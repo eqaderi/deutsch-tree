@@ -112,7 +112,9 @@ test('from German the learner reads the word with its article and chooses its me
   if (question.type !== 'meaning-of-word') throw new Error('unreachable')
 
   await expect(page.getByText('What does this word mean?')).toBeVisible()
-  await expect(page.locator('.question-sentence [lang="de"]')).toHaveText(question.prompt)
+  // The word is shown as German, and names the choice.
+  const choice = page.getByRole('radiogroup', { name: `What does this word mean? ${question.prompt}` })
+  await expect(choice.getByText(question.prompt, { exact: true })).toHaveAttribute('lang', 'de')
   await expect(page.getByRole('radio')).toHaveCount(4)
   for (const option of question.options) {
     await expect(page.getByRole('radio', { name: option.meaning.en, exact: true })).toBeVisible()
@@ -131,7 +133,9 @@ test('into German the learner reads the meaning and must type a noun with its ar
   const bare = learned.replace(/^(der|die|das) /, '')
 
   await expect(page.getByText('Type the German word. A noun needs its article.')).toBeVisible()
-  await expect(page.locator('.question-sentence')).toHaveText(question.prompt.en)
+  await expect(
+    page.getByRole('textbox', { name: `Type the German word. A noun needs its article. ${question.prompt.en}` }),
+  ).toBeVisible()
   await page.getByRole('textbox').fill(bare)
   const place = Number(/\d+/.exec((await page.getByRole('heading', { level: 2 }).first().textContent()) ?? '')?.[0])
   await page.getByRole('button', { name: place < 10 ? 'Next' : 'Check answers' }).click()
@@ -142,8 +146,9 @@ test('into German the learner reads the meaning and must type a noun with its ar
   const wrong = page.getByRole('list', { name: 'Wrong answers' }).getByRole('listitem')
   await expect(wrong).toHaveCount(1)
   await expect(wrong).toContainText(question.prompt.en)
-  await expect(wrong.locator('.answer-given')).toContainText(bare)
-  await expect(wrong.locator('.answer-right')).toContainText(learned)
+  await expect(wrong.getByRole('term')).toHaveText(['Your answer', 'Right answer'])
+  await expect(wrong.getByRole('definition').nth(0)).toContainText(bare)
+  await expect(wrong.getByRole('definition').nth(1)).toContainText(learned)
 })
 
 test('a Persian learner is asked by the Persian meaning; the report of a problem names the word’s question', async ({
@@ -154,7 +159,7 @@ test('a Persian learner is asked by the Persian meaning; the report of a problem
   const question = await firstOfType(page, 'word-for-meaning', undefined, PERSIAN)
   if (question.type !== 'word-for-meaning') throw new Error('unreachable')
 
-  await expect(page.locator('.question-sentence')).toHaveText(question.prompt.fa)
+  await expect(page.getByRole('textbox', { name: new RegExp(`${escaped(question.prompt.fa)}$`) })).toBeVisible()
   const issue = await reportedIssue(reportLink(page))
   expect(issue.node).toBe(NODE)
   expect(issue.question).toBe(question.id)
@@ -168,7 +173,10 @@ test('a learner who reads in German is asked for the word by its German definiti
   const question = await firstOfType(page, 'word-for-meaning', undefined, words)
   if (question.type !== 'word-for-meaning') throw new Error('unreachable')
 
-  await expect(page.locator('.question-sentence [lang="de"]')).toHaveText(question.prompt.de)
+  // The definition is German: shown as German, and the name of the field.
+  const field = page.getByRole('textbox', { name: new RegExp(`${escaped(question.prompt.de)}$`) })
+  await expect(field).toBeVisible()
+  await expect(page.getByText(question.prompt.de, { exact: true })).toHaveAttribute('lang', 'de')
 })
 
 /**
@@ -191,3 +199,6 @@ async function firstOfType(
   }
   throw new Error(`no ${type} question in the attempt`)
 }
+
+/** Text for a pattern that matches it as written. */
+const escaped = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
