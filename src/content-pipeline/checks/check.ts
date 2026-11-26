@@ -3,7 +3,7 @@
  * cannot state: it needs the other nodes, other files, or a number of the
  * project. How to add one: content/README.md, "Adding a check".
  */
-import type { NodeFile } from '../../content-model/index.ts'
+import type { Chapter, NodeFile } from '../../content-model/index.ts'
 
 /** One thing a maintainer has to fix. */
 export interface ContentProblem {
@@ -32,6 +32,8 @@ export interface ContentUnderCheck {
   nodes: CheckedNode[]
   /** The id of every node file, including files that failed the schema. */
   ids: ReadonlySet<string>
+  /** The chapter list, in curriculum order. Null when chapters.yaml is unusable; the pipeline reports that itself. */
+  chapters: readonly Chapter[] | null
 }
 
 /** Returns one problem per thing to fix; an empty list when the content passes. */

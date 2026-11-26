@@ -1,5 +1,6 @@
 /**
- * Content pipeline: node files in, compiled bundle and a report out.
+ * Content pipeline: the chapter list and node files in, compiled bundle and a
+ * report out.
  *
  * `compileContent` reads and validates; it never writes. `writeBundle` puts a
  * compiled bundle on disk. The command line (cli.ts) and the site build
@@ -9,8 +10,10 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
 import {
+  type Chapter,
   type CompiledNode,
   type ContentBundle,
+  chaptersFileSchema,
   type GrammarContent,
   LANGUAGES,
   type Localised,
@@ -22,6 +25,9 @@ import {
 import { CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
 
 export type { ContentProblem }
+
+/** The chapter list, beside the `nodes` folder. */
+export const CHAPTERS_FILE = 'chapters.yaml'
 
 export interface PipelineReport {
   ok: boolean
@@ -82,12 +88,17 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
     checked.push({ file, node: parsed.data })
   }
 
+  const chapters = await readChapters(contentDir, errors)
+
   for (const check of CHECKS) {
-    errors.push(...(await check({ contentDir, nodes: checked, ids })))
+    errors.push(...(await check({ contentDir, nodes: checked, ids, chapters })))
   }
 
+  // The curriculum order: chapter by chapter, and inside a chapter by `order`.
+  const chapterPlace = new Map((chapters ?? []).map((chapter, index) => [chapter.id, index]))
+  const placeOf = (node: CompiledNode) => chapterPlace.get(node.chapter) ?? Number.POSITIVE_INFINITY
   const nodes = checked.map(({ node }) => compileNode(node))
-  nodes.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id))
+  nodes.sort((a, b) => placeOf(a) - placeOf(b) || a.order - b.order || a.id.localeCompare(b.id))
 
   const published = nodes.filter((node) => node.status === 'published').length
   const report: PipelineReport = {
@@ -99,7 +110,7 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
 
   return {
     report,
-    bundle: report.ok ? { index: { nodes: nodes.map(summarise) }, nodes } : null,
+    bundle: report.ok ? { index: { chapters: chapters ?? [], nodes: nodes.map(summarise) }, nodes } : null,
   }
 }
 
@@ -155,6 +166,37 @@ async function findNodeFiles(contentDir: string): Promise<string[]> {
     .sort()
 }
 
+/** The chapter list, or null when it cannot be used; the reason is then added to `errors`. */
+async function readChapters(contentDir: string, errors: ContentProblem[]): Promise<Chapter[] | null> {
+  let source: string
+  try {
+    source = await readFile(path.join(contentDir, CHAPTERS_FILE), 'utf8')
+  } catch {
+    errors.push({
+      file: CHAPTERS_FILE,
+      message: 'is missing: the chapter list that every node file names a chapter of',
+    })
+    return null
+  }
+
+  let raw: unknown
+  try {
+    raw = parseYaml(source)
+  } catch (error) {
+    errors.push({ file: CHAPTERS_FILE, message: `is not valid YAML: ${(error as Error).message}` })
+    return null
+  }
+
+  const parsed = chaptersFileSchema.safeParse(raw)
+  if (!parsed.success) {
+    for (const issue of parsed.error.issues) {
+      errors.push({ file: CHAPTERS_FILE, where: formatPath(issue.path), message: issue.message })
+    }
+    return null
+  }
+  return parsed.data
+}
+
 /** The node a file holds: the id it states, or else the id its name promises. */
 function nodeOf(file: string, raw?: unknown): string {
   const id = (raw as { id?: unknown } | null | undefined)?.id
@@ -173,6 +215,7 @@ function compileNode(file: NodeFile): CompiledNode {
     id: file.id,
     kind: file.kind,
     level: file.level,
+    chapter: file.chapter,
     order: file.order,
     status: file.status,
     recogniseOnly: file.recogniseOnly,

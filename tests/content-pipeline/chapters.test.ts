@@ -1,0 +1,126 @@
+import { rm } from 'node:fs/promises'
+import path from 'node:path'
+import { expect, test } from 'vitest'
+import { compileContent } from '../../src/content-pipeline/index.ts'
+import { COMING_SOON, changeNode, fixtureContentWith } from './fixture.ts'
+
+const CHAPTERS = 'chapters.yaml'
+
+test('the curriculum order runs chapter by chapter, in the order of the chapter list', async () => {
+  // grammar-002 has the higher `order`, so only the chapter list can put it first.
+  const content = await fixtureContentWith({
+    [CHAPTERS]: (text) => {
+      const [comment, basics, later] = text.split(/\n(?=- id:)/)
+      return [comment, later, basics].join('\n')
+    },
+  })
+
+  const { report, bundle } = await compileContent(content)
+
+  expect(report.errors).toEqual([])
+  expect(bundle?.index.chapters).toEqual([
+    {
+      id: 'fixture-later',
+      level: 'A1',
+      kind: 'grammar',
+      title: { en: 'Fixture later topics', fa: 'موضوع‌های بعدی آزمایشی', de: 'Spätere Test-Themen' },
+    },
+    {
+      id: 'fixture-basics',
+      level: 'A1',
+      kind: 'grammar',
+      title: { en: 'Fixture basics', fa: 'مبانی آزمایشی', de: 'Test-Grundlagen' },
+    },
+  ])
+  expect(bundle?.index.nodes.map((node) => [node.chapter, node.id])).toEqual([
+    ['fixture-later', 'grammar-002'],
+    ['fixture-basics', 'grammar-001'],
+  ])
+})
+
+test('a node without a chapter is rejected', async () => {
+  const content = await fixtureContentWith({
+    [COMING_SOON]: changeNode((node) => {
+      delete node.chapter
+    }),
+  })
+
+  const { report, bundle } = await compileContent(content)
+
+  expect(report.errors).toEqual([
+    {
+      file: COMING_SOON,
+      node: 'grammar-002',
+      where: 'chapter',
+      message: 'is missing: every node belongs to a chapter of chapters.yaml',
+    },
+  ])
+  expect(bundle).toBeNull()
+})
+
+test('a node in a chapter that the chapter list does not have is rejected', async () => {
+  const content = await fixtureContentWith({
+    [CHAPTERS]: (text) => text.replace('- id: fixture-later', '- id: fixture-renamed'),
+  })
+
+  const { report, bundle } = await compileContent(content)
+
+  expect(report.errors).toEqual([
+    {
+      file: COMING_SOON,
+      node: 'grammar-002',
+      where: 'chapter',
+      message: 'points nowhere: there is no chapter "fixture-later" in chapters.yaml',
+    },
+  ])
+  expect(bundle).toBeNull()
+})
+
+test('a node must be of the level and the kind of its chapter', async () => {
+  const content = await fixtureContentWith({
+    [CHAPTERS]: (text) => text.replace(/(- id: fixture-later\n {2}level: )A1(\n {2}kind: )grammar/, '$1A2$2vocabulary'),
+  })
+
+  const { report, bundle } = await compileContent(content)
+
+  expect(report.errors).toEqual([
+    {
+      file: COMING_SOON,
+      node: 'grammar-002',
+      where: 'level',
+      message: 'is A1, but its chapter "fixture-later" is a chapter of A2',
+    },
+    {
+      file: COMING_SOON,
+      node: 'grammar-002',
+      where: 'kind',
+      message: 'is grammar, but its chapter "fixture-later" is a vocabulary chapter',
+    },
+  ])
+  expect(bundle).toBeNull()
+})
+
+test('a chapter name is needed in all three languages', async () => {
+  const content = await fixtureContentWith({
+    [CHAPTERS]: (text) => text.replace('    fa: مبانی آزمایشی\n', ''),
+  })
+
+  const { report, bundle } = await compileContent(content)
+
+  expect(report.errors).toEqual([
+    { file: CHAPTERS, where: '[0].title.fa', message: 'is missing; this text is needed in fa' },
+  ])
+  expect(bundle).toBeNull()
+})
+
+test('content without a chapter list is rejected', async () => {
+  const content = await fixtureContentWith({})
+  await rm(path.join(content, CHAPTERS))
+
+  const { report, bundle } = await compileContent(content)
+
+  expect(report.errors).toEqual([
+    { file: CHAPTERS, message: 'is missing: the chapter list that every node file names a chapter of' },
+  ])
+  expect(bundle).toBeNull()
+})

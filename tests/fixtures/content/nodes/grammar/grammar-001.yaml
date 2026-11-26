@@ -2,6 +2,7 @@
 id: grammar-001
 kind: grammar
 level: A1
+chapter: fixture-basics
 order: 1
 status: published
 recogniseOnly: false
