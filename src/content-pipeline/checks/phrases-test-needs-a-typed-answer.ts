@@ -1,8 +1,12 @@
+import type { NodeFile } from '../../content-model/index.ts'
 import { passMark } from '../../learning-engine/index.ts'
 import { type ContentCheck, problemIn } from './check.ts'
 
 /** The question types in which the learner writes the German, and does not pick it from what is shown. */
-const TYPED = new Set<string>(['typed-answer', 'typed-gap-fill'])
+const TYPED: ReadonlySet<NonNullable<NodeFile['questions']>[number]['type']> = new Set([
+  'typed-answer',
+  'typed-gap-fill',
+])
 
 /**
  * The test of a published phrases node proves recall, not only recognition.
