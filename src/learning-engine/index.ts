@@ -159,7 +159,7 @@ export function rightAnswer(question: Question): Answer {
 }
 
 /** How many meanings a `meaning-of-word` question offers, the right one among them, where the node has that many. */
-export const MEANINGS_OFFERED = 4
+const MEANINGS_OFFERED = 4
 
 /**
  * The pool of a vocabulary node, made from its words: every word is asked in
@@ -482,7 +482,7 @@ export type Milestone =
   /** This many topics are done, counted in steps of TOPICS_PER_MILESTONE. */
   | { id: string; kind: 'topics'; count: number }
 
-export const TOPICS_PER_MILESTONE = 10
+const TOPICS_PER_MILESTONE = 10
 
 /**
  * The milestones this progress has reached: first the finished levels, in
@@ -832,10 +832,10 @@ export function readiness(progress: Progress, officialExamIds: readonly string[]
 }
 
 /** The most questions one checkpoint asks. */
-export const CHECKPOINT_SIZE = 30
+const CHECKPOINT_SIZE = 30
 
 /** The most questions one node gives to a checkpoint. */
-export const CHECKPOINT_MOST_PER_NODE = 5
+const CHECKPOINT_MOST_PER_NODE = 5
 
 /** What a published node brings to the checkpoint of its level: its pool. */
 export interface CheckpointSource {

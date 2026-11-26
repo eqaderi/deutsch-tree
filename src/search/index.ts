@@ -101,7 +101,7 @@ function bestPassage(passages: Searchable[], words: Word[]): RichText | null {
  *     as «می کنم» and as «میکنم».
  *   - Everything that is not a letter or a number separates words.
  */
-export function fold(text: string): string {
+function fold(text: string): string {
   return (
     text
       // Splits a letter from the marks on it (ä into a and two dots), then drops the marks.

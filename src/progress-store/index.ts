@@ -76,7 +76,7 @@ export interface ProgressStore {
 export const STORAGE_KEY = 'deutsch-tree:progress'
 
 /** Where saved text that could not be read is kept, so that replacing it destroys nothing. */
-export const UNREADABLE_KEY = 'deutsch-tree:progress:unreadable'
+const UNREADABLE_KEY = 'deutsch-tree:progress:unreadable'
 
 /**
  * The version of the saved shape written today.
@@ -200,7 +200,7 @@ export interface SavedFormat {
 const TODAY: SavedFormat = { version: SAVED_VERSION, upgrades: UPGRADES }
 
 /** Progress as the text that is saved. */
-export function serialiseProgress(progress: Progress): string {
+function serialiseProgress(progress: Progress): string {
   return JSON.stringify(savedObject(progress))
 }
 

@@ -53,7 +53,7 @@ function belowThousand(n: number, ending: boolean): string {
 }
 
 /** A whole number as it is said: 85 "fünfundachtzig", 3700000 "drei Millionen siebenhunderttausend". */
-export function numberWords(n: number): string {
+function numberWords(n: number): string {
   if (n === 0) return 'null'
   const millions = Math.floor(n / 1_000_000)
   const thousands = Math.floor((n % 1_000_000) / 1000)
