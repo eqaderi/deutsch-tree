@@ -226,6 +226,7 @@ export const fa: Strings = {
   checkpointIntro:
     'آزمونی کوتاه با سؤال‌هایی از موضوع‌های این سطح. نشان می‌دهد چه چیزهایی را باید دوباره ببینید. در موضوع‌های شما چیزی را تغییر نمی‌دهد.',
   startCheckpoint: 'شروع آزمون مرور',
+  onToLevel: (level) => `ادامه با ${level}`,
   checkpointNothingYet: 'هنوز هیچ موضوعی از این سطح آزمون ندارد. آزمون مرور با اولین موضوع می‌آید.',
   checkpointSize: (questions, topics) => `${digits.format(questions)} سؤال از ${digits.format(topics)} موضوع`,
   checkpointResult: 'نتیجهٔ آزمون مرور',

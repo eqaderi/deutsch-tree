@@ -1899,6 +1899,16 @@ export interface GrammarOverview {
   tables: Array<{ node: string; table: GrammarTable }>
 }
 
+/**
+ * What one published topic gives to the checkpoint of its level: its pool.
+ * A level's checkpoint file (`checkpoints/<level>.json`) is a list of these,
+ * in curriculum order; the app fetches it when the checkpoint opens.
+ */
+export interface CheckpointPool {
+  nodeId: string
+  questions: Question[]
+}
+
 /** An original mock exam as the list of mock exams shows it (`mock-exams.json`). */
 export interface MockExamSummary {
   id: string
@@ -1976,4 +1986,6 @@ export interface ContentBundle {
   mockExams: MockExam[]
   search: Localised<SearchData>
   overview: GrammarOverview
+  /** Each level's checkpoint data, by level. */
+  checkpoints: Record<string, CheckpointPool[]>
 }

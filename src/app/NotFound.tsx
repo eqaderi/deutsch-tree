@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import type { NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
-import { lastTreeAddress, treeAddressOf } from './treeAddress.ts'
+import { lastTreeAddress, treeAddress, treeAddressOf } from './treeAddress.ts'
 
 export function NotFound() {
   const { strings } = useLanguage()
@@ -21,13 +21,15 @@ export function NotFound() {
 
 /**
  * The link back to the tree. From a topic it leads to the topic's level, so
- * the learner sees the topic they come from; from any other page, to the tree
- * as they last saw it.
+ * the learner sees the topic they come from; from a page of a level (its
+ * checkpoint), to that level; from any other page, to the tree as they last
+ * saw it.
  */
-export function BackToTree({ from }: { from?: Pick<NodeSummary, 'level' | 'kind'> }) {
+export function BackToTree({ from, level }: { from?: Pick<NodeSummary, 'level' | 'kind'>; level?: string }) {
   const { strings } = useLanguage()
+  const to = from ? treeAddressOf(from) : level !== undefined ? treeAddress({ level }) : lastTreeAddress()
   return (
-    <Link to={from ? treeAddressOf(from) : lastTreeAddress()} className="back">
+    <Link to={to} className="back">
       <span className="flip" aria-hidden="true">
         ←
       </span>

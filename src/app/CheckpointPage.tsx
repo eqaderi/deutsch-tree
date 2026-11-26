@@ -1,7 +1,6 @@
 import { use, useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router'
-import type { CompiledNode, NodeSummary, Question } from '../content-model/index.ts'
-import { hasPool } from '../content-model/scoring.ts'
+import type { NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import {
   type Checkpoint,
@@ -11,41 +10,32 @@ import {
   scoreCheckpoint,
 } from '../learning-engine/index.ts'
 import { AttemptRun } from './AttemptRun.tsx'
-import { loadIndex, loadNodes } from './content.ts'
+import { loadCheckpoint, loadIndex } from './content.ts'
 import { RichText } from './German.tsx'
-import { NotFound } from './NotFound.tsx'
-import { WrongAnswers } from './TestResult.tsx'
+import { BackToTree, NotFound } from './NotFound.tsx'
+import { isNoted, NotedAnswers, WrongAnswers } from './TestResult.tsx'
+import { treeAddress } from './treeAddress.ts'
 
 /** The address of a level's checkpoint in the app. */
 const checkpointPath = (level: string) => `/checkpoint/${level}`
 
-/** The tree, opened at a level. */
-const levelPath = (level: string) => `/?level=${level}`
-
 /**
  * Whether a node gives questions to the checkpoint of its level. An exam part
  * gives none: what it asks is a whole task, and an item of a task cannot be
- * asked without the text it is about.
+ * asked without the text it is about. The content pipeline writes the pools of
+ * exactly these nodes into the level's checkpoint file (`checkpoint-data.ts`).
  */
 export function givesToCheckpoint(node: NodeSummary): boolean {
   return node.hasTest && node.kind !== 'exam-part'
 }
 
 /**
- * The questions a node gives to the checkpoint of its level: its pool. A
- * published node without a plain pool (an exam part with its practice task,
- * for example) gives none, and the checkpoint is drawn from the others.
- */
-function checkpointPool(node: CompiledNode): readonly Question[] {
-  return node.content && hasPool(node.content) ? node.content.questions : []
-}
-
-/**
  * The last stop of a level's line in the tree: its checkpoint, or a line that
- * says why there is none yet. `ready` says whether the level has a published
- * topic with a pool; a writing or speaking topic has none.
+ * says why there is none yet, then the way on to the next level. `ready` says
+ * whether the level has a published topic with a pool; a writing or speaking
+ * topic has none. The last level has no `nextLevel`: the exam follows it.
  */
-export function CheckpointStop({ level, ready }: { level: string; ready: boolean }) {
+export function CheckpointStop({ level, ready, nextLevel }: { level: string; ready: boolean; nextLevel?: string }) {
   const { strings } = useLanguage()
   return (
     <div className="stop">
@@ -60,6 +50,11 @@ export function CheckpointStop({ level, ready }: { level: string; ready: boolean
             {strings.startCheckpoint}
           </Link>
         )}
+        {nextLevel !== undefined && (
+          <p className="next-level">
+            <Link to={treeAddress({ level: nextLevel })}>{strings.onToLevel(nextLevel)}</Link>
+          </p>
+        )}
       </section>
     </div>
   )
@@ -71,12 +66,9 @@ export function CheckpointPage() {
   const topics = use(loadIndex()).nodes.filter((node) => node.level === level)
   if (topics.length === 0) return <NotFound />
 
-  // The checkpoint draws across every published topic of the level that has a pool, so it needs all their pools.
+  // The checkpoint draws across every published topic of the level that has a pool: one file holds all their pools.
   const published = topics.filter(givesToCheckpoint)
-  const sources = use(loadNodes(published.map((node) => node.id))).map((node) => ({
-    nodeId: node.id,
-    questions: checkpointPool(node),
-  }))
+  const sources = use(loadCheckpoint(level))
   return <LevelCheckpoint key={level} level={level} topics={published} sources={sources} />
 }
 
@@ -111,12 +103,7 @@ function LevelCheckpoint({ level, topics, sources }: LevelCheckpointProps) {
   return (
     <main className="wrap">
       <title>{`${title} · ${strings.appName}`}</title>
-      <Link to={levelPath(level)} className="back">
-        <span className="flip" aria-hidden="true">
-          ←
-        </span>
-        {strings.allTopics}
-      </Link>
+      <BackToTree level={level} />
       <header className="page-head">
         <h1>{title}</h1>
         {checkpoint.questions.length > 0 && (
@@ -163,7 +150,9 @@ interface CheckpointResultPanelProps {
  */
 function CheckpointResultPanel({ level, result, topics, onRetry }: CheckpointResultPanelProps) {
   const { language, strings } = useLanguage()
-  const wrong = result.questions.map((item, index) => ({ ...item, place: index + 1 })).filter((item) => !item.correct)
+  const answered = result.questions.map((item, index) => ({ ...item, place: index + 1 }))
+  const wrong = answered.filter((item) => !item.correct)
+  const noted = answered.filter(isNoted)
 
   // The result takes the place of the last question: take the keyboard and a screen reader to it.
   const heading = useRef<HTMLHeadingElement>(null)
@@ -206,9 +195,10 @@ function CheckpointResultPanel({ level, result, topics, onRetry }: CheckpointRes
       )}
 
       <WrongAnswers wrong={wrong} />
+      <NotedAnswers noted={noted} />
 
       <div className="result-actions">
-        <Link to={levelPath(level)} className="btn btn-main">
+        <Link to={treeAddress({ level })} className="btn btn-main">
           {strings.allTopics}
         </Link>
         <button type="button" className="btn btn-quiet" onClick={onRetry}>

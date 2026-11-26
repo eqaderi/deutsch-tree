@@ -16,6 +16,7 @@ import {
   type ChapterEntry,
   type CompiledNode,
   type ContentBundle,
+  type ContentIndex,
   chaptersFileSchema,
   type Diagram,
   type ExamPartExplanations,
@@ -47,6 +48,7 @@ import {
 import { hasPool, hasPractice, isAssistantGraded } from '../content-model/scoring.ts'
 import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { audioProblems, presentAudio } from './audio.ts'
+import { checkpointData } from './checkpoint-data.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
 import { mixedAwayFrom } from './mix.ts'
@@ -164,19 +166,21 @@ export async function compileContent(
     questions: nodes.reduce((sum, node) => sum + questionCount(node.content), 0),
   }
 
+  const index: ContentIndex = {
+    chapters: (chapters ?? []).map((chapter) => ({ ...chapter, title: richTextIn(chapter.title) })),
+    nodes: nodes.map(summarise),
+  }
   return {
     report,
     bundle: report.ok
       ? {
-          index: {
-            chapters: (chapters ?? []).map((chapter) => ({ ...chapter, title: richTextIn(chapter.title) })),
-            nodes: nodes.map(summarise),
-          },
+          index,
           nodes,
           officialMockExams: officialMockExams ?? [],
           mockExams,
           search: searchData(nodes),
           overview: overviewData(nodes),
+          checkpoints: checkpointData(nodes, index),
         }
       : null,
   }
@@ -194,6 +198,11 @@ export function bundleFiles(bundle: ContentBundle): Array<{ path: string; json: 
     // The list first; an exam's parts only when it is opened.
     { path: MOCK_EXAMS_JSON, json: JSON.stringify(mockExamList(bundle.mockExams)) },
     ...bundle.mockExams.map((exam) => ({ path: `mock-exams/${exam.id}.json`, json: JSON.stringify(exam) })),
+    // Fetched only when the learner opens a level's checkpoint.
+    ...Object.entries(bundle.checkpoints).map(([level, pools]) => ({
+      path: `checkpoints/${level}.json`,
+      json: JSON.stringify(pools),
+    })),
     // Fetched only when the learner opens the "all grammar at a glance" page.
     { path: 'overview.json', json: JSON.stringify(bundle.overview) },
     // Fetched only when the learner opens search.

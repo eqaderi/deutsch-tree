@@ -743,6 +743,16 @@ main.wrap {
   color: var(--text-secondary);
 }
 
+/* The way on to the next level, after the checkpoint. */
+.checkpoint-stop .next-level a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
 .rows {
   list-style: none;
   margin: 0;

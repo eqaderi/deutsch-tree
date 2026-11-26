@@ -10,6 +10,7 @@
  * first load of the tree stays small however much content there is.
  */
 import type {
+  CheckpointPool,
   CompiledNode,
   ContentIndex,
   GrammarOverview,
@@ -82,6 +83,11 @@ export function loadNodes(ids: readonly string[]): Promise<CompiledNode[]> {
 /** What search looks through in one language, besides the titles of the index. */
 export function loadSearchData(language: Language): Promise<SearchData> {
   return load(`search/${language}.json`)
+}
+
+/** What each published topic of a level gives to the level's checkpoint, in curriculum order. */
+export function loadCheckpoint(level: string): Promise<CheckpointPool[]> {
+  return load(`checkpoints/${encodeURIComponent(level)}.json`)
 }
 
 /** Every grammar table, for the "all grammar at a glance" page. */

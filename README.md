@@ -74,7 +74,8 @@ build time, each only on the page that shows it:
 | File | Holds | Fetched by |
 |---|---|---|
 | `content/index.json` | The chapters and every node's summary, both in curriculum order. | Every page. |
-| `content/nodes/<id>.json` | One node's page. | That node's page and its test; a level's checkpoint, for the nodes it asks about. |
+| `content/nodes/<id>.json` | One node's page. | That node's page and its test. |
+| `content/checkpoints/<level>.json` | The pool of every published topic of the level that has one (`checkpoint-data.ts`). | That level's checkpoint (`#/checkpoint/<level>`). |
 | `content/official-mock-exams.json` | The exams the readiness view links to. | The readiness view (`#/readiness`) and the exam stop that ends the tree's last level. |
 | `content/mock-exams.json` | The original mock exams: title, status and modules of each. | The list of mock exams (`#/mock-exams`) and a module's page. |
 | `content/mock-exams/<id>.json` | One mock exam with its parts. | Its card in the list, and its modules (`#/mock-exams/<id>/<module>`). |
@@ -138,8 +139,14 @@ GitHub Pages and from a local folder.
   level: up to 6 nodes give 5 each, 7 to 29 nodes share the 30 evenly, and
   from 30 nodes on a checkpoint asks 30 nodes drawn at random, one question
   each. A node without a pool gives none; an exam part gives none either (`givesToCheckpoint`). `scoreCheckpoint` reports the nodes
-  with wrong answers. A checkpoint is advice: it never reads or changes the
-  progress. What a node gives to it is `checkpointPool` in that file.
+  with wrong answers, and keeps the notes of a typed answer accepted with a
+  note, which the result lists as after a test (`NotedAnswers` in
+  `TestResult.tsx`). A checkpoint is advice: it never reads or changes the
+  progress. What the nodes of a level give to it is one file,
+  `content/checkpoints/<level>.json`, written by
+  `src/content-pipeline/checkpoint-data.ts`, so a checkpoint needs one request
+  however many topics its level has. The stop of the checkpoint ends with the
+  way on to the next level.
 - A writing or speaking node has no test of questions. Below the three
   panels of every exam part, its page (`src/app/ExamTaskPage.tsx`) shows the
   task, a button that copies a prompt
@@ -273,7 +280,8 @@ The rules are in the learning engine, like every rule. The tree
   With no level in the address the tree opens at the level the learner is
   in. Build such an address with `treeAddress` (`src/app/treeAddress.ts`).
   A link "back to the tree" is `<BackToTree from={node} />` from a topic,
-  which leads to the topic's level, and `<BackToTree />` from any other
+  which leads to the topic's level, `<BackToTree level={level} />` from a
+  page of a level (its checkpoint), and `<BackToTree />` from any other
   page, which leads to the tree as the learner last saw it.
 - Above the route the tree shows the next topic and at most one note: the
   first-visit steps while the learner has no progress, the backup suggestion

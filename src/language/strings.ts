@@ -256,6 +256,7 @@ export const en = {
   checkpointIntro:
     'A short test with questions from the topics of this level. It shows you what to look at again. It changes nothing in your topics.',
   startCheckpoint: 'Start the checkpoint',
+  onToLevel: (level: string) => `On to ${level}`,
   checkpointNothingYet: 'No topic of this level has a test yet. The checkpoint comes with the first one.',
   checkpointSize: (questions: number, topics: number) =>
     `${questions === 1 ? '1 question' : `${questions} questions`} from ${topics === 1 ? '1 topic' : `${topics} topics`}`,

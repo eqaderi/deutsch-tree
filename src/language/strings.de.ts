@@ -220,6 +220,7 @@ export const de: Strings = {
   checkpointIntro:
     'Ein kurzer Test mit Fragen aus den Themen von diesem Niveau. Er zeigt dir, was du noch einmal ansehen sollst. Er ändert nichts an deinen Themen.',
   startCheckpoint: 'Zwischentest starten',
+  onToLevel: (level) => `Weiter zu ${level}`,
   checkpointNothingYet:
     'Auf diesem Niveau hat noch kein Thema einen Test. Der Zwischentest kommt mit dem ersten Thema.',
   checkpointSize: (questions, topics) =>

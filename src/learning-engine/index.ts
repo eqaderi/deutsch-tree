@@ -877,8 +877,11 @@ export interface CheckpointResult {
   total: number
   /** How many were answered right. */
   correct: number
-  /** Every question of the checkpoint, in order, with its node and what was answered. */
-  questions: Array<CheckpointQuestion & { answer: Answer | undefined; correct: boolean }>
+  /**
+   * Every question of the checkpoint, in order, with its node, what was answered and how it was
+   * checked: a typed answer accepted with a note has its `notes` and `accepted`, as in a test.
+   */
+  questions: Array<CheckpointQuestion & { answer: Answer | undefined } & AnswerCheck>
   /** The nodes with a wrong answer, in curriculum order. */
   nodesToRevisit: Array<{ nodeId: string; asked: number; wrong: number }>
 }
@@ -892,7 +895,7 @@ export interface CheckpointResult {
 export function scoreCheckpoint(checkpoint: Checkpoint, answers: readonly (Answer | undefined)[]): CheckpointResult {
   const questions = checkpoint.questions.map((asked, index) => {
     const answer = answers[index]
-    return { ...asked, answer, correct: checkAnswer(asked.question, answer).correct }
+    return { ...asked, answer, ...checkAnswer(asked.question, answer) }
   })
   const nodesToRevisit = checkpoint.nodeIds
     .map((nodeId) => {
