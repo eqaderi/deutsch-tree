@@ -1,20 +1,21 @@
-import { mkdtemp, readFile } from 'node:fs/promises'
+import { mkdtemp, readdir, readFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { expect, test } from 'vitest'
-import { buildPack } from '../../src/pack-builder/index.ts'
+import { buildPack, type PackBuildOptions } from '../../src/pack-builder/index.ts'
 import { type FixtureBook, fixtureBook, fixturePageNumbers, writeFixtureBook } from './fixture.ts'
 
 /** Builds a pack from a synthetic book into a new temporary folder. */
-async function build(book: FixtureBook = fixtureBook()) {
+async function build(book: FixtureBook = fixtureBook(), options: Partial<PackBuildOptions> = {}) {
   const files = await writeFixtureBook(book)
-  const outDir = await mkdtemp(path.join(tmpdir(), 'deutsch-tree-packs-'))
+  const outDir = options.outDir ?? (await mkdtemp(path.join(tmpdir(), 'deutsch-tree-packs-')))
   const result = await buildPack({
     examPdf: files.examPdf,
     answerKeyPdf: files.answerKeyPdf,
     audioDir: files.audioDir,
     name: 'Fixture book',
     outDir,
+    ...options,
   })
   return { ...result, outDir, files }
 }
@@ -247,4 +248,175 @@ test('recordings are matched to Hören parts by file name and copied into the pa
   const copied = await readFile(path.join(packDir as string, 'exams/02/hoeren-3.mp3'))
   const original = await readFile(path.join(files.audioDir, 'Modelltest-2-Hoeren-Teil-3.mp3'))
   expect(copied.equals(original)).toBe(true)
+})
+
+// ---------------------------------------------------------------------------
+// A book that does not add up: errors in the report, and no pack
+// ---------------------------------------------------------------------------
+
+/** Builds from the default book after `edit` has changed it; expects the build to fail. */
+async function buildBroken(edit: (book: FixtureBook) => void) {
+  const book = fixtureBook()
+  edit(book)
+  const { report, packDir, outDir } = await build(book)
+
+  expect(report.ok).toBe(false)
+  expect(packDir).toBeNull()
+  expect(await readdir(outDir)).toEqual([])
+  return report
+}
+
+/** Replaces one line of a page with other lines (none to delete it). */
+function replaceLine(pages: FixtureBook['examPages'], page: number, line: string, ...replacement: string[]) {
+  const lines = pages[page - 1] as string[]
+  expect(lines).toContain(line)
+  lines.splice(lines.indexOf(line), 1, ...replacement)
+}
+
+test('an exam with a missing part heading is an error that names the exam, the module and the part', async () => {
+  // Page 17 is where Lesen Teil 3 of exam 2 starts.
+  const report = await buildBroken((book) => replaceLine(book.examPages, 17, 'Teil 3'))
+
+  expect(report.errors).toEqual([
+    { source: 'exam-pdf', message: expect.stringMatching(/^Exam 2, Lesen .*Missing: part 3\b/) },
+  ])
+  // The report still shows what was found, so the pattern or the book can be checked.
+  expect(report.headings).toContainEqual({ exam: 2, module: 'lesen', part: 2, page: 15 })
+  expect(report.headings).toContainEqual({ exam: 2, module: 'lesen', part: 4, page: 18 })
+})
+
+test('an exam with a missing module heading is an error', async () => {
+  const report = await buildBroken((book) => replaceLine(book.examPages, 8, 'Hören'))
+
+  expect(report.errors).toContainEqual({ source: 'exam-pdf', message: expect.stringMatching(/^Exam 1 .*Hören/) })
+})
+
+test('exam headings that do not count up from 1 are an error', async () => {
+  const report = await buildBroken((book) => replaceLine(book.examPages, 14, 'Modelltest 2', 'Modelltest 3'))
+
+  expect(report.errors).toContainEqual({
+    source: 'exam-pdf',
+    message: expect.stringContaining('1 (page 2), 3 (page 14)'),
+  })
+})
+
+test('an exam PDF without a text layer is an error', async () => {
+  const report = await buildBroken((book) => {
+    book.examPages = book.examPages.map(() => [])
+  })
+
+  expect(report.errors).toEqual([{ source: 'exam-pdf', message: expect.stringContaining('no text layer') }])
+})
+
+test('a part with fewer answers in the key than items is an error, not a shifted key', async () => {
+  const report = await buildBroken((book) =>
+    replaceLine(
+      book.keyPages,
+      1,
+      'Teil 2   7 a   8 c   9 b   10 b   11 a   12 c',
+      'Teil 2   7 a   8 c   9 b   10 b   11 a',
+    ),
+  )
+
+  expect(report.errors).toEqual([
+    {
+      source: 'answer-key',
+      message: 'Exam 1, Lesen Teil 2: the key has 5 answers but the part has 6 items. Printed numbers found: 7, 8, 9, 10, 11',
+    },
+  ])
+})
+
+test('an answer that its item cannot have is an error', async () => {
+  const report = await buildBroken((book) =>
+    replaceLine(
+      book.keyPages,
+      1,
+      'Teil 1   1 richtig   2 falsch   3 falsch   4 richtig   5 richtig   6 falsch',
+      'Teil 1   1 richtig   2 b   3 falsch   4 richtig   5 richtig   6 falsch',
+    ),
+  )
+
+  expect(report.errors).toEqual([
+    {
+      source: 'answer-key',
+      message: 'Exam 1, Lesen Teil 1, item 2: the key says "b", which is not one of richtig, falsch',
+    },
+  ])
+})
+
+test('an exam that the answer key does not have is an error', async () => {
+  const report = await buildBroken((book) => {
+    book.keyPages = book.keyPages.slice(0, 1)
+  })
+
+  expect(report.errors).toEqual([
+    { source: 'answer-key', message: 'Exam 2: no heading for this exam in the answer key' },
+  ])
+})
+
+test('a recording whose name matches nothing is an error', async () => {
+  const report = await buildBroken((book) => {
+    book.recordings.push('Bonus track.mp3')
+  })
+
+  expect(report.errors).toEqual([{ source: 'recordings', message: expect.stringContaining('"Bonus track.mp3"') }])
+})
+
+test('a recording for an exam or part that does not exist is an error', async () => {
+  const report = await buildBroken((book) => {
+    book.recordings.push('Modelltest-3-Hoeren-Teil-1.mp3', 'Modelltest-1-Hoeren-Teil-5.mp3')
+  })
+
+  expect(report.errors).toEqual([
+    { source: 'recordings', message: expect.stringMatching(/"Modelltest-1-Hoeren-Teil-5.mp3".*Teil 5/) },
+    { source: 'recordings', message: expect.stringMatching(/"Modelltest-3-Hoeren-Teil-1.mp3".*exam 3/) },
+  ])
+})
+
+test('a Hören part without a recording is an error', async () => {
+  const report = await buildBroken((book) => {
+    book.recordings = book.recordings.filter((name) => name !== 'Modelltest-2-Hoeren-Teil-4.mp3')
+  })
+
+  expect(report.errors).toEqual([{ source: 'recordings', message: 'Exam 2, Hören Teil 4: no recording found' }])
+})
+
+test('problems in the exam PDF, the answer key and the recordings are all reported in one run', async () => {
+  const report = await buildBroken((book) => {
+    replaceLine(book.examPages, 17, 'Teil 3')
+    replaceLine(book.keyPages, 2, 'Teil 5   27 b   28 b   29 c   30 a', 'Teil 5   27 b   28 b   29 c')
+    book.recordings.push('Bonus track.mp3')
+  })
+
+  expect(report.errors.map((error) => error.source)).toEqual(['exam-pdf', 'answer-key', 'recordings'])
+})
+
+test('a file that is not a PDF is an error', async () => {
+  const files = await writeFixtureBook(fixtureBook())
+  const { report, packDir } = await build(fixtureBook(), {
+    answerKeyPdf: path.join(files.audioDir, 'Modelltest-1-Hoeren-Teil-1.mp3'),
+  })
+
+  expect(packDir).toBeNull()
+  expect(report.errors).toEqual([{ source: 'answer-key', message: expect.stringContaining('cannot be read as a PDF') }])
+})
+
+test('an existing pack is left alone unless the build is told to replace it', async () => {
+  const first = await build()
+  const smaller = fixtureBook()
+  smaller.examPages = smaller.examPages.slice(0, 13)
+  smaller.keyPages = smaller.keyPages.slice(0, 1)
+  smaller.recordings = smaller.recordings.slice(0, 4)
+
+  const refused = await build(smaller, { outDir: first.outDir })
+  expect(refused.packDir).toBeNull()
+  expect(refused.report.errors).toEqual([{ source: 'output', message: expect.stringContaining('already exists') }])
+  expect((await readJson(first.packDir, 'pack.json')).examCount).toBe(2)
+
+  const replaced = await build(smaller, { outDir: first.outDir, replace: true })
+  expect(replaced.report.errors).toEqual([])
+  expect((await readJson(replaced.packDir, 'pack.json')).examCount).toBe(1)
+  // Nothing of the old pack is left behind, and no working folder either.
+  expect(await readdir(first.outDir)).toEqual(['fixture-book'])
+  expect(await readdir(path.join(first.outDir, 'fixture-book', 'exams'))).toEqual(['01'])
 })

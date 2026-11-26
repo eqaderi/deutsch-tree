@@ -43,6 +43,8 @@ export interface PackBuildOptions {
   id?: string
   /** What differs in this book from the defaults in profile.ts. */
   profile?: BookProfileOverrides
+  /** Replace a pack that already has this folder name. Default: refuse. */
+  replace?: boolean
 }
 
 export type ProblemSource = 'profile' | 'exam-pdf' | 'answer-key' | 'recordings' | 'output'
@@ -192,22 +194,51 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
   const profile = resolved.profile
 
   const id = options.id ?? slug(options.name)
+  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) {
+    problem(
+      'output',
+      `"${id}" cannot be a pack's folder name. Give an id made of lower-case letters, digits and hyphens`,
+    )
+    return failed()
+  }
   const packDir = path.join(options.outDir, id)
+  if (!options.replace && (await exists(packDir))) {
+    problem('output', `The pack folder ${packDir} already exists. Remove it, or build again with replace`)
+  }
 
-  const pages = await readPdfText(options.examPdf)
+  let pages: string[]
+  try {
+    pages = await readPdfText(options.examPdf)
+  } catch (error) {
+    problem('exam-pdf', `${options.examPdf} cannot be read as a PDF: ${(error as Error).message}`)
+    return failed()
+  }
+  if (pages.every((text) => text.trim() === '')) {
+    problem('exam-pdf', 'The exam PDF has no text layer, so no heading can be found in it')
+    return failed()
+  }
   const firstPage = profile.examPdf.firstPage
   const lastPage = Math.min(profile.examPdf.lastPage ?? pages.length, pages.length)
   const outline = outlineOf(pages, profile, firstPage, lastPage)
   headings = headingsOf(outline)
   for (const message of outlineErrors(outline, profile, firstPage, lastPage)) problem('exam-pdf', message)
+  // Without exams there is nothing to hold the key and the recordings against.
+  if (outline.length === 0) return failed()
 
+  let keyPages: string[]
+  try {
+    keyPages = await readPdfText(options.answerKeyPdf, profile.answerKey.columns)
+  } catch (error) {
+    problem('answer-key', `${options.answerKeyPdf} cannot be read as a PDF: ${(error as Error).message}`)
+    keyPages = []
+  }
   const key = readAnswerKey(
-    await readPdfText(options.answerKeyPdf, profile.answerKey.columns),
+    keyPages,
     profile,
     outline.map((exam) => exam.number),
   )
   repairs = key.repairs
-  for (const message of key.errors) problem('answer-key', message)
+  if (keyPages.length > 0) for (const message of key.errors) problem('answer-key', message)
 
   const recordings = await matchRecordings(
     options.audioDir,
@@ -246,10 +277,11 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
     }
     await writeFile(path.join(building, PACK_DESCRIPTION_FILE), `${JSON.stringify(description, null, 2)}\n`)
     await writeFile(path.join(building, PACK_ANSWER_KEY_FILE), `${JSON.stringify(answerKey, null, 2)}\n`)
+    if (options.replace) await rm(packDir, { recursive: true, force: true })
     await rename(building, packDir)
   } finally {
     await rm(building, { recursive: true, force: true })
   }
 
-  return { report: { ok: true, errors, headings, repairs }, packDir: (await exists(packDir)) ? packDir : null }
+  return { report: { ok: true, errors, headings, repairs }, packDir }
 }
