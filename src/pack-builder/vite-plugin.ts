@@ -4,17 +4,19 @@
  * the project's `private` folder is about to end up in it:
  *
  *   - code that imports or links a file from the folder,
- *   - a static-files folder that is, holds, or lies inside the folder,
+ *   - a static-files folder that is, holds, or lies inside the folder, or
+ *     holds a link into it,
  *   - a `private` folder in the output.
  *
  * The dev server is not affected. The site on GitHub Pages is built from the
  * repository, which never holds the folder (.gitignore); this guard covers a
  * site built on a computer that has packs.
  */
-import { existsSync, realpathSync } from 'node:fs'
+import { existsSync, readdirSync, realpathSync } from 'node:fs'
 import path from 'node:path'
 import type { Plugin } from 'vite'
-import { PACKS_FOLDER } from '../content-model/pack.ts'
+import { PACK_LIST_FILE, PACKS_FOLDER } from '../content-model/pack.ts'
+import { listPacks } from './pack-list.ts'
 
 const REASON = 'Private packs are never published.'
 
@@ -34,6 +36,14 @@ export function keepPacksOutOfTheSite(): Plugin {
   const isInside = (folder: string, file: string) => {
     const [outer, inner] = [real(folder), real(file)]
     return inner === outer || inner.startsWith(outer + path.sep)
+  }
+  /** The first link in a folder, at any depth, that leads to the private folder or into it. */
+  const linkIntoPacks = (folder: string): string | undefined => {
+    const entries = existsSync(folder) ? readdirSync(folder, { recursive: true, withFileTypes: true }) : []
+    return entries
+      .filter((entry) => entry.isSymbolicLink())
+      .map((entry) => path.join(entry.parentPath, entry.name))
+      .find((link) => isInside(packsDir, link) || isInside(link, packsDir))
   }
   /** The file a module id or asset name stands for, without `?query` and virtual-module marks. */
   const fileOf = (id: string) => path.resolve(root, id.replace(/^\0+/, '').replace(/[?#].*$/, ''))
@@ -70,6 +80,11 @@ export function keepPacksOutOfTheSite(): Plugin {
           `The static-files folder ${publicDir} would copy ${packsDir} into the site. ${REASON} Use a folder that does not hold the private folder.`,
         )
       }
+      // A link inside the static-files folder is copied as what it points at.
+      const linked = publicDir && linkIntoPacks(publicDir)
+      if (linked) {
+        throw new Error(`${linked} in the static-files folder leads into ${packsDir}. ${REASON} Remove the link.`)
+      }
       if (isInside(packsDir, outDir)) {
         throw new Error(`The site cannot be built into ${outDir}: that is the private folder. ${REASON}`)
       }
@@ -96,6 +111,34 @@ export function keepPacksOutOfTheSite(): Plugin {
       if (existsSync(path.join(outDir, PACKS_FOLDER))) {
         throw new Error(`${path.join(outDir, PACKS_FOLDER)} exists: the built site holds a private folder. ${REASON}`)
       }
+    },
+  }
+}
+
+/**
+ * Lets `pnpm dev` find the packs with nothing to set up: it answers
+ * private/packs.json from the folder as it is now, so a pack built or copied
+ * in appears on the next reload. The packs' own files are served from the
+ * folder like every other file of the project. Not part of a build.
+ */
+export function packsOnTheDevServer(): Plugin {
+  return {
+    name: 'deutsch-tree:packs-on-the-dev-server',
+    apply: 'serve',
+    configureServer(server) {
+      const listUrl = `/${PACKS_FOLDER}/${PACK_LIST_FILE}`
+      server.middlewares.use(async (request, response, next) => {
+        const { pathname } = new URL(request.url ?? '/', 'http://localhost')
+        if (pathname !== listUrl) return next()
+        try {
+          const list = await listPacks(path.resolve(server.config.root, PACKS_FOLDER))
+          response.setHeader('content-type', 'application/json; charset=utf-8')
+          response.setHeader('cache-control', 'no-store')
+          response.end(JSON.stringify(list))
+        } catch (error) {
+          next(error)
+        }
+      })
     },
   }
 }

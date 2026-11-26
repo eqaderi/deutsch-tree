@@ -27,6 +27,8 @@ process.env.BROWSER_TEST_PORT ??= String(await freePort())
 const port = process.env.BROWSER_TEST_PORT
 const siteUrl = `http://127.0.0.1:${port}/deutsch-tree/`
 const siteDir = '.browser-test/site'
+// The fixture pack, served as the private folder of the site under /local/ (tests/browser/serve-site.ts).
+const packsDir = '.browser-test/packs'
 
 export default defineConfig({
   testDir: 'tests/browser',
@@ -45,7 +47,11 @@ export default defineConfig({
     { name: 'computer', use: { ...devices['Desktop Chrome'] } },
   ],
   webServer: {
-    command: `pnpm exec vite build --outDir ${siteDir} --emptyOutDir && node tests/browser/serve-site.ts ${siteDir} ${port}`,
+    command: [
+      `pnpm exec vite build --outDir ${siteDir} --emptyOutDir`,
+      `node tests/browser/fixture-pack.ts ${packsDir}`,
+      `node tests/browser/serve-site.ts ${siteDir} ${port} ${packsDir}`,
+    ].join(' && '),
     env: { CONTENT_DIR: 'tests/fixtures/content' },
     url: siteUrl,
     reuseExistingServer: false,

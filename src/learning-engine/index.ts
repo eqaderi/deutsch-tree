@@ -588,6 +588,69 @@ export function isScore(value: unknown): value is number {
 }
 
 /**
+ * Lesen and Hören: right items brought to a score out of 100, in whole
+ * points. Every item counts the same, so 27 of 30 is 90.
+ */
+export function examScore(correct: number, total: number): number {
+  return total === 0 ? 0 : Math.round((correct / total) * MAXIMUM_SCORE)
+}
+
+/** The right answer to one item of an answer sheet, as a book's answer key gives it. */
+export interface KeyedAnswer {
+  /** The item's number as printed, for example 7. */
+  item: number
+  answer: string
+}
+
+/** One item of a checked answer sheet. */
+export interface SheetItemResult {
+  item: number
+  /** What the learner marked; undefined for an item left empty. */
+  given: string | undefined
+  right: string
+  correct: boolean
+}
+
+export interface SheetResult {
+  total: number
+  correct: number
+  /** Out of 100. */
+  score: number
+  /** In the order of the key. */
+  items: SheetItemResult[]
+}
+
+/**
+ * Checks an answer sheet (a private pack's part) against the book's answer
+ * key. `given` holds the learner's choice by item number; an empty item is
+ * wrong. A choice is right when it is the key's, spelled the same.
+ */
+export function scoreAnswerSheet(
+  key: readonly KeyedAnswer[],
+  given: Readonly<Partial<Record<number, string>>>,
+): SheetResult {
+  const items = key.map(({ item, answer }) => ({
+    item,
+    given: given[item],
+    right: answer,
+    correct: given[item] === answer,
+  }))
+  const correct = items.filter((item) => item.correct).length
+  return { total: items.length, correct, score: examScore(correct, items.length), items }
+}
+
+/** A module (Lesen, Hören) over the results of its parts: right items of all parts, and the score out of 100. */
+export function scoreModule(parts: ReadonlyArray<{ total: number; correct: number }>): {
+  total: number
+  correct: number
+  score: number
+} {
+  const total = parts.reduce((sum, part) => sum + part.total, 0)
+  const correct = parts.reduce((sum, part) => sum + part.correct, 0)
+  return { total, correct, score: examScore(correct, total) }
+}
+
+/**
  * What the learner typed into a score field: the score, 'none' for an empty
  * field (the module is not recorded), or 'invalid' for anything that is not
  * a whole number from 0 to 100. Persian and Arabic digits are read too.

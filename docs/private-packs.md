@@ -4,6 +4,7 @@ A pack is a folder of practice exams from a book the learner owns. It lives in
 `private/<pack id>/` inside the project and is never published.
 
 - [Pack format](#pack-format): what the folder contains. Read this to load a pack in the app.
+- [Finding packs in the app](#finding-packs-in-the-app): how the app detects packs, and what a start file must provide.
 - [Building a pack](#building-a-pack): the command that makes one from a book's files.
 - [Book profile](#book-profile): what to tell the command about a book that is laid out differently.
 - [When a real book does not build](#when-a-real-book-does-not-build)
@@ -15,11 +16,12 @@ Three things keep a pack on the learner's computer:
 1. `.gitignore` ignores `private/`, so a pack cannot be committed.
 2. The published site is built by GitHub Actions from the repository, which never holds `private/`.
 3. `keepPacksOutOfTheSite` in `src/pack-builder/vite-plugin.ts` fails `pnpm build` when code
-   imports or links a file from `private/`, when the static-files folder would copy it, or when
-   the output holds a `private` folder. The dev server is not affected.
+   imports or links a file from `private/`, when the static-files folder would copy it or holds a
+   link into it, or when the output would hold a `private` folder. The dev server is not affected.
 
 Tests for all three are in `tests/pack-builder/private-folder.test.ts`. Tests write packs to a
-temporary folder, never to the repository's `private/`.
+temporary folder, never to the repository's `private/`. The browser test
+`tests/browser/private-packs.spec.ts` also checks that the built site answers no pack file.
 
 ## Pack format
 
@@ -28,6 +30,7 @@ The schema and the types are in `src/content-model/pack.ts` (`packDescriptionSch
 
 ```
 private/
+  packs.json                which packs the folder holds (see below)
   my-book/                  the pack id is the folder name
     pack.json               the description
     answers.json            the answer key
@@ -167,11 +170,22 @@ with another profile has other modules, parts and choices.
 - `repairs` lists the places where the book's key prints a wrong item number. The answers above
   are already right. The list is for checking those places against the book by hand.
 
-### What the format leaves to the loader
+### packs.json
 
-- The builder writes no list of packs. Finding the folders under `private/` is the loader's job.
-- The pages are PDF, not pictures. The exam view decides how to show pages `first` to `last`
-  of `pagesFile`.
+```json
+{ "format": 1, "packs": ["my-book", "other-book"] }
+```
+
+The ids of the packs in the folder, in name order: every subfolder whose name is a pack id and that
+holds a `pack.json`. A browser cannot list a folder, so this file is how the app finds the packs
+(`packListSchema`). Nobody writes it by hand: the builder rewrites it after every build
+(`writePackList` in `src/pack-builder/pack-list.ts`), and the dev server answers it from the folder
+as it is.
+
+### What the format leaves to the app
+
+- The pages are PDF, not pictures. The exam view draws pages `first` to `last` of `pagesFile`
+  with PDF.js (`src/app/BookPages.tsx`).
 
 ### A pack for tests
 
@@ -193,7 +207,41 @@ const { packDir } = await buildPack({
 ```
 
 That pack has two exams of twelve pages each with the full B1 structure, eight silent MP3
-recordings, and one repair. Its right answers are the lines of `fixtureBook()`.
+recordings, and one repair. Its right answers are the lines of `fixtureBook()`. The browser tests
+build it with `tests/browser/fixture-pack.ts` and serve it as the `private` folder of the site
+under `/local/` (`tests/browser/serve-site.ts`).
+
+## Finding packs in the app
+
+The pack loader (`src/pack-loader/index.ts`) runs in the browser. It requests
+`private/packs.json` beside the page's `index.html`, then each listed pack's `pack.json`, and the
+answer key when a module is opened. There is nothing to configure:
+
+| Where the app runs | What answers `private/packs.json` |
+|---|---|
+| `pnpm dev` | `packsOnTheDevServer` (`src/pack-builder/vite-plugin.ts`), from the project's `private/` as it is now. |
+| A folder served by a start file | The file itself, which `pnpm pack:build` wrote. |
+| The public site | Nothing: a 404. The app finds no pack and explains where to put one. |
+
+Anything that is not a readable list (a 404, an HTML page, another `format`) counts as no pack.
+A listed pack whose `pack.json` cannot be read is shown by its folder name as unreadable.
+
+**What a start file (#32) must provide.** Serve one folder over HTTP that holds the built site
+(`dist/`: `index.html`, `assets/`, `content/`, `pdfjs/`) and, beside `index.html`, the `private/`
+folder with the packs and their `packs.json`. Pages, recordings and JSON files are requested with
+plain GET requests, relative to the page, so the folder may sit under any path and a phone on the
+same network uses it the same way. A start file should rewrite `private/packs.json` when it starts,
+from the subfolders that hold a `pack.json`, so that a pack copied in by hand is found too.
+Recordings play best from a server that answers partial requests (`Range`), which iPhones need to
+seek.
+
+The views: `#/packs` (`src/app/PacksPage.tsx`) lists the packs, or explains where to put one;
+`#/packs/<pack>/<exam>/<module>?part=<n>` (`src/app/PackExamPage.tsx`) shows the part's pages
+beside its answer sheet (`src/app/AnswerSheet.tsx`) and its recordings. Each part is scored on its
+own (`scoreAnswerSheet` in the learning engine), and the module out of 100 once every part is
+checked (`scoreModule`, `examScore`). Results are not saved in the progress. The view and PDF.js
+load only when it is opened. PDF.js's fonts, character maps and decoders are copied into the site
+under `pdfjs/` (`src/pack-loader/vite-plugin.ts`), so no request goes to another server.
 
 ## Building a pack
 

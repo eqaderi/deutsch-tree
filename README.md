@@ -60,6 +60,7 @@ ending, because the pipeline runs directly in Node.
 | `tests/browser/` | Seam 3: whole journeys in a browser. |
 | `src/pack-builder/` | A learner's own exam book in, a private pack out. `cli.ts` is the command; `vite-plugin.ts` keeps packs out of the site build. The pack format's schema is `src/content-model/pack.ts`. |
 | `tests/pack-builder/` | Seam 4: build a pack from a synthetic book (`fixture.ts`) and assert on the pack. |
+| `src/pack-loader/` | Finds the private packs in the browser (`private/packs.json`, then each `pack.json`) and hands them to the private exam view (`#/packs`, `src/app/PacksPage.tsx` and `PackExamPage.tsx`). How detection works and what a start file must serve: [docs/private-packs.md](docs/private-packs.md), "Finding packs in the app". |
 
 The app never reads node files. It fetches files that the pipeline writes at
 build time, each only on the page that shows it:

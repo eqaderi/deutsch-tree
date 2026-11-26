@@ -1,10 +1,10 @@
 import { execFile } from 'node:child_process'
-import { mkdir, mkdtemp, readdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, mkdtemp, readdir, readFile, symlink, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { promisify } from 'node:util'
-import { build, type InlineConfig } from 'vite'
+import { build, type InlineConfig, type Plugin } from 'vite'
 import { expect, test } from 'vitest'
 import { keepPacksOutOfTheSite } from '../../src/pack-builder/vite-plugin.ts'
 
@@ -74,4 +74,24 @@ test('a site build fails when the private folder would be copied in as static fi
 
   await expect(buildSite(root, { publicDir: 'private' })).rejects.toThrow(NEVER_PUBLISHED)
   await expect(buildSite(root, { publicDir: '.' })).rejects.toThrow(NEVER_PUBLISHED)
+})
+
+test('a site build fails when the static-files folder holds a link to the private folder', async () => {
+  const root = await siteWithPack('document.title = "site"')
+  await mkdir(path.join(root, 'public'))
+  await symlink(path.join(root, 'private'), path.join(root, 'public', 'packs'))
+
+  await expect(buildSite(root)).rejects.toThrow(NEVER_PUBLISHED)
+})
+
+test('a site build fails when a step of the build would write into a private folder of the site', async () => {
+  const root = await siteWithPack('document.title = "site"')
+  const writesPack: Plugin = {
+    name: 'writes-a-pack',
+    generateBundle() {
+      this.emitFile({ type: 'asset', fileName: 'private/some-pack/pack.json', source: SECRET })
+    },
+  }
+
+  await expect(buildSite(root, { plugins: [keepPacksOutOfTheSite(), writesPack] })).rejects.toThrow(NEVER_PUBLISHED)
 })
