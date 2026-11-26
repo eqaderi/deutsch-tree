@@ -1,5 +1,5 @@
-import type { NodeKind, Question } from '../content-model/index.ts'
-import type { AnswerNote } from '../learning-engine/index.ts'
+import type { ExamAudience, ExamLinkKind, NodeKind, Question } from '../content-model/index.ts'
+import type { AnswerNote, ExamModule } from '../learning-engine/index.ts'
 
 /**
  * Every word the interface shows. Components never hold their own wording;
@@ -146,6 +146,81 @@ export const en = {
     'umlaut-substitute': 'Accepted. The exact spelling has ä, ö, ü or ß.',
     capitalisation: 'Accepted. Mind the capital and small letters.',
   } satisfies Record<AnswerNote, string>,
+
+  // The readiness view: whether the learner can book the exam, and what is missing.
+  readiness: 'Readiness',
+  readinessTitle: 'Ready for the exam?',
+  readinessRule: (score: number, exams: number) =>
+    `You are ready when you have ${score} or more in every module on ${exams} official mock exams.`,
+  ready: 'Ready',
+  readyText: (score: number, exams: number) =>
+    `You have ${score} or more in every module on ${exams} official mock exams. You can book the exam.`,
+  notReady: 'Not ready yet',
+  /** Follows the number of exams that reached the target, which is shown large: "1 of 2 official mock exams with…". */
+  ofExamsAtTarget: (needed: number, score: number) =>
+    `of ${needed} official mock exams with ${score} or more in every module`,
+  whatIsMissing: 'What is missing',
+  examsStillNeeded: (count: number, score: number) =>
+    count === 1
+      ? `1 more official mock exam with ${score} or more in every module`
+      : `${count} more official mock exams with ${score} or more in every module`,
+  /** One module of an exam that keeps it from counting. A whole sentence: several follow each other. */
+  moduleBelow: (module: string, score: number, target: number) => `${module}: ${score}, needs ${target}.`,
+  moduleNotRecorded: (module: string) => `${module}: not recorded.`,
+  examModules: {
+    reading: 'Reading',
+    listening: 'Listening',
+    writing: 'Writing',
+    speaking: 'Speaking',
+  } satisfies Record<ExamModule, string>,
+
+  // The end of the tree.
+  examStopTitle: 'The exam',
+  examStopWarning: 'Keep the official mock exams unseen until your final check.',
+  openReadiness: 'Readiness and official mock exams',
+
+  // The warning. It must be hard to miss in every language.
+  keepUnseenTitle: 'Keep these exams unseen',
+  keepUnseenText:
+    'Only a few official mock exams exist, and you need two of them. An exam tests you only the first time you see it. Do not open one, not even for a look, before you have finished the topics and the mock exams of this site.',
+  keepUnseenThen: 'Then take each exam once, with a clock, like the real exam, and record your scores here.',
+
+  officialMockExams: 'Official mock exams',
+  officialMockExamsIntro:
+    'These are the practice sets of the exam’s own institute. This site only links to them. Every link opens another website.',
+  spareSets: 'Spare sets',
+  spareSetsIntro:
+    'Sets for young people. The format and the scoring are the same as for adults; the topics come from school life. Use one only when an adult set is used up.',
+  examAudiences: { adults: 'Adults', youth: 'Young people' } satisfies Record<ExamAudience, string>,
+  spareCounts: 'Counts toward readiness like an adult set.',
+  doesNotCount: 'Scores on this set do not count toward readiness.',
+
+  examNotRecorded: 'No scores recorded yet',
+  examAtTarget: (score: number) => `Target reached: ${score} or more in every module`,
+  examBelowTarget: 'Target not reached yet',
+  /** In place of a module's score. */
+  scoreNotRecorded: 'not recorded',
+  recordScores: 'Record scores',
+  changeScores: 'Change scores',
+  scoreHint: (maximum: number) =>
+    `Points out of ${maximum} for each module. Leave a field empty until you have done that module.`,
+  scoreInvalid: (maximum: number) => `A score is a whole number from 0 to ${maximum}.`,
+  saveScores: 'Save scores',
+
+  showExamLinks: 'Show the links to this exam',
+  hideExamLinks: 'Hide the links',
+  finalCheckQuestion: 'Is this your final check?',
+  finalCheckText:
+    'You can see this exam for the first time only once. Open it only when you are ready to take it as your final check.',
+  finalCheckYes: 'Yes, show the links',
+  finalCheckNotYet: 'Not yet',
+  examLinkKinds: {
+    papers: 'Exam papers (PDF)',
+    audio: 'Listening recordings',
+    online: 'Online version',
+  } satisfies Record<ExamLinkKind, string>,
+  candidatePagesOnly: (first: number, last: number) =>
+    `Use pages ${first} to ${last} only. The pages after them hold the answers, the texts of the recordings and sample answers.`,
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */

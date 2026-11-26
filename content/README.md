@@ -107,6 +107,40 @@ the first node of the next chapter.
 - A new level such as B2 is new chapters with `level: B2` after the B1
   chapters, and node files that name them. No code changes.
 
+## Official mock exams
+
+`content/official-mock-exams.yaml` lists the official mock exams of the
+Goethe-Zertifikat B1, in the order the readiness view shows them. The app
+links to them. It never hosts or copies them, so this file holds addresses
+and a few words about them, and nothing of an exam itself.
+
+```yaml
+- id: goethe-b1-modellsatz-erwachsene   # stable for ever: a learner's recorded scores are kept under it
+  title: Zertifikat B1 Modellsatz Erwachsene   # the set's own German name
+  publisher: Goethe-Institut
+  audience: adults                      # adults | youth; youth sets are listed as "Spare sets"
+  countsTowardReadiness: true           # false: scores can be recorded but do not count
+  links:                                # at least one
+    - kind: papers                      # papers (a PDF) | audio (the recordings) | online
+      url: https://…                    # a full https address
+      candidatePages: { first: 7, last: 28 }   # optional: the PDF pages before the answers
+      checked: 2026-11-26               # optional: the day someone last saw the link work
+      note: { en: …, fa: …, de: … }     # optional: one or two sentences, e.g. where on the page
+```
+
+- To correct a link, change its `url` and set `checked` to today. A link
+  without `checked` has not been confirmed by anyone; the file marks those
+  with a comment.
+- To add an exam, add an entry. Never change the `id` of an exam that is
+  already published: learners would lose the scores they recorded for it.
+- `candidatePages` makes the page tell the learner to stay inside those pages
+  of the PDF, because the pages after them hold the answers.
+- `countsTowardReadiness` is a product decision, not a technical one: it says
+  whether 90 or more in every module on this set is one of the two that the
+  readiness rule asks for. At least two entries must count.
+- A `note` follows the two conventions above: three languages, and German
+  (also a name in Latin letters inside the Persian) in asterisks.
+
 ## A published grammar node
 
 Add all five sections. The page shows them in this fixed order: rule, table,
@@ -260,6 +294,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   one node.
 - A published node with no review record, or whose questions or answers
   changed after its review. A `coming-soon` node needs none.
+- A list of official mock exams that is missing, has a link that is not a
+  full `https://` address, has an exam without a link, has two exams with one
+  id, or has fewer than two exams that count toward readiness.
 
 ## Adding a check (for people who change the code)
 
