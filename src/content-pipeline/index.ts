@@ -15,6 +15,8 @@ import {
   type CompiledNode,
   type ContentBundle,
   chaptersFileSchema,
+  type ExamTask,
+  type ExamTaskContent,
   type FindErrorQuestion,
   GAP,
   type GrammarContent,
@@ -30,6 +32,7 @@ import {
   type RichText,
   WORD,
 } from '../content-model/index.ts'
+import { hasPool, isAssistantGraded } from '../content-model/scoring.ts'
 import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
@@ -120,7 +123,10 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
     ok: errors.length === 0,
     errors,
     nodes: { total: nodes.length, published, comingSoon: nodes.length - published },
-    questions: nodes.reduce((sum, node) => sum + (node.content?.questions.length ?? 0), 0),
+    questions: nodes.reduce(
+      (sum, node) => sum + (node.content && hasPool(node.content) ? node.content.questions.length : 0),
+      0,
+    ),
   }
 
   return {
@@ -318,7 +324,14 @@ function compileNode(file: NodeFile): CompiledNode {
     ...(file.examTasks !== undefined && { examTasks: file.examTasks }),
   }
   // Drafts inside a "coming soon" file are checked but never shipped.
-  return { ...summary, content: file.status === 'published' ? compileGrammarContent(file) : null }
+  if (file.status !== 'published') return { ...summary, content: null }
+  return { ...summary, content: isAssistantGraded(file) ? compileTaskContent(file) : compileGrammarContent(file) }
+}
+
+/** A writing or speaking node: its task, with the module and the part that say which task it is. */
+function compileTaskContent(file: NodeFile): ExamTaskContent {
+  // The schema guarantees the module, the part, and the fields of that part's task.
+  return { task: { module: file.module, part: file.part, ...file.task } as ExamTask }
 }
 
 function compileGrammarContent(file: NodeFile): GrammarContent {

@@ -42,6 +42,7 @@ ending, because the pipeline runs directly in Node.
 | `src/search/` | Search as pure functions: the node summaries and the search data of one language in, the nodes found for a query out. It decides how typed text meets content (umlauts, capitals, Persian letter forms). No interface, no loading. |
 | `src/vocabulary-scope/` | Which words are in scope: the extracted word lists in, the scope list in `content/vocabulary/` out. `SCOPE_RULE` is the one setting that decides it. `approval.ts` writes the lists of the vocabulary approval document. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress, name the milestones reached. No interface, no storage; randomness is passed in. |
+| `src/assistant-grading/` | Writing and speaking, which the app cannot score: the official marking criteria (`criteria.ts`), the task as the learner reads it, the prompt to paste into an AI assistant, and the rule for the score out of 100. Pure functions on a task; the app calls no AI service. |
 | `src/progress-store/` | Keeps progress in browser storage, with a version number, and writes and reads the progress file a learner exports. It reads every older version and refuses a newer one. It only stores; the learning engine decides how progress changes. |
 | `src/app/` | App shell: routes, tree, node page, test, backup, search page, overview page. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
@@ -50,6 +51,7 @@ ending, because the pipeline runs directly in Node.
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/vocabulary-scope/` | The scope rule and the corrections, on invented rows of a word list. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
+| `tests/assistant-grading/` | The prompt and the score rule, on invented tasks (`tasks.ts`). The expected criteria and points are written out from the official score sheets. |
 | `tests/search/` | Search on a small invented catalogue (`catalogue.ts`): what a query finds, in which order, and which passage a result shows. |
 | `tests/progress-store/` | The progress store on a stand-in for browser storage, and the progress file. `older-versions.test.ts` holds text saved by each earlier version. |
 | `tests/language/` | The interface strings of the three languages, compared key by key. |
@@ -95,6 +97,24 @@ GitHub Pages and from a local folder.
   each. A node without a pool gives none. `scoreCheckpoint` reports the nodes
   with wrong answers. A checkpoint is advice: it never reads or changes the
   progress. What a node gives to it is `checkpointPool` in that file.
+- A writing or speaking node has no test of questions. Its page
+  (`src/app/ExamTaskPage.tsx`) shows the task, a button that copies a prompt
+  for an AI assistant, and a box for the score that comes back;
+  `applyEnteredScore` keeps the score and marks the node done at 90 of 100.
+  The three pieces (`TaskSheetView`, `CopyPrompt`, `ScoreEntry` in
+  `src/app/AssistantGrading.tsx`) know nothing of nodes or progress, and the
+  prompt comes from `assistantPrompt(task, language)` in
+  `src/assistant-grading/`, so a mock exam can use them for its own tasks.
+  The app only copies text; it never calls an AI service.
+- The score of one task is its points brought to a scale of 100
+  (`src/assistant-grading/score.ts`). Schreiben: the share of the task's own
+  points (40, 40, 20). Sprechen: the part's criteria count for 84 points and
+  pronunciation, rated on that part alone, for its official 16. The prompt
+  states the same rule to the assistant.
+- Whether a node has a pool or is graded by an assistant: `hasPool` and
+  `isAssistantGraded` in `src/content-model/scoring.ts`. The app imports
+  these from that file, not from `index.ts`, which holds the schema that only
+  the pipeline needs.
 - Progress: read it with `useProgress()` and change it with
   `updateProgress((progress) => …)` from `src/app/progress.ts`, where the
   function comes from the learning engine.
@@ -109,7 +129,9 @@ GitHub Pages and from a local folder.
   `SAVED_VERSION`, and add the old text to
   `tests/progress-store/older-versions.test.ts`. It is then saved, exported
   and imported with no other code. To reshape something already saved, also
-  add a step to `UPGRADES`. The top of that file has the full steps.
+  add a step to `UPGRADES`. The top of that file has the full steps. A field
+  inside a node that may be absent (`scores`, the scores typed in for a
+  writing or speaking node) is a line in `readNodes` and needs no new version.
 - An app never loads progress from a newer version than its own: an import is
   refused with the reason, and such progress found in browser storage is left
   untouched while the page asks for a reload.

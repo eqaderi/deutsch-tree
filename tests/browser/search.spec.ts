@@ -102,7 +102,7 @@ test('the tree loads no search data; search loads it, and only in the language o
 
   await page.getByRole('link', { name: 'Search' }).click()
   await page.getByRole('searchbox').fill('fixture')
-  await expect(results(page)).toHaveCount(8)
+  await expect(results(page)).toHaveCount(10)
 
   expect(loaded).toEqual(['index.json', 'search/en.json'])
 })
@@ -137,12 +137,12 @@ test('in Persian, search takes Persian as a learner types it, and shows the Germ
 
 test('search fits the screen it is opened on, in English and in Persian', async ({ page }) => {
   await page.goto('./#/search?q=fixture')
-  await expect(results(page)).toHaveCount(8)
+  await expect(results(page)).toHaveCount(10)
   await expect(page.getByRole('searchbox')).toBeInViewport()
   expect(await sidewaysScroll(page)).toBe(0)
 
   await page.getByRole('button', { name: 'فارسی' }).click()
   await page.getByRole('searchbox').fill('آزمایشی')
-  await expect(results(page)).toHaveCount(8)
+  await expect(results(page)).toHaveCount(10)
   expect(await sidewaysScroll(page)).toBe(0)
 })
