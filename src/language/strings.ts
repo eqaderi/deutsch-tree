@@ -93,6 +93,19 @@ export const en = {
   test: 'Test',
   takeTheTest: 'Take the test',
   comingSoonPage: 'This topic is not written yet. It will appear here when it is ready.',
+  // The export of words to Anki, on a vocabulary page.
+  ankiTitle: 'Flashcards for Anki',
+  ankiText:
+    'Save the words as a file for Anki, a flashcard app that shows you each word again just before you would forget it. In Anki, choose File, then Import, and open the file. If you import a newer file later, Anki updates the cards you already have instead of adding them again. You need Anki 2.1.54 or newer.',
+  ankiThisTopic: 'Download this topic',
+  ankiStartedTopics: 'Download all started topics',
+  ankiStartedCount: (count: number) =>
+    count === 1 ? '1 vocabulary topic started' : `${count} vocabulary topics started`,
+  ankiNoneStarted:
+    'You have not started a vocabulary topic yet. A topic counts as started once you have taken its test.',
+  /** The name of the file follows on a line of its own. */
+  ankiSavedAs: 'The cards are in this file:',
+  ankiLoadFailed: 'The words could not be loaded. Check your connection and try again.',
   // A vocabulary topic: its words, each with article, plural, word class, level, meaning and example.
   words: 'Words',
   plural: 'Plural',

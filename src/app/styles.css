@@ -1179,6 +1179,12 @@ main.wrap {
   color: var(--text-secondary);
 }
 
+/* The export to Anki: what the export of started topics holds, or why it holds nothing yet. */
+.anki-note {
+  margin-block-start: 8px;
+  font-size: 14px;
+}
+
 .mistake {
   border-radius: var(--radius-card);
   background: var(--raised);

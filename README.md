@@ -43,6 +43,7 @@ ending, because the pipeline runs directly in Node.
 | `src/vocabulary-scope/` | Which words are in scope: the extracted word lists in, the scope list in `content/vocabulary/` out. `SCOPE_RULE` is the one setting that decides it. `approval.ts` writes the lists of the vocabulary approval document. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress, name the milestones reached. No interface, no storage; randomness is passed in. |
 | `src/assistant-grading/` | Writing and speaking, which the app cannot score: the official marking criteria (`criteria.ts`), the task as the learner reads it, the prompt to paste into an AI assistant, and the rule for the score out of 100. Pure functions on a task; the app calls no AI service. |
+| `src/anki-export/` | Vocabulary words in, the text of a file that Anki imports out. Pure functions; the app saves the file in the browser. |
 | `src/progress-store/` | Keeps progress in browser storage, with a version number, and writes and reads the progress file a learner exports. It reads every older version and refuses a newer one. It only stores; the learning engine decides how progress changes. |
 | `src/app/` | App shell: routes, tree, node page, test, backup, search page, overview page. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
@@ -51,6 +52,7 @@ ending, because the pipeline runs directly in Node.
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/vocabulary-scope/` | The scope rule and the corrections, on invented rows of a word list. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
+| `tests/anki-export/` | The exact text of the Anki file for a few invented words, in each language. |
 | `tests/assistant-grading/` | The prompt and the score rule, on invented tasks (`tasks.ts`). The expected criteria and points are written out from the official score sheets. |
 | `tests/search/` | Search on a small invented catalogue (`catalogue.ts`): what a query finds, in which order, and which passage a result shows. |
 | `tests/progress-store/` | The progress store on a stand-in for browser storage, and the progress file. `older-versions.test.ts` holds text saved by each earlier version. |
@@ -148,6 +150,18 @@ GitHub Pages and from a local folder.
   `src/app/VocabularySections.tsx`. The words, as `VocabularyWord`, are what
   an export (Anki) or audio of words reads; `asLearned(word)` is the word
   with its article, as it is said and asked.
+- A vocabulary page ends with the export to Anki (`src/app/AnkiExport.tsx`):
+  the words of that node, or of every vocabulary node the learner has
+  started, as a file the browser saves. "Started" is `startedVocabulary` in
+  the learning engine: published, and done or in progress by `nodeState`.
+  The other nodes' files are fetched only when the learner asks for that
+  export. The file is `ankiText(words, language)` in `src/anki-export/`:
+  Anki's plain-text import with file headers (Anki 2.1.54 or newer), one
+  Basic note per word, the word with its article in front, the meaning in
+  the page's language (the German definition in simple German; Persian
+  marked right to left) and the example on the back. Each note has a GUID
+  made from its word, so an updated file updates the cards instead of
+  copying them. The top of that file says why each header is there.
 - Whether a node has a pool or is graded by an assistant: `hasPool` and
   `isAssistantGraded` in `src/content-model/scoring.ts`; which page it has:
   `isGrammar`, `isVocabulary`. The app imports

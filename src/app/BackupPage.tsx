@@ -1,7 +1,8 @@
 import { type ChangeEvent, useEffect, useRef, useState } from 'react'
 import { useLanguage } from '../language/index.tsx'
 import { doneCount, hasProgress, type Progress } from '../learning-engine/index.ts'
-import { exportProgress, importProgress, type ProgressFile, type ReadProblem } from '../progress-store/index.ts'
+import { exportProgress, importProgress, type ReadProblem } from '../progress-store/index.ts'
+import { download } from './download.ts'
 import { acknowledgeMilestonesOf } from './milestones.ts'
 import { BackToTree } from './NotFound.tsx'
 import { progressProblem, updateProgress, useProgress } from './progress.ts'
@@ -28,7 +29,7 @@ export function BackupPage() {
 
   function exportToFile() {
     const file = exportProgress(progress, new Date())
-    download(file)
+    download(file, 'application/json')
     acknowledgeMilestonesOf(progress)
     setOutcome({ step: 'exported', fileName: file.name })
   }
@@ -172,17 +173,4 @@ function ReplaceWarning({ here, inFile, exported, onReplace, onCancel }: Replace
       </div>
     </div>
   )
-}
-
-/** Hands a file to the browser to save. It never leaves the device. */
-function download(file: ProgressFile): void {
-  const address = URL.createObjectURL(new Blob([file.text], { type: 'application/json' }))
-  const link = document.createElement('a')
-  link.href = address
-  link.download = file.name
-  document.body.append(link)
-  link.click()
-  link.remove()
-  // Not at once: some browsers start the download a moment after the click.
-  window.setTimeout(() => URL.revokeObjectURL(address), 60_000)
 }

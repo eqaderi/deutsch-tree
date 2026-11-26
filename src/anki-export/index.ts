@@ -50,9 +50,7 @@ const HEADERS = [
  * the example alone.
  */
 export function ankiText(words: readonly VocabularyWord[], language: Language): string {
-  const notes = words.map((word) =>
-    [asLearned(word), back(word, language), NAME, noteId(word)].map(field).join('\t'),
-  )
+  const notes = words.map((word) => [asLearned(word), back(word, language), NAME, noteId(word)].map(field).join('\t'))
   return `${[...HEADERS, ...notes].join('\n')}\n`
 }
 

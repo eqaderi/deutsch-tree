@@ -17,7 +17,11 @@ const GRUESSEN = word({
   class: 'verb',
   meaning: { en: 'to say "hello"\tto greet', fa: '«سلام» گفتن' },
   definition: 'jemandem „Hallo“ sagen',
-  example: { de: 'Er sagt: "Hallo & guten Tag!"', en: 'He says: "Hello & good day!" <smiles>', fa: 'او می‌گوید: «سلام و روز بخیر!»' },
+  example: {
+    de: 'Er sagt: "Hallo & guten Tag!"',
+    en: 'He says: "Hello & good day!" <smiles>',
+    fa: 'او می‌گوید: «سلام و روز بخیر!»',
+  },
 })
 const WORDS = [MAEDCHEN, GRUESSEN]
 
