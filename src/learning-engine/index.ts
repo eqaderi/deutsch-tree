@@ -214,6 +214,25 @@ export interface Readiness {
   exams: ExamReadiness[]
 }
 
+/** How one official mock exam stands, from what the learner recorded for it. */
+export function examStanding(progress: Progress, examId: string): ExamReadiness {
+  const scores = officialExamScores(progress, examId)
+  const below: ExamReadiness['below'] = []
+  const notRecorded: ExamModule[] = []
+  for (const module of EXAM_MODULES) {
+    const score = scores[module]
+    if (score === undefined) notRecorded.push(module)
+    else if (score < READINESS_SCORE) below.push({ module, score })
+  }
+  return {
+    id: examId,
+    started: notRecorded.length < EXAM_MODULES.length,
+    met: below.length === 0 && notRecorded.length === 0,
+    below,
+    notRecorded,
+  }
+}
+
 /**
  * The readiness rule: 90 or more in every module on two official mock exams,
  * as recorded by the learner. `officialExamIds` are the exams that count, in
@@ -221,23 +240,7 @@ export interface Readiness {
  * ignored.
  */
 export function readiness(progress: Progress, officialExamIds: readonly string[]): Readiness {
-  const exams = officialExamIds.map((id): ExamReadiness => {
-    const scores = officialExamScores(progress, id)
-    const below: ExamReadiness['below'] = []
-    const notRecorded: ExamModule[] = []
-    for (const module of EXAM_MODULES) {
-      const score = scores[module]
-      if (score === undefined) notRecorded.push(module)
-      else if (score < READINESS_SCORE) below.push({ module, score })
-    }
-    return {
-      id,
-      started: notRecorded.length < EXAM_MODULES.length,
-      met: below.length === 0 && notRecorded.length === 0,
-      below,
-      notRecorded,
-    }
-  })
+  const exams = officialExamIds.map((id) => examStanding(progress, id))
   const met = exams.filter((exam) => exam.met).length
   return {
     ready: met >= READINESS_EXAMS,

@@ -4,6 +4,7 @@ import type { ChapterSummary, NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { isDone } from '../learning-engine/index.ts'
 import { loadIndex } from './content.ts'
+import { ExamStop } from './ExamStop.tsx'
 import { RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { useProgress } from './progress.ts'
@@ -52,7 +53,9 @@ export function TreePage() {
           </Fragment>
         ))}
         <span className="strip-line" aria-hidden="true" />
-        <span className="strip-end">{strings.routeExam}</span>
+        <Link to="/readiness" className="strip-end">
+          {strings.routeExam}
+        </Link>
       </nav>
 
       {level !== undefined && (
@@ -65,6 +68,8 @@ export function TreePage() {
             {stops.map(({ chapter, topics }, index) => (
               <ChapterStop key={chapter.id} chapter={chapter} topics={topics} place={index + 1} />
             ))}
+            {/* The last level ends with the exam and the readiness rule. */}
+            {level === levels.at(-1) && <ExamStop />}
           </div>
         </>
       )}
