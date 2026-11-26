@@ -80,14 +80,9 @@ test.each([
   expect(readScore(typed)).toBe(score)
 })
 
-test.each([
-  [''],
-  ['ninety'],
-  ['101'],
-  ['-5'],
-  ['87.5'],
-  ['90/100'],
-  ['9 0'],
-])('typed text that is not a whole number from 0 to 100 (%j) is no score', (typed) => {
-  expect(readScore(typed)).toBeNull()
-})
+test.each([[''], ['ninety'], ['101'], ['-5'], ['87.5'], ['90/100'], ['9 0']])(
+  'typed text that is not a whole number from 0 to 100 (%j) is no score',
+  (typed) => {
+    expect(readScore(typed)).toBeNull()
+  },
+)

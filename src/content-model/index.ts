@@ -356,6 +356,44 @@ export interface GrammarContent {
   attemptSize: number
 }
 
+/** The four modules of the Goethe B1 exam, as they are written in a node id. */
+export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
+export type ExamModule = (typeof EXAM_MODULES)[number]
+
+/** How many parts each module has. */
+export const EXAM_PART_COUNT: Record<ExamModule, number> = { lesen: 5, hoeren: 4, schreiben: 3, sprechen: 3 }
+
+/**
+ * One task of the Schreiben module or one part of the Sprechen module, with
+ * everything that tells it apart from another task of the same part. All of
+ * its text is German. The fixed wording of a part (how long, what to mind)
+ * is not content; it comes from the part.
+ *
+ * A task stands on its own, so a mock exam can hold tasks as well as a node.
+ */
+export type ExamTask =
+  /** An informal e-mail of about 80 words on three content points. */
+  | { module: 'schreiben'; part: 1; situation: string; points: string[] }
+  /** A post of about 80 words giving the learner's opinion, in reply to one opinion from a forum. */
+  | { module: 'schreiben'; part: 2; situation: string; opinion: { author: string; text: string } }
+  /** A short semi-formal e-mail of about 40 words. */
+  | { module: 'schreiben'; part: 3; situation: string }
+  /** Planning something with a partner, along four guiding points. */
+  | { module: 'sprechen'; part: 1; situation: string; points: string[] }
+  /** A short presentation on a topic, along the five fixed slides. */
+  | { module: 'sprechen'; part: 2; topic: string }
+  /** Talking about a presentation on a topic: feedback, a question, answers. */
+  | { module: 'sprechen'; part: 3; topic: string }
+
+/**
+ * The page content of a writing or speaking node. There is no pool: the
+ * learner does the task, an AI assistant grades it with the prompt the app
+ * provides, and the learner types the score in.
+ */
+export interface ExamTaskContent {
+  task: ExamTask
+}
+
 /** A node as the app loads it. `content` is null until the node is published. */
 export interface CompiledNode extends NodeSummary {
   content: GrammarContent | null
