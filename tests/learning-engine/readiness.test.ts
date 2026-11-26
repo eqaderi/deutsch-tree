@@ -4,6 +4,7 @@ import {
   type ModuleScores,
   type Progress,
   readiness,
+  readinessOf,
   recordOfficialExamScores,
 } from '../../src/learning-engine/index.ts'
 
@@ -106,4 +107,18 @@ test('scores of an exam that is not one of the official mock exams do not count'
 
   expect(result).toMatchObject({ ready: false, met: 1, missing: 1 })
   expect(result.exams.map((exam) => exam.id)).toEqual(OFFICIAL)
+})
+
+test('of the official mock exams the content lists, only those that count toward readiness are held to the rule', () => {
+  const listed = [
+    { id: 'adults-1', countsTowardReadiness: true },
+    { id: 'practice-set', countsTowardReadiness: false },
+    { id: 'adults-2', countsTowardReadiness: true },
+  ]
+  const progress = recorded({ 'adults-1': all(95), 'practice-set': all(95) })
+
+  const result = readinessOf(progress, listed)
+
+  expect(result).toMatchObject({ ready: false, met: 1, missing: 1 })
+  expect(result.exams.map((exam) => exam.id)).toEqual(['adults-1', 'adults-2'])
 })

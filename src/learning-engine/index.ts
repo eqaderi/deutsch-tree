@@ -784,6 +784,20 @@ export interface Readiness {
   exams: ExamReadiness[]
 }
 
+/**
+ * The readiness rule over the official mock exams as the content lists them:
+ * only those whose entry says `countsTowardReadiness` are held to it.
+ */
+export function readinessOf(
+  progress: Progress,
+  exams: ReadonlyArray<{ id: string; countsTowardReadiness: boolean }>,
+): Readiness {
+  return readiness(
+    progress,
+    exams.filter((exam) => exam.countsTowardReadiness).map((exam) => exam.id),
+  )
+}
+
 /** How one official mock exam stands, from what the learner recorded for it. */
 export function examStanding(progress: Progress, examId: string): ExamReadiness {
   const scores = officialExamScores(progress, examId)
