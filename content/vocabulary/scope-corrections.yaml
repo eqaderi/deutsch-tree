@@ -1,0 +1,1055 @@
+# Corrections to the headwords extracted from the Goethe A1, A2 and B1 word
+# lists, applied by `pnpm vocabulary:scope` before the scope rule
+# (src/vocabulary-scope/index.ts). Written by hand.
+#
+# `word` is always the headword as the extracted lists spell it. The keys:
+#   rename      the headword to use instead
+#   sameAs      another spelling or form of that headword: one word, at the lower level of the two
+#   class, article, plural, reflexive
+#               what the lists do not print, or what the extraction got wrong
+#   drop        no word at all
+#   isWord      true: a word although written with a hyphen; false: a word-building part
+#   feminineOf  the masculine noun this is the feminine form of; null: a word of its own
+#   variantOf   the word used in Germany that this Austrian or Swiss word stands for; null: used in Germany too
+#   region      with variantOf: where the word is used (A, CH), when the lists print no region
+#
+# Only headwords, articles, plural markers and word classes belong here.
+# Never a sentence, a definition or a translation from a word list.
+
+# The word class of every word that is neither noun nor verb. The lists print none.
+classes:
+  adjective:
+    [
+      abhängig,
+      absolut,
+      abwesend,
+      aktiv,
+      aktuell,
+      allein,
+      allgemein,
+      alltäglich,
+      alt,
+      alternativ,
+      angenehm,
+      anstrengend,
+      anwesend,
+      arbeitslos,
+      arm,
+      aufmerksam,
+      aufregend,
+      ausgebildet,
+      ausgezeichnet,
+      ausländisch,
+      ausreichend,
+      automatisch,
+      bar,
+      befreit,
+      befriedigend,
+      begeistert,
+      begrenzt,
+      behindert,
+      bekannt,
+      beliebt,
+      bequem,
+      bereit,
+      beruflich,
+      berufstätig,
+      berühmt,
+      besetzt,
+      besondere,
+      besser,
+      beste,
+      bestimmt,
+      betrunken,
+      bewölkt,
+      billig,
+      biologisch,
+      bitter,
+      blass,
+      blau,
+      blind,
+      blond,
+      blöd,
+      braun,
+      breit,
+      bunt,
+      böse,
+      chic,
+      cool,
+      dankbar,
+      dauernd,
+      demokratisch,
+      deutlich,
+      deutsch,
+      dicht,
+      dick,
+      digital,
+      direkt,
+      doppelt,
+      dringend,
+      dumm,
+      dunkel,
+      durchschnittlich,
+      durstig,
+      dünn,
+      echt,
+      eckig,
+      egal,
+      ehrlich,
+      eigen,
+      eilig,
+      eindeutig,
+      einfach,
+      einheitlich,
+      einsam,
+      einverstanden,
+      einzeln,
+      einzig,
+      elegant,
+      elektrisch,
+      elektronisch,
+      endgültig,
+      eng,
+      entschlossen,
+      entspannend,
+      erfolgreich,
+      erforderlich,
+      erkältet,
+      ernst,
+      ernsthaft,
+      erschöpft,
+      erwachsen,
+      europäisch,
+      eventuell,
+      ewig,
+      extrem,
+      fair,
+      falsch,
+      fantastisch,
+      farbig,
+      faul,
+      fertig,
+      fest,
+      fett,
+      feucht,
+      finanziell,
+      fit,
+      flach,
+      fleißig,
+      flexibel,
+      fließend,
+      folgend,
+      frech,
+      frei,
+      freiwillig,
+      fremd,
+      freundlich,
+      frisch,
+      froh,
+      fröhlich,
+      früh,
+      furchtbar,
+      fällig,
+      ganz,
+      geboren,
+      geehrt,
+      geeignet,
+      gefährlich,
+      geheim,
+      gelb,
+      gemeinsam,
+      gemütlich,
+      genau,
+      genügend,
+      gerecht,
+      gering,
+      gesamt,
+      geschieden,
+      geschlossen,
+      gespannt,
+      gestorben,
+      gesund,
+      getrennt,
+      gewohnt,
+      gewöhnlich,
+      geöffnet,
+      giftig,
+      glatt,
+      gleich,
+      gleichberechtigt,
+      gleichzeitig,
+      global,
+      glücklich,
+      grau,
+      griechisch,
+      groß,
+      grün,
+      gründlich,
+      gut,
+      gültig,
+      günstig,
+      halb,
+      haltbar,
+      hart,
+      heimlich,
+      heiß,
+      hell,
+      herzlich,
+      heutig,
+      historisch,
+      hoch,
+      hungrig,
+      hässlich,
+      häufig,
+      höflich,
+      hübsch,
+      ideal,
+      illegal,
+      individuell,
+      innere,
+      intelligent,
+      intensiv,
+      interessant,
+      interessiert,
+      interkulturell,
+      international,
+      jung,
+      jährlich,
+      kalt,
+      kaputt,
+      klar,
+      klasse,
+      klein,
+      klug,
+      knapp,
+      komisch,
+      komplett,
+      kompliziert,
+      konservativ,
+      korrekt,
+      kostenlos,
+      krank,
+      kreativ,
+      kritisch,
+      kräftig,
+      kulturell,
+      kurz,
+      körperlich,
+      kühl,
+      künstlich,
+      lang,
+      langsam,
+      langweilig,
+      laut,
+      lecker,
+      ledig,
+      leer,
+      leicht,
+      leise,
+      letzte,
+      liberal,
+      lieb,
+      lila,
+      linke,
+      locker,
+      lustig,
+      luxemburgisch,
+      mager,
+      mangelhaft,
+      maximal,
+      meiste,
+      menschlich,
+      merkwürdig,
+      mild,
+      minimal,
+      mittlere,
+      mobil,
+      modern,
+      monatlich,
+      musikalisch,
+      mutig,
+      männlich,
+      möbliert,
+      möglich,
+      müde,
+      mündlich,
+      nah,
+      nass,
+      national,
+      natürlich,
+      neblig,
+      negativ,
+      nervös,
+      nett,
+      neu,
+      neugierig,
+      niedrig,
+      normal,
+      notwendig,
+      nächste,
+      nördlich,
+      nötig,
+      nützlich,
+      obere,
+      offen,
+      offenbar,
+      offiziell,
+      optimistisch,
+      orange,
+      ordentlich,
+      original,
+      parallel,
+      passiv,
+      pauschal,
+      peinlich,
+      perfekt,
+      persönlich,
+      politisch,
+      populär,
+      positiv,
+      praktisch,
+      preiswert,
+      prima,
+      privat,
+      pünktlich,
+      realistisch,
+      recht,
+      rechte,
+      rechtlich,
+      rechtzeitig,
+      regelmäßig,
+      regional,
+      reich,
+      reif,
+      relativ,
+      richtig,
+      riesig,
+      roh,
+      romantisch,
+      rosa,
+      rot,
+      ruhig,
+      rund,
+      salzig,
+      satt,
+      sauber,
+      sauer,
+      schade,
+      scharf,
+      schief,
+      schlank,
+      schlecht,
+      schlimm,
+      schmal,
+      schmutzig,
+      schnell,
+      schrecklich,
+      schriftlich,
+      schuld,
+      schuldig,
+      schwach,
+      schwanger,
+      schwarz,
+      schweizerisch,
+      schwer,
+      schwierig,
+      schädlich,
+      schön,
+      selbstständig,
+      selbstverständlich,
+      selten,
+      seltsam,
+      senkrecht,
+      sicher,
+      sichtbar,
+      sinnlos,
+      sinnvoll,
+      sogenannt,
+      sonnig,
+      sozial,
+      spannend,
+      sparsam,
+      speziell,
+      spitz,
+      sportlich,
+      spät,
+      staatlich,
+      stark,
+      statistisch,
+      steil,
+      stilistisch,
+      still,
+      stolz,
+      strafbar,
+      streng,
+      stressig,
+      stumm,
+      städtisch,
+      ständig,
+      stündlich,
+      super,
+      sympathisch,
+      süchtig,
+      südlich,
+      süß,
+      taub,
+      technisch,
+      teuer,
+      theoretisch,
+      tief,
+      tolerant,
+      toll,
+      tot,
+      total,
+      traditionell,
+      traurig,
+      treu,
+      trocken,
+      typisch,
+      täglich,
+      tödlich,
+      türkisch,
+      ukrainisch,
+      umgekehrt,
+      unentschieden,
+      ungenügend,
+      ungewöhnlich,
+      unglaublich,
+      unheimlich,
+      untersagt,
+      unterschiedlich,
+      ursprünglich,
+      vegetarisch,
+      verabredet,
+      verantwortlich,
+      verboten,
+      verdächtig,
+      vergeblich,
+      vergnügt,
+      verheiratet,
+      verliebt,
+      vernünftig,
+      verpflichtet,
+      verrückt,
+      verschieden,
+      verständlich,
+      verwandt,
+      violett,
+      virtuell,
+      voll,
+      vordere,
+      vorläufig,
+      vorsichtig,
+      völlig,
+      waagerecht,
+      wach,
+      wahnsinnig,
+      wahr,
+      warm,
+      weiblich,
+      weich,
+      weit,
+      weiß,
+      weltweit,
+      wert,
+      wertlos,
+      wertvoll,
+      westlich,
+      wichtig,
+      wild,
+      willkommen,
+      windig,
+      wirklich,
+      witzig,
+      wunderbar,
+      wunderschön,
+      wöchentlich,
+      wütend,
+      zahlreich,
+      zentral,
+      zufrieden,
+      zufällig,
+      zugänglich,
+      zukünftig,
+      zuständig,
+      zusätzlich,
+      zuverlässig,
+      zweifach,
+      ähnlich,
+      ängstlich,
+      ärgerlich,
+      äußerlich,
+      öffentlich,
+      österreichisch,
+      östlich,
+      üblich,
+      übrig,
+    ]
+  adverb:
+    [
+      also,
+      auch,
+      bald,
+      bisschen,
+      circa,
+      da,
+      daneben,
+      dann,
+      dort,
+      draußen,
+      einmal,
+      früher,
+      gerade,
+      geradeaus,
+      gern,
+      gestern,
+      heute,
+      hier,
+      hinten,
+      immer,
+      jetzt,
+      lange,
+      leider,
+      lieber,
+      links,
+      mehr,
+      morgen,
+      nie,
+      noch,
+      nur,
+      oben,
+      oft,
+      rechts,
+      schon,
+      sehr,
+      so,
+      sofort,
+      später,
+      unten,
+      vielleicht,
+      wann,
+      warum,
+      weiter,
+      wie,
+      wo,
+      woher,
+      wohin,
+      zurzeit,
+      zurück,
+      zusammen,
+      anders,
+      außerdem,
+      besonders,
+      damals,
+      deshalb,
+      drinnen,
+      drüben,
+      eigentlich,
+      endlich,
+      erst,
+      fast,
+      genug,
+      her,
+      heraus,
+      herein,
+      hin,
+      hoffentlich,
+      manchmal,
+      meistens,
+      mindestens,
+      nebenan,
+      nirgends,
+      online,
+      plötzlich,
+      sogar,
+      sonst,
+      überall,
+      übermorgen,
+      unbedingt,
+      vorbei,
+      vorgestern,
+      vorher,
+      vorn,
+      vorwärts,
+      wahrscheinlich,
+      weg,
+      wenigstens,
+      wieder,
+      zuerst,
+      zuletzt,
+      tagsüber,
+      morgens,
+      vormittags,
+      mittags,
+      nachmittags,
+      abends,
+      nachts,
+      erstens,
+      zweitens,
+      drittens,
+      viertens,
+      zweimal,
+      dreimal,
+      viermal,
+      montags,
+      dienstags,
+      mittwochs,
+      donnerstags,
+      freitags,
+      samstags,
+      sonntags,
+      abwärts,
+      allerdings,
+      andererseits,
+      anfangs,
+      aufwärts,
+      auseinander,
+      ausschließlich,
+      außen,
+      beinahe,
+      bereits,
+      bisher,
+      bloß,
+      dabei,
+      dafür,
+      dagegen,
+      daher,
+      dahin,
+      danach,
+      deswegen,
+      diesmal,
+      dorthin,
+      drin,
+      durcheinander,
+      eben,
+      ebenfalls,
+      ebenso,
+      eher,
+      einerseits,
+      etwa,
+      extra,
+      gar,
+      genauso,
+      gleichfalls,
+      halbtags,
+      heim,
+      hierher,
+      hinterher,
+      höchstens,
+      innen,
+      insgesamt,
+      inzwischen,
+      irgendwann,
+      je,
+      jederzeit,
+      jedoch,
+      jemals,
+      jeweils,
+      kaum,
+      kürzlich,
+      längst,
+      los,
+      meinetwegen,
+      miteinander,
+      mitten,
+      mittlerweile,
+      möglichst,
+      nachher,
+      nämlich,
+      nebenbei,
+      neulich,
+      nirgendwo,
+      nochmals,
+      normalerweise,
+      nun,
+      quer,
+      rauf,
+      raus,
+      rein,
+      rückwärts,
+      schließlich,
+      seitdem,
+      sowieso,
+      spätestens,
+      tatsächlich,
+      trotzdem,
+      überhaupt,
+      übrigens,
+      umso,
+      umsonst,
+      ungefähr,
+      unterwegs,
+      vermutlich,
+      voneinander,
+      voraus,
+      voraussichtlich,
+      vorhin,
+      weshalb,
+      wieso,
+      wohl,
+      worüber,
+      worum,
+      ziemlich,
+      zumindest,
+      zunächst,
+      zwar,
+      wochentags,
+      werktags,
+      sonnabends,
+      live,
+      gratis,
+    ]
+  pronoun:
+    [
+      beide,
+      dich,
+      dir,
+      er,
+      es,
+      ich,
+      ihr,
+      man,
+      nichts,
+      sich,
+      sie,
+      Sie,
+      viel,
+      was,
+      wenig,
+      wer,
+      wir,
+      alle,
+      andere,
+      etwas,
+      jeder,
+      jemand,
+      niemand,
+      selbst,
+      welcher,
+      einige,
+      manche,
+      derselbe,
+      irgendein,
+      mehrere,
+      sämtliche,
+      selber,
+      solche,
+    ]
+  article: [der, euer, kein, mein, dein, dieser, ein, unser]
+  preposition:
+    [
+      ab,
+      an,
+      auf,
+      aus,
+      bei,
+      bis,
+      durch,
+      für,
+      gegen,
+      in,
+      mit,
+      nach,
+      ohne,
+      seit,
+      über,
+      um,
+      unter,
+      von,
+      vor,
+      zu,
+      zwischen,
+      außer,
+      außerhalb,
+      gegenüber,
+      hinter,
+      neben,
+      pro,
+      wegen,
+      einschließlich,
+      entlang,
+      inklusive,
+      innerhalb,
+      per,
+      statt,
+      trotz,
+      plus,
+      minus,
+    ]
+  conjunction:
+    [
+      aber,
+      denn,
+      oder,
+      und,
+      als,
+      dass,
+      weil,
+      wenn,
+      als ob,
+      bevor,
+      damit,
+      falls,
+      indem,
+      nachdem,
+      ob,
+      obwohl,
+      sobald,
+      sodass,
+      solange,
+      sondern,
+      soviel,
+      während,
+      entweder … oder,
+      je … desto,
+      sowohl … als auch,
+      weder
+      … noch,
+      um … zu,
+    ]
+  numeral:
+    [
+      eins,
+      zwei,
+      drei,
+      vier,
+      fünf,
+      sechs,
+      sieben,
+      acht,
+      neun,
+      zehn,
+      elf,
+      zwölf,
+      dreizehn,
+      vierzehn,
+      fünfzehn,
+      sechzehn,
+      siebzehn,
+      achtzehn,
+      neunzehn,
+      zwanzig,
+      einundzwanzig,
+      dreißig,
+      vierzig,
+      fünfzig,
+      sechzig,
+      siebzig,
+      achtzig,
+      neunzig,
+      hundert,
+      hunderteins,
+      zweihundert,
+      tausend,
+      erste,
+      zweite,
+      dritte,
+      vierte,
+      zweitausendeins,
+      viertel,
+      dreiviertel,
+    ]
+  particle: ["ja", "nein", nicht, doch, mal, halt]
+  interjection: [bitte, danke, hallo, tschüss]
+  phrase:
+    [
+      zum Beispiel,
+      was für ein,
+      wie viel,
+      auf jeden Fall,
+      ein paar,
+      auf Deutsch,
+      im Freien,
+      jedes Mal,
+      noch
+      mal,
+      so viel,
+      vor allem,
+      sehr gut,
+      zu Mittag,
+      nicht genügend,
+      sehr schlecht,
+      in der Früh,
+    ]
+  abbreviation: [ca., d. h., usw., z. B., bzw., etc., vgl., o.k.]
+
+changes:
+  # The lists write a word that takes endings as its stem with a hyphen. It is a word, under its full form.
+  - { word: all-, rename: alle }
+  - { word: ander-, rename: andere }
+  - { word: best-, rename: beste }
+  - { word: dein-, rename: dein }
+  - { word: dies-, rename: dieser }
+  - { word: ein-, rename: ein }
+  - { word: letzt-, rename: letzte }
+  - { word: meist-, rename: meiste }
+  - { word: unser-, rename: unser }
+  - { word: eigen-, rename: eigen }
+  - { word: einig-, rename: einige }
+  - { word: manch-, rename: manche }
+  - { word: besonder-, rename: besondere }
+  - { word: einzig-, rename: einzig }
+  - { word: gesamt-, rename: gesamt }
+  - { word: heutig-, rename: heutig }
+  - { word: inner-, rename: innere }
+  - { word: link-, rename: linke }
+  - { word: mittler-, rename: mittlere }
+  - { word: ober-, rename: obere }
+  - { word: recht-, rename: rechte }
+  - { word: sogenannt-, rename: sogenannt }
+  - { word: solch-, rename: solche }
+  - { word: vorder-, rename: vordere }
+  # The same stem, where another list already has the full form.
+  - { word: jed-, sameAs: jeder }
+  - { word: lieb-, sameAs: lieb }
+  - { word: nächst-, sameAs: nächste }
+  - { word: welch-, sameAs: welcher }
+  - { word: einzel-, sameAs: einzeln }
+  - { word: geehrt-, sameAs: geehrt }
+  - { word: beid-, sameAs: beide }
+  - { word: erst-, sameAs: erste }
+  - { word: kein-, sameAs: kein }
+  - { word: selb-, sameAs: derselbe }
+  - { word: was für ein-, sameAs: was für ein }
+  # One word that two lists spell differently.
+  - { word: gern(e), sameAs: gern }
+  - { word: tschüs, sameAs: tschüss }
+  - { word: vorn(e), sameAs: vorn }
+  - { word: Disko, sameAs: Disco }
+  - { word: Kilo(gramm), sameAs: Kilogramm }
+  - { word: Mathe(matik), sameAs: Mathematik }
+  - { word: Kunst(erziehung), sameAs: Kunst }
+  - { word: meist(ens), sameAs: meistens }
+  - { word: wie viel(e), sameAs: wie viel }
+  - { word: ein bisschen, sameAs: bisschen }
+  - { word: leid tun, sameAs: leidtun }
+  - { word: Phantasie, sameAs: Fantasie }
+  - { word: Mail, sameAs: E-Mail }
+  - { word: Angestellter, sameAs: Angestellte }
+  # A noun with its preposition, or an adjective with "sein" or "werden": learned with the word itself.
+  - { word: am Wochenende, sameAs: Wochenende }
+  - { word: am Morgen, sameAs: Morgen }
+  - { word: am Vormittag, sameAs: Vormittag }
+  - { word: am Mittag, sameAs: Mittag }
+  - { word: am Nachmittag, sameAs: Nachmittag }
+  - { word: am Abend, sameAs: Abend }
+  - { word: in der Nacht, sameAs: Nacht }
+  - { word: um Mitternacht, sameAs: Mitternacht }
+  - { word: am Montag, sameAs: Montag }
+  - { word: am Dienstag, sameAs: Dienstag }
+  - { word: am Mittwoch, sameAs: Mittwoch }
+  - { word: am Donnerstag, sameAs: Donnerstag }
+  - { word: am Freitag, sameAs: Freitag }
+  - { word: am Samstag, sameAs: Samstag }
+  - { word: am Sonntag, sameAs: Sonntag }
+  - { word: weg sein, sameAs: weg }
+  - { word: fertig sein, sameAs: fertig }
+  - { word: gültig sein, sameAs: gültig }
+  - { word: verboten sein, sameAs: verboten }
+  - { word: einverstanden sein, sameAs: einverstanden }
+  - { word: erkältet sein, sameAs: erkältet }
+  - { word: fit sein, sameAs: fit }
+  - { word: unterwegs sein, sameAs: unterwegs }
+  - { word: verabredet sein, sameAs: verabredet }
+  - { word: dabei sein, sameAs: dabei }
+  - { word: dafür sein, sameAs: dafür }
+  - { word: dagegen sein, sameAs: dagegen }
+  - { word: geboren werden, sameAs: geboren }
+  - { word: erlaubt sein, rename: erlaubt, class: adjective }
+  # Headwords printed with brackets, slashes or dots: the plain form.
+  - { word: auf jeden/keinen Fall, rename: auf jeden Fall }
+  - { word: bio(logisch), rename: biologisch }
+  - { word: nah(e), rename: nah }
+  - { word: Schreck(en), rename: Schreck, plural: "-e" }
+  - { word: Chat(room), rename: Chat }
+  - { word: entweder ... oder, rename: entweder … oder }
+  - { word: je … desto …, rename: je … desto }
+  - { word: in Rente gehen/sein, rename: in Rente gehen }
+  - { word: in Pension gehen/sein, rename: in Pension gehen }
+  - { word: pensioniert werden/sein, rename: pensioniert, class: adjective }
+  - { word: Speise-/-speise, rename: Speise, class: noun, article: die, plural: "-n" }
+  - { word: Auszubildender, rename: Auszubildende, article: der/die, plural: "-n" }
+  - { word: Europäische Parlament, rename: Europäisches Parlament, article: das, plural: sg }
+  - { word: da(r), isWord: false, reason: 'the first part of "dafür", "darauf": grammar teaches it' }
+  # The feminine form or the regional variant that the lists' cross-references do not give.
+  - { word: Zeugin, feminineOf: Zeuge }
+  - { word: Jänner, variantOf: Januar }
+  - { word: Feber, variantOf: Februar }
+  - { word: Abwart, variantOf: Hausmeister, region: CH }
+  - { word: Fleischhauer, variantOf: Metzger, region: A }
+  - { word: Coiffeur, variantOf: Friseur, region: CH }
+  - { word: Billett, variantOf: Fahrkarte, region: CH }
+  - { word: Tram, variantOf: Straßenbahn, region: CH }
+  - { word: Kaffeehaus, variantOf: Café }
+  - { word: Konfitüre, variantOf: Marmelade }
+  - { word: Pfanne, variantOf: null, reason: "a frying pan in Germany, the list only has the Swiss sense" }
+  - { word: Gasthaus, variantOf: null, reason: used in Germany too }
+  # Word classes the extraction guessed wrong.
+  - { word: Prost, class: interjection }
+  # Nouns that the lists print without article or plural.
+  - { word: Achtung, article: die, plural: sg }
+  - { word: Grad, article: der, plural: "-e" }
+  - { word: Million, article: die, plural: "-en" }
+  - { word: Milliarde, article: die, plural: "-n" }
+  - { word: Euro, article: der, plural: "-s" }
+  - { word: Cent, article: der, plural: "-s" }
+  - { word: Meter, article: der, plural: "-" }
+  - { word: Zentimeter, article: der, plural: "-" }
+  - { word: Kilometer, article: der, plural: "-" }
+  - { word: Quadratmeter, article: der, plural: "-" }
+  - { word: Prozent, article: das, plural: "-e" }
+  - { word: Liter, article: der, plural: "-" }
+  - { word: Gramm, article: das, plural: "-e" }
+  - { word: Pfund, article: das, plural: "-e" }
+  - { word: Kilogramm, article: das, plural: "-e" }
+  - { word: Deutschland, article: das, plural: sg }
+  - { word: Europa, article: das, plural: sg }
+  - { word: Prüfer, article: der, plural: "-" }
+  - { word: Bäcker, article: der, plural: "-" }
+  - { word: Kaufmann, article: der, plural: Kaufleute }
+  - { word: Model, article: das, plural: "-s" }
+  - { word: Techniker, article: der, plural: "-" }
+  - { word: Mama, article: die, plural: "-s" }
+  - { word: Papa, article: der, plural: "-s" }
+  - { word: Österreich, article: das, plural: sg }
+  - { word: Luxemburg, article: das, plural: sg }
+  - { word: Luxemburger, article: der, plural: "-" }
+  - { word: Franken, article: der, plural: "-" }
+  - { word: Rappen, article: der, plural: "-" }
+  - { word: Grad Celsius, article: der, plural: "-" }
+  - { word: Klassenfahrt, article: die, plural: "-en" }
+  - { word: Sekretariat, article: das, plural: "-e" }
+  - { word: Stundenplan, article: der, plural: "¨-e" }
+  - { word: Chemie, article: die, plural: sg }
+  - { word: Deutsch, article: das, plural: sg }
+  - { word: Englisch, article: das, plural: sg }
+  - { word: Französisch, article: das, plural: sg }
+  - { word: Geografie, article: die, plural: sg }
+  - { word: Latein, article: das, plural: sg }
+  - { word: Mathematik, article: die, plural: sg }
+  - { word: Physik, article: die, plural: sg }
+  - { word: Sozialkunde, article: die, plural: sg }
+  - { word: Ostern, article: das, plural: sg }
+  - { word: Weihnachten, article: das, plural: sg }
+  - { word: Neujahr, article: das, plural: sg }
+  - { word: Silvester, article: das, plural: sg }
+  - { word: Arbeitstag, article: der, plural: "-e" }
+  - { word: Abgase, article: die, plural: pl }
+  - { word: Ratschlag, article: der, plural: "¨-e" }
+  - { word: Verzeihung, article: die, plural: sg }
+  - { word: Philosophie, article: die, plural: "-n" }
+  - { word: Griechenland, article: das, plural: sg }
+  - { word: Griechisch, article: das, plural: sg }
+  - { word: Türkisch, article: das, plural: sg }
+  - { word: Ukrainisch, article: das, plural: sg }
+  - { word: Bundesrepublik Deutschland, article: die, plural: sg }
+  - { word: Kilometer pro Stunde, article: der, plural: "-" }
+  - { word: Drittel, article: das, plural: "-" }
+  - { word: Pfingsten, article: das, plural: sg }
+  - { word: Nationalfeiertag, article: der, plural: "-e" }
+
+# Headwords that the lists print in the cell of another word, so the extraction has no row for them.
+additions:
+  - { word: Kauffrau, class: noun, level: A2, article: die, plural: "-en", reason: printed beside Kaufmann }
+  - { word: Werktag, class: noun, level: A2, article: der, plural: "-e", reason: printed beside Arbeitstag }
+  - { word: Ostsee, class: noun, level: B1, article: die, plural: sg, reason: printed beside Nordsee }

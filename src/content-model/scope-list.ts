@@ -25,6 +25,8 @@ export const WORD_CLASSES = [
   'interjection',
   'phrase',
   'abbreviation',
+  /** A word-building part such as "Lieblings-". In the scope list only when the scope rule includes them. */
+  'affix',
 ] as const
 export type WordClass = (typeof WORD_CLASSES)[number]
 
