@@ -2581,6 +2581,14 @@ a.strip-end {
   font-weight: 300;
 }
 
+/* The app's address on the home network: typed by hand on a phone, so large and unbroken. */
+.phone-address {
+  font-family: var(--font-latin);
+  font-size: 22px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
 .pack-exams {
   display: grid;
   gap: 10px;
