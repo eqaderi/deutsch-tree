@@ -66,8 +66,11 @@ test('the exam parts are the end of the curriculum: one chapter for each module,
 })
 
 test('the phrase list has 30 nodes in six chapters: 10 in A2 and 20 in B1', () => {
-  const count = (key: 'level' | 'chapter') =>
-    Object.fromEntries(Map.groupBy(phrases, (node) => node[key]).entries().map(([name, nodes]) => [name, nodes.length]))
+  const count = (key: 'level' | 'chapter') => {
+    const counts: Record<string, number> = {}
+    for (const node of phrases) counts[node[key]] = (counts[node[key]] ?? 0) + 1
+    return counts
+  }
 
   expect(count('level')).toEqual({ A2: 10, B1: 20 })
   expect(count('chapter')).toEqual({

@@ -51,6 +51,33 @@ A `coming-soon` node needs nothing more. It appears in the tree, marked
 "Coming soon". It may already hold the sections below as a draft: they are
 checked, but not shown.
 
+## A phrases node and an exam-part node
+
+These two kinds have a few lines more, also while they are `coming-soon`.
+The lists of both, with the reasons, are in
+`docs/approvals/phrase-and-exam-part-nodes.md`.
+
+```yaml
+id: phrases-agreeing     # "phrases-" + the purpose in a word or two
+kind: phrases
+purpose:                 # one line, in three languages: what the phrases are for
+  en: Say that you think the same as another person, fully or in part.
+  fa: …
+  de: …
+examTasks: [exam-schreiben-2, exam-sprechen-1]   # ids of the exam-part nodes it serves; at least one
+```
+
+```yaml
+id: exam-lesen-2         # "exam-" + module + "-" + part
+kind: exam-part
+module: lesen            # lesen | hoeren | schreiben | sprechen
+part: 2                  # the number of the part inside its module
+```
+
+The exam has 15 parts, so there are 15 exam-part nodes: Lesen 1 to 5, Hören 1
+to 4, Schreiben 1 to 3 and Sprechen 1 to 3. An exam task is always named by
+the id of its exam-part node, so the name cannot point at nothing.
+
 ## Chapters and the curriculum order
 
 A chapter is a named group of nodes of one kind inside one level, for example
@@ -188,12 +215,17 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - A node without a chapter, with a chapter that `chapters.yaml` does not
   have, or of another level or kind than its chapter. A chapter name that
   lacks a language.
-- Persian text (a title, a chapter name, a rule, the reason of a mistake or
-  of a question) with a Latin letter outside asterisks.
+- Persian text (a title, a chapter name, a purpose, a rule, the reason of a
+  mistake or of a question) with a Latin letter outside asterisks.
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
 - A prerequisite that is not the id of a node, and a prerequisite cycle
   (a node that needs itself, directly or through other nodes).
+- A phrases node without a purpose or without an exam task, and an exam task
+  that is not the id of an exam-part node.
+- An exam-part node without its module or part number, or whose id is not
+  `exam-<module>-<part>`. A `purpose`, `examTasks`, `module` or `part` in a
+  node of another kind.
 - A published node with fewer than 15 questions. A `coming-soon` draft may
   have fewer.
 - Two node files with the same id, and two questions with the same id inside
