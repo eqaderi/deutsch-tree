@@ -56,7 +56,7 @@ export function comingSoonNode(id: string, fields: Record<string, unknown> = {})
     chapter: 'fixture-later',
     order: Number(id.replace(/\D/g, '')),
     status: 'coming-soon',
-    title: { en: `Extra topic ${id}`, fa: `موضوع اضافه ${id}`, de: `Zusatzthema ${id}` },
+    title: { en: `Extra topic ${id}`, fa: `موضوع اضافه *${id}*`, de: `Zusatzthema ${id}` },
     ...fields,
   })
 }

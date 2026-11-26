@@ -1,4 +1,5 @@
 import type { ContentCheck } from './check.ts'
+import { germanInPersianIsMarked } from './german-in-persian-is-marked.ts'
 import { nodeIdsAreUnique, questionIdsAreUnique } from './identifiers-are-unique.ts'
 import { nodesBelongToAChapter } from './nodes-belong-to-a-chapter.ts'
 import { poolIsLargeEnough } from './pool-is-large-enough.ts'
@@ -13,6 +14,7 @@ export const CHECKS: ContentCheck[] = [
   nodeIdsAreUnique,
   questionIdsAreUnique,
   nodesBelongToAChapter,
+  germanInPersianIsMarked,
   prerequisitesExist,
   prerequisitesHaveNoCycle,
   poolIsLargeEnough,

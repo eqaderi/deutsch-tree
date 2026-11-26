@@ -60,135 +60,135 @@ questions:
     options: [wohne, wohnst, wohnt]
     answer: wohne
     explanation:
-      en: With ich the ending is -e.
-      fa: با ich پایانه -e است.
-      de: Bei ich ist die Endung -e.
+      en: With *ich* the ending is *-e*.
+      fa: با *ich* پایانه *-e* است.
+      de: Bei *ich* ist die Endung *-e*.
   - id: q2
     type: multiple-choice
     prompt: Du ___ hier.
     options: [wohne, wohnst, wohnen]
     answer: wohnst
     explanation:
-      en: With du the ending is -st.
-      fa: با du پایانه -st است.
-      de: Bei du ist die Endung -st.
+      en: With *du* the ending is *-st*.
+      fa: با *du* پایانه *-st* است.
+      de: Bei *du* ist die Endung *-st*.
   - id: q3
     type: multiple-choice
     prompt: Er ___ in Köln.
     options: [wohne, wohnst, wohnt]
     answer: wohnt
     explanation:
-      en: With er the ending is -t.
-      fa: با er پایانه -t است.
-      de: Bei er ist die Endung -t.
+      en: With *er* the ending is *-t*.
+      fa: با *er* پایانه *-t* است.
+      de: Bei *er* ist die Endung *-t*.
   - id: q4
     type: multiple-choice
     prompt: Wir ___ in Wien.
     options: [wohnst, wohnt, wohnen]
     answer: wohnen
     explanation:
-      en: With wir the ending is -en.
-      fa: با wir پایانه -en است.
-      de: Bei wir ist die Endung -en.
+      en: With *wir* the ending is *-en*.
+      fa: با *wir* پایانه *-en* است.
+      de: Bei *wir* ist die Endung *-en*.
   - id: q5
     type: multiple-choice
     prompt: Ihr ___ in Bonn.
     options: [wohnt, wohnen, wohne]
     answer: wohnt
     explanation:
-      en: With ihr the ending is -t.
-      fa: با ihr پایانه -t است.
-      de: Bei ihr ist die Endung -t.
+      en: With *ihr* the ending is *-t*.
+      fa: با *ihr* پایانه *-t* است.
+      de: Bei *ihr* ist die Endung *-t*.
   - id: q6
     type: multiple-choice
     prompt: Ich ___ Deutsch.
     options: [lerne, lernst, lernt]
     answer: lerne
     explanation:
-      en: With ich the ending is -e.
-      fa: با ich پایانه -e است.
-      de: Bei ich ist die Endung -e.
+      en: With *ich* the ending is *-e*.
+      fa: با *ich* پایانه *-e* است.
+      de: Bei *ich* ist die Endung *-e*.
   - id: q7
     type: multiple-choice
     prompt: Du ___ Deutsch.
     options: [lerne, lernst, lernen]
     answer: lernst
     explanation:
-      en: With du the ending is -st.
-      fa: با du پایانه -st است.
-      de: Bei du ist die Endung -st.
+      en: With *du* the ending is *-st*.
+      fa: با *du* پایانه *-st* است.
+      de: Bei *du* ist die Endung *-st*.
   - id: q8
     type: multiple-choice
     prompt: Er ___ Deutsch.
     options: [lerne, lernst, lernt]
     answer: lernt
     explanation:
-      en: With er the ending is -t.
-      fa: با er پایانه -t است.
-      de: Bei er ist die Endung -t.
+      en: With *er* the ending is *-t*.
+      fa: با *er* پایانه *-t* است.
+      de: Bei *er* ist die Endung *-t*.
   - id: q9
     type: multiple-choice
     prompt: Wir ___ Fußball.
     options: [spiele, spielst, spielen]
     answer: spielen
     explanation:
-      en: With wir the ending is -en.
-      fa: با wir پایانه -en است.
-      de: Bei wir ist die Endung -en.
+      en: With *wir* the ending is *-en*.
+      fa: با *wir* پایانه *-en* است.
+      de: Bei *wir* ist die Endung *-en*.
   - id: q10
     type: multiple-choice
     prompt: Ihr ___ Fußball.
     options: [spielt, spielen, spiele]
     answer: spielt
     explanation:
-      en: With ihr the ending is -t.
-      fa: با ihr پایانه -t است.
-      de: Bei ihr ist die Endung -t.
+      en: With *ihr* the ending is *-t*.
+      fa: با *ihr* پایانه *-t* است.
+      de: Bei *ihr* ist die Endung *-t*.
   - id: q11
     type: multiple-choice
     prompt: Ich ___ Suppe.
     options: [koche, kochst, kocht]
     answer: koche
     explanation:
-      en: With ich the ending is -e.
-      fa: با ich پایانه -e است.
-      de: Bei ich ist die Endung -e.
+      en: With *ich* the ending is *-e*.
+      fa: با *ich* پایانه *-e* است.
+      de: Bei *ich* ist die Endung *-e*.
   - id: q12
     type: multiple-choice
     prompt: Du ___ Suppe.
     options: [koche, kochst, kochen]
     answer: kochst
     explanation:
-      en: With du the ending is -st.
-      fa: با du پایانه -st است.
-      de: Bei du ist die Endung -st.
+      en: With *du* the ending is *-st*.
+      fa: با *du* پایانه *-st* است.
+      de: Bei *du* ist die Endung *-st*.
   - id: q13
     type: multiple-choice
     prompt: Er ___ Suppe.
     options: [koche, kochst, kocht]
     answer: kocht
     explanation:
-      en: With er the ending is -t.
-      fa: با er پایانه -t است.
-      de: Bei er ist die Endung -t.
+      en: With *er* the ending is *-t*.
+      fa: با *er* پایانه *-t* است.
+      de: Bei *er* ist die Endung *-t*.
   - id: q14
     type: multiple-choice
     prompt: Wir ___ Suppe.
     options: [kochst, kocht, kochen]
     answer: kochen
     explanation:
-      en: With wir the ending is -en.
-      fa: با wir پایانه -en است.
-      de: Bei wir ist die Endung -en.
+      en: With *wir* the ending is *-en*.
+      fa: با *wir* پایانه *-en* است.
+      de: Bei *wir* ist die Endung *-en*.
   - id: q15
     type: multiple-choice
     prompt: Ihr ___ Suppe.
     options: [kocht, kochen, koche]
     answer: kocht
     explanation:
-      en: With ihr the ending is -t.
-      fa: با ihr پایانه -t است.
-      de: Bei ihr ist die Endung -t.
+      en: With *ihr* the ending is *-t*.
+      fa: با *ihr* پایانه *-t* است.
+      de: Bei *ihr* ist die Endung *-t*.
 
 review:
   reviewer: Fixture reviewer
