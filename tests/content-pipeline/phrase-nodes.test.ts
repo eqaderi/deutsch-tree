@@ -36,7 +36,7 @@ test('a published phrases node gives its page each phrase with its meaning, its 
   expect(node?.content && 'questions' in node.content && node.content.questions).toHaveLength(15)
 })
 
-test('a phrases node cannot be published without its phrases, and a listening part not at all', async () => {
+test('a phrases node cannot be published without its phrases, nor a listening part without its tasks', async () => {
   const content = await fixtureContentWith({
     [PHRASES]: changeNode((node) => {
       delete node.phrases
@@ -56,12 +56,8 @@ test('a phrases node cannot be published without its phrases, and a listening pa
   })
 
   expect(await errorsOf(content)).toEqual([
-    {
-      file: LISTENING_PART,
-      node: 'exam-hoeren-1',
-      where: 'status',
-      message: 'Hören, Teil 1 cannot be published yet: the format of its practice task is not built',
-    },
+    { file: LISTENING_PART, node: 'exam-hoeren-1', where: 'explanations', message: 'is required for a published node' },
+    { file: LISTENING_PART, node: 'exam-hoeren-1', where: 'practice', message: 'is required for a published node' },
     { file: PHRASES, node: PHRASES_NODE, where: 'phrases', message: 'is required for a published node' },
   ])
 })

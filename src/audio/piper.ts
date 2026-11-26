@@ -34,8 +34,10 @@ export function piperVoice({ piper, voices, ffmpeg }: PiperSetup): Synthesiser {
     try {
       const wav = path.join(folder, 'said.wav')
       const mp3 = path.join(folder, 'said.mp3')
-      const model = path.join(voices, `${VOICES[item.voice].model}.onnx`)
-      await run(piper, ['--model', model, '--output-file', wav], item.text)
+      const voice = VOICES[item.voice]
+      const model = path.join(voices, `${voice.model}.onnx`)
+      const speaker = voice.speaker === undefined ? [] : ['--speaker', String(voice.speaker)]
+      await run(piper, ['--model', model, ...speaker, '--output-file', wav], item.text)
       await run(ffmpeg, ['-y', '-loglevel', 'error', '-i', wav, ...MP3_OPTIONS, mp3])
       return await readFile(mp3)
     } finally {

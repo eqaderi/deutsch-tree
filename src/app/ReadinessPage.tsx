@@ -146,7 +146,7 @@ function KeepUnseen() {
 }
 
 /** A module's name, with the German name the exam papers print beside it. */
-function ModuleName({ module }: { module: ExamModule }) {
+export function ModuleName({ module }: { module: ExamModule }) {
   const { language, strings } = useLanguage()
   if (language === 'de') return strings.examModules[module]
   return (

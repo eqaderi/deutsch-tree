@@ -149,17 +149,15 @@ test('a grammar node explains a rule, not an exam task', async () => {
   ])
 })
 
-test('an exam part whose practice format is not built yet cannot be published', async () => {
+test('every reading and listening part has a practice format, so a published one needs its explanations and tasks', async () => {
   const problems = await problemsOf(
     'nodes/exam-part/exam-hoeren-2.yaml',
     examPartNode('exam-hoeren-2', { status: 'published' }),
   )
 
   expect(problems).toEqual([
-    {
-      where: 'status',
-      message: 'Hören, Teil 2 cannot be published yet: the format of its practice task is not built',
-    },
+    { where: 'explanations', message: 'is required for a published node' },
+    { where: 'practice', message: 'is required for a published node' },
   ])
 })
 

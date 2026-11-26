@@ -1,4 +1,5 @@
 import {
+  EXAM_CHOICES,
   EXAM_MODULE_FACTS,
   type ExamPart,
   type ItemTaskFile,
@@ -69,5 +70,25 @@ export function itemTaskProblems(
     }
     return []
   })
-  return [...sizes, ...texts]
+  const items = task.items.flatMap((item, index) => {
+    const type = format.itemTypes[index % format.itemTypes.length]
+    if (type !== undefined && item.type !== type) {
+      return [
+        {
+          where: `items[${index}].type`,
+          message: `${name}: item ${index + 1} is ${type}, item "${item.id}" is ${item.type}`,
+        },
+      ]
+    }
+    if (item.type === 'multiple-choice' && item.options.length !== EXAM_CHOICES) {
+      return [
+        {
+          where: `items[${index}].options`,
+          message: `${name}: an item has the options a, b and c, item "${item.id}" has ${item.options.length}`,
+        },
+      ]
+    }
+    return []
+  })
+  return [...sizes, ...texts, ...items]
 }

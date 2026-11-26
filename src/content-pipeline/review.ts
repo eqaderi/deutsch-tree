@@ -9,12 +9,21 @@ import path from 'node:path'
 import { isDeepStrictEqual } from 'node:util'
 import { parse as parseYaml, stringify as toYaml } from 'yaml'
 import { z } from 'zod'
-import { LANGUAGES, type Language, type NodeFile, nodeFileSchema, type Question } from '../content-model/index.ts'
+import {
+  LANGUAGES,
+  type Language,
+  type MockExamFile,
+  mockExamFileSchema,
+  type NodeFile,
+  nodeFileSchema,
+  type Question,
+} from '../content-model/index.ts'
 import { de } from '../language/strings.de.ts'
 import { fa } from '../language/strings.fa.ts'
 import { en } from '../language/strings.ts'
 import { checkTyped } from '../learning-engine/index.ts'
 import { mixed } from './mix.ts'
+import { MOCK_EXAMS_FOLDER, mockExamTasks } from './mock-exams.ts'
 import { vocabularyQuestions } from './vocabulary.ts'
 
 type PoolQuestionFile = NonNullable<NodeFile['questions']>[number]
@@ -97,6 +106,12 @@ const REVIEW_VIEWS: { [T in QuestionFile['type']]: ReviewView<Extract<QuestionFi
     'answer',
     'true when the statement is right according to the text (Richtig), false when it is not (Falsch) (no quotes)',
   ),
+  'ja-nein': keyIn('answer', 'true when the writer of the text is for it (Ja), false when against (Nein) (no quotes)'),
+  'which-text': keyIn(
+    'answer',
+    'the id of the one text of the task that fits the situation, such as "c", or "0" when no text fits (each text fits one situation at most)',
+  ),
+  'who-says': keyIn('answer', 'the name of the one speaker of the text who says this, exactly as the lines name them'),
 }
 
 /** The view of a type whose key is the field `field`. The reviewer sees every other field except the explanation. */
@@ -326,7 +341,7 @@ const HEARD_TEXT_INSTRUCTIONS = [
 
 /** A node's pool as a reviewer may see it. `only` limits it to some questions, for a second pass. */
 export async function blindPool(contentDir: string, nodeId: string, only?: string[]): Promise<ReviewSheet> {
-  const { node } = await loadNode(contentDir, nodeId)
+  const { node } = await loadReviewable(contentDir, nodeId)
   const reviewed = reviewedIn(node)
   if (reviewed.length === 0) throw new Error(`Node ${nodeId} has no questions to review.`)
 
@@ -399,7 +414,7 @@ export async function recordReview(
   sheets: unknown[],
   by: { reviewer: string; date: string },
 ): Promise<ReviewResult> {
-  const { file, source, node } = await loadNode(contentDir, nodeId)
+  const { file, source, node, withRecord } = await loadReviewable(contentDir, nodeId)
   const reviewed = reviewedIn(node)
   if (reviewed.length === 0) throw new Error(`Node ${nodeId} has no questions to review.`)
 
@@ -444,33 +459,93 @@ export async function recordReview(
   if (disagreements.length > 0) return { disagreements, record: null }
 
   const record = nodeFileSchema.shape.review.unwrap().parse({ ...by, pool: reviewFingerprint(node) })
-  await writeFile(file, withReviewRecord(source, node, record))
+  await writeFile(file, withRecord(source, record))
   return { disagreements, record }
 }
 
-/** The node file's text with `record` as its review record and every other line as it was. */
-function withReviewRecord(source: string, node: NodeFile, record: ReviewRecord): string {
+/**
+ * The file's text with `record` as its review record and every other line as
+ * it was, or an error when that cannot be done. `read` reads the text back
+ * as the content model does; `expected` is the file's content with the record.
+ */
+function withReviewRecord(
+  source: string,
+  record: ReviewRecord,
+  read: (text: string) => unknown,
+  expected: unknown,
+  name: string,
+): string {
   const withoutRecord = source.replace(/^review:.*\n(?:[ \t]+.*(?:\n|$))*/m, '')
   const result = `${withoutRecord.trimEnd()}\n\n${toYaml({ review: record })}`
-  if (!isDeepStrictEqual(nodeFileSchema.parse(parseYaml(result)), { ...node, review: record })) {
-    throw new Error(`Could not add the review record to ${node.id}.yaml without changing something else in it.`)
+  if (!isDeepStrictEqual(read(result), expected)) {
+    throw new Error(`Could not add the review record to ${name} without changing something else in it.`)
   }
   return result
 }
 
-async function loadNode(contentDir: string, nodeId: string): Promise<{ file: string; source: string; node: NodeFile }> {
+/** What a review goes through: a node file, or a mock exam file as the practice tasks of its parts. */
+interface Reviewable {
+  file: string
+  source: string
+  node: ReviewedContent & { id: string; level: string; title: { en: string } }
+  withRecord(source: string, record: ReviewRecord): string
+}
+
+/** The node or mock exam of this id, ready for its review. A node file is looked for first. */
+async function loadReviewable(contentDir: string, id: string): Promise<Reviewable> {
   const nodesDir = path.join(contentDir, 'nodes')
   const entries = await readdir(nodesDir, { recursive: true }).catch(() => [] as string[])
-  const entry = entries.find((candidate) => path.basename(candidate) === `${nodeId}.yaml`)
-  if (!entry) throw new Error(`No file ${nodeId}.yaml under ${nodesDir}.`)
+  const entry = entries.find((candidate) => path.basename(candidate) === `${id}.yaml`)
+  if (entry) {
+    const file = path.join(nodesDir, entry)
+    const source = await readFile(file, 'utf8')
+    const node = readOrRefuse(file, source, (raw) => nodeFileSchema.safeParse(raw))
+    return {
+      file,
+      source,
+      node,
+      withRecord: (text, record) =>
+        withReviewRecord(
+          text,
+          record,
+          (result) => nodeFileSchema.parse(parseYaml(result)),
+          { ...node, review: record },
+          `${id}.yaml`,
+        ),
+    }
+  }
 
-  const file = path.join(nodesDir, entry)
-  const source = await readFile(file, 'utf8')
-  const parsed = nodeFileSchema.safeParse(parseYaml(source))
+  const file = path.join(contentDir, MOCK_EXAMS_FOLDER, `${id}.yaml`)
+  const source = await readFile(file, 'utf8').catch(() => {
+    throw new Error(`No file ${id}.yaml under ${nodesDir} or ${path.dirname(file)}.`)
+  })
+  const exam: MockExamFile = readOrRefuse(file, source, (raw) => mockExamFileSchema.safeParse(raw))
+  return {
+    file,
+    source,
+    // A mock exam is reviewed as the practice tasks of its parts: "lesen-3/i2" is Lesen, Teil 3, item i2.
+    node: { id: exam.id, level: 'B1', title: exam.title, practice: mockExamTasks(exam) },
+    withRecord: (text, record) =>
+      withReviewRecord(
+        text,
+        record,
+        (result) => mockExamFileSchema.parse(parseYaml(result)),
+        { ...exam, review: record },
+        `${id}.yaml`,
+      ),
+  }
+}
+
+function readOrRefuse<T>(
+  file: string,
+  source: string,
+  parse: (raw: unknown) => { success: true; data: T } | { success: false },
+): T {
+  const parsed = parse(parseYaml(source))
   if (!parsed.success) {
     throw new Error(`${file} breaks the content model. Run "pnpm content:check" and fix it first.`)
   }
-  return { file, source, node: parsed.data }
+  return parsed.data
 }
 
 // ---------------------------------------------------------------------------
@@ -492,13 +567,20 @@ export function reviewFingerprint(node: ReviewedContent): string {
   return createHash('sha256').update(canonical(covered)).digest('hex').slice(0, 16)
 }
 
-/** Why a node may not be published as far as its review goes, or undefined when it may. */
-export function reviewProblem(node: NodeFile): string | undefined {
+/**
+ * Why a node may not be published as far as its review goes, or undefined
+ * when it may. A mock exam is held to the same rule, as the practice tasks
+ * of its parts (`what` is then "mock exam").
+ */
+export function reviewProblem(
+  node: ReviewedContent & Pick<NodeFile, 'id' | 'status' | 'review'>,
+  what = 'node',
+): string | undefined {
   if (node.status !== 'published') return undefined
   const steps = `Run "pnpm review:pool ${node.id}"; the steps are in content/README.md`
-  if (!node.review) return `a published node needs a review record. ${steps}`
+  if (!node.review) return `a published ${what} needs a review record. ${steps}`
   if (node.review.pool !== reviewFingerprint(node)) {
-    return `the questions, their answers or the texts they are about changed after the review of ${node.review.date}, so the node needs a new review. ${steps}`
+    return `the questions, their answers or the texts they are about changed after the review of ${node.review.date}, so the ${what} needs a new review. ${steps}`
   }
   return undefined
 }

@@ -1,6 +1,6 @@
 /**
  * Generates the audio of a content folder: every piece of German of the
- * published nodes that carries audio gets a file `audio/<key>.mp3`.
+ * published nodes and mock exams that carries audio gets a file `audio/<key>.mp3`.
  *
  * A file that exists is kept, so a second run says only what is new or
  * changed. A file that no content needs any more is removed. Which voice
@@ -12,7 +12,7 @@ import path from 'node:path'
 import { AUDIO_FOLDER, type Spoken } from '../content-model/audio.ts'
 import { presentAudio } from '../content-pipeline/audio.ts'
 import { type ContentProblem, compileContent } from '../content-pipeline/index.ts'
-import { type SpokenItem, spokenItems } from './index.ts'
+import { type SpokenItem, spokenInBundle } from './index.ts'
 
 /** Says one text in one voice and gives back the MP3 file. */
 export type Synthesiser = (item: Spoken) => Promise<Uint8Array>
@@ -46,7 +46,7 @@ export async function generateAudio(
   if (!bundle) return { errors: report.errors, made: [], kept: [], removed: [] }
 
   // The same words in the same voice are one file, wherever they stand.
-  const items = [...new Map(spokenItems(bundle.nodes).map((item) => [item.key, item])).values()]
+  const items = [...new Map(spokenInBundle(bundle).map((item) => [item.key, item])).values()]
   const audioDir = path.join(contentDir, AUDIO_FOLDER)
   await mkdir(audioDir, { recursive: true })
   const present = await presentAudio(contentDir)

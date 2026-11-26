@@ -5,13 +5,14 @@
  * every piece of German that has a play button. Its key is a hash of the
  * voice and the spoken text, never of the audio, so it is known without
  * Piper, the same text always has the same file, and a changed text gets a
- * new one. `spokenItems(nodes)` finds everything that carries one, so the
+ * new one. `spokenItems(nodes)` finds everything that carries one (in nodes
+ * and mock exams alike: `spokenInBundle`), so the
  * pipeline's check and the command that generates audio (cli.ts) agree on
  * what is spoken without a list of their own.
  */
 import { createHash } from 'node:crypto'
 import { DEFAULT_VOICE, type Spoken, VOICE_IDS, type VoiceId } from '../content-model/audio.ts'
-import type { CompiledNode } from '../content-model/index.ts'
+import type { ContentBundle } from '../content-model/index.ts'
 import { speakable } from './speakable.ts'
 
 /** How many hex digits of the hash name a file: 64 bits, so thousands of files never share one. */
@@ -35,7 +36,7 @@ export interface SpokenItem extends Spoken {
  * nodes and their content. Found by its `audio` field, so new content that
  * carries audio (a dialogue line with its own voice) needs nothing here.
  */
-export function spokenItems(nodes: readonly CompiledNode[]): SpokenItem[] {
+export function spokenItems(nodes: ReadonlyArray<{ id: string; content: unknown }>): SpokenItem[] {
   const items: SpokenItem[] = []
   const visit = (value: unknown, node: string, where: string) => {
     if (Array.isArray(value)) {
@@ -53,6 +54,11 @@ export function spokenItems(nodes: readonly CompiledNode[]): SpokenItem[] {
   }
   for (const node of nodes) visit(node.content, node.id, '')
   return items
+}
+
+/** Everything a compiled bundle says aloud: its nodes, then its mock exams. */
+export function spokenInBundle(bundle: Pick<ContentBundle, 'nodes' | 'mockExams'>): SpokenItem[] {
+  return spokenItems([...bundle.nodes, ...bundle.mockExams])
 }
 
 function isSpoken(value: unknown): value is Spoken {

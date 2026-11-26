@@ -3,11 +3,13 @@
  * piece of German that the learner can hear carries in the compiled bundle.
  *
  * The voices were chosen on ticket #5: Piper's Thorsten (medium) reads
- * everything, and Kerstin (medium) is the second voice of a dialogue.
+ * everything, and Kerstin (medium) is the second voice of a dialogue. A
+ * third voice, for the radio discussion of three people in Hören, Teil 4,
+ * was added on ticket #27: one speaker of Piper's MLS (medium) model.
  */
 import { z } from 'zod'
 
-export const VOICE_IDS = ['thorsten', 'kerstin'] as const
+export const VOICE_IDS = ['thorsten', 'kerstin', 'mls-5424'] as const
 /** A voice by name. A content field that names who speaks takes one of these (`voiceSchema`). */
 export type VoiceId = (typeof VOICE_IDS)[number]
 
@@ -20,18 +22,26 @@ export const DEFAULT_VOICE: VoiceId = 'thorsten'
 export interface Voice {
   /** The Piper voice model, as the files `<model>.onnx` and `<model>.onnx.json` are named. */
   model: string
+  /** Of a model with many speakers: the number Piper gives the one that speaks (`piper --speaker`). */
+  speaker?: number
   /** Whether the site must credit the voice; the credit line itself is an interface string (`voiceCredit`). */
   needsCredit: boolean
 }
 
 /**
- * The voices. Both are CC0. Kerstin is trained on top of a model made from
- * Hi-Fi TTS (CC BY 4.0, NVIDIA; reader Cori Samuel), so the site credits it.
- * Changing a voice's model keeps its audio keys: regenerate with `--force`.
+ * The voices. Thorsten and Kerstin are CC0. Kerstin is trained on top of a
+ * model made from Hi-Fi TTS (CC BY 4.0, NVIDIA; reader Cori Samuel), so the
+ * site credits it. The MLS model is trained on Multilingual LibriSpeech (CC
+ * BY 4.0, Facebook AI; read from LibriVox audiobooks), so the site credits it
+ * too. `mls-5424` is its speaker 5424 of that data set, Piper's speaker 12:
+ * a voice clearly higher than Kerstin's, so three speakers of one text are
+ * told apart by ear. Changing a voice's model keeps its audio keys:
+ * regenerate with `--force`.
  */
 export const VOICES: Readonly<Record<VoiceId, Voice>> = {
   thorsten: { model: 'de_DE-thorsten-medium', needsCredit: false },
   kerstin: { model: 'de_DE-kerstin-medium', needsCredit: true },
+  'mls-5424': { model: 'de_DE-mls-medium', speaker: 12, needsCredit: true },
 }
 
 /**

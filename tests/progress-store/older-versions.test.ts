@@ -6,7 +6,13 @@
  * code), and say what today's app must make of it.
  */
 import { expect, test } from 'vitest'
-import { emptyProgress, isDone, nodeProgress, officialExamScores } from '../../src/learning-engine/index.ts'
+import {
+  emptyProgress,
+  isDone,
+  mockExamHistory,
+  nodeProgress,
+  officialExamScores,
+} from '../../src/learning-engine/index.ts'
 import { parseProgress, SAVED_VERSION, type SavedFormat } from '../../src/progress-store/index.ts'
 
 function read(text: string, format?: SavedFormat) {
@@ -22,8 +28,8 @@ test('the saved shape has a version, and a new field of progress means a new ver
   // know the field must refuse the data instead of dropping the field, and
   // the version number is what tells it. See src/progress-store/index.ts.
   expect({ version: SAVED_VERSION, fields: Object.keys(emptyProgress()).sort() }).toEqual({
-    version: 2,
-    fields: ['nodes', 'officialExams'],
+    version: 3,
+    fields: ['mockExams', 'nodes', 'officialExams'],
   })
 })
 
@@ -53,6 +59,39 @@ test('progress saved by version 2 loads', () => {
     speaking: 100,
   })
   expect(officialExamScores(progress, 'goethe-b1-uebungssatz-erwachsene')).toEqual({ reading: 0 })
+  expect(mockExamHistory(progress)).toEqual([])
+})
+
+test('progress saved by version 3 loads, with the history of mock exam modules', () => {
+  // Version 3 added the finished modules of the original mock exams, oldest first.
+  const progress = read(
+    '{"version":3,"nodes":{},"officialExams":{},"mockExams":[{"exam":"mock-exam-1","module":"reading","finished":"2026-11-20T09:00:00.000Z","timed":true,"score":90,"parts":[{"part":1,"correct":6,"total":6},{"part":2,"correct":5,"total":6},{"part":3,"correct":6,"total":7},{"part":4,"correct":7,"total":7},{"part":5,"correct":3,"total":4}]},{"exam":"mock-exam-1","module":"listening","finished":"2026-11-21T09:00:00.000Z","timed":false,"score":57,"parts":[{"part":1,"correct":6,"total":10}]},{"exam":"mock-exam-1","module":"reading","finished":"not a date","score":"ninety"}]}',
+  )
+
+  expect(mockExamHistory(progress)).toEqual([
+    {
+      exam: 'mock-exam-1',
+      module: 'listening',
+      finished: '2026-11-21T09:00:00.000Z',
+      timed: false,
+      score: 57,
+      parts: [{ part: 1, correct: 6, total: 10 }],
+    },
+    {
+      exam: 'mock-exam-1',
+      module: 'reading',
+      finished: '2026-11-20T09:00:00.000Z',
+      timed: true,
+      score: 90,
+      parts: [
+        { part: 1, correct: 6, total: 6 },
+        { part: 2, correct: 5, total: 6 },
+        { part: 3, correct: 6, total: 7 },
+        { part: 4, correct: 7, total: 7 },
+        { part: 5, correct: 3, total: 4 },
+      ],
+    },
+  ])
 })
 
 /**

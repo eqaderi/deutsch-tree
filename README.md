@@ -38,7 +38,7 @@ ending, because the pipeline runs directly in Node.
 
 | Folder | Module |
 |---|---|
-| `content/` | The real content: one YAML file per node under `content/nodes/`, the chapters that group them in `content/chapters.yaml`, and the official mock exams the app links to in `content/official-mock-exams.yaml`. |
+| `content/` | The real content: one YAML file per node under `content/nodes/`, the chapters that group them in `content/chapters.yaml`, the original mock exams in `content/mock-exams/`, and the official mock exams the app links to in `content/official-mock-exams.yaml`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
 | `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
 | `src/search/` | Search as pure functions: the node summaries and the search data of one language in, the nodes found for a query out. It decides how typed text meets content (umlauts, capitals, Persian letter forms). No interface, no loading. |
@@ -76,6 +76,8 @@ build time, each only on the page that shows it:
 | `content/index.json` | The chapters and every node's summary, both in curriculum order. | Every page. |
 | `content/nodes/<id>.json` | One node's page. | That node's page and its test; a level's checkpoint, for the nodes it asks about. |
 | `content/official-mock-exams.json` | The exams the readiness view links to. | The readiness view (`#/readiness`) and the exam stop that ends the tree's last level. |
+| `content/mock-exams.json` | The original mock exams: title, status and modules of each. | The list of mock exams (`#/mock-exams`) and a module's page. |
+| `content/mock-exams/<id>.json` | One mock exam with its parts. | Its card in the list, and its modules (`#/mock-exams/<id>/<module>`). |
 | `content/search/<language>.json` | The text of every published node as a list of passages, in one language plus the German. | The search page (`#/search`), in the learner's language only. |
 | `content/overview.json` | Every grammar table. | "All grammar at a glance" (`#/overview`). |
 | `content/audio/<key>.mp3` | The audio of one piece of German. | Only when the learner presses its play button. |
@@ -107,8 +109,9 @@ GitHub Pages and from a local folder.
   answered the page shows only `PlayRecording` (`src/app/PlayButton.tsx`),
   which plays the lines one after the other; the result shows what is said,
   line by line, each with its `PlayButton`. A task holds texts to read or
-  texts to hear, as `textsAre` in its part's format says. A mock exam's
-  Lesen and Hören parts are meant to take the same `ItemTask`.
+  texts to hear, as `textsAre` in its part's format says. The views of a
+  task (`TaskTexts`, `TaskItems`, `ItemResults`) are in
+  `src/app/ItemTaskView.tsx`, shared with the mock exams.
 - A task that the app scores per item (`ItemTask` in the content model:
   texts and items; schema `itemTaskSchema`, compiled by `compileItemTask`,
   formats per exam part in `ITEM_TASK_FORMATS`, format check
@@ -282,6 +285,47 @@ The rules are in the learning engine, like every rule. The tree
 - The tree has no streaks, points, reminders or daily goals, and a browser
   test keeps it so.
 
+## The original mock exams
+
+- The list is `#/mock-exams` (`src/app/MockExamsPage.tsx`), reached from the
+  exam stop at the end of the tree. A module is taken at
+  `#/mock-exams/<exam>/<module>` (`src/app/MockExamPage.tsx`).
+- An exam is content: `content/mock-exams/<id>.yaml` ("Mock exams" in
+  [content/README.md](content/README.md)), read by
+  `src/content-pipeline/mock-exams.ts`. Its Lesen and Hören parts are
+  `ItemTask`s, held to `ITEM_TASK_FORMATS`, reviewed blind and compiled like
+  the practice tasks of an exam part; `mockExamTasks` names them `lesen-1` to
+  `hoeren-4`. Compiled, an exam is `MockExam` with its `modules`
+  (`MockExamModule`), each with its `minutes` (from `EXAM_MODULE_FACTS`)
+  and its parts; a heard part also says how often it is `plays`.
+- **The shell.** `MockExamPage.tsx` is a shell around a module: the start
+  (with the time limit switched on or off), the clock (`timeLeft` in the
+  learning engine; it can be switched off while the module runs, and when
+  time is up the run finishes with the answers so far), and the result. What
+  the learner does inside the module is `ModuleRun`, picked by the module's
+  `scoredBy`: `ItemModuleRun` for Lesen and Hören. A run gets
+  `ModuleRunProps` (the exam, the module, `timeUp`, `onFinish`) and finishes
+  with `FinishedModule`: each part's `{ part, correct, total }` and what to
+  show below the result. A module graded by an AI assistant (Schreiben,
+  Sprechen; ticket #28) is a new member of `MockExamModule` with
+  `scoredBy: 'assistant'`, a case in `ModuleRun` with its own run (built
+  from `TaskSheetView`, `CopyPrompt`, `ScoreEntry`), and parts given as
+  points of their weight (`correct` 32 of `total` 40); the shell, the result
+  and the history need no change.
+- **Scores.** `mockModuleResult` scores a module over all its parts out of
+  100 (`scoreModule`, so 27 of 30 is 90); `scoreStanding` says where it
+  stands against `PASS_SCORE` (60) and `READINESS_SCORE` (90). A result shows
+  the score large, that standing in words, and each part in the
+  `module-scores` boxes of the readiness view (`MockResultSummary`).
+- **History.** Every finished module is kept in the progress
+  (`mockExams`, oldest first, saved since version 3) with
+  `recordMockExamResult`; `mockExamHistory` gives them the latest first. A
+  result is never replaced. Original mock exams do not count toward
+  readiness: only the official ones do.
+- In Hören each recording plays as often as the exam plays it
+  (`PlayRecording` with `plays`); the transcript is shown only in the
+  result.
+
 ## Readiness and the official mock exams
 
 - The readiness view is `#/readiness` (`src/app/ReadinessPage.tsx`). The tree
@@ -388,6 +432,11 @@ The rules are in the learning engine, like every rule. The tree
   and Jonas (Thorsten). B2 is the last level, so its
   line ends with the exam. A new fixture node of another kind goes there too,
   so that the counts of the levels above stay as their tests know them.
+- The fixture's mock exams are `tests/fixtures/content/mock-exams/`:
+  `mock-exam-1` is published, with every part of Lesen and Hören in its
+  format (short invented texts; Hören Teil 4 in all three voices), and
+  `mock-exam-2` is coming soon. `tests/browser/mock-exam.spec.ts` answers its
+  items from that file.
 - A journey that takes a practice task uses `tests/browser/taking-a-task.ts`
   with the part (`READING` or `LISTENING`); one that hears German records
   what plays with `listen` in `tests/browser/listening.ts`.
@@ -404,7 +453,10 @@ The rules are in the learning engine, like every rule. The tree
 - German is heard in a stored voice, never the browser's own speech, so it
   sounds the same on every device. The voices (ticket #5) are Piper's
   Thorsten (medium), which says every example and word, and Kerstin (medium),
-  the second voice of a dialogue. They are `VOICES` in
+  the second voice of a dialogue. The third, `mls-5424` (ticket #27), is
+  speaker 5424 of Piper's MLS (medium) model (Piper's speaker number 12,
+  passed as `--speaker`), for the third speaker of Hören Teil 4: a woman's
+  voice clearly higher than Kerstin's. They are `VOICES` in
   `src/content-model/audio.ts`. The format is MP3, 48 kbit/s, mono.
 - The pipeline attaches `audio` (a `Spoken`: `key`, `voice`, `text`) to every
   piece of German that has a play button: each example of a grammar node and
@@ -424,7 +476,8 @@ The rules are in the learning engine, like every rule. The tree
   needs no audio. The build copies only the files that published nodes play.
 - **Generating.** Piper (`piper-tts`) and the voice files
   (`de_DE-thorsten-medium.onnx` with its `.onnx.json`, the same for Kerstin)
-  are installed outside the repository. Then:
+  are installed outside the repository, and so is `de_DE-mls-medium.onnx`
+  for the third voice. Then:
 
   ```sh
   pnpm audio:generate --voices <folder of the .onnx files> --piper <path to piper>
@@ -451,11 +504,13 @@ The rules are in the learning engine, like every rule. The tree
   gives each line `audio: spoken(line.text, <its speaker's voice>)`. Anything
   in a compiled node that carries `audio` is found by `spokenItems`, so the
   command generates it, the check asks for its file and the build ships it
-  with no other change. A third speaker in one text (Hören Teil 4) needs a
-  third voice in `VOICES` first: two speakers of a text may not share one.
+  with no other change; a mock exam's lines are found the same way
+  (`spokenInBundle`). Two speakers of a text may not share a voice, so Hören
+  Teil 4 uses all three.
 - The licence of the Kerstin voice asks for a credit (Hi-Fi TTS, NVIDIA;
-  reader Cori Samuel). It is `voiceCredit` in the strings, at the foot of
-  every page.
+  reader Cori Samuel), and so does the MLS voice (Multilingual LibriSpeech,
+  CC BY 4.0, Facebook AI; read from LibriVox). It is `voiceCredit` in the
+  strings, at the foot of every page.
 
 ## Running the app at home
 

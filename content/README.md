@@ -297,6 +297,44 @@ and a few words about them, and nothing of an exam itself.
 - A `note` follows the two conventions above: three languages, and German
   (also a name in Latin letters inside the Persian) in asterisks.
 
+## Mock exams
+
+The original mock exams are one file each: `content/mock-exams/<id>.yaml`,
+with ids `mock-exam-1` to `mock-exam-5`. A mock exam is a whole exam in the
+Goethe B1 format, written for this project: never copied or reworked from an
+official set or a book. While it is `coming-soon` it may be its title alone;
+the list of mock exams shows it as "Coming soon". A complete example is
+`tests/fixtures/content/mock-exams/mock-exam-1.yaml`.
+
+```yaml
+id: mock-exam-1          # stable for ever: the learner's results are kept under it
+order: 1                 # its place in the list
+status: published        # coming-soon | published
+title: { en: Mock exam 1, fa: امتحان آزمایشی ۱, de: Übungsprüfung 1 }
+
+lesen:                   # Lesen, Teil 1 to Teil 5, in order
+  - texts: …             # a part is a task without an id: its texts and its items
+    items: …
+  - …
+hoeren:                  # Hören, Teil 1 to Teil 4, in order
+  - texts: …
+    items: …
+```
+
+- Each part has the format of its exam part, as a practice task does (the
+  table in "Practice tasks (Lesen)"). A part's id is its place: `lesen-3` is
+  Lesen Teil 3, and a report or a review sheet names its items `lesen-3/i2`.
+- A published mock exam has all five parts of Lesen and all four of Hören.
+  The time of each module comes from the exam (Lesen 65 minutes, Hören 40),
+  and so does how often each recording of Hören is played (Teil 1 and Teil 4
+  twice, Teil 2 and Teil 3 once). None of this is written in the file.
+- It is reviewed blind, texts included, exactly as an exam part is (see
+  "Review before publishing"): `pnpm review:pool mock-exam-1`, then
+  `pnpm review:record mock-exam-1`. Then publish it and run
+  `pnpm audio:generate` for the lines of Hören.
+- Schreiben and Sprechen of a mock exam are added in their own ticket (#28),
+  beside `lesen` and `hoeren`.
+
 ## A published grammar node
 
 Add the sections below. The page shows them in this fixed order: rule,
@@ -633,12 +671,51 @@ practice:                # one task or more; each attempt takes one of them, who
 ```
 
 - An item is a question whose answer lies in the texts, so it has what every
-  question has: `id`, `type`, `prompt`, `answer`, `explanation`. The only item
-  type so far is `richtig-falsch`.
-- A task has the format of its exam part: Lesen Teil 1 is 1 text and 6 items.
-  The formats are `ITEM_TASK_FORMATS` in `src/content-model/index.ts`. Only a
-  part that has a format there can be published; so far those are
-  `exam-lesen-1` and `exam-hoeren-3`.
+  question has: `id`, `type`, `prompt`, `answer`, `explanation`.
+- A task has the format of its exam part: its number of texts and items, and
+  the type of its items. The formats are `ITEM_TASK_FORMATS` in
+  `src/content-model/index.ts`; every Lesen and Hören part has one:
+
+  | Part | Texts | Items | Item type |
+  |---|---|---|---|
+  | Lesen Teil 1 | 1 personal text (an e-mail, a blog entry) | 6 | `richtig-falsch` |
+  | Lesen Teil 2 | 2 press texts; three items on each, the first on what it is about | 6 | `multiple-choice` |
+  | Lesen Teil 3 | 10 advertisements, ids `a` to `j` | 7 | `which-text` |
+  | Lesen Teil 4 | 7 comments on one question, each titled with its writer's name | 7 | `ja-nein` |
+  | Lesen Teil 5 | 1 set of rules or instructions | 4 | `multiple-choice` |
+  | Hören Teil 1 | 5 announcements or messages, 1 speaker each, heard twice | 10 | `richtig-falsch`, then `multiple-choice`, per text |
+  | Hören Teil 2 | 1 talk to an audience, 1 speaker, heard once | 5 | `multiple-choice` |
+  | Hören Teil 3 | 1 conversation of 2 speakers, heard once | 7 | `richtig-falsch` |
+  | Hören Teil 4 | 1 radio discussion of 3 speakers (a moderator and two guests), heard twice | 8 | `who-says` |
+
+- The item types besides `richtig-falsch`:
+
+  ```yaml
+  - id: i1
+    type: multiple-choice          # a, b, c: exactly three options, shown in the order written
+    prompt: Die Bibliothek ist …
+    options: [nur am Wochenende offen., jeden Tag offen., am Abend geschlossen.]
+    answer: jeden Tag offen.       # the text of the one right option
+  - id: i2
+    type: which-text               # Lesen Teil 3: which advertisement fits the situation?
+    prompt: Sie möchten am Abend Deutsch lernen.
+    answer: a                      # the id of a text of the task, or '0' when none fits
+  - id: i3
+    type: ja-nein                  # Lesen Teil 4: is the writer for it?
+    prompt: Ist Lisa für ein Handyverbot?
+    answer: true                   # true: Ja; false: Nein
+  - id: i4
+    type: who-says                 # Hören Teil 4: who says this?
+    prompt: Zu Hause spart man Zeit.
+    answer: Herr Wolf              # the name of a speaker of the task's text
+  ```
+
+  A `which-text` answer is the id of one text, and a text answers one item
+  at most (each advertisement is used once); exactly as in the exam, one
+  situation should have none (`'0'`, in quotes). The app offers the texts'
+  ids and "0" as the choices, and shows each text with its id; a
+  `who-says` item offers the speakers of the text. Each item still has its
+  `explanation`.
 - Everything in a task is original. Follow the exam's format; never copy a
   text or an item from the official model sets or from a book.
 - The solved example "0" that the exam prints before the items is not an item.
@@ -672,9 +749,11 @@ practice:
         explanation: { en: …, fa: …, de: … }
 ```
 
-- The voices are `thorsten` and `kerstin` (README, "Audio"). Two speakers of
-  one text never share a voice: the learner tells them apart by ear, as in
-  the exam. Give the man Thorsten and the woman Kerstin.
+- The voices are `thorsten`, `kerstin` and `mls-5424` (README, "Audio").
+  Two speakers of one text never share a voice: the learner tells them apart
+  by ear, as in the exam. Give the man Thorsten and the woman Kerstin; a
+  third speaker (Hören Teil 4) gets `mls-5424`, a second, higher woman's
+  voice.
 - Every line is spoken in its speaker's voice by `pnpm audio:generate`, one
   file per line, and the check asks for each file. Write numbers, times and
   prices in words ("um acht", "dreißig Leute"): the voice misreads digits.
@@ -819,7 +898,7 @@ still `coming-soon`: record it, set the status to `published`, then run
 `pnpm audio:generate` for the audio of its lines.
 
 Grammar, vocabulary and phrases nodes and exam parts can be published so far: every
-writing and speaking part, and the reading and listening parts whose task format is built.
+writing and speaking part, and every reading and listening part. So can mock exams (see "Mock exams").
 Other node kinds and exam parts are added to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
@@ -869,7 +948,8 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   than 8 words, which give 16). A `coming-soon` draft may have fewer. An exam part is exempt: it has no pool. A reading part is held
   to the format of its part instead, and a writing or speaking part has none.
 - A published reading or listening part whose practice task has not the
-  number of texts and items of its part, a text to hear in a reading part or
+  number of texts and items of its part or the type of its items, an item
+  `multiple-choice` without exactly three options, a text to hear in a reading part or
   a text to read in a listening part, a conversation with another number of
   speakers than its part has, and a part that has no task format yet.
 - A text with neither a `body` nor `lines`, or with both; a text to hear
@@ -897,6 +977,12 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - German of a published node that is spoken (an example, a word) without its
   audio file in `content/audio/`, and spoken German with a number that is not
   written in words.
+- A mock exam whose file is not named by its id; a published one without
+  every part of Lesen and Hören, with a part that has not the format of its
+  exam part, or without a review record of its texts and items as they are;
+  a `which-text` answer that is no text of its part (or "0"), or a text
+  that answers two items; a `who-says` answer that is no speaker of its part;
+  two texts or two items of one part with the same id.
 - A list of official mock exams that is missing, has a link that is not a
   full `https://` address, has an exam without a link, has two exams with one
   id, or has fewer than two exams that count toward readiness.

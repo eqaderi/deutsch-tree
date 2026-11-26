@@ -1,0 +1,420 @@
+# Fixture mock exam for tests. Invented, short, and stable: tests assert on these words.
+# Every part has the format of its exam part (number of texts and items, item types),
+# but the texts are far shorter than in a real exam.
+id: mock-exam-1
+order: 1
+status: published
+title:
+  en: Fixture mock exam
+  fa: آزمون آزمایشی
+  de: Test-Prüfung
+
+lesen:
+  # Teil 1: one personal text, six statements, Richtig or Falsch.
+  - texts:
+      - id: a
+        title: Endlich in Leipzig
+        body: |
+          Liebe Anna,
+
+          seit einem Monat wohne ich jetzt in Leipzig. Die Wohnung ist klein, aber hell.
+          Meine Arbeit im Café beginnt schon um sechs Uhr, darum stehe ich sehr früh auf.
+
+          Am Wochenende fahre ich mit dem Fahrrad an den See. Komm mich doch im Mai besuchen!
+
+          Viele Grüße
+          Paula
+    items:
+      - id: i1
+        type: richtig-falsch
+        prompt: Paula wohnt seit einem Jahr in Leipzig.
+        answer: false
+        explanation: &why { en: The text says so., fa: متن همین را می‌گوید., de: So steht es im Text. }
+      - id: i2
+        type: richtig-falsch
+        prompt: Die Wohnung ist hell.
+        answer: true
+        explanation: *why
+      - id: i3
+        type: richtig-falsch
+        prompt: Paula arbeitet in einem Café.
+        answer: true
+        explanation: *why
+      - id: i4
+        type: richtig-falsch
+        prompt: Paula steht spät auf.
+        answer: false
+        explanation: *why
+      - id: i5
+        type: richtig-falsch
+        prompt: Am Wochenende fährt Paula mit dem Zug an den See.
+        answer: false
+        explanation: *why
+      - id: i6
+        type: richtig-falsch
+        prompt: Paula lädt Anna ein.
+        answer: true
+        explanation: *why
+
+  # Teil 2: two press texts, three questions each, a, b or c.
+  - texts:
+      - id: a
+        title: Neue Bibliothek im Zentrum
+        body: |
+          Die Stadt hat eine neue Bibliothek eröffnet. Sie ist jeden Tag bis zwanzig Uhr offen.
+          Kinder bekommen ihren Ausweis kostenlos.
+      - id: b
+        title: Mehr Busse am Abend
+        body: |
+          Ab Juni fahren die Busse am Abend öfter. Die Linie drei fährt dann auch nachts.
+          Die Fahrkarten kosten so viel wie vorher.
+    items:
+      - id: i1
+        type: multiple-choice
+        prompt: In dem Text geht es um …
+        options: [eine neue Bibliothek., eine neue Schule., ein neues Museum.]
+        answer: eine neue Bibliothek.
+        explanation: *why
+      - id: i2
+        type: multiple-choice
+        prompt: Die Bibliothek ist …
+        options: [nur am Wochenende offen., jeden Tag offen., am Abend geschlossen.]
+        answer: jeden Tag offen.
+        explanation: *why
+      - id: i3
+        type: multiple-choice
+        prompt: Kinder …
+        options: [zahlen für den Ausweis., bekommen den Ausweis kostenlos., brauchen keinen Ausweis.]
+        answer: bekommen den Ausweis kostenlos.
+        explanation: *why
+      - id: i4
+        type: multiple-choice
+        prompt: In dem Text geht es um …
+        options: [neue Fahrräder., mehr Busse am Abend., teure Fahrkarten.]
+        answer: mehr Busse am Abend.
+        explanation: *why
+      - id: i5
+        type: multiple-choice
+        prompt: Die Linie drei …
+        options: [fährt auch nachts., fährt nicht mehr., fährt nur am Morgen.]
+        answer: fährt auch nachts.
+        explanation: *why
+      - id: i6
+        type: multiple-choice
+        prompt: Die Fahrkarten …
+        options: [werden teurer., werden billiger., kosten so viel wie vorher.]
+        answer: kosten so viel wie vorher.
+        explanation: *why
+
+  # Teil 3: ten advertisements, seven situations; one situation has no advertisement (0).
+  - texts:
+      - { id: a, title: Sprachschule Wort, body: "Deutschkurse am Abend für Erwachsene." }
+      - { id: b, title: Fahrradladen Rad, body: "Wir reparieren Ihr Fahrrad in einer Stunde." }
+      - { id: c, title: Kochstudio, body: "Kochkurse für Kinder am Samstag." }
+      - { id: d, title: Tanzschule Takt, body: "Tanzen lernen zu zweit, jeden Freitag." }
+      - { id: e, title: Hundeschule, body: "Kurse für junge Hunde und ihre Besitzer." }
+      - { id: f, title: Computerhilfe, body: "Wir helfen bei Problemen mit dem Laptop, auch zu Hause." }
+      - { id: g, title: Gartenhilfe, body: "Wir mähen Ihren Rasen und schneiden Ihre Hecke." }
+      - { id: h, title: Schwimmbad Welle, body: "Schwimmkurse für Erwachsene am Morgen." }
+      - { id: i, title: Umzugsfirma, body: "Wir bringen Ihre Möbel in die neue Wohnung." }
+      - { id: j, title: Fotostudio, body: "Passfotos sofort, ohne Termin." }
+    items:
+      - id: i1
+        type: which-text
+        prompt: Sie möchten am Abend Deutsch lernen.
+        answer: a
+        explanation: *why
+      - id: i2
+        type: which-text
+        prompt: Ihr Fahrrad ist kaputt.
+        answer: b
+        explanation: *why
+      - id: i3
+        type: which-text
+        prompt: Sie brauchen schnell ein Foto für Ihren Pass.
+        answer: j
+        explanation: *why
+      - id: i4
+        type: which-text
+        prompt: Sie suchen einen Kurs für Ihr Auto.
+        answer: "0"
+        explanation: *why
+      - id: i5
+        type: which-text
+        prompt: Ihr Laptop funktioniert nicht.
+        answer: f
+        explanation: *why
+      - id: i6
+        type: which-text
+        prompt: Sie ziehen um.
+        answer: i
+        explanation: *why
+      - id: i7
+        type: which-text
+        prompt: Sie möchten mit Ihrem Partner tanzen.
+        answer: d
+        explanation: *why
+
+  # Teil 4: seven comments on one question; is the person for it?
+  - texts:
+      - { id: a, title: Lisa, body: "Ein Verbot finde ich richtig. Handys stören im Unterricht." }
+      - { id: b, title: Tom, body: "Ich brauche mein Handy, wenn meine Eltern anrufen. Kein Verbot!" }
+      - { id: c, title: Mia, body: "In der Pause sollen alle miteinander sprechen. Also bitte ein Verbot." }
+      - { id: d, title: Ben, body: "Wir lernen mit dem Handy auch viel. Ein Verbot ist falsch." }
+      - { id: e, title: Ella, body: "Ohne Handys ist es in der Klasse ruhiger. Ich bin dafür." }
+      - { id: f, title: Max, body: "Die Schüler sollen selbst entscheiden. Ich bin dagegen." }
+      - { id: g, title: Zoe, body: "Ein Verbot ist gut, dann gibt es weniger Streit." }
+    items:
+      - { id: i1, type: ja-nein, prompt: Ist Lisa für ein Handyverbot?, answer: true, explanation: *why }
+      - { id: i2, type: ja-nein, prompt: Ist Tom für ein Handyverbot?, answer: false, explanation: *why }
+      - { id: i3, type: ja-nein, prompt: Ist Mia für ein Handyverbot?, answer: true, explanation: *why }
+      - { id: i4, type: ja-nein, prompt: Ist Ben für ein Handyverbot?, answer: false, explanation: *why }
+      - { id: i5, type: ja-nein, prompt: Ist Ella für ein Handyverbot?, answer: true, explanation: *why }
+      - { id: i6, type: ja-nein, prompt: Ist Max für ein Handyverbot?, answer: false, explanation: *why }
+      - { id: i7, type: ja-nein, prompt: Ist Zoe für ein Handyverbot?, answer: true, explanation: *why }
+
+  # Teil 5: one set of rules, four questions, a, b or c.
+  - texts:
+      - id: a
+        title: Regeln im Fitnessstudio
+        body: |
+          Bitte bringen Sie immer ein Handtuch mit. Essen ist im Studio nicht erlaubt.
+          Kinder unter vierzehn Jahren dürfen nur mit einem Erwachsenen trainieren.
+          Wer seinen Vertrag kündigen will, schreibt uns einen Brief.
+    items:
+      - id: i1
+        type: multiple-choice
+        prompt: Was müssen Sie mitbringen?
+        options: [Ein Handtuch., Etwas zu essen., Einen Ausweis.]
+        answer: Ein Handtuch.
+        explanation: *why
+      - id: i2
+        type: multiple-choice
+        prompt: Essen im Studio ist …
+        options: [erlaubt., nicht erlaubt., nur am Abend erlaubt.]
+        answer: nicht erlaubt.
+        explanation: *why
+      - id: i3
+        type: multiple-choice
+        prompt: Kinder unter vierzehn Jahren …
+        options: [dürfen nicht trainieren., trainieren mit einem Erwachsenen., trainieren allein.]
+        answer: trainieren mit einem Erwachsenen.
+        explanation: *why
+      - id: i4
+        type: multiple-choice
+        prompt: Wie kündigt man den Vertrag?
+        options: [Mit einem Anruf., Mit einem Brief., Im Studio an der Kasse.]
+        answer: Mit einem Brief.
+        explanation: *why
+
+hoeren:
+  # Teil 1: five short texts, each heard twice; per text a statement and a question.
+  - texts:
+      - id: a
+        title: Auf dem Anrufbeantworter
+        speakers: [{ name: Frau Berg, voice: kerstin }]
+        lines:
+          - {
+              speaker: Frau Berg,
+              text: "Hallo Herr Klein, Ihr Auto ist fertig. Sie können es morgen ab neun Uhr abholen.",
+            }
+      - id: b
+        title: Im Radio
+        speakers: [{ name: Sprecher, voice: thorsten }]
+        lines:
+          - {
+              speaker: Sprecher,
+              text: "Auf der Autobahn nach Bremen gibt es einen langen Stau. Fahren Sie lieber über die Landstraße.",
+            }
+      - id: c
+        title: Am Bahnhof
+        speakers: [{ name: Ansage, voice: kerstin }]
+        lines:
+          - { speaker: Ansage, text: "Der Zug nach Köln fährt heute von Gleis sieben. Er hat zehn Minuten Verspätung." }
+      - id: d
+        title: Das Wetter
+        speakers: [{ name: Sprecher, voice: thorsten }]
+        lines:
+          - { speaker: Sprecher, text: "Morgen wird es sonnig und warm. Erst am Abend kommt Regen." }
+      - id: e
+        title: Im Kaufhaus
+        speakers: [{ name: Ansage, voice: kerstin }]
+        lines:
+          - { speaker: Ansage, text: "Heute gibt es alle Schuhe im ersten Stock zum halben Preis." }
+    items:
+      - {
+          id: i1,
+          type: richtig-falsch,
+          prompt: Das Auto von Herrn Klein ist repariert.,
+          answer: true,
+          explanation: *why,
+        }
+      - id: i2
+        type: multiple-choice
+        prompt: Wann kann Herr Klein das Auto abholen?
+        options: [Heute., Morgen ab neun Uhr., Am Wochenende.]
+        answer: Morgen ab neun Uhr.
+        explanation: *why
+      - {
+          id: i3,
+          type: richtig-falsch,
+          prompt: Auf der Autobahn nach Bremen ist kein Verkehr.,
+          answer: false,
+          explanation: *why,
+        }
+      - id: i4
+        type: multiple-choice
+        prompt: Was soll man tun?
+        options: [Über die Landstraße fahren., Zu Hause bleiben., Mit dem Zug fahren.]
+        answer: Über die Landstraße fahren.
+        explanation: *why
+      - { id: i5, type: richtig-falsch, prompt: Der Zug nach Köln ist pünktlich., answer: false, explanation: *why }
+      - id: i6
+        type: multiple-choice
+        prompt: Von welchem Gleis fährt der Zug?
+        options: [Gleis drei., Gleis sieben., Gleis zehn.]
+        answer: Gleis sieben.
+        explanation: *why
+      - { id: i7, type: richtig-falsch, prompt: Morgen scheint die Sonne., answer: true, explanation: *why }
+      - id: i8
+        type: multiple-choice
+        prompt: Wann regnet es?
+        options: [Am Morgen., Am Mittag., Am Abend.]
+        answer: Am Abend.
+        explanation: *why
+      - { id: i9, type: richtig-falsch, prompt: Die Schuhe sind heute billiger., answer: true, explanation: *why }
+      - id: i10
+        type: multiple-choice
+        prompt: Wo sind die Schuhe?
+        options: [Im Erdgeschoss., Im ersten Stock., Im zweiten Stock.]
+        answer: Im ersten Stock.
+        explanation: *why
+
+  # Teil 2: one talk to an audience, heard once; five questions, a, b or c.
+  - texts:
+      - id: a
+        title: Eine Führung im Schloss
+        speakers: [{ name: Führerin, voice: kerstin }]
+        lines:
+          - { speaker: Führerin, text: "Herzlich willkommen im Schloss! Die Führung dauert eine Stunde." }
+          - { speaker: Führerin, text: "Wir beginnen im großen Saal. Hier hat der König gegessen." }
+          - { speaker: Führerin, text: "Fotos sind leider nicht erlaubt." }
+          - { speaker: Führerin, text: "Am Ende besuchen wir den Garten. Dort gibt es auch ein Café." }
+          - { speaker: Führerin, text: "Ihre Jacken können Sie unten an der Kasse lassen." }
+    items:
+      - id: i1
+        type: multiple-choice
+        prompt: Wie lange dauert die Führung?
+        options: [Eine halbe Stunde., Eine Stunde., Zwei Stunden.]
+        answer: Eine Stunde.
+        explanation: *why
+      - id: i2
+        type: multiple-choice
+        prompt: Wo beginnt die Führung?
+        options: [Im Garten., Im großen Saal., An der Kasse.]
+        answer: Im großen Saal.
+        explanation: *why
+      - id: i3
+        type: multiple-choice
+        prompt: Fotos sind …
+        options: [erlaubt., nicht erlaubt., nur im Garten erlaubt.]
+        answer: nicht erlaubt.
+        explanation: *why
+      - id: i4
+        type: multiple-choice
+        prompt: Wo gibt es ein Café?
+        options: [Im Garten., Im Saal., Neben der Kasse.]
+        answer: Im Garten.
+        explanation: *why
+      - id: i5
+        type: multiple-choice
+        prompt: Wo können die Besucher ihre Jacken lassen?
+        options: [Im Saal., An der Kasse., Im Café.]
+        answer: An der Kasse.
+        explanation: *why
+
+  # Teil 3: one conversation of two people, heard once; seven statements.
+  - texts:
+      - id: a
+        title: In der Mittagspause
+        speakers:
+          - { name: Sara, voice: kerstin }
+          - { name: David, voice: thorsten }
+        lines:
+          - { speaker: Sara, text: "Hallo David, gehst du mit in die Kantine?" }
+          - { speaker: David, text: "Heute nicht, ich habe mein Essen von zu Hause dabei." }
+          - { speaker: Sara, text: "Schade. Was machst du am Wochenende?" }
+          - { speaker: David, text: "Ich besuche meine Schwester in Hamburg. Sie hat Geburtstag." }
+          - { speaker: Sara, text: "Fährst du mit dem Auto?" }
+          - { speaker: David, text: "Nein, mit dem Zug. Das ist bequemer." }
+          - { speaker: Sara, text: "Viel Spaß! Ich bleibe zu Hause und lese." }
+    items:
+      - { id: i1, type: richtig-falsch, prompt: David geht heute in die Kantine., answer: false, explanation: *why }
+      - { id: i2, type: richtig-falsch, prompt: David hat sein Essen dabei., answer: true, explanation: *why }
+      - { id: i3, type: richtig-falsch, prompt: Davids Schwester wohnt in Hamburg., answer: true, explanation: *why }
+      - { id: i4, type: richtig-falsch, prompt: Davids Bruder hat Geburtstag., answer: false, explanation: *why }
+      - { id: i5, type: richtig-falsch, prompt: David fährt mit dem Auto., answer: false, explanation: *why }
+      - { id: i6, type: richtig-falsch, prompt: David findet den Zug bequem., answer: true, explanation: *why }
+      - { id: i7, type: richtig-falsch, prompt: Sara bleibt am Wochenende zu Hause., answer: true, explanation: *why }
+
+  # Teil 4: one radio discussion of a moderator and two guests, heard twice; who says what?
+  - texts:
+      - id: a
+        title: Arbeiten von zu Hause
+        speakers:
+          - { name: Moderatorin, voice: kerstin }
+          - { name: Herr Wolf, voice: thorsten }
+          - { name: Frau Roth, voice: mls-5424 }
+        lines:
+          - {
+              speaker: Moderatorin,
+              text: "Heute sprechen wir über das Arbeiten von zu Hause. Ich finde das Thema sehr wichtig.",
+            }
+          - { speaker: Herr Wolf, text: "Ich arbeite gern zu Hause. Ich spare jeden Tag viel Zeit." }
+          - {
+              speaker: Frau Roth,
+              text: "Mir fehlen zu Hause meine Kollegen. Im Büro kann man besser zusammen sprechen.",
+            }
+          - { speaker: Moderatorin, text: "Viele Eltern sagen, dass sie zu Hause mehr Zeit für die Kinder haben." }
+          - { speaker: Herr Wolf, text: "Man braucht aber einen ruhigen Platz zum Arbeiten." }
+          - { speaker: Frau Roth, text: "Ich gehe lieber jeden Tag ins Büro. Dort ist mein Tag besser geplant." }
+          - { speaker: Moderatorin, text: "Zum Schluss eine Frage an unsere Hörer. Schreiben Sie uns Ihre Meinung!" }
+          - { speaker: Herr Wolf, text: "Die Firmen sollen den Mitarbeitern die Wahl lassen." }
+    items:
+      - { id: i1, type: who-says, prompt: Das Thema ist sehr wichtig., answer: Moderatorin, explanation: *why }
+      - { id: i2, type: who-says, prompt: Zu Hause spart man Zeit., answer: Herr Wolf, explanation: *why }
+      - {
+          id: i3,
+          type: who-says,
+          prompt: Im Büro spricht man besser miteinander.,
+          answer: Frau Roth,
+          explanation: *why,
+        }
+      - {
+          id: i4,
+          type: who-says,
+          prompt: Eltern haben zu Hause mehr Zeit für ihre Kinder.,
+          answer: Moderatorin,
+          explanation: *why,
+        }
+      - {
+          id: i5,
+          type: who-says,
+          prompt: Für die Arbeit zu Hause braucht man Ruhe.,
+          answer: Herr Wolf,
+          explanation: *why,
+        }
+      - { id: i6, type: who-says, prompt: Im Büro ist der Tag besser geplant., answer: Frau Roth, explanation: *why }
+      - {
+          id: i7,
+          type: who-says,
+          prompt: Die Hörer sollen ihre Meinung schreiben.,
+          answer: Moderatorin,
+          explanation: *why,
+        }
+      - { id: i8, type: who-says, prompt: Die Mitarbeiter sollen selbst wählen., answer: Herr Wolf, explanation: *why }
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-11-26
+  pool: b99d8716b67b493e

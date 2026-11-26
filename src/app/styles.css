@@ -2999,3 +2999,140 @@ a.strip-end {
  * Nothing moves yet. When motion is added (150ms at most), switch it off
  * inside @media (prefers-reduced-motion: reduce).
  */
+
+/* ---------- original mock exams: the list, a module as it is taken, its result ---------- */
+
+.mock-modules {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mock-history {
+  display: grid;
+  gap: 10px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mock-history-entry {
+  border-radius: var(--radius-card);
+  padding: 12px var(--pad);
+  background: var(--raised);
+}
+
+.mock-history-entry .module-scores div {
+  background: var(--panel);
+}
+
+.mock-result-head {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+h2.mock-result-head {
+  font-size: 18px;
+}
+
+.mock-standing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block: 8px 0;
+}
+
+.part-scores dd {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* The clock of a timed module: it stays in view at the top while the learner scrolls. */
+.mock-clock {
+  position: sticky;
+  inset-block-start: 8px;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-block-end: var(--gap);
+  border-radius: var(--radius-panel);
+  padding: 8px var(--pad);
+  background: var(--panel);
+  box-shadow: 0 12px 24px -16px rgb(96 72 40 / 0.6);
+}
+
+.mock-clock p {
+  margin: 0;
+}
+
+.mock-clock-time {
+  font-size: 22px;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+}
+
+.part-choice button.pill {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.part-choice [aria-current="step"] {
+  background: var(--text);
+  color: #fff;
+  box-shadow: none;
+}
+
+.action-bar {
+  gap: 8px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-block-size: var(--touch);
+}
+
+.check input {
+  inline-size: 20px;
+  block-size: 20px;
+  accent-color: var(--text);
+}
+
+/* The letter of a text that items name it by (Lesen, Teil 3). */
+.text-letter {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 28px;
+  block-size: 28px;
+  margin-inline-end: 8px;
+  border-radius: 50%;
+  background: var(--raised);
+  font-size: 15px;
+}
+
+.plays-left {
+  font-size: 14px;
+}
+
+.mock-part-answers > summary {
+  min-block-size: var(--touch);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.mock-part-answers > .panel {
+  margin-block-start: var(--gap);
+  padding: 0;
+  box-shadow: none;
+  background: transparent;
+}
