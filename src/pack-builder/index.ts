@@ -166,12 +166,15 @@ function describeExams(exams: ExamOutline[], lastPage: number, recordings: Match
 }
 
 function slug(name: string): string {
-  return name
-    .normalize('NFKD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
+  return (
+    name
+      .normalize('NFKD')
+      // Accents come off: "Übungsbuch" becomes "ubungsbuch".
+      .replace(/\p{M}/gu, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+  )
 }
 
 async function exists(file: string): Promise<boolean> {

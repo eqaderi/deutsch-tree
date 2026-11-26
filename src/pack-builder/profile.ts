@@ -16,18 +16,36 @@ import { readFile } from 'node:fs/promises'
 import { parse } from 'yaml'
 import { z } from 'zod'
 
-const pattern = z
-  .string()
-  .min(1)
-  // One spelling for umlauts (a single character), as in the text read from a PDF.
-  .transform((source) => source.normalize('NFC'))
-  .superRefine((source, ctx) => {
-    try {
-      new RegExp(source, 'gmu')
-    } catch (error) {
-      ctx.addIssue({ code: 'custom', message: `is not a valid pattern: ${(error as Error).message}` })
-    }
-  })
+/** A pattern that has at least `groups` numbered groups. */
+const patternWith = (groups: number) =>
+  z
+    .string()
+    .min(1)
+    // One spelling for umlauts (a single character), as in the text read from a PDF.
+    .transform((source) => source.normalize('NFC'))
+    .superRefine((source, ctx) => {
+      let found: number
+      try {
+        new RegExp(source, 'gmu')
+        // Matching the empty alternative shows how many groups the pattern has.
+        found = (new RegExp(`${source}|`, 'u').exec('')?.length ?? 1) - 1
+      } catch (error) {
+        ctx.addIssue({ code: 'custom', message: `is not a valid pattern: ${(error as Error).message}` })
+        return
+      }
+      if (found < groups) {
+        ctx.addIssue({
+          code: 'custom',
+          message:
+            groups === 1
+              ? 'needs a group in round brackets around the number, like (\\d+)'
+              : `needs ${groups} groups in round brackets, and has ${found}`,
+        })
+      }
+    })
+
+const pattern = patternWith(0)
+const numberPattern = patternWith(1)
 
 const moduleId = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens')
 const pageNumber = z.number().int().positive()
@@ -68,23 +86,23 @@ export const bookProfileSchema = z
       /** Pages after this one are skipped (transcripts, answer sheets). Default: the last page. */
       lastPage: pageNumber.optional(),
       /** An exam's heading. Group 1 is the exam's number. */
-      exam: pattern,
+      exam: numberPattern,
       /** A module's heading, by module id. */
       modules: z.record(moduleId, pattern),
       /** A part's heading. Group 1 is the part's number. */
-      part: pattern,
+      part: numberPattern,
     }),
     answerKey: z.strictObject({
       /** How many columns of text a page of the key has. */
       columns: z.number().int().positive().default(1),
       /** An exam's heading in the key. Group 1 is the exam's number. */
-      exam: pattern,
+      exam: numberPattern,
       /** A module's heading in the key, by module id. */
       modules: z.record(moduleId, pattern),
       /** A part's heading in the key; group 1 is its number. Null when the key has none. */
-      part: pattern.nullable(),
+      part: numberPattern.nullable(),
       /** One answer. Group 1 is the printed item number, group 2 the answer as printed. */
-      item: pattern,
+      item: patternWith(2),
       /** Printed answers that stand for a choice, for example r: richtig. Case is ignored. */
       answers: z.record(z.string(), z.string()).default({}),
     }),

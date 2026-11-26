@@ -45,6 +45,22 @@ test('a book becomes a pack folder whose description names the pack and counts i
   expect(description.exams.map((exam: { number: number }) => exam.number)).toEqual([1, 2])
 })
 
+test("the pack's folder is named after the pack, or as asked", async () => {
+  const named = await build(fixtureBook(), { name: 'Übungsbuch B1 (2. Auflage)' })
+  expect(named.packDir).toBe(path.join(named.outDir, 'ubungsbuch-b1-2-auflage'))
+  expect(await readJson(named.packDir, 'pack.json')).toMatchObject({
+    id: 'ubungsbuch-b1-2-auflage',
+    name: 'Übungsbuch B1 (2. Auflage)',
+  })
+
+  const asked = await build(fixtureBook(), { id: 'my-book' })
+  expect(asked.packDir).toBe(path.join(asked.outDir, 'my-book'))
+
+  const refused = await build(fixtureBook(), { id: '../elsewhere' })
+  expect(refused.packDir).toBeNull()
+  expect(refused.report.errors).toEqual([{ source: 'output', message: expect.stringContaining('folder name') }])
+})
+
 test('the pack follows the pack format that the app reads', async () => {
   const { packDir } = await build()
 
@@ -572,6 +588,22 @@ test('a profile with a mistake in it is reported before any file is read', async
   expect(report.errors.map((error) => error.message).join('\n')).toMatch(/examPdf\.exam: is not a valid pattern/)
   expect(report.errors.map((error) => error.message).join('\n')).toMatch(/recordings\.file: needs either/)
   expect(report.errors.map((error) => error.message).join('\n')).toMatch(/answerkey/)
+})
+
+test('a pattern without the group that carries the number is a mistake in the profile', async () => {
+  const { report, packDir } = await build(fixtureBook(), {
+    profile: {
+      examPdf: { exam: '^Modelltest \\d+$' },
+      answerKey: { part: '^Teil \\d+', item: '(\\d+) [a-c]' },
+    },
+  })
+
+  expect(packDir).toBeNull()
+  expect(report.errors).toEqual([
+    { source: 'profile', message: expect.stringMatching(/^examPdf\.exam: .*group/) },
+    { source: 'profile', message: expect.stringMatching(/^answerKey\.part: .*group/) },
+    { source: 'profile', message: expect.stringMatching(/^answerKey\.item: .*2 groups/) },
+  ])
 })
 
 test.each([
