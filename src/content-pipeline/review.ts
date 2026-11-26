@@ -29,7 +29,7 @@ interface ReviewView<Q> {
 }
 
 const TYPED =
-  'the German you would type, as text; if several answers are equally right, a list with each of them, such as ["…", "…"]'
+  'the German you would type, as text. Several right answers are no flaw here: give a list with each of them, such as ["…", "…"]. Object only when the question leaves its answer open'
 
 /**
  * A typed question's key is the list of accepted answers. The reviewer agrees

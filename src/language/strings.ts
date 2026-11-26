@@ -1,4 +1,5 @@
 import type { NodeKind, Question } from '../content-model/index.ts'
+import type { AnswerNote } from '../learning-engine/index.ts'
 
 /**
  * Every word the interface shows. Components never hold their own wording;
@@ -58,11 +59,15 @@ export const en = {
     'multiple-choice': 'Choose the right answer.',
     'gap-fill': 'Choose the word that fits the gap.',
     'true-false': 'Is this sentence correct German?',
+    'typed-answer': 'Type the answer.',
+    'typed-gap-fill': 'Type the word that fits the gap.',
   } satisfies Record<Question['type'], string>,
   /** Read out in place of an empty gap. */
   gap: 'gap',
   sentenceCorrect: 'Correct',
   sentenceNotCorrect: 'Not correct',
+  /** The name of the buttons that write ä, ö, ü and ß into a typed answer. */
+  germanLetters: 'German letters',
   next: 'Next',
   checkAnswers: 'Check answers',
   reportProblem: 'Report a problem',
@@ -78,6 +83,13 @@ export const en = {
   wrongAnswers: 'Wrong answers',
   yourAnswer: 'Your answer',
   rightAnswer: 'Right answer',
+  // Typed answers that counted as right although they were not written exactly.
+  acceptedWithNote: 'Accepted with a note',
+  exactSpelling: 'Exact spelling',
+  answerNotes: {
+    'umlaut-substitute': 'Accepted. The exact spelling has ä, ö, ü or ß.',
+    capitalisation: 'Accepted. Mind the capital and small letters.',
+  } satisfies Record<AnswerNote, string>,
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */

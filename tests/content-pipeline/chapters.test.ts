@@ -39,6 +39,7 @@ test('the curriculum order runs chapter by chapter, in the order of the chapter 
   expect(bundle?.index.nodes.map((node) => [node.chapter, node.id])).toEqual([
     ['fixture-later', 'grammar-002'],
     ['fixture-basics', 'grammar-001'],
+    ['fixture-basics', 'grammar-010'],
   ])
 })
 
@@ -140,6 +141,7 @@ test('German marked in a topic title is compiled as German, like in every other 
 
   expect(bundle?.index.nodes.map((node) => node.title.fa)).toEqual([
     ['فعل‌های آزمایشی'],
+    ['اوملاوت‌های آزمایشی'],
     ['پایانهٔ ', { de: '-st' }, ' با ', { de: 'du' }],
   ])
   expect(bundle?.nodes.find((node) => node.id === 'grammar-002')?.title.en).toEqual([
@@ -162,6 +164,7 @@ test('a new level needs only content: a chapter of that level and a node in it',
   expect(report.errors).toEqual([])
   expect(bundle?.index.nodes.map((node) => [node.level, node.chapter, node.id])).toEqual([
     ['A1', 'fixture-basics', 'grammar-001'],
+    ['A1', 'fixture-basics', 'grammar-010'],
     ['A1', 'fixture-later', 'grammar-002'],
     ['B2', 'fixture-b2', 'grammar-003'],
   ])

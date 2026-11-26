@@ -75,10 +75,17 @@ GitHub Pages and from a local folder.
   number; `src/progress-store/index.ts` says what to do when its shape changes.
 - A new question type needs: its schema and compiled type in
   `src/content-model/index.ts`, its review view in
-  `src/content-pipeline/review.ts`, a case in `checkAnswer`, a case in
-  `QuestionView` and in `AnswerText` (`src/app/QuestionView.tsx`), and its
-  instruction in the three string files. The type checker points at each
-  place that is missing.
+  `src/content-pipeline/review.ts`, a case in `checkAnswer` and in
+  `rightAnswer`, a case in `QuestionView` and in `AnswerText`
+  (`src/app/QuestionView.tsx`), and its instruction in the three string
+  files. The type checker points at each place that is missing.
+- A question whose answer is typed shows `TypedAnswer`
+  (`src/app/TypedAnswer.tsx`: the field and the ä, ö, ü, ß buttons) and is
+  checked with `checkTyped(text, acceptedAnswers)`. A check says `correct`,
+  and for an answer accepted with a note also `notes` (which slips:
+  `umlaut-substitute`, `capitalisation`) and `accepted` (the exact spelling).
+  `scoreAttempt` keeps both for each question, and the result lists them
+  under "Accepted with a note". A missing or wrong word is never a slip.
 
 ## Languages
 
@@ -114,7 +121,9 @@ GitHub Pages and from a local folder.
   several worktrees do not collide. Tests run at phone and at computer size.
   A journey that takes a test uses `tests/browser/taking-a-test.ts`: it
   answers right or wrong from the fixture node's own answer key, whatever
-  questions the attempt drew.
+  questions the attempt drew. The fixture node `grammar-010` holds only
+  typed questions and draws its whole pool, so a journey there meets every
+  question (`takeTypedTest`).
 
 ## Deploying
 

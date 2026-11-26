@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
-import { checkAnswer, checkTyped, scoreAttempt } from '../../src/learning-engine/index.ts'
-import { multipleChoice, typedAnswer, typedGapFill } from './questions.ts'
+import { checkAnswer, checkTyped, rightAnswer, scoreAttempt } from '../../src/learning-engine/index.ts'
+import { gapFill, multipleChoice, trueFalse, typedAnswer, typedGapFill } from './questions.ts'
 
 test('a typed answer is right when it is the accepted answer, and wrong when it is another word', () => {
   const question = typedAnswer('q1', ['wohnst'])
@@ -229,4 +229,12 @@ test('the result of an attempt counts an answer accepted with a note as right an
     { question: attempt[1], answer: 'wohnst', correct: true, notes: [], accepted: 'wohnst' },
     { question: attempt[2], answer: 'Bern', correct: false, notes: [] },
   ])
+})
+
+test('the right answer that a result shows is the stated one, or the first of the accepted answers', () => {
+  expect(rightAnswer(multipleChoice('q1', 'wohne', ['wohnst']))).toBe('wohne')
+  expect(rightAnswer(gapFill('q2', 'wohnst', ['wohne']))).toBe('wohnst')
+  expect(rightAnswer(trueFalse('q3', false))).toBe(false)
+  expect(rightAnswer(typedAnswer('q4', ['die Äpfel', 'Äpfel']))).toBe('die Äpfel')
+  expect(rightAnswer(typedGapFill('q5', ['lernen', 'üben']))).toBe('lernen')
 })

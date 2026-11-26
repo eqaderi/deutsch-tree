@@ -61,6 +61,23 @@ export function checkAnswer(question: Question, answer: Answer | undefined): Ans
 }
 
 /**
+ * The right answer to a question, as a result shows it. Where a question
+ * accepts several answers, it is the first one listed.
+ */
+export function rightAnswer(question: Question): Answer {
+  switch (question.type) {
+    case 'multiple-choice':
+    case 'gap-fill':
+    case 'true-false':
+      return question.answer
+    case 'typed-answer':
+    case 'typed-gap-fill':
+      // The content model guarantees at least one accepted answer.
+      return question.answers[0] ?? ''
+  }
+}
+
+/**
  * A slip in a typed answer that is accepted, and said to the learner:
  * "umlaut-substitute" for ae, oe, ue or ss written in place of ä, ö, ü or ß,
  * "capitalisation" for a capital or a small letter in the wrong place.
