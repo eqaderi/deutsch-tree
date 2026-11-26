@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
-import type { Answer } from '../learning-engine/index.ts'
+import { type Answer, isAnswered } from '../learning-engine/index.ts'
 import { QuestionView } from './QuestionView.tsx'
 import { ReportProblem } from './ReportProblem.tsx'
 
@@ -43,6 +43,8 @@ export function AttemptRun({ nodeId, questions, focusOnStart = false, onFinish }
   const question = questions[place]
   if (!question) return null
   const answer = answers[place]
+  // An answer built in steps (an order of words, pairs) is in `answers` before it is whole.
+  const answered = isAnswered(question, answer)
   const isLast = place === questions.length - 1
 
   return (
@@ -62,7 +64,7 @@ export function AttemptRun({ nodeId, questions, focusOnStart = false, onFinish }
       <form
         onSubmit={(event) => {
           event.preventDefault()
-          if (answer === undefined) return
+          if (!answered) return
           if (isLast) onFinish(answers)
           else setPlace(place + 1)
         }}
@@ -78,7 +80,7 @@ export function AttemptRun({ nodeId, questions, focusOnStart = false, onFinish }
         </section>
 
         <div className="action-bar">
-          <button type="submit" className="btn btn-main" disabled={answer === undefined}>
+          <button type="submit" className="btn btn-main" disabled={!answered}>
             {isLast ? strings.checkAnswers : strings.next}
           </button>
         </div>

@@ -18,6 +18,7 @@ import {
   type ExamPartContent,
   type ExamTask,
   type ExamTaskFile,
+  type FindErrorQuestion,
   GAP,
   type GrammarContent,
   LANGUAGES,
@@ -31,10 +32,12 @@ import {
   officialMockExamsFileSchema,
   type Question,
   type RichText,
+  WORD,
 } from '../content-model/index.ts'
 import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
+import { mixedAwayFrom } from './mix.ts'
 import { overviewData } from './overview-data.ts'
 import { searchData } from './search-data.ts'
 
@@ -398,9 +401,42 @@ function compileQuestion(question: NonNullable<NodeFile['questions']>[number]): 
       const [before = '', after = ''] = question.prompt.split(GAP)
       return { ...question, explanation, gap: { before, after } }
     }
+    case 'find-error': {
+      const parts = sentenceParts(question.prompt)
+      const words = parts.filter((part) => typeof part !== 'string')
+      // The schema guarantees that exactly one word is the answer.
+      return { ...question, explanation, parts, answer: words.findIndex((part) => part.word === question.answer) }
+    }
+    case 'word-order': {
+      // The schema guarantees a first order, and that every other one is the same pieces.
+      const pieces = mixedAwayFrom(question.answers[0] ?? [], question.answers)
+      return { ...question, explanation, pieces, prompt: pieces.join(SHOWN_APART) }
+    }
+    case 'matching': {
+      const left = question.answer.map(([item]) => item)
+      const answer = question.answer.map(([, partner]) => partner)
+      const right = mixedAwayFrom(answer, [answer])
+      return { ...question, explanation, left, right, answer, prompt: left.join(SHOWN_APART) }
+    }
     default:
       return { ...question, explanation }
   }
+}
+
+/** Stands between the things shown, in the prompt that the pipeline builds for a question without one. */
+const SHOWN_APART = ' / '
+
+/** Cuts "Du wohne hier." into its words and what stands between them. */
+function sentenceParts(sentence: string): FindErrorQuestion['parts'] {
+  const parts: FindErrorQuestion['parts'] = []
+  let end = 0
+  for (const match of sentence.matchAll(WORD)) {
+    if (match.index > end) parts.push(sentence.slice(end, match.index))
+    parts.push({ word: match[0] })
+    end = match.index + match[0].length
+  }
+  if (end < sentence.length) parts.push(sentence.slice(end))
+  return parts
 }
 
 function summarise(node: CompiledNode): NodeSummary {

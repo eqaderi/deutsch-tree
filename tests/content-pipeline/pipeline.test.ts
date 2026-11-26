@@ -10,7 +10,7 @@ test('valid content compiles and the report counts what was found', async () => 
     errors: [],
     // The questions are the pools of the grammar nodes and the twelve items of the exam part's two practice tasks.
     nodes: { total: 8, published: 6, comingSoon: 2 },
-    questions: 87,
+    questions: 91,
   })
   expect(bundle).not.toBeNull()
 })

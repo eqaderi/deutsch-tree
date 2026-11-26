@@ -202,9 +202,11 @@ sections above.
 ### Question types
 
 Every question has `id`, `type`, `prompt` (German), its answer and
-`explanation`. The test shows the learner what to do in their language, so a
-prompt holds only the German. A question that is answered by choosing states
-one `answer`; a question that is answered by typing lists its `answers`.
+`explanation`; two types below build their own prompt. The test shows the
+learner what to do in their language, so a prompt holds only the German. A
+question with one right answer states its `answer`; a question that can have
+several (a typed answer, an order of words) lists every one under `answers`,
+and the first is shown as the right one.
 
 ```yaml
   - id: q2
@@ -247,6 +249,55 @@ one `answer`; a question that is answered by typing lists its `answers`.
   give the word to use, as in `Du ___ (wohnen) hier.` The blind reviewer types
   an answer without seeing your list, and an answer that is not on it stops
   the review.
+
+### Word ordering, find the error and matching
+
+```yaml
+  - id: q6
+    type: find-error                # a sentence with one wrong word; the learner picks it
+    prompt: Du wohne in Berlin.     # exactly one word is wrong
+    answer: wohne                   # that word, as it stands in the sentence
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q7
+    type: word-order                # the learner puts the pieces of a sentence in order
+    answers:                        # every right order of the pieces; the first is shown as the right one
+      - [heute, wohne, ich, in Berlin]
+      - [ich, wohne, heute, in Berlin]
+      - [in Berlin, wohne, ich, heute]
+    end: "."                        # optional: ".", "?" or "!"; default "."
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q8
+    type: matching                  # the learner finds the partner of each item
+    answer:                         # the pairs, each as [item, partner]; three or more
+      - [ich, wohne]
+      - [du, wohnst]
+      - [wir, wohnen]
+    explanation: { en: …, fa: …, de: … }
+```
+
+Word ordering and matching have no `prompt`: the pipeline builds one from the
+pieces or the items, and it mixes what the learner sees.
+
+- **Find the error.** The wrong word must stand in the sentence once only
+  (`Die` and `die` are two words). Write a sentence with one mistake that has
+  one repair; "which word is wrong" must not be a matter of opinion.
+- **Word ordering.** A piece is one word or several (`in Berlin`). Use three
+  or more. Write each piece as it stands inside a sentence, so no capital
+  letter for the first one and no full stop: the app adds both, and a capital
+  would give the first piece away. The same piece may be there twice.
+  German often allows more than one order. **List every right order** under
+  `answers`, the most usual one first; with one right order the list has one
+  entry. The checks make sure every order is the same pieces. To keep the
+  list short, join words into one piece or choose a sentence with less
+  freedom (a question with `end: "?"` has fewer orders than a statement). The
+  blind reviewer is asked for every right order too, without seeing your
+  list: an order that only one side has stops the review, and the
+  disagreement prints the reviewer's orders ready to copy.
+- **Matching.** Both sides are German. No item and no partner may be there
+  twice, so only one matching is right. Write the pairs in the order the
+  items should be shown; the partners are mixed.
 
 ### How many questions an attempt draws
 
@@ -361,10 +412,9 @@ review, like changing an item or its key, means a new review; every item of
 that task then needs a fresh answer (`--only t1/i1,t1/i2,…`), because the text
 decides them all.
 
-Grammar nodes, with `multiple-choice`, `gap-fill`, `true-false`,
-`typed-answer` and `typed-gap-fill` questions, and the exam parts that have a
-task format can be published so far. Other question types, node kinds and
-exam parts are added to the schema as they are built.
+Only grammar nodes, and the exam parts that have a task format, can be
+published so far. Other node kinds and exam parts are added to the schema as
+they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 
@@ -378,6 +428,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   outside asterisks.
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
+- A wrong word that stands in its sentence twice, a right order that is not
+  the same pieces as the first one or is listed twice, and a matching item or
+  partner that is there twice.
 - A prerequisite that is not the id of a node, and a prerequisite cycle
   (a node that needs itself, directly or through other nodes).
 - A phrases node without a purpose or without an exam task, and an exam task

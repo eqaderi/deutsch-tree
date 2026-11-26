@@ -6,6 +6,7 @@ import {
   type Answer,
   type AttemptResult,
   applyAttempt,
+  isAnswered,
   isDone,
   nextTask,
   rightAnswer,
@@ -104,7 +105,7 @@ interface TaskRunProps {
 function TaskRun({ nodeId, task, focusOnStart, onFinish }: TaskRunProps) {
   const { strings } = useLanguage()
   const [answers, setAnswers] = useState<Array<Answer | undefined>>([])
-  const answered = task.items.filter((_, index) => answers[index] !== undefined).length
+  const answered = task.items.filter((item, index) => isAnswered(item, answers[index])).length
 
   const heading = useRef<HTMLHeadingElement>(null)
   useEffect(() => {
