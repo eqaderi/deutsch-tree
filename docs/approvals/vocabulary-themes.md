@@ -109,20 +109,22 @@ Bold lines are the vocabulary chapters. "A1-W3" means: the third vocabulary chap
 | 2 | **A2-W1** | **Words: people, feelings and opinions** | 6 |
 | 3 | Grammar | Dativ, objects and their order | 6 |
 | 4 | **A2-W2** | **Words: home, food and clothes** | 6 |
-| 5 | Grammar | Articles and pronouns | 6 |
-| 6 | Grammar | Adjective endings and comparison | 8 |
-| 7 | Grammar | Reflexive verbs and verbs with prepositions | 3 |
-| 8 | **A2-W3** | **Words: free time and media** | 5 |
-| 9 | Grammar | Prepositions and directions | 5 |
-| 10 | **A2-W4** | **Words: health, town and nature** | 5 |
-| 11 | Grammar | Polite requests and advice (Konjunktiv II) | 4 |
-| 12 | **A2-W5** | **Words: school and work** | 3 |
-| 13 | Grammar | Adverbs: deshalb, schon, noch | 3 |
-| 14 | Grammar | Subordinate clauses | 7 |
-| 15 | **A2-W6** | **Words: time, connecting words and amounts** | 4 |
-| 16 | Grammar | werden, lassen and the passive | 3 |
-| 17 | Grammar | Relative clauses | 3 |
-| 18 | Grammar | Word building and particles | 3 |
+| 5 | Phrases | E-mails and messages | 4 |
+| 6 | Grammar | Articles and pronouns | 6 |
+| 7 | Grammar | Adjective endings and comparison | 8 |
+| 8 | Grammar | Reflexive verbs and verbs with prepositions | 3 |
+| 9 | **A2-W3** | **Words: free time and media** | 5 |
+| 10 | Grammar | Prepositions and directions | 5 |
+| 11 | **A2-W4** | **Words: health, town and nature** | 5 |
+| 12 | Grammar | Polite requests and advice (Konjunktiv II) | 4 |
+| 13 | **A2-W5** | **Words: school and work** | 3 |
+| 14 | Grammar | Adverbs: deshalb, schon, noch | 3 |
+| 15 | Grammar | Subordinate clauses | 7 |
+| 16 | **A2-W6** | **Words: time, connecting words and amounts** | 4 |
+| 17 | Phrases | Suggestions, requests and apologies | 6 |
+| 18 | Grammar | werden, lassen and the passive | 3 |
+| 19 | Grammar | Relative clauses | 3 |
+| 20 | Grammar | Word building and particles | 3 |
 
 ### B1
 
@@ -138,21 +140,29 @@ Bold lines are the vocabulary chapters. "A1-W3" means: the third vocabulary chap
 | 8 | **B1-W4** | **Words: school, learning and science** | 5 |
 | 9 | Grammar | Two-part connectors | 6 |
 | 10 | **B1-W5** | **Words: time, connecting words and amounts** | 8 |
-| 11 | Grammar | Genitiv and special nouns | 4 |
-| 12 | **B1-W6** | **Words: work, money and offices** | 9 |
-| 13 | Grammar | Prepositions | 6 |
-| 14 | **B1-W7** | **Words: traffic, travel and nature** | 8 |
-| 15 | Grammar | Adjectives and participles | 4 |
-| 16 | **B1-W8** | **Words: media, arts and free time** | 8 |
-| 17 | Grammar | Pronouns and quantity words | 4 |
-| 18 | Grammar | Relative clauses | 4 |
-| 19 | **B1-W9** | **Words: thinking and discussing** | 6 |
-| 20 | Grammar | Infinitive with and without zu | 7 |
-| 21 | Grammar | Modal verbs and Konjunktiv II | 8 |
-| 22 | **B1-W10** | **Words: state and society** | 5 |
-| 23 | Grammar | The passive | 5 |
-| 24 | **B1-W11** | **Words: general verbs and describing** | 5 |
-| 25 | Grammar | Fractions, word building and particles | 3 |
+| 11 | Phrases | Opinions and discussion | 5 |
+| 12 | Grammar | Genitiv and special nouns | 4 |
+| 13 | **B1-W6** | **Words: work, money and offices** | 9 |
+| 14 | Grammar | Prepositions | 6 |
+| 15 | **B1-W7** | **Words: traffic, travel and nature** | 8 |
+| 16 | Phrases | Writing e-mails and forum posts | 5 |
+| 17 | Grammar | Adjectives and participles | 4 |
+| 18 | **B1-W8** | **Words: media, arts and free time** | 8 |
+| 19 | Grammar | Pronouns and quantity words | 4 |
+| 20 | Grammar | Relative clauses | 4 |
+| 21 | **B1-W9** | **Words: thinking and discussing** | 6 |
+| 22 | Grammar | Infinitive with and without zu | 7 |
+| 23 | Grammar | Modal verbs and Konjunktiv II | 8 |
+| 24 | **B1-W10** | **Words: state and society** | 5 |
+| 25 | Phrases | Planning something together | 4 |
+| 26 | Grammar | The passive | 5 |
+| 27 | **B1-W11** | **Words: general verbs and describing** | 5 |
+| 28 | Grammar | Fractions, word building and particles | 3 |
+| 29 | Phrases | Presenting a topic and talking about it | 6 |
+| 30 | Exam | The exam: reading (Lesen) | 5 |
+| 31 | Exam | The exam: listening (Hören) | 4 |
+| 32 | Exam | The exam: writing (Schreiben) | 3 |
+| 33 | Exam | The exam: speaking (Sprechen) | 3 |
 
 <!-- end generated -->
 

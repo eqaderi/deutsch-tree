@@ -182,7 +182,7 @@ test('only a vocabulary node has words', async () => {
       file: COMING_SOON,
       node: 'grammar-002',
       where: 'words',
-      message: 'a grammar node has no words; only a vocabulary node has',
+      message: 'only a vocabulary node has this',
     },
   ])
 })

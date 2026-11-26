@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-lesen-3
+kind: exam-part
+level: B1
+chapter: b1-exam-lesen
+order: 3
+status: coming-soon
+module: lesen
+part: 3
+title:
+  en: "*Lesen Teil 3*: the right advertisement for each situation"
+  fa: "*Lesen Teil 3*: آگهی مناسب برای هر موقعیت"
+  de: "Lesen Teil 3: die passende Anzeige für jede Situation"

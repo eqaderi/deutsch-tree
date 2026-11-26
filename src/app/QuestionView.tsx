@@ -7,13 +7,18 @@ import { type ReactNode, useId } from 'react'
 import type { Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import type { Answer } from '../learning-engine/index.ts'
+import { FindError, wordsOf } from './FindError.tsx'
 import { German } from './German.tsx'
+import { Matching, partnersIn } from './Matching.tsx'
+import { TypedAnswer } from './TypedAnswer.tsx'
+import { sentenceOf, WordOrder } from './WordOrder.tsx'
 
 interface QuestionViewProps {
   question: Question
   /** What the learner has given so far. */
   answer: Answer | undefined
-  onAnswer: (answer: Answer) => void
+  /** Called with every change. Undefined takes the answer back: the question is unanswered again. */
+  onAnswer: (answer: Answer | undefined) => void
 }
 
 /** One question, ready to be answered. */
@@ -36,15 +41,7 @@ export function QuestionView({ question, answer, onAnswer }: QuestionViewProps) 
       return (
         <Choices
           instruction={instruction}
-          sentence={
-            <>
-              {question.gap.before}
-              <span className={typeof answer === 'string' ? 'gap gap-filled' : 'gap'}>
-                {typeof answer === 'string' ? answer : <span className="visually-hidden">{strings.gap}</span>}
-              </span>
-              {question.gap.after}
-            </>
-          }
+          sentence={<GapSentence gap={question.gap} filled={answer} />}
           options={question.options.map((option) => ({ value: option, label: <German>{option}</German> }))}
           chosen={answer}
           onChoose={onAnswer}
@@ -63,7 +60,50 @@ export function QuestionView({ question, answer, onAnswer }: QuestionViewProps) 
           onChoose={onAnswer}
         />
       )
+    case 'typed-answer':
+      return (
+        <TypedAnswer
+          instruction={instruction}
+          sentence={question.prompt}
+          text={typeof answer === 'string' ? answer : ''}
+          onType={(text) => onAnswer(typedText(text))}
+        />
+      )
+    case 'typed-gap-fill':
+      return (
+        <TypedAnswer
+          instruction={instruction}
+          sentence={<GapSentence gap={question.gap} filled={answer} />}
+          text={typeof answer === 'string' ? answer : ''}
+          onType={(text) => onAnswer(typedText(text))}
+        />
+      )
+    case 'find-error':
+      return <FindError question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
+    case 'word-order':
+      return <WordOrder question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
+    case 'matching':
+      return <Matching question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
   }
+}
+
+/** What a field holds, as an answer. A field with nothing but spaces in it is no answer yet. */
+function typedText(text: string): Answer | undefined {
+  return text.trim() === '' ? undefined : text
+}
+
+/** A sentence with one gap: a line while the gap is empty, then the chosen or typed form on the line. */
+function GapSentence({ gap, filled }: { gap: { before: string; after: string }; filled: Answer | undefined }) {
+  const { strings } = useLanguage()
+  return (
+    <>
+      {gap.before}
+      <span className={typeof filled === 'string' ? 'gap gap-filled' : 'gap'}>
+        {typeof filled === 'string' ? filled : <span className="visually-hidden">{strings.gap}</span>}
+      </span>
+      {gap.after}
+    </>
+  )
 }
 
 /** An answer to a question, as a result quotes it. */
@@ -74,9 +114,20 @@ export function AnswerText({ question, answer }: { question: Question; answer: A
   switch (question.type) {
     case 'multiple-choice':
     case 'gap-fill':
+    case 'typed-answer':
+    case 'typed-gap-fill':
       return <German>{String(answer)}</German>
     case 'true-false':
       return answer === true ? strings.sentenceCorrect : strings.sentenceNotCorrect
+    case 'find-error':
+      return <German>{(typeof answer === 'number' && wordsOf(question)[answer]) || '–'}</German>
+    case 'word-order':
+      return <German>{sentenceOf(question, answer)}</German>
+    case 'matching': {
+      // Left to right as a whole, so that each arrow points from an item to its partner.
+      const partners = partnersIn(question, answer)
+      return <German>{question.left.map((item, index) => `${item} → ${partners[index] ?? '–'}`).join(', ')}</German>
+    }
   }
 }
 

@@ -1,9 +1,16 @@
 import { Suspense } from 'react'
 import { createHashRouter, Link, Outlet, RouterProvider, ScrollRestoration } from 'react-router'
 import { LanguageProvider, useLanguage } from '../language/index.tsx'
+import { BackupPage } from './BackupPage.tsx'
+import { CheckpointPage } from './CheckpointPage.tsx'
 import { LanguageSwitch } from './LanguageSwitch.tsx'
 import { NodePage } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
+import { OverviewPage } from './OverviewPage.tsx'
+import { progressProblem } from './progress.ts'
+import { ReadinessPage } from './ReadinessPage.tsx'
+import { ReferenceLinks } from './ReferenceLinks.tsx'
+import { SearchPage } from './SearchPage.tsx'
 import { TestPage } from './TestPage.tsx'
 import { TreePage } from './TreePage.tsx'
 
@@ -22,6 +29,11 @@ const router = createHashRouter([
           { index: true, element: <TreePage /> },
           { path: 'node/:id', element: <NodePage /> },
           { path: 'node/:id/test', element: <TestPage /> },
+          { path: 'search', element: <SearchPage /> },
+          { path: 'overview', element: <OverviewPage /> },
+          { path: 'backup', element: <BackupPage /> },
+          { path: 'checkpoint/:level', element: <CheckpointPage /> },
+          { path: 'readiness', element: <ReadinessPage /> },
           { path: '*', element: <NotFound /> },
         ],
       },
@@ -47,8 +59,10 @@ function Frame() {
         <Link to="/" className="logo">
           {strings.appName}
         </Link>
+        <ReferenceLinks />
         <LanguageSwitch />
       </header>
+      {progressProblem && <NewerVersionNotice />}
       <Suspense
         fallback={
           <main className="wrap">
@@ -58,8 +72,30 @@ function Frame() {
       >
         <Outlet />
       </Suspense>
+      <footer className="wrap site-footer">
+        <Link to="/backup">{strings.backupLink}</Link>
+      </footer>
       <ScrollRestoration />
     </>
+  )
+}
+
+/**
+ * Shown on every page when this browser holds progress saved by a newer
+ * version of the app (this page is an old copy of it). The progress store
+ * leaves that progress untouched; a reload brings the app that can read it.
+ */
+function NewerVersionNotice() {
+  const { strings } = useLanguage()
+  return (
+    <div className="wrap notice">
+      <section role="alert" className="panel message">
+        <p>{strings.savedByNewerVersion}</p>
+        <button type="button" className="btn" onClick={() => window.location.reload()}>
+          {strings.reload}
+        </button>
+      </section>
+    </div>
   )
 }
 

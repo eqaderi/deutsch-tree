@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-leading-conversation
+kind: phrases
+level: B1
+chapter: b1-phrases-planning
+order: 1
+status: coming-soon
+title:
+  en: "Starting, moving on and ending a conversation"
+  fa: "شروع، ادامه و پایان دادن به گفت‌وگو"
+  de: "Ein Gespräch beginnen, weiterführen und beenden"
+purpose:
+  en: "Open a planning talk, go on to the next point and close it with a result."
+  fa: "گفت‌وگوی برنامه‌ریزی را شروع کنید، به نکتهٔ بعدی بروید و آن را با یک نتیجه تمام کنید."
+  de: "Ein Planungsgespräch anfangen, zum nächsten Punkt gehen und mit einem Ergebnis beenden."
+examTasks: [exam-sprechen-1]

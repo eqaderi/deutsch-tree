@@ -1,0 +1,188 @@
+# Fixture node for tests. Invented, short, and stable: tests assert on these words.
+id: grammar-103
+kind: grammar
+level: A2
+chapter: fixture-nouns
+order: 3
+status: published
+recogniseOnly: false
+prerequisites: []
+title:
+  en: Fixture negation
+  fa: نفی آزمایشی
+  de: Test-Negation
+
+explanations:
+  en:
+    rule: "A fixture sentence is negated with *nicht*. Before a noun without an article it is *kein*."
+  fa:
+    rule: "جملهٔ آزمایشی با *nicht* منفی می‌شود. پیش از اسمِ بدون حرف تعریف، *kein* می‌آید."
+  de:
+    rule: "Einen Test-Satz verneint man mit *nicht*. Vor einem Nomen ohne Artikel steht *kein*."
+
+table:
+  columns:
+    - en: With
+      fa: مثبت
+      de: Positiv
+    - en: Without
+      fa: منفی
+      de: Negativ
+  rows:
+    - [ein Auto, kein Auto]
+    - [eine Katze, keine Katze]
+    - [müde, nicht müde]
+
+examples:
+  - de: Ich habe kein Auto.
+    en: I have no car.
+    fa: من ماشین ندارم.
+  - de: Er ist nicht müde.
+    en: He is not tired.
+    fa: او خسته نیست.
+
+mistakes:
+  - wrong: Ich habe nicht Auto.
+    right: Ich habe kein Auto.
+    why:
+      en: "Before a noun without an article the negation is *kein*; with a *die* noun it is *keine*."
+      fa: "پیش از اسمِ بدون حرف تعریف، نفی با *kein* است؛ برای اسم با *die* می‌شود *keine*."
+      de: "Vor einem Nomen ohne Artikel steht *kein*; bei einem Nomen mit *die* steht *keine*."
+
+# 15 questions: the smallest pool a published node may have.
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: Ich habe ___ Auto.
+    options: [kein, keine, nicht]
+    answer: kein
+    explanation:
+      en: "Before a noun without an article the negation is *kein*; with a *die* noun it is *keine*."
+      fa: "پیش از اسمِ بدون حرف تعریف، نفی با *kein* است؛ برای اسم با *die* می‌شود *keine*."
+      de: "Vor einem Nomen ohne Artikel steht *kein*; bei einem Nomen mit *die* steht *keine*."
+  - id: q2
+    type: multiple-choice
+    prompt: Ich wohne ___ in Berlin.
+    options: [kein, keine, nicht]
+    answer: nicht
+    explanation:
+      en: "A verb or an adjective is negated with *nicht*."
+      fa: "فعل یا صفت با *nicht* منفی می‌شود."
+      de: "Ein Verb oder ein Adjektiv verneint man mit *nicht*."
+  - id: q3
+    type: gap-fill
+    prompt: Sie hat ___ Katze.
+    options: [kein, keine, nicht]
+    answer: keine
+    explanation:
+      en: "Before a noun without an article the negation is *kein*; with a *die* noun it is *keine*."
+      fa: "پیش از اسمِ بدون حرف تعریف، نفی با *kein* است؛ برای اسم با *die* می‌شود *keine*."
+      de: "Vor einem Nomen ohne Artikel steht *kein*; bei einem Nomen mit *die* steht *keine*."
+  - id: q4
+    type: multiple-choice
+    prompt: Er kommt heute ___.
+    options: [kein, keine, nicht]
+    answer: nicht
+    explanation:
+      en: "A verb or an adjective is negated with *nicht*."
+      fa: "فعل یا صفت با *nicht* منفی می‌شود."
+      de: "Ein Verb oder ein Adjektiv verneint man mit *nicht*."
+  - id: q5
+    type: gap-fill
+    prompt: Wir haben ___ Zeit.
+    options: [kein, keine, nicht]
+    answer: keine
+    explanation:
+      en: "Before a noun without an article the negation is *kein*; with a *die* noun it is *keine*."
+      fa: "پیش از اسمِ بدون حرف تعریف، نفی با *kein* است؛ برای اسم با *die* می‌شود *keine*."
+      de: "Vor einem Nomen ohne Artikel steht *kein*; bei einem Nomen mit *die* steht *keine*."
+  - id: q6
+    type: multiple-choice
+    prompt: Das ist ___ Tisch.
+    options: [kein, keine, nicht]
+    answer: kein
+    explanation:
+      en: "Before a noun without an article the negation is *kein*; with a *die* noun it is *keine*."
+      fa: "پیش از اسمِ بدون حرف تعریف، نفی با *kein* است؛ برای اسم با *die* می‌شود *keine*."
+      de: "Vor einem Nomen ohne Artikel steht *kein*; bei einem Nomen mit *die* steht *keine*."
+  - id: q7
+    type: gap-fill
+    prompt: Das Buch ist ___ neu.
+    options: [kein, keine, nicht]
+    answer: nicht
+    explanation:
+      en: "A verb or an adjective is negated with *nicht*."
+      fa: "فعل یا صفت با *nicht* منفی می‌شود."
+      de: "Ein Verb oder ein Adjektiv verneint man mit *nicht*."
+  - id: q8
+    type: multiple-choice
+    prompt: Ich trinke ___ Milch.
+    options: [kein, keine, nicht]
+    answer: keine
+    explanation:
+      en: "Before a noun without an article the negation is *kein*; with a *die* noun it is *keine*."
+      fa: "پیش از اسمِ بدون حرف تعریف، نفی با *kein* است؛ برای اسم با *die* می‌شود *keine*."
+      de: "Vor einem Nomen ohne Artikel steht *kein*; bei einem Nomen mit *die* steht *keine*."
+  - id: q9
+    type: gap-fill
+    prompt: Sie arbeitet heute ___.
+    options: [kein, keine, nicht]
+    answer: nicht
+    explanation:
+      en: "A verb or an adjective is negated with *nicht*."
+      fa: "فعل یا صفت با *nicht* منفی می‌شود."
+      de: "Ein Verb oder ein Adjektiv verneint man mit *nicht*."
+  - id: q10
+    type: multiple-choice
+    prompt: Das ist ___ Lampe.
+    options: [kein, keine, nicht]
+    answer: keine
+    explanation:
+      en: "Before a noun without an article the negation is *kein*; with a *die* noun it is *keine*."
+      fa: "پیش از اسمِ بدون حرف تعریف، نفی با *kein* است؛ برای اسم با *die* می‌شود *keine*."
+      de: "Vor einem Nomen ohne Artikel steht *kein*; bei einem Nomen mit *die* steht *keine*."
+  - id: q11
+    type: true-false
+    prompt: Er ist kein müde.
+    answer: false
+    explanation:
+      en: "A verb or an adjective is negated with *nicht*."
+      fa: "فعل یا صفت با *nicht* منفی می‌شود."
+      de: "Ein Verb oder ein Adjektiv verneint man mit *nicht*."
+  - id: q12
+    type: true-false
+    prompt: Ich habe kein Buch.
+    answer: true
+    explanation:
+      en: "Before a noun without an article the negation is *kein*; with a *die* noun it is *keine*."
+      fa: "پیش از اسمِ بدون حرف تعریف، نفی با *kein* است؛ برای اسم با *die* می‌شود *keine*."
+      de: "Vor einem Nomen ohne Artikel steht *kein*; bei einem Nomen mit *die* steht *keine*."
+  - id: q13
+    type: true-false
+    prompt: Wir kochen heute kein.
+    answer: false
+    explanation:
+      en: "A verb or an adjective is negated with *nicht*."
+      fa: "فعل یا صفت با *nicht* منفی می‌شود."
+      de: "Ein Verb oder ein Adjektiv verneint man mit *nicht*."
+  - id: q14
+    type: true-false
+    prompt: Sie hat kein Kind.
+    answer: true
+    explanation:
+      en: "Before a noun without an article the negation is *kein*; with a *die* noun it is *keine*."
+      fa: "پیش از اسمِ بدون حرف تعریف، نفی با *kein* است؛ برای اسم با *die* می‌شود *keine*."
+      de: "Vor einem Nomen ohne Artikel steht *kein*; bei einem Nomen mit *die* steht *keine*."
+  - id: q15
+    type: true-false
+    prompt: Das Auto ist keine alt.
+    answer: false
+    explanation:
+      en: "A verb or an adjective is negated with *nicht*."
+      fa: "فعل یا صفت با *nicht* منفی می‌شود."
+      de: "Ein Verb oder ein Adjektiv verneint man mit *nicht*."
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-01-01
+  pool: 7ab257655079057b

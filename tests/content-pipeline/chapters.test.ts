@@ -6,19 +6,22 @@ import { COMING_SOON, changeNode, comingSoonNode, fixtureContentWith } from './f
 
 const CHAPTERS = 'chapters.yaml'
 
+/** The fixture's first level: two chapters with one node each. Its other levels are for the checkpoints. */
+const inA1 = (node: { level: string }) => node.level === 'A1'
+
 test('the curriculum order runs chapter by chapter, in the order of the chapter list', async () => {
   // grammar-002 has the higher `order`, so only the chapter list can put it first.
   const content = await fixtureContentWith({
     [CHAPTERS]: (text) => {
-      const [comment, basics, later, ...rest] = text.split(/\n(?=- id:)/)
-      return [comment, later, basics, ...rest].join('\n')
+      const [comment, basics, later, ...otherLevels] = text.split(/\n(?=- id:)/)
+      return [comment, later, basics, ...otherLevels].join('\n')
     },
   })
 
   const { report, bundle } = await compileContent(content)
 
   expect(report.errors).toEqual([])
-  expect(bundle?.index.chapters.slice(0, 2)).toEqual([
+  expect(bundle?.index.chapters.filter((chapter) => chapter.level === 'A1' && chapter.kind === 'grammar')).toEqual([
     {
       id: 'fixture-later',
       level: 'A1',
@@ -36,9 +39,10 @@ test('the curriculum order runs chapter by chapter, in the order of the chapter 
       title: { en: ['Fixture basics'], fa: ['مبانی آزمایشی'], de: ['Test-Grundlagen'] },
     },
   ])
-  expect(bundle?.index.nodes.map((node) => [node.chapter, node.id])).toEqual([
+  expect(bundle?.index.nodes.filter(inA1).map((node) => [node.chapter, node.id])).toEqual([
     ['fixture-later', 'grammar-002'],
     ['fixture-basics', 'grammar-001'],
+    ['fixture-basics', 'grammar-010'],
     ['fixture-words', 'vocabulary-fixture-family'],
   ])
 })
@@ -139,8 +143,9 @@ test('German marked in a topic title is compiled as German, like in every other 
 
   const { bundle } = await compileContent(content)
 
-  expect(bundle?.index.nodes.map((node) => node.title.fa)).toEqual([
+  expect(bundle?.index.nodes.filter(inA1).map((node) => node.title.fa)).toEqual([
     ['فعل‌های آزمایشی'],
+    ['اوملاوت‌های آزمایشی'],
     ['پایانهٔ ', { de: '-st' }, ' با ', { de: 'du' }],
     ['واژه‌های آزمایشی خانواده'],
   ])
@@ -164,8 +169,13 @@ test('a new level needs only content: a chapter of that level and a node in it',
   expect(report.errors).toEqual([])
   expect(bundle?.index.nodes.map((node) => [node.level, node.chapter, node.id])).toEqual([
     ['A1', 'fixture-basics', 'grammar-001'],
+    ['A1', 'fixture-basics', 'grammar-010'],
     ['A1', 'fixture-later', 'grammar-002'],
     ['A1', 'fixture-words', 'vocabulary-fixture-family'],
+    ['A2', 'fixture-nouns', 'grammar-101'],
+    ['A2', 'fixture-nouns', 'grammar-102'],
+    ['A2', 'fixture-nouns', 'grammar-103'],
+    ['B1', 'fixture-unwritten', 'grammar-201'],
     ['B2', 'fixture-b2', 'grammar-003'],
   ])
 })

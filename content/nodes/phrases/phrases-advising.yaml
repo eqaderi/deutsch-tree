@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-advising
+kind: phrases
+level: A2
+chapter: a2-phrases-arrangements
+order: 2
+status: coming-soon
+title:
+  en: "Giving advice and recommending"
+  fa: "توصیه و راهنمایی کردن"
+  de: "Einen Rat geben und etwas empfehlen"
+purpose:
+  en: "Tell someone what they could do, or what you think is worth doing."
+  fa: "به کسی بگویید چه کاری می‌تواند بکند، یا چه چیزی به نظرتان ارزش انجام دادن دارد."
+  de: "Jemandem sagen, was er tun könnte oder was man gut findet."
+examTasks: [exam-schreiben-1, exam-sprechen-1]

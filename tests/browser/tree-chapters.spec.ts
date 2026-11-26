@@ -1,13 +1,15 @@
 import { expect, test } from './test.ts'
 
-test('a level is a line of chapters, each with its name, its kind and its number of topics', async ({ page }) => {
+test('a level is a line of chapters, each with its name, its kind and how many of its topics are done', async ({
+  page,
+}) => {
   await page.goto('./')
 
   const chapters = page.getByRole('main').getByRole('group')
   await expect(chapters).toHaveCount(3)
   await expect(chapters.nth(0).getByRole('heading', { level: 3 })).toHaveText('Fixture basics')
   await expect(chapters.nth(0).locator('summary')).toContainText('Grammar')
-  await expect(chapters.nth(0).locator('summary')).toContainText('1 topic')
+  await expect(chapters.nth(0).locator('summary')).toContainText('0 of 2 done')
   await expect(chapters.nth(1).getByRole('heading', { level: 3 })).toHaveText('Fixture topics with sein')
 })
 
@@ -39,7 +41,7 @@ test('a vocabulary chapter stands in the line of its level, and its nodes are ma
   const node = chapter.getByRole('listitem').filter({ hasText: 'Fixture family words' })
 
   await expect(chapter.locator('summary')).toContainText('Vocabulary')
-  await expect(chapter.locator('summary')).toContainText('1 topic')
+  await expect(chapter.locator('summary')).toContainText('1 coming soon')
 
   await chapter.getByRole('heading', { name: 'Fixture words' }).click()
 

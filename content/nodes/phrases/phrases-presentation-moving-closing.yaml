@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-presentation-moving-closing
+kind: phrases
+level: B1
+chapter: b1-phrases-presentation
+order: 3
+status: coming-soon
+title:
+  en: "Moving to the next point and closing a presentation"
+  fa: "رفتن به نکتهٔ بعدی و پایان دادن به ارائه"
+  de: "Zum nächsten Punkt kommen und die Präsentation beenden"
+purpose:
+  en: "Lead your listeners from one part to the next, end the presentation and thank them."
+  fa: "شنوندگان را از بخشی به بخش بعد ببرید، ارائه را تمام کنید و از آن‌ها تشکر کنید."
+  de: "Die Zuhörer von einem Teil zum nächsten führen, die Präsentation beenden und sich bedanken."
+examTasks: [exam-sprechen-2]

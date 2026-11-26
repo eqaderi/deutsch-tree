@@ -32,6 +32,38 @@ export const fa: Strings = {
   start: 'شروع',
   comingSoon: 'به‌زودی',
   done: 'تمام‌شده',
+  continueTopic: 'ادامه',
+
+  howItWorks: 'روش کار',
+  firstSteps: {
+    pick: 'یک موضوع انتخاب کنید.',
+    read: 'آن را بخوانید، یا مستقیم آزمون بدهید.',
+    pass: (percent) => `با ${digits.format(percent)}٪ پاسخ درست، موضوع تمام‌شده است.`,
+  },
+  gotIt: 'فهمیدم',
+  yourNextTopic: 'موضوع بعدی شما',
+  nothingNext:
+    'همهٔ موضوع‌هایی را که تا امروز نوشته شده‌اند تمام کرده‌اید. موضوع‌های تازه، وقتی آماده شوند، در درخت می‌آیند.',
+  youAreHere: 'شما اینجایید',
+  kindsOfTopic: 'نوع موضوع‌ها',
+  allKinds: 'همهٔ نوع‌ها',
+  doneCount: (done) => `${digits.format(done)} تمام‌شده`,
+  leftCount: (left) => `${digits.format(left)} مانده`,
+  countsSummary: (done, left, comingSoon) =>
+    comingSoon === 0
+      ? `${digits.format(done)} تمام‌شده · ${digits.format(left)} مانده`
+      : `${digits.format(done)} تمام‌شده · ${digits.format(left)} مانده، ${digits.format(comingSoon)} تای آن‌ها به‌زودی`,
+  doneOfTotal: (done, total) => `${digits.format(done)} از ${digits.format(total)} تمام‌شده`,
+  comingSoonCount: (count) => `${digits.format(count)} به‌زودی`,
+  noTopicsHere: 'این سطح موضوعی از این نوع ندارد.',
+
+  buildsOn: 'پیش‌نیازها',
+  buildsOnNote: 'هیچ موضوعی قفل نیست. اگر این موضوع سخت بود، این موضوع‌ها کمک می‌کنند.',
+  unmark: 'برداشتن علامت «تمام‌شده»',
+  unmarkQuestion: 'علامت «تمام‌شده» از این موضوع برداشته شود؟ تا وقتی دوباره در آن قبول نشوید، تمام‌شده نیست.',
+  unmarkConfirm: 'بله، بردار',
+  keepDone: 'تمام‌شده بماند',
+  unmarked: 'این موضوع دیگر تمام‌شده نیست.',
 
   allTopics: 'همهٔ موضوع‌ها',
   rule: 'قاعده',
@@ -54,10 +86,19 @@ export const fa: Strings = {
     'multiple-choice': 'پاسخ درست را انتخاب کنید.',
     'gap-fill': 'واژه‌ای را انتخاب کنید که در جای خالی درست است.',
     'true-false': 'آیا این جمله آلمانیِ درستی است؟',
+    'find-error': 'یک واژه در این جمله نادرست است. آن را انتخاب کنید.',
+    'word-order': 'جمله را بسازید: واژه‌ها را به ترتیب درست انتخاب کنید.',
+    matching: 'برای هر واژه، جفت مناسب را انتخاب کنید.',
+    'typed-answer': 'پاسخ را تایپ کنید.',
+    'typed-gap-fill': 'واژه‌ای را تایپ کنید که در جای خالی درست است.',
   },
   gap: 'جای خالی',
+  yourSentence: 'جملهٔ شما',
+  wordsToPlace: 'واژه‌ها',
+  choosePartner: 'انتخاب کنید…',
   sentenceCorrect: 'درست',
   sentenceNotCorrect: 'نادرست',
+  germanLetters: 'حروف آلمانی',
   next: 'بعدی',
   checkAnswers: 'بررسی پاسخ‌ها',
   reportProblem: 'گزارش مشکل',
@@ -73,4 +114,147 @@ export const fa: Strings = {
   wrongAnswers: 'پاسخ‌های نادرست',
   yourAnswer: 'پاسخ شما',
   rightAnswer: 'پاسخ درست',
+
+  backupLink: 'پشتیبان‌گیری از پیشرفت',
+  backupTitle: 'از پیشرفت خود پشتیبان بگیرید',
+  backupWhy:
+    'پیشرفت شما فقط در همین مرورگر و روی همین دستگاه نگه داشته می‌شود. اگر داده‌های مرورگر پاک شود، پیشرفت هم از بین می‌رود. یک فایل آن را امن نگه می‌دارد و به دستگاه دیگر هم می‌برد.',
+  // The calendar of the date in the file's name, so that the two agree.
+  date: (date) => new Intl.DateTimeFormat('fa-IR-u-ca-gregory', { dateStyle: 'long' }).format(date),
+  topicsDone: (count) => `${digits.format(count)} موضوع تمام‌شده`,
+  onThisDevice: 'روی این دستگاه',
+  inTheFile: 'در فایل',
+  exportTitle: 'خروجی گرفتن',
+  exportText: 'یک فایل با پیشرفت شما روی همین دستگاه ذخیره می‌شود. چیزی به جایی فرستاده نمی‌شود.',
+  exportProgress: 'خروجی گرفتن از پیشرفت',
+  exportedAs: 'پیشرفت شما حالا در این فایل است:',
+  keepFileSafe: 'فایل را در جای امنی نگه دارید.',
+  importTitle: 'وارد کردن',
+  importText:
+    'پیشرفت را از فایلی برمی‌گرداند که در همین دستگاه یا دستگاه دیگری خروجی گرفته‌اید. فایل جای پیشرفتِ روی این دستگاه را می‌گیرد.',
+  importFile: 'وارد کردن فایل پیشرفت',
+  importReplaceTitle: 'پیشرفتِ روی این دستگاه جایگزین شود؟',
+  importReplaceText: 'فایل جای همه‌چیزِ روی این دستگاه را می‌گیرد. این کار برگشت‌پذیر نیست.',
+  exportedOn: (date) => `خروجی گرفته‌شده در ${date}`,
+  replaceProgress: 'جایگزین شود',
+  cancel: 'انصراف',
+  imported: 'پیشرفت وارد شد.',
+  importNotProgress: 'این فایل، فایل پیشرفت deutsch-tree نیست یا خراب شده است. چیزی تغییر نکرد.',
+  importNewerVersion:
+    'این فایل با نسخهٔ تازه‌تری از deutsch-tree ذخیره شده است. این صفحه را دوباره بارگذاری کنید تا تازه‌ترین نسخه بیاید، بعد فایل را دوباره وارد کنید. چیزی تغییر نکرد.',
+  savedByNewerVersion:
+    'پیشرفتِ این مرورگر با نسخهٔ تازه‌تری از deutsch-tree ذخیره شده است. صفحه را دوباره بارگذاری کنید تا آن نسخه بیاید. تا آن زمان پیشرفت شما نشان داده نمی‌شود و کاری که اینجا می‌کنید ذخیره نمی‌شود.',
+  reload: 'بارگذاری دوباره',
+  milestoneLevel: (level) => `همهٔ موضوع‌های ${level} را که تا امروز آماده شده‌اند تمام کرده‌اید.`,
+  milestoneTopics: (count) => `${digits.format(count)} موضوع را تمام کرده‌اید.`,
+  suggestBackup: 'پیشرفت شما فقط در همین مرورگر نگه داشته می‌شود. یک نسخه در فایل آن را امن نگه می‌دارد.',
+  notNow: 'حالا نه',
+
+  checkpoint: 'آزمون مرور',
+  checkpointTitle: (level) => `آزمون مرور ${level}`,
+  checkpointIntro:
+    'آزمونی کوتاه با سؤال‌هایی از موضوع‌های این سطح. نشان می‌دهد چه چیزهایی را باید دوباره ببینید. در موضوع‌های شما چیزی را تغییر نمی‌دهد.',
+  startCheckpoint: 'شروع آزمون مرور',
+  checkpointNothingYet: 'هنوز هیچ موضوعی از این سطح آزمون ندارد. آزمون مرور با اولین موضوع می‌آید.',
+  checkpointSize: (questions, topics) => `${digits.format(questions)} سؤال از ${digits.format(topics)} موضوع`,
+  checkpointResult: 'نتیجهٔ آزمون مرور',
+  checkpointAllRight: 'همه درست بود. چیزی برای مرور دوباره نیست.',
+  checkpointSomeWrong: 'بعضی پاسخ‌ها نادرست بود. بهتر است موضوع‌های زیر را دوباره ببینید.',
+  checkpointChangesNothing: 'آزمون مرور فقط نشان می‌دهد کجا هستید. موضوع‌های شما همان‌طور که بودند می‌مانند.',
+  topicsToRevisit: 'موضوع‌هایی برای مرور دوباره',
+  wrongOfAsked: (wrong, asked) => `${digits.format(wrong)} نادرست از ${digits.format(asked)}`,
+
+  acceptedWithNote: 'پذیرفته‌شده با یادداشت',
+  exactSpelling: 'املای دقیق',
+  answerNotes: {
+    'umlaut-substitute': `پذیرفته شد. املای دقیق با ${german('ä')}، ${german('ö')}، ${german('ü')} یا ${german('ß')} است.`,
+    capitalisation: 'پذیرفته شد. به حروف بزرگ و کوچک دقت کنید.',
+  },
+
+  // "Module" (Lesen, Hören, Schreiben, Sprechen) is «مهارت»; "mock exam" is «امتحان آزمایشی».
+  readiness: 'آمادگی',
+  readinessTitle: 'برای امتحان آماده‌اید؟',
+  readinessRule: (score, exams) =>
+    `وقتی در ${digits.format(exams)} امتحان آزمایشی رسمی، در هر مهارت ${digits.format(score)} یا بیشتر داشته باشید، آماده‌اید.`,
+  ready: 'آماده‌اید',
+  readyText: (score, exams) =>
+    `شما در ${digits.format(exams)} امتحان آزمایشی رسمی، در هر مهارت ${digits.format(score)} یا بیشتر دارید. می‌توانید برای امتحان ثبت‌نام کنید.`,
+  notReady: 'هنوز آماده نیستید',
+  ofExamsAtTarget: (needed, score) =>
+    `از ${digits.format(needed)} امتحان آزمایشی رسمی با ${digits.format(score)} یا بیشتر در هر مهارت`,
+  whatIsMissing: 'چه چیزی مانده است',
+  examsStillNeeded: (count, score) =>
+    `${digits.format(count)} امتحان آزمایشی رسمی دیگر با ${digits.format(score)} یا بیشتر در هر مهارت`,
+  moduleBelow: (module, score, target) => `${module}: ${digits.format(score)}، باید ${digits.format(target)} باشد.`,
+  moduleNotRecorded: (module) => `${module}: ثبت نشده.`,
+  examModules: {
+    reading: 'خواندن',
+    listening: 'شنیدن',
+    writing: 'نوشتن',
+    speaking: 'صحبت‌کردن',
+  },
+
+  examStopTitle: 'امتحان',
+  examStopWarning: 'امتحان‌های آزمایشی رسمی را تا سنجش نهایی ندیده نگه دارید.',
+  openReadiness: 'آمادگی و امتحان‌های آزمایشی رسمی',
+
+  keepUnseenTitle: 'این امتحان‌ها را ندیده نگه دارید',
+  keepUnseenText:
+    'فقط چند امتحان آزمایشی رسمی وجود دارد و شما به دو تا از آن‌ها نیاز دارید. یک امتحان فقط بار اولی که آن را می‌بینید شما را می‌سنجد. تا وقتی موضوع‌ها و امتحان‌های آزمایشی این سایت را تمام نکرده‌اید، آن‌ها را باز نکنید، حتی برای یک نگاه.',
+  keepUnseenThen: 'بعد هر امتحان را یک بار، با ساعت و مثل امتحان واقعی بدهید و نمره‌هایتان را همین‌جا ثبت کنید.',
+
+  officialMockExams: 'امتحان‌های آزمایشی رسمی',
+  officialMockExamsIntro:
+    'این‌ها مجموعه‌های تمرینیِ خودِ مؤسسهٔ برگزارکنندهٔ امتحان هستند. این سایت فقط به آن‌ها لینک می‌دهد. هر لینک یک وب‌سایت دیگر را باز می‌کند.',
+  spareSets: 'مجموعه‌های ذخیره',
+  spareSetsIntro:
+    'مجموعه‌هایی برای نوجوانان. شکل امتحان و نمره‌دهی مثل بزرگسالان است؛ موضوع‌ها از زندگی مدرسه می‌آیند. فقط وقتی از این‌ها استفاده کنید که یک مجموعهٔ بزرگسالان مصرف شده باشد.',
+  examAudiences: { adults: 'بزرگسالان', youth: 'نوجوانان' },
+  spareCounts: 'برای آمادگی مثل مجموعهٔ بزرگسالان حساب می‌شود.',
+  doesNotCount: 'نمره‌های این مجموعه برای آمادگی حساب نمی‌شود.',
+
+  examNotRecorded: 'هنوز نمره‌ای ثبت نشده',
+  examAtTarget: (score) => `به هدف رسیدید: ${digits.format(score)} یا بیشتر در هر مهارت`,
+  examBelowTarget: 'هنوز به هدف نرسیده‌اید',
+  scoreNotRecorded: 'ثبت نشده',
+  recordScores: 'ثبت نمره‌ها',
+  changeScores: 'تغییر نمره‌ها',
+  scoreHint: (maximum) =>
+    `نمرهٔ هر مهارت از ${digits.format(maximum)}. تا وقتی مهارتی را انجام نداده‌اید، خانهٔ آن را خالی بگذارید.`,
+  scoreInvalid: (maximum) => `نمره یک عدد صحیح از ${digits.format(0)} تا ${digits.format(maximum)} است.`,
+  saveScores: 'ذخیرهٔ نمره‌ها',
+
+  showExamLinks: 'نشان دادن لینک‌های این امتحان',
+  hideExamLinks: 'پنهان کردن لینک‌ها',
+  finalCheckQuestion: 'این آخرین سنجش شماست؟',
+  finalCheckText:
+    'شما فقط یک بار می‌توانید این امتحان را برای اولین بار ببینید. فقط وقتی آن را باز کنید که می‌خواهید آن را به‌عنوان سنجش نهایی بدهید.',
+  finalCheckYes: 'بله، لینک‌ها را نشان بده',
+  finalCheckNotYet: 'هنوز نه',
+  examLinkKinds: {
+    papers: 'برگه‌های امتحان (پی‌دی‌اف)',
+    audio: 'فایل‌های شنیداری',
+    online: 'نسخهٔ آنلاین',
+  },
+  candidatePagesOnly: (first, last) =>
+    `فقط صفحه‌های ${digits.format(first)} تا ${digits.format(last)} را ببینید. در صفحه‌های بعد از آن پاسخ‌ها، متن فایل‌های شنیداری و نمونهٔ پاسخ آمده است.`,
+
+  reference: 'مرجع',
+  search: 'جست‌وجو',
+  allGrammar: 'همهٔ دستور زبان',
+  searchTitle: 'جست‌وجو در همهٔ موضوع‌ها',
+  searchHint: `یک واژه به فارسی یا آلمانی بنویسید. اگر صفحه‌کلید شما ${german('ä, ö, ü, ß')} ندارد، ${german('ae, oe, ue, ss')} بنویسید.`,
+  searchResults: (count) => `${digits.format(count)} موضوع پیدا شد`,
+  searchNothing: 'موضوعی پیدا نشد. واژهٔ دیگری را امتحان کنید، یا واژه‌های کمتری بنویسید.',
+  overviewTitle: 'همهٔ دستور زبان در یک نگاه',
+  overviewIntro: 'همهٔ جدول‌های دستور زبان در یک صفحه. نام بالای هر جدول، موضوع آن را باز می‌کند.',
+  overviewEmpty: 'هنوز هیچ جدول دستور زبانی نوشته نشده است.',
+}
+
+/**
+ * A German letter inside a Persian string, kept apart from the Persian around
+ * it by the Unicode marks U+2066 … U+2069, since a string cannot hold a <span>.
+ */
+function german(text: string): string {
+  return `\u2066${text}\u2069`
 }
