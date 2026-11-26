@@ -7,16 +7,22 @@
  * practice tasks of an exam-part node: the same schema, format check,
  * review and compiled shape. A part's id is its place ("lesen-3"), so an
  * item is named "lesen-3/i2" in a report and on a review sheet.
+ *
+ * Its Schreiben and Sprechen are tasks for an AI assistant, the same as the
+ * task of a writing or speaking node. They have no key, so they are not on
+ * the review sheet.
  */
 import { readdir, readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
 import {
   EXAM_MODULE_FACTS,
+  type ExamTask,
   type ItemTask,
   type ItemTaskFile,
   itemTaskFormat,
   type Localised,
+  MOCK_EXAM_ASSISTANT_MODULES,
   MOCK_EXAM_ITEM_MODULES,
   type MockExam,
   type MockExamFile,
@@ -165,19 +171,31 @@ export function compileMockExam(
   const content: MockExam['content'] =
     exam.status === 'published'
       ? {
-          modules: MOCK_EXAM_ITEM_MODULES.filter((module) => exam[module] !== undefined).map((module) => ({
-            module,
-            scoredBy: 'items' as const,
-            minutes: EXAM_MODULE_FACTS[module].minutes,
-            parts: (exam[module] ?? []).map((part, index) => {
-              const plays = itemTaskFormat({ module, part: index + 1 })?.plays
-              return {
+          modules: [
+            ...MOCK_EXAM_ITEM_MODULES.filter((module) => exam[module] !== undefined).map((module) => ({
+              module,
+              scoredBy: 'items' as const,
+              minutes: EXAM_MODULE_FACTS[module].minutes,
+              parts: (exam[module] ?? []).map((part, index) => {
+                const plays = itemTaskFormat({ module, part: index + 1 })?.plays
+                return {
+                  part: index + 1,
+                  task: compileTask({ id: `${module}-${index + 1}`, ...part }),
+                  ...(plays === undefined ? {} : { plays }),
+                }
+              }),
+            })),
+            ...MOCK_EXAM_ASSISTANT_MODULES.filter((module) => exam[module] !== undefined).map((module) => ({
+              module,
+              scoredBy: 'assistant' as const,
+              minutes: EXAM_MODULE_FACTS[module].minutes,
+              // The schema guarantees the fields of each part's task.
+              parts: (exam[module] ?? []).map((task, index) => ({
                 part: index + 1,
-                task: compileTask({ id: `${module}-${index + 1}`, ...part }),
-                ...(plays === undefined ? {} : { plays }),
-              }
-            }),
-          })),
+                task: { module, part: index + 1, ...task } as ExamTask,
+              })),
+            })),
+          ],
         }
       : null
   return {

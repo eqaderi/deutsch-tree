@@ -12,7 +12,7 @@ import { z } from 'zod'
 import { type Spoken, voiceSchema } from './audio.ts'
 import { type DiagramPart, readDrawing } from './diagram.ts'
 import { WORD_CLASSES, type WordClass } from './scope-list.ts'
-import { type AssistantGradedModule, isAssistantGraded } from './scoring.ts'
+import { ASSISTANT_GRADED_MODULES, type AssistantGradedModule, isAssistantGraded } from './scoring.ts'
 
 export const LANGUAGES = ['en', 'fa', 'de'] as const
 export type Language = (typeof LANGUAGES)[number]
@@ -1098,7 +1098,7 @@ export const nodeFileSchema = z
     if (isAssistantGraded(value) && value.part !== undefined && value.task) {
       const taskFields = TASK_FIELDS[value.module][value.part]
       if (taskFields) {
-        taskFitsItsPart(value.task, taskFields, ctx)
+        taskFitsItsPart(value.task, taskFields, ctx, ['task'])
       }
     }
 
@@ -1171,22 +1171,26 @@ export const nodeFileSchema = z
     }
   })
 
-/** A task holds the fields of its exam part, no others, and as many points as the part has. */
+/**
+ * A task holds the fields of its exam part, no others, and as many points as
+ * the part has. `at` is where the task stands in its file.
+ */
 function taskFitsItsPart(
   value: z.infer<typeof task>,
   part: { name: string; fields: TaskField[]; points?: number },
   ctx: z.RefinementCtx,
+  at: PropertyKey[],
 ): void {
   for (const field of part.fields) {
     if (value[field] === undefined) {
-      ctx.addIssue({ code: 'custom', path: ['task', field], message: `is required for ${part.name}` })
+      ctx.addIssue({ code: 'custom', path: [...at, field], message: `is required for ${part.name}` })
     }
   }
   for (const field of Object.keys(value) as TaskField[]) {
     if (value[field] !== undefined && !part.fields.includes(field)) {
       ctx.addIssue({
         code: 'custom',
-        path: ['task', field],
+        path: [...at, field],
         message: `does not belong to ${part.name}; that task has: ${part.fields.join(', ')}`,
       })
     }
@@ -1194,7 +1198,7 @@ function taskFitsItsPart(
   if (part.points !== undefined && value.points !== undefined && value.points.length !== part.points) {
     ctx.addIssue({
       code: 'custom',
-      path: ['task', 'points'],
+      path: [...at, 'points'],
       message: `${part.name} has exactly ${part.points} points, this task has ${value.points.length}`,
     })
   }
@@ -1249,11 +1253,18 @@ export type ChapterEntry = z.infer<typeof chapter>
 /**
  * The modules a mock exam holds as tasks scored per item, in the order of
  * the exam. Each is a list of its parts, Teil 1 first, each in the format of
- * its exam part (`ITEM_TASK_FORMATS`). Schreiben and Sprechen, graded by an
- * AI assistant, are added beside them as modules of their own.
+ * its exam part (`ITEM_TASK_FORMATS`).
  */
 export const MOCK_EXAM_ITEM_MODULES = ['lesen', 'hoeren'] as const
 export type MockExamItemModule = (typeof MOCK_EXAM_ITEM_MODULES)[number]
+
+/**
+ * The modules a mock exam holds as tasks that an AI assistant grades, after
+ * Lesen and Hören: Schreiben, Aufgabe 1 to 3, and Sprechen, Teil 1 to 3. A
+ * task has the fields of its part, as the task of a writing or speaking
+ * node has (`TASK_FIELDS`).
+ */
+export const MOCK_EXAM_ASSISTANT_MODULES = ASSISTANT_GRADED_MODULES
 
 /**
  * One original mock exam: a full exam in the Goethe B1 format, written for
@@ -1271,12 +1282,22 @@ export const mockExamFileSchema = z
     lesen: z.array(mockExamPartSchema).min(1).optional(),
     /** Hören, Teil 1 to Teil 4. */
     hoeren: z.array(mockExamPartSchema).min(1).optional(),
+    /** Schreiben, Aufgabe 1 to Aufgabe 3. */
+    schreiben: z.array(task).min(1).optional(),
+    /** Sprechen, Teil 1 to Teil 3. */
+    sprechen: z.array(task).min(1).optional(),
     /** A published exam must have one that matches its texts and items; the content pipeline checks it. */
     review: reviewRecord.optional(),
   })
   .superRefine((value, ctx) => {
+    for (const module of MOCK_EXAM_ASSISTANT_MODULES) {
+      ;(value[module] ?? []).forEach((one, index) => {
+        const taskFields = TASK_FIELDS[module][index + 1]
+        if (taskFields) taskFitsItsPart(one, taskFields, ctx, [module, index])
+      })
+    }
     if (value.status !== 'published') return
-    for (const module of MOCK_EXAM_ITEM_MODULES) {
+    for (const module of [...MOCK_EXAM_ITEM_MODULES, ...MOCK_EXAM_ASSISTANT_MODULES]) {
       const { name, parts } = EXAM_MODULE_FACTS[module]
       const held = value[module]?.length ?? 0
       if (held !== parts) {
@@ -1901,11 +1922,11 @@ export interface MockExamContent {
 
 /**
  * One module of a mock exam. A module that the app scores per item (Lesen,
- * Hören) holds item tasks. A module graded by an AI assistant (Schreiben,
- * Sprechen) joins this union with `scoredBy: 'assistant'` and its own parts;
- * the mock exam page picks the view by `scoredBy`.
+ * Hören) holds item tasks; a module graded by an AI assistant (Schreiben,
+ * Sprechen) holds the tasks of a writing or speaking node. The mock exam
+ * page picks the view by `scoredBy`.
  */
-export type MockExamModule = ItemTaskModule
+export type MockExamModule = ItemTaskModule | AssistantTaskModule
 
 /** Lesen or Hören of a mock exam: its parts, each a task scored per item. */
 export interface ItemTaskModule {
@@ -1924,6 +1945,22 @@ export interface ItemTaskPart {
   task: ItemTask
   /** Of a part whose texts are heard: how often each recording may be played, as in the exam. */
   plays?: number
+}
+
+/** Schreiben or Sprechen of a mock exam: its tasks, which an AI assistant grades and the learner scores. */
+export interface AssistantTaskModule {
+  module: AssistantGradedModule
+  scoredBy: 'assistant'
+  /** The time of the module in the exam (`EXAM_MODULE_FACTS`). */
+  minutes: number
+  /** Aufgabe 1 or Teil 1 first. */
+  parts: AssistantTaskPart[]
+}
+
+export interface AssistantTaskPart {
+  /** The part's number in its module. */
+  part: number
+  task: ExamTask
 }
 
 /** `mock-exams.json`: every mock exam, in order. */

@@ -424,6 +424,14 @@ export const fa: Strings = {
   withTimeLimit: 'با محدودیت زمانی',
   withoutTimeLimit: 'بدون محدودیت زمانی',
   playsLeft: (count) => (count === 0 ? 'دیگر پخش نمی‌شود' : `${digits.format(count)} بار دیگر پخش می‌شود`),
+  moduleTasks: (tasks, minutes) => `${digits.format(tasks)} تکلیف · ${digits.format(minutes)} دقیقه`,
+  gradedTimeLimitNote:
+    'وقتی زمان تمام شود، مثل امتحان نوشتن یا صحبت کردن را تمام کنید. بعد تکلیف‌هایتان را نمره‌دهی کنید و نمره‌ها را وارد کنید.',
+  gradedTimeIsUp:
+    'زمان تمام شد. مثل امتحان همین‌جا دست نگه دارید. تکلیف‌هایتان را نمره‌دهی کنید، نمره‌ها را وارد کنید و بعد این بخش را تمام کنید.',
+  scoreEntered: (score) => `نمره: ${digits.format(score)} از ۱۰۰`,
+  scoresEnteredOf: (entered, total) => `${digits.format(entered)} از ${digits.format(total)} نمره وارد شده`,
+  enteredScores: 'نمره‌هایی که وارد کردید',
 }
 
 /**

@@ -7,13 +7,15 @@ import { expect, test } from './test.ts'
 
 /**
  * The original mock exams, against the fixture's: `mock-exam-1` is published
- * with Lesen (5 parts, 30 items) and Hören (4 parts, 30 items); `mock-exam-2`
- * is coming soon. The answer key comes from the fixture file, read here on
+ * with Lesen (5 parts, 30 items), Hören (4 parts, 30 items), Schreiben (3
+ * tasks) and Sprechen (3 parts); `mock-exam-2` is coming soon. The answer key comes from the fixture file, read here on
  * its own; the app only gets the compiled bundle.
  */
 const LIST = './#/mock-exams'
 const LESEN = './#/mock-exams/mock-exam-1/lesen'
 const HOEREN = './#/mock-exams/mock-exam-1/hoeren'
+const SCHREIBEN = './#/mock-exams/mock-exam-1/schreiben'
+const SPRECHEN = './#/mock-exams/mock-exam-1/sprechen'
 
 interface FixtureItem {
   id: string
@@ -53,6 +55,27 @@ function optionFor(item: FixtureItem, part: FixturePart, right: boolean): string
   }
 }
 
+/** Shows a part of the module on screen. */
+async function showPart(page: Page, part: number) {
+  await page
+    .getByRole('navigation', { name: 'Parts' })
+    .getByRole('button', { name: `Part ${part}`, exact: true })
+    .click()
+}
+
+/** Text on the screen; the other parts of a module, and the prompt, stay on the page hidden. */
+const shown = (page: Page, text: string) => page.getByText(text, { exact: false }).filter({ visible: true })
+
+/** Types the assistant's score of each part into the part's own box, part by part. */
+async function enterScores(page: Page, scores: string[]) {
+  for (const [index, score] of scores.entries()) {
+    await showPart(page, index + 1)
+    await page.getByRole('textbox', { name: /Score from the assistant/ }).fill(score)
+    await page.getByRole('button', { name: 'Save the score' }).click()
+    await expect(shown(page, `Score: ${score} of 100`)).toBeVisible()
+  }
+}
+
 /**
  * Answers every part of the module on screen, part by part, from the key:
  * right, except `wrong[part]` items at the end of each part.
@@ -85,6 +108,8 @@ test('the exam stop of the tree leads to the mock exams; one that is still being
   const published = page.getByRole('region', { name: 'Fixture mock exam', exact: true })
   await expect(published.getByRole('link', { name: /Reading.*30 questions · 65 minutes/ })).toBeVisible()
   await expect(published.getByRole('link', { name: /Listening.*30 questions · 40 minutes/ })).toBeVisible()
+  await expect(published.getByRole('link', { name: /Writing.*3 tasks · 60 minutes/ })).toBeVisible()
+  await expect(published.getByRole('link', { name: /Speaking.*3 tasks · 15 minutes/ })).toBeVisible()
   await expect(published).toContainText('No results yet.')
   const soon = page.getByRole('region', { name: 'Second fixture mock exam' })
   await expect(soon).toContainText('Coming soon')
@@ -216,4 +241,95 @@ test('in Hören the recordings play as often as in the exam, and the discussion 
   // What was said is shown once the answers are checked.
   await page.getByText('Part 4: your answers').click()
   await expect(page.getByText('Mir fehlen zu Hause meine Kollegen.', { exact: false })).toBeVisible()
+})
+
+test('in Schreiben each task has its prompt to copy and a box for its score; the result is out of 100 and kept', async ({
+  page,
+}) => {
+  await page.goto(SCHREIBEN)
+  await expect(page.getByRole('heading', { level: 1, name: /Writing/ })).toBeVisible()
+  await expect(page.getByRole('region', { name: '3 tasks · 60 minutes' })).toBeVisible()
+  await page.getByRole('checkbox', { name: 'Use the time limit of the exam: 60 minutes' }).uncheck()
+  await page.getByRole('button', { name: 'Start the module' }).click()
+
+  // Each task as the learner reads it, and its prompt with the task and the official criteria.
+  await expect(shown(page, 'Schreiben, Aufgabe 1')).toBeVisible()
+  await expect(shown(page, 'Ihr Freund Tim war nicht dabei.')).toBeVisible()
+  await page.context().grantPermissions(['clipboard-read', 'clipboard-write'])
+  await page.getByRole('button', { name: 'Copy the prompt' }).click()
+  const prompt = await page.evaluate(() => navigator.clipboard.readText())
+  expect(prompt).toContain('Machen Sie einen Vorschlag für den nächsten Ausflug.')
+  expect(prompt).toContain('Erfüllung')
+  expect(prompt).toContain('SCORE: <number>/100')
+  await showPart(page, 2)
+  await expect(shown(page, 'Schreiben, Aufgabe 2')).toBeVisible()
+  await expect(shown(page, 'Ein Auto brauche ich nicht.')).toBeVisible()
+
+  await enterScores(page, ['81', '75', '75'])
+  await page.getByRole('button', { name: /Finish and check.*3 of 3 scores entered/ }).click()
+
+  // 32.4 + 30 + 15 of the 40 + 40 + 20 points of the tasks.
+  const result = page.getByRole('region', { name: /: your result$/ })
+  await expect(result.locator('.big-number')).toHaveText('77')
+  await expect(result).toContainText('Passed: 60 is the pass mark.')
+  for (const [part, points] of ['32 of 40', '30 of 40', '15 of 20'].entries()) {
+    await expect(result.getByRole('definition').nth(part)).toHaveText(points)
+  }
+  // Below the result: the score typed in for each task.
+  await expect(page.getByRole('region', { name: 'The scores you entered' })).toContainText('81 of 100')
+
+  await page.goto(LIST)
+  await page.reload()
+  const exam = page.getByRole('region', { name: 'Fixture mock exam', exact: true })
+  await expect(exam.getByRole('link', { name: /Writing.*Last time: 77 of 100/ })).toBeVisible()
+})
+
+test('in Sprechen the time running out ends the speaking, not the module: the scores can still be entered', async ({
+  page,
+}) => {
+  await page.clock.install()
+  await page.goto(SPRECHEN)
+  await page.getByRole('button', { name: 'Start the module' }).click()
+  await expect(page.getByRole('timer')).toHaveText('15:00')
+  await expect(shown(page, 'Sprechen, Teil 1: Gemeinsam etwas planen')).toBeVisible()
+
+  await page.clock.fastForward('15:01')
+
+  await expect(page.getByRole('main')).toContainText('The time is up.')
+  await enterScores(page, ['75', '75'])
+  await page.getByRole('button', { name: /Finish and check.*2 of 3 scores entered/ }).click()
+
+  // 25 of 33 and 36 of 48; Teil 3 has no score, so 0 of 19.
+  const result = page.getByRole('region', { name: /: your result$/ })
+  await expect(result.locator('.big-number')).toHaveText('61')
+  for (const [part, points] of ['25 of 33', '36 of 48', '0 of 19'].entries()) {
+    await expect(result.getByRole('definition').nth(part)).toHaveText(points)
+  }
+  await expect(result).not.toContainText('Your answers so far were checked.')
+})
+
+test('the history of an exam keeps all four modules, each out of 100', async ({ page }) => {
+  for (const module of [LESEN, HOEREN]) {
+    await page.goto(module)
+    await page.getByRole('button', { name: 'Start the module' }).click()
+    await page.getByRole('button', { name: /Finish and check/ }).click()
+    await expect(page.getByRole('region', { name: /: your result$/ })).toBeVisible()
+  }
+  for (const [module, scores] of [
+    [SCHREIBEN, ['90', '90', '90']],
+    [SPRECHEN, ['100', '100', '100']],
+  ] as const) {
+    await page.goto(module)
+    await page.getByRole('button', { name: 'Start the module' }).click()
+    await enterScores(page, [...scores])
+    await page.getByRole('button', { name: /Finish and check/ }).click()
+    await expect(page.getByRole('region', { name: /: your result$/ })).toBeVisible()
+  }
+
+  await page.goto(LIST)
+  await page.reload()
+  const history = page.getByRole('list', { name: 'Your results' }).getByRole('listitem')
+  await expect(history).toHaveCount(4)
+  await expect(history.locator('.mock-result-head')).toContainText(['Speaking', 'Writing', 'Listening', 'Reading'])
+  await expect(history.locator('.big-number')).toHaveText(['100', '90', '0', '0'])
 })

@@ -8,19 +8,27 @@
  * has: the start, the clock, finishing (by the learner or when time is up),
  * the score out of 100 against 60 and 90, and the history. What the learner
  * does inside a module is `ModuleRun`, chosen by the module's `scoredBy`:
- * `ItemModuleRun` for Lesen and Hören, scored per item. A module graded by
- * an AI assistant (Schreiben, Sprechen) is another case there, with a run
- * that calls `onFinish` with the points of its parts.
+ * `ItemModuleRun` for Lesen and Hören, scored per item, and
+ * `AssistantModuleRun` for Schreiben and Sprechen, graded by an AI assistant,
+ * which calls `onFinish` with the points of its parts.
  */
-import { type ReactNode, use, useEffect, useId, useRef, useState } from 'react'
+import { type ReactNode, type RefObject, use, useEffect, useId, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router'
-import type { ItemTaskModule, MockExam, MockExamModule } from '../content-model/index.ts'
+import { modulePoints } from '../assistant-grading/index.ts'
+import type {
+  AssistantTaskModule,
+  AssistantTaskPart,
+  ItemTaskModule,
+  MockExam,
+  MockExamModule,
+} from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import {
   type Answer,
   type AttemptResult,
   examModuleOf,
   isAnswered,
+  MAXIMUM_SCORE,
   type MockModuleResult,
   type MockPartResult,
   mockModuleResult,
@@ -28,10 +36,11 @@ import {
   scoreAttempt,
   timeLeft,
 } from '../learning-engine/index.ts'
+import { GradingSteps, ScoreEntry, TaskSheetView } from './AssistantGrading.tsx'
 import { loadMockExam, loadMockExams } from './content.ts'
 import { RichText } from './German.tsx'
 import { ItemResults, TaskItems, TaskTexts } from './ItemTaskView.tsx'
-import { MockResultSummary } from './MockExamsPage.tsx'
+import { MockResultSummary, moduleFacts } from './MockExamsPage.tsx'
 import { NotFound } from './NotFound.tsx'
 import { updateProgress } from './progress.ts'
 import { ModuleName } from './ReadinessPage.tsx'
@@ -64,7 +73,11 @@ export interface FinishedModule {
 export interface ModuleRunProps<Module extends MockExamModule> {
   exam: MockExam
   module: Module
-  /** The time is up: the run finishes at once with what was answered. */
+  /**
+   * The time is up. Lesen and Hören finish at once with what was answered;
+   * Schreiben and Sprechen stop the writing or speaking, and the learner
+   * still enters the scores the assistant gives.
+   */
   timeUp: boolean
   /** Called once, when the module is finished. */
   onFinish: (finished: FinishedModule) => void
@@ -136,7 +149,8 @@ function MockExamModuleShell({ exam, module }: { exam: MockExam; module: MockExa
       {phase.at === 'finished' && (
         <ModuleResult
           result={phase.result}
-          timeUp={phase.timeUp}
+          // Only a module scored per item was finished by the clock.
+          timeUp={phase.timeUp && module.scoredBy === 'items'}
           details={phase.details}
           onAgain={() => setPhase({ at: 'start' })}
         />
@@ -150,6 +164,8 @@ function ModuleRun(props: ModuleRunProps<MockExamModule>) {
   switch (props.module.scoredBy) {
     case 'items':
       return <ItemModuleRun {...props} module={props.module} />
+    case 'assistant':
+      return <AssistantModuleRun {...props} module={props.module} />
   }
 }
 
@@ -164,18 +180,20 @@ interface ModuleStartProps {
 function ModuleStart({ module, timed, onTimed, onStart }: ModuleStartProps) {
   const { strings } = useLanguage()
   const id = useId()
-  const questions = module.parts.reduce((sum, part) => sum + part.task.items.length, 0)
-  const heard = module.parts.some((part) => part.plays !== undefined)
+  const graded = module.scoredBy === 'assistant'
+  const heard = !graded && module.parts.some((part) => part.plays !== undefined)
   return (
     <section className="panel" aria-labelledby={id}>
       <h2 id={id} className="cap">
-        {strings.moduleFacts(questions, module.minutes)}
+        {moduleFacts(module, strings)}
       </h2>
       <label className="check">
         <input type="checkbox" checked={timed} onChange={(event) => onTimed(event.target.checked)} />
         <span>{strings.useTimeLimit(module.minutes)}</span>
       </label>
-      <p className="secondary">{timed ? strings.timeLimitNote : strings.noTimeLimit}</p>
+      <p className="secondary">
+        {timed ? (graded ? strings.gradedTimeLimitNote : strings.timeLimitNote) : strings.noTimeLimit}
+      </p>
       {heard && <p className="secondary">{strings.playsNote}</p>}
       <div className="result-actions">
         <button type="button" className="btn btn-main" onClick={onStart}>
@@ -273,7 +291,7 @@ function ModuleResult({ result, timeUp, details, onAgain }: ModuleResultProps) {
  */
 function ItemModuleRun({ exam, module, timeUp, onFinish }: ModuleRunProps<ItemTaskModule>) {
   const { strings } = useLanguage()
-  const [place, setPlace] = useState(0)
+  const { place, show, top } = usePartPlace()
   const [answers, setAnswers] = useState<Array<Array<Answer | undefined>>>(() => module.parts.map(() => []))
   const firstNumbers = module.parts.map((_, index) =>
     module.parts.slice(0, index).reduce((sum, part) => sum + part.task.items.length, 1),
@@ -302,27 +320,9 @@ function ItemModuleRun({ exam, module, timeUp, onFinish }: ModuleRunProps<ItemTa
     if (timeUp) finishNow.current()
   }, [timeUp])
 
-  const top = useRef<HTMLElement>(null)
-  const show = (index: number) => {
-    setPlace(index)
-    top.current?.scrollIntoView({ block: 'start' })
-  }
-
   return (
     <>
-      <nav className="part-choice" aria-label={strings.parts} ref={top}>
-        {module.parts.map((part, index) => (
-          <button
-            key={part.part}
-            type="button"
-            className="pill"
-            aria-current={index === place ? 'step' : undefined}
-            onClick={() => show(index)}
-          >
-            {strings.packPart(part.part)}
-          </button>
-        ))}
-      </nav>
+      <PartChoice parts={module.parts} place={place} onShow={show} navRef={top} />
 
       {module.parts.map((part, index) => (
         <div key={part.part} hidden={index !== place}>
@@ -344,17 +344,12 @@ function ItemModuleRun({ exam, module, timeUp, onFinish }: ModuleRunProps<ItemTa
         </div>
       ))}
 
-      <div className="action-bar">
-        {place < module.parts.length - 1 && (
-          <button type="button" className="btn" onClick={() => show(place + 1)}>
-            {strings.nextPart}
-          </button>
-        )}
-        <button type="button" className="btn btn-main btn-with-note" onClick={finish}>
-          {strings.finishModule}
-          <small>{strings.answeredOf(answered, total)}</small>
-        </button>
-      </div>
+      <ModuleActions
+        hasNext={place < module.parts.length - 1}
+        onNext={() => show(place + 1)}
+        onFinish={finish}
+        note={strings.answeredOf(answered, total)}
+      />
     </>
   )
 }
@@ -385,5 +380,178 @@ function ItemModuleAnswers({ exam, module, results, firstNumbers }: ItemModuleAn
         )
       })}
     </>
+  )
+}
+
+/**
+ * Schreiben or Sprechen: the tasks one at a time, chosen from the same row
+ * of parts, each with its task sheet, the prompt to have it graded by an AI
+ * assistant, and the box for the score that comes back. The learner
+ * finishes the module, also after the time is up, and each task's score
+ * becomes points of its weight (`modulePoints`); a task without a score
+ * counts as 0.
+ */
+function AssistantModuleRun({ module, timeUp, onFinish }: ModuleRunProps<AssistantTaskModule>) {
+  const { strings } = useLanguage()
+  const { place, show, top } = usePartPlace()
+  const [scores, setScores] = useState<Array<number | undefined>>(() => module.parts.map(() => undefined))
+  const entered = scores.filter((score) => score !== undefined).length
+
+  const finish = () =>
+    onFinish({
+      parts: modulePoints(module.module, scores),
+      details: <EnteredScores module={module} scores={scores} />,
+    })
+
+  return (
+    <>
+      <PartChoice parts={module.parts} place={place} onShow={show} navRef={top} />
+      {timeUp && <p className="message">{strings.gradedTimeIsUp}</p>}
+
+      {module.parts.map((part, index) => (
+        <div key={part.part} hidden={index !== place}>
+          <h2 className="list-heading">{strings.packPart(part.part)}</h2>
+          <AssistantPart
+            part={part}
+            score={scores[index]}
+            onScore={(score) =>
+              setScores((before) => before.map((one, partIndex) => (partIndex === index ? score : one)))
+            }
+          />
+        </div>
+      ))}
+
+      <ModuleActions
+        hasNext={place < module.parts.length - 1}
+        onNext={() => show(place + 1)}
+        onFinish={finish}
+        note={strings.scoresEnteredOf(entered, module.parts.length)}
+      />
+    </>
+  )
+}
+
+interface AssistantPartProps {
+  part: AssistantTaskPart
+  score: number | undefined
+  onScore: (score: number) => void
+}
+
+/** One task of Schreiben or Sprechen: the task, how to have it graded, and its score. A new score replaces the last. */
+function AssistantPart({ part, score, onScore }: AssistantPartProps) {
+  const { strings } = useLanguage()
+  const id = useId()
+  return (
+    <>
+      <section className="panel" aria-labelledby={`${id}-task`}>
+        <h3 id={`${id}-task`} className="cap">
+          {strings.task}
+        </h3>
+        <TaskSheetView task={part.task} />
+      </section>
+      <section className="panel" aria-labelledby={`${id}-prompt`}>
+        <h3 id={`${id}-prompt`} className="cap">
+          {strings.getYourScore}
+        </h3>
+        <GradingSteps task={part.task} />
+      </section>
+      <section className="panel" aria-labelledby={`${id}-score`}>
+        <h3 id={`${id}-score`} className="cap">
+          {strings.yourScore}
+        </h3>
+        <p className="score" role="status">
+          {score === undefined ? strings.noScoreYet : strings.scoreEntered(score)}
+        </p>
+        <ScoreEntry onScore={onScore} />
+      </section>
+    </>
+  )
+}
+
+/** Below the result of Schreiben or Sprechen: the score out of 100 that was typed in for each task. */
+function EnteredScores({ module, scores }: { module: AssistantTaskModule; scores: Array<number | undefined> }) {
+  const { strings } = useLanguage()
+  const id = useId()
+  return (
+    <section className="panel" aria-labelledby={id}>
+      <h2 id={id} className="cap">
+        {strings.enteredScores}
+      </h2>
+      <dl className="module-scores part-scores">
+        {module.parts.map((part, index) => {
+          const score = scores[index]
+          return (
+            <div key={part.part}>
+              <dt>{strings.packPart(part.part)}</dt>
+              <dd>{score === undefined ? strings.noScoreYet : strings.partRight(score, MAXIMUM_SCORE)}</dd>
+            </div>
+          )
+        })}
+      </dl>
+    </section>
+  )
+}
+
+/** Which part of a module is shown, and the way to show another, from the top of the row of parts. */
+function usePartPlace() {
+  const [place, setPlace] = useState(0)
+  const top = useRef<HTMLElement>(null)
+  const show = (index: number) => {
+    setPlace(index)
+    top.current?.scrollIntoView({ block: 'start' })
+  }
+  return { place, show, top }
+}
+
+interface PartChoiceProps {
+  parts: ReadonlyArray<{ part: number }>
+  place: number
+  onShow: (index: number) => void
+  navRef: RefObject<HTMLElement | null>
+}
+
+/** The row of a module's parts, the one shown marked. */
+function PartChoice({ parts, place, onShow, navRef }: PartChoiceProps) {
+  const { strings } = useLanguage()
+  return (
+    <nav className="part-choice" aria-label={strings.parts} ref={navRef}>
+      {parts.map((part, index) => (
+        <button
+          key={part.part}
+          type="button"
+          className="pill"
+          aria-current={index === place ? 'step' : undefined}
+          onClick={() => onShow(index)}
+        >
+          {strings.packPart(part.part)}
+        </button>
+      ))}
+    </nav>
+  )
+}
+
+interface ModuleActionsProps {
+  hasNext: boolean
+  onNext: () => void
+  onFinish: () => void
+  /** Under the finish button: how much of the module is done. */
+  note: string
+}
+
+/** Below the parts: the way to the next part, and the way to finish the module. */
+function ModuleActions({ hasNext, onNext, onFinish, note }: ModuleActionsProps) {
+  const { strings } = useLanguage()
+  return (
+    <div className="action-bar">
+      {hasNext && (
+        <button type="button" className="btn" onClick={onNext}>
+          {strings.nextPart}
+        </button>
+      )}
+      <button type="button" className="btn btn-main btn-with-note" onClick={onFinish}>
+        {strings.finishModule}
+        <small>{note}</small>
+      </button>
+    </div>
   )
 }

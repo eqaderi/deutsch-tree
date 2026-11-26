@@ -5,6 +5,7 @@
  *   taskSheet(task)                 the task as the learner reads it (German)
  *   assistantPrompt(task, language) the text to paste into an AI assistant
  *   scoreOutOf100(task, points)     the score rule that the prompt states
+ *   modulePoints(module, scores)    the parts of a mock exam's module as points of their weight
  *
  * Pure functions on an `ExamTask`: no interface, no storage, and no request
  * to anything. The app only copies the prompt; it never calls an AI service.
@@ -15,5 +16,5 @@
  */
 export { BANDS, type Criterion, type Marking, markingOf, wordsAskedFor } from './criteria.ts'
 export { assistantPrompt } from './prompt.ts'
-export { PRONUNCIATION_SHARE, scoreOutOf100 } from './score.ts'
+export { modulePoints, PRONUNCIATION_SHARE, scoreOutOf100 } from './score.ts'
 export { sheetAsText, type TaskBlock, type TaskSheet, taskSheet } from './task-sheet.ts'

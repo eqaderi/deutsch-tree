@@ -295,23 +295,34 @@ The rules are in the learning engine, like every rule. The tree
   `src/content-pipeline/mock-exams.ts`. Its Lesen and Hören parts are
   `ItemTask`s, held to `ITEM_TASK_FORMATS`, reviewed blind and compiled like
   the practice tasks of an exam part; `mockExamTasks` names them `lesen-1` to
-  `hoeren-4`. Compiled, an exam is `MockExam` with its `modules`
-  (`MockExamModule`), each with its `minutes` (from `EXAM_MODULE_FACTS`)
+  `hoeren-4`. Its Schreiben and Sprechen parts are `ExamTask`s, the task of a
+  writing or speaking node, held to the same `TASK_FIELDS`; they have no key,
+  so they are not on the review sheet. Compiled, an exam is `MockExam` with
+  its `modules` (`MockExamModule`: `ItemTaskModule` or
+  `AssistantTaskModule`), each with its `minutes` (from `EXAM_MODULE_FACTS`)
   and its parts; a heard part also says how often it is `plays`.
 - **The shell.** `MockExamPage.tsx` is a shell around a module: the start
   (with the time limit switched on or off), the clock (`timeLeft` in the
   learning engine; it can be switched off while the module runs, and when
   time is up the run finishes with the answers so far), and the result. What
   the learner does inside the module is `ModuleRun`, picked by the module's
-  `scoredBy`: `ItemModuleRun` for Lesen and Hören. A run gets
-  `ModuleRunProps` (the exam, the module, `timeUp`, `onFinish`) and finishes
-  with `FinishedModule`: each part's `{ part, correct, total }` and what to
-  show below the result. A module graded by an AI assistant (Schreiben,
-  Sprechen; ticket #28) is a new member of `MockExamModule` with
-  `scoredBy: 'assistant'`, a case in `ModuleRun` with its own run (built
-  from `TaskSheetView`, `CopyPrompt`, `ScoreEntry`), and parts given as
-  points of their weight (`correct` 32 of `total` 40); the shell, the result
-  and the history need no change.
+  `scoredBy`: `ItemModuleRun` for Lesen and Hören, `AssistantModuleRun` for
+  Schreiben and Sprechen. A run gets `ModuleRunProps` (the exam, the module,
+  `timeUp`, `onFinish`) and finishes with `FinishedModule`: each part's
+  `{ part, correct, total }` and what to show below the result. The row of
+  parts (`PartChoice`) and the buttons below them (`ModuleActions`) are
+  shared by both runs.
+- **Schreiben and Sprechen.** Each task shows its sheet, the steps and the
+  prompt to copy (`TaskSheetView`, `GradingSteps` with `CopyPrompt`, from
+  `src/app/AssistantGrading.tsx`, as on a writing or speaking node) and a
+  `ScoreEntry` for the score out of 100 that the assistant gives. When the
+  time is up the learner stops writing or speaking but still enters the
+  scores; the module ends only when the learner finishes it, and a task
+  without a score counts as 0. `modulePoints` (`src/assistant-grading/score.ts`)
+  makes the scores points of each part's weight: Schreiben 40, 40, 20; Sprechen
+  33, 48, 19 (each part's 28, 40 or 16 points with its share of Aussprache's
+  16). The points are whole and add up to the module score the exam rule
+  gives, so the score, the result and the history work as for Lesen.
 - **Scores.** `mockModuleResult` scores a module over all its parts out of
   100 (`scoreModule`, so 27 of 30 is 90); `scoreStanding` says where it
   stands against `PASS_SCORE` (60) and `READINESS_SCORE` (90). A result shows

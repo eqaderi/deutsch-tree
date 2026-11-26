@@ -319,21 +319,36 @@ lesen:                   # Lesen, Teil 1 to Teil 5, in order
 hoeren:                  # Hören, Teil 1 to Teil 4, in order
   - texts: …
     items: …
+schreiben:               # Schreiben, Aufgabe 1 to Aufgabe 3, in order
+  - situation: …         # a task, written as the `task` of a writing node
+    points: […]
+  - situation: …
+    opinion: { author: …, text: … }
+  - situation: …
+sprechen:                # Sprechen, Teil 1 to Teil 3, in order
+  - situation: …         # a task, written as the `task` of a speaking node
+    points: […]
+  - topic: …
+  - topic: …
 ```
 
 - Each part has the format of its exam part, as a practice task does (the
   table in "Practice tasks (Lesen)"). A part's id is its place: `lesen-3` is
   Lesen Teil 3, and a report or a review sheet names its items `lesen-3/i2`.
-- A published mock exam has all five parts of Lesen and all four of Hören.
-  The time of each module comes from the exam (Lesen 65 minutes, Hören 40),
+- A published mock exam has all five parts of Lesen, all four of Hören and
+  all three of Schreiben and of Sprechen. The time of each module comes from
+  the exam (Lesen 65 minutes, Hören 40, Schreiben 60, Sprechen 15),
   and so does how often each recording of Hören is played (Teil 1 and Teil 4
   twice, Teil 2 and Teil 3 once). None of this is written in the file.
 - It is reviewed blind, texts included, exactly as an exam part is (see
   "Review before publishing"): `pnpm review:pool mock-exam-1`, then
   `pnpm review:record mock-exam-1`. Then publish it and run
   `pnpm audio:generate` for the lines of Hören.
-- Schreiben and Sprechen of a mock exam are added in their own ticket (#28),
-  beside `lesen` and `hoeren`.
+- A task of Schreiben or Sprechen has the fields of its part (the table in
+  "A published writing or speaking node"), and only what is special to it:
+  the app adds the fixed wording, the criteria and the prompt. It has no key,
+  so it is not on the review sheet and changing it needs no new review; have
+  its German read by someone who knows German.
 
 ## A published grammar node
 

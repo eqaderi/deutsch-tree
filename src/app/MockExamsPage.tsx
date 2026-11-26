@@ -1,7 +1,7 @@
 import { use, useId } from 'react'
 import { Link } from 'react-router'
-import type { MockExamSummary } from '../content-model/index.ts'
-import { useLanguage } from '../language/index.tsx'
+import type { MockExamModule, MockExamSummary } from '../content-model/index.ts'
+import { type Strings, useLanguage } from '../language/index.tsx'
 import {
   examModuleOf,
   MAXIMUM_SCORE,
@@ -21,7 +21,7 @@ import { ModuleName } from './ReadinessPage.tsx'
  * The original mock exams (`#/mock-exams`): each exam with its modules, the
  * way into each, and every result the learner had in it, the latest first.
  * The list file holds no parts; an exam's own file is fetched for the number
- * of questions of its modules.
+ * of questions (or tasks) of its modules.
  */
 export function MockExamsPage() {
   const { strings } = useLanguage()
@@ -76,7 +76,6 @@ function MockExamCard({ exam }: { exam: MockExamSummary }) {
       </h2>
       <ul className="mock-modules">
         {(content?.modules ?? []).map((module) => {
-          const items = module.parts.reduce((sum, part) => sum + part.task.items.length, 0)
           const latest = history.find((result) => result.module === examModuleOf(module.module))
           return (
             <li key={module.module}>
@@ -87,7 +86,7 @@ function MockExamCard({ exam }: { exam: MockExamSummary }) {
                     <ModuleName module={examModuleOf(module.module)} />
                   </span>
                   <span className="row-meta">
-                    {strings.moduleFacts(items, module.minutes)}
+                    {moduleFacts(module, strings)}
                     {latest && ` · ${strings.latestScore(latest.score)}`}
                   </span>
                 </span>
@@ -100,6 +99,13 @@ function MockExamCard({ exam }: { exam: MockExamSummary }) {
       <MockExamHistory results={history} />
     </section>
   )
+}
+
+/** What a module holds and its time: "30 questions · 65 minutes", or "3 tasks · 60 minutes". */
+export function moduleFacts(module: MockExamModule, strings: Strings): string {
+  if (module.scoredBy === 'assistant') return strings.moduleTasks(module.parts.length, module.minutes)
+  const questions = module.parts.reduce((sum, part) => sum + part.task.items.length, 0)
+  return strings.moduleFacts(questions, module.minutes)
 }
 
 /** The finished modules of one exam, the latest first: when, the score out of 100, and each part. */

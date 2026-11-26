@@ -32,3 +32,51 @@ export function scoreOutOf100(
   if (!pronunciation) return Math.round((points.task * 100) / maximum)
   return Math.round((points.task * (100 - PRONUNCIATION_SHARE)) / maximum + (points.pronunciation ?? 0))
 }
+
+/**
+ * The parts of a mock exam's Schreiben or Sprechen as points of their weight
+ * in the module, from the score out of 100 that the learner typed in for
+ * each task (`undefined` for none, which counts as 0). The points of all
+ * parts add up to the module's score out of 100.
+ *
+ * A part weighs its share of the points of the module's parts: Schreiben
+ * 40, 40 and 20. In Sprechen the parts have 28, 40 and 16 points and
+ * Aussprache, rated once for all three, the other 16; a part's score already
+ * holds its own Aussprache, so a part weighs its points and its share of
+ * Aussprache, 28 of 84 of the 100. The module score is the weighted mean of
+ * the parts: the points of the three parts plus Aussprache averaged over them
+ * as the parts weigh.
+ *
+ * Progress keeps whole points, so each weight is shown whole (33, 48, 19)
+ * and each part's points are its exact share rounded so that together they
+ * make the module score, rounded as the exam rounds it (a half up): what
+ * rounding leaves over goes to the parts with the largest fractions.
+ */
+export function modulePoints(
+  module: ExamTask['module'],
+  scores: ReadonlyArray<number | undefined>,
+): Array<{ part: number; correct: number; total: number }> {
+  const parts = ([1, 2, 3] as const).map((part) => {
+    const { maximum } = markingOf({ module, part })
+    return { part, maximum, reached: (scores[part - 1] ?? 0) * maximum }
+  })
+  // Everything is a whole number over `whole`, the points of the three parts.
+  const whole = parts.reduce((sum, part) => sum + part.maximum, 0)
+  const reached = parts.reduce((sum, part) => sum + part.reached, 0)
+  const score = Math.floor((2 * reached + whole) / (2 * whole))
+
+  const points = parts.map(({ part, maximum, reached }) => ({
+    part,
+    correct: Math.floor(reached / whole),
+    total: Math.round((maximum * 100) / whole),
+    fraction: reached % whole,
+  }))
+  let left = score - points.reduce((sum, part) => sum + part.correct, 0)
+  for (const one of points.toSorted((a, b) => b.fraction - a.fraction)) {
+    if (left === 0) break
+    if (one.fraction === 0 || one.correct >= one.total) continue
+    one.correct += 1
+    left -= 1
+  }
+  return points.map(({ part, correct, total }) => ({ part, correct, total }))
+}

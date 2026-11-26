@@ -414,6 +414,30 @@ hoeren:
         }
       - { id: i8, type: who-says, prompt: Die Mitarbeiter sollen selbst wählen., answer: Herr Wolf, explanation: *why }
 
+# Schreiben, Aufgabe 1 to 3, and Sprechen, Teil 1 to 3: each a task in the format of its part,
+# as a writing or speaking node holds it. An AI assistant grades them; they have no key and no review.
+schreiben:
+  - situation: Sie haben am Wochenende einen Ausflug an den See gemacht. Ihr Freund Tim war nicht dabei.
+    points:
+      - "Beschreiben Sie: Wie war der Ausflug?"
+      - "Begründen Sie: Was hat Ihnen nicht gefallen?"
+      - Machen Sie einen Vorschlag für den nächsten Ausflug.
+  - situation: >-
+      Sie haben im Radio eine Sendung zum Thema „Fahrrad in der Stadt“ gehört.
+      Im Gästebuch der Sendung lesen Sie diese Meinung:
+    opinion:
+      author: Jonas
+      text: In der Stadt fahre ich nur Fahrrad. Ein Auto brauche ich nicht.
+  - situation: >-
+      Sie haben morgen einen Termin bei Ihrer Ärztin, Frau Dr. Berg. Sie können nicht kommen.
+      Schreiben Sie an die Praxis: Entschuldigen Sie sich und bitten Sie um einen neuen Termin.
+
+sprechen:
+  - situation: Eine Freundin aus Ihrem Deutschkurs hat bald Geburtstag. Sie möchten zusammen eine Feier für sie planen.
+    points: [Wann und wo feiern?, Wer kommt?, Essen und Trinken?, Geschenk?]
+  - topic: Brauchen Kinder ein eigenes Handy?
+  - topic: Sollen Städte das Auto im Zentrum verbieten?
+
 review:
   reviewer: Fixture reviewer
   date: 2026-11-26
