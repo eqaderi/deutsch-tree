@@ -17,6 +17,8 @@
   /* Darker than the mock-up's #857b70, which failed contrast on the page background. */
   --text-secondary: #6b6258;
   --hairline: #dcd2c5;
+  /* The lighter line between the rows inside a panel. */
+  --hairline-soft: #e7dfd3;
   --track: #cfc4b5;
   --ring: #b9ad9c;
   --accent: #f08a2b;
@@ -28,6 +30,15 @@
   --kind-vocabulary: #bccab1;
   --kind-phrases: #b6c4d4;
   --kind-exam-part: #dfb7ac;
+  /* A level tag, and other small labels on the panel. */
+  --tag: #e6ded2;
+  --tag-text: #5e554b;
+  /* Text and marks on a filled colour (a main button, a done mark), and the face of a scale. */
+  --white: #fff;
+  /* The light edge of a panel. */
+  --panel-edge: rgb(255 255 255 / 0.85);
+  /* Shadows are this warm brown at some opacity: rgb(var(--shadow) / 0.4). */
+  --shadow: 96 72 40;
 
   --font-latin: "Outfit Variable", system-ui, sans-serif;
   --font-persian: "Vazirmatn Variable", "Outfit Variable", system-ui, sans-serif;
@@ -190,7 +201,7 @@ a {
 
 .language-switch [aria-pressed="true"] span {
   background: var(--text);
-  color: #fff;
+  color: var(--white);
 }
 
 main.wrap {
@@ -201,12 +212,12 @@ main.wrap {
 
 .panel {
   background: var(--panel);
-  border: 1px solid rgb(255 255 255 / 0.85);
+  border: 1px solid var(--panel-edge);
   border-radius: var(--radius-panel);
   padding: var(--pad);
   box-shadow:
-    0 16px 30px -20px rgb(96 72 40 / 0.4),
-    0 2px 5px rgb(96 72 40 / 0.06);
+    0 16px 30px -20px rgb(var(--shadow) / 0.4),
+    0 2px 5px rgb(var(--shadow) / 0.06);
 }
 
 .panel + .panel {
@@ -244,8 +255,8 @@ main.wrap {
 .tag {
   border-radius: 999px;
   padding: 2px 9px;
-  background: #e6ded2;
-  color: #5e554b;
+  background: var(--tag);
+  color: var(--tag-text);
 }
 
 /* A kind is always written out; the tint only supports the word. */
@@ -291,7 +302,7 @@ main.wrap {
   border-radius: 999px;
   padding: 12px 20px;
   background: var(--text);
-  color: #fff;
+  color: var(--white);
   font: inherit;
   font-weight: 500;
   text-decoration: none;
@@ -371,14 +382,14 @@ main.wrap {
   inset-block-start: 5px;
   inline-size: 6px;
   block-size: 11px;
-  border: solid #fff;
+  border: solid var(--white);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
 
 .tag-done {
   background: var(--text);
-  color: #fff;
+  color: var(--white);
 }
 
 /* Recognise only: outlined, so that it is not read as a state of the topic. */
@@ -438,7 +449,7 @@ main.wrap {
   block-size: 24px;
   border-radius: 50%;
   background: var(--text);
-  color: #fff;
+  color: var(--white);
   font-size: 12px;
   font-weight: 500;
 }
@@ -532,7 +543,7 @@ main.wrap {
 
 .strip-level[aria-current] b {
   background: var(--text);
-  color: #fff;
+  color: var(--white);
   box-shadow: none;
 }
 
@@ -645,7 +656,7 @@ main.wrap {
 .stop-done .stop-dot {
   background: var(--text);
   box-shadow: none;
-  color: #fff;
+  color: var(--white);
 }
 
 /* A chapter: its head is always there; a tap on it shows or hides its topics. */
@@ -765,7 +776,7 @@ main.wrap {
 }
 
 .rows li + li {
-  border-block-start: 1px solid #e7dfd3;
+  border-block-start: 1px solid var(--hairline-soft);
 }
 
 /* A row of a list: a mark or nothing, a text, and a word at its end. Often the whole row is a link. */
@@ -1006,7 +1017,7 @@ main.wrap {
 }
 
 .table-scroll td {
-  border-block-start: 1px solid #e7dfd3;
+  border-block-start: 1px solid var(--hairline-soft);
   font-size: 17px;
 }
 
@@ -1109,7 +1120,7 @@ main.wrap {
 
 .example + .example {
   margin-block-start: 10px;
-  border-block-start: 1px solid #e7dfd3;
+  border-block-start: 1px solid var(--hairline-soft);
   padding-block-start: 10px;
 }
 
@@ -1378,7 +1389,7 @@ main.wrap {
 
 .action-bar .btn {
   flex: 1;
-  box-shadow: 0 12px 24px -10px rgb(96 72 40 / 0.6);
+  box-shadow: 0 12px 24px -10px rgb(var(--shadow) / 0.6);
 }
 
 .action-bar .btn:disabled {
@@ -2023,7 +2034,7 @@ main.wrap {
   padding: 1px 9px;
   font-size: 12px;
   font-weight: 500;
-  color: #fff;
+  color: var(--white);
 }
 
 .verdict-right {
@@ -2508,7 +2519,7 @@ a.strip-end {
 
 .reference-links [aria-current="page"] span {
   background: var(--text);
-  color: #fff;
+  color: var(--white);
   box-shadow: none;
 }
 
@@ -2713,7 +2724,7 @@ a.strip-end {
 
 .part-choice [aria-current="page"] {
   background: var(--text);
-  color: #fff;
+  color: var(--white);
   box-shadow: none;
 }
 
@@ -2769,7 +2780,7 @@ a.strip-end {
   position: relative;
   overflow: hidden;
   border-radius: 6px;
-  background: #fff;
+  background: var(--white);
   box-shadow: 0 0 0 1px var(--hairline);
 }
 
@@ -2888,7 +2899,7 @@ a.strip-end {
 
 .sheet-choice:has(input:checked) {
   background: var(--text);
-  color: #fff;
+  color: var(--white);
   box-shadow: none;
 }
 
@@ -3082,7 +3093,7 @@ h2.mock-result-head {
   border-radius: var(--radius-panel);
   padding: 8px var(--pad);
   background: var(--panel);
-  box-shadow: 0 12px 24px -16px rgb(96 72 40 / 0.6);
+  box-shadow: 0 12px 24px -16px rgb(var(--shadow) / 0.6);
 }
 
 .mock-clock p {
@@ -3103,7 +3114,7 @@ h2.mock-result-head {
 
 .part-choice [aria-current="step"] {
   background: var(--text);
-  color: #fff;
+  color: var(--white);
   box-shadow: none;
 }
 
