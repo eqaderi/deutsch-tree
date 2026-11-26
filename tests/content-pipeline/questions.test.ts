@@ -1,5 +1,6 @@
 import { expect, test } from 'vitest'
-import { type ContentBundle, hasPool } from '../../src/content-model/index.ts'
+import type { ContentBundle } from '../../src/content-model/index.ts'
+import { hasPool } from '../../src/content-model/scoring.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { changeNode, changeReviewedNode, fixtureContent, fixtureContentWith, PUBLISHED } from './fixture.ts'
 

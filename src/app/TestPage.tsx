@@ -1,6 +1,7 @@
 import { use, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router'
-import { type CompiledNode, hasPool, type Question } from '../content-model/index.ts'
+import type { CompiledNode, Question } from '../content-model/index.ts'
+import { hasPool } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import { type AttemptResult, applyAttempt, drawAttempt, isDone, scoreAttempt } from '../learning-engine/index.ts'
 import { AttemptRun } from './AttemptRun.tsx'

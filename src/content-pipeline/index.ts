@@ -18,8 +18,6 @@ import {
   type ExamTaskContent,
   GAP,
   type GrammarContent,
-  hasPool,
-  isAssistantGraded,
   LANGUAGES,
   type Localised,
   type NodeFile,
@@ -28,6 +26,7 @@ import {
   type Question,
   type RichText,
 } from '../content-model/index.ts'
+import { hasPool, isAssistantGraded } from '../content-model/scoring.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
 
 export type { ContentProblem }

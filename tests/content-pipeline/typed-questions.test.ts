@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { hasPool } from '../../src/content-model/index.ts'
+import { hasPool } from '../../src/content-model/scoring.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { blindPool, poolFingerprint, type ReviewSheet, recordReview } from '../../src/content-pipeline/review.ts'
 import { changeNode, changeReviewedNode, fixtureContentWith, PUBLISHED } from './fixture.ts'

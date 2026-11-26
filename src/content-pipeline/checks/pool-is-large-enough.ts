@@ -1,4 +1,5 @@
-import { isAssistantGraded, MINIMUM_POOL_SIZE } from '../../content-model/index.ts'
+import { MINIMUM_POOL_SIZE } from '../../content-model/index.ts'
+import { isAssistantGraded } from '../../content-model/scoring.ts'
 import { type ContentCheck, problemIn } from './check.ts'
 
 /**

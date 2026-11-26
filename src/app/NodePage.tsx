@@ -1,6 +1,7 @@
 import { type ReactNode, use } from 'react'
 import { Link, useParams } from 'react-router'
-import { type GrammarContent, hasPool, type NodeSummary } from '../content-model/index.ts'
+import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
+import { hasPool } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import { isDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'

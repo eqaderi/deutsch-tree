@@ -1,4 +1,4 @@
-import { isAssistantGraded } from '../../content-model/index.ts'
+import { isAssistantGraded } from '../../content-model/scoring.ts'
 import { reviewProblem } from '../review.ts'
 import { type ContentCheck, problemIn } from './check.ts'
 

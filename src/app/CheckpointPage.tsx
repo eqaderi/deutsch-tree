@@ -1,6 +1,7 @@
 import { use, useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router'
-import { type CompiledNode, hasPool, type NodeSummary, type Question } from '../content-model/index.ts'
+import type { CompiledNode, NodeSummary, Question } from '../content-model/index.ts'
+import { hasPool } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import {
   type Checkpoint,

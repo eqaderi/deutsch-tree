@@ -9,6 +9,7 @@
  *      (*ich wohne*), so the app can render it left to right as German.
  */
 import { z } from 'zod'
+import { type AssistantGradedModule, isAssistantGraded } from './scoring.ts'
 
 export const LANGUAGES = ['en', 'fa', 'de'] as const
 export type Language = (typeof LANGUAGES)[number]
@@ -23,22 +24,6 @@ export type NodeStatus = (typeof NODE_STATUSES)[number]
 /** The four modules of the Goethe B1 exam, as they are written in a node id. */
 export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
 export type ExamModule = (typeof EXAM_MODULES)[number]
-
-/**
- * The modules that the app cannot score itself. Their nodes have no question
- * pool: the learner does a task, an AI assistant grades it with the prompt
- * the app provides, and the learner types the score in.
- */
-export const ASSISTANT_GRADED_MODULES = ['schreiben', 'sprechen'] as const
-export type AssistantGradedModule = (typeof ASSISTANT_GRADED_MODULES)[number]
-
-/** Whether a node is a writing or speaking exam part: graded by an AI assistant, with no question pool. */
-export function isAssistantGraded(node: { kind: NodeKind; module?: ExamModule | undefined }): node is {
-  kind: 'exam-part'
-  module: AssistantGradedModule
-} {
-  return node.kind === 'exam-part' && (ASSISTANT_GRADED_MODULES as readonly unknown[]).includes(node.module)
-}
 
 /**
  * The fewest questions a published node's pool may hold. An attempt draws 10
@@ -647,13 +632,8 @@ export interface CompiledNode extends NodeSummary {
   content: NodeContent | null
 }
 
-/** What a node's page is built from. Which one it is follows from what it holds: a pool, or a task. */
+/** What a node's page is built from. Which one it is follows from what it holds: a pool, or a task (see scoring.ts). */
 export type NodeContent = GrammarContent | ExamTaskContent
-
-/** Whether the node is tested by questions drawn from its pool. A writing or speaking node is not. */
-export function hasPool(content: NodeContent): content is GrammarContent {
-  return 'questions' in content
-}
 
 /** Chapters and nodes, both in curriculum order: chapter by chapter, and inside a chapter by `order`. */
 export interface ContentIndex {
