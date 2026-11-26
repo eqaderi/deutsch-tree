@@ -243,9 +243,6 @@ function assign<Field extends keyof Progress>(progress: Progress, field: Field, 
 /** The name that marks a file as a progress file of this app. */
 const APP_NAME = 'deutsch-tree'
 
-const ABOUT_THE_FILE =
-  'A backup of your learning progress in deutsch-tree. To bring it back, open deutsch-tree, choose "Back up progress" and import this file. It holds which topics you have done and your scores, nothing else, and it is never sent anywhere.'
-
 export interface ProgressFile {
   /** A file name that says what the file is and the day it was made. */
   name: string
@@ -254,12 +251,13 @@ export interface ProgressFile {
 
 /**
  * The progress as a file for the learner to keep: the saved object, headed
- * by the app's name, a sentence on what the file is, and the moment of the
+ * by the app's name, `about` (a sentence on what the file is, in the
+ * learner's language: `strings.aboutProgressFile`), and the moment of the
  * export. Laid out so that a person can read it.
  */
-export function exportProgress(progress: Progress, now: Date): ProgressFile {
+export function exportProgress(progress: Progress, now: Date, about: string): ProgressFile {
   const { version, ...fields } = savedObject(progress)
-  const file = { app: APP_NAME, about: ABOUT_THE_FILE, exported: now.toISOString(), version, ...fields }
+  const file = { app: APP_NAME, about, exported: now.toISOString(), version, ...fields }
   // The day as the learner's own clock has it, which is what they will look for.
   const day = [now.getFullYear(), now.getMonth() + 1, now.getDate()]
     .map((part) => String(part).padStart(2, '0'))

@@ -540,6 +540,11 @@ export function doneCount(progress: Progress): number {
   return Object.values(progress.nodes).filter((node) => node.done).length
 }
 
+/** The exam results kept in the progress: finished modules of mock exams, and official exams with a score. */
+export function examResultCounts(progress: Progress): { mockModules: number; officialExams: number } {
+  return { mockModules: progress.mockExams.length, officialExams: Object.keys(progress.officialExams).length }
+}
+
 /**
  * Whether anything at all has been recorded, so that replacing the progress
  * would lose something. Every field of `Progress` is a list or a record that

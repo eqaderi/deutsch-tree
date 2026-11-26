@@ -220,6 +220,10 @@ export const en = {
   /** A day as this language writes it. Use it for every date shown. */
   date: (date: Date) => new Intl.DateTimeFormat('en-GB', { dateStyle: 'long' }).format(date),
   topicsDone: (count: number) => (count === 1 ? '1 topic done' : `${count} topics done`),
+  mockModulesFinished: (count: number) =>
+    count === 1 ? '1 mock exam module finished' : `${count} mock exam modules finished`,
+  officialExamsScored: (count: number) =>
+    count === 1 ? 'Scores of 1 official mock exam' : `Scores of ${count} official mock exams`,
   onThisDevice: 'On this device',
   inTheFile: 'In the file',
   exportTitle: 'Export',
@@ -228,12 +232,16 @@ export const en = {
   /** The name of the file follows on a line of its own. */
   exportedAs: 'Your progress is now in this file:',
   keepFileSafe: 'Keep the file somewhere safe.',
+  /** The first line of an exported file, for whoever opens it. `button` is the name of the link to the backup page. */
+  aboutProgressFile: (button: string) =>
+    `A backup of your learning progress in deutsch-tree. To bring it back, open deutsch-tree, choose "${button}" and import this file. It holds which topics you have done and your scores, nothing else, and it is never sent anywhere.`,
   importTitle: 'Import',
   importText:
     'Brings back the progress from a file that you exported here or on another device. It takes the place of the progress on this device.',
   importFile: 'Import a progress file',
   importReplaceTitle: 'Replace the progress on this device?',
-  importReplaceText: 'The file takes the place of everything on this device. This cannot be undone.',
+  importReplaceText:
+    'The file takes the place of everything on this device: your topics, your mock exam results and the scores of official mock exams. This cannot be undone.',
   exportedOn: (date: string) => `exported on ${date}`,
   replaceProgress: 'Replace progress',
   cancel: 'Cancel',

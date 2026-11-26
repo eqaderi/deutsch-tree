@@ -193,6 +193,8 @@ export const fa: Strings = {
   // The calendar of the date in the file's name, so that the two agree.
   date: (date) => new Intl.DateTimeFormat('fa-IR-u-ca-gregory', { dateStyle: 'long' }).format(date),
   topicsDone: (count) => `${digits.format(count)} موضوع تمام‌شده`,
+  mockModulesFinished: (count) => `${digits.format(count)} بخشِ آزمون آزمایشی تمام‌شده`,
+  officialExamsScored: (count) => `امتیازهای ${digits.format(count)} آزمون آزمایشی رسمی`,
   onThisDevice: 'روی این دستگاه',
   inTheFile: 'در فایل',
   exportTitle: 'خروجی گرفتن',
@@ -200,12 +202,15 @@ export const fa: Strings = {
   exportProgress: 'خروجی گرفتن از پیشرفت',
   exportedAs: 'پیشرفت شما حالا در این فایل است:',
   keepFileSafe: 'فایل را در جای امنی نگه دارید.',
+  aboutProgressFile: (button) =>
+    `پشتیبانِ پیشرفت یادگیری شما در deutsch-tree. برای برگرداندن آن، deutsch-tree را باز کنید، «${button}» را بزنید و این فایل را وارد کنید. این فایل فقط می‌گوید کدام موضوع‌ها را تمام کرده‌اید و امتیازهای شما چیست، و هرگز به جایی فرستاده نمی‌شود.`,
   importTitle: 'وارد کردن',
   importText:
     'پیشرفت را از فایلی برمی‌گرداند که در همین دستگاه یا دستگاه دیگری خروجی گرفته‌اید. فایل جای پیشرفتِ روی این دستگاه را می‌گیرد.',
   importFile: 'وارد کردن فایل پیشرفت',
   importReplaceTitle: 'پیشرفتِ روی این دستگاه جایگزین شود؟',
-  importReplaceText: 'فایل جای همه‌چیزِ روی این دستگاه را می‌گیرد. این کار برگشت‌پذیر نیست.',
+  importReplaceText:
+    'فایل جای همه‌چیزِ روی این دستگاه را می‌گیرد: موضوع‌ها، نتیجه‌های آزمون‌های آزمایشی و امتیازهای آزمون‌های آزمایشی رسمی. این کار برگشت‌پذیر نیست.',
   exportedOn: (date) => `خروجی گرفته‌شده در ${date}`,
   replaceProgress: 'جایگزین شود',
   cancel: 'انصراف',

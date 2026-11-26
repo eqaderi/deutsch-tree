@@ -186,6 +186,10 @@ export const de: Strings = {
     'Dein Fortschritt ist nur in diesem Browser auf diesem Gerät gespeichert. Wenn die Daten vom Browser gelöscht werden, ist er weg. Eine Datei macht ihn sicher. Mit der Datei kannst du ihn auch auf ein anderes Gerät bringen.',
   date: (date) => new Intl.DateTimeFormat('de-DE', { dateStyle: 'long' }).format(date),
   topicsDone: (count) => (count === 1 ? '1 Thema fertig' : `${count} Themen fertig`),
+  mockModulesFinished: (count) =>
+    count === 1 ? '1 Teil einer Modellprüfung fertig' : `${count} Teile von Modellprüfungen fertig`,
+  officialExamsScored: (count) =>
+    count === 1 ? 'Punkte von 1 offiziellen Modellprüfung' : `Punkte von ${count} offiziellen Modellprüfungen`,
   onThisDevice: 'Auf diesem Gerät',
   inTheFile: 'In der Datei',
   exportTitle: 'Als Datei speichern',
@@ -193,12 +197,15 @@ export const de: Strings = {
   exportProgress: 'Fortschritt als Datei speichern',
   exportedAs: 'Dein Fortschritt ist jetzt in dieser Datei:',
   keepFileSafe: 'Heb die Datei gut auf.',
+  aboutProgressFile: (button) =>
+    `Eine Sicherung von deinem Lernstand in deutsch-tree. So bekommst du ihn zurück: deutsch-tree öffnen, „${button}“ wählen und diese Datei laden. Sie enthält nur, welche Themen du fertig hast, und deine Punkte. Sie wird nie irgendwohin geschickt.`,
   importTitle: 'Aus einer Datei laden',
   importText:
     'Hier holst du den Fortschritt aus einer Datei zurück. Die Datei kann von diesem Gerät oder von einem anderen Gerät sein. Sie ersetzt den Fortschritt auf diesem Gerät.',
   importFile: 'Datei mit Fortschritt laden',
   importReplaceTitle: 'Fortschritt auf diesem Gerät ersetzen?',
-  importReplaceText: 'Die Datei ersetzt alles auf diesem Gerät. Das kannst du später nicht mehr ändern.',
+  importReplaceText:
+    'Die Datei ersetzt alles auf diesem Gerät: deine Themen, deine Ergebnisse in Modellprüfungen und die Punkte von offiziellen Modellprüfungen. Das kannst du später nicht mehr ändern.',
   exportedOn: (date) => `gespeichert am ${date}`,
   replaceProgress: 'Fortschritt ersetzen',
   cancel: 'Abbrechen',

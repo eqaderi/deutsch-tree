@@ -1,5 +1,15 @@
 import { expect, test } from 'vitest'
-import { applyAttempt, emptyProgress, isDone, nodeProgress, scoreAttempt } from '../../src/learning-engine/index.ts'
+import {
+  applyAttempt,
+  emptyProgress,
+  examResultCounts,
+  isDone,
+  mockModuleResult,
+  nodeProgress,
+  recordMockExamResult,
+  recordOfficialExamScores,
+  scoreAttempt,
+} from '../../src/learning-engine/index.ts'
 import { questions } from './questions.ts'
 
 const passed = scoreAttempt(questions(10), Array(10).fill('right'))
@@ -71,4 +81,17 @@ test('every finished test of a node is counted, passed or not', () => {
 
 test('an attempt with no questions is never passed', () => {
   expect(scoreAttempt([], []).passed).toBe(false)
+})
+
+test('the exam results kept in the progress are counted: finished mock exam modules and official exams with a score', () => {
+  const module = (exam: string) =>
+    mockModuleResult({ exam, module: 'reading', finished: '2026-11-26T10:00:00.000Z', timed: true, parts: [] })
+  let progress = emptyProgress()
+  expect(examResultCounts(progress)).toEqual({ mockModules: 0, officialExams: 0 })
+
+  progress = recordMockExamResult(progress, module('mock-exam-1'))
+  progress = recordMockExamResult(progress, module('mock-exam-1'))
+  progress = recordOfficialExamScores(progress, 'goethe-1', { reading: 80, writing: 90 })
+
+  expect(examResultCounts(progress)).toEqual({ mockModules: 2, officialExams: 1 })
 })
