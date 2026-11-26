@@ -6,14 +6,26 @@
  * code), and say what today's app must make of it.
  */
 import { expect, test } from 'vitest'
-import { isDone, nodeProgress } from '../../src/learning-engine/index.ts'
-import { parseProgress, type SavedFormat } from '../../src/progress-store/index.ts'
+import { emptyProgress, isDone, nodeProgress } from '../../src/learning-engine/index.ts'
+import { parseProgress, SAVED_VERSION, type SavedFormat } from '../../src/progress-store/index.ts'
 
 function read(text: string, format?: SavedFormat) {
   const result = parseProgress(text, format)
   if (!result.ok) throw new Error(`could not be read: ${result.problem}`)
   return result.progress
 }
+
+test('the saved shape has a version, and a new field of progress means a new version', () => {
+  // This fails when a field is added to Progress. Then: raise SAVED_VERSION,
+  // add the field's reader, update the two values below, and add a test in
+  // this file for text saved by the version before. An app that does not
+  // know the field must refuse the data instead of dropping the field, and
+  // the version number is what tells it. See src/progress-store/index.ts.
+  expect({ version: SAVED_VERSION, fields: Object.keys(emptyProgress()).sort() }).toEqual({
+    version: 1,
+    fields: ['nodes'],
+  })
+})
 
 test('progress saved by version 1 loads', () => {
   const progress = read(

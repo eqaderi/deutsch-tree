@@ -26,6 +26,9 @@
  *      (`tests/progress-store/older-versions.test.ts`).
  * It is then saved, loaded, exported and imported with no further code.
  *
+ * A new field inside a node (beside `done` and `attempts`) is the same, with
+ * its line in `readNodes` in place of step 2.
+ *
  * To change the shape of something already saved (rename, move, convert):
  * do the steps above, and add a step to `UPGRADES` that turns the old saved
  * object into the new one. A version that only added a field needs no step.

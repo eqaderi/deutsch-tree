@@ -4,7 +4,7 @@
  */
 import { expect, test } from 'vitest'
 import { applyAttempt, emptyProgress, isDone, type Progress } from '../../src/learning-engine/index.ts'
-import { exportProgress, importProgress } from '../../src/progress-store/index.ts'
+import { exportProgress, importProgress, SAVED_VERSION } from '../../src/progress-store/index.ts'
 
 /** A morning in Berlin, in whatever time zone the test runs. */
 const morning = new Date(2026, 10, 26, 9, 30)
@@ -39,8 +39,14 @@ test('the file says in its name and in its first lines what it is, and when it w
   expect(lines[1]).toBe('  "app": "deutsch-tree",')
   expect(lines[2]).toMatch(/^ {2}"about": ".*progress.*",$/)
   expect(lines[3]).toBe(`  "exported": "${morning.toISOString()}",`)
-  expect(lines[4]).toBe('  "version": 1,')
+  expect(lines[4]).toBe(`  "version": ${SAVED_VERSION},`)
   expect(imported(file.text).exported).toEqual(morning)
+})
+
+test('every field of the progress is in the file, so that nothing is left behind on the old device', () => {
+  const file = JSON.parse(exportProgress(emptyProgress(), morning).text)
+
+  expect(Object.keys(file)).toEqual(['app', 'about', 'exported', 'version', ...Object.keys(emptyProgress())])
 })
 
 test('a person can read the file: one line per topic', () => {

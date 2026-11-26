@@ -60,7 +60,7 @@ test('a learner exports progress, clears the browser and imports it back', async
   const file = JSON.parse(await readFile(path, 'utf8'))
   expect(file).toMatchObject({
     app: 'deutsch-tree',
-    version: 1,
+    version: expect.any(Number),
     nodes: { 'grammar-001': { done: true, attempts: 1 } },
   })
   expect(Date.parse(file.exported)).not.toBeNaN()

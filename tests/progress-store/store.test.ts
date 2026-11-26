@@ -37,7 +37,7 @@ test('saved progress carries a version number', () => {
   createProgressStore(storage).update(passGrammar1)
 
   const [text] = Object.values(storage.saved)
-  expect(JSON.parse(text ?? '')).toMatchObject({ version: 1 })
+  expect(JSON.parse(text ?? '')).toMatchObject({ version: expect.any(Number) })
 })
 
 test('progress saved by version 1 of the app loads', () => {
