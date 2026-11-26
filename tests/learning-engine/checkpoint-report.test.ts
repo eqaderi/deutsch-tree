@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import { type Checkpoint, drawCheckpoint, scoreCheckpoint } from '../../src/learning-engine/index.ts'
-import { multipleChoice } from './questions.ts'
+import { multipleChoice, typedAnswer } from './questions.ts'
 import { seededRandom } from './random.ts'
 
 /** A checkpoint of three nodes, two questions of each, asked in turn. Every right answer is "right". */
@@ -53,13 +53,33 @@ test('the result goes through the checkpoint in order and says for each question
     question: asked.questions[0]?.question,
     answer: 'wrong',
     correct: false,
+    notes: [],
   })
   expect(result.questions[1]).toEqual({
     nodeId: 'articles',
     question: asked.questions[1]?.question,
     answer: 'right',
     correct: true,
+    notes: [],
   })
+})
+
+test('a typed answer accepted with a note keeps its note and the exact spelling, as after a topic’s test', () => {
+  const asked: Checkpoint = {
+    nodeIds: ['umlauts'],
+    questions: [
+      { nodeId: 'umlauts', question: typedAnswer('q1', ['schön']) },
+      { nodeId: 'umlauts', question: typedAnswer('q2', ['Fußball']) },
+    ],
+  }
+
+  const result = scoreCheckpoint(asked, ['schoen', 'Fußball'])
+
+  expect(result.questions.map(({ correct, notes, accepted }) => ({ correct, notes, accepted }))).toEqual([
+    { correct: true, notes: ['umlaut-substitute'], accepted: 'schön' },
+    { correct: true, notes: [], accepted: 'Fußball' },
+  ])
+  expect(result.nodesToRevisit).toEqual([])
 })
 
 test('questions go by place and node, so the same question identifier in two nodes is told apart', () => {

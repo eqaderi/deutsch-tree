@@ -1,6 +1,6 @@
 # Vocabulary themes: for your approval
 
-Status: **waiting for the learner's approval.** Nothing here is final until you say so. The integration branch is not merged to `main` before that.
+Status: **scope approved, theme list still open.** The learner accepted the scope on 2026-11-26 (issue #7): 3,271 words in 138 nodes, and the headword list in the public repository. The chapter names, their places and the nodes with their words are reviewed with the samples in #34; the integration branch is not merged to `main` before that.
 
 This document lists every vocabulary node of the tree with its words, level by level, in the order the app walks through them. It belongs to ticket #7 ("Vocabulary theme list, approved and in the tree").
 
@@ -8,7 +8,7 @@ The parts between `<!-- generated -->` marks are written by a command (`pnpm voc
 
 ## What you are asked to check
 
-1. **Which words are in scope** (the next section). This is the one open question that changes the amount of work: the three Goethe lists hold about 3,560 headwords, not the "roughly 2,400" of the spec.
+1. **Which words are in scope** (the next section). Accepted on 2026-11-26. The three Goethe lists hold about 3,560 headwords, not the "roughly 2,400" of the spec; the rule below keeps 3,271.
 2. **The chapter names**, in English, Persian and simple German, and **where each vocabulary chapter stands** among the grammar chapters of its level.
 3. **The nodes and their words**: is each node one theme you would learn in one sitting, and is a word in the wrong node?
 4. **The judgment calls** at the end.
@@ -19,7 +19,7 @@ To change something, say it in plain words: "leave out the word groups", "rename
 
 The words come from the three official word lists: Goethe-Zertifikat A1 (Start Deutsch 1), A2 and B1. Only the headwords were taken: the word, and for a noun its article and plural marker. No example sentence, definition or translation of the lists is in this repository; ticket #18 writes all of those new.
 
-**The rule in force** (my recommendation; you have not answered yet):
+**The rule in force** (accepted by the learner on 2026-11-26):
 
 - Everything in the three lists counts: the alphabetical lists and the word groups in front of them (numbers, months, colours, countries, school subjects, abbreviations …).
 - **Word-building parts are left out** (*Lieblings-*, *un-*, *-weise*). They are not words; grammar teaches word building.

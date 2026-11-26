@@ -494,7 +494,8 @@ export const TOPICS_PER_MILESTONE = 10
  * latest step of done topics.
  *
  * A level is finished when all its published topics are done and it has at
- * least one; a topic that is coming soon cannot hold a level open. Done
+ * least one; a topic that is coming soon cannot hold a level open. Once more
+ * of the level is published and done, it is finished again: a new milestone. Done
  * topics are counted from the progress alone, so a topic the content no
  * longer has still counts.
  */
@@ -506,8 +507,11 @@ export function milestonesReached(
 
   const published = nodes.filter((node) => node.status === 'published')
   for (const level of new Set(published.map((node) => node.level))) {
-    if (published.every((node) => node.level !== level || isDone(progress, node.id))) {
-      reached.push({ id: `level:${level}`, kind: 'level', level })
+    const ofLevel = published.filter((node) => node.level === level)
+    if (ofLevel.every((node) => isDone(progress, node.id))) {
+      // The identifier holds how many topics the level has so far, so a level finished again
+      // after more of it was published is a milestone of its own.
+      reached.push({ id: `level:${level}:${ofLevel.length}`, kind: 'level', level })
     }
   }
 
@@ -534,6 +538,11 @@ export function milestoneToMention(
 /** How many topics are done. */
 export function doneCount(progress: Progress): number {
   return Object.values(progress.nodes).filter((node) => node.done).length
+}
+
+/** The exam results kept in the progress: finished modules of mock exams, and official exams with a score. */
+export function examResultCounts(progress: Progress): { mockModules: number; officialExams: number } {
+  return { mockModules: progress.mockExams.length, officialExams: Object.keys(progress.officialExams).length }
 }
 
 /**
@@ -775,6 +784,20 @@ export interface Readiness {
   exams: ExamReadiness[]
 }
 
+/**
+ * The readiness rule over the official mock exams as the content lists them:
+ * only those whose entry says `countsTowardReadiness` are held to it.
+ */
+export function readinessOf(
+  progress: Progress,
+  exams: ReadonlyArray<{ id: string; countsTowardReadiness: boolean }>,
+): Readiness {
+  return readiness(
+    progress,
+    exams.filter((exam) => exam.countsTowardReadiness).map((exam) => exam.id),
+  )
+}
+
 /** How one official mock exam stands, from what the learner recorded for it. */
 export function examStanding(progress: Progress, examId: string): ExamReadiness {
   const scores = officialExamScores(progress, examId)
@@ -873,8 +896,11 @@ export interface CheckpointResult {
   total: number
   /** How many were answered right. */
   correct: number
-  /** Every question of the checkpoint, in order, with its node and what was answered. */
-  questions: Array<CheckpointQuestion & { answer: Answer | undefined; correct: boolean }>
+  /**
+   * Every question of the checkpoint, in order, with its node, what was answered and how it was
+   * checked: a typed answer accepted with a note has its `notes` and `accepted`, as in a test.
+   */
+  questions: Array<CheckpointQuestion & { answer: Answer | undefined } & AnswerCheck>
   /** The nodes with a wrong answer, in curriculum order. */
   nodesToRevisit: Array<{ nodeId: string; asked: number; wrong: number }>
 }
@@ -888,7 +914,7 @@ export interface CheckpointResult {
 export function scoreCheckpoint(checkpoint: Checkpoint, answers: readonly (Answer | undefined)[]): CheckpointResult {
   const questions = checkpoint.questions.map((asked, index) => {
     const answer = answers[index]
-    return { ...asked, answer, correct: checkAnswer(asked.question, answer).correct }
+    return { ...asked, answer, ...checkAnswer(asked.question, answer) }
   })
   const nodesToRevisit = checkpoint.nodeIds
     .map((nodeId) => {

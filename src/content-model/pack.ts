@@ -24,8 +24,15 @@ export const PACK_ANSWER_KEY_FILE = 'answers.json'
 /** In the packs folder itself, beside the packs: which packs it holds (packListSchema). */
 export const PACK_LIST_FILE = 'packs.json'
 
+/**
+ * A pack's id, which is also its folder's name, and the id of a module of a
+ * book: lower-case words joined by hyphens. The start files' servers hold
+ * the same rule in their own languages.
+ */
+export const PACK_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/
+
 const count = z.number().int().positive()
-const id = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens')
+const id = z.string().regex(PACK_ID, 'must be lower-case words joined by hyphens')
 
 /** A run of pages, both ends included. */
 const pageRange = z.strictObject({ first: count, last: count })

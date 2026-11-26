@@ -54,10 +54,25 @@ test('a vocabulary word can be heard with its article, and so can its example se
   await expect(page.getByRole('list', { name: 'Words' }).getByRole('button', { name: 'Listen' })).toHaveCount(20)
 })
 
-test('the example of every phrase can be heard', async ({ page }) => {
+test('every phrase can be heard, and so can its example', async ({ page }) => {
   await page.goto('./#/node/phrases-greeting')
 
-  await expect(page.getByRole('list', { name: 'Phrases' }).getByRole('button', { name: 'Listen' })).toHaveCount(3)
+  // Three phrases, each with a button for itself (in its heading) and one for its example.
+  const list = page.getByRole('list', { name: 'Phrases' })
+  await expect(list.getByRole('button', { name: 'Listen' })).toHaveCount(6)
+  const names = list.getByRole('heading', { level: 3 })
+  await expect(names).toHaveCount(3)
+  for (const name of await names.all()) await expect(name.getByRole('button', { name: 'Listen' })).toHaveCount(1)
+})
+
+test('the right sentence of a common mistake can be heard; the wrong one cannot', async ({ page }) => {
+  await page.goto('./#/node/grammar-001')
+
+  const mistakes = page.getByRole('region', { name: 'Common mistakes' }).getByRole('listitem')
+  await expect(mistakes.first()).toBeVisible()
+  for (const mistake of await mistakes.all()) {
+    await expect(mistake.getByRole('button', { name: 'Listen' })).toHaveCount(1)
+  }
 })
 
 test('a file that cannot be loaded says so, and the page goes on working', async ({ page }) => {

@@ -5,7 +5,7 @@ import { useLanguage } from '../language/index.tsx'
 import { loadIndex } from './content.ts'
 import { German, RichText } from './German.tsx'
 import { Panel } from './Panel.tsx'
-import { SpokenExample } from './PlayButton.tsx'
+import { PlayButton, SpokenExample } from './PlayButton.tsx'
 
 /**
  * The panels of a phrases page: what the phrases are for, then the phrases.
@@ -46,6 +46,7 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
   return (
     <>
       <h3 className="phrase-de">
+        <PlayButton audio={phrase.audio} />
         <German>{phrase.de}</German>
       </h3>
       <p className="phrase-meaning">

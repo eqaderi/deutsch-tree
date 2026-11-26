@@ -39,6 +39,20 @@ test.each([
 })
 
 test.each([
+  ['Hier wohnen 1500 Menschen.', 'Hier wohnen tausendfünfhundert Menschen.'],
+  ['Der Saal hat 1200 Plätze.', 'Der Saal hat tausendzweihundert Plätze.'],
+])('a number from 1100 to 1999 before a noun in "%s" is a count, not a year', (written, spoken) => {
+  expect(speakable(written)).toBe(spoken)
+})
+
+test.each(['Ich habe 1 Bruder.', 'Ich habe 1 Schwester.'])(
+  'a 1 before a noun in "%s" stays a digit, since its ending depends on the noun',
+  (written) => {
+    expect(speakable(written)).toMatch(/\d/)
+  },
+)
+
+test.each([
   ['Der Zug fährt um 14:35 Uhr.', 'Der Zug fährt um vierzehn Uhr fünfunddreißig.'],
   ['Der Zug fährt um 14.35 Uhr.', 'Der Zug fährt um vierzehn Uhr fünfunddreißig.'],
   ['Wir treffen uns um 8:05.', 'Wir treffen uns um acht Uhr fünf.'],

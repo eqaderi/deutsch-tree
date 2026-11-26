@@ -6,7 +6,7 @@
  *   - code that imports or links a file from the folder,
  *   - a static-files folder that is, holds, or lies inside the folder, or
  *     holds a link into it,
- *   - a `private` folder in the output.
+ *   - a `private` folder in the output, at any depth.
  *
  * The dev server is not affected. The site on GitHub Pages is built from the
  * repository, which never holds the folder (.gitignore); this guard covers a
@@ -101,15 +101,19 @@ export function keepPacksOutOfTheSite(): Plugin {
       for (const file of Object.values(bundle)) {
         const sources = file.type === 'asset' ? file.originalFileNames : Object.keys(file.modules)
         const fromPack = sources.map(fileOf).find((source) => isInside(packsDir, source))
-        if (fromPack || file.fileName.split('/')[0] === PACKS_FOLDER) {
+        // An asset made from a source in memory has no original file, so its name is all there is to go by.
+        if (fromPack || file.fileName.split('/').includes(PACKS_FOLDER)) {
           this.error(`${file.fileName} would put ${fromPack ?? 'a private folder'} into the site. ${REASON}`)
         }
       }
     },
 
     closeBundle() {
-      if (existsSync(path.join(outDir, PACKS_FOLDER))) {
-        throw new Error(`${path.join(outDir, PACKS_FOLDER)} exists: the built site holds a private folder. ${REASON}`)
+      const entries = existsSync(outDir) ? readdirSync(outDir, { recursive: true, withFileTypes: true }) : []
+      const folder = entries.find((entry) => entry.isDirectory() && entry.name === PACKS_FOLDER)
+      if (folder) {
+        const found = path.join(folder.parentPath, folder.name)
+        throw new Error(`${found} exists: the built site holds a private folder. ${REASON}`)
       }
     },
   }

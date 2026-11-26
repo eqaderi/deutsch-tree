@@ -1,10 +1,10 @@
 import { mkdir, mkdtemp, readFile, writeFile } from 'node:fs/promises'
-import { connect } from 'node:net'
+import { connect, createServer } from 'node:net'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { afterEach, describe, expect, test } from 'vitest'
 import { listPacks } from '../../src/pack-builder/pack-list.ts'
-import { availableServers, type RunningServer, startServer } from './server.ts'
+import { availableServers, freePort, type RunningServer, runUntilItStops, startServer } from './server.ts'
 
 let running: RunningServer | undefined
 afterEach(async () => {
@@ -148,5 +148,34 @@ describe.each(availableServers)('the %s server of the start files', (kind) => {
     expect(phone.hostname).not.toMatch(/^127\./)
     expect((await fetch(phone)).status).toBe(200)
     expect(running.output()).toContain(address.phone)
+  })
+
+  test('keeps to its one port: when another program has it, it says so and stops', async () => {
+    // Progress is kept by the browser per address, so on another port it would look gone.
+    const port = await freePort()
+    const other = createServer((socket) => socket.destroy())
+    await new Promise<void>((resolve) => other.listen(port, '0.0.0.0', resolve))
+
+    try {
+      const { code, output } = await runUntilItStops(kind, await appFolder(), port)
+
+      expect(code).not.toBe(0)
+      expect(output).toContain(`Port ${port} is used by another program`)
+      expect(output).not.toContain('deutsch-tree is running')
+    } finally {
+      await new Promise((resolve) => other.close(resolve))
+    }
+  })
+
+  test('started a second time, it says that the app is already running, and leaves the first one alone', async () => {
+    const root = await appFolder()
+    running = await startServer(kind, root)
+
+    const { code, output } = await runUntilItStops(kind, root, running.port)
+
+    expect(code).toBe(0)
+    expect(output).toContain('deutsch-tree is already running')
+    expect(output).toContain(`http://localhost:${running.port}/`)
+    expect((await fetch(running.url)).status).toBe(200)
   })
 })

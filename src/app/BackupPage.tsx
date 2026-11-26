@@ -1,6 +1,6 @@
 import { type ChangeEvent, useEffect, useRef, useState } from 'react'
 import { useLanguage } from '../language/index.tsx'
-import { doneCount, hasProgress, type Progress } from '../learning-engine/index.ts'
+import { doneCount, examResultCounts, hasProgress, type Progress } from '../learning-engine/index.ts'
 import { exportProgress, importProgress, type ReadProblem } from '../progress-store/index.ts'
 import { download } from './download.ts'
 import { acknowledgeMilestonesOf } from './milestones.ts'
@@ -28,7 +28,7 @@ export function BackupPage() {
   const fileInput = useRef<HTMLInputElement>(null)
 
   function exportToFile() {
-    const file = exportProgress(progress, new Date())
+    const file = exportProgress(progress, new Date(), strings.aboutProgressFile(strings.backupLink))
     download(file, 'application/json')
     acknowledgeMilestonesOf(progress)
     setOutcome({ step: 'exported', fileName: file.name })
@@ -66,7 +66,9 @@ export function BackupPage() {
           <dl className="facts">
             <div>
               <dt>{strings.onThisDevice}</dt>
-              <dd>{strings.topicsDone(doneCount(progress))}</dd>
+              <dd>
+                <ProgressFacts progress={progress} />
+              </dd>
             </div>
           </dl>
         )}
@@ -152,12 +154,14 @@ function ReplaceWarning({ here, inFile, exported, onReplace, onCancel }: Replace
       <dl className="facts">
         <div>
           <dt>{strings.onThisDevice}</dt>
-          <dd>{strings.topicsDone(doneCount(here))}</dd>
+          <dd>
+            <ProgressFacts progress={here} />
+          </dd>
         </div>
         <div>
           <dt>{strings.inTheFile}</dt>
           <dd>
-            {strings.topicsDone(doneCount(inFile))}
+            <ProgressFacts progress={inFile} />
             {exported && <small>{strings.exportedOn(strings.date(exported))}</small>}
           </dd>
         </div>
@@ -172,5 +176,18 @@ function ReplaceWarning({ here, inFile, exported, onReplace, onCancel }: Replace
         </button>
       </div>
     </div>
+  )
+}
+
+/** What a progress holds, in a few words: the topics done, and the exam results when there are any. */
+function ProgressFacts({ progress }: { progress: Progress }) {
+  const { strings } = useLanguage()
+  const { mockModules, officialExams } = examResultCounts(progress)
+  return (
+    <>
+      {strings.topicsDone(doneCount(progress))}
+      {mockModules > 0 && <small>{strings.mockModulesFinished(mockModules)}</small>}
+      {officialExams > 0 && <small>{strings.officialExamsScored(officialExams)}</small>}
+    </>
   )
 }

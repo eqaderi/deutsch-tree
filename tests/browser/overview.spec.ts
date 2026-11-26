@@ -29,6 +29,19 @@ test('one page shows every grammar table under its level and chapter, and a tabl
   await expect(page.getByRole('link', { name: 'Take the test' })).toBeVisible()
 })
 
+test('the overview page jumps to a level, and the address stays that of the page', async ({ page }) => {
+  await page.goto('./#/overview')
+  const jump = page.getByRole('navigation', { name: 'Jump to a level' })
+  await expect(jump.getByRole('button')).toHaveText(['A1', 'A2'])
+
+  await jump.getByRole('button', { name: 'A2' }).click()
+
+  const a2 = page.getByRole('heading', { level: 2, name: 'A2 · Elementary' })
+  await expect(a2).toBeFocused()
+  await expect(a2).toBeInViewport()
+  expect(new URL(page.url()).hash).toBe('#/overview')
+})
+
 test('a topic without a table leaves no empty box, and neither does its chapter', async ({ page }) => {
   await page.goto('./#/overview')
   const overview = page.getByRole('main')

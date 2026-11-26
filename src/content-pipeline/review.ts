@@ -10,6 +10,7 @@ import { isDeepStrictEqual } from 'node:util'
 import { parse as parseYaml, stringify as toYaml } from 'yaml'
 import { z } from 'zod'
 import {
+  type ItemTaskFile,
   LANGUAGES,
   type Language,
   type MockExamFile,
@@ -27,7 +28,6 @@ import { MOCK_EXAMS_FOLDER, mockExamTasks } from './mock-exams.ts'
 import { vocabularyQuestions } from './vocabulary.ts'
 
 type PoolQuestionFile = NonNullable<NodeFile['questions']>[number]
-type ItemTaskFile = NonNullable<NodeFile['practice']>[number]
 /** A question of a pool, or an item of a practice task. */
 type QuestionFile = PoolQuestionFile | ItemTaskFile['items'][number]
 
@@ -317,8 +317,14 @@ export interface SheetQuestion {
   objection: string | null
 }
 
+/** What the reviewer is told they review, by what the sheet is of. */
+const OPENING: Record<Reviewable['kind'], string> = {
+  node: 'This is the test of one node of a German course. You are its independent reviewer.',
+  'mock-exam':
+    'This is the reading and listening of one original mock exam for the Goethe B1 exam. You are its independent reviewer.',
+}
+
 const INSTRUCTIONS = [
-  'This is the test of one node of a German course. You are its independent reviewer.',
   'Answer every question from your own knowledge of German. Do not open any other file of this project.',
   'Write your answer in "answer", in the form that "answerFormat" asks for.',
   'A question with a "language" is asked of a learner who reads in that language ("de" is simple German): "instruction" is what',
@@ -341,7 +347,7 @@ const HEARD_TEXT_INSTRUCTIONS = [
 
 /** A node's pool as a reviewer may see it. `only` limits it to some questions, for a second pass. */
 export async function blindPool(contentDir: string, nodeId: string, only?: string[]): Promise<ReviewSheet> {
-  const { node } = await loadReviewable(contentDir, nodeId)
+  const { kind, node } = await loadReviewable(contentDir, nodeId)
   const reviewed = reviewedIn(node)
   if (reviewed.length === 0) throw new Error(`Node ${nodeId} has no questions to review.`)
 
@@ -352,6 +358,7 @@ export async function blindPool(contentDir: string, nodeId: string, only?: strin
   const tasks = (node.practice ?? []).filter((task) => chosen.some((entry) => entry.task === task))
   const heard = tasks.some((task) => task.texts.some((text) => text.lines !== undefined))
   const instructions = [
+    OPENING[kind],
     INSTRUCTIONS,
     ...(tasks.length > 0 ? [TASK_INSTRUCTIONS] : []),
     ...(heard ? [HEARD_TEXT_INSTRUCTIONS] : []),
@@ -485,6 +492,7 @@ function withReviewRecord(
 
 /** What a review goes through: a node file, or a mock exam file as the practice tasks of its parts. */
 interface Reviewable {
+  kind: 'node' | 'mock-exam'
   file: string
   source: string
   node: ReviewedContent & { id: string; level: string; title: { en: string } }
@@ -501,6 +509,7 @@ async function loadReviewable(contentDir: string, id: string): Promise<Reviewabl
     const source = await readFile(file, 'utf8')
     const node = readOrRefuse(file, source, (raw) => nodeFileSchema.safeParse(raw))
     return {
+      kind: 'node',
       file,
       source,
       node,
@@ -521,6 +530,7 @@ async function loadReviewable(contentDir: string, id: string): Promise<Reviewabl
   })
   const exam: MockExamFile = readOrRefuse(file, source, (raw) => mockExamFileSchema.safeParse(raw))
   return {
+    kind: 'mock-exam',
     file,
     source,
     // A mock exam is reviewed as the practice tasks of its parts: "lesen-3/i2" is Lesen, Teil 3, item i2.

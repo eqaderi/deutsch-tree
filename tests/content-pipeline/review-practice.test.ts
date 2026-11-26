@@ -51,6 +51,7 @@ test('the review sheet of a node without practice tasks has no texts', async () 
 
   expect(sheet).not.toHaveProperty('tasks')
   expect(sheet.instructions).not.toContain('texts')
+  expect(sheet.instructions).toMatch(/^This is the test of one node of a German course/)
 })
 
 test('a review of an exam part with no disagreement is recorded, and the node can then be published', async () => {

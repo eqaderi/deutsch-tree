@@ -1,7 +1,7 @@
 import { type ReactNode, use, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
-import { hasPool, hasPractice, isVocabulary } from '../content-model/scoring.ts'
+import { hasPool, hasPractice, isPhrases, isVocabulary } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import { examModuleOf, isDone, unmarkDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
@@ -14,7 +14,7 @@ import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
 import { Panel } from './Panel.tsx'
 import { PhraseSections } from './PhraseSections.tsx'
-import { SpokenExample } from './PlayButton.tsx'
+import { PlayButton, SpokenExample } from './PlayButton.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 import { RecogniseOnlyLabel, RecogniseOnlyNote } from './RecogniseOnly.tsx'
 import { VocabularySections } from './VocabularySections.tsx'
@@ -73,7 +73,7 @@ export function NodePage() {
     <NodeFrame node={summary}>
       {isVocabulary(content) ? (
         <VocabularySections nodeId={summary.id} content={content} />
-      ) : 'phrases' in content ? (
+      ) : isPhrases(content) ? (
         <PhraseSections node={summary} content={content} />
       ) : (
         <GrammarSections content={content} />
@@ -243,6 +243,7 @@ function GrammarSections({ content }: { content: GrammarContent }) {
               <div className="mistake-line mistake-right">
                 <span className="mistake-word">{strings.right}</span>
                 <German>{mistake.right}</German>
+                <PlayButton audio={mistake.audio} />
               </div>
               <p>
                 <RichText parts={mistake.why[language]} />

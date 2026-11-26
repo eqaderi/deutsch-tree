@@ -1,5 +1,6 @@
 import { Suspense, use, useEffect, useMemo, useState } from 'react'
 import { Link, useSearchParams } from 'react-router'
+import type { NodeSummary, SearchData } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { isDone } from '../learning-engine/index.ts'
 import { prepareSearch, type SearchResult } from '../search/index.ts'
@@ -59,10 +60,38 @@ export function SearchPage() {
   )
 }
 
+/** No text of the topics yet: search finds topics by their titles only. */
+const TITLES_ONLY: SearchData = { entries: [] }
+
+/**
+ * The topics found. The titles are in the index, which every page has, so
+ * they are found at once; the text of the topics comes with the search data,
+ * and until it is there the results say that they are not complete.
+ */
 function Results({ query }: { query: string }) {
-  const { language, strings } = useLanguage()
   const { nodes } = use(loadIndex())
-  const data = use(loadSearchData(language))
+  return (
+    <Suspense fallback={<FoundTopics query={query} nodes={nodes} data={TITLES_ONLY} titlesOnly />}>
+      <ResultsWithText query={query} nodes={nodes} />
+    </Suspense>
+  )
+}
+
+function ResultsWithText({ query, nodes }: { query: string; nodes: NodeSummary[] }) {
+  const { language } = useLanguage()
+  return <FoundTopics query={query} nodes={nodes} data={use(loadSearchData(language))} />
+}
+
+interface FoundTopicsProps {
+  query: string
+  nodes: NodeSummary[]
+  data: SearchData
+  /** The search data is still loading: only titles were searched. */
+  titlesOnly?: boolean
+}
+
+function FoundTopics({ query, nodes, data, titlesOnly = false }: FoundTopicsProps) {
+  const { language, strings } = useLanguage()
   const search = useMemo(() => prepareSearch(nodes, data, language), [nodes, data, language])
   const results = useMemo(() => search(query), [search, query])
 
@@ -70,8 +99,9 @@ function Results({ query }: { query: string }) {
   return (
     <>
       <p className="search-count" role="status">
-        {results.length === 0 ? strings.searchNothing : strings.searchResults(results.length)}
+        {results.length > 0 ? strings.searchResults(results.length) : titlesOnly ? '' : strings.searchNothing}
       </p>
+      {titlesOnly && <p className="secondary">{strings.searchStillLoading}</p>}
       {results.length > 0 && (
         <section className="panel">
           <ul className="rows">

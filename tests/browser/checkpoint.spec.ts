@@ -1,5 +1,15 @@
 import type { Page } from '@playwright/test'
-import { asShown, PERSIAN, takeCheckpoint, takeTest } from './taking-a-test.ts'
+import {
+  answerField,
+  asShown,
+  ENGLISH,
+  giveAnswer,
+  PERSIAN,
+  questionOnScreen,
+  rightAnswerText,
+  takeCheckpoint,
+  takeTest,
+} from './taking-a-test.ts'
 import { expect, test } from './test.ts'
 
 /**
@@ -150,6 +160,75 @@ test('a level with no published topic says that it has no checkpoint yet, in the
   await expect(page.getByRole('heading', { level: 1, name: 'B1 checkpoint' })).toBeVisible()
   await expect(nothingYet).toBeVisible()
   await expect(page.getByText(/Question 1/)).toHaveCount(0)
+})
+
+test('a level with one published topic has a checkpoint of five of its questions, fetched as one file', async ({
+  page,
+}) => {
+  // B2 has one topic with a pool, the phrases; its listening part gives a checkpoint nothing.
+  await page.goto('./#/?level=B2')
+  // The last level leads on to the exam, not to another level.
+  await expect(page.getByRole('link', { name: /^On to / })).toHaveCount(0)
+  const fetched: string[] = []
+  page.on('request', (request) => fetched.push(new URL(request.url()).pathname))
+  await page.getByRole('main').getByRole('link', { name: 'Start the checkpoint' }).click()
+
+  await expect(page.getByRole('heading', { level: 1, name: 'B2 checkpoint' })).toBeVisible()
+  await expect(page.getByText('5 questions from 1 topic')).toBeVisible()
+  const met = await takeCheckpoint(page, 5, (place) => (place === 1 ? 'wrong' : 'right'))
+
+  expect(new Set(met.map((question) => question.id)).size).toBe(5)
+  expect(met.every((question) => question.node === 'phrases-greeting')).toBe(true)
+  // The level's pools come in one file; no node file is fetched for them.
+  expect(fetched.filter((file) => file.includes('/content/checkpoints/'))).toEqual([
+    '/deutsch-tree/content/checkpoints/B2.json',
+  ])
+  expect(fetched.filter((file) => file.includes('/content/nodes/'))).toEqual([])
+  await expect(page.getByRole('main')).toContainText('4 of 5 right')
+  const toRevisit = page.getByRole('list', { name: 'Topics to look at again' }).getByRole('listitem')
+  await expect(toRevisit).toHaveCount(1)
+  await expect(toRevisit.first()).toContainText('1 of 5 wrong')
+
+  // Back to the tree at the checkpoint's level.
+  await page.getByRole('link', { name: 'All topics' }).first().click()
+  expect(new URL(page.url()).hash).toBe('#/?level=B2')
+})
+
+test('a typed answer of a checkpoint that is accepted with a note is shown with its note, as after a test', async ({
+  page,
+}) => {
+  await page.goto('./#/checkpoint/A1')
+  // The typed answers of "Fixture umlauts" are given with the first letter's case turned round: right, with a note.
+  const flipped = (text: string) =>
+    (text[0] === text[0]?.toLowerCase() ? text[0]?.toUpperCase() : text[0]?.toLowerCase()) + text.slice(1)
+  const typedPlaces: number[] = []
+  for (let place = 1; place <= 15; place += 1) {
+    await expect(page.getByText(ENGLISH.questionOf(place, 15))).toBeVisible()
+    const question = await questionOnScreen(page)
+    if (question.node === 'grammar-010') {
+      typedPlaces.push(place)
+      await answerField(page).fill(flipped(rightAnswerText(question)))
+    } else {
+      await giveAnswer(page, question, 'right')
+    }
+    await page.getByRole('button', { name: place < 15 ? ENGLISH.next : ENGLISH.checkAnswers }).click()
+  }
+
+  await expect(page.getByRole('main')).toContainText('15 of 15 right')
+  const noted = page.getByRole('list', { name: 'Accepted with a note' }).getByRole('listitem')
+  await expect(noted).toHaveCount(5)
+  for (const [index, place] of typedPlaces.entries()) {
+    await expect(noted.nth(index)).toContainText(`Question ${place}`)
+    await expect(noted.nth(index).getByRole('term')).toHaveText(['Your answer', 'Exact spelling'])
+  }
+})
+
+test('the checkpoint stop of a level leads on to the next level', async ({ page }) => {
+  await page.goto('./#/?level=A1')
+  await page.getByRole('main').getByRole('link', { name: 'On to A2' }).click()
+
+  expect(new URL(page.url()).hash).toBe('#/?level=A2')
+  await expect(page.getByRole('main').getByRole('link', { name: 'On to B1' })).toBeVisible()
 })
 
 test('a checkpoint of a level that does not exist is not found', async ({ page }) => {

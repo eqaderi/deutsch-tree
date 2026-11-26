@@ -29,6 +29,9 @@ function someProgress(): Progress {
   return progress
 }
 
+/** The sentence the app gives the file, in the learner's language (`strings.aboutProgressFile`). */
+const ABOUT = 'A backup of your progress, in the learner’s language.'
+
 function imported(text: string) {
   const result = importProgress(text)
   if (!result.ok) throw new Error(`the file was refused: ${result.problem}`)
@@ -38,7 +41,7 @@ function imported(text: string) {
 test('an exported file comes back as the same progress', () => {
   const progress = someProgress()
 
-  const file = exportProgress(progress, morning)
+  const file = exportProgress(progress, morning, ABOUT)
 
   expect(imported(file.text).progress).toEqual(progress)
 })
@@ -49,7 +52,7 @@ test('the scores a learner typed in for writing and speaking go into the file an
   progress = applyEnteredScore(progress, 'exam-schreiben-1', 93)
   progress = applyEnteredScore(progress, 'exam-sprechen-1', 85)
 
-  const file = exportProgress(progress, morning)
+  const file = exportProgress(progress, morning, ABOUT)
 
   expect(file.text).toContain('    "exam-schreiben-1": { "done": true, "attempts": 2, "scores": [72, 93] },\n')
   const back = imported(file.text).progress
@@ -61,25 +64,25 @@ test('the scores a learner typed in for writing and speaking go into the file an
 })
 
 test('the file says in its name and in its first lines what it is, and when it was made', () => {
-  const file = exportProgress(someProgress(), morning)
+  const file = exportProgress(someProgress(), morning, ABOUT)
 
   expect(file.name).toBe('deutsch-tree-progress-2026-11-26.json')
   const lines = file.text.split('\n')
   expect(lines[1]).toBe('  "app": "deutsch-tree",')
-  expect(lines[2]).toMatch(/^ {2}"about": ".*progress.*",$/)
+  expect(lines[2]).toBe('  "about": "A backup of your progress, in the learner’s language.",')
   expect(lines[3]).toBe(`  "exported": "${morning.toISOString()}",`)
   expect(lines[4]).toBe(`  "version": ${SAVED_VERSION},`)
   expect(imported(file.text).exported).toEqual(morning)
 })
 
 test('every field of the progress is in the file, so that nothing is left behind on the old device', () => {
-  const file = JSON.parse(exportProgress(emptyProgress(), morning).text)
+  const file = JSON.parse(exportProgress(emptyProgress(), morning, ABOUT).text)
 
   expect(Object.keys(file)).toEqual(['app', 'about', 'exported', 'version', ...Object.keys(emptyProgress())])
 })
 
 test('a person can read the file: one line per topic', () => {
-  const file = exportProgress(someProgress(), morning)
+  const file = exportProgress(someProgress(), morning, ABOUT)
 
   expect(file.text).toContain('    "grammar-001": { "done": true, "attempts": 2 },\n')
   expect(file.text).toContain('    "grammar-002": { "done": false, "attempts": 1 }\n')
@@ -92,7 +95,7 @@ test('the scores recorded for official mock exams travel in the file, and readin
   progress = recordOfficialExamScores(progress, 'youth-1', { reading: 70 })
   expect(readiness(progress, ['adults-1', 'adults-2', 'youth-1']).ready).toBe(true)
 
-  const file = exportProgress(progress, morning)
+  const file = exportProgress(progress, morning, ABOUT)
   const onTheOtherDevice = imported(file.text).progress
 
   // A person can read them: one line per exam.

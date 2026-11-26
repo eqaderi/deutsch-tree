@@ -64,6 +64,8 @@ test('a learner exports progress, clears the browser and imports it back', async
     nodes: { 'grammar-001': { done: true, attempts: 1 } },
   })
   expect(Date.parse(file.exported)).not.toBeNaN()
+  // It names the link that brings it back, as the page calls it.
+  expect(file.about).toContain('choose "Back up progress"')
 
   // The browser is cleared: everything is gone.
   await context.clearCookies()
@@ -118,6 +120,29 @@ test('importing over existing progress warns first, and replaces it only after a
   await page.getByRole('link', { name: 'All topics' }).click()
   await expect(topicInTree(page)).toContainText('Done')
   expect(JSON.parse((await savedText(page)) ?? '').nodes).toEqual({ 'grammar-001': { done: true, attempts: 1 } })
+})
+
+test('the warning before an import names the exam results it would replace too', async ({ page }, testInfo) => {
+  // Here: no topic done, but two finished mock exam modules and the scores of one official exam.
+  const module = (name: string) =>
+    `{"exam":"mock-exam-1","module":"${name}","finished":"2026-11-20T09:00:00.000Z","timed":true,"score":90,"parts":[{"part":1,"correct":9,"total":10}]}`
+  const here = `{"version":3,"nodes":{},"officialExams":{"fixture-adults-1":{"reading":80}},"mockExams":[${module('reading')},${module('listening')}]}`
+  await startWithSaved(page, here)
+  const path = await fileOnDevice(testInfo, 'deutsch-tree-progress-2026-11-20.json', progressFile(['grammar-001']))
+
+  await backupLink(page).click()
+  await expect(page.getByRole('main')).toContainText('2 mock exam modules finished')
+  await chooseFile(page, path)
+
+  const warning = page.getByRole('alertdialog', { name: 'Replace the progress on this device?' })
+  const onThisDevice = warning.getByRole('definition').nth(0)
+  const inTheFile = warning.getByRole('definition').nth(1)
+  await expect(onThisDevice).toContainText('0 topics done')
+  await expect(onThisDevice).toContainText('2 mock exam modules finished')
+  await expect(onThisDevice).toContainText('Scores of 1 official mock exam')
+  await expect(inTheFile).toContainText('1 topic done')
+  await expect(inTheFile).not.toContainText('mock exam')
+  await expect(warning).toContainText('your topics, your mock exam results and the scores of official mock exams')
 })
 
 test('a file from a newer version, or one that is no progress file, is refused with the reason and changes nothing', async ({

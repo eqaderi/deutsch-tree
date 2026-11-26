@@ -1468,6 +1468,8 @@ export interface Mistake {
   wrong: string
   right: string
   why: Localised<RichText>
+  /** What says `right`. The wrong sentence is never said: a learner should not hear it. */
+  audio: Spoken
 }
 
 interface QuestionBase {
@@ -1773,6 +1775,8 @@ export interface VocabularyContent {
 export interface Phrase {
   /** The phrase itself. */
   de: string
+  /** What says the phrase itself. */
+  audio: Spoken
   /** What it means in English and in Persian, and in simple German when it is used. */
   meaning: Localised<RichText>
   /** Ids of the exam-part nodes whose tasks the phrase serves. */
@@ -1899,6 +1903,16 @@ export interface GrammarOverview {
   tables: Array<{ node: string; table: GrammarTable }>
 }
 
+/**
+ * What one published topic gives to the checkpoint of its level: its pool.
+ * A level's checkpoint file (`checkpoints/<level>.json`) is a list of these,
+ * in curriculum order; the app fetches it when the checkpoint opens.
+ */
+export interface CheckpointPool {
+  nodeId: string
+  questions: Question[]
+}
+
 /** An original mock exam as the list of mock exams shows it (`mock-exams.json`). */
 export interface MockExamSummary {
   id: string
@@ -1976,4 +1990,6 @@ export interface ContentBundle {
   mockExams: MockExam[]
   search: Localised<SearchData>
   overview: GrammarOverview
+  /** Each level's checkpoint data, by level. */
+  checkpoints: Record<string, CheckpointPool[]>
 }

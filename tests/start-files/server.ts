@@ -9,8 +9,9 @@ import { execFileSync, spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const SERVER_DIR = path.resolve('src/start-files/folder/server')
+const SERVER_DIR = fileURLToPath(new URL('../../src/start-files/folder/server', import.meta.url))
 
 export type ServerKind = 'perl' | 'powershell'
 
@@ -29,7 +30,7 @@ export const availableServers: ServerKind[] = [
   ...(runs('pwsh', '-Version') ? (['powershell'] as const) : []),
 ]
 
-function freePort(): Promise<number> {
+export function freePort(): Promise<number> {
   return new Promise((resolve, reject) => {
     const server = createServer()
     server.once('error', reject)
@@ -50,16 +51,47 @@ export interface RunningServer {
   stop: () => Promise<void>
 }
 
+/** The command that runs a server on `folder` and `port`, as its start file does. */
+function serverCommand(kind: ServerKind, folder: string, port: number): [string, string[]] {
+  return kind === 'perl'
+    ? ['perl', [path.join(SERVER_DIR, 'serve.pl'), folder, String(port)]]
+    : ['pwsh', ['-NoProfile', '-File', path.join(SERVER_DIR, 'serve.ps1'), '-Root', folder, '-Port', String(port)]]
+}
+
 /** Starts the server on `folder` (the app folder: index.html and private/) and waits until it answers. */
 export async function startServer(kind: ServerKind, folder: string): Promise<RunningServer> {
   const port = await freePort()
-  return kind === 'perl'
-    ? run('perl', [path.join(SERVER_DIR, 'serve.pl'), folder, String(port)], port)
-    : run(
-        'pwsh',
-        ['-NoProfile', '-File', path.join(SERVER_DIR, 'serve.ps1'), '-Root', folder, '-Port', String(port)],
-        port,
-      )
+  const [command, args] = serverCommand(kind, folder, port)
+  return run(command, args, port)
+}
+
+/**
+ * Runs the server on `folder` and `port` when it is expected not to serve
+ * there (the port is taken), and gives back how it ended.
+ */
+export function runUntilItStops(
+  kind: ServerKind,
+  folder: string,
+  port: number,
+): Promise<{ code: number | null; output: string }> {
+  const [command, args] = serverCommand(kind, folder, port)
+  const child = spawn(command, args, { env: { ...process.env, NO_OPEN: '1' }, stdio: ['ignore', 'pipe', 'pipe'] })
+  let output = ''
+  const collect = (chunk: Buffer) => {
+    output += chunk
+  }
+  child.stdout.on('data', collect)
+  child.stderr.on('data', collect)
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => {
+      child.kill()
+      reject(new Error(`${command} kept running on a port that was taken:\n${output}`))
+    }, 20_000)
+    child.once('exit', (code) => {
+      clearTimeout(timer)
+      resolve({ code, output })
+    })
+  })
 }
 
 /**

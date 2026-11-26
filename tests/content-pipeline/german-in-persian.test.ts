@@ -1,6 +1,14 @@
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { COMING_SOON, changeNode, EXAM_PART, fixtureContentWith, PUBLISHED } from './fixture.ts'
+import {
+  COMING_SOON,
+  changeNode,
+  changeReviewedNode,
+  EXAM_PART,
+  fixtureContentWith,
+  PUBLISHED,
+  VOCABULARY,
+} from './fixture.ts'
 
 const CHAPTERS = 'chapters.yaml'
 
@@ -59,6 +67,30 @@ test('German outside asterisks is found in the Persian texts of an exam part', a
     [undefined, 'explanations.fa.task', expect.stringContaining('"Richtig"')],
     [undefined, 'explanations.fa.approach[1]', expect.stringContaining('"Text"')],
     ['t2/i3', 'practice[1].items[2].explanation.fa', expect.stringContaining('"kostet"')],
+  ])
+})
+
+test('the Persian meaning of a word is plain text: a Latin letter in it is rejected, with or without asterisks', async () => {
+  const content = await fixtureContentWith({
+    [VOCABULARY]: changeReviewedNode((node) => {
+      node.words[0].meaning.fa = 'میز (Tisch)'
+      node.words[1].meaning.fa = 'چراغ، *Licht*'
+    }),
+  })
+
+  const { report } = await compileContent(content)
+
+  expect(report.errors.map(({ file, where, message }) => [file, where, message])).toEqual([
+    [
+      VOCABULARY,
+      'words[0].meaning.fa',
+      'Latin letters in a meaning: "Tisch". A meaning is plain text, shown as it is written, so German in it reads in the wrong order on a Persian page; write the meaning in Persian only',
+    ],
+    [
+      VOCABULARY,
+      'words[1].meaning.fa',
+      'Latin letters in a meaning: "Licht". A meaning is plain text, shown as it is written, so German in it reads in the wrong order on a Persian page; write the meaning in Persian only',
+    ],
   ])
 })
 

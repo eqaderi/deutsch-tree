@@ -11,6 +11,8 @@ import { COMING_SOON, changeNode, fixtureContent, fixtureContentWith, PUBLISHED 
  */
 const ICH_WOHNE_IN_BERLIN = '16af11d6bd373d3d'
 const DER_TISCH = 'a22a5e6927988b84'
+const DU_WOHNST_HIER = 'a5ab113f6d6d9121'
+const GUTEN_TAG = 'f68b933d2ec7985b'
 
 async function compiledFixture() {
   const { report, bundle } = await compileContent(fixtureContent)
@@ -30,6 +32,14 @@ test('every German example of a published grammar node carries the audio that sa
   })
 })
 
+test('the right sentence of a common mistake carries its audio; the wrong one is never said', async () => {
+  const { content } = await compiledFixture()
+  const [mistake] = (content('grammar-001') as GrammarContent).mistakes
+
+  expect(mistake?.wrong).toBe('Du wohne hier.')
+  expect(mistake?.audio).toEqual({ key: DU_WOHNST_HIER, voice: 'thorsten', text: 'Du wohnst hier.' })
+})
+
 test('a vocabulary word is heard with its article, and its example sentence on its own', async () => {
   const { content } = await compiledFixture()
   const words = (content('vocabulary-fixture-home') as VocabularyContent).words
@@ -43,6 +53,13 @@ test('the example of each phrase carries its audio', async () => {
   const phrases = (content('phrases-greeting') as PhrasesContent).phrases
 
   expect(phrases[0]?.example.audio).toMatchObject({ voice: 'thorsten', text: 'Guten Tag, Frau Test!' })
+})
+
+test('a phrase itself carries its audio too', async () => {
+  const { content } = await compiledFixture()
+  const phrases = (content('phrases-greeting') as PhrasesContent).phrases
+
+  expect(phrases[0]?.audio).toEqual({ key: GUTEN_TAG, voice: 'thorsten', text: 'Guten Tag!' })
 })
 
 test('a published example without its audio file is an error that names the node, the place, the text and the file', async () => {

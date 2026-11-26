@@ -15,6 +15,7 @@ import {
   PACK_ANSWER_KEY_FILE,
   PACK_DESCRIPTION_FILE,
   PACK_FORMAT,
+  PACK_ID,
   type PackAnswerKey,
   type PackAnswerRepair,
   type PackDescription,
@@ -203,7 +204,7 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
   const profile = resolved.profile
 
   const id = options.id ?? slug(options.name)
-  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) {
+  if (!PACK_ID.test(id)) {
     problem(
       'output',
       `"${id}" cannot be a pack's folder name. Give an id made of lower-case letters, digits and hyphens`,

@@ -15,6 +15,10 @@ import { CHAPTERS_FILE, type ContentCheck, type ContentProblem, problemIn } from
  * diagrams, and the one-line reasons of mistakes, questions and the items
  * of practice tasks. A diagram's labels hold no German at all; the schema
  * says so.
+ *
+ * The meaning of a vocabulary word is plain text: it is shown as written,
+ * asterisks and all, and it is the prompt when the word is asked. So it may
+ * hold no Latin letter at all, marked or not.
  */
 export const germanInPersianIsMarked: ContentCheck = ({ nodes, chapters }) => {
   const problems: ContentProblem[] = []
@@ -24,6 +28,19 @@ export const germanInPersianIsMarked: ContentCheck = ({ nodes, chapters }) => {
       const message = unmarkedGerman(text)
       if (message) problems.push(problemIn(checked, { ...(question ? { question } : {}), where, message }))
     }
+  }
+
+  for (const checked of nodes) {
+    ;(checked.node.words ?? []).forEach((word, index) => {
+      const german = word.meaning === undefined ? undefined : /\p{Script=Latin}+/u.exec(word.meaning.fa)?.[0]
+      if (german === undefined) return
+      problems.push(
+        problemIn(checked, {
+          where: `words[${index}].meaning.fa`,
+          message: `Latin letters in a meaning: "${german}". A meaning is plain text, shown as it is written, so German in it reads in the wrong order on a Persian page; write the meaning in Persian only`,
+        }),
+      )
+    })
   }
 
   ;(chapters ?? []).forEach((chapter, index) => {

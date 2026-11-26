@@ -220,6 +220,10 @@ export const en = {
   /** A day as this language writes it. Use it for every date shown. */
   date: (date: Date) => new Intl.DateTimeFormat('en-GB', { dateStyle: 'long' }).format(date),
   topicsDone: (count: number) => (count === 1 ? '1 topic done' : `${count} topics done`),
+  mockModulesFinished: (count: number) =>
+    count === 1 ? '1 mock exam module finished' : `${count} mock exam modules finished`,
+  officialExamsScored: (count: number) =>
+    count === 1 ? 'Scores of 1 official mock exam' : `Scores of ${count} official mock exams`,
   onThisDevice: 'On this device',
   inTheFile: 'In the file',
   exportTitle: 'Export',
@@ -228,12 +232,16 @@ export const en = {
   /** The name of the file follows on a line of its own. */
   exportedAs: 'Your progress is now in this file:',
   keepFileSafe: 'Keep the file somewhere safe.',
+  /** The first line of an exported file, for whoever opens it. `button` is the name of the link to the backup page. */
+  aboutProgressFile: (button: string) =>
+    `A backup of your learning progress in deutsch-tree. To bring it back, open deutsch-tree, choose "${button}" and import this file. It holds which topics you have done and your scores, nothing else, and it is never sent anywhere.`,
   importTitle: 'Import',
   importText:
     'Brings back the progress from a file that you exported here or on another device. It takes the place of the progress on this device.',
   importFile: 'Import a progress file',
   importReplaceTitle: 'Replace the progress on this device?',
-  importReplaceText: 'The file takes the place of everything on this device. This cannot be undone.',
+  importReplaceText:
+    'The file takes the place of everything on this device: your topics, your mock exam results and the scores of official mock exams. This cannot be undone.',
   exportedOn: (date: string) => `exported on ${date}`,
   replaceProgress: 'Replace progress',
   cancel: 'Cancel',
@@ -256,6 +264,7 @@ export const en = {
   checkpointIntro:
     'A short test with questions from the topics of this level. It shows you what to look at again. It changes nothing in your topics.',
   startCheckpoint: 'Start the checkpoint',
+  onToLevel: (level: string) => `On to ${level}`,
   checkpointNothingYet: 'No topic of this level has a test yet. The checkpoint comes with the first one.',
   checkpointSize: (questions: number, topics: number) =>
     `${questions === 1 ? '1 question' : `${questions} questions`} from ${topics === 1 ? '1 topic' : `${topics} topics`}`,
@@ -399,9 +408,11 @@ export const en = {
   searchHint: 'Type a word in English or in German. Without ä, ö, ü and ß on your keyboard, write ae, oe, ue and ss.',
   searchResults: (count: number) => (count === 1 ? '1 topic found' : `${count} topics found`),
   searchNothing: 'No topic found. Try another word, or fewer words.',
+  searchStillLoading: 'Still looking through the text of the topics…',
   overviewTitle: 'All grammar at a glance',
   overviewIntro: 'Every grammar table on one page. The name above a table opens its topic.',
   overviewEmpty: 'No grammar table is written yet.',
+  jumpToLevel: 'Jump to a level',
 
   // A writing or speaking node: the task, a prompt for an AI assistant, and the score typed back in.
   task: 'Task',

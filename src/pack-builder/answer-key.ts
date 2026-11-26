@@ -126,7 +126,7 @@ export function readAnswerKey(pages: string[], profile: BookProfile, examNumbers
 
   const errors: string[] = []
   const repairs: PackAnswerRepair[] = []
-  const substitutes = new Map(Object.entries(key.answers).map(([from, to]) => [from.toLowerCase(), to]))
+  const substitutes = new Map(Object.entries(key.answers).map(([from, to]) => [folded(from), to]))
   const numbers = (answers: PrintedAnswer[]) => answers.map((answer) => answer.printed).join(', ') || 'none'
 
   if (examsInKey.length === 0) {
@@ -194,9 +194,11 @@ export function readAnswerKey(pages: string[], profile: BookProfile, examNumbers
         }
         const answers = partItems.map((item, position) => {
           const { printed: printedNumber, token } = found[position] as PrintedAnswer
-          const lower = token.trim().toLowerCase()
-          const answer = substitutes.get(lower) ?? lower
-          if (!item.choices.includes(answer)) {
+          const meant = folded(substitutes.get(folded(token)) ?? token)
+          // The choice as the profile writes it: that is what the answer sheet offers.
+          const choice = item.choices.find((candidate) => folded(candidate) === meant)
+          const answer = choice ?? meant
+          if (choice === undefined) {
             errors.push(
               `${partLabel}, item ${item.number}: the key says "${token}", which is not one of ${item.choices.join(', ')}`,
             )
@@ -220,4 +222,9 @@ export function readAnswerKey(pages: string[], profile: BookProfile, examNumbers
   }
 
   return { exams, repairs, errors }
+}
+
+/** A printed answer or a choice as they are compared: case and the spelling of umlauts do not count. */
+function folded(text: string): string {
+  return text.trim().normalize('NFC').toLowerCase()
 }

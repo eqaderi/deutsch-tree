@@ -102,8 +102,10 @@ test('the export of started topics fetches their words only when asked, and list
       nodes: { [OTHER]: { done: true, attempts: 1 }, [NODE]: { done: false, attempts: 1 } },
     }),
   ] as const)
-  // A reload, so that the app starts on the saved progress.
+  // A reload, so that the app starts on the saved progress. The page is shown first, so that its
+  // own request for the node is made before the count starts again (it was once counted twice).
   await page.goto(`./#/node/${NODE}`)
+  await expect(ankiPanel(page)).toBeVisible()
   asked.length = 0
   await page.reload()
   await expect(ankiPanel(page)).toContainText('2 vocabulary topics started')

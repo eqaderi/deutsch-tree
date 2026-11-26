@@ -74,7 +74,8 @@ build time, each only on the page that shows it:
 | File | Holds | Fetched by |
 |---|---|---|
 | `content/index.json` | The chapters and every node's summary, both in curriculum order. | Every page. |
-| `content/nodes/<id>.json` | One node's page. | That node's page and its test; a level's checkpoint, for the nodes it asks about. |
+| `content/nodes/<id>.json` | One node's page. | That node's page and its test. |
+| `content/checkpoints/<level>.json` | The pool of every published topic of the level that has one (`checkpoint-data.ts`). | That level's checkpoint (`#/checkpoint/<level>`). |
 | `content/official-mock-exams.json` | The exams the readiness view links to. | The readiness view (`#/readiness`) and the exam stop that ends the tree's last level. |
 | `content/mock-exams.json` | The original mock exams: title, status and modules of each. | The list of mock exams (`#/mock-exams`) and a module's page. |
 | `content/mock-exams/<id>.json` | One mock exam with its parts. | Its card in the list, and its modules (`#/mock-exams/<id>/<module>`). |
@@ -138,8 +139,14 @@ GitHub Pages and from a local folder.
   level: up to 6 nodes give 5 each, 7 to 29 nodes share the 30 evenly, and
   from 30 nodes on a checkpoint asks 30 nodes drawn at random, one question
   each. A node without a pool gives none; an exam part gives none either (`givesToCheckpoint`). `scoreCheckpoint` reports the nodes
-  with wrong answers. A checkpoint is advice: it never reads or changes the
-  progress. What a node gives to it is `checkpointPool` in that file.
+  with wrong answers, and keeps the notes of a typed answer accepted with a
+  note, which the result lists as after a test (`NotedAnswers` in
+  `TestResult.tsx`). A checkpoint is advice: it never reads or changes the
+  progress. What the nodes of a level give to it is one file,
+  `content/checkpoints/<level>.json`, written by
+  `src/content-pipeline/checkpoint-data.ts`, so a checkpoint needs one request
+  however many topics its level has. The stop of the checkpoint ends with the
+  way on to the next level.
 - A writing or speaking node has no test of questions. Below the three
   panels of every exam part, its page (`src/app/ExamTaskPage.tsx`) shows the
   task, a button that copies a prompt
@@ -183,7 +190,8 @@ GitHub Pages and from a local folder.
   copying them. The top of that file says why each header is there.
 - Whether a node has a pool or is graded by an assistant: `hasPool` and
   `isAssistantGraded` in `src/content-model/scoring.ts`; which page it has:
-  `isGrammar`, `isVocabulary`. The app imports
+  `isGrammar`, `isVocabulary`, `isPhrases`, `hasPractice`, `hasExamTask`. Use these
+  rather than testing for a key of the content. The app imports
   these from that file, not from `index.ts`, which holds the schema that only
   the pipeline needs.
 - Progress: read it with `useProgress()` and change it with
@@ -272,7 +280,8 @@ The rules are in the learning engine, like every rule. The tree
   With no level in the address the tree opens at the level the learner is
   in. Build such an address with `treeAddress` (`src/app/treeAddress.ts`).
   A link "back to the tree" is `<BackToTree from={node} />` from a topic,
-  which leads to the topic's level, and `<BackToTree />` from any other
+  which leads to the topic's level, `<BackToTree level={level} />` from a
+  page of a level (its checkpoint), and `<BackToTree />` from any other
   page, which leads to the tree as the learner last saw it.
 - Above the route the tree shows the next topic and at most one note: the
   first-visit steps while the learner has no progress, the backup suggestion
@@ -471,7 +480,9 @@ The rules are in the learning engine, like every rule. The tree
   `src/content-model/audio.ts`. The format is MP3, 48 kbit/s, mono.
 - The pipeline attaches `audio` (a `Spoken`: `key`, `voice`, `text`) to every
   piece of German that has a play button: each example of a grammar node and
-  of a phrase, and each vocabulary word (with its article) and its example.
+  of a phrase, the right sentence of each common mistake (never the wrong
+  one), each phrase itself, and each vocabulary word (with its article) and
+  its example.
   `text` is what the voice says: `speakable` in `src/audio/speakable.ts`
   writes numbers, times, dates, years and amounts as words, because Piper
   misreads digits ("14:35 Uhr").
@@ -494,7 +505,9 @@ The rules are in the learning engine, like every rule. The tree
   pnpm audio:generate --voices <folder of the .onnx files> --piper <path to piper>
   ```
 
-  It says what has no file yet, removes the files no content needs any more,
+  It says what has no file yet, removes the files no content needs any more
+  (also those of a node set back to "coming soon"; they are made again when
+  it is published),
   and prints each file it makes. `--redo <key>,<key>` says items again when
   the voice slipped on them (Piper is not repeatable, so a second take often
   comes out right); `--force` says everything again, after a voice model
@@ -537,8 +550,8 @@ control because it holds the packs):
 | `app/` | The built site, with the packs in `app/private/`. A pack copied there by hand is found at the next start. |
 
 The decision for a local server, and the trial of the candidate servers, are on issue #4. Both
-servers use only what the system ships with, call it by its full path, take the first free port
-from 8000 to 8009 and listen on every network interface. When they start they rewrite
+servers use only what the system ships with, call it by its full path, use port 8000 and no other,
+and listen on every network interface. When they start they rewrite
 `app/private/packs.json` and `app/private/address.json` (see [docs/private-packs.md](docs/private-packs.md),
 "Finding packs in the app"), print the address for this computer and for a phone, and open the
 browser. They answer GET and HEAD with single byte ranges, and nothing outside `app/`. Both
@@ -548,8 +561,14 @@ PowerShell 7 when `pwsh` is installed, as on GitHub's runners, and is skipped ot
 Things to know:
 
 - Progress is kept by the browser for each address. `localhost:8000`, the phone's
-  `192.168.x.x:8000` and the public site each have their own; the backup page moves it. If port
-  8000 is taken, the app runs on 8001 and starts with no progress there.
+  `192.168.x.x:8000` and the public site each have their own; the backup page moves it. So the
+  servers never move to another port, where the progress would seem gone. When 8000 is taken they
+  ask it for `private/address.json`: if it answers, deutsch-tree is already running, and the server
+  says so, opens the browser there and stops; otherwise it says that another program has the port
+  and stops. The tests give the servers a free port of their own.
+- Anyone on the same network can open the app and the packs while it runs. The instructions tell
+  the learner to start it on the home Wi-Fi only. Whether it should listen only on this computer by
+  default is the learner's decision (#4); until then it listens on every interface.
 - A start file that arrives by download or AirDrop is blocked once by macOS ("Open Anyway" in
   Privacy & Security) or by Windows SmartScreen ("More info", "Run anyway"). A Mac keeps the
   start file executable only when the folder travels as a zip.

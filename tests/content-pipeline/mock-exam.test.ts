@@ -354,6 +354,9 @@ test('the review sheet of a mock exam holds every part as a task, its items name
     prompt: 'Sie suchen einen Kurs für Ihr Auto.',
   })
   expect(JSON.stringify(sheet)).not.toContain('Moderatorin","explanation')
+  // The reviewer is told what they review: a mock exam, not a node of the course.
+  expect(sheet.instructions).toMatch(/^This is the reading and listening of one original mock exam/)
+  expect(sheet.instructions).not.toContain('node')
 })
 
 test('German in a Persian title of a mock exam must stand in asterisks', async () => {

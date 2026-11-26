@@ -186,6 +186,10 @@ export const de: Strings = {
     'Dein Fortschritt ist nur in diesem Browser auf diesem Gerät gespeichert. Wenn die Daten vom Browser gelöscht werden, ist er weg. Eine Datei macht ihn sicher. Mit der Datei kannst du ihn auch auf ein anderes Gerät bringen.',
   date: (date) => new Intl.DateTimeFormat('de-DE', { dateStyle: 'long' }).format(date),
   topicsDone: (count) => (count === 1 ? '1 Thema fertig' : `${count} Themen fertig`),
+  mockModulesFinished: (count) =>
+    count === 1 ? '1 Teil einer Modellprüfung fertig' : `${count} Teile von Modellprüfungen fertig`,
+  officialExamsScored: (count) =>
+    count === 1 ? 'Punkte von 1 offiziellen Modellprüfung' : `Punkte von ${count} offiziellen Modellprüfungen`,
   onThisDevice: 'Auf diesem Gerät',
   inTheFile: 'In der Datei',
   exportTitle: 'Als Datei speichern',
@@ -193,12 +197,15 @@ export const de: Strings = {
   exportProgress: 'Fortschritt als Datei speichern',
   exportedAs: 'Dein Fortschritt ist jetzt in dieser Datei:',
   keepFileSafe: 'Heb die Datei gut auf.',
+  aboutProgressFile: (button) =>
+    `Eine Sicherung von deinem Lernstand in deutsch-tree. So bekommst du ihn zurück: deutsch-tree öffnen, „${button}“ wählen und diese Datei laden. Sie enthält nur, welche Themen du fertig hast, und deine Punkte. Sie wird nie irgendwohin geschickt.`,
   importTitle: 'Aus einer Datei laden',
   importText:
     'Hier holst du den Fortschritt aus einer Datei zurück. Die Datei kann von diesem Gerät oder von einem anderen Gerät sein. Sie ersetzt den Fortschritt auf diesem Gerät.',
   importFile: 'Datei mit Fortschritt laden',
   importReplaceTitle: 'Fortschritt auf diesem Gerät ersetzen?',
-  importReplaceText: 'Die Datei ersetzt alles auf diesem Gerät. Das kannst du später nicht mehr ändern.',
+  importReplaceText:
+    'Die Datei ersetzt alles auf diesem Gerät: deine Themen, deine Ergebnisse in Modellprüfungen und die Punkte von offiziellen Modellprüfungen. Das kannst du später nicht mehr ändern.',
   exportedOn: (date) => `gespeichert am ${date}`,
   replaceProgress: 'Fortschritt ersetzen',
   cancel: 'Abbrechen',
@@ -220,6 +227,7 @@ export const de: Strings = {
   checkpointIntro:
     'Ein kurzer Test mit Fragen aus den Themen von diesem Niveau. Er zeigt dir, was du noch einmal ansehen sollst. Er ändert nichts an deinen Themen.',
   startCheckpoint: 'Zwischentest starten',
+  onToLevel: (level) => `Weiter zu ${level}`,
   checkpointNothingYet:
     'Auf diesem Niveau hat noch kein Thema einen Test. Der Zwischentest kommt mit dem ersten Thema.',
   checkpointSize: (questions, topics) =>
@@ -356,9 +364,11 @@ export const de: Strings = {
   searchHint: 'Schreib ein Wort. Hat deine Tastatur kein ä, ö, ü und ß? Dann schreib ae, oe, ue und ss.',
   searchResults: (count) => (count === 1 ? '1 Thema gefunden' : `${count} Themen gefunden`),
   searchNothing: 'Kein Thema gefunden. Versuch ein anderes Wort oder weniger Wörter.',
+  searchStillLoading: 'Der Text der Themen wird noch durchsucht …',
   overviewTitle: 'Die ganze Grammatik auf einen Blick',
   overviewIntro: 'Alle Grammatik-Tabellen auf einer Seite. Der Name über einer Tabelle öffnet das Thema.',
   overviewEmpty: 'Es gibt noch keine Grammatik-Tabelle.',
+  jumpToLevel: 'Zu einem Niveau springen',
 
   task: 'Aufgabe',
   getYourScore: 'So bekommst du deine Punkte',

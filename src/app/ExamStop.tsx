@@ -1,10 +1,9 @@
 import { Suspense, use } from 'react'
 import { Link } from 'react-router'
 import { useLanguage } from '../language/index.tsx'
-import { READINESS_SCORE } from '../learning-engine/index.ts'
+import { READINESS_SCORE, readinessOf } from '../learning-engine/index.ts'
 import { loadOfficialMockExams } from './content.ts'
 import { useProgress } from './progress.ts'
-import { readinessOf } from './ReadinessPage.tsx'
 
 /**
  * The last stop of the tree: the exam. It states the readiness rule and the

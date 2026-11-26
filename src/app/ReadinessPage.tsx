@@ -11,7 +11,7 @@ import {
   type Progress,
   READINESS_SCORE,
   type Readiness,
-  readiness,
+  readinessOf,
   readScore,
   recordOfficialExamScores,
 } from '../learning-engine/index.ts'
@@ -19,18 +19,6 @@ import { loadOfficialMockExams } from './content.ts'
 import { German, RichText } from './German.tsx'
 import { BackToTree } from './NotFound.tsx'
 import { updateProgress, useProgress } from './progress.ts'
-
-/**
- * Where the learner stands against the readiness rule. The list of official
- * mock exams is content (`official-mock-exams.yaml`); the rule is the
- * learning engine's. Nothing here decides either.
- */
-export function readinessOf(progress: Progress, exams: readonly OfficialMockExam[]): Readiness {
-  return readiness(
-    progress,
-    exams.filter((exam) => exam.countsTowardReadiness).map((exam) => exam.id),
-  )
-}
 
 /**
  * The readiness view: whether the learner can book the exam and what is

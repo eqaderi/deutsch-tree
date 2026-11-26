@@ -133,7 +133,7 @@ test('a learner takes Lesen from start to finish and sees each part and the scor
   await page.getByRole('button', { name: /Finish and check/ }).click()
 
   const result = page.getByRole('region', { name: /: your result$/ })
-  await expect(result.locator('.big-number')).toHaveText('90')
+  await expect(result.getByText('90', { exact: true })).toBeVisible()
   await expect(result).toContainText('of 100')
   await expect(result).toContainText('At your target of 90 or more.')
   await expect(result).toContainText('without a time limit')
@@ -174,8 +174,8 @@ test('a second try is added to the history, the latest first, and a score under 
   await page.goto(LIST)
   const history = page.getByRole('list', { name: 'Your results' }).getByRole('listitem')
   await expect(history).toHaveCount(2)
-  await expect(history.nth(0).locator('.big-number')).toHaveText('60')
-  await expect(history.nth(1).locator('.big-number')).toHaveText('100')
+  await expect(history.nth(0).getByText('60', { exact: true })).toBeVisible()
+  await expect(history.nth(1).getByText('100', { exact: true })).toBeVisible()
 })
 
 test('when the time limit is over, the answers so far are checked', async ({ page }) => {
@@ -192,7 +192,7 @@ test('when the time limit is over, the answers so far are checked', async ({ pag
   const result = page.getByRole('region', { name: /: your result$/ })
   await expect(result).toContainText('The time is up. Your answers so far were checked.')
   // Six of thirty: 20 out of 100.
-  await expect(result.locator('.big-number')).toHaveText('20')
+  await expect(result.getByText('20', { exact: true })).toBeVisible()
   await expect(result).toContainText('Not passed. You pass with 60, and your target is 90.')
 })
 
@@ -234,7 +234,7 @@ test('in Hören the recordings play as often as in the exam, and the discussion 
   await page.getByRole('button', { name: /Finish and check/ }).click()
 
   const result = page.getByRole('region', { name: /: your result$/ })
-  await expect(result.locator('.big-number')).toHaveText('100')
+  await expect(result.getByText('100', { exact: true })).toBeVisible()
   for (const [part, right] of ['10 of 10', '5 of 5', '7 of 7', '8 of 8'].entries()) {
     await expect(result.getByRole('definition').nth(part)).toHaveText(right)
   }
@@ -270,7 +270,7 @@ test('in Schreiben each task has its prompt to copy and a box for its score; the
 
   // 32.4 + 30 + 15 of the 40 + 40 + 20 points of the tasks.
   const result = page.getByRole('region', { name: /: your result$/ })
-  await expect(result.locator('.big-number')).toHaveText('77')
+  await expect(result.getByText('77', { exact: true })).toBeVisible()
   await expect(result).toContainText('Passed: 60 is the pass mark.')
   for (const [part, points] of ['32 of 40', '30 of 40', '15 of 20'].entries()) {
     await expect(result.getByRole('definition').nth(part)).toHaveText(points)
@@ -301,7 +301,7 @@ test('in Sprechen the time running out ends the speaking, not the module: the sc
 
   // 25 of 33 and 36 of 48; Teil 3 has no score, so 0 of 19.
   const result = page.getByRole('region', { name: /: your result$/ })
-  await expect(result.locator('.big-number')).toHaveText('61')
+  await expect(result.getByText('61', { exact: true })).toBeVisible()
   for (const [part, points] of ['25 of 33', '36 of 48', '0 of 19'].entries()) {
     await expect(result.getByRole('definition').nth(part)).toHaveText(points)
   }
@@ -330,6 +330,14 @@ test('the history of an exam keeps all four modules, each out of 100', async ({ 
   await page.reload()
   const history = page.getByRole('list', { name: 'Your results' }).getByRole('listitem')
   await expect(history).toHaveCount(4)
-  await expect(history.locator('.mock-result-head')).toContainText(['Speaking', 'Writing', 'Listening', 'Reading'])
-  await expect(history.locator('.big-number')).toHaveText(['100', '90', '0', '0'])
+  const latestFirst = [
+    ['Speaking', '100'],
+    ['Writing', '90'],
+    ['Listening', '0'],
+    ['Reading', '0'],
+  ] as const
+  for (const [index, [module, score]] of latestFirst.entries()) {
+    await expect(history.nth(index)).toContainText(module)
+    await expect(history.nth(index).getByText(score, { exact: true })).toBeVisible()
+  }
 })
