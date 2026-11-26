@@ -1,4 +1,5 @@
 import type { Page } from '@playwright/test'
+import { serveCurriculum } from './curriculum.ts'
 import { expect, test } from './test.ts'
 
 /**
@@ -25,6 +26,15 @@ async function enterScore(
   await page.getByRole('textbox', { name: words.label }).fill(score)
   await page.getByRole('button', { name: words.save }).click()
 }
+
+/** What the copy button answered. The page has other status lines: the score's, and the one of un-marking. */
+const promptStatus = (page: Page) => page.getByRole('region', { name: 'How to get your score' }).getByRole('status')
+
+/** The row of a topic in the tree, and its link to the topic's page. */
+const row = (page: Page, title: string) =>
+  page.getByRole('main').getByRole('group').getByRole('listitem').filter({ hasText: title })
+const topicLink = (page: Page, title: string) => row(page, title).getByRole('link', { name: new RegExp(title) })
+const nextTopic = (page: Page) => page.getByRole('region', { name: 'Your next topic' })
 
 const sidewaysScroll = (page: Page) =>
   page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)
@@ -57,7 +67,7 @@ test('the copy button of a writing node copies a prompt with the task, the offic
 
   const prompt = await copiedPrompt(page)
 
-  await expect(page.getByRole('status')).toContainText('Copied')
+  await expect(promptStatus(page)).toContainText('Copied')
   // The task.
   expect(prompt).toContain('Sie waren am Samstag auf dem Fixture-Fest in Ihrer Straße.')
   expect(prompt).toContain('Schlagen Sie ein Treffen vor.')
@@ -231,7 +241,7 @@ test('when the browser refuses to copy, the prompt is shown so that the learner 
 
   await page.getByRole('button', { name: 'Copy the prompt' }).click()
 
-  await expect(page.getByRole('status')).toContainText('Select the whole prompt below and copy it yourself')
+  await expect(promptStatus(page)).toContainText('Select the whole prompt below and copy it yourself')
   await expect(page.getByRole('textbox', { name: 'The prompt' })).toHaveValue(/Speak only German/)
 })
 
@@ -258,4 +268,92 @@ test('a writing or speaking page fits the screen it is opened on', async ({ page
     await expect(page.getByRole('button', { name: 'Copy the prompt' })).toBeVisible()
     expect(await sidewaysScroll(page)).toBe(0)
   }
+})
+
+test('the tree shows a writing node as in progress after a low score and done after 90, and never offers a test of it', async ({
+  page,
+}) => {
+  // The tree keeps a chapter open or closed as the learner left it until a reload; reloading starts it closed.
+  const openWriting = async () => {
+    await page.goto('./#/?level=B1')
+    await page.reload()
+    await page.getByRole('main').getByRole('heading', { name: 'Fixture exam: writing' }).click()
+  }
+  await openWriting()
+  await expect(topicLink(page, 'Fixture writing')).toContainText('Start')
+  await expect(row(page, 'Fixture writing').getByRole('link')).toHaveCount(1)
+
+  await topicLink(page, 'Fixture writing').click()
+  await enterScore(page, '89')
+  await openWriting()
+
+  await expect(topicLink(page, 'Fixture writing')).toContainText('Continue')
+  await expect(topicLink(page, 'Fixture writing')).not.toContainText('Done')
+
+  await topicLink(page, 'Fixture writing').click()
+  await enterScore(page, '90')
+  await openWriting()
+
+  await expect(topicLink(page, 'Fixture writing')).toContainText('Done')
+  await expect(row(page, 'Fixture writing').getByRole('link')).toHaveCount(1)
+  await expect(row(page, 'Fixture writing').getByRole('link', { name: 'Test', exact: true })).toHaveCount(0)
+})
+
+test('a writing node can be the next topic: it is opened from there, with no test to start, until a score of 90', async ({
+  page,
+}) => {
+  // The writing node is the only topic that is written, so it is next.
+  await serveCurriculum(page, [
+    { level: 'A1', kind: 'grammar', name: 'Verbs', topics: ['g0 soon'] },
+    { level: 'B1', kind: 'exam-part', name: 'Writing', topics: ['exam-schreiben-1 no-test'] },
+  ])
+  await page.goto('./')
+
+  await expect(nextTopic(page)).toContainText('Topic exam-schreiben-1')
+  await expect(nextTopic(page).getByRole('link', { name: 'Take the test' })).toHaveCount(0)
+  await nextTopic(page).getByRole('link', { name: 'Start' }).click()
+  await expect(page.getByRole('button', { name: 'Copy the prompt' })).toBeVisible()
+
+  await enterScore(page, '60')
+  await page.getByRole('link', { name: 'All topics' }).click()
+
+  await expect(nextTopic(page)).toContainText('Topic exam-schreiben-1')
+  await nextTopic(page).getByRole('link', { name: 'Continue' }).click()
+  await enterScore(page, '94')
+  await page.getByRole('link', { name: 'All topics' }).click()
+
+  await expect(nextTopic(page)).not.toContainText('Topic exam-schreiben-1')
+  await expect(nextTopic(page)).toContainText('You have done every topic that is written so far.')
+})
+
+test('a learner un-marks a done writing node: it is in progress, its scores are kept, and a new score of 90 finishes it again', async ({
+  page,
+}) => {
+  await page.goto(WRITING)
+  await enterScore(page, '93')
+  const done = page.getByRole('main').getByText('Done', { exact: true })
+  const score = page.getByRole('region', { name: 'Your score', exact: true })
+  await expect(score).toContainText('This topic is now done.')
+
+  await page.getByRole('button', { name: 'Mark as not done' }).click()
+  await page.getByRole('button', { name: 'Yes, mark as not done' }).click()
+
+  await expect(done).toBeHidden()
+  await expect(page.getByRole('main')).toContainText('This topic is not done any more.')
+  // The score is still there, and the page does not say "done" beside it any more.
+  await expect(score).toContainText('93 of 100')
+  await expect(score).not.toContainText('This topic is now done.')
+  await expect(score).toContainText('You need 90 of 100 to finish this topic.')
+
+  await page.goto('./#/?level=B1')
+  await page.reload()
+  await page.getByRole('main').getByRole('heading', { name: 'Fixture exam: writing' }).click()
+  await expect(topicLink(page, 'Fixture writing')).toContainText('Continue')
+
+  await topicLink(page, 'Fixture writing').click()
+  await enterScore(page, '91')
+
+  await expect(done).toBeVisible()
+  await expect(score).toContainText('This topic is now done.')
+  await expect(score.getByRole('list', { name: 'Your scores so far' }).getByRole('listitem')).toHaveText(['93', '91'])
 })

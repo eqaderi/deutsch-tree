@@ -12,6 +12,9 @@ test('the index says which nodes have a test, so the tree can offer it without l
   expect(hasTest['grammar-001']).toBe(true)
   // Not written yet: nothing to test.
   expect(hasTest['grammar-002']).toBe(false)
+  // Published, but without a pool: a score is typed in instead.
+  expect(hasTest['exam-schreiben-1']).toBe(false)
+  expect(hasTest['exam-sprechen-1']).toBe(false)
 })
 
 test('a draft pool inside a "coming soon" node is not a test', async () => {
