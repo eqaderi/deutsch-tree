@@ -81,7 +81,12 @@ export function outlineOf(pages: string[], profile: BookProfile, firstPage: numb
 const list = (numbers: number[]) => (numbers.length > 0 ? numbers.join(', ') : 'none')
 
 /** Everything in the outline that does not match the profile's exam structure. */
-export function outlineErrors(exams: ExamOutline[], profile: BookProfile, firstPage: number, lastPage: number): string[] {
+export function outlineErrors(
+  exams: ExamOutline[],
+  profile: BookProfile,
+  firstPage: number,
+  lastPage: number,
+): string[] {
   if (exams.length === 0) {
     return [
       `No exam heading found on pages ${firstPage} to ${lastPage}. The pattern for an exam's heading is ${profile.examPdf.exam}`,

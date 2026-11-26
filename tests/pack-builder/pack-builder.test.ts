@@ -180,7 +180,7 @@ test('the answer key gives every item of every Lesen and Hören part its answer'
   ])
 })
 
-test('the description lists each part\'s items with the answers an answer sheet offers', async () => {
+test("the description lists each part's items with the answers an answer sheet offers", async () => {
   const { packDir } = await build()
   const description = await readJson(packDir, 'pack.json')
   const items = (moduleId: string, part: number) =>
@@ -321,7 +321,8 @@ test('a part with fewer answers in the key than items is an error, not a shifted
   expect(report.errors).toEqual([
     {
       source: 'answer-key',
-      message: 'Exam 1, Lesen Teil 2: the key has 5 answers but the part has 6 items. Printed numbers found: 7, 8, 9, 10, 11',
+      message:
+        'Exam 1, Lesen Teil 2: the key has 5 answers but the part has 6 items. Printed numbers found: 7, 8, 9, 10, 11',
     },
   ])
 })
@@ -419,4 +420,219 @@ test('an existing pack is left alone unless the build is told to replace it', as
   // Nothing of the old pack is left behind, and no working folder either.
   expect(await readdir(first.outDir)).toEqual(['fixture-book'])
   expect(await readdir(path.join(first.outDir, 'fixture-book', 'exams'))).toEqual(['01'])
+})
+
+// ---------------------------------------------------------------------------
+// A book laid out differently: everything book-specific comes from the profile
+// ---------------------------------------------------------------------------
+
+/**
+ * A book unlike the default one: other names, a running head on every page
+ * instead of headings, contents and transcripts that repeat the headings, a
+ * two-column answer key with no part headings and one-letter answers, and
+ * recordings numbered as tracks in two folders.
+ */
+function otherBook(): FixtureBook {
+  const exam = (number: number): string[][] => [
+    [`Übungssatz ${number} | Leseverstehen | Aufgabe 1`, 'Placeholder text.'],
+    [`Übungssatz ${number} | Leseverstehen | Aufgabe 1`, 'Placeholder text, continued.'],
+    [`Übungssatz ${number} | Leseverstehen | Aufgabe 2`, 'Placeholder text.'],
+    [`Übungssatz ${number} | Hörverstehen | Aufgabe 1`, 'Placeholder text.'],
+    [`Übungssatz ${number} | Hörverstehen | Aufgabe 2`, 'Placeholder text.'],
+    [`Übungssatz ${number} | Schriftlicher Ausdruck`, 'Placeholder text.'],
+  ]
+  return {
+    examPages: [
+      ['Contents', 'Übungssatz 1 | page 3', 'Übungssatz 2 | page 9'],
+      ['Introduction', 'Placeholder text.'],
+      ...exam(1),
+      ...exam(2),
+      ['Transcripts', 'Übungssatz 1 | Hörverstehen | Aufgabe 1', 'Placeholder text.'],
+    ],
+    keyPages: [
+      {
+        columns: [
+          ['Lösungen zu Übungssatz 1', 'LV: 1. R 2. F 3. R 4. b 5. a', 'HV: 1. c 2. a 3. b 4. b'],
+          ['Lösungen zu Übungssatz 2', 'LV: 1. F 2. F 3. R 4. c 5. c', 'HV: 1. a 2. b 3. c 4. a'],
+        ],
+      },
+    ],
+    recordings: ['cover.jpg', 'CD1/Track 2.mp3', 'CD1/Track 3.mp3', 'CD2/Track 10.mp3', 'CD2/Track 11.mp3'],
+  }
+}
+
+const otherProfile: PackBuildOptions['profile'] = {
+  exams: 2,
+  modules: [
+    {
+      id: 'lesen',
+      title: 'Leseverstehen',
+      parts: [
+        { items: 3, choices: ['richtig', 'falsch'] },
+        { items: 2, choices: ['a', 'b', 'c'] },
+      ],
+    },
+    {
+      id: 'hoeren',
+      title: 'Hörverstehen',
+      recordings: true,
+      parts: [
+        { items: 2, choices: ['a', 'b', 'c'] },
+        { items: 2, choices: ['a', 'b', 'c'] },
+      ],
+    },
+    { id: 'schreiben', title: 'Schriftlicher Ausdruck' },
+  ],
+  examPdf: {
+    firstPage: 3,
+    lastPage: 14,
+    exam: '^Übungssatz (\\d+) \\|',
+    modules: {
+      lesen: '\\| Leseverstehen\\b',
+      hoeren: '\\| Hörverstehen\\b',
+      schreiben: '\\| Schriftlicher Ausdruck$',
+    },
+    part: '\\| Aufgabe (\\d+)$',
+  },
+  answerKey: {
+    columns: 2,
+    exam: 'Übungssatz (\\d+)',
+    modules: { lesen: '^LV:', hoeren: '^HV:' },
+    part: null,
+    item: '(\\d+)\\. (R|F|[a-c])(?!\\S)',
+    answers: { R: 'richtig', F: 'falsch' },
+  },
+  recordings: { file: '^Track (?<track>\\d+)$', ignore: '\\.jpg$' },
+}
+
+test("a book with another layout is read with that book's profile", async () => {
+  const { report, packDir } = await build(otherBook(), { profile: otherProfile })
+  expect(report.errors).toEqual([])
+  expect(report.repairs).toEqual([])
+
+  const description = await readJson(packDir, 'pack.json')
+  expect(description.examCount).toBe(2)
+  // The contents page, the introduction and the transcripts belong to no exam.
+  expect(description.exams.map((exam: { sourcePages: unknown }) => exam.sourcePages)).toEqual([
+    { first: 3, last: 8 },
+    { first: 9, last: 14 },
+  ])
+  const outline = description.exams[1].modules.map(
+    (module: { title: string; sourcePages: unknown; parts: Array<{ sourcePages: unknown }> }) => [
+      module.title,
+      module.sourcePages,
+      module.parts.map((part) => part.sourcePages),
+    ],
+  )
+  expect(outline).toEqual([
+    [
+      'Leseverstehen',
+      { first: 9, last: 11 },
+      [
+        { first: 9, last: 10 },
+        { first: 11, last: 11 },
+      ],
+    ],
+    [
+      'Hörverstehen',
+      { first: 12, last: 13 },
+      [
+        { first: 12, last: 12 },
+        { first: 13, last: 13 },
+      ],
+    ],
+    ['Schriftlicher Ausdruck', { first: 14, last: 14 }, []],
+  ])
+
+  // The key has no part headings: answers are cut into parts by item count.
+  expect(await answersOf(packDir, 1, 'lesen', 1)).toEqual([
+    [1, 'richtig'],
+    [2, 'falsch'],
+    [3, 'richtig'],
+  ])
+  expect(await answersOf(packDir, 1, 'lesen', 2)).toEqual([
+    [4, 'b'],
+    [5, 'a'],
+  ])
+  expect(await answersOf(packDir, 2, 'lesen', 1)).toEqual([
+    [1, 'falsch'],
+    [2, 'falsch'],
+    [3, 'richtig'],
+  ])
+  expect(await answersOf(packDir, 2, 'hoeren', 2)).toEqual([
+    [3, 'c'],
+    [4, 'a'],
+  ])
+
+  // Tracks in number order are the Hören parts in book order: 2, 3, 10, 11.
+  const recordings = description.exams.map((exam: { modules: Array<{ id: string; parts: unknown[] }> }) =>
+    exam.modules
+      .find((module) => module.id === 'hoeren')
+      ?.parts.map((part) => (part as { recordings: unknown }).recordings),
+  )
+  expect(recordings).toEqual([
+    [
+      [{ file: 'exams/01/hoeren-1.mp3', source: 'CD1/Track 2.mp3' }],
+      [{ file: 'exams/01/hoeren-2.mp3', source: 'CD1/Track 3.mp3' }],
+    ],
+    [
+      [{ file: 'exams/02/hoeren-1.mp3', source: 'CD2/Track 10.mp3' }],
+      [{ file: 'exams/02/hoeren-2.mp3', source: 'CD2/Track 11.mp3' }],
+    ],
+  ])
+})
+
+test('with track numbers, a missing recording is an error rather than a shifted mapping', async () => {
+  const book = otherBook()
+  book.recordings = book.recordings.filter((name) => name !== 'CD1/Track 3.mp3')
+  const { report, packDir } = await build(book, { profile: otherProfile })
+
+  expect(packDir).toBeNull()
+  expect(report.errors).toEqual([
+    { source: 'recordings', message: expect.stringMatching(/^Found 3 recordings, but .* need 4$/) },
+  ])
+})
+
+test('a part may have several recordings, kept in file-name order', async () => {
+  const book = fixtureBook()
+  book.recordings = book.recordings.flatMap((name) =>
+    name === 'Modelltest-1-Hoeren-Teil-1.mp3'
+      ? ['Modelltest-1-Hoeren-Teil-1b.mp3', 'Modelltest-1-Hoeren-Teil-1a.mp3']
+      : [name],
+  )
+  const { report, packDir } = await build(book)
+
+  expect(report.errors).toEqual([])
+  const description = await readJson(packDir, 'pack.json')
+  expect(description.exams[0].modules[1].parts[0].recordings).toEqual([
+    { file: 'exams/01/hoeren-1-1.mp3', source: 'Modelltest-1-Hoeren-Teil-1a.mp3' },
+    { file: 'exams/01/hoeren-1-2.mp3', source: 'Modelltest-1-Hoeren-Teil-1b.mp3' },
+  ])
+})
+
+test('a different number of exams than the profile expects is an error', async () => {
+  const { report, packDir } = await build(fixtureBook(), { profile: { exams: 15 } })
+
+  expect(packDir).toBeNull()
+  expect(report.errors).toContainEqual({
+    source: 'exam-pdf',
+    message: 'The profile says the book has 15 exams, but 2 exam headings were found',
+  })
+})
+
+test('a profile with a mistake in it is reported before any file is read', async () => {
+  const { report, packDir } = await build(fixtureBook(), {
+    profile: {
+      examPdf: { exam: '^Modelltest (\\d+' },
+      recordings: { file: '^Track (\\d+)$' },
+      // @ts-expect-error a misspelt key
+      answerkey: {},
+    },
+  })
+
+  expect(packDir).toBeNull()
+  expect(report.errors.map((error) => error.source)).toEqual(['profile', 'profile', 'profile'])
+  expect(report.errors.map((error) => error.message).join('\n')).toMatch(/examPdf\.exam: is not a valid pattern/)
+  expect(report.errors.map((error) => error.message).join('\n')).toMatch(/recordings\.file: needs either/)
+  expect(report.errors.map((error) => error.message).join('\n')).toMatch(/answerkey/)
 })

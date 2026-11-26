@@ -16,13 +16,16 @@ import { readFile } from 'node:fs/promises'
 import { parse } from 'yaml'
 import { z } from 'zod'
 
-const pattern = z.string().min(1).superRefine((source, ctx) => {
-  try {
-    new RegExp(source, 'gmu')
-  } catch (error) {
-    ctx.addIssue({ code: 'custom', message: `is not a valid pattern: ${(error as Error).message}` })
-  }
-})
+const pattern = z
+  .string()
+  .min(1)
+  .superRefine((source, ctx) => {
+    try {
+      new RegExp(source, 'gmu')
+    } catch (error) {
+      ctx.addIssue({ code: 'custom', message: `is not a valid pattern: ${(error as Error).message}` })
+    }
+  })
 
 const moduleId = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens')
 const pageNumber = z.number().int().positive()

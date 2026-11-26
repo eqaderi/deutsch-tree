@@ -75,6 +75,8 @@ export interface PackBuildReport {
    * right, because the key is read in order; check these against the book.
    */
   repairs: PackAnswerRepair[]
+  /** The description of the pack that was written, or null when there were errors. */
+  pack: PackDescription | null
 }
 
 export interface PackBuildResult {
@@ -183,7 +185,10 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
   const errors: PackBuildProblem[] = []
   let headings: FoundHeading[] = []
   let repairs: PackAnswerRepair[] = []
-  const failed = (): PackBuildResult => ({ report: { ok: false, errors, headings, repairs }, packDir: null })
+  const failed = (): PackBuildResult => ({
+    report: { ok: false, errors, headings, repairs, pack: null },
+    packDir: null,
+  })
   const problem = (source: ProblemSource, message: string) => errors.push({ source, message })
 
   const resolved = resolveProfile(options.profile)
@@ -203,7 +208,7 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
   }
   const packDir = path.join(options.outDir, id)
   if (!options.replace && (await exists(packDir))) {
-    problem('output', `The pack folder ${packDir} already exists. Remove it, or build again with replace`)
+    problem('output', `The pack folder ${packDir} already exists. Remove it, or build again with --replace`)
   }
 
   let pages: string[]
@@ -279,9 +284,107 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
     await writeFile(path.join(building, PACK_ANSWER_KEY_FILE), `${JSON.stringify(answerKey, null, 2)}\n`)
     if (options.replace) await rm(packDir, { recursive: true, force: true })
     await rename(building, packDir)
+  } catch (error) {
+    problem('output', `The pack could not be written: ${(error as Error).message}`)
+    return failed()
   } finally {
     await rm(building, { recursive: true, force: true })
   }
 
-  return { report: { ok: true, errors, headings, repairs }, packDir }
+  return { report: { ok: true, errors, headings, repairs, pack: description }, packDir }
+}
+
+// ---------------------------------------------------------------------------
+// The report as text
+// ---------------------------------------------------------------------------
+
+const SOURCE_TITLES: Record<ProblemSource, string> = {
+  profile: 'Profile',
+  'exam-pdf': 'Exam PDF',
+  'answer-key': 'Answer key',
+  recordings: 'Recordings',
+  output: 'Pack folder',
+}
+
+const plural = (count: number, word: string) => `${count} ${word}${count === 1 ? '' : 's'}`
+const pagesText = (range: PageRange) =>
+  range.first === range.last ? `page ${range.first}` : `pages ${range.first} to ${range.last}`
+
+/** What was found in a failed build: each exam's headings and the pages they are on. */
+function headingLines(headings: FoundHeading[]): string[] {
+  const lines: string[] = []
+  for (const heading of headings) {
+    if (heading.module === undefined) lines.push(`  Exam ${heading.exam} (page ${heading.page})`)
+    else if (heading.part === undefined) lines.push(`    ${heading.module} (page ${heading.page})`)
+    else lines[lines.length - 1] += `, Teil ${heading.part} (page ${heading.page})`
+  }
+  return lines
+}
+
+/** The report for a terminal: every problem, or what the pack holds and what to check by hand. */
+export function formatReport(report: PackBuildReport, packDir: string | null): string {
+  const lines: string[] = []
+  if (!report.pack) {
+    lines.push(`No pack was written. ${plural(report.errors.length, 'problem')}:`)
+    for (const [source, title] of Object.entries(SOURCE_TITLES)) {
+      const problems = report.errors.filter((error) => error.source === source)
+      if (problems.length === 0) continue
+      lines.push('', title)
+      for (const error of problems) lines.push(`  - ${error.message}`)
+    }
+    if (report.headings.length > 0) {
+      lines.push('', 'Headings found in the exam PDF:', ...headingLines(report.headings))
+    }
+    return lines.join('\n')
+  }
+
+  const parts = report.pack.exams.flatMap((exam) => exam.modules.flatMap((module) => module.parts))
+  lines.push(
+    `Pack "${report.pack.name}" written to ${packDir}`,
+    [
+      plural(report.pack.examCount, 'exam'),
+      plural(
+        report.pack.exams.reduce((sum, exam) => sum + exam.pageCount, 0),
+        'page',
+      ),
+      plural(
+        parts.reduce((sum, part) => sum + part.items.length, 0),
+        'answer',
+      ),
+      plural(
+        parts.reduce((sum, part) => sum + part.recordings.length, 0),
+        'recording',
+      ),
+    ].join(', '),
+    '',
+    'Page numbers count the pages of the exam PDF from 1; the numbers printed in the book may differ.',
+    'Check a few exams against the book.',
+  )
+  for (const exam of report.pack.exams) {
+    lines.push(`Exam ${exam.number}: ${pagesText(exam.sourcePages)}`)
+    for (const module of exam.modules) {
+      lines.push(`  ${module.title}: ${pagesText(module.sourcePages)}`)
+      for (const part of module.parts) {
+        const items = `items ${part.items[0]?.number} to ${part.items.at(-1)?.number}`
+        const recordings = part.recordings.map((recording) => recording.source).join(', ')
+        lines.push(
+          `    Teil ${part.number}: ${pagesText(part.sourcePages)}, ${items}${recordings ? `, ${recordings}` : ''}`,
+        )
+      }
+    }
+  }
+  if (report.repairs.length > 0) {
+    const titles = new Map(report.pack.exams.flatMap((exam) => exam.modules.map((module) => [module.id, module.title])))
+    lines.push(
+      '',
+      'The answer key prints a wrong item number in these places. The answer is filed under the item',
+      'it belongs to by its place in the key. Check each one against the book:',
+    )
+    for (const repair of report.repairs) {
+      lines.push(
+        `  Exam ${repair.exam}, ${titles.get(repair.module) ?? repair.module} Teil ${repair.part}: item ${repair.item} is printed as ${repair.printed}`,
+      )
+    }
+  }
+  return lines.join('\n')
 }

@@ -16,6 +16,7 @@
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "content:check": "node src/content-pipeline/cli.ts",
+    "pack:build": "node src/pack-builder/cli.ts",
     "test:unit": "vitest run",
     "test:pipeline": "vitest run tests/content-pipeline",
     "test:browser": "playwright test"

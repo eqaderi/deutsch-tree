@@ -72,7 +72,9 @@ export async function matchRecordings(
     const exam = Number(match.named.exam)
     const part = Number(match.named.part)
     if (!examNumbers.includes(exam)) {
-      errors.push(`"${source}" reads as exam ${exam}, ${module.title} Teil ${part}, but the exam PDF has no exam ${exam}`)
+      errors.push(
+        `"${source}" reads as exam ${exam}, ${module.title} Teil ${part}, but the exam PDF has no exam ${exam}`,
+      )
     } else if (!(part >= 1 && part <= partCount)) {
       errors.push(
         `"${source}" reads as exam ${exam}, ${module.title} Teil ${part}, but ${module.title} has parts 1 to ${partCount}`,
