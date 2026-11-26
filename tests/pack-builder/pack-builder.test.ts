@@ -645,3 +645,57 @@ test('a profile with a mistake in it is reported before any file is read', async
   expect(report.errors.map((error) => error.message).join('\n')).toMatch(/recordings\.file: needs either/)
   expect(report.errors.map((error) => error.message).join('\n')).toMatch(/answerkey/)
 })
+
+test.each([
+  ['examPdf.firstPage', { examPdf: { ...otherProfile?.examPdf, firstPage: undefined } }, 'exam-pdf'],
+  ['examPdf.lastPage', { examPdf: { ...otherProfile?.examPdf, lastPage: undefined } }, 'exam-pdf'],
+  ['answerKey.columns', { answerKey: { ...otherProfile?.answerKey, columns: undefined } }, 'answer-key'],
+  ['answerKey.answers', { answerKey: { ...otherProfile?.answerKey, answers: undefined } }, 'answer-key'],
+  ['recordings.ignore', { recordings: { ...otherProfile?.recordings, ignore: undefined } }, 'recordings'],
+] as const)('that book does not build without %s in its profile', async (_key, change, source) => {
+  const { report, packDir } = await build(otherBook(), { profile: { ...otherProfile, ...change } })
+
+  expect(packDir).toBeNull()
+  expect(new Set(report.errors.map((error) => error.source))).toEqual(new Set([source]))
+})
+
+test('exam pages set in columns are read column by column, and parts that share a page both get it', async () => {
+  // Page 5 of the book now holds Lesen Teil 3 in its left half and Teil 4 in its right half.
+  const book = fixtureBook()
+  book.examPages.splice(4, 2, {
+    columns: [
+      ['Teil 3', 'Placeholder text.'],
+      ['Teil 4', 'Placeholder text.'],
+    ],
+  })
+
+  const asOneColumn = await build(book)
+  expect(asOneColumn.packDir).toBeNull()
+  expect(asOneColumn.report.errors).toEqual([
+    { source: 'exam-pdf', message: expect.stringMatching(/^Exam 1, Lesen .*Missing: part 3, 4\b/) },
+  ])
+
+  const { report, packDir } = await build(book, { profile: { examPdf: { columns: 2 } } })
+  expect(report.errors).toEqual([])
+  const description = await readJson(packDir, 'pack.json')
+  expect(description.exams[0].modules[0].parts.map((part: { sourcePages: unknown }) => part.sourcePages)).toEqual([
+    { first: 2, last: 2 },
+    { first: 3, last: 4 },
+    { first: 5, last: 5 },
+    { first: 5, last: 5 },
+    { first: 6, last: 6 },
+  ])
+})
+
+test('a pattern matches however the PDF and the profile spell their umlauts', async () => {
+  // "ö" as one character in the PDF, as "o" plus a combining mark in the profile.
+  const { report } = await build(fixtureBook(), {
+    profile: {
+      examPdf: {
+        modules: { lesen: '^Lesen$', hoeren: '^Ho\u0308ren$', schreiben: '^Schreiben$', sprechen: '^Sprechen$' },
+      },
+    },
+  })
+
+  expect(report.errors).toEqual([])
+})

@@ -23,7 +23,7 @@ import {
   type PageRange,
 } from '../content-model/pack.ts'
 import { itemsByPart, readAnswerKey } from './answer-key.ts'
-import { type ExamOutline, outlineErrors, outlineOf } from './exam-pdf.ts'
+import { checkOutline, type ExamOutline, outlineOf } from './exam-pdf.ts'
 import { readPdfText, splitPdf } from './pdf.ts'
 import { type BookProfileOverrides, resolveProfile } from './profile.ts'
 import { type MatchedRecording, matchRecordings } from './recordings.ts'
@@ -118,7 +118,7 @@ function placeRecordings(recordings: MatchedRecording[], moduleId: string): Pack
   })
 }
 
-/** The description's exams, from an outline that has passed outlineErrors. */
+/** The description's exams, from an outline that has passed checkOutline. */
 function describeExams(exams: ExamOutline[], lastPage: number, recordings: MatchedRecording[]): PackExam[] {
   return exams.map((exam, examIndex) => {
     const examLast = (exams[examIndex + 1]?.page ?? lastPage + 1) - 1
@@ -213,7 +213,7 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
 
   let pages: string[]
   try {
-    pages = await readPdfText(options.examPdf)
+    pages = await readPdfText(options.examPdf, profile.examPdf.columns)
   } catch (error) {
     problem('exam-pdf', `${options.examPdf} cannot be read as a PDF: ${(error as Error).message}`)
     return failed()
@@ -226,9 +226,10 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
   const lastPage = Math.min(profile.examPdf.lastPage ?? pages.length, pages.length)
   const outline = outlineOf(pages, profile, firstPage, lastPage)
   headings = headingsOf(outline)
-  for (const message of outlineErrors(outline, profile, firstPage, lastPage)) problem('exam-pdf', message)
-  // Without exams there is nothing to hold the key and the recordings against.
-  if (outline.length === 0) return failed()
+  const check = checkOutline(outline, profile, firstPage, lastPage)
+  for (const message of check.errors) problem('exam-pdf', message)
+  // Without a sure list of exams there is nothing to hold the key and the recordings against.
+  if (!check.examsAddUp) return failed()
 
   let keyPages: string[]
   try {

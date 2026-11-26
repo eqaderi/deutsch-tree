@@ -80,17 +80,29 @@ export function outlineOf(pages: string[], profile: BookProfile, firstPage: numb
 
 const list = (numbers: number[]) => (numbers.length > 0 ? numbers.join(', ') : 'none')
 
+export interface OutlineCheck {
+  errors: string[]
+  /**
+   * False when the list of exams itself is in doubt. The answer key and the
+   * recordings are then not checked: every mismatch would be an echo.
+   */
+  examsAddUp: boolean
+}
+
 /** Everything in the outline that does not match the profile's exam structure. */
-export function outlineErrors(
+export function checkOutline(
   exams: ExamOutline[],
   profile: BookProfile,
   firstPage: number,
   lastPage: number,
-): string[] {
+): OutlineCheck {
   if (exams.length === 0) {
-    return [
-      `No exam heading found on pages ${firstPage} to ${lastPage}. The pattern for an exam's heading is ${profile.examPdf.exam}`,
-    ]
+    return {
+      errors: [
+        `No exam heading found on pages ${firstPage} to ${lastPage}. The pattern for an exam's heading is ${profile.examPdf.exam}`,
+      ],
+      examsAddUp: false,
+    }
   }
   const errors: string[] = []
   const numbers = exams.map((exam) => exam.number)
@@ -101,6 +113,7 @@ export function outlineErrors(
   if (profile.exams !== undefined && profile.exams !== exams.length) {
     errors.push(`The profile says the book has ${profile.exams} exams, but ${exams.length} exam headings were found`)
   }
+  const examsAddUp = errors.length === 0
   for (const exam of exams) {
     const expected = profile.modules.map((module) => module.id)
     const found = exam.modules.map((module) => module.profile.id)
@@ -126,5 +139,5 @@ export function outlineErrors(
       }
     }
   }
-  return errors
+  return { errors, examsAddUp }
 }

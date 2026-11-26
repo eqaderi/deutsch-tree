@@ -76,7 +76,8 @@ function linesOf(fragments: Fragment[]): string[] {
       text += text !== '' && gap > 0.15 * fragment.height ? ` ${fragment.text}` : fragment.text
       end = fragment.x + fragment.width
     }
-    return text.replace(/\s+/g, ' ').trim()
+    // One spelling for umlauts (a single character), as in the profile's patterns.
+    return text.normalize('NFC').replace(/\s+/g, ' ').trim()
   })
 }
 

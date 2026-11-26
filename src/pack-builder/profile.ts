@@ -19,6 +19,8 @@ import { z } from 'zod'
 const pattern = z
   .string()
   .min(1)
+  // One spelling for umlauts (a single character), as in the text read from a PDF.
+  .transform((source) => source.normalize('NFC'))
   .superRefine((source, ctx) => {
     try {
       new RegExp(source, 'gmu')
@@ -59,6 +61,8 @@ export const bookProfileSchema = z
     /** The modules of one exam, in the order they appear in the book. */
     modules: z.array(moduleProfile).min(1),
     examPdf: z.strictObject({
+      /** How many columns of text a page of the exams has. */
+      columns: z.number().int().positive().default(1),
       /** Pages before this one are skipped (contents, introduction). */
       firstPage: pageNumber.default(1),
       /** Pages after this one are skipped (transcripts, answer sheets). Default: the last page. */
