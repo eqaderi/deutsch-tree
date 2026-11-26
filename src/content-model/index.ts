@@ -495,6 +495,17 @@ export const nodeFileSchema = z
 
 export type NodeFile = z.infer<typeof nodeFileSchema>
 
+/**
+ * The question types in which the learner produces the form: types it, or
+ * builds the sentence from its pieces. A recognise-only node must not use
+ * them. Every other type offers the forms, or a sentence to judge, and asks
+ * the learner to recognise and understand: those are the understanding
+ * questions a recognise-only pool is made of.
+ */
+export const PRODUCING_QUESTION_TYPES = ['typed-answer', 'typed-gap-fill', 'word-order'] as const satisfies Array<
+  NonNullable<NodeFile['questions']>[number]['type']
+>
+
 // ---------------------------------------------------------------------------
 // Chapter list schema (source): chapters.yaml
 // ---------------------------------------------------------------------------
