@@ -53,9 +53,10 @@ ending, because the pipeline runs directly in Node.
 | `tests/pack-builder/` | Seam 4: build a pack from a synthetic book (`fixture.ts`) and assert on the pack. |
 
 The app never reads node files. It fetches `content/index.json` (the chapters
-and every node's summary, both in curriculum order) and
-`content/nodes/<id>.json` (one node's page), both written by the pipeline at
-build time.
+and every node's summary, both in curriculum order),
+`content/nodes/<id>.json` (one node's page) and
+`content/official-mock-exams.json` (the exams the readiness view links to),
+all written by the pipeline at build time.
 
 Page addresses live after the `#`, for example `#/node/grammar-001`. The site
 is plain files, so this is what keeps direct links and reloads working on
