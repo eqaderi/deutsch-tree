@@ -23,7 +23,12 @@ test('a node file that breaks the content model is reported by file and place, a
 
   expect(report.ok).toBe(false)
   expect(report.errors).toEqual([
-    { file: 'nodes/grammar/grammar-001.yaml', where: 'kind', message: expect.stringContaining('"grammar"') },
+    {
+      file: 'nodes/grammar/grammar-001.yaml',
+      node: 'grammar-001',
+      where: 'kind',
+      message: expect.stringContaining('"grammar"'),
+    },
   ])
   expect(bundle).toBeNull()
 })

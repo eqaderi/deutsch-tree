@@ -24,6 +24,10 @@ import {
 export interface ContentProblem {
   /** Path of the file, relative to the content folder. */
   file: string
+  /** Id of the node. Absent only when the problem is not about one node. */
+  node?: string
+  /** Id of the question, when the problem is inside one. */
+  question?: string
   /** Where in the file, such as `questions[1].answer`. Absent for whole-file problems. */
   where?: string
   message: string
@@ -58,21 +62,27 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
     try {
       raw = parseYaml(source)
     } catch (error) {
-      errors.push({ file, message: `is not valid YAML: ${(error as Error).message}` })
+      errors.push({ file, node: nodeOf(file), message: `is not valid YAML: ${(error as Error).message}` })
       continue
     }
 
     const parsed = nodeFileSchema.safeParse(raw)
     if (!parsed.success) {
       for (const issue of parsed.error.issues) {
-        errors.push({ file, where: formatPath(issue.path), message: issue.message })
+        errors.push({
+          file,
+          node: nodeOf(file, raw),
+          ...questionAt(issue.path, raw),
+          where: formatPath(issue.path),
+          message: issue.message,
+        })
       }
       continue
     }
 
-    const expectedName = `${parsed.data.id}.yaml`
-    if (path.basename(file) !== expectedName) {
-      errors.push({ file, where: 'id', message: `the file of node "${parsed.data.id}" must be named ${expectedName}` })
+    const { id } = parsed.data
+    if (path.basename(file) !== `${id}.yaml`) {
+      errors.push({ file, node: id, where: 'id', message: `the file of node "${id}" must be named ${id}.yaml` })
       continue
     }
 
@@ -139,6 +149,19 @@ async function findNodeFiles(contentDir: string): Promise<string[]> {
     .filter((entry) => entry.endsWith('.yaml'))
     .map((entry) => path.posix.join('nodes', entry.split(path.sep).join('/')))
     .sort()
+}
+
+/** The node a file holds: the id it states, or else the id its name promises. */
+function nodeOf(file: string, raw?: unknown): string {
+  const id = (raw as { id?: unknown } | null | undefined)?.id
+  return typeof id === 'string' && id !== '' ? id : path.basename(file, '.yaml')
+}
+
+/** The question that a place such as `questions[1].answer` lies in, if it states an id. */
+function questionAt(pathParts: PropertyKey[], raw: unknown): { question?: string } {
+  if (pathParts[0] !== 'questions' || typeof pathParts[1] !== 'number') return {}
+  const id = (raw as { questions?: Array<{ id?: unknown } | null> }).questions?.[pathParts[1]]?.id
+  return typeof id === 'string' && id !== '' ? { question: id } : {}
 }
 
 function compileNode(file: NodeFile): CompiledNode {
