@@ -392,8 +392,19 @@ export interface SearchData {
   entries: SearchEntry[]
 }
 
+/**
+ * `overview.json`: every grammar table, for the "all grammar at a glance"
+ * page, in curriculum order. A node without a table has no entry. The page
+ * takes each node's title, level and chapter from the index. The app fetches
+ * this file when the learner opens that page, never before.
+ */
+export interface GrammarOverview {
+  tables: Array<{ node: string; table: GrammarTable }>
+}
+
 export interface ContentBundle {
   index: ContentIndex
   nodes: CompiledNode[]
   search: Localised<SearchData>
+  overview: GrammarOverview
 }
