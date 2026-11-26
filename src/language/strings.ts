@@ -59,11 +59,19 @@ export const en = {
     'multiple-choice': 'Choose the right answer.',
     'gap-fill': 'Choose the word that fits the gap.',
     'true-false': 'Is this sentence correct German?',
+    'find-error': 'One word in this sentence is wrong. Choose it.',
+    'word-order': 'Build the sentence: choose the words in the right order.',
+    matching: 'Choose the partner that fits each word.',
     'typed-answer': 'Type the answer.',
     'typed-gap-fill': 'Type the word that fits the gap.',
   } satisfies Record<Question['type'], string>,
   /** Read out in place of an empty gap. */
   gap: 'gap',
+  /** Word ordering: names the line on which the sentence is built, and the words it is built from. */
+  yourSentence: 'Your sentence',
+  wordsToPlace: 'Words',
+  /** Matching: stands in a list of partners until one is chosen. */
+  choosePartner: 'Choose…',
   sentenceCorrect: 'Correct',
   sentenceNotCorrect: 'Not correct',
   /** The name of the buttons that write ä, ö, ü and ß into a typed answer. */

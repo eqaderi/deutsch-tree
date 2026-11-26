@@ -52,7 +52,7 @@ mistakes:
       fa: با *du* پایانه *-st* است.
       de: Bei *du* ist die Endung *-st*.
 
-# 15 questions: the smallest pool a published node may have.
+# The first 15 questions are the smallest pool a published node may have.
 questions:
   - id: q1
     type: multiple-choice
@@ -186,8 +186,45 @@ questions:
       en: It must be *ihr kocht*.
       fa: باید *ihr kocht* باشد.
       de: Es muss *ihr kocht* heißen.
+  # One of each further type, and a word ordering question with two right orders.
+  - id: order-1
+    type: word-order
+    answers:
+      - [wo, wohnst, du]
+    end: "?"
+    explanation:
+      en: In a question with *wo* the verb comes second.
+      fa: در پرسش با *wo* فعل در جای دوم می‌آید.
+      de: In einer Frage mit *wo* steht das Verb auf Platz 2.
+  - id: order-2
+    type: word-order
+    answers:
+      - [ich, wohne, in Berlin]
+      - [in Berlin, wohne, ich]
+    explanation:
+      en: The verb is in second place; *ich* or *in Berlin* can come first.
+      fa: فعل در جای دوم است؛ *ich* یا *in Berlin* می‌تواند اول بیاید.
+      de: Das Verb steht auf Platz 2. *ich* oder *in Berlin* kann am Anfang stehen.
+  - id: error-1
+    type: find-error
+    prompt: Wir wohnst in Wien.
+    answer: wohnst
+    explanation:
+      en: It must be *wir wohnen*.
+      fa: باید *wir wohnen* باشد.
+      de: Es muss *wir wohnen* heißen.
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, lerne]
+      - [du, lernst]
+      - [wir, lernen]
+    explanation:
+      en: With *ich* the ending is *-e*, with *du* it is *-st* and with *wir* it is *-en*.
+      fa: با *ich* پایانه *-e* است، با *du* پایانه *-st* و با *wir* پایانه *-en*.
+      de: Bei *ich* ist die Endung *-e*, bei *du* ist sie *-st* und bei *wir* ist sie *-en*.
 
 review:
   reviewer: Fixture reviewer
   date: 2026-01-01
-  pool: cede7a8faa3402d6
+  pool: 85af6dcc5459a89c
