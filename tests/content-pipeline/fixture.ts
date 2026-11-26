@@ -1,27 +1,78 @@
-import { cp, mkdtemp, readFile, writeFile } from 'node:fs/promises'
+import { cp, mkdir, mkdtemp, readFile, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { parse, stringify } from 'yaml'
+import { poolFingerprint } from '../../src/content-pipeline/review.ts'
 
 /** The small, valid content folder that tests start from. */
 export const fixtureContent = fileURLToPath(new URL('../fixtures/content', import.meta.url))
 
+/** The fixture's published node and its "coming soon" node. */
+export const PUBLISHED = 'nodes/grammar/grammar-001.yaml'
+export const COMING_SOON = 'nodes/grammar/grammar-002.yaml'
+
 /**
- * A temporary copy of the fixture content with some files rewritten.
+ * A temporary copy of the fixture content with some files rewritten or added.
  * Keys are paths inside the content folder; each function gets the file's
- * text and returns the new text.
+ * text (empty for a new file) and returns the new text. An edit that changes
+ * nothing is a mistake in the test, so it throws.
  */
 export async function fixtureContentWith(edits: Record<string, (text: string) => string>): Promise<string> {
   const dir = await mkdtemp(path.join(tmpdir(), 'deutsch-tree-content-'))
   await cp(fixtureContent, dir, { recursive: true })
   for (const [file, edit] of Object.entries(edits)) {
     const target = path.join(dir, file)
-    await writeFile(target, edit(await readFile(target, 'utf8')))
+    const before = await readFile(target, 'utf8').catch(() => '')
+    const after = edit(before)
+    if (after === before) throw new Error(`the edit of ${file} changed nothing`)
+    await mkdir(path.dirname(target), { recursive: true })
+    await writeFile(target, after)
   }
   return dir
 }
 
-/** A node file's text with its review record cut out: the node as it is before any review. */
-export function withoutReviewRecord(text: string): string {
-  return text.replace(/^review:\n(?:[ \t].*\n?)*/m, '')
+// biome-ignore lint/suspicious/noExplicitAny: a test breaks a node on purpose, in ways the schema forbids.
+type LooseNode = any
+
+/**
+ * An edit for `fixtureContentWith` that changes a node as data instead of as
+ * text: `changeNode((node) => { delete node.title.fa })`.
+ */
+export function changeNode(change: (node: LooseNode) => void): (text: string) => string {
+  return (text) => {
+    const node = parse(text)
+    change(node)
+    return stringify(node)
+  }
 }
+
+/** The text of a new, valid "coming soon" grammar node, for a test that needs more nodes than the fixture has. */
+export function comingSoonNode(id: string, fields: Record<string, unknown> = {}): string {
+  return stringify({
+    id,
+    kind: 'grammar',
+    level: 'A1',
+    order: Number(id.replace(/\D/g, '')),
+    status: 'coming-soon',
+    title: { en: `Extra topic ${id}`, fa: `موضوع اضافه ${id}`, de: `Zusatzthema ${id}` },
+    ...fields,
+  })
+}
+
+/**
+ * `changeNode` for a change to the questions of a published node, in a test
+ * that is not about the review: the review record is brought up to date, as
+ * a new review would do. Without it the test also gets "needs a new review".
+ */
+export function changeReviewedNode(change: (node: LooseNode) => void): (text: string) => string {
+  return changeNode((node) => {
+    change(node)
+    node.review.pool = poolFingerprint(node.questions)
+  })
+}
+
+/** An edit for `fixtureContentWith`: the node as it is before any review. */
+export const withoutReviewRecord = changeNode((node) => {
+  delete node.review
+})

@@ -36,7 +36,7 @@ ending, because the pipeline runs directly in Node.
 |---|---|
 | `content/` | The real content: one YAML file per node under `content/nodes/`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
-| `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. |
+| `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
 | `src/app/` | App shell: routes, tree, node page. `styles.css` holds the design tokens. |
 | `src/language/` | Interface strings and the language in use. Components take every word from here. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests never depend on the real content. |
@@ -55,10 +55,15 @@ GitHub Pages and from a local folder.
 
 - Content pipeline: start from `tests/fixtures/content`. To test broken
   content, use `fixtureContentWith` in `tests/content-pipeline/fixture.ts` to
-  get a temporary copy with one file changed. A fixture node is checked like
-  a real one: after changing its questions, record its review again with the
-  two review commands and `--content tests/fixtures/content`. The fixtures are
-  invented, so you may fill in that sheet yourself as "Fixture reviewer".
+  get a temporary copy with files changed or added; `changeNode` changes a
+  node as data. One test file per rule. How to add a rule and its test:
+  `content/README.md`, "Adding a check".
+  A fixture node is reviewed like a real one. A test that changes the
+  questions of the published node uses `changeReviewedNode`, or it also gets
+  "needs a new review". After changing the questions in a fixture file,
+  record its review again with the two review commands and
+  `--content tests/fixtures/content`; the fixtures are invented, so you may
+  fill in that sheet yourself as "Fixture reviewer".
 - Browser: import `test` and `expect` from `tests/browser/test.ts`, not from
   Playwright. That adds the rule that the site talks to no other server (no
   font service, no analytics). Each run builds the site from the fixture

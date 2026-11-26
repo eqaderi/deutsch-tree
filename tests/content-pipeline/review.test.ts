@@ -3,16 +3,34 @@ import path from 'node:path'
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { blindPool, type ReviewSheet, recordReview } from '../../src/content-pipeline/review.ts'
-import { fixtureContent, fixtureContentWith, withoutReviewRecord } from './fixture.ts'
+import { changeNode, fixtureContent, fixtureContentWith, PUBLISHED, withoutReviewRecord } from './fixture.ts'
 
-const NODE_FILE = 'nodes/grammar/grammar-001.yaml'
+/** What a careful reviewer answers to the fixture pool. Written out here, not read from the node file. */
+const RIGHT = {
+  q1: 'wohne',
+  q2: 'wohnst',
+  q3: 'wohnt',
+  q4: 'wohnen',
+  q5: 'wohnt',
+  q6: 'lerne',
+  q7: 'lernst',
+  q8: 'lernt',
+  q9: 'spielen',
+  q10: 'spielt',
+  q11: 'koche',
+  q12: 'kochst',
+  q13: 'kocht',
+  q14: 'kochen',
+  q15: 'kocht',
+}
 const BY = { reviewer: 'Second fixture reviewer', date: '2026-02-03' }
 
 test('the blind pool holds every question without its answer or its explanation', async () => {
   const sheet = await blindPool(fixtureContent, 'grammar-001')
 
   expect(sheet.node).toBe('grammar-001')
-  expect(sheet.questions).toEqual([
+  expect(sheet.questions.map((entry) => entry.id)).toEqual(Object.keys(RIGHT))
+  expect(sheet.questions.slice(0, 2)).toEqual([
     {
       id: 'q1',
       question: { type: 'multiple-choice', prompt: 'Ich ___ in Berlin.', options: ['wohne', 'wohnst', 'wohnt'] },
@@ -28,13 +46,14 @@ test('the blind pool holds every question without its answer or its explanation'
       objection: null,
     },
   ])
+  for (const entry of sheet.questions) expect(Object.keys(entry.question).sort()).toEqual(['options', 'prompt', 'type'])
   expect(JSON.stringify(sheet)).not.toContain('the ending is')
 })
 
 test('an answer that differs from the key is listed, and no record is written', async () => {
   const content = await unreviewedFixture()
-  const before = await readFile(path.join(content, NODE_FILE), 'utf8')
-  const sheet = answered(await blindPool(content, 'grammar-001'), { q1: 'wohne', q2: 'wohnen' })
+  const before = await readFile(path.join(content, PUBLISHED), 'utf8')
+  const sheet = answered(await blindPool(content, 'grammar-001'), { ...RIGHT, q2: 'wohnen' })
 
   const result = await recordReview(content, 'grammar-001', [sheet], BY)
 
@@ -42,19 +61,19 @@ test('an answer that differs from the key is listed, and no record is written', 
   expect(result.disagreements).toEqual([
     { question: 'q2', problem: 'the reviewer answered "wohnen", the key says "wohnst"' },
   ])
-  expect(await readFile(path.join(content, NODE_FILE), 'utf8')).toBe(before)
+  expect(await readFile(path.join(content, PUBLISHED), 'utf8')).toBe(before)
 })
 
 test('a review with no disagreement is recorded with the node, and the node can then be published', async () => {
   const content = await unreviewedFixture()
   expect((await compileContent(content)).report.ok).toBe(false)
-  const sheet = answered(await blindPool(content, 'grammar-001'), { q1: 'wohne', q2: 'wohnst' })
+  const sheet = answered(await blindPool(content, 'grammar-001'), RIGHT)
 
   const result = await recordReview(content, 'grammar-001', [sheet], BY)
 
   expect(result.disagreements).toEqual([])
   expect(result.record).toMatchObject(BY)
-  const nodeFile = await readFile(path.join(content, NODE_FILE), 'utf8')
+  const nodeFile = await readFile(path.join(content, PUBLISHED), 'utf8')
   expect(nodeFile).toContain('reviewer: Second fixture reviewer')
   expect(nodeFile).toContain('date: 2026-02-03')
   expect((await compileContent(content)).report).toMatchObject({ ok: true, errors: [] })
@@ -62,11 +81,11 @@ test('a review with no disagreement is recorded with the node, and the node can 
 
 test('a new review replaces the record of an earlier one', async () => {
   const content = await fixtureContentWith({})
-  const sheet = answered(await blindPool(content, 'grammar-001'), { q1: 'wohne', q2: 'wohnst' })
+  const sheet = answered(await blindPool(content, 'grammar-001'), RIGHT)
 
   await recordReview(content, 'grammar-001', [sheet], BY)
 
-  const nodeFile = await readFile(path.join(content, NODE_FILE), 'utf8')
+  const nodeFile = await readFile(path.join(content, PUBLISHED), 'utf8')
   expect(nodeFile.match(/^review:/gm)).toHaveLength(1)
   expect(nodeFile).toContain('reviewer: Second fixture reviewer')
   expect((await compileContent(content)).report.ok).toBe(true)
@@ -74,11 +93,7 @@ test('a new review replaces the record of an earlier one', async () => {
 
 test("a reviewer's objection to a question is listed even when the answer matches the key", async () => {
   const content = await unreviewedFixture()
-  const sheet = answered(
-    await blindPool(content, 'grammar-001'),
-    { q1: 'wohne', q2: 'wohnst' },
-    { q1: 'Two options are right.' },
-  )
+  const sheet = answered(await blindPool(content, 'grammar-001'), RIGHT, { q1: 'Two options are right.' })
 
   const result = await recordReview(content, 'grammar-001', [sheet], BY)
 
@@ -88,7 +103,8 @@ test("a reviewer's objection to a question is listed even when the answer matche
 
 test('a question the reviewer left out or left unanswered is listed', async () => {
   const content = await unreviewedFixture()
-  const sheet = answered(await blindPool(content, 'grammar-001', ['q2']), {})
+  const everyQuestionButTheFirst = Object.keys(RIGHT).slice(1)
+  const sheet = answered(await blindPool(content, 'grammar-001', everyQuestionButTheFirst), { ...RIGHT, q2: null })
 
   const result = await recordReview(content, 'grammar-001', [sheet], BY)
 
@@ -101,12 +117,13 @@ test('a question the reviewer left out or left unanswered is listed', async () =
 
 test('a question that was changed to settle a disagreement needs a fresh answer, and only that one', async () => {
   const content = await unreviewedFixture()
-  const first = answered(await blindPool(content, 'grammar-001'), { q1: 'wohne', q2: 'wohnen' })
+  const first = answered(await blindPool(content, 'grammar-001'), { ...RIGHT, q2: 'wohnen' })
   const changed = await fixtureContentWith({
-    [NODE_FILE]: (text) =>
-      withoutReviewRecord(text)
-        .replace('prompt: Du ___ hier.', 'prompt: Du ___ in Bonn.')
-        .replace('options: [wohne, wohnst, wohnen]', 'options: [wohne, wohnst, wohnt]'),
+    [PUBLISHED]: changeNode((node) => {
+      delete node.review
+      node.questions[1].prompt = 'Du ___ in Bonn.'
+      node.questions[1].options = ['wohne', 'wohnst', 'wohnt']
+    }),
   })
 
   const stillOpen = await recordReview(changed, 'grammar-001', [first], BY)
@@ -127,9 +144,12 @@ test('a question that was changed to settle a disagreement needs a fresh answer,
 
 test('a key that was corrected to settle a disagreement needs no second pass', async () => {
   const wrongKey = await fixtureContentWith({
-    [NODE_FILE]: (text) => withoutReviewRecord(text).replace('answer: wohnst', 'answer: wohnen'),
+    [PUBLISHED]: changeNode((node) => {
+      delete node.review
+      node.questions[1].answer = 'wohnen'
+    }),
   })
-  const sheet = answered(await blindPool(wrongKey, 'grammar-001'), { q1: 'wohne', q2: 'wohnst' })
+  const sheet = answered(await blindPool(wrongKey, 'grammar-001'), RIGHT)
   expect((await recordReview(wrongKey, 'grammar-001', [sheet], BY)).disagreements).toEqual([
     { question: 'q2', problem: 'the reviewer answered "wohnst", the key says "wohnen"' },
   ])
@@ -144,7 +164,7 @@ test('a key that was corrected to settle a disagreement needs no second pass', a
 test('a sheet for another node is refused', async () => {
   const content = await unreviewedFixture()
   const sheet = {
-    ...answered(await blindPool(content, 'grammar-001'), { q1: 'wohne', q2: 'wohnst' }),
+    ...answered(await blindPool(content, 'grammar-001'), RIGHT),
     node: 'grammar-002',
   }
 
@@ -153,7 +173,7 @@ test('a sheet for another node is refused', async () => {
 
 /** The fixture content as it is before any review: the published node has no review record. */
 function unreviewedFixture(): Promise<string> {
-  return fixtureContentWith({ [NODE_FILE]: withoutReviewRecord })
+  return fixtureContentWith({ [PUBLISHED]: withoutReviewRecord })
 }
 
 /** The sheet as a reviewer hands it back. */

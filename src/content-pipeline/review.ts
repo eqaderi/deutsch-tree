@@ -259,7 +259,7 @@ export function poolFingerprint(questions: QuestionFile[]): string {
       blind: viewOf(question).blind(question),
       key: viewOf(question).key(question),
     }))
-    .sort((a, b) => (a.id < b.id ? -1 : 1))
+    .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
   return createHash('sha256').update(canonical(reviewed)).digest('hex').slice(0, 16)
 }
 
