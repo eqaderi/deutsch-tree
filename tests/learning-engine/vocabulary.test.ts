@@ -145,21 +145,27 @@ test('the pool asks every word in both directions, and is the same pool every ti
     expect(fromGerman(pool, word).word).toBe(word)
     expect(intoGerman(pool, word).word).toBe(word)
   }
-  expect(pool.map((question) => question.id)).toEqual(
-    expect.arrayContaining(['tisch-meaning', 'tisch-word', 'tuer-meaning', 'moebel-word', 'gross-meaning']),
-  )
-  expect(new Set(pool.map((question) => question.id)).size).toBe(pool.length)
   expect(vocabularyPool(HOME)).toEqual(pool)
 })
 
-test('two words that are spelt alike but for a capital get questions of their own', () => {
-  const essen = word({ word: 'essen', class: 'verb' })
-  const dasEssen = word({ word: 'Essen', class: 'noun', article: 'das', number: 'singular-only' })
+test('every question has an id of its own that stays with its word wherever the word stands in the node', () => {
+  const pool = vocabularyPool(HOME)
+  const reordered = vocabularyPool([...HOME].reverse())
 
-  const ids = vocabularyPool([essen, dasEssen, ...HOME]).map((question) => question.id)
+  expect(new Set(pool.map((question) => question.id)).size).toBe(pool.length)
+  for (const { word } of HOME) {
+    expect(fromGerman(reordered, word).id).toBe(fromGerman(pool, word).id)
+    expect(intoGerman(reordered, word).id).toBe(intoGerman(pool, word).id)
+  }
+})
 
-  expect(new Set(ids).size).toBe(ids.length)
-  expect(ids).toEqual(expect.arrayContaining(['essen-verb-word', 'essen-noun-word', 'essen-noun-meaning']))
+test('an id does not give the word away: it is shown where the word is asked for', () => {
+  for (const { word } of HOME) {
+    const { id } = intoGerman(vocabularyPool(HOME), word)
+
+    expect(id).toMatch(/^w[a-z0-9]{7}-word$/)
+    expect(id).not.toContain(word.toLowerCase().slice(0, 3))
+  }
 })
 
 test('the reason of a vocabulary question is the word with its meaning and its example sentence', () => {

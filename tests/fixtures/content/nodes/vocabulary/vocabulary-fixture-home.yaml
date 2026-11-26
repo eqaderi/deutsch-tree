@@ -1,0 +1,154 @@
+# Fixture node for tests: a published vocabulary node. Ten words, so an attempt of ten asks each word once.
+id: vocabulary-fixture-home
+kind: vocabulary
+level: A1
+chapter: fixture-words
+order: 2
+status: published
+title:
+  en: Fixture home words
+  fa: واژه‌های آزمایشی خانه
+  de: Test-Wörter zum Wohnen
+
+words:
+  - word: Tisch
+    class: noun
+    article: der
+    plural: Tische
+    level: A1
+    meaning:
+      en: table
+      fa: میز
+    definition: ein Möbelstück mit einer Platte und vier Beinen
+    example:
+      de: Das Essen steht auf dem Tisch.
+      en: The food is on the table.
+      fa: غذا روی میز است.
+
+  - word: Lampe
+    class: noun
+    article: die
+    plural: Lampen
+    level: A1
+    meaning:
+      en: lamp
+      fa: چراغ
+    definition: ein Gerät, das Licht macht
+    example:
+      de: Die Lampe ist neu.
+      en: The lamp is new.
+      fa: چراغ نو است.
+
+  - word: Bett
+    class: noun
+    article: das
+    plural: Betten
+    level: A1
+    meaning:
+      en: bed
+      fa: تخت
+    definition: ein Möbelstück, in dem man schläft
+    example:
+      de: Das Bett ist bequem.
+      en: The bed is comfortable.
+      fa: تخت راحت است.
+
+  - word: Stuhl
+    class: noun
+    article: der
+    plural: Stühle
+    level: A1
+    meaning:
+      en: chair
+      fa: صندلی
+    definition: ein Möbelstück, auf dem eine Person sitzt
+    example:
+      de: Der Stuhl ist frei.
+      en: The chair is free.
+      fa: صندلی خالی است.
+
+  - word: Tür
+    class: noun
+    article: die
+    plural: Türen
+    level: A1
+    meaning:
+      en: door
+      fa: در
+    definition: der Eingang in ein Zimmer, den man öffnen und schließen kann
+    example:
+      de: Bitte mach die Tür zu.
+      en: Please close the door.
+      fa: لطفاً در را ببند.
+
+  - word: Fenster
+    class: noun
+    article: das
+    plural: Fenster
+    level: A1
+    meaning:
+      en: window
+      fa: پنجره
+    definition: eine Öffnung mit Glas in der Wand, durch die Licht kommt
+    example:
+      de: Das Fenster ist offen.
+      en: The window is open.
+      fa: پنجره باز است.
+
+  - word: Küche
+    class: noun
+    article: die
+    plural: Küchen
+    level: A1
+    meaning:
+      en: kitchen
+      fa: آشپزخانه
+    definition: das Zimmer, in dem man das Essen macht
+    example:
+      de: Wir essen in der Küche.
+      en: We eat in the kitchen.
+      fa: ما در آشپزخانه غذا می‌خوریم.
+
+  # A noun with only a plural, and a word of another level than its node.
+  - word: Möbel
+    class: noun
+    article: die
+    number: plural-only
+    level: A2
+    meaning:
+      en: furniture
+      fa: مبلمان
+    definition: alle großen Sachen in einer Wohnung, auf denen man sitzt, schläft oder isst
+    example:
+      de: Die Möbel sind alt.
+      en: The furniture is old.
+      fa: مبلمان قدیمی است.
+
+  - word: wohnen
+    class: verb
+    level: A1
+    meaning:
+      en: to live (somewhere)
+      fa: زندگی کردن، ساکن بودن
+    definition: an einem Ort zu Hause sein
+    example:
+      de: Wir wohnen in Köln.
+      en: We live in Cologne.
+      fa: ما در کلن زندگی می‌کنیم.
+
+  - word: groß
+    class: adjective
+    level: A1
+    meaning:
+      en: big
+      fa: بزرگ
+    definition: nicht klein
+    example:
+      de: Das Zimmer ist groß.
+      en: The room is big.
+      fa: اتاق بزرگ است.
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-11-26
+  pool: c3cf74ac1dd967fb

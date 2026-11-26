@@ -7,8 +7,12 @@ import path from 'node:path'
 import { isDeepStrictEqual } from 'node:util'
 import { parse as parseYaml, stringify as toYaml } from 'yaml'
 import { z } from 'zod'
-import { type NodeFile, nodeFileSchema } from '../content-model/index.ts'
+import { LANGUAGES, type Language, type NodeFile, nodeFileSchema, type Question } from '../content-model/index.ts'
+import { de } from '../language/strings.de.ts'
+import { fa } from '../language/strings.fa.ts'
+import { en } from '../language/strings.ts'
 import { checkTyped } from '../learning-engine/index.ts'
+import { vocabularyQuestions } from './vocabulary.ts'
 
 type QuestionFile = NonNullable<NodeFile['questions']>[number]
 
@@ -77,6 +81,92 @@ function viewOf(question: QuestionFile): ReviewView<QuestionFile> {
   return REVIEW_VIEWS[question.type] as ReviewView<QuestionFile>
 }
 
+/**
+ * One thing a reviewer answers: a question of the node file, or a question
+ * made from a word of a vocabulary node, in one language.
+ */
+interface ReviewItem {
+  id: string
+  /** As the reviewer sees it: nothing in it may give the answer away. */
+  blind: Record<string, unknown>
+  key: unknown
+  answerFormat: string
+  agrees(answer: unknown): boolean
+  /** For a question that differs by language: the language of this one, and what its learner is told to do. */
+  language?: Language
+  instruction?: string
+}
+
+function itemOf(question: QuestionFile): ReviewItem {
+  const view = viewOf(question)
+  return {
+    id: question.id,
+    blind: view.blind(question),
+    key: view.key(question),
+    answerFormat: view.answerFormat,
+    agrees: (answer) => view.agrees(question, answer),
+  }
+}
+
+/** What a learner of each language is told to do with a question: the words of the test screen itself. */
+const LEARNER_INSTRUCTIONS: Record<Language, Record<Question['type'], string>> = {
+  en: en.instructions,
+  fa: fa.instructions,
+  de: de.instructions,
+}
+
+/**
+ * The questions made from the words of a vocabulary node, each once per
+ * language: a learner reads the meanings in their own language, so a
+ * question that is clear in English may have two right answers in Persian.
+ * The reviewer answers what each learner is asked. Its id is the id of the
+ * question plus the language ("tisch-word-fa").
+ */
+function vocabularyItems(node: NodeFile): ReviewItem[] {
+  return vocabularyQuestions(node).flatMap((question) =>
+    LANGUAGES.flatMap((language): ReviewItem[] => {
+      const shared = {
+        id: `${question.id}-${language}`,
+        language,
+        instruction: LEARNER_INSTRUCTIONS[language][question.type],
+      }
+      if (question.type === 'meaning-of-word') {
+        const key = question.options.find((option) => option.word === question.answer)?.meaning[language]
+        return [
+          {
+            ...shared,
+            blind: {
+              type: question.type,
+              prompt: question.prompt,
+              options: question.options.map((option) => option.meaning[language]),
+            },
+            key,
+            answerFormat: 'the exact text of the one option that says what the German word means',
+            agrees: (answer) => same(key, answer),
+          },
+        ]
+      }
+      if (question.type === 'word-for-meaning') {
+        return [
+          {
+            ...shared,
+            blind: { type: question.type, prompt: question.prompt[language] },
+            key: question.answers,
+            answerFormat: `the German word that the instruction asks for: ${TYPED}`,
+            agrees: (answer) => everyAnswerIsAccepted(question.answers, answer),
+          },
+        ]
+      }
+      return []
+    }),
+  )
+}
+
+/** Everything of a node that a reviewer answers: its written questions, and those made from its words. */
+function itemsOf(node: NodeFile): ReviewItem[] {
+  return [...(node.questions ?? []).map(itemOf), ...vocabularyItems(node)]
+}
+
 /** Equal once differences in spacing and in how a letter is encoded are set aside. */
 function same(a: unknown, b: unknown): boolean {
   return canonical(a) === canonical(b)
@@ -108,6 +198,10 @@ export interface ReviewSheet {
 
 export interface SheetQuestion {
   id: string
+  /** Only for a question that differs by language: the language this learner reads in. */
+  language?: Language
+  /** Only then: what the test tells this learner to do, in their language. */
+  instruction?: string
   /** The question without its key. */
   question: Record<string, unknown>
   answerFormat: string
@@ -121,6 +215,8 @@ const INSTRUCTIONS = [
   'This is the test of one node of a German course. You are its independent reviewer.',
   'Answer every question from your own knowledge of German. Do not open any other file of this project.',
   'Write your answer in "answer", in the form that "answerFormat" asks for.',
+  'A question with a "language" is asked of a learner who reads in that language ("de" is simple German): "instruction" is what',
+  'the test tells that learner. Answer each such question on its own, from what it shows, also when you met the same word in another language.',
   'If a question is flawed (no right answer, more than one right answer, unclear, or wrong or unnatural German),',
   'say why in "objection" in one sentence, and still give your best answer. Otherwise leave "objection" as null.',
   'Change nothing else, and save the file where it is.',
@@ -129,10 +225,10 @@ const INSTRUCTIONS = [
 /** A node's pool as a reviewer may see it. `only` limits it to some questions, for a second pass. */
 export async function blindPool(contentDir: string, nodeId: string, only?: string[]): Promise<ReviewSheet> {
   const { node } = await loadNode(contentDir, nodeId)
-  const questions = node.questions ?? []
-  if (questions.length === 0) throw new Error(`Node ${nodeId} has no questions to review.`)
+  const items = itemsOf(node)
+  if (items.length === 0) throw new Error(`Node ${nodeId} has no questions to review.`)
 
-  const unknown = (only ?? []).filter((id) => !questions.some((question) => question.id === id))
+  const unknown = (only ?? []).filter((id) => !items.some((item) => item.id === id))
   if (unknown.length > 0) throw new Error(`Node ${nodeId} has no question ${unknown.join(', ')}.`)
 
   return {
@@ -140,12 +236,13 @@ export async function blindPool(contentDir: string, nodeId: string, only?: strin
     level: node.level,
     topic: node.title.en,
     instructions: INSTRUCTIONS,
-    questions: questions
-      .filter((question) => !only || only.includes(question.id))
-      .map((question) => ({
-        id: question.id,
-        question: viewOf(question).blind(question),
-        answerFormat: viewOf(question).answerFormat,
+    questions: items
+      .filter((item) => !only || only.includes(item.id))
+      .map((item) => ({
+        id: item.id,
+        ...(item.language && { language: item.language, instruction: item.instruction }),
+        question: item.blind,
+        answerFormat: item.answerFormat,
         answer: null,
         objection: null,
       })),
@@ -193,8 +290,8 @@ export async function recordReview(
   by: { reviewer: string; date: string },
 ): Promise<ReviewResult> {
   const { file, source, node } = await loadNode(contentDir, nodeId)
-  const questions = node.questions ?? []
-  if (questions.length === 0) throw new Error(`Node ${nodeId} has no questions to review.`)
+  const items = itemsOf(node)
+  if (items.length === 0) throw new Error(`Node ${nodeId} has no questions to review.`)
 
   const returned = new Map<string, z.infer<typeof returnedSheet>['questions'][number]>()
   for (const sheet of sheets) {
@@ -208,32 +305,28 @@ export async function recordReview(
   }
 
   const disagreements: Disagreement[] = []
-  const disagree = (question: QuestionFile, problem: string) => disagreements.push({ question: question.id, problem })
-  for (const question of questions) {
-    const view = viewOf(question)
-    const entry = returned.get(question.id)
-    const again = `get it answered with "pnpm review:pool ${nodeId} --only ${question.id}"`
+  const disagree = (item: ReviewItem, problem: string) => disagreements.push({ question: item.id, problem })
+  for (const item of items) {
+    const entry = returned.get(item.id)
+    const again = `get it answered with "pnpm review:pool ${nodeId} --only ${item.id}"`
     if (!entry) {
-      disagree(question, `no reviewer has seen this question; ${again}`)
+      disagree(item, `no reviewer has seen this question; ${again}`)
       continue
     }
-    if (!same(entry.question, view.blind(question))) {
-      disagree(question, `the question changed after the reviewer saw it; ${again}`)
+    if (!same(entry.question, item.blind)) {
+      disagree(item, `the question changed after the reviewer saw it; ${again}`)
       continue
     }
-    if (entry.objection?.trim()) disagree(question, `the reviewer objects: ${entry.objection.trim()}`)
+    if (entry.objection?.trim()) disagree(item, `the reviewer objects: ${entry.objection.trim()}`)
     if (entry.answer === null || entry.answer === undefined || entry.answer === '') {
-      disagree(question, 'the reviewer gave no answer')
-    } else if (!view.agrees(question, entry.answer)) {
-      disagree(
-        question,
-        `the reviewer answered ${JSON.stringify(entry.answer)}, the key says ${JSON.stringify(view.key(question))}`,
-      )
+      disagree(item, 'the reviewer gave no answer')
+    } else if (!item.agrees(entry.answer)) {
+      disagree(item, `the reviewer answered ${JSON.stringify(entry.answer)}, the key says ${JSON.stringify(item.key)}`)
     }
   }
   if (disagreements.length > 0) return { disagreements, record: null }
 
-  const record = nodeFileSchema.shape.review.unwrap().parse({ ...by, pool: poolFingerprint(questions) })
+  const record = nodeFileSchema.shape.review.unwrap().parse({ ...by, pool: fingerprint(items) })
   await writeFile(file, withReviewRecord(source, node, record))
   return { disagreements, record }
 }
@@ -272,12 +365,22 @@ async function loadNode(contentDir: string, nodeId: string): Promise<{ file: str
  * and its key. Explanations are not part of it; the reviewer never sees them.
  */
 export function poolFingerprint(questions: QuestionFile[]): string {
-  const reviewed = questions
-    .map((question) => ({
-      id: question.id,
-      blind: viewOf(question).blind(question),
-      key: viewOf(question).key(question),
-    }))
+  return fingerprint(questions.map(itemOf))
+}
+
+/**
+ * The same for a whole node: its written questions and, for a vocabulary
+ * node, the questions made from its words, in every language. So a word, an
+ * article, a meaning or a definition that changes calls for a new review; an
+ * example sentence or a plural, which no question shows, does not.
+ */
+export function reviewFingerprint(node: NodeFile): string {
+  return fingerprint(itemsOf(node))
+}
+
+function fingerprint(items: ReviewItem[]): string {
+  const reviewed = items
+    .map(({ id, blind, key }) => ({ id, blind, key }))
     .sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0))
   return createHash('sha256').update(canonical(reviewed)).digest('hex').slice(0, 16)
 }
@@ -287,7 +390,7 @@ export function reviewProblem(node: NodeFile): string | undefined {
   if (node.status !== 'published') return undefined
   const steps = `Run "pnpm review:pool ${node.id}"; the steps are in content/README.md`
   if (!node.review) return `a published node needs a review record. ${steps}`
-  if (node.review.pool !== poolFingerprint(node.questions ?? [])) {
+  if (node.review.pool !== reviewFingerprint(node)) {
     return `the questions or their answers changed after the review of ${node.review.date}, so the node needs a new review. ${steps}`
   }
   return undefined

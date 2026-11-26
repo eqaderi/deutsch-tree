@@ -21,7 +21,7 @@ test('the curriculum order runs chapter by chapter, in the order of the chapter 
   const { report, bundle } = await compileContent(content)
 
   expect(report.errors).toEqual([])
-  expect(bundle?.index.chapters.filter((chapter) => chapter.level === 'A1')).toEqual([
+  expect(bundle?.index.chapters.filter((chapter) => chapter.level === 'A1' && chapter.kind === 'grammar')).toEqual([
     {
       id: 'fixture-later',
       level: 'A1',
@@ -43,6 +43,8 @@ test('the curriculum order runs chapter by chapter, in the order of the chapter 
     ['fixture-later', 'grammar-002'],
     ['fixture-basics', 'grammar-001'],
     ['fixture-basics', 'grammar-010'],
+    ['fixture-words', 'vocabulary-fixture-family'],
+    ['fixture-words', 'vocabulary-fixture-home'],
   ])
 })
 
@@ -146,6 +148,8 @@ test('German marked in a topic title is compiled as German, like in every other 
     ['فعل‌های آزمایشی'],
     ['اوملاوت‌های آزمایشی'],
     ['پایانهٔ ', { de: '-st' }, ' با ', { de: 'du' }],
+    ['واژه‌های آزمایشی خانواده'],
+    ['واژه‌های آزمایشی خانه'],
   ])
   expect(bundle?.nodes.find((node) => node.id === 'grammar-002')?.title.en).toEqual([
     'The ending ',
@@ -169,6 +173,8 @@ test('a new level needs only content: a chapter of that level and a node in it',
     ['A1', 'fixture-basics', 'grammar-001'],
     ['A1', 'fixture-basics', 'grammar-010'],
     ['A1', 'fixture-later', 'grammar-002'],
+    ['A1', 'fixture-words', 'vocabulary-fixture-family'],
+    ['A1', 'fixture-words', 'vocabulary-fixture-home'],
     ['A2', 'fixture-nouns', 'grammar-101'],
     ['A2', 'fixture-nouns', 'grammar-102'],
     ['A2', 'fixture-nouns', 'grammar-103'],

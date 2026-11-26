@@ -31,6 +31,7 @@ import {
 import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
+import { compileVocabularyContent } from './vocabulary.ts'
 
 /** The list of official mock exams, beside the `nodes` folder, and its file in the compiled bundle. */
 export const OFFICIAL_MOCK_EXAMS_FILE = 'official-mock-exams.yaml'
@@ -302,13 +303,18 @@ function compileNode(file: NodeFile): CompiledNode {
     ...(file.examTasks !== undefined && { examTasks: file.examTasks }),
   }
   // Drafts inside a "coming soon" file are checked but never shipped.
-  return { ...summary, content: file.status === 'published' ? compileGrammarContent(file) : null }
+  if (file.status !== 'published') return { ...summary, content: null }
+  return {
+    ...summary,
+    content: file.kind === 'vocabulary' ? compileVocabularyContent(file) : compileGrammarContent(file),
+  }
 }
 
 function compileGrammarContent(file: NodeFile): GrammarContent {
   // The schema guarantees these sections for a published node.
   const { explanations, table, examples, mistakes, questions } = file as Required<NodeFile>
   return {
+    kind: 'grammar',
     explanations: {
       en: { rule: richText(explanations.en.rule) },
       fa: { rule: richText(explanations.fa.rule) },

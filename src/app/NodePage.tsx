@@ -36,7 +36,7 @@ export function NodePage() {
   if (!content) return <NotFound />
   return (
     <NodeFrame node={summary}>
-      <GrammarSections content={content} />
+      {content.kind === 'grammar' && <GrammarSections content={content} />}
       <section className="action-bar" aria-labelledby="section-test">
         <h2 id="section-test" className="visually-hidden">
           {strings.test}

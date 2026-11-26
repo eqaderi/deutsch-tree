@@ -3,7 +3,8 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parse, stringify } from 'yaml'
-import { poolFingerprint } from '../../src/content-pipeline/review.ts'
+import { nodeFileSchema } from '../../src/content-model/index.ts'
+import { poolFingerprint, reviewFingerprint } from '../../src/content-pipeline/review.ts'
 
 /** The small, valid content folder that tests start from. */
 export const fixtureContent = fileURLToPath(new URL('../fixtures/content', import.meta.url))
@@ -11,6 +12,9 @@ export const fixtureContent = fileURLToPath(new URL('../fixtures/content', impor
 /** The fixture's published node and its "coming soon" node. */
 export const PUBLISHED = 'nodes/grammar/grammar-001.yaml'
 export const COMING_SOON = 'nodes/grammar/grammar-002.yaml'
+
+/** The fixture's published vocabulary node. */
+export const VOCABULARY = 'nodes/vocabulary/vocabulary-fixture-home.yaml'
 
 /**
  * A temporary copy of the fixture content with some files rewritten or added.
@@ -69,7 +73,9 @@ export function comingSoonNode(id: string, fields: Record<string, unknown> = {})
 export function changeReviewedNode(change: (node: LooseNode) => void): (text: string) => string {
   return changeNode((node) => {
     change(node)
-    node.review.pool = poolFingerprint(node.questions)
+    // The pool of a vocabulary node is made from its words, so the whole node is read as the pipeline reads it.
+    node.review.pool =
+      node.kind === 'vocabulary' ? reviewFingerprint(nodeFileSchema.parse(node)) : poolFingerprint(node.questions)
   })
 }
 

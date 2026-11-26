@@ -251,12 +251,109 @@ const reviewRecord = z.strictObject({
   pool: text,
 })
 
+/** The parts of a vocabulary entry that only a noun has. */
+const NOUN_FIELDS = ['article', 'plural', 'number'] as const
+
+/** The parts that every word of a published vocabulary node must have. */
+const WRITTEN_WORD_FIELDS = ['class', 'level', 'meaning', 'definition', 'example'] as const
+
+/** Whether `text` holds `word` as a whole word, whatever its capitals. */
+function usesWord(text: string, word: string): boolean {
+  const letters = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return new RegExp(`(?<!\\p{L})${letters}(?!\\p{L})`, 'iu').test(text)
+}
+
+/**
+ * One word of a vocabulary node. A node that is coming soon may give `word`
+ * alone; a published node needs every part (the node schema checks that).
+ */
+const vocabularyEntry = z
+  .strictObject({
+    /** The headword, without article, as the scope list spells it: "Mutter", "kochen". */
+    word: text,
+    class: z.enum(WORD_CLASSES).optional(),
+    /** Nouns only. */
+    article: z.enum(ARTICLES).optional(),
+    /** Nouns only: the plural form, without article ("Mütter"). */
+    plural: text.optional(),
+    /** Nouns only, in place of `plural`: the noun has one number only. */
+    number: z.enum(NOUN_NUMBERS).optional(),
+    /** The level of the word; a node may hold words of several levels. */
+    level: level.optional(),
+    /** What the word means, in English and in Persian. Plain text. */
+    meaning: z.strictObject({ en: textIn('en'), fa: textIn('fa') }).optional(),
+    /** What the word means, in simple German that does not use the word itself. A phrase without a full stop. */
+    definition: text.optional(),
+    /** One original sentence that uses the word. */
+    example: example.optional(),
+    /** Other German that is right when a learner is asked for this word, written exactly: "die Mama". */
+    alsoAccepted: z.array(text).default([]),
+    /** Words of this node that mean nearly the same; their meaning is never offered as a wrong option for this word. */
+    tooCloseTo: z.array(text).default([]),
+  })
+  .superRefine((value, ctx) => {
+    if (value.definition !== undefined && usesWord(value.definition, value.word)) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['definition'],
+        message: `uses the word "${value.word}" itself; the definition is what a learner who reads in German is asked for the word by`,
+      })
+    }
+    if (value.class !== undefined && value.class !== 'noun') {
+      const wordClass = `${/^[aeiou]/.test(value.class) ? 'an' : 'a'} ${value.class}`
+      for (const field of NOUN_FIELDS) {
+        if (value[field] !== undefined) {
+          ctx.addIssue({
+            code: 'custom',
+            path: [field],
+            message: `only a noun has this, and this word is ${wordClass}`,
+          })
+        }
+      }
+      return
+    }
+    if (value.plural !== undefined && value.number !== undefined) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['number'],
+        message: 'a noun with a plural has both numbers; give the plural or this, not both',
+      })
+    }
+    const bare = value.plural?.replace(/^die\s+/i, '')
+    if (value.plural !== undefined && bare !== value.plural) {
+      ctx.addIssue({ code: 'custom', path: ['plural'], message: `is written without its article: "${bare}"` })
+    }
+    if (value.number === 'plural-only' && value.article !== undefined && value.article !== 'die') {
+      ctx.addIssue({ code: 'custom', path: ['article'], message: 'a noun that has only a plural takes "die"' })
+    }
+  })
+
+/** The words of a vocabulary node. What one word says about another must hold inside the node. */
+const vocabularyEntries = z
+  .array(vocabularyEntry)
+  .min(1)
+  .superRefine((words, ctx) => {
+    const ofNode = new Set(words.map((entry) => entry.word))
+    words.forEach((entry, index) => {
+      entry.tooCloseTo.forEach((other, place) => {
+        if (!ofNode.has(other) || other === entry.word) {
+          ctx.addIssue({
+            code: 'custom',
+            path: [index, 'tooCloseTo', place],
+            message: other === entry.word ? 'names the word itself' : `"${other}" is not a word of this node`,
+          })
+        }
+      })
+    })
+  })
+
 /** The fields that the nodes of one kind have, and no others. */
 const FIELDS_OF_ONE_KIND = {
   module: 'exam-part',
   part: 'exam-part',
   purpose: 'phrases',
   examTasks: 'phrases',
+  words: 'vocabulary',
 } as const satisfies Record<string, NodeKind>
 
 const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${kind}`
@@ -308,6 +405,9 @@ export const nodeFileSchema = z
       .default(10),
     /** A published node must have one that matches its pool; the content pipeline checks it. */
     review: reviewRecord.optional(),
+
+    /** Vocabulary nodes only: the words of the node. Its page lists them and its test is made from them. */
+    words: vocabularyEntries.optional(),
   })
   .superRefine((value, ctx) => {
     if (value.kind === 'grammar' && !/^grammar-\d{3}$/.test(value.id)) {
@@ -369,12 +469,50 @@ export const nodeFileSchema = z
         })
       }
     }
+    if (value.kind === 'vocabulary') {
+      if (!value.id.startsWith('vocabulary-')) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['id'],
+          message: 'a vocabulary node id is "vocabulary-" plus the name of its theme, like "vocabulary-family"',
+        })
+      }
+      if (value.words === undefined) {
+        ctx.addIssue({ code: 'custom', path: ['words'], message: 'is missing: a vocabulary node lists its words' })
+      }
+      if (value.questions !== undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['questions'],
+          message: 'a vocabulary node writes no questions: its test is made from its words',
+        })
+      }
+    }
     if (value.status !== 'published') return
+    if (value.kind === 'vocabulary') {
+      const required = 'is required for a published node'
+      ;(value.words ?? []).forEach((entry, index) => {
+        const missing = (field: string, why = '') =>
+          ctx.addIssue({ code: 'custom', path: ['words', index, field], message: `${required}${why}` })
+        for (const field of WRITTEN_WORD_FIELDS) {
+          if (entry[field] === undefined) missing(field)
+        }
+        if (entry.class !== 'noun') return
+        if (entry.article === undefined) missing('article', ': a noun is learned with its article')
+        if (entry.plural === undefined && entry.number === undefined) {
+          missing(
+            'plural',
+            ': the plural of the noun, or "number: singular-only" or "number: plural-only" in its place',
+          )
+        }
+      })
+      return
+    }
     if (value.kind !== 'grammar') {
       ctx.addIssue({
         code: 'custom',
         path: ['status'],
-        message: `a ${value.kind} node cannot be published yet; only grammar nodes have a page`,
+        message: `a ${value.kind} node cannot be published yet; only grammar and vocabulary nodes have a page`,
       })
       return
     }
@@ -674,6 +812,7 @@ export function pluralAsLearned(word: Pick<VocabularyWord, 'plural'>): string | 
 }
 
 export interface GrammarContent {
+  kind: 'grammar'
   explanations: Localised<{ rule: RichText }>
   table: GrammarTable
   examples: Example[]
@@ -684,9 +823,23 @@ export interface GrammarContent {
   attemptSize: number
 }
 
-/** A node as the app loads it. `content` is null until the node is published. */
+/** What the page and the test of a published vocabulary node need. */
+export interface VocabularyContent {
+  kind: 'vocabulary'
+  /** In the order of the node file. */
+  words: VocabularyWord[]
+  /** The pool, made from the words: each word from German and into German. */
+  questions: Question[]
+  /** How many questions of the pool one attempt draws. */
+  attemptSize: number
+}
+
+/**
+ * A node as the app loads it. `content` is null until the node is published;
+ * `content.kind` says which page it is.
+ */
 export interface CompiledNode extends NodeSummary {
-  content: GrammarContent | null
+  content: GrammarContent | VocabularyContent | null
 }
 
 /** Chapters and nodes, both in curriculum order: chapter by chapter, and inside a chapter by `order`. */

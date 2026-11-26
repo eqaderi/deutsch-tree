@@ -213,24 +213,21 @@ function fingerprint(text: string): number {
 }
 
 /**
- * The start of the question ids of each word: the word in plain small
- * letters ("tuer" for "Tür"). Two words of a node that come out alike
- * ("essen", "Essen") get their word class added ("essen-verb").
+ * The start of the question ids of each word: a short code made from the
+ * word, the same every time and for every place of the word in its node. It
+ * is a code and not the word because an id is shown: in the address of the
+ * "report a problem" link of a question that asks for the word, and on the
+ * sheet of the reviewer who answers the pool without its key.
  */
 function questionIds(words: readonly VocabularyWord[]): string[] {
-  const plain = words.map((word) =>
-    word.word
-      .toLocaleLowerCase('de')
-      .replace(/ä/g, 'ae')
-      .replace(/ö/g, 'oe')
-      .replace(/ü/g, 'ue')
-      .replace(/ß/g, 'ss')
-      .normalize('NFD')
-      .replace(/\p{Mark}/gu, '')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-|-$/g, ''),
-  )
-  return plain.map((id, index) => (plain.indexOf(id) === plain.lastIndexOf(id) ? id : `${id}-${words[index]?.class}`))
+  const code = (text: string) => `w${fingerprint(text).toString(36).padStart(7, '0')}`
+  const taken = new Set<string>()
+  return words.map((word) => {
+    let id = code(word.word)
+    for (let again = 1; taken.has(id); again += 1) id = code(`${word.word}\u0000${again}`)
+    taken.add(id)
+    return id
+  })
 }
 
 /**
