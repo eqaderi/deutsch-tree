@@ -5,6 +5,8 @@ import {
   emptyProgress,
   enteredScores,
   isDone,
+  officialExamScores,
+  recordOfficialExamScores,
 } from '../../src/learning-engine/index.ts'
 import { createProgressStore, type KeyValueStorage } from '../../src/progress-store/index.ts'
 
@@ -178,4 +180,35 @@ test('progress for a topic that the content no longer has is kept', () => {
   const afterReload = createProgressStore(storage).get()
   expect(afterReload.nodes['grammar-removed']).toEqual({ done: true, attempts: 2 })
   expect(isDone(afterReload, 'grammar-001')).toBe(true)
+})
+
+test('recorded scores of an official mock exam are still there when the app starts again', () => {
+  const storage = browserStorage()
+  const store = createProgressStore(storage)
+  store.update(passGrammar1)
+  store.update((progress) => recordOfficialExamScores(progress, 'adults-1', { reading: 93, listening: 0 }))
+
+  const afterReload = createProgressStore(storage).get()
+
+  expect(officialExamScores(afterReload, 'adults-1')).toEqual({ reading: 93, listening: 0 })
+  expect(officialExamScores(afterReload, 'adults-2')).toEqual({})
+  expect(isDone(afterReload, 'grammar-001')).toBe(true)
+})
+
+test('a saved score that is not a whole number from 0 to 100 counts as not recorded', () => {
+  const storage = browserStorage({
+    'deutsch-tree:progress': JSON.stringify({
+      version: 2,
+      nodes: {},
+      officialExams: {
+        'adults-1': { reading: 93, listening: '97', writing: 100.5, speaking: 101, other: 95 },
+        'adults-2': 'ninety',
+        'adults-3': { reading: -1 },
+      },
+    }),
+  })
+
+  const progress = createProgressStore(storage).get()
+
+  expect(progress.officialExams).toEqual({ 'adults-1': { reading: 93 } })
 })

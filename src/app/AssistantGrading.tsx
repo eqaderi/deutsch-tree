@@ -113,8 +113,9 @@ export function ScoreEntry({ onScore }: { onScore: (score: number) => void }) {
   const submit = (event: FormEvent) => {
     event.preventDefault()
     const score = readScore(typed)
-    setRefused(score === null)
-    if (score === null) return
+    // An empty box is refused like any other text that is not a score: there is nothing to save.
+    setRefused(typeof score !== 'number')
+    if (typeof score !== 'number') return
     setTyped('')
     onScore(score)
   }

@@ -478,6 +478,83 @@ export const chaptersFileSchema = z.array(chapter).superRefine((chapters, ctx) =
 export type ChapterEntry = z.infer<typeof chapter>
 
 // ---------------------------------------------------------------------------
+// Official mock exams (source): official-mock-exams.yaml
+// ---------------------------------------------------------------------------
+
+/** Who a set was written for. A youth set has the same format and scoring as an adult set. */
+export const EXAM_AUDIENCES = ['adults', 'youth'] as const
+export type ExamAudience = (typeof EXAM_AUDIENCES)[number]
+
+/**
+ * What a link leads to: the exam papers (a PDF), the listening recordings, or
+ * a version of the exam that is worked through online.
+ */
+export const EXAM_LINK_KINDS = ['papers', 'audio', 'online'] as const
+export type ExamLinkKind = (typeof EXAM_LINK_KINDS)[number]
+
+const pageNumber = z.number().int('must be a whole number').positive()
+
+const examLink = z.strictObject({
+  kind: z.enum(EXAM_LINK_KINDS),
+  /** The app links to this address and never requests it. */
+  url: z.string().regex(/^https:\/\/[^\s/]+\.[^\s/]+(\/\S*)?$/, 'must be a full address that starts with https://'),
+  /** One line for the learner, for example where on the page the set is found. */
+  note: localised.optional(),
+  /**
+   * The pages of a PDF that hold the candidate sheets. The pages after them
+   * hold the answers; the learner is told to stay inside these.
+   */
+  candidatePages: z
+    .strictObject({ first: pageNumber, last: pageNumber })
+    .superRefine((pages, ctx) => {
+      if (pages.last < pages.first) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['last'],
+          message: `must not be before the first page (${pages.first})`,
+        })
+      }
+    })
+    .optional(),
+  /** The day a person last opened the link and saw what it promises. Absent: nobody has yet. Not shown. */
+  checked: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, 'must be a date such as 2026-11-26')
+    .optional(),
+})
+
+/**
+ * One official mock exam: a full set with all four modules, published by the
+ * exam's own institute. The app links to it; it never hosts or copies it.
+ */
+const officialMockExam = z.strictObject({
+  /** Stable for ever: the scores a learner records are kept under it. */
+  id: z
+    .string()
+    .regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "goethe-b1-modellsatz"'),
+  /** The set's own German name, shown unchanged in every language. */
+  title: text,
+  /** Who publishes it, shown unchanged in every language. */
+  publisher: text,
+  audience: z.enum(EXAM_AUDIENCES),
+  /** Whether 90 or more in every module on this set counts as one of the two the readiness rule asks for. */
+  countsTowardReadiness: z.boolean(),
+  links: z.array(examLink).min(1, 'needs at least one link: the app only links to an official mock exam'),
+})
+
+export const officialMockExamsFileSchema = z.array(officialMockExam).superRefine((exams, ctx) => {
+  const seen = new Set<string>()
+  exams.forEach(({ id }, index) => {
+    if (seen.has(id)) {
+      ctx.addIssue({ code: 'custom', path: [index, 'id'], message: `duplicated exam id: "${id}"` })
+    }
+    seen.add(id)
+  })
+})
+
+export type OfficialMockExamEntry = z.infer<typeof officialMockExam>
+
+// ---------------------------------------------------------------------------
 // Compiled bundle (what the app loads)
 // ---------------------------------------------------------------------------
 
@@ -641,7 +718,33 @@ export interface ContentIndex {
   nodes: NodeSummary[]
 }
 
+/** A link of an official mock exam as the app shows it. */
+export interface OfficialExamLink {
+  kind: ExamLinkKind
+  url: string
+  note?: Localised<RichText>
+  /** The pages of the PDF that hold the candidate sheets; the answers come after them. */
+  candidatePages?: { first: number; last: number }
+}
+
+/** An official mock exam as the app lists it. */
+export interface OfficialMockExam {
+  id: string
+  /** German. */
+  title: string
+  publisher: string
+  audience: ExamAudience
+  countsTowardReadiness: boolean
+  links: OfficialExamLink[]
+}
+
+/** The official mock exams, in the order the list is written. */
+export interface OfficialMockExams {
+  exams: OfficialMockExam[]
+}
+
 export interface ContentBundle {
   index: ContentIndex
   nodes: CompiledNode[]
+  officialMockExams: OfficialMockExam[]
 }

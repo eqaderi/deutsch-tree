@@ -4,8 +4,8 @@ import { useLanguage } from '../language/index.tsx'
 import {
   applyEnteredScore,
   enteredScores,
-  FULL_SCORE,
   isDone,
+  MAXIMUM_SCORE,
   passMark,
   scorePasses,
 } from '../learning-engine/index.ts'
@@ -64,7 +64,7 @@ function NodeScore({ nodeId }: { nodeId: string }) {
     updateProgress((before) => applyEnteredScore(before, nodeId, score))
   }
 
-  const needed = strings.scoreNeeded(passMark(FULL_SCORE), FULL_SCORE)
+  const needed = strings.scoreNeeded(passMark(MAXIMUM_SCORE), MAXIMUM_SCORE)
   return (
     <section className="panel" aria-labelledby="section-score">
       <h2 id="section-score" className="cap">
@@ -80,7 +80,7 @@ function NodeScore({ nodeId }: { nodeId: string }) {
         <>
           <p className="score">
             <span className="big-number">{strings.number(latest)}</span>{' '}
-            <span className="secondary">{strings.ofTotal(FULL_SCORE)}</span>
+            <span className="secondary">{strings.ofTotal(MAXIMUM_SCORE)}</span>
           </p>
           <div className="message" role="status">
             {entered && scorePasses(latest) && <p>{entered.wasDone ? strings.topicStaysDone : strings.topicNowDone}</p>}

@@ -9,7 +9,7 @@
  * ## The saved shape and its version
  *
  * What is saved is the `Progress` object of the learning engine plus a
- * `version` number: `{ "version": 1, "nodes": { … } }`. The file a learner
+ * `version` number: `{ "version": 2, "nodes": { … }, "officialExams": { … } }`. The file a learner
  * exports is the same object with three more lines that say what it is.
  *
  * The version number is what keeps progress from being lost. An app reads
@@ -38,7 +38,14 @@
  * Never remove a reader's tolerance or an upgrade step: a learner may come
  * back with a file exported years ago.
  */
-import { emptyProgress, FULL_SCORE, type NodeProgress, type Progress } from '../learning-engine/index.ts'
+import {
+  EXAM_MODULES,
+  emptyProgress,
+  isScore,
+  type ModuleScores,
+  type NodeProgress,
+  type Progress,
+} from '../learning-engine/index.ts'
 
 /** The part of the browser's `localStorage` that the store needs. */
 export interface KeyValueStorage {
@@ -73,8 +80,9 @@ export const UNREADABLE_KEY = 'deutsch-tree:progress:unreadable'
  *
  * History, one line per version:
  *   1  nodes: done and number of attempts, by node identifier
+ *   2  officialExams: the module scores recorded for official mock exams, by exam identifier
  */
-export const SAVED_VERSION = 1
+export const SAVED_VERSION = 2
 
 /** A saved object as it comes out of JSON, before anything is known about it. */
 type Saved = Record<string, unknown>
@@ -95,6 +103,7 @@ const UPGRADES: Upgrades = {}
  */
 const READERS: { [Field in keyof Progress]-?: (saved: unknown) => Progress[Field] } = {
   nodes: readNodes,
+  officialExams: readOfficialExams,
 }
 
 function readNodes(saved: unknown): Record<string, NodeProgress> {
@@ -112,6 +121,26 @@ function readNodes(saved: unknown): Record<string, NodeProgress> {
     }
   }
   return nodes
+}
+
+/**
+ * The recorded module scores of official mock exams. A score that is not a
+ * whole number from 0 to 100 is skipped, and so is an exam left with none.
+ */
+function readOfficialExams(saved: unknown): Record<string, ModuleScores> {
+  const exams: Record<string, ModuleScores> = {}
+  if (!isRecord(saved)) return exams
+  // Every identifier is kept, also of an exam the content no longer lists.
+  for (const [id, savedScores] of Object.entries(saved)) {
+    if (!isRecord(savedScores)) continue
+    const scores: ModuleScores = {}
+    for (const module of EXAM_MODULES) {
+      const score = savedScores[module]
+      if (isScore(score)) scores[module] = score
+    }
+    if (Object.keys(scores).length > 0) exams[id] = scores
+  }
+  return exams
 }
 
 /** Why saved text or a file was not read. */
@@ -303,10 +332,6 @@ function parseJson(text: string): unknown {
 
 function wholeNumber(value: unknown): number {
   return typeof value === 'number' && Number.isInteger(value) && value > 0 ? value : 0
-}
-
-function isScore(value: unknown): value is number {
-  return typeof value === 'number' && Number.isInteger(value) && value >= 0 && value <= FULL_SCORE
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {

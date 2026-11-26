@@ -1,0 +1,114 @@
+# The official mock exams for the Goethe-Zertifikat B1, in the order the
+# readiness view lists them. The app links to them. It never hosts or copies
+# them, and it never requests these addresses itself.
+#
+# How to change this list: content/README.md, "Official mock exams".
+#
+# There are four official full sets: two for adults and two for youth. The
+# readiness rule needs two, so the two adult sets leave no spare; the youth
+# sets (same format and scoring, school-age topics, "du") are the spares.
+#
+# `checked` is the day a person or an agent last fetched the address and saw
+# what it promises. A link without `checked` has NOT been confirmed: open it
+# once in a browser, correct it if needed, and add the date.
+#
+# Known copy that is not linked: an accessible PDF of the youth practice set
+# (goethe.de/resources/files/pdf206/barrierefrei_zertifikat_b1_jugend.pdf).
+# Nobody has noted on which page its answers start, so the learner could not
+# be told which pages to stay inside.
+
+- id: goethe-b1-modellsatz-erwachsene
+  title: Zertifikat B1 Modellsatz Erwachsene
+  publisher: Goethe-Institut
+  audience: adults
+  countsTowardReadiness: true
+  links:
+    - kind: papers
+      url: https://www.goethe.de/pro/relaunch/prf/materialien/B1/b1_modellsatz_erwachsene.pdf
+      candidatePages: { first: 7, last: 28 }
+      checked: 2026-11-26
+    - kind: online
+      url: https://bfu.goethe.de/b1_mod/
+      note:
+        en: The same exam to work through online, made for screen readers. The listening recordings play in the page.
+        fa: همین امتحان به شکل آنلاین، ساخته‌شده برای صفحه‌خوان‌ها. فایل‌های شنیداری در خود صفحه پخش می‌شوند.
+        de: Die gleiche Prüfung online, auch für Screenreader. Die Hörtexte kannst du auf der Seite hören.
+      checked: 2026-11-26
+    - kind: audio
+      url: https://osd.at/downloads/
+      note:
+        en: >
+          On that page, under *Stufe B1*, download *Modellsatz ÖSD Zertifikat B1*: the same exam
+          with its four recordings. The file also holds the answers. Do not take *ZDÖ B1*; that
+          is another exam.
+        fa: >
+          در آن صفحه، زیر *Stufe B1*، فایل *Modellsatz ÖSD Zertifikat B1* را دانلود کنید: همین
+          امتحان با چهار فایل شنیداری آن. پاسخ‌ها هم در همین فایل هستند. *ZDÖ B1* را نگیرید؛
+          آن امتحان دیگری است.
+        de: >
+          Such auf der Seite unter *Stufe B1* und lade *Modellsatz ÖSD Zertifikat B1* herunter.
+          Das ist die gleiche Prüfung mit vier Hörtexten. In der Datei sind auch die Lösungen.
+          Nimm nicht *ZDÖ B1*. Das ist eine andere Prüfung.
+      checked: 2026-11-26
+
+- id: goethe-b1-uebungssatz-erwachsene
+  title: Goethe-Zertifikat B1 Übungssatz Erwachsene
+  publisher: Goethe-Institut
+  audience: adults
+  countsTowardReadiness: true
+  links:
+    - kind: papers
+      url: https://www.goethe.de/pro/relaunch/prf/materialien/B1/B1_Uebungssatz_Erwachsene.pdf
+      candidatePages: { first: 7, last: 28 }
+      checked: 2026-11-26
+    # NOT CONFIRMED: goethe.de refuses automated readers, so nobody has seen
+    # what this page offers. It is the only known place for the recordings of
+    # this set.
+    - kind: audio
+      url: https://www.goethe.de/de/spr/prf/ueb/pb1.html
+      note:
+        en: Look for the recordings of this set on the practice page of the Goethe-Institut for B1.
+        fa: فایل‌های شنیداری این مجموعه را در صفحهٔ تمرین *Goethe-Institut* برای *B1* پیدا کنید.
+        de: Such die Hörtexte zu diesem Satz auf der Übungsseite vom Goethe-Institut für B1.
+
+- id: goethe-b1-modellsatz-jugendliche
+  title: Zertifikat B1 Modellsatz Jugendliche
+  publisher: Goethe-Institut
+  audience: youth
+  countsTowardReadiness: true
+  links:
+    - kind: papers
+      url: https://www.goethe.de/pro/relaunch/prf/materialien/B1/b1_modellsatz_jugend.pdf
+      candidatePages: { first: 7, last: 28 }
+      checked: 2026-11-26
+    - kind: audio
+      url: https://osd.at/downloads/
+      note:
+        en: >
+          On that page, under *Stufe B1*, download *Modellsatz ÖSD Zertifikat B1 / Jugendliche*:
+          the same exam with its recording. The file also holds the answers.
+        fa: >
+          در آن صفحه، زیر *Stufe B1*، فایل *Modellsatz ÖSD Zertifikat B1 / Jugendliche* را
+          دانلود کنید: همین امتحان با فایل شنیداری آن. پاسخ‌ها هم در همین فایل هستند.
+        de: >
+          Such auf der Seite unter *Stufe B1* und lade *Modellsatz ÖSD Zertifikat B1 / Jugendliche*
+          herunter. Das ist die gleiche Prüfung mit dem Hörtext. In der Datei sind auch die Lösungen.
+      checked: 2026-11-26
+
+- id: goethe-b1-uebungssatz-jugendliche
+  title: Goethe-Zertifikat B1 Übungssatz Jugendliche
+  publisher: Goethe-Institut
+  audience: youth
+  countsTowardReadiness: true
+  links:
+    - kind: papers
+      url: https://www.goethe.de/pro/relaunch/prf/materialien/B1/B1_Uebungssatz_Jugendliche.pdf
+      candidatePages: { first: 7, last: 28 }
+      checked: 2026-11-26
+    # NOT CONFIRMED, see the adult practice set above.
+    - kind: audio
+      url: https://www.goethe.de/de/spr/prf/ueb/pb1.html
+      note:
+        en: Look for the recordings of this set on the practice page of the Goethe-Institut for B1.
+        fa: فایل‌های شنیداری این مجموعه را در صفحهٔ تمرین *Goethe-Institut* برای *B1* پیدا کنید.
+        de: Such die Hörtexte zu diesem Satz auf der Übungsseite vom Goethe-Institut für B1.

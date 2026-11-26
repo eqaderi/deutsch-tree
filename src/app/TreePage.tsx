@@ -7,6 +7,7 @@ import { isDone } from '../learning-engine/index.ts'
 import { BackupSuggestion } from './BackupSuggestion.tsx'
 import { CheckpointStop } from './CheckpointPage.tsx'
 import { loadIndex } from './content.ts'
+import { ExamStop } from './ExamStop.tsx'
 import { RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { useProgress } from './progress.ts'
@@ -57,7 +58,9 @@ export function TreePage() {
           </Fragment>
         ))}
         <span className="strip-line" aria-hidden="true" />
-        <span className="strip-end">{strings.routeExam}</span>
+        <Link to="/readiness" className="strip-end">
+          {strings.routeExam}
+        </Link>
       </nav>
 
       {level !== undefined && (
@@ -74,6 +77,8 @@ export function TreePage() {
               level={level}
               ready={inLevel.some((node) => node.status === 'published' && !isAssistantGraded(node))}
             />
+            {/* The last level ends with the exam and the readiness rule. */}
+            {level === levels.at(-1) && <ExamStop />}
           </div>
         </>
       )}

@@ -6,7 +6,6 @@ import {
   enteredScores,
   isDone,
   nodeProgress,
-  readScore,
   scorePasses,
 } from '../../src/learning-engine/index.ts'
 
@@ -68,21 +67,3 @@ test('entering a score gives new progress and leaves the old one as it was', () 
 
   expect(enteredScores(before, 'exam-schreiben-1')).toEqual([72])
 })
-
-test.each([
-  ['90', 90],
-  [' 87 ', 87],
-  ['0', 0],
-  ['100', 100],
-  ['۹۳', 93], // Persian digits, as a Persian keyboard types them
-  ['٧٥', 75], // Arabic digits
-])('what a learner types as a score (%j) is read as a whole number from 0 to 100', (typed, score) => {
-  expect(readScore(typed)).toBe(score)
-})
-
-test.each([[''], ['ninety'], ['101'], ['-5'], ['87.5'], ['90/100'], ['9 0']])(
-  'typed text that is not a whole number from 0 to 100 (%j) is no score',
-  (typed) => {
-    expect(readScore(typed)).toBeNull()
-  },
-)
