@@ -172,3 +172,40 @@ export function drawCheckpoint(sources: readonly CheckpointSource[], random: Ran
   const asked = new Set(dealt.map(({ nodeId }) => nodeId))
   return { questions: dealt, nodeIds: sources.map(({ nodeId }) => nodeId).filter((nodeId) => asked.has(nodeId)) }
 }
+
+/** What a finished checkpoint says. It has no pass mark: a checkpoint is advice. */
+export interface CheckpointResult {
+  /** How many questions the checkpoint had. */
+  total: number
+  /** How many were answered right. */
+  correct: number
+  /** Every question of the checkpoint, in order, with its node and what was answered. */
+  questions: Array<CheckpointQuestion & { answer: Answer | undefined; correct: boolean }>
+  /** The nodes with a wrong answer, in curriculum order. */
+  nodesToRevisit: Array<{ nodeId: string; asked: number; wrong: number }>
+}
+
+/**
+ * Scores a checkpoint and reports the nodes with wrong answers. `answers`
+ * runs parallel to the checkpoint's questions; a missing answer is a wrong
+ * one. It takes no progress and gives none back: a checkpoint changes no
+ * node, whatever the score.
+ */
+export function scoreCheckpoint(checkpoint: Checkpoint, answers: readonly (Answer | undefined)[]): CheckpointResult {
+  const questions = checkpoint.questions.map((asked, index) => {
+    const answer = answers[index]
+    return { ...asked, answer, correct: checkAnswer(asked.question, answer).correct }
+  })
+  const nodesToRevisit = checkpoint.nodeIds
+    .map((nodeId) => {
+      const ofNode = questions.filter((item) => item.nodeId === nodeId)
+      return { nodeId, asked: ofNode.length, wrong: ofNode.filter((item) => !item.correct).length }
+    })
+    .filter((node) => node.wrong > 0)
+  return {
+    total: questions.length,
+    correct: questions.filter((item) => item.correct).length,
+    questions,
+    nodesToRevisit,
+  }
+}
