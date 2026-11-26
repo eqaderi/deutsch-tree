@@ -98,6 +98,14 @@ GitHub Pages and from a local folder.
   `scoreAttempt(task.items, answers)` scores it per item, with the same 90%
   rule; `applyAttempt` marks the part done. An item is a `Question`, so
   `QuestionView`, `AnswerText` and the "report a problem" link serve it too.
+- A listening part runs the same `PracticeTest`. Its task's texts are heard
+  (`isHeard(text)` in `scoring.ts`): each is a list of lines, each line with
+  its speaker and its `audio` in that speaker's voice. While the items are
+  answered the page shows only `PlayRecording` (`src/app/PlayButton.tsx`),
+  which plays the lines one after the other; the result shows what is said,
+  line by line, each with its `PlayButton`. A task holds texts to read or
+  texts to hear, as `textsAre` in its part's format says. A mock exam's
+  Lesen and Hören parts are meant to take the same `ItemTask`.
 - A task that the app scores per item (`ItemTask` in the content model:
   texts and items; schema `itemTaskSchema`, compiled by `compileItemTask`,
   formats per exam part in `ITEM_TASK_FORMATS`, format check
@@ -372,9 +380,14 @@ The rules are in the learning engine, like every rule. The tree
   published writing and speaking parts `exam-schreiben-1` and
   `exam-sprechen-1`. A fourth level, B2, holds the published phrases node
   `phrases-greeting` and the "coming soon" exam part `exam-schreiben-3`; its
-  phrases serve that part and `exam-sprechen-1`. B2 is the last level, so its
+  phrases serve that part and `exam-sprechen-1`. B2 also holds the published
+  listening part `exam-hoeren-3`: two short conversations of Lena (Kerstin)
+  and Jonas (Thorsten). B2 is the last level, so its
   line ends with the exam. A new fixture node of another kind goes there too,
   so that the counts of the levels above stay as their tests know them.
+- A journey that takes a practice task uses `tests/browser/taking-a-task.ts`
+  with the part (`READING` or `LISTENING`); one that hears German records
+  what plays with `listen` in `tests/browser/listening.ts`.
 - One question type: `tests/content-pipeline/extra-question.ts` adds one
   question to the fixture pool and gives back what the pipeline makes of it;
   `review-sheet.ts` holds a reviewer's answers to the fixture pool.
@@ -429,12 +442,14 @@ The rules are in the learning engine, like every rule. The tree
   of the German; an example with its button and translation is
   `SpokenExample`. It loads the file only when pressed, and one piece plays
   at a time.
-- **A second voice (a dialogue, ticket #22).** Name the voice in the content
-  with `voiceSchema` from `src/content-model/audio.ts` (`voice: kerstin`), and
-  compile each line with `audio: spoken(line.text, line.voice)`. Anything in
-  a compiled node that carries `audio` is found by `spokenItems`, so the
+- **A second voice: the lines of a conversation.** A text to hear in a
+  listening part names its speakers, each with a voice (`voiceSchema` from
+  `src/content-model/audio.ts`: `voice: kerstin`), and `compileTaskText`
+  gives each line `audio: spoken(line.text, <its speaker's voice>)`. Anything
+  in a compiled node that carries `audio` is found by `spokenItems`, so the
   command generates it, the check asks for its file and the build ships it
-  with no other change.
+  with no other change. A third speaker in one text (Hören Teil 4) needs a
+  third voice in `VOICES` first: two speakers of a text may not share one.
 - The licence of the Kerstin voice asks for a credit (Hi-Fi TTS, NVIDIA;
   reader Cori Samuel). It is `voiceCredit` in the strings, at the foot of
   every page.

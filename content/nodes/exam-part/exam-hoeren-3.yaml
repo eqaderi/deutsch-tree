@@ -1,4 +1,8 @@
 # Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+# Goethe-Zertifikat B1, Hören, Teil 3. The format follows the exam; the conversations and the items are original.
+# Each line is heard in the voice of its speaker: Kerstin for the woman, Thorsten for the man.
+# Written in full and waiting for its blind review. To publish it: review it (content/README.md,
+# "Review before publishing"), set the status to published, then run pnpm audio:generate.
 id: exam-hoeren-3
 kind: exam-part
 level: B1
@@ -11,3 +15,280 @@ title:
   en: "*Hören Teil 3*: a conversation between two people"
   fa: "*Hören Teil 3*: گفت‌وگوی دو نفر"
   de: "Hören Teil 3: ein Gespräch zwischen zwei Personen"
+
+explanations:
+  en:
+    task: >
+      You hear one everyday conversation between two people who know each
+      other, a woman and a man: on a train, in a café, in the street. You
+      hear it once. Before it starts you have 60 seconds to read seven
+      statements. Then you decide for each statement whether it is right
+      (*Richtig*) or wrong (*Falsch*) according to the conversation. This
+      part has no solved example.
+    scoring: >
+      Each right answer is one point; a wrong or empty answer loses nothing.
+      All of *Hören*, with its four parts, has 30 points, which are turned
+      into a result out of 100, and 60 passes. This part is 7 of the 30
+      points. *Hören* has no clock: the recording sets the pace and takes
+      about 40 minutes for all four parts. In this app the part counts as
+      done when all seven answers of one practice task are right.
+    approach:
+      - "Use the 60 seconds to read all seven statements. Note for each one who it is about and what it claims."
+      - "The statements come in the order of the conversation. Listen for the first one; when the talk has moved past it, go on to the next."
+      - "Keep the two speakers apart. Many statements say which of the two does or thinks something, and you can tell them by their voices."
+      - "Listen for the meaning, not for one word. The speakers usually say it in other words, and a statement that repeats a word you heard can still be wrong."
+      - "Listen to the end of what a speaker says. People often correct themselves or add a *aber*, a *nicht mehr* or a *erst*."
+      - "Mark each answer at once and keep listening. The exam plays the conversation only once, so play it here only once too before you check your answers."
+  fa:
+    task: >
+      یک گفت‌وگوی روزمره میان دو نفر را می‌شنوید که همدیگر را می‌شناسند، یک زن
+      و یک مرد: در قطار، در کافه، در خیابان. گفت‌وگو را یک بار می‌شنوید. پیش از
+      شروع آن ۶۰ ثانیه وقت دارید تا هفت جمله را بخوانید. بعد دربارهٔ هر جمله
+      تصمیم می‌گیرید که طبق گفت‌وگو درست است (*Richtig*) یا غلط (*Falsch*).
+      این بخش نمونهٔ حل‌شده ندارد.
+    scoring: >
+      هر پاسخ درست یک امتیاز دارد؛ پاسخ غلط یا خالی امتیازی کم نمی‌کند. کل
+      *Hören* با چهار بخشش ۳۰ امتیاز دارد که به نمره‌ای از ۱۰۰ تبدیل می‌شود و
+      با ۶۰ قبول می‌شوید. این بخش ۷ امتیاز از آن ۳۰ امتیاز است. *Hören*
+      زمان‌سنج ندارد: فایل صوتی سرعت را تعیین می‌کند و برای هر چهار بخش حدود
+      ۴۰ دقیقه طول می‌کشد. در این برنامه، این بخش وقتی تمام‌شده حساب می‌شود که
+      در یک تمرین هر هفت پاسخ درست باشد.
+    approach:
+      - "از آن ۶۰ ثانیه برای خواندن هر هفت جمله استفاده کنید. برای هر جمله ببینید دربارهٔ چه کسی است و چه می‌گوید."
+      - "جمله‌ها به ترتیب گفت‌وگو می‌آیند. منتظر جملهٔ اول بمانید؛ وقتی گفت‌وگو از آن گذشت، سراغ جملهٔ بعدی بروید."
+      - "دو گوینده را از هم جدا نگه دارید. بسیاری از جمله‌ها می‌گویند کدام یک از آن دو کاری می‌کند یا چیزی فکر می‌کند، و آن دو را از صدایشان می‌شناسید."
+      - "به معنا گوش کنید، نه به یک کلمه. گوینده‌ها معمولاً همان مطلب را با کلمه‌های دیگری می‌گویند، و جمله‌ای که کلمه‌ای شنیده‌شده را تکرار می‌کند هم می‌تواند غلط باشد."
+      - "حرف هر گوینده را تا آخر گوش کنید. آدم‌ها اغلب حرفشان را اصلاح می‌کنند یا یک *aber*، یک *nicht mehr* یا یک *erst* اضافه می‌کنند."
+      - "هر پاسخ را فوراً علامت بزنید و به گوش دادن ادامه دهید. امتحان گفت‌وگو را فقط یک بار پخش می‌کند؛ پس این‌جا هم پیش از بررسی پاسخ‌ها آن را فقط یک بار پخش کنید."
+  de:
+    task: >
+      Du hörst ein Gespräch aus dem Alltag. Zwei Personen sprechen
+      miteinander, eine Frau und ein Mann. Sie kennen sich, zum Beispiel aus
+      der Arbeit. Sie sind im Zug, im Café oder auf der Straße. Du hörst das
+      Gespräch nur einmal. Vorher hast du 60 Sekunden Zeit. Dann liest du
+      sieben Sätze. Bei jedem Satz entscheidest du: *Richtig* oder *Falsch*?
+      In diesem Teil gibt es kein Beispiel.
+    scoring: >
+      Jede richtige Antwort gibt einen Punkt. Für eine falsche Antwort
+      verlierst du keinen Punkt. Das ganze Modul *Hören* hat 30 Punkte.
+      Daraus macht die Prüfung ein Ergebnis von 0 bis 100. Mit 60 hast du
+      bestanden. Dieser Teil hat 7 von den 30 Punkten. Beim Hören gibt es
+      keine Uhr: Die Aufnahme bestimmt das Tempo. Alle vier Teile dauern
+      zusammen etwa 40 Minuten. In dieser App ist der Teil fertig, wenn in
+      einer Übung alle sieben Antworten richtig sind.
+    approach:
+      - "Lies in den 60 Sekunden alle sieben Sätze. Über wen ist der Satz? Was sagt er?"
+      - "Die Sätze kommen in der Reihenfolge vom Gespräch. Warte auf den ersten Satz. Ist das Gespräch schon weiter, geh zum nächsten Satz."
+      - "Achte auf die zwei Personen. Viele Sätze sagen: Die Frau oder der Mann macht oder denkt etwas. Du erkennst die beiden an der Stimme."
+      - "Hör auf die Bedeutung, nicht auf ein Wort. Die Personen sagen es oft mit anderen Wörtern. Ein Satz kann falsch sein, auch wenn er ein Wort aus dem Gespräch hat."
+      - "Hör bis zum Ende zu. Oft sagt eine Person noch *aber*, *nicht mehr* oder *erst*, und dann ändert sich die Bedeutung."
+      - "Kreuz deine Antwort sofort an und hör weiter zu. In der Prüfung hörst du das Gespräch nur einmal. Spiel es hier auch nur einmal ab, bevor du deine Antworten prüfst."
+
+practice:
+  - id: t1
+    texts:
+      - id: a
+        title: Im Zug nach Hannover
+        speakers:
+          - { name: Sandra, voice: kerstin }
+          - { name: Michael, voice: thorsten }
+        lines:
+          - speaker: Michael
+            text: Entschuldigung, ist der Platz hier noch frei? Moment mal ... Sandra? Das gibt es ja nicht!
+          - speaker: Sandra
+            text: Michael! So ein Zufall! Setz dich doch. Wie lange haben wir uns nicht gesehen?
+          - speaker: Michael
+            text: Bestimmt drei Jahre. Seit du bei uns in der Firma aufgehört hast, oder?
+          - speaker: Sandra
+            text: Stimmt, das war kurz vor meinem Umzug nach Leipzig. Und du? Arbeitest du immer noch im Büro in der Bahnhofstraße?
+          - speaker: Michael
+            text: Nein, nicht mehr. Die Firma ist letztes Jahr an den Stadtrand gezogen. Mit dem Auto brauche ich jetzt fast eine Stunde. Deshalb arbeite ich zwei Tage in der Woche von zu Hause.
+          - speaker: Sandra
+            text: Das klingt doch gar nicht schlecht.
+          - speaker: Michael
+            text: Am Anfang war es komisch, so allein am Küchentisch. Aber inzwischen gefällt es mir. Heute fahre ich übrigens nur mit dem Zug, weil mein Auto in der Werkstatt ist.
+          - speaker: Sandra
+            text: Ich fahre fast immer mit dem Zug. Ich besuche meine Eltern in Hannover. Das mache ich einmal im Monat.
+          - speaker: Michael
+            text: Wie geht es deinen Eltern?
+          - speaker: Sandra
+            text: Meinem Vater geht es gut. Aber meine Mutter hatte im Frühling eine Operation am Knie, und sie darf noch nicht lange laufen. Deshalb gehe ich am Wochenende für sie einkaufen und helfe ein bisschen im Garten.
+          - speaker: Michael
+            text: Das ist nett von dir. Und wie gefällt dir Leipzig?
+          - speaker: Sandra
+            text: Sehr gut! Am Anfang kannte ich dort niemanden. Dann habe ich angefangen, in einem Chor zu singen, und da habe ich schnell Freunde gefunden.
+          - speaker: Michael
+            text: Du singst? Das wusste ich gar nicht.
+          - speaker: Sandra
+            text: Ich habe es einfach ausprobiert. Im Dezember haben wir sogar ein Konzert in einer Kirche gegeben.
+          - speaker: Michael
+            text: Toll. Ich habe auch etwas Neues angefangen. Ich lerne Spanisch, denn meine Freundin kommt aus Valencia.
+          - speaker: Sandra
+            text: Deine Freundin? Erzähl!
+          - speaker: Michael
+            text: Wir haben uns vor einem Jahr im Urlaub kennengelernt, am Strand. Im Sommer wollen wir zusammen ihre Familie besuchen. Ich habe ein bisschen Angst, dass ich dann nichts verstehe.
+          - speaker: Sandra
+            text: Ach, das klappt schon. Oh, der nächste Halt ist ja schon Hannover. Ich muss aussteigen.
+          - speaker: Michael
+            text: Schade! Gib mir doch deine Nummer, dann telefonieren wir mal.
+          - speaker: Sandra
+            text: Gern. Warte, ich schreibe sie dir auf.
+    items:
+      - id: i1
+        type: richtig-falsch
+        prompt: Sandra und Michael haben früher in derselben Firma gearbeitet.
+        answer: true
+        explanation:
+          en: "Michael says *seit du bei uns in der Firma aufgehört hast*: she worked at his company until three years ago."
+          fa: "*Michael* می‌گوید *seit du bei uns in der Firma aufgehört hast*: یعنی ساندرا تا سه سال پیش در شرکت او کار می‌کرد."
+          de: "Michael sagt: *Seit du bei uns in der Firma aufgehört hast*. Sandra hat also früher in seiner Firma gearbeitet."
+      - id: i2
+        type: richtig-falsch
+        prompt: Michael arbeitet jeden Tag im Büro.
+        answer: false
+        explanation:
+          en: "He works *zwei Tage in der Woche von zu Hause*: two days a week from home."
+          fa: "او *zwei Tage in der Woche von zu Hause* کار می‌کند: دو روز در هفته از خانه."
+          de: "Er arbeitet *zwei Tage in der Woche von zu Hause*, also nicht jeden Tag im Büro."
+      - id: i3
+        type: richtig-falsch
+        prompt: Michael fährt normalerweise mit dem Zug zur Arbeit.
+        answer: false
+        explanation:
+          en: "He usually drives; he takes the train *nur* today, *weil mein Auto in der Werkstatt ist*."
+          fa: "او معمولاً با ماشین می‌رود؛ فقط امروز با قطار می‌آید، *weil mein Auto in der Werkstatt ist*."
+          de: "Er fährt sonst mit dem Auto. Nur heute fährt er mit dem Zug, *weil mein Auto in der Werkstatt ist*."
+      - id: i4
+        type: richtig-falsch
+        prompt: Sandra besucht ihre Eltern regelmäßig.
+        answer: true
+        explanation:
+          en: "She visits them in Hannover *einmal im Monat*: once a month."
+          fa: "او پدر و مادرش را در هانوفر *einmal im Monat* می‌بیند: ماهی یک بار."
+          de: "Sie besucht ihre Eltern *einmal im Monat*."
+      - id: i5
+        type: richtig-falsch
+        prompt: Sandras Vater kann nach einer Operation noch nicht gut laufen.
+        answer: false
+        explanation:
+          en: "Her father is well (*Meinem Vater geht es gut*); it is her mother who had the knee operation."
+          fa: "حال پدرش خوب است (*Meinem Vater geht es gut*)؛ مادرش بود که زانویش را عمل کرد."
+          de: "*Meinem Vater geht es gut.* Die Mutter hatte die Operation am Knie."
+      - id: i6
+        type: richtig-falsch
+        prompt: In Leipzig hat Sandra im Chor neue Freunde gefunden.
+        answer: true
+        explanation:
+          en: "She began to sing in a choir, *und da habe ich schnell Freunde gefunden*."
+          fa: "او در یک گروه کُر شروع به خواندن کرد، *und da habe ich schnell Freunde gefunden*."
+          de: "Sie singt in einem Chor, *und da habe ich schnell Freunde gefunden*."
+      - id: i7
+        type: richtig-falsch
+        prompt: Michael hat seine Freundin bei der Arbeit kennengelernt.
+        answer: false
+        explanation:
+          en: "They met *im Urlaub*, on the beach, a year ago."
+          fa: "آن‌ها یک سال پیش *im Urlaub*، کنار ساحل، با هم آشنا شدند."
+          de: "Sie haben sich *im Urlaub* am Strand kennengelernt."
+
+  - id: t2
+    texts:
+      - id: a
+        title: Im Café
+        speakers:
+          - { name: Julia, voice: kerstin }
+          - { name: Tobias, voice: thorsten }
+        lines:
+          - speaker: Julia
+            text: Hallo Tobias! Du siehst müde aus. Ist alles in Ordnung?
+          - speaker: Tobias
+            text: Hallo Julia. Ach, ich suche seit Wochen eine neue Wohnung, und das ist wirklich anstrengend.
+          - speaker: Julia
+            text: Wieso suchst du denn? Deine Wohnung ist doch so schön.
+          - speaker: Tobias
+            text: Schön ist sie schon, aber zu klein. Meine Freundin zieht im Herbst zu mir, und für zwei Personen reichen zwei Zimmer einfach nicht. Sie arbeitet oft zu Hause und braucht ein eigenes Arbeitszimmer.
+          - speaker: Julia
+            text: Verstehe. Und, hast du schon etwas gefunden?
+          - speaker: Tobias
+            text: Gestern habe ich eine Wohnung angesehen, ganz in der Nähe vom Park. Drei Zimmer, ein großer Balkon, und die Miete ist auch in Ordnung. Aber da waren noch dreißig andere Leute.
+          - speaker: Julia
+            text: Dreißig? Oje.
+          - speaker: Tobias
+            text: Ja. Der Vermieter will sich bis Freitag melden. Aber ich glaube nicht, dass ich sie bekomme.
+          - speaker: Julia
+            text: Warte mal. Meine Kollegin Anna zieht nächsten Monat nach München. Soviel ich weiß, ist ihre Wohnung dann frei. Sie wohnt in der Gartenstraße.
+          - speaker: Tobias
+            text: Wirklich? Weißt du, wie groß die Wohnung ist?
+          - speaker: Julia
+            text: Ich war einmal zum Abendessen da. Drei Zimmer, glaube ich, aber leider ohne Balkon. Dafür ist die Küche sehr groß.
+          - speaker: Tobias
+            text: Ohne Balkon ist schade. Aber eine große Küche ist auch schön, wir kochen nämlich beide gern. Kannst du Anna fragen, ob ich die Wohnung mal ansehen darf?
+          - speaker: Julia
+            text: Klar, ich sehe sie morgen im Büro. Dann schicke ich dir ihre Telefonnummer.
+          - speaker: Tobias
+            text: Super, danke! Und bei dir? Was gibt es Neues?
+          - speaker: Julia
+            text: Ich trainiere für einen Lauf im Mai, zehn Kilometer. Ich gehe jetzt dreimal in der Woche laufen, meistens morgens vor der Arbeit.
+          - speaker: Tobias
+            text: Morgens? Respekt! Ich schaffe das nicht einmal am Wochenende.
+          - speaker: Julia
+            text: Am Anfang war es schwer. Aber jetzt fehlt mir etwas, wenn ich nicht laufe. Komm doch einfach mal mit!
+          - speaker: Tobias
+            text: Mal sehen. Zuerst brauche ich eine Wohnung.
+    items:
+      - id: i1
+        type: richtig-falsch
+        prompt: Tobias sucht eine neue Wohnung, weil seine Wohnung zu teuer ist.
+        answer: false
+        explanation:
+          en: "His flat is *zu klein*: too small, because his girlfriend is moving in."
+          fa: "خانه‌اش *zu klein* است: خیلی کوچک، چون دوست‌دخترش پیش او می‌آید."
+          de: "Seine Wohnung ist *zu klein*, denn seine Freundin zieht zu ihm."
+      - id: i2
+        type: richtig-falsch
+        prompt: Die Freundin von Tobias braucht in der neuen Wohnung ein Zimmer zum Arbeiten.
+        answer: true
+        explanation:
+          en: "She often works at home *und braucht ein eigenes Arbeitszimmer*."
+          fa: "او اغلب در خانه کار می‌کند *und braucht ein eigenes Arbeitszimmer*."
+          de: "Sie arbeitet oft zu Hause *und braucht ein eigenes Arbeitszimmer*."
+      - id: i3
+        type: richtig-falsch
+        prompt: Viele andere Leute wollten die Wohnung am Park auch haben.
+        answer: true
+        explanation:
+          en: "At the viewing there were *noch dreißig andere Leute*: thirty other people."
+          fa: "هنگام دیدن خانه *noch dreißig andere Leute* آن‌جا بودند: سی نفر دیگر."
+          de: "Bei der Wohnung waren *noch dreißig andere Leute*."
+      - id: i4
+        type: richtig-falsch
+        prompt: Tobias weiß schon, dass er die Wohnung am Park bekommt.
+        answer: false
+        explanation:
+          en: "The landlord will answer by Friday, and Tobias says *ich glaube nicht, dass ich sie bekomme*."
+          fa: "صاحب‌خانه تا جمعه خبر می‌دهد، و *Tobias* می‌گوید *ich glaube nicht, dass ich sie bekomme*."
+          de: "Der Vermieter meldet sich erst bis Freitag, und Tobias sagt: *Ich glaube nicht, dass ich sie bekomme.*"
+      - id: i5
+        type: richtig-falsch
+        prompt: Die Wohnung von Anna hat einen großen Balkon.
+        answer: false
+        explanation:
+          en: "Anna's flat is *leider ohne Balkon*; its kitchen is large."
+          fa: "خانهٔ *Anna* بالکن ندارد (*leider ohne Balkon*)؛ در عوض آشپزخانه‌اش بزرگ است."
+          de: "Annas Wohnung ist *leider ohne Balkon*. Groß ist die Küche."
+      - id: i6
+        type: richtig-falsch
+        prompt: Julia will Anna fragen, ob Tobias die Wohnung ansehen kann.
+        answer: true
+        explanation:
+          en: "Tobias asks her to, and she says *Klar, ich sehe sie morgen im Büro*."
+          fa: "*Tobias* این را از او می‌خواهد و او می‌گوید *Klar, ich sehe sie morgen im Büro*."
+          de: "Tobias bittet sie darum, und Julia sagt: *Klar, ich sehe sie morgen im Büro.*"
+      - id: i7
+        type: richtig-falsch
+        prompt: Julia geht meistens abends nach der Arbeit laufen.
+        answer: false
+        explanation:
+          en: "She runs *meistens morgens vor der Arbeit*: mostly in the morning, before work."
+          fa: "او *meistens morgens vor der Arbeit* می‌دود: بیشتر صبح‌ها، پیش از کار."
+          de: "Sie läuft *meistens morgens vor der Arbeit*."

@@ -83,3 +83,12 @@
     en: Fixture exam parts served by phrases
     fa: بخش‌های امتحان آزمایشی برای عبارت‌ها
     de: Test-Prüfungsteile für Redemittel
+
+# A listening part the app scores per item: its conversations are heard in two voices.
+- id: fixture-exam-hoeren
+  level: B2
+  kind: exam-part
+  title:
+    en: "Fixture exam: listening"
+    fa: "امتحان آزمایشی: شنیدن"
+    de: "Test-Prüfung: Hören"

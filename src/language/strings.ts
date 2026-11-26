@@ -149,6 +149,12 @@ export const en = {
   // A practice task: the text, all its items on one page, then the result of every item.
   practiceTitle: (title: string) => `Practice: ${title}`,
   practiceText: 'Text',
+  // A listening task: the recording while it is answered, then what is said, line by line.
+  practiceRecording: 'Recording',
+  playRecording: 'Play the recording',
+  stopRecording: 'Stop the recording',
+  recordingHidden: 'You read what is said after you check your answers.',
+  transcript: 'What is said',
   questions: 'Questions',
   /** The words on the exam's answer sheet. They are German in every language. */
   examAnswers: { richtig: 'Richtig', falsch: 'Falsch' },

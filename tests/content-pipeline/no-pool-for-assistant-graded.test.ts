@@ -27,6 +27,7 @@ test('published writing and speaking nodes pass with no question pool and no rev
     ['exam-schreiben-1', 'published'],
     ['exam-sprechen-1', 'published'],
     ['exam-schreiben-3', 'coming-soon'],
+    ['exam-hoeren-3', 'published'],
   ])
 })
 

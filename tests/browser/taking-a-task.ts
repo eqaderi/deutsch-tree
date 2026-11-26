@@ -20,18 +20,38 @@ export interface FixtureItem {
   explanation: { en: string; fa: string; de: string }
 }
 
+/** A text of a fixture task: one to read (`body`), or one to hear (`speakers` and `lines`). */
+export interface FixtureText {
+  id: string
+  title: string
+  body?: string
+  speakers?: Array<{ name: string; voice: string }>
+  lines?: Array<{ speaker: string; text: string }>
+}
+
 export interface FixtureTask {
   id: string
-  texts: Array<{ id: string; title: string; body: string }>
+  texts: FixtureText[]
   items: FixtureItem[]
 }
 
-/** How many items a task of the fixture exam part has: Lesen, Teil 1. */
-export const ITEMS = 6
+/** A fixture exam part with practice tasks, and how many items each of its tasks has. */
+export interface FixturePart {
+  node: string
+  items: number
+}
 
-/** The practice tasks of the fixture exam part "Fixture reading, part 1". */
-export async function fixtureTasks(): Promise<FixtureTask[]> {
-  const file = fileURLToPath(new URL('../fixtures/content/nodes/exam-part/exam-lesen-1.yaml', import.meta.url))
+/** "Fixture reading, part 1": Lesen, Teil 1. */
+export const READING: FixturePart = { node: 'exam-lesen-1', items: 6 }
+/** "Fixture listening, part 3": Hören, Teil 3. */
+export const LISTENING: FixturePart = { node: 'exam-hoeren-3', items: 7 }
+
+/** How many items a task of the fixture reading part has. */
+export const ITEMS = READING.items
+
+/** The practice tasks of a fixture exam part. */
+export async function fixtureTasks(part: FixturePart = READING): Promise<FixtureTask[]> {
+  const file = fileURLToPath(new URL(`../fixtures/content/nodes/exam-part/${part.node}.yaml`, import.meta.url))
   return (parse(await readFile(file, 'utf8')) as { practice: FixtureTask[] }).practice
 }
 
@@ -41,12 +61,12 @@ export function itemsOnScreen(page: Page, listName = 'Questions'): Locator {
 }
 
 /** The fixture task that is on screen now. */
-export async function taskOnScreen(page: Page, listName = 'Questions'): Promise<FixtureTask> {
-  await expect(itemsOnScreen(page, listName)).toHaveCount(ITEMS)
+export async function taskOnScreen(page: Page, listName = 'Questions', part = READING): Promise<FixtureTask> {
+  await expect(itemsOnScreen(page, listName)).toHaveCount(part.items)
   const { node, question } = await reportedIssue(reportLink(itemsOnScreen(page, listName).first()))
-  expect(node).toBe('exam-lesen-1')
-  const found = (await fixtureTasks()).find((task) => question === `${task.id}/${task.items[0]?.id}`)
-  if (!found) throw new Error(`the task on screen (item ${question}) is not a task of the fixture exam part`)
+  expect(node).toBe(part.node)
+  const found = (await fixtureTasks(part)).find((task) => question === `${task.id}/${task.items[0]?.id}`)
+  if (!found) throw new Error(`the task on screen (item ${question}) is not a task of ${part.node}`)
   return found
 }
 
@@ -63,8 +83,9 @@ export async function answerTask(
   page: Page,
   how: (place: number) => 'right' | 'wrong',
   listName = 'Questions',
+  part = READING,
 ): Promise<FixtureTask> {
-  const task = await taskOnScreen(page, listName)
+  const task = await taskOnScreen(page, listName, part)
   for (const [index, item] of task.items.entries()) {
     const given = how(index + 1) === 'right' ? item.answer : !item.answer
     await itemsOnScreen(page, listName)

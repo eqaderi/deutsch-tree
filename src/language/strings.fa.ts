@@ -130,6 +130,11 @@ export const fa: Strings = {
 
   practiceTitle: (title) => `تمرین: ${title}`,
   practiceText: 'متن',
+  practiceRecording: 'فایل صوتی',
+  playRecording: 'پخش فایل صوتی',
+  stopRecording: 'توقف فایل صوتی',
+  recordingHidden: 'متن گفت‌وگو را بعد از بررسی پاسخ‌ها می‌بینید.',
+  transcript: 'آنچه گفته می‌شود',
   questions: 'سؤال‌ها',
   examAnswers: { richtig: 'Richtig', falsch: 'Falsch' },
   answeredOf: (answered, total) => `${digits.format(answered)} از ${digits.format(total)} پاسخ داده شده`,

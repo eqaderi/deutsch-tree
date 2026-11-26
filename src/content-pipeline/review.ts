@@ -245,9 +245,22 @@ function vocabularyItems(node: ReviewedContent): Reviewed[] {
   )
 }
 
-/** A task's texts as the reviewer sees them. */
+/**
+ * A task's texts as the reviewer sees them. A text to hear is its
+ * transcript: who says what, line by line. The voices are left out, so a
+ * change of voice needs no new review; what is said does.
+ */
 function textsOf(task: ItemTaskFile): SheetTask {
-  return { id: task.id, texts: task.texts }
+  return {
+    id: task.id,
+    texts: task.texts.map(({ id, title, body, lines }) => ({
+      id,
+      ...(title === undefined ? {} : { title }),
+      ...(lines === undefined
+        ? { body: body ?? '' }
+        : { lines: lines.map(({ speaker, text }) => ({ speaker, text })) }),
+    })),
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -268,7 +281,10 @@ export interface ReviewSheet {
 /** The texts of one practice task. A question with `task: <id>` is answered from them. */
 export interface SheetTask {
   id: string
-  texts: Array<{ id: string; title?: string; body: string }>
+  /** A text to read has a body; a text to hear has its lines, each with who says it. */
+  texts: Array<
+    { id: string; title?: string } & ({ body: string } | { lines: Array<{ speaker: string; text: string }> })
+  >
 }
 
 export interface SheetQuestion {
@@ -298,9 +314,14 @@ const INSTRUCTIONS = [
 ].join(' ')
 
 const TASK_INSTRUCTIONS = [
-  'A question that names a "task" is an item of an exam reading task: a statement or question about the texts of that task,',
+  'A question that names a "task" is an item of an exam reading or listening task: a statement or question about the texts of that task,',
   'which are under "tasks". Answer it from those texts alone, as a candidate in the exam would.',
   'Object too when a text does not settle an item, or when a text has wrong or unnatural German.',
+].join(' ')
+
+const HEARD_TEXT_INSTRUCTIONS = [
+  'A text with "lines" is heard, not read: a conversation or an announcement, each line with who says it.',
+  'The candidate hears it without seeing these words, so object too when an item hangs on a detail that is hard to catch by ear.',
 ].join(' ')
 
 /** A node's pool as a reviewer may see it. `only` limits it to some questions, for a second pass. */
@@ -314,11 +335,17 @@ export async function blindPool(contentDir: string, nodeId: string, only?: strin
 
   const chosen = reviewed.filter((entry) => !only || only.includes(entry.id))
   const tasks = (node.practice ?? []).filter((task) => chosen.some((entry) => entry.task === task))
+  const heard = tasks.some((task) => task.texts.some((text) => text.lines !== undefined))
+  const instructions = [
+    INSTRUCTIONS,
+    ...(tasks.length > 0 ? [TASK_INSTRUCTIONS] : []),
+    ...(heard ? [HEARD_TEXT_INSTRUCTIONS] : []),
+  ].join(' ')
   return {
     node: node.id,
     level: node.level,
     topic: node.title.en,
-    instructions: tasks.length > 0 ? `${INSTRUCTIONS} ${TASK_INSTRUCTIONS}` : INSTRUCTIONS,
+    instructions,
     ...(tasks.length > 0 ? { tasks: tasks.map(textsOf) } : {}),
     questions: chosen.map((entry) => ({
       id: entry.id,

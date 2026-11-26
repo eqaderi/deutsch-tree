@@ -9,10 +9,12 @@
 import type {
   ExamModule,
   GrammarContent,
+  HeardText,
   NodeContent,
   NodeKind,
   PhrasesContent,
   PracticeContent,
+  TaskText,
   VocabularyContent,
 } from './index.ts'
 
@@ -40,6 +42,11 @@ export function hasPool(content: NodeContent): content is GrammarContent | Vocab
 /** Whether a published node is a reading part, practised with tasks that the app scores per item. */
 export function hasPractice(content: NodeContent): content is PracticeContent {
   return 'practice' in content
+}
+
+/** Whether a text of a task is heard (Hören), line by line in its speakers' voices, rather than read. */
+export function isHeard(text: TaskText): text is HeardText {
+  return 'lines' in text
 }
 
 /** Whether the content is that of a grammar node: rule, table, examples, mistakes and a written pool. */

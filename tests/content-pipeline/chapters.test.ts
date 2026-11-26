@@ -184,6 +184,7 @@ test('a new level needs only content: a chapter of that level and a node in it',
     ['B1', 'fixture-sprechen', 'exam-sprechen-1'],
     ['B2', 'fixture-set-phrases', 'phrases-greeting'],
     ['B2', 'fixture-exam-parts', 'exam-schreiben-3'],
+    ['B2', 'fixture-exam-hoeren', 'exam-hoeren-3'],
     ['C1', 'fixture-c1', 'grammar-003'],
   ])
 })
