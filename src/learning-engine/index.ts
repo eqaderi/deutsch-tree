@@ -145,7 +145,8 @@ export interface Checkpoint {
 }
 
 /**
- * The checkpoint of a level, drawn across the pools of its published nodes.
+ * The checkpoint of a level, drawn across the pools of its published nodes,
+ * which are given in curriculum order. A node without questions gives none.
  *
  * Questions are dealt in rounds. A round gives one question to every node
  * that has one left; when fewer questions remain to be dealt than that, the

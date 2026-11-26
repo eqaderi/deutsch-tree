@@ -67,8 +67,19 @@ GitHub Pages and from a local folder.
   runs it for any node with a pool: it draws an attempt, shows one question
   per screen (`AttemptRun.tsx`), then the result (`TestResult.tsx`).
 - Every rule is in `src/learning-engine/index.ts`: `drawAttempt`, `passMark`,
-  `checkAnswer`, `scoreAttempt`, `applyAttempt`, `isDone`. Components call
-  these and hold no rule of their own.
+  `checkAnswer`, `scoreAttempt`, `applyAttempt`, `isDone`, and for a
+  checkpoint `drawCheckpoint` and `scoreCheckpoint`. Components call these
+  and hold no rule of their own.
+- A level's checkpoint is at `#/checkpoint/<level>`
+  (`src/app/CheckpointPage.tsx`); the tree ends each level's line with it. It
+  asks through the same `AttemptRun` as a node's test, so a new question type
+  works in it without more code. `drawCheckpoint` asks 30 questions at most
+  and 5 at most of one node, dealt in rounds over the published nodes of the
+  level: up to 6 nodes give 5 each, 7 to 29 nodes share the 30 evenly, and
+  from 30 nodes on a checkpoint asks 30 nodes drawn at random, one question
+  each. A node without a pool gives none. `scoreCheckpoint` reports the nodes
+  with wrong answers. A checkpoint is advice: it never reads or changes the
+  progress. What a node gives to it is `checkpointPool` in that file.
 - Progress: read it with `useProgress()` and change it with
   `updateProgress((progress) => …)` from `src/app/progress.ts`, where the
   function comes from the learning engine. The saved text has a version
@@ -114,7 +125,11 @@ GitHub Pages and from a local folder.
   several worktrees do not collide. Tests run at phone and at computer size.
   A journey that takes a test uses `tests/browser/taking-a-test.ts`: it
   answers right or wrong from the fixture node's own answer key, whatever
-  questions the attempt drew.
+  questions the attempt drew. `takeCheckpoint` does the same for a checkpoint,
+  whose questions come from several nodes.
+- The fixture content has three levels: A1 with one published topic and one
+  "coming soon", A2 with three published topics (`grammar-101` to
+  `grammar-103`) and B1 with nothing published.
 
 ## Deploying
 
