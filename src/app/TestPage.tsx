@@ -9,6 +9,7 @@ import { plainText } from './German.tsx'
 import { isNodeId } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
 import { updateProgress, useProgress } from './progress.ts'
+import { RecogniseOnlyLabel, RecogniseOnlyNote } from './RecogniseOnly.tsx'
 import { TestResult } from './TestResult.tsx'
 import { treeAddressOf } from './treeAddress.ts'
 
@@ -62,6 +63,14 @@ export function NodeTest({ node, pool, attemptSize }: NodeTestProps) {
       </Link>
       <header className="page-head">
         <h1>{title}</h1>
+        {node.recogniseOnly && (
+          <>
+            <div className="meta">
+              <RecogniseOnlyLabel />
+            </div>
+            <RecogniseOnlyNote on="test" />
+          </>
+        )}
       </header>
 
       {attempt.finished ? (

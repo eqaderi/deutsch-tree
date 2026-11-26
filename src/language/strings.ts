@@ -35,6 +35,10 @@ export const en = {
   } satisfies Record<NodeKind, string>,
   start: 'Start',
   comingSoon: 'Coming soon',
+  /** A topic that the exam only asks the learner to understand, never to use. */
+  recogniseOnly: 'Recognise only',
+  recogniseOnlyNote: 'You only need to understand this when you read or hear it. You do not need to use it yourself.',
+  recogniseOnlyTest: 'This test only asks whether you understand the form. You never have to write it yourself.',
   done: 'Done',
   /** The state word of a topic that is in progress, as the tree writes it. */
   continueTopic: 'Continue',

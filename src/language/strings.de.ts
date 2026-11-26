@@ -28,6 +28,9 @@ export const de: Strings = {
   },
   start: 'Start',
   comingSoon: 'Kommt bald',
+  recogniseOnly: 'Nur verstehen',
+  recogniseOnlyNote: 'Das musst du nur verstehen, wenn du es liest oder hörst. Du musst es nicht selbst benutzen.',
+  recogniseOnlyTest: 'Dieser Test fragt nur, ob du die Form verstehst. Du musst sie nie selbst schreiben.',
   done: 'Fertig',
   continueTopic: 'Weiter',
 

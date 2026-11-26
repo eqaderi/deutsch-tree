@@ -5,7 +5,7 @@ level: B1
 chapter: fixture-unwritten
 order: 1
 status: coming-soon
-recogniseOnly: false
+recogniseOnly: true # a recognise-only topic that is not written yet: labelled all the same
 prerequisites: []
 title:
   en: Fixture topic of a later level

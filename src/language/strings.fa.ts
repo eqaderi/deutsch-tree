@@ -31,6 +31,9 @@ export const fa: Strings = {
   },
   start: 'شروع',
   comingSoon: 'به‌زودی',
+  recogniseOnly: 'فقط شناختن',
+  recogniseOnlyNote: 'کافی است این را هنگام خواندن یا شنیدن بفهمید. لازم نیست خودتان آن را به کار ببرید.',
+  recogniseOnlyTest: 'این آزمون فقط می‌پرسد که آیا این ساخت را می‌فهمید. هیچ‌وقت لازم نیست خودتان آن را بنویسید.',
   done: 'تمام‌شده',
   continueTopic: 'ادامه',
 

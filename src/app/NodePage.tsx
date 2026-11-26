@@ -10,6 +10,7 @@ import { GrammarTableView } from './GrammarTableView.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
 import { updateProgress, useProgress } from './progress.ts'
+import { RecogniseOnlyLabel, RecogniseOnlyNote } from './RecogniseOnly.tsx'
 
 /**
  * A node's page. A grammar page is a column of panels in one fixed order:
@@ -70,8 +71,10 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
           <span className="tag">{node.level}</span>
           <KindLabel kind={node.kind} />
           {node.status === 'coming-soon' && <span className="tag">{strings.comingSoon}</span>}
+          {node.recogniseOnly && <RecogniseOnlyLabel />}
           {done && <span className="tag tag-done">{strings.done}</span>}
         </div>
+        {node.recogniseOnly && <RecogniseOnlyNote on="page" />}
         <Unmark key={node.id} nodeId={node.id} />
         <BuildsOn node={node} />
       </header>
