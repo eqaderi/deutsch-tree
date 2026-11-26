@@ -4,6 +4,8 @@ import { LanguageProvider, useLanguage } from '../language/index.tsx'
 import { BackupPage } from './BackupPage.tsx'
 import { CheckpointPage } from './CheckpointPage.tsx'
 import { LanguageSwitch } from './LanguageSwitch.tsx'
+import { MockExamPage } from './MockExamPage.tsx'
+import { MockExamsPage } from './MockExamsPage.tsx'
 import { NodePage } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
 import { OverviewPage } from './OverviewPage.tsx'
@@ -38,6 +40,8 @@ const router = createHashRouter([
           { path: 'backup', element: <BackupPage /> },
           { path: 'checkpoint/:level', element: <CheckpointPage /> },
           { path: 'readiness', element: <ReadinessPage /> },
+          { path: 'mock-exams', element: <MockExamsPage /> },
+          { path: 'mock-exams/:exam/:module', element: <MockExamPage /> },
           { path: 'packs', element: <PacksPage /> },
           { path: 'packs/:pack/:exam/:module', element: <PackExamPage /> },
           { path: '*', element: <NotFound /> },
@@ -81,7 +85,7 @@ function Frame() {
       <footer className="wrap site-footer">
         <Link to="/backup">{strings.backupLink}</Link>
         <Link to="/packs">{strings.packsLink}</Link>
-        {/* The licence of the Kerstin voice asks for this credit (ticket #5). */}
+        {/* The licences of the Kerstin voice (ticket #5) and the MLS voice (ticket #27) ask for this credit. */}
         <p className="voice-credit">{strings.voiceCredit}</p>
       </footer>
       <ScrollRestoration />

@@ -87,7 +87,8 @@ export function passMark(attemptSize: number): number {
 /**
  * What a learner gave for one question: the chosen option for multiple choice
  * and gap fill, true or false for a true/false question and for a
- * Richtig/Falsch item of an exam task, the typed text for a typed answer and
+ * Richtig/Falsch or a Ja/Nein item of an exam task, the id of the chosen text
+ * or speaker for an item that chooses among them, the typed text for a typed answer and
  * a typed gap fill, the place of the picked word for find the error, the
  * pieces placed so far (in their order) for word ordering, the partner chosen
  * for each item (null where none is chosen yet) for matching. A question type
@@ -113,6 +114,9 @@ export function checkAnswer(question: Question, answer: Answer | undefined): Ans
     case 'gap-fill':
     case 'true-false':
     case 'richtig-falsch':
+    case 'ja-nein':
+    case 'which-text':
+    case 'who-says':
     case 'find-error':
       return { correct: answer === question.answer, notes: [] }
     case 'typed-answer':
@@ -139,6 +143,9 @@ export function rightAnswer(question: Question): Answer {
     case 'gap-fill':
     case 'true-false':
     case 'richtig-falsch':
+    case 'ja-nein':
+    case 'which-text':
+    case 'who-says':
     case 'find-error':
     case 'matching':
       return question.answer
@@ -273,6 +280,9 @@ export function isAnswered(question: Question, answer: Answer | undefined): bool
     case 'gap-fill':
     case 'true-false':
     case 'richtig-falsch':
+    case 'ja-nein':
+    case 'which-text':
+    case 'who-says':
     case 'find-error':
     case 'typed-answer':
     case 'typed-gap-fill':
@@ -431,10 +441,15 @@ export interface Progress {
    * identifier. An exam with nothing recorded has no entry.
    */
   officialExams: Record<string, ModuleScores>
+  /**
+   * Every module of an original mock exam that the learner finished, oldest
+   * first. A result is never changed or replaced: this is the history.
+   */
+  mockExams: MockModuleResult[]
 }
 
 export function emptyProgress(): Progress {
-  return { nodes: {}, officialExams: {} }
+  return { nodes: {}, officialExams: {}, mockExams: [] }
 }
 
 export function nodeProgress(progress: Progress, nodeId: string): NodeProgress {
@@ -648,6 +663,74 @@ export function scoreModule(parts: ReadonlyArray<{ total: number; correct: numbe
   const total = parts.reduce((sum, part) => sum + part.total, 0)
   const correct = parts.reduce((sum, part) => sum + part.correct, 0)
   return { total, correct, score: examScore(correct, total) }
+}
+
+// ---------------------------------------------------------------------------
+// Original mock exams: a finished module, its score and the history
+// ---------------------------------------------------------------------------
+
+/** A module of the exam is passed with this score or more. */
+export const PASS_SCORE = 60
+
+/**
+ * One part of a finished mock exam module. For Lesen and Hören: the items of
+ * the part and how many were right. A module whose parts are graded in
+ * points (Schreiben, Sprechen) gives the points reached as `correct` and the
+ * points the part is worth as `total`, so its score is reached the same way.
+ */
+export interface MockPartResult {
+  /** The part's number in its module: Teil 1 is 1. */
+  part: number
+  correct: number
+  total: number
+}
+
+/** A module of an original mock exam, finished: what the history keeps. */
+export interface MockModuleResult {
+  /** The id of the mock exam. */
+  exam: string
+  module: ExamModule
+  /** When the module was finished, as an ISO date and time. */
+  finished: string
+  /** Whether it was taken with the time limit of the exam. */
+  timed: boolean
+  /** Out of 100, over all the parts. */
+  score: number
+  /** Every part, in the order of the module. */
+  parts: MockPartResult[]
+}
+
+/** The result of a finished module, scored out of 100 over all its parts (27 of 30 is 90). */
+export function mockModuleResult(finished: Omit<MockModuleResult, 'score'>): MockModuleResult {
+  const { exam, module, finished: at, timed, parts } = finished
+  return { exam, module, finished: at, timed, score: scoreModule(parts).score, parts }
+}
+
+/** Where a module score stands: under the pass mark of 60, passed, or at the target of 90 or more. */
+export function scoreStanding(score: number): 'not-passed' | 'passed' | 'at-target' {
+  if (score >= READINESS_SCORE) return 'at-target'
+  return score >= PASS_SCORE ? 'passed' : 'not-passed'
+}
+
+/** The progress with one more finished module in the history. Returns new progress. */
+export function recordMockExamResult(progress: Progress, result: MockModuleResult): Progress {
+  return { ...progress, mockExams: [...progress.mockExams, result] }
+}
+
+/** The finished modules of mock exams, the latest first; of one exam only when `examId` is given. */
+export function mockExamHistory(progress: Progress, examId?: string): MockModuleResult[] {
+  return progress.mockExams
+    .filter((result) => examId === undefined || result.exam === examId)
+    .toSorted((a, b) => (a.finished < b.finished ? 1 : a.finished > b.finished ? -1 : 0))
+}
+
+/**
+ * The seconds left of a time limit of `minutes` that began at `startedAt`
+ * (milliseconds, like Date.now()), at the moment `now`. The last second
+ * counts until it is over; 0 when time is up.
+ */
+export function timeLeft(minutes: number, startedAt: number, now: number): number {
+  return Math.max(0, Math.ceil((minutes * 60_000 - (now - startedAt)) / 1000))
 }
 
 /**

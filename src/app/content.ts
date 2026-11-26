@@ -14,6 +14,8 @@ import type {
   ContentIndex,
   GrammarOverview,
   Language,
+  MockExam,
+  MockExamList,
   OfficialMockExams,
   SearchData,
 } from '../content-model/index.ts'
@@ -47,6 +49,16 @@ export function loadNode(id: string): Promise<CompiledNode> {
 /** The official mock exams, in the order the content lists them. */
 export function loadOfficialMockExams(): Promise<OfficialMockExams> {
   return load('official-mock-exams.json')
+}
+
+/** The original mock exams, in order, without what is taken. */
+export function loadMockExams(): Promise<MockExamList> {
+  return load('mock-exams.json')
+}
+
+/** One original mock exam with its parts. */
+export function loadMockExam(id: string): Promise<MockExam> {
+  return load(`mock-exams/${id}.json`)
 }
 
 const groups = new Map<string, Promise<CompiledNode[]>>()

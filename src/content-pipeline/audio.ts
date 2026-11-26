@@ -15,16 +15,16 @@ import { readdir } from 'node:fs/promises'
 import path from 'node:path'
 import { spokenItems } from '../audio/index.ts'
 import { AUDIO_FOLDER, audioFile } from '../content-model/audio.ts'
-import type { CompiledNode } from '../content-model/index.ts'
 import type { ContentProblem } from './checks/index.ts'
 
 /**
- * The problems of the audio of the compiled nodes. `present` holds the keys
+ * The problems of the audio of the compiled nodes and mock exams (anything
+ * with an `id` and its compiled `content`). `present` holds the keys
  * whose files exist, or is null when the files are not looked at (while
  * audio is being generated).
  */
 export function audioProblems(
-  nodes: readonly CompiledNode[],
+  nodes: ReadonlyArray<{ id: string; content: unknown }>,
   fileOf: ReadonlyMap<string, string>,
   present: ReadonlySet<string> | null,
 ): ContentProblem[] {

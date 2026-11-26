@@ -1,7 +1,6 @@
-import { type Ref, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
-import type { CompiledNode, ItemTask, Question } from '../content-model/index.ts'
-import { isHeard } from '../content-model/scoring.ts'
+import type { CompiledNode, ItemTask } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import {
   type Answer,
@@ -10,15 +9,12 @@ import {
   isAnswered,
   isDone,
   nextTask,
-  rightAnswer,
   scoreAttempt,
 } from '../learning-engine/index.ts'
-import { German, plainText, RichText } from './German.tsx'
+import { plainText } from './German.tsx'
+import { ItemResults, TaskItems, TaskTexts } from './ItemTaskView.tsx'
 import { NotFound } from './NotFound.tsx'
-import { PlayButton, PlayRecording } from './PlayButton.tsx'
 import { updateProgress, useProgress } from './progress.ts'
-import { AnswerText, QuestionPrompt, QuestionView } from './QuestionView.tsx'
-import { ReportProblem } from './ReportProblem.tsx'
 
 interface PracticeTestProps {
   node: CompiledNode
@@ -89,11 +85,6 @@ export function PracticeTest({ node, tasks }: PracticeTestProps) {
   )
 }
 
-/** How a report names an item: with its task, since two tasks may both have an item "i1". */
-function reported(task: ItemTask, item: Pick<Question, 'id' | 'prompt'>) {
-  return { id: `${task.id}/${item.id}`, prompt: item.prompt }
-}
-
 interface TaskRunProps {
   nodeId: string
   task: ItemTask
@@ -114,36 +105,15 @@ function TaskRun({ nodeId, task, focusOnStart, onFinish }: TaskRunProps) {
     if (focusOnStart) heading.current?.focus()
   }, [focusOnStart])
 
-  // The items of one exam part are of one type, so what to do is said once, above them.
-  const types = new Set(task.items.map((item) => item.type))
-  const instruction = task.items[0] && types.size === 1 ? strings.instructions[task.items[0].type] : undefined
-
   return (
     <>
       <TaskTexts task={task} headingRef={heading} />
-
-      <section className="panel" aria-labelledby="task-items-heading">
-        <h2 id="task-items-heading" className="cap">
-          {strings.questions}
-        </h2>
-        {instruction && <p className="question-instruction">{instruction}</p>}
-        <ol
-          className={instruction ? 'task-items task-items-one-instruction' : 'task-items'}
-          aria-labelledby="task-items-heading"
-        >
-          {task.items.map((item, index) => (
-            <li key={item.id} className="task-item">
-              <span className="task-item-place">{strings.questionNumber(index + 1)}</span>
-              <QuestionView
-                question={item}
-                answer={answers[index]}
-                onAnswer={(given) => setAnswers((before) => Object.assign([...before], { [index]: given }))}
-              />
-              <ReportProblem nodeId={nodeId} question={reported(task, item)} />
-            </li>
-          ))}
-        </ol>
-      </section>
+      <TaskItems
+        reportAs={nodeId}
+        task={task}
+        answers={answers}
+        onAnswer={(index, given) => setAnswers((before) => Object.assign([...before], { [index]: given }))}
+      />
 
       <div className="action-bar">
         <button
@@ -174,7 +144,7 @@ interface TaskResultProps {
  * every item with what was answered, whether it was right, and the reason.
  */
 function TaskResult({ nodeId, task, result, wasDone, onRetry }: TaskResultProps) {
-  const { language, strings } = useLanguage()
+  const { strings } = useLanguage()
 
   // The result takes the place of the task: take the keyboard and a screen reader to it.
   const heading = useRef<HTMLHeadingElement>(null)
@@ -225,103 +195,7 @@ function TaskResult({ nodeId, task, result, wasDone, onRetry }: TaskResultProps)
 
       <TaskTexts task={task} checked />
 
-      <section className="panel" aria-labelledby="item-results-heading">
-        <h2 id="item-results-heading" className="cap">
-          {strings.yourAnswers}
-        </h2>
-        <ol className="item-results" aria-labelledby="item-results-heading">
-          {result.questions.map(({ question, answer, correct }, index) => (
-            <li key={question.id} className="item-result">
-              <span className="item-result-head">
-                <span className="task-item-place">{strings.questionNumber(index + 1)}</span>
-                <span className={correct ? 'verdict verdict-right' : 'verdict verdict-wrong'}>
-                  {correct ? strings.answerIsRight : strings.answerIsWrong}
-                </span>
-              </span>
-              <QuestionPrompt question={question} className="item-result-prompt" />
-              <dl>
-                <div className={correct ? 'answer-right' : 'answer-given'}>
-                  <dt>{strings.yourAnswer}</dt>
-                  <dd>
-                    <AnswerText question={question} answer={answer} />
-                  </dd>
-                </div>
-                {!correct && (
-                  <div className="answer-right">
-                    <dt>{strings.rightAnswer}</dt>
-                    <dd>
-                      <AnswerText question={question} answer={rightAnswer(question)} />
-                    </dd>
-                  </div>
-                )}
-              </dl>
-              <p className="item-result-reason">
-                <RichText parts={question.explanation[language]} />
-              </p>
-              <ReportProblem nodeId={nodeId} question={reported(task, question)} />
-            </li>
-          ))}
-        </ol>
-      </section>
+      <ItemResults reportAs={nodeId} task={task} result={result} />
     </>
-  )
-}
-
-interface TaskTextsProps {
-  task: ItemTask
-  /** The answers have been checked: a heard text now shows what is said. */
-  checked?: boolean
-  headingRef?: Ref<HTMLHeadingElement>
-}
-
-/**
- * The texts of a task. A text to read is shown whole. A text to hear is its
- * recording while the items are answered, as in the exam; once the answers
- * are checked, also what is said, line by line, each line with its speaker
- * and its own play button. The texts are German, so they read left to
- * right in every language.
- */
-function TaskTexts({ task, checked = false, headingRef }: TaskTextsProps) {
-  const { strings } = useLanguage()
-  const heard = task.texts.some(isHeard)
-  return (
-    <section className="panel" aria-labelledby="task-text-heading">
-      <h2 id="task-text-heading" ref={headingRef} tabIndex={-1} className="cap task-text-heading">
-        {heard ? (checked ? strings.transcript : strings.practiceRecording) : strings.practiceText}
-      </h2>
-      {task.texts.map((text) =>
-        isHeard(text) ? (
-          <div key={text.id} className="task-text task-heard">
-            {text.title !== undefined && (
-              <h3 lang="de" dir="ltr">
-                {text.title}
-              </h3>
-            )}
-            <PlayRecording lines={text.lines} />
-            {checked && (
-              // Left to right as a whole, so each speaker stays at the start of the line.
-              <ol className="transcript" dir="ltr">
-                {text.lines.map((line, index) => (
-                  <li key={index} className="transcript-line">
-                    <PlayButton audio={line.audio} />
-                    <German>
-                      <span className="transcript-speaker">{line.speaker}</span> {line.text}
-                    </German>
-                  </li>
-                ))}
-              </ol>
-            )}
-          </div>
-        ) : (
-          <article key={text.id} className="task-text de" lang="de" dir="ltr">
-            {text.title !== undefined && <h3>{text.title}</h3>}
-            {text.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </article>
-        ),
-      )}
-      {heard && !checked && <p className="secondary recording-note">{strings.recordingHidden}</p>}
-    </section>
   )
 }

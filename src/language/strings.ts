@@ -86,7 +86,7 @@ export const en = {
   audioFailed: 'The audio could not be played.',
   /** The credit that a voice's licence asks for, shown at the foot of every page. */
   voiceCredit:
-    'German audio: the Piper voices Thorsten and Kerstin. The Kerstin voice is built on Hi-Fi TTS by NVIDIA (CC BY 4.0), read by Cori Samuel.',
+    'German audio: the Piper voices Thorsten, Kerstin and MLS. The Kerstin voice is built on Hi-Fi TTS by NVIDIA (CC BY 4.0), read by Cori Samuel. The MLS voice is built on Multilingual LibriSpeech by Facebook AI (CC BY 4.0), read from LibriVox audiobooks.',
   commonMistakes: 'Common mistakes',
   wrong: 'Wrong',
   right: 'Right',
@@ -157,7 +157,7 @@ export const en = {
   transcript: 'What is said',
   questions: 'Questions',
   /** The words on the exam's answer sheet. They are German in every language. */
-  examAnswers: { richtig: 'Richtig', falsch: 'Falsch' },
+  examAnswers: { richtig: 'Richtig', falsch: 'Falsch', ja: 'Ja', nein: 'Nein' },
   answeredOf: (answered: number, total: number) => `${answered} of ${total} answered`,
   yourAnswers: 'Your answers',
   answerIsRight: 'Your answer is right',
@@ -181,6 +181,9 @@ export const en = {
     'meaning-of-word': 'What does this word mean?',
     'word-for-meaning': 'Type the German word. A noun needs its article.',
     'richtig-falsch': 'Is this statement right or wrong? The text decides.',
+    'ja-nein': 'Answer yes (Ja) or no (Nein). The text of this person decides.',
+    'which-text': 'Which advertisement fits? Choose its letter, or 0 if none fits.',
+    'who-says': 'Who says this?',
   } satisfies Record<Question['type'], string>,
   /** Read out in place of an empty gap. */
   gap: 'gap',
@@ -433,6 +436,42 @@ export const en = {
   scoreNeeded: (needed: number, total: number) => `You need ${needed} of ${total} to finish this topic.`,
   scoreRetry: 'Do the task again and enter the new score. You can try as often as you like.',
   scoresSoFar: 'Your scores so far',
+
+  // The original mock exams: the list with each exam's history, and one module as it is taken.
+  mockExamsTitle: 'Mock exams',
+  mockExamsIntro:
+    'Whole exams in the format of the Goethe B1 exam, written for this app. Take each module on its own, with the time limit of the exam or without it. Every result is kept here, so you can see whether you are improving.',
+  openMockExams: 'Mock exams for practice',
+  allMockExams: 'All mock exams',
+  /** What one module of a mock exam holds: "30 questions · 65 minutes". */
+  moduleFacts: (questions: number, minutes: number) => `${questions} questions · ${minutes} minutes`,
+  startModule: 'Start',
+  takeAgain: 'Take it again',
+  latestScore: (score: number) => `Last time: ${score} of 100`,
+  useTimeLimit: (minutes: number) => `Use the time limit of the exam: ${minutes} minutes`,
+  timeLimitNote: 'When the time is up, your answers so far are checked, as in the exam.',
+  playsNote: 'The recordings play as often as in the exam: some once, some twice.',
+  startTheModule: 'Start the module',
+  timeLeft: 'Time left',
+  /** The time left on the clock: minutes and seconds. */
+  clock: (minutes: number, seconds: number) => `${minutes}:${String(seconds).padStart(2, '0')}`,
+  switchTimerOff: 'Switch the timer off',
+  noTimeLimit: 'No time limit',
+  timeIsUp: 'The time is up. Your answers so far were checked.',
+  finishModule: 'Finish and check',
+  /** Under the score of a module, shown large: where it stands against the pass mark and the target. */
+  scoreStandings: {
+    'not-passed': (pass: number, target: number) => `Not passed. You pass with ${pass}, and your target is ${target}.`,
+    passed: (pass: number, target: number) => `Passed: ${pass} is the pass mark. Your target is ${target}.`,
+    'at-target': (_pass: number, target: number) => `At your target of ${target} or more.`,
+  },
+  partAnswers: (part: number) => `Part ${part}: your answers`,
+  mockExamHistory: 'Your results',
+  noResultsYet: 'No results yet.',
+  withTimeLimit: 'with the time limit',
+  withoutTimeLimit: 'without a time limit',
+  /** How often a recording may still be played. */
+  playsLeft: (count: number) => (count === 0 ? 'No plays left' : `Plays left: ${count}`),
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */

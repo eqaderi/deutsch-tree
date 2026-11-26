@@ -77,7 +77,7 @@ export const fa: Strings = {
   stopListening: 'توقف',
   audioFailed: 'صدا پخش نشد.',
   // The names in Latin letters read left to right; the hyphen of Hi-Fi does not break the line.
-  voiceCredit: `صدای آلمانی: صداهای ${german('Thorsten')} و ${german('Kerstin')} از ${german('Piper')}. صدای ${german('Kerstin')} بر پایهٔ ${german('Hi\u2011Fi TTS')} از ${german('NVIDIA')} با پروانهٔ ${german('CC BY 4.0')} و با خوانش ${german('Cori Samuel')} ساخته شده است.`,
+  voiceCredit: `صدای آلمانی: صداهای ${german('Thorsten')}، ${german('Kerstin')} و ${german('MLS')} از ${german('Piper')}. صدای ${german('Kerstin')} بر پایهٔ ${german('Hi\u2011Fi TTS')} از ${german('NVIDIA')} با پروانهٔ ${german('CC BY 4.0')} و با خوانش ${german('Cori Samuel')} ساخته شده است. صدای ${german('MLS')} بر پایهٔ ${german('Multilingual LibriSpeech')} از ${german('Facebook AI')} با پروانهٔ ${german('CC BY 4.0')} و از کتاب‌های صوتی ${german('LibriVox')} ساخته شده است.`,
   commonMistakes: 'اشتباه‌های رایج',
   wrong: 'غلط',
   right: 'درست',
@@ -136,7 +136,7 @@ export const fa: Strings = {
   recordingHidden: 'متن گفت‌وگو را بعد از بررسی پاسخ‌ها می‌بینید.',
   transcript: 'آنچه گفته می‌شود',
   questions: 'سؤال‌ها',
-  examAnswers: { richtig: 'Richtig', falsch: 'Falsch' },
+  examAnswers: { richtig: 'Richtig', falsch: 'Falsch', ja: 'Ja', nein: 'Nein' },
   answeredOf: (answered, total) => `${digits.format(answered)} از ${digits.format(total)} پاسخ داده شده`,
   yourAnswers: 'پاسخ‌های شما',
   answerIsRight: 'پاسخ شما درست است',
@@ -159,6 +159,9 @@ export const fa: Strings = {
     'meaning-of-word': 'این واژه چه معنایی دارد؟',
     'word-for-meaning': 'واژهٔ آلمانی را تایپ کنید. اسم را با حرف تعریفش بنویسید.',
     'richtig-falsch': 'این جمله طبق متن درست است یا غلط؟',
+    'ja-nein': `بله (${german('Ja')}) یا نه (${german('Nein')})؟ متنِ همین شخص پاسخ را می‌دهد.`,
+    'which-text': 'کدام آگهی مناسب است؟ حرف آن را انتخاب کنید، یا اگر هیچ‌کدام مناسب نیست ۰ را.',
+    'who-says': 'چه کسی این را می‌گوید؟',
   },
   gap: 'جای خالی',
   yourSentence: 'جملهٔ شما',
@@ -388,6 +391,39 @@ export const fa: Strings = {
     `برای تمام کردن این موضوع باید ${digits.format(needed)} از ${digits.format(total)} بگیرید.`,
   scoreRetry: 'تمرین را دوباره انجام دهید و نمرهٔ تازه را وارد کنید. هر چند بار که بخواهید می‌توانید تلاش کنید.',
   scoresSoFar: 'نمره‌های شما تا حالا',
+
+  mockExamsTitle: 'امتحان‌های آزمایشی',
+  mockExamsIntro:
+    'امتحان‌های کامل به شکل امتحان گوته B1 که برای همین برنامه نوشته شده‌اند. هر بخش اصلی را جداگانه انجام دهید، با محدودیت زمانی امتحان یا بدون آن. همهٔ نتیجه‌ها این‌جا می‌مانند تا ببینید پیشرفت می‌کنید یا نه.',
+  openMockExams: 'امتحان‌های آزمایشی برای تمرین',
+  allMockExams: 'همهٔ امتحان‌های آزمایشی',
+  moduleFacts: (questions, minutes) => `${digits.format(questions)} پرسش · ${digits.format(minutes)} دقیقه`,
+  startModule: 'شروع',
+  takeAgain: 'دوباره انجام دهید',
+  latestScore: (score) => `دفعهٔ قبل: ${digits.format(score)} از ۱۰۰`,
+  useTimeLimit: (minutes) => `با محدودیت زمانی امتحان: ${digits.format(minutes)} دقیقه`,
+  timeLimitNote: 'وقتی زمان تمام شود، پاسخ‌هایی که تا آن لحظه داده‌اید بررسی می‌شوند، مثل امتحان.',
+  playsNote: 'صداها به همان تعداد دفعه‌ای پخش می‌شوند که در امتحان: بعضی یک بار، بعضی دو بار.',
+  startTheModule: 'شروع این بخش',
+  timeLeft: 'زمان باقی‌مانده',
+  clock: (minutes, seconds) =>
+    `${digits.format(minutes)}:${digits.format(Math.floor(seconds / 10))}${digits.format(seconds % 10)}`,
+  switchTimerOff: 'خاموش کردن زمان‌سنج',
+  noTimeLimit: 'بدون محدودیت زمانی',
+  timeIsUp: 'زمان تمام شد. پاسخ‌هایی که تا آن لحظه داده بودید بررسی شدند.',
+  finishModule: 'پایان و بررسی',
+  scoreStandings: {
+    'not-passed': (pass, target) =>
+      `قبول نشدید. با ${digits.format(pass)} قبول می‌شوید و هدف شما ${digits.format(target)} است.`,
+    passed: (pass, target) => `قبول شدید: نمرهٔ قبولی ${digits.format(pass)} است. هدف شما ${digits.format(target)} است.`,
+    'at-target': (_pass, target) => `به هدف خود، یعنی ${digits.format(target)} یا بیشتر، رسیده‌اید.`,
+  },
+  partAnswers: (part) => `بخش ${digits.format(part)}: پاسخ‌های شما`,
+  mockExamHistory: 'نتیجه‌های شما',
+  noResultsYet: 'هنوز نتیجه‌ای نیست.',
+  withTimeLimit: 'با محدودیت زمانی',
+  withoutTimeLimit: 'بدون محدودیت زمانی',
+  playsLeft: (count) => (count === 0 ? 'دیگر پخش نمی‌شود' : `${digits.format(count)} بار دیگر پخش می‌شود`),
 }
 
 /**

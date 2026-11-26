@@ -29,6 +29,7 @@ import {
   LANGUAGES,
   type Language,
   type Localised,
+  NO_TEXT,
   type NodeContent,
   type NodeFile,
   type NodeSummary,
@@ -49,6 +50,7 @@ import { audioProblems, presentAudio } from './audio.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
 import { mixedAwayFrom } from './mix.ts'
+import { compileMockExam, MOCK_EXAMS_JSON, mockExamList, readMockExams } from './mock-exams.ts'
 import { overviewData } from './overview-data.ts'
 import { searchData } from './search-data.ts'
 import { compileVocabularyContent } from './vocabulary.ts'
@@ -131,6 +133,7 @@ export async function compileContent(
 
   const chapters = await readChapters(contentDir, errors)
   const officialMockExams = await readOfficialMockExams(contentDir, errors)
+  const checkedMockExams = await readMockExams(contentDir, errors)
 
   for (const check of CHECKS) {
     errors.push(...(await check({ contentDir, nodes: checked, ids, chapters })))
@@ -142,9 +145,16 @@ export async function compileContent(
   const nodes = checked.map(({ node }) => compileNode(node))
   nodes.sort((a, b) => placeOf(a) - placeOf(b) || a.order - b.order || a.id.localeCompare(b.id))
 
-  // What the published pages say aloud, and whether its files are there.
-  const fileOf = new Map(checked.map(({ file, node }) => [node.id, file]))
-  errors.push(...audioProblems(nodes, fileOf, requireAudio ? await presentAudio(contentDir) : null))
+  const mockExams = checkedMockExams
+    .map(({ exam }) => compileMockExam(exam, compileItemTask, richTextIn))
+    .sort((a, b) => a.order - b.order || a.id.localeCompare(b.id))
+
+  // What the published pages and mock exams say aloud, and whether its files are there.
+  const fileOf = new Map([
+    ...checked.map(({ file, node }) => [node.id, file] as const),
+    ...checkedMockExams.map(({ file, exam }) => [exam.id, file] as const),
+  ])
+  errors.push(...audioProblems([...nodes, ...mockExams], fileOf, requireAudio ? await presentAudio(contentDir) : null))
 
   const published = nodes.filter((node) => node.status === 'published').length
   const report: PipelineReport = {
@@ -164,6 +174,7 @@ export async function compileContent(
           },
           nodes,
           officialMockExams: officialMockExams ?? [],
+          mockExams,
           search: searchData(nodes),
           overview: overviewData(nodes),
         }
@@ -180,6 +191,9 @@ export function bundleFiles(bundle: ContentBundle): Array<{ path: string; json: 
       json: JSON.stringify({ exams: bundle.officialMockExams } satisfies OfficialMockExams),
     },
     ...bundle.nodes.map((node) => ({ path: `nodes/${node.id}.json`, json: JSON.stringify(node) })),
+    // The list first; an exam's parts only when it is opened.
+    { path: MOCK_EXAMS_JSON, json: JSON.stringify(mockExamList(bundle.mockExams)) },
+    ...bundle.mockExams.map((exam) => ({ path: `mock-exams/${exam.id}.json`, json: JSON.stringify(exam) })),
     // Fetched only when the learner opens the "all grammar at a glance" page.
     { path: 'overview.json', json: JSON.stringify(bundle.overview) },
     // Fetched only when the learner opens search.
@@ -408,14 +422,33 @@ function compilePracticeContent(file: NodeFile): PracticeContent {
 }
 
 /**
- * A task as the app shows it. Used for a node's practice tasks; a mock
- * exam's reading and listening parts are meant to have the same shape.
+ * A task as the app shows it. Used for a node's practice tasks and for the
+ * parts of a mock exam's Lesen and Hören.
  */
 export function compileItemTask(task: ItemTaskFile): ItemTask {
   return {
     id: task.id,
     texts: task.texts.map(compileTaskText),
-    items: task.items.map((item) => ({ ...item, explanation: richTextIn(item.explanation) })),
+    items: task.items.map((item) => compileTaskItem(item, task)),
+  }
+}
+
+/**
+ * An item as the app asks it. An item that chooses among the task's own
+ * texts or speakers gets them as its options, so that it can be shown and
+ * checked without its task.
+ */
+function compileTaskItem(item: ItemTaskFile['items'][number], task: ItemTaskFile): ItemTask['items'][number] {
+  const explanation = richTextIn(item.explanation)
+  switch (item.type) {
+    case 'which-text':
+      return { ...item, explanation, options: [...task.texts.map((text) => text.id), NO_TEXT] }
+    case 'who-says': {
+      const speakers = task.texts.flatMap((text) => (text.speakers ?? []).map((one) => one.name))
+      return { ...item, explanation, options: [...new Set(speakers)] }
+    }
+    default:
+      return { ...item, explanation }
   }
 }
 

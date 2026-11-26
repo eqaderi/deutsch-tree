@@ -100,22 +100,48 @@ export function PlayButton({ audio }: { audio: Spoken }) {
   )
 }
 
+interface PlayRecordingProps {
+  lines: readonly HeardLine[]
+  /**
+   * How often the recording may be played, as in the exam (a mock exam's
+   * Hören). Each start counts, also one that is stopped; one that fails to
+   * play is given back. Unlimited when absent.
+   */
+  plays?: number
+}
+
 /** The recording of a heard text: every line, in order, each in the voice of its speaker. */
-export function PlayRecording({ lines }: { lines: readonly HeardLine[] }) {
+export function PlayRecording({ lines, plays }: PlayRecordingProps) {
   const { strings } = useLanguage()
   const { state, play, stop } = useSound()
+  const [started, setStarted] = useState(0)
+
+  // A play that failed to start is no play.
+  useEffect(() => {
+    if (state === 'failed') setStarted((count) => Math.max(0, count - 1))
+  }, [state])
 
   const isPlaying = state === 'playing'
+  const left = plays === undefined ? undefined : Math.max(0, plays - started)
   return (
     <p className="recording">
       <button
         type="button"
         className="btn btn-recording"
-        onClick={isPlaying ? stop : () => play(lines.map((line) => line.audio))}
+        disabled={!isPlaying && left === 0}
+        onClick={
+          isPlaying
+            ? stop
+            : () => {
+                setStarted((count) => count + 1)
+                play(lines.map((line) => line.audio))
+              }
+        }
       >
         <PlayIcon playing={isPlaying} />
         {isPlaying ? strings.stopRecording : strings.playRecording}
       </button>
+      {left !== undefined && <span className="secondary plays-left">{strings.playsLeft(left)}</span>}
       {state === 'failed' && <PlayFailed />}
     </p>
   )

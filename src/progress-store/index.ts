@@ -9,7 +9,7 @@
  * ## The saved shape and its version
  *
  * What is saved is the `Progress` object of the learning engine plus a
- * `version` number: `{ "version": 2, "nodes": { … }, "officialExams": { … } }`. The file a learner
+ * `version` number: `{ "version": 3, "nodes": { … }, "officialExams": { … }, "mockExams": [ … ] }`. The file a learner
  * exports is the same object with three more lines that say what it is.
  *
  * The version number is what keeps progress from being lost. An app reads
@@ -40,8 +40,11 @@
  */
 import {
   EXAM_MODULES,
+  type ExamModule,
   emptyProgress,
   isScore,
+  type MockModuleResult,
+  type MockPartResult,
   type ModuleScores,
   type NodeProgress,
   type Progress,
@@ -81,8 +84,9 @@ export const UNREADABLE_KEY = 'deutsch-tree:progress:unreadable'
  * History, one line per version:
  *   1  nodes: done and number of attempts, by node identifier
  *   2  officialExams: the module scores recorded for official mock exams, by exam identifier
+ *   3  mockExams: every finished module of an original mock exam, oldest first (the history)
  */
-export const SAVED_VERSION = 2
+export const SAVED_VERSION = 3
 
 /** A saved object as it comes out of JSON, before anything is known about it. */
 type Saved = Record<string, unknown>
@@ -104,6 +108,7 @@ const UPGRADES: Upgrades = {}
 const READERS: { [Field in keyof Progress]-?: (saved: unknown) => Progress[Field] } = {
   nodes: readNodes,
   officialExams: readOfficialExams,
+  mockExams: readMockExams,
 }
 
 function readNodes(saved: unknown): Record<string, NodeProgress> {
@@ -141,6 +146,40 @@ function readOfficialExams(saved: unknown): Record<string, ModuleScores> {
     if (Object.keys(scores).length > 0) exams[id] = scores
   }
   return exams
+}
+
+/**
+ * The history of mock exam modules. A result that lacks what makes it a
+ * result (its exam, its module, a score, a time) is skipped; the rest are
+ * kept in the order they were saved.
+ */
+function readMockExams(saved: unknown): MockModuleResult[] {
+  if (!Array.isArray(saved)) return []
+  return saved.flatMap((result): MockModuleResult[] => {
+    if (!isRecord(result)) return []
+    const { exam, module, finished, timed, score, parts } = result
+    if (typeof exam !== 'string' || exam === '' || !isScore(score)) return []
+    if (!(EXAM_MODULES as readonly unknown[]).includes(module)) return []
+    if (typeof finished !== 'string' || Number.isNaN(Date.parse(finished))) return []
+    return [
+      {
+        exam,
+        module: module as ExamModule,
+        finished,
+        timed: timed === true,
+        score,
+        parts: Array.isArray(parts) ? parts.flatMap(readPartResult) : [],
+      },
+    ]
+  })
+}
+
+function readPartResult(saved: unknown): MockPartResult[] {
+  if (!isRecord(saved)) return []
+  const part = wholeNumber(saved.part)
+  const total = wholeNumber(saved.total)
+  const correct = typeof saved.correct === 'number' && Number.isInteger(saved.correct) ? saved.correct : -1
+  return part > 0 && total > 0 && correct >= 0 && correct <= total ? [{ part, correct, total }] : []
 }
 
 /** Why saved text or a file was not read. */

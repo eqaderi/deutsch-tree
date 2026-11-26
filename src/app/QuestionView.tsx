@@ -106,14 +106,32 @@ export function QuestionView({ question, answer, onAnswer }: QuestionViewProps) 
     case 'matching':
       return <Matching question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
     case 'richtig-falsch':
+    case 'ja-nein':
       return (
         <Choices
           instruction={instruction}
           sentence={question.prompt}
-          options={[true, false].map((value) => ({ value, label: <ExamAnswer answer={value} /> }))}
+          options={[true, false].map((value) => ({
+            value,
+            label: <ExamAnswer type={question.type} answer={value} />,
+          }))}
           chosen={answer}
           onChoose={onAnswer}
           sideBySide
+        />
+      )
+    case 'which-text':
+    case 'who-says':
+      return (
+        <Choices
+          instruction={instruction}
+          sentence={question.prompt}
+          // A letter of a text, "0", or a speaker's name: German, as on the exam's answer sheet.
+          options={question.options.map((option) => ({ value: option, label: <German>{option}</German> }))}
+          chosen={answer}
+          onChoose={onAnswer}
+          // Letters stand side by side; names, which may be long, one under the other.
+          sideBySide={question.type === 'which-text'}
         />
       )
   }
@@ -144,10 +162,11 @@ export function promptText(question: Pick<Question, 'prompt'>, language: Languag
   return typeof question.prompt === 'string' ? question.prompt : question.prompt[language]
 }
 
-/** "Richtig" or "Falsch", as the exam's answer sheet has it: German in every language. */
-function ExamAnswer({ answer }: { answer: boolean }) {
-  const { strings } = useLanguage()
-  return <German>{answer ? strings.examAnswers.richtig : strings.examAnswers.falsch}</German>
+/** "Richtig" or "Falsch", "Ja" or "Nein", as the exam's answer sheet has it: German in every language. */
+function ExamAnswer({ type, answer }: { type: 'richtig-falsch' | 'ja-nein'; answer: boolean }) {
+  const { examAnswers } = useLanguage().strings
+  if (type === 'ja-nein') return <German>{answer ? examAnswers.ja : examAnswers.nein}</German>
+  return <German>{answer ? examAnswers.richtig : examAnswers.falsch}</German>
 }
 
 /** What a field holds, as an answer. A field with nothing but spaces in it is no answer yet. */
@@ -198,7 +217,11 @@ export function AnswerText({ question, answer }: { question: Question; answer: A
       return <German>{question.left.map((item, index) => `${item} → ${partners[index] ?? '–'}`).join(', ')}</German>
     }
     case 'richtig-falsch':
-      return <ExamAnswer answer={answer === true} />
+    case 'ja-nein':
+      return <ExamAnswer type={question.type} answer={answer === true} />
+    case 'which-text':
+    case 'who-says':
+      return <German>{String(answer)}</German>
   }
 }
 

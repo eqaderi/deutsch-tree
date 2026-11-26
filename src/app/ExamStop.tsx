@@ -9,7 +9,7 @@ import { readinessOf } from './ReadinessPage.tsx'
 /**
  * The last stop of the tree: the exam. It states the readiness rule and the
  * warning to keep the official mock exams unseen, and leads to the readiness
- * view. The tree does not wait for it.
+ * view and to the original mock exams for practice. The tree does not wait for it.
  */
 export function ExamStop() {
   return (
@@ -41,6 +41,12 @@ function Stop() {
             <span className="row-title">{strings.openReadiness}</span>
           </span>
           <span className="pill">{result.ready ? strings.ready : strings.notReady}</span>
+        </Link>
+        <Link to="/mock-exams" className="row">
+          <span className="mark" aria-hidden="true" />
+          <span className="row-text">
+            <span className="row-title">{strings.openMockExams}</span>
+          </span>
         </Link>
       </section>
     </div>

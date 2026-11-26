@@ -38,12 +38,18 @@ export type NodeStatus = (typeof NODE_STATUSES)[number]
 export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
 export type ExamModule = (typeof EXAM_MODULES)[number]
 
-/** Each module under the exam's own name, with the number of parts the exam gives it. */
-export const EXAM_MODULE_FACTS: Readonly<Record<ExamModule, { name: string; parts: number }>> = {
-  lesen: { name: 'Lesen', parts: 5 },
-  hoeren: { name: 'Hören', parts: 4 },
-  schreiben: { name: 'Schreiben', parts: 3 },
-  sprechen: { name: 'Sprechen', parts: 3 },
+/**
+ * Each module under the exam's own name, with the number of parts the exam
+ * gives it and its time in minutes. Lesen (65) and Schreiben (60) have a
+ * fixed limit. Hören is paced by its recording, about 40 minutes with the
+ * five minutes to fill in the answer sheet; Sprechen takes about 15 for a
+ * pair, after 15 minutes to prepare. Source: the exam's own overview.
+ */
+export const EXAM_MODULE_FACTS: Readonly<Record<ExamModule, { name: string; parts: number; minutes: number }>> = {
+  lesen: { name: 'Lesen', parts: 5, minutes: 65 },
+  hoeren: { name: 'Hören', parts: 4, minutes: 40 },
+  schreiben: { name: 'Schreiben', parts: 3, minutes: 60 },
+  sprechen: { name: 'Sprechen', parts: 3, minutes: 15 },
 }
 
 /** One part of the exam: Lesen, Teil 1 is { module: 'lesen', part: 1 }. */
@@ -558,43 +564,156 @@ const richtigFalschItem = z.strictObject({
 })
 
 /**
+ * "Ja" or "Nein" (Lesen, Teil 4): the prompt asks whether the writer of one
+ * of the texts is for something ("Ist Lisa für ein Verbot?"), and that text
+ * decides.
+ */
+const jaNeinItem = z.strictObject({
+  ...questionBase,
+  type: z.literal('ja-nein'),
+  /** true when the text's writer is for it (Ja), false when against (Nein). */
+  answer: z.boolean(oneAnswer('ja-nein', 'must be true (Ja) or false (Nein)')),
+})
+
+/** The answer of a `which-text` item when no text of its task fits: "0", as on the exam's answer sheet. */
+export const NO_TEXT = '0'
+
+/**
+ * Which text fits (Lesen, Teil 3): the prompt is a situation, and the answer
+ * is the id of the one text (an advertisement) that fits it, or "0" when
+ * none does. The options are the task's texts; the pipeline adds them.
+ */
+const whichTextItem = z.strictObject({
+  ...questionBase,
+  type: z.literal('which-text'),
+  /** The id of the text that fits, or "0" (also written 0) when none does. */
+  answer: z.preprocess(
+    (value) => (value === 0 ? NO_TEXT : value),
+    z.string(oneAnswer('which-text', 'must be the id of one text, or "0"')).trim().min(1, 'must not be empty'),
+  ),
+})
+
+/**
+ * Who says it (Hören, Teil 4): the prompt is a statement made in the
+ * discussion, and the answer is the name of the speaker who makes it. The
+ * options are the speakers of the task's text; the pipeline adds them.
+ */
+const whoSaysItem = z.strictObject({
+  ...questionBase,
+  type: z.literal('who-says'),
+  /** The name of one speaker of the task's text. */
+  answer: answerText('who-says'),
+})
+
+/**
  * One item of a task. An item is a question whose answer lies in the task's
  * texts, so it has what every question has: id, prompt, answer, explanation.
- * The item format of another exam part joins this union under its own `type`.
+ * A `multiple-choice` item is the a, b, c of the exam: its options are shown
+ * in the order written. The item format of another exam part joins this
+ * union under its own `type`.
  */
-const taskItem = z.discriminatedUnion('type', [richtigFalschItem])
+const taskItem = z.discriminatedUnion('type', [
+  richtigFalschItem,
+  multipleChoiceQuestion,
+  jaNeinItem,
+  whichTextItem,
+  whoSaysItem,
+])
+
+/** The item types of a task, as `ITEM_TASK_FORMATS` names them. */
+export type TaskItemType = z.infer<typeof taskItem>['type']
+
+const itemTaskFields = {
+  texts: z.array(taskText).min(1),
+  items: z.array(taskItem).min(1),
+}
+
+/** The answers of the items that choose among the task's own texts or speakers name one of them. */
+function answersAreOfTheTask(task: z.infer<z.ZodObject<typeof itemTaskFields>>, ctx: z.RefinementCtx) {
+  const textIds = task.texts.map((text) => text.id)
+  const speakers = [...new Set(task.texts.flatMap((text) => (text.speakers ?? []).map((one) => one.name)))]
+  const answeredBy = new Map<string, string>()
+  task.items.forEach((item, index) => {
+    const path = ['items', index, 'answer']
+    if (item.type === 'which-text') {
+      if (item.answer === NO_TEXT) return
+      if (!textIds.includes(item.answer)) {
+        const message = `"${item.answer}" is not a text of this task; its texts are ${textIds.join(', ')}, or "${NO_TEXT}" when none fits`
+        ctx.addIssue({ code: 'custom', path, message })
+        return
+      }
+      const earlier = answeredBy.get(item.answer)
+      if (earlier !== undefined) {
+        const message = `text "${item.answer}" is also the answer of item "${earlier}": each text fits one item at most`
+        ctx.addIssue({ code: 'custom', path, message })
+      }
+      answeredBy.set(item.answer, item.id)
+    }
+    if (item.type === 'who-says' && !speakers.includes(item.answer)) {
+      const message = `"${item.answer}" is not a speaker of this task; its speakers are ${speakers.join(', ') || 'none'}`
+      ctx.addIssue({ code: 'custom', path, message })
+    }
+  })
+}
 
 /**
  * One task in the format of one exam part that the app scores itself: its
  * texts, and its items in the order the candidate answers them. It is always
  * taken whole and scored per item. A practice task of an exam-part node has
- * this shape, and so is a Lesen part of a mock exam meant to be. (A writing or
- * speaking task, graded by an AI assistant, is `task` below.)
+ * this shape, and so has a Lesen or Hören part of a mock exam
+ * (`mockExamPartSchema`, without the id). (A writing or speaking task,
+ * graded by an AI assistant, is `task` below.)
  */
-export const itemTaskSchema = z.strictObject({
-  /** Stable inside the node (or the exam) that holds the task. */
-  id: partId,
-  texts: z.array(taskText).min(1),
-  items: z.array(taskItem).min(1),
-})
+export const itemTaskSchema = z
+  .strictObject({
+    /** Stable inside the node that holds the task. */
+    id: partId,
+    ...itemTaskFields,
+  })
+  .superRefine(answersAreOfTheTask)
 
 export type ItemTaskFile = z.infer<typeof itemTaskSchema>
 
+/** A part of a mock exam: a task whose id is its place, "lesen-2" for Lesen, Teil 2. */
+export const mockExamPartSchema = z.strictObject(itemTaskFields).superRefine(answersAreOfTheTask)
+
 /**
  * The format of the task of each exam part, by the id of the part's node:
- * how many texts it has and how many items. A part that is not listed here
- * has no task format yet, so its node cannot be published. Source: the
- * candidate sheets of the official model set (the solved example "0" that
- * some parts begin with is not an item).
- *
- * Every item is "richtig-falsch" so far. With the item type of a second
- * part, a format also names the type of its items.
+ * how many texts it has and how many items, and the type of its items. A
+ * part that is not listed here has no task format yet, so its node cannot
+ * be published. Source: the candidate sheets of the official model set (the
+ * solved example "0" that some parts begin with is not an item).
  */
 export const ITEM_TASK_FORMATS: Readonly<Record<string, ItemTaskFormat>> = {
-  'exam-lesen-1': { texts: 1, items: 6, textsAre: 'read' },
+  // One longer personal text (an e-mail, a blog entry); six statements.
+  'exam-lesen-1': { texts: 1, items: 6, textsAre: 'read', itemTypes: ['richtig-falsch'] },
+  // Two press texts; three questions on each, the first on what the text is about.
+  'exam-lesen-2': { texts: 2, items: 6, textsAre: 'read', itemTypes: ['multiple-choice'] },
+  // Ten short advertisements; seven situations, each with one advertisement or none (0).
+  'exam-lesen-3': { texts: 10, items: 7, textsAre: 'read', itemTypes: ['which-text'] },
+  // Seven short comments on one question; is the writer of each for it?
+  'exam-lesen-4': { texts: 7, items: 7, textsAre: 'read', itemTypes: ['ja-nein'] },
+  // One set of rules or instructions; four questions.
+  'exam-lesen-5': { texts: 1, items: 4, textsAre: 'read', itemTypes: ['multiple-choice'] },
+  // Five short announcements or messages, each heard twice; per text a statement, then a question.
+  'exam-hoeren-1': {
+    texts: 5,
+    items: 10,
+    textsAre: 'heard',
+    speakers: 1,
+    plays: 2,
+    itemTypes: ['richtig-falsch', 'multiple-choice'],
+  },
+  // One talk to an audience (a guided tour), heard once; five questions in the order they are heard.
+  'exam-hoeren-2': { texts: 1, items: 5, textsAre: 'heard', speakers: 1, plays: 1, itemTypes: ['multiple-choice'] },
   // One conversation between two people, heard once; seven statements in the order they are heard.
-  'exam-hoeren-3': { texts: 1, items: 7, textsAre: 'heard', speakers: 2 },
+  'exam-hoeren-3': { texts: 1, items: 7, textsAre: 'heard', speakers: 2, plays: 1, itemTypes: ['richtig-falsch'] },
+  // One radio discussion of a moderator and two guests, heard twice; who says each of eight statements?
+  'exam-hoeren-4': { texts: 1, items: 8, textsAre: 'heard', speakers: 3, plays: 2, itemTypes: ['who-says'] },
 }
+
+/** How many options a `multiple-choice` item of the exam has: a, b and c. */
+export const EXAM_CHOICES = 3
 
 export interface ItemTaskFormat {
   texts: number
@@ -603,6 +722,14 @@ export interface ItemTaskFormat {
   textsAre: 'read' | 'heard'
   /** Of a part whose texts are heard: how many people speak in each text. */
   speakers?: number
+  /** Of a part whose texts are heard: how often the exam plays each recording. */
+  plays?: number
+  /**
+   * The type of each item, in turn: with one type every item has it; with
+   * two, the first item has the first, the second the second, the third the
+   * first again (Hören, Teil 1: a statement, then a question, per text).
+   */
+  itemTypes: readonly TaskItemType[]
 }
 
 /** The task format of an exam part, or undefined while it is not built. */
@@ -1116,6 +1243,55 @@ export const chaptersFileSchema = z.array(chapter).superRefine((chapters, ctx) =
 export type ChapterEntry = z.infer<typeof chapter>
 
 // ---------------------------------------------------------------------------
+// Original mock exams (source): mock-exams/<id>.yaml
+// ---------------------------------------------------------------------------
+
+/**
+ * The modules a mock exam holds as tasks scored per item, in the order of
+ * the exam. Each is a list of its parts, Teil 1 first, each in the format of
+ * its exam part (`ITEM_TASK_FORMATS`). Schreiben and Sprechen, graded by an
+ * AI assistant, are added beside them as modules of their own.
+ */
+export const MOCK_EXAM_ITEM_MODULES = ['lesen', 'hoeren'] as const
+export type MockExamItemModule = (typeof MOCK_EXAM_ITEM_MODULES)[number]
+
+/**
+ * One original mock exam: a full exam in the Goethe B1 format, written for
+ * this project. A file that is coming soon may be its title alone.
+ */
+export const mockExamFileSchema = z
+  .strictObject({
+    /** Stable for ever: the learner's history is kept under it. "mock-exam-1". */
+    id: nodeId,
+    /** Its place in the list of mock exams; lower comes first. */
+    order: z.number().int('must be a whole number').positive(),
+    status: z.enum(NODE_STATUSES),
+    title: localised,
+    /** Lesen, Teil 1 to Teil 5. */
+    lesen: z.array(mockExamPartSchema).min(1).optional(),
+    /** Hören, Teil 1 to Teil 4. */
+    hoeren: z.array(mockExamPartSchema).min(1).optional(),
+    /** A published exam must have one that matches its texts and items; the content pipeline checks it. */
+    review: reviewRecord.optional(),
+  })
+  .superRefine((value, ctx) => {
+    if (value.status !== 'published') return
+    for (const module of MOCK_EXAM_ITEM_MODULES) {
+      const { name, parts } = EXAM_MODULE_FACTS[module]
+      const held = value[module]?.length ?? 0
+      if (held !== parts) {
+        ctx.addIssue({
+          code: 'custom',
+          path: [module],
+          message: `must hold the ${parts} parts of ${name}, Teil 1 to Teil ${parts}; it holds ${held}`,
+        })
+      }
+    }
+  })
+
+export type MockExamFile = z.infer<typeof mockExamFileSchema>
+
+// ---------------------------------------------------------------------------
 // Official mock exams (source): official-mock-exams.yaml
 // ---------------------------------------------------------------------------
 
@@ -1390,6 +1566,29 @@ export interface RichtigFalschQuestion extends QuestionBase {
   answer: boolean
 }
 
+/** An item of an exam task: the prompt asks whether a text's writer is for something; `answer` true is Ja. */
+export interface JaNeinQuestion extends QuestionBase {
+  type: 'ja-nein'
+  answer: boolean
+}
+
+/**
+ * An item of an exam task: the prompt is a situation; the options are the
+ * ids of the task's texts and, last, "0" for none. `answer` is one of them.
+ */
+export interface WhichTextQuestion extends QuestionBase {
+  type: 'which-text'
+  options: string[]
+  answer: string
+}
+
+/** An item of an exam task: the prompt is a statement; the options are the speakers of the task's text. */
+export interface WhoSaysQuestion extends QuestionBase {
+  type: 'who-says'
+  options: string[]
+  answer: string
+}
+
 /**
  * Every question the app can ask, check and show: those of a node's pool and
  * the items of an exam task.
@@ -1404,6 +1603,9 @@ export type Question =
   | WordOrderQuestion
   | MatchingQuestion
   | RichtigFalschQuestion
+  | JaNeinQuestion
+  | WhichTextQuestion
+  | WhoSaysQuestion
   | MeaningOfWordQuestion
   | WordForMeaningQuestion
 
@@ -1448,7 +1650,12 @@ export function pluralAsLearned(word: Pick<VocabularyWord, 'plural'>): string | 
 }
 
 /** A question that is an item of an item task: its answer lies in the task's texts. */
-export type TaskItem = RichtigFalschQuestion
+export type TaskItem =
+  | RichtigFalschQuestion
+  | MultipleChoiceQuestion
+  | JaNeinQuestion
+  | WhichTextQuestion
+  | WhoSaysQuestion
 
 /** A text of a task: one to read, or one to hear (`isHeard` in scoring.ts tells them apart). */
 export type TaskText = ReadText | HeardText
@@ -1671,10 +1878,65 @@ export interface GrammarOverview {
   tables: Array<{ node: string; table: GrammarTable }>
 }
 
+/** An original mock exam as the list of mock exams shows it (`mock-exams.json`). */
+export interface MockExamSummary {
+  id: string
+  order: number
+  status: NodeStatus
+  title: Localised<RichText>
+  /** The modules it can be taken in, in the order of the exam. None while it is coming soon. */
+  modules: ExamModule[]
+}
+
+/** An original mock exam with what is taken (`mock-exams/<id>.json`). */
+export interface MockExam extends MockExamSummary {
+  /** Null while it is coming soon. */
+  content: MockExamContent | null
+}
+
+export interface MockExamContent {
+  /** In the order of the exam. */
+  modules: MockExamModule[]
+}
+
+/**
+ * One module of a mock exam. A module that the app scores per item (Lesen,
+ * Hören) holds item tasks. A module graded by an AI assistant (Schreiben,
+ * Sprechen) joins this union with `scoredBy: 'assistant'` and its own parts;
+ * the mock exam page picks the view by `scoredBy`.
+ */
+export type MockExamModule = ItemTaskModule
+
+/** Lesen or Hören of a mock exam: its parts, each a task scored per item. */
+export interface ItemTaskModule {
+  module: MockExamItemModule
+  scoredBy: 'items'
+  /** The time of the module in the exam (`EXAM_MODULE_FACTS`). */
+  minutes: number
+  /** Teil 1 first. */
+  parts: ItemTaskPart[]
+}
+
+export interface ItemTaskPart {
+  /** The part's number in its module. */
+  part: number
+  /** Its id is the part's place: "lesen-2". */
+  task: ItemTask
+  /** Of a part whose texts are heard: how often each recording may be played, as in the exam. */
+  plays?: number
+}
+
+/** `mock-exams.json`: every mock exam, in order. */
+export interface MockExamList {
+  exams: MockExamSummary[]
+}
+
 export interface ContentBundle {
   index: ContentIndex
   nodes: CompiledNode[]
   officialMockExams: OfficialMockExam[]
+  /** The original mock exams, in order. */
+  mockExams: MockExam[]
   search: Localised<SearchData>
   overview: GrammarOverview
 }

@@ -10,7 +10,7 @@
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import type { Plugin } from 'vite'
-import { spokenItems } from '../audio/index.ts'
+import { spokenInBundle } from '../audio/index.ts'
 import { AUDIO_FOLDER, audioFile } from '../content-model/audio.ts'
 import { bundleFiles, compileContent, formatReport } from './index.ts'
 
@@ -35,7 +35,7 @@ export function contentPipeline(contentDir: string): Plugin {
         this.emitFile({ type: 'asset', fileName: `${SITE_FOLDER}/${file.path}`, source: file.json })
       }
       // The content check has made sure that each of these files exists.
-      for (const key of new Set(spokenItems(bundle.nodes).map((item) => item.key))) {
+      for (const key of new Set(spokenInBundle(bundle).map((item) => item.key))) {
         const file = audioFile(key)
         this.emitFile({
           type: 'asset',
