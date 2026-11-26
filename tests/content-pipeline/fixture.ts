@@ -3,6 +3,7 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parse, stringify } from 'yaml'
+import { nodeFileSchema } from '../../src/content-model/index.ts'
 import { poolFingerprint } from '../../src/content-pipeline/review.ts'
 
 /** The small, valid content folder that tests start from. */
@@ -69,7 +70,10 @@ export function comingSoonNode(id: string, fields: Record<string, unknown> = {})
 export function changeReviewedNode(change: (node: LooseNode) => void): (text: string) => string {
   return changeNode((node) => {
     change(node)
-    node.review.pool = poolFingerprint(node.questions)
+    // The record is of the questions as the pipeline reads them. A node that
+    // breaks the content model is rejected before its review is looked at.
+    const read = nodeFileSchema.safeParse(node)
+    if (read.success) node.review.pool = poolFingerprint(read.data.questions ?? [])
   })
 }
 
