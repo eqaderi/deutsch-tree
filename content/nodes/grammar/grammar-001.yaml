@@ -234,3 +234,8 @@ questions:
       en: "*Das Kind* is one person you talk about (*es*), so the ending is *-t*."
       fa: "*das Kind* یک نفر است که درباره‌اش حرف می‌زنیم (*es*)، پس پایانه *-t* است."
       de: "*Das Kind* ist eine Person (*es*). Die Endung ist *-t*."
+
+review:
+  reviewer: Claude Fable 5.2, an independent AI agent (blind pass, not a person)
+  date: 2026-11-26
+  pool: 09b7013fb9032fab

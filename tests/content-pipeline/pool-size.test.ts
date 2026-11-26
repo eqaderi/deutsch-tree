@@ -1,10 +1,10 @@
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { COMING_SOON, changeNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
+import { COMING_SOON, changeNode, changeReviewedNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
 test('a published node whose pool is below the minimum size is rejected', async () => {
   const content = await fixtureContentWith({
-    [PUBLISHED]: changeNode((node) => {
+    [PUBLISHED]: changeReviewedNode((node) => {
       node.questions = node.questions.slice(0, 14)
     }),
   })
