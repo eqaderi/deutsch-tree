@@ -38,18 +38,21 @@ const WORDS: Record<string, { german: string; en: string; fa: string; de: string
     fa: 'مبلمان',
     de: 'alle großen Sachen in einer Wohnung, auf denen man sitzt, schläft oder isst',
   },
-  wohnen: {
-    german: 'wohnen',
-    en: 'to live (somewhere)',
-    fa: 'زندگی کردن، ساکن بودن',
-    de: 'an einem Ort zu Hause sein',
+  schlafen: {
+    german: 'schlafen',
+    en: 'to sleep',
+    fa: 'خوابیدن',
+    de: 'in der Nacht im Bett liegen und die Augen zu haben',
   },
   gross: { german: 'groß', en: 'big', fa: 'بزرگ', de: 'nicht klein' },
 }
 
+let compiled: ReturnType<typeof compileContent> | undefined
+
 /** The id of the question about `word` in one direction, as the compiled pool names it. */
 async function idOf(word: string, direction: 'meaning' | 'word'): Promise<string> {
-  const { bundle } = await compileContent(fixtureContent)
+  compiled ??= compileContent(fixtureContent)
+  const { bundle } = await compiled
   const content = bundle?.nodes.find((node) => node.id === NODE)?.content
   if (!content || !hasPool(content)) throw new Error(`${NODE} has no pool`)
   const type = direction === 'meaning' ? 'meaning-of-word' : 'word-for-meaning'
@@ -68,7 +71,7 @@ const HEADWORD: Record<string, string> = {
   fenster: 'Fenster',
   kueche: 'Küche',
   moebel: 'Möbel',
-  wohnen: 'wohnen',
+  schlafen: 'schlafen',
   gross: 'groß',
 }
 
@@ -147,7 +150,7 @@ test('the sheet gives no answer away: no key, no example sentence, and no German
     expect(Object.keys(entry.question).sort()).toEqual(shown)
   }
   const askedFor = sheet.questions.filter((entry) => entry.question.type === 'word-for-meaning')
-  expect(JSON.stringify(askedFor)).not.toMatch(/Tisch|Lampe|Küche|wohnen/)
+  expect(JSON.stringify(askedFor)).not.toMatch(/Tisch|Lampe|Küche|schlafen/)
   expect(JSON.stringify(sheet)).not.toContain('Das Essen steht auf dem Tisch.')
 })
 

@@ -54,7 +54,7 @@ test('a published vocabulary node compiles into its words, each with all that it
     number: 'plural-only',
     level: 'A2',
   })
-  expect(content.words.find((word) => word.word === 'wohnen')).toMatchObject({ class: 'verb' })
+  expect(content.words.find((word) => word.word === 'schlafen')).toMatchObject({ class: 'verb' })
 })
 
 test('its pool asks every word from German and into German, a noun with its article', async () => {
@@ -72,7 +72,7 @@ test('its pool asks every word from German and into German, a noun with its arti
       answers: ['der Tisch'],
     }),
   ])
-  expect(about('wohnen')?.[1]).toMatchObject({ answers: ['wohnen'] })
+  expect(about('schlafen')?.[1]).toMatchObject({ answers: ['schlafen'] })
 })
 
 test('a vocabulary node that is coming soon may name its words and nothing more', async () => {

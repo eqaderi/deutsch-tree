@@ -46,9 +46,9 @@ test('a vocabulary page lists each word with its article, plural, word class, le
   await expect(moebel).toContainText('plural only')
   await expect(moebel).toContainText('A2')
 
-  const wohnen = wordsOnPage(page).filter({ hasText: 'to live (somewhere)' })
-  await expect(wohnen).toContainText('verb')
-  await expect(wohnen).not.toContainText('Plural')
+  const schlafen = wordsOnPage(page).filter({ hasText: 'to sleep' })
+  await expect(schlafen).toContainText('verb')
+  await expect(schlafen).not.toContainText('Plural')
 })
 
 test('in Persian the meaning is Persian, right to left, and the German still reads left to right', async ({ page }) => {

@@ -124,17 +124,17 @@ words:
       en: The furniture is old.
       fa: مبلمان قدیمی است.
 
-  - word: wohnen
+  - word: schlafen
     class: verb
     level: A1
     meaning:
-      en: to live (somewhere)
-      fa: زندگی کردن، ساکن بودن
-    definition: an einem Ort zu Hause sein
+      en: to sleep
+      fa: خوابیدن
+    definition: in der Nacht im Bett liegen und die Augen zu haben
     example:
-      de: Wir wohnen in Köln.
-      en: We live in Cologne.
-      fa: ما در کلن زندگی می‌کنیم.
+      de: Ich schlafe acht Stunden.
+      en: I sleep for eight hours.
+      fa: من هشت ساعت می‌خوابم.
 
   - word: groß
     class: adjective
@@ -151,4 +151,4 @@ words:
 review:
   reviewer: Fixture reviewer
   date: 2026-11-26
-  pool: c3cf74ac1dd967fb
+  pool: 4ebcaf5d486fca64

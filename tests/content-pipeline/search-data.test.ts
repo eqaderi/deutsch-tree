@@ -48,7 +48,7 @@ test('a vocabulary node is found by each word with its article and what it means
   expect(passages('fa')?.[0]).toEqual([{ de: 'der Tisch' }, ' – میز'])
   // In simple German the meaning is the German definition.
   expect(passages('de')?.[0]).toEqual([{ de: 'der Tisch – ein Möbelstück mit einer Platte und vier Beinen' }])
-  expect(passages('en')?.[8]).toEqual([{ de: 'wohnen' }, ' – to live (somewhere)'])
+  expect(passages('en')?.[8]).toEqual([{ de: 'schlafen' }, ' – to sleep'])
   // The example sentences are left out: they would make the file several times larger.
   expect(JSON.stringify(passages('en'))).not.toContain('Das Essen steht auf dem Tisch.')
 })
