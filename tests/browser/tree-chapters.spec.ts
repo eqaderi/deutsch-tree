@@ -4,7 +4,7 @@ test('a level is a line of chapters, each with its name, its kind and its number
   await page.goto('./')
 
   const chapters = page.getByRole('main').getByRole('group')
-  await expect(chapters).toHaveCount(2)
+  await expect(chapters).toHaveCount(3)
   await expect(chapters.nth(0).getByRole('heading', { level: 3 })).toHaveText('Fixture basics')
   await expect(chapters.nth(0).locator('summary')).toContainText('Grammar')
   await expect(chapters.nth(0).locator('summary')).toContainText('1 topic')
@@ -28,6 +28,23 @@ test('the first chapter is open; another chapter opens on a tap and closes again
   await laterChapter.click()
 
   await expect(laterTopic).toBeHidden()
+})
+
+test('a vocabulary chapter stands in the line of its level, and its nodes are marked "Coming soon"', async ({
+  page,
+}) => {
+  await page.goto('./')
+  const tree = page.getByRole('main')
+  const chapter = tree.getByRole('group').filter({ hasText: 'Fixture words' })
+  const node = chapter.getByRole('listitem').filter({ hasText: 'Fixture family words' })
+
+  await expect(chapter.locator('summary')).toContainText('Vocabulary')
+  await expect(chapter.locator('summary')).toContainText('1 topic')
+
+  await chapter.getByRole('heading', { name: 'Fixture words' }).click()
+
+  await expect(node).toContainText('Coming soon')
+  await expect(node.getByRole('link')).toHaveCount(0)
 })
 
 test('coming back from a topic, the chapters are as the learner left them', async ({ page }) => {
