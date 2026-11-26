@@ -5,6 +5,7 @@ import { useLanguage } from '../language/index.tsx'
 import { findPacks, findPhoneAddress } from '../pack-loader/index.ts'
 import { German } from './German.tsx'
 import { BackToTree } from './NotFound.tsx'
+import { PageTitle } from './PageTitle.tsx'
 
 /** The address of one module of one exam of a pack, in the private exam view. */
 export function packModuleAddress(packId: string, exam: number, module: string): string {
@@ -24,7 +25,7 @@ export function PacksPage() {
 
   return (
     <main className="wrap">
-      <title>{`${strings.packsTitle} · ${strings.appName}`}</title>
+      <PageTitle title={strings.packsTitle} />
       <BackToTree />
       <header className="page-head">
         <h1>{strings.packsTitle}</h1>

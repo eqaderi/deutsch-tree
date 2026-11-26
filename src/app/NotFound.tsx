@@ -1,13 +1,13 @@
-import { Link } from 'react-router'
 import type { NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
+import { BackLink, PageTitle } from './PageTitle.tsx'
 import { lastTreeAddress, treeAddress, treeAddressOf } from './treeAddress.ts'
 
 export function NotFound() {
   const { strings } = useLanguage()
   return (
     <main className="wrap">
-      <title>{`${strings.notFoundTitle} · ${strings.appName}`}</title>
+      <PageTitle title={strings.notFoundTitle} />
       <BackToTree />
       <header className="page-head">
         <h1>{strings.notFoundTitle}</h1>
@@ -28,12 +28,5 @@ export function NotFound() {
 export function BackToTree({ from, level }: { from?: Pick<NodeSummary, 'level' | 'kind'>; level?: string }) {
   const { strings } = useLanguage()
   const to = from ? treeAddressOf(from) : level !== undefined ? treeAddress({ level }) : lastTreeAddress()
-  return (
-    <Link to={to} className="back">
-      <span className="flip" aria-hidden="true">
-        ←
-      </span>
-      {strings.allTopics}
-    </Link>
-  )
+  return <BackLink to={to}>{strings.allTopics}</BackLink>
 }

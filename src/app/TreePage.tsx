@@ -11,6 +11,7 @@ import { useFirstSteps } from './firstVisit.ts'
 import { RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { NodeRow } from './NodeRow.tsx'
+import { PageTitle } from './PageTitle.tsx'
 import { useProgress } from './progress.ts'
 import { rememberTreeView, treeAddress } from './treeAddress.ts'
 
@@ -60,7 +61,7 @@ export function TreePage() {
 
   return (
     <main className="wrap">
-      <title>{`${strings.treeTitle} · ${strings.appName}`}</title>
+      <PageTitle title={strings.treeTitle} />
       <header className="intro">
         <h1>{strings.treeTitle}</h1>
         <p>{strings.treeIntro}</p>

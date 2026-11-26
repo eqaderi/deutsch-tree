@@ -1,5 +1,5 @@
 import { use, useState } from 'react'
-import { Link, Navigate, useParams } from 'react-router'
+import { Navigate, useParams } from 'react-router'
 import type { CompiledNode, Question } from '../content-model/index.ts'
 import { hasPool, hasPractice } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
@@ -9,6 +9,7 @@ import { loadNode } from './content.ts'
 import { plainText } from './German.tsx'
 import { isNodeId } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
+import { BackLink, PageTitle } from './PageTitle.tsx'
 import { PracticeTest } from './PracticeTest.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 import { RecogniseOnlyLabel, RecogniseOnlyNote } from './RecogniseOnly.tsx'
@@ -64,13 +65,10 @@ export function NodeTest({ node, pool, attemptSize }: NodeTestProps) {
   const title = strings.testTitle(plainText(node.title[language]))
   return (
     <main className="wrap">
-      <title>{`${title} · ${strings.appName}`}</title>
-      <Link to=".." relative="path" className="back">
-        <span className="flip" aria-hidden="true">
-          ←
-        </span>
+      <PageTitle title={title} />
+      <BackLink to=".." relative="path">
         {strings.backToTopic}
-      </Link>
+      </BackLink>
       <header className="page-head">
         <h1>{title}</h1>
         {node.recogniseOnly && (

@@ -7,6 +7,7 @@ import { answersOf, fileOfPack, findPacks, loadAnswerKey, moduleOf } from '../pa
 import { AnswerSheet, type SheetMarks, SheetResultView } from './AnswerSheet.tsx'
 import { BookPages } from './BookPages.tsx'
 import { NotFound } from './NotFound.tsx'
+import { BackLink, PageTitle } from './PageTitle.tsx'
 
 /**
  * The private exam view: one module of one exam of a pack
@@ -53,13 +54,8 @@ function ModuleView({ pack, exam, module }: ModuleViewProps) {
   const shown = part ?? module
   return (
     <main className="wrap wrap-wide">
-      <title>{`${title} · ${strings.appName}`}</title>
-      <Link to="/packs" className="back">
-        <span className="flip" aria-hidden="true">
-          ←
-        </span>
-        {strings.packsTitle}
-      </Link>
+      <PageTitle title={title} />
+      <BackLink to="/packs">{strings.packsTitle}</BackLink>
       <header className="page-head">
         <h1>
           <bdi>{pack.name}</bdi> · {strings.packExam(exam.number)} ·{' '}

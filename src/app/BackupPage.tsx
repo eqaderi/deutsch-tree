@@ -5,6 +5,7 @@ import { exportProgress, importProgress, type ReadProblem } from '../progress-st
 import { download } from './download.ts'
 import { acknowledgeMilestonesOf } from './milestones.ts'
 import { BackToTree } from './NotFound.tsx'
+import { PageTitle } from './PageTitle.tsx'
 import { progressProblem, updateProgress, useProgress } from './progress.ts'
 
 /** What the page last did, or is waiting for. One thing at a time. */
@@ -54,7 +55,7 @@ export function BackupPage() {
 
   return (
     <main className="wrap">
-      <title>{`${strings.backupTitle} · ${strings.appName}`}</title>
+      <PageTitle title={strings.backupTitle} />
       <BackToTree />
       <header className="page-head">
         <h1>{strings.backupTitle}</h1>

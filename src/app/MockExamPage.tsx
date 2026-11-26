@@ -42,6 +42,7 @@ import { RichText } from './German.tsx'
 import { ItemResults, TaskItems, TaskTexts } from './ItemTaskView.tsx'
 import { MockResultSummary, moduleFacts } from './MockExamsPage.tsx'
 import { NotFound } from './NotFound.tsx'
+import { BackLink, PageTitle } from './PageTitle.tsx'
 import { updateProgress } from './progress.ts'
 import { ModuleName } from './ReadinessPage.tsx'
 
@@ -109,13 +110,8 @@ function MockExamModuleShell({ exam, module }: { exam: MockExam; module: MockExa
 
   return (
     <main className="wrap">
-      <title>{`${strings.mockExamsTitle} · ${strings.appName}`}</title>
-      <Link to="/mock-exams" className="back">
-        <span className="flip" aria-hidden="true">
-          ←
-        </span>
-        {strings.allMockExams}
-      </Link>
+      <PageTitle title={strings.mockExamsTitle} />
+      <BackLink to="/mock-exams">{strings.allMockExams}</BackLink>
       <header className="page-head">
         <p className="secondary">
           <RichText parts={exam.title[language]} />

@@ -8,6 +8,7 @@ import { loadIndex, loadSearchData } from './content.ts'
 import { RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree } from './NotFound.tsx'
+import { PageTitle } from './PageTitle.tsx'
 import { useProgress } from './progress.ts'
 
 /**
@@ -25,7 +26,7 @@ export function SearchPage() {
 
   return (
     <main className="wrap">
-      <title>{`${strings.searchTitle} · ${strings.appName}`}</title>
+      <PageTitle title={strings.searchTitle} />
       <BackToTree />
       <header className="page-head">
         <h1>
