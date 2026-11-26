@@ -18,7 +18,7 @@
 import path from 'node:path'
 import { parseArgs } from 'node:util'
 import { audioFile } from '../content-model/audio.ts'
-import { formatReport } from '../content-pipeline/index.ts'
+import { formatErrors } from '../content-pipeline/index.ts'
 import { generateAudio } from './generate.ts'
 import { piperVoice, silentVoice } from './piper.ts'
 
@@ -54,14 +54,7 @@ const report = await generateAudio(values.content, synthesise, {
 })
 
 if (report.errors.length > 0) {
-  console.log(
-    formatReport({
-      ok: false,
-      errors: report.errors,
-      nodes: { total: 0, published: 0, comingSoon: 0 },
-      questions: 0,
-    }),
-  )
+  console.log(formatErrors(report.errors))
   process.exitCode = 1
 } else {
   console.log(

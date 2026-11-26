@@ -225,14 +225,20 @@ export async function writeBundle(bundle: ContentBundle, outDir: string): Promis
 
 /** The report as text for a terminal. */
 export function formatReport(report: PipelineReport): string {
-  const lines = report.errors.map(formatProblem)
+  if (!report.ok) return formatErrors(report.errors)
   const { total, published, comingSoon } = report.nodes
-  lines.push(
-    report.ok
-      ? `Content OK. Nodes: ${total} (${published} published, ${comingSoon} coming soon). Questions: ${report.questions}.`
-      : `Content has ${report.errors.length} error${report.errors.length === 1 ? '' : 's'}. Nothing was compiled.`,
-  )
-  return lines.join('\n')
+  return [
+    ...report.errors.map(formatProblem),
+    `Content OK. Nodes: ${total} (${published} published, ${comingSoon} coming soon). Questions: ${report.questions}.`,
+  ].join('\n')
+}
+
+/** The content errors that stopped a compile, one line each, and their count. */
+export function formatErrors(errors: readonly ContentProblem[]): string {
+  return [
+    ...errors.map(formatProblem),
+    `Content has ${errors.length} error${errors.length === 1 ? '' : 's'}. Nothing was compiled.`,
+  ].join('\n')
 }
 
 /** "ERROR node grammar-001, question q2 (nodes/grammar/grammar-001.yaml at questions[1].answer): …" */
