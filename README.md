@@ -435,8 +435,9 @@ The rules are in the learning engine, like every rule. The tree
   answers right or wrong from the fixture node's own answer key, whatever
   questions the attempt drew. `takeCheckpoint` does the same for a checkpoint,
   whose questions come from several nodes. The fixture node `grammar-010`
-  holds only typed questions and draws its whole pool, so a journey there
-  meets every question (`takeTypedTest`).
+  holds only typed questions and draws 15 of its 16, so a journey there
+  meets nearly every question; `takeTypedTest` retakes the attempt until the
+  questions the journey needs came up.
   A new question type gets a case in `giveAnswer`, `expectAnswerGiven` and
   `rightAnswerText` there. A journey about one type of `grammar-001` calls
   `findQuestion`, which brings a question of that type on screen.

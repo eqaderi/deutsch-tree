@@ -632,6 +632,10 @@ attemptSize: 12          # optional; 10 to 15, default 10
 The pass mark follows from it: 90%, rounded up to a whole question (9 of 10,
 11 of 12, 14 of 15).
 
+A published pool holds more questions than one attempt draws, so that a
+retry asks another set; a vocabulary node holds more words than its
+`attemptSize`, because its test asks about a word once.
+
 ## A published exam-part node
 
 Every exam-part page, whatever its module, begins with three panels in this
@@ -964,6 +968,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - A published node with fewer than 15 questions (a vocabulary node: fewer
   than 8 words, which give 16). A `coming-soon` draft may have fewer. An exam part is exempt: it has no pool. A reading part is held
   to the format of its part instead, and a writing or speaking part has none.
+- A published node whose pool is not larger than its `attemptSize` (a
+  vocabulary node: whose words are not more than its `attemptSize`), so that
+  every retry would ask the same questions.
 - A published reading or listening part whose practice task has not the
   number of texts and items of its part or the type of its items, an item
   `multiple-choice` without exactly three options, a text to hear in a reading part or

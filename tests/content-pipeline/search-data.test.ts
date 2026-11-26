@@ -55,7 +55,7 @@ test('a vocabulary node is found by each word with its article and what it means
 
   const passages = (language: 'en' | 'fa' | 'de') =>
     bundle?.search[language].entries.find((entry) => entry.node === 'vocabulary-fixture-home')?.passages
-  expect(passages('en')).toHaveLength(10)
+  expect(passages('en')).toHaveLength(11)
   expect(passages('en')?.[0]).toEqual([{ de: 'der Tisch' }, ' – table'])
   expect(passages('fa')?.[0]).toEqual([{ de: 'der Tisch' }, ' – میز'])
   // In simple German the meaning is the German definition.

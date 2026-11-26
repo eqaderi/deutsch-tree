@@ -19,16 +19,23 @@ const TYPED_TEST = `./#/node/${TYPED_NODE}/test`
 const SUBSTITUTE_NOTE = 'Accepted. The exact spelling has ä, ö, ü or ß.'
 const CAPITALS_NOTE = 'Accepted. Mind the capital and small letters.'
 
-/** Answers right until the question `id` is on screen. An attempt of the typed node holds every question. */
+/**
+ * Answers right until the question `id` is on screen. An attempt of the typed
+ * node leaves one question out, so this starts another attempt when one ends
+ * without it.
+ */
 async function goToQuestion(page: Page, id: string): Promise<FixtureQuestion> {
-  for (let place = 1; place <= TYPED_ATTEMPT_SIZE; place += 1) {
-    await expect(page.getByText(`Question ${place} of ${TYPED_ATTEMPT_SIZE}`)).toBeVisible()
-    const question = await questionOnScreen(page)
-    if (question.id === id) return question
-    await giveAnswer(page, question, 'right')
-    await page.getByRole('button', { name: 'Next' }).click()
+  for (let attempt = 1; attempt <= 20; attempt += 1) {
+    for (let place = 1; place <= TYPED_ATTEMPT_SIZE; place += 1) {
+      await expect(page.getByText(`Question ${place} of ${TYPED_ATTEMPT_SIZE}`)).toBeVisible()
+      const question = await questionOnScreen(page)
+      if (question.id === id) return question
+      await giveAnswer(page, question, 'right')
+      await page.getByRole('button', { name: place < TYPED_ATTEMPT_SIZE ? 'Next' : 'Check answers' }).click()
+    }
+    await page.getByRole('button', { name: 'Try again' }).click()
   }
-  throw new Error(`the attempt did not hold the question ${id}`)
+  throw new Error(`no attempt in 20 held the question ${id}`)
 }
 
 /** Puts the cursor into the field before the letter at `start`, or selects from `start` up to `end`. */
@@ -49,8 +56,10 @@ test('a learner passes a test by typing the answers', async ({ page }) => {
 
   const places = await takeTypedTest(page, (question) => rightAnswerText(question))
 
-  // The attempt held typed answers and typed gap fills, all 15 of the pool.
-  expect([...places.keys()].sort()).toEqual([...(await fixturePool(TYPED_NODE)).keys()].sort())
+  // The attempt held 15 different questions of the pool: typed answers and typed gap fills.
+  const pool = await fixturePool(TYPED_NODE)
+  expect(places.size).toBe(15)
+  expect([...places.keys()].every((id) => pool.has(id))).toBe(true)
   await expect(page.getByRole('heading', { name: 'Passed' })).toBeVisible()
   await expect(page.getByRole('main')).toContainText('15 of 15 right')
   // Answers written exactly get no note.
@@ -154,7 +163,11 @@ test('extra spaces are ignored; ae, oe, ue, ss and wrong capitals are accepted a
     q6: 'lebst',
   }
 
-  const places = await takeTypedTest(page, (question) => typed[question.id] ?? rightAnswerText(question))
+  const places = await takeTypedTest(
+    page,
+    (question) => typed[question.id] ?? rightAnswerText(question),
+    Object.keys(typed),
+  )
 
   await expect(page.getByRole('heading', { name: 'Passed' })).toBeVisible()
   await expect(page.getByRole('main')).toContainText('15 of 15 right')
@@ -191,7 +204,11 @@ test('a wrong typed answer is shown with what was typed, the right answer and it
   // A plain letter in place of an umlaut is not a slip: it is wrong.
   const typed: Record<string, string> = { q2: 'schon', q11: 'die Fusse' }
 
-  const places = await takeTypedTest(page, (question) => typed[question.id] ?? rightAnswerText(question))
+  const places = await takeTypedTest(
+    page,
+    (question) => typed[question.id] ?? rightAnswerText(question),
+    Object.keys(typed),
+  )
 
   await expect(page.getByRole('heading', { name: 'Not passed yet' })).toBeVisible()
   await expect(page.getByRole('main')).toContainText('13 of 15 right')
@@ -240,7 +257,7 @@ test('on a Persian page the answer field and the letter buttons still read left 
 test('the notes of a result are in the learner’s language and fit the screen', async ({ page }) => {
   await page.goto(TYPED_TEST)
 
-  await takeTypedTest(page, (question) => (question.id === 'q7' ? 'strasse' : rightAnswerText(question)))
+  await takeTypedTest(page, (question) => (question.id === 'q7' ? 'strasse' : rightAnswerText(question)), ['q7'])
 
   await expect(page.getByRole('list', { name: 'Accepted with a note' }).getByRole('listitem')).toHaveCount(1)
   expect(await sidewaysScroll(page)).toBe(0)

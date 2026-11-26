@@ -44,7 +44,7 @@ export type FixtureQuestion = FixtureQuestionBase &
 
 export type FixtureQuestionOf<Type extends FixtureQuestion['type']> = Extract<FixtureQuestion, { type: Type }>
 
-/** The fixture node whose pool is typed questions only. An attempt draws all 15 of them. */
+/** The fixture node whose pool is typed questions only. An attempt draws 15 of its 16. */
 export const TYPED_NODE = 'grammar-010'
 export const TYPED_ATTEMPT_SIZE = 15
 
@@ -417,23 +417,30 @@ export async function findQuestion<Type extends FixtureQuestion['type']>(
 
 /**
  * Takes the whole test of the typed fixture node, typing for each question
- * what `text` gives for it. Returns the place (from 1) at which each question
- * came, by question id.
+ * what `text` gives for it. An attempt leaves one question of the pool out,
+ * so when one of the questions in `needs` did not come up, this takes another
+ * attempt, until one held them all. Returns the place (from 1) at which each
+ * question of that attempt came, by question id.
  */
 export async function takeTypedTest(
   page: Page,
   text: (question: FixtureQuestion) => string,
+  needs: readonly string[] = [],
   words = ENGLISH,
 ): Promise<Map<string, number>> {
-  const places = new Map<string, number>()
-  for (let place = 1; place <= TYPED_ATTEMPT_SIZE; place += 1) {
-    await expect(page.getByText(words.questionOf(place, TYPED_ATTEMPT_SIZE))).toBeVisible()
-    const question = await questionOnScreen(page)
-    places.set(question.id, place)
-    await answerField(page).fill(text(question))
-    await page.getByRole('button', { name: place < TYPED_ATTEMPT_SIZE ? words.next : words.checkAnswers }).click()
+  for (let attempt = 1; attempt <= 20; attempt += 1) {
+    if (attempt > 1) await page.getByRole('button', { name: words.tryAgain }).click()
+    const places = new Map<string, number>()
+    for (let place = 1; place <= TYPED_ATTEMPT_SIZE; place += 1) {
+      await expect(page.getByText(words.questionOf(place, TYPED_ATTEMPT_SIZE))).toBeVisible()
+      const question = await questionOnScreen(page)
+      places.set(question.id, place)
+      await answerField(page).fill(text(question))
+      await page.getByRole('button', { name: place < TYPED_ATTEMPT_SIZE ? words.next : words.checkAnswers }).click()
+    }
+    if (needs.every((id) => places.has(id))) return places
   }
-  return places
+  throw new Error(`no attempt in 20 held all of ${needs.join(', ')}`)
 }
 
 /** An explanation as a learner reads it: the asterisks that mark German are not shown. */

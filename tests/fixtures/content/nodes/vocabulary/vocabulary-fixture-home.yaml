@@ -1,4 +1,5 @@
-# Fixture node for tests: a published vocabulary node. Ten words, so an attempt of ten asks each word once.
+# Fixture node for tests: a published vocabulary node. Eleven words, so an attempt of ten asks ten different words
+# and a retry another ten.
 id: vocabulary-fixture-home
 kind: vocabulary
 level: A1
@@ -148,7 +149,21 @@ words:
       en: The room is big.
       fa: اتاق بزرگ است.
 
+  - word: Schrank
+    class: noun
+    article: der
+    plural: Schränke
+    level: A1
+    meaning:
+      en: cupboard
+      fa: کمد
+    definition: ein Möbelstück mit Türen, in dem man Sachen aufbewahrt
+    example:
+      de: Der Schrank ist voll.
+      en: The cupboard is full.
+      fa: کمد پر است.
+
 review:
   reviewer: Fixture reviewer
   date: 2026-11-26
-  pool: 4ebcaf5d486fca64
+  pool: f3f5b70dc39d798e

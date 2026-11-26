@@ -1,5 +1,6 @@
 # Fixture node for tests of typed answers. Invented, short, and stable: tests assert on these words.
-# An attempt draws the whole pool, so a test meets every question, in an order it does not know.
+# An attempt draws 15 of its 16 questions, so a test that must meet certain questions retakes the attempt until
+# they came up (takeTypedTest).
 id: grammar-010
 kind: grammar
 level: A1
@@ -179,8 +180,16 @@ questions:
       en: The plural is *die Übungen*.
       fa: جمع آن *die Übungen* است.
       de: Der Plural ist *die Übungen*.
+  - id: q16
+    type: typed-answer
+    prompt: "Plural: der Baum"
+    answers: [die Bäume, Bäume]
+    explanation:
+      en: The plural is *die Bäume*.
+      fa: جمع آن *die Bäume* است.
+      de: Der Plural ist *die Bäume*.
 
 review:
   reviewer: Fixture reviewer
-  date: 2026-01-01
-  pool: b2a26eaa45fed883
+  date: 2026-11-26
+  pool: a47d1b53a7b58d70

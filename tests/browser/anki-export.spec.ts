@@ -4,13 +4,13 @@ import type { CompiledNode, ContentIndex } from '../../src/content-model/index.t
 import { takeTest } from './taking-a-test.ts'
 import { expect, test } from './test.ts'
 
-/** The fixture's published vocabulary node: ten words about the home, "der Tisch" first. */
+/** The fixture's published vocabulary node: eleven words about the home, "der Tisch" first. */
 const NODE = 'vocabulary-fixture-home'
 /** A second published vocabulary node that a journey adds to the fixture's tree. */
 const OTHER = 'vocabulary-fixture-other'
 
 const STORAGE_KEY = 'deutsch-tree:progress'
-const NOTES_IN_HOME = 10
+const NOTES_IN_HOME = 11
 
 const ankiPanel = (page: Page) => page.getByRole('region', { name: 'Flashcards for Anki' })
 

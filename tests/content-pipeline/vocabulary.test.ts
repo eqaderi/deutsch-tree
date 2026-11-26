@@ -12,7 +12,7 @@ import {
   VOCABULARY,
 } from './fixture.ts'
 
-/** The fixture's published vocabulary node: ten words about the home, the first of them "Tisch". */
+/** The fixture's published vocabulary node: eleven words about the home, the first of them "Tisch". */
 const NODE = 'vocabulary-fixture-home'
 
 /** The fixture's vocabulary node that is coming soon: three words, named and not written yet. */
@@ -46,7 +46,7 @@ test('a published vocabulary node compiles into its words, each with all that it
 
   expect(inNodes(report.errors)).toEqual([])
   const content = vocabularyOf(bundle?.nodes.find((node) => node.id === NODE))
-  expect(content.words).toHaveLength(10)
+  expect(content.words).toHaveLength(11)
   expect(content.words[0]).toEqual({
     word: 'Tisch',
     class: 'noun',
@@ -77,7 +77,7 @@ test('its pool asks every word from German and into German, a noun with its arti
   const { bundle } = await compileContent(fixtureContent)
 
   const content = vocabularyOf(bundle?.nodes.find((node) => node.id === NODE))
-  expect(content?.questions).toHaveLength(20)
+  expect(content?.questions).toHaveLength(22)
   expect(content?.attemptSize).toBe(10)
   const about = (word: string) => content?.questions.filter((question) => 'word' in question && question.word === word)
   expect(about('Tisch')).toEqual([

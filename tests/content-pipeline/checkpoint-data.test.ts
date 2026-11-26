@@ -9,8 +9,8 @@ test('a level’s checkpoint data holds the pool of each published topic with on
   // A1: two grammar topics and a vocabulary topic; grammar-002 is coming soon.
   expect(pools?.A1?.map(({ nodeId, questions }) => [nodeId, questions.length])).toEqual([
     ['grammar-001', 19],
-    ['grammar-010', 15],
-    ['vocabulary-fixture-home', 20],
+    ['grammar-010', 16],
+    ['vocabulary-fixture-home', 22],
   ])
   // The pool is the one the node's test draws from.
   const grammar001 = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content

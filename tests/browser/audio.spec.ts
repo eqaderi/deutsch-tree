@@ -51,7 +51,7 @@ test('a vocabulary word can be heard with its article, and so can its example se
   const tisch = page.getByRole('list', { name: 'Words' }).getByRole('listitem').first()
   await expect(tisch.getByRole('button', { name: 'Listen' })).toHaveCount(2)
   // Ten words, each with its own example.
-  await expect(page.getByRole('list', { name: 'Words' }).getByRole('button', { name: 'Listen' })).toHaveCount(20)
+  await expect(page.getByRole('list', { name: 'Words' }).getByRole('button', { name: 'Listen' })).toHaveCount(22)
 })
 
 test('every phrase can be heard, and so can its example', async ({ page }) => {
