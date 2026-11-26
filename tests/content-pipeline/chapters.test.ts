@@ -158,8 +158,8 @@ test('German marked in a topic title is compiled as German, like in every other 
 test('a new level needs only content: a chapter of that level and a node in it', async () => {
   const content = await fixtureContentWith({
     [CHAPTERS]: (text) =>
-      `${text}\n- id: fixture-b2\n  level: B2\n  kind: grammar\n  title: { en: Fixture B2, fa: آزمایشی, de: Test B2 }\n`,
-    'nodes/grammar/grammar-003.yaml': () => comingSoonNode('grammar-003', { level: 'B2', chapter: 'fixture-b2' }),
+      `${text}\n- id: fixture-c1\n  level: C1\n  kind: grammar\n  title: { en: Fixture C1, fa: آزمایشی, de: Test C1 }\n`,
+    'nodes/grammar/grammar-003.yaml': () => comingSoonNode('grammar-003', { level: 'C1', chapter: 'fixture-c1' }),
   })
 
   const { report, bundle } = await compileContent(content)
@@ -173,6 +173,9 @@ test('a new level needs only content: a chapter of that level and a node in it',
     ['A2', 'fixture-nouns', 'grammar-102'],
     ['A2', 'fixture-nouns', 'grammar-103'],
     ['B1', 'fixture-unwritten', 'grammar-201'],
-    ['B2', 'fixture-b2', 'grammar-003'],
+    ['B2', 'fixture-set-phrases', 'phrases-greeting'],
+    ['B2', 'fixture-exam-parts', 'exam-schreiben-1'],
+    ['B2', 'fixture-exam-parts', 'exam-sprechen-1'],
+    ['C1', 'fixture-c1', 'grammar-003'],
   ])
 })

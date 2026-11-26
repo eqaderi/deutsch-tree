@@ -1,0 +1,13 @@
+# Fixture exam part: an exam task that the fixture phrases serve. Not written, like the real ones today.
+id: exam-schreiben-1
+kind: exam-part
+level: B2
+chapter: fixture-exam-parts
+order: 1
+status: coming-soon
+module: schreiben
+part: 1
+title:
+  en: "Fixture writing task with *du*"
+  fa: "تمرین نوشتن آزمایشی با *du*"
+  de: "Test-Schreibaufgabe mit *du*"

@@ -18,9 +18,11 @@ import {
   type GrammarContent,
   LANGUAGES,
   type Localised,
+  type NodeContent,
   type NodeFile,
   type NodeSummary,
   nodeFileSchema,
+  type PhrasesContent,
   type Question,
   type RichText,
 } from '../content-model/index.ts'
@@ -234,7 +236,22 @@ function compileNode(file: NodeFile): CompiledNode {
     ...(file.examTasks !== undefined && { examTasks: file.examTasks }),
   }
   // Drafts inside a "coming soon" file are checked but never shipped.
-  return { ...summary, content: file.status === 'published' ? compileGrammarContent(file) : null }
+  return { ...summary, content: file.status === 'published' ? compileContentOf(file) : null }
+}
+
+/** The page content of a published node. The schema lets only the kinds with a page be published. */
+function compileContentOf(file: NodeFile): NodeContent {
+  return file.kind === 'phrases' ? compilePhrasesContent(file) : compileGrammarContent(file)
+}
+
+function compilePhrasesContent(file: NodeFile): PhrasesContent {
+  // The schema guarantees these sections for a published node.
+  const { phrases, questions } = file as Required<NodeFile>
+  return {
+    phrases: phrases.map((phrase) => ({ ...phrase, meaning: richTextIn(phrase.meaning) })),
+    questions: questions.map(compileQuestion),
+    attemptSize: file.attemptSize,
+  }
 }
 
 function compileGrammarContent(file: NodeFile): GrammarContent {

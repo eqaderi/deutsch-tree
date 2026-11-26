@@ -3,6 +3,8 @@ import { examTasksAreExamParts } from './exam-tasks-are-exam-parts.ts'
 import { germanInPersianIsMarked } from './german-in-persian-is-marked.ts'
 import { nodeIdsAreUnique, questionIdsAreUnique } from './identifiers-are-unique.ts'
 import { nodesBelongToAChapter } from './nodes-belong-to-a-chapter.ts'
+import { phrasesServeTheirNodesExamTasks } from './phrases-serve-their-nodes-exam-tasks.ts'
+import { phrasesTestNeedsATypedAnswer } from './phrases-test-needs-a-typed-answer.ts'
 import { poolIsLargeEnough } from './pool-is-large-enough.ts'
 import { prerequisitesExist } from './prerequisites-exist.ts'
 import { prerequisitesHaveNoCycle } from './prerequisites-have-no-cycle.ts'
@@ -20,6 +22,8 @@ export const CHECKS: ContentCheck[] = [
   prerequisitesExist,
   prerequisitesHaveNoCycle,
   examTasksAreExamParts,
+  phrasesServeTheirNodesExamTasks,
   poolIsLargeEnough,
+  phrasesTestNeedsATypedAnswer,
   publishedNodeIsReviewed,
 ]

@@ -1,0 +1,13 @@
+# Fixture exam part: an exam task that the fixture phrases serve. Not written, like the real ones today.
+id: exam-sprechen-1
+kind: exam-part
+level: B2
+chapter: fixture-exam-parts
+order: 2
+status: coming-soon
+module: sprechen
+part: 1
+title:
+  en: Fixture speaking task
+  fa: تمرین صحبت کردن آزمایشی
+  de: Test-Sprechaufgabe

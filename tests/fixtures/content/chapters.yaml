@@ -32,3 +32,21 @@
     en: Fixture level not written yet
     fa: سطح آزمایشی نانوشته
     de: Test-Niveau, noch nicht geschrieben
+
+# A fourth level for the kinds of node that are not grammar. It is a level of its own, so that the
+# three levels above keep the counts that the tests of the tree and of the checkpoints know.
+- id: fixture-set-phrases
+  level: B2
+  kind: phrases
+  title:
+    en: Fixture set phrases
+    fa: عبارت‌های ثابت آزمایشی
+    de: Test-Redemittel
+
+- id: fixture-exam-parts
+  level: B2
+  kind: exam-part
+  title:
+    en: Fixture exam
+    fa: امتحان آزمایشی
+    de: Test-Prüfung
