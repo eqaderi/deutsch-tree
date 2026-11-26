@@ -1,7 +1,7 @@
 import { type ReactNode, use, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
-import { hasPool, hasPractice, isVocabulary } from '../content-model/scoring.ts'
+import { hasPool, hasPractice, isPhrases, isVocabulary } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import { examModuleOf, isDone, unmarkDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
@@ -73,7 +73,7 @@ export function NodePage() {
     <NodeFrame node={summary}>
       {isVocabulary(content) ? (
         <VocabularySections nodeId={summary.id} content={content} />
-      ) : 'phrases' in content ? (
+      ) : isPhrases(content) ? (
         <PhraseSections node={summary} content={content} />
       ) : (
         <GrammarSections content={content} />

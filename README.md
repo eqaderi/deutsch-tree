@@ -183,7 +183,8 @@ GitHub Pages and from a local folder.
   copying them. The top of that file says why each header is there.
 - Whether a node has a pool or is graded by an assistant: `hasPool` and
   `isAssistantGraded` in `src/content-model/scoring.ts`; which page it has:
-  `isGrammar`, `isVocabulary`. The app imports
+  `isGrammar`, `isVocabulary`, `isPhrases`, `hasPractice`, `hasExamTask`. Use these
+  rather than testing for a key of the content. The app imports
   these from that file, not from `index.ts`, which holds the schema that only
   the pipeline needs.
 - Progress: read it with `useProgress()` and change it with

@@ -24,7 +24,7 @@ import {
   type SearchData,
   type VocabularyWord,
 } from '../content-model/index.ts'
-import { hasPool, isVocabulary } from '../content-model/scoring.ts'
+import { hasExamTask, hasPool, isPhrases, isVocabulary } from '../content-model/scoring.ts'
 
 /** Stands between a piece of German and what the learner's language says about it. */
 const THEN = ' – '
@@ -53,10 +53,10 @@ function passagesOf(node: CompiledNode, language: Language): RichText[] {
     // the approach), and for a writing or speaking part the words of its task. Never a practice
     // task: its text is for the attempt, and its items are questions.
     const { task, scoring, approach } = content.explanations[language]
-    return [task, scoring, ...approach, ...('task' in content ? taskPassages(content.task) : [])]
+    return [task, scoring, ...approach, ...(hasExamTask(content) ? taskPassages(content.task) : [])]
   }
   if (isVocabulary(content)) return content.words.map((word) => wordPassage(word, language))
-  if ('phrases' in content) {
+  if (isPhrases(content)) {
     return [
       ...(node.purpose ? [node.purpose[language]] : []),
       ...content.phrases.flatMap((phrase) => [

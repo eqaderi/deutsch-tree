@@ -1,5 +1,6 @@
 import { expect, test } from 'vitest'
 import type { GrammarContent } from '../../src/content-model/index.ts'
+import { isGrammar } from '../../src/content-model/scoring.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { changeNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
@@ -77,7 +78,11 @@ test('a published node may show a diagram instead of a table, but needs one of t
       node.diagrams = [{ caption, labels, svg }]
     }),
   })
-  expect((await compileContent(withDiagramOnly)).report.errors).toEqual([])
+  const { report, bundle } = await compileContent(withDiagramOnly)
+  expect(report.errors).toEqual([])
+  // Without a table it is still a grammar node, with the page of one.
+  const content = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content
+  expect(content && isGrammar(content)).toBe(true)
 
   const withNeither = await fixtureContentWith({
     [PUBLISHED]: changeNode((node) => {

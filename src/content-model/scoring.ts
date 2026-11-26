@@ -8,6 +8,7 @@
  */
 import type {
   ExamModule,
+  ExamTaskContent,
   GrammarContent,
   HeardText,
   NodeContent,
@@ -49,9 +50,22 @@ export function isHeard(text: TaskText): text is HeardText {
   return 'lines' in text
 }
 
-/** Whether the content is that of a grammar node: rule, table, examples, mistakes and a written pool. */
+/**
+ * Whether the content is that of a grammar node: rule, table or diagram, examples, mistakes and a
+ * written pool. Only grammar has mistakes; a node drawn by a diagram alone has no table.
+ */
 export function isGrammar(content: NodeContent): content is GrammarContent {
-  return 'table' in content
+  return 'mistakes' in content
+}
+
+/** Whether the content is that of a phrases node: its phrases, and a written pool. */
+export function isPhrases(content: NodeContent): content is PhrasesContent {
+  return 'phrases' in content
+}
+
+/** Whether the content is that of a writing or speaking part: a task that an AI assistant grades. */
+export function hasExamTask(content: NodeContent): content is ExamTaskContent {
+  return 'task' in content
 }
 
 /** Whether the content is that of a vocabulary node: its words, and the pool made from them. */
