@@ -47,9 +47,9 @@ mistakes:
   - wrong: Du wohne hier.
     right: Du wohnst hier.
     why:
-      en: With du the ending is -st.
-      fa: با du پایانه -st است.
-      de: Bei du ist die Endung -st.
+      en: With *du* the ending is *-st*.
+      fa: با *du* پایانه *-st* است.
+      de: Bei *du* ist die Endung *-st*.
 
 # 15 questions: the smallest pool a published node may have.
 questions:
