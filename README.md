@@ -21,6 +21,7 @@ machine `pnpm exec playwright install chromium` for the browser tests.
 | `pnpm review:pool <id>`, `pnpm review:record <id>` | The blind review that a node needs before it is published. The steps are in [content/README.md](content/README.md). |
 | `pnpm test:unit` | All Vitest tests (`tests/**/*.test.ts`). `pnpm test:pipeline` runs only the content pipeline tests. |
 | `pnpm test:browser` | Playwright journeys (`tests/browser/*.spec.ts`) against the built site with fixture content. |
+| `pnpm pack:build` | Builds a private pack from a book the learner owns. Options and format: [docs/private-packs.md](docs/private-packs.md). |
 | `pnpm dev` | Dev server on the real content. Content files reload on save. |
 | `pnpm build` | Compiles the content and builds the site into `dist/`. Fails on any content error. |
 
@@ -47,6 +48,8 @@ ending, because the pipeline runs directly in Node.
 | `tests/progress-store/` | The progress store on a stand-in for browser storage, including text saved by each earlier version. |
 | `tests/language/` | The interface strings of the three languages, compared key by key. |
 | `tests/browser/` | Seam 3: whole journeys in a browser. |
+| `src/pack-builder/` | A learner's own exam book in, a private pack out. `cli.ts` is the command; `vite-plugin.ts` keeps packs out of the site build. The pack format's schema is `src/content-model/pack.ts`. |
+| `tests/pack-builder/` | Seam 4: build a pack from a synthetic book (`fixture.ts`) and assert on the pack. |
 
 The app never reads node files. It fetches `content/index.json` (every node's
 summary, in curriculum order) and `content/nodes/<id>.json` (one node's page),
@@ -120,3 +123,5 @@ to "GitHub Actions" once in the repository settings.
 ## Not in version control
 
 `research/` and `private/` are ignored on purpose and must never be committed.
+`private/` holds private packs; `pnpm build` fails rather than put anything from
+it into the site. See [docs/private-packs.md](docs/private-packs.md).
