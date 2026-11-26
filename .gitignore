@@ -6,3 +6,5 @@ dist/
 .DS_Store
 .claude/worktrees/
 /share/
+# Audio is committed as MP3 only; a WAV is an intermediate file of the voice engine.
+*.wav

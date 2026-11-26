@@ -18,6 +18,7 @@
     "content:check": "node src/content-pipeline/cli.ts",
     "review:pool": "node src/content-pipeline/review-cli.ts pool",
     "review:record": "node src/content-pipeline/review-cli.ts record",
+    "audio:generate": "node src/audio/cli.ts",
     "pack:build": "node src/pack-builder/cli.ts",
     "share": "vite build && node src/start-files/cli.ts",
     "vocabulary:scope": "node src/vocabulary-scope/cli.ts",

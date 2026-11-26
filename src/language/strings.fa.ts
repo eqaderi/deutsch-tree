@@ -73,6 +73,11 @@ export const fa: Strings = {
   table: 'جدول',
   diagram: 'نمودار',
   examples: 'مثال‌ها',
+  listen: 'گوش دادن',
+  stopListening: 'توقف',
+  audioFailed: 'صدا پخش نشد.',
+  // The names in Latin letters read left to right; the hyphen of Hi-Fi does not break the line.
+  voiceCredit: `صدای آلمانی: صداهای ${german('Thorsten')} و ${german('Kerstin')} از ${german('Piper')}. صدای ${german('Kerstin')} بر پایهٔ ${german('Hi\u2011Fi TTS')} از ${german('NVIDIA')} با پروانهٔ ${german('CC BY 4.0')} و با خوانش ${german('Cori Samuel')} ساخته شده است.`,
   commonMistakes: 'اشتباه‌های رایج',
   wrong: 'غلط',
   right: 'درست',

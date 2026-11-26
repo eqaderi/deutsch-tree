@@ -1,7 +1,14 @@
-import { asLearned, pluralAsLearned, type VocabularyContent, type VocabularyWord } from '../content-model/index.ts'
+import {
+  asLearned,
+  type HeardWord,
+  pluralAsLearned,
+  type VocabularyContent,
+  type VocabularyWord,
+} from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { AnkiExport } from './AnkiExport.tsx'
 import { German } from './German.tsx'
+import { PlayButton, SpokenExample } from './PlayButton.tsx'
 
 /**
  * The page of a vocabulary node: one panel with every word of the node, in
@@ -35,13 +42,16 @@ export function VocabularySections({ nodeId, content }: { nodeId: string; conten
  * language and then the German definition; a learner who reads in German
  * sees the definition alone, and no translation of the example.
  */
-function WordEntry({ word }: { word: VocabularyWord }) {
+function WordEntry({ word }: { word: HeardWord }) {
   const { language, strings } = useLanguage()
   return (
-    <li className="word">
+    <li className="vocabulary-word">
       <div className="word-head">
-        {/* The place for the button that reads the word aloud with its article (audio, ticket #14). */}
-        <German className="word-german">{asLearned(word)}</German>
+        <span className="word-said">
+          {/* The word is heard as it is learned, a noun with its article. */}
+          <PlayButton audio={word.audio} />
+          <German className="word-german">{asLearned(word)}</German>
+        </span>
         <span className="word-facts">
           <span className="word-class">{strings.wordClasses[word.class]}</span>
           <span className="tag">{word.level}</span>
@@ -56,10 +66,8 @@ function WordEntry({ word }: { word: VocabularyWord }) {
       <p className="word-definition">
         <German>{word.definition}</German>
       </p>
-      <p className="example word-example">
-        <German>{word.example.de}</German>
-        {/* A learner reading in German needs no translation. */}
-        {language !== 'de' && <small>{word.example[language]}</small>}
+      <p className="example heard word-example">
+        <SpokenExample example={word.example} />
       </p>
     </li>
   )

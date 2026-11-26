@@ -55,9 +55,15 @@ test('a published vocabulary node compiles into its words, each with all that it
     level: 'A1',
     meaning: { en: 'table', fa: 'میز' },
     definition: 'ein Möbelstück mit einer Platte und vier Beinen',
-    example: { de: 'Das Essen steht auf dem Tisch.', en: 'The food is on the table.', fa: 'غذا روی میز است.' },
+    example: {
+      de: 'Das Essen steht auf dem Tisch.',
+      en: 'The food is on the table.',
+      fa: 'غذا روی میز است.',
+      audio: expect.objectContaining({ text: 'Das Essen steht auf dem Tisch.' }),
+    },
     alsoAccepted: [],
     tooCloseTo: [],
+    audio: expect.objectContaining({ text: 'der Tisch' }),
   })
   expect(content.words.find((word) => word.word === 'Möbel')).toMatchObject({
     article: 'die',
@@ -310,7 +316,8 @@ test('two words with the same meaning that accept each other when asked for are 
     [SCOPE_LIST_FILE]: (text) => `${text}Leuchte\tnoun\tA1\tdie\t-n\n`,
   })
 
-  const { report } = await compileContent(content)
+  // The new word has no audio yet; that is not what this test is about.
+  const { report } = await compileContent(content, { requireAudio: false })
 
   expect(inNodes(report.errors)).toEqual([])
 })

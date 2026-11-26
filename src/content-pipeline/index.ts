@@ -10,6 +10,7 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
 import type { z } from 'zod'
+import { spoken } from '../audio/index.ts'
 import { readDrawing } from '../content-model/diagram.ts'
 import {
   type ChapterEntry,
@@ -43,6 +44,7 @@ import {
 } from '../content-model/index.ts'
 import { hasPool, hasPractice, isAssistantGraded } from '../content-model/scoring.ts'
 import { READINESS_EXAMS } from '../learning-engine/index.ts'
+import { audioProblems, presentAudio } from './audio.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
 import { mixedAwayFrom } from './mix.ts'
@@ -69,7 +71,18 @@ export interface PipelineResult {
   bundle: ContentBundle | null
 }
 
-export async function compileContent(contentDir: string): Promise<PipelineResult> {
+export interface CompileOptions {
+  /**
+   * Whether every spoken item of a published node must have its audio file
+   * (default true). Only the command that generates the audio turns it off.
+   */
+  requireAudio?: boolean
+}
+
+export async function compileContent(
+  contentDir: string,
+  { requireAudio = true }: CompileOptions = {},
+): Promise<PipelineResult> {
   const errors: ContentProblem[] = []
   const checked: CheckedNode[] = []
   const ids = new Set<string>()
@@ -127,6 +140,10 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
   const placeOf = (node: CompiledNode) => chapterPlace.get(node.chapter) ?? Number.POSITIVE_INFINITY
   const nodes = checked.map(({ node }) => compileNode(node))
   nodes.sort((a, b) => placeOf(a) - placeOf(b) || a.order - b.order || a.id.localeCompare(b.id))
+
+  // What the published pages say aloud, and whether its files are there.
+  const fileOf = new Map(checked.map(({ file, node }) => [node.id, file]))
+  errors.push(...audioProblems(nodes, fileOf, requireAudio ? await presentAudio(contentDir) : null))
 
   const published = nodes.filter((node) => node.status === 'published').length
   const report: PipelineReport = {
@@ -418,7 +435,11 @@ function compilePhrasesContent(file: NodeFile): PhrasesContent {
   // The schema guarantees these sections for a published node.
   const { phrases, questions } = file as Required<NodeFile>
   return {
-    phrases: phrases.map((phrase) => ({ ...phrase, meaning: richTextIn(phrase.meaning) })),
+    phrases: phrases.map((phrase) => ({
+      ...phrase,
+      meaning: richTextIn(phrase.meaning),
+      example: { ...phrase.example, audio: spoken(phrase.example.de) },
+    })),
     questions: questions.map(compileQuestion),
     attemptSize: file.attemptSize,
   }
@@ -434,7 +455,7 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
     explanations: { en: rule('en'), fa: rule('fa'), de: rule('de') },
     ...(table && { table }),
     ...(diagrams && { diagrams: diagrams.map(compileDiagram) }),
-    examples,
+    examples: examples.map((example) => ({ ...example, audio: spoken(example.de) })),
     mistakes: mistakes.map((mistake) => ({ ...mistake, why: richTextIn(mistake.why) })),
     questions: questions.map(compileQuestion),
     attemptSize: file.attemptSize,

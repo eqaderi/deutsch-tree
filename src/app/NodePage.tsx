@@ -14,6 +14,7 @@ import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
 import { Panel } from './Panel.tsx'
 import { PhraseSections } from './PhraseSections.tsx'
+import { SpokenExample } from './PlayButton.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 import { RecogniseOnlyLabel, RecogniseOnlyNote } from './RecogniseOnly.tsx'
 import { VocabularySections } from './VocabularySections.tsx'
@@ -224,10 +225,8 @@ function GrammarSections({ content }: { content: GrammarContent }) {
       <Panel id="section-examples" heading={strings.examples}>
         <ul className="examples">
           {content.examples.map((example, index) => (
-            <li key={index} className="example">
-              <German>{example.de}</German>
-              {/* A learner reading in German needs no translation. */}
-              {language !== 'de' && <small>{example[language]}</small>}
+            <li key={index} className="example heard">
+              <SpokenExample example={example} />
             </li>
           ))}
         </ul>

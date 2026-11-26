@@ -5,6 +5,7 @@ import { useLanguage } from '../language/index.tsx'
 import { loadIndex } from './content.ts'
 import { German, RichText } from './German.tsx'
 import { Panel } from './Panel.tsx'
+import { SpokenExample } from './PlayButton.tsx'
 
 /**
  * The panels of a phrases page: what the phrases are for, then the phrases.
@@ -52,10 +53,8 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
       </p>
 
       <p className="phrase-label">{strings.phraseExample}</p>
-      <p className="example">
-        <German>{phrase.example.de}</German>
-        {/* A learner reading in German needs no translation. */}
-        {language !== 'de' && <small>{phrase.example[language]}</small>}
+      <p className="example heard">
+        <SpokenExample example={phrase.example} />
       </p>
 
       <p id={id} className="phrase-label">

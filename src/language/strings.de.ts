@@ -69,6 +69,11 @@ export const de: Strings = {
   table: 'Tabelle',
   diagram: 'Bild',
   examples: 'Beispiele',
+  listen: 'Anhören',
+  stopListening: 'Stopp',
+  audioFailed: 'Der Ton kann nicht abgespielt werden.',
+  voiceCredit:
+    'Deutsche Aufnahmen: die Piper-Stimmen Thorsten und Kerstin. Die Stimme Kerstin beruht auf Hi-Fi TTS von NVIDIA (CC BY 4.0), gelesen von Cori Samuel.',
   commonMistakes: 'Häufige Fehler',
   wrong: 'Falsch',
   right: 'Richtig',
