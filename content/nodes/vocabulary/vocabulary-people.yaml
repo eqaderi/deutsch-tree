@@ -1,0 +1,38 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-people
+kind: vocabulary
+level: A1
+chapter: a1-words-people
+order: 4
+status: coming-soon
+title:
+  en: "People around you"
+  fa: "آدم‌های دور و بر"
+  de: "Menschen um dich"
+words:
+  - word: Mensch
+  - word: Leute
+  - word: Mann
+  - word: Mädchen
+  - word: Junge
+  - word: Erwachsene
+  - word: Jugendliche
+  - word: Freund
+  - word: Bekannte
+  - word: Kollege
+  - word: Gast
+  - word: Gruppe
+  - word: jung
+  - word: alt
+  - word: allein
+  - word: zusammen
+  - word: fremd
+  - word: bekannt
+  - word: kennen
+  - word: treffen
+  - word: besuchen
+  - word: einladen
+  - word: Einladung
+  - word: helfen
+  - word: Hilfe

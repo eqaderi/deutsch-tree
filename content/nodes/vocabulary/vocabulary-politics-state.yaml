@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-politics-state
+kind: vocabulary
+level: B1
+chapter: b1-words-society
+order: 1
+status: coming-soon
+title:
+  en: "Politics and the state"
+  fa: "سیاست و دولت"
+  de: "Politik und Staat"
+words:
+  - word: Staat
+  - word: Regierung
+  - word: Parlament
+  - word: Bundestag
+  - word: Bundeskanzler
+  - word: Bundespräsident
+  - word: Minister
+  - word: Bürgermeister
+  - word: Politik
+  - word: Politiker
+  - word: politisch
+  - word: Partei
+  - word: Wahl
+  - word: abstimmen
+  - word: Demokratie
+  - word: demokratisch
+  - word: konservativ
+  - word: liberal
+  - word: Bund
+  - word: Bundesland
+  - word: Bundesrepublik Deutschland
+  - word: EU
+  - word: Europäische Union
+  - word: Europäisches Parlament
+  - word: staatlich
+  - word: national

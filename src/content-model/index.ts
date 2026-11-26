@@ -473,6 +473,15 @@ const reviewRecord = z.strictObject({
   pool: text,
 })
 
+/**
+ * One word of a vocabulary node. `word` is the headword as the scope list
+ * (content/vocabulary/scope-list.tsv) spells it; the list holds its word
+ * class, level, article and plural. The rest of an entry (meanings, a
+ * definition, an example sentence) joins this object when vocabulary pages
+ * are built.
+ */
+const vocabularyEntry = z.strictObject({ word: text })
+
 /** The fields that the nodes of one kind have, and no others. */
 const FIELDS_OF_ONE_KIND = {
   module: 'exam-part',
@@ -480,6 +489,7 @@ const FIELDS_OF_ONE_KIND = {
   practice: 'exam-part',
   purpose: 'phrases',
   examTasks: 'phrases',
+  words: 'vocabulary',
 } as const satisfies Record<string, NodeKind>
 
 const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${kind}`
@@ -571,6 +581,8 @@ export const nodeFileSchema = z
       .default(10),
     /** A published node must have one that matches its pool; the content pipeline checks it. */
     review: reviewRecord.optional(),
+    /** The words of a vocabulary node; no other kind has them. */
+    words: z.array(vocabularyEntry).min(1).optional(),
 
     /** Writing and speaking nodes only: the task. */
     task: task.optional(),
@@ -644,6 +656,16 @@ export const nodeFileSchema = z
           })
         }
       }
+    }
+    if (value.kind === 'vocabulary' && !value.id.startsWith('vocabulary-')) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['id'],
+        message: 'a vocabulary node id is "vocabulary-" plus the name of its theme, like "vocabulary-family"',
+      })
+    }
+    if (value.kind === 'vocabulary' && value.words === undefined) {
+      ctx.addIssue({ code: 'custom', path: ['words'], message: 'is missing: a vocabulary node lists its words' })
     }
 
     // A node explains what its kind explains, in every language, and nothing else.

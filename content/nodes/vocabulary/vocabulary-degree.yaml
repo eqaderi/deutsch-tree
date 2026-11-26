@@ -1,0 +1,38 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-degree
+kind: vocabulary
+level: B1
+chapter: b1-words-time-amounts
+order: 5
+status: coming-soon
+title:
+  en: "Quite, hardly, absolutely: words of degree"
+  fa: "نسبتاً، به‌سختی، کاملاً: واژه‌های شدت"
+  de: "Ziemlich, kaum, absolut: Gradwörter"
+words:
+  - word: absolut
+  - word: völlig
+  - word: komplett
+  - word: ziemlich
+  - word: relativ
+  - word: extrem
+  - word: wahnsinnig
+  - word: unglaublich
+  - word: kaum
+  - word: beinahe
+  - word: möglichst
+  - word: eher
+  - word: halt
+  - word: wohl
+  - word: bloß
+  - word: gar
+  - word: umso
+  - word: je
+  - word: jeweils
+  - word: meinetwegen
+  - word: sowieso
+  - word: überhaupt
+  - word: selbstverständlich
+  - word: eindeutig
+  - word: offenbar

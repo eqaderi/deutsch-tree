@@ -1,0 +1,40 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-telling-informing
+kind: vocabulary
+level: B1
+chapter: b1-words-thinking-talking
+order: 6
+status: coming-soon
+title:
+  en: "Telling and informing"
+  fa: "خبر دادن و آگاه کردن"
+  de: "Mitteilen und Informieren"
+words:
+  - word: mitteilen
+  - word: melden
+  - word: ankündigen
+  - word: bekannt geben
+  - word: Bescheid geben
+  - word: Bescheid sagen
+  - word: ansprechen
+  - word: besprechen
+  - word: erkundigen
+  - word: hinweisen
+  - word: ausrichten
+  - word: hinterlassen
+  - word: unterbrechen
+  - word: schweigen
+  - word: versprechen
+  - word: Rückmeldung
+  - word: Kommunikation
+  - word: Dialog
+  - word: Rede
+  - word: Ausdruck
+  - word: Erklärung
+  - word: Beschreibung
+  - word: duzen
+  - word: siezen
+  - word: winken
+  - word: Zeichen
+  - word: Symbol

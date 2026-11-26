@@ -1,0 +1,40 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-offices-documents
+kind: vocabulary
+level: B1
+chapter: b1-words-work-money
+order: 8
+status: coming-soon
+title:
+  en: "Offices and documents"
+  fa: "اداره‌ها و مدارک"
+  de: "Ämter und Dokumente"
+words:
+  - word: Amt
+  - word: Behörde
+  - word: Verwaltung
+  - word: Gemeinde
+  - word: Antrag
+  - word: beantragen
+  - word: genehmigen
+  - word: Frist
+  - word: Personalien
+  - word: Visum
+  - word: Konsulat
+  - word: Botschaft
+  - word: Asyl
+  - word: Aufenthalt
+  - word: Bestätigung
+  - word: ausstellen
+  - word: verlängern
+  - word: fällig
+  - word: erforderlich
+  - word: Vorschrift
+  - word: Pflicht
+  - word: verpflichtet
+  - word: offiziell
+  - word: Einschreiben
+  - word: Kennzeichen
+  - word: Anlage
+  - word: angeben

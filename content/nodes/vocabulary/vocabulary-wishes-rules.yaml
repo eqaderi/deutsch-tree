@@ -1,0 +1,32 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-wishes-rules
+kind: vocabulary
+level: A1
+chapter: a1-words-small-words
+order: 2
+status: coming-soon
+title:
+  en: "Can, must, may: wishes and rules"
+  fa: "توانستن، بایستن، اجازه داشتن: خواسته‌ها و قانون‌ها"
+  de: "Können, müssen, dürfen: Wünsche und Regeln"
+words:
+  - word: dürfen
+  - word: können
+  - word: müssen
+  - word: sollen
+  - word: wollen
+  - word: möchten
+  - word: mögen
+  - word: brauchen
+  - word: erlauben
+  - word: verboten
+  - word: Achtung
+  - word: Vorsicht
+  - word: gültig
+  - word: besetzt
+  - word: frei
+  - word: vielleicht
+  - word: leider
+  - word: gern
+  - word: lieber

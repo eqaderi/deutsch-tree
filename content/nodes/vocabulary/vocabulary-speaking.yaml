@@ -1,0 +1,40 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-speaking
+kind: vocabulary
+level: A1
+chapter: a1-words-daily-life
+order: 2
+status: coming-soon
+title:
+  en: "Speaking and understanding"
+  fa: "حرف زدن و فهمیدن"
+  de: "Sprechen und Verstehen"
+words:
+  - word: Sprache
+  - word: sprechen
+  - word: verstehen
+  - word: sagen
+  - word: fragen
+  - word: Frage
+  - word: antworten
+  - word: Antwort
+  - word: erzählen
+  - word: erklären
+  - word: wiederholen
+  - word: bedeuten
+  - word: Wort
+  - word: Satz
+  - word: Gespräch
+  - word: Aussage
+  - word: Beispiel
+  - word: zum Beispiel
+  - word: Text
+  - word: Thema
+  - word: hören
+  - word: Anrede
+  - word: laut
+  - word: leise
+  - word: langsam
+  - word: wissen
+  - word: glauben

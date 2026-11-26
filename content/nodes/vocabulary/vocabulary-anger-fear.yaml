@@ -1,0 +1,37 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-anger-fear
+kind: vocabulary
+level: B1
+chapter: b1-words-people-feelings
+order: 6
+status: coming-soon
+title:
+  en: "Anger, fear and worry"
+  fa: "خشم، ترس و نگرانی"
+  de: "Ärger, Angst und Sorgen"
+words:
+  - word: Ärger
+  - word: ärgerlich
+  - word: aufregen
+  - word: wütend
+  - word: Sorge
+  - word: sorgen
+  - word: fürchten
+  - word: ängstlich
+  - word: erschrecken
+  - word: Schreck
+  - word: Enttäuschung
+  - word: enttäuschen
+  - word: Langeweile
+  - word: langweilen
+  - word: Pech
+  - word: leiden
+  - word: klagen
+  - word: hassen
+  - word: Träne
+  - word: schreien
+  - word: peinlich
+  - word: unheimlich
+  - word: Nerv
+  - word: Druck

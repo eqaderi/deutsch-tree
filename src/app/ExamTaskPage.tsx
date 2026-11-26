@@ -56,6 +56,7 @@ function NodeScore({ nodeId }: { nodeId: string }) {
   const progress = useProgress()
   const scores = enteredScores(progress, nodeId)
   const latest = scores.at(-1)
+  const done = isDone(progress, nodeId)
   // What the last score entered on this visit did, so that the learner is told once.
   const [entered, setEntered] = useState<{ wasDone: boolean } | null>(null)
 
@@ -82,16 +83,22 @@ function NodeScore({ nodeId }: { nodeId: string }) {
             <span className="big-number">{strings.number(latest)}</span>{' '}
             <span className="secondary">{strings.ofTotal(MAXIMUM_SCORE)}</span>
           </p>
+          {/*
+            What the last score did, told against the node's state now: the learner may have
+            un-marked the node since, and then it is not done, whatever the score did.
+          */}
           <div className="message" role="status">
-            {entered && scorePasses(latest) && <p>{entered.wasDone ? strings.topicStaysDone : strings.topicNowDone}</p>}
-            {entered && !scorePasses(latest) && entered.wasDone && <p>{strings.topicStaysDone}</p>}
-            {entered && !scorePasses(latest) && !entered.wasDone && (
+            {entered && done && (
+              <p>{entered.wasDone || !scorePasses(latest) ? strings.topicStaysDone : strings.topicNowDone}</p>
+            )}
+            {entered && !done && !entered.wasDone && !scorePasses(latest) ? (
               <>
                 <p>{needed}</p>
                 <p>{strings.scoreRetry}</p>
               </>
+            ) : (
+              !done && <p>{needed}</p>
             )}
-            {!entered && !isDone(progress, nodeId) && <p>{needed}</p>}
           </div>
         </>
       )}

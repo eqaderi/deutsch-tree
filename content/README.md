@@ -51,6 +51,61 @@ A `coming-soon` node needs nothing more. It appears in the tree, marked
 "Coming soon". It may already hold the sections below as a draft: they are
 checked, but not shown.
 
+## A vocabulary node
+
+A vocabulary node is one theme of about 25 words. Until vocabulary pages are
+built it is always `coming-soon`:
+
+```yaml
+id: vocabulary-family    # "vocabulary-" plus an English name of the theme; never the level
+kind: vocabulary
+level: A1
+chapter: a1-words-people
+order: 3
+status: coming-soon
+title: { en: Family, fa: خانواده, de: Familie }
+words:                   # in the order to learn them
+  - word: Mutter         # the headword, exactly as the scope list spells it
+  - word: Vater
+```
+
+An entry holds only `word` so far. The scope list has the word's class, level,
+article and plural marker. Meanings, a definition and an example sentence join
+the entry when vocabulary pages are built.
+
+A node holds words of its own level only (a test of the real content says so).
+After changing a vocabulary node or a vocabulary chapter, run
+`pnpm vocabulary:approval`: it rewrites the lists in
+`docs/approvals/vocabulary-themes.md`, and `pnpm check` fails while they are out
+of date.
+
+## The vocabulary scope list
+
+`content/vocabulary/` holds three files:
+
+| File | What it is | Written by |
+|---|---|---|
+| `scope-list.tsv` | Every word in scope, one per line: `word`, `class`, `level`, `article`, `plural`, `reflexive`, `feminine`, `regional`. The vocabulary nodes must hold each word exactly once. | `pnpm vocabulary:scope` |
+| `left-out.tsv` | Every headword of the word lists that is not in scope, with the reason and the word it is noted on. | `pnpm vocabulary:scope` |
+| `scope-corrections.yaml` | What the extracted lists got wrong or do not print: word classes, missing articles, two spellings of one word. | by hand |
+
+The words come from the Goethe A1, A2 and B1 word lists. **Only headwords may
+be here**: a word, its article, plural marker, word class and level. Never a
+sentence, a definition or a translation from a word list, and never the lists
+themselves; they stay outside the repository.
+
+What counts as "in scope" is one setting, `SCOPE_RULE` in
+`src/vocabulary-scope/index.ts`. To change the scope:
+
+1. Change `SCOPE_RULE`, or add a correction to `scope-corrections.yaml`.
+2. Run `pnpm vocabulary:scope --lists <folder>`, where the folder holds the
+   extracted `union-headwords.tsv` and `b1-headwords.tsv`.
+3. Run `pnpm content:check`. It names every word that is now in no node, and
+   every word of a node that is no longer in scope. Move those words in the
+   node files.
+4. Run `pnpm vocabulary:approval`, and update the numbers in
+   `tests/real-content/vocabulary-themes.test.ts`.
+
 ## A phrases node and an exam-part node
 
 These two kinds have a few lines more, also while they are `coming-soon`.
@@ -512,6 +567,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - Two node files with the same id, and two questions with the same id inside
   one node. Two practice tasks of one node with the same id, and two texts or
   two items with the same id inside one task.
+- A word of the scope list that is in no vocabulary node or in two, and a word
+  of a node that the scope list does not have. A vocabulary node without
+  words, and words in a node of another kind.
 - A published node with no review record, or whose questions, answers or
   task texts changed after its review. A `coming-soon` node needs none, and
   neither does a writing or speaking node.

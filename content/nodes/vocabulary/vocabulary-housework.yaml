@@ -1,0 +1,40 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-housework
+kind: vocabulary
+level: A2
+chapter: a2-words-home-food
+order: 2
+status: coming-soon
+title:
+  en: "Housework and things"
+  fa: "کارهای خانه و وسایل"
+  de: "Hausarbeit und Dinge"
+words:
+  - word: Haushalt
+  - word: Müll
+  - word: aufräumen
+  - word: putzen
+  - word: Wäsche
+  - word: Handtuch
+  - word: Seife
+  - word: sauber
+  - word: schmutzig
+  - word: Reinigung
+  - word: Schere
+  - word: Ding
+  - word: Sache
+  - word: leer
+  - word: voll
+  - word: nass
+  - word: trocken
+  - word: wecken
+  - word: ausruhen
+  - word: packen
+  - word: einpacken
+  - word: auspacken
+  - word: Mittel
+  - word: setzen
+  - word: ziehen
+  - word: rund
+  - word: wach

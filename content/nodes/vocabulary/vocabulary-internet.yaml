@@ -1,0 +1,36 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-internet
+kind: vocabulary
+level: B1
+chapter: b1-words-media-free-time
+order: 2
+status: coming-soon
+title:
+  en: "The internet and messages"
+  fa: "اینترنت و پیام‌ها"
+  de: "Internet und Nachrichten"
+words:
+  - word: Netz
+  - word: Netzwerk
+  - word: Plattform
+  - word: Forum
+  - word: Chat
+  - word: User
+  - word: Daten
+  - word: Klick
+  - word: klicken
+  - word: googeln
+  - word: bloggen
+  - word: twittern
+  - word: mailen
+  - word: hochladen
+  - word: löschen
+  - word: tippen
+  - word: virtuell
+  - word: digital
+  - word: checken
+  - word: Mobilbox
+  - word: Rufnummer
+  - word: faxen
+  - word: Briefumschlag

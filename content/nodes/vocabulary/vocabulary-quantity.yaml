@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-quantity
+kind: vocabulary
+level: B1
+chapter: b1-words-time-amounts
+order: 6
+status: coming-soon
+title:
+  en: "How much? About, at most, in total"
+  fa: "چقدر؟ حدوداً، حداکثر، در مجموع"
+  de: "Wie viel? Ungefähr, höchstens, insgesamt"
+words:
+  - word: etwa
+  - word: ungefähr
+  - word: höchstens
+  - word: zumindest
+  - word: maximal
+  - word: minimal
+  - word: knapp
+  - word: gering
+  - word: zahlreich
+  - word: mehrere
+  - word: sämtliche
+  - word: einzig
+  - word: gesamt
+  - word: insgesamt
+  - word: übrig
+  - word: Anzahl
+  - word: Hälfte
+  - word: Drittel
+  - word: so viel
+  - word: zusätzlich
+  - word: extra
+  - word: einschließlich
+  - word: ausschließlich
+  - word: plus
+  - word: minus
+  - word: per

@@ -1,0 +1,35 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-directions
+kind: vocabulary
+level: A1
+chapter: a1-words-town-travel
+order: 2
+status: coming-soon
+title:
+  en: "Left, right, here, there"
+  fa: "چپ، راست، اینجا، آنجا"
+  de: "Links, rechts, hier, dort"
+words:
+  - word: links
+  - word: rechts
+  - word: geradeaus
+  - word: hier
+  - word: dort
+  - word: da
+  - word: oben
+  - word: unten
+  - word: hinten
+  - word: daneben
+  - word: draußen
+  - word: weit
+  - word: zurück
+  - word: weiter
+  - word: weg
+  - word: Ecke
+  - word: Mitte
+  - word: suchen
+  - word: finden
+  - word: gehen
+  - word: laufen
+  - word: bleiben

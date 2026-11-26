@@ -1,0 +1,38 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-shopping
+kind: vocabulary
+level: A1
+chapter: a1-words-food-home
+order: 5
+status: coming-soon
+title:
+  en: "Shopping and money"
+  fa: "خرید و پول"
+  de: "Einkaufen und Geld"
+words:
+  - word: einkaufen
+  - word: kaufen
+  - word: verkaufen
+  - word: Verkäufer
+  - word: Kunde
+  - word: Geschäft
+  - word: Laden
+  - word: Kasse
+  - word: Preis
+  - word: kosten
+  - word: bezahlen
+  - word: zahlen
+  - word: Geld
+  - word: Euro
+  - word: Cent
+  - word: billig
+  - word: teuer
+  - word: günstig
+  - word: Angebot
+  - word: Rechnung
+  - word: bar
+  - word: Kreditkarte
+  - word: Konto
+  - word: überweisen
+  - word: Prospekt
