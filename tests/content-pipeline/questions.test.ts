@@ -1,4 +1,5 @@
 import { expect, test } from 'vitest'
+import type { ContentBundle, GrammarContent } from '../../src/content-model/index.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { changeNode, changeReviewedNode, fixtureContent, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
@@ -17,6 +18,12 @@ function withQuestion(question: Record<string, unknown>): Promise<string> {
   })
 }
 
+/** The page of the fixture's published grammar node. */
+function grammarContent(bundle: ContentBundle | null): GrammarContent | undefined {
+  const content = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content
+  return content?.kind === 'grammar' ? content : undefined
+}
+
 /** What the report says about the question "extra": where the problem is and the message. */
 async function problemsOfExtra(contentDir: string) {
   const { report, bundle } = await compileContent(contentDir)
@@ -30,7 +37,7 @@ async function problemsOfExtra(contentDir: string) {
 async function compiledExtra(contentDir: string) {
   const { report, bundle } = await compileContent(contentDir)
   expect(report.errors).toEqual([])
-  return bundle?.nodes.find((node) => node.id === 'grammar-001')?.content?.questions.find((q) => q.id === 'extra')
+  return grammarContent(bundle)?.questions.find((q) => q.id === 'extra')
 }
 
 // ---------- true/false ----------
@@ -148,8 +155,7 @@ test('a node says how many questions an attempt draws, and 10 is the default', a
   const byDefault = await compileContent(fixtureContent)
   const chosen = await compileContent(await withAttemptSize(15))
 
-  const attemptSize = (result: typeof byDefault) =>
-    result.bundle?.nodes.find((node) => node.id === 'grammar-001')?.content?.attemptSize
+  const attemptSize = (result: typeof byDefault) => grammarContent(result.bundle)?.attemptSize
   expect(attemptSize(byDefault)).toBe(10)
   expect(attemptSize(chosen)).toBe(15)
 })

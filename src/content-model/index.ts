@@ -21,6 +21,29 @@ export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
 
 /**
+ * The four modules of the Goethe B1 exam, under the names that node ids use
+ * ("exam-hoeren-2"), with the exam's own name and its number of parts.
+ */
+export const EXAM_MODULES = {
+  lesen: { name: 'Lesen', parts: 5 },
+  hoeren: { name: 'Hören', parts: 4 },
+  schreiben: { name: 'Schreiben', parts: 3 },
+  sprechen: { name: 'Sprechen', parts: 3 },
+} as const
+export type ExamModule = keyof typeof EXAM_MODULES
+
+/** One part of the exam: Lesen, Teil 1 is { module: 'lesen', part: 1 }. */
+export interface ExamPart {
+  module: ExamModule
+  part: number
+}
+
+/** The id of the node of an exam part: "exam-lesen-1". */
+export function examPartNodeId({ module, part }: ExamPart): string {
+  return `exam-${module}-${part}`
+}
+
+/**
  * The fewest questions a published node's pool may hold. An attempt draws 10
  * to 15, so a smaller pool could not give a fresh set on a retry. The spec
  * asks for about 15 to 20 for a small topic and up to 40 for a large one.
@@ -47,14 +70,33 @@ const nodeId = z
   .string()
   .regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "grammar-001"')
 
+/**
+ * What a node explains in one language. Which of these a node must have
+ * follows from its kind (`EXPLANATIONS_OF` below); the node schema checks it.
+ * German inside any of them goes in *asterisks*.
+ */
 const explanationIn = (language: Language) =>
   z.strictObject(
     {
-      /** The rule in two or three sentences. German inside it goes in *asterisks*. */
-      rule: text,
+      /** A grammar node: the rule in two or three sentences. */
+      rule: text.optional(),
+      /** An exam-part node: what the part asks the candidate to do. */
+      task: text.optional(),
+      /** An exam-part node: how the part is scored. */
+      scoring: text.optional(),
+      /** An exam-part node: how to approach the part, as steps in order. */
+      approach: z.array(text).min(1).optional(),
     },
     missingIn(language),
   )
+
+const EXAM_PART_EXPLANATIONS = ['task', 'scoring', 'approach'] as const
+const EXPLANATIONS = ['rule', ...EXAM_PART_EXPLANATIONS] as const
+
+/** The explanations that a node of this kind writes in every language. */
+function explanationsOf(kind: NodeKind): readonly (typeof EXPLANATIONS)[number][] {
+  return kind === 'exam-part' ? EXAM_PART_EXPLANATIONS : ['rule']
+}
 
 const table = z
   .strictObject({
@@ -159,6 +201,97 @@ const trueFalseQuestion = z.strictObject({
 /** Later question types join this union under their own `type`, each with its answer rule. */
 const question = z.discriminatedUnion('type', [multipleChoiceQuestion, gapFillQuestion, trueFalseQuestion])
 
+// ---------------------------------------------------------------------------
+// Exam tasks: a part of the exam as a candidate meets it
+// ---------------------------------------------------------------------------
+
+const partId = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "t1"')
+
+/** A German text that a task's items are about: an e-mail, a blog entry, an advertisement. */
+const taskText = z.strictObject({
+  /** Stable inside the task. */
+  id: partId,
+  /** A heading or subject line, where the text has one. */
+  title: text.optional(),
+  /** The text itself. A blank line starts a new paragraph; a line break inside a paragraph is kept. */
+  body: text,
+})
+
+/**
+ * "Richtig" or "Falsch": the prompt is a statement about the text of the
+ * task, and the text decides. (Not `true-false`, which asks whether a
+ * sentence is correct German.)
+ */
+const richtigFalschItem = z.strictObject({
+  ...questionBase,
+  type: z.literal('richtig-falsch'),
+  /** true when the statement is right according to the text (Richtig), false when it is not (Falsch). */
+  answer: z.boolean(oneAnswer('richtig-falsch', 'must be true (Richtig) or false (Falsch)')),
+})
+
+/**
+ * One item of a task. An item is a question whose answer lies in the task's
+ * texts, so it has what every question has: id, prompt, answer, explanation.
+ * The item format of another exam part joins this union under its own `type`.
+ */
+const taskItem = z.discriminatedUnion('type', [richtigFalschItem])
+
+/**
+ * One task in the format of one exam part: its texts, and its items in the
+ * order the candidate answers them. It is always taken whole and scored per
+ * item. A practice task of an exam-part node has this shape, and so does a
+ * part of a mock exam.
+ */
+export const examTaskSchema = z.strictObject({
+  /** Stable inside the node (or the exam) that holds the task. */
+  id: partId,
+  texts: z.array(taskText).min(1),
+  items: z.array(taskItem).min(1),
+})
+
+export type ExamTaskFile = z.infer<typeof examTaskSchema>
+
+/**
+ * The format of the task of each exam part, by the id of the part's node:
+ * how many texts it has and how many items. A part that is not listed here
+ * has no task format yet, so its node cannot be published. Source: the
+ * candidate sheets of the official model set (the solved example "0" that
+ * some parts begin with is not an item).
+ *
+ * Every item is "richtig-falsch" so far. With the item type of a second
+ * part, a format also names the type of its items.
+ */
+export const EXAM_TASK_FORMATS: Readonly<Record<string, ExamTaskFormat>> = {
+  'exam-lesen-1': { texts: 1, items: 6 },
+}
+
+export interface ExamTaskFormat {
+  texts: number
+  items: number
+}
+
+/** The task format of an exam part, or undefined while it is not built. */
+export function examTaskFormat(part: ExamPart): ExamTaskFormat | undefined {
+  return EXAM_TASK_FORMATS[examPartNodeId(part)]
+}
+
+/** Which part of the exam an exam-part node is about. */
+const examPart = z
+  .strictObject({
+    module: z.enum(Object.keys(EXAM_MODULES) as [ExamModule, ...ExamModule[]]),
+    part: z.number().int('must be a whole number').min(1),
+  })
+  .superRefine((value, ctx) => {
+    const { name, parts } = EXAM_MODULES[value.module]
+    if (value.part > parts) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['part'],
+        message: `${name} has parts 1 to ${parts}, not a part ${value.part}`,
+      })
+    }
+  })
+
 /**
  * Proof that an independent reviewer answered the pool without seeing the
  * answer key, and that every disagreement was resolved. Written by
@@ -172,8 +305,11 @@ const reviewRecord = z.strictObject({
   pool: text,
 })
 
-/** The content sections that a published node must have. */
+/** The content sections that a published grammar node must have. */
 const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
+
+/** The content sections that a published exam-part node must have. */
+const EXAM_PART_SECTIONS = ['explanations', 'practice'] as const
 
 export const nodeFileSchema = z
   .strictObject({
@@ -192,6 +328,8 @@ export const nodeFileSchema = z
     /** Ids of the nodes this one builds on. Advisory; never locks a node. */
     prerequisites: z.array(nodeId).default([]),
     title: localised,
+    /** Only in an exam-part node, and always there: the part of the exam it is about. */
+    exam: examPart.optional(),
 
     explanations: z
       .strictObject({ en: explanationIn('en'), fa: explanationIn('fa'), de: explanationIn('de') })
@@ -200,6 +338,11 @@ export const nodeFileSchema = z
     examples: z.array(example).min(1).optional(),
     mistakes: z.array(mistake).min(1).optional(),
     questions: z.array(question).min(1).optional(),
+    /**
+     * Only in an exam-part node: its practice tasks, each in the format of
+     * the node's exam part. An attempt takes one of them, whole.
+     */
+    practice: z.array(examTaskSchema).min(1).optional(),
     /** How many questions of the pool one attempt draws. */
     attemptSize: z
       .number()
@@ -218,13 +361,69 @@ export const nodeFileSchema = z
         message: 'a grammar node id is "grammar-" plus its three-digit number in the grammar list, like "grammar-001"',
       })
     }
+    if (value.kind !== 'exam-part') {
+      if (value.exam !== undefined) {
+        ctx.addIssue({ code: 'custom', path: ['exam'], message: 'belongs to an exam-part node only' })
+      }
+    } else if (value.exam === undefined) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['exam'],
+        message: 'is missing: an exam-part node names its module and part, like { module: lesen, part: 1 }',
+      })
+    } else if (value.id !== examPartNodeId(value.exam)) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['id'],
+        message: `the id of this exam-part node must be "${examPartNodeId(value.exam)}": "exam-", its module, its part`,
+      })
+    }
+    if (value.kind !== 'exam-part' && value.practice !== undefined) {
+      ctx.addIssue({ code: 'custom', path: ['practice'], message: 'belongs to an exam-part node only' })
+    }
+
+    // A node explains what its kind explains, in every language, and nothing else.
+    const wanted = explanationsOf(value.kind)
+    for (const language of value.explanations ? LANGUAGES : []) {
+      for (const name of EXPLANATIONS) {
+        const written = value.explanations?.[language][name] !== undefined
+        if (written === wanted.includes(name)) continue
+        ctx.addIssue({
+          code: 'custom',
+          path: ['explanations', language, name],
+          message: written
+            ? value.kind === 'exam-part'
+              ? 'belongs to a grammar node; an exam-part node explains task, scoring and approach'
+              : `belongs to an exam-part node; a ${value.kind} node explains its rule`
+            : `is missing; this text is needed in ${language}`,
+        })
+      }
+    }
+
     if (value.status !== 'published') return
-    if (value.kind !== 'grammar') {
+    if (value.kind !== 'grammar' && value.kind !== 'exam-part') {
       ctx.addIssue({
         code: 'custom',
         path: ['status'],
-        message: `a ${value.kind} node cannot be published yet; only grammar nodes have a page`,
+        message: `a ${value.kind} node cannot be published yet; only grammar nodes and exam parts have a page`,
       })
+      return
+    }
+    if (value.kind === 'exam-part') {
+      // Without `exam` the node is already rejected above.
+      if (value.exam !== undefined && examTaskFormat(value.exam) === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['status'],
+          message: `${EXAM_MODULES[value.exam.module].name}, Teil ${value.exam.part} cannot be published yet: the format of its practice task is not built`,
+        })
+        return
+      }
+      for (const section of EXAM_PART_SECTIONS) {
+        if (value[section] === undefined) {
+          ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
+        }
+      }
       return
     }
     for (const section of CONTENT_SECTIONS) {
@@ -286,6 +485,8 @@ export interface NodeSummary {
   prerequisites: string[]
   /** German inside a title is marked, like in every other text for the learner. */
   title: Localised<RichText>
+  /** Only an exam-part node has it: the part of the exam it is about. */
+  exam?: ExamPart
 }
 
 /** A chapter as the tree shows it: a stop on the line of its level. */
@@ -343,9 +544,59 @@ export interface TrueFalseQuestion extends QuestionBase {
   answer: boolean
 }
 
-export type Question = MultipleChoiceQuestion | GapFillQuestion | TrueFalseQuestion
+/** An item of an exam task: the prompt is a statement about the task's text; `answer` says whether the text makes it right. */
+export interface RichtigFalschQuestion extends QuestionBase {
+  type: 'richtig-falsch'
+  answer: boolean
+}
+
+/**
+ * Every question the app can ask, check and show: those of a node's pool and
+ * the items of an exam task.
+ */
+export type Question = MultipleChoiceQuestion | GapFillQuestion | TrueFalseQuestion | RichtigFalschQuestion
+
+/** A question that is an item of an exam task: its answer lies in the task's texts. */
+export type TaskItem = RichtigFalschQuestion
+
+export interface TaskText {
+  /** Stable inside the task. */
+  id: string
+  /** German: a heading or subject line. */
+  title?: string
+  /** German. A line break inside a paragraph is part of the text (a greeting, a signature). */
+  paragraphs: string[]
+}
+
+/**
+ * One task in the format of one exam part: texts to read, and items in the
+ * order they are answered. It is taken whole and scored per item with the
+ * learning engine's `scoreAttempt(task.items, answers)`.
+ */
+export interface ExamTask {
+  /** Stable inside the node or exam that holds the task. */
+  id: string
+  texts: TaskText[]
+  items: TaskItem[]
+}
+
+/** The page of an exam-part node. */
+export interface ExamPartContent {
+  kind: 'exam-part'
+  explanations: Localised<{
+    /** What the part asks the candidate to do. */
+    task: RichText
+    /** How the part is scored. */
+    scoring: RichText
+    /** How to approach the part: steps, in order. */
+    approach: RichText[]
+  }>
+  /** The practice tasks. An attempt takes one of them. */
+  practice: ExamTask[]
+}
 
 export interface GrammarContent {
+  kind: 'grammar'
   explanations: Localised<{ rule: RichText }>
   table: GrammarTable
   examples: Example[]
@@ -358,7 +609,8 @@ export interface GrammarContent {
 
 /** A node as the app loads it. `content` is null until the node is published. */
 export interface CompiledNode extends NodeSummary {
-  content: GrammarContent | null
+  /** `content.kind` says which page it is. */
+  content: GrammarContent | ExamPartContent | null
 }
 
 /** Chapters and nodes, both in curriculum order: chapter by chapter, and inside a chapter by `order`. */

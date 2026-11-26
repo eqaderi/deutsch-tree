@@ -18,6 +18,43 @@ export const nodeIdsAreUnique: ContentCheck = ({ nodes }) => {
   return problems
 }
 
+/**
+ * No two practice tasks of one node share an id, and inside one task no two
+ * texts and no two items. Two tasks may both have an item "i1": an item is
+ * always named with its task ("t1/i1").
+ */
+export const practiceIdsAreUnique: ContentCheck = ({ nodes }) => {
+  const problems: ContentProblem[] = []
+  for (const checked of nodes) {
+    /** Reports every id in `list` that an earlier entry already has. */
+    const unique = (list: ReadonlyArray<{ id: string }>, place: string, what: string, task?: string) => {
+      const firstPlace = new Map<string, number>()
+      for (const [index, { id }] of list.entries()) {
+        const first = firstPlace.get(id)
+        if (first === undefined) {
+          firstPlace.set(id, index)
+          continue
+        }
+        problems.push(
+          problemIn(checked, {
+            ...(task === undefined ? {} : { question: `${task}/${id}` }),
+            where: `${place}[${index}].id`,
+            message: `duplicated ${what} id: "${id}" is also the id of ${place}[${first}]`,
+          }),
+        )
+      }
+    }
+
+    const tasks = checked.node.practice ?? []
+    for (const [index, task] of tasks.entries()) {
+      unique(task.texts, `practice[${index}].texts`, 'text')
+      unique(task.items, `practice[${index}].items`, 'item', task.id)
+    }
+    unique(tasks, 'practice', 'task')
+  }
+  return problems
+}
+
 /** No two questions of one node share an id. */
 export const questionIdsAreUnique: ContentCheck = ({ nodes }) => {
   const problems: ContentProblem[] = []

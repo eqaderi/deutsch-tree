@@ -14,9 +14,13 @@ import {
   type CompiledNode,
   type ContentBundle,
   chaptersFileSchema,
+  type ExamPartContent,
+  type ExamTask,
+  type ExamTaskFile,
   GAP,
   type GrammarContent,
   LANGUAGES,
+  type Language,
   type Localised,
   type NodeFile,
   type NodeSummary,
@@ -104,7 +108,7 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
     ok: errors.length === 0,
     errors,
     nodes: { total: nodes.length, published, comingSoon: nodes.length - published },
-    questions: nodes.reduce((sum, node) => sum + (node.content?.questions.length ?? 0), 0),
+    questions: nodes.reduce((sum, node) => sum + questionCount(node.content), 0),
   }
 
   return {
@@ -210,11 +214,32 @@ function nodeOf(file: string, raw?: unknown): string {
   return typeof id === 'string' && id !== '' ? id : path.basename(file, '.yaml')
 }
 
-/** The question that a place such as `questions[1].answer` lies in, if it states an id. */
+/**
+ * The question that a place such as `questions[1].answer` lies in, if it
+ * states an id. An item of a practice task (`practice[0].items[4].answer`) is
+ * named with its task: "t1/i5".
+ */
 function questionAt(pathParts: PropertyKey[], raw: unknown): { question?: string } {
-  if (pathParts[0] !== 'questions' || typeof pathParts[1] !== 'number') return {}
-  const id = (raw as { questions?: Array<{ id?: unknown } | null> }).questions?.[pathParts[1]]?.id
-  return typeof id === 'string' && id !== '' ? { question: id } : {}
+  type Identified = { id?: unknown } | null
+  const named = (...ids: unknown[]) =>
+    ids.every((id) => typeof id === 'string' && id !== '') ? { question: ids.join('/') } : {}
+
+  const [section, first, inner, second] = pathParts
+  if (section === 'questions' && typeof first === 'number') {
+    return named((raw as { questions?: Identified[] }).questions?.[first]?.id)
+  }
+  if (section === 'practice' && typeof first === 'number' && inner === 'items' && typeof second === 'number') {
+    const task = (raw as { practice?: Array<{ id?: unknown; items?: Identified[] } | null> }).practice?.[first]
+    return named(task?.id, task?.items?.[second]?.id)
+  }
+  return {}
+}
+
+/** How many questions a published node asks: its pool, or the items of its practice tasks. */
+function questionCount(content: CompiledNode['content']): number {
+  if (content === null) return 0
+  if (content.kind === 'grammar') return content.questions.length
+  return content.practice.reduce((sum, task) => sum + task.items.length, 0)
 }
 
 function compileNode(file: NodeFile): CompiledNode {
@@ -228,20 +253,52 @@ function compileNode(file: NodeFile): CompiledNode {
     recogniseOnly: file.recogniseOnly,
     prerequisites: file.prerequisites,
     title: richTextIn(file.title),
+    ...(file.exam ? { exam: file.exam } : {}),
   }
   // Drafts inside a "coming soon" file are checked but never shipped.
-  return { ...summary, content: file.status === 'published' ? compileGrammarContent(file) : null }
+  if (file.status !== 'published') return { ...summary, content: null }
+  return { ...summary, content: file.kind === 'exam-part' ? compileExamPartContent(file) : compileGrammarContent(file) }
+}
+
+function compileExamPartContent(file: NodeFile): ExamPartContent {
+  // The schema guarantees these sections, and every explanation, for a published exam-part node.
+  const { explanations, practice } = file as Required<NodeFile>
+  const explain = (language: Language) => ({
+    task: richText(explanations[language].task ?? ''),
+    scoring: richText(explanations[language].scoring ?? ''),
+    approach: (explanations[language].approach ?? []).map(richText),
+  })
+  return {
+    kind: 'exam-part',
+    explanations: { en: explain('en'), fa: explain('fa'), de: explain('de') },
+    practice: practice.map(compileExamTask),
+  }
+}
+
+/** A task as the app shows it. Used for a node's practice tasks; a mock exam's parts have the same shape. */
+export function compileExamTask(task: ExamTaskFile): ExamTask {
+  return {
+    id: task.id,
+    texts: task.texts.map(({ id, title, body }) => ({
+      id,
+      ...(title === undefined ? {} : { title }),
+      paragraphs: body
+        .split(/\n[ \t]*\n/)
+        .map((paragraph) => paragraph.trim())
+        .filter((paragraph) => paragraph !== ''),
+    })),
+    items: task.items.map((item) => ({ ...item, explanation: richTextIn(item.explanation) })),
+  }
 }
 
 function compileGrammarContent(file: NodeFile): GrammarContent {
   // The schema guarantees these sections for a published node.
   const { explanations, table, examples, mistakes, questions } = file as Required<NodeFile>
+  // The schema guarantees the rule in every language.
+  const rule = (language: Language) => ({ rule: richText(explanations[language].rule ?? '') })
   return {
-    explanations: {
-      en: { rule: richText(explanations.en.rule) },
-      fa: { rule: richText(explanations.fa.rule) },
-      de: { rule: richText(explanations.de.rule) },
-    },
+    kind: 'grammar',
+    explanations: { en: rule('en'), fa: rule('fa'), de: rule('de') },
     table,
     examples,
     mistakes: mistakes.map((mistake) => ({ ...mistake, why: richTextIn(mistake.why) })),

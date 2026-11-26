@@ -14,3 +14,11 @@
     en: Fixture topics with *sein*
     fa: موضوع‌های آزمایشی با *sein*
     de: Test-Themen mit *sein*
+
+- id: fixture-exam-lesen
+  level: B1
+  kind: exam-part
+  title:
+    en: "Fixture exam: reading"
+    fa: "امتحان آزمایشی: خواندن"
+    de: "Test-Prüfung: Lesen"

@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parse, stringify } from 'yaml'
-import { poolFingerprint } from '../../src/content-pipeline/review.ts'
+import { reviewFingerprint } from '../../src/content-pipeline/review.ts'
 
 /** The small, valid content folder that tests start from. */
 export const fixtureContent = fileURLToPath(new URL('../fixtures/content', import.meta.url))
@@ -11,6 +11,8 @@ export const fixtureContent = fileURLToPath(new URL('../fixtures/content', impor
 /** The fixture's published node and its "coming soon" node. */
 export const PUBLISHED = 'nodes/grammar/grammar-001.yaml'
 export const COMING_SOON = 'nodes/grammar/grammar-002.yaml'
+/** The fixture's published exam-part node: Lesen, Teil 1, with two practice tasks. */
+export const EXAM_PART = 'nodes/exam/exam-lesen-1.yaml'
 
 /**
  * A temporary copy of the fixture content with some files rewritten or added.
@@ -62,14 +64,14 @@ export function comingSoonNode(id: string, fields: Record<string, unknown> = {})
 }
 
 /**
- * `changeNode` for a change to the questions of a published node, in a test
+ * `changeNode` for a change to the questions or practice tasks of a published node, in a test
  * that is not about the review: the review record is brought up to date, as
  * a new review would do. Without it the test also gets "needs a new review".
  */
 export function changeReviewedNode(change: (node: LooseNode) => void): (text: string) => string {
   return changeNode((node) => {
     change(node)
-    node.review.pool = poolFingerprint(node.questions)
+    node.review.pool = reviewFingerprint(node)
   })
 }
 

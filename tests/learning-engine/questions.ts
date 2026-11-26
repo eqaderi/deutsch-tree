@@ -2,6 +2,7 @@ import type {
   GapFillQuestion,
   MultipleChoiceQuestion,
   Question,
+  RichtigFalschQuestion,
   TrueFalseQuestion,
 } from '../../src/content-model/index.ts'
 
@@ -25,6 +26,11 @@ export function gapFill(id: string, answer: string, others: string[]): GapFillQu
 
 export function trueFalse(id: string, answer: boolean): TrueFalseQuestion {
   return { id, type: 'true-false', prompt: `Sentence of ${id}`, answer, explanation }
+}
+
+/** An item of an exam task: a statement that the task's text makes right (`answer: true`) or not. */
+export function richtigFalsch(id: string, answer: boolean): RichtigFalschQuestion {
+  return { id, type: 'richtig-falsch', prompt: `Statement of ${id}`, answer, explanation }
 }
 
 /** `count` multiple choice questions, q1 to q<count>, each with the right answer "right". */

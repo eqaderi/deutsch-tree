@@ -1,0 +1,173 @@
+# Fixture exam-part node for tests. Invented, short, and stable: tests assert on these words.
+# A real Lesen text is far longer; these are long enough to answer six statements from.
+id: exam-lesen-1
+kind: exam-part
+exam:
+  module: lesen
+  part: 1
+level: B1
+chapter: fixture-exam-lesen
+order: 1
+status: published
+title:
+  en: "Fixture reading, part 1"
+  fa: "خواندن آزمایشی، بخش ۱"
+  de: "Test-Lesen, Teil 1"
+
+explanations:
+  en:
+    task: >
+      You read one fixture text and decide whether six statements about it
+      are right. The answer sheet says *Richtig* or *Falsch*.
+    scoring: Each right answer is one fixture point.
+    approach:
+      - Read the six statements first.
+      - Then look for each statement in the text.
+  fa:
+    task: >
+      یک متن آزمایشی می‌خوانید و دربارهٔ شش جمله تصمیم می‌گیرید که درست است یا
+      نه. در پاسخ‌نامه *Richtig* یا *Falsch* می‌آید.
+    scoring: هر پاسخ درست یک امتیاز آزمایشی است.
+    approach:
+      - اول شش جمله را بخوانید.
+      - بعد هر جمله را در متن پیدا کنید.
+  de:
+    task: >
+      Du liest einen Test-Text. Dann entscheidest du bei sechs Sätzen:
+      *Richtig* oder *Falsch*?
+    scoring: Jede richtige Antwort ist ein Test-Punkt.
+    approach:
+      - Lies zuerst die sechs Sätze.
+      - Such dann jeden Satz im Text.
+
+practice:
+  - id: t1
+    texts:
+      - id: a
+        title: Neu in Bonn
+        body: |
+          Hallo Mia,
+
+          ich wohne seit Mai in Bonn. Die Wohnung ist klein, aber hell. Ich fahre jeden Tag mit dem Rad zur Arbeit, denn der Bus ist teuer.
+
+          Am Samstag kommt mein Bruder zu Besuch. Wir wollen zusammen kochen. Komm doch auch!
+
+          Viele Grüße
+          Tom
+    items:
+      - id: i1
+        type: richtig-falsch
+        prompt: Tom wohnt seit Mai in Bonn.
+        answer: true
+        explanation:
+          en: He writes *ich wohne seit Mai in Bonn*.
+          fa: او می‌نویسد *ich wohne seit Mai in Bonn*.
+          de: Er schreibt *ich wohne seit Mai in Bonn*.
+      - id: i2
+        type: richtig-falsch
+        prompt: Toms Wohnung ist groß.
+        answer: false
+        explanation:
+          en: The flat is *klein, aber hell*.
+          fa: خانه *klein, aber hell* است.
+          de: Die Wohnung ist *klein, aber hell*.
+      - id: i3
+        type: richtig-falsch
+        prompt: Tom fährt mit dem Bus zur Arbeit.
+        answer: false
+        explanation:
+          en: He goes *mit dem Rad*.
+          fa: او *mit dem Rad* می‌رود.
+          de: Er fährt *mit dem Rad*.
+      - id: i4
+        type: richtig-falsch
+        prompt: Tom findet den Bus teuer.
+        answer: true
+        explanation:
+          en: He writes *der Bus ist teuer*.
+          fa: او می‌نویسد *der Bus ist teuer*.
+          de: Er schreibt *der Bus ist teuer*.
+      - id: i5
+        type: richtig-falsch
+        prompt: Am Samstag besucht Toms Schwester ihn.
+        answer: false
+        explanation:
+          en: "It is his brother who comes: *mein Bruder*."
+          fa: "برادرش می‌آید: *mein Bruder*."
+          de: "Es kommt sein Bruder: *mein Bruder*."
+      - id: i6
+        type: richtig-falsch
+        prompt: Tom lädt Mia ein.
+        answer: true
+        explanation:
+          en: "*Komm doch auch!* is an invitation."
+          fa: "*Komm doch auch!* یک دعوت است."
+          de: "*Komm doch auch!* ist eine Einladung."
+
+  - id: t2
+    texts:
+      - id: a
+        title: Mein Deutschkurs
+        body: |
+          Liebe Frau Weber,
+
+          mein Deutschkurs beginnt am Montag um neun Uhr. Er dauert drei Monate und kostet nichts.
+
+          Am ersten Tag kann ich leider erst um zehn Uhr kommen, weil ich einen Termin beim Arzt habe. Die Bücher habe ich schon gekauft.
+
+          Mit freundlichen Grüßen
+          Ali Karimi
+    items:
+      - id: i1
+        type: richtig-falsch
+        prompt: Der Kurs beginnt am Montag.
+        answer: true
+        explanation:
+          en: The text says *beginnt am Montag*.
+          fa: در متن آمده است *beginnt am Montag*.
+          de: Im Text steht *beginnt am Montag*.
+      - id: i2
+        type: richtig-falsch
+        prompt: Der Kurs dauert drei Wochen.
+        answer: false
+        explanation:
+          en: It lasts *drei Monate*.
+          fa: دوره *drei Monate* طول می‌کشد.
+          de: Er dauert *drei Monate*.
+      - id: i3
+        type: richtig-falsch
+        prompt: Ali muss für den Kurs nichts bezahlen.
+        answer: true
+        explanation:
+          en: The course *kostet nichts*.
+          fa: دوره *kostet nichts*.
+          de: Der Kurs *kostet nichts*.
+      - id: i4
+        type: richtig-falsch
+        prompt: Ali kommt am ersten Tag um neun Uhr.
+        answer: false
+        explanation:
+          en: He can only come *um zehn Uhr*.
+          fa: او فقط *um zehn Uhr* می‌تواند بیاید.
+          de: Er kann erst *um zehn Uhr* kommen.
+      - id: i5
+        type: richtig-falsch
+        prompt: Ali hat am ersten Tag einen Termin beim Arzt.
+        answer: true
+        explanation:
+          en: He writes *weil ich einen Termin beim Arzt habe*.
+          fa: او می‌نویسد *weil ich einen Termin beim Arzt habe*.
+          de: Er schreibt *weil ich einen Termin beim Arzt habe*.
+      - id: i6
+        type: richtig-falsch
+        prompt: Ali muss die Bücher noch kaufen.
+        answer: false
+        explanation:
+          en: "He has them already: *schon gekauft*."
+          fa: "او آن‌ها را دارد: *schon gekauft*."
+          de: "Er hat sie schon: *schon gekauft*."
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-01-01
+  pool: 6d3987b2d631bd0b

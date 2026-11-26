@@ -23,7 +23,24 @@ export function drawAttempt<T>(pool: readonly T[], size: number, random: Random)
   return drawn
 }
 
-/** A node test is passed at 90%: the smallest whole number of questions that is at least 90% of the attempt. */
+/**
+ * The practice task of the next attempt at an exam part. A task is always
+ * taken whole, so an attempt is one task and not a draw of items. After a
+ * task, the next attempt takes another one, so that a retry is not the text
+ * the learner has just seen with its answers; a part with a single task gives
+ * that task again. `last` is the task of the attempt before, if there was one.
+ */
+export function nextTask<T>(tasks: readonly T[], last: T | undefined, random: Random): T | undefined {
+  const others = tasks.filter((task) => task !== last)
+  return drawAttempt(others.length > 0 ? others : tasks, 1, random)[0]
+}
+
+/**
+ * A node test is passed at 90%: the smallest whole number of questions that
+ * is at least 90% of the attempt. The same rule holds for a practice task of
+ * an exam part, counted over the items of the task, so a task of up to nine
+ * items is passed only with every item right.
+ */
 export function passMark(attemptSize: number): number {
   // Whole numbers only: 0.9 * 30 is a hair above 27 in floating point and would round up to 28.
   return Math.ceil((attemptSize * 9) / 10)
@@ -31,7 +48,8 @@ export function passMark(attemptSize: number): number {
 
 /**
  * What a learner gave for one question: the chosen option for multiple choice
- * and gap fill, true or false for a true/false question. A question type with
+ * and gap fill, true or false for a true/false question and for a
+ * Richtig/Falsch item of an exam task. A question type with
  * another kind of answer adds it here and gets a case in `checkAnswer`.
  */
 export type Answer = string | boolean
@@ -46,6 +64,7 @@ export function checkAnswer(question: Question, answer: Answer | undefined): Ans
     case 'multiple-choice':
     case 'gap-fill':
     case 'true-false':
+    case 'richtig-falsch':
       return { correct: answer === question.answer }
   }
 }
@@ -65,6 +84,10 @@ export interface AttemptResult {
 /**
  * Scores an attempt. `answers` runs parallel to `questions`: the answer to
  * the third question is the third answer. A missing answer is a wrong one.
+ *
+ * An exam task is scored with this too: `scoreAttempt(task.items, answers)`
+ * gives the result per item. A mock exam adds up `correct` over its parts and
+ * leaves `passMark` and `passed`, which are the rule of a node, aside.
  */
 export function scoreAttempt(questions: readonly Question[], answers: readonly (Answer | undefined)[]): AttemptResult {
   const checked = questions.map((question, index) => {
