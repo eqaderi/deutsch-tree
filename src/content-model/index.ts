@@ -609,7 +609,8 @@ const whoSaysItem = z.strictObject({
  * One item of a task. An item is a question whose answer lies in the task's
  * texts, so it has what every question has: id, prompt, answer, explanation.
  * A `multiple-choice` item is the a, b, c of the exam: its options are shown
- * in the order written. The item format of another exam part joins this
+ * in an order drawn for each attempt (`asAsked` in the learning engine), as
+ * in a node's test. The item format of another exam part joins this
  * union under its own `type`.
  */
 const taskItem = z.discriminatedUnion('type', [
@@ -1527,7 +1528,7 @@ export interface MatchingQuestion extends QuestionBase {
   type: 'matching'
   /** The items that each get a partner, in the order the author wrote them. */
   left: string[]
-  /** The partners to choose from, mixed. No two are the same. */
+  /** The partners to choose from, mixed, and drawn anew for each attempt (`asAsked`). No two are the same. */
   right: string[]
   /** The partner of each item of `left`, in the same order. */
   answer: string[]

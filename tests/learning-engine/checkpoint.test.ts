@@ -129,3 +129,20 @@ test('the checkpoint follows the randomness it is given, names its nodes in curr
   expect([...checkpoint.nodeIds].sort()).toEqual(Object.keys(shares(checkpoint.questions)).sort())
   expect(nodes).toEqual(before)
 })
+
+test('a checkpoint asks each question as an attempt asks it: the options in an order drawn for this checkpoint', () => {
+  const sources = [
+    { nodeId: 'n1', questions: [multipleChoice('n1-q1', 'wohnen', ['wohne', 'wohnst', 'wohnt'])] },
+    { nodeId: 'n2', questions: [multipleChoice('n2-q1', 'gehen', ['gehe', 'gehst', 'geht'])] },
+  ]
+  const random = seededRandom(9)
+
+  const places = new Set(
+    Array.from({ length: 30 }, () => {
+      const asked = drawCheckpoint(sources, random).questions.find(({ nodeId }) => nodeId === 'n1')?.question
+      return asked?.type === 'multiple-choice' ? asked.options.indexOf('wohnen') : -1
+    }),
+  )
+
+  expect([...places].sort()).toEqual([0, 1, 2, 3])
+})

@@ -193,3 +193,42 @@ test('a test fits the screen it is taken on, in English and in Persian', async (
   const wrongInGerman = page.getByRole('list', { name: 'Falsche Antworten' }).getByRole('listitem')
   await expect(wrongInGerman.first()).toContainText(asShown(first.explanation.de))
 })
+
+test('each attempt shows the options in an order of its own, kept while it runs, also across a change of language', async ({
+  page,
+}) => {
+  await page.goto('./#/node/grammar-001/test')
+  const optionsShown = () => page.getByRole('radiogroup').locator('label').allInnerTexts()
+
+  // The orders each question was shown in, by question id: one order per attempt.
+  const seen = new Map<string, Set<string>>()
+  let languageSwitched = false
+  for (let attempt = 1; attempt <= 20; attempt += 1) {
+    for (let place = 1; place <= ATTEMPT_SIZE; place += 1) {
+      await expect(page.getByText(`Question ${place} of ${ATTEMPT_SIZE}`)).toBeVisible()
+      const question = await questionOnScreen(page)
+      if (question.type === 'multiple-choice' || question.type === 'gap-fill') {
+        const order = await optionsShown()
+        expect([...order].sort()).toEqual([...question.options].sort())
+        if (!languageSwitched) {
+          // The German options stand in the same order on a Persian page, and again on the English one.
+          await page.getByRole('button', { name: 'فارسی' }).click()
+          await expect(page.getByText(PERSIAN.questionOf(place, ATTEMPT_SIZE))).toBeVisible()
+          expect(await optionsShown()).toEqual(order)
+          await page.getByRole('button', { name: 'English' }).click()
+          await expect(page.getByText(`Question ${place} of ${ATTEMPT_SIZE}`)).toBeVisible()
+          expect(await optionsShown()).toEqual(order)
+          languageSwitched = true
+        }
+        const orders = seen.get(question.id) ?? new Set()
+        orders.add(order.join(' | '))
+        seen.set(question.id, orders)
+        if (orders.size > 1) return
+      }
+      await giveAnswer(page, question, 'right')
+      await page.getByRole('button', { name: place < ATTEMPT_SIZE ? 'Next' : 'Check answers' }).click()
+    }
+    await page.getByRole('button', { name: 'Try again' }).click()
+  }
+  throw new Error('no question came up in two attempts in different orders')
+})

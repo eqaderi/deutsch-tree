@@ -34,6 +34,7 @@ import {
   mockModuleResult,
   recordMockExamResult,
   scoreAttempt,
+  taskAsAsked,
   timeLeft,
 } from '../learning-engine/index.ts'
 import { GradingSteps, ScoreEntry, TaskSheetView } from './AssistantGrading.tsx'
@@ -283,10 +284,16 @@ function ModuleResult({ result, timeUp, details, onAgain }: ModuleResultProps) {
  * Lesen or Hören: the parts one at a time, chosen from a row of parts, each
  * with its texts (or recordings) and items, numbered across the module as
  * the exam numbers them. Every part stays on the page while it is hidden,
- * so its answers and the plays of its recordings are kept.
+ * so its answers and the plays of its recordings are kept. Each run asks
+ * the tasks as an attempt asks them, so the options stand in an order of
+ * their own.
  */
-function ItemModuleRun({ exam, module, timeUp, onFinish }: ModuleRunProps<ItemTaskModule>) {
+function ItemModuleRun({ exam, module: written, timeUp, onFinish }: ModuleRunProps<ItemTaskModule>) {
   const { strings } = useLanguage()
+  const [module] = useState(() => ({
+    ...written,
+    parts: written.parts.map((part) => ({ ...part, task: taskAsAsked(part.task, Math.random) })),
+  }))
   const { place, show, top } = usePartPlace()
   const [answers, setAnswers] = useState<Array<Array<Answer | undefined>>>(() => module.parts.map(() => []))
   const firstNumbers = module.parts.map((_, index) =>

@@ -10,6 +10,7 @@ import {
   isDone,
   nextTask,
   scoreAttempt,
+  taskAsAsked,
 } from '../learning-engine/index.ts'
 import { plainText } from './German.tsx'
 import { ItemResults, TaskItems, TaskTexts } from './ItemTaskView.tsx'
@@ -26,6 +27,9 @@ interface PracticeTestProps {
 interface Attempt {
   /** 1 for the first attempt of this visit, 2 for the first retry, and so on. */
   number: number
+  /** The task as the node holds it, so that a retry takes another one. */
+  drawn: ItemTask
+  /** The same task as this attempt asks it. */
   task: ItemTask
   /** Set when the answers have been checked. */
   finished?: { result: AttemptResult; wasDone: boolean }
@@ -41,8 +45,8 @@ export function PracticeTest({ node, tasks }: PracticeTestProps) {
   const { language, strings } = useLanguage()
   const progress = useProgress()
   const start = (number: number, last?: ItemTask): Attempt | undefined => {
-    const task = nextTask(tasks, last, Math.random)
-    return task && { number, task }
+    const drawn = nextTask(tasks, last, Math.random)
+    return drawn && { number, drawn, task: taskAsAsked(drawn, Math.random) }
   }
   const [attempt, setAttempt] = useState(() => start(1))
   if (!attempt) return <NotFound />
@@ -64,7 +68,7 @@ export function PracticeTest({ node, tasks }: PracticeTestProps) {
           task={attempt.task}
           result={attempt.finished.result}
           wasDone={attempt.finished.wasDone}
-          onRetry={() => setAttempt(start(attempt.number + 1, attempt.task))}
+          onRetry={() => setAttempt(start(attempt.number + 1, attempt.drawn))}
         />
       ) : (
         <TaskRun

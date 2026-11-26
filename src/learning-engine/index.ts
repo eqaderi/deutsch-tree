@@ -5,6 +5,7 @@
  */
 import {
   asLearned,
+  type ItemTask,
   type Localised,
   type NodeStatus,
   type NodeSummary,
@@ -39,9 +40,14 @@ export function drawAttempt<T>(pool: readonly T[], size: number, random: Random)
  * once, and takes the directions in turn: as many questions from German as
  * into German, or one more of either. Only a pool with fewer words than
  * `size` asks a word both ways. A pool without such questions is drawn as
- * `drawAttempt` draws it.
+ * `drawAttempt` draws it. Each question comes as `asAsked` asks it.
  */
 export function drawQuestions(pool: readonly Question[], size: number, random: Random): Question[] {
+  return chooseQuestions(pool, size, random).map((question) => asAsked(question, random))
+}
+
+/** Which questions of the pool an attempt asks, in which order: the draw of `drawQuestions`. */
+function chooseQuestions(pool: readonly Question[], size: number, random: Random): Question[] {
   const about = new Map<string, Question[]>()
   for (const question of pool) {
     const subject = 'word' in question ? `word ${question.word}` : `question ${about.size}`
@@ -71,6 +77,45 @@ export function drawQuestions(pool: readonly Question[], size: number, random: R
 export function nextTask<T>(tasks: readonly T[], last: T | undefined, random: Random): T | undefined {
   const others = tasks.filter((task) => task !== last)
   return drawAttempt(others.length > 0 ? others : tasks, 1, random)[0]
+}
+
+/**
+ * A question as one attempt asks it: what the learner chooses from comes in
+ * an order drawn for this attempt, so that a learner cannot remember where
+ * the right answer stood. The options of a multiple choice, gap fill or
+ * vocabulary question are drawn in any order; the partners of a matching
+ * question in any order but that of the answer, so that it never arrives
+ * solved. Answers name an option or partner, not its place, so the order
+ * changes nothing in what is right. Other questions are asked as written:
+ * yes or no, Richtig or Falsch, and the texts or speakers of an exam task
+ * stand as on the exam's answer sheet.
+ */
+export function asAsked<Q extends Question>(question: Q, random: Random): Q {
+  const q: Question = question
+  switch (q.type) {
+    case 'multiple-choice':
+    case 'gap-fill':
+      return { ...question, options: inDrawnOrder(q.options, random) }
+    case 'meaning-of-word':
+      return { ...question, options: inDrawnOrder(q.options, random) }
+    case 'matching': {
+      const right = inDrawnOrder(q.right, random)
+      // Moved on by one, an order of different partners is another order.
+      return { ...question, right: sameList(q.answer, right) ? [...right.slice(1), ...right.slice(0, 1)] : right }
+    }
+    default:
+      return question
+  }
+}
+
+/** A task as one attempt asks it: its texts and its items as written, each item as `asAsked` asks it. */
+export function taskAsAsked(task: ItemTask, random: Random): ItemTask {
+  return { ...task, items: task.items.map((item) => asAsked(item, random)) }
+}
+
+/** All of `items`, in an order drawn by `random`. */
+function inDrawnOrder<T>(items: readonly T[], random: Random): T[] {
+  return drawAttempt(items, items.length, random)
 }
 
 /**
@@ -867,6 +912,7 @@ export interface Checkpoint {
  *   - up to 6 nodes: 5 questions of each (1 node: 5 questions, 2 nodes: 10);
  *   - 7 to 29 nodes: 30 questions, every node in, no node more than one ahead of another;
  *   - 30 nodes or more: 30 nodes drawn at random, each with the same chance, one question of each.
+ * Each question is asked as `asAsked` asks it, as in a test (`drawQuestions`).
  */
 export function drawCheckpoint(sources: readonly CheckpointSource[], random: Random): Checkpoint {
   const hands = sources.map(({ nodeId, questions }) => ({

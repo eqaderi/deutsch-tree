@@ -620,6 +620,12 @@ pieces or the items, and it mixes what the learner sees.
   twice, so only one matching is right. Write the pairs in the order the
   items should be shown; the partners are mixed.
 
+The options of a multiple choice or gap fill question, and the partners of
+a matching question, are shown in an order drawn anew for every attempt,
+never in the order of the file, so a learner cannot remember where the right
+answer stood. Write the options in any order. (Yes or no, Richtig or Falsch,
+and the texts or speakers of an exam item keep their order.)
+
 ### How many questions an attempt draws
 
 Each attempt at the test draws 10 questions from the pool at random. A node
@@ -712,7 +718,7 @@ practice:                # one task or more; each attempt takes one of them, who
 
   ```yaml
   - id: i1
-    type: multiple-choice          # a, b, c: exactly three options, shown in the order written
+    type: multiple-choice          # a, b, c: exactly three options, shown in an order drawn per attempt
     prompt: Die Bibliothek ist …
     options: [nur am Wochenende offen., jeden Tag offen., am Abend geschlossen.]
     answer: jeden Tag offen.       # the text of the one right option

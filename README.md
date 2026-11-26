@@ -131,6 +131,17 @@ GitHub Pages and from a local folder.
   `checkAnswer`, `scoreAttempt`, `applyAttempt`, `isDone`, and for a
   checkpoint `drawCheckpoint` and `scoreCheckpoint`. Components call these
   and hold no rule of their own.
+- Each attempt shows what the learner chooses from in an order of its own:
+  `asAsked(question, random)` draws the options of a multiple choice, gap
+  fill or `meaning-of-word` question, and the partners of a matching
+  question (never in the order of the answer). `drawQuestions`, and so
+  `drawCheckpoint`, give their questions as asked; a practice task or a
+  part of a mock exam is asked through `taskAsAsked(task, random)` when it
+  starts. The order is kept in the attempt's state, so it stays while the
+  attempt runs and across a change of language. An answer names an option,
+  never its place, so scoring, the review sheets and the saved progress do
+  not depend on it. A new question type with something to choose from gets
+  a case in `asAsked`.
 - A level's checkpoint is at `#/checkpoint/<level>`
   (`src/app/CheckpointPage.tsx`); the tree ends each level's line with it. It
   asks through the same `AttemptRun` as a node's test, so a new question type
@@ -245,7 +256,8 @@ GitHub Pages and from a local folder.
   learning engine says when the test may move on. A type that shows its
   material mixed gets the order from `src/content-pipeline/mix.ts`: `mixed`
   for the reviewer's sheet (it must not lean on the answer), `mixedAwayFrom`
-  for the learner. A larger view gets its own file beside `QuestionView.tsx`
+  for the compiled question. Matching partners are drawn again for each
+  attempt (`asAsked`, above). A larger view gets its own file beside `QuestionView.tsx`
   (`WordOrder.tsx`, `FindError.tsx`, `Matching.tsx`).
 
 ## The tree: where the learner stands
