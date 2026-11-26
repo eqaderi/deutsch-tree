@@ -24,6 +24,7 @@ machine `pnpm exec playwright install chromium` for the browser tests.
 | `pnpm vocabulary:scope --lists <folder>` | Writes the vocabulary scope list from the extracted word lists, which are not in the repository. `pnpm vocabulary:approval` then rewrites the lists in `docs/approvals/vocabulary-themes.md`. See [content/README.md](content/README.md), "The vocabulary scope list". |
 | `pnpm audio:generate --voices <folder>` | Says every German example and word of the published nodes with Piper and stores it as `content/audio/<key>.mp3`. Says only what is new or changed. Needs Piper and ffmpeg on this computer; nothing else does. See "Audio" below. |
 | `pnpm pack:build` | Builds a private pack from a book the learner owns. Options and format: [docs/private-packs.md](docs/private-packs.md). |
+| `pnpm share` | Builds the site and writes the folder that runs the app at home, with the packs and the start files (default `share/`, `--out <folder>`). See [Running the app at home](#running-the-app-at-home). |
 | `pnpm dev` | Dev server on the real content. Content files reload on save. |
 | `pnpm build` | Compiles the content and builds the site into `dist/`. Fails on any content error. |
 
@@ -64,6 +65,8 @@ ending, because the pipeline runs directly in Node.
 | `src/pack-builder/` | A learner's own exam book in, a private pack out. `cli.ts` is the command; `vite-plugin.ts` keeps packs out of the site build. The pack format's schema is `src/content-model/pack.ts`. |
 | `tests/pack-builder/` | Seam 4: build a pack from a synthetic book (`fixture.ts`) and assert on the pack. |
 | `src/pack-loader/` | Finds the private packs in the browser (`private/packs.json`, then each `pack.json`) and hands them to the private exam view (`#/packs`, `src/app/PacksPage.tsx` and `PackExamPage.tsx`). How detection works and what a start file must serve: [docs/private-packs.md](docs/private-packs.md), "Finding packs in the app". |
+| `src/start-files/` | The folder that runs the app at home: `index.ts` copies the built site and the packs and adds the templates in `folder/` (the two start files, their servers in `folder/server/`, the learner's instructions in English and Persian). `cli.ts` is `pnpm share`. |
+| `tests/start-files/` | The two servers run on a temporary folder (`server.ts` starts them as the start files do), and the folder that `pnpm share` writes. The browser journey `tests/browser/start-files.spec.ts` runs the app from that folder with the Mac start file. |
 
 The app never reads node files. It fetches files that the pipeline writes at
 build time, each only on the page that shows it:
@@ -454,6 +457,56 @@ The rules are in the learning engine, like every rule. The tree
   reader Cori Samuel). It is `voiceCredit` in the strings, at the foot of
   every page.
 
+## Running the app at home
+
+The public site has everything except the private packs. To use a pack, the app runs on the
+learner's computer from a folder that `pnpm share` writes (default `share/`, ignored by version
+control because it holds the packs):
+
+| In the folder | What it is |
+|---|---|
+| `Start on Mac.command` | Double-click on a Mac. Runs `server/serve.pl` with `/usr/bin/perl`, which ships with macOS. |
+| `Start on Windows.bat` | Double-click on Windows 10 or 11. Runs `server/serve.ps1` with Windows PowerShell 5.1, which ships with Windows, without administrator rights. |
+| `instructions-en.html`, `instructions-fa.html` | The learner's instructions: starting, first-time prompts, the phone, progress, passing the folder on. |
+| `app/` | The built site, with the packs in `app/private/`. A pack copied there by hand is found at the next start. |
+
+The decision for a local server, and the trial of the candidate servers, are on issue #4. Both
+servers use only what the system ships with, call it by its full path, take the first free port
+from 8000 to 8009 and listen on every network interface. When they start they rewrite
+`app/private/packs.json` and `app/private/address.json` (see [docs/private-packs.md](docs/private-packs.md),
+"Finding packs in the app"), print the address for this computer and for a phone, and open the
+browser. They answer GET and HEAD with single byte ranges, and nothing outside `app/`. Both
+servers are tested on Mac and Linux (`tests/start-files/`); the PowerShell one runs there under
+PowerShell 7 when `pwsh` is installed, as on GitHub's runners, and is skipped otherwise.
+
+Things to know:
+
+- Progress is kept by the browser for each address. `localhost:8000`, the phone's
+  `192.168.x.x:8000` and the public site each have their own; the backup page moves it. If port
+  8000 is taken, the app runs on 8001 and starts with no progress there.
+- A start file that arrives by download or AirDrop is blocked once by macOS ("Open Anyway" in
+  Privacy & Security) or by Windows SmartScreen ("More info", "Run anyway"). A Mac keeps the
+  start file executable only when the folder travels as a zip.
+- The first time, Windows Defender Firewall asks about "Windows PowerShell"; allowing it needs an
+  administrator and is what lets a phone in. The macOS firewall, when it is on, asks the same about
+  Perl.
+
+**Manual check (once, on the household computers).** Nobody has double-clicked the start files
+yet; the tests start them from a shell. Run `pnpm share`, zip the `share` folder, and copy it to
+each computer the way it will travel (AirDrop, download or USB stick). Then:
+
+1. Unzip it and double-click the start file. Write down every prompt (Gatekeeper, SmartScreen,
+   firewall, folder access) and whether the browser opened the app.
+2. Open "Your exam books" from the footer: the pack is listed, and the panel "On a phone or tablet"
+   shows an address.
+3. On a phone on the same Wi-Fi, type that address. The tree opens. Open the pack's Hören part:
+   the recording plays, and on an iPhone the slider can be dragged.
+4. Copy a pack folder into `app/private`, close the window, start again: the pack is listed.
+5. Close the window: the app stops (the page no longer reloads).
+
+If a step fails on one system, the fallback in issue #4 (a build opened from the file system)
+still stands; record what happened on issue #32.
+
 ## Deploying
 
 `.github/workflows/pages.yml` runs `pnpm check` on every pull request and
@@ -462,6 +515,6 @@ to "GitHub Actions" once in the repository settings.
 
 ## Not in version control
 
-`research/` and `private/` are ignored on purpose and must never be committed.
+`research/`, `private/` and `share/` are ignored on purpose and must never be committed.
 `private/` holds private packs; `pnpm build` fails rather than put anything from
-it into the site. See [docs/private-packs.md](docs/private-packs.md).
+it into the site. `share/` is the folder `pnpm share` writes, with copies of the packs. See [docs/private-packs.md](docs/private-packs.md).

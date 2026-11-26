@@ -4,7 +4,7 @@ A pack is a folder of practice exams from a book the learner owns. It lives in
 `private/<pack id>/` inside the project and is never published.
 
 - [Pack format](#pack-format): what the folder contains. Read this to load a pack in the app.
-- [Finding packs in the app](#finding-packs-in-the-app): how the app detects packs, and what a start file must provide.
+- [Finding packs in the app](#finding-packs-in-the-app): how the app detects packs, and what the start files provide.
 - [Building a pack](#building-a-pack): the command that makes one from a book's files.
 - [Book profile](#book-profile): what to tell the command about a book that is laid out differently.
 - [When a real book does not build](#when-a-real-book-does-not-build)
@@ -179,8 +179,18 @@ with another profile has other modules, parts and choices.
 The ids of the packs in the folder, in name order: every subfolder whose name is a pack id and that
 holds a `pack.json`. A browser cannot list a folder, so this file is how the app finds the packs
 (`packListSchema`). Nobody writes it by hand: the builder rewrites it after every build
-(`writePackList` in `src/pack-builder/pack-list.ts`), and the dev server answers it from the folder
-as it is.
+(`writePackList` in `src/pack-builder/pack-list.ts`), the dev server answers it from the folder
+as it is, and a start file's server rewrites it with the same rules when it starts.
+
+### address.json
+
+```json
+{ "format": 1, "phone": "http://192.168.1.23:8000/" }
+```
+
+The address a phone or tablet on the same Wi-Fi opens, or `null` when the computer is on no network
+(`localAddressSchema`). Only a start file's server writes it, when it starts. The page "Your exam
+books" shows the address when the file is there.
 
 ### What the format leaves to the app
 
@@ -220,20 +230,20 @@ answer key when a module is opened. There is nothing to configure:
 | Where the app runs | What answers `private/packs.json` |
 |---|---|
 | `pnpm dev` | `packsOnTheDevServer` (`src/pack-builder/vite-plugin.ts`), from the project's `private/` as it is now. |
-| A folder served by a start file | The file itself, which `pnpm pack:build` wrote. |
+| The folder of the start files | The file itself, which the start file's server rewrote when it started. |
 | The public site | Nothing: a 404. The app finds no pack and explains where to put one. |
 
 Anything that is not a readable list (a 404, an HTML page, another `format`) counts as no pack.
 A listed pack whose `pack.json` cannot be read is shown by its folder name as unreadable.
 
-**What a start file (#32) must provide.** Serve one folder over HTTP that holds the built site
+**What the start files provide.** `pnpm share` writes a folder whose `app/` holds the built site
 (`dist/`: `index.html`, `assets/`, `content/`, `pdfjs/`) and, beside `index.html`, the `private/`
-folder with the packs and their `packs.json`. Pages, recordings and JSON files are requested with
-plain GET requests, relative to the page, so the folder may sit under any path and a phone on the
-same network uses it the same way. A start file should rewrite `private/packs.json` when it starts,
-from the subfolders that hold a `pack.json`, so that a pack copied in by hand is found too.
-Recordings play best from a server that answers partial requests (`Range`), which iPhones need to
-seek.
+folder with the packs. A start file serves `app/` over HTTP to this computer and to the home
+network. When it starts, its server rewrites `private/packs.json` from the subfolders that hold a
+`pack.json`, so a pack copied in by hand is found, and writes `private/address.json`. It answers
+partial requests (`Range`), which iPhones need to play and seek recordings. Pages, recordings and
+JSON files are requested with plain GET requests, relative to the page, so a phone uses the app the
+same way. How the folder is made and started: [README.md](../README.md), "Running the app at home".
 
 The views: `#/packs` (`src/app/PacksPage.tsx`) lists the packs, or explains where to put one;
 `#/packs/<pack>/<exam>/<module>?part=<n>` (`src/app/PackExamPage.tsx`) shows the part's pages

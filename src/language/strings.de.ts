@@ -311,9 +311,14 @@ export const de: Strings = {
   noPackTitle: 'Kein Prüfungsbuch gefunden',
   noPackSteps: [
     'Ein Buch mit Übungsprüfungen kannst du als privates Paket dazunehmen. Du machst das Paket einmal aus den Dateien vom Buch, mit dem Befehl pnpm pack:build.',
-    'Leg den Ordner vom Paket in den Ordner „private“ im Ordner deutsch-tree auf deinem Computer. Starte die App aus diesem Ordner mit ihrer Startdatei. Dann öffne diese Seite noch einmal.',
+    'Leg den Ordner vom Paket in den Ordner „private“. Im Ordner mit den Startdateien ist er im Ordner „app“. Starte die App mit ihrer Startdatei. Dann öffne diese Seite noch einmal.',
     'Pakete sind nie auf der öffentlichen Website. Nur die App auf deinem eigenen Computer findet sie. So bleibt das Buch bei dir.',
   ],
+  phoneTitle: 'Auf dem Handy oder Tablet',
+  phoneIntro:
+    'Verbinde es mit demselben WLAN wie diesen Computer. Öffne dann diese Adresse im Browser. Die App muss hier weiterlaufen.',
+  phoneProgress:
+    'Das Handy hat seinen eigenen Fortschritt. Mit „Fortschritt sichern“ bringst du ihn von einem Gerät zum anderen.',
   packUnreadable: (folder) =>
     `Das Paket im Ordner „${folder}“ kann man nicht lesen. Mach es noch einmal mit pnpm pack:build.`,
   examCount: (count) => (count === 1 ? '1 Prüfung' : `${count} Prüfungen`),

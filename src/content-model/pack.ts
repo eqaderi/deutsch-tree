@@ -129,8 +129,8 @@ export const packAnswerKeySchema = z.strictObject({
  * private/packs.json: the ids of the packs in the folder, in name order.
  * A browser cannot list a folder, so this is how the app finds the packs.
  * The pack builder rewrites it after every build, from the subfolders that
- * hold a pack.json; the dev server answers it from the folder as it is; a
- * start file may rewrite it the same way when it starts the app.
+ * hold a pack.json; the dev server answers it from the folder as it is; the
+ * start files' servers (src/start-files/) rewrite it the same way when they start.
  */
 export const packListSchema = z.strictObject({
   format: z.literal(PACK_FORMAT),
@@ -148,3 +148,20 @@ export type PackDescription = z.infer<typeof packDescriptionSchema>
 export type PackAnswer = z.infer<typeof packAnswer>
 export type PackAnswerRepair = z.infer<typeof packAnswerRepair>
 export type PackAnswerKey = z.infer<typeof packAnswerKeySchema>
+
+/** In the packs folder too: the address a phone opens, written by a start file's server when it starts. */
+export const LOCAL_ADDRESS_FILE = 'address.json'
+
+/**
+ * private/address.json: the address that a phone or tablet on the same network
+ * opens to reach the app on this computer, or null when the computer is on no
+ * network. Only a start file writes it (src/start-files/folder/server/), so the
+ * dev server and the public site have none.
+ */
+export const localAddressSchema = z.strictObject({
+  format: z.literal(PACK_FORMAT),
+  phone: z
+    .string()
+    .regex(/^http:\/\/[^/]+\/$/)
+    .nullable(),
+})
