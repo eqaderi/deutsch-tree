@@ -8,7 +8,7 @@ kind: exam-part
 level: B1
 chapter: b1-exam-hoeren
 order: 3
-status: coming-soon
+status: published
 module: hoeren
 part: 3
 title:
@@ -292,3 +292,8 @@ practice:
           en: "She runs *meistens morgens vor der Arbeit*: mostly in the morning, before work."
           fa: "او *meistens morgens vor der Arbeit* می‌دود: بیشتر صبح‌ها، پیش از کار."
           de: "Sie läuft *meistens morgens vor der Arbeit*."
+
+review:
+  reviewer: An independent AI agent (Claude Opus 5.5, blind)
+  date: 2026-11-26
+  pool: 6ef1a3bb6a362af2
