@@ -54,10 +54,13 @@ export const fa: Strings = {
     'multiple-choice': 'پاسخ درست را انتخاب کنید.',
     'gap-fill': 'واژه‌ای را انتخاب کنید که در جای خالی درست است.',
     'true-false': 'آیا این جمله آلمانیِ درستی است؟',
+    'typed-answer': 'پاسخ را تایپ کنید.',
+    'typed-gap-fill': 'واژه‌ای را تایپ کنید که در جای خالی درست است.',
   },
   gap: 'جای خالی',
   sentenceCorrect: 'درست',
   sentenceNotCorrect: 'نادرست',
+  germanLetters: 'حروف آلمانی',
   next: 'بعدی',
   checkAnswers: 'بررسی پاسخ‌ها',
   reportProblem: 'گزارش مشکل',
@@ -122,4 +125,19 @@ export const fa: Strings = {
   checkpointChangesNothing: 'آزمون مرور فقط نشان می‌دهد کجا هستید. موضوع‌های شما همان‌طور که بودند می‌مانند.',
   topicsToRevisit: 'موضوع‌هایی برای مرور دوباره',
   wrongOfAsked: (wrong, asked) => `${digits.format(wrong)} نادرست از ${digits.format(asked)}`,
+
+  acceptedWithNote: 'پذیرفته‌شده با یادداشت',
+  exactSpelling: 'املای دقیق',
+  answerNotes: {
+    'umlaut-substitute': `پذیرفته شد. املای دقیق با ${german('ä')}، ${german('ö')}، ${german('ü')} یا ${german('ß')} است.`,
+    capitalisation: 'پذیرفته شد. به حروف بزرگ و کوچک دقت کنید.',
+  },
+}
+
+/**
+ * A German letter inside a Persian string, kept apart from the Persian around
+ * it by the Unicode marks U+2066 … U+2069, since a string cannot hold a <span>.
+ */
+function german(text: string): string {
+  return `\u2066${text}\u2069`
 }

@@ -51,10 +51,13 @@ export const de: Strings = {
     'multiple-choice': 'Wähle die richtige Antwort.',
     'gap-fill': 'Welches Wort passt in die Lücke?',
     'true-false': 'Ist dieser Satz richtiges Deutsch?',
+    'typed-answer': 'Schreib die Antwort.',
+    'typed-gap-fill': 'Schreib das Wort für die Lücke.',
   },
   gap: 'Lücke',
   sentenceCorrect: 'Richtig',
   sentenceNotCorrect: 'Falsch',
+  germanLetters: 'Deutsche Buchstaben',
   next: 'Weiter',
   checkAnswers: 'Antworten prüfen',
   reportProblem: 'Problem melden',
@@ -120,4 +123,11 @@ export const de: Strings = {
   checkpointChangesNothing: 'Ein Zwischentest zeigt nur, wo du stehst. Deine Themen bleiben, wie sie sind.',
   topicsToRevisit: 'Noch einmal ansehen',
   wrongOfAsked: (wrong, asked) => `${wrong} von ${asked} falsch`,
+
+  acceptedWithNote: 'Richtig, mit Hinweis',
+  exactSpelling: 'Genau so schreibt man es',
+  answerNotes: {
+    'umlaut-substitute': 'Das ist richtig. Genau schreibt man es mit ä, ö, ü oder ß.',
+    capitalisation: 'Das ist richtig. Achte auf große und kleine Buchstaben.',
+  },
 }

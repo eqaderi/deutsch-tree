@@ -15,12 +15,22 @@ export interface FixtureQuestion {
   /** The fixture node the question belongs to. */
   node: string
   id: string
-  type: 'multiple-choice' | 'gap-fill' | 'true-false'
+  type: 'multiple-choice' | 'gap-fill' | 'true-false' | 'typed-answer' | 'typed-gap-fill'
   prompt: string
   options?: string[]
-  answer: string | boolean
+  /** The key of a question that is answered by choosing. */
+  answer?: string | boolean
+  /** The key of a question that is answered by typing: every accepted answer. */
+  answers?: string[]
   explanation: { en: string; fa: string; de: string }
 }
+
+/** The fixture node whose pool is typed questions only. An attempt draws all 15 of them. */
+export const TYPED_NODE = 'grammar-010'
+export const TYPED_ATTEMPT_SIZE = 15
+
+/** What a test types as a wrong answer: no fixture question accepts it. */
+export const WRONG_TEXT = 'falsch'
 
 /** The words of the test screens in one language. English unless a journey says otherwise. */
 export interface TestWords {
@@ -70,6 +80,12 @@ export async function fixtureQuestions(): Promise<Map<string, FixtureQuestion>> 
   return questions
 }
 
+/** The pool of one fixture node, by question id. "Fixture verbs" unless a journey says otherwise. */
+export async function fixturePool(nodeId = FIXTURE_NODE): Promise<Map<string, FixtureQuestion>> {
+  const ofNode = [...(await fixtureQuestions()).values()].filter((question) => question.node === nodeId)
+  return new Map(ofNode.map((question) => [question.id, question]))
+}
+
 /** The "report a problem" link of the question on screen, in any language. */
 export function reportLink(scope: Page | Locator): Locator {
   return scope.locator('a[href*="/issues/new"]')
@@ -108,9 +124,29 @@ export function choice(page: Page, question: FixtureQuestion, how: 'right' | 'wr
   return page.getByRole('radio', { name: String(option), exact: true })
 }
 
+/** Whether the question on screen is answered by typing. */
+export function isTyped(question: FixtureQuestion): boolean {
+  return question.type === 'typed-answer' || question.type === 'typed-gap-fill'
+}
+
+/** The field a typed question is answered in. */
+export function answerField(page: Page): Locator {
+  return page.getByRole('textbox')
+}
+
+/** Answers the question on screen right or wrong: by choosing, or by typing. */
+export async function giveAnswer(page: Page, question: FixtureQuestion, how: 'right' | 'wrong', words = ENGLISH) {
+  if (isTyped(question)) {
+    await answerField(page).fill(how === 'right' ? rightAnswerText(question) : WRONG_TEXT)
+  } else {
+    await choice(page, question, how, words).check()
+  }
+}
+
 /** The right answer of a question, as the result shows it. */
 export function rightAnswerText(question: FixtureQuestion, words = ENGLISH): string {
   if (question.type === 'true-false') return question.answer ? words.correct : words.notCorrect
+  if (isTyped(question)) return String(question.answers?.[0])
   return String(question.answer)
 }
 
@@ -138,7 +174,7 @@ export async function takeTest(
     const question = await questionOnScreen(page)
     if (node !== null) expect(question.node).toBe(node)
     met.push(question)
-    await choice(page, question, how(place, question), words).check()
+    await giveAnswer(page, question, how(place, question), words)
     await page.getByRole('button', { name: place < total ? words.next : words.checkAnswers }).click()
   }
   return met
@@ -152,6 +188,27 @@ export function takeCheckpoint(
   words = ENGLISH,
 ): Promise<FixtureQuestion[]> {
   return takeTest(page, how, { total, words, node: null })
+}
+
+/**
+ * Takes the whole test of the typed fixture node, typing for each question
+ * what `text` gives for it. Returns the place (from 1) at which each question
+ * came, by question id.
+ */
+export async function takeTypedTest(
+  page: Page,
+  text: (question: FixtureQuestion) => string,
+  words = ENGLISH,
+): Promise<Map<string, number>> {
+  const places = new Map<string, number>()
+  for (let place = 1; place <= TYPED_ATTEMPT_SIZE; place += 1) {
+    await expect(page.getByText(words.questionOf(place, TYPED_ATTEMPT_SIZE))).toBeVisible()
+    const question = await questionOnScreen(page)
+    places.set(question.id, place)
+    await answerField(page).fill(text(question))
+    await page.getByRole('button', { name: place < TYPED_ATTEMPT_SIZE ? words.next : words.checkAnswers }).click()
+  }
+  return places
 }
 
 /** An explanation as a learner reads it: the asterisks that mark German are not shown. */
