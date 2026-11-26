@@ -1,0 +1,72 @@
+# Fixture node for tests. Invented, short, and stable: tests assert on these words.
+id: grammar-001
+kind: grammar
+level: A1
+order: 1
+status: published
+recogniseOnly: false
+prerequisites: []
+title:
+  en: Fixture verbs
+  fa: فعل‌های آزمایشی
+  de: Test-Verben
+
+explanations:
+  en:
+    rule: >
+      A fixture verb takes the ending of its person. With *ich* the ending
+      is *-e*.
+  fa:
+    rule: >
+      فعل آزمایشی پایانهٔ شخص خود را می‌گیرد. با *ich* پایانه *-e* است.
+  de:
+    rule: >
+      Ein Test-Verb bekommt die Endung der Person. Bei *ich* ist die Endung *-e*.
+
+table:
+  columns:
+    - en: Person
+      fa: شخص
+      de: Person
+    - en: Form
+      fa: صورت
+      de: Form
+  rows:
+    - [ich, wohne]
+    - [du, wohnst]
+
+examples:
+  - de: Ich wohne in Berlin.
+    en: I live in Berlin.
+    fa: من در برلین زندگی می‌کنم.
+  - de: Wohnst du hier?
+    en: Do you live here?
+    fa: تو این‌جا زندگی می‌کنی؟
+
+mistakes:
+  - wrong: Du wohne hier.
+    right: Du wohnst hier.
+    why:
+      en: With du the ending is -st.
+      fa: با du پایانه -st است.
+      de: Bei du ist die Endung -st.
+
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Ich ___ in Berlin.
+    options: [wohne, wohnst, wohnt]
+    answer: wohne
+    explanation:
+      en: With ich the ending is -e.
+      fa: با ich پایانه -e است.
+      de: Bei ich ist die Endung -e.
+  - id: q2
+    type: multiple-choice
+    prompt: Du ___ hier.
+    options: [wohne, wohnst, wohnen]
+    answer: wohnst
+    explanation:
+      en: With du the ending is -st.
+      fa: با du پایانه -st است.
+      de: Bei du ist die Endung -st.

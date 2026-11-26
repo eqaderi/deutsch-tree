@@ -1,0 +1,199 @@
+/**
+ * Content pipeline: node files in, compiled bundle and a report out.
+ *
+ * `compileContent` reads and validates; it never writes. `writeBundle` puts a
+ * compiled bundle on disk. The command line (cli.ts) and the site build
+ * (vite-plugin.ts) are thin callers of these.
+ */
+import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
+import path from 'node:path'
+import { parse as parseYaml } from 'yaml'
+import {
+  type CompiledNode,
+  type ContentBundle,
+  type GrammarContent,
+  LANGUAGES,
+  type Localised,
+  type NodeFile,
+  type NodeSummary,
+  nodeFileSchema,
+  type RichText,
+} from '../content-model/index.ts'
+
+/** One thing a maintainer has to fix. */
+export interface ContentProblem {
+  /** Path of the file, relative to the content folder. */
+  file: string
+  /** Where in the file, such as `questions[1].answer`. Absent for whole-file problems. */
+  where?: string
+  message: string
+}
+
+export interface PipelineReport {
+  ok: boolean
+  errors: ContentProblem[]
+  nodes: { total: number; published: number; comingSoon: number }
+  questions: number
+}
+
+export interface PipelineResult {
+  report: PipelineReport
+  /** Null when the report has errors. */
+  bundle: ContentBundle | null
+}
+
+export async function compileContent(contentDir: string): Promise<PipelineResult> {
+  const errors: ContentProblem[] = []
+  const nodes: CompiledNode[] = []
+
+  const files = await findNodeFiles(contentDir)
+  if (files.length === 0) {
+    errors.push({ file: 'nodes', message: `no node files (*.yaml) found under ${path.join(contentDir, 'nodes')}` })
+  }
+
+  for (const file of files) {
+    const source = await readFile(path.join(contentDir, file), 'utf8')
+
+    let raw: unknown
+    try {
+      raw = parseYaml(source)
+    } catch (error) {
+      errors.push({ file, message: `is not valid YAML: ${(error as Error).message}` })
+      continue
+    }
+
+    const parsed = nodeFileSchema.safeParse(raw)
+    if (!parsed.success) {
+      for (const issue of parsed.error.issues) {
+        errors.push({ file, where: formatPath(issue.path), message: issue.message })
+      }
+      continue
+    }
+
+    const expectedName = `${parsed.data.id}.yaml`
+    if (path.basename(file) !== expectedName) {
+      errors.push({ file, where: 'id', message: `the file of node "${parsed.data.id}" must be named ${expectedName}` })
+      continue
+    }
+
+    nodes.push(compileNode(parsed.data))
+  }
+
+  nodes.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id))
+
+  const published = nodes.filter((node) => node.status === 'published').length
+  const report: PipelineReport = {
+    ok: errors.length === 0,
+    errors,
+    nodes: { total: nodes.length, published, comingSoon: nodes.length - published },
+    questions: nodes.reduce((sum, node) => sum + (node.content?.questions.length ?? 0), 0),
+  }
+
+  return {
+    report,
+    bundle: report.ok ? { index: { nodes: nodes.map(summarise) }, nodes } : null,
+  }
+}
+
+/** The files of a compiled bundle, as paths relative to the bundle folder. */
+export function bundleFiles(bundle: ContentBundle): Array<{ path: string; json: string }> {
+  return [
+    { path: 'index.json', json: JSON.stringify(bundle.index) },
+    ...bundle.nodes.map((node) => ({ path: `nodes/${node.id}.json`, json: JSON.stringify(node) })),
+  ]
+}
+
+/** Replaces `outDir` with the compiled bundle. */
+export async function writeBundle(bundle: ContentBundle, outDir: string): Promise<void> {
+  await rm(outDir, { recursive: true, force: true })
+  for (const file of bundleFiles(bundle)) {
+    const target = path.join(outDir, file.path)
+    await mkdir(path.dirname(target), { recursive: true })
+    await writeFile(target, file.json)
+  }
+}
+
+/** The report as text for a terminal. */
+export function formatReport(report: PipelineReport): string {
+  const lines = report.errors.map(
+    (problem) => `ERROR ${problem.file}${problem.where ? ` at ${problem.where}` : ''}: ${problem.message}`,
+  )
+  const { total, published, comingSoon } = report.nodes
+  lines.push(
+    report.ok
+      ? `Content OK. Nodes: ${total} (${published} published, ${comingSoon} coming soon). Questions: ${report.questions}.`
+      : `Content has ${report.errors.length} error${report.errors.length === 1 ? '' : 's'}. Nothing was compiled.`,
+  )
+  return lines.join('\n')
+}
+
+async function findNodeFiles(contentDir: string): Promise<string[]> {
+  const nodesDir = path.join(contentDir, 'nodes')
+  let entries: string[]
+  try {
+    entries = await readdir(nodesDir, { recursive: true })
+  } catch {
+    return []
+  }
+  return entries
+    .filter((entry) => entry.endsWith('.yaml'))
+    .map((entry) => path.posix.join('nodes', entry.split(path.sep).join('/')))
+    .sort()
+}
+
+function compileNode(file: NodeFile): CompiledNode {
+  const summary: NodeSummary = {
+    id: file.id,
+    kind: file.kind,
+    level: file.level,
+    order: file.order,
+    status: file.status,
+    recogniseOnly: file.recogniseOnly,
+    prerequisites: file.prerequisites,
+    title: file.title,
+  }
+  // Drafts inside a "coming soon" file are checked but never shipped.
+  return { ...summary, content: file.status === 'published' ? compileGrammarContent(file) : null }
+}
+
+function compileGrammarContent(file: NodeFile): GrammarContent {
+  // The schema guarantees these sections for a published node.
+  const { explanations, table, examples, mistakes, questions } = file as Required<NodeFile>
+  return {
+    explanations: {
+      en: { rule: richText(explanations.en.rule) },
+      fa: { rule: richText(explanations.fa.rule) },
+      de: { rule: richText(explanations.de.rule) },
+    },
+    table,
+    examples,
+    mistakes: mistakes.map((mistake) => ({ ...mistake, why: richTextIn(mistake.why) })),
+    questions: questions.map((question) => ({ ...question, explanation: richTextIn(question.explanation) })),
+  }
+}
+
+function summarise(node: CompiledNode): NodeSummary {
+  const { content: _content, ...summary } = node
+  return summary
+}
+
+function richTextIn(text: Localised): Localised<RichText> {
+  return Object.fromEntries(LANGUAGES.map((language) => [language, richText(text[language])])) as Localised<RichText>
+}
+
+/** Splits "With *ich* the ending is *-e*." into plain parts and German parts. */
+function richText(source: string): RichText {
+  return source
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(/\*([^*]+)\*/)
+    .map((part, index) => (index % 2 === 1 ? { de: part } : part))
+    .filter((part) => part !== '')
+}
+
+function formatPath(pathParts: PropertyKey[]): string | undefined {
+  if (pathParts.length === 0) return undefined
+  return pathParts
+    .map((part, index) => (typeof part === 'number' ? `[${part}]` : index === 0 ? String(part) : `.${String(part)}`))
+    .join('')
+}

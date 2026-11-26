@@ -2,4 +2,5 @@ private/
 research/
 node_modules/
 dist/
+.browser-test/
 .DS_Store
