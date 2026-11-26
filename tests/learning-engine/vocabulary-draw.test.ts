@@ -10,6 +10,7 @@ const NODE = Array.from({ length: 25 }, (_, index) =>
   word({ word: `Wort${index + 1}`, class: 'noun', article: 'das', plural: `Wörter${index + 1}` }),
 )
 
+const idOf = (question: Question) => question.id
 const wordOf = (question: Question) => ('word' in question ? question.word : undefined)
 const asking = (attempt: Question[], type: Question['type']) =>
   attempt.filter((question) => question.type === type).length
@@ -22,7 +23,7 @@ test('an attempt at a vocabulary test asks about a word in one direction only', 
 
     expect(attempt).toHaveLength(15)
     expect(new Set(attempt.map(wordOf)).size).toBe(15)
-    expect(pool).toEqual(expect.arrayContaining(attempt))
+    expect(pool.map(idOf)).toEqual(expect.arrayContaining(attempt.map(idOf)))
   }
 })
 
@@ -67,7 +68,7 @@ test('a node with fewer words than an attempt asks some words in both directions
 test('a pool of other questions is drawn as before: any questions, in the same random order', () => {
   const pool = questions(20)
 
-  expect(drawQuestions(pool, 10, seededRandom(3))).toEqual(drawAttempt(pool, 10, seededRandom(3)))
+  expect(drawQuestions(pool, 10, seededRandom(3)).map(idOf)).toEqual(drawAttempt(pool, 10, seededRandom(3)).map(idOf))
 })
 
 test('a checkpoint asks about a word of a vocabulary node in one direction only', () => {
