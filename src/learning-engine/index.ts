@@ -118,12 +118,10 @@ export function checkAnswer(question: Question, answer: Answer | undefined): Ans
     case 'which-text':
     case 'who-says':
     case 'find-error':
+    case 'meaning-of-word':
       return { correct: answer === question.answer, notes: [] }
     case 'typed-answer':
     case 'typed-gap-fill':
-      return typeof answer === 'string' ? checkTyped(answer, question.answers) : wrong()
-    case 'meaning-of-word':
-      return { correct: answer === question.answer, notes: [] }
     case 'word-for-meaning':
       return typeof answer === 'string' ? checkTyped(answer, question.answers) : wrong()
     case 'word-order':
@@ -148,14 +146,12 @@ export function rightAnswer(question: Question): Answer {
     case 'who-says':
     case 'find-error':
     case 'matching':
+    case 'meaning-of-word':
       return question.answer
     case 'typed-answer':
     case 'typed-gap-fill':
-      // The content model guarantees at least one accepted answer.
-      return question.answers[0] ?? ''
-    case 'meaning-of-word':
-      return question.answer
     case 'word-for-meaning':
+      // The content model guarantees at least one accepted answer.
       return question.answers[0] ?? ''
     case 'word-order':
       return question.answers[0] ?? []
