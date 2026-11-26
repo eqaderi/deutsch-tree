@@ -14,3 +14,19 @@
     en: Fixture topics with *sein*
     fa: موضوع‌های آزمایشی با *sein*
     de: Test-Themen mit *sein*
+
+- id: fixture-schreiben
+  level: B1
+  kind: exam-part
+  title:
+    en: "Fixture exam: writing"
+    fa: "امتحان آزمایشی: نوشتن"
+    de: "Test-Prüfung: Schreiben"
+
+- id: fixture-sprechen
+  level: B1
+  kind: exam-part
+  title:
+    en: "Fixture exam: speaking"
+    fa: "امتحان آزمایشی: صحبت کردن"
+    de: "Test-Prüfung: Sprechen"

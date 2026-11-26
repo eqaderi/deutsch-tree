@@ -8,7 +8,7 @@ test('valid content compiles and the report counts what was found', async () => 
   expect(report).toEqual({
     ok: true,
     errors: [],
-    nodes: { total: 2, published: 1, comingSoon: 1 },
+    nodes: { total: 4, published: 3, comingSoon: 1 },
     questions: 15,
   })
   expect(bundle).not.toBeNull()

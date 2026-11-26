@@ -987,6 +987,138 @@ main.wrap {
   flex: 1;
 }
 
+/* ---------- writing and speaking: task, prompt, score ---------- */
+
+/* The task sheet is German, like the sheet in the exam, and reads left to right in every language. */
+.task-sheet {
+  display: grid;
+  gap: 12px;
+  font-size: 17px;
+  line-height: 1.55;
+  text-align: start;
+}
+
+.task-part {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.task-points {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-inline-start: 22px;
+}
+
+.task-quote {
+  margin: 0;
+  border-radius: var(--radius-card);
+  padding: 12px;
+  background: var(--raised);
+}
+
+.task-quote cite {
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.steps {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding-inline-start: 22px;
+}
+
+.prompt {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+}
+
+.prompt-status:empty {
+  display: none;
+}
+
+.prompt-details {
+  justify-self: stretch;
+}
+
+.prompt-details summary {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  color: var(--text-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.prompt-text {
+  display: block;
+  inline-size: 100%;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  padding: 12px;
+  background: var(--raised);
+  color: var(--text);
+  font-family: var(--font-latin);
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.prompt-notes {
+  display: grid;
+  gap: 8px;
+  margin-block-start: 10px;
+  font-size: 14px;
+}
+
+.score-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.score-form {
+  display: grid;
+  gap: 8px;
+  margin-block-start: 18px;
+}
+
+.score-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.score-input {
+  inline-size: 6em;
+  min-block-size: var(--touch);
+  border: 1.5px solid var(--ring);
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: var(--raised);
+  color: var(--text);
+  font: inherit;
+  font-size: 18px;
+  text-align: center;
+}
+
+.score-input[aria-invalid="true"] {
+  border-color: var(--wrong);
+}
+
+.score-problem {
+  color: var(--wrong);
+}
+
 /* ---------- messages ---------- */
 
 .message p + p,

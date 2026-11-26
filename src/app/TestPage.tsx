@@ -1,6 +1,6 @@
 import { use, useState } from 'react'
-import { Link, useParams } from 'react-router'
-import type { CompiledNode, Question } from '../content-model/index.ts'
+import { Link, Navigate, useParams } from 'react-router'
+import { type CompiledNode, hasPool, type Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { type AttemptResult, applyAttempt, drawAttempt, isDone, scoreAttempt } from '../learning-engine/index.ts'
 import { AttemptRun } from './AttemptRun.tsx'
@@ -18,6 +18,8 @@ export function TestPage() {
 
   const node = use(loadNode(id))
   if (!node.content) return <NotFound />
+  // A writing or speaking node has no test of questions: its page holds the task and the score.
+  if (!hasPool(node.content)) return <Navigate to=".." relative="path" replace />
 
   return <NodeTest key={node.id} node={node} pool={node.content.questions} attemptSize={node.content.attemptSize} />
 }

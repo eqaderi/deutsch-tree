@@ -10,15 +10,15 @@ test('the curriculum order runs chapter by chapter, in the order of the chapter 
   // grammar-002 has the higher `order`, so only the chapter list can put it first.
   const content = await fixtureContentWith({
     [CHAPTERS]: (text) => {
-      const [comment, basics, later] = text.split(/\n(?=- id:)/)
-      return [comment, later, basics].join('\n')
+      const [comment, basics, later, ...examChapters] = text.split(/\n(?=- id:)/)
+      return [comment, later, basics, ...examChapters].join('\n')
     },
   })
 
   const { report, bundle } = await compileContent(content)
 
   expect(report.errors).toEqual([])
-  expect(bundle?.index.chapters).toEqual([
+  expect(bundle?.index.chapters.slice(0, 2)).toEqual([
     {
       id: 'fixture-later',
       level: 'A1',
@@ -39,6 +39,8 @@ test('the curriculum order runs chapter by chapter, in the order of the chapter 
   expect(bundle?.index.nodes.map((node) => [node.chapter, node.id])).toEqual([
     ['fixture-later', 'grammar-002'],
     ['fixture-basics', 'grammar-001'],
+    ['fixture-schreiben', 'exam-schreiben-1'],
+    ['fixture-sprechen', 'exam-sprechen-1'],
   ])
 })
 
@@ -138,7 +140,7 @@ test('German marked in a topic title is compiled as German, like in every other 
 
   const { bundle } = await compileContent(content)
 
-  expect(bundle?.index.nodes.map((node) => node.title.fa)).toEqual([
+  expect(bundle?.index.nodes.filter((node) => node.kind === 'grammar').map((node) => node.title.fa)).toEqual([
     ['فعل‌های آزمایشی'],
     ['پایانهٔ ', { de: '-st' }, ' با ', { de: 'du' }],
   ])
@@ -163,6 +165,8 @@ test('a new level needs only content: a chapter of that level and a node in it',
   expect(bundle?.index.nodes.map((node) => [node.level, node.chapter, node.id])).toEqual([
     ['A1', 'fixture-basics', 'grammar-001'],
     ['A1', 'fixture-later', 'grammar-002'],
+    ['B1', 'fixture-schreiben', 'exam-schreiben-1'],
+    ['B1', 'fixture-sprechen', 'exam-sprechen-1'],
     ['B2', 'fixture-b2', 'grammar-003'],
   ])
 })

@@ -1,3 +1,4 @@
+import { assistantGradedNodeHasNoPool } from './assistant-graded-node-has-no-pool.ts'
 import type { ContentCheck } from './check.ts'
 import { germanInPersianIsMarked } from './german-in-persian-is-marked.ts'
 import { nodeIdsAreUnique, questionIdsAreUnique } from './identifiers-are-unique.ts'
@@ -20,4 +21,5 @@ export const CHECKS: ContentCheck[] = [
   prerequisitesHaveNoCycle,
   poolIsLargeEnough,
   publishedNodeIsReviewed,
+  assistantGradedNodeHasNoPool,
 ]

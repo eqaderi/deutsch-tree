@@ -1,4 +1,5 @@
 import { expect, test } from 'vitest'
+import { type ContentBundle, hasPool } from '../../src/content-model/index.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { changeNode, changeReviewedNode, fixtureContent, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
@@ -30,7 +31,13 @@ async function problemsOfExtra(contentDir: string) {
 async function compiledExtra(contentDir: string) {
   const { report, bundle } = await compileContent(contentDir)
   expect(report.errors).toEqual([])
-  return bundle?.nodes.find((node) => node.id === 'grammar-001')?.content?.questions.find((q) => q.id === 'extra')
+  return pool(bundle)?.questions.find((q) => q.id === 'extra')
+}
+
+/** The compiled content of the fixture's grammar node, which has a pool. */
+function pool(bundle: ContentBundle | null) {
+  const content = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content
+  return content && hasPool(content) ? content : undefined
 }
 
 // ---------- true/false ----------
@@ -148,8 +155,7 @@ test('a node says how many questions an attempt draws, and 10 is the default', a
   const byDefault = await compileContent(fixtureContent)
   const chosen = await compileContent(await withAttemptSize(15))
 
-  const attemptSize = (result: typeof byDefault) =>
-    result.bundle?.nodes.find((node) => node.id === 'grammar-001')?.content?.attemptSize
+  const attemptSize = (result: typeof byDefault) => pool(result.bundle)?.attemptSize
   expect(attemptSize(byDefault)).toBe(10)
   expect(attemptSize(chosen)).toBe(15)
 })

@@ -20,6 +20,29 @@ export type NodeKind = (typeof NODE_KINDS)[number]
 export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
 
+/** The four modules of the Goethe B1 exam, as they are written in a node id. */
+export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
+export type ExamModule = (typeof EXAM_MODULES)[number]
+
+/** How many parts each module has. */
+export const EXAM_PART_COUNT: Record<ExamModule, number> = { lesen: 5, hoeren: 4, schreiben: 3, sprechen: 3 }
+
+/**
+ * The modules that the app cannot score itself. Their nodes have no question
+ * pool: the learner does a task, an AI assistant grades it with the prompt
+ * the app provides, and the learner types the score in.
+ */
+export const ASSISTANT_GRADED_MODULES = ['schreiben', 'sprechen'] as const
+export type AssistantGradedModule = (typeof ASSISTANT_GRADED_MODULES)[number]
+
+/** Whether a node is a writing or speaking exam part: graded by an AI assistant, with no question pool. */
+export function isAssistantGraded(node: { kind: NodeKind; module?: ExamModule | undefined }): node is {
+  kind: 'exam-part'
+  module: AssistantGradedModule
+} {
+  return node.kind === 'exam-part' && (ASSISTANT_GRADED_MODULES as readonly unknown[]).includes(node.module)
+}
+
 /**
  * The fewest questions a published node's pool may hold. An attempt draws 10
  * to 15, so a smaller pool could not give a fresh set on a retry. The spec
@@ -172,8 +195,43 @@ const reviewRecord = z.strictObject({
   pool: text,
 })
 
-/** The content sections that a published node must have. */
+/** The content sections that a published grammar node must have. */
 const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
+
+/**
+ * The task of a writing or speaking node: what tells it apart from another
+ * task of the same exam part. All of it is German. Which fields a task has
+ * depends on its part; `TASK_FIELDS` says which.
+ */
+const task = z.strictObject({
+  /** The situation the learner writes or speaks in. */
+  situation: text.optional(),
+  /** The content points of an e-mail, or the points to plan together. */
+  points: z.array(text).optional(),
+  /** Schreiben Aufgabe 2: the one opinion from a forum that the learner replies to. */
+  opinion: z.strictObject({ author: text, text }).optional(),
+  /** Sprechen Teil 2 and 3: the topic of the presentation. */
+  topic: text.optional(),
+})
+
+type TaskField = keyof z.infer<typeof task>
+
+/** The fields of a task in each part, and how many points it lists. */
+const TASK_FIELDS: Record<
+  AssistantGradedModule,
+  Record<number, { name: string; fields: TaskField[]; points?: number }>
+> = {
+  schreiben: {
+    1: { name: 'Schreiben Aufgabe 1', fields: ['situation', 'points'], points: 3 },
+    2: { name: 'Schreiben Aufgabe 2', fields: ['situation', 'opinion'] },
+    3: { name: 'Schreiben Aufgabe 3', fields: ['situation'] },
+  },
+  sprechen: {
+    1: { name: 'Sprechen Teil 1', fields: ['situation', 'points'], points: 4 },
+    2: { name: 'Sprechen Teil 2', fields: ['topic'] },
+    3: { name: 'Sprechen Teil 3', fields: ['topic'] },
+  },
+}
 
 export const nodeFileSchema = z
   .strictObject({
@@ -209,6 +267,13 @@ export const nodeFileSchema = z
       .default(10),
     /** A published node must have one that matches its pool; the content pipeline checks it. */
     review: reviewRecord.optional(),
+
+    /** Exam part nodes only: the module of the exam the part belongs to. */
+    module: z.enum(EXAM_MODULES).optional(),
+    /** Exam part nodes only: the number of the part in its module (Teil 1, Aufgabe 2 …). */
+    part: z.number().int('must be a whole number').positive().optional(),
+    /** Writing and speaking nodes only: the task. */
+    task: task.optional(),
   })
   .superRefine((value, ctx) => {
     if (value.kind === 'grammar' && !/^grammar-\d{3}$/.test(value.id)) {
@@ -218,21 +283,115 @@ export const nodeFileSchema = z
         message: 'a grammar node id is "grammar-" plus its three-digit number in the grammar list, like "grammar-001"',
       })
     }
+    const partIsKnown = examPartIsStated(value, ctx)
+    const taskFields = partIsKnown && isAssistantGraded(value) ? TASK_FIELDS[value.module][value.part ?? 0] : undefined
+    if (taskFields && value.task) taskFitsItsPart(value.task, taskFields, ctx)
+
     if (value.status !== 'published') return
-    if (value.kind !== 'grammar') {
+    if (value.kind === 'grammar') {
+      for (const section of CONTENT_SECTIONS) {
+        if (value[section] === undefined) {
+          ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
+        }
+      }
+    } else if (isAssistantGraded(value)) {
+      if (value.task === undefined) {
+        ctx.addIssue({ code: 'custom', path: ['task'], message: 'is required for a published node' })
+      }
+    } else if (value.kind !== 'exam-part' || partIsKnown) {
       ctx.addIssue({
         code: 'custom',
         path: ['status'],
-        message: `a ${value.kind} node cannot be published yet; only grammar nodes have a page`,
+        message: `a ${value.kind} node${value.module ? ` of ${value.module}` : ''} cannot be published yet; it has no page`,
       })
-      return
-    }
-    for (const section of CONTENT_SECTIONS) {
-      if (value[section] === undefined) {
-        ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
-      }
     }
   })
+
+/**
+ * An exam part node states its module and its part, and is named after them;
+ * no other node states them. Returns whether the node is an exam part whose
+ * module and part can be relied on.
+ */
+function examPartIsStated(
+  value: { id: string; kind: NodeKind; module?: ExamModule | undefined; part?: number | undefined },
+  ctx: z.RefinementCtx,
+): boolean {
+  if (value.kind !== 'exam-part') {
+    for (const field of ['module', 'part'] as const) {
+      if (value[field] !== undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: [field],
+          message: `belongs to exam part nodes only; this is a ${value.kind} node`,
+        })
+      }
+    }
+    return false
+  }
+
+  if (value.module === undefined) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['module'],
+      message: `is required for an exam part node: ${EXAM_MODULES.slice(0, -1).join(', ')} or ${EXAM_MODULES.at(-1)}`,
+    })
+  }
+  if (value.part === undefined) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['part'],
+      message: 'is required for an exam part node: the number of the part in its module',
+    })
+  }
+  if (value.module === undefined || value.part === undefined) return false
+
+  if (value.part > EXAM_PART_COUNT[value.module]) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['part'],
+      message: `${value.module} has parts 1 to ${EXAM_PART_COUNT[value.module]}`,
+    })
+    return false
+  }
+  const id = `exam-${value.module}-${value.part}`
+  if (value.id !== id) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['id'],
+      message: `the id of an exam part node is "exam-<module>-<part>": this one must be "${id}"`,
+    })
+  }
+  return true
+}
+
+/** A task holds the fields of its exam part, no others, and as many points as the part has. */
+function taskFitsItsPart(
+  value: z.infer<typeof task>,
+  part: { name: string; fields: TaskField[]; points?: number },
+  ctx: z.RefinementCtx,
+): void {
+  for (const field of part.fields) {
+    if (value[field] === undefined) {
+      ctx.addIssue({ code: 'custom', path: ['task', field], message: `is required for ${part.name}` })
+    }
+  }
+  for (const field of Object.keys(value) as TaskField[]) {
+    if (value[field] !== undefined && !part.fields.includes(field)) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['task', field],
+        message: `does not belong to ${part.name}; that task has: ${part.fields.join(', ')}`,
+      })
+    }
+  }
+  if (part.points !== undefined && value.points !== undefined && value.points.length !== part.points) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['task', 'points'],
+      message: `${part.name} has exactly ${part.points} points, this task has ${value.points.length}`,
+    })
+  }
+}
 
 export type NodeFile = z.infer<typeof nodeFileSchema>
 
@@ -356,13 +515,6 @@ export interface GrammarContent {
   attemptSize: number
 }
 
-/** The four modules of the Goethe B1 exam, as they are written in a node id. */
-export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
-export type ExamModule = (typeof EXAM_MODULES)[number]
-
-/** How many parts each module has. */
-export const EXAM_PART_COUNT: Record<ExamModule, number> = { lesen: 5, hoeren: 4, schreiben: 3, sprechen: 3 }
-
 /**
  * One task of the Schreiben module or one part of the Sprechen module, with
  * everything that tells it apart from another task of the same part. All of
@@ -396,7 +548,15 @@ export interface ExamTaskContent {
 
 /** A node as the app loads it. `content` is null until the node is published. */
 export interface CompiledNode extends NodeSummary {
-  content: GrammarContent | null
+  content: NodeContent | null
+}
+
+/** What a node's page is built from. Which one it is follows from what it holds: a pool, or a task. */
+export type NodeContent = GrammarContent | ExamTaskContent
+
+/** Whether the node is tested by questions drawn from its pool. A writing or speaking node is not. */
+export function hasPool(content: NodeContent): content is GrammarContent {
+  return 'questions' in content
 }
 
 /** Chapters and nodes, both in curriculum order: chapter by chapter, and inside a chapter by `order`. */

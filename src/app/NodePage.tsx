@@ -1,9 +1,10 @@
 import { type ReactNode, use } from 'react'
 import { Link, useParams } from 'react-router'
-import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
+import { type GrammarContent, hasPool, type NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { isDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
+import { ExamTaskSections } from './ExamTaskPage.tsx'
 import { German, plainText, RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
@@ -11,7 +12,8 @@ import { useProgress } from './progress.ts'
 
 /**
  * A node's page. A grammar page is a column of panels in one fixed order:
- * rule, table, examples, common mistakes, test.
+ * rule, table, examples, common mistakes, test. A writing or speaking page
+ * has no test of questions: task, prompt for an AI assistant, score.
  */
 export function NodePage() {
   const { id = '' } = useParams()
@@ -34,6 +36,13 @@ export function NodePage() {
 
   const { content } = use(nodeRequest)
   if (!content) return <NotFound />
+  if (!hasPool(content)) {
+    return (
+      <NodeFrame node={summary}>
+        <ExamTaskSections nodeId={summary.id} task={content.task} />
+      </NodeFrame>
+    )
+  }
   return (
     <NodeFrame node={summary}>
       <GrammarSections content={content} />
