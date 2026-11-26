@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitest/config'
 
-// Unit-level seams (content pipeline and pack builder now; learning engine later).
+// The unit-level seams: the content pipeline, the learning engine, the pack builder and every other module of src/.
 // Browser journeys live in tests/browser and run with Playwright, not Vitest.
 export default defineConfig({
   test: {
