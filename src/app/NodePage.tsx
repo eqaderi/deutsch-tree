@@ -72,12 +72,8 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
         <div className="meta">
           <span className="tag">{node.level}</span>
           <KindLabel kind={node.kind} />
-          {node.exam && (
-            <>
-              <span className="tag">{strings.examModules[node.exam.module]}</span>
-              <span className="tag">{strings.examPartNumber(node.exam.part)}</span>
-            </>
-          )}
+          {node.module !== undefined && <span className="tag">{strings.examModules[node.module]}</span>}
+          {node.part !== undefined && <span className="tag">{strings.examPartNumber(node.part)}</span>}
           {node.status === 'coming-soon' && <span className="tag">{strings.comingSoon}</span>}
           {done && <span className="tag tag-done">{strings.done}</span>}
         </div>

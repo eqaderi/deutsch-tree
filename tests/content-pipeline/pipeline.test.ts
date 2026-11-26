@@ -8,9 +8,9 @@ test('valid content compiles and the report counts what was found', async () => 
   expect(report).toEqual({
     ok: true,
     errors: [],
-    // The questions are the pool of the grammar node and the twelve items of the exam part's two practice tasks.
-    nodes: { total: 3, published: 2, comingSoon: 1 },
-    questions: 27,
+    // The questions are the pools of the grammar nodes and the twelve items of the exam part's two practice tasks.
+    nodes: { total: 8, published: 6, comingSoon: 2 },
+    questions: 87,
   })
   expect(bundle).not.toBeNull()
 })

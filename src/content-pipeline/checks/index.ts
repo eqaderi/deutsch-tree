@@ -1,4 +1,5 @@
 import type { ContentCheck } from './check.ts'
+import { examTasksAreExamParts } from './exam-tasks-are-exam-parts.ts'
 import { germanInPersianIsMarked } from './german-in-persian-is-marked.ts'
 import { nodeIdsAreUnique, practiceIdsAreUnique, questionIdsAreUnique } from './identifiers-are-unique.ts'
 import { nodesBelongToAChapter } from './nodes-belong-to-a-chapter.ts'
@@ -20,6 +21,7 @@ export const CHECKS: ContentCheck[] = [
   germanInPersianIsMarked,
   prerequisitesExist,
   prerequisitesHaveNoCycle,
+  examTasksAreExamParts,
   poolIsLargeEnough,
   practiceTaskFitsItsPart,
   publishedNodeIsReviewed,

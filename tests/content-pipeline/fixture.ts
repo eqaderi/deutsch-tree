@@ -12,7 +12,7 @@ export const fixtureContent = fileURLToPath(new URL('../fixtures/content', impor
 export const PUBLISHED = 'nodes/grammar/grammar-001.yaml'
 export const COMING_SOON = 'nodes/grammar/grammar-002.yaml'
 /** The fixture's published exam-part node: Lesen, Teil 1, with two practice tasks. */
-export const EXAM_PART = 'nodes/exam/exam-lesen-1.yaml'
+export const EXAM_PART = 'nodes/exam-part/exam-lesen-1.yaml'
 
 /**
  * A temporary copy of the fixture content with some files rewritten or added.

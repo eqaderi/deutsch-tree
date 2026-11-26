@@ -4,6 +4,8 @@ import type {
   Question,
   RichtigFalschQuestion,
   TrueFalseQuestion,
+  TypedAnswerQuestion,
+  TypedGapFillQuestion,
 } from '../../src/content-model/index.ts'
 
 const explanation = { en: ['Because.'], fa: ['چون.'], de: ['Darum.'] }
@@ -31,6 +33,23 @@ export function trueFalse(id: string, answer: boolean): TrueFalseQuestion {
 /** An item of an exam task: a statement that the task's text makes right (`answer: true`) or not. */
 export function richtigFalsch(id: string, answer: boolean): RichtigFalschQuestion {
   return { id, type: 'richtig-falsch', prompt: `Statement of ${id}`, answer, explanation }
+}
+
+/** A typed answer question that accepts each of `answers`. */
+export function typedAnswer(id: string, answers: string[]): TypedAnswerQuestion {
+  return { id, type: 'typed-answer', prompt: `Prompt of ${id}`, answers, explanation }
+}
+
+/** A typed gap fill question whose gap accepts each of `answers`. */
+export function typedGapFill(id: string, answers: string[]): TypedGapFillQuestion {
+  return {
+    id,
+    type: 'typed-gap-fill',
+    prompt: `Gap of ${id}: ___`,
+    answers,
+    explanation,
+    gap: { before: `Gap of ${id}: `, after: '' },
+  }
 }
 
 /** `count` multiple choice questions, q1 to q<count>, each with the right answer "right". */

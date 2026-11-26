@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-reasons-examples
+kind: phrases
+level: B1
+chapter: b1-phrases-opinions
+order: 4
+status: coming-soon
+title:
+  en: "Giving reasons and examples"
+  fa: "آوردن دلیل و مثال"
+  de: "Gründe und Beispiele nennen"
+purpose:
+  en: "Support what you say with a reason, an example or your own experience."
+  fa: "حرفتان را با دلیل، مثال یا تجربهٔ شخصی محکم کنید."
+  de: "Mit einem Grund, einem Beispiel oder der eigenen Erfahrung zeigen, warum man etwas denkt."
+examTasks: [exam-schreiben-1, exam-schreiben-2, exam-sprechen-2]

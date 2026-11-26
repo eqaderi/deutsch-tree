@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-email-formal-greetings
+kind: phrases
+level: A2
+chapter: a2-phrases-emails
+order: 2
+status: coming-soon
+title:
+  en: "Greeting and signing off in a formal e-mail"
+  fa: "سلام و خداحافظی در ایمیل رسمی"
+  de: "Anrede und Gruß in einer formellen E-Mail"
+purpose:
+  en: "Begin and end an e-mail to a person you address with *Sie*, such as a teacher or a landlord."
+  fa: "ایمیل به کسی را که با *Sie* خطابش می‌کنید، مثل معلم یا صاحب‌خانه، درست شروع و تمام کنید."
+  de: "Eine E-Mail an eine Person, zu der man *Sie* sagt, richtig beginnen und beenden."
+examTasks: [exam-schreiben-3]

@@ -10,14 +10,19 @@ import {
   PUBLISHED,
 } from './fixture.ts'
 
-/** A new "coming soon" exam-part node for Hören, Teil 2, with some fields changed. */
+/**
+ * A new "coming soon" exam-part node for Hören, Teil 2, with some fields
+ * changed. That an exam-part node names its module and part, and that its id
+ * says the same, is covered in phrases-and-exam-parts.test.ts.
+ */
 function examPartNode(id: string, fields: Record<string, unknown> = {}): string {
   return comingSoonNode(id, {
     kind: 'exam-part',
     level: 'B1',
     chapter: 'fixture-exam-lesen',
     order: 9,
-    exam: { module: 'hoeren', part: 2 },
+    module: 'hoeren',
+    part: 2,
     ...fields,
   })
 }
@@ -27,54 +32,10 @@ async function problemsOf(file: string, text: string) {
   return report.errors.map(({ where, message }) => ({ where, message }))
 }
 
-test('an exam-part node names its module and part, and the tree gets both', async () => {
-  const content = await fixtureContentWith({ 'nodes/exam/exam-hoeren-2.yaml': () => examPartNode('exam-hoeren-2') })
-
-  const { report, bundle } = await compileContent(content)
-
-  expect(report.errors).toEqual([])
-  expect(bundle?.index.nodes.find((node) => node.id === 'exam-hoeren-2')).toMatchObject({
-    kind: 'exam-part',
-    exam: { module: 'hoeren', part: 2 },
-  })
-  expect(bundle?.index.nodes.find((node) => node.id === 'grammar-001')).not.toHaveProperty('exam')
-})
-
-test('an exam-part node that does not say which part of the exam it is, is rejected', async () => {
-  const problems = await problemsOf('nodes/exam/exam-hoeren-2.yaml', examPartNode('exam-hoeren-2', { exam: undefined }))
-
-  expect(problems).toEqual([
-    {
-      where: 'exam',
-      message: 'is missing: an exam-part node names its module and part, like { module: lesen, part: 1 }',
-    },
-  ])
-})
-
-test('the id of an exam-part node is "exam-", its module and its part number', async () => {
-  const problems = await problemsOf('nodes/exam/exam-listening-2.yaml', examPartNode('exam-listening-2'))
-
-  expect(problems).toEqual([
-    { where: 'id', message: 'the id of this exam-part node must be "exam-hoeren-2": "exam-", its module, its part' },
-  ])
-})
-
 test('a part that its module does not have is rejected', async () => {
-  const problems = await problemsOf(
-    'nodes/exam/exam-hoeren-5.yaml',
-    examPartNode('exam-hoeren-5', { exam: { module: 'hoeren', part: 5 } }),
-  )
+  const problems = await problemsOf('nodes/exam-part/exam-hoeren-5.yaml', examPartNode('exam-hoeren-5', { part: 5 }))
 
-  expect(problems).toEqual([{ where: 'exam.part', message: 'Hören has parts 1 to 4, not a part 5' }])
-})
-
-test('only an exam-part node names a part of the exam', async () => {
-  const problems = await problemsOf(
-    'nodes/grammar/grammar-003.yaml',
-    comingSoonNode('grammar-003', { exam: { module: 'lesen', part: 1 } }),
-  )
-
-  expect(problems).toEqual([{ where: 'exam', message: 'belongs to an exam-part node only' }])
+  expect(problems).toEqual([{ where: 'part', message: 'Hören has parts 1 to 4, not a part 5' }])
 })
 
 test('a published Lesen part compiles to its page: what the part asks, how it is scored, how to approach it', async () => {
@@ -82,7 +43,7 @@ test('a published Lesen part compiles to its page: what the part asks, how it is
 
   expect(report.errors).toEqual([])
   const node = bundle?.nodes.find((candidate) => candidate.id === 'exam-lesen-1')
-  expect(node).toMatchObject({ kind: 'exam-part', exam: { module: 'lesen', part: 1 }, status: 'published' })
+  expect(node).toMatchObject({ kind: 'exam-part', module: 'lesen', part: 1, status: 'published' })
   expect(node?.content).toMatchObject({
     kind: 'exam-part',
     explanations: {
@@ -190,7 +151,7 @@ test('a grammar node explains a rule, not an exam task', async () => {
 
 test('an exam part whose practice format is not built yet cannot be published', async () => {
   const problems = await problemsOf(
-    'nodes/exam/exam-hoeren-2.yaml',
+    'nodes/exam-part/exam-hoeren-2.yaml',
     examPartNode('exam-hoeren-2', { status: 'published' }),
   )
 
@@ -226,7 +187,7 @@ test('only an exam-part node holds a practice task', async () => {
   const { report } = await compileContent(content)
 
   expect(report.errors.map(({ where, message }) => ({ where, message }))).toEqual([
-    { where: 'practice', message: 'belongs to an exam-part node only' },
+    { where: 'practice', message: 'only an exam-part node has this' },
   ])
 })
 

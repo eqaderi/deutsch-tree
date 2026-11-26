@@ -51,6 +51,33 @@ A `coming-soon` node needs nothing more. It appears in the tree, marked
 "Coming soon". It may already hold the sections below as a draft: they are
 checked, but not shown.
 
+## A phrases node and an exam-part node
+
+These two kinds have a few lines more, also while they are `coming-soon`.
+The lists of both, with the reasons, are in
+`docs/approvals/phrase-and-exam-part-nodes.md`.
+
+```yaml
+id: phrases-agreeing     # "phrases-" + the purpose in a word or two
+kind: phrases
+purpose:                 # one line, in three languages: what the phrases are for
+  en: Say that you think the same as another person, fully or in part.
+  fa: …
+  de: …
+examTasks: [exam-schreiben-2, exam-sprechen-1]   # ids of the exam-part nodes it serves; at least one
+```
+
+```yaml
+id: exam-lesen-2         # "exam-" + module + "-" + part
+kind: exam-part
+module: lesen            # lesen | hoeren | schreiben | sprechen
+part: 2                  # the number of the part inside its module
+```
+
+The exam has 15 parts, so there are 15 exam-part nodes: Lesen 1 to 5, Hören 1
+to 4, Schreiben 1 to 3 and Sprechen 1 to 3. An exam task is always named by
+the id of its exam-part node, so the name cannot point at nothing.
+
 ## Chapters and the curriculum order
 
 A chapter is a named group of nodes of one kind inside one level, for example
@@ -128,9 +155,10 @@ questions:
 
 ### Question types
 
-Every question has `id`, `type`, `prompt` (German), `answer` and
+Every question has `id`, `type`, `prompt` (German), its answer and
 `explanation`. The test shows the learner what to do in their language, so a
-prompt holds only the German.
+prompt holds only the German. A question that is answered by choosing states
+one `answer`; a question that is answered by typing lists its `answers`.
 
 ```yaml
   - id: q2
@@ -145,7 +173,34 @@ prompt holds only the German.
     prompt: Du wohne hier.          # the sentence the learner judges
     answer: false                   # true: correct German; false: it holds a mistake
     explanation: { en: …, fa: …, de: … }
+
+  - id: q4
+    type: typed-answer              # the learner types the answer
+    prompt: "Plural: der Apfel"
+    answers: [die Äpfel, Äpfel]     # every accepted answer; the first is shown as the right one
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q5
+    type: typed-gap-fill            # a sentence with one gap; the learner types the form
+    prompt: Du ___ (wohnen) hier.   # exactly one gap
+    answers: [wohnst]
+    explanation: { en: …, fa: …, de: … }
 ```
+
+### Typed questions: the accepted answers
+
+- List every answer that is correct German under `answers`, each written
+  exactly, with its umlauts, its ß and its capitals. An answer that is not
+  listed is marked wrong.
+- Do not list variants of spelling. The test ignores extra spaces by itself,
+  and it accepts *ae*, *oe*, *ue* and *ss* in place of *ä*, *ö*, *ü* and *ß*
+  and a capitalisation difference, each with a note that shows the learner
+  the exact spelling. Nothing else is forgiven: a missing word, such as an
+  article, or a plain *u* for *ü* is a wrong answer.
+- Pin the answer down. `Wir spielen ___.` can be filled in a hundred ways;
+  give the word to use, as in `Du ___ (wohnen) hier.` The blind reviewer types
+  an answer without seeing your list, and an answer that is not on it stops
+  the review.
 
 ### How many questions an attempt draws
 
@@ -159,6 +214,82 @@ attemptSize: 12          # optional; 10 to 15, default 10
 The pass mark follows from it: 90%, rounded up to a whole question (9 of 10,
 11 of 12, 14 of 15).
 
+## A published exam-part node
+
+The page shows three panels in this fixed order: what the part asks, how it is
+scored, how to approach it. Every exam-part node has them, whatever its
+module. A complete example is `content/nodes/exam-part/exam-lesen-1.yaml`.
+
+```yaml
+status: published
+
+explanations:            # one section per language, all three keys in each
+  en:
+    task: >              # what the part asks the candidate to do
+      You read one longer personal text. Then you decide for six statements
+      whether each is right (*Richtig*) or wrong (*Falsch*).
+    scoring: >           # how the part is scored
+      Each right answer is one point. …
+    approach:            # how to approach it: steps, in order
+      - Read the six statements before the text.
+      - …
+  fa: { task: …, scoring: …, approach: [ … ] }
+  de: { task: …, scoring: …, approach: [ … ] }   # simple German, about A2 level
+```
+
+A grammar node explains a `rule`; an exam-part node explains `task`, `scoring`
+and `approach`. The other kind's keys are an error.
+
+### Practice tasks (Lesen)
+
+A Lesen part offers practice tasks. A task is the part as the candidate meets
+it: the texts, and the items about them in the order they are answered.
+
+```yaml
+practice:                # one task or more; each attempt takes one of them, whole
+  - id: t1               # stable inside the node
+    texts:
+      - id: a            # stable inside the task
+        title: Mein erster Monat auf dem Land    # optional: a heading or subject line
+        body: |          # German. A blank line starts a new paragraph;
+          Hallo ihr Lieben,                      # a line break inside one is kept
+
+          endlich habe ich Zeit, euch zu schreiben. …
+
+          Liebe Grüße
+          eure Milena
+    items:
+      - id: i1           # stable inside the task; reports name it "t1/i1"
+        type: richtig-falsch
+        prompt: In der Stadt hat Milena keine Ausbildungsstelle gefunden.   # a statement about the text
+        answer: true     # true: right according to the text (Richtig); false: Falsch
+        explanation: { en: …, fa: …, de: … }   # one line: where the text says so
+```
+
+- An item is a question whose answer lies in the texts, so it has what every
+  question has: `id`, `type`, `prompt`, `answer`, `explanation`. The only item
+  type so far is `richtig-falsch`.
+- A task has the format of its exam part: Lesen Teil 1 is 1 text and 6 items.
+  The formats are `EXAM_TASK_FORMATS` in `src/content-model/index.ts`. Only a
+  part that has a format there can be published; so far that is `exam-lesen-1`.
+- Everything in a task is original. Follow the exam's format; never copy a
+  text or an item from the official model sets or from a book.
+- The solved example "0" that the exam prints before the items is not an item.
+
+**How an exam part differs from the other nodes**
+
+- **No pool, no minimum of 15.** A part is not asked as a random draw of
+  questions but as one whole task, so its size is the size the exam gives it.
+  The check on the task's format takes the place of the pool minimum.
+- **Done at 90% of one task.** The pass mark is the usual rule (90%, rounded
+  up to a whole item) over the items of the task taken. For a task of up to
+  nine items that is every item: 6 of 6 in Lesen Teil 1.
+- **A retry takes another task** when the node has more than one. With a
+  single task the learner gets the same text again and may remember it, so a
+  second and third task make "done" mean more. One task is enough to publish.
+- **No checkpoint questions.** An item cannot be asked without its text, so an
+  exam part gives nothing to the checkpoint of its level.
+
 ## Review before publishing
 
 A published node needs a `review:` record. `pnpm content:check` fails without
@@ -166,7 +297,9 @@ one, and again when a question or its answer changes later (explanations may
 change freely). A command writes the record, never a hand:
 
 1. `pnpm review:pool <id> --out /tmp/<id>.json` writes the review sheet: the
-   pool without answers and explanations. Keep it outside the repository.
+   pool without answers and explanations. For an exam part it holds the texts
+   of every practice task and the items without answers; an item is named
+   with its task (`t1/i3`). Keep the sheet outside the repository.
 2. Give only that file to a reviewer who has not seen the node file (for an
    agent: a fresh subagent told to read nothing else). The reviewer fills in
    each `answer`, and an `objection` where a question is flawed.
@@ -177,9 +310,15 @@ change freely). A command writes the record, never a hand:
    step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
    in step 1, then add that second file with another `--answers`.
 
-Only `multiple-choice`, `gap-fill` and `true-false` questions and only grammar
-nodes can be published so far. Other question types and node kinds are added
-to the schema as they are built.
+For an exam part the review covers the texts too. Changing a text after the
+review, like changing an item or its key, means a new review; every item of
+that task then needs a fresh answer (`--only t1/i1,t1/i2,…`), because the text
+decides them all.
+
+Grammar nodes, with `multiple-choice`, `gap-fill`, `true-false`,
+`typed-answer` and `typed-gap-fill` questions, and the exam parts that have a
+task format can be published so far. Other question types, node kinds and
+exam parts are added to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 
@@ -188,18 +327,31 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - A node without a chapter, with a chapter that `chapters.yaml` does not
   have, or of another level or kind than its chapter. A chapter name that
   lacks a language.
-- Persian text (a title, a chapter name, a rule, the reason of a mistake or
-  of a question) with a Latin letter outside asterisks.
+- Persian text (a title, a chapter name, a purpose, an explanation, the
+  reason of a mistake, of a question or of an item) with a Latin letter
+  outside asterisks.
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
 - A prerequisite that is not the id of a node, and a prerequisite cycle
   (a node that needs itself, directly or through other nodes).
+- A phrases node without a purpose or without an exam task, and an exam task
+  that is not the id of an exam-part node.
+- An exam-part node without its module or part number, or whose id is not
+  `exam-<module>-<part>`, or with a part number its module does not have
+  (Hören has four parts). A `purpose`, `examTasks`, `module`, `part` or
+  `practice` in a node of another kind.
+- An explanation of the wrong kind: `task`, `scoring` or `approach` in a
+  grammar node, `rule` in an exam-part node; and one of a node's own that is
+  missing in a language.
 - A published node with fewer than 15 questions. A `coming-soon` draft may
-  have fewer.
+  have fewer. An exam part is exempt: it is held to the format of its part.
+- A published exam part whose practice task has not the number of texts and
+  items of its part, and one whose part has no task format yet.
 - Two node files with the same id, and two questions with the same id inside
-  one node.
-- A published node with no review record, or whose questions or answers
-  changed after its review. A `coming-soon` node needs none.
+  one node. Two practice tasks of one node with the same id, and two texts or
+  two items with the same id inside one task.
+- A published node with no review record, or whose questions, answers or
+  task texts changed after its review. A `coming-soon` node needs none.
 
 ## Adding a check (for people who change the code)
 

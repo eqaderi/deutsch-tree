@@ -9,10 +9,17 @@ const PRACTICE = './#/node/exam-lesen-1/test'
 const sidewaysScroll = (page: Page) =>
   page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)
 
-/** The exam part in the tree, which must be open: under level B1, in its chapter. */
+/**
+ * The exam part in the tree, which must be open: under level B1, in the
+ * chapter of the exam's reading parts. That chapter is not the first of its
+ * level, so it is closed until the learner opens it.
+ */
 async function partInTree(page: Page) {
   await page.getByRole('navigation', { name: 'Levels' }).getByRole('link', { name: /B1/ }).click()
-  return page.getByRole('main').getByRole('link', { name: /Fixture reading, part 1/ })
+  const chapter = page.getByRole('main').getByRole('group').filter({ hasText: 'Fixture exam: reading' })
+  await expect(chapter).toBeVisible()
+  if ((await chapter.getAttribute('open')) === null) await chapter.getByRole('heading').click()
+  return chapter.getByRole('link', { name: /Fixture reading, part 1/ })
 }
 
 test('an exam part page says what the part asks, how it is scored and how to approach it', async ({ page }) => {

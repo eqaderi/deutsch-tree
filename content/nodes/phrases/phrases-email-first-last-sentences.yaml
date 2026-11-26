@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-email-first-last-sentences
+kind: phrases
+level: B1
+chapter: b1-phrases-writing
+order: 1
+status: coming-soon
+title:
+  en: "First and last sentences of an e-mail"
+  fa: "جمله‌های اول و آخر ایمیل"
+  de: "Erste und letzte Sätze in einer E-Mail"
+purpose:
+  en: "After the greeting, say why you are writing; before the closing, end with a wish or a request for an answer."
+  fa: "بعد از سلام بگویید چرا می‌نویسید؛ پیش از خداحافظی با یک آرزو یا درخواست جواب تمام کنید."
+  de: "Nach der Anrede sagen, warum man schreibt; vor dem Gruß mit einem Wunsch oder einer Bitte um Antwort enden."
+examTasks: [exam-schreiben-1, exam-schreiben-3]

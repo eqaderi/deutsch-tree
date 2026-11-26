@@ -1,17 +1,17 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
 # Goethe-Zertifikat B1, Lesen, Teil 1. The format follows the exam; the text and the items are original.
 id: exam-lesen-1
 kind: exam-part
-exam:
-  module: lesen
-  part: 1
 level: B1
 chapter: b1-exam-lesen
 order: 1
 status: published
+module: lesen
+part: 1
 title:
-  en: "*Lesen*, part 1: a blog entry or an e-mail"
-  fa: "*Lesen*، بخش ۱: وبلاگ یا ایمیل"
-  de: "Lesen, Teil 1: Blog oder E-Mail"
+  en: "*Lesen Teil 1*: a blog post or e-mail, right or wrong"
+  fa: "*Lesen Teil 1*: متن وبلاگ یا ایمیل، درست یا غلط"
+  de: "Lesen Teil 1: Blog oder E-Mail, richtig oder falsch"
 
 explanations:
   en:
@@ -91,7 +91,7 @@ practice:
 
           Was mich am meisten überrascht hat, sind die Leute. In der Stadt kannte ich nach drei Jahren nicht einmal meine Nachbarn. Hier hat man mich schon in der ersten Woche zum Dorffest eingeladen, und inzwischen singe ich sogar im Chor mit, obwohl ich gar nicht gut singen kann. Die Proben sind jeden Donnerstag, und danach sitzen wir noch lange zusammen.
 
-          Natürlich vermisse ich euch und unsere Kinoabende. Ein Kino gibt es hier nämlich auch nicht. Deshalb habe ich eine Bitte: Kommt mich doch im Juli besuchen! Frau Brandl vermietet im Sommer zwei Gästezimmer, die nicht teuer sind. Sagt mir aber bitte bis Ende Mai Bescheid, weil die Zimmer schnell weg sind.
+          Ein Kino gibt es hier übrigens auch nicht, und natürlich vermisse ich euch und unsere Kinoabende. Deshalb habe ich eine Bitte: Kommt mich doch im Juli besuchen! Frau Brandl vermietet im Sommer zwei Gästezimmer, die nicht teuer sind. Sagt mir aber bitte bis Ende Mai Bescheid, weil die Zimmer schnell weg sind.
 
           Liebe Grüße
           eure Milena
@@ -106,7 +106,7 @@ practice:
           de: "Sie schreibt: In der Stadt hat sie fast ein Jahr lang *ohne Erfolg* gesucht."
       - id: i2
         type: richtig-falsch
-        prompt: Milena hat sich für die Fahrt zum Einkaufen ein Fahrrad gekauft.
+        prompt: Milena hat sich ein Fahrrad gekauft, um einkaufen zu fahren.
         answer: false
         explanation:
           en: "She has not bought the bicycle: her landlady has lent it to her (*geliehen*)."
@@ -130,7 +130,7 @@ practice:
           de: "*Das frühe Aufstehen fällt mir schwer* heißt: Früh aufstehen ist für sie schwer."
       - id: i5
         type: richtig-falsch
-        prompt: Im Dorf hat Milena schneller Leute kennengelernt als in der Stadt.
+        prompt: Im Dorf hat Milena schneller Kontakt zu den Leuten gefunden als in der Stadt.
         answer: true
         explanation:
           en: "In the city she did not know her neighbours after three years; in the village she was invited in her first week."

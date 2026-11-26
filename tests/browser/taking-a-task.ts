@@ -31,7 +31,7 @@ export const ITEMS = 6
 
 /** The practice tasks of the fixture exam part "Fixture reading, part 1". */
 export async function fixtureTasks(): Promise<FixtureTask[]> {
-  const file = fileURLToPath(new URL('../fixtures/content/nodes/exam/exam-lesen-1.yaml', import.meta.url))
+  const file = fileURLToPath(new URL('../fixtures/content/nodes/exam-part/exam-lesen-1.yaml', import.meta.url))
   return (parse(await readFile(file, 'utf8')) as { practice: FixtureTask[] }).practice
 }
 

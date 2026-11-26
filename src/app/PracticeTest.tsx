@@ -8,6 +8,7 @@ import {
   applyAttempt,
   isDone,
   nextTask,
+  rightAnswer,
   scoreAttempt,
 } from '../learning-engine/index.ts'
 import { German, plainText, RichText } from './German.tsx'
@@ -246,7 +247,7 @@ function TaskResult({ nodeId, task, result, wasDone, onRetry }: TaskResultProps)
                   <div className="answer-right">
                     <dt>{strings.rightAnswer}</dt>
                     <dd>
-                      <AnswerText question={question} answer={question.answer} />
+                      <AnswerText question={question} answer={rightAnswer(question)} />
                     </dd>
                   </div>
                 )}

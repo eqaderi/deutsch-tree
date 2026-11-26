@@ -72,13 +72,14 @@ test('two practice tasks of one node may not share an id, nor two items or two t
     items: items.map((id) => ({ id, type: 'richtig-falsch', prompt: 'Das ist ein Text.', answer: true, explanation })),
   })
   const content = await fixtureContentWith({
-    'nodes/exam/exam-lesen-2.yaml': () =>
+    'nodes/exam-part/exam-lesen-2.yaml': () =>
       comingSoonNode('exam-lesen-2', {
         kind: 'exam-part',
         level: 'B1',
         chapter: 'fixture-exam-lesen',
         order: 2,
-        exam: { module: 'lesen', part: 2 },
+        module: 'lesen',
+        part: 2,
         practice: [task(['a', 'a'], ['i1', 'i2', 'i1']), task(['a'], ['i1'])],
       }),
   })

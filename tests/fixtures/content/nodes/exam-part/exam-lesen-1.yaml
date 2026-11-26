@@ -2,13 +2,12 @@
 # A real Lesen text is far longer; these are long enough to answer six statements from.
 id: exam-lesen-1
 kind: exam-part
-exam:
-  module: lesen
-  part: 1
 level: B1
 chapter: fixture-exam-lesen
 order: 1
 status: published
+module: lesen
+part: 1
 title:
   en: "Fixture reading, part 1"
   fa: "خواندن آزمایشی، بخش ۱"

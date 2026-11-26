@@ -253,7 +253,10 @@ function compileNode(file: NodeFile): CompiledNode {
     recogniseOnly: file.recogniseOnly,
     prerequisites: file.prerequisites,
     title: richTextIn(file.title),
-    ...(file.exam ? { exam: file.exam } : {}),
+    ...(file.module !== undefined && { module: file.module }),
+    ...(file.part !== undefined && { part: file.part }),
+    ...(file.purpose !== undefined && { purpose: richTextIn(file.purpose) }),
+    ...(file.examTasks !== undefined && { examTasks: file.examTasks }),
   }
   // Drafts inside a "coming soon" file are checked but never shipped.
   if (file.status !== 'published') return { ...summary, content: null }
@@ -309,10 +312,16 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
 
 function compileQuestion(question: NonNullable<NodeFile['questions']>[number]): Question {
   const explanation = richTextIn(question.explanation)
-  if (question.type !== 'gap-fill') return { ...question, explanation }
-  // The schema guarantees exactly one gap.
-  const [before = '', after = ''] = question.prompt.split(GAP)
-  return { ...question, explanation, gap: { before, after } }
+  switch (question.type) {
+    case 'gap-fill':
+    case 'typed-gap-fill': {
+      // The schema guarantees exactly one gap.
+      const [before = '', after = ''] = question.prompt.split(GAP)
+      return { ...question, explanation, gap: { before, after } }
+    }
+    default:
+      return { ...question, explanation }
+  }
 }
 
 function summarise(node: CompiledNode): NodeSummary {

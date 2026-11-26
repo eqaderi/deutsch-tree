@@ -9,6 +9,7 @@ import { isDeepStrictEqual } from 'node:util'
 import { parse as parseYaml, stringify as toYaml } from 'yaml'
 import { z } from 'zod'
 import { type NodeFile, nodeFileSchema } from '../content-model/index.ts'
+import { checkTyped } from '../learning-engine/index.ts'
 
 type PoolQuestionFile = NonNullable<NodeFile['questions']>[number]
 type ExamTaskFile = NonNullable<NodeFile['practice']>[number]
@@ -31,6 +32,20 @@ interface ReviewView<Q> {
   agrees(question: Q, answer: unknown): boolean
 }
 
+const TYPED =
+  'the German you would type, as text. Several right answers are no flaw here: give a list with each of them, such as ["…", "…"]. Object only when the question leaves its answer open'
+
+/**
+ * A typed question's key is the list of accepted answers. The reviewer agrees
+ * when each answer they give would be marked right for a learner. One that
+ * is not listed shows that the list is incomplete, or that the question is
+ * unclear.
+ */
+function everyAnswerIsAccepted(key: unknown, answer: unknown): boolean {
+  const given: unknown[] = Array.isArray(answer) ? answer : [answer]
+  return given.length > 0 && given.every((one) => typeof one === 'string' && checkTyped(one, key as string[]).correct)
+}
+
 /**
  * One entry per question type; TypeScript refuses a type that has none.
  *
@@ -43,6 +58,8 @@ const REVIEW_VIEWS: { [T in QuestionFile['type']]: ReviewView<Extract<QuestionFi
   'multiple-choice': keyIn('answer', 'the exact text of the one correct option'),
   'gap-fill': keyIn('answer', 'the exact text of the one option that fills the gap'),
   'true-false': keyIn('answer', 'true when the sentence is correct German, false when it holds a mistake (no quotes)'),
+  'typed-answer': keyIn('answers', TYPED, everyAnswerIsAccepted),
+  'typed-gap-fill': keyIn('answers', `what fills the gap: ${TYPED}`, everyAnswerIsAccepted),
   'richtig-falsch': keyIn(
     'answer',
     'true when the statement is right according to the text (Richtig), false when it is not (Falsch) (no quotes)',

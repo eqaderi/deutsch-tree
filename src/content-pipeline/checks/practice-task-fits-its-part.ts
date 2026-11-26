@@ -1,5 +1,5 @@
 import {
-  EXAM_MODULES,
+  EXAM_MODULE_FACTS,
   type ExamPart,
   type ExamTaskFile,
   type ExamTaskFormat,
@@ -18,11 +18,12 @@ import { type ContentCheck, problemIn } from './check.ts'
  */
 export const practiceTaskFitsItsPart: ContentCheck = ({ nodes }) =>
   nodes.flatMap((checked) => {
-    const { exam, practice, status } = checked.node
-    const format = exam && examTaskFormat(exam)
-    if (status !== 'published' || !exam || !format) return []
+    const { module, part, practice, status } = checked.node
+    if (status !== 'published' || module === undefined || part === undefined) return []
+    const format = examTaskFormat({ module, part })
+    if (!format) return []
     return (practice ?? []).flatMap((task, index) =>
-      examTaskProblems(task, exam, format).map(({ where, message }) =>
+      examTaskProblems(task, { module, part }, format).map(({ where, message }) =>
         problemIn(checked, { where: `practice[${index}].${where}`, message }),
       ),
     )
@@ -37,7 +38,7 @@ export function examTaskProblems(
   part: ExamPart,
   format: ExamTaskFormat,
 ): Array<{ where: 'texts' | 'items'; message: string }> {
-  const name = `${EXAM_MODULES[part.module].name}, Teil ${part.part}`
+  const name = `${EXAM_MODULE_FACTS[part.module].name}, Teil ${part.part}`
   const count = (number: number, one: string) => `${number} ${one}${number === 1 ? '' : 's'}`
   return (['texts', 'items'] as const)
     .filter((where) => task[where].length !== format[where])

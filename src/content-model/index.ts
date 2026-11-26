@@ -20,17 +20,17 @@ export type NodeKind = (typeof NODE_KINDS)[number]
 export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
 
-/**
- * The four modules of the Goethe B1 exam, under the names that node ids use
- * ("exam-hoeren-2"), with the exam's own name and its number of parts.
- */
-export const EXAM_MODULES = {
+/** The four modules of the exam, as an exam-part node names its own. */
+export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
+export type ExamModule = (typeof EXAM_MODULES)[number]
+
+/** Each module under the exam's own name, with the number of parts the exam gives it. */
+export const EXAM_MODULE_FACTS: Readonly<Record<ExamModule, { name: string; parts: number }>> = {
   lesen: { name: 'Lesen', parts: 5 },
   hoeren: { name: 'Hören', parts: 4 },
   schreiben: { name: 'Schreiben', parts: 3 },
   sprechen: { name: 'Sprechen', parts: 3 },
-} as const
-export type ExamModule = keyof typeof EXAM_MODULES
+}
 
 /** One part of the exam: Lesen, Teil 1 is { module: 'lesen', part: 1 }. */
 export interface ExamPart {
@@ -171,6 +171,13 @@ const multipleChoiceQuestion = z
 /** How a gap is written in a German sentence: three underscores or more. */
 export const GAP = /_{3,}/g
 
+/** The prompt of a gap fill question, chosen or typed, is a sentence with exactly one gap. */
+function hasOneGap(value: { prompt: string }, ctx: z.RefinementCtx) {
+  if ((value.prompt.match(GAP) ?? []).length !== 1) {
+    ctx.addIssue({ code: 'custom', path: ['prompt'], message: 'must have exactly one gap, written as ___' })
+  }
+}
+
 /** A sentence with one gap, filled by choosing one of the offered forms. */
 const gapFillQuestion = z
   .strictObject({
@@ -181,9 +188,7 @@ const gapFillQuestion = z
     answer: answerText('gap-fill'),
   })
   .superRefine((value, ctx) => {
-    if ((value.prompt.match(GAP) ?? []).length !== 1) {
-      ctx.addIssue({ code: 'custom', path: ['prompt'], message: 'must have exactly one gap, written as ___' })
-    }
+    hasOneGap(value, ctx)
     answerIsOneOption(value, ctx)
   })
 
@@ -198,8 +203,53 @@ const trueFalseQuestion = z.strictObject({
   answer: z.boolean(oneAnswer('true-false', 'must be true or false')),
 })
 
+const NO_ACCEPTED_ANSWER = 'no correct answer: the question lists none under "answers"'
+
+/**
+ * The answer rule of a question whose answer is typed: it lists every
+ * accepted answer, so that correct German is never marked wrong. The first
+ * one is shown as the right answer. Spaces, ae/oe/ue/ss and capitals are
+ * forgiven by the learning engine and need no entries of their own.
+ */
+const acceptedAnswers = z
+  .array(text, {
+    error: ({ input }) =>
+      input === undefined ? NO_ACCEPTED_ANSWER : 'must be a list of every accepted answer, such as [wohnst]',
+  })
+  .min(1, NO_ACCEPTED_ANSWER)
+  .superRefine((answers, ctx) => {
+    const spaced = answers.map((answer) => answer.replace(/\s+/g, ' '))
+    spaced.forEach((answer, index) => {
+      if (spaced.indexOf(answer) < index) {
+        ctx.addIssue({ code: 'custom', path: [index], message: `"${answer}" is listed twice` })
+      }
+    })
+  })
+
+/** The learner types the answer to the prompt. */
+const typedAnswerQuestion = z.strictObject({
+  ...questionBase,
+  type: z.literal('typed-answer'),
+  answers: acceptedAnswers,
+})
+
+/** A sentence with one gap; the learner types what fills it. */
+const typedGapFillQuestion = z
+  .strictObject({
+    ...questionBase,
+    type: z.literal('typed-gap-fill'),
+    answers: acceptedAnswers,
+  })
+  .superRefine(hasOneGap)
+
 /** Later question types join this union under their own `type`, each with its answer rule. */
-const question = z.discriminatedUnion('type', [multipleChoiceQuestion, gapFillQuestion, trueFalseQuestion])
+const question = z.discriminatedUnion('type', [
+  multipleChoiceQuestion,
+  gapFillQuestion,
+  trueFalseQuestion,
+  typedAnswerQuestion,
+  typedGapFillQuestion,
+])
 
 // ---------------------------------------------------------------------------
 // Exam tasks: a part of the exam as a candidate meets it
@@ -275,23 +325,6 @@ export function examTaskFormat(part: ExamPart): ExamTaskFormat | undefined {
   return EXAM_TASK_FORMATS[examPartNodeId(part)]
 }
 
-/** Which part of the exam an exam-part node is about. */
-const examPart = z
-  .strictObject({
-    module: z.enum(Object.keys(EXAM_MODULES) as [ExamModule, ...ExamModule[]]),
-    part: z.number().int('must be a whole number').min(1),
-  })
-  .superRefine((value, ctx) => {
-    const { name, parts } = EXAM_MODULES[value.module]
-    if (value.part > parts) {
-      ctx.addIssue({
-        code: 'custom',
-        path: ['part'],
-        message: `${name} has parts 1 to ${parts}, not a part ${value.part}`,
-      })
-    }
-  })
-
 /**
  * Proof that an independent reviewer answered the pool without seeing the
  * answer key, and that every disagreement was resolved. Written by
@@ -304,6 +337,17 @@ const reviewRecord = z.strictObject({
   /** Fingerprint of the questions and the answer key that were reviewed. */
   pool: text,
 })
+
+/** The fields that the nodes of one kind have, and no others. */
+const FIELDS_OF_ONE_KIND = {
+  module: 'exam-part',
+  part: 'exam-part',
+  practice: 'exam-part',
+  purpose: 'phrases',
+  examTasks: 'phrases',
+} as const satisfies Record<string, NodeKind>
+
+const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${kind}`
 
 /** The content sections that a published grammar node must have. */
 const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
@@ -328,8 +372,16 @@ export const nodeFileSchema = z
     /** Ids of the nodes this one builds on. Advisory; never locks a node. */
     prerequisites: z.array(nodeId).default([]),
     title: localised,
-    /** Only in an exam-part node, and always there: the part of the exam it is about. */
-    exam: examPart.optional(),
+
+    /** Exam-part nodes only: the module of the exam this part belongs to. */
+    module: z.enum(EXAM_MODULES).optional(),
+    /** Exam-part nodes only: the number of the part inside its module, as the exam counts it. */
+    part: z.number().int('must be a whole number').positive().optional(),
+
+    /** Phrases nodes only: what the phrases are for, in one line. */
+    purpose: localised.optional(),
+    /** Phrases nodes only: ids of the exam-part nodes whose tasks the phrases serve. */
+    examTasks: z.array(nodeId).min(1, 'must name at least one exam task').optional(),
 
     explanations: z
       .strictObject({ en: explanationIn('en'), fa: explanationIn('fa'), de: explanationIn('de') })
@@ -361,25 +413,67 @@ export const nodeFileSchema = z
         message: 'a grammar node id is "grammar-" plus its three-digit number in the grammar list, like "grammar-001"',
       })
     }
-    if (value.kind !== 'exam-part') {
-      if (value.exam !== undefined) {
-        ctx.addIssue({ code: 'custom', path: ['exam'], message: 'belongs to an exam-part node only' })
+    for (const [field, kind] of Object.entries(FIELDS_OF_ONE_KIND)) {
+      if (value.kind !== kind && value[field as keyof typeof FIELDS_OF_ONE_KIND] !== undefined) {
+        ctx.addIssue({ code: 'custom', path: [field], message: `only ${withArticle(kind)} node has this` })
       }
-    } else if (value.exam === undefined) {
-      ctx.addIssue({
-        code: 'custom',
-        path: ['exam'],
-        message: 'is missing: an exam-part node names its module and part, like { module: lesen, part: 1 }',
-      })
-    } else if (value.id !== examPartNodeId(value.exam)) {
-      ctx.addIssue({
-        code: 'custom',
-        path: ['id'],
-        message: `the id of this exam-part node must be "${examPartNodeId(value.exam)}": "exam-", its module, its part`,
-      })
     }
-    if (value.kind !== 'exam-part' && value.practice !== undefined) {
-      ctx.addIssue({ code: 'custom', path: ['practice'], message: 'belongs to an exam-part node only' })
+    if (value.kind === 'phrases') {
+      if (!value.id.startsWith('phrases-')) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['id'],
+          message: 'a phrases node id is "phrases-" plus its purpose in a word or two, like "phrases-agreeing"',
+        })
+      }
+      if (value.purpose === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['purpose'],
+          message: 'is missing: a phrases node says in one line what its phrases are for',
+        })
+      }
+      if (value.examTasks === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['examTasks'],
+          message: 'is missing: a phrases node names the exam tasks it serves, by the ids of their exam-part nodes',
+        })
+      }
+    }
+    if (value.kind === 'exam-part') {
+      if (value.module === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['module'],
+          message: `is missing: an exam-part node names its module: ${EXAM_MODULES.slice(0, -1).join(', ')} or ${EXAM_MODULES.at(-1)}`,
+        })
+      }
+      if (value.part === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['part'],
+          message: 'is missing: an exam-part node gives the number of its part inside the module',
+        })
+      }
+      const id = `exam-${value.module}-${value.part}`
+      if (value.module !== undefined && value.part !== undefined && value.id !== id) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['id'],
+          message: `the id of part ${value.part} of the module ${value.module} is "${id}"`,
+        })
+      }
+      if (value.module !== undefined && value.part !== undefined) {
+        const { name, parts } = EXAM_MODULE_FACTS[value.module]
+        if (value.part > parts) {
+          ctx.addIssue({
+            code: 'custom',
+            path: ['part'],
+            message: `${name} has parts 1 to ${parts}, not a part ${value.part}`,
+          })
+        }
+      }
     }
 
     // A node explains what its kind explains, in every language, and nothing else.
@@ -394,7 +488,7 @@ export const nodeFileSchema = z
           message: written
             ? value.kind === 'exam-part'
               ? 'belongs to a grammar node; an exam-part node explains task, scoring and approach'
-              : `belongs to an exam-part node; a ${value.kind} node explains its rule`
+              : `belongs to an exam-part node; ${withArticle(value.kind)} node explains its rule`
             : `is missing; this text is needed in ${language}`,
         })
       }
@@ -410,12 +504,13 @@ export const nodeFileSchema = z
       return
     }
     if (value.kind === 'exam-part') {
-      // Without `exam` the node is already rejected above.
-      if (value.exam !== undefined && examTaskFormat(value.exam) === undefined) {
+      // Without its module and part the node is already rejected above.
+      const { module, part } = value
+      if (module !== undefined && part !== undefined && examTaskFormat({ module, part }) === undefined) {
         ctx.addIssue({
           code: 'custom',
           path: ['status'],
-          message: `${EXAM_MODULES[value.exam.module].name}, Teil ${value.exam.part} cannot be published yet: the format of its practice task is not built`,
+          message: `${EXAM_MODULE_FACTS[module].name}, Teil ${part} cannot be published yet: the format of its practice task is not built`,
         })
         return
       }
@@ -485,8 +580,12 @@ export interface NodeSummary {
   prerequisites: string[]
   /** German inside a title is marked, like in every other text for the learner. */
   title: Localised<RichText>
-  /** Only an exam-part node has it: the part of the exam it is about. */
-  exam?: ExamPart
+  /** Exam-part nodes only: the module of the exam and the number of the part inside it. */
+  module?: ExamModule
+  part?: number
+  /** Phrases nodes only: what the phrases are for, and the ids of the exam-part nodes whose tasks they serve. */
+  purpose?: Localised<RichText>
+  examTasks?: string[]
 }
 
 /** A chapter as the tree shows it: a stop on the line of its level. */
@@ -544,6 +643,23 @@ export interface TrueFalseQuestion extends QuestionBase {
   answer: boolean
 }
 
+/**
+ * The learner types the answer. `answers` lists every accepted answer; the
+ * first is the one a result shows as the right answer.
+ */
+export interface TypedAnswerQuestion extends QuestionBase {
+  type: 'typed-answer'
+  answers: string[]
+}
+
+/** The prompt holds one gap; the learner types what fills it. `answers` as in a typed answer. */
+export interface TypedGapFillQuestion extends QuestionBase {
+  type: 'typed-gap-fill'
+  answers: string[]
+  /** The prompt cut at its gap, so the app can show the typed form inside the sentence. */
+  gap: { before: string; after: string }
+}
+
 /** An item of an exam task: the prompt is a statement about the task's text; `answer` says whether the text makes it right. */
 export interface RichtigFalschQuestion extends QuestionBase {
   type: 'richtig-falsch'
@@ -554,7 +670,13 @@ export interface RichtigFalschQuestion extends QuestionBase {
  * Every question the app can ask, check and show: those of a node's pool and
  * the items of an exam task.
  */
-export type Question = MultipleChoiceQuestion | GapFillQuestion | TrueFalseQuestion | RichtigFalschQuestion
+export type Question =
+  | MultipleChoiceQuestion
+  | GapFillQuestion
+  | TrueFalseQuestion
+  | TypedAnswerQuestion
+  | TypedGapFillQuestion
+  | RichtigFalschQuestion
 
 /** A question that is an item of an exam task: its answer lies in the task's texts. */
 export type TaskItem = RichtigFalschQuestion
