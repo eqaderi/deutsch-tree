@@ -124,6 +124,19 @@ const level = z.string().regex(/^[A-C][12]$/, 'must be a level such as A1, A2 or
 /** Later question types join this union under their own `type`. */
 const question = z.discriminatedUnion('type', [multipleChoiceQuestion])
 
+/**
+ * Proof that an independent reviewer answered the pool without seeing the
+ * answer key, and that every disagreement was resolved. Written by
+ * `pnpm review:record`, never by hand.
+ */
+const reviewRecord = z.strictObject({
+  /** Who answered the pool blind: a person, or an AI agent named as one. */
+  reviewer: text,
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'must be a date such as 2026-11-26'),
+  /** Fingerprint of the questions and the answer key that were reviewed. */
+  pool: text,
+})
+
 /** The content sections that a published node must have. */
 const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
 
@@ -152,6 +165,8 @@ export const nodeFileSchema = z
     examples: z.array(example).min(1).optional(),
     mistakes: z.array(mistake).min(1).optional(),
     questions: z.array(question).min(1).optional(),
+    /** A published node must have one that matches its pool; the content pipeline checks it. */
+    review: reviewRecord.optional(),
   })
   .superRefine((value, ctx) => {
     if (value.kind === 'grammar' && !/^grammar-\d{3}$/.test(value.id)) {
