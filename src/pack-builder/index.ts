@@ -9,7 +9,7 @@
  * nothing is written. A wrong answer key that looks right is the worst
  * outcome, so there are no silent guesses.
  */
-import { mkdir, rename, rm, stat, writeFile } from 'node:fs/promises'
+import { copyFile, mkdir, rename, rm, stat, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import {
   PACK_ANSWER_KEY_FILE,
@@ -19,12 +19,14 @@ import {
   type PackAnswerRepair,
   type PackDescription,
   type PackExam,
+  type PackRecording,
   type PageRange,
 } from '../content-model/pack.ts'
 import { itemsByPart, readAnswerKey } from './answer-key.ts'
 import { type ExamOutline, outlineErrors, outlineOf } from './exam-pdf.ts'
 import { readPdfText, splitPdf } from './pdf.ts'
 import { type BookProfileOverrides, resolveProfile } from './profile.ts'
+import { type MatchedRecording, matchRecordings } from './recordings.ts'
 
 export interface PackBuildOptions {
   /** The book's exams as one PDF with a text layer. */
@@ -100,8 +102,20 @@ function headingsOf(exams: ExamOutline[]): FoundHeading[] {
 
 const two = (number: number) => String(number).padStart(2, '0')
 
+/** Where a part's recordings go inside the pack: exams/01/hoeren-1.mp3, or -1-1, -1-2 when it has several. */
+function placeRecordings(recordings: MatchedRecording[], moduleId: string): PackRecording[] {
+  return recordings.map((recording, index) => {
+    const ending = path.posix.extname(recording.source).toLowerCase()
+    const turn = recordings.length > 1 ? `-${index + 1}` : ''
+    return {
+      file: `exams/${two(recording.exam)}/${moduleId}-${recording.part}${turn}${ending}`,
+      source: recording.source,
+    }
+  })
+}
+
 /** The description's exams, from an outline that has passed outlineErrors. */
-function describeExams(exams: ExamOutline[], lastPage: number): PackExam[] {
+function describeExams(exams: ExamOutline[], lastPage: number, recordings: MatchedRecording[]): PackExam[] {
   return exams.map((exam, examIndex) => {
     const examLast = (exams[examIndex + 1]?.page ?? lastPage + 1) - 1
     const inExam = (range: PageRange): PageRange => ({
@@ -133,7 +147,12 @@ function describeExams(exams: ExamOutline[], lastPage: number): PackExam[] {
               pages: inExam(partRange),
               sourcePages: partRange,
               items: items[partIndex] ?? [],
-              recordings: [],
+              recordings: module.profile.recordings
+                ? placeRecordings(
+                    recordings.filter((entry) => entry.exam === exam.number && entry.part === part.number),
+                    module.profile.id,
+                  )
+                : [],
             }
           }),
         }
@@ -190,6 +209,13 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
   repairs = key.repairs
   for (const message of key.errors) problem('answer-key', message)
 
+  const recordings = await matchRecordings(
+    options.audioDir,
+    profile,
+    outline.map((exam) => exam.number),
+  )
+  for (const message of recordings.errors) problem('recordings', message)
+
   if (errors.length > 0) return failed()
 
   const description: PackDescription = {
@@ -197,7 +223,7 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
     id,
     name: options.name,
     examCount: outline.length,
-    exams: describeExams(outline, lastPage),
+    exams: describeExams(outline, lastPage, recordings.matched),
   }
   const answerKey: PackAnswerKey = { format: PACK_FORMAT, exams: key.exams, repairs }
 
@@ -213,6 +239,11 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
       options.examPdf,
       description.exams.map((exam) => ({ file: path.join(building, exam.pagesFile), ...exam.sourcePages })),
     )
+    for (const recording of description.exams.flatMap((exam) =>
+      exam.modules.flatMap((module) => module.parts.flatMap((part) => part.recordings)),
+    )) {
+      await copyFile(path.join(options.audioDir, recording.source), path.join(building, recording.file))
+    }
     await writeFile(path.join(building, PACK_DESCRIPTION_FILE), `${JSON.stringify(description, null, 2)}\n`)
     await writeFile(path.join(building, PACK_ANSWER_KEY_FILE), `${JSON.stringify(answerKey, null, 2)}\n`)
     await rename(building, packDir)

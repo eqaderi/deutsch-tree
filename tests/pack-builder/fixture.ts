@@ -126,13 +126,13 @@ async function pdfOf(pages: FixturePage[]): Promise<Uint8Array> {
 }
 
 /**
- * About a quarter of a second of silence as an MP3: ten MPEG-1 Layer III
- * frames (128 kbit/s, 44.1 kHz) with nothing in them.
+ * Silence as an MP3: MPEG-1 Layer III frames (128 kbit/s, 44.1 kHz, 26 ms
+ * each) with nothing in them.
  */
-export function silentMp3(): Buffer {
+export function silentMp3(frames = 10): Buffer {
   const frame = Buffer.alloc(417)
   frame.set([0xff, 0xfb, 0x90, 0x64])
-  return Buffer.concat(Array.from({ length: 10 }, () => frame))
+  return Buffer.concat(Array.from({ length: frames }, () => frame))
 }
 
 /** Writes a book's source files into a folder; a new temporary one unless given. */
@@ -147,7 +147,11 @@ export async function writeFixtureBook(book: FixtureBook, dir?: string): Promise
   await mkdir(files.audioDir, { recursive: true })
   await writeFile(files.examPdf, await pdfOf(book.examPages))
   await writeFile(files.answerKeyPdf, await pdfOf(book.keyPages))
-  for (const name of book.recordings) await writeFile(path.join(files.audioDir, name), silentMp3())
+  // Every recording has its own length, so a test can tell which file was copied where.
+  for (const [index, name] of book.recordings.entries()) {
+    await mkdir(path.dirname(path.join(files.audioDir, name)), { recursive: true })
+    await writeFile(path.join(files.audioDir, name), silentMp3(10 + index))
+  }
   return files
 }
 

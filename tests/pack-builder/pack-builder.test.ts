@@ -16,7 +16,7 @@ async function build(book: FixtureBook = fixtureBook()) {
     name: 'Fixture book',
     outDir,
   })
-  return { ...result, outDir }
+  return { ...result, outDir, files }
 }
 
 async function readJson(packDir: string | null, file: string) {
@@ -219,4 +219,32 @@ test('a numbering misprint in the answer key is repaired, and the repair is reco
   const repair = { exam: 2, module: 'lesen', part: 2, item: 9, printed: 8 }
   expect(report.repairs).toEqual([repair])
   expect((await readJson(packDir, 'answers.json')).repairs).toEqual([repair])
+})
+
+test('recordings are matched to Hören parts by file name and copied into the pack', async () => {
+  const { packDir, files } = await build()
+  const description = await readJson(packDir, 'pack.json')
+  const recordings = (exam: number, moduleId: string) =>
+    description.exams[exam - 1].modules
+      .find((module: { id: string }) => module.id === moduleId)
+      .parts.map((part: { recordings: unknown }) => part.recordings)
+
+  expect(recordings(1, 'hoeren')).toEqual([
+    [{ file: 'exams/01/hoeren-1.mp3', source: 'Modelltest-1-Hoeren-Teil-1.mp3' }],
+    [{ file: 'exams/01/hoeren-2.mp3', source: 'Modelltest-1-Hoeren-Teil-2.mp3' }],
+    [{ file: 'exams/01/hoeren-3.mp3', source: 'Modelltest-1-Hoeren-Teil-3.mp3' }],
+    [{ file: 'exams/01/hoeren-4.mp3', source: 'Modelltest-1-Hoeren-Teil-4.mp3' }],
+  ])
+  expect(recordings(2, 'hoeren')).toEqual([
+    [{ file: 'exams/02/hoeren-1.mp3', source: 'Modelltest-2-Hoeren-Teil-1.mp3' }],
+    [{ file: 'exams/02/hoeren-2.mp3', source: 'Modelltest-2-Hoeren-Teil-2.mp3' }],
+    [{ file: 'exams/02/hoeren-3.mp3', source: 'Modelltest-2-Hoeren-Teil-3.mp3' }],
+    [{ file: 'exams/02/hoeren-4.mp3', source: 'Modelltest-2-Hoeren-Teil-4.mp3' }],
+  ])
+  expect(recordings(1, 'lesen')).toEqual([[], [], [], [], []])
+
+  // The copy is the learner's file, byte for byte.
+  const copied = await readFile(path.join(packDir as string, 'exams/02/hoeren-3.mp3'))
+  const original = await readFile(path.join(files.audioDir, 'Modelltest-2-Hoeren-Teil-3.mp3'))
+  expect(copied.equals(original)).toBe(true)
 })
