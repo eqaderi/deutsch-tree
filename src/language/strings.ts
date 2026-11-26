@@ -74,6 +74,7 @@ export const en = {
   allTopics: 'All topics',
   rule: 'Rule',
   table: 'Table',
+  diagram: 'Diagram',
   examples: 'Examples',
   commonMistakes: 'Common mistakes',
   wrong: 'Wrong',

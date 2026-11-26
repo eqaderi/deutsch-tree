@@ -43,7 +43,9 @@ function passagesOf(node: CompiledNode, language: Language): RichText[] {
   if (!content) return []
   return [
     content.explanations[language].rule,
-    ...content.table.rows.map((row): RichText => [{ de: row.join(CELL) }]),
+    // What a diagram shows is said in its caption; the drawing itself is not searched.
+    ...(content.diagrams ?? []).map((diagram) => diagram.caption[language]),
+    ...(content.table?.rows ?? []).map((row): RichText => [{ de: row.join(CELL) }]),
     ...content.examples.map(
       // A learner reading in German needs no translation.
       (example): RichText =>

@@ -10,11 +10,13 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
 import type { z } from 'zod'
+import { readDrawing } from '../content-model/diagram.ts'
 import {
   type ChapterEntry,
   type CompiledNode,
   type ContentBundle,
   chaptersFileSchema,
+  type Diagram,
   type FindErrorQuestion,
   GAP,
   type GrammarContent,
@@ -323,18 +325,33 @@ function compileNode(file: NodeFile): CompiledNode {
 
 function compileGrammarContent(file: NodeFile): GrammarContent {
   // The schema guarantees these sections for a published node.
-  const { explanations, table, examples, mistakes, questions } = file as Required<NodeFile>
+  const { explanations, examples, mistakes, questions } = file as Required<NodeFile>
+  const { table, diagrams } = file
   return {
     explanations: {
       en: { rule: richText(explanations.en.rule) },
       fa: { rule: richText(explanations.fa.rule) },
       de: { rule: richText(explanations.de.rule) },
     },
-    table,
+    ...(table && { table }),
+    ...(diagrams && { diagrams: diagrams.map(compileDiagram) }),
     examples,
     mistakes: mistakes.map((mistake) => ({ ...mistake, why: richTextIn(mistake.why) })),
     questions: questions.map(compileQuestion),
     attemptSize: file.attemptSize,
+  }
+}
+
+function compileDiagram(diagram: NonNullable<NodeFile['diagrams']>[number]): Diagram {
+  // The schema has read the drawing already, and refused it if it had a problem.
+  const { drawing } = readDrawing(diagram.svg, Object.keys(diagram.labels))
+  if (!drawing) throw new Error('a diagram that the schema accepted could not be read')
+  return {
+    width: drawing.width,
+    height: drawing.height,
+    drawing: drawing.parts,
+    labels: diagram.labels,
+    caption: richTextIn(diagram.caption),
   }
 }
 

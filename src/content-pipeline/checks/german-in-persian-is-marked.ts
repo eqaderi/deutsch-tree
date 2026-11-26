@@ -11,7 +11,9 @@ import { CHAPTERS_FILE, type ContentCheck, type ContentProblem, problemIn } from
  * The rule takes every Latin letter for German, because Persian is written
  * without any. A level ("B1") or a name in Latin letters goes in asterisks
  * too. It covers the texts in which asterisks mark German: titles, chapter
- * names, purposes, rules, and the one-line reasons of mistakes and questions.
+ * names, purposes, rules, captions of diagrams, and the one-line reasons of
+ * mistakes and questions. A diagram's labels hold no German at all; the
+ * schema says so.
  */
 export const germanInPersianIsMarked: ContentCheck = ({ nodes, chapters }) => {
   const problems: ContentProblem[] = []
@@ -36,6 +38,10 @@ function persianTextsOf(node: NodeFile): Array<{ where: string; text: string; qu
     { where: 'title.fa', text: node.title.fa },
     ...(node.purpose ? [{ where: 'purpose.fa', text: node.purpose.fa }] : []),
     ...(node.explanations ? [{ where: 'explanations.fa.rule', text: node.explanations.fa.rule }] : []),
+    ...(node.diagrams ?? []).map((diagram, index) => ({
+      where: `diagrams[${index}].caption.fa`,
+      text: diagram.caption.fa,
+    })),
     ...(node.mistakes ?? []).map((mistake, index) => ({ where: `mistakes[${index}].why.fa`, text: mistake.why.fa })),
     ...(node.questions ?? []).map((question, index) => ({
       where: `questions[${index}].explanation.fa`,

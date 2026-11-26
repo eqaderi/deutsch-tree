@@ -20,6 +20,25 @@ explanations:
   de:
     rule: "Ein Test-Nomen hat einen von drei Artikeln: *der*, *die* oder *das*."
 
+# The fixture's one diagram: German drawn in it, and one label in the learner's language.
+diagrams:
+  - caption:
+      en: "The book lies *auf dem Tisch*."
+      fa: "کتاب *auf dem Tisch* است."
+      de: "Das Buch liegt *auf dem Tisch*."
+    labels:
+      table:
+        en: the table
+        fa: میز
+        de: der Tisch
+    svg: |
+      <svg viewBox="0 0 320 180">
+        <rect class="surface" x="60" y="110" width="200" height="20" rx="8"/>
+        <rect class="object" x="130" y="86" width="60" height="24" rx="4"/>
+        <text class="label" x="160" y="60" text-anchor="middle">auf dem Tisch</text>
+        <text class="note" x="160" y="160" text-anchor="middle">{{table}}</text>
+      </svg>
+
 table:
   columns:
     - en: Article

@@ -22,6 +22,15 @@ test('the search data of a language holds what a published node says, in that la
   ])
 })
 
+test('the caption of a diagram is found by search, after the rule', async () => {
+  const { bundle } = await compileContent(fixtureContent)
+
+  const passages = (language: 'en' | 'fa') =>
+    bundle?.search[language].entries.find((entry) => entry.node === 'grammar-101')?.passages.slice(1, 3)
+  expect(passages('en')).toEqual([['The book lies ', { de: 'auf dem Tisch' }, '.'], [{ de: 'der · Tisch' }]])
+  expect(passages('fa')?.[0]).toEqual(['کتاب ', { de: 'auf dem Tisch' }, ' است.'])
+})
+
 test('a node that is coming soon has no search data: the index has its title', async () => {
   const { bundle } = await compileContent(fixtureContent)
 

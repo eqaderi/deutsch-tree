@@ -988,6 +988,88 @@ main.wrap {
   font-size: 17px;
 }
 
+/*
+ * Diagrams: drawn on an inner card, with the interface's colours. A drawing
+ * is 320 wide (src/content-model/diagram.ts) and is drawn at most 400px wide,
+ * so a label is never smaller than about 14px on a phone and never larger
+ * than 20px on a computer. The classes are the only look a drawing can have;
+ * content/README.md, "Diagrams", lists them.
+ */
+.diagram {
+  margin: 0;
+}
+
+.diagram + .diagram {
+  margin-block-start: var(--gap);
+}
+
+.diagram-drawing {
+  border-radius: var(--radius-card);
+  background: var(--raised);
+  padding: 8px;
+}
+
+.diagram-drawing svg {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 400px;
+  block-size: auto;
+  margin-inline: auto;
+}
+
+.diagram figcaption {
+  margin-block-start: 8px;
+  color: var(--text-secondary);
+}
+
+.diagram .object {
+  fill: var(--text);
+}
+
+.diagram .surface {
+  fill: var(--panel);
+  stroke: var(--ring);
+  stroke-width: 1.5;
+}
+
+.diagram .shade {
+  fill: var(--kind-grammar);
+}
+
+.diagram .line {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.diagram .guide {
+  fill: none;
+  stroke: var(--ring);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+
+.diagram text {
+  font-family: var(--font-latin);
+  fill: var(--text);
+}
+
+.diagram text:lang(fa) {
+  font-family: var(--font-persian);
+}
+
+.diagram .label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.diagram .note {
+  font-size: 14px;
+  fill: var(--text-secondary);
+}
+
 .examples,
 .mistakes {
   list-style: none;

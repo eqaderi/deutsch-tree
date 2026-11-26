@@ -64,6 +64,7 @@ export const de: Strings = {
   allTopics: 'Alle Themen',
   rule: 'Regel',
   table: 'Tabelle',
+  diagram: 'Bild',
   examples: 'Beispiele',
   commonMistakes: 'Häufige Fehler',
   wrong: 'Falsch',

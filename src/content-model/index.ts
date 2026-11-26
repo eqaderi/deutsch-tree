@@ -9,6 +9,7 @@
  *      (*ich wohne*), so the app can render it left to right as German.
  */
 import { z } from 'zod'
+import { type DiagramPart, readDrawing } from './diagram.ts'
 
 export const LANGUAGES = ['en', 'fa', 'de'] as const
 export type Language = (typeof LANGUAGES)[number]
@@ -76,6 +77,42 @@ const table = z
         })
       }
     })
+  })
+
+/** The name of a label in a drawing: {{box}}. */
+const labelName = z.string().regex(/^[a-z][a-z0-9-]*$/, 'must be lower-case letters, digits and hyphens, like "box"')
+
+/**
+ * A diagram: a drawing written as SVG, the words of the learner's language
+ * it shows (its labels), and a caption that says what it shows. German is
+ * written in the drawing itself. The format: content/README.md, "Diagrams".
+ */
+const diagram = z
+  .strictObject({
+    /** One or two sentences saying what the drawing shows. Also what a screen reader reads for it. */
+    caption: localised,
+    /** Words of the learner's language, by name; the drawing shows one as {{name}}. */
+    labels: z.record(labelName, localised).default({}),
+    /** The drawing. */
+    svg: text,
+  })
+  .superRefine((value, ctx) => {
+    const names = Object.keys(value.labels)
+    const { problems, used } = readDrawing(value.svg, names)
+    for (const message of problems) ctx.addIssue({ code: 'custom', path: ['svg'], message })
+    for (const name of names) {
+      if (used && !used.includes(name)) {
+        ctx.addIssue({ code: 'custom', path: ['labels', name], message: 'is not used in the drawing' })
+      }
+      const german = /\p{Script=Latin}+/u.exec(value.labels[name]?.fa ?? '')?.[0]
+      if (german) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['labels', name, 'fa'],
+          message: `a label holds no German ("${german}"); write the German as its own text in the drawing`,
+        })
+      }
+    }
   })
 
 const example = z.strictObject({ de: text, en: textIn('en'), fa: textIn('fa') })
@@ -369,8 +406,8 @@ const FIELDS_OF_ONE_KIND = {
 
 const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${kind}`
 
-/** The content sections that a published node must have. */
-const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
+/** The content sections that a published node must have. The table may be left out for a diagram. */
+const CONTENT_SECTIONS = ['explanations', 'examples', 'mistakes', 'questions'] as const
 
 export const nodeFileSchema = z
   .strictObject({
@@ -404,6 +441,8 @@ export const nodeFileSchema = z
       .strictObject({ en: explanationIn('en'), fa: explanationIn('fa'), de: explanationIn('de') })
       .optional(),
     table: table.optional(),
+    /** Drawings, shown after the rule and before the table. A published node needs a table, a diagram or both. */
+    diagrams: z.array(diagram).min(1).optional(),
     examples: z.array(example).min(1).optional(),
     mistakes: z.array(mistake).min(1).optional(),
     questions: z.array(question).min(1).optional(),
@@ -490,6 +529,13 @@ export const nodeFileSchema = z
       if (value[section] === undefined) {
         ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
       }
+    }
+    if (value.table === undefined && value.diagrams === undefined) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['table'],
+        message: 'is required for a published node, unless it has a diagram',
+      })
     }
   })
 
@@ -660,6 +706,21 @@ export interface GrammarTable {
   rows: string[][]
 }
 
+/**
+ * A diagram as the app draws it. The drawing is read into shapes; a label
+ * stands in it by name, and the app writes it in the learner's language.
+ */
+export interface Diagram {
+  /** The width and height of the drawing. The app scales it to the page. */
+  width: number
+  height: number
+  drawing: DiagramPart[]
+  labels: Record<string, Localised>
+  caption: Localised<RichText>
+}
+
+export type { DiagramPart, DiagramShape, DiagramTag } from './diagram.ts'
+
 export interface Example {
   de: string
   en: string
@@ -762,7 +823,10 @@ export type Question =
 
 export interface GrammarContent {
   explanations: Localised<{ rule: RichText }>
-  table: GrammarTable
+  /** A node explained by a diagram alone has no table. */
+  table?: GrammarTable
+  /** Drawings, shown after the rule and before the table. */
+  diagrams?: Diagram[]
   examples: Example[]
   mistakes: Mistake[]
   /** The pool. */

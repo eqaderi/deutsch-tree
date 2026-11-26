@@ -68,6 +68,7 @@ export const fa: Strings = {
   allTopics: 'همهٔ موضوع‌ها',
   rule: 'قاعده',
   table: 'جدول',
+  diagram: 'نمودار',
   examples: 'مثال‌ها',
   commonMistakes: 'اشتباه‌های رایج',
   wrong: 'غلط',

@@ -4,6 +4,7 @@ import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { isDone, unmarkDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
+import { DiagramView } from './DiagramView.tsx'
 import { German, plainText, RichText } from './German.tsx'
 import { GrammarTableView } from './GrammarTableView.tsx'
 import { KindLabel } from './KindLabel.tsx'
@@ -164,9 +165,19 @@ function GrammarSections({ content }: { content: GrammarContent }) {
         </p>
       </Panel>
 
-      <Panel id="section-table" heading={strings.table}>
-        <GrammarTableView table={content.table} />
-      </Panel>
+      {content.diagrams && (
+        <Panel id="section-diagram" heading={strings.diagram}>
+          {content.diagrams.map((diagram, index) => (
+            <DiagramView key={index} diagram={diagram} />
+          ))}
+        </Panel>
+      )}
+
+      {content.table && (
+        <Panel id="section-table" heading={strings.table}>
+          <GrammarTableView table={content.table} />
+        </Panel>
+      )}
 
       <Panel id="section-examples" heading={strings.examples}>
         <ul className="examples">
