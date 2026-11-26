@@ -44,7 +44,7 @@ test('an un-marked node is done again after its test is passed again', () => {
 
 test('un-marking keeps whatever else is recorded for the node', () => {
   // A later kind of result (an entered score, say) adds its own fields to a node.
-  const progress = { nodes: { 'exam-writing-1': { done: true, attempts: 1, scores: [92] } } }
+  const progress = { ...emptyProgress(), nodes: { 'exam-writing-1': { done: true, attempts: 1, scores: [92] } } }
 
   expect(unmarkDone(progress, 'exam-writing-1').nodes['exam-writing-1']).toEqual({
     done: false,

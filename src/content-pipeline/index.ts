@@ -1,6 +1,6 @@
 /**
- * Content pipeline: the chapter list and node files in, compiled bundle and a
- * report out.
+ * Content pipeline: the chapter list, node files and the list of official
+ * mock exams in, compiled bundle and a report out.
  *
  * `compileContent` reads and validates; it never writes. `writeBundle` puts a
  * compiled bundle on disk. The command line (cli.ts) and the site build
@@ -9,6 +9,7 @@
 import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
+import type { z } from 'zod'
 import {
   type ChapterEntry,
   type CompiledNode,
@@ -21,10 +22,21 @@ import {
   type NodeFile,
   type NodeSummary,
   nodeFileSchema,
+  type OfficialMockExam,
+  type OfficialMockExams,
+  officialMockExamsFileSchema,
   type Question,
   type RichText,
 } from '../content-model/index.ts'
+import { READINESS_EXAMS } from '../learning-engine/index.ts'
+import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
+import { overviewData } from './overview-data.ts'
+import { searchData } from './search-data.ts'
+
+/** The list of official mock exams, beside the `nodes` folder, and its file in the compiled bundle. */
+export const OFFICIAL_MOCK_EXAMS_FILE = 'official-mock-exams.yaml'
+export const OFFICIAL_MOCK_EXAMS_JSON = 'official-mock-exams.json'
 
 export type { ContentProblem }
 
@@ -88,6 +100,7 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
   }
 
   const chapters = await readChapters(contentDir, errors)
+  const officialMockExams = await readOfficialMockExams(contentDir, errors)
 
   for (const check of CHECKS) {
     errors.push(...(await check({ contentDir, nodes: checked, ids, chapters })))
@@ -116,6 +129,9 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
             nodes: nodes.map(summarise),
           },
           nodes,
+          officialMockExams: officialMockExams ?? [],
+          search: searchData(nodes),
+          overview: overviewData(nodes),
         }
       : null,
   }
@@ -125,7 +141,18 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
 export function bundleFiles(bundle: ContentBundle): Array<{ path: string; json: string }> {
   return [
     { path: 'index.json', json: JSON.stringify(bundle.index) },
+    {
+      path: OFFICIAL_MOCK_EXAMS_JSON,
+      json: JSON.stringify({ exams: bundle.officialMockExams } satisfies OfficialMockExams),
+    },
     ...bundle.nodes.map((node) => ({ path: `nodes/${node.id}.json`, json: JSON.stringify(node) })),
+    // Fetched only when the learner opens the "all grammar at a glance" page.
+    { path: 'overview.json', json: JSON.stringify(bundle.overview) },
+    // Fetched only when the learner opens search.
+    ...LANGUAGES.map((language) => ({
+      path: `search/${language}.json`,
+      json: JSON.stringify(bundle.search[language]),
+    })),
   ]
 }
 
@@ -174,15 +201,67 @@ async function findNodeFiles(contentDir: string): Promise<string[]> {
 }
 
 /** The chapter list, or null when it cannot be used; the reason is then added to `errors`. */
-async function readChapters(contentDir: string, errors: ContentProblem[]): Promise<ChapterEntry[] | null> {
+function readChapters(contentDir: string, errors: ContentProblem[]): Promise<ChapterEntry[] | null> {
+  return readListFile(contentDir, CHAPTERS_FILE, chaptersFileSchema, errors, {
+    whenMissing: 'is missing: the chapter list that every node file names a chapter of',
+  })
+}
+
+/**
+ * The official mock exams, compiled, or null when the list cannot be used;
+ * the reasons are then added to `errors`.
+ */
+async function readOfficialMockExams(contentDir: string, errors: ContentProblem[]): Promise<OfficialMockExam[] | null> {
+  const before = errors.length
+  const exams = await readListFile(contentDir, OFFICIAL_MOCK_EXAMS_FILE, officialMockExamsFileSchema, errors, {
+    whenMissing: 'is missing: the list of official mock exams that the readiness view links to',
+  })
+  if (!exams) return null
+
+  exams.forEach((exam, examIndex) => {
+    exam.links.forEach((link, linkIndex) => {
+      const message = link.note && unmarkedGerman(link.note.fa)
+      if (message) {
+        errors.push({ file: OFFICIAL_MOCK_EXAMS_FILE, where: `[${examIndex}].links[${linkIndex}].note.fa`, message })
+      }
+    })
+  })
+
+  const counting = exams.filter((exam) => exam.countsTowardReadiness).length
+  if (counting < READINESS_EXAMS) {
+    errors.push({
+      file: OFFICIAL_MOCK_EXAMS_FILE,
+      message: `only ${counting} exam${counting === 1 ? ' counts' : 's count'} toward readiness: the readiness rule needs ${READINESS_EXAMS}, so the learner could never reach it`,
+    })
+  }
+  if (errors.length > before) return null
+
+  return exams.map((exam) => ({
+    ...exam,
+    // The day a link was last checked is for maintainers; the learner is not shown it.
+    links: exam.links.map(({ checked: _checked, note, ...link }) => ({
+      ...link,
+      ...(note ? { note: richTextIn(note) } : {}),
+    })),
+  }))
+}
+
+/**
+ * A content file that holds one list, read and held against its schema. Null
+ * when it cannot be used; the reason is then added to `errors`.
+ */
+async function readListFile<T>(
+  contentDir: string,
+  file: string,
+  schema: z.ZodType<T>,
+  errors: ContentProblem[],
+  { whenMissing }: { whenMissing: string },
+): Promise<T | null> {
   let source: string
   try {
-    source = await readFile(path.join(contentDir, CHAPTERS_FILE), 'utf8')
+    source = await readFile(path.join(contentDir, file), 'utf8')
   } catch {
-    errors.push({
-      file: CHAPTERS_FILE,
-      message: 'is missing: the chapter list that every node file names a chapter of',
-    })
+    errors.push({ file, message: whenMissing })
     return null
   }
 
@@ -190,14 +269,14 @@ async function readChapters(contentDir: string, errors: ContentProblem[]): Promi
   try {
     raw = parseYaml(source)
   } catch (error) {
-    errors.push({ file: CHAPTERS_FILE, message: `is not valid YAML: ${(error as Error).message}` })
+    errors.push({ file, message: `is not valid YAML: ${(error as Error).message}` })
     return null
   }
 
-  const parsed = chaptersFileSchema.safeParse(raw)
+  const parsed = schema.safeParse(raw)
   if (!parsed.success) {
     for (const issue of parsed.error.issues) {
-      errors.push({ file: CHAPTERS_FILE, where: formatPath(issue.path), message: issue.message })
+      errors.push({ file, where: formatPath(issue.path), message: issue.message })
     }
     return null
   }

@@ -6,6 +6,7 @@ import { countNodes, hasProgress, nextRecommended, nodeState, passMark, youAreHe
 import { BackupSuggestion } from './BackupSuggestion.tsx'
 import { CheckpointStop } from './CheckpointPage.tsx'
 import { loadIndex } from './content.ts'
+import { ExamStop } from './ExamStop.tsx'
 import { useFirstSteps } from './firstVisit.ts'
 import { RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
@@ -93,11 +94,11 @@ export function TreePage() {
           )
         })}
         <span className="strip-line" aria-hidden="true" />
-        <span className="strip-end">
+        <Link to="/readiness" className="strip-end">
           {/* Every topic is done: the learner is past the last level. */}
           {here === undefined && nodes.length > 0 && <em className="here">{strings.youAreHere}</em>}
           {strings.routeExam}
-        </span>
+        </Link>
       </nav>
 
       {level !== undefined && (
@@ -141,6 +142,8 @@ export function TreePage() {
             ))}
             {/* The checkpoint is the level's, whatever kind the tree is filtered to. */}
             <CheckpointStop level={level} ready={inLevel(nodes, level).some((node) => node.status === 'published')} />
+            {/* The last level ends with the exam and the readiness rule. */}
+            {level === levels.at(-1) && <ExamStop />}
           </div>
         </>
       )}
