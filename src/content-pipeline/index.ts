@@ -22,12 +22,14 @@ import {
   type GrammarContent,
   LANGUAGES,
   type Localised,
+  type NodeContent,
   type NodeFile,
   type NodeSummary,
   nodeFileSchema,
   type OfficialMockExam,
   type OfficialMockExams,
   officialMockExamsFileSchema,
+  type PhrasesContent,
   type Question,
   type RichText,
   WORD,
@@ -324,14 +326,29 @@ function compileNode(file: NodeFile): CompiledNode {
     ...(file.examTasks !== undefined && { examTasks: file.examTasks }),
   }
   // Drafts inside a "coming soon" file are checked but never shipped.
-  if (file.status !== 'published') return { ...summary, content: null }
-  return { ...summary, content: isAssistantGraded(file) ? compileTaskContent(file) : compileGrammarContent(file) }
+  return { ...summary, content: file.status === 'published' ? compileContentOf(file) : null }
+}
+
+/** The page content of a published node. The schema lets only the kinds with a page be published. */
+function compileContentOf(file: NodeFile): NodeContent {
+  if (isAssistantGraded(file)) return compileTaskContent(file)
+  return file.kind === 'phrases' ? compilePhrasesContent(file) : compileGrammarContent(file)
 }
 
 /** A writing or speaking node: its task, with the module and the part that say which task it is. */
 function compileTaskContent(file: NodeFile): ExamTaskContent {
   // The schema guarantees the module, the part, and the fields of that part's task.
   return { task: { module: file.module, part: file.part, ...file.task } as ExamTask }
+}
+
+function compilePhrasesContent(file: NodeFile): PhrasesContent {
+  // The schema guarantees these sections for a published node.
+  const { phrases, questions } = file as Required<NodeFile>
+  return {
+    phrases: phrases.map((phrase) => ({ ...phrase, meaning: richTextIn(phrase.meaning) })),
+    questions: questions.map(compileQuestion),
+    attemptSize: file.attemptSize,
+  }
 }
 
 function compileGrammarContent(file: NodeFile): GrammarContent {

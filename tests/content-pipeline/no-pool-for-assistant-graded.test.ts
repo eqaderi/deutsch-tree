@@ -21,11 +21,8 @@ test('published writing and speaking nodes pass with no question pool and no rev
   const { report, bundle } = await compileContent(fixtureContent)
 
   expect(report.errors).toEqual([])
-  const examParts = bundle?.index.nodes.filter((node) => node.kind === 'exam-part')
-  expect(examParts?.map((node) => [node.id, node.status])).toEqual([
-    ['exam-schreiben-1', 'published'],
-    ['exam-sprechen-1', 'published'],
-  ])
+  const published = bundle?.index.nodes.filter((node) => node.kind === 'exam-part' && node.status === 'published')
+  expect(published?.map((node) => node.id)).toEqual(['exam-schreiben-1', 'exam-sprechen-1'])
 })
 
 test('a writing node may not hold a question pool', async () => {

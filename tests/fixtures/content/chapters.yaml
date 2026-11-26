@@ -57,3 +57,21 @@
     en: "Fixture exam: speaking"
     fa: "امتحان آزمایشی: صحبت کردن"
     de: "Test-Prüfung: Sprechen"
+
+# A fourth level for the phrases node and an exam part it serves. It is a level of its own, so that
+# the levels above keep the counts that the tests of the tree and of the checkpoints know.
+- id: fixture-set-phrases
+  level: B2
+  kind: phrases
+  title:
+    en: Fixture set phrases
+    fa: عبارت‌های ثابت آزمایشی
+    de: Test-Redemittel
+
+- id: fixture-exam-parts
+  level: B2
+  kind: exam-part
+  title:
+    en: Fixture exam parts served by phrases
+    fa: بخش‌های امتحان آزمایشی برای عبارت‌ها
+    de: Test-Prüfungsteile für Redemittel

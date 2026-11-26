@@ -8,10 +8,12 @@
  * wrong German as if it were an example).
  *
  * A new kind of node adds its own passages in `passagesOf`; the shape of the
- * data and the app's search stay as they are.
+ * data and the app's search stay as they are. A phrases node gives what its
+ * phrases are for, and each phrase with its meaning and its example.
  */
 import {
   type CompiledNode,
+  type Example,
   type ExamTask,
   LANGUAGES,
   type Language,
@@ -44,16 +46,26 @@ function passagesOf(node: CompiledNode, language: Language): RichText[] {
   const { content } = node
   if (!content) return []
   if (!hasPool(content)) return taskPassages(content.task)
+  if ('phrases' in content) {
+    return [
+      ...(node.purpose ? [node.purpose[language]] : []),
+      ...content.phrases.flatMap((phrase) => [
+        joined([{ de: phrase.de }, THEN, ...phrase.meaning[language]]),
+        exampleWithItsMeaning(phrase.example, language),
+      ]),
+    ]
+  }
   return [
     content.explanations[language].rule,
     ...content.table.rows.map((row): RichText => [{ de: row.join(CELL) }]),
-    ...content.examples.map(
-      // A learner reading in German needs no translation.
-      (example): RichText =>
-        language === 'de' ? [{ de: example.de }] : [{ de: example.de }, THEN + example[language]],
-    ),
+    ...content.examples.map((example) => exampleWithItsMeaning(example, language)),
     ...content.mistakes.map((mistake): RichText => joined([{ de: mistake.right }, THEN, ...mistake.why[language]])),
   ]
+}
+
+/** A German sentence, and what it means in the learner's language. A learner reading in German needs no translation. */
+function exampleWithItsMeaning(example: Example, language: Language): RichText {
+  return language === 'de' ? [{ de: example.de }] : [{ de: example.de }, THEN + example[language]]
 }
 
 /**

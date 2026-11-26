@@ -88,9 +88,10 @@ export const FIXTURE_NODE = 'grammar-001'
 
 /** Every question of the fixture nodes, by node and question id ("grammar-001/q1"). */
 export async function fixtureQuestions(): Promise<Map<string, FixtureQuestion>> {
-  const folder = fileURLToPath(new URL('../fixtures/content/nodes/grammar/', import.meta.url))
+  const folder = fileURLToPath(new URL('../fixtures/content/nodes/', import.meta.url))
   const questions = new Map<string, FixtureQuestion>()
-  for (const file of await readdir(folder)) {
+  for (const file of await readdir(folder, { recursive: true })) {
+    if (!file.endsWith('.yaml')) continue
     const node = parse(await readFile(`${folder}${file}`, 'utf8')) as { id: string; questions?: FixtureQuestion[] }
     for (const question of node.questions ?? []) {
       questions.set(`${node.id}/${question.id}`, { ...question, node: node.id })

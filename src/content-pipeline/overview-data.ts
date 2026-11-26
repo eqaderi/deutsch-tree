@@ -11,7 +11,7 @@ import { hasPool } from '../content-model/scoring.ts'
 export function overviewData(nodes: CompiledNode[]): GrammarOverview {
   return {
     tables: nodes.flatMap((node) =>
-      node.kind === 'grammar' && node.content && hasPool(node.content) && node.content.table
+      node.content && hasPool(node.content) && 'table' in node.content && node.content.table
         ? [{ node: node.id, table: node.content.table }]
         : [],
     ),

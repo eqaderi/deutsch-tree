@@ -133,6 +133,51 @@ The exam has 15 parts, so there are 15 exam-part nodes: Lesen 1 to 5, Hören 1
 to 4, Schreiben 1 to 3 and Sprechen 1 to 3. An exam task is always named by
 the id of its exam-part node, so the name cannot point at nothing.
 
+## A published phrases node
+
+A phrases node is published with two sections more: `phrases` and
+`questions`. The page shows what the phrases are for (the `purpose`), then
+each phrase as a card, then the test. A complete example is
+`content/nodes/phrases/phrases-suggesting.yaml`.
+
+```yaml
+status: published
+
+phrases:                 # in the order the page shows them
+  - de: Wie wäre es mit …?          # the phrase; "…" where the speaker's own words go
+    meaning:
+      en: How about …? Suggests a thing, a day or a place. After *mit* comes the dative.
+      fa: …                         # the meaning in Persian, and when it is used
+      de: Damit schlägt man eine Sache vor. Nach *mit* kommt der Dativ.
+    examTasks: [exam-sprechen-1]    # one or more of the node's own examTasks
+    example:                        # the phrase in use, in one whole sentence
+      de: Wie wäre es mit einem Picknick im Park?
+      en: How about a picnic in the park?
+      fa: یک پیک‌نیک در پارک چطور است؟
+
+questions: …             # as for a grammar node
+```
+
+- `meaning.en` and `meaning.fa` say what the phrase means and when it is
+  used, in a sentence or two. `meaning.de` is for a learner who reads in
+  German: it says in simple German (about A2) when the phrase is used, since
+  a translation would tell that reader nothing.
+- Each phrase names the exam tasks it is useful for, out of the node's
+  `examTasks`. Every exam task of the node is served by at least one phrase.
+  A phrase that is mostly spoken does not name a writing task.
+- **The test proves recall, not only recognition.** A learner who knows a
+  phrase when they see it but cannot write it must not pass. So fewer
+  questions of the pool are answered without typing than an attempt needs to
+  pass: at most 8 of them with the usual attempt of 10. Write the rest as
+  `typed-gap-fill` or `typed-answer` questions that make the learner write a
+  part of a phrase.
+- Pin a typed answer down (see "Typed questions: the accepted answers"):
+  the phrase with one gap, so the words around the gap fix what goes in it,
+  and the word to use in brackets where the gap could take several. Then list
+  every answer that is correct German for the prompt as written, also the
+  ones that are not the phrase being taught (`Hättest` beside `Hast` in
+  `___ (haben) du Lust, …?`). The blind review shows which ones you missed.
+
 ## Chapters and the curriculum order
 
 A chapter is a named group of nodes of one kind inside one level, for example
@@ -249,7 +294,9 @@ sections above.
 
 - Search finds a published node by its title, its rule, the rows of its table,
   its examples with their translations, and the right half and the reason of
-  each common mistake. It does not look into the questions. A `coming-soon`
+  each common mistake. A phrases node is
+  found by its purpose, each phrase with its meaning, and each example with
+  its translation. Search does not look into the questions. A `coming-soon`
   node is found by its title only.
 - "All grammar at a glance" shows the table of every published grammar node,
   under its level and chapter.
@@ -432,8 +479,9 @@ change freely). A command writes the record, never a hand:
    step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
    in step 1, then add that second file with another `--answers`.
 
-Only grammar nodes and the writing and speaking exam-part nodes can be
-published so far. Other node kinds are added to the schema as they are built.
+Only grammar nodes, phrases nodes and the writing and speaking exam-part
+nodes can be published so far. Other node kinds are added to the schema as
+they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 
@@ -442,8 +490,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - A node without a chapter, with a chapter that `chapters.yaml` does not
   have, or of another level or kind than its chapter. A chapter name that
   lacks a language.
-- Persian text (a title, a chapter name, a purpose, a rule, the reason of a
-  mistake or of a question) with a Latin letter outside asterisks.
+- Persian text (a title, a chapter name, a purpose, a rule, the meaning of a
+  phrase, the reason of a mistake or of a question) with a Latin letter
+  outside asterisks.
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
 - A wrong word that stands in its sentence twice, a right order that is not
@@ -453,6 +502,13 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   (a node that needs itself, directly or through other nodes).
 - A phrases node without a purpose or without an exam task, and an exam task
   that is not the id of an exam-part node.
+- A phrase without its meaning in all three languages, without an exam task
+  or without an example. An exam task of a phrase that is not one of its
+  node's `examTasks`, and in a published node, an exam task of the node that
+  no phrase serves.
+- A published phrases node whose test can be passed without typing: as many
+  questions answered by choosing (or by ordering or matching) as the pass
+  mark of an attempt, or more.
 - An exam-part node without its module or part number, or whose id is not
   `exam-<module>-<part>`. A `purpose`, `examTasks`, `module` or `part` in a
   node of another kind.

@@ -140,6 +140,14 @@ GitHub Pages and from a local folder.
   out from the content index: every published topic of a level done, or
   every tenth done topic. Which ones were already mentioned is remembered by
   `src/app/milestones.ts`, outside the progress.
+- A node of any kind with a pool is tested the same way. What differs is its
+  page: `NodePage.tsx` shows the grammar sections, or for a phrases node
+  `PhraseSections.tsx` (what the phrases are for, then a card per phrase with
+  its meaning, an example and links to the exam parts it serves). A kind
+  gets a page by naming its sections in `SECTIONS_OF_A_PUBLISHED` in
+  `src/content-model/index.ts`, a compile step in
+  `src/content-pipeline/index.ts`, and a case in `NodePage.tsx`; its
+  passages for search go in `search-data.ts`.
 - A new question type needs: its schema and compiled type in
   `src/content-model/index.ts`, its review view in
   `src/content-pipeline/review.ts`, a case in `checkAnswer`, in `rightAnswer`
@@ -287,10 +295,16 @@ The rules are in the learning engine, like every rule. The tree
   A new question type gets a case in `giveAnswer`, `expectAnswerGiven` and
   `rightAnswerText` there. A journey about one type of `grammar-001` calls
   `findQuestion`, which brings a question of that type on screen.
-- The fixture content has three levels: A1 with two published topics
-  (`grammar-001`, and `grammar-010` with typed questions) and one "coming
-  soon", A2 with three published topics (`grammar-101` to `grammar-103`) and
-  B1 with nothing published.
+- The fixture content has three levels of grammar: A1 with two published
+  topics (`grammar-001`, and `grammar-010` with typed questions) and one
+  "coming soon", A2 with three published topics (`grammar-101` to
+  `grammar-103`) and B1 with no published grammar. B1 also holds the
+  published writing and speaking parts `exam-schreiben-1` and
+  `exam-sprechen-1`. A fourth level, B2, holds the published phrases node
+  `phrases-greeting` and the "coming soon" exam part `exam-schreiben-3`; its
+  phrases serve that part and `exam-sprechen-1`. B2 is the last level, so its
+  line ends with the exam. A new fixture node of another kind goes there too,
+  so that the counts of the levels above stay as their tests know them.
 - One question type: `tests/content-pipeline/extra-question.ts` adds one
   question to the fixture pool and gives back what the pipeline makes of it;
   `review-sheet.ts` holds a reviewer's answers to the fixture pool.

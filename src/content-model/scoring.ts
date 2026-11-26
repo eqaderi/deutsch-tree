@@ -6,7 +6,7 @@
  * without loading the schema of the node files, which only the content
  * pipeline needs. The app imports them from here, never from index.ts.
  */
-import type { ExamModule, GrammarContent, NodeContent, NodeKind } from './index.ts'
+import type { ExamModule, GrammarContent, NodeContent, NodeKind, PhrasesContent } from './index.ts'
 
 /**
  * The modules that the app cannot score itself. Their nodes have no question
@@ -25,6 +25,6 @@ export function isAssistantGraded(node: { kind: NodeKind; module?: ExamModule | 
 }
 
 /** Whether a published node is tested by questions drawn from its pool. A writing or speaking node is not. */
-export function hasPool(content: NodeContent): content is GrammarContent {
+export function hasPool(content: NodeContent): content is GrammarContent | PhrasesContent {
   return 'questions' in content
 }

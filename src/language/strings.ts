@@ -78,6 +78,13 @@ export const en = {
   commonMistakes: 'Common mistakes',
   wrong: 'Wrong',
   right: 'Right',
+  // A phrases page: what the phrases are for, then each phrase.
+  phrasesPurpose: 'What these phrases are for',
+  phraseList: 'Phrases',
+  /** Above the example of one phrase. */
+  phraseExample: 'Example',
+  /** Above the exam tasks that one phrase serves. */
+  phraseUsefulFor: 'Useful for',
   test: 'Test',
   takeTheTest: 'Take the test',
   comingSoonPage: 'This topic is not written yet. It will appear here when it is ready.',

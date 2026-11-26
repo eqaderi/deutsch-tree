@@ -83,6 +83,26 @@ const example = z.strictObject({ de: text, en: textIn('en'), fa: textIn('fa') })
 
 const mistake = z.strictObject({ wrong: text, right: text, why: localised })
 
+/**
+ * One set phrase of a phrases node. `meaning` says what the phrase means in
+ * English and in Persian; its German text explains in simple German when the
+ * phrase is used, since a translation would say nothing to that reader.
+ */
+const phrase = z.strictObject({
+  /** The phrase. Where the speaker's own words follow, it is left open with "…". */
+  de: text,
+  meaning: localised,
+  /** Ids of the exam-part nodes whose tasks this phrase serves: one or more of the node's own `examTasks`. */
+  examTasks: z.array(nodeId).min(1, 'must name at least one exam task'),
+  /** The phrase in use, in a whole sentence. */
+  example: z.strictObject(example.shape, {
+    error: ({ input }) =>
+      input === undefined
+        ? 'is missing: a phrase is shown in use, in one German sentence with its English and Persian'
+        : undefined,
+  }),
+})
+
 const questionBase = {
   id: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "q1"'),
   /** German, shown unchanged in every language. */
@@ -375,13 +395,22 @@ const FIELDS_OF_ONE_KIND = {
   part: 'exam-part',
   purpose: 'phrases',
   examTasks: 'phrases',
+  phrases: 'phrases',
   words: 'vocabulary',
 } as const satisfies Record<string, NodeKind>
 
 const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${kind}`
 
-/** The content sections that a published grammar node must have. */
-const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
+/**
+ * The content sections that a published node with a pool must have, by its
+ * kind. A writing or speaking node has a task instead (see `isAssistantGraded`).
+ */
+const SECTIONS_OF_A_PUBLISHED = {
+  grammar: ['explanations', 'table', 'examples', 'mistakes', 'questions'],
+  phrases: ['phrases', 'questions'],
+} as const satisfies Partial<Record<NodeKind, readonly string[]>>
+
+const hasAPage = (kind: NodeKind): kind is keyof typeof SECTIONS_OF_A_PUBLISHED => kind in SECTIONS_OF_A_PUBLISHED
 
 /**
  * The task of a writing or speaking node: what tells it apart from another
@@ -452,6 +481,8 @@ export const nodeFileSchema = z
     table: table.optional(),
     examples: z.array(example).min(1).optional(),
     mistakes: z.array(mistake).min(1).optional(),
+    /** Phrases nodes only: the set phrases, in the order the page shows them. */
+    phrases: z.array(phrase).min(1).optional(),
     questions: z.array(question).min(1).optional(),
     /** How many questions of the pool one attempt draws. */
     attemptSize: z
@@ -553,8 +584,8 @@ export const nodeFileSchema = z
     }
 
     if (value.status !== 'published') return
-    if (value.kind === 'grammar') {
-      for (const section of CONTENT_SECTIONS) {
+    if (hasAPage(value.kind)) {
+      for (const section of SECTIONS_OF_A_PUBLISHED[value.kind]) {
         if (value[section] === undefined) {
           ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
         }
@@ -567,7 +598,7 @@ export const nodeFileSchema = z
       ctx.addIssue({
         code: 'custom',
         path: ['status'],
-        message: `a ${value.kind} node${value.module ? ` of ${value.module}` : ''} cannot be published yet; it has no page`,
+        message: `${withArticle(value.kind)} node${value.module ? ` of ${value.module}` : ''} cannot be published yet; it has no page`,
       })
     }
   })
@@ -868,6 +899,26 @@ export interface GrammarContent {
   attemptSize: number
 }
 
+/** One set phrase, as the page of a phrases node shows it. */
+export interface Phrase {
+  /** The phrase itself. */
+  de: string
+  /** What it means in English and in Persian, and in simple German when it is used. */
+  meaning: Localised<RichText>
+  /** Ids of the exam-part nodes whose tasks the phrase serves. */
+  examTasks: string[]
+  /** The phrase in use. */
+  example: Example
+}
+
+export interface PhrasesContent {
+  phrases: Phrase[]
+  /** The pool. */
+  questions: Question[]
+  /** How many questions of the pool one attempt draws. */
+  attemptSize: number
+}
+
 /**
  * One task of the Schreiben module or one part of the Sprechen module, with
  * everything that tells it apart from another task of the same part. All of
@@ -905,7 +956,7 @@ export interface CompiledNode extends NodeSummary {
 }
 
 /** What a node's page is built from. Which one it is follows from what it holds: a pool, or a task (see scoring.ts). */
-export type NodeContent = GrammarContent | ExamTaskContent
+export type NodeContent = GrammarContent | PhrasesContent | ExamTaskContent
 
 /** Chapters and nodes, both in curriculum order: chapter by chapter, and inside a chapter by `order`. */
 export interface ContentIndex {

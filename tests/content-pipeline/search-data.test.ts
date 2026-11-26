@@ -34,6 +34,7 @@ test('a node that is coming soon has no search data: the index has its title', a
     'grammar-103',
     'exam-schreiben-1',
     'exam-sprechen-1',
+    'phrases-greeting',
   ])
 })
 
