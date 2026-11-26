@@ -31,6 +31,7 @@ export const fa: Strings = {
   },
   start: 'شروع',
   comingSoon: 'به‌زودی',
+  done: 'تمام‌شده',
 
   allTopics: 'همهٔ موضوع‌ها',
   rule: 'قاعده',
@@ -47,6 +48,29 @@ export const fa: Strings = {
 
   backToTopic: 'بازگشت به موضوع',
   testTitle: (title) => `آزمون: ${title}`,
-  questionsInPool: () => 'سؤال در بانک سؤال',
-  testNotReady: 'هنوز نمی‌توان آزمون داد. این بخش در دست ساخت است.',
+  questionOf: (place, total) => `سؤال ${digits.format(place)} از ${digits.format(total)}`,
+  questionNumber: (place) => `سؤال ${digits.format(place)}`,
+  instructions: {
+    'multiple-choice': 'پاسخ درست را انتخاب کنید.',
+    'gap-fill': 'واژه‌ای را انتخاب کنید که در جای خالی درست است.',
+    'true-false': 'آیا این جمله آلمانیِ درستی است؟',
+  },
+  gap: 'جای خالی',
+  sentenceCorrect: 'درست',
+  sentenceNotCorrect: 'نادرست',
+  next: 'بعدی',
+  checkAnswers: 'بررسی پاسخ‌ها',
+  reportProblem: 'گزارش مشکل',
+
+  passed: 'قبول شدید',
+  notPassed: 'هنوز قبول نشده‌اید',
+  ofTotalRight: (total) => `از ${digits.format(total)} درست`,
+  neededToPass: (passMark, total) =>
+    `برای قبولی باید ${digits.format(passMark)} پاسخ از ${digits.format(total)} درست باشد.`,
+  topicNowDone: 'این موضوع حالا تمام‌شده است.',
+  topicStaysDone: 'این موضوع از قبل تمام‌شده بود و تمام‌شده می‌ماند.',
+  retryAnyTime: 'هر چند بار که بخواهید می‌توانید دوباره امتحان کنید. هر آزمون سؤال‌های تازه‌ای می‌آورد.',
+  wrongAnswers: 'پاسخ‌های نادرست',
+  yourAnswer: 'پاسخ شما',
+  rightAnswer: 'پاسخ درست',
 }
