@@ -1,0 +1,13 @@
+# Grammar list row 177.
+id: grammar-177
+kind: grammar
+level: A2
+chapter: a2-relative-clauses
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-079, grammar-157]
+title:
+  en: "Relative clause, *Nominativ*"
+  fa: "جملهٔ موصولی در *Nominativ*"
+  de: "Relativsatz im Nominativ"

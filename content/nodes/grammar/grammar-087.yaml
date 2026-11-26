@@ -1,0 +1,13 @@
+# Grammar list row 87.
+id: grammar-087
+kind: grammar
+level: A1
+chapter: a1-first-sentences
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-001]
+title:
+  en: "W-question words"
+  fa: "واژه‌های پرسشی (*wo*، *woher*، *wann*، *wie* …)"
+  de: "W-Fragewörter (*wo*, *woher*, *wann*, *wie* …)"

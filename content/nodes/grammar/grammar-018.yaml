@@ -1,0 +1,13 @@
+# Grammar list row 18.
+id: grammar-018
+kind: grammar
+level: A2
+chapter: a2-past
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-013, grammar-026]
+title:
+  en: "*Präteritum* of modal verbs"
+  fa: "گذشتهٔ ساده (*Präteritum*) فعل‌های وجهی"
+  de: "Präteritum der Modalverben"

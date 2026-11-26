@@ -1,0 +1,13 @@
+# Grammar list row 72.
+id: grammar-072
+kind: grammar
+level: B1
+chapter: b1-genitive-nouns
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-062, grammar-071]
+title:
+  en: "*n-Deklination*"
+  fa: "صرف اسم با *-n* (*n-Deklination*)"
+  de: "n-Deklination"

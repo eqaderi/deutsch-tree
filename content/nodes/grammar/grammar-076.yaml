@@ -1,0 +1,13 @@
+# Grammar list row 76.
+id: grammar-076
+kind: grammar
+level: A1
+chapter: a1-nouns-articles
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-074]
+title:
+  en: "*Negativartikel* *kein*"
+  fa: "حرف تعریف منفی *kein*"
+  de: "Negativartikel *kein*"

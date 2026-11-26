@@ -2,13 +2,14 @@
 id: grammar-001
 kind: grammar
 level: A1
+chapter: a1-verbs-present
 order: 1
 status: published
 recogniseOnly: false
 prerequisites: []
 title:
-  en: Präsens, regular conjugation
-  fa: زمان حال (Präsens)، صرف فعل‌های باقاعده
+  en: "*Präsens*, regular conjugation"
+  fa: زمان حال (*Präsens*)، صرف فعل‌های باقاعده
   de: Präsens, regelmäßige Verben
 
 explanations:
@@ -20,7 +21,7 @@ explanations:
       so *ich wohne* means both "I live" and "I am living".
   fa:
     rule: >
-      در زمان حال (Präsens) فعل باقاعده ستاک خود را نگه می‌دارد و برای هر شخص
+      در زمان حال (*Präsens*) فعل باقاعده ستاک خود را نگه می‌دارد و برای هر شخص
       یک پایانه می‌گیرد. برای پیدا کردن ستاک، *-en* را از آخر مصدر بردارید:
       ستاک *wohnen* می‌شود *wohn-*. آلمانی فقط همین یک زمان حال را دارد؛
       *ich wohne* هم یعنی «زندگی می‌کنم» و هم «دارم زندگی می‌کنم».

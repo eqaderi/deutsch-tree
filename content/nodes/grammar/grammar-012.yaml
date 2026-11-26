@@ -1,0 +1,13 @@
+# Grammar list row 12.
+id: grammar-012
+kind: grammar
+level: A1
+chapter: a1-verb-patterns
+order: 8
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-140, grammar-193]
+title:
+  en: "*Präsens* with future meaning"
+  fa: "زمان حال با معنای آینده"
+  de: "Präsens für die Zukunft"

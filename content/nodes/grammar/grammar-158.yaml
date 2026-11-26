@@ -1,0 +1,13 @@
+# Grammar list row 158.
+id: grammar-158
+kind: grammar
+level: A2
+chapter: a2-subordinate-clauses
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-149, grammar-157]
+title:
+  en: "*weil*"
+  fa: "*weil*"
+  de: "*weil*"

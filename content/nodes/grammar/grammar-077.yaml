@@ -1,0 +1,13 @@
+# Grammar list row 77.
+id: grammar-077
+kind: grammar
+level: A1
+chapter: a1-more-articles
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-062, grammar-081]
+title:
+  en: "*Possessivartikel*, *Nominativ* and *Akkusativ*"
+  fa: "صفت ملکی (*Possessivartikel*) در *Nominativ* و *Akkusativ*"
+  de: "Possessivartikel im Nominativ und Akkusativ"

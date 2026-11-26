@@ -1,0 +1,13 @@
+# Grammar list row 175.
+id: grammar-175
+kind: grammar
+level: B1
+chapter: b1-reason-condition-clauses
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-097, grammar-159]
+title:
+  en: "Verb + preposition + clause"
+  fa: "فعل + حرف اضافه + جملهٔ پیرو (*darauf, dass …*)"
+  de: "Verb + Präposition + Nebensatz (*darauf, dass …*)"

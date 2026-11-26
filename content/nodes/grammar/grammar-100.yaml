@@ -1,0 +1,13 @@
+# Grammar list row 100.
+id: grammar-100
+kind: grammar
+level: B1
+chapter: b1-pronouns
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-093]
+title:
+  en: "*irgend-*"
+  fa: "*irgend-*"
+  de: "*irgend-*"

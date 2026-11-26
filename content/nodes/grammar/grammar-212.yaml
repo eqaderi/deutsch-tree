@@ -1,0 +1,13 @@
+# Grammar list row 212.
+id: grammar-212
+kind: grammar
+level: B1
+chapter: b1-prepositions
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-120, grammar-131, grammar-134, grammar-137]
+title:
+  en: "Temporal prepositions: contrast pairs and temporal *bei*"
+  fa: "حرف‌های اضافهٔ زمان: جفت‌های متقابل و *bei* زمانی"
+  de: "Präpositionen für die Zeit: Unterschiede und *bei* für die Zeit"

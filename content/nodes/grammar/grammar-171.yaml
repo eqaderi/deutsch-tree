@@ -1,0 +1,13 @@
+# Grammar list row 171.
+id: grammar-171
+kind: grammar
+level: B1
+chapter: b1-time-clauses
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-120, grammar-157]
+title:
+  en: "*bis* as conjunction"
+  fa: "*bis* به‌عنوان حرف ربط"
+  de: "*bis* als Konjunktion"

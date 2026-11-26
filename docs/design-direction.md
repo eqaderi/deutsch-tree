@@ -21,7 +21,7 @@ The learner picked a "warm and calm" reference (cream surfaces, soft raised pane
 
 ## Chapters
 
-The route depends on a grouping the spec does not have yet: a **chapter**, a named group of topics of one kind inside one level (for example "Verbs and tenses" or "Home and food"). The tree is level, then chapter, then topic. The curriculum order runs chapter by chapter, so progress fills one chapter before the next begins. Chapter names exist in all three languages. The chapter names in the mock-up were samples; the real ones are drawn up for the learner's approval together with the node lists.
+The route depends on a grouping the spec does not have yet: a **chapter**, a named group of topics of one kind inside one level (for example "Verbs and tenses" or "Home and food"). The tree is level, then chapter, then topic. The curriculum order runs chapter by chapter, so progress fills one chapter before the next begins. Chapter names exist in all three languages. The chapter names in the mock-up were samples; the real ones are drawn up for the learner's approval together with the node lists. The grammar chapters are listed for approval in `docs/approvals/grammar-chapters.md`; how a chapter is written is in `content/README.md`.
 
 ## Colours
 

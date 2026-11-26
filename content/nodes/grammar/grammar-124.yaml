@@ -1,0 +1,13 @@
+# Grammar list row 124.
+id: grammar-124
+kind: grammar
+level: A1
+chapter: a1-prepositions
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-121, grammar-122]
+title:
+  en: "Contractions"
+  fa: "ادغام حرف اضافه با حرف تعریف (*im*، *zum*، *ins* …)"
+  de: "Präposition + Artikel in einem Wort (*im*, *zum*, *ins* …)"

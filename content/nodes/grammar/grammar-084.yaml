@@ -1,0 +1,13 @@
+# Grammar list row 84.
+id: grammar-084
+kind: grammar
+level: A1
+chapter: a1-pronouns
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-081]
+title:
+  en: "*man*"
+  fa: "*man*"
+  de: "*man*"

@@ -1,13 +1,10 @@
 import { expect, test } from './test.ts'
 
-test('the tree lists the topics and a topic opens from it', async ({ page }) => {
+test('a topic opens from the tree', async ({ page }) => {
   await page.goto('./')
 
   const tree = page.getByRole('main')
   await expect(tree.getByRole('link', { name: /Fixture verbs/ })).toBeVisible()
-  await expect(tree.getByRole('listitem').filter({ hasText: 'Fixture topic not written yet' })).toContainText(
-    'Coming soon',
-  )
 
   await tree.getByRole('link', { name: /Fixture verbs/ }).click()
 

@@ -1,0 +1,13 @@
+# Grammar list row 164.
+id: grammar-164
+kind: grammar
+level: B1
+chapter: b1-time-clauses
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-023, grammar-160]
+title:
+  en: "*als* for a single past event, vs *wenn*"
+  fa: "*als* برای یک رویداد در گذشته، در برابر *wenn*"
+  de: "*als* für ein einzelnes Ereignis in der Vergangenheit, im Vergleich mit *wenn*"

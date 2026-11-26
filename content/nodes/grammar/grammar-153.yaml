@@ -1,0 +1,13 @@
+# Grammar list row 153.
+id: grammar-153
+kind: grammar
+level: B1
+chapter: b1-connectors-negation
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-151]
+title:
+  en: "*darum*, *deswegen*, *daher*, *nämlich*, *also*"
+  fa: "*darum*، *deswegen*، *daher*، *nämlich*، *also*"
+  de: "*darum*, *deswegen*, *daher*, *nämlich*, *also*"
