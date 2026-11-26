@@ -32,7 +32,7 @@ export function TestPage() {
       </header>
       <section className="panel message">
         <p>
-          <span className="big-number">{count}</span>{' '}
+          <span className="big-number">{strings.number(count)}</span>{' '}
           <span className="secondary">{strings.questionsInPool(count)}</span>
         </p>
         <p>{strings.testNotReady}</p>

@@ -82,12 +82,13 @@ function GrammarSections({ content }: { content: GrammarContent }) {
 
       <Panel id="section-table" heading={strings.table}>
         <div className="table-scroll">
-          <table>
+          {/* The rows are German, so the table reads left to right in every language. */}
+          <table dir="ltr">
             <thead>
               <tr>
                 {content.table.columns.map((column, index) => (
                   <th key={index} scope="col">
-                    {column[language]}
+                    <bdi>{column[language]}</bdi>
                   </th>
                 ))}
               </tr>

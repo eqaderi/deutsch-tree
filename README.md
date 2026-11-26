@@ -37,9 +37,10 @@ ending, because the pipeline runs directly in Node.
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
 | `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
 | `src/app/` | App shell: routes, tree, node page. `styles.css` holds the design tokens. |
-| `src/language/` | Interface strings and the language in use. Components take every word from here. |
+| `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests never depend on the real content. |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
+| `tests/language/` | The interface strings of the three languages, compared key by key. |
 | `tests/browser/` | Seam 3: whole journeys in a browser. |
 
 The app never reads node files. It fetches `content/index.json` (every node's
@@ -49,6 +50,20 @@ both written by the pipeline at build time.
 Page addresses live after the `#`, for example `#/node/grammar-001`. The site
 is plain files, so this is what keeps direct links and reloads working on
 GitHub Pages and from a local folder.
+
+## Languages
+
+- A component reads `const { language, strings } = useLanguage()` from
+  `src/language/index.tsx`: `strings.rule` for an interface word,
+  `node.title[language]` for content, `strings.number(7)` for a number shown
+  on its own (Persian digits in Persian).
+- To add an interface string, add it to `src/language/strings.ts` (English),
+  `strings.fa.ts` (Persian) and `strings.de.ts` (simple German, about A2
+  level). `pnpm check` fails until all three have it. A string with a number
+  in it is a function, so Persian can write its own digits.
+- Persian pages are right to left. Use logical CSS properties, and put every
+  piece of German in `<German>` or `<RichText>` (`src/app/German.tsx`) so it
+  still reads left to right.
 
 ## Writing tests
 
