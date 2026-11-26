@@ -3,9 +3,10 @@ import { asShown, PERSIAN, takeCheckpoint, takeTest } from './taking-a-test.ts'
 import { expect, test } from './test.ts'
 
 /**
- * The fixture has three levels: A1 with one published topic, A2 with three
- * (articles, plurals, negation: grammar-101 to grammar-103) and B1 with none.
- * A checkpoint asks five questions of each published topic.
+ * The fixture has three levels: A1 with two published topics (verbs, and
+ * umlauts, whose answers are typed), A2 with three (articles, plurals,
+ * negation: grammar-101 to grammar-103) and B1 with none. A checkpoint asks
+ * five questions of each published topic.
  */
 const ARTICLES = 'grammar-101'
 const NEGATION = 'grammar-103'
@@ -88,24 +89,28 @@ test('a checkpoint changes no topic: every answer right marks nothing done', asy
 })
 
 test('a checkpoint changes no topic: every answer wrong leaves a done topic done', async ({ page }) => {
-  // A1 has one published topic. Passing its test marks it done.
+  // Passing the test of "Fixture verbs" marks it done.
   await page.goto('./#/node/grammar-001/test')
   await takeTest(page, () => 'right')
   await expect(page.getByRole('heading', { name: 'Passed' })).toBeVisible()
   const before = await stored(page)
 
-  // A level with one topic still has a checkpoint: five of that topic's questions.
+  // The A1 checkpoint asks five questions of each of its two topics; those of "Fixture umlauts" are typed.
   await page.goto('./')
   await page.getByRole('main').getByRole('link', { name: 'Start the checkpoint' }).click()
   await expect(page.getByRole('heading', { level: 1, name: 'A1 checkpoint' })).toBeVisible()
-  await expect(page.getByText('5 questions from 1 topic')).toBeVisible()
-  const met = await takeCheckpoint(page, 5, () => 'wrong')
+  await expect(page.getByText('10 questions from 2 topics')).toBeVisible()
+  const met = await takeCheckpoint(page, 10, () => 'wrong')
 
-  expect(new Set(met.map((question) => `${question.node}/${question.id}`)).size).toBe(5)
-  await expect(page.getByRole('main')).toContainText('0 of 5 right')
+  expect(new Set(met.map((question) => `${question.node}/${question.id}`)).size).toBe(10)
+  for (const node of ['grammar-001', 'grammar-010']) {
+    expect(met.filter((question) => question.node === node)).toHaveLength(5)
+  }
+  await expect(page.getByRole('main')).toContainText('0 of 10 right')
   const toRevisit = page.getByRole('list', { name: 'Topics to look at again' }).getByRole('listitem')
-  await expect(toRevisit).toHaveCount(1)
-  await expect(toRevisit).toContainText('Fixture verbs')
+  await expect(toRevisit).toHaveCount(2)
+  await expect(toRevisit.nth(0)).toContainText('Fixture verbs')
+  await expect(toRevisit.nth(1)).toContainText('Fixture umlauts')
   await expect(page.getByText('Your topics stay as they are.')).toBeVisible()
   expect(await stored(page)).toBe(before)
 
@@ -117,14 +122,14 @@ test('a checkpoint changes no topic: every answer wrong leaves a done topic done
 
 test('a new checkpoint starts from the result, as often as the learner likes', async ({ page }) => {
   await page.goto('./#/checkpoint/A1')
-  await takeCheckpoint(page, 5, () => 'right')
-  await expect(page.getByRole('main')).toContainText('5 of 5 right')
+  await takeCheckpoint(page, 10, () => 'right')
+  await expect(page.getByRole('main')).toContainText('10 of 10 right')
 
   await page.getByRole('button', { name: 'Try again' }).click()
 
-  await expect(page.getByText('Question 1 of 5')).toBeVisible()
-  await takeCheckpoint(page, 5, (place) => (place === 2 ? 'wrong' : 'right'))
-  await expect(page.getByRole('main')).toContainText('4 of 5 right')
+  await expect(page.getByText('Question 1 of 10')).toBeVisible()
+  await takeCheckpoint(page, 10, (place) => (place === 2 ? 'wrong' : 'right'))
+  await expect(page.getByRole('main')).toContainText('9 of 10 right')
 })
 
 test('a level with no published topic says that it has no checkpoint yet, in the tree and at the checkpoint’s address', async ({

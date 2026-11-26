@@ -1,0 +1,186 @@
+# Fixture node for tests of typed answers. Invented, short, and stable: tests assert on these words.
+# An attempt draws the whole pool, so a test meets every question, in an order it does not know.
+id: grammar-010
+kind: grammar
+level: A1
+chapter: fixture-basics
+order: 2
+status: published
+recogniseOnly: false
+prerequisites: []
+title:
+  en: Fixture umlauts
+  fa: اوملاوت‌های آزمایشی
+  de: Test-Umlaute
+
+explanations:
+  en:
+    rule: >
+      A fixture word may hold *ä*, *ö*, *ü* or *ß*. Many plurals take an
+      umlaut: *der Apfel*, *die Äpfel*.
+  fa:
+    rule: >
+      واژهٔ آزمایشی می‌تواند *ä*، *ö*، *ü* یا *ß* داشته باشد. بسیاری از
+      جمع‌ها اوملاوت می‌گیرند: *der Apfel*، *die Äpfel*.
+  de:
+    rule: >
+      Ein Test-Wort kann *ä*, *ö*, *ü* oder *ß* haben. Viele Pluralformen
+      bekommen einen Umlaut: *der Apfel*, *die Äpfel*.
+
+table:
+  columns:
+    - en: Singular
+      fa: مفرد
+      de: Singular
+    - en: Plural
+      fa: جمع
+      de: Plural
+  rows:
+    - [der Apfel, die Äpfel]
+    - [das Haus, die Häuser]
+
+examples:
+  - de: Wir spielen Fußball.
+    en: We play football.
+    fa: ما فوتبال بازی می‌کنیم.
+  - de: Die Äpfel sind schön.
+    en: The apples are lovely.
+    fa: سیب‌ها قشنگ‌اند.
+
+mistakes:
+  - wrong: Die Apfel sind schön.
+    right: Die Äpfel sind schön.
+    why:
+      en: The plural of *der Apfel* takes an umlaut.
+      fa: جمعِ *der Apfel* اوملاوت می‌گیرد.
+      de: Der Plural von *der Apfel* hat einen Umlaut.
+
+attemptSize: 15
+
+# 15 questions, all typed. A test answers each one right with the first accepted answer.
+questions:
+  - id: q1
+    type: typed-gap-fill
+    prompt: Wir spielen ___.
+    answers: [Fußball]
+    explanation:
+      en: The game is *Fußball*, with *ß*.
+      fa: نام این بازی *Fußball* است، با *ß*.
+      de: Das Spiel heißt *Fußball*, mit *ß*.
+  - id: q2
+    type: typed-gap-fill
+    prompt: Das Wetter ist ___.
+    answers: [schön]
+    explanation:
+      en: Fixture weather is always *schön*.
+      fa: هوای آزمایشی همیشه *schön* است.
+      de: Das Test-Wetter ist immer *schön*.
+  - id: q3
+    type: typed-gap-fill
+    prompt: Ich bin ___.
+    answers: [müde]
+    explanation:
+      en: A fixture learner is always *müde*.
+      fa: زبان‌آموز آزمایشی همیشه *müde* است.
+      de: Eine Test-Person ist immer *müde*.
+  - id: q4
+    type: typed-gap-fill
+    prompt: Das ___ lernt Deutsch.
+    answers: [Mädchen]
+    explanation:
+      en: In the fixture, *das Mädchen* learns German.
+      fa: در این آزمایش *das Mädchen* آلمانی یاد می‌گیرد.
+      de: Im Test lernt *das Mädchen* Deutsch.
+  - id: q5
+    type: typed-gap-fill
+    prompt: Er ___ Tom.
+    answers: [heißt]
+    explanation:
+      en: With *er* the form is *heißt*.
+      fa: با *er* صورت فعل *heißt* است.
+      de: Bei *er* ist die Form *heißt*.
+  - id: q6
+    type: typed-gap-fill
+    prompt: Du ___ hier.
+    answers: [wohnst, lebst]
+    explanation:
+      en: With *du* the ending is *-st*. Both *wohnst* and *lebst* fit.
+      fa: با *du* پایانه *-st* است. هم *wohnst* درست است و هم *lebst*.
+      de: Bei *du* ist die Endung *-st*. *wohnst* und *lebst* passen beide.
+  - id: q7
+    type: typed-gap-fill
+    prompt: Die ___ ist lang.
+    answers: [Straße]
+    explanation:
+      en: A fixture *Straße* is long, and it has *ß*.
+      fa: یک *Straße* آزمایشی دراز است و *ß* دارد.
+      de: Eine Test-*Straße* ist lang und hat ein *ß*.
+  - id: q8
+    type: typed-gap-fill
+    prompt: Wir ___ Deutsch.
+    answers: [lernen, üben]
+    explanation:
+      en: With *wir* the ending is *-en*. Both *lernen* and *üben* fit.
+      fa: با *wir* پایانه *-en* است. هم *lernen* درست است و هم *üben*.
+      de: Bei *wir* ist die Endung *-en*. *lernen* und *üben* passen beide.
+  - id: q9
+    type: typed-answer
+    prompt: "Plural: der Apfel"
+    answers: [die Äpfel, Äpfel]
+    explanation:
+      en: The plural is *die Äpfel*.
+      fa: جمع آن *die Äpfel* است.
+      de: Der Plural ist *die Äpfel*.
+  - id: q10
+    type: typed-answer
+    prompt: "Plural: das Haus"
+    answers: [die Häuser, Häuser]
+    explanation:
+      en: The plural is *die Häuser*.
+      fa: جمع آن *die Häuser* است.
+      de: Der Plural ist *die Häuser*.
+  - id: q11
+    type: typed-answer
+    prompt: "Plural: der Fuß"
+    answers: [die Füße, Füße]
+    explanation:
+      en: The plural is *die Füße*.
+      fa: جمع آن *die Füße* است.
+      de: Der Plural ist *die Füße*.
+  - id: q12
+    type: typed-answer
+    prompt: "Plural: die Tür"
+    answers: [die Türen, Türen]
+    explanation:
+      en: The plural is *die Türen*.
+      fa: جمع آن *die Türen* است.
+      de: Der Plural ist *die Türen*.
+  - id: q13
+    type: typed-answer
+    prompt: "Plural: der Sohn"
+    answers: [die Söhne, Söhne]
+    explanation:
+      en: The plural is *die Söhne*.
+      fa: جمع آن *die Söhne* است.
+      de: Der Plural ist *die Söhne*.
+  - id: q14
+    type: typed-answer
+    prompt: "Plural: das Buch"
+    answers: [die Bücher, Bücher]
+    explanation:
+      en: The plural is *die Bücher*.
+      fa: جمع آن *die Bücher* است.
+      de: Der Plural ist *die Bücher*.
+  - id: q15
+    type: typed-answer
+    prompt: "Plural: die Übung"
+    answers: [die Übungen, Übungen]
+    explanation:
+      en: The plural is *die Übungen*.
+      fa: جمع آن *die Übungen* است.
+      de: Der Plural ist *die Übungen*.
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-01-01
+  pool: b2a26eaa45fed883
