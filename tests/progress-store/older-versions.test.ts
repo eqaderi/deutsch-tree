@@ -6,7 +6,7 @@
  * code), and say what today's app must make of it.
  */
 import { expect, test } from 'vitest'
-import { emptyProgress, isDone, nodeProgress } from '../../src/learning-engine/index.ts'
+import { emptyProgress, isDone, nodeProgress, officialExamScores } from '../../src/learning-engine/index.ts'
 import { parseProgress, SAVED_VERSION, type SavedFormat } from '../../src/progress-store/index.ts'
 
 function read(text: string, format?: SavedFormat) {
@@ -22,18 +22,37 @@ test('the saved shape has a version, and a new field of progress means a new ver
   // know the field must refuse the data instead of dropping the field, and
   // the version number is what tells it. See src/progress-store/index.ts.
   expect({ version: SAVED_VERSION, fields: Object.keys(emptyProgress()).sort() }).toEqual({
-    version: 1,
-    fields: ['nodes'],
+    version: 2,
+    fields: ['nodes', 'officialExams'],
   })
 })
 
-test('progress saved by version 1 loads', () => {
+test('progress saved by version 1 loads, with no official mock exam scores recorded', () => {
+  // Version 1 knew nothing of official mock exams.
   const progress = read(
     '{"version":1,"nodes":{"grammar-001":{"done":true,"attempts":3},"grammar-002":{"done":false,"attempts":1}}}',
   )
 
   expect(nodeProgress(progress, 'grammar-001')).toEqual({ done: true, attempts: 3 })
   expect(nodeProgress(progress, 'grammar-002')).toEqual({ done: false, attempts: 1 })
+  expect(progress.officialExams).toEqual({})
+  expect(officialExamScores(progress, 'goethe-b1-modellsatz-erwachsene')).toEqual({})
+})
+
+test('progress saved by version 2 loads', () => {
+  // Version 2 added the module scores recorded for official mock exams. An exam may lack modules.
+  const progress = read(
+    '{"version":2,"nodes":{"grammar-001":{"done":true,"attempts":3}},"officialExams":{"goethe-b1-modellsatz-erwachsene":{"reading":93,"listening":90,"writing":88,"speaking":100},"goethe-b1-uebungssatz-erwachsene":{"reading":0}}}',
+  )
+
+  expect(nodeProgress(progress, 'grammar-001')).toEqual({ done: true, attempts: 3 })
+  expect(officialExamScores(progress, 'goethe-b1-modellsatz-erwachsene')).toEqual({
+    reading: 93,
+    listening: 90,
+    writing: 88,
+    speaking: 100,
+  })
+  expect(officialExamScores(progress, 'goethe-b1-uebungssatz-erwachsene')).toEqual({ reading: 0 })
 })
 
 /**

@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-schreiben-2
+kind: exam-part
+level: B1
+chapter: b1-exam-schreiben
+order: 2
+status: coming-soon
+module: schreiben
+part: 2
+title:
+  en: "*Schreiben Aufgabe 2*: your opinion in a forum post"
+  fa: "*Schreiben Aufgabe 2*: نظر شما در یک انجمن اینترنتی"
+  de: "Schreiben Aufgabe 2: die eigene Meinung in einem Forum"

@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-lesen-1
+kind: exam-part
+level: B1
+chapter: b1-exam-lesen
+order: 1
+status: coming-soon
+module: lesen
+part: 1
+title:
+  en: "*Lesen Teil 1*: a blog post or e-mail, right or wrong"
+  fa: "*Lesen Teil 1*: متن وبلاگ یا ایمیل، درست یا غلط"
+  de: "Lesen Teil 1: Blog oder E-Mail, richtig oder falsch"

@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-own-experience-home-country
+kind: phrases
+level: B1
+chapter: b1-phrases-presentation
+order: 2
+status: coming-soon
+title:
+  en: "Your own experience and your home country"
+  fa: "تجربهٔ شخصی و کشور خودتان"
+  de: "Eigene Erfahrungen und das Heimatland"
+purpose:
+  en: "Say what the topic has to do with your own life, and what the situation is like in your home country."
+  fa: "بگویید موضوع چه ربطی به زندگی خودتان دارد و وضعیت در کشور خودتان چگونه است."
+  de: "Sagen, was das Thema mit dem eigenen Leben zu tun hat und wie die Situation im Heimatland ist."
+examTasks: [exam-sprechen-2]

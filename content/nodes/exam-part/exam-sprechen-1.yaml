@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-sprechen-1
+kind: exam-part
+level: B1
+chapter: b1-exam-sprechen
+order: 1
+status: coming-soon
+module: sprechen
+part: 1
+title:
+  en: "*Sprechen Teil 1*: planning something together"
+  fa: "*Sprechen Teil 1*: برنامه‌ریزی مشترک"
+  de: "Sprechen Teil 1: gemeinsam etwas planen"
