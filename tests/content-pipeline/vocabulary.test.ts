@@ -85,6 +85,14 @@ test('its pool asks every word from German and into German, a noun with its arti
   expect(about('schlafen')?.[1]).toMatchObject({ answers: ['schlafen'] })
 })
 
+test('the tree and the checkpoint know that a published vocabulary node has a test', async () => {
+  const { bundle } = await compileContent(fixtureContent)
+
+  const summary = (id: string) => bundle?.index.nodes.find((node) => node.id === id)
+  expect(summary(NODE)?.hasTest).toBe(true)
+  expect(summary('vocabulary-fixture-family')?.hasTest).toBe(false)
+})
+
 test('a vocabulary node that is coming soon may name its words and nothing more', async () => {
   const { report, bundle } = await compileContent(fixtureContent)
 
