@@ -178,7 +178,16 @@ test('a test fits the screen it is taken on, in English and in Persian', async (
   await expect(page.getByRole('button', { name: PERSIAN.next })).toBeInViewport()
   expect(await sidewaysScroll()).toBe(0)
 
-  await takeTest(page, () => 'wrong', { words: PERSIAN })
-  await expect(page.getByRole('list', { name: 'پاسخ‌های نادرست' }).getByRole('listitem')).toHaveCount(ATTEMPT_SIZE)
+  const met = await takeTest(page, () => 'wrong', { words: PERSIAN })
+  const wrong = page.getByRole('list', { name: 'پاسخ‌های نادرست' }).getByRole('listitem')
+  await expect(wrong).toHaveCount(ATTEMPT_SIZE)
   expect(await sidewaysScroll()).toBe(0)
+
+  // The reasons are in the learner's language, and change with it.
+  const first = met[0]
+  if (!first) throw new Error('the attempt had no question')
+  await expect(wrong.first()).toContainText(asShown(first.explanation.fa))
+  await page.getByRole('button', { name: 'Deutsch' }).click()
+  const wrongInGerman = page.getByRole('list', { name: 'Falsche Antworten' }).getByRole('listitem')
+  await expect(wrongInGerman.first()).toContainText(asShown(first.explanation.de))
 })
