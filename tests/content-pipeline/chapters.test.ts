@@ -21,7 +21,7 @@ test('the curriculum order runs chapter by chapter, in the order of the chapter 
   const { report, bundle } = await compileContent(content)
 
   expect(report.errors).toEqual([])
-  expect(bundle?.index.chapters.filter((chapter) => chapter.level === 'A1')).toEqual([
+  expect(bundle?.index.chapters.filter((chapter) => chapter.level === 'A1' && chapter.kind === 'grammar')).toEqual([
     {
       id: 'fixture-later',
       level: 'A1',
@@ -43,6 +43,7 @@ test('the curriculum order runs chapter by chapter, in the order of the chapter 
     ['fixture-later', 'grammar-002'],
     ['fixture-basics', 'grammar-001'],
     ['fixture-basics', 'grammar-010'],
+    ['fixture-words', 'vocabulary-fixture-family'],
   ])
 })
 
@@ -146,6 +147,7 @@ test('German marked in a topic title is compiled as German, like in every other 
     ['فعل‌های آزمایشی'],
     ['اوملاوت‌های آزمایشی'],
     ['پایانهٔ ', { de: '-st' }, ' با ', { de: 'du' }],
+    ['واژه‌های آزمایشی خانواده'],
   ])
   expect(bundle?.nodes.find((node) => node.id === 'grammar-002')?.title.en).toEqual([
     'The ending ',
@@ -158,8 +160,8 @@ test('German marked in a topic title is compiled as German, like in every other 
 test('a new level needs only content: a chapter of that level and a node in it', async () => {
   const content = await fixtureContentWith({
     [CHAPTERS]: (text) =>
-      `${text}\n- id: fixture-b2\n  level: B2\n  kind: grammar\n  title: { en: Fixture B2, fa: آزمایشی, de: Test B2 }\n`,
-    'nodes/grammar/grammar-003.yaml': () => comingSoonNode('grammar-003', { level: 'B2', chapter: 'fixture-b2' }),
+      `${text}\n- id: fixture-c1\n  level: C1\n  kind: grammar\n  title: { en: Fixture C1, fa: آزمایشی, de: Test C1 }\n`,
+    'nodes/grammar/grammar-003.yaml': () => comingSoonNode('grammar-003', { level: 'C1', chapter: 'fixture-c1' }),
   })
 
   const { report, bundle } = await compileContent(content)
@@ -169,10 +171,16 @@ test('a new level needs only content: a chapter of that level and a node in it',
     ['A1', 'fixture-basics', 'grammar-001'],
     ['A1', 'fixture-basics', 'grammar-010'],
     ['A1', 'fixture-later', 'grammar-002'],
+    ['A1', 'fixture-words', 'vocabulary-fixture-family'],
     ['A2', 'fixture-nouns', 'grammar-101'],
     ['A2', 'fixture-nouns', 'grammar-102'],
     ['A2', 'fixture-nouns', 'grammar-103'],
     ['B1', 'fixture-unwritten', 'grammar-201'],
-    ['B2', 'fixture-b2', 'grammar-003'],
+    ['B1', 'fixture-exam-lesen', 'exam-lesen-1'],
+    ['B1', 'fixture-schreiben', 'exam-schreiben-1'],
+    ['B1', 'fixture-sprechen', 'exam-sprechen-1'],
+    ['B2', 'fixture-set-phrases', 'phrases-greeting'],
+    ['B2', 'fixture-exam-parts', 'exam-schreiben-3'],
+    ['C1', 'fixture-c1', 'grammar-003'],
   ])
 })

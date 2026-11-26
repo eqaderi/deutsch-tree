@@ -1,0 +1,40 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-school-subjects
+kind: vocabulary
+level: A2
+chapter: a2-words-school-work
+order: 1
+status: coming-soon
+title:
+  en: "School and school subjects"
+  fa: "مدرسه و درس‌ها"
+  de: "Schule und Schulfächer"
+words:
+  - word: Fach
+  - word: Biologie
+  - word: Chemie
+  - word: Deutsch
+  - word: Englisch
+  - word: Französisch
+  - word: Geografie
+  - word: Latein
+  - word: Mathematik
+  - word: Physik
+  - word: Sozialkunde
+  - word: Stundenplan
+  - word: Klassenfahrt
+  - word: Sekretariat
+  - word: Direktor
+  - word: Note
+  - word: Zeugnis
+  - word: Heft
+  - word: Stift
+  - word: Tafel
+  - word: Wörterbuch
+  - word: Bibliothek
+  - word: Cafeteria
+  - word: Antwortbogen
+  - word: Prüfer
+  - word: bestehen
+  - word: Abitur

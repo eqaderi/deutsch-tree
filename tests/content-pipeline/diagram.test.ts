@@ -1,4 +1,5 @@
 import { expect, test } from 'vitest'
+import type { GrammarContent } from '../../src/content-model/index.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { changeNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
@@ -45,7 +46,8 @@ test('a diagram is compiled into its drawing, its labels and its caption', async
   const { report, bundle } = await compileWithDiagram()
 
   expect(report.errors).toEqual([])
-  const [diagram] = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content?.diagrams ?? []
+  const content = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content as GrammarContent | undefined
+  const [diagram] = content?.diagrams ?? []
   expect(diagram).toEqual({
     width: 320,
     height: 200,

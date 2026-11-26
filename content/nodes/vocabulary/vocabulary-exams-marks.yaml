@@ -1,0 +1,35 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-exams-marks
+kind: vocabulary
+level: B1
+chapter: b1-words-learning
+order: 2
+status: coming-soon
+title:
+  en: "Exams, marks and certificates"
+  fa: "امتحان، نمره و مدرک"
+  de: "Prüfungen, Noten und Zeugnisse"
+words:
+  - word: Klassenarbeit
+  - word: Nachhilfe
+  - word: Intensivkurs
+  - word: Zertifikat
+  - word: Diplom
+  - word: Abschluss
+  - word: sehr gut
+  - word: befriedigend
+  - word: ausreichend
+  - word: mangelhaft
+  - word: ungenügend
+  - word: ausgezeichnet
+  - word: Übung
+  - word: Wiederholung
+  - word: Fortschritt
+  - word: korrigieren
+  - word: verbessern
+  - word: Leistung
+  - word: testen
+  - word: Qualifikation
+  - word: Urkunde
+  - word: Kandidat

@@ -1,0 +1,36 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-town
+kind: vocabulary
+level: A1
+chapter: a1-words-town-travel
+order: 1
+status: coming-soon
+title:
+  en: "In town"
+  fa: "در شهر"
+  de: "In der Stadt"
+words:
+  - word: Stadt
+  - word: Dorf
+  - word: Straße
+  - word: Platz
+  - word: Bank
+  - word: Post
+  - word: Polizei
+  - word: Kino
+  - word: Schwimmbad
+  - word: Bäckerei
+  - word: Kiosk
+  - word: Kindergarten
+  - word: Halle
+  - word: Disco
+  - word: Schild
+  - word: Automat
+  - word: Sehenswürdigkeit
+  - word: besichtigen
+  - word: Führung
+  - word: Eintritt
+  - word: Information
+  - word: Auskunft
+  - word: Schalter

@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { COMING_SOON, changeNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
+import { COMING_SOON, changeNode, EXAM_PART, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
 const CHAPTERS = 'chapters.yaml'
 
@@ -41,6 +41,24 @@ test('German outside asterisks is found in every Persian text that can mark Germ
     [PUBLISHED, undefined, 'mistakes[0].why.fa', expect.stringContaining('"du"')],
     [PUBLISHED, 'q2', 'questions[1].explanation.fa', expect.stringContaining('"st"')],
     [CHAPTERS, undefined, '[1].title.fa', expect.stringContaining('"sein"')],
+  ])
+})
+
+test('German outside asterisks is found in the Persian texts of an exam part', async () => {
+  const content = await fixtureContentWith({
+    [EXAM_PART]: changeNode((node) => {
+      node.explanations.fa.task = 'در پاسخ‌نامه Richtig یا *Falsch* می‌آید.'
+      node.explanations.fa.approach[1] = 'بعد هر جمله را در Text پیدا کنید.'
+      node.practice[1].items[2].explanation.fa = 'دوره kostet nichts.'
+    }),
+  })
+
+  const { report } = await compileContent(content)
+
+  expect(report.errors.map(({ question, where, message }) => [question, where, message])).toEqual([
+    [undefined, 'explanations.fa.task', expect.stringContaining('"Richtig"')],
+    [undefined, 'explanations.fa.approach[1]', expect.stringContaining('"Text"')],
+    ['t2/i3', 'practice[1].items[2].explanation.fa', expect.stringContaining('"kostet"')],
   ])
 })
 

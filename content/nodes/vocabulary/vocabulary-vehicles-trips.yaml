@@ -1,0 +1,38 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-vehicles-trips
+kind: vocabulary
+level: A2
+chapter: a2-words-health-town
+order: 3
+status: coming-soon
+title:
+  en: "Vehicles and trips"
+  fa: "وسیله‌های نقلیه و سفر"
+  de: "Fahrzeuge und Reisen"
+words:
+  - word: parken
+  - word: Wagen
+  - word: Motor
+  - word: Reifen
+  - word: Motorroller
+  - word: Rad
+  - word: Werkstatt
+  - word: Führerschein
+  - word: Fahrplan
+  - word: ICE
+  - word: Verspätung
+  - word: umsteigen
+  - word: verpassen
+  - word: erreichen
+  - word: Flug
+  - word: Schiff
+  - word: buchen
+  - word: reservieren
+  - word: verreisen
+  - word: Tour
+  - word: Tourist
+  - word: Unterkunft
+  - word: Jugendherberge
+  - word: Zelt
+  - word: unterwegs

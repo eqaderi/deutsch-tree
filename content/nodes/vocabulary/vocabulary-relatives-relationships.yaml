@@ -1,0 +1,39 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-relatives-relationships
+kind: vocabulary
+level: A2
+chapter: a2-words-people
+order: 1
+status: coming-soon
+title:
+  en: "Relatives and relationships"
+  fa: "خویشاوندان و رابطه‌ها"
+  de: "Verwandte und Beziehungen"
+words:
+  - word: Onkel
+  - word: Tante
+  - word: Cousin
+  - word: Cousine
+  - word: Enkel
+  - word: Mama
+  - word: Papa
+  - word: Ehepartner
+  - word: Paar
+  - word: Nachbar
+  - word: Person
+  - word: Besuch
+  - word: Kontakt
+  - word: Rentner
+  - word: geschieden
+  - word: getrennt
+  - word: schwanger
+  - word: verlieben
+  - word: streiten
+  - word: sterben
+  - word: Babysitter
+  - word: Taschengeld
+  - word: jemand
+  - word: niemand
+  - word: unterhalten
+  - word: verabredet

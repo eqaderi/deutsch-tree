@@ -1,0 +1,36 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-deciding-planning
+kind: vocabulary
+level: B1
+chapter: b1-words-thinking-talking
+order: 2
+status: coming-soon
+title:
+  en: "Deciding and planning"
+  fa: "تصمیم گرفتن و برنامه‌ریزی"
+  de: "Entscheiden und Planen"
+words:
+  - word: vorhaben
+  - word: Absicht
+  - word: beschließen
+  - word: entscheiden
+  - word: Entscheidung
+  - word: entschließen
+  - word: entschlossen
+  - word: Planung
+  - word: Zweck
+  - word: Vorbereitung
+  - word: Versuch
+  - word: Chance
+  - word: Gelegenheit
+  - word: Möglichkeit
+  - word: Alternative
+  - word: lösen
+  - word: klären
+  - word: verzichten
+  - word: versäumen
+  - word: abmachen
+  - word: realisieren
+  - word: eventuell
+  - word: voraussichtlich

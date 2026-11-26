@@ -1,6 +1,7 @@
 import { use, useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import type { CompiledNode, NodeSummary, Question } from '../content-model/index.ts'
+import { hasPool } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import {
   type Checkpoint,
@@ -22,18 +23,27 @@ const checkpointPath = (level: string) => `/checkpoint/${level}`
 const levelPath = (level: string) => `/?level=${level}`
 
 /**
+ * Whether a node gives questions to the checkpoint of its level. An exam part
+ * gives none: what it asks is a whole task, and an item of a task cannot be
+ * asked without the text it is about.
+ */
+export function givesToCheckpoint(node: NodeSummary): boolean {
+  return node.hasTest && node.kind !== 'exam-part'
+}
+
+/**
  * The questions a node gives to the checkpoint of its level: its pool. A
- * published node without a plain pool (a writing task, for example) gives
- * none, and the checkpoint is drawn from the others.
+ * published node without a plain pool (an exam part with its practice task,
+ * for example) gives none, and the checkpoint is drawn from the others.
  */
 function checkpointPool(node: CompiledNode): readonly Question[] {
-  return node.content?.questions ?? []
+  return node.content && hasPool(node.content) ? node.content.questions : []
 }
 
 /**
  * The last stop of a level's line in the tree: its checkpoint, or a line that
  * says why there is none yet. `ready` says whether the level has a published
- * topic.
+ * topic with a pool; a writing or speaking topic has none.
  */
 export function CheckpointStop({ level, ready }: { level: string; ready: boolean }) {
   const { strings } = useLanguage()
@@ -61,8 +71,8 @@ export function CheckpointPage() {
   const topics = use(loadIndex()).nodes.filter((node) => node.level === level)
   if (topics.length === 0) return <NotFound />
 
-  // The checkpoint draws across every published topic of the level, so it needs all their pools.
-  const published = topics.filter((node) => node.status === 'published')
+  // The checkpoint draws across every published topic of the level that has a pool, so it needs all their pools.
+  const published = topics.filter(givesToCheckpoint)
   const sources = use(loadNodes(published.map((node) => node.id))).map((node) => ({
     nodeId: node.id,
     questions: checkpointPool(node),

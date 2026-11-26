@@ -1,0 +1,38 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-post-phone-computer
+kind: vocabulary
+level: A1
+chapter: a1-words-town-travel
+order: 5
+status: coming-soon
+title:
+  en: "Post, phone and computer"
+  fa: "پست، تلفن و کامپیوتر"
+  de: "Post, Telefon und Computer"
+words:
+  - word: Brief
+  - word: Karte
+  - word: Briefmarke
+  - word: Absender
+  - word: Empfänger
+  - word: schicken
+  - word: Telefon
+  - word: Handy
+  - word: Anruf
+  - word: anrufen
+  - word: telefonieren
+  - word: Anrufbeantworter
+  - word: Vorwahl
+  - word: Nummer
+  - word: Fax
+  - word: E-Mail
+  - word: Internet
+  - word: Computer
+  - word: Drucker
+  - word: drucken
+  - word: anklicken
+  - word: drücken
+  - word: Zeitung
+  - word: Anzeige
+  - word: Papier

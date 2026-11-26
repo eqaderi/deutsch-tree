@@ -1,0 +1,33 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-clothes-colours
+kind: vocabulary
+level: A1
+chapter: a1-words-daily-life
+order: 5
+status: coming-soon
+title:
+  en: "Clothes and colours"
+  fa: "لباس و رنگ‌ها"
+  de: "Kleidung und Farben"
+words:
+  - word: Kleidung
+  - word: Jacke
+  - word: Schuh
+  - word: anziehen
+  - word: ausziehen
+  - word: Tasche
+  - word: aussehen
+  - word: gefallen
+  - word: schön
+  - word: neu
+  - word: Farbe
+  - word: schwarz
+  - word: weiß
+  - word: rot
+  - word: blau
+  - word: grün
+  - word: gelb
+  - word: grau
+  - word: braun
+  - word: hell

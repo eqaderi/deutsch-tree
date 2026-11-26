@@ -1,0 +1,38 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-agreeing-disagreeing
+kind: vocabulary
+level: B1
+chapter: b1-words-thinking-talking
+order: 4
+status: coming-soon
+title:
+  en: "Agreeing, disagreeing and advising"
+  fa: "موافقت، مخالفت و توصیه"
+  de: "Zustimmen, Widersprechen und Raten"
+words:
+  - word: Diskussion
+  - word: Standpunkt
+  - word: Überzeugung
+  - word: überzeugen
+  - word: überreden
+  - word: behaupten
+  - word: widersprechen
+  - word: zustimmen
+  - word: Zustimmung
+  - word: zusagen
+  - word: ablehnen
+  - word: akzeptieren
+  - word: anerkennen
+  - word: Kritik
+  - word: kritisch
+  - word: kritisieren
+  - word: Eindruck
+  - word: Tatsache
+  - word: tatsächlich
+  - word: Wahrheit
+  - word: absagen
+  - word: vorschlagen
+  - word: Empfehlung
+  - word: Rat
+  - word: Ratschlag

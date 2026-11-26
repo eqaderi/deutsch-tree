@@ -1,0 +1,40 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-tasks-meetings
+kind: vocabulary
+level: B1
+chapter: b1-words-work-money
+order: 3
+status: coming-soon
+title:
+  en: "Tasks, meetings and the office"
+  fa: "وظیفه‌ها، جلسه‌ها و دفتر کار"
+  de: "Aufgaben, Besprechungen und Büro"
+words:
+  - word: Tagesablauf
+  - word: Alltag
+  - word: alltäglich
+  - word: Besprechung
+  - word: Konferenz
+  - word: Versammlung
+  - word: Zusammenarbeit
+  - word: Auftrag
+  - word: Tätigkeit
+  - word: Dienst
+  - word: Vertretung
+  - word: vertreten
+  - word: Vertreter
+  - word: Terminkalender
+  - word: Mappe
+  - word: Ordner
+  - word: Kuli
+  - word: Kopie
+  - word: kopieren
+  - word: Kopierer
+  - word: Stempel
+  - word: Dokument
+  - word: Visitenkarte
+  - word: übernehmen
+  - word: zuständig
+  - word: verantwortlich
+  - word: Verantwortung

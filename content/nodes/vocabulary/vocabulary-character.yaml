@@ -1,0 +1,36 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-character
+kind: vocabulary
+level: B1
+chapter: b1-words-people-feelings
+order: 3
+status: coming-soon
+title:
+  en: "Character"
+  fa: "شخصیت و اخلاق"
+  de: "Charakter"
+words:
+  - word: ehrlich
+  - word: höflich
+  - word: frech
+  - word: mutig
+  - word: Mut
+  - word: neugierig
+  - word: stolz
+  - word: tolerant
+  - word: zuverlässig
+  - word: ordentlich
+  - word: sparsam
+  - word: kreativ
+  - word: optimistisch
+  - word: realistisch
+  - word: vernünftig
+  - word: verrückt
+  - word: ernst
+  - word: ernsthaft
+  - word: locker
+  - word: cool
+  - word: fair
+  - word: Humor
+  - word: Geduld

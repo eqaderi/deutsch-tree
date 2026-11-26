@@ -1,0 +1,37 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-school-system
+kind: vocabulary
+level: B1
+chapter: b1-words-learning
+order: 1
+status: coming-soon
+title:
+  en: "Schools and universities"
+  fa: "مدرسه‌ها و دانشگاه‌ها"
+  de: "Schulen und Hochschulen"
+words:
+  - word: Grundschule
+  - word: Gymnasium
+  - word: Realschule
+  - word: Gesamtschule
+  - word: Mittelschule
+  - word: Sonderschule
+  - word: Berufsschule
+  - word: Hochschule
+  - word: Fachhochschule
+  - word: Volkshochschule
+  - word: Uni
+  - word: Institut
+  - word: Kindertagesstätte
+  - word: Kita
+  - word: Krippe
+  - word: Semester
+  - word: Seminar
+  - word: Studierende
+  - word: Professor
+  - word: Kursleiter
+  - word: Lerner
+  - word: Teilnehmer
+  - word: Teilnahme
+  - word: beteiligen

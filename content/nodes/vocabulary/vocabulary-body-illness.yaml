@@ -1,0 +1,39 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-body-illness
+kind: vocabulary
+level: A2
+chapter: a2-words-health-town
+order: 1
+status: coming-soon
+title:
+  en: "The body and being ill"
+  fa: "بدن و بیماری"
+  de: "Der Körper und Kranksein"
+words:
+  - word: Körper
+  - word: Gesicht
+  - word: Hals
+  - word: Ohr
+  - word: Zahn
+  - word: Rücken
+  - word: Magen
+  - word: Gesundheit
+  - word: gesund
+  - word: Krankheit
+  - word: Grippe
+  - word: erkältet
+  - word: husten
+  - word: Schmerz
+  - word: Medikament
+  - word: Tablette
+  - word: Apotheke
+  - word: Krankenhaus
+  - word: Krankenkasse
+  - word: Krankenpfleger
+  - word: Sprechstunde
+  - word: untersuchen
+  - word: verletzen
+  - word: Unfall
+  - word: fit
+  - word: fallen

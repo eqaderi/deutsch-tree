@@ -84,7 +84,24 @@ export function QuestionView({ question, answer, onAnswer }: QuestionViewProps) 
       return <WordOrder question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
     case 'matching':
       return <Matching question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
+    case 'richtig-falsch':
+      return (
+        <Choices
+          instruction={instruction}
+          sentence={question.prompt}
+          options={[true, false].map((value) => ({ value, label: <ExamAnswer answer={value} /> }))}
+          chosen={answer}
+          onChoose={onAnswer}
+          sideBySide
+        />
+      )
   }
+}
+
+/** "Richtig" or "Falsch", as the exam's answer sheet has it: German in every language. */
+function ExamAnswer({ answer }: { answer: boolean }) {
+  const { strings } = useLanguage()
+  return <German>{answer ? strings.examAnswers.richtig : strings.examAnswers.falsch}</German>
 }
 
 /** What a field holds, as an answer. A field with nothing but spaces in it is no answer yet. */
@@ -128,6 +145,8 @@ export function AnswerText({ question, answer }: { question: Question; answer: A
       const partners = partnersIn(question, answer)
       return <German>{question.left.map((item, index) => `${item} → ${partners[index] ?? '–'}`).join(', ')}</German>
     }
+    case 'richtig-falsch':
+      return <ExamAnswer answer={answer === true} />
   }
 }
 
@@ -139,10 +158,12 @@ interface ChoicesProps {
   options: Array<{ value: Answer; label: ReactNode }>
   chosen: Answer | undefined
   onChoose: (value: Answer) => void
+  /** Two short answers stand next to each other, as on an answer sheet. */
+  sideBySide?: boolean
 }
 
 /** A German sentence and a short list of answers, one of which is chosen. */
-function Choices({ instruction, sentence, options, chosen, onChoose }: ChoicesProps) {
+function Choices({ instruction, sentence, options, chosen, onChoose, sideBySide = false }: ChoicesProps) {
   const id = useId()
   return (
     <div role="radiogroup" aria-labelledby={`${id}-instruction ${id}-sentence`}>
@@ -152,7 +173,7 @@ function Choices({ instruction, sentence, options, chosen, onChoose }: ChoicesPr
       <p id={`${id}-sentence`} className="question-sentence">
         <German>{sentence}</German>
       </p>
-      <div className="options">
+      <div className={sideBySide ? 'options options-side-by-side' : 'options'}>
         {options.map((option, index) => (
           <label key={index} className="option">
             <input type="radio" name={id} checked={option.value === chosen} onChange={() => onChoose(option.value)} />

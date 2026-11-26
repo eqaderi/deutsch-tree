@@ -1,0 +1,35 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-months-seasons
+kind: vocabulary
+level: A1
+chapter: a1-words-numbers-time
+order: 4
+status: coming-soon
+title:
+  en: "Months, seasons and the year"
+  fa: "ماه‌ها، فصل‌ها و سال"
+  de: "Monate, Jahreszeiten und das Jahr"
+words:
+  - word: Januar
+  - word: Februar
+  - word: März
+  - word: April
+  - word: Mai
+  - word: Juni
+  - word: Juli
+  - word: August
+  - word: September
+  - word: Oktober
+  - word: November
+  - word: Dezember
+  - word: Jahr
+  - word: Frühling
+  - word: Frühjahr
+  - word: Sommer
+  - word: Herbst
+  - word: Winter
+  - word: Datum
+  - word: Zeit
+  - word: Anfang
+  - word: Ende

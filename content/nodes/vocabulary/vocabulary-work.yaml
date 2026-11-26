@@ -1,0 +1,34 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-work
+kind: vocabulary
+level: A1
+chapter: a1-words-daily-life
+order: 3
+status: coming-soon
+title:
+  en: "Work and jobs"
+  fa: "کار و شغل"
+  de: "Arbeit und Beruf"
+words:
+  - word: Arbeit
+  - word: arbeiten
+  - word: Beruf
+  - word: Job
+  - word: Arbeitsplatz
+  - word: Firma
+  - word: Chef
+  - word: Beamte
+  - word: Hausfrau
+  - word: Hausmann
+  - word: Praktikum
+  - word: Stelle
+  - word: verdienen
+  - word: arbeitslos
+  - word: selbstständig
+  - word: Termin
+  - word: Plan
+  - word: Problem
+  - word: Ordnung
+  - word: wichtig
+  - word: fertig

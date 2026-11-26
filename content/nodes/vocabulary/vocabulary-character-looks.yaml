@@ -1,0 +1,40 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-character-looks
+kind: vocabulary
+level: A2
+chapter: a2-words-people
+order: 2
+status: coming-soon
+title:
+  en: "What people are like"
+  fa: "آدم‌ها چه‌جور هستند"
+  de: "Wie Menschen sind"
+words:
+  - word: nett
+  - word: sympathisch
+  - word: freundlich
+  - word: klug
+  - word: intelligent
+  - word: dumm
+  - word: blöd
+  - word: faul
+  - word: fleißig
+  - word: streng
+  - word: komisch
+  - word: witzig
+  - word: sportlich
+  - word: aktiv
+  - word: romantisch
+  - word: nervös
+  - word: vorsichtig
+  - word: berühmt
+  - word: beliebt
+  - word: reich
+  - word: arm
+  - word: blond
+  - word: dick
+  - word: dünn
+  - word: hässlich
+  - word: stark
+  - word: schwach

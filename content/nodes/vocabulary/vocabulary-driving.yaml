@@ -1,0 +1,40 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-driving
+kind: vocabulary
+level: B1
+chapter: b1-words-travel-nature
+order: 2
+status: coming-soon
+title:
+  en: "Driving and vehicles"
+  fa: "رانندگی و وسیله‌های نقلیه"
+  de: "Fahren und Fahrzeuge"
+words:
+  - word: abbiegen
+  - word: überholen
+  - word: überqueren
+  - word: überfahren
+  - word: bremsen
+  - word: Bremse
+  - word: hupen
+  - word: Strafzettel
+  - word: anschnallen
+  - word: losfahren
+  - word: stoppen
+  - word: Halt
+  - word: wenden
+  - word: tanken
+  - word: Tankstelle
+  - word: Benzin
+  - word: Panne
+  - word: Fahrzeug
+  - word: Kraftfahrzeug
+  - word: Kfz
+  - word: Pkw
+  - word: Laster
+  - word: Motorrad
+  - word: E-Bike
+  - word: Mountainbike
+  - word: Mobilität
+  - word: mobil

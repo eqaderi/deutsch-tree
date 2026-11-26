@@ -1,0 +1,34 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-home
+kind: vocabulary
+level: A1
+chapter: a1-words-food-home
+order: 3
+status: coming-soon
+title:
+  en: "House and flat"
+  fa: "خانه و آپارتمان"
+  de: "Haus und Wohnung"
+words:
+  - word: Haus
+  - word: Wohnung
+  - word: Apartment
+  - word: Zimmer
+  - word: Raum
+  - word: Küche
+  - word: Bad
+  - word: Toilette
+  - word: Balkon
+  - word: Garten
+  - word: Treppe
+  - word: Stock
+  - word: Aufzug
+  - word: Eingang
+  - word: Ausgang
+  - word: Miete
+  - word: mieten
+  - word: vermieten
+  - word: Vermieter
+  - word: umziehen
+  - word: Schlüssel

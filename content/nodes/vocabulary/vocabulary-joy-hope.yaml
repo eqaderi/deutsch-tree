@@ -1,0 +1,38 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-joy-hope
+kind: vocabulary
+level: B1
+chapter: b1-words-people-feelings
+order: 5
+status: coming-soon
+title:
+  en: "Joy, hope and surprise"
+  fa: "شادی، امید و شگفتی"
+  de: "Freude, Hoffnung und Überraschung"
+words:
+  - word: Freude
+  - word: Gefühl
+  - word: Laune
+  - word: Stimmung
+  - word: Hoffnung
+  - word: Überraschung
+  - word: überraschen
+  - word: Vergnügen
+  - word: vergnügen
+  - word: vergnügt
+  - word: amüsieren
+  - word: genießen
+  - word: fröhlich
+  - word: begeistert
+  - word: dankbar
+  - word: gespannt
+  - word: lächeln
+  - word: beruhigen
+  - word: wundern
+  - word: Wunder
+  - word: angenehm
+  - word: gemütlich
+  - word: entspannend
+  - word: Respekt
+  - word: erwarten

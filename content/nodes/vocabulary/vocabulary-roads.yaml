@@ -1,0 +1,36 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-roads
+kind: vocabulary
+level: B1
+chapter: b1-words-travel-nature
+order: 1
+status: coming-soon
+title:
+  en: "Roads and traffic rules"
+  fa: "جاده‌ها و قانون‌های رانندگی"
+  de: "Straßen und Verkehrsregeln"
+words:
+  - word: Fahrbahn
+  - word: Einbahnstraße
+  - word: Ausfahrt
+  - word: Einfahrt
+  - word: Kurve
+  - word: Umleitung
+  - word: Stau
+  - word: Vorfahrt
+  - word: Verkehrszeichen
+  - word: Geschwindigkeit
+  - word: Geschwindigkeitsbeschränkung
+  - word: Tempo
+  - word: Kilometer pro Stunde
+  - word: Fußgänger
+  - word: Fußgängerzone
+  - word: Gehsteig
+  - word: Radfahrer
+  - word: Strecke
+  - word: Entfernung
+  - word: Distanz
+  - word: Richtung
+  - word: Zone
+  - word: verlaufen

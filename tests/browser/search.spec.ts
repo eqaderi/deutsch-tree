@@ -4,6 +4,13 @@ import { expect, test } from './test.ts'
 
 const results = (page: Page) => page.getByRole('main').getByRole('listitem')
 
+/**
+ * How many fixture topics a search for "fixture" (in Persian: «آزمایشی»)
+ * finds: every one, the seven grammar topics, the vocabulary topic, the
+ * phrases topic and the four exam parts, since each has the word in its title.
+ */
+const FIXTURE_TOPICS = 13
+
 /** How far the page can be scrolled sideways. A page that fits its screen gives 0. */
 const sidewaysScroll = (page: Page) =>
   page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)
@@ -102,7 +109,7 @@ test('the tree loads no search data; search loads it, and only in the language o
 
   await page.getByRole('link', { name: 'Search' }).click()
   await page.getByRole('searchbox').fill('fixture')
-  await expect(results(page)).toHaveCount(7)
+  await expect(results(page)).toHaveCount(FIXTURE_TOPICS)
 
   expect(loaded).toEqual(['index.json', 'search/en.json'])
 })
@@ -137,12 +144,12 @@ test('in Persian, search takes Persian as a learner types it, and shows the Germ
 
 test('search fits the screen it is opened on, in English and in Persian', async ({ page }) => {
   await page.goto('./#/search?q=fixture')
-  await expect(results(page)).toHaveCount(7)
+  await expect(results(page)).toHaveCount(FIXTURE_TOPICS)
   await expect(page.getByRole('searchbox')).toBeInViewport()
   expect(await sidewaysScroll(page)).toBe(0)
 
   await page.getByRole('button', { name: 'فارسی' }).click()
   await page.getByRole('searchbox').fill('آزمایشی')
-  await expect(results(page)).toHaveCount(7)
+  await expect(results(page)).toHaveCount(FIXTURE_TOPICS)
   expect(await sidewaysScroll(page)).toBe(0)
 })

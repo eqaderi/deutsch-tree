@@ -10,6 +10,7 @@
  */
 import { z } from 'zod'
 import { type DiagramPart, readDrawing } from './diagram.ts'
+import { type AssistantGradedModule, isAssistantGraded } from './scoring.ts'
 
 export const LANGUAGES = ['en', 'fa', 'de'] as const
 export type Language = (typeof LANGUAGES)[number]
@@ -21,9 +22,28 @@ export type NodeKind = (typeof NODE_KINDS)[number]
 export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
 
-/** The four modules of the exam, as an exam-part node names its own. */
+/** The four modules of the Goethe B1 exam, as they are written in a node id. */
 export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
 export type ExamModule = (typeof EXAM_MODULES)[number]
+
+/** Each module under the exam's own name, with the number of parts the exam gives it. */
+export const EXAM_MODULE_FACTS: Readonly<Record<ExamModule, { name: string; parts: number }>> = {
+  lesen: { name: 'Lesen', parts: 5 },
+  hoeren: { name: 'Hören', parts: 4 },
+  schreiben: { name: 'Schreiben', parts: 3 },
+  sprechen: { name: 'Sprechen', parts: 3 },
+}
+
+/** One part of the exam: Lesen, Teil 1 is { module: 'lesen', part: 1 }. */
+export interface ExamPart {
+  module: ExamModule
+  part: number
+}
+
+/** The id of the node of an exam part: "exam-lesen-1". */
+export function examPartNodeId({ module, part }: ExamPart): string {
+  return `exam-${module}-${part}`
+}
 
 /**
  * The fewest questions a published node's pool may hold. An attempt draws 10
@@ -52,14 +72,33 @@ const nodeId = z
   .string()
   .regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "grammar-001"')
 
+/**
+ * What a node explains in one language. Which of these a node must have
+ * follows from its kind (`EXPLANATIONS_OF` below); the node schema checks it.
+ * German inside any of them goes in *asterisks*.
+ */
 const explanationIn = (language: Language) =>
   z.strictObject(
     {
-      /** The rule in two or three sentences. German inside it goes in *asterisks*. */
-      rule: text,
+      /** A grammar node: the rule in two or three sentences. */
+      rule: text.optional(),
+      /** An exam-part node: what the part asks the candidate to do. */
+      task: text.optional(),
+      /** An exam-part node: how the part is scored. */
+      scoring: text.optional(),
+      /** An exam-part node: how to approach the part, as steps in order. */
+      approach: z.array(text).min(1).optional(),
     },
     missingIn(language),
   )
+
+const EXAM_PART_EXPLANATIONS = ['task', 'scoring', 'approach'] as const
+const EXPLANATIONS = ['rule', ...EXAM_PART_EXPLANATIONS] as const
+
+/** The explanations that a node of this kind writes in every language. */
+function explanationsOf(kind: NodeKind): readonly (typeof EXPLANATIONS)[number][] {
+  return kind === 'exam-part' ? EXAM_PART_EXPLANATIONS : ['rule']
+}
 
 const table = z
   .strictObject({
@@ -118,6 +157,26 @@ const diagram = z
 const example = z.strictObject({ de: text, en: textIn('en'), fa: textIn('fa') })
 
 const mistake = z.strictObject({ wrong: text, right: text, why: localised })
+
+/**
+ * One set phrase of a phrases node. `meaning` says what the phrase means in
+ * English and in Persian; its German text explains in simple German when the
+ * phrase is used, since a translation would say nothing to that reader.
+ */
+const phrase = z.strictObject({
+  /** The phrase. Where the speaker's own words follow, it is left open with "…". */
+  de: text,
+  meaning: localised,
+  /** Ids of the exam-part nodes whose tasks this phrase serves: one or more of the node's own `examTasks`. */
+  examTasks: z.array(nodeId).min(1, 'must name at least one exam task'),
+  /** The phrase in use, in a whole sentence. */
+  example: z.strictObject(example.shape, {
+    error: ({ input }) =>
+      input === undefined
+        ? 'is missing: a phrase is shown in use, in one German sentence with its English and Persian'
+        : undefined,
+  }),
+})
 
 const questionBase = {
   id: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "q1"'),
@@ -383,6 +442,81 @@ const question = z.discriminatedUnion('type', [
   matchingQuestion,
 ])
 
+// ---------------------------------------------------------------------------
+// Item tasks: a reading part as a candidate meets it, scored per item
+// ---------------------------------------------------------------------------
+
+const partId = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "t1"')
+
+/** A German text that a task's items are about: an e-mail, a blog entry, an advertisement. */
+const taskText = z.strictObject({
+  /** Stable inside the task. */
+  id: partId,
+  /** A heading or subject line, where the text has one. */
+  title: text.optional(),
+  /** The text itself. A blank line starts a new paragraph; a line break inside a paragraph is kept. */
+  body: text,
+})
+
+/**
+ * "Richtig" or "Falsch": the prompt is a statement about the text of the
+ * task, and the text decides. (Not `true-false`, which asks whether a
+ * sentence is correct German.)
+ */
+const richtigFalschItem = z.strictObject({
+  ...questionBase,
+  type: z.literal('richtig-falsch'),
+  /** true when the statement is right according to the text (Richtig), false when it is not (Falsch). */
+  answer: z.boolean(oneAnswer('richtig-falsch', 'must be true (Richtig) or false (Falsch)')),
+})
+
+/**
+ * One item of a task. An item is a question whose answer lies in the task's
+ * texts, so it has what every question has: id, prompt, answer, explanation.
+ * The item format of another exam part joins this union under its own `type`.
+ */
+const taskItem = z.discriminatedUnion('type', [richtigFalschItem])
+
+/**
+ * One task in the format of one exam part that the app scores itself: its
+ * texts, and its items in the order the candidate answers them. It is always
+ * taken whole and scored per item. A practice task of an exam-part node has
+ * this shape, and so is a Lesen part of a mock exam meant to be. (A writing or
+ * speaking task, graded by an AI assistant, is `task` below.)
+ */
+export const itemTaskSchema = z.strictObject({
+  /** Stable inside the node (or the exam) that holds the task. */
+  id: partId,
+  texts: z.array(taskText).min(1),
+  items: z.array(taskItem).min(1),
+})
+
+export type ItemTaskFile = z.infer<typeof itemTaskSchema>
+
+/**
+ * The format of the task of each exam part, by the id of the part's node:
+ * how many texts it has and how many items. A part that is not listed here
+ * has no task format yet, so its node cannot be published. Source: the
+ * candidate sheets of the official model set (the solved example "0" that
+ * some parts begin with is not an item).
+ *
+ * Every item is "richtig-falsch" so far. With the item type of a second
+ * part, a format also names the type of its items.
+ */
+export const ITEM_TASK_FORMATS: Readonly<Record<string, ItemTaskFormat>> = {
+  'exam-lesen-1': { texts: 1, items: 6 },
+}
+
+export interface ItemTaskFormat {
+  texts: number
+  items: number
+}
+
+/** The task format of an exam part, or undefined while it is not built. */
+export function itemTaskFormat(part: ExamPart): ItemTaskFormat | undefined {
+  return ITEM_TASK_FORMATS[examPartNodeId(part)]
+}
+
 /**
  * Proof that an independent reviewer answered the pool without seeing the
  * answer key, and that every disagreement was resolved. Written by
@@ -396,18 +530,74 @@ const reviewRecord = z.strictObject({
   pool: text,
 })
 
+/**
+ * One word of a vocabulary node. `word` is the headword as the scope list
+ * (content/vocabulary/scope-list.tsv) spells it; the list holds its word
+ * class, level, article and plural. The rest of an entry (meanings, a
+ * definition, an example sentence) joins this object when vocabulary pages
+ * are built.
+ */
+const vocabularyEntry = z.strictObject({ word: text })
+
 /** The fields that the nodes of one kind have, and no others. */
 const FIELDS_OF_ONE_KIND = {
   module: 'exam-part',
   part: 'exam-part',
+  practice: 'exam-part',
   purpose: 'phrases',
   examTasks: 'phrases',
+  phrases: 'phrases',
+  words: 'vocabulary',
 } as const satisfies Record<string, NodeKind>
 
 const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${kind}`
 
-/** The content sections that a published node must have. The table may be left out for a diagram. */
-const CONTENT_SECTIONS = ['explanations', 'examples', 'mistakes', 'questions'] as const
+/**
+ * The content sections that a published node with a pool must have, by its
+ * kind. A writing or speaking node has a task instead (see `isAssistantGraded`).
+ */
+const SECTIONS_OF_A_PUBLISHED = {
+  // A grammar node needs a table, a diagram or both; that is checked below.
+  grammar: ['explanations', 'examples', 'mistakes', 'questions'],
+  phrases: ['phrases', 'questions'],
+} as const satisfies Partial<Record<NodeKind, readonly string[]>>
+
+const hasAPage = (kind: NodeKind): kind is keyof typeof SECTIONS_OF_A_PUBLISHED => kind in SECTIONS_OF_A_PUBLISHED
+
+/**
+ * The task of a writing or speaking node: what tells it apart from another
+ * task of the same exam part. All of it is German. Which fields a task has
+ * depends on its part; `TASK_FIELDS` says which.
+ */
+const task = z.strictObject({
+  /** The situation the learner writes or speaks in. */
+  situation: text.optional(),
+  /** The content points of an e-mail, or the points to plan together. */
+  points: z.array(text).optional(),
+  /** Schreiben Aufgabe 2: the one opinion from a forum that the learner replies to. */
+  opinion: z.strictObject({ author: text, text }).optional(),
+  /** Sprechen Teil 2 and 3: the topic of the presentation. */
+  topic: text.optional(),
+})
+
+type TaskField = keyof z.infer<typeof task>
+
+/** The fields of a task in each part, and how many points it lists. */
+const TASK_FIELDS: Record<
+  AssistantGradedModule,
+  Record<number, { name: string; fields: TaskField[]; points?: number }>
+> = {
+  schreiben: {
+    1: { name: 'Schreiben Aufgabe 1', fields: ['situation', 'points'], points: 3 },
+    2: { name: 'Schreiben Aufgabe 2', fields: ['situation', 'opinion'] },
+    3: { name: 'Schreiben Aufgabe 3', fields: ['situation'] },
+  },
+  sprechen: {
+    1: { name: 'Sprechen Teil 1', fields: ['situation', 'points'], points: 4 },
+    2: { name: 'Sprechen Teil 2', fields: ['topic'] },
+    3: { name: 'Sprechen Teil 3', fields: ['topic'] },
+  },
+}
 
 export const nodeFileSchema = z
   .strictObject({
@@ -445,7 +635,14 @@ export const nodeFileSchema = z
     diagrams: z.array(diagram).min(1).optional(),
     examples: z.array(example).min(1).optional(),
     mistakes: z.array(mistake).min(1).optional(),
+    /** Phrases nodes only: the set phrases, in the order the page shows them. */
+    phrases: z.array(phrase).min(1).optional(),
     questions: z.array(question).min(1).optional(),
+    /**
+     * Only in an exam-part node: its practice tasks, each in the format of
+     * the node's exam part. An attempt takes one of them, whole.
+     */
+    practice: z.array(itemTaskSchema).min(1).optional(),
     /** How many questions of the pool one attempt draws. */
     attemptSize: z
       .number()
@@ -455,6 +652,11 @@ export const nodeFileSchema = z
       .default(10),
     /** A published node must have one that matches its pool; the content pipeline checks it. */
     review: reviewRecord.optional(),
+    /** The words of a vocabulary node; no other kind has them. */
+    words: z.array(vocabularyEntry).min(1).optional(),
+
+    /** Writing and speaking nodes only: the task. */
+    task: task.optional(),
   })
   .superRefine((value, ctx) => {
     if (value.kind === 'grammar' && !/^grammar-\d{3}$/.test(value.id)) {
@@ -515,29 +717,153 @@ export const nodeFileSchema = z
           message: `the id of part ${value.part} of the module ${value.module} is "${id}"`,
         })
       }
+      if (value.module !== undefined && value.part !== undefined) {
+        const { name, parts } = EXAM_MODULE_FACTS[value.module]
+        if (value.part > parts) {
+          ctx.addIssue({
+            code: 'custom',
+            path: ['part'],
+            message: `${name} has parts 1 to ${parts}, not a part ${value.part}`,
+          })
+        }
+      }
     }
+    if (value.kind === 'vocabulary' && !value.id.startsWith('vocabulary-')) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['id'],
+        message: 'a vocabulary node id is "vocabulary-" plus the name of its theme, like "vocabulary-family"',
+      })
+    }
+    if (value.kind === 'vocabulary' && value.words === undefined) {
+      ctx.addIssue({ code: 'custom', path: ['words'], message: 'is missing: a vocabulary node lists its words' })
+    }
+
+    // A node explains what its kind explains, in every language, and nothing else.
+    const wanted = explanationsOf(value.kind)
+    for (const language of value.explanations ? LANGUAGES : []) {
+      for (const name of EXPLANATIONS) {
+        const written = value.explanations?.[language][name] !== undefined
+        if (written === wanted.includes(name)) continue
+        ctx.addIssue({
+          code: 'custom',
+          path: ['explanations', language, name],
+          message: written
+            ? value.kind === 'exam-part'
+              ? 'belongs to a grammar node; an exam-part node explains task, scoring and approach'
+              : `belongs to an exam-part node; ${withArticle(value.kind)} node explains its rule`
+            : `is missing; this text is needed in ${language}`,
+        })
+      }
+    }
+
+    // What the learner does with an exam part follows from its module: an AI
+    // assistant grades a writing or speaking task; a reading part is practised
+    // with tasks the app scores per item.
+    if (value.kind === 'exam-part' && value.module !== undefined) {
+      if (isAssistantGraded(value)) {
+        if (value.practice !== undefined) {
+          ctx.addIssue({
+            code: 'custom',
+            path: ['practice'],
+            message: 'a writing or speaking part has no practice task of items: an AI assistant grades its task',
+          })
+        }
+      } else if (value.task !== undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['task'],
+          message: 'only a writing or speaking part has a task for an AI assistant; this part has practice tasks',
+        })
+      }
+    }
+
+    // A writing or speaking task has the fields of its part. A part that its module does not have is reported above.
+    if (isAssistantGraded(value) && value.part !== undefined && value.task) {
+      const taskFields = TASK_FIELDS[value.module][value.part]
+      if (taskFields) {
+        taskFitsItsPart(value.task, taskFields, ctx)
+      }
+    }
+
     if (value.status !== 'published') return
-    if (value.kind !== 'grammar') {
+    if (hasAPage(value.kind)) {
+      for (const section of SECTIONS_OF_A_PUBLISHED[value.kind]) {
+        if (value[section] === undefined) {
+          ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
+        }
+      }
+      if (value.kind === 'grammar' && value.table === undefined && value.diagrams === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['table'],
+          message: 'is required for a published node, unless it has a diagram',
+        })
+      }
+      return
+    }
+    if (value.kind !== 'exam-part') {
       ctx.addIssue({
         code: 'custom',
         path: ['status'],
-        message: `a ${value.kind} node cannot be published yet; only grammar nodes have a page`,
+        message: `${withArticle(value.kind)} node cannot be published yet; it has no page`,
       })
       return
     }
-    for (const section of CONTENT_SECTIONS) {
-      if (value[section] === undefined) {
-        ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
-      }
-    }
-    if (value.table === undefined && value.diagrams === undefined) {
+
+    // A published exam part. Without its module and part it is already rejected above.
+    const { module, part } = value
+    if (module === undefined || part === undefined) return
+    if (!isAssistantGraded(value) && itemTaskFormat({ module, part }) === undefined) {
       ctx.addIssue({
         code: 'custom',
-        path: ['table'],
-        message: 'is required for a published node, unless it has a diagram',
+        path: ['status'],
+        message: `${EXAM_MODULE_FACTS[module].name}, Teil ${part} cannot be published yet: the format of its practice task is not built`,
       })
+      return
+    }
+    // Every exam part's page: what the part asks, how it is scored, how to approach it.
+    if (value.explanations === undefined) {
+      ctx.addIssue({ code: 'custom', path: ['explanations'], message: 'is required for a published node' })
+    }
+    // Then what the learner does with it.
+    if (isAssistantGraded(value)) {
+      if (value.task === undefined) {
+        ctx.addIssue({ code: 'custom', path: ['task'], message: 'is required for a published node' })
+      }
+    } else if (value.practice === undefined) {
+      ctx.addIssue({ code: 'custom', path: ['practice'], message: 'is required for a published node' })
     }
   })
+
+/** A task holds the fields of its exam part, no others, and as many points as the part has. */
+function taskFitsItsPart(
+  value: z.infer<typeof task>,
+  part: { name: string; fields: TaskField[]; points?: number },
+  ctx: z.RefinementCtx,
+): void {
+  for (const field of part.fields) {
+    if (value[field] === undefined) {
+      ctx.addIssue({ code: 'custom', path: ['task', field], message: `is required for ${part.name}` })
+    }
+  }
+  for (const field of Object.keys(value) as TaskField[]) {
+    if (value[field] !== undefined && !part.fields.includes(field)) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['task', field],
+        message: `does not belong to ${part.name}; that task has: ${part.fields.join(', ')}`,
+      })
+    }
+  }
+  if (part.points !== undefined && value.points !== undefined && value.points.length !== part.points) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['task', 'points'],
+      message: `${part.name} has exactly ${part.points} points, this task has ${value.points.length}`,
+    })
+  }
+}
 
 export type NodeFile = z.infer<typeof nodeFileSchema>
 
@@ -678,9 +1004,10 @@ export interface NodeSummary {
   recogniseOnly: boolean
   prerequisites: string[]
   /**
-   * The node is published and has a pool, so its test can be started at
-   * `#/node/<id>/test` without opening its page. False for a node that becomes
-   * done in another way (a score typed in, a practice task).
+   * The node is published and the app can test it, so its test can be started
+   * at `#/node/<id>/test` without opening its page: a draw from its pool, or
+   * for an exam part one of its practice tasks. False for a node that becomes
+   * done in another way (a score typed in).
    */
   hasTest: boolean
   /** German inside a title is marked, like in every other text for the learner. */
@@ -811,6 +1138,16 @@ export interface TypedGapFillQuestion extends QuestionBase {
   gap: { before: string; after: string }
 }
 
+/** An item of an exam task: the prompt is a statement about the task's text; `answer` says whether the text makes it right. */
+export interface RichtigFalschQuestion extends QuestionBase {
+  type: 'richtig-falsch'
+  answer: boolean
+}
+
+/**
+ * Every question the app can ask, check and show: those of a node's pool and
+ * the items of an exam task.
+ */
 export type Question =
   | MultipleChoiceQuestion
   | GapFillQuestion
@@ -820,6 +1157,51 @@ export type Question =
   | FindErrorQuestion
   | WordOrderQuestion
   | MatchingQuestion
+  | RichtigFalschQuestion
+
+/** A question that is an item of an item task: its answer lies in the task's texts. */
+export type TaskItem = RichtigFalschQuestion
+
+export interface TaskText {
+  /** Stable inside the task. */
+  id: string
+  /** German: a heading or subject line. */
+  title?: string
+  /** German. A line break inside a paragraph is part of the text (a greeting, a signature). */
+  paragraphs: string[]
+}
+
+/**
+ * One task in the format of one exam part that the app scores itself: texts
+ * to read, and items in the order they are answered. It is taken whole and
+ * scored per item with the learning engine's `scoreAttempt(task.items, answers)`.
+ */
+export interface ItemTask {
+  /** Stable inside the node or exam that holds the task. */
+  id: string
+  texts: TaskText[]
+  items: TaskItem[]
+}
+
+/**
+ * What the page of every exam part begins with, whatever its module: what
+ * the part asks, how it is scored, how to approach it.
+ */
+export type ExamPartExplanations = Localised<{
+  /** What the part asks the candidate to do. */
+  task: RichText
+  /** How the part is scored. */
+  scoring: RichText
+  /** How to approach the part: steps, in order. */
+  approach: RichText[]
+}>
+
+/** The page content of a reading part: its explanations and the practice tasks the app scores per item. */
+export interface PracticeContent {
+  explanations: ExamPartExplanations
+  /** The practice tasks. An attempt takes one of them, whole. */
+  practice: ItemTask[]
+}
 
 export interface GrammarContent {
   explanations: Localised<{ rule: RichText }>
@@ -835,10 +1217,69 @@ export interface GrammarContent {
   attemptSize: number
 }
 
+/** One set phrase, as the page of a phrases node shows it. */
+export interface Phrase {
+  /** The phrase itself. */
+  de: string
+  /** What it means in English and in Persian, and in simple German when it is used. */
+  meaning: Localised<RichText>
+  /** Ids of the exam-part nodes whose tasks the phrase serves. */
+  examTasks: string[]
+  /** The phrase in use. */
+  example: Example
+}
+
+export interface PhrasesContent {
+  phrases: Phrase[]
+  /** The pool. */
+  questions: Question[]
+  /** How many questions of the pool one attempt draws. */
+  attemptSize: number
+}
+
+/**
+ * One task of the Schreiben module or one part of the Sprechen module, with
+ * everything that tells it apart from another task of the same part. All of
+ * its text is German. The fixed wording of a part (how long, what to mind)
+ * is not content; it comes from the part.
+ *
+ * A task stands on its own, so a mock exam can hold tasks as well as a node.
+ */
+export type ExamTask =
+  /** An informal e-mail of about 80 words on three content points. */
+  | { module: 'schreiben'; part: 1; situation: string; points: string[] }
+  /** A post of about 80 words giving the learner's opinion, in reply to one opinion from a forum. */
+  | { module: 'schreiben'; part: 2; situation: string; opinion: { author: string; text: string } }
+  /** A short semi-formal e-mail of about 40 words. */
+  | { module: 'schreiben'; part: 3; situation: string }
+  /** Planning something with a partner, along four guiding points. */
+  | { module: 'sprechen'; part: 1; situation: string; points: string[] }
+  /** A short presentation on a topic, along the five fixed slides. */
+  | { module: 'sprechen'; part: 2; topic: string }
+  /** Talking about a presentation on a topic: feedback, a question, answers. */
+  | { module: 'sprechen'; part: 3; topic: string }
+
+/**
+ * The page content of a writing or speaking node: its explanations and its
+ * task. There is no pool: the learner does the task, an AI assistant grades
+ * it with the prompt the app provides, and the learner types the score in.
+ */
+export interface ExamTaskContent {
+  explanations: ExamPartExplanations
+  task: ExamTask
+}
+
 /** A node as the app loads it. `content` is null until the node is published. */
 export interface CompiledNode extends NodeSummary {
-  content: GrammarContent | null
+  content: NodeContent | null
 }
+
+/**
+ * What a node's page is built from. Which one it is follows from what it
+ * holds: a pool, practice tasks, or a task for an AI assistant (see
+ * `hasPool` and `hasPractice` in scoring.ts).
+ */
+export type NodeContent = GrammarContent | PhrasesContent | PracticeContent | ExamTaskContent
 
 /** Chapters and nodes, both in curriculum order: chapter by chapter, and inside a chapter by `order`. */
 export interface ContentIndex {

@@ -1,0 +1,38 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-science-research
+kind: vocabulary
+level: B1
+chapter: b1-words-learning
+order: 5
+status: coming-soon
+title:
+  en: "Science, research and technology"
+  fa: "علم، پژوهش و فناوری"
+  de: "Wissenschaft, Forschung und Technik"
+words:
+  - word: Wissenschaft
+  - word: Wissenschaftler
+  - word: Forschung
+  - word: Studie
+  - word: Theorie
+  - word: theoretisch
+  - word: Experte
+  - word: Statistik
+  - word: statistisch
+  - word: Umfrage
+  - word: Recherche
+  - word: analysieren
+  - word: Erfindung
+  - word: erfinden
+  - word: entdecken
+  - word: Entwicklung
+  - word: entwickeln
+  - word: Technik
+  - word: Technologie
+  - word: technisch
+  - word: Methode
+  - word: Faktor
+  - word: Durchschnitt
+  - word: durchschnittlich
+  - word: Philosophie

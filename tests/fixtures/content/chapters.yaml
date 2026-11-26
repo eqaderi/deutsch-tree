@@ -15,6 +15,14 @@
     fa: موضوع‌های آزمایشی با *sein*
     de: Test-Themen mit *sein*
 
+- id: fixture-words
+  level: A1
+  kind: vocabulary
+  title:
+    en: Fixture words
+    fa: واژه‌های آزمایشی
+    de: Test-Wörter
+
 # A second level with three published topics, for the checkpoint of a level with several.
 - id: fixture-nouns
   level: A2
@@ -24,7 +32,7 @@
     fa: اسم‌های آزمایشی
     de: Test-Nomen
 
-# A third level with nothing published: it has no checkpoint yet.
+# A third level with no grammar published: it has no checkpoint yet.
 - id: fixture-unwritten
   level: B1
   kind: grammar
@@ -32,3 +40,46 @@
     en: Fixture level not written yet
     fa: سطح آزمایشی نانوشته
     de: Test-Niveau, noch nicht geschrieben
+
+# The exam parts, at the end of the curriculum. A reading part the app scores per item.
+- id: fixture-exam-lesen
+  level: B1
+  kind: exam-part
+  title:
+    en: "Fixture exam: reading"
+    fa: "امتحان آزمایشی: خواندن"
+    de: "Test-Prüfung: Lesen"
+# Exam parts that an AI assistant grades: they have a task and no question pool.
+- id: fixture-schreiben
+  level: B1
+  kind: exam-part
+  title:
+    en: "Fixture exam: writing"
+    fa: "امتحان آزمایشی: نوشتن"
+    de: "Test-Prüfung: Schreiben"
+
+- id: fixture-sprechen
+  level: B1
+  kind: exam-part
+  title:
+    en: "Fixture exam: speaking"
+    fa: "امتحان آزمایشی: صحبت کردن"
+    de: "Test-Prüfung: Sprechen"
+
+# A fourth level for the phrases node and an exam part it serves. It is a level of its own, so that
+# the levels above keep the counts that the tests of the tree and of the checkpoints know.
+- id: fixture-set-phrases
+  level: B2
+  kind: phrases
+  title:
+    en: Fixture set phrases
+    fa: عبارت‌های ثابت آزمایشی
+    de: Test-Redemittel
+
+- id: fixture-exam-parts
+  level: B2
+  kind: exam-part
+  title:
+    en: Fixture exam parts served by phrases
+    fa: بخش‌های امتحان آزمایشی برای عبارت‌ها
+    de: Test-Prüfungsteile für Redemittel

@@ -1,0 +1,38 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-materials
+kind: vocabulary
+level: B1
+chapter: b1-words-home-food
+order: 5
+status: coming-soon
+title:
+  en: "Materials and things"
+  fa: "جنس‌ها و چیزها"
+  de: "Materialien und Dinge"
+words:
+  - word: Material
+  - word: Holz
+  - word: Metall
+  - word: Gold
+  - word: Plastik
+  - word: Kunststoff
+  - word: Leder
+  - word: Wolle
+  - word: Stoff
+  - word: Gas
+  - word: Flüssigkeit
+  - word: Stein
+  - word: Sand
+  - word: künstlich
+  - word: fest
+  - word: dicht
+  - word: glatt
+  - word: Gegenstand
+  - word: Zeug
+  - word: haltbar
+  - word: original
+  - word: Original
+  - word: Folie
+  - word: farbig
+  - word: violett

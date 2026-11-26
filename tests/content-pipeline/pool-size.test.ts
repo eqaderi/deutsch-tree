@@ -1,6 +1,13 @@
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { COMING_SOON, changeNode, changeReviewedNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
+import {
+  COMING_SOON,
+  changeNode,
+  changeReviewedNode,
+  fixtureContent,
+  fixtureContentWith,
+  PUBLISHED,
+} from './fixture.ts'
 
 test('a published node whose pool is below the minimum size is rejected', async () => {
   const content = await fixtureContentWith({
@@ -21,6 +28,14 @@ test('a published node whose pool is below the minimum size is rejected', async 
   ])
   expect(report.ok).toBe(false)
   expect(bundle).toBeNull()
+})
+
+test('the minimum is not for an exam part: it asks one whole task of its part, which is far smaller', async () => {
+  // The fixture exam part is published with two practice tasks of six items each, and no pool.
+  const { report, bundle } = await compileContent(fixtureContent)
+
+  expect(report.errors).toEqual([])
+  expect(bundle?.nodes.find((node) => node.id === 'exam-lesen-1')).toMatchObject({ status: 'published' })
 })
 
 test('a "coming soon" node may hold a pool that is still being written', async () => {

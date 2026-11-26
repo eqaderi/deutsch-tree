@@ -1,0 +1,38 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-connectors
+kind: vocabulary
+level: A2
+chapter: a2-words-small-words
+order: 3
+status: coming-soon
+title:
+  en: "Because, that, if: connecting words"
+  fa: "چون، که، اگر: واژه‌های ربط"
+  de: "Weil, dass, wenn: Verbindungswörter"
+words:
+  - word: als
+  - word: dass
+  - word: weil
+  - word: wenn
+  - word: deshalb
+  - word: außerdem
+  - word: sonst
+  - word: doch
+  - word: mal
+  - word: sogar
+  - word: eigentlich
+  - word: außer
+  - word: wegen
+  - word: anders
+  - word: selbst
+  - word: eigen
+  - word: einzeln
+  - word: verschieden
+  - word: her
+  - word: hin
+  - word: heraus
+  - word: herein
+  - word: dabei
+  - word: genau
+  - word: fast

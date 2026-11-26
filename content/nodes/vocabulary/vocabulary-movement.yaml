@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-movement
+kind: vocabulary
+level: B1
+chapter: b1-words-general
+order: 1
+status: coming-soon
+title:
+  en: "Moving and handling"
+  fa: "حرکت دادن و به دست گرفتن"
+  de: "Bewegen und Anfassen"
+words:
+  - word: drehen
+  - word: umdrehen
+  - word: heben
+  - word: schieben
+  - word: stoßen
+  - word: schlagen
+  - word: schütteln
+  - word: greifen
+  - word: fassen
+  - word: festhalten
+  - word: stecken
+  - word: treiben
+  - word: zugehen
+  - word: nähern
+  - word: eilen
+  - word: Eile
+  - word: eintreten
+  - word: verlassen
+  - word: aufhalten
+  - word: befinden
+  - word: stehen bleiben
+  - word: entfernen
+  - word: entgegenkommen
+  - word: brechen
+  - word: Schritt
+  - word: los

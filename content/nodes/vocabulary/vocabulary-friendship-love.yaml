@@ -1,0 +1,38 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-friendship-love
+kind: vocabulary
+level: B1
+chapter: b1-words-people-feelings
+order: 2
+status: coming-soon
+title:
+  en: "Friendship, love and meeting people"
+  fa: "دوستی، عشق و دیدار با دیگران"
+  de: "Freundschaft, Liebe und Begegnungen"
+words:
+  - word: Freundschaft
+  - word: Liebe
+  - word: Beziehung
+  - word: Verhältnis
+  - word: Kuss
+  - word: küssen
+  - word: umarmen
+  - word: verliebt
+  - word: treu
+  - word: vertrauen
+  - word: Vertrauen
+  - word: begegnen
+  - word: begrüßen
+  - word: grüßen
+  - word: verabschieden
+  - word: Abschied
+  - word: verabreden
+  - word: Verabredung
+  - word: Treffpunkt
+  - word: begleiten
+  - word: vermissen
+  - word: Heimweh
+  - word: einsam
+  - word: gemeinsam
+  - word: miteinander
