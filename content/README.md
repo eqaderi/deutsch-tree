@@ -1022,8 +1022,10 @@ A rule about the shape of one field goes in the schema,
    one problem per thing to fix. Build each problem with `problemIn`, so that
    it names the node. The shortest example is `pool-is-large-enough.ts`.
 2. Add it to the list in `src/content-pipeline/checks/index.ts`.
-3. Write `tests/content-pipeline/<rule>.test.ts`: break the fixture content
-   with `fixtureContentWith` and `changeNode` from `fixture.ts`, run
+3. Write one test file for the rule in `tests/content-pipeline/`, named
+   after what it rejects (`pool-size.test.ts` holds the tests of
+   `pool-is-large-enough.ts`): break the fixture content with
+   `fixtureContentWith` and `changeNode` from `fixture.ts`, run
    `compileContent`, and compare `report.errors`. Copy `pool-size.test.ts`.
 4. Run `pnpm check`. If the real content or the fixture content in
    `tests/fixtures/content` breaks the new rule, repair the content.
