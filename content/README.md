@@ -187,12 +187,26 @@ questions:
     explanation: { en: …, fa: …, de: … }   # one line: why the answer is right
 ```
 
+### What search and the overview page take from a node
+
+Nothing extra is written for them; the content pipeline builds both from the
+sections above.
+
+- Search finds a published node by its title, its rule, the rows of its table,
+  its examples with their translations, and the right half and the reason of
+  each common mistake. It does not look into the questions. A `coming-soon`
+  node is found by its title only.
+- "All grammar at a glance" shows the table of every published grammar node,
+  under its level and chapter.
+
 ### Question types
 
 Every question has `id`, `type`, `prompt` (German), its answer and
-`explanation`. The test shows the learner what to do in their language, so a
-prompt holds only the German. A question that is answered by choosing states
-one `answer`; a question that is answered by typing lists its `answers`.
+`explanation`; two types below build their own prompt. The test shows the
+learner what to do in their language, so a prompt holds only the German. A
+question with one right answer states its `answer`; a question that can have
+several (a typed answer, an order of words) lists every one under `answers`,
+and the first is shown as the right one.
 
 ```yaml
   - id: q2
@@ -236,6 +250,55 @@ one `answer`; a question that is answered by typing lists its `answers`.
   an answer without seeing your list, and an answer that is not on it stops
   the review.
 
+### Word ordering, find the error and matching
+
+```yaml
+  - id: q6
+    type: find-error                # a sentence with one wrong word; the learner picks it
+    prompt: Du wohne in Berlin.     # exactly one word is wrong
+    answer: wohne                   # that word, as it stands in the sentence
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q7
+    type: word-order                # the learner puts the pieces of a sentence in order
+    answers:                        # every right order of the pieces; the first is shown as the right one
+      - [heute, wohne, ich, in Berlin]
+      - [ich, wohne, heute, in Berlin]
+      - [in Berlin, wohne, ich, heute]
+    end: "."                        # optional: ".", "?" or "!"; default "."
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q8
+    type: matching                  # the learner finds the partner of each item
+    answer:                         # the pairs, each as [item, partner]; three or more
+      - [ich, wohne]
+      - [du, wohnst]
+      - [wir, wohnen]
+    explanation: { en: …, fa: …, de: … }
+```
+
+Word ordering and matching have no `prompt`: the pipeline builds one from the
+pieces or the items, and it mixes what the learner sees.
+
+- **Find the error.** The wrong word must stand in the sentence once only
+  (`Die` and `die` are two words). Write a sentence with one mistake that has
+  one repair; "which word is wrong" must not be a matter of opinion.
+- **Word ordering.** A piece is one word or several (`in Berlin`). Use three
+  or more. Write each piece as it stands inside a sentence, so no capital
+  letter for the first one and no full stop: the app adds both, and a capital
+  would give the first piece away. The same piece may be there twice.
+  German often allows more than one order. **List every right order** under
+  `answers`, the most usual one first; with one right order the list has one
+  entry. The checks make sure every order is the same pieces. To keep the
+  list short, join words into one piece or choose a sentence with less
+  freedom (a question with `end: "?"` has fewer orders than a statement). The
+  blind reviewer is asked for every right order too, without seeing your
+  list: an order that only one side has stops the review, and the
+  disagreement prints the reviewer's orders ready to copy.
+- **Matching.** Both sides are German. No item and no partner may be there
+  twice, so only one matching is right. Write the pairs in the order the
+  items should be shown; the partners are mixed.
+
 ### How many questions an attempt draws
 
 Each attempt at the test draws 10 questions from the pool at random. A node
@@ -248,7 +311,55 @@ attemptSize: 12          # optional; 10 to 15, default 10
 The pass mark follows from it: 90%, rounded up to a whole question (9 of 10,
 11 of 12, 14 of 15).
 
+## A published writing or speaking node
+
+A Schreiben or Sprechen exam-part node has no questions. The learner does one
+task, an AI assistant grades it with a prompt that the app builds, and the
+learner types the score in. The node file holds only the task:
+
+```yaml
+id: exam-schreiben-1
+kind: exam-part
+module: schreiben
+part: 1
+status: published
+
+task:                    # all of it is German
+  situation: >           # who writes to whom, and why
+    Sie sind letzte Woche in eine neue Wohnung gezogen. …
+  points:                # exactly three content points
+    - "Beschreiben Sie: Wie ist die neue Wohnung?"
+    - "Begründen Sie: Warum sind Sie umgezogen?"
+    - Machen Sie einen Vorschlag für einen Besuch.
+```
+
+What a task holds depends on its part:
+
+| Part | Fields of `task` |
+|---|---|
+| Schreiben Aufgabe 1 (informal e-mail, about 80 words) | `situation`, `points` (exactly 3) |
+| Schreiben Aufgabe 2 (opinion post, about 80 words) | `situation`, `opinion: { author, text }` (the one opinion the learner replies to) |
+| Schreiben Aufgabe 3 (short semi-formal e-mail, about 40 words) | `situation` |
+| Sprechen Teil 1 (planning together) | `situation`, `points` (exactly 4) |
+| Sprechen Teil 2 (presentation) | `topic` |
+| Sprechen Teil 3 (talking about a presentation) | `topic` |
+
+Write only what is special to this task. The fixed wording of the part (how
+many words, the five slides of a presentation, what to mind) is added by the
+app, and so are the official marking criteria and the prompt. Never write
+criteria, points or a prompt into a node file.
+
+Every task is original. Follow the format of the exam, and never copy or
+rework the text of an official task or of a task from a book.
+
+Such a node has no `questions` and no `review:` record, and the checks refuse
+both: there is no answer key that a reviewer could answer blind. Have the
+German of the task read by someone who knows German before you publish it.
+
 ## Review before publishing
+
+This is for nodes with a question pool. A writing or speaking node has none;
+see the section above.
 
 A published node needs a `review:` record. `pnpm content:check` fails without
 one, and again when a question or its answer changes later (explanations may
@@ -266,9 +377,8 @@ change freely). A command writes the record, never a hand:
    step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
    in step 1, then add that second file with another `--answers`.
 
-Only `multiple-choice`, `gap-fill`, `true-false`, `typed-answer` and
-`typed-gap-fill` questions and only grammar nodes can be published so far.
-Other question types and node kinds are added to the schema as they are built.
+Only grammar nodes and the writing and speaking exam-part nodes can be
+published so far. Other node kinds are added to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 
@@ -281,6 +391,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   mistake or of a question) with a Latin letter outside asterisks.
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
+- A wrong word that stands in its sentence twice, a right order that is not
+  the same pieces as the first one or is listed twice, and a matching item or
+  partner that is there twice.
 - A prerequisite that is not the id of a node, and a prerequisite cycle
   (a node that needs itself, directly or through other nodes).
 - A phrases node without a purpose or without an exam task, and an exam task
@@ -289,11 +402,15 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   `exam-<module>-<part>`. A `purpose`, `examTasks`, `module` or `part` in a
   node of another kind.
 - A published node with fewer than 15 questions. A `coming-soon` draft may
-  have fewer.
+  have fewer. A writing or speaking node is exempt: it has no pool.
+- A writing or speaking node with `questions` or with a `review:` record, a
+  published one without a `task`, and a task that lacks a field of its part,
+  holds a field of another part, or lists the wrong number of points.
 - Two node files with the same id, and two questions with the same id inside
   one node.
 - A published node with no review record, or whose questions or answers
-  changed after its review. A `coming-soon` node needs none.
+  changed after its review. A `coming-soon` node needs none, and neither
+  does a writing or speaking node.
 - A list of official mock exams that is missing, has a link that is not a
   full `https://` address, has an exam without a link, has two exams with one
   id, or has fewer than two exams that count toward readiness.

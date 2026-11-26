@@ -7,8 +7,11 @@ import { type ReactNode, useId } from 'react'
 import type { Language, Localised, Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import type { Answer } from '../learning-engine/index.ts'
+import { FindError, wordsOf } from './FindError.tsx'
 import { German } from './German.tsx'
+import { Matching, partnersIn } from './Matching.tsx'
 import { TypedAnswer } from './TypedAnswer.tsx'
+import { sentenceOf, WordOrder } from './WordOrder.tsx'
 
 interface QuestionViewProps {
   question: Question
@@ -96,6 +99,12 @@ export function QuestionView({ question, answer, onAnswer }: QuestionViewProps) 
           onType={(text) => onAnswer(typedText(text))}
         />
       )
+    case 'find-error':
+      return <FindError question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
+    case 'word-order':
+      return <WordOrder question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
+    case 'matching':
+      return <Matching question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
   }
 }
 
@@ -161,6 +170,15 @@ export function AnswerText({ question, answer }: { question: Question; answer: A
       // The answer names a word of the node; the learner chose, and reads, its meaning.
       const chosen = question.options.find((option) => option.word === answer)
       return chosen ? <Meaning of={chosen.meaning} /> : '–'
+    }
+    case 'find-error':
+      return <German>{(typeof answer === 'number' && wordsOf(question)[answer]) || '–'}</German>
+    case 'word-order':
+      return <German>{sentenceOf(question, answer)}</German>
+    case 'matching': {
+      // Left to right as a whole, so that each arrow points from an item to its partner.
+      const partners = partnersIn(question, answer)
+      return <German>{question.left.map((item, index) => `${item} → ${partners[index] ?? '–'}`).join(', ')}</German>
     }
   }
 }

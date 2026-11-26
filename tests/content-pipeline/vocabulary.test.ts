@@ -1,4 +1,6 @@
 import { expect, test } from 'vitest'
+import type { CompiledNode, VocabularyContent } from '../../src/content-model/index.ts'
+import { isVocabulary } from '../../src/content-model/scoring.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import {
   COMING_SOON,
@@ -21,14 +23,19 @@ async function errorsAfter(change: (node: any) => void) {
   return (await compileContent(content)).report.errors
 }
 
+/** The vocabulary content of a compiled node; the test fails when it has none. */
+function vocabularyOf(node: CompiledNode | undefined): VocabularyContent {
+  if (!node?.content || !isVocabulary(node.content)) throw new Error(`${node?.id} has no vocabulary content`)
+  return node.content
+}
+
 const inWords = (where: string, message: string) => ({ file: VOCABULARY, node: NODE, where, message })
 
 test('a published vocabulary node compiles into its words, each with all that its page shows', async () => {
   const { report, bundle } = await compileContent(fixtureContent)
 
   expect(report.errors).toEqual([])
-  const content = bundle?.nodes.find((node) => node.id === NODE)?.content
-  if (content?.kind !== 'vocabulary') throw new Error('the node has no vocabulary content')
+  const content = vocabularyOf(bundle?.nodes.find((node) => node.id === NODE))
   expect(content.words).toHaveLength(10)
   expect(content.words[0]).toEqual({
     word: 'Tisch',
@@ -53,7 +60,7 @@ test('a published vocabulary node compiles into its words, each with all that it
 test('its pool asks every word from German and into German, a noun with its article', async () => {
   const { bundle } = await compileContent(fixtureContent)
 
-  const content = bundle?.nodes.find((node) => node.id === NODE)?.content
+  const content = vocabularyOf(bundle?.nodes.find((node) => node.id === NODE))
   expect(content?.questions).toHaveLength(20)
   expect(content?.attemptSize).toBe(10)
   const about = (word: string) => content?.questions.filter((question) => 'word' in question && question.word === word)

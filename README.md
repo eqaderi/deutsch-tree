@@ -38,25 +38,38 @@ ending, because the pipeline runs directly in Node.
 | `content/` | The real content: one YAML file per node under `content/nodes/`, the chapters that group them in `content/chapters.yaml`, and the official mock exams the app links to in `content/official-mock-exams.yaml`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
 | `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
+| `src/search/` | Search as pure functions: the node summaries and the search data of one language in, the nodes found for a query out. It decides how typed text meets content (umlauts, capitals, Persian letter forms). No interface, no loading. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress, name the milestones reached. No interface, no storage; randomness is passed in. |
+| `src/assistant-grading/` | Writing and speaking, which the app cannot score: the official marking criteria (`criteria.ts`), the task as the learner reads it, the prompt to paste into an AI assistant, and the rule for the score out of 100. Pure functions on a task; the app calls no AI service. |
 | `src/progress-store/` | Keeps progress in browser storage, with a version number, and writes and reads the progress file a learner exports. It reads every older version and refuses a newer one. It only stores; the learning engine decides how progress changes. |
-| `src/app/` | App shell: routes, tree, node page, test, backup. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
+| `src/app/` | App shell: routes, tree, node page, test, backup, search page, overview page. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests of code never depend on the real content. |
 | `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows" or "the exam has 15 parts". |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
+| `tests/assistant-grading/` | The prompt and the score rule, on invented tasks (`tasks.ts`). The expected criteria and points are written out from the official score sheets. |
+| `tests/search/` | Search on a small invented catalogue (`catalogue.ts`): what a query finds, in which order, and which passage a result shows. |
 | `tests/progress-store/` | The progress store on a stand-in for browser storage, and the progress file. `older-versions.test.ts` holds text saved by each earlier version. |
 | `tests/language/` | The interface strings of the three languages, compared key by key. |
 | `tests/browser/` | Seam 3: whole journeys in a browser. |
 | `src/pack-builder/` | A learner's own exam book in, a private pack out. `cli.ts` is the command; `vite-plugin.ts` keeps packs out of the site build. The pack format's schema is `src/content-model/pack.ts`. |
 | `tests/pack-builder/` | Seam 4: build a pack from a synthetic book (`fixture.ts`) and assert on the pack. |
 
-The app never reads node files. It fetches `content/index.json` (the chapters
-and every node's summary, both in curriculum order),
-`content/nodes/<id>.json` (one node's page) and
-`content/official-mock-exams.json` (the exams the readiness view links to),
-all written by the pipeline at build time.
+The app never reads node files. It fetches files that the pipeline writes at
+build time, each only on the page that shows it:
+
+| File | Holds | Fetched by |
+|---|---|---|
+| `content/index.json` | The chapters and every node's summary, both in curriculum order. | Every page. |
+| `content/nodes/<id>.json` | One node's page. | That node's page and its test; a level's checkpoint, for the nodes it asks about. |
+| `content/official-mock-exams.json` | The exams the readiness view links to. | The readiness view (`#/readiness`) and the exam stop that ends the tree's last level. |
+| `content/search/<language>.json` | The text of every published node as a list of passages, in one language plus the German. | The search page (`#/search`), in the learner's language only. |
+| `content/overview.json` | Every grammar table. | "All grammar at a glance" (`#/overview`). |
+
+So the first load of the tree does not grow when content is written; only
+`index.json` grows, by one summary per node. Keep it that way: text that only
+one page needs goes into that page's own file, not into the index.
 
 Page addresses live after the `#`, for example `#/node/grammar-001`. The site
 is plain files, so this is what keeps direct links and reloads working on
@@ -81,6 +94,24 @@ GitHub Pages and from a local folder.
   each. A node without a pool gives none. `scoreCheckpoint` reports the nodes
   with wrong answers. A checkpoint is advice: it never reads or changes the
   progress. What a node gives to it is `checkpointPool` in that file.
+- A writing or speaking node has no test of questions. Its page
+  (`src/app/ExamTaskPage.tsx`) shows the task, a button that copies a prompt
+  for an AI assistant, and a box for the score that comes back;
+  `applyEnteredScore` keeps the score and marks the node done at 90 of 100.
+  The three pieces (`TaskSheetView`, `CopyPrompt`, `ScoreEntry` in
+  `src/app/AssistantGrading.tsx`) know nothing of nodes or progress, and the
+  prompt comes from `assistantPrompt(task, language)` in
+  `src/assistant-grading/`, so a mock exam can use them for its own tasks.
+  The app only copies text; it never calls an AI service.
+- The score of one task is its points brought to a scale of 100
+  (`src/assistant-grading/score.ts`). Schreiben: the share of the task's own
+  points (40, 40, 20). Sprechen: the part's criteria count for 84 points and
+  pronunciation, rated on that part alone, for its official 16. The prompt
+  states the same rule to the assistant.
+- Whether a node has a pool or is graded by an assistant: `hasPool` and
+  `isAssistantGraded` in `src/content-model/scoring.ts`. The app imports
+  these from that file, not from `index.ts`, which holds the schema that only
+  the pipeline needs.
 - Progress: read it with `useProgress()` and change it with
   `updateProgress((progress) => …)` from `src/app/progress.ts`, where the
   function comes from the learning engine.
@@ -95,7 +126,9 @@ GitHub Pages and from a local folder.
   `SAVED_VERSION`, and add the old text to
   `tests/progress-store/older-versions.test.ts`. It is then saved, exported
   and imported with no other code. To reshape something already saved, also
-  add a step to `UPGRADES`. The top of that file has the full steps.
+  add a step to `UPGRADES`. The top of that file has the full steps. A field
+  inside a node that may be absent (`scores`, the scores typed in for a
+  writing or speaking node) is a line in `readNodes` and needs no new version.
 - An app never loads progress from a newer version than its own: an import is
   refused with the reason, and such progress found in browser storage is left
   untouched while the page asks for a reload.
@@ -106,8 +139,8 @@ GitHub Pages and from a local folder.
   `src/app/milestones.ts`, outside the progress.
 - A new question type needs: its schema and compiled type in
   `src/content-model/index.ts`, its review view in
-  `src/content-pipeline/review.ts`, a case in `checkAnswer` and in
-  `rightAnswer`, a case in `QuestionView` and in `AnswerText`
+  `src/content-pipeline/review.ts`, a case in `checkAnswer`, in `rightAnswer`
+  and in `isAnswered`, a case in `QuestionView` and in `AnswerText`
   (`src/app/QuestionView.tsx`), and its instruction in the three string
   files. The type checker points at each place that is missing.
 - A question whose answer is typed shows `TypedAnswer`
@@ -117,6 +150,56 @@ GitHub Pages and from a local folder.
   `umlaut-substitute`, `capitalisation`) and `accepted` (the exact spelling).
   `scoreAttempt` keeps both for each question, and the result lists them
   under "Accepted with a note". A missing or wrong word is never a slip.
+- A type whose answer is built in steps (word ordering, matching) keeps the
+  unfinished answer in the same place as a finished one; `isAnswered` in the
+  learning engine says when the test may move on. A type that shows its
+  material mixed gets the order from `src/content-pipeline/mix.ts`: `mixed`
+  for the reviewer's sheet (it must not lean on the answer), `mixedAwayFrom`
+  for the learner. A larger view gets its own file beside `QuestionView.tsx`
+  (`WordOrder.tsx`, `FindError.tsx`, `Matching.tsx`).
+
+## The tree: where the learner stands
+
+The rules are in the learning engine, like every rule. The tree
+(`src/app/TreePage.tsx`) only lays the answers out.
+
+- **State.** `nodeState(progress, id)` gives `not-started`, `in-progress` or
+  `done`. A node is in progress once a result exists for it (a finished test,
+  an entered score) and it is not done. Opening a page starts nothing. Read
+  the state through this function, never from the fields of the progress: a
+  node can become done in other ways than a passed pool. "Coming soon" is not
+  a state; it is the node's `status` in the content.
+- **Un-marking.** `unmarkDone(progress, id)` makes a done node not done and
+  keeps the rest, so it reads as in progress. The node page offers it.
+- **Next recommended.** `nextRecommended(nodes, progress)` is the earliest
+  node of the index that is published and not done, across kinds and levels.
+  It recommends and locks nothing; prerequisites are shown on the node page
+  and lock nothing either. `youAreHere` is the same node, or, when every
+  published node is done, the first one still to be written.
+- **Counts.** `countNodes(nodes, progress)` counts the nodes it is given (a
+  level, a kind, a chapter). A "coming soon" node counts as remaining, since
+  it is still on the way to the exam; `comingSoon` says how many of the
+  remaining ones have to wait. So one done node of 212 reads "1 done · 211
+  left, 211 of them coming soon".
+- **A test from the tree.** `hasTest` in a node's summary says that the node
+  is published and has a pool. Only then does a row offer "Test", which goes
+  to `#/node/<id>/test`. A new way of becoming done needs no change here.
+- **What the tree shows is in its address**: `#/?level=A2&kind=vocabulary`.
+  With no level in the address the tree opens at the level the learner is
+  in. Build such an address with `treeAddress` (`src/app/treeAddress.ts`).
+  A link "back to the tree" is `<BackToTree from={node} />` from a topic,
+  which leads to the topic's level, and `<BackToTree />` from any other
+  page, which leads to the tree as the learner last saw it.
+- Above the route the tree shows the next topic and at most one note: the
+  first-visit steps while the learner has no progress, the backup suggestion
+  once they have a milestone. A new note must not make a third panel there.
+- A row of a topic, in the tree or in another list, is `NodeRow`
+  (`src/app/NodeRow.tsx`).
+- A setting of the device that is not progress (the dismissed first-visit
+  steps in `src/app/firstVisit.ts`, the language) has its own storage key
+  and stays out of the progress store.
+- The tree has no streaks, points, reminders or daily goals, and a browser
+  test keeps it so.
 
 ## Readiness and the official mock exams
 
@@ -139,6 +222,26 @@ GitHub Pages and from a local folder.
   an exam with no score yet the page first asks whether this is the final
   check. Keep it that way: only a few official sets exist, and one that was
   seen early cannot test the learner again.
+
+## Search and the overview page
+
+- Search runs in the browser. `prepareSearch` in `src/search/index.ts` takes
+  the node summaries and the search data, and returns the function that
+  answers a query. `fold` in the same file is the one place that says which
+  typed text equals which content text; a new habit of typing (another
+  keyboard, another script) is a line there and a test in `tests/search/`.
+- The search data is built in `src/content-pipeline/search-data.ts`. A node is
+  a list of passages, whatever its kind, so a new kind of node becomes
+  searchable by adding its passages in `passagesOf` there. Nothing in the app
+  changes. Questions and the wrong half of a common mistake are left out on
+  purpose.
+- A node that is coming soon has no search data and is found by its title,
+  which the index has.
+- The overview data is built in `src/content-pipeline/overview-data.ts`. A
+  node without a table has no entry, and the page shows no box for it.
+- `GrammarTableView` (`src/app/GrammarTableView.tsx`) draws a table on a node
+  page and on the overview page. A table reads left to right in every
+  language.
 
 ## Languages
 
@@ -178,10 +281,20 @@ GitHub Pages and from a local folder.
   whose questions come from several nodes. The fixture node `grammar-010`
   holds only typed questions and draws its whole pool, so a journey there
   meets every question (`takeTypedTest`).
+  A new question type gets a case in `giveAnswer`, `expectAnswerGiven` and
+  `rightAnswerText` there. A journey about one type of `grammar-001` calls
+  `findQuestion`, which brings a question of that type on screen.
 - The fixture content has three levels: A1 with two published topics
   (`grammar-001`, and `grammar-010` with typed questions) and one "coming
   soon", A2 with three published topics (`grammar-101` to `grammar-103`) and
   B1 with nothing published.
+- One question type: `tests/content-pipeline/extra-question.ts` adds one
+  question to the fixture pool and gives back what the pipeline makes of it;
+  `review-sheet.ts` holds a reviewer's answers to the fixture pool.
+- A journey that needs another tree than the fixture's (several kinds, other
+  chapters, hundreds of topics) uses `serveCurriculum` in
+  `tests/browser/curriculum.ts`: it gives the page an invented tree written
+  in a few lines, and leaves the fixture files alone.
 
 ## Deploying
 

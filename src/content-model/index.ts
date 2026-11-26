@@ -9,6 +9,7 @@
  *      (*ich wohne*), so the app can render it left to right as German.
  */
 import { z } from 'zod'
+import { type AssistantGradedModule, isAssistantGraded } from './scoring.ts'
 
 export const LANGUAGES = ['en', 'fa', 'de'] as const
 export type Language = (typeof LANGUAGES)[number]
@@ -45,7 +46,7 @@ export type NounNumber = (typeof NOUN_NUMBERS)[number]
 export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
 
-/** The four modules of the exam, as an exam-part node names its own. */
+/** The four modules of the Goethe B1 exam, as they are written in a node id. */
 export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
 export type ExamModule = (typeof EXAM_MODULES)[number]
 
@@ -229,6 +230,136 @@ const typedGapFillQuestion = z
   })
   .superRefine(hasOneGap)
 
+/**
+ * A word of a German sentence: letters and digits, with a hyphen or an
+ * apostrophe inside it. Whatever stands between two words (spaces, commas,
+ * the full stop) belongs to neither.
+ */
+export const WORD = /[\p{L}\p{N}]+(?:[-'’][\p{L}\p{N}]+)*/gu
+
+/** The prompt is a German sentence with one wrong word; the learner picks that word. */
+const findErrorQuestion = z
+  .strictObject({
+    ...questionBase,
+    type: z.literal('find-error'),
+    /** The one wrong word, written as it stands in the sentence. */
+    answer: answerText('find-error'),
+  })
+  .superRefine((value, ctx) => {
+    const matches = (value.prompt.match(WORD) ?? []).filter((word) => word === value.answer).length
+    if (matches === 1) return
+    ctx.addIssue({
+      code: 'custom',
+      path: ['answer'],
+      message:
+        matches === 0
+          ? `no correct answer: "${value.answer}" is not a word of the sentence`
+          : `${matches} correct answers: "${value.answer}" is in the sentence ${matches} times`,
+    })
+  })
+
+/**
+ * A question type whose prompt the author does not write: the pipeline builds
+ * it from what the question shows.
+ */
+const questionWithoutPrompt = { id: questionBase.id, explanation: questionBase.explanation }
+
+/** The marks that may close the sentence of a word ordering question. */
+export const SENTENCE_ENDS = ['.', '?', '!'] as const
+
+const NOT_ORDERS = 'must be a list of orders, each one a list of the pieces, such as [[wo, wohnst, du]]'
+
+/** One order of the pieces of a word ordering question. */
+const piecesInOrder = z.array(text).min(3, 'needs at least 3 pieces: with fewer there is nothing to put in order')
+
+/**
+ * Every right order of a word ordering question. One order written without
+ * the list around it is the likely slip, so the shape is looked at first and
+ * gets one message.
+ */
+const rightOrders = z
+  .custom<unknown[][]>((input) => Array.isArray(input) && input.every(Array.isArray), {
+    error: ({ input }) => (input === undefined ? NO_ACCEPTED_ANSWER : NOT_ORDERS),
+  })
+  .pipe(z.array(piecesInOrder).min(1, NO_ACCEPTED_ANSWER))
+
+/**
+ * The pieces of a German sentence, which the learner puts in order. A piece
+ * is one word or several. Like a typed question it lists every accepted
+ * answer: where German allows more than one order of the pieces, each right
+ * order is listed, and the first one is shown as the right answer.
+ */
+const wordOrderQuestion = z
+  .strictObject({
+    ...questionWithoutPrompt,
+    type: z.literal('word-order'),
+    /** Every right order. A piece is written as it stands inside a sentence (no capital for the first). */
+    answers: rightOrders,
+    /** The mark that closes the sentence. The app adds it, and the capital letter at the start. */
+    end: z.enum(SENTENCE_ENDS, { error: 'must be ".", "?" or "!"' }).default('.'),
+  })
+  .superRefine((value, ctx) => {
+    const [first = []] = value.answers
+    value.answers.forEach((order, index) => {
+      if (index === 0) return
+      const listedTwice = value.answers.slice(0, index).some((earlier) => sameList(earlier, order))
+      const problem = notTheSamePieces(first, order) ?? (listedTwice ? 'is listed twice' : undefined)
+      if (problem) ctx.addIssue({ code: 'custom', path: ['answers', index], message: problem })
+    })
+  })
+
+function sameList(a: readonly string[], b: readonly string[]): boolean {
+  return a.length === b.length && a.every((item, index) => item === b[index])
+}
+
+/** Why `order` is not a rearrangement of `pieces`, or undefined when it is one. */
+function notTheSamePieces(pieces: readonly string[], order: readonly string[]): string | undefined {
+  const must = 'must be the pieces of the first order in another order'
+  const left = [...pieces]
+  for (const piece of order) {
+    const index = left.indexOf(piece)
+    if (index === -1) {
+      return `${must}: "${piece}" is ${pieces.includes(piece) ? 'there too often' : 'not one'}`
+    }
+    left.splice(index, 1)
+  }
+  return left.length > 0 ? `${must}: "${left[0]}" is missing` : undefined
+}
+
+const NOT_PAIRS = 'must be the pairs, each one written as [item, partner]'
+
+/**
+ * Pairs of German: the learner finds the partner of each item. An item has
+ * one partner and a partner fits one item, so only one matching is right.
+ */
+const matchingQuestion = z
+  .strictObject({
+    ...questionWithoutPrompt,
+    type: z.literal('matching'),
+    /** The pairs, each one as [item, partner]. The app mixes the partners. */
+    answer: z
+      .array(z.tuple([text, text], { error: NOT_PAIRS }), {
+        error: ({ input }) => (input === undefined ? 'no correct answer: the question states none' : NOT_PAIRS),
+      })
+      .min(3, 'needs at least 3 pairs: with fewer there is nothing to match'),
+  })
+  .superRefine((value, ctx) => {
+    value.answer.forEach(([item, partner], index) => {
+      // Reported once, at the last pair that repeats it.
+      const later = value.answer.slice(index + 1)
+      const items = value.answer.filter(([other]) => other === item).length
+      if (items > 1 && !later.some(([other]) => other === item)) {
+        const message = `${items} correct answers: "${item}" has ${items} partners`
+        ctx.addIssue({ code: 'custom', path: ['answer', index], message })
+      }
+      const partners = value.answer.filter(([, other]) => other === partner).length
+      if (partners > 1 && !later.some(([, other]) => other === partner)) {
+        const message = `${partners} correct answers: "${partner}" is the partner of ${partners} items`
+        ctx.addIssue({ code: 'custom', path: ['answer', index], message })
+      }
+    })
+  })
+
 /** Later question types join this union under their own `type`, each with its answer rule. */
 const question = z.discriminatedUnion('type', [
   multipleChoiceQuestion,
@@ -236,6 +367,9 @@ const question = z.discriminatedUnion('type', [
   trueFalseQuestion,
   typedAnswerQuestion,
   typedGapFillQuestion,
+  findErrorQuestion,
+  wordOrderQuestion,
+  matchingQuestion,
 ])
 
 /**
@@ -358,8 +492,43 @@ const FIELDS_OF_ONE_KIND = {
 
 const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${kind}`
 
-/** The content sections that a published node must have. */
+/** The content sections that a published grammar node must have. */
 const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
+
+/**
+ * The task of a writing or speaking node: what tells it apart from another
+ * task of the same exam part. All of it is German. Which fields a task has
+ * depends on its part; `TASK_FIELDS` says which.
+ */
+const task = z.strictObject({
+  /** The situation the learner writes or speaks in. */
+  situation: text.optional(),
+  /** The content points of an e-mail, or the points to plan together. */
+  points: z.array(text).optional(),
+  /** Schreiben Aufgabe 2: the one opinion from a forum that the learner replies to. */
+  opinion: z.strictObject({ author: text, text }).optional(),
+  /** Sprechen Teil 2 and 3: the topic of the presentation. */
+  topic: text.optional(),
+})
+
+type TaskField = keyof z.infer<typeof task>
+
+/** The fields of a task in each part, and how many points it lists. */
+const TASK_FIELDS: Record<
+  AssistantGradedModule,
+  Record<number, { name: string; fields: TaskField[]; points?: number }>
+> = {
+  schreiben: {
+    1: { name: 'Schreiben Aufgabe 1', fields: ['situation', 'points'], points: 3 },
+    2: { name: 'Schreiben Aufgabe 2', fields: ['situation', 'opinion'] },
+    3: { name: 'Schreiben Aufgabe 3', fields: ['situation'] },
+  },
+  sprechen: {
+    1: { name: 'Sprechen Teil 1', fields: ['situation', 'points'], points: 4 },
+    2: { name: 'Sprechen Teil 2', fields: ['topic'] },
+    3: { name: 'Sprechen Teil 3', fields: ['topic'] },
+  },
+}
 
 export const nodeFileSchema = z
   .strictObject({
@@ -408,6 +577,8 @@ export const nodeFileSchema = z
 
     /** Vocabulary nodes only: the words of the node. Its page lists them and its test is made from them. */
     words: vocabularyEntries.optional(),
+    /** Writing and speaking nodes only: the task. */
+    task: task.optional(),
   })
   .superRefine((value, ctx) => {
     if (value.kind === 'grammar' && !/^grammar-\d{3}$/.test(value.id)) {
@@ -488,6 +659,20 @@ export const nodeFileSchema = z
         })
       }
     }
+    if (isAssistantGraded(value) && value.part !== undefined) {
+      const taskFields = TASK_FIELDS[value.module][value.part]
+      if (taskFields === undefined) {
+        const parts = Object.keys(TASK_FIELDS[value.module])
+        ctx.addIssue({
+          code: 'custom',
+          path: ['part'],
+          message: `${value.module} has parts ${parts[0]} to ${parts.at(-1)}`,
+        })
+      } else if (value.task) {
+        taskFitsItsPart(value.task, taskFields, ctx)
+      }
+    }
+
     if (value.status !== 'published') return
     if (value.kind === 'vocabulary') {
       const required = 'is required for a published node'
@@ -508,20 +693,53 @@ export const nodeFileSchema = z
       })
       return
     }
-    if (value.kind !== 'grammar') {
+    if (value.kind === 'grammar') {
+      for (const section of CONTENT_SECTIONS) {
+        if (value[section] === undefined) {
+          ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
+        }
+      }
+    } else if (isAssistantGraded(value)) {
+      if (value.task === undefined) {
+        ctx.addIssue({ code: 'custom', path: ['task'], message: 'is required for a published node' })
+      }
+    } else {
       ctx.addIssue({
         code: 'custom',
         path: ['status'],
-        message: `a ${value.kind} node cannot be published yet; only grammar and vocabulary nodes have a page`,
+        message: `a ${value.kind} node${value.module ? ` of ${value.module}` : ''} cannot be published yet; it has no page`,
       })
-      return
-    }
-    for (const section of CONTENT_SECTIONS) {
-      if (value[section] === undefined) {
-        ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
-      }
     }
   })
+
+/** A task holds the fields of its exam part, no others, and as many points as the part has. */
+function taskFitsItsPart(
+  value: z.infer<typeof task>,
+  part: { name: string; fields: TaskField[]; points?: number },
+  ctx: z.RefinementCtx,
+): void {
+  for (const field of part.fields) {
+    if (value[field] === undefined) {
+      ctx.addIssue({ code: 'custom', path: ['task', field], message: `is required for ${part.name}` })
+    }
+  }
+  for (const field of Object.keys(value) as TaskField[]) {
+    if (value[field] !== undefined && !part.fields.includes(field)) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['task', field],
+        message: `does not belong to ${part.name}; that task has: ${part.fields.join(', ')}`,
+      })
+    }
+  }
+  if (part.points !== undefined && value.points !== undefined && value.points.length !== part.points) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['task', 'points'],
+      message: `${part.name} has exactly ${part.points} points, this task has ${value.points.length}`,
+    })
+  }
+}
 
 export type NodeFile = z.infer<typeof nodeFileSchema>
 
@@ -650,6 +868,12 @@ export interface NodeSummary {
   status: NodeStatus
   recogniseOnly: boolean
   prerequisites: string[]
+  /**
+   * The node is published and has a pool, so its test can be started at
+   * `#/node/<id>/test` without opening its page. False for a node that becomes
+   * done in another way (a score typed in, a practice task).
+   */
+  hasTest: boolean
   /** German inside a title is marked, like in every other text for the learner. */
   title: Localised<RichText>
   /** Exam-part nodes only: the module of the exam and the number of the part inside it. */
@@ -715,6 +939,37 @@ export interface TrueFalseQuestion extends QuestionBase {
   answer: boolean
 }
 
+/** The prompt is a German sentence with one wrong word; the learner picks that word. */
+export interface FindErrorQuestion extends QuestionBase {
+  type: 'find-error'
+  /** The prompt cut into its words and what stands between them, so the app can offer each word. */
+  parts: Array<string | { word: string }>
+  /** The place of the wrong word among the words of `parts`, counted from 0. */
+  answer: number
+}
+
+/** The learner puts the pieces of a German sentence in order. The prompt is the mixed pieces. */
+export interface WordOrderQuestion extends QuestionBase {
+  type: 'word-order'
+  /** The pieces as the learner first sees them: mixed, and in no right order. */
+  pieces: string[]
+  /** The mark that closes the sentence. */
+  end: (typeof SENTENCE_ENDS)[number]
+  /** Every right order of the pieces. The first is the one a result shows as the right answer. */
+  answers: string[][]
+}
+
+/** The learner finds the partner of each item. The prompt is the items. */
+export interface MatchingQuestion extends QuestionBase {
+  type: 'matching'
+  /** The items that each get a partner, in the order the author wrote them. */
+  left: string[]
+  /** The partners to choose from, mixed. No two are the same. */
+  right: string[]
+  /** The partner of each item of `left`, in the same order. */
+  answer: string[]
+}
+
 /**
  * The learner types the answer. `answers` lists every accepted answer; the
  * first is the one a result shows as the right answer.
@@ -771,6 +1026,9 @@ export type Question =
   | TrueFalseQuestion
   | TypedAnswerQuestion
   | TypedGapFillQuestion
+  | FindErrorQuestion
+  | WordOrderQuestion
+  | MatchingQuestion
   | MeaningOfWordQuestion
   | WordForMeaningQuestion
 
@@ -812,7 +1070,6 @@ export function pluralAsLearned(word: Pick<VocabularyWord, 'plural'>): string | 
 }
 
 export interface GrammarContent {
-  kind: 'grammar'
   explanations: Localised<{ rule: RichText }>
   table: GrammarTable
   examples: Example[]
@@ -825,7 +1082,6 @@ export interface GrammarContent {
 
 /** What the page and the test of a published vocabulary node need. */
 export interface VocabularyContent {
-  kind: 'vocabulary'
   /** In the order of the node file. */
   words: VocabularyWord[]
   /** The pool, made from the words: each word from German and into German. */
@@ -835,12 +1091,43 @@ export interface VocabularyContent {
 }
 
 /**
- * A node as the app loads it. `content` is null until the node is published;
- * `content.kind` says which page it is.
+ * One task of the Schreiben module or one part of the Sprechen module, with
+ * everything that tells it apart from another task of the same part. All of
+ * its text is German. The fixed wording of a part (how long, what to mind)
+ * is not content; it comes from the part.
+ *
+ * A task stands on its own, so a mock exam can hold tasks as well as a node.
  */
-export interface CompiledNode extends NodeSummary {
-  content: GrammarContent | VocabularyContent | null
+export type ExamTask =
+  /** An informal e-mail of about 80 words on three content points. */
+  | { module: 'schreiben'; part: 1; situation: string; points: string[] }
+  /** A post of about 80 words giving the learner's opinion, in reply to one opinion from a forum. */
+  | { module: 'schreiben'; part: 2; situation: string; opinion: { author: string; text: string } }
+  /** A short semi-formal e-mail of about 40 words. */
+  | { module: 'schreiben'; part: 3; situation: string }
+  /** Planning something with a partner, along four guiding points. */
+  | { module: 'sprechen'; part: 1; situation: string; points: string[] }
+  /** A short presentation on a topic, along the five fixed slides. */
+  | { module: 'sprechen'; part: 2; topic: string }
+  /** Talking about a presentation on a topic: feedback, a question, answers. */
+  | { module: 'sprechen'; part: 3; topic: string }
+
+/**
+ * The page content of a writing or speaking node. There is no pool: the
+ * learner does the task, an AI assistant grades it with the prompt the app
+ * provides, and the learner types the score in.
+ */
+export interface ExamTaskContent {
+  task: ExamTask
 }
+
+/** A node as the app loads it. `content` is null until the node is published. */
+export interface CompiledNode extends NodeSummary {
+  content: NodeContent | null
+}
+
+/** What a node's page is built from. Which one it is follows from what it holds: a pool, or a task (see scoring.ts). */
+export type NodeContent = GrammarContent | VocabularyContent | ExamTaskContent
 
 /** Chapters and nodes, both in curriculum order: chapter by chapter, and inside a chapter by `order`. */
 export interface ContentIndex {
@@ -873,8 +1160,45 @@ export interface OfficialMockExams {
   exams: OfficialMockExam[]
 }
 
+/**
+ * What search knows about one node beyond its title, in one language. It is
+ * the same for every kind of node: a list of pieces of text, with no field
+ * that only a grammar node has.
+ */
+export interface SearchEntry {
+  /** Id of the node that a result opens. */
+  node: string
+  /**
+   * The pieces of the node's content, in the order of its page: a rule, a
+   * table row, an example with its translation, a word with its meaning.
+   * Search looks through them, and a result shows the piece that matched.
+   */
+  passages: RichText[]
+}
+
+/**
+ * `search/<language>.json`: everything search looks through besides the
+ * titles, which the index already has. A node with nothing written yet has
+ * no entry. The app fetches it when the learner opens search, never before.
+ */
+export interface SearchData {
+  entries: SearchEntry[]
+}
+
+/**
+ * `overview.json`: every grammar table, for the "all grammar at a glance"
+ * page, in curriculum order. A node without a table has no entry. The page
+ * takes each node's title, level and chapter from the index. The app fetches
+ * this file when the learner opens that page, never before.
+ */
+export interface GrammarOverview {
+  tables: Array<{ node: string; table: GrammarTable }>
+}
+
 export interface ContentBundle {
   index: ContentIndex
   nodes: CompiledNode[]
   officialMockExams: OfficialMockExam[]
+  search: Localised<SearchData>
+  overview: GrammarOverview
 }

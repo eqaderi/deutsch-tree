@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { expect, test } from 'vitest'
+import { hasPool } from '../../src/content-model/scoring.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { blindPool, type ReviewSheet, recordReview } from '../../src/content-pipeline/review.ts'
 import { changeNode, fixtureContent, fixtureContentWith, VOCABULARY, withoutReviewRecord } from './fixture.ts'
@@ -50,6 +51,7 @@ const WORDS: Record<string, { german: string; en: string; fa: string; de: string
 async function idOf(word: string, direction: 'meaning' | 'word'): Promise<string> {
   const { bundle } = await compileContent(fixtureContent)
   const content = bundle?.nodes.find((node) => node.id === NODE)?.content
+  if (!content || !hasPool(content)) throw new Error(`${NODE} has no pool`)
   const type = direction === 'meaning' ? 'meaning-of-word' : 'word-for-meaning'
   const question = content?.questions.find((one) => one.type === type && 'word' in one && one.word === word)
   if (!question) throw new Error(`the pool has no ${type} question about ${word}`)

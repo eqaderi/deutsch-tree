@@ -4,10 +4,21 @@ kind: exam-part
 level: B1
 chapter: b1-exam-schreiben
 order: 1
-status: coming-soon
+status: published
 module: schreiben
 part: 1
 title:
   en: "*Schreiben Aufgabe 1*: an e-mail to a friend"
   fa: "*Schreiben Aufgabe 1*: ایمیل به یک دوست"
   de: "Schreiben Aufgabe 1: eine E-Mail an einen Freund oder eine Freundin"
+
+# The task is original; it follows the format of the exam, not the wording of
+# any official or published task.
+task:
+  situation: >
+    Sie sind letzte Woche in eine neue Wohnung gezogen. Ihre Freundin Lena
+    wohnt in einer anderen Stadt und hat die Wohnung noch nicht gesehen.
+  points:
+    - "Beschreiben Sie: Wie ist die neue Wohnung?"
+    - "Begründen Sie: Warum sind Sie umgezogen?"
+    - Machen Sie einen Vorschlag für einen Besuch von Lena.

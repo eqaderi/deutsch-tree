@@ -15,6 +15,9 @@ import {
   type CompiledNode,
   type ContentBundle,
   chaptersFileSchema,
+  type ExamTask,
+  type ExamTaskContent,
+  type FindErrorQuestion,
   GAP,
   type GrammarContent,
   LANGUAGES,
@@ -27,10 +30,15 @@ import {
   officialMockExamsFileSchema,
   type Question,
   type RichText,
+  WORD,
 } from '../content-model/index.ts'
+import { hasPool, isAssistantGraded } from '../content-model/scoring.ts'
 import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
+import { mixedAwayFrom } from './mix.ts'
+import { overviewData } from './overview-data.ts'
+import { searchData } from './search-data.ts'
 import { compileVocabularyContent } from './vocabulary.ts'
 
 /** The list of official mock exams, beside the `nodes` folder, and its file in the compiled bundle. */
@@ -116,7 +124,10 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
     ok: errors.length === 0,
     errors,
     nodes: { total: nodes.length, published, comingSoon: nodes.length - published },
-    questions: nodes.reduce((sum, node) => sum + (node.content?.questions.length ?? 0), 0),
+    questions: nodes.reduce(
+      (sum, node) => sum + (node.content && hasPool(node.content) ? node.content.questions.length : 0),
+      0,
+    ),
   }
 
   return {
@@ -129,6 +140,8 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
           },
           nodes,
           officialMockExams: officialMockExams ?? [],
+          search: searchData(nodes),
+          overview: overviewData(nodes),
         }
       : null,
   }
@@ -143,6 +156,13 @@ export function bundleFiles(bundle: ContentBundle): Array<{ path: string; json: 
       json: JSON.stringify({ exams: bundle.officialMockExams } satisfies OfficialMockExams),
     },
     ...bundle.nodes.map((node) => ({ path: `nodes/${node.id}.json`, json: JSON.stringify(node) })),
+    // Fetched only when the learner opens the "all grammar at a glance" page.
+    { path: 'overview.json', json: JSON.stringify(bundle.overview) },
+    // Fetched only when the learner opens search.
+    ...LANGUAGES.map((language) => ({
+      path: `search/${language}.json`,
+      json: JSON.stringify(bundle.search[language]),
+    })),
   ]
 }
 
@@ -296,6 +316,8 @@ function compileNode(file: NodeFile): CompiledNode {
     status: file.status,
     recogniseOnly: file.recogniseOnly,
     prerequisites: file.prerequisites,
+    // A draft pool inside a "coming soon" file is not a test yet.
+    hasTest: file.status === 'published' && file.questions !== undefined,
     title: richTextIn(file.title),
     ...(file.module !== undefined && { module: file.module }),
     ...(file.part !== undefined && { part: file.part }),
@@ -304,17 +326,23 @@ function compileNode(file: NodeFile): CompiledNode {
   }
   // Drafts inside a "coming soon" file are checked but never shipped.
   if (file.status !== 'published') return { ...summary, content: null }
+  if (isAssistantGraded(file)) return { ...summary, content: compileTaskContent(file) }
   return {
     ...summary,
     content: file.kind === 'vocabulary' ? compileVocabularyContent(file) : compileGrammarContent(file),
   }
 }
 
+/** A writing or speaking node: its task, with the module and the part that say which task it is. */
+function compileTaskContent(file: NodeFile): ExamTaskContent {
+  // The schema guarantees the module, the part, and the fields of that part's task.
+  return { task: { module: file.module, part: file.part, ...file.task } as ExamTask }
+}
+
 function compileGrammarContent(file: NodeFile): GrammarContent {
   // The schema guarantees these sections for a published node.
   const { explanations, table, examples, mistakes, questions } = file as Required<NodeFile>
   return {
-    kind: 'grammar',
     explanations: {
       en: { rule: richText(explanations.en.rule) },
       fa: { rule: richText(explanations.fa.rule) },
@@ -337,9 +365,42 @@ function compileQuestion(question: NonNullable<NodeFile['questions']>[number]): 
       const [before = '', after = ''] = question.prompt.split(GAP)
       return { ...question, explanation, gap: { before, after } }
     }
+    case 'find-error': {
+      const parts = sentenceParts(question.prompt)
+      const words = parts.filter((part) => typeof part !== 'string')
+      // The schema guarantees that exactly one word is the answer.
+      return { ...question, explanation, parts, answer: words.findIndex((part) => part.word === question.answer) }
+    }
+    case 'word-order': {
+      // The schema guarantees a first order, and that every other one is the same pieces.
+      const pieces = mixedAwayFrom(question.answers[0] ?? [], question.answers)
+      return { ...question, explanation, pieces, prompt: pieces.join(SHOWN_APART) }
+    }
+    case 'matching': {
+      const left = question.answer.map(([item]) => item)
+      const answer = question.answer.map(([, partner]) => partner)
+      const right = mixedAwayFrom(answer, [answer])
+      return { ...question, explanation, left, right, answer, prompt: left.join(SHOWN_APART) }
+    }
     default:
       return { ...question, explanation }
   }
+}
+
+/** Stands between the things shown, in the prompt that the pipeline builds for a question without one. */
+const SHOWN_APART = ' / '
+
+/** Cuts "Du wohne hier." into its words and what stands between them. */
+function sentenceParts(sentence: string): FindErrorQuestion['parts'] {
+  const parts: FindErrorQuestion['parts'] = []
+  let end = 0
+  for (const match of sentence.matchAll(WORD)) {
+    if (match.index > end) parts.push(sentence.slice(end, match.index))
+    parts.push({ word: match[0] })
+    end = match.index + match[0].length
+  }
+  if (end < sentence.length) parts.push(sentence.slice(end))
+  return parts
 }
 
 function summarise(node: CompiledNode): NodeSummary {

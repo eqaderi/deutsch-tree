@@ -36,6 +36,40 @@ export const en = {
   start: 'Start',
   comingSoon: 'Coming soon',
   done: 'Done',
+  /** The state word of a topic that is in progress, as the tree writes it. */
+  continueTopic: 'Continue',
+
+  // Finding the way in the tree: the first visit, the next topic, the filter and the counts.
+  howItWorks: 'How it works',
+  firstSteps: {
+    pick: 'Pick a topic.',
+    read: 'Read it, or go straight to the test.',
+    pass: (percent: number) => `Score ${percent}% and the topic is done.`,
+  },
+  gotIt: 'Got it',
+  yourNextTopic: 'Your next topic',
+  nothingNext: 'You have done every topic that is written so far. New topics appear in the tree when they are ready.',
+  youAreHere: 'You are here',
+  kindsOfTopic: 'Kinds of topic',
+  allKinds: 'All kinds',
+  doneCount: (done: number) => `${done} done`,
+  /** Topics that are not done yet, written or not. */
+  leftCount: (left: number) => `${left} left`,
+  /** The counts of a level: done, left, and how many of those left are not written yet. */
+  countsSummary: (done: number, left: number, comingSoon: number) =>
+    comingSoon === 0 ? `${done} done · ${left} left` : `${done} done · ${left} left, ${comingSoon} of them coming soon`,
+  doneOfTotal: (done: number, total: number) => `${done} of ${total} done`,
+  comingSoonCount: (count: number) => `${count} coming soon`,
+  noTopicsHere: 'This level has no topics of this kind.',
+
+  // A topic's page: what it builds on, and un-marking.
+  buildsOn: 'Builds on',
+  buildsOnNote: 'Nothing is locked. These topics help if this one feels too hard.',
+  unmark: 'Mark as not done',
+  unmarkQuestion: 'Mark this topic as not done? It stays that way until you pass it again.',
+  unmarkConfirm: 'Yes, mark as not done',
+  keepDone: 'Keep it done',
+  unmarked: 'This topic is not done any more.',
 
   allTopics: 'All topics',
   rule: 'Rule',
@@ -80,6 +114,9 @@ export const en = {
     'multiple-choice': 'Choose the right answer.',
     'gap-fill': 'Choose the word that fits the gap.',
     'true-false': 'Is this sentence correct German?',
+    'find-error': 'One word in this sentence is wrong. Choose it.',
+    'word-order': 'Build the sentence: choose the words in the right order.',
+    matching: 'Choose the partner that fits each word.',
     'typed-answer': 'Type the answer.',
     'typed-gap-fill': 'Type the word that fits the gap.',
     'meaning-of-word': 'What does this word mean?',
@@ -87,6 +124,11 @@ export const en = {
   } satisfies Record<Question['type'], string>,
   /** Read out in place of an empty gap. */
   gap: 'gap',
+  /** Word ordering: names the line on which the sentence is built, and the words it is built from. */
+  yourSentence: 'Your sentence',
+  wordsToPlace: 'Words',
+  /** Matching: stands in a list of partners until one is chosen. */
+  choosePartner: 'Choose…',
   sentenceCorrect: 'Correct',
   sentenceNotCorrect: 'Not correct',
   /** The name of the buttons that write ä, ö, ü and ß into a typed answer. */
@@ -244,6 +286,52 @@ export const en = {
   } satisfies Record<ExamLinkKind, string>,
   candidatePagesOnly: (first: number, last: number) =>
     `Use pages ${first} to ${last} only. The pages after them hold the answers, the texts of the recordings and sample answers.`,
+
+  // The two reference pages, and the links to them on every page.
+  reference: 'Look up',
+  search: 'Search',
+  allGrammar: 'All grammar',
+  searchTitle: 'Search all topics',
+  searchHint: 'Type a word in English or in German. Without ä, ö, ü and ß on your keyboard, write ae, oe, ue and ss.',
+  searchResults: (count: number) => (count === 1 ? '1 topic found' : `${count} topics found`),
+  searchNothing: 'No topic found. Try another word, or fewer words.',
+  overviewTitle: 'All grammar at a glance',
+  overviewIntro: 'Every grammar table on one page. The name above a table opens its topic.',
+  overviewEmpty: 'No grammar table is written yet.',
+
+  // A writing or speaking node: the task, a prompt for an AI assistant, and the score typed back in.
+  task: 'Task',
+  getYourScore: 'How to get your score',
+  writingSteps: [
+    'Write your text for this task, as in the exam: without a dictionary and without a translator.',
+    'Copy the prompt and paste it into an AI assistant, for example ChatGPT, Claude or Gemini. Put your text below it and send both.',
+    'The assistant grades your text with the official criteria of the exam. Type its score into the box below.',
+  ],
+  speakingSteps: [
+    'Copy the prompt and paste it into an AI assistant that can talk, for example ChatGPT, Claude or Gemini. Send it.',
+    'Switch the assistant to voice mode and say “Hallo”. It speaks German with you, as in the exam. Speak; do not type.',
+    'At the end the assistant grades you with the official criteria of the exam. Type its score into the box below.',
+  ],
+  copyPrompt: 'Copy the prompt',
+  promptCopied: 'Copied. Now paste it into your AI assistant.',
+  promptNotCopied: 'Your browser did not allow copying. Select the whole prompt below and copy it yourself.',
+  readPrompt: 'Read the prompt',
+  thePrompt: 'The prompt',
+  /** Says which language the assistant answers in: the language of this very file. */
+  promptNote:
+    'The prompt is in English and German, because an assistant follows it best that way. It tells the assistant to grade strictly and to answer you in English. This app sends nothing anywhere; it only copies the text.',
+  pronunciationNote:
+    '16 of the 100 points are for pronunciation. An assistant can judge pronunciation only roughly, so take that part of the score as an estimate.',
+  yourScore: 'Your score',
+  noScoreYet: 'No score yet.',
+  scoreLabel: 'Score from the assistant, from 0 to 100',
+  saveScore: 'Save the score',
+  scoreNotValid: 'Type a whole number from 0 to 100.',
+  /** Follows a score, which is shown large: "93 of 100". */
+  ofTotal: (total: number) => `of ${total}`,
+  scoreNeeded: (needed: number, total: number) => `You need ${needed} of ${total} to finish this topic.`,
+  scoreRetry: 'Do the task again and enter the new score. You can try as often as you like.',
+  scoresSoFar: 'Your scores so far',
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */

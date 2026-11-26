@@ -6,6 +6,7 @@ import { type Answer, type AttemptResult, rightAnswer } from '../learning-engine
 import { RichText } from './German.tsx'
 import { AnswerText, QuestionPrompt } from './QuestionView.tsx'
 import { ReportProblem } from './ReportProblem.tsx'
+import { lastTreeAddress } from './treeAddress.ts'
 
 interface TestResultProps {
   nodeId: string
@@ -13,13 +14,15 @@ interface TestResultProps {
   /** The node was done before this attempt. */
   wasDone: boolean
   onRetry: () => void
+  /** Where "All topics" leads: the tree at the node's level. Left out, the tree as the learner last saw it. */
+  treeAddress?: string
 }
 
 /**
  * The result of a node's test: one panel with the score as a big number, the
  * wrong answers with their one-line reasons, and two buttons.
  */
-export function TestResult({ nodeId, result, wasDone, onRetry }: TestResultProps) {
+export function TestResult({ nodeId, result, wasDone, onRetry, treeAddress }: TestResultProps) {
   const { strings } = useLanguage()
   const answered = result.questions.map((item, index) => ({ ...item, nodeId, place: index + 1 }))
   const wrong = answered.filter((item) => !item.correct)
@@ -90,7 +93,7 @@ export function TestResult({ nodeId, result, wasDone, onRetry }: TestResultProps
       <div className="result-actions">
         {result.passed ? (
           <>
-            <Link to="/" className="btn btn-main">
+            <Link to={treeAddress ?? lastTreeAddress()} className="btn btn-main">
               {strings.allTopics}
             </Link>
             <button type="button" className="btn btn-quiet" onClick={onRetry}>

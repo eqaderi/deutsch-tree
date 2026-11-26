@@ -4,7 +4,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parse, stringify } from 'yaml'
 import { nodeFileSchema } from '../../src/content-model/index.ts'
-import { poolFingerprint, reviewFingerprint } from '../../src/content-pipeline/review.ts'
+import { reviewFingerprint } from '../../src/content-pipeline/review.ts'
 
 /** The small, valid content folder that tests start from. */
 export const fixtureContent = fileURLToPath(new URL('../fixtures/content', import.meta.url))
@@ -15,6 +15,9 @@ export const COMING_SOON = 'nodes/grammar/grammar-002.yaml'
 
 /** The fixture's published vocabulary node. */
 export const VOCABULARY = 'nodes/vocabulary/vocabulary-fixture-home.yaml'
+/** The fixture's published writing node and speaking node: exam parts that an AI assistant grades. */
+export const WRITING = 'nodes/exam-part/exam-schreiben-1.yaml'
+export const SPEAKING = 'nodes/exam-part/exam-sprechen-1.yaml'
 
 /**
  * A temporary copy of the fixture content with some files rewritten or added.
@@ -73,9 +76,11 @@ export function comingSoonNode(id: string, fields: Record<string, unknown> = {})
 export function changeReviewedNode(change: (node: LooseNode) => void): (text: string) => string {
   return changeNode((node) => {
     change(node)
-    // The pool of a vocabulary node is made from its words, so the whole node is read as the pipeline reads it.
-    node.review.pool =
-      node.kind === 'vocabulary' ? reviewFingerprint(nodeFileSchema.parse(node)) : poolFingerprint(node.questions)
+    // The record is of the questions as the pipeline reads them. A node that
+    // breaks the content model is rejected before its review is looked at.
+    const read = nodeFileSchema.safeParse(node)
+    // The pool of a vocabulary node is made from its words, so the whole node is fingerprinted.
+    if (read.success) node.review.pool = reviewFingerprint(read.data)
   })
 }
 

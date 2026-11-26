@@ -46,5 +46,5 @@ export const QUESTIONS_PER_WORD = 2
 export function compileVocabularyContent(node: NodeFile): VocabularyContent {
   // The schema guarantees that every word of a published node is written.
   const words = writtenWords(node) ?? []
-  return { kind: 'vocabulary', words, questions: vocabularyPool(words), attemptSize: node.attemptSize }
+  return { words, questions: vocabularyPool(words), attemptSize: node.attemptSize }
 }

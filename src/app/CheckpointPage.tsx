@@ -1,6 +1,7 @@
 import { use, useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import type { CompiledNode, NodeSummary, Question } from '../content-model/index.ts'
+import { hasPool } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import {
   type Checkpoint,
@@ -27,13 +28,13 @@ const levelPath = (level: string) => `/?level=${level}`
  * none, and the checkpoint is drawn from the others.
  */
 function checkpointPool(node: CompiledNode): readonly Question[] {
-  return node.content?.questions ?? []
+  return node.content && hasPool(node.content) ? node.content.questions : []
 }
 
 /**
  * The last stop of a level's line in the tree: its checkpoint, or a line that
  * says why there is none yet. `ready` says whether the level has a published
- * topic.
+ * topic with a pool; a writing or speaking topic has none.
  */
 export function CheckpointStop({ level, ready }: { level: string; ready: boolean }) {
   const { strings } = useLanguage()
