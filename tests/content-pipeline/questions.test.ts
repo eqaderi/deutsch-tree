@@ -66,7 +66,20 @@ test('a gap fill question offers forms for the one gap in its sentence', async (
     prompt: 'Du ___ hier.',
     options: ['wohne', 'wohnst'],
     answer: 'wohnst',
+    // The app gets the sentence already cut at the gap.
+    gap: { before: 'Du ', after: ' hier.' },
   })
+})
+
+test('a gap may open or close the sentence', async () => {
+  const content = await withQuestion(`
+  - id: extra
+    type: gap-fill
+    prompt: _____ du hier?
+    options: [Wohne, Wohnst]
+    answer: Wohnst`)
+
+  expect(await compiledQuestion(content, 'extra')).toMatchObject({ gap: { before: '', after: ' du hier?' } })
 })
 
 test.each([

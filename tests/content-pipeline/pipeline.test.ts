@@ -9,7 +9,7 @@ test('valid content compiles and the report counts what was found', async () => 
     ok: true,
     errors: [],
     nodes: { total: 2, published: 1, comingSoon: 1 },
-    questions: 2,
+    questions: 12,
   })
   expect(bundle).not.toBeNull()
 })

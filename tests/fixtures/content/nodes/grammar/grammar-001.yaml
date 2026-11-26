@@ -70,3 +70,89 @@ questions:
       en: With du the ending is -st.
       fa: با du پایانه -st است.
       de: Bei du ist die Endung -st.
+  - id: q3
+    type: gap-fill
+    prompt: Wir ___ in Wien.
+    options: [wohnen, wohnst]
+    answer: wohnen
+    explanation:
+      en: With *wir* the ending is *-en*.
+      fa: با *wir* پایانه *-en* است.
+      de: Bei *wir* ist die Endung *-en*.
+  - id: q4
+    type: gap-fill
+    prompt: Ich ___ Deutsch.
+    options: [lernst, lerne, lernt]
+    answer: lerne
+    explanation:
+      en: Ich lerne has the ending -e.
+      fa: Ich lerne پایانه -e دارد.
+      de: Ich lerne hat die Endung -e.
+  - id: q5
+    type: true-false
+    prompt: Du wohne hier.
+    answer: false
+    explanation:
+      en: It must be *du wohnst*.
+      fa: باید *du wohnst* باشد.
+      de: Es muss *du wohnst* heißen.
+  - id: q6
+    type: true-false
+    prompt: Ich wohne hier.
+    answer: true
+    explanation:
+      en: Ich wohne is the right form.
+      fa: Ich wohne صورت درست است.
+      de: Ich wohne ist die richtige Form.
+  - id: q7
+    type: multiple-choice
+    prompt: Du ___ Deutsch.
+    options: [lerne, lernen, lernst]
+    answer: lernst
+    explanation:
+      en: Du lernst has the ending -st.
+      fa: Du lernst پایانه -st دارد.
+      de: Du lernst hat die Endung -st.
+  - id: q8
+    type: gap-fill
+    prompt: ___ du in Berlin?
+    options: [Wohne, Wohnst]
+    answer: Wohnst
+    explanation:
+      en: In a question the ending for du is -st too.
+      fa: در جملهٔ پرسشی هم پایانهٔ du همان -st است.
+      de: Auch in der Frage ist die Endung bei du -st.
+  - id: q9
+    type: true-false
+    prompt: Ich lernst Deutsch.
+    answer: false
+    explanation:
+      en: It must be *ich lerne*.
+      fa: باید *ich lerne* باشد.
+      de: Es muss *ich lerne* heißen.
+  - id: q10
+    type: true-false
+    prompt: Du lernst Deutsch.
+    answer: true
+    explanation:
+      en: Du lernst is the right form.
+      fa: Du lernst صورت درست است.
+      de: Du lernst ist die richtige Form.
+  - id: q11
+    type: multiple-choice
+    prompt: Ich ___ Suppe.
+    options: [koche, kochst]
+    answer: koche
+    explanation:
+      en: Ich koche has the ending -e.
+      fa: Ich koche پایانه -e دارد.
+      de: Ich koche hat die Endung -e.
+  - id: q12
+    type: gap-fill
+    prompt: Du ___ Suppe.
+    options: [koche, kochst]
+    answer: kochst
+    explanation:
+      en: Du kochst has the ending -st.
+      fa: Du kochst پایانه -st دارد.
+      de: Du kochst hat die Endung -st.

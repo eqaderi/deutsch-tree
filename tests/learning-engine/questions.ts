@@ -12,7 +12,15 @@ export function multipleChoice(id: string, answer: string, others: string[]): Mu
 }
 
 export function gapFill(id: string, answer: string, others: string[]): GapFillQuestion {
-  return { id, type: 'gap-fill', prompt: `Gap of ${id}: ___`, options: [answer, ...others], answer, explanation }
+  return {
+    id,
+    type: 'gap-fill',
+    prompt: `Gap of ${id}: ___`,
+    options: [answer, ...others],
+    answer,
+    explanation,
+    gap: { before: `Gap of ${id}: `, after: '' },
+  }
 }
 
 export function trueFalse(id: string, answer: boolean): TrueFalseQuestion {

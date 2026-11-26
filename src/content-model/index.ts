@@ -225,11 +225,13 @@ export interface MultipleChoiceQuestion extends QuestionBase {
   answer: string
 }
 
-/** The prompt holds one gap (see GAP); one of the options fills it. */
+/** The prompt holds one gap; one of the options fills it. */
 export interface GapFillQuestion extends QuestionBase {
   type: 'gap-fill'
   options: string[]
   answer: string
+  /** The prompt cut at its gap, so the app can show the chosen form inside the sentence. */
+  gap: { before: string; after: string }
 }
 
 /** The prompt is a German sentence; `answer` says whether it is correct German. */

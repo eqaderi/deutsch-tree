@@ -11,12 +11,14 @@ import { parse as parseYaml } from 'yaml'
 import {
   type CompiledNode,
   type ContentBundle,
+  GAP,
   type GrammarContent,
   LANGUAGES,
   type Localised,
   type NodeFile,
   type NodeSummary,
   nodeFileSchema,
+  type Question,
   type RichText,
 } from '../content-model/index.ts'
 
@@ -168,9 +170,17 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
     table,
     examples,
     mistakes: mistakes.map((mistake) => ({ ...mistake, why: richTextIn(mistake.why) })),
-    questions: questions.map((question) => ({ ...question, explanation: richTextIn(question.explanation) })),
+    questions: questions.map(compileQuestion),
     attemptSize: file.attemptSize,
   }
+}
+
+function compileQuestion(question: NonNullable<NodeFile['questions']>[number]): Question {
+  const explanation = richTextIn(question.explanation)
+  if (question.type !== 'gap-fill') return { ...question, explanation }
+  // The schema guarantees exactly one gap.
+  const [before = '', after = ''] = question.prompt.split(GAP)
+  return { ...question, explanation, gap: { before, after } }
 }
 
 function summarise(node: CompiledNode): NodeSummary {
