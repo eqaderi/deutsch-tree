@@ -422,4 +422,12 @@ export const de: Strings = {
   withTimeLimit: 'mit Zeit',
   withoutTimeLimit: 'ohne Zeit',
   playsLeft: (count) => (count === 0 ? 'Du kannst es nicht mehr hören' : `Du kannst es noch ${count}-mal hören`),
+  moduleTasks: (tasks, minutes) => `${tasks} Teile · ${minutes} Minuten`,
+  gradedTimeLimitNote:
+    'Wenn die Zeit vorbei ist, hörst du auf zu schreiben oder zu sprechen, wie in der Prüfung. Dann lässt du deine Aufgaben bewerten und trägst die Punktzahlen ein.',
+  gradedTimeIsUp:
+    'Die Zeit ist vorbei. Hör jetzt auf, wie in der Prüfung. Lass deine Aufgaben bewerten, trag die Punktzahlen ein und mach dann das Modul fertig.',
+  scoreEntered: (score) => `Punktzahl: ${score} von 100`,
+  scoresEnteredOf: (entered, total) => `${entered} von ${total} Punktzahlen eingetragen`,
+  enteredScores: 'Deine Punktzahlen',
 }

@@ -36,7 +36,7 @@ test('a mock exam holds Lesen in five parts and Hören in four, thirty items eac
   const { mockExams } = await compiledFixture()
 
   const exam = mockExams.find((candidate) => candidate.id === 'mock-exam-1')
-  const modules = exam?.content?.modules ?? []
+  const modules = (exam?.content?.modules ?? []).flatMap((module) => (module.scoredBy === 'items' ? [module] : []))
   expect(
     modules.map((module) => ({
       module: module.module,
@@ -69,6 +69,67 @@ test('a mock exam holds Lesen in five parts and Hören in four, thirty items eac
   ])
 })
 
+test('a mock exam holds Schreiben in three tasks and Sprechen in three parts, graded by an assistant, after Lesen and Hören', async () => {
+  const { mockExams } = await compiledFixture()
+
+  const modules = mockExams.find((candidate) => candidate.id === 'mock-exam-1')?.content?.modules ?? []
+  expect(modules.map((module) => [module.module, module.scoredBy, module.minutes])).toEqual([
+    ['lesen', 'items', 65],
+    ['hoeren', 'items', 40],
+    ['schreiben', 'assistant', 60],
+    ['sprechen', 'assistant', 15],
+  ])
+  const [schreiben, sprechen] = modules.slice(2)
+  expect(schreiben?.parts).toEqual([
+    {
+      part: 1,
+      task: {
+        module: 'schreiben',
+        part: 1,
+        situation: 'Sie haben am Wochenende einen Ausflug an den See gemacht. Ihr Freund Tim war nicht dabei.',
+        points: [
+          'Beschreiben Sie: Wie war der Ausflug?',
+          'Begründen Sie: Was hat Ihnen nicht gefallen?',
+          'Machen Sie einen Vorschlag für den nächsten Ausflug.',
+        ],
+      },
+    },
+    {
+      part: 2,
+      task: {
+        module: 'schreiben',
+        part: 2,
+        situation:
+          'Sie haben im Radio eine Sendung zum Thema „Fahrrad in der Stadt“ gehört. Im Gästebuch der Sendung lesen Sie diese Meinung:',
+        opinion: { author: 'Jonas', text: 'In der Stadt fahre ich nur Fahrrad. Ein Auto brauche ich nicht.' },
+      },
+    },
+    {
+      part: 3,
+      task: {
+        module: 'schreiben',
+        part: 3,
+        situation:
+          'Sie haben morgen einen Termin bei Ihrer Ärztin, Frau Dr. Berg. Sie können nicht kommen. Schreiben Sie an die Praxis: Entschuldigen Sie sich und bitten Sie um einen neuen Termin.',
+      },
+    },
+  ])
+  expect(sprechen?.parts.map((part) => [part.part, part.task])).toEqual([
+    [
+      1,
+      {
+        module: 'sprechen',
+        part: 1,
+        situation:
+          'Eine Freundin aus Ihrem Deutschkurs hat bald Geburtstag. Sie möchten zusammen eine Feier für sie planen.',
+        points: ['Wann und wo feiern?', 'Wer kommt?', 'Essen und Trinken?', 'Geschenk?'],
+      },
+    ],
+    [2, { module: 'sprechen', part: 2, topic: 'Brauchen Kinder ein eigenes Handy?' }],
+    [3, { module: 'sprechen', part: 3, topic: 'Sollen Städte das Auto im Zentrum verbieten?' }],
+  ])
+})
+
 test('the list of mock exams names each in order, with its status and modules; one still being written has no content', async () => {
   const bundle = await compiledFixture()
 
@@ -80,7 +141,7 @@ test('the list of mock exams names each in order, with its status and modules; o
         order: 1,
         status: 'published',
         title: { en: ['Fixture mock exam'], fa: ['آزمون آزمایشی'], de: ['Test-Prüfung'] },
-        modules: ['lesen', 'hoeren'],
+        modules: ['lesen', 'hoeren', 'schreiben', 'sprechen'],
       },
       {
         id: 'mock-exam-2',
@@ -100,7 +161,8 @@ test('the list of mock exams names each in order, with its status and modules; o
 test('an item that asks which text fits offers every text of its part and "0" for none', async () => {
   const { mockExams } = await compiledFixture()
 
-  const teil3 = mockExams[0]?.content?.modules[0]?.parts[2]?.task
+  const lesen = mockExams[0]?.content?.modules[0]
+  const teil3 = lesen?.scoredBy === 'items' ? lesen.parts[2]?.task : undefined
   expect(teil3?.items[3]).toMatchObject({
     type: 'which-text',
     prompt: 'Sie suchen einen Kurs für Ihr Auto.',
@@ -112,7 +174,8 @@ test('an item that asks which text fits offers every text of its part and "0" fo
 test('an item that asks who says something offers the speakers of the discussion, the third in a voice of its own', async () => {
   const { mockExams } = await compiledFixture()
 
-  const teil4 = mockExams[0]?.content?.modules[1]?.parts[3]?.task
+  const hoeren = mockExams[0]?.content?.modules[1]
+  const teil4 = hoeren?.scoredBy === 'items' ? hoeren.parts[3]?.task : undefined
   expect(teil4?.items[2]).toMatchObject({
     type: 'who-says',
     options: ['Moderatorin', 'Herr Wolf', 'Frau Roth'],
@@ -163,6 +226,53 @@ test('a published mock exam needs all parts of Lesen and Hören; one coming soon
       message: 'must hold the 4 parts of Hören, Teil 1 to Teil 4; it holds 3',
     },
   ])
+})
+
+test('a published mock exam needs the three tasks of Schreiben and the three parts of Sprechen', async () => {
+  const errors = await problemsWith((exam) => {
+    exam.schreiben.pop()
+    delete exam.sprechen
+  })
+
+  expect(errors).toEqual([
+    {
+      file: MOCK_EXAM,
+      where: 'schreiben',
+      message: 'must hold the 3 parts of Schreiben, Teil 1 to Teil 3; it holds 2',
+    },
+    { file: MOCK_EXAM, where: 'sprechen', message: 'must hold the 3 parts of Sprechen, Teil 1 to Teil 3; it holds 0' },
+  ])
+})
+
+test('a task of Schreiben or Sprechen holds the fields of its part and no others', async () => {
+  const errors = await problemsWith((exam) => {
+    exam.schreiben[1].points = ['Sagen Sie Ihre Meinung.']
+    delete exam.schreiben[1].opinion
+    exam.sprechen[0].points.pop()
+    exam.sprechen.push({ topic: 'Noch ein Thema' })
+  })
+
+  expect(errors).toEqual([
+    { file: MOCK_EXAM, where: 'schreiben[1].opinion', message: 'is required for Schreiben Aufgabe 2' },
+    {
+      file: MOCK_EXAM,
+      where: 'schreiben[1].points',
+      message: 'does not belong to Schreiben Aufgabe 2; that task has: situation, opinion',
+    },
+    { file: MOCK_EXAM, where: 'sprechen[0].points', message: 'Sprechen Teil 1 has exactly 4 points, this task has 3' },
+    { file: MOCK_EXAM, where: 'sprechen', message: 'must hold the 3 parts of Sprechen, Teil 1 to Teil 3; it holds 4' },
+  ])
+})
+
+test('the tasks of Schreiben and Sprechen are not on the review sheet, so changing one needs no new review', async () => {
+  const errors = await problemsWith(
+    (exam) => {
+      exam.sprechen[1].topic = 'Ist Sport im Verein besser als allein?'
+    },
+    { review: false },
+  )
+
+  expect(errors).toEqual([])
 })
 
 test('an item that asks which text fits must name a text of its part or "0", and each text fits one item at most', async () => {

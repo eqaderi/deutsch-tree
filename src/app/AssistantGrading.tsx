@@ -1,5 +1,5 @@
 /**
- * The three pieces a learner needs to have a writing task or a speaking part
+ * The pieces a learner needs to have a writing task or a speaking part
  * graded by an AI assistant: the task, the prompt to copy, and the box for
  * the score that comes back.
  *
@@ -48,6 +48,29 @@ function TaskBlockView({ block }: { block: TaskBlock }) {
       )
     }
   }
+}
+
+/**
+ * How to have this task graded: the steps for writing or for speaking, the
+ * prompt to copy, and what to know about the prompt and the score.
+ */
+export function GradingSteps({ task }: { task: ExamTask }) {
+  const { strings } = useLanguage()
+  const steps = task.module === 'schreiben' ? strings.writingSteps : strings.speakingSteps
+  return (
+    <>
+      <ol className="steps">
+        {steps.map((step, index) => (
+          <li key={index}>{step}</li>
+        ))}
+      </ol>
+      <CopyPrompt task={task} />
+      <div className="prompt-notes secondary">
+        <p>{strings.promptNote}</p>
+        {task.module === 'sprechen' && <p>{strings.pronunciationNote}</p>}
+      </div>
+    </>
+  )
 }
 
 /**

@@ -9,7 +9,7 @@ import {
   passMark,
   scorePasses,
 } from '../learning-engine/index.ts'
-import { CopyPrompt, ScoreEntry, TaskSheetView } from './AssistantGrading.tsx'
+import { GradingSteps, ScoreEntry, TaskSheetView } from './AssistantGrading.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 
 /**
@@ -19,7 +19,6 @@ import { updateProgress, useProgress } from './progress.ts'
  */
 export function ExamTaskSections({ nodeId, task }: { nodeId: string; task: ExamTask }) {
   const { strings } = useLanguage()
-  const steps = task.module === 'schreiben' ? strings.writingSteps : strings.speakingSteps
   return (
     <>
       <section className="panel" aria-labelledby="section-task">
@@ -33,16 +32,7 @@ export function ExamTaskSections({ nodeId, task }: { nodeId: string; task: ExamT
         <h2 id="section-prompt" className="cap">
           {strings.getYourScore}
         </h2>
-        <ol className="steps">
-          {steps.map((step, index) => (
-            <li key={index}>{step}</li>
-          ))}
-        </ol>
-        <CopyPrompt task={task} />
-        <div className="prompt-notes secondary">
-          <p>{strings.promptNote}</p>
-          {task.module === 'sprechen' && <p>{strings.pronunciationNote}</p>}
-        </div>
+        <GradingSteps task={task} />
       </section>
 
       <NodeScore nodeId={nodeId} />

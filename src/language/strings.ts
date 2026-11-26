@@ -472,6 +472,17 @@ export const en = {
   withoutTimeLimit: 'without a time limit',
   /** How often a recording may still be played. */
   playsLeft: (count: number) => (count === 0 ? 'No plays left' : `Plays left: ${count}`),
+
+  // Schreiben and Sprechen of a mock exam: each task graded by an AI assistant, its score typed in.
+  /** What a module of tasks holds: "3 tasks · 60 minutes". */
+  moduleTasks: (tasks: number, minutes: number) => `${tasks} tasks · ${minutes} minutes`,
+  gradedTimeLimitNote:
+    'When the time is up, stop writing or speaking, as in the exam. Then have your tasks graded and enter the scores.',
+  gradedTimeIsUp: 'The time is up. Stop now, as in the exam. Have your tasks graded, enter the scores, then finish.',
+  /** The score typed in for one task of a mock exam. */
+  scoreEntered: (score: number) => `Score: ${score} of 100`,
+  scoresEnteredOf: (entered: number, total: number) => `${entered} of ${total} scores entered`,
+  enteredScores: 'The scores you entered',
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */

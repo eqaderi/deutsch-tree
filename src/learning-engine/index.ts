@@ -654,7 +654,7 @@ export function scoreAnswerSheet(
   return { total: items.length, correct, score: examScore(correct, items.length), items }
 }
 
-/** A module (Lesen, Hören) over the results of its parts: right items of all parts, and the score out of 100. */
+/** A module over the results of its parts: right items (or points) of all parts, and the score out of 100. */
 export function scoreModule(parts: ReadonlyArray<{ total: number; correct: number }>): {
   total: number
   correct: number
