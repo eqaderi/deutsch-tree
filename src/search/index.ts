@@ -6,6 +6,7 @@
  * (`search/<language>.json`, written by the content pipeline).
  */
 import type { Language, NodeSummary, RichText, SearchData } from '../content-model/index.ts'
+import { textOf } from '../content-model/rich-text.ts'
 
 export interface SearchResult {
   node: NodeSummary
@@ -39,12 +40,12 @@ export function prepareSearch(
   const searchable = nodes.map((node) => {
     // The German title is a passage like any other: a learner who reads in
     // another language may still type "Akkusativ".
-    const germanTitle: RichText[] = language === 'de' ? [] : [[{ de: flat(node.title.de) }]]
+    const germanTitle: RichText[] = language === 'de' ? [] : [[{ de: textOf(node.title.de) }]]
     return {
       node,
-      title: fold(flat(node.title[language])),
+      title: fold(textOf(node.title[language])),
       passages: [...germanTitle, ...(passagesOf.get(node.id) ?? [])].map(
-        (shown): Searchable => ({ shown, folded: fold(flat(shown)) }),
+        (shown): Searchable => ({ shown, folded: fold(textOf(shown)) }),
       ),
     }
   })
@@ -100,7 +101,7 @@ function bestPassage(passages: Searchable[], words: Word[]): RichText | null {
  *     as «می کنم» and as «میکنم».
  *   - Everything that is not a letter or a number separates words.
  */
-export function fold(text: string): string {
+function fold(text: string): string {
   return (
     text
       // Splits a letter from the marks on it (ä into a and two dots), then drops the marks.
@@ -154,6 +155,3 @@ function holds(text: string, word: Word): boolean {
 }
 
 /** Rich text as one plain string. */
-function flat(text: RichText): string {
-  return text.map((part) => (typeof part === 'string' ? part : part.de)).join('')
-}

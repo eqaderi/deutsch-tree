@@ -26,13 +26,14 @@ import {
   MOCK_EXAM_ITEM_MODULES,
   type MockExam,
   type MockExamFile,
+  type MockExamItemModule,
   type MockExamList,
   type MockExamSummary,
   mockExamFileSchema,
   type RichText,
 } from '../content-model/index.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
-import type { ContentProblem } from './checks/index.ts'
+import { type ContentProblem, formatPath } from './checks/index.ts'
 import { itemTaskProblems } from './checks/practice-task-fits-its-part.ts'
 import { reviewProblem } from './review.ts'
 
@@ -42,9 +43,12 @@ export const MOCK_EXAMS_JSON = 'mock-exams.json'
 
 /** The parts of a mock exam as item tasks with their ids, Lesen then Hören: "lesen-1" to "hoeren-4". */
 export function mockExamTasks(exam: MockExamFile): ItemTaskFile[] {
-  return MOCK_EXAM_ITEM_MODULES.flatMap((module) =>
-    (exam[module] ?? []).map((part, index) => ({ id: `${module}-${index + 1}`, ...part })),
-  )
+  return MOCK_EXAM_ITEM_MODULES.flatMap((module) => tasksOf(exam, module))
+}
+
+/** The parts of one module of a mock exam as item tasks, in order, each with its id: "lesen-1". */
+function tasksOf(exam: MockExamFile, module: MockExamItemModule): ItemTaskFile[] {
+  return (exam[module] ?? []).map((part, index) => ({ id: `${module}-${index + 1}`, ...part }))
 }
 
 /** A mock exam file that passed the schema. */
@@ -138,15 +142,11 @@ function mockExamProblems({ file, exam }: CheckedMockExam): ContentProblem[] {
 
   if (exam.status === 'published') {
     for (const module of MOCK_EXAM_ITEM_MODULES) {
-      ;(exam[module] ?? []).forEach((part, index) => {
+      tasksOf(exam, module).forEach((task, index) => {
         const examPart = { module, part: index + 1 }
         const format = itemTaskFormat(examPart)
         if (!format) return
-        for (const { where, message } of itemTaskProblems(
-          { id: `${module}-${index + 1}`, ...part },
-          examPart,
-          format,
-        )) {
+        for (const { where, message } of itemTaskProblems(task, examPart, format)) {
           problems.push({ ...at, where: `${module}[${index}].${where}`, message })
         }
       })
@@ -176,11 +176,11 @@ export function compileMockExam(
               module,
               scoredBy: 'items' as const,
               minutes: EXAM_MODULE_FACTS[module].minutes,
-              parts: (exam[module] ?? []).map((part, index) => {
+              parts: tasksOf(exam, module).map((task, index) => {
                 const plays = itemTaskFormat({ module, part: index + 1 })?.plays
                 return {
                   part: index + 1,
-                  task: compileTask({ id: `${module}-${index + 1}`, ...part }),
+                  task: compileTask(task),
                   ...(plays === undefined ? {} : { plays }),
                 }
               }),
@@ -211,11 +211,4 @@ export function compileMockExam(
 /** The list of mock exams that the app fetches first: everything but what is taken. */
 export function mockExamList(exams: readonly MockExam[]): MockExamList {
   return { exams: exams.map(({ content: _content, ...summary }): MockExamSummary => summary) }
-}
-
-function formatPath(pathParts: PropertyKey[]): string | undefined {
-  if (pathParts.length === 0) return undefined
-  return pathParts
-    .map((part, index) => (typeof part === 'number' ? `[${part}]` : index === 0 ? String(part) : `.${String(part)}`))
-    .join('')
 }

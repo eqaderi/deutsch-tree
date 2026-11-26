@@ -50,7 +50,7 @@ import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { audioProblems, presentAudio } from './audio.ts'
 import { checkpointData } from './checkpoint-data.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
-import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
+import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem, formatPath } from './checks/index.ts'
 import { mixedAwayFrom } from './mix.ts'
 import { compileMockExam, MOCK_EXAMS_JSON, mockExamList, readMockExams } from './mock-exams.ts'
 import { overviewData } from './overview-data.ts'
@@ -225,14 +225,20 @@ export async function writeBundle(bundle: ContentBundle, outDir: string): Promis
 
 /** The report as text for a terminal. */
 export function formatReport(report: PipelineReport): string {
-  const lines = report.errors.map(formatProblem)
+  if (!report.ok) return formatErrors(report.errors)
   const { total, published, comingSoon } = report.nodes
-  lines.push(
-    report.ok
-      ? `Content OK. Nodes: ${total} (${published} published, ${comingSoon} coming soon). Questions: ${report.questions}.`
-      : `Content has ${report.errors.length} error${report.errors.length === 1 ? '' : 's'}. Nothing was compiled.`,
-  )
-  return lines.join('\n')
+  return [
+    ...report.errors.map(formatProblem),
+    `Content OK. Nodes: ${total} (${published} published, ${comingSoon} coming soon). Questions: ${report.questions}.`,
+  ].join('\n')
+}
+
+/** The content errors that stopped a compile, one line each, and their count. */
+export function formatErrors(errors: readonly ContentProblem[]): string {
+  return [
+    ...errors.map(formatProblem),
+    `Content has ${errors.length} error${errors.length === 1 ? '' : 's'}. Nothing was compiled.`,
+  ].join('\n')
 }
 
 /** "ERROR node grammar-001, question q2 (nodes/grammar/grammar-001.yaml at questions[1].answer): …" */
@@ -420,7 +426,7 @@ function compileExamPartExplanations(file: NodeFile): ExamPartExplanations {
     scoring: richText(explanations[language].scoring ?? ''),
     approach: (explanations[language].approach ?? []).map(richText),
   })
-  return { en: explain('en'), fa: explain('fa'), de: explain('de') }
+  return inEachLanguage(explain)
 }
 
 /** A reading part: its explanations and its practice tasks. */
@@ -515,7 +521,7 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
   // The schema guarantees the rule in every language.
   const rule = (language: Language) => ({ rule: richText(explanations[language].rule ?? '') })
   return {
-    explanations: { en: rule('en'), fa: rule('fa'), de: rule('de') },
+    explanations: inEachLanguage(rule),
     ...(table && { table }),
     ...(diagrams && { diagrams: diagrams.map(compileDiagram) }),
     examples: examples.map((example) => ({ ...example, audio: spoken(example.de) })),
@@ -591,7 +597,12 @@ function summarise(node: CompiledNode): NodeSummary {
 }
 
 function richTextIn(text: Localised): Localised<RichText> {
-  return Object.fromEntries(LANGUAGES.map((language) => [language, richText(text[language])])) as Localised<RichText>
+  return inEachLanguage((language) => richText(text[language]))
+}
+
+/** One value for each language of the app, made by `make`. */
+function inEachLanguage<T>(make: (language: Language) => T): Localised<T> {
+  return Object.fromEntries(LANGUAGES.map((language) => [language, make(language)])) as Localised<T>
 }
 
 /** Splits "With *ich* the ending is *-e*." into plain parts and German parts. */
@@ -602,11 +613,4 @@ function richText(source: string): RichText {
     .split(/\*([^*]+)\*/)
     .map((part, index) => (index % 2 === 1 ? { de: part } : part))
     .filter((part) => part !== '')
-}
-
-function formatPath(pathParts: PropertyKey[]): string | undefined {
-  if (pathParts.length === 0) return undefined
-  return pathParts
-    .map((part, index) => (typeof part === 'number' ? `[${part}]` : index === 0 ? String(part) : `.${String(part)}`))
-    .join('')
 }

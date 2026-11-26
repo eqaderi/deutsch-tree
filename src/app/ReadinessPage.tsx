@@ -18,6 +18,7 @@ import {
 import { loadOfficialMockExams } from './content.ts'
 import { German, RichText } from './German.tsx'
 import { BackToTree } from './NotFound.tsx'
+import { PageTitle } from './PageTitle.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 
 /**
@@ -37,7 +38,7 @@ export function ReadinessPage() {
 
   return (
     <main className="wrap">
-      <title>{`${strings.readinessTitle} · ${strings.appName}`}</title>
+      <PageTitle title={strings.readinessTitle} />
       <BackToTree />
       <header className="page-head">
         <h1>{strings.readinessTitle}</h1>

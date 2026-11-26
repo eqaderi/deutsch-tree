@@ -7,7 +7,49 @@ import {
   fixtureContent,
   fixtureContentWith,
   PUBLISHED,
+  VOCABULARY,
 } from './fixture.ts'
+
+test('a published pool must be larger than its attempt, so that a retry draws another set', async () => {
+  const content = await fixtureContentWith({
+    [PUBLISHED]: changeReviewedNode((node) => {
+      node.questions = node.questions.slice(0, 15)
+      node.attemptSize = 15
+    }),
+  })
+
+  const { report } = await compileContent(content)
+
+  expect(report.errors).toEqual([
+    {
+      file: PUBLISHED,
+      node: 'grammar-001',
+      where: 'attemptSize',
+      message:
+        'pool too small for its attempt: an attempt draws 15 questions and the pool has 15, so every retry asks the same ones; write more questions or lower attemptSize',
+    },
+  ])
+})
+
+test('a vocabulary test asks about a word once, so a published vocabulary node needs more words than its attempt', async () => {
+  const content = await fixtureContentWith({
+    [VOCABULARY]: changeReviewedNode((node) => {
+      node.attemptSize = 11
+    }),
+  })
+
+  const { report } = await compileContent(content)
+
+  expect(report.errors).toEqual([
+    {
+      file: VOCABULARY,
+      node: 'vocabulary-fixture-home',
+      where: 'attemptSize',
+      message:
+        'too few words for its attempt: an attempt asks about 11 words and the node has 11, so every retry asks about the same ones; add words or lower attemptSize',
+    },
+  ])
+})
 
 test('a published node whose pool is below the minimum size is rejected', async () => {
   const content = await fixtureContentWith({

@@ -14,6 +14,7 @@ import {
 import { plainText } from './German.tsx'
 import { ItemResults, TaskItems, TaskTexts } from './ItemTaskView.tsx'
 import { NotFound } from './NotFound.tsx'
+import { BackLink, PageTitle } from './PageTitle.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 
 interface PracticeTestProps {
@@ -49,13 +50,10 @@ export function PracticeTest({ node, tasks }: PracticeTestProps) {
   const title = strings.practiceTitle(plainText(node.title[language]))
   return (
     <main className="wrap">
-      <title>{`${title} · ${strings.appName}`}</title>
-      <Link to=".." relative="path" className="back">
-        <span className="flip" aria-hidden="true">
-          ←
-        </span>
+      <PageTitle title={title} />
+      <BackLink to=".." relative="path">
         {strings.backToTopic}
-      </Link>
+      </BackLink>
       <header className="page-head">
         <h1>{title}</h1>
       </header>

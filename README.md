@@ -283,6 +283,8 @@ The rules are in the learning engine, like every rule. The tree
   which leads to the topic's level, `<BackToTree level={level} />` from a
   page of a level (its checkpoint), and `<BackToTree />` from any other
   page, which leads to the tree as the learner last saw it.
+- Any other link back at the top of a page is `BackLink`, and the title of a
+  page's browser tab is `PageTitle` (both `src/app/PageTitle.tsx`).
 - Above the route the tree shows the next topic and at most one note: the
   first-visit steps while the learner has no progress, the backup suggestion
   once they have a milestone. A new note must not make a third panel there.
@@ -435,8 +437,9 @@ The rules are in the learning engine, like every rule. The tree
   answers right or wrong from the fixture node's own answer key, whatever
   questions the attempt drew. `takeCheckpoint` does the same for a checkpoint,
   whose questions come from several nodes. The fixture node `grammar-010`
-  holds only typed questions and draws its whole pool, so a journey there
-  meets every question (`takeTypedTest`).
+  holds only typed questions and draws 15 of its 16, so a journey there
+  meets nearly every question; `takeTypedTest` retakes the attempt until the
+  questions the journey needs came up.
   A new question type gets a case in `giveAnswer`, `expectAnswerGiven` and
   `rightAnswerText` there. A journey about one type of `grammar-001` calls
   `findQuestion`, which brings a question of that type on screen.

@@ -107,7 +107,7 @@ test('a word added to the scope list must be given to a node', async () => {
   expect(report.errors).toEqual([
     {
       file: SCOPE_LIST,
-      where: 'line 15',
+      where: 'line 16',
       message:
         'the word "Onkel" (A2) is in no vocabulary node; every word of the scope list belongs to exactly one node',
     },

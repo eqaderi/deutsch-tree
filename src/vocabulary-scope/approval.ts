@@ -11,7 +11,8 @@
 import { readdir, readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
-import type { Localised, NodeFile, RichText } from '../content-model/index.ts'
+import type { NodeFile } from '../content-model/index.ts'
+import { textOf } from '../content-model/rich-text.ts'
 import { parseScopeList, SCOPE_LIST_FILE, type ScopeWord } from '../content-model/scope-list.ts'
 import { compileContent, formatReport } from '../content-pipeline/index.ts'
 import { LEFT_OUT_FILE, type LeftOut, parseLeftOut } from './index.ts'
@@ -73,7 +74,7 @@ async function generatedParts(contentDir: string): Promise<Record<string, string
       const rows = chapters
         .filter((chapter) => chapter.level === level)
         .map((chapter, index) => {
-          const name = plain(chapter.title.en)
+          const name = textOf(chapter.title.en)
           const isVocabulary = chapter.kind === 'vocabulary'
           return `| ${index + 1} | ${isVocabulary ? `**${label.get(chapter.id)}**` : KIND_NAMES[chapter.kind]} | ${
             isVocabulary ? `**${name}**` : name
@@ -94,18 +95,18 @@ async function generatedParts(contentDir: string): Promise<Record<string, string
           const words = wordsOf.get(node.id) ?? []
           const shown = words.map((word) => display(scopeWord.get(word), word)).join(' · ')
           return [
-            `**${label.get(chapter.id)}.${index + 1} ${plain(node.title.en)}** · ${plain(node.title.fa)} · ${plain(
+            `**${label.get(chapter.id)}.${index + 1} ${textOf(node.title.en)}** · ${textOf(node.title.fa)} · ${textOf(
               node.title.de,
             )} · ${words.length} words  `,
             shown,
           ].join('\n')
         })
         return [
-          `#### ${label.get(chapter.id)} ${plain(chapter.title.en)}`,
+          `#### ${label.get(chapter.id)} ${textOf(chapter.title.en)}`,
           '',
-          `Persian: ${plain(chapter.title.fa)}  `,
-          `Simple German: ${plain(chapter.title.de)}  `,
-          `Comes after the grammar chapter: ${before ? `"${plain(before.title.en)}"` : 'none; it opens the level'}  `,
+          `Persian: ${textOf(chapter.title.fa)}  `,
+          `Simple German: ${textOf(chapter.title.de)}  `,
+          `Comes after the grammar chapter: ${before ? `"${textOf(before.title.en)}"` : 'none; it opens the level'}  `,
           `${themes.length} nodes, ${count(nodesIn(chapter.id).reduce((sum, node) => sum + (wordsOf.get(node.id)?.length ?? 0), 0))} words:`,
           '',
           themes.join('\n\n'),
@@ -165,13 +166,6 @@ function display(word: ScopeWord | undefined, written: string): string {
 
 /** 3271 as "3,271". */
 const count = (value: number) => value.toLocaleString('en')
-
-/** A title without the marks around its German parts. */
-function plain(text: RichText): string
-function plain(text: Localised<RichText>[keyof Localised]): string
-function plain(text: RichText): string {
-  return text.map((part) => (typeof part === 'string' ? part : part.de)).join('')
-}
 
 /** The words of every vocabulary node file, by node id. */
 async function wordsOfVocabularyNodes(contentDir: string): Promise<Map<string, string[]>> {

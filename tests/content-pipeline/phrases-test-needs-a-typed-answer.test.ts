@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { changeReviewedNode, fixtureContentWith } from './fixture.ts'
+import { changeReviewedNode, fixtureContentWith, type LooseNode } from './fixture.ts'
 
 /**
  * The fixture's published phrases node: 6 questions answered by choosing
@@ -8,9 +8,6 @@ import { changeReviewedNode, fixtureContentWith } from './fixture.ts'
  * passed with 9 right.
  */
 const PHRASES = 'nodes/phrases/phrases-greeting.yaml'
-
-// biome-ignore lint/suspicious/noExplicitAny: a node file as plain data.
-type LooseNode = any
 
 /** Turns the first `count` typed questions into gap fills that are answered by choosing. */
 function typedToChosen(node: LooseNode, count: number) {

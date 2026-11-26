@@ -191,7 +191,7 @@ function GapSentence({ gap, filled }: { gap: { before: string; after: string }; 
 /** An answer to a question, as a result quotes it. */
 export function AnswerText({ question, answer }: { question: Question; answer: Answer | undefined }) {
   const { strings } = useLanguage()
-  if (answer === undefined) return '–'
+  if (answer === undefined) return strings.noAnswer
 
   switch (question.type) {
     case 'multiple-choice':
@@ -205,16 +205,20 @@ export function AnswerText({ question, answer }: { question: Question; answer: A
     case 'meaning-of-word': {
       // The answer names a word of the node; the learner chose, and reads, its meaning.
       const chosen = question.options.find((option) => option.word === answer)
-      return chosen ? <Meaning of={chosen.meaning} /> : '–'
+      return chosen ? <Meaning of={chosen.meaning} /> : strings.noAnswer
     }
     case 'find-error':
-      return <German>{(typeof answer === 'number' && wordsOf(question)[answer]) || '–'}</German>
+      return <German>{(typeof answer === 'number' && wordsOf(question)[answer]) || strings.noAnswer}</German>
     case 'word-order':
       return <German>{sentenceOf(question, answer)}</German>
     case 'matching': {
       // Left to right as a whole, so that each arrow points from an item to its partner.
       const partners = partnersIn(question, answer)
-      return <German>{question.left.map((item, index) => `${item} → ${partners[index] ?? '–'}`).join(', ')}</German>
+      return (
+        <German>
+          {question.left.map((item, index) => `${item} → ${partners[index] ?? strings.noAnswer}`).join(', ')}
+        </German>
+      )
     }
     case 'richtig-falsch':
     case 'ja-nein':

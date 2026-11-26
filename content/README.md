@@ -632,6 +632,10 @@ attemptSize: 12          # optional; 10 to 15, default 10
 The pass mark follows from it: 90%, rounded up to a whole question (9 of 10,
 11 of 12, 14 of 15).
 
+A published pool holds more questions than one attempt draws, so that a
+retry asks another set; a vocabulary node holds more words than its
+`attemptSize`, because its test asks about a word once.
+
 ## A published exam-part node
 
 Every exam-part page, whatever its module, begins with three panels in this
@@ -964,6 +968,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - A published node with fewer than 15 questions (a vocabulary node: fewer
   than 8 words, which give 16). A `coming-soon` draft may have fewer. An exam part is exempt: it has no pool. A reading part is held
   to the format of its part instead, and a writing or speaking part has none.
+- A published node whose pool is not larger than its `attemptSize` (a
+  vocabulary node: whose words are not more than its `attemptSize`), so that
+  every retry would ask the same questions.
 - A published reading or listening part whose practice task has not the
   number of texts and items of its part or the type of its items, an item
   `multiple-choice` without exactly three options, a text to hear in a reading part or
@@ -1015,8 +1022,18 @@ A rule about the shape of one field goes in the schema,
    one problem per thing to fix. Build each problem with `problemIn`, so that
    it names the node. The shortest example is `pool-is-large-enough.ts`.
 2. Add it to the list in `src/content-pipeline/checks/index.ts`.
-3. Write `tests/content-pipeline/<rule>.test.ts`: break the fixture content
-   with `fixtureContentWith` and `changeNode` from `fixture.ts`, run
+3. Write one test file for the rule in `tests/content-pipeline/`, named
+   after what it rejects (`pool-size.test.ts` holds the tests of
+   `pool-is-large-enough.ts`): break the fixture content with
+   `fixtureContentWith` and `changeNode` from `fixture.ts`, run
    `compileContent`, and compare `report.errors`. Copy `pool-size.test.ts`.
 4. Run `pnpm check`. If the real content or the fixture content in
    `tests/fixtures/content` breaks the new rule, repair the content.
+
+A check gets the node files, and the content folder for a rule that holds a
+node against another file (the chapters, the vocabulary scope list). A rule
+about a file that is not a node is checked where that file is read: a mock
+exam in `mockExamProblems` (`src/content-pipeline/mock-exams.ts`), the
+official mock exams in `readOfficialMockExams` (`src/content-pipeline/index.ts`).
+Its test goes beside the tests of that file (`mock-exam.test.ts`,
+`official-mock-exams.test.ts`).

@@ -9,6 +9,7 @@ const digits = new Intl.NumberFormat('fa-IR', { useGrouping: false })
  */
 export const fa: Strings = {
   appName: 'deutsch-tree',
+  appDescription: 'همهٔ آلمانی از صفر تا آزمون B1 گوته، به شکل درختی از موضوع‌های کوچک، هر کدام با توضیح و آزمون.',
   language: 'زبان',
   number: (value) => digits.format(value),
   loading: 'در حال بارگذاری…',
@@ -184,6 +185,7 @@ export const fa: Strings = {
   retryAnyTime: 'هر چند بار که بخواهید می‌توانید دوباره امتحان کنید. هر آزمون سؤال‌های تازه‌ای می‌آورد.',
   wrongAnswers: 'پاسخ‌های نادرست',
   yourAnswer: 'پاسخ شما',
+  noAnswer: '–',
   rightAnswer: 'پاسخ درست',
 
   backupLink: 'پشتیبان‌گیری از پیشرفت',

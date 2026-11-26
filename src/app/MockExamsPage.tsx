@@ -14,6 +14,7 @@ import {
 import { loadMockExam, loadMockExams } from './content.ts'
 import { RichText } from './German.tsx'
 import { BackToTree } from './NotFound.tsx'
+import { PageTitle } from './PageTitle.tsx'
 import { useProgress } from './progress.ts'
 import { ModuleName } from './ReadinessPage.tsx'
 
@@ -29,7 +30,7 @@ export function MockExamsPage() {
 
   return (
     <main className="wrap">
-      <title>{`${strings.mockExamsTitle} · ${strings.appName}`}</title>
+      <PageTitle title={strings.mockExamsTitle} />
       <BackToTree />
       <header className="page-head">
         <h1>{strings.mockExamsTitle}</h1>

@@ -12,7 +12,7 @@ import {
 } from './taking-a-test.ts'
 import { expect, test } from './test.ts'
 
-/** The fixture's published vocabulary node: ten words about the home. An attempt asks each word once. */
+/** The fixture's published vocabulary node: eleven words about the home. An attempt asks ten of them, each once. */
 const NODE = 'vocabulary-fixture-home'
 
 /** The words of the test screens in simple German, as far as these journeys need them. */
@@ -33,7 +33,7 @@ test('a vocabulary page lists each word with its article, plural, word class, le
     'Flashcards for Anki',
     'Test',
   ])
-  await expect(wordsOnPage(page)).toHaveCount(10)
+  await expect(wordsOnPage(page)).toHaveCount(11)
 
   const tisch = wordsOnPage(page).first()
   await expect(tisch.locator('[lang="de"]').first()).toHaveText('der Tisch')

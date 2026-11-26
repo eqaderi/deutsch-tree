@@ -3,12 +3,9 @@ import path from 'node:path'
 import { expect, test } from 'vitest'
 import { parse, stringify } from 'yaml'
 import { bundleFiles, compileContent } from '../../src/content-pipeline/index.ts'
-import { fixtureContent, fixtureContentWith } from './fixture.ts'
+import { fixtureContent, fixtureContentWith, type LooseExams } from './fixture.ts'
 
 const EXAMS = 'official-mock-exams.yaml'
-
-// biome-ignore lint/suspicious/noExplicitAny: a test breaks the list on purpose, in ways the schema forbids.
-type LooseExams = any[]
 
 /** An edit for `fixtureContentWith` that changes the list of official mock exams as data. */
 function changeExams(change: (exams: LooseExams) => void): (text: string) => string {

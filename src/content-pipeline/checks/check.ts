@@ -49,3 +49,11 @@ export function problemIn(
 ): ContentProblem {
   return { file, node: node.id, ...rest }
 }
+
+/** Where in a file a schema issue is, from its path: `questions[1].answer`. Undefined for the whole file. */
+export function formatPath(pathParts: readonly PropertyKey[]): string | undefined {
+  if (pathParts.length === 0) return undefined
+  return pathParts
+    .map((part, index) => (typeof part === 'number' ? `[${part}]` : index === 0 ? String(part) : `.${String(part)}`))
+    .join('')
+}

@@ -44,7 +44,10 @@ export async function fixtureContentWith(edits: Record<string, (text: string) =>
 }
 
 // biome-ignore lint/suspicious/noExplicitAny: a test breaks a node on purpose, in ways the schema forbids.
-type LooseNode = any
+export type LooseNode = any
+
+// biome-ignore lint/suspicious/noExplicitAny: the same for the list of official mock exams.
+export type LooseExams = any[]
 
 /**
  * An edit for `fixtureContentWith` that changes a node as data instead of as

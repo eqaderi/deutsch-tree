@@ -45,6 +45,12 @@ const WORDS: Record<string, { german: string; en: string; fa: string; de: string
     de: 'in der Nacht im Bett liegen und die Augen zu haben',
   },
   gross: { german: 'groß', en: 'big', fa: 'بزرگ', de: 'nicht klein' },
+  schrank: {
+    german: 'der Schrank',
+    en: 'cupboard',
+    fa: 'کمد',
+    de: 'ein Möbelstück mit Türen, in dem man Sachen aufbewahrt',
+  },
 }
 
 let compiled: ReturnType<typeof compileContent> | undefined
@@ -73,6 +79,7 @@ const HEADWORD: Record<string, string> = {
   moebel: 'Möbel',
   schlafen: 'schlafen',
   gross: 'groß',
+  schrank: 'Schrank',
 }
 
 /** The sheet id of the question about a word, in a direction and a language: "tisch", "word", "fa". */

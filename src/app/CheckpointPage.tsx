@@ -13,6 +13,7 @@ import { AttemptRun } from './AttemptRun.tsx'
 import { loadCheckpoint, loadIndex } from './content.ts'
 import { RichText } from './German.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
+import { PageTitle } from './PageTitle.tsx'
 import { isNoted, NotedAnswers, WrongAnswers } from './TestResult.tsx'
 import { treeAddress } from './treeAddress.ts'
 
@@ -102,7 +103,7 @@ function LevelCheckpoint({ level, topics, sources }: LevelCheckpointProps) {
   const title = strings.checkpointTitle(level)
   return (
     <main className="wrap">
-      <title>{`${title} · ${strings.appName}`}</title>
+      <PageTitle title={title} />
       <BackToTree level={level} />
       <header className="page-head">
         <h1>{title}</h1>

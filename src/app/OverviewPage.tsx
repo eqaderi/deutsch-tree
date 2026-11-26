@@ -5,6 +5,7 @@ import { loadIndex, loadOverview } from './content.ts'
 import { RichText } from './German.tsx'
 import { GrammarTableView } from './GrammarTableView.tsx'
 import { BackToTree } from './NotFound.tsx'
+import { PageTitle } from './PageTitle.tsx'
 
 /**
  * "All grammar at a glance": every grammar table on one page, grouped as in
@@ -43,7 +44,7 @@ export function OverviewPage() {
 
   return (
     <main className="wrap">
-      <title>{`${strings.overviewTitle} · ${strings.appName}`}</title>
+      <PageTitle title={strings.overviewTitle} />
       <BackToTree />
       <header className="page-head">
         <h1>{strings.overviewTitle}</h1>

@@ -12,6 +12,7 @@ import { German, plainText, RichText } from './German.tsx'
 import { GrammarTableView } from './GrammarTableView.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
+import { PageTitle } from './PageTitle.tsx'
 import { Panel } from './Panel.tsx'
 import { PhraseSections } from './PhraseSections.tsx'
 import { PlayButton, SpokenExample } from './PlayButton.tsx'
@@ -99,7 +100,7 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
   const done = isDone(useProgress(), node.id)
   return (
     <main className="wrap">
-      <title>{`${plainText(node.title[language])} · ${strings.appName}`}</title>
+      <PageTitle title={plainText(node.title[language])} />
       <BackToTree from={node} />
       <header className="page-head">
         <h1>
