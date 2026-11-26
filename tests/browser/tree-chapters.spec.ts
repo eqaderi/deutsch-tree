@@ -1,13 +1,15 @@
 import { expect, test } from './test.ts'
 
-test('a level is a line of chapters, each with its name, its kind and its number of topics', async ({ page }) => {
+test('a level is a line of chapters, each with its name, its kind and how many of its topics are done', async ({
+  page,
+}) => {
   await page.goto('./')
 
   const chapters = page.getByRole('main').getByRole('group')
   await expect(chapters).toHaveCount(2)
   await expect(chapters.nth(0).getByRole('heading', { level: 3 })).toHaveText('Fixture basics')
   await expect(chapters.nth(0).locator('summary')).toContainText('Grammar')
-  await expect(chapters.nth(0).locator('summary')).toContainText('1 topic')
+  await expect(chapters.nth(0).locator('summary')).toContainText('0 of 1 done')
   await expect(chapters.nth(1).getByRole('heading', { level: 3 })).toHaveText('Fixture topics with sein')
 })
 

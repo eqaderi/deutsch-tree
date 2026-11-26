@@ -80,6 +80,45 @@ GitHub Pages and from a local folder.
   instruction in the three string files. The type checker points at each
   place that is missing.
 
+## The tree: where the learner stands
+
+The rules are in the learning engine, like every rule. The tree
+(`src/app/TreePage.tsx`) only lays the answers out.
+
+- **State.** `nodeState(progress, id)` gives `not-started`, `in-progress` or
+  `done`. A node is in progress once a result exists for it (a finished test,
+  an entered score) and it is not done. Opening a page starts nothing. Read
+  the state through this function, never from the fields of the progress: a
+  node can become done in other ways than a passed pool. "Coming soon" is not
+  a state; it is the node's `status` in the content.
+- **Un-marking.** `unmarkDone(progress, id)` makes a done node not done and
+  keeps the rest, so it reads as in progress. The node page offers it.
+- **Next recommended.** `nextRecommended(nodes, progress)` is the earliest
+  node of the index that is published and not done, across kinds and levels.
+  It recommends and locks nothing; prerequisites are shown on the node page
+  and lock nothing either. `youAreHere` is the same node, or, when every
+  published node is done, the first one still to be written.
+- **Counts.** `countNodes(nodes, progress)` counts the nodes it is given (a
+  level, a kind, a chapter). A "coming soon" node counts as remaining, since
+  it is still on the way to the exam; `comingSoon` says how many of the
+  remaining ones have to wait. So one done node of 212 reads "1 done · 211
+  left, 211 of them coming soon".
+- **A test from the tree.** `hasTest` in a node's summary says that the node
+  is published and has a pool. Only then does a row offer "Test", which goes
+  to `#/node/<id>/test`. A new way of becoming done needs no change here.
+- **What the tree shows is in its address**: `#/?level=A2&kind=vocabulary`.
+  With no level in the address the tree opens at the level the learner is
+  in. Build such an address with `treeAddress` (`src/app/treeAddress.ts`);
+  link "back to the tree" with `lastTreeAddress()`, which keeps the level and
+  kind the learner chose.
+- A row of a topic, in the tree or in another list, is `NodeRow`
+  (`src/app/NodeRow.tsx`).
+- A setting of the device that is not progress (the dismissed first-visit
+  steps in `src/app/firstVisit.ts`, the language) has its own storage key
+  and stays out of the progress store.
+- The tree has no streaks, points, reminders or daily goals, and a browser
+  test keeps it so.
+
 ## Languages
 
 - A component reads `const { language, strings } = useLanguage()` from
@@ -115,6 +154,10 @@ GitHub Pages and from a local folder.
   A journey that takes a test uses `tests/browser/taking-a-test.ts`: it
   answers right or wrong from the fixture node's own answer key, whatever
   questions the attempt drew.
+  A journey that needs a bigger tree than the two fixture topics (several
+  levels, kinds or chapters, hundreds of topics) uses `serveCurriculum` in
+  `tests/browser/curriculum.ts`: it gives the page an invented tree written
+  in a few lines, and leaves the fixture files alone.
 
 ## Deploying
 

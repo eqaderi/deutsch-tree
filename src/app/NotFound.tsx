@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import { useLanguage } from '../language/index.tsx'
+import { lastTreeAddress } from './treeAddress.ts'
 
 export function NotFound() {
   const { strings } = useLanguage()
@@ -20,7 +21,7 @@ export function NotFound() {
 export function BackToTree() {
   const { strings } = useLanguage()
   return (
-    <Link to="/" className="back">
+    <Link to={lastTreeAddress()} className="back">
       <span className="flip" aria-hidden="true">
         ←
       </span>

@@ -5,6 +5,7 @@ import type { AttemptResult } from '../learning-engine/index.ts'
 import { German, RichText } from './German.tsx'
 import { AnswerText } from './QuestionView.tsx'
 import { ReportProblem } from './ReportProblem.tsx'
+import { lastTreeAddress } from './treeAddress.ts'
 
 interface TestResultProps {
   nodeId: string
@@ -83,7 +84,7 @@ export function TestResult({ nodeId, result, wasDone, onRetry }: TestResultProps
       <div className="result-actions">
         {result.passed ? (
           <>
-            <Link to="/" className="btn btn-main">
+            <Link to={lastTreeAddress()} className="btn btn-main">
               {strings.allTopics}
             </Link>
             <button type="button" className="btn btn-quiet" onClick={onRetry}>
