@@ -15,6 +15,7 @@
 import { readFile } from 'node:fs/promises'
 import { parse } from 'yaml'
 import { z } from 'zod'
+import { PACK_ID } from '../content-model/pack.ts'
 
 /** A pattern that has at least `groups` numbered groups. */
 const patternWith = (groups: number) =>
@@ -47,7 +48,7 @@ const patternWith = (groups: number) =>
 const pattern = patternWith(0)
 const numberPattern = patternWith(1)
 
-const moduleId = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens')
+const moduleId = z.string().regex(PACK_ID, 'must be lower-case words joined by hyphens')
 const pageNumber = z.number().int().positive()
 const choices = z.array(z.string().min(1)).min(2)
 

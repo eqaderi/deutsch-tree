@@ -6,9 +6,7 @@
  */
 import { readdir, stat, writeFile } from 'node:fs/promises'
 import path from 'node:path'
-import { PACK_DESCRIPTION_FILE, PACK_FORMAT, PACK_LIST_FILE, type PackList } from '../content-model/pack.ts'
-
-const PACK_ID = /^[a-z0-9]+(-[a-z0-9]+)*$/
+import { PACK_DESCRIPTION_FILE, PACK_FORMAT, PACK_ID, PACK_LIST_FILE, type PackList } from '../content-model/pack.ts'
 
 /** The packs in a folder: every subfolder with a pack id for a name and a pack.json in it, in name order. */
 export async function listPacks(packsDir: string): Promise<PackList> {
