@@ -542,6 +542,19 @@ main.wrap {
   border-block-end: 1px solid var(--hairline);
 }
 
+/* The last stop of a level: its checkpoint. */
+.stop > .checkpoint-stop {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  padding: 14px;
+}
+
+.checkpoint-stop p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
 .rows {
   list-style: none;
   margin: 0;
@@ -608,6 +621,13 @@ main.wrap {
 
 .page-head h1 {
   overflow-wrap: anywhere;
+}
+
+/* One line under a page's title, such as how many questions a checkpoint has. */
+.page-note {
+  margin-block-start: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
 }
 
 .meta {
@@ -974,6 +994,20 @@ main.wrap {
 
 .wrong-answer .report {
   margin-block-start: 0;
+}
+
+/* A checkpoint's result: the topics with wrong answers, each a link to its page. */
+.revisit {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: var(--radius-card);
+  background: var(--raised);
+  overflow: hidden;
+}
+
+.revisit li + li {
+  border-block-start: 1px solid var(--hairline);
 }
 
 .result-actions {

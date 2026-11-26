@@ -108,4 +108,18 @@ export const fa: Strings = {
   milestoneTopics: (count) => `${digits.format(count)} موضوع را تمام کرده‌اید.`,
   suggestBackup: 'پیشرفت شما فقط در همین مرورگر نگه داشته می‌شود. یک نسخه در فایل آن را امن نگه می‌دارد.',
   notNow: 'حالا نه',
+
+  checkpoint: 'آزمون مرور',
+  checkpointTitle: (level) => `آزمون مرور ${level}`,
+  checkpointIntro:
+    'آزمونی کوتاه با سؤال‌هایی از موضوع‌های این سطح. نشان می‌دهد چه چیزهایی را باید دوباره ببینید. در موضوع‌های شما چیزی را تغییر نمی‌دهد.',
+  startCheckpoint: 'شروع آزمون مرور',
+  checkpointNothingYet: 'هنوز هیچ موضوعی از این سطح آزمون ندارد. آزمون مرور با اولین موضوع می‌آید.',
+  checkpointSize: (questions, topics) => `${digits.format(questions)} سؤال از ${digits.format(topics)} موضوع`,
+  checkpointResult: 'نتیجهٔ آزمون مرور',
+  checkpointAllRight: 'همه درست بود. چیزی برای مرور دوباره نیست.',
+  checkpointSomeWrong: 'بعضی پاسخ‌ها نادرست بود. بهتر است موضوع‌های زیر را دوباره ببینید.',
+  checkpointChangesNothing: 'آزمون مرور فقط نشان می‌دهد کجا هستید. موضوع‌های شما همان‌طور که بودند می‌مانند.',
+  topicsToRevisit: 'موضوع‌هایی برای مرور دوباره',
+  wrongOfAsked: (wrong, asked) => `${digits.format(wrong)} نادرست از ${digits.format(asked)}`,
 }
