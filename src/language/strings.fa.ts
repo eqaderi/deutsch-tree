@@ -54,10 +54,13 @@ export const fa: Strings = {
     'multiple-choice': 'پاسخ درست را انتخاب کنید.',
     'gap-fill': 'واژه‌ای را انتخاب کنید که در جای خالی درست است.',
     'true-false': 'آیا این جمله آلمانیِ درستی است؟',
+    'typed-answer': 'پاسخ را تایپ کنید.',
+    'typed-gap-fill': 'واژه‌ای را تایپ کنید که در جای خالی درست است.',
   },
   gap: 'جای خالی',
   sentenceCorrect: 'درست',
   sentenceNotCorrect: 'نادرست',
+  germanLetters: 'حروف آلمانی',
   next: 'بعدی',
   checkAnswers: 'بررسی پاسخ‌ها',
   reportProblem: 'گزارش مشکل',
@@ -108,6 +111,27 @@ export const fa: Strings = {
   milestoneTopics: (count) => `${digits.format(count)} موضوع را تمام کرده‌اید.`,
   suggestBackup: 'پیشرفت شما فقط در همین مرورگر نگه داشته می‌شود. یک نسخه در فایل آن را امن نگه می‌دارد.',
   notNow: 'حالا نه',
+
+  checkpoint: 'آزمون مرور',
+  checkpointTitle: (level) => `آزمون مرور ${level}`,
+  checkpointIntro:
+    'آزمونی کوتاه با سؤال‌هایی از موضوع‌های این سطح. نشان می‌دهد چه چیزهایی را باید دوباره ببینید. در موضوع‌های شما چیزی را تغییر نمی‌دهد.',
+  startCheckpoint: 'شروع آزمون مرور',
+  checkpointNothingYet: 'هنوز هیچ موضوعی از این سطح آزمون ندارد. آزمون مرور با اولین موضوع می‌آید.',
+  checkpointSize: (questions, topics) => `${digits.format(questions)} سؤال از ${digits.format(topics)} موضوع`,
+  checkpointResult: 'نتیجهٔ آزمون مرور',
+  checkpointAllRight: 'همه درست بود. چیزی برای مرور دوباره نیست.',
+  checkpointSomeWrong: 'بعضی پاسخ‌ها نادرست بود. بهتر است موضوع‌های زیر را دوباره ببینید.',
+  checkpointChangesNothing: 'آزمون مرور فقط نشان می‌دهد کجا هستید. موضوع‌های شما همان‌طور که بودند می‌مانند.',
+  topicsToRevisit: 'موضوع‌هایی برای مرور دوباره',
+  wrongOfAsked: (wrong, asked) => `${digits.format(wrong)} نادرست از ${digits.format(asked)}`,
+
+  acceptedWithNote: 'پذیرفته‌شده با یادداشت',
+  exactSpelling: 'املای دقیق',
+  answerNotes: {
+    'umlaut-substitute': `پذیرفته شد. املای دقیق با ${german('ä')}، ${german('ö')}، ${german('ü')} یا ${german('ß')} است.`,
+    capitalisation: 'پذیرفته شد. به حروف بزرگ و کوچک دقت کنید.',
+  },
 
   // "Module" (Lesen, Hören, Schreiben, Sprechen) is «مهارت»; "mock exam" is «امتحان آزمایشی».
   readiness: 'آمادگی',
@@ -176,4 +200,12 @@ export const fa: Strings = {
   },
   candidatePagesOnly: (first, last) =>
     `فقط صفحه‌های ${digits.format(first)} تا ${digits.format(last)} را ببینید. در صفحه‌های بعد از آن پاسخ‌ها، متن فایل‌های شنیداری و نمونهٔ پاسخ آمده است.`,
+}
+
+/**
+ * A German letter inside a Persian string, kept apart from the Persian around
+ * it by the Unicode marks U+2066 … U+2069, since a string cannot hold a <span>.
+ */
+function german(text: string): string {
+  return `\u2066${text}\u2069`
 }

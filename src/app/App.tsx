@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { createHashRouter, Link, Outlet, RouterProvider, ScrollRestoration } from 'react-router'
 import { LanguageProvider, useLanguage } from '../language/index.tsx'
 import { BackupPage } from './BackupPage.tsx'
+import { CheckpointPage } from './CheckpointPage.tsx'
 import { LanguageSwitch } from './LanguageSwitch.tsx'
 import { NodePage } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
@@ -26,6 +27,7 @@ const router = createHashRouter([
           { path: 'node/:id', element: <NodePage /> },
           { path: 'node/:id/test', element: <TestPage /> },
           { path: 'backup', element: <BackupPage /> },
+          { path: 'checkpoint/:level', element: <CheckpointPage /> },
           { path: 'readiness', element: <ReadinessPage /> },
           { path: '*', element: <NotFound /> },
         ],

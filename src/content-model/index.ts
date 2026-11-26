@@ -129,6 +129,13 @@ const multipleChoiceQuestion = z
 /** How a gap is written in a German sentence: three underscores or more. */
 export const GAP = /_{3,}/g
 
+/** The prompt of a gap fill question, chosen or typed, is a sentence with exactly one gap. */
+function hasOneGap(value: { prompt: string }, ctx: z.RefinementCtx) {
+  if ((value.prompt.match(GAP) ?? []).length !== 1) {
+    ctx.addIssue({ code: 'custom', path: ['prompt'], message: 'must have exactly one gap, written as ___' })
+  }
+}
+
 /** A sentence with one gap, filled by choosing one of the offered forms. */
 const gapFillQuestion = z
   .strictObject({
@@ -139,9 +146,7 @@ const gapFillQuestion = z
     answer: answerText('gap-fill'),
   })
   .superRefine((value, ctx) => {
-    if ((value.prompt.match(GAP) ?? []).length !== 1) {
-      ctx.addIssue({ code: 'custom', path: ['prompt'], message: 'must have exactly one gap, written as ___' })
-    }
+    hasOneGap(value, ctx)
     answerIsOneOption(value, ctx)
   })
 
@@ -156,8 +161,53 @@ const trueFalseQuestion = z.strictObject({
   answer: z.boolean(oneAnswer('true-false', 'must be true or false')),
 })
 
+const NO_ACCEPTED_ANSWER = 'no correct answer: the question lists none under "answers"'
+
+/**
+ * The answer rule of a question whose answer is typed: it lists every
+ * accepted answer, so that correct German is never marked wrong. The first
+ * one is shown as the right answer. Spaces, ae/oe/ue/ss and capitals are
+ * forgiven by the learning engine and need no entries of their own.
+ */
+const acceptedAnswers = z
+  .array(text, {
+    error: ({ input }) =>
+      input === undefined ? NO_ACCEPTED_ANSWER : 'must be a list of every accepted answer, such as [wohnst]',
+  })
+  .min(1, NO_ACCEPTED_ANSWER)
+  .superRefine((answers, ctx) => {
+    const spaced = answers.map((answer) => answer.replace(/\s+/g, ' '))
+    spaced.forEach((answer, index) => {
+      if (spaced.indexOf(answer) < index) {
+        ctx.addIssue({ code: 'custom', path: [index], message: `"${answer}" is listed twice` })
+      }
+    })
+  })
+
+/** The learner types the answer to the prompt. */
+const typedAnswerQuestion = z.strictObject({
+  ...questionBase,
+  type: z.literal('typed-answer'),
+  answers: acceptedAnswers,
+})
+
+/** A sentence with one gap; the learner types what fills it. */
+const typedGapFillQuestion = z
+  .strictObject({
+    ...questionBase,
+    type: z.literal('typed-gap-fill'),
+    answers: acceptedAnswers,
+  })
+  .superRefine(hasOneGap)
+
 /** Later question types join this union under their own `type`, each with its answer rule. */
-const question = z.discriminatedUnion('type', [multipleChoiceQuestion, gapFillQuestion, trueFalseQuestion])
+const question = z.discriminatedUnion('type', [
+  multipleChoiceQuestion,
+  gapFillQuestion,
+  trueFalseQuestion,
+  typedAnswerQuestion,
+  typedGapFillQuestion,
+])
 
 /**
  * Proof that an independent reviewer answered the pool without seeing the
@@ -420,7 +470,29 @@ export interface TrueFalseQuestion extends QuestionBase {
   answer: boolean
 }
 
-export type Question = MultipleChoiceQuestion | GapFillQuestion | TrueFalseQuestion
+/**
+ * The learner types the answer. `answers` lists every accepted answer; the
+ * first is the one a result shows as the right answer.
+ */
+export interface TypedAnswerQuestion extends QuestionBase {
+  type: 'typed-answer'
+  answers: string[]
+}
+
+/** The prompt holds one gap; the learner types what fills it. `answers` as in a typed answer. */
+export interface TypedGapFillQuestion extends QuestionBase {
+  type: 'typed-gap-fill'
+  answers: string[]
+  /** The prompt cut at its gap, so the app can show the typed form inside the sentence. */
+  gap: { before: string; after: string }
+}
+
+export type Question =
+  | MultipleChoiceQuestion
+  | GapFillQuestion
+  | TrueFalseQuestion
+  | TypedAnswerQuestion
+  | TypedGapFillQuestion
 
 export interface GrammarContent {
   explanations: Localised<{ rule: RichText }>

@@ -2,8 +2,8 @@
  * Loads the compiled content bundle that the content pipeline put next to the
  * site. The app never reads raw node files.
  *
- * Every function returns the same promise for the same request, so they can be
- * passed to React's `use()`.
+ * Every function returns the same promise for the same request, so they can
+ * be passed to React's `use()`.
  */
 import type { CompiledNode, ContentIndex, OfficialMockExams } from '../content-model/index.ts'
 
@@ -36,4 +36,22 @@ export function loadNode(id: string): Promise<CompiledNode> {
 /** The official mock exams, in the order the content lists them. */
 export function loadOfficialMockExams(): Promise<OfficialMockExams> {
   return load('official-mock-exams.json')
+}
+
+const groups = new Map<string, Promise<CompiledNode[]>>()
+
+/**
+ * Several nodes with their page content, in the order asked for. All are
+ * requested at once; a node that was loaded before is not fetched again.
+ */
+export function loadNodes(ids: readonly string[]): Promise<CompiledNode[]> {
+  const key = ids.join(' ')
+  let group = groups.get(key)
+  if (!group) {
+    group = Promise.all(ids.map(loadNode))
+    // A failed group is forgotten, like a failed request.
+    group.catch(() => groups.delete(key))
+    groups.set(key, group)
+  }
+  return group
 }

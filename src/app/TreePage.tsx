@@ -4,6 +4,7 @@ import type { ChapterSummary, NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { isDone } from '../learning-engine/index.ts'
 import { BackupSuggestion } from './BackupSuggestion.tsx'
+import { CheckpointStop } from './CheckpointPage.tsx'
 import { loadIndex } from './content.ts'
 import { ExamStop } from './ExamStop.tsx'
 import { RichText } from './German.tsx'
@@ -71,6 +72,7 @@ export function TreePage() {
             {stops.map(({ chapter, topics }, index) => (
               <ChapterStop key={chapter.id} chapter={chapter} topics={topics} place={index + 1} />
             ))}
+            <CheckpointStop level={level} ready={inLevel.some((node) => node.status === 'published')} />
             {/* The last level ends with the exam and the readiness rule. */}
             {level === levels.at(-1) && <ExamStop />}
           </div>

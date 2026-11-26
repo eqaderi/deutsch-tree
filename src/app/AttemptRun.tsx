@@ -6,8 +6,11 @@ import { QuestionView } from './QuestionView.tsx'
 import { ReportProblem } from './ReportProblem.tsx'
 
 interface AttemptRunProps {
-  /** The node the questions belong to, for the "report a problem" link. */
-  nodeId: string
+  /**
+   * The node the questions belong to, for the "report a problem" link. A
+   * checkpoint asks several nodes and gives one node per question instead.
+   */
+  nodeId: string | readonly string[]
   /** The questions of this attempt, in the order they are asked. */
   questions: Question[]
   /** Moves the keyboard and a screen reader to the first question (after "Try again"). */
@@ -55,26 +58,31 @@ export function AttemptRun({ nodeId, questions, focusOnStart = false, onFinish }
         </h2>
       </div>
 
-      <section className="panel question">
-        <QuestionView
-          key={place}
-          question={question}
-          answer={answer}
-          onAnswer={(given) => setAnswers((before) => Object.assign([...before], { [place]: given }))}
-        />
-        <ReportProblem nodeId={nodeId} question={question} />
-      </section>
+      {/* A form, so that Enter in a typed answer goes on as the button does. */}
+      <form
+        onSubmit={(event) => {
+          event.preventDefault()
+          if (answer === undefined) return
+          if (isLast) onFinish(answers)
+          else setPlace(place + 1)
+        }}
+      >
+        <section className="panel question">
+          <QuestionView
+            key={place}
+            question={question}
+            answer={answer}
+            onAnswer={(given) => setAnswers((before) => Object.assign([...before], { [place]: given }))}
+          />
+          <ReportProblem nodeId={typeof nodeId === 'string' ? nodeId : (nodeId[place] ?? '')} question={question} />
+        </section>
 
-      <div className="action-bar">
-        <button
-          type="button"
-          className="btn btn-main"
-          disabled={answer === undefined}
-          onClick={() => (isLast ? onFinish(answers) : setPlace(place + 1))}
-        >
-          {isLast ? strings.checkAnswers : strings.next}
-        </button>
-      </div>
+        <div className="action-bar">
+          <button type="submit" className="btn btn-main" disabled={answer === undefined}>
+            {isLast ? strings.checkAnswers : strings.next}
+          </button>
+        </div>
+      </form>
     </>
   )
 }

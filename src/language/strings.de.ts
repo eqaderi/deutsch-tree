@@ -51,10 +51,13 @@ export const de: Strings = {
     'multiple-choice': 'Wähle die richtige Antwort.',
     'gap-fill': 'Welches Wort passt in die Lücke?',
     'true-false': 'Ist dieser Satz richtiges Deutsch?',
+    'typed-answer': 'Schreib die Antwort.',
+    'typed-gap-fill': 'Schreib das Wort für die Lücke.',
   },
   gap: 'Lücke',
   sentenceCorrect: 'Richtig',
   sentenceNotCorrect: 'Falsch',
+  germanLetters: 'Deutsche Buchstaben',
   next: 'Weiter',
   checkAnswers: 'Antworten prüfen',
   reportProblem: 'Problem melden',
@@ -104,6 +107,29 @@ export const de: Strings = {
   milestoneTopics: (count) => `Du hast ${count} Themen gemacht.`,
   suggestBackup: 'Dein Fortschritt ist nur in diesem Browser gespeichert. Eine Kopie in einer Datei macht ihn sicher.',
   notNow: 'Jetzt nicht',
+
+  checkpoint: 'Zwischentest',
+  checkpointTitle: (level) => `Zwischentest ${level}`,
+  checkpointIntro:
+    'Ein kurzer Test mit Fragen aus den Themen von diesem Niveau. Er zeigt dir, was du noch einmal ansehen sollst. Er ändert nichts an deinen Themen.',
+  startCheckpoint: 'Zwischentest starten',
+  checkpointNothingYet:
+    'Auf diesem Niveau hat noch kein Thema einen Test. Der Zwischentest kommt mit dem ersten Thema.',
+  checkpointSize: (questions, topics) =>
+    `${questions === 1 ? '1 Frage' : `${questions} Fragen`} aus ${topics === 1 ? '1 Thema' : `${topics} Themen`}`,
+  checkpointResult: 'Ergebnis vom Zwischentest',
+  checkpointAllRight: 'Alles war richtig. Du musst nichts noch einmal ansehen.',
+  checkpointSomeWrong: 'Einige Antworten waren falsch. Sieh dir die Themen unten noch einmal an.',
+  checkpointChangesNothing: 'Ein Zwischentest zeigt nur, wo du stehst. Deine Themen bleiben, wie sie sind.',
+  topicsToRevisit: 'Noch einmal ansehen',
+  wrongOfAsked: (wrong, asked) => `${wrong} von ${asked} falsch`,
+
+  acceptedWithNote: 'Richtig, mit Hinweis',
+  exactSpelling: 'Genau so schreibt man es',
+  answerNotes: {
+    'umlaut-substitute': 'Das ist richtig. Genau schreibt man es mit ä, ö, ü oder ß.',
+    capitalisation: 'Das ist richtig. Achte auf große und kleine Buchstaben.',
+  },
 
   readiness: 'Bereit für die Prüfung',
   readinessTitle: 'Bist du bereit für die Prüfung?',

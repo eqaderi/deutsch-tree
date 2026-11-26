@@ -1,5 +1,5 @@
 import type { ExamAudience, ExamLinkKind, NodeKind, Question } from '../content-model/index.ts'
-import type { ExamModule } from '../learning-engine/index.ts'
+import type { AnswerNote, ExamModule } from '../learning-engine/index.ts'
 
 /**
  * Every word the interface shows. Components never hold their own wording;
@@ -59,11 +59,15 @@ export const en = {
     'multiple-choice': 'Choose the right answer.',
     'gap-fill': 'Choose the word that fits the gap.',
     'true-false': 'Is this sentence correct German?',
+    'typed-answer': 'Type the answer.',
+    'typed-gap-fill': 'Type the word that fits the gap.',
   } satisfies Record<Question['type'], string>,
   /** Read out in place of an empty gap. */
   gap: 'gap',
   sentenceCorrect: 'Correct',
   sentenceNotCorrect: 'Not correct',
+  /** The name of the buttons that write ä, ö, ü and ß into a typed answer. */
+  germanLetters: 'German letters',
   next: 'Next',
   checkAnswers: 'Check answers',
   reportProblem: 'Report a problem',
@@ -117,6 +121,31 @@ export const en = {
   milestoneTopics: (count: number) => `You have done ${count} topics.`,
   suggestBackup: 'Your progress is kept only in this browser. A copy in a file keeps it safe.',
   notNow: 'Not now',
+
+  // A level's checkpoint: a test across the topics of the level. It is advice and changes no topic.
+  checkpoint: 'Checkpoint',
+  checkpointTitle: (level: string) => `${level} checkpoint`,
+  checkpointIntro:
+    'A short test with questions from the topics of this level. It shows you what to look at again. It changes nothing in your topics.',
+  startCheckpoint: 'Start the checkpoint',
+  checkpointNothingYet: 'No topic of this level has a test yet. The checkpoint comes with the first one.',
+  checkpointSize: (questions: number, topics: number) =>
+    `${questions === 1 ? '1 question' : `${questions} questions`} from ${topics === 1 ? '1 topic' : `${topics} topics`}`,
+  checkpointResult: 'Checkpoint result',
+  checkpointAllRight: 'Everything was right. There is nothing to look at again.',
+  checkpointSomeWrong: 'Some answers were wrong. The topics below are worth another look.',
+  checkpointChangesNothing: 'A checkpoint only shows where you stand. Your topics stay as they are.',
+  topicsToRevisit: 'Topics to look at again',
+  /** Beside a topic in that list: "2 of 5 wrong". */
+  wrongOfAsked: (wrong: number, asked: number) => `${wrong} of ${asked} wrong`,
+
+  // Typed answers that counted as right although they were not written exactly.
+  acceptedWithNote: 'Accepted with a note',
+  exactSpelling: 'Exact spelling',
+  answerNotes: {
+    'umlaut-substitute': 'Accepted. The exact spelling has ä, ö, ü or ß.',
+    capitalisation: 'Accepted. Mind the capital and small letters.',
+  } satisfies Record<AnswerNote, string>,
 
   // The readiness view: whether the learner can book the exam, and what is missing.
   readiness: 'Readiness',

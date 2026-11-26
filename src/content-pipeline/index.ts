@@ -320,10 +320,16 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
 
 function compileQuestion(question: NonNullable<NodeFile['questions']>[number]): Question {
   const explanation = richTextIn(question.explanation)
-  if (question.type !== 'gap-fill') return { ...question, explanation }
-  // The schema guarantees exactly one gap.
-  const [before = '', after = ''] = question.prompt.split(GAP)
-  return { ...question, explanation, gap: { before, after } }
+  switch (question.type) {
+    case 'gap-fill':
+    case 'typed-gap-fill': {
+      // The schema guarantees exactly one gap.
+      const [before = '', after = ''] = question.prompt.split(GAP)
+      return { ...question, explanation, gap: { before, after } }
+    }
+    default:
+      return { ...question, explanation }
+  }
 }
 
 function summarise(node: CompiledNode): NodeSummary {

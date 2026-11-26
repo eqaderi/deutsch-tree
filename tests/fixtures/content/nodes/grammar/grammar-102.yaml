@@ -1,0 +1,188 @@
+# Fixture node for tests. Invented, short, and stable: tests assert on these words.
+id: grammar-102
+kind: grammar
+level: A2
+chapter: fixture-nouns
+order: 2
+status: published
+recogniseOnly: false
+prerequisites: []
+title:
+  en: Fixture plurals
+  fa: جمع‌های آزمایشی
+  de: Test-Plural
+
+explanations:
+  en:
+    rule: "A fixture noun has its own plural form. Many end in *-e*, *-en* or *-er*."
+  fa:
+    rule: "هر اسم آزمایشی صورت جمع خودش را دارد. بسیاری به *-e*، *-en* یا *-er* ختم می‌شوند."
+  de:
+    rule: "Ein Test-Nomen hat eine eigene Pluralform. Viele enden auf *-e*, *-en* oder *-er*."
+
+table:
+  columns:
+    - en: One
+      fa: مفرد
+      de: Singular
+    - en: Many
+      fa: جمع
+      de: Plural
+  rows:
+    - [Tisch, Tische]
+    - [Lampe, Lampen]
+    - [Buch, Bücher]
+
+examples:
+  - de: Hier sind zwei Tische.
+    en: Here are two tables.
+    fa: این‌جا دو میز هست.
+  - de: Hier sind zwei Lampen.
+    en: Here are two lamps.
+    fa: این‌جا دو چراغ هست.
+
+mistakes:
+  - wrong: Hier sind zwei Buchs.
+    right: Hier sind zwei Bücher.
+    why:
+      en: "The plural of *Buch* is *Bücher*."
+      fa: "جمع *Buch* می‌شود *Bücher*."
+      de: "Der Plural von *Buch* ist *Bücher*."
+
+# 15 questions: the smallest pool a published node may have.
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: Ein Tisch, zwei ___.
+    options: [Tischen, Tische, Tischs]
+    answer: Tische
+    explanation:
+      en: "The plural of *Tisch* is *Tische*."
+      fa: "جمع *Tisch* می‌شود *Tische*."
+      de: "Der Plural von *Tisch* ist *Tische*."
+  - id: q2
+    type: multiple-choice
+    prompt: Eine Lampe, zwei ___.
+    options: [Lampes, Lampen, Lämpe]
+    answer: Lampen
+    explanation:
+      en: "The plural of *Lampe* is *Lampen*."
+      fa: "جمع *Lampe* می‌شود *Lampen*."
+      de: "Der Plural von *Lampe* ist *Lampen*."
+  - id: q3
+    type: gap-fill
+    prompt: Ein Buch, zwei ___.
+    options: [Bücher, Buchs, Buchen]
+    answer: Bücher
+    explanation:
+      en: "The plural of *Buch* is *Bücher*."
+      fa: "جمع *Buch* می‌شود *Bücher*."
+      de: "Der Plural von *Buch* ist *Bücher*."
+  - id: q4
+    type: multiple-choice
+    prompt: Ein Kind, zwei ___.
+    options: [Kinds, Kinder, Kinden]
+    answer: Kinder
+    explanation:
+      en: "The plural of *Kind* is *Kinder*."
+      fa: "جمع *Kind* می‌شود *Kinder*."
+      de: "Der Plural von *Kind* ist *Kinder*."
+  - id: q5
+    type: gap-fill
+    prompt: Ein Auto, zwei ___.
+    options: [Auten, Autos, Autoe]
+    answer: Autos
+    explanation:
+      en: "The plural of *Auto* is *Autos*."
+      fa: "جمع *Auto* می‌شود *Autos*."
+      de: "Der Plural von *Auto* ist *Autos*."
+  - id: q6
+    type: multiple-choice
+    prompt: Eine Frau, zwei ___.
+    options: [Frauen, Fraus, Fräue]
+    answer: Frauen
+    explanation:
+      en: "The plural of *Frau* is *Frauen*."
+      fa: "جمع *Frau* می‌شود *Frauen*."
+      de: "Der Plural von *Frau* ist *Frauen*."
+  - id: q7
+    type: gap-fill
+    prompt: Ein Mann, zwei ___.
+    options: [Manns, Männer, Mannen]
+    answer: Männer
+    explanation:
+      en: "The plural of *Mann* is *Männer*."
+      fa: "جمع *Mann* می‌شود *Männer*."
+      de: "Der Plural von *Mann* ist *Männer*."
+  - id: q8
+    type: multiple-choice
+    prompt: Ein Haus, zwei ___.
+    options: [Hausen, Häuser, Häuse]
+    answer: Häuser
+    explanation:
+      en: "The plural of *Haus* is *Häuser*."
+      fa: "جمع *Haus* می‌شود *Häuser*."
+      de: "Der Plural von *Haus* ist *Häuser*."
+  - id: q9
+    type: gap-fill
+    prompt: Ein Hund, zwei ___.
+    options: [Hunde, Hunden, Hünder]
+    answer: Hunde
+    explanation:
+      en: "The plural of *Hund* is *Hunde*."
+      fa: "جمع *Hund* می‌شود *Hunde*."
+      de: "Der Plural von *Hund* ist *Hunde*."
+  - id: q10
+    type: multiple-choice
+    prompt: Eine Katze, zwei ___.
+    options: [Katzes, Katzen, Kätze]
+    answer: Katzen
+    explanation:
+      en: "The plural of *Katze* is *Katzen*."
+      fa: "جمع *Katze* می‌شود *Katzen*."
+      de: "Der Plural von *Katze* ist *Katzen*."
+  - id: q11
+    type: true-false
+    prompt: Hier sind zwei Blumes.
+    answer: false
+    explanation:
+      en: "The plural of *Blume* is *Blumen*."
+      fa: "جمع *Blume* می‌شود *Blumen*."
+      de: "Der Plural von *Blume* ist *Blumen*."
+  - id: q12
+    type: true-false
+    prompt: Hier sind zwei Stühle.
+    answer: true
+    explanation:
+      en: "The plural of *Stuhl* is *Stühle*."
+      fa: "جمع *Stuhl* می‌شود *Stühle*."
+      de: "Der Plural von *Stuhl* ist *Stühle*."
+  - id: q13
+    type: true-false
+    prompt: Hier sind zwei Baumen.
+    answer: false
+    explanation:
+      en: "The plural of *Baum* is *Bäume*."
+      fa: "جمع *Baum* می‌شود *Bäume*."
+      de: "Der Plural von *Baum* ist *Bäume*."
+  - id: q14
+    type: true-false
+    prompt: Hier sind zwei Städte.
+    answer: true
+    explanation:
+      en: "The plural of *Stadt* is *Städte*."
+      fa: "جمع *Stadt* می‌شود *Städte*."
+      de: "Der Plural von *Stadt* ist *Städte*."
+  - id: q15
+    type: true-false
+    prompt: Hier sind zwei Bilds.
+    answer: false
+    explanation:
+      en: "The plural of *Bild* is *Bilder*."
+      fa: "جمع *Bild* می‌شود *Bilder*."
+      de: "Der Plural von *Bild* ist *Bilder*."
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-01-01
+  pool: cae1ee4192ee9466

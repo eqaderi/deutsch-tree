@@ -55,21 +55,31 @@ const PERSIAN = {
 
 const all = (score: string): Scores => ({ reading: score, listening: score, writing: score, speaking: score })
 
-test('the tree ends with the exam: the readiness rule, the warning, and the way to the readiness view', async ({
+/** The last level of the fixture content: its line in the tree ends with the exam. */
+const LAST_LEVEL = './#/?level=B1'
+
+test('the last level ends with the exam: the readiness rule, the warning, and the way to the readiness view', async ({
   page,
 }) => {
   await page.goto('./')
   const stop = page.getByRole('region', { name: 'The exam' })
+  const examInStrip = page.getByRole('navigation', { name: 'Levels' }).getByRole('link', { name: 'Exam' })
 
+  // An earlier level ends with its checkpoint. The way to the readiness view
+  // is "Exam" at the end of the strip of levels, which every level shows.
+  await expect(page.getByRole('region', { name: 'A1 checkpoint' })).toBeVisible()
+  await expect(stop).toHaveCount(0)
+  await expect(examInStrip).toHaveAttribute('href', '#/readiness')
+
+  await page.getByRole('navigation', { name: 'Levels' }).getByRole('link', { name: 'B1' }).click()
+
+  // The last level: its checkpoint, and after it the exam.
   await expect(stop).toContainText('You are ready when you have 90 or more in every module on 2 official mock exams.')
   await expect(stop).toContainText('Keep the official mock exams unseen until your final check.')
   await expect(stop.getByText('Not ready yet', { exact: true })).toBeVisible()
-
-  // "Exam" at the end of the strip of levels leads there too, from every level.
-  await expect(page.getByRole('navigation', { name: 'Levels' }).getByRole('link', { name: 'Exam' })).toHaveAttribute(
-    'href',
-    '#/readiness',
-  )
+  const checkpoint = await page.getByRole('region', { name: 'B1 checkpoint' }).boundingBox()
+  expect((await stop.boundingBox())?.y).toBeGreaterThan(checkpoint?.y ?? Number.POSITIVE_INFINITY)
+  await expect(examInStrip).toHaveAttribute('href', '#/readiness')
 
   await stop.getByRole('link', { name: 'Readiness and official mock exams' }).click()
 
@@ -169,7 +179,7 @@ test('a learner records module scores, reads what is missing, reaches the target
   await expect(exam(page, ADULTS_2).getByLabel(/Writing/)).toHaveValue('90')
 
   // The tree says it too.
-  await page.getByRole('link', { name: 'All topics' }).click()
+  await page.goto(LAST_LEVEL)
   await expect(page.getByRole('region', { name: 'The exam' }).getByText('Ready', { exact: true })).toBeVisible()
 })
 
@@ -277,7 +287,7 @@ test('the warning and the question before the links are there in simple German',
   await expect(linksOut(page)).toHaveCount(0)
 
   // And on the tree.
-  await page.getByRole('link', { name: 'Alle Themen' }).click()
+  await page.goto(LAST_LEVEL)
   await expect(page.getByRole('region', { name: 'Die Prüfung' })).toContainText(
     'Sieh dir die offiziellen Modellprüfungen erst bei deinem letzten Test an.',
   )
