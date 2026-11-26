@@ -494,7 +494,8 @@ export const TOPICS_PER_MILESTONE = 10
  * latest step of done topics.
  *
  * A level is finished when all its published topics are done and it has at
- * least one; a topic that is coming soon cannot hold a level open. Done
+ * least one; a topic that is coming soon cannot hold a level open. Once more
+ * of the level is published and done, it is finished again: a new milestone. Done
  * topics are counted from the progress alone, so a topic the content no
  * longer has still counts.
  */
@@ -506,8 +507,11 @@ export function milestonesReached(
 
   const published = nodes.filter((node) => node.status === 'published')
   for (const level of new Set(published.map((node) => node.level))) {
-    if (published.every((node) => node.level !== level || isDone(progress, node.id))) {
-      reached.push({ id: `level:${level}`, kind: 'level', level })
+    const ofLevel = published.filter((node) => node.level === level)
+    if (ofLevel.every((node) => isDone(progress, node.id))) {
+      // The identifier holds how many topics the level has so far, so a level finished again
+      // after more of it was published is a milestone of its own.
+      reached.push({ id: `level:${level}:${ofLevel.length}`, kind: 'level', level })
     }
   }
 
