@@ -1,0 +1,37 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-countries-migration
+kind: vocabulary
+level: B1
+chapter: b1-words-society
+order: 5
+status: coming-soon
+title:
+  en: "Countries, origins and migration"
+  fa: "کشورها، خاستگاه و مهاجرت"
+  de: "Länder, Herkunft und Migration"
+words:
+  - word: Griechenland
+  - word: Grieche
+  - word: Griechisch
+  - word: griechisch
+  - word: Türkei
+  - word: Türke
+  - word: Türkisch
+  - word: türkisch
+  - word: Ukraine
+  - word: Ukrainer
+  - word: Ukrainisch
+  - word: ukrainisch
+  - word: Migrant
+  - word: Migration
+  - word: Integration
+  - word: integrieren
+  - word: interkulturell
+  - word: Minderheit
+  - word: Mehrheit
+  - word: Bevölkerung
+  - word: Einwohner
+  - word: Bürger
+  - word: Herkunft
+  - word: stammen

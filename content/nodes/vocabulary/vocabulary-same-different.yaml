@@ -1,0 +1,35 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-same-different
+kind: vocabulary
+level: B1
+chapter: b1-words-general
+order: 4
+status: coming-soon
+title:
+  en: "Same or different? Usual or strange?"
+  fa: "یکسان یا متفاوت؟ معمولی یا عجیب؟"
+  de: "Gleich oder anders? Normal oder seltsam?"
+words:
+  - word: ähnlich
+  - word: allgemein
+  - word: speziell
+  - word: besondere
+  - word: bestimmt
+  - word: individuell
+  - word: persönlich
+  - word: einheitlich
+  - word: unterschiedlich
+  - word: umgekehrt
+  - word: üblich
+  - word: ungewöhnlich
+  - word: merkwürdig
+  - word: seltsam
+  - word: sogenannt
+  - word: solche
+  - word: derselbe
+  - word: selber
+  - word: irgendein
+  - word: auseinander
+  - word: durcheinander
+  - word: voneinander

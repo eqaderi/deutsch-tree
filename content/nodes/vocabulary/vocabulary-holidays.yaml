@@ -1,0 +1,35 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-holidays
+kind: vocabulary
+level: B1
+chapter: b1-words-travel-nature
+order: 4
+status: coming-soon
+title:
+  en: "Holidays and sightseeing"
+  fa: "تعطیلات و دیدن جاهای دیدنی"
+  de: "Urlaub und Sehenswürdigkeiten"
+words:
+  - word: Tourismus
+  - word: Saison
+  - word: Übernachtung
+  - word: Rundfahrt
+  - word: Wanderung
+  - word: Abenteuer
+  - word: Erlebnis
+  - word: erleben
+  - word: Souvenir
+  - word: Camp
+  - word: campen
+  - word: zelten
+  - word: Aussicht
+  - word: Denkmal
+  - word: Burg
+  - word: Turm
+  - word: Metropole
+  - word: City
+  - word: verbringen
+  - word: Empfang
+  - word: empfangen
+  - word: Pension

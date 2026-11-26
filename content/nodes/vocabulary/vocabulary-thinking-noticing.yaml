@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-thinking-noticing
+kind: vocabulary
+level: B1
+chapter: b1-words-thinking-talking
+order: 1
+status: coming-soon
+title:
+  en: "Thinking, noticing and understanding"
+  fa: "فکر کردن، متوجه شدن و فهمیدن"
+  de: "Denken, Bemerken und Verstehen"
+words:
+  - word: nachdenken
+  - word: überlegen
+  - word: Gedanke
+  - word: vermuten
+  - word: vermutlich
+  - word: annehmen
+  - word: zweifeln
+  - word: Zweifel
+  - word: irren
+  - word: verwechseln
+  - word: erkennen
+  - word: bemerken
+  - word: beobachten
+  - word: auffallen
+  - word: feststellen
+  - word: herausfinden
+  - word: erfahren
+  - word: einfallen
+  - word: Einfall
+  - word: Erinnerung
+  - word: Verständnis
+  - word: verständlich
+  - word: Sinn
+  - word: sinnvoll
+  - word: sinnlos
+  - word: Bedeutung
