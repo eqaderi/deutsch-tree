@@ -330,3 +330,11 @@
     en: "Fractions, word building and particles"
     fa: "کسرها، واژه‌سازی و ادات"
     de: "Bruchzahlen, Wortbildung und Partikeln"
+
+- id: b1-exam-lesen
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: reading (*Lesen*)"
+    fa: "امتحان: خواندن (*Lesen*)"
+    de: "Die Prüfung: Lesen"

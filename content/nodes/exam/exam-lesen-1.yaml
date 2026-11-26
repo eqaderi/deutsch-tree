@@ -1,0 +1,146 @@
+# Goethe-Zertifikat B1, Lesen, Teil 1. The format follows the exam; the text and the items are original.
+id: exam-lesen-1
+kind: exam-part
+exam:
+  module: lesen
+  part: 1
+level: B1
+chapter: b1-exam-lesen
+order: 1
+status: published
+title:
+  en: "*Lesen*, part 1: a blog entry or an e-mail"
+  fa: "*Lesen*، بخش ۱: وبلاگ یا ایمیل"
+  de: "Lesen, Teil 1: Blog oder E-Mail"
+
+explanations:
+  en:
+    task: >
+      You read one longer personal text: a blog entry or an e-mail. Then you
+      decide for six statements whether each is right (*Richtig*) or wrong
+      (*Falsch*) according to the text. Before the six statements the exam
+      shows one solved example, numbered 0.
+    scoring: >
+      Each right answer is one point; a wrong or empty answer loses nothing.
+      All of *Lesen*, with its five parts, has 30 points, which are turned
+      into a result out of 100, and 60 passes. This part is 6 of the 30
+      points. The exam suggests 10 minutes for it, of the 65 minutes for
+      *Lesen*. In this app the part counts as done when all six answers of
+      one practice task are right.
+    approach:
+      - "Read the six statements before the text, and see what each one claims: who, what, when."
+      - "The statements usually come in the order of the text. Find the place for the first one, then move down the text."
+      - "Compare the meaning, not the words. The text usually says it in other words, and a statement that repeats a word of the text can still be wrong."
+      - "Watch the small words that change the meaning: *nicht*, *kein*, *nur*, *erst*, *schon*, *fast*."
+      - "Decide by the text alone, not by what you know or find likely."
+      - "Answer every statement. A wrong answer costs no point, so guess when you are not sure, and keep to about ten minutes."
+  fa:
+    task: >
+      یک متن شخصیِ نسبتاً بلند می‌خوانید: یک نوشتهٔ وبلاگ یا یک ایمیل. بعد
+      دربارهٔ شش جمله تصمیم می‌گیرید که هر کدام طبق متن درست است (*Richtig*)
+      یا غلط (*Falsch*). پیش از این شش جمله، امتحان یک نمونهٔ حل‌شده با شمارهٔ
+      صفر نشان می‌دهد.
+    scoring: >
+      هر پاسخ درست یک امتیاز دارد؛ پاسخ غلط یا خالی امتیازی کم نمی‌کند. کل
+      *Lesen* با پنج بخشش ۳۰ امتیاز دارد که به نمره‌ای از ۱۰۰ تبدیل می‌شود و
+      با ۶۰ قبول می‌شوید. این بخش ۶ امتیاز از آن ۳۰ امتیاز است. امتحان برای
+      این بخش ۱۰ دقیقه پیشنهاد می‌کند، از ۶۵ دقیقهٔ کل *Lesen*. در این برنامه،
+      این بخش وقتی تمام‌شده حساب می‌شود که در یک تمرین هر شش پاسخ درست باشد.
+    approach:
+      - "پیش از متن، شش جمله را بخوانید و ببینید هر کدام چه می‌گوید: چه کسی، چه چیزی، چه وقت."
+      - "جمله‌ها معمولاً به ترتیب متن می‌آیند. جای جملهٔ اول را پیدا کنید و بعد در متن پایین بروید."
+      - "معنا را مقایسه کنید، نه کلمه‌ها را. متن معمولاً همان مطلب را با کلمه‌های دیگری می‌گوید، و جمله‌ای که کلمه‌ای از متن را تکرار می‌کند هم می‌تواند غلط باشد."
+      - "به کلمه‌های کوچکی که معنا را عوض می‌کنند دقت کنید: *nicht*، *kein*، *nur*، *erst*، *schon*، *fast*."
+      - "فقط از روی متن تصمیم بگیرید، نه از روی دانسته‌ها یا حدس خودتان."
+      - "به همهٔ جمله‌ها پاسخ بدهید. پاسخ غلط امتیازی کم نمی‌کند؛ پس اگر مطمئن نیستید حدس بزنید، و حدود ده دقیقه وقت بگذارید."
+  de:
+    task: >
+      Du liest einen längeren persönlichen Text: einen Blog-Beitrag oder eine
+      E-Mail. Danach liest du sechs Sätze über den Text. Bei jedem Satz
+      entscheidest du: *Richtig* oder *Falsch*? Vor den sechs Sätzen steht in
+      der Prüfung ein Beispiel mit der Nummer 0. Es ist schon gelöst.
+    scoring: >
+      Jede richtige Antwort gibt einen Punkt. Für eine falsche Antwort
+      verlierst du keinen Punkt. Das ganze Modul *Lesen* hat 30 Punkte.
+      Daraus macht die Prüfung ein Ergebnis von 0 bis 100. Mit 60 hast du
+      bestanden. Dieser Teil hat 6 von den 30 Punkten. Die Prüfung empfiehlt
+      für diesen Teil 10 Minuten. Für das ganze Modul hast du 65 Minuten. In
+      dieser App ist der Teil fertig, wenn in einer Übung alle sechs
+      Antworten richtig sind.
+    approach:
+      - "Lies zuerst die sechs Sätze. Was sagt jeder Satz: Wer? Was? Wann?"
+      - "Die Sätze kommen meistens in der Reihenfolge vom Text. Such die Stelle für den ersten Satz und geh dann im Text weiter nach unten."
+      - "Vergleiche die Bedeutung, nicht die Wörter. Der Text sagt es oft mit anderen Wörtern. Ein Satz kann falsch sein, auch wenn er ein Wort aus dem Text hat."
+      - "Achte auf kleine Wörter. Sie ändern die Bedeutung: *nicht*, *kein*, *nur*, *erst*, *schon*, *fast*."
+      - "Entscheide nur mit dem Text. Was du selbst weißt oder denkst, zählt hier nicht."
+      - "Antworte bei jedem Satz. Eine falsche Antwort kostet keinen Punkt. Wenn du nicht sicher bist, dann rate. Brauch nicht mehr als etwa zehn Minuten."
+
+practice:
+  - id: t1
+    texts:
+      - id: a
+        title: Mein erster Monat auf dem Land
+        body: |
+          Hallo ihr Lieben,
+
+          endlich habe ich Zeit, euch zu schreiben. Seit vier Wochen wohne ich nun in Altenbach, einem Dorf mit nur achthundert Einwohnern. Ihr wisst ja, dass ich eigentlich nie aus der Stadt wegziehen wollte. Aber die Tierarztpraxis hier hat mir eine Ausbildungsstelle angeboten, und in der Stadt hatte ich fast ein Jahr lang ohne Erfolg gesucht.
+
+          Am Anfang war vieles ungewohnt. Der letzte Bus fährt schon um halb acht, und einen Supermarkt gibt es nicht, nur eine kleine Bäckerei. Zum Einkaufen muss ich deshalb zwölf Kilometer in die nächste Stadt fahren. Das mache ich mit dem alten Fahrrad, das mir meine Vermieterin, Frau Brandl, geliehen hat. Ein Auto möchte ich mir erst kaufen, wenn ich im zweiten Ausbildungsjahr mehr verdiene.
+
+          Die Arbeit gefällt mir viel besser, als ich erwartet hatte. Ich dachte, dass ich vor allem Hunde und Katzen sehen würde. In Wirklichkeit fahren wir fast jeden Vormittag zu den Bauernhöfen in der Umgebung und kümmern uns dort um Kühe und Pferde. Meine Chefin erklärt mir alles sehr geduldig, auch wenn ich dieselbe Frage zum dritten Mal stelle. Nur das frühe Aufstehen fällt mir schwer: Um sechs Uhr muss ich schon in der Praxis sein.
+
+          Was mich am meisten überrascht hat, sind die Leute. In der Stadt kannte ich nach drei Jahren nicht einmal meine Nachbarn. Hier hat man mich schon in der ersten Woche zum Dorffest eingeladen, und inzwischen singe ich sogar im Chor mit, obwohl ich gar nicht gut singen kann. Die Proben sind jeden Donnerstag, und danach sitzen wir noch lange zusammen.
+
+          Natürlich vermisse ich euch und unsere Kinoabende. Ein Kino gibt es hier nämlich auch nicht. Deshalb habe ich eine Bitte: Kommt mich doch im Juli besuchen! Frau Brandl vermietet im Sommer zwei Gästezimmer, die nicht teuer sind. Sagt mir aber bitte bis Ende Mai Bescheid, weil die Zimmer schnell weg sind.
+
+          Liebe Grüße
+          eure Milena
+    items:
+      - id: i1
+        type: richtig-falsch
+        prompt: In der Stadt hat Milena keine Ausbildungsstelle gefunden.
+        answer: true
+        explanation:
+          en: "She writes that in the city she had looked for almost a year *ohne Erfolg*: without success."
+          fa: "او می‌نویسد که در شهر نزدیک یک سال *ohne Erfolg* گشته است: بدون نتیجه."
+          de: "Sie schreibt: In der Stadt hat sie fast ein Jahr lang *ohne Erfolg* gesucht."
+      - id: i2
+        type: richtig-falsch
+        prompt: Milena hat sich für die Fahrt zum Einkaufen ein Fahrrad gekauft.
+        answer: false
+        explanation:
+          en: "She has not bought the bicycle: her landlady has lent it to her (*geliehen*)."
+          fa: "او دوچرخه را نخریده است: صاحب‌خانه‌اش آن را به او قرض داده است (*geliehen*)."
+          de: "Sie hat das Fahrrad nicht gekauft. Ihre Vermieterin hat es ihr *geliehen*."
+      - id: i3
+        type: richtig-falsch
+        prompt: Bei der Arbeit hat Milena vor allem mit Hunden und Katzen zu tun.
+        answer: false
+        explanation:
+          en: "That is only what she had expected. *In Wirklichkeit* she mostly looks after cows and horses on farms."
+          fa: "این فقط چیزی بود که انتظارش را داشت. *In Wirklichkeit* بیشتر در مزرعه‌ها به گاوها و اسب‌ها می‌رسد."
+          de: "Das hat sie nur gedacht. *In Wirklichkeit* kümmert sie sich meistens um Kühe und Pferde."
+      - id: i4
+        type: richtig-falsch
+        prompt: Das frühe Aufstehen ist für Milena ein Problem.
+        answer: true
+        explanation:
+          en: "*Das frühe Aufstehen fällt mir schwer* means that getting up early is hard for her."
+          fa: "*Das frühe Aufstehen fällt mir schwer* یعنی زود بیدار شدن برایش سخت است."
+          de: "*Das frühe Aufstehen fällt mir schwer* heißt: Früh aufstehen ist für sie schwer."
+      - id: i5
+        type: richtig-falsch
+        prompt: Im Dorf hat Milena schneller Leute kennengelernt als in der Stadt.
+        answer: true
+        explanation:
+          en: "In the city she did not know her neighbours after three years; in the village she was invited in her first week."
+          fa: "در شهر بعد از سه سال همسایه‌هایش را نمی‌شناخت؛ در روستا همان هفتهٔ اول دعوتش کردند."
+          de: "In der Stadt kannte sie nach drei Jahren ihre Nachbarn nicht. Im Dorf hat man sie schon in der ersten Woche eingeladen."
+      - id: i6
+        type: richtig-falsch
+        prompt: Milenas Freunde können im Sommer kostenlos bei Frau Brandl übernachten.
+        answer: false
+        explanation:
+          en: "The rooms are rented out (*vermietet*) and are *nicht teuer*: cheap, but not free."
+          fa: "اتاق‌ها اجاره داده می‌شوند (*vermietet*) و *nicht teuer* هستند: ارزان، ولی نه رایگان."
+          de: "Frau Brandl *vermietet* die Zimmer. Sie sind *nicht teuer*, aber sie kosten etwas."
