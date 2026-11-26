@@ -43,7 +43,7 @@ export function taskSheet(task: ExamTask): TaskSheet {
             text(task.situation),
             { type: 'list', ordered: false, items: task.points },
             text(
-              `Schreiben Sie eine E-Mail mit ungefähr ${words} Wörtern. Gehen Sie auf alle drei Punkte ein. Denken Sie an eine Anrede, eine Einleitung, eine sinnvolle Reihenfolge der Punkte und einen Schluss mit Gruß.`,
+              `Schreiben Sie eine E-Mail mit ungefähr ${words} Wörtern. Schreiben Sie zu jedem der drei Punkte etwas. Denken Sie an eine Anrede, eine Einleitung, eine sinnvolle Reihenfolge der Punkte und einen Schluss mit Gruß.`,
             ),
           ],
         }
@@ -53,7 +53,7 @@ export function taskSheet(task: ExamTask): TaskSheet {
           blocks: [
             text(task.situation),
             { type: 'quote', ...task.opinion },
-            text(`Schreiben Sie nun Ihre eigene Meinung zu diesem Thema, mit ungefähr ${words} Wörtern.`),
+            text(`Schreiben Sie nun Ihre eigene Meinung zu diesem Thema (ungefähr ${words} Wörter).`),
           ],
         }
       case 3:
@@ -76,7 +76,7 @@ export function taskSheet(task: ExamTask): TaskSheet {
         blocks: [
           text(task.situation),
           text(
-            'Planen Sie das zusammen mit Ihrer Partnerin oder Ihrem Partner. Sprechen Sie über die Punkte unten und auch über eigene Ideen. Machen Sie Vorschläge, reagieren Sie auf die Vorschläge der anderen Person und entscheiden Sie am Ende gemeinsam. Sie haben ungefähr 3 Minuten Zeit.',
+            'Planen Sie alles zusammen mit Ihrer Partnerin oder Ihrem Partner. Sprechen Sie über die Punkte unten und auch über eigene Ideen. Machen Sie Vorschläge, reagieren Sie auf die Vorschläge der anderen Person und entscheiden Sie am Ende gemeinsam. Sie haben ungefähr 3 Minuten Zeit.',
           ),
           { type: 'list', ordered: false, items: [...task.points, '…'] },
         ],
@@ -87,7 +87,7 @@ export function taskSheet(task: ExamTask): TaskSheet {
         blocks: [
           text(`Ihr Thema: ${task.topic}`),
           text(
-            'Halten Sie eine kurze Präsentation zu diesem Thema, ungefähr 3 Minuten lang. Folgen Sie dabei diesen fünf Folien:',
+            'Halten Sie eine kurze Präsentation zu diesem Thema, ungefähr 3 Minuten lang. Halten Sie sich dabei an diese fünf Folien:',
           ),
           { type: 'list', ordered: true, items: SLIDES },
         ],

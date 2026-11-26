@@ -205,12 +205,12 @@ export const de: Strings = {
   writingSteps: [
     'Schreib deinen Text zu dieser Aufgabe, wie in der Prüfung: ohne Wörterbuch und ohne Übersetzer.',
     'Kopiere den Prompt und füge ihn in einen KI-Assistenten ein, zum Beispiel ChatGPT, Claude oder Gemini. Setz deinen Text darunter und schick beides ab.',
-    'Der Assistent bewertet deinen Text mit den offiziellen Kriterien der Prüfung. Schreib seine Punktzahl unten in das Feld.',
+    'Der Assistent bewertet deinen Text nach den offiziellen Kriterien der Prüfung. Schreib seine Punktzahl unten in das Feld.',
   ],
   speakingSteps: [
     'Kopiere den Prompt und füge ihn in einen KI-Assistenten ein, der sprechen kann, zum Beispiel ChatGPT, Claude oder Gemini. Schick ihn ab.',
-    'Schalte beim Assistenten den Sprachmodus ein und sag „Hallo“. Er spricht Deutsch mit dir, wie in der Prüfung. Sprich; schreib nicht.',
-    'Am Ende bewertet dich der Assistent mit den offiziellen Kriterien der Prüfung. Schreib seine Punktzahl unten in das Feld.',
+    'Schalte beim Assistenten den Sprachmodus ein und sag „Hallo“. Er spricht Deutsch mit dir, wie in der Prüfung. Sprich. Schreib nicht.',
+    'Am Ende bewertet dich der Assistent nach den offiziellen Kriterien der Prüfung. Schreib seine Punktzahl unten in das Feld.',
   ],
   copyPrompt: 'Prompt kopieren',
   promptCopied: 'Kopiert. Füge ihn jetzt in deinen KI-Assistenten ein.',
@@ -229,6 +229,6 @@ export const de: Strings = {
   ofTotal: (total) => `von ${total}`,
   scoreNeeded: (needed, total) => `Du brauchst ${needed} von ${total} Punkten. Dann ist das Thema fertig.`,
   scoreRetry:
-    'Mach die Aufgabe noch einmal und schreib die neue Punktzahl hier hin. Du kannst es so oft versuchen, wie du willst.',
+    'Mach die Aufgabe noch einmal und trag die neue Punktzahl hier ein. Du kannst es so oft versuchen, wie du willst.',
   scoresSoFar: 'Deine Punktzahlen bis jetzt',
 }
