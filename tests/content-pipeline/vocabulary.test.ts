@@ -19,7 +19,7 @@ const NODE = 'vocabulary-fixture-home'
 const UNWRITTEN = 'nodes/vocabulary/vocabulary-fixture-family.yaml'
 
 /** The errors of the fixture content after one change to the published vocabulary node. */
-async function errorsAfter(change: (node: any) => void) {
+async function errorsAfter(change: Parameters<typeof changeNode>[0]) {
   const content = await fixtureContentWith({ [VOCABULARY]: changeNode(change) })
   return inNodes((await compileContent(content)).report.errors)
 }

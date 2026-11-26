@@ -220,7 +220,7 @@ test('a reviewer who knows another right word shows that the word must accept it
 })
 
 test('a word, an article or a meaning in any language that changes after the review calls for a new review', async () => {
-  const changes: Array<(node: any) => void> = [
+  const changes: Array<Parameters<typeof changeNode>[0]> = [
     (node) => {
       node.words[0].article = 'das'
     },
