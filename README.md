@@ -111,8 +111,23 @@ GitHub Pages and from a local folder.
   points (40, 40, 20). Sprechen: the part's criteria count for 84 points and
   pronunciation, rated on that part alone, for its official 16. The prompt
   states the same rule to the assistant.
+- A vocabulary node writes no questions. `vocabularyPool(words)` in the
+  learning engine makes its pool: for every word one `meaning-of-word`
+  question (the word with its article, choose its meaning) and one
+  `word-for-meaning` question (the meaning, type the word; a noun only with
+  its article, through `checkTyped`). The content pipeline calls it once
+  (`src/content-pipeline/vocabulary.ts`) for the compiled node and for the
+  review, so what was reviewed is what is asked. A `word-for-meaning` prompt
+  is the meaning in each language (`de` is the German definition); the app
+  shows the one of the page's language. `drawQuestions` draws a test so that
+  it asks about a word once and takes the two directions in turn; for a pool
+  of other questions it is `drawAttempt`. Its page is
+  `src/app/VocabularySections.tsx`. The words, as `VocabularyWord`, are what
+  an export (Anki) or audio of words reads; `asLearned(word)` is the word
+  with its article, as it is said and asked.
 - Whether a node has a pool or is graded by an assistant: `hasPool` and
-  `isAssistantGraded` in `src/content-model/scoring.ts`. The app imports
+  `isAssistantGraded` in `src/content-model/scoring.ts`; which page it has:
+  `isGrammar`, `isVocabulary`. The app imports
   these from that file, not from `index.ts`, which holds the schema that only
   the pipeline needs.
 - Progress: read it with `useProgress()` and change it with
