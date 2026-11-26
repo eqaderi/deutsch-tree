@@ -4,8 +4,9 @@
  *
  * Build: content errors fail the build; the bundle is emitted into the site,
  * with the audio files that its published nodes say (and no other).
- * Dev: the bundle is served from memory and recompiled when a content file
- * changes; audio is served from the content folder.
+ * Dev: the bundle is compiled on the first request for it, served from memory,
+ * and compiled again on the first request after a content file changed; audio
+ * is served from the content folder.
  */
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
@@ -47,9 +48,20 @@ export function contentPipeline(contentDir: string): Plugin {
 
     configureServer(server) {
       const root = path.resolve(contentDir)
+      // The files of the last compile, kept until a content file changes. A failed compile is not kept.
+      let compiled: Promise<Map<string, string>> | undefined
+      const files = () => {
+        compiled ??= compile().catch((error: unknown) => {
+          compiled = undefined
+          throw error
+        })
+        return compiled
+      }
       server.watcher.add(root)
       server.watcher.on('all', (_event, file) => {
-        if (file.startsWith(root + path.sep)) server.ws.send({ type: 'full-reload' })
+        if (!file.startsWith(root + path.sep)) return
+        compiled = undefined
+        server.ws.send({ type: 'full-reload' })
       })
 
       server.middlewares.use(async (request, response, next) => {
@@ -65,8 +77,7 @@ export function contentPipeline(contentDir: string): Plugin {
         if (start === -1 || !pathname.endsWith('.json')) return next()
 
         try {
-          const files = await compile()
-          const json = files.get(decodeURIComponent(pathname.slice(start + 1)))
+          const json = (await files()).get(decodeURIComponent(pathname.slice(start + 1)))
           if (json === undefined) {
             response.writeHead(404).end('Not found')
             return
