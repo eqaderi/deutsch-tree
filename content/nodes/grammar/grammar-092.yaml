@@ -1,0 +1,13 @@
+# Grammar list row 92.
+id: grammar-092
+kind: grammar
+level: A2
+chapter: a2-articles-pronouns
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-078]
+title:
+  en: "*alle*, *jeder*"
+  fa: "*alle* و *jeder*"
+  de: "*alle*, *jeder*"

@@ -1,0 +1,13 @@
+# Grammar list row 113.
+id: grammar-113
+kind: grammar
+level: A2
+chapter: a2-adjectives
+order: 7
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-102, grammar-126]
+title:
+  en: "Adjectives with fixed prepositions"
+  fa: "صفت‌هایی با حرف اضافهٔ ثابت"
+  de: "Adjektive mit festen Präpositionen"

@@ -1,0 +1,13 @@
+# Grammar list row 44.
+id: grammar-044
+kind: grammar
+level: B1
+chapter: b1-modal-konjunktiv
+order: 7
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-043]
+title:
+  en: "*als ob* + *Konjunktiv II*"
+  fa: "*als ob* با *Konjunktiv II*"
+  de: "*als ob* + Konjunktiv II"

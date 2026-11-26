@@ -1,0 +1,13 @@
+# Grammar list row 141.
+id: grammar-141
+kind: grammar
+level: A1
+chapter: a1-first-sentences
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-087, grammar-139]
+title:
+  en: "W-question"
+  fa: "پرسش با واژهٔ پرسشی (*W-Frage*)"
+  de: "W-Frage"

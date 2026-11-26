@@ -1,0 +1,13 @@
+# Grammar list row 161.
+id: grammar-161
+kind: grammar
+level: A2
+chapter: a2-subordinate-clauses
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-157]
+title:
+  en: "*damit*"
+  fa: "*damit*"
+  de: "*damit*"

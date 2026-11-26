@@ -1,0 +1,13 @@
+# Grammar list row 118.
+id: grammar-118
+kind: grammar
+level: B1
+chapter: b1-adjectives-participles
+order: 4
+status: coming-soon
+recogniseOnly: true
+prerequisites: [grammar-117]
+title:
+  en: "*Partizip I* as adjective"
+  fa: "*Partizip I* در نقش صفت"
+  de: "Partizip I als Adjektiv"

@@ -1,0 +1,13 @@
+# Grammar list row 23.
+id: grammar-023
+kind: grammar
+level: B1
+chapter: b1-tenses
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-016, grammar-019]
+title:
+  en: "*Präteritum* of all verbs, with principal parts"
+  fa: "گذشتهٔ ساده (*Präteritum*) همهٔ فعل‌ها، با سه صورت اصلی فعل"
+  de: "Präteritum von allen Verben, mit den Stammformen"

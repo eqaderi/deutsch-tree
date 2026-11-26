@@ -1,0 +1,13 @@
+# Grammar list row 30.
+id: grammar-030
+kind: grammar
+level: A1
+chapter: a1-modal-verbs
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-026]
+title:
+  en: "*sollen*"
+  fa: "*sollen*"
+  de: "*sollen*"

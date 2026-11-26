@@ -1,0 +1,13 @@
+# Grammar list row 10.
+id: grammar-010
+kind: grammar
+level: A1
+chapter: a1-verb-patterns
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-062]
+title:
+  en: "*es gibt* + *Akkusativ*"
+  fa: "*es gibt* با *Akkusativ*"
+  de: "*es gibt* + Akkusativ"

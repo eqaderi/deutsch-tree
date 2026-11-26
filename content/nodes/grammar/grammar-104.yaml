@@ -1,0 +1,13 @@
+# Grammar list row 104.
+id: grammar-104
+kind: grammar
+level: A1
+chapter: a1-adjectives
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-102]
+title:
+  en: "*sehr* / *zu* + adjective"
+  fa: "*sehr* و *zu* + صفت"
+  de: "*sehr* / *zu* + Adjektiv"

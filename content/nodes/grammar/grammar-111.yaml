@@ -1,0 +1,13 @@
+# Grammar list row 111.
+id: grammar-111
+kind: grammar
+level: A2
+chapter: a2-adjectives
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-110]
+title:
+  en: "*Superlativ*"
+  fa: "صفت عالی (*Superlativ*)"
+  de: "Superlativ"

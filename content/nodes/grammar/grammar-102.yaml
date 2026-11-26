@@ -1,0 +1,13 @@
+# Grammar list row 102.
+id: grammar-102
+kind: grammar
+level: A1
+chapter: a1-adjectives
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-002]
+title:
+  en: "Predicative adjective"
+  fa: "صفت در نقش مسند (بدون پایانه)"
+  de: "Adjektiv nach *sein* (ohne Endung)"

@@ -1,0 +1,13 @@
+# Grammar list row 116.
+id: grammar-116
+kind: grammar
+level: B1
+chapter: b1-adjectives-participles
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-071, grammar-109]
+title:
+  en: "Adjective endings in the *Genitiv*"
+  fa: "پایانهٔ صفت در *Genitiv*"
+  de: "Adjektivendungen im Genitiv"

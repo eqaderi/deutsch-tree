@@ -1,0 +1,13 @@
+# Grammar list row 204.
+id: grammar-204
+kind: grammar
+level: A2
+chapter: a2-reflexive-prepositional
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-096, grammar-126]
+title:
+  en: "Verbs with fixed prepositions"
+  fa: "فعل‌هایی با حرف اضافهٔ ثابت"
+  de: "Verben mit festen Präpositionen"

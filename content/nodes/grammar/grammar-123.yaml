@@ -1,0 +1,13 @@
+# Grammar list row 123.
+id: grammar-123
+kind: grammar
+level: A1
+chapter: a1-prepositions
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-121]
+title:
+  en: "Local, *Woher?*: *aus*; *von*"
+  fa: "مبدأ، *Woher?*: *aus* و *von*"
+  de: "Herkunft, *Woher?*: *aus*; *von*"

@@ -1,0 +1,13 @@
+# Grammar list row 33.
+id: grammar-033
+kind: grammar
+level: B1
+chapter: b1-modal-konjunktiv
+order: 2
+status: coming-soon
+recogniseOnly: true
+prerequisites: [grammar-025, grammar-026, grammar-030]
+title:
+  en: "Modal verbs for assumption or hearsay"
+  fa: "فعل‌های وجهی برای حدس و برای نقل شنیده‌ها"
+  de: "Modalverben für Vermutungen und für Gehörtes"
