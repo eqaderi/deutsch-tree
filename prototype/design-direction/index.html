@@ -1,0 +1,517 @@
+<!doctype html>
+<!--
+  PROTOTYPE, THROWAWAY. Not product code. Lives only on the prototype/design-direction branch.
+
+  Question: the learner chose the "warm and calm" look (cream surfaces, soft raised panels,
+  one orange accent, big clear numbers). How should the tree, a grammar node page and a test
+  be laid out in that look?
+
+  Plan: three structurally different variants of the same three screens, switchable with
+  ?variant=A|B|C from the floating bar. ?screen=tree|page|test, ?lang=en|fa|de, ?frame=phone|full.
+  Node titles are real; states, vocabulary themes, phrases and all texts are invented samples.
+  Nothing is saved.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROTOTYPE · deutsch-tree design direction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Vazirmatn:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ece6dd; --panel:#f6f2ec; --hi:#fdfbf8; --ink:#201d1a; --muted:#857b70; --line:#dcd2c5;
+  --accent:#f08a2b; --accent-ink:#a4520b; --accent-soft:#fbe2c8; --ok:#4f7a52; --bad:#b4492f;
+  --g:#dccbb0; --v:#bccab1; --p:#b6c4d4; --x:#dfb7ac;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:#cfc7bb;color:var(--ink);font-family:"Outfit","Vazirmatn",system-ui,sans-serif;font-size:16px;line-height:1.5}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+#stage{height:100%;display:grid;place-items:center}
+#stage.full #app{width:100%;height:100%}
+#stage.phone #app{width:390px;height:min(800px,calc(100% - 110px));border-radius:36px;box-shadow:0 0 0 10px #201d1a,0 30px 60px rgba(0,0,0,.3);margin-bottom:70px}
+#app{background:var(--bg);overflow:auto;container-type:inline-size;container-name:app;position:relative}
+#app[dir=rtl]{font-family:"Vazirmatn","Outfit",system-ui,sans-serif}
+.de{direction:ltr;unicode-bidi:isolate;font-family:"Outfit",system-ui,sans-serif}
+.wrap{max-width:1120px;margin:auto;padding:16px 16px 120px}
+.narrow{max-width:720px}
+.panel{background:var(--panel);border:1px solid rgba(255,255,255,.85);border-radius:22px;padding:16px;
+  box-shadow:0 16px 30px -20px rgba(96,72,40,.4),0 2px 5px rgba(96,72,40,.06)}
+.panel+.panel{margin-block-start:14px}
+.big{font-weight:300;font-size:46px;line-height:1;letter-spacing:-.02em}
+.mid{font-weight:300;font-size:30px;line-height:1}
+.cap{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+[dir=rtl] .cap,[dir=rtl] .big{letter-spacing:0}
+[dir=rtl] .cap{font-size:13px}
+.muted{color:var(--muted)}
+.row{display:flex;align-items:center;gap:10px}
+.spread{justify-content:space-between}
+.grow{flex:1;min-width:0}
+h1{font-weight:400;font-size:30px;line-height:1.15;margin:0}
+h2{font-weight:500;font-size:18px;margin:0 0 8px}
+p{margin:0 0 10px}
+.btn{border:0;border-radius:999px;padding:12px 20px;background:var(--ink);color:#fff;font-weight:500;white-space:nowrap}
+.btn.acc{background:var(--accent)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn.sm{padding:8px 14px;font-size:14px}
+.btn.wide{width:100%}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-block:12px}
+.chip{border:0;border-radius:999px;padding:7px 14px;background:transparent;box-shadow:inset 0 0 0 1.5px var(--line);font-size:14px;display:inline-flex;align-items:center;gap:6px}
+.chip.on{background:var(--ink);color:#fff;box-shadow:none}
+.seg{display:flex;background:#e2dacf;border-radius:999px;padding:4px;gap:4px}
+.seg button{flex:1;border:0;background:transparent;border-radius:999px;padding:8px 10px;font-weight:500}
+.seg button.on{background:var(--hi);box-shadow:0 2px 6px rgba(96,72,40,.15)}
+.bar{height:6px;border-radius:9px;background:#e2dacf;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--ink);border-radius:9px}
+.tag{font-size:12px;border-radius:999px;padding:2px 9px;background:#e6ded2;color:#5e554b;white-space:nowrap}
+.tag.acc{background:var(--accent-soft);color:var(--accent-ink)}
+
+/* node tokens: shape = kind, fill = state */
+.tok{--sz:36px;inline-size:var(--sz);block-size:var(--sz);flex:none;display:inline-grid;place-items:center;background:var(--tint);border:0;padding:0;font-size:calc(var(--sz)*.42);font-weight:600;color:var(--ink);position:relative}
+.tok>b{font-weight:600;line-height:1}
+.k-grammar{--tint:var(--g);border-radius:28%}
+.k-vocab{--tint:var(--v);border-radius:50%}
+.k-phrase{--tint:var(--p);border-radius:50% 50% 50% 14%}
+[dir=rtl] .k-phrase{border-radius:50% 50% 14% 50%}
+.k-exam{--tint:var(--x);border-radius:18%;transform:rotate(45deg) scale(.8)}
+.k-exam>b{transform:rotate(-45deg)}
+.s-done{background:var(--ink);color:#fff}
+.s-prog{box-shadow:inset 0 0 0 3px var(--ink)}
+.s-soon{background:transparent;box-shadow:inset 0 0 0 1.5px var(--tint);opacity:.75}
+.s-soon>b{opacity:0}
+.tok.next{outline:3px solid var(--accent);outline-offset:3px}
+.tok.dim{opacity:.12}
+.tok.sel{outline:3px solid var(--ink);outline-offset:3px}
+
+.top{display:flex;align-items:center;justify-content:space-between;margin-block-end:14px}
+.logo{font-weight:600;letter-spacing:-.01em}
+.logo i{display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--accent);margin-inline-end:7px}
+.langs{display:flex;gap:2px;background:#e2dacf;border-radius:999px;padding:3px}
+.langs button{border:0;background:transparent;border-radius:999px;padding:4px 10px;font-size:13px}
+.langs button.on{background:var(--hi)}
+.note{font-size:12px;color:var(--muted);text-align:center;margin-block:10px}
+
+/* ---------- A: path ---------- */
+.A-grid{display:block}
+.hero .title{font-size:22px;line-height:1.2;margin-block:6px 4px}
+.stage{padding:0;overflow:hidden}
+.stage>header{display:flex;align-items:center;gap:10px;padding:14px 16px;width:100%;border:0;background:transparent;text-align:start}
+.stage .path{padding:4px 16px 18px}
+.pnode{display:flex;align-items:center;gap:12px;border:0;background:transparent;text-align:start;padding:9px 0;margin-inline-start:calc(var(--o)*13%);position:relative;max-width:calc(100% - var(--o)*13%)}
+.pnode+.pnode::before{content:"";position:absolute;inset-block-start:-5px;inset-inline-start:21px;width:4px;height:4px;border-radius:50%;background:#cfc4b5;box-shadow:0 8px 0 transparent}
+.pnode .tok{--sz:46px}
+.pnode .lbl{font-size:15px;line-height:1.25}
+.pnode.soon .lbl{color:var(--muted)}
+@container app (min-width:820px){
+  .A-grid{display:grid;grid-template-columns:340px 1fr;gap:20px;align-items:start}
+  .A-grid>aside{position:sticky;inset-block-start:16px}
+}
+
+/* ---------- B: map ---------- */
+.mapgrid{display:grid;gap:14px}
+.lvl .toks{display:flex;flex-wrap:wrap;gap:9px;margin-block-start:14px}
+.lvl .tok{--sz:27px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:#5e554b;margin-block:14px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend .tok{--sz:18px}
+.sheet{position:sticky;inset-block-end:76px;margin-block-start:14px;background:var(--hi);z-index:3}
+.B-side .panel+.panel{margin-block-start:14px}
+@container app (min-width:820px){
+  .B-grid{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+  .B-side{position:sticky;inset-block-start:16px}
+  .sheet{position:static}
+  .lvl .tok{--sz:30px}
+}
+
+/* ---------- C: index ---------- */
+.lv3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.lv3 button{border:0;text-align:start;background:var(--panel);border-radius:18px;padding:12px;border:1px solid rgba(255,255,255,.85);box-shadow:0 10px 20px -16px rgba(96,72,40,.4)}
+.lv3 button.on{background:var(--ink);color:#fff;border-color:transparent}
+.lv3 button.on .cap,.lv3 button.on .muted{color:#cfc7bb}
+.lv3 button.on .bar{background:#4a443d}.lv3 button.on .bar i{background:#fff}
+.search{width:100%;border:0;border-radius:999px;padding:12px 18px;background:var(--hi);box-shadow:inset 0 0 0 1.5px var(--line);margin-block-start:14px}
+.list{padding:4px 0;margin-block-start:4px}
+.li{display:flex;align-items:center;gap:12px;width:100%;border:0;background:transparent;text-align:start;padding:11px 16px;border-block-end:1px solid #e7dfd3}
+.li:last-child{border:0}
+.li .n{inline-size:28px;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.li .tok{--sz:24px;font-size:11px}
+.li .ttl{flex:1;min-width:0;font-size:15px;line-height:1.25}
+.li.soon .ttl{color:var(--muted)}
+.li.next{background:var(--accent-soft)}
+.li .st{font-size:12px;color:var(--muted);white-space:nowrap}
+@container app (min-width:820px){
+  .C-grid{display:grid;grid-template-columns:330px 1fr;gap:20px;align-items:start}
+  .C-grid>aside{position:sticky;inset-block-start:16px}
+  .lv3{grid-template-columns:1fr}
+}
+
+/* ---------- trees, second round ---------- */
+.kk-grammar{--tint:var(--g)}.kk-vocab{--tint:var(--v)}.kk-phrase{--tint:var(--p)}.kk-exam{--tint:var(--x)}
+.intro h1{font-size:28px}
+.intro p{margin-block:6px 14px}
+.how{background:var(--hi);border-radius:18px;padding:12px 14px;margin-block-end:14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.how ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;flex:1}
+.how li{display:flex;gap:8px;align-items:center;font-size:14px}
+.how li b{inline-size:24px;block-size:24px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:500;flex:none}
+.cont .title{font-size:22px;line-height:1.2;margin-block:6px 8px}
+.kp{font-size:12px;border-radius:7px;padding:2px 8px;background:var(--tint);color:#3b352e;white-space:nowrap;font-weight:500}
+.mk{inline-size:26px;block-size:26px;border-radius:50%;flex:none;display:inline-grid;place-items:center;font-size:13px;box-shadow:inset 0 0 0 2px #b9ad9c;color:#fff}
+.m-done{background:var(--ink);box-shadow:none}
+.m-prog{background:conic-gradient(var(--ink) 0 50%,transparent 0);box-shadow:inset 0 0 0 2px var(--ink)}
+.m-soon{box-shadow:none;border:2px dashed #cdc2b2;opacity:.7}
+.m-next{box-shadow:inset 0 0 0 2px var(--accent),0 0 0 4px #f6cfa6}
+.pill{font-size:13px;border-radius:999px;padding:4px 12px;background:var(--ink);color:#fff;white-space:nowrap;font-weight:500}
+.pill.acc{background:var(--accent)}
+.pill.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.nr{display:flex;align-items:center;gap:12px;width:100%;border:0;background:transparent;text-align:start;padding:12px 14px;border-block-start:1px solid #e7dfd3;font-size:15px}
+.nr:first-child{border-block-start:0}
+.nr .ttl{flex:1;min-width:0;line-height:1.3}
+.nr.soon .ttl{color:var(--muted)}
+.nr.done .ttl{color:#5e554b}
+.nr.isnext{background:var(--accent-soft)}
+.nr>.muted{font-size:13px;white-space:nowrap}
+.sm{font-size:13px}
+.cname{font-size:17px;font-weight:500;line-height:1.25;display:block}
+.chev{color:var(--muted);font-size:22px;line-height:1}
+[dir=rtl] .flip{display:inline-block;transform:scaleX(-1)}
+.lvname{font-size:17px;font-weight:500}
+.rowsp{padding:0;overflow:hidden}
+/* route */
+.strip{display:flex;align-items:flex-start;gap:6px;margin-block:14px 4px;padding-block-start:28px}
+.strip i{flex:1;height:3px;background:#cfc4b5;border-radius:3px;margin-block-start:21px}
+.strip .end{font-size:12px;color:var(--muted);margin-block-start:13px;white-space:nowrap}
+.strip button{position:relative;border:0;background:transparent;display:grid;justify-items:center;gap:2px;padding:0}
+.strip button b{inline-size:44px;block-size:44px;border-radius:50%;display:grid;place-items:center;background:var(--panel);box-shadow:inset 0 0 0 2px #b9ad9c;font-weight:500}
+.strip button.on b{background:var(--ink);color:#fff;box-shadow:none}
+.strip button small{font-size:12px;color:var(--muted)}
+.strip em{position:absolute;inset-block-end:100%;margin-block-end:4px;white-space:nowrap;font-style:normal;font-size:11px;background:var(--accent);color:#fff;border-radius:999px;padding:2px 8px}
+.lh{margin-block:18px 12px;font-size:18px}
+.route{position:relative;padding-inline-start:46px}
+.route::before{content:"";position:absolute;inset-inline-start:16px;inset-block:10px 24px;width:3px;background:#cfc4b5;border-radius:3px}
+.st{position:relative;margin-block-end:14px}
+.st .dot{position:absolute;inset-inline-start:-46px;inset-block-start:12px;inline-size:35px;block-size:35px;border-radius:50%;background:var(--bg);box-shadow:inset 0 0 0 2px #b9ad9c;display:grid;place-items:center;font-size:14px;font-weight:500;color:var(--muted)}
+.st.full .dot{background:var(--ink);color:#fff;box-shadow:none}
+.st.cur .dot{background:var(--accent);color:#fff;box-shadow:0 0 0 5px #f6cfa6;inset-block-start:38px}
+.herebadge{display:inline-block;font-size:12px;background:var(--accent);color:#fff;border-radius:999px;padding:2px 10px;margin-block-end:6px}
+.stc{padding:0;overflow:hidden}
+.stc.soft{padding:14px 16px;background:transparent;box-shadow:none;border:1.5px dashed var(--line)}
+.st-h{display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;text-align:start;padding:14px 16px}
+.rows{border-block-start:1px solid #e7dfd3}
+/* folders */
+.fold .col,.fold .fhome{display:none}
+.fold.view-levels .c-levels,.fold.view-chaps .c-chaps,.fold.view-nodes .c-nodes{display:block}
+.fold.view-levels .fhome{display:block;margin-block-end:16px}
+.colh{margin-block:6px 12px}
+.lvcard{display:grid;gap:6px;width:100%;text-align:start;border:1px solid rgba(255,255,255,.85);background:var(--panel);border-radius:22px;padding:16px;margin-block-end:12px;box-shadow:0 16px 30px -20px rgba(96,72,40,.4)}
+.lvcard.exam{background:transparent;box-shadow:none;border:1.5px dashed var(--line)}
+.kh{margin-block:16px 8px}
+.chrow{display:flex;align-items:center;gap:12px;width:100%;text-align:start;background:var(--panel);border-radius:16px;padding:12px 14px;margin-block-end:8px;border:1px solid rgba(255,255,255,.85)}
+.chrow .cname{font-size:16px}
+.crumb{display:block;margin-block-end:4px}
+.big2{font-size:22px}
+@container app (min-width:820px){
+  .fold{display:grid;grid-template-columns:250px 1fr 1.25fr;gap:22px;align-items:start}
+  .fold .col,.fold .fhome{display:block!important}
+  .fold .fhome{grid-column:1/-1;max-width:520px;margin:0}
+  .fold .crumb{display:none}
+  .lvcard.on,.chrow.on{box-shadow:inset 0 0 0 2.5px var(--ink)}
+}
+/* checklist */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-block:16px 10px}
+.tile{display:grid;gap:5px;text-align:start;border:1px solid rgba(255,255,255,.85);background:var(--panel);border-radius:20px;padding:14px;box-shadow:0 16px 30px -20px rgba(96,72,40,.4);align-content:start}
+.tile .sw{inline-size:26px;block-size:8px;border-radius:9px;background:var(--tint)}
+.tname{font-size:17px;font-weight:500}
+.tdesc{font-size:13px;color:var(--muted);line-height:1.3;min-height:2.6em}
+.tile.on{background:var(--ink);color:#fff;border-color:transparent}
+.tile.on .tdesc{color:#cfc7bb}.tile.on .bar{background:#4a443d}.tile.on .bar i{background:#fff}
+@container app (min-width:820px){.tiles{grid-template-columns:repeat(4,1fr)}}
+.hd{display:flex;gap:8px;align-items:center;font-size:14px;margin-block:10px 4px;color:#5e554b}
+.clh{display:flex;align-items:center;gap:12px;width:100%;border:0;background:transparent;text-align:start;padding:14px 2px;border-block-start:1px solid var(--line);margin-block-start:10px}
+.cch{font-size:14px;font-weight:500;color:#5e554b;margin-block:14px 8px}
+
+/* ---------- node page ---------- */
+.back{border:0;background:transparent;padding:6px 0;color:var(--muted)}
+.ph{margin-block:6px 16px}
+.ph .meta{display:flex;flex-wrap:wrap;gap:6px;margin-block-start:10px;align-items:center}
+.rule{font-size:18px;line-height:1.55}
+.dia{direction:ltr;background:var(--hi);border-radius:16px;padding:10px;overflow:auto}
+.dia svg{display:block;width:100%;min-width:300px;height:auto}
+.ex{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-block-end:1px solid #e7dfd3}
+.ex:last-child{border:0}
+.play{flex:none;inline-size:38px;block-size:38px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:13px}
+.ex .de{font-size:17px;display:block}
+.ex small{color:var(--muted);font-size:14px}
+.mis{border-radius:16px;background:var(--hi);padding:12px;margin-block-end:10px}
+.mis .w{color:var(--bad);text-decoration:line-through;text-decoration-thickness:1px;display:block}
+.mis .r{color:var(--ok);display:block;font-weight:500}
+.mis small{color:var(--muted)}
+.cta{position:sticky;inset-block-end:76px;display:flex;gap:10px;margin-block-start:16px;z-index:3}
+.cta .btn{flex:1;box-shadow:0 12px 24px -10px rgba(96,72,40,.6)}
+.tabs{margin-block:0 14px}
+.B-page .tabpane{display:none}
+.B-page .tabpane.on{display:block}
+@container app (min-width:820px){
+  .B-page .tabs{display:none}
+  .B-page .panes{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  .B-page .tabpane{display:block;margin:0!important}
+}
+.book{max-width:680px}
+.book h1{font-size:40px;font-weight:300}
+.book section{padding-block:18px;border-block-start:1px solid var(--line)}
+.book h2{display:flex;gap:10px;align-items:baseline}
+.book h2 span{color:var(--accent);font-weight:300;font-size:22px}
+.book .mis{background:transparent;border-inline-start:3px solid var(--accent);border-radius:0;padding:2px 14px}
+.toc{display:none}
+@container app (min-width:820px){
+  .C-page{display:grid;grid-template-columns:1fr 240px;gap:40px;max-width:980px}
+  .toc{display:block;position:sticky;inset-block-start:16px;align-self:start}
+  .toc a{display:block;padding:7px 0;color:var(--ink);text-decoration:none;border-block-end:1px solid var(--line)}
+  .C-page .cta{display:none}
+}
+
+/* ---------- test ---------- */
+.dots{display:flex;gap:6px;flex:1}
+.dots i{flex:1;height:6px;border-radius:9px;background:#dcd2c5}
+.dots i.on{background:var(--ink)}
+.dots i.cur{background:var(--accent)}
+.prompt{font-size:15px;color:#5e554b;margin-block-end:12px}
+.sent{font-size:22px;line-height:1.5;margin-block-end:16px}
+.opt{display:block;width:100%;text-align:start;border:0;background:var(--hi);border-radius:16px;padding:14px 16px;margin-block-end:10px;font-size:17px;box-shadow:inset 0 0 0 1.5px var(--line)}
+.opt.on{box-shadow:inset 0 0 0 2.5px var(--ink)}
+.gap{border:0;border-block-end:2.5px solid var(--ink);background:transparent;inline-size:7.5em;font-size:22px;padding:0 4px;text-align:center;outline:none}
+.gap:focus{border-color:var(--accent)}
+.uml{display:flex;gap:8px;margin-block:4px 6px;direction:ltr}
+.uml button{inline-size:44px;block-size:44px;border-radius:12px;border:0;background:var(--hi);box-shadow:inset 0 0 0 1.5px var(--line);font-size:18px}
+.line{min-height:56px;border-block-end:2px dashed var(--line);display:flex;flex-wrap:wrap;gap:8px;padding-block-end:10px;margin-block-end:14px;direction:ltr;align-items:center}
+.bank{display:flex;flex-wrap:wrap;gap:8px;direction:ltr}
+.word{border:0;border-radius:12px;padding:9px 14px;background:var(--hi);box-shadow:0 3px 0 #d5cabb,inset 0 0 0 1px var(--line);font-size:17px}
+.word.used{opacity:.25}
+.T-A{display:flex;flex-direction:column;min-height:100%}
+.T-A .qcard{flex:1}
+.rail{display:flex;gap:8px;margin-block-end:14px}
+.rail button{inline-size:40px;block-size:40px;border-radius:50%;border:0;background:#e2dacf;font-weight:500}
+.rail button.cur{background:var(--ink);color:#fff}
+.rail button.ans{box-shadow:inset 0 0 0 2px var(--ink)}
+@container app (min-width:820px){
+  .T-B{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:start}
+  .T-B .rail{flex-direction:column}
+  .T-B .rail button{inline-size:100%;border-radius:14px;text-align:start;padding-inline:14px}
+}
+.sheetq{padding-block:18px;border-block-end:1px solid var(--line)}
+.sheetq>.row{align-items:baseline}
+.sheetq .qn{font-weight:300;font-size:28px;color:var(--accent);inline-size:34px;flex:none}
+.res{text-align:center;padding:28px 16px}
+.res .big{font-size:84px}
+.wrong{text-align:start;background:var(--hi);border-radius:16px;padding:12px;margin-block-start:14px}
+
+#stage.phone .cta,#stage.phone .sheet{inset-block-end:14px}
+#stage.phone .wrap{padding-block-end:40px}
+#stage.phone #app{scrollbar-width:none}
+/* ---------- prototype bar (not part of the design) ---------- */
+#pb{position:fixed;inset-inline:0;bottom:10px;display:flex;justify-content:center;z-index:99;pointer-events:none;direction:ltr;font-family:system-ui,sans-serif}
+#pb>div{pointer-events:auto;background:#111;color:#fff;border-radius:16px;padding:6px 8px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(0,0,0,.45);font-size:13px;max-width:96vw}
+#pb button{border:0;background:#2b2b2b;color:#fff;border-radius:9px;padding:6px 10px;font-size:13px}
+#pb button.on{background:#f08a2b;color:#111;font-weight:600}
+#pb .v{min-width:150px;text-align:center;font-weight:600}
+#pb .g{display:flex;gap:4px;align-items:center}
+</style>
+</head>
+<body>
+<div id="stage"><div id="app"></div></div>
+<div id="pb"><div></div></div>
+<script>
+const GRAMMAR=[{"n": 1, "t": "Präsens, regular conjugation", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 2, "t": "sein and haben in Präsens", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 3, "t": "Verbs with stem-vowel change", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 4, "t": "Stem-ending specials", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 5, "t": "Trennbare Verben in Präsens", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 6, "t": "Untrennbare Verben (be-, ver-, er-, ent-)", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 7, "t": "Imperativ, Sie-form", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 8, "t": "Imperativ, du- and ihr-form", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 9, "t": "mögen and möchten as verbs", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 10, "t": "es gibt + Akkusativ", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 11, "t": "Verb + Infinitiv without zu (gehen, bleiben)", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 12, "t": "Präsens with future meaning", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 13, "t": "Präteritum of sein and haben", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 14, "t": "Perfekt with haben, regular Partizip II", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 15, "t": "Perfekt with sein", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 16, "t": "Irregular Partizip II", "l": "A1", "s": "Verbs and tenses", "r": false}, {"n": 17, "t": "Perfekt of separable, inseparable and -ieren verbs", "l": "A2", "s": "Verbs and tenses", "r": false}, {"n": 18, "t": "Präteritum of modal verbs", "l": "A2", "s": "Verbs and tenses", "r": false}, {"n": 19, "t": "Präteritum of very frequent verbs", "l": "A2", "s": "Verbs and tenses", "r": false}, {"n": 20, "t": "Perfekt vs Präteritum in use", "l": "A2", "s": "Verbs and tenses", "r": false}, {"n": 21, "t": "werden as a full verb", "l": "A2", "s": "Verbs and tenses", "r": false}, {"n": 22, "t": "lassen + Infinitiv", "l": "A2", "s": "Verbs and tenses", "r": false}, {"n": 23, "t": "Präteritum of all verbs, with principal parts", "l": "B1", "s": "Verbs and tenses", "r": false}, {"n": 24, "t": "Plusquamperfekt", "l": "B1", "s": "Verbs and tenses", "r": false}, {"n": 25, "t": "Futur I", "l": "B1", "s": "Verbs and tenses", "r": false}, {"n": 26, "t": "können + Satzklammer", "l": "A1", "s": "Modal verbs", "r": false}, {"n": 27, "t": "wollen", "l": "A1", "s": "Modal verbs", "r": false}, {"n": 28, "t": "müssen", "l": "A1", "s": "Modal verbs", "r": false}, {"n": 29, "t": "dürfen / nicht dürfen", "l": "A1", "s": "Modal verbs", "r": false}, {"n": 30, "t": "sollen", "l": "A1", "s": "Modal verbs", "r": false}, {"n": 31, "t": "müssen vs sollen; nicht müssen vs nicht dürfen", "l": "A1", "s": "Modal verbs", "r": false}, {"n": 32, "t": "nicht / nur brauchen + zu", "l": "B1", "s": "Modal verbs", "r": false}, {"n": 33, "t": "Modal verbs for assumption or hearsay", "l": "B1", "s": "Modal verbs", "r": true}, {"n": 34, "t": "möchte as a fixed polite form", "l": "A1", "s": "Konjunktiv II", "r": false}, {"n": 35, "t": "würde gern + Infinitiv", "l": "A1", "s": "Konjunktiv II", "r": false}, {"n": 36, "t": "hätte gern", "l": "A2", "s": "Konjunktiv II", "r": false}, {"n": 37, "t": "könnte for polite requests and suggestions", "l": "A2", "s": "Konjunktiv II", "r": false}, {"n": 38, "t": "sollte for advice", "l": "A2", "s": "Konjunktiv II", "r": false}, {"n": 39, "t": "wäre, hätte, würde, könnte as a paradigm", "l": "A2", "s": "Konjunktiv II", "r": false}, {"n": 40, "t": "Konjunktiv II of modal verbs", "l": "B1", "s": "Konjunktiv II", "r": false}, {"n": 41, "t": "Unreal conditions with wenn", "l": "B1", "s": "Konjunktiv II", "r": false}, {"n": 42, "t": "Unreal wishes", "l": "B1", "s": "Konjunktiv II", "r": false}, {"n": 43, "t": "Konjunktiv II in the past", "l": "B1", "s": "Konjunktiv II", "r": false}, {"n": 44, "t": "als ob + Konjunktiv II", "l": "B1", "s": "Konjunktiv II", "r": false}, {"n": 45, "t": "Reported speech with dass + Indikativ", "l": "B1", "s": "Konjunktiv II", "r": false}, {"n": 46, "t": "sein + Partizip II as vocabulary", "l": "A1", "s": "Passive", "r": false}, {"n": 47, "t": "Passiv Präsens", "l": "A2", "s": "Passive", "r": false}, {"n": 48, "t": "Passiv Präteritum", "l": "B1", "s": "Passive", "r": false}, {"n": 49, "t": "Passiv Perfekt", "l": "B1", "s": "Passive", "r": false}, {"n": 211, "t": "werden: three functions compared (review)", "l": "B1", "s": "Passive", "r": false}, {"n": 50, "t": "Passive with modal verbs", "l": "B1", "s": "Passive", "r": false}, {"n": 51, "t": "Passive substitutes", "l": "B1", "s": "Passive", "r": true}, {"n": 52, "t": "Infinitive as an instruction", "l": "A1", "s": "Infinitive constructions", "r": true}, {"n": 53, "t": "Infinitiv mit zu", "l": "B1", "s": "Infinitive constructions", "r": false}, {"n": 54, "t": "zu with separable verbs", "l": "B1", "s": "Infinitive constructions", "r": false}, {"n": 208, "t": "Infinitive without zu: sehen, hören; overview", "l": "B1", "s": "Infinitive constructions", "r": false}, {"n": 55, "t": "um … zu", "l": "B1", "s": "Infinitive constructions", "r": false}, {"n": 56, "t": "(an)statt … zu, ohne … zu", "l": "B1", "s": "Infinitive constructions", "r": false}, {"n": 57, "t": "ohne dass, (an)statt dass", "l": "B1", "s": "Infinitive constructions", "r": false}, {"n": 58, "t": "Nominalised infinitive", "l": "B1", "s": "Infinitive constructions", "r": false}, {"n": 59, "t": "Genus and definite article", "l": "A1", "s": "Nouns, cases, declension", "r": false}, {"n": 205, "t": "Gender rules of thumb", "l": "A1", "s": "Nouns, cases, declension", "r": false}, {"n": 60, "t": "Plural formation", "l": "A1", "s": "Nouns, cases, declension", "r": false}, {"n": 61, "t": "Nominativ", "l": "A1", "s": "Nouns, cases, declension", "r": false}, {"n": 62, "t": "Akkusativ", "l": "A1", "s": "Nouns, cases, declension", "r": false}, {"n": 63, "t": "Dativ after prepositions and in chunks", "l": "A1", "s": "Nouns, cases, declension", "r": false}, {"n": 64, "t": "Verbs with Dativ", "l": "A1", "s": "Nouns, cases, declension", "r": false}, {"n": 65, "t": "Genitiv -s on names", "l": "A1", "s": "Nouns, cases, declension", "r": false}, {"n": 66, "t": "Dativ as indirect object, all nouns, plural -n", "l": "A2", "s": "Nouns, cases, declension", "r": false}, {"n": 67, "t": "Verbs with Dativ + Akkusativ", "l": "A2", "s": "Nouns, cases, declension", "r": false}, {"n": 68, "t": "Order of objects and pronouns", "l": "A2", "s": "Nouns, cases, declension", "r": false}, {"n": 209, "t": "Time before place in the sentence", "l": "A2", "s": "Nouns, cases, declension", "r": false}, {"n": 69, "t": "von + Dativ instead of Genitiv", "l": "A2", "s": "Nouns, cases, declension", "r": false}, {"n": 70, "t": "Time expressions in the Akkusativ", "l": "A2", "s": "Nouns, cases, declension", "r": false}, {"n": 71, "t": "Genitiv with articles", "l": "B1", "s": "Nouns, cases, declension", "r": false}, {"n": 72, "t": "n-Deklination", "l": "B1", "s": "Nouns, cases, declension", "r": false}, {"n": 73, "t": "Adjectives and participles as nouns", "l": "B1", "s": "Nouns, cases, declension", "r": false}, {"n": 206, "t": "Adjectives as neuter nouns", "l": "B1", "s": "Nouns, cases, declension", "r": false}, {"n": 74, "t": "Indefinite article", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 75, "t": "Nullartikel", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 76, "t": "Negativartikel kein", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 77, "t": "Possessivartikel, Nominativ and Akkusativ", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 78, "t": "Demonstrativartikel dieser", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 79, "t": "Demonstrativpronomen der, das, die", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 80, "t": "Frageartikel welch-", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 81, "t": "Personalpronomen, Nominativ", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 82, "t": "Personalpronomen, Akkusativ", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 83, "t": "Personalpronomen, Dativ", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 84, "t": "man", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 85, "t": "etwas, nichts, alles, mehr", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 86, "t": "Question pronouns wer, was, wen, wem", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 87, "t": "W-question words", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 88, "t": "Reciprocal sich / uns", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 89, "t": "Impersonal es", "l": "A1", "s": "Articles and pronouns", "r": false}, {"n": 90, "t": "Possessivartikel in the Dativ; euer", "l": "A2", "s": "Articles and pronouns", "r": false}, {"n": 91, "t": "Was für ein …?", "l": "A2", "s": "Articles and pronouns", "r": false}, {"n": 92, "t": "alle, jeder", "l": "A2", "s": "Articles and pronouns", "r": false}, {"n": 93, "t": "jemand, niemand", "l": "A2", "s": "Articles and pronouns", "r": false}, {"n": 94, "t": "einer, keiner, welche as pronouns", "l": "A2", "s": "Articles and pronouns", "r": false}, {"n": 95, "t": "Possessivpronomen", "l": "A2", "s": "Articles and pronouns", "r": false}, {"n": 96, "t": "Reflexive verbs and pronouns, Akkusativ", "l": "A2", "s": "Articles and pronouns", "r": false}, {"n": 204, "t": "Verbs with fixed prepositions", "l": "A2", "s": "Articles and pronouns", "r": false}, {"n": 97, "t": "da(r)- and wo(r)- adverbs", "l": "A2", "s": "Articles and pronouns", "r": false}, {"n": 98, "t": "einige, manche, wenige, ein paar", "l": "B1", "s": "Articles and pronouns", "r": false}, {"n": 99, "t": "derselbe, dieselbe, dasselbe", "l": "B1", "s": "Articles and pronouns", "r": false}, {"n": 100, "t": "irgend-", "l": "B1", "s": "Articles and pronouns", "r": false}, {"n": 101, "t": "Reflexive pronoun in the Dativ", "l": "B1", "s": "Articles and pronouns", "r": false}, {"n": 102, "t": "Predicative adjective", "l": "A1", "s": "Adjectives", "r": false}, {"n": 103, "t": "Adjective used adverbially", "l": "A1", "s": "Adjectives", "r": false}, {"n": 104, "t": "sehr / zu + adjective", "l": "A1", "s": "Adjectives", "r": false}, {"n": 105, "t": "gern – lieber – am liebsten; gut – besser; viel – mehr", "l": "A1", "s": "Adjectives", "r": false}, {"n": 106, "t": "Ordinal numbers", "l": "A1", "s": "Adjectives", "r": false}, {"n": 107, "t": "Adjective endings after definite article", "l": "A2", "s": "Adjectives", "r": false}, {"n": 108, "t": "Adjective endings after indefinite, kein, possessive", "l": "A2", "s": "Adjectives", "r": false}, {"n": 109, "t": "Adjective endings without article", "l": "A2", "s": "Adjectives", "r": false}, {"n": 110, "t": "Komparativ + als", "l": "A2", "s": "Adjectives", "r": false}, {"n": 111, "t": "Superlativ", "l": "A2", "s": "Adjectives", "r": false}, {"n": 112, "t": "Comparisons with (genau)so … wie", "l": "A2", "s": "Adjectives", "r": false}, {"n": 113, "t": "Adjectives with fixed prepositions", "l": "A2", "s": "Adjectives", "r": false}, {"n": 114, "t": "Degree words", "l": "A2", "s": "Adjectives", "r": false}, {"n": 115, "t": "Declined comparative and superlative", "l": "B1", "s": "Adjectives", "r": false}, {"n": 116, "t": "Adjective endings in the Genitiv", "l": "B1", "s": "Adjectives", "r": false}, {"n": 117, "t": "Partizip II as adjective", "l": "B1", "s": "Adjectives", "r": false}, {"n": 118, "t": "Partizip I as adjective", "l": "B1", "s": "Adjectives", "r": true}, {"n": 119, "t": "Temporal: am, um, im, von … bis, ab", "l": "A1", "s": "Prepositions", "r": false}, {"n": 120, "t": "Temporal: vor, nach, in, für, seit, bis", "l": "A1", "s": "Prepositions", "r": false}, {"n": 121, "t": "Local, Wo?: in, an, auf, bei + Dativ", "l": "A1", "s": "Prepositions", "r": false}, {"n": 122, "t": "Local, Wohin?: nach, zu, in + Akkusativ", "l": "A1", "s": "Prepositions", "r": false}, {"n": 123, "t": "Local, Woher?: aus; von", "l": "A1", "s": "Prepositions", "r": false}, {"n": 124, "t": "Contractions", "l": "A1", "s": "Prepositions", "r": false}, {"n": 125, "t": "Modal: mit, ohne, für, aus (material), als (job)", "l": "A1", "s": "Prepositions", "r": false}, {"n": 126, "t": "Dativ set and Akkusativ set", "l": "A1", "s": "Prepositions", "r": false}, {"n": 127, "t": "Place adverbs", "l": "A1", "s": "Prepositions", "r": false}, {"n": 128, "t": "Two-way prepositions, Wo? + Dativ", "l": "A1", "s": "Prepositions", "r": false}, {"n": 129, "t": "Two-way prepositions, Wohin? + Akkusativ, and the contrast", "l": "A2", "s": "Prepositions", "r": false}, {"n": 130, "t": "Position and direction verb pairs", "l": "A2", "s": "Prepositions", "r": false}, {"n": 131, "t": "Temporal: über, von … an, zwischen, zu", "l": "A2", "s": "Prepositions", "r": false}, {"n": 132, "t": "Route prepositions", "l": "A2", "s": "Prepositions", "r": false}, {"n": 133, "t": "Direction adverbs and hin-/her-", "l": "A2", "s": "Prepositions", "r": false}, {"n": 134, "t": "während + Genitiv/Dativ", "l": "B1", "s": "Prepositions", "r": false}, {"n": 135, "t": "wegen + Genitiv/Dativ", "l": "B1", "s": "Prepositions", "r": false}, {"n": 136, "t": "trotz + Genitiv", "l": "B1", "s": "Prepositions", "r": false}, {"n": 137, "t": "innerhalb, außerhalb + Genitiv", "l": "B1", "s": "Prepositions", "r": false}, {"n": 212, "t": "Temporal prepositions: contrast pairs and temporal bei", "l": "B1", "s": "Prepositions", "r": false}, {"n": 138, "t": "außer + Dativ", "l": "B1", "s": "Prepositions", "r": false}, {"n": 139, "t": "Statement, verb second", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 140, "t": "Inversion", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 141, "t": "W-question", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 142, "t": "Yes/no question", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 143, "t": "ja – nein – doch", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 144, "t": "Satzklammer", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 145, "t": "Verb complements", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 146, "t": "Negation with nicht", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 147, "t": "Negation with kein", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 148, "t": "kein … mehr, nicht mehr, nichts, nie", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 149, "t": "und, oder, aber, denn", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 150, "t": "dann, zuerst, danach, später", "l": "A1", "s": "Word order, sentence types, negation", "r": false}, {"n": 151, "t": "deshalb, sonst", "l": "A2", "s": "Word order, sentence types, negation", "r": false}, {"n": 207, "t": "schon / noch and their negative answers", "l": "A2", "s": "Word order, sentence types, negation", "r": false}, {"n": 152, "t": "trotzdem", "l": "B1", "s": "Word order, sentence types, negation", "r": false}, {"n": 153, "t": "darum, deswegen, daher, nämlich, also", "l": "B1", "s": "Word order, sentence types, negation", "r": false}, {"n": 154, "t": "nicht …, sondern …", "l": "B1", "s": "Word order, sentence types, negation", "r": false}, {"n": 155, "t": "Text connectors", "l": "B1", "s": "Word order, sentence types, negation", "r": false}, {"n": 156, "t": "Position of nicht in detail", "l": "B1", "s": "Word order, sentence types, negation", "r": false}, {"n": 157, "t": "Subordinate clause word order", "l": "A2", "s": "Subordinate clauses and connectors", "r": false}, {"n": 158, "t": "weil", "l": "A2", "s": "Subordinate clauses and connectors", "r": false}, {"n": 159, "t": "dass", "l": "A2", "s": "Subordinate clauses and connectors", "r": false}, {"n": 160, "t": "wenn", "l": "A2", "s": "Subordinate clauses and connectors", "r": false}, {"n": 161, "t": "damit", "l": "A2", "s": "Subordinate clauses and connectors", "r": false}, {"n": 162, "t": "Indirect question with question word", "l": "A2", "s": "Subordinate clauses and connectors", "r": false}, {"n": 163, "t": "Indirect question with ob", "l": "A2", "s": "Subordinate clauses and connectors", "r": false}, {"n": 164, "t": "als for a single past event, vs wenn", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 165, "t": "obwohl", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 166, "t": "da", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 167, "t": "bevor", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 168, "t": "nachdem", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 169, "t": "während as conjunction", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 170, "t": "seit / seitdem", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 171, "t": "bis as conjunction", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 172, "t": "falls", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 173, "t": "so … dass / sodass", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 174, "t": "indem", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 175, "t": "Verb + preposition + clause", "l": "B1", "s": "Subordinate clauses and connectors", "r": false}, {"n": 176, "t": "sobald, solange", "l": "B1", "s": "Subordinate clauses and connectors", "r": true}, {"n": 177, "t": "Relative clause, Nominativ", "l": "A2", "s": "Relative clauses", "r": false}, {"n": 178, "t": "Relative clause, Akkusativ", "l": "A2", "s": "Relative clauses", "r": false}, {"n": 179, "t": "Embedded relative clause", "l": "A2", "s": "Relative clauses", "r": false}, {"n": 180, "t": "Relative clause, Dativ", "l": "B1", "s": "Relative clauses", "r": false}, {"n": 181, "t": "Relative clause with preposition", "l": "B1", "s": "Relative clauses", "r": false}, {"n": 182, "t": "Relative clause with wo and was", "l": "B1", "s": "Relative clauses", "r": false}, {"n": 183, "t": "Relative pronoun in the Genitiv", "l": "B1", "s": "Relative clauses", "r": true}, {"n": 184, "t": "entweder … oder", "l": "B1", "s": "Two-part connectors", "r": false}, {"n": 185, "t": "nicht nur … sondern auch", "l": "B1", "s": "Two-part connectors", "r": false}, {"n": 186, "t": "sowohl … als auch", "l": "B1", "s": "Two-part connectors", "r": false}, {"n": 187, "t": "weder … noch", "l": "B1", "s": "Two-part connectors", "r": false}, {"n": 188, "t": "zwar … aber", "l": "B1", "s": "Two-part connectors", "r": false}, {"n": 189, "t": "je … desto / umso", "l": "B1", "s": "Two-part connectors", "r": false}, {"n": 190, "t": "Cardinal numbers to one million; prices, quantities", "l": "A1", "s": "Numbers and time expressions", "r": false}, {"n": 191, "t": "Clock time, informal and official", "l": "A1", "s": "Numbers and time expressions", "r": false}, {"n": 192, "t": "Dates, days, months, seasons, times of day", "l": "A1", "s": "Numbers and time expressions", "r": false}, {"n": 193, "t": "Time and frequency adverbs", "l": "A1", "s": "Numbers and time expressions", "r": false}, {"n": 194, "t": "Adverbs in -s", "l": "A2", "s": "Numbers and time expressions", "r": false}, {"n": 195, "t": "Fractions", "l": "B1", "s": "Numbers and time expressions", "r": false}, {"n": 196, "t": "Noun compounds", "l": "A1", "s": "Word formation", "r": false}, {"n": 197, "t": "-in, -er, -ung", "l": "A1", "s": "Word formation", "r": true}, {"n": 198, "t": "Adjectives with un-, -los, -bar; colour compounds", "l": "A1", "s": "Word formation", "r": true}, {"n": 210, "t": "State expressions with sein/haben + particle", "l": "A1", "s": "Word formation", "r": false}, {"n": 199, "t": "Verb prefixes with meaning", "l": "A2", "s": "Word formation", "r": false}, {"n": 200, "t": "Diminutive -chen", "l": "A2", "s": "Word formation", "r": false}, {"n": 201, "t": "-heit/-keit; -ig, -lich, -wert", "l": "B1", "s": "Word formation", "r": false}, {"n": 202, "t": "doch, mal, denn in requests and questions", "l": "A2", "s": "Particles", "r": false}, {"n": 203, "t": "Modal particles ja, eigentlich, eben, halt, wohl, bloß", "l": "B1", "s": "Particles", "r": false}];
+const THEMES='Personalien,Familie,Freunde,Zahlen,Uhrzeit und Datum,Wohnen,Möbel,Haushalt,Essen,Trinken,Lebensmittel,Restaurant,Kleidung,Farben,Körper,Gesundheit,Arzt und Apotheke,Arbeit,Berufe,Schule,Ausbildung,Freizeit,Sport,Musik und Kultur,Reisen,Verkehr,Stadt,Wetter,Natur,Tiere,Medien,Post und Bank,Ämter,Feste'.split(',');
+const PHRASES=[['E-Mail beginnen','A2'],['E-Mail beenden','A2'],['Um etwas bitten','A2'],['Sich entschuldigen','A2'],['Einladen und absagen','B1'],['Meinung sagen','B1'],['Zustimmen','B1'],['Widersprechen','B1'],['Etwas vorschlagen','B1'],['Vor- und Nachteile nennen','B1'],['Eine Präsentation gliedern','B1'],['Rückfragen stellen','B1']];
+const EXAM=['Lesen Teil 1','Lesen Teil 2','Lesen Teil 3','Lesen Teil 4','Lesen Teil 5','Hören Teil 1','Hören Teil 2','Hören Teil 3','Hören Teil 4','Schreiben Teil 1','Schreiben Teil 2','Schreiben Teil 3','Sprechen Teil 1','Sprechen Teil 2','Sprechen Teil 3'];
+const LEVELS=['A1','A2','B1'], KINDS=['grammar','vocab','phrase','exam'], KL={grammar:'G',vocab:'W',phrase:'R',exam:'P'};
+const VARIANTS={A:'Route',B:'Folders',C:'Checklist'};
+
+const GSEC=[...new Set(GRAMMAR.map(x=>x.s))];
+const GNAME=[['Verbs and tenses','فعل‌ها و زمان‌ها','Verben und Zeiten'],['Modal verbs','فعل‌های مُدال','Modalverben'],['Konjunktiv II','وجه التزامی (Konjunktiv II)','Konjunktiv II'],['Passive','مجهول','Passiv'],['Infinitive constructions','ساخت‌های مصدری','Infinitivsätze'],['Nouns and cases','اسم‌ها و حالت‌ها','Nomen und Kasus'],['Articles and pronouns','حرف تعریف و ضمیر','Artikel und Pronomen'],['Adjectives','صفت‌ها','Adjektive'],['Prepositions','حروف اضافه','Präpositionen'],['Word order and negation','ترتیب کلمات و نفی','Wortstellung und Negation'],['Subordinate clauses','جمله‌های پیرو','Nebensätze'],['Relative clauses','جمله‌های موصولی','Relativsätze'],['Two-part connectors','حروف ربط دوتایی','Zweiteilige Konnektoren'],['Numbers and time','عددها و زمان','Zahlen und Zeitangaben'],['Word formation','واژه‌سازی','Wortbildung'],['Particles','ادات (Partikeln)','Partikeln']];
+const VG=[[{en:'People and daily life',fa:'آدم‌ها و زندگی روزمره',de:'Menschen und Alltag'},['Personalien','Familie','Freunde','Zahlen','Uhrzeit und Datum','Farben','Feste']],
+ [{en:'Home and food',fa:'خانه و خوراک',de:'Wohnen und Essen'},['Wohnen','Möbel','Haushalt','Essen','Trinken','Lebensmittel','Restaurant']],
+ [{en:'Body and health',fa:'بدن و سلامت',de:'Körper und Gesundheit'},['Kleidung','Körper','Gesundheit','Arzt und Apotheke']],
+ [{en:'Work and learning',fa:'کار و آموزش',de:'Arbeit und Lernen'},['Arbeit','Berufe','Schule','Ausbildung','Medien','Post und Bank','Ämter']],
+ [{en:'Free time and travel',fa:'اوقات فراغت و سفر',de:'Freizeit und Reisen'},['Freizeit','Sport','Musik und Kultur','Reisen','Verkehr','Stadt','Wetter','Natur','Tiere']]];
+const PNAME={A2:{en:'Emails and requests',fa:'ایمیل و درخواست',de:'E-Mails und Bitten'},B1:{en:'Opinions and discussion',fa:'نظر و گفت‌وگو',de:'Meinung und Diskussion'}};
+const XG=[[{en:'Reading (Lesen)',fa:'خواندن (Lesen)',de:'Lesen'},[0,1,2,3,4]],[{en:'Listening (Hören)',fa:'شنیدن (Hören)',de:'Hören'},[5,6,7,8]],[{en:'Writing (Schreiben)',fa:'نوشتن (Schreiben)',de:'Schreiben'},[9,10,11]],[{en:'Speaking (Sprechen)',fa:'صحبت کردن (Sprechen)',de:'Sprechen'},[12,13,14]]];
+const CHAPS=[],NODES=[];
+for(const L of LEVELS){
+  const R={A1:'I',A2:'II',B1:'III'}[L];
+  const gch=GSEC.map((sec,si)=>({id:'c'+L+'g'+si,level:L,kind:'grammar',name:{en:GNAME[si][0],fa:GNAME[si][1],de:GNAME[si][2]},nodes:GRAMMAR.filter(x=>x.l===L&&x.s===sec).map(x=>({id:'g'+x.n,kind:'grammar',level:L,title:x.t,num:x.n,rec:x.r}))})).filter(c=>c.nodes.length);
+  const vch=VG.map((g,vi)=>({id:'c'+L+'v'+vi,level:L,kind:'vocab',name:g[0],nodes:g[1].map((th,i)=>({id:'v'+L+vi+'_'+i,kind:'vocab',level:L,title:th+' '+R}))}));
+  const seq=[];let gi=0,vi=0;
+  while(gi<gch.length||vi<vch.length){ if(gi<gch.length)seq.push(gch[gi++]); if(gi<gch.length)seq.push(gch[gi++]); if(vi<vch.length)seq.push(vch[vi++]); }
+  const ph=PHRASES.filter(x=>x[1]===L);
+  if(ph.length)seq.push({id:'c'+L+'p',level:L,kind:'phrase',name:PNAME[L],nodes:ph.map((x,i)=>({id:'p'+L+i,kind:'phrase',level:L,title:x[0]}))});
+  if(L==='B1')XG.forEach((g,xi)=>seq.push({id:'cx'+xi,level:L,kind:'exam',name:g[0],nodes:g[1].map(i=>({id:'x'+i,kind:'exam',level:L,title:EXAM[i]}))}));
+  let li=0;for(const c of seq){CHAPS.push(c);for(const n of c.nodes){n.chap=c;n.li=li++;NODES.push(n)}}
+}
+NODES.forEach((n,i)=>{n.i=i; n.state=i<38?'done':i<39?'prog':n.level==='A1'?'todo':(n.level==='A2'&&n.li<30)?'todo':'soon';});
+const byId=id=>NODES.find(n=>n.id===id);
+byId('g158').state='todo'; byId('x0').state='todo';
+const NEXT=NODES.find(n=>n.state==='prog'||n.state==='todo');
+const count=(L,k)=>{const a=NODES.filter(n=>(!L||n.level===L)&&(!k||n.kind===k));return{done:a.filter(n=>n.state==='done').length,total:a.length}};
+
+const T={
+ en:{dir:'ltr',tree:'Tree',next:'Next recommended',start:'Open',take:'Take the test',done:'Done',prog:'In progress',todo:'Not started',soon:'Coming soon',grammar:'Grammar',vocab:'Vocabulary',phrase:'Phrases',exam:'Exam parts',all:'All',stage:'Stage',builds:'Builds on',rule:'Rule',dia:'Diagram',ex:'Examples',mis:'Common mistakes',test:'Test',q:'Question',of:'of',check:'Check answers',nextq:'Next',back:'Back',search:'Search all nodes',passed:'Passed',nodeDone:'This node is now done.',wrong:'Wrong answer',retry:'Try again',toTree:'Back to the tree',pass:'Pass mark 90%',left:'left',recog:'recognise only',sample:'Prototype: every node opens this sample page.',fin:'Finish',contents:'On this page',correct:'Correct'},
+ fa:{dir:'rtl',tree:'درخت',next:'پیشنهاد بعدی',start:'باز کردن',take:'شروع آزمون',done:'تمام‌شده',prog:'در حال یادگیری',todo:'شروع‌نشده',soon:'به‌زودی',grammar:'دستور زبان',vocab:'واژگان',phrase:'عبارت‌ها',exam:'بخش‌های آزمون',all:'همه',stage:'مرحله',builds:'پیش‌نیاز',rule:'قاعده',dia:'نمودار',ex:'مثال‌ها',mis:'اشتباه‌های رایج',test:'آزمون',q:'سؤال',of:'از',check:'بررسی پاسخ‌ها',nextq:'بعدی',back:'بازگشت',search:'جست‌وجو در همهٔ مبحث‌ها',passed:'قبول شدی',nodeDone:'این مبحث تمام شد.',wrong:'پاسخ نادرست',retry:'دوباره',toTree:'بازگشت به درخت',pass:'حد قبولی ۹۰٪',left:'مانده',recog:'فقط فهمیدن',sample:'نمونهٔ آزمایشی: همهٔ مبحث‌ها همین صفحه را باز می‌کنند.',fin:'پایان',contents:'در این صفحه',correct:'درست'},
+ de:{dir:'ltr',tree:'Baum',next:'Als Nächstes',start:'Öffnen',take:'Test machen',done:'Fertig',prog:'In Arbeit',todo:'Offen',soon:'Bald',grammar:'Grammatik',vocab:'Wortschatz',phrase:'Redemittel',exam:'Prüfungsteile',all:'Alle',stage:'Etappe',builds:'Baut auf',rule:'Regel',dia:'Bild',ex:'Beispiele',mis:'Häufige Fehler',test:'Test',q:'Frage',of:'von',check:'Antworten prüfen',nextq:'Weiter',back:'Zurück',search:'Alle Themen durchsuchen',passed:'Bestanden',nodeDone:'Dieses Thema ist jetzt fertig.',wrong:'Falsche Antwort',retry:'Noch einmal',toTree:'Zurück zum Baum',pass:'Bestanden ab 90 %',left:'übrig',recog:'nur verstehen',sample:'Prototyp: Jedes Thema öffnet diese Beispielseite.',fin:'Fertig',contents:'Auf dieser Seite',correct:'Richtig'}
+};
+Object.assign(T.en,{h1:'Your way to Goethe B1',sub:'341 small topics. Learn one, pass its test with 90%, and it is ticked off.',how1:'Pick a topic',how2:'Read it, or go straight to the test',how3:'Score 90% and it is ticked off',gotit:'Got it',yourNext:'Your next topic',here:'You are here',startHere:'Start here',cont:'Continue',startW:'Start',examEnd:'Goethe B1 exam',examShort:'Exam',ready:'You are ready when you score 90% in every part of two official mock exams.',checkpoint:'Checkpoint: a mixed test of level X (optional)',lvA1:'Beginner',lvA2:'Elementary',lvB1:'Intermediate',chapters:'Chapters',allLevels:'All levels',hideDone:'Hide finished topics',nextLevel:'Go on to level',d_grammar:'Rules, forms and word order',d_vocab:'The 2,400 words of the exam, by theme',d_phrase:'Ready sentences for writing and speaking',d_exam:'Practice for each part of the exam'});
+Object.assign(T.fa,{h1:'مسیر شما تا Goethe B1',sub:'۳۴۱ مبحث کوچک. یکی را یاد بگیر، آزمونش را با ۹۰٪ قبول شو، و تیک می‌خورد.',how1:'یک مبحث انتخاب کن',how2:'آن را بخوان، یا مستقیم آزمون بده',how3:'با ۹۰٪ تیک می‌خورد',gotit:'فهمیدم',yourNext:'مبحث بعدی شما',here:'شما اینجایید',startHere:'از اینجا شروع کن',cont:'ادامه',startW:'شروع',examEnd:'آزمون Goethe B1',examShort:'آزمون',ready:'وقتی در دو آزمون آزمایشی رسمی در همهٔ بخش‌ها ۹۰٪ بگیری، آماده‌ای.',checkpoint:'آزمون مرور سطح X (اختیاری)',lvA1:'مبتدی',lvA2:'پایه',lvB1:'متوسط',chapters:'فصل‌ها',allLevels:'همهٔ سطح‌ها',hideDone:'پنهان کردن مبحث‌های تمام‌شده',nextLevel:'ادامه به سطح',d_grammar:'قاعده‌ها، صرف و ترتیب کلمات',d_vocab:'۲۴۰۰ واژهٔ آزمون، بر اساس موضوع',d_phrase:'جمله‌های آماده برای نوشتن و صحبت کردن',d_exam:'تمرین برای هر بخش آزمون'});
+Object.assign(T.de,{h1:'Dein Weg zum Goethe B1',sub:'341 kleine Themen. Lerne ein Thema, bestehe den Test mit 90 %, dann ist es abgehakt.',how1:'Thema wählen',how2:'Lesen oder gleich den Test machen',how3:'90 % erreichen, dann ist es abgehakt',gotit:'Verstanden',yourNext:'Dein nächstes Thema',here:'Du bist hier',startHere:'Hier starten',cont:'Weiter',startW:'Start',examEnd:'Goethe-B1-Prüfung',examShort:'Prüfung',ready:'Du bist bereit, wenn du in zwei offiziellen Modellprüfungen in jedem Teil 90 % erreichst.',checkpoint:'Zwischentest für Stufe X (freiwillig)',lvA1:'Anfänger',lvA2:'Grundstufe',lvB1:'Mittelstufe',chapters:'Kapitel',allLevels:'Alle Stufen',hideDone:'Fertige Themen ausblenden',nextLevel:'Weiter zu Stufe',d_grammar:'Regeln, Formen und Wortstellung',d_vocab:'Die 2400 Wörter der Prüfung, nach Themen',d_phrase:'Fertige Sätze zum Schreiben und Sprechen',d_exam:'Training für jeden Teil der Prüfung'});
+const PAGE={
+ title:'weil', level:'A2', pre:'Subordinate clause word order',
+ rule:{en:'<span class="de">weil</span> gives a reason. In the <span class="de">weil</span>-clause the conjugated verb goes to the end. A comma separates the two clauses.',
+       fa:'<span class="de">weil</span> دلیل را بیان می‌کند. در جمله‌ای که با <span class="de">weil</span> می‌آید، فعلِ صرف‌شده به آخر جمله می‌رود. بین دو جمله ویرگول می‌گذاریم.',
+       de:'Mit „weil“ nennt man einen Grund. Im weil-Satz steht das Verb am Ende. Zwischen den Sätzen steht ein Komma.'},
+ ex:[['Ich lerne Deutsch, weil ich in Deutschland arbeite.','I am learning German because I work in Germany.','من آلمانی یاد می‌گیرم چون در آلمان کار می‌کنم.'],
+     ['Sie bleibt zu Hause, weil sie krank ist.','She is staying at home because she is ill.','او در خانه می‌ماند چون مریض است.'],
+     ['Weil es regnet, nehmen wir den Bus.','Because it is raining, we take the bus.','چون باران می‌بارد، با اتوبوس می‌رویم.']],
+ mis:[['…, weil ich arbeite in Deutschland.','…, weil ich in Deutschland arbeite.',{en:'The verb goes to the end.',fa:'فعل به آخر جمله می‌رود.',de:'Das Verb steht am Ende.'}],
+      ['Weil es regnet, wir nehmen den Bus.','Weil es regnet, nehmen wir den Bus.',{en:'After the weil-clause the main verb comes first.',fa:'بعد از جملهٔ weil، فعلِ جملهٔ اصلی بلافاصله می‌آید.',de:'Nach dem weil-Satz kommt sofort das Verb.'}]]
+};
+const QS=[
+ {type:'choice',p:{en:'Which sentence is correct?',fa:'کدام جمله درست است؟',de:'Welcher Satz ist richtig?'},opts:['Er kommt nicht, weil er hat keine Zeit.','Er kommt nicht, weil er keine Zeit hat.','Er kommt nicht, weil hat er keine Zeit.']},
+ {type:'typed',p:{en:'Fill the gap with the right form of möchten.',fa:'جای خالی را با شکل درست möchten پر کن.',de:'Ergänze die richtige Form von möchten.'},a:'Sie lernt viel, weil sie die Prüfung bestehen ',b:'.'},
+ {type:'order',p:{en:'Put the words in order.',fa:'کلمه‌ها را به ترتیب درست بچین.',de:'Bring die Wörter in die richtige Reihenfolge.'},lead:'Ich kann nicht kommen, …',words:['arbeiten','weil','muss','ich','morgen']}
+];
+
+const Q=new URLSearchParams(location.search);
+const S={variant:Q.get('variant')||'A',screen:Q.get('screen')||'tree',lang:Q.get('lang')||'en',frame:Q.get('frame')||(innerWidth<700?'full':'phone'),
+  level:NEXT.level,kind:'all',sel:NEXT.id,open:{},how:true,fLevel:NEXT.level,fChap:NEXT.chap.id,fView:'levels',ck:NEXT.kind,hideDone:false,copen:{},tab:'rule',find:'',t:{i:0,choice:null,typed:'',order:[],result:false}};
+const t=k=>T[S.lang][k];
+const num=n=>S.lang==='fa'?Number(n).toLocaleString('fa-IR'):String(n);
+const de=s=>`<span class="de" lang="de">${s}</span>`;
+const tok=(n,extra='')=>`<span class="tok k-${n.kind} s-${n.state} ${n===NEXT?'next':''} ${extra}"><b>${n.state==='done'?'✓':KL[n.kind]}</b></span>`;
+const stateTxt=n=>t(n.state);
+const topbar=()=>`<div class="top"><div class="logo"><i></i>deutsch-tree</div><div class="langs">${[['en','EN'],['fa','فا'],['de','DE']].map(([k,l])=>`<button data-a="lang" data-v="${k}" class="${S.lang===k?'on':''}">${l}</button>`).join('')}</div></div>`;
+const levelSeg=()=>`<div class="seg">${LEVELS.map(L=>`<button data-a="level" data-v="${L}" class="${S.level===L?'on':''}">${L} <span class="muted">${num(count(L).done)}/${num(count(L).total)}</span></button>`).join('')}</div>`;
+const kindChips=()=>`<div class="chips"><button class="chip ${S.kind==='all'?'on':''}" data-a="kind" data-v="all">${t('all')}</button>${KINDS.map(k=>`<button class="chip ${S.kind===k?'on':''}" data-a="kind" data-v="${k}"><span class="tok k-${k} s-todo" style="--sz:14px"></span>${t(k)}</button>`).join('')}</div>`;
+const hero=()=>`<section class="panel hero"><div class="cap">${t('next')}</div><div class="row" style="margin-block:10px 14px">${tok(NEXT)}<div class="grow"><div class="title">${de(NEXT.title)}</div><span class="tag">${NEXT.level}</span> <span class="tag">${t(NEXT.kind)}</span></div></div><div class="row"><button class="btn acc grow" data-a="go" data-v="page">${t('start')}</button><button class="btn ghost" data-a="go" data-v="test">${t('take')}</button></div></section>`;
+const totals=()=>{const c=count();return `<section class="panel"><div class="row spread"><div><div class="big">${num(c.done)}</div><div class="cap">${t('done')}</div></div><div style="text-align:end"><div class="big">${num(c.total-c.done)}</div><div class="cap">${t('left')}</div></div></div><div class="bar" style="margin-block-start:14px"><i style="width:${c.done/c.total*100}%"></i></div></section>`};
+const legend=()=>`<div class="legend">${KINDS.map(k=>`<span><span class="tok k-${k} s-todo"></span>${t(k)}</span>`).join('')}<span><span class="tok k-vocab s-done" style="font-size:9px"><b>✓</b></span>${t('done')}</span><span><span class="tok k-vocab s-prog"></span>${t('prog')}</span><span><span class="tok k-vocab s-soon"></span>${t('soon')}</span></div>`;
+
+/* ---------- trees (second round: words over symbols, named chapters, one obvious next step) ---------- */
+const pct=(a,b)=>b?a/b*100:0;
+const ofDone=(a,b)=>({en:`${a} of ${b} done`,fa:`${num(a)} از ${num(b)} تمام‌شده`,de:`${a} von ${b} fertig`})[S.lang];
+const kp=k=>`<span class="kp kk-${k}">${t(k)}</span>`;
+const mk=n=>`<span class="mk m-${n.state} ${n===NEXT?'m-next':''}">${n.state==='done'?'✓':''}</span>`;
+const act=n=>n.state==='done'?`<span class="muted">${t('done')}</span>`:n===NEXT?`<span class="pill acc">${n.state==='prog'?t('cont'):t('startHere')}</span>`:n.state==='prog'?`<span class="pill">${t('cont')}</span>`:n.state==='soon'?`<span class="muted">${t('soon')}</span>`:`<span class="pill ghost">${t('startW')}</span>`;
+const nrow=n=>`<button class="nr ${n.state} ${n===NEXT?'isnext':''}" data-a="node" data-v="${n.id}">${mk(n)}<span class="ttl">${de(n.title)}${n.rec?` <span class="tag">${t('recog')}</span>`:''}</span>${act(n)}</button>`;
+const cstat=c=>{const d=c.nodes.filter(n=>n.state==='done').length;return{d,n:c.nodes.length,all:d===c.nodes.length}};
+const intro=()=>`<header class="intro"><h1>${t('h1')}</h1><p class="muted">${t('sub')}</p>${S.how?`<div class="how"><ol>${[1,2,3].map(i=>`<li><b>${num(i)}</b><span>${t('how'+i)}</span></li>`).join('')}</ol><button class="btn ghost sm" data-a="how">${t('gotit')}</button></div>`:''}</header>`;
+const cont=()=>`<section class="panel cont"><div class="cap">${t('yourNext')}</div><div class="title">${de(NEXT.title)}</div><div class="row" style="flex-wrap:wrap;gap:6px">${kp(NEXT.kind)}<span class="tag">${NEXT.level}</span><span class="muted sm">${NEXT.chap.name[S.lang]}</span></div><div class="row" style="margin-block-start:14px"><button class="btn acc grow" data-a="go" data-v="page">${t('start')}</button><button class="btn ghost" data-a="go" data-v="test">${t('take')}</button></div></section>`;
+
+function treeA(){ /* Route: one line from Start to the exam, with named stops */
+  const L=S.level,chs=CHAPS.filter(c=>c.level===L),lc=count(L),li=LEVELS.indexOf(L);
+  const strip=`<nav class="strip"><span class="end">${t('startW')}</span>${LEVELS.map(x=>{const c=count(x);return `<i></i><button data-a="level" data-v="${x}" class="${x===L?'on':''}">${x===NEXT.level?`<em>${t('here')}</em>`:''}<b>${x}</b><small>${num(c.done)}/${num(c.total)}</small></button>`}).join('')}<i></i><span class="end">⚑ ${t('examShort')}</span></nav>`;
+  const stations=chs.map((c,i)=>{const st=cstat(c),cur=c===NEXT.chap,open=c.id in S.open?S.open[c.id]:cur;
+    return `<div class="st ${st.all?'full':''} ${cur?'cur':''}"><span class="dot">${st.all?'✓':num(i+1)}</span>${cur?`<div class="herebadge">${t('here')}</div>`:''}
+    <section class="panel stc"><button class="st-h" data-a="stage" data-v="${c.id}" data-open="${open?1:0}"><span class="grow"><span class="cname">${c.name[S.lang]}</span><span class="row" style="gap:8px;margin-block-start:6px">${kp(c.kind)}<span class="muted sm">${ofDone(st.d,st.n)}</span></span></span><span class="chev">${open?'−':'+'}</span></button>${open?`<div class="rows">${c.nodes.map(nrow).join('')}</div>`:''}</section></div>`}).join('');
+  const tail=`<div class="st"><span class="dot">?</span><section class="panel stc soft"><div class="cname">${t('checkpoint').replace('X',L)}</div></section></div>`+
+    (li<2?`<div class="st"><span class="dot">${S.lang==='fa'?'←':'→'}</span><button class="btn ghost" data-a="levelTop" data-v="${LEVELS[li+1]}" style="margin-block-start:6px">${t('nextLevel')} ${LEVELS[li+1]}</button></div>`
+         :`<div class="st"><span class="dot">⚑</span><section class="panel stc soft"><div class="cname">${t('examEnd')}</div><p class="muted sm" style="margin:6px 0 0">${t('ready')}</p></section></div>`);
+  return `<div class="wrap narrow">${topbar()}${intro()}${cont()}${strip}<h2 class="lh">${L} · ${t('lv'+L)} <span class="muted" style="font-weight:400">· ${ofDone(lc.done,lc.total)}</span></h2><div class="route">${stations}${tail}</div></div>`;
+}
+function treeB(){ /* Folders: levels, then chapters, then topics */
+  const L=S.fLevel,chs=CHAPS.filter(c=>c.level===L),ch=chs.find(c=>c.id===S.fChap)||chs[0],cs=cstat(ch);
+  const bk=`<span class="flip">‹</span>`,fw=`<span class="chev flip">›</span>`;
+  const levels=`<div class="col c-levels"><div class="cap colh">${t('allLevels')}</div>${LEVELS.map(x=>{const c=count(x);return `<button class="lvcard ${x===L?'on':''}" data-a="fl" data-v="${x}"><span class="row spread"><span class="mid">${x}</span>${x===NEXT.level?`<span class="pill acc">${t('here')}</span>`:fw}</span><span class="lvname">${t('lv'+x)}</span><span class="bar"><i style="width:${pct(c.done,c.total)}%"></i></span><span class="muted sm">${ofDone(c.done,c.total)}</span></button>`}).join('')}<div class="lvcard exam"><span class="mid">⚑</span><span class="lvname">${t('examEnd')}</span><span class="muted sm">${t('ready')}</span></div></div>`;
+  const chaps=`<div class="col c-chaps"><button class="back crumb" data-a="fb" data-v="levels">${bk} ${t('allLevels')}</button><div class="colh"><span class="mid">${L}</span> <span class="lvname">${t('lv'+L)}</span> <span class="muted sm">· ${t('chapters')}</span></div>${KINDS.filter(k=>chs.some(c=>c.kind===k)).map(k=>`<div class="kh">${kp(k)}</div>`+chs.filter(c=>c.kind===k).map(c=>{const st=cstat(c);return `<button class="chrow ${c===ch?'on':''}" data-a="fc" data-v="${c.id}"><span class="mk ${st.all?'m-done':st.d?'m-prog':'m-todo'}">${st.all?'✓':''}</span><span class="grow"><span class="cname">${c.name[S.lang]}</span><span class="muted sm">${ofDone(st.d,st.n)}</span></span>${c===NEXT.chap?`<span class="pill acc">${t('here')}</span>`:''}${fw}</button>`}).join('')).join('')}</div>`;
+  const nodes=`<div class="col c-nodes"><button class="back crumb" data-a="fb" data-v="chaps">${bk} ${L} · ${t('chapters')}</button><div class="colh"><div class="cname big2">${ch.name[S.lang]}</div><div class="row" style="gap:8px;margin-block-start:6px">${kp(ch.kind)}<span class="muted sm">${ofDone(cs.d,cs.n)}</span></div></div><section class="panel rowsp">${ch.nodes.map(nrow).join('')}</section></div>`;
+  return `<div class="wrap">${topbar()}${intro()}<div class="fold view-${S.fView}"><div class="fhome">${cont()}</div>${levels}${chaps}${nodes}</div></div>`;
+}
+function treeC(){ /* Checklist: four piles, each a to-do list */
+  const k=S.ck;
+  const tiles=`<div class="tiles">${KINDS.map(x=>{const c=count(null,x);return `<button class="tile ${x===k?'on':''}" data-a="ck" data-v="${x}"><span class="sw kk-${x}"></span><span class="tname">${t(x)}</span><span class="tdesc">${t('d_'+x)}</span><span class="bar"><i style="width:${pct(c.done,c.total)}%"></i></span><span class="sm">${ofDone(c.done,c.total)}</span></button>`}).join('')}</div>`;
+  const firstL=LEVELS.find(L=>NODES.some(n=>n.level===L&&n.kind===k&&n.state!=='done'));
+  const body=LEVELS.map(L=>{const chs=CHAPS.filter(c=>c.level===L&&c.kind===k);if(!chs.length)return '';
+    const ns=chs.flatMap(c=>c.nodes),d=ns.filter(n=>n.state==='done').length,open=L in S.copen?S.copen[L]:L===firstL;
+    return `<section class="clv"><button class="clh" data-a="cl" data-v="${L}" data-open="${open?1:0}"><span class="mid">${L}</span><span class="grow"><span class="lvname">${t('lv'+L)}</span><span class="muted sm"> · ${ofDone(d,ns.length)}</span></span><span class="chev">${open?'−':'+'}</span></button>${open?chs.map(c=>{const rows=c.nodes.filter(n=>!(S.hideDone&&n.state==='done'));return rows.length?`<div class="cch">${c.name[S.lang]}</div><section class="panel rowsp">${rows.map(nrow).join('')}</section>`:''}).join(''):''}</section>`}).join('');
+  return `<div class="wrap narrow">${topbar()}${intro()}${cont()}${tiles}<label class="hd"><input type="checkbox" data-hd ${S.hideDone?'checked':''}> ${t('hideDone')}</label>${body}</div>`;
+}
+
+/* ---------- node page ---------- */
+const diagram=()=>`<div class="dia"><svg viewBox="0 0 430 150" font-family="Outfit,system-ui,sans-serif" font-size="16" text-anchor="middle">
+  <g fill="#f6f2ec" stroke="#dcd2c5" stroke-width="1.5"><rect x="8" y="26" width="46" height="38" rx="10"/><rect x="146" y="26" width="92" height="38" rx="10"/><rect x="84" y="100" width="46" height="38" rx="10"/><rect x="138" y="100" width="142" height="38" rx="10"/></g>
+  <g fill="#f08a2b"><rect x="62" y="26" width="76" height="38" rx="10"/><rect x="288" y="100" width="92" height="38" rx="10"/></g>
+  <rect x="8" y="100" width="68" height="38" rx="10" fill="#201d1a"/>
+  <g fill="#201d1a"><text x="31" y="51">Ich</text><text x="192" y="51">Deutsch</text><text x="250" y="51">,</text><text x="107" y="125">ich</text><text x="209" y="125">in Deutschland</text><text x="388" y="125">.</text></g>
+  <g fill="#fff" font-weight="500"><text x="100" y="51">lerne</text><text x="334" y="125">arbeite</text><text x="42" y="125">weil</text></g>
+  <g fill="#857b70" font-size="12"><text x="100" y="17">Position 2</text><text x="334" y="91">Ende</text></g></svg></div>`;
+const examples=()=>PAGE.ex.map(e=>`<div class="ex"><button class="play" aria-label="play">▶</button><div>${de(e[0])}${S.lang==='de'?'':`<small>${S.lang==='fa'?e[2]:e[1]}</small>`}</div></div>`).join('');
+const mistakes=()=>PAGE.mis.map(m=>`<div class="mis"><span class="w de">${m[0]}</span><span class="r de">${m[1]}</span><small>${m[2][S.lang]}</small></div>`).join('');
+const phead=()=>`<button class="back" data-a="go" data-v="tree">${S.lang==='fa'?'→':'←'} ${t('tree')}</button><div class="ph"><h1>${de(PAGE.title)}</h1><div class="meta"><span class="tag">${PAGE.level}</span><span class="tag">${t('grammar')}</span><span class="tag">${t('todo')}</span><span class="muted" style="font-size:14px">${t('builds')}: ${de(PAGE.pre)}</span></div></div>`;
+const cta=()=>`<div class="cta"><button class="btn acc" data-a="go" data-v="test">${t('take')}</button></div>`;
+const sample=()=>`<p class="note">${t('sample')}</p>`;
+function pageA(){return `<div class="wrap narrow">${topbar()}${phead()}
+  <section class="panel"><div class="cap">${t('rule')}</div><p class="rule" style="margin-block-start:8px">${PAGE.rule[S.lang]}</p></section>
+  <section class="panel"><div class="cap" style="margin-block-end:10px">${t('dia')}</div>${diagram()}</section>
+  <section class="panel"><div class="cap">${t('ex')}</div>${examples()}</section>
+  <section class="panel"><div class="cap" style="margin-block-end:10px">${t('mis')}</div>${mistakes()}</section>${cta()}${sample()}</div>`}
+function pageB(){const tabs=[['rule','rule'],['dia','dia'],['ex','ex'],['mis','mis']];
+  const pane=(k,body)=>`<section class="panel tabpane ${S.tab===k?'on':''}"><div class="cap" style="margin-block-end:10px">${t(k)}</div>${body}</section>`;
+  return `<div class="wrap B-page">${topbar()}<div class="row spread" style="align-items:flex-start;flex-wrap:wrap"><div>${phead()}</div><button class="btn acc" data-a="go" data-v="test" style="margin-block-start:34px">${t('take')}</button></div>
+  <div class="seg tabs">${tabs.map(([k,l])=>`<button data-a="tab" data-v="${k}" class="${S.tab===k?'on':''}" style="font-size:14px;padding-inline:4px">${t(l)}</button>`).join('')}</div>
+  <div class="panes">${pane('rule',`<p class="rule">${PAGE.rule[S.lang]}</p>`)}${pane('dia',diagram())}${pane('ex',examples())}${pane('mis',mistakes())}</div>${sample()}</div>`}
+function pageC(){return `<div class="wrap">${topbar()}<div class="C-page"><article class="book">${phead()}
+  <p class="rule" style="font-size:20px">${PAGE.rule[S.lang]}</p>
+  <section id="s2"><h2><span>${num(1)}</span>${t('dia')}</h2>${diagram()}</section>
+  <section id="s3"><h2><span>${num(2)}</span>${t('ex')}</h2>${examples()}</section>
+  <section id="s4"><h2><span>${num(3)}</span>${t('mis')}</h2>${mistakes()}</section>${cta()}${sample()}</article>
+  <nav class="toc"><div class="cap" style="margin-block-end:8px">${t('contents')}</div><a href="#s2">${t('dia')}</a><a href="#s3">${t('ex')}</a><a href="#s4">${t('mis')}</a><button class="btn acc wide" data-a="go" data-v="test" style="margin-block-start:16px">${t('take')}</button></nav></div></div>`}
+
+/* ---------- test ---------- */
+function qBody(i){const q=QS[i],x=S.t;
+  if(q.type==='choice')return `<p class="prompt">${q.p[S.lang]}</p>${q.opts.map((o,j)=>`<button class="opt de ${x.choice===j?'on':''}" data-a="choice" data-v="${j}">${o}</button>`).join('')}`;
+  if(q.type==='typed')return `<p class="prompt">${q.p[S.lang]}</p><p class="sent de">${q.a}<input class="gap" data-typed value="${x.typed.replace(/"/g,'&quot;')}" autocapitalize="off" autocomplete="off" spellcheck="false">${q.b}</p><div class="uml">${['ä','ö','ü','ß'].map(c=>`<button data-a="uml" data-v="${c}">${c}</button>`).join('')}</div>`;
+  return `<p class="prompt">${q.p[S.lang]}</p><p class="sent de">${q.lead}</p><div class="line">${x.order.map(j=>`<button class="word" data-a="unword" data-v="${j}">${q.words[j]}</button>`).join('')}</div><div class="bank">${q.words.map((w,j)=>`<button class="word ${x.order.includes(j)?'used':''}" data-a="word" data-v="${j}">${w}</button>`).join('')}</div>`}
+const answered=i=>i===0?S.t.choice!==null:i===1?!!S.t.typed:S.t.order.length>0;
+const thead=()=>`<div class="row" style="margin-block-end:14px"><button class="back" data-a="go" data-v="page">✕</button><div class="grow"></div><span class="tag">${de('weil')}</span><span class="tag">${t('pass')}</span></div>`;
+function result(){return `<div class="wrap narrow">${topbar()}<section class="panel res"><div class="cap">${t('passed')}</div><div class="big" style="margin-block:14px 6px">${num(9)}<span class="muted" style="font-size:34px"> / ${num(10)}</span></div><div class="mid">${S.lang==='fa'?'۹۰٪':'90%'}</div><p style="margin-block:14px">${t('nodeDone')}</p>
+  <div class="wrong"><div class="cap">${t('wrong')} · ${t('q')} ${num(7)}</div><span class="de" style="display:block;color:var(--bad);text-decoration:line-through">Weil es regnet, wir nehmen den Bus.</span><span class="de" style="display:block;color:var(--ok);font-weight:500">Weil es regnet, nehmen wir den Bus.</span><small class="muted">${PAGE.mis[1][2][S.lang]}</small></div>
+  <div class="row" style="margin-block-start:18px"><button class="btn acc grow" data-a="go" data-v="tree">${t('toTree')}</button><button class="btn ghost" data-a="retry">${t('retry')}</button></div></section></div>`}
+function testA(){const i=S.t.i,last=i===QS.length-1;return `<div class="wrap narrow T-A">${thead()}<div class="row" style="margin-block-end:18px"><div class="dots">${QS.map((_,j)=>`<i class="${j<i?'on':j===i?'cur':''}"></i>`).join('')}</div><span class="muted" style="font-size:14px">${num(i+1)} ${t('of')} ${num(QS.length)}</span></div>
+  <section class="panel qcard">${qBody(i)}</section><div class="cta"><button class="btn ${answered(i)?'acc':''}" data-a="${last?'finish':'nextq'}">${last?t('check'):t('nextq')}</button></div></div>`}
+function testB(){const i=S.t.i,last=i===QS.length-1;return `<div class="wrap">${thead()}<div class="T-B"><div class="rail">${QS.map((_,j)=>`<button data-a="jump" data-v="${j}" class="${j===i?'cur':answered(j)?'ans':''}">${num(j+1)}</button>`).join('')}</div>
+  <div><section class="panel"><div class="cap" style="margin-block-end:10px">${t('q')} ${num(i+1)} ${t('of')} ${num(QS.length)}</div>${qBody(i)}</section><div class="row" style="margin-block-start:14px;justify-content:flex-end">${last?'':`<button class="btn ghost" data-a="nextq">${t('nextq')}</button>`}<button class="btn ${QS.every((_,j)=>answered(j))?'acc':''}" data-a="finish">${t('check')}</button></div></div></div></div>`}
+function testC(){return `<div class="wrap narrow">${thead()}<h1 style="font-weight:300;font-size:36px">${t('test')}: ${de('weil')}</h1>${QS.map((_,i)=>`<div class="sheetq"><div class="row"><span class="qn">${num(i+1)}</span><div class="grow">${qBody(i)}</div></div></div>`).join('')}<div class="cta"><button class="btn acc" data-a="finish">${t('check')}</button></div></div>`}
+
+const SCREENS={tree:{A:treeA,B:treeB,C:treeC},page:{A:pageA,B:pageB,C:pageC},test:{A:testA,B:testB,C:testC}};
+const app=document.getElementById('app'),stage=document.getElementById('stage'),pb=document.querySelector('#pb>div');
+function render(keep){
+  const y=app.scrollTop;
+  stage.className=S.frame; app.dir=t('dir'); app.lang=S.lang;
+  app.innerHTML=(S.screen==='test'&&S.t.result)?result():SCREENS[S.screen][S.variant]();
+  app.scrollTop=keep?y:0;
+  pb.innerHTML=`<span class="g"><button data-a="var" data-v="-1">←</button><span class="v">${S.variant} · ${VARIANTS[S.variant]}</span><button data-a="var" data-v="1">→</button></span>
+   <span class="g">${[['tree','Tree'],['page','Node page'],['test','Test']].map(([k,l])=>`<button data-a="go" data-v="${k}" class="${S.screen===k?'on':''}">${l}</button>`).join('')}</span>
+   <span class="g">${[['phone','Phone'],['full','Full width']].map(([k,l])=>`<button data-a="frame" data-v="${k}" class="${S.frame===k?'on':''}">${l}</button>`).join('')}</span>`;
+  history.replaceState(null,'','?'+new URLSearchParams({variant:S.variant,screen:S.screen,lang:S.lang,frame:S.frame}));
+}
+const ACT={
+  how:()=>{S.how=false;return true}, levelTop:v=>{S.level=v}, fl:v=>{S.fLevel=v;S.fView='chaps';const c=CHAPS.filter(c=>c.level===v);S.fChap=(c.includes(NEXT.chap)?NEXT.chap:c[0]).id},
+  fc:v=>{S.fChap=v;S.fView='nodes'}, fb:v=>{S.fView=v}, ck:v=>{S.ck=v;return true}, cl:(v,el)=>{S.copen[v]=el.dataset.open!=='1';return true},
+  lang:v=>{S.lang=v;return true}, level:v=>{S.level=v;S.find='';return true}, kind:v=>{S.kind=v;return true}, frame:v=>{S.frame=v;return true},
+  stage:(v,el)=>{S.open[v]=el.dataset.open!=='1';return true}, node:v=>{const n=byId(v);if(n.state==='soon')return true;S.screen='page'}, sel:v=>{S.sel=v;return true},
+  go:v=>{S.screen=v;if(v==='test')S.t={i:0,choice:null,typed:'',order:[],result:false}}, tab:v=>{S.tab=v;return true},
+  var:v=>{const k=Object.keys(VARIANTS);S.variant=k[(k.indexOf(S.variant)+ +v+k.length)%k.length];return true},
+  choice:v=>{S.t.choice=+v;return true}, word:v=>{if(!S.t.order.includes(+v))S.t.order.push(+v);return true}, unword:v=>{S.t.order=S.t.order.filter(j=>j!==+v);return true},
+  uml:v=>{const inp=app.querySelector('[data-typed]');const s=inp.selectionStart??inp.value.length;inp.value=inp.value.slice(0,s)+v+inp.value.slice(inp.selectionEnd??s);S.t.typed=inp.value;inp.focus();inp.setSelectionRange(s+1,s+1);return 'none'},
+  nextq:()=>{S.t.i=Math.min(S.t.i+1,QS.length-1)}, jump:v=>{S.t.i=+v;return true}, finish:()=>{S.t.result=true}, retry:()=>{S.t={i:0,choice:null,typed:'',order:[],result:false}}
+};
+document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el)return;const r=ACT[el.dataset.a](el.dataset.v,el);if(r!=='none')render(r===true)});
+document.addEventListener('input',e=>{if(e.target.matches('[data-typed]'))S.t.typed=e.target.value;
+  if(e.target.matches('[data-find]')){S.find=e.target.value;render(true);const i=app.querySelector('[data-find]');i.focus();i.setSelectionRange(i.value.length,i.value.length)}});
+document.addEventListener('change',e=>{if(e.target.matches('[data-hd]')){S.hideDone=e.target.checked;render(true)}});
+document.addEventListener('keydown',e=>{if(e.target.matches('input,textarea,[contenteditable]'))return;if(e.key==='ArrowLeft'){ACT.var(-1);render(true)}if(e.key==='ArrowRight'){ACT.var(1);render(true)}});
+render();
+</script>
+</body>
+</html>
