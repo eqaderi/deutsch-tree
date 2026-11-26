@@ -44,7 +44,7 @@ ending, because the pipeline runs directly in Node.
 | `src/app/` | App shell: routes, tree, node page, test, backup, search page, overview page. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests of code never depend on the real content. |
-| `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows". |
+| `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows" or "the exam has 15 parts". |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
 | `tests/search/` | Search on a small invented catalogue (`catalogue.ts`): what a query finds, in which order, and which passage a result shows. |

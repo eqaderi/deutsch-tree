@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-suggesting
+kind: phrases
+level: A2
+chapter: a2-phrases-arrangements
+order: 1
+status: coming-soon
+title:
+  en: "Making a suggestion"
+  fa: "پیشنهاد دادن"
+  de: "Einen Vorschlag machen"
+purpose:
+  en: "Suggest what to do, where to meet or how to solve a problem."
+  fa: "پیشنهاد بدهید که چه کاری بکنید، کجا همدیگر را ببینید یا چطور مشکلی را حل کنید."
+  de: "Vorschlagen, was man macht, wo man sich trifft oder wie man ein Problem löst."
+examTasks: [exam-schreiben-1, exam-sprechen-1]

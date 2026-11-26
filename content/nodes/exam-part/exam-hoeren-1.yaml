@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-hoeren-1
+kind: exam-part
+level: B1
+chapter: b1-exam-hoeren
+order: 1
+status: coming-soon
+module: hoeren
+part: 1
+title:
+  en: "*Hören Teil 1*: five short messages and announcements"
+  fa: "*Hören Teil 1*: پنج پیام و اطلاعیهٔ کوتاه"
+  de: "Hören Teil 1: fünf kurze Nachrichten und Durchsagen"
