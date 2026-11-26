@@ -162,3 +162,8 @@ questions:
       en: With the polite *Sie* the ending is *-en*.
       fa: با *Sie* (شکل مؤدبانه) پایانه *-en* است.
       de: Bei *Sie* (höflich) ist die Endung *-en*.
+
+review:
+  reviewer: Claude Fable 5.2, an independent AI agent (blind pass, not a person)
+  date: 2026-11-26
+  pool: 3bfd9c22921b73c2

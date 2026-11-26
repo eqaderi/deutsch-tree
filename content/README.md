@@ -88,6 +88,24 @@ questions:
     explanation: { en: …, fa: …, de: … }   # one line: why the answer is right
 ```
 
+## Review before publishing
+
+A published node needs a `review:` record. `pnpm content:check` fails without
+one, and again when a question or its answer changes later (explanations may
+change freely). A command writes the record, never a hand:
+
+1. `pnpm review:pool <id> --out /tmp/<id>.json` writes the review sheet: the
+   pool without answers and explanations. Keep it outside the repository.
+2. Give only that file to a reviewer who has not seen the node file (for an
+   agent: a fresh subagent told to read nothing else). The reviewer fills in
+   each `answer`, and an `objection` where a question is flawed.
+3. `pnpm review:record <id> --answers /tmp/<id>.json --reviewer "<who>"` lists
+   every disagreement, or stores the record. Name the reviewer honestly: a
+   person, or "an independent AI agent".
+4. Settle each disagreement by fixing the question or the key, then repeat
+   step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
+   in step 1, then add that second file with another `--answers`.
+
 Only `multiple-choice` questions and only grammar nodes can be published so
 far. Other question types and node kinds are added to the schema as they are
 built.
