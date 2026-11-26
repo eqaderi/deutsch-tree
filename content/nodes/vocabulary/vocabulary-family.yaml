@@ -340,13 +340,12 @@ words:
     level: A1
     meaning:
       en: to love
-      fa: عاشق بودن، عشق ورزیدن
+      fa: عشق ورزیدن
     definition: eine Person oder eine Sache sehr, sehr gern haben
     example:
       de: Die Kinder lieben ihren Hund.
       en: The children love their dog.
       fa: بچه‌ها عاشق سگشان هستند.
-    alsoAccepted: [verliebt sein]
 
   - word: Leben
     class: noun
@@ -393,7 +392,7 @@ words:
     tooCloseTo: [gestorben]
 
 review:
-  reviewer: independent AI agents (three fresh Claude subagents, sheet only; 156,
-    then 21, then 2 questions)
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 162, then 1 question)
   date: 2026-11-26
-  pool: 94bf245d86487888
+  pool: ea7bd33677877f64
