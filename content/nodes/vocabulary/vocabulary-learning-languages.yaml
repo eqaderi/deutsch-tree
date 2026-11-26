@@ -1,0 +1,35 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-learning-languages
+kind: vocabulary
+level: B1
+chapter: b1-words-learning
+order: 3
+status: coming-soon
+title:
+  en: "Learning and languages"
+  fa: "یادگیری و زبان‌ها"
+  de: "Lernen und Sprachen"
+words:
+  - word: Wissen
+  - word: Fremdsprache
+  - word: Muttersprache
+  - word: Zweitsprache
+  - word: Dialekt
+  - word: Aussprache
+  - word: Alphabet
+  - word: Lexikon
+  - word: nachschlagen
+  - word: abschreiben
+  - word: aufschreiben
+  - word: vorlesen
+  - word: unterstreichen
+  - word: Fähigkeit
+  - word: Intelligenz
+  - word: Talent
+  - word: konzentrieren
+  - word: aufmerksam
+  - word: fließend
+  - word: mündlich
+  - word: unterrichten
+  - word: Lehre

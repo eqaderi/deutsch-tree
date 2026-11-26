@@ -10,6 +10,7 @@ import { poolIsLargeEnough } from './pool-is-large-enough.ts'
 import { prerequisitesExist } from './prerequisites-exist.ts'
 import { prerequisitesHaveNoCycle } from './prerequisites-have-no-cycle.ts'
 import { publishedNodeIsReviewed } from './published-node-is-reviewed.ts'
+import { vocabularyCoversTheScopeList } from './vocabulary-covers-the-scope-list.ts'
 
 export type { CheckedNode, ContentCheck, ContentProblem, ContentUnderCheck } from './check.ts'
 export { CHAPTERS_FILE } from './check.ts'
@@ -27,5 +28,6 @@ export const CHECKS: ContentCheck[] = [
   poolIsLargeEnough,
   phrasesTestNeedsATypedAnswer,
   publishedNodeIsReviewed,
+  vocabularyCoversTheScopeList,
   assistantGradedNodeHasNoPool,
 ]

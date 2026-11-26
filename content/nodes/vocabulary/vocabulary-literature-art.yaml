@@ -1,0 +1,33 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-literature-art
+kind: vocabulary
+level: B1
+chapter: b1-words-media-free-time
+order: 5
+status: coming-soon
+title:
+  en: "Books, writing and art"
+  fa: "کتاب، نوشتن و هنر"
+  de: "Bücher, Schreiben und Kunst"
+words:
+  - word: Literatur
+  - word: Roman
+  - word: Märchen
+  - word: Gedicht
+  - word: Erzählung
+  - word: Kapitel
+  - word: Stil
+  - word: stilistisch
+  - word: Fantasie
+  - word: Schrift
+  - word: Zeichnung
+  - word: Fotografie
+  - word: Galerie
+  - word: Werk
+  - word: darstellen
+  - word: Darstellung
+  - word: Schreiben
+  - word: Schriftsteller
+  - word: Maler
+  - word: Fotograf

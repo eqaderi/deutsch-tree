@@ -1,0 +1,39 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-rooms-furniture
+kind: vocabulary
+level: A2
+chapter: a2-words-home-food
+order: 1
+status: coming-soon
+title:
+  en: "Rooms and the building"
+  fa: "اتاق‌ها و ساختمان"
+  de: "Zimmer und Gebäude"
+words:
+  - word: Wohnzimmer
+  - word: Schlafzimmer
+  - word: Keller
+  - word: Garage
+  - word: Erdgeschoss
+  - word: Stockwerk
+  - word: Tür
+  - word: Fenster
+  - word: Heizung
+  - word: WC
+  - word: Stuhl
+  - word: Lampe
+  - word: Fernseher
+  - word: Gerät
+  - word: Apparat
+  - word: Umzug
+  - word: einziehen
+  - word: renovieren
+  - word: bauen
+  - word: nebenan
+  - word: drinnen
+  - word: hängen
+  - word: aufmachen
+  - word: zumachen
+  - word: abschließen
+  - word: offen

@@ -1,0 +1,37 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-furniture
+kind: vocabulary
+level: A1
+chapter: a1-words-food-home
+order: 4
+status: coming-soon
+title:
+  en: "Furniture and things at home"
+  fa: "مبلمان و وسایل خانه"
+  de: "Möbel und Dinge im Haus"
+words:
+  - word: Möbel
+  - word: Tisch
+  - word: Bett
+  - word: Schrank
+  - word: Sofa
+  - word: Herd
+  - word: Kühlschrank
+  - word: Dusche
+  - word: Licht
+  - word: Bild
+  - word: Maschine
+  - word: anmachen
+  - word: ausmachen
+  - word: an sein
+  - word: aus sein
+  - word: auf sein
+  - word: zu sein
+  - word: öffnen
+  - word: schließen
+  - word: geöffnet
+  - word: geschlossen
+  - word: kaputt
+  - word: reparieren
+  - word: Reparatur

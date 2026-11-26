@@ -1,0 +1,35 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-when-how-often
+kind: vocabulary
+level: A2
+chapter: a2-words-small-words
+order: 1
+status: coming-soon
+title:
+  en: "When and how often"
+  fa: "کِی و چند وقت یک‌بار"
+  de: "Wann und wie oft"
+words:
+  - word: montags
+  - word: dienstags
+  - word: mittwochs
+  - word: donnerstags
+  - word: freitags
+  - word: samstags
+  - word: sonntags
+  - word: morgens
+  - word: vormittags
+  - word: mittags
+  - word: nachmittags
+  - word: abends
+  - word: nachts
+  - word: übermorgen
+  - word: vorgestern
+  - word: früh
+  - word: zweimal
+  - word: dreimal
+  - word: viermal
+  - word: manchmal
+  - word: meistens
+  - word: Mal

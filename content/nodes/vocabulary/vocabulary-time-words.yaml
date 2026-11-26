@@ -1,0 +1,39 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-time-words
+kind: vocabulary
+level: A1
+chapter: a1-words-numbers-time
+order: 5
+status: coming-soon
+title:
+  en: "Now, soon, always: words for time"
+  fa: "حالا، زود، همیشه: واژه‌های زمان"
+  de: "Jetzt, bald, immer: Wörter für die Zeit"
+words:
+  - word: jetzt
+  - word: bald
+  - word: sofort
+  - word: gleich
+  - word: später
+  - word: früher
+  - word: spät
+  - word: immer
+  - word: oft
+  - word: nie
+  - word: einmal
+  - word: schon
+  - word: noch
+  - word: lange
+  - word: zurzeit
+  - word: gerade
+  - word: dann
+  - word: pünktlich
+  - word: dauern
+  - word: anfangen
+  - word: beginnen
+  - word: aufhören
+  - word: enden
+  - word: Schluss
+  - word: letzte
+  - word: nächste

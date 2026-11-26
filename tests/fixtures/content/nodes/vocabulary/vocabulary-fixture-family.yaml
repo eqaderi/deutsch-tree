@@ -1,0 +1,15 @@
+# Fixture node for tests: a vocabulary node, listed in the tree with its words assigned, not written yet.
+id: vocabulary-fixture-family
+kind: vocabulary
+level: A1
+chapter: fixture-words
+order: 1
+status: coming-soon
+title:
+  en: Fixture family words
+  fa: واژه‌های آزمایشی خانواده
+  de: Test-Wörter zur Familie
+words:
+  - word: Mutter
+  - word: Vater
+  - word: kochen

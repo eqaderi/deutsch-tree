@@ -1,0 +1,40 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-looks-clothes
+kind: vocabulary
+level: B1
+chapter: b1-words-people-feelings
+order: 4
+status: coming-soon
+title:
+  en: "Looks and what you wear"
+  fa: "ظاهر و پوشش"
+  de: "Aussehen und Kleidung"
+words:
+  - word: hübsch
+  - word: schlank
+  - word: mager
+  - word: blass
+  - word: elegant
+  - word: chic
+  - word: Figur
+  - word: Frisur
+  - word: Bart
+  - word: Schmuck
+  - word: schminken
+  - word: rasieren
+  - word: äußerlich
+  - word: wunderschön
+  - word: kräftig
+  - word: Uniform
+  - word: Kostüm
+  - word: Hut
+  - word: Socke
+  - word: Strumpf
+  - word: Bikini
+  - word: Knopf
+  - word: Tuch
+  - word: anhaben
+  - word: nähen
+  - word: Nadel
+  - word: Garderobe

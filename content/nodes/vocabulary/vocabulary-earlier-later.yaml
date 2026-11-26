@@ -1,0 +1,37 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-earlier-later
+kind: vocabulary
+level: B1
+chapter: b1-words-time-amounts
+order: 1
+status: coming-soon
+title:
+  en: "Earlier, meanwhile, later"
+  fa: "پیش‌تر، در این میان، بعدتر"
+  de: "Früher, inzwischen, später"
+words:
+  - word: Monat
+  - word: Augenblick
+  - word: Zeitpunkt
+  - word: Dauer
+  - word: Beginn
+  - word: anfangs
+  - word: bisher
+  - word: bereits
+  - word: danach
+  - word: nachher
+  - word: hinterher
+  - word: vorhin
+  - word: neulich
+  - word: kürzlich
+  - word: inzwischen
+  - word: mittlerweile
+  - word: seitdem
+  - word: längst
+  - word: nun
+  - word: eben
+  - word: diesmal
+  - word: zunächst
+  - word: jemals
+  - word: irgendwann

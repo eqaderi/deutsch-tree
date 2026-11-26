@@ -1,0 +1,39 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-great-or-terrible
+kind: vocabulary
+level: A2
+chapter: a2-words-people
+order: 4
+status: coming-soon
+title:
+  en: "Great or terrible? Saying how something is"
+  fa: "عالی یا افتضاح؟ گفتنِ اینکه چیزی چطور است"
+  de: "Toll oder schrecklich? Sagen, wie etwas ist"
+words:
+  - word: furchtbar
+  - word: schrecklich
+  - word: schlimm
+  - word: toll
+  - word: super
+  - word: fantastisch
+  - word: langweilig
+  - word: interessant
+  - word: spannend
+  - word: aufregend
+  - word: stressig
+  - word: echt
+  - word: wirklich
+  - word: total
+  - word: ganz
+  - word: besonders
+  - word: typisch
+  - word: modern
+  - word: praktisch
+  - word: nützlich
+  - word: notwendig
+  - word: schwierig
+  - word: gefährlich
+  - word: wahr
+  - word: schädlich
+  - word: bequem

@@ -1,0 +1,38 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-sizes-amounts
+kind: vocabulary
+level: A1
+chapter: a1-words-food-home
+order: 6
+status: coming-soon
+title:
+  en: "Sizes, weights and amounts"
+  fa: "اندازه، وزن و مقدار"
+  de: "Größen, Gewichte und Mengen"
+words:
+  - word: Gramm
+  - word: Kilogramm
+  - word: Pfund
+  - word: Liter
+  - word: Meter
+  - word: Zentimeter
+  - word: Kilometer
+  - word: Quadratmeter
+  - word: Gewicht
+  - word: Größe
+  - word: groß
+  - word: klein
+  - word: lang
+  - word: kurz
+  - word: breit
+  - word: hoch
+  - word: schwer
+  - word: leicht
+  - word: viel
+  - word: wenig
+  - word: mehr
+  - word: bisschen
+  - word: Teil
+  - word: meiste
+  - word: wie viel

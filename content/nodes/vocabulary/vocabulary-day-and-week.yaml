@@ -1,0 +1,38 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-day-and-week
+kind: vocabulary
+level: A1
+chapter: a1-words-numbers-time
+order: 3
+status: coming-soon
+title:
+  en: "The day and the week"
+  fa: "روز و هفته"
+  de: "Der Tag und die Woche"
+words:
+  - word: Tag
+  - word: Morgen
+  - word: Vormittag
+  - word: Mittag
+  - word: Nachmittag
+  - word: Abend
+  - word: Nacht
+  - word: Woche
+  - word: Wochentag
+  - word: Wochenende
+  - word: Montag
+  - word: Dienstag
+  - word: Mittwoch
+  - word: Donnerstag
+  - word: Freitag
+  - word: Samstag
+  - word: Sonntag
+  - word: heute
+  - word: morgen
+  - word: gestern
+  - word: Uhr
+  - word: Stunde
+  - word: Minute
+  - word: Sekunde
+  - word: Moment

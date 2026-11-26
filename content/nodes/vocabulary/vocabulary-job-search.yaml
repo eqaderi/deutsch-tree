@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-job-search
+kind: vocabulary
+level: B1
+chapter: b1-words-work-money
+order: 1
+status: coming-soon
+title:
+  en: "Looking for a job"
+  fa: "جست‌وجوی کار"
+  de: "Arbeitssuche"
+words:
+  - word: Arbeitsstelle
+  - word: Lehrstelle
+  - word: Lehrling
+  - word: Azubi
+  - word: Praktikant
+  - word: Aushilfe
+  - word: Lebenslauf
+  - word: Vorstellungsgespräch
+  - word: Unterlagen
+  - word: Voraussetzung
+  - word: Karriere
+  - word: Fortbildung
+  - word: Weiterbildung
+  - word: ausgebildet
+  - word: beruflich
+  - word: berufstätig
+  - word: Arbeitslosigkeit
+  - word: Arbeitserlaubnis
+  - word: einstellen
+  - word: anstellen
+  - word: entlassen
+  - word: Entlassung
+  - word: Kündigung
+  - word: jobben
+  - word: Beratung
+  - word: Vermittlung

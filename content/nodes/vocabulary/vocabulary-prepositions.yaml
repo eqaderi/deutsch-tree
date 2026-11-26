@@ -1,0 +1,34 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-prepositions
+kind: vocabulary
+level: A1
+chapter: a1-words-small-words
+order: 5
+status: coming-soon
+title:
+  en: "Prepositions"
+  fa: "حرف‌های اضافه"
+  de: "Präpositionen"
+words:
+  - word: an
+  - word: auf
+  - word: aus
+  - word: bei
+  - word: bis
+  - word: durch
+  - word: für
+  - word: gegen
+  - word: in
+  - word: mit
+  - word: nach
+  - word: ohne
+  - word: seit
+  - word: über
+  - word: um
+  - word: unter
+  - word: von
+  - word: vor
+  - word: zu
+  - word: zwischen
+  - word: ab

@@ -1,0 +1,33 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-food-drink-more
+kind: vocabulary
+level: A2
+chapter: a2-words-home-food
+order: 4
+status: coming-soon
+title:
+  en: "More food and drink"
+  fa: "خوراکی‌ها و نوشیدنی‌های بیشتر"
+  de: "Mehr Essen und Trinken"
+words:
+  - word: Käse
+  - word: Wurst
+  - word: Rind
+  - word: Schwein
+  - word: Nudel
+  - word: Suppe
+  - word: Pizza
+  - word: Hamburger
+  - word: Bohne
+  - word: Orange
+  - word: Zitrone
+  - word: Eis
+  - word: Schokolade
+  - word: Torte
+  - word: Süßigkeiten
+  - word: Zucker
+  - word: Mineralwasser
+  - word: Bäcker
+  - word: hart
+  - word: weich

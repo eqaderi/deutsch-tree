@@ -1,0 +1,31 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-nature-animals
+kind: vocabulary
+level: A2
+chapter: a2-words-health-town
+order: 5
+status: coming-soon
+title:
+  en: "Nature, animals and plants"
+  fa: "طبیعت، حیوانات و گیاهان"
+  de: "Natur, Tiere und Pflanzen"
+words:
+  - word: Natur
+  - word: Landschaft
+  - word: Berg
+  - word: Fluss
+  - word: Insel
+  - word: Strand
+  - word: Wald
+  - word: Pflanze
+  - word: Rose
+  - word: Blatt
+  - word: Tier
+  - word: Katze
+  - word: Pferd
+  - word: Vogel
+  - word: Zoo
+  - word: Spaziergang
+  - word: spazieren gehen
+  - word: reiten

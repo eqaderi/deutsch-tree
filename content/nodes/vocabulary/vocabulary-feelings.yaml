@@ -1,0 +1,38 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-feelings
+kind: vocabulary
+level: A2
+chapter: a2-words-people
+order: 3
+status: coming-soon
+title:
+  en: "Feelings"
+  fa: "احساس‌ها"
+  de: "Gefühle"
+words:
+  - word: Angst
+  - word: Lust
+  - word: Spaß
+  - word: Stress
+  - word: Ruhe
+  - word: Traum
+  - word: Wunsch
+  - word: froh
+  - word: traurig
+  - word: ärgern
+  - word: fühlen
+  - word: hoffen
+  - word: hoffentlich
+  - word: weinen
+  - word: träumen
+  - word: wünschen
+  - word: schimpfen
+  - word: beschweren
+  - word: bedanken
+  - word: leidtun
+  - word: schade
+  - word: egal
+  - word: Lüge
+  - word: lügen
+  - word: stören

@@ -1,0 +1,37 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-pronouns-articles
+kind: vocabulary
+level: A1
+chapter: a1-words-small-words
+order: 3
+status: coming-soon
+title:
+  en: "I, you, my, this: pronouns and articles"
+  fa: "من، تو، مالِ من، این: ضمیرها و حرف‌های تعریف"
+  de: "Ich, du, mein, dieser: Pronomen und Artikel"
+words:
+  - word: ich
+  - word: er
+  - word: es
+  - word: sie
+  - word: Sie
+  - word: wir
+  - word: ihr
+  - word: man
+  - word: dich
+  - word: dir
+  - word: sich
+  - word: mein
+  - word: dein
+  - word: unser
+  - word: euer
+  - word: der
+  - word: ein
+  - word: kein
+  - word: dieser
+  - word: jeder
+  - word: alle
+  - word: andere
+  - word: beide
+  - word: nichts

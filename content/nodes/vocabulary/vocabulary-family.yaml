@@ -1,0 +1,39 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-family
+kind: vocabulary
+level: A1
+chapter: a1-words-people
+order: 3
+status: coming-soon
+title:
+  en: "Family"
+  fa: "خانواده"
+  de: "Familie"
+words:
+  - word: Familie
+  - word: Eltern
+  - word: Mutter
+  - word: Vater
+  - word: Kind
+  - word: Sohn
+  - word: Tochter
+  - word: Bruder
+  - word: Schwester
+  - word: Geschwister
+  - word: Großeltern
+  - word: Großmutter
+  - word: Großvater
+  - word: Oma
+  - word: Opa
+  - word: Ehefrau
+  - word: Ehemann
+  - word: Baby
+  - word: Verwandte
+  - word: Hochzeit
+  - word: heiraten
+  - word: Partner
+  - word: lieben
+  - word: Leben
+  - word: gestorben
+  - word: tot

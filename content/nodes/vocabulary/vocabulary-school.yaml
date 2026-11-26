@@ -1,0 +1,39 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-school
+kind: vocabulary
+level: A1
+chapter: a1-words-daily-life
+order: 1
+status: coming-soon
+title:
+  en: "School and the German course"
+  fa: "مدرسه و کلاس آلمانی"
+  de: "Schule und Deutschkurs"
+words:
+  - word: Schule
+  - word: Schüler
+  - word: Lehrer
+  - word: Student
+  - word: studieren
+  - word: Studium
+  - word: Kurs
+  - word: Unterricht
+  - word: Klasse
+  - word: lernen
+  - word: lesen
+  - word: schreiben
+  - word: Buch
+  - word: Bleistift
+  - word: Kugelschreiber
+  - word: Aufgabe
+  - word: Hausaufgabe
+  - word: Test
+  - word: Prüfung
+  - word: Fehler
+  - word: Lösung
+  - word: Ergebnis
+  - word: richtig
+  - word: falsch
+  - word: Pause
+  - word: Bogen

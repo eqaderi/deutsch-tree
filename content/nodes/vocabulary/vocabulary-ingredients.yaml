@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-ingredients
+kind: vocabulary
+level: B1
+chapter: b1-words-home-food
+order: 6
+status: coming-soon
+title:
+  en: "Ingredients"
+  fa: "مواد غذایی"
+  de: "Zutaten"
+words:
+  - word: Aprikose
+  - word: Pflaume
+  - word: Frucht
+  - word: Karotte
+  - word: Möhre
+  - word: Zwiebel
+  - word: Pilz
+  - word: Hackfleisch
+  - word: Braten
+  - word: Schnitzel
+  - word: Steak
+  - word: Mehl
+  - word: Honig
+  - word: Marmelade
+  - word: Margarine
+  - word: Sahne
+  - word: Schlagsahne
+  - word: Essig
+  - word: Pfeffer
+  - word: Gewürz
+  - word: Soße
+  - word: Ketchup
+  - word: Kloß
+  - word: Knödel
+  - word: Zutaten
+  - word: Fett

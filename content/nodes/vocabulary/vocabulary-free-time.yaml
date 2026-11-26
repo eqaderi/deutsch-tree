@@ -1,0 +1,40 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-free-time
+kind: vocabulary
+level: A1
+chapter: a1-words-daily-life
+order: 6
+status: coming-soon
+title:
+  en: "Free time and celebrations"
+  fa: "اوقات فراغت و جشن‌ها"
+  de: "Freizeit und Feste"
+words:
+  - word: Freizeit
+  - word: Hobby
+  - word: Sport
+  - word: Fußball
+  - word: spielen
+  - word: schwimmen
+  - word: tanzen
+  - word: wandern
+  - word: Verein
+  - word: Film
+  - word: Lied
+  - word: fernsehen
+  - word: Foto
+  - word: CD
+  - word: Party
+  - word: feiern
+  - word: Geschenk
+  - word: Geburtstag
+  - word: Glückwunsch
+  - word: gratulieren
+  - word: Glück
+  - word: gewinnen
+  - word: lachen
+  - word: lustig
+  - word: mitkommen
+  - word: mitmachen
+  - word: mitbringen
