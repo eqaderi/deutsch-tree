@@ -118,3 +118,57 @@ export function applyAttempt(progress: Progress, nodeId: string, result: Pick<At
     nodes: { ...progress.nodes, [nodeId]: { done: before.done || result.passed, attempts: before.attempts + 1 } },
   }
 }
+
+/** The most questions one checkpoint asks. */
+export const CHECKPOINT_SIZE = 30
+
+/** The most questions one node gives to a checkpoint. */
+export const CHECKPOINT_MOST_PER_NODE = 5
+
+/** What a published node brings to the checkpoint of its level: its pool. */
+export interface CheckpointSource {
+  nodeId: string
+  questions: readonly Question[]
+}
+
+/** One question of a checkpoint, with the node it came from. */
+export interface CheckpointQuestion {
+  nodeId: string
+  question: Question
+}
+
+export interface Checkpoint {
+  /** In the order they are asked. */
+  questions: CheckpointQuestion[]
+  /** The nodes that gave a question, in the order the nodes were given: the curriculum order. */
+  nodeIds: string[]
+}
+
+/**
+ * The checkpoint of a level, drawn across the pools of its published nodes.
+ *
+ * Questions are dealt in rounds. A round gives one question to every node
+ * that has one left; when fewer questions remain to be dealt than that, the
+ * nodes that get one are drawn at random. Dealing stops at `CHECKPOINT_SIZE`
+ * questions or after `CHECKPOINT_MOST_PER_NODE` rounds. So:
+ *   - up to 6 nodes: 5 questions of each (1 node: 5 questions, 2 nodes: 10);
+ *   - 7 to 29 nodes: 30 questions, every node in, no node more than one ahead of another;
+ *   - 30 nodes or more: 30 nodes drawn at random, each with the same chance, one question of each.
+ */
+export function drawCheckpoint(sources: readonly CheckpointSource[], random: Random): Checkpoint {
+  const hands = sources.map(({ nodeId, questions }) => ({
+    nodeId,
+    questions: drawAttempt(questions, CHECKPOINT_MOST_PER_NODE, random),
+  }))
+
+  const dealt: CheckpointQuestion[] = []
+  for (let round = 0; round < CHECKPOINT_MOST_PER_NODE && dealt.length < CHECKPOINT_SIZE; round += 1) {
+    const stillIn = hands.filter((hand) => hand.questions.length > round)
+    for (const { nodeId, questions } of drawAttempt(stillIn, CHECKPOINT_SIZE - dealt.length, random)) {
+      const question = questions[round]
+      if (question) dealt.push({ nodeId, question })
+    }
+  }
+  const asked = new Set(dealt.map(({ nodeId }) => nodeId))
+  return { questions: dealt, nodeIds: sources.map(({ nodeId }) => nodeId).filter((nodeId) => asked.has(nodeId)) }
+}
