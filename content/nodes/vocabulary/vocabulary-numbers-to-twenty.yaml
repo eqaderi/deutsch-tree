@@ -1,0 +1,33 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-numbers-to-twenty
+kind: vocabulary
+level: A1
+chapter: a1-words-numbers-time
+order: 1
+status: coming-soon
+title:
+  en: "Numbers 1 to 20"
+  fa: "عددهای ۱ تا ۲۰"
+  de: "Zahlen von 1 bis 20"
+words:
+  - word: eins
+  - word: zwei
+  - word: drei
+  - word: vier
+  - word: fünf
+  - word: sechs
+  - word: sieben
+  - word: acht
+  - word: neun
+  - word: zehn
+  - word: elf
+  - word: zwölf
+  - word: dreizehn
+  - word: vierzehn
+  - word: fünfzehn
+  - word: sechzehn
+  - word: siebzehn
+  - word: achtzehn
+  - word: neunzehn
+  - word: zwanzig

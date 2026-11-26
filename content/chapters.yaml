@@ -19,6 +19,14 @@
     fa: "نخستین جمله‌ها و پرسش‌ها"
     de: "Erste Sätze und Fragen"
 
+- id: a1-words-people
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: people and first contacts"
+    fa: "واژه‌ها: آدم‌ها و نخستین آشنایی"
+    de: "Wörter: Menschen und erste Kontakte"
+
 - id: a1-nouns-articles
   level: A1
   kind: grammar
@@ -43,6 +51,14 @@
     fa: "عدد، تاریخ و ساعت"
     de: "Zahlen, Datum und Uhrzeit"
 
+- id: a1-words-numbers-time
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: numbers and time"
+    fa: "واژه‌ها: عدد و زمان"
+    de: "Wörter: Zahlen und Zeit"
+
 - id: a1-cases
   level: A1
   kind: grammar
@@ -58,6 +74,14 @@
     en: "More articles: *mein*, *dieser*, *welcher*"
     fa: "حرف تعریف‌های دیگر: *mein*، *dieser*، *welcher*"
     de: "Mehr Artikelwörter: *mein*, *dieser*, *welcher*"
+
+- id: a1-words-food-home
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: food, home and shopping"
+    fa: "واژه‌ها: خوراک، خانه و خرید"
+    de: "Wörter: Essen, Wohnen und Einkaufen"
 
 - id: a1-verb-patterns
   level: A1
@@ -75,6 +99,14 @@
     fa: "فعل‌های وجهی و خواستهٔ مؤدبانه"
     de: "Modalverben und höfliche Wünsche"
 
+- id: a1-words-daily-life
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: everyday life"
+    fa: "واژه‌ها: زندگی روزمره"
+    de: "Wörter: Alltag"
+
 - id: a1-prepositions
   level: A1
   kind: grammar
@@ -83,6 +115,14 @@
     fa: "حرف‌های اضافه"
     de: "Präpositionen"
 
+- id: a1-words-town-travel
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: town and travel"
+    fa: "واژه‌ها: شهر و سفر"
+    de: "Wörter: Stadt und Reisen"
+
 - id: a1-pronouns
   level: A1
   kind: grammar
@@ -90,6 +130,14 @@
     en: "Pronouns"
     fa: "ضمیرها"
     de: "Pronomen"
+
+- id: a1-words-small-words
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: small words and useful verbs"
+    fa: "واژه‌ها: واژه‌های کوچک و فعل‌های پرکاربرد"
+    de: "Wörter: kleine Wörter und wichtige Verben"
 
 - id: a1-past
   level: A1
