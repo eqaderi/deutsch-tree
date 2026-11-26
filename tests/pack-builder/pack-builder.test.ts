@@ -2,6 +2,7 @@ import { mkdtemp, readdir, readFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { expect, test } from 'vitest'
+import { packAnswerKeySchema, packDescriptionSchema } from '../../src/content-model/pack.ts'
 import { buildPack, type PackBuildOptions } from '../../src/pack-builder/index.ts'
 import { type FixtureBook, fixtureBook, fixturePageNumbers, writeFixtureBook } from './fixture.ts'
 
@@ -35,6 +36,14 @@ test('a book becomes a pack folder whose description names the pack and counts i
   const description = await readJson(packDir, 'pack.json')
   expect(description).toMatchObject({ format: 1, id: 'fixture-book', name: 'Fixture book', examCount: 2 })
   expect(description.exams.map((exam: { number: number }) => exam.number)).toEqual([1, 2])
+})
+
+test('the pack follows the pack format that the app reads', async () => {
+  const { packDir } = await build()
+
+  expect(packDescriptionSchema.safeParse(await readJson(packDir, 'pack.json')).error).toBeUndefined()
+  expect(packAnswerKeySchema.safeParse(await readJson(packDir, 'answers.json')).error).toBeUndefined()
+  expect((await readdir(packDir as string)).sort()).toEqual(['answers.json', 'exams', 'pack.json'])
 })
 
 test('the description says which pages belong to each exam, module and part', async () => {
