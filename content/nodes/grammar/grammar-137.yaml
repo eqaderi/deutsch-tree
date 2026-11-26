@@ -1,0 +1,13 @@
+# Grammar list row 137.
+id: grammar-137
+kind: grammar
+level: B1
+chapter: b1-prepositions
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-071]
+title:
+  en: "*innerhalb*, *außerhalb* + *Genitiv*"
+  fa: "*innerhalb* و *außerhalb* + *Genitiv*"
+  de: "*innerhalb*, *außerhalb* + Genitiv"

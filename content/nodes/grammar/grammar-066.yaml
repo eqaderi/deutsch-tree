@@ -1,0 +1,13 @@
+# Grammar list row 66.
+id: grammar-066
+kind: grammar
+level: A2
+chapter: a2-dativ-objects
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-063, grammar-064]
+title:
+  en: "*Dativ* as indirect object, all nouns, plural *-n*"
+  fa: "*Dativ* به‌عنوان مفعول غیرمستقیم، برای همهٔ اسم‌ها؛ *-n* در جمع"
+  de: "Dativ als indirektes Objekt, alle Nomen, Plural mit *-n*"

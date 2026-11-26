@@ -1,0 +1,13 @@
+# Grammar list row 190.
+id: grammar-190
+kind: grammar
+level: A1
+chapter: a1-numbers-time
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: []
+title:
+  en: "Cardinal numbers to one million; prices, quantities"
+  fa: "عددهای اصلی تا یک میلیون؛ قیمت و مقدار"
+  de: "Zahlen bis eine Million; Preise und Mengen"

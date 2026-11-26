@@ -1,0 +1,13 @@
+# Grammar list row 36.
+id: grammar-036
+kind: grammar
+level: A2
+chapter: a2-polite-forms
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-034]
+title:
+  en: "*hätte gern*"
+  fa: "*hätte gern*"
+  de: "*hätte gern*"

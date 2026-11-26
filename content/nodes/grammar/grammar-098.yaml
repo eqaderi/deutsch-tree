@@ -1,0 +1,13 @@
+# Grammar list row 98.
+id: grammar-098
+kind: grammar
+level: B1
+chapter: b1-pronouns
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-092]
+title:
+  en: "*einige*, *manche*, *wenige*, *ein paar*"
+  fa: "*einige*، *manche*، *wenige*، *ein paar*"
+  de: "*einige*, *manche*, *wenige*, *ein paar*"

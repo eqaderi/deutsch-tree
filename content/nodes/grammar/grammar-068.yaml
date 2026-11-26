@@ -1,0 +1,13 @@
+# Grammar list row 68.
+id: grammar-068
+kind: grammar
+level: A2
+chapter: a2-dativ-objects
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-067, grammar-082, grammar-083]
+title:
+  en: "Order of objects and pronouns"
+  fa: "ترتیب مفعول‌ها و ضمیرها"
+  de: "Reihenfolge von Objekten und Pronomen"

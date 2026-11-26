@@ -1,0 +1,13 @@
+# Grammar list row 186.
+id: grammar-186
+kind: grammar
+level: B1
+chapter: b1-two-part-connectors
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-184]
+title:
+  en: "*sowohl … als auch*"
+  fa: "*sowohl … als auch*"
+  de: "*sowohl … als auch*"

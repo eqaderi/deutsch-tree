@@ -1,0 +1,13 @@
+# Grammar list row 169.
+id: grammar-169
+kind: grammar
+level: B1
+chapter: b1-time-clauses
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-160]
+title:
+  en: "*während* as conjunction"
+  fa: "*während* به‌عنوان حرف ربط"
+  de: "*während* als Konjunktion"

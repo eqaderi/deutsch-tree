@@ -1,0 +1,13 @@
+# Grammar list row 139.
+id: grammar-139
+kind: grammar
+level: A1
+chapter: a1-first-sentences
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-001]
+title:
+  en: "Statement, verb second"
+  fa: "جملهٔ خبری: فعل در جایگاه دوم"
+  de: "Aussagesatz: Verb auf Position 2"

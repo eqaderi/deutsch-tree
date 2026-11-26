@@ -1,0 +1,13 @@
+# Grammar list row 150.
+id: grammar-150
+kind: grammar
+level: A1
+chapter: a1-building-sentences
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-140]
+title:
+  en: "*dann*, *zuerst*, *danach*, *später*"
+  fa: "*dann*، *zuerst*، *danach*، *später*"
+  de: "*dann*, *zuerst*, *danach*, *später*"

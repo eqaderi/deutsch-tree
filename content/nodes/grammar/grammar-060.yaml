@@ -1,0 +1,13 @@
+# Grammar list row 60.
+id: grammar-060
+kind: grammar
+level: A1
+chapter: a1-nouns-articles
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-059]
+title:
+  en: "Plural formation"
+  fa: "ساختن جمع"
+  de: "Der Plural"

@@ -1,0 +1,13 @@
+# Grammar list row 202.
+id: grammar-202
+kind: grammar
+level: A2
+chapter: a2-word-building-particles
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-008, grammar-141]
+title:
+  en: "*doch*, *mal*, *denn* in requests and questions"
+  fa: "*doch*، *mal* و *denn* در درخواست و پرسش"
+  de: "*doch*, *mal*, *denn* in Bitten und Fragen"

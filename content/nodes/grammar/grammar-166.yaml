@@ -1,0 +1,13 @@
+# Grammar list row 166.
+id: grammar-166
+kind: grammar
+level: B1
+chapter: b1-reason-condition-clauses
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-158]
+title:
+  en: "*da*"
+  fa: "*da*"
+  de: "*da*"

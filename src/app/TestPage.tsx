@@ -5,6 +5,7 @@ import { useLanguage } from '../language/index.tsx'
 import { type AttemptResult, applyAttempt, drawAttempt, isDone, scoreAttempt } from '../learning-engine/index.ts'
 import { AttemptRun } from './AttemptRun.tsx'
 import { loadNode } from './content.ts'
+import { plainText } from './German.tsx'
 import { isNodeId } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
 import { updateProgress, useProgress } from './progress.ts'
@@ -48,7 +49,7 @@ export function NodeTest({ node, pool, attemptSize }: NodeTestProps) {
   const draw = (number: number): Attempt => ({ number, questions: drawAttempt(pool, attemptSize, Math.random) })
   const [attempt, setAttempt] = useState(() => draw(1))
 
-  const title = strings.testTitle(node.title[language])
+  const title = strings.testTitle(plainText(node.title[language]))
   return (
     <main className="wrap">
       <title>{`${title} · ${strings.appName}`}</title>

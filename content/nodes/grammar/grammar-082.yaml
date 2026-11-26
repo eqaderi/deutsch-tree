@@ -1,0 +1,13 @@
+# Grammar list row 82.
+id: grammar-082
+kind: grammar
+level: A1
+chapter: a1-pronouns
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-062, grammar-081]
+title:
+  en: "*Personalpronomen*, *Akkusativ*"
+  fa: "ضمیرهای شخصی در *Akkusativ*"
+  de: "Personalpronomen im Akkusativ"

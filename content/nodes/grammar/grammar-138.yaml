@@ -1,0 +1,13 @@
+# Grammar list row 138.
+id: grammar-138
+kind: grammar
+level: B1
+chapter: b1-prepositions
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-126]
+title:
+  en: "*außer* + *Dativ*"
+  fa: "*außer* + *Dativ*"
+  de: "*außer* + Dativ"

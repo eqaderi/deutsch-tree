@@ -1,0 +1,13 @@
+# Grammar list row 105.
+id: grammar-105
+kind: grammar
+level: A1
+chapter: a1-adjectives
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-103]
+title:
+  en: "*gern* – *lieber* – *am liebsten*; *gut* – *besser*; *viel* – *mehr*"
+  fa: "*gern* – *lieber* – *am liebsten*؛ *gut* – *besser*؛ *viel* – *mehr*"
+  de: "*gern* – *lieber* – *am liebsten*; *gut* – *besser*; *viel* – *mehr*"
