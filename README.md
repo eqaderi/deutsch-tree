@@ -38,24 +38,35 @@ ending, because the pipeline runs directly in Node.
 | `content/` | The real content: one YAML file per node under `content/nodes/`, and the chapters that group them in `content/chapters.yaml`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
 | `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
+| `src/search/` | Search as pure functions: the node summaries and the search data of one language in, the nodes found for a query out. It decides how typed text meets content (umlauts, capitals, Persian letter forms). No interface, no loading. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress. No interface, no storage; randomness is passed in. |
 | `src/progress-store/` | Keeps progress in browser storage, with a version number. It only stores; the learning engine decides how progress changes. |
-| `src/app/` | App shell: routes, tree, node page, test. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
+| `src/app/` | App shell: routes, tree, node page, test, search page, overview page. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests of code never depend on the real content. |
 | `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows". |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
+| `tests/search/` | Search on a small invented catalogue (`catalogue.ts`): what a query finds, in which order, and which passage a result shows. |
 | `tests/progress-store/` | The progress store on a stand-in for browser storage, including text saved by each earlier version. |
 | `tests/language/` | The interface strings of the three languages, compared key by key. |
 | `tests/browser/` | Seam 3: whole journeys in a browser. |
 | `src/pack-builder/` | A learner's own exam book in, a private pack out. `cli.ts` is the command; `vite-plugin.ts` keeps packs out of the site build. The pack format's schema is `src/content-model/pack.ts`. |
 | `tests/pack-builder/` | Seam 4: build a pack from a synthetic book (`fixture.ts`) and assert on the pack. |
 
-The app never reads node files. It fetches `content/index.json` (the chapters
-and every node's summary, both in curriculum order) and
-`content/nodes/<id>.json` (one node's page), both written by the pipeline at
-build time.
+The app never reads node files. It fetches files that the pipeline writes at
+build time, each only on the page that shows it:
+
+| File | Holds | Fetched by |
+|---|---|---|
+| `content/index.json` | The chapters and every node's summary, both in curriculum order. | Every page. |
+| `content/nodes/<id>.json` | One node's page. | That node's page and its test. |
+| `content/search/<language>.json` | The text of every published node as a list of passages, in one language plus the German. | The search page (`#/search`), in the learner's language only. |
+| `content/overview.json` | Every grammar table. | "All grammar at a glance" (`#/overview`). |
+
+So the first load of the tree does not grow when content is written; only
+`index.json` grows, by one summary per node. Keep it that way: text that only
+one page needs goes into that page's own file, not into the index.
 
 Page addresses live after the `#`, for example `#/node/grammar-001`. The site
 is plain files, so this is what keeps direct links and reloads working on
@@ -79,6 +90,26 @@ GitHub Pages and from a local folder.
   `QuestionView` and in `AnswerText` (`src/app/QuestionView.tsx`), and its
   instruction in the three string files. The type checker points at each
   place that is missing.
+
+## Search and the overview page
+
+- Search runs in the browser. `prepareSearch` in `src/search/index.ts` takes
+  the node summaries and the search data, and returns the function that
+  answers a query. `fold` in the same file is the one place that says which
+  typed text equals which content text; a new habit of typing (another
+  keyboard, another script) is a line there and a test in `tests/search/`.
+- The search data is built in `src/content-pipeline/search-data.ts`. A node is
+  a list of passages, whatever its kind, so a new kind of node becomes
+  searchable by adding its passages in `passagesOf` there. Nothing in the app
+  changes. Questions and the wrong half of a common mistake are left out on
+  purpose.
+- A node that is coming soon has no search data and is found by its title,
+  which the index has.
+- The overview data is built in `src/content-pipeline/overview-data.ts`. A
+  node without a table has no entry, and the page shows no box for it.
+- `GrammarTableView` (`src/app/GrammarTableView.tsx`) draws a table on a node
+  page and on the overview page. A table reads left to right in every
+  language.
 
 ## Languages
 

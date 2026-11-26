@@ -4,6 +4,7 @@ import { LanguageProvider, useLanguage } from '../language/index.tsx'
 import { LanguageSwitch } from './LanguageSwitch.tsx'
 import { NodePage } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
+import { OverviewPage } from './OverviewPage.tsx'
 import { ReferenceLinks } from './ReferenceLinks.tsx'
 import { SearchPage } from './SearchPage.tsx'
 import { TestPage } from './TestPage.tsx'
@@ -25,6 +26,7 @@ const router = createHashRouter([
           { path: 'node/:id', element: <NodePage /> },
           { path: 'node/:id/test', element: <TestPage /> },
           { path: 'search', element: <SearchPage /> },
+          { path: 'overview', element: <OverviewPage /> },
           { path: '*', element: <NotFound /> },
         ],
       },

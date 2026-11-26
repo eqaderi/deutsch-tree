@@ -15,7 +15,9 @@ test('a learner searches for a topic and opens it', async ({ page }) => {
   await page.getByRole('searchbox', { name: 'Search all topics' }).fill('fixture verbs')
 
   await expect(results(page)).toHaveCount(1)
-  await results(page).getByRole('link', { name: /Fixture verbs/ }).click()
+  await results(page)
+    .getByRole('link', { name: /Fixture verbs/ })
+    .click()
 
   await expect(page.getByRole('heading', { level: 1, name: 'Fixture verbs' })).toBeVisible()
   await expect(page.getByText('A fixture verb takes the ending of its person.')).toBeVisible()
@@ -66,7 +68,9 @@ test('words that no topic has give a clear answer', async ({ page }) => {
 test('coming back from a topic, the search is as the learner left it', async ({ page }) => {
   await page.goto('./#/search')
   await page.getByRole('searchbox').fill('fixture verbs')
-  await results(page).getByRole('link', { name: /Fixture verbs/ }).click()
+  await results(page)
+    .getByRole('link', { name: /Fixture verbs/ })
+    .click()
   await expect(page.getByRole('heading', { level: 1, name: 'Fixture verbs' })).toBeVisible()
 
   await page.goBack()
