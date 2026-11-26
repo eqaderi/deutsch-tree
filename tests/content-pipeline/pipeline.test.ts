@@ -8,11 +8,10 @@ import { COMING_SOON, changeNode, fixtureContent, fixtureContentWith, PUBLISHED 
 test('the index says which nodes have a test, so the tree can offer it without loading the node', async () => {
   const { bundle } = await compileContent(fixtureContent)
 
-  expect(bundle?.index.nodes.map((node) => [node.id, node.hasTest])).toEqual([
-    ['grammar-001', true],
-    // Not written yet: nothing to test.
-    ['grammar-002', false],
-  ])
+  const hasTest = Object.fromEntries((bundle?.index.nodes ?? []).map((node) => [node.id, node.hasTest]))
+  expect(hasTest['grammar-001']).toBe(true)
+  // Not written yet: nothing to test.
+  expect(hasTest['grammar-002']).toBe(false)
 })
 
 test('a draft pool inside a "coming soon" node is not a test', async () => {
@@ -35,8 +34,8 @@ test('valid content compiles and the report counts what was found', async () => 
   expect(report).toEqual({
     ok: true,
     errors: [],
-    nodes: { total: 2, published: 1, comingSoon: 1 },
-    questions: 15,
+    nodes: { total: 7, published: 5, comingSoon: 2 },
+    questions: 75,
   })
   expect(bundle).not.toBeNull()
 })

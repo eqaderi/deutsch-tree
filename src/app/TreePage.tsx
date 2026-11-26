@@ -2,7 +2,9 @@ import { Fragment, use, useEffect } from 'react'
 import { Link, useSearchParams } from 'react-router'
 import { type ChapterSummary, NODE_KINDS, type NodeKind, type NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
-import { countNodes, nextRecommended, nodeState, passMark, youAreHere } from '../learning-engine/index.ts'
+import { countNodes, hasProgress, nextRecommended, nodeState, passMark, youAreHere } from '../learning-engine/index.ts'
+import { BackupSuggestion } from './BackupSuggestion.tsx'
+import { CheckpointStop } from './CheckpointPage.tsx'
 import { loadIndex } from './content.ts'
 import { useFirstSteps } from './firstVisit.ts'
 import { RichText } from './German.tsx'
@@ -62,8 +64,13 @@ export function TreePage() {
         <h1>{strings.treeTitle}</h1>
         <p>{strings.treeIntro}</p>
       </header>
-      <FirstSteps />
+      {/*
+        Above the route there is the next topic and at most one note. The steps are for a learner
+        who has not started; the backup suggestion needs done topics. So the two never meet.
+      */}
+      {!hasProgress(progress) && <FirstSteps />}
       <NextTopic node={next} chapter={chapters.find((chapter) => chapter.id === next?.chapter)} />
+      <BackupSuggestion />
 
       <nav className="strip" aria-label={strings.levels}>
         <span className="strip-end">{strings.routeStart}</span>
@@ -120,29 +127,31 @@ export function TreePage() {
             })}
           </nav>
 
-          {stops.length === 0 ? (
-            <p className="panel message">{strings.noTopicsHere}</p>
-          ) : (
-            <div className="route">
-              {stops.map(({ chapter, topics }, index) => (
-                <ChapterStop
-                  key={chapter.id}
-                  chapter={chapter}
-                  topics={topics}
-                  place={index + 1}
-                  openAtFirst={chapter === current?.chapter}
-                  next={next}
-                />
-              ))}
-            </div>
-          )}
+          {stops.length === 0 && <p className="panel message no-topics">{strings.noTopicsHere}</p>}
+          <div className="route">
+            {stops.map(({ chapter, topics }, index) => (
+              <ChapterStop
+                key={chapter.id}
+                chapter={chapter}
+                topics={topics}
+                place={index + 1}
+                openAtFirst={chapter === current?.chapter}
+                next={next}
+              />
+            ))}
+            {/* The checkpoint is the level's, whatever kind the tree is filtered to. */}
+            <CheckpointStop level={level} ready={inLevel(nodes, level).some((node) => node.status === 'published')} />
+          </div>
         </>
       )}
     </main>
   )
 }
 
-/** How the tree works, in three steps, for a first visit. Dismissed once, it stays away on this device. */
+/**
+ * How the tree works, in three steps, for a learner who has not started.
+ * Dismissed once, it stays away on this device.
+ */
 function FirstSteps() {
   const { strings } = useLanguage()
   const { shown, dismiss } = useFirstSteps()

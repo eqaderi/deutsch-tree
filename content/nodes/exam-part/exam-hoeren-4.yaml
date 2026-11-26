@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-hoeren-4
+kind: exam-part
+level: B1
+chapter: b1-exam-hoeren
+order: 4
+status: coming-soon
+module: hoeren
+part: 4
+title:
+  en: "*Hören Teil 4*: a radio discussion, who says what?"
+  fa: "*Hören Teil 4*: بحث رادیویی، چه کسی چه می‌گوید؟"
+  de: "Hören Teil 4: eine Diskussion im Radio, wer sagt was?"

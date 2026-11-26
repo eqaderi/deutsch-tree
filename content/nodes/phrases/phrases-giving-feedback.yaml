@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-giving-feedback
+kind: phrases
+level: B1
+chapter: b1-phrases-presentation
+order: 4
+status: coming-soon
+title:
+  en: "Giving feedback on a presentation"
+  fa: "بازخورد دادن به یک ارائه"
+  de: "Rückmeldung zu einer Präsentation geben"
+purpose:
+  en: "Say what you liked about a presentation and what was new or interesting for you."
+  fa: "بگویید از چه چیزِ ارائه خوشتان آمد و چه چیزی برایتان تازه یا جالب بود."
+  de: "Sagen, was einem an einer Präsentation gefallen hat und was neu oder interessant war."
+examTasks: [exam-sprechen-3]

@@ -10,6 +10,7 @@ import { isNodeId } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 import { TestResult } from './TestResult.tsx'
+import { treeAddressOf } from './treeAddress.ts'
 
 /** The address of a node's test. It can be opened without opening the node's page first. */
 export function TestPage() {
@@ -69,6 +70,7 @@ export function NodeTest({ node, pool, attemptSize }: NodeTestProps) {
           result={attempt.finished.result}
           wasDone={attempt.finished.wasDone}
           onRetry={() => setAttempt(draw(attempt.number + 1))}
+          treeAddress={treeAddressOf(node)}
         />
       ) : (
         <AttemptRun

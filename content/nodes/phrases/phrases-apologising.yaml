@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-apologising
+kind: phrases
+level: A2
+chapter: a2-phrases-arrangements
+order: 4
+status: coming-soon
+title:
+  en: "Apologising and saying why"
+  fa: "عذرخواهی و گفتن دلیل"
+  de: "Sich entschuldigen und den Grund sagen"
+purpose:
+  en: "Say sorry, for example because you cannot come, and give a short reason."
+  fa: "عذرخواهی کنید، مثلاً چون نمی‌توانید بیایید، و دلیل کوتاهی بگویید."
+  de: "Sich entschuldigen, zum Beispiel weil man nicht kommen kann, und kurz den Grund sagen."
+examTasks: [exam-schreiben-1, exam-schreiben-3]

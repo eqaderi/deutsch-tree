@@ -59,7 +59,7 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
   return (
     <main className="wrap">
       <title>{`${plainText(node.title[language])} · ${strings.appName}`}</title>
-      <BackToTree />
+      <BackToTree from={node} />
       <header className="page-head">
         <h1>
           <RichText parts={node.title[language]} />

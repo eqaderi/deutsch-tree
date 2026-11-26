@@ -41,8 +41,8 @@ export function NodeRow({ node, isNext = false }: { node: NodeSummary; isNext?: 
     )
   }
   return (
-    <div className={isNext ? 'row row-next' : 'row'}>
-      <Link to={`/node/${node.id}`} className="row-main">
+    <div className={isNext ? 'topic topic-next' : 'topic'}>
+      <Link to={`/node/${node.id}`} className="row">
         <StateMark state={state} />
         <span className="row-text">
           {title}

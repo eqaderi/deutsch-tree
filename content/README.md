@@ -51,6 +51,33 @@ A `coming-soon` node needs nothing more. It appears in the tree, marked
 "Coming soon". It may already hold the sections below as a draft: they are
 checked, but not shown.
 
+## A phrases node and an exam-part node
+
+These two kinds have a few lines more, also while they are `coming-soon`.
+The lists of both, with the reasons, are in
+`docs/approvals/phrase-and-exam-part-nodes.md`.
+
+```yaml
+id: phrases-agreeing     # "phrases-" + the purpose in a word or two
+kind: phrases
+purpose:                 # one line, in three languages: what the phrases are for
+  en: Say that you think the same as another person, fully or in part.
+  fa: …
+  de: …
+examTasks: [exam-schreiben-2, exam-sprechen-1]   # ids of the exam-part nodes it serves; at least one
+```
+
+```yaml
+id: exam-lesen-2         # "exam-" + module + "-" + part
+kind: exam-part
+module: lesen            # lesen | hoeren | schreiben | sprechen
+part: 2                  # the number of the part inside its module
+```
+
+The exam has 15 parts, so there are 15 exam-part nodes: Lesen 1 to 5, Hören 1
+to 4, Schreiben 1 to 3 and Sprechen 1 to 3. An exam task is always named by
+the id of its exam-part node, so the name cannot point at nothing.
+
 ## Chapters and the curriculum order
 
 A chapter is a named group of nodes of one kind inside one level, for example
@@ -128,9 +155,10 @@ questions:
 
 ### Question types
 
-Every question has `id`, `type`, `prompt` (German), `answer` and
+Every question has `id`, `type`, `prompt` (German), its answer and
 `explanation`. The test shows the learner what to do in their language, so a
-prompt holds only the German.
+prompt holds only the German. A question that is answered by choosing states
+one `answer`; a question that is answered by typing lists its `answers`.
 
 ```yaml
   - id: q2
@@ -145,7 +173,34 @@ prompt holds only the German.
     prompt: Du wohne hier.          # the sentence the learner judges
     answer: false                   # true: correct German; false: it holds a mistake
     explanation: { en: …, fa: …, de: … }
+
+  - id: q4
+    type: typed-answer              # the learner types the answer
+    prompt: "Plural: der Apfel"
+    answers: [die Äpfel, Äpfel]     # every accepted answer; the first is shown as the right one
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q5
+    type: typed-gap-fill            # a sentence with one gap; the learner types the form
+    prompt: Du ___ (wohnen) hier.   # exactly one gap
+    answers: [wohnst]
+    explanation: { en: …, fa: …, de: … }
 ```
+
+### Typed questions: the accepted answers
+
+- List every answer that is correct German under `answers`, each written
+  exactly, with its umlauts, its ß and its capitals. An answer that is not
+  listed is marked wrong.
+- Do not list variants of spelling. The test ignores extra spaces by itself,
+  and it accepts *ae*, *oe*, *ue* and *ss* in place of *ä*, *ö*, *ü* and *ß*
+  and a capitalisation difference, each with a note that shows the learner
+  the exact spelling. Nothing else is forgiven: a missing word, such as an
+  article, or a plain *u* for *ü* is a wrong answer.
+- Pin the answer down. `Wir spielen ___.` can be filled in a hundred ways;
+  give the word to use, as in `Du ___ (wohnen) hier.` The blind reviewer types
+  an answer without seeing your list, and an answer that is not on it stops
+  the review.
 
 ### How many questions an attempt draws
 
@@ -177,9 +232,9 @@ change freely). A command writes the record, never a hand:
    step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
    in step 1, then add that second file with another `--answers`.
 
-Only `multiple-choice`, `gap-fill` and `true-false` questions and only grammar
-nodes can be published so far. Other question types and node kinds are added
-to the schema as they are built.
+Only `multiple-choice`, `gap-fill`, `true-false`, `typed-answer` and
+`typed-gap-fill` questions and only grammar nodes can be published so far.
+Other question types and node kinds are added to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 
@@ -188,12 +243,17 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - A node without a chapter, with a chapter that `chapters.yaml` does not
   have, or of another level or kind than its chapter. A chapter name that
   lacks a language.
-- Persian text (a title, a chapter name, a rule, the reason of a mistake or
-  of a question) with a Latin letter outside asterisks.
+- Persian text (a title, a chapter name, a purpose, a rule, the reason of a
+  mistake or of a question) with a Latin letter outside asterisks.
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
 - A prerequisite that is not the id of a node, and a prerequisite cycle
   (a node that needs itself, directly or through other nodes).
+- A phrases node without a purpose or without an exam task, and an exam task
+  that is not the id of an exam-part node.
+- An exam-part node without its module or part number, or whose id is not
+  `exam-<module>-<part>`. A `purpose`, `examTasks`, `module` or `part` in a
+  node of another kind.
 - A published node with fewer than 15 questions. A `coming-soon` draft may
   have fewer.
 - Two node files with the same id, and two questions with the same id inside

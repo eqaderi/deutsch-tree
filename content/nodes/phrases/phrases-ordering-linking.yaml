@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-ordering-linking
+kind: phrases
+level: B1
+chapter: b1-phrases-writing
+order: 4
+status: coming-soon
+title:
+  en: "Ordering and linking your points"
+  fa: "مرتب کردن و پیوند دادن مطالب"
+  de: "Punkte ordnen und verbinden"
+purpose:
+  en: "Put your points in an order and connect them, so that a text or a talk is easy to follow."
+  fa: "مطالبتان را به ترتیب بچینید و به هم وصل کنید تا دنبال کردن متن یا صحبت شما آسان باشد."
+  de: "Die eigenen Punkte in eine Reihenfolge bringen und verbinden, damit man den Text oder Vortrag gut versteht."
+examTasks: [exam-schreiben-1, exam-schreiben-2, exam-sprechen-2]

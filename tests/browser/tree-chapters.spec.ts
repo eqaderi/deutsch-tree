@@ -9,7 +9,7 @@ test('a level is a line of chapters, each with its name, its kind and how many o
   await expect(chapters).toHaveCount(2)
   await expect(chapters.nth(0).getByRole('heading', { level: 3 })).toHaveText('Fixture basics')
   await expect(chapters.nth(0).locator('summary')).toContainText('Grammar')
-  await expect(chapters.nth(0).locator('summary')).toContainText('0 of 1 done')
+  await expect(chapters.nth(0).locator('summary')).toContainText('0 of 2 done')
   await expect(chapters.nth(1).getByRole('heading', { level: 3 })).toHaveText('Fixture topics with sein')
 })
 

@@ -63,6 +63,8 @@ test('a topic whose test was taken but not passed is in progress: the tree says 
   await expect(topicLink(page, 'Fixture verbs')).not.toContainText('Start')
   await expect(topicLink(page, 'Fixture verbs')).not.toContainText('Done')
   await expect(nextTopic(page).getByRole('link', { name: 'Continue' })).toBeVisible()
+  // The three steps are for a learner who has not started.
+  await expect(page.getByRole('region', { name: 'How it works' })).toBeHidden()
 })
 
 test('a topic that is not written yet has no test to start, and a topic without a test offers none', async ({
@@ -349,6 +351,7 @@ test('a first visit explains the tree in three steps; once dismissed they stay a
 })
 
 test('with every written topic done, the tree says so instead of naming a next topic', async ({ page }) => {
+  await serveCurriculum(page, [{ level: 'A1', kind: 'grammar', name: 'Basics', topics: ['grammar-001', 'g2 soon'] }])
   await page.goto('./#/node/grammar-001/test')
   await takeTest(page, () => 'right')
   await page.getByRole('link', { name: 'All topics' }).click()

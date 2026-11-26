@@ -1,4 +1,5 @@
 import type { NodeKind, Question } from '../content-model/index.ts'
+import type { AnswerNote } from '../learning-engine/index.ts'
 
 /**
  * Every word the interface shows. Components never hold their own wording;
@@ -92,11 +93,15 @@ export const en = {
     'multiple-choice': 'Choose the right answer.',
     'gap-fill': 'Choose the word that fits the gap.',
     'true-false': 'Is this sentence correct German?',
+    'typed-answer': 'Type the answer.',
+    'typed-gap-fill': 'Type the word that fits the gap.',
   } satisfies Record<Question['type'], string>,
   /** Read out in place of an empty gap. */
   gap: 'gap',
   sentenceCorrect: 'Correct',
   sentenceNotCorrect: 'Not correct',
+  /** The name of the buttons that write ä, ö, ü and ß into a typed answer. */
+  germanLetters: 'German letters',
   next: 'Next',
   checkAnswers: 'Check answers',
   reportProblem: 'Report a problem',
@@ -112,6 +117,69 @@ export const en = {
   wrongAnswers: 'Wrong answers',
   yourAnswer: 'Your answer',
   rightAnswer: 'Right answer',
+
+  // Backup: progress exported to a file and imported from one.
+  backupLink: 'Back up progress',
+  backupTitle: 'Back up your progress',
+  backupWhy:
+    'Your progress is kept only in this browser, on this device. If the browser’s data is cleared, it is gone. A file keeps it safe, and takes it to another device.',
+  /** A day as this language writes it. Use it for every date shown. */
+  date: (date: Date) => new Intl.DateTimeFormat('en-GB', { dateStyle: 'long' }).format(date),
+  topicsDone: (count: number) => (count === 1 ? '1 topic done' : `${count} topics done`),
+  onThisDevice: 'On this device',
+  inTheFile: 'In the file',
+  exportTitle: 'Export',
+  exportText: 'Saves a file with your progress on this device. Nothing is uploaded.',
+  exportProgress: 'Export progress',
+  /** The name of the file follows on a line of its own. */
+  exportedAs: 'Your progress is now in this file:',
+  keepFileSafe: 'Keep the file somewhere safe.',
+  importTitle: 'Import',
+  importText:
+    'Brings back the progress from a file that you exported here or on another device. It takes the place of the progress on this device.',
+  importFile: 'Import a progress file',
+  importReplaceTitle: 'Replace the progress on this device?',
+  importReplaceText: 'The file takes the place of everything on this device. This cannot be undone.',
+  exportedOn: (date: string) => `exported on ${date}`,
+  replaceProgress: 'Replace progress',
+  cancel: 'Cancel',
+  imported: 'Progress imported.',
+  importNotProgress: 'This is not a deutsch-tree progress file, or the file is damaged. Nothing was changed.',
+  importNewerVersion:
+    'This file was saved by a newer version of deutsch-tree than the one open here. Reload this page to get the newest version, then import the file again. Nothing was changed.',
+  savedByNewerVersion:
+    'The progress in this browser was saved by a newer version of deutsch-tree. Reload the page to get that version. Until then your progress is not shown, and nothing you do here is saved.',
+  reload: 'Reload',
+  // A milestone, said once on the tree, with the suggestion to back up.
+  milestoneLevel: (level: string) => `You have done every ${level} topic there is so far.`,
+  milestoneTopics: (count: number) => `You have done ${count} topics.`,
+  suggestBackup: 'Your progress is kept only in this browser. A copy in a file keeps it safe.',
+  notNow: 'Not now',
+
+  // A level's checkpoint: a test across the topics of the level. It is advice and changes no topic.
+  checkpoint: 'Checkpoint',
+  checkpointTitle: (level: string) => `${level} checkpoint`,
+  checkpointIntro:
+    'A short test with questions from the topics of this level. It shows you what to look at again. It changes nothing in your topics.',
+  startCheckpoint: 'Start the checkpoint',
+  checkpointNothingYet: 'No topic of this level has a test yet. The checkpoint comes with the first one.',
+  checkpointSize: (questions: number, topics: number) =>
+    `${questions === 1 ? '1 question' : `${questions} questions`} from ${topics === 1 ? '1 topic' : `${topics} topics`}`,
+  checkpointResult: 'Checkpoint result',
+  checkpointAllRight: 'Everything was right. There is nothing to look at again.',
+  checkpointSomeWrong: 'Some answers were wrong. The topics below are worth another look.',
+  checkpointChangesNothing: 'A checkpoint only shows where you stand. Your topics stay as they are.',
+  topicsToRevisit: 'Topics to look at again',
+  /** Beside a topic in that list: "2 of 5 wrong". */
+  wrongOfAsked: (wrong: number, asked: number) => `${wrong} of ${asked} wrong`,
+
+  // Typed answers that counted as right although they were not written exactly.
+  acceptedWithNote: 'Accepted with a note',
+  exactSpelling: 'Exact spelling',
+  answerNotes: {
+    'umlaut-substitute': 'Accepted. The exact spelling has ä, ö, ü or ß.',
+    capitalisation: 'Accepted. Mind the capital and small letters.',
+  } satisfies Record<AnswerNote, string>,
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */

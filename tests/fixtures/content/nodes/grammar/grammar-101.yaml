@@ -1,0 +1,188 @@
+# Fixture node for tests. Invented, short, and stable: tests assert on these words.
+id: grammar-101
+kind: grammar
+level: A2
+chapter: fixture-nouns
+order: 1
+status: published
+recogniseOnly: false
+prerequisites: []
+title:
+  en: Fixture articles
+  fa: حرف تعریف‌های آزمایشی
+  de: Test-Artikel
+
+explanations:
+  en:
+    rule: "A fixture noun has one of three articles: *der*, *die* or *das*."
+  fa:
+    rule: "اسم آزمایشی یکی از سه حرف تعریف را دارد: *der*، *die* یا *das*."
+  de:
+    rule: "Ein Test-Nomen hat einen von drei Artikeln: *der*, *die* oder *das*."
+
+table:
+  columns:
+    - en: Article
+      fa: حرف تعریف
+      de: Artikel
+    - en: Noun
+      fa: اسم
+      de: Nomen
+  rows:
+    - [der, Tisch]
+    - [die, Lampe]
+    - [das, Buch]
+
+examples:
+  - de: Der Tisch ist hier.
+    en: The table is here.
+    fa: میز این‌جاست.
+  - de: Das Buch ist hier.
+    en: The book is here.
+    fa: کتاب این‌جاست.
+
+mistakes:
+  - wrong: Die Tisch ist hier.
+    right: Der Tisch ist hier.
+    why:
+      en: "*Tisch* is masculine: *der Tisch*."
+      fa: "*Tisch* مذکر است: *der Tisch*."
+      de: "*Tisch* ist maskulin: *der Tisch*."
+
+# 15 questions: the smallest pool a published node may have.
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: ___ Tisch ist hier.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "*Tisch* is masculine: *der Tisch*."
+      fa: "*Tisch* مذکر است: *der Tisch*."
+      de: "*Tisch* ist maskulin: *der Tisch*."
+  - id: q2
+    type: gap-fill
+    prompt: ___ Lampe ist hier.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "*Lampe* is feminine: *die Lampe*."
+      fa: "*Lampe* مؤنث است: *die Lampe*."
+      de: "*Lampe* ist feminin: *die Lampe*."
+  - id: q3
+    type: multiple-choice
+    prompt: ___ Buch ist hier.
+    options: [Der, Die, Das]
+    answer: Das
+    explanation:
+      en: "*Buch* is neuter: *das Buch*."
+      fa: "*Buch* خنثی است: *das Buch*."
+      de: "*Buch* ist neutral: *das Buch*."
+  - id: q4
+    type: gap-fill
+    prompt: ___ Stuhl ist hier.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "*Stuhl* is masculine: *der Stuhl*."
+      fa: "*Stuhl* مذکر است: *der Stuhl*."
+      de: "*Stuhl* ist maskulin: *der Stuhl*."
+  - id: q5
+    type: multiple-choice
+    prompt: ___ Tür ist hier.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "*Tür* is feminine: *die Tür*."
+      fa: "*Tür* مؤنث است: *die Tür*."
+      de: "*Tür* ist feminin: *die Tür*."
+  - id: q6
+    type: gap-fill
+    prompt: ___ Fenster ist hier.
+    options: [Der, Die, Das]
+    answer: Das
+    explanation:
+      en: "*Fenster* is neuter: *das Fenster*."
+      fa: "*Fenster* خنثی است: *das Fenster*."
+      de: "*Fenster* ist neutral: *das Fenster*."
+  - id: q7
+    type: multiple-choice
+    prompt: ___ Hund ist hier.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "*Hund* is masculine: *der Hund*."
+      fa: "*Hund* مذکر است: *der Hund*."
+      de: "*Hund* ist maskulin: *der Hund*."
+  - id: q8
+    type: gap-fill
+    prompt: ___ Katze ist hier.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "*Katze* is feminine: *die Katze*."
+      fa: "*Katze* مؤنث است: *die Katze*."
+      de: "*Katze* ist feminin: *die Katze*."
+  - id: q9
+    type: multiple-choice
+    prompt: ___ Auto ist hier.
+    options: [Der, Die, Das]
+    answer: Das
+    explanation:
+      en: "*Auto* is neuter: *das Auto*."
+      fa: "*Auto* خنثی است: *das Auto*."
+      de: "*Auto* ist neutral: *das Auto*."
+  - id: q10
+    type: gap-fill
+    prompt: ___ Mann ist hier.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "*Mann* is masculine: *der Mann*."
+      fa: "*Mann* مذکر است: *der Mann*."
+      de: "*Mann* ist maskulin: *der Mann*."
+  - id: q11
+    type: true-false
+    prompt: Das Frau ist hier.
+    answer: false
+    explanation:
+      en: "*Frau* is feminine: *die Frau*."
+      fa: "*Frau* مؤنث است: *die Frau*."
+      de: "*Frau* ist feminin: *die Frau*."
+  - id: q12
+    type: true-false
+    prompt: Das Kind ist hier.
+    answer: true
+    explanation:
+      en: "*Kind* is neuter: *das Kind*."
+      fa: "*Kind* خنثی است: *das Kind*."
+      de: "*Kind* ist neutral: *das Kind*."
+  - id: q13
+    type: true-false
+    prompt: Die Baum ist hier.
+    answer: false
+    explanation:
+      en: "*Baum* is masculine: *der Baum*."
+      fa: "*Baum* مذکر است: *der Baum*."
+      de: "*Baum* ist maskulin: *der Baum*."
+  - id: q14
+    type: true-false
+    prompt: Die Blume ist hier.
+    answer: true
+    explanation:
+      en: "*Blume* is feminine: *die Blume*."
+      fa: "*Blume* مؤنث است: *die Blume*."
+      de: "*Blume* ist feminin: *die Blume*."
+  - id: q15
+    type: true-false
+    prompt: Der Haus ist hier.
+    answer: false
+    explanation:
+      en: "*Haus* is neuter: *das Haus*."
+      fa: "*Haus* خنثی است: *das Haus*."
+      de: "*Haus* ist neutral: *das Haus*."
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-01-01
+  pool: c1e7c762e11d7420
