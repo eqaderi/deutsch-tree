@@ -37,10 +37,14 @@ ending, because the pipeline runs directly in Node.
 | `content/` | The real content: one YAML file per node under `content/nodes/`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
 | `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
-| `src/app/` | App shell: routes, tree, node page. `styles.css` holds the design tokens. |
+| `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress. No interface, no storage; randomness is passed in. |
+| `src/progress-store/` | Keeps progress in browser storage, with a version number. It only stores; the learning engine decides how progress changes. |
+| `src/app/` | App shell: routes, tree, node page, test. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests never depend on the real content. |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
+| `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
+| `tests/progress-store/` | The progress store on a stand-in for browser storage, including text saved by each earlier version. |
 | `tests/language/` | The interface strings of the three languages, compared key by key. |
 | `tests/browser/` | Seam 3: whole journeys in a browser. |
 
@@ -51,6 +55,25 @@ both written by the pipeline at build time.
 Page addresses live after the `#`, for example `#/node/grammar-001`. The site
 is plain files, so this is what keeps direct links and reloads working on
 GitHub Pages and from a local folder.
+
+## Tests and progress
+
+- A test is taken at `#/node/<id>/test`. `NodeTest` in `src/app/TestPage.tsx`
+  runs it for any node with a pool: it draws an attempt, shows one question
+  per screen (`AttemptRun.tsx`), then the result (`TestResult.tsx`).
+- Every rule is in `src/learning-engine/index.ts`: `drawAttempt`, `passMark`,
+  `checkAnswer`, `scoreAttempt`, `applyAttempt`, `isDone`. Components call
+  these and hold no rule of their own.
+- Progress: read it with `useProgress()` and change it with
+  `updateProgress((progress) => …)` from `src/app/progress.ts`, where the
+  function comes from the learning engine. The saved text has a version
+  number; `src/progress-store/index.ts` says what to do when its shape changes.
+- A new question type needs: its schema and compiled type in
+  `src/content-model/index.ts`, its review view in
+  `src/content-pipeline/review.ts`, a case in `checkAnswer`, a case in
+  `QuestionView` and in `AnswerText` (`src/app/QuestionView.tsx`), and its
+  instruction in the three string files. The type checker points at each
+  place that is missing.
 
 ## Languages
 
@@ -84,6 +107,9 @@ GitHub Pages and from a local folder.
   font service, no analytics). Each run builds the site from the fixture
   content and serves it under `/deutsch-tree/` on a free port, so runs in
   several worktrees do not collide. Tests run at phone and at computer size.
+  A journey that takes a test uses `tests/browser/taking-a-test.ts`: it
+  answers right or wrong from the fixture node's own answer key, whatever
+  questions the attempt drew.
 
 ## Deploying
 
