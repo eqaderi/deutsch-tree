@@ -94,9 +94,9 @@ test('every official mock exam is reported, in the order given, also the ones no
 
 test('any two of the official mock exams will do, and a third good one changes nothing', () => {
   expect(readiness(recorded({ 'adults-2': all(92), 'youth-1': all(94) }), OFFICIAL).ready).toBe(true)
-  expect(
-    readiness(recorded({ 'adults-1': all(92), 'adults-2': all(92), 'youth-1': all(94) }), OFFICIAL),
-  ).toMatchObject({ ready: true, met: 3, missing: 0 })
+  expect(readiness(recorded({ 'adults-1': all(92), 'adults-2': all(92), 'youth-1': all(94) }), OFFICIAL)).toMatchObject(
+    { ready: true, met: 3, missing: 0 },
+  )
 })
 
 test('scores of an exam that is not one of the official mock exams do not count', () => {

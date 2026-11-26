@@ -82,16 +82,9 @@ test.each(['', '   '])('an empty field ("%s") means the module is not recorded',
   expect(readScore(typed)).toBe('none')
 })
 
-test.each([
-  '101',
-  '-1',
-  '90.5',
-  '90,5',
-  '90%',
-  'ninety',
-  '9 0',
-  '1e2',
-  '۱۰۱',
-])('a typed score "%s" is not a whole number from 0 to 100', (typed) => {
-  expect(readScore(typed)).toBe('invalid')
-})
+test.each(['101', '-1', '90.5', '90,5', '90%', 'ninety', '9 0', '1e2', '۱۰۱'])(
+  'a typed score "%s" is not a whole number from 0 to 100',
+  (typed) => {
+    expect(readScore(typed)).toBe('invalid')
+  },
+)
