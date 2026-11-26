@@ -8,7 +8,14 @@
  * The saved text carries a version number. When the saved shape changes,
  * raise SAVED_VERSION and teach `parseProgress` to read the older versions.
  */
-import { emptyProgress, type NodeProgress, type Progress } from '../learning-engine/index.ts'
+import {
+  EXAM_MODULES,
+  emptyProgress,
+  isScore,
+  type ModuleScores,
+  type NodeProgress,
+  type Progress,
+} from '../learning-engine/index.ts'
 
 /** The part of the browser's `localStorage` that the store needs. */
 export interface KeyValueStorage {
@@ -33,7 +40,8 @@ export const SAVED_VERSION = 1
 
 /** Progress as the text that is saved. */
 export function serialiseProgress(progress: Progress): string {
-  return JSON.stringify({ version: SAVED_VERSION, nodes: progress.nodes })
+  // `officialExams` joined version 1 later: it is left out while nothing is recorded.
+  return JSON.stringify({ version: SAVED_VERSION, nodes: progress.nodes, officialExams: progress.officialExams })
 }
 
 /** Saved text back into progress. Null when the text is not progress this version can read. */
@@ -55,7 +63,28 @@ export function parseProgress(text: string): Progress | null {
       attempts: typeof attempts === 'number' && Number.isInteger(attempts) && attempts > 0 ? attempts : 0,
     }
   }
-  return { nodes }
+  const officialExams = parseOfficialExams(saved.officialExams)
+  return officialExams ? { nodes, officialExams } : { nodes }
+}
+
+/**
+ * The recorded scores of official mock exams. Saved text without them (the
+ * app saved it before they existed) means that nothing is recorded. A score
+ * that is not a whole number from 0 to 100 is dropped.
+ */
+function parseOfficialExams(saved: unknown): Record<string, ModuleScores> | undefined {
+  if (!isRecord(saved)) return undefined
+  const exams: Record<string, ModuleScores> = {}
+  for (const [id, savedScores] of Object.entries(saved)) {
+    if (!isRecord(savedScores)) continue
+    const scores: ModuleScores = {}
+    for (const module of EXAM_MODULES) {
+      const score = savedScores[module]
+      if (isScore(score)) scores[module] = score
+    }
+    if (Object.keys(scores).length > 0) exams[id] = scores
+  }
+  return Object.keys(exams).length > 0 ? exams : undefined
 }
 
 /**

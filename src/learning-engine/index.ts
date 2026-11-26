@@ -167,6 +167,11 @@ export function recordOfficialExamScores(progress: Progress, examId: string, sco
 /** A module is scored in whole points from 0 to this. */
 export const MAXIMUM_SCORE = 100
 
+/** Is this a module score: a whole number from 0 to 100? */
+export function isScore(value: unknown): value is number {
+  return typeof value === 'number' && Number.isInteger(value) && value >= 0 && value <= MAXIMUM_SCORE
+}
+
 /**
  * What the learner typed into a score field: the score, 'none' for an empty
  * field (the module is not recorded), or 'invalid' for anything that is not
@@ -180,7 +185,7 @@ export function readScore(typed: string): number | 'none' | 'invalid' {
     .replace(/[٠-٩]/g, (digit) => String(digit.charCodeAt(0) - 0x0660))
   if (!/^\d{1,4}$/.test(latin)) return 'invalid'
   const score = Number(latin)
-  return score <= MAXIMUM_SCORE ? score : 'invalid'
+  return isScore(score) ? score : 'invalid'
 }
 
 /** How one official mock exam stands against the readiness rule. */

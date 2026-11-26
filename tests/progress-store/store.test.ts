@@ -1,5 +1,11 @@
 import { expect, test } from 'vitest'
-import { applyAttempt, emptyProgress, isDone } from '../../src/learning-engine/index.ts'
+import {
+  applyAttempt,
+  emptyProgress,
+  isDone,
+  officialExamScores,
+  recordOfficialExamScores,
+} from '../../src/learning-engine/index.ts'
 import { createProgressStore, type KeyValueStorage } from '../../src/progress-store/index.ts'
 
 /** Browser storage as the store sees it: text kept under a key. */
@@ -96,4 +102,47 @@ test('whoever subscribed hears of every change until they stop listening', () =>
   store.update(passGrammar1)
 
   expect(heard).toBe(2)
+})
+
+test('recorded scores of an official mock exam are still there when the app starts again', () => {
+  const storage = browserStorage()
+  const store = createProgressStore(storage)
+  store.update(passGrammar1)
+  store.update((progress) => recordOfficialExamScores(progress, 'adults-1', { reading: 93, listening: 0 }))
+
+  const afterReload = createProgressStore(storage).get()
+
+  expect(officialExamScores(afterReload, 'adults-1')).toEqual({ reading: 93, listening: 0 })
+  expect(officialExamScores(afterReload, 'adults-2')).toEqual({})
+  expect(isDone(afterReload, 'grammar-001')).toBe(true)
+})
+
+test('progress saved before official mock exam scores existed loads with nothing recorded', () => {
+  // Written out by hand: what the app saved before it knew of official mock exams.
+  const storage = browserStorage({
+    'deutsch-tree:progress': '{"version":1,"nodes":{"grammar-001":{"done":true,"attempts":3}}}',
+  })
+
+  const progress = createProgressStore(storage).get()
+
+  expect(officialExamScores(progress, 'adults-1')).toEqual({})
+  expect(isDone(progress, 'grammar-001')).toBe(true)
+})
+
+test('a saved score that is not a whole number from 0 to 100 counts as not recorded', () => {
+  const storage = browserStorage({
+    'deutsch-tree:progress': JSON.stringify({
+      version: 1,
+      nodes: {},
+      officialExams: {
+        'adults-1': { reading: 93, listening: '97', writing: 100.5, speaking: 101, other: 95 },
+        'adults-2': 'ninety',
+        'adults-3': { reading: -1 },
+      },
+    }),
+  })
+
+  const progress = createProgressStore(storage).get()
+
+  expect(progress.officialExams).toEqual({ 'adults-1': { reading: 93 } })
 })
