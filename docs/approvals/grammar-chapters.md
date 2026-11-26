@@ -1,6 +1,6 @@
 # Grammar chapters: for your approval
 
-Status: **waiting for the learner's approval.** Nothing here is final until you say so. The integration branch is not merged to `main` before that.
+Status: **approved by the learner on 2026-11-26** (recorded on issue #6): the chapter names and their order as listed here. A later change to a chapter's name or place needs a new yes.
 
 This document lists every grammar chapter of the tree, level by level, in the order the app walks through them. It belongs to ticket #6 ("All 212 grammar topics in the tree").
 
