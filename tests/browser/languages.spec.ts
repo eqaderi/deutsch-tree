@@ -73,3 +73,107 @@ test('a learner switches to Persian: the page reads right to left, the German in
   // An example sentence starts at the same edge as its Persian translation.
   expect(await startsOnTheRight(german.filter({ hasText: 'Ich wohne in Berlin.' }))).toBe(true)
 })
+
+test('the language choice is remembered after a reload', async ({ page }) => {
+  await page.goto('./#/node/grammar-001')
+  await page.getByRole('button', { name: 'فارسی' }).click()
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('فعل‌های آزمایشی')
+
+  await page.reload()
+
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('فعل‌های آزمایشی')
+  await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
+  await expect(page.getByRole('button', { name: 'فارسی' })).toHaveAttribute('aria-pressed', 'true')
+
+  // And on the next page the learner opens.
+  await page.getByRole('link', { name: 'همهٔ موضوع‌ها' }).click()
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('آلمانی از صفر تا B1')
+})
+
+test('in simple German the explanation is German and the examples need no translation', async ({ page }) => {
+  await page.goto('./#/node/grammar-001')
+
+  await page.getByRole('button', { name: 'Deutsch' }).click()
+
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Test-Verben')
+  await expect(page.getByRole('main').getByRole('heading', { level: 2 })).toHaveText([
+    'Regel',
+    'Tabelle',
+    'Beispiele',
+    'Häufige Fehler',
+    'Test',
+  ])
+  await expect(page.getByText('Ein Test-Verb bekommt die Endung der Person.')).toBeVisible()
+  await expect(page.getByText('Ich wohne in Berlin.')).toBeVisible()
+  await expect(page.getByText('I live in Berlin.')).toHaveCount(0)
+  await expect(page.locator('html')).toHaveAttribute('dir', 'ltr')
+  await expect(page.locator('html')).toHaveAttribute('lang', 'de')
+})
+
+test('the German on a topic page is the same in all three languages', async ({ page }) => {
+  await page.goto('./#/node/grammar-001')
+  const german = page.getByRole('main').locator('[lang="de"]')
+  const sameEverywhere = [
+    'ich',
+    '-e',
+    'ich',
+    'wohne',
+    'du',
+    'wohnst',
+    'Ich wohne in Berlin.',
+    'Wohnst du hier?',
+    'Du wohne hier.',
+    'Du wohnst hier.',
+  ]
+
+  for (const language of ['English', 'فارسی', 'Deutsch']) {
+    await page.getByRole('button', { name: language }).click()
+    await expect(page.getByRole('button', { name: language })).toHaveAttribute('aria-pressed', 'true')
+    await expect(german).toHaveText(sameEverywhere)
+  }
+})
+
+test('switching language keeps the learner in the same place', async ({ page }) => {
+  // On the tree, with a level chosen.
+  await page.goto('./#/?level=A1')
+  await page.getByRole('button', { name: 'فارسی' }).click()
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('آلمانی از صفر تا B1')
+  expect(new URL(page.url()).hash).toBe('#/?level=A1')
+
+  // On a topic's test. The page is the very same one, only in another
+  // language: it is not opened again, so nothing the learner did on it is lost.
+  await page.goto('./#/node/grammar-001/test')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('آزمون: فعل‌های آزمایشی')
+  const pageBefore = await page.getByRole('main').elementHandle()
+
+  await page.getByRole('button', { name: 'English' }).click()
+
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Test: Fixture verbs')
+  expect(new URL(page.url()).hash).toBe('#/node/grammar-001/test')
+  expect(await pageBefore?.evaluate((main) => main.isConnected)).toBe(true)
+})
+
+test('a Persian page fits the screen it is opened on', async ({ page }) => {
+  for (const address of ['./', './#/node/grammar-001', './#/node/grammar-001/test']) {
+    await page.goto(address)
+    await page.getByRole('button', { name: 'فارسی' }).click()
+    await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+
+    const sidewaysScroll = await page.evaluate(
+      () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    )
+    expect(sidewaysScroll, address).toBe(0)
+  }
+})
+
+test.describe('on a first visit with a Persian browser', () => {
+  test.use({ locale: 'fa-IR' })
+
+  test('the site opens in Persian', async ({ page }) => {
+    await page.goto('./')
+
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('آلمانی از صفر تا B1')
+    await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
+  })
+})
