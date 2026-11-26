@@ -136,6 +136,49 @@ GitHub Pages and from a local folder.
   for the learner. A larger view gets its own file beside `QuestionView.tsx`
   (`WordOrder.tsx`, `FindError.tsx`, `Matching.tsx`).
 
+## The tree: where the learner stands
+
+The rules are in the learning engine, like every rule. The tree
+(`src/app/TreePage.tsx`) only lays the answers out.
+
+- **State.** `nodeState(progress, id)` gives `not-started`, `in-progress` or
+  `done`. A node is in progress once a result exists for it (a finished test,
+  an entered score) and it is not done. Opening a page starts nothing. Read
+  the state through this function, never from the fields of the progress: a
+  node can become done in other ways than a passed pool. "Coming soon" is not
+  a state; it is the node's `status` in the content.
+- **Un-marking.** `unmarkDone(progress, id)` makes a done node not done and
+  keeps the rest, so it reads as in progress. The node page offers it.
+- **Next recommended.** `nextRecommended(nodes, progress)` is the earliest
+  node of the index that is published and not done, across kinds and levels.
+  It recommends and locks nothing; prerequisites are shown on the node page
+  and lock nothing either. `youAreHere` is the same node, or, when every
+  published node is done, the first one still to be written.
+- **Counts.** `countNodes(nodes, progress)` counts the nodes it is given (a
+  level, a kind, a chapter). A "coming soon" node counts as remaining, since
+  it is still on the way to the exam; `comingSoon` says how many of the
+  remaining ones have to wait. So one done node of 212 reads "1 done · 211
+  left, 211 of them coming soon".
+- **A test from the tree.** `hasTest` in a node's summary says that the node
+  is published and has a pool. Only then does a row offer "Test", which goes
+  to `#/node/<id>/test`. A new way of becoming done needs no change here.
+- **What the tree shows is in its address**: `#/?level=A2&kind=vocabulary`.
+  With no level in the address the tree opens at the level the learner is
+  in. Build such an address with `treeAddress` (`src/app/treeAddress.ts`).
+  A link "back to the tree" is `<BackToTree from={node} />` from a topic,
+  which leads to the topic's level, and `<BackToTree />` from any other
+  page, which leads to the tree as the learner last saw it.
+- Above the route the tree shows the next topic and at most one note: the
+  first-visit steps while the learner has no progress, the backup suggestion
+  once they have a milestone. A new note must not make a third panel there.
+- A row of a topic, in the tree or in another list, is `NodeRow`
+  (`src/app/NodeRow.tsx`).
+- A setting of the device that is not progress (the dismissed first-visit
+  steps in `src/app/firstVisit.ts`, the language) has its own storage key
+  and stays out of the progress store.
+- The tree has no streaks, points, reminders or daily goals, and a browser
+  test keeps it so.
+
 ## Readiness and the official mock exams
 
 - The readiness view is `#/readiness` (`src/app/ReadinessPage.tsx`). The tree
@@ -226,6 +269,10 @@ GitHub Pages and from a local folder.
 - One question type: `tests/content-pipeline/extra-question.ts` adds one
   question to the fixture pool and gives back what the pipeline makes of it;
   `review-sheet.ts` holds a reviewer's answers to the fixture pool.
+- A journey that needs another tree than the fixture's (several kinds, other
+  chapters, hundreds of topics) uses `serveCurriculum` in
+  `tests/browser/curriculum.ts`: it gives the page an invented tree written
+  in a few lines, and leaves the fixture files alone.
 
 ## Deploying
 

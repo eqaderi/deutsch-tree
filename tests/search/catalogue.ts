@@ -75,6 +75,7 @@ function topic(id: string, status: NodeSummary['status'], title: Localised<RichT
     status,
     recogniseOnly: false,
     prerequisites: [],
+    hasTest: status === 'published',
     title,
   }
 }

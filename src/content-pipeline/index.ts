@@ -309,6 +309,8 @@ function compileNode(file: NodeFile): CompiledNode {
     status: file.status,
     recogniseOnly: file.recogniseOnly,
     prerequisites: file.prerequisites,
+    // A draft pool inside a "coming soon" file is not a test yet.
+    hasTest: file.status === 'published' && file.questions !== undefined,
     title: richTextIn(file.title),
     ...(file.module !== undefined && { module: file.module }),
     ...(file.part !== undefined && { part: file.part }),
