@@ -162,6 +162,80 @@ function assign<Field extends keyof Progress>(progress: Progress, field: Field, 
   progress[field] = value
 }
 
+/** The name that marks a file as a progress file of this app. */
+const APP_NAME = 'deutsch-tree'
+
+const ABOUT_THE_FILE =
+  'A backup of your learning progress in deutsch-tree. To bring it back, open deutsch-tree, choose "Back up progress" and import this file. It holds which topics you have done and your scores, nothing else, and it is never sent anywhere.'
+
+export interface ProgressFile {
+  /** A file name that says what the file is and the day it was made. */
+  name: string
+  text: string
+}
+
+/**
+ * The progress as a file for the learner to keep: the saved object, headed
+ * by the app's name, a sentence on what the file is, and the moment of the
+ * export. Laid out so that a person can read it.
+ */
+export function exportProgress(progress: Progress, now: Date): ProgressFile {
+  const { version, ...fields } = savedObject(progress)
+  const file = { app: APP_NAME, about: ABOUT_THE_FILE, exported: now.toISOString(), version, ...fields }
+  // The day as the learner's own clock has it, which is what they will look for.
+  const day = [now.getFullYear(), now.getMonth() + 1, now.getDate()]
+    .map((part) => String(part).padStart(2, '0'))
+    .join('-')
+  return { name: `${APP_NAME}-progress-${day}.json`, text: `${readableJson(file)}\n` }
+}
+
+export type ImportedProgress =
+  | {
+      ok: true
+      progress: Progress
+      /** When the file was exported, if it says so. */
+      exported: Date | null
+    }
+  | { ok: false; problem: ReadProblem }
+
+/** The text of a progress file back into progress, whichever version of the app exported it. */
+export function importProgress(text: string): ImportedProgress {
+  const file = parseJson(text)
+  if (!isRecord(file) || file.app !== APP_NAME) return { ok: false, problem: 'not-progress' }
+  const read = readSaved(file, TODAY)
+  if (!read.ok) return read
+  const exported = typeof file.exported === 'string' ? new Date(file.exported) : null
+  return { ...read, exported: exported && !Number.isNaN(exported.getTime()) ? exported : null }
+}
+
+/**
+ * JSON with the first two levels on lines of their own and everything deeper
+ * on one line: one line per topic, per exam, per whatever a field lists.
+ */
+function readableJson(value: unknown, depth = 0): string {
+  const inner = '  '.repeat(depth + 1)
+  const close = '  '.repeat(depth)
+  if (depth < 2 && Array.isArray(value) && value.length > 0) {
+    return `[\n${value.map((item) => inner + readableJson(item, depth + 1)).join(',\n')}\n${close}]`
+  }
+  if (depth < 2 && isRecord(value) && Object.keys(value).length > 0) {
+    const lines = Object.entries(value).map(
+      ([key, item]) => `${inner}${JSON.stringify(key)}: ${readableJson(item, depth + 1)}`,
+    )
+    return `{\n${lines.join(',\n')}\n${close}}`
+  }
+  return onOneLine(value)
+}
+
+function onOneLine(value: unknown): string {
+  if (Array.isArray(value)) return `[${value.map(onOneLine).join(', ')}]`
+  if (isRecord(value)) {
+    const parts = Object.entries(value).map(([key, item]) => `${JSON.stringify(key)}: ${onOneLine(item)}`)
+    return parts.length > 0 ? `{ ${parts.join(', ')} }` : '{}'
+  }
+  return JSON.stringify(value) ?? 'null'
+}
+
 /**
  * A store on the given storage (the browser's `localStorage`). With `null`,
  * or with storage that refuses to work (some private windows), progress still
