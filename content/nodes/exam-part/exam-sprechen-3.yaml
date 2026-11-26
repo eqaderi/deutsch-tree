@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-sprechen-3
+kind: exam-part
+level: B1
+chapter: b1-exam-sprechen
+order: 3
+status: coming-soon
+module: sprechen
+part: 3
+title:
+  en: "*Sprechen Teil 3*: feedback and questions after a presentation"
+  fa: "*Sprechen Teil 3*: بازخورد و پرسش پس از ارائه"
+  de: "Sprechen Teil 3: Rückmeldung und Fragen nach einer Präsentation"

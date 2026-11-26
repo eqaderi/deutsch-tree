@@ -1,6 +1,4 @@
-# Sprechen, Teil 1: planning something together, along four points. The task
-# is original; it follows the format of the exam, not the wording of any
-# official or published task.
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
 id: exam-sprechen-1
 kind: exam-part
 level: B1
@@ -10,10 +8,12 @@ status: published
 module: sprechen
 part: 1
 title:
-  en: "Speaking, part 1: planning something together"
-  fa: "صحبت کردن، بخش ۱: برنامه‌ریزی با هم"
-  de: "Sprechen, Teil 1: gemeinsam etwas planen"
+  en: "*Sprechen Teil 1*: planning something together"
+  fa: "*Sprechen Teil 1*: برنامه‌ریزی مشترک"
+  de: "Sprechen Teil 1: gemeinsam etwas planen"
 
+# The task is original; it follows the format of the exam, not the wording of
+# any official or published task.
 task:
   situation: >
     Ihr Deutschkurs ist in zwei Wochen zu Ende. Zum Abschluss möchten Sie für

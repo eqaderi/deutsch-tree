@@ -24,9 +24,6 @@ export type NodeStatus = (typeof NODE_STATUSES)[number]
 export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
 export type ExamModule = (typeof EXAM_MODULES)[number]
 
-/** How many parts each module has. */
-export const EXAM_PART_COUNT: Record<ExamModule, number> = { lesen: 5, hoeren: 4, schreiben: 3, sprechen: 3 }
-
 /**
  * The modules that the app cannot score itself. Their nodes have no question
  * pool: the learner does a task, an AI assistant grades it with the prompt
@@ -245,6 +242,16 @@ const reviewRecord = z.strictObject({
   pool: text,
 })
 
+/** The fields that the nodes of one kind have, and no others. */
+const FIELDS_OF_ONE_KIND = {
+  module: 'exam-part',
+  part: 'exam-part',
+  purpose: 'phrases',
+  examTasks: 'phrases',
+} as const satisfies Record<string, NodeKind>
+
+const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${kind}`
+
 /** The content sections that a published grammar node must have. */
 const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
 
@@ -301,6 +308,16 @@ export const nodeFileSchema = z
     prerequisites: z.array(nodeId).default([]),
     title: localised,
 
+    /** Exam-part nodes only: the module of the exam this part belongs to. */
+    module: z.enum(EXAM_MODULES).optional(),
+    /** Exam-part nodes only: the number of the part inside its module, as the exam counts it. */
+    part: z.number().int('must be a whole number').positive().optional(),
+
+    /** Phrases nodes only: what the phrases are for, in one line. */
+    purpose: localised.optional(),
+    /** Phrases nodes only: ids of the exam-part nodes whose tasks the phrases serve. */
+    examTasks: z.array(nodeId).min(1, 'must name at least one exam task').optional(),
+
     explanations: z
       .strictObject({ en: explanationIn('en'), fa: explanationIn('fa'), de: explanationIn('de') })
       .optional(),
@@ -318,10 +335,6 @@ export const nodeFileSchema = z
     /** A published node must have one that matches its pool; the content pipeline checks it. */
     review: reviewRecord.optional(),
 
-    /** Exam part nodes only: the module of the exam the part belongs to. */
-    module: z.enum(EXAM_MODULES).optional(),
-    /** Exam part nodes only: the number of the part in its module (Teil 1, Aufgabe 2 …). */
-    part: z.number().int('must be a whole number').positive().optional(),
     /** Writing and speaking nodes only: the task. */
     task: task.optional(),
   })
@@ -333,9 +346,71 @@ export const nodeFileSchema = z
         message: 'a grammar node id is "grammar-" plus its three-digit number in the grammar list, like "grammar-001"',
       })
     }
-    const partIsKnown = examPartIsStated(value, ctx)
-    const taskFields = partIsKnown && isAssistantGraded(value) ? TASK_FIELDS[value.module][value.part ?? 0] : undefined
-    if (taskFields && value.task) taskFitsItsPart(value.task, taskFields, ctx)
+    for (const [field, kind] of Object.entries(FIELDS_OF_ONE_KIND)) {
+      if (value.kind !== kind && value[field as keyof typeof FIELDS_OF_ONE_KIND] !== undefined) {
+        ctx.addIssue({ code: 'custom', path: [field], message: `only ${withArticle(kind)} node has this` })
+      }
+    }
+    if (value.kind === 'phrases') {
+      if (!value.id.startsWith('phrases-')) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['id'],
+          message: 'a phrases node id is "phrases-" plus its purpose in a word or two, like "phrases-agreeing"',
+        })
+      }
+      if (value.purpose === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['purpose'],
+          message: 'is missing: a phrases node says in one line what its phrases are for',
+        })
+      }
+      if (value.examTasks === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['examTasks'],
+          message: 'is missing: a phrases node names the exam tasks it serves, by the ids of their exam-part nodes',
+        })
+      }
+    }
+    if (value.kind === 'exam-part') {
+      if (value.module === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['module'],
+          message: `is missing: an exam-part node names its module: ${EXAM_MODULES.slice(0, -1).join(', ')} or ${EXAM_MODULES.at(-1)}`,
+        })
+      }
+      if (value.part === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['part'],
+          message: 'is missing: an exam-part node gives the number of its part inside the module',
+        })
+      }
+      const id = `exam-${value.module}-${value.part}`
+      if (value.module !== undefined && value.part !== undefined && value.id !== id) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['id'],
+          message: `the id of part ${value.part} of the module ${value.module} is "${id}"`,
+        })
+      }
+    }
+    if (isAssistantGraded(value) && value.part !== undefined) {
+      const taskFields = TASK_FIELDS[value.module][value.part]
+      if (taskFields === undefined) {
+        const parts = Object.keys(TASK_FIELDS[value.module])
+        ctx.addIssue({
+          code: 'custom',
+          path: ['part'],
+          message: `${value.module} has parts ${parts[0]} to ${parts.at(-1)}`,
+        })
+      } else if (value.task) {
+        taskFitsItsPart(value.task, taskFields, ctx)
+      }
+    }
 
     if (value.status !== 'published') return
     if (value.kind === 'grammar') {
@@ -348,7 +423,7 @@ export const nodeFileSchema = z
       if (value.task === undefined) {
         ctx.addIssue({ code: 'custom', path: ['task'], message: 'is required for a published node' })
       }
-    } else if (value.kind !== 'exam-part' || partIsKnown) {
+    } else {
       ctx.addIssue({
         code: 'custom',
         path: ['status'],
@@ -356,63 +431,6 @@ export const nodeFileSchema = z
       })
     }
   })
-
-/**
- * An exam part node states its module and its part, and is named after them;
- * no other node states them. Returns whether the node is an exam part whose
- * module and part can be relied on.
- */
-function examPartIsStated(
-  value: { id: string; kind: NodeKind; module?: ExamModule | undefined; part?: number | undefined },
-  ctx: z.RefinementCtx,
-): boolean {
-  if (value.kind !== 'exam-part') {
-    for (const field of ['module', 'part'] as const) {
-      if (value[field] !== undefined) {
-        ctx.addIssue({
-          code: 'custom',
-          path: [field],
-          message: `belongs to exam part nodes only; this is a ${value.kind} node`,
-        })
-      }
-    }
-    return false
-  }
-
-  if (value.module === undefined) {
-    ctx.addIssue({
-      code: 'custom',
-      path: ['module'],
-      message: `is required for an exam part node: ${EXAM_MODULES.slice(0, -1).join(', ')} or ${EXAM_MODULES.at(-1)}`,
-    })
-  }
-  if (value.part === undefined) {
-    ctx.addIssue({
-      code: 'custom',
-      path: ['part'],
-      message: 'is required for an exam part node: the number of the part in its module',
-    })
-  }
-  if (value.module === undefined || value.part === undefined) return false
-
-  if (value.part > EXAM_PART_COUNT[value.module]) {
-    ctx.addIssue({
-      code: 'custom',
-      path: ['part'],
-      message: `${value.module} has parts 1 to ${EXAM_PART_COUNT[value.module]}`,
-    })
-    return false
-  }
-  const id = `exam-${value.module}-${value.part}`
-  if (value.id !== id) {
-    ctx.addIssue({
-      code: 'custom',
-      path: ['id'],
-      message: `the id of an exam part node is "exam-<module>-<part>": this one must be "${id}"`,
-    })
-  }
-  return true
-}
 
 /** A task holds the fields of its exam part, no others, and as many points as the part has. */
 function taskFitsItsPart(
@@ -495,9 +513,12 @@ export interface NodeSummary {
   prerequisites: string[]
   /** German inside a title is marked, like in every other text for the learner. */
   title: Localised<RichText>
-  /** Exam part nodes only: the module of the exam and the number of the part in it. */
+  /** Exam-part nodes only: the module of the exam and the number of the part inside it. */
   module?: ExamModule
   part?: number
+  /** Phrases nodes only: what the phrases are for, and the ids of the exam-part nodes whose tasks they serve. */
+  purpose?: Localised<RichText>
+  examTasks?: string[]
 }
 
 /** A chapter as the tree shows it: a stop on the line of its level. */

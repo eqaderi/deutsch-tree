@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-hoeren-2
+kind: exam-part
+level: B1
+chapter: b1-exam-hoeren
+order: 2
+status: coming-soon
+module: hoeren
+part: 2
+title:
+  en: "*Hören Teil 2*: a guided tour or a short talk"
+  fa: "*Hören Teil 2*: بازدید با راهنما یا سخنرانی کوتاه"
+  de: "Hören Teil 2: eine Führung oder ein kurzer Vortrag"

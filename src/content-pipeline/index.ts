@@ -235,7 +235,10 @@ function compileNode(file: NodeFile): CompiledNode {
     recogniseOnly: file.recogniseOnly,
     prerequisites: file.prerequisites,
     title: richTextIn(file.title),
-    ...(file.module !== undefined && file.part !== undefined ? { module: file.module, part: file.part } : {}),
+    ...(file.module !== undefined && { module: file.module }),
+    ...(file.part !== undefined && { part: file.part }),
+    ...(file.purpose !== undefined && { purpose: richTextIn(file.purpose) }),
+    ...(file.examTasks !== undefined && { examTasks: file.examTasks }),
   }
   // Drafts inside a "coming soon" file are checked but never shipped.
   if (file.status !== 'published') return { ...summary, content: null }

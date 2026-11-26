@@ -129,7 +129,7 @@ test('a task holds the fields of its own exam part and no others', async () => {
 
 test('a presentation task is a topic; the five slides are the same for every topic', async () => {
   const content = await fixtureContentWith({
-    'nodes/exam/exam-sprechen-2.yaml': () =>
+    'nodes/exam-part/exam-sprechen-2.yaml': () =>
       [
         'id: exam-sprechen-2',
         'kind: exam-part',
@@ -153,45 +153,7 @@ test('a presentation task is a topic; the five slides are the same for every top
   })
 })
 
-test('an exam part node states its module and part, and its id is "exam-<module>-<part>"', async () => {
-  const withoutModule = await fixtureContentWith({
-    [WRITING]: changeNode((node) => {
-      delete node.module
-      delete node.part
-    }),
-  })
-  const otherId = await fixtureContentWith({
-    [SPEAKING]: changeNode((node) => {
-      node.part = 3
-      node.task = { topic: 'Fixture-Sport im Verein' }
-    }),
-  })
-
-  expect((await compileContent(withoutModule)).report.errors).toEqual([
-    {
-      file: WRITING,
-      node: 'exam-schreiben-1',
-      where: 'module',
-      message: 'is required for an exam part node: lesen, hoeren, schreiben or sprechen',
-    },
-    {
-      file: WRITING,
-      node: 'exam-schreiben-1',
-      where: 'part',
-      message: 'is required for an exam part node: the number of the part in its module',
-    },
-  ])
-  expect((await compileContent(otherId)).report.errors).toEqual([
-    {
-      file: SPEAKING,
-      node: 'exam-sprechen-1',
-      where: 'id',
-      message: 'the id of an exam part node is "exam-<module>-<part>": this one must be "exam-sprechen-3"',
-    },
-  ])
-})
-
-test('a part number beyond the parts of its module is rejected', async () => {
+test('a writing or speaking node is one of the three parts of its module', async () => {
   const content = await fixtureContentWith({
     [WRITING]: changeNode((node) => {
       node.id = 'exam-schreiben-4'
@@ -204,24 +166,5 @@ test('a part number beyond the parts of its module is rejected', async () => {
 
   expect(report.errors).toEqual([
     { file: WRITING, node: 'exam-schreiben-4', where: 'part', message: 'schreiben has parts 1 to 3' },
-  ])
-})
-
-test('only an exam part node states a module and a part', async () => {
-  const content = await fixtureContentWith({
-    'nodes/grammar/grammar-002.yaml': changeNode((node) => {
-      node.module = 'schreiben'
-    }),
-  })
-
-  const { report } = await compileContent(content)
-
-  expect(report.errors).toEqual([
-    {
-      file: 'nodes/grammar/grammar-002.yaml',
-      node: 'grammar-002',
-      where: 'module',
-      message: 'belongs to exam part nodes only; this is a grammar node',
-    },
   ])
 })

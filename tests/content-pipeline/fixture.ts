@@ -13,8 +13,8 @@ export const PUBLISHED = 'nodes/grammar/grammar-001.yaml'
 export const COMING_SOON = 'nodes/grammar/grammar-002.yaml'
 
 /** The fixture's published writing node and speaking node: exam parts that an AI assistant grades. */
-export const WRITING = 'nodes/exam/exam-schreiben-1.yaml'
-export const SPEAKING = 'nodes/exam/exam-sprechen-1.yaml'
+export const WRITING = 'nodes/exam-part/exam-schreiben-1.yaml'
+export const SPEAKING = 'nodes/exam-part/exam-sprechen-1.yaml'
 
 /**
  * A temporary copy of the fixture content with some files rewritten or added.
