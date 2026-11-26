@@ -19,6 +19,7 @@
     "review:pool": "node src/content-pipeline/review-cli.ts pool",
     "review:record": "node src/content-pipeline/review-cli.ts record",
     "pack:build": "node src/pack-builder/cli.ts",
+    "share": "vite build && node src/start-files/cli.ts",
     "vocabulary:scope": "node src/vocabulary-scope/cli.ts",
     "vocabulary:approval": "node src/vocabulary-scope/approval-cli.ts",
     "test:unit": "vitest run",

@@ -341,9 +341,14 @@ export const en = {
   noPackTitle: 'No exam book found',
   noPackSteps: [
     'A book of practice exams that you own can be added as a private pack. The pack is made once from the book’s files with the command pnpm pack:build.',
-    'Put the pack folder into the folder named “private” in the deutsch-tree folder on your computer. Start the app from that folder with its start file, then open this page again.',
+    'Put the pack folder into the folder named “private”. In the folder with the start files, it is inside the folder “app”. Start the app with its start file, then open this page again.',
     'Packs never appear on the public website. Only the app on your own computer finds them, so the book stays with you.',
   ],
+  phoneTitle: 'On a phone or tablet',
+  phoneIntro:
+    'Connect it to the same Wi-Fi as this computer, and open this address in its browser. The app must keep running here.',
+  phoneProgress:
+    'The phone keeps its own progress. To move progress from one device to the other, use “Back up progress”.',
   packUnreadable: (folder: string) =>
     `The pack in the folder “${folder}” cannot be read. Build it again with pnpm pack:build.`,
   examCount: (count: number) => (count === 1 ? '1 exam' : `${count} exams`),

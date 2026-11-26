@@ -2,7 +2,7 @@ import { use, useId } from 'react'
 import { Link } from 'react-router'
 import type { PackDescription } from '../content-model/pack.ts'
 import { useLanguage } from '../language/index.tsx'
-import { findPacks } from '../pack-loader/index.ts'
+import { findPacks, findPhoneAddress } from '../pack-loader/index.ts'
 import { German } from './German.tsx'
 import { BackToTree } from './NotFound.tsx'
 
@@ -14,11 +14,13 @@ export function packModuleAddress(packId: string, exam: number, module: string):
 /**
  * The learner's own exam books: the packs the pack loader found in the
  * private folder, each exam with its modules. With none, as on the public
- * site, the page explains where to put one.
+ * site, the page explains where to put one. When a start file runs the app,
+ * the page also gives the address a phone on the same Wi-Fi opens.
  */
 export function PacksPage() {
   const { strings } = useLanguage()
   const packs = use(findPacks())
+  const phone = use(findPhoneAddress())
 
   return (
     <main className="wrap">
@@ -39,7 +41,26 @@ export function PacksPage() {
           </section>
         ),
       )}
+      {phone && <PhoneAddress address={phone} />}
     </main>
+  )
+}
+
+/** The address of the app on the home network, for a phone or tablet. */
+function PhoneAddress({ address }: { address: string }) {
+  const { strings } = useLanguage()
+  const id = useId()
+  return (
+    <section className="panel message" aria-labelledby={id}>
+      <h2 id={id} className="cap">
+        {strings.phoneTitle}
+      </h2>
+      <p>{strings.phoneIntro}</p>
+      <p className="phone-address">
+        <bdi dir="ltr">{address}</bdi>
+      </p>
+      <p className="secondary">{strings.phoneProgress}</p>
+    </section>
   )
 }
 

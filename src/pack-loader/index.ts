@@ -8,8 +8,10 @@
  * configured:
  *
  *   - `pnpm dev` answers packs.json from the project's private folder as it is;
- *   - the pack builder rewrites packs.json after every build, so a folder
- *     served by a start file has it;
+ *   - the pack builder rewrites packs.json after every build, and a start
+ *     file's server rewrites it when it starts (src/start-files/);
+ *   - a start file's server also writes `private/address.json`, the address
+ *     a phone on the same network opens;
  *   - on the public site there is no private folder: the request fails, the
  *     loader finds no pack, and the app explains where to put one.
  *
@@ -18,6 +20,8 @@
  * be read is reported as such, so the learner sees which folder is broken.
  */
 import {
+  LOCAL_ADDRESS_FILE,
+  localAddressSchema,
   PACK_ANSWER_KEY_FILE,
   PACK_DESCRIPTION_FILE,
   PACK_LIST_FILE,
@@ -79,6 +83,21 @@ let found: Promise<FoundPack[]> | undefined
 export function findPacks(): Promise<FoundPack[]> {
   found ??= findAll()
   return found
+}
+
+let phone: Promise<string | undefined> | undefined
+
+/**
+ * The address a phone or tablet on the same network opens to reach the app
+ * on this computer, as the start file's server wrote it into the private
+ * folder when it started; undefined anywhere else. The same promise for every call.
+ */
+export function findPhoneAddress(): Promise<string | undefined> {
+  phone ??= json(packFileUrl(LOCAL_ADDRESS_FILE)).then((data) => {
+    const parsed = localAddressSchema.safeParse(data)
+    return parsed.success ? (parsed.data.phone ?? undefined) : undefined
+  })
+  return phone
 }
 
 const keys = new Map<string, Promise<PackAnswerKey | undefined>>()
