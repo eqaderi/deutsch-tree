@@ -69,4 +69,20 @@ export const de: Strings = {
   wrongAnswers: 'Falsche Antworten',
   yourAnswer: 'Deine Antwort',
   rightAnswer: 'Richtige Antwort',
+
+  checkpoint: 'Zwischentest',
+  checkpointTitle: (level) => `Zwischentest ${level}`,
+  checkpointIntro:
+    'Ein kurzer Test mit Fragen aus den Themen von diesem Niveau. Er zeigt dir, was du noch einmal ansehen sollst. Er ändert nichts an deinen Themen.',
+  startCheckpoint: 'Zwischentest starten',
+  checkpointNothingYet:
+    'Auf diesem Niveau hat noch kein Thema einen Test. Der Zwischentest kommt mit dem ersten Thema.',
+  checkpointSize: (questions, topics) =>
+    `${questions === 1 ? '1 Frage' : `${questions} Fragen`} aus ${topics === 1 ? '1 Thema' : `${topics} Themen`}`,
+  checkpointResult: 'Ergebnis vom Zwischentest',
+  checkpointAllRight: 'Alles war richtig. Du musst nichts noch einmal ansehen.',
+  checkpointSomeWrong: 'Einige Antworten waren falsch. Sieh dir die Themen unten noch einmal an.',
+  checkpointChangesNothing: 'Ein Zwischentest zeigt nur, wo du stehst. Deine Themen bleiben, wie sie sind.',
+  topicsToRevisit: 'Noch einmal ansehen',
+  wrongOfAsked: (wrong, asked) => `${wrong} von ${asked} falsch`,
 }

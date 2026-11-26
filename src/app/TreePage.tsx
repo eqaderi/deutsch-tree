@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router'
 import type { ChapterSummary, NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { isDone } from '../learning-engine/index.ts'
+import { CheckpointStop } from './CheckpointPage.tsx'
 import { loadIndex } from './content.ts'
 import { RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
@@ -65,6 +66,7 @@ export function TreePage() {
             {stops.map(({ chapter, topics }, index) => (
               <ChapterStop key={chapter.id} chapter={chapter} topics={topics} place={index + 1} />
             ))}
+            <CheckpointStop level={level} ready={inLevel.some((node) => node.status === 'published')} />
           </div>
         </>
       )}

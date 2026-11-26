@@ -1,17 +1,19 @@
 /**
- * Helpers for journeys that take a node's test.
+ * Helpers for journeys that take a node's test or a level's checkpoint.
  *
- * The answer key comes from the fixture node file, read here on its own; the
- * app only ever gets the compiled bundle. Which question is on screen is told
- * by its "report a problem" link, which names the node and the question.
+ * The answer key comes from the fixture node files, read here on their own;
+ * the app only ever gets the compiled bundle. Which question is on screen is
+ * told by its "report a problem" link, which names the node and the question.
  */
-import { readFile } from 'node:fs/promises'
+import { readdir, readFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import type { Locator, Page } from '@playwright/test'
 import { parse } from 'yaml'
 import { expect } from './test.ts'
 
 export interface FixtureQuestion {
+  /** The fixture node the question belongs to. */
+  node: string
   id: string
   type: 'multiple-choice' | 'gap-fill' | 'true-false'
   prompt: string
@@ -52,11 +54,20 @@ function persianDigits(value: number): string {
 /** How many questions an attempt of the fixture node draws: the default of the node file format. */
 export const ATTEMPT_SIZE = 10
 
-/** The pool of the fixture node "Fixture verbs", by question id. */
-export async function fixturePool(): Promise<Map<string, FixtureQuestion>> {
-  const file = fileURLToPath(new URL('../fixtures/content/nodes/grammar/grammar-001.yaml', import.meta.url))
-  const node = parse(await readFile(file, 'utf8')) as { questions: FixtureQuestion[] }
-  return new Map(node.questions.map((question) => [question.id, question]))
+/** The node whose test most journeys take: "Fixture verbs". */
+export const FIXTURE_NODE = 'grammar-001'
+
+/** Every question of the fixture nodes, by node and question id ("grammar-001/q1"). */
+export async function fixtureQuestions(): Promise<Map<string, FixtureQuestion>> {
+  const folder = fileURLToPath(new URL('../fixtures/content/nodes/grammar/', import.meta.url))
+  const questions = new Map<string, FixtureQuestion>()
+  for (const file of await readdir(folder)) {
+    const node = parse(await readFile(`${folder}${file}`, 'utf8')) as { id: string; questions?: FixtureQuestion[] }
+    for (const question of node.questions ?? []) {
+      questions.set(`${node.id}/${question.id}`, { ...question, node: node.id })
+    }
+  }
+  return questions
 }
 
 /** The "report a problem" link of the question on screen, in any language. */
@@ -82,9 +93,8 @@ export async function reportedIssue(link: Locator) {
 /** The fixture question that is on screen now. */
 export async function questionOnScreen(page: Page): Promise<FixtureQuestion> {
   const { node, question } = await reportedIssue(reportLink(page))
-  expect(node).toBe('grammar-001')
-  const found = (await fixturePool()).get(question ?? '')
-  if (!found) throw new Error(`the question on screen (${question}) is not in the fixture pool`)
+  const found = (await fixtureQuestions()).get(`${node}/${question}`)
+  if (!found) throw new Error(`the question on screen (${question} of ${node}) is not in the fixture content`)
   return found
 }
 
@@ -104,24 +114,44 @@ export function rightAnswerText(question: FixtureQuestion, words = ENGLISH): str
   return String(question.answer)
 }
 
+interface TakeTestOptions {
+  from?: number
+  words?: TestWords
+  /** How many questions the test has. */
+  total?: number
+  /** The node every question must come from; null for a checkpoint, which asks several nodes. */
+  node?: string | null
+}
+
 /**
  * Takes the rest of a test: answers every question from place `from` to the
  * last one and asks for the result. Returns the questions it met, in order.
  */
 export async function takeTest(
   page: Page,
-  how: (place: number) => 'right' | 'wrong',
-  { from = 1, words = ENGLISH }: { from?: number; words?: TestWords } = {},
+  how: (place: number, question: FixtureQuestion) => 'right' | 'wrong',
+  { from = 1, words = ENGLISH, total = ATTEMPT_SIZE, node = FIXTURE_NODE }: TakeTestOptions = {},
 ): Promise<FixtureQuestion[]> {
   const met: FixtureQuestion[] = []
-  for (let place = from; place <= ATTEMPT_SIZE; place += 1) {
-    await expect(page.getByText(words.questionOf(place, ATTEMPT_SIZE))).toBeVisible()
+  for (let place = from; place <= total; place += 1) {
+    await expect(page.getByText(words.questionOf(place, total))).toBeVisible()
     const question = await questionOnScreen(page)
+    if (node !== null) expect(question.node).toBe(node)
     met.push(question)
-    await choice(page, question, how(place), words).check()
-    await page.getByRole('button', { name: place < ATTEMPT_SIZE ? words.next : words.checkAnswers }).click()
+    await choice(page, question, how(place, question), words).check()
+    await page.getByRole('button', { name: place < total ? words.next : words.checkAnswers }).click()
   }
   return met
+}
+
+/** Takes a level's checkpoint of `total` questions from its first question to its result. */
+export function takeCheckpoint(
+  page: Page,
+  total: number,
+  how: (place: number, question: FixtureQuestion) => 'right' | 'wrong',
+  words = ENGLISH,
+): Promise<FixtureQuestion[]> {
+  return takeTest(page, how, { total, words, node: null })
 }
 
 /** An explanation as a learner reads it: the asterisks that mark German are not shown. */

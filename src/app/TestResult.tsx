@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router'
+import type { Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
-import type { AttemptResult } from '../learning-engine/index.ts'
+import type { Answer, AttemptResult } from '../learning-engine/index.ts'
 import { German, RichText } from './German.tsx'
 import { AnswerText } from './QuestionView.tsx'
 import { ReportProblem } from './ReportProblem.tsx'
@@ -19,8 +20,10 @@ interface TestResultProps {
  * wrong answers with their one-line reasons, and two buttons.
  */
 export function TestResult({ nodeId, result, wasDone, onRetry }: TestResultProps) {
-  const { language, strings } = useLanguage()
-  const wrong = result.questions.map((item, index) => ({ ...item, place: index + 1 })).filter((item) => !item.correct)
+  const { strings } = useLanguage()
+  const wrong = result.questions
+    .map((item, index) => ({ ...item, nodeId, place: index + 1 }))
+    .filter((item) => !item.correct)
 
   // The result takes the place of the last question: take the keyboard and a screen reader to it.
   const heading = useRef<HTMLHeadingElement>(null)
@@ -46,39 +49,7 @@ export function TestResult({ nodeId, result, wasDone, onRetry }: TestResultProps
         )}
       </div>
 
-      {wrong.length > 0 && (
-        <>
-          <h3 id="wrong-heading" className="cap">
-            {strings.wrongAnswers}
-          </h3>
-          <ol className="wrong-answers" aria-labelledby="wrong-heading">
-            {wrong.map(({ question, answer, place }) => (
-              <li key={place} className="wrong-answer">
-                <span className="wrong-answer-place">{strings.questionNumber(place)}</span>
-                <German className="wrong-answer-prompt">{question.prompt}</German>
-                <dl>
-                  <div className="answer-given">
-                    <dt>{strings.yourAnswer}</dt>
-                    <dd>
-                      <AnswerText question={question} answer={answer} />
-                    </dd>
-                  </div>
-                  <div className="answer-right">
-                    <dt>{strings.rightAnswer}</dt>
-                    <dd>
-                      <AnswerText question={question} answer={question.answer} />
-                    </dd>
-                  </div>
-                </dl>
-                <p className="wrong-answer-reason">
-                  <RichText parts={question.explanation[language]} />
-                </p>
-                <ReportProblem nodeId={nodeId} question={question} />
-              </li>
-            ))}
-          </ol>
-        </>
-      )}
+      <WrongAnswers wrong={wrong} />
 
       <div className="result-actions">
         {result.passed ? (
@@ -102,5 +73,58 @@ export function TestResult({ nodeId, result, wasDone, onRetry }: TestResultProps
         )}
       </div>
     </section>
+  )
+}
+
+/** One wrong answer of a finished test or checkpoint. */
+export interface WrongAnswer {
+  /** The place of the question in the test, from 1. */
+  place: number
+  /** The node the question belongs to. */
+  nodeId: string
+  question: Question
+  answer: Answer | undefined
+}
+
+/**
+ * The wrong answers of a test or a checkpoint under their heading: each
+ * question with what was answered, the right answer and its one-line reason.
+ * Shows nothing when there is none.
+ */
+export function WrongAnswers({ wrong }: { wrong: WrongAnswer[] }) {
+  const { language, strings } = useLanguage()
+  if (wrong.length === 0) return null
+  return (
+    <>
+      <h3 id="wrong-heading" className="cap">
+        {strings.wrongAnswers}
+      </h3>
+      <ol className="wrong-answers" aria-labelledby="wrong-heading">
+        {wrong.map(({ nodeId, question, answer, place }) => (
+          <li key={place} className="wrong-answer">
+            <span className="wrong-answer-place">{strings.questionNumber(place)}</span>
+            <German className="wrong-answer-prompt">{question.prompt}</German>
+            <dl>
+              <div className="answer-given">
+                <dt>{strings.yourAnswer}</dt>
+                <dd>
+                  <AnswerText question={question} answer={answer} />
+                </dd>
+              </div>
+              <div className="answer-right">
+                <dt>{strings.rightAnswer}</dt>
+                <dd>
+                  <AnswerText question={question} answer={question.answer} />
+                </dd>
+              </div>
+            </dl>
+            <p className="wrong-answer-reason">
+              <RichText parts={question.explanation[language]} />
+            </p>
+            <ReportProblem nodeId={nodeId} question={question} />
+          </li>
+        ))}
+      </ol>
+    </>
   )
 }

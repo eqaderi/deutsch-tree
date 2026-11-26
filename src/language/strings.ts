@@ -78,6 +78,23 @@ export const en = {
   wrongAnswers: 'Wrong answers',
   yourAnswer: 'Your answer',
   rightAnswer: 'Right answer',
+
+  // A level's checkpoint: a test across the topics of the level. It is advice and changes no topic.
+  checkpoint: 'Checkpoint',
+  checkpointTitle: (level: string) => `${level} checkpoint`,
+  checkpointIntro:
+    'A short test with questions from the topics of this level. It shows you what to look at again. It changes nothing in your topics.',
+  startCheckpoint: 'Start the checkpoint',
+  checkpointNothingYet: 'No topic of this level has a test yet. The checkpoint comes with the first one.',
+  checkpointSize: (questions: number, topics: number) =>
+    `${questions === 1 ? '1 question' : `${questions} questions`} from ${topics === 1 ? '1 topic' : `${topics} topics`}`,
+  checkpointResult: 'Checkpoint result',
+  checkpointAllRight: 'Everything was right. There is nothing to look at again.',
+  checkpointSomeWrong: 'Some answers were wrong. The topics below are worth another look.',
+  checkpointChangesNothing: 'A checkpoint only shows where you stand. Your topics stay as they are.',
+  topicsToRevisit: 'Topics to look at again',
+  /** Beside a topic in that list: "2 of 5 wrong". */
+  wrongOfAsked: (wrong: number, asked: number) => `${wrong} of ${asked} wrong`,
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */
