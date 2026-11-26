@@ -187,6 +187,18 @@ questions:
     explanation: { en: …, fa: …, de: … }   # one line: why the answer is right
 ```
 
+### What search and the overview page take from a node
+
+Nothing extra is written for them; the content pipeline builds both from the
+sections above.
+
+- Search finds a published node by its title, its rule, the rows of its table,
+  its examples with their translations, and the right half and the reason of
+  each common mistake. It does not look into the questions. A `coming-soon`
+  node is found by its title only.
+- "All grammar at a glance" shows the table of every published grammar node,
+  under its level and chapter.
+
 ### Question types
 
 Every question has `id`, `type`, `prompt` (German), its answer and

@@ -199,4 +199,15 @@ export const de: Strings = {
   },
   candidatePagesOnly: (first, last) =>
     `Benutz nur die Seiten ${first} bis ${last}. Auf den Seiten danach stehen die Lösungen, die Hörtexte zum Lesen und Beispiele für gute Antworten.`,
+
+  reference: 'Nachschlagen',
+  search: 'Suche',
+  allGrammar: 'Ganze Grammatik',
+  searchTitle: 'In allen Themen suchen',
+  searchHint: 'Schreib ein Wort. Hat deine Tastatur kein ä, ö, ü und ß? Dann schreib ae, oe, ue und ss.',
+  searchResults: (count) => (count === 1 ? '1 Thema gefunden' : `${count} Themen gefunden`),
+  searchNothing: 'Kein Thema gefunden. Versuch ein anderes Wort oder weniger Wörter.',
+  overviewTitle: 'Die ganze Grammatik auf einen Blick',
+  overviewIntro: 'Alle Grammatik-Tabellen auf einer Seite. Der Name über einer Tabelle öffnet das Thema.',
+  overviewEmpty: 'Es gibt noch keine Grammatik-Tabelle.',
 }
