@@ -7,11 +7,13 @@ import { loadIndex, loadNode } from './content.ts'
 import { German, plainText, RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
+import { PhraseSections } from './PhraseSections.tsx'
 import { useProgress } from './progress.ts'
 
 /**
- * A node's page. A grammar page is a column of panels in one fixed order:
- * rule, table, examples, common mistakes, test.
+ * A node's page: a column of panels in one fixed order, ending with the test.
+ * A grammar page has rule, table, examples and common mistakes; a phrases
+ * page has what the phrases are for and the phrases (PhraseSections.tsx).
  */
 export function NodePage() {
   const { id = '' } = useParams()
@@ -36,7 +38,11 @@ export function NodePage() {
   if (!content) return <NotFound />
   return (
     <NodeFrame node={summary}>
-      <GrammarSections content={content} />
+      {'phrases' in content ? (
+        <PhraseSections node={summary} content={content} />
+      ) : (
+        <GrammarSections content={content} />
+      )}
       <section className="action-bar" aria-labelledby="section-test">
         <h2 id="section-test" className="visually-hidden">
           {strings.test}
@@ -149,7 +155,8 @@ function GrammarSections({ content }: { content: GrammarContent }) {
   )
 }
 
-function Panel({ id, heading, children }: { id: string; heading: string; children: ReactNode }) {
+/** One panel of a node's page, under its heading. */
+export function Panel({ id, heading, children }: { id: string; heading: string; children: ReactNode }) {
   return (
     <section className="panel" aria-labelledby={id}>
       <h2 id={id} className="cap">
