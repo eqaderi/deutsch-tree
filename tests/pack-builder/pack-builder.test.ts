@@ -4,6 +4,7 @@ import path from 'node:path'
 import { expect, test } from 'vitest'
 import { packAnswerKeySchema, packDescriptionSchema, packListSchema } from '../../src/content-model/pack.ts'
 import { buildPack, type PackBuildOptions } from '../../src/pack-builder/index.ts'
+import { DEFAULT_PROFILE } from '../../src/pack-builder/profile.ts'
 import {
   type FixtureBook,
   fixtureBook,
@@ -47,9 +48,9 @@ test('a book becomes a pack folder whose description names the pack and counts i
 
 test('the packs folder lists every pack it holds, so the app can find them without listing folders', async () => {
   const first = await build(fixtureBook(), { id: 'second-book' })
-  await build(fixtureBook(), { id: 'first-book', outDir: first.outDir })
   // A folder that is not a pack, such as one copied in half-way, is not listed.
   await mkdir(path.join(first.outDir, 'not-a-pack'))
+  await build(fixtureBook(), { id: 'first-book', outDir: first.outDir })
 
   const list = JSON.parse(await readFile(path.join(first.outDir, 'packs.json'), 'utf8'))
   expect(packListSchema.parse(list)).toEqual({ format: 1, packs: ['first-book', 'second-book'] })
@@ -655,6 +656,31 @@ test('exam pages set in columns are read column by column, and parts that share 
     { first: 5, last: 5 },
     { first: 6, last: 6 },
   ])
+})
+
+test('choices may be written in capitals; the key is matched to them and keeps them as written', async () => {
+  const capitals = (list: string[]) => list.map((choice) => choice.toUpperCase())
+  const modules = structuredClone(DEFAULT_PROFILE.modules).map((module) => ({
+    ...module,
+    parts: module.parts?.map((part) => ({
+      ...part,
+      choices: (part.choices as Array<string | string[]>).every((choice) => typeof choice === 'string')
+        ? capitals(part.choices as string[])
+        : (part.choices as string[][]).map(capitals),
+    })),
+  }))
+  const { report, packDir } = await build(fixtureBook(), { profile: { modules } })
+
+  expect(report.errors).toEqual([])
+  expect(await answersOf(packDir, 1, 'lesen', 1)).toEqual([
+    [1, 'RICHTIG'],
+    [2, 'FALSCH'],
+    [3, 'FALSCH'],
+    [4, 'RICHTIG'],
+    [5, 'RICHTIG'],
+    [6, 'FALSCH'],
+  ])
+  expect((await answersOf(packDir, 1, 'lesen', 3))[0]).toEqual([13, 'D'])
 })
 
 test('a pattern matches however the PDF and the profile spell their umlauts', async () => {
