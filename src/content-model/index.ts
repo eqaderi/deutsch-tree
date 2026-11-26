@@ -648,6 +648,12 @@ export interface NodeSummary {
   status: NodeStatus
   recogniseOnly: boolean
   prerequisites: string[]
+  /**
+   * The node is published and has a pool, so its test can be started at
+   * `#/node/<id>/test` without opening its page. False for a node that becomes
+   * done in another way (a score typed in, a practice task).
+   */
+  hasTest: boolean
   /** German inside a title is marked, like in every other text for the learner. */
   title: Localised<RichText>
   /** Exam-part nodes only: the module of the exam and the number of the part inside it. */
