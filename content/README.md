@@ -140,9 +140,10 @@ sections above.
 
 ### Question types
 
-Every question has `id`, `type`, `prompt` (German), `answer` and
+Every question has `id`, `type`, `prompt` (German), its answer and
 `explanation`. The test shows the learner what to do in their language, so a
-prompt holds only the German.
+prompt holds only the German. A question that is answered by choosing states
+one `answer`; a question that is answered by typing lists its `answers`.
 
 ```yaml
   - id: q2
@@ -157,7 +158,34 @@ prompt holds only the German.
     prompt: Du wohne hier.          # the sentence the learner judges
     answer: false                   # true: correct German; false: it holds a mistake
     explanation: { en: …, fa: …, de: … }
+
+  - id: q4
+    type: typed-answer              # the learner types the answer
+    prompt: "Plural: der Apfel"
+    answers: [die Äpfel, Äpfel]     # every accepted answer; the first is shown as the right one
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q5
+    type: typed-gap-fill            # a sentence with one gap; the learner types the form
+    prompt: Du ___ (wohnen) hier.   # exactly one gap
+    answers: [wohnst]
+    explanation: { en: …, fa: …, de: … }
 ```
+
+### Typed questions: the accepted answers
+
+- List every answer that is correct German under `answers`, each written
+  exactly, with its umlauts, its ß and its capitals. An answer that is not
+  listed is marked wrong.
+- Do not list variants of spelling. The test ignores extra spaces by itself,
+  and it accepts *ae*, *oe*, *ue* and *ss* in place of *ä*, *ö*, *ü* and *ß*
+  and a capitalisation difference, each with a note that shows the learner
+  the exact spelling. Nothing else is forgiven: a missing word, such as an
+  article, or a plain *u* for *ü* is a wrong answer.
+- Pin the answer down. `Wir spielen ___.` can be filled in a hundred ways;
+  give the word to use, as in `Du ___ (wohnen) hier.` The blind reviewer types
+  an answer without seeing your list, and an answer that is not on it stops
+  the review.
 
 ### How many questions an attempt draws
 
@@ -189,9 +217,9 @@ change freely). A command writes the record, never a hand:
    step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
    in step 1, then add that second file with another `--answers`.
 
-Only `multiple-choice`, `gap-fill` and `true-false` questions and only grammar
-nodes can be published so far. Other question types and node kinds are added
-to the schema as they are built.
+Only `multiple-choice`, `gap-fill`, `true-false`, `typed-answer` and
+`typed-gap-fill` questions and only grammar nodes can be published so far.
+Other question types and node kinds are added to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 

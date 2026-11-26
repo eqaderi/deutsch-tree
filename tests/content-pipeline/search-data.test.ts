@@ -5,24 +5,33 @@ import { fixtureContent } from './fixture.ts'
 test('the search data of a language holds what a published node says, in that language and in German', async () => {
   const { bundle } = await compileContent(fixtureContent)
 
-  expect(bundle?.search.en).toEqual({
-    entries: [
-      {
-        node: 'grammar-001',
-        passages: [
-          ['A fixture verb takes the ending of its person. With ', { de: 'ich' }, ' the ending is ', { de: '-e' }, '.'],
-          [{ de: 'ich · wohne' }],
-          [{ de: 'du · wohnst' }],
-          [{ de: 'Ich wohne in Berlin.' }, ' – I live in Berlin.'],
-          [{ de: 'Wohnst du hier?' }, ' – Do you live here?'],
-          [{ de: 'Du wohnst hier.' }, ' – With ', { de: 'du' }, ' the ending is ', { de: '-st' }, '.'],
-        ],
-      },
+  expect(bundle?.search.en.entries[0]).toEqual({
+    node: 'grammar-001',
+    passages: [
+      ['A fixture verb takes the ending of its person. With ', { de: 'ich' }, ' the ending is ', { de: '-e' }, '.'],
+      [{ de: 'ich · wohne' }],
+      [{ de: 'du · wohnst' }],
+      [{ de: 'Ich wohne in Berlin.' }, ' – I live in Berlin.'],
+      [{ de: 'Wohnst du hier?' }, ' – Do you live here?'],
+      [{ de: 'Du wohnst hier.' }, ' – With ', { de: 'du' }, ' the ending is ', { de: '-st' }, '.'],
     ],
   })
   expect(bundle?.search.fa.entries[0]?.passages[3]).toEqual([
     { de: 'Ich wohne in Berlin.' },
     ' – من در برلین زندگی می‌کنم.',
+  ])
+})
+
+test('a node that is coming soon has no search data: the index has its title', async () => {
+  const { bundle } = await compileContent(fixtureContent)
+
+  // grammar-002 and grammar-201 are coming soon.
+  expect(bundle?.search.en.entries.map((entry) => entry.node)).toEqual([
+    'grammar-001',
+    'grammar-010',
+    'grammar-101',
+    'grammar-102',
+    'grammar-103',
   ])
 })
 

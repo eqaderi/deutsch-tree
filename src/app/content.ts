@@ -37,6 +37,24 @@ export function loadNode(id: string): Promise<CompiledNode> {
   return load(`nodes/${id}.json`)
 }
 
+const groups = new Map<string, Promise<CompiledNode[]>>()
+
+/**
+ * Several nodes with their page content, in the order asked for. All are
+ * requested at once; a node that was loaded before is not fetched again.
+ */
+export function loadNodes(ids: readonly string[]): Promise<CompiledNode[]> {
+  const key = ids.join(' ')
+  let group = groups.get(key)
+  if (!group) {
+    group = Promise.all(ids.map(loadNode))
+    // A failed group is forgotten, like a failed request.
+    group.catch(() => groups.delete(key))
+    groups.set(key, group)
+  }
+  return group
+}
+
 /** What search looks through in one language, besides the titles of the index. */
 export function loadSearchData(language: Language): Promise<SearchData> {
   return load(`search/${language}.json`)

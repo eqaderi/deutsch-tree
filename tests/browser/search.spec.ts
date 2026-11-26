@@ -39,6 +39,14 @@ test('search finds a topic by a word of its explanation or by a German word, and
   await box.fill('BERLIN')
   await expect(results(page)).toContainText('Ich wohne in Berlin. – I live in Berlin.')
 
+  // German typed on a keyboard without umlauts: "die Häuser" is in a table, "Fußball" in an example.
+  await box.fill('haeuser')
+  await expect(results(page)).toHaveCount(1)
+  await expect(results(page)).toContainText('Fixture umlauts')
+  await expect(results(page)).toContainText('das Haus · die Häuser')
+  await box.fill('fussball')
+  await expect(results(page)).toContainText('Wir spielen Fußball. – We play football.')
+
   // The German title of the topic.
   await box.fill('test-verben')
   await expect(results(page)).toContainText('Fixture verbs')
@@ -94,7 +102,7 @@ test('the tree loads no search data; search loads it, and only in the language o
 
   await page.getByRole('link', { name: 'Search' }).click()
   await page.getByRole('searchbox').fill('fixture')
-  await expect(results(page)).toHaveCount(2)
+  await expect(results(page)).toHaveCount(7)
 
   expect(loaded).toEqual(['index.json', 'search/en.json'])
 })
@@ -129,12 +137,12 @@ test('in Persian, search takes Persian as a learner types it, and shows the Germ
 
 test('search fits the screen it is opened on, in English and in Persian', async ({ page }) => {
   await page.goto('./#/search?q=fixture')
-  await expect(results(page)).toHaveCount(2)
+  await expect(results(page)).toHaveCount(7)
   await expect(page.getByRole('searchbox')).toBeInViewport()
   expect(await sidewaysScroll(page)).toBe(0)
 
   await page.getByRole('button', { name: 'فارسی' }).click()
   await page.getByRole('searchbox').fill('آزمایشی')
-  await expect(results(page)).toHaveCount(2)
+  await expect(results(page)).toHaveCount(7)
   expect(await sidewaysScroll(page)).toBe(0)
 })
