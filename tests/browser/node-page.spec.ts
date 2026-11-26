@@ -43,3 +43,13 @@ test('a topic page fits the screen it is opened on', async ({ page }) => {
   )
   expect(sidewaysScroll).toBe(0)
 })
+
+test('the test button on a topic page leads to that topic’s test', async ({ page }) => {
+  await page.goto('./#/node/grammar-001')
+
+  await page.getByRole('link', { name: 'Take the test' }).click()
+
+  await expect(page.getByRole('heading', { level: 1, name: 'Test: Fixture verbs' })).toBeVisible()
+  await page.getByRole('link', { name: 'Back to the topic' }).click()
+  await expect(page.getByRole('heading', { level: 1, name: 'Fixture verbs' })).toBeVisible()
+})
