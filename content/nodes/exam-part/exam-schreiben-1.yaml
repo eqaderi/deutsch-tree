@@ -1,0 +1,92 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-schreiben-1
+kind: exam-part
+level: B1
+chapter: b1-exam-schreiben
+order: 1
+status: published
+module: schreiben
+part: 1
+title:
+  en: "*Schreiben Aufgabe 1*: an e-mail to a friend"
+  fa: "*Schreiben Aufgabe 1*: ایمیل به یک دوست"
+  de: "Schreiben Aufgabe 1: eine E-Mail an einen Freund oder eine Freundin"
+
+explanations:
+  en:
+    task: >
+      You write an informal e-mail of about 80 words to a friend. The task
+      describes a situation and gives three content points, each asking for
+      something different: for example describe something, give a reason, make
+      a suggestion. You write about all three, with a greeting, an
+      introduction, the points in a sensible order and a closing.
+    scoring: >
+      This task is 40 of the 100 points of *Schreiben*: up to 10 each for task
+      fulfilment (*Erfüllung*), coherence (*Kohärenz*), vocabulary
+      (*Wortschatz*) and grammar and spelling (*Strukturen*). If the task is
+      not fulfilled at all, the whole task scores 0. The exam suggests 20
+      minutes of the 60 for *Schreiben*. Here an AI assistant grades your
+      e-mail by these criteria and turns the points into a score out of 100;
+      the part is done at 90.
+    approach:
+      - "Read the three points and mark what each one asks you to do: describe, explain, suggest."
+      - "Write one or two sentences for each point, in the order of the task. A point left out costs the most."
+      - "Begin and end like an e-mail to a friend: *Liebe Lena,* … *Viele Grüße*."
+      - "Join your sentences with *weil*, *deshalb*, *aber* and *dann*, so that the e-mail reads as one text."
+      - "Aim for about 80 words; much shorter leaves points thin."
+      - "Keep five minutes to read it again for verb endings and word order."
+  fa:
+    task: >
+      یک ایمیل دوستانه با حدود ۸۰ کلمه به یک دوست می‌نویسید. تکلیف یک
+      موقعیت را شرح می‌دهد و سه نکتهٔ محتوایی می‌دهد که هر کدام چیز متفاوتی
+      می‌خواهد: مثلاً توصیف، دلیل آوردن، پیشنهاد دادن. دربارهٔ هر سه
+      می‌نویسید، با سلام، مقدمه، نکته‌ها به ترتیبی منطقی و پایان‌بندی.
+    scoring: >
+      این تکلیف ۴۰ امتیاز از ۱۰۰ امتیاز *Schreiben* است: تا ۱۰ امتیاز برای
+      انجام تکلیف (*Erfüllung*)، انسجام متن (*Kohärenz*)، واژگان (*Wortschatz*)
+      و دستور و املا (*Strukturen*). اگر تکلیف اصلاً انجام نشود، کل تکلیف صفر
+      می‌گیرد. امتحان ۲۰ دقیقه از ۶۰ دقیقهٔ *Schreiben* را برای آن پیشنهاد
+      می‌کند. این‌جا یک دستیار هوش مصنوعی ایمیل شما را با همین معیارها نمره
+      می‌دهد و امتیاز را به نمره‌ای از ۱۰۰ تبدیل می‌کند؛ با ۹۰ این بخش
+      تمام‌شده است.
+    approach:
+      - "سه نکته را بخوانید و مشخص کنید هر کدام چه کاری می‌خواهد: توصیف، توضیح، پیشنهاد."
+      - "برای هر نکته یک یا دو جمله بنویسید، به ترتیب تکلیف. جاانداختن یک نکته بیشترین امتیاز را می‌گیرد."
+      - "مثل ایمیل به یک دوست شروع و تمام کنید: *Liebe Lena,* … *Viele Grüße*."
+      - "جمله‌ها را با *weil*، *deshalb*، *aber* و *dann* به هم وصل کنید تا ایمیل یک متن واحد باشد."
+      - "حدود ۸۰ کلمه بنویسید؛ متن خیلی کوتاه نکته‌ها را ناقص می‌گذارد."
+      - "پنج دقیقه برای بازخوانی پایانهٔ فعل‌ها و ترتیب کلمه‌ها نگه دارید."
+  de:
+    task: >
+      Du schreibst eine persönliche E-Mail an einen Freund oder eine Freundin,
+      etwa 80 Wörter. Die Aufgabe beschreibt eine Situation und hat drei
+      Punkte. Jeder Punkt will etwas anderes: zum Beispiel etwas beschreiben,
+      einen Grund nennen, einen Vorschlag machen. Du schreibst zu allen drei
+      Punkten. Die E-Mail hat eine Anrede, eine Einleitung, die Punkte in einer
+      guten Reihenfolge und einen Schluss.
+    scoring: >
+      Diese Aufgabe hat 40 von 100 Punkten im Modul *Schreiben*. Es gibt bis
+      zu 10 Punkte für die Aufgabe (*Erfüllung*), für den Aufbau
+      (*Kohärenz*), für die Wörter (*Wortschatz*) und für Grammatik und
+      Rechtschreibung (*Strukturen*). Wenn du die Aufgabe gar nicht erfüllst,
+      bekommst du 0 Punkte. Die Prüfung empfiehlt 20 von 60 Minuten. Hier
+      bewertet ein KI-Assistent deine E-Mail mit diesen Kriterien. Er macht
+      daraus ein Ergebnis von 0 bis 100. Mit 90 ist der Teil fertig.
+    approach:
+      - "Lies die drei Punkte. Was sollst du bei jedem Punkt machen: beschreiben, begründen, vorschlagen?"
+      - "Schreib zu jedem Punkt ein oder zwei Sätze, in der Reihenfolge der Aufgabe. Ein fehlender Punkt kostet am meisten."
+      - "Beginn und schließ wie in einer E-Mail an einen Freund: *Liebe Lena,* … *Viele Grüße*."
+      - "Verbinde deine Sätze mit *weil*, *deshalb*, *aber* und *dann*. So wird die E-Mail ein Text."
+      - "Schreib etwa 80 Wörter. Ein viel kürzerer Text sagt zu wenig zu den Punkten."
+      - "Lies am Ende fünf Minuten Korrektur: Verbendungen und Wortstellung."
+
+# The task is original; it follows the format of the exam, not the wording of
+# any official or published task.
+task:
+  situation: >
+    Sie sind letzte Woche in eine neue Wohnung gezogen. Ihre Freundin Lena
+    wohnt in einer anderen Stadt und hat die Wohnung noch nicht gesehen.
+  points:
+    - "Beschreiben Sie: Wie ist die neue Wohnung?"
+    - "Begründen Sie: Warum sind Sie umgezogen?"
+    - Machen Sie einen Vorschlag für einen Besuch von Lena.

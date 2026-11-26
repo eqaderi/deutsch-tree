@@ -1,0 +1,230 @@
+# Fixture node for tests. Invented, short, and stable: tests assert on these words.
+id: grammar-001
+kind: grammar
+level: A1
+chapter: fixture-basics
+order: 1
+status: published
+recogniseOnly: false
+prerequisites: []
+title:
+  en: Fixture verbs
+  fa: فعل‌های آزمایشی
+  de: Test-Verben
+
+explanations:
+  en:
+    rule: >
+      A fixture verb takes the ending of its person. With *ich* the ending
+      is *-e*.
+  fa:
+    rule: >
+      فعل آزمایشی پایانهٔ شخص خود را می‌گیرد. با *ich* پایانه *-e* است.
+  de:
+    rule: >
+      Ein Test-Verb bekommt die Endung der Person. Bei *ich* ist die Endung *-e*.
+
+table:
+  columns:
+    - en: Person
+      fa: شخص
+      de: Person
+    - en: Form
+      fa: صورت
+      de: Form
+  rows:
+    - [ich, wohne]
+    - [du, wohnst]
+
+examples:
+  - de: Ich wohne in Berlin.
+    en: I live in Berlin.
+    fa: من در برلین زندگی می‌کنم.
+  - de: Wohnst du hier?
+    en: Do you live here?
+    fa: تو این‌جا زندگی می‌کنی؟
+
+mistakes:
+  - wrong: Du wohne hier.
+    right: Du wohnst hier.
+    why:
+      en: With *du* the ending is *-st*.
+      fa: با *du* پایانه *-st* است.
+      de: Bei *du* ist die Endung *-st*.
+
+# The first 15 questions are the smallest pool a published node may have.
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Ich ___ in Berlin.
+    options: [wohne, wohnst, wohnt]
+    answer: wohne
+    explanation:
+      en: With *ich* the ending is *-e*.
+      fa: با *ich* پایانه *-e* است.
+      de: Bei *ich* ist die Endung *-e*.
+  - id: q2
+    type: multiple-choice
+    prompt: Du ___ hier.
+    options: [wohne, wohnst, wohnen]
+    answer: wohnst
+    explanation:
+      en: With *du* the ending is *-st*.
+      fa: با *du* پایانه *-st* است.
+      de: Bei *du* ist die Endung *-st*.
+  - id: q3
+    type: multiple-choice
+    prompt: Er ___ in Köln.
+    options: [wohne, wohnst, wohnt]
+    answer: wohnt
+    explanation:
+      en: With *er* the ending is *-t*.
+      fa: با *er* پایانه *-t* است.
+      de: Bei *er* ist die Endung *-t*.
+  - id: q4
+    type: gap-fill
+    prompt: Wir ___ in Wien.
+    options: [wohnst, wohnt, wohnen]
+    answer: wohnen
+    explanation:
+      en: With *wir* the ending is *-en*.
+      fa: با *wir* پایانه *-en* است.
+      de: Bei *wir* ist die Endung *-en*.
+  - id: q5
+    type: multiple-choice
+    prompt: Ihr ___ in Bonn.
+    options: [wohnt, wohnen, wohne]
+    answer: wohnt
+    explanation:
+      en: With *ihr* the ending is *-t*.
+      fa: با *ihr* پایانه *-t* است.
+      de: Bei *ihr* ist die Endung *-t*.
+  - id: q6
+    type: multiple-choice
+    prompt: Ich ___ Deutsch.
+    options: [lerne, lernst, lernt]
+    answer: lerne
+    explanation:
+      en: With *ich* the ending is *-e*.
+      fa: با *ich* پایانه *-e* است.
+      de: Bei *ich* ist die Endung *-e*.
+  - id: q7
+    type: multiple-choice
+    prompt: Du ___ Deutsch.
+    options: [lerne, lernst, lernen]
+    answer: lernst
+    explanation:
+      en: With *du* the ending is *-st*.
+      fa: با *du* پایانه *-st* است.
+      de: Bei *du* ist die Endung *-st*.
+  - id: q8
+    type: multiple-choice
+    prompt: Er ___ Deutsch.
+    options: [lerne, lernst, lernt]
+    answer: lernt
+    explanation:
+      en: With *er* the ending is *-t*.
+      fa: با *er* پایانه *-t* است.
+      de: Bei *er* ist die Endung *-t*.
+  - id: q9
+    type: gap-fill
+    prompt: Wir ___ Fußball.
+    options: [spiele, spielst, spielen]
+    answer: spielen
+    explanation:
+      en: With *wir* the ending is *-en*.
+      fa: با *wir* پایانه *-en* است.
+      de: Bei *wir* ist die Endung *-en*.
+  - id: q10
+    type: multiple-choice
+    prompt: Ihr ___ Fußball.
+    options: [spielt, spielen, spiele]
+    answer: spielt
+    explanation:
+      en: With *ihr* the ending is *-t*.
+      fa: با *ihr* پایانه *-t* است.
+      de: Bei *ihr* ist die Endung *-t*.
+  - id: q11
+    type: multiple-choice
+    prompt: Ich ___ Suppe.
+    options: [koche, kochst, kocht]
+    answer: koche
+    explanation:
+      en: With *ich* the ending is *-e*.
+      fa: با *ich* پایانه *-e* است.
+      de: Bei *ich* ist die Endung *-e*.
+  - id: q12
+    type: gap-fill
+    prompt: Du ___ Suppe.
+    options: [koche, kochst, kochen]
+    answer: kochst
+    explanation:
+      en: With *du* the ending is *-st*.
+      fa: با *du* پایانه *-st* است.
+      de: Bei *du* ist die Endung *-st*.
+  - id: q13
+    type: true-false
+    prompt: Er kochst Suppe.
+    answer: false
+    explanation:
+      en: It must be *er kocht*.
+      fa: باید *er kocht* باشد.
+      de: Es muss *er kocht* heißen.
+  - id: q14
+    type: true-false
+    prompt: Wir kochen Suppe.
+    answer: true
+    explanation:
+      en: With *wir* the ending is *-en*.
+      fa: با *wir* پایانه *-en* است.
+      de: Bei *wir* ist die Endung *-en*.
+  - id: q15
+    type: true-false
+    prompt: Ihr koche Suppe.
+    answer: false
+    explanation:
+      en: It must be *ihr kocht*.
+      fa: باید *ihr kocht* باشد.
+      de: Es muss *ihr kocht* heißen.
+  # One of each further type, and a word ordering question with two right orders.
+  - id: order-1
+    type: word-order
+    answers:
+      - [wo, wohnst, du]
+    end: "?"
+    explanation:
+      en: In a question with *wo* the verb comes second.
+      fa: در پرسش با *wo* فعل در جای دوم می‌آید.
+      de: In einer Frage mit *wo* steht das Verb auf Platz 2.
+  - id: order-2
+    type: word-order
+    answers:
+      - [ich, wohne, in Berlin]
+      - [in Berlin, wohne, ich]
+    explanation:
+      en: The verb is in second place; *ich* or *in Berlin* can come first.
+      fa: فعل در جای دوم است؛ *ich* یا *in Berlin* می‌تواند اول بیاید.
+      de: Das Verb steht auf Platz 2. *ich* oder *in Berlin* kann am Anfang stehen.
+  - id: error-1
+    type: find-error
+    prompt: Wir wohnst in Wien.
+    answer: wohnst
+    explanation:
+      en: It must be *wir wohnen*.
+      fa: باید *wir wohnen* باشد.
+      de: Es muss *wir wohnen* heißen.
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, lerne]
+      - [du, lernst]
+      - [wir, lernen]
+    explanation:
+      en: With *ich* the ending is *-e*, with *du* it is *-st* and with *wir* it is *-en*.
+      fa: با *ich* پایانه *-e* است، با *du* پایانه *-st* و با *wir* پایانه *-en*.
+      de: Bei *ich* ist die Endung *-e*, bei *du* ist sie *-st* und bei *wir* ist sie *-en*.
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-01-01
+  pool: 85af6dcc5459a89c

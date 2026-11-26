@@ -1,0 +1,13 @@
+# Grammar list row 148.
+id: grammar-148
+kind: grammar
+level: A1
+chapter: a1-negation
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-146, grammar-147]
+title:
+  en: "*kein … mehr*, *nicht mehr*, *nichts*, *nie*"
+  fa: "*kein … mehr*، *nicht mehr*، *nichts*، *nie*"
+  de: "*kein … mehr*, *nicht mehr*, *nichts*, *nie*"

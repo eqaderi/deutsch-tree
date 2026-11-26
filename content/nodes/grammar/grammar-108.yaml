@@ -1,0 +1,13 @@
+# Grammar list row 108.
+id: grammar-108
+kind: grammar
+level: A2
+chapter: a2-adjectives
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-077, grammar-107]
+title:
+  en: "Adjective endings after indefinite, *kein*, possessive"
+  fa: "پایانهٔ صفت بعد از حرف تعریف نامعیّن، *kein* و صفت ملکی"
+  de: "Adjektivendungen nach unbestimmtem Artikel, *kein* und Possessivartikel"

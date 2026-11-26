@@ -1,0 +1,13 @@
+# Grammar list row 125.
+id: grammar-125
+kind: grammar
+level: A1
+chapter: a1-prepositions
+order: 7
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-062, grammar-063]
+title:
+  en: "Modal: *mit*, *ohne*, *für*, *aus* (material), *als* (job)"
+  fa: "حرف‌های اضافهٔ *mit*، *ohne*، *für*، *aus* (جنس) و *als* (شغل)"
+  de: "*mit*, *ohne*, *für*, *aus* (Material), *als* (Beruf)"

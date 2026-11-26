@@ -1,0 +1,30 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-festivals
+kind: vocabulary
+level: A2
+chapter: a2-words-free-time
+order: 5
+status: coming-soon
+title:
+  en: "Festivals and holidays"
+  fa: "جشن‌ها و تعطیلی‌ها"
+  de: "Feste und Feiertage"
+words:
+  - word: Fest
+  - word: Feier
+  - word: Feiertag
+  - word: Weihnachten
+  - word: Ostern
+  - word: Silvester
+  - word: Neujahr
+  - word: Karneval
+  - word: Ferien
+  - word: schenken
+  - word: Religion
+  - word: Werktag
+  - word: Arbeitstag
+  - word: Mitternacht
+  - word: Kalender
+  - word: täglich
+  - word: tagsüber

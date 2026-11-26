@@ -1,0 +1,3167 @@
+/*
+ * The look of the whole app. It follows docs/design-direction.md; read that
+ * before changing anything here.
+ *
+ * Rules that keep later screens consistent:
+ *   - Use the tokens below; do not write colour values in components.
+ *   - Use logical properties (inline-start, block-end), never left and right,
+ *     so the same rules work right to left.
+ *   - Orange is only for the next recommended topic and the main action.
+ */
+
+:root {
+  --bg: #ece6dd;
+  --panel: #f6f2ec;
+  --raised: #fdfbf8;
+  --text: #201d1a;
+  /* Darker than the mock-up's #857b70, which failed contrast on the page background. */
+  --text-secondary: #6b6258;
+  --hairline: #dcd2c5;
+  /* The lighter line between the rows inside a panel. */
+  --hairline-soft: #e7dfd3;
+  --track: #cfc4b5;
+  --ring: #b9ad9c;
+  --accent: #f08a2b;
+  --accent-soft: #fbe2c8;
+  --accent-text: #a4520b;
+  --correct: #4f7a52;
+  --wrong: #b4492f;
+  --kind-grammar: #dccbb0;
+  --kind-vocabulary: #bccab1;
+  --kind-phrases: #b6c4d4;
+  --kind-exam-part: #dfb7ac;
+  /* A level tag, and other small labels on the panel. */
+  --tag: #e6ded2;
+  --tag-text: #5e554b;
+  /* Text and marks on a filled colour (a main button, a done mark), and the face of a scale. */
+  --white: #fff;
+  /* The light edge of a panel. */
+  --panel-edge: rgb(255 255 255 / 0.85);
+  /* Shadows are this warm brown at some opacity: rgb(var(--shadow) / 0.4). */
+  --shadow: 96 72 40;
+
+  --font-latin: "Outfit Variable", system-ui, sans-serif;
+  --font-persian: "Vazirmatn Variable", "Outfit Variable", system-ui, sans-serif;
+
+  --radius-panel: 22px;
+  --radius-card: 16px;
+  --gap: 14px;
+  --pad: 16px;
+  --reading-width: 720px;
+  --wide-width: 1120px;
+  --touch: 44px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-latin);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+:lang(fa) {
+  font-family: var(--font-persian);
+  letter-spacing: 0;
+}
+
+/* German always reads left to right, also inside a right-to-left page. */
+.de {
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-family: var(--font-latin);
+}
+
+h1 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.secondary {
+  color: var(--text-secondary);
+}
+
+/* Arrows that mean "back" or "forward" point the other way right to left. */
+[dir="rtl"] .flip {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+/* ---------- page frame ---------- */
+
+.wrap {
+  max-inline-size: var(--reading-width);
+  margin-inline: auto;
+  padding: var(--pad);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block-end: 0;
+}
+
+.logo {
+  font-family: var(--font-latin);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-block-size: var(--touch);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.logo::before {
+  content: "";
+  inline-size: 10px;
+  block-size: 10px;
+  border-radius: 3px;
+  background: var(--text);
+}
+
+/* The language choice: one pill with the three languages, each named in itself. */
+.topbar {
+  flex-wrap: wrap;
+  gap: 0 12px;
+}
+
+.language-switch {
+  display: flex;
+  border-radius: 999px;
+  background: var(--panel);
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+}
+
+.language-switch button {
+  display: flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  border: 0;
+  border-radius: 999px;
+  padding: 0 3px;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-family: var(--font-latin);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.language-switch button:lang(fa) {
+  font-family: var(--font-persian);
+}
+
+.language-switch span {
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.language-switch [aria-pressed="true"] span {
+  background: var(--text);
+  color: var(--white);
+}
+
+main.wrap {
+  padding-block-end: 48px;
+}
+
+/* ---------- shared pieces ---------- */
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: var(--radius-panel);
+  padding: var(--pad);
+  box-shadow:
+    0 16px 30px -20px rgb(var(--shadow) / 0.4),
+    0 2px 5px rgb(var(--shadow) / 0.06);
+}
+
+.panel + .panel {
+  margin-block-start: var(--gap);
+}
+
+.cap {
+  margin-block-end: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+:lang(fa) .cap {
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.big-number {
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 1;
+}
+
+.tag,
+.kind {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.tag {
+  border-radius: 999px;
+  padding: 2px 9px;
+  background: var(--tag);
+  color: var(--tag-text);
+}
+
+/* A kind is always written out; the tint only supports the word. */
+.kind {
+  border-radius: 7px;
+  padding: 2px 8px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.kind-grammar {
+  background: var(--kind-grammar);
+}
+
+.kind-vocabulary {
+  background: var(--kind-vocabulary);
+}
+
+.kind-phrases {
+  background: var(--kind-phrases);
+}
+
+.kind-exam-part {
+  background: var(--kind-exam-part);
+}
+
+.pill {
+  flex: none;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: var(--touch);
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: var(--text);
+  color: var(--white);
+  font: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* The main action. Dark text: white on this orange is too faint to read. */
+.btn-main {
+  background: var(--accent);
+  color: var(--text);
+}
+
+/* A second action beside the main one. */
+.btn-quiet {
+  background: transparent;
+  color: var(--text);
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+}
+
+.btn:disabled {
+  background: var(--hairline);
+  color: var(--text-secondary);
+  cursor: default;
+}
+
+/* A small action inside a note. Still as high as a touch target. */
+.btn-small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+/* State marks: a circle whose fill says the state; the word is always beside it. */
+.mark {
+  flex: none;
+  inline-size: 26px;
+  block-size: 26px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px var(--ring);
+}
+
+.mark-coming-soon {
+  box-shadow: none;
+  border: 2px dashed var(--ring);
+}
+
+/* In progress: a half-filled ring. */
+.mark-in-progress {
+  background: conic-gradient(var(--text) 0 50%, transparent 0);
+  box-shadow: inset 0 0 0 2px var(--text);
+}
+
+/* "You are here": on the level strip and on the chapter with the next topic. */
+.here {
+  border-radius: 999px;
+  padding: 2px 9px;
+  background: var(--accent);
+  color: var(--text);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* Done: a dark filled circle with a tick. */
+.mark-done {
+  position: relative;
+  background: var(--text);
+  box-shadow: none;
+}
+
+.mark-done::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 9px;
+  inset-block-start: 5px;
+  inline-size: 6px;
+  block-size: 11px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.tag-done {
+  background: var(--text);
+  color: var(--white);
+}
+
+/* Recognise only: outlined, so that it is not read as a state of the topic. */
+.tag-recognise {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--ring);
+  color: var(--text);
+}
+
+.recognise-note {
+  margin-block-start: 8px;
+  color: var(--text-secondary);
+}
+
+/* ---------- tree ---------- */
+
+.intro p {
+  margin-block-start: 8px;
+  color: var(--text-secondary);
+}
+
+/* First visit: three numbered steps and a button that sends them away. */
+.first-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-block-start: var(--gap);
+  border-radius: var(--radius-card);
+  padding: 12px 14px;
+  background: var(--raised);
+}
+
+.first-steps ol {
+  flex: 1;
+  min-inline-size: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.first-steps li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.first-steps li b {
+  flex: none;
+  display: grid;
+  place-items: center;
+  inline-size: 24px;
+  block-size: 24px;
+  border-radius: 50%;
+  background: var(--text);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* The next recommended topic: the one obvious next step, with the screen's main action. */
+.next-topic {
+  margin-block-start: var(--gap);
+}
+
+.next-topic-title {
+  font-size: 22px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.next-topic-chapter {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.next-topic-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-start: 14px;
+}
+
+.next-topic-actions .btn-main {
+  flex: 1;
+}
+
+.strip {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  /* Room above the levels for "You are here". */
+  margin-block: 22px 4px;
+  padding-block-start: 30px;
+}
+
+/* Above its level, centred on it, in both directions of writing. */
+.strip-level .here {
+  position: absolute;
+  inset-block-end: 100%;
+  justify-self: center;
+  margin-block-end: 4px;
+}
+
+/* Past the last level: it ends where the strip ends, so it never leaves the page. */
+.strip-end .here {
+  position: absolute;
+  inset-block-end: 100%;
+  inset-inline-end: 0;
+  margin-block-end: 4px;
+}
+
+.strip-line {
+  flex: 1;
+  block-size: 3px;
+  margin-block-start: 21px;
+  border-radius: 3px;
+  background: var(--track);
+}
+
+.strip-end {
+  position: relative;
+  margin-block-start: 13px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.strip-level {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  text-decoration: none;
+}
+
+.strip-level b {
+  display: grid;
+  place-items: center;
+  inline-size: var(--touch);
+  block-size: var(--touch);
+  border-radius: 50%;
+  background: var(--panel);
+  box-shadow: inset 0 0 0 2px var(--ring);
+  font-weight: 500;
+}
+
+.strip-level[aria-current] b {
+  background: var(--text);
+  color: var(--white);
+  box-shadow: none;
+}
+
+.strip-level small {
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.level-heading {
+  margin-block: 18px 2px;
+}
+
+.level-heading span {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.level-counts {
+  margin-block-end: 12px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* The filter by kind: one pill per kind, each with its own counts. */
+.kinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block-end: 16px;
+}
+
+.kind-choice {
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  gap: 2px;
+  min-block-size: var(--touch);
+  border-radius: 999px;
+  padding: 6px 16px;
+  background: var(--panel);
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.kind-choice[aria-current] {
+  background: var(--raised);
+  box-shadow: inset 0 0 0 2px var(--text);
+}
+
+.kind-choice b {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.kind-choice small {
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* One vertical line per level, with a stop for each chapter. */
+.route {
+  position: relative;
+  padding-inline-start: 40px;
+}
+
+.route::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 13px;
+  inset-block: 10px 24px;
+  inline-size: 3px;
+  border-radius: 3px;
+  background: var(--track);
+}
+
+.stop {
+  position: relative;
+  margin-block-end: var(--gap);
+}
+
+.stop-dot {
+  position: absolute;
+  inset-inline-start: -40px;
+  inset-block-start: 16px;
+  display: grid;
+  place-items: center;
+  inline-size: 29px;
+  block-size: 29px;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: inset 0 0 0 2px var(--ring);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* The chapter with the next recommended topic. */
+.stop-here .stop-dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  color: var(--text);
+}
+
+/* A chapter with every topic done. */
+.stop-done .stop-dot {
+  background: var(--text);
+  box-shadow: none;
+  color: var(--white);
+}
+
+/* A chapter: its head is always there; a tap on it shows or hides its topics. */
+.stop > .panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+.stop-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-block-size: var(--touch);
+  padding: 14px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.stop-head::-webkit-details-marker {
+  display: none;
+}
+
+.stop-head:focus-visible {
+  outline-offset: -3px;
+  border-radius: var(--radius-panel);
+}
+
+.stop-text {
+  flex: 1;
+  min-inline-size: 0;
+  display: grid;
+  justify-items: start;
+  gap: 6px;
+}
+
+.stop-name {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.stop-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* A plus while the chapter is closed, a minus while it is open. */
+.stop-sign {
+  position: relative;
+  flex: none;
+  inline-size: 14px;
+  block-size: 14px;
+  color: var(--text-secondary);
+}
+
+.stop-sign::before,
+.stop-sign::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 6px;
+  inline-size: 14px;
+  block-size: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.stop-sign::after {
+  transform: rotate(90deg);
+}
+
+[open] > .stop-head .stop-sign::after {
+  display: none;
+}
+
+[open] > .stop-head {
+  border-block-end: 1px solid var(--hairline);
+}
+
+/* The last stop of a level: its checkpoint. */
+.stop > .checkpoint-stop {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  padding: 14px;
+}
+
+.checkpoint-stop p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* The way on to the next level, after the checkpoint. */
+.checkpoint-stop .next-level a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.panel:has(> .rows) {
+  padding: 0;
+  overflow: hidden;
+}
+
+.rows li + li {
+  border-block-start: 1px solid var(--hairline-soft);
+}
+
+/* A row of a list: a mark or nothing, a text, and a word at its end. Often the whole row is a link. */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-block-size: var(--touch);
+  padding: 12px 14px;
+  text-decoration: none;
+}
+
+/*
+ * A topic: a row that links to its page (mark, title, state word) and, beside
+ * it, a link to its test.
+ */
+.topic {
+  display: flex;
+  align-items: center;
+}
+
+.topic > .row {
+  flex: 1;
+  min-inline-size: 0;
+}
+
+.topic > .row:focus-visible {
+  outline-offset: -3px;
+}
+
+/* Looks 32px high; the area that takes a tap is 44px. */
+.row-test {
+  position: relative;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 32px;
+  margin-inline-end: 14px;
+  border-radius: 999px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+}
+
+.row-test::after {
+  content: "";
+  position: absolute;
+  inset: -6px 0;
+}
+
+.row-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+
+/* The next recommended topic: the one row with the accent. The words say it too. */
+.topic-next {
+  background: var(--accent-soft);
+}
+
+.topic-next .mark {
+  box-shadow:
+    inset 0 0 0 2px var(--text),
+    0 0 0 3px var(--accent);
+}
+
+.pill-next {
+  background: var(--accent);
+  box-shadow: none;
+}
+
+.row-next-word {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.row-text {
+  flex: 1;
+  min-inline-size: 0;
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+}
+
+.row-title {
+  font-size: 15px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.row-soon .row-title,
+.row-state {
+  color: var(--text-secondary);
+}
+
+.row-state {
+  flex: none;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* ---------- node page ---------- */
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-block-size: var(--touch);
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.page-head {
+  margin-block: 2px 16px;
+}
+
+.page-head h1 {
+  overflow-wrap: anywhere;
+}
+
+/* One line under a page's title, such as how many questions a checkpoint has. */
+.page-note {
+  margin-block-start: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-block-start: 10px;
+}
+
+/* A quiet action written as a link, such as un-marking a done topic. */
+.text-button {
+  min-block-size: var(--touch);
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.unmark-question {
+  margin-block-start: 10px;
+  border-radius: var(--radius-card);
+  padding: 12px 14px;
+  background: var(--raised);
+}
+
+.unmark-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-start: 12px;
+}
+
+.unmark [role="status"] {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.unmark [role="status"]:not(:empty) {
+  margin-block-start: 10px;
+}
+
+/* What a topic builds on: advice, never a lock. */
+.builds-on {
+  margin-block-start: 14px;
+  font-size: 14px;
+}
+
+.builds-on .cap {
+  margin-block-end: 2px;
+}
+
+.builds-on ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.builds-on li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.builds-on a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.builds-on p {
+  color: var(--text-secondary);
+}
+
+.rule {
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  border-radius: var(--radius-card);
+  background: var(--raised);
+}
+
+.table-scroll table {
+  inline-size: 100%;
+  border-collapse: collapse;
+}
+
+.table-scroll th,
+.table-scroll td {
+  padding: 10px 12px;
+  text-align: start;
+}
+
+.table-scroll th {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.table-scroll td {
+  border-block-start: 1px solid var(--hairline-soft);
+  font-size: 17px;
+}
+
+/*
+ * Diagrams: drawn on an inner card, with the interface's colours. A drawing
+ * is 320 wide (src/content-model/diagram.ts) and is drawn at most 400px wide,
+ * so a label is never smaller than about 14px on a phone and never larger
+ * than 20px on a computer. The classes are the only look a drawing can have;
+ * content/README.md, "Diagrams", lists them.
+ */
+.diagram {
+  margin: 0;
+}
+
+.diagram + .diagram {
+  margin-block-start: var(--gap);
+}
+
+.diagram-drawing {
+  border-radius: var(--radius-card);
+  background: var(--raised);
+  padding: 8px;
+}
+
+.diagram-drawing svg {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: 400px;
+  block-size: auto;
+  margin-inline: auto;
+}
+
+.diagram figcaption {
+  margin-block-start: 8px;
+  color: var(--text-secondary);
+}
+
+.diagram .object {
+  fill: var(--text);
+}
+
+/* Edges are drawn in the secondary text colour: a hairline would be too faint to see a shape by. */
+.diagram .surface,
+.diagram .shade {
+  fill: var(--panel);
+  stroke: var(--text-secondary);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+
+.diagram .shade {
+  fill: var(--kind-grammar);
+}
+
+.diagram .line {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.diagram .guide {
+  fill: none;
+  stroke: var(--text-secondary);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
+}
+
+.diagram text {
+  font-family: var(--font-latin);
+  fill: var(--text);
+}
+
+.diagram text:lang(fa) {
+  font-family: var(--font-persian);
+}
+
+.diagram .label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.diagram .note {
+  font-size: 14px;
+  fill: var(--text-secondary);
+}
+
+.examples,
+.mistakes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.example {
+  display: grid;
+  gap: 2px;
+}
+
+.example + .example {
+  margin-block-start: 10px;
+  border-block-start: 1px solid var(--hairline-soft);
+  padding-block-start: 10px;
+}
+
+.example .de {
+  /* Starts at the same edge as its translation, also right to left. */
+  justify-self: start;
+  font-size: 17px;
+}
+
+.example small {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* ---------- audio ---------- */
+
+/* The play button of a piece of German: a ring, dark like the text. Orange is for the next topic and the main button only. */
+.play {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  inline-size: var(--touch);
+  block-size: var(--touch);
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  color: var(--text);
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+  cursor: pointer;
+}
+
+.play:hover {
+  background: var(--raised);
+}
+
+.play svg {
+  inline-size: 16px;
+  block-size: 16px;
+  fill: currentColor;
+}
+
+.play-failed {
+  font-size: 14px;
+  color: var(--wrong);
+}
+
+/* An example with its play button: the button at the start, the German and its translation beside it. */
+.example.heard {
+  grid-template-columns: var(--touch) 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.example.heard .play {
+  grid-row: span 3;
+  align-self: start;
+}
+
+.example.heard > :not(.play) {
+  grid-column: 2;
+}
+
+.word-said {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- vocabulary page ---------- */
+
+.words {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vocabulary-word {
+  display: grid;
+  gap: 4px;
+  border-radius: var(--radius-card);
+  background: var(--raised);
+  padding: 12px;
+}
+
+.vocabulary-word + .vocabulary-word {
+  margin-block-start: 10px;
+}
+
+.word-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px 10px;
+}
+
+.word-german {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.word-facts {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.word-plural,
+.word-definition {
+  font-size: 14px;
+}
+
+.word-definition {
+  color: var(--text-secondary);
+}
+
+.word-example {
+  display: grid;
+  gap: 2px;
+  margin-block-start: 4px;
+}
+
+.word-example .de {
+  justify-self: start;
+}
+
+.word-example small {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* The export to Anki: what the export of started topics holds, or why it holds nothing yet. */
+.anki-note {
+  margin-block-start: 8px;
+  font-size: 14px;
+}
+
+.mistake {
+  border-radius: var(--radius-card);
+  background: var(--raised);
+  padding: 12px;
+}
+
+.mistake + .mistake {
+  margin-block-start: 10px;
+}
+
+/* German quoted inside an explanation stands out a little. */
+.rule .de,
+.mistake p .de {
+  font-weight: 500;
+}
+
+.mistake-line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.mistake-word {
+  flex: none;
+  min-inline-size: 48px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.mistake-wrong {
+  color: var(--wrong);
+}
+
+.mistake-wrong .de {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.mistake-right {
+  color: var(--correct);
+}
+
+.mistake-right .de {
+  font-weight: 500;
+}
+
+.mistake p {
+  margin-block-start: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* A phrases page: one inner card for each phrase. */
+.phrases,
+.phrase-tasks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.phrase {
+  border-radius: var(--radius-card);
+  background: var(--raised);
+  padding: 14px;
+}
+
+.phrase + .phrase {
+  margin-block-start: 10px;
+}
+
+.phrase-de {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+/* The phrase starts at the same edge as its meaning, also right to left. */
+.phrase-de .de {
+  display: block;
+  inline-size: fit-content;
+}
+
+.phrase-meaning {
+  margin-block-start: 4px;
+}
+
+.phrase-meaning .de {
+  font-weight: 500;
+}
+
+.phrase-label {
+  margin-block: 12px 4px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.phrase-tasks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* An exam task the phrase serves: a link to that part of the exam. Its name may run over two lines. */
+.phrase-task {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  border-radius: calc(var(--touch) / 2);
+  padding: 6px 14px;
+  font-size: 14px;
+  line-height: 1.35;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+}
+
+/* The main action stays at the bottom of the screen while the page scrolls. */
+.action-bar {
+  position: sticky;
+  inset-block-end: 14px;
+  z-index: 3;
+  display: flex;
+  margin-block-start: 16px;
+}
+
+.action-bar .btn {
+  flex: 1;
+  box-shadow: 0 12px 24px -10px rgb(var(--shadow) / 0.6);
+}
+
+.action-bar .btn:disabled {
+  box-shadow: none;
+}
+
+/* ---------- test: one question per screen ---------- */
+
+.test-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-block-end: var(--gap);
+}
+
+.segments {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+}
+
+.segments span {
+  flex: 1;
+  block-size: 6px;
+  border-radius: 999px;
+  background: var(--track);
+}
+
+.segments .segment-done {
+  background: var(--text);
+}
+
+.segments .segment-current {
+  background: var(--accent);
+}
+
+.test-progress h2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* These headings get the focus from the app when the screen changes, never from the Tab key. */
+.test-progress h2:focus,
+.result h2:focus {
+  outline: none;
+}
+
+.question-instruction {
+  margin-block-end: 10px;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.question-sentence {
+  margin-block-end: 16px;
+  font-size: 22px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* The gap of a gap fill sentence: a line, then the chosen form on the line. */
+.gap {
+  display: inline-block;
+  min-inline-size: 4.5em;
+  border-block-end: 2.5px solid var(--text);
+  line-height: 1.25;
+  text-align: center;
+}
+
+.gap-filled {
+  font-weight: 500;
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+}
+
+.option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-block-size: 52px;
+  border-radius: var(--radius-card);
+  padding: 12px 16px;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+/* The real radio button covers the whole card, unseen: the card is the button. */
+.option input {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.option::before {
+  content: "";
+  flex: none;
+  inline-size: 20px;
+  block-size: 20px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px var(--ring);
+}
+
+.option:has(input:checked) {
+  box-shadow: inset 0 0 0 2.5px var(--text);
+}
+
+.option:has(input:checked)::before {
+  box-shadow: inset 0 0 0 6px var(--text);
+}
+
+.option:has(input:focus-visible) {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+/*
+ * Word ordering, find the error and matching. Their German is laid out left
+ * to right in every language (dir="ltr" in the markup), so these rules may
+ * rely on that order.
+ */
+
+.word-order,
+.matching,
+.sentence-line,
+.pieces {
+  min-inline-size: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+/* Word ordering: the sentence grows on a line; the pieces wait below it. */
+.sentence-line,
+.pieces {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.sentence-line {
+  min-block-size: 62px;
+  margin-block-end: 18px;
+  border-block-end: 2.5px solid var(--text);
+  padding-block: 8px;
+}
+
+/* The closing mark stands close to the last piece, as in a written sentence. */
+.sentence-end {
+  margin-inline-start: -4px;
+  font-family: var(--font-latin);
+  font-size: 22px;
+}
+
+.piece {
+  min-inline-size: var(--touch);
+  min-block-size: var(--touch);
+  border: 1.5px solid var(--hairline);
+  border-radius: 12px;
+  padding: 6px 14px;
+  background: var(--raised);
+  color: var(--text);
+  font: inherit;
+  font-family: var(--font-latin);
+  font-size: 18px;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+/* A piece that is in the sentence keeps its place below, as an empty outline. */
+.piece[aria-pressed="true"] {
+  border-style: dashed;
+  border-color: var(--ring);
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+/* Find the error: every word of the sentence is a choice; the marks between them are plain text. */
+.pick-word {
+  line-height: 56px;
+}
+
+.word {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: var(--touch);
+  min-block-size: var(--touch);
+  border-radius: 12px;
+  padding: 0 10px;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+  line-height: 1.25;
+  vertical-align: middle;
+}
+
+/* The real radio button covers the whole word, unseen: the word is the button. */
+.word input {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.word:has(input:checked) {
+  box-shadow: inset 0 0 0 2.5px var(--text);
+  font-weight: 500;
+}
+
+.word:has(input:focus-visible) {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+/* Matching: one row per item, the item and the list its partner is chosen from. */
+.pairs {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.pair select {
+  inline-size: 100%;
+  min-block-size: 52px;
+  border: 1.5px solid var(--hairline);
+  border-radius: var(--radius-card);
+  padding: 10px 12px;
+  background-color: var(--raised);
+  color: var(--text);
+  font: inherit;
+  font-family: "Outfit Variable", "Vazirmatn Variable", system-ui, sans-serif;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* A typed answer: a field for German, and under it one button for each letter a keyboard may lack. */
+.typed-field {
+  display: block;
+  inline-size: 100%;
+  min-block-size: 52px;
+  border: 0;
+  border-radius: var(--radius-card);
+  padding: 12px 16px;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.typed-field:focus-visible {
+  outline: 0;
+  box-shadow: inset 0 0 0 2.5px var(--text);
+}
+
+/* The buttons hold German: they run left to right, from the left edge of the field, on every page. */
+.typed-letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block-start: 10px;
+  direction: ltr;
+}
+
+.typed-letter {
+  min-inline-size: 52px;
+  min-block-size: var(--touch);
+  border: 0;
+  border-radius: 999px;
+  padding: 0 14px;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.typed-letter:active {
+  background: var(--hairline);
+}
+
+.report {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  margin-block-start: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.panel.question {
+  padding-block-end: 4px;
+}
+
+/* ---------- test: the result ---------- */
+
+.score {
+  margin-block: 14px 10px;
+}
+
+.result h3 {
+  margin-block: 22px 10px;
+}
+
+.wrong-answers,
+.noted-answers {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wrong-answer,
+.noted-answer {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+  border-radius: var(--radius-card);
+  padding: 12px 12px 0;
+  background: var(--raised);
+}
+
+.wrong-answer-place,
+.noted-answer-place {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.wrong-answer-prompt,
+.noted-answer-prompt {
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.wrong-answer dl,
+.noted-answer dl {
+  display: grid;
+  gap: 2px;
+  margin: 4px 0 0;
+}
+
+.wrong-answer dl div,
+.noted-answer dl div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 10px;
+}
+
+.wrong-answer dt,
+.noted-answer dt {
+  flex: none;
+  min-inline-size: 110px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.wrong-answer dd,
+.noted-answer dd {
+  margin: 0;
+}
+
+.answer-given {
+  color: var(--wrong);
+}
+
+.answer-given dd {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.answer-right {
+  color: var(--correct);
+}
+
+.answer-right dd {
+  font-weight: 500;
+}
+
+.wrong-answer-reason,
+.noted-answer-note {
+  margin-block-start: 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.wrong-answer-reason .de {
+  font-weight: 500;
+}
+
+/* A card of an answer accepted with a note ends with the note; a wrong answer's card ends with a link. */
+.noted-answer {
+  padding-block-end: 12px;
+}
+
+.wrong-answer .report {
+  margin-block-start: 0;
+}
+
+/* A checkpoint's result: the topics with wrong answers, each a link to its page. */
+.revisit {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: var(--radius-card);
+  background: var(--raised);
+  overflow: hidden;
+}
+
+.revisit li + li {
+  border-block-start: 1px solid var(--hairline);
+}
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-start: 18px;
+}
+
+.result-actions .btn {
+  flex: 1;
+}
+
+/* ---------- exam part: its page ---------- */
+
+/*
+ * Numbered steps: how to approach a part, and how to get a writing or
+ * speaking task graded. Something may follow them in their panel.
+ */
+.steps {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding-inline-start: 22px;
+}
+
+.steps:last-child {
+  margin-block-end: 0;
+}
+
+:lang(fa) .steps {
+  list-style-type: persian;
+}
+
+.steps li::marker {
+  color: var(--text-secondary);
+}
+
+/* ---------- exam part: a practice task, all on one page ---------- */
+
+/* A text of the task: an inner card, set for reading. */
+.task-text {
+  display: block;
+  border-radius: var(--radius-card);
+  padding: 16px;
+  background: var(--raised);
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.task-text + .task-text {
+  margin-block-start: 10px;
+}
+
+.task-text h3 {
+  margin-block-end: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* A line break inside a paragraph belongs to the text: a greeting, a signature. */
+.task-text p {
+  white-space: pre-line;
+}
+
+.task-text p + p {
+  margin-block-start: 12px;
+}
+
+/* A text to hear: its recording, and once the answers are checked what is said, line by line. */
+.recording {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+/* A second action: the main button of the page is "Check answers". */
+.btn-recording {
+  gap: 8px;
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+}
+
+.btn-recording svg {
+  inline-size: 16px;
+  block-size: 16px;
+  fill: currentColor;
+}
+
+.recording-note {
+  margin-block-start: 10px;
+  font-size: 14px;
+}
+
+.transcript {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+}
+
+.transcript-line {
+  display: grid;
+  grid-template-columns: var(--touch) 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.transcript-speaker {
+  font-weight: 500;
+}
+
+/* This heading gets the focus from the app when a new attempt starts, never from the Tab key. */
+.task-text-heading:focus {
+  outline: none;
+}
+
+.task-items,
+.item-results {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.task-item,
+.item-result {
+  border-radius: var(--radius-card);
+  padding: 12px 12px 0;
+  background: var(--raised);
+}
+
+.task-item-place {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* The statements of a task are read against a text, so they are smaller than the one sentence of a test screen. */
+.task-item .question-sentence {
+  margin-block: 2px 12px;
+  font-size: 18px;
+}
+
+/* What to do stands once above the items; inside each item only a screen reader hears it. */
+.task-items-one-instruction .question-instruction {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.task-item .option {
+  background: var(--panel);
+}
+
+/* Two short answers next to each other, as on an answer sheet. */
+.options-side-by-side {
+  grid-template-columns: 1fr 1fr;
+}
+
+.task-item .report {
+  margin-block-start: 0;
+}
+
+/* The count of answered items, under the words of the button. */
+.btn-with-note {
+  flex-direction: column;
+  gap: 0;
+  padding-block: 8px;
+}
+
+.btn-with-note small {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ---------- exam part: the result of every item ---------- */
+
+.item-result {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+}
+
+.item-result-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+}
+
+/* Whether an item was right. The words say it; the colour only supports them. */
+.verdict {
+  border-radius: 999px;
+  padding: 1px 9px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.verdict-right {
+  background: var(--correct);
+}
+
+.verdict-wrong {
+  background: var(--wrong);
+}
+
+.item-result-prompt {
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.item-result dl {
+  display: grid;
+  gap: 2px;
+  margin: 4px 0 0;
+}
+
+.item-result dl div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 10px;
+}
+
+.item-result dt {
+  flex: none;
+  min-inline-size: 110px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.item-result dd {
+  margin: 0;
+}
+
+/* An answer that was right is not crossed out. */
+.item-result .answer-right dd {
+  text-decoration: none;
+}
+
+.item-result-reason {
+  margin-block-start: 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.item-result-reason .de {
+  font-weight: 500;
+}
+
+.item-result .report {
+  margin-block-start: 0;
+}
+
+/* ---------- writing and speaking: task, prompt, score ---------- */
+
+/* The task sheet is German, like the sheet in the exam, and reads left to right in every language. */
+.task-sheet {
+  display: grid;
+  gap: 12px;
+  font-size: 17px;
+  line-height: 1.55;
+  text-align: start;
+}
+
+.task-part {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.task-points {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-inline-start: 22px;
+}
+
+.task-quote {
+  margin: 0;
+  border-radius: var(--radius-card);
+  padding: 12px;
+  background: var(--raised);
+}
+
+.task-quote cite {
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.prompt {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+}
+
+.prompt-status:empty {
+  display: none;
+}
+
+.prompt-details {
+  justify-self: stretch;
+}
+
+.prompt-details summary {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  color: var(--text-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.prompt-text {
+  display: block;
+  inline-size: 100%;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  padding: 12px;
+  background: var(--raised);
+  color: var(--text);
+  font-family: var(--font-latin);
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.prompt-notes {
+  display: grid;
+  gap: 8px;
+  margin-block-start: 10px;
+  font-size: 14px;
+}
+
+.score-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.score-form {
+  display: grid;
+  gap: 8px;
+  margin-block-start: 18px;
+}
+
+.score-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.score-input {
+  inline-size: 6em;
+  min-block-size: var(--touch);
+  border: 1.5px solid var(--ring);
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: var(--raised);
+  color: var(--text);
+  font: inherit;
+  font-size: 18px;
+  text-align: center;
+}
+
+.score-input[aria-invalid="true"] {
+  border-color: var(--wrong);
+}
+
+.score-problem {
+  color: var(--wrong);
+}
+
+/* ---------- the end of the tree: the exam ---------- */
+
+/* "Exam" at the end of the strip leads to the readiness view. */
+a.strip-end {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  margin-block-start: 0;
+  text-underline-offset: 3px;
+}
+
+.exam-stop-text {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+}
+
+.exam-stop-text p {
+  font-size: 14px;
+}
+
+.exam-stop-warning {
+  font-weight: 500;
+}
+
+.exam-stop .row {
+  border-block-start: 1px solid var(--hairline);
+}
+
+/* ---------- readiness and the official mock exams ---------- */
+
+.verdict-word {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.verdict .score {
+  margin-block: 12px 10px;
+}
+
+.verdict h3.cap {
+  margin-block: 20px 8px;
+}
+
+.missing {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-inline-start: 20px;
+}
+
+.missing .de {
+  display: block;
+  inline-size: fit-content;
+  font-weight: 500;
+}
+
+/*
+ * A warning is plain words inside a dark edge. It never takes the accent:
+ * orange is for the main action only.
+ */
+.panel.warning,
+.final-check {
+  border: 2px solid var(--text);
+}
+
+.warning h2,
+.final-check-question {
+  margin-block-end: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.warning p + p {
+  margin-block-start: 8px;
+}
+
+.list-heading {
+  margin-block: 28px 6px;
+}
+
+.list-intro {
+  margin-block-end: 12px;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.exam-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.exam .meta {
+  font-size: 13px;
+}
+
+.exam-note {
+  margin-block-start: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* The four module scores: two by two on a phone, four in a row on a wider screen. */
+.module-scores,
+.score-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+
+@media (min-width: 560px) {
+  .module-scores,
+  .score-fields {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.module-scores div {
+  display: grid;
+  align-content: space-between;
+  gap: 8px;
+  border-radius: var(--radius-card);
+  padding: 10px 12px;
+  background: var(--raised);
+}
+
+.module-scores dt,
+.score-field span {
+  font-size: 13px;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.module-german {
+  font-size: 12px;
+}
+
+.module-scores dd {
+  display: flex;
+  align-items: flex-end;
+  min-block-size: 46px;
+  margin: 0;
+}
+
+.module-scores .score-none {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.exam-state {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block-end: 14px;
+  font-weight: 500;
+}
+
+.score-form {
+  border-block-start: 1px solid var(--hairline);
+  padding-block-start: 14px;
+}
+
+.score-hint {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.score-field {
+  display: grid;
+  align-content: space-between;
+  gap: 6px;
+}
+
+.score-field input {
+  inline-size: 100%;
+  min-block-size: 52px;
+  border: 0;
+  border-radius: var(--radius-card);
+  padding: 8px 12px;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+  color: var(--text);
+  font: inherit;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.score-field input[aria-invalid="true"] {
+  box-shadow: inset 0 0 0 2.5px var(--wrong);
+}
+
+.form-error {
+  font-weight: 500;
+  color: var(--wrong);
+}
+
+.score-form .result-actions {
+  margin-block-start: 14px;
+}
+
+.exam-links-area {
+  margin-block-start: 10px;
+}
+
+.final-check {
+  border-radius: var(--radius-card);
+  padding: 14px;
+  background: var(--raised);
+}
+
+.final-check .result-actions {
+  margin-block-start: 14px;
+}
+
+.exam-links {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+
+.exam-link {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+  border-radius: var(--radius-card);
+  padding: 8px 12px 12px;
+  background: var(--raised);
+}
+
+.exam-link a {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 10px;
+  min-block-size: var(--touch);
+  font-weight: 500;
+  text-underline-offset: 3px;
+}
+
+.exam-link-site {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.exam-link p {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.exam-link-pages {
+  font-weight: 500;
+}
+
+.exam-link p .de {
+  font-weight: 500;
+}
+
+/* ---------- the links to search and to all grammar, on every page ---------- */
+
+/* On a phone they have their own line under the logo and the language choice. */
+.reference-links {
+  order: 3;
+  flex-basis: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .reference-links {
+    order: 0;
+    flex-basis: auto;
+  }
+}
+
+.reference-links a {
+  display: flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.reference-links span {
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: var(--panel);
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+}
+
+.reference-links [aria-current="page"] span {
+  background: var(--text);
+  color: var(--white);
+  box-shadow: none;
+}
+
+/* ---------- search ---------- */
+
+.search-form {
+  margin-block-end: var(--gap);
+}
+
+.search-box {
+  inline-size: 100%;
+  min-block-size: 52px;
+  border: 0;
+  border-radius: var(--radius-card);
+  padding: 12px 16px;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+  color: var(--text);
+  /* Latin letters in the Latin typeface and Persian letters in the Persian one, whatever the page. */
+  font-family: "Outfit Variable", "Vazirmatn Variable", system-ui, sans-serif;
+  /* Below 16px a phone zooms the page in when the box is tapped. */
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.search-hint {
+  margin-block-start: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.search-count {
+  margin-block-end: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* The passage the words were found in: three lines at most. */
+.result-passage {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.result-passage .de {
+  color: var(--text);
+}
+
+.result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-block-start: 2px;
+}
+
+/* ---------- all grammar at a glance ---------- */
+
+.page-head p {
+  margin-block-start: 8px;
+}
+
+.overview-chapter h3 {
+  margin-block: 18px 10px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+/* One table under the other on a phone; side by side where there is room for two. */
+.overview-tables {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  align-items: start;
+  gap: var(--gap);
+}
+
+.overview-tables .panel {
+  /* A wide table scrolls inside its panel instead of widening the column. */
+  min-inline-size: 0;
+  margin-block-start: 0;
+}
+
+.overview-tables h4 {
+  margin-block: 0 10px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+/* The name of a topic is the link to it; the row is tall enough to tap. */
+/* The buttons that jump to a level of the overview. */
+.overview-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block-end: var(--gap);
+}
+
+.overview-tables h4 a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  margin-block: -8px;
+  text-underline-offset: 3px;
+}
+
+/* ---------- messages ---------- */
+
+.message p + p,
+.message p + .btn {
+  margin-block-start: 12px;
+}
+
+.message p + dl,
+.message > [role="status"],
+.message > [role="alert"] {
+  margin-block-start: 12px;
+}
+
+/* ---------- private packs: the learner's exam books and the private exam view ---------- */
+
+.pack-name {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+/* The app's address on the home network: typed by hand on a phone, so large and unbroken. */
+.phone-address {
+  font-family: var(--font-latin);
+  font-size: 22px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.pack-exams {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+}
+
+.pack-exam {
+  display: grid;
+  gap: 8px;
+  border-radius: var(--radius-card);
+  padding: 12px;
+  background: var(--raised);
+}
+
+.pack-exam-name {
+  font-weight: 500;
+}
+
+.pack-modules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pack-modules .pill {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  padding-inline: 16px;
+  color: var(--text);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* The pages and the answer sheet: one column on a phone, side by side on a wide screen. */
+.wrap-wide {
+  max-inline-size: var(--wide-width);
+}
+
+.part-choice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block-end: var(--gap);
+}
+
+.part-choice .pill {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  padding-inline: 16px;
+  color: var(--text);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.part-choice [aria-current="page"] {
+  background: var(--text);
+  color: var(--white);
+  box-shadow: none;
+}
+
+.exam-view {
+  display: grid;
+  gap: var(--gap);
+  align-items: start;
+}
+
+.exam-view-side {
+  display: grid;
+  gap: var(--gap);
+}
+
+.exam-view .panel + .panel {
+  margin-block-start: 0;
+}
+
+@media (min-width: 900px) {
+  .exam-view {
+    grid-template-columns: minmax(0, 3fr) minmax(320px, 2fr);
+  }
+
+  /* The sheet stays in view while the learner scrolls through the pages. */
+  .exam-view-side {
+    position: sticky;
+    inset-block-start: var(--gap);
+    max-block-size: calc(100vh - 2 * var(--gap));
+    overflow-y: auto;
+  }
+}
+
+.book-pages {
+  display: grid;
+  gap: var(--gap);
+}
+
+.book-page {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+
+.book-page figcaption {
+  font-size: 13px;
+  text-align: center;
+}
+
+/* A page of the book: the picture, and its text laid over it unseen (PDF.js's text layer). */
+.book-page-frame {
+  --scale-round-x: 1px;
+  --scale-round-y: 1px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--white);
+  box-shadow: 0 0 0 1px var(--hairline);
+}
+
+.book-page-frame canvas {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.book-page-frame .textLayer {
+  position: absolute;
+  inset: 0;
+  overflow: clip;
+  line-height: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-size-adjust: none;
+  forced-color-adjust: none;
+  transform-origin: 0 0;
+  --min-font-size: 1;
+  --text-scale-factor: calc(var(--total-scale-factor) * var(--min-font-size));
+  --min-font-size-inv: calc(1 / var(--min-font-size));
+}
+
+.book-page-frame .textLayer :is(span, br) {
+  position: absolute;
+  color: transparent;
+  white-space: pre;
+  cursor: text;
+  transform-origin: 0% 0%;
+}
+
+.book-page-frame .textLayer > :not(.markedContent),
+.book-page-frame .textLayer .markedContent span:not(.markedContent) {
+  --font-height: 0;
+  --scale-x: 1;
+  --rotate: 0deg;
+  font-size: calc(var(--text-scale-factor) * var(--font-height));
+  transform: rotate(var(--rotate)) scaleX(var(--scale-x)) scale(var(--min-font-size-inv));
+}
+
+.book-page-frame .textLayer .markedContent {
+  display: contents;
+}
+
+.book-page-frame .textLayer ::selection {
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
+  color: transparent;
+}
+
+.recording {
+  margin: 0;
+}
+
+.recording + .recording {
+  margin-block-start: 10px;
+}
+
+.recording audio {
+  display: block;
+  inline-size: 100%;
+}
+
+.sheet-items {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.sheet-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sheet-number {
+  flex: none;
+  min-inline-size: 2ch;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: end;
+}
+
+.sheet-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* One answer to choose: a pill as high as a touch target. The real radio button covers it, unseen. */
+.sheet-choice {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: var(--touch);
+  min-block-size: var(--touch);
+  border-radius: 999px;
+  padding-inline: 12px;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+  font-size: 16px;
+}
+
+.sheet-choice input {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.sheet-choice:has(input:checked) {
+  background: var(--text);
+  color: var(--white);
+  box-shadow: none;
+}
+
+.sheet-choice:has(input:focus-visible) {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.sheet-check {
+  inline-size: 100%;
+}
+
+.sheet-results .item-result {
+  padding-block-end: 10px;
+}
+
+/* ---------- backup: export, import, and the suggestion after a milestone ---------- */
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  justify-content: center;
+  padding-block: 0 24px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+}
+
+/* The credit a voice's licence asks for: small, on its own line under the footer's links. */
+.voice-credit {
+  flex-basis: 100%;
+  margin: 0;
+  max-inline-size: var(--reading-width);
+  font-size: 12px;
+  text-align: center;
+}
+
+.notice {
+  padding-block-end: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-start: 14px;
+}
+
+.suggestion {
+  margin-block-start: 18px;
+}
+
+.suggestion h2 {
+  margin-block-end: 6px;
+}
+
+.suggestion p {
+  color: var(--text-secondary);
+}
+
+/* A short list of facts: what it is about, then the fact. */
+.facts {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.facts dt {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.facts dd {
+  margin: 0;
+  font-size: 18px;
+}
+
+.facts small {
+  display: block;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.file-note {
+  display: grid;
+  gap: 2px;
+}
+
+/* A file name is one long word: let it break rather than widen the page. */
+.file-note bdi {
+  justify-self: start;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.refused {
+  color: var(--wrong);
+}
+
+/* The question before an import replaces progress. */
+.replace {
+  margin-block-start: 14px;
+  border-radius: var(--radius-card);
+  padding: 14px;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+}
+
+.replace h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.replace p {
+  margin-block-start: 12px;
+}
+
+/*
+ * Nothing moves yet. When motion is added (150ms at most), switch it off
+ * inside @media (prefers-reduced-motion: reduce).
+ */
+
+/* ---------- original mock exams: the list, a module as it is taken, its result ---------- */
+
+.mock-modules {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mock-history {
+  display: grid;
+  gap: 10px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mock-history-entry {
+  border-radius: var(--radius-card);
+  padding: 12px var(--pad);
+  background: var(--raised);
+}
+
+.mock-history-entry .module-scores div {
+  background: var(--panel);
+}
+
+.mock-result-head {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+h2.mock-result-head {
+  font-size: 18px;
+}
+
+.mock-standing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block: 8px 0;
+}
+
+.part-scores dd {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* The clock of a timed module: it stays in view at the top while the learner scrolls. */
+.mock-clock {
+  position: sticky;
+  inset-block-start: 8px;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-block-end: var(--gap);
+  border-radius: var(--radius-panel);
+  padding: 8px var(--pad);
+  background: var(--panel);
+  box-shadow: 0 12px 24px -16px rgb(var(--shadow) / 0.6);
+}
+
+.mock-clock p {
+  margin: 0;
+}
+
+.mock-clock-time {
+  font-size: 22px;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+}
+
+.part-choice button.pill {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.part-choice [aria-current="step"] {
+  background: var(--text);
+  color: var(--white);
+  box-shadow: none;
+}
+
+.action-bar {
+  gap: 8px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-block-size: var(--touch);
+}
+
+.check input {
+  inline-size: 20px;
+  block-size: 20px;
+  accent-color: var(--text);
+}
+
+/* The letter of a text that items name it by (Lesen, Teil 3). */
+.text-letter {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 28px;
+  block-size: 28px;
+  margin-inline-end: 8px;
+  border-radius: 50%;
+  background: var(--raised);
+  font-size: 15px;
+}
+
+.plays-left {
+  font-size: 14px;
+}
+
+.mock-part-answers > summary {
+  min-block-size: var(--touch);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.mock-part-answers > .panel {
+  margin-block-start: var(--gap);
+  padding: 0;
+  box-shadow: none;
+  background: transparent;
+}

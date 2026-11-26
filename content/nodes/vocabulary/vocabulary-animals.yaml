@@ -1,0 +1,37 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-animals
+kind: vocabulary
+level: B1
+chapter: b1-words-travel-nature
+order: 7
+status: coming-soon
+title:
+  en: "Animals"
+  fa: "حیوانات"
+  de: "Tiere"
+words:
+  - word: Affe
+  - word: Bär
+  - word: Biene
+  - word: Elefant
+  - word: Ente
+  - word: Fliege
+  - word: Giraffe
+  - word: Hase
+  - word: Insekt
+  - word: Krokodil
+  - word: Kuh
+  - word: Löwe
+  - word: Maus
+  - word: Mücke
+  - word: Pinguin
+  - word: Schaf
+  - word: Schildkröte
+  - word: Schlange
+  - word: Haustier
+  - word: füttern
+  - word: beißen
+  - word: stechen
+  - word: wild
+  - word: Tierpark

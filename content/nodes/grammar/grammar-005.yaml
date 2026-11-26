@@ -1,0 +1,13 @@
+# Grammar list row 5.
+id: grammar-005
+kind: grammar
+level: A1
+chapter: a1-verb-patterns
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-001, grammar-139]
+title:
+  en: "*Trennbare Verben* in *Präsens*"
+  fa: "فعل‌های جداشدنی در زمان حال"
+  de: "Trennbare Verben im Präsens"

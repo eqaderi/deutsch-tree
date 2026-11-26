@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-inviting
+kind: phrases
+level: A2
+chapter: a2-phrases-emails
+order: 4
+status: coming-soon
+title:
+  en: "Inviting, accepting and declining"
+  fa: "دعوت کردن، پذیرفتن و رد کردن دعوت"
+  de: "Einladen, zusagen und absagen"
+purpose:
+  en: "Invite someone, and say yes or no to an invitation in a friendly way."
+  fa: "کسی را دعوت کنید و به یک دعوت، دوستانه جواب مثبت یا منفی بدهید."
+  de: "Jemanden einladen und auf eine Einladung freundlich mit Ja oder Nein antworten."
+examTasks: [exam-schreiben-1, exam-schreiben-3]

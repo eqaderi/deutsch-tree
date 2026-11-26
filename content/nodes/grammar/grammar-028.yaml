@@ -1,0 +1,13 @@
+# Grammar list row 28.
+id: grammar-028
+kind: grammar
+level: A1
+chapter: a1-modal-verbs
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-026]
+title:
+  en: "*müssen*"
+  fa: "*müssen*"
+  de: "*müssen*"

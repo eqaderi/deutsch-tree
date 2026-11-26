@@ -1,0 +1,13 @@
+# Grammar list row 89.
+id: grammar-089
+kind: grammar
+level: A1
+chapter: a1-pronouns
+order: 7
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-081]
+title:
+  en: "Impersonal *es*"
+  fa: "*es* غیرشخصی"
+  de: "Unpersönliches *es*"

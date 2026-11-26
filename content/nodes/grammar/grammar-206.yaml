@@ -1,0 +1,13 @@
+# Grammar list row 206.
+id: grammar-206
+kind: grammar
+level: B1
+chapter: b1-genitive-nouns
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-073, grammar-085]
+title:
+  en: "Adjectives as neuter nouns"
+  fa: "صفت به‌عنوان اسم خنثی (*etwas Neues*، *nichts Besonderes*)"
+  de: "Adjektive als neutrale Nomen (*etwas Neues*, *nichts Besonderes*)"

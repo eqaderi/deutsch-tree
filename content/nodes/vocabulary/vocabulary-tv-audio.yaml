@@ -1,0 +1,36 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-tv-audio
+kind: vocabulary
+level: B1
+chapter: b1-words-media-free-time
+order: 4
+status: coming-soon
+title:
+  en: "Television, film and sound"
+  fa: "تلویزیون، فیلم و صدا"
+  de: "Fernsehen, Film und Ton"
+words:
+  - word: Fernsehen
+  - word: TV
+  - word: Sender
+  - word: senden
+  - word: Serie
+  - word: Show
+  - word: Castingshow
+  - word: Spot
+  - word: Studio
+  - word: übertragen
+  - word: live
+  - word: Video
+  - word: DVD
+  - word: Kassette
+  - word: CD-Player
+  - word: Fernbedienung
+  - word: Lautsprecher
+  - word: Kabel
+  - word: zuschauen
+  - word: gucken
+  - word: schauen
+  - word: Aufnahme
+  - word: aufnehmen

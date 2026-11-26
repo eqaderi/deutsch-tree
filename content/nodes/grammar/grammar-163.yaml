@@ -1,0 +1,13 @@
+# Grammar list row 163.
+id: grammar-163
+kind: grammar
+level: A2
+chapter: a2-subordinate-clauses
+order: 7
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-142, grammar-162]
+title:
+  en: "Indirect question with *ob*"
+  fa: "پرسش غیرمستقیم با *ob*"
+  de: "Indirekte Frage mit *ob*"

@@ -1,0 +1,40 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-everyday-verbs
+kind: vocabulary
+level: A1
+chapter: a1-words-small-words
+order: 1
+status: coming-soon
+title:
+  en: "Verbs for every day"
+  fa: "فعل‌های هرروزه"
+  de: "Verben für jeden Tag"
+words:
+  - word: machen
+  - word: tun
+  - word: haben
+  - word: sein
+  - word: werden
+  - word: geben
+  - word: nehmen
+  - word: bekommen
+  - word: kriegen
+  - word: bringen
+  - word: holen
+  - word: abholen
+  - word: abgeben
+  - word: mitnehmen
+  - word: legen
+  - word: stellen
+  - word: liegen
+  - word: stehen
+  - word: sitzen
+  - word: sehen
+  - word: benutzen
+  - word: gehören
+  - word: fehlen
+  - word: kümmern
+  - word: freuen
+  - word: anbieten
+  - word: empfehlen

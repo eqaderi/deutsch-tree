@@ -1,0 +1,290 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-suggesting
+kind: phrases
+level: A2
+chapter: a2-phrases-arrangements
+order: 1
+status: published
+title:
+  en: "Making a suggestion"
+  fa: "پیشنهاد دادن"
+  de: "Einen Vorschlag machen"
+purpose:
+  en: "Suggest what to do, where to meet or how to solve a problem."
+  fa: "پیشنهاد بدهید که چه کاری بکنید، کجا همدیگر را ببینید یا چطور مشکلی را حل کنید."
+  de: "Vorschlagen, was man macht, wo man sich trifft oder wie man ein Problem löst."
+examTasks: [exam-schreiben-1, exam-sprechen-1]
+
+# The Persian text is a draft for a native reader.
+phrases:
+  - de: Wollen wir …?
+    meaning:
+      en: Shall we …? A friendly question that suggests doing something together. The second verb goes to the end.
+      fa: بیا … ؟ پرسشی دوستانه برای اینکه کاری را با هم انجام دهید. فعل دوم در آخر جمله می‌آید.
+      de: Eine freundliche Frage. Man schlägt vor, etwas zusammen zu machen. Das zweite Verb steht am Ende.
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Wollen wir am Samstag zusammen ins Kino gehen?
+      en: Shall we go to the cinema together on Saturday?
+      fa: شنبه با هم به سینما برویم؟
+
+  - de: Wie wäre es mit …?
+    meaning:
+      en: How about …? Suggests a thing, a day or a place. After *mit* comes the dative, as in *mit einem Picknick*.
+      fa: … چطور است؟ چیزی، روزی یا جایی را پیشنهاد می‌دهد. بعد از *mit* حالت *Dativ* می‌آید، مثل *mit einem Picknick*.
+      de: Damit schlägt man eine Sache, einen Tag oder einen Ort vor. Nach *mit* kommt der Dativ, zum Beispiel *mit einem Picknick*.
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Wie wäre es mit einem Picknick im Park?
+      en: How about a picnic in the park?
+      fa: یک پیک‌نیک در پارک چطور است؟
+
+  - de: Wir könnten …
+    meaning:
+      en: We could … A careful suggestion. *könnten* is the polite form of *können*; the second verb goes to the end.
+      fa: می‌توانیم … پیشنهادی ملایم و مؤدبانه. *könnten* صورت مؤدبانهٔ *können* است و فعل دوم در آخر جمله می‌آید.
+      de: Ein vorsichtiger Vorschlag. *könnten* ist die höfliche Form von *können*. Das zweite Verb steht am Ende.
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Wir könnten am Sonntag einen Ausflug an den See machen.
+      en: We could take a trip to the lake on Sunday.
+      fa: می‌توانیم یکشنبه گردشی تا دریاچه برویم.
+
+  - de: Was hältst du von …?
+    meaning:
+      en: What do you think of …? Makes a suggestion and asks for the other person's opinion at the same time. After *von* comes the dative.
+      fa: نظرت دربارهٔ … چیست؟ هم چیزی را پیشنهاد می‌دهد و هم نظر طرف مقابل را می‌پرسد. بعد از *von* حالت *Dativ* می‌آید.
+      de: Man macht einen Vorschlag und fragt gleich nach der Meinung der anderen Person. Nach *von* kommt der Dativ.
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Was hältst du von einem Kochabend bei mir?
+      en: What do you think of an evening of cooking at my place?
+      fa: نظرت دربارهٔ یک شب آشپزی در خانهٔ من چیست؟
+
+  - de: Hast du Lust, … zu …?
+    meaning:
+      en: Do you feel like …? Asks a friend whether they would like to do something. The verb goes to the end, with *zu* before it.
+      fa: حوصله‌اش را داری که … ؟ از یک دوست می‌پرسید که آیا دوست دارد کاری بکند. فعل در آخر جمله می‌آید و *zu* پیش از آن.
+      de: Man fragt einen Freund oder eine Freundin, ob er oder sie etwas machen möchte. Das Verb steht am Ende, mit *zu* davor.
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Hast du Lust, am Sonntag mit mir schwimmen zu gehen?
+      en: Do you feel like going swimming with me on Sunday?
+      fa: حوصله داری یکشنبه با من شنا بیایی؟
+
+  - de: Ich schlage vor, dass …
+    meaning:
+      en: I suggest that … A clear suggestion, for example when you plan something with a partner. After *dass* the verb goes to the end.
+      fa: پیشنهاد می‌کنم که … پیشنهادی روشن، مثلاً وقتی با یک هم‌گروهی برنامه‌ای می‌ریزید. بعد از *dass* فعل در آخر جمله می‌آید.
+      de: Ein klarer Vorschlag, zum Beispiel beim Planen mit einem Partner. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Ich schlage vor, dass wir uns um zehn Uhr am Bahnhof treffen.
+      en: I suggest that we meet at the station at ten.
+      fa: پیشنهاد می‌کنم ساعت ده در ایستگاه قطار همدیگر را ببینیم.
+
+  - de: Lass uns …!
+    meaning:
+      en: Let's …! A short, lively suggestion to one friend, mostly when speaking. To two or more friends you say *Lasst uns …!*
+      fa: بیا … ! پیشنهادی کوتاه و پرشور به یک دوست، بیشتر در گفتار. به دو دوست یا بیشتر می‌گویید *Lasst uns …!*
+      de: Ein kurzer Vorschlag an einen Freund oder eine Freundin, meistens beim Sprechen. Zu zwei oder mehr Personen sagt man *Lasst uns …!*
+    examTasks: [exam-sprechen-1]
+    example:
+      de: Lass uns doch am Freitag zusammen kochen!
+      en: Let's cook together on Friday!
+      fa: بیا جمعه با هم آشپزی کنیم!
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Du möchtest Tom einen Kinobesuch vorschlagen. Was sagst du?
+    options:
+      - Wie wäre es mit einem Kinobesuch?
+      - Wie war es mit einem Kinobesuch?
+      - Wie wäre es mit einen Kinobesuch?
+    answer: Wie wäre es mit einem Kinobesuch?
+    explanation:
+      en: The phrase is *Wie wäre es mit …?* (not *war*), and *mit* takes the dative *einem*.
+      fa: عبارت *Wie wäre es mit …?* است (نه *war*) و *mit* حالت *Dativ* یعنی *einem* می‌گیرد.
+      de: Der Satz heißt *Wie wäre es mit …?* (nicht *war*), und nach *mit* kommt der Dativ *einem*.
+
+  - id: q2
+    type: gap-fill
+    prompt: "Mein Vorschlag: Wir ___ am Sonntag einen Ausflug an den See machen."
+    options: [könnten, konnten, könntest]
+    answer: könnten
+    explanation:
+      en: A suggestion with *wir* takes *könnten*. *konnten* is the past, *könntest* is for *du*.
+      fa: پیشنهاد با *wir* صورت *könnten* را می‌گیرد. *konnten* گذشته است و *könntest* برای *du*.
+      de: Bei einem Vorschlag mit *wir* heißt es *könnten*. *konnten* ist Vergangenheit, *könntest* ist für *du*.
+
+  - id: q3
+    type: true-false
+    prompt: Ich schlage vor, dass wir treffen uns um zehn Uhr.
+    answer: false
+    explanation:
+      en: After *dass* the verb goes to the end. *Ich schlage vor, dass wir uns um zehn Uhr treffen.*
+      fa: "بعد از *dass* فعل به آخر جمله می‌رود: *Ich schlage vor, dass wir uns um zehn Uhr treffen.*"
+      de: "Nach *dass* steht das Verb am Ende: *Ich schlage vor, dass wir uns um zehn Uhr treffen.*"
+
+  - id: q4
+    type: true-false
+    prompt: Was hältst du von einem Spaziergang am Nachmittag?
+    answer: true
+    explanation:
+      en: "*Was hältst du von …?* with the dative *einem Spaziergang* is correct."
+      fa: "*Was hältst du von …?* با *Dativ* یعنی *einem Spaziergang* درست است."
+      de: "*Was hältst du von …?* mit dem Dativ *einem Spaziergang* ist richtig."
+
+  - id: q5
+    type: find-error
+    prompt: Wie wäre es mit einen Ausflug an den See?
+    answer: einen
+    explanation:
+      en: After *mit* comes the dative. *mit einem Ausflug*.
+      fa: "بعد از *mit* حالت *Dativ* می‌آید: *mit einem Ausflug*."
+      de: "Nach *mit* kommt der Dativ: *mit einem Ausflug*."
+
+  - id: q6
+    type: word-order
+    answers:
+      - [wir, könnten, uns, am Bahnhof, treffen]
+      - [am Bahnhof, könnten, wir, uns, treffen]
+    explanation:
+      en: "*könnten* is the second part of the sentence and *treffen* goes to the end: *Wir könnten uns am Bahnhof treffen.*"
+      fa: "*könnten* در جایگاه دوم جمله است و *treffen* در آخر: *Wir könnten uns am Bahnhof treffen.*"
+      de: "*könnten* steht an Position 2 und *treffen* am Ende: *Wir könnten uns am Bahnhof treffen.*"
+
+  - id: q7
+    type: gap-fill
+    prompt: Tom, ___ uns doch am Freitag zusammen kochen!
+    options: [lass, lasst, lässt]
+    answer: lass
+    explanation:
+      en: To one friend you say *lass uns*. *lasst uns* is for two or more people.
+      fa: به یک دوست می‌گویید *lass uns*. *lasst uns* برای دو نفر یا بیشتر است.
+      de: Zu einer Person sagt man *lass uns*. *lasst uns* ist für zwei oder mehr Personen.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Was ___ (halten) du von einem Picknick im Park?
+    answers: [hältst, hieltest, hieltst]
+    explanation:
+      en: The phrase is *Was hältst du von …?* With *du*, *halten* becomes *hältst*. The past *hieltest* is also correct German.
+      fa: عبارت *Was hältst du von …?* است. با *du* فعل *halten* می‌شود *hältst*.
+      de: Der Satz heißt *Was hältst du von …?* Bei *du* wird *halten* zu *hältst*.
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: "Mein Vorschlag: Wie ___ (sein, Konjunktiv II) es mit einem Spaziergang am See?"
+    answers: [wäre, wär]
+    explanation:
+      en: The phrase is *Wie wäre es mit …?*
+      fa: عبارت *Wie wäre es mit …?* است.
+      de: Der Satz heißt *Wie wäre es mit …?*
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Ich schlage ___, dass wir uns um zehn Uhr am Bahnhof treffen.
+    answers: [vor, dir vor, euch vor, Ihnen vor]
+    explanation:
+      en: The verb is *vorschlagen*, so *vor* goes to the end of the main clause. *Ich schlage vor, dass …*
+      fa: "فعل *vorschlagen* است، پس *vor* به آخر جملهٔ اصلی می‌رود: *Ich schlage vor, dass …*"
+      de: "Das Verb ist *vorschlagen*, also steht *vor* am Ende vom Hauptsatz: *Ich schlage vor, dass …*"
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Ich schlage vor, ___ wir uns um zehn Uhr am Bahnhof treffen.
+    answers: [dass]
+    explanation:
+      en: The phrase is *Ich schlage vor, dass …*, and after *dass* the verb goes to the end.
+      fa: عبارت *Ich schlage vor, dass …* است و بعد از *dass* فعل به آخر جمله می‌رود.
+      de: Der Satz heißt *Ich schlage vor, dass …*, und nach *dass* steht das Verb am Ende.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Hast du Lust, am Sonntag mit mir schwimmen ___ gehen?
+    answers: [zu]
+    explanation:
+      en: The phrase is *Hast du Lust, … zu …?* The verb at the end has *zu* before it.
+      fa: عبارت *Hast du Lust, … zu …?* است. پیش از فعل آخر *zu* می‌آید.
+      de: Der Satz heißt *Hast du Lust, … zu …?* Vor dem Verb am Ende steht *zu*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: ___ (haben) du Lust, am Sonntag mit mir schwimmen zu gehen?
+    answers: [Hast, Hättest, Hattest]
+    explanation:
+      en: The phrase is *Hast du Lust, … zu …?* *Hättest du Lust …?* is a little more polite and also right.
+      fa: عبارت *Hast du Lust, … zu …?* است. *Hättest du Lust …?* کمی مؤدبانه‌تر است و آن هم درست است.
+      de: Der Satz heißt *Hast du Lust, … zu …?* *Hättest du Lust …?* ist etwas höflicher und auch richtig.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: "Mein Vorschlag: Wir ___ (können, Konjunktiv II) am Samstag einen Ausflug machen."
+    answers: [könnten]
+    explanation:
+      en: A careful suggestion is *Wir könnten …*
+      fa: پیشنهاد ملایم *Wir könnten …* است.
+      de: Ein vorsichtiger Vorschlag ist *Wir könnten …*
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: ___ (wollen) wir am Samstag zusammen ins Kino gehen?
+    answers: [Wollen, Wollten]
+    explanation:
+      en: The phrase is *Wollen wir …?* The verb comes first, before *wir*.
+      fa: عبارت *Wollen wir …?* است. فعل اول می‌آید، پیش از *wir*.
+      de: Der Satz heißt *Wollen wir …?* Das Verb steht vorne, vor *wir*.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Tom, ___ (lassen) uns doch am Freitag zusammen kochen!
+    answers: [lass, lasse]
+    explanation:
+      en: To one friend you say *lass uns*.
+      fa: به یک دوست می‌گویید *lass uns*.
+      de: Zu einer Person sagt man *lass uns*.
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Was hältst du ___ einem Picknick im Park?
+    answers: [von]
+    explanation:
+      en: The phrase is *Was hältst du von …?*
+      fa: عبارت *Was hältst du von …?* است.
+      de: Der Satz heißt *Was hältst du von …?*
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Wie wäre es ___ einem Spaziergang am See?
+    answers: [mit]
+    explanation:
+      en: The phrase is *Wie wäre es mit …?*
+      fa: عبارت *Wie wäre es mit …?* است.
+      de: Der Satz heißt *Wie wäre es mit …?*
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Wie wäre es mit ___ (ein) Spaziergang am See?
+    answers: [einem]
+    explanation:
+      en: After *mit* comes the dative. *der Spaziergang*, so *mit einem Spaziergang*.
+      fa: بعد از *mit* حالت *Dativ* می‌آید. *der Spaziergang*، پس *mit einem Spaziergang*.
+      de: Nach *mit* kommt der Dativ. *der Spaziergang*, also *mit einem Spaziergang*.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Was hältst du von ___ (ein) Kochabend bei mir?
+    answers: [einem]
+    explanation:
+      en: After *von* comes the dative. *der Kochabend*, so *von einem Kochabend*.
+      fa: بعد از *von* حالت *Dativ* می‌آید. *der Kochabend*، پس *von einem Kochabend*.
+      de: Nach *von* kommt der Dativ. *der Kochabend*, also *von einem Kochabend*.
+
+review:
+  reviewer: an independent AI agent (two fresh subagents, blind to the key)
+  date: 2026-11-26
+  pool: 63f767fd27085603

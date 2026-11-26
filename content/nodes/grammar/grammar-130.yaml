@@ -1,0 +1,13 @@
+# Grammar list row 130.
+id: grammar-130
+kind: grammar
+level: A2
+chapter: a2-prepositions
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-129]
+title:
+  en: "Position and direction verb pairs"
+  fa: "جفت‌فعل‌های مکان و جهت (*stehen* / *stellen* …)"
+  de: "Verbpaare für Ort und Richtung (*stehen* / *stellen* …)"

@@ -1,0 +1,13 @@
+# Grammar list row 91.
+id: grammar-091
+kind: grammar
+level: A2
+chapter: a2-articles-pronouns
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-074, grammar-080]
+title:
+  en: "*Was für ein …?*"
+  fa: "*Was für ein …?*"
+  de: "*Was für ein …?*"

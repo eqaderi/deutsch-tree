@@ -1,0 +1,34 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-meals-snacks
+kind: vocabulary
+level: B1
+chapter: b1-words-home-food
+order: 7
+status: coming-soon
+title:
+  en: "Meals, snacks and drinks"
+  fa: "وعده‌ها، میان‌وعده‌ها و نوشیدنی‌ها"
+  de: "Mahlzeiten, Snacks und Getränke"
+words:
+  - word: Mahlzeit
+  - word: Speise
+  - word: Menü
+  - word: Nachspeise
+  - word: Dessert
+  - word: Imbiss
+  - word: Snack
+  - word: Sandwich
+  - word: Müesli
+  - word: Gebäck
+  - word: Kakao
+  - word: Cola
+  - word: Limonade
+  - word: Buffet
+  - word: zubereiten
+  - word: mischen
+  - word: Tee ziehen lassen
+  - word: zu Mittag
+  - word: Scheibe
+  - word: Nahrungsmittel
+  - word: verpflegen

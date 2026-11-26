@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-dividing-tasks
+kind: phrases
+level: B1
+chapter: b1-phrases-planning
+order: 4
+status: coming-soon
+title:
+  en: "Deciding who does what"
+  fa: "تقسیم کارها: چه کسی چه کار می‌کند"
+  de: "Entscheiden, wer was macht"
+purpose:
+  en: "Share out the tasks, offer to do something yourself and sum up what you have decided."
+  fa: "کارها را تقسیم کنید، انجام کاری را خودتان به عهده بگیرید و تصمیم‌ها را جمع‌بندی کنید."
+  de: "Aufgaben verteilen, selbst etwas übernehmen und zusammenfassen, was man beschlossen hat."
+examTasks: [exam-sprechen-1]

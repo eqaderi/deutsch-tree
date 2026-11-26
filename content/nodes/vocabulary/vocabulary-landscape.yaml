@@ -1,0 +1,35 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-landscape
+kind: vocabulary
+level: B1
+chapter: b1-words-travel-nature
+order: 5
+status: coming-soon
+title:
+  en: "Land, sea and sky"
+  fa: "خشکی، دریا و آسمان"
+  de: "Land, Meer und Himmel"
+words:
+  - word: Nordsee
+  - word: Ostsee
+  - word: Ozean
+  - word: Küste
+  - word: Ufer
+  - word: Gebirge
+  - word: Hügel
+  - word: Tal
+  - word: Gebiet
+  - word: Region
+  - word: regional
+  - word: Grenze
+  - word: nördlich
+  - word: südlich
+  - word: östlich
+  - word: westlich
+  - word: Kanal
+  - word: Mond
+  - word: Stern
+  - word: Luft
+  - word: Schatten
+  - word: fließen

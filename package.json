@@ -1,0 +1,52 @@
+{
+  "name": "deutsch-tree",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "pnpm typecheck && pnpm lint && pnpm content:check && pnpm test:unit && pnpm test:browser",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "content:check": "node src/content-pipeline/cli.ts",
+    "review:pool": "node src/content-pipeline/review-cli.ts pool",
+    "review:record": "node src/content-pipeline/review-cli.ts record",
+    "audio:generate": "node src/audio/cli.ts",
+    "pack:build": "node src/pack-builder/cli.ts",
+    "share": "vite build && node src/start-files/cli.ts",
+    "vocabulary:scope": "node src/vocabulary-scope/cli.ts",
+    "vocabulary:approval": "node src/vocabulary-scope/approval-cli.ts",
+    "test:unit": "vitest run",
+    "test:pipeline": "vitest run tests/content-pipeline",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "@fontsource-variable/outfit": "^5.3.0",
+    "@fontsource-variable/vazirmatn": "^5.3.0",
+    "pdfjs-dist": "^6.5.438",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router": "^8.5.3",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.9",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^24.19.4",
+    "@types/react": "^19.3.2",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "pdf-lib": "^1.17.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.2"
+  }
+}

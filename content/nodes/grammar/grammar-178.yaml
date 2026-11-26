@@ -1,0 +1,13 @@
+# Grammar list row 178.
+id: grammar-178
+kind: grammar
+level: A2
+chapter: a2-relative-clauses
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-062, grammar-177]
+title:
+  en: "Relative clause, *Akkusativ*"
+  fa: "جملهٔ موصولی در *Akkusativ*"
+  de: "Relativsatz im Akkusativ"

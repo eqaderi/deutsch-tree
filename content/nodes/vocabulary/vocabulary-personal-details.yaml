@@ -1,0 +1,39 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-personal-details
+kind: vocabulary
+level: A1
+chapter: a1-words-people
+order: 2
+status: coming-soon
+title:
+  en: "Name, address and forms"
+  fa: "نام، نشانی و فرم‌ها"
+  de: "Name, Adresse und Formulare"
+words:
+  - word: Name
+  - word: Vorname
+  - word: Familienname
+  - word: Adresse
+  - word: Alter
+  - word: Geburtsjahr
+  - word: Geburtsort
+  - word: Familienstand
+  - word: ledig
+  - word: verheiratet
+  - word: geboren
+  - word: männlich
+  - word: weiblich
+  - word: Postleitzahl
+  - word: Formular
+  - word: ausfüllen
+  - word: ankreuzen
+  - word: unterschreiben
+  - word: Unterschrift
+  - word: buchstabieren
+  - word: Buchstabe
+  - word: Ausweis
+  - word: Pass
+  - word: Papiere
+  - word: Anmeldung
+  - word: anmelden

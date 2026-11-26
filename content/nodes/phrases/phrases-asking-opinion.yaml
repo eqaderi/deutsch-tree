@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-asking-opinion
+kind: phrases
+level: B1
+chapter: b1-phrases-planning
+order: 2
+status: coming-soon
+title:
+  en: "Asking what your partner thinks"
+  fa: "پرسیدن نظر طرف مقابل"
+  de: "Den Partner nach seiner Meinung fragen"
+purpose:
+  en: "Bring your partner into the talk: ask for their opinion, their ideas and their agreement."
+  fa: "طرف مقابل را وارد گفت‌وگو کنید: نظر، ایده‌ها و موافقتش را بپرسید."
+  de: "Den Partner ins Gespräch holen: nach seiner Meinung, seinen Ideen und seiner Zustimmung fragen."
+examTasks: [exam-sprechen-1]

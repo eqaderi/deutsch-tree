@@ -1,0 +1,38 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-money-bank
+kind: vocabulary
+level: B1
+chapter: b1-words-work-money
+order: 6
+status: coming-soon
+title:
+  en: "Money and the bank"
+  fa: "پول و بانک"
+  de: "Geld und Bank"
+words:
+  - word: Bargeld
+  - word: Münze
+  - word: Schein
+  - word: Geldautomat
+  - word: ec-Karte
+  - word: Girokonto
+  - word: Bankleitzahl
+  - word: Überweisung
+  - word: Einzahlung
+  - word: einzahlen
+  - word: abheben
+  - word: Zinsen
+  - word: Schulden
+  - word: Brieftasche
+  - word: Portemonnaie
+  - word: Chipkarte
+  - word: Chip
+  - word: Betrag
+  - word: Summe
+  - word: Gebühr
+  - word: Kosten
+  - word: Zahlung
+  - word: Mahnung
+  - word: Quittung
+  - word: Beleg

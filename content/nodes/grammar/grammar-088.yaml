@@ -1,0 +1,13 @@
+# Grammar list row 88.
+id: grammar-088
+kind: grammar
+level: A1
+chapter: a1-pronouns
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-082]
+title:
+  en: "Reciprocal *sich* / *uns*"
+  fa: "*sich* و *uns* به معنای «همدیگر»"
+  de: "*sich* / *uns* mit der Bedeutung „einander“"

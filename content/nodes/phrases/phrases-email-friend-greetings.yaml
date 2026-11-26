@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-email-friend-greetings
+kind: phrases
+level: A2
+chapter: a2-phrases-emails
+order: 1
+status: coming-soon
+title:
+  en: "Greeting and signing off in an e-mail to a friend"
+  fa: "سلام و خداحافظی در ایمیل به دوست"
+  de: "Anrede und Gruß in einer E-Mail an Freunde"
+purpose:
+  en: "Begin an informal e-mail with the right greeting and end it with the right closing."
+  fa: "ایمیل غیررسمی را با سلام مناسب شروع کنید و با خداحافظی مناسب تمام کنید."
+  de: "Eine informelle E-Mail richtig beginnen und richtig beenden."
+examTasks: [exam-schreiben-1]

@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-polite-requests
+kind: phrases
+level: A2
+chapter: a2-phrases-arrangements
+order: 5
+status: coming-soon
+title:
+  en: "Asking politely for help or information"
+  fa: "درخواست مؤدبانهٔ کمک یا اطلاعات"
+  de: "Höflich um Hilfe oder Informationen bitten"
+purpose:
+  en: "Ask a person you address with *Sie* to do something or to tell you something."
+  fa: "از کسی که با *Sie* خطابش می‌کنید بخواهید کاری انجام دهد یا چیزی را به شما بگوید."
+  de: "Eine Person, zu der man *Sie* sagt, höflich um etwas bitten oder nach etwas fragen."
+examTasks: [exam-schreiben-3]

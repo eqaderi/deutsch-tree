@@ -1,0 +1,13 @@
+# Grammar list row 78.
+id: grammar-078
+kind: grammar
+level: A1
+chapter: a1-more-articles
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-062]
+title:
+  en: "*Demonstrativartikel* *dieser*"
+  fa: "صفت اشاره *dieser*"
+  de: "Demonstrativartikel *dieser*"

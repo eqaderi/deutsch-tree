@@ -1,0 +1,40 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-emergencies
+kind: vocabulary
+level: B1
+chapter: b1-words-health
+order: 3
+status: coming-soon
+title:
+  en: "Emergencies, danger and damage"
+  fa: "وضعیت اضطراری، خطر و خسارت"
+  de: "Notfälle, Gefahr und Schaden"
+words:
+  - word: Notfall
+  - word: Notruf
+  - word: Notaufnahme
+  - word: Notausgang
+  - word: Krankenwagen
+  - word: Feuerwehr
+  - word: Alarm
+  - word: Gefahr
+  - word: retten
+  - word: warnen
+  - word: brennen
+  - word: verbrennen
+  - word: stürzen
+  - word: Unglück
+  - word: Katastrophe
+  - word: Opfer
+  - word: Schaden
+  - word: schaden
+  - word: beschädigen
+  - word: zerstören
+  - word: kaputtgehen
+  - word: kaputtmachen
+  - word: Risiko
+  - word: Sicherheit
+  - word: sichern
+  - word: schützen
+  - word: Schutz

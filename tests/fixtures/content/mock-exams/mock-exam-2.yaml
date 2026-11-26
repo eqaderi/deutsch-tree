@@ -1,0 +1,8 @@
+# Fixture mock exam that is still being written: listed, marked "Coming soon", and not taken.
+id: mock-exam-2
+order: 2
+status: coming-soon
+title:
+  en: Second fixture mock exam
+  fa: آزمون آزمایشی دوم
+  de: Zweite Test-Prüfung

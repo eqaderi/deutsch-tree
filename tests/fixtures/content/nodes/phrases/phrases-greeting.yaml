@@ -1,0 +1,180 @@
+# Fixture phrases node. Invented, short, and stable: tests assert on these words.
+# 6 of its 15 questions are answered by choosing and 9 by typing.
+id: phrases-greeting
+kind: phrases
+level: B2
+chapter: fixture-set-phrases
+order: 1
+status: published
+title:
+  en: Fixture greetings
+  fa: سلام‌های آزمایشی
+  de: Test-Grüße
+purpose:
+  en: Say hello and goodbye, for example with *Guten Tag!*
+  fa: سلام و خداحافظی کنید، مثلاً با *Guten Tag!*
+  de: Hallo und Tschüs sagen, zum Beispiel mit *Guten Tag!*
+examTasks: [exam-schreiben-3, exam-sprechen-1]
+
+phrases:
+  - de: Guten Tag!
+    meaning:
+      en: Hello. You say it in the daytime, also to a person you call *Sie*.
+      fa: سلام. در طول روز می‌گویید، همچنین به کسی که *Sie* خطابش می‌کنید.
+      de: So sagt man am Tag Hallo, auch zu einer Person, zu der man *Sie* sagt.
+    examTasks: [exam-sprechen-1]
+    example:
+      de: Guten Tag, Frau Test!
+      en: Hello, Ms Test!
+      fa: سلام، خانم تست!
+  - de: Wie geht es dir?
+    meaning:
+      en: How are you? You ask a friend.
+      fa: حالت چطور است؟ از یک دوست می‌پرسید.
+      de: Man fragt einen Freund oder eine Freundin, ob alles gut ist.
+    examTasks: [exam-schreiben-3, exam-sprechen-1]
+    example:
+      de: Hallo Tom, wie geht es dir?
+      en: Hello Tom, how are you?
+      fa: سلام تام، حالت چطور است؟
+  - de: Bis bald!
+    meaning:
+      en: See you soon. You say it at the end.
+      fa: به امید دیدار. در پایان می‌گویید.
+      de: Das sagt man am Ende. Man sieht die Person bald wieder.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Tschüs und bis bald!
+      en: Bye, and see you soon!
+      fa: خداحافظ و به امید دیدار!
+
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Es ist zehn Uhr am Morgen. Sie treffen Frau Test. Was sagen Sie?
+    options: [Guten Tag!, Bis bald!, Gute Nacht!]
+    answer: Guten Tag!
+    explanation:
+      en: In the daytime you say hello with *Guten Tag!*
+      fa: در طول روز با *Guten Tag!* سلام می‌کنید.
+      de: Am Tag sagt man *Guten Tag!*
+  - id: q2
+    type: multiple-choice
+    prompt: Sie gehen nach Hause. Was sagen Sie?
+    options: [Guten Tag!, Bis bald!, Wie geht es dir?]
+    answer: Bis bald!
+    explanation:
+      en: At the end you say *Bis bald!*
+      fa: در پایان می‌گویید *Bis bald!*
+      de: Am Ende sagt man *Bis bald!*
+  - id: q3
+    type: gap-fill
+    prompt: Wie ___ es dir?
+    options: [geht, gehst, gehen]
+    answer: geht
+    explanation:
+      en: With *es* the form is *geht*.
+      fa: با *es* صورت فعل *geht* است.
+      de: Bei *es* ist die Form *geht*.
+  - id: q4
+    type: gap-fill
+    prompt: Tschüs und bis ___!
+    options: [bald, gut, Tag]
+    answer: bald
+    explanation:
+      en: The fixture phrase is *Bis bald!*
+      fa: عبارت آزمایشی *Bis bald!* است.
+      de: Der Test-Satz ist *Bis bald!*
+  - id: q5
+    type: true-false
+    prompt: Wie geht es du?
+    answer: false
+    explanation:
+      en: The phrase takes *dir*, not *du*.
+      fa: این عبارت *dir* می‌گیرد، نه *du*.
+      de: Der Satz braucht *dir*, nicht *du*.
+  - id: q6
+    type: true-false
+    prompt: Guten Tag, Frau Test!
+    answer: true
+    explanation:
+      en: This is the fixture greeting, written correctly.
+      fa: این همان سلام آزمایشی است و درست نوشته شده.
+      de: Das ist der Test-Gruß, richtig geschrieben.
+  - id: q7
+    type: typed-gap-fill
+    prompt: Guten ___, Frau Test! (der Tag)
+    answers: [Tag]
+    explanation:
+      en: The fixture greeting is *Guten Tag!*
+      fa: سلام آزمایشی *Guten Tag!* است.
+      de: Der Test-Gruß ist *Guten Tag!*
+  - id: q8
+    type: typed-gap-fill
+    prompt: Wie ___ (gehen) es dir?
+    answers: [geht]
+    explanation:
+      en: With *es* the form is *geht*.
+      fa: با *es* صورت فعل *geht* است.
+      de: Bei *es* ist die Form *geht*.
+  - id: q9
+    type: typed-gap-fill
+    prompt: Wie geht es ___ (du)?
+    answers: [dir]
+    explanation:
+      en: The phrase takes the form *dir*.
+      fa: این عبارت صورت *dir* را می‌گیرد.
+      de: Der Satz braucht die Form *dir*.
+  - id: q10
+    type: typed-gap-fill
+    prompt: Wie geht es ___ (Sie)?
+    answers: [Ihnen]
+    explanation:
+      en: With *Sie* the form is *Ihnen*.
+      fa: با *Sie* صورت آن *Ihnen* است.
+      de: Bei *Sie* ist die Form *Ihnen*.
+  - id: q11
+    type: typed-gap-fill
+    prompt: Tschüs und ___ (bis) bald!
+    answers: [bis]
+    explanation:
+      en: The fixture phrase is *Bis bald!*
+      fa: عبارت آزمایشی *Bis bald!* است.
+      de: Der Test-Satz ist *Bis bald!*
+  - id: q12
+    type: typed-gap-fill
+    prompt: Bis ___ (bald)!
+    answers: [bald]
+    explanation:
+      en: The fixture phrase is *Bis bald!*
+      fa: عبارت آزمایشی *Bis bald!* است.
+      de: Der Test-Satz ist *Bis bald!*
+  - id: q13
+    type: typed-answer
+    prompt: "___, Frau Test! (gut / Tag)"
+    answers: [Guten Tag]
+    explanation:
+      en: The fixture greeting is *Guten Tag!*
+      fa: سلام آزمایشی *Guten Tag!* است.
+      de: Der Test-Gruß ist *Guten Tag!*
+  - id: q14
+    type: typed-answer
+    prompt: "Hallo Tom, ___? (wie / gehen / es / du)"
+    answers: [wie geht es dir]
+    explanation:
+      en: You ask a friend *Wie geht es dir?*
+      fa: از یک دوست می‌پرسید *Wie geht es dir?*
+      de: Einen Freund fragt man *Wie geht es dir?*
+  - id: q15
+    type: typed-answer
+    prompt: "Tschüs und ___! (bis / bald)"
+    answers: [bis bald]
+    explanation:
+      en: At the end you say *Bis bald!*
+      fa: در پایان می‌گویید *Bis bald!*
+      de: Am Ende sagt man *Bis bald!*
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-01-01
+  pool: 5cebced75a09e12a

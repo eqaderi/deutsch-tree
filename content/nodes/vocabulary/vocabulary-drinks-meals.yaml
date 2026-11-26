@@ -1,0 +1,39 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-drinks-meals
+kind: vocabulary
+level: A1
+chapter: a1-words-food-home
+order: 2
+status: coming-soon
+title:
+  en: "Drinks, meals and eating out"
+  fa: "نوشیدنی‌ها، وعده‌ها و غذا خوردن در بیرون"
+  de: "Getränke, Mahlzeiten und Essen gehen"
+words:
+  - word: Getränk
+  - word: Wasser
+  - word: Milch
+  - word: Kaffee
+  - word: Tee
+  - word: Saft
+  - word: Bier
+  - word: Wein
+  - word: Flasche
+  - word: Glas
+  - word: Durst
+  - word: Frühstück
+  - word: frühstücken
+  - word: essen
+  - word: trinken
+  - word: kochen
+  - word: grillen
+  - word: schmecken
+  - word: Appetit
+  - word: Restaurant
+  - word: Café
+  - word: Lokal
+  - word: Speisekarte
+  - word: bestellen
+  - word: bitter
+  - word: riechen

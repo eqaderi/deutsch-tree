@@ -1,0 +1,13 @@
+# Grammar list row 40.
+id: grammar-040
+kind: grammar
+level: B1
+chapter: b1-modal-konjunktiv
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-018, grammar-039]
+title:
+  en: "*Konjunktiv II* of modal verbs"
+  fa: "*Konjunktiv II* فعل‌های وجهی"
+  de: "Konjunktiv II der Modalverben"

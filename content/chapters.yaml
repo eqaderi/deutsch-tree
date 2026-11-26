@@ -1,0 +1,596 @@
+# The chapters, in curriculum order. A chapter is a named group of nodes of one
+# kind inside one level; the tree shows it as one stop. The curriculum runs
+# through this list from top to bottom, and inside a chapter by each node's
+# `order`. The format is described in content/README.md.
+
+- id: a1-verbs-present
+  level: A1
+  kind: grammar
+  title:
+    en: "Verbs in the present"
+    fa: "فعل در زمان حال"
+    de: "Verben im Präsens"
+
+- id: a1-first-sentences
+  level: A1
+  kind: grammar
+  title:
+    en: "First sentences and questions"
+    fa: "نخستین جمله‌ها و پرسش‌ها"
+    de: "Erste Sätze und Fragen"
+
+- id: a1-words-people
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: people and first contacts"
+    fa: "واژه‌ها: آدم‌ها و نخستین آشنایی"
+    de: "Wörter: Menschen und erste Kontakte"
+
+- id: a1-nouns-articles
+  level: A1
+  kind: grammar
+  title:
+    en: "Nouns and articles"
+    fa: "اسم و حرف تعریف"
+    de: "Nomen und Artikel"
+
+- id: a1-negation
+  level: A1
+  kind: grammar
+  title:
+    en: "Negation with *nicht* and *kein*"
+    fa: "نفی با *nicht* و *kein*"
+    de: "Verneinung mit *nicht* und *kein*"
+
+- id: a1-numbers-time
+  level: A1
+  kind: grammar
+  title:
+    en: "Numbers, dates and time"
+    fa: "عدد، تاریخ و ساعت"
+    de: "Zahlen, Datum und Uhrzeit"
+
+- id: a1-words-numbers-time
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: numbers and time"
+    fa: "واژه‌ها: عدد و زمان"
+    de: "Wörter: Zahlen und Zeit"
+
+- id: a1-cases
+  level: A1
+  kind: grammar
+  title:
+    en: "The cases: *Nominativ*, *Akkusativ*, *Dativ*"
+    fa: "حالت‌های اسم: *Nominativ*، *Akkusativ*، *Dativ*"
+    de: "Die Fälle: Nominativ, Akkusativ, Dativ"
+
+- id: a1-more-articles
+  level: A1
+  kind: grammar
+  title:
+    en: "More articles: *mein*, *dieser*, *welcher*"
+    fa: "حرف تعریف‌های دیگر: *mein*، *dieser*، *welcher*"
+    de: "Mehr Artikelwörter: *mein*, *dieser*, *welcher*"
+
+- id: a1-words-food-home
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: food, home and shopping"
+    fa: "واژه‌ها: خوراک، خانه و خرید"
+    de: "Wörter: Essen, Wohnen und Einkaufen"
+
+- id: a1-verb-patterns
+  level: A1
+  kind: grammar
+  title:
+    en: "Separable verbs, imperative and verb patterns"
+    fa: "فعل‌های جداشدنی، امر و الگوهای فعلی"
+    de: "Trennbare Verben, Imperativ und Verbmuster"
+
+- id: a1-modal-verbs
+  level: A1
+  kind: grammar
+  title:
+    en: "Modal verbs and polite wishes"
+    fa: "فعل‌های وجهی و خواستهٔ مؤدبانه"
+    de: "Modalverben und höfliche Wünsche"
+
+- id: a1-words-daily-life
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: everyday life"
+    fa: "واژه‌ها: زندگی روزمره"
+    de: "Wörter: Alltag"
+
+- id: a1-prepositions
+  level: A1
+  kind: grammar
+  title:
+    en: "Prepositions"
+    fa: "حرف‌های اضافه"
+    de: "Präpositionen"
+
+- id: a1-words-town-travel
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: town and travel"
+    fa: "واژه‌ها: شهر و سفر"
+    de: "Wörter: Stadt und Reisen"
+
+- id: a1-pronouns
+  level: A1
+  kind: grammar
+  title:
+    en: "Pronouns"
+    fa: "ضمیرها"
+    de: "Pronomen"
+
+- id: a1-words-small-words
+  level: A1
+  kind: vocabulary
+  title:
+    en: "Words: small words and useful verbs"
+    fa: "واژه‌ها: واژه‌های کوچک و فعل‌های پرکاربرد"
+    de: "Wörter: kleine Wörter und wichtige Verben"
+
+- id: a1-past
+  level: A1
+  kind: grammar
+  title:
+    en: "Talking about the past"
+    fa: "صحبت دربارهٔ گذشته"
+    de: "Über die Vergangenheit sprechen"
+
+- id: a1-adjectives
+  level: A1
+  kind: grammar
+  title:
+    en: "Adjectives"
+    fa: "صفت‌ها"
+    de: "Adjektive"
+
+- id: a1-building-sentences
+  level: A1
+  kind: grammar
+  title:
+    en: "Building sentences"
+    fa: "ساختن جمله"
+    de: "Sätze bauen"
+
+- id: a1-word-building
+  level: A1
+  kind: grammar
+  title:
+    en: "Word building"
+    fa: "واژه‌سازی"
+    de: "Wortbildung"
+
+- id: a2-past
+  level: A2
+  kind: grammar
+  title:
+    en: "The past: all verbs"
+    fa: "گذشته: همهٔ فعل‌ها"
+    de: "Vergangenheit: alle Verben"
+
+- id: a2-words-people
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: people, feelings and opinions"
+    fa: "واژه‌ها: آدم‌ها، احساس‌ها و نظرها"
+    de: "Wörter: Menschen, Gefühle und Meinungen"
+
+- id: a2-dativ-objects
+  level: A2
+  kind: grammar
+  title:
+    en: "*Dativ*, objects and their order"
+    fa: "*Dativ*، مفعول‌ها و ترتیب آن‌ها"
+    de: "Dativ, Objekte und ihre Reihenfolge"
+
+- id: a2-words-home-food
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: home, food and clothes"
+    fa: "واژه‌ها: خانه، خوراک و لباس"
+    de: "Wörter: Wohnen, Essen und Kleidung"
+
+- id: a2-phrases-emails
+  level: A2
+  kind: phrases
+  title:
+    en: "E-mails and messages"
+    fa: "ایمیل و پیام"
+    de: "E-Mails und Nachrichten"
+
+- id: a2-articles-pronouns
+  level: A2
+  kind: grammar
+  title:
+    en: "Articles and pronouns"
+    fa: "حرف تعریف و ضمیر"
+    de: "Artikelwörter und Pronomen"
+
+- id: a2-adjectives
+  level: A2
+  kind: grammar
+  title:
+    en: "Adjective endings and comparison"
+    fa: "پایانهٔ صفت و مقایسه"
+    de: "Adjektivendungen und Vergleiche"
+
+- id: a2-reflexive-prepositional
+  level: A2
+  kind: grammar
+  title:
+    en: "Reflexive verbs and verbs with prepositions"
+    fa: "فعل‌های انعکاسی و فعل‌های دارای حرف اضافه"
+    de: "Reflexive Verben und Verben mit Präpositionen"
+
+- id: a2-words-free-time
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: free time and media"
+    fa: "واژه‌ها: اوقات فراغت و رسانه‌ها"
+    de: "Wörter: Freizeit und Medien"
+
+- id: a2-prepositions
+  level: A2
+  kind: grammar
+  title:
+    en: "Prepositions and directions"
+    fa: "حرف‌های اضافه و جهت‌ها"
+    de: "Präpositionen und Richtungen"
+
+- id: a2-words-health-town
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: health, town and nature"
+    fa: "واژه‌ها: سلامت، شهر و طبیعت"
+    de: "Wörter: Gesundheit, Stadt und Natur"
+
+- id: a2-polite-forms
+  level: A2
+  kind: grammar
+  title:
+    en: "Polite requests and advice (*Konjunktiv II*)"
+    fa: "درخواست مؤدبانه و توصیه (*Konjunktiv II*)"
+    de: "Höfliche Bitten und Ratschläge (Konjunktiv II)"
+
+- id: a2-words-school-work
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: school and work"
+    fa: "واژه‌ها: مدرسه و کار"
+    de: "Wörter: Schule und Arbeit"
+
+- id: a2-adverbs
+  level: A2
+  kind: grammar
+  title:
+    en: "Adverbs: *deshalb*, *schon*, *noch*"
+    fa: "قیدها: *deshalb*، *schon*، *noch*"
+    de: "Adverbien: *deshalb*, *schon*, *noch*"
+
+- id: a2-subordinate-clauses
+  level: A2
+  kind: grammar
+  title:
+    en: "Subordinate clauses"
+    fa: "جمله‌های پیرو"
+    de: "Nebensätze"
+
+- id: a2-words-small-words
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: time, connecting words and amounts"
+    fa: "واژه‌ها: زمان، واژه‌های ربط و مقدار"
+    de: "Wörter: Zeit, Verbindungswörter und Mengen"
+
+- id: a2-phrases-arrangements
+  level: A2
+  kind: phrases
+  title:
+    en: "Suggestions, requests and apologies"
+    fa: "پیشنهاد، درخواست و عذرخواهی"
+    de: "Vorschläge, Bitten und Entschuldigungen"
+
+- id: a2-werden-lassen-passive
+  level: A2
+  kind: grammar
+  title:
+    en: "*werden*, *lassen* and the passive"
+    fa: "*werden*، *lassen* و مجهول"
+    de: "*werden*, *lassen* und das Passiv"
+
+- id: a2-relative-clauses
+  level: A2
+  kind: grammar
+  title:
+    en: "Relative clauses"
+    fa: "جمله‌های موصولی"
+    de: "Relativsätze"
+
+- id: a2-word-building-particles
+  level: A2
+  kind: grammar
+  title:
+    en: "Word building and particles"
+    fa: "واژه‌سازی و ادات"
+    de: "Wortbildung und Partikeln"
+
+- id: b1-tenses
+  level: B1
+  kind: grammar
+  title:
+    en: "Past and future tenses"
+    fa: "زمان‌های گذشته و آینده"
+    de: "Vergangenheit und Zukunft"
+
+- id: b1-words-people-feelings
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: people and feelings"
+    fa: "واژه‌ها: آدم‌ها و احساس‌ها"
+    de: "Wörter: Menschen und Gefühle"
+
+- id: b1-time-clauses
+  level: B1
+  kind: grammar
+  title:
+    en: "Time clauses"
+    fa: "جمله‌های پیرو زمانی"
+    de: "Nebensätze für die Zeit"
+
+- id: b1-words-health
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: body and health"
+    fa: "واژه‌ها: بدن و سلامت"
+    de: "Wörter: Körper und Gesundheit"
+
+- id: b1-reason-condition-clauses
+  level: B1
+  kind: grammar
+  title:
+    en: "Clauses of reason, contrast, condition and result"
+    fa: "جمله‌های پیرو: علت، تضاد، شرط و نتیجه"
+    de: "Nebensätze: Grund, Gegensatz, Bedingung und Folge"
+
+- id: b1-words-home-food
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: home, food and shopping"
+    fa: "واژه‌ها: خانه، خوراک و خرید"
+    de: "Wörter: Wohnen, Essen und Einkaufen"
+
+- id: b1-connectors-negation
+  level: B1
+  kind: grammar
+  title:
+    en: "Connectors and negation"
+    fa: "واژه‌های ربط و نفی"
+    de: "Konnektoren und Verneinung"
+
+- id: b1-words-learning
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: school, learning and science"
+    fa: "واژه‌ها: مدرسه، یادگیری و علم"
+    de: "Wörter: Schule, Lernen und Wissenschaft"
+
+- id: b1-two-part-connectors
+  level: B1
+  kind: grammar
+  title:
+    en: "Two-part connectors"
+    fa: "حرف‌های ربط دوتایی"
+    de: "Zweiteilige Konnektoren"
+
+- id: b1-words-time-amounts
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: time, connecting words and amounts"
+    fa: "واژه‌ها: زمان، واژه‌های ربط و مقدار"
+    de: "Wörter: Zeit, Verbindungswörter und Mengen"
+
+- id: b1-phrases-opinions
+  level: B1
+  kind: phrases
+  title:
+    en: "Opinions and discussion"
+    fa: "نظر و بحث"
+    de: "Meinung und Diskussion"
+
+- id: b1-genitive-nouns
+  level: B1
+  kind: grammar
+  title:
+    en: "*Genitiv* and special nouns"
+    fa: "*Genitiv* و اسم‌های ویژه"
+    de: "Genitiv und besondere Nomen"
+
+- id: b1-words-work-money
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: work, money and offices"
+    fa: "واژه‌ها: کار، پول و اداره‌ها"
+    de: "Wörter: Arbeit, Geld und Ämter"
+
+- id: b1-prepositions
+  level: B1
+  kind: grammar
+  title:
+    en: "Prepositions"
+    fa: "حرف‌های اضافه"
+    de: "Präpositionen"
+
+- id: b1-words-travel-nature
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: traffic, travel and nature"
+    fa: "واژه‌ها: ترافیک، سفر و طبیعت"
+    de: "Wörter: Verkehr, Reisen und Natur"
+
+- id: b1-phrases-writing
+  level: B1
+  kind: phrases
+  title:
+    en: "Writing e-mails and forum posts"
+    fa: "نوشتن ایمیل و نظر در انجمن اینترنتی"
+    de: "E-Mails und Beiträge im Forum schreiben"
+
+- id: b1-adjectives-participles
+  level: B1
+  kind: grammar
+  title:
+    en: "Adjectives and participles"
+    fa: "صفت و صفت فعلی"
+    de: "Adjektive und Partizipien"
+
+- id: b1-words-media-free-time
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: media, arts and free time"
+    fa: "واژه‌ها: رسانه‌ها، هنر و اوقات فراغت"
+    de: "Wörter: Medien, Kunst und Freizeit"
+
+- id: b1-pronouns
+  level: B1
+  kind: grammar
+  title:
+    en: "Pronouns and quantity words"
+    fa: "ضمیرها و واژه‌های مقدار"
+    de: "Pronomen und Mengenwörter"
+
+- id: b1-relative-clauses
+  level: B1
+  kind: grammar
+  title:
+    en: "Relative clauses"
+    fa: "جمله‌های موصولی"
+    de: "Relativsätze"
+
+- id: b1-words-thinking-talking
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: thinking and discussing"
+    fa: "واژه‌ها: فکر کردن و بحث کردن"
+    de: "Wörter: Denken und Diskutieren"
+
+- id: b1-infinitive
+  level: B1
+  kind: grammar
+  title:
+    en: "Infinitive with and without *zu*"
+    fa: "مصدر با *zu* و بدون *zu*"
+    de: "Infinitiv mit und ohne *zu*"
+
+- id: b1-modal-konjunktiv
+  level: B1
+  kind: grammar
+  title:
+    en: "Modal verbs and *Konjunktiv II*"
+    fa: "فعل‌های وجهی و *Konjunktiv II*"
+    de: "Modalverben und Konjunktiv II"
+
+- id: b1-words-society
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: state and society"
+    fa: "واژه‌ها: دولت و جامعه"
+    de: "Wörter: Staat und Gesellschaft"
+
+- id: b1-phrases-planning
+  level: B1
+  kind: phrases
+  title:
+    en: "Planning something together"
+    fa: "برنامه‌ریزی با هم"
+    de: "Gemeinsam etwas planen"
+
+- id: b1-passive
+  level: B1
+  kind: grammar
+  title:
+    en: "The passive"
+    fa: "مجهول"
+    de: "Das Passiv"
+
+- id: b1-words-general
+  level: B1
+  kind: vocabulary
+  title:
+    en: "Words: general verbs and describing"
+    fa: "واژه‌ها: فعل‌های عمومی و توصیف"
+    de: "Wörter: allgemeine Verben und Beschreiben"
+
+- id: b1-fractions-words-particles
+  level: B1
+  kind: grammar
+  title:
+    en: "Fractions, word building and particles"
+    fa: "کسرها، واژه‌سازی و ادات"
+    de: "Bruchzahlen, Wortbildung und Partikeln"
+
+- id: b1-phrases-presentation
+  level: B1
+  kind: phrases
+  title:
+    en: "Presenting a topic and talking about it"
+    fa: "ارائهٔ یک موضوع و گفت‌وگو دربارهٔ آن"
+    de: "Ein Thema präsentieren und darüber sprechen"
+
+- id: b1-exam-lesen
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: reading (*Lesen*)"
+    fa: "آزمون: خواندن (*Lesen*)"
+    de: "Die Prüfung: Lesen"
+
+- id: b1-exam-hoeren
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: listening (*Hören*)"
+    fa: "آزمون: شنیدن (*Hören*)"
+    de: "Die Prüfung: Hören"
+
+- id: b1-exam-schreiben
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: writing (*Schreiben*)"
+    fa: "آزمون: نوشتن (*Schreiben*)"
+    de: "Die Prüfung: Schreiben"
+
+- id: b1-exam-sprechen
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: speaking (*Sprechen*)"
+    fa: "آزمون: صحبت کردن (*Sprechen*)"
+    de: "Die Prüfung: Sprechen"

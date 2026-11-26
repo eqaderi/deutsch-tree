@@ -1,0 +1,211 @@
+# Fixture listening part for tests. Invented, short, and stable: tests assert on these words.
+# A real Hören conversation is far longer; these are long enough to answer seven statements from.
+id: exam-hoeren-3
+kind: exam-part
+level: B2
+chapter: fixture-exam-hoeren
+order: 1
+status: published
+module: hoeren
+part: 3
+title:
+  en: "Fixture listening, part 3"
+  fa: "شنیدن آزمایشی، بخش ۳"
+  de: "Test-Hören, Teil 3"
+
+explanations:
+  en:
+    task: >
+      You hear one fixture conversation between two people and decide whether
+      seven statements about it are right. The answer sheet says *Richtig* or
+      *Falsch*.
+    scoring: Each right answer is one fixture point.
+    approach:
+      - Read the seven statements before you listen.
+      - Listen once, as in the exam.
+  fa:
+    task: >
+      یک گفت‌وگوی آزمایشی میان دو نفر را می‌شنوید و دربارهٔ هفت جمله تصمیم
+      می‌گیرید که درست است یا نه. در پاسخ‌نامه *Richtig* یا *Falsch* می‌آید.
+    scoring: هر پاسخ درست یک امتیاز آزمایشی است.
+    approach:
+      - پیش از شنیدن، هفت جمله را بخوانید.
+      - مثل امتحان، یک بار گوش کنید.
+  de:
+    task: >
+      Du hörst ein Test-Gespräch zwischen zwei Personen. Dann entscheidest du
+      bei sieben Sätzen: *Richtig* oder *Falsch*?
+    scoring: Jede richtige Antwort ist ein Test-Punkt.
+    approach:
+      - Lies die sieben Sätze, bevor du hörst.
+      - Hör einmal zu, wie in der Prüfung.
+
+practice:
+  - id: t1
+    texts:
+      - id: a
+        title: Nach dem Urlaub
+        speakers:
+          - { name: Lena, voice: kerstin }
+          - { name: Jonas, voice: thorsten }
+        lines:
+          - speaker: Lena
+            text: Hallo Jonas, schön, dich zu sehen! Wie war dein Urlaub?
+          - speaker: Jonas
+            text: Danke, sehr gut. Ich war zwei Wochen am Meer, in Kiel.
+          - speaker: Lena
+            text: Am Meer? Und das Wetter?
+          - speaker: Jonas
+            text: Es hat nur einen Tag geregnet. Sonst war es warm.
+          - speaker: Lena
+            text: Bist du mit dem Zug gefahren?
+          - speaker: Jonas
+            text: Nein, mit dem Auto. Meine Schwester ist mitgekommen.
+          - speaker: Lena
+            text: Ich fahre im Sommer in die Berge. Ich wandere gern.
+          - speaker: Jonas
+            text: Das klingt toll. Schick mir ein Foto!
+    items:
+      - id: i1
+        type: richtig-falsch
+        prompt: Jonas war zwei Wochen am Meer.
+        answer: true
+        explanation:
+          en: He says *Ich war zwei Wochen am Meer*.
+          fa: او می‌گوید *Ich war zwei Wochen am Meer*.
+          de: Er sagt *Ich war zwei Wochen am Meer*.
+      - id: i2
+        type: richtig-falsch
+        prompt: Im Urlaub hat es oft geregnet.
+        answer: false
+        explanation:
+          en: It rained *nur einen Tag*.
+          fa: فقط *einen Tag* باران آمد.
+          de: Es hat *nur einen Tag* geregnet.
+      - id: i3
+        type: richtig-falsch
+        prompt: Jonas ist mit dem Zug gefahren.
+        answer: false
+        explanation:
+          en: He went *mit dem Auto*.
+          fa: او *mit dem Auto* رفت.
+          de: Er ist *mit dem Auto* gefahren.
+      - id: i4
+        type: richtig-falsch
+        prompt: Die Schwester von Jonas war auch im Urlaub.
+        answer: true
+        explanation:
+          en: He says *Meine Schwester ist mitgekommen*.
+          fa: او می‌گوید *Meine Schwester ist mitgekommen*.
+          de: Er sagt *Meine Schwester ist mitgekommen*.
+      - id: i5
+        type: richtig-falsch
+        prompt: Lena fährt im Sommer ans Meer.
+        answer: false
+        explanation:
+          en: She goes *in die Berge*.
+          fa: او *in die Berge* می‌رود.
+          de: Sie fährt *in die Berge*.
+      - id: i6
+        type: richtig-falsch
+        prompt: Lena wandert gern.
+        answer: true
+        explanation:
+          en: She says *Ich wandere gern*.
+          fa: او می‌گوید *Ich wandere gern*.
+          de: Sie sagt *Ich wandere gern*.
+      - id: i7
+        type: richtig-falsch
+        prompt: Jonas möchte ein Foto bekommen.
+        answer: true
+        explanation:
+          en: He says *Schick mir ein Foto!*
+          fa: او می‌گوید *Schick mir ein Foto!*
+          de: Er sagt *Schick mir ein Foto!*
+
+  - id: t2
+    texts:
+      - id: a
+        title: Die Party
+        speakers:
+          - { name: Jonas, voice: thorsten }
+          - { name: Lena, voice: kerstin }
+        lines:
+          - speaker: Jonas
+            text: Lena, hast du am Freitag Zeit? Ich mache eine Party.
+          - speaker: Lena
+            text: Am Freitag arbeite ich bis sieben. Danach habe ich Zeit.
+          - speaker: Jonas
+            text: Super. Die Party beginnt erst um acht.
+          - speaker: Lena
+            text: Soll ich etwas mitbringen?
+          - speaker: Jonas
+            text: Vielleicht einen Salat. Die Getränke kaufe ich selbst.
+          - speaker: Lena
+            text: Gern. Kommt deine Schwester auch?
+          - speaker: Jonas
+            text: Nein, sie ist am Wochenende in München.
+          - speaker: Lena
+            text: Schade. Dann bis Freitag!
+    items:
+      - id: i1
+        type: richtig-falsch
+        prompt: Jonas macht am Freitag eine Party.
+        answer: true
+        explanation:
+          en: He says *Ich mache eine Party*.
+          fa: او می‌گوید *Ich mache eine Party*.
+          de: Er sagt *Ich mache eine Party*.
+      - id: i2
+        type: richtig-falsch
+        prompt: Lena arbeitet am Freitag bis acht.
+        answer: false
+        explanation:
+          en: She works *bis sieben*.
+          fa: او *bis sieben* کار می‌کند.
+          de: Sie arbeitet *bis sieben*.
+      - id: i3
+        type: richtig-falsch
+        prompt: Die Party beginnt um acht.
+        answer: true
+        explanation:
+          en: He says *Die Party beginnt erst um acht*.
+          fa: او می‌گوید *Die Party beginnt erst um acht*.
+          de: Er sagt *Die Party beginnt erst um acht*.
+      - id: i4
+        type: richtig-falsch
+        prompt: Lena soll die Getränke mitbringen.
+        answer: false
+        explanation:
+          en: She brings *einen Salat*.
+          fa: او *einen Salat* می‌آورد.
+          de: Sie bringt *einen Salat* mit.
+      - id: i5
+        type: richtig-falsch
+        prompt: Jonas kauft die Getränke.
+        answer: true
+        explanation:
+          en: He says *Die Getränke kaufe ich selbst*.
+          fa: او می‌گوید *Die Getränke kaufe ich selbst*.
+          de: Er sagt *Die Getränke kaufe ich selbst*.
+      - id: i6
+        type: richtig-falsch
+        prompt: Die Schwester von Jonas kommt zur Party.
+        answer: false
+        explanation:
+          en: She is *am Wochenende in München*.
+          fa: او *am Wochenende in München* است.
+          de: Sie ist *am Wochenende in München*.
+      - id: i7
+        type: richtig-falsch
+        prompt: Die Schwester von Jonas ist am Wochenende in München.
+        answer: true
+        explanation:
+          en: He says *sie ist am Wochenende in München*.
+          fa: او می‌گوید *sie ist am Wochenende in München*.
+          de: Er sagt *sie ist am Wochenende in München*.
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-11-26
+  pool: df1c665c43e66fa7

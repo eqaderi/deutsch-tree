@@ -1,0 +1,13 @@
+# Grammar list row 31.
+id: grammar-031
+kind: grammar
+level: A1
+chapter: a1-modal-verbs
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-028, grammar-029, grammar-030]
+title:
+  en: "*müssen* vs *sollen*; *nicht müssen* vs *nicht dürfen*"
+  fa: "*müssen* در برابر *sollen*؛ *nicht müssen* در برابر *nicht dürfen*"
+  de: "*müssen* oder *sollen*; *nicht müssen* oder *nicht dürfen*"

@@ -1,0 +1,13 @@
+# Grammar list row 74.
+id: grammar-074
+kind: grammar
+level: A1
+chapter: a1-nouns-articles
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-059]
+title:
+  en: "Indefinite article"
+  fa: "حرف تعریف نامعیّن"
+  de: "Unbestimmter Artikel"

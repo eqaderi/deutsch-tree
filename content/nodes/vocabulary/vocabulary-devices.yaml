@@ -1,0 +1,38 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-devices
+kind: vocabulary
+level: B1
+chapter: b1-words-media-free-time
+order: 1
+status: coming-soon
+title:
+  en: "Devices and how to use them"
+  fa: "دستگاه‌ها و طرز استفاده"
+  de: "Geräte und ihre Bedienung"
+words:
+  - word: Bildschirm
+  - word: Monitor
+  - word: Tastatur
+  - word: Taste
+  - word: Festplatte
+  - word: Laufwerk
+  - word: Rechner
+  - word: Software
+  - word: Smartphone
+  - word: Akku
+  - word: Batterie
+  - word: aufladen
+  - word: einschalten
+  - word: schalten
+  - word: anschließen
+  - word: herunterfahren
+  - word: installieren
+  - word: ausdrucken
+  - word: Bedienungsanleitung
+  - word: Gebrauchsanweisung
+  - word: Anleitung
+  - word: funktionieren
+  - word: Störung
+  - word: elektrisch
+  - word: elektronisch

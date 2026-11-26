@@ -1,0 +1,36 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-furniture-containers
+kind: vocabulary
+level: B1
+chapter: b1-words-home-food
+order: 3
+status: coming-soon
+title:
+  en: "Furniture, pots and boxes"
+  fa: "مبلمان، ظرف‌ها و جعبه‌ها"
+  de: "Möbel, Töpfe und Kisten"
+words:
+  - word: Regal
+  - word: Sessel
+  - word: Couch
+  - word: Teppich
+  - word: Kissen
+  - word: Vase
+  - word: Wecker
+  - word: Backofen
+  - word: Ofen
+  - word: Pfanne
+  - word: Schüssel
+  - word: Kanne
+  - word: Dose
+  - word: Büchse
+  - word: Schachtel
+  - word: Kiste
+  - word: Kasten
+  - word: Sack
+  - word: Tüte
+  - word: Abfalleimer
+  - word: Mülltonne
+  - word: Abfall
+  - word: Müllabfuhr

@@ -1,0 +1,13 @@
+# Grammar list row 6.
+id: grammar-006
+kind: grammar
+level: A1
+chapter: a1-verb-patterns
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-005]
+title:
+  en: "*Untrennbare Verben* (*be-*, *ver-*, *er-*, *ent-*)"
+  fa: "فعل‌های جدانشدنی (*be-*، *ver-*، *er-*، *ent-*)"
+  de: "Untrennbare Verben (*be-*, *ver-*, *er-*, *ent-*)"

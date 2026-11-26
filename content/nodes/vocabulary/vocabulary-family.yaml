@@ -1,0 +1,398 @@
+# Vocabulary theme of A1, the sample vocabulary node. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md. The Persian meanings are a draft for a native reader.
+id: vocabulary-family
+kind: vocabulary
+level: A1
+chapter: a1-words-people
+order: 3
+status: published
+title:
+  en: "Family"
+  fa: "خانواده"
+  de: "Familie"
+attemptSize: 15
+words:
+  - word: Familie
+    class: noun
+    article: die
+    plural: Familien
+    level: A1
+    meaning:
+      en: family
+      fa: خانواده
+    definition: Eltern und ihre Kinder
+    example:
+      de: Meine Familie wohnt in Hamburg.
+      en: My family lives in Hamburg.
+      fa: خانوادهٔ من در هامبورگ زندگی می‌کند.
+
+  - word: Eltern
+    class: noun
+    article: die
+    number: plural-only
+    level: A1
+    meaning:
+      en: parents
+      fa: پدر و مادر، والدین
+    definition: Mutter und Vater zusammen
+    example:
+      de: Meine Eltern kommen am Sonntag zum Essen.
+      en: My parents are coming for a meal on Sunday.
+      fa: پدر و مادرم یکشنبه برای غذا می‌آیند.
+
+  - word: Mutter
+    class: noun
+    article: die
+    plural: Mütter
+    level: A1
+    meaning:
+      en: mother
+      fa: مادر
+    definition: die Frau, die ein Kind geboren hat
+    example:
+      de: Meine Mutter arbeitet in einer Apotheke.
+      en: My mother works in a pharmacy.
+      fa: مادرم در یک داروخانه کار می‌کند.
+
+  - word: Vater
+    class: noun
+    article: der
+    plural: Väter
+    level: A1
+    meaning:
+      en: father
+      fa: پدر
+    definition: der Mann, von dem ein Kind kommt
+    example:
+      de: Ihr Vater kocht sehr gern.
+      en: Her father really likes cooking.
+      fa: پدرش خیلی دوست دارد آشپزی کند.
+
+  - word: Kind
+    class: noun
+    article: das
+    plural: Kinder
+    level: A1
+    meaning:
+      en: child
+      fa: بچه، کودک
+    definition: ein Junge oder ein Mädchen, zum Beispiel sechs Jahre alt
+    example:
+      de: Das Kind spielt im Garten.
+      en: The child is playing in the garden.
+      fa: بچه در باغ بازی می‌کند.
+
+  - word: Sohn
+    class: noun
+    article: der
+    plural: Söhne
+    level: A1
+    meaning:
+      en: son
+      fa: پسر (فرزند)
+    definition: für Mutter und Vater ihr Kind, wenn es ein Junge oder ein Mann ist
+    example:
+      de: Unser Sohn ist acht Jahre alt.
+      en: Our son is eight years old.
+      fa: پسرمان هشت ساله است.
+
+  - word: Tochter
+    class: noun
+    article: die
+    plural: Töchter
+    level: A1
+    meaning:
+      en: daughter
+      fa: دختر (فرزند)
+    definition: für Mutter und Vater ihr Kind, wenn es ein Mädchen oder eine Frau ist
+    example:
+      de: Ihre Tochter studiert in Wien.
+      en: Her daughter is studying in Vienna.
+      fa: دخترش در وین درس می‌خواند.
+
+  - word: Bruder
+    class: noun
+    article: der
+    plural: Brüder
+    level: A1
+    meaning:
+      en: brother
+      fa: برادر
+    definition: ein Junge oder Mann mit denselben Eltern wie man selbst
+    example:
+      de: Mein Bruder spielt Fußball.
+      en: My brother plays football.
+      fa: برادرم فوتبال بازی می‌کند.
+
+  - word: Schwester
+    class: noun
+    article: die
+    plural: Schwestern
+    level: A1
+    meaning:
+      en: sister
+      fa: خواهر
+    definition: ein Mädchen oder eine Frau mit denselben Eltern wie man selbst
+    example:
+      de: Hast du eine Schwester?
+      en: Do you have a sister?
+      fa: خواهر داری؟
+
+  - word: Geschwister
+    class: noun
+    article: die
+    number: plural-only
+    level: A1
+    meaning:
+      en: brothers and sisters, siblings
+      fa: خواهر و برادرها
+    definition: alle Brüder und Schwestern von einer Person
+    example:
+      de: Ich habe zwei Geschwister.
+      en: I have two brothers and sisters.
+      fa: من دو خواهر و برادر دارم.
+
+  - word: Großeltern
+    class: noun
+    article: die
+    number: plural-only
+    level: A1
+    meaning:
+      en: grandparents
+      fa: پدربزرگ و مادربزرگ
+    definition: die Eltern von der Mutter oder vom Vater
+    example:
+      de: Die Großeltern besuchen uns im Sommer.
+      en: The grandparents visit us in the summer.
+      fa: پدربزرگ و مادربزرگ تابستان به دیدن ما می‌آیند.
+
+  # Großmutter and Oma name the same person; each is right when the other is asked for.
+  - word: Großmutter
+    class: noun
+    article: die
+    plural: Großmütter
+    level: A1
+    meaning:
+      en: grandmother
+      fa: مادربزرگ
+    definition: die Mutter von der Mutter oder vom Vater
+    example:
+      de: Meine Großmutter ist 85 Jahre alt.
+      en: My grandmother is 85 years old.
+      fa: مادربزرگم ۸۵ سال دارد.
+    alsoAccepted: [die Oma]
+    tooCloseTo: [Oma]
+
+  - word: Großvater
+    class: noun
+    article: der
+    plural: Großväter
+    level: A1
+    meaning:
+      en: grandfather
+      fa: پدربزرگ
+    definition: der Vater von der Mutter oder vom Vater
+    example:
+      de: Der Großvater liest jeden Morgen die Zeitung.
+      en: Grandfather reads the newspaper every morning.
+      fa: پدربزرگ هر صبح روزنامه می‌خواند.
+    alsoAccepted: [der Opa]
+    tooCloseTo: [Opa]
+
+  - word: Oma
+    class: noun
+    article: die
+    plural: Omas
+    level: A1
+    meaning:
+      en: grandma
+      fa: مامان‌بزرگ
+    definition: so sagen Kinder zu der Mutter von ihrer Mutter oder ihrem Vater
+    example:
+      de: Oma, kommst du morgen zu uns?
+      en: Grandma, are you coming to see us tomorrow?
+      fa: مامان‌بزرگ، فردا پیش ما می‌آیی؟
+    alsoAccepted: [die Großmutter]
+    tooCloseTo: [Großmutter]
+
+  - word: Opa
+    class: noun
+    article: der
+    plural: Opas
+    level: A1
+    meaning:
+      en: grandpa
+      fa: بابابزرگ
+    definition: so sagen Kinder zu dem Vater von ihrer Mutter oder ihrem Vater
+    example:
+      de: Mein Opa erzählt gern Geschichten.
+      en: My grandpa likes telling stories.
+      fa: بابابزرگم دوست دارد قصه تعریف کند.
+    alsoAccepted: [der Großvater]
+    tooCloseTo: [Großvater]
+
+  # "meine Frau" and "mein Mann" are the everyday words for the same people.
+  - word: Ehefrau
+    class: noun
+    article: die
+    plural: Ehefrauen
+    level: A1
+    meaning:
+      en: wife
+      fa: همسر (زن)، زن
+    definition: die Frau, mit der eine Person verheiratet ist
+    example:
+      de: Das ist meine Ehefrau Lena.
+      en: This is my wife, Lena.
+      fa: این همسرم لنا است.
+    alsoAccepted: [die Frau]
+
+  - word: Ehemann
+    class: noun
+    article: der
+    plural: Ehemänner
+    level: A1
+    meaning:
+      en: husband
+      fa: شوهر
+    definition: der Mann, mit dem eine Person verheiratet ist
+    example:
+      de: Ihr Ehemann ist Lehrer.
+      en: Her husband is a teacher.
+      fa: شوهرش معلم است.
+    alsoAccepted: [der Mann]
+
+  - word: Baby
+    class: noun
+    article: das
+    plural: Babys
+    level: A1
+    meaning:
+      en: baby
+      fa: نوزاد
+    definition: ein ganz kleines Kind, noch kein Jahr alt
+    example:
+      de: Das Baby schläft jetzt.
+      en: The baby is asleep now.
+      fa: نوزاد الان خواب است.
+    alsoAccepted: [der Säugling, das Neugeborene]
+
+  # The scope list gives "der/die": a man is "der Verwandte", a woman "die Verwandte".
+  - word: Verwandte
+    class: noun
+    article: der
+    plural: Verwandten
+    level: A1
+    meaning:
+      en: relative
+      fa: خویشاوند، فامیل
+    definition: eine Person aus der Familie, zum Beispiel ein Onkel oder eine Tante
+    example:
+      de: Am Wochenende besuchen wir Verwandte in Bonn.
+      en: At the weekend we are visiting relatives in Bonn.
+      fa: آخر هفته به دیدن فامیل‌هایمان در بن می‌رویم.
+    alsoAccepted: [die Verwandte, der Angehörige, die Angehörige, das Familienmitglied]
+
+  - word: Hochzeit
+    class: noun
+    article: die
+    plural: Hochzeiten
+    level: A1
+    meaning:
+      en: wedding
+      fa: عروسی
+    definition: das Fest, wenn zwei Menschen heiraten
+    example:
+      de: Die Hochzeit ist im Mai.
+      en: The wedding is in May.
+      fa: عروسی در ماه مه است.
+    alsoAccepted: [die Hochzeitsfeier]
+
+  - word: heiraten
+    class: verb
+    level: A1
+    meaning:
+      en: to marry, to get married
+      fa: ازدواج کردن
+    definition: Mann und Frau oder zwei Menschen werden ein Ehepaar
+    example:
+      de: Sie heiraten nächstes Jahr.
+      en: They are getting married next year.
+      fa: آن‌ها سال آینده ازدواج می‌کنند.
+
+  - word: Partner
+    class: noun
+    article: der
+    plural: Partner
+    level: A1
+    meaning:
+      en: partner
+      fa: شریک زندگی
+    definition: die Person, mit der man ein Paar ist, verheiratet oder nicht
+    example:
+      de: Mein Partner kommt aus Spanien.
+      en: My partner is from Spain.
+      fa: شریک زندگی‌ام اهل اسپانیاست.
+    alsoAccepted: [die Partnerin, der Lebenspartner, die Lebenspartnerin, der Lebensgefährte, die Lebensgefährtin]
+
+  - word: lieben
+    class: verb
+    level: A1
+    meaning:
+      en: to love
+      fa: عشق ورزیدن
+    definition: eine Person oder eine Sache sehr, sehr gern haben
+    example:
+      de: Die Kinder lieben ihren Hund.
+      en: The children love their dog.
+      fa: بچه‌ها عاشق سگشان هستند.
+
+  - word: Leben
+    class: noun
+    article: das
+    plural: Leben
+    level: A1
+    meaning:
+      en: life
+      fa: زندگی
+    definition: die Zeit von der Geburt bis zum Tod
+    example:
+      de: Das Leben in der Stadt ist teuer.
+      en: Life in the city is expensive.
+      fa: زندگی در شهر گران است.
+    alsoAccepted: [die Lebenszeit]
+
+  # Both say that a life has ended; each is right when the other is asked for.
+  - word: gestorben
+    class: adjective
+    level: A1
+    meaning:
+      en: died, passed away
+      fa: فوت کرده
+    definition: das Partizip II von „sterben“
+    example:
+      de: Sein Großvater ist letztes Jahr gestorben.
+      en: His grandfather died last year.
+      fa: پدربزرگش سال گذشته درگذشت.
+    alsoAccepted: [tot, verstorben, ist gestorben, starb]
+    tooCloseTo: [tot]
+
+  - word: tot
+    class: adjective
+    level: A1
+    meaning:
+      en: dead
+      fa: مرده، بی‌جان
+    definition: nicht mehr lebendig
+    example:
+      de: Die Pflanze ist leider tot.
+      en: Sadly, the plant is dead.
+      fa: متأسفانه گیاه مرده است.
+    alsoAccepted: [gestorben, verstorben, leblos]
+    tooCloseTo: [gestorben]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 162, then 1 question)
+  date: 2026-11-26
+  pool: ea7bd33677877f64

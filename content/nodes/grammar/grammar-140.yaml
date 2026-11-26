@@ -1,0 +1,13 @@
+# Grammar list row 140.
+id: grammar-140
+kind: grammar
+level: A1
+chapter: a1-first-sentences
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-139]
+title:
+  en: "Inversion"
+  fa: "جابه‌جایی فاعل و فعل (*Inversion*)"
+  de: "Inversion: Das Subjekt steht nach dem Verb"

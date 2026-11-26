@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-good-correct-necessary
+kind: vocabulary
+level: B1
+chapter: b1-words-general
+order: 5
+status: coming-soon
+title:
+  en: "Ideal, correct, necessary: judging things"
+  fa: "ایده‌آل، درست، لازم: ارزیابی کردن"
+  de: "Ideal, korrekt, nötig: Dinge beurteilen"
+words:
+  - word: ideal
+  - word: perfekt
+  - word: prima
+  - word: klasse
+  - word: positiv
+  - word: negativ
+  - word: korrekt
+  - word: gründlich
+  - word: intensiv
+  - word: kompliziert
+  - word: nötig
+  - word: bereit
+  - word: flexibel
+  - word: passiv
+  - word: populär
+  - word: anwesend
+  - word: abwesend
+  - word: sichtbar
+  - word: zugänglich
+  - word: interessiert
+  - word: begrenzt
+  - word: recht
+  - word: "o.k."
+  - word: ausreichen
+  - word: genügen
+  - word: reichen

@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-advantages-disadvantages
+kind: phrases
+level: B1
+chapter: b1-phrases-opinions
+order: 5
+status: coming-soon
+title:
+  en: "Advantages and disadvantages"
+  fa: "مزایا و معایب"
+  de: "Vorteile und Nachteile"
+purpose:
+  en: "Name the good and the bad sides of something and weigh them."
+  fa: "خوبی‌ها و بدی‌های چیزی را بگویید و آن‌ها را با هم بسنجید."
+  de: "Die guten und die schlechten Seiten von etwas nennen und vergleichen."
+examTasks: [exam-schreiben-2, exam-sprechen-2]

@@ -1,0 +1,512 @@
+import type { ExamAudience, ExamLinkKind, NodeKind, Question, WordClass } from '../content-model/index.ts'
+import type { AnswerNote, ExamModule } from '../learning-engine/index.ts'
+
+/**
+ * Every word the interface shows. Components never hold their own wording;
+ * they read it from here through `useLanguage()`.
+ *
+ * To add a string: add it here in English, then to `strings.fa.ts` (Persian)
+ * and `strings.de.ts` (simple German, about A2 level). `pnpm check` fails
+ * until all three have it. A string that holds a number is a function, so
+ * that Persian can write the number in Persian digits.
+ */
+export const en = {
+  appName: 'deutsch-tree',
+  /** The page's description, for search engines and link previews. */
+  appDescription:
+    'Everything from zero to the Goethe B1 exam as a tree of small topics, each with an explanation and a test.',
+  language: 'Language',
+  /** A whole number as this language writes it. Use it for every number shown on its own. */
+  number: (value: number) => String(value),
+  loading: 'Loading…',
+  loadFailed: 'This page could not be loaded. Check your connection and try again.',
+  tryAgain: 'Try again',
+
+  treeTitle: 'German from zero to B1',
+  treeIntro:
+    'Everything you need for the Goethe B1 exam, as one tree of small topics. Each topic has a short explanation and a test.',
+  levels: 'Levels',
+  routeStart: 'Start',
+  routeExam: 'Exam',
+  levelNames: { A1: 'Beginner', A2: 'Elementary', B1: 'Intermediate' } as Record<string, string | undefined>,
+  topicCount: (count: number) => (count === 1 ? '1 topic' : `${count} topics`),
+  kinds: {
+    grammar: 'Grammar',
+    vocabulary: 'Vocabulary',
+    phrases: 'Phrases',
+    'exam-part': 'Exam parts',
+  } satisfies Record<NodeKind, string>,
+  start: 'Start',
+  comingSoon: 'Coming soon',
+  /** A topic that the exam only asks the learner to understand, never to use. */
+  recogniseOnly: 'Recognise only',
+  recogniseOnlyNote: 'You only need to understand this when you read or hear it. You do not need to use it yourself.',
+  recogniseOnlyTest: 'This test only asks whether you understand the form. You never have to write it yourself.',
+  done: 'Done',
+  /** The state word of a topic that is in progress, as the tree writes it. */
+  continueTopic: 'Continue',
+
+  // Finding the way in the tree: the first visit, the next topic, the filter and the counts.
+  howItWorks: 'How it works',
+  firstSteps: {
+    pick: 'Pick a topic.',
+    read: 'Read it, or go straight to the test.',
+    pass: (percent: number) => `Score ${percent}% and the topic is done.`,
+  },
+  gotIt: 'Got it',
+  yourNextTopic: 'Your next topic',
+  nothingNext: 'You have done every topic that is written so far. New topics appear in the tree when they are ready.',
+  youAreHere: 'You are here',
+  kindsOfTopic: 'Kinds of topic',
+  allKinds: 'All kinds',
+  doneCount: (done: number) => `${done} done`,
+  /** Topics that are not done yet, written or not. */
+  leftCount: (left: number) => `${left} left`,
+  /** The counts of a level: done, left, and how many of those left are not written yet. */
+  countsSummary: (done: number, left: number, comingSoon: number) =>
+    comingSoon === 0 ? `${done} done · ${left} left` : `${done} done · ${left} left, ${comingSoon} of them coming soon`,
+  doneOfTotal: (done: number, total: number) => `${done} of ${total} done`,
+  comingSoonCount: (count: number) => `${count} coming soon`,
+  noTopicsHere: 'This level has no topics of this kind.',
+
+  // A topic's page: what it builds on, and un-marking.
+  buildsOn: 'Builds on',
+  buildsOnNote: 'Nothing is locked. These topics help if this one feels too hard.',
+  unmark: 'Mark as not done',
+  unmarkQuestion: 'Mark this topic as not done? It stays that way until you pass it again.',
+  unmarkConfirm: 'Yes, mark as not done',
+  keepDone: 'Keep it done',
+  unmarked: 'This topic is not done any more.',
+
+  allTopics: 'All topics',
+  rule: 'Rule',
+  table: 'Table',
+  diagram: 'Diagram',
+  examples: 'Examples',
+  /** The play button of a piece of German, and the same button while it plays. */
+  listen: 'Listen',
+  stopListening: 'Stop',
+  audioFailed: 'The audio could not be played.',
+  /** The credit that a voice's licence asks for, shown at the foot of every page. */
+  voiceCredit:
+    'German audio: the Piper voices Thorsten, Kerstin and MLS. The Kerstin voice is built on Hi-Fi TTS by NVIDIA (CC BY 4.0), read by Cori Samuel. The MLS voice is built on Multilingual LibriSpeech by Facebook AI (CC BY 4.0), read from LibriVox audiobooks.',
+  commonMistakes: 'Common mistakes',
+  wrong: 'Wrong',
+  right: 'Right',
+  // A phrases page: what the phrases are for, then each phrase.
+  phrasesPurpose: 'What these phrases are for',
+  phraseList: 'Phrases',
+  /** Above the example of one phrase. */
+  phraseExample: 'Example',
+  /** Above the exam tasks that one phrase serves. */
+  phraseUsefulFor: 'Useful for',
+  test: 'Test',
+  takeTheTest: 'Take the test',
+  comingSoonPage: 'This topic is not written yet. It will appear here when it is ready.',
+  // The export of words to Anki, on a vocabulary page.
+  ankiTitle: 'Flashcards for Anki',
+  ankiText:
+    'Save the words as a file for Anki, a flashcard app that shows you each word again just before you would forget it. In Anki, choose File, then Import, and open the file. If you import a newer file later, Anki updates the cards you already have instead of adding them again. You need Anki 2.1.54 or newer.',
+  ankiThisTopic: 'Download this topic',
+  ankiStartedTopics: 'Download all started topics',
+  ankiStartedCount: (count: number) =>
+    count === 1 ? '1 vocabulary topic started' : `${count} vocabulary topics started`,
+  ankiNoneStarted:
+    'You have not started a vocabulary topic yet. A topic counts as started once you have taken its test.',
+  /** The name of the file follows on a line of its own. */
+  ankiSavedAs: 'The cards are in this file:',
+  ankiLoadFailed: 'The words could not be loaded. Check your connection and try again.',
+  // A vocabulary topic: its words, each with article, plural, word class, level, meaning and example.
+  words: 'Words',
+  plural: 'Plural',
+  /** In place of a plural, for a noun that has only one number. */
+  pluralOnly: 'plural only',
+  noPlural: 'no plural',
+  wordClasses: {
+    noun: 'noun',
+    verb: 'verb',
+    adjective: 'adjective',
+    adverb: 'adverb',
+    pronoun: 'pronoun',
+    article: 'article',
+    preposition: 'preposition',
+    conjunction: 'conjunction',
+    numeral: 'number',
+    particle: 'particle',
+    interjection: 'interjection',
+    phrase: 'phrase',
+    abbreviation: 'abbreviation',
+    affix: 'word part',
+  } satisfies Record<WordClass, string>,
+  notFoundTitle: 'Topic not found',
+  notFoundText: 'There is no topic at this address.',
+
+  // An exam-part page: what the part asks, how it is scored, how to approach it, and its practice task.
+  examPartNumber: (part: number) => `Part ${part}`,
+  examTask: 'What this part asks',
+  examScoring: 'How it is scored',
+  examApproach: 'How to approach it',
+  practice: 'Practice task',
+  startPractice: 'Start the practice task',
+
+  // A practice task: the text, all its items on one page, then the result of every item.
+  practiceTitle: (title: string) => `Practice: ${title}`,
+  practiceText: 'Text',
+  // A listening task: the recording while it is answered, then what is said, line by line.
+  practiceRecording: 'Recording',
+  playRecording: 'Play the recording',
+  stopRecording: 'Stop the recording',
+  recordingHidden: 'You read what is said after you check your answers.',
+  transcript: 'What is said',
+  questions: 'Questions',
+  /** The words on the exam's answer sheet. They are German in every language. */
+  examAnswers: { richtig: 'Richtig', falsch: 'Falsch', ja: 'Ja', nein: 'Nein' },
+  answeredOf: (answered: number, total: number) => `${answered} of ${total} answered`,
+  yourAnswers: 'Your answers',
+  answerIsRight: 'Your answer is right',
+  answerIsWrong: 'Your answer is wrong',
+  practiceRetry: 'You can try as often as you like.',
+
+  backToTopic: 'Back to the topic',
+  testTitle: (title: string) => `Test: ${title}`,
+  // A node's test: one question per screen, then the result.
+  questionOf: (place: number, total: number) => `Question ${place} of ${total}`,
+  questionNumber: (place: number) => `Question ${place}`,
+  instructions: {
+    'multiple-choice': 'Choose the right answer.',
+    'gap-fill': 'Choose the word that fits the gap.',
+    'true-false': 'Is this sentence correct German?',
+    'find-error': 'One word in this sentence is wrong. Choose it.',
+    'word-order': 'Build the sentence: choose the words in the right order.',
+    matching: 'Choose the partner that fits each word.',
+    'typed-answer': 'Type the answer.',
+    'typed-gap-fill': 'Type the word that fits the gap.',
+    'meaning-of-word': 'What does this word mean?',
+    'word-for-meaning': 'Type the German word. A noun needs its article.',
+    'richtig-falsch': 'Is this statement right or wrong? The text decides.',
+    'ja-nein': 'Answer yes (Ja) or no (Nein). The text of this person decides.',
+    'which-text': 'Which advertisement fits? Choose its letter, or 0 if none fits.',
+    'who-says': 'Who says this?',
+  } satisfies Record<Question['type'], string>,
+  /** Read out in place of an empty gap. */
+  gap: 'gap',
+  /** Word ordering: names the line on which the sentence is built, and the words it is built from. */
+  yourSentence: 'Your sentence',
+  wordsToPlace: 'Words',
+  /** Matching: stands in a list of partners until one is chosen. */
+  choosePartner: 'Choose…',
+  sentenceCorrect: 'Correct',
+  sentenceNotCorrect: 'Not correct',
+  /** The name of the buttons that write ä, ö, ü and ß into a typed answer. */
+  germanLetters: 'German letters',
+  next: 'Next',
+  checkAnswers: 'Check answers',
+  reportProblem: 'Report a problem',
+
+  passed: 'Passed',
+  notPassed: 'Not passed yet',
+  /** Follows the number of right answers, which is shown large: "9 of 10 right". */
+  ofTotalRight: (total: number) => `of ${total} right`,
+  neededToPass: (passMark: number, total: number) => `You need ${passMark} of ${total} right to pass.`,
+  topicNowDone: 'This topic is now done.',
+  topicStaysDone: 'This topic was already done. It stays done.',
+  retryAnyTime: 'You can try as often as you like. Every test draws new questions.',
+  wrongAnswers: 'Wrong answers',
+  yourAnswer: 'Your answer',
+  /** In place of an answer that was not given. */
+  noAnswer: '–',
+  rightAnswer: 'Right answer',
+
+  // Backup: progress exported to a file and imported from one.
+  backupLink: 'Back up progress',
+  backupTitle: 'Back up your progress',
+  backupWhy:
+    'Your progress is kept only in this browser, on this device. If the browser’s data is cleared, it is gone. A file keeps it safe, and takes it to another device.',
+  /** A day as this language writes it. Use it for every date shown. */
+  date: (date: Date) => new Intl.DateTimeFormat('en-GB', { dateStyle: 'long' }).format(date),
+  topicsDone: (count: number) => (count === 1 ? '1 topic done' : `${count} topics done`),
+  mockModulesFinished: (count: number) =>
+    count === 1 ? '1 mock exam module finished' : `${count} mock exam modules finished`,
+  officialExamsScored: (count: number) =>
+    count === 1 ? 'Scores of 1 official mock exam' : `Scores of ${count} official mock exams`,
+  onThisDevice: 'On this device',
+  inTheFile: 'In the file',
+  exportTitle: 'Export',
+  exportText: 'Saves a file with your progress on this device. Nothing is uploaded.',
+  exportProgress: 'Export progress',
+  /** The name of the file follows on a line of its own. */
+  exportedAs: 'Your progress is now in this file:',
+  keepFileSafe: 'Keep the file somewhere safe.',
+  /** The first line of an exported file, for whoever opens it. `button` is the name of the link to the backup page. */
+  aboutProgressFile: (button: string) =>
+    `A backup of your learning progress in deutsch-tree. To bring it back, open deutsch-tree, choose "${button}" and import this file. It holds which topics you have done and your scores, nothing else, and it is never sent anywhere.`,
+  importTitle: 'Import',
+  importText:
+    'Brings back the progress from a file that you exported here or on another device. It takes the place of the progress on this device.',
+  importFile: 'Import a progress file',
+  importReplaceTitle: 'Replace the progress on this device?',
+  importReplaceText:
+    'The file takes the place of everything on this device: your topics, your mock exam results and the scores of official mock exams. This cannot be undone.',
+  exportedOn: (date: string) => `exported on ${date}`,
+  replaceProgress: 'Replace progress',
+  cancel: 'Cancel',
+  imported: 'Progress imported.',
+  importNotProgress: 'This is not a deutsch-tree progress file, or the file is damaged. Nothing was changed.',
+  importNewerVersion:
+    'This file was saved by a newer version of deutsch-tree than the one open here. Reload this page to get the newest version, then import the file again. Nothing was changed.',
+  savedByNewerVersion:
+    'The progress in this browser was saved by a newer version of deutsch-tree. Reload the page to get that version. Until then your progress is not shown, and nothing you do here is saved.',
+  reload: 'Reload',
+  // A milestone, said once on the tree, with the suggestion to back up.
+  milestoneLevel: (level: string) => `You have done every ${level} topic there is so far.`,
+  milestoneTopics: (count: number) => `You have done ${count} topics.`,
+  suggestBackup: 'Your progress is kept only in this browser. A copy in a file keeps it safe.',
+  notNow: 'Not now',
+
+  // A level's checkpoint: a test across the topics of the level. It is advice and changes no topic.
+  checkpoint: 'Checkpoint',
+  checkpointTitle: (level: string) => `${level} checkpoint`,
+  checkpointIntro:
+    'A short test with questions from the topics of this level. It shows you what to look at again. It changes nothing in your topics.',
+  startCheckpoint: 'Start the checkpoint',
+  onToLevel: (level: string) => `On to ${level}`,
+  checkpointNothingYet: 'No topic of this level has a test yet. The checkpoint comes with the first one.',
+  checkpointSize: (questions: number, topics: number) =>
+    `${questions === 1 ? '1 question' : `${questions} questions`} from ${topics === 1 ? '1 topic' : `${topics} topics`}`,
+  checkpointResult: 'Checkpoint result',
+  checkpointAllRight: 'Everything was right. There is nothing to look at again.',
+  checkpointSomeWrong: 'Some answers were wrong. The topics below are worth another look.',
+  checkpointChangesNothing: 'A checkpoint only shows where you stand. Your topics stay as they are.',
+  topicsToRevisit: 'Topics to look at again',
+  /** Beside a topic in that list: "2 of 5 wrong". */
+  wrongOfAsked: (wrong: number, asked: number) => `${wrong} of ${asked} wrong`,
+
+  // Typed answers that counted as right although they were not written exactly.
+  acceptedWithNote: 'Accepted with a note',
+  exactSpelling: 'Exact spelling',
+  answerNotes: {
+    'umlaut-substitute': 'Accepted. The exact spelling has ä, ö, ü or ß.',
+    capitalisation: 'Accepted. Mind the capital and small letters.',
+  } satisfies Record<AnswerNote, string>,
+
+  // The readiness view: whether the learner can book the exam, and what is missing.
+  readiness: 'Readiness',
+  readinessTitle: 'Ready for the exam?',
+  readinessRule: (score: number, exams: number) =>
+    `You are ready when you have ${score} or more in every module on ${exams} official mock exams.`,
+  ready: 'Ready',
+  readyText: (score: number, exams: number) =>
+    `You have ${score} or more in every module on ${exams} official mock exams. You can book the exam.`,
+  notReady: 'Not ready yet',
+  /** Follows the number of exams that reached the target, which is shown large: "1 of 2 official mock exams with…". */
+  ofExamsAtTarget: (needed: number, score: number) =>
+    `of ${needed} official mock exams with ${score} or more in every module`,
+  whatIsMissing: 'What is missing',
+  examsStillNeeded: (count: number, score: number) =>
+    count === 1
+      ? `1 more official mock exam with ${score} or more in every module`
+      : `${count} more official mock exams with ${score} or more in every module`,
+  /** One module of an exam that keeps it from counting. A whole sentence: several follow each other. */
+  moduleBelow: (module: string, score: number, target: number) => `${module}: ${score}, needs ${target}.`,
+  moduleNotRecorded: (module: string) => `${module}: not recorded.`,
+  examModules: {
+    reading: 'Reading',
+    listening: 'Listening',
+    writing: 'Writing',
+    speaking: 'Speaking',
+  } satisfies Record<ExamModule, string>,
+
+  // The end of the tree.
+  examStopTitle: 'The exam',
+  examStopWarning: 'Keep the official mock exams unseen until your final check.',
+  openReadiness: 'Readiness and official mock exams',
+
+  // The warning. It must be hard to miss in every language.
+  keepUnseenTitle: 'Keep these exams unseen',
+  keepUnseenText:
+    'Only a few official mock exams exist, and you need two of them. An exam tests you only the first time you see it. Do not open one, not even for a look, before you have finished the topics and the mock exams of this site.',
+  keepUnseenThen: 'Then take each exam once, with a clock, like the real exam, and record your scores here.',
+
+  officialMockExams: 'Official mock exams',
+  officialMockExamsIntro:
+    'These are the practice sets of the exam’s own institute. This site only links to them. Every link opens another website.',
+  spareSets: 'Spare sets',
+  spareSetsIntro:
+    'Sets for young people. The format and the scoring are the same as for adults; the topics come from school life. Use one only when an adult set is used up.',
+  examAudiences: { adults: 'Adults', youth: 'Young people' } satisfies Record<ExamAudience, string>,
+  spareCounts: 'Counts toward readiness like an adult set.',
+  doesNotCount: 'Scores on this set do not count toward readiness.',
+
+  examNotRecorded: 'No scores recorded yet',
+  examAtTarget: (score: number) => `Target reached: ${score} or more in every module`,
+  examBelowTarget: 'Target not reached yet',
+  /** In place of a module's score. */
+  scoreNotRecorded: 'not recorded',
+  recordScores: 'Record scores',
+  changeScores: 'Change scores',
+  scoreHint: (maximum: number) =>
+    `Points out of ${maximum} for each module. Leave a field empty until you have done that module.`,
+  scoreInvalid: (maximum: number) => `A score is a whole number from 0 to ${maximum}.`,
+  saveScores: 'Save scores',
+
+  showExamLinks: 'Show the links to this exam',
+  hideExamLinks: 'Hide the links',
+  finalCheckQuestion: 'Is this your final check?',
+  finalCheckText:
+    'You can see this exam for the first time only once. Open it only when you are ready to take it as your final check.',
+  finalCheckYes: 'Yes, show the links',
+  finalCheckNotYet: 'Not yet',
+  examLinkKinds: {
+    papers: 'Exam papers (PDF)',
+    audio: 'Listening recordings',
+    online: 'Online version',
+  } satisfies Record<ExamLinkKind, string>,
+  candidatePagesOnly: (first: number, last: number) =>
+    `Use pages ${first} to ${last} only. The pages after them hold the answers, the texts of the recordings and sample answers.`,
+
+  // Private packs: practice exams from a book the learner owns, found in the private folder.
+  packsLink: 'Your exam books',
+  packsTitle: 'Your exam books',
+  packsIntro: 'Practice exams from a book you own, with its pages, its recordings and its answer key.',
+  noPackTitle: 'No exam book found',
+  noPackSteps: [
+    'A book of practice exams that you own can be added as a private pack. The pack is made once from the book’s files with the command pnpm pack:build.',
+    'Put the pack folder into the folder named “private”. In the folder with the start files, it is inside the folder “app”. Start the app with its start file, then open this page again.',
+    'Packs never appear on the public website. Only the app on your own computer finds them, so the book stays with you.',
+  ],
+  phoneTitle: 'On a phone or tablet',
+  phoneIntro:
+    'Connect it to the same Wi-Fi as this computer, and open this address in its browser. The app must keep running here.',
+  phoneProgress:
+    'The phone keeps its own progress. To move progress from one device to the other, use “Back up progress”.',
+  packUnreadable: (folder: string) =>
+    `The pack in the folder “${folder}” cannot be read. Build it again with pnpm pack:build.`,
+  examCount: (count: number) => (count === 1 ? '1 exam' : `${count} exams`),
+  packExam: (number: number) => `Exam ${number}`,
+  moduleNotScored:
+    'This module is not scored from the answer key. Do its tasks on these pages; the exam part’s page in the tree shows how to get a score.',
+  parts: 'Parts',
+  packPart: (number: number) => `Part ${number}`,
+  bookPagesHeading: 'Pages of the book',
+  bookPage: (page: number) => `Page ${page} of the book`,
+  bookPagesFailed: 'The pages could not be shown. The pack may be damaged; build it again with pnpm pack:build.',
+  recording: 'Recording',
+  recordingOf: (place: number, count: number) => `Recording ${place} of ${count}`,
+  answerSheet: 'Answer sheet',
+  sheetItem: (number: number) => `Item ${number}`,
+  partResult: (number: number) => `Result of part ${number}`,
+  rightOfTotal: (correct: number, total: number) => `${correct} of ${total} right`,
+  nextPart: 'Next part',
+  answerAgain: 'Answer this part again',
+  moduleResult: (module: string) => `${module}: your result`,
+  partNotChecked: 'not checked yet',
+  partRight: (correct: number, total: number) => `${correct} of ${total}`,
+  moduleScoreLater: 'The score of the module out of 100 appears once every part is checked.',
+  answerKeyUnreadable:
+    'The answer key of this pack cannot be read, so it cannot score this part. Build the pack again with pnpm pack:build.',
+
+  // The two reference pages, and the links to them on every page.
+  reference: 'Look up',
+  search: 'Search',
+  allGrammar: 'All grammar',
+  searchTitle: 'Search all topics',
+  searchHint: 'Type a word in English or in German. Without ä, ö, ü and ß on your keyboard, write ae, oe, ue and ss.',
+  searchResults: (count: number) => (count === 1 ? '1 topic found' : `${count} topics found`),
+  searchNothing: 'No topic found. Try another word, or fewer words.',
+  searchStillLoading: 'Still looking through the text of the topics…',
+  overviewTitle: 'All grammar at a glance',
+  overviewIntro: 'Every grammar table on one page. The name above a table opens its topic.',
+  overviewEmpty: 'No grammar table is written yet.',
+  jumpToLevel: 'Jump to a level',
+
+  // A writing or speaking node: the task, a prompt for an AI assistant, and the score typed back in.
+  task: 'Task',
+  getYourScore: 'How to get your score',
+  writingSteps: [
+    'Write your text for this task, as in the exam: without a dictionary and without a translator.',
+    'Copy the prompt and paste it into an AI assistant, for example ChatGPT, Claude or Gemini. Put your text below it and send both.',
+    'The assistant grades your text with the official criteria of the exam. Type its score into the box below.',
+  ],
+  speakingSteps: [
+    'Copy the prompt and paste it into an AI assistant that can talk, for example ChatGPT, Claude or Gemini. Send it.',
+    'Switch the assistant to voice mode and say “Hallo”. It speaks German with you, as in the exam. Speak; do not type.',
+    'At the end the assistant grades you with the official criteria of the exam. Type its score into the box below.',
+  ],
+  copyPrompt: 'Copy the prompt',
+  promptCopied: 'Copied. Now paste it into your AI assistant.',
+  promptNotCopied: 'Your browser did not allow copying. Select the whole prompt below and copy it yourself.',
+  readPrompt: 'Read the prompt',
+  thePrompt: 'The prompt',
+  /** Says which language the assistant answers in: the language of this very file. */
+  promptNote:
+    'The prompt is in English and German, because an assistant follows it best that way. It tells the assistant to grade strictly and to answer you in English. This app sends nothing anywhere; it only copies the text.',
+  pronunciationNote:
+    '16 of the 100 points are for pronunciation. An assistant can judge pronunciation only roughly, so take that part of the score as an estimate.',
+  yourScore: 'Your score',
+  noScoreYet: 'No score yet.',
+  scoreLabel: 'Score from the assistant, from 0 to 100',
+  saveScore: 'Save the score',
+  scoreNotValid: 'Type a whole number from 0 to 100.',
+  /** Follows a score, which is shown large: "93 of 100". */
+  ofTotal: (total: number) => `of ${total}`,
+  scoreNeeded: (needed: number, total: number) => `You need ${needed} of ${total} to finish this topic.`,
+  scoreRetry: 'Do the task again and enter the new score. You can try as often as you like.',
+  scoresSoFar: 'Your scores so far',
+
+  // The original mock exams: the list with each exam's history, and one module as it is taken.
+  mockExamsTitle: 'Mock exams',
+  mockExamsIntro:
+    'Whole exams in the format of the Goethe B1 exam, written for this app. Take each module on its own, with the time limit of the exam or without it. Every result is kept here, so you can see whether you are improving.',
+  openMockExams: 'Mock exams for practice',
+  allMockExams: 'All mock exams',
+  /** What one module of a mock exam holds: "30 questions · 65 minutes". */
+  moduleFacts: (questions: number, minutes: number) => `${questions} questions · ${minutes} minutes`,
+  startModule: 'Start',
+  takeAgain: 'Take it again',
+  latestScore: (score: number) => `Last time: ${score} of 100`,
+  useTimeLimit: (minutes: number) => `Use the time limit of the exam: ${minutes} minutes`,
+  timeLimitNote: 'When the time is up, your answers so far are checked, as in the exam.',
+  playsNote: 'The recordings play as often as in the exam: some once, some twice.',
+  startTheModule: 'Start the module',
+  timeLeft: 'Time left',
+  /** The time left on the clock: minutes and seconds. */
+  clock: (minutes: number, seconds: number) => `${minutes}:${String(seconds).padStart(2, '0')}`,
+  switchTimerOff: 'Switch the timer off',
+  noTimeLimit: 'No time limit',
+  timeIsUp: 'The time is up. Your answers so far were checked.',
+  finishModule: 'Finish and check',
+  /** Under the score of a module, shown large: where it stands against the pass mark and the target. */
+  scoreStandings: {
+    'not-passed': (pass: number, target: number) => `Not passed. You pass with ${pass}, and your target is ${target}.`,
+    passed: (pass: number, target: number) => `Passed: ${pass} is the pass mark. Your target is ${target}.`,
+    'at-target': (_pass: number, target: number) => `At your target of ${target} or more.`,
+  },
+  partAnswers: (part: number) => `Part ${part}: your answers`,
+  mockExamHistory: 'Your results',
+  noResultsYet: 'No results yet.',
+  withTimeLimit: 'with the time limit',
+  withoutTimeLimit: 'without a time limit',
+  /** How often a recording may still be played. */
+  playsLeft: (count: number) => (count === 0 ? 'No plays left' : `Plays left: ${count}`),
+
+  // Schreiben and Sprechen of a mock exam: each task graded by an AI assistant, its score typed in.
+  /** What a module of tasks holds: "3 tasks · 60 minutes". */
+  moduleTasks: (tasks: number, minutes: number) => `${tasks} tasks · ${minutes} minutes`,
+  gradedTimeLimitNote:
+    'When the time is up, stop writing or speaking, as in the exam. Then have your tasks graded and enter the scores.',
+  gradedTimeIsUp: 'The time is up. Stop now, as in the exam. Have your tasks graded, enter the scores, then finish.',
+  /** The score typed in for one task of a mock exam. */
+  scoreEntered: (score: number) => `Score: ${score} of 100`,
+  scoresEnteredOf: (entered: number, total: number) => `${entered} of ${total} scores entered`,
+  enteredScores: 'The scores you entered',
+}
+
+/** The shape of `en` with the wording left open: every key, any text. */
+type Wording<T> = T extends (...args: infer Args) => string
+  ? (...args: Args) => string
+  : T extends string
+    ? string
+    : { [Key in keyof T]: Wording<T[Key]> }
+
+/** What every language must provide. A key missing in one language is a type error. */
+export type Strings = Wording<typeof en>
