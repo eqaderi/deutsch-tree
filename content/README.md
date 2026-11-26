@@ -935,7 +935,8 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - Persian text (a title, a chapter name, a purpose, an explanation, the
   caption of a diagram, the meaning of a phrase, the reason of a mistake, of a question or of an item)
   with a Latin letter
-  outside asterisks.
+  outside asterisks. The Persian meaning of a vocabulary word is plain text
+  and may hold no Latin letter at all.
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
 - A wrong word that stands in its sentence twice, a right order that is not
