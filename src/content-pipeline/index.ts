@@ -19,6 +19,7 @@ import {
   nodeFileSchema,
   type RichText,
 } from '../content-model/index.ts'
+import { reviewProblem } from './review.ts'
 
 /** One thing a maintainer has to fix. */
 export interface ContentProblem {
@@ -75,6 +76,9 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
       errors.push({ file, where: 'id', message: `the file of node "${parsed.data.id}" must be named ${expectedName}` })
       continue
     }
+
+    const unreviewed = reviewProblem(parsed.data)
+    if (unreviewed) errors.push({ file, where: 'review', message: unreviewed })
 
     nodes.push(compileNode(parsed.data))
   }

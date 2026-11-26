@@ -70,3 +70,8 @@ questions:
       en: With du the ending is -st.
       fa: با du پایانه -st است.
       de: Bei du ist die Endung -st.
+
+review:
+  reviewer: Fixture reviewer
+  date: 2026-01-01
+  pool: 79cdb685a77f553d

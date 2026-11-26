@@ -20,3 +20,8 @@ export async function fixtureContentWith(edits: Record<string, (text: string) =>
   }
   return dir
 }
+
+/** A node file's text with its review record cut out: the node as it is before any review. */
+export function withoutReviewRecord(text: string): string {
+  return text.replace(/^review:\n(?:[ \t].*\n?)*/m, '')
+}
