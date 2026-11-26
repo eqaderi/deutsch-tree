@@ -334,6 +334,42 @@ export const en = {
   candidatePagesOnly: (first: number, last: number) =>
     `Use pages ${first} to ${last} only. The pages after them hold the answers, the texts of the recordings and sample answers.`,
 
+  // Private packs: practice exams from a book the learner owns, found in the private folder.
+  packsLink: 'Your exam books',
+  packsTitle: 'Your exam books',
+  packsIntro: 'Practice exams from a book you own, with its pages, its recordings and its answer key.',
+  noPackTitle: 'No exam book found',
+  noPackSteps: [
+    'A book of practice exams that you own can be added as a private pack. The pack is made once from the book’s files with the command pnpm pack:build.',
+    'Put the pack folder into the folder named “private” in the deutsch-tree folder on your computer. Start the app from that folder with its start file, then open this page again.',
+    'Packs never appear on the public website. Only the app on your own computer finds them, so the book stays with you.',
+  ],
+  packUnreadable: (folder: string) =>
+    `The pack in the folder “${folder}” cannot be read. Build it again with pnpm pack:build.`,
+  examCount: (count: number) => (count === 1 ? '1 exam' : `${count} exams`),
+  packExam: (number: number) => `Exam ${number}`,
+  moduleNotScored:
+    'This module is not scored from the answer key. Do its tasks on these pages; the exam part’s page in the tree shows how to get a score.',
+  parts: 'Parts',
+  packPart: (number: number) => `Part ${number}`,
+  bookPagesHeading: 'Pages of the book',
+  bookPage: (page: number) => `Page ${page} of the book`,
+  bookPagesFailed: 'The pages could not be shown. The pack may be damaged; build it again with pnpm pack:build.',
+  recording: 'Recording',
+  recordingOf: (place: number, count: number) => `Recording ${place} of ${count}`,
+  answerSheet: 'Answer sheet',
+  sheetItem: (number: number) => `Item ${number}`,
+  partResult: (number: number) => `Result of part ${number}`,
+  rightOfTotal: (correct: number, total: number) => `${correct} of ${total} right`,
+  nextPart: 'Next part',
+  answerAgain: 'Answer this part again',
+  moduleResult: (module: string) => `${module}: your result`,
+  partNotChecked: 'not checked yet',
+  partRight: (correct: number, total: number) => `${correct} of ${total}`,
+  moduleScoreLater: 'The score of the module out of 100 appears once every part is checked.',
+  answerKeyUnreadable:
+    'The answer key of this pack cannot be read, so it cannot score this part. Build the pack again with pnpm pack:build.',
+
   // The two reference pages, and the links to them on every page.
   reference: 'Look up',
   search: 'Search',
