@@ -1,0 +1,36 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-old-age-care
+kind: vocabulary
+level: B1
+chapter: b1-words-health
+order: 5
+status: coming-soon
+title:
+  en: "Old age and care"
+  fa: "سالمندی و مراقبت"
+  de: "Alter und Pflege"
+words:
+  - word: Senioren
+  - word: Rente
+  - word: in Rente gehen
+  - word: in Pension gehen
+  - word: pensioniert
+  - word: Altenheim
+  - word: Altersheim
+  - word: Tod
+  - word: Tote
+  - word: tödlich
+  - word: Pfleger
+  - word: pflegen
+  - word: Betreuer
+  - word: betreuen
+  - word: Betreuung
+  - word: Krankenschwester
+  - word: behindert
+  - word: behindern
+  - word: Heim
+  - word: Sozialarbeiter
+  - word: blind
+  - word: taub
+  - word: stumm

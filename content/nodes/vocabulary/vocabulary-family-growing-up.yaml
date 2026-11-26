@@ -1,0 +1,35 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-family-growing-up
+kind: vocabulary
+level: B1
+chapter: b1-words-people-feelings
+order: 1
+status: coming-soon
+title:
+  en: "Family and growing up"
+  fa: "خانواده و بزرگ شدن"
+  de: "Familie und Aufwachsen"
+words:
+  - word: Geburt
+  - word: Kindheit
+  - word: Jugend
+  - word: Generation
+  - word: Nachwuchs
+  - word: Neffe
+  - word: Nichte
+  - word: Angehörige
+  - word: verwandt
+  - word: Ehe
+  - word: Ehepaar
+  - word: Scheidung
+  - word: scheiden lassen
+  - word: Trennung
+  - word: getrennt leben
+  - word: trennen
+  - word: erziehen
+  - word: Erziehung
+  - word: erwachsen
+  - word: Schwangerschaft
+  - word: Geschlecht
+  - word: Personenstand

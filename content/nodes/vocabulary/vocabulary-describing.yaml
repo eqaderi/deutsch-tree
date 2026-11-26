@@ -1,0 +1,31 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-describing
+kind: vocabulary
+level: A1
+chapter: a1-words-small-words
+order: 6
+status: coming-soon
+title:
+  en: "Good, bad, easy: describing"
+  fa: "خوب، بد، آسان: توصیف کردن"
+  de: "Gut, schlecht, einfach: Beschreiben"
+words:
+  - word: gut
+  - word: schlecht
+  - word: besser
+  - word: beste
+  - word: einfach
+  - word: normal
+  - word: klar
+  - word: wunderbar
+  - word: glücklich
+  - word: zufrieden
+  - word: böse
+  - word: lieb
+  - word: ruhig
+  - word: schnell
+  - word: eilig
+  - word: kulturell
+  - word: automatisch
+  - word: möglich

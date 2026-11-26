@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-costs-prices
+kind: vocabulary
+level: B1
+chapter: b1-words-work-money
+order: 7
+status: coming-soon
+title:
+  en: "Costs, prices and value"
+  fa: "هزینه، قیمت و ارزش"
+  de: "Kosten, Preise und Wert"
+words:
+  - word: Steuer
+  - word: Mehrwertsteuer
+  - word: finanziell
+  - word: finanzieren
+  - word: leisten
+  - word: Einnahme
+  - word: Ausgabe
+  - word: Gewinn
+  - word: Verlust
+  - word: Wert
+  - word: wert
+  - word: wertlos
+  - word: wertvoll
+  - word: gratis
+  - word: umsonst
+  - word: inklusive
+  - word: pauschal
+  - word: Zuschlag
+  - word: Rabatt
+  - word: Sonderangebot
+  - word: erhöhen
+  - word: Erhöhung
+  - word: reduzieren
+  - word: lohnen
+  - word: berechnen
+  - word: einnehmen

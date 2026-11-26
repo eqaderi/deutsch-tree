@@ -1,0 +1,39 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-opinions
+kind: vocabulary
+level: A2
+chapter: a2-words-people
+order: 5
+status: coming-soon
+title:
+  en: "Opinions and advice"
+  fa: "نظر و توصیه"
+  de: "Meinungen und Ratschläge"
+words:
+  - word: Meinung
+  - word: meinen
+  - word: denken
+  - word: diskutieren
+  - word: Idee
+  - word: Vorschlag
+  - word: Tipp
+  - word: raten
+  - word: beraten
+  - word: begründen
+  - word: recht haben
+  - word: einverstanden
+  - word: dafür
+  - word: dagegen
+  - word: auf jeden Fall
+  - word: natürlich
+  - word: sicher
+  - word: wahrscheinlich
+  - word: unbedingt
+  - word: Unterschied
+  - word: Gegenteil
+  - word: vergleichen
+  - word: Ahnung
+  - word: Interesse
+  - word: interessieren
+  - word: wählen

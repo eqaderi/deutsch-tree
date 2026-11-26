@@ -1,0 +1,36 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-crime
+kind: vocabulary
+level: B1
+chapter: b1-words-society
+order: 3
+status: coming-soon
+title:
+  en: "Crime and the police"
+  fa: "جرم و پلیس"
+  de: "Kriminalität und Polizei"
+words:
+  - word: Kriminalpolizei
+  - word: Verbrecher
+  - word: Dieb
+  - word: Einbrecher
+  - word: Einbruch
+  - word: einbrechen
+  - word: stehlen
+  - word: Täter
+  - word: Zeuge
+  - word: Verdacht
+  - word: verdächtig
+  - word: verhaften
+  - word: festnehmen
+  - word: anzeigen
+  - word: Tat
+  - word: Gewalt
+  - word: Killer
+  - word: Flucht
+  - word: fliehen
+  - word: Spur
+  - word: verstecken
+  - word: verschwinden
+  - word: Gefängnis

@@ -1,0 +1,40 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-body
+kind: vocabulary
+level: B1
+chapter: b1-words-health
+order: 1
+status: coming-soon
+title:
+  en: "The body"
+  fa: "بدن"
+  de: "Der Körper"
+words:
+  - word: Brust
+  - word: Finger
+  - word: Herz
+  - word: Haut
+  - word: Knie
+  - word: Knochen
+  - word: Lippe
+  - word: Muskel
+  - word: Nase
+  - word: Schulter
+  - word: Blut
+  - word: bluten
+  - word: Atem
+  - word: atmen
+  - word: Stimme
+  - word: körperlich
+  - word: Kraft
+  - word: schwitzen
+  - word: frieren
+  - word: Schlaf
+  - word: aufwachen
+  - word: bewegen
+  - word: Bewegung
+  - word: wiegen
+  - word: Fitness
+  - word: Gymnastik
+  - word: spüren

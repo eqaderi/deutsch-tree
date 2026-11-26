@@ -1,0 +1,31 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-professions
+kind: vocabulary
+level: B1
+chapter: b1-words-work-money
+order: 4
+status: coming-soon
+title:
+  en: "More jobs"
+  fa: "شغل‌های بیشتر"
+  de: "Mehr Berufe"
+words:
+  - word: Architekt
+  - word: Briefträger
+  - word: Händler
+  - word: Ingenieur
+  - word: Metzger
+  - word: Übersetzer
+  - word: Fachmann
+  - word: Fachfrau
+  - word: Fachleute
+  - word: Spezialist
+  - word: Profi
+  - word: Sekretär
+  - word: Meister
+  - word: Arbeiter
+  - word: Manager
+  - word: Unternehmer
+  - word: Reporter
+  - word: Moderator

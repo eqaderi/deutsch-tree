@@ -1,0 +1,36 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-reasons-consequences
+kind: vocabulary
+level: B1
+chapter: b1-words-thinking-talking
+order: 5
+status: coming-soon
+title:
+  en: "Reasons and consequences"
+  fa: "دلیل‌ها و پیامدها"
+  de: "Gründe und Folgen"
+words:
+  - word: Begründung
+  - word: Grund
+  - word: Ursache
+  - word: Folge
+  - word: Wirkung
+  - word: wirken
+  - word: verursachen
+  - word: Zusammenhang
+  - word: Gegensatz
+  - word: Vergleich
+  - word: unterscheiden
+  - word: Einfluss
+  - word: beeinflussen
+  - word: abhängen
+  - word: abhängig
+  - word: führen
+  - word: entstehen
+  - word: folgen
+  - word: Reaktion
+  - word: reagieren
+  - word: dienen
+  - word: nutzen
+  - word: nützen

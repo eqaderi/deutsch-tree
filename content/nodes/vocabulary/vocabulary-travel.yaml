@@ -1,0 +1,38 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-travel
+kind: vocabulary
+level: A1
+chapter: a1-words-town-travel
+order: 4
+status: coming-soon
+title:
+  en: "Car, plane and holidays"
+  fa: "ماشین، هواپیما و تعطیلات"
+  de: "Auto, Flugzeug und Urlaub"
+words:
+  - word: Auto
+  - word: Lkw
+  - word: Autobahn
+  - word: Fahrrad
+  - word: Rad fahren
+  - word: Flugzeug
+  - word: Flughafen
+  - word: Abflug
+  - word: abfliegen
+  - word: fliegen
+  - word: Reise
+  - word: reisen
+  - word: Reisebüro
+  - word: Reiseführer
+  - word: Urlaub
+  - word: Ausflug
+  - word: Koffer
+  - word: Gepäck
+  - word: Zoll
+  - word: Hotel
+  - word: Rezeption
+  - word: Einzelzimmer
+  - word: Doppelzimmer
+  - word: Halbpension
+  - word: übernachten

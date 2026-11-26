@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-exam-instructions
+kind: vocabulary
+level: B1
+chapter: b1-words-learning
+order: 4
+status: coming-soon
+title:
+  en: "The language of exam tasks"
+  fa: "زبانِ دستورهای امتحان"
+  de: "Die Sprache der Prüfungsaufgaben"
+words:
+  - word: Aufforderung
+  - word: Abschnitt
+  - word: Zeile
+  - word: Überschrift
+  - word: Abbildung
+  - word: Tabelle
+  - word: Grafik
+  - word: Textaufbau
+  - word: Einleitung
+  - word: Reihenfolge
+  - word: ergänzen
+  - word: zuordnen
+  - word: einfügen
+  - word: auswählen
+  - word: zusammenfassen
+  - word: Referat
+  - word: Präsentation
+  - word: präsentieren
+  - word: Vortrag
+  - word: Modul
+  - word: Hinweis
+  - word: Angabe
+  - word: "vgl."
+  - word: "bzw."
+  - word: "etc."
+  - word: folgend

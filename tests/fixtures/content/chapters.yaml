@@ -15,6 +15,14 @@
     fa: موضوع‌های آزمایشی با *sein*
     de: Test-Themen mit *sein*
 
+- id: fixture-words
+  level: A1
+  kind: vocabulary
+  title:
+    en: Fixture words
+    fa: واژه‌های آزمایشی
+    de: Test-Wörter
+
 # A second level with three published topics, for the checkpoint of a level with several.
 - id: fixture-nouns
   level: A2

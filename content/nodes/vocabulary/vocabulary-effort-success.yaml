@@ -1,0 +1,38 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-effort-success
+kind: vocabulary
+level: B1
+chapter: b1-words-thinking-talking
+order: 3
+status: coming-soon
+title:
+  en: "Effort, support and success"
+  fa: "تلاش، پشتیبانی و موفقیت"
+  de: "Mühe, Unterstützung und Erfolg"
+words:
+  - word: Herausforderung
+  - word: Schwierigkeit
+  - word: zurechtkommen
+  - word: Mühe
+  - word: bemühen
+  - word: anstrengen
+  - word: anstrengend
+  - word: aufgeben
+  - word: Erfolg
+  - word: erfolgreich
+  - word: gelingen
+  - word: Mangel
+  - word: Nachteil
+  - word: Vorteil
+  - word: vergeblich
+  - word: Zufall
+  - word: zufällig
+  - word: verhindern
+  - word: vermeiden
+  - word: erleichtern
+  - word: Hilfsmittel
+  - word: Unterstützung
+  - word: unterstützen
+  - word: Förderung
+  - word: fördern

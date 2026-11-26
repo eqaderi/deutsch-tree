@@ -1,0 +1,39 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-clothes
+kind: vocabulary
+level: A2
+chapter: a2-words-home-food
+order: 5
+status: coming-soon
+title:
+  en: "Clothes and fashion"
+  fa: "لباس و مد"
+  de: "Kleidung und Mode"
+words:
+  - word: Hose
+  - word: Hemd
+  - word: Bluse
+  - word: Kleid
+  - word: Rock
+  - word: Pullover
+  - word: T-Shirt
+  - word: Jeans
+  - word: Mantel
+  - word: Anzug
+  - word: Mütze
+  - word: Stiefel
+  - word: Brille
+  - word: Ring
+  - word: Kette
+  - word: Rucksack
+  - word: Mode
+  - word: Model
+  - word: tragen
+  - word: passen
+  - word: eng
+  - word: bunt
+  - word: lila
+  - word: rosa
+  - word: orange
+  - word: dunkel

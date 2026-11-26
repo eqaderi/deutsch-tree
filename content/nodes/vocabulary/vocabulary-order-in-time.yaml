@@ -1,0 +1,36 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-order-in-time
+kind: vocabulary
+level: A2
+chapter: a2-words-small-words
+order: 2
+status: coming-soon
+title:
+  en: "First, then, suddenly: the order of events"
+  fa: "اول، بعد، ناگهان: ترتیب رویدادها"
+  de: "Zuerst, dann, plötzlich: die Reihenfolge"
+words:
+  - word: damals
+  - word: endlich
+  - word: plötzlich
+  - word: zuerst
+  - word: zuletzt
+  - word: vorher
+  - word: vorbei
+  - word: wieder
+  - word: erst
+  - word: erstens
+  - word: zweitens
+  - word: drittens
+  - word: viertens
+  - word: beenden
+  - word: verschieben
+  - word: passieren
+  - word: klappen
+  - word: versuchen
+  - word: planen
+  - word: vorbereiten
+  - word: organisieren
+  - word: beeilen
+  - word: lassen

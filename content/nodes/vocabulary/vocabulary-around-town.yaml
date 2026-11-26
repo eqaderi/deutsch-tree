@@ -1,0 +1,39 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-around-town
+kind: vocabulary
+level: A2
+chapter: a2-words-health-town
+order: 2
+status: coming-soon
+title:
+  en: "Getting around town"
+  fa: "رفت‌وآمد در شهر"
+  de: "Unterwegs in der Stadt"
+words:
+  - word: Verkehr
+  - word: Verkehrsmittel
+  - word: Ampel
+  - word: Kreuzung
+  - word: Brücke
+  - word: Baustelle
+  - word: Weg
+  - word: Nähe
+  - word: Zentrum
+  - word: Rathaus
+  - word: Kirche
+  - word: Park
+  - word: Stadtplan
+  - word: Hauptstadt
+  - word: Polizist
+  - word: Fundsachen
+  - word: gegenüber
+  - word: neben
+  - word: hinter
+  - word: außerhalb
+  - word: drüben
+  - word: überall
+  - word: nirgends
+  - word: direkt
+  - word: vorn
+  - word: vorwärts

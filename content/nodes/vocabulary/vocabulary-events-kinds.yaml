@@ -1,0 +1,32 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-events-kinds
+kind: vocabulary
+level: B1
+chapter: b1-words-general
+order: 3
+status: coming-soon
+title:
+  en: "Events, kinds and details"
+  fa: "رویدادها، گونه‌ها و جزئیات"
+  de: "Ereignisse, Arten und Einzelheiten"
+words:
+  - word: geschehen
+  - word: ereignen
+  - word: Ereignis
+  - word: vorkommen
+  - word: ausfallen
+  - word: eröffnen
+  - word: Eröffnung
+  - word: Fall
+  - word: Zustand
+  - word: Stufe
+  - word: Art
+  - word: Bereich
+  - word: Struktur
+  - word: System
+  - word: Detail
+  - word: Einzelheit
+  - word: Modell
+  - word: Liste
+  - word: Typ

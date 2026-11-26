@@ -1,0 +1,35 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-numbers-big
+kind: vocabulary
+level: A1
+chapter: a1-words-numbers-time
+order: 2
+status: coming-soon
+title:
+  en: "Big numbers, first and second"
+  fa: "عددهای بزرگ، اول و دوم"
+  de: "Große Zahlen, erste und zweite"
+words:
+  - word: einundzwanzig
+  - word: dreißig
+  - word: vierzig
+  - word: fünfzig
+  - word: sechzig
+  - word: siebzig
+  - word: achtzig
+  - word: neunzig
+  - word: hundert
+  - word: hunderteins
+  - word: zweihundert
+  - word: tausend
+  - word: Million
+  - word: Milliarde
+  - word: erste
+  - word: zweite
+  - word: dritte
+  - word: vierte
+  - word: halb
+  - word: Viertel
+  - word: Prozent
+  - word: circa
