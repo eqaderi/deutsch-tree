@@ -3,8 +3,9 @@
 One node is one YAML file: `content/nodes/<kind>/<id>.yaml`. The file name
 must be the node's id. Subfolders are only for tidiness.
 
-Check your work with `pnpm content:check`. It names the file and the place of
-every problem. `pnpm dev` shows the result in a browser and reloads on save.
+Check your work with `pnpm content:check`. It names the node, the question,
+the file and the place of every problem, and the site is not built while one
+remains. `pnpm dev` shows the result in a browser and reloads on save.
 
 The exact rules are the schema in `src/content-model/index.ts`. A complete
 example is `content/nodes/grammar/grammar-001.yaml`.
@@ -88,8 +89,89 @@ questions:
     explanation: { en: …, fa: …, de: … }   # one line: why the answer is right
 ```
 
-Only `multiple-choice` questions and only grammar nodes can be published so
-far. Other question types and node kinds are added to the schema as they are
-built.
+### Question types
+
+Every question has `id`, `type`, `prompt` (German), `answer` and
+`explanation`. The test shows the learner what to do in their language, so a
+prompt holds only the German.
+
+```yaml
+  - id: q2
+    type: gap-fill                  # a sentence with one gap; the learner chooses the form
+    prompt: Du ___ hier.            # exactly one gap, written as three underscores
+    options: [wohne, wohnst]
+    answer: wohnst                  # the text of the one option that fills the gap
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q3
+    type: true-false                # "Is this sentence correct German?"
+    prompt: Du wohne hier.          # the sentence the learner judges
+    answer: false                   # true: correct German; false: it holds a mistake
+    explanation: { en: …, fa: …, de: … }
+```
+
+### How many questions an attempt draws
+
+Each attempt at the test draws 10 questions from the pool at random. A node
+with a large pool may raise this, up to 15:
+
+```yaml
+attemptSize: 12          # optional; 10 to 15, default 10
+```
+
+The pass mark follows from it: 90%, rounded up to a whole question (9 of 10,
+11 of 12, 14 of 15).
+
+## Review before publishing
+
+A published node needs a `review:` record. `pnpm content:check` fails without
+one, and again when a question or its answer changes later (explanations may
+change freely). A command writes the record, never a hand:
+
+1. `pnpm review:pool <id> --out /tmp/<id>.json` writes the review sheet: the
+   pool without answers and explanations. Keep it outside the repository.
+2. Give only that file to a reviewer who has not seen the node file (for an
+   agent: a fresh subagent told to read nothing else). The reviewer fills in
+   each `answer`, and an `objection` where a question is flawed.
+3. `pnpm review:record <id> --answers /tmp/<id>.json --reviewer "<who>"` lists
+   every disagreement, or stores the record. Name the reviewer honestly: a
+   person, or "an independent AI agent".
+4. Settle each disagreement by fixing the question or the key, then repeat
+   step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
+   in step 1, then add that second file with another `--answers`.
+
+Only `multiple-choice`, `gap-fill` and `true-false` questions and only grammar
+nodes can be published so far. Other question types and node kinds are added
+to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
+
+## What the checks reject
+
+- Text for the learner that lacks one of the three languages.
+- A question with no correct answer, or with two where one is required.
+- A prerequisite that is not the id of a node, and a prerequisite cycle
+  (a node that needs itself, directly or through other nodes).
+- A published node with fewer than 15 questions. A `coming-soon` draft may
+  have fewer.
+- Two node files with the same id, and two questions with the same id inside
+  one node.
+- A published node with no review record, or whose questions or answers
+  changed after its review. A `coming-soon` node needs none.
+
+## Adding a check (for people who change the code)
+
+A rule about the shape of one field goes in the schema,
+`src/content-model/index.ts`. Every other rule is a check:
+
+1. Write `src/content-pipeline/checks/<rule>.ts`. It exports one
+   `ContentCheck`: a function that gets every node file that passed the
+   schema (and the content folder, for a rule about other files) and returns
+   one problem per thing to fix. Build each problem with `problemIn`, so that
+   it names the node. The shortest example is `pool-is-large-enough.ts`.
+2. Add it to the list in `src/content-pipeline/checks/index.ts`.
+3. Write `tests/content-pipeline/<rule>.test.ts`: break the fixture content
+   with `fixtureContentWith` and `changeNode` from `fixture.ts`, run
+   `compileContent`, and compare `report.errors`. Copy `pool-size.test.ts`.
+4. Run `pnpm check`. If the real content or the fixture content in
+   `tests/fixtures/content` breaks the new rule, repair the content.

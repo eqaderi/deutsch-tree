@@ -2,10 +2,12 @@ import { type ReactNode, use } from 'react'
 import { Link, useParams } from 'react-router'
 import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
+import { isDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
 import { German, RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
+import { useProgress } from './progress.ts'
 
 /**
  * A node's page. A grammar page is a column of panels in one fixed order:
@@ -53,6 +55,7 @@ export function isNodeId(id: string): boolean {
 
 function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode }) {
   const { language, strings } = useLanguage()
+  const done = isDone(useProgress(), node.id)
   return (
     <main className="wrap">
       <title>{`${node.title[language]} · ${strings.appName}`}</title>
@@ -63,6 +66,7 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
           <span className="tag">{node.level}</span>
           <KindLabel kind={node.kind} />
           {node.status === 'coming-soon' && <span className="tag">{strings.comingSoon}</span>}
+          {done && <span className="tag tag-done">{strings.done}</span>}
         </div>
       </header>
       {children}
@@ -82,12 +86,13 @@ function GrammarSections({ content }: { content: GrammarContent }) {
 
       <Panel id="section-table" heading={strings.table}>
         <div className="table-scroll">
-          <table>
+          {/* The rows are German, so the table reads left to right in every language. */}
+          <table dir="ltr">
             <thead>
               <tr>
                 {content.table.columns.map((column, index) => (
                   <th key={index} scope="col">
-                    {column[language]}
+                    <bdi>{column[language]}</bdi>
                   </th>
                 ))}
               </tr>

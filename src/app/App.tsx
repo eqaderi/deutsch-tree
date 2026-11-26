@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import { createHashRouter, Link, Outlet, RouterProvider, ScrollRestoration } from 'react-router'
-import { useLanguage } from '../language/index.tsx'
+import { LanguageProvider, useLanguage } from '../language/index.tsx'
+import { LanguageSwitch } from './LanguageSwitch.tsx'
 import { NodePage } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
 import { TestPage } from './TestPage.tsx'
@@ -29,7 +30,13 @@ const router = createHashRouter([
 ])
 
 export function App() {
-  return <RouterProvider router={router} />
+  // The language sits above the router: changing it re-renders the page that
+  // is open and never moves the learner to another one.
+  return (
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
+  )
 }
 
 function Frame() {
@@ -40,6 +47,7 @@ function Frame() {
         <Link to="/" className="logo">
           {strings.appName}
         </Link>
+        <LanguageSwitch />
       </header>
       <Suspense
         fallback={
