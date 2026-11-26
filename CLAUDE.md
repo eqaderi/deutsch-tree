@@ -11,5 +11,5 @@
 - A new interface string goes into `src/language/strings.ts`, `strings.fa.ts` and `strings.de.ts`; `pnpm check` fails until all three have it. Never write wording, or a bare number, in a component. See `README.md`, "Languages".
 - A new kind of node, or a new section of a node, that learners should find by search adds its passages in `src/content-pipeline/search-data.ts`. Text that only one page needs never goes into `content/index.json`. See `README.md`, "Search and the overview page".
 - Never commit `research/` or `private/`.
-- Private packs (format, the `pnpm pack:build` command, a book's profile): `docs/private-packs.md`; the schema is `src/content-model/pack.ts`. Pack tests use the synthetic book in `tests/pack-builder/fixture.ts` and write to a temporary folder, never to `private/`.
+- Private packs (format, the `pnpm pack:build` command, a book's profile, how the app finds packs): `docs/private-packs.md`; the schema is `src/content-model/pack.ts`. Pack tests use the synthetic book in `tests/pack-builder/fixture.ts` and write to a temporary folder, never to `private/`; browser tests get the same book as a pack under `/local/`.
 - Browser tests and servers must not use a fixed port. `playwright.config.ts` already takes a free one per run.

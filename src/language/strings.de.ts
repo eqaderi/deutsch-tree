@@ -299,6 +299,43 @@ export const de: Strings = {
   candidatePagesOnly: (first, last) =>
     `Benutz nur die Seiten ${first} bis ${last}. Auf den Seiten danach stehen die Lösungen, die Hörtexte zum Lesen und Beispiele für gute Antworten.`,
 
+  packsLink: 'Deine Prüfungsbücher',
+  packsTitle: 'Deine Prüfungsbücher',
+  packsIntro:
+    'Übungsprüfungen aus einem Buch, das du hast: mit den Seiten, den Hörtexten und den Lösungen aus dem Buch.',
+  noPackTitle: 'Kein Prüfungsbuch gefunden',
+  noPackSteps: [
+    'Ein Buch mit Übungsprüfungen kannst du als privates Paket dazunehmen. Du machst das Paket einmal aus den Dateien vom Buch, mit dem Befehl pnpm pack:build.',
+    'Leg den Ordner vom Paket in den Ordner „private“ im Ordner deutsch-tree auf deinem Computer. Starte die App aus diesem Ordner mit ihrer Startdatei. Dann öffne diese Seite noch einmal.',
+    'Pakete sind nie auf der öffentlichen Website. Nur die App auf deinem eigenen Computer findet sie. So bleibt das Buch bei dir.',
+  ],
+  packUnreadable: (folder) =>
+    `Das Paket im Ordner „${folder}“ kann man nicht lesen. Mach es noch einmal mit pnpm pack:build.`,
+  examCount: (count) => (count === 1 ? '1 Prüfung' : `${count} Prüfungen`),
+  packExam: (number) => `Prüfung ${number}`,
+  moduleNotScored:
+    'Für diesen Teil gibt es keine Punkte aus den Lösungen. Mach die Aufgaben auf diesen Seiten. Auf der Seite vom Prüfungsteil im Baum steht, wie du Punkte bekommst.',
+  parts: 'Teile',
+  packPart: (number) => `Teil ${number}`,
+  bookPagesHeading: 'Seiten aus dem Buch',
+  bookPage: (page) => `Seite ${page} im Buch`,
+  bookPagesFailed:
+    'Die Seiten lassen sich nicht zeigen. Vielleicht ist das Paket kaputt. Mach es noch einmal mit pnpm pack:build.',
+  recording: 'Hörtext',
+  recordingOf: (place, count) => `Hörtext ${place} von ${count}`,
+  answerSheet: 'Antwortbogen',
+  sheetItem: (number) => `Aufgabe ${number}`,
+  partResult: (number) => `Ergebnis von Teil ${number}`,
+  rightOfTotal: (correct, total) => `${correct} von ${total} richtig`,
+  nextPart: 'Nächster Teil',
+  answerAgain: 'Diesen Teil noch einmal machen',
+  moduleResult: (module) => `${module}: dein Ergebnis`,
+  partNotChecked: 'noch nicht geprüft',
+  partRight: (correct, total) => `${correct} von ${total}`,
+  moduleScoreLater: 'Die Punkte von 100 für den ganzen Teil kommen, wenn du jeden Teil geprüft hast.',
+  answerKeyUnreadable:
+    'Die Lösungen von diesem Paket kann man nicht lesen. Darum gibt es für diesen Teil keine Punkte. Mach das Paket noch einmal mit pnpm pack:build.',
+
   reference: 'Nachschlagen',
   search: 'Suche',
   allGrammar: 'Ganze Grammatik',

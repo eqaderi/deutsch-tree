@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { lazy, Suspense } from 'react'
 import { createHashRouter, Link, Outlet, RouterProvider, ScrollRestoration } from 'react-router'
 import { LanguageProvider, useLanguage } from '../language/index.tsx'
 import { BackupPage } from './BackupPage.tsx'
@@ -13,6 +13,10 @@ import { ReferenceLinks } from './ReferenceLinks.tsx'
 import { SearchPage } from './SearchPage.tsx'
 import { TestPage } from './TestPage.tsx'
 import { TreePage } from './TreePage.tsx'
+
+// The private exam view loads only when it is opened: it brings PDF.js and the pack format's checks.
+const PacksPage = lazy(() => import('./PacksPage.tsx').then((module) => ({ default: module.PacksPage })))
+const PackExamPage = lazy(() => import('./PackExamPage.tsx').then((module) => ({ default: module.PackExamPage })))
 
 /**
  * Addresses live after the "#" (…/deutsch-tree/#/node/grammar-001). The site
@@ -34,6 +38,8 @@ const router = createHashRouter([
           { path: 'backup', element: <BackupPage /> },
           { path: 'checkpoint/:level', element: <CheckpointPage /> },
           { path: 'readiness', element: <ReadinessPage /> },
+          { path: 'packs', element: <PacksPage /> },
+          { path: 'packs/:pack/:exam/:module', element: <PackExamPage /> },
           { path: '*', element: <NotFound /> },
         ],
       },
@@ -74,6 +80,7 @@ function Frame() {
       </Suspense>
       <footer className="wrap site-footer">
         <Link to="/backup">{strings.backupLink}</Link>
+        <Link to="/packs">{strings.packsLink}</Link>
         {/* The licence of the Kerstin voice asks for this credit (ticket #5). */}
         <p className="voice-credit">{strings.voiceCredit}</p>
       </footer>

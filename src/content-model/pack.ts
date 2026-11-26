@@ -21,6 +21,8 @@ export const PACK_FORMAT = 1
 export const PACKS_FOLDER = 'private'
 export const PACK_DESCRIPTION_FILE = 'pack.json'
 export const PACK_ANSWER_KEY_FILE = 'answers.json'
+/** In the packs folder itself, beside the packs: which packs it holds (packListSchema). */
+export const PACK_LIST_FILE = 'packs.json'
 
 const count = z.number().int().positive()
 const id = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens')
@@ -123,6 +125,19 @@ export const packAnswerKeySchema = z.strictObject({
   repairs: z.array(packAnswerRepair),
 })
 
+/**
+ * private/packs.json: the ids of the packs in the folder, in name order.
+ * A browser cannot list a folder, so this is how the app finds the packs.
+ * The pack builder rewrites it after every build, from the subfolders that
+ * hold a pack.json; the dev server answers it from the folder as it is; a
+ * start file may rewrite it the same way when it starts the app.
+ */
+export const packListSchema = z.strictObject({
+  format: z.literal(PACK_FORMAT),
+  packs: z.array(id),
+})
+
+export type PackList = z.infer<typeof packListSchema>
 export type PageRange = z.infer<typeof pageRange>
 export type PackItem = z.infer<typeof packItem>
 export type PackRecording = z.infer<typeof packRecording>

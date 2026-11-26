@@ -24,6 +24,7 @@ import {
 } from '../content-model/pack.ts'
 import { itemsByPart, readAnswerKey } from './answer-key.ts'
 import { checkOutline, type ExamOutline, outlineOf } from './exam-pdf.ts'
+import { writePackList } from './pack-list.ts'
 import { readPdfText, splitPdf } from './pdf.ts'
 import { type BookProfileOverrides, resolveProfile } from './profile.ts'
 import { type MatchedRecording, matchRecordings } from './recordings.ts'
@@ -288,6 +289,7 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
     await writeFile(path.join(building, PACK_ANSWER_KEY_FILE), `${JSON.stringify(answerKey, null, 2)}\n`)
     if (options.replace) await rm(packDir, { recursive: true, force: true })
     await rename(building, packDir)
+    await writePackList(options.outDir)
   } catch (error) {
     problem('output', `The pack could not be written: ${(error as Error).message}`)
     return failed()

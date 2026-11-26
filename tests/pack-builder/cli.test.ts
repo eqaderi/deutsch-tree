@@ -43,7 +43,7 @@ test('one command turns an exam PDF, an answer-key PDF and an audio folder into 
   // The repaired misprint is pointed out, so the learner can check it against the book.
   expect(output).toMatch(/Exam 2, Lesen Teil 2: item 9 is printed as 8/)
   expect(code).toBe(0)
-  expect(await readdir(path.join(project, 'private'))).toEqual(['fixture-book'])
+  expect((await readdir(path.join(project, 'private'))).sort()).toEqual(['fixture-book', 'packs.json'])
   expect((await readdir(path.join(project, 'private', 'fixture-book'))).sort()).toEqual([
     'answers.json',
     'exams',

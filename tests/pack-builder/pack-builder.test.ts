@@ -1,8 +1,8 @@
-import { mkdtemp, readdir, readFile } from 'node:fs/promises'
+import { mkdir, mkdtemp, readdir, readFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { expect, test } from 'vitest'
-import { packAnswerKeySchema, packDescriptionSchema } from '../../src/content-model/pack.ts'
+import { packAnswerKeySchema, packDescriptionSchema, packListSchema } from '../../src/content-model/pack.ts'
 import { buildPack, type PackBuildOptions } from '../../src/pack-builder/index.ts'
 import {
   type FixtureBook,
@@ -43,6 +43,16 @@ test('a book becomes a pack folder whose description names the pack and counts i
   const description = await readJson(packDir, 'pack.json')
   expect(description).toMatchObject({ format: 1, id: 'fixture-book', name: 'Fixture book', examCount: 2 })
   expect(description.exams.map((exam: { number: number }) => exam.number)).toEqual([1, 2])
+})
+
+test('the packs folder lists every pack it holds, so the app can find them without listing folders', async () => {
+  const first = await build(fixtureBook(), { id: 'second-book' })
+  await build(fixtureBook(), { id: 'first-book', outDir: first.outDir })
+  // A folder that is not a pack, such as one copied in half-way, is not listed.
+  await mkdir(path.join(first.outDir, 'not-a-pack'))
+
+  const list = JSON.parse(await readFile(path.join(first.outDir, 'packs.json'), 'utf8'))
+  expect(packListSchema.parse(list)).toEqual({ format: 1, packs: ['first-book', 'second-book'] })
 })
 
 test("the pack's folder is named after the pack, or as asked", async () => {
@@ -450,7 +460,7 @@ test('an existing pack is left alone unless the build is told to replace it', as
   expect(replaced.report.errors).toEqual([])
   expect((await readJson(replaced.packDir, 'pack.json')).examCount).toBe(1)
   // Nothing of the old pack is left behind, and no working folder either.
-  expect(await readdir(first.outDir)).toEqual(['fixture-book'])
+  expect((await readdir(first.outDir)).sort()).toEqual(['fixture-book', 'packs.json'])
   expect(await readdir(path.join(first.outDir, 'fixture-book', 'exams'))).toEqual(['01'])
 })
 
