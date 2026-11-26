@@ -1,0 +1,13 @@
+# Grammar list row 80.
+id: grammar-080
+kind: grammar
+level: A1
+chapter: a1-more-articles
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-062, grammar-141]
+title:
+  en: "*Frageartikel* *welch-*"
+  fa: "صفت پرسشی *welch-*"
+  de: "Frageartikel *welch-*"

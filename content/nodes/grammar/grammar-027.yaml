@@ -1,0 +1,13 @@
+# Grammar list row 27.
+id: grammar-027
+kind: grammar
+level: A1
+chapter: a1-modal-verbs
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-026]
+title:
+  en: "*wollen*"
+  fa: "*wollen*"
+  de: "*wollen*"

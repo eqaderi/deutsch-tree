@@ -1,0 +1,13 @@
+# Grammar list row 43.
+id: grammar-043
+kind: grammar
+level: B1
+chapter: b1-modal-konjunktiv
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-017, grammar-041]
+title:
+  en: "*Konjunktiv II* in the past"
+  fa: "*Konjunktiv II* در گذشته"
+  de: "Konjunktiv II in der Vergangenheit"

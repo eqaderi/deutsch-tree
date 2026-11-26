@@ -1,0 +1,13 @@
+# Grammar list row 29.
+id: grammar-029
+kind: grammar
+level: A1
+chapter: a1-modal-verbs
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-026, grammar-146]
+title:
+  en: "*dürfen* / *nicht dürfen*"
+  fa: "*dürfen* و *nicht dürfen*"
+  de: "*dürfen* / *nicht dürfen*"

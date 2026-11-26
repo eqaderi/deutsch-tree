@@ -1,0 +1,13 @@
+# Grammar list row 16.
+id: grammar-016
+kind: grammar
+level: A1
+chapter: a1-past
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-014, grammar-015]
+title:
+  en: "Irregular *Partizip II*"
+  fa: "*Partizip II* بی‌قاعده"
+  de: "Unregelmäßiges Partizip II"

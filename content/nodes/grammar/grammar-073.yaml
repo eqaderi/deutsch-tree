@@ -1,0 +1,13 @@
+# Grammar list row 73.
+id: grammar-073
+kind: grammar
+level: B1
+chapter: b1-genitive-nouns
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-107, grammar-108]
+title:
+  en: "Adjectives and participles as nouns"
+  fa: "صفت و صفت فعلی به‌عنوان اسم"
+  de: "Adjektive und Partizipien als Nomen"

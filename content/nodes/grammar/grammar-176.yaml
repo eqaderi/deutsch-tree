@@ -1,0 +1,13 @@
+# Grammar list row 176.
+id: grammar-176
+kind: grammar
+level: B1
+chapter: b1-time-clauses
+order: 7
+status: coming-soon
+recogniseOnly: true
+prerequisites: [grammar-160]
+title:
+  en: "*sobald*, *solange*"
+  fa: "*sobald* و *solange*"
+  de: "*sobald*, *solange*"

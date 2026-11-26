@@ -1,0 +1,13 @@
+# Grammar list row 93.
+id: grammar-093
+kind: grammar
+level: A2
+chapter: a2-articles-pronouns
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-085]
+title:
+  en: "*jemand*, *niemand*"
+  fa: "*jemand* و *niemand*"
+  de: "*jemand*, *niemand*"

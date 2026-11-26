@@ -1,0 +1,13 @@
+# Grammar list row 21.
+id: grammar-021
+kind: grammar
+level: A2
+chapter: a2-werden-lassen-passive
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-003]
+title:
+  en: "*werden* as a full verb"
+  fa: "*werden* به‌عنوان فعل اصلی"
+  de: "*werden* als Vollverb"

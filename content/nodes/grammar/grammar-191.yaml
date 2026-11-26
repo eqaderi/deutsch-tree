@@ -1,0 +1,13 @@
+# Grammar list row 191.
+id: grammar-191
+kind: grammar
+level: A1
+chapter: a1-numbers-time
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-190]
+title:
+  en: "Clock time, informal and official"
+  fa: "ساعت: گفتاری و رسمی"
+  de: "Uhrzeit, informell und offiziell"

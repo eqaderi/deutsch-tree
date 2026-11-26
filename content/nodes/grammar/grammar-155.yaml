@@ -1,0 +1,13 @@
+# Grammar list row 155.
+id: grammar-155
+kind: grammar
+level: B1
+chapter: b1-connectors-negation
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-153]
+title:
+  en: "Text connectors"
+  fa: "واژه‌های پیونددهندهٔ متن (*außerdem*، *allerdings*، *jedoch* …)"
+  de: "Wörter, die Sätze im Text verbinden (*außerdem*, *allerdings*, *jedoch* …)"

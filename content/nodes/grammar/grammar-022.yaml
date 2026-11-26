@@ -1,0 +1,13 @@
+# Grammar list row 22.
+id: grammar-022
+kind: grammar
+level: A2
+chapter: a2-werden-lassen-passive
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-003, grammar-144]
+title:
+  en: "*lassen* + *Infinitiv*"
+  fa: "*lassen* + مصدر"
+  de: "*lassen* + Infinitiv"

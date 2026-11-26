@@ -1,0 +1,13 @@
+# Grammar list row 9.
+id: grammar-009
+kind: grammar
+level: A1
+chapter: a1-verb-patterns
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-062]
+title:
+  en: "*mögen* and *möchten* as verbs"
+  fa: "*mögen* و *möchten* به‌عنوان فعل اصلی"
+  de: "*mögen* und *möchten* als Verben"

@@ -1,0 +1,13 @@
+# Grammar list row 115.
+id: grammar-115
+kind: grammar
+level: B1
+chapter: b1-adjectives-participles
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-108, grammar-111]
+title:
+  en: "Declined comparative and superlative"
+  fa: "صفت تفضیلی و عالی با پایانه"
+  de: "Komparativ und Superlativ mit Endung"

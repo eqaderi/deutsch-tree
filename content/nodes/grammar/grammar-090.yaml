@@ -1,0 +1,13 @@
+# Grammar list row 90.
+id: grammar-090
+kind: grammar
+level: A2
+chapter: a2-articles-pronouns
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-066, grammar-077]
+title:
+  en: "*Possessivartikel* in the *Dativ*; *euer*"
+  fa: "صفت ملکی در *Dativ*؛ *euer*"
+  de: "Possessivartikel im Dativ; *euer*"

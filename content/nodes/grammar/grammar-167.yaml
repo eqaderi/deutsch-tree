@@ -1,0 +1,13 @@
+# Grammar list row 167.
+id: grammar-167
+kind: grammar
+level: B1
+chapter: b1-time-clauses
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-157]
+title:
+  en: "*bevor*"
+  fa: "*bevor*"
+  de: "*bevor*"

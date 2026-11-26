@@ -1,0 +1,16 @@
+# Fixture chapters for tests, in curriculum order.
+- id: fixture-basics
+  level: A1
+  kind: grammar
+  title:
+    en: Fixture basics
+    fa: مبانی آزمایشی
+    de: Test-Grundlagen
+
+- id: fixture-later
+  level: A1
+  kind: grammar
+  title:
+    en: Fixture topics with *sein*
+    fa: موضوع‌های آزمایشی با *sein*
+    de: Test-Themen mit *sein*

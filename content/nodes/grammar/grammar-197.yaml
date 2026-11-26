@@ -1,0 +1,13 @@
+# Grammar list row 197.
+id: grammar-197
+kind: grammar
+level: A1
+chapter: a1-word-building
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-060, grammar-205]
+title:
+  en: "*-in*, *-er*, *-ung*"
+  fa: "پسوندهای *-in*، *-er*، *-ung*"
+  de: "Nomen mit *-in*, *-er*, *-ung*"

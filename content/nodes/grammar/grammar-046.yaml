@@ -1,0 +1,13 @@
+# Grammar list row 46.
+id: grammar-046
+kind: grammar
+level: A1
+chapter: a1-past
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-014, grammar-016]
+title:
+  en: "*sein* + *Partizip II* as vocabulary"
+  fa: "*sein* + *Partizip II* به‌عنوان واژه (*geöffnet*، *geschlossen*)"
+  de: "*sein* + Partizip II als Wortschatz (*geöffnet*, *geschlossen*)"

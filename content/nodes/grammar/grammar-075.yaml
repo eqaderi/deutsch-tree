@@ -1,0 +1,13 @@
+# Grammar list row 75.
+id: grammar-075
+kind: grammar
+level: A1
+chapter: a1-nouns-articles
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-074]
+title:
+  en: "*Nullartikel*"
+  fa: "بدون حرف تعریف (*Nullartikel*)"
+  de: "Nullartikel"

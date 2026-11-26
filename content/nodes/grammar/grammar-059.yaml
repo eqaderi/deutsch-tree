@@ -1,0 +1,13 @@
+# Grammar list row 59.
+id: grammar-059
+kind: grammar
+level: A1
+chapter: a1-nouns-articles
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: []
+title:
+  en: "*Genus* and definite article"
+  fa: "جنس دستوری (*Genus*) و حرف تعریف معیّن"
+  de: "Genus und bestimmter Artikel"

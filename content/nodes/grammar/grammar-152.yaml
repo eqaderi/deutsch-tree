@@ -1,0 +1,13 @@
+# Grammar list row 152.
+id: grammar-152
+kind: grammar
+level: B1
+chapter: b1-connectors-negation
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-151, grammar-165]
+title:
+  en: "*trotzdem*"
+  fa: "*trotzdem*"
+  de: "*trotzdem*"
