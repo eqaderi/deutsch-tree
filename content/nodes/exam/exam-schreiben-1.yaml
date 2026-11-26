@@ -1,0 +1,24 @@
+# Schreiben, Aufgabe 1: an informal e-mail of about 80 words on three content
+# points. The task is original; it follows the format of the exam, not the
+# wording of any official or published task.
+id: exam-schreiben-1
+kind: exam-part
+level: B1
+chapter: b1-exam-schreiben
+order: 1
+status: published
+module: schreiben
+part: 1
+title:
+  en: "Writing, task 1: an e-mail to a friend"
+  fa: "نوشتن، تکلیف ۱: ایمیل به یک دوست"
+  de: "Schreiben, Aufgabe 1: eine E-Mail an eine Freundin"
+
+task:
+  situation: >
+    Sie sind letzte Woche in eine neue Wohnung gezogen. Ihre Freundin Lena
+    wohnt in einer anderen Stadt und hat die Wohnung noch nicht gesehen.
+  points:
+    - "Beschreiben Sie: Wie ist die neue Wohnung?"
+    - "Begründen Sie: Warum sind Sie umgezogen?"
+    - Machen Sie einen Vorschlag für einen Besuch von Lena.

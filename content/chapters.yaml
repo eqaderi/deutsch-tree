@@ -330,3 +330,20 @@
     en: "Fractions, word building and particles"
     fa: "کسرها، واژه‌سازی و ادات"
     de: "Bruchzahlen, Wortbildung und Partikeln"
+
+# The exam, part by part. Ticket #8 settles the final names and positions.
+- id: b1-exam-schreiben
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: writing"
+    fa: "امتحان: نوشتن"
+    de: "Die Prüfung: Schreiben"
+
+- id: b1-exam-sprechen
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: speaking"
+    fa: "امتحان: صحبت کردن"
+    de: "Die Prüfung: Sprechen"
