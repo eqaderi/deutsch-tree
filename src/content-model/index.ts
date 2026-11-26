@@ -67,6 +67,17 @@ const questionBase = {
   explanation: localised,
 }
 
+/** `answer` must be the text of exactly one of `options`. */
+function answerIsOneOption(value: { options: string[]; answer: string }, ctx: z.RefinementCtx) {
+  if (value.options.filter((option) => option === value.answer).length !== 1) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['answer'],
+      message: 'must match exactly one of the options',
+    })
+  }
+}
+
 const multipleChoiceQuestion = z
   .strictObject({
     ...questionBase,
@@ -75,18 +86,37 @@ const multipleChoiceQuestion = z
     /** The text of the one correct option. */
     answer: text,
   })
+  .superRefine(answerIsOneOption)
+
+/** How a gap is written in a German sentence: three underscores or more. */
+export const GAP = /_{3,}/g
+
+/** A sentence with one gap, filled by choosing one of the offered forms. */
+const gapFillQuestion = z
+  .strictObject({
+    ...questionBase,
+    type: z.literal('gap-fill'),
+    options: z.array(text).min(2),
+    /** The text of the one option that fills the gap. */
+    answer: text,
+  })
   .superRefine((value, ctx) => {
-    if (value.options.filter((option) => option === value.answer).length !== 1) {
-      ctx.addIssue({
-        code: 'custom',
-        path: ['answer'],
-        message: 'must match exactly one of the options',
-      })
+    if ((value.prompt.match(GAP) ?? []).length !== 1) {
+      ctx.addIssue({ code: 'custom', path: ['prompt'], message: 'must have exactly one gap, written as ___' })
     }
+    answerIsOneOption(value, ctx)
   })
 
+/** The prompt is a German sentence; the learner says whether it is correct German. */
+const trueFalseQuestion = z.strictObject({
+  ...questionBase,
+  type: z.literal('true-false'),
+  /** true when the sentence is correct German, false when it holds a mistake. */
+  answer: z.boolean('must be true or false'),
+})
+
 /** Later question types join this union under their own `type`. */
-const question = z.discriminatedUnion('type', [multipleChoiceQuestion])
+const question = z.discriminatedUnion('type', [multipleChoiceQuestion, gapFillQuestion, trueFalseQuestion])
 
 /** The content sections that a published node must have. */
 const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
@@ -110,6 +140,13 @@ export const nodeFileSchema = z
     examples: z.array(example).min(1).optional(),
     mistakes: z.array(mistake).min(1).optional(),
     questions: z.array(question).min(1).optional(),
+    /** How many questions of the pool one attempt draws. */
+    attemptSize: z
+      .number()
+      .int('must be a whole number')
+      .min(10, 'must be 10 to 15: an attempt draws 10 to 15 questions')
+      .max(15, 'must be 10 to 15: an attempt draws 10 to 15 questions')
+      .default(10),
   })
   .superRefine((value, ctx) => {
     if (value.kind === 'grammar' && !/^grammar-\d{3}$/.test(value.id)) {
@@ -173,23 +210,45 @@ export interface Mistake {
   why: Localised<RichText>
 }
 
-export interface MultipleChoiceQuestion {
+interface QuestionBase {
+  /** Stable inside the node. */
   id: string
-  type: 'multiple-choice'
+  /** German. */
   prompt: string
-  options: string[]
-  answer: string
+  /** One line saying why the right answer is right. */
   explanation: Localised<RichText>
 }
 
-export type Question = MultipleChoiceQuestion
+export interface MultipleChoiceQuestion extends QuestionBase {
+  type: 'multiple-choice'
+  options: string[]
+  answer: string
+}
+
+/** The prompt holds one gap (see GAP); one of the options fills it. */
+export interface GapFillQuestion extends QuestionBase {
+  type: 'gap-fill'
+  options: string[]
+  answer: string
+}
+
+/** The prompt is a German sentence; `answer` says whether it is correct German. */
+export interface TrueFalseQuestion extends QuestionBase {
+  type: 'true-false'
+  answer: boolean
+}
+
+export type Question = MultipleChoiceQuestion | GapFillQuestion | TrueFalseQuestion
 
 export interface GrammarContent {
   explanations: Localised<{ rule: RichText }>
   table: GrammarTable
   examples: Example[]
   mistakes: Mistake[]
+  /** The pool. */
   questions: Question[]
+  /** How many questions of the pool one attempt draws. */
+  attemptSize: number
 }
 
 /** A node as the app loads it. `content` is null until the node is published. */

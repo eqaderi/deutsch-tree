@@ -169,6 +169,7 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
     examples,
     mistakes: mistakes.map((mistake) => ({ ...mistake, why: richTextIn(mistake.why) })),
     questions: questions.map((question) => ({ ...question, explanation: richTextIn(question.explanation) })),
+    attemptSize: file.attemptSize,
   }
 }
 
