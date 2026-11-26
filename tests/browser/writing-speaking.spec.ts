@@ -31,11 +31,11 @@ const sidewaysScroll = (page: Page) =>
 
 test('a writing node opens from the tree and shows its task', async ({ page }) => {
   await page.goto('./#/?level=B1')
+  const tree = page.getByRole('main')
 
-  await page
-    .getByRole('main')
-    .getByRole('link', { name: /Fixture writing/ })
-    .click()
+  // Its chapter is not the first of the level, so it starts closed.
+  await tree.getByRole('heading', { name: 'Fixture exam: writing' }).click()
+  await tree.getByRole('link', { name: /Fixture writing/ }).click()
 
   await expect(page.getByRole('heading', { level: 1, name: 'Fixture writing: an e-mail to a friend' })).toBeVisible()
   const task = page.getByRole('region', { name: 'Task' })
@@ -112,6 +112,7 @@ test('a score of 90 marks the node done, and the score and the state are still t
   await expect(page.getByRole('main').getByText('Done', { exact: true })).toBeVisible()
   await page.getByRole('link', { name: 'All topics' }).click()
   await page.getByRole('link', { name: /B1/ }).click()
+  await page.getByRole('main').getByRole('heading', { name: 'Fixture exam: writing' }).click()
   await expect(page.getByRole('main').getByRole('link', { name: /Fixture writing/ })).toContainText('Done')
 })
 

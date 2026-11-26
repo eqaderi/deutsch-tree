@@ -21,13 +21,10 @@ test('published writing and speaking nodes pass with no question pool and no rev
   const { report, bundle } = await compileContent(fixtureContent)
 
   expect(report.errors).toEqual([])
-  expect(report.nodes).toEqual({ total: 4, published: 3, comingSoon: 1 })
-  // Only the pool of the grammar node is counted.
-  expect(report.questions).toBe(15)
-  expect(bundle?.index.nodes.filter((node) => node.status === 'published').map((node) => node.id)).toEqual([
-    'grammar-001',
-    'exam-schreiben-1',
-    'exam-sprechen-1',
+  const examParts = bundle?.index.nodes.filter((node) => node.kind === 'exam-part')
+  expect(examParts?.map((node) => [node.id, node.status])).toEqual([
+    ['exam-schreiben-1', 'published'],
+    ['exam-sprechen-1', 'published'],
   ])
 })
 

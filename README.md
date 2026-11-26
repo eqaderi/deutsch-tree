@@ -38,15 +38,15 @@ ending, because the pipeline runs directly in Node.
 | `content/` | The real content: one YAML file per node under `content/nodes/`, and the chapters that group them in `content/chapters.yaml`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
 | `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
-| `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress. No interface, no storage; randomness is passed in. |
-| `src/progress-store/` | Keeps progress in browser storage, with a version number. It only stores; the learning engine decides how progress changes. |
-| `src/app/` | App shell: routes, tree, node page, test. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
+| `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress, name the milestones reached. No interface, no storage; randomness is passed in. |
+| `src/progress-store/` | Keeps progress in browser storage, with a version number, and writes and reads the progress file a learner exports. It reads every older version and refuses a newer one. It only stores; the learning engine decides how progress changes. |
+| `src/app/` | App shell: routes, tree, node page, test, backup. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests of code never depend on the real content. |
 | `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows". |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
-| `tests/progress-store/` | The progress store on a stand-in for browser storage, including text saved by each earlier version. |
+| `tests/progress-store/` | The progress store on a stand-in for browser storage, and the progress file. `older-versions.test.ts` holds text saved by each earlier version. |
 | `tests/language/` | The interface strings of the three languages, compared key by key. |
 | `tests/browser/` | Seam 3: whole journeys in a browser. |
 | `src/pack-builder/` | A learner's own exam book in, a private pack out. `cli.ts` is the command; `vite-plugin.ts` keeps packs out of the site build. The pack format's schema is `src/content-model/pack.ts`. |
@@ -67,18 +67,55 @@ GitHub Pages and from a local folder.
   runs it for any node with a pool: it draws an attempt, shows one question
   per screen (`AttemptRun.tsx`), then the result (`TestResult.tsx`).
 - Every rule is in `src/learning-engine/index.ts`: `drawAttempt`, `passMark`,
-  `checkAnswer`, `scoreAttempt`, `applyAttempt`, `isDone`. Components call
-  these and hold no rule of their own.
+  `checkAnswer`, `scoreAttempt`, `applyAttempt`, `isDone`, and for a
+  checkpoint `drawCheckpoint` and `scoreCheckpoint`. Components call these
+  and hold no rule of their own.
+- A level's checkpoint is at `#/checkpoint/<level>`
+  (`src/app/CheckpointPage.tsx`); the tree ends each level's line with it. It
+  asks through the same `AttemptRun` as a node's test, so a new question type
+  works in it without more code. `drawCheckpoint` asks 30 questions at most
+  and 5 at most of one node, dealt in rounds over the published nodes of the
+  level: up to 6 nodes give 5 each, 7 to 29 nodes share the 30 evenly, and
+  from 30 nodes on a checkpoint asks 30 nodes drawn at random, one question
+  each. A node without a pool gives none. `scoreCheckpoint` reports the nodes
+  with wrong answers. A checkpoint is advice: it never reads or changes the
+  progress. What a node gives to it is `checkpointPool` in that file.
 - Progress: read it with `useProgress()` and change it with
   `updateProgress((progress) => …)` from `src/app/progress.ts`, where the
-  function comes from the learning engine. The saved text has a version
-  number; `src/progress-store/index.ts` says what to do when its shape changes.
+  function comes from the learning engine.
+- Backup is at `#/backup` (`src/app/BackupPage.tsx`): export writes
+  `deutsch-tree-progress-<date>.json`, import reads it back and asks before it
+  replaces progress. Nothing is uploaded. Progress for a node that the content
+  no longer has is kept, never pruned.
+- Saved progress and the exported file are the `Progress` object plus a
+  `version`. To add a field: add it to `Progress` and `emptyProgress` in the
+  learning engine, give it a reader in `READERS` in
+  `src/progress-store/index.ts` (a missing value reads as empty), raise
+  `SAVED_VERSION`, and add the old text to
+  `tests/progress-store/older-versions.test.ts`. It is then saved, exported
+  and imported with no other code. To reshape something already saved, also
+  add a step to `UPGRADES`. The top of that file has the full steps.
+- An app never loads progress from a newer version than its own: an import is
+  refused with the reason, and such progress found in browser storage is left
+  untouched while the page asks for a reload.
+- After a milestone the tree suggests a backup once (`BackupSuggestion.tsx`).
+  What a milestone is, is `milestonesReached` in the learning engine, worked
+  out from the content index: every published topic of a level done, or
+  every tenth done topic. Which ones were already mentioned is remembered by
+  `src/app/milestones.ts`, outside the progress.
 - A new question type needs: its schema and compiled type in
   `src/content-model/index.ts`, its review view in
-  `src/content-pipeline/review.ts`, a case in `checkAnswer`, a case in
-  `QuestionView` and in `AnswerText` (`src/app/QuestionView.tsx`), and its
-  instruction in the three string files. The type checker points at each
-  place that is missing.
+  `src/content-pipeline/review.ts`, a case in `checkAnswer` and in
+  `rightAnswer`, a case in `QuestionView` and in `AnswerText`
+  (`src/app/QuestionView.tsx`), and its instruction in the three string
+  files. The type checker points at each place that is missing.
+- A question whose answer is typed shows `TypedAnswer`
+  (`src/app/TypedAnswer.tsx`: the field and the ä, ö, ü, ß buttons) and is
+  checked with `checkTyped(text, acceptedAnswers)`. A check says `correct`,
+  and for an answer accepted with a note also `notes` (which slips:
+  `umlaut-substitute`, `capitalisation`) and `accepted` (the exact spelling).
+  `scoreAttempt` keeps both for each question, and the result lists them
+  under "Accepted with a note". A missing or wrong word is never a slip.
 
 ## Languages
 
@@ -114,7 +151,14 @@ GitHub Pages and from a local folder.
   several worktrees do not collide. Tests run at phone and at computer size.
   A journey that takes a test uses `tests/browser/taking-a-test.ts`: it
   answers right or wrong from the fixture node's own answer key, whatever
-  questions the attempt drew.
+  questions the attempt drew. `takeCheckpoint` does the same for a checkpoint,
+  whose questions come from several nodes. The fixture node `grammar-010`
+  holds only typed questions and draws its whole pool, so a journey there
+  meets every question (`takeTypedTest`).
+- The fixture content has three levels: A1 with two published topics
+  (`grammar-001`, and `grammar-010` with typed questions) and one "coming
+  soon", A2 with three published topics (`grammar-101` to `grammar-103`) and
+  B1 with nothing published.
 
 ## Deploying
 
