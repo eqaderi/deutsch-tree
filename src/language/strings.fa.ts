@@ -201,6 +201,17 @@ export const fa: Strings = {
   candidatePagesOnly: (first, last) =>
     `فقط صفحه‌های ${digits.format(first)} تا ${digits.format(last)} را ببینید. در صفحه‌های بعد از آن پاسخ‌ها، متن فایل‌های شنیداری و نمونهٔ پاسخ آمده است.`,
 
+  reference: 'مرجع',
+  search: 'جست‌وجو',
+  allGrammar: 'همهٔ دستور زبان',
+  searchTitle: 'جست‌وجو در همهٔ موضوع‌ها',
+  searchHint: `یک واژه به فارسی یا آلمانی بنویسید. اگر صفحه‌کلید شما ${german('ä, ö, ü, ß')} ندارد، ${german('ae, oe, ue, ss')} بنویسید.`,
+  searchResults: (count) => `${digits.format(count)} موضوع پیدا شد`,
+  searchNothing: 'موضوعی پیدا نشد. واژهٔ دیگری را امتحان کنید، یا واژه‌های کمتری بنویسید.',
+  overviewTitle: 'همهٔ دستور زبان در یک نگاه',
+  overviewIntro: 'همهٔ جدول‌های دستور زبان در یک صفحه. نام بالای هر جدول، موضوع آن را باز می‌کند.',
+  overviewEmpty: 'هنوز هیچ جدول دستور زبانی نوشته نشده است.',
+
   task: 'تمرین',
   getYourScore: 'چطور نمره بگیرید',
   writingSteps: [
