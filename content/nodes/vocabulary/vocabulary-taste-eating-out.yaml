@@ -1,0 +1,35 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-taste-eating-out
+kind: vocabulary
+level: B1
+chapter: b1-words-home-food
+order: 8
+status: coming-soon
+title:
+  en: "Taste and eating out"
+  fa: "مزه و غذا خوردن در بیرون"
+  de: "Geschmack und Essen gehen"
+words:
+  - word: Geschmack
+  - word: lecker
+  - word: salzig
+  - word: roh
+  - word: reif
+  - word: satt
+  - word: hungrig
+  - word: durstig
+  - word: Gaststätte
+  - word: Gasthaus
+  - word: Kneipe
+  - word: Bar
+  - word: Kantine
+  - word: Mensa
+  - word: Ober
+  - word: Wirt
+  - word: Trinkgeld
+  - word: bedienen
+  - word: Prost
+  - word: Reservierung
+  - word: fressen
+  - word: konsumieren

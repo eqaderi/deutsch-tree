@@ -1,0 +1,37 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-society-history
+kind: vocabulary
+level: B1
+chapter: b1-words-society
+order: 4
+status: coming-soon
+title:
+  en: "Society and history"
+  fa: "جامعه و تاریخ"
+  de: "Gesellschaft und Geschichte"
+words:
+  - word: Gesellschaft
+  - word: Gemeinschaft
+  - word: Mitglied
+  - word: Organisation
+  - word: sozial
+  - word: Friede
+  - word: Krieg
+  - word: Protest
+  - word: protestieren
+  - word: Aktion
+  - word: Gott
+  - word: menschlich
+  - word: Zukunft
+  - word: Vergangenheit
+  - word: Jahrhundert
+  - word: Jahrtausend
+  - word: Jahrzehnt
+  - word: historisch
+  - word: König
+  - word: zukünftig
+  - word: heutig
+  - word: ursprünglich
+  - word: Realität
+  - word: Wirklichkeit

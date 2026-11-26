@@ -1,0 +1,40 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-sport-competition
+kind: vocabulary
+level: B1
+chapter: b1-words-media-free-time
+order: 7
+status: coming-soon
+title:
+  en: "Sport and competition"
+  fa: "ورزش و رقابت"
+  de: "Sport und Wettkampf"
+words:
+  - word: Sportart
+  - word: Sportler
+  - word: Profisportler
+  - word: Spieler
+  - word: Trainer
+  - word: Gegner
+  - word: Sieg
+  - word: Sieger
+  - word: siegen
+  - word: Verlierer
+  - word: Rekord
+  - word: Stadion
+  - word: Tor
+  - word: Golf
+  - word: klettern
+  - word: tauchen
+  - word: springen
+  - word: rennen
+  - word: werfen
+  - word: fangen
+  - word: schießen
+  - word: treten
+  - word: kämpfen
+  - word: Kampf
+  - word: unentschieden
+  - word: Runde
+  - word: wetten

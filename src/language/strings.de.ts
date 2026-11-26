@@ -89,6 +89,7 @@ export const de: Strings = {
     interjection: 'Ausruf',
     phrase: 'Ausdruck',
     abbreviation: 'Abkürzung',
+    affix: 'Wortteil',
   },
   notFoundTitle: 'Thema nicht gefunden',
   notFoundText: 'Unter dieser Adresse gibt es kein Thema.',

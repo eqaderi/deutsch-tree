@@ -1,0 +1,40 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-behaviour-conflict
+kind: vocabulary
+level: B1
+chapter: b1-words-people-feelings
+order: 7
+status: coming-soon
+title:
+  en: "Behaviour and conflicts"
+  fa: "رفتار و اختلاف‌ها"
+  de: "Verhalten und Konflikte"
+words:
+  - word: Verhalten
+  - word: verhalten
+  - word: Gewohnheit
+  - word: gewöhnen
+  - word: gewohnt
+  - word: Rücksicht
+  - word: Streit
+  - word: Konflikt
+  - word: Vorwurf
+  - word: beleidigen
+  - word: verzeihen
+  - word: Verzeihung
+  - word: Schuld
+  - word: schuld
+  - word: loben
+  - word: zwingen
+  - word: weigern
+  - word: gefallen lassen
+  - word: betrügen
+  - word: verraten
+  - word: Geheimnis
+  - word: geheim
+  - word: heimlich
+  - word: umgehen
+  - word: Kompromiss
+  - word: einigen
+  - word: übertreiben

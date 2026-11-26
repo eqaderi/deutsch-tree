@@ -1,0 +1,30 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-countries
+kind: vocabulary
+level: A1
+chapter: a1-words-people
+order: 5
+status: coming-soon
+title:
+  en: "Countries and where you live"
+  fa: "کشورها و محل زندگی"
+  de: "Länder und Wohnort"
+words:
+  - word: Land
+  - word: Deutschland
+  - word: Europa
+  - word: Ausland
+  - word: Welt
+  - word: Heimat
+  - word: deutsch
+  - word: europäisch
+  - word: ausländisch
+  - word: international
+  - word: Ausländer
+  - word: Deutsche
+  - word: Europäer
+  - word: kommen
+  - word: wohnen
+  - word: leben
+  - word: Ort

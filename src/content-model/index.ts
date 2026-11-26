@@ -9,6 +9,7 @@
  *      (*ich wohne*), so the app can render it left to right as German.
  */
 import { z } from 'zod'
+import { WORD_CLASSES, type WordClass } from './scope-list.ts'
 import { type AssistantGradedModule, isAssistantGraded } from './scoring.ts'
 
 export const LANGUAGES = ['en', 'fa', 'de'] as const
@@ -18,23 +19,8 @@ export type Localised<T = string> = Record<Language, T>
 export const NODE_KINDS = ['grammar', 'vocabulary', 'phrases', 'exam-part'] as const
 export type NodeKind = (typeof NODE_KINDS)[number]
 
-/** What kind of word a vocabulary entry is. */
-export const WORD_CLASSES = [
-  'noun',
-  'verb',
-  'adjective',
-  'adverb',
-  'pronoun',
-  'article',
-  'preposition',
-  'conjunction',
-  'numeral',
-  'particle',
-  'interjection',
-  'phrase',
-  'abbreviation',
-] as const
-export type WordClass = (typeof WORD_CLASSES)[number]
+/** What kind of word a vocabulary entry is: the classes of the scope list. */
+export { WORD_CLASSES, type WordClass }
 
 export const ARTICLES = ['der', 'die', 'das'] as const
 export type Article = (typeof ARTICLES)[number]

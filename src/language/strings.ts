@@ -101,6 +101,7 @@ export const en = {
     interjection: 'interjection',
     phrase: 'phrase',
     abbreviation: 'abbreviation',
+    affix: 'word part',
   } satisfies Record<WordClass, string>,
   notFoundTitle: 'Topic not found',
   notFoundText: 'There is no topic at this address.',

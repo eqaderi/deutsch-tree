@@ -1,0 +1,34 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-linking-adverbs
+kind: vocabulary
+level: B1
+chapter: b1-words-time-amounts
+order: 4
+status: coming-soon
+title:
+  en: "However, therefore, by the way: linking a text"
+  fa: "با این حال، بنابراین، راستی: پیوند دادن متن"
+  de: "Jedoch, deshalb, übrigens: Texte verbinden"
+words:
+  - word: jedoch
+  - word: trotzdem
+  - word: deswegen
+  - word: daher
+  - word: nämlich
+  - word: zwar
+  - word: allerdings
+  - word: einerseits
+  - word: andererseits
+  - word: übrigens
+  - word: weshalb
+  - word: wieso
+  - word: worüber
+  - word: worum
+  - word: ebenfalls
+  - word: ebenso
+  - word: genauso
+  - word: gleichfalls
+  - word: vor allem
+  - word: schließlich
+  - word: nebenbei

@@ -1,7 +1,8 @@
 import { expect, test } from 'vitest'
 import type { CompiledNode, VocabularyContent } from '../../src/content-model/index.ts'
+import { SCOPE_LIST_FILE } from '../../src/content-model/scope-list.ts'
 import { isVocabulary } from '../../src/content-model/scoring.ts'
-import { compileContent } from '../../src/content-pipeline/index.ts'
+import { type ContentProblem, compileContent } from '../../src/content-pipeline/index.ts'
 import {
   COMING_SOON,
   changeNode,
@@ -20,7 +21,16 @@ const UNWRITTEN = 'nodes/vocabulary/vocabulary-fixture-family.yaml'
 /** The errors of the fixture content after one change to the published vocabulary node. */
 async function errorsAfter(change: (node: any) => void) {
   const content = await fixtureContentWith({ [VOCABULARY]: changeNode(change) })
-  return (await compileContent(content)).report.errors
+  return inNodes((await compileContent(content)).report.errors)
+}
+
+/**
+ * The problems found in node files. A node file that breaks the schema is not
+ * read, so the scope list then also reports each of its words as in no node;
+ * those lines say nothing these tests are about.
+ */
+function inNodes(errors: ContentProblem[]): ContentProblem[] {
+  return errors.filter((problem) => problem.file !== SCOPE_LIST_FILE)
 }
 
 /** The vocabulary content of a compiled node; the test fails when it has none. */
@@ -34,7 +44,7 @@ const inWords = (where: string, message: string) => ({ file: VOCABULARY, node: N
 test('a published vocabulary node compiles into its words, each with all that its page shows', async () => {
   const { report, bundle } = await compileContent(fixtureContent)
 
-  expect(report.errors).toEqual([])
+  expect(inNodes(report.errors)).toEqual([])
   const content = vocabularyOf(bundle?.nodes.find((node) => node.id === NODE))
   expect(content.words).toHaveLength(10)
   expect(content.words[0]).toEqual({
@@ -78,7 +88,7 @@ test('its pool asks every word from German and into German, a noun with its arti
 test('a vocabulary node that is coming soon may name its words and nothing more', async () => {
   const { report, bundle } = await compileContent(fixtureContent)
 
-  expect(report.errors).toEqual([])
+  expect(inNodes(report.errors)).toEqual([])
   expect(bundle?.nodes.find((node) => node.id === 'vocabulary-fixture-family')).toMatchObject({
     status: 'coming-soon',
     content: null,
@@ -209,7 +219,7 @@ test('a vocabulary node must list words, and only a vocabulary node has them', a
 
   const { report } = await compileContent(content)
 
-  expect(report.errors).toEqual([
+  expect(inNodes(report.errors)).toEqual([
     { file: COMING_SOON, node: 'grammar-002', where: 'words', message: 'only a vocabulary node has this' },
     {
       file: UNWRITTEN,
@@ -227,7 +237,7 @@ test('the id of a vocabulary node starts with "vocabulary-"', async () => {
 
   const { report } = await compileContent(content)
 
-  expect(report.errors).toEqual([
+  expect(inNodes(report.errors)).toEqual([
     {
       file: UNWRITTEN,
       node: 'fixture-family',
@@ -246,7 +256,7 @@ test('a published vocabulary node with too few words for a pool is rejected', as
 
   const { report } = await compileContent(content)
 
-  expect(report.errors).toEqual([
+  expect(inNodes(report.errors)).toEqual([
     inWords(
       'words',
       'pool too small: a published node needs at least 15 questions, and the 7 words of this one give 14 (two for each word)',
@@ -265,7 +275,7 @@ test('two words of a node with the same meaning in a language are rejected: the 
 
   const { report } = await compileContent(content)
 
-  expect(report.errors).toEqual([
+  expect(inNodes(report.errors)).toEqual([
     inWords(
       'words[1].meaning.fa',
       '"Lampe" has the same meaning in fa as "Tisch" (words[0]): "میز". Asked for either, both would be right; tell them apart',
@@ -289,9 +299,10 @@ test('two words with the same meaning that accept each other when asked for are 
       })
       node.words[1].alsoAccepted = ['die Leuchte']
     }),
+    [SCOPE_LIST_FILE]: (text) => `${text}Leuchte\tnoun\tA1\tdie\t-n\n`,
   })
 
   const { report } = await compileContent(content)
 
-  expect(report.errors).toEqual([])
+  expect(inNodes(report.errors)).toEqual([])
 })

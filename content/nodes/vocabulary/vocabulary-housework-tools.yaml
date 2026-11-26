@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-housework-tools
+kind: vocabulary
+level: B1
+chapter: b1-words-home-food
+order: 4
+status: coming-soon
+title:
+  en: "Cleaning, tools and repairs"
+  fa: "نظافت، ابزار و تعمیر"
+  de: "Putzen, Werkzeug und Reparaturen"
+words:
+  - word: abwaschen
+  - word: spülen
+  - word: staubsaugen
+  - word: trocknen
+  - word: reinigen
+  - word: Waschmittel
+  - word: Staub
+  - word: Schmutz
+  - word: Dreck
+  - word: Fleck
+  - word: entsorgen
+  - word: Werkzeug
+  - word: Hammer
+  - word: Zange
+  - word: Nagel
+  - word: kleben
+  - word: gießen
+  - word: aufheben
+  - word: runterwerfen
+  - word: Streichholz
+  - word: Zündholz
+  - word: Feuerzeug
+  - word: ordnen
+  - word: erledigen
+  - word: besorgen
+  - word: stinken

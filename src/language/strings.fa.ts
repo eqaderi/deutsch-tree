@@ -93,6 +93,7 @@ export const fa: Strings = {
     interjection: 'شبه‌جمله',
     phrase: 'عبارت',
     abbreviation: 'مخفف',
+    affix: 'جزء واژه',
   },
   notFoundTitle: 'موضوع پیدا نشد',
   notFoundText: 'در این نشانی موضوعی وجود ندارد.',

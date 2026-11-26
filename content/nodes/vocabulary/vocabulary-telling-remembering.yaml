@@ -1,0 +1,36 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-telling-remembering
+kind: vocabulary
+level: A2
+chapter: a2-words-people
+order: 6
+status: coming-soon
+title:
+  en: "Telling and remembering"
+  fa: "تعریف کردن و به یاد آوردن"
+  de: "Erzählen und Erinnern"
+words:
+  - word: reden
+  - word: berichten
+  - word: beschreiben
+  - word: erinnern
+  - word: vergessen
+  - word: merken
+  - word: nennen
+  - word: aussprechen
+  - word: zuhören
+  - word: rufen
+  - word: Situation
+  - word: Bescheid
+  - word: Nachricht
+  - word: informieren
+  - word: beantworten
+  - word: bestätigen
+  - word: Witz
+  - word: Geschichte
+  - word: zeigen
+  - word: übersetzen
+  - word: Übersetzung
+  - word: auf Deutsch
+  - word: deutlich

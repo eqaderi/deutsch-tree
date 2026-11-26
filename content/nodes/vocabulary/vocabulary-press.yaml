@@ -1,0 +1,34 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-press
+kind: vocabulary
+level: B1
+chapter: b1-words-media-free-time
+order: 3
+status: coming-soon
+title:
+  en: "Press and the public"
+  fa: "مطبوعات و افکار عمومی"
+  de: "Presse und Öffentlichkeit"
+words:
+  - word: Medien
+  - word: Presse
+  - word: Magazin
+  - word: Broschüre
+  - word: Annonce
+  - word: Inserat
+  - word: Verlag
+  - word: veröffentlichen
+  - word: Bericht
+  - word: Reportage
+  - word: Meldung
+  - word: Neuigkeit
+  - word: Kommentar
+  - word: Leser
+  - word: Hörer
+  - word: Zuhörer
+  - word: Zuschauer
+  - word: Publikum
+  - word: Öffentlichkeit
+  - word: öffentlich
+  - word: Beitrag

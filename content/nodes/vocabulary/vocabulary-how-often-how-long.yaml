@@ -1,0 +1,39 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-how-often-how-long
+kind: vocabulary
+level: B1
+chapter: b1-words-time-amounts
+order: 2
+status: coming-soon
+title:
+  en: "How often and how long"
+  fa: "چند وقت یک‌بار و چه مدت"
+  de: "Wie oft und wie lange"
+words:
+  - word: jedes Mal
+  - word: jederzeit
+  - word: endgültig
+  - word: vorläufig
+  - word: rechtzeitig
+  - word: spätestens
+  - word: gleichzeitig
+  - word: dauernd
+  - word: ständig
+  - word: häufig
+  - word: selten
+  - word: regelmäßig
+  - word: gewöhnlich
+  - word: normalerweise
+  - word: stündlich
+  - word: wöchentlich
+  - word: monatlich
+  - word: jährlich
+  - word: wochentags
+  - word: werktags
+  - word: sonnabends
+  - word: ewig
+  - word: fortsetzen
+  - word: Fortsetzung
+  - word: noch mal
+  - word: nochmals

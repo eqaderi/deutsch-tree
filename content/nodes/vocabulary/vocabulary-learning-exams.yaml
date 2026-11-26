@@ -1,0 +1,34 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-learning-exams
+kind: vocabulary
+level: A2
+chapter: a2-words-school-work
+order: 2
+status: coming-soon
+title:
+  en: "Training, studying and exams"
+  fa: "آموزش، تحصیل و امتحان"
+  de: "Ausbildung, Studium und Prüfungen"
+words:
+  - word: Ausbildung
+  - word: Auszubildende
+  - word: Universität
+  - word: Stipendium
+  - word: Kenntnisse
+  - word: Erfahrung
+  - word: Workshop
+  - word: Projekt
+  - word: üben
+  - word: prüfen
+  - word: kontrollieren
+  - word: eintragen
+  - word: markieren
+  - word: Rätsel
+  - word: Quiz
+  - word: schriftlich
+  - word: Reihe
+  - word: aufpassen
+  - word: "d. h."
+  - word: "usw."
+  - word: "z. B."

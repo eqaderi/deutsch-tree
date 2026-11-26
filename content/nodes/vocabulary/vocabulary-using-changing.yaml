@@ -1,0 +1,37 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-using-changing
+kind: vocabulary
+level: B1
+chapter: b1-words-general
+order: 2
+status: coming-soon
+title:
+  en: "Using, keeping and changing"
+  fa: "به کار بردن، نگه داشتن و تغییر دادن"
+  de: "Benutzen, Behalten und Verändern"
+words:
+  - word: verändern
+  - word: Änderung
+  - word: ersetzen
+  - word: Ersatz
+  - word: erhalten
+  - word: behalten
+  - word: besitzen
+  - word: gebrauchen
+  - word: verwenden
+  - word: anwenden
+  - word: einsetzen
+  - word: einführen
+  - word: Einführung
+  - word: auflösen
+  - word: verbinden
+  - word: verteilen
+  - word: vergrößern
+  - word: enthalten
+  - word: Inhalt
+  - word: eignen
+  - word: geeignet
+  - word: stimmen
+  - word: besetzen
+  - word: erstellen

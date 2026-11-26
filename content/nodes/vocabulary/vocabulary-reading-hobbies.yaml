@@ -1,0 +1,39 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-reading-hobbies
+kind: vocabulary
+level: A2
+chapter: a2-words-free-time
+order: 3
+status: coming-soon
+title:
+  en: "Reading, radio and hobbies"
+  fa: "خواندن، رادیو و سرگرمی‌ها"
+  de: "Lesen, Radio und Hobbys"
+words:
+  - word: Radio
+  - word: Sendung
+  - word: Zeitschrift
+  - word: Krimi
+  - word: Comic
+  - word: Autor
+  - word: Titel
+  - word: Seite
+  - word: Artikel
+  - word: Interview
+  - word: Journalist
+  - word: Plakat
+  - word: Poster
+  - word: Postkarte
+  - word: Notiz
+  - word: Zettel
+  - word: notieren
+  - word: Fotoapparat
+  - word: Kamera
+  - word: fotografieren
+  - word: malen
+  - word: zeichnen
+  - word: basteln
+  - word: sammeln
+  - word: ansehen
+  - word: aktuell

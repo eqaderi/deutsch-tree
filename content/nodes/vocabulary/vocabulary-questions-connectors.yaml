@@ -1,0 +1,33 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-questions-connectors
+kind: vocabulary
+level: A1
+chapter: a1-words-small-words
+order: 4
+status: coming-soon
+title:
+  en: "Question words and connecting words"
+  fa: "واژه‌های پرسشی و واژه‌های ربط"
+  de: "Fragewörter und Verbindungswörter"
+words:
+  - word: wer
+  - word: was
+  - word: wann
+  - word: warum
+  - word: wie
+  - word: wo
+  - word: woher
+  - word: wohin
+  - word: welcher
+  - word: was für ein
+  - word: und
+  - word: oder
+  - word: aber
+  - word: denn
+  - word: also
+  - word: auch
+  - word: nicht
+  - word: nur
+  - word: sehr
+  - word: so

@@ -1,0 +1,38 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-bus-train
+kind: vocabulary
+level: A1
+chapter: a1-words-town-travel
+order: 3
+status: coming-soon
+title:
+  en: "Bus and train"
+  fa: "اتوبوس و قطار"
+  de: "Bus und Bahn"
+words:
+  - word: Bus
+  - word: Bahn
+  - word: Zug
+  - word: S-Bahn
+  - word: Straßenbahn
+  - word: Bahnhof
+  - word: Bahnsteig
+  - word: Gleis
+  - word: Haltestelle
+  - word: Fahrkarte
+  - word: Ticket
+  - word: Abfahrt
+  - word: Ankunft
+  - word: abfahren
+  - word: ankommen
+  - word: einsteigen
+  - word: aussteigen
+  - word: Anschluss
+  - word: Durchsage
+  - word: Ansage
+  - word: fahren
+  - word: Fahrer
+  - word: halten
+  - word: warten
+  - word: Taxi

@@ -1,0 +1,37 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-economy
+kind: vocabulary
+level: B1
+chapter: b1-words-work-money
+order: 5
+status: coming-soon
+title:
+  en: "Business and the economy"
+  fa: "کسب‌وکار و اقتصاد"
+  de: "Wirtschaft und Handel"
+words:
+  - word: Konsum
+  - word: Nachfrage
+  - word: Bedarf
+  - word: benötigen
+  - word: verbrauchen
+  - word: Handel
+  - word: handeln
+  - word: Import
+  - word: Export
+  - word: Hersteller
+  - word: Anbieter
+  - word: Konkurrenz
+  - word: Wirtschaft
+  - word: Industrie
+  - word: Produktion
+  - word: produzieren
+  - word: Krise
+  - word: gründen
+  - word: Trend
+  - word: Transport
+  - word: transportieren
+  - word: weltweit
+  - word: Reform
+  - word: global

@@ -1,0 +1,39 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-countries-amounts
+kind: vocabulary
+level: A2
+chapter: a2-words-small-words
+order: 4
+status: coming-soon
+title:
+  en: "Countries, numbers and amounts"
+  fa: "کشورها، عددها و مقدارها"
+  de: "Länder, Zahlen und Mengen"
+words:
+  - word: Österreich
+  - word: Schweiz
+  - word: Luxemburg
+  - word: Österreicher
+  - word: Schweizer
+  - word: Luxemburger
+  - word: österreichisch
+  - word: schweizerisch
+  - word: luxemburgisch
+  - word: Franken
+  - word: Rappen
+  - word: Zahl
+  - word: rechnen
+  - word: zweitausendeins
+  - word: viertel
+  - word: mindestens
+  - word: wenigstens
+  - word: "ca."
+  - word: genug
+  - word: ein paar
+  - word: einige
+  - word: manche
+  - word: etwas
+  - word: Rest
+  - word: Menge
+  - word: teilen

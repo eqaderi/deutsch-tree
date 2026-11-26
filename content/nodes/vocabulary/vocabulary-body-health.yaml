@@ -1,0 +1,36 @@
+# Vocabulary theme of A1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-body-health
+kind: vocabulary
+level: A1
+chapter: a1-words-daily-life
+order: 4
+status: coming-soon
+title:
+  en: "Body and health"
+  fa: "بدن و سلامت"
+  de: "Körper und Gesundheit"
+words:
+  - word: Kopf
+  - word: Auge
+  - word: Mund
+  - word: Haar
+  - word: Hand
+  - word: Arm
+  - word: Bein
+  - word: Fuß
+  - word: Bauch
+  - word: krank
+  - word: Fieber
+  - word: wehtun
+  - word: müde
+  - word: Arzt
+  - word: Doktor
+  - word: Praxis
+  - word: rauchen
+  - word: Zigarette
+  - word: schlafen
+  - word: aufstehen
+  - word: waschen
+  - word: baden
+  - word: duschen

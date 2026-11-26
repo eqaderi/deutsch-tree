@@ -1,0 +1,31 @@
+# Vocabulary theme of B1. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-weather-climate
+kind: vocabulary
+level: B1
+chapter: b1-words-travel-nature
+order: 6
+status: coming-soon
+title:
+  en: "Weather and climate"
+  fa: "هوا و اقلیم"
+  de: "Wetter und Klima"
+words:
+  - word: Klima
+  - word: Temperatur
+  - word: Hitze
+  - word: Kälte
+  - word: Wärme
+  - word: Nebel
+  - word: Sturm
+  - word: Blitz
+  - word: blitzen
+  - word: Donner
+  - word: donnern
+  - word: hageln
+  - word: Wetterbericht
+  - word: Wettervorhersage
+  - word: mild
+  - word: feucht
+  - word: sinken
+  - word: steigen
