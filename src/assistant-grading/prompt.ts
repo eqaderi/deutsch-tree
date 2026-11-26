@@ -19,7 +19,7 @@
 import type { ExamTask, Language } from '../content-model/index.ts'
 import { BANDS, type Criterion, type Marking, markingOf, wordsAskedFor } from './criteria.ts'
 import { PRONUNCIATION_SHARE, scoreOutOf100 } from './score.ts'
-import { sheetAsText, taskSheet } from './task-sheet.ts'
+import { sheetAsText, sheetBodyAsText, taskSheet } from './task-sheet.ts'
 
 type WritingTask = Extract<ExamTask, { module: 'schreiben' }>
 type SpeakingTask = Extract<ExamTask, { module: 'sprechen' }>
@@ -153,7 +153,7 @@ function speakingPrompt(task: SpeakingTask, language: Language): string {
       `# The part: ${sheet.title}`,
       `${part.inTheExam} ${part.roles}`,
       'This is the task sheet. I have it in front of me.',
-      sheetAsText({ ...sheet, title: '' }).trim(),
+      sheetBodyAsText(sheet),
     ].join('\n\n'),
 
     [

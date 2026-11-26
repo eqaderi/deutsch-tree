@@ -116,15 +116,21 @@ export function taskSheet(task: ExamTask): TaskSheet {
 
 /** The task sheet as plain text, for a prompt. */
 export function sheetAsText(sheet: TaskSheet): string {
-  const blocks = sheet.blocks.map((block) => {
-    switch (block.type) {
-      case 'text':
-        return block.text
-      case 'quote':
-        return `${block.author}: ${block.text}`
-      case 'list':
-        return block.items.map((item, index) => `${block.ordered ? `${index + 1}.` : '-'} ${item}`).join('\n')
-    }
-  })
-  return [sheet.title, ...blocks].join('\n\n')
+  return `${sheet.title}\n\n${sheetBodyAsText(sheet)}`
+}
+
+/** The same without the title line. */
+export function sheetBodyAsText(sheet: TaskSheet): string {
+  return sheet.blocks.map(blockAsText).join('\n\n')
+}
+
+function blockAsText(block: TaskBlock): string {
+  switch (block.type) {
+    case 'text':
+      return block.text
+    case 'quote':
+      return `${block.author}: ${block.text}`
+    case 'list':
+      return block.items.map((item, index) => `${block.ordered ? `${index + 1}.` : '-'} ${item}`).join('\n')
+  }
 }
