@@ -139,6 +139,14 @@
     fa: "*Dativ*، مفعول‌ها و ترتیب آن‌ها"
     de: "Dativ, Objekte und ihre Reihenfolge"
 
+- id: a2-phrases-emails
+  level: A2
+  kind: phrases
+  title:
+    en: "E-mails and messages"
+    fa: "ایمیل و پیام"
+    de: "E-Mails und Nachrichten"
+
 - id: a2-articles-pronouns
   level: A2
   kind: grammar
@@ -194,6 +202,14 @@
     en: "Subordinate clauses"
     fa: "جمله‌های پیرو"
     de: "Nebensätze"
+
+- id: a2-phrases-arrangements
+  level: A2
+  kind: phrases
+  title:
+    en: "Suggestions, requests and apologies"
+    fa: "پیشنهاد، درخواست و عذرخواهی"
+    de: "Vorschläge, Bitten und Entschuldigungen"
 
 - id: a2-werden-lassen-passive
   level: A2
@@ -259,6 +275,14 @@
     fa: "حرف‌های ربط دوتایی"
     de: "Zweiteilige Konnektoren"
 
+- id: b1-phrases-opinions
+  level: B1
+  kind: phrases
+  title:
+    en: "Opinions and discussion"
+    fa: "نظر و بحث"
+    de: "Meinung und Diskussion"
+
 - id: b1-genitive-nouns
   level: B1
   kind: grammar
@@ -274,6 +298,14 @@
     en: "Prepositions"
     fa: "حرف‌های اضافه"
     de: "Präpositionen"
+
+- id: b1-phrases-writing
+  level: B1
+  kind: phrases
+  title:
+    en: "Writing e-mails and forum posts"
+    fa: "نوشتن ایمیل و نظر در انجمن اینترنتی"
+    de: "E-Mails und Beiträge im Forum schreiben"
 
 - id: b1-adjectives-participles
   level: B1
@@ -315,6 +347,14 @@
     fa: "فعل‌های وجهی و *Konjunktiv II*"
     de: "Modalverben und Konjunktiv II"
 
+- id: b1-phrases-planning
+  level: B1
+  kind: phrases
+  title:
+    en: "Planning something together"
+    fa: "برنامه‌ریزی با هم"
+    de: "Gemeinsam etwas planen"
+
 - id: b1-passive
   level: B1
   kind: grammar
@@ -330,3 +370,43 @@
     en: "Fractions, word building and particles"
     fa: "کسرها، واژه‌سازی و ادات"
     de: "Bruchzahlen, Wortbildung und Partikeln"
+
+- id: b1-phrases-presentation
+  level: B1
+  kind: phrases
+  title:
+    en: "Presenting a topic and talking about it"
+    fa: "ارائهٔ یک موضوع و گفت‌وگو دربارهٔ آن"
+    de: "Ein Thema präsentieren und darüber sprechen"
+
+- id: b1-exam-lesen
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: reading (*Lesen*)"
+    fa: "آزمون: خواندن (*Lesen*)"
+    de: "Die Prüfung: Lesen"
+
+- id: b1-exam-hoeren
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: listening (*Hören*)"
+    fa: "آزمون: شنیدن (*Hören*)"
+    de: "Die Prüfung: Hören"
+
+- id: b1-exam-schreiben
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: writing (*Schreiben*)"
+    fa: "آزمون: نوشتن (*Schreiben*)"
+    de: "Die Prüfung: Schreiben"
+
+- id: b1-exam-sprechen
+  level: B1
+  kind: exam-part
+  title:
+    en: "The exam: speaking (*Sprechen*)"
+    fa: "آزمون: صحبت کردن (*Sprechen*)"
+    de: "Die Prüfung: Sprechen"

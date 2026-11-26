@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-telling-what-happened
+kind: phrases
+level: B1
+chapter: b1-phrases-writing
+order: 2
+status: coming-soon
+title:
+  en: "Telling what happened and how it was"
+  fa: "تعریف کردن یک اتفاق و اینکه چطور بود"
+  de: "Erzählen, was passiert ist und wie es war"
+purpose:
+  en: "Describe an event such as a party or a trip: what you did, how it was and what you liked best."
+  fa: "اتفاقی مثل جشن یا سفر را توصیف کنید: چه کردید، چطور بود و از چه چیزی بیشتر خوشتان آمد."
+  de: "Ein Ereignis wie eine Feier oder eine Reise beschreiben: was man gemacht hat, wie es war und was am besten war."
+examTasks: [exam-schreiben-1, exam-sprechen-2]

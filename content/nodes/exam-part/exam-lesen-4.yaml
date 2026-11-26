@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-lesen-4
+kind: exam-part
+level: B1
+chapter: b1-exam-lesen
+order: 4
+status: coming-soon
+module: lesen
+part: 4
+title:
+  en: "*Lesen Teil 4*: readers' comments, for or against"
+  fa: "*Lesen Teil 4*: نظر خوانندگان، موافق یا مخالف"
+  de: "Lesen Teil 4: Leserkommentare, dafür oder dagegen"

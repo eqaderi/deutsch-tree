@@ -20,6 +20,10 @@ export type NodeKind = (typeof NODE_KINDS)[number]
 export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
 
+/** The four modules of the exam, as an exam-part node names its own. */
+export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
+export type ExamModule = (typeof EXAM_MODULES)[number]
+
 /**
  * The fewest questions a published node's pool may hold. An attempt draws 10
  * to 15, so a smaller pool could not give a fresh set on a retry. The spec
@@ -222,6 +226,16 @@ const reviewRecord = z.strictObject({
   pool: text,
 })
 
+/** The fields that the nodes of one kind have, and no others. */
+const FIELDS_OF_ONE_KIND = {
+  module: 'exam-part',
+  part: 'exam-part',
+  purpose: 'phrases',
+  examTasks: 'phrases',
+} as const satisfies Record<string, NodeKind>
+
+const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${kind}`
+
 /** The content sections that a published node must have. */
 const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
 
@@ -242,6 +256,16 @@ export const nodeFileSchema = z
     /** Ids of the nodes this one builds on. Advisory; never locks a node. */
     prerequisites: z.array(nodeId).default([]),
     title: localised,
+
+    /** Exam-part nodes only: the module of the exam this part belongs to. */
+    module: z.enum(EXAM_MODULES).optional(),
+    /** Exam-part nodes only: the number of the part inside its module, as the exam counts it. */
+    part: z.number().int('must be a whole number').positive().optional(),
+
+    /** Phrases nodes only: what the phrases are for, in one line. */
+    purpose: localised.optional(),
+    /** Phrases nodes only: ids of the exam-part nodes whose tasks the phrases serve. */
+    examTasks: z.array(nodeId).min(1, 'must name at least one exam task').optional(),
 
     explanations: z
       .strictObject({ en: explanationIn('en'), fa: explanationIn('fa'), de: explanationIn('de') })
@@ -267,6 +291,58 @@ export const nodeFileSchema = z
         path: ['id'],
         message: 'a grammar node id is "grammar-" plus its three-digit number in the grammar list, like "grammar-001"',
       })
+    }
+    for (const [field, kind] of Object.entries(FIELDS_OF_ONE_KIND)) {
+      if (value.kind !== kind && value[field as keyof typeof FIELDS_OF_ONE_KIND] !== undefined) {
+        ctx.addIssue({ code: 'custom', path: [field], message: `only ${withArticle(kind)} node has this` })
+      }
+    }
+    if (value.kind === 'phrases') {
+      if (!value.id.startsWith('phrases-')) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['id'],
+          message: 'a phrases node id is "phrases-" plus its purpose in a word or two, like "phrases-agreeing"',
+        })
+      }
+      if (value.purpose === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['purpose'],
+          message: 'is missing: a phrases node says in one line what its phrases are for',
+        })
+      }
+      if (value.examTasks === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['examTasks'],
+          message: 'is missing: a phrases node names the exam tasks it serves, by the ids of their exam-part nodes',
+        })
+      }
+    }
+    if (value.kind === 'exam-part') {
+      if (value.module === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['module'],
+          message: `is missing: an exam-part node names its module: ${EXAM_MODULES.slice(0, -1).join(', ')} or ${EXAM_MODULES.at(-1)}`,
+        })
+      }
+      if (value.part === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['part'],
+          message: 'is missing: an exam-part node gives the number of its part inside the module',
+        })
+      }
+      const id = `exam-${value.module}-${value.part}`
+      if (value.module !== undefined && value.part !== undefined && value.id !== id) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['id'],
+          message: `the id of part ${value.part} of the module ${value.module} is "${id}"`,
+        })
+      }
     }
     if (value.status !== 'published') return
     if (value.kind !== 'grammar') {
@@ -336,6 +412,12 @@ export interface NodeSummary {
   prerequisites: string[]
   /** German inside a title is marked, like in every other text for the learner. */
   title: Localised<RichText>
+  /** Exam-part nodes only: the module of the exam and the number of the part inside it. */
+  module?: ExamModule
+  part?: number
+  /** Phrases nodes only: what the phrases are for, and the ids of the exam-part nodes whose tasks they serve. */
+  purpose?: Localised<RichText>
+  examTasks?: string[]
 }
 
 /** A chapter as the tree shows it: a stop on the line of its level. */

@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-forum-post
+kind: phrases
+level: B1
+chapter: b1-phrases-writing
+order: 3
+status: coming-soon
+title:
+  en: "Starting and ending a forum post"
+  fa: "شروع و پایان یک نوشته در انجمن اینترنتی"
+  de: "Einen Beitrag im Forum beginnen und beenden"
+purpose:
+  en: "Refer to the topic or to another person's post at the start, and sum up your view at the end."
+  fa: "در آغاز به موضوع یا به نوشتهٔ فرد دیگری اشاره کنید و در پایان نظرتان را جمع‌بندی کنید."
+  de: "Am Anfang etwas zum Thema oder zu einem anderen Beitrag sagen und am Ende die eigene Meinung zusammenfassen."
+examTasks: [exam-schreiben-2]

@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-thanking-reacting
+kind: phrases
+level: A2
+chapter: a2-phrases-emails
+order: 3
+status: coming-soon
+title:
+  en: "Thanking and reacting to news"
+  fa: "تشکر و واکنش به خبر"
+  de: "Danken und auf Neuigkeiten reagieren"
+purpose:
+  en: "Thank someone, congratulate, and say that you are glad or sorry about something."
+  fa: "از کسی تشکر کنید، تبریک بگویید و بگویید که از چیزی خوشحال یا متأسفید."
+  de: "Jemandem danken, gratulieren und sagen, dass man sich freut oder dass etwas schade ist."
+examTasks: [exam-schreiben-1, exam-schreiben-3]

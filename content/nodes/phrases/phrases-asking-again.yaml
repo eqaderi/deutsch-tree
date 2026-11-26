@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-asking-again
+kind: phrases
+level: A2
+chapter: a2-phrases-arrangements
+order: 6
+status: coming-soon
+title:
+  en: "Asking again when you did not understand"
+  fa: "دوباره پرسیدن وقتی متوجه نشده‌اید"
+  de: "Nachfragen, wenn man etwas nicht verstanden hat"
+purpose:
+  en: "Say that you did not understand, ask the other person to repeat or explain, and check that you understood."
+  fa: "بگویید که متوجه نشده‌اید، از طرف مقابل بخواهید تکرار کند یا توضیح دهد، و مطمئن شوید که درست فهمیده‌اید."
+  de: "Sagen, dass man etwas nicht verstanden hat, um Wiederholung oder Erklärung bitten und prüfen, ob man es richtig verstanden hat."
+examTasks: [exam-sprechen-1, exam-sprechen-3]

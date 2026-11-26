@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-agreeing
+kind: phrases
+level: B1
+chapter: b1-phrases-opinions
+order: 2
+status: coming-soon
+title:
+  en: "Agreeing"
+  fa: "موافقت کردن"
+  de: "Zustimmen"
+purpose:
+  en: "Say that you think the same as another person, fully or in part."
+  fa: "بگویید که با نظر کس دیگری موافقید، کاملاً یا تا حدی."
+  de: "Sagen, dass man die gleiche Meinung hat wie eine andere Person, ganz oder zum Teil."
+examTasks: [exam-schreiben-2, exam-sprechen-1]

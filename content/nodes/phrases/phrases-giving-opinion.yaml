@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-giving-opinion
+kind: phrases
+level: B1
+chapter: b1-phrases-opinions
+order: 1
+status: coming-soon
+title:
+  en: "Giving your opinion"
+  fa: "بیان نظر خود"
+  de: "Die eigene Meinung sagen"
+purpose:
+  en: "Say what you think about a topic, in writing and in speaking."
+  fa: "نظرتان را دربارهٔ یک موضوع بگویید، هم در نوشتن و هم در صحبت کردن."
+  de: "Sagen und schreiben, was man über ein Thema denkt."
+examTasks: [exam-schreiben-2, exam-sprechen-2]

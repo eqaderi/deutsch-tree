@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-presentation-opening
+kind: phrases
+level: B1
+chapter: b1-phrases-presentation
+order: 1
+status: coming-soon
+title:
+  en: "Opening a presentation"
+  fa: "شروع ارائه"
+  de: "Eine Präsentation beginnen"
+purpose:
+  en: "Name your topic and say which parts your presentation has."
+  fa: "موضوعتان را بگویید و بگویید ارائهٔ شما چه بخش‌هایی دارد."
+  de: "Das Thema nennen und sagen, welche Teile die Präsentation hat."
+examTasks: [exam-sprechen-2]
