@@ -23,5 +23,5 @@ if not exist "%PS%" (
 )
 "%PS%" -NoProfile -ExecutionPolicy Bypass -File "%~dp0server\serve.ps1" -Root "%~dp0app"
 echo.
-echo The app has stopped. Press any key to close this window.
+echo Press any key to close this window.
 pause >nul

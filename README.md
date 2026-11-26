@@ -546,8 +546,8 @@ control because it holds the packs):
 | `app/` | The built site, with the packs in `app/private/`. A pack copied there by hand is found at the next start. |
 
 The decision for a local server, and the trial of the candidate servers, are on issue #4. Both
-servers use only what the system ships with, call it by its full path, take the first free port
-from 8000 to 8009 and listen on every network interface. When they start they rewrite
+servers use only what the system ships with, call it by its full path, use port 8000 and no other,
+and listen on every network interface. When they start they rewrite
 `app/private/packs.json` and `app/private/address.json` (see [docs/private-packs.md](docs/private-packs.md),
 "Finding packs in the app"), print the address for this computer and for a phone, and open the
 browser. They answer GET and HEAD with single byte ranges, and nothing outside `app/`. Both
@@ -557,8 +557,14 @@ PowerShell 7 when `pwsh` is installed, as on GitHub's runners, and is skipped ot
 Things to know:
 
 - Progress is kept by the browser for each address. `localhost:8000`, the phone's
-  `192.168.x.x:8000` and the public site each have their own; the backup page moves it. If port
-  8000 is taken, the app runs on 8001 and starts with no progress there.
+  `192.168.x.x:8000` and the public site each have their own; the backup page moves it. So the
+  servers never move to another port, where the progress would seem gone. When 8000 is taken they
+  ask it for `private/address.json`: if it answers, deutsch-tree is already running, and the server
+  says so, opens the browser there and stops; otherwise it says that another program has the port
+  and stops. The tests give the servers a free port of their own.
+- Anyone on the same network can open the app and the packs while it runs. The instructions tell
+  the learner to start it on the home Wi-Fi only. Whether it should listen only on this computer by
+  default is the learner's decision (#4); until then it listens on every interface.
 - A start file that arrives by download or AirDrop is blocked once by macOS ("Open Anyway" in
   Privacy & Security) or by Windows SmartScreen ("More info", "Run anyway"). A Mac keeps the
   start file executable only when the folder travels as a zip.

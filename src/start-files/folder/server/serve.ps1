@@ -2,10 +2,17 @@
 # with Windows 10 and 11. ASCII only: Windows PowerShell reads a file without a byte
 # order mark in the old Windows code page.
 #
-#   powershell -NoProfile -ExecutionPolicy Bypass -File serve.ps1 -Root <app folder> [-Port <first port>]
+#   powershell -NoProfile -ExecutionPolicy Bypass -File serve.ps1 -Root <app folder> [-Port <port>]
+#
+# It always uses the same port, 8000 unless one is given: the browser keeps the
+# learner's progress per address, so on another port the progress would seem
+# gone. When the port is taken it says by whom and stops: by deutsch-tree
+# itself (started twice), or by another program.
 #
 # When it starts, it rewrites private\packs.json from the subfolders that hold a
-# pack.json (the rules of src/pack-builder/pack-list.ts). Then it serves the app folder
+# pack.json (the rules of src/pack-builder/pack-list.ts) and writes the address a
+# phone opens into private\address.json. Then it opens the browser (unless NO_OPEN
+# is set) and serves the app folder
 # to this computer and to every device on the home network, on a plain TCP socket,
 # which needs no administrator. GET and HEAD, single byte ranges (iPhones need them to
 # play and seek recordings).
@@ -45,6 +52,26 @@ function Get-PackIds([string]$Dir) {
   }
   $ids.Sort([System.StringComparer]::Ordinal)
   return , $ids.ToArray()
+}
+
+# Whether the program on this port is a start file's server: only these answer
+# private/address.json.
+function Test-DeutschTree([int]$OnPort) {
+  try {
+    $client = New-Object System.Net.Sockets.TcpClient
+    $client.ReceiveTimeout = 3000
+    $client.SendTimeout = 3000
+    $client.Connect('127.0.0.1', $OnPort)
+    $stream = $client.GetStream()
+    $request = [System.Text.Encoding]::ASCII.GetBytes("GET /private/address.json HTTP/1.0`r`nHost: localhost`r`n`r`n")
+    $stream.Write($request, 0, $request.Length)
+    $reader = New-Object System.IO.StreamReader($stream, [System.Text.Encoding]::ASCII)
+    $answer = $reader.ReadToEnd()
+    $client.Close()
+    return ($answer -match '^HTTP/1\.[01] 200' -and $answer -match '"format":1')
+  } catch {
+    return $false
+  }
 }
 
 # The address other devices on the home network use for this computer, or $null.
@@ -195,15 +222,36 @@ try {
   Write-TextFile ([System.IO.Path]::Combine($private, 'packs.json')) ('{"format":1,"packs":[' + ($quoted -join ',') + "]}`n")
 
   $listener = $null
-  for ($p = $Port; $p -lt ($Port + 10); $p++) {
-    try {
-      $candidate = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::Any, $p)
-      $candidate.Start(64)
-      $listener = $candidate; $Port = $p
-      break
-    } catch { }
+  try {
+    $candidate = New-Object System.Net.Sockets.TcpListener([System.Net.IPAddress]::Any, $Port)
+    $candidate.Start(64)
+    $listener = $candidate
+  } catch { }
+  if (-not $listener) {
+    Write-Host ''
+    Write-Host ('=' * 66)
+    if (Test-DeutschTree $Port) {
+      Write-Host ' deutsch-tree is already running, in another window:'
+      Write-Host ''
+      Write-Host " On this computer:  http://localhost:$Port/"
+      Write-Host ''
+      Write-Host ' This window is not needed. You can close it.'
+      Write-Host ('=' * 66)
+      Write-Host ''
+      if (-not $env:NO_OPEN) {
+        try { Start-Process "http://localhost:$Port/" } catch { }
+      }
+      exit 0
+    }
+    Write-Host " Port $Port is used by another program, so deutsch-tree cannot start."
+    Write-Host ''
+    Write-Host ' deutsch-tree always uses this port: your browser keeps your progress'
+    Write-Host ' by address, and on another port your progress would seem to be gone.'
+    Write-Host ' Close the other program, or restart the computer, then start again.'
+    Write-Host ('=' * 66)
+    Write-Host ''
+    exit 1
   }
-  if (-not $listener) { throw "No free port between $Port and $($Port + 9). Is the app already running in another window?" }
   $lan = Get-LanAddress
   $phone = $null
   if ($lan) { $phone = "http://${lan}:$Port/" }

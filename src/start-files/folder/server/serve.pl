@@ -1,7 +1,12 @@
 #!/usr/bin/perl
 # The Mac start file's web server. Uses only Perl and modules that ship with macOS.
 #
-#   perl serve.pl <app folder> [<first port>]
+#   perl serve.pl <app folder> [<port>]
+#
+# It always uses the same port, 8000 unless one is given: the browser keeps the
+# learner's progress per address, so on another port the progress would seem
+# gone. When the port is taken it says by whom and stops: by deutsch-tree
+# itself (started twice), or by another program.
 #
 # When it starts, it rewrites private/packs.json from the subfolders that hold
 # a pack.json (the rules of src/pack-builder/pack-list.ts) and writes the
@@ -14,9 +19,9 @@ use warnings;
 use IO::Socket::INET;
 use POSIX ();
 
-my ($root, $first_port) = @ARGV;
-die "usage: serve.pl <app folder> [<first port>]\n" unless defined $root;
-$first_port = 8000 unless defined $first_port;
+my ($root, $port) = @ARGV;
+die "usage: serve.pl <app folder> [<port>]\n" unless defined $root;
+$port = 8000 unless defined $port;
 $root =~ s{/+$}{};
 die "There is no index.html in $root.\n" unless -f "$root/index.html";
 
@@ -36,13 +41,25 @@ mkdir $private unless -d $private;
 my @packs = list_packs($private);
 write_file("$private/packs.json", '{"format":1,"packs":[' . join(',', map { "\"$_\"" } @packs) . "]}\n");
 
-my ($server, $port);
-for my $p ($first_port .. $first_port + 9) {
-  $server = IO::Socket::INET->new(LocalAddr => '0.0.0.0', LocalPort => $p, Proto => 'tcp', Listen => 64, ReuseAddr => 1);
-  if ($server) { $port = $p; last; }
+my $server = IO::Socket::INET->new(LocalAddr => '0.0.0.0', LocalPort => $port, Proto => 'tcp', Listen => 64, ReuseAddr => 1);
+unless ($server) {
+  $| = 1;
+  print "\n", '=' x 66, "\n";
+  if (runs_deutsch_tree($port)) {
+    print " deutsch-tree is already running, in another window:\n\n";
+    print " On this computer:  http://localhost:$port/\n\n";
+    print " This window is not needed. You can close it.\n";
+    print '=' x 66, "\n\n";
+    system('/usr/bin/open', "http://localhost:$port/") if $^O eq 'darwin' && !$ENV{NO_OPEN};
+    exit 0;
+  }
+  print " Port $port is used by another program, so deutsch-tree cannot start.\n\n";
+  print " deutsch-tree always uses this port: your browser keeps your progress\n";
+  print " by address, and on another port your progress would seem to be gone.\n";
+  print " Close the other program, or restart the computer, then start again.\n";
+  print '=' x 66, "\n\n";
+  exit 1;
 }
-die "No free port between $first_port and " . ($first_port + 9) . ". Is the app already running in another window?\n"
-  unless $server;
 
 my $lan_ip = lan_ip();
 my $phone = defined $lan_ip ? "http://$lan_ip:$port/" : undef;
@@ -82,6 +99,18 @@ sub lan_ip {
   close $udp;
   return undef if !defined $ip || $ip eq '0.0.0.0' || $ip =~ /^127\./ || $ip =~ /^169\.254\./;
   return $ip;
+}
+
+# Whether the program on this port is a start file's server: only these answer
+# private/address.json.
+sub runs_deutsch_tree {
+  my ($p) = @_;
+  my $s = IO::Socket::INET->new(PeerAddr => '127.0.0.1', PeerPort => $p, Proto => 'tcp', Timeout => 3) or return 0;
+  print $s "GET /private/address.json HTTP/1.0\r\nHost: localhost\r\n\r\n";
+  local $/;
+  my $answer = eval { local $SIG{ALRM} = sub { die "timeout\n" }; alarm 3; my $a = <$s>; alarm 0; $a } // '';
+  close $s;
+  return $answer =~ m{^HTTP/1\.[01] 200} && $answer =~ /"format":1/ ? 1 : 0;
 }
 
 # The packs in a folder: every subfolder with a pack id for a name and a pack.json in it, in name order.
