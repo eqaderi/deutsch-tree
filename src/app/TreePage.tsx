@@ -140,8 +140,11 @@ export function TreePage() {
                 next={next}
               />
             ))}
-            {/* The checkpoint is the level's, whatever kind the tree is filtered to. */}
-            <CheckpointStop level={level} ready={inLevel(nodes, level).some((node) => node.status === 'published')} />
+            {/*
+              The checkpoint is the level's, whatever kind the tree is filtered to. It needs a
+              published topic with a pool: a writing or speaking topic gives it no questions.
+            */}
+            <CheckpointStop level={level} ready={inLevel(nodes, level).some((node) => node.hasTest)} />
             {/* The last level ends with the exam and the readiness rule. */}
             {level === levels.at(-1) && <ExamStop />}
           </div>

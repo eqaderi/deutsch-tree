@@ -311,7 +311,55 @@ attemptSize: 12          # optional; 10 to 15, default 10
 The pass mark follows from it: 90%, rounded up to a whole question (9 of 10,
 11 of 12, 14 of 15).
 
+## A published writing or speaking node
+
+A Schreiben or Sprechen exam-part node has no questions. The learner does one
+task, an AI assistant grades it with a prompt that the app builds, and the
+learner types the score in. The node file holds only the task:
+
+```yaml
+id: exam-schreiben-1
+kind: exam-part
+module: schreiben
+part: 1
+status: published
+
+task:                    # all of it is German
+  situation: >           # who writes to whom, and why
+    Sie sind letzte Woche in eine neue Wohnung gezogen. …
+  points:                # exactly three content points
+    - "Beschreiben Sie: Wie ist die neue Wohnung?"
+    - "Begründen Sie: Warum sind Sie umgezogen?"
+    - Machen Sie einen Vorschlag für einen Besuch.
+```
+
+What a task holds depends on its part:
+
+| Part | Fields of `task` |
+|---|---|
+| Schreiben Aufgabe 1 (informal e-mail, about 80 words) | `situation`, `points` (exactly 3) |
+| Schreiben Aufgabe 2 (opinion post, about 80 words) | `situation`, `opinion: { author, text }` (the one opinion the learner replies to) |
+| Schreiben Aufgabe 3 (short semi-formal e-mail, about 40 words) | `situation` |
+| Sprechen Teil 1 (planning together) | `situation`, `points` (exactly 4) |
+| Sprechen Teil 2 (presentation) | `topic` |
+| Sprechen Teil 3 (talking about a presentation) | `topic` |
+
+Write only what is special to this task. The fixed wording of the part (how
+many words, the five slides of a presentation, what to mind) is added by the
+app, and so are the official marking criteria and the prompt. Never write
+criteria, points or a prompt into a node file.
+
+Every task is original. Follow the format of the exam, and never copy or
+rework the text of an official task or of a task from a book.
+
+Such a node has no `questions` and no `review:` record, and the checks refuse
+both: there is no answer key that a reviewer could answer blind. Have the
+German of the task read by someone who knows German before you publish it.
+
 ## Review before publishing
+
+This is for nodes with a question pool. A writing or speaking node has none;
+see the section above.
 
 A published node needs a `review:` record. `pnpm content:check` fails without
 one, and again when a question or its answer changes later (explanations may
@@ -329,8 +377,8 @@ change freely). A command writes the record, never a hand:
    step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
    in step 1, then add that second file with another `--answers`.
 
-Only grammar nodes can be published so far. Other node kinds are added to the
-schema as they are built.
+Only grammar nodes and the writing and speaking exam-part nodes can be
+published so far. Other node kinds are added to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 
@@ -354,11 +402,15 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   `exam-<module>-<part>`. A `purpose`, `examTasks`, `module` or `part` in a
   node of another kind.
 - A published node with fewer than 15 questions. A `coming-soon` draft may
-  have fewer.
+  have fewer. A writing or speaking node is exempt: it has no pool.
+- A writing or speaking node with `questions` or with a `review:` record, a
+  published one without a `task`, and a task that lacks a field of its part,
+  holds a field of another part, or lists the wrong number of points.
 - Two node files with the same id, and two questions with the same id inside
   one node.
 - A published node with no review record, or whose questions or answers
-  changed after its review. A `coming-soon` node needs none.
+  changed after its review. A `coming-soon` node needs none, and neither
+  does a writing or speaking node.
 - A list of official mock exams that is missing, has a link that is not a
   full `https://` address, has an exam without a link, has two exams with one
   id, or has fewer than two exams that count toward readiness.

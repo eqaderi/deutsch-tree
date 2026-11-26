@@ -5,6 +5,7 @@
 - The node file format is in `content/README.md`; its schema is `src/content-model/index.ts`.
 - A new rule for content is one file in `src/content-pipeline/checks/`, one line in its `index.ts`, and one test file on fixture content. Steps: `content/README.md`, "Adding a check".
 - A published node needs a blind review of its questions, and a new one whenever they change. The four steps are in `content/README.md` under "Review before publishing".
+- Writing and speaking nodes have a task and no questions, so no pool and no review: `content/README.md`, "A published writing or speaking node". The official marking criteria live in `src/assistant-grading/criteria.ts` and stay word for word as printed; the prompt and the score rule are in the same folder.
 - Every screen follows `docs/design-direction.md`. Colours and sizes come from the tokens in `src/app/styles.css`; every interface word comes from `src/language/strings.ts`.
 - A new interface string goes into `src/language/strings.ts`, `strings.fa.ts` and `strings.de.ts`; `pnpm check` fails until all three have it. Never write wording, or a bare number, in a component. See `README.md`, "Languages".
 - A new kind of node, or a new section of a node, that learners should find by search adds its passages in `src/content-pipeline/search-data.ts`. Text that only one page needs never goes into `content/index.json`. See `README.md`, "Search and the overview page".

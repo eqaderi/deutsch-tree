@@ -27,7 +27,9 @@
  * It is then saved, loaded, exported and imported with no further code.
  *
  * A new field inside a node (beside `done` and `attempts`) is the same, with
- * its line in `readNodes` in place of step 2.
+ * its line in `readNodes` in place of step 2. One that may be absent, and
+ * whose absence means "nothing yet", needs no new version: `scores` (the
+ * scores a learner typed in for a writing or speaking node) was added so.
  *
  * To change the shape of something already saved (rename, move, convert):
  * do the steps above, and add a step to `UPGRADES` that turns the old saved
@@ -111,7 +113,12 @@ function readNodes(saved: unknown): Record<string, NodeProgress> {
   // change, and what a learner has done is never thrown away.
   for (const [id, node] of Object.entries(saved)) {
     if (!isRecord(node)) continue
-    nodes[id] = { done: node.done === true, attempts: wholeNumber(node.attempts) }
+    nodes[id] = {
+      done: node.done === true,
+      attempts: wholeNumber(node.attempts),
+      // Absent stays absent: a node without entered scores is saved as it always was.
+      ...(Array.isArray(node.scores) ? { scores: node.scores.filter(isScore) } : {}),
+    }
   }
   return nodes
 }

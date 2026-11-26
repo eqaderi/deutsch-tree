@@ -1,0 +1,23 @@
+# Fixture node for tests: a speaking part. Invented and stable: tests assert on these words.
+id: exam-sprechen-1
+kind: exam-part
+level: B1
+chapter: fixture-sprechen
+order: 1
+status: published
+module: sprechen
+part: 1
+title:
+  en: "Fixture speaking: planning together"
+  fa: "صحبت کردن آزمایشی: برنامه‌ریزی با هم"
+  de: "Test-Sprechen: gemeinsam etwas planen"
+
+task:
+  situation: >
+    Ihr Kurs macht am Ende ein Fixture-Fest. Sie organisieren das Fest zu
+    zweit.
+  points:
+    - Wann und wo feiern?
+    - Was essen und trinken?
+    - Wer bringt was mit?
+    - Welches Programm?

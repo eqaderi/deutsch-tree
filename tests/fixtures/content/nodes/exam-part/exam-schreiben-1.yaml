@@ -1,0 +1,22 @@
+# Fixture node for tests: a writing task. Invented and stable: tests assert on these words.
+id: exam-schreiben-1
+kind: exam-part
+level: B1
+chapter: fixture-schreiben
+order: 1
+status: published
+module: schreiben
+part: 1
+title:
+  en: "Fixture writing: an e-mail to a friend"
+  fa: "نوشتن آزمایشی: ایمیل به یک دوست"
+  de: "Test-Schreiben: eine E-Mail an eine Freundin"
+
+task:
+  situation: >
+    Sie waren am Samstag auf dem Fixture-Fest in Ihrer Straße. Ihre Freundin
+    Mira konnte nicht kommen.
+  points:
+    - "Beschreiben Sie: Wie war das Fest?"
+    - "Begründen Sie: Was hat Ihnen besonders gut gefallen und warum?"
+    - Schlagen Sie ein Treffen vor.

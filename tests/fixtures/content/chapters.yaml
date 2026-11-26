@@ -32,3 +32,20 @@
     en: Fixture level not written yet
     fa: سطح آزمایشی نانوشته
     de: Test-Niveau, noch nicht geschrieben
+
+# Exam parts that an AI assistant grades: they have a task and no question pool.
+- id: fixture-schreiben
+  level: B1
+  kind: exam-part
+  title:
+    en: "Fixture exam: writing"
+    fa: "امتحان آزمایشی: نوشتن"
+    de: "Test-Prüfung: Schreiben"
+
+- id: fixture-sprechen
+  level: B1
+  kind: exam-part
+  title:
+    en: "Fixture exam: speaking"
+    fa: "امتحان آزمایشی: صحبت کردن"
+    de: "Test-Prüfung: Sprechen"

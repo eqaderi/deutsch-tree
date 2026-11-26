@@ -5,7 +5,9 @@
 import { expect, test } from 'vitest'
 import {
   applyAttempt,
+  applyEnteredScore,
   emptyProgress,
+  enteredScores,
   isDone,
   officialExamScores,
   type Progress,
@@ -39,6 +41,23 @@ test('an exported file comes back as the same progress', () => {
   const file = exportProgress(progress, morning)
 
   expect(imported(file.text).progress).toEqual(progress)
+})
+
+test('the scores a learner typed in for writing and speaking go into the file and come back from it', () => {
+  let progress = someProgress()
+  progress = applyEnteredScore(progress, 'exam-schreiben-1', 72)
+  progress = applyEnteredScore(progress, 'exam-schreiben-1', 93)
+  progress = applyEnteredScore(progress, 'exam-sprechen-1', 85)
+
+  const file = exportProgress(progress, morning)
+
+  expect(file.text).toContain('    "exam-schreiben-1": { "done": true, "attempts": 2, "scores": [72, 93] },\n')
+  const back = imported(file.text).progress
+  expect(enteredScores(back, 'exam-schreiben-1')).toEqual([72, 93])
+  expect(enteredScores(back, 'exam-sprechen-1')).toEqual([85])
+  expect(isDone(back, 'exam-schreiben-1')).toBe(true)
+  expect(isDone(back, 'exam-sprechen-1')).toBe(false)
+  expect(back).toEqual(progress)
 })
 
 test('the file says in its name and in its first lines what it is, and when it was made', () => {
