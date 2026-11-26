@@ -95,3 +95,17 @@ test('a site build fails when a step of the build would write into a private fol
 
   await expect(buildSite(root, { plugins: [keepPacksOutOfTheSite(), writesPack] })).rejects.toThrow(NEVER_PUBLISHED)
 })
+
+test('a site build fails when a step of the build would write a private folder deeper in the site', async () => {
+  const root = await siteWithPack('document.title = "site"')
+  const writesNestedPack: Plugin = {
+    name: 'writes-a-nested-pack',
+    generateBundle() {
+      this.emitFile({ type: 'asset', fileName: 'content/private/some-pack/pack.json', source: SECRET })
+    },
+  }
+
+  await expect(buildSite(root, { plugins: [keepPacksOutOfTheSite(), writesNestedPack] })).rejects.toThrow(
+    NEVER_PUBLISHED,
+  )
+})
