@@ -45,3 +45,16 @@ export function changeNode(change: (node: LooseNode) => void): (text: string) =>
     return stringify(node)
   }
 }
+
+/** The text of a new, valid "coming soon" grammar node, for a test that needs more nodes than the fixture has. */
+export function comingSoonNode(id: string, fields: Record<string, unknown> = {}): string {
+  return stringify({
+    id,
+    kind: 'grammar',
+    level: 'A1',
+    order: Number(id.replace(/\D/g, '')),
+    status: 'coming-soon',
+    title: { en: `Extra topic ${id}`, fa: `موضوع اضافه ${id}`, de: `Zusatzthema ${id}` },
+    ...fields,
+  })
+}

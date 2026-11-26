@@ -19,19 +19,9 @@ import {
   nodeFileSchema,
   type RichText,
 } from '../content-model/index.ts'
+import { CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
 
-/** One thing a maintainer has to fix. */
-export interface ContentProblem {
-  /** Path of the file, relative to the content folder. */
-  file: string
-  /** Id of the node. Absent only when the problem is not about one node. */
-  node?: string
-  /** Id of the question, when the problem is inside one. */
-  question?: string
-  /** Where in the file, such as `questions[1].answer`. Absent for whole-file problems. */
-  where?: string
-  message: string
-}
+export type { ContentProblem }
 
 export interface PipelineReport {
   ok: boolean
@@ -48,7 +38,8 @@ export interface PipelineResult {
 
 export async function compileContent(contentDir: string): Promise<PipelineResult> {
   const errors: ContentProblem[] = []
-  const nodes: CompiledNode[] = []
+  const checked: CheckedNode[] = []
+  const ids = new Set<string>()
 
   const files = await findNodeFiles(contentDir)
   if (files.length === 0) {
@@ -63,8 +54,10 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
       raw = parseYaml(source)
     } catch (error) {
       errors.push({ file, node: nodeOf(file), message: `is not valid YAML: ${(error as Error).message}` })
+      ids.add(nodeOf(file))
       continue
     }
+    ids.add(nodeOf(file, raw))
 
     const parsed = nodeFileSchema.safeParse(raw)
     if (!parsed.success) {
@@ -86,9 +79,14 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
       continue
     }
 
-    nodes.push(compileNode(parsed.data))
+    checked.push({ file, node: parsed.data })
   }
 
+  for (const check of CHECKS) {
+    errors.push(...(await check({ contentDir, nodes: checked, ids })))
+  }
+
+  const nodes = checked.map(({ node }) => compileNode(node))
   nodes.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id))
 
   const published = nodes.filter((node) => node.status === 'published').length
