@@ -11,6 +11,7 @@ import { practiceTaskFitsItsPart } from './practice-task-fits-its-part.ts'
 import { prerequisitesExist } from './prerequisites-exist.ts'
 import { prerequisitesHaveNoCycle } from './prerequisites-have-no-cycle.ts'
 import { publishedNodeIsReviewed } from './published-node-is-reviewed.ts'
+import { recogniseOnlyAsksForUnderstanding } from './recognise-only-asks-for-understanding.ts'
 import { vocabularyAgreesWithTheScopeList } from './vocabulary-agrees-with-the-scope-list.ts'
 import { vocabularyCoversTheScopeList } from './vocabulary-covers-the-scope-list.ts'
 import { vocabularyMeaningsDiffer } from './vocabulary-meanings-differ.ts'
@@ -31,6 +32,7 @@ export const CHECKS: ContentCheck[] = [
   phrasesServeTheirNodesExamTasks,
   poolIsLargeEnough,
   vocabularyMeaningsDiffer,
+  recogniseOnlyAsksForUnderstanding,
   phrasesTestNeedsATypedAnswer,
   practiceTaskFitsItsPart,
   publishedNodeIsReviewed,

@@ -9,6 +9,7 @@
  *      (*ich wohne*), so the app can render it left to right as German.
  */
 import { z } from 'zod'
+import { type DiagramPart, readDrawing } from './diagram.ts'
 import { WORD_CLASSES, type WordClass } from './scope-list.ts'
 import { type AssistantGradedModule, isAssistantGraded } from './scoring.ts'
 
@@ -126,6 +127,42 @@ const table = z
         })
       }
     })
+  })
+
+/** The name of a label in a drawing: {{box}}. */
+const labelName = z.string().regex(/^[a-z][a-z0-9-]*$/, 'must be lower-case letters, digits and hyphens, like "box"')
+
+/**
+ * A diagram: a drawing written as SVG, the words of the learner's language
+ * it shows (its labels), and a caption that says what it shows. German is
+ * written in the drawing itself. The format: content/README.md, "Diagrams".
+ */
+const diagram = z
+  .strictObject({
+    /** One or two sentences saying what the drawing shows. Also what a screen reader reads for it. */
+    caption: localised,
+    /** Words of the learner's language, by name; the drawing shows one as {{name}}. */
+    labels: z.record(labelName, localised).default({}),
+    /** The drawing. */
+    svg: text,
+  })
+  .superRefine((value, ctx) => {
+    const names = Object.keys(value.labels)
+    const { problems, used } = readDrawing(value.svg, names)
+    for (const message of problems) ctx.addIssue({ code: 'custom', path: ['svg'], message })
+    for (const name of names) {
+      if (used && !used.includes(name)) {
+        ctx.addIssue({ code: 'custom', path: ['labels', name], message: 'is not used in the drawing' })
+      }
+      const german = /\p{Script=Latin}+/u.exec(value.labels[name]?.fa ?? '')?.[0]
+      if (german) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['labels', name, 'fa'],
+          message: `a label holds no German ("${german}"); write the German as its own text in the drawing`,
+        })
+      }
+    }
   })
 
 const example = z.strictObject({ de: text, en: textIn('en'), fa: textIn('fa') })
@@ -618,7 +655,8 @@ const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${
  * kind. A writing or speaking node has a task instead (see `isAssistantGraded`).
  */
 const SECTIONS_OF_A_PUBLISHED = {
-  grammar: ['explanations', 'table', 'examples', 'mistakes', 'questions'],
+  // A grammar node needs a table, a diagram or both; that is checked below.
+  grammar: ['explanations', 'examples', 'mistakes', 'questions'],
   phrases: ['phrases', 'questions'],
 } as const satisfies Partial<Record<NodeKind, readonly string[]>>
 
@@ -691,6 +729,8 @@ export const nodeFileSchema = z
       .strictObject({ en: explanationIn('en'), fa: explanationIn('fa'), de: explanationIn('de') })
       .optional(),
     table: table.optional(),
+    /** Drawings, shown after the rule and before the table. A published node needs a table, a diagram or both. */
+    diagrams: z.array(diagram).min(1).optional(),
     examples: z.array(example).min(1).optional(),
     mistakes: z.array(mistake).min(1).optional(),
     /** Phrases nodes only: the set phrases, in the order the page shows them. */
@@ -879,6 +919,13 @@ export const nodeFileSchema = z
           ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
         }
       }
+      if (value.kind === 'grammar' && value.table === undefined && value.diagrams === undefined) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['table'],
+          message: 'is required for a published node, unless it has a diagram',
+        })
+      }
       return
     }
     if (value.kind !== 'exam-part') {
@@ -945,6 +992,17 @@ function taskFitsItsPart(
 }
 
 export type NodeFile = z.infer<typeof nodeFileSchema>
+
+/**
+ * The question types in which the learner produces the form: types it, or
+ * builds the sentence from its pieces. A recognise-only node must not use
+ * them. Every other type offers the forms, or a sentence to judge, and asks
+ * the learner to recognise and understand: those are the understanding
+ * questions a recognise-only pool is made of.
+ */
+export const PRODUCING_QUESTION_TYPES = ['typed-answer', 'typed-gap-fill', 'word-order'] as const satisfies Array<
+  NonNullable<NodeFile['questions']>[number]['type']
+>
 
 // ---------------------------------------------------------------------------
 // Chapter list schema (source): chapters.yaml
@@ -1100,6 +1158,21 @@ export interface GrammarTable {
   columns: Localised[]
   rows: string[][]
 }
+
+/**
+ * A diagram as the app draws it. The drawing is read into shapes; a label
+ * stands in it by name, and the app writes it in the learner's language.
+ */
+export interface Diagram {
+  /** The width and height of the drawing. The app scales it to the page. */
+  width: number
+  height: number
+  drawing: DiagramPart[]
+  labels: Record<string, Localised>
+  caption: Localised<RichText>
+}
+
+export type { DiagramPart, DiagramShape, DiagramTag } from './diagram.ts'
 
 export interface Example {
   de: string
@@ -1330,7 +1403,10 @@ export interface PracticeContent {
 
 export interface GrammarContent {
   explanations: Localised<{ rule: RichText }>
-  table: GrammarTable
+  /** A node explained by a diagram alone has no table. */
+  table?: GrammarTable
+  /** Drawings, shown after the rule and before the table. */
+  diagrams?: Diagram[]
   examples: Example[]
   mistakes: Mistake[]
   /** The pool. */

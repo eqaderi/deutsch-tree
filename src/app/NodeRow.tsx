@@ -5,6 +5,7 @@ import { useLanguage } from '../language/index.tsx'
 import { type NodeState, nodeState } from '../learning-engine/index.ts'
 import { RichText } from './German.tsx'
 import { useProgress } from './progress.ts'
+import { RecogniseOnlyLabel } from './RecogniseOnly.tsx'
 
 /** The circle that supports a state word: empty ring, half-filled ring, or a dark circle with a tick. */
 export function StateMark({ state }: { state: NodeState | 'coming-soon' }) {
@@ -35,7 +36,10 @@ export function NodeRow({ node, isNext = false }: { node: NodeSummary; isNext?: 
         <StateMark state="coming-soon" />
         <span className="row-text">
           {title}
-          <span className="row-state">{strings.comingSoon}</span>
+          <span className="row-meta">
+            <span className="row-state">{strings.comingSoon}</span>
+            {node.recogniseOnly && <RecogniseOnlyLabel />}
+          </span>
         </span>
       </div>
     )
@@ -55,6 +59,7 @@ export function NodeRow({ node, isNext = false }: { node: NodeSummary; isNext?: 
               </span>
             )}
             {isNext && <span className="row-next-word">{strings.yourNextTopic}</span>}
+            {node.recogniseOnly && <RecogniseOnlyLabel />}
           </span>
         </span>
       </Link>

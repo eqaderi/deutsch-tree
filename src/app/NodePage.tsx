@@ -5,6 +5,7 @@ import { hasPool, hasPractice, isVocabulary } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import { examModuleOf, isDone, unmarkDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
+import { DiagramView } from './DiagramView.tsx'
 import { ExamPartSections } from './ExamPartSections.tsx'
 import { ExamTaskSections } from './ExamTaskPage.tsx'
 import { German, plainText, RichText } from './German.tsx'
@@ -14,6 +15,7 @@ import { BackToTree, NotFound } from './NotFound.tsx'
 import { Panel } from './Panel.tsx'
 import { PhraseSections } from './PhraseSections.tsx'
 import { updateProgress, useProgress } from './progress.ts'
+import { RecogniseOnlyLabel, RecogniseOnlyNote } from './RecogniseOnly.tsx'
 import { VocabularySections } from './VocabularySections.tsx'
 
 /**
@@ -108,8 +110,10 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
           {node.module !== undefined && <span className="tag">{strings.examModules[examModuleOf(node.module)]}</span>}
           {node.part !== undefined && <span className="tag">{strings.examPartNumber(node.part)}</span>}
           {node.status === 'coming-soon' && <span className="tag">{strings.comingSoon}</span>}
+          {node.recogniseOnly && <RecogniseOnlyLabel />}
           {done && <span className="tag tag-done">{strings.done}</span>}
         </div>
+        {node.recogniseOnly && <RecogniseOnlyNote on="page" />}
         <Unmark key={node.id} nodeId={node.id} />
         <BuildsOn node={node} />
       </header>
@@ -203,9 +207,19 @@ function GrammarSections({ content }: { content: GrammarContent }) {
         </p>
       </Panel>
 
-      <Panel id="section-table" heading={strings.table}>
-        <GrammarTableView table={content.table} />
-      </Panel>
+      {content.diagrams && (
+        <Panel id="section-diagram" heading={strings.diagram}>
+          {content.diagrams.map((diagram, index) => (
+            <DiagramView key={index} diagram={diagram} />
+          ))}
+        </Panel>
+      )}
+
+      {content.table && (
+        <Panel id="section-table" heading={strings.table}>
+          <GrammarTableView table={content.table} />
+        </Panel>
+      )}
 
       <Panel id="section-examples" heading={strings.examples}>
         <ul className="examples">

@@ -5,7 +5,7 @@ level: A2
 chapter: fixture-nouns
 order: 2
 status: published
-recogniseOnly: false
+recogniseOnly: true # the fixture's published recognise-only topic: its pool asks only for understanding
 prerequisites: []
 title:
   en: Fixture plurals
