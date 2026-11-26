@@ -1038,10 +1038,13 @@ main.wrap {
   fill: var(--text);
 }
 
-.diagram .surface {
+/* Edges are drawn in the secondary text colour: a hairline would be too faint to see a shape by. */
+.diagram .surface,
+.diagram .shade {
   fill: var(--panel);
-  stroke: var(--ring);
+  stroke: var(--text-secondary);
   stroke-width: 1.5;
+  stroke-linejoin: round;
 }
 
 .diagram .shade {
@@ -1058,9 +1061,9 @@ main.wrap {
 
 .diagram .guide {
   fill: none;
-  stroke: var(--ring);
+  stroke: var(--text-secondary);
   stroke-width: 1.5;
-  stroke-dasharray: 4 4;
+  stroke-dasharray: 4 3;
 }
 
 .diagram text {

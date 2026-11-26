@@ -1,13 +1,366 @@
-# Grammar list row 128.
+# Grammar list row 128. The grammar sample node: it shows every section a
+# grammar node can have, a diagram among them. The format is in content/README.md.
 id: grammar-128
 kind: grammar
 level: A1
 chapter: a1-prepositions
 order: 10
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-121]
 title:
   en: "Two-way prepositions, *Wo?* + *Dativ*"
   fa: "حرف‌های اضافهٔ دوحالته، *Wo?* + *Dativ*"
   de: "Wechselpräpositionen, *Wo?* + Dativ"
+
+explanations:
+  en:
+    rule: >
+      The prepositions *an*, *auf*, *hinter*, *in*, *neben*, *über*, *unter*,
+      *vor* and *zwischen* take the *Dativ* when they say where something is,
+      in answer to *Wo?* (where?). In the *Dativ*, *der* and *das* become
+      *dem*, *die* becomes *der*, and plural *die* becomes *den*, with *-n* on
+      the noun. *In dem* and *an dem* are almost always shortened to *im* and
+      *am*.
+  fa:
+    rule: >
+      حرف‌های اضافهٔ *an*، *auf*، *hinter*، *in*، *neben*، *über*، *unter*،
+      *vor* و *zwischen* وقتی می‌گویند چیزی کجاست، یعنی در پاسخ به *Wo?*
+      (کجا؟)، با *Dativ* می‌آیند. در *Dativ*، *der* و *das* می‌شوند *dem*،
+      *die* می‌شود *der*، و *die* جمع می‌شود *den* و خود اسم هم *-n* می‌گیرد.
+      *in dem* و *an dem* تقریباً همیشه کوتاه می‌شوند: *im* و *am*.
+  de:
+    rule: >
+      Die Präpositionen *an*, *auf*, *hinter*, *in*, *neben*, *über*, *unter*,
+      *vor* und *zwischen* sagen, wo etwas ist. Auf die Frage *Wo?* steht
+      danach der Dativ: *der* und *das* werden zu *dem*, *die* wird zu *der*,
+      und im Plural steht *den*, das Nomen bekommt *-n*. *In dem* und *an dem*
+      sagt man fast immer kurz: *im* und *am*.
+
+# One picture per preposition. The drawing is German only: the picture itself
+# says what each word means, so it needs no labels in the learner's language.
+diagrams:
+  - caption:
+      en: >
+        *Wo ist der Ball?* One picture for each preposition. With *auf* and
+        *an* the ball touches the box; with *über* and *neben* it does not. A
+        dashed line shows what you cannot see.
+      fa: >
+        *Wo ist der Ball?* برای هر حرف اضافه یک تصویر. با *auf* و *an* توپ به
+        جعبه چسبیده است؛ با *über* و *neben* نه. خط‌چین چیزی را نشان می‌دهد که
+        دیده نمی‌شود.
+      de: >
+        *Wo ist der Ball?* Ein Bild für jede Präposition. Bei *auf* und *an*
+        berührt der Ball die Kiste, bei *über* und *neben* nicht. Was man nicht
+        sehen kann, ist mit Strichen gezeichnet.
+    svg: |
+      <svg viewBox="0 0 320 384">
+        <!-- über -->
+        <rect class="surface" x="26" y="40" width="44" height="36"/>
+        <polygon class="surface" points="26,40 38,31 82,31 70,40"/>
+        <polygon class="shade" points="70,40 82,31 82,67 70,76"/>
+        <circle class="object" cx="54" cy="10" r="9"/>
+        <text class="label" x="50" y="116" text-anchor="middle">über</text>
+        <!-- auf -->
+        <rect class="surface" x="136" y="40" width="44" height="36"/>
+        <polygon class="surface" points="136,40 148,31 192,31 180,40"/>
+        <polygon class="shade" points="180,40 192,31 192,67 180,76"/>
+        <circle class="object" cx="164" cy="27" r="9"/>
+        <text class="label" x="160" y="116" text-anchor="middle">auf</text>
+        <!-- unter -->
+        <rect class="surface" x="246" y="40" width="44" height="36"/>
+        <polygon class="surface" points="246,40 258,31 302,31 290,40"/>
+        <polygon class="shade" points="290,40 302,31 302,67 290,76"/>
+        <circle class="object" cx="268" cy="87" r="9"/>
+        <text class="label" x="270" y="116" text-anchor="middle">unter</text>
+        <!-- vor: the ball is drawn last, so it stands in front of the box -->
+        <rect class="surface" x="26" y="168" width="44" height="36"/>
+        <polygon class="surface" points="26,168 38,159 82,159 70,168"/>
+        <polygon class="shade" points="70,168 82,159 82,195 70,204"/>
+        <circle class="object" cx="44" cy="200" r="10"/>
+        <text class="label" x="50" y="244" text-anchor="middle">vor</text>
+        <!-- hinter: the ball is drawn first, and its hidden part dashed over the box -->
+        <circle class="object" cx="188" cy="164" r="9"/>
+        <rect class="surface" x="136" y="168" width="44" height="36"/>
+        <polygon class="surface" points="136,168 148,159 192,159 180,168"/>
+        <polygon class="shade" points="180,168 192,159 192,195 180,204"/>
+        <circle class="guide" cx="188" cy="164" r="9"/>
+        <text class="label" x="160" y="244" text-anchor="middle">hinter</text>
+        <!-- zwischen: two smaller boxes -->
+        <rect class="surface" x="222" y="176" width="28" height="28"/>
+        <polygon class="surface" points="222,176 230,170 258,170 250,176"/>
+        <polygon class="shade" points="250,176 258,170 258,198 250,204"/>
+        <rect class="surface" x="282" y="176" width="28" height="28"/>
+        <polygon class="surface" points="282,176 290,170 318,170 310,176"/>
+        <polygon class="shade" points="310,176 318,170 318,198 310,204"/>
+        <circle class="object" cx="270" cy="192" r="9"/>
+        <text class="label" x="270" y="244" text-anchor="middle">zwischen</text>
+        <!-- neben: a gap between ball and box -->
+        <rect class="surface" x="26" y="296" width="44" height="36"/>
+        <polygon class="surface" points="26,296 38,287 82,287 70,296"/>
+        <polygon class="shade" points="70,296 82,287 82,323 70,332"/>
+        <circle class="object" cx="10" cy="322" r="9"/>
+        <text class="label" x="50" y="372" text-anchor="middle">neben</text>
+        <!-- an: the ball touches the side of the box -->
+        <rect class="surface" x="136" y="296" width="44" height="36"/>
+        <polygon class="surface" points="136,296 148,287 192,287 180,296"/>
+        <polygon class="shade" points="180,296 192,287 192,323 180,332"/>
+        <circle class="object" cx="127" cy="322" r="9"/>
+        <text class="label" x="160" y="372" text-anchor="middle">an</text>
+        <!-- in: a box you can see into, all its edges dashed -->
+        <circle class="object" cx="270" cy="316" r="9"/>
+        <rect class="guide" x="246" y="296" width="44" height="36"/>
+        <polygon class="guide" points="246,296 258,287 302,287 290,296"/>
+        <polygon class="guide" points="290,296 302,287 302,323 290,332"/>
+        <text class="label" x="270" y="372" text-anchor="middle">in</text>
+      </svg>
+
+table:
+  columns:
+    - { en: Nominativ, fa: Nominativ, de: Nominativ }
+    - { en: Dativ, fa: Dativ, de: Dativ }
+    - { en: With ein, fa: با ein, de: Mit ein }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Schrank, dem Schrank, einem Schrank, neben dem Schrank]
+    - [die Tür, der Tür, einer Tür, hinter der Tür]
+    - [das Regal, dem Regal, einem Regal, auf dem Regal]
+    - [die Bücher (Plural), den Büchern, –, zwischen den Büchern]
+
+examples:
+  - de: Die Katze schläft unter dem Tisch.
+    en: The cat is sleeping under the table.
+    fa: گربه زیر میز خوابیده است.
+  - de: Mein Handy liegt auf dem Sofa.
+    en: My phone is on the sofa.
+    fa: گوشی‌ام روی مبل است.
+  - de: Das Bild hängt an der Wand.
+    en: The picture is hanging on the wall.
+    fa: تابلو به دیوار آویزان است.
+  - de: Die Lampe hängt über dem Esstisch.
+    en: The lamp hangs above the dining table.
+    fa: چراغ بالای میز غذاخوری آویزان است.
+  - de: Wir warten vor dem Kino.
+    en: We are waiting in front of the cinema.
+    fa: ما جلوی سینما منتظریم.
+  - de: Das Fahrrad steht hinter dem Haus.
+    en: The bike is behind the house.
+    fa: دوچرخه پشت خانه است.
+  - de: Der Schlüssel liegt neben dem Handy.
+    en: The key is next to the phone.
+    fa: کلید کنار گوشی است.
+  - de: Der Supermarkt ist zwischen der Post und dem Bahnhof.
+    en: The supermarket is between the post office and the station.
+    fa: سوپرمارکت بین اداره پست و ایستگاه قطار است.
+  - de: Die Milch ist im Kühlschrank.
+    en: The milk is in the fridge.
+    fa: شیر در یخچال است.
+  - de: Wir sitzen am Fenster.
+    en: We are sitting at the window.
+    fa: ما کنار پنجره نشسته‌ایم.
+
+mistakes:
+  - wrong: Das Buch liegt auf den Tisch.
+    right: Das Buch liegt auf dem Tisch.
+    why:
+      en: "*Liegen* says where something is (*Wo?*), so the *Dativ* follows: *dem Tisch*. *Den Tisch* is for a movement (*Wohin?*), a later topic."
+      fa: "*liegen* می‌گوید چیزی کجاست (*Wo?*)، پس *Dativ* می‌آید: *dem Tisch*. *den Tisch* برای حرکت است (*Wohin?*) و در موضوعی بعدتر می‌آید."
+      de: "*Liegen* sagt, wo etwas ist (*Wo?*). Darum steht der Dativ: *dem Tisch*. *Den Tisch* sagt man bei einer Bewegung (*Wohin?*). Das kommt später."
+  - wrong: Das Bild hängt auf der Wand.
+    right: Das Bild hängt an der Wand.
+    why:
+      en: "English says \"on the wall\", German says *an der Wand*: *an* is for the side of something, *auf* for its top, like a table or the floor."
+      fa: "در فارسی می‌گوییم «روی دیوار»، اما در آلمانی *an der Wand*: *an* برای کنارهٔ ایستادهٔ چیزی است و *auf* برای سطح بالایی آن، مثل میز یا زمین."
+      de: "Bei einer Wand sagt man *an*: Das Bild ist an der Seite, nicht oben. *Auf* sagt man für oben, zum Beispiel *auf dem Tisch*."
+  - wrong: Mein Bruder ist im Küche.
+    right: Mein Bruder ist in der Küche.
+    why:
+      en: "*Im* is short for *in dem*, so it fits only *der* and *das* nouns. *Küche* is a *die* noun: *in der Küche*."
+      fa: "*im* کوتاه‌شدهٔ *in dem* است و فقط با اسم‌های *der* و *das* می‌آید. *Küche* اسمِ *die* است: *in der Küche*."
+      de: "*Im* ist kurz für *in dem*. Das passt nur bei *der* und *das*. *Küche* hat den Artikel *die*: *in der Küche*."
+  - wrong: Die Apotheke ist neben dem Bank.
+    right: Die Apotheke ist neben der Bank.
+    why:
+      en: "*Bank* is a *die* noun. In the *Dativ*, *die* becomes *der*, not *dem*."
+      fa: "*Bank* اسمِ *die* است. در *Dativ*، *die* می‌شود *der*، نه *dem*."
+      de: "*Bank* hat den Artikel *die*. Im Dativ wird *die* zu *der*, nicht zu *dem*."
+  - wrong: Die Bank ist zwischen dem Kino und das Café.
+    right: Die Bank ist zwischen dem Kino und dem Café.
+    why:
+      en: "After *zwischen* both nouns are in the *Dativ*, the second one too."
+      fa: "بعد از *zwischen* هر دو اسم در *Dativ* می‌آیند، اسم دوم هم."
+      de: "Nach *zwischen* stehen beide Nomen im Dativ, auch das zweite."
+
+# 20 questions, every question type. A small topic: the spec asks for 15 to 20.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Die Katze schläft unter ___ Tisch.
+    options: [dem, den, der]
+    answer: dem
+    explanation:
+      en: "*Der Tisch* in the *Dativ* is *dem Tisch*: the cat is somewhere (*Wo?*)."
+      fa: "*der Tisch* در *Dativ* می‌شود *dem Tisch*: گربه جایی است (*Wo?*)."
+      de: "Die Katze ist an einem Ort (*Wo?*). *Der Tisch* im Dativ: *dem Tisch*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Jacke hängt an ___ Tür.
+    options: [der, die, dem]
+    answer: der
+    explanation:
+      en: "*Die Tür* in the *Dativ* is *der Tür*."
+      fa: "*die Tür* در *Dativ* می‌شود *der Tür*."
+      de: "*Die Tür* im Dativ: *der Tür*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Mein Fahrrad steht hinter ___ Haus.
+    options: [dem, das, den]
+    answer: dem
+    explanation:
+      en: "*Das Haus* in the *Dativ* is *dem Haus*."
+      fa: "*das Haus* در *Dativ* می‌شود *dem Haus*."
+      de: "*Das Haus* im Dativ: *dem Haus*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wir warten ___ Kino.
+    options: [vor dem, vor das, vor den]
+    answer: vor dem
+    explanation:
+      en: "We are somewhere (*Wo?*), so *das Kino* is in the *Dativ*: *vor dem Kino*."
+      fa: "ما جایی هستیم (*Wo?*)، پس *das Kino* در *Dativ* می‌آید: *vor dem Kino*."
+      de: "Wir sind an einem Ort (*Wo?*). *Das Kino* im Dativ: *vor dem Kino*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Die Lampe hängt oben, ___ dem Esstisch.
+    options: [über, auf, unter]
+    answer: über
+    explanation:
+      en: "*Über*: higher up, without touching. *Auf* would sit on the table."
+      fa: "*über*: بالاتر، بدون تماس. *auf* یعنی روی خود میز."
+      de: "*Über*: oben, ohne Kontakt. *Auf* heißt: direkt auf dem Tisch."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wo ist die Milch? – ___ Kühlschrank.
+    options: [Im, In, Ins]
+    answer: Im
+    explanation:
+      en: "*Der Kühlschrank* in the *Dativ* is *dem Kühlschrank*, and *in dem* is shortened to *im*."
+      fa: "*der Kühlschrank* در *Dativ* می‌شود *dem Kühlschrank*، و *in dem* کوتاه می‌شود: *im*."
+      de: "*Der Kühlschrank* im Dativ: *dem Kühlschrank*. *In dem* sagt man kurz: *im*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Das Bild hängt ___ der Wand.
+    options: [an, auf, in]
+    answer: an
+    explanation:
+      en: "Something on a wall is *an der Wand*: *an* is for the side of a thing."
+      fa: "چیزی که روی دیوار است *an der Wand* است: *an* برای کنارهٔ ایستادهٔ چیزهاست."
+      de: "Bei einer Wand sagt man *an*: *an der Wand*."
+  - id: true-1
+    type: true-false
+    prompt: Das Handy liegt auf dem Sofa.
+    answer: true
+    explanation:
+      en: "*Das Sofa* in the *Dativ* is *dem Sofa*. The sentence is correct."
+      fa: "*das Sofa* در *Dativ* می‌شود *dem Sofa*. جمله درست است."
+      de: "*Das Sofa* im Dativ: *dem Sofa*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Die Tasse steht auf den Tisch.
+    answer: false
+    explanation:
+      en: "The cup is somewhere (*Wo?*), so the *Dativ*: *auf dem Tisch*."
+      fa: "فنجان جایی است (*Wo?*)، پس *Dativ* می‌آید: *auf dem Tisch*."
+      de: "Die Tasse ist an einem Ort (*Wo?*). Darum Dativ: *auf dem Tisch*."
+  - id: true-3
+    type: true-false
+    prompt: Die Kinder spielen zwischen den Bäumen.
+    answer: true
+    explanation:
+      en: "*Die Bäume* in the *Dativ* is *den Bäumen*, with *-n* on the noun. The sentence is correct."
+      fa: "*die Bäume* در *Dativ* می‌شود *den Bäumen* و اسم *-n* می‌گیرد. جمله درست است."
+      de: "*Die Bäume* im Dativ: *den Bäumen*, mit *-n*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Die Schuhe stehen unter ___ (das) Bett.
+    answers: [dem]
+    explanation:
+      en: "*Das* becomes *dem* in the *Dativ*: *unter dem Bett*."
+      fa: "*das* در *Dativ* می‌شود *dem*: *unter dem Bett*."
+      de: "*Das* wird im Dativ zu *dem*: *unter dem Bett*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir warten vor ___ (die) Post.
+    answers: [der]
+    explanation:
+      en: "*Die* becomes *der* in the *Dativ*: *vor der Post*."
+      fa: "*die* در *Dativ* می‌شود *der*: *vor der Post*."
+      de: "*Die* wird im Dativ zu *der*: *vor der Post*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Bücher stehen ___ (in + das) Regal.
+    answers: [im, in dem]
+    explanation:
+      en: "*In* + *das Regal* in the *Dativ* is *in dem Regal*, almost always said as *im Regal*."
+      fa: "*in* + *das Regal* در *Dativ* می‌شود *in dem Regal* که تقریباً همیشه کوتاه می‌شود: *im Regal*."
+      de: "*In* + *das Regal* im Dativ: *in dem Regal*. Kurz sagt man fast immer *im Regal*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Wo? in + die Küche"
+    answers: [in der Küche]
+    explanation:
+      en: "*Die Küche* in the *Dativ* is *der Küche*. *Im* is only for *der* and *das* nouns."
+      fa: "*die Küche* در *Dativ* می‌شود *der Küche*. *im* فقط برای اسم‌های *der* و *das* است."
+      de: "*Die Küche* im Dativ: *der Küche*. *Im* gibt es nur bei *der* und *das*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Wo? an + das Fenster"
+    answers: [am Fenster, an dem Fenster]
+    explanation:
+      en: "*An* + *dem Fenster*, almost always said as *am Fenster*."
+      fa: "*an* + *dem Fenster* که تقریباً همیشه کوتاه می‌شود: *am Fenster*."
+      de: "*An* + *dem Fenster*. Kurz sagt man fast immer *am Fenster*."
+  - id: error-1
+    type: find-error
+    prompt: Der Spiegel hängt an die Wand.
+    answer: die
+    explanation:
+      en: "The mirror is somewhere (*Wo?*), so *die Wand* is in the *Dativ*: *an der Wand*."
+      fa: "آینه جایی است (*Wo?*)، پس *die Wand* در *Dativ* می‌آید: *an der Wand*."
+      de: "Der Spiegel ist an einem Ort (*Wo?*). Darum Dativ: *an der Wand*."
+  - id: error-2
+    type: find-error
+    prompt: Der Supermarkt ist zwischen der Bank und die Post.
+    answer: die
+    explanation:
+      en: "After *zwischen* both nouns are in the *Dativ*: *und der Post*."
+      fa: "بعد از *zwischen* هر دو اسم در *Dativ* می‌آیند: *und der Post*."
+      de: "Nach *zwischen* stehen beide Nomen im Dativ: *und der Post*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [die Katze, schläft, unter dem Sofa]
+      - [unter dem Sofa, schläft, die Katze]
+    explanation:
+      en: "The verb comes second. The place can stand first or last."
+      fa: "فعل در جای دوم می‌آید. مکان می‌تواند اول یا آخر جمله باشد."
+      de: "Das Verb steht an Position 2. Der Ort kann am Anfang oder am Ende stehen."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wir, warten, vor dem Kino]
+      - [vor dem Kino, warten, wir]
+    explanation:
+      en: "The verb comes second. The place can stand first or last."
+      fa: "فعل در جای دوم می‌آید. مکان می‌تواند اول یا آخر جمله باشد."
+      de: "Das Verb steht an Position 2. Der Ort kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [unter ___ Tisch, dem]
+      - [neben ___ Tür, der]
+      - [zwischen ___ Stühlen, den]
+    explanation:
+      en: "In the *Dativ*: *der Tisch* becomes *dem Tisch*, *die Tür* becomes *der Tür*, plural *die Stühle* becomes *den Stühlen*."
+      fa: "در *Dativ*: *der Tisch* می‌شود *dem Tisch*، *die Tür* می‌شود *der Tür*، و *die Stühle* جمع می‌شود *den Stühlen*."
+      de: "Im Dativ: *der Tisch* wird zu *dem Tisch*, *die Tür* zu *der Tür*, *die Stühle* (Plural) zu *den Stühlen*."
