@@ -6,8 +6,8 @@ test('a level is a line of chapters, each with its name, its kind and its number
   const chapters = page.getByRole('main').getByRole('group')
   await expect(chapters).toHaveCount(2)
   await expect(chapters.nth(0).getByRole('heading', { level: 3 })).toHaveText('Fixture basics')
-  await expect(chapters.nth(0)).toContainText('Grammar')
-  await expect(chapters.nth(0)).toContainText('1 topic')
+  await expect(chapters.nth(0).locator('summary')).toContainText('Grammar')
+  await expect(chapters.nth(0).locator('summary')).toContainText('1 topic')
   await expect(chapters.nth(1).getByRole('heading', { level: 3 })).toHaveText('Fixture topics with sein')
 })
 

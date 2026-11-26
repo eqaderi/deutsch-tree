@@ -115,6 +115,7 @@ function ChapterStop({ chapter, topics, place }: { chapter: ChapterSummary; topi
   )
 }
 
+/** One topic. Its kind is not repeated here: the chapter above it says it. */
 function NodeRow({ node }: { node: NodeSummary }) {
   const { language, strings } = useLanguage()
   const text = (
@@ -122,7 +123,6 @@ function NodeRow({ node }: { node: NodeSummary }) {
       <span className="row-title">
         <RichText parts={node.title[language]} />
       </span>
-      <KindLabel kind={node.kind} />
     </span>
   )
 

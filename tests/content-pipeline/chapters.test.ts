@@ -2,7 +2,7 @@ import { rm } from 'node:fs/promises'
 import path from 'node:path'
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { COMING_SOON, changeNode, fixtureContentWith } from './fixture.ts'
+import { COMING_SOON, changeNode, comingSoonNode, fixtureContentWith } from './fixture.ts'
 
 const CHAPTERS = 'chapters.yaml'
 
@@ -147,5 +147,22 @@ test('German marked in a topic title is compiled as German, like in every other 
     { de: '-st' },
     ' with ',
     { de: 'du' },
+  ])
+})
+
+test('a new level needs only content: a chapter of that level and a node in it', async () => {
+  const content = await fixtureContentWith({
+    [CHAPTERS]: (text) =>
+      `${text}\n- id: fixture-b2\n  level: B2\n  kind: grammar\n  title: { en: Fixture B2, fa: آزمایشی, de: Test B2 }\n`,
+    'nodes/grammar/grammar-003.yaml': () => comingSoonNode('grammar-003', { level: 'B2', chapter: 'fixture-b2' }),
+  })
+
+  const { report, bundle } = await compileContent(content)
+
+  expect(report.errors).toEqual([])
+  expect(bundle?.index.nodes.map((node) => [node.level, node.chapter, node.id])).toEqual([
+    ['A1', 'fixture-basics', 'grammar-001'],
+    ['A1', 'fixture-later', 'grammar-002'],
+    ['B2', 'fixture-b2', 'grammar-003'],
   ])
 })
