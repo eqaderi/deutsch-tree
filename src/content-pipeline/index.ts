@@ -48,6 +48,7 @@ import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './
 import { mixedAwayFrom } from './mix.ts'
 import { overviewData } from './overview-data.ts'
 import { searchData } from './search-data.ts'
+import { compileVocabularyContent } from './vocabulary.ts'
 
 /** The list of official mock exams, beside the `nodes` folder, and its file in the compiled bundle. */
 export const OFFICIAL_MOCK_EXAMS_FILE = 'official-mock-exams.yaml'
@@ -347,7 +348,10 @@ function compileNode(file: NodeFile): CompiledNode {
     recogniseOnly: file.recogniseOnly,
     prerequisites: file.prerequisites,
     // A draft pool or practice task inside a "coming soon" file is not a test yet.
-    hasTest: file.status === 'published' && (file.questions !== undefined || file.practice !== undefined),
+    // A vocabulary node's test is made from its words.
+    hasTest:
+      file.status === 'published' &&
+      (file.questions !== undefined || file.practice !== undefined || file.kind === 'vocabulary'),
     title: richTextIn(file.title),
     ...(file.module !== undefined && { module: file.module }),
     ...(file.part !== undefined && { part: file.part }),
@@ -362,6 +366,7 @@ function compileNode(file: NodeFile): CompiledNode {
 function compileContentOf(file: NodeFile): NodeContent {
   if (isAssistantGraded(file)) return compileTaskContent(file)
   if (file.kind === 'exam-part') return compilePracticeContent(file)
+  if (file.kind === 'vocabulary') return compileVocabularyContent(file)
   return file.kind === 'phrases' ? compilePhrasesContent(file) : compileGrammarContent(file)
 }
 

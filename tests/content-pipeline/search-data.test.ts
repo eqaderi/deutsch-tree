@@ -38,6 +38,7 @@ test('a node that is coming soon has no search data: the index has its title', a
   expect(bundle?.search.en.entries.map((entry) => entry.node)).toEqual([
     'grammar-001',
     'grammar-010',
+    'vocabulary-fixture-home',
     'grammar-101',
     'grammar-102',
     'grammar-103',
@@ -46,6 +47,21 @@ test('a node that is coming soon has no search data: the index has its title', a
     'exam-sprechen-1',
     'phrases-greeting',
   ])
+})
+
+test('a vocabulary node is found by each word with its article and what it means in the language of the page', async () => {
+  const { bundle } = await compileContent(fixtureContent)
+
+  const passages = (language: 'en' | 'fa' | 'de') =>
+    bundle?.search[language].entries.find((entry) => entry.node === 'vocabulary-fixture-home')?.passages
+  expect(passages('en')).toHaveLength(10)
+  expect(passages('en')?.[0]).toEqual([{ de: 'der Tisch' }, ' – table'])
+  expect(passages('fa')?.[0]).toEqual([{ de: 'der Tisch' }, ' – میز'])
+  // In simple German the meaning is the German definition.
+  expect(passages('de')?.[0]).toEqual([{ de: 'der Tisch – ein Möbelstück mit einer Platte und vier Beinen' }])
+  expect(passages('en')?.[8]).toEqual([{ de: 'schlafen' }, ' – to sleep'])
+  // The example sentences are left out: they would make the file several times larger.
+  expect(JSON.stringify(passages('en'))).not.toContain('Das Essen steht auf dem Tisch.')
 })
 
 test('the search data of an exam part holds what its page explains, and nothing of its practice tasks', async () => {

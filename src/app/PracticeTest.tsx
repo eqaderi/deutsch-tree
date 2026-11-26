@@ -12,10 +12,10 @@ import {
   rightAnswer,
   scoreAttempt,
 } from '../learning-engine/index.ts'
-import { German, plainText, RichText } from './German.tsx'
+import { plainText, RichText } from './German.tsx'
 import { NotFound } from './NotFound.tsx'
 import { updateProgress, useProgress } from './progress.ts'
-import { AnswerText, QuestionView } from './QuestionView.tsx'
+import { AnswerText, QuestionPrompt, QuestionView } from './QuestionView.tsx'
 import { ReportProblem } from './ReportProblem.tsx'
 
 interface PracticeTestProps {
@@ -236,7 +236,7 @@ function TaskResult({ nodeId, task, result, wasDone, onRetry }: TaskResultProps)
                   {correct ? strings.answerIsRight : strings.answerIsWrong}
                 </span>
               </span>
-              <German className="item-result-prompt">{question.prompt}</German>
+              <QuestionPrompt question={question} className="item-result-prompt" />
               <dl>
                 <div className={correct ? 'answer-right' : 'answer-given'}>
                   <dt>{strings.yourAnswer}</dt>

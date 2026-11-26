@@ -3,7 +3,15 @@
  * storage, no clock. Whatever is random comes in as a `Random`, so a caller
  * (and a test) decides the dice.
  */
-import type { NodeStatus, NodeSummary, Question } from '../content-model/index.ts'
+import {
+  asLearned,
+  type Localised,
+  type NodeStatus,
+  type NodeSummary,
+  type Question,
+  type RichText,
+  type VocabularyWord,
+} from '../content-model/index.ts'
 
 /** A source of randomness with the contract of Math.random: a number from 0 up to, not including, 1. */
 export type Random = () => number
@@ -21,6 +29,36 @@ export function drawAttempt<T>(pool: readonly T[], size: number, random: Random)
     drawn.push(...remaining.splice(index, 1))
   }
   return drawn
+}
+
+/**
+ * The questions of one attempt at a test, drawn from a node's pool.
+ *
+ * Two questions about the same word (a vocabulary node asks every word in
+ * both directions) give each other away, so an attempt asks about a word
+ * once, and takes the directions in turn: as many questions from German as
+ * into German, or one more of either. Only a pool with fewer words than
+ * `size` asks a word both ways. A pool without such questions is drawn as
+ * `drawAttempt` draws it.
+ */
+export function drawQuestions(pool: readonly Question[], size: number, random: Random): Question[] {
+  const about = new Map<string, Question[]>()
+  for (const question of pool) {
+    const subject = 'word' in question ? `word ${question.word}` : `question ${about.size}`
+    about.set(subject, [...(about.get(subject) ?? []), question])
+  }
+  const subjects = drawAttempt([...about.values()], size, random)
+
+  // Which of a word's questions comes first is drawn once; after that they take turns.
+  let turn = subjects.some((questions) => questions.length > 1) ? Math.floor(random() * 2) : 0
+  const drawn = subjects.map((questions) => {
+    if (questions.length > 1) turn += 1
+    return questions[turn % questions.length] as Question
+  })
+  if (drawn.length === size) return drawn
+
+  const left = pool.filter((question) => !drawn.includes(question))
+  return [...drawn, ...drawAttempt(left, size - drawn.length, random)]
 }
 
 /**
@@ -80,6 +118,10 @@ export function checkAnswer(question: Question, answer: Answer | undefined): Ans
     case 'typed-answer':
     case 'typed-gap-fill':
       return typeof answer === 'string' ? checkTyped(answer, question.answers) : wrong()
+    case 'meaning-of-word':
+      return { correct: answer === question.answer, notes: [] }
+    case 'word-for-meaning':
+      return typeof answer === 'string' ? checkTyped(answer, question.answers) : wrong()
     case 'word-order':
       return { correct: question.answers.some((order) => sameList(order, answer)), notes: [] }
     case 'matching':
@@ -104,9 +146,121 @@ export function rightAnswer(question: Question): Answer {
     case 'typed-gap-fill':
       // The content model guarantees at least one accepted answer.
       return question.answers[0] ?? ''
+    case 'meaning-of-word':
+      return question.answer
+    case 'word-for-meaning':
+      return question.answers[0] ?? ''
     case 'word-order':
       return question.answers[0] ?? []
   }
+}
+
+/** How many meanings a `meaning-of-word` question offers, the right one among them, where the node has that many. */
+export const MEANINGS_OFFERED = 4
+
+/**
+ * The pool of a vocabulary node, made from its words: every word is asked in
+ * both directions. The same words always give the same pool, so the pool that
+ * was reviewed is the pool a learner is asked.
+ *
+ * From German (`meaning-of-word`) the learner reads the word as it is learned
+ * and chooses its meaning among the meanings of other words of the node:
+ * words of the same class before others, and never a word that either of the
+ * two names in `tooCloseTo`.
+ *
+ * Into German (`word-for-meaning`) the learner reads the meaning and types
+ * the word as it is learned: a noun with its article. The accepted answers
+ * are that form and what the word lists under `alsoAccepted`, so a noun
+ * without its article, or with another one, is a wrong answer.
+ *
+ * The reason of both questions is the word with its meaning and its example
+ * sentence.
+ */
+export function vocabularyPool(words: readonly VocabularyWord[]): Question[] {
+  const ids = questionIds(words)
+  return words.flatMap((word, index): Question[] => {
+    const id = ids[index] ?? ''
+    const meaning: Localised = { ...word.meaning, de: word.definition }
+    const learned = asLearned(word)
+    const explanation: Localised<RichText> = {
+      en: [{ de: learned }, `: ${word.meaning.en}. `, { de: word.example.de }],
+      fa: [{ de: learned }, `: ${word.meaning.fa}. `, { de: word.example.de }],
+      de: [{ de: `${learned}: ${word.definition}. ${word.example.de}` }],
+    }
+    return [
+      {
+        id: `${id}-meaning`,
+        type: 'meaning-of-word',
+        word: word.word,
+        prompt: learned,
+        options: mixed([word, ...wrongOptions(word, words)], word.word).map((option) => ({
+          word: option.word,
+          meaning: { ...option.meaning, de: option.definition },
+        })),
+        answer: word.word,
+        explanation,
+      },
+      {
+        id: `${id}-word`,
+        type: 'word-for-meaning',
+        word: word.word,
+        prompt: meaning,
+        answers: [learned, ...word.alsoAccepted],
+        explanation,
+      },
+    ]
+  })
+}
+
+/** The words whose meanings are offered beside the meaning of `word`: the same every time. */
+function wrongOptions(word: VocabularyWord, words: readonly VocabularyWord[]): VocabularyWord[] {
+  const tooClose = (other: VocabularyWord) =>
+    word.tooCloseTo.includes(other.word) || other.tooCloseTo.includes(word.word)
+  const others = mixed(
+    words.filter((other) => other.word !== word.word && !tooClose(other)),
+    word.word,
+  )
+  const sameClass = others.filter((other) => other.class === word.class)
+  const otherClass = others.filter((other) => other.class !== word.class)
+  return [...sameClass, ...otherClass].slice(0, MEANINGS_OFFERED - 1)
+}
+
+/**
+ * The words in an order that looks random and is always the same for the
+ * same `seed`. Adding a word to a node moves no other word in it.
+ */
+function mixed(words: readonly VocabularyWord[], seed: string): VocabularyWord[] {
+  const rank = (word: VocabularyWord) => fingerprint(`${seed}\u0000${word.word}`)
+  return [...words].sort((a, b) => rank(a) - rank(b) || (a.word < b.word ? -1 : 1))
+}
+
+/** A number that depends on every letter of the text (FNV-1a, with a last stir so that near texts land far apart). */
+function fingerprint(text: string): number {
+  let hash = 0x811c9dc5
+  for (let index = 0; index < text.length; index += 1) {
+    hash = Math.imul(hash ^ text.charCodeAt(index), 0x01000193)
+  }
+  hash ^= hash >>> 15
+  hash = Math.imul(hash, 0x2c1b3c6d)
+  return (hash ^ (hash >>> 12)) >>> 0
+}
+
+/**
+ * The start of the question ids of each word: a short code made from the
+ * word, the same every time and for every place of the word in its node. It
+ * is a code and not the word because an id is shown: in the address of the
+ * "report a problem" link of a question that asks for the word, and on the
+ * sheet of the reviewer who answers the pool without its key.
+ */
+function questionIds(words: readonly VocabularyWord[]): string[] {
+  const code = (text: string) => `w${fingerprint(text).toString(36).padStart(7, '0')}`
+  const taken = new Set<string>()
+  return words.map((word) => {
+    let id = code(word.word)
+    for (let again = 1; taken.has(id); again += 1) id = code(`${word.word}\u0000${again}`)
+    taken.add(id)
+    return id
+  })
 }
 
 /**
@@ -122,6 +276,8 @@ export function isAnswered(question: Question, answer: Answer | undefined): bool
     case 'find-error':
     case 'typed-answer':
     case 'typed-gap-fill':
+    case 'meaning-of-word':
+    case 'word-for-meaning':
       return answer !== undefined
     case 'word-order':
       return Array.isArray(answer) && answer.length === question.pieces.length
@@ -550,7 +706,7 @@ export interface Checkpoint {
 export function drawCheckpoint(sources: readonly CheckpointSource[], random: Random): Checkpoint {
   const hands = sources.map(({ nodeId, questions }) => ({
     nodeId,
-    questions: drawAttempt(questions, CHECKPOINT_MOST_PER_NODE, random),
+    questions: drawQuestions(questions, CHECKPOINT_MOST_PER_NODE, random),
   }))
 
   const dealt: CheckpointQuestion[] = []

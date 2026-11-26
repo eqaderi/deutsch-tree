@@ -3,7 +3,7 @@ import { Link, Navigate, useParams } from 'react-router'
 import type { CompiledNode, Question } from '../content-model/index.ts'
 import { hasPool, hasPractice } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
-import { type AttemptResult, applyAttempt, drawAttempt, isDone, scoreAttempt } from '../learning-engine/index.ts'
+import { type AttemptResult, applyAttempt, drawQuestions, isDone, scoreAttempt } from '../learning-engine/index.ts'
 import { AttemptRun } from './AttemptRun.tsx'
 import { loadNode } from './content.ts'
 import { plainText } from './German.tsx'
@@ -58,7 +58,7 @@ interface Attempt {
 export function NodeTest({ node, pool, attemptSize }: NodeTestProps) {
   const { language, strings } = useLanguage()
   const progress = useProgress()
-  const draw = (number: number): Attempt => ({ number, questions: drawAttempt(pool, attemptSize, Math.random) })
+  const draw = (number: number): Attempt => ({ number, questions: drawQuestions(pool, attemptSize, Math.random) })
   const [attempt, setAttempt] = useState(() => draw(1))
 
   const title = strings.testTitle(plainText(node.title[language]))

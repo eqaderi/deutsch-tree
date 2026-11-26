@@ -1,13 +1,15 @@
-import type { Language } from '../content-model/index.ts'
+import type { Language, Localised } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
+import { promptText } from './QuestionView.tsx'
 
 /**
- * What a report says about a question: its id inside the node and its German
- * prompt. An item of a practice task is named with its task: "t1/i3".
+ * What a report says about a question: its id inside the node and its
+ * prompt: German, or for a word asked for in German its meaning in each
+ * language. An item of a practice task is named with its task: "t1/i3".
  */
 export interface ReportedQuestion {
   id: string
-  prompt: string
+  prompt: string | Localised
 }
 
 const NEW_ISSUE = 'https://github.com/eqaderi/deutsch-tree/issues/new'
@@ -21,7 +23,7 @@ export function reportProblemUrl(nodeId: string, question: ReportedQuestion, lan
   const body = [
     `Topic: ${nodeId}`,
     `Question: ${question.id}`,
-    `Prompt: ${question.prompt}`,
+    `Prompt: ${promptText(question, language)}`,
     `Language of the page: ${language}`,
     '',
     'What is wrong with this question?',

@@ -5,13 +5,13 @@
  * never shows an empty box for it.
  */
 import type { CompiledNode, GrammarOverview } from '../content-model/index.ts'
-import { hasPool } from '../content-model/scoring.ts'
+import { isGrammar } from '../content-model/scoring.ts'
 
 /** `nodes` must be in curriculum order. */
 export function overviewData(nodes: CompiledNode[]): GrammarOverview {
   return {
     tables: nodes.flatMap((node) =>
-      node.content && hasPool(node.content) && 'table' in node.content && node.content.table
+      node.kind === 'grammar' && node.content && isGrammar(node.content) && node.content.table
         ? [{ node: node.id, table: node.content.table }]
         : [],
     ),

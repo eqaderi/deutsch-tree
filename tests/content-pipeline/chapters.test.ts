@@ -44,6 +44,7 @@ test('the curriculum order runs chapter by chapter, in the order of the chapter 
     ['fixture-basics', 'grammar-001'],
     ['fixture-basics', 'grammar-010'],
     ['fixture-words', 'vocabulary-fixture-family'],
+    ['fixture-words', 'vocabulary-fixture-home'],
   ])
 })
 
@@ -148,6 +149,7 @@ test('German marked in a topic title is compiled as German, like in every other 
     ['اوملاوت‌های آزمایشی'],
     ['پایانهٔ ', { de: '-st' }, ' با ', { de: 'du' }],
     ['واژه‌های آزمایشی خانواده'],
+    ['واژه‌های آزمایشی خانه'],
   ])
   expect(bundle?.nodes.find((node) => node.id === 'grammar-002')?.title.en).toEqual([
     'The ending ',
@@ -172,6 +174,7 @@ test('a new level needs only content: a chapter of that level and a node in it',
     ['A1', 'fixture-basics', 'grammar-010'],
     ['A1', 'fixture-later', 'grammar-002'],
     ['A1', 'fixture-words', 'vocabulary-fixture-family'],
+    ['A1', 'fixture-words', 'vocabulary-fixture-home'],
     ['A2', 'fixture-nouns', 'grammar-101'],
     ['A2', 'fixture-nouns', 'grammar-102'],
     ['A2', 'fixture-nouns', 'grammar-103'],

@@ -15,6 +15,8 @@ export const COMING_SOON = 'nodes/grammar/grammar-002.yaml'
 /** The fixture's published exam-part node: Lesen, Teil 1, with two practice tasks. */
 export const EXAM_PART = 'nodes/exam-part/exam-lesen-1.yaml'
 
+/** The fixture's published vocabulary node. */
+export const VOCABULARY = 'nodes/vocabulary/vocabulary-fixture-home.yaml'
 /** The fixture's published writing node and speaking node: exam parts that an AI assistant grades. */
 export const WRITING = 'nodes/exam-part/exam-schreiben-1.yaml'
 export const SPEAKING = 'nodes/exam-part/exam-sprechen-1.yaml'
@@ -80,6 +82,7 @@ export function changeReviewedNode(change: (node: LooseNode) => void): (text: st
     // them. A node that breaks the content model is rejected before its
     // review is looked at.
     const read = nodeFileSchema.safeParse(node)
+    // The pool of a vocabulary node is made from its words, so the whole node is fingerprinted.
     if (read.success) node.review.pool = reviewFingerprint(read.data)
   })
 }

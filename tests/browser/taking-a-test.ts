@@ -9,6 +9,8 @@ import { readdir, readFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import type { Locator, Page } from '@playwright/test'
 import { parse } from 'yaml'
+import { type Language, nodeFileSchema, type RichText } from '../../src/content-model/index.ts'
+import { vocabularyQuestions } from '../../src/content-pipeline/vocabulary.ts'
 import { expect } from './test.ts'
 
 interface FixtureQuestionBase {
@@ -29,6 +31,15 @@ export type FixtureQuestion = FixtureQuestionBase &
     // Every right order of the pieces; the first is the one a result shows.
     | { type: 'word-order'; answers: string[][]; end?: string }
     | { type: 'matching'; answer: Array<[item: string, partner: string]> }
+    // Made from the words of a vocabulary node: from German (choose the meaning) and into German (type the word).
+    | {
+        type: 'meaning-of-word'
+        word: string
+        prompt: string
+        options: Array<{ word: string; meaning: Record<Language, string> }>
+        answer: string
+      }
+    | { type: 'word-for-meaning'; word: string; prompt: Record<Language, string>; answers: string[] }
   )
 
 export type FixtureQuestionOf<Type extends FixtureQuestion['type']> = Extract<FixtureQuestion, { type: Type }>
@@ -42,6 +53,8 @@ export const WRONG_TEXT = 'falsch'
 
 /** The words of the test screens in one language. English unless a journey says otherwise. */
 export interface TestWords {
+  /** The language of the page: a vocabulary question offers meanings in it. */
+  language: Language
   questionOf: (place: number, total: number) => string
   next: string
   checkAnswers: string
@@ -55,6 +68,7 @@ export interface TestWords {
 }
 
 export const ENGLISH: TestWords = {
+  language: 'en',
   questionOf: (place, total) => `Question ${place} of ${total}`,
   next: 'Next',
   checkAnswers: 'Check answers',
@@ -66,6 +80,7 @@ export const ENGLISH: TestWords = {
 }
 
 export const PERSIAN: TestWords = {
+  language: 'fa',
   questionOf: (place, total) => `سؤال ${persianDigits(place)} از ${persianDigits(total)}`,
   next: 'بعدی',
   checkAnswers: 'بررسی پاسخ‌ها',
@@ -86,7 +101,11 @@ export const ATTEMPT_SIZE = 10
 /** The node whose test most journeys take: "Fixture verbs". */
 export const FIXTURE_NODE = 'grammar-001'
 
-/** Every question of the fixture nodes, by node and question id ("grammar-001/q1"). */
+/**
+ * Every question of the fixture nodes, by node and question id
+ * ("grammar-001/q1"). The pool of a vocabulary node is made from its words,
+ * the same way the content pipeline makes it.
+ */
 export async function fixtureQuestions(): Promise<Map<string, FixtureQuestion>> {
   const folder = fileURLToPath(new URL('../fixtures/content/nodes/', import.meta.url))
   const questions = new Map<string, FixtureQuestion>()
@@ -97,7 +116,25 @@ export async function fixtureQuestions(): Promise<Map<string, FixtureQuestion>> 
       questions.set(`${node.id}/${question.id}`, { ...question, node: node.id })
     }
   }
+  const vocabulary = fileURLToPath(new URL('../fixtures/content/nodes/vocabulary/', import.meta.url))
+  for (const file of await readdir(vocabulary)) {
+    const node = nodeFileSchema.parse(parse(await readFile(`${vocabulary}${file}`, 'utf8')))
+    for (const question of vocabularyQuestions(node)) {
+      if (question.type !== 'meaning-of-word' && question.type !== 'word-for-meaning') continue
+      const explanation = {
+        en: plain(question.explanation.en),
+        fa: plain(question.explanation.fa),
+        de: plain(question.explanation.de),
+      }
+      questions.set(`${node.id}/${question.id}`, { ...question, explanation, node: node.id })
+    }
+  }
   return questions
+}
+
+/** Rich text as a fixture file writes it: German in asterisks. */
+function plain(parts: RichText): string {
+  return parts.map((part) => (typeof part === 'string' ? part : `*${part.de}*`)).join('')
 }
 
 /** The pool of one fixture node, by question id. "Fixture verbs" unless a journey says otherwise. */
@@ -138,6 +175,8 @@ export async function questionOnScreen(page: Page): Promise<FixtureQuestion> {
 export function germanShown(question: FixtureQuestion): string[] {
   if (question.type === 'word-order') return question.answers[0] ?? []
   if (question.type === 'matching') return question.answer.map(([item]) => item)
+  // Into German, the learner reads a meaning: the German is what they type.
+  if (question.type === 'word-for-meaning') return []
   return [question.prompt]
 }
 
@@ -154,6 +193,12 @@ export function choice(page: Page, question: FixtureQuestion, how: 'right' | 'wr
     case 'multiple-choice':
     case 'gap-fill':
       return radio(how === 'right' ? question.answer : otherThan(question.answer, question.options))
+    case 'meaning-of-word': {
+      // Each option is the meaning of a word, in the language of the page.
+      const meaning = (word: string) => question.options.find((option) => option.word === word)?.meaning[words.language]
+      const others = question.options.map((option) => option.word)
+      return radio(meaning(how === 'right' ? question.answer : otherThan(question.answer, others)) ?? '')
+    }
     case 'find-error':
       // Every word of the sentence is a choice; the right one is the wrong word.
       return radio(how === 'right' ? question.answer : otherThan(question.answer, question.prompt.match(/\p{L}+/gu)))
@@ -242,6 +287,7 @@ export async function giveAnswer(
   switch (question.type) {
     case 'typed-answer':
     case 'typed-gap-fill':
+    case 'word-for-meaning':
       await answerField(page).fill(textGiven(question, how))
       return
     case 'word-order':
@@ -265,6 +311,7 @@ export async function expectAnswerGiven(
   switch (question.type) {
     case 'typed-answer':
     case 'typed-gap-fill':
+    case 'word-for-meaning':
       await expect(answerField(page)).toHaveValue(textGiven(question, how))
       return
     case 'word-order': {
@@ -289,8 +336,11 @@ export function rightAnswerText(question: FixtureQuestion, words = ENGLISH): str
       return question.answer ? words.correct : words.notCorrect
     case 'typed-answer':
     case 'typed-gap-fill':
+    case 'word-for-meaning':
       // The first accepted answer is the one a result shows.
       return String(question.answers[0])
+    case 'meaning-of-word':
+      return question.options.find((option) => option.word === question.answer)?.meaning[words.language] ?? ''
     case 'word-order':
       return sentenceOf(orderGiven(question, 'right'), question.end)
     case 'matching':

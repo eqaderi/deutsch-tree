@@ -6,10 +6,10 @@ const results = (page: Page) => page.getByRole('main').getByRole('listitem')
 
 /**
  * How many fixture topics a search for "fixture" (in Persian: «آزمایشی»)
- * finds: every one, the seven grammar topics, the vocabulary topic, the
+ * finds: every one, the seven grammar topics, the two vocabulary topics, the
  * phrases topic and the four exam parts, since each has the word in its title.
  */
-const FIXTURE_TOPICS = 13
+const FIXTURE_TOPICS = 14
 
 /** How far the page can be scrolled sideways. A page that fits its screen gives 0. */
 const sidewaysScroll = (page: Page) =>

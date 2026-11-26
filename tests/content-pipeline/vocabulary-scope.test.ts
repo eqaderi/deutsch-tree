@@ -107,7 +107,7 @@ test('a word added to the scope list must be given to a node', async () => {
   expect(report.errors).toEqual([
     {
       file: SCOPE_LIST,
-      where: 'line 5',
+      where: 'line 15',
       message:
         'the word "Onkel" (A2) is in no vocabulary node; every word of the scope list belongs to exactly one node',
     },
@@ -153,7 +153,11 @@ test('a vocabulary node without words is rejected', async () => {
     [FAMILY]: changeNode((node) => {
       delete node.words
     }),
-    [SCOPE_LIST]: (text) => text.split('\n').slice(0, 1).join('\n'),
+    [SCOPE_LIST]: (text) =>
+      text
+        .split('\n')
+        .filter((line) => !/^(Mutter|Vater|kochen)\t/.test(line))
+        .join('\n'),
   })
 
   const { report } = await compileContent(content)

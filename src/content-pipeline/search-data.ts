@@ -13,6 +13,7 @@
  * phrases are for, and each phrase with its meaning and its example.
  */
 import {
+  asLearned,
   type CompiledNode,
   type Example,
   type ExamTask,
@@ -21,8 +22,9 @@ import {
   type Localised,
   type RichText,
   type SearchData,
+  type VocabularyWord,
 } from '../content-model/index.ts'
-import { hasPool } from '../content-model/scoring.ts'
+import { hasPool, isVocabulary } from '../content-model/scoring.ts'
 
 /** Stands between a piece of German and what the learner's language says about it. */
 const THEN = ' – '
@@ -53,6 +55,7 @@ function passagesOf(node: CompiledNode, language: Language): RichText[] {
     const { task, scoring, approach } = content.explanations[language]
     return [task, scoring, ...approach, ...('task' in content ? taskPassages(content.task) : [])]
   }
+  if (isVocabulary(content)) return content.words.map((word) => wordPassage(word, language))
   if ('phrases' in content) {
     return [
       ...(node.purpose ? [node.purpose[language]] : []),
@@ -75,6 +78,19 @@ function passagesOf(node: CompiledNode, language: Language): RichText[] {
 /** A German sentence, and what it means in the learner's language. A learner reading in German needs no translation. */
 function exampleWithItsMeaning(example: Example, language: Language): RichText {
   return language === 'de' ? [{ de: example.de }] : [{ de: example.de }, THEN + example[language]]
+}
+
+/**
+ * A word of a vocabulary node is found by itself, with its article, and by
+ * what it means in the language of the page: in simple German its
+ * definition. Its example sentence is left out, to keep the file of a
+ * language small with some 3,300 words in it.
+ */
+function wordPassage(word: VocabularyWord, language: Language): RichText {
+  const learned = asLearned(word)
+  return language === 'de'
+    ? [{ de: `${learned}${THEN}${word.definition}` }]
+    : [{ de: learned }, THEN + word.meaning[language]]
 }
 
 /**

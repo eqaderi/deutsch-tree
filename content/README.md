@@ -53,8 +53,8 @@ checked, but not shown.
 
 ## A vocabulary node
 
-A vocabulary node is one theme of about 25 words. Until vocabulary pages are
-built it is always `coming-soon`:
+A vocabulary node is one theme of about 25 words. While it is `coming-soon`
+its entries hold only `word`:
 
 ```yaml
 id: vocabulary-family    # "vocabulary-" plus an English name of the theme; never the level
@@ -69,9 +69,65 @@ words:                   # in the order to learn them
   - word: Vater
 ```
 
-An entry holds only `word` so far. The scope list has the word's class, level,
-article and plural marker. Meanings, a definition and an example sentence join
-the entry when vocabulary pages are built.
+The scope list has the word's class, level, article and plural marker.
+
+### A published vocabulary node
+
+Each entry then holds the whole word. The example is
+`content/nodes/vocabulary/vocabulary-family.yaml`.
+
+```yaml
+status: published
+attemptSize: 15          # optional, as for every node
+words:
+  - word: Großmutter     # the headword, without article
+    class: noun          # a word class of the scope list
+    article: die         # nouns only
+    plural: Großmütter   # nouns only: the plural written out, without article
+    # number: plural-only  # in place of `plural` for a noun with one number (plural-only, singular-only)
+    level: A1
+    meaning:             # plain text, no asterisks; Persian without Latin letters
+      en: grandmother
+      fa: مادربزرگ
+    definition: die Mutter von der Mutter oder vom Vater   # simple German, never the word itself
+    example:             # one original sentence that uses the word
+      de: Meine Großmutter ist 85 Jahre alt.
+      en: My grandmother is 85 years old.
+      fa: مادربزرگم ۸۵ سال دارد.
+    alsoAccepted: [die Oma]  # optional: other German that is right when this word is asked for
+    tooCloseTo: [Oma]        # optional: words of this node never offered as a wrong meaning of this one
+```
+
+- `class`, `level`, `article` and `plural` must agree with the scope list (a
+  check says where they do not). The plural is written out because the lists
+  give only a marker: `¨-e` on *Stuhl* is *Stühle*. A noun the list gives
+  two articles (`der/die` for *Verwandte*) takes one, and lists the other form
+  under `alsoAccepted`.
+- A node writes no `questions`: the test is made from the words. Every word
+  is asked twice. **From German**: the learner sees the word as it is learned
+  (*die Großmutter*) and chooses its meaning among four meanings of words of
+  the node, of the same word class where the node has enough. **Into
+  German**: the learner sees the meaning and types the word, a noun with its
+  article; *Großmutter* or *der Großmutter* is wrong, and only the slips of
+  any typed answer (umlauts, capitals) are forgiven. A learner who reads in
+  simple German sees the `definition` in place of a meaning, in both
+  directions. One attempt asks about a word once, half of the words in each
+  direction. The reason shown for a wrong answer is the word, its meaning
+  and its example.
+- So every meaning must be clear enough to name one word. Two words of a node
+  with the same meaning in one language, or the same definition, are
+  rejected, unless each lists the other in `alsoAccepted` and one names the
+  other in `tooCloseTo` (*Oma* and *Großmutter*). List under `alsoAccepted`
+  every other German a learner may rightly type: *die Frau* for *Ehefrau*.
+- The page lists every word with its article, plural, word class, level,
+  meaning, definition and example. Search finds a word by itself with its
+  article and its meaning (in simple German: its definition), not by its
+  example.
+- The review covers the questions made from the words, in each of the three
+  languages (see "Review before publishing"). A change to a word, its
+  article, a meaning, the definition, `alsoAccepted` or `tooCloseTo` calls
+  for a new review; the example sentence, the plural and the level may change
+  freely, because no question shows them.
 
 A node holds words of its own level only (a test of the real content says so).
 After changing a vocabulary node or a vocabulary chapter, run
@@ -657,6 +713,14 @@ publish it.
 This is for nodes with a question pool. A writing or speaking node has none;
 see the section above.
 
+A vocabulary node's pool is made from its words, so the sheet holds what each
+learner will be asked: every question once per language (its id ends in
+`-en`, `-fa` or `-de`), with the instruction that learner reads. A reviewer
+answers each one on its own; a meaning that is clear in English may name two
+words in Persian. The ids are codes, not the words, so the sheet does not
+give away a word that is asked for. To review a few words again, run step 1
+with `--only` and the ids that step 3 named.
+
 A published node needs a `review:` record. `pnpm content:check` fails without
 one, and again when a question or its answer changes later (explanations may
 change freely). A command writes the record, never a hand:
@@ -680,7 +744,7 @@ review, like changing an item or its key, means a new review; every item of
 that task then needs a fresh answer (`--only t1/i1,t1/i2,…`), because the text
 decides them all.
 
-Grammar nodes, phrases nodes and exam parts can be published so far: every
+Grammar, vocabulary and phrases nodes and exam parts can be published so far: every
 writing and speaking part, and the reading parts whose task format is built.
 Other node kinds and exam parts are added to the schema as they are built.
 
@@ -727,8 +791,8 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - An explanation of the wrong kind: `task`, `scoring` or `approach` in a
   grammar node, `rule` in an exam-part node; and one of a node's own that is
   missing in a language.
-- A published node with fewer than 15 questions. A `coming-soon` draft may
-  have fewer. An exam part is exempt: it has no pool. A reading part is held
+- A published node with fewer than 15 questions (a vocabulary node: fewer
+  than 8 words, which give 16). A `coming-soon` draft may have fewer. An exam part is exempt: it has no pool. A reading part is held
   to the format of its part instead, and a writing or speaking part has none.
 - A published reading part whose practice task has not the number of texts
   and items of its part, and one whose part has no task format yet.
@@ -742,7 +806,12 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   two items with the same id inside one task.
 - A word of the scope list that is in no vocabulary node or in two, and a word
   of a node that the scope list does not have. A vocabulary node without
-  words, and words in a node of another kind.
+  words, with `questions`, and words in a node of another kind.
+- A word of a published vocabulary node that lacks a part; a word class,
+  level, article or plural that differs from the scope list; an article or
+  plural on a word that is no noun; a definition that uses the word itself;
+  two words with the same meaning or definition that do not accept each
+  other; a `tooCloseTo` that is not a word of the node.
 - A published node with no review record, or whose questions, answers or
   task texts changed after its review. A `coming-soon` node needs none, and
   neither does a writing or speaking node.

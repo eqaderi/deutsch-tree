@@ -1,4 +1,4 @@
-import type { ExamAudience, ExamLinkKind, NodeKind, Question } from '../content-model/index.ts'
+import type { ExamAudience, ExamLinkKind, NodeKind, Question, WordClass } from '../content-model/index.ts'
 import type { AnswerNote, ExamModule } from '../learning-engine/index.ts'
 
 /**
@@ -93,6 +93,28 @@ export const en = {
   test: 'Test',
   takeTheTest: 'Take the test',
   comingSoonPage: 'This topic is not written yet. It will appear here when it is ready.',
+  // A vocabulary topic: its words, each with article, plural, word class, level, meaning and example.
+  words: 'Words',
+  plural: 'Plural',
+  /** In place of a plural, for a noun that has only one number. */
+  pluralOnly: 'plural only',
+  noPlural: 'no plural',
+  wordClasses: {
+    noun: 'noun',
+    verb: 'verb',
+    adjective: 'adjective',
+    adverb: 'adverb',
+    pronoun: 'pronoun',
+    article: 'article',
+    preposition: 'preposition',
+    conjunction: 'conjunction',
+    numeral: 'number',
+    particle: 'particle',
+    interjection: 'interjection',
+    phrase: 'phrase',
+    abbreviation: 'abbreviation',
+    affix: 'word part',
+  } satisfies Record<WordClass, string>,
   notFoundTitle: 'Topic not found',
   notFoundText: 'There is no topic at this address.',
 
@@ -130,6 +152,8 @@ export const en = {
     matching: 'Choose the partner that fits each word.',
     'typed-answer': 'Type the answer.',
     'typed-gap-fill': 'Type the word that fits the gap.',
+    'meaning-of-word': 'What does this word mean?',
+    'word-for-meaning': 'Type the German word. A noun needs its article.',
     'richtig-falsch': 'Is this statement right or wrong? The text decides.',
   } satisfies Record<Question['type'], string>,
   /** Read out in place of an empty gap. */

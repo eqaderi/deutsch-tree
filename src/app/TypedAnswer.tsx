@@ -10,6 +10,8 @@ interface TypedAnswerProps {
   instruction: string
   /** The German the question is about. */
   sentence: ReactNode
+  /** False when the sentence is in the learner's language instead, as a meaning whose word is asked for. */
+  sentenceIsGerman?: boolean
   /** What the learner has typed so far. */
   text: string
   onType: (text: string) => void
@@ -22,7 +24,7 @@ interface TypedAnswerProps {
  *
  * The field and the buttons read left to right on every page: they hold German.
  */
-export function TypedAnswer({ instruction, sentence, text, onType }: TypedAnswerProps) {
+export function TypedAnswer({ instruction, sentence, sentenceIsGerman = true, text, onType }: TypedAnswerProps) {
   const { strings } = useLanguage()
   const id = useId()
   const field = useRef<HTMLInputElement>(null)
@@ -52,7 +54,7 @@ export function TypedAnswer({ instruction, sentence, text, onType }: TypedAnswer
         {instruction}
       </p>
       <p id={`${id}-sentence`} className="question-sentence">
-        <German>{sentence}</German>
+        {sentenceIsGerman ? <German>{sentence}</German> : sentence}
       </p>
       <input
         ref={field}

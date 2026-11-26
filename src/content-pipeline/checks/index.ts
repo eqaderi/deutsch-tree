@@ -12,7 +12,9 @@ import { prerequisitesExist } from './prerequisites-exist.ts'
 import { prerequisitesHaveNoCycle } from './prerequisites-have-no-cycle.ts'
 import { publishedNodeIsReviewed } from './published-node-is-reviewed.ts'
 import { recogniseOnlyAsksForUnderstanding } from './recognise-only-asks-for-understanding.ts'
+import { vocabularyAgreesWithTheScopeList } from './vocabulary-agrees-with-the-scope-list.ts'
 import { vocabularyCoversTheScopeList } from './vocabulary-covers-the-scope-list.ts'
+import { vocabularyMeaningsDiffer } from './vocabulary-meanings-differ.ts'
 
 export type { CheckedNode, ContentCheck, ContentProblem, ContentUnderCheck } from './check.ts'
 export { CHAPTERS_FILE } from './check.ts'
@@ -29,10 +31,12 @@ export const CHECKS: ContentCheck[] = [
   examTasksAreExamParts,
   phrasesServeTheirNodesExamTasks,
   poolIsLargeEnough,
+  vocabularyMeaningsDiffer,
   recogniseOnlyAsksForUnderstanding,
   phrasesTestNeedsATypedAnswer,
   practiceTaskFitsItsPart,
   publishedNodeIsReviewed,
   vocabularyCoversTheScopeList,
+  vocabularyAgreesWithTheScopeList,
   assistantGradedNodeHasNoPool,
 ]
