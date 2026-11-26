@@ -12,8 +12,8 @@
  */
 import {
   type CompiledNode,
-  type Language,
   LANGUAGES,
+  type Language,
   type Localised,
   type RichText,
   type SearchData,
@@ -46,7 +46,8 @@ function passagesOf(node: CompiledNode, language: Language): RichText[] {
     ...content.table.rows.map((row): RichText => [{ de: row.join(CELL) }]),
     ...content.examples.map(
       // A learner reading in German needs no translation.
-      (example): RichText => (language === 'de' ? [{ de: example.de }] : [{ de: example.de }, THEN + example[language]]),
+      (example): RichText =>
+        language === 'de' ? [{ de: example.de }] : [{ de: example.de }, THEN + example[language]],
     ),
     ...content.mistakes.map((mistake): RichText => joined([{ de: mistake.right }, THEN, ...mistake.why[language]])),
   ]
