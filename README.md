@@ -35,7 +35,7 @@ ending, because the pipeline runs directly in Node.
 
 | Folder | Module |
 |---|---|
-| `content/` | The real content: one YAML file per node under `content/nodes/`, and the chapters that group them in `content/chapters.yaml`. |
+| `content/` | The real content: one YAML file per node under `content/nodes/`, the chapters that group them in `content/chapters.yaml`, and the official mock exams the app links to in `content/official-mock-exams.yaml`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
 | `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress. No interface, no storage; randomness is passed in. |
@@ -79,6 +79,27 @@ GitHub Pages and from a local folder.
   `QuestionView` and in `AnswerText` (`src/app/QuestionView.tsx`), and its
   instruction in the three string files. The type checker points at each
   place that is missing.
+
+## Readiness and the official mock exams
+
+- The readiness view is `#/readiness` (`src/app/ReadinessPage.tsx`). The tree
+  leads to it from "Exam" at the end of the strip of levels and from the last
+  stop of the last level (`src/app/ExamStop.tsx`).
+- The exams are content, not code: `content/official-mock-exams.yaml`,
+  compiled to `content/official-mock-exams.json`. To add an exam or correct a
+  link, edit that file only; the format is in
+  [content/README.md](content/README.md), "Official mock exams". The app
+  links to the exams and never requests them, hosts them or copies them.
+- The rule is `readiness` in `src/learning-engine/index.ts`: 90 or more in
+  every module on two of the exams whose entry says
+  `countsTowardReadiness: true`. `readScore` says what a typed score is.
+- The scores a learner records are part of their progress, under the exam's
+  id: `officialExamScores` reads them, `recordOfficialExamScores` changes
+  them. They are trusted, not verified.
+- A link to an exam is not on the page until the learner asks for it, and for
+  an exam with no score yet the page first asks whether this is the final
+  check. Keep it that way: only a few official sets exist, and one that was
+  seen early cannot test the learner again.
 
 ## Languages
 
