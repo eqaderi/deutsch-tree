@@ -1027,3 +1027,11 @@ A rule about the shape of one field goes in the schema,
    `compileContent`, and compare `report.errors`. Copy `pool-size.test.ts`.
 4. Run `pnpm check`. If the real content or the fixture content in
    `tests/fixtures/content` breaks the new rule, repair the content.
+
+A check gets the node files, and the content folder for a rule that holds a
+node against another file (the chapters, the vocabulary scope list). A rule
+about a file that is not a node is checked where that file is read: a mock
+exam in `mockExamProblems` (`src/content-pipeline/mock-exams.ts`), the
+official mock exams in `readOfficialMockExams` (`src/content-pipeline/index.ts`).
+Its test goes beside the tests of that file (`mock-exam.test.ts`,
+`official-mock-exams.test.ts`).
