@@ -3,8 +3,8 @@ import { Link } from 'react-router'
 import type { Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { type Answer, type AttemptResult, rightAnswer } from '../learning-engine/index.ts'
-import { German, RichText } from './German.tsx'
-import { AnswerText } from './QuestionView.tsx'
+import { RichText } from './German.tsx'
+import { AnswerText, QuestionPrompt } from './QuestionView.tsx'
 import { ReportProblem } from './ReportProblem.tsx'
 
 interface TestResultProps {
@@ -61,7 +61,7 @@ export function TestResult({ nodeId, result, wasDone, onRetry }: TestResultProps
             {noted.map(({ question, answer, notes, accepted, place }) => (
               <li key={place} className="noted-answer">
                 <span className="noted-answer-place">{strings.questionNumber(place)}</span>
-                <German className="noted-answer-prompt">{question.prompt}</German>
+                <QuestionPrompt question={question} className="noted-answer-prompt" />
                 <dl>
                   <div className="answer-noted">
                     <dt>{strings.yourAnswer}</dt>
@@ -139,7 +139,7 @@ export function WrongAnswers({ wrong }: { wrong: WrongAnswer[] }) {
         {wrong.map(({ nodeId, question, answer, place }) => (
           <li key={place} className="wrong-answer">
             <span className="wrong-answer-place">{strings.questionNumber(place)}</span>
-            <German className="wrong-answer-prompt">{question.prompt}</German>
+            <QuestionPrompt question={question} className="wrong-answer-prompt" />
             <dl>
               <div className="answer-given">
                 <dt>{strings.yourAnswer}</dt>

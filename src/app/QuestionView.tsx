@@ -4,7 +4,7 @@
  * gets one case in each; nothing else in the test screens knows the types.
  */
 import { type ReactNode, useId } from 'react'
-import type { Question } from '../content-model/index.ts'
+import type { Language, Localised, Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import type { Answer } from '../learning-engine/index.ts'
 import { German } from './German.tsx'
@@ -75,7 +75,53 @@ export function QuestionView({ question, answer, onAnswer }: QuestionViewProps) 
           onType={(text) => onAnswer(typedText(text))}
         />
       )
+    case 'meaning-of-word':
+      return (
+        <Choices
+          instruction={instruction}
+          sentence={question.prompt}
+          // An option is named by its word, so the answer stays the same when the language changes.
+          options={question.options.map((option) => ({ value: option.word, label: <Meaning of={option.meaning} /> }))}
+          chosen={answer}
+          onChoose={onAnswer}
+        />
+      )
+    case 'word-for-meaning':
+      return (
+        <TypedAnswer
+          instruction={instruction}
+          sentence={<Meaning of={question.prompt} />}
+          sentenceIsGerman={false}
+          text={typeof answer === 'string' ? answer : ''}
+          onType={(text) => onAnswer(typedText(text))}
+        />
+      )
   }
+}
+
+/**
+ * What a word means, for the learner who reads this page: the meaning in
+ * English or Persian, or the German definition for a learner who reads in
+ * German.
+ */
+export function Meaning({ of }: { of: Localised }) {
+  const { language } = useLanguage()
+  return language === 'de' ? <German>{of.de}</German> : <bdi>{of[language]}</bdi>
+}
+
+/** What a question asks about, as a result quotes it: German, or for a word asked for in German its meaning. */
+export function QuestionPrompt({ question, className }: { question: Question; className?: string }) {
+  if (typeof question.prompt === 'string') return <German className={className}>{question.prompt}</German>
+  return (
+    <span className={className}>
+      <Meaning of={question.prompt} />
+    </span>
+  )
+}
+
+/** The same as plain text, in one language. */
+export function promptText(question: Question, language: Language): string {
+  return typeof question.prompt === 'string' ? question.prompt : question.prompt[language]
 }
 
 /** What a field holds, as an answer. A field with nothing but spaces in it is no answer yet. */
@@ -107,9 +153,15 @@ export function AnswerText({ question, answer }: { question: Question; answer: A
     case 'gap-fill':
     case 'typed-answer':
     case 'typed-gap-fill':
+    case 'word-for-meaning':
       return <German>{String(answer)}</German>
     case 'true-false':
       return answer === true ? strings.sentenceCorrect : strings.sentenceNotCorrect
+    case 'meaning-of-word': {
+      // The answer names a word of the node; the learner chose, and reads, its meaning.
+      const chosen = question.options.find((option) => option.word === answer)
+      return chosen ? <Meaning of={chosen.meaning} /> : '–'
+    }
   }
 }
 

@@ -1,5 +1,6 @@
 import type { Language, Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
+import { promptText } from './QuestionView.tsx'
 
 const NEW_ISSUE = 'https://github.com/eqaderi/deutsch-tree/issues/new'
 
@@ -12,7 +13,7 @@ export function reportProblemUrl(nodeId: string, question: Question, language: L
   const body = [
     `Topic: ${nodeId}`,
     `Question: ${question.id}`,
-    `Prompt: ${question.prompt}`,
+    `Prompt: ${promptText(question, language)}`,
     `Language of the page: ${language}`,
     '',
     'What is wrong with this question?',

@@ -17,6 +17,31 @@ export type Localised<T = string> = Record<Language, T>
 export const NODE_KINDS = ['grammar', 'vocabulary', 'phrases', 'exam-part'] as const
 export type NodeKind = (typeof NODE_KINDS)[number]
 
+/** What kind of word a vocabulary entry is. */
+export const WORD_CLASSES = [
+  'noun',
+  'verb',
+  'adjective',
+  'adverb',
+  'pronoun',
+  'article',
+  'preposition',
+  'conjunction',
+  'numeral',
+  'particle',
+  'interjection',
+  'phrase',
+  'abbreviation',
+] as const
+export type WordClass = (typeof WORD_CLASSES)[number]
+
+export const ARTICLES = ['der', 'die', 'das'] as const
+export type Article = (typeof ARTICLES)[number]
+
+/** What a noun with one number only has. */
+export const NOUN_NUMBERS = ['singular-only', 'plural-only'] as const
+export type NounNumber = (typeof NOUN_NUMBERS)[number]
+
 export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
 
@@ -569,12 +594,84 @@ export interface TypedGapFillQuestion extends QuestionBase {
   gap: { before: string; after: string }
 }
 
+/**
+ * Vocabulary, from German: the learner reads a word and chooses what it
+ * means. The prompt is the word as it is learned ("die Mutter"). Made from
+ * the words of a vocabulary node, never written in a node file.
+ */
+export interface MeaningOfWordQuestion extends QuestionBase {
+  type: 'meaning-of-word'
+  /** The headword the question is about. An attempt asks about a word once while it has other words to ask. */
+  word: string
+  /**
+   * What the learner chooses from, each the meaning of one word of the node:
+   * `en` and `fa` in that language, `de` the German definition. `word` names
+   * the option whatever the language.
+   */
+  options: Array<{ word: string; meaning: Localised }>
+  /** The `word` of the one right option. */
+  answer: string
+}
+
+/**
+ * Vocabulary, into German: the learner reads a meaning and types the word, a
+ * noun with its article. Made from the words of a vocabulary node.
+ */
+export interface WordForMeaningQuestion extends Omit<QuestionBase, 'prompt'> {
+  type: 'word-for-meaning'
+  /** The headword the question is about. */
+  word: string
+  /** The meaning in the learner's language; `de` is the German definition. */
+  prompt: Localised
+  /** Every accepted answer, as in a typed answer. The first is the word as it is learned. */
+  answers: string[]
+}
+
 export type Question =
   | MultipleChoiceQuestion
   | GapFillQuestion
   | TrueFalseQuestion
   | TypedAnswerQuestion
   | TypedGapFillQuestion
+  | MeaningOfWordQuestion
+  | WordForMeaningQuestion
+
+/** One word of a vocabulary node, as its page shows it and as its test asks it. */
+export interface VocabularyWord {
+  /** The headword, without article: "Mutter", "kochen". */
+  word: string
+  class: WordClass
+  /** Of a noun. */
+  article?: Article
+  /** Of a noun: its plural, without article ("Mütter"). Absent when the noun has one number only. */
+  plural?: string
+  /** Of a noun that has one number only. */
+  number?: NounNumber
+  /** The level the word belongs to; a node may hold words of several. */
+  level: string
+  /** What the word means, in the learner's language. A learner who reads in German gets the definition. */
+  meaning: { en: string; fa: string }
+  /** What the word means, in simple German that does not use the word itself. */
+  definition: string
+  example: Example
+  /** Other German that is right when the learner is asked for this word, written exactly ("die Mama"). */
+  alsoAccepted: string[]
+  /** Words of the same node that mean nearly the same; their meaning is never a wrong option for this word. */
+  tooCloseTo: string[]
+}
+
+/**
+ * A word as it is learned, said and asked for: a noun with its article
+ * ("die Mutter"), any other word on its own ("kochen").
+ */
+export function asLearned(word: Pick<VocabularyWord, 'word' | 'article'>): string {
+  return word.article ? `${word.article} ${word.word}` : word.word
+}
+
+/** The plural of a noun as it is learned ("die Mütter"), or undefined for a word without one. */
+export function pluralAsLearned(word: Pick<VocabularyWord, 'plural'>): string | undefined {
+  return word.plural ? `die ${word.plural}` : undefined
+}
 
 export interface GrammarContent {
   explanations: Localised<{ rule: RichText }>
