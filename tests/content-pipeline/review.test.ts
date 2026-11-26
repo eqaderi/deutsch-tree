@@ -19,9 +19,10 @@ const RIGHT = {
   q10: 'spielt',
   q11: 'koche',
   q12: 'kochst',
-  q13: 'kocht',
-  q14: 'kochen',
-  q15: 'kocht',
+  // True/false: is the sentence correct German?
+  q13: false,
+  q14: true,
+  q15: false,
 }
 const BY = { reviewer: 'Second fixture reviewer', date: '2026-02-03' }
 
@@ -46,7 +47,10 @@ test('the blind pool holds every question without its answer or its explanation'
       objection: null,
     },
   ])
-  for (const entry of sheet.questions) expect(Object.keys(entry.question).sort()).toEqual(['options', 'prompt', 'type'])
+  for (const entry of sheet.questions) {
+    const shown = entry.question.type === 'true-false' ? ['prompt', 'type'] : ['options', 'prompt', 'type']
+    expect(Object.keys(entry.question).sort()).toEqual(shown)
+  }
   expect(JSON.stringify(sheet)).not.toContain('the ending is')
 })
 

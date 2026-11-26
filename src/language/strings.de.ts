@@ -28,6 +28,7 @@ export const de: Strings = {
   },
   start: 'Start',
   comingSoon: 'Kommt bald',
+  done: 'Fertig',
 
   allTopics: 'Alle Themen',
   rule: 'Regel',
@@ -44,6 +45,28 @@ export const de: Strings = {
 
   backToTopic: 'Zurück zum Thema',
   testTitle: (title) => `Test: ${title}`,
-  questionsInPool: (count) => (count === 1 ? 'Frage im Pool' : 'Fragen im Pool'),
-  testNotReady: 'Tests gibt es noch nicht. Wir bauen sie gerade.',
+  questionOf: (place, total) => `Frage ${place} von ${total}`,
+  questionNumber: (place) => `Frage ${place}`,
+  instructions: {
+    'multiple-choice': 'Wähle die richtige Antwort.',
+    'gap-fill': 'Welches Wort passt in die Lücke?',
+    'true-false': 'Ist dieser Satz richtiges Deutsch?',
+  },
+  gap: 'Lücke',
+  sentenceCorrect: 'Richtig',
+  sentenceNotCorrect: 'Falsch',
+  next: 'Weiter',
+  checkAnswers: 'Antworten prüfen',
+  reportProblem: 'Problem melden',
+
+  passed: 'Bestanden',
+  notPassed: 'Noch nicht bestanden',
+  ofTotalRight: (total) => `von ${total} richtig`,
+  neededToPass: (passMark, total) => `Du brauchst ${passMark} richtige Antworten von ${total}.`,
+  topicNowDone: 'Dieses Thema ist jetzt fertig.',
+  topicStaysDone: 'Dieses Thema war schon fertig. Es bleibt fertig.',
+  retryAnyTime: 'Du kannst es so oft versuchen, wie du willst. Jeder Test hat neue Fragen.',
+  wrongAnswers: 'Falsche Antworten',
+  yourAnswer: 'Deine Antwort',
+  rightAnswer: 'Richtige Antwort',
 }

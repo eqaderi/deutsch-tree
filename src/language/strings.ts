@@ -1,4 +1,4 @@
-import type { NodeKind } from '../content-model/index.ts'
+import type { NodeKind, Question } from '../content-model/index.ts'
 
 /**
  * Every word the interface shows. Components never hold their own wording;
@@ -34,6 +34,7 @@ export const en = {
   } satisfies Record<NodeKind, string>,
   start: 'Start',
   comingSoon: 'Coming soon',
+  done: 'Done',
 
   allTopics: 'All topics',
   rule: 'Rule',
@@ -50,8 +51,33 @@ export const en = {
 
   backToTopic: 'Back to the topic',
   testTitle: (title: string) => `Test: ${title}`,
-  questionsInPool: (count: number) => (count === 1 ? 'question in the pool' : 'questions in the pool'),
-  testNotReady: 'Tests cannot be taken yet. They are being built.',
+  // A node's test: one question per screen, then the result.
+  questionOf: (place: number, total: number) => `Question ${place} of ${total}`,
+  questionNumber: (place: number) => `Question ${place}`,
+  instructions: {
+    'multiple-choice': 'Choose the right answer.',
+    'gap-fill': 'Choose the word that fits the gap.',
+    'true-false': 'Is this sentence correct German?',
+  } satisfies Record<Question['type'], string>,
+  /** Read out in place of an empty gap. */
+  gap: 'gap',
+  sentenceCorrect: 'Correct',
+  sentenceNotCorrect: 'Not correct',
+  next: 'Next',
+  checkAnswers: 'Check answers',
+  reportProblem: 'Report a problem',
+
+  passed: 'Passed',
+  notPassed: 'Not passed yet',
+  /** Follows the number of right answers, which is shown large: "9 of 10 right". */
+  ofTotalRight: (total: number) => `of ${total} right`,
+  neededToPass: (passMark: number, total: number) => `You need ${passMark} of ${total} right to pass.`,
+  topicNowDone: 'This topic is now done.',
+  topicStaysDone: 'This topic was already done. It stays done.',
+  retryAnyTime: 'You can try as often as you like. Every test draws new questions.',
+  wrongAnswers: 'Wrong answers',
+  yourAnswer: 'Your answer',
+  rightAnswer: 'Right answer',
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */

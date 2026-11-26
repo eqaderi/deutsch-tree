@@ -37,6 +37,8 @@ interface ReviewView<Q> {
  */
 const REVIEW_VIEWS: { [T in QuestionFile['type']]: ReviewView<Extract<QuestionFile, { type: T }>> } = {
   'multiple-choice': keyIn('answer', 'the exact text of the one correct option'),
+  'gap-fill': keyIn('answer', 'the exact text of the one option that fills the gap'),
+  'true-false': keyIn('answer', 'true when the sentence is correct German, false when it holds a mistake (no quotes)'),
 }
 
 /** The view of a type whose key is the field `field`. The reviewer sees every other field except the explanation. */

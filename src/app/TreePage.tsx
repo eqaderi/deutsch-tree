@@ -2,8 +2,10 @@ import { Fragment, use } from 'react'
 import { Link, useSearchParams } from 'react-router'
 import type { NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
+import { isDone } from '../learning-engine/index.ts'
 import { loadIndex } from './content.ts'
 import { KindLabel } from './KindLabel.tsx'
+import { useProgress } from './progress.ts'
 
 /**
  * The tree, in the "route" layout: a strip of levels, then the chosen level as
@@ -76,6 +78,7 @@ export function TreePage() {
 
 function NodeRow({ node }: { node: NodeSummary }) {
   const { language, strings } = useLanguage()
+  const done = isDone(useProgress(), node.id)
   const text = (
     <span className="row-text">
       <span className="row-title">{node.title[language]}</span>
@@ -94,9 +97,9 @@ function NodeRow({ node }: { node: NodeSummary }) {
   }
   return (
     <Link to={`/node/${node.id}`} className="row">
-      <span className="mark" aria-hidden="true" />
+      <span className={done ? 'mark mark-done' : 'mark'} aria-hidden="true" />
       {text}
-      <span className="pill">{strings.start}</span>
+      <span className="pill">{done ? strings.done : strings.start}</span>
     </Link>
   )
 }
