@@ -17,7 +17,7 @@ import { vocabularyCoversTheScopeList } from './vocabulary-covers-the-scope-list
 import { vocabularyMeaningsDiffer } from './vocabulary-meanings-differ.ts'
 
 export type { CheckedNode, ContentCheck, ContentProblem, ContentUnderCheck } from './check.ts'
-export { CHAPTERS_FILE } from './check.ts'
+export { CHAPTERS_FILE, formatPath } from './check.ts'
 
 /** Every content check, in the order their problems appear in the report. */
 export const CHECKS: ContentCheck[] = [

@@ -50,7 +50,7 @@ import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { audioProblems, presentAudio } from './audio.ts'
 import { checkpointData } from './checkpoint-data.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
-import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
+import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem, formatPath } from './checks/index.ts'
 import { mixedAwayFrom } from './mix.ts'
 import { compileMockExam, MOCK_EXAMS_JSON, mockExamList, readMockExams } from './mock-exams.ts'
 import { overviewData } from './overview-data.ts'
@@ -602,11 +602,4 @@ function richText(source: string): RichText {
     .split(/\*([^*]+)\*/)
     .map((part, index) => (index % 2 === 1 ? { de: part } : part))
     .filter((part) => part !== '')
-}
-
-function formatPath(pathParts: PropertyKey[]): string | undefined {
-  if (pathParts.length === 0) return undefined
-  return pathParts
-    .map((part, index) => (typeof part === 'number' ? `[${part}]` : index === 0 ? String(part) : `.${String(part)}`))
-    .join('')
 }

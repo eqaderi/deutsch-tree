@@ -32,7 +32,7 @@ import {
   type RichText,
 } from '../content-model/index.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
-import type { ContentProblem } from './checks/index.ts'
+import { type ContentProblem, formatPath } from './checks/index.ts'
 import { itemTaskProblems } from './checks/practice-task-fits-its-part.ts'
 import { reviewProblem } from './review.ts'
 
@@ -211,11 +211,4 @@ export function compileMockExam(
 /** The list of mock exams that the app fetches first: everything but what is taken. */
 export function mockExamList(exams: readonly MockExam[]): MockExamList {
   return { exams: exams.map(({ content: _content, ...summary }): MockExamSummary => summary) }
-}
-
-function formatPath(pathParts: PropertyKey[]): string | undefined {
-  if (pathParts.length === 0) return undefined
-  return pathParts
-    .map((part, index) => (typeof part === 'number' ? `[${part}]` : index === 0 ? String(part) : `.${String(part)}`))
-    .join('')
 }
