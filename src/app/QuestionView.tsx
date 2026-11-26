@@ -87,7 +87,7 @@ export function AnswerText({ question, answer }: { question: Question; answer: A
     case 'true-false':
       return answer === true ? strings.sentenceCorrect : strings.sentenceNotCorrect
     case 'find-error':
-      return <German>{wordsOf(question)[Number(answer)] ?? '–'}</German>
+      return <German>{(typeof answer === 'number' && wordsOf(question)[answer]) || '–'}</German>
     case 'word-order':
       return <German>{sentenceOf(question, answer)}</German>
     case 'matching': {
