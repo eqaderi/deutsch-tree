@@ -25,6 +25,7 @@ import {
   type RichText,
 } from '../content-model/index.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
+import { searchData } from './search-data.ts'
 
 export type { ContentProblem }
 
@@ -116,6 +117,7 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
             nodes: nodes.map(summarise),
           },
           nodes,
+          search: searchData(nodes),
         }
       : null,
   }
@@ -126,6 +128,11 @@ export function bundleFiles(bundle: ContentBundle): Array<{ path: string; json: 
   return [
     { path: 'index.json', json: JSON.stringify(bundle.index) },
     ...bundle.nodes.map((node) => ({ path: `nodes/${node.id}.json`, json: JSON.stringify(node) })),
+    // Fetched only when the learner opens search.
+    ...LANGUAGES.map((language) => ({
+      path: `search/${language}.json`,
+      json: JSON.stringify(bundle.search[language]),
+    })),
   ]
 }
 

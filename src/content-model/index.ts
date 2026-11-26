@@ -367,7 +367,33 @@ export interface ContentIndex {
   nodes: NodeSummary[]
 }
 
+/**
+ * What search knows about one node beyond its title, in one language. It is
+ * the same for every kind of node: a list of pieces of text, with no field
+ * that only a grammar node has.
+ */
+export interface SearchEntry {
+  /** Id of the node that a result opens. */
+  node: string
+  /**
+   * The pieces of the node's content, in the order of its page: a rule, a
+   * table row, an example with its translation, a word with its meaning.
+   * Search looks through them, and a result shows the piece that matched.
+   */
+  passages: RichText[]
+}
+
+/**
+ * `search/<language>.json`: everything search looks through besides the
+ * titles, which the index already has. A node with nothing written yet has
+ * no entry. The app fetches it when the learner opens search, never before.
+ */
+export interface SearchData {
+  entries: SearchEntry[]
+}
+
 export interface ContentBundle {
   index: ContentIndex
   nodes: CompiledNode[]
+  search: Localised<SearchData>
 }
