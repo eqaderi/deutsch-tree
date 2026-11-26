@@ -1,0 +1,38 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-shops-buying
+kind: vocabulary
+level: A2
+chapter: a2-words-home-food
+order: 6
+status: coming-soon
+title:
+  en: "Shops and buying"
+  fa: "مغازه‌ها و خرید کردن"
+  de: "Geschäfte und Kaufen"
+words:
+  - word: Supermarkt
+  - word: Kaufhaus
+  - word: Einkaufszentrum
+  - word: Markt
+  - word: Flohmarkt
+  - word: Produkt
+  - word: Qualität
+  - word: Ermäßigung
+  - word: preiswert
+  - word: kostenlos
+  - word: ausgeben
+  - word: sparen
+  - word: Kredit
+  - word: Geldbörse
+  - word: wechseln
+  - word: tauschen
+  - word: leihen
+  - word: liefern
+  - word: Paket
+  - word: Service
+  - word: Kosmetik
+  - word: Parfüm
+  - word: Creme
+  - word: Friseur
+  - word: pro

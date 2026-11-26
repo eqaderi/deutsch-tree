@@ -179,6 +179,14 @@
     fa: "گذشته: همهٔ فعل‌ها"
     de: "Vergangenheit: alle Verben"
 
+- id: a2-words-people
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: people, feelings and opinions"
+    fa: "واژه‌ها: آدم‌ها، احساس‌ها و نظرها"
+    de: "Wörter: Menschen, Gefühle und Meinungen"
+
 - id: a2-dativ-objects
   level: A2
   kind: grammar
@@ -186,6 +194,14 @@
     en: "*Dativ*, objects and their order"
     fa: "*Dativ*، مفعول‌ها و ترتیب آن‌ها"
     de: "Dativ, Objekte und ihre Reihenfolge"
+
+- id: a2-words-home-food
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: home, food and clothes"
+    fa: "واژه‌ها: خانه، خوراک و لباس"
+    de: "Wörter: Wohnen, Essen und Kleidung"
 
 - id: a2-articles-pronouns
   level: A2
@@ -211,6 +227,14 @@
     fa: "فعل‌های انعکاسی و فعل‌های دارای حرف اضافه"
     de: "Reflexive Verben und Verben mit Präpositionen"
 
+- id: a2-words-free-time
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: free time and media"
+    fa: "واژه‌ها: اوقات فراغت و رسانه‌ها"
+    de: "Wörter: Freizeit und Medien"
+
 - id: a2-prepositions
   level: A2
   kind: grammar
@@ -219,6 +243,14 @@
     fa: "حرف‌های اضافه و جهت‌ها"
     de: "Präpositionen und Richtungen"
 
+- id: a2-words-health-town
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: health, town and nature"
+    fa: "واژه‌ها: سلامت، شهر و طبیعت"
+    de: "Wörter: Gesundheit, Stadt und Natur"
+
 - id: a2-polite-forms
   level: A2
   kind: grammar
@@ -226,6 +258,14 @@
     en: "Polite requests and advice (*Konjunktiv II*)"
     fa: "درخواست مؤدبانه و توصیه (*Konjunktiv II*)"
     de: "Höfliche Bitten und Ratschläge (Konjunktiv II)"
+
+- id: a2-words-school-work
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: school and work"
+    fa: "واژه‌ها: مدرسه و کار"
+    de: "Wörter: Schule und Arbeit"
 
 - id: a2-adverbs
   level: A2
@@ -242,6 +282,14 @@
     en: "Subordinate clauses"
     fa: "جمله‌های پیرو"
     de: "Nebensätze"
+
+- id: a2-words-small-words
+  level: A2
+  kind: vocabulary
+  title:
+    en: "Words: time, connecting words and amounts"
+    fa: "واژه‌ها: زمان، واژه‌های ربط و مقدار"
+    de: "Wörter: Zeit, Verbindungswörter und Mengen"
 
 - id: a2-werden-lassen-passive
   level: A2

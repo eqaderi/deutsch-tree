@@ -1,0 +1,32 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-computer-phone
+kind: vocabulary
+level: A2
+chapter: a2-words-free-time
+order: 4
+status: coming-soon
+title:
+  en: "Computer and phone"
+  fa: "کامپیوتر و تلفن"
+  de: "Computer und Telefon"
+words:
+  - word: Blog
+  - word: E-Book
+  - word: Homepage
+  - word: Webseite
+  - word: Link
+  - word: Datei
+  - word: Passwort
+  - word: PC
+  - word: Laptop
+  - word: Tablet
+  - word: Mobiltelefon
+  - word: SMS
+  - word: Mailbox
+  - word: chatten
+  - word: surfen
+  - word: speichern
+  - word: herunterladen
+  - word: online
+  - word: austauschen

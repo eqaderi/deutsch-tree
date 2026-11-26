@@ -1,0 +1,32 @@
+# Vocabulary theme of A2. Its words are waiting for the learner's approval:
+# docs/approvals/vocabulary-themes.md.
+id: vocabulary-sport
+kind: vocabulary
+level: A2
+chapter: a2-words-free-time
+order: 1
+status: coming-soon
+title:
+  en: "Sport and games"
+  fa: "ورزش و بازی"
+  de: "Sport und Spiele"
+words:
+  - word: Ball
+  - word: Basketball
+  - word: Volleyball
+  - word: Tennis
+  - word: Ski
+  - word: Mannschaft
+  - word: Team
+  - word: Training
+  - word: trainieren
+  - word: joggen
+  - word: Sportplatz
+  - word: Spiel
+  - word: Wettbewerb
+  - word: verlieren
+  - word: Fan
+  - word: Club
+  - word: Ziel
+  - word: schaffen
+  - word: Punkt
