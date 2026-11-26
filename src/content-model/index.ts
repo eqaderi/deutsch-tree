@@ -224,6 +224,136 @@ const typedGapFillQuestion = z
   })
   .superRefine(hasOneGap)
 
+/**
+ * A word of a German sentence: letters and digits, with a hyphen or an
+ * apostrophe inside it. Whatever stands between two words (spaces, commas,
+ * the full stop) belongs to neither.
+ */
+export const WORD = /[\p{L}\p{N}]+(?:[-'’][\p{L}\p{N}]+)*/gu
+
+/** The prompt is a German sentence with one wrong word; the learner picks that word. */
+const findErrorQuestion = z
+  .strictObject({
+    ...questionBase,
+    type: z.literal('find-error'),
+    /** The one wrong word, written as it stands in the sentence. */
+    answer: answerText('find-error'),
+  })
+  .superRefine((value, ctx) => {
+    const matches = (value.prompt.match(WORD) ?? []).filter((word) => word === value.answer).length
+    if (matches === 1) return
+    ctx.addIssue({
+      code: 'custom',
+      path: ['answer'],
+      message:
+        matches === 0
+          ? `no correct answer: "${value.answer}" is not a word of the sentence`
+          : `${matches} correct answers: "${value.answer}" is in the sentence ${matches} times`,
+    })
+  })
+
+/**
+ * A question type whose prompt the author does not write: the pipeline builds
+ * it from what the question shows.
+ */
+const questionWithoutPrompt = { id: questionBase.id, explanation: questionBase.explanation }
+
+/** The marks that may close the sentence of a word ordering question. */
+export const SENTENCE_ENDS = ['.', '?', '!'] as const
+
+const NOT_ORDERS = 'must be a list of orders, each one a list of the pieces, such as [[wo, wohnst, du]]'
+
+/** One order of the pieces of a word ordering question. */
+const piecesInOrder = z.array(text).min(3, 'needs at least 3 pieces: with fewer there is nothing to put in order')
+
+/**
+ * Every right order of a word ordering question. One order written without
+ * the list around it is the likely slip, so the shape is looked at first and
+ * gets one message.
+ */
+const rightOrders = z
+  .custom<unknown[][]>((input) => Array.isArray(input) && input.every(Array.isArray), {
+    error: ({ input }) => (input === undefined ? NO_ACCEPTED_ANSWER : NOT_ORDERS),
+  })
+  .pipe(z.array(piecesInOrder).min(1, NO_ACCEPTED_ANSWER))
+
+/**
+ * The pieces of a German sentence, which the learner puts in order. A piece
+ * is one word or several. Like a typed question it lists every accepted
+ * answer: where German allows more than one order of the pieces, each right
+ * order is listed, and the first one is shown as the right answer.
+ */
+const wordOrderQuestion = z
+  .strictObject({
+    ...questionWithoutPrompt,
+    type: z.literal('word-order'),
+    /** Every right order. A piece is written as it stands inside a sentence (no capital for the first). */
+    answers: rightOrders,
+    /** The mark that closes the sentence. The app adds it, and the capital letter at the start. */
+    end: z.enum(SENTENCE_ENDS, { error: 'must be ".", "?" or "!"' }).default('.'),
+  })
+  .superRefine((value, ctx) => {
+    const [first = []] = value.answers
+    value.answers.forEach((order, index) => {
+      if (index === 0) return
+      const listedTwice = value.answers.slice(0, index).some((earlier) => sameList(earlier, order))
+      const problem = notTheSamePieces(first, order) ?? (listedTwice ? 'is listed twice' : undefined)
+      if (problem) ctx.addIssue({ code: 'custom', path: ['answers', index], message: problem })
+    })
+  })
+
+function sameList(a: readonly string[], b: readonly string[]): boolean {
+  return a.length === b.length && a.every((item, index) => item === b[index])
+}
+
+/** Why `order` is not a rearrangement of `pieces`, or undefined when it is one. */
+function notTheSamePieces(pieces: readonly string[], order: readonly string[]): string | undefined {
+  const must = 'must be the pieces of the first order in another order'
+  const left = [...pieces]
+  for (const piece of order) {
+    const index = left.indexOf(piece)
+    if (index === -1) {
+      return `${must}: "${piece}" is ${pieces.includes(piece) ? 'there too often' : 'not one'}`
+    }
+    left.splice(index, 1)
+  }
+  return left.length > 0 ? `${must}: "${left[0]}" is missing` : undefined
+}
+
+const NOT_PAIRS = 'must be the pairs, each one written as [item, partner]'
+
+/**
+ * Pairs of German: the learner finds the partner of each item. An item has
+ * one partner and a partner fits one item, so only one matching is right.
+ */
+const matchingQuestion = z
+  .strictObject({
+    ...questionWithoutPrompt,
+    type: z.literal('matching'),
+    /** The pairs, each one as [item, partner]. The app mixes the partners. */
+    answer: z
+      .array(z.tuple([text, text], { error: NOT_PAIRS }), {
+        error: ({ input }) => (input === undefined ? 'no correct answer: the question states none' : NOT_PAIRS),
+      })
+      .min(3, 'needs at least 3 pairs: with fewer there is nothing to match'),
+  })
+  .superRefine((value, ctx) => {
+    value.answer.forEach(([item, partner], index) => {
+      // Reported once, at the last pair that repeats it.
+      const later = value.answer.slice(index + 1)
+      const items = value.answer.filter(([other]) => other === item).length
+      if (items > 1 && !later.some(([other]) => other === item)) {
+        const message = `${items} correct answers: "${item}" has ${items} partners`
+        ctx.addIssue({ code: 'custom', path: ['answer', index], message })
+      }
+      const partners = value.answer.filter(([, other]) => other === partner).length
+      if (partners > 1 && !later.some(([, other]) => other === partner)) {
+        const message = `${partners} correct answers: "${partner}" is the partner of ${partners} items`
+        ctx.addIssue({ code: 'custom', path: ['answer', index], message })
+      }
+    })
+  })
+
 /** Later question types join this union under their own `type`, each with its answer rule. */
 const question = z.discriminatedUnion('type', [
   multipleChoiceQuestion,
@@ -231,6 +361,9 @@ const question = z.discriminatedUnion('type', [
   trueFalseQuestion,
   typedAnswerQuestion,
   typedGapFillQuestion,
+  findErrorQuestion,
+  wordOrderQuestion,
+  matchingQuestion,
 ])
 
 /**
@@ -420,6 +553,83 @@ export const chaptersFileSchema = z.array(chapter).superRefine((chapters, ctx) =
 export type ChapterEntry = z.infer<typeof chapter>
 
 // ---------------------------------------------------------------------------
+// Official mock exams (source): official-mock-exams.yaml
+// ---------------------------------------------------------------------------
+
+/** Who a set was written for. A youth set has the same format and scoring as an adult set. */
+export const EXAM_AUDIENCES = ['adults', 'youth'] as const
+export type ExamAudience = (typeof EXAM_AUDIENCES)[number]
+
+/**
+ * What a link leads to: the exam papers (a PDF), the listening recordings, or
+ * a version of the exam that is worked through online.
+ */
+export const EXAM_LINK_KINDS = ['papers', 'audio', 'online'] as const
+export type ExamLinkKind = (typeof EXAM_LINK_KINDS)[number]
+
+const pageNumber = z.number().int('must be a whole number').positive()
+
+const examLink = z.strictObject({
+  kind: z.enum(EXAM_LINK_KINDS),
+  /** The app links to this address and never requests it. */
+  url: z.string().regex(/^https:\/\/[^\s/]+\.[^\s/]+(\/\S*)?$/, 'must be a full address that starts with https://'),
+  /** One line for the learner, for example where on the page the set is found. */
+  note: localised.optional(),
+  /**
+   * The pages of a PDF that hold the candidate sheets. The pages after them
+   * hold the answers; the learner is told to stay inside these.
+   */
+  candidatePages: z
+    .strictObject({ first: pageNumber, last: pageNumber })
+    .superRefine((pages, ctx) => {
+      if (pages.last < pages.first) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['last'],
+          message: `must not be before the first page (${pages.first})`,
+        })
+      }
+    })
+    .optional(),
+  /** The day a person last opened the link and saw what it promises. Absent: nobody has yet. Not shown. */
+  checked: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, 'must be a date such as 2026-11-26')
+    .optional(),
+})
+
+/**
+ * One official mock exam: a full set with all four modules, published by the
+ * exam's own institute. The app links to it; it never hosts or copies it.
+ */
+const officialMockExam = z.strictObject({
+  /** Stable for ever: the scores a learner records are kept under it. */
+  id: z
+    .string()
+    .regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "goethe-b1-modellsatz"'),
+  /** The set's own German name, shown unchanged in every language. */
+  title: text,
+  /** Who publishes it, shown unchanged in every language. */
+  publisher: text,
+  audience: z.enum(EXAM_AUDIENCES),
+  /** Whether 90 or more in every module on this set counts as one of the two the readiness rule asks for. */
+  countsTowardReadiness: z.boolean(),
+  links: z.array(examLink).min(1, 'needs at least one link: the app only links to an official mock exam'),
+})
+
+export const officialMockExamsFileSchema = z.array(officialMockExam).superRefine((exams, ctx) => {
+  const seen = new Set<string>()
+  exams.forEach(({ id }, index) => {
+    if (seen.has(id)) {
+      ctx.addIssue({ code: 'custom', path: [index, 'id'], message: `duplicated exam id: "${id}"` })
+    }
+    seen.add(id)
+  })
+})
+
+export type OfficialMockExamEntry = z.infer<typeof officialMockExam>
+
+// ---------------------------------------------------------------------------
 // Compiled bundle (what the app loads)
 // ---------------------------------------------------------------------------
 
@@ -503,6 +713,37 @@ export interface TrueFalseQuestion extends QuestionBase {
   answer: boolean
 }
 
+/** The prompt is a German sentence with one wrong word; the learner picks that word. */
+export interface FindErrorQuestion extends QuestionBase {
+  type: 'find-error'
+  /** The prompt cut into its words and what stands between them, so the app can offer each word. */
+  parts: Array<string | { word: string }>
+  /** The place of the wrong word among the words of `parts`, counted from 0. */
+  answer: number
+}
+
+/** The learner puts the pieces of a German sentence in order. The prompt is the mixed pieces. */
+export interface WordOrderQuestion extends QuestionBase {
+  type: 'word-order'
+  /** The pieces as the learner first sees them: mixed, and in no right order. */
+  pieces: string[]
+  /** The mark that closes the sentence. */
+  end: (typeof SENTENCE_ENDS)[number]
+  /** Every right order of the pieces. The first is the one a result shows as the right answer. */
+  answers: string[][]
+}
+
+/** The learner finds the partner of each item. The prompt is the items. */
+export interface MatchingQuestion extends QuestionBase {
+  type: 'matching'
+  /** The items that each get a partner, in the order the author wrote them. */
+  left: string[]
+  /** The partners to choose from, mixed. No two are the same. */
+  right: string[]
+  /** The partner of each item of `left`, in the same order. */
+  answer: string[]
+}
+
 /**
  * The learner types the answer. `answers` lists every accepted answer; the
  * first is the one a result shows as the right answer.
@@ -526,6 +767,9 @@ export type Question =
   | TrueFalseQuestion
   | TypedAnswerQuestion
   | TypedGapFillQuestion
+  | FindErrorQuestion
+  | WordOrderQuestion
+  | MatchingQuestion
 
 export interface GrammarContent {
   explanations: Localised<{ rule: RichText }>
@@ -572,7 +816,70 @@ export interface ContentIndex {
   nodes: NodeSummary[]
 }
 
+/** A link of an official mock exam as the app shows it. */
+export interface OfficialExamLink {
+  kind: ExamLinkKind
+  url: string
+  note?: Localised<RichText>
+  /** The pages of the PDF that hold the candidate sheets; the answers come after them. */
+  candidatePages?: { first: number; last: number }
+}
+
+/** An official mock exam as the app lists it. */
+export interface OfficialMockExam {
+  id: string
+  /** German. */
+  title: string
+  publisher: string
+  audience: ExamAudience
+  countsTowardReadiness: boolean
+  links: OfficialExamLink[]
+}
+
+/** The official mock exams, in the order the list is written. */
+export interface OfficialMockExams {
+  exams: OfficialMockExam[]
+}
+
+/**
+ * What search knows about one node beyond its title, in one language. It is
+ * the same for every kind of node: a list of pieces of text, with no field
+ * that only a grammar node has.
+ */
+export interface SearchEntry {
+  /** Id of the node that a result opens. */
+  node: string
+  /**
+   * The pieces of the node's content, in the order of its page: a rule, a
+   * table row, an example with its translation, a word with its meaning.
+   * Search looks through them, and a result shows the piece that matched.
+   */
+  passages: RichText[]
+}
+
+/**
+ * `search/<language>.json`: everything search looks through besides the
+ * titles, which the index already has. A node with nothing written yet has
+ * no entry. The app fetches it when the learner opens search, never before.
+ */
+export interface SearchData {
+  entries: SearchEntry[]
+}
+
+/**
+ * `overview.json`: every grammar table, for the "all grammar at a glance"
+ * page, in curriculum order. A node without a table has no entry. The page
+ * takes each node's title, level and chapter from the index. The app fetches
+ * this file when the learner opens that page, never before.
+ */
+export interface GrammarOverview {
+  tables: Array<{ node: string; table: GrammarTable }>
+}
+
 export interface ContentBundle {
   index: ContentIndex
   nodes: CompiledNode[]
+  officialMockExams: OfficialMockExam[]
+  search: Localised<SearchData>
+  overview: GrammarOverview
 }

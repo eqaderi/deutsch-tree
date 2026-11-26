@@ -5,6 +5,7 @@ import { useLanguage } from '../language/index.tsx'
 import { isDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
 import { German, plainText, RichText } from './German.tsx'
+import { GrammarTableView } from './GrammarTableView.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
 import { PhraseSections } from './PhraseSections.tsx'
@@ -93,31 +94,7 @@ function GrammarSections({ content }: { content: GrammarContent }) {
       </Panel>
 
       <Panel id="section-table" heading={strings.table}>
-        <div className="table-scroll">
-          {/* The rows are German, so the table reads left to right in every language. */}
-          <table dir="ltr">
-            <thead>
-              <tr>
-                {content.table.columns.map((column, index) => (
-                  <th key={index} scope="col">
-                    <bdi>{column[language]}</bdi>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {content.table.rows.map((row, rowIndex) => (
-                <tr key={rowIndex}>
-                  {row.map((cell, cellIndex) => (
-                    <td key={cellIndex}>
-                      <German>{cell}</German>
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <GrammarTableView table={content.table} />
       </Panel>
 
       <Panel id="section-examples" heading={strings.examples}>

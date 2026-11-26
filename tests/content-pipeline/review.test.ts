@@ -2,28 +2,10 @@ import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { blindPool, type ReviewSheet, recordReview } from '../../src/content-pipeline/review.ts'
+import { blindPool, recordReview } from '../../src/content-pipeline/review.ts'
 import { changeNode, fixtureContent, fixtureContentWith, PUBLISHED, withoutReviewRecord } from './fixture.ts'
+import { answered, RIGHT } from './review-sheet.ts'
 
-/** What a careful reviewer answers to the fixture pool. Written out here, not read from the node file. */
-const RIGHT = {
-  q1: 'wohne',
-  q2: 'wohnst',
-  q3: 'wohnt',
-  q4: 'wohnen',
-  q5: 'wohnt',
-  q6: 'lerne',
-  q7: 'lernst',
-  q8: 'lernt',
-  q9: 'spielen',
-  q10: 'spielt',
-  q11: 'koche',
-  q12: 'kochst',
-  // True/false: is the sentence correct German?
-  q13: false,
-  q14: true,
-  q15: false,
-}
 const BY = { reviewer: 'Second fixture reviewer', date: '2026-02-03' }
 
 test('the blind pool holds every question without its answer or its explanation', async () => {
@@ -47,9 +29,16 @@ test('the blind pool holds every question without its answer or its explanation'
       objection: null,
     },
   ])
+  const SHOWN: Record<string, string[]> = {
+    'multiple-choice': ['options', 'prompt', 'type'],
+    'gap-fill': ['options', 'prompt', 'type'],
+    'true-false': ['prompt', 'type'],
+    'find-error': ['prompt', 'type'],
+    'word-order': ['end', 'pieces', 'type'],
+    matching: ['left', 'right', 'type'],
+  }
   for (const entry of sheet.questions) {
-    const shown = entry.question.type === 'true-false' ? ['prompt', 'type'] : ['options', 'prompt', 'type']
-    expect(Object.keys(entry.question).sort()).toEqual(shown)
+    expect(Object.keys(entry.question).sort()).toEqual(SHOWN[String(entry.question.type)])
   }
   expect(JSON.stringify(sheet)).not.toContain('the ending is')
 })
@@ -178,16 +167,4 @@ test('a sheet for another node is refused', async () => {
 /** The fixture content as it is before any review: the published node has no review record. */
 function unreviewedFixture(): Promise<string> {
   return fixtureContentWith({ [PUBLISHED]: withoutReviewRecord })
-}
-
-/** The sheet as a reviewer hands it back. */
-function answered(sheet: ReviewSheet, answers: Record<string, unknown>, objections: Record<string, string> = {}) {
-  return {
-    ...sheet,
-    questions: sheet.questions.map((entry) => ({
-      ...entry,
-      answer: answers[entry.id] ?? null,
-      objection: objections[entry.id] ?? null,
-    })),
-  }
 }

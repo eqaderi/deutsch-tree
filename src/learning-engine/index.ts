@@ -32,10 +32,13 @@ export function passMark(attemptSize: number): number {
 /**
  * What a learner gave for one question: the chosen option for multiple choice
  * and gap fill, true or false for a true/false question, the typed text for
- * a typed answer and a typed gap fill. A question type with another kind of
- * answer adds it here and gets a case in `checkAnswer`.
+ * a typed answer and a typed gap fill, the place of the picked word for find
+ * the error, the pieces placed so far (in their order) for word ordering, the
+ * partner chosen for each item (null where none is chosen yet) for matching.
+ * A question type with another kind of answer adds it here and gets a case
+ * in `checkAnswer`, `rightAnswer` and `isAnswered`.
  */
-export type Answer = string | boolean
+export type Answer = string | boolean | number | Array<string | null>
 
 export interface AnswerCheck {
   correct: boolean
@@ -53,10 +56,15 @@ export function checkAnswer(question: Question, answer: Answer | undefined): Ans
     case 'multiple-choice':
     case 'gap-fill':
     case 'true-false':
+    case 'find-error':
       return { correct: answer === question.answer, notes: [] }
     case 'typed-answer':
     case 'typed-gap-fill':
       return typeof answer === 'string' ? checkTyped(answer, question.answers) : wrong()
+    case 'word-order':
+      return { correct: question.answers.some((order) => sameList(order, answer)), notes: [] }
+    case 'matching':
+      return { correct: sameList(question.answer, answer), notes: [] }
   }
 }
 
@@ -69,12 +77,41 @@ export function rightAnswer(question: Question): Answer {
     case 'multiple-choice':
     case 'gap-fill':
     case 'true-false':
+    case 'find-error':
+    case 'matching':
       return question.answer
     case 'typed-answer':
     case 'typed-gap-fill':
       // The content model guarantees at least one accepted answer.
       return question.answers[0] ?? ''
+    case 'word-order':
+      return question.answers[0] ?? []
   }
+}
+
+/**
+ * Has the learner given a whole answer, so that the test may move on? An
+ * answer that is built in steps is not whole until its last step.
+ */
+export function isAnswered(question: Question, answer: Answer | undefined): boolean {
+  switch (question.type) {
+    case 'multiple-choice':
+    case 'gap-fill':
+    case 'true-false':
+    case 'find-error':
+    case 'typed-answer':
+    case 'typed-gap-fill':
+      return answer !== undefined
+    case 'word-order':
+      return Array.isArray(answer) && answer.length === question.pieces.length
+    case 'matching':
+      return Array.isArray(answer) && question.left.every((_, index) => typeof answer[index] === 'string')
+  }
+}
+
+/** Is `answer` a list with exactly the items of `list`, in the same order? */
+function sameList(list: readonly unknown[], answer: Answer | undefined): boolean {
+  return Array.isArray(answer) && answer.length === list.length && list.every((item, index) => item === answer[index])
 }
 
 /**
@@ -202,10 +239,15 @@ export interface NodeProgress {
  */
 export interface Progress {
   nodes: Record<string, NodeProgress>
+  /**
+   * The module scores the learner recorded for official mock exams, by exam
+   * identifier. An exam with nothing recorded has no entry.
+   */
+  officialExams: Record<string, ModuleScores>
 }
 
 export function emptyProgress(): Progress {
-  return { nodes: {} }
+  return { nodes: {}, officialExams: {} }
 }
 
 export function nodeProgress(progress: Progress, nodeId: string): NodeProgress {
@@ -296,6 +338,133 @@ export function doneCount(progress: Progress): number {
  */
 export function hasProgress(progress: Progress): boolean {
   return Object.values(progress).some((field) => Object.keys(field).length > 0)
+}
+
+// ---------------------------------------------------------------------------
+// Official mock exams and readiness
+// ---------------------------------------------------------------------------
+
+/** The four modules of the Goethe B1 exam, in the order of the exam. */
+export const EXAM_MODULES = ['reading', 'listening', 'writing', 'speaking'] as const
+export type ExamModule = (typeof EXAM_MODULES)[number]
+
+/**
+ * The scores of one mock exam: points out of 100 for each module. A module
+ * with no score was not recorded yet. The learner types these in, and they
+ * are trusted.
+ */
+export type ModuleScores = Partial<Record<ExamModule, number>>
+
+/** Readiness: this score or more in every module… */
+export const READINESS_SCORE = 90
+/** …on this many official mock exams. */
+export const READINESS_EXAMS = 2
+
+/** What the learner recorded for one official mock exam. Empty when nothing was. */
+export function officialExamScores(progress: Progress, examId: string): ModuleScores {
+  return progress.officialExams[examId] ?? {}
+}
+
+/**
+ * The progress after the learner recorded the scores of one official mock
+ * exam. The scores given replace what was recorded for that exam before; a
+ * module left out is "not recorded". Returns new progress.
+ */
+export function recordOfficialExamScores(progress: Progress, examId: string, scores: ModuleScores): Progress {
+  const kept: ModuleScores = {}
+  for (const module of EXAM_MODULES) {
+    const score = scores[module]
+    if (score !== undefined) kept[module] = score
+  }
+  const { [examId]: _before, ...others } = progress.officialExams
+  return { ...progress, officialExams: Object.keys(kept).length > 0 ? { ...others, [examId]: kept } : others }
+}
+
+/** A module is scored in whole points from 0 to this. */
+export const MAXIMUM_SCORE = 100
+
+/** Is this a module score: a whole number from 0 to 100? */
+export function isScore(value: unknown): value is number {
+  return typeof value === 'number' && Number.isInteger(value) && value >= 0 && value <= MAXIMUM_SCORE
+}
+
+/**
+ * What the learner typed into a score field: the score, 'none' for an empty
+ * field (the module is not recorded), or 'invalid' for anything that is not
+ * a whole number from 0 to 100. Persian and Arabic digits are read too.
+ */
+export function readScore(typed: string): number | 'none' | 'invalid' {
+  const text = typed.trim()
+  if (text === '') return 'none'
+  const latin = text
+    .replace(/[۰-۹]/g, (digit) => String(digit.charCodeAt(0) - 0x06f0))
+    .replace(/[٠-٩]/g, (digit) => String(digit.charCodeAt(0) - 0x0660))
+  if (!/^\d{1,4}$/.test(latin)) return 'invalid'
+  const score = Number(latin)
+  return isScore(score) ? score : 'invalid'
+}
+
+/** How one official mock exam stands against the readiness rule. */
+export interface ExamReadiness {
+  id: string
+  /** At least one module score is recorded. */
+  started: boolean
+  /** Every module is recorded at the readiness score or more. */
+  met: boolean
+  /** The modules recorded under the readiness score, in exam order. */
+  below: Array<{ module: ExamModule; score: number }>
+  /** The modules with no score recorded, in exam order. */
+  notRecorded: ExamModule[]
+}
+
+export interface Readiness {
+  /** The learner has reached the target and can book the exam. */
+  ready: boolean
+  /** How many official mock exams must meet the target. */
+  needed: number
+  /** How many do. */
+  met: number
+  /** How many more are needed. 0 when ready. */
+  missing: number
+  /** Every official mock exam, in the order given. */
+  exams: ExamReadiness[]
+}
+
+/** How one official mock exam stands, from what the learner recorded for it. */
+export function examStanding(progress: Progress, examId: string): ExamReadiness {
+  const scores = officialExamScores(progress, examId)
+  const below: ExamReadiness['below'] = []
+  const notRecorded: ExamModule[] = []
+  for (const module of EXAM_MODULES) {
+    const score = scores[module]
+    if (score === undefined) notRecorded.push(module)
+    else if (score < READINESS_SCORE) below.push({ module, score })
+  }
+  return {
+    id: examId,
+    started: notRecorded.length < EXAM_MODULES.length,
+    met: below.length === 0 && notRecorded.length === 0,
+    below,
+    notRecorded,
+  }
+}
+
+/**
+ * The readiness rule: 90 or more in every module on two official mock exams,
+ * as recorded by the learner. `officialExamIds` are the exams that count, in
+ * the order the content lists them; a score recorded for any other exam is
+ * ignored.
+ */
+export function readiness(progress: Progress, officialExamIds: readonly string[]): Readiness {
+  const exams = officialExamIds.map((id) => examStanding(progress, id))
+  const met = exams.filter((exam) => exam.met).length
+  return {
+    ready: met >= READINESS_EXAMS,
+    needed: READINESS_EXAMS,
+    met,
+    missing: Math.max(0, READINESS_EXAMS - met),
+    exams,
+  }
 }
 
 /** The most questions one checkpoint asks. */

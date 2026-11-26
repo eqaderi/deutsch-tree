@@ -112,3 +112,21 @@ test('German outside asterisks is found in the Persian meaning of a phrase', asy
     { file: PHRASES, node: PHRASES_NODE, where: 'phrases[0].meaning.fa', message: expect.stringContaining('"Sie"') },
   ])
 })
+
+test('search finds a phrases node by what it is for, by a phrase with its meaning and by an example', async () => {
+  const { bundle } = await compileContent(fixtureContent)
+
+  const passagesIn = (language: 'en' | 'fa' | 'de') =>
+    bundle?.search[language].entries.find((entry) => entry.node === PHRASES_NODE)?.passages
+  expect(passagesIn('en')?.slice(0, 3)).toEqual([
+    ['Say hello and goodbye, for example with ', { de: 'Guten Tag!' }],
+    [{ de: 'Guten Tag!' }, ' – Hello. You say it in the daytime, also to a person you call ', { de: 'Sie' }, '.'],
+    [{ de: 'Guten Tag, Frau Test!' }, ' – Hello, Ms Test!'],
+  ])
+  expect(passagesIn('en')).toHaveLength(1 + 2 * 3)
+  expect(passagesIn('fa')?.[2]).toEqual([{ de: 'Guten Tag, Frau Test!' }, ' – سلام، خانم تست!'])
+  // A learner reading in German needs no translation of an example.
+  expect(passagesIn('de')?.[2]).toEqual([{ de: 'Guten Tag, Frau Test!' }])
+  // The questions stay out of the search data, with their answers.
+  expect(JSON.stringify(bundle?.search)).not.toContain('wie / gehen / es / du')
+})

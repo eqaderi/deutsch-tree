@@ -107,6 +107,40 @@ the first node of the next chapter.
 - A new level such as B2 is new chapters with `level: B2` after the B1
   chapters, and node files that name them. No code changes.
 
+## Official mock exams
+
+`content/official-mock-exams.yaml` lists the official mock exams of the
+Goethe-Zertifikat B1, in the order the readiness view shows them. The app
+links to them. It never hosts or copies them, so this file holds addresses
+and a few words about them, and nothing of an exam itself.
+
+```yaml
+- id: goethe-b1-modellsatz-erwachsene   # stable for ever: a learner's recorded scores are kept under it
+  title: Zertifikat B1 Modellsatz Erwachsene   # the set's own German name
+  publisher: Goethe-Institut
+  audience: adults                      # adults | youth; youth sets are listed as "Spare sets"
+  countsTowardReadiness: true           # false: scores can be recorded but do not count
+  links:                                # at least one
+    - kind: papers                      # papers (a PDF) | audio (the recordings) | online
+      url: https://…                    # a full https address
+      candidatePages: { first: 7, last: 28 }   # optional: the PDF pages before the answers
+      checked: 2026-11-26               # optional: the day someone last saw the link work
+      note: { en: …, fa: …, de: … }     # optional: one or two sentences, e.g. where on the page
+```
+
+- To correct a link, change its `url` and set `checked` to today. A link
+  without `checked` has not been confirmed by anyone; the file marks those
+  with a comment.
+- To add an exam, add an entry. Never change the `id` of an exam that is
+  already published: learners would lose the scores they recorded for it.
+- `candidatePages` makes the page tell the learner to stay inside those pages
+  of the PDF, because the pages after them hold the answers.
+- `countsTowardReadiness` is a product decision, not a technical one: it says
+  whether 90 or more in every module on this set is one of the two that the
+  readiness rule asks for. At least two entries must count.
+- A `note` follows the two conventions above: three languages, and German
+  (also a name in Latin letters inside the Persian) in asterisks.
+
 ## A published grammar node
 
 Add all five sections. The page shows them in this fixed order: rule, table,
@@ -153,12 +187,26 @@ questions:
     explanation: { en: …, fa: …, de: … }   # one line: why the answer is right
 ```
 
+### What search and the overview page take from a node
+
+Nothing extra is written for them; the content pipeline builds both from the
+sections above.
+
+- Search finds a published node by its title, its rule, the rows of its table,
+  its examples with their translations, and the right half and the reason of
+  each common mistake. It does not look into the questions. A `coming-soon`
+  node is found by its title only.
+- "All grammar at a glance" shows the table of every published grammar node,
+  under its level and chapter.
+
 ### Question types
 
 Every question has `id`, `type`, `prompt` (German), its answer and
-`explanation`. The test shows the learner what to do in their language, so a
-prompt holds only the German. A question that is answered by choosing states
-one `answer`; a question that is answered by typing lists its `answers`.
+`explanation`; two types below build their own prompt. The test shows the
+learner what to do in their language, so a prompt holds only the German. A
+question with one right answer states its `answer`; a question that can have
+several (a typed answer, an order of words) lists every one under `answers`,
+and the first is shown as the right one.
 
 ```yaml
   - id: q2
@@ -202,6 +250,55 @@ one `answer`; a question that is answered by typing lists its `answers`.
   an answer without seeing your list, and an answer that is not on it stops
   the review.
 
+### Word ordering, find the error and matching
+
+```yaml
+  - id: q6
+    type: find-error                # a sentence with one wrong word; the learner picks it
+    prompt: Du wohne in Berlin.     # exactly one word is wrong
+    answer: wohne                   # that word, as it stands in the sentence
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q7
+    type: word-order                # the learner puts the pieces of a sentence in order
+    answers:                        # every right order of the pieces; the first is shown as the right one
+      - [heute, wohne, ich, in Berlin]
+      - [ich, wohne, heute, in Berlin]
+      - [in Berlin, wohne, ich, heute]
+    end: "."                        # optional: ".", "?" or "!"; default "."
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q8
+    type: matching                  # the learner finds the partner of each item
+    answer:                         # the pairs, each as [item, partner]; three or more
+      - [ich, wohne]
+      - [du, wohnst]
+      - [wir, wohnen]
+    explanation: { en: …, fa: …, de: … }
+```
+
+Word ordering and matching have no `prompt`: the pipeline builds one from the
+pieces or the items, and it mixes what the learner sees.
+
+- **Find the error.** The wrong word must stand in the sentence once only
+  (`Die` and `die` are two words). Write a sentence with one mistake that has
+  one repair; "which word is wrong" must not be a matter of opinion.
+- **Word ordering.** A piece is one word or several (`in Berlin`). Use three
+  or more. Write each piece as it stands inside a sentence, so no capital
+  letter for the first one and no full stop: the app adds both, and a capital
+  would give the first piece away. The same piece may be there twice.
+  German often allows more than one order. **List every right order** under
+  `answers`, the most usual one first; with one right order the list has one
+  entry. The checks make sure every order is the same pieces. To keep the
+  list short, join words into one piece or choose a sentence with less
+  freedom (a question with `end: "?"` has fewer orders than a statement). The
+  blind reviewer is asked for every right order too, without seeing your
+  list: an order that only one side has stops the review, and the
+  disagreement prints the reviewer's orders ready to copy.
+- **Matching.** Both sides are German. No item and no partner may be there
+  twice, so only one matching is right. Write the pairs in the order the
+  items should be shown; the partners are mixed.
+
 ### How many questions an attempt draws
 
 Each attempt at the test draws 10 questions from the pool at random. A node
@@ -232,9 +329,8 @@ change freely). A command writes the record, never a hand:
    step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
    in step 1, then add that second file with another `--answers`.
 
-Only `multiple-choice`, `gap-fill`, `true-false`, `typed-answer` and
-`typed-gap-fill` questions and only grammar nodes can be published so far.
-Other question types and node kinds are added to the schema as they are built.
+Only grammar nodes can be published so far. Other node kinds are added to the
+schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 
@@ -247,6 +343,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   mistake or of a question) with a Latin letter outside asterisks.
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
+- A wrong word that stands in its sentence twice, a right order that is not
+  the same pieces as the first one or is listed twice, and a matching item or
+  partner that is there twice.
 - A prerequisite that is not the id of a node, and a prerequisite cycle
   (a node that needs itself, directly or through other nodes).
 - A phrases node without a purpose or without an exam task, and an exam task
@@ -260,6 +359,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   one node.
 - A published node with no review record, or whose questions or answers
   changed after its review. A `coming-soon` node needs none.
+- A list of official mock exams that is missing, has a link that is not a
+  full `https://` address, has an exam without a link, has two exams with one
+  id, or has fewer than two exams that count toward readiness.
 
 ## Adding a check (for people who change the code)
 
