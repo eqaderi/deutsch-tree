@@ -36,9 +36,9 @@ test('the result goes through the attempt in order and says for each question wh
   const result = scoreAttempt(attempt, ['wohnst', false, 'wohnst'])
 
   expect(result.questions).toEqual([
-    { question: attempt[0], answer: 'wohnst', correct: false },
-    { question: attempt[1], answer: false, correct: true },
-    { question: attempt[2], answer: 'wohnst', correct: true },
+    { question: attempt[0], answer: 'wohnst', correct: false, notes: [] },
+    { question: attempt[1], answer: false, correct: true, notes: [] },
+    { question: attempt[2], answer: 'wohnst', correct: true, notes: [] },
   ])
   expect(result).toMatchObject({ total: 3, correct: 2, passMark: 3, passed: false })
 })
