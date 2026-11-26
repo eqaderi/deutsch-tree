@@ -101,3 +101,122 @@ test("each exam's pages are copied from the book into the exam's own PDF", async
     14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
   ])
 })
+
+/** A part's answers in item order, as [item, answer] pairs. */
+async function answersOf(packDir: string | null, exam: number, moduleId: string, part: number) {
+  const key = await readJson(packDir, 'answers.json')
+  return key.exams
+    .find((entry: { number: number }) => entry.number === exam)
+    .modules.find((entry: { id: string }) => entry.id === moduleId)
+    .parts.find((entry: { number: number }) => entry.number === part)
+    .answers.map((entry: { item: number; answer: string }) => [entry.item, entry.answer])
+}
+
+test('the answer key gives every item of every Lesen and Hören part its answer', async () => {
+  const { packDir } = await build()
+
+  expect(await answersOf(packDir, 1, 'lesen', 1)).toEqual([
+    [1, 'richtig'],
+    [2, 'falsch'],
+    [3, 'falsch'],
+    [4, 'richtig'],
+    [5, 'richtig'],
+    [6, 'falsch'],
+  ])
+  expect(await answersOf(packDir, 1, 'lesen', 3)).toEqual([
+    [13, 'd'],
+    [14, '0'],
+    [15, 'a'],
+    [16, 'h'],
+    [17, 'f'],
+    [18, 'j'],
+    [19, 'b'],
+  ])
+  expect(await answersOf(packDir, 1, 'lesen', 5)).toEqual([
+    [27, 'c'],
+    [28, 'a'],
+    [29, 'b'],
+    [30, 'a'],
+  ])
+  expect(await answersOf(packDir, 1, 'hoeren', 1)).toEqual([
+    [1, 'falsch'],
+    [2, 'b'],
+    [3, 'richtig'],
+    [4, 'a'],
+    [5, 'richtig'],
+    [6, 'c'],
+    [7, 'falsch'],
+    [8, 'a'],
+    [9, 'falsch'],
+    [10, 'b'],
+  ])
+  expect(await answersOf(packDir, 2, 'lesen', 4)).toEqual([
+    [20, 'nein'],
+    [21, 'ja'],
+    [22, 'ja'],
+    [23, 'nein'],
+    [24, 'ja'],
+    [25, 'nein'],
+    [26, 'nein'],
+  ])
+  expect(await answersOf(packDir, 2, 'hoeren', 4)).toEqual([
+    [23, 'b'],
+    [24, 'a'],
+    [25, 'c'],
+    [26, 'a'],
+    [27, 'c'],
+    [28, 'b'],
+    [29, 'b'],
+    [30, 'c'],
+  ])
+
+  // Only Lesen and Hören are scored from the key.
+  const key = await readJson(packDir, 'answers.json')
+  expect(key.format).toBe(1)
+  expect(key.exams.map((exam: { modules: Array<{ id: string }> }) => exam.modules.map((module) => module.id))).toEqual([
+    ['lesen', 'hoeren'],
+    ['lesen', 'hoeren'],
+  ])
+})
+
+test('the description lists each part\'s items with the answers an answer sheet offers', async () => {
+  const { packDir } = await build()
+  const description = await readJson(packDir, 'pack.json')
+  const items = (moduleId: string, part: number) =>
+    description.exams[0].modules.find((module: { id: string }) => module.id === moduleId).parts[part - 1].items
+
+  expect(items('lesen', 2)).toEqual([
+    { number: 7, choices: ['a', 'b', 'c'] },
+    { number: 8, choices: ['a', 'b', 'c'] },
+    { number: 9, choices: ['a', 'b', 'c'] },
+    { number: 10, choices: ['a', 'b', 'c'] },
+    { number: 11, choices: ['a', 'b', 'c'] },
+    { number: 12, choices: ['a', 'b', 'c'] },
+  ])
+  expect(items('lesen', 4).map((item: { number: number }) => item.number)).toEqual([20, 21, 22, 23, 24, 25, 26])
+  expect(items('lesen', 4)[0].choices).toEqual(['ja', 'nein'])
+  // Hören Teil 1 alternates: a richtig/falsch item, then an a/b/c item.
+  expect(items('hoeren', 1).slice(0, 3)).toEqual([
+    { number: 1, choices: ['richtig', 'falsch'] },
+    { number: 2, choices: ['a', 'b', 'c'] },
+    { number: 3, choices: ['richtig', 'falsch'] },
+  ])
+  expect(items('hoeren', 4).map((item: { number: number }) => item.number)).toEqual([23, 24, 25, 26, 27, 28, 29, 30])
+})
+
+test('a numbering misprint in the answer key is repaired, and the repair is recorded', async () => {
+  // The fixture key prints exam 2, Lesen Teil 2 as "7 b  8 a  8 c  10 c  11 a  12 b".
+  const { report, packDir } = await build()
+
+  expect(await answersOf(packDir, 2, 'lesen', 2)).toEqual([
+    [7, 'b'],
+    [8, 'a'],
+    [9, 'c'],
+    [10, 'c'],
+    [11, 'a'],
+    [12, 'b'],
+  ])
+  const repair = { exam: 2, module: 'lesen', part: 2, item: 9, printed: 8 }
+  expect(report.repairs).toEqual([repair])
+  expect((await readJson(packDir, 'answers.json')).repairs).toEqual([repair])
+})
