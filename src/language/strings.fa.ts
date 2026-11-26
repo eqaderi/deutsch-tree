@@ -361,6 +361,7 @@ export const fa: Strings = {
   overviewTitle: 'همهٔ دستور زبان در یک نگاه',
   overviewIntro: 'همهٔ جدول‌های دستور زبان در یک صفحه. نام بالای هر جدول، موضوع آن را باز می‌کند.',
   overviewEmpty: 'هنوز هیچ جدول دستور زبانی نوشته نشده است.',
+  jumpToLevel: 'رفتن به یک سطح',
 
   task: 'تمرین',
   getYourScore: 'چطور نمره بگیرید',

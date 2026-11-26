@@ -361,6 +361,7 @@ export const de: Strings = {
   overviewTitle: 'Die ganze Grammatik auf einen Blick',
   overviewIntro: 'Alle Grammatik-Tabellen auf einer Seite. Der Name über einer Tabelle öffnet das Thema.',
   overviewEmpty: 'Es gibt noch keine Grammatik-Tabelle.',
+  jumpToLevel: 'Zu einem Niveau springen',
 
   task: 'Aufgabe',
   getYourScore: 'So bekommst du deine Punkte',

@@ -2608,6 +2608,14 @@ a.strip-end {
 }
 
 /* The name of a topic is the link to it; the row is tall enough to tap. */
+/* The buttons that jump to a level of the overview. */
+.overview-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block-end: var(--gap);
+}
+
 .overview-tables h4 a {
   display: inline-flex;
   align-items: center;

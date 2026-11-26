@@ -404,6 +404,7 @@ export const en = {
   overviewTitle: 'All grammar at a glance',
   overviewIntro: 'Every grammar table on one page. The name above a table opens its topic.',
   overviewEmpty: 'No grammar table is written yet.',
+  jumpToLevel: 'Jump to a level',
 
   // A writing or speaking node: the task, a prompt for an AI assistant, and the score typed back in.
   task: 'Task',

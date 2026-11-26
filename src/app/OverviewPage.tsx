@@ -13,6 +13,15 @@ import { BackToTree } from './NotFound.tsx'
  * Only what has a table is shown: a topic, a chapter or a level without one
  * takes no room.
  */
+const levelHeadingId = (level: string) => `overview-level-${level}`
+
+/** Brings a level's heading into view and takes the keyboard and a screen reader to it. */
+function jumpTo(level: string): void {
+  const heading = document.getElementById(levelHeadingId(level))
+  heading?.scrollIntoView({ block: 'start' })
+  heading?.focus({ preventScroll: true })
+}
+
 export function OverviewPage() {
   const { language, strings } = useLanguage()
   const { chapters, nodes } = use(loadIndex())
@@ -41,9 +50,20 @@ export function OverviewPage() {
         <p className="secondary">{levels.length === 0 ? strings.overviewEmpty : strings.overviewIntro}</p>
       </header>
 
+      {levels.length > 1 && (
+        // Buttons, not links: the part after the # is the page's address, so it cannot also name a place on it.
+        <nav className="overview-jump" aria-label={strings.jumpToLevel}>
+          {levels.map(({ level }) => (
+            <button key={level} type="button" className="btn btn-quiet" onClick={() => jumpTo(level)}>
+              {level}
+            </button>
+          ))}
+        </nav>
+      )}
+
       {levels.map(({ level, chapters }) => (
         <section key={level} className="overview-level">
-          <h2 className="level-heading">
+          <h2 id={levelHeadingId(level)} className="level-heading" tabIndex={-1}>
             {level}
             {strings.levelNames[level] && ` · ${strings.levelNames[level]}`}
           </h2>
