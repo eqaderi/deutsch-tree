@@ -45,7 +45,7 @@ export interface AnswerCheck {
   accepted?: string
 }
 
-const WRONG: AnswerCheck = { correct: false, notes: [] }
+const wrong = (): AnswerCheck => ({ correct: false, notes: [] })
 
 /** Is this answer right for this question? No answer is a wrong answer. */
 export function checkAnswer(question: Question, answer: Answer | undefined): AnswerCheck {
@@ -56,7 +56,7 @@ export function checkAnswer(question: Question, answer: Answer | undefined): Ans
       return { correct: answer === question.answer, notes: [] }
     case 'typed-answer':
     case 'typed-gap-fill':
-      return typeof answer === 'string' ? checkTyped(answer, question.answers) : WRONG
+      return typeof answer === 'string' ? checkTyped(answer, question.answers) : wrong()
   }
 }
 
@@ -97,12 +97,12 @@ export type AnswerNote = 'umlaut-substitute' | 'capitalisation'
  */
 export function checkTyped(typed: string, accepted: readonly string[]): AnswerCheck {
   const given = spaced(typed)
-  if (given === '') return WRONG
+  if (given === '') return wrong()
   for (const slips of SLIPS) {
     const found = accepted.find((answer) => sameBut(slips, given, spaced(answer)))
     if (found !== undefined) return { correct: true, notes: [...slips], accepted: found }
   }
-  return WRONG
+  return wrong()
 }
 
 /** The slips an answer may be accepted with, from none to all. */
