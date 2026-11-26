@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-schreiben-1
+kind: exam-part
+level: B1
+chapter: b1-exam-schreiben
+order: 1
+status: coming-soon
+module: schreiben
+part: 1
+title:
+  en: "*Schreiben Aufgabe 1*: an e-mail to a friend"
+  fa: "*Schreiben Aufgabe 1*: ایمیل به یک دوست"
+  de: "Schreiben Aufgabe 1: eine E-Mail an einen Freund oder eine Freundin"

@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-asking-about-presentation
+kind: phrases
+level: B1
+chapter: b1-phrases-presentation
+order: 5
+status: coming-soon
+title:
+  en: "Asking a question about a presentation"
+  fa: "پرسیدن سؤال دربارهٔ یک ارائه"
+  de: "Eine Frage zu einer Präsentation stellen"
+purpose:
+  en: "Lead into a question and ask the speaker for more detail or for their opinion."
+  fa: "مقدمه‌ای برای سؤالتان بگویید و از ارائه‌دهنده جزئیات بیشتر یا نظرش را بپرسید."
+  de: "Eine Frage einleiten und die Person nach mehr Informationen oder nach ihrer Meinung fragen."
+examTasks: [exam-sprechen-3]

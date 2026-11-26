@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-schreiben-3
+kind: exam-part
+level: B1
+chapter: b1-exam-schreiben
+order: 3
+status: coming-soon
+module: schreiben
+part: 3
+title:
+  en: "*Schreiben Aufgabe 3*: a short semi-formal e-mail"
+  fa: "*Schreiben Aufgabe 3*: ایمیل کوتاه نیمه‌رسمی"
+  de: "Schreiben Aufgabe 3: eine kurze halbformelle E-Mail"

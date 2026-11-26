@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-reacting-to-suggestions
+kind: phrases
+level: B1
+chapter: b1-phrases-planning
+order: 3
+status: coming-soon
+title:
+  en: "Reacting to a suggestion"
+  fa: "واکنش به پیشنهاد"
+  de: "Auf einen Vorschlag reagieren"
+purpose:
+  en: "Accept a suggestion, turn it down with a reason, or answer with a suggestion of your own."
+  fa: "پیشنهادی را بپذیرید، با ذکر دلیل رد کنید یا با پیشنهاد خودتان جواب بدهید."
+  de: "Einen Vorschlag annehmen, mit einem Grund ablehnen oder selbst etwas anderes vorschlagen."
+examTasks: [exam-sprechen-1]

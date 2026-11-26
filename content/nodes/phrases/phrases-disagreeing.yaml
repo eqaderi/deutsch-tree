@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-disagreeing
+kind: phrases
+level: B1
+chapter: b1-phrases-opinions
+order: 3
+status: coming-soon
+title:
+  en: "Disagreeing politely"
+  fa: "مخالفت مؤدبانه"
+  de: "Höflich widersprechen"
+purpose:
+  en: "Say that you see something differently without being rude."
+  fa: "بگویید که نظر دیگری دارید، بدون اینکه بی‌ادبانه باشد."
+  de: "Sagen, dass man etwas anders sieht, ohne unhöflich zu sein."
+examTasks: [exam-schreiben-2, exam-sprechen-1]

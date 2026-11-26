@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-answering-questions
+kind: phrases
+level: B1
+chapter: b1-phrases-presentation
+order: 6
+status: coming-soon
+title:
+  en: "Reacting to feedback and answering questions"
+  fa: "واکنش به بازخورد و جواب دادن به سؤال‌ها"
+  de: "Auf Rückmeldung reagieren und Fragen beantworten"
+purpose:
+  en: "Thank for feedback, answer a question, and win time when you need to think."
+  fa: "برای بازخورد تشکر کنید، به سؤال جواب بدهید و وقتی باید فکر کنید کمی وقت بخرید."
+  de: "Sich für die Rückmeldung bedanken, eine Frage beantworten und Zeit gewinnen, wenn man nachdenken muss."
+examTasks: [exam-sprechen-3]
