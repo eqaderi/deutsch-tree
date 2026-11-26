@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-appointments
+kind: phrases
+level: A2
+chapter: a2-phrases-arrangements
+order: 3
+status: coming-soon
+title:
+  en: "Agreeing on a time and a place"
+  fa: "هماهنگ کردن زمان و مکان"
+  de: "Zeit und Ort ausmachen"
+purpose:
+  en: "Ask when someone has time, offer a day and a place, and fix the meeting."
+  fa: "بپرسید طرف مقابل کی وقت دارد، روز و جایی را پیشنهاد کنید و قرار را قطعی کنید."
+  de: "Fragen, wann jemand Zeit hat, einen Tag und einen Ort anbieten und den Termin festmachen."
+examTasks: [exam-schreiben-1, exam-schreiben-3, exam-sprechen-1]

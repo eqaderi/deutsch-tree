@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-sprechen-2
+kind: exam-part
+level: B1
+chapter: b1-exam-sprechen
+order: 2
+status: coming-soon
+module: sprechen
+part: 2
+title:
+  en: "*Sprechen Teil 2*: presenting a topic"
+  fa: "*Sprechen Teil 2*: ارائهٔ یک موضوع"
+  de: "Sprechen Teil 2: ein Thema präsentieren"

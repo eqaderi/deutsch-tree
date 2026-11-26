@@ -1,0 +1,13 @@
+# Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: exam-hoeren-3
+kind: exam-part
+level: B1
+chapter: b1-exam-hoeren
+order: 3
+status: coming-soon
+module: hoeren
+part: 3
+title:
+  en: "*Hören Teil 3*: a conversation between two people"
+  fa: "*Hören Teil 3*: گفت‌وگوی دو نفر"
+  de: "Hören Teil 3: ein Gespräch zwischen zwei Personen"

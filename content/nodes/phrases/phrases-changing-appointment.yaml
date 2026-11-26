@@ -1,0 +1,16 @@
+# Phrase list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
+id: phrases-changing-appointment
+kind: phrases
+level: B1
+chapter: b1-phrases-writing
+order: 5
+status: coming-soon
+title:
+  en: "Cancelling or moving an appointment"
+  fa: "لغو یا جابه‌جا کردن قرار"
+  de: "Einen Termin absagen oder verschieben"
+purpose:
+  en: "Tell someone politely that you cannot keep an appointment and ask for a new one."
+  fa: "مؤدبانه خبر بدهید که نمی‌توانید سر قرار بیایید و قرار تازه‌ای بخواهید."
+  de: "Höflich sagen, dass man zu einem Termin nicht kommen kann, und um einen neuen Termin bitten."
+examTasks: [exam-schreiben-3]
