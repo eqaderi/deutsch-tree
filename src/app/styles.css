@@ -1114,6 +1114,61 @@ main.wrap {
   color: var(--text-secondary);
 }
 
+/* ---------- audio ---------- */
+
+/* The play button of a piece of German: a ring, dark like the text. Orange is for the next topic and the main button only. */
+.play {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  inline-size: var(--touch);
+  block-size: var(--touch);
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  color: var(--text);
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+  cursor: pointer;
+}
+
+.play:hover {
+  background: var(--raised);
+}
+
+.play svg {
+  inline-size: 16px;
+  block-size: 16px;
+  fill: currentColor;
+}
+
+.play-failed {
+  font-size: 14px;
+  color: var(--wrong);
+}
+
+/* An example with its play button: the button at the start, the German and its translation beside it. */
+.example.heard {
+  grid-template-columns: var(--touch) 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.example.heard .play {
+  grid-row: span 3;
+  align-self: start;
+}
+
+.example.heard > :not(.play) {
+  grid-column: 2;
+}
+
+.word-said {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* ---------- vocabulary page ---------- */
 
 .words {
@@ -1122,7 +1177,7 @@ main.wrap {
   padding: 0;
 }
 
-.word {
+.vocabulary-word {
   display: grid;
   gap: 4px;
   border-radius: var(--radius-card);
@@ -1130,7 +1185,7 @@ main.wrap {
   padding: 12px;
 }
 
-.word + .word {
+.vocabulary-word + .vocabulary-word {
   margin-block-start: 10px;
 }
 
@@ -2532,6 +2587,19 @@ a.strip-end {
   display: inline-flex;
   align-items: center;
   min-block-size: var(--touch);
+}
+
+.site-footer {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The credit a voice's licence asks for: small, under the footer's link. */
+.voice-credit {
+  margin: 0;
+  max-inline-size: var(--reading-width);
+  font-size: 12px;
+  text-align: center;
 }
 
 .notice {

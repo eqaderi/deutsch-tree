@@ -257,7 +257,8 @@ test('what the test does not ask may change freely: the example sentence, the pl
     'vocabulary/scope-list.tsv': (text) => text.replace('Tisch\tnoun\tA1\tder\t-e', 'Tisch\tnoun\tA2\tder\t-en'),
   })
 
-  expect((await compileContent(content)).report.errors).toEqual([])
+  // The new example needs new audio, which `pnpm audio:generate` makes; the review is not touched.
+  expect((await compileContent(content, { requireAudio: false })).report.errors).toEqual([])
 })
 
 test('a changed word needs a fresh answer for its own questions only', async () => {
