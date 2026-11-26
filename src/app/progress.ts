@@ -29,3 +29,9 @@ export function useProgress(): Progress {
 export function updateProgress(change: (progress: Progress) => Progress): void {
   store.update(change)
 }
+
+/**
+ * Set when this browser holds progress from a newer version of the app, which
+ * this one cannot read and does not touch. The page frame tells the learner.
+ */
+export const progressProblem = store.problem

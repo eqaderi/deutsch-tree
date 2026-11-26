@@ -3,7 +3,7 @@
  * storage, no clock. Whatever is random comes in as a `Random`, so a caller
  * (and a test) decides the dice.
  */
-import type { Question } from '../content-model/index.ts'
+import type { NodeSummary, Question } from '../content-model/index.ts'
 
 /** A source of randomness with the contract of Math.random: a number from 0 up to, not including, 1. */
 export type Random = () => number
@@ -116,5 +116,166 @@ export function applyAttempt(progress: Progress, nodeId: string, result: Pick<At
   return {
     ...progress,
     nodes: { ...progress.nodes, [nodeId]: { done: before.done || result.passed, attempts: before.attempts + 1 } },
+  }
+}
+
+/**
+ * A point at which a learner has done enough that losing it would hurt: the
+ * app then suggests exporting progress to a file, once per milestone.
+ */
+export type Milestone =
+  /** Every topic of the level that can be taken is done. */
+  | { id: string; kind: 'level'; level: string }
+  /** This many topics are done, counted in steps of TOPICS_PER_MILESTONE. */
+  | { id: string; kind: 'topics'; count: number }
+
+export const TOPICS_PER_MILESTONE = 10
+
+/**
+ * The milestones this progress has reached: first the finished levels, in
+ * the order of `nodes` (the content index, in curriculum order), then the
+ * latest step of done topics.
+ *
+ * A level is finished when all its published topics are done and it has at
+ * least one; a topic that is coming soon cannot hold a level open. Done
+ * topics are counted from the progress alone, so a topic the content no
+ * longer has still counts.
+ */
+export function milestonesReached(
+  nodes: ReadonlyArray<Pick<NodeSummary, 'id' | 'level' | 'status'>>,
+  progress: Progress,
+): Milestone[] {
+  const reached: Milestone[] = []
+
+  const published = nodes.filter((node) => node.status === 'published')
+  for (const level of new Set(published.map((node) => node.level))) {
+    if (published.every((node) => node.level !== level || isDone(progress, node.id))) {
+      reached.push({ id: `level:${level}`, kind: 'level', level })
+    }
+  }
+
+  const done = doneCount(progress)
+  const count = done - (done % TOPICS_PER_MILESTONE)
+  if (count > 0) reached.push({ id: `topics:${count}`, kind: 'topics', count })
+
+  return reached
+}
+
+/**
+ * The one milestone worth telling the learner about, if any: the latest
+ * finished level whose identifier is not in `acknowledged`, or else the
+ * count of done topics.
+ */
+export function milestoneToMention(
+  reached: readonly Milestone[],
+  acknowledged: readonly string[],
+): Milestone | undefined {
+  const fresh = reached.filter((milestone) => !acknowledged.includes(milestone.id))
+  return fresh.findLast((milestone) => milestone.kind === 'level') ?? fresh[0]
+}
+
+/** How many topics are done. */
+export function doneCount(progress: Progress): number {
+  return Object.values(progress.nodes).filter((node) => node.done).length
+}
+
+/**
+ * Whether anything at all has been recorded, so that replacing the progress
+ * would lose something. Every field of `Progress` is a list or a record that
+ * starts empty; a field of another kind needs its own line here.
+ */
+export function hasProgress(progress: Progress): boolean {
+  return Object.values(progress).some((field) => Object.keys(field).length > 0)
+}
+
+/** The most questions one checkpoint asks. */
+export const CHECKPOINT_SIZE = 30
+
+/** The most questions one node gives to a checkpoint. */
+export const CHECKPOINT_MOST_PER_NODE = 5
+
+/** What a published node brings to the checkpoint of its level: its pool. */
+export interface CheckpointSource {
+  nodeId: string
+  questions: readonly Question[]
+}
+
+/** One question of a checkpoint, with the node it came from. */
+export interface CheckpointQuestion {
+  nodeId: string
+  question: Question
+}
+
+export interface Checkpoint {
+  /** In the order they are asked. */
+  questions: CheckpointQuestion[]
+  /** The nodes that gave a question, in the order the nodes were given: the curriculum order. */
+  nodeIds: string[]
+}
+
+/**
+ * The checkpoint of a level, drawn across the pools of its published nodes,
+ * which are given in curriculum order. A node without questions gives none.
+ *
+ * Questions are dealt in rounds. A round gives one question to every node
+ * that has one left; when fewer questions remain to be dealt than that, the
+ * nodes that get one are drawn at random. Dealing stops at `CHECKPOINT_SIZE`
+ * questions or after `CHECKPOINT_MOST_PER_NODE` rounds. So:
+ *   - up to 6 nodes: 5 questions of each (1 node: 5 questions, 2 nodes: 10);
+ *   - 7 to 29 nodes: 30 questions, every node in, no node more than one ahead of another;
+ *   - 30 nodes or more: 30 nodes drawn at random, each with the same chance, one question of each.
+ */
+export function drawCheckpoint(sources: readonly CheckpointSource[], random: Random): Checkpoint {
+  const hands = sources.map(({ nodeId, questions }) => ({
+    nodeId,
+    questions: drawAttempt(questions, CHECKPOINT_MOST_PER_NODE, random),
+  }))
+
+  const dealt: CheckpointQuestion[] = []
+  for (let round = 0; round < CHECKPOINT_MOST_PER_NODE && dealt.length < CHECKPOINT_SIZE; round += 1) {
+    const stillIn = hands.filter((hand) => hand.questions.length > round)
+    for (const { nodeId, questions } of drawAttempt(stillIn, CHECKPOINT_SIZE - dealt.length, random)) {
+      const question = questions[round]
+      if (question) dealt.push({ nodeId, question })
+    }
+  }
+  const asked = new Set(dealt.map(({ nodeId }) => nodeId))
+  return { questions: dealt, nodeIds: sources.map(({ nodeId }) => nodeId).filter((nodeId) => asked.has(nodeId)) }
+}
+
+/** What a finished checkpoint says. It has no pass mark: a checkpoint is advice. */
+export interface CheckpointResult {
+  /** How many questions the checkpoint had. */
+  total: number
+  /** How many were answered right. */
+  correct: number
+  /** Every question of the checkpoint, in order, with its node and what was answered. */
+  questions: Array<CheckpointQuestion & { answer: Answer | undefined; correct: boolean }>
+  /** The nodes with a wrong answer, in curriculum order. */
+  nodesToRevisit: Array<{ nodeId: string; asked: number; wrong: number }>
+}
+
+/**
+ * Scores a checkpoint and reports the nodes with wrong answers. `answers`
+ * runs parallel to the checkpoint's questions; a missing answer is a wrong
+ * one. It takes no progress and gives none back: a checkpoint changes no
+ * node, whatever the score.
+ */
+export function scoreCheckpoint(checkpoint: Checkpoint, answers: readonly (Answer | undefined)[]): CheckpointResult {
+  const questions = checkpoint.questions.map((asked, index) => {
+    const answer = answers[index]
+    return { ...asked, answer, correct: checkAnswer(asked.question, answer).correct }
+  })
+  const nodesToRevisit = checkpoint.nodeIds
+    .map((nodeId) => {
+      const ofNode = questions.filter((item) => item.nodeId === nodeId)
+      return { nodeId, asked: ofNode.length, wrong: ofNode.filter((item) => !item.correct).length }
+    })
+    .filter((node) => node.wrong > 0)
+  return {
+    total: questions.length,
+    correct: questions.filter((item) => item.correct).length,
+    questions,
+    nodesToRevisit,
   }
 }

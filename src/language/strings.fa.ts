@@ -73,4 +73,53 @@ export const fa: Strings = {
   wrongAnswers: 'پاسخ‌های نادرست',
   yourAnswer: 'پاسخ شما',
   rightAnswer: 'پاسخ درست',
+
+  backupLink: 'پشتیبان‌گیری از پیشرفت',
+  backupTitle: 'از پیشرفت خود پشتیبان بگیرید',
+  backupWhy:
+    'پیشرفت شما فقط در همین مرورگر و روی همین دستگاه نگه داشته می‌شود. اگر داده‌های مرورگر پاک شود، پیشرفت هم از بین می‌رود. یک فایل آن را امن نگه می‌دارد و به دستگاه دیگر هم می‌برد.',
+  // The calendar of the date in the file's name, so that the two agree.
+  date: (date) => new Intl.DateTimeFormat('fa-IR-u-ca-gregory', { dateStyle: 'long' }).format(date),
+  topicsDone: (count) => `${digits.format(count)} موضوع تمام‌شده`,
+  onThisDevice: 'روی این دستگاه',
+  inTheFile: 'در فایل',
+  exportTitle: 'خروجی گرفتن',
+  exportText: 'یک فایل با پیشرفت شما روی همین دستگاه ذخیره می‌شود. چیزی به جایی فرستاده نمی‌شود.',
+  exportProgress: 'خروجی گرفتن از پیشرفت',
+  exportedAs: 'پیشرفت شما حالا در این فایل است:',
+  keepFileSafe: 'فایل را در جای امنی نگه دارید.',
+  importTitle: 'وارد کردن',
+  importText:
+    'پیشرفت را از فایلی برمی‌گرداند که در همین دستگاه یا دستگاه دیگری خروجی گرفته‌اید. فایل جای پیشرفتِ روی این دستگاه را می‌گیرد.',
+  importFile: 'وارد کردن فایل پیشرفت',
+  importReplaceTitle: 'پیشرفتِ روی این دستگاه جایگزین شود؟',
+  importReplaceText: 'فایل جای همه‌چیزِ روی این دستگاه را می‌گیرد. این کار برگشت‌پذیر نیست.',
+  exportedOn: (date) => `خروجی گرفته‌شده در ${date}`,
+  replaceProgress: 'جایگزین شود',
+  cancel: 'انصراف',
+  imported: 'پیشرفت وارد شد.',
+  importNotProgress: 'این فایل، فایل پیشرفت deutsch-tree نیست یا خراب شده است. چیزی تغییر نکرد.',
+  importNewerVersion:
+    'این فایل با نسخهٔ تازه‌تری از deutsch-tree ذخیره شده است. این صفحه را دوباره بارگذاری کنید تا تازه‌ترین نسخه بیاید، بعد فایل را دوباره وارد کنید. چیزی تغییر نکرد.',
+  savedByNewerVersion:
+    'پیشرفتِ این مرورگر با نسخهٔ تازه‌تری از deutsch-tree ذخیره شده است. صفحه را دوباره بارگذاری کنید تا آن نسخه بیاید. تا آن زمان پیشرفت شما نشان داده نمی‌شود و کاری که اینجا می‌کنید ذخیره نمی‌شود.',
+  reload: 'بارگذاری دوباره',
+  milestoneLevel: (level) => `همهٔ موضوع‌های ${level} را که تا امروز آماده شده‌اند تمام کرده‌اید.`,
+  milestoneTopics: (count) => `${digits.format(count)} موضوع را تمام کرده‌اید.`,
+  suggestBackup: 'پیشرفت شما فقط در همین مرورگر نگه داشته می‌شود. یک نسخه در فایل آن را امن نگه می‌دارد.',
+  notNow: 'حالا نه',
+
+  checkpoint: 'آزمون مرور',
+  checkpointTitle: (level) => `آزمون مرور ${level}`,
+  checkpointIntro:
+    'آزمونی کوتاه با سؤال‌هایی از موضوع‌های این سطح. نشان می‌دهد چه چیزهایی را باید دوباره ببینید. در موضوع‌های شما چیزی را تغییر نمی‌دهد.',
+  startCheckpoint: 'شروع آزمون مرور',
+  checkpointNothingYet: 'هنوز هیچ موضوعی از این سطح آزمون ندارد. آزمون مرور با اولین موضوع می‌آید.',
+  checkpointSize: (questions, topics) => `${digits.format(questions)} سؤال از ${digits.format(topics)} موضوع`,
+  checkpointResult: 'نتیجهٔ آزمون مرور',
+  checkpointAllRight: 'همه درست بود. چیزی برای مرور دوباره نیست.',
+  checkpointSomeWrong: 'بعضی پاسخ‌ها نادرست بود. بهتر است موضوع‌های زیر را دوباره ببینید.',
+  checkpointChangesNothing: 'آزمون مرور فقط نشان می‌دهد کجا هستید. موضوع‌های شما همان‌طور که بودند می‌مانند.',
+  topicsToRevisit: 'موضوع‌هایی برای مرور دوباره',
+  wrongOfAsked: (wrong, asked) => `${digits.format(wrong)} نادرست از ${digits.format(asked)}`,
 }

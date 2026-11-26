@@ -14,3 +14,21 @@
     en: Fixture topics with *sein*
     fa: موضوع‌های آزمایشی با *sein*
     de: Test-Themen mit *sein*
+
+# A second level with three published topics, for the checkpoint of a level with several.
+- id: fixture-nouns
+  level: A2
+  kind: grammar
+  title:
+    en: Fixture nouns
+    fa: اسم‌های آزمایشی
+    de: Test-Nomen
+
+# A third level with nothing published: it has no checkpoint yet.
+- id: fixture-unwritten
+  level: B1
+  kind: grammar
+  title:
+    en: Fixture level not written yet
+    fa: سطح آزمایشی نانوشته
+    de: Test-Niveau, noch nicht geschrieben
