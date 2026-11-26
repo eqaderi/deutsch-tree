@@ -2,7 +2,9 @@ import type { Page } from '@playwright/test'
 import {
   ATTEMPT_SIZE,
   asShown,
-  choice,
+  expectAnswerGiven,
+  germanShown,
+  giveAnswer,
   PERSIAN,
   questionOnScreen,
   reportedIssue,
@@ -116,7 +118,7 @@ test('every question has a "report a problem" link that opens a pre-filled issue
   expect(issue.title).toContain(question.id)
   expect(issue.body).toContain('Topic: grammar-001')
   expect(issue.body).toContain(`Question: ${question.id}`)
-  expect(issue.body).toContain(question.prompt)
+  for (const german of germanShown(question)) expect(issue.body).toContain(german)
   await expect(link).toHaveAttribute('target', '_blank')
 
   // And in the result, where a learner sees the right answer and may doubt it.
@@ -137,12 +139,12 @@ test('switching language in the middle of a test keeps the question and the answ
   // Three questions answered right, the fourth chosen but not yet confirmed.
   for (let place = 1; place <= 3; place += 1) {
     await expect(page.getByText(`Question ${place} of 10`)).toBeVisible()
-    await choice(page, await questionOnScreen(page), 'right').check()
+    await giveAnswer(page, await questionOnScreen(page), 'right')
     await page.getByRole('button', { name: 'Next' }).click()
   }
   await expect(page.getByText('Question 4 of 10')).toBeVisible()
   const fourth = await questionOnScreen(page)
-  await choice(page, fourth, 'right').check()
+  await giveAnswer(page, fourth, 'right')
 
   await page.getByRole('button', { name: 'فارسی' }).click()
 
@@ -150,7 +152,7 @@ test('switching language in the middle of a test keeps the question and the answ
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
   await expect(page.getByText(PERSIAN.questionOf(4, 10))).toBeVisible()
   expect((await questionOnScreen(page)).id).toBe(fourth.id)
-  await expect(choice(page, fourth, 'right', PERSIAN)).toBeChecked()
+  await expectAnswerGiven(page, fourth, 'right', PERSIAN)
   expect(new URL(page.url()).hash).toBe('#/node/grammar-001/test')
 
   // The first three answers still count: the rest answered right gives ten of ten.

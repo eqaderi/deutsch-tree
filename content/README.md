@@ -92,7 +92,7 @@ questions:
 ### Question types
 
 Every question has `id`, `type`, `prompt` (German), `answer` and
-`explanation`. The test shows the learner what to do in their language, so a
+`explanation`; two types below build their own prompt. The test shows the learner what to do in their language, so a
 prompt holds only the German.
 
 ```yaml
@@ -109,6 +109,53 @@ prompt holds only the German.
     answer: false                   # true: correct German; false: it holds a mistake
     explanation: { en: …, fa: …, de: … }
 ```
+
+### Word ordering, find the error and matching
+
+```yaml
+  - id: q4
+    type: find-error                # a sentence with one wrong word; the learner picks it
+    prompt: Du wohne in Berlin.     # exactly one word is wrong
+    answer: wohne                   # that word, as it stands in the sentence
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q5
+    type: word-order                # the learner puts the pieces of a sentence in order
+    answer: [heute, wohne, ich, in Berlin]     # the pieces in the right order
+    alsoAccepted:                   # optional: every other right order of the same pieces
+      - [ich, wohne, heute, in Berlin]
+      - [in Berlin, wohne, ich, heute]
+    end: "."                        # optional: ".", "?" or "!"; default "."
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q6
+    type: matching                  # the learner finds the partner of each item
+    answer:                         # the pairs, each as [item, partner]; three or more
+      - [ich, wohne]
+      - [du, wohnst]
+      - [wir, wohnen]
+    explanation: { en: …, fa: …, de: … }
+```
+
+Word ordering and matching have no `prompt`: the pipeline builds one from the
+pieces or the items, and it mixes what the learner sees.
+
+- **Find the error.** The wrong word must stand in the sentence once only
+  (`Die` and `die` are two words). Write a sentence with one mistake that has
+  one repair; "which word is wrong" must not be a matter of opinion.
+- **Word ordering.** A piece is one word or several (`in Berlin`). Use three
+  or more. Write each piece as it stands inside a sentence, so no capital
+  letter for the first one and no full stop: the app adds both, and a capital
+  would give the first piece away. The same piece may be there twice.
+  German often allows more than one order. **List every right order**, the
+  most usual one as `answer` and the others under `alsoAccepted`; the checks
+  make sure each is the same pieces. To keep the list short, join words into
+  one piece or choose a sentence with less freedom (a question with `end: "?"`
+  has fewer orders than a statement). The reviewer is asked for every right
+  order too, and an order that only one side has is a disagreement.
+- **Matching.** Both sides are German. No item and no partner may be there
+  twice, so only one matching is right. Write the pairs in the order the
+  items should be shown; the partners are mixed.
 
 ### How many questions an attempt draws
 
@@ -140,9 +187,9 @@ change freely). A command writes the record, never a hand:
    step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
    in step 1, then add that second file with another `--answers`.
 
-Only `multiple-choice`, `gap-fill` and `true-false` questions and only grammar
-nodes can be published so far. Other question types and node kinds are added
-to the schema as they are built.
+Only `multiple-choice`, `gap-fill`, `true-false`, `find-error`, `word-order`
+and `matching` questions and only grammar nodes can be published so far. Other
+question types and node kinds are added to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 
@@ -150,6 +197,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
+- A wrong word that stands in its sentence twice, another accepted order that
+  is not the same pieces as the answer, and a matching item or partner that
+  is there twice.
 - A prerequisite that is not the id of a node, and a prerequisite cycle
   (a node that needs itself, directly or through other nodes).
 - A published node with fewer than 15 questions. A `coming-soon` draft may

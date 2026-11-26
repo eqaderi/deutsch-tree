@@ -7,7 +7,10 @@ import { type ReactNode, useId } from 'react'
 import type { Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import type { Answer } from '../learning-engine/index.ts'
+import { FindError, wordsOf } from './FindError.tsx'
 import { German } from './German.tsx'
+import { Matching, partnersIn } from './Matching.tsx'
+import { sentenceOf, WordOrder } from './WordOrder.tsx'
 
 interface QuestionViewProps {
   question: Question
@@ -63,6 +66,12 @@ export function QuestionView({ question, answer, onAnswer }: QuestionViewProps) 
           onChoose={onAnswer}
         />
       )
+    case 'find-error':
+      return <FindError question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
+    case 'word-order':
+      return <WordOrder question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
+    case 'matching':
+      return <Matching question={question} instruction={instruction} answer={answer} onAnswer={onAnswer} />
   }
 }
 
@@ -77,6 +86,15 @@ export function AnswerText({ question, answer }: { question: Question; answer: A
       return <German>{String(answer)}</German>
     case 'true-false':
       return answer === true ? strings.sentenceCorrect : strings.sentenceNotCorrect
+    case 'find-error':
+      return <German>{wordsOf(question)[Number(answer)] ?? '–'}</German>
+    case 'word-order':
+      return <German>{sentenceOf(question, answer)}</German>
+    case 'matching': {
+      // Left to right as a whole, so that each arrow points from an item to its partner.
+      const partners = partnersIn(question, answer)
+      return <German>{question.left.map((item, index) => `${item} → ${partners[index] ?? '–'}`).join(', ')}</German>
+    }
   }
 }
 

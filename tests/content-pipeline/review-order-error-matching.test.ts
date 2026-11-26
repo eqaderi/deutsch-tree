@@ -92,7 +92,10 @@ test('a reviewer who does not find a listed order disagrees', async () => {
 
 test('a reviewer who puts the pieces in another order disagrees', async () => {
   expect(await disagreementsWith({ 'order-1': [['wo', 'du', 'wohnst']] })).toEqual([
-    { question: 'order-1', problem: 'the reviewer answered [["wo","du","wohnst"]], the key says [["wo","wohnst","du"]]' },
+    {
+      question: 'order-1',
+      problem: 'the reviewer answered [["wo","du","wohnst"]], the key says [["wo","wohnst","du"]]',
+    },
   ])
 })
 

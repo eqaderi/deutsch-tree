@@ -36,7 +36,11 @@ export const RIGHT = {
 }
 
 /** The sheet as a reviewer hands it back. */
-export function answered(sheet: ReviewSheet, answers: Record<string, unknown>, objections: Record<string, string> = {}) {
+export function answered(
+  sheet: ReviewSheet,
+  answers: Record<string, unknown>,
+  objections: Record<string, string> = {},
+) {
   return {
     ...sheet,
     questions: sheet.questions.map((entry) => ({

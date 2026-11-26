@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
-import type { Answer } from '../learning-engine/index.ts'
+import { type Answer, isAnswered } from '../learning-engine/index.ts'
 import { QuestionView } from './QuestionView.tsx'
 import { ReportProblem } from './ReportProblem.tsx'
 
@@ -69,7 +69,7 @@ export function AttemptRun({ nodeId, questions, focusOnStart = false, onFinish }
         <button
           type="button"
           className="btn btn-main"
-          disabled={answer === undefined}
+          disabled={!isAnswered(question, answer)}
           onClick={() => (isLast ? onFinish(answers) : setPlace(place + 1))}
         >
           {isLast ? strings.checkAnswers : strings.next}

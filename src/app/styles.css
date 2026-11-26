@@ -784,6 +784,141 @@ main.wrap {
   outline-offset: 2px;
 }
 
+/*
+ * Word ordering, find the error and matching. Their German is laid out left
+ * to right in every language (dir="ltr" in the markup), so these rules may
+ * rely on that order.
+ */
+
+.word-order,
+.matching,
+.sentence-line,
+.pieces {
+  min-inline-size: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+/* Word ordering: the sentence grows on a line; the pieces wait below it. */
+.sentence-line,
+.pieces {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.sentence-line {
+  min-block-size: 62px;
+  margin-block-end: 18px;
+  border-block-end: 2.5px solid var(--text);
+  padding-block: 8px;
+}
+
+/* The closing mark stands close to the last piece, as in a written sentence. */
+.sentence-end {
+  margin-inline-start: -4px;
+  font-family: var(--font-latin);
+  font-size: 22px;
+}
+
+.piece {
+  min-inline-size: var(--touch);
+  min-block-size: var(--touch);
+  border: 1.5px solid var(--hairline);
+  border-radius: 12px;
+  padding: 6px 14px;
+  background: var(--raised);
+  color: var(--text);
+  font: inherit;
+  font-family: var(--font-latin);
+  font-size: 18px;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+/* A piece that is in the sentence keeps its place below, as an empty outline. */
+.piece[aria-pressed="true"] {
+  border-style: dashed;
+  border-color: var(--ring);
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+/* Find the error: every word of the sentence is a choice; the marks between them are plain text. */
+.pick-word {
+  line-height: 56px;
+}
+
+.word {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: var(--touch);
+  min-block-size: var(--touch);
+  border-radius: 12px;
+  padding: 0 10px;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+  line-height: 1.25;
+  vertical-align: middle;
+}
+
+/* The real radio button covers the whole word, unseen: the word is the button. */
+.word input {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.word:has(input:checked) {
+  box-shadow: inset 0 0 0 2.5px var(--text);
+  font-weight: 500;
+}
+
+.word:has(input:focus-visible) {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+/* Matching: one row per item, the item and the list its partner is chosen from. */
+.pairs {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.pair select {
+  inline-size: 100%;
+  min-block-size: 52px;
+  border: 1.5px solid var(--hairline);
+  border-radius: var(--radius-card);
+  padding: 10px 12px;
+  background-color: var(--raised);
+  color: var(--text);
+  font: inherit;
+  font-family: "Outfit Variable", "Vazirmatn Variable", system-ui, sans-serif;
+  font-size: 17px;
+  cursor: pointer;
+}
+
 .report {
   display: inline-flex;
   align-items: center;

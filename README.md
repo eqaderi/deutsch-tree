@@ -74,6 +74,13 @@ GitHub Pages and from a local folder.
   `QuestionView` and in `AnswerText` (`src/app/QuestionView.tsx`), and its
   instruction in the three string files. The type checker points at each
   place that is missing.
+- A type whose answer is built in steps (word ordering, matching) keeps the
+  unfinished answer in the same place as a finished one; `isAnswered` in the
+  learning engine says when the test may move on. A type that shows its
+  material mixed gets the order from `src/content-pipeline/mix.ts`: `mixed`
+  for the reviewer's sheet (it must not lean on the answer), `mixedAwayFrom`
+  for the learner. A larger view gets its own file beside `QuestionView.tsx`
+  (`WordOrder.tsx`, `FindError.tsx`, `Matching.tsx`).
 
 ## Languages
 
@@ -110,6 +117,12 @@ GitHub Pages and from a local folder.
   A journey that takes a test uses `tests/browser/taking-a-test.ts`: it
   answers right or wrong from the fixture node's own answer key, whatever
   questions the attempt drew.
+  A new question type gets a case in `giveAnswer`, `expectAnswerGiven` and
+  `rightAnswerText` there. A journey about one type calls `findQuestion`,
+  which brings a question of that type on screen.
+- One question type: `tests/content-pipeline/extra-question.ts` adds one
+  question to the fixture pool and gives back what the pipeline makes of it;
+  `review-sheet.ts` holds a reviewer's answers to the fixture pool.
 
 ## Deploying
 
