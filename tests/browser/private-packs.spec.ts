@@ -105,11 +105,18 @@ test("a reading part shows the book's pages beside an answer sheet and is scored
 test('a listening part plays its recording, and the module is scored out of 100 once every part is checked', async ({
   page,
 }) => {
+  const recordingsFetched: string[] = []
+  page.on('request', (request) => {
+    if (request.url().endsWith('.mp3')) recordingsFetched.push(request.url())
+  })
   await openModule(page, 'Hören')
 
   const player = page.getByRole('region', { name: 'Recording' })
   const audio = player.locator('audio')
   await expect(audio).toHaveAttribute('src', /private\/fixture-book\/exams\/01\/hoeren-1\.mp3$/)
+  // A recording loads only when it is played.
+  await page.waitForTimeout(500)
+  expect(recordingsFetched).toEqual([])
   const duration = await audio.evaluate(
     (element: HTMLAudioElement) =>
       new Promise<number>((resolve, reject) => {

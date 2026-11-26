@@ -181,8 +181,9 @@ function Recordings({ packId, part }: { packId: string; part: PackPart }) {
           {part.recordings.length > 1 && (
             <figcaption className="secondary">{strings.recordingOf(index + 1, part.recordings.length)}</figcaption>
           )}
+          {/* Loaded only when the learner plays it, like every recording of the app. */}
           {/* biome-ignore lint/a11y/useMediaCaption: a recording from the learner's own book; the book has no captions to give. */}
-          <audio controls preload="metadata" src={fileOfPack(packId, recording.file)} />
+          <audio controls preload="none" src={fileOfPack(packId, recording.file)} />
         </figure>
       ))}
     </section>
