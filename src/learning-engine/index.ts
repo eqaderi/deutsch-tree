@@ -823,6 +823,21 @@ export function youAreHere<Node extends CurriculumNode>(
   return nextRecommended(curriculum, progress) ?? curriculum.find((node) => !isDone(progress, node.id))
 }
 
+/**
+ * The vocabulary nodes the learner has started, in curriculum order: the
+ * published ones that are done or in progress (`nodeState`). These are the
+ * nodes whose words go into one Anki file. Opening a page starts nothing.
+ */
+export function startedVocabulary<Node extends CurriculumNode & Pick<NodeSummary, 'kind'>>(
+  curriculum: readonly Node[],
+  progress: Progress,
+): Node[] {
+  return curriculum.filter(
+    (node) =>
+      node.kind === 'vocabulary' && node.status === 'published' && nodeState(progress, node.id) !== 'not-started',
+  )
+}
+
 export interface NodeCounts {
   /** Every node counted, written or not. */
   total: number

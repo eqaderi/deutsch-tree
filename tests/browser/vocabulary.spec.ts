@@ -28,7 +28,11 @@ test('a vocabulary page lists each word with its article, plural, word class, le
   await page.goto(`./#/node/${NODE}`)
 
   await expect(page.getByRole('heading', { level: 1, name: 'Fixture home words' })).toBeVisible()
-  await expect(page.getByRole('main').getByRole('heading', { level: 2 })).toHaveText(['Words', 'Test'])
+  await expect(page.getByRole('main').getByRole('heading', { level: 2 })).toHaveText([
+    'Words',
+    'Flashcards for Anki',
+    'Test',
+  ])
   await expect(wordsOnPage(page)).toHaveCount(10)
 
   const tisch = wordsOnPage(page).first()

@@ -1,24 +1,29 @@
 import { asLearned, pluralAsLearned, type VocabularyContent, type VocabularyWord } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
+import { AnkiExport } from './AnkiExport.tsx'
 import { German } from './German.tsx'
 
 /**
  * The page of a vocabulary node: one panel with every word of the node, in
- * the order of the node file. The test follows, as on every page.
+ * the order of the node file, then the export of the words to Anki. The test
+ * follows, as on every page.
  */
-export function VocabularySections({ content }: { content: VocabularyContent }) {
+export function VocabularySections({ nodeId, content }: { nodeId: string; content: VocabularyContent }) {
   const { strings } = useLanguage()
   return (
-    <section className="panel" aria-labelledby="section-words">
-      <h2 id="section-words" className="cap">
-        {strings.words}
-      </h2>
-      <ul className="words" aria-labelledby="section-words">
-        {content.words.map((word) => (
-          <WordEntry key={word.word} word={word} />
-        ))}
-      </ul>
-    </section>
+    <>
+      <section className="panel" aria-labelledby="section-words">
+        <h2 id="section-words" className="cap">
+          {strings.words}
+        </h2>
+        <ul className="words" aria-labelledby="section-words">
+          {content.words.map((word) => (
+            <WordEntry key={word.word} word={word} />
+          ))}
+        </ul>
+      </section>
+      <AnkiExport nodeId={nodeId} words={content.words} />
+    </>
   )
 }
 

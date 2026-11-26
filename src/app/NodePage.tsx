@@ -71,7 +71,7 @@ export function NodePage() {
   return (
     <NodeFrame node={summary}>
       {isVocabulary(content) ? (
-        <VocabularySections content={content} />
+        <VocabularySections nodeId={summary.id} content={content} />
       ) : 'phrases' in content ? (
         <PhraseSections node={summary} content={content} />
       ) : (
