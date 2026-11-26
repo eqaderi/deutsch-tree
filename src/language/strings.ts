@@ -210,6 +210,8 @@ export const en = {
   retryAnyTime: 'You can try as often as you like. Every test draws new questions.',
   wrongAnswers: 'Wrong answers',
   yourAnswer: 'Your answer',
+  /** In place of an answer that was not given. */
+  noAnswer: '–',
   rightAnswer: 'Right answer',
 
   // Backup: progress exported to a file and imported from one.

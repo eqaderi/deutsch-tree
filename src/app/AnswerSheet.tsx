@@ -116,7 +116,7 @@ export function SheetResultView({ part, result, next, onAnswerAgain }: SheetResu
             <dl>
               <div className={correct ? 'answer-right' : 'answer-given'}>
                 <dt>{strings.yourAnswer}</dt>
-                <dd>{given === undefined ? '–' : <German>{given}</German>}</dd>
+                <dd>{given === undefined ? strings.noAnswer : <German>{given}</German>}</dd>
               </div>
               {!correct && (
                 <div className="answer-right">

@@ -184,6 +184,7 @@ export const fa: Strings = {
   retryAnyTime: 'هر چند بار که بخواهید می‌توانید دوباره امتحان کنید. هر آزمون سؤال‌های تازه‌ای می‌آورد.',
   wrongAnswers: 'پاسخ‌های نادرست',
   yourAnswer: 'پاسخ شما',
+  noAnswer: '–',
   rightAnswer: 'پاسخ درست',
 
   backupLink: 'پشتیبان‌گیری از پیشرفت',

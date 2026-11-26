@@ -178,6 +178,7 @@ export const de: Strings = {
   retryAnyTime: 'Du kannst es so oft versuchen, wie du willst. Jeder Test hat neue Fragen.',
   wrongAnswers: 'Falsche Antworten',
   yourAnswer: 'Deine Antwort',
+  noAnswer: '–',
   rightAnswer: 'Richtige Antwort',
 
   backupLink: 'Fortschritt sichern',
