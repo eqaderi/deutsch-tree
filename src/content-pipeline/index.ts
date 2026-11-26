@@ -35,6 +35,8 @@ import {
 import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
+import { overviewData } from './overview-data.ts'
+import { searchData } from './search-data.ts'
 
 /** The list of official mock exams, beside the `nodes` folder, and its file in the compiled bundle. */
 export const OFFICIAL_MOCK_EXAMS_FILE = 'official-mock-exams.yaml'
@@ -132,6 +134,8 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
           },
           nodes,
           officialMockExams: officialMockExams ?? [],
+          search: searchData(nodes),
+          overview: overviewData(nodes),
         }
       : null,
   }
@@ -146,6 +150,13 @@ export function bundleFiles(bundle: ContentBundle): Array<{ path: string; json: 
       json: JSON.stringify({ exams: bundle.officialMockExams } satisfies OfficialMockExams),
     },
     ...bundle.nodes.map((node) => ({ path: `nodes/${node.id}.json`, json: JSON.stringify(node) })),
+    // Fetched only when the learner opens the "all grammar at a glance" page.
+    { path: 'overview.json', json: JSON.stringify(bundle.overview) },
+    // Fetched only when the learner opens search.
+    ...LANGUAGES.map((language) => ({
+      path: `search/${language}.json`,
+      json: JSON.stringify(bundle.search[language]),
+    })),
   ]
 }
 

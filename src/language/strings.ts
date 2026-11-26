@@ -242,6 +242,18 @@ export const en = {
   } satisfies Record<ExamLinkKind, string>,
   candidatePagesOnly: (first: number, last: number) =>
     `Use pages ${first} to ${last} only. The pages after them hold the answers, the texts of the recordings and sample answers.`,
+
+  // The two reference pages, and the links to them on every page.
+  reference: 'Look up',
+  search: 'Search',
+  allGrammar: 'All grammar',
+  searchTitle: 'Search all topics',
+  searchHint: 'Type a word in English or in German. Without ä, ö, ü and ß on your keyboard, write ae, oe, ue and ss.',
+  searchResults: (count: number) => (count === 1 ? '1 topic found' : `${count} topics found`),
+  searchNothing: 'No topic found. Try another word, or fewer words.',
+  overviewTitle: 'All grammar at a glance',
+  overviewIntro: 'Every grammar table on one page. The name above a table opens its topic.',
+  overviewEmpty: 'No grammar table is written yet.',
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */
