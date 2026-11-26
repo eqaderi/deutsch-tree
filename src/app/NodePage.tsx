@@ -1,8 +1,8 @@
-import { type ReactNode, use } from 'react'
+import { type ReactNode, use, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
-import { examModuleOf, isDone } from '../learning-engine/index.ts'
+import { examModuleOf, isDone, unmarkDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
 import { ExamPartSections } from './ExamPartSections.tsx'
 import { German, plainText, RichText } from './German.tsx'
@@ -10,7 +10,7 @@ import { GrammarTableView } from './GrammarTableView.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
 import { Panel } from './Panel.tsx'
-import { useProgress } from './progress.ts'
+import { updateProgress, useProgress } from './progress.ts'
 
 /**
  * A node's page: a column of panels in one fixed order, with the main action
@@ -65,7 +65,7 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
   return (
     <main className="wrap">
       <title>{`${plainText(node.title[language])} · ${strings.appName}`}</title>
-      <BackToTree />
+      <BackToTree from={node} />
       <header className="page-head">
         <h1>
           <RichText parts={node.title[language]} />
@@ -78,9 +78,86 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
           {node.status === 'coming-soon' && <span className="tag">{strings.comingSoon}</span>}
           {done && <span className="tag tag-done">{strings.done}</span>}
         </div>
+        <Unmark key={node.id} nodeId={node.id} />
+        <BuildsOn node={node} />
       </header>
       {children}
     </main>
+  )
+}
+
+/**
+ * Un-marks a done node, for a learner who has forgotten the topic. It asks
+ * once before it does: the only way back to "done" is to pass again.
+ */
+function Unmark({ nodeId }: { nodeId: string }) {
+  const { strings } = useLanguage()
+  const done = isDone(useProgress(), nodeId)
+  const [step, setStep] = useState<'offered' | 'asking' | 'unmarked'>('offered')
+  return (
+    <div className="unmark">
+      {done && step !== 'asking' && (
+        <button type="button" className="text-button" onClick={() => setStep('asking')}>
+          {strings.unmark}
+        </button>
+      )}
+      {done && step === 'asking' && (
+        <div className="unmark-question">
+          <p>{strings.unmarkQuestion}</p>
+          <div className="unmark-actions">
+            <button
+              type="button"
+              className="btn btn-small"
+              onClick={() => {
+                updateProgress((progress) => unmarkDone(progress, nodeId))
+                setStep('unmarked')
+              }}
+            >
+              {strings.unmarkConfirm}
+            </button>
+            <button type="button" className="btn btn-quiet btn-small" onClick={() => setStep('offered')}>
+              {strings.keepDone}
+            </button>
+          </div>
+        </div>
+      )}
+      {/* Always there, so that a screen reader hears the words when they arrive. */}
+      <p role="status">{!done && step === 'unmarked' ? strings.unmarked : ''}</p>
+    </div>
+  )
+}
+
+/**
+ * The nodes this one builds on, as links. They are advice on what to review:
+ * nothing here, or anywhere, locks a node.
+ */
+function BuildsOn({ node }: { node: NodeSummary }) {
+  const { language, strings } = useLanguage()
+  const { nodes } = use(loadIndex())
+  const progress = useProgress()
+  const earlier = node.prerequisites.flatMap((id) => nodes.find((candidate) => candidate.id === id) ?? [])
+  if (earlier.length === 0) return null
+  return (
+    <section className="builds-on" aria-labelledby="builds-on-heading">
+      <h2 id="builds-on-heading" className="cap">
+        {strings.buildsOn}
+      </h2>
+      <ul>
+        {earlier.map((other) => (
+          <li key={other.id}>
+            <Link to={`/node/${other.id}`}>
+              <RichText parts={other.title[language]} />
+            </Link>
+            {other.status === 'coming-soon' ? (
+              <span className="tag">{strings.comingSoon}</span>
+            ) : (
+              isDone(progress, other.id) && <span className="tag tag-done">{strings.done}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+      <p>{strings.buildsOnNote}</p>
+    </section>
   )
 }
 

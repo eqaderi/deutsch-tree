@@ -36,6 +36,40 @@ export const en = {
   start: 'Start',
   comingSoon: 'Coming soon',
   done: 'Done',
+  /** The state word of a topic that is in progress, as the tree writes it. */
+  continueTopic: 'Continue',
+
+  // Finding the way in the tree: the first visit, the next topic, the filter and the counts.
+  howItWorks: 'How it works',
+  firstSteps: {
+    pick: 'Pick a topic.',
+    read: 'Read it, or go straight to the test.',
+    pass: (percent: number) => `Score ${percent}% and the topic is done.`,
+  },
+  gotIt: 'Got it',
+  yourNextTopic: 'Your next topic',
+  nothingNext: 'You have done every topic that is written so far. New topics appear in the tree when they are ready.',
+  youAreHere: 'You are here',
+  kindsOfTopic: 'Kinds of topic',
+  allKinds: 'All kinds',
+  doneCount: (done: number) => `${done} done`,
+  /** Topics that are not done yet, written or not. */
+  leftCount: (left: number) => `${left} left`,
+  /** The counts of a level: done, left, and how many of those left are not written yet. */
+  countsSummary: (done: number, left: number, comingSoon: number) =>
+    comingSoon === 0 ? `${done} done · ${left} left` : `${done} done · ${left} left, ${comingSoon} of them coming soon`,
+  doneOfTotal: (done: number, total: number) => `${done} of ${total} done`,
+  comingSoonCount: (count: number) => `${count} coming soon`,
+  noTopicsHere: 'This level has no topics of this kind.',
+
+  // A topic's page: what it builds on, and un-marking.
+  buildsOn: 'Builds on',
+  buildsOnNote: 'Nothing is locked. These topics help if this one feels too hard.',
+  unmark: 'Mark as not done',
+  unmarkQuestion: 'Mark this topic as not done? It stays that way until you pass it again.',
+  unmarkConfirm: 'Yes, mark as not done',
+  keepDone: 'Keep it done',
+  unmarked: 'This topic is not done any more.',
 
   allTopics: 'All topics',
   rule: 'Rule',

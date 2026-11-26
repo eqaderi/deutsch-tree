@@ -29,6 +29,37 @@ export const de: Strings = {
   start: 'Start',
   comingSoon: 'Kommt bald',
   done: 'Fertig',
+  continueTopic: 'Weiter',
+
+  howItWorks: 'So geht es',
+  firstSteps: {
+    pick: 'Wähl ein Thema.',
+    read: 'Lies es oder mach gleich den Test.',
+    pass: (percent) => `Mit ${percent} % ist das Thema fertig.`,
+  },
+  gotIt: 'Verstanden',
+  yourNextTopic: 'Dein nächstes Thema',
+  nothingNext: 'Du hast alle Themen gemacht, die schon fertig sind. Neue Themen kommen später in den Baum.',
+  youAreHere: 'Du bist hier',
+  kindsOfTopic: 'Arten von Themen',
+  allKinds: 'Alle Arten',
+  doneCount: (done) => `${done} fertig`,
+  leftCount: (left) => `${left} offen`,
+  countsSummary: (done, left, comingSoon) =>
+    comingSoon === 0
+      ? `${done} fertig · ${left} offen`
+      : `${done} fertig · ${left} offen, davon ${comingSoon === 1 ? 'kommt 1' : `kommen ${comingSoon}`} bald`,
+  doneOfTotal: (done, total) => `${done} von ${total} fertig`,
+  comingSoonCount: (count) => (count === 1 ? '1 kommt bald' : `${count} kommen bald`),
+  noTopicsHere: 'In diesem Niveau gibt es keine Themen von dieser Art.',
+
+  buildsOn: 'Diese Themen kommen vorher',
+  buildsOnNote: 'Kein Thema ist gesperrt. Diese Themen helfen dir, wenn dieses Thema zu schwer ist.',
+  unmark: 'Als nicht fertig markieren',
+  unmarkQuestion: 'Soll dieses Thema nicht mehr fertig sein? Dann musst du es noch einmal bestehen.',
+  unmarkConfirm: 'Ja, nicht mehr fertig',
+  keepDone: 'Es bleibt fertig',
+  unmarked: 'Dieses Thema ist nicht mehr fertig.',
 
   allTopics: 'Alle Themen',
   rule: 'Regel',

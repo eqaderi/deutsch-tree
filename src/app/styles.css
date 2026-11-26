@@ -318,6 +318,12 @@ main.wrap {
   cursor: default;
 }
 
+/* A small action inside a note. Still as high as a touch target. */
+.btn-small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
 /* State marks: a circle whose fill says the state; the word is always beside it. */
 .mark {
   flex: none;
@@ -330,6 +336,25 @@ main.wrap {
 .mark-coming-soon {
   box-shadow: none;
   border: 2px dashed var(--ring);
+}
+
+/* In progress: a half-filled ring. */
+.mark-in-progress {
+  background: conic-gradient(var(--text) 0 50%, transparent 0);
+  box-shadow: inset 0 0 0 2px var(--text);
+}
+
+/* "You are here": on the level strip and on the chapter with the next topic. */
+.here {
+  border-radius: 999px;
+  padding: 2px 9px;
+  background: var(--accent);
+  color: var(--text);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
 /* Done: a dark filled circle with a tick. */
@@ -363,11 +388,99 @@ main.wrap {
   color: var(--text-secondary);
 }
 
+/* First visit: three numbered steps and a button that sends them away. */
+.first-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-block-start: var(--gap);
+  border-radius: var(--radius-card);
+  padding: 12px 14px;
+  background: var(--raised);
+}
+
+.first-steps ol {
+  flex: 1;
+  min-inline-size: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.first-steps li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.first-steps li b {
+  flex: none;
+  display: grid;
+  place-items: center;
+  inline-size: 24px;
+  block-size: 24px;
+  border-radius: 50%;
+  background: var(--text);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* The next recommended topic: the one obvious next step, with the screen's main action. */
+.next-topic {
+  margin-block-start: var(--gap);
+}
+
+.next-topic-title {
+  font-size: 22px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.next-topic-chapter {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.next-topic-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-start: 14px;
+}
+
+.next-topic-actions .btn-main {
+  flex: 1;
+}
+
 .strip {
   display: flex;
   align-items: flex-start;
   gap: 6px;
+  /* Room above the levels for "You are here". */
   margin-block: 22px 4px;
+  padding-block-start: 30px;
+}
+
+/* Above its level, centred on it, in both directions of writing. */
+.strip-level .here {
+  position: absolute;
+  inset-block-end: 100%;
+  justify-self: center;
+  margin-block-end: 4px;
+}
+
+/* Past the last level: it ends where the strip ends, so it never leaves the page. */
+.strip-end .here {
+  position: absolute;
+  inset-block-end: 100%;
+  inset-inline-end: 0;
+  margin-block-end: 4px;
 }
 
 .strip-line {
@@ -379,6 +492,7 @@ main.wrap {
 }
 
 .strip-end {
+  position: relative;
   margin-block-start: 13px;
   font-size: 12px;
   color: var(--text-secondary);
@@ -386,6 +500,7 @@ main.wrap {
 }
 
 .strip-level {
+  position: relative;
   display: grid;
   justify-items: center;
   gap: 2px;
@@ -411,16 +526,63 @@ main.wrap {
 
 .strip-level small {
   font-size: 12px;
+  line-height: 1.3;
   color: var(--text-secondary);
+  white-space: nowrap;
 }
 
 .level-heading {
-  margin-block: 18px 12px;
+  margin-block: 18px 2px;
 }
 
 .level-heading span {
   font-weight: 400;
   color: var(--text-secondary);
+}
+
+.level-counts {
+  margin-block-end: 12px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* The filter by kind: one pill per kind, each with its own counts. */
+.kinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block-end: 16px;
+}
+
+.kind-choice {
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  gap: 2px;
+  min-block-size: var(--touch);
+  border-radius: 999px;
+  padding: 6px 16px;
+  background: var(--panel);
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.kind-choice[aria-current] {
+  background: var(--raised);
+  box-shadow: inset 0 0 0 2px var(--text);
+}
+
+.kind-choice b {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.kind-choice small {
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  white-space: nowrap;
 }
 
 /* One vertical line per level, with a stop for each chapter. */
@@ -458,6 +620,20 @@ main.wrap {
   font-size: 13px;
   font-weight: 500;
   color: var(--text-secondary);
+}
+
+/* The chapter with the next recommended topic. */
+.stop-here .stop-dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  color: var(--text);
+}
+
+/* A chapter with every topic done. */
+.stop-done .stop-dot {
+  background: var(--text);
+  box-shadow: none;
+  color: #fff;
 }
 
 /* A chapter: its head is always there; a tap on it shows or hides its topics. */
@@ -570,6 +746,7 @@ main.wrap {
   border-block-start: 1px solid #e7dfd3;
 }
 
+/* A row of a list: a mark or nothing, a text, and a word at its end. Often the whole row is a link. */
 .row {
   display: flex;
   align-items: center;
@@ -577,6 +754,75 @@ main.wrap {
   min-block-size: var(--touch);
   padding: 12px 14px;
   text-decoration: none;
+}
+
+/*
+ * A topic: a row that links to its page (mark, title, state word) and, beside
+ * it, a link to its test.
+ */
+.topic {
+  display: flex;
+  align-items: center;
+}
+
+.topic > .row {
+  flex: 1;
+  min-inline-size: 0;
+}
+
+.topic > .row:focus-visible {
+  outline-offset: -3px;
+}
+
+/* Looks 32px high; the area that takes a tap is 44px. */
+.row-test {
+  position: relative;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 32px;
+  margin-inline-end: 14px;
+  border-radius: 999px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+}
+
+.row-test::after {
+  content: "";
+  position: absolute;
+  inset: -6px 0;
+}
+
+.row-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+
+/* The next recommended topic: the one row with the accent. The words say it too. */
+.topic-next {
+  background: var(--accent-soft);
+}
+
+.topic-next .mark {
+  box-shadow:
+    inset 0 0 0 2px var(--text),
+    0 0 0 3px var(--accent);
+}
+
+.pill-next {
+  background: var(--accent);
+  box-shadow: none;
+}
+
+.row-next-word {
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .row-text {
@@ -636,6 +882,77 @@ main.wrap {
   align-items: center;
   gap: 6px;
   margin-block-start: 10px;
+}
+
+/* A quiet action written as a link, such as un-marking a done topic. */
+.text-button {
+  min-block-size: var(--touch);
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.unmark-question {
+  margin-block-start: 10px;
+  border-radius: var(--radius-card);
+  padding: 12px 14px;
+  background: var(--raised);
+}
+
+.unmark-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block-start: 12px;
+}
+
+.unmark [role="status"] {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.unmark [role="status"]:not(:empty) {
+  margin-block-start: 10px;
+}
+
+/* What a topic builds on: advice, never a lock. */
+.builds-on {
+  margin-block-start: 14px;
+  font-size: 14px;
+}
+
+.builds-on .cap {
+  margin-block-end: 2px;
+}
+
+.builds-on ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.builds-on li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 8px;
+}
+
+.builds-on a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.builds-on p {
+  color: var(--text-secondary);
 }
 
 .rule {

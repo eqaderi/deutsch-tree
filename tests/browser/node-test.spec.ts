@@ -79,7 +79,7 @@ test('a learner fails a test, sees each wrong question with the right answer and
   await expect(page.getByText('Question 1 of 10')).toBeVisible()
   await page.getByRole('link', { name: 'Back to the topic' }).click()
   await page.getByRole('link', { name: 'All topics' }).click()
-  await expect(topicInTree(page)).toContainText('Start')
+  await expect(topicInTree(page)).toContainText('Continue')
   await expect(topicInTree(page)).not.toContainText('Done')
 })
 

@@ -11,6 +11,7 @@ import { NotFound } from './NotFound.tsx'
 import { PracticeTest } from './PracticeTest.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 import { TestResult } from './TestResult.tsx'
+import { treeAddressOf } from './treeAddress.ts'
 
 /**
  * The address of a node's test: for an exam part, its practice task. It can
@@ -76,6 +77,7 @@ export function NodeTest({ node, pool, attemptSize }: NodeTestProps) {
           result={attempt.finished.result}
           wasDone={attempt.finished.wasDone}
           onRetry={() => setAttempt(draw(attempt.number + 1))}
+          treeAddress={treeAddressOf(node)}
         />
       ) : (
         <AttemptRun

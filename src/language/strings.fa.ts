@@ -32,6 +32,38 @@ export const fa: Strings = {
   start: 'شروع',
   comingSoon: 'به‌زودی',
   done: 'تمام‌شده',
+  continueTopic: 'ادامه',
+
+  howItWorks: 'روش کار',
+  firstSteps: {
+    pick: 'یک موضوع انتخاب کنید.',
+    read: 'آن را بخوانید، یا مستقیم آزمون بدهید.',
+    pass: (percent) => `با ${digits.format(percent)}٪ پاسخ درست، موضوع تمام‌شده است.`,
+  },
+  gotIt: 'فهمیدم',
+  yourNextTopic: 'موضوع بعدی شما',
+  nothingNext:
+    'همهٔ موضوع‌هایی را که تا امروز نوشته شده‌اند تمام کرده‌اید. موضوع‌های تازه، وقتی آماده شوند، در درخت می‌آیند.',
+  youAreHere: 'شما اینجایید',
+  kindsOfTopic: 'نوع موضوع‌ها',
+  allKinds: 'همهٔ نوع‌ها',
+  doneCount: (done) => `${digits.format(done)} تمام‌شده`,
+  leftCount: (left) => `${digits.format(left)} مانده`,
+  countsSummary: (done, left, comingSoon) =>
+    comingSoon === 0
+      ? `${digits.format(done)} تمام‌شده · ${digits.format(left)} مانده`
+      : `${digits.format(done)} تمام‌شده · ${digits.format(left)} مانده، ${digits.format(comingSoon)} تای آن‌ها به‌زودی`,
+  doneOfTotal: (done, total) => `${digits.format(done)} از ${digits.format(total)} تمام‌شده`,
+  comingSoonCount: (count) => `${digits.format(count)} به‌زودی`,
+  noTopicsHere: 'این سطح موضوعی از این نوع ندارد.',
+
+  buildsOn: 'پیش‌نیازها',
+  buildsOnNote: 'هیچ موضوعی قفل نیست. اگر این موضوع سخت بود، این موضوع‌ها کمک می‌کنند.',
+  unmark: 'برداشتن علامت «تمام‌شده»',
+  unmarkQuestion: 'علامت «تمام‌شده» از این موضوع برداشته شود؟ تا وقتی دوباره در آن قبول نشوید، تمام‌شده نیست.',
+  unmarkConfirm: 'بله، بردار',
+  keepDone: 'تمام‌شده بماند',
+  unmarked: 'این موضوع دیگر تمام‌شده نیست.',
 
   allTopics: 'همهٔ موضوع‌ها',
   rule: 'قاعده',

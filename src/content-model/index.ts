@@ -788,6 +788,13 @@ export interface NodeSummary {
   status: NodeStatus
   recogniseOnly: boolean
   prerequisites: string[]
+  /**
+   * The node is published and the app can test it, so its test can be started
+   * at `#/node/<id>/test` without opening its page: a draw from its pool, or
+   * for an exam part one of its practice tasks. False for a node that becomes
+   * done in another way (a score typed in).
+   */
+  hasTest: boolean
   /** German inside a title is marked, like in every other text for the learner. */
   title: Localised<RichText>
   /** Exam-part nodes only: the module of the exam and the number of the part inside it. */

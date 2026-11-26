@@ -128,6 +128,18 @@ test('a learner takes the practice task of an exam part, gets every item right, 
   await expect(await partInTree(page)).toContainText('Done')
 })
 
+test('the practice task of an exam part starts from the tree, without opening the part’s page', async ({ page }) => {
+  await page.goto('./')
+  await expect(await partInTree(page)).toBeVisible()
+  // Beside the link to the part's page, its row has a link straight to the practice task.
+  const row = page.getByRole('main').getByRole('listitem').filter({ hasText: 'Fixture reading, part 1' })
+
+  await row.getByRole('link', { name: 'Practice task' }).click()
+
+  await expect(page.getByRole('heading', { level: 1, name: 'Practice: Fixture reading, part 1' })).toBeVisible()
+  await expect(itemsOnScreen(page)).toHaveCount(ITEMS)
+})
+
 test('one wrong item of six does not pass; every item shows its result, and the wrong one its right answer and reason', async ({
   page,
 }) => {
