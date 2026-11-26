@@ -24,12 +24,9 @@ import {
   type Question,
   type RichText,
 } from '../content-model/index.ts'
-import { CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
+import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
 
 export type { ContentProblem }
-
-/** The chapter list, beside the `nodes` folder. */
-export const CHAPTERS_FILE = 'chapters.yaml'
 
 export interface PipelineReport {
   ok: boolean

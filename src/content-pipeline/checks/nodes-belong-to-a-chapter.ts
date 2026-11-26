@@ -1,6 +1,4 @@
-import { type ContentCheck, type ContentProblem, problemIn } from './check.ts'
-
-const CHAPTERS_FILE = 'chapters.yaml'
+import { CHAPTERS_FILE, type ContentCheck, type ContentProblem, problemIn } from './check.ts'
 
 /** Every node names a chapter of the chapter list, and has that chapter's level and kind. */
 export const nodesBelongToAChapter: ContentCheck = ({ nodes, chapters }) => {

@@ -1,7 +1,5 @@
 import type { NodeFile } from '../../content-model/index.ts'
-import { type ContentCheck, type ContentProblem, problemIn } from './check.ts'
-
-const CHAPTERS_FILE = 'chapters.yaml'
+import { CHAPTERS_FILE, type ContentCheck, type ContentProblem, problemIn } from './check.ts'
 
 /**
  * In Persian text, every piece of German stands in asterisks.

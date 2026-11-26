@@ -8,6 +8,7 @@ import { prerequisitesHaveNoCycle } from './prerequisites-have-no-cycle.ts'
 import { publishedNodeIsReviewed } from './published-node-is-reviewed.ts'
 
 export type { CheckedNode, ContentCheck, ContentProblem, ContentUnderCheck } from './check.ts'
+export { CHAPTERS_FILE } from './check.ts'
 
 /** Every content check, in the order their problems appear in the report. */
 export const CHECKS: ContentCheck[] = [

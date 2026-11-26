@@ -5,6 +5,9 @@
  */
 import type { ChapterEntry, NodeFile } from '../../content-model/index.ts'
 
+/** The chapter list, beside the `nodes` folder. */
+export const CHAPTERS_FILE = 'chapters.yaml'
+
 /** One thing a maintainer has to fix. */
 export interface ContentProblem {
   /** Path of the file, relative to the content folder. */
