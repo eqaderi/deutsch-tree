@@ -172,6 +172,15 @@ const reviewRecord = z.strictObject({
   pool: text,
 })
 
+/**
+ * One word of a vocabulary node. `word` is the headword as the scope list
+ * (content/vocabulary/scope-list.tsv) spells it; the list holds its word
+ * class, level, article and plural. The rest of an entry (meanings, a
+ * definition, an example sentence) joins this object when vocabulary pages
+ * are built.
+ */
+const vocabularyEntry = z.strictObject({ word: text })
+
 /** The content sections that a published node must have. */
 const CONTENT_SECTIONS = ['explanations', 'table', 'examples', 'mistakes', 'questions'] as const
 
@@ -209,6 +218,8 @@ export const nodeFileSchema = z
       .default(10),
     /** A published node must have one that matches its pool; the content pipeline checks it. */
     review: reviewRecord.optional(),
+    /** The words of a vocabulary node; no other kind has them. */
+    words: z.array(vocabularyEntry).min(1).optional(),
   })
   .superRefine((value, ctx) => {
     if (value.kind === 'grammar' && !/^grammar-\d{3}$/.test(value.id)) {
@@ -216,6 +227,23 @@ export const nodeFileSchema = z
         code: 'custom',
         path: ['id'],
         message: 'a grammar node id is "grammar-" plus its three-digit number in the grammar list, like "grammar-001"',
+      })
+    }
+    if (value.kind === 'vocabulary' && !value.id.startsWith('vocabulary-')) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['id'],
+        message: 'a vocabulary node id is "vocabulary-" plus the name of its theme, like "vocabulary-family"',
+      })
+    }
+    if (value.kind === 'vocabulary' && value.words === undefined) {
+      ctx.addIssue({ code: 'custom', path: ['words'], message: 'is missing: a vocabulary node lists its words' })
+    }
+    if (value.kind !== 'vocabulary' && value.words !== undefined) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['words'],
+        message: `a ${value.kind} node has no words; only a vocabulary node has`,
       })
     }
     if (value.status !== 'published') return
