@@ -1,5 +1,5 @@
 # Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
-# Goethe-Zertifikat B1, Lesen, Teil 1. The format follows the exam; the texts and the items of both tasks are original.
+# Goethe-Zertifikat B1, Lesen, Teil 1. The format follows the exam; the text and the items are original.
 id: exam-lesen-1
 kind: exam-part
 level: B1
@@ -144,77 +144,6 @@ practice:
           en: "The rooms are rented out (*vermietet*) and are *nicht teuer*: cheap, but not free."
           fa: "اتاق‌ها اجاره داده می‌شوند (*vermietet*) و *nicht teuer* هستند: ارزان، ولی نه رایگان."
           de: "Frau Brandl *vermietet* die Zimmer. Sie sind *nicht teuer*, aber sie kosten etwas."
-
-  - id: t2
-    texts:
-      - id: a
-        title: Ein Sommer im Gemeinschaftsgarten
-        body: |
-          Hallo zusammen,
-
-          heute gibt es auf meinem Blog keinen Reisebericht, sondern etwas ganz anderes. Seit April habe ich nämlich ein neues Hobby: Ich gärtnere. Das klingt vielleicht seltsam, weil ich mitten in der Stadt in einer kleinen Wohnung im vierten Stock wohne und nicht einmal einen Balkon habe. Aber zehn Minuten von meiner Wohnung entfernt gibt es seit letztem Jahr einen Gemeinschaftsgarten. Dort teilen sich ungefähr vierzig Leute ein großes Grundstück, das früher ein Parkplatz war.
-
-          Auf die Idee hat mich meine Kollegin Aylin gebracht. Sie macht schon länger mit und hat mich im Frühling einfach einmal mitgenommen. Ich wollte eigentlich nur zuschauen, aber nach einer Stunde hatte ich schon schmutzige Hände und meine ersten Tomaten gepflanzt.
-
-          Jeder kann im Garten ein eigenes Beet bekommen. Es kostet nichts, aber man muss versprechen, dass man jeden Monat mindestens an einem Samstag bei der gemeinsamen Arbeit hilft: Wege sauber machen, Wasser holen, Werkzeug reparieren. Am Anfang fand ich diese Regel ein bisschen streng. Inzwischen freue ich mich auf diese Samstage, weil man dabei die anderen am besten kennenlernt.
-
-          Leider ist nicht alles gelungen. Meine Tomaten sind wunderbar gewachsen, aber den Salat haben die Schnecken gefressen, bevor ich auch nur ein Blatt probieren konnte. Ein älterer Herr aus dem Garten, Herr Okafor, hat mir dann erklärt, was ich nächstes Jahr anders machen muss. Er gärtnert seit fünfzig Jahren und weiß wirklich alles über Pflanzen.
-
-          Was mich am meisten überrascht hat: Ich bin viel ruhiger geworden. Früher habe ich nach der Arbeit oft stundenlang am Computer gesessen und mich trotzdem nicht erholt. Jetzt gehe ich zweimal pro Woche nach Feierabend in den Garten, gieße meine Pflanzen und rede mit den Nachbarn. Danach schlafe ich viel besser.
-
-          Im September feiern wir ein Erntefest, zu dem jeder etwas aus dem eigenen Beet mitbringt. Ich werde eine Tomatensuppe kochen, und zwar für sechzig Personen! Wer von euch in der Nähe wohnt, ist herzlich eingeladen. Den genauen Termin schreibe ich bald hier auf den Blog.
-
-          Bis bald
-          eure Sabine
-    items:
-      - id: i1
-        type: richtig-falsch
-        prompt: Sabine wohnt in einer Wohnung mit Balkon.
-        answer: false
-        explanation:
-          en: "She lives in a small flat on the fourth floor and has *nicht einmal einen Balkon*: not even a balcony."
-          fa: "او در آپارتمان کوچکی در طبقهٔ چهارم زندگی می‌کند و *nicht einmal einen Balkon* دارد: حتی یک بالکن هم ندارد."
-          de: "Sie wohnt im vierten Stock und hat *nicht einmal einen Balkon*."
-      - id: i2
-        type: richtig-falsch
-        prompt: Sabine ist durch eine Kollegin zum Gemeinschaftsgarten gekommen.
-        answer: true
-        explanation:
-          en: "*Auf die Idee hat mich meine Kollegin Aylin gebracht*: her colleague Aylin gave her the idea and took her along."
-          fa: "*Auf die Idee hat mich meine Kollegin Aylin gebracht*: همکارش آیلین این فکر را به او داد و او را با خودش به باغ برد."
-          de: "Ihre Kollegin Aylin hat sie *auf die Idee gebracht* und einmal *mitgenommen*."
-      - id: i3
-        type: richtig-falsch
-        prompt: Für ein eigenes Beet zahlt man jeden Monat einen kleinen Betrag.
-        answer: false
-        explanation:
-          en: "A bed *kostet nichts*: it is free. Instead, everyone helps with the shared work on one Saturday a month."
-          fa: "باغچه *kostet nichts*: رایگان است. در عوض هر کس ماهی یک شنبه در کار مشترک کمک می‌کند."
-          de: "Ein Beet *kostet nichts*. Man muss aber jeden Monat an einem Samstag mithelfen."
-      - id: i4
-        type: richtig-falsch
-        prompt: Die Regel mit der gemeinsamen Arbeit findet Sabine heute nicht mehr schlimm.
-        answer: true
-        explanation:
-          en: "At first she found the rule *ein bisschen streng*, a bit strict; *inzwischen* she looks forward to those Saturdays."
-          fa: "اول این قانون را *ein bisschen streng* می‌دانست، یعنی کمی سخت‌گیرانه؛ ولی حالا (*inzwischen*) با خوشحالی منتظر آن شنبه‌هاست."
-          de: "Am Anfang war die Regel für sie *ein bisschen streng*. *Inzwischen* freut sie sich auf die Samstage."
-      - id: i5
-        type: richtig-falsch
-        prompt: Herr Okafor hat erst vor Kurzem mit der Gartenarbeit angefangen.
-        answer: false
-        explanation:
-          en: "He *gärtnert seit fünfzig Jahren*: he has been gardening for fifty years."
-          fa: "او *seit fünfzig Jahren* باغبانی می‌کند: پنجاه سال است که باغبانی می‌کند."
-          de: "Er *gärtnert seit fünfzig Jahren*. Er weiß alles über Pflanzen."
-      - id: i6
-        type: richtig-falsch
-        prompt: Durch die Gartenarbeit fühlt sich Sabine entspannter als früher.
-        answer: true
-        explanation:
-          en: "She writes *Ich bin viel ruhiger geworden*: she has become much calmer, and she sleeps better."
-          fa: "او می‌نویسد *Ich bin viel ruhiger geworden*: خیلی آرام‌تر شده است و بهتر هم می‌خوابد."
-          de: "Sie schreibt: *Ich bin viel ruhiger geworden.* Und sie schläft viel besser."
 
 review:
   reviewer: Independent AI agents (blind; a second agent for the two reworded items)
