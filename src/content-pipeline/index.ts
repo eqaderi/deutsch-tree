@@ -9,14 +9,14 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
 import {
-  LANGUAGES,
-  nodeFileSchema,
   type CompiledNode,
   type ContentBundle,
   type GrammarContent,
+  LANGUAGES,
   type Localised,
   type NodeFile,
   type NodeSummary,
+  nodeFileSchema,
   type RichText,
 } from '../content-model/index.ts'
 
@@ -121,7 +121,7 @@ export function formatReport(report: PipelineReport): string {
   const { total, published, comingSoon } = report.nodes
   lines.push(
     report.ok
-      ? `Content OK: ${total} nodes (${published} published, ${comingSoon} coming soon), ${report.questions} questions.`
+      ? `Content OK. Nodes: ${total} (${published} published, ${comingSoon} coming soon). Questions: ${report.questions}.`
       : `Content has ${report.errors.length} error${report.errors.length === 1 ? '' : 's'}. Nothing was compiled.`,
   )
   return lines.join('\n')
