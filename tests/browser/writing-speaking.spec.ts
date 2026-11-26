@@ -142,6 +142,38 @@ test('a score of 89 does not mark the node done; a later 95 does, and every scor
   ).toHaveText(['89', '95'])
 })
 
+test('entered scores go into the exported progress file and come back when it is imported', async ({
+  page,
+}, testInfo) => {
+  await page.goto(WRITING)
+  await enterScore(page, '72')
+  await enterScore(page, '93')
+
+  await page.getByRole('contentinfo').getByRole('link', { name: 'Back up progress' }).click()
+  const downloading = page.waitForEvent('download')
+  await page.getByRole('button', { name: 'Export progress' }).click()
+  const download = await downloading
+  const path = testInfo.outputPath(download.suggestedFilename())
+  await download.saveAs(path)
+
+  // The browser is cleared: the scores are gone.
+  await page.evaluate(() => localStorage.clear())
+  await page.goto(WRITING)
+  await page.reload()
+  await expect(page.getByRole('region', { name: 'Your score', exact: true })).toContainText('No score yet.')
+
+  await page.getByRole('contentinfo').getByRole('link', { name: 'Back up progress' }).click()
+  const chooser = page.waitForEvent('filechooser')
+  await page.getByRole('button', { name: 'Import a progress file' }).click()
+  await (await chooser).setFiles(path)
+  await expect(page.getByRole('status')).toContainText('Progress imported.')
+
+  await page.goto(WRITING)
+  const score = page.getByRole('region', { name: 'Your score', exact: true })
+  await expect(score.getByRole('list', { name: 'Your scores so far' }).getByRole('listitem')).toHaveText(['72', '93'])
+  await expect(page.getByRole('main').getByText('Done', { exact: true })).toBeVisible()
+})
+
 test('a lower score after the node is done leaves it done', async ({ page }) => {
   await page.goto(WRITING)
   await enterScore(page, '93')
