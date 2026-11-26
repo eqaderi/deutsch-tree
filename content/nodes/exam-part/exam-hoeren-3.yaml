@@ -1,8 +1,8 @@
 # Exam-part list: docs/approvals/phrase-and-exam-part-nodes.md. The file format is described in content/README.md.
 # Goethe-Zertifikat B1, Hören, Teil 3. The format follows the exam; the conversations and the items are original.
 # Each line is heard in the voice of its speaker: Kerstin for the woman, Thorsten for the man.
-# Written in full and waiting for its blind review. To publish it: review it (content/README.md,
-# "Review before publishing"), set the status to published, then run pnpm audio:generate.
+# Published after a blind review (the review record at the end). A change to a line or an item
+# needs a new review: content/README.md, "Review before publishing".
 id: exam-hoeren-3
 kind: exam-part
 level: B1

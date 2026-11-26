@@ -8,8 +8,9 @@ Check your work with `pnpm content:check`. It names the node, the question,
 the file and the place of every problem, and the site is not built while one
 remains. `pnpm dev` shows the result in a browser and reloads on save.
 
-The exact rules are the schema in `src/content-model/index.ts`. A complete
-example is `content/nodes/grammar/grammar-001.yaml`.
+The exact rules are the schema in `src/content-model/index.ts`. Each kind's
+section below names a complete example of it; for grammar it is
+`content/nodes/grammar/grammar-128.yaml`.
 
 ## Two conventions
 
