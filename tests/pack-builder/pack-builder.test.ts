@@ -4,7 +4,14 @@ import path from 'node:path'
 import { expect, test } from 'vitest'
 import { packAnswerKeySchema, packDescriptionSchema } from '../../src/content-model/pack.ts'
 import { buildPack, type PackBuildOptions } from '../../src/pack-builder/index.ts'
-import { type FixtureBook, fixtureBook, fixturePageNumbers, writeFixtureBook } from './fixture.ts'
+import {
+  type FixtureBook,
+  fixtureBook,
+  fixturePageNumbers,
+  otherBook,
+  otherBookProfile,
+  writeFixtureBook,
+} from './fixture.ts'
 
 /** Builds a pack from a synthetic book into a new temporary folder. */
 async function build(book: FixtureBook = fixtureBook(), options: Partial<PackBuildOptions> = {}) {
@@ -435,87 +442,8 @@ test('an existing pack is left alone unless the build is told to replace it', as
 // A book laid out differently: everything book-specific comes from the profile
 // ---------------------------------------------------------------------------
 
-/**
- * A book unlike the default one: other names, a running head on every page
- * instead of headings, contents and transcripts that repeat the headings, a
- * two-column answer key with no part headings and one-letter answers, and
- * recordings numbered as tracks in two folders.
- */
-function otherBook(): FixtureBook {
-  const exam = (number: number): string[][] => [
-    [`Übungssatz ${number} | Leseverstehen | Aufgabe 1`, 'Placeholder text.'],
-    [`Übungssatz ${number} | Leseverstehen | Aufgabe 1`, 'Placeholder text, continued.'],
-    [`Übungssatz ${number} | Leseverstehen | Aufgabe 2`, 'Placeholder text.'],
-    [`Übungssatz ${number} | Hörverstehen | Aufgabe 1`, 'Placeholder text.'],
-    [`Übungssatz ${number} | Hörverstehen | Aufgabe 2`, 'Placeholder text.'],
-    [`Übungssatz ${number} | Schriftlicher Ausdruck`, 'Placeholder text.'],
-  ]
-  return {
-    examPages: [
-      ['Contents', 'Übungssatz 1 | page 3', 'Übungssatz 2 | page 9'],
-      ['Introduction', 'Placeholder text.'],
-      ...exam(1),
-      ...exam(2),
-      ['Transcripts', 'Übungssatz 1 | Hörverstehen | Aufgabe 1', 'Placeholder text.'],
-    ],
-    keyPages: [
-      {
-        columns: [
-          ['Lösungen zu Übungssatz 1', 'LV: 1. R 2. F 3. R 4. b 5. a', 'HV: 1. c 2. a 3. b 4. b'],
-          ['Lösungen zu Übungssatz 2', 'LV: 1. F 2. F 3. R 4. c 5. c', 'HV: 1. a 2. b 3. c 4. a'],
-        ],
-      },
-    ],
-    recordings: ['cover.jpg', 'CD1/Track 2.mp3', 'CD1/Track 3.mp3', 'CD2/Track 10.mp3', 'CD2/Track 11.mp3'],
-  }
-}
-
-const otherProfile: PackBuildOptions['profile'] = {
-  exams: 2,
-  modules: [
-    {
-      id: 'lesen',
-      title: 'Leseverstehen',
-      parts: [
-        { items: 3, choices: ['richtig', 'falsch'] },
-        { items: 2, choices: ['a', 'b', 'c'] },
-      ],
-    },
-    {
-      id: 'hoeren',
-      title: 'Hörverstehen',
-      recordings: true,
-      parts: [
-        { items: 2, choices: ['a', 'b', 'c'] },
-        { items: 2, choices: ['a', 'b', 'c'] },
-      ],
-    },
-    { id: 'schreiben', title: 'Schriftlicher Ausdruck' },
-  ],
-  examPdf: {
-    firstPage: 3,
-    lastPage: 14,
-    exam: '^Übungssatz (\\d+) \\|',
-    modules: {
-      lesen: '\\| Leseverstehen\\b',
-      hoeren: '\\| Hörverstehen\\b',
-      schreiben: '\\| Schriftlicher Ausdruck$',
-    },
-    part: '\\| Aufgabe (\\d+)$',
-  },
-  answerKey: {
-    columns: 2,
-    exam: 'Übungssatz (\\d+)',
-    modules: { lesen: '^LV:', hoeren: '^HV:' },
-    part: null,
-    item: '(\\d+)\\. (R|F|[a-c])(?!\\S)',
-    answers: { R: 'richtig', F: 'falsch' },
-  },
-  recordings: { file: '^Track (?<track>\\d+)$', ignore: '\\.jpg$' },
-}
-
 test("a book with another layout is read with that book's profile", async () => {
-  const { report, packDir } = await build(otherBook(), { profile: otherProfile })
+  const { report, packDir } = await build(otherBook(), { profile: otherBookProfile })
   expect(report.errors).toEqual([])
   expect(report.repairs).toEqual([])
 
@@ -594,7 +522,7 @@ test("a book with another layout is read with that book's profile", async () => 
 test('with track numbers, a missing recording is an error rather than a shifted mapping', async () => {
   const book = otherBook()
   book.recordings = book.recordings.filter((name) => name !== 'CD1/Track 3.mp3')
-  const { report, packDir } = await build(book, { profile: otherProfile })
+  const { report, packDir } = await build(book, { profile: otherBookProfile })
 
   expect(packDir).toBeNull()
   expect(report.errors).toEqual([
@@ -647,13 +575,13 @@ test('a profile with a mistake in it is reported before any file is read', async
 })
 
 test.each([
-  ['examPdf.firstPage', { examPdf: { ...otherProfile?.examPdf, firstPage: undefined } }, 'exam-pdf'],
-  ['examPdf.lastPage', { examPdf: { ...otherProfile?.examPdf, lastPage: undefined } }, 'exam-pdf'],
-  ['answerKey.columns', { answerKey: { ...otherProfile?.answerKey, columns: undefined } }, 'answer-key'],
-  ['answerKey.answers', { answerKey: { ...otherProfile?.answerKey, answers: undefined } }, 'answer-key'],
-  ['recordings.ignore', { recordings: { ...otherProfile?.recordings, ignore: undefined } }, 'recordings'],
+  ['examPdf.firstPage', { examPdf: { ...otherBookProfile?.examPdf, firstPage: undefined } }, 'exam-pdf'],
+  ['examPdf.lastPage', { examPdf: { ...otherBookProfile?.examPdf, lastPage: undefined } }, 'exam-pdf'],
+  ['answerKey.columns', { answerKey: { ...otherBookProfile?.answerKey, columns: undefined } }, 'answer-key'],
+  ['answerKey.answers', { answerKey: { ...otherBookProfile?.answerKey, answers: undefined } }, 'answer-key'],
+  ['recordings.ignore', { recordings: { ...otherBookProfile?.recordings, ignore: undefined } }, 'recordings'],
 ] as const)('that book does not build without %s in its profile', async (_key, change, source) => {
-  const { report, packDir } = await build(otherBook(), { profile: { ...otherProfile, ...change } })
+  const { report, packDir } = await build(otherBook(), { profile: { ...otherBookProfile, ...change } })
 
   expect(packDir).toBeNull()
   expect(new Set(report.errors.map((error) => error.source))).toEqual(new Set([source]))

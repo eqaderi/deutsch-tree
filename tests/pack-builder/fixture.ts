@@ -14,6 +14,7 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { PDFDocument, StandardFonts } from 'pdf-lib'
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs'
+import type { BookProfileOverrides } from '../../src/pack-builder/profile.ts'
 
 /** The lines on a page, top to bottom; or side-by-side columns of lines. */
 export type FixturePage = string[] | { columns: string[][] }
@@ -96,6 +97,86 @@ export function fixtureBook(): FixtureBook {
     ],
     recordings: [1, 2].flatMap((exam) => [1, 2, 3, 4].map((part) => `Modelltest-${exam}-Hoeren-Teil-${part}.mp3`)),
   }
+}
+
+/**
+ * A book unlike the default one: other names, a running head on every page
+ * instead of headings, contents and transcripts that repeat the headings, a
+ * two-column answer key with no part headings and one-letter answers, and
+ * recordings numbered as tracks in two folders.
+ */
+export function otherBook(): FixtureBook {
+  const exam = (number: number): string[][] => [
+    [`Übungssatz ${number} | Leseverstehen | Aufgabe 1`, 'Placeholder text.'],
+    [`Übungssatz ${number} | Leseverstehen | Aufgabe 1`, 'Placeholder text, continued.'],
+    [`Übungssatz ${number} | Leseverstehen | Aufgabe 2`, 'Placeholder text.'],
+    [`Übungssatz ${number} | Hörverstehen | Aufgabe 1`, 'Placeholder text.'],
+    [`Übungssatz ${number} | Hörverstehen | Aufgabe 2`, 'Placeholder text.'],
+    [`Übungssatz ${number} | Schriftlicher Ausdruck`, 'Placeholder text.'],
+  ]
+  return {
+    examPages: [
+      ['Contents', 'Übungssatz 1 | page 3', 'Übungssatz 2 | page 9'],
+      ['Introduction', 'Placeholder text.'],
+      ...exam(1),
+      ...exam(2),
+      ['Transcripts', 'Übungssatz 1 | Hörverstehen | Aufgabe 1', 'Placeholder text.'],
+    ],
+    keyPages: [
+      {
+        columns: [
+          ['Lösungen zu Übungssatz 1', 'LV: 1. R 2. F 3. R 4. b 5. a', 'HV: 1. c 2. a 3. b 4. b'],
+          ['Lösungen zu Übungssatz 2', 'LV: 1. F 2. F 3. R 4. c 5. c', 'HV: 1. a 2. b 3. c 4. a'],
+        ],
+      },
+    ],
+    recordings: ['cover.jpg', 'CD1/Track 2.mp3', 'CD1/Track 3.mp3', 'CD2/Track 10.mp3', 'CD2/Track 11.mp3'],
+  }
+}
+
+/** The profile that `otherBook()` needs. Everything in it differs from the defaults. */
+export const otherBookProfile: BookProfileOverrides = {
+  exams: 2,
+  modules: [
+    {
+      id: 'lesen',
+      title: 'Leseverstehen',
+      parts: [
+        { items: 3, choices: ['richtig', 'falsch'] },
+        { items: 2, choices: ['a', 'b', 'c'] },
+      ],
+    },
+    {
+      id: 'hoeren',
+      title: 'Hörverstehen',
+      recordings: true,
+      parts: [
+        { items: 2, choices: ['a', 'b', 'c'] },
+        { items: 2, choices: ['a', 'b', 'c'] },
+      ],
+    },
+    { id: 'schreiben', title: 'Schriftlicher Ausdruck' },
+  ],
+  examPdf: {
+    firstPage: 3,
+    lastPage: 14,
+    exam: '^Übungssatz (\\d+) \\|',
+    modules: {
+      lesen: '\\| Leseverstehen\\b',
+      hoeren: '\\| Hörverstehen\\b',
+      schreiben: '\\| Schriftlicher Ausdruck$',
+    },
+    part: '\\| Aufgabe (\\d+)$',
+  },
+  answerKey: {
+    columns: 2,
+    exam: 'Übungssatz (\\d+)',
+    modules: { lesen: '^LV:', hoeren: '^HV:' },
+    part: null,
+    item: '(\\d+)\\. (R|F|[a-c])(?!\\S)',
+    answers: { R: 'richtig', F: 'falsch' },
+  },
+  recordings: { file: '^Track (?<track>\\d+)$', ignore: '\\.jpg$' },
 }
 
 const PAGE = { width: 595, height: 842, margin: 50, lineHeight: 18, fontSize: 9 }
