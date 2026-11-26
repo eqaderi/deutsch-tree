@@ -4,14 +4,18 @@ import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { isDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
+import { ExamPartSections } from './ExamPartSections.tsx'
 import { German, plainText, RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
+import { Panel } from './Panel.tsx'
 import { useProgress } from './progress.ts'
 
 /**
- * A node's page. A grammar page is a column of panels in one fixed order:
- * rule, table, examples, common mistakes, test.
+ * A node's page: a column of panels in one fixed order, with the main action
+ * at the bottom of the screen. A grammar page is rule, table, examples,
+ * common mistakes, test. An exam-part page is what the part asks, how it is
+ * scored, how to approach it, practice task.
  */
 export function NodePage() {
   const { id = '' } = useParams()
@@ -34,15 +38,16 @@ export function NodePage() {
 
   const { content } = use(nodeRequest)
   if (!content) return <NotFound />
+  const isExamPart = content.kind === 'exam-part'
   return (
     <NodeFrame node={summary}>
-      <GrammarSections content={content} />
+      {isExamPart ? <ExamPartSections content={content} /> : <GrammarSections content={content} />}
       <section className="action-bar" aria-labelledby="section-test">
         <h2 id="section-test" className="visually-hidden">
-          {strings.test}
+          {isExamPart ? strings.practice : strings.test}
         </h2>
         <Link to="test" relative="path" className="btn btn-main">
-          {strings.takeTheTest}
+          {isExamPart ? strings.startPractice : strings.takeTheTest}
         </Link>
       </section>
     </NodeFrame>
@@ -67,6 +72,12 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
         <div className="meta">
           <span className="tag">{node.level}</span>
           <KindLabel kind={node.kind} />
+          {node.exam && (
+            <>
+              <span className="tag">{strings.examModules[node.exam.module]}</span>
+              <span className="tag">{strings.examPartNumber(node.exam.part)}</span>
+            </>
+          )}
           {node.status === 'coming-soon' && <span className="tag">{strings.comingSoon}</span>}
           {done && <span className="tag tag-done">{strings.done}</span>}
         </div>
@@ -146,16 +157,5 @@ function GrammarSections({ content }: { content: GrammarContent }) {
         </ul>
       </Panel>
     </>
-  )
-}
-
-function Panel({ id, heading, children }: { id: string; heading: string; children: ReactNode }) {
-  return (
-    <section className="panel" aria-labelledby={id}>
-      <h2 id={id} className="cap">
-        {heading}
-      </h2>
-      {children}
-    </section>
   )
 }

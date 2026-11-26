@@ -56,7 +56,12 @@ test('the review sheet of a node without practice tasks has no texts', async () 
 test('a review of an exam part with no disagreement is recorded, and the node can then be published', async () => {
   const content = await unreviewedFixture()
   expect((await compileContent(content)).report.errors).toEqual([
-    { file: EXAM_PART, node: 'exam-lesen-1', where: 'review', message: expect.stringContaining('needs a review record') },
+    {
+      file: EXAM_PART,
+      node: 'exam-lesen-1',
+      where: 'review',
+      message: expect.stringContaining('needs a review record'),
+    },
   ])
   const sheet = answered(await blindPool(content, 'exam-lesen-1'), RIGHT)
 
@@ -74,7 +79,9 @@ test('an item that the reviewer answers otherwise than the key is listed under i
   const result = await recordReview(content, 'exam-lesen-1', [sheet], BY)
 
   expect(result.record).toBeNull()
-  expect(result.disagreements).toEqual([{ question: 't2/i4', problem: 'the reviewer answered true, the key says false' }])
+  expect(result.disagreements).toEqual([
+    { question: 't2/i4', problem: 'the reviewer answered true, the key says false' },
+  ])
 })
 
 test('a published exam part whose text changed after its review needs a new review', async () => {
@@ -103,7 +110,12 @@ test('a published exam part whose item or key changed after its review needs a n
     const { report } = await compileContent(content)
 
     expect(report.errors).toEqual([
-      { file: EXAM_PART, node: 'exam-lesen-1', where: 'review', message: expect.stringContaining('needs a new review') },
+      {
+        file: EXAM_PART,
+        node: 'exam-lesen-1',
+        where: 'review',
+        message: expect.stringContaining('needs a new review'),
+      },
     ])
   }
 })
