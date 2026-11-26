@@ -1,6 +1,16 @@
-import type { Language, Question } from '../content-model/index.ts'
+import type { Language, Localised } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { promptText } from './QuestionView.tsx'
+
+/**
+ * What a report says about a question: its id inside the node and its
+ * prompt: German, or for a word asked for in German its meaning in each
+ * language. An item of a practice task is named with its task: "t1/i3".
+ */
+export interface ReportedQuestion {
+  id: string
+  prompt: string | Localised
+}
 
 const NEW_ISSUE = 'https://github.com/eqaderi/deutsch-tree/issues/new'
 
@@ -9,7 +19,7 @@ const NEW_ISSUE = 'https://github.com/eqaderi/deutsch-tree/issues/new'
  * node and the question. The text is English in every language: it is written
  * for the maintainers, and the learner adds to it in any language.
  */
-export function reportProblemUrl(nodeId: string, question: Question, language: Language): string {
+export function reportProblemUrl(nodeId: string, question: ReportedQuestion, language: Language): string {
   const body = [
     `Topic: ${nodeId}`,
     `Question: ${question.id}`,
@@ -28,7 +38,7 @@ export function reportProblemUrl(nodeId: string, question: Question, language: L
  * The "report a problem" link of one question. It is a plain link that opens
  * in a new tab when the learner follows it; the app itself sends nothing.
  */
-export function ReportProblem({ nodeId, question }: { nodeId: string; question: Question }) {
+export function ReportProblem({ nodeId, question }: { nodeId: string; question: ReportedQuestion }) {
   const { language, strings } = useLanguage()
   return (
     <a className="report" href={reportProblemUrl(nodeId, question, language)} target="_blank" rel="noopener noreferrer">

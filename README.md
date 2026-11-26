@@ -83,6 +83,28 @@ GitHub Pages and from a local folder.
 - A test is taken at `#/node/<id>/test`. `NodeTest` in `src/app/TestPage.tsx`
   runs it for any node with a pool: it draws an attempt, shows one question
   per screen (`AttemptRun.tsx`), then the result (`TestResult.tsx`).
+- An exam part has no pool. For a reading part the same address runs
+  `PracticeTest` (`src/app/PracticeTest.tsx`) on one of its practice tasks
+  (`hasPractice(content)` in `src/content-model/scoring.ts`): the texts and
+  all items on one page, as in the exam, then the result of every item. The
+  engine's `nextTask` picks the task (another one on a retry) and
+  `scoreAttempt(task.items, answers)` scores it per item, with the same 90%
+  rule; `applyAttempt` marks the part done. An item is a `Question`, so
+  `QuestionView`, `AnswerText` and the "report a problem" link serve it too.
+- A task that the app scores per item (`ItemTask` in the content model:
+  texts and items; schema `itemTaskSchema`, compiled by `compileItemTask`,
+  formats per exam part in `ITEM_TASK_FORMATS`, format check
+  `itemTaskProblems`) does not depend on the node that holds it, so a mock
+  exam's reading parts can take the same shape, and a Hören part the same
+  mechanism. A new item type is a new question type plus a place in the
+  `taskItem` union of the schema; a new exam part is a row in
+  `ITEM_TASK_FORMATS`. (`ExamTask` is the other kind of exam task: the
+  writing or speaking task that an AI assistant grades.)
+- Every exam-part page, of all 15 parts, begins with the same three panels
+  (what the part asks, how it is scored, how to approach it):
+  `ExamPartSections.tsx`, from the node's `explanations`. What follows
+  depends on the module: the button to the practice task (Lesen), or the
+  task, prompt and score of `ExamTaskSections` (Schreiben, Sprechen).
 - Every rule is in `src/learning-engine/index.ts`: `drawAttempt`, `passMark`,
   `checkAnswer`, `scoreAttempt`, `applyAttempt`, `isDone`, and for a
   checkpoint `drawCheckpoint` and `scoreCheckpoint`. Components call these
@@ -94,11 +116,12 @@ GitHub Pages and from a local folder.
   and 5 at most of one node, dealt in rounds over the published nodes of the
   level: up to 6 nodes give 5 each, 7 to 29 nodes share the 30 evenly, and
   from 30 nodes on a checkpoint asks 30 nodes drawn at random, one question
-  each. A node without a pool gives none. `scoreCheckpoint` reports the nodes
+  each. A node without a pool gives none; an exam part gives none either (`givesToCheckpoint`). `scoreCheckpoint` reports the nodes
   with wrong answers. A checkpoint is advice: it never reads or changes the
   progress. What a node gives to it is `checkpointPool` in that file.
-- A writing or speaking node has no test of questions. Its page
-  (`src/app/ExamTaskPage.tsx`) shows the task, a button that copies a prompt
+- A writing or speaking node has no test of questions. Below the three
+  panels of every exam part, its page (`src/app/ExamTaskPage.tsx`) shows the
+  task, a button that copies a prompt
   for an AI assistant, and a box for the score that comes back;
   `applyEnteredScore` keeps the score and marks the node done at 90 of 100.
   The three pieces (`TaskSheetView`, `CopyPrompt`, `ScoreEntry` in
@@ -155,6 +178,14 @@ GitHub Pages and from a local folder.
   out from the content index: every published topic of a level done, or
   every tenth done topic. Which ones were already mentioned is remembered by
   `src/app/milestones.ts`, outside the progress.
+- A node of any kind with a pool is tested the same way. What differs is its
+  page: `NodePage.tsx` shows the grammar sections, or for a phrases node
+  `PhraseSections.tsx` (what the phrases are for, then a card per phrase with
+  its meaning, an example and links to the exam parts it serves). A kind
+  gets a page by naming its sections in `SECTIONS_OF_A_PUBLISHED` in
+  `src/content-model/index.ts`, a compile step in
+  `src/content-pipeline/index.ts`, and a case in `NodePage.tsx`; its
+  passages for search go in `search-data.ts`.
 - A new question type needs: its schema and compiled type in
   `src/content-model/index.ts`, its review view in
   `src/content-pipeline/review.ts`, a case in `checkAnswer`, in `rightAnswer`
@@ -200,8 +231,10 @@ The rules are in the learning engine, like every rule. The tree
   remaining ones have to wait. So one done node of 212 reads "1 done · 211
   left, 211 of them coming soon".
 - **A test from the tree.** `hasTest` in a node's summary says that the node
-  is published and has a pool. Only then does a row offer "Test", which goes
-  to `#/node/<id>/test`. A new way of becoming done needs no change here.
+  is published and that the app can test it: it has a pool, or it is an exam
+  part with a practice task. Only then does a row offer "Test" (for an exam
+  part: "Practice task"), which goes to `#/node/<id>/test`. A node that
+  becomes done in another way, such as a score typed in, has no such link.
 - **What the tree shows is in its address**: `#/?level=A2&kind=vocabulary`.
   With no level in the address the tree opens at the level the learner is
   in. Build such an address with `treeAddress` (`src/app/treeAddress.ts`).
@@ -302,10 +335,16 @@ The rules are in the learning engine, like every rule. The tree
   A new question type gets a case in `giveAnswer`, `expectAnswerGiven` and
   `rightAnswerText` there. A journey about one type of `grammar-001` calls
   `findQuestion`, which brings a question of that type on screen.
-- The fixture content has three levels: A1 with two published topics
-  (`grammar-001`, and `grammar-010` with typed questions) and one "coming
-  soon", A2 with three published topics (`grammar-101` to `grammar-103`) and
-  B1 with nothing published.
+- The fixture content has three levels of grammar: A1 with two published
+  topics (`grammar-001`, and `grammar-010` with typed questions) and one
+  "coming soon", A2 with three published topics (`grammar-101` to
+  `grammar-103`) and B1 with no published grammar. B1 also holds the
+  published writing and speaking parts `exam-schreiben-1` and
+  `exam-sprechen-1`. A fourth level, B2, holds the published phrases node
+  `phrases-greeting` and the "coming soon" exam part `exam-schreiben-3`; its
+  phrases serve that part and `exam-sprechen-1`. B2 is the last level, so its
+  line ends with the exam. A new fixture node of another kind goes there too,
+  so that the counts of the levels above stay as their tests know them.
 - One question type: `tests/content-pipeline/extra-question.ts` adds one
   question to the fixture pool and gives back what the pipeline makes of it;
   `review-sheet.ts` holds a reviewer's answers to the fixture pool.

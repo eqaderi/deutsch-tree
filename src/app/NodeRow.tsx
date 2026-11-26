@@ -59,9 +59,9 @@ export function NodeRow({ node, isNext = false }: { node: NodeSummary; isNext?: 
         </span>
       </Link>
       {node.hasTest && (
-        // Every row's link says "Test"; the title it belongs to is its description.
+        // Every row's link says "Test" (an exam part's: "Practice task"); the title it belongs to is its description.
         <Link to={`/node/${node.id}/test`} className="row-test" aria-describedby={titleId}>
-          {strings.test}
+          {node.kind === 'exam-part' ? strings.practice : strings.test}
         </Link>
       )}
     </div>

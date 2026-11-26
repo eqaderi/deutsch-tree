@@ -25,7 +25,7 @@ function isWritten(entry: EntryFile): entry is EntryFile & VocabularyWord {
  * Undefined for a node of another kind and for a draft that still has a bare
  * word: neither has a pool yet.
  */
-export function writtenWords(node: NodeFile): VocabularyWord[] | undefined {
+export function writtenWords(node: Partial<Pick<NodeFile, 'kind' | 'words'>>): VocabularyWord[] | undefined {
   const words = node.kind === 'vocabulary' ? (node.words ?? []) : []
   return words.length > 0 && words.every(isWritten) ? words.filter(isWritten) : undefined
 }
@@ -35,7 +35,7 @@ export function writtenWords(node: NodeFile): VocabularyWord[] | undefined {
  * Empty while a word is not written. It is made here and in no other place,
  * so the pool that is reviewed is the pool that is compiled and asked.
  */
-export function vocabularyQuestions(node: NodeFile): Question[] {
+export function vocabularyQuestions(node: Partial<Pick<NodeFile, 'kind' | 'words'>>): Question[] {
   const words = writtenWords(node)
   return words ? vocabularyPool(words) : []
 }

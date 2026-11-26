@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { poolFingerprint } from '../../src/content-pipeline/review.ts'
+import { reviewFingerprint } from '../../src/content-pipeline/review.ts'
 import { changeNode, fixtureContent, fixtureContentWith, SPEAKING, WRITING } from './fixture.ts'
 
 /**
@@ -23,8 +23,10 @@ test('published writing and speaking nodes pass with no question pool and no rev
   expect(report.errors).toEqual([])
   const examParts = bundle?.index.nodes.filter((node) => node.kind === 'exam-part')
   expect(examParts?.map((node) => [node.id, node.status])).toEqual([
+    ['exam-lesen-1', 'published'],
     ['exam-schreiben-1', 'published'],
     ['exam-sprechen-1', 'published'],
+    ['exam-schreiben-3', 'coming-soon'],
   ])
 })
 
@@ -52,7 +54,7 @@ test('a writing node may not hold a question pool', async () => {
 test('a speaking node may not carry a review record, since there is no pool that was reviewed', async () => {
   const content = await fixtureContentWith({
     [SPEAKING]: changeNode((node) => {
-      node.review = { reviewer: 'Fixture reviewer', date: '2026-11-26', pool: poolFingerprint([]) }
+      node.review = { reviewer: 'Fixture reviewer', date: '2026-11-26', pool: reviewFingerprint({}) }
     }),
   })
 

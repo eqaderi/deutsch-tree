@@ -61,7 +61,24 @@ export function drawQuestions(pool: readonly Question[], size: number, random: R
   return [...drawn, ...drawAttempt(left, size - drawn.length, random)]
 }
 
-/** A node test is passed at 90%: the smallest whole number of questions that is at least 90% of the attempt. */
+/**
+ * The practice task of the next attempt at an exam part. A task is always
+ * taken whole, so an attempt is one task and not a draw of items. After a
+ * task, the next attempt takes another one, so that a retry is not the text
+ * the learner has just seen with its answers; a part with a single task gives
+ * that task again. `last` is the task of the attempt before, if there was one.
+ */
+export function nextTask<T>(tasks: readonly T[], last: T | undefined, random: Random): T | undefined {
+  const others = tasks.filter((task) => task !== last)
+  return drawAttempt(others.length > 0 ? others : tasks, 1, random)[0]
+}
+
+/**
+ * A node test is passed at 90%: the smallest whole number of questions that
+ * is at least 90% of the attempt. The same rule holds for a practice task of
+ * an exam part, counted over the items of the task, so a task of up to nine
+ * items is passed only with every item right.
+ */
 export function passMark(attemptSize: number): number {
   // Whole numbers only: 0.9 * 30 is a hair above 27 in floating point and would round up to 28.
   return Math.ceil((attemptSize * 9) / 10)
@@ -69,12 +86,13 @@ export function passMark(attemptSize: number): number {
 
 /**
  * What a learner gave for one question: the chosen option for multiple choice
- * and gap fill, true or false for a true/false question, the typed text for
- * a typed answer and a typed gap fill, the place of the picked word for find
- * the error, the pieces placed so far (in their order) for word ordering, the
- * partner chosen for each item (null where none is chosen yet) for matching.
- * A question type with another kind of answer adds it here and gets a case
- * in `checkAnswer`, `rightAnswer` and `isAnswered`.
+ * and gap fill, true or false for a true/false question and for a
+ * Richtig/Falsch item of an exam task, the typed text for a typed answer and
+ * a typed gap fill, the place of the picked word for find the error, the
+ * pieces placed so far (in their order) for word ordering, the partner chosen
+ * for each item (null where none is chosen yet) for matching. A question type
+ * with another kind of answer adds it here and gets a case in `checkAnswer`,
+ * `rightAnswer` and `isAnswered`.
  */
 export type Answer = string | boolean | number | Array<string | null>
 
@@ -94,6 +112,7 @@ export function checkAnswer(question: Question, answer: Answer | undefined): Ans
     case 'multiple-choice':
     case 'gap-fill':
     case 'true-false':
+    case 'richtig-falsch':
     case 'find-error':
       return { correct: answer === question.answer, notes: [] }
     case 'typed-answer':
@@ -119,6 +138,7 @@ export function rightAnswer(question: Question): Answer {
     case 'multiple-choice':
     case 'gap-fill':
     case 'true-false':
+    case 'richtig-falsch':
     case 'find-error':
     case 'matching':
       return question.answer
@@ -252,6 +272,7 @@ export function isAnswered(question: Question, answer: Answer | undefined): bool
     case 'multiple-choice':
     case 'gap-fill':
     case 'true-false':
+    case 'richtig-falsch':
     case 'find-error':
     case 'typed-answer':
     case 'typed-gap-fill':
@@ -368,6 +389,10 @@ export interface AnsweredQuestion extends AnswerCheck {
 /**
  * Scores an attempt. `answers` runs parallel to `questions`: the answer to
  * the third question is the third answer. A missing answer is a wrong one.
+ *
+ * An exam task is scored with this too: `scoreAttempt(task.items, answers)`
+ * gives the result per item. A mock exam adds up `correct` over its parts and
+ * leaves `passMark` and `passed`, which are the rule of a node, aside.
  */
 export function scoreAttempt(questions: readonly Question[], answers: readonly (Answer | undefined)[]): AttemptResult {
   const checked = questions.map((question, index) => {
@@ -512,6 +537,15 @@ export function hasProgress(progress: Progress): boolean {
 /** The four modules of the Goethe B1 exam, in the order of the exam. */
 export const EXAM_MODULES = ['reading', 'listening', 'writing', 'speaking'] as const
 export type ExamModule = (typeof EXAM_MODULES)[number]
+
+/**
+ * The module of an exam-part node as the engine names modules. A node file
+ * says `module: lesen`, with the exam's own word, because its id does
+ * ("exam-lesen-1"); scores are kept under the names above.
+ */
+export function examModuleOf(module: NonNullable<NodeSummary['module']>): ExamModule {
+  return ({ lesen: 'reading', hoeren: 'listening', schreiben: 'writing', sprechen: 'speaking' } as const)[module]
+}
 
 /**
  * The scores of one mock exam: points out of 100 for each module. A module

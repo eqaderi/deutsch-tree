@@ -12,6 +12,26 @@ title:
   fa: "صحبت کردن آزمایشی: برنامه‌ریزی با هم"
   de: "Test-Sprechen: gemeinsam etwas planen"
 
+explanations:
+  en:
+    task: You plan a fixture party with a partner.
+    scoring: Each fixture point counts.
+    approach:
+      - Make suggestions.
+      - React to your partner.
+  fa:
+    task: با یک هم‌گروهی یک جشن آزمایشی برنامه‌ریزی می‌کنید.
+    scoring: هر امتیاز آزمایشی حساب می‌شود.
+    approach:
+      - پیشنهاد بدهید.
+      - به هم‌گروهی خود واکنش نشان بدهید.
+  de:
+    task: Du planst mit einer Partnerin ein Test-Fest.
+    scoring: Jeder Test-Punkt zählt.
+    approach:
+      - Mach Vorschläge.
+      - Reagier auf deine Partnerin.
+
 task:
   situation: >
     Ihr Kurs macht am Ende ein Fixture-Fest. Sie organisieren das Fest zu

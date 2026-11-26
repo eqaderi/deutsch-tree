@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest'
 import { hasPool } from '../../src/content-model/scoring.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { blindPool, poolFingerprint, type ReviewSheet, recordReview } from '../../src/content-pipeline/review.ts'
+import { blindPool, type ReviewSheet, recordReview, reviewFingerprint } from '../../src/content-pipeline/review.ts'
 import { changeNode, changeReviewedNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
 const explanation = {
@@ -178,7 +178,7 @@ test('a change to the accepted answers of a reviewed node calls for a new review
     [PUBLISHED]: changeNode((node) => {
       node.questions.push({ id: 'extra', ...typedAnswer, explanation })
       // Reviewed with two accepted answers; then one of them is taken away.
-      node.review.pool = poolFingerprint(node.questions)
+      node.review.pool = reviewFingerprint(node)
       node.questions.at(-1).answers = ['wohnst']
     }),
   })

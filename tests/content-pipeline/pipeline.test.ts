@@ -12,7 +12,9 @@ test('the index says which nodes have a test, so the tree can offer it without l
   expect(hasTest['grammar-001']).toBe(true)
   // Not written yet: nothing to test.
   expect(hasTest['grammar-002']).toBe(false)
-  // Published, but without a pool: a score is typed in instead.
+  // An exam part with a practice task: that task is its test, at the same address.
+  expect(hasTest['exam-lesen-1']).toBe(true)
+  // Published, but without a pool or a practice task: a score is typed in instead.
   expect(hasTest['exam-schreiben-1']).toBe(false)
   expect(hasTest['exam-sprechen-1']).toBe(false)
 })
@@ -37,8 +39,10 @@ test('valid content compiles and the report counts what was found', async () => 
   expect(report).toEqual({
     ok: true,
     errors: [],
-    nodes: { total: 11, published: 8, comingSoon: 3 },
-    questions: 99,
+    // The questions are the pools of the grammar and phrases nodes, the twenty made from the ten words of the vocabulary node, and the twelve items of the reading
+    // part's two practice tasks. A writing or speaking part asks none that the app scores.
+    nodes: { total: 14, published: 10, comingSoon: 4 },
+    questions: 126,
   })
   expect(bundle).not.toBeNull()
 })

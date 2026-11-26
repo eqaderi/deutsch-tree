@@ -78,6 +78,13 @@ export const en = {
   commonMistakes: 'Common mistakes',
   wrong: 'Wrong',
   right: 'Right',
+  // A phrases page: what the phrases are for, then each phrase.
+  phrasesPurpose: 'What these phrases are for',
+  phraseList: 'Phrases',
+  /** Above the example of one phrase. */
+  phraseExample: 'Example',
+  /** Above the exam tasks that one phrase serves. */
+  phraseUsefulFor: 'Useful for',
   test: 'Test',
   takeTheTest: 'Take the test',
   comingSoonPage: 'This topic is not written yet. It will appear here when it is ready.',
@@ -106,6 +113,26 @@ export const en = {
   notFoundTitle: 'Topic not found',
   notFoundText: 'There is no topic at this address.',
 
+  // An exam-part page: what the part asks, how it is scored, how to approach it, and its practice task.
+  examPartNumber: (part: number) => `Part ${part}`,
+  examTask: 'What this part asks',
+  examScoring: 'How it is scored',
+  examApproach: 'How to approach it',
+  practice: 'Practice task',
+  startPractice: 'Start the practice task',
+
+  // A practice task: the text, all its items on one page, then the result of every item.
+  practiceTitle: (title: string) => `Practice: ${title}`,
+  practiceText: 'Text',
+  questions: 'Questions',
+  /** The words on the exam's answer sheet. They are German in every language. */
+  examAnswers: { richtig: 'Richtig', falsch: 'Falsch' },
+  answeredOf: (answered: number, total: number) => `${answered} of ${total} answered`,
+  yourAnswers: 'Your answers',
+  answerIsRight: 'Your answer is right',
+  answerIsWrong: 'Your answer is wrong',
+  practiceRetry: 'You can try as often as you like.',
+
   backToTopic: 'Back to the topic',
   testTitle: (title: string) => `Test: ${title}`,
   // A node's test: one question per screen, then the result.
@@ -122,6 +149,7 @@ export const en = {
     'typed-gap-fill': 'Type the word that fits the gap.',
     'meaning-of-word': 'What does this word mean?',
     'word-for-meaning': 'Type the German word. A noun needs its article.',
+    'richtig-falsch': 'Is this statement right or wrong? The text decides.',
   } satisfies Record<Question['type'], string>,
   /** Read out in place of an empty gap. */
   gap: 'gap',

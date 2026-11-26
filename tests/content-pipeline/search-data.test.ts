@@ -33,8 +33,10 @@ test('a node that is coming soon has no search data: the index has its title', a
     'grammar-101',
     'grammar-102',
     'grammar-103',
+    'exam-lesen-1',
     'exam-schreiben-1',
     'exam-sprechen-1',
+    'phrases-greeting',
   ])
 })
 
@@ -53,19 +55,50 @@ test('a vocabulary node is found by each word with its article and what it means
   expect(JSON.stringify(passages('en'))).not.toContain('Das Essen steht auf dem Tisch.')
 })
 
-test('a writing or speaking node is found by the words of its task, which are German in every language', async () => {
+test('the search data of an exam part holds what its page explains, and nothing of its practice tasks', async () => {
+  const { bundle } = await compileContent(fixtureContent)
+
+  expect(bundle?.search.en.entries.find((entry) => entry.node === 'exam-lesen-1')?.passages).toEqual([
+    [
+      'You read one fixture text and decide whether six statements about it are right. The answer sheet says ',
+      { de: 'Richtig' },
+      ' or ',
+      { de: 'Falsch' },
+      '.',
+    ],
+    ['Each right answer is one fixture point.'],
+    ['Read the six statements first.'],
+    ['Then look for each statement in the text.'],
+  ])
+  expect(bundle?.search.de.entries.find((entry) => entry.node === 'exam-lesen-1')?.passages[1]).toEqual([
+    'Jede richtige Antwort ist ein Test-Punkt.',
+  ])
+  // A search must not show a task's text before it is taken, nor an item or the reason that answers it.
+  const text = JSON.stringify(bundle?.search)
+  expect(text).not.toContain('Neu in Bonn')
+  expect(text).not.toContain('ich wohne seit Mai')
+  expect(text).not.toContain('Toms Wohnung ist groß.')
+  expect(text).not.toContain('klein, aber hell')
+})
+
+test('a writing or speaking node is found by what its page explains, and by the words of its task, which are German in every language', async () => {
   const { bundle } = await compileContent(fixtureContent)
 
   const passages = (language: 'en' | 'fa') =>
     bundle?.search[language].entries.find((entry) => entry.node === 'exam-sprechen-1')?.passages
-  expect(passages('en')).toEqual([
+  expect(passages('en')?.slice(0, 2)).toEqual([
+    ['You plan a fixture party with a partner.'],
+    ['Each fixture point counts.'],
+  ])
+  expect(passages('en')?.slice(-5)).toEqual([
     [{ de: 'Ihr Kurs macht am Ende ein Fixture-Fest. Sie organisieren das Fest zu zweit.' }],
     [{ de: 'Wann und wo feiern?' }],
     [{ de: 'Was essen und trinken?' }],
     [{ de: 'Wer bringt was mit?' }],
     [{ de: 'Welches Programm?' }],
   ])
-  expect(passages('fa')).toEqual(passages('en'))
+  expect(passages('fa')?.slice(-5)).toEqual(passages('en')?.slice(-5))
+  expect(passages('fa')?.[0]).toEqual(['با یک هم‌گروهی یک جشن آزمایشی برنامه‌ریزی می‌کنید.'])
 })
 
 test('in simple German an example needs no translation', async () => {

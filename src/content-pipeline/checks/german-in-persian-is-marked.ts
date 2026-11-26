@@ -11,7 +11,8 @@ import { CHAPTERS_FILE, type ContentCheck, type ContentProblem, problemIn } from
  * The rule takes every Latin letter for German, because Persian is written
  * without any. A level ("B1") or a name in Latin letters goes in asterisks
  * too. It covers the texts in which asterisks mark German: titles, chapter
- * names, purposes, rules, and the one-line reasons of mistakes and questions.
+ * names, purposes, explanations, the meanings of phrases, and the one-line
+ * reasons of mistakes, questions and the items of practice tasks.
  */
 export const germanInPersianIsMarked: ContentCheck = ({ nodes, chapters }) => {
   const problems: ContentProblem[] = []
@@ -35,13 +36,28 @@ function persianTextsOf(node: NodeFile): Array<{ where: string; text: string; qu
   return [
     { where: 'title.fa', text: node.title.fa },
     ...(node.purpose ? [{ where: 'purpose.fa', text: node.purpose.fa }] : []),
-    ...(node.explanations ? [{ where: 'explanations.fa.rule', text: node.explanations.fa.rule }] : []),
+    ...Object.entries(node.explanations?.fa ?? {}).flatMap(([name, value]) =>
+      typeof value === 'string'
+        ? [{ where: `explanations.fa.${name}`, text: value }]
+        : value.map((step, index) => ({ where: `explanations.fa.${name}[${index}]`, text: step })),
+    ),
     ...(node.mistakes ?? []).map((mistake, index) => ({ where: `mistakes[${index}].why.fa`, text: mistake.why.fa })),
+    ...(node.phrases ?? []).map((phrase, index) => ({
+      where: `phrases[${index}].meaning.fa`,
+      text: phrase.meaning.fa,
+    })),
     ...(node.questions ?? []).map((question, index) => ({
       where: `questions[${index}].explanation.fa`,
       text: question.explanation.fa,
       question: question.id,
     })),
+    ...(node.practice ?? []).flatMap((task, taskIndex) =>
+      task.items.map((item, index) => ({
+        where: `practice[${taskIndex}].items[${index}].explanation.fa`,
+        text: item.explanation.fa,
+        question: `${task.id}/${item.id}`,
+      })),
+    ),
   ]
 }
 

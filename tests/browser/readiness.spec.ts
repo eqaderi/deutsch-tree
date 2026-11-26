@@ -56,7 +56,7 @@ const PERSIAN = {
 const all = (score: string): Scores => ({ reading: score, listening: score, writing: score, speaking: score })
 
 /** The last level of the fixture content: its line in the tree ends with the exam. */
-const LAST_LEVEL = './#/?level=B1'
+const LAST_LEVEL = './#/?level=B2'
 
 test('the last level ends with the exam: the readiness rule, the warning, and the way to the readiness view', async ({
   page,
@@ -71,13 +71,13 @@ test('the last level ends with the exam: the readiness rule, the warning, and th
   await expect(stop).toHaveCount(0)
   await expect(examInStrip).toHaveAttribute('href', '#/readiness')
 
-  await page.getByRole('navigation', { name: 'Levels' }).getByRole('link', { name: 'B1' }).click()
+  await page.getByRole('navigation', { name: 'Levels' }).getByRole('link', { name: 'B2' }).click()
 
   // The last level: its checkpoint, and after it the exam.
   await expect(stop).toContainText('You are ready when you have 90 or more in every module on 2 official mock exams.')
   await expect(stop).toContainText('Keep the official mock exams unseen until your final check.')
   await expect(stop.getByText('Not ready yet', { exact: true })).toBeVisible()
-  const checkpoint = await page.getByRole('region', { name: 'B1 checkpoint' }).boundingBox()
+  const checkpoint = await page.getByRole('region', { name: 'B2 checkpoint' }).boundingBox()
   expect((await stop.boundingBox())?.y).toBeGreaterThan(checkpoint?.y ?? Number.POSITIVE_INFINITY)
   await expect(examInStrip).toHaveAttribute('href', '#/readiness')
 

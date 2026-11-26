@@ -12,6 +12,26 @@ title:
   fa: "نوشتن آزمایشی: ایمیل به یک دوست"
   de: "Test-Schreiben: eine E-Mail an eine Freundin"
 
+explanations:
+  en:
+    task: You write a fixture e-mail to a friend about three points.
+    scoring: Each fixture point counts.
+    approach:
+      - Answer every point.
+      - Begin and end like an e-mail.
+  fa:
+    task: یک ایمیل آزمایشی دربارهٔ سه نکته به یک دوست می‌نویسید.
+    scoring: هر امتیاز آزمایشی حساب می‌شود.
+    approach:
+      - به همهٔ نکته‌ها جواب بدهید.
+      - مثل یک ایمیل شروع و تمام کنید.
+  de:
+    task: Du schreibst eine Test-E-Mail an eine Freundin. Sie hat drei Punkte.
+    scoring: Jeder Test-Punkt zählt.
+    approach:
+      - Schreib zu jedem Punkt etwas.
+      - Beginn und schließ wie in einer E-Mail.
+
 task:
   situation: >
     Sie waren am Samstag auf dem Fixture-Fest in Ihrer Straße. Ihre Freundin
