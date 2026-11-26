@@ -40,6 +40,7 @@ import {
   type PracticeContent,
   type Question,
   type RichText,
+  type TaskText,
   WORD,
 } from '../content-model/index.ts'
 import { hasPool, hasPractice, isAssistantGraded } from '../content-model/scoring.ts'
@@ -406,19 +407,38 @@ function compilePracticeContent(file: NodeFile): PracticeContent {
   return { explanations: compileExamPartExplanations(file), practice: practice.map(compileItemTask) }
 }
 
-/** A task as the app shows it. Used for a node's practice tasks; a mock exam's reading parts are meant to have the same shape. */
+/**
+ * A task as the app shows it. Used for a node's practice tasks; a mock
+ * exam's reading and listening parts are meant to have the same shape.
+ */
 export function compileItemTask(task: ItemTaskFile): ItemTask {
   return {
     id: task.id,
-    texts: task.texts.map(({ id, title, body }) => ({
-      id,
-      ...(title === undefined ? {} : { title }),
-      paragraphs: body
+    texts: task.texts.map(compileTaskText),
+    items: task.items.map((item) => ({ ...item, explanation: richTextIn(item.explanation) })),
+  }
+}
+
+/**
+ * A text to read, cut into paragraphs; or a text to hear, each line with the
+ * audio that says it in its speaker's voice. The schema guarantees one or
+ * the other, and that every line's speaker is one of the text's speakers.
+ */
+function compileTaskText({ id, title, body, speakers, lines }: ItemTaskFile['texts'][number]): TaskText {
+  const titled = { id, ...(title === undefined ? {} : { title }) }
+  if (lines === undefined) {
+    return {
+      ...titled,
+      paragraphs: (body ?? '')
         .split(/\n[ \t]*\n/)
         .map((paragraph) => paragraph.trim())
         .filter((paragraph) => paragraph !== ''),
-    })),
-    items: task.items.map((item) => ({ ...item, explanation: richTextIn(item.explanation) })),
+    }
+  }
+  const voiceOf = new Map((speakers ?? []).map((one) => [one.name, one.voice]))
+  return {
+    ...titled,
+    lines: lines.map((line) => ({ ...line, audio: spoken(line.text, voiceOf.get(line.speaker)) })),
   }
 }
 

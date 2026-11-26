@@ -583,7 +583,7 @@ The pass mark follows from it: 90%, rounded up to a whole question (9 of 10,
 Every exam-part page, whatever its module, begins with three panels in this
 fixed order: what the part asks, how it is scored, how to approach it. Then
 comes what the learner does with the part: a practice task that the app
-scores (Lesen), or a task that an AI assistant grades (Schreiben, Sprechen).
+scores (Lesen, Hören), or a task that an AI assistant grades (Schreiben, Sprechen).
 A complete example is `content/nodes/exam-part/exam-lesen-1.yaml`.
 
 ```yaml
@@ -637,12 +637,54 @@ practice:                # one task or more; each attempt takes one of them, who
   type so far is `richtig-falsch`.
 - A task has the format of its exam part: Lesen Teil 1 is 1 text and 6 items.
   The formats are `ITEM_TASK_FORMATS` in `src/content-model/index.ts`. Only a
-  part that has a format there can be published; so far that is `exam-lesen-1`.
+  part that has a format there can be published; so far those are
+  `exam-lesen-1` and `exam-hoeren-3`.
 - Everything in a task is original. Follow the exam's format; never copy a
   text or an item from the official model sets or from a book.
 - The solved example "0" that the exam prints before the items is not an item.
 
-**How a reading part differs from the other nodes**
+### Practice tasks (Hören)
+
+A Hören part has practice tasks of the same shape, but its texts are heard,
+not read. A text to hear names its speakers, each with a voice, and gives
+what is said line by line instead of a `body`. A complete example is
+`content/nodes/exam-part/exam-hoeren-3.yaml`.
+
+```yaml
+practice:
+  - id: t1
+    texts:
+      - id: a
+        title: Im Zug nach Hannover        # optional: where the people are, or what the talk is about
+        speakers:                          # who speaks, each in a voice of their own
+          - { name: Sandra, voice: kerstin }
+          - { name: Michael, voice: thorsten }
+        lines:                             # what is said, in the order it is heard
+          - speaker: Michael               # one of the speakers above
+            text: Entschuldigung, ist der Platz hier noch frei?
+          - speaker: Sandra
+            text: Michael! So ein Zufall!
+    items:
+      - id: i1
+        type: richtig-falsch
+        prompt: Sandra und Michael haben früher in derselben Firma gearbeitet.
+        answer: true
+        explanation: { en: …, fa: …, de: … }
+```
+
+- The voices are `thorsten` and `kerstin` (README, "Audio"). Two speakers of
+  one text never share a voice: the learner tells them apart by ear, as in
+  the exam. Give the man Thorsten and the woman Kerstin.
+- Every line is spoken in its speaker's voice by `pnpm audio:generate`, one
+  file per line, and the check asks for each file. Write numbers, times and
+  prices in words ("um acht", "dreißig Leute"): the voice misreads digits.
+- The practice page plays the lines one after the other as the recording,
+  and shows the items. What is said is shown only in the result, line by
+  line with its speaker and a play button, so the learner can hear again
+  what was missed.
+- Hören Teil 3 is one conversation between two people and 7 items.
+
+**How a reading or listening part differs from the other nodes**
 
 - **No pool, no minimum of 15.** A part is not asked as a random draw of
   questions but as one whole task, so its size is the size the exam gives it.
@@ -711,7 +753,8 @@ publish it.
 ## Audio of the German
 
 Every German example of a published node can be heard, and so can every
-vocabulary word (with its article) and its example sentence. The audio is
+vocabulary word (with its article) and its example sentence, and every line
+of a listening part, in the voice of its speaker. The audio is
 made from the text by one command, in the voice chosen on ticket #5:
 
 ```sh
@@ -769,8 +812,14 @@ review, like changing an item or its key, means a new review; every item of
 that task then needs a fresh answer (`--only t1/i1,t1/i2,…`), because the text
 decides them all.
 
+A text to hear is on the sheet as what is said: each line with its speaker,
+without the voices. So giving a speaker another voice needs no new review;
+changing what a line says does. The review can be done while the node is
+still `coming-soon`: record it, set the status to `published`, then run
+`pnpm audio:generate` for the audio of its lines.
+
 Grammar, vocabulary and phrases nodes and exam parts can be published so far: every
-writing and speaking part, and the reading parts whose task format is built.
+writing and speaking part, and the reading and listening parts whose task format is built.
 Other node kinds and exam parts are added to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
@@ -819,8 +868,13 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - A published node with fewer than 15 questions (a vocabulary node: fewer
   than 8 words, which give 16). A `coming-soon` draft may have fewer. An exam part is exempt: it has no pool. A reading part is held
   to the format of its part instead, and a writing or speaking part has none.
-- A published reading part whose practice task has not the number of texts
-  and items of its part, and one whose part has no task format yet.
+- A published reading or listening part whose practice task has not the
+  number of texts and items of its part, a text to hear in a reading part or
+  a text to read in a listening part, a conversation with another number of
+  speakers than its part has, and a part that has no task format yet.
+- A text with neither a `body` nor `lines`, or with both; a text to hear
+  without its `speakers`; a line whose speaker is not one of them; two
+  speakers of one text with the same name or the same voice.
 - A published exam part without its explanations.
 - A writing or speaking node with `questions`, `practice` or a `review:`
   record, a published one without a `task`, and a task that lacks a field of

@@ -1,52 +1,88 @@
 /**
- * The play button of a piece of German. It plays the stored audio file
+ * The play buttons of German. They play the stored audio files
  * (`content/audio/<key>.mp3`), never the browser's own speech, so the voice
  * is the same on every device. Nothing is downloaded until the learner
- * presses it, and one piece plays at a time.
+ * presses one, and one piece plays at a time on the whole page.
  *
- * It takes the `audio` that the content pipeline attached to the German
- * (`Spoken`), so anything that carries one can have a button: an example,
- * a word, and later a line of a dialogue in its own voice.
+ * `PlayButton` takes the `audio` that the content pipeline attached to a
+ * piece of German (`Spoken`): an example, a word, a line of a conversation.
+ * `PlayRecording` plays the lines of a heard text one after the other, each
+ * in its speaker's voice, as the recording of a listening task.
  */
 import { useEffect, useRef, useState } from 'react'
 import { audioFile, type Spoken } from '../content-model/audio.ts'
-import type { HeardExample } from '../content-model/index.ts'
+import type { HeardExample, HeardLine } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { German } from './German.tsx'
 
 type State = 'idle' | 'playing' | 'failed'
 
-/** The one sound playing on the page, so that pressing another button stops it. */
-let playing: { sound: HTMLAudioElement; stop: () => void } | null = null
+/** The silence between two lines of a recording, in milliseconds, so that one speaker does not run into the next. */
+const PAUSE_BETWEEN_LINES = 350
 
-export function PlayButton({ audio }: { audio: Spoken }) {
-  const { strings } = useLanguage()
+/** The one sound playing on the page, so that pressing another button stops it. */
+let playing: { stop: () => void } | null = null
+
+/**
+ * Plays pieces of German one after the other, in one audio element (a phone
+ * lets a page that the learner touched once play the next file in it).
+ */
+function useSound(): { state: State; play: (pieces: readonly Spoken[]) => void; stop: () => void } {
   const [state, setState] = useState<State>('idle')
   const stopRef = useRef<(() => void) | null>(null)
 
   // A page that is left stops what it plays.
   useEffect(() => () => stopRef.current?.(), [])
 
-  const play = () => {
+  const play = (pieces: readonly Spoken[]) => {
     playing?.stop()
-    const sound = new Audio(new URL(`content/${audioFile(audio.key)}`, document.baseURI).href)
-    const stop = () => {
-      sound.pause()
-      if (playing?.sound === sound) playing = null
-      stopRef.current = null
-      setState((current) => (current === 'playing' ? 'idle' : current))
+    const sound = new Audio()
+    let pause: ReturnType<typeof setTimeout> | undefined
+    let stopped = false
+    const self = {
+      stop: () => {
+        stopped = true
+        clearTimeout(pause)
+        sound.pause()
+        if (playing === self) playing = null
+        stopRef.current = null
+        setState((current) => (current === 'playing' ? 'idle' : current))
+      },
     }
+    // Stopping a file that is still loading makes it fail; that is no failure to show.
     const fail = () => {
-      stop()
+      if (stopped) return
+      self.stop()
       setState('failed')
     }
-    playing = { sound, stop }
-    stopRef.current = stop
-    sound.addEventListener('ended', stop)
+    const playPiece = (index: number) => {
+      const piece = pieces[index]
+      if (!piece) {
+        self.stop()
+        return
+      }
+      sound.src = new URL(`content/${audioFile(piece.key)}`, document.baseURI).href
+      sound.play().catch(fail)
+    }
+    let place = 0
+    sound.addEventListener('ended', () => {
+      place += 1
+      if (place >= pieces.length) self.stop()
+      else pause = setTimeout(() => playPiece(place), PAUSE_BETWEEN_LINES)
+    })
     sound.addEventListener('error', fail)
+    playing = self
+    stopRef.current = self.stop
     setState('playing')
-    sound.play().catch(fail)
+    playPiece(0)
   }
+
+  return { state, play, stop: () => stopRef.current?.() }
+}
+
+export function PlayButton({ audio }: { audio: Spoken }) {
+  const { strings } = useLanguage()
+  const { state, play, stop } = useSound()
 
   const isPlaying = state === 'playing'
   return (
@@ -55,18 +91,50 @@ export function PlayButton({ audio }: { audio: Spoken }) {
         type="button"
         className="play"
         aria-label={isPlaying ? strings.stopListening : strings.listen}
-        onClick={isPlaying ? () => stopRef.current?.() : play}
+        onClick={isPlaying ? stop : () => play([audio])}
       >
-        <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-          {isPlaying ? <rect x="3.5" y="3.5" width="9" height="9" rx="1.5" /> : <path d="M5 2.8v10.4L13.2 8z" />}
-        </svg>
+        <PlayIcon playing={isPlaying} />
       </button>
-      {state === 'failed' && (
-        <span role="status" className="play-failed">
-          {strings.audioFailed}
-        </span>
-      )}
+      {state === 'failed' && <PlayFailed />}
     </>
+  )
+}
+
+/** The recording of a heard text: every line, in order, each in the voice of its speaker. */
+export function PlayRecording({ lines }: { lines: readonly HeardLine[] }) {
+  const { strings } = useLanguage()
+  const { state, play, stop } = useSound()
+
+  const isPlaying = state === 'playing'
+  return (
+    <p className="recording">
+      <button
+        type="button"
+        className="btn btn-recording"
+        onClick={isPlaying ? stop : () => play(lines.map((line) => line.audio))}
+      >
+        <PlayIcon playing={isPlaying} />
+        {isPlaying ? strings.stopRecording : strings.playRecording}
+      </button>
+      {state === 'failed' && <PlayFailed />}
+    </p>
+  )
+}
+
+function PlayIcon({ playing: isPlaying }: { playing: boolean }) {
+  return (
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      {isPlaying ? <rect x="3.5" y="3.5" width="9" height="9" rx="1.5" /> : <path d="M5 2.8v10.4L13.2 8z" />}
+    </svg>
+  )
+}
+
+function PlayFailed() {
+  const { strings } = useLanguage()
+  return (
+    <span role="status" className="play-failed">
+      {strings.audioFailed}
+    </span>
   )
 }
 

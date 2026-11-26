@@ -1,4 +1,5 @@
 import type { Page } from '@playwright/test'
+import { audioRequests, listen } from './listening.ts'
 import { expect, test } from './test.ts'
 
 /**
@@ -9,40 +10,6 @@ import { expect, test } from './test.ts'
 
 /** The audio of "Ich wohne in Berlin.", the first example of the fixture node grammar-001 (see tests/content-pipeline/audio.test.ts). */
 const ICH_WOHNE_IN_BERLIN = '16af11d6bd373d3d'
-
-/** Every audio file the page asks for, as the path after the site's `content/` folder. */
-function audioRequests(page: Page): string[] {
-  const asked: string[] = []
-  page.on('request', (request) => {
-    const match = new URL(request.url()).pathname.match(/\/content\/(audio\/.+)$/)
-    if (match?.[1]) asked.push(match[1])
-  })
-  return asked
-}
-
-interface Heard {
-  /** The files the browser played to their end. */
-  played: string[]
-  /** What was given to the browser's built-in speech, which the app must never use. */
-  builtInSpeech: string[]
-}
-
-/** Records what the page plays, and every use of the browser's built-in speech. */
-async function listen(page: Page): Promise<() => Promise<Heard>> {
-  await page.addInitScript(() => {
-    const heard: Heard = { played: [], builtInSpeech: [] }
-    ;(window as unknown as { heard: Heard }).heard = heard
-    const play = HTMLMediaElement.prototype.play
-    HTMLMediaElement.prototype.play = function (this: HTMLMediaElement) {
-      this.addEventListener('ended', () => heard.played.push(new URL(this.currentSrc).pathname))
-      return play.call(this)
-    }
-    window.speechSynthesis.speak = (utterance) => {
-      heard.builtInSpeech.push(utterance.text)
-    }
-  })
-  return () => page.evaluate(() => (window as unknown as { heard: Heard }).heard)
-}
 
 const examples = (page: Page) => page.getByRole('region', { name: 'Examples' }).getByRole('listitem')
 

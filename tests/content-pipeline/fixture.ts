@@ -14,6 +14,8 @@ export const PUBLISHED = 'nodes/grammar/grammar-001.yaml'
 export const COMING_SOON = 'nodes/grammar/grammar-002.yaml'
 /** The fixture's published exam-part node: Lesen, Teil 1, with two practice tasks. */
 export const EXAM_PART = 'nodes/exam-part/exam-lesen-1.yaml'
+/** The fixture's published listening part: Hören, Teil 3, with two conversations in two voices. */
+export const LISTENING_PART = 'nodes/exam-part/exam-hoeren-3.yaml'
 
 /** The fixture's published vocabulary node. */
 export const VOCABULARY = 'nodes/vocabulary/vocabulary-fixture-home.yaml'

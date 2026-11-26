@@ -9,7 +9,7 @@
  *      (*ich wohne*), so the app can render it left to right as German.
  */
 import { z } from 'zod'
-import type { Spoken } from './audio.ts'
+import { type Spoken, voiceSchema } from './audio.ts'
 import { type DiagramPart, readDrawing } from './diagram.ts'
 import { WORD_CLASSES, type WordClass } from './scope-list.ts'
 import { type AssistantGradedModule, isAssistantGraded } from './scoring.ts'
@@ -460,15 +460,90 @@ const question = z.discriminatedUnion('type', [
 
 const partId = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "t1"')
 
-/** A German text that a task's items are about: an e-mail, a blog entry, an advertisement. */
-const taskText = z.strictObject({
-  /** Stable inside the task. */
-  id: partId,
-  /** A heading or subject line, where the text has one. */
-  title: text.optional(),
-  /** The text itself. A blank line starts a new paragraph; a line break inside a paragraph is kept. */
-  body: text,
+/** Who speaks in a heard text, and in which voice. */
+const speaker = z.strictObject({
+  /** The name the lines give, and the transcript shows: "Lena". */
+  name: text,
+  voice: voiceSchema,
 })
+
+/** One line of a heard text: who says it, and what they say (German). */
+const spokenLine = z.strictObject({
+  /** The name of one of the text's speakers. */
+  speaker: text,
+  text,
+})
+
+/**
+ * A German text that a task's items are about. A text to read (Lesen: an
+ * e-mail, a blog entry, an advertisement) has a `body`. A text to hear (Hören:
+ * a conversation, an announcement) has `speakers` and `lines`, and each line
+ * is heard in the voice of its speaker.
+ */
+const taskText = z
+  .strictObject({
+    /** Stable inside the task. */
+    id: partId,
+    /** A heading or subject line, where the text has one. */
+    title: text.optional(),
+    /** A text to read. A blank line starts a new paragraph; a line break inside a paragraph is kept. */
+    body: text.optional(),
+    /** A text to hear: who speaks in it, each in a voice of their own. */
+    speakers: z.array(speaker).min(1).optional(),
+    /** A text to hear: what is said, line by line, in the order it is heard. */
+    lines: z.array(spokenLine).min(1).optional(),
+  })
+  .superRefine((value, ctx) => {
+    if (value.body !== undefined) {
+      for (const field of ['speakers', 'lines'] as const) {
+        if (value[field] !== undefined) {
+          ctx.addIssue({
+            code: 'custom',
+            path: [field],
+            message: 'belongs to a text to hear; a text to read has its body only',
+          })
+        }
+      }
+      return
+    }
+    if (value.lines === undefined) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['body'],
+        message: 'is missing: a text has a body (to read), or speakers and lines (to hear)',
+      })
+      return
+    }
+    if (value.speakers === undefined) {
+      ctx.addIssue({ code: 'custom', path: ['speakers'], message: 'is missing: a text to hear names its speakers' })
+      return
+    }
+    const { speakers } = value
+    speakers.forEach((one, index) => {
+      if (speakers.findIndex((other) => other.name === one.name) !== index) {
+        ctx.addIssue({ code: 'custom', path: ['speakers', index, 'name'], message: `"${one.name}" is named twice` })
+        return
+      }
+      const sameVoice = speakers.find((other) => other.voice === one.voice)
+      if (sameVoice !== one) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['speakers', index, 'voice'],
+          message: `is also the voice of ${sameVoice?.name}: the speakers of one text are told apart by their voices`,
+        })
+      }
+    })
+    const names = speakers.map((one) => one.name)
+    value.lines.forEach((line, index) => {
+      if (!names.includes(line.speaker)) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['lines', index, 'speaker'],
+          message: `"${line.speaker}" is not a speaker of this text; its speakers are ${names.join(', ')}`,
+        })
+      }
+    })
+  })
 
 /**
  * "Richtig" or "Falsch": the prompt is a statement about the text of the
@@ -516,12 +591,18 @@ export type ItemTaskFile = z.infer<typeof itemTaskSchema>
  * part, a format also names the type of its items.
  */
 export const ITEM_TASK_FORMATS: Readonly<Record<string, ItemTaskFormat>> = {
-  'exam-lesen-1': { texts: 1, items: 6 },
+  'exam-lesen-1': { texts: 1, items: 6, textsAre: 'read' },
+  // One conversation between two people, heard once; seven statements in the order they are heard.
+  'exam-hoeren-3': { texts: 1, items: 7, textsAre: 'heard', speakers: 2 },
 }
 
 export interface ItemTaskFormat {
   texts: number
   items: number
+  /** How the candidate meets the texts: reads them (Lesen) or hears them (Hören). */
+  textsAre: 'read' | 'heard'
+  /** Of a part whose texts are heard: how many people speak in each text. */
+  speakers?: number
 }
 
 /** The task format of an exam part, or undefined while it is not built. */
@@ -1369,13 +1450,39 @@ export function pluralAsLearned(word: Pick<VocabularyWord, 'plural'>): string | 
 /** A question that is an item of an item task: its answer lies in the task's texts. */
 export type TaskItem = RichtigFalschQuestion
 
-export interface TaskText {
+/** A text of a task: one to read, or one to hear (`isHeard` in scoring.ts tells them apart). */
+export type TaskText = ReadText | HeardText
+
+/** A text to read (Lesen). */
+export interface ReadText {
   /** Stable inside the task. */
   id: string
   /** German: a heading or subject line. */
   title?: string
   /** German. A line break inside a paragraph is part of the text (a greeting, a signature). */
   paragraphs: string[]
+}
+
+/**
+ * A text to hear (Hören): a conversation or an announcement, line by line.
+ * Each line carries the audio that says it in its speaker's voice; played
+ * one after the other, the lines are the recording.
+ */
+export interface HeardText {
+  /** Stable inside the task. */
+  id: string
+  /** German: what the recording is about. */
+  title?: string
+  lines: HeardLine[]
+}
+
+export interface HeardLine {
+  /** The name of who says the line. */
+  speaker: string
+  /** German: what is said, as the transcript shows it. */
+  text: string
+  /** The line said in its speaker's voice. */
+  audio: Spoken
 }
 
 /**

@@ -1879,6 +1879,52 @@ main.wrap {
   margin-block-start: 12px;
 }
 
+/* A text to hear: its recording, and once the answers are checked what is said, line by line. */
+.recording {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+/* A second action: the main button of the page is "Check answers". */
+.btn-recording {
+  gap: 8px;
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+}
+
+.btn-recording svg {
+  inline-size: 16px;
+  block-size: 16px;
+  fill: currentColor;
+}
+
+.recording-note {
+  margin-block-start: 10px;
+  font-size: 14px;
+}
+
+.transcript {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+}
+
+.transcript-line {
+  display: grid;
+  grid-template-columns: var(--touch) 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.transcript-speaker {
+  font-weight: 500;
+}
+
 /* This heading gets the focus from the app when a new attempt starts, never from the Tab key. */
 .task-text-heading:focus {
   outline: none;

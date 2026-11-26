@@ -1,6 +1,7 @@
 import { type Ref, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import type { CompiledNode, ItemTask, Question } from '../content-model/index.ts'
+import { isHeard } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import {
   type Answer,
@@ -12,8 +13,9 @@ import {
   rightAnswer,
   scoreAttempt,
 } from '../learning-engine/index.ts'
-import { plainText, RichText } from './German.tsx'
+import { German, plainText, RichText } from './German.tsx'
 import { NotFound } from './NotFound.tsx'
+import { PlayButton, PlayRecording } from './PlayButton.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 import { AnswerText, QuestionPrompt, QuestionView } from './QuestionView.tsx'
 import { ReportProblem } from './ReportProblem.tsx'
@@ -221,7 +223,7 @@ function TaskResult({ nodeId, task, result, wasDone, onRetry }: TaskResultProps)
         </div>
       </section>
 
-      <TaskTexts task={task} />
+      <TaskTexts task={task} checked />
 
       <section className="panel" aria-labelledby="item-results-heading">
         <h2 id="item-results-heading" className="cap">
@@ -265,22 +267,61 @@ function TaskResult({ nodeId, task, result, wasDone, onRetry }: TaskResultProps)
   )
 }
 
-/** The texts of a task. They are German, so they read left to right in every language. */
-function TaskTexts({ task, headingRef }: { task: ItemTask; headingRef?: Ref<HTMLHeadingElement> }) {
+interface TaskTextsProps {
+  task: ItemTask
+  /** The answers have been checked: a heard text now shows what is said. */
+  checked?: boolean
+  headingRef?: Ref<HTMLHeadingElement>
+}
+
+/**
+ * The texts of a task. A text to read is shown whole. A text to hear is its
+ * recording while the items are answered, as in the exam; once the answers
+ * are checked, also what is said, line by line, each line with its speaker
+ * and its own play button. The texts are German, so they read left to
+ * right in every language.
+ */
+function TaskTexts({ task, checked = false, headingRef }: TaskTextsProps) {
   const { strings } = useLanguage()
+  const heard = task.texts.some(isHeard)
   return (
     <section className="panel" aria-labelledby="task-text-heading">
       <h2 id="task-text-heading" ref={headingRef} tabIndex={-1} className="cap task-text-heading">
-        {strings.practiceText}
+        {heard ? (checked ? strings.transcript : strings.practiceRecording) : strings.practiceText}
       </h2>
-      {task.texts.map((text) => (
-        <article key={text.id} className="task-text de" lang="de" dir="ltr">
-          {text.title !== undefined && <h3>{text.title}</h3>}
-          {text.paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-        </article>
-      ))}
+      {task.texts.map((text) =>
+        isHeard(text) ? (
+          <div key={text.id} className="task-text task-heard">
+            {text.title !== undefined && (
+              <h3 lang="de" dir="ltr">
+                {text.title}
+              </h3>
+            )}
+            <PlayRecording lines={text.lines} />
+            {checked && (
+              // Left to right as a whole, so each speaker stays at the start of the line.
+              <ol className="transcript" dir="ltr">
+                {text.lines.map((line, index) => (
+                  <li key={index} className="transcript-line">
+                    <PlayButton audio={line.audio} />
+                    <German>
+                      <span className="transcript-speaker">{line.speaker}</span> {line.text}
+                    </German>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </div>
+        ) : (
+          <article key={text.id} className="task-text de" lang="de" dir="ltr">
+            {text.title !== undefined && <h3>{text.title}</h3>}
+            {text.paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </article>
+        ),
+      )}
+      {heard && !checked && <p className="secondary recording-note">{strings.recordingHidden}</p>}
     </section>
   )
 }

@@ -54,6 +54,20 @@ test('the first run says every example and word of the published nodes once, and
   expect(await fileText(dir, '16af11d6bd373d3d')).toBe('thorsten: Ich wohne in Berlin.')
 })
 
+test('each line of a conversation is said in the voice of its speaker', async () => {
+  const dir = await contentWithoutAudio()
+
+  await generateAudio(dir, fakeVoice().synthesise)
+
+  // The first two lines of the fixture listening part: Lena (Kerstin), then Jonas (Thorsten).
+  expect(await fileText(dir, 'c09f5744233f9743')).toBe(
+    'kerstin: Hallo Jonas, schön, dich zu sehen! Wie war dein Urlaub?',
+  )
+  expect(await fileText(dir, '9d0cd9a15da89407')).toBe(
+    'thorsten: Danke, sehr gut. Ich war zwei Wochen am Meer, in Kiel.',
+  )
+})
+
 test('a second run says nothing when no text changed', async () => {
   const dir = await contentWithoutAudio()
   const first = await generateAudio(dir, fakeVoice().synthesise)

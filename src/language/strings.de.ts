@@ -125,6 +125,11 @@ export const de: Strings = {
 
   practiceTitle: (title) => `Übung: ${title}`,
   practiceText: 'Text',
+  practiceRecording: 'Aufnahme',
+  playRecording: 'Aufnahme abspielen',
+  stopRecording: 'Aufnahme stoppen',
+  recordingHidden: 'Was gesagt wird, liest du, wenn du deine Antworten prüfst.',
+  transcript: 'Was gesagt wird',
   questions: 'Aufgaben',
   examAnswers: { richtig: 'Richtig', falsch: 'Falsch' },
   answeredOf: (answered, total) => `${answered} von ${total} beantwortet`,
