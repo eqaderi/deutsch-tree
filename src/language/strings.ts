@@ -3,9 +3,17 @@ import type { NodeKind } from '../content-model/index.ts'
 /**
  * Every word the interface shows. Components never hold their own wording;
  * they read it from here through `useLanguage()`.
+ *
+ * To add a string: add it here in English, then to `strings.fa.ts` (Persian)
+ * and `strings.de.ts` (simple German, about A2 level). `pnpm check` fails
+ * until all three have it. A string that holds a number is a function, so
+ * that Persian can write the number in Persian digits.
  */
 export const en = {
   appName: 'deutsch-tree',
+  language: 'Language',
+  /** A whole number as this language writes it. Use it for every number shown on its own. */
+  number: (value: number) => String(value),
   loading: 'Loading…',
   loadFailed: 'This page could not be loaded. Check your connection and try again.',
   tryAgain: 'Try again',
@@ -46,4 +54,12 @@ export const en = {
   testNotReady: 'Tests cannot be taken yet. They are being built.',
 }
 
-export type Strings = typeof en
+/** The shape of `en` with the wording left open: every key, any text. */
+type Wording<T> = T extends (...args: infer Args) => string
+  ? (...args: Args) => string
+  : T extends string
+    ? string
+    : { [Key in keyof T]: Wording<T[Key]> }
+
+/** What every language must provide. A key missing in one language is a type error. */
+export type Strings = Wording<typeof en>
