@@ -13,9 +13,9 @@ import { checkTyped } from '../learning-engine/index.ts'
 import { mixed } from './mix.ts'
 
 type PoolQuestionFile = NonNullable<NodeFile['questions']>[number]
-type ExamTaskFile = NonNullable<NodeFile['practice']>[number]
+type ItemTaskFile = NonNullable<NodeFile['practice']>[number]
 /** A question of a pool, or an item of a practice task. */
-type QuestionFile = PoolQuestionFile | ExamTaskFile['items'][number]
+type QuestionFile = PoolQuestionFile | ItemTaskFile['items'][number]
 
 // ---------------------------------------------------------------------------
 // What a reviewer may see of each question type
@@ -151,7 +151,7 @@ interface Reviewed {
   id: string
   question: QuestionFile
   /** The practice task the question is an item of. */
-  task?: ExamTaskFile
+  task?: ItemTaskFile
 }
 
 type ReviewedContent = Pick<NodeFile, 'questions' | 'practice'>
@@ -172,7 +172,7 @@ function blindView({ question, task }: Reviewed): Record<string, unknown> {
 }
 
 /** A task's texts as the reviewer sees them. */
-function textsOf(task: ExamTaskFile): SheetTask {
+function textsOf(task: ItemTaskFile): SheetTask {
   return { id: task.id, texts: task.texts }
 }
 

@@ -3,9 +3,10 @@ import { type ContentCheck, problemIn } from './check.ts'
 
 /**
  * A published node has a pool that an attempt can draw a fresh set from. A
- * draft may be smaller. An exam-part node has no pool: what it asks is a
- * whole task in the format of its exam part, and `practiceTaskFitsItsPart`
- * holds it to that format.
+ * draft may be smaller. An exam-part node has no pool: a reading part asks
+ * a whole task in the format of its exam part (`practiceTaskFitsItsPart`
+ * holds it to that format), and a writing or speaking part has a task for an
+ * AI assistant (see assistant-graded-node-has-no-pool.ts).
  */
 export const poolIsLargeEnough: ContentCheck = ({ nodes }) =>
   nodes.flatMap((checked) => {

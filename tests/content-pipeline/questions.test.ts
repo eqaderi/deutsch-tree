@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { compiledExtra, grammarContent, problemsOfExtra, withQuestion } from './extra-question.ts'
+import { compiledExtra, grammarPool, problemsOfExtra, withQuestion } from './extra-question.ts'
 import { changeNode, fixtureContent, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
 // ---------- true/false ----------
@@ -118,7 +118,7 @@ test('a node says how many questions an attempt draws, and 10 is the default', a
   const byDefault = await compileContent(fixtureContent)
   const chosen = await compileContent(await withAttemptSize(15))
 
-  const attemptSize = (result: typeof byDefault) => grammarContent(result.bundle)?.attemptSize
+  const attemptSize = (result: typeof byDefault) => grammarPool(result.bundle)?.attemptSize
   expect(attemptSize(byDefault)).toBe(10)
   expect(attemptSize(chosen)).toBe(15)
 })

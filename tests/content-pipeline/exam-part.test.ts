@@ -1,4 +1,5 @@
 import { expect, test } from 'vitest'
+import { hasPractice } from '../../src/content-model/scoring.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import {
   COMING_SOON,
@@ -45,7 +46,6 @@ test('a published Lesen part compiles to its page: what the part asks, how it is
   const node = bundle?.nodes.find((candidate) => candidate.id === 'exam-lesen-1')
   expect(node).toMatchObject({ kind: 'exam-part', module: 'lesen', part: 1, status: 'published' })
   expect(node?.content).toMatchObject({
-    kind: 'exam-part',
     explanations: {
       en: {
         task: [
@@ -67,7 +67,7 @@ test('a practice task compiles to its texts, cut into paragraphs, and its items 
   const { bundle } = await compileContent(fixtureContent)
 
   const content = bundle?.nodes.find((candidate) => candidate.id === 'exam-lesen-1')?.content
-  if (content?.kind !== 'exam-part') throw new Error('the fixture exam part has no exam-part content')
+  if (!content || !hasPractice(content)) throw new Error('the fixture reading part has no practice tasks')
   expect(content.practice.map((task) => task.id)).toEqual(['t1', 't2'])
   const [task] = content.practice
   expect(task?.texts).toEqual([

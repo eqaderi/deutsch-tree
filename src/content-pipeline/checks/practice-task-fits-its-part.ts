@@ -1,9 +1,9 @@
 import {
   EXAM_MODULE_FACTS,
   type ExamPart,
-  type ExamTaskFile,
-  type ExamTaskFormat,
-  examTaskFormat,
+  type ItemTaskFile,
+  type ItemTaskFormat,
+  itemTaskFormat,
 } from '../../content-model/index.ts'
 import { type ContentCheck, problemIn } from './check.ts'
 
@@ -20,10 +20,10 @@ export const practiceTaskFitsItsPart: ContentCheck = ({ nodes }) =>
   nodes.flatMap((checked) => {
     const { module, part, practice, status } = checked.node
     if (status !== 'published' || module === undefined || part === undefined) return []
-    const format = examTaskFormat({ module, part })
+    const format = itemTaskFormat({ module, part })
     if (!format) return []
     return (practice ?? []).flatMap((task, index) =>
-      examTaskProblems(task, { module, part }, format).map(({ where, message }) =>
+      itemTaskProblems(task, { module, part }, format).map(({ where, message }) =>
         problemIn(checked, { where: `practice[${index}].${where}`, message }),
       ),
     )
@@ -33,10 +33,10 @@ export const practiceTaskFitsItsPart: ContentCheck = ({ nodes }) =>
  * What keeps one task from being a task of `part`, with the place inside the
  * task. Empty when it fits. A mock exam holds its parts to the same formats.
  */
-export function examTaskProblems(
-  task: ExamTaskFile,
+export function itemTaskProblems(
+  task: ItemTaskFile,
   part: ExamPart,
-  format: ExamTaskFormat,
+  format: ItemTaskFormat,
 ): Array<{ where: 'texts' | 'items'; message: string }> {
   const name = `${EXAM_MODULE_FACTS[part.module].name}, Teil ${part.part}`
   const count = (number: number, one: string) => `${number} ${one}${number === 1 ? '' : 's'}`

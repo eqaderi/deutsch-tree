@@ -1,4 +1,5 @@
 import { expect, test } from 'vitest'
+import { hasPool } from '../../src/content-model/scoring.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { blindPool, type ReviewSheet, recordReview, reviewFingerprint } from '../../src/content-pipeline/review.ts'
 import { changeNode, changeReviewedNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
@@ -32,7 +33,7 @@ async function compiledExtra(contentDir: string) {
   const { report, bundle } = await compileContent(contentDir)
   expect(report.errors).toEqual([])
   const content = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content
-  return content?.kind === 'grammar' ? content.questions.find((q) => q.id === 'extra') : undefined
+  return content && hasPool(content) ? content.questions.find((q) => q.id === 'extra') : undefined
 }
 
 const typedAnswer = { type: 'typed-answer', prompt: 'wohnen (du)', answers: ['du wohnst', 'wohnst'] }

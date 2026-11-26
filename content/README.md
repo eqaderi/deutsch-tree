@@ -313,9 +313,11 @@ The pass mark follows from it: 90%, rounded up to a whole question (9 of 10,
 
 ## A published exam-part node
 
-The page shows three panels in this fixed order: what the part asks, how it is
-scored, how to approach it. Every exam-part node has them, whatever its
-module. A complete example is `content/nodes/exam-part/exam-lesen-1.yaml`.
+Every exam-part page, whatever its module, begins with three panels in this
+fixed order: what the part asks, how it is scored, how to approach it. Then
+comes what the learner does with the part: a practice task that the app
+scores (Lesen), or a task that an AI assistant grades (Schreiben, Sprechen).
+A complete example is `content/nodes/exam-part/exam-lesen-1.yaml`.
 
 ```yaml
 status: published
@@ -367,13 +369,13 @@ practice:                # one task or more; each attempt takes one of them, who
   question has: `id`, `type`, `prompt`, `answer`, `explanation`. The only item
   type so far is `richtig-falsch`.
 - A task has the format of its exam part: Lesen Teil 1 is 1 text and 6 items.
-  The formats are `EXAM_TASK_FORMATS` in `src/content-model/index.ts`. Only a
+  The formats are `ITEM_TASK_FORMATS` in `src/content-model/index.ts`. Only a
   part that has a format there can be published; so far that is `exam-lesen-1`.
 - Everything in a task is original. Follow the exam's format; never copy a
   text or an item from the official model sets or from a book.
 - The solved example "0" that the exam prints before the items is not an item.
 
-**How an exam part differs from the other nodes**
+**How a reading part differs from the other nodes**
 
 - **No pool, no minimum of 15.** A part is not asked as a random draw of
   questions but as one whole task, so its size is the size the exam gives it.
@@ -384,10 +386,65 @@ practice:                # one task or more; each attempt takes one of them, who
 - **A retry takes another task** when the node has more than one. With a
   single task the learner gets the same text again and may remember it, so a
   second and third task make "done" mean more. One task is enough to publish.
+- **Reviewed blind, texts included**, like a pool (see "Review before
+  publishing").
 - **No checkpoint questions.** An item cannot be asked without its text, so an
-  exam part gives nothing to the checkpoint of its level.
+  exam part gives nothing to the checkpoint of its level. Its practice task is
+  still offered from the tree, like any node's test.
+
+### A published writing or speaking node
+
+A Schreiben or Sprechen exam-part node has no questions. The learner does one
+task, an AI assistant grades it with a prompt that the app builds, and the
+learner types the score in. Besides its explanations (above), the node file
+holds the task:
+
+```yaml
+id: exam-schreiben-1
+kind: exam-part
+module: schreiben
+part: 1
+status: published
+
+explanations: …          # what the part asks, how it is scored, how to approach it
+
+task:                    # all of it is German
+  situation: >           # who writes to whom, and why
+    Sie sind letzte Woche in eine neue Wohnung gezogen. …
+  points:                # exactly three content points
+    - "Beschreiben Sie: Wie ist die neue Wohnung?"
+    - "Begründen Sie: Warum sind Sie umgezogen?"
+    - Machen Sie einen Vorschlag für einen Besuch.
+```
+
+What a task holds depends on its part:
+
+| Part | Fields of `task` |
+|---|---|
+| Schreiben Aufgabe 1 (informal e-mail, about 80 words) | `situation`, `points` (exactly 3) |
+| Schreiben Aufgabe 2 (opinion post, about 80 words) | `situation`, `opinion: { author, text }` (the one opinion the learner replies to) |
+| Schreiben Aufgabe 3 (short semi-formal e-mail, about 40 words) | `situation` |
+| Sprechen Teil 1 (planning together) | `situation`, `points` (exactly 4) |
+| Sprechen Teil 2 (presentation) | `topic` |
+| Sprechen Teil 3 (talking about a presentation) | `topic` |
+
+Write only what is special to this task. The fixed wording of the part (how
+many words, the five slides of a presentation, what to mind) is added by the
+app, and so are the official marking criteria and the prompt. Never write
+criteria, points or a prompt into a node file.
+
+Every task is original. Follow the format of the exam, and never copy or
+rework the text of an official task or of a task from a book.
+
+Such a node has no `questions`, no `practice` and no `review:` record, and the
+checks refuse them: there is no answer key that a reviewer could answer blind.
+Have the German of the task read by someone who knows German before you
+publish it.
 
 ## Review before publishing
+
+This is for nodes with a question pool. A writing or speaking node has none;
+see the section above.
 
 A published node needs a `review:` record. `pnpm content:check` fails without
 one, and again when a question or its answer changes later (explanations may
@@ -412,9 +469,9 @@ review, like changing an item or its key, means a new review; every item of
 that task then needs a fresh answer (`--only t1/i1,t1/i2,…`), because the text
 decides them all.
 
-Only grammar nodes, and the exam parts that have a task format, can be
-published so far. Other node kinds and exam parts are added to the schema as
-they are built.
+Grammar nodes and exam parts can be published so far: every writing and
+speaking part, and the reading parts whose task format is built. Other node
+kinds and exam parts are added to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 
@@ -443,14 +500,21 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   grammar node, `rule` in an exam-part node; and one of a node's own that is
   missing in a language.
 - A published node with fewer than 15 questions. A `coming-soon` draft may
-  have fewer. An exam part is exempt: it is held to the format of its part.
-- A published exam part whose practice task has not the number of texts and
-  items of its part, and one whose part has no task format yet.
+  have fewer. An exam part is exempt: it has no pool. A reading part is held
+  to the format of its part instead, and a writing or speaking part has none.
+- A published reading part whose practice task has not the number of texts
+  and items of its part, and one whose part has no task format yet.
+- A published exam part without its explanations.
+- A writing or speaking node with `questions`, `practice` or a `review:`
+  record, a published one without a `task`, and a task that lacks a field of
+  its part, holds a field of another part, or lists the wrong number of
+  points. A `task` in a reading part.
 - Two node files with the same id, and two questions with the same id inside
   one node. Two practice tasks of one node with the same id, and two texts or
   two items with the same id inside one task.
 - A published node with no review record, or whose questions, answers or
-  task texts changed after its review. A `coming-soon` node needs none.
+  task texts changed after its review. A `coming-soon` node needs none, and
+  neither does a writing or speaking node.
 - A list of official mock exams that is missing, has a link that is not a
   full `https://` address, has an exam without a link, has two exams with one
   id, or has fewer than two exams that count toward readiness.

@@ -48,6 +48,27 @@ test('an exam part page says what the part asks, how it is scored and how to app
   expect(await sidewaysScroll(page)).toBe(0)
 })
 
+test('a writing or speaking page begins like every exam part, then has its task, prompt and score', async ({
+  page,
+}) => {
+  for (const [address, task] of [
+    ['./#/node/exam-schreiben-1', 'You write a fixture e-mail to a friend about three points.'],
+    ['./#/node/exam-sprechen-1', 'You plan a fixture party with a partner.'],
+  ] as const) {
+    await page.goto(address)
+
+    await expect(page.getByRole('main').getByRole('heading', { level: 2 })).toHaveText([
+      'What this part asks',
+      'How it is scored',
+      'How to approach it',
+      'Task',
+      'How to get your score',
+      'Your score',
+    ])
+    await expect(page.getByText(task)).toBeVisible()
+  }
+})
+
 test('the page of an exam part is there in Persian and in simple German too', async ({ page }) => {
   await page.goto(PART)
 

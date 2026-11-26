@@ -253,8 +253,14 @@ export function scoreAttempt(questions: readonly Question[], answers: readonly (
 export interface NodeProgress {
   /** The node's test was passed. Only a pass sets this; a failed test never clears it. */
   done: boolean
-  /** How many tests of this node were finished, passed or not. */
+  /** How many tests of this node were finished, passed or not. An entered score counts as one. */
   attempts: number
+  /**
+   * The scores out of 100 that the learner typed in for this node, oldest
+   * first. Only a node scored outside the app has them (a writing or speaking
+   * exam part, graded by an AI assistant). Absent means: no score yet.
+   */
+  scores?: number[]
 }
 
 /**
@@ -292,7 +298,10 @@ export function applyAttempt(progress: Progress, nodeId: string, result: Pick<At
   const before = nodeProgress(progress, nodeId)
   return {
     ...progress,
-    nodes: { ...progress.nodes, [nodeId]: { done: before.done || result.passed, attempts: before.attempts + 1 } },
+    nodes: {
+      ...progress.nodes,
+      [nodeId]: { ...before, done: before.done || result.passed, attempts: before.attempts + 1 },
+    },
   }
 }
 
@@ -680,4 +689,29 @@ export function countNodes(nodes: readonly CurriculumNode[], progress: Progress)
   const done = nodes.filter((node) => isDone(progress, node.id)).length
   const comingSoon = nodes.filter((node) => node.status === 'coming-soon' && !isDone(progress, node.id)).length
   return { total: nodes.length, done, remaining: nodes.length - done, comingSoon }
+}
+
+// ---------------------------------------------------------------------------
+// Scores that the learner types in (writing and speaking)
+// ---------------------------------------------------------------------------
+
+/** An entered score passes at 90%, the pass mark of every node. */
+export function scorePasses(score: number): boolean {
+  return score >= passMark(MAXIMUM_SCORE)
+}
+
+/** The scores entered for a node, oldest first. Empty when there is none yet. */
+export function enteredScores(progress: Progress, nodeId: string): number[] {
+  return nodeProgress(progress, nodeId).scores ?? []
+}
+
+/**
+ * The progress after the learner entered a score out of 100 for a node. The
+ * score is kept; 90 or more marks the node done; a lower score never changes
+ * a done node. Returns new progress and leaves the given one untouched.
+ */
+export function applyEnteredScore(progress: Progress, nodeId: string, score: number): Progress {
+  const after = applyAttempt(progress, nodeId, { passed: scorePasses(score) })
+  const node = nodeProgress(after, nodeId)
+  return { ...after, nodes: { ...after.nodes, [nodeId]: { ...node, scores: [...(node.scores ?? []), score] } } }
 }

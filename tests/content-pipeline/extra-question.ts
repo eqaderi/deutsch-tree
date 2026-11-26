@@ -4,7 +4,8 @@
  * makes of it.
  */
 import { expect } from 'vitest'
-import type { ContentBundle, GrammarContent } from '../../src/content-model/index.ts'
+import type { ContentBundle } from '../../src/content-model/index.ts'
+import { hasPool } from '../../src/content-model/scoring.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { changeReviewedNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
@@ -33,15 +34,15 @@ export async function problemsOfExtra(contentDir: string) {
   return report.errors.map(({ where, message }) => ({ where: where?.replace(/^questions\[\d+\]\./, ''), message }))
 }
 
-/** The page of the fixture's published grammar node. */
-export function grammarContent(bundle: ContentBundle | null): GrammarContent | undefined {
-  const content = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content
-  return content?.kind === 'grammar' ? content : undefined
-}
-
 /** The question "extra" as the app gets it. */
 export async function compiledExtra(contentDir: string) {
   const { report, bundle } = await compileContent(contentDir)
   expect(report.errors).toEqual([])
-  return grammarContent(bundle)?.questions.find((q) => q.id === 'extra')
+  return grammarPool(bundle)?.questions.find((q) => q.id === 'extra')
+}
+
+/** The compiled content of the fixture's published grammar node, which has a pool. */
+export function grammarPool(bundle: ContentBundle | null) {
+  const content = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content
+  return content && hasPool(content) ? content : undefined
 }

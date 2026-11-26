@@ -33,6 +33,8 @@ test('a node that is coming soon has no search data: the index has its title', a
     'grammar-102',
     'grammar-103',
     'exam-lesen-1',
+    'exam-schreiben-1',
+    'exam-sprechen-1',
   ])
 })
 
@@ -60,6 +62,26 @@ test('the search data of an exam part holds what its page explains, and nothing 
   expect(text).not.toContain('ich wohne seit Mai')
   expect(text).not.toContain('Toms Wohnung ist groß.')
   expect(text).not.toContain('klein, aber hell')
+})
+
+test('a writing or speaking node is found by what its page explains, and by the words of its task, which are German in every language', async () => {
+  const { bundle } = await compileContent(fixtureContent)
+
+  const passages = (language: 'en' | 'fa') =>
+    bundle?.search[language].entries.find((entry) => entry.node === 'exam-sprechen-1')?.passages
+  expect(passages('en')?.slice(0, 2)).toEqual([
+    ['You plan a fixture party with a partner.'],
+    ['Each fixture point counts.'],
+  ])
+  expect(passages('en')?.slice(-5)).toEqual([
+    [{ de: 'Ihr Kurs macht am Ende ein Fixture-Fest. Sie organisieren das Fest zu zweit.' }],
+    [{ de: 'Wann und wo feiern?' }],
+    [{ de: 'Was essen und trinken?' }],
+    [{ de: 'Wer bringt was mit?' }],
+    [{ de: 'Welches Programm?' }],
+  ])
+  expect(passages('fa')?.slice(-5)).toEqual(passages('en')?.slice(-5))
+  expect(passages('fa')?.[0]).toEqual(['با یک هم‌گروهی یک جشن آزمایشی برنامه‌ریزی می‌کنید.'])
 })
 
 test('in simple German an example needs no translation', async () => {

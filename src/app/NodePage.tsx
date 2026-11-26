@@ -1,10 +1,12 @@
 import { type ReactNode, use, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
+import { hasPool, hasPractice } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import { examModuleOf, isDone, unmarkDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
 import { ExamPartSections } from './ExamPartSections.tsx'
+import { ExamTaskSections } from './ExamTaskPage.tsx'
 import { German, plainText, RichText } from './German.tsx'
 import { GrammarTableView } from './GrammarTableView.tsx'
 import { KindLabel } from './KindLabel.tsx'
@@ -15,8 +17,10 @@ import { updateProgress, useProgress } from './progress.ts'
 /**
  * A node's page: a column of panels in one fixed order, with the main action
  * at the bottom of the screen. A grammar page is rule, table, examples,
- * common mistakes, test. An exam-part page is what the part asks, how it is
- * scored, how to approach it, practice task.
+ * common mistakes, test. Every exam-part page begins with what the part asks,
+ * how it is scored and how to approach it; then comes what the learner does
+ * with it: a practice task the app scores (reading), or a task, the prompt
+ * for an AI assistant and the score (writing and speaking).
  */
 export function NodePage() {
   const { id = '' } = useParams()
@@ -39,16 +43,34 @@ export function NodePage() {
 
   const { content } = use(nodeRequest)
   if (!content) return <NotFound />
-  const isExamPart = content.kind === 'exam-part'
+  if (!hasPool(content)) {
+    return (
+      <NodeFrame node={summary}>
+        <ExamPartSections explanations={content.explanations} />
+        {hasPractice(content) ? (
+          <section className="action-bar" aria-labelledby="section-practice">
+            <h2 id="section-practice" className="visually-hidden">
+              {strings.practice}
+            </h2>
+            <Link to="test" relative="path" className="btn btn-main">
+              {strings.startPractice}
+            </Link>
+          </section>
+        ) : (
+          <ExamTaskSections nodeId={summary.id} task={content.task} />
+        )}
+      </NodeFrame>
+    )
+  }
   return (
     <NodeFrame node={summary}>
-      {isExamPart ? <ExamPartSections content={content} /> : <GrammarSections content={content} />}
+      <GrammarSections content={content} />
       <section className="action-bar" aria-labelledby="section-test">
         <h2 id="section-test" className="visually-hidden">
-          {isExamPart ? strings.practice : strings.test}
+          {strings.test}
         </h2>
         <Link to="test" relative="path" className="btn btn-main">
-          {isExamPart ? strings.startPractice : strings.takeTheTest}
+          {strings.takeTheTest}
         </Link>
       </section>
     </NodeFrame>

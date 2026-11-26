@@ -1,7 +1,9 @@
 import { expect, test } from 'vitest'
 import {
   applyAttempt,
+  applyEnteredScore,
   emptyProgress,
+  enteredScores,
   isDone,
   officialExamScores,
   recordOfficialExamScores,
@@ -57,6 +59,41 @@ test('progress saved by version 1 of the app loads', () => {
 
   expect(isDone(progress, 'grammar-001')).toBe(true)
   expect(isDone(progress, 'grammar-002')).toBe(false)
+})
+
+test('the scores a learner entered are still there when the app starts again', () => {
+  const storage = browserStorage()
+  const store = createProgressStore(storage)
+  store.update((progress) => applyEnteredScore(progress, 'exam-schreiben-1', 72))
+  store.update((progress) => applyEnteredScore(progress, 'exam-schreiben-1', 93))
+
+  const afterReload = createProgressStore(storage).get()
+
+  expect(enteredScores(afterReload, 'exam-schreiben-1')).toEqual([72, 93])
+  expect(isDone(afterReload, 'exam-schreiben-1')).toBe(true)
+})
+
+test('progress saved before scores could be entered loads with no score yet', () => {
+  const storage = browserStorage({
+    'deutsch-tree:progress': '{"version":1,"nodes":{"exam-schreiben-1":{"done":false,"attempts":0}}}',
+  })
+
+  const progress = createProgressStore(storage).get()
+
+  expect(enteredScores(progress, 'exam-schreiben-1')).toEqual([])
+  expect(progress.nodes['exam-schreiben-1']).toEqual({ done: false, attempts: 0 })
+})
+
+test('a saved score that is not a whole number from 0 to 100 is left out, the others stay', () => {
+  const storage = browserStorage({
+    'deutsch-tree:progress':
+      '{"version":1,"nodes":{"exam-sprechen-1":{"done":true,"attempts":5,"scores":[88,"95",140,-1,87.5,null,91]},"exam-schreiben-1":{"done":false,"attempts":1,"scores":"none"}}}',
+  })
+
+  const progress = createProgressStore(storage).get()
+
+  expect(enteredScores(progress, 'exam-sprechen-1')).toEqual([88, 91])
+  expect(enteredScores(progress, 'exam-schreiben-1')).toEqual([])
 })
 
 test.each([

@@ -1,3 +1,4 @@
+import { assistantGradedNodeHasNoPool } from './assistant-graded-node-has-no-pool.ts'
 import type { ContentCheck } from './check.ts'
 import { examTasksAreExamParts } from './exam-tasks-are-exam-parts.ts'
 import { germanInPersianIsMarked } from './german-in-persian-is-marked.ts'
@@ -25,4 +26,5 @@ export const CHECKS: ContentCheck[] = [
   poolIsLargeEnough,
   practiceTaskFitsItsPart,
   publishedNodeIsReviewed,
+  assistantGradedNodeHasNoPool,
 ]

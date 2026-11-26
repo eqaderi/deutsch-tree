@@ -1,6 +1,6 @@
 import { type Ref, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
-import type { CompiledNode, ExamTask, Question } from '../content-model/index.ts'
+import type { CompiledNode, ItemTask, Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import {
   type Answer,
@@ -21,13 +21,13 @@ import { ReportProblem } from './ReportProblem.tsx'
 interface PracticeTestProps {
   node: CompiledNode
   /** The practice tasks of the exam part. An attempt takes one of them, whole. */
-  tasks: ExamTask[]
+  tasks: ItemTask[]
 }
 
 interface Attempt {
   /** 1 for the first attempt of this visit, 2 for the first retry, and so on. */
   number: number
-  task: ExamTask
+  task: ItemTask
   /** Set when the answers have been checked. */
   finished?: { result: AttemptResult; wasDone: boolean }
 }
@@ -41,7 +41,7 @@ interface Attempt {
 export function PracticeTest({ node, tasks }: PracticeTestProps) {
   const { language, strings } = useLanguage()
   const progress = useProgress()
-  const start = (number: number, last?: ExamTask): Attempt | undefined => {
+  const start = (number: number, last?: ItemTask): Attempt | undefined => {
     const task = nextTask(tasks, last, Math.random)
     return task && { number, task }
   }
@@ -88,13 +88,13 @@ export function PracticeTest({ node, tasks }: PracticeTestProps) {
 }
 
 /** How a report names an item: with its task, since two tasks may both have an item "i1". */
-function reported(task: ExamTask, item: Pick<Question, 'id' | 'prompt'>) {
+function reported(task: ItemTask, item: Pick<Question, 'id' | 'prompt'>) {
   return { id: `${task.id}/${item.id}`, prompt: item.prompt }
 }
 
 interface TaskRunProps {
   nodeId: string
-  task: ExamTask
+  task: ItemTask
   /** Moves the keyboard and a screen reader to the text (after "Try again"). */
   focusOnStart: boolean
   /** Called once, with one answer per item in the order of the items. */
@@ -160,7 +160,7 @@ function TaskRun({ nodeId, task, focusOnStart, onFinish }: TaskRunProps) {
 
 interface TaskResultProps {
   nodeId: string
-  task: ExamTask
+  task: ItemTask
   result: AttemptResult
   /** The part was done before this attempt. */
   wasDone: boolean
@@ -266,7 +266,7 @@ function TaskResult({ nodeId, task, result, wasDone, onRetry }: TaskResultProps)
 }
 
 /** The texts of a task. They are German, so they read left to right in every language. */
-function TaskTexts({ task, headingRef }: { task: ExamTask; headingRef?: Ref<HTMLHeadingElement> }) {
+function TaskTexts({ task, headingRef }: { task: ItemTask; headingRef?: Ref<HTMLHeadingElement> }) {
   const { strings } = useLanguage()
   return (
     <section className="panel" aria-labelledby="task-text-heading">
