@@ -221,7 +221,7 @@ export const chaptersFileSchema = z.array(chapter).superRefine((chapters, ctx) =
   })
 })
 
-export type Chapter = z.infer<typeof chapter>
+export type ChapterEntry = z.infer<typeof chapter>
 
 // ---------------------------------------------------------------------------
 // Compiled bundle (what the app loads)
@@ -242,7 +242,16 @@ export interface NodeSummary {
   status: NodeStatus
   recogniseOnly: boolean
   prerequisites: string[]
-  title: Localised
+  /** German inside a title is marked, like in every other text for the learner. */
+  title: Localised<RichText>
+}
+
+/** A chapter as the tree shows it: a stop on the line of its level. */
+export interface ChapterSummary {
+  id: string
+  level: string
+  kind: NodeKind
+  title: Localised<RichText>
 }
 
 export interface GrammarTable {
@@ -288,7 +297,7 @@ export interface CompiledNode extends NodeSummary {
 
 /** Chapters and nodes, both in curriculum order: chapter by chapter, and inside a chapter by `order`. */
 export interface ContentIndex {
-  chapters: Chapter[]
+  chapters: ChapterSummary[]
   nodes: NodeSummary[]
 }
 

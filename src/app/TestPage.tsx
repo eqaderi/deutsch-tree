@@ -2,6 +2,7 @@ import { use } from 'react'
 import { Link, useParams } from 'react-router'
 import { useLanguage } from '../language/index.tsx'
 import { loadNode } from './content.ts'
+import { plainText } from './German.tsx'
 import { isNodeId } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
 
@@ -20,7 +21,7 @@ export function TestPage() {
   const count = node.content.questions.length
   return (
     <main className="wrap">
-      <title>{`${strings.testTitle(node.title[language])} · ${strings.appName}`}</title>
+      <title>{`${strings.testTitle(plainText(node.title[language]))} · ${strings.appName}`}</title>
       <Link to=".." relative="path" className="back">
         <span className="flip" aria-hidden="true">
           ←
@@ -28,7 +29,7 @@ export function TestPage() {
         {strings.backToTopic}
       </Link>
       <header className="page-head">
-        <h1>{strings.testTitle(node.title[language])}</h1>
+        <h1>{strings.testTitle(plainText(node.title[language]))}</h1>
       </header>
       <section className="panel message">
         <p>

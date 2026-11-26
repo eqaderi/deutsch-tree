@@ -23,13 +23,17 @@ test('the curriculum order runs chapter by chapter, in the order of the chapter 
       id: 'fixture-later',
       level: 'A1',
       kind: 'grammar',
-      title: { en: 'Fixture later topics', fa: 'موضوع‌های بعدی آزمایشی', de: 'Spätere Test-Themen' },
+      title: {
+        en: ['Fixture topics with ', { de: 'sein' }],
+        fa: ['موضوع‌های آزمایشی با ', { de: 'sein' }],
+        de: ['Test-Themen mit ', { de: 'sein' }],
+      },
     },
     {
       id: 'fixture-basics',
       level: 'A1',
       kind: 'grammar',
-      title: { en: 'Fixture basics', fa: 'مبانی آزمایشی', de: 'Test-Grundlagen' },
+      title: { en: ['Fixture basics'], fa: ['مبانی آزمایشی'], de: ['Test-Grundlagen'] },
     },
   ])
   expect(bundle?.index.nodes.map((node) => [node.chapter, node.id])).toEqual([
@@ -123,4 +127,25 @@ test('content without a chapter list is rejected', async () => {
     { file: CHAPTERS, message: 'is missing: the chapter list that every node file names a chapter of' },
   ])
   expect(bundle).toBeNull()
+})
+
+test('German marked in a topic title is compiled as German, like in every other text for the learner', async () => {
+  const content = await fixtureContentWith({
+    [COMING_SOON]: changeNode((node) => {
+      node.title = { en: 'The ending *-st* with *du*', fa: 'پایانهٔ *-st* با *du*', de: 'Die Endung *-st* bei *du*' }
+    }),
+  })
+
+  const { bundle } = await compileContent(content)
+
+  expect(bundle?.index.nodes.map((node) => node.title.fa)).toEqual([
+    ['فعل‌های آزمایشی'],
+    ['پایانهٔ ', { de: '-st' }, ' با ', { de: 'du' }],
+  ])
+  expect(bundle?.nodes.find((node) => node.id === 'grammar-002')?.title.en).toEqual([
+    'The ending ',
+    { de: '-st' },
+    ' with ',
+    { de: 'du' },
+  ])
 })

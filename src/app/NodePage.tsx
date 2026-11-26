@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router'
 import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { loadIndex, loadNode } from './content.ts'
-import { German, RichText } from './German.tsx'
+import { German, plainText, RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
 
@@ -55,10 +55,12 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
   const { language, strings } = useLanguage()
   return (
     <main className="wrap">
-      <title>{`${node.title[language]} · ${strings.appName}`}</title>
+      <title>{`${plainText(node.title[language])} · ${strings.appName}`}</title>
       <BackToTree />
       <header className="page-head">
-        <h1>{node.title[language]}</h1>
+        <h1>
+          <RichText parts={node.title[language]} />
+        </h1>
         <div className="meta">
           <span className="tag">{node.level}</span>
           <KindLabel kind={node.kind} />

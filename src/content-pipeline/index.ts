@@ -10,7 +10,7 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
 import {
-  type Chapter,
+  type ChapterEntry,
   type CompiledNode,
   type ContentBundle,
   chaptersFileSchema,
@@ -110,7 +110,15 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
 
   return {
     report,
-    bundle: report.ok ? { index: { chapters: chapters ?? [], nodes: nodes.map(summarise) }, nodes } : null,
+    bundle: report.ok
+      ? {
+          index: {
+            chapters: (chapters ?? []).map((chapter) => ({ ...chapter, title: richTextIn(chapter.title) })),
+            nodes: nodes.map(summarise),
+          },
+          nodes,
+        }
+      : null,
   }
 }
 
@@ -167,7 +175,7 @@ async function findNodeFiles(contentDir: string): Promise<string[]> {
 }
 
 /** The chapter list, or null when it cannot be used; the reason is then added to `errors`. */
-async function readChapters(contentDir: string, errors: ContentProblem[]): Promise<Chapter[] | null> {
+async function readChapters(contentDir: string, errors: ContentProblem[]): Promise<ChapterEntry[] | null> {
   let source: string
   try {
     source = await readFile(path.join(contentDir, CHAPTERS_FILE), 'utf8')
@@ -220,7 +228,7 @@ function compileNode(file: NodeFile): CompiledNode {
     status: file.status,
     recogniseOnly: file.recogniseOnly,
     prerequisites: file.prerequisites,
-    title: file.title,
+    title: richTextIn(file.title),
   }
   // Drafts inside a "coming soon" file are checked but never shipped.
   return { ...summary, content: file.status === 'published' ? compileGrammarContent(file) : null }
