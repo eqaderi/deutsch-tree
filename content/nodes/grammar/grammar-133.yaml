@@ -1,0 +1,13 @@
+# Grammar list row 133.
+id: grammar-133
+kind: grammar
+level: A2
+chapter: a2-prepositions
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-122, grammar-127]
+title:
+  en: "Direction adverbs and *hin-*/*her-*"
+  fa: "قیدهای جهت و *hin-* / *her-*"
+  de: "Richtungsadverbien und *hin-* / *her-*"

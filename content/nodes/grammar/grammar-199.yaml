@@ -1,0 +1,13 @@
+# Grammar list row 199.
+id: grammar-199
+kind: grammar
+level: A2
+chapter: a2-word-building-particles
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-005, grammar-210]
+title:
+  en: "Verb prefixes with meaning"
+  fa: "پیشوندهای فعلی معنادار (*an-*، *aus-*، *auf-*، *zu-* …)"
+  de: "Verbvorsilben mit Bedeutung (*an-*, *aus-*, *auf-*, *zu-* …)"

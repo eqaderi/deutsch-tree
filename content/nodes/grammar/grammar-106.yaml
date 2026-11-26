@@ -1,0 +1,13 @@
+# Grammar list row 106.
+id: grammar-106
+kind: grammar
+level: A1
+chapter: a1-adjectives
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-190, grammar-192]
+title:
+  en: "Ordinal numbers"
+  fa: "عددهای ترتیبی"
+  de: "Ordinalzahlen"

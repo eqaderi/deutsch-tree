@@ -1,0 +1,13 @@
+# Grammar list row 209.
+id: grammar-209
+kind: grammar
+level: A2
+chapter: a2-dativ-objects
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-140]
+title:
+  en: "Time before place in the sentence"
+  fa: "زمان پیش از مکان در جمله"
+  de: "Zeit vor Ort im Satz"

@@ -1,0 +1,13 @@
+# Grammar list row 207.
+id: grammar-207
+kind: grammar
+level: A2
+chapter: a2-adverbs
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-148]
+title:
+  en: "*schon* / *noch* and their negative answers"
+  fa: "*schon* و *noch* و پاسخ‌های منفی آن‌ها"
+  de: "*schon* / *noch* und ihre negativen Antworten"

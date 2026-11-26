@@ -1,0 +1,13 @@
+# Grammar list row 170.
+id: grammar-170
+kind: grammar
+level: B1
+chapter: b1-time-clauses
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-120, grammar-157]
+title:
+  en: "*seit* / *seitdem*"
+  fa: "*seit* / *seitdem*"
+  de: "*seit* / *seitdem*"

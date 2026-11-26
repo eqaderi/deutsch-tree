@@ -1,0 +1,13 @@
+# Grammar list row 26.
+id: grammar-026
+kind: grammar
+level: A1
+chapter: a1-modal-verbs
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-139]
+title:
+  en: "*können* + *Satzklammer*"
+  fa: "*können* و قاب جمله (*Satzklammer*)"
+  de: "*können* + Satzklammer"

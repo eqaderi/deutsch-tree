@@ -1,0 +1,13 @@
+# Grammar list row 114.
+id: grammar-114
+kind: grammar
+level: A2
+chapter: a2-adjectives
+order: 8
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-104]
+title:
+  en: "Degree words"
+  fa: "واژه‌های شدت (*sehr*، *ziemlich*، *total* …)"
+  de: "Gradwörter (*sehr*, *ziemlich*, *total* …)"

@@ -1,0 +1,13 @@
+# Grammar list row 112.
+id: grammar-112
+kind: grammar
+level: A2
+chapter: a2-adjectives
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-110]
+title:
+  en: "Comparisons with *(genau)so … wie*"
+  fa: "مقایسه با *(genau)so … wie*"
+  de: "Vergleiche mit *(genau)so … wie*"

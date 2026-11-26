@@ -1,0 +1,13 @@
+# Grammar list row 165.
+id: grammar-165
+kind: grammar
+level: B1
+chapter: b1-reason-condition-clauses
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-158]
+title:
+  en: "*obwohl*"
+  fa: "*obwohl*"
+  de: "*obwohl*"

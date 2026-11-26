@@ -1,0 +1,13 @@
+# Grammar list row 134.
+id: grammar-134
+kind: grammar
+level: B1
+chapter: b1-prepositions
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-071]
+title:
+  en: "*während* + *Genitiv*/*Dativ*"
+  fa: "*während* + *Genitiv* یا *Dativ*"
+  de: "*während* + Genitiv / Dativ"

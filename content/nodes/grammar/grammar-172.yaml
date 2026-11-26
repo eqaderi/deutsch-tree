@@ -1,0 +1,13 @@
+# Grammar list row 172.
+id: grammar-172
+kind: grammar
+level: B1
+chapter: b1-reason-condition-clauses
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-160]
+title:
+  en: "*falls*"
+  fa: "*falls*"
+  de: "*falls*"

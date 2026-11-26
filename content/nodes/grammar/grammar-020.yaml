@@ -1,0 +1,13 @@
+# Grammar list row 20.
+id: grammar-020
+kind: grammar
+level: A2
+chapter: a2-past
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-017, grammar-018, grammar-019]
+title:
+  en: "*Perfekt* vs *Präteritum* in use"
+  fa: "کاربرد *Perfekt* در برابر *Präteritum*"
+  de: "Perfekt oder Präteritum: Was benutzt man wann?"

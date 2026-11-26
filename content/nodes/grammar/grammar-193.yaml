@@ -1,0 +1,13 @@
+# Grammar list row 193.
+id: grammar-193
+kind: grammar
+level: A1
+chapter: a1-numbers-time
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-139]
+title:
+  en: "Time and frequency adverbs"
+  fa: "قیدهای زمان و تکرار (*heute*، *oft*، *nie* …)"
+  de: "Adverbien für Zeit und Häufigkeit (*heute*, *oft*, *nie* …)"

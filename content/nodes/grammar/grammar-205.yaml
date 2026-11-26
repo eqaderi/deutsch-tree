@@ -1,0 +1,13 @@
+# Grammar list row 205.
+id: grammar-205
+kind: grammar
+level: A1
+chapter: a1-nouns-articles
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-059]
+title:
+  en: "Gender rules of thumb"
+  fa: "قاعده‌های سرانگشتی برای جنس دستوری"
+  de: "Faustregeln für das Genus"

@@ -1,0 +1,13 @@
+# Grammar list row 95.
+id: grammar-095
+kind: grammar
+level: A2
+chapter: a2-articles-pronouns
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-077, grammar-094]
+title:
+  en: "*Possessivpronomen*"
+  fa: "ضمیر ملکی (*meiner*، *deins*)"
+  de: "Possessivpronomen (*meiner*, *deins*)"

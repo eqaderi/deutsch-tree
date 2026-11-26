@@ -1,0 +1,13 @@
+# Grammar list row 200.
+id: grammar-200
+kind: grammar
+level: A2
+chapter: a2-word-building-particles
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-205]
+title:
+  en: "Diminutive *-chen*"
+  fa: "اسم مصغّر با *-chen*"
+  de: "Verkleinerung mit *-chen*"

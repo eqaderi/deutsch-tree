@@ -1,0 +1,13 @@
+# Grammar list row 144.
+id: grammar-144
+kind: grammar
+level: A1
+chapter: a1-building-sentences
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-005, grammar-014, grammar-026]
+title:
+  en: "*Satzklammer*"
+  fa: "قاب جمله (*Satzklammer*)"
+  de: "Satzklammer"

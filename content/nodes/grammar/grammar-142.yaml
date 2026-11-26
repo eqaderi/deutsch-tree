@@ -1,0 +1,13 @@
+# Grammar list row 142.
+id: grammar-142
+kind: grammar
+level: A1
+chapter: a1-first-sentences
+order: 6
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-139]
+title:
+  en: "Yes/no question"
+  fa: "پرسش بله یا نه"
+  de: "Ja/Nein-Frage"
