@@ -81,8 +81,14 @@ export function scoreAttempt(questions: readonly Question[], answers: readonly (
 export interface NodeProgress {
   /** The node's test was passed. Only a pass sets this; a failed test never clears it. */
   done: boolean
-  /** How many tests of this node were finished, passed or not. */
+  /** How many tests of this node were finished, passed or not. An entered score counts as one. */
   attempts: number
+  /**
+   * The scores out of 100 that the learner typed in for this node, oldest
+   * first. Only a node scored outside the app has them (a writing or speaking
+   * exam part, graded by an AI assistant). Absent means: no score yet.
+   */
+  scores?: number[]
 }
 
 /**
@@ -115,6 +121,49 @@ export function applyAttempt(progress: Progress, nodeId: string, result: Pick<At
   const before = nodeProgress(progress, nodeId)
   return {
     ...progress,
-    nodes: { ...progress.nodes, [nodeId]: { done: before.done || result.passed, attempts: before.attempts + 1 } },
+    nodes: {
+      ...progress.nodes,
+      [nodeId]: { ...before, done: before.done || result.passed, attempts: before.attempts + 1 },
+    },
   }
+}
+
+// ---------------------------------------------------------------------------
+// Scores that the learner types in (writing and speaking)
+// ---------------------------------------------------------------------------
+
+/** The highest score that can be entered. Writing and speaking are scored out of 100, like an exam module. */
+export const FULL_SCORE = 100
+
+/** An entered score passes at 90%, the pass mark of every node. */
+export function scorePasses(score: number): boolean {
+  return score >= passMark(FULL_SCORE)
+}
+
+/**
+ * What a learner typed as a score, as a whole number from 0 to 100. Null for
+ * anything else. Persian and Arabic digits count as digits, since a Persian
+ * keyboard types them.
+ */
+export function readScore(typed: string): number | null {
+  const latin = typed.trim().replace(/[۰-۹٠-٩]/g, (digit) => String(digit.charCodeAt(0) & 0xf))
+  if (!/^\d{1,3}$/.test(latin)) return null
+  const score = Number(latin)
+  return score <= FULL_SCORE ? score : null
+}
+
+/** The scores entered for a node, oldest first. Empty when there is none yet. */
+export function enteredScores(progress: Progress, nodeId: string): number[] {
+  return nodeProgress(progress, nodeId).scores ?? []
+}
+
+/**
+ * The progress after the learner entered a score out of 100 for a node. The
+ * score is kept; 90 or more marks the node done; a lower score never changes
+ * a done node. Returns new progress and leaves the given one untouched.
+ */
+export function applyEnteredScore(progress: Progress, nodeId: string, score: number): Progress {
+  const after = applyAttempt(progress, nodeId, { passed: scorePasses(score) })
+  const node = nodeProgress(after, nodeId)
+  return { ...after, nodes: { ...after.nodes, [nodeId]: { ...node, scores: [...(node.scores ?? []), score] } } }
 }

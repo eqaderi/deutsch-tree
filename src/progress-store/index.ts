@@ -7,8 +7,10 @@
  *
  * The saved text carries a version number. When the saved shape changes,
  * raise SAVED_VERSION and teach `parseProgress` to read the older versions.
+ * A new field that may be absent needs no new version: `scores` was added
+ * that way, and text saved before it reads as "no score yet".
  */
-import { emptyProgress, type NodeProgress, type Progress } from '../learning-engine/index.ts'
+import { emptyProgress, FULL_SCORE, type NodeProgress, type Progress } from '../learning-engine/index.ts'
 
 /** The part of the browser's `localStorage` that the store needs. */
 export interface KeyValueStorage {
@@ -53,6 +55,8 @@ export function parseProgress(text: string): Progress | null {
     nodes[id] = {
       done: node.done === true,
       attempts: typeof attempts === 'number' && Number.isInteger(attempts) && attempts > 0 ? attempts : 0,
+      // Absent stays absent: a node without entered scores is saved as it always was.
+      ...(Array.isArray(node.scores) ? { scores: node.scores.filter(isScore) } : {}),
     }
   }
   return { nodes }
@@ -92,6 +96,10 @@ function load(storage: KeyValueStorage | null): Progress {
   } catch {
     return emptyProgress()
   }
+}
+
+function isScore(value: unknown): value is number {
+  return typeof value === 'number' && Number.isInteger(value) && value >= 0 && value <= FULL_SCORE
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
