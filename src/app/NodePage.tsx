@@ -1,9 +1,11 @@
 import { type ReactNode, use, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
+import { hasPool } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
 import { isDone, unmarkDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
+import { ExamTaskSections } from './ExamTaskPage.tsx'
 import { German, plainText, RichText } from './German.tsx'
 import { GrammarTableView } from './GrammarTableView.tsx'
 import { KindLabel } from './KindLabel.tsx'
@@ -12,9 +14,11 @@ import { PhraseSections } from './PhraseSections.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 
 /**
- * A node's page: a column of panels in one fixed order, ending with the test.
- * A grammar page has rule, table, examples and common mistakes; a phrases
- * page has what the phrases are for and the phrases (PhraseSections.tsx).
+ * A node's page: a column of panels in one fixed order. A grammar page has
+ * rule, table, examples and common mistakes; a phrases page has what the
+ * phrases are for and the phrases (PhraseSections.tsx); both end with the
+ * test. A writing or speaking page has no test of questions: task, prompt
+ * for an AI assistant, score.
  */
 export function NodePage() {
   const { id = '' } = useParams()
@@ -37,6 +41,13 @@ export function NodePage() {
 
   const { content } = use(nodeRequest)
   if (!content) return <NotFound />
+  if (!hasPool(content)) {
+    return (
+      <NodeFrame node={summary}>
+        <ExamTaskSections nodeId={summary.id} task={content.task} />
+      </NodeFrame>
+    )
+  }
   return (
     <NodeFrame node={summary}>
       {'phrases' in content ? (

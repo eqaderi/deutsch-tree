@@ -282,6 +282,40 @@ export const en = {
   overviewTitle: 'All grammar at a glance',
   overviewIntro: 'Every grammar table on one page. The name above a table opens its topic.',
   overviewEmpty: 'No grammar table is written yet.',
+
+  // A writing or speaking node: the task, a prompt for an AI assistant, and the score typed back in.
+  task: 'Task',
+  getYourScore: 'How to get your score',
+  writingSteps: [
+    'Write your text for this task, as in the exam: without a dictionary and without a translator.',
+    'Copy the prompt and paste it into an AI assistant, for example ChatGPT, Claude or Gemini. Put your text below it and send both.',
+    'The assistant grades your text with the official criteria of the exam. Type its score into the box below.',
+  ],
+  speakingSteps: [
+    'Copy the prompt and paste it into an AI assistant that can talk, for example ChatGPT, Claude or Gemini. Send it.',
+    'Switch the assistant to voice mode and say “Hallo”. It speaks German with you, as in the exam. Speak; do not type.',
+    'At the end the assistant grades you with the official criteria of the exam. Type its score into the box below.',
+  ],
+  copyPrompt: 'Copy the prompt',
+  promptCopied: 'Copied. Now paste it into your AI assistant.',
+  promptNotCopied: 'Your browser did not allow copying. Select the whole prompt below and copy it yourself.',
+  readPrompt: 'Read the prompt',
+  thePrompt: 'The prompt',
+  /** Says which language the assistant answers in: the language of this very file. */
+  promptNote:
+    'The prompt is in English and German, because an assistant follows it best that way. It tells the assistant to grade strictly and to answer you in English. This app sends nothing anywhere; it only copies the text.',
+  pronunciationNote:
+    '16 of the 100 points are for pronunciation. An assistant can judge pronunciation only roughly, so take that part of the score as an estimate.',
+  yourScore: 'Your score',
+  noScoreYet: 'No score yet.',
+  scoreLabel: 'Score from the assistant, from 0 to 100',
+  saveScore: 'Save the score',
+  scoreNotValid: 'Type a whole number from 0 to 100.',
+  /** Follows a score, which is shown large: "93 of 100". */
+  ofTotal: (total: number) => `of ${total}`,
+  scoreNeeded: (needed: number, total: number) => `You need ${needed} of ${total} to finish this topic.`,
+  scoreRetry: 'Do the task again and enter the new score. You can try as often as you like.',
+  scoresSoFar: 'Your scores so far',
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */

@@ -33,8 +33,25 @@
     fa: سطح آزمایشی نانوشته
     de: Test-Niveau, noch nicht geschrieben
 
-# A fourth level for the kinds of node that are not grammar. It is a level of its own, so that the
-# three levels above keep the counts that the tests of the tree and of the checkpoints know.
+# Exam parts that an AI assistant grades: they have a task and no question pool.
+- id: fixture-schreiben
+  level: B1
+  kind: exam-part
+  title:
+    en: "Fixture exam: writing"
+    fa: "امتحان آزمایشی: نوشتن"
+    de: "Test-Prüfung: Schreiben"
+
+- id: fixture-sprechen
+  level: B1
+  kind: exam-part
+  title:
+    en: "Fixture exam: speaking"
+    fa: "امتحان آزمایشی: صحبت کردن"
+    de: "Test-Prüfung: Sprechen"
+
+# A fourth level for the phrases node and an exam part it serves. It is a level of its own, so that
+# the levels above keep the counts that the tests of the tree and of the checkpoints know.
 - id: fixture-set-phrases
   level: B2
   kind: phrases
@@ -47,6 +64,6 @@
   level: B2
   kind: exam-part
   title:
-    en: Fixture exam
-    fa: امتحان آزمایشی
-    de: Test-Prüfung
+    en: Fixture exam parts served by phrases
+    fa: بخش‌های امتحان آزمایشی برای عبارت‌ها
+    de: Test-Prüfungsteile für Redemittel

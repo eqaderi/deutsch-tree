@@ -1,0 +1,14 @@
+# Fixture exam part that the fixture phrases serve, beside exam-sprechen-1. Not written. Tests of
+# writing and speaking nodes rename exam-schreiben-1, so the phrases do not depend on that one.
+id: exam-schreiben-3
+kind: exam-part
+level: B2
+chapter: fixture-exam-parts
+order: 1
+status: coming-soon
+module: schreiben
+part: 3
+title:
+  en: "Fixture writing task with *du*"
+  fa: "تمرین نوشتن آزمایشی با *du*"
+  de: "Test-Schreibaufgabe mit *du*"

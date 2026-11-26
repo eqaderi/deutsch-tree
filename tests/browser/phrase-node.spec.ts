@@ -43,20 +43,20 @@ test('a phrases page says what its phrases are for and shows each one with its m
   await expect(howAreYou.getByText('Hello Tom, how are you?')).toBeVisible()
   // As the learner sees it: the German inside a task's name keeps the space before it.
   await expect(howAreYou.getByRole('list', { name: 'Useful for' }).getByRole('link')).toHaveText(
-    ['Fixture writing task with du', 'Fixture speaking task'],
+    ['Fixture writing task with du', 'Fixture speaking: planning together'],
     { useInnerText: true },
   )
   // Each phrase names its own exam tasks, not those of the whole node.
   await expect(phrases(page).nth(0).getByRole('list', { name: 'Useful for' }).getByRole('link')).toHaveText([
-    'Fixture speaking task',
+    'Fixture speaking: planning together',
   ])
   await expect(phrases(page).nth(2).getByRole('list', { name: 'Useful for' }).getByRole('link')).toHaveText([
     'Fixture writing task with du',
   ])
 
   // An exam task is a link to the page of that part of the exam.
-  await howAreYou.getByRole('link', { name: 'Fixture speaking task' }).click()
-  await expect(page.getByRole('heading', { level: 1, name: 'Fixture speaking task' })).toBeVisible()
+  await howAreYou.getByRole('link', { name: 'Fixture speaking: planning together' }).click()
+  await expect(page.getByRole('heading', { level: 1, name: 'Fixture speaking: planning together' })).toBeVisible()
   expect(new URL(page.url()).hash).toBe('#/node/exam-sprechen-1')
 })
 
@@ -82,7 +82,7 @@ test('a phrases page in Persian and in German: the phrases stay German and read 
   await expect(first.locator('p [lang="de"]').filter({ hasText: 'Sie' })).toHaveAttribute('dir', 'ltr')
   await expect(first.getByText('سلام، خانم تست!')).toBeVisible()
   await expect(first.getByRole('list', { name: 'کاربرد در امتحان' }).getByRole('link')).toHaveText([
-    'تمرین صحبت کردن آزمایشی',
+    'صحبت کردن آزمایشی: برنامه‌ریزی با هم',
   ])
 
   // A learner who reads in German gets the explanation in simple German, and no translation of the example.

@@ -25,15 +25,32 @@ test('the search data of a language holds what a published node says, in that la
 test('a node that is coming soon has no search data: the index has its title', async () => {
   const { bundle } = await compileContent(fixtureContent)
 
-  // grammar-002, grammar-201 and the two exam parts are coming soon.
+  // grammar-002 and grammar-201 are coming soon.
   expect(bundle?.search.en.entries.map((entry) => entry.node)).toEqual([
     'grammar-001',
     'grammar-010',
     'grammar-101',
     'grammar-102',
     'grammar-103',
+    'exam-schreiben-1',
+    'exam-sprechen-1',
     'phrases-greeting',
   ])
+})
+
+test('a writing or speaking node is found by the words of its task, which are German in every language', async () => {
+  const { bundle } = await compileContent(fixtureContent)
+
+  const passages = (language: 'en' | 'fa') =>
+    bundle?.search[language].entries.find((entry) => entry.node === 'exam-sprechen-1')?.passages
+  expect(passages('en')).toEqual([
+    [{ de: 'Ihr Kurs macht am Ende ein Fixture-Fest. Sie organisieren das Fest zu zweit.' }],
+    [{ de: 'Wann und wo feiern?' }],
+    [{ de: 'Was essen und trinken?' }],
+    [{ de: 'Wer bringt was mit?' }],
+    [{ de: 'Welches Programm?' }],
+  ])
+  expect(passages('fa')).toEqual(passages('en'))
 })
 
 test('in simple German an example needs no translation', async () => {

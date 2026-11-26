@@ -9,6 +9,7 @@
  *      (*ich wohne*), so the app can render it left to right as German.
  */
 import { z } from 'zod'
+import { type AssistantGradedModule, isAssistantGraded } from './scoring.ts'
 
 export const LANGUAGES = ['en', 'fa', 'de'] as const
 export type Language = (typeof LANGUAGES)[number]
@@ -20,7 +21,7 @@ export type NodeKind = (typeof NODE_KINDS)[number]
 export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
 
-/** The four modules of the exam, as an exam-part node names its own. */
+/** The four modules of the Goethe B1 exam, as they are written in a node id. */
 export const EXAM_MODULES = ['lesen', 'hoeren', 'schreiben', 'sprechen'] as const
 export type ExamModule = (typeof EXAM_MODULES)[number]
 
@@ -390,13 +391,51 @@ const FIELDS_OF_ONE_KIND = {
 
 const withArticle = (kind: NodeKind) => `${kind === 'exam-part' ? 'an' : 'a'} ${kind}`
 
-/** The content sections that a published node must have, by its kind. A kind that is not here has no page yet. */
+/**
+ * The content sections that a published node with a pool must have, by its
+ * kind. A writing or speaking node has a task instead (see `isAssistantGraded`).
+ */
 const SECTIONS_OF_A_PUBLISHED = {
   grammar: ['explanations', 'table', 'examples', 'mistakes', 'questions'],
   phrases: ['phrases', 'questions'],
 } as const satisfies Partial<Record<NodeKind, readonly string[]>>
 
 const hasAPage = (kind: NodeKind): kind is keyof typeof SECTIONS_OF_A_PUBLISHED => kind in SECTIONS_OF_A_PUBLISHED
+
+/**
+ * The task of a writing or speaking node: what tells it apart from another
+ * task of the same exam part. All of it is German. Which fields a task has
+ * depends on its part; `TASK_FIELDS` says which.
+ */
+const task = z.strictObject({
+  /** The situation the learner writes or speaks in. */
+  situation: text.optional(),
+  /** The content points of an e-mail, or the points to plan together. */
+  points: z.array(text).optional(),
+  /** Schreiben Aufgabe 2: the one opinion from a forum that the learner replies to. */
+  opinion: z.strictObject({ author: text, text }).optional(),
+  /** Sprechen Teil 2 and 3: the topic of the presentation. */
+  topic: text.optional(),
+})
+
+type TaskField = keyof z.infer<typeof task>
+
+/** The fields of a task in each part, and how many points it lists. */
+const TASK_FIELDS: Record<
+  AssistantGradedModule,
+  Record<number, { name: string; fields: TaskField[]; points?: number }>
+> = {
+  schreiben: {
+    1: { name: 'Schreiben Aufgabe 1', fields: ['situation', 'points'], points: 3 },
+    2: { name: 'Schreiben Aufgabe 2', fields: ['situation', 'opinion'] },
+    3: { name: 'Schreiben Aufgabe 3', fields: ['situation'] },
+  },
+  sprechen: {
+    1: { name: 'Sprechen Teil 1', fields: ['situation', 'points'], points: 4 },
+    2: { name: 'Sprechen Teil 2', fields: ['topic'] },
+    3: { name: 'Sprechen Teil 3', fields: ['topic'] },
+  },
+}
 
 export const nodeFileSchema = z
   .strictObject({
@@ -444,6 +483,9 @@ export const nodeFileSchema = z
       .default(10),
     /** A published node must have one that matches its pool; the content pipeline checks it. */
     review: reviewRecord.optional(),
+
+    /** Writing and speaking nodes only: the task. */
+    task: task.optional(),
   })
   .superRefine((value, ctx) => {
     if (value.kind === 'grammar' && !/^grammar-\d{3}$/.test(value.id)) {
@@ -505,21 +547,68 @@ export const nodeFileSchema = z
         })
       }
     }
+    if (isAssistantGraded(value) && value.part !== undefined) {
+      const taskFields = TASK_FIELDS[value.module][value.part]
+      if (taskFields === undefined) {
+        const parts = Object.keys(TASK_FIELDS[value.module])
+        ctx.addIssue({
+          code: 'custom',
+          path: ['part'],
+          message: `${value.module} has parts ${parts[0]} to ${parts.at(-1)}`,
+        })
+      } else if (value.task) {
+        taskFitsItsPart(value.task, taskFields, ctx)
+      }
+    }
+
     if (value.status !== 'published') return
-    if (!hasAPage(value.kind)) {
+    if (hasAPage(value.kind)) {
+      for (const section of SECTIONS_OF_A_PUBLISHED[value.kind]) {
+        if (value[section] === undefined) {
+          ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
+        }
+      }
+    } else if (isAssistantGraded(value)) {
+      if (value.task === undefined) {
+        ctx.addIssue({ code: 'custom', path: ['task'], message: 'is required for a published node' })
+      }
+    } else {
       ctx.addIssue({
         code: 'custom',
         path: ['status'],
-        message: `${withArticle(value.kind)} node cannot be published yet; only ${Object.keys(SECTIONS_OF_A_PUBLISHED).join(' and ')} nodes have a page`,
+        message: `${withArticle(value.kind)} node${value.module ? ` of ${value.module}` : ''} cannot be published yet; it has no page`,
       })
-      return
-    }
-    for (const section of SECTIONS_OF_A_PUBLISHED[value.kind]) {
-      if (value[section] === undefined) {
-        ctx.addIssue({ code: 'custom', path: [section], message: 'is required for a published node' })
-      }
     }
   })
+
+/** A task holds the fields of its exam part, no others, and as many points as the part has. */
+function taskFitsItsPart(
+  value: z.infer<typeof task>,
+  part: { name: string; fields: TaskField[]; points?: number },
+  ctx: z.RefinementCtx,
+): void {
+  for (const field of part.fields) {
+    if (value[field] === undefined) {
+      ctx.addIssue({ code: 'custom', path: ['task', field], message: `is required for ${part.name}` })
+    }
+  }
+  for (const field of Object.keys(value) as TaskField[]) {
+    if (value[field] !== undefined && !part.fields.includes(field)) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['task', field],
+        message: `does not belong to ${part.name}; that task has: ${part.fields.join(', ')}`,
+      })
+    }
+  }
+  if (part.points !== undefined && value.points !== undefined && value.points.length !== part.points) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['task', 'points'],
+      message: `${part.name} has exactly ${part.points} points, this task has ${value.points.length}`,
+    })
+  }
+}
 
 export type NodeFile = z.infer<typeof nodeFileSchema>
 
@@ -808,13 +897,44 @@ export interface PhrasesContent {
   attemptSize: number
 }
 
-/** The page content of a published node. Which one it is follows from the node's kind. */
-export type NodeContent = GrammarContent | PhrasesContent
+/**
+ * One task of the Schreiben module or one part of the Sprechen module, with
+ * everything that tells it apart from another task of the same part. All of
+ * its text is German. The fixed wording of a part (how long, what to mind)
+ * is not content; it comes from the part.
+ *
+ * A task stands on its own, so a mock exam can hold tasks as well as a node.
+ */
+export type ExamTask =
+  /** An informal e-mail of about 80 words on three content points. */
+  | { module: 'schreiben'; part: 1; situation: string; points: string[] }
+  /** A post of about 80 words giving the learner's opinion, in reply to one opinion from a forum. */
+  | { module: 'schreiben'; part: 2; situation: string; opinion: { author: string; text: string } }
+  /** A short semi-formal e-mail of about 40 words. */
+  | { module: 'schreiben'; part: 3; situation: string }
+  /** Planning something with a partner, along four guiding points. */
+  | { module: 'sprechen'; part: 1; situation: string; points: string[] }
+  /** A short presentation on a topic, along the five fixed slides. */
+  | { module: 'sprechen'; part: 2; topic: string }
+  /** Talking about a presentation on a topic: feedback, a question, answers. */
+  | { module: 'sprechen'; part: 3; topic: string }
+
+/**
+ * The page content of a writing or speaking node. There is no pool: the
+ * learner does the task, an AI assistant grades it with the prompt the app
+ * provides, and the learner types the score in.
+ */
+export interface ExamTaskContent {
+  task: ExamTask
+}
 
 /** A node as the app loads it. `content` is null until the node is published. */
 export interface CompiledNode extends NodeSummary {
   content: NodeContent | null
 }
+
+/** What a node's page is built from. Which one it is follows from what it holds: a pool, or a task (see scoring.ts). */
+export type NodeContent = GrammarContent | PhrasesContent | ExamTaskContent
 
 /** Chapters and nodes, both in curriculum order: chapter by chapter, and inside a chapter by `order`. */
 export interface ContentIndex {

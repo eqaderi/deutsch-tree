@@ -4,10 +4,22 @@ kind: exam-part
 level: B1
 chapter: b1-exam-sprechen
 order: 1
-status: coming-soon
+status: published
 module: sprechen
 part: 1
 title:
   en: "*Sprechen Teil 1*: planning something together"
   fa: "*Sprechen Teil 1*: برنامه‌ریزی مشترک"
   de: "Sprechen Teil 1: gemeinsam etwas planen"
+
+# The task is original; it follows the format of the exam, not the wording of
+# any official or published task.
+task:
+  situation: >
+    Ihr Deutschkurs ist in zwei Wochen zu Ende. Zum Abschluss möchten Sie für
+    den ganzen Kurs einen Ausflug organisieren.
+  points:
+    - Wohin fahren?
+    - Wann? (Tag und Uhrzeit)
+    - Wie hinkommen?
+    - Was mitnehmen? (Essen, Getränke …)

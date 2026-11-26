@@ -4,6 +4,8 @@
  * makes of it.
  */
 import { expect } from 'vitest'
+import type { ContentBundle } from '../../src/content-model/index.ts'
+import { hasPool } from '../../src/content-model/scoring.ts'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { changeReviewedNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
@@ -36,5 +38,11 @@ export async function problemsOfExtra(contentDir: string) {
 export async function compiledExtra(contentDir: string) {
   const { report, bundle } = await compileContent(contentDir)
   expect(report.errors).toEqual([])
-  return bundle?.nodes.find((node) => node.id === 'grammar-001')?.content?.questions.find((q) => q.id === 'extra')
+  return grammarPool(bundle)?.questions.find((q) => q.id === 'extra')
+}
+
+/** The compiled content of the fixture's published grammar node, which has a pool. */
+export function grammarPool(bundle: ContentBundle | null) {
+  const content = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content
+  return content && hasPool(content) ? content : undefined
 }

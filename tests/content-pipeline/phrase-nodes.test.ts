@@ -1,11 +1,12 @@
 import { expect, test } from 'vitest'
+import { stringify } from 'yaml'
 import { compileContent } from '../../src/content-pipeline/index.ts'
 import { COMING_SOON, changeNode, fixtureContent, fixtureContentWith } from './fixture.ts'
 
 /** The fixture's published phrases node, "Fixture greetings". */
 const PHRASES_NODE = 'phrases-greeting'
 const PHRASES = `nodes/phrases/${PHRASES_NODE}.yaml`
-const EXAM_PART = 'nodes/exam-part/exam-sprechen-1.yaml'
+const READING_PART = 'nodes/exam-part/exam-lesen-1.yaml'
 
 const errorsOf = async (content: string) => (await compileContent(content)).report.errors
 
@@ -26,31 +27,40 @@ test('a published phrases node gives its page each phrase with its meaning, its 
         examTasks: ['exam-sprechen-1'],
         example: { de: 'Guten Tag, Frau Test!', en: 'Hello, Ms Test!', fa: 'سلام، خانم تست!' },
       },
-      { de: 'Wie geht es dir?', examTasks: ['exam-schreiben-1', 'exam-sprechen-1'] },
-      { de: 'Bis bald!', examTasks: ['exam-schreiben-1'] },
+      { de: 'Wie geht es dir?', examTasks: ['exam-schreiben-3', 'exam-sprechen-1'] },
+      { de: 'Bis bald!', examTasks: ['exam-schreiben-3'] },
     ],
   })
   // The test of a phrases node is drawn from its pool like any other.
-  expect(node?.content?.questions).toHaveLength(15)
-  expect(node?.content?.attemptSize).toBe(10)
+  expect(node?.content).toMatchObject({ questions: expect.any(Array), attemptSize: 10 })
+  expect(node?.content && 'questions' in node.content && node.content.questions).toHaveLength(15)
 })
 
-test('a phrases node cannot be published without its phrases, and an exam-part node not at all', async () => {
+test('a phrases node cannot be published without its phrases, and a reading part not at all', async () => {
   const content = await fixtureContentWith({
     [PHRASES]: changeNode((node) => {
       delete node.phrases
     }),
-    [EXAM_PART]: changeNode((node) => {
-      node.status = 'published'
-    }),
+    [READING_PART]: () =>
+      stringify({
+        id: 'exam-lesen-1',
+        kind: 'exam-part',
+        level: 'B2',
+        chapter: 'fixture-exam-parts',
+        order: 2,
+        status: 'published',
+        module: 'lesen',
+        part: 1,
+        title: { en: 'Fixture reading', fa: 'خواندن آزمایشی', de: 'Test-Lesen' },
+      }),
   })
 
   expect(await errorsOf(content)).toEqual([
     {
-      file: EXAM_PART,
-      node: 'exam-sprechen-1',
+      file: READING_PART,
+      node: 'exam-lesen-1',
       where: 'status',
-      message: 'an exam-part node cannot be published yet; only grammar and phrases nodes have a page',
+      message: 'an exam-part node of lesen cannot be published yet; it has no page',
     },
     { file: PHRASES, node: PHRASES_NODE, where: 'phrases', message: 'is required for a published node' },
   ])

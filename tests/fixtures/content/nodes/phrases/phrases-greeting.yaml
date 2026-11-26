@@ -14,7 +14,7 @@ purpose:
   en: Say hello and goodbye, for example with *Guten Tag!*
   fa: سلام و خداحافظی کنید، مثلاً با *Guten Tag!*
   de: Hallo und Tschüs sagen, zum Beispiel mit *Guten Tag!*
-examTasks: [exam-schreiben-1, exam-sprechen-1]
+examTasks: [exam-schreiben-3, exam-sprechen-1]
 
 phrases:
   - de: Guten Tag!
@@ -32,7 +32,7 @@ phrases:
       en: How are you? You ask a friend.
       fa: حالت چطور است؟ از یک دوست می‌پرسید.
       de: Man fragt einen Freund oder eine Freundin, ob alles gut ist.
-    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    examTasks: [exam-schreiben-3, exam-sprechen-1]
     example:
       de: Hallo Tom, wie geht es dir?
       en: Hello Tom, how are you?
@@ -42,7 +42,7 @@ phrases:
       en: See you soon. You say it at the end.
       fa: به امید دیدار. در پایان می‌گویید.
       de: Das sagt man am Ende. Man sieht die Person bald wieder.
-    examTasks: [exam-schreiben-1]
+    examTasks: [exam-schreiben-3]
     example:
       de: Tschüs und bis bald!
       en: Bye, and see you soon!

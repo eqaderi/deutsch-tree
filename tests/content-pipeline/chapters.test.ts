@@ -173,9 +173,10 @@ test('a new level needs only content: a chapter of that level and a node in it',
     ['A2', 'fixture-nouns', 'grammar-102'],
     ['A2', 'fixture-nouns', 'grammar-103'],
     ['B1', 'fixture-unwritten', 'grammar-201'],
+    ['B1', 'fixture-schreiben', 'exam-schreiben-1'],
+    ['B1', 'fixture-sprechen', 'exam-sprechen-1'],
     ['B2', 'fixture-set-phrases', 'phrases-greeting'],
-    ['B2', 'fixture-exam-parts', 'exam-schreiben-1'],
-    ['B2', 'fixture-exam-parts', 'exam-sprechen-1'],
+    ['B2', 'fixture-exam-parts', 'exam-schreiben-3'],
     ['C1', 'fixture-c1', 'grammar-003'],
   ])
 })
