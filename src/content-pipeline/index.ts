@@ -420,7 +420,7 @@ function compileExamPartExplanations(file: NodeFile): ExamPartExplanations {
     scoring: richText(explanations[language].scoring ?? ''),
     approach: (explanations[language].approach ?? []).map(richText),
   })
-  return { en: explain('en'), fa: explain('fa'), de: explain('de') }
+  return inEachLanguage(explain)
 }
 
 /** A reading part: its explanations and its practice tasks. */
@@ -515,7 +515,7 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
   // The schema guarantees the rule in every language.
   const rule = (language: Language) => ({ rule: richText(explanations[language].rule ?? '') })
   return {
-    explanations: { en: rule('en'), fa: rule('fa'), de: rule('de') },
+    explanations: inEachLanguage(rule),
     ...(table && { table }),
     ...(diagrams && { diagrams: diagrams.map(compileDiagram) }),
     examples: examples.map((example) => ({ ...example, audio: spoken(example.de) })),
@@ -591,7 +591,12 @@ function summarise(node: CompiledNode): NodeSummary {
 }
 
 function richTextIn(text: Localised): Localised<RichText> {
-  return Object.fromEntries(LANGUAGES.map((language) => [language, richText(text[language])])) as Localised<RichText>
+  return inEachLanguage((language) => richText(text[language]))
+}
+
+/** One value for each language of the app, made by `make`. */
+function inEachLanguage<T>(make: (language: Language) => T): Localised<T> {
+  return Object.fromEntries(LANGUAGES.map((language) => [language, make(language)])) as Localised<T>
 }
 
 /** Splits "With *ich* the ending is *-e*." into plain parts and German parts. */
