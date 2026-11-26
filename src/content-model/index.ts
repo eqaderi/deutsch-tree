@@ -20,6 +20,13 @@ export type NodeKind = (typeof NODE_KINDS)[number]
 export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
 
+/**
+ * The fewest questions a published node's pool may hold. An attempt draws 10
+ * to 15, so a smaller pool could not give a fresh set on a retry. The spec
+ * asks for about 15 to 20 for a small topic and up to 40 for a large one.
+ */
+export const MINIMUM_POOL_SIZE = 15
+
 // ---------------------------------------------------------------------------
 // Node file schema (source)
 // ---------------------------------------------------------------------------

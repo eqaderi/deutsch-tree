@@ -1,5 +1,6 @@
 import type { ContentCheck } from './check.ts'
 import { nodeIdsAreUnique, questionIdsAreUnique } from './identifiers-are-unique.ts'
+import { poolIsLargeEnough } from './pool-is-large-enough.ts'
 import { prerequisitesExist } from './prerequisites-exist.ts'
 import { prerequisitesHaveNoCycle } from './prerequisites-have-no-cycle.ts'
 
@@ -11,4 +12,5 @@ export const CHECKS: ContentCheck[] = [
   questionIdsAreUnique,
   prerequisitesExist,
   prerequisitesHaveNoCycle,
+  poolIsLargeEnough,
 ]

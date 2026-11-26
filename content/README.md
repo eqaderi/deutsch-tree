@@ -3,8 +3,9 @@
 One node is one YAML file: `content/nodes/<kind>/<id>.yaml`. The file name
 must be the node's id. Subfolders are only for tidiness.
 
-Check your work with `pnpm content:check`. It names the file and the place of
-every problem. `pnpm dev` shows the result in a browser and reloads on save.
+Check your work with `pnpm content:check`. It names the node, the question,
+the file and the place of every problem, and the site is not built while one
+remains. `pnpm dev` shows the result in a browser and reloads on save.
 
 The exact rules are the schema in `src/content-model/index.ts`. A complete
 example is `content/nodes/grammar/grammar-001.yaml`.
@@ -93,3 +94,31 @@ far. Other question types and node kinds are added to the schema as they are
 built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
+
+## What the checks reject
+
+- Text for the learner that lacks one of the three languages.
+- A question with no correct answer, or with two where one is required.
+- A prerequisite that is not the id of a node, and a prerequisite cycle
+  (a node that needs itself, directly or through other nodes).
+- A published node with fewer than 15 questions. A `coming-soon` draft may
+  have fewer.
+- Two node files with the same id, and two questions with the same id inside
+  one node.
+
+## Adding a check (for people who change the code)
+
+A rule about the shape of one field goes in the schema,
+`src/content-model/index.ts`. Every other rule is a check:
+
+1. Write `src/content-pipeline/checks/<rule>.ts`. It exports one
+   `ContentCheck`: a function that gets every node file that passed the
+   schema (and the content folder, for a rule about other files) and returns
+   one problem per thing to fix. Build each problem with `problemIn`, so that
+   it names the node. The shortest example is `pool-is-large-enough.ts`.
+2. Add it to the list in `src/content-pipeline/checks/index.ts`.
+3. Write `tests/content-pipeline/<rule>.test.ts`: break the fixture content
+   with `fixtureContentWith` and `changeNode` from `fixture.ts`, run
+   `compileContent`, and compare `report.errors`. Copy `pool-size.test.ts`.
+4. Run `pnpm check`. If the real content or the fixture content in
+   `tests/fixtures/content` breaks the new rule, repair the content.

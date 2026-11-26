@@ -123,9 +123,7 @@ export async function writeBundle(bundle: ContentBundle, outDir: string): Promis
 
 /** The report as text for a terminal. */
 export function formatReport(report: PipelineReport): string {
-  const lines = report.errors.map(
-    (problem) => `ERROR ${problem.file}${problem.where ? ` at ${problem.where}` : ''}: ${problem.message}`,
-  )
+  const lines = report.errors.map(formatProblem)
   const { total, published, comingSoon } = report.nodes
   lines.push(
     report.ok
@@ -133,6 +131,14 @@ export function formatReport(report: PipelineReport): string {
       : `Content has ${report.errors.length} error${report.errors.length === 1 ? '' : 's'}. Nothing was compiled.`,
   )
   return lines.join('\n')
+}
+
+/** "ERROR node grammar-001, question q2 (nodes/grammar/grammar-001.yaml at questions[1].answer): …" */
+function formatProblem(problem: ContentProblem): string {
+  const place = `${problem.file}${problem.where ? ` at ${problem.where}` : ''}`
+  if (!problem.node) return `ERROR ${place}: ${problem.message}`
+  const question = problem.question ? `, question ${problem.question}` : ''
+  return `ERROR node ${problem.node}${question} (${place}): ${problem.message}`
 }
 
 async function findNodeFiles(contentDir: string): Promise<string[]> {
