@@ -1,3 +1,4 @@
+import { readFile, writeFile } from 'node:fs/promises'
 import type { Locator, Page } from '@playwright/test'
 import { expect, test } from './test.ts'
 
@@ -296,4 +297,75 @@ test('the readiness view fits the screen it is opened on, with the score fields 
     () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
   )
   expect(sidewaysScroll).toBe(0)
+})
+
+test('recorded scores are in the exported progress file and come back with an import', async ({
+  page,
+  context,
+}, testInfo) => {
+  await page.goto('./#/readiness')
+  const verdict = page.getByRole('region', { name: 'Readiness' })
+  await recordScores(page, ADULTS_1, { reading: '95', listening: '92', writing: '90', speaking: '97' })
+  await recordScores(page, ADULTS_2, all('91'))
+  await recordScores(page, YOUTH_1, { reading: '70' })
+  await expect(verdict.getByRole('heading', { name: 'Ready', exact: true })).toBeVisible()
+
+  // Export: the file holds the scores of every exam, also of one that is not finished.
+  await page.getByRole('contentinfo').getByRole('link', { name: 'Back up progress' }).click()
+  const downloading = page.waitForEvent('download')
+  await page.getByRole('button', { name: 'Export progress' }).click()
+  const path = testInfo.outputPath('progress.json')
+  await (await downloading).saveAs(path)
+  expect(JSON.parse(await readFile(path, 'utf8')).officialExams).toEqual({
+    'fixture-adults-1': { reading: 95, listening: 92, writing: 90, speaking: 97 },
+    'fixture-adults-2': { reading: 91, listening: 91, writing: 91, speaking: 91 },
+    'fixture-youth-1': { reading: 70 },
+  })
+
+  // The browser is cleared: the scores are gone.
+  await context.clearCookies()
+  await page.evaluate(() => {
+    localStorage.clear()
+    sessionStorage.clear()
+  })
+  await page.goto('./#/readiness')
+  await page.reload()
+  await expect(verdict.getByRole('heading', { name: 'Not ready yet' })).toBeVisible()
+  await expect(exam(page, ADULTS_1)).toContainText('No scores recorded yet')
+
+  // Import: they are back, and the learner is ready again.
+  await page.goto('./#/backup')
+  const chooser = page.waitForEvent('filechooser')
+  await page.getByRole('button', { name: 'Import a progress file' }).click()
+  await (await chooser).setFiles(path)
+  await expect(page.getByRole('status')).toContainText('Progress imported.')
+
+  await page.goto('./#/readiness')
+  await expect(verdict.getByRole('heading', { name: 'Ready', exact: true })).toBeVisible()
+  await expect(exam(page, ADULTS_1).getByRole('definition')).toHaveText(['95', '92', '90', '97'])
+  await expect(exam(page, YOUTH_1).getByRole('definition')).toHaveText([
+    '70',
+    'not recorded',
+    'not recorded',
+    'not recorded',
+  ])
+})
+
+test('an import asks before it replaces recorded scores, also when no topic is done', async ({ page }, testInfo) => {
+  await page.goto('./#/readiness')
+  await recordScores(page, ADULTS_1, all('95'))
+  const path = testInfo.outputPath('older.json')
+  await writeFile(path, '{"app":"deutsch-tree","exported":"2026-11-20T12:00:00.000Z","version":1,"nodes":{}}')
+
+  await page.goto('./#/backup')
+  const chooser = page.waitForEvent('filechooser')
+  await page.getByRole('button', { name: 'Import a progress file' }).click()
+  await (await chooser).setFiles(path)
+
+  const warning = page.getByRole('alertdialog', { name: 'Replace the progress on this device?' })
+  await expect(warning).toBeVisible()
+  await warning.getByRole('button', { name: 'Cancel' }).click()
+
+  await page.goto('./#/readiness')
+  await expect(exam(page, ADULTS_1).getByRole('definition')).toHaveText(['95', '95', '95', '95'])
 })

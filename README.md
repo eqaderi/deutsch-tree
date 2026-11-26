@@ -38,15 +38,15 @@ ending, because the pipeline runs directly in Node.
 | `content/` | The real content: one YAML file per node under `content/nodes/`, the chapters that group them in `content/chapters.yaml`, and the official mock exams the app links to in `content/official-mock-exams.yaml`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
 | `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
-| `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress. No interface, no storage; randomness is passed in. |
-| `src/progress-store/` | Keeps progress in browser storage, with a version number. It only stores; the learning engine decides how progress changes. |
-| `src/app/` | App shell: routes, tree, node page, test. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
+| `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress, name the milestones reached. No interface, no storage; randomness is passed in. |
+| `src/progress-store/` | Keeps progress in browser storage, with a version number, and writes and reads the progress file a learner exports. It reads every older version and refuses a newer one. It only stores; the learning engine decides how progress changes. |
+| `src/app/` | App shell: routes, tree, node page, test, backup. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests of code never depend on the real content. |
 | `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows". |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
-| `tests/progress-store/` | The progress store on a stand-in for browser storage, including text saved by each earlier version. |
+| `tests/progress-store/` | The progress store on a stand-in for browser storage, and the progress file. `older-versions.test.ts` holds text saved by each earlier version. |
 | `tests/language/` | The interface strings of the three languages, compared key by key. |
 | `tests/browser/` | Seam 3: whole journeys in a browser. |
 | `src/pack-builder/` | A learner's own exam book in, a private pack out. `cli.ts` is the command; `vite-plugin.ts` keeps packs out of the site build. The pack format's schema is `src/content-model/pack.ts`. |
@@ -71,8 +71,27 @@ GitHub Pages and from a local folder.
   these and hold no rule of their own.
 - Progress: read it with `useProgress()` and change it with
   `updateProgress((progress) => …)` from `src/app/progress.ts`, where the
-  function comes from the learning engine. The saved text has a version
-  number; `src/progress-store/index.ts` says what to do when its shape changes.
+  function comes from the learning engine.
+- Backup is at `#/backup` (`src/app/BackupPage.tsx`): export writes
+  `deutsch-tree-progress-<date>.json`, import reads it back and asks before it
+  replaces progress. Nothing is uploaded. Progress for a node that the content
+  no longer has is kept, never pruned.
+- Saved progress and the exported file are the `Progress` object plus a
+  `version`. To add a field: add it to `Progress` and `emptyProgress` in the
+  learning engine, give it a reader in `READERS` in
+  `src/progress-store/index.ts` (a missing value reads as empty), raise
+  `SAVED_VERSION`, and add the old text to
+  `tests/progress-store/older-versions.test.ts`. It is then saved, exported
+  and imported with no other code. To reshape something already saved, also
+  add a step to `UPGRADES`. The top of that file has the full steps.
+- An app never loads progress from a newer version than its own: an import is
+  refused with the reason, and such progress found in browser storage is left
+  untouched while the page asks for a reload.
+- After a milestone the tree suggests a backup once (`BackupSuggestion.tsx`).
+  What a milestone is, is `milestonesReached` in the learning engine, worked
+  out from the content index: every published topic of a level done, or
+  every tenth done topic. Which ones were already mentioned is remembered by
+  `src/app/milestones.ts`, outside the progress.
 - A new question type needs: its schema and compiled type in
   `src/content-model/index.ts`, its review view in
   `src/content-pipeline/review.ts`, a case in `checkAnswer`, a case in
@@ -93,8 +112,9 @@ GitHub Pages and from a local folder.
 - The rule is `readiness` in `src/learning-engine/index.ts`: 90 or more in
   every module on two of the exams whose entry says
   `countsTowardReadiness: true`. `readScore` says what a typed score is.
-- The scores a learner records are part of their progress, under the exam's
-  id: `officialExamScores` reads them, `recordOfficialExamScores` changes
+- The scores a learner records are part of their progress (`officialExams`,
+  by exam id, saved since version 2), so they are exported and imported with
+  it: `officialExamScores` reads them, `recordOfficialExamScores` changes
   them. They are trusted, not verified.
 - A link to an exam is not on the page until the learner asks for it, and for
   an exam with no score yet the page first asks whether this is the final
