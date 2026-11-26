@@ -4,7 +4,7 @@ import { type ChapterSummary, NODE_KINDS, type NodeKind, type NodeSummary } from
 import { useLanguage } from '../language/index.tsx'
 import { countNodes, hasProgress, nextRecommended, nodeState, passMark, youAreHere } from '../learning-engine/index.ts'
 import { BackupSuggestion } from './BackupSuggestion.tsx'
-import { CheckpointStop } from './CheckpointPage.tsx'
+import { CheckpointStop, givesToCheckpoint } from './CheckpointPage.tsx'
 import { loadIndex } from './content.ts'
 import { ExamStop } from './ExamStop.tsx'
 import { useFirstSteps } from './firstVisit.ts'
@@ -142,9 +142,9 @@ export function TreePage() {
             ))}
             {/*
               The checkpoint is the level's, whatever kind the tree is filtered to. It needs a
-              published topic with a pool: a writing or speaking topic gives it no questions.
+              published topic with a pool: an exam part gives it no questions.
             */}
-            <CheckpointStop level={level} ready={inLevel(nodes, level).some((node) => node.hasTest)} />
+            <CheckpointStop level={level} ready={inLevel(nodes, level).some(givesToCheckpoint)} />
             {/* The last level ends with the exam and the readiness rule. */}
             {level === levels.at(-1) && <ExamStop />}
           </div>
@@ -215,7 +215,7 @@ function NextTopic({ node, chapter }: { node: NodeSummary | undefined; chapter: 
             </Link>
             {node.hasTest && (
               <Link to={`/node/${node.id}/test`} className="btn btn-quiet" aria-describedby="next-topic-title">
-                {strings.takeTheTest}
+                {node.kind === 'exam-part' ? strings.startPractice : strings.takeTheTest}
               </Link>
             )}
           </div>

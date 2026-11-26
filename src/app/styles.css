@@ -1599,6 +1599,210 @@ main.wrap {
   flex: 1;
 }
 
+/* ---------- exam part: its page ---------- */
+
+/*
+ * Numbered steps: how to approach a part, and how to get a writing or
+ * speaking task graded. Something may follow them in their panel.
+ */
+.steps {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding-inline-start: 22px;
+}
+
+.steps:last-child {
+  margin-block-end: 0;
+}
+
+:lang(fa) .steps {
+  list-style-type: persian;
+}
+
+.steps li::marker {
+  color: var(--text-secondary);
+}
+
+/* ---------- exam part: a practice task, all on one page ---------- */
+
+/* A text of the task: an inner card, set for reading. */
+.task-text {
+  display: block;
+  border-radius: var(--radius-card);
+  padding: 16px;
+  background: var(--raised);
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.task-text + .task-text {
+  margin-block-start: 10px;
+}
+
+.task-text h3 {
+  margin-block-end: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* A line break inside a paragraph belongs to the text: a greeting, a signature. */
+.task-text p {
+  white-space: pre-line;
+}
+
+.task-text p + p {
+  margin-block-start: 12px;
+}
+
+/* This heading gets the focus from the app when a new attempt starts, never from the Tab key. */
+.task-text-heading:focus {
+  outline: none;
+}
+
+.task-items,
+.item-results {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.task-item,
+.item-result {
+  border-radius: var(--radius-card);
+  padding: 12px 12px 0;
+  background: var(--raised);
+}
+
+.task-item-place {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* The statements of a task are read against a text, so they are smaller than the one sentence of a test screen. */
+.task-item .question-sentence {
+  margin-block: 2px 12px;
+  font-size: 18px;
+}
+
+/* What to do stands once above the items; inside each item only a screen reader hears it. */
+.task-items-one-instruction .question-instruction {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.task-item .option {
+  background: var(--panel);
+}
+
+/* Two short answers next to each other, as on an answer sheet. */
+.options-side-by-side {
+  grid-template-columns: 1fr 1fr;
+}
+
+.task-item .report {
+  margin-block-start: 0;
+}
+
+/* The count of answered items, under the words of the button. */
+.btn-with-note {
+  flex-direction: column;
+  gap: 0;
+  padding-block: 8px;
+}
+
+.btn-with-note small {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ---------- exam part: the result of every item ---------- */
+
+.item-result {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+}
+
+.item-result-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+}
+
+/* Whether an item was right. The words say it; the colour only supports them. */
+.verdict {
+  border-radius: 999px;
+  padding: 1px 9px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.verdict-right {
+  background: var(--correct);
+}
+
+.verdict-wrong {
+  background: var(--wrong);
+}
+
+.item-result-prompt {
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.item-result dl {
+  display: grid;
+  gap: 2px;
+  margin: 4px 0 0;
+}
+
+.item-result dl div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 10px;
+}
+
+.item-result dt {
+  flex: none;
+  min-inline-size: 110px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.item-result dd {
+  margin: 0;
+}
+
+/* An answer that was right is not crossed out. */
+.item-result .answer-right dd {
+  text-decoration: none;
+}
+
+.item-result-reason {
+  margin-block-start: 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.item-result-reason .de {
+  font-weight: 500;
+}
+
+.item-result .report {
+  margin-block-start: 0;
+}
+
 /* ---------- writing and speaking: task, prompt, score ---------- */
 
 /* The task sheet is German, like the sheet in the exam, and reads left to right in every language. */
@@ -1636,13 +1840,6 @@ main.wrap {
   font-style: normal;
   font-weight: 500;
   color: var(--text-secondary);
-}
-
-.steps {
-  display: grid;
-  gap: 8px;
-  margin: 0 0 16px;
-  padding-inline-start: 22px;
 }
 
 .prompt {

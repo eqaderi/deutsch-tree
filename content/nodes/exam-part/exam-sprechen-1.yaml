@@ -12,6 +12,70 @@ title:
   fa: "*Sprechen Teil 1*: برنامه‌ریزی مشترک"
   de: "Sprechen Teil 1: gemeinsam etwas planen"
 
+explanations:
+  en:
+    task: >
+      With a partner you plan something together, for example a trip or a
+      party. The sheet gives the situation and four points to talk about. You
+      make suggestions, react to your partner's suggestions, agree or
+      disagree with reasons, and in the end decide together. It takes about
+      three minutes.
+    scoring: >
+      This part is 28 of the 100 points of *Sprechen*: 8 for fulfilling the
+      task (*Erfüllung*), 4 for interaction (*Interaktion*), 8 for vocabulary
+      (*Wortschatz*) and 8 for grammar (*Strukturen*). Pronunciation
+      (*Aussprache*) is 16 more points, rated once across all three parts.
+      Here an AI assistant plays your partner in voice mode and grades this
+      part by these criteria, pronunciation included, on a scale of 100; the
+      part is done at 90.
+    approach:
+      - "Use the preparation time to note one idea for each of the four points."
+      - "Begin with a suggestion and ask for your partner's opinion: *Wie findest du das?*"
+      - "React to every suggestion: agree, disagree with a reason, or offer something else."
+      - "Talk about all four points, and keep the conversation going: an equal share of the talking counts."
+      - "End with a decision you both agree on: *Also machen wir es so.*"
+  fa:
+    task: >
+      با یک هم‌گروهی با هم چیزی را برنامه‌ریزی می‌کنید، مثلاً یک گردش یا یک
+      جشن. برگه موقعیت و چهار نکته برای گفت‌وگو می‌دهد. پیشنهاد می‌دهید، به
+      پیشنهادهای هم‌گروهی واکنش نشان می‌دهید، با دلیل موافقت یا مخالفت
+      می‌کنید و در آخر با هم تصمیم می‌گیرید. حدود سه دقیقه طول می‌کشد.
+    scoring: >
+      این بخش ۲۸ امتیاز از ۱۰۰ امتیاز *Sprechen* است: ۸ برای انجام تکلیف
+      (*Erfüllung*)، ۴ برای تعامل (*Interaktion*)، ۸ برای واژگان (*Wortschatz*)
+      و ۸ برای دستور زبان (*Strukturen*). تلفظ (*Aussprache*) ۱۶ امتیاز دیگر
+      است که یک بار برای هر سه بخش نمره داده می‌شود. این‌جا یک دستیار هوش
+      مصنوعی در حالت صوتی نقش هم‌گروهی شما را بازی می‌کند و این بخش را با همین
+      معیارها، همراه با تلفظ، در مقیاس ۱۰۰ نمره می‌دهد؛ با ۹۰ این بخش
+      تمام‌شده است.
+    approach:
+      - "در زمان آمادگی برای هر یک از چهار نکته یک ایده یادداشت کنید."
+      - "با یک پیشنهاد شروع کنید و نظر هم‌گروهی را بپرسید: *Wie findest du das?*"
+      - "به هر پیشنهاد واکنش نشان بدهید: موافقت، مخالفت با دلیل، یا پیشنهادی دیگر."
+      - "دربارهٔ هر چهار نکته صحبت کنید و گفت‌وگو را ادامه بدهید: سهم برابر در صحبت حساب می‌شود."
+      - "با تصمیمی تمام کنید که هر دو با آن موافقید: *Also machen wir es so.*"
+  de:
+    task: >
+      Du planst mit einem Partner oder einer Partnerin zusammen etwas, zum
+      Beispiel einen Ausflug oder ein Fest. Auf dem Blatt stehen die Situation
+      und vier Punkte. Du machst Vorschläge und reagierst auf die Vorschläge
+      von deinem Partner. Du sagst Ja oder Nein und nennst Gründe. Am Ende
+      entscheidet ihr zusammen. Das dauert etwa drei Minuten.
+    scoring: >
+      Dieser Teil hat 28 von 100 Punkten im Modul *Sprechen*: 8 für die
+      Aufgabe (*Erfüllung*), 4 für das Gespräch (*Interaktion*), 8 für die
+      Wörter (*Wortschatz*) und 8 für die Grammatik (*Strukturen*). Die
+      Aussprache (*Aussprache*) hat noch 16 Punkte. Sie zählt einmal für alle
+      drei Teile. Hier spielt ein KI-Assistent im Sprachmodus deinen Partner.
+      Er bewertet diesen Teil mit diesen Kriterien, auch die Aussprache, mit 0
+      bis 100. Mit 90 ist der Teil fertig.
+    approach:
+      - "Notier in der Vorbereitung eine Idee zu jedem der vier Punkte."
+      - "Beginn mit einem Vorschlag und frag deinen Partner: *Wie findest du das?*"
+      - "Reagier auf jeden Vorschlag: Sag Ja, sag Nein mit einem Grund oder mach einen anderen Vorschlag."
+      - "Sprich über alle vier Punkte und halt das Gespräch in Gang. Beide sollen etwa gleich viel sprechen."
+      - "Am Ende entscheidet ihr zusammen: *Also machen wir es so.*"
+
 # The task is original; it follows the format of the exam, not the wording of
 # any official or published task.
 task:

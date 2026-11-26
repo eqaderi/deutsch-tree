@@ -15,12 +15,16 @@ import {
   type CompiledNode,
   type ContentBundle,
   chaptersFileSchema,
+  type ExamPartExplanations,
   type ExamTask,
   type ExamTaskContent,
   type FindErrorQuestion,
   GAP,
   type GrammarContent,
+  type ItemTask,
+  type ItemTaskFile,
   LANGUAGES,
+  type Language,
   type Localised,
   type NodeContent,
   type NodeFile,
@@ -30,11 +34,12 @@ import {
   type OfficialMockExams,
   officialMockExamsFileSchema,
   type PhrasesContent,
+  type PracticeContent,
   type Question,
   type RichText,
   WORD,
 } from '../content-model/index.ts'
-import { hasPool, isAssistantGraded } from '../content-model/scoring.ts'
+import { hasPool, hasPractice, isAssistantGraded } from '../content-model/scoring.ts'
 import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
@@ -125,10 +130,7 @@ export async function compileContent(contentDir: string): Promise<PipelineResult
     ok: errors.length === 0,
     errors,
     nodes: { total: nodes.length, published, comingSoon: nodes.length - published },
-    questions: nodes.reduce(
-      (sum, node) => sum + (node.content && hasPool(node.content) ? node.content.questions.length : 0),
-      0,
-    ),
+    questions: nodes.reduce((sum, node) => sum + questionCount(node.content), 0),
   }
 
   return {
@@ -300,11 +302,36 @@ function nodeOf(file: string, raw?: unknown): string {
   return typeof id === 'string' && id !== '' ? id : path.basename(file, '.yaml')
 }
 
-/** The question that a place such as `questions[1].answer` lies in, if it states an id. */
+/**
+ * The question that a place such as `questions[1].answer` lies in, if it
+ * states an id. An item of a practice task (`practice[0].items[4].answer`) is
+ * named with its task: "t1/i5".
+ */
 function questionAt(pathParts: PropertyKey[], raw: unknown): { question?: string } {
-  if (pathParts[0] !== 'questions' || typeof pathParts[1] !== 'number') return {}
-  const id = (raw as { questions?: Array<{ id?: unknown } | null> }).questions?.[pathParts[1]]?.id
-  return typeof id === 'string' && id !== '' ? { question: id } : {}
+  type Identified = { id?: unknown } | null
+  const named = (...ids: unknown[]) =>
+    ids.every((id) => typeof id === 'string' && id !== '') ? { question: ids.join('/') } : {}
+
+  const [section, first, inner, second] = pathParts
+  if (section === 'questions' && typeof first === 'number') {
+    return named((raw as { questions?: Identified[] }).questions?.[first]?.id)
+  }
+  if (section === 'practice' && typeof first === 'number' && inner === 'items' && typeof second === 'number') {
+    const task = (raw as { practice?: Array<{ id?: unknown; items?: Identified[] } | null> }).practice?.[first]
+    return named(task?.id, task?.items?.[second]?.id)
+  }
+  return {}
+}
+
+/**
+ * How many questions a published node asks: its pool, or the items of its
+ * practice tasks. A writing or speaking task asks none the app scores.
+ */
+function questionCount(content: CompiledNode['content']): number {
+  if (content === null) return 0
+  if (hasPool(content)) return content.questions.length
+  if (hasPractice(content)) return content.practice.reduce((sum, task) => sum + task.items.length, 0)
+  return 0
 }
 
 function compileNode(file: NodeFile): CompiledNode {
@@ -317,8 +344,8 @@ function compileNode(file: NodeFile): CompiledNode {
     status: file.status,
     recogniseOnly: file.recogniseOnly,
     prerequisites: file.prerequisites,
-    // A draft pool inside a "coming soon" file is not a test yet.
-    hasTest: file.status === 'published' && file.questions !== undefined,
+    // A draft pool or practice task inside a "coming soon" file is not a test yet.
+    hasTest: file.status === 'published' && (file.questions !== undefined || file.practice !== undefined),
     title: richTextIn(file.title),
     ...(file.module !== undefined && { module: file.module }),
     ...(file.part !== undefined && { part: file.part }),
@@ -332,13 +359,52 @@ function compileNode(file: NodeFile): CompiledNode {
 /** The page content of a published node. The schema lets only the kinds with a page be published. */
 function compileContentOf(file: NodeFile): NodeContent {
   if (isAssistantGraded(file)) return compileTaskContent(file)
+  if (file.kind === 'exam-part') return compilePracticeContent(file)
   return file.kind === 'phrases' ? compilePhrasesContent(file) : compileGrammarContent(file)
 }
 
-/** A writing or speaking node: its task, with the module and the part that say which task it is. */
+/** What every exam part's page begins with: what it asks, how it is scored, how to approach it. */
+function compileExamPartExplanations(file: NodeFile): ExamPartExplanations {
+  // The schema guarantees every explanation of an exam part, in every language, for a published node.
+  const explanations = file.explanations as NonNullable<NodeFile['explanations']>
+  const explain = (language: Language) => ({
+    task: richText(explanations[language].task ?? ''),
+    scoring: richText(explanations[language].scoring ?? ''),
+    approach: (explanations[language].approach ?? []).map(richText),
+  })
+  return { en: explain('en'), fa: explain('fa'), de: explain('de') }
+}
+
+/** A reading part: its explanations and its practice tasks. */
+function compilePracticeContent(file: NodeFile): PracticeContent {
+  // The schema guarantees the practice tasks for a published reading part.
+  const practice = file.practice as NonNullable<NodeFile['practice']>
+  return { explanations: compileExamPartExplanations(file), practice: practice.map(compileItemTask) }
+}
+
+/** A task as the app shows it. Used for a node's practice tasks; a mock exam's reading parts are meant to have the same shape. */
+export function compileItemTask(task: ItemTaskFile): ItemTask {
+  return {
+    id: task.id,
+    texts: task.texts.map(({ id, title, body }) => ({
+      id,
+      ...(title === undefined ? {} : { title }),
+      paragraphs: body
+        .split(/\n[ \t]*\n/)
+        .map((paragraph) => paragraph.trim())
+        .filter((paragraph) => paragraph !== ''),
+    })),
+    items: task.items.map((item) => ({ ...item, explanation: richTextIn(item.explanation) })),
+  }
+}
+
+/** A writing or speaking node: its explanations, and its task with the module and the part that say which task it is. */
 function compileTaskContent(file: NodeFile): ExamTaskContent {
   // The schema guarantees the module, the part, and the fields of that part's task.
-  return { task: { module: file.module, part: file.part, ...file.task } as ExamTask }
+  return {
+    explanations: compileExamPartExplanations(file),
+    task: { module: file.module, part: file.part, ...file.task } as ExamTask,
+  }
 }
 
 function compilePhrasesContent(file: NodeFile): PhrasesContent {
@@ -354,12 +420,10 @@ function compilePhrasesContent(file: NodeFile): PhrasesContent {
 function compileGrammarContent(file: NodeFile): GrammarContent {
   // The schema guarantees these sections for a published node.
   const { explanations, table, examples, mistakes, questions } = file as Required<NodeFile>
+  // The schema guarantees the rule in every language.
+  const rule = (language: Language) => ({ rule: richText(explanations[language].rule ?? '') })
   return {
-    explanations: {
-      en: { rule: richText(explanations.en.rule) },
-      fa: { rule: richText(explanations.fa.rule) },
-      de: { rule: richText(explanations.de.rule) },
-    },
+    explanations: { en: rule('en'), fa: rule('fa'), de: rule('de') },
     table,
     examples,
     mistakes: mistakes.map((mistake) => ({ ...mistake, why: richTextIn(mistake.why) })),

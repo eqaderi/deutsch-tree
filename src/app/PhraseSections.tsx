@@ -4,7 +4,7 @@ import type { NodeSummary, Phrase, PhrasesContent } from '../content-model/index
 import { useLanguage } from '../language/index.tsx'
 import { loadIndex } from './content.ts'
 import { German, RichText } from './German.tsx'
-import { Panel } from './NodePage.tsx'
+import { Panel } from './Panel.tsx'
 
 /**
  * The panels of a phrases page: what the phrases are for, then the phrases.

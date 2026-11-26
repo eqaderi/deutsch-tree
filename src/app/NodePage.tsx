@@ -1,24 +1,29 @@
 import { type ReactNode, use, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
-import { hasPool } from '../content-model/scoring.ts'
+import { hasPool, hasPractice } from '../content-model/scoring.ts'
 import { useLanguage } from '../language/index.tsx'
-import { isDone, unmarkDone } from '../learning-engine/index.ts'
+import { examModuleOf, isDone, unmarkDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
+import { ExamPartSections } from './ExamPartSections.tsx'
 import { ExamTaskSections } from './ExamTaskPage.tsx'
 import { German, plainText, RichText } from './German.tsx'
 import { GrammarTableView } from './GrammarTableView.tsx'
 import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
+import { Panel } from './Panel.tsx'
 import { PhraseSections } from './PhraseSections.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 
 /**
- * A node's page: a column of panels in one fixed order. A grammar page has
- * rule, table, examples and common mistakes; a phrases page has what the
- * phrases are for and the phrases (PhraseSections.tsx); both end with the
- * test. A writing or speaking page has no test of questions: task, prompt
- * for an AI assistant, score.
+ * A node's page: a column of panels in one fixed order, with the main action
+ * at the bottom of the screen. A grammar page is rule, table, examples,
+ * common mistakes, test; a phrases page is what the phrases are for and the
+ * phrases (PhraseSections.tsx), then the test. Every exam-part page begins
+ * with what the part asks, how it is scored and how to approach it; then
+ * comes what the learner does with it: a practice task the app scores
+ * (reading), or a task, the prompt for an AI assistant and the score (writing
+ * and speaking).
  */
 export function NodePage() {
   const { id = '' } = useParams()
@@ -44,7 +49,19 @@ export function NodePage() {
   if (!hasPool(content)) {
     return (
       <NodeFrame node={summary}>
-        <ExamTaskSections nodeId={summary.id} task={content.task} />
+        <ExamPartSections explanations={content.explanations} />
+        {hasPractice(content) ? (
+          <section className="action-bar" aria-labelledby="section-practice">
+            <h2 id="section-practice" className="visually-hidden">
+              {strings.practice}
+            </h2>
+            <Link to="test" relative="path" className="btn btn-main">
+              {strings.startPractice}
+            </Link>
+          </section>
+        ) : (
+          <ExamTaskSections nodeId={summary.id} task={content.task} />
+        )}
       </NodeFrame>
     )
   }
@@ -85,6 +102,8 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
         <div className="meta">
           <span className="tag">{node.level}</span>
           <KindLabel kind={node.kind} />
+          {node.module !== undefined && <span className="tag">{strings.examModules[examModuleOf(node.module)]}</span>}
+          {node.part !== undefined && <span className="tag">{strings.examPartNumber(node.part)}</span>}
           {node.status === 'coming-soon' && <span className="tag">{strings.comingSoon}</span>}
           {done && <span className="tag tag-done">{strings.done}</span>}
         </div>
@@ -217,17 +236,5 @@ function GrammarSections({ content }: { content: GrammarContent }) {
         </ul>
       </Panel>
     </>
-  )
-}
-
-/** One panel of a node's page, under its heading. */
-export function Panel({ id, heading, children }: { id: string; heading: string; children: ReactNode }) {
-  return (
-    <section className="panel" aria-labelledby={id}>
-      <h2 id={id} className="cap">
-        {heading}
-      </h2>
-      {children}
-    </section>
   )
 }

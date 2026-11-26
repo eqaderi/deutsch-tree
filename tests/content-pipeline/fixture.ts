@@ -4,7 +4,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parse, stringify } from 'yaml'
 import { nodeFileSchema } from '../../src/content-model/index.ts'
-import { poolFingerprint } from '../../src/content-pipeline/review.ts'
+import { reviewFingerprint } from '../../src/content-pipeline/review.ts'
 
 /** The small, valid content folder that tests start from. */
 export const fixtureContent = fileURLToPath(new URL('../fixtures/content', import.meta.url))
@@ -12,6 +12,8 @@ export const fixtureContent = fileURLToPath(new URL('../fixtures/content', impor
 /** The fixture's published node and its "coming soon" node. */
 export const PUBLISHED = 'nodes/grammar/grammar-001.yaml'
 export const COMING_SOON = 'nodes/grammar/grammar-002.yaml'
+/** The fixture's published exam-part node: Lesen, Teil 1, with two practice tasks. */
+export const EXAM_PART = 'nodes/exam-part/exam-lesen-1.yaml'
 
 /** The fixture's published writing node and speaking node: exam parts that an AI assistant grades. */
 export const WRITING = 'nodes/exam-part/exam-schreiben-1.yaml'
@@ -67,17 +69,18 @@ export function comingSoonNode(id: string, fields: Record<string, unknown> = {})
 }
 
 /**
- * `changeNode` for a change to the questions of a published node, in a test
+ * `changeNode` for a change to the questions or practice tasks of a published node, in a test
  * that is not about the review: the review record is brought up to date, as
  * a new review would do. Without it the test also gets "needs a new review".
  */
 export function changeReviewedNode(change: (node: LooseNode) => void): (text: string) => string {
   return changeNode((node) => {
     change(node)
-    // The record is of the questions as the pipeline reads them. A node that
-    // breaks the content model is rejected before its review is looked at.
+    // The record is of the questions and practice tasks as the pipeline reads
+    // them. A node that breaks the content model is rejected before its
+    // review is looked at.
     const read = nodeFileSchema.safeParse(node)
-    if (read.success) node.review.pool = poolFingerprint(read.data.questions ?? [])
+    if (read.success) node.review.pool = reviewFingerprint(read.data)
   })
 }
 
