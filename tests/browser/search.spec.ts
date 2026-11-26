@@ -30,6 +30,34 @@ test('a learner searches for a topic and opens it', async ({ page }) => {
   await expect(page.getByText('A fixture verb takes the ending of its person.')).toBeVisible()
 })
 
+test('while the text of the topics is still loading, search already shows the topics found by their titles', async ({
+  page,
+}) => {
+  // Hold back the search data until the test lets it through.
+  let release = () => {}
+  const held = new Promise<void>((resolve) => {
+    release = resolve
+  })
+  await page.route('**/content/search/en.json', async (route) => {
+    await held
+    await route.continue()
+  })
+
+  await page.goto('./#/search?q=fixture%20verbs')
+
+  await expect(results(page)).toHaveCount(1)
+  await expect(results(page)).toContainText('Fixture verbs')
+  await expect(page.getByText('Still looking through the text of the topics…')).toBeVisible()
+
+  // A word of an explanation is found once the text is there.
+  await page.getByRole('searchbox', { name: 'Search all topics' }).fill('ending')
+  await expect(results(page)).toHaveCount(0)
+  release()
+  await expect(results(page)).toHaveCount(1)
+  await expect(results(page)).toContainText('Fixture verbs')
+  await expect(page.getByText('Still looking through the text of the topics…')).toHaveCount(0)
+})
+
 test('search finds a topic by a word of its explanation or by a German word, and shows where it stands', async ({
   page,
 }) => {

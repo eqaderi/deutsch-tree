@@ -400,6 +400,7 @@ export const en = {
   searchHint: 'Type a word in English or in German. Without ä, ö, ü and ß on your keyboard, write ae, oe, ue and ss.',
   searchResults: (count: number) => (count === 1 ? '1 topic found' : `${count} topics found`),
   searchNothing: 'No topic found. Try another word, or fewer words.',
+  searchStillLoading: 'Still looking through the text of the topics…',
   overviewTitle: 'All grammar at a glance',
   overviewIntro: 'Every grammar table on one page. The name above a table opens its topic.',
   overviewEmpty: 'No grammar table is written yet.',

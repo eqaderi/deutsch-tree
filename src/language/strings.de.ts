@@ -357,6 +357,7 @@ export const de: Strings = {
   searchHint: 'Schreib ein Wort. Hat deine Tastatur kein ä, ö, ü und ß? Dann schreib ae, oe, ue und ss.',
   searchResults: (count) => (count === 1 ? '1 Thema gefunden' : `${count} Themen gefunden`),
   searchNothing: 'Kein Thema gefunden. Versuch ein anderes Wort oder weniger Wörter.',
+  searchStillLoading: 'Der Text der Themen wird noch durchsucht …',
   overviewTitle: 'Die ganze Grammatik auf einen Blick',
   overviewIntro: 'Alle Grammatik-Tabellen auf einer Seite. Der Name über einer Tabelle öffnet das Thema.',
   overviewEmpty: 'Es gibt noch keine Grammatik-Tabelle.',
