@@ -1,0 +1,47 @@
+# Fixture list of official mock exams for tests. The sets and their addresses
+# are invented; the addresses lead nowhere.
+- id: fixture-adults-1
+  title: Fixture-Modellsatz Erwachsene
+  publisher: Fixture-Institut
+  audience: adults
+  countsTowardReadiness: true
+  links:
+    - kind: papers
+      url: https://official.example/fixture-adults-1.pdf
+      candidatePages: { first: 7, last: 28 }
+      checked: 2026-11-26
+    - kind: audio
+      url: https://recordings.example/downloads/
+      note:
+        en: On that page, look for *Fixture-Modellsatz* under *Stufe B1*.
+        fa: در آن صفحه، زیر *Stufe B1* دنبال *Fixture-Modellsatz* بگردید.
+        de: Such auf der Seite unter *Stufe B1* nach *Fixture-Modellsatz*.
+
+- id: fixture-adults-2
+  title: Fixture-Übungssatz Erwachsene
+  publisher: Fixture-Institut
+  audience: adults
+  countsTowardReadiness: true
+  links:
+    - kind: papers
+      url: https://official.example/fixture-adults-2.pdf
+    - kind: online
+      url: https://official.example/online/
+
+- id: fixture-youth-1
+  title: Fixture-Modellsatz Jugendliche
+  publisher: Fixture-Institut
+  audience: youth
+  countsTowardReadiness: true
+  links:
+    - kind: papers
+      url: https://official.example/fixture-youth-1.pdf
+
+- id: fixture-youth-2
+  title: Fixture-Übungssatz Jugendliche
+  publisher: Fixture-Institut
+  audience: youth
+  countsTowardReadiness: false
+  links:
+    - kind: papers
+      url: https://official.example/fixture-youth-2.pdf

@@ -9,7 +9,14 @@
  * its node, and search and the overview page each for their own file. So the
  * first load of the tree stays small however much content there is.
  */
-import type { CompiledNode, ContentIndex, GrammarOverview, Language, SearchData } from '../content-model/index.ts'
+import type {
+  CompiledNode,
+  ContentIndex,
+  GrammarOverview,
+  Language,
+  OfficialMockExams,
+  SearchData,
+} from '../content-model/index.ts'
 
 const requests = new Map<string, Promise<unknown>>()
 
@@ -35,6 +42,11 @@ export function loadIndex(): Promise<ContentIndex> {
 /** One node with its page content. */
 export function loadNode(id: string): Promise<CompiledNode> {
   return load(`nodes/${id}.json`)
+}
+
+/** The official mock exams, in the order the content lists them. */
+export function loadOfficialMockExams(): Promise<OfficialMockExams> {
+  return load('official-mock-exams.json')
 }
 
 const groups = new Map<string, Promise<CompiledNode[]>>()
