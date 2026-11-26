@@ -243,8 +243,12 @@ and a few words about them, and nothing of an exam itself.
 
 ## A published grammar node
 
-Add all five sections. The page shows them in this fixed order: rule, table,
-examples, common mistakes, test.
+Add the sections below. The page shows them in this fixed order: rule,
+diagram, table, examples, common mistakes, test. A node needs a table, a
+diagram or both: a table for forms (endings, articles), a diagram for a
+structure that is hard to picture from text (positions, word order, cases).
+The diagram is written as described in "Diagrams" below. A complete example
+with both is `content/nodes/grammar/grammar-128.yaml`, the grammar sample.
 
 ```yaml
 status: published
@@ -260,8 +264,13 @@ explanations:            # one section per language
     rule: >              # simple German, about A2 level
       …
 
-table:
-  columns:               # headings, in three languages
+diagrams:                # optional; see "Diagrams"
+  - caption: { en: …, fa: …, de: … }
+    svg: |
+      <svg viewBox="0 0 320 200"> … </svg>
+
+table:                   # optional when the node has a diagram
+  columns:               # headings, in three languages; plain text, no asterisks
     - { en: Person, fa: شخص, de: Person }
     - { en: Ending, fa: پایانه, de: Endung }
   rows:                  # cells are German; every row has one cell per column
@@ -292,14 +301,114 @@ questions:
 Nothing extra is written for them; the content pipeline builds both from the
 sections above.
 
-- Search finds a published node by its title, its rule, the rows of its table,
+- Search finds a published node by its title, its rule, the caption of each
+  diagram, the rows of its table,
   its examples with their translations, and the right half and the reason of
   each common mistake. A phrases node is
   found by its purpose, each phrase with its meaning, and each example with
   its translation. Search does not look into the questions. A `coming-soon`
   node is found by its title only.
 - "All grammar at a glance" shows the table of every published grammar node,
-  under its level and chapter.
+  under its level and chapter. A node with a diagram and no table is not
+  there.
+
+### Diagrams
+
+A diagram is a drawing written as SVG inside the node file, so it is fixed
+like any other text: no code, no image file, no drawing program needed (one
+may be used to find the coordinates). The pipeline reads the drawing and
+refuses what the app cannot draw, with the place and the reason.
+
+```yaml
+diagrams:
+  - caption:                     # what the drawing shows, in one or two sentences
+      en: "*Wo ist der Ball?* One picture for each preposition."
+      fa: "*Wo ist der Ball?* برای هر حرف اضافه یک تصویر."
+      de: "*Wo ist der Ball?* Ein Bild für jede Präposition."
+    labels:                      # optional: words of the learner's language in the drawing
+      box: { en: the box, fa: جعبه, de: die Kiste }
+    svg: |
+      <svg viewBox="0 0 320 200">
+        <!-- a comment is allowed and ignored -->
+        <rect class="surface" x="100" y="100" width="120" height="80"/>
+        <circle class="object" cx="160" cy="84" r="16"/>
+        <text class="label" x="160" y="40" text-anchor="middle">auf</text>
+        <text class="note" x="160" y="150" text-anchor="middle">{{box}}</text>
+      </svg>
+```
+
+**Size.** Every drawing is `viewBox="0 0 320 <height>"`: 320 wide, as tall as
+it needs. The app draws it as wide as the page allows, up to 400px, so a
+`label` is about 16px on a phone and 20px at most on a computer, and a
+`note` about 14px. Draw for a phone: three small pictures side by side at
+most, and grow downwards, not sideways. Keep 4 or more units between a word
+and a shape.
+
+**Look.** A drawing has no colours or sizes of its own. Every shape takes one
+of these classes, which give it the interface's colours (`src/app/styles.css`,
+"Diagrams"):
+
+| Class | Looks like | Use it for |
+|---|---|---|
+| `object` | dark, filled | the thing the diagram is about (the ball, the verb) |
+| `surface` | panel colour, dark edge | what it stands in, on or by (the box, a slot) |
+| `shade` | grammar tint, dark edge | a second, quieter area (the side of a box) |
+| `line` | dark line, no fill | lines and arrows |
+| `guide` | dashed line, no fill | what is hidden or seen through, a guide |
+
+Text takes `label` (a word the diagram is about, 16, medium) or `note` (a
+smaller word beside it, 14, grey). A `<g>` may give its class to the shapes
+inside it. `fill`, `stroke`, `style`, `font-size` and other looks are refused.
+Orange is never used: it marks the next topic and the main button only.
+
+**Shapes.** `g`, `rect`, `circle`, `ellipse`, `line`, `polyline`, `polygon`,
+`path`, `text` and `tspan`, with their positions (`x`, `y`, `cx`, `r`,
+`points`, `d` …), `transform`, `text-anchor` and `class`. Nothing else: no
+images, links, scripts, fonts or styles. Later shapes are drawn over earlier
+ones, so draw what is behind first.
+
+**Languages.** A drawing reads left to right in every language, also on a
+Persian page, like the German in it.
+
+- German is written in the drawing itself: `<text …>auf</text>`. It is the same
+  for every learner.
+- A word of the learner's language is a label: write `{{name}}` alone in its
+  `<text>` or `<tspan>`, and give the name under `labels` in all three
+  languages. The app writes it in the learner's language, in the Persian font
+  on a Persian page. A label holds no German, so a Persian label has no Latin
+  letter; put the German beside it as its own text. Every label must be used.
+- Leave room: a Persian or German label is often longer than the English one.
+  Centre a label (`text-anchor="middle"`) so that it grows to both sides.
+- The caption is learner-language text like a rule: German in asterisks. It
+  stands under the drawing, is what search finds, and is the drawing's name
+  for a screen reader, so it says in words what the drawing shows.
+
+Use a diagram only where it shows what text cannot; a list of forms is a
+table. Look at it with `pnpm dev` at phone width and in Persian before
+publishing. A diagram is not part of the review record: it may change
+without a new review.
+
+### Recognise-only nodes
+
+A node with `recogniseOnly: true` is one the exam asks the learner to
+understand when they read or hear it, never to use. The app labels it
+"Recognise only" in the tree, on its page and on its test, in the learner's
+language, also while it is coming soon, and its page and test say in a
+sentence what that means.
+
+Its test asks only for understanding. The types in which the learner
+produces the form are refused in its pool, also in a draft:
+
+- `typed-answer` and `typed-gap-fill`: the learner writes the form.
+- `word-order`: the learner builds the sentence.
+
+The other types offer the forms or a sentence and ask the learner to
+recognise and understand: `multiple-choice` (for example a sentence and three
+meanings of it, in German), `gap-fill` (choose between offered forms, such as
+two words that differ in meaning), `true-false`, `find-error` and `matching`
+(a form and its meaning). Write the questions about what the form means or
+which form a sentence has, not about building it. The list is
+`PRODUCING_QUESTION_TYPES` in `src/content-model/index.ts`.
 
 ### Question types
 
@@ -579,11 +688,20 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 
 ## What the checks reject
 
+- A diagram whose drawing is not one `<svg>` 320 wide, that uses a shape,
+  attribute or class a diagram may not have, gives itself a colour or a size,
+  has a word outside `<text>`, or is not well-formed. A label that the
+  drawing does not use, a `{{name}}` that is not a label or does not stand
+  alone, and a Persian label with a Latin letter.
+- A published grammar node with neither a table nor a diagram.
+- A recognise-only node with a typed answer, a typed gap fill or a word
+  ordering question.
+
 - A node without a chapter, with a chapter that `chapters.yaml` does not
   have, or of another level or kind than its chapter. A chapter name that
   lacks a language.
 - Persian text (a title, a chapter name, a purpose, an explanation, the
-  meaning of a phrase, the reason of a mistake, of a question or of an item)
+  caption of a diagram, the meaning of a phrase, the reason of a mistake, of a question or of an item)
   with a Latin letter
   outside asterisks.
 - Text for the learner that lacks one of the three languages.

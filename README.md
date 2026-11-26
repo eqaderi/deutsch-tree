@@ -278,6 +278,17 @@ The rules are in the learning engine, like every rule. The tree
 - `GrammarTableView` (`src/app/GrammarTableView.tsx`) draws a table on a node
   page and on the overview page. A table reads left to right in every
   language.
+- A diagram is read by `readDrawing` in `src/content-model/diagram.ts`: an
+  allow-list of shapes, attributes and classes, turned into a small tree.
+  `DiagramView` (`src/app/DiagramView.tsx`) draws that tree with React, so no
+  markup from content is ever inserted, left to right in every language, with
+  its labels in the learner's language. Its look is the "Diagrams" block of
+  `styles.css`. Search finds a diagram by its caption. The format for
+  maintainers: [content/README.md](content/README.md), "Diagrams".
+- A recognise-only node is labelled by `RecogniseOnlyLabel`
+  (`src/app/RecogniseOnly.tsx`) in its tree row, on its page and on its
+  test. Which question types it may not use is `PRODUCING_QUESTION_TYPES` in
+  `src/content-model/index.ts`.
 
 ## Languages
 

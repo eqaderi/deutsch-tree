@@ -169,7 +169,7 @@ mistakes:
   - wrong: Das Bild hängt auf der Wand.
     right: Das Bild hängt an der Wand.
     why:
-      en: "English says \"on the wall\", German says *an der Wand*: *an* is for the side of something, *auf* for its top, like a table or the floor."
+      en: 'English says "on the wall", German says *an der Wand*: *an* is for the side of something, *auf* for its top, like a table or the floor.'
       fa: "در فارسی می‌گوییم «روی دیوار»، اما در آلمانی *an der Wand*: *an* برای کنارهٔ ایستادهٔ چیزی است و *auf* برای سطح بالایی آن، مثل میز یا زمین."
       de: "Bei einer Wand sagt man *an*: Das Bild ist an der Seite, nicht oben. *Auf* sagt man für oben, zum Beispiel *auf dem Tisch*."
   - wrong: Mein Bruder ist im Küche.
@@ -348,8 +348,8 @@ questions:
   - id: order-2
     type: word-order
     answers:
-      - [wir, warten, vor dem Kino]
-      - [vor dem Kino, warten, wir]
+      - [meine Freunde, warten, vor dem Kino]
+      - [vor dem Kino, warten, meine Freunde]
     explanation:
       en: "The verb comes second. The place can stand first or last."
       fa: "فعل در جای دوم می‌آید. مکان می‌تواند اول یا آخر جمله باشد."
@@ -357,10 +357,15 @@ questions:
   - id: match-1
     type: matching
     answer:
-      - [unter ___ Tisch, dem]
-      - [neben ___ Tür, der]
-      - [zwischen ___ Stühlen, den]
+      - [liegt unter ___ Tisch, dem]
+      - [steht neben ___ Tür, der]
+      - [steht zwischen ___ Autos, den]
     explanation:
-      en: "In the *Dativ*: *der Tisch* becomes *dem Tisch*, *die Tür* becomes *der Tür*, plural *die Stühle* becomes *den Stühlen*."
-      fa: "در *Dativ*: *der Tisch* می‌شود *dem Tisch*، *die Tür* می‌شود *der Tür*، و *die Stühle* جمع می‌شود *den Stühlen*."
-      de: "Im Dativ: *der Tisch* wird zu *dem Tisch*, *die Tür* zu *der Tür*, *die Stühle* (Plural) zu *den Stühlen*."
+      en: "Each thing is somewhere (*Wo?*), so the *Dativ*: *dem Tisch*, *der Tür*, and plural *den Autos*."
+      fa: "هر چیز جایی است (*Wo?*)، پس *Dativ* می‌آید: *dem Tisch*، *der Tür*، و برای جمع *den Autos*."
+      de: "Alles ist an einem Ort (*Wo?*). Darum Dativ: *dem Tisch*, *der Tür* und im Plural *den Autos*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-26
+  pool: 3a0379dc8e91a8ff
