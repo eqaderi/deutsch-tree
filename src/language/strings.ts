@@ -12,6 +12,9 @@ import type { AnswerNote, ExamModule } from '../learning-engine/index.ts'
  */
 export const en = {
   appName: 'deutsch-tree',
+  /** The page's description, for search engines and link previews. */
+  appDescription:
+    'Everything from zero to the Goethe B1 exam as a tree of small topics, each with an explanation and a test.',
   language: 'Language',
   /** A whole number as this language writes it. Use it for every number shown on its own. */
   number: (value: number) => String(value),

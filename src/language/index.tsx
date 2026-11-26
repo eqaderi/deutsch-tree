@@ -71,6 +71,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useLayoutEffect(() => {
     document.documentElement.lang = language
     document.documentElement.dir = direction
+    document.querySelector('meta[name="description"]')?.setAttribute('content', allStrings[language].appDescription)
   }, [language, direction])
 
   const state = useMemo<LanguageState>(

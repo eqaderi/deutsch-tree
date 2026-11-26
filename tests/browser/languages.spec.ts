@@ -142,6 +142,27 @@ test('a Persian page fits the screen it is opened on', async ({ page }) => {
   }
 })
 
+test('the description of the page is in the learner’s language', async ({ page }) => {
+  await page.goto('./')
+  const description = page.locator('meta[name="description"]')
+  await expect(description).toHaveAttribute(
+    'content',
+    'Everything from zero to the Goethe B1 exam as a tree of small topics, each with an explanation and a test.',
+  )
+
+  await page.getByRole('button', { name: 'فارسی' }).click()
+  await expect(description).toHaveAttribute(
+    'content',
+    'همهٔ آلمانی از صفر تا آزمون B1 گوته، به شکل درختی از موضوع‌های کوچک، هر کدام با توضیح و آزمون.',
+  )
+
+  await page.getByRole('button', { name: 'Deutsch' }).click()
+  await expect(description).toHaveAttribute(
+    'content',
+    'Deutsch von null bis zur Prüfung Goethe B1: ein Baum aus kleinen Themen, jedes mit einer Erklärung und einem Test.',
+  )
+})
+
 test.describe('on a first visit with a Persian browser', () => {
   test.use({ locale: 'fa-IR' })
 

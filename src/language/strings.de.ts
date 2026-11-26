@@ -6,6 +6,8 @@ import type { Strings } from './strings.ts'
  */
 export const de: Strings = {
   appName: 'deutsch-tree',
+  appDescription:
+    'Deutsch von null bis zur Prüfung Goethe B1: ein Baum aus kleinen Themen, jedes mit einer Erklärung und einem Test.',
   language: 'Sprache',
   number: (value) => String(value),
   loading: 'Die Seite lädt …',
