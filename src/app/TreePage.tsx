@@ -2,9 +2,11 @@ import { Fragment, use } from 'react'
 import { Link, useSearchParams } from 'react-router'
 import type { ChapterSummary, NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
+import { isDone } from '../learning-engine/index.ts'
 import { loadIndex } from './content.ts'
 import { RichText } from './German.tsx'
 import { KindLabel } from './KindLabel.tsx'
+import { useProgress } from './progress.ts'
 
 /**
  * The tree, in the "route" layout: a strip of levels, then the chosen level as
@@ -118,6 +120,7 @@ function ChapterStop({ chapter, topics, place }: { chapter: ChapterSummary; topi
 /** One topic. Its kind is not repeated here: the chapter above it says it. */
 function NodeRow({ node }: { node: NodeSummary }) {
   const { language, strings } = useLanguage()
+  const done = isDone(useProgress(), node.id)
   const text = (
     <span className="row-text">
       <span className="row-title">
@@ -137,9 +140,9 @@ function NodeRow({ node }: { node: NodeSummary }) {
   }
   return (
     <Link to={`/node/${node.id}`} className="row">
-      <span className="mark" aria-hidden="true" />
+      <span className={done ? 'mark mark-done' : 'mark'} aria-hidden="true" />
       {text}
-      <span className="pill">{strings.start}</span>
+      <span className="pill">{done ? strings.done : strings.start}</span>
     </Link>
   )
 }

@@ -82,7 +82,7 @@ questions:
       fa: با *er* پایانه *-t* است.
       de: Bei *er* ist die Endung *-t*.
   - id: q4
-    type: multiple-choice
+    type: gap-fill
     prompt: Wir ___ in Wien.
     options: [wohnst, wohnt, wohnen]
     answer: wohnen
@@ -127,7 +127,7 @@ questions:
       fa: با *er* پایانه *-t* است.
       de: Bei *er* ist die Endung *-t*.
   - id: q9
-    type: multiple-choice
+    type: gap-fill
     prompt: Wir ___ Fußball.
     options: [spiele, spielst, spielen]
     answer: spielen
@@ -154,7 +154,7 @@ questions:
       fa: با *ich* پایانه *-e* است.
       de: Bei *ich* ist die Endung *-e*.
   - id: q12
-    type: multiple-choice
+    type: gap-fill
     prompt: Du ___ Suppe.
     options: [koche, kochst, kochen]
     answer: kochst
@@ -163,34 +163,31 @@ questions:
       fa: با *du* پایانه *-st* است.
       de: Bei *du* ist die Endung *-st*.
   - id: q13
-    type: multiple-choice
-    prompt: Er ___ Suppe.
-    options: [koche, kochst, kocht]
-    answer: kocht
+    type: true-false
+    prompt: Er kochst Suppe.
+    answer: false
     explanation:
-      en: With *er* the ending is *-t*.
-      fa: با *er* پایانه *-t* است.
-      de: Bei *er* ist die Endung *-t*.
+      en: It must be *er kocht*.
+      fa: باید *er kocht* باشد.
+      de: Es muss *er kocht* heißen.
   - id: q14
-    type: multiple-choice
-    prompt: Wir ___ Suppe.
-    options: [kochst, kocht, kochen]
-    answer: kochen
+    type: true-false
+    prompt: Wir kochen Suppe.
+    answer: true
     explanation:
       en: With *wir* the ending is *-en*.
       fa: با *wir* پایانه *-en* است.
       de: Bei *wir* ist die Endung *-en*.
   - id: q15
-    type: multiple-choice
-    prompt: Ihr ___ Suppe.
-    options: [kocht, kochen, koche]
-    answer: kocht
+    type: true-false
+    prompt: Ihr koche Suppe.
+    answer: false
     explanation:
-      en: With *ihr* the ending is *-t*.
-      fa: با *ihr* پایانه *-t* است.
-      de: Bei *ihr* ist die Endung *-t*.
+      en: It must be *ihr kocht*.
+      fa: باید *ihr kocht* باشد.
+      de: Es muss *ihr kocht* heißen.
 
 review:
   reviewer: Fixture reviewer
   date: 2026-01-01
-  pool: e7b02779009369b3
+  pool: cede7a8faa3402d6

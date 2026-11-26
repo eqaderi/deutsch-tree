@@ -126,6 +126,39 @@ questions:
     explanation: { en: …, fa: …, de: … }   # one line: why the answer is right
 ```
 
+### Question types
+
+Every question has `id`, `type`, `prompt` (German), `answer` and
+`explanation`. The test shows the learner what to do in their language, so a
+prompt holds only the German.
+
+```yaml
+  - id: q2
+    type: gap-fill                  # a sentence with one gap; the learner chooses the form
+    prompt: Du ___ hier.            # exactly one gap, written as three underscores
+    options: [wohne, wohnst]
+    answer: wohnst                  # the text of the one option that fills the gap
+    explanation: { en: …, fa: …, de: … }
+
+  - id: q3
+    type: true-false                # "Is this sentence correct German?"
+    prompt: Du wohne hier.          # the sentence the learner judges
+    answer: false                   # true: correct German; false: it holds a mistake
+    explanation: { en: …, fa: …, de: … }
+```
+
+### How many questions an attempt draws
+
+Each attempt at the test draws 10 questions from the pool at random. A node
+with a large pool may raise this, up to 15:
+
+```yaml
+attemptSize: 12          # optional; 10 to 15, default 10
+```
+
+The pass mark follows from it: 90%, rounded up to a whole question (9 of 10,
+11 of 12, 14 of 15).
+
 ## Review before publishing
 
 A published node needs a `review:` record. `pnpm content:check` fails without
@@ -144,9 +177,9 @@ change freely). A command writes the record, never a hand:
    step 3. A changed or disputed question needs a fresh reviewer: `--only q3`
    in step 1, then add that second file with another `--answers`.
 
-Only `multiple-choice` questions and only grammar nodes can be published so
-far. Other question types and node kinds are added to the schema as they are
-built.
+Only `multiple-choice`, `gap-fill` and `true-false` questions and only grammar
+nodes can be published so far. Other question types and node kinds are added
+to the schema as they are built.
 
 A key that the schema does not know is an error, so a misspelt key is caught.
 

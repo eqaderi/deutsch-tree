@@ -86,43 +86,78 @@ const questionBase = {
   explanation: localised,
 }
 
+/**
+ * The answer rule of every question type: a question states exactly one
+ * correct answer. `type` names the question type in the message, and `shape`
+ * says what one answer looks like when the value is something else.
+ */
+const oneAnswer = (type: string, shape?: string) => ({
+  error: ({ input }: { input?: unknown }) => {
+    if (input === undefined) return 'no correct answer: the question states none'
+    if (Array.isArray(input)) return `${input.length} correct answers: a ${type} question has exactly one`
+    return shape
+  },
+})
+
+/** The stated answer of a question with options: the text of one option. */
+const answerText = (type: string) => z.string(oneAnswer(type)).trim().min(1, 'must not be empty')
+
+/** The stated answer must be exactly one of the options. */
+function answerIsOneOption(value: { options: string[]; answer: string }, ctx: z.RefinementCtx) {
+  const matches = value.options.filter((option) => option === value.answer).length
+  if (matches === 1) return
+  ctx.addIssue({
+    code: 'custom',
+    path: ['answer'],
+    message:
+      matches === 0
+        ? `no correct answer: "${value.answer}" is not one of the options`
+        : `${matches} correct answers: "${value.answer}" is in the options ${matches} times`,
+  })
+}
+
 const multipleChoiceQuestion = z
   .strictObject({
     ...questionBase,
     type: z.literal('multiple-choice'),
     options: z.array(text).min(2),
     /** The text of the one correct option. */
-    answer: z
-      .string({
-        error: ({ input }) => {
-          if (input === undefined) return 'no correct answer: the question states none'
-          if (Array.isArray(input)) {
-            return `${input.length} correct answers: a multiple-choice question has exactly one`
-          }
-          return undefined
-        },
-      })
-      .trim()
-      .min(1, 'must not be empty'),
+    answer: answerText('multiple-choice'),
+  })
+  .superRefine(answerIsOneOption)
+
+/** How a gap is written in a German sentence: three underscores or more. */
+export const GAP = /_{3,}/g
+
+/** A sentence with one gap, filled by choosing one of the offered forms. */
+const gapFillQuestion = z
+  .strictObject({
+    ...questionBase,
+    type: z.literal('gap-fill'),
+    options: z.array(text).min(2),
+    /** The text of the one option that fills the gap. */
+    answer: answerText('gap-fill'),
   })
   .superRefine((value, ctx) => {
-    const matches = value.options.filter((option) => option === value.answer).length
-    if (matches === 1) return
-    ctx.addIssue({
-      code: 'custom',
-      path: ['answer'],
-      message:
-        matches === 0
-          ? `no correct answer: "${value.answer}" is not one of the options`
-          : `${matches} correct answers: "${value.answer}" is in the options ${matches} times`,
-    })
+    if ((value.prompt.match(GAP) ?? []).length !== 1) {
+      ctx.addIssue({ code: 'custom', path: ['prompt'], message: 'must have exactly one gap, written as ___' })
+    }
+    answerIsOneOption(value, ctx)
   })
 
 /** A CEFR level such as A1. A new level needs no code change. */
 const level = z.string().regex(/^[A-C][12]$/, 'must be a level such as A1, A2 or B1')
 
-/** Later question types join this union under their own `type`. */
-const question = z.discriminatedUnion('type', [multipleChoiceQuestion])
+/** The prompt is a German sentence; the learner says whether it is correct German. */
+const trueFalseQuestion = z.strictObject({
+  ...questionBase,
+  type: z.literal('true-false'),
+  /** true when the sentence is correct German, false when it holds a mistake. */
+  answer: z.boolean(oneAnswer('true-false', 'must be true or false')),
+})
+
+/** Later question types join this union under their own `type`, each with its answer rule. */
+const question = z.discriminatedUnion('type', [multipleChoiceQuestion, gapFillQuestion, trueFalseQuestion])
 
 /**
  * Proof that an independent reviewer answered the pool without seeing the
@@ -165,6 +200,13 @@ export const nodeFileSchema = z
     examples: z.array(example).min(1).optional(),
     mistakes: z.array(mistake).min(1).optional(),
     questions: z.array(question).min(1).optional(),
+    /** How many questions of the pool one attempt draws. */
+    attemptSize: z
+      .number()
+      .int('must be a whole number')
+      .min(10, 'must be 10 to 15: an attempt draws 10 to 15 questions')
+      .max(15, 'must be 10 to 15: an attempt draws 10 to 15 questions')
+      .default(10),
     /** A published node must have one that matches its pool; the content pipeline checks it. */
     review: reviewRecord.optional(),
   })
@@ -271,23 +313,47 @@ export interface Mistake {
   why: Localised<RichText>
 }
 
-export interface MultipleChoiceQuestion {
+interface QuestionBase {
+  /** Stable inside the node. */
   id: string
-  type: 'multiple-choice'
+  /** German. */
   prompt: string
-  options: string[]
-  answer: string
+  /** One line saying why the right answer is right. */
   explanation: Localised<RichText>
 }
 
-export type Question = MultipleChoiceQuestion
+export interface MultipleChoiceQuestion extends QuestionBase {
+  type: 'multiple-choice'
+  options: string[]
+  answer: string
+}
+
+/** The prompt holds one gap; one of the options fills it. */
+export interface GapFillQuestion extends QuestionBase {
+  type: 'gap-fill'
+  options: string[]
+  answer: string
+  /** The prompt cut at its gap, so the app can show the chosen form inside the sentence. */
+  gap: { before: string; after: string }
+}
+
+/** The prompt is a German sentence; `answer` says whether it is correct German. */
+export interface TrueFalseQuestion extends QuestionBase {
+  type: 'true-false'
+  answer: boolean
+}
+
+export type Question = MultipleChoiceQuestion | GapFillQuestion | TrueFalseQuestion
 
 export interface GrammarContent {
   explanations: Localised<{ rule: RichText }>
   table: GrammarTable
   examples: Example[]
   mistakes: Mistake[]
+  /** The pool. */
   questions: Question[]
+  /** How many questions of the pool one attempt draws. */
+  attemptSize: number
 }
 
 /** A node as the app loads it. `content` is null until the node is published. */
