@@ -54,6 +54,8 @@ export const de: Strings = {
     'find-error': 'Ein Wort in diesem Satz ist falsch. Wähle es.',
     'word-order': 'Bilde den Satz: Wähle die Wörter in der richtigen Reihenfolge.',
     matching: 'Was passt zusammen? Wähle zu jedem Wort den passenden Teil.',
+    'typed-answer': 'Schreib die Antwort.',
+    'typed-gap-fill': 'Schreib das Wort für die Lücke.',
   },
   gap: 'Lücke',
   yourSentence: 'Dein Satz',
@@ -61,6 +63,7 @@ export const de: Strings = {
   choosePartner: 'Bitte wählen …',
   sentenceCorrect: 'Richtig',
   sentenceNotCorrect: 'Falsch',
+  germanLetters: 'Deutsche Buchstaben',
   next: 'Weiter',
   checkAnswers: 'Antworten prüfen',
   reportProblem: 'Problem melden',
@@ -126,4 +129,11 @@ export const de: Strings = {
   checkpointChangesNothing: 'Ein Zwischentest zeigt nur, wo du stehst. Deine Themen bleiben, wie sie sind.',
   topicsToRevisit: 'Noch einmal ansehen',
   wrongOfAsked: (wrong, asked) => `${wrong} von ${asked} falsch`,
+
+  acceptedWithNote: 'Richtig, mit Hinweis',
+  exactSpelling: 'Genau so schreibt man es',
+  answerNotes: {
+    'umlaut-substitute': 'Das ist richtig. Genau schreibt man es mit ä, ö, ü oder ß.',
+    capitalisation: 'Das ist richtig. Achte auf große und kleine Buchstaben.',
+  },
 }

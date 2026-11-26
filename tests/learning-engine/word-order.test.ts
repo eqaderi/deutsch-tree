@@ -1,17 +1,17 @@
 import { expect, test } from 'vitest'
 import type { WordOrderQuestion } from '../../src/content-model/index.ts'
-import { checkAnswer, isAnswered, scoreAttempt } from '../../src/learning-engine/index.ts'
+import { checkAnswer, isAnswered, rightAnswer, scoreAttempt } from '../../src/learning-engine/index.ts'
 
-function wordOrder(answer: string[], alsoAccepted: string[][] = []): WordOrderQuestion {
-  const pieces = [...answer].reverse()
+/** A word ordering question with these right orders. */
+function wordOrder(first: string[], ...others: string[][]): WordOrderQuestion {
+  const pieces = [...first].reverse()
   return {
     id: 'q1',
     type: 'word-order',
     prompt: pieces.join(' / '),
     pieces,
     end: '.',
-    answer,
-    alsoAccepted,
+    answers: [first, ...others],
     explanation: { en: ['Because.'], fa: ['چون.'], de: ['Darum.'] },
   }
 }
@@ -27,16 +27,20 @@ test('a word ordering answer is right when the pieces are in the order of the an
 test('every listed order is right, and no other one', () => {
   const question = wordOrder(
     ['heute', 'wohne', 'ich', 'in Berlin'],
-    [
-      ['ich', 'wohne', 'heute', 'in Berlin'],
-      ['in Berlin', 'wohne', 'ich', 'heute'],
-    ],
+    ['ich', 'wohne', 'heute', 'in Berlin'],
+    ['in Berlin', 'wohne', 'ich', 'heute'],
   )
 
   expect(checkAnswer(question, ['heute', 'wohne', 'ich', 'in Berlin']).correct).toBe(true)
   expect(checkAnswer(question, ['ich', 'wohne', 'heute', 'in Berlin']).correct).toBe(true)
   expect(checkAnswer(question, ['in Berlin', 'wohne', 'ich', 'heute']).correct).toBe(true)
   expect(checkAnswer(question, ['ich', 'heute', 'wohne', 'in Berlin']).correct).toBe(false)
+})
+
+test('the right answer shown for a word ordering question is the first order listed', () => {
+  const question = wordOrder(['heute', 'wohne', 'ich', 'in Berlin'], ['ich', 'wohne', 'heute', 'in Berlin'])
+
+  expect(rightAnswer(question)).toEqual(['heute', 'wohne', 'ich', 'in Berlin'])
 })
 
 test('an order that leaves pieces out is wrong, also when it starts right', () => {

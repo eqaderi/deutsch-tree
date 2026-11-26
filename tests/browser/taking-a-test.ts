@@ -23,12 +23,22 @@ export type FixtureQuestion = FixtureQuestionBase &
   (
     | { type: 'multiple-choice' | 'gap-fill'; prompt: string; options: string[]; answer: string }
     | { type: 'true-false'; prompt: string; answer: boolean }
+    // Answered by typing: `answers` is every accepted answer.
+    | { type: 'typed-answer' | 'typed-gap-fill'; prompt: string; answers: string[] }
     | { type: 'find-error'; prompt: string; answer: string }
-    | { type: 'word-order'; answer: string[]; alsoAccepted?: string[][]; end?: string }
+    // Every right order of the pieces; the first is the one a result shows.
+    | { type: 'word-order'; answers: string[][]; end?: string }
     | { type: 'matching'; answer: Array<[item: string, partner: string]> }
   )
 
 export type FixtureQuestionOf<Type extends FixtureQuestion['type']> = Extract<FixtureQuestion, { type: Type }>
+
+/** The fixture node whose pool is typed questions only. An attempt draws all 15 of them. */
+export const TYPED_NODE = 'grammar-010'
+export const TYPED_ATTEMPT_SIZE = 15
+
+/** What a test types as a wrong answer: no fixture question accepts it. */
+export const WRONG_TEXT = 'falsch'
 
 /** The words of the test screens in one language. English unless a journey says otherwise. */
 export interface TestWords {
@@ -89,6 +99,12 @@ export async function fixtureQuestions(): Promise<Map<string, FixtureQuestion>> 
   return questions
 }
 
+/** The pool of one fixture node, by question id. "Fixture verbs" unless a journey says otherwise. */
+export async function fixturePool(nodeId = FIXTURE_NODE): Promise<Map<string, FixtureQuestion>> {
+  const ofNode = [...(await fixtureQuestions()).values()].filter((question) => question.node === nodeId)
+  return new Map(ofNode.map((question) => [question.id, question]))
+}
+
 /** The "report a problem" link of the question on screen, in any language. */
 export function reportLink(scope: Page | Locator): Locator {
   return scope.locator('a[href*="/issues/new"]')
@@ -119,7 +135,7 @@ export async function questionOnScreen(page: Page): Promise<FixtureQuestion> {
 
 /** The German that a question puts in front of the learner: its sentence, its pieces or its items. */
 export function germanShown(question: FixtureQuestion): string[] {
-  if (question.type === 'word-order') return question.answer
+  if (question.type === 'word-order') return question.answers[0] ?? []
   if (question.type === 'matching') return question.answer.map(([item]) => item)
   return [question.prompt]
 }
@@ -166,9 +182,10 @@ export function wordOrder(page: Page, words = ENGLISH) {
 
 /** The order in which a word ordering question is answered right or wrong. */
 export function orderGiven(question: FixtureQuestionOf<'word-order'>, how: 'right' | 'wrong'): string[] {
-  if (how === 'right') return question.answer
-  const right = [question.answer, ...(question.alsoAccepted ?? [])].map((order) => order.join('|'))
-  const [first = '', ...rest] = question.answer
+  const [shown = []] = question.answers
+  if (how === 'right') return shown
+  const right = question.answers.map((order) => order.join('|'))
+  const [first = '', ...rest] = shown
   // The first piece moved back by one place, then by two, and so on, until the order is a wrong one.
   for (let place = 1; place <= rest.length; place += 1) {
     const order = rest.toSpliced(place, 0, first)
@@ -199,7 +216,22 @@ export function partnerOf(page: Page, item: string): Locator {
   return page.getByRole('combobox', { name: item, exact: true })
 }
 
-/** Answers the question on screen, right or wrong, the way a learner does. */
+/** Whether the question on screen is answered by typing. */
+export function isTyped(question: FixtureQuestion): question is FixtureQuestionOf<'typed-answer' | 'typed-gap-fill'> {
+  return question.type === 'typed-answer' || question.type === 'typed-gap-fill'
+}
+
+/** The field a typed question is answered in. */
+export function answerField(page: Page): Locator {
+  return page.getByRole('textbox')
+}
+
+/** What `giveAnswer` types into the field of a typed question. */
+function textGiven(question: FixtureQuestion, how: 'right' | 'wrong'): string {
+  return how === 'right' ? rightAnswerText(question) : WRONG_TEXT
+}
+
+/** Answers the question on screen, right or wrong, the way a learner does: by choosing, typing, ordering or matching. */
 export async function giveAnswer(
   page: Page,
   question: FixtureQuestion,
@@ -207,6 +239,10 @@ export async function giveAnswer(
   words = ENGLISH,
 ): Promise<void> {
   switch (question.type) {
+    case 'typed-answer':
+    case 'typed-gap-fill':
+      await answerField(page).fill(textGiven(question, how))
+      return
     case 'word-order':
       for (const piece of orderGiven(question, how)) await wordOrder(page, words).piece(piece).click()
       return
@@ -226,6 +262,10 @@ export async function expectAnswerGiven(
   words = ENGLISH,
 ): Promise<void> {
   switch (question.type) {
+    case 'typed-answer':
+    case 'typed-gap-fill':
+      await expect(answerField(page)).toHaveValue(textGiven(question, how))
+      return
     case 'word-order': {
       const [first = '', ...rest] = orderGiven(question, how)
       await expect(wordOrder(page, words).placed).toHaveText([sentenceOf([first], ''), ...rest])
@@ -246,8 +286,12 @@ export function rightAnswerText(question: FixtureQuestion, words = ENGLISH): str
   switch (question.type) {
     case 'true-false':
       return question.answer ? words.correct : words.notCorrect
+    case 'typed-answer':
+    case 'typed-gap-fill':
+      // The first accepted answer is the one a result shows.
+      return String(question.answers[0])
     case 'word-order':
-      return sentenceOf(question.answer, question.end)
+      return sentenceOf(orderGiven(question, 'right'), question.end)
     case 'matching':
       return question.answer.map(([item, partner]) => `${item} → ${partner}`).join(', ')
     default:
@@ -318,6 +362,27 @@ export async function findQuestion<Type extends FixtureQuestion['type']>(
     await page.getByRole('button', { name: words.tryAgain }).click()
   }
   throw new Error(`no ${type} question came up in 40 attempts`)
+}
+
+/**
+ * Takes the whole test of the typed fixture node, typing for each question
+ * what `text` gives for it. Returns the place (from 1) at which each question
+ * came, by question id.
+ */
+export async function takeTypedTest(
+  page: Page,
+  text: (question: FixtureQuestion) => string,
+  words = ENGLISH,
+): Promise<Map<string, number>> {
+  const places = new Map<string, number>()
+  for (let place = 1; place <= TYPED_ATTEMPT_SIZE; place += 1) {
+    await expect(page.getByText(words.questionOf(place, TYPED_ATTEMPT_SIZE))).toBeVisible()
+    const question = await questionOnScreen(page)
+    places.set(question.id, place)
+    await answerField(page).fill(text(question))
+    await page.getByRole('button', { name: place < TYPED_ATTEMPT_SIZE ? words.next : words.checkAnswers }).click()
+  }
+  return places
 }
 
 /** An explanation as a learner reads it: the asterisks that mark German are not shown. */

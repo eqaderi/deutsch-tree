@@ -189,7 +189,8 @@ questions:
   # One of each further type, and a word ordering question with two right orders.
   - id: order-1
     type: word-order
-    answer: [wo, wohnst, du]
+    answers:
+      - [wo, wohnst, du]
     end: "?"
     explanation:
       en: In a question with *wo* the verb comes second.
@@ -197,8 +198,8 @@ questions:
       de: In einer Frage mit *wo* steht das Verb auf Platz 2.
   - id: order-2
     type: word-order
-    answer: [ich, wohne, in Berlin]
-    alsoAccepted:
+    answers:
+      - [ich, wohne, in Berlin]
       - [in Berlin, wohne, ich]
     explanation:
       en: The verb is in second place; *ich* or *in Berlin* can come first.

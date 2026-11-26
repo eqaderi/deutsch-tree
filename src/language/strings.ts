@@ -1,4 +1,5 @@
 import type { NodeKind, Question } from '../content-model/index.ts'
+import type { AnswerNote } from '../learning-engine/index.ts'
 
 /**
  * Every word the interface shows. Components never hold their own wording;
@@ -61,6 +62,8 @@ export const en = {
     'find-error': 'One word in this sentence is wrong. Choose it.',
     'word-order': 'Build the sentence: choose the words in the right order.',
     matching: 'Choose the partner that fits each word.',
+    'typed-answer': 'Type the answer.',
+    'typed-gap-fill': 'Type the word that fits the gap.',
   } satisfies Record<Question['type'], string>,
   /** Read out in place of an empty gap. */
   gap: 'gap',
@@ -71,6 +74,8 @@ export const en = {
   choosePartner: 'Choose…',
   sentenceCorrect: 'Correct',
   sentenceNotCorrect: 'Not correct',
+  /** The name of the buttons that write ä, ö, ü and ß into a typed answer. */
+  germanLetters: 'German letters',
   next: 'Next',
   checkAnswers: 'Check answers',
   reportProblem: 'Report a problem',
@@ -141,6 +146,14 @@ export const en = {
   topicsToRevisit: 'Topics to look at again',
   /** Beside a topic in that list: "2 of 5 wrong". */
   wrongOfAsked: (wrong: number, asked: number) => `${wrong} of ${asked} wrong`,
+
+  // Typed answers that counted as right although they were not written exactly.
+  acceptedWithNote: 'Accepted with a note',
+  exactSpelling: 'Exact spelling',
+  answerNotes: {
+    'umlaut-substitute': 'Accepted. The exact spelling has ä, ö, ü or ß.',
+    capitalisation: 'Accepted. Mind the capital and small letters.',
+  } satisfies Record<AnswerNote, string>,
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */

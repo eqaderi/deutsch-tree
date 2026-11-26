@@ -8,6 +8,7 @@ import { isDeepStrictEqual } from 'node:util'
 import { parse as parseYaml, stringify as toYaml } from 'yaml'
 import { z } from 'zod'
 import { type NodeFile, nodeFileSchema } from '../content-model/index.ts'
+import { checkTyped } from '../learning-engine/index.ts'
 import { mixed } from './mix.ts'
 
 type QuestionFile = NonNullable<NodeFile['questions']>[number]
@@ -28,6 +29,20 @@ interface ReviewView<Q> {
   agrees(question: Q, answer: unknown): boolean
 }
 
+const TYPED =
+  'the German you would type, as text. Several right answers are no flaw here: give a list with each of them, such as ["…", "…"]. Object only when the question leaves its answer open'
+
+/**
+ * A typed question's key is the list of accepted answers. The reviewer agrees
+ * when each answer they give would be marked right for a learner. One that
+ * is not listed shows that the list is incomplete, or that the question is
+ * unclear.
+ */
+function everyAnswerIsAccepted(key: unknown, answer: unknown): boolean {
+  const given: unknown[] = Array.isArray(answer) ? answer : [answer]
+  return given.length > 0 && given.every((one) => typeof one === 'string' && checkTyped(one, key as string[]).correct)
+}
+
 /**
  * One entry per question type; TypeScript refuses a type that has none.
  *
@@ -40,11 +55,13 @@ const REVIEW_VIEWS: { [T in QuestionFile['type']]: ReviewView<Extract<QuestionFi
   'multiple-choice': keyIn('answer', 'the exact text of the one correct option'),
   'gap-fill': keyIn('answer', 'the exact text of the one option that fills the gap'),
   'true-false': keyIn('answer', 'true when the sentence is correct German, false when it holds a mistake (no quotes)'),
+  'typed-answer': keyIn('answers', TYPED, everyAnswerIsAccepted),
+  'typed-gap-fill': keyIn('answers', `what fills the gap: ${TYPED}`, everyAnswerIsAccepted),
   'find-error': keyIn('answer', 'the one wrong word of the sentence, exactly as it is written there'),
   'word-order': {
     // Mixed by the pieces alone: the order on the sheet says nothing about the key.
-    blind: (question) => ({ type: question.type, pieces: mixed(question.answer), end: question.end }),
-    key: (question) => [question.answer, ...question.alsoAccepted],
+    blind: (question) => ({ type: question.type, pieces: mixed(question.answers[0] ?? []), end: question.end }),
+    key: (question) => question.answers,
     answerFormat: [
       'every order of the pieces that is a correct German sentence closed by the mark in "end":',
       'a list of orders, each order a list of all the pieces exactly as written, such as [["ich", "wohne", "hier"]].',
@@ -53,7 +70,7 @@ const REVIEW_VIEWS: { [T in QuestionFile['type']]: ReviewView<Extract<QuestionFi
       'list each order that is just as correct.',
     ].join(' '),
     // The reviewer must find every accepted order and no other one. One order may come without the outer list.
-    agrees: (question, answer) => sameSet([question.answer, ...question.alsoAccepted], listOfLists(answer)),
+    agrees: (question, answer) => sameSet(question.answers, listOfLists(answer)),
   },
   matching: {
     // The partners are mixed by themselves alone: their order says nothing about the pairs.

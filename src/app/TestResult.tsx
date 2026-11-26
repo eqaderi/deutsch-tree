@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router'
 import type { Question } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
-import type { Answer, AttemptResult } from '../learning-engine/index.ts'
+import { type Answer, type AttemptResult, rightAnswer } from '../learning-engine/index.ts'
 import { German, RichText } from './German.tsx'
 import { AnswerText } from './QuestionView.tsx'
 import { ReportProblem } from './ReportProblem.tsx'
@@ -21,9 +21,10 @@ interface TestResultProps {
  */
 export function TestResult({ nodeId, result, wasDone, onRetry }: TestResultProps) {
   const { strings } = useLanguage()
-  const wrong = result.questions
-    .map((item, index) => ({ ...item, nodeId, place: index + 1 }))
-    .filter((item) => !item.correct)
+  const answered = result.questions.map((item, index) => ({ ...item, nodeId, place: index + 1 }))
+  const wrong = answered.filter((item) => !item.correct)
+  // Right, but not written exactly: the learner sees the exact spelling and which slip it was.
+  const noted = answered.filter((item) => item.correct && item.notes.length > 0)
 
   // The result takes the place of the last question: take the keyboard and a screen reader to it.
   const heading = useRef<HTMLHeadingElement>(null)
@@ -50,6 +51,41 @@ export function TestResult({ nodeId, result, wasDone, onRetry }: TestResultProps
       </div>
 
       <WrongAnswers wrong={wrong} />
+
+      {noted.length > 0 && (
+        <>
+          <h3 id="noted-heading" className="cap">
+            {strings.acceptedWithNote}
+          </h3>
+          <ol className="noted-answers" aria-labelledby="noted-heading">
+            {noted.map(({ question, answer, notes, accepted, place }) => (
+              <li key={place} className="noted-answer">
+                <span className="noted-answer-place">{strings.questionNumber(place)}</span>
+                <German className="noted-answer-prompt">{question.prompt}</German>
+                <dl>
+                  <div className="answer-noted">
+                    <dt>{strings.yourAnswer}</dt>
+                    <dd>
+                      <AnswerText question={question} answer={answer} />
+                    </dd>
+                  </div>
+                  <div className="answer-right">
+                    <dt>{strings.exactSpelling}</dt>
+                    <dd>
+                      <AnswerText question={question} answer={accepted} />
+                    </dd>
+                  </div>
+                </dl>
+                {notes.map((note) => (
+                  <p key={note} className="noted-answer-note">
+                    {strings.answerNotes[note]}
+                  </p>
+                ))}
+              </li>
+            ))}
+          </ol>
+        </>
+      )}
 
       <div className="result-actions">
         {result.passed ? (
@@ -114,7 +150,7 @@ export function WrongAnswers({ wrong }: { wrong: WrongAnswer[] }) {
               <div className="answer-right">
                 <dt>{strings.rightAnswer}</dt>
                 <dd>
-                  <AnswerText question={question} answer={question.answer} />
+                  <AnswerText question={question} answer={rightAnswer(question)} />
                 </dd>
               </div>
             </dl>

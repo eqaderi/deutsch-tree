@@ -129,6 +129,13 @@ const multipleChoiceQuestion = z
 /** How a gap is written in a German sentence: three underscores or more. */
 export const GAP = /_{3,}/g
 
+/** The prompt of a gap fill question, chosen or typed, is a sentence with exactly one gap. */
+function hasOneGap(value: { prompt: string }, ctx: z.RefinementCtx) {
+  if ((value.prompt.match(GAP) ?? []).length !== 1) {
+    ctx.addIssue({ code: 'custom', path: ['prompt'], message: 'must have exactly one gap, written as ___' })
+  }
+}
+
 /** A sentence with one gap, filled by choosing one of the offered forms. */
 const gapFillQuestion = z
   .strictObject({
@@ -139,9 +146,7 @@ const gapFillQuestion = z
     answer: answerText('gap-fill'),
   })
   .superRefine((value, ctx) => {
-    if ((value.prompt.match(GAP) ?? []).length !== 1) {
-      ctx.addIssue({ code: 'custom', path: ['prompt'], message: 'must have exactly one gap, written as ___' })
-    }
+    hasOneGap(value, ctx)
     answerIsOneOption(value, ctx)
   })
 
@@ -155,6 +160,45 @@ const trueFalseQuestion = z.strictObject({
   /** true when the sentence is correct German, false when it holds a mistake. */
   answer: z.boolean(oneAnswer('true-false', 'must be true or false')),
 })
+
+const NO_ACCEPTED_ANSWER = 'no correct answer: the question lists none under "answers"'
+
+/**
+ * The answer rule of a question whose answer is typed: it lists every
+ * accepted answer, so that correct German is never marked wrong. The first
+ * one is shown as the right answer. Spaces, ae/oe/ue/ss and capitals are
+ * forgiven by the learning engine and need no entries of their own.
+ */
+const acceptedAnswers = z
+  .array(text, {
+    error: ({ input }) =>
+      input === undefined ? NO_ACCEPTED_ANSWER : 'must be a list of every accepted answer, such as [wohnst]',
+  })
+  .min(1, NO_ACCEPTED_ANSWER)
+  .superRefine((answers, ctx) => {
+    const spaced = answers.map((answer) => answer.replace(/\s+/g, ' '))
+    spaced.forEach((answer, index) => {
+      if (spaced.indexOf(answer) < index) {
+        ctx.addIssue({ code: 'custom', path: [index], message: `"${answer}" is listed twice` })
+      }
+    })
+  })
+
+/** The learner types the answer to the prompt. */
+const typedAnswerQuestion = z.strictObject({
+  ...questionBase,
+  type: z.literal('typed-answer'),
+  answers: acceptedAnswers,
+})
+
+/** A sentence with one gap; the learner types what fills it. */
+const typedGapFillQuestion = z
+  .strictObject({
+    ...questionBase,
+    type: z.literal('typed-gap-fill'),
+    answers: acceptedAnswers,
+  })
+  .superRefine(hasOneGap)
 
 /**
  * A word of a German sentence: letters and digits, with a hyphen or an
@@ -193,37 +237,44 @@ const questionWithoutPrompt = { id: questionBase.id, explanation: questionBase.e
 /** The marks that may close the sentence of a word ordering question. */
 export const SENTENCE_ENDS = ['.', '?', '!'] as const
 
+const NOT_ORDERS = 'must be a list of orders, each one a list of the pieces, such as [[wo, wohnst, du]]'
+
 /** One order of the pieces of a word ordering question. */
-const piecesInOrder = z.array(text, {
-  error: ({ input }) =>
-    input === undefined
-      ? 'no correct answer: the question states none'
-      : 'must be the pieces of the sentence in the right order, as a list',
-})
+const piecesInOrder = z.array(text).min(3, 'needs at least 3 pieces: with fewer there is nothing to put in order')
+
+/**
+ * Every right order of a word ordering question. One order written without
+ * the list around it is the likely slip, so the shape is looked at first and
+ * gets one message.
+ */
+const rightOrders = z
+  .custom<unknown[][]>((input) => Array.isArray(input) && input.every(Array.isArray), {
+    error: ({ input }) => (input === undefined ? NO_ACCEPTED_ANSWER : NOT_ORDERS),
+  })
+  .pipe(z.array(piecesInOrder).min(1, NO_ACCEPTED_ANSWER))
 
 /**
  * The pieces of a German sentence, which the learner puts in order. A piece
- * is one word or several. Where German allows more than one order, every
- * right one is listed: `answer` and then `alsoAccepted`.
+ * is one word or several. Like a typed question it lists every accepted
+ * answer: where German allows more than one order of the pieces, each right
+ * order is listed, and the first one is shown as the right answer.
  */
 const wordOrderQuestion = z
   .strictObject({
     ...questionWithoutPrompt,
     type: z.literal('word-order'),
-    /** The pieces in the right order, each written as it stands inside a sentence (no capital for the first). */
-    answer: piecesInOrder.min(3, 'needs at least 3 pieces: with fewer there is nothing to put in order'),
-    /** Every other right order of the same pieces. */
-    alsoAccepted: z.array(piecesInOrder).default([]),
+    /** Every right order. A piece is written as it stands inside a sentence (no capital for the first). */
+    answers: rightOrders,
     /** The mark that closes the sentence. The app adds it, and the capital letter at the start. */
     end: z.enum(SENTENCE_ENDS, { error: 'must be ".", "?" or "!"' }).default('.'),
   })
   .superRefine((value, ctx) => {
-    value.alsoAccepted.forEach((order, index) => {
-      const problem =
-        notTheSamePieces(value.answer, order) ??
-        (sameList(order, value.answer) ? 'is the same order as the answer' : undefined) ??
-        (value.alsoAccepted.slice(0, index).some((earlier) => sameList(earlier, order)) ? 'is listed twice' : undefined)
-      if (problem) ctx.addIssue({ code: 'custom', path: ['alsoAccepted', index], message: problem })
+    const [first = []] = value.answers
+    value.answers.forEach((order, index) => {
+      if (index === 0) return
+      const listedTwice = value.answers.slice(0, index).some((earlier) => sameList(earlier, order))
+      const problem = notTheSamePieces(first, order) ?? (listedTwice ? 'is listed twice' : undefined)
+      if (problem) ctx.addIssue({ code: 'custom', path: ['answers', index], message: problem })
     })
   })
 
@@ -233,7 +284,7 @@ function sameList(a: readonly string[], b: readonly string[]): boolean {
 
 /** Why `order` is not a rearrangement of `pieces`, or undefined when it is one. */
 function notTheSamePieces(pieces: readonly string[], order: readonly string[]): string | undefined {
-  const must = 'must be the pieces of the answer in another order'
+  const must = 'must be the pieces of the first order in another order'
   const left = [...pieces]
   for (const piece of order) {
     const index = left.indexOf(piece)
@@ -284,6 +335,8 @@ const question = z.discriminatedUnion('type', [
   multipleChoiceQuestion,
   gapFillQuestion,
   trueFalseQuestion,
+  typedAnswerQuestion,
+  typedGapFillQuestion,
   findErrorQuestion,
   wordOrderQuestion,
   matchingQuestion,
@@ -489,10 +542,8 @@ export interface WordOrderQuestion extends QuestionBase {
   pieces: string[]
   /** The mark that closes the sentence. */
   end: (typeof SENTENCE_ENDS)[number]
-  /** The pieces in the right order. */
-  answer: string[]
-  /** Every other right order of the same pieces. */
-  alsoAccepted: string[][]
+  /** Every right order of the pieces. The first is the one a result shows as the right answer. */
+  answers: string[][]
 }
 
 /** The learner finds the partner of each item. The prompt is the items. */
@@ -506,10 +557,29 @@ export interface MatchingQuestion extends QuestionBase {
   answer: string[]
 }
 
+/**
+ * The learner types the answer. `answers` lists every accepted answer; the
+ * first is the one a result shows as the right answer.
+ */
+export interface TypedAnswerQuestion extends QuestionBase {
+  type: 'typed-answer'
+  answers: string[]
+}
+
+/** The prompt holds one gap; the learner types what fills it. `answers` as in a typed answer. */
+export interface TypedGapFillQuestion extends QuestionBase {
+  type: 'typed-gap-fill'
+  answers: string[]
+  /** The prompt cut at its gap, so the app can show the typed form inside the sentence. */
+  gap: { before: string; after: string }
+}
+
 export type Question =
   | MultipleChoiceQuestion
   | GapFillQuestion
   | TrueFalseQuestion
+  | TypedAnswerQuestion
+  | TypedGapFillQuestion
   | FindErrorQuestion
   | WordOrderQuestion
   | MatchingQuestion

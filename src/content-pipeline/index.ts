@@ -256,7 +256,8 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
 function compileQuestion(question: NonNullable<NodeFile['questions']>[number]): Question {
   const explanation = richTextIn(question.explanation)
   switch (question.type) {
-    case 'gap-fill': {
+    case 'gap-fill':
+    case 'typed-gap-fill': {
       // The schema guarantees exactly one gap.
       const [before = '', after = ''] = question.prompt.split(GAP)
       return { ...question, explanation, gap: { before, after } }
@@ -268,7 +269,8 @@ function compileQuestion(question: NonNullable<NodeFile['questions']>[number]): 
       return { ...question, explanation, parts, answer: words.findIndex((part) => part.word === question.answer) }
     }
     case 'word-order': {
-      const pieces = mixedAwayFrom(question.answer, [question.answer, ...question.alsoAccepted])
+      // The schema guarantees a first order, and that every other one is the same pieces.
+      const pieces = mixedAwayFrom(question.answers[0] ?? [], question.answers)
       return { ...question, explanation, pieces, prompt: pieces.join(SHOWN_APART) }
     }
     case 'matching': {

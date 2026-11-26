@@ -105,10 +105,17 @@ GitHub Pages and from a local folder.
   `src/app/milestones.ts`, outside the progress.
 - A new question type needs: its schema and compiled type in
   `src/content-model/index.ts`, its review view in
-  `src/content-pipeline/review.ts`, a case in `checkAnswer`, a case in
-  `QuestionView` and in `AnswerText` (`src/app/QuestionView.tsx`), and its
-  instruction in the three string files. The type checker points at each
-  place that is missing.
+  `src/content-pipeline/review.ts`, a case in `checkAnswer`, in `rightAnswer`
+  and in `isAnswered`, a case in `QuestionView` and in `AnswerText`
+  (`src/app/QuestionView.tsx`), and its instruction in the three string
+  files. The type checker points at each place that is missing.
+- A question whose answer is typed shows `TypedAnswer`
+  (`src/app/TypedAnswer.tsx`: the field and the ä, ö, ü, ß buttons) and is
+  checked with `checkTyped(text, acceptedAnswers)`. A check says `correct`,
+  and for an answer accepted with a note also `notes` (which slips:
+  `umlaut-substitute`, `capitalisation`) and `accepted` (the exact spelling).
+  `scoreAttempt` keeps both for each question, and the result lists them
+  under "Accepted with a note". A missing or wrong word is never a slip.
 - A type whose answer is built in steps (word ordering, matching) keeps the
   unfinished answer in the same place as a finished one; `isAnswered` in the
   learning engine says when the test may move on. A type that shows its
@@ -152,13 +159,16 @@ GitHub Pages and from a local folder.
   A journey that takes a test uses `tests/browser/taking-a-test.ts`: it
   answers right or wrong from the fixture node's own answer key, whatever
   questions the attempt drew. `takeCheckpoint` does the same for a checkpoint,
-  whose questions come from several nodes.
+  whose questions come from several nodes. The fixture node `grammar-010`
+  holds only typed questions and draws its whole pool, so a journey there
+  meets every question (`takeTypedTest`).
   A new question type gets a case in `giveAnswer`, `expectAnswerGiven` and
-  `rightAnswerText` there. A journey about one type calls `findQuestion`,
-  which brings a question of that type on screen.
-- The fixture content has three levels: A1 with one published topic and one
-  "coming soon", A2 with three published topics (`grammar-101` to
-  `grammar-103`) and B1 with nothing published.
+  `rightAnswerText` there. A journey about one type of `grammar-001` calls
+  `findQuestion`, which brings a question of that type on screen.
+- The fixture content has three levels: A1 with two published topics
+  (`grammar-001`, and `grammar-010` with typed questions) and one "coming
+  soon", A2 with three published topics (`grammar-101` to `grammar-103`) and
+  B1 with nothing published.
 - One question type: `tests/content-pipeline/extra-question.ts` adds one
   question to the fixture pool and gives back what the pipeline makes of it;
   `review-sheet.ts` holds a reviewer's answers to the fixture pool.

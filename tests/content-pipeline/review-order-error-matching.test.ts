@@ -44,7 +44,7 @@ test('how the pieces are mixed for the reviewer does not depend on the right ord
   for (const order of orders) {
     const content = await fixtureContentWith({
       [PUBLISHED]: changeNode((node) => {
-        node.questions.find((question: { id: string }) => question.id === 'order-1').answer = order
+        node.questions.find((question: { id: string }) => question.id === 'order-1').answers = [order]
         node.status = 'coming-soon'
       }),
     })
