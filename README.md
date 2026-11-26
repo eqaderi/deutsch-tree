@@ -480,7 +480,9 @@ The rules are in the learning engine, like every rule. The tree
   `src/content-model/audio.ts`. The format is MP3, 48 kbit/s, mono.
 - The pipeline attaches `audio` (a `Spoken`: `key`, `voice`, `text`) to every
   piece of German that has a play button: each example of a grammar node and
-  of a phrase, and each vocabulary word (with its article) and its example.
+  of a phrase, the right sentence of each common mistake (never the wrong
+  one), each phrase itself, and each vocabulary word (with its article) and
+  its example.
   `text` is what the voice says: `speakable` in `src/audio/speakable.ts`
   writes numbers, times, dates, years and amounts as words, because Piper
   misreads digits ("14:35 Uhr").
@@ -503,7 +505,9 @@ The rules are in the learning engine, like every rule. The tree
   pnpm audio:generate --voices <folder of the .onnx files> --piper <path to piper>
   ```
 
-  It says what has no file yet, removes the files no content needs any more,
+  It says what has no file yet, removes the files no content needs any more
+  (also those of a node set back to "coming soon"; they are made again when
+  it is published),
   and prints each file it makes. `--redo <key>,<key>` says items again when
   the voice slipped on them (Piper is not repeatable, so a second take often
   comes out right); `--force` says everything again, after a voice model

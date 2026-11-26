@@ -14,7 +14,7 @@ import { KindLabel } from './KindLabel.tsx'
 import { BackToTree, NotFound } from './NotFound.tsx'
 import { Panel } from './Panel.tsx'
 import { PhraseSections } from './PhraseSections.tsx'
-import { SpokenExample } from './PlayButton.tsx'
+import { PlayButton, SpokenExample } from './PlayButton.tsx'
 import { updateProgress, useProgress } from './progress.ts'
 import { RecogniseOnlyLabel, RecogniseOnlyNote } from './RecogniseOnly.tsx'
 import { VocabularySections } from './VocabularySections.tsx'
@@ -243,6 +243,7 @@ function GrammarSections({ content }: { content: GrammarContent }) {
               <div className="mistake-line mistake-right">
                 <span className="mistake-word">{strings.right}</span>
                 <German>{mistake.right}</German>
+                <PlayButton audio={mistake.audio} />
               </div>
               <p>
                 <RichText parts={mistake.why[language]} />

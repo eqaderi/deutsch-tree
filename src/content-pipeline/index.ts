@@ -499,6 +499,7 @@ function compilePhrasesContent(file: NodeFile): PhrasesContent {
   return {
     phrases: phrases.map((phrase) => ({
       ...phrase,
+      audio: spoken(phrase.de),
       meaning: richTextIn(phrase.meaning),
       example: { ...phrase.example, audio: spoken(phrase.example.de) },
     })),
@@ -518,7 +519,7 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
     ...(table && { table }),
     ...(diagrams && { diagrams: diagrams.map(compileDiagram) }),
     examples: examples.map((example) => ({ ...example, audio: spoken(example.de) })),
-    mistakes: mistakes.map((mistake) => ({ ...mistake, why: richTextIn(mistake.why) })),
+    mistakes: mistakes.map((mistake) => ({ ...mistake, why: richTextIn(mistake.why), audio: spoken(mistake.right) })),
     questions: questions.map(compileQuestion),
     attemptSize: file.attemptSize,
   }

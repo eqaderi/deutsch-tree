@@ -1468,6 +1468,8 @@ export interface Mistake {
   wrong: string
   right: string
   why: Localised<RichText>
+  /** What says `right`. The wrong sentence is never said: a learner should not hear it. */
+  audio: Spoken
 }
 
 interface QuestionBase {
@@ -1773,6 +1775,8 @@ export interface VocabularyContent {
 export interface Phrase {
   /** The phrase itself. */
   de: string
+  /** What says the phrase itself. */
+  audio: Spoken
   /** What it means in English and in Persian, and in simple German when it is used. */
   meaning: Localised<RichText>
   /** Ids of the exam-part nodes whose tasks the phrase serves. */
