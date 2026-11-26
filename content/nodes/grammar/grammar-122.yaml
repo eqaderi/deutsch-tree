@@ -1,0 +1,13 @@
+# Grammar list row 122.
+id: grammar-122
+kind: grammar
+level: A1
+chapter: a1-prepositions
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-062, grammar-121]
+title:
+  en: "Local, *Wohin?*: *nach*, *zu*, *in* + *Akkusativ*"
+  fa: "مقصد، *Wohin?*: *nach*، *zu*، *in* + *Akkusativ*"
+  de: "Richtung, *Wohin?*: *nach*, *zu*, *in* + Akkusativ"

@@ -1,0 +1,13 @@
+# Grammar list row 53.
+id: grammar-053
+kind: grammar
+level: B1
+chapter: b1-infinitive
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-144, grammar-159]
+title:
+  en: "*Infinitiv mit zu*"
+  fa: "مصدر با *zu*"
+  de: "Infinitiv mit *zu*"

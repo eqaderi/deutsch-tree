@@ -1,0 +1,13 @@
+# Grammar list row 38.
+id: grammar-038
+kind: grammar
+level: A2
+chapter: a2-polite-forms
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-030]
+title:
+  en: "*sollte* for advice"
+  fa: "*sollte* برای توصیه"
+  de: "*sollte* für Ratschläge"

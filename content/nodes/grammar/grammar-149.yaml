@@ -1,0 +1,13 @@
+# Grammar list row 149.
+id: grammar-149
+kind: grammar
+level: A1
+chapter: a1-building-sentences
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-139]
+title:
+  en: "*und*, *oder*, *aber*, *denn*"
+  fa: "*und*، *oder*، *aber*، *denn*"
+  de: "*und*, *oder*, *aber*, *denn*"

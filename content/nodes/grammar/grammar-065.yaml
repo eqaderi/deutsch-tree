@@ -1,0 +1,13 @@
+# Grammar list row 65.
+id: grammar-065
+kind: grammar
+level: A1
+chapter: a1-cases
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-061]
+title:
+  en: "*Genitiv* *-s* on names"
+  fa: "*-s* ملکی (*Genitiv*) روی نام‌ها"
+  de: "Genitiv-*s* bei Namen"

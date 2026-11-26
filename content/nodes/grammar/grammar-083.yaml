@@ -1,0 +1,13 @@
+# Grammar list row 83.
+id: grammar-083
+kind: grammar
+level: A1
+chapter: a1-pronouns
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-064, grammar-082]
+title:
+  en: "*Personalpronomen*, *Dativ*"
+  fa: "ضمیرهای شخصی در *Dativ*"
+  de: "Personalpronomen im Dativ"

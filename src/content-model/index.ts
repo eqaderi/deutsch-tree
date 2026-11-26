@@ -150,6 +150,9 @@ const gapFillQuestion = z
     answerIsOneOption(value, ctx)
   })
 
+/** A CEFR level such as A1. A new level needs no code change. */
+const level = z.string().regex(/^[A-C][12]$/, 'must be a level such as A1, A2 or B1')
+
 /** The prompt is a German sentence; the learner says whether it is correct German. */
 const trueFalseQuestion = z.strictObject({
   ...questionBase,
@@ -226,9 +229,13 @@ export const nodeFileSchema = z
   .strictObject({
     id: nodeId,
     kind: z.enum(NODE_KINDS),
-    /** A CEFR level such as A1. A new level needs no code change. */
-    level: z.string().regex(/^[A-C][12]$/, 'must be a level such as A1, A2 or B1'),
-    /** Position in the curriculum order; lower comes first. */
+    level,
+    /** Id of the chapter this node belongs to: an entry of chapters.yaml with the same level and kind. */
+    chapter: z.string({
+      error: ({ input }) =>
+        input === undefined ? 'is missing: every node belongs to a chapter of chapters.yaml' : undefined,
+    }),
+    /** Position inside its chapter; lower comes first. The chapter list orders the chapters. */
     order: z.number().positive(),
     status: z.enum(NODE_STATUSES),
     recogniseOnly: z.boolean().default(false),
@@ -280,6 +287,35 @@ export const nodeFileSchema = z
 export type NodeFile = z.infer<typeof nodeFileSchema>
 
 // ---------------------------------------------------------------------------
+// Chapter list schema (source): chapters.yaml
+// ---------------------------------------------------------------------------
+
+/**
+ * A chapter is a named group of nodes of one kind inside one level. The list
+ * is written in curriculum order: the curriculum runs through the chapters
+ * from the first to the last, and inside a chapter by each node's `order`.
+ */
+const chapter = z.strictObject({
+  id: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "a1-cases"'),
+  level,
+  kind: z.enum(NODE_KINDS),
+  /** The chapter's name in the three languages. */
+  title: localised,
+})
+
+export const chaptersFileSchema = z.array(chapter).superRefine((chapters, ctx) => {
+  const seen = new Set<string>()
+  chapters.forEach(({ id }, index) => {
+    if (seen.has(id)) {
+      ctx.addIssue({ code: 'custom', path: [index, 'id'], message: `duplicated chapter id: "${id}"` })
+    }
+    seen.add(id)
+  })
+})
+
+export type ChapterEntry = z.infer<typeof chapter>
+
+// ---------------------------------------------------------------------------
 // Compiled bundle (what the app loads)
 // ---------------------------------------------------------------------------
 
@@ -291,11 +327,23 @@ export interface NodeSummary {
   id: string
   kind: NodeKind
   level: string
+  /** Id of its chapter. */
+  chapter: string
+  /** Position inside its chapter. `ContentIndex.nodes` is already in curriculum order. */
   order: number
   status: NodeStatus
   recogniseOnly: boolean
   prerequisites: string[]
-  title: Localised
+  /** German inside a title is marked, like in every other text for the learner. */
+  title: Localised<RichText>
+}
+
+/** A chapter as the tree shows it: a stop on the line of its level. */
+export interface ChapterSummary {
+  id: string
+  level: string
+  kind: NodeKind
+  title: Localised<RichText>
 }
 
 export interface GrammarTable {
@@ -385,8 +433,9 @@ export interface CompiledNode extends NodeSummary {
   content: GrammarContent | null
 }
 
-/** Nodes in curriculum order. */
+/** Chapters and nodes, both in curriculum order: chapter by chapter, and inside a chapter by `order`. */
 export interface ContentIndex {
+  chapters: ChapterSummary[]
   nodes: NodeSummary[]
 }
 

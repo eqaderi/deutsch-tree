@@ -1,6 +1,7 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { contentPipeline } from './src/content-pipeline/vite-plugin.ts'
+import { keepPacksOutOfTheSite } from './src/pack-builder/vite-plugin.ts'
 
 export default defineConfig({
   // Relative, so the same build works under /deutsch-tree/ on GitHub Pages
@@ -10,5 +11,7 @@ export default defineConfig({
     react(),
     // CONTENT_DIR lets the browser tests build the site from fixture content.
     contentPipeline(process.env.CONTENT_DIR ?? 'content'),
+    // The build fails rather than put anything from private/ into the site.
+    keepPacksOutOfTheSite(),
   ],
 })

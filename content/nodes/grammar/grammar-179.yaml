@@ -1,0 +1,13 @@
+# Grammar list row 179.
+id: grammar-179
+kind: grammar
+level: A2
+chapter: a2-relative-clauses
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-177]
+title:
+  en: "Embedded relative clause"
+  fa: "جملهٔ موصولی در میان جملهٔ اصلی"
+  de: "Relativsatz in der Mitte vom Hauptsatz"

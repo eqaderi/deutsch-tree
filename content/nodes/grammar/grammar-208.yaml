@@ -1,0 +1,13 @@
+# Grammar list row 208.
+id: grammar-208
+kind: grammar
+level: B1
+chapter: b1-infinitive
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-011, grammar-022, grammar-053]
+title:
+  en: "Infinitive without *zu*: *sehen*, *hören*; overview"
+  fa: "مصدر بدون *zu*: *sehen*، *hören*؛ مرور کلی"
+  de: "Infinitiv ohne *zu*: *sehen*, *hören*; Überblick"

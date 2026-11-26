@@ -1,0 +1,13 @@
+# Grammar list row 135.
+id: grammar-135
+kind: grammar
+level: B1
+chapter: b1-prepositions
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-071]
+title:
+  en: "*wegen* + *Genitiv*/*Dativ*"
+  fa: "*wegen* + *Genitiv* یا *Dativ*"
+  de: "*wegen* + Genitiv / Dativ"

@@ -1,0 +1,13 @@
+# Grammar list row 39.
+id: grammar-039
+kind: grammar
+level: A2
+chapter: a2-polite-forms
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-035, grammar-036, grammar-037]
+title:
+  en: "*wäre*, *hätte*, *würde*, *könnte* as a paradigm"
+  fa: "*wäre*، *hätte*، *würde* و *könnte*: همهٔ صیغه‌ها"
+  de: "*wäre*, *hätte*, *würde*, *könnte*: alle Formen"

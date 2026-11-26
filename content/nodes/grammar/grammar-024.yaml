@@ -1,0 +1,13 @@
+# Grammar list row 24.
+id: grammar-024
+kind: grammar
+level: B1
+chapter: b1-tenses
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-020, grammar-023]
+title:
+  en: "*Plusquamperfekt*"
+  fa: "ماضی بعید (*Plusquamperfekt*)"
+  de: "Plusquamperfekt"

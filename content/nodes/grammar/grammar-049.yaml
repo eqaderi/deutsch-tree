@@ -1,0 +1,13 @@
+# Grammar list row 49.
+id: grammar-049
+kind: grammar
+level: B1
+chapter: b1-passive
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-015, grammar-048]
+title:
+  en: "*Passiv Perfekt*"
+  fa: "مجهول در *Perfekt* (*Passiv Perfekt*)"
+  de: "Passiv Perfekt"

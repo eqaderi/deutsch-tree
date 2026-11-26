@@ -21,6 +21,7 @@ machine `pnpm exec playwright install chromium` for the browser tests.
 | `pnpm review:pool <id>`, `pnpm review:record <id>` | The blind review that a node needs before it is published. The steps are in [content/README.md](content/README.md). |
 | `pnpm test:unit` | All Vitest tests (`tests/**/*.test.ts`). `pnpm test:pipeline` runs only the content pipeline tests. |
 | `pnpm test:browser` | Playwright journeys (`tests/browser/*.spec.ts`) against the built site with fixture content. |
+| `pnpm pack:build` | Builds a private pack from a book the learner owns. Options and format: [docs/private-packs.md](docs/private-packs.md). |
 | `pnpm dev` | Dev server on the real content. Content files reload on save. |
 | `pnpm build` | Compiles the content and builds the site into `dist/`. Fails on any content error. |
 
@@ -34,23 +35,27 @@ ending, because the pipeline runs directly in Node.
 
 | Folder | Module |
 |---|---|
-| `content/` | The real content: one YAML file per node under `content/nodes/`. |
+| `content/` | The real content: one YAML file per node under `content/nodes/`, and the chapters that group them in `content/chapters.yaml`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
 | `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress. No interface, no storage; randomness is passed in. |
 | `src/progress-store/` | Keeps progress in browser storage, with a version number. It only stores; the learning engine decides how progress changes. |
 | `src/app/` | App shell: routes, tree, node page, test. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
-| `tests/fixtures/content/` | Small invented content that tests run on. Tests never depend on the real content. |
+| `tests/fixtures/content/` | Small invented content that tests run on. Tests of code never depend on the real content. |
+| `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows". |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
 | `tests/progress-store/` | The progress store on a stand-in for browser storage, including text saved by each earlier version. |
 | `tests/language/` | The interface strings of the three languages, compared key by key. |
 | `tests/browser/` | Seam 3: whole journeys in a browser. |
+| `src/pack-builder/` | A learner's own exam book in, a private pack out. `cli.ts` is the command; `vite-plugin.ts` keeps packs out of the site build. The pack format's schema is `src/content-model/pack.ts`. |
+| `tests/pack-builder/` | Seam 4: build a pack from a synthetic book (`fixture.ts`) and assert on the pack. |
 
-The app never reads node files. It fetches `content/index.json` (every node's
-summary, in curriculum order) and `content/nodes/<id>.json` (one node's page),
-both written by the pipeline at build time.
+The app never reads node files. It fetches `content/index.json` (the chapters
+and every node's summary, both in curriculum order) and
+`content/nodes/<id>.json` (one node's page), both written by the pipeline at
+build time.
 
 Page addresses live after the `#`, for example `#/node/grammar-001`. The site
 is plain files, so this is what keeps direct links and reloads working on
@@ -120,3 +125,5 @@ to "GitHub Actions" once in the repository settings.
 ## Not in version control
 
 `research/` and `private/` are ignored on purpose and must never be committed.
+`private/` holds private packs; `pnpm build` fails rather than put anything from
+it into the site. See [docs/private-packs.md](docs/private-packs.md).

@@ -1,0 +1,13 @@
+# Grammar list row 8.
+id: grammar-008
+kind: grammar
+level: A1
+chapter: a1-verb-patterns
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-003, grammar-005, grammar-007]
+title:
+  en: "*Imperativ*, *du*- and *ihr*-form"
+  fa: "امر (*Imperativ*) با *du* و *ihr*"
+  de: "Imperativ mit *du* und *ihr*"

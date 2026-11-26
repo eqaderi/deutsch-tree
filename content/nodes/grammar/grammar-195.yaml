@@ -1,0 +1,13 @@
+# Grammar list row 195.
+id: grammar-195
+kind: grammar
+level: B1
+chapter: b1-fractions-words-particles
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-106]
+title:
+  en: "Fractions"
+  fa: "کسرها (*ein Drittel*، *die Hälfte*)"
+  de: "Bruchzahlen (*ein Drittel*, *die Hälfte*)"

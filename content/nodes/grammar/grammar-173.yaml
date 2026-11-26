@@ -1,0 +1,13 @@
+# Grammar list row 173.
+id: grammar-173
+kind: grammar
+level: B1
+chapter: b1-reason-condition-clauses
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-159]
+title:
+  en: "*so … dass* / *sodass*"
+  fa: "*so … dass* / *sodass*"
+  de: "*so … dass* / *sodass*"
