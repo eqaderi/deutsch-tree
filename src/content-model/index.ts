@@ -20,22 +20,41 @@ export type NodeKind = (typeof NODE_KINDS)[number]
 export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
 
+/**
+ * The fewest questions a published node's pool may hold. An attempt draws 10
+ * to 15, so a smaller pool could not give a fresh set on a retry. The spec
+ * asks for about 15 to 20 for a small topic and up to 40 for a large one.
+ */
+export const MINIMUM_POOL_SIZE = 15
+
 // ---------------------------------------------------------------------------
 // Node file schema (source)
 // ---------------------------------------------------------------------------
 
 const text = z.string().trim().min(1, 'must not be empty')
 
-const localised = z.strictObject({ en: text, fa: text, de: text })
+/** Says which language is absent, instead of a bare "expected string". */
+const missingIn = (language: Language) => ({
+  error: (issue: { input?: unknown }) =>
+    issue.input === undefined ? `is missing; this text is needed in ${language}` : undefined,
+})
+
+const textIn = (language: Language) => z.string(missingIn(language)).trim().min(1, 'must not be empty')
+
+const localised = z.strictObject({ en: textIn('en'), fa: textIn('fa'), de: textIn('de') })
 
 const nodeId = z
   .string()
   .regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'must be lower-case words joined by hyphens, like "grammar-001"')
 
-const explanation = z.strictObject({
-  /** The rule in two or three sentences. German inside it goes in *asterisks*. */
-  rule: text,
-})
+const explanationIn = (language: Language) =>
+  z.strictObject(
+    {
+      /** The rule in two or three sentences. German inside it goes in *asterisks*. */
+      rule: text,
+    },
+    missingIn(language),
+  )
 
 const table = z
   .strictObject({
@@ -55,7 +74,7 @@ const table = z
     })
   })
 
-const example = z.strictObject({ de: text, en: text, fa: text })
+const example = z.strictObject({ de: text, en: textIn('en'), fa: textIn('fa') })
 
 const mistake = z.strictObject({ wrong: text, right: text, why: localised })
 
@@ -73,16 +92,30 @@ const multipleChoiceQuestion = z
     type: z.literal('multiple-choice'),
     options: z.array(text).min(2),
     /** The text of the one correct option. */
-    answer: text,
+    answer: z
+      .string({
+        error: ({ input }) => {
+          if (input === undefined) return 'no correct answer: the question states none'
+          if (Array.isArray(input)) {
+            return `${input.length} correct answers: a multiple-choice question has exactly one`
+          }
+          return undefined
+        },
+      })
+      .trim()
+      .min(1, 'must not be empty'),
   })
   .superRefine((value, ctx) => {
-    if (value.options.filter((option) => option === value.answer).length !== 1) {
-      ctx.addIssue({
-        code: 'custom',
-        path: ['answer'],
-        message: 'must match exactly one of the options',
-      })
-    }
+    const matches = value.options.filter((option) => option === value.answer).length
+    if (matches === 1) return
+    ctx.addIssue({
+      code: 'custom',
+      path: ['answer'],
+      message:
+        matches === 0
+          ? `no correct answer: "${value.answer}" is not one of the options`
+          : `${matches} correct answers: "${value.answer}" is in the options ${matches} times`,
+    })
   })
 
 /** Later question types join this union under their own `type`. */
@@ -105,7 +138,9 @@ export const nodeFileSchema = z
     prerequisites: z.array(nodeId).default([]),
     title: localised,
 
-    explanations: z.strictObject({ en: explanation, fa: explanation, de: explanation }).optional(),
+    explanations: z
+      .strictObject({ en: explanationIn('en'), fa: explanationIn('fa'), de: explanationIn('de') })
+      .optional(),
     table: table.optional(),
     examples: z.array(example).min(1).optional(),
     mistakes: z.array(mistake).min(1).optional(),
