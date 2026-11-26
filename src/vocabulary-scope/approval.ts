@@ -64,7 +64,7 @@ async function generatedParts(contentDir: string): Promise<Record<string, string
       const sizes = inLevel(vocabulary).map((node) => wordsOf.get(node.id)?.length ?? 0)
       return `| ${level} | ${count(inLevel(scope).length)} | ${inLevel(vocabulary).length} | ${
         inLevel(chapters).filter((chapter) => chapter.kind === 'vocabulary').length
-      } | ${Math.min(...sizes)} and ${Math.max(...sizes)} words |`
+      } | ${sizes.length === 0 ? '–' : `${Math.min(...sizes)} and ${Math.max(...sizes)} words`} |`
     }),
   ].join('\n')
 

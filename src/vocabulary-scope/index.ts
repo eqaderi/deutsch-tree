@@ -117,7 +117,15 @@ export interface Corrections {
 /** A row of a headword table, by column name. */
 type Row = Record<string, string>
 
-export type LeftOutReason = 'affix' | 'feminine form' | 'regional variant' | 'word group' | 'same word' | 'no word'
+export const LEFT_OUT_REASONS = [
+  'affix',
+  'feminine form',
+  'regional variant',
+  'word group',
+  'same word',
+  'no word',
+] as const
+export type LeftOutReason = (typeof LEFT_OUT_REASONS)[number]
 
 export interface LeftOut {
   /** The headword as the lists spell it. */
@@ -416,7 +424,19 @@ export function formatLeftOut(leftOut: readonly LeftOut[]): string {
   return `${[LEFT_OUT_COLUMNS.join('\t'), ...lines].join('\n')}\n`
 }
 
-/** The rows of the left-out file. */
+const leftOutSchema: z.ZodType<LeftOut> = z.strictObject({
+  word: z.string().min(1),
+  level: z.string(),
+  reason: z.enum(LEFT_OUT_REASONS),
+  notedOn: z.string(),
+})
+
+/** The rows of the left-out file. A row with a reason the scope rule never gives is an error. */
 export function parseLeftOut(text: string): LeftOut[] {
-  return parseTable(text) as unknown as LeftOut[]
+  return parseTable(text).map((row, index) => {
+    const read = leftOutSchema.safeParse(row)
+    if (!read.success)
+      throw new Error(`${LEFT_OUT_FILE}, row ${index + 1} (${JSON.stringify(row)}): ${read.error.issues[0]?.message}`)
+    return read.data
+  })
 }
