@@ -3,7 +3,7 @@
  * storage, no clock. Whatever is random comes in as a `Random`, so a caller
  * (and a test) decides the dice.
  */
-import type { Question } from '../content-model/index.ts'
+import type { NodeSummary, Question } from '../content-model/index.ts'
 
 /** A source of randomness with the contract of Math.random: a number from 0 up to, not including, 1. */
 export type Random = () => number
@@ -117,4 +117,73 @@ export function applyAttempt(progress: Progress, nodeId: string, result: Pick<At
     ...progress,
     nodes: { ...progress.nodes, [nodeId]: { done: before.done || result.passed, attempts: before.attempts + 1 } },
   }
+}
+
+/**
+ * A point at which a learner has done enough that losing it would hurt: the
+ * app then suggests exporting progress to a file, once per milestone.
+ */
+export type Milestone =
+  /** Every topic of the level that can be taken is done. */
+  | { id: string; kind: 'level'; level: string }
+  /** This many topics are done, counted in steps of TOPICS_PER_MILESTONE. */
+  | { id: string; kind: 'topics'; count: number }
+
+export const TOPICS_PER_MILESTONE = 10
+
+/**
+ * The milestones this progress has reached: first the finished levels, in
+ * the order of `nodes` (the content index, in curriculum order), then the
+ * latest step of done topics.
+ *
+ * A level is finished when all its published topics are done and it has at
+ * least one; a topic that is coming soon cannot hold a level open. Done
+ * topics are counted from the progress alone, so a topic the content no
+ * longer has still counts.
+ */
+export function milestonesReached(
+  nodes: ReadonlyArray<Pick<NodeSummary, 'id' | 'level' | 'status'>>,
+  progress: Progress,
+): Milestone[] {
+  const reached: Milestone[] = []
+
+  const published = nodes.filter((node) => node.status === 'published')
+  for (const level of new Set(published.map((node) => node.level))) {
+    if (published.every((node) => node.level !== level || isDone(progress, node.id))) {
+      reached.push({ id: `level:${level}`, kind: 'level', level })
+    }
+  }
+
+  const done = doneCount(progress)
+  const count = done - (done % TOPICS_PER_MILESTONE)
+  if (count > 0) reached.push({ id: `topics:${count}`, kind: 'topics', count })
+
+  return reached
+}
+
+/**
+ * The one milestone worth telling the learner about, if any: the latest
+ * finished level whose identifier is not in `acknowledged`, or else the
+ * count of done topics.
+ */
+export function milestoneToMention(
+  reached: readonly Milestone[],
+  acknowledged: readonly string[],
+): Milestone | undefined {
+  const fresh = reached.filter((milestone) => !acknowledged.includes(milestone.id))
+  return fresh.findLast((milestone) => milestone.kind === 'level') ?? fresh[0]
+}
+
+/** How many topics are done. */
+export function doneCount(progress: Progress): number {
+  return Object.values(progress.nodes).filter((node) => node.done).length
+}
+
+/**
+ * Whether anything at all has been recorded, so that replacing the progress
+ * would lose something. Every field of `Progress` is a list or a record that
+ * starts empty; a field of another kind needs its own line here.
+ */
+export function hasProgress(progress: Progress): boolean {
+  return Object.values(progress).some((field) => Object.keys(field).length > 0)
 }

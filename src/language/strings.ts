@@ -78,6 +78,44 @@ export const en = {
   wrongAnswers: 'Wrong answers',
   yourAnswer: 'Your answer',
   rightAnswer: 'Right answer',
+
+  // Backup: progress exported to a file and imported from one.
+  backupLink: 'Back up progress',
+  backupTitle: 'Back up your progress',
+  backupWhy:
+    'Your progress is kept only in this browser, on this device. If the browser’s data is cleared, it is gone. A file keeps it safe, and takes it to another device.',
+  /** A day as this language writes it. Use it for every date shown. */
+  date: (date: Date) => new Intl.DateTimeFormat('en-GB', { dateStyle: 'long' }).format(date),
+  topicsDone: (count: number) => (count === 1 ? '1 topic done' : `${count} topics done`),
+  onThisDevice: 'On this device',
+  inTheFile: 'In the file',
+  exportTitle: 'Export',
+  exportText: 'Saves a file with your progress on this device. Nothing is uploaded.',
+  exportProgress: 'Export progress',
+  /** The name of the file follows on a line of its own. */
+  exportedAs: 'Your progress is now in this file:',
+  keepFileSafe: 'Keep the file somewhere safe.',
+  importTitle: 'Import',
+  importText:
+    'Brings back the progress from a file that you exported here or on another device. It takes the place of the progress on this device.',
+  importFile: 'Import a progress file',
+  importReplaceTitle: 'Replace the progress on this device?',
+  importReplaceText: 'The file takes the place of everything on this device. This cannot be undone.',
+  exportedOn: (date: string) => `exported on ${date}`,
+  replaceProgress: 'Replace progress',
+  cancel: 'Cancel',
+  imported: 'Progress imported.',
+  importNotProgress: 'This is not a deutsch-tree progress file, or the file is damaged. Nothing was changed.',
+  importNewerVersion:
+    'This file was saved by a newer version of deutsch-tree than the one open here. Reload this page to get the newest version, then import the file again. Nothing was changed.',
+  savedByNewerVersion:
+    'The progress in this browser was saved by a newer version of deutsch-tree. Reload the page to get that version. Until then your progress is not shown, and nothing you do here is saved.',
+  reload: 'Reload',
+  // A milestone, said once on the tree, with the suggestion to back up.
+  milestoneLevel: (level: string) => `You have done every ${level} topic there is so far.`,
+  milestoneTopics: (count: number) => `You have done ${count} topics.`,
+  suggestBackup: 'Your progress is kept only in this browser. A copy in a file keeps it safe.',
+  notNow: 'Not now',
 }
 
 /** The shape of `en` with the wording left open: every key, any text. */

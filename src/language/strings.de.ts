@@ -69,4 +69,39 @@ export const de: Strings = {
   wrongAnswers: 'Falsche Antworten',
   yourAnswer: 'Deine Antwort',
   rightAnswer: 'Richtige Antwort',
+
+  backupLink: 'Fortschritt sichern',
+  backupTitle: 'Deinen Fortschritt sichern',
+  backupWhy:
+    'Dein Fortschritt ist nur in diesem Browser auf diesem Gerät gespeichert. Wenn die Daten vom Browser gelöscht werden, ist er weg. Eine Datei macht ihn sicher. Mit der Datei kannst du ihn auch auf ein anderes Gerät bringen.',
+  date: (date) => new Intl.DateTimeFormat('de-DE', { dateStyle: 'long' }).format(date),
+  topicsDone: (count) => (count === 1 ? '1 Thema fertig' : `${count} Themen fertig`),
+  onThisDevice: 'Auf diesem Gerät',
+  inTheFile: 'In der Datei',
+  exportTitle: 'Als Datei speichern',
+  exportText: 'Du bekommst eine Datei mit deinem Fortschritt auf dieses Gerät. Nichts geht ins Internet.',
+  exportProgress: 'Fortschritt als Datei speichern',
+  exportedAs: 'Dein Fortschritt ist jetzt in dieser Datei:',
+  keepFileSafe: 'Heb die Datei gut auf.',
+  importTitle: 'Aus einer Datei laden',
+  importText:
+    'Hier holst du den Fortschritt aus einer Datei zurück. Die Datei kann von diesem Gerät oder von einem anderen Gerät sein. Sie ersetzt den Fortschritt auf diesem Gerät.',
+  importFile: 'Datei mit Fortschritt laden',
+  importReplaceTitle: 'Fortschritt auf diesem Gerät ersetzen?',
+  importReplaceText: 'Die Datei ersetzt alles auf diesem Gerät. Das kannst du später nicht mehr ändern.',
+  exportedOn: (date) => `gespeichert am ${date}`,
+  replaceProgress: 'Fortschritt ersetzen',
+  cancel: 'Abbrechen',
+  imported: 'Der Fortschritt ist geladen.',
+  importNotProgress:
+    'Das ist keine Fortschritt-Datei von deutsch-tree, oder die Datei ist kaputt. Nichts ist geändert.',
+  importNewerVersion:
+    'Diese Datei kommt von einer neueren Version von deutsch-tree. Lade diese Seite neu, dann hast du die neueste Version. Lade danach die Datei noch einmal. Nichts ist geändert.',
+  savedByNewerVersion:
+    'Der Fortschritt in diesem Browser kommt von einer neueren Version von deutsch-tree. Lade die Seite neu, dann hast du diese Version. Bis dann siehst du deinen Fortschritt nicht, und nichts wird gespeichert.',
+  reload: 'Seite neu laden',
+  milestoneLevel: (level) => `Du hast alle ${level}-Themen gemacht, die es bis jetzt gibt.`,
+  milestoneTopics: (count) => `Du hast ${count} Themen gemacht.`,
+  suggestBackup: 'Dein Fortschritt ist nur in diesem Browser gespeichert. Eine Kopie in einer Datei macht ihn sicher.',
+  notNow: 'Jetzt nicht',
 }
