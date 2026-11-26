@@ -115,6 +115,14 @@ GitHub Pages and from a local folder.
   out from the content index: every published topic of a level done, or
   every tenth done topic. Which ones were already mentioned is remembered by
   `src/app/milestones.ts`, outside the progress.
+- A node of any kind with a pool is tested the same way. What differs is its
+  page: `NodePage.tsx` shows the grammar sections, or for a phrases node
+  `PhraseSections.tsx` (what the phrases are for, then a card per phrase with
+  its meaning, an example and links to the exam parts it serves). A kind
+  gets a page by naming its sections in `SECTIONS_OF_A_PUBLISHED` in
+  `src/content-model/index.ts`, a compile step in
+  `src/content-pipeline/index.ts`, and a case in `NodePage.tsx`; its
+  passages for search go in `search-data.ts`.
 - A new question type needs: its schema and compiled type in
   `src/content-model/index.ts`, its review view in
   `src/content-pipeline/review.ts`, a case in `checkAnswer`, in `rightAnswer`
