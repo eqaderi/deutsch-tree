@@ -2,6 +2,7 @@ import { expect, test } from 'vitest'
 import {
   applyAttempt,
   emptyProgress,
+  hasProgress,
   milestonesReached,
   milestoneToMention,
   type Progress,
@@ -76,4 +77,10 @@ test('of several new milestones, the latest level is the one mentioned', () => {
   const reached = milestonesReached(content, done(...topics(8), 'a1-1', 'a1-2', 'a2-1'))
 
   expect(milestoneToMention(reached, [])?.id).toBe('level:A2')
+})
+
+test('there is progress to lose from the first finished test on, passed or not', () => {
+  expect(hasProgress(emptyProgress())).toBe(false)
+  expect(hasProgress(applyAttempt(emptyProgress(), 'a1-1', { passed: false }))).toBe(true)
+  expect(hasProgress(done('a1-1'))).toBe(true)
 })

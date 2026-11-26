@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router'
 import type { NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { isDone } from '../learning-engine/index.ts'
+import { BackupSuggestion } from './BackupSuggestion.tsx'
 import { loadIndex } from './content.ts'
 import { KindLabel } from './KindLabel.tsx'
 import { useProgress } from './progress.ts'
@@ -30,6 +31,8 @@ export function TreePage() {
         <h1>{strings.treeTitle}</h1>
         <p>{strings.treeIntro}</p>
       </header>
+
+      <BackupSuggestion />
 
       <nav className="strip" aria-label={strings.levels}>
         <span className="strip-end">{strings.routeStart}</span>

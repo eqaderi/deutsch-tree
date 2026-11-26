@@ -178,3 +178,12 @@ export function milestoneToMention(
 export function doneCount(progress: Progress): number {
   return Object.values(progress.nodes).filter((node) => node.done).length
 }
+
+/**
+ * Whether anything at all has been recorded, so that replacing the progress
+ * would lose something. Every field of `Progress` is a list or a record that
+ * starts empty; a field of another kind needs its own line here.
+ */
+export function hasProgress(progress: Progress): boolean {
+  return Object.values(progress).some((field) => Object.keys(field).length > 0)
+}
