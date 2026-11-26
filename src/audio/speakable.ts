@@ -31,6 +31,8 @@ const MONTHS = 'Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktobe
 /** A number not touching another digit or a separator, so "3.5.2025" is never read in pieces. */
 const ALONE_BEFORE = '(?<![\\d.,:])'
 const ALONE_AFTER = '(?![\\d]|[.,:]\\d)'
+/** Followed by a noun: "1500 Menschen" counts people and is no year. */
+const BEFORE_A_NOUN = '\\s+\\p{Lu}'
 
 /** 1 to 99. `ending` says whether the number ends here ("eins") or goes on ("ein" in "eintausend"). */
 function belowHundred(n: number, ending: boolean): string {
@@ -132,10 +134,17 @@ const RULES: Array<[RegExp, (...groups: string[]) => string]> = [
     new RegExp(`${ALONE_BEFORE}(\\d+),(\\d+)${ALONE_AFTER}`, 'g'),
     (_match, whole, fraction) => decimalWords(whole, fraction),
   ],
-  // A year: four digits from 1100 to 1999.
-  [new RegExp(`${ALONE_BEFORE}(1[1-9]\\d{2})${ALONE_AFTER}`, 'g'), (year) => yearWords(Number(year))],
-  // Any other whole number.
-  [new RegExp(`${ALONE_BEFORE}(\\d{1,9})${ALONE_AFTER}`, 'g'), (number) => numberWords(Number(number))],
+  // A year: four digits from 1100 to 1999, not before a noun.
+  [
+    new RegExp(`${ALONE_BEFORE}(1[1-9]\\d{2})${ALONE_AFTER}(?!${BEFORE_A_NOUN})`, 'gu'),
+    (year) => yearWords(Number(year)),
+  ],
+  // Any other whole number. A 1 before a noun is left as a digit: "ein Bruder" or
+  // "eine Schwester" depends on the noun, so the content check asks for it in words.
+  [
+    new RegExp(`${ALONE_BEFORE}(?!1${BEFORE_A_NOUN})(\\d{1,9})${ALONE_AFTER}`, 'gu'),
+    (number) => numberWords(Number(number)),
+  ],
 ]
 
 /** The text as the voice says it: tidied, and with every number it knows written as words. */
