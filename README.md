@@ -18,12 +18,13 @@ machine `pnpm exec playwright install chromium` for the browser tests.
 | `pnpm typecheck` | TypeScript, whole project. |
 | `pnpm lint` | Biome: formatting and lint rules. `pnpm lint:fix` repairs what it can. |
 | `pnpm content:check` | The content pipeline on the real content in `content/`. Prints the report; fails on any error. |
+| `pnpm review:pool <id>`, `pnpm review:record <id>` | The blind review that a node needs before it is published. The steps are in [content/README.md](content/README.md). |
 | `pnpm test:unit` | All Vitest tests (`tests/**/*.test.ts`). `pnpm test:pipeline` runs only the content pipeline tests. |
 | `pnpm test:browser` | Playwright journeys (`tests/browser/*.spec.ts`) against the built site with fixture content. |
 | `pnpm dev` | Dev server on the real content. Content files reload on save. |
 | `pnpm build` | Compiles the content and builds the site into `dist/`. Fails on any content error. |
 
-`CONTENT_DIR=<folder>` makes `dev`, `build` and `content:check` use another
+`CONTENT_DIR=<folder>` makes `dev`, `build`, `content:check` and the review commands use another
 content folder, for example `tests/fixtures/content`.
 
 ## Layout
@@ -72,6 +73,12 @@ GitHub Pages and from a local folder.
   get a temporary copy with files changed or added; `changeNode` changes a
   node as data. One test file per rule. How to add a rule and its test:
   `content/README.md`, "Adding a check".
+  A fixture node is reviewed like a real one. A test that changes the
+  questions of the published node uses `changeReviewedNode`, or it also gets
+  "needs a new review". After changing the questions in a fixture file,
+  record its review again with the two review commands and
+  `--content tests/fixtures/content`; the fixtures are invented, so you may
+  fill in that sheet yourself as "Fixture reviewer".
 - Browser: import `test` and `expect` from `tests/browser/test.ts`, not from
   Playwright. That adds the rule that the site talks to no other server (no
   font service, no analytics). Each run builds the site from the fixture

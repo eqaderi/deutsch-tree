@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { changeNode, fixtureContent, fixtureContentWith, PUBLISHED } from './fixture.ts'
+import { changeNode, changeReviewedNode, fixtureContent, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
 const explanation = {
   en: 'With *du* the ending is *-st*.',
@@ -11,7 +11,7 @@ const explanation = {
 /** The fixture content with one more question, "extra", at the end of the published node's pool. */
 function withQuestion(question: Record<string, unknown>): Promise<string> {
   return fixtureContentWith({
-    [PUBLISHED]: changeNode((node) => {
+    [PUBLISHED]: changeReviewedNode((node) => {
       node.questions.push({ id: 'extra', ...question, explanation })
     }),
   })

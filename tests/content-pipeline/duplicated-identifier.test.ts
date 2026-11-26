@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import { compileContent } from '../../src/content-pipeline/index.ts'
-import { COMING_SOON, changeNode, comingSoonNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
+import { COMING_SOON, changeReviewedNode, comingSoonNode, fixtureContentWith, PUBLISHED } from './fixture.ts'
 
 test('a duplicated node identifier is rejected, and the report names both files', async () => {
   const content = await fixtureContentWith({
@@ -23,7 +23,7 @@ test('a duplicated node identifier is rejected, and the report names both files'
 
 test('a duplicated question identifier inside a node is rejected, and the report names the question', async () => {
   const content = await fixtureContentWith({
-    [PUBLISHED]: changeNode((node) => {
+    [PUBLISHED]: changeReviewedNode((node) => {
       node.questions[1].id = 'q1'
     }),
   })
