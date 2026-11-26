@@ -162,3 +162,75 @@ questions:
       en: With the polite *Sie* the ending is *-en*.
       fa: با *Sie* (شکل مؤدبانه) پایانه *-en* است.
       de: Bei *Sie* (höflich) ist die Endung *-en*.
+  - id: q9
+    type: multiple-choice
+    prompt: Ich ___ Musik.
+    options: [hören, höre, hörst]
+    answer: höre
+    explanation:
+      en: With *ich* the ending is *-e*.
+      fa: با *ich* پایانه *-e* است.
+      de: Bei *ich* ist die Endung *-e*.
+  - id: q10
+    type: multiple-choice
+    prompt: Tom ___ ein Buch.
+    options: [kauft, kaufe, kaufst]
+    answer: kauft
+    explanation:
+      en: Tom is one person you talk about (*er*), so the ending is *-t*.
+      fa: تام یک نفر است که درباره‌اش حرف می‌زنیم (*er*)، پس پایانه *-t* است.
+      de: Tom ist eine Person (*er*). Die Endung ist *-t*.
+  - id: q11
+    type: multiple-choice
+    prompt: Woher ___ ihr?
+    options: [kommst, kommen, kommt]
+    answer: kommt
+    explanation:
+      en: With *ihr* the ending is *-t*.
+      fa: با *ihr* پایانه *-t* است.
+      de: Bei *ihr* ist die Endung *-t*.
+  - id: q12
+    type: multiple-choice
+    prompt: Wir ___ Wasser.
+    options: [trinken, trinkst, trinke]
+    answer: trinken
+    explanation:
+      en: With *wir* the ending is *-en*.
+      fa: با *wir* پایانه *-en* است.
+      de: Bei *wir* ist die Endung *-en*.
+  - id: q13
+    type: multiple-choice
+    prompt: Die Kinder ___ im Garten.
+    options: [spielt, spielen, spielst]
+    answer: spielen
+    explanation:
+      en: "*Die Kinder* are several people (*sie*, plural), so the ending is *-en*."
+      fa: "*die Kinder* چند نفرند (*sie* جمع)، پس پایانه *-en* است."
+      de: "*Die Kinder* sind mehrere Personen (*sie*, Plural). Die Endung ist *-en*."
+  - id: q14
+    type: multiple-choice
+    prompt: ___ wohnst in Wien.
+    options: [Ich, Du, Wir]
+    answer: Du
+    explanation:
+      en: The ending *-st* goes only with *du*.
+      fa: پایانه *-st* فقط با *du* می‌آید.
+      de: Die Endung *-st* gibt es nur bei *du*.
+  - id: q15
+    type: multiple-choice
+    prompt: ___ lerne Deutsch.
+    options: [Er, Ihr, Ich]
+    answer: Ich
+    explanation:
+      en: The ending *-e* goes only with *ich*.
+      fa: پایانه *-e* فقط با *ich* می‌آید.
+      de: Die Endung *-e* gibt es nur bei *ich*.
+  - id: q16
+    type: multiple-choice
+    prompt: Das Kind ___ Milch.
+    options: [trinke, trinkt, trinkst]
+    answer: trinkt
+    explanation:
+      en: "*Das Kind* is one person you talk about (*es*), so the ending is *-t*."
+      fa: "*das Kind* یک نفر است که درباره‌اش حرف می‌زنیم (*es*)، پس پایانه *-t* است."
+      de: "*Das Kind* ist eine Person (*es*). Die Endung ist *-t*."
