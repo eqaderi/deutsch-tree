@@ -32,7 +32,34 @@ test('a node that is coming soon has no search data: the index has its title', a
     'grammar-101',
     'grammar-102',
     'grammar-103',
+    'exam-lesen-1',
   ])
+})
+
+test('the search data of an exam part holds what its page explains, and nothing of its practice tasks', async () => {
+  const { bundle } = await compileContent(fixtureContent)
+
+  expect(bundle?.search.en.entries.find((entry) => entry.node === 'exam-lesen-1')?.passages).toEqual([
+    [
+      'You read one fixture text and decide whether six statements about it are right. The answer sheet says ',
+      { de: 'Richtig' },
+      ' or ',
+      { de: 'Falsch' },
+      '.',
+    ],
+    ['Each right answer is one fixture point.'],
+    ['Read the six statements first.'],
+    ['Then look for each statement in the text.'],
+  ])
+  expect(bundle?.search.de.entries.find((entry) => entry.node === 'exam-lesen-1')?.passages[1]).toEqual([
+    'Jede richtige Antwort ist ein Test-Punkt.',
+  ])
+  // A search must not show a task's text before it is taken, nor an item or the reason that answers it.
+  const text = JSON.stringify(bundle?.search)
+  expect(text).not.toContain('Neu in Bonn')
+  expect(text).not.toContain('ich wohne seit Mai')
+  expect(text).not.toContain('Toms Wohnung ist groß.')
+  expect(text).not.toContain('klein, aber hell')
 })
 
 test('in simple German an example needs no translation', async () => {

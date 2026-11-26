@@ -10,7 +10,7 @@ import type { CompiledNode, GrammarOverview } from '../content-model/index.ts'
 export function overviewData(nodes: CompiledNode[]): GrammarOverview {
   return {
     tables: nodes.flatMap((node) =>
-      node.kind === 'grammar' && node.content?.table ? [{ node: node.id, table: node.content.table }] : [],
+      node.content?.kind === 'grammar' && node.content.table ? [{ node: node.id, table: node.content.table }] : [],
     ),
   }
 }

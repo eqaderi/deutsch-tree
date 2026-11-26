@@ -4,8 +4,9 @@
  * them, also for the nodes that are not written yet.
  *
  * Left out on purpose: the questions (a search must not show a test's
- * answers) and the wrong half of a common mistake (a result must never show
- * wrong German as if it were an example).
+ * answers), the practice tasks of an exam part (their texts are for the
+ * attempt, and their items are questions) and the wrong half of a common
+ * mistake (a result must never show wrong German as if it were an example).
  *
  * A new kind of node adds its own passages in `passagesOf`; the shape of the
  * data and the app's search stay as they are.
@@ -41,6 +42,11 @@ export function searchData(nodes: CompiledNode[]): Localised<SearchData> {
 function passagesOf(node: CompiledNode, language: Language): RichText[] {
   const { content } = node
   if (!content) return []
+  if (content.kind === 'exam-part') {
+    // What the page explains: what the part asks, how it is scored, and each step of the approach.
+    const { task, scoring, approach } = content.explanations[language]
+    return [task, scoring, ...approach]
+  }
   return [
     content.explanations[language].rule,
     ...content.table.rows.map((row): RichText => [{ de: row.join(CELL) }]),
