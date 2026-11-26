@@ -35,7 +35,7 @@ ending, because the pipeline runs directly in Node.
 
 | Folder | Module |
 |---|---|
-| `content/` | The real content: one YAML file per node under `content/nodes/`, and the chapters that group them in `content/chapters.yaml`. |
+| `content/` | The real content: one YAML file per node under `content/nodes/`, the chapters that group them in `content/chapters.yaml`, and the official mock exams the app links to in `content/official-mock-exams.yaml`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
 | `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress, name the milestones reached. No interface, no storage; randomness is passed in. |
@@ -53,9 +53,10 @@ ending, because the pipeline runs directly in Node.
 | `tests/pack-builder/` | Seam 4: build a pack from a synthetic book (`fixture.ts`) and assert on the pack. |
 
 The app never reads node files. It fetches `content/index.json` (the chapters
-and every node's summary, both in curriculum order) and
-`content/nodes/<id>.json` (one node's page), both written by the pipeline at
-build time.
+and every node's summary, both in curriculum order),
+`content/nodes/<id>.json` (one node's page) and
+`content/official-mock-exams.json` (the exams the readiness view links to),
+all written by the pipeline at build time.
 
 Page addresses live after the `#`, for example `#/node/grammar-001`. The site
 is plain files, so this is what keeps direct links and reloads working on
@@ -132,6 +133,28 @@ GitHub Pages and from a local folder.
   `umlaut-substitute`, `capitalisation`) and `accepted` (the exact spelling).
   `scoreAttempt` keeps both for each question, and the result lists them
   under "Accepted with a note". A missing or wrong word is never a slip.
+
+## Readiness and the official mock exams
+
+- The readiness view is `#/readiness` (`src/app/ReadinessPage.tsx`). The tree
+  leads to it from "Exam" at the end of the strip of levels and from the last
+  stop of the last level (`src/app/ExamStop.tsx`).
+- The exams are content, not code: `content/official-mock-exams.yaml`,
+  compiled to `content/official-mock-exams.json`. To add an exam or correct a
+  link, edit that file only; the format is in
+  [content/README.md](content/README.md), "Official mock exams". The app
+  links to the exams and never requests them, hosts them or copies them.
+- The rule is `readiness` in `src/learning-engine/index.ts`: 90 or more in
+  every module on two of the exams whose entry says
+  `countsTowardReadiness: true`. `readScore` says what a typed score is.
+- The scores a learner records are part of their progress (`officialExams`,
+  by exam id, saved since version 2), so they are exported and imported with
+  it: `officialExamScores` reads them, `recordOfficialExamScores` changes
+  them. They are trusted, not verified.
+- A link to an exam is not on the page until the learner asks for it, and for
+  an exam with no score yet the page first asks whether this is the final
+  check. Keep it that way: only a few official sets exist, and one that was
+  seen early cannot test the learner again.
 
 ## Languages
 

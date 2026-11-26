@@ -5,7 +5,7 @@
  * Every function returns the same promise for the same request, so they can
  * be passed to React's `use()`.
  */
-import type { CompiledNode, ContentIndex } from '../content-model/index.ts'
+import type { CompiledNode, ContentIndex, OfficialMockExams } from '../content-model/index.ts'
 
 const requests = new Map<string, Promise<unknown>>()
 
@@ -31,6 +31,11 @@ export function loadIndex(): Promise<ContentIndex> {
 /** One node with its page content. */
 export function loadNode(id: string): Promise<CompiledNode> {
   return load(`nodes/${id}.json`)
+}
+
+/** The official mock exams, in the order the content lists them. */
+export function loadOfficialMockExams(): Promise<OfficialMockExams> {
+  return load('official-mock-exams.json')
 }
 
 const groups = new Map<string, Promise<CompiledNode[]>>()

@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { checkAnswer, nextTask, scoreAttempt } from '../../src/learning-engine/index.ts'
+import { checkAnswer, EXAM_MODULES, examModuleOf, nextTask, scoreAttempt } from '../../src/learning-engine/index.ts'
 import { richtigFalsch } from './questions.ts'
 import { seededRandom } from './random.ts'
 
@@ -67,4 +67,15 @@ test('an exam part with one practice task gives that task again', () => {
 
 test('an exam part without a practice task gives none', () => {
   expect(nextTask([], undefined, seededRandom(1))).toBeUndefined()
+})
+
+test('the module of an exam-part node is one of the four modules that scores are kept for', () => {
+  // Node files use the exam's own words; scores are kept under English names, in the order of the exam.
+  expect((['lesen', 'hoeren', 'schreiben', 'sprechen'] as const).map(examModuleOf)).toEqual([
+    'reading',
+    'listening',
+    'writing',
+    'speaking',
+  ])
+  expect(EXAM_MODULES).toEqual(['reading', 'listening', 'writing', 'speaking'])
 })

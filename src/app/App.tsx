@@ -7,6 +7,7 @@ import { LanguageSwitch } from './LanguageSwitch.tsx'
 import { NodePage } from './NodePage.tsx'
 import { NotFound } from './NotFound.tsx'
 import { progressProblem } from './progress.ts'
+import { ReadinessPage } from './ReadinessPage.tsx'
 import { TestPage } from './TestPage.tsx'
 import { TreePage } from './TreePage.tsx'
 
@@ -27,6 +28,7 @@ const router = createHashRouter([
           { path: 'node/:id/test', element: <TestPage /> },
           { path: 'backup', element: <BackupPage /> },
           { path: 'checkpoint/:level', element: <CheckpointPage /> },
+          { path: 'readiness', element: <ReadinessPage /> },
           { path: '*', element: <NotFound /> },
         ],
       },

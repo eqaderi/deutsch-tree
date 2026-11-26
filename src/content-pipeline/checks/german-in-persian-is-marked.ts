@@ -60,8 +60,8 @@ function persianTextsOf(node: NodeFile): Array<{ where: string; text: string; qu
 /** The first run of Latin letters outside asterisks, with the hyphens and dots that belong to it. */
 const LATIN_RUN = /[-.’'(]*\p{Script=Latin}[\p{Script=Latin}\p{Mark}\-.’'()]*/u
 
-/** What is wrong with the text, or nothing. */
-function unmarkedGerman(text: string): string | undefined {
+/** What is wrong with the Persian text, or nothing. */
+export function unmarkedGerman(text: string): string | undefined {
   const outsideAsterisks = text.replace(/\*[^*]+\*/g, ' ')
   const german = LATIN_RUN.exec(outsideAsterisks)?.[0]
   if (german === undefined) return undefined

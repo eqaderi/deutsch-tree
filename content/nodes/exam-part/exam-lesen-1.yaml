@@ -144,3 +144,8 @@ practice:
           en: "The rooms are rented out (*vermietet*) and are *nicht teuer*: cheap, but not free."
           fa: "اتاق‌ها اجاره داده می‌شوند (*vermietet*) و *nicht teuer* هستند: ارزان، ولی نه رایگان."
           de: "Frau Brandl *vermietet* die Zimmer. Sie sind *nicht teuer*, aber sie kosten etwas."
+
+review:
+  reviewer: Independent AI agents (blind; a second agent for the two reworded items)
+  date: 2026-11-26
+  pool: bfb838ffb4903d38

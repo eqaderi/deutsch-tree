@@ -3,7 +3,15 @@
  * another device, or on this one after the browser was cleared.
  */
 import { expect, test } from 'vitest'
-import { applyAttempt, emptyProgress, isDone, type Progress } from '../../src/learning-engine/index.ts'
+import {
+  applyAttempt,
+  emptyProgress,
+  isDone,
+  officialExamScores,
+  type Progress,
+  readiness,
+  recordOfficialExamScores,
+} from '../../src/learning-engine/index.ts'
 import { exportProgress, importProgress, SAVED_VERSION } from '../../src/progress-store/index.ts'
 
 /** A morning in Berlin, in whatever time zone the test runs. */
@@ -14,6 +22,8 @@ function someProgress(): Progress {
   progress = applyAttempt(progress, 'grammar-001', { passed: false })
   progress = applyAttempt(progress, 'grammar-001', { passed: true })
   progress = applyAttempt(progress, 'grammar-002', { passed: false })
+  progress = recordOfficialExamScores(progress, 'adults-1', { reading: 93, listening: 90, writing: 88, speaking: 100 })
+  progress = recordOfficialExamScores(progress, 'adults-2', { reading: 0 })
   return progress
 }
 
@@ -56,6 +66,58 @@ test('a person can read the file: one line per topic', () => {
   expect(file.text).toContain('    "grammar-002": { "done": false, "attempts": 1 }\n')
 })
 
+test('the scores recorded for official mock exams travel in the file, and readiness with them', () => {
+  let progress = emptyProgress()
+  progress = recordOfficialExamScores(progress, 'adults-1', { reading: 93, listening: 90, writing: 91, speaking: 100 })
+  progress = recordOfficialExamScores(progress, 'adults-2', { reading: 95, listening: 94, writing: 90, speaking: 92 })
+  progress = recordOfficialExamScores(progress, 'youth-1', { reading: 70 })
+  expect(readiness(progress, ['adults-1', 'adults-2', 'youth-1']).ready).toBe(true)
+
+  const file = exportProgress(progress, morning)
+  const onTheOtherDevice = imported(file.text).progress
+
+  // A person can read them: one line per exam.
+  expect(file.text).toContain('    "adults-1": { "reading": 93, "listening": 90, "writing": 91, "speaking": 100 },\n')
+  expect(officialExamScores(onTheOtherDevice, 'adults-2')).toEqual({
+    reading: 95,
+    listening: 94,
+    writing: 90,
+    speaking: 92,
+  })
+  expect(officialExamScores(onTheOtherDevice, 'youth-1')).toEqual({ reading: 70 })
+  expect(readiness(onTheOtherDevice, ['adults-1', 'adults-2', 'youth-1']).ready).toBe(true)
+})
+
+test('a file exported by version 2 imports, with its official mock exam scores', () => {
+  // Written out by hand: a file as version 2 of the app exported it.
+  const file = `{
+  "app": "deutsch-tree",
+  "about": "A backup of your learning progress in deutsch-tree.",
+  "exported": "2026-11-26T08:30:00.000Z",
+  "version": 2,
+  "nodes": {
+    "grammar-001": { "done": true, "attempts": 2 }
+  },
+  "officialExams": {
+    "goethe-b1-modellsatz-erwachsene": { "reading": 93, "listening": 90, "writing": 88, "speaking": 100 },
+    "an-exam-no-longer-listed": { "speaking": 77 }
+  }
+}
+`
+
+  const result = imported(file)
+
+  expect(isDone(result.progress, 'grammar-001')).toBe(true)
+  expect(officialExamScores(result.progress, 'goethe-b1-modellsatz-erwachsene')).toEqual({
+    reading: 93,
+    listening: 90,
+    writing: 88,
+    speaking: 100,
+  })
+  // Scores for an exam that today's list does not have are kept all the same.
+  expect(officialExamScores(result.progress, 'an-exam-no-longer-listed')).toEqual({ speaking: 77 })
+})
+
 test('a file exported by version 1 imports', () => {
   // Written out by hand: a file as version 1 of the app exported it.
   const file = `{
@@ -75,6 +137,8 @@ test('a file exported by version 1 imports', () => {
   expect(isDone(result.progress, 'grammar-001')).toBe(true)
   // A topic that today's content does not have is kept all the same.
   expect(isDone(result.progress, 'grammar-retired')).toBe(true)
+  // Version 1 had no official mock exam scores: none are recorded.
+  expect(result.progress.officialExams).toEqual({})
   expect(result.exported).toEqual(new Date('2026-11-26T08:30:00.000Z'))
 })
 

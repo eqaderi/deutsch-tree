@@ -2,7 +2,7 @@ import { type ReactNode, use } from 'react'
 import { Link, useParams } from 'react-router'
 import type { GrammarContent, NodeSummary } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
-import { isDone } from '../learning-engine/index.ts'
+import { examModuleOf, isDone } from '../learning-engine/index.ts'
 import { loadIndex, loadNode } from './content.ts'
 import { ExamPartSections } from './ExamPartSections.tsx'
 import { German, plainText, RichText } from './German.tsx'
@@ -72,7 +72,7 @@ function NodeFrame({ node, children }: { node: NodeSummary; children: ReactNode 
         <div className="meta">
           <span className="tag">{node.level}</span>
           <KindLabel kind={node.kind} />
-          {node.module !== undefined && <span className="tag">{strings.examModules[node.module]}</span>}
+          {node.module !== undefined && <span className="tag">{strings.examModules[examModuleOf(node.module)]}</span>}
           {node.part !== undefined && <span className="tag">{strings.examPartNumber(node.part)}</span>}
           {node.status === 'coming-soon' && <span className="tag">{strings.comingSoon}</span>}
           {done && <span className="tag tag-done">{strings.done}</span>}
