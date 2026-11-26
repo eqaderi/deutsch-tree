@@ -22,6 +22,7 @@ machine `pnpm exec playwright install chromium` for the browser tests.
 | `pnpm test:unit` | All Vitest tests (`tests/**/*.test.ts`). `pnpm test:pipeline` runs only the content pipeline tests. |
 | `pnpm test:browser` | Playwright journeys (`tests/browser/*.spec.ts`) against the built site with fixture content. |
 | `pnpm vocabulary:scope --lists <folder>` | Writes the vocabulary scope list from the extracted word lists, which are not in the repository. `pnpm vocabulary:approval` then rewrites the lists in `docs/approvals/vocabulary-themes.md`. See [content/README.md](content/README.md), "The vocabulary scope list". |
+| `pnpm audio:generate --voices <folder>` | Says every German example and word of the published nodes with Piper and stores it as `content/audio/<key>.mp3`. Says only what is new or changed. Needs Piper and ffmpeg on this computer; nothing else does. See "Audio" below. |
 | `pnpm pack:build` | Builds a private pack from a book the learner owns. Options and format: [docs/private-packs.md](docs/private-packs.md). |
 | `pnpm dev` | Dev server on the real content. Content files reload on save. |
 | `pnpm build` | Compiles the content and builds the site into `dist/`. Fails on any content error. |
@@ -43,6 +44,7 @@ ending, because the pipeline runs directly in Node.
 | `src/vocabulary-scope/` | Which words are in scope: the extracted word lists in, the scope list in `content/vocabulary/` out. `SCOPE_RULE` is the one setting that decides it. `approval.ts` writes the lists of the vocabulary approval document. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress, name the milestones reached. No interface, no storage; randomness is passed in. |
 | `src/assistant-grading/` | Writing and speaking, which the app cannot score: the official marking criteria (`criteria.ts`), the task as the learner reads it, the prompt to paste into an AI assistant, and the rule for the score out of 100. Pure functions on a task; the app calls no AI service. |
+| `src/audio/` | German in the compiled content to the audio files that say it: `speakable` writes numbers as words, `spoken` gives a piece of German its key, `spokenItems` finds everything a page can play, `generateAudio` makes the missing files with a voice engine passed in (`piper.ts`), and `cli.ts` is the command. The voices are in `src/content-model/audio.ts`. |
 | `src/anki-export/` | Vocabulary words in, the text of a file that Anki imports out. Pure functions; the app saves the file in the browser. |
 | `src/progress-store/` | Keeps progress in browser storage, with a version number, and writes and reads the progress file a learner exports. It reads every older version and refuses a newer one. It only stores; the learning engine decides how progress changes. |
 | `src/app/` | App shell: routes, tree, node page, test, backup, search page, overview page. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
@@ -52,6 +54,7 @@ ending, because the pipeline runs directly in Node.
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/vocabulary-scope/` | The scope rule and the corrections, on invented rows of a word list. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
+| `tests/audio/` | How numbers are spoken, and the audio command on fixture content with a stand-in for Piper. |
 | `tests/anki-export/` | The exact text of the Anki file for a few invented words, in each language. |
 | `tests/assistant-grading/` | The prompt and the score rule, on invented tasks (`tasks.ts`). The expected criteria and points are written out from the official score sheets. |
 | `tests/search/` | Search on a small invented catalogue (`catalogue.ts`): what a query finds, in which order, and which passage a result shows. |
@@ -72,6 +75,7 @@ build time, each only on the page that shows it:
 | `content/official-mock-exams.json` | The exams the readiness view links to. | The readiness view (`#/readiness`) and the exam stop that ends the tree's last level. |
 | `content/search/<language>.json` | The text of every published node as a list of passages, in one language plus the German. | The search page (`#/search`), in the learner's language only. |
 | `content/overview.json` | Every grammar table. | "All grammar at a glance" (`#/overview`). |
+| `content/audio/<key>.mp3` | The audio of one piece of German. | Only when the learner presses its play button. |
 
 So the first load of the tree does not grow when content is written; only
 `index.json` grows, by one summary per node. Keep it that way: text that only
@@ -378,6 +382,62 @@ The rules are in the learning engine, like every rule. The tree
   chapters, hundreds of topics) uses `serveCurriculum` in
   `tests/browser/curriculum.ts`: it gives the page an invented tree written
   in a few lines, and leaves the fixture files alone.
+
+## Audio
+
+- German is heard in a stored voice, never the browser's own speech, so it
+  sounds the same on every device. The voices (ticket #5) are Piper's
+  Thorsten (medium), which says every example and word, and Kerstin (medium),
+  the second voice of a dialogue. They are `VOICES` in
+  `src/content-model/audio.ts`. The format is MP3, 48 kbit/s, mono.
+- The pipeline attaches `audio` (a `Spoken`: `key`, `voice`, `text`) to every
+  piece of German that has a play button: each example of a grammar node and
+  of a phrase, and each vocabulary word (with its article) and its example.
+  `text` is what the voice says: `speakable` in `src/audio/speakable.ts`
+  writes numbers, times, dates, years and amounts as words, because Piper
+  misreads digits ("14:35 Uhr").
+- **The key** is the first 16 hex digits of the SHA-256 of
+  `<voice>\n<spoken text>`: `printf 'thorsten\nIch wohne in Berlin.' | shasum -a 256`.
+  It is made from the text and never from the audio, so it is known without
+  Piper, the same words in the same voice are one file wherever they stand,
+  and a changed text gets a new file. The file is `content/audio/<key>.mp3`,
+  in the site `content/audio/<key>.mp3`.
+- The content check fails for a published node whose spoken item has no file,
+  and for spoken text that still holds a digit (`src/content-pipeline/audio.ts`).
+  Neither needs Piper, and nor does `pnpm check` or CI. A "coming soon" node
+  needs no audio. The build copies only the files that published nodes play.
+- **Generating.** Piper (`piper-tts`) and the voice files
+  (`de_DE-thorsten-medium.onnx` with its `.onnx.json`, the same for Kerstin)
+  are installed outside the repository. Then:
+
+  ```sh
+  pnpm audio:generate --voices <folder of the .onnx files> --piper <path to piper>
+  ```
+
+  It says what has no file yet, removes the files no content needs any more,
+  and prints each file it makes. `--redo <key>,<key>` says items again when
+  the voice slipped on them (Piper is not repeatable, so a second take often
+  comes out right); `--force` says everything again, after a voice model
+  changed. Commit the MP3 files with the content change. Never commit a WAV
+  (`.gitignore` ignores them), and keep full regenerations rare: each adds
+  the whole audio to the history again.
+- **Fixture content** gets a silent file per item, without Piper:
+  `pnpm audio:generate --content tests/fixtures/content --silent`. A test
+  that changes spoken German of a fixture node compiles with
+  `compileContent(dir, { requireAudio: false })`, unless audio is what it tests.
+- A play button is `PlayButton` (`src/app/PlayButton.tsx`) given the `audio`
+  of the German; an example with its button and translation is
+  `SpokenExample`. It loads the file only when pressed, and one piece plays
+  at a time.
+- **A second voice (a dialogue, ticket #22).** Name the voice in the content
+  with `voiceSchema` from `src/content-model/audio.ts` (`voice: kerstin`), and
+  compile each line with `audio: spoken(line.text, line.voice)`. Anything in
+  a compiled node that carries `audio` is found by `spokenItems`, so the
+  command generates it, the check asks for its file and the build ships it
+  with no other change.
+- The licence of the Kerstin voice asks for a credit (Hi-Fi TTS, NVIDIA;
+  reader Cori Samuel). It is `voiceCredit` in the strings, at the foot of
+  every page.
 
 ## Deploying
 

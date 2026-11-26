@@ -9,6 +9,7 @@
  *      (*ich wohne*), so the app can render it left to right as German.
  */
 import { z } from 'zod'
+import type { Spoken } from './audio.ts'
 import { type DiagramPart, readDrawing } from './diagram.ts'
 import { WORD_CLASSES, type WordClass } from './scope-list.ts'
 import { type AssistantGradedModule, isAssistantGraded } from './scoring.ts'
@@ -1180,6 +1181,11 @@ export interface Example {
   fa: string
 }
 
+/** An example as a page shows it, with the audio of its German (see `Spoken` in audio.ts). */
+export interface HeardExample extends Example {
+  audio: Spoken
+}
+
 export interface Mistake {
   wrong: string
   right: string
@@ -1344,6 +1350,9 @@ export interface VocabularyWord {
   tooCloseTo: string[]
 }
 
+/** A word as its page shows it: the word with its article can be heard, and so can its example. */
+export type HeardWord = VocabularyWord & { audio: Spoken; example: HeardExample }
+
 /**
  * A word as it is learned, said and asked for: a noun with its article
  * ("die Mutter"), any other word on its own ("kochen").
@@ -1407,7 +1416,7 @@ export interface GrammarContent {
   table?: GrammarTable
   /** Drawings, shown after the rule and before the table. */
   diagrams?: Diagram[]
-  examples: Example[]
+  examples: HeardExample[]
   mistakes: Mistake[]
   /** The pool. */
   questions: Question[]
@@ -1418,7 +1427,7 @@ export interface GrammarContent {
 /** What the page and the test of a published vocabulary node need. */
 export interface VocabularyContent {
   /** In the order of the node file. */
-  words: VocabularyWord[]
+  words: HeardWord[]
   /** The pool, made from the words: each word from German and into German. */
   questions: Question[]
   /** How many questions of the pool one attempt draws. */
@@ -1434,7 +1443,7 @@ export interface Phrase {
   /** Ids of the exam-part nodes whose tasks the phrase serves. */
   examTasks: string[]
   /** The phrase in use. */
-  example: Example
+  example: HeardExample
 }
 
 export interface PhrasesContent {

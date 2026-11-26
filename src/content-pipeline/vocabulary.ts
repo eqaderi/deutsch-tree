@@ -2,7 +2,14 @@
  * Vocabulary nodes in the pipeline: from the words of a node file to the
  * words and the pool of the compiled node.
  */
-import type { NodeFile, Question, VocabularyContent, VocabularyWord } from '../content-model/index.ts'
+import { spoken } from '../audio/index.ts'
+import {
+  asLearned,
+  type NodeFile,
+  type Question,
+  type VocabularyContent,
+  type VocabularyWord,
+} from '../content-model/index.ts'
 import { vocabularyPool } from '../learning-engine/index.ts'
 
 type EntryFile = NonNullable<NodeFile['words']>[number]
@@ -46,5 +53,14 @@ export const QUESTIONS_PER_WORD = 2
 export function compileVocabularyContent(node: NodeFile): VocabularyContent {
   // The schema guarantees that every word of a published node is written.
   const words = writtenWords(node) ?? []
-  return { words, questions: vocabularyPool(words), attemptSize: node.attemptSize }
+  return {
+    // The word is heard as it is learned, a noun with its article.
+    words: words.map((word) => ({
+      ...word,
+      audio: spoken(asLearned(word)),
+      example: { ...word.example, audio: spoken(word.example.de) },
+    })),
+    questions: vocabularyPool(words),
+    attemptSize: node.attemptSize,
+  }
 }

@@ -80,6 +80,13 @@ export const en = {
   table: 'Table',
   diagram: 'Diagram',
   examples: 'Examples',
+  /** The play button of a piece of German, and the same button while it plays. */
+  listen: 'Listen',
+  stopListening: 'Stop',
+  audioFailed: 'The audio could not be played.',
+  /** The credit that a voice's licence asks for, shown at the foot of every page. */
+  voiceCredit:
+    'German audio: the Piper voices Thorsten and Kerstin. The Kerstin voice is built on Hi-Fi TTS by NVIDIA (CC BY 4.0), read by Cori Samuel.',
   commonMistakes: 'Common mistakes',
   wrong: 'Wrong',
   right: 'Right',

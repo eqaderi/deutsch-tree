@@ -708,6 +708,31 @@ checks refuse them: there is no answer key that a reviewer could answer blind.
 Have the German of the task read by someone who knows German before you
 publish it.
 
+## Audio of the German
+
+Every German example of a published node can be heard, and so can every
+vocabulary word (with its article) and its example sentence. The audio is
+made from the text by one command, in the voice chosen on ticket #5:
+
+```sh
+pnpm audio:generate --voices <folder of the Piper voice files> --piper <path to piper>
+```
+
+Run it after changing or adding German that is spoken, and commit the files it
+writes in `content/audio/` with the change. It says only what is new or
+changed and removes what is no longer needed. `pnpm content:check` names
+every spoken item of a published node whose file is missing. Piper and its
+voice files are not in the repository; how to install them and the options of
+the command are in the main README, "Audio".
+
+- Numbers are spoken as words: `85 Jahre`, `14:35 Uhr`, `am 3. Mai`, `1990`,
+  `3,50 €` and `20 %` need nothing. A number in another form (`3.5.2025`) is
+  an error that asks you to write it in words.
+- Audio is not part of the review record: changing an example needs new
+  audio, never a new review.
+- Listen to new audio once. When the voice slips on an item, say it again with
+  `--redo <key>` (the key is the file name the command printed).
+
 ## Review before publishing
 
 This is for nodes with a question pool. A writing or speaking node has none;
@@ -815,6 +840,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - A published node with no review record, or whose questions, answers or
   task texts changed after its review. A `coming-soon` node needs none, and
   neither does a writing or speaking node.
+- German of a published node that is spoken (an example, a word) without its
+  audio file in `content/audio/`, and spoken German with a number that is not
+  written in words.
 - A list of official mock exams that is missing, has a link that is not a
   full `https://` address, has an exam without a link, has two exams with one
   id, or has fewer than two exams that count toward readiness.

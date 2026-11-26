@@ -81,6 +81,8 @@ function Frame() {
       <footer className="wrap site-footer">
         <Link to="/backup">{strings.backupLink}</Link>
         <Link to="/packs">{strings.packsLink}</Link>
+        {/* The licence of the Kerstin voice asks for this credit (ticket #5). */}
+        <p className="voice-credit">{strings.voiceCredit}</p>
       </footer>
       <ScrollRestoration />
     </>
