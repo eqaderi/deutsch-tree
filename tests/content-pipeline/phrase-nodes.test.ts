@@ -6,7 +6,7 @@ import { COMING_SOON, changeNode, fixtureContent, fixtureContentWith } from './f
 /** The fixture's published phrases node, "Fixture greetings". */
 const PHRASES_NODE = 'phrases-greeting'
 const PHRASES = `nodes/phrases/${PHRASES_NODE}.yaml`
-const READING_PART = 'nodes/exam-part/exam-lesen-1.yaml'
+const LISTENING_PART = 'nodes/exam-part/exam-hoeren-1.yaml'
 
 const errorsOf = async (content: string) => (await compileContent(content)).report.errors
 
@@ -36,31 +36,31 @@ test('a published phrases node gives its page each phrase with its meaning, its 
   expect(node?.content && 'questions' in node.content && node.content.questions).toHaveLength(15)
 })
 
-test('a phrases node cannot be published without its phrases, and a reading part not at all', async () => {
+test('a phrases node cannot be published without its phrases, and a listening part not at all', async () => {
   const content = await fixtureContentWith({
     [PHRASES]: changeNode((node) => {
       delete node.phrases
     }),
-    [READING_PART]: () =>
+    [LISTENING_PART]: () =>
       stringify({
-        id: 'exam-lesen-1',
+        id: 'exam-hoeren-1',
         kind: 'exam-part',
         level: 'B2',
         chapter: 'fixture-exam-parts',
         order: 2,
         status: 'published',
-        module: 'lesen',
+        module: 'hoeren',
         part: 1,
-        title: { en: 'Fixture reading', fa: 'خواندن آزمایشی', de: 'Test-Lesen' },
+        title: { en: 'Fixture listening', fa: 'شنیدن آزمایشی', de: 'Test-Hören' },
       }),
   })
 
   expect(await errorsOf(content)).toEqual([
     {
-      file: READING_PART,
-      node: 'exam-lesen-1',
+      file: LISTENING_PART,
+      node: 'exam-hoeren-1',
       where: 'status',
-      message: 'an exam-part node of lesen cannot be published yet; it has no page',
+      message: 'Hören, Teil 1 cannot be published yet: the format of its practice task is not built',
     },
     { file: PHRASES, node: PHRASES_NODE, where: 'phrases', message: 'is required for a published node' },
   ])
