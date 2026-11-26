@@ -1,0 +1,13 @@
+# Grammar list row 55.
+id: grammar-055
+kind: grammar
+level: B1
+chapter: b1-infinitive
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-053, grammar-161]
+title:
+  en: "*um … zu*"
+  fa: "*um … zu*"
+  de: "*um … zu*"

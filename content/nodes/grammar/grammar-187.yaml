@@ -1,0 +1,13 @@
+# Grammar list row 187.
+id: grammar-187
+kind: grammar
+level: B1
+chapter: b1-two-part-connectors
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-148, grammar-184]
+title:
+  en: "*weder … noch*"
+  fa: "*weder … noch*"
+  de: "*weder … noch*"

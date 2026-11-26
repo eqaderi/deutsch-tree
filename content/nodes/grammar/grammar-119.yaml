@@ -1,0 +1,13 @@
+# Grammar list row 119.
+id: grammar-119
+kind: grammar
+level: A1
+chapter: a1-prepositions
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-191, grammar-192]
+title:
+  en: "Temporal: *am*, *um*, *im*, *von … bis*, *ab*"
+  fa: "حرف‌های اضافهٔ زمان: *am*، *um*، *im*، *von … bis*، *ab*"
+  de: "Zeit: *am*, *um*, *im*, *von … bis*, *ab*"

@@ -18,6 +18,7 @@
     "content:check": "node src/content-pipeline/cli.ts",
     "review:pool": "node src/content-pipeline/review-cli.ts pool",
     "review:record": "node src/content-pipeline/review-cli.ts record",
+    "pack:build": "node src/pack-builder/cli.ts",
     "test:unit": "vitest run",
     "test:pipeline": "vitest run tests/content-pipeline",
     "test:browser": "playwright test"
@@ -38,6 +39,8 @@
     "@types/react": "^19.3.2",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.3.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.5.438",
     "typescript": "^7.0.2",
     "vite": "^8.3.8",
     "vitest": "^5.1.2"

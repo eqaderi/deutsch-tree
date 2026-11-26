@@ -1,0 +1,13 @@
+# Grammar list row 198.
+id: grammar-198
+kind: grammar
+level: A1
+chapter: a1-word-building
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-102]
+title:
+  en: "Adjectives with *un-*, *-los*, *-bar*; colour compounds"
+  fa: "صفت‌هایی با *un-*، *-los*، *-bar*؛ رنگ‌های مرکب"
+  de: "Adjektive mit *un-*, *-los*, *-bar*; zusammengesetzte Farben"

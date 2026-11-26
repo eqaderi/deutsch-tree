@@ -1,0 +1,13 @@
+# Grammar list row 13.
+id: grammar-013
+kind: grammar
+level: A1
+chapter: a1-past
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-002]
+title:
+  en: "*Präteritum* of *sein* and *haben*"
+  fa: "گذشتهٔ ساده (*Präteritum*) فعل‌های *sein* و *haben*"
+  de: "Präteritum von *sein* und *haben*"

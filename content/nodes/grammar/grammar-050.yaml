@@ -1,0 +1,13 @@
+# Grammar list row 50.
+id: grammar-050
+kind: grammar
+level: B1
+chapter: b1-passive
+order: 4
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-026, grammar-047]
+title:
+  en: "Passive with modal verbs"
+  fa: "مجهول با فعل‌های وجهی"
+  de: "Passiv mit Modalverben"

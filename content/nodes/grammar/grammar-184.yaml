@@ -1,0 +1,13 @@
+# Grammar list row 184.
+id: grammar-184
+kind: grammar
+level: B1
+chapter: b1-two-part-connectors
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-149]
+title:
+  en: "*entweder … oder*"
+  fa: "*entweder … oder*"
+  de: "*entweder … oder*"

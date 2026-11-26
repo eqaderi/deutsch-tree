@@ -1,0 +1,13 @@
+# Grammar list row 146.
+id: grammar-146
+kind: grammar
+level: A1
+chapter: a1-negation
+order: 1
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-139]
+title:
+  en: "Negation with *nicht*"
+  fa: "نفی با *nicht*"
+  de: "Verneinung mit *nicht*"

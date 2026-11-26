@@ -1,0 +1,13 @@
+# Grammar list row 94.
+id: grammar-094
+kind: grammar
+level: A2
+chapter: a2-articles-pronouns
+order: 5
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-074, grammar-076, grammar-079]
+title:
+  en: "*einer*, *keiner*, *welche* as pronouns"
+  fa: "*einer*، *keiner* و *welche* به‌عنوان ضمیر"
+  de: "*einer*, *keiner*, *welche* als Pronomen"

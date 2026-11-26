@@ -1,7 +1,8 @@
 # Writing content
 
 One node is one YAML file: `content/nodes/<kind>/<id>.yaml`. The file name
-must be the node's id. Subfolders are only for tidiness.
+must be the node's id. Subfolders are only for tidiness. The chapters that
+group the nodes are one list: `content/chapters.yaml`.
 
 Check your work with `pnpm content:check`. It names the node, the question,
 the file and the place of every problem, and the site is not built while one
@@ -24,7 +25,13 @@ example is `content/nodes/grammar/grammar-001.yaml`.
 
 2. **German inside learner-language text goes in asterisks**: `With *ich* the
    ending is *-e*.` The app shows it as German, left to right, also on a
-   Persian page.
+   Persian page. This holds for titles and chapter names too. A value that
+   starts with an asterisk needs quotes, or YAML misreads it:
+   `en: "*weil*"`.
+
+   In Persian text this is checked: every Latin letter must stand inside
+   asterisks, also a level such as `*B1*`. Without them a Persian page shows
+   the German in the wrong order (`-st` as `st-`).
 
 ## Every node
 
@@ -32,7 +39,8 @@ example is `content/nodes/grammar/grammar-001.yaml`.
 id: grammar-001          # stable; a grammar id is "grammar-" + the list number, three digits
 kind: grammar            # grammar | vocabulary | phrases | exam-part
 level: A1                # A1, A2, B1; a new level such as B2 needs no code change
-order: 1                 # position in the curriculum order; lower comes first
+chapter: a1-cases        # id of its chapter in chapters.yaml; same level and kind
+order: 1                 # position inside its chapter; lower comes first
 status: coming-soon      # coming-soon | published
 recogniseOnly: false     # optional, default false
 prerequisites: []        # optional; ids of nodes this builds on (advisory)
@@ -42,6 +50,35 @@ title: { en: …, fa: …, de: … }
 A `coming-soon` node needs nothing more. It appears in the tree, marked
 "Coming soon". It may already hold the sections below as a draft: they are
 checked, but not shown.
+
+## Chapters and the curriculum order
+
+A chapter is a named group of nodes of one kind inside one level, for example
+the A1 grammar chapter "Nouns and articles". The tree shows a level as a line
+of chapters; a chapter opens to list its nodes.
+
+`content/chapters.yaml` is the list of all chapters:
+
+```yaml
+- id: a1-cases           # stable; nodes name it in `chapter`
+  level: A1
+  kind: grammar          # grammar | vocabulary | phrases | exam-part
+  title:                 # the chapter's name, in three languages
+    en: "The cases: *Nominativ*, *Akkusativ*, *Dativ*"
+    fa: …
+    de: …
+```
+
+The order of this list is the curriculum order: the curriculum runs through
+the chapters from top to bottom, and inside a chapter by each node's `order`.
+So "next" for a learner is always the next node of the same chapter, and then
+the first node of the next chapter.
+
+- To move a chapter, move its entry in the list. No node file changes.
+- To add a chapter (of any kind) between two others, add an entry there and
+  name it in its nodes.
+- A new level such as B2 is new chapters with `level: B2` after the B1
+  chapters, and node files that name them. No code changes.
 
 ## A published grammar node
 
@@ -195,6 +232,11 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 
 ## What the checks reject
 
+- A node without a chapter, with a chapter that `chapters.yaml` does not
+  have, or of another level or kind than its chapter. A chapter name that
+  lacks a language.
+- Persian text (a title, a chapter name, a rule, the reason of a mistake or
+  of a question) with a Latin letter outside asterisks.
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
 - A wrong word that stands in its sentence twice, another accepted order that

@@ -1,0 +1,13 @@
+# Grammar list row 126.
+id: grammar-126
+kind: grammar
+level: A1
+chapter: a1-prepositions
+order: 8
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-120, grammar-123, grammar-125]
+title:
+  en: "*Dativ* set and *Akkusativ* set"
+  fa: "حرف‌های اضافه با *Dativ* و حرف‌های اضافه با *Akkusativ*"
+  de: "Präpositionen mit Dativ und Präpositionen mit Akkusativ"

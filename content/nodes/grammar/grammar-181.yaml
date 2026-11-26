@@ -1,0 +1,13 @@
+# Grammar list row 181.
+id: grammar-181
+kind: grammar
+level: B1
+chapter: b1-relative-clauses
+order: 2
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-126, grammar-180]
+title:
+  en: "Relative clause with preposition"
+  fa: "جملهٔ موصولی با حرف اضافه"
+  de: "Relativsatz mit Präposition"

@@ -1,0 +1,13 @@
+# Grammar list row 97.
+id: grammar-097
+kind: grammar
+level: A2
+chapter: a2-reflexive-prepositional
+order: 3
+status: coming-soon
+recogniseOnly: false
+prerequisites: [grammar-086, grammar-204]
+title:
+  en: "*da(r)-* and *wo(r)-* adverbs"
+  fa: "قیدهای *da(r)-* و *wo(r)-*"
+  de: "Adverbien mit *da(r)-* und *wo(r)-*"

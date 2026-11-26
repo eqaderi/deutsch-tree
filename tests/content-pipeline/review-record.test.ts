@@ -71,7 +71,7 @@ test('a "coming soon" node needs no review record', async () => {
           prompt: 'Wir ___ hier.',
           options: ['wohnen', 'wohnst'],
           answer: 'wohnen',
-          explanation: { en: 'With wir the ending is -en.', fa: 'با wir پایانه -en است.', de: 'Bei wir: -en.' },
+          explanation: { en: 'With wir the ending is -en.', fa: 'با *wir* پایانه *-en* است.', de: 'Bei wir: -en.' },
         },
       ]
     }),
