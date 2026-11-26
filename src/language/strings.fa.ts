@@ -73,4 +73,17 @@ export const fa: Strings = {
   wrongAnswers: 'پاسخ‌های نادرست',
   yourAnswer: 'پاسخ شما',
   rightAnswer: 'پاسخ درست',
+
+  reference: 'مرجع',
+  search: 'جست‌وجو',
+  allGrammar: 'همهٔ دستور زبان',
+  searchTitle: 'جست‌وجو در همهٔ موضوع‌ها',
+  // The Latin letters stand between the marks U+2066 and U+2069, which keep them left to right.
+  searchHint:
+    'یک واژه به فارسی یا آلمانی بنویسید. اگر صفحه‌کلید شما \u2066ä, ö, ü, ß\u2069 ندارد، \u2066ae, oe, ue, ss\u2069 بنویسید.',
+  searchResults: (count) => `${digits.format(count)} موضوع پیدا شد`,
+  searchNothing: 'موضوعی پیدا نشد. واژهٔ دیگری را امتحان کنید، یا واژه‌های کمتری بنویسید.',
+  overviewTitle: 'همهٔ دستور زبان در یک نگاه',
+  overviewIntro: 'همهٔ جدول‌های دستور زبان در یک صفحه. نام بالای هر جدول، موضوع آن را باز می‌کند.',
+  overviewEmpty: 'هنوز هیچ جدول دستور زبانی نوشته نشده است.',
 }

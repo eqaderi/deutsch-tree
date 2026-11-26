@@ -987,6 +987,104 @@ main.wrap {
   flex: 1;
 }
 
+/* ---------- the links to search and to all grammar, on every page ---------- */
+
+/* On a phone they have their own line under the logo and the language choice. */
+.reference-links {
+  order: 3;
+  flex-basis: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .reference-links {
+    order: 0;
+    flex-basis: auto;
+  }
+}
+
+.reference-links a {
+  display: flex;
+  align-items: center;
+  min-block-size: var(--touch);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.reference-links span {
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: var(--panel);
+  box-shadow: inset 0 0 0 1.5px var(--hairline);
+}
+
+.reference-links [aria-current="page"] span {
+  background: var(--text);
+  color: #fff;
+  box-shadow: none;
+}
+
+/* ---------- search ---------- */
+
+.search-form {
+  margin-block-end: var(--gap);
+}
+
+.search-box {
+  inline-size: 100%;
+  min-block-size: 52px;
+  border: 0;
+  border-radius: var(--radius-card);
+  padding: 12px 16px;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1.5px var(--ring);
+  color: var(--text);
+  /* Latin letters in the Latin typeface and Persian letters in the Persian one, whatever the page. */
+  font-family: "Outfit Variable", "Vazirmatn Variable", system-ui, sans-serif;
+  /* Below 16px a phone zooms the page in when the box is tapped. */
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.search-hint {
+  margin-block-start: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.search-count {
+  margin-block-end: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* The passage the words were found in: three lines at most. */
+.result-passage {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.result-passage .de {
+  color: var(--text);
+}
+
+.result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-block-start: 2px;
+}
+
 /* ---------- messages ---------- */
 
 .message p + p,
