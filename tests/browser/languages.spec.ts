@@ -64,6 +64,7 @@ test('a learner switches to Persian: the page reads right to left, the German in
   expect(await readsLeftToRight(german.filter({ hasText: 'Ich wohne in Berlin.' }))).toBe(true)
   expect(await readsLeftToRight(page.getByRole('cell', { name: 'wohnst' }).locator('[lang="de"]'))).toBe(true)
   expect(await readsLeftToRight(rule.locator('[lang="de"]').filter({ hasText: '-e' }))).toBe(true)
+  expect(await readsLeftToRight(page.getByText('پایانه -st است.').locator('[lang="de"]').last())).toBe(true)
 
   // A table row is German too: "ich" stands to the left of "wohne".
   const person = await page.getByRole('cell', { name: 'ich', exact: true }).boundingBox()
@@ -124,6 +125,8 @@ test('the German on a topic page is the same in all three languages', async ({ p
     'Wohnst du hier?',
     'Du wohne hier.',
     'Du wohnst hier.',
+    'du',
+    '-st',
   ]
 
   for (const language of ['English', 'فارسی', 'Deutsch']) {
