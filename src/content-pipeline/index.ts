@@ -11,6 +11,7 @@ import { parse as parseYaml } from 'yaml'
 import {
   type CompiledNode,
   type ContentBundle,
+  type FindErrorQuestion,
   GAP,
   type GrammarContent,
   LANGUAGES,
@@ -20,8 +21,10 @@ import {
   nodeFileSchema,
   type Question,
   type RichText,
+  WORD,
 } from '../content-model/index.ts'
 import { CHECKS, type CheckedNode, type ContentProblem } from './checks/index.ts'
+import { mixedAwayFrom } from './mix.ts'
 
 export type { ContentProblem }
 
@@ -204,10 +207,47 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
 
 function compileQuestion(question: NonNullable<NodeFile['questions']>[number]): Question {
   const explanation = richTextIn(question.explanation)
-  if (question.type !== 'gap-fill') return { ...question, explanation }
-  // The schema guarantees exactly one gap.
-  const [before = '', after = ''] = question.prompt.split(GAP)
-  return { ...question, explanation, gap: { before, after } }
+  switch (question.type) {
+    case 'gap-fill': {
+      // The schema guarantees exactly one gap.
+      const [before = '', after = ''] = question.prompt.split(GAP)
+      return { ...question, explanation, gap: { before, after } }
+    }
+    case 'find-error': {
+      const parts = sentenceParts(question.prompt)
+      const words = parts.filter((part) => typeof part !== 'string')
+      // The schema guarantees that exactly one word is the answer.
+      return { ...question, explanation, parts, answer: words.findIndex((part) => part.word === question.answer) }
+    }
+    case 'word-order': {
+      const pieces = mixedAwayFrom(question.answer, [question.answer, ...question.alsoAccepted])
+      return { ...question, explanation, pieces, prompt: pieces.join(SHOWN_APART) }
+    }
+    case 'matching': {
+      const left = question.answer.map(([item]) => item)
+      const answer = question.answer.map(([, partner]) => partner)
+      const right = mixedAwayFrom(answer, [answer])
+      return { ...question, explanation, left, right, answer, prompt: left.join(SHOWN_APART) }
+    }
+    default:
+      return { ...question, explanation }
+  }
+}
+
+/** Stands between the things shown, in the prompt that the pipeline builds for a question without one. */
+const SHOWN_APART = ' / '
+
+/** Cuts "Du wohne hier." into its words and what stands between them. */
+function sentenceParts(sentence: string): FindErrorQuestion['parts'] {
+  const parts: FindErrorQuestion['parts'] = []
+  let end = 0
+  for (const match of sentence.matchAll(WORD)) {
+    if (match.index > end) parts.push(sentence.slice(end, match.index))
+    parts.push({ word: match[0] })
+    end = match.index + match[0].length
+  }
+  if (end < sentence.length) parts.push(sentence.slice(end))
+  return parts
 }
 
 function summarise(node: CompiledNode): NodeSummary {

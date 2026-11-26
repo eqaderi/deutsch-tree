@@ -31,10 +31,13 @@ export function passMark(attemptSize: number): number {
 
 /**
  * What a learner gave for one question: the chosen option for multiple choice
- * and gap fill, true or false for a true/false question. A question type with
- * another kind of answer adds it here and gets a case in `checkAnswer`.
+ * and gap fill, true or false for a true/false question, the place of the
+ * picked word for find the error, the pieces placed so far (in their order)
+ * for word ordering, the partner chosen for each item (null where none is
+ * chosen yet) for matching. A question type with another kind of answer adds
+ * it here and gets a case in `checkAnswer` and in `isAnswered`.
  */
-export type Answer = string | boolean
+export type Answer = string | boolean | number | Array<string | null>
 
 export interface AnswerCheck {
   correct: boolean
@@ -46,8 +49,36 @@ export function checkAnswer(question: Question, answer: Answer | undefined): Ans
     case 'multiple-choice':
     case 'gap-fill':
     case 'true-false':
+    case 'find-error':
       return { correct: answer === question.answer }
+    case 'word-order':
+      return { correct: [question.answer, ...question.alsoAccepted].some((order) => sameList(order, answer)) }
+    case 'matching':
+      return { correct: sameList(question.answer, answer) }
   }
+}
+
+/**
+ * Has the learner given a whole answer, so that the test may move on? An
+ * answer that is built in steps is not whole until its last step.
+ */
+export function isAnswered(question: Question, answer: Answer | undefined): boolean {
+  switch (question.type) {
+    case 'multiple-choice':
+    case 'gap-fill':
+    case 'true-false':
+    case 'find-error':
+      return answer !== undefined
+    case 'word-order':
+      return Array.isArray(answer) && answer.length === question.pieces.length
+    case 'matching':
+      return Array.isArray(answer) && question.left.every((_, index) => typeof answer[index] === 'string')
+  }
+}
+
+/** Is `answer` a list with exactly the items of `list`, in the same order? */
+function sameList(list: readonly unknown[], answer: Answer | undefined): boolean {
+  return Array.isArray(answer) && answer.length === list.length && list.every((item, index) => item === answer[index])
 }
 
 export interface AttemptResult {

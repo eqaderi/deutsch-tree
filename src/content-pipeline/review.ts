@@ -8,6 +8,7 @@ import { isDeepStrictEqual } from 'node:util'
 import { parse as parseYaml, stringify as toYaml } from 'yaml'
 import { z } from 'zod'
 import { type NodeFile, nodeFileSchema } from '../content-model/index.ts'
+import { mixed } from './mix.ts'
 
 type QuestionFile = NonNullable<NodeFile['questions']>[number]
 
@@ -39,6 +40,33 @@ const REVIEW_VIEWS: { [T in QuestionFile['type']]: ReviewView<Extract<QuestionFi
   'multiple-choice': keyIn('answer', 'the exact text of the one correct option'),
   'gap-fill': keyIn('answer', 'the exact text of the one option that fills the gap'),
   'true-false': keyIn('answer', 'true when the sentence is correct German, false when it holds a mistake (no quotes)'),
+  'find-error': keyIn('answer', 'the one wrong word of the sentence, exactly as it is written there'),
+  'word-order': {
+    // Mixed by the pieces alone: the order on the sheet says nothing about the key.
+    blind: (question) => ({ type: question.type, pieces: mixed(question.answer), end: question.end }),
+    key: (question) => [question.answer, ...question.alsoAccepted],
+    answerFormat: [
+      'every order of the pieces that is a correct German sentence closed by the mark in "end":',
+      'a list of orders, each order a list of all the pieces exactly as written, such as [["ich", "wohne", "hier"]].',
+      'Use every piece once per order. The pieces are written as they stand inside a sentence; the learner sees',
+      'the first one with a capital letter. Most questions have one right order. More than one is no flaw here:',
+      'list each order that is just as correct.',
+    ].join(' '),
+    // The reviewer must find every accepted order and no other one. One order may come without the outer list.
+    agrees: (question, answer) => sameSet([question.answer, ...question.alsoAccepted], listOfLists(answer)),
+  },
+  matching: {
+    // The partners are mixed by themselves alone: their order says nothing about the pairs.
+    blind: (question) => ({
+      type: question.type,
+      left: question.answer.map(([item]) => item),
+      right: mixed(question.answer.map(([, partner]) => partner)),
+    }),
+    key: (question) => question.answer,
+    answerFormat:
+      'every pair as [item from "left", its partner from "right"], exactly as written, such as [["ich", "wohne"], ["du", "wohnst"]]',
+    agrees: (question, answer) => sameSet(question.answer, listOfLists(answer)),
+  },
 }
 
 /** The view of a type whose key is the field `field`. The reviewer sees every other field except the explanation. */
@@ -63,6 +91,18 @@ function viewOf(question: QuestionFile): ReviewView<QuestionFile> {
 /** Equal once differences in spacing and in how a letter is encoded are set aside. */
 function same(a: unknown, b: unknown): boolean {
   return canonical(a) === canonical(b)
+}
+
+/** The same things, in whatever order and however often each is listed. */
+function sameSet(a: unknown[], b: unknown[]): boolean {
+  const members = (list: unknown[]) => [...new Set(list.map(canonical))].sort()
+  return isDeepStrictEqual(members(a), members(b))
+}
+
+/** A reviewer's answer that should be a list of lists; a single list of texts counts as a list of one. */
+function listOfLists(answer: unknown): unknown[] {
+  if (!Array.isArray(answer)) return [answer]
+  return answer.length > 0 && answer.every((part) => typeof part === 'string') ? [answer] : answer
 }
 
 /** The same text for the same value, whatever order its keys were written in. */

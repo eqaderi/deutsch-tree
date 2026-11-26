@@ -153,8 +153,138 @@ const trueFalseQuestion = z.strictObject({
   answer: z.boolean(oneAnswer('true-false', 'must be true or false')),
 })
 
+/**
+ * A word of a German sentence: letters and digits, with a hyphen or an
+ * apostrophe inside it. Whatever stands between two words (spaces, commas,
+ * the full stop) belongs to neither.
+ */
+export const WORD = /[\p{L}\p{N}]+(?:[-'’][\p{L}\p{N}]+)*/gu
+
+/** The prompt is a German sentence with one wrong word; the learner picks that word. */
+const findErrorQuestion = z
+  .strictObject({
+    ...questionBase,
+    type: z.literal('find-error'),
+    /** The one wrong word, written as it stands in the sentence. */
+    answer: answerText('find-error'),
+  })
+  .superRefine((value, ctx) => {
+    const matches = (value.prompt.match(WORD) ?? []).filter((word) => word === value.answer).length
+    if (matches === 1) return
+    ctx.addIssue({
+      code: 'custom',
+      path: ['answer'],
+      message:
+        matches === 0
+          ? `no correct answer: "${value.answer}" is not a word of the sentence`
+          : `${matches} correct answers: "${value.answer}" is in the sentence ${matches} times`,
+    })
+  })
+
+/**
+ * A question type whose prompt the author does not write: the pipeline builds
+ * it from what the question shows.
+ */
+const questionWithoutPrompt = { id: questionBase.id, explanation: questionBase.explanation }
+
+/** The marks that may close the sentence of a word ordering question. */
+export const SENTENCE_ENDS = ['.', '?', '!'] as const
+
+/** One order of the pieces of a word ordering question. */
+const piecesInOrder = z.array(text, {
+  error: ({ input }) =>
+    input === undefined
+      ? 'no correct answer: the question states none'
+      : 'must be the pieces of the sentence in the right order, as a list',
+})
+
+/**
+ * The pieces of a German sentence, which the learner puts in order. A piece
+ * is one word or several. Where German allows more than one order, every
+ * right one is listed: `answer` and then `alsoAccepted`.
+ */
+const wordOrderQuestion = z
+  .strictObject({
+    ...questionWithoutPrompt,
+    type: z.literal('word-order'),
+    /** The pieces in the right order, each written as it stands inside a sentence (no capital for the first). */
+    answer: piecesInOrder.min(3, 'needs at least 3 pieces: with fewer there is nothing to put in order'),
+    /** Every other right order of the same pieces. */
+    alsoAccepted: z.array(piecesInOrder).default([]),
+    /** The mark that closes the sentence. The app adds it, and the capital letter at the start. */
+    end: z.enum(SENTENCE_ENDS, { error: 'must be ".", "?" or "!"' }).default('.'),
+  })
+  .superRefine((value, ctx) => {
+    value.alsoAccepted.forEach((order, index) => {
+      const problem =
+        notTheSamePieces(value.answer, order) ??
+        (sameList(order, value.answer) ? 'is the same order as the answer' : undefined) ??
+        (value.alsoAccepted.slice(0, index).some((earlier) => sameList(earlier, order)) ? 'is listed twice' : undefined)
+      if (problem) ctx.addIssue({ code: 'custom', path: ['alsoAccepted', index], message: problem })
+    })
+  })
+
+function sameList(a: readonly string[], b: readonly string[]): boolean {
+  return a.length === b.length && a.every((item, index) => item === b[index])
+}
+
+/** Why `order` is not a rearrangement of `pieces`, or undefined when it is one. */
+function notTheSamePieces(pieces: readonly string[], order: readonly string[]): string | undefined {
+  const must = 'must be the pieces of the answer in another order'
+  const left = [...pieces]
+  for (const piece of order) {
+    const index = left.indexOf(piece)
+    if (index === -1) {
+      return `${must}: "${piece}" is ${pieces.includes(piece) ? 'there too often' : 'not one'}`
+    }
+    left.splice(index, 1)
+  }
+  return left.length > 0 ? `${must}: "${left[0]}" is missing` : undefined
+}
+
+const NOT_PAIRS = 'must be the pairs, each one written as [item, partner]'
+
+/**
+ * Pairs of German: the learner finds the partner of each item. An item has
+ * one partner and a partner fits one item, so only one matching is right.
+ */
+const matchingQuestion = z
+  .strictObject({
+    ...questionWithoutPrompt,
+    type: z.literal('matching'),
+    /** The pairs, each one as [item, partner]. The app mixes the partners. */
+    answer: z
+      .array(z.tuple([text, text], { error: NOT_PAIRS }), {
+        error: ({ input }) => (input === undefined ? 'no correct answer: the question states none' : NOT_PAIRS),
+      })
+      .min(3, 'needs at least 3 pairs: with fewer there is nothing to match'),
+  })
+  .superRefine((value, ctx) => {
+    value.answer.forEach(([item, partner], index) => {
+      // Reported once, at the last pair that repeats it.
+      const later = value.answer.slice(index + 1)
+      const items = value.answer.filter(([other]) => other === item).length
+      if (items > 1 && !later.some(([other]) => other === item)) {
+        const message = `${items} correct answers: "${item}" has ${items} partners`
+        ctx.addIssue({ code: 'custom', path: ['answer', index], message })
+      }
+      const partners = value.answer.filter(([, other]) => other === partner).length
+      if (partners > 1 && !later.some(([, other]) => other === partner)) {
+        const message = `${partners} correct answers: "${partner}" is the partner of ${partners} items`
+        ctx.addIssue({ code: 'custom', path: ['answer', index], message })
+      }
+    })
+  })
+
 /** Later question types join this union under their own `type`, each with its answer rule. */
-const question = z.discriminatedUnion('type', [multipleChoiceQuestion, gapFillQuestion, trueFalseQuestion])
+const question = z.discriminatedUnion('type', [
+  multipleChoiceQuestion,
+  gapFillQuestion,
+  trueFalseQuestion,
+  findErrorQuestion,
+  wordOrderQuestion,
+  matchingQuestion,
+])
 
 /**
  * Proof that an independent reviewer answered the pool without seeing the
@@ -295,7 +425,46 @@ export interface TrueFalseQuestion extends QuestionBase {
   answer: boolean
 }
 
-export type Question = MultipleChoiceQuestion | GapFillQuestion | TrueFalseQuestion
+/** The prompt is a German sentence with one wrong word; the learner picks that word. */
+export interface FindErrorQuestion extends QuestionBase {
+  type: 'find-error'
+  /** The prompt cut into its words and what stands between them, so the app can offer each word. */
+  parts: Array<string | { word: string }>
+  /** The place of the wrong word among the words of `parts`, counted from 0. */
+  answer: number
+}
+
+/** The learner puts the pieces of a German sentence in order. The prompt is the mixed pieces. */
+export interface WordOrderQuestion extends QuestionBase {
+  type: 'word-order'
+  /** The pieces as the learner first sees them: mixed, and in no right order. */
+  pieces: string[]
+  /** The mark that closes the sentence. */
+  end: (typeof SENTENCE_ENDS)[number]
+  /** The pieces in the right order. */
+  answer: string[]
+  /** Every other right order of the same pieces. */
+  alsoAccepted: string[][]
+}
+
+/** The learner finds the partner of each item. The prompt is the items. */
+export interface MatchingQuestion extends QuestionBase {
+  type: 'matching'
+  /** The items that each get a partner, in the order the author wrote them. */
+  left: string[]
+  /** The partners to choose from, mixed. No two are the same. */
+  right: string[]
+  /** The partner of each item of `left`, in the same order. */
+  answer: string[]
+}
+
+export type Question =
+  | MultipleChoiceQuestion
+  | GapFillQuestion
+  | TrueFalseQuestion
+  | FindErrorQuestion
+  | WordOrderQuestion
+  | MatchingQuestion
 
 export interface GrammarContent {
   explanations: Localised<{ rule: RichText }>
