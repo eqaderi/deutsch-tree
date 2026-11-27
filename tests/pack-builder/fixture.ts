@@ -179,6 +179,75 @@ export const otherBookProfile: BookProfileOverrides = {
   recordings: { file: '^Track (?<track>\\d+)$', ignore: '\\.jpg$' },
 }
 
+/**
+ * The default book as a scan with a poor text layer: the exam pages have no
+ * exam heading, exam 1's other headings are misread and exam 2 has none. The
+ * pages are where they are in the default book, and every exam is laid out
+ * the same, so `scannedBookProfile` gives the pages instead of headings.
+ *
+ * Its answer key prints one answer without its number (exam 1, Hören Teil 1:
+ * item 3) and breaks one line between a number and its answer (exam 1,
+ * Lesen Teil 5: item 29).
+ */
+export function scannedBook(): FixtureBook {
+  const book = fixtureBook()
+  const misread: Record<string, string> = { Lesen: 'Lcsen', Hören: 'H0ren', Schreiben: 'Schrciben' }
+  book.examPages = book.examPages.map((page, index) => {
+    const lines = page as string[]
+    if (index === 0) return lines
+    const inExam2 = index > 12
+    return lines
+      .filter((line) => !/^Modelltest \d+$/.test(line))
+      .filter((line) => !inExam2 || !(line in misread || /^Teil \d+$/.test(line)))
+      .map((line) => misread[line] ?? line.replace(/^Teil (\d+)$/, 'Tei1 $1'))
+  })
+  const key = book.keyPages[0] as string[]
+  key.splice(key.indexOf('Teil 5   27 c   28 a   29 b   30 a'), 1, 'Teil 5   27 c   28 a   29', 'b   30 a')
+  key.splice(
+    key.indexOf('Teil 1   1 falsch   2 b   3 richtig   4 a   5 richtig   6 c   7 falsch   8 a   9 falsch   10 b'),
+    1,
+    'Teil 1   1 falsch   2 b   Richtig   4 a   5 richtig   6 c   7 falsch   8 a   9 falsch   10 b',
+  )
+  return book
+}
+
+/** The profile that `scannedBook()` needs: the pages of one exam, and an item number that may be missing. */
+export const scannedBookProfile: BookProfileOverrides = {
+  exams: 2,
+  examPdf: {
+    layout: {
+      firstPage: 2,
+      pagesPerExam: 12,
+      modules: {
+        lesen: {
+          pages: [1, 6],
+          parts: [
+            [1, 1],
+            [2, 3],
+            [4, 4],
+            [5, 5],
+            [6, 6],
+          ],
+        },
+        hoeren: {
+          pages: [7, 10],
+          parts: [
+            [7, 7],
+            [8, 8],
+            [9, 9],
+            [10, 10],
+          ],
+        },
+        schreiben: { pages: [11, 11] },
+        sprechen: { pages: [12, 12] },
+      },
+    },
+  },
+  answerKey: {
+    item: '(?<!\\S)(?:(\\d{1,2})[.):]?\\s+)?(?i:(richtig|falsch|ja|nein|[a-j0]))(?!\\S)',
+  },
+}
+
 const PAGE = { width: 595, height: 842, margin: 50, lineHeight: 18, fontSize: 9 }
 
 /** A PDF with a text layer. Every page ends with the line "Fixture page N". */

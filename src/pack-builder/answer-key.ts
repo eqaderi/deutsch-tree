@@ -25,8 +25,8 @@ export function itemsByPart(module: ModuleProfile): PackItem[][] {
 }
 
 interface PrintedAnswer {
-  /** The item number printed in the key. */
-  printed: number
+  /** The item number printed in the key; null when the answer is printed without one. */
+  printed: number | null
   /** The answer as printed. */
   token: string
 }
@@ -92,7 +92,8 @@ export function readAnswerKey(pages: string[], profile: BookProfile, examNumbers
     ...matches(key.item, withoutHeadings).map((match) => ({
       kind: 'answer' as const,
       index: match.index,
-      printed: Number(match.groups[0]),
+      // An item pattern whose number is optional reads an answer printed without one.
+      printed: match.groups[0] === undefined ? null : Number(match.groups[0]),
       token: match.groups[1] ?? '',
     })),
   ].sort((a, b) => a.index - b.index)
@@ -127,7 +128,8 @@ export function readAnswerKey(pages: string[], profile: BookProfile, examNumbers
   const errors: string[] = []
   const repairs: PackAnswerRepair[] = []
   const substitutes = new Map(Object.entries(key.answers).map(([from, to]) => [folded(from), to]))
-  const numbers = (answers: PrintedAnswer[]) => answers.map((answer) => answer.printed).join(', ') || 'none'
+  const numbers = (answers: PrintedAnswer[]) =>
+    answers.map((answer) => answer.printed ?? '(no number)').join(', ') || 'none'
 
   if (examsInKey.length === 0) {
     errors.push(`No exam heading found in the answer key. The pattern for an exam's heading there is ${key.exam}`)

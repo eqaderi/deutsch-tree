@@ -106,8 +106,8 @@ const packAnswerRepair = z.strictObject({
   part: count,
   /** The item the answer belongs to, by its place in the key. */
   item: count,
-  /** The number the book's key prints at that place. */
-  printed: count,
+  /** The number the book's key prints at that place; null when it prints the answer without a number. */
+  printed: count.nullable(),
 })
 
 /** answers.json: the right answer for every item of every scored part. */
@@ -125,7 +125,7 @@ export const packAnswerKeySchema = z.strictObject({
     }),
   ),
   /**
-   * Places where the book's key prints a wrong item number. The builder reads
+   * Places where the book's key prints a wrong item number, or none. The builder reads
    * the key in order, so the answers above are already right; this list is
    * for checking those places against the book by hand.
    */

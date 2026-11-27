@@ -53,6 +53,16 @@ export async function readPdfText(file: string, columns = 1): Promise<string[]> 
   }
 }
 
+/** How many pages a PDF has. Its text is not read. */
+export async function pdfPageCount(file: string): Promise<number> {
+  const task = getDocument({ data: new Uint8Array(await readFile(file)), verbosity: 0 })
+  try {
+    return (await task.promise).numPages
+  } finally {
+    await task.destroy()
+  }
+}
+
 /** Groups text fragments into lines: by column, then top to bottom, then left to right. */
 function linesOf(fragments: Fragment[]): string[] {
   const sorted = [...fragments].sort((a, b) => a.column - b.column || b.y - a.y || a.x - b.x)

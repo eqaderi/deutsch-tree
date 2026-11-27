@@ -63,6 +63,24 @@ const partProfile = z.strictObject({
   choices: z.union([choices, z.array(choices).min(1)]),
 })
 
+/** Pages within one exam, counted from the exam's first page as 1: [first, last], both included. */
+const layoutRange = z
+  .tuple([pageNumber, pageNumber])
+  .refine(([first, last]) => first <= last, 'must be [first, last], and first cannot come after last')
+
+/**
+ * Where everything is when every exam has the same pages: the exam PDF's
+ * outline is then worked out from this, and no heading is looked for.
+ */
+const layoutProfile = z.strictObject({
+  /** The page of the exam PDF where exam 1 starts. */
+  firstPage: pageNumber,
+  /** How many pages every exam has. Exam 2 starts right after exam 1. */
+  pagesPerExam: pageNumber,
+  /** By module id: the module's pages, and one range for each of its scored parts. */
+  modules: z.record(moduleId, z.strictObject({ pages: layoutRange, parts: z.array(layoutRange).default([]) })),
+})
+
 const moduleProfile = z.strictObject({
   id: moduleId,
   /** The module's German name, shown in the app and in reports. */
@@ -92,6 +110,8 @@ export const bookProfileSchema = z
       modules: z.record(moduleId, pattern),
       /** A part's heading. Group 1 is the part's number. */
       part: numberPattern,
+      /** Every exam's pages, when they are the same in every exam. Then no heading is looked for. */
+      layout: layoutProfile.optional(),
     }),
     answerKey: z.strictObject({
       /** How many columns of text a page of the key has. */
@@ -126,7 +146,7 @@ export const bookProfileSchema = z
       }
     })
     for (const module of profile.modules) {
-      if (profile.examPdf.modules[module.id] === undefined) {
+      if (profile.examPdf.layout === undefined && profile.examPdf.modules[module.id] === undefined) {
         ctx.addIssue({
           code: 'custom',
           path: ['examPdf', 'modules'],
@@ -151,6 +171,7 @@ export const bookProfileSchema = z
     if (profile.modules.filter((module) => module.recordings).length > 1) {
       ctx.addIssue({ code: 'custom', path: ['modules'], message: 'only one module can have recordings' })
     }
+    if (profile.examPdf.layout) checkLayout(profile.examPdf.layout, profile, ctx)
     const groups = namedGroups(profile.recordings.file)
     const byPart = groups.includes('exam') && groups.includes('part')
     if (byPart === groups.includes('track')) {
@@ -161,6 +182,68 @@ export const bookProfileSchema = z
       })
     }
   })
+
+type Layout = z.infer<typeof layoutProfile>
+type Range = Layout['modules'][string]['pages']
+
+/** A layout that fits the profile: one range for every module and part, in order, inside one exam. */
+function checkLayout(layout: Layout, profile: BookProfile, ctx: z.RefinementCtx) {
+  const at = ['examPdf', 'layout', 'modules']
+  if (profile.exams === undefined) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['exams'],
+      message: 'is needed with examPdf.layout: a layout cannot count the exams',
+    })
+  }
+  for (const id of Object.keys(layout.modules)) {
+    if (!profile.modules.some((module) => module.id === id)) {
+      ctx.addIssue({ code: 'custom', path: [...at, id], message: `"${id}" is not one of the profile's modules` })
+    }
+  }
+  /** Each range inside `outer`, starting no earlier than the one before it ends: they may share a page. */
+  const inOrder = (ranges: Array<[Range, Array<string | number>]>, outer: Range, what: string) => {
+    ranges.forEach(([[first, last], path], index) => {
+      const before = ranges[index - 1]?.[0]
+      if (first < outer[0] || last > outer[1]) {
+        ctx.addIssue({
+          code: 'custom',
+          path,
+          message: `pages ${first} to ${last} are not inside ${what}, pages ${outer[0]} to ${outer[1]}`,
+        })
+      } else if (before && first < before[1]) {
+        ctx.addIssue({
+          code: 'custom',
+          path,
+          message: `starts on page ${first}, before the one before it ends on page ${before[1]}`,
+        })
+      }
+    })
+  }
+  const modules = profile.modules.flatMap((module): Array<[Range, Array<string | number>]> => {
+    const entry = layout.modules[module.id]
+    if (!entry) {
+      ctx.addIssue({ code: 'custom', path: at, message: `has no pages for the module "${module.id}"` })
+      return []
+    }
+    const parts = [...at, module.id, 'parts']
+    if (entry.parts.length !== module.parts.length) {
+      ctx.addIssue({
+        code: 'custom',
+        path: parts,
+        message: `has ${entry.parts.length} page ranges, but the module has ${module.parts.length} parts in the profile`,
+      })
+    } else {
+      inOrder(
+        entry.parts.map((range, index) => [range, [...parts, index]]),
+        entry.pages,
+        `the module's pages`,
+      )
+    }
+    return [[entry.pages, [...at, module.id, 'pages']]]
+  })
+  inOrder(modules, [1, layout.pagesPerExam], 'one exam')
+}
 
 export type BookProfile = z.infer<typeof bookProfileSchema>
 export type ModuleProfile = BookProfile['modules'][number]

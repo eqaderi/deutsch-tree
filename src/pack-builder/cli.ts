@@ -15,7 +15,7 @@ const USAGE = `Builds a private pack from your own exam book.
 
   pnpm pack:build --exam <exams.pdf> --key <answer-key.pdf> --audio <folder> --name "<pack name>"
 
-  --exam <file>      the book's exams as one PDF with a text layer
+  --exam <file>      the book's exams as one PDF with a text layer (none needed with a layout)
   --key <file>       the book's answer key as a PDF with a text layer
   --audio <folder>   the folder with the book's recordings
   --name <text>      the pack's name, as the app shows it
