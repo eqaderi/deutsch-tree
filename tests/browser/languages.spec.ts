@@ -60,7 +60,7 @@ test('the language choice is remembered after a reload', async ({ page }) => {
 
   // And on the next page the learner opens.
   await page.getByRole('link', { name: 'همهٔ موضوع‌ها' }).click()
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('آلمانی از صفر تا B1')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('آلمانی از صفر تا \u2066B1\u2069')
 })
 
 test('in simple German the explanation is German and the examples need no translation', async ({ page }) => {
@@ -112,7 +112,7 @@ test('switching language keeps the learner in the same place', async ({ page }) 
   // On the tree, with a level chosen.
   await page.goto('./#/?level=A1')
   await page.getByRole('button', { name: 'فارسی' }).click()
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('آلمانی از صفر تا B1')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('آلمانی از صفر تا \u2066B1\u2069')
   expect(new URL(page.url()).hash).toBe('#/?level=A1')
 
   // On a topic's test. The page is the very same one, only in another
@@ -153,7 +153,7 @@ test('the description of the page is in the learner’s language', async ({ page
   await page.getByRole('button', { name: 'فارسی' }).click()
   await expect(description).toHaveAttribute(
     'content',
-    'همهٔ آلمانی از صفر تا آزمون B1 گوته، به شکل درختی از موضوع‌های کوچک، هر کدام با توضیح و آزمون.',
+    'آلمانی از صفر تا امتحان \u2066B1\u2069 گوته، در درختی از موضوع‌های کوچک که هر کدام توضیح و آزمونی دارد.',
   )
 
   await page.getByRole('button', { name: 'Deutsch' }).click()
@@ -169,7 +169,7 @@ test.describe('on a first visit with a Persian browser', () => {
   test('the site opens in Persian', async ({ page }) => {
     await page.goto('./')
 
-    await expect(page.getByRole('heading', { level: 1 })).toHaveText('آلمانی از صفر تا B1')
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('آلمانی از صفر تا \u2066B1\u2069')
     await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
   })
 })

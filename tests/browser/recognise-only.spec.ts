@@ -46,7 +46,7 @@ test('a recognise-only topic’s page and its test say that only understanding i
 test('the label is in the learner’s language', async ({ page }) => {
   await page.goto('./#/node/grammar-102')
   await page.getByRole('button', { name: 'فارسی' }).click()
-  await expect(page.locator('header.page-head')).toContainText('فقط شناختن')
+  await expect(page.locator('header.page-head')).toContainText('فقط در حد شناختن')
 
   await page.getByRole('button', { name: 'Deutsch' }).click()
   await expect(page.locator('header.page-head')).toContainText('Nur verstehen')

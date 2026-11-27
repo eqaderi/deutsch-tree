@@ -236,7 +236,7 @@ test('on a Persian page the answer field and the letter buttons still read left 
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
 
   const field = answerField(page)
-  const letters = page.getByRole('group', { name: 'حروف آلمانی' }).getByRole('button')
+  const letters = page.getByRole('group', { name: 'حرف‌های آلمانی' }).getByRole('button')
   await expect(letters).toHaveText(['ä', 'ö', 'ü', 'ß'])
   const fromTheLeft = await Promise.all((await letters.all()).map(async (button) => (await button.boundingBox())?.x))
   expect(fromTheLeft).toEqual([...fromTheLeft].sort((a, b) => (a ?? 0) - (b ?? 0)))
@@ -263,7 +263,7 @@ test('the notes of a result are in the learner’s language and fit the screen',
   expect(await sidewaysScroll(page)).toBe(0)
 
   await page.getByRole('button', { name: 'فارسی' }).click()
-  const noted = page.getByRole('list', { name: 'پذیرفته‌شده با یادداشت' }).getByRole('listitem')
+  const noted = page.getByRole('list', { name: 'پذیرفته شد، با یک نکته' }).getByRole('listitem')
   await expect(noted).toHaveCount(1)
   await expect(noted.getByRole('term')).toHaveText(['پاسخ شما', 'املای دقیق'])
   // The German in the note is German: left to right inside the Persian card.

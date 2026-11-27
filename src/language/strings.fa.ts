@@ -139,7 +139,7 @@ export const fa: Strings = {
   transcript: 'آنچه گفته می‌شود',
   questions: 'پرسش‌ها',
   examAnswers: { richtig: 'Richtig', falsch: 'Falsch', ja: 'Ja', nein: 'Nein' },
-  answeredOf: (answered, total) => `${digits.format(answered)} پرسش از ${digits.format(total)} پاسخ داده شده`,
+  answeredOf: (answered, total) => `${digits.format(answered)} از ${digits.format(total)} پاسخ داده شده`,
   yourAnswers: 'پاسخ‌های شما',
   answerIsRight: 'پاسخ شما درست است',
   answerIsWrong: 'پاسخ شما نادرست است',
@@ -438,7 +438,7 @@ export const fa: Strings = {
   gradedTimeIsUp:
     'زمان تمام شد. همانند امتحان، همین‌جا دست نگه دارید. به تکلیف‌هایتان نمره بدهید، نمره‌ها را وارد کنید و سپس این مهارت را به پایان برسانید.',
   scoreEntered: (score) => `نمره: ${digits.format(score)} از ۱۰۰`,
-  scoresEnteredOf: (entered, total) => `${digits.format(entered)} نمره از ${digits.format(total)} وارد شده`,
+  scoresEnteredOf: (entered, total) => `${digits.format(entered)} از ${digits.format(total)} نمره وارد شده`,
   enteredScores: 'نمره‌هایی که وارد کردید',
 }
 

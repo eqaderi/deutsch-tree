@@ -69,7 +69,7 @@ test('a phrases page in Persian and in German: the phrases stay German and read 
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('سلام‌های آزمایشی')
   await expect(page.getByRole('main').getByRole('heading', { level: 2 })).toHaveText([
-    'این عبارت‌ها برای چیست',
+    'کاربرد این عبارت‌ها',
     'عبارت‌ها',
     'آزمون',
   ])
