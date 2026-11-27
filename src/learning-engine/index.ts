@@ -3,6 +3,7 @@
  * storage, no clock. Whatever is random comes in as a `Random`, so a caller
  * (and a test) decides the dice.
  */
+import { type ChoosableVoice, DEFAULT_VOICE } from '../content-model/audio.ts'
 import {
   asLearned,
   type ItemTask,
@@ -487,10 +488,21 @@ export interface Progress {
    * first. A result is never changed or replaced: this is the history.
    */
   mockExams: MockModuleResult[]
+  /**
+   * The voice the learner chose for everything one person says (examples,
+   * words, phrases, mistakes). A dialogue keeps its speakers' voices. It is
+   * kept with the progress so that an export carries it to another device.
+   */
+  voice: ChoosableVoice
 }
 
 export function emptyProgress(): Progress {
-  return { nodes: {}, officialExams: {}, mockExams: [] }
+  return { nodes: {}, officialExams: {}, mockExams: [], voice: DEFAULT_VOICE }
+}
+
+/** The progress with another voice for everything one person says. Nothing else changes. */
+export function chooseVoice(progress: Progress, voice: ChoosableVoice): Progress {
+  return { ...progress, voice }
 }
 
 export function nodeProgress(progress: Progress, nodeId: string): NodeProgress {
@@ -588,11 +600,13 @@ export function examResultCounts(progress: Progress): { mockModules: number; off
 
 /**
  * Whether anything at all has been recorded, so that replacing the progress
- * would lose something. Every field of `Progress` is a list or a record that
- * starts empty; a field of another kind needs its own line here.
+ * would lose something. Every field of `Progress` but the voice is a list or
+ * a record that starts empty; a new field of another kind needs its own line
+ * here. The chosen voice is a setting, not something done, so it does not
+ * count.
  */
-export function hasProgress(progress: Progress): boolean {
-  return Object.values(progress).some((field) => Object.keys(field).length > 0)
+export function hasProgress({ voice: _voice, ...done }: Progress): boolean {
+  return Object.values(done).some((field) => Object.keys(field).length > 0)
 }
 
 // ---------------------------------------------------------------------------

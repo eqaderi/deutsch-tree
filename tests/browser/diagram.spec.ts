@@ -12,17 +12,21 @@ function drawnSize(text: Locator): Promise<number> {
   })
 }
 
-test('a diagram stands after the rule and before the table, named by its caption', async ({ page }) => {
+test('a grammar page shows its table right after the rule, before the diagram, which is named by its caption', async ({
+  page,
+}) => {
   await page.goto('./#/node/grammar-101')
 
-  await expect(page.getByRole('main').getByRole('heading', { level: 2 })).toHaveText([
-    'Rule',
-    'Diagram',
-    'Table',
-    'Examples',
-    'Common mistakes',
-    'Test',
-  ])
+  const headings = page.getByRole('main').getByRole('heading', { level: 2 })
+  await expect(headings).toHaveText(['Rule', 'Table', 'Diagram', 'Examples', 'Common mistakes', 'Test'])
+  // The same order on the screen, one below the other (the test button stays at the bottom of the screen).
+  const tops: number[] = []
+  for (const heading of (await headings.all()).slice(0, -1)) {
+    const box = await heading.boundingBox()
+    if (!box) throw new Error('a section heading is not on the page')
+    tops.push(box.y)
+  }
+  expect(tops).toEqual([...tops].sort((a, b) => a - b))
   const diagram = page.getByRole('img', { name: 'The book lies auf dem Tisch.' })
   await expect(diagram).toBeVisible()
   // German drawn in it, and a label in the learner's language.
@@ -52,7 +56,7 @@ test('in Persian a diagram keeps its left-to-right layout and writes its labels 
 
   const diagram = page.getByRole('img', { name: 'کتاب auf dem Tisch است.' })
   await expect(diagram).toBeVisible()
-  await expect(page.getByRole('main').getByRole('heading', { level: 2 }).nth(1)).toHaveText('نمودار')
+  await expect(page.getByRole('main').getByRole('heading', { level: 2 }).nth(2)).toHaveText('نمودار')
   const label = diagram.locator('text[lang="fa"]')
   await expect(label).toHaveText('میز')
   expect(await readsLeftToRight(diagram.locator('text[lang="de"]', { hasText: 'auf dem Tisch' }))).toBe(true)

@@ -192,6 +192,9 @@ A Persian page runs right to left; German must stay left to right.
   keeps it left to right. `pnpm test:unit` rejects Latin letters or digits
   outside it. A string that is Latin only, such as an answer *Richtig*,
   needs nothing.
+- **In the start-folder instructions** (`src/start-files/folder/instructions-fa.html`),
+  a command, a file name or an address goes in `<code>`, and any other Latin
+  word in `<bdi>`.
 - **A German word is quoted in its dictionary form**, lower case unless it
   is a noun: «*die Kinder* چند نفرند», even at the start of a Persian
   sentence. A German sentence keeps its capital: *Ich wohne in Berlin.*

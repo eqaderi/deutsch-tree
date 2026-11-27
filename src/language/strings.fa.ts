@@ -77,6 +77,8 @@ export const fa: Strings = {
   listen: 'گوش دادن',
   stopListening: 'توقف',
   audioFailed: 'صدا پخش نشد.',
+  voice: 'صدا',
+  voiceNames: { thorsten: `مرد (${german('Thorsten')})`, kerstin: `زن (${german('Kerstin')})` },
   // The names in Latin letters read left to right; the hyphen of Hi-Fi does not break the line.
   voiceCredit: `صدای آلمانی: صداهای ${german('Thorsten')}، ${german('Kerstin')} و ${german('MLS')} از ${german('Piper')}. صدای ${german('Kerstin')} بر پایهٔ ${german('Hi‑Fi TTS')} از ${german('NVIDIA')}، با پروانهٔ ${german('CC BY 4.0')} و با خوانش ${german('Cori Samuel')} ساخته شده است. صدای ${german('MLS')} بر پایهٔ ${german('Multilingual LibriSpeech')} از ${german('Facebook AI')}، با پروانهٔ ${german('CC BY 4.0')} و از کتاب‌های صوتی ${german('LibriVox')} ساخته شده است.`,
   commonMistakes: 'اشتباه‌های رایج',
@@ -90,7 +92,7 @@ export const fa: Strings = {
   takeTheTest: 'شروع آزمون',
   comingSoonPage: 'این موضوع هنوز نوشته نشده است. پس از آماده شدن، در همین صفحه می‌آید.',
   ankiTitle: `کارت‌های ${german('Anki')}`,
-  ankiText: `واژه‌ها را در فایلی برای ${german('Anki')} ذخیره کنید. ${german('Anki')} برنامهٔ فلش‌کارت است و هر واژه را درست پیش از آن‌که فراموشش کنید دوباره نشان می‌دهد. در ${german('Anki')} گزینهٔ ${german('File')} و سپس ${german('Import')} را بزنید و فایل را باز کنید. اگر بعدها فایل تازه‌تری وارد کنید، ${german('Anki')} کارت‌های موجود را به‌روز می‌کند و آن‌ها را دوباره نمی‌افزاید. نسخهٔ ${german('2.1.54')} یا تازه‌تر ${german('Anki')} لازم است.`,
+  ankiText: `واژه‌ها را در فایلی برای ${german('Anki')} ذخیره کنید. ${german('Anki')} برنامهٔ فلش‌کارت است و هر واژه را درست پیش از آن‌که فراموشش کنید دوباره نشان می‌دهد. در ${german('Anki')} گزینهٔ ${german('File')} و سپس ${german('Import')} را بزنید و فایل را باز کنید. اگر بعدها فایل تازه‌تری وارد کنید، ${german('Anki')} کارت‌های موجود را به‌روز می‌کند و آن‌ها را دوباره نمی‌افزاید. نسخهٔ ${german('2.1.54')} یا تازه‌تر ${german('Anki')} لازم است. ${german('Anki')} روی رایانهٔ مک یا ویندوز رایگان است، ولی نسخهٔ آیفون آن پولی است. برای مرور رایگان روی گوشی، فایل را در ${german('Anki')} روی رایانه وارد کنید، کارت‌ها را با یک حساب رایگان ${german('AnkiWeb')} همگام کنید، سپس در مرورگر گوشی به ${german('ankiweb.net')} بروید و همان‌جا مرور کنید. روی گوشی‌های اندرویدی، برنامهٔ ${german('AnkiDroid')} رایگان است.`,
   ankiThisTopic: 'دانلود همین موضوع',
   ankiStartedTopics: 'دانلود همهٔ موضوع‌های شروع‌شده',
   ankiStartedCount: (count) => `${digits.format(count)} موضوع واژگان شروع‌شده`,

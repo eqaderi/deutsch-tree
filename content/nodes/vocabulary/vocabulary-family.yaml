@@ -392,7 +392,7 @@ words:
     tooCloseTo: [gestorben]
 
 review:
-  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
-    only; 162, then 1 question)
-  date: 2026-11-26
-  pool: ea7bd33677877f64
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 2, then 1 question)
+  date: 2026-11-27
+  pool: c29dd8934e945777

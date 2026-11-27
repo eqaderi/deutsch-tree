@@ -1,3 +1,4 @@
+import type { ChoosableVoice } from '../content-model/audio.ts'
 import type { ExamAudience, ExamLinkKind, NodeKind, Question, WordClass } from '../content-model/index.ts'
 import type { AnswerNote, ExamModule } from '../learning-engine/index.ts'
 
@@ -87,6 +88,9 @@ export const en = {
   listen: 'Listen',
   stopListening: 'Stop',
   audioFailed: 'The audio could not be played.',
+  /** The voice setting at the foot of every page: who says everything one person says. A dialogue keeps its speakers. */
+  voice: 'Voice',
+  voiceNames: { thorsten: 'Male (Thorsten)', kerstin: 'Female (Kerstin)' } satisfies Record<ChoosableVoice, string>,
   /** The credit that a voice's licence asks for, shown at the foot of every page. */
   voiceCredit:
     'German audio: the Piper voices Thorsten, Kerstin and MLS. The Kerstin voice is built on Hi-Fi TTS by NVIDIA (CC BY 4.0), read by Cori Samuel. The MLS voice is built on Multilingual LibriSpeech by Facebook AI (CC BY 4.0), read from LibriVox audiobooks.',
@@ -106,7 +110,7 @@ export const en = {
   // The export of words to Anki, on a vocabulary page.
   ankiTitle: 'Flashcards for Anki',
   ankiText:
-    'Save the words as a file for Anki, a flashcard app that shows you each word again just before you would forget it. In Anki, choose File, then Import, and open the file. If you import a newer file later, Anki updates the cards you already have instead of adding them again. You need Anki 2.1.54 or newer.',
+    'Save the words as a file for Anki, a flashcard app that shows you each word again just before you would forget it. In Anki, choose File, then Import, and open the file. If you import a newer file later, Anki updates the cards you already have instead of adding them again. You need Anki 2.1.54 or newer. Anki is free on a Mac or Windows computer but costs money on an iPhone. To study on the phone for free, import the file into Anki on the computer, sync it with a free AnkiWeb account, then open ankiweb.net in the phone’s browser and study there. On Android, the AnkiDroid app is free.',
   ankiThisTopic: 'Download this topic',
   ankiStartedTopics: 'Download all started topics',
   ankiStartedCount: (count: number) =>

@@ -10,7 +10,8 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
 import type { z } from 'zod'
-import { spoken } from '../audio/index.ts'
+import { spoken, spokenBy } from '../audio/index.ts'
+import { DEFAULT_VOICE } from '../content-model/audio.ts'
 import { readDrawing } from '../content-model/diagram.ts'
 import {
   type ChapterEntry,
@@ -487,7 +488,7 @@ function compileTaskText({ id, title, body, speakers, lines }: ItemTaskFile['tex
   const voiceOf = new Map((speakers ?? []).map((one) => [one.name, one.voice]))
   return {
     ...titled,
-    lines: lines.map((line) => ({ ...line, audio: spoken(line.text, voiceOf.get(line.speaker)) })),
+    lines: lines.map((line) => ({ ...line, audio: spokenBy(line.text, voiceOf.get(line.speaker) ?? DEFAULT_VOICE) })),
   }
 }
 

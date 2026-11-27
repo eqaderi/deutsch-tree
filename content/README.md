@@ -359,11 +359,35 @@ sprechen:                # Sprechen, Teil 1 to Teil 3, in order
 ## A published grammar node
 
 Add the sections below. The page shows them in this fixed order: rule,
-diagram, table, examples, common mistakes, test. A node needs a table, a
+table, diagrams, examples, common mistakes, test, on a phone as on a
+computer, so the forms come right after the rule. A node needs a table, a
 diagram or both: a table for forms (endings, articles), a diagram for a
 structure that is hard to picture from text (positions, word order, cases).
 The diagram is written as described in "Diagrams" below. A complete example
 with both is `content/nodes/grammar/grammar-128.yaml`, the grammar sample.
+
+A topic that changes articles or endings (cases, prepositions, adjective
+endings, pronouns) has a table that shows the change from the Nominativ
+form: one row each for masculine, feminine, neuter and plural (der, die,
+das, die), with the changed form beside it (dem, der, dem, den for the
+Dativ), the form with *ein* where it applies (*–* in a row without one), and
+a short example. The first column is headed Nominativ, the next one names
+the form it changes to. The table of `grammar-128` is this table for the
+Dativ:
+
+```yaml
+table:
+  columns:
+    - { en: Nominativ, fa: Nominativ, de: Nominativ }
+    - { en: Dativ, fa: Dativ, de: Dativ }
+    - { en: With ein, fa: با ein, de: Mit ein }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Schrank, dem Schrank, einem Schrank, neben dem Schrank]
+    - [die Tür, der Tür, einer Tür, hinter der Tür]
+    - [das Regal, dem Regal, einem Regal, auf dem Regal]
+    - [die Bücher (Plural), den Büchern, –, zwischen den Büchern]
+```
 
 ```yaml
 status: published
@@ -864,8 +888,10 @@ publish it.
 
 Every German example of a published node can be heard, and so can every
 vocabulary word (with its article) and its example sentence, and every line
-of a listening part, in the voice of its speaker. The audio is
-made from the text by one command, in the voice chosen on ticket #5:
+of a listening part, in the voice of its speaker. What one person says
+(examples, words, phrases, mistakes) is made in both voices a learner may
+choose, Thorsten and Kerstin (ticket #41); a line of a dialogue only in its
+speaker's voice. The audio is made from the text by one command:
 
 ```sh
 pnpm audio:generate --voices <folder of the Piper voice files> --piper <path to piper>
@@ -874,7 +900,8 @@ pnpm audio:generate --voices <folder of the Piper voice files> --piper <path to 
 Run it after changing or adding German that is spoken, and commit the files it
 writes in `content/audio/` with the change. It says only what is new or
 changed and removes what is no longer needed. `pnpm content:check` names
-every spoken item of a published node whose file is missing. Piper and its
+every spoken item of a published node whose file is missing, with the voice
+it is missing in. Piper and its
 voice files are not in the repository; how to install them and the options of
 the command are in the main README, "Audio".
 
