@@ -22,8 +22,8 @@ import { VocabularySections } from './VocabularySections.tsx'
 
 /**
  * A node's page: a column of panels in one fixed order, with the main action
- * at the bottom of the screen. A grammar page is rule, table, examples,
- * common mistakes, test; a phrases page is what the phrases are for and the
+ * at the bottom of the screen. A grammar page is rule, table, diagrams,
+ * examples, common mistakes, test; a phrases page is what the phrases are for and the
  * phrases (PhraseSections.tsx), then the test. Every exam-part page begins
  * with what the part asks, how it is scored and how to approach it; then
  * comes what the learner does with it: a practice task the app scores
@@ -209,17 +209,17 @@ function GrammarSections({ content }: { content: GrammarContent }) {
         </p>
       </Panel>
 
+      {content.table && (
+        <Panel id="section-table" heading={strings.table}>
+          <GrammarTableView table={content.table} />
+        </Panel>
+      )}
+
       {content.diagrams && (
         <Panel id="section-diagram" heading={strings.diagram}>
           {content.diagrams.map((diagram, index) => (
             <DiagramView key={index} diagram={diagram} />
           ))}
-        </Panel>
-      )}
-
-      {content.table && (
-        <Panel id="section-table" heading={strings.table}>
-          <GrammarTableView table={content.table} />
         </Panel>
       )}
 
