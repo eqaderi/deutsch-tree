@@ -372,15 +372,17 @@ form: one row each for masculine, feminine, neuter and plural (der, die,
 das, die), with the changed form beside it (dem, der, dem, den for the
 Dativ), the form with *ein* where it applies (*–* in a row without one), and
 a short example. The first column is headed Nominativ, the next one names
-the form it changes to. The table of `grammar-128` is this table for the
-Dativ:
+the form it changes to. A heading marks German in asterisks, as a title does,
+and in Persian a case is named with «حالت» (`content/persian-style.md`, §3
+and §5): «حالت *Dativ*», «با *ein*». The table of `grammar-128` is this
+table for the Dativ:
 
 ```yaml
 table:
   columns:
-    - { en: Nominativ, fa: Nominativ, de: Nominativ }
-    - { en: Dativ, fa: Dativ, de: Dativ }
-    - { en: With ein, fa: با ein, de: Mit ein }
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
     - { en: Example, fa: مثال, de: Beispiel }
   rows:
     - [der Schrank, dem Schrank, einem Schrank, neben dem Schrank]
@@ -409,7 +411,7 @@ diagrams:                # optional; see "Diagrams"
       <svg viewBox="0 0 320 200"> … </svg>
 
 table:                   # optional when the node has a diagram
-  columns:               # headings, in three languages; plain text, no asterisks
+  columns:               # headings, in three languages; German in asterisks, as in a title
     - { en: Person, fa: شخص, de: Person }
     - { en: Ending, fa: پایانه, de: Endung }
   rows:                  # cells are German; every row has one cell per column
@@ -905,6 +907,13 @@ it is missing in. Piper and its
 voice files are not in the repository; how to install them and the options of
 the command are in the main README, "Audio".
 
+- A line of a listening text (a Hören part of an exam-part node or of a
+  mock exam) keeps the voice of its named speaker, also in a text with one
+  speaker, and whatever voice the learner chose: the recordings of the exam
+  have fixed voices, and the practice sounds like them. Only German without a
+  named speaker (examples, words, phrases, mistakes) follows the learner's
+  choice. A chapter or mock-exam ticket that adds listening texts follows
+  this rule.
 - Numbers are spoken as words: `85 Jahre`, `14:35 Uhr`, `am 3. Mai`, `1990`,
   `3,50 €` and `20 %` need nothing. A number in another form (`3.5.2025`) is
   an error that asks you to write it in words.
@@ -975,8 +984,9 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - A node without a chapter, with a chapter that `chapters.yaml` does not
   have, or of another level or kind than its chapter. A chapter name that
   lacks a language.
-- Persian text (a title, a chapter name, a purpose, an explanation, the
-  caption of a diagram, the meaning of a phrase, the reason of a mistake, of a question or of an item)
+- Persian text (a title, a chapter name, a purpose, an explanation, a
+  heading of a table, the caption of a diagram, the meaning of a phrase, the
+  reason of a mistake, of a question or of an item)
   with a Latin letter
   outside asterisks. The Persian meaning of a vocabulary word is plain text
   and may hold no Latin letter at all.

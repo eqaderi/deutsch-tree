@@ -29,7 +29,7 @@ export function persianProblem(text: string): string | undefined {
 
 /**
  * Every Persian text of a node in which asterisks mark German: titles,
- * purposes, explanations, captions of diagrams, the meanings of phrases,
+ * purposes, explanations, the headings of a table, captions of diagrams, the meanings of phrases,
  * and the one-line reasons of mistakes, questions and practice items. The
  * meaning of a vocabulary word is not among them: it is plain text.
  */
@@ -42,6 +42,7 @@ export function persianTextsOf(node: NodeFile): PersianText[] {
         ? [{ where: `explanations.fa.${name}`, text: value }]
         : value.map((step, index) => ({ where: `explanations.fa.${name}[${index}]`, text: step })),
     ),
+    ...(node.table?.columns ?? []).map((column, index) => ({ where: `table.columns[${index}].fa`, text: column.fa })),
     ...(node.diagrams ?? []).map((diagram, index) => ({
       where: `diagrams[${index}].caption.fa`,
       text: diagram.caption.fa,

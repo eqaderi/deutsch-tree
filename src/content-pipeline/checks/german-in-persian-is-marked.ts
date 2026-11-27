@@ -11,7 +11,7 @@ import { CHAPTERS_FILE, type ContentCheck, type ContentProblem, problemIn } from
  * The rule takes every Latin letter for German, because Persian is written
  * without any. A level ("B1") or a name in Latin letters goes in asterisks
  * too. It covers the texts in which asterisks mark German: titles, chapter
- * names, purposes, explanations, the meanings of phrases, captions of
+ * names, purposes, explanations, the headings of tables, the meanings of phrases, captions of
  * diagrams, and the one-line reasons of mistakes, questions and the items
  * of practice tasks. A diagram's labels hold no German at all; the schema
  * says so.

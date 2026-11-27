@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { allStrings } from '../../src/language/index.tsx'
 import { persianProblem } from '../../src/content-pipeline/persian-texts.ts'
+import { allStrings } from '../../src/language/index.tsx'
 
 /**
  * The type checker already rejects a language that lacks a string. These

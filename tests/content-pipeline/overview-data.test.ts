@@ -19,8 +19,8 @@ test('the overview data holds the table of every published grammar node, and not
     node: 'grammar-001',
     table: {
       columns: [
-        { en: 'Person', fa: 'شخص', de: 'Person' },
-        { en: 'Form', fa: 'صورت', de: 'Form' },
+        { en: ['Person'], fa: ['شخص'], de: ['Person'] },
+        { en: ['Form'], fa: ['صورت'], de: ['Form'] },
       ],
       rows: [
         ['ich', 'wohne'],
@@ -49,6 +49,23 @@ test('the tables of the overview data are in curriculum order', async () => {
     'grammar-102',
     'grammar-103',
   ])
+})
+
+test('German in the heading of a table stands in asterisks, as in a title, and is compiled as German', async () => {
+  const content = await fixtureContentWith({
+    [PUBLISHED]: changeNode((node) => {
+      node.table.columns[1] = { en: '*Dativ*', fa: 'حالت *Dativ*', de: 'Dativ' }
+    }),
+  })
+
+  const { report, bundle } = await compileContent(content)
+
+  expect(report.errors).toEqual([])
+  expect(bundle?.overview.tables[0]?.table.columns[1]).toEqual({
+    en: [{ de: 'Dativ' }],
+    fa: ['حالت ', { de: 'Dativ' }],
+    de: ['Dativ'],
+  })
 })
 
 test('a draft table inside a node that is coming soon is not in the overview data', async () => {

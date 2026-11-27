@@ -61,6 +61,20 @@ test('the prefix می and the plural ها are joined with a half-space, not a sp
   ])
 })
 
+test('the Persian headings of a table are held to the same spelling', async () => {
+  const content = await fixtureContentWith({
+    [PUBLISHED]: changeNode((node) => {
+      node.table.columns[1].fa = 'شكل'
+    }),
+  })
+
+  const { report } = await compileContent(content)
+
+  expect(report.errors.map(({ file, where, message }) => [file, where, message])).toEqual([
+    [PUBLISHED, 'table.columns[1].fa', 'Arabic letter "ك" in Persian text: write the Persian "ک"'],
+  ])
+})
+
 test('the meaning of a word and the title of a chapter are held to the same spelling', async () => {
   const content = await fixtureContentWith({
     [VOCABULARY]: changeReviewedNode((node) => {

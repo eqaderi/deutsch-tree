@@ -52,6 +52,21 @@ test('German outside asterisks is found in every Persian text that can mark Germ
   ])
 })
 
+test('German outside asterisks is found in the Persian headings of a table', async () => {
+  const content = await fixtureContentWith({
+    [PUBLISHED]: changeNode((node) => {
+      node.table.columns[0].fa = 'حالت Nominativ'
+      node.table.columns[1].fa = 'حالت *Dativ*'
+    }),
+  })
+
+  const { report } = await compileContent(content)
+
+  expect(report.errors.map(({ file, where, message }) => [file, where, message])).toEqual([
+    [PUBLISHED, 'table.columns[0].fa', expect.stringContaining('"Nominativ"')],
+  ])
+})
+
 test('German outside asterisks is found in the Persian texts of an exam part', async () => {
   const content = await fixtureContentWith({
     [EXAM_PART]: changeNode((node) => {

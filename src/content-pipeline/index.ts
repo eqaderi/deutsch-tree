@@ -11,7 +11,7 @@ import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
 import type { z } from 'zod'
 import { spoken, spokenLines } from '../audio/index.ts'
-import type { Spoken } from '../content-model/audio.ts'
+import type { SpokenLine } from '../content-model/audio.ts'
 import { readDrawing } from '../content-model/diagram.ts'
 import {
   type ChapterEntry,
@@ -485,7 +485,7 @@ function compileTaskText({ id, title, body, speakers, lines }: ItemTaskFile['tex
     }
   }
   const audio = spokenLines(speakers ?? [], lines)
-  return { ...titled, lines: lines.map((line, index) => ({ ...line, audio: audio[index] as Spoken })) }
+  return { ...titled, lines: lines.map((line, index) => ({ ...line, audio: audio[index] as SpokenLine })) }
 }
 
 /** A writing or speaking node: its explanations, and its task with the module and the part that say which task it is. */
@@ -520,7 +520,7 @@ function compileGrammarContent(file: NodeFile): GrammarContent {
   const rule = (language: Language) => ({ rule: richText(explanations[language].rule ?? '') })
   return {
     explanations: inEachLanguage(rule),
-    ...(table && { table }),
+    ...(table && { table: { columns: table.columns.map(richTextIn), rows: table.rows } }),
     ...(diagrams && { diagrams: diagrams.map(compileDiagram) }),
     examples: examples.map((example) => ({ ...example, audio: spoken(example.de) })),
     mistakes: mistakes.map((mistake) => ({ ...mistake, why: richTextIn(mistake.why), audio: spoken(mistake.right) })),

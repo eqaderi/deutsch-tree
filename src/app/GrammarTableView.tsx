@@ -1,6 +1,6 @@
 import type { GrammarTable } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
-import { German } from './German.tsx'
+import { German, RichText } from './German.tsx'
 
 /**
  * A grammar table, on a topic's page and on the "all grammar at a glance"
@@ -16,7 +16,9 @@ export function GrammarTableView({ table }: { table: GrammarTable }) {
           <tr>
             {table.columns.map((column, index) => (
               <th key={index} scope="col">
-                <bdi>{column[language]}</bdi>
+                <bdi>
+                  <RichText parts={column[language]} />
+                </bdi>
               </th>
             ))}
           </tr>
