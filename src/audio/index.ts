@@ -5,7 +5,7 @@
  * piece of German that one person says (an example, a word, a phrase, the
  * right sentence of a mistake): it has a key in each voice the learner may
  * choose. `spokenBy(text, voice)` is a line of a dialogue, said only in the
- * voice of its speaker. A key is a hash of the voice and the spoken text,
+ * voice of its speaker (`spokenLines` for the lines of a text). A key is a hash of the voice and the spoken text,
  * never of the audio, so it is known without Piper, the same text always has
  * the same file, and a changed text gets a new one. `spokenItems(nodes)`
  * finds everything that carries audio (in nodes and mock exams alike:
@@ -42,6 +42,19 @@ export function spokenBy(text: string, voice: VoiceId): Spoken {
   const said = speakable(text)
   const key = createHash('sha256').update(`${voice}\n${said}`).digest('hex').slice(0, KEY_LENGTH)
   return { key, voice, text: said }
+}
+
+/**
+ * The audio of each line of a dialogue, in the order of the lines: in the
+ * voice of its speaker, and in the main voice for a speaker the text gives
+ * no voice.
+ */
+export function spokenLines(
+  speakers: ReadonlyArray<{ name: string; voice: VoiceId }>,
+  lines: ReadonlyArray<{ speaker: string; text: string }>,
+): Spoken[] {
+  const voiceOf = new Map(speakers.map((one) => [one.name, one.voice]))
+  return lines.map((line) => spokenBy(line.text, voiceOf.get(line.speaker) ?? DEFAULT_VOICE))
 }
 
 /**

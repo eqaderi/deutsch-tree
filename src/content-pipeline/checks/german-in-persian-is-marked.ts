@@ -1,4 +1,4 @@
-import type { NodeFile } from '../../content-model/index.ts'
+import { persianTextsOf, unmarkedGerman } from '../persian-texts.ts'
 import { CHAPTERS_FILE, type ContentCheck, type ContentProblem, problemIn } from './check.ts'
 
 /**
@@ -49,48 +49,4 @@ export const germanInPersianIsMarked: ContentCheck = ({ nodes, chapters }) => {
   })
 
   return problems
-}
-
-export function persianTextsOf(node: NodeFile): Array<{ where: string; text: string; question?: string }> {
-  return [
-    { where: 'title.fa', text: node.title.fa },
-    ...(node.purpose ? [{ where: 'purpose.fa', text: node.purpose.fa }] : []),
-    ...Object.entries(node.explanations?.fa ?? {}).flatMap(([name, value]) =>
-      typeof value === 'string'
-        ? [{ where: `explanations.fa.${name}`, text: value }]
-        : value.map((step, index) => ({ where: `explanations.fa.${name}[${index}]`, text: step })),
-    ),
-    ...(node.diagrams ?? []).map((diagram, index) => ({
-      where: `diagrams[${index}].caption.fa`,
-      text: diagram.caption.fa,
-    })),
-    ...(node.mistakes ?? []).map((mistake, index) => ({ where: `mistakes[${index}].why.fa`, text: mistake.why.fa })),
-    ...(node.phrases ?? []).map((phrase, index) => ({
-      where: `phrases[${index}].meaning.fa`,
-      text: phrase.meaning.fa,
-    })),
-    ...(node.questions ?? []).map((question, index) => ({
-      where: `questions[${index}].explanation.fa`,
-      text: question.explanation.fa,
-      question: question.id,
-    })),
-    ...(node.practice ?? []).flatMap((task, taskIndex) =>
-      task.items.map((item, index) => ({
-        where: `practice[${taskIndex}].items[${index}].explanation.fa`,
-        text: item.explanation.fa,
-        question: `${task.id}/${item.id}`,
-      })),
-    ),
-  ]
-}
-
-/** The first run of Latin letters outside asterisks, with the hyphens and dots that belong to it. */
-const LATIN_RUN = /[-.’'(]*\p{Script=Latin}[\p{Script=Latin}\p{Mark}\-.’'()]*/u
-
-/** What is wrong with the Persian text, or nothing. */
-export function unmarkedGerman(text: string): string | undefined {
-  const outsideAsterisks = text.replace(/\*[^*]+\*/g, ' ')
-  const german = LATIN_RUN.exec(outsideAsterisks)?.[0]
-  if (german === undefined) return undefined
-  return `German outside asterisks: "${german}". A Persian page shows it in the wrong order; write *${german}*`
 }

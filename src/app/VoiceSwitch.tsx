@@ -13,7 +13,7 @@ export function VoiceSwitch() {
   const { voice } = useProgress()
   return (
     // biome-ignore lint/a11y/useSemanticElements: a fieldset cannot be laid out as one pill in every browser
-    <div role="group" aria-label={strings.voice} className="voice-switch">
+    <div role="group" aria-label={strings.voice} className="pill-switch">
       {CHOOSABLE_VOICES.map((choice) => (
         <button
           key={choice}

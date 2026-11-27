@@ -76,15 +76,3 @@ test('the meaning of a word and the title of a chapter are held to the same spel
     ['chapters.yaml', '[1].title.fa', 'Arabic letter "ي" in Persian text: write the Persian "ی"'],
   ])
 })
-
-test('the Persian of a mock exam is held to the same spelling', async () => {
-  const content = await fixtureContentWith({
-    'mock-exams/mock-exam-2.yaml': (text) => text.replace('fa: آزمون آزمایشی دوم', 'fa: امتحان آزمایشی 2'),
-  })
-
-  const { report } = await compileContent(content)
-
-  expect(report.errors.map(({ file, where, message }) => [file, where, message])).toEqual([
-    ['mock-exams/mock-exam-2.yaml', 'title.fa', 'Latin digit "2" in Persian text: write Persian digits (۰ to ۹)'],
-  ])
-})

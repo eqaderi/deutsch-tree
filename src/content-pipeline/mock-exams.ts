@@ -32,10 +32,9 @@ import {
   mockExamFileSchema,
   type RichText,
 } from '../content-model/index.ts'
-import { misspeltPersian } from '../language/persian-spelling.ts'
-import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { type ContentProblem, formatPath } from './checks/index.ts'
 import { itemTaskProblems } from './checks/practice-task-fits-its-part.ts'
+import { type PersianText, persianProblem } from './persian-texts.ts'
 import { reviewProblem } from './review.ts'
 
 /** The folder of the mock exam files, inside the content folder; and the compiled files in the bundle. */
@@ -124,7 +123,7 @@ function mockExamProblems({ file, exam }: CheckedMockExam): ContentProblem[] {
     })
   }
 
-  const persian: Array<{ where: string; text: string; question?: string }> = [
+  const persian: PersianText[] = [
     { where: 'title.fa', text: exam.title.fa },
     ...MOCK_EXAM_ITEM_MODULES.flatMap((module) =>
       (exam[module] ?? []).flatMap((part, partIndex) =>
@@ -137,7 +136,7 @@ function mockExamProblems({ file, exam }: CheckedMockExam): ContentProblem[] {
     ),
   ]
   for (const { where, text, question } of persian) {
-    const message = unmarkedGerman(text) ?? misspeltPersian(text)
+    const message = persianProblem(text)
     if (message) problems.push({ ...at, ...(question ? { question } : {}), where, message })
   }
 

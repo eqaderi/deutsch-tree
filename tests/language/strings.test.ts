@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { allStrings } from '../../src/language/index.tsx'
-import { misspeltPersian } from '../../src/language/persian-spelling.ts'
+import { persianProblem } from '../../src/content-pipeline/persian-texts.ts'
 
 /**
  * The type checker already rejects a language that lacks a string. These
@@ -37,9 +37,12 @@ function persianStrings(value: unknown = allStrings.fa, prefix = ''): Array<{ pa
   return Object.entries(value).flatMap(([key, inner]) => persianStrings(inner, prefix ? `${prefix}.${key}` : key))
 }
 
-/** The text without what stands between U+2066 and U+2069: German or a name, kept left to right. */
-function withoutMarkedLatin(text: string): string {
-  return text.replace(/⁦[^⁩]*⁩/g, ' ')
+/**
+ * The text with what stands between U+2066 and U+2069 (German or a name,
+ * kept left to right by `german()`) in asterisks, as content marks German.
+ */
+function markedAsInContent(text: string): string {
+  return text.replace(/⁦([^⁩]*)⁩/g, '*$1*')
 }
 
 describe('interface strings', () => {
@@ -55,22 +58,13 @@ describe('interface strings', () => {
     expect(emptyStrings(allStrings[language])).toEqual([])
   })
 
-  it('spells Persian as content/persian-style.md says: Persian letters and digits, half-spaces', () => {
-    const misspelt = persianStrings()
-      .map(({ path, text }) => [path, misspeltPersian(withoutMarkedLatin(text))])
-      .filter(([, problem]) => problem !== undefined)
-    expect(misspelt).toEqual([])
-  })
-
-  it('marks every piece of Latin text inside a Persian sentence, so that it reads left to right', () => {
-    const unmarked = persianStrings()
+  it('holds Persian to content/persian-style.md as content is: Latin text marked, Persian letters, digits and half-spaces', () => {
+    // A string that is Latin only, such as an answer *Richtig*, needs nothing.
+    const problems = persianStrings()
       .filter(({ text }) => /\p{Script=Arabic}/u.test(text))
-      .map(({ path, text }) => [
-        path,
-        /[\p{Script=Latin}0-9][\p{Script=Latin}0-9 .:-]*/u.exec(withoutMarkedLatin(text))?.[0],
-      ])
-      .filter(([, latin]) => latin !== undefined)
-    expect(unmarked).toEqual([])
+      .map(({ path, text }) => [path, persianProblem(markedAsInContent(text))])
+      .filter(([, problem]) => problem !== undefined)
+    expect(problems).toEqual([])
   })
 
   it('writes numbers in Persian digits in Persian, and in Latin digits otherwise', () => {

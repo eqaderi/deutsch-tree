@@ -10,8 +10,8 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
 import type { z } from 'zod'
-import { spoken, spokenBy } from '../audio/index.ts'
-import { DEFAULT_VOICE } from '../content-model/audio.ts'
+import { spoken, spokenLines } from '../audio/index.ts'
+import type { Spoken } from '../content-model/audio.ts'
 import { readDrawing } from '../content-model/diagram.ts'
 import {
   type ChapterEntry,
@@ -47,15 +47,14 @@ import {
   WORD,
 } from '../content-model/index.ts'
 import { hasPool, hasPractice, isAssistantGraded } from '../content-model/scoring.ts'
-import { misspeltPersian } from '../language/persian-spelling.ts'
 import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { audioProblems, presentAudio } from './audio.ts'
 import { checkpointData } from './checkpoint-data.ts'
-import { unmarkedGerman } from './checks/german-in-persian-is-marked.ts'
 import { CHAPTERS_FILE, CHECKS, type CheckedNode, type ContentProblem, formatPath } from './checks/index.ts'
 import { mixedAwayFrom } from './mix.ts'
 import { compileMockExam, MOCK_EXAMS_JSON, mockExamList, readMockExams } from './mock-exams.ts'
 import { overviewData } from './overview-data.ts'
+import { persianProblem } from './persian-texts.ts'
 import { searchData } from './search-data.ts'
 import { compileVocabularyContent } from './vocabulary.ts'
 
@@ -285,7 +284,7 @@ async function readOfficialMockExams(contentDir: string, errors: ContentProblem[
 
   exams.forEach((exam, examIndex) => {
     exam.links.forEach((link, linkIndex) => {
-      const message = link.note && (unmarkedGerman(link.note.fa) ?? misspeltPersian(link.note.fa))
+      const message = link.note && persianProblem(link.note.fa)
       if (message) {
         errors.push({ file: OFFICIAL_MOCK_EXAMS_FILE, where: `[${examIndex}].links[${linkIndex}].note.fa`, message })
       }
@@ -485,11 +484,8 @@ function compileTaskText({ id, title, body, speakers, lines }: ItemTaskFile['tex
         .filter((paragraph) => paragraph !== ''),
     }
   }
-  const voiceOf = new Map((speakers ?? []).map((one) => [one.name, one.voice]))
-  return {
-    ...titled,
-    lines: lines.map((line) => ({ ...line, audio: spokenBy(line.text, voiceOf.get(line.speaker) ?? DEFAULT_VOICE) })),
-  }
+  const audio = spokenLines(speakers ?? [], lines)
+  return { ...titled, lines: lines.map((line, index) => ({ ...line, audio: audio[index] as Spoken })) }
 }
 
 /** A writing or speaking node: its explanations, and its task with the module and the part that say which task it is. */

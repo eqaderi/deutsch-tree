@@ -1,6 +1,6 @@
 import { misspeltPersian } from '../../language/persian-spelling.ts'
+import { type PersianText, persianTextsOf } from '../persian-texts.ts'
 import { CHAPTERS_FILE, type ContentCheck, type ContentProblem, problemIn } from './check.ts'
-import { persianTextsOf } from './german-in-persian-is-marked.ts'
 
 /**
  * Persian text follows the spelling of content/persian-style.md: Persian ی
@@ -12,7 +12,7 @@ export const persianIsSpeltToTheStyleGuide: ContentCheck = ({ nodes, chapters })
   const problems: ContentProblem[] = []
 
   for (const checked of nodes) {
-    const texts: Array<{ where: string; text: string; question?: string }> = [
+    const texts: PersianText[] = [
       ...persianTextsOf(checked.node),
       ...(checked.node.words ?? []).flatMap((word, index) =>
         word.meaning === undefined ? [] : [{ where: `words[${index}].meaning.fa`, text: word.meaning.fa }],

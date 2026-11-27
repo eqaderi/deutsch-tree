@@ -140,14 +140,14 @@ test('the list of mock exams names each in order, with its status and modules; o
         id: 'mock-exam-1',
         order: 1,
         status: 'published',
-        title: { en: ['Fixture mock exam'], fa: ['آزمون آزمایشی'], de: ['Test-Prüfung'] },
+        title: { en: ['Fixture mock exam'], fa: ['امتحان آزمایشی'], de: ['Test-Prüfung'] },
         modules: ['lesen', 'hoeren', 'schreiben', 'sprechen'],
       },
       {
         id: 'mock-exam-2',
         order: 2,
         status: 'coming-soon',
-        title: { en: ['Second fixture mock exam'], fa: ['آزمون آزمایشی دوم'], de: ['Zweite Test-Prüfung'] },
+        title: { en: ['Second fixture mock exam'], fa: ['امتحان آزمایشی دوم'], de: ['Zweite Test-Prüfung'] },
         modules: [],
       },
     ],
@@ -361,7 +361,7 @@ test('the review sheet of a mock exam holds every part as a task, its items name
 
 test('German in a Persian title of a mock exam must stand in asterisks', async () => {
   const errors = await problemsWith((exam) => {
-    exam.title.fa = 'آزمون Probe'
+    exam.title.fa = 'امتحان Probe'
   })
 
   expect(errors).toEqual([
@@ -370,6 +370,16 @@ test('German in a Persian title of a mock exam must stand in asterisks', async (
       where: 'title.fa',
       message: 'German outside asterisks: "Probe". A Persian page shows it in the wrong order; write *Probe*',
     },
+  ])
+})
+
+test('the Persian of a mock exam is held to the spelling of every Persian text', async () => {
+  const errors = await problemsWith((exam) => {
+    exam.title.fa = 'امتحان آزمایشی 2'
+  })
+
+  expect(errors).toEqual([
+    { file: MOCK_EXAM, where: 'title.fa', message: 'Latin digit "2" in Persian text: write Persian digits (۰ to ۹)' },
   ])
 })
 
