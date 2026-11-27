@@ -35,7 +35,7 @@ async function editIn(dir: string, file: string, edit: (text: string) => string)
 const audioFiles = async (dir: string) => (await readdir(path.join(dir, 'audio'))).sort()
 const fileText = (dir: string, key: string) => readFile(path.join(dir, 'audio', `${key}.mp3`), 'utf8')
 
-test('the first run says every example and word of the published nodes once, and writes one file for each', async () => {
+test('the first run says every example and word of the published nodes once in each voice, and writes one file for each', async () => {
   const dir = await contentWithoutAudio()
   const { said, synthesise } = fakeVoice()
 
@@ -47,11 +47,27 @@ test('the first run says every example and word of the published nodes once, and
   expect(texts).toContain('der Tisch')
   expect(texts).toContain('Das Essen steht auf dem Tisch.')
   expect(texts).toContain('Guten Tag, Frau Test!')
-  // German that stands in several places is said once.
-  expect(new Set(texts).size).toBe(texts.length)
+  // German that stands in several places is said once in each voice.
+  const voiced = said.map((item) => `${item.voice}: ${item.text}`)
+  expect(new Set(voiced).size).toBe(voiced.length)
   expect(report.made).toHaveLength(said.length)
   expect(await audioFiles(dir)).toEqual(said.map((item) => `${item.key}.mp3`).sort())
   expect(await fileText(dir, '16af11d6bd373d3d')).toBe('thorsten: Ich wohne in Berlin.')
+})
+
+test('what one person says is said in both voices a learner may choose; a line of a conversation only in its speaker’s', async () => {
+  const dir = await contentWithoutAudio()
+  const { said, synthesise } = fakeVoice()
+
+  await generateAudio(dir, synthesise)
+
+  const voicesOf = (text: string) => said.filter((item) => item.text === text).map((item) => item.voice)
+  expect(voicesOf('Ich wohne in Berlin.')).toEqual(['thorsten', 'kerstin'])
+  expect(voicesOf('der Tisch')).toEqual(['thorsten', 'kerstin'])
+  expect(voicesOf('Guten Tag!')).toEqual(['thorsten', 'kerstin'])
+  expect(voicesOf('Hallo Jonas, schön, dich zu sehen! Wie war dein Urlaub?')).toEqual(['kerstin'])
+  // The keys were worked out with `printf 'kerstin\n<text>' | shasum -a 256`.
+  expect(await fileText(dir, '7610892bd4157192')).toBe('kerstin: Ich wohne in Berlin.')
 })
 
 test('a "coming soon" node has no page yet, so nothing of it is said, and the files of a node set back are removed', async () => {
@@ -114,8 +130,11 @@ test('a changed example gets new audio, its old file is removed, and nothing els
 
   const report = await generateAudio(dir, synthesise)
 
-  expect(said.map((item) => item.text)).toEqual(['Ich wohne in Hamburg.'])
-  expect(report.removed).toEqual(['16af11d6bd373d3d'])
+  expect(said.map((item) => `${item.voice}: ${item.text}`)).toEqual([
+    'thorsten: Ich wohne in Hamburg.',
+    'kerstin: Ich wohne in Hamburg.',
+  ])
+  expect(report.removed).toEqual(['16af11d6bd373d3d', '7610892bd4157192'])
   expect(await audioFiles(dir)).not.toContain('16af11d6bd373d3d.mp3')
 })
 
@@ -131,7 +150,10 @@ test('a number is said as words, and the same words with digits or in letters ar
   await generateAudio(dir, synthesise)
 
   const spokenTwice = said.filter((item) => item.text.includes('Jahre alt'))
-  expect(spokenTwice.map((item) => item.text)).toEqual(['Der Tisch ist fünfundachtzig Jahre alt.'])
+  expect(spokenTwice.map((item) => `${item.voice}: ${item.text}`)).toEqual([
+    'thorsten: Der Tisch ist fünfundachtzig Jahre alt.',
+    'kerstin: Der Tisch ist fünfundachtzig Jahre alt.',
+  ])
 })
 
 test('--force says everything again, and --redo says only the files named', async () => {

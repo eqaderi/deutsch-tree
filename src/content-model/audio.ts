@@ -5,7 +5,9 @@
  * The voices were chosen on ticket #5: Piper's Thorsten (medium) reads
  * everything, and Kerstin (medium) is the second voice of a dialogue. A
  * third voice, for the radio discussion of three people in Hören, Teil 4,
- * was added on ticket #27: one speaker of Piper's MLS (medium) model.
+ * was added on ticket #27: one speaker of Piper's MLS (medium) model. Since
+ * ticket #41 the learner chooses Thorsten or Kerstin for everything that one
+ * person says (`CHOOSABLE_VOICES`); a dialogue keeps its speakers' voices.
  */
 import { z } from 'zod'
 
@@ -16,8 +18,17 @@ export type VoiceId = (typeof VOICE_IDS)[number]
 /** For a content field that says who speaks a line: `voice: kerstin`. */
 export const voiceSchema = z.enum(VOICE_IDS)
 
-/** The voice of every example and word. A dialogue names the voice of each line. */
-export const DEFAULT_VOICE: VoiceId = 'thorsten'
+/**
+ * The voices a learner may choose for everything one person says (examples,
+ * words, phrases, mistakes): the main voice first, then the second. The
+ * choice is part of the learner's progress (`voice`). Every such piece of
+ * German has a file in each of them.
+ */
+export const CHOOSABLE_VOICES = ['thorsten', 'kerstin'] as const
+export type ChoosableVoice = (typeof CHOOSABLE_VOICES)[number]
+
+/** The main voice: what a learner hears who has chosen nothing. A dialogue names the voice of each line. */
+export const DEFAULT_VOICE: ChoosableVoice = 'thorsten'
 
 export interface Voice {
   /** The Piper voice model, as the files `<model>.onnx` and `<model>.onnx.json` are named. */
@@ -56,6 +67,18 @@ export interface Spoken {
   voice: VoiceId
   /** The text as the voice says it: numbers written as words. It may differ from the text shown. */
   text: string
+  /**
+   * Of German that one person says (not a line of a dialogue): the key of
+   * the same text in each voice the learner may choose. `key` and `voice`
+   * are then those of the main voice. A play button plays the learner's
+   * choice (`keyFor`).
+   */
+  byVoice?: Readonly<Record<ChoosableVoice, string>>
+}
+
+/** The key a play button plays: of the learner's chosen voice when the learner may choose, else of the speaker's. */
+export function keyFor(audio: Spoken, chosen: ChoosableVoice): string {
+  return audio.byVoice?.[chosen] ?? audio.key
 }
 
 /** The folder of the audio files, inside the content folder and inside the site's `content/` folder. */

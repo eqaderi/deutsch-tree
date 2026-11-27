@@ -1,3 +1,4 @@
+import type { ChoosableVoice } from '../content-model/audio.ts'
 import type { ExamAudience, ExamLinkKind, NodeKind, Question, WordClass } from '../content-model/index.ts'
 import type { AnswerNote, ExamModule } from '../learning-engine/index.ts'
 
@@ -87,6 +88,9 @@ export const en = {
   listen: 'Listen',
   stopListening: 'Stop',
   audioFailed: 'The audio could not be played.',
+  /** The voice setting at the foot of every page: who says everything one person says. A dialogue keeps its speakers. */
+  voice: 'Voice',
+  voiceNames: { thorsten: 'Male (Thorsten)', kerstin: 'Female (Kerstin)' } satisfies Record<ChoosableVoice, string>,
   /** The credit that a voice's licence asks for, shown at the foot of every page. */
   voiceCredit:
     'German audio: the Piper voices Thorsten, Kerstin and MLS. The Kerstin voice is built on Hi-Fi TTS by NVIDIA (CC BY 4.0), read by Cori Samuel. The MLS voice is built on Multilingual LibriSpeech by Facebook AI (CC BY 4.0), read from LibriVox audiobooks.',

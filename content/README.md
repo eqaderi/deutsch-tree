@@ -859,8 +859,10 @@ publish it.
 
 Every German example of a published node can be heard, and so can every
 vocabulary word (with its article) and its example sentence, and every line
-of a listening part, in the voice of its speaker. The audio is
-made from the text by one command, in the voice chosen on ticket #5:
+of a listening part, in the voice of its speaker. What one person says
+(examples, words, phrases, mistakes) is made in both voices a learner may
+choose, Thorsten and Kerstin (ticket #41); a line of a dialogue only in its
+speaker's voice. The audio is made from the text by one command:
 
 ```sh
 pnpm audio:generate --voices <folder of the Piper voice files> --piper <path to piper>
@@ -869,7 +871,8 @@ pnpm audio:generate --voices <folder of the Piper voice files> --piper <path to 
 Run it after changing or adding German that is spoken, and commit the files it
 writes in `content/audio/` with the change. It says only what is new or
 changed and removes what is no longer needed. `pnpm content:check` names
-every spoken item of a published node whose file is missing. Piper and its
+every spoken item of a published node whose file is missing, with the voice
+it is missing in. Piper and its
 voice files are not in the repository; how to install them and the options of
 the command are in the main README, "Audio".
 

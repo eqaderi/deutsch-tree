@@ -28,8 +28,8 @@ test('the saved shape has a version, and a new field of progress means a new ver
   // know the field must refuse the data instead of dropping the field, and
   // the version number is what tells it. See src/progress-store/index.ts.
   expect({ version: SAVED_VERSION, fields: Object.keys(emptyProgress()).sort() }).toEqual({
-    version: 3,
-    fields: ['mockExams', 'nodes', 'officialExams'],
+    version: 4,
+    fields: ['mockExams', 'nodes', 'officialExams', 'voice'],
   })
 })
 
@@ -92,6 +92,28 @@ test('progress saved by version 3 loads, with the history of mock exam modules',
       ],
     },
   ])
+})
+
+test('progress saved by version 3 loads with the main voice, as the app sounded then', () => {
+  // Version 4 added the voice the learner chose for everything one person says.
+  const progress = read(
+    '{"version":3,"nodes":{"grammar-001":{"done":true,"attempts":2}},"officialExams":{},"mockExams":[]}',
+  )
+
+  expect(progress.voice).toBe('thorsten')
+  expect(nodeProgress(progress, 'grammar-001')).toEqual({ done: true, attempts: 2 })
+})
+
+test('progress saved by version 4 loads with the voice the learner chose', () => {
+  const progress = read('{"version":4,"nodes":{},"officialExams":{},"mockExams":[],"voice":"kerstin"}')
+
+  expect(progress.voice).toBe('kerstin')
+})
+
+test('a saved voice the app does not offer reads as the main voice', () => {
+  for (const voice of ['"mls-5424"', '"robot"', '3', 'null']) {
+    expect(read(`{"version":4,"nodes":{},"voice":${voice}}`).voice).toBe('thorsten')
+  }
 })
 
 /**
