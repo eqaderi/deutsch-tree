@@ -36,9 +36,7 @@ test('pressing play plays the stored audio of that example, not the browser’s 
   await first.getByRole('button', { name: 'Listen' }).click()
 
   await expect.poll(() => asked).toEqual([`audio/${ICH_WOHNE_IN_BERLIN}.mp3`])
-  await expect
-    .poll(async () => (await heard()).played)
-    .toEqual([`/deutsch-tree/content/audio/${ICH_WOHNE_IN_BERLIN}.mp3`])
+  await expect.poll(async () => (await heard()).played).toEqual([`audio/${ICH_WOHNE_IN_BERLIN}.mp3`])
   // Played to its end, the button offers to listen again.
   await expect(first.getByRole('button', { name: 'Listen' })).toBeVisible()
   await expect(first).not.toContainText('could not be played')

@@ -1435,7 +1435,8 @@ export interface ChapterSummary {
 }
 
 export interface GrammarTable {
-  columns: Localised[]
+  /** The headings; German in them is marked, as in a title. */
+  columns: Array<Localised<RichText>>
   rows: string[][]
 }
 

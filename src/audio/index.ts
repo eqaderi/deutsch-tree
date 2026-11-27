@@ -5,7 +5,7 @@
  * piece of German that one person says (an example, a word, a phrase, the
  * right sentence of a mistake): it has a key in each voice the learner may
  * choose. `spokenBy(text, voice)` is a line of a dialogue, said only in the
- * voice of its speaker. A key is a hash of the voice and the spoken text,
+ * voice of its speaker (`spokenLines` for the lines of a text). A key is a hash of the voice and the spoken text,
  * never of the audio, so it is known without Piper, the same text always has
  * the same file, and a changed text gets a new one. `spokenItems(nodes)`
  * finds everything that carries audio (in nodes and mock exams alike:
@@ -19,6 +19,9 @@ import {
   type ChoosableVoice,
   DEFAULT_VOICE,
   type Spoken,
+  type SpokenFile,
+  type SpokenInEachVoice,
+  type SpokenLine,
   VOICE_IDS,
   type VoiceId,
 } from '../content-model/audio.ts'
@@ -29,29 +32,40 @@ import { speakable } from './speakable.ts'
 const KEY_LENGTH = 16
 
 /** The audio of German that one person says: in the main voice, with its key in each voice the learner may choose. */
-export function spoken(text: string): Spoken {
+export function spoken(text: string): SpokenInEachVoice {
   const byVoice = Object.fromEntries(CHOOSABLE_VOICES.map((voice) => [voice, spokenBy(text, voice).key])) as Record<
     ChoosableVoice,
     string
   >
-  return { ...spokenBy(text, DEFAULT_VOICE), byVoice }
+  const { key, text: said } = spokenBy(text, DEFAULT_VOICE)
+  return { key, voice: DEFAULT_VOICE, text: said, byVoice }
 }
 
 /** The audio of a line of a dialogue: said in the voice of its speaker only, whatever the learner chose. */
-export function spokenBy(text: string, voice: VoiceId): Spoken {
+export function spokenBy(text: string, voice: VoiceId): SpokenLine {
   const said = speakable(text)
   const key = createHash('sha256').update(`${voice}\n${said}`).digest('hex').slice(0, KEY_LENGTH)
   return { key, voice, text: said }
 }
 
 /**
+ * The audio of each line of a dialogue, in the order of the lines: in the
+ * voice of its speaker, and in the main voice for a speaker the text gives
+ * no voice.
+ */
+export function spokenLines(
+  speakers: ReadonlyArray<{ name: string; voice: VoiceId }>,
+  lines: ReadonlyArray<{ speaker: string; text: string }>,
+): SpokenLine[] {
+  const voiceOf = new Map(speakers.map((one) => [one.name, one.voice]))
+  return lines.map((line) => spokenBy(line.text, voiceOf.get(line.speaker) ?? DEFAULT_VOICE))
+}
+
+/**
  * One file that a page can play: a text in one voice, with the node it
  * belongs to and its place in the node's page content ("examples[0]").
  */
-export interface SpokenItem {
-  key: string
-  voice: VoiceId
-  text: string
+export interface SpokenItem extends SpokenFile {
   node: string
   where: string
 }
@@ -88,7 +102,7 @@ export function spokenInBundle(bundle: Pick<ContentBundle, 'nodes' | 'mockExams'
 }
 
 /** A piece of audio as the files that hold it: one per voice it is said in. */
-function inEachVoice({ key, voice, text, byVoice }: Spoken): Array<Pick<SpokenItem, 'key' | 'voice' | 'text'>> {
+function inEachVoice({ key, voice, text, byVoice }: Spoken): SpokenFile[] {
   if (!byVoice) return [{ key, voice, text }]
   return CHOOSABLE_VOICES.map((each) => ({ key: byVoice[each], voice: each, text }))
 }

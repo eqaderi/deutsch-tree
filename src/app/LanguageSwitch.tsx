@@ -9,7 +9,7 @@ export function LanguageSwitch() {
   const { language, strings, setLanguage } = useLanguage()
   return (
     // biome-ignore lint/a11y/useSemanticElements: a fieldset cannot be laid out as one pill in every browser
-    <div role="group" aria-label={strings.language} className="language-switch">
+    <div role="group" aria-label={strings.language} className="pill-switch">
       {(Object.keys(languageNames) as Language[]).map((choice) => (
         <button
           key={choice}

@@ -118,9 +118,9 @@ diagrams:
 
 table:
   columns:
-    - { en: Nominativ, fa: Nominativ, de: Nominativ }
-    - { en: Dativ, fa: Dativ, de: Dativ }
-    - { en: With ein, fa: با ein, de: Mit ein }
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
     - { en: Example, fa: مثال, de: Beispiel }
   rows:
     - [der Schrank, dem Schrank, einem Schrank, neben dem Schrank]

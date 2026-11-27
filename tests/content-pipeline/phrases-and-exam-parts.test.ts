@@ -42,7 +42,7 @@ const CHAPTERS = `
 - id: fixture-exam
   level: B1
   kind: exam-part
-  title: { en: Fixture exam chapter, fa: فصل آزمون آزمایشی, de: Test-Kapitel Prüfung }
+  title: { en: Fixture exam chapter, fa: فصل امتحان آزمایشی, de: Test-Kapitel Prüfung }
 `
 
 /** The fixture content with a phrases chapter and an exam-part chapter, and the given nodes in them. */
