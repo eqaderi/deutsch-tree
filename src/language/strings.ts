@@ -110,7 +110,7 @@ export const en = {
   // The export of words to Anki, on a vocabulary page.
   ankiTitle: 'Flashcards for Anki',
   ankiText:
-    'Save the words as a file for Anki, a flashcard app that shows you each word again just before you would forget it. In Anki, choose File, then Import, and open the file. If you import a newer file later, Anki updates the cards you already have instead of adding them again. You need Anki 2.1.54 or newer.',
+    'Save the words as a file for Anki, a flashcard app that shows you each word again just before you would forget it. In Anki, choose File, then Import, and open the file. If you import a newer file later, Anki updates the cards you already have instead of adding them again. You need Anki 2.1.54 or newer. Anki is free on a Mac or Windows computer but costs money on an iPhone. To study on the phone for free, import the file into Anki on the computer, sync it with a free AnkiWeb account, then open ankiweb.net in the phone’s browser and study there. On Android, the AnkiDroid app is free.',
   ankiThisTopic: 'Download this topic',
   ankiStartedTopics: 'Download all started topics',
   ankiStartedCount: (count: number) =>

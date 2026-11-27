@@ -939,7 +939,7 @@ export const nodeFileSchema = z
       .strictObject({ en: explanationIn('en'), fa: explanationIn('fa'), de: explanationIn('de') })
       .optional(),
     table: table.optional(),
-    /** Drawings, shown after the rule and before the table. A published node needs a table, a diagram or both. */
+    /** Drawings, shown after the table (after the rule when there is no table). A published node needs a table, a diagram or both. */
     diagrams: z.array(diagram).min(1).optional(),
     examples: z.array(example).min(1).optional(),
     mistakes: z.array(mistake).min(1).optional(),
@@ -1752,7 +1752,7 @@ export interface GrammarContent {
   explanations: Localised<{ rule: RichText }>
   /** A node explained by a diagram alone has no table. */
   table?: GrammarTable
-  /** Drawings, shown after the rule and before the table. */
+  /** Drawings, shown after the table (after the rule when there is no table). */
   diagrams?: Diagram[]
   examples: HeardExample[]
   mistakes: Mistake[]

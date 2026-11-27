@@ -90,7 +90,7 @@ export const de: Strings = {
   comingSoonPage: 'Dieses Thema ist noch nicht fertig. Es kommt später hierher.',
   ankiTitle: 'Karteikarten für Anki',
   ankiText:
-    'Speichere die Wörter als Datei für Anki. Anki ist eine App mit Karteikarten. Sie zeigt dir jedes Wort wieder, kurz bevor du es vergisst. Wähle in Anki „Datei“ und dann „Importieren“ und öffne die Datei. Importierst du später eine neue Datei, ändert Anki deine Karten und macht keine zweiten Karten. Du brauchst Anki 2.1.54 oder neuer.',
+    'Speichere die Wörter als Datei für Anki. Anki ist eine App mit Karteikarten. Sie zeigt dir jedes Wort wieder, kurz bevor du es vergisst. Wähle in Anki „Datei“ und dann „Importieren“ und öffne die Datei. Importierst du später eine neue Datei, ändert Anki deine Karten und macht keine zweiten Karten. Du brauchst Anki 2.1.54 oder neuer. Auf einem Computer mit Mac oder Windows ist Anki kostenlos, auf dem iPhone kostet es Geld. So lernst du kostenlos auf dem Handy: Importiere die Datei in Anki auf dem Computer und synchronisiere sie mit einem kostenlosen Konto bei AnkiWeb. Öffne dann im Browser des Handys ankiweb.net und lerne dort. Auf Android ist die App AnkiDroid kostenlos.',
   ankiThisTopic: 'Dieses Thema herunterladen',
   ankiStartedTopics: 'Alle begonnenen Themen herunterladen',
   ankiStartedCount: (count) => (count === 1 ? '1 Wörter-Thema begonnen' : `${count} Wörter-Themen begonnen`),
