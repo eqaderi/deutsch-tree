@@ -10,7 +10,7 @@ module: lesen
 part: 1
 title:
   en: "*Lesen Teil 1*: a blog post or e-mail, right or wrong"
-  fa: "*Lesen Teil 1*: متن وبلاگ یا ایمیل، درست یا غلط"
+  fa: "*Lesen Teil 1*: متن وبلاگ یا ایمیل، درست یا نادرست"
   de: "Lesen Teil 1: Blog oder E-Mail, richtig oder falsch"
 
 explanations:
@@ -36,23 +36,24 @@ explanations:
       - "Answer every statement. A wrong answer costs no point, so guess when you are not sure, and keep to about ten minutes."
   fa:
     task: >
-      یک متن شخصیِ نسبتاً بلند می‌خوانید: یک نوشتهٔ وبلاگ یا یک ایمیل. بعد
-      دربارهٔ شش جمله تصمیم می‌گیرید که هر کدام طبق متن درست است (*Richtig*)
-      یا غلط (*Falsch*). پیش از این شش جمله، امتحان یک نمونهٔ حل‌شده با شمارهٔ
-      صفر نشان می‌دهد.
+      متنی شخصی و نسبتاً بلند می‌خوانید، مثلاً نوشته‌ای در وبلاگ یا یک ایمیل.
+      سپس دربارهٔ شش جمله تصمیم می‌گیرید که هر کدام بنا بر متن درست است
+      (*Richtig*) یا نادرست (*Falsch*). پیش از این شش جمله، نمونه‌ای حل‌شده
+      با شمارهٔ صفر آمده است.
     scoring: >
-      هر پاسخ درست یک امتیاز دارد؛ پاسخ غلط یا خالی امتیازی کم نمی‌کند. کل
-      *Lesen* با پنج بخشش ۳۰ امتیاز دارد که به نمره‌ای از ۱۰۰ تبدیل می‌شود و
-      با ۶۰ قبول می‌شوید. این بخش ۶ امتیاز از آن ۳۰ امتیاز است. امتحان برای
-      این بخش ۱۰ دقیقه پیشنهاد می‌کند، از ۶۵ دقیقهٔ کل *Lesen*. در این برنامه،
-      این بخش وقتی تمام‌شده حساب می‌شود که در یک تمرین هر شش پاسخ درست باشد.
+      هر پاسخ درست یک امتیاز دارد و پاسخ نادرست یا خالی امتیازی کم نمی‌کند.
+      کل مهارت *Lesen* با پنج بخشش ۳۰ امتیاز دارد که به نمره‌ای از ۱۰۰ تبدیل
+      می‌شود؛ نمرهٔ قبولی ۶۰ است. سهم این بخش ۶ امتیاز از این ۳۰ امتیاز است.
+      امتحان از ۶۵ دقیقهٔ *Lesen*، ۱۰ دقیقه را برای این بخش پیشنهاد می‌کند. در
+      این برنامه، این بخش وقتی تمام‌شده به شمار می‌آید که در یک تمرین هر شش
+      پاسخ درست باشد.
     approach:
-      - "پیش از متن، شش جمله را بخوانید و ببینید هر کدام چه می‌گوید: چه کسی، چه چیزی، چه وقت."
-      - "جمله‌ها معمولاً به ترتیب متن می‌آیند. جای جملهٔ اول را پیدا کنید و بعد در متن پایین بروید."
-      - "معنا را مقایسه کنید، نه کلمه‌ها را. متن معمولاً همان مطلب را با کلمه‌های دیگری می‌گوید، و جمله‌ای که کلمه‌ای از متن را تکرار می‌کند هم می‌تواند غلط باشد."
-      - "به کلمه‌های کوچکی که معنا را عوض می‌کنند دقت کنید: *nicht*، *kein*، *nur*، *erst*، *schon*، *fast*."
-      - "فقط از روی متن تصمیم بگیرید، نه از روی دانسته‌ها یا حدس خودتان."
-      - "به همهٔ جمله‌ها پاسخ بدهید. پاسخ غلط امتیازی کم نمی‌کند؛ پس اگر مطمئن نیستید حدس بزنید، و حدود ده دقیقه وقت بگذارید."
+      - "پیش از خواندن متن، شش جمله را بخوانید و ببینید هر کدام چه می‌گوید: چه کسی، چه چیزی، چه زمانی."
+      - "جمله‌ها معمولاً به ترتیب متن می‌آیند. جای جملهٔ نخست را در متن پیدا کنید و سپس در متن پیش بروید."
+      - "معنا را با هم بسنجید، نه واژه‌ها را. متن معمولاً همان مطلب را با واژه‌های دیگری بیان می‌کند، و جمله‌ای که واژه‌ای از متن را تکرار می‌کند ممکن است نادرست باشد."
+      - "به واژه‌های کوچکی که معنا را دگرگون می‌کنند دقت کنید: *nicht*، *kein*، *nur*، *erst*، *schon*، *fast*."
+      - "فقط بر پایهٔ متن تصمیم بگیرید، نه بر پایهٔ دانسته‌ها یا گمان خودتان."
+      - "به همهٔ جمله‌ها پاسخ بدهید. پاسخ نادرست امتیازی کم نمی‌کند؛ پس اگر مطمئن نیستید، حدس بزنید. روی هم حدود ده دقیقه وقت بگذارید."
   de:
     task: >
       Du liest einen längeren persönlichen Text: einen Blog-Beitrag oder eine
@@ -102,7 +103,7 @@ practice:
         answer: true
         explanation:
           en: "She writes that in the city she had looked for almost a year *ohne Erfolg*: without success."
-          fa: "او می‌نویسد که در شهر نزدیک یک سال *ohne Erfolg* گشته است: بدون نتیجه."
+          fa: "او می‌نویسد که در شهر نزدیک به یک سال *ohne Erfolg*، یعنی بی‌نتیجه، گشته است."
           de: "Sie schreibt: In der Stadt hat sie fast ein Jahr lang *ohne Erfolg* gesucht."
       - id: i2
         type: richtig-falsch
@@ -118,7 +119,7 @@ practice:
         answer: false
         explanation:
           en: "That is only what she had expected. *In Wirklichkeit* she mostly looks after cows and horses on farms."
-          fa: "این فقط چیزی بود که انتظارش را داشت. *In Wirklichkeit* بیشتر در مزرعه‌ها به گاوها و اسب‌ها می‌رسد."
+          fa: "این فقط چیزی بود که انتظار داشت. *In Wirklichkeit* بیشتر در مزرعه‌ها به گاوها و اسب‌ها رسیدگی می‌کند."
           de: "Das hat sie nur gedacht. *In Wirklichkeit* kümmert sie sich meistens um Kühe und Pferde."
       - id: i4
         type: richtig-falsch
@@ -126,7 +127,7 @@ practice:
         answer: true
         explanation:
           en: "*Das frühe Aufstehen fällt mir schwer* means that getting up early is hard for her."
-          fa: "*Das frühe Aufstehen fällt mir schwer* یعنی زود بیدار شدن برایش سخت است."
+          fa: "*Das frühe Aufstehen fällt mir schwer* یعنی زود بیدار شدن برایش دشوار است."
           de: "*Das frühe Aufstehen fällt mir schwer* heißt: Früh aufstehen ist für sie schwer."
       - id: i5
         type: richtig-falsch
@@ -134,7 +135,7 @@ practice:
         answer: true
         explanation:
           en: "In the city she did not know her neighbours after three years; in the village she was invited in her first week."
-          fa: "در شهر بعد از سه سال همسایه‌هایش را نمی‌شناخت؛ در روستا همان هفتهٔ اول دعوتش کردند."
+          fa: "در شهر پس از سه سال هنوز همسایه‌هایش را نمی‌شناخت؛ در روستا همان هفتهٔ نخست دعوتش کردند."
           de: "In der Stadt kannte sie nach drei Jahren ihre Nachbarn nicht. Im Dorf hat man sie schon in der ersten Woche eingeladen."
       - id: i6
         type: richtig-falsch
@@ -142,7 +143,7 @@ practice:
         answer: false
         explanation:
           en: "The rooms are rented out (*vermietet*) and are *nicht teuer*: cheap, but not free."
-          fa: "اتاق‌ها اجاره داده می‌شوند (*vermietet*) و *nicht teuer* هستند: ارزان، ولی نه رایگان."
+          fa: "اتاق‌ها اجاره داده می‌شوند (*vermietet*) و *nicht teuer* هستند، یعنی ارزان‌اند ولی رایگان نیستند."
           de: "Frau Brandl *vermietet* die Zimmer. Sie sind *nicht teuer*, aber sie kosten etwas."
 
   - id: t2
@@ -181,7 +182,7 @@ practice:
         answer: true
         explanation:
           en: "*Auf die Idee hat mich meine Kollegin Aylin gebracht*: her colleague Aylin gave her the idea and took her along."
-          fa: "*Auf die Idee hat mich meine Kollegin Aylin gebracht*: همکارش آیلین این فکر را به او داد و او را با خودش به باغ برد."
+          fa: "*Auf die Idee hat mich meine Kollegin Aylin gebracht*؛ یعنی همکارش آیلین این فکر را به او داد و او را با خود به باغ برد."
           de: "Ihre Kollegin Aylin hat sie *auf die Idee gebracht* und einmal *mitgenommen*."
       - id: i3
         type: richtig-falsch
@@ -189,7 +190,7 @@ practice:
         answer: false
         explanation:
           en: "A bed *kostet nichts*: it is free. Instead, everyone helps with the shared work on one Saturday a month."
-          fa: "باغچه *kostet nichts*: رایگان است. در عوض هر کس ماهی یک شنبه در کار مشترک کمک می‌کند."
+          fa: "باغچه *kostet nichts*، یعنی رایگان است. در عوض، هر کس ماهی یک شنبه در کارهای مشترک کمک می‌کند."
           de: "Ein Beet *kostet nichts*. Man muss aber jeden Monat an einem Samstag mithelfen."
       - id: i4
         type: richtig-falsch
@@ -197,7 +198,7 @@ practice:
         answer: true
         explanation:
           en: "At first she found the rule *ein bisschen streng*, a bit strict; *inzwischen* she looks forward to those Saturdays."
-          fa: "اول این قانون را *ein bisschen streng* می‌دانست، یعنی کمی سخت‌گیرانه؛ ولی حالا (*inzwischen*) با خوشحالی منتظر آن شنبه‌هاست."
+          fa: "نخست این قاعده را *ein bisschen streng*، یعنی کمی سخت‌گیرانه، می‌دانست؛ ولی اکنون (*inzwischen*) با شوق منتظر آن شنبه‌هاست."
           de: "Am Anfang war die Regel für sie *ein bisschen streng*. *Inzwischen* freut sie sich auf die Samstage."
       - id: i5
         type: richtig-falsch
@@ -205,7 +206,7 @@ practice:
         answer: false
         explanation:
           en: "He *gärtnert seit fünfzig Jahren*: he has been gardening for fifty years."
-          fa: "او *seit fünfzig Jahren* باغبانی می‌کند: پنجاه سال است که باغبانی می‌کند."
+          fa: "او *seit fünfzig Jahren*، یعنی پنجاه سال است که باغبانی می‌کند."
           de: "Er *gärtnert seit fünfzig Jahren*. Er weiß alles über Pflanzen."
       - id: i6
         type: richtig-falsch
@@ -213,7 +214,7 @@ practice:
         answer: true
         explanation:
           en: "She writes *Ich bin viel ruhiger geworden*: she has become much calmer, and she sleeps better."
-          fa: "او می‌نویسد *Ich bin viel ruhiger geworden*: خیلی آرام‌تر شده است و بهتر هم می‌خوابد."
+          fa: "او می‌نویسد *Ich bin viel ruhiger geworden*؛ یعنی بسیار آرام‌تر شده است و بهتر هم می‌خوابد."
           de: "Sie schreibt: *Ich bin viel ruhiger geworden.* Und sie schläft viel besser."
 
 review:

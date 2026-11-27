@@ -220,7 +220,7 @@ test('in Persian the page reads right to left, the task stays German, and the as
   const situation = page.locator('[lang="de"]').filter({ hasText: 'Sie waren am Samstag' }).first()
   await expect(situation).toHaveAttribute('dir', 'ltr')
 
-  const prompt = await copiedPrompt(page, 'کپی کردن پرامپت')
+  const prompt = await copiedPrompt(page, 'کپی پرامپت')
   expect(prompt).toContain('Write your answer in Persian')
   expect(prompt).toContain('Sie waren am Samstag auf dem Fixture-Fest in Ihrer Straße.')
 

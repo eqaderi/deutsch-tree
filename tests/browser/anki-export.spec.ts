@@ -50,7 +50,7 @@ test('in Persian the file holds the Persian meanings, marked right to left', asy
   await page.goto(`./#/node/${NODE}`)
   await page.getByRole('button', { name: 'فارسی' }).click()
 
-  const panel = page.getByRole('region', { name: 'کارت‌های Anki' })
+  const panel = page.getByRole('region', { name: 'کارت‌های \u2066Anki\u2069' })
   const downloading = page.waitForEvent('download')
   await panel.getByRole('button', { name: 'دانلود همین موضوع' }).click()
   const path = testInfo.outputPath('fa.txt')
@@ -66,7 +66,7 @@ test('the Anki text names the free route to a phone, in English, Persian and Ger
 
   for (const { language, panel, free, computer, iPhone } of [
     { language: 'English', panel: 'Flashcards for Anki', free: 'free', computer: 'computer', iPhone: 'iPhone' },
-    { language: 'فارسی', panel: 'کارت‌های Anki', free: 'رایگان', computer: 'رایانه', iPhone: 'آیفون' },
+    { language: 'فارسی', panel: 'کارت‌های \u2066Anki\u2069', free: 'رایگان', computer: 'رایانه', iPhone: 'آیفون' },
     { language: 'Deutsch', panel: 'Karteikarten für Anki', free: 'kostenlos', computer: 'Computer', iPhone: 'iPhone' },
   ]) {
     await page.getByRole('button', { name: language }).click()

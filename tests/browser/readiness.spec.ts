@@ -49,7 +49,7 @@ const PERSIAN = {
   reading: /خواندن/,
   listening: /شنیدن/,
   writing: /نوشتن/,
-  speaking: /صحبت‌کردن/,
+  speaking: /صحبت کردن/,
   save: 'ذخیرهٔ نمره‌ها',
 }
 
@@ -254,7 +254,7 @@ test('the warning is as hard to miss in Persian, and the page reads right to lef
 
   // The question before the links is Persian too.
   await card.getByRole('button', { name: 'نشان دادن لینک‌های این امتحان' }).click()
-  await expect(card.getByText('این آخرین سنجش شماست؟')).toBeVisible()
+  await expect(card.getByText('این سنجش نهایی شماست؟')).toBeVisible()
   await expect(linksOut(page)).toHaveCount(0)
   await card.getByRole('button', { name: 'بله، لینک‌ها را نشان بده' }).click()
   await expect(linksOut(card)).toHaveCount(2)

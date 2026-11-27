@@ -47,6 +47,7 @@ import {
   WORD,
 } from '../content-model/index.ts'
 import { hasPool, hasPractice, isAssistantGraded } from '../content-model/scoring.ts'
+import { misspeltPersian } from '../language/persian-spelling.ts'
 import { READINESS_EXAMS } from '../learning-engine/index.ts'
 import { audioProblems, presentAudio } from './audio.ts'
 import { checkpointData } from './checkpoint-data.ts'
@@ -284,7 +285,7 @@ async function readOfficialMockExams(contentDir: string, errors: ContentProblem[
 
   exams.forEach((exam, examIndex) => {
     exam.links.forEach((link, linkIndex) => {
-      const message = link.note && unmarkedGerman(link.note.fa)
+      const message = link.note && (unmarkedGerman(link.note.fa) ?? misspeltPersian(link.note.fa))
       if (message) {
         errors.push({ file: OFFICIAL_MOCK_EXAMS_FILE, where: `[${examIndex}].links[${linkIndex}].note.fa`, message })
       }

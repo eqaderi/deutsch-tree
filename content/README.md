@@ -34,6 +34,11 @@ section below names a complete example of it; for grammar it is
    asterisks, also a level such as `*B1*`. Without them a Persian page shows
    the German in the wrong order (`-st` as `st-`).
 
+Every Persian text follows the Persian style guide,
+[persian-style.md](persian-style.md): formal standard written Persian, natural
+sentences rather than translated ones, one fixed term for each grammar term,
+and its spelling. Read it before you write or change any Persian.
+
 ## Every node
 
 ```yaml
@@ -975,6 +980,11 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   with a Latin letter
   outside asterisks. The Persian meaning of a vocabulary word is plain text
   and may hold no Latin letter at all.
+- Persian text (the same texts, the meaning of a word, and the Persian of a
+  mock exam or of an official mock exam's note) spelt against
+  [persian-style.md](persian-style.md): an Arabic ي, ى or ك, a Latin or
+  Arabic digit outside asterisks, or a space instead of a half-space after
+  «می» or «نمی» or before «ها».
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
 - A wrong word that stands in its sentence twice, a right order that is not

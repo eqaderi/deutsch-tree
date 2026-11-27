@@ -255,7 +255,7 @@ test('a checkpoint and its result fit the screen, in English and in Persian', as
   await takeCheckpoint(page, 15, () => 'wrong', PERSIAN)
 
   await expect(page.getByRole('main')).toContainText('۰ از ۱۵ درست')
-  const toRevisit = page.getByRole('list', { name: 'موضوع‌هایی برای مرور دوباره' }).getByRole('listitem')
+  const toRevisit = page.getByRole('list', { name: 'موضوع‌هایی برای مرور' }).getByRole('listitem')
   await expect(toRevisit).toHaveCount(3)
   await expect(toRevisit.first()).toContainText('۵ نادرست از ۵')
   expect(await sidewaysScroll()).toBe(0)

@@ -72,7 +72,7 @@
   kind: grammar
   title:
     en: "More articles: *mein*, *dieser*, *welcher*"
-    fa: "حرف تعریف‌های دیگر: *mein*، *dieser*، *welcher*"
+    fa: "حرف‌های تعریف دیگر: *mein*، *dieser*، *welcher*"
     de: "Mehr Artikelwörter: *mein*, *dieser*, *welcher*"
 
 - id: a1-words-food-home
@@ -224,7 +224,7 @@
   kind: grammar
   title:
     en: "Adjective endings and comparison"
-    fa: "پایانهٔ صفت و مقایسه"
+    fa: "پایانهٔ صفت، صفت تفضیلی و عالی"
     de: "Adjektivendungen und Vergleiche"
 
 - id: a2-reflexive-prepositional
@@ -232,7 +232,7 @@
   kind: grammar
   title:
     en: "Reflexive verbs and verbs with prepositions"
-    fa: "فعل‌های انعکاسی و فعل‌های دارای حرف اضافه"
+    fa: "فعل‌های انعکاسی و فعل‌های حرف‌اضافه‌دار"
     de: "Reflexive Verben und Verben mit Präpositionen"
 
 - id: a2-words-free-time
@@ -400,7 +400,7 @@
   kind: grammar
   title:
     en: "Two-part connectors"
-    fa: "حرف‌های ربط دوتایی"
+    fa: "حرف‌های ربط دوجزئی"
     de: "Zweiteilige Konnektoren"
 
 - id: b1-words-time-amounts
@@ -568,7 +568,7 @@
   kind: exam-part
   title:
     en: "The exam: reading (*Lesen*)"
-    fa: "آزمون: خواندن (*Lesen*)"
+    fa: "امتحان: خواندن (*Lesen*)"
     de: "Die Prüfung: Lesen"
 
 - id: b1-exam-hoeren
@@ -576,7 +576,7 @@
   kind: exam-part
   title:
     en: "The exam: listening (*Hören*)"
-    fa: "آزمون: شنیدن (*Hören*)"
+    fa: "امتحان: شنیدن (*Hören*)"
     de: "Die Prüfung: Hören"
 
 - id: b1-exam-schreiben
@@ -584,7 +584,7 @@
   kind: exam-part
   title:
     en: "The exam: writing (*Schreiben*)"
-    fa: "آزمون: نوشتن (*Schreiben*)"
+    fa: "امتحان: نوشتن (*Schreiben*)"
     de: "Die Prüfung: Schreiben"
 
 - id: b1-exam-sprechen
@@ -592,5 +592,5 @@
   kind: exam-part
   title:
     en: "The exam: speaking (*Sprechen*)"
-    fa: "آزمون: صحبت کردن (*Sprechen*)"
+    fa: "امتحان: صحبت کردن (*Sprechen*)"
     de: "Die Prüfung: Sprechen"
