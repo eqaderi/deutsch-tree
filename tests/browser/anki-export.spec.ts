@@ -61,6 +61,23 @@ test('in Persian the file holds the Persian meanings, marked right to left', asy
   )
 })
 
+test('the Anki text names the free route to a phone, in English, Persian and German', async ({ page }) => {
+  await page.goto(`./#/node/${NODE}`)
+
+  for (const { language, panel, free, computer, iPhone } of [
+    { language: 'English', panel: 'Flashcards for Anki', free: 'free', computer: 'computer', iPhone: 'iPhone' },
+    { language: 'فارسی', panel: 'کارت‌های Anki', free: 'رایگان', computer: 'رایانه', iPhone: 'آیفون' },
+    { language: 'Deutsch', panel: 'Karteikarten für Anki', free: 'kostenlos', computer: 'Computer', iPhone: 'iPhone' },
+  ]) {
+    await page.getByRole('button', { name: language }).click()
+    const text = page.getByRole('region', { name: panel })
+    // Anki on a computer, a free AnkiWeb account, then the phone's browser at ankiweb.net, or AnkiDroid.
+    for (const part of [free, computer, iPhone, 'AnkiWeb', 'ankiweb.net', 'AnkiDroid']) {
+      await expect(text).toContainText(part)
+    }
+  }
+})
+
 test('before any vocabulary test, the export of started topics says why there is nothing to export', async ({
   page,
 }) => {

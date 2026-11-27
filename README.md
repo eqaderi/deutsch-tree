@@ -65,7 +65,7 @@ ending, because the pipeline runs directly in Node.
 | `src/pack-builder/` | A learner's own exam book in, a private pack out. `cli.ts` is the command; `vite-plugin.ts` keeps packs out of the site build. The pack format's schema is `src/content-model/pack.ts`. |
 | `tests/pack-builder/` | Seam 4: build a pack from a synthetic book (`fixture.ts`) and assert on the pack. |
 | `src/pack-loader/` | Finds the private packs in the browser (`private/packs.json`, then each `pack.json`) and hands them to the private exam view (`#/packs`, `src/app/PacksPage.tsx` and `PackExamPage.tsx`). How detection works and what a start file must serve: [docs/private-packs.md](docs/private-packs.md), "Finding packs in the app". |
-| `src/start-files/` | The folder that runs the app at home: `index.ts` copies the built site and the packs and adds the templates in `folder/` (the two start files, their servers in `folder/server/`, the learner's instructions in English and Persian). `cli.ts` is `pnpm share`. |
+| `src/start-files/` | The folder that runs the app at home: `index.ts` copies the built site and the packs and adds the templates in `folder/` (the two start files, their servers in `folder/server/`, the learner's instructions in English, Persian and German). `cli.ts` is `pnpm share`. |
 | `tests/start-files/` | The two servers run on a temporary folder (`server.ts` starts them as the start files do), and the folder that `pnpm share` writes. The browser journey `tests/browser/start-files.spec.ts` runs the app from that folder with the Mac start file. |
 
 The app never reads node files. It fetches files that the pipeline writes at
@@ -199,6 +199,10 @@ GitHub Pages and from a local folder.
   marked right to left) and the example on the back. Each note has a GUID
   made from its word, so an updated file updates the cards instead of
   copying them. The top of that file says why each header is there.
+  Anki costs money on the iPhone, so the panel's text (`ankiText` in the
+  string files) and the start-folder instructions give the free route:
+  Anki on a Mac or Windows computer, sync to a free AnkiWeb account, then
+  study in the phone's browser at ankiweb.net (on Android, AnkiDroid).
 - Whether a node has a pool or is graded by an assistant: `hasPool` and
   `isAssistantGraded` in `src/content-model/scoring.ts`; which page it has:
   `isGrammar`, `isVocabulary`, `isPhrases`, `hasPractice`, `hasExamTask`. Use these
@@ -561,7 +565,7 @@ control because it holds the packs):
 |---|---|
 | `Start on Mac.command` | Double-click on a Mac. Runs `server/serve.pl` with `/usr/bin/perl`, which ships with macOS. |
 | `Start on Windows.bat` | Double-click on Windows 10 or 11. Runs `server/serve.ps1` with Windows PowerShell 5.1, which ships with Windows, without administrator rights. |
-| `instructions-en.html`, `instructions-fa.html` | The learner's instructions: starting, first-time prompts, the phone, progress, passing the folder on. |
+| `instructions-en.html`, `instructions-fa.html`, `instructions-de.html` | The learner's instructions: starting, first-time prompts, the phone, Anki on the phone for free, progress, passing the folder on. |
 | `app/` | The built site, with the packs in `app/private/`. A pack copied there by hand is found at the next start. |
 
 The decision for a local server, and the trial of the candidate servers, are on issue #4. Both

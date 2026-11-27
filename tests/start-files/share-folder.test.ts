@@ -69,6 +69,7 @@ test('the shared folder holds the start files, the instructions, the built site 
     'app/private/a-book/audio/1-1.mp3',
     'app/private/a-book/pack.json',
     'app/private/packs.json',
+    'instructions-de.html',
     'instructions-en.html',
     'instructions-fa.html',
     'server/serve.pl',
