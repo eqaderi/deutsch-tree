@@ -22,7 +22,7 @@ machine `pnpm exec playwright install chromium` for the browser tests.
 | `pnpm test:unit` | All Vitest tests (`tests/**/*.test.ts`). `pnpm test:pipeline` runs only the content pipeline tests. |
 | `pnpm test:browser` | Playwright journeys (`tests/browser/*.spec.ts`) against the built site with fixture content. |
 | `pnpm vocabulary:scope --lists <folder>` | Writes the vocabulary scope list from the extracted word lists, which are not in the repository. `pnpm vocabulary:approval` then rewrites the lists in `docs/approvals/vocabulary-themes.md`. See [content/README.md](content/README.md), "The vocabulary scope list". |
-| `pnpm audio:generate --voices <folder>` | Says every German example and word of the published nodes with Piper and stores it as `content/audio/<key>.mp3`. Says only what is new or changed. Needs Piper and ffmpeg on this computer; nothing else does. See "Audio" below. |
+| `pnpm audio:generate --voices <folder>` | Says every German example and word of the published nodes with Piper, in both voices a learner may choose, and stores it as `content/audio/<key>.mp3`. Says only what is new or changed. Needs Piper and ffmpeg on this computer; nothing else does. See "Audio" below. |
 | `pnpm pack:build` | Builds a private pack from a book the learner owns. Options and format: [docs/private-packs.md](docs/private-packs.md). |
 | `pnpm share` | Builds the site and writes the folder that runs the app at home, with the packs and the start files (default `share/`, `--out <folder>`). See [Running the app at home](#running-the-app-at-home). |
 | `pnpm dev` | Dev server on the real content. Content files reload on save. |
@@ -45,7 +45,7 @@ ending, because the pipeline runs directly in Node.
 | `src/vocabulary-scope/` | Which words are in scope: the extracted word lists in, the scope list in `content/vocabulary/` out. `SCOPE_RULE` is the one setting that decides it. `approval.ts` writes the lists of the vocabulary approval document. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress, name the milestones reached. No interface, no storage; randomness is passed in. |
 | `src/assistant-grading/` | Writing and speaking, which the app cannot score: the official marking criteria (`criteria.ts`), the task as the learner reads it, the prompt to paste into an AI assistant, and the rule for the score out of 100. Pure functions on a task; the app calls no AI service. |
-| `src/audio/` | German in the compiled content to the audio files that say it: `speakable` writes numbers as words, `spoken` gives a piece of German its key, `spokenItems` finds everything a page can play, `generateAudio` makes the missing files with a voice engine passed in (`piper.ts`), and `cli.ts` is the command. The voices are in `src/content-model/audio.ts`. |
+| `src/audio/` | German in the compiled content to the audio files that say it: `speakable` writes numbers as words, `spoken` gives a piece of German one person says its key in each voice a learner may choose and `spokenBy` a dialogue line its key in its speaker's voice, `spokenItems` finds everything a page can play, `generateAudio` makes the missing files with a voice engine passed in (`piper.ts`), and `cli.ts` is the command. The voices are in `src/content-model/audio.ts`. |
 | `src/anki-export/` | Vocabulary words in, the text of a file that Anki imports out. Pure functions; the app saves the file in the browser. |
 | `src/progress-store/` | Keeps progress in browser storage, with a version number, and writes and reads the progress file a learner exports. It reads every older version and refuses a newer one. It only stores; the learning engine decides how progress changes. |
 | `src/app/` | App shell: routes, tree, node page, test, backup, search page, overview page. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
@@ -308,7 +308,9 @@ The rules are in the learning engine, like every rule. The tree
   (`src/app/NodeRow.tsx`).
 - A setting of the device that is not progress (the dismissed first-visit
   steps in `src/app/firstVisit.ts`, the language) has its own storage key
-  and stays out of the progress store.
+  and stays out of the progress store. The voice is the exception (ticket
+  #41): it is `voice` in the progress (saved since version 4), so that an
+  export carries it to another device; `hasProgress` does not count it.
 - The tree has no streaks, points, reminders or daily goals, and a browser
   test keeps it so.
 
@@ -497,11 +499,21 @@ The rules are in the learning engine, like every rule. The tree
   passed as `--speaker`), for the third speaker of Hören Teil 4: a woman's
   voice clearly higher than Kerstin's. They are `VOICES` in
   `src/content-model/audio.ts`. The format is MP3, 48 kbit/s, mono.
+- **The voice a learner chooses** (ticket #41): Thorsten (male, the main
+  voice and the default) or Kerstin (female), for everything one person
+  says. `CHOOSABLE_VOICES` in `src/content-model/audio.ts`; the choice is
+  `voice` in the progress, set by `chooseVoice` from the switch at the foot
+  of every page (`src/app/VoiceSwitch.tsx`). A line of a dialogue keeps its
+  speaker's voice whatever the learner chose.
 - The pipeline attaches `audio` (a `Spoken`: `key`, `voice`, `text`) to every
   piece of German that has a play button: each example of a grammar node and
   of a phrase, the right sentence of each common mistake (never the wrong
   one), each phrase itself, and each vocabulary word (with its article) and
-  its example.
+  its example. These are said by one person, so `spoken(text)` also gives
+  them `byVoice`, the key of the text in each voice a learner may choose;
+  `key` and `voice` are the main voice's. A play button plays
+  `keyFor(audio, voice)`: the chosen voice's file, or for a dialogue line
+  (no `byVoice`) its speaker's.
   `text` is what the voice says: `speakable` in `src/audio/speakable.ts`
   writes numbers, times, dates, years and amounts as words, because Piper
   misreads digits ("14:35 Uhr").
@@ -511,8 +523,9 @@ The rules are in the learning engine, like every rule. The tree
   Piper, the same words in the same voice are one file wherever they stand,
   and a changed text gets a new file. The file is `content/audio/<key>.mp3`,
   in the site `content/audio/<key>.mp3`.
-- The content check fails for a published node whose spoken item has no file,
-  and for spoken text that still holds a digit (`src/content-pipeline/audio.ts`).
+- The content check fails for a published node whose spoken item has no file
+  in one of its voices (both chosen voices for what one person says, the
+  speaker's voice for a dialogue line), and for spoken text that still holds a digit (`src/content-pipeline/audio.ts`).
   Neither needs Piper, and nor does `pnpm check` or CI. A "coming soon" node
   needs no audio. The build copies only the files that published nodes play.
 - **Generating.** Piper (`piper-tts`) and the voice files
@@ -533,6 +546,12 @@ The rules are in the learning engine, like every rule. The tree
   changed. Commit the MP3 files with the content change. Never commit a WAV
   (`.gitignore` ignores them), and keep full regenerations rare: each adds
   the whole audio to the history again.
+- **Size** (measured on ticket #41, on the 8 published sample nodes): what
+  one person says is 88 files, 0.86 MB in Thorsten and 0.98 MB in Kerstin
+  (about 10 and 11 KB a file, so Kerstin is about 14% larger); the 19
+  dialogue lines are 1.28 MB. Ticket #5 projected about 200 MB for one voice;
+  with the second voice the whole tree stays under about 430 MB (43%),
+  under half of GitHub Pages' 1 GB.
 - **Fixture content** gets a silent file per item, without Piper:
   `pnpm audio:generate --content tests/fixtures/content --silent`. A test
   that changes spoken German of a fixture node compiles with
@@ -544,7 +563,7 @@ The rules are in the learning engine, like every rule. The tree
 - **A second voice: the lines of a conversation.** A text to hear in a
   listening part names its speakers, each with a voice (`voiceSchema` from
   `src/content-model/audio.ts`: `voice: kerstin`), and `compileTaskText`
-  gives each line `audio: spoken(line.text, <its speaker's voice>)`. Anything
+  gives each line `audio: spokenBy(line.text, <its speaker's voice>)`, with no `byVoice`. Anything
   in a compiled node that carries `audio` is found by `spokenItems`, so the
   command generates it, the check asks for its file and the build ships it
   with no other change; a mock exam's lines are found the same way

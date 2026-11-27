@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest'
 import {
   applyAttempt,
+  chooseVoice,
   emptyProgress,
   hasProgress,
   milestonesReached,
@@ -94,5 +95,7 @@ test('of several new milestones, the latest level is the one mentioned', () => {
 test('there is progress to lose from the first finished test on, passed or not', () => {
   expect(hasProgress(emptyProgress())).toBe(false)
   expect(hasProgress(applyAttempt(emptyProgress(), 'a1-1', { passed: false }))).toBe(true)
+  // The voice is a setting, not something done: replacing it loses no work.
+  expect(hasProgress(chooseVoice(emptyProgress(), 'kerstin'))).toBe(false)
   expect(hasProgress(done('a1-1'))).toBe(true)
 })

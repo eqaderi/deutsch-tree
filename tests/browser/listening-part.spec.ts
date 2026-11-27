@@ -1,7 +1,6 @@
-import { createHash } from 'node:crypto'
 import type { Page } from '@playwright/test'
-import { listen } from './listening.ts'
-import { answerTask, type FixtureText, itemsOnScreen, LISTENING, taskOnScreen } from './taking-a-task.ts'
+import { lineFiles, listen } from './listening.ts'
+import { answerTask, itemsOnScreen, LISTENING, taskOnScreen } from './taking-a-task.ts'
 import { expect, test } from './test.ts'
 
 /**
@@ -10,22 +9,6 @@ import { expect, test } from './test.ts'
  */
 const PART = './#/node/exam-hoeren-3'
 const PRACTICE = './#/node/exam-hoeren-3/test'
-
-/**
- * Where the audio of each line of a conversation is served, in the order of
- * the lines. The file is named by the key of the voice and the words, as
- * README "Audio" defines it (pinned to known keys in the pipeline's tests).
- */
-function lineFiles(text: FixtureText): string[] {
-  const voiceOf = new Map(text.speakers?.map((speaker) => [speaker.name, speaker.voice]))
-  return (text.lines ?? []).map((line) => {
-    const key = createHash('sha256')
-      .update(`${voiceOf.get(line.speaker)}\n${line.text}`)
-      .digest('hex')
-      .slice(0, 16)
-    return `/deutsch-tree/content/audio/${key}.mp3`
-  })
-}
 
 const sidewaysScroll = (page: Page) =>
   page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)

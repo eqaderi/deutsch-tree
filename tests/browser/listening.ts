@@ -2,7 +2,9 @@
  * Helpers for journeys that hear German. The fixture's audio files are a
  * quarter of a second of silence each, named by the key of what they say.
  */
+import { createHash } from 'node:crypto'
 import type { Page } from '@playwright/test'
+import type { FixtureText } from './taking-a-task.ts'
 
 /** Every audio file the page asks for, as the path after the site's `content/` folder. */
 export function audioRequests(page: Page): string[] {
@@ -41,4 +43,19 @@ export async function listen(page: Page): Promise<() => Promise<Heard>> {
     }
   })
   return () => page.evaluate(() => (window as unknown as { heard: Heard }).heard)
+}
+/**
+ * Where the audio of each line of a conversation is served, in the order of
+ * the lines. The file is named by the key of the voice and the words, as
+ * README "Audio" defines it (pinned to known keys in the pipeline's tests).
+ */
+export function lineFiles(text: FixtureText): string[] {
+  const voiceOf = new Map(text.speakers?.map((speaker) => [speaker.name, speaker.voice]))
+  return (text.lines ?? []).map((line) => {
+    const key = createHash('sha256')
+      .update(`${voiceOf.get(line.speaker)}\n${line.text}`)
+      .digest('hex')
+      .slice(0, 16)
+    return `/deutsch-tree/content/audio/${key}.mp3`
+  })
 }

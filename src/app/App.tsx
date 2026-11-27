@@ -15,6 +15,7 @@ import { ReferenceLinks } from './ReferenceLinks.tsx'
 import { SearchPage } from './SearchPage.tsx'
 import { TestPage } from './TestPage.tsx'
 import { TreePage } from './TreePage.tsx'
+import { VoiceSwitch } from './VoiceSwitch.tsx'
 
 // The private exam view loads only when it is opened: it brings PDF.js and the pack format's checks.
 const PacksPage = lazy(() => import('./PacksPage.tsx').then((module) => ({ default: module.PacksPage })))
@@ -85,6 +86,7 @@ function Frame() {
       <footer className="wrap site-footer">
         <Link to="/backup">{strings.backupLink}</Link>
         <Link to="/packs">{strings.packsLink}</Link>
+        <VoiceSwitch />
         {/* The licences of the Kerstin voice (ticket #5) and the MLS voice (ticket #27) ask for this credit. */}
         <p className="voice-credit">{strings.voiceCredit}</p>
       </footer>

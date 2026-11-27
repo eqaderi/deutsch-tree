@@ -9,7 +9,7 @@
  * ## The saved shape and its version
  *
  * What is saved is the `Progress` object of the learning engine plus a
- * `version` number: `{ "version": 3, "nodes": { … }, "officialExams": { … }, "mockExams": [ … ] }`. The file a learner
+ * `version` number: `{ "version": 4, "nodes": { … }, "officialExams": { … }, "mockExams": [ … ], "voice": "thorsten" }`. The file a learner
  * exports is the same object with three more lines that say what it is.
  *
  * The version number is what keeps progress from being lost. An app reads
@@ -38,6 +38,7 @@
  * Never remove a reader's tolerance or an upgrade step: a learner may come
  * back with a file exported years ago.
  */
+import { CHOOSABLE_VOICES, type ChoosableVoice, DEFAULT_VOICE } from '../content-model/audio.ts'
 import {
   EXAM_MODULES,
   type ExamModule,
@@ -85,8 +86,9 @@ const UNREADABLE_KEY = 'deutsch-tree:progress:unreadable'
  *   1  nodes: done and number of attempts, by node identifier
  *   2  officialExams: the module scores recorded for official mock exams, by exam identifier
  *   3  mockExams: every finished module of an original mock exam, oldest first (the history)
+ *   4  voice: the voice the learner chose for everything one person says (earlier versions read as the main voice)
  */
-export const SAVED_VERSION = 3
+export const SAVED_VERSION = 4
 
 /** A saved object as it comes out of JSON, before anything is known about it. */
 type Saved = Record<string, unknown>
@@ -109,6 +111,12 @@ const READERS: { [Field in keyof Progress]-?: (saved: unknown) => Progress[Field
   nodes: readNodes,
   officialExams: readOfficialExams,
   mockExams: readMockExams,
+  voice: readVoice,
+}
+
+/** The chosen voice. Anything else, also a voice the app does not offer to choose, is the main voice. */
+function readVoice(saved: unknown): ChoosableVoice {
+  return (CHOOSABLE_VOICES as readonly unknown[]).includes(saved) ? (saved as ChoosableVoice) : DEFAULT_VOICE
 }
 
 function readNodes(saved: unknown): Record<string, NodeProgress> {

@@ -74,6 +74,8 @@ export const de: Strings = {
   listen: 'Anhören',
   stopListening: 'Stopp',
   audioFailed: 'Der Ton kann nicht abgespielt werden.',
+  voice: 'Stimme',
+  voiceNames: { thorsten: 'Männlich (Thorsten)', kerstin: 'Weiblich (Kerstin)' },
   voiceCredit:
     'Deutsche Aufnahmen: die Piper-Stimmen Thorsten, Kerstin und MLS. Die Stimme Kerstin beruht auf Hi-Fi TTS von NVIDIA (CC BY 4.0), gelesen von Cori Samuel. Die Stimme MLS beruht auf Multilingual LibriSpeech von Facebook AI (CC BY 4.0), gelesen aus Hörbüchern von LibriVox.',
   commonMistakes: 'Häufige Fehler',
