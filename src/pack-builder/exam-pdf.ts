@@ -1,7 +1,9 @@
 /**
  * Reads the exam PDF's text into an outline: on which page every exam, module
- * and part starts.
+ * and part starts. Or, for a book whose exams all have the same pages, works
+ * the pages out from the profile's layout without reading any text.
  */
+import type { PageRange } from '../content-model/pack.ts'
 import { matches } from './patterns.ts'
 import type { BookProfile, ModuleProfile } from './profile.ts'
 
@@ -140,4 +142,58 @@ export function checkOutline(
     }
   }
   return { errors, examsAddUp }
+}
+
+/** The pages of every exam, module and part, counted in the exam PDF. */
+export interface ExamPages {
+  number: number
+  pages: PageRange
+  modules: Array<{ profile: ModuleProfile; pages: PageRange; parts: Array<{ number: number; pages: PageRange }> }>
+}
+
+/** The pages of an outline that has passed checkOutline. */
+export function pagesOfOutline(exams: ExamOutline[], lastPage: number): ExamPages[] {
+  return exams.map((exam, examIndex) => {
+    const examLast = (exams[examIndex + 1]?.page ?? lastPage + 1) - 1
+    return {
+      number: exam.number,
+      pages: { first: exam.page, last: examLast },
+      modules: exam.modules.map((module, moduleIndex) => {
+        // A section ends on the page before the next heading. When two
+        // headings share a page, that page belongs to both sections.
+        const nextModule = exam.modules[moduleIndex + 1]?.page ?? examLast + 1
+        const moduleLast = Math.max(module.page, nextModule - 1)
+        return {
+          profile: module.profile,
+          pages: { first: module.page, last: moduleLast },
+          parts: module.parts.map((part, partIndex) => {
+            const nextPart = module.parts[partIndex + 1]?.page ?? moduleLast + 1
+            return { number: part.number, pages: { first: part.page, last: Math.max(part.page, nextPart - 1) } }
+          }),
+        }
+      }),
+    }
+  })
+}
+
+/** The pages of the profile's `exams` exams, from its layout. The profile has checked the layout. */
+export function pagesOfLayout(profile: BookProfile): ExamPages[] {
+  const layout = profile.examPdf.layout
+  if (!layout || profile.exams === undefined) return []
+  return Array.from({ length: profile.exams }, (_, index) => {
+    const before = layout.firstPage - 1 + index * layout.pagesPerExam
+    const inBook = ([first, last]: [number, number]) => ({ first: before + first, last: before + last })
+    return {
+      number: index + 1,
+      pages: inBook([1, layout.pagesPerExam]),
+      modules: profile.modules.map((module) => {
+        const entry = layout.modules[module.id] ?? { pages: [1, layout.pagesPerExam], parts: [] }
+        return {
+          profile: module,
+          pages: inBook(entry.pages),
+          parts: entry.parts.map((range, partIndex) => ({ number: partIndex + 1, pages: inBook(range) })),
+        }
+      }),
+    }
+  })
 }

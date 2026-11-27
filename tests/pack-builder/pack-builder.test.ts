@@ -3,14 +3,16 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { expect, test } from 'vitest'
 import { packAnswerKeySchema, packDescriptionSchema, packListSchema } from '../../src/content-model/pack.ts'
-import { buildPack, type PackBuildOptions } from '../../src/pack-builder/index.ts'
-import { DEFAULT_PROFILE } from '../../src/pack-builder/profile.ts'
+import { buildPack, formatReport, type PackBuildOptions } from '../../src/pack-builder/index.ts'
+import { type BookProfileOverrides, DEFAULT_PROFILE } from '../../src/pack-builder/profile.ts'
 import {
   type FixtureBook,
   fixtureBook,
   fixturePageNumbers,
   otherBook,
   otherBookProfile,
+  scannedBook,
+  scannedBookProfile,
   writeFixtureBook,
 } from './fixture.ts'
 
@@ -694,4 +696,170 @@ test('a pattern matches however the PDF and the profile spell their umlauts', as
   })
 
   expect(report.errors).toEqual([])
+})
+
+// ---------------------------------------------------------------------------
+// A scanned book: pages from the profile's layout, not from headings
+// ---------------------------------------------------------------------------
+
+test('a book whose headings cannot be read is cut into exams by the layout in its profile', async () => {
+  const unreadable = await build(scannedBook())
+  expect(unreadable.packDir).toBeNull()
+
+  const { report, packDir } = await build(scannedBook(), { profile: scannedBookProfile })
+  expect(report.errors).toEqual([])
+  // No heading is looked for, so none is reported.
+  expect(report.headings).toEqual([])
+
+  // The scan has its pages where the default book has them, so the pack is the same.
+  const fromHeadings = await build()
+  expect(await readJson(packDir, 'pack.json')).toEqual(await readJson(fromHeadings.packDir, 'pack.json'))
+  expect(await fixturePageNumbers(path.join(packDir as string, 'exams/02/pages.pdf'))).toEqual([
+    14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+  ])
+})
+
+test('with a layout the exam PDF needs no text layer at all', async () => {
+  const book = scannedBook()
+  book.examPages = book.examPages.map(() => [])
+  const { report, packDir } = await build(book, { profile: scannedBookProfile })
+
+  expect(report.errors).toEqual([])
+  const description = await readJson(packDir, 'pack.json')
+  expect(description.exams.map((exam: { sourcePages: unknown }) => exam.sourcePages)).toEqual([
+    { first: 2, last: 13 },
+    { first: 14, last: 25 },
+  ])
+})
+
+/** The scanned book's profile with some modules of its layout changed, or left out when undefined. */
+function layoutWith(modules: Record<string, unknown>, others: BookProfileOverrides = {}): BookProfileOverrides {
+  const layout = scannedBookProfile.examPdf?.layout
+  const changed = Object.entries({ ...layout?.modules, ...modules }).filter(([, entry]) => entry !== undefined)
+  return {
+    ...scannedBookProfile,
+    examPdf: { layout: { ...layout, modules: Object.fromEntries(changed) } as typeof layout },
+    ...others,
+  }
+}
+
+test.each([
+  ['without exams', layoutWith({}, { exams: undefined }), /^exams: is needed with examPdf\.layout/],
+  [
+    'with a module left out',
+    layoutWith({ sprechen: undefined }),
+    /^examPdf\.layout\.modules: has no pages for the module "sprechen"$/,
+  ],
+  [
+    'with a module the profile does not have',
+    layoutWith({ extra: { pages: [12, 12] } }),
+    /^examPdf\.layout\.modules\.extra: "extra" is not one of the profile's modules$/,
+  ],
+  [
+    'with a range backwards',
+    layoutWith({ sprechen: { pages: [12, 11] } }),
+    /^examPdf\.layout\.modules\.sprechen\.pages: .*first cannot come after last/,
+  ],
+  [
+    'with a module past the end of an exam',
+    layoutWith({ sprechen: { pages: [12, 13] } }),
+    /^examPdf\.layout\.modules\.sprechen\.pages: pages 12 to 13 are not inside one exam, pages 1 to 12$/,
+  ],
+  [
+    'with modules out of order',
+    layoutWith({ schreiben: { pages: [9, 11] } }),
+    /^examPdf\.layout\.modules\.schreiben\.pages: starts on page 9, before the one before it ends on page 10$/,
+  ],
+  [
+    'with a part missing',
+    layoutWith({
+      hoeren: {
+        pages: [7, 10],
+        parts: [
+          [7, 7],
+          [8, 8],
+          [9, 10],
+        ],
+      },
+    }),
+    /^examPdf\.layout\.modules\.hoeren\.parts: has 3 page ranges, but the module has 4 parts in the profile$/,
+  ],
+  [
+    'with a part for a module without parts',
+    layoutWith({ schreiben: { pages: [11, 11], parts: [[11, 11]] } }),
+    /^examPdf\.layout\.modules\.schreiben\.parts: has 1 page ranges, but the module has 0 parts/,
+  ],
+  [
+    'with a part outside its module',
+    layoutWith({
+      hoeren: {
+        pages: [7, 10],
+        parts: [
+          [7, 7],
+          [8, 8],
+          [9, 9],
+          [10, 11],
+        ],
+      },
+    }),
+    /^examPdf\.layout\.modules\.hoeren\.parts\.3: pages 10 to 11 are not inside the module's pages, pages 7 to 10$/,
+  ],
+  [
+    'with parts out of order',
+    layoutWith({
+      hoeren: {
+        pages: [7, 10],
+        parts: [
+          [7, 8],
+          [7, 7],
+          [9, 9],
+          [10, 10],
+        ],
+      },
+    }),
+    /^examPdf\.layout\.modules\.hoeren\.parts\.1: starts on page 7, before the one before it ends on page 8$/,
+  ],
+] as const)('a layout %s is a mistake in the profile', async (_case, profile, message) => {
+  const { report, packDir } = await build(scannedBook(), { profile })
+
+  expect(packDir).toBeNull()
+  expect(report.errors).toEqual([{ source: 'profile', message: expect.stringMatching(message) }])
+})
+
+test('a layout that puts an exam past the end of the exam PDF is an error', async () => {
+  const { report, packDir } = await build(scannedBook(), { profile: { ...scannedBookProfile, exams: 3 } })
+
+  expect(packDir).toBeNull()
+  expect(report.errors).toEqual([
+    { source: 'exam-pdf', message: 'The layout puts exam 3 on pages 26 to 37, but the exam PDF has 25 pages' },
+  ])
+})
+
+test('an answer printed without its number is taken by its place, and listed as a repair', async () => {
+  // The scanned key prints exam 1, Hören Teil 1 as "1 falsch  2 b  Richtig  4 a ...",
+  // and Lesen Teil 5 as "27 c  28 a  29" with "b  30 a" on the next line.
+  const { report, packDir } = await build(scannedBook(), { profile: scannedBookProfile })
+
+  expect(report.errors).toEqual([])
+  expect((await answersOf(packDir, 1, 'hoeren', 1)).slice(0, 4)).toEqual([
+    [1, 'falsch'],
+    [2, 'b'],
+    [3, 'richtig'],
+    [4, 'a'],
+  ])
+  expect(await answersOf(packDir, 1, 'lesen', 5)).toEqual([
+    [27, 'c'],
+    [28, 'a'],
+    [29, 'b'],
+    [30, 'a'],
+  ])
+  const repairs = [
+    { exam: 1, module: 'hoeren', part: 1, item: 3, printed: null },
+    { exam: 2, module: 'lesen', part: 2, item: 9, printed: 8 },
+  ]
+  expect(report.repairs).toEqual(repairs)
+  const key = await readJson(packDir, 'answers.json')
+  expect(key.repairs).toEqual(repairs)
+  expect(packAnswerKeySchema.safeParse(key).error).toBeUndefined()
+  expect(formatReport(report, packDir)).toContain('Exam 1, Hören Teil 1: item 3 is printed without a number')
 })

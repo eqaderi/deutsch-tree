@@ -159,7 +159,10 @@ with another profile has other modules, parts and choices.
       ]
     }
   ],
-  "repairs": [{ "exam": 4, "module": "lesen", "part": 2, "item": 9, "printed": 8 }]
+  "repairs": [
+    { "exam": 4, "module": "lesen", "part": 2, "item": 9, "printed": 8 },
+    { "exam": 6, "module": "hoeren", "part": 1, "item": 3, "printed": null }
+  ]
 }
 ```
 
@@ -167,8 +170,9 @@ with another profile has other modules, parts and choices.
   one of the item's `choices`, in the same spelling, so scoring is a plain comparison.
 - Every item counts the same. A module's score out of 100 is the share of right answers; the
   format holds no points.
-- `repairs` lists the places where the book's key prints a wrong item number. The answers above
-  are already right. The list is for checking those places against the book by hand.
+- `repairs` lists the places where the book's key prints a wrong item number (`printed` is the
+  number it prints), or prints an answer without its number (`printed` is `null`). The answers
+  above are already right. The list is for checking those places against the book by hand.
 
 ### packs.json
 
@@ -263,7 +267,7 @@ pnpm pack:build --exam <exams.pdf> --key <answer-key.pdf> --audio <folder> --nam
 
 | Option | Meaning |
 |---|---|
-| `--exam <file>` | The book's exams as one PDF. It must have a text layer (text you can select). |
+| `--exam <file>` | The book's exams as one PDF. It must have a text layer (text you can select), unless the profile has a [layout](#every-exam-on-the-same-pages). |
 | `--key <file>` | The book's answer key as a PDF with a text layer. |
 | `--audio <folder>` | The folder with the recordings. Subfolders are read too. |
 | `--name <text>` | The pack's name, as the app shows it. |
@@ -281,6 +285,7 @@ headings it did find and their pages. These are errors:
 
 - no text layer, or a file that is not a readable PDF;
 - exam headings that do not count 1, 2, 3 ..., or a different number of exams than the profile says;
+- a layout that puts the last exam past the end of the exam PDF;
 - an exam with a missing, repeated or out-of-order module or part heading;
 - a part whose number of answers in the key differs from its number of items;
 - an answer that is not one of its item's choices;
@@ -300,13 +305,15 @@ the module or the part *changes*. A heading that repeats the current one changes
 book with a running head on every page and a book with one heading per section read the same.
 A section runs from its heading's page to the page before the next heading. When two headings
 share a page, that page belongs to both sections. Part headings are only looked for in modules
-that have parts in the profile.
+that have parts in the profile. With a [layout](#every-exam-on-the-same-pages) in the profile, no
+heading is looked for and no text is read: the pages come from the layout.
 
 **Answer key.** The builder finds the exam, module and part headings in the key and reads the
 answers under each in the order they are printed. An answer goes to an item by its place, not by
 the number printed beside it: the third answer of a part belongs to the part's third item. That
 is what repairs a numbering misprint. It is safe because of the two checks above (the count and
-the choices). Each place where the printed number differs is recorded as a repair.
+the choices). Each place where the printed number differs, or where no number is printed, is
+recorded as a repair.
 
 **Recordings.** Each file's name, without its ending, is matched against the profile's file
 pattern. The pattern either names the exam and the part, or gives a running track number. With
@@ -357,6 +364,7 @@ examPdf:
     schreiben: '^Schreiben$'
     sprechen: '^Sprechen$'
   part: '^Teil (\d+)$'            # group 1: the part's number
+  # layout: ...                   # the pages of every exam instead of headings; see below
 
 answerKey:
   columns: 1
@@ -384,6 +392,10 @@ Rules for the keys:
   (the list) and the two `modules` maps of patterns are replaced as a whole when given.
 - With `answerKey.part: null` the key has no part headings. A module's answers are then read as
   one run and cut into parts by item count.
+- `answerKey.item` may make the number optional, as in `(?:(\d{1,2})\s+)?`, for a key that
+  sometimes prints an answer without its number. Such an answer is taken by its place like any
+  other, and listed as a repair. Write `\s+` rather than `[ \t]+` between the number and the
+  answer when the key breaks a line between them (`28 a, 29` and `b, 30 a` on the next line).
 - `answerKey.answers` is looked up without regard to case. The result must be one of the item's
   choices.
 - `columns: 2` cuts each page into two equal halves and reads the left one first. Use it when
@@ -417,6 +429,44 @@ answerKey:
 recordings:
   file: '^Track (?<track>\d+)$'
   ignore: '\.jpg$'
+```
+
+### Every exam on the same pages
+
+A scanned book's text layer may be too poor to find the headings in: misread, missing, or spelled
+differently from exam to exam. When every exam has the same pages, `examPdf.layout` gives them
+instead, and no heading is looked for. The exam PDF then needs no text layer at all, and the
+other `examPdf` keys are not used.
+
+- `firstPage`: the page of the exam PDF where exam 1 starts.
+- `pagesPerExam`: how many pages every exam has. Exam 2 starts on the page after exam 1 ends.
+- `modules`: for every module of the profile, by id, its `pages` within one exam, and for a module
+  with parts one range in `parts` for each of them, in order. Pages count from 1 at the exam's
+  first page. A range is `[first, last]`, both included.
+- `exams` is needed: a layout cannot count the exams.
+
+The ranges must lie inside one exam (modules) or inside their module (parts), and each must start
+no earlier than the one before it ends: two sections may share a page, as with headings. The last
+exam must end inside the exam PDF. The pack is the same as one built from headings that start on
+those pages.
+
+This is the layout of `scannedBook()` in `tests/pack-builder/fixture.ts`: the default book with
+its headings misread or missing. Its key also prints one answer without its number, so the item
+pattern makes the number optional.
+
+```yaml
+exams: 2
+examPdf:
+  layout:
+    firstPage: 2       # exam 1 is pages 2 to 13, exam 2 pages 14 to 25
+    pagesPerExam: 12
+    modules:
+      lesen: { pages: [1, 6], parts: [[1, 1], [2, 3], [4, 4], [5, 5], [6, 6]] }
+      hoeren: { pages: [7, 10], parts: [[7, 7], [8, 8], [9, 9], [10, 10]] }
+      schreiben: { pages: [11, 11] }
+      sprechen: { pages: [12, 12] }
+answerKey:
+  item: '(?<!\S)(?:(\d{1,2})[.):]?\s+)?(?i:(richtig|falsch|ja|nein|[a-j0]))(?!\S)'
 ```
 
 ## When a real book does not build

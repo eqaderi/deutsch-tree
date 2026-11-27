@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises'
 import { expect, test } from 'vitest'
 import { parse } from 'yaml'
 import { resolveProfile } from '../../src/pack-builder/profile.ts'
-import { otherBookProfile } from './fixture.ts'
+import { otherBookProfile, scannedBookProfile } from './fixture.ts'
 
 /** The YAML examples in docs/private-packs.md, in order. */
 async function profilesInTheDoc() {
@@ -27,4 +27,10 @@ test('the example profile in the documentation is the one the tests build a book
     answerKey: otherBookProfile.answerKey,
     recordings: otherBookProfile.recordings,
   })
+})
+
+test('the example layout in the documentation is the one the tests build a scanned book with', async () => {
+  const [, , example] = await profilesInTheDoc()
+
+  expect(example).toEqual(scannedBookProfile)
 })

@@ -24,14 +24,14 @@ import {
   type PageRange,
 } from '../content-model/pack.ts'
 import { itemsByPart, readAnswerKey } from './answer-key.ts'
-import { checkOutline, type ExamOutline, outlineOf } from './exam-pdf.ts'
+import { checkOutline, type ExamOutline, type ExamPages, outlineOf, pagesOfLayout, pagesOfOutline } from './exam-pdf.ts'
 import { writePackList } from './pack-list.ts'
-import { readPdfText, splitPdf } from './pdf.ts'
+import { pdfPageCount, readPdfText, splitPdf } from './pdf.ts'
 import { type BookProfileOverrides, resolveProfile } from './profile.ts'
 import { type MatchedRecording, matchRecordings } from './recordings.ts'
 
 export interface PackBuildOptions {
-  /** The book's exams as one PDF with a text layer. */
+  /** The book's exams as one PDF, with a text layer unless the profile gives a layout. */
   examPdf: string
   /** The book's answer key as a PDF with a text layer. */
   answerKeyPdf: string
@@ -73,7 +73,7 @@ export interface PackBuildReport {
   /** Every heading recognised in the exam PDF, in reading order, also when the build fails. */
   headings: FoundHeading[]
   /**
-   * Places where the answer key prints a wrong item number. The answers are
+   * Places where the answer key prints a wrong item number, or none. The answers are
    * right, because the key is read in order; check these against the book.
    */
   repairs: PackAnswerRepair[]
@@ -120,47 +120,37 @@ function placeRecordings(recordings: MatchedRecording[], moduleId: string): Pack
   })
 }
 
-/** The description's exams, from an outline that has passed checkOutline. */
-function describeExams(exams: ExamOutline[], lastPage: number, recordings: MatchedRecording[]): PackExam[] {
-  return exams.map((exam, examIndex) => {
-    const examLast = (exams[examIndex + 1]?.page ?? lastPage + 1) - 1
+/** The description's exams, from their pages in the exam PDF. */
+function describeExams(exams: ExamPages[], recordings: MatchedRecording[]): PackExam[] {
+  return exams.map((exam) => {
     const inExam = (range: PageRange): PageRange => ({
-      first: range.first - exam.page + 1,
-      last: range.last - exam.page + 1,
+      first: range.first - exam.pages.first + 1,
+      last: range.last - exam.pages.first + 1,
     })
     return {
       number: exam.number,
       pagesFile: `exams/${two(exam.number)}/pages.pdf`,
-      pageCount: examLast - exam.page + 1,
-      sourcePages: { first: exam.page, last: examLast },
-      modules: exam.modules.map((module, moduleIndex) => {
-        // A section ends on the page before the next heading. When two
-        // headings share a page, that page belongs to both sections.
-        const nextModule = exam.modules[moduleIndex + 1]?.page ?? examLast + 1
-        const moduleLast = Math.max(module.page, nextModule - 1)
-        const moduleRange = { first: module.page, last: moduleLast }
+      pageCount: exam.pages.last - exam.pages.first + 1,
+      sourcePages: exam.pages,
+      modules: exam.modules.map((module) => {
         const items = itemsByPart(module.profile)
         return {
           id: module.profile.id,
           title: module.profile.title,
-          pages: inExam(moduleRange),
-          sourcePages: moduleRange,
-          parts: module.parts.map((part, partIndex) => {
-            const nextPart = module.parts[partIndex + 1]?.page ?? moduleLast + 1
-            const partRange = { first: part.page, last: Math.max(part.page, nextPart - 1) }
-            return {
-              number: part.number,
-              pages: inExam(partRange),
-              sourcePages: partRange,
-              items: items[partIndex] ?? [],
-              recordings: module.profile.recordings
-                ? placeRecordings(
-                    recordings.filter((entry) => entry.exam === exam.number && entry.part === part.number),
-                    module.profile.id,
-                  )
-                : [],
-            }
-          }),
+          pages: inExam(module.pages),
+          sourcePages: module.pages,
+          parts: module.parts.map((part, partIndex) => ({
+            number: part.number,
+            pages: inExam(part.pages),
+            sourcePages: part.pages,
+            items: items[partIndex] ?? [],
+            recordings: module.profile.recordings
+              ? placeRecordings(
+                  recordings.filter((entry) => entry.exam === exam.number && entry.part === part.number),
+                  module.profile.id,
+                )
+              : [],
+          })),
         }
       }),
     }
@@ -216,25 +206,48 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
     problem('output', `The pack folder ${packDir} already exists. Remove it, or build again with --replace`)
   }
 
-  let pages: string[]
-  try {
-    pages = await readPdfText(options.examPdf, profile.examPdf.columns)
-  } catch (error) {
-    problem('exam-pdf', `${options.examPdf} cannot be read as a PDF: ${(error as Error).message}`)
-    return failed()
+  let exams: ExamPages[]
+  if (profile.examPdf.layout) {
+    // Every exam has the same pages: no heading is looked for, and no text is read.
+    let pageCount: number
+    try {
+      pageCount = await pdfPageCount(options.examPdf)
+    } catch (error) {
+      problem('exam-pdf', `${options.examPdf} cannot be read as a PDF: ${(error as Error).message}`)
+      return failed()
+    }
+    exams = pagesOfLayout(profile)
+    const last = exams.at(-1)
+    if (last && last.pages.last > pageCount) {
+      problem(
+        'exam-pdf',
+        `The layout puts exam ${last.number} on pages ${last.pages.first} to ${last.pages.last}, but the exam PDF has ${plural(pageCount, 'page')}`,
+      )
+      return failed()
+    }
+  } else {
+    let pages: string[]
+    try {
+      pages = await readPdfText(options.examPdf, profile.examPdf.columns)
+    } catch (error) {
+      problem('exam-pdf', `${options.examPdf} cannot be read as a PDF: ${(error as Error).message}`)
+      return failed()
+    }
+    if (pages.every((text) => text.trim() === '')) {
+      problem('exam-pdf', 'The exam PDF has no text layer, so no heading can be found in it')
+      return failed()
+    }
+    const firstPage = profile.examPdf.firstPage
+    const lastPage = Math.min(profile.examPdf.lastPage ?? pages.length, pages.length)
+    const outline = outlineOf(pages, profile, firstPage, lastPage)
+    headings = headingsOf(outline)
+    const check = checkOutline(outline, profile, firstPage, lastPage)
+    for (const message of check.errors) problem('exam-pdf', message)
+    // Without a sure list of exams there is nothing to hold the key and the recordings against.
+    if (!check.examsAddUp) return failed()
+    exams = pagesOfOutline(outline, lastPage)
   }
-  if (pages.every((text) => text.trim() === '')) {
-    problem('exam-pdf', 'The exam PDF has no text layer, so no heading can be found in it')
-    return failed()
-  }
-  const firstPage = profile.examPdf.firstPage
-  const lastPage = Math.min(profile.examPdf.lastPage ?? pages.length, pages.length)
-  const outline = outlineOf(pages, profile, firstPage, lastPage)
-  headings = headingsOf(outline)
-  const check = checkOutline(outline, profile, firstPage, lastPage)
-  for (const message of check.errors) problem('exam-pdf', message)
-  // Without a sure list of exams there is nothing to hold the key and the recordings against.
-  if (!check.examsAddUp) return failed()
+  const examNumbers = exams.map((exam) => exam.number)
 
   let keyPages: string[]
   try {
@@ -243,19 +256,11 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
     problem('answer-key', `${options.answerKeyPdf} cannot be read as a PDF: ${(error as Error).message}`)
     keyPages = []
   }
-  const key = readAnswerKey(
-    keyPages,
-    profile,
-    outline.map((exam) => exam.number),
-  )
+  const key = readAnswerKey(keyPages, profile, examNumbers)
   repairs = key.repairs
   if (keyPages.length > 0) for (const message of key.errors) problem('answer-key', message)
 
-  const recordings = await matchRecordings(
-    options.audioDir,
-    profile,
-    outline.map((exam) => exam.number),
-  )
+  const recordings = await matchRecordings(options.audioDir, profile, examNumbers)
   for (const message of recordings.errors) problem('recordings', message)
 
   if (errors.length > 0) return failed()
@@ -264,8 +269,8 @@ export async function buildPack(options: PackBuildOptions): Promise<PackBuildRes
     format: PACK_FORMAT,
     id,
     name: options.name,
-    examCount: outline.length,
-    exams: describeExams(outline, lastPage, recordings.matched),
+    examCount: exams.length,
+    exams: describeExams(exams, recordings.matched),
   }
   const answerKey: PackAnswerKey = { format: PACK_FORMAT, exams: key.exams, repairs }
 
@@ -384,12 +389,13 @@ export function formatReport(report: PackBuildReport, packDir: string | null): s
     const titles = new Map(report.pack.exams.flatMap((exam) => exam.modules.map((module) => [module.id, module.title])))
     lines.push(
       '',
-      'The answer key prints a wrong item number in these places. The answer is filed under the item',
-      'it belongs to by its place in the key. Check each one against the book:',
+      'The answer key prints a wrong item number, or none, in these places. The answer is filed under',
+      'the item it belongs to by its place in the key. Check each one against the book:',
     )
     for (const repair of report.repairs) {
+      const printed = repair.printed === null ? 'without a number' : `as ${repair.printed}`
       lines.push(
-        `  Exam ${repair.exam}, ${titles.get(repair.module) ?? repair.module} Teil ${repair.part}: item ${repair.item} is printed as ${repair.printed}`,
+        `  Exam ${repair.exam}, ${titles.get(repair.module) ?? repair.module} Teil ${repair.part}: item ${repair.item} is printed ${printed}`,
       )
     }
   }
