@@ -125,7 +125,7 @@ test('the review sheet of a vocabulary node asks every question once in each lan
   })
   expect(entry(ids.meaningFa)).toMatchObject({
     language: 'fa',
-    instruction: 'این واژه چه معنایی دارد؟',
+    instruction: 'معنای این واژه چیست؟',
     question: { type: 'meaning-of-word', prompt: 'der Tisch', options: expect.arrayContaining(['میز']) },
   })
   expect(entry(ids.meaningDe)?.question.options).toContain('ein Möbelstück mit einer Platte und vier Beinen')

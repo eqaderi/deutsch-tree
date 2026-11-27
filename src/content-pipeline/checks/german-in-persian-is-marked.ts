@@ -51,7 +51,7 @@ export const germanInPersianIsMarked: ContentCheck = ({ nodes, chapters }) => {
   return problems
 }
 
-function persianTextsOf(node: NodeFile): Array<{ where: string; text: string; question?: string }> {
+export function persianTextsOf(node: NodeFile): Array<{ where: string; text: string; question?: string }> {
   return [
     { where: 'title.fa', text: node.title.fa },
     ...(node.purpose ? [{ where: 'purpose.fa', text: node.purpose.fa }] : []),

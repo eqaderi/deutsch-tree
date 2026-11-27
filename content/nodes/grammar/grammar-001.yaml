@@ -21,10 +21,10 @@ explanations:
       so *ich wohne* means both "I live" and "I am living".
   fa:
     rule: >
-      در زمان حال (*Präsens*) فعل باقاعده ستاک خود را نگه می‌دارد و برای هر شخص
-      یک پایانه می‌گیرد. برای پیدا کردن ستاک، *-en* را از آخر مصدر بردارید:
-      ستاک *wohnen* می‌شود *wohn-*. آلمانی فقط همین یک زمان حال را دارد؛
-      *ich wohne* هم یعنی «زندگی می‌کنم» و هم «دارم زندگی می‌کنم».
+      در زمان حال (*Präsens*)، بن فعل باقاعده ثابت می‌ماند و برای هر شخص
+      شناسهٔ ویژهٔ خود را می‌گیرد. بن فعل، مصدر بدون *-en* پایانی است: بن
+      *wohnen* می‌شود *wohn-*. آلمانی فقط همین یک زمان حال را دارد؛ از این رو
+      *ich wohne* هم به معنای «زندگی می‌کنم» است و هم «دارم زندگی می‌کنم».
   de:
     rule: >
       Im Präsens bleibt der Stamm von einem regelmäßigen Verb gleich. Jede
@@ -37,7 +37,7 @@ table:
       fa: شخص
       de: Person
     - en: Ending
-      fa: پایانه
+      fa: شناسه
       de: Endung
     - en: Example
       fa: مثال
@@ -75,19 +75,19 @@ mistakes:
     right: Er wohnt in Köln.
     why:
       en: With *er*, *sie* and *es* the ending is *-t*, not *-e*.
-      fa: با *er*، *sie* و *es* پایانه *-t* است، نه *-e*.
+      fa: با *er*، *sie* و *es* شناسهٔ فعل *-t* است، نه *-e*.
       de: Bei *er*, *sie* und *es* ist die Endung *-t*, nicht *-e*.
   - wrong: Du lernt Deutsch.
     right: Du lernst Deutsch.
     why:
       en: With *du* the ending is *-st*.
-      fa: با *du* پایانه *-st* است.
+      fa: با *du* شناسهٔ فعل *-st* است.
       de: Bei *du* ist die Endung *-st*.
   - wrong: Ich bin wohne in Berlin.
     right: Ich wohne in Berlin.
     why:
       en: Do not add *sein* to copy the English "I am living". The verb alone is enough.
-      fa: برای گفتن «دارم زندگی می‌کنم» فعل *sein* را اضافه نکنید. خودِ فعل کافی است.
+      fa: «دارم زندگی می‌کنم» را با افزودن *sein* نسازید؛ خودِ فعل همین معنا را دارد.
       de: Man braucht kein *sein* vor dem Verb. Das Verb allein ist genug.
 
 questions:
@@ -98,7 +98,7 @@ questions:
     answer: wohne
     explanation:
       en: With *ich* the ending is *-e*.
-      fa: با *ich* پایانه *-e* است.
+      fa: با *ich* شناسهٔ فعل *-e* است.
       de: Bei *ich* ist die Endung *-e*.
   - id: q2
     type: multiple-choice
@@ -107,7 +107,7 @@ questions:
     answer: Lernst
     explanation:
       en: With *du* the ending is *-st*.
-      fa: با *du* پایانه *-st* است.
+      fa: با *du* شناسهٔ فعل *-st* است.
       de: Bei *du* ist die Endung *-st*.
   - id: q3
     type: multiple-choice
@@ -116,7 +116,7 @@ questions:
     answer: kocht
     explanation:
       en: Anna is one person you talk about (*sie*), so the ending is *-t*.
-      fa: آنا یک نفر است که درباره‌اش حرف می‌زنیم (*sie*)، پس پایانه *-t* است.
+      fa: آنا سوم‌شخص مفرد است (*sie*)، پس شناسهٔ فعل *-t* است.
       de: Anna ist eine Person (*sie*). Die Endung ist *-t*.
   - id: q4
     type: multiple-choice
@@ -125,7 +125,7 @@ questions:
     answer: spielen
     explanation:
       en: With *wir* the ending is *-en*.
-      fa: با *wir* پایانه *-en* است.
+      fa: با *wir* شناسهٔ فعل *-en* است.
       de: Bei *wir* ist die Endung *-en*.
   - id: q5
     type: multiple-choice
@@ -134,7 +134,7 @@ questions:
     answer: wohnt
     explanation:
       en: With *ihr* the ending is *-t*.
-      fa: با *ihr* پایانه *-t* است.
+      fa: با *ihr* شناسهٔ فعل *-t* است.
       de: Bei *ihr* ist die Endung *-t*.
   - id: q6
     type: multiple-choice
@@ -143,7 +143,7 @@ questions:
     answer: lernen
     explanation:
       en: Anna and Tom are two people (*sie*, plural), so the ending is *-en*.
-      fa: آنا و تام دو نفرند (*sie* جمع)، پس پایانه *-en* است.
+      fa: آنا و تام سوم‌شخص جمع‌اند (*sie*)، پس شناسهٔ فعل *-en* است.
       de: Anna und Tom sind zwei Personen (*sie*, Plural). Die Endung ist *-en*.
   - id: q7
     type: multiple-choice
@@ -152,7 +152,7 @@ questions:
     answer: machst
     explanation:
       en: With *du* the ending is *-st*.
-      fa: با *du* پایانه *-st* است.
+      fa: با *du* شناسهٔ فعل *-st* است.
       de: Bei *du* ist die Endung *-st*.
   - id: q8
     type: multiple-choice
@@ -161,7 +161,7 @@ questions:
     answer: wohnen
     explanation:
       en: With the polite *Sie* the ending is *-en*.
-      fa: با *Sie* (شکل مؤدبانه) پایانه *-en* است.
+      fa: با *Sie* رسمی شناسهٔ فعل *-en* است.
       de: Bei *Sie* (höflich) ist die Endung *-en*.
   - id: q9
     type: multiple-choice
@@ -170,7 +170,7 @@ questions:
     answer: höre
     explanation:
       en: With *ich* the ending is *-e*.
-      fa: با *ich* پایانه *-e* است.
+      fa: با *ich* شناسهٔ فعل *-e* است.
       de: Bei *ich* ist die Endung *-e*.
   - id: q10
     type: multiple-choice
@@ -179,7 +179,7 @@ questions:
     answer: kauft
     explanation:
       en: Tom is one person you talk about (*er*), so the ending is *-t*.
-      fa: تام یک نفر است که درباره‌اش حرف می‌زنیم (*er*)، پس پایانه *-t* است.
+      fa: تام سوم‌شخص مفرد است (*er*)، پس شناسهٔ فعل *-t* است.
       de: Tom ist eine Person (*er*). Die Endung ist *-t*.
   - id: q11
     type: multiple-choice
@@ -188,7 +188,7 @@ questions:
     answer: kommt
     explanation:
       en: With *ihr* the ending is *-t*.
-      fa: با *ihr* پایانه *-t* است.
+      fa: با *ihr* شناسهٔ فعل *-t* است.
       de: Bei *ihr* ist die Endung *-t*.
   - id: q12
     type: multiple-choice
@@ -197,7 +197,7 @@ questions:
     answer: trinken
     explanation:
       en: With *wir* the ending is *-en*.
-      fa: با *wir* پایانه *-en* است.
+      fa: با *wir* شناسهٔ فعل *-en* است.
       de: Bei *wir* ist die Endung *-en*.
   - id: q13
     type: multiple-choice
@@ -206,7 +206,7 @@ questions:
     answer: spielen
     explanation:
       en: "*Die Kinder* are several people (*sie*, plural), so the ending is *-en*."
-      fa: "*die Kinder* چند نفرند (*sie* جمع)، پس پایانه *-en* است."
+      fa: "*die Kinder* سوم‌شخص جمع است (*sie*)، پس شناسهٔ فعل *-en* است."
       de: "*Die Kinder* sind mehrere Personen (*sie*, Plural). Die Endung ist *-en*."
   - id: q14
     type: multiple-choice
@@ -215,7 +215,7 @@ questions:
     answer: Du
     explanation:
       en: The ending *-st* goes only with *du*.
-      fa: پایانه *-st* فقط با *du* می‌آید.
+      fa: شناسهٔ *-st* فقط با *du* می‌آید.
       de: Die Endung *-st* gibt es nur bei *du*.
   - id: q15
     type: multiple-choice
@@ -224,7 +224,7 @@ questions:
     answer: Ich
     explanation:
       en: The ending *-e* goes only with *ich*.
-      fa: پایانه *-e* فقط با *ich* می‌آید.
+      fa: شناسهٔ *-e* فقط با *ich* می‌آید.
       de: Die Endung *-e* gibt es nur bei *ich*.
   - id: q16
     type: multiple-choice
@@ -233,7 +233,7 @@ questions:
     answer: trinkt
     explanation:
       en: "*Das Kind* is one person you talk about (*es*), so the ending is *-t*."
-      fa: "*das Kind* یک نفر است که درباره‌اش حرف می‌زنیم (*es*)، پس پایانه *-t* است."
+      fa: "*das Kind* سوم‌شخص مفرد است (*es*)، پس شناسهٔ فعل *-t* است."
       de: "*Das Kind* ist eine Person (*es*). Die Endung ist *-t*."
 
 review:

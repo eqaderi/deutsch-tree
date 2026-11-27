@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { allStrings } from '../../src/language/index.tsx'
+import { misspeltPersian } from '../../src/language/persian-spelling.ts'
 
 /**
  * The type checker already rejects a language that lacks a string. These
@@ -19,6 +20,28 @@ function emptyStrings(value: unknown, prefix = ''): string[] {
   return Object.entries(value).flatMap(([key, inner]) => emptyStrings(inner, prefix ? `${prefix}.${key}` : key))
 }
 
+/**
+ * The argument given to every Persian string that is a function. As a number
+ * it is 7 (formatted by the string, so in Persian digits); as text it is a
+ * Persian word, standing for a title or a level that the string only places.
+ */
+const ARGUMENT = { valueOf: () => 7, toString: () => 'نام' }
+
+/** Every Persian string with its path, a function's with ARGUMENT for each parameter. */
+function persianStrings(value: unknown = allStrings.fa, prefix = ''): Array<{ path: string; text: string }> {
+  if (typeof value === 'string') return [{ path: prefix, text: value }]
+  if (typeof value === 'function') {
+    return persianStrings(value(...Array.from({ length: value.length }, () => ARGUMENT)), prefix)
+  }
+  if (typeof value !== 'object' || value === null) return []
+  return Object.entries(value).flatMap(([key, inner]) => persianStrings(inner, prefix ? `${prefix}.${key}` : key))
+}
+
+/** The text without what stands between U+2066 and U+2069: German or a name, kept left to right. */
+function withoutMarkedLatin(text: string): string {
+  return text.replace(/⁦[^⁩]*⁩/g, ' ')
+}
+
 describe('interface strings', () => {
   it('offers English, Persian and simple German', () => {
     expect(Object.keys(allStrings).sort()).toEqual(['de', 'en', 'fa'])
@@ -30,6 +53,24 @@ describe('interface strings', () => {
 
   it.each(['en', 'fa', 'de'] as const)('%s has no empty string', (language) => {
     expect(emptyStrings(allStrings[language])).toEqual([])
+  })
+
+  it('spells Persian as content/persian-style.md says: Persian letters and digits, half-spaces', () => {
+    const misspelt = persianStrings()
+      .map(({ path, text }) => [path, misspeltPersian(withoutMarkedLatin(text))])
+      .filter(([, problem]) => problem !== undefined)
+    expect(misspelt).toEqual([])
+  })
+
+  it('marks every piece of Latin text inside a Persian sentence, so that it reads left to right', () => {
+    const unmarked = persianStrings()
+      .filter(({ text }) => /\p{Script=Arabic}/u.test(text))
+      .map(({ path, text }) => [
+        path,
+        /[\p{Script=Latin}0-9][\p{Script=Latin}0-9 .:-]*/u.exec(withoutMarkedLatin(text))?.[0],
+      ])
+      .filter(([, latin]) => latin !== undefined)
+    expect(unmarked).toEqual([])
   })
 
   it('writes numbers in Persian digits in Persian, and in Latin digits otherwise', () => {

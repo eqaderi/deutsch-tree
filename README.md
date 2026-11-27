@@ -420,12 +420,15 @@ The rules are in the learning engine, like every rule. The tree
   `node.title[language]` for content, `strings.number(7)` for a number shown
   on its own (Persian digits in Persian).
 - To add an interface string, add it to `src/language/strings.ts` (English),
-  `strings.fa.ts` (Persian) and `strings.de.ts` (simple German, about A2
-  level). `pnpm check` fails until all three have it. A string with a number
+  `strings.fa.ts` (Persian, written to
+  [content/persian-style.md](content/persian-style.md)) and `strings.de.ts`
+  (simple German, about A2 level). `pnpm check` fails until all three have it. A string with a number
   in it is a function, so Persian can write its own digits.
 - Persian pages are right to left. Use logical CSS properties, and put every
   piece of German in `<German>` or `<RichText>` (`src/app/German.tsx`) so it
-  still reads left to right.
+  still reads left to right. Inside a Persian string, Latin text (German, a name, a
+  command) goes in `german()` in `strings.fa.ts`; `pnpm test:unit` rejects
+  Latin letters or digits outside it.
 
 ## Writing tests
 

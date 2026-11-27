@@ -1,5 +1,5 @@
 # Vocabulary theme of A1, the sample vocabulary node. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md. The Persian meanings are a draft for a native reader.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-family
 kind: vocabulary
 level: A1
@@ -38,7 +38,7 @@ words:
     example:
       de: Meine Eltern kommen am Sonntag zum Essen.
       en: My parents are coming for a meal on Sunday.
-      fa: پدر و مادرم یکشنبه برای غذا می‌آیند.
+      fa: پدر و مادرم یکشنبه برای صرف غذا می‌آیند.
 
   - word: Mutter
     class: noun
@@ -52,7 +52,7 @@ words:
     example:
       de: Meine Mutter arbeitet in einer Apotheke.
       en: My mother works in a pharmacy.
-      fa: مادرم در یک داروخانه کار می‌کند.
+      fa: مادرم در داروخانه‌ای کار می‌کند.
 
   - word: Vater
     class: noun
@@ -66,7 +66,7 @@ words:
     example:
       de: Ihr Vater kocht sehr gern.
       en: Her father really likes cooking.
-      fa: پدرش خیلی دوست دارد آشپزی کند.
+      fa: پدرش آشپزی را خیلی دوست دارد.
 
   - word: Kind
     class: noun
@@ -94,7 +94,7 @@ words:
     example:
       de: Unser Sohn ist acht Jahre alt.
       en: Our son is eight years old.
-      fa: پسرمان هشت ساله است.
+      fa: پسرمان هشت‌ساله است.
 
   - word: Tochter
     class: noun
@@ -227,7 +227,7 @@ words:
     example:
       de: Mein Opa erzählt gern Geschichten.
       en: My grandpa likes telling stories.
-      fa: بابابزرگم دوست دارد قصه تعریف کند.
+      fa: بابابزرگم قصه گفتن را دوست دارد.
     alsoAccepted: [der Großvater]
     tooCloseTo: [Großvater]
 
@@ -244,7 +244,7 @@ words:
     example:
       de: Das ist meine Ehefrau Lena.
       en: This is my wife, Lena.
-      fa: این همسرم لنا است.
+      fa: این همسرم، لناست.
     alsoAccepted: [die Frau]
 
   - word: Ehemann
@@ -274,7 +274,7 @@ words:
     example:
       de: Das Baby schläft jetzt.
       en: The baby is asleep now.
-      fa: نوزاد الان خواب است.
+      fa: نوزاد اکنون خواب است.
     alsoAccepted: [der Säugling, das Neugeborene]
 
   # The scope list gives "der/die": a man is "der Verwandte", a woman "die Verwandte".
@@ -314,7 +314,7 @@ words:
     meaning:
       en: to marry, to get married
       fa: ازدواج کردن
-    definition: Mann und Frau oder zwei Menschen werden ein Ehepaar
+    definition: zwei Menschen werden ein Ehepaar
     example:
       de: Sie heiraten nächstes Jahr.
       en: They are getting married next year.
@@ -340,7 +340,7 @@ words:
     level: A1
     meaning:
       en: to love
-      fa: عشق ورزیدن
+      fa: دوست داشتن، عاشق بودن
     definition: eine Person oder eine Sache sehr, sehr gern haben
     example:
       de: Die Kinder lieben ihren Hund.
@@ -368,7 +368,7 @@ words:
     level: A1
     meaning:
       en: died, passed away
-      fa: فوت کرده
+      fa: درگذشته، فوت‌کرده
     definition: das Partizip II von „sterben“
     example:
       de: Sein Großvater ist letztes Jahr gestorben.
