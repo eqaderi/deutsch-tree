@@ -176,7 +176,8 @@ words:
       de: Sag mir bitte Bescheid, wenn du zu Hause bist.
       en: Please let me know when you're home.
       fa: لطفاً وقتی به خانه رسیدی، به من خبر بده.
-    alsoAccepted: [Bescheid, die Information, die Info, die Nachricht, die Mitteilung, die Auskunft, die Benachrichtigung]
+    alsoAccepted:
+      [Bescheid, die Information, die Info, die Nachricht, die Mitteilung, die Auskunft, die Benachrichtigung]
     tooCloseTo: [Nachricht, informieren]
 
   - word: Nachricht

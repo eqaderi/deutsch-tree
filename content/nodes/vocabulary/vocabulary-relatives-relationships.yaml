@@ -233,7 +233,16 @@ words:
       de: Mein Großvater ist seit zwei Jahren Rentner.
       en: My grandfather has been retired for two years.
       fa: پدربزرگم دو سال است که بازنشسته است.
-    alsoAccepted: [die Rentnerin, der Pensionist, die Pensionistin, der Pensionär, die Pensionärin, der Ruheständler, die Ruheständlerin]
+    alsoAccepted:
+      [
+        die Rentnerin,
+        der Pensionist,
+        die Pensionistin,
+        der Pensionär,
+        die Pensionärin,
+        der Ruheständler,
+        die Ruheständlerin,
+      ]
 
   # Divorced and separated are near each other; neither is offered as a wrong meaning of the other.
   - word: geschieden

@@ -66,7 +66,21 @@ words:
       de: Das war ein toller Abend!
       en: That was a great evening!
       fa: شب معرکه‌ای بود!
-    alsoAccepted: [super, fantastisch, prima, klasse, spitze, großartig, wunderbar, genial, cool, phantastisch, ausgezeichnet, herrlich]
+    alsoAccepted:
+      [
+        super,
+        fantastisch,
+        prima,
+        klasse,
+        spitze,
+        großartig,
+        wunderbar,
+        genial,
+        cool,
+        phantastisch,
+        ausgezeichnet,
+        herrlich,
+      ]
     tooCloseTo: [super, fantastisch]
 
   - word: super
@@ -94,7 +108,23 @@ words:
       de: Von hier hat man einen fantastischen Blick auf die Berge.
       en: From here you have a fantastic view of the mountains.
       fa: از اینجا منظرهٔ فوق‌العاده‌ای از کوه‌ها پیداست.
-    alsoAccepted: [phantastisch, toll, super, großartig, wunderbar, genial, unglaublich, erstaunlich, klasse, spitze, prima, außergewöhnlich, sagenhaft, traumhaft]
+    alsoAccepted:
+      [
+        phantastisch,
+        toll,
+        super,
+        großartig,
+        wunderbar,
+        genial,
+        unglaublich,
+        erstaunlich,
+        klasse,
+        spitze,
+        prima,
+        außergewöhnlich,
+        sagenhaft,
+        traumhaft,
+      ]
 
   - word: langweilig
     class: adjective
