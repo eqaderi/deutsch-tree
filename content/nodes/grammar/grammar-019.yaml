@@ -4,10 +4,335 @@ kind: grammar
 level: A2
 chapter: a2-past
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-013, grammar-016]
 title:
   en: "*Präteritum* of very frequent verbs"
   fa: "گذشتهٔ ساده (*Präteritum*) فعل‌های پرکاربرد"
   de: "Präteritum von sehr häufigen Verben"
+
+explanations:
+  en:
+    rule: >
+      A few very frequent verbs are often used in the *Präteritum*, in stories
+      and reports, and some also in speech: *Es gab kein Brot mehr.* A regular
+      verb such as *sagen* adds *-te* to its stem: *ich sagte*. An irregular
+      verb changes its vowel instead: *kommen*, *kam*; *gehen*, *ging*;
+      *geben*, *gab*; *finden*, *fand*. With *ich* and *er* / *sie* / *es*
+      the form has no ending, as with *war*; the other persons take the
+      endings you know (*du kamst*, *wir kamen*, *ihr kamt*). You will hear
+      *es gab* (there was, there were) and *ich fand* (I thought, for an
+      opinion: *Ich fand den Film gut.*) most often.
+  fa:
+    rule: >
+      چند فعل بسیار پرکاربرد اغلب در گذشتهٔ ساده (*Präteritum*) به کار
+      می‌روند: در داستان و گزارش، و برخی از آن‌ها در گفتار هم: *Es gab kein
+      Brot mehr.* فعل باقاعده‌ای مانند *sagen* به بن خود *-te* می‌افزاید:
+      *ich sagte*. فعل بی‌قاعده به جای آن واکهٔ خود را تغییر می‌دهد: *kommen*،
+      *kam*؛ *gehen*، *ging*؛ *geben*، *gab*؛ *finden*، *fand*. صورت فعل با
+      *ich* و *er/sie/es*، مانند *war*، شناسه ندارد. شخص‌های دیگر شناسه‌های
+      آشنا را می‌گیرند (*du kamst*، *wir kamen*، *ihr kamt*). *es gab* (بود،
+      وجود داشت) و *ich fand* (به نظرم … بود، برای بیان نظر: *Ich fand den
+      Film gut.*) را بیش از همه خواهید شنید.
+  de:
+    rule: >
+      Einige sehr häufige Verben benutzt man oft im Präteritum: in
+      Geschichten und Berichten, manche auch beim Sprechen: *Es gab kein Brot
+      mehr.* Ein regelmäßiges Verb wie *sagen* bekommt *-te*: *ich sagte*.
+      Ein unregelmäßiges Verb ändert den Vokal: *kommen*, *kam*; *gehen*,
+      *ging*; *geben*, *gab*; *finden*, *fand*. Bei *ich* und *er/sie/es* hat
+      die Form keine Endung, wie bei *war*. Die anderen Personen haben die
+      bekannten Endungen: *du kamst*, *wir kamen*, *ihr kamt*. Sehr oft hört
+      man *es gab* und *ich fand* (für eine Meinung: *Ich fand den Film
+      gut.*).
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*ich* / *er* / *sie* / *es*", fa: "*ich* / *er* / *sie* / *es*", de: "*ich* / *er* / *sie* / *es*" }
+    - { en: "*du*", fa: "*du*", de: "*du*" }
+    - { en: "*wir* / *sie* / *Sie*", fa: "*wir* / *sie* / *Sie*", de: "*wir* / *sie* / *Sie*" }
+    - { en: "*ihr*", fa: "*ihr*", de: "*ihr*" }
+  rows:
+    - [kommen, kam, kamst, kamen, kamt]
+    - [gehen, ging, gingst, gingen, gingt]
+    - [geben, gab, gabst, gaben, gabt]
+    - [finden, fand, fandest, fanden, fandet]
+    - [sagen, sagte, sagtest, sagten, sagtet]
+
+examples:
+  - de: Es gab kein Brot mehr.
+    en: There was no bread left.
+    fa: دیگر نانی نمانده بود.
+  - de: Der Bus kam zu spät.
+    en: The bus came too late.
+    fa: اتوبوس دیر آمد.
+  - de: Er sagte kein Wort.
+    en: He didn't say a word.
+    fa: او هیچ حرفی نزد.
+  - de: Nach dem Konzert gingen wir zusammen nach Hause.
+    en: After the concert we went home together.
+    fa: بعد از کنسرت با هم به خانه رفتیم.
+  - de: Ich fand den Film sehr gut.
+    en: I thought the film was very good.
+    fa: به نظرم فیلم خیلی خوب بود.
+  - de: Im Hotel gab es leider kein Frühstück.
+    en: Unfortunately there was no breakfast at the hotel.
+    fa: متأسفانه هتل صبحانه نداشت.
+  - de: Dann kamen meine Freunde, und wir gingen ins Café.
+    en: Then my friends came, and we went to the café.
+    fa: بعد دوستانم آمدند و با هم به کافه رفتیم.
+  - de: Wie fandet ihr das Konzert?
+    en: How did you (plural) like the concert?
+    fa: کنسرت به نظر شما (جمع) چطور بود؟
+
+mistakes:
+  - wrong: Gestern kommte er spät nach Hause.
+    right: Gestern kam er spät nach Hause.
+    why:
+      en: "*Kommen* is irregular: *er kam*, with a new vowel and no *-te*."
+      fa: "*kommen* بی‌قاعده است: *er kam*، با واکه‌ای دیگر و بدون *-te*."
+      de: "*Kommen* ist unregelmäßig: *er kam*, mit anderem Vokal und ohne *-te*."
+  - wrong: Ich gingte zum Arzt.
+    right: Ich ging zum Arzt.
+    why:
+      en: "*Gehen* is irregular: *ich ging*, with no ending."
+      fa: "*gehen* بی‌قاعده است: *ich ging*، بدون شناسه."
+      de: "*Gehen* ist unregelmäßig: *ich ging*, ohne Endung."
+  - wrong: Er kamt um acht Uhr.
+    right: Er kam um acht Uhr.
+    why:
+      en: "With *er* the form has no ending: *er kam*. *Kamt* goes with *ihr*."
+      fa: "با *er* صورت فعل شناسه ندارد: *er kam*. *kamt* با *ihr* می‌آید."
+      de: "Bei *er* hat die Form keine Endung: *er kam*. *Kamt* sagt man bei *ihr*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Gestern ___ es kein Brot mehr.
+    options: [gab, gibt, gabt]
+    answer: gab
+    explanation:
+      en: "*Gestern* asks for the past: *es gab*."
+      fa: "*gestern* گذشته را می‌خواهد: *es gab*."
+      de: "*Gestern* ist Vergangenheit: *es gab*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Der Zug ___ pünktlich.
+    options: [kam, kamt, kommte]
+    answer: kam
+    explanation:
+      en: "*Kommen* is irregular: *er kam*, with no ending."
+      fa: "*kommen* بی‌قاعده است: *er kam*، بدون شناسه."
+      de: "*Kommen* ist unregelmäßig: *er kam*, ohne Endung."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir ___ zusammen ins Kino.
+    options: [gingen, ging, gingt]
+    answer: gingen
+    explanation:
+      en: "With *wir* the form is *gingen*, with *-en*."
+      fa: "با *wir* صورت فعل *gingen* است، با *-en*."
+      de: "Bei *wir* heißt es *gingen*, mit *-en*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wie ___ du den Film?
+    options: [fandest, fand, fanden]
+    answer: fandest
+    explanation:
+      en: "With *du* the ending is *-st*; after *-d* an *e* comes in between: *fandest*."
+      fa: "با *du* شناسهٔ فعل *-st* است و پس از *-d* یک *e* میان آن‌ها می‌آید: *fandest*."
+      de: "Bei *du* ist die Endung *-st*, nach *-d* mit *e*: *fandest*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Er ___ kein Wort.
+    options: [sagte, sagten, sagtest]
+    answer: sagte
+    explanation:
+      en: "*Sagen* is regular: *-te*, and with *er* no further ending: *sagte*."
+      fa: "*sagen* باقاعده است: *-te* و با *er* بدون شناسهٔ دیگر: *sagte*."
+      de: "*Sagen* ist regelmäßig: *-te*, bei *er* ohne weitere Endung: *sagte*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Dann ___ meine Eltern nach Hause.
+    options: [kamen, kam, kamt]
+    answer: kamen
+    explanation:
+      en: "*Meine Eltern* is *sie* (plural): *kamen*."
+      fa: "*meine Eltern* سوم‌شخص جمع است (*sie*): *kamen*."
+      de: "*Meine Eltern* ist *sie* (Plural): *kamen*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich ___ das Buch langweilig.
+    options: [fand, fandet, fanden]
+    answer: fand
+    explanation:
+      en: "With *ich* the form has no ending: *ich fand*."
+      fa: "با *ich* صورت فعل شناسه ندارد: *ich fand*."
+      de: "Bei *ich* hat die Form keine Endung: *ich fand*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: ___ ihr gestern noch zum Supermarkt?
+    options: [Gingt, Gingen, Ging]
+    answer: Gingt
+    explanation:
+      en: "With *ihr* the ending is *-t*: *gingt*."
+      fa: "با *ihr* شناسهٔ فعل *-t* است: *gingt*."
+      de: "Bei *ihr* ist die Endung *-t*: *gingt*."
+  - id: true-1
+    type: true-false
+    prompt: Im Hotel gab es kein Frühstück.
+    answer: true
+    explanation:
+      en: "*Es gab*: there was. The sentence is correct."
+      fa: "*es gab* یعنی «بود، وجود داشت». جمله درست است."
+      de: "*Es gab* ist das Präteritum von *es gibt*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Gestern gehte ich früh ins Bett.
+    answer: false
+    explanation:
+      en: "*Gehen* is irregular: *Gestern ging ich früh ins Bett.*"
+      fa: "*gehen* بی‌قاعده است: *Gestern ging ich früh ins Bett.*"
+      de: "*Gehen* ist unregelmäßig: *Gestern ging ich früh ins Bett.*"
+  - id: true-3
+    type: true-false
+    prompt: Sie sagte, dass sie keine Zeit hatte.
+    answer: true
+    explanation:
+      en: "*Sagen* is regular: *sie sagte*. The sentence is correct."
+      fa: "*sagen* باقاعده است: *sie sagte*. جمله درست است."
+      de: "*Sagen* ist regelmäßig: *sie sagte*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wir kamt zu spät zum Kurs.
+    answer: false
+    explanation:
+      en: "With *wir* the form is *kamen*: *Wir kamen zu spät zum Kurs.*"
+      fa: "با *wir* صورت فعل *kamen* است: *Wir kamen zu spät zum Kurs.*"
+      de: "Bei *wir* heißt es *kamen*: *Wir kamen zu spät zum Kurs.*"
+  - id: error-1
+    type: find-error
+    prompt: Er kommte gestern sehr spät nach Hause.
+    answer: kommte
+    explanation:
+      en: "*Kommen* is irregular: *Er kam gestern sehr spät nach Hause.*"
+      fa: "*kommen* بی‌قاعده است: *Er kam gestern sehr spät nach Hause.*"
+      de: "*Kommen* ist unregelmäßig: *Er kam gestern sehr spät nach Hause.*"
+  - id: error-2
+    type: find-error
+    prompt: Gestern gebte es keinen Kuchen.
+    answer: gebte
+    explanation:
+      en: "*Geben* is irregular: *Gestern gab es keinen Kuchen.*"
+      fa: "*geben* بی‌قاعده است: *Gestern gab es keinen Kuchen.*"
+      de: "*Geben* ist unregelmäßig: *Gestern gab es keinen Kuchen.*"
+  - id: error-3
+    type: find-error
+    prompt: Meine Freunde ging schon um zehn Uhr nach Hause.
+    answer: ging
+    explanation:
+      en: "*Meine Freunde* is *sie* (plural): *Meine Freunde gingen schon um zehn Uhr nach Hause.*"
+      fa: "*meine Freunde* سوم‌شخص جمع است (*sie*): *Meine Freunde gingen schon um zehn Uhr nach Hause.*"
+      de: "*Meine Freunde* ist *sie* (Plural): *Meine Freunde gingen schon um zehn Uhr nach Hause.*"
+  - id: error-4
+    type: find-error
+    prompt: Du sagtet mir nichts davon.
+    answer: sagtet
+    explanation:
+      en: "With *du* the ending is *-st*: *Du sagtest mir nichts davon.*"
+      fa: "با *du* شناسهٔ فعل *-st* است: *Du sagtest mir nichts davon.*"
+      de: "Bei *du* ist die Endung *-st*: *Du sagtest mir nichts davon.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Gestern ___ es keine Tickets mehr (geben).
+    answers: [gab]
+    explanation:
+      en: "*Geben* is irregular: *es gab*."
+      fa: "*geben* بی‌قاعده است: *es gab*."
+      de: "*Geben* ist unregelmäßig: *es gab*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Gestern ___ ich zu Fuß nach Hause (gehen).
+    answers: [ging]
+    explanation:
+      en: "*Gehen* is irregular: *ich ging*."
+      fa: "*gehen* بی‌قاعده است: *ich ging*."
+      de: "*Gehen* ist unregelmäßig: *ich ging*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Letzte Woche ___ meine Oma zu Besuch (kommen).
+    answers: [kam]
+    explanation:
+      en: "*Meine Oma* is *sie* (singular): *kam*, with no ending."
+      fa: "*meine Oma* سوم‌شخص مفرد است (*sie*): *kam*، بدون شناسه."
+      de: "*Meine Oma* ist *sie* (Singular): *kam*, ohne Endung."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Gestern Abend ___ wir das Essen sehr gut (finden).
+    answers: [fanden]
+    explanation:
+      en: "*Finden* is irregular, and *wir* adds *-en*: *fanden*."
+      fa: "*finden* بی‌قاعده است و با *wir* *-en* می‌گیرد: *fanden*."
+      de: "*Finden* ist unregelmäßig, bei *wir* mit *-en*: *fanden*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Gestern ___ der Lehrer nichts (sagen).
+    answers: [sagte]
+    explanation:
+      en: "*Sagen* is regular: *er sagte*."
+      fa: "*sagen* باقاعده است: *er sagte*."
+      de: "*Sagen* ist regelmäßig: *er sagte*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Präteritum: ich komme"
+    answers: [ich kam]
+    explanation:
+      en: "*Kommen* is irregular: *ich kam*."
+      fa: "*kommen* بی‌قاعده است: *ich kam*."
+      de: "*Kommen* ist unregelmäßig: *ich kam*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Präteritum: wir gehen"
+    answers: [wir gingen]
+    explanation:
+      en: "*Gehen* is irregular: *wir gingen*."
+      fa: "*gehen* بی‌قاعده است: *wir gingen*."
+      de: "*Gehen* ist unregelmäßig: *wir gingen*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wann, kam, der Bus]
+    end: "?"
+    explanation:
+      en: "The question word comes first and the verb *kam* second."
+      fa: "واژهٔ پرسشی در آغاز و فعل *kam* در جایگاه دوم می‌آید."
+      de: "Das Fragewort steht am Anfang, das Verb *kam* auf Position 2."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wie, fandest, du, das Konzert]
+    end: "?"
+    explanation:
+      en: "The question word comes first and the verb *fandest* second."
+      fa: "واژهٔ پرسشی در آغاز و فعل *fandest* در جایگاه دوم می‌آید."
+      de: "Das Fragewort steht am Anfang, das Verb *fandest* auf Position 2."
+  - id: match-1
+    type: matching
+    answer:
+      - [kommen, kam]
+      - [gehen, ging]
+      - [geben, gab]
+      - [finden, fand]
+      - [sagen, sagte]
+    explanation:
+      en: "Irregular verbs change their vowel (*kam*, *ging*, *gab*, *fand*); the regular *sagen* adds *-te*."
+      fa: "فعل‌های بی‌قاعده واکهٔ خود را تغییر می‌دهند (*kam*، *ging*، *gab*، *fand*)؛ *sagen* باقاعده است و *-te* می‌گیرد."
+      de: "Unregelmäßige Verben ändern den Vokal (*kam*, *ging*, *gab*, *fand*); das regelmäßige *sagen* bekommt *-te*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 2ade9892ca25bcc9
