@@ -4,10 +4,266 @@ kind: grammar
 level: A2
 chapter: a2-articles-pronouns
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-074, grammar-080]
 title:
   en: "*Was für ein …?*"
   fa: "*Was für ein …?*"
   de: "*Was für ein …?*"
+
+explanations:
+  en:
+    rule: >
+      *Was für ein …?* asks what kind of thing: *Was für ein Auto hast du? –
+      Einen Kombi.* *Welch-* asks which one out of a known group: *Welches
+      Auto ist deins, das rote oder das blaue?* Here *für* does not decide
+      the case. *Ein* takes the case of the noun in the sentence: *ein* for
+      the subject, *einen* for a masculine object: *Was für ein Film läuft
+      heute?* but *Was für einen Film siehst du?* In the plural, and with
+      nouns such as *Musik* or *Wetter*, there is no *ein*: *Was für Bücher
+      liest du?* The answer usually has *ein* or no article.
+  fa:
+    rule: >
+      با *Was für ein …?* نوع چیزی را می‌پرسیم: *Was für ein Auto hast du? –
+      Einen Kombi.* (چه جور ماشینی داری؟ – یک استیشن.) ولی با *welch-* یکی
+      را از میان چند چیز معلوم می‌پرسیم: *Welches Auto ist deins, das rote
+      oder das blaue?* در این پرسش، *für* حالت اسم را تعیین نمی‌کند و *ein*
+      همان حالتی را می‌گیرد که اسم در جمله دارد: برای فاعل *ein* و برای
+      مفعول مذکر *einen*. پس می‌گوییم *Was für ein Film läuft heute?* ولی
+      *Was für einen Film siehst du?* در جمع و با اسم‌هایی مانند *Musik* و
+      *Wetter*، *ein* نمی‌آید: *Was für Bücher liest du?* در پاسخ معمولاً
+      *ein* می‌آید یا اسمی بی‌حرف تعریف.
+  de:
+    rule: >
+      Mit *Was für ein …?* fragt man nach der Art: *Was für ein Auto hast du?
+      – Einen Kombi.* Mit *welch-* fragt man nach einer Sache aus einer
+      bekannten Gruppe: *Welches Auto ist deins, das rote oder das blaue?*
+      Hier bestimmt *für* den Kasus nicht. *Ein* hat den Kasus vom Nomen im
+      Satz: *ein* beim Subjekt, *einen* bei einem maskulinen Objekt: *Was für
+      ein Film läuft heute?*, aber *Was für einen Film siehst du?* Im Plural
+      und bei Nomen wie *Musik* oder *Wetter* steht kein *ein*: *Was für
+      Bücher liest du?*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *was für ein*", fa: "با *was für ein*", de: "Mit *was für ein*" }
+    - { en: "*Akkusativ* with *was für ein*", fa: "حالت *Akkusativ* با *was für ein*", de: "Akkusativ mit *was für ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Film, was für ein Film, was für einen Film, Was für einen Film siehst du?]
+    - [die Bluse, was für eine Bluse, was für eine Bluse, Was für eine Bluse möchten Sie?]
+    - [das Auto, was für ein Auto, was für ein Auto, Was für ein Auto hast du?]
+    - [die Bücher (Plural), was für Bücher, was für Bücher, Was für Bücher liest du?]
+
+examples:
+  - de: Was für eine Bluse möchten Sie? – Eine aus Baumwolle.
+    en: What kind of blouse would you like? – One made of cotton.
+    fa: چه جور بلوزی می‌خواهید؟ – بلوزی از جنس پنبه.
+  - de: Was für ein Auto hast du? – Einen Kombi.
+    en: What kind of car do you have? – An estate car.
+    fa: چه جور ماشینی داری؟ – یک استیشن.
+  - de: Was für einen Film siehst du heute? – Einen Krimi.
+    en: What kind of film are you watching today? – A crime film.
+    fa: امروز چه جور فیلمی می‌بینی؟ – یک فیلم جنایی.
+  - de: Was für ein Hund ist das? – Ein Pudel.
+    en: What kind of dog is that? – A poodle.
+    fa: این چه جور سگی است؟ – یک پودل.
+  - de: Was für Musik hörst du gern? – Jazz und Pop.
+    en: What kind of music do you like listening to? – Jazz and pop.
+    fa: چه جور موسیقی‌ای دوست داری؟ – جاز و پاپ.
+  - de: Was für Schuhe suchen Sie? – Sportschuhe.
+    en: What kind of shoes are you looking for? – Trainers.
+    fa: دنبال چه جور کفشی هستید؟ – کفش ورزشی.
+  - de: In was für einem Hotel wohnt ihr?
+    en: What kind of hotel are you staying in?
+    fa: در چه جور هتلی اقامت دارید؟
+  - de: Was für eine Wohnung sucht ihr? – Eine mit Balkon.
+    en: What kind of flat are you looking for? – One with a balcony.
+    fa: دنبال چه جور آپارتمانی هستید؟ – آپارتمانی با بالکن.
+  - de: Welchen Pullover nimmst du, den blauen oder den grünen?
+    en: Which jumper are you taking, the blue one or the green one?
+    fa: کدام پلیور را برمی‌داری، آبی را یا سبز را؟
+
+mistakes:
+  - wrong: Was für einen Film läuft heute im Kino?
+    right: Was für ein Film läuft heute im Kino?
+    why:
+      en: "The film is the subject of *läuft*, so the *Nominativ*: *ein Film*. *Für* does not make it *Akkusativ* here."
+      fa: "فیلم فاعل فعل *läuft* است، پس در حالت *Nominativ* می‌آید: *ein Film*. این‌جا *für* حالت *Akkusativ* نمی‌سازد."
+      de: "Der Film ist das Subjekt von *läuft*. Darum Nominativ: *ein Film*. *Für* macht hier keinen Akkusativ."
+  - wrong: Was für ein Kuchen möchtest du?
+    right: Was für einen Kuchen möchtest du?
+    why:
+      en: "The cake is the object of *möchten* and masculine, so the *Akkusativ*: *einen Kuchen*."
+      fa: "کیک مفعول *möchten* و اسم مذکر است، پس در حالت *Akkusativ* می‌آید: *einen Kuchen*."
+      de: "Der Kuchen ist das Objekt von *möchten* und maskulin. Darum Akkusativ: *einen Kuchen*."
+  - wrong: Was für eine Schuhe suchen Sie?
+    right: Was für Schuhe suchen Sie?
+    why:
+      en: "*Schuhe* is a plural, and *ein* has no plural: *Was für Schuhe …?*"
+      fa: "*Schuhe* جمع است و *ein* شکل جمع ندارد: *Was für Schuhe …?*"
+      de: "*Schuhe* ist Plural, und *ein* hat keinen Plural: *Was für Schuhe …?*"
+  - wrong: Was für ein Pullover ist deiner, der blaue oder der grüne?
+    right: Welcher Pullover ist deiner, der blaue oder der grüne?
+    why:
+      en: "Here you choose one of two pullovers you can see, so *welch-*. *Was für ein* asks for a kind."
+      fa: "این‌جا یکی از دو پلیوری را می‌پرسیم که پیش چشم‌اند، پس *welch-* می‌آید. *was für ein* نوع چیزی را می‌پرسد."
+      de: "Hier wählt man aus zwei Pullovern, die man sieht. Darum *welch-*. *Was für ein* fragt nach der Art."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Was für ___ Auto möchtest du kaufen? – Ein Elektroauto.
+    options: [ein, einen, eine]
+    answer: ein
+    explanation:
+      en: "*Auto* is neuter; in the *Akkusativ* neuter *ein* stays *ein*."
+      fa: "*Auto* اسم خنثی است و *ein* خنثی در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Auto* ist neutral. Im Akkusativ bleibt *ein*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Was für ___ Film siehst du heute Abend?
+    options: [einen, ein, einem]
+    answer: einen
+    explanation:
+      en: "*Film* is masculine and the object of *sehen*: *einen Film*."
+      fa: "*Film* اسم مذکر و مفعول *sehen* است: *einen Film*."
+      de: "*Film* ist maskulin und das Objekt von *sehen*: *einen Film*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Was für ___ Film läuft heute im Kino?
+    options: [ein, einen, eine]
+    answer: ein
+    explanation:
+      en: "The film is the subject of *läuft*: *Nominativ*, *ein Film*. *Für* does not change the case."
+      fa: "فیلم فاعل *läuft* است: حالت *Nominativ*، *ein Film*. *für* حالت را تغییر نمی‌دهد."
+      de: "Der Film ist das Subjekt von *läuft*: Nominativ, *ein Film*. *Für* ändert den Kasus nicht."
+  - id: gap-4
+    type: gap-fill
+    prompt: Was für ___ Tasche suchen Sie? – Eine aus Leder.
+    options: [eine, einen, ein]
+    answer: eine
+    explanation:
+      en: "*Tasche* is feminine: *eine Tasche*, also in the *Akkusativ*."
+      fa: "*Tasche* اسم مؤنث است: *eine Tasche*، در حالت *Akkusativ* هم."
+      de: "*Tasche* ist feminin: *eine Tasche*, auch im Akkusativ."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "___ Pullover möchten Sie? – Einen warmen aus Wolle, bitte."
+    options: [Was für einen, Welchen, Was für ein]
+    answer: Was für einen
+    explanation:
+      en: "The answer names a kind of pullover, not one from a group, so *was für*; masculine object: *einen*."
+      fa: "پاسخ نوع پلیور را می‌گوید، نه یکی از میان چند پلیور معلوم، پس *was für* می‌آید؛ مفعول مذکر است: *einen*."
+      de: "Die Antwort nennt eine Art von Pullover, keinen aus einer Gruppe. Darum *was für*. Objekt, maskulin: *einen*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "___ Pullover nehmen Sie, den blauen oder den grünen? – Den blauen."
+    options: [Welchen, Was für einen, Was für ein]
+    answer: Welchen
+    explanation:
+      en: "The customer chooses one of two pullovers, so *welch-*: *Welchen Pullover …?*"
+      fa: "مشتری یکی از دو پلیور را انتخاب می‌کند، پس *welch-* می‌آید: *Welchen Pullover …?*"
+      de: "Man wählt aus zwei Pullovern. Darum *welch-*: *Welchen Pullover …?*"
+  - id: choice-3
+    type: multiple-choice
+    prompt: Was für ___ hörst du gern?
+    options: [Musik, eine Musik, einen Musik]
+    answer: Musik
+    explanation:
+      en: "*Musik* takes no *ein* here: *Was für Musik …?*"
+      fa: "*Musik* در این پرسش *ein* نمی‌گیرد: *Was für Musik …?*"
+      de: "Bei *Musik* steht hier kein *ein*: *Was für Musik …?*"
+  - id: choice-4
+    type: multiple-choice
+    prompt: Was für ein Haus habt ihr?
+    options: [Ein altes Haus mit Garten., Das Haus links., "Ja, wir haben ein Haus."]
+    answer: Ein altes Haus mit Garten.
+    explanation:
+      en: "*Was für ein* asks for a kind, so the answer describes the house. *Das Haus links* answers *Welches Haus?*"
+      fa: "*was für ein* نوع چیزی را می‌پرسد، پس پاسخ خانه را توصیف می‌کند. *Das Haus links* پاسخ *Welches Haus?* است."
+      de: "*Was für ein* fragt nach der Art. Darum beschreibt die Antwort das Haus. *Das Haus links* passt zu *Welches Haus?*"
+  - id: true-1
+    type: true-false
+    prompt: Was für Bücher liest du gern?
+    answer: true
+    explanation:
+      en: "*Bücher* is a plural, so there is no *ein*. The sentence is correct."
+      fa: "*Bücher* جمع است، پس *ein* نمی‌آید. جمله درست است."
+      de: "*Bücher* ist Plural, darum kein *ein*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Was für einen Mann ist Herr Keller?
+    answer: false
+    explanation:
+      en: "*Herr Keller* is the subject and *ist* takes no object, so the *Nominativ*: *Was für ein Mann …?*"
+      fa: "*Herr Keller* فاعل است و پس از *ist* مفعول نمی‌آید، پس حالت *Nominativ* درست است: *Was für ein Mann …?*"
+      de: "Bei *sein* gibt es kein Objekt. Darum Nominativ: *Was für ein Mann …?*"
+  - id: true-3
+    type: true-false
+    prompt: Was für eine Wohnung sucht ihr?
+    answer: true
+    explanation:
+      en: "*Wohnung* is feminine: *eine Wohnung*. The sentence is correct."
+      fa: "*Wohnung* اسم مؤنث است: *eine Wohnung*. جمله درست است."
+      de: "*Wohnung* ist feminin: *eine Wohnung*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Was für ___ (ein) Baum ist das? – Ein Apfelbaum.
+    answers: [ein]
+    explanation:
+      en: "*Das ist* takes the *Nominativ*: *ein Baum*."
+      fa: "پس از *das ist* حالت *Nominativ* می‌آید: *ein Baum*."
+      de: "Nach *das ist* steht der Nominativ: *ein Baum*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Was für ___ (ein) Computer brauchst du? – Einen Laptop.
+    answers: [einen]
+    explanation:
+      en: "*Computer* is masculine and the object of *brauchen*: *einen Computer*."
+      fa: "*Computer* اسم مذکر و مفعول *brauchen* است: *einen Computer*."
+      de: "*Computer* ist maskulin und das Objekt von *brauchen*: *einen Computer*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: In was für ___ (ein) Hotel habt ihr gewohnt?
+    answers: [einem]
+    explanation:
+      en: "Here *in* says where, so the *Dativ*; *Hotel* is neuter: *einem Hotel*."
+      fa: "این‌جا *in* جا را نشان می‌دهد، پس حالت *Dativ* می‌آید؛ *Hotel* اسم خنثی است: *einem Hotel*."
+      de: "Hier sagt *in*, wo. Darum Dativ. *Hotel* ist neutral: *einem Hotel*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Was für ___ (ein) Jacke trägst du im Winter? – Eine dicke.
+    answers: [eine]
+    explanation:
+      en: "*Jacke* is feminine: *eine Jacke*, also in the *Akkusativ*."
+      fa: "*Jacke* اسم مؤنث است: *eine Jacke*، در حالت *Akkusativ* هم."
+      de: "*Jacke* ist feminin: *eine Jacke*, auch im Akkusativ."
+  - id: error-1
+    type: find-error
+    prompt: Was für eine Schuhe kaufst du?
+    answer: eine
+    explanation:
+      en: "*Schuhe* is a plural, and *ein* has no plural: *Was für Schuhe …?*"
+      fa: "*Schuhe* جمع است و *ein* شکل جمع ندارد: *Was für Schuhe …?*"
+      de: "*Schuhe* ist Plural, und *ein* hat keinen Plural: *Was für Schuhe …?*"
+  - id: error-2
+    type: find-error
+    prompt: Was für einen Kuchen ist das?
+    answer: einen
+    explanation:
+      en: "After *das ist* comes the *Nominativ*: *Was für ein Kuchen ist das?*"
+      fa: "پس از *das ist* حالت *Nominativ* می‌آید: *Was für ein Kuchen ist das?*"
+      de: "Nach *das ist* steht der Nominativ: *Was für ein Kuchen ist das?*"
+  - id: match-1
+    type: matching
+    answer:
+      - [Was für ___ Film siehst du?, einen]
+      - [Was für ___ Jacke kaufst du?, eine]
+      - [Was für ___ Buch liest du?, ein]
+    explanation:
+      en: "Each noun is an object (*Akkusativ*): masculine *einen*, feminine *eine*, neuter *ein*."
+      fa: "در هر سه جمله اسم مفعول است (حالت *Akkusativ*): مذکر *einen*، مؤنث *eine* و خنثی *ein*."
+      de: "Jedes Nomen ist Objekt (Akkusativ): maskulin *einen*, feminin *eine*, neutral *ein*."

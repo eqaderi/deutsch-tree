@@ -4,10 +4,293 @@ kind: grammar
 level: A2
 chapter: a2-articles-pronouns
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-066, grammar-077]
 title:
   en: "*Possessivartikel* in the *Dativ*; *euer*"
-  fa: "صفت ملکی در *Dativ*؛ *euer*"
+  fa: "حرف تعریف ملکی در حالت *Dativ*؛ *euer*"
   de: "Possessivartikel im Dativ; *euer*"
+
+explanations:
+  en:
+    rule: >
+      In the *Dativ* (after *mit*, *bei*, *zu*, *von*, after verbs such as
+      *helfen* and for the person you give something to) a possessive article
+      has the endings of *ein*: *meinem* for masculine and neuter nouns,
+      *meiner* for feminine nouns, and *meinen* for the plural, with *-n* on
+      the noun as well: *mit meinem Freund*, *mit meiner Schwester*, *mit
+      meinen Kindern*. *Euer* is the possessive for *ihr* (you, more than one
+      person you say *du* to). When it takes an ending, the *e* before the
+      *r* drops: *euer Sohn*, but *eure Tochter*, *euren Sohn*, *eurem Sohn*.
+  fa:
+    rule: >
+      در حالت *Dativ* (حالت مفعول باواسطه)، یعنی پس از حرف‌های اضافه‌ای مانند
+      *mit*، *bei*، *zu* و *von*، پس از فعل‌هایی مانند *helfen* و برای کسی که
+      چیزی به او می‌دهیم، حرف تعریف ملکی همان پایانه‌های *ein* را می‌گیرد:
+      *meinem* برای اسم مذکر و خنثی، *meiner* برای اسم مؤنث و *meinen* برای
+      جمع. در جمع، خود اسم نیز *-n* می‌گیرد: *mit meinem Freund*، *mit meiner
+      Schwester*، *mit meinen Kindern*. *euer* حرف تعریف ملکی دوم‌شخص جمع
+      است، یعنی برای *ihr*، وقتی چند نفر را که با آن‌ها *du* می‌گوییم مخاطب
+      قرار می‌دهیم: *euer Auto* یعنی «ماشینتان». هرگاه *euer* پایانه بگیرد،
+      حرف *e* پیش از *r* می‌افتد: *euer Sohn*، ولی *eure Tochter*، *euren Sohn* و
+      *eurem Sohn*.
+  de:
+    rule: >
+      Im Dativ (nach *mit*, *bei*, *zu*, *von*, nach Verben wie *helfen* und
+      für die Person, die etwas bekommt) hat der Possessivartikel die
+      Endungen von *ein*: *meinem* bei maskulinen und neutralen Nomen,
+      *meiner* bei femininen Nomen und *meinen* im Plural. Im Plural bekommt
+      auch das Nomen *-n*: *mit meinen Kindern*. *Euer* ist der
+      Possessivartikel für *ihr*. Mit Endung fällt das *e* vor dem *r* weg:
+      *euer Sohn*, aber *eure Tochter*, *euren Sohn*, *eurem Sohn*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *mein*", fa: "با *mein*", de: "Mit *mein*" }
+    - { en: "With *euer*", fa: "با *euer*", de: "Mit *euer*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Freund, dem Freund, meinem Freund, eurem Freund, Ich fahre mit meinem Freund.]
+    - [die Schwester, der Schwester, meiner Schwester, eurer Schwester, Ich helfe meiner Schwester.]
+    - [das Kind, dem Kind, meinem Kind, eurem Kind, Wie geht es eurem Kind?]
+    - [die Kinder (Plural), den Kindern, meinen Kindern, euren Kindern, Ich spiele mit meinen Kindern.]
+
+examples:
+  - de: Ich fahre mit meinem Freund nach Hamburg.
+    en: I'm driving to Hamburg with my friend.
+    fa: با دوستم به هامبورگ می‌روم.
+  - de: Am Wochenende sind wir bei unseren Eltern.
+    en: At the weekend we are at our parents' place.
+    fa: آخر هفته پیش پدر و مادرمان هستیم.
+  - de: Ich helfe meiner Mutter in der Küche.
+    en: I'm helping my mother in the kitchen.
+    fa: در آشپزخانه به مادرم کمک می‌کنم.
+  - de: Das Geschenk ist von meiner Schwester.
+    en: The present is from my sister.
+    fa: این هدیه از طرف خواهرم است.
+  - de: Tim wohnt noch bei seinen Großeltern.
+    en: Tim still lives with his grandparents.
+    fa: تیم هنوز پیش پدربزرگ و مادربزرگش زندگی می‌کند.
+  - de: Wie gefällt dir das Leben in deiner neuen Stadt?
+    en: How do you like life in your new town?
+    fa: زندگی در شهر تازه‌ات را چطور می‌بینی؟
+  - de: Ist das euer Auto?
+    en: Is that your car?
+    fa: این ماشینتان است؟
+  - de: Kinder, wo ist eure Lehrerin?
+    en: Children, where is your teacher?
+    fa: بچه‌ها، معلمتان کجاست؟
+  - de: Kommt ihr mit eurem Hund?
+    en: Are you coming with your dog?
+    fa: با سگتان می‌آیید؟
+  - de: Wir kommen gern zu eurer Party.
+    en: We'd love to come to your party.
+    fa: با کمال میل به مهمانی‌تان می‌آییم.
+
+mistakes:
+  - wrong: Ich fahre mit mein Freund.
+    right: Ich fahre mit meinem Freund.
+    why:
+      en: "*Mit* takes the *Dativ*, and *Freund* is masculine: *meinem*, like *einem*."
+      fa: "*mit* با حالت *Dativ* می‌آید و *Freund* اسم مذکر است: *meinem*، مانند *einem*."
+      de: "Nach *mit* steht der Dativ, und *Freund* ist maskulin: *meinem*, wie *einem*."
+  - wrong: Ich telefoniere mit meinem Schwester.
+    right: Ich telefoniere mit meiner Schwester.
+    why:
+      en: "*Schwester* is feminine. In the *Dativ* a feminine noun takes *meiner*, like *einer*."
+      fa: "*Schwester* اسم مؤنث است. اسم مؤنث در حالت *Dativ* با *meiner* می‌آید، مانند *einer*."
+      de: "*Schwester* ist feminin. Im Dativ heißt es *meiner*, wie *einer*."
+  - wrong: Wir wohnen bei unseren Freunde.
+    right: Wir wohnen bei unseren Freunden.
+    why:
+      en: "In the *Dativ* plural the noun takes *-n* too: *unseren Freunden*."
+      fa: "در حالت *Dativ* جمع، خود اسم نیز *-n* می‌گیرد: *unseren Freunden*."
+      de: "Im Dativ Plural bekommt auch das Nomen *-n*: *unseren Freunden*."
+  - wrong: Kinder, wo ist euer Lehrerin?
+    right: Kinder, wo ist eure Lehrerin?
+    why:
+      en: "*Lehrerin* is feminine, so *euer* takes *-e*, and the *e* before the *r* drops: *eure*."
+      fa: "*Lehrerin* اسم مؤنث است، پس *euer* پایانهٔ *-e* می‌گیرد و حرف *e* پیش از *r* می‌افتد: *eure*."
+      de: "*Lehrerin* ist feminin. Darum bekommt *euer* ein *-e*, und das *e* vor dem *r* fällt weg: *eure*."
+  - wrong: Anna spricht mit seiner Mutter.
+    right: Anna spricht mit ihrer Mutter.
+    why:
+      en: "The owner is Anna, a woman, so *ihr*; the case only gives the ending: *ihrer*."
+      fa: "دارنده آنا است که زن است، پس *ihr* می‌آید؛ حالت *Dativ* فقط پایانه را تعیین می‌کند: *ihrer*."
+      de: "Anna ist eine Frau. Darum *ihr*. Der Dativ gibt nur die Endung: *ihrer*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich fahre mit ___ Bruder nach Köln.
+    options: [meinem, meinen, meiner]
+    answer: meinem
+    explanation:
+      en: "*Mit* takes the *Dativ*; *Bruder* is masculine: *meinem Bruder*."
+      fa: "*mit* با حالت *Dativ* می‌آید و *Bruder* اسم مذکر است: *meinem Bruder*."
+      de: "Nach *mit* steht der Dativ. *Bruder* ist maskulin: *meinem Bruder*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Am Sonntag sind wir bei ___ Oma.
+    options: [unserer, unserem, unsere]
+    answer: unserer
+    explanation:
+      en: "*Bei* takes the *Dativ*; *Oma* is feminine: *unserer Oma*."
+      fa: "*bei* با حالت *Dativ* می‌آید و *Oma* اسم مؤنث است: *unserer Oma*."
+      de: "Nach *bei* steht der Dativ. *Oma* ist feminin: *unserer Oma*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Lisa spielt mit ___ Kindern im Garten.
+    options: [ihren, ihrem, ihre]
+    answer: ihren
+    explanation:
+      en: "*Kindern* is a plural in the *Dativ*: *ihren Kindern*."
+      fa: "*Kindern* جمع و در حالت *Dativ* است: *ihren Kindern*."
+      de: "*Kindern* ist Plural im Dativ: *ihren Kindern*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Paul, hilfst du ___ Vater heute?
+    options: [deinem, deinen, deiner]
+    answer: deinem
+    explanation:
+      en: "*Helfen* takes the *Dativ*; *Vater* is masculine: *deinem Vater*."
+      fa: "فعل *helfen* با حالت *Dativ* می‌آید و *Vater* اسم مذکر است: *deinem Vater*."
+      de: "*Helfen* hat den Dativ. *Vater* ist maskulin: *deinem Vater*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Habt ihr ___ Fahrkarten dabei?
+    options: [eure, euer, euren]
+    answer: eure
+    explanation:
+      en: "*Ihr* → *euer*. *Fahrkarten* is a plural object (*Akkusativ*): *eure*, without the *e* before the *r*."
+      fa: "برای *ihr* حرف تعریف ملکی *euer* است. *Fahrkarten* جمع و مفعول جمله است (حالت *Akkusativ*): *eure*؛ حرف *e* پیش از *r* می‌افتد."
+      de: "Zu *ihr* gehört *euer*. *Fahrkarten* ist Plural und Objekt (Akkusativ): *eure*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Herr und Frau Berg, wie geht es ___ Sohn?
+    options: [Ihrem, Ihren, eurem]
+    answer: Ihrem
+    explanation:
+      en: "You say *Sie* to Herr and Frau Berg, so *Ihr*; *es geht* + *Dativ*, and *Sohn* is masculine: *Ihrem Sohn*."
+      fa: "با آقا و خانم برگ با *Sie* سخن می‌گوییم، پس *Ihr* می‌آید؛ پس از *es geht* حالت *Dativ* می‌آید و *Sohn* اسم مذکر است: *Ihrem Sohn*."
+      de: "Zu Herrn und Frau Berg sagt man *Sie*. Darum *Ihr*. Nach *es geht* steht der Dativ, *Sohn* ist maskulin: *Ihrem Sohn*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Wir kommen gern zu eurer Party., Wir kommen gern zu eurem Party., Wir kommen gern zu euren Party.]
+    answer: Wir kommen gern zu eurer Party.
+    explanation:
+      en: "*Zu* takes the *Dativ*; *Party* is feminine and singular: *eurer Party*."
+      fa: "*zu* با حالت *Dativ* می‌آید و *Party* اسم مؤنث و مفرد است: *eurer Party*."
+      de: "Nach *zu* steht der Dativ. *Party* ist feminin und Singular: *eurer Party*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Lena und Jonas, ist das ___ Hund?
+    options: [euer, eurer, euren]
+    answer: euer
+    explanation:
+      en: "*Ihr* → *euer*. *Hund* is masculine and the subject (*Nominativ*): *euer*, with no ending."
+      fa: "برای *ihr* حرف تعریف ملکی *euer* است. *Hund* اسم مذکر و فاعل جمله است (حالت *Nominativ*): *euer*، بی‌پایانه."
+      de: "Zu *ihr* gehört *euer*. *Hund* ist maskulin und das Subjekt (Nominativ): *euer*, ohne Endung."
+  - id: true-1
+    type: true-false
+    prompt: Ich wohne bei meinen Eltern.
+    answer: true
+    explanation:
+      en: "*Bei* takes the *Dativ*; *Eltern* is a plural: *meinen Eltern*. The sentence is correct."
+      fa: "*bei* با حالت *Dativ* می‌آید و *Eltern* جمع است: *meinen Eltern*. جمله درست است."
+      de: "Nach *bei* steht der Dativ. *Eltern* ist Plural: *meinen Eltern*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Der Brief ist von meinem Tante.
+    answer: false
+    explanation:
+      en: "*Tante* is feminine, so in the *Dativ*: *von meiner Tante*."
+      fa: "*Tante* اسم مؤنث است، پس در حالت *Dativ* می‌شود: *von meiner Tante*."
+      de: "*Tante* ist feminin. Im Dativ: *von meiner Tante*."
+  - id: true-3
+    type: true-false
+    prompt: Was macht ihr mit eurem Geld?
+    answer: true
+    explanation:
+      en: "*Mit* takes the *Dativ*; *Geld* is neuter: *eurem Geld*. The sentence is correct."
+      fa: "*mit* با حالت *Dativ* می‌آید و *Geld* اسم خنثی است: *eurem Geld*. جمله درست است."
+      de: "Nach *mit* steht der Dativ. *Geld* ist neutral: *eurem Geld*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich telefoniere jeden Abend mit ___ (mein) Freundin.
+    answers: [meiner]
+    explanation:
+      en: "*Mit* takes the *Dativ*; *Freundin* is feminine: *meiner Freundin*."
+      fa: "*mit* با حالت *Dativ* می‌آید و *Freundin* اسم مؤنث است: *meiner Freundin*."
+      de: "Nach *mit* steht der Dativ. *Freundin* ist feminin: *meiner Freundin*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Peter fährt mit ___ (sein) Fahrrad zur Arbeit.
+    answers: [seinem]
+    explanation:
+      en: "*Mit* takes the *Dativ*; *Fahrrad* is neuter: *seinem Fahrrad*."
+      fa: "*mit* با حالت *Dativ* می‌آید و *Fahrrad* اسم خنثی است: *seinem Fahrrad*."
+      de: "Nach *mit* steht der Dativ. *Fahrrad* ist neutral: *seinem Fahrrad*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir danken ___ (unser) Freunden für die Hilfe.
+    answers: [unseren, unsren, unsern]
+    explanation:
+      en: "*Danken* takes the *Dativ*, and *Freunden* is a plural: *unseren Freunden*."
+      fa: "فعل *danken* با حالت *Dativ* می‌آید و *Freunden* جمع است: *unseren Freunden*."
+      de: "*Danken* hat den Dativ, und *Freunden* ist Plural: *unseren Freunden*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Kinder, ist das ___ (euer) Ball?
+    answers: [euer]
+    explanation:
+      en: "*Ball* is masculine and the subject (*Nominativ*): *euer Ball*, with no ending."
+      fa: "*Ball* اسم مذکر و فاعل جمله است (حالت *Nominativ*): *euer Ball*، بی‌پایانه."
+      de: "*Ball* ist maskulin und das Subjekt (Nominativ): *euer Ball*, ohne Endung."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Wie heißt die Freundin von ___ (euer) Sohn?
+    answers: [eurem, euerem]
+    explanation:
+      en: "*Von* takes the *Dativ*; *Sohn* is masculine: *eurem Sohn*."
+      fa: "*von* با حالت *Dativ* می‌آید و *Sohn* اسم مذکر است: *eurem Sohn*."
+      de: "Nach *von* steht der Dativ. *Sohn* ist maskulin: *eurem Sohn*."
+  - id: error-1
+    type: find-error
+    prompt: Am Abend gehe ich zu meine Großmutter.
+    answer: meine
+    explanation:
+      en: "*Zu* takes the *Dativ*; *Großmutter* is feminine: *zu meiner Großmutter*."
+      fa: "*zu* با حالت *Dativ* می‌آید و *Großmutter* اسم مؤنث است: *zu meiner Großmutter*."
+      de: "Nach *zu* steht der Dativ. *Großmutter* ist feminin: *zu meiner Großmutter*."
+  - id: error-2
+    type: find-error
+    prompt: Maria geht mit seinem Hund spazieren.
+    answer: seinem
+    explanation:
+      en: "The owner is Maria, a woman, so *ihr*: *mit ihrem Hund*."
+      fa: "دارنده ماریا است که زن است، پس *ihr* می‌آید: *mit ihrem Hund*."
+      de: "Maria ist eine Frau. Darum *ihr*: *mit ihrem Hund*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ich, wohne, bei meinen Eltern]
+      - [bei meinen Eltern, wohne, ich]
+    explanation:
+      en: "The verb comes second. *Bei meinen Eltern* can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. *bei meinen Eltern* می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. *Bei meinen Eltern* kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [mit ___ Bruder, meinem]
+      - [mit ___ Schwester, meiner]
+      - [mit ___ Freunden, meinen]
+    explanation:
+      en: "*Mit* takes the *Dativ*: *meinem* for masculine, *meiner* for feminine, *meinen* for the plural."
+      fa: "*mit* با حالت *Dativ* می‌آید: *meinem* برای مذکر، *meiner* برای مؤنث و *meinen* برای جمع."
+      de: "Nach *mit* steht der Dativ: *meinem* (maskulin), *meiner* (feminin), *meinen* (Plural)."

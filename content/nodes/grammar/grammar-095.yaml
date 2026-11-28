@@ -4,10 +4,267 @@ kind: grammar
 level: A2
 chapter: a2-articles-pronouns
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-077, grammar-094]
 title:
   en: "*Possessivpronomen*"
   fa: "ضمیر ملکی (*meiner*، *deins*)"
   de: "Possessivpronomen (*meiner*, *deins*)"
+
+explanations:
+  en:
+    rule: >
+      A possessive pronoun stands alone, without its noun: *Wem gehört die
+      Tasche? – Das ist meine.* It is the possessive article with the endings
+      of *einer*, *eine*, *eins*: *meiner* (masculine), *meine* (feminine),
+      *meins* (neuter, also *meines*), *meine* (plural); in the *Akkusativ*
+      only the masculine changes: *meinen*. The gender comes from the noun it
+      stands for, the word from the owner, as with the article: *Ist das dein
+      Schlüssel? – Ja, das ist meiner.* *Das Handy ist nicht meins, es ist
+      seins.* The same goes for *deiner*, *seiner*, *ihrer*, *unserer*,
+      *eurer* and *Ihrer*.
+  fa:
+    rule: >
+      ضمیر ملکی بی‌اسم می‌آید و جای اسم را می‌گیرد: *Wem gehört die Tasche? –
+      Das ist meine.* (این کیف مال کیست؟ – مال من است.) این ضمیر همان حرف
+      تعریف ملکی است با پایانه‌های *einer*، *eine* و *eins*: *meiner* برای
+      مذکر، *meine* برای مؤنث، *meins* (یا *meines*) برای خنثی و *meine* برای
+      جمع. در حالت *Akkusativ* (حالت مفعولی) فقط مذکر تغییر می‌کند: *meinen*.
+      جنس ضمیر را اسمی تعیین می‌کند که به جای آن آمده است و خود واژه را
+      دارنده، درست مانند حرف تعریف ملکی: *Ist das dein Schlüssel? – Ja, das
+      ist meiner.* و *Das Handy ist nicht meins, es ist seins.* در فارسی
+      می‌گوییم «مال من» و این عبارت هیچ‌گاه تغییر نمی‌کند، ولی در آلمانی پایانه
+      با جنس اسم عوض می‌شود. *deiner*، *seiner*، *ihrer*، *unserer*، *eurer*
+      و *Ihrer* نیز همین قاعده را دارند.
+  de:
+    rule: >
+      Das Possessivpronomen steht allein, ohne Nomen: *Wem gehört die Tasche?
+      – Das ist meine.* Es ist der Possessivartikel mit den Endungen von
+      *einer*, *eine*, *eins*: *meiner* (maskulin), *meine* (feminin),
+      *meins* (neutral, auch *meines*), *meine* (Plural). Im Akkusativ ändert
+      sich nur das Maskulinum: *meinen*. Das Genus kommt vom Nomen, das Wort
+      vom Besitzer: *Ist das dein Schlüssel? – Ja, das ist meiner.* *Das
+      Handy ist nicht meins, es ist seins.* Genauso bei *deiner*, *seiner*,
+      *ihrer*, *unserer*, *eurer* und *Ihrer*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *mein*", fa: "با *mein*", de: "Mit *mein*" }
+    - { en: Pronoun, fa: ضمیر, de: Pronomen }
+    - { en: "Pronoun in the *Akkusativ*", fa: "ضمیر در حالت *Akkusativ*", de: Pronomen im Akkusativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Schlüssel, mein Schlüssel, meiner, meinen, "Ist das deiner? – Ja, das ist meiner."]
+    - [die Tasche, meine Tasche, meine, meine, Die Tasche ist meine.]
+    - [das Handy, mein Handy, meins, meins, Das Handy ist nicht meins.]
+    - [die Schuhe (Plural), meine Schuhe, meine, meine, Das sind meine.]
+
+examples:
+  - de: Wem gehört die Tasche? – Das ist meine.
+    en: Whose bag is this? – It's mine.
+    fa: این کیف مال کیست؟ – مال من است.
+  - de: Ist das dein Schlüssel? – Ja, das ist meiner.
+    en: Is that your key? – Yes, it's mine.
+    fa: این کلید توست؟ – بله، مال من است.
+  - de: Das Handy ist nicht meins. Ist es deins?
+    en: The phone isn't mine. Is it yours?
+    fa: این گوشی مال من نیست. مال توست؟
+  - de: Mein Laptop ist kaputt. Kann ich deinen benutzen?
+    en: My laptop is broken. Can I use yours?
+    fa: لپ‌تاپم خراب است. می‌توانم از مال تو استفاده کنم؟
+  - de: Ist das Peters Jacke? – Ja, das ist seine.
+    en: Is that Peter's jacket? – Yes, it's his.
+    fa: این کاپشن پیتر است؟ – بله، مال اوست.
+  - de: Sind das eure Fahrräder? – Ja, das sind unsere.
+    en: Are those your bikes? – Yes, they're ours.
+    fa: این دوچرخه‌ها مال شماست؟ – بله، مال ماست.
+  - de: Unser Auto ist alt, Ihres ist neu.
+    en: Our car is old. Yours is new.
+    fa: ماشین ما قدیمی است. ماشین شما نو است.
+  - de: Ich habe meinen Schirm vergessen. Hast du deinen dabei?
+    en: I've forgotten my umbrella. Have you got yours with you?
+    fa: چترم را جا گذاشته‌ام. چترت همراهت است؟
+
+mistakes:
+  - wrong: Ist das dein Schlüssel? – Ja, das ist mein.
+    right: Ist das dein Schlüssel? – Ja, das ist meiner.
+    why:
+      en: "Without a noun the word needs its ending: *Schlüssel* is masculine, so *meiner*."
+      fa: "بی‌اسم، واژه پایانه لازم دارد: *Schlüssel* اسم مذکر است، پس *meiner*."
+      de: "Ohne Nomen braucht das Wort eine Endung. *Schlüssel* ist maskulin: *meiner*."
+  - wrong: Ist das Annas Tasche? – Ja, das ist seine.
+    right: Ist das Annas Tasche? – Ja, das ist ihre.
+    why:
+      en: "The owner is Anna, a woman, so *ihr-*; *Tasche* is feminine: *ihre*."
+      fa: "دارنده آنا است که زن است، پس *ihr-* می‌آید؛ *Tasche* اسم مؤنث است: *ihre*."
+      de: "Anna ist eine Frau. Darum *ihr-*. *Tasche* ist feminin: *ihre*."
+  - wrong: Mein Stift ist leer. Kann ich deiner haben?
+    right: Mein Stift ist leer. Kann ich deinen haben?
+    why:
+      en: "The pen is the object of *haben*, so the masculine *Akkusativ*: *deinen*."
+      fa: "خودکار مفعول *haben* است، پس شکل مذکر در حالت *Akkusativ* می‌آید: *deinen*."
+      de: "Der Stift ist das Objekt von *haben*. Darum Akkusativ maskulin: *deinen*."
+  - wrong: Das Buch? Das ist meiner.
+    right: Das Buch? Das ist meins.
+    why:
+      en: "The pronoun takes the gender of *Buch*, which is neuter: *meins*."
+      fa: "ضمیر جنس *Buch* را می‌گیرد که خنثی است: *meins*."
+      de: "Das Pronomen hat das Genus von *Buch*. *Buch* ist neutral: *meins*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wem gehört der Koffer? – Das ist ___.
+    options: [meiner, meine, meins]
+    answer: meiner
+    explanation:
+      en: "*Koffer* is masculine: *meiner*."
+      fa: "*Koffer* اسم مذکر است: *meiner*."
+      de: "*Koffer* ist maskulin: *meiner*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ist das deine Jacke? – Ja, das ist ___.
+    options: [meine, meiner, meins]
+    answer: meine
+    explanation:
+      en: "*Jacke* is feminine: *meine*."
+      fa: "*Jacke* اسم مؤنث است: *meine*."
+      de: "*Jacke* ist feminin: *meine*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Fahrrad gehört nicht mir. Es ist ___, Lisa.
+    options: [deins, deiner, deinen]
+    answer: deins
+    explanation:
+      en: "*Fahrrad* is neuter, and you say *du* to Lisa: *deins*."
+      fa: "*Fahrrad* اسم خنثی است و با لیزا با *du* سخن می‌گوییم: *deins*."
+      de: "*Fahrrad* ist neutral, und zu Lisa sagt man *du*: *deins*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Mein Handy ist leer. Kann ich ___ benutzen, Tom?
+    options: [deins, deiner, deine]
+    answer: deins
+    explanation:
+      en: "*Handy* is neuter; neuter is the same in the *Akkusativ*: *deins*."
+      fa: "*Handy* اسم خنثی است و خنثی در حالت *Akkusativ* تغییر نمی‌کند: *deins*."
+      de: "*Handy* ist neutral. Im Akkusativ bleibt es gleich: *deins*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ist das Pauls Mantel? – Ja, das ist ___.
+    options: [seiner, ihrer, seine]
+    answer: seiner
+    explanation:
+      en: "The owner is Paul (*er*), so *sein-*; *Mantel* is masculine: *seiner*."
+      fa: "دارنده پاول (*er*) است، پس *sein-* می‌آید؛ *Mantel* اسم مذکر است: *seiner*."
+      de: "Paul ist *er*. Darum *sein-*. *Mantel* ist maskulin: *seiner*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Sind das eure Koffer? – Ja, das sind ___.
+    options: [unsere, unserer, unseres]
+    answer: unsere
+    explanation:
+      en: "*Koffer* is a plural here (*sind*): *unsere*."
+      fa: "*Koffer* این‌جا جمع است (*sind*): *unsere*."
+      de: "*Koffer* ist hier Plural (*sind*): *unsere*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich habe meinen Schirm vergessen. Hast du ___ dabei?
+    options: [deinen, deiner, deins]
+    answer: deinen
+    explanation:
+      en: "*Schirm* is masculine and the object of *haben*: *deinen*."
+      fa: "*Schirm* اسم مذکر و مفعول *haben* است: *deinen*."
+      de: "*Schirm* ist maskulin und das Objekt von *haben*: *deinen*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Was bedeutet „Das ist nicht meins.“?
+    options: [Das gehört mir nicht., Das gefällt mir nicht., Das kenne ich nicht.]
+    answer: Das gehört mir nicht.
+    explanation:
+      en: "*Meins* says whose it is: it does not belong to me."
+      fa: "*meins* دارنده را نشان می‌دهد: مال من نیست."
+      de: "*Meins* sagt, wem etwas gehört: Es gehört mir nicht."
+  - id: true-1
+    type: true-false
+    prompt: Wem gehört die Brille? – Das ist meine.
+    answer: true
+    explanation:
+      en: "*Brille* is feminine: *meine*. The sentence is correct."
+      fa: "*Brille* اسم مؤنث است: *meine*. جمله درست است."
+      de: "*Brille* ist feminin: *meine*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ist das Annas Buch? – Ja, das ist seins.
+    answer: false
+    explanation:
+      en: "The owner is Anna, so *ihr-*: *Ja, das ist ihrs.*"
+      fa: "دارنده آنا است، پس *ihr-* می‌آید: *Ja, das ist ihrs.*"
+      de: "Anna ist eine Frau. Darum *ihr-*: *Ja, das ist ihrs.*"
+  - id: true-3
+    type: true-false
+    prompt: Unser Garten ist klein, aber eurer ist groß.
+    answer: true
+    explanation:
+      en: "*Garten* is masculine and *euer* loses its *e*: *eurer*. The sentence is correct."
+      fa: "*Garten* اسم مذکر است و در *euer* حرف *e* می‌افتد: *eurer*. جمله درست است."
+      de: "*Garten* ist maskulin, und bei *euer* fällt das *e* weg: *eurer*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ist das dein Kuli? – Ja, das ist ___ (mein).
+    answers: [meiner]
+    explanation:
+      en: "*Kuli* is masculine and the subject: *meiner*."
+      fa: "*Kuli* اسم مذکر است: *meiner*."
+      de: "*Kuli* ist maskulin: *meiner*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das ist nicht mein Heft. ___ (mein) ist blau.
+    answers: [Meins, Meines]
+    explanation:
+      en: "*Heft* is neuter: *meins* (or *meines*)."
+      fa: "*Heft* اسم خنثی است: *meins* (یا *meines*)."
+      de: "*Heft* ist neutral: *meins* (oder *meines*)."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Mein Computer ist langsam. Kann ich ___ (dein) benutzen?
+    answers: [deinen]
+    explanation:
+      en: "*Computer* is masculine and the object: *deinen*."
+      fa: "*Computer* اسم مذکر و مفعول است: *deinen*."
+      de: "*Computer* ist maskulin und das Objekt: *deinen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Herr Weber, ist das Ihre Tasche? – Ja, das ist ___ (mein).
+    answers: [meine]
+    explanation:
+      en: "*Tasche* is feminine: *meine*."
+      fa: "*Tasche* اسم مؤنث است: *meine*."
+      de: "*Tasche* ist feminin: *meine*."
+  - id: error-1
+    type: find-error
+    prompt: Ist das dein Schlüssel? – Ja, das ist mein.
+    answer: mein
+    explanation:
+      en: "Without a noun the pronoun needs its ending: *meiner*."
+      fa: "بی‌اسم، ضمیر پایانه لازم دارد: *meiner*."
+      de: "Ohne Nomen braucht das Pronomen eine Endung: *meiner*."
+  - id: error-2
+    type: find-error
+    prompt: Mein Fahrrad ist alt, aber ihrer ist ganz neu.
+    answer: ihrer
+    explanation:
+      en: "*Fahrrad* is neuter: *ihrs* (or *ihres*)."
+      fa: "*Fahrrad* اسم خنثی است: *ihrs* (یا *ihres*)."
+      de: "*Fahrrad* ist neutral: *ihrs* (oder *ihres*)."
+  - id: match-1
+    type: matching
+    answer:
+      - [Der Hut? Das ist ___., meiner]
+      - [Die Uhr? Das ist ___., meine]
+      - [Das Kleid? Das ist ___., meins]
+    explanation:
+      en: "The pronoun takes the gender of the noun: masculine *meiner*, feminine *meine*, neuter *meins*."
+      fa: "ضمیر جنس اسم را می‌گیرد: مذکر *meiner*، مؤنث *meine* و خنثی *meins*."
+      de: "Das Pronomen hat das Genus vom Nomen: maskulin *meiner*, feminin *meine*, neutral *meins*."

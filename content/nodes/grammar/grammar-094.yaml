@@ -4,10 +4,267 @@ kind: grammar
 level: A2
 chapter: a2-articles-pronouns
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-074, grammar-076, grammar-079]
 title:
   en: "*einer*, *keiner*, *welche* as pronouns"
   fa: "*einer*، *keiner* و *welche* به‌عنوان ضمیر"
   de: "*einer*, *keiner*, *welche* als Pronomen"
+
+explanations:
+  en:
+    rule: >
+      So as not to repeat a noun with *ein* or *kein*, German uses *einer*
+      (one) and *keiner* (none) alone: *Ich brauche einen Stift. Hast du
+      einen?* – *Nein, ich habe keinen.* Without its noun the word shows the
+      gender itself: *einer* (masculine), *eine* (feminine), *eins*
+      (neuter, also *eines*); in the *Akkusativ* only the masculine changes:
+      *einen*. *Keiner*, *keine*, *keins* work the same way. *Ein* has no
+      plural, so for a plural, or for something you cannot count such as
+      *Milch*, the pronoun is *welche* (some): *Ich habe keine Milch mehr.
+      Hast du welche?* The answer "none" is then *keine*.
+  fa:
+    rule: >
+      در آلمانی برای این‌که اسمی که با *ein* یا *kein* آمده تکرار نشود،
+      *einer* (یکی) و *keiner* (هیچ‌کدام) را بی‌اسم به کار می‌بریم: *Ich
+      brauche einen Stift. Hast du einen?* (خودکار لازم دارم. یکی داری؟) –
+      *Nein, ich habe keinen.* (نه، ندارم.) این ضمیر مبهم چون اسمی پس از
+      خود ندارد، جنس را خودش نشان می‌دهد: *einer* برای مذکر، *eine* برای
+      مؤنث و *eins* (یا *eines*) برای خنثی. در حالت *Akkusativ* (حالت مفعولی)
+      فقط مذکر تغییر می‌کند: *einen*. *keiner*، *keine* و *keins* نیز همین
+      شکل‌ها را دارند. *ein* جمع ندارد؛ پس برای اسم جمع و برای چیزهای
+      ناشمردنی مانند *Milch* ضمیر *welche* (مقداری، چندتایی) به کار می‌رود:
+      *Ich habe keine Milch mehr. Hast du welche?* و پاسخ منفی آن *keine* است.
+  de:
+    rule: >
+      Man möchte ein Nomen mit *ein* oder *kein* nicht wiederholen. Dann sagt
+      man nur *einer* oder *keiner*: *Ich brauche einen Stift. Hast du einen?*
+      – *Nein, ich habe keinen.* Ohne Nomen zeigt das Wort selbst das Genus:
+      *einer* (maskulin), *eine* (feminin), *eins* (neutral, auch *eines*).
+      Im Akkusativ ändert sich nur das Maskulinum: *einen*. Bei *keiner*,
+      *keine*, *keins* ist es genauso. *Ein* hat keinen Plural. Darum sagt man
+      im Plural und bei Sachen wie *Milch* *welche*: *Ich habe keine Milch
+      mehr. Hast du welche?* Die Antwort „nein“ heißt dann *keine*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: "Pronoun (*Nominativ*)", fa: "ضمیر (حالت *Nominativ*)", de: Pronomen (Nominativ) }
+    - { en: "Pronoun (*Akkusativ*)", fa: "ضمیر (حالت *Akkusativ*)", de: Pronomen (Akkusativ) }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Stift, ein Stift, einer / keiner, einen / keinen, "Hast du einen? – Nein, ich habe keinen."]
+    - [die Tasche, eine Tasche, eine / keine, eine / keine, "Hast du eine? – Ja, hier ist eine."]
+    - [das Messer, ein Messer, eins / keins, eins / keins, "Hier ist keins."]
+    - [die Äpfel (Plural), –, welche / keine, welche / keine, "Hast du welche? – Nein, ich habe keine."]
+
+examples:
+  - de: Ich habe keine Milch mehr. Hast du welche?
+    en: I've run out of milk. Have you got any?
+    fa: شیرم تمام شده است. تو داری؟
+  - de: Ich brauche einen Stift. Hast du einen?
+    en: I need a pen. Do you have one?
+    fa: خودکار لازم دارم. تو یکی داری؟
+  - de: Hast du ein Fahrrad? – Nein, ich habe keins.
+    en: Do you have a bike? – No, I don't have one.
+    fa: دوچرخه داری؟ – نه، ندارم.
+  - de: Gibt es hier eine Apotheke? – Ja, da vorne ist eine.
+    en: Is there a pharmacy here? – Yes, there's one up ahead.
+    fa: این‌جا داروخانه هست؟ – بله، آن جلو یکی هست.
+  - de: Wir brauchen Eier. – Im Kühlschrank sind noch welche.
+    en: We need eggs. – There are still some in the fridge.
+    fa: تخم‌مرغ لازم داریم. – هنوز چندتایی در یخچال هست.
+  - de: Möchtest du einen Kaffee? – Danke, ich habe schon einen.
+    en: Would you like a coffee? – Thanks, I already have one.
+    fa: قهوه می‌خواهی؟ – ممنون، یکی دارم.
+  - de: Hast du Kinder? – Nein, ich habe keine.
+    en: Do you have children? – No, I don't have any.
+    fa: بچه داری؟ – نه، ندارم.
+  - de: Hier ist kein Stuhl frei. – Doch, da ist noch einer.
+    en: There's no free chair here. – Yes there is, there's one over there.
+    fa: این‌جا صندلی خالی نیست. – چرا، آن‌جا یکی هست.
+
+mistakes:
+  - wrong: Ich brauche einen Stift. Hast du ein?
+    right: Ich brauche einen Stift. Hast du einen?
+    why:
+      en: "*Stift* is masculine and the object, so the pronoun is *einen*. Without a noun, *ein* alone is not used."
+      fa: "*Stift* اسم مذکر و مفعول است، پس ضمیر *einen* است. *ein* به‌تنهایی و بی‌اسم به کار نمی‌رود."
+      de: "*Stift* ist maskulin und das Objekt. Darum *einen*. *Ein* allein ohne Nomen sagt man nicht."
+  - wrong: Wir brauchen Tomaten. Hast du eine?
+    right: Wir brauchen Tomaten. Hast du welche?
+    why:
+      en: "*Tomaten* is a plural, and *ein* has no plural: *welche*."
+      fa: "*Tomaten* جمع است و *ein* جمع ندارد: *welche*."
+      de: "*Tomaten* ist Plural, und *ein* hat keinen Plural: *welche*."
+  - wrong: Das Messer? Hier ist keiner.
+    right: Das Messer? Hier ist keins.
+    why:
+      en: "*Messer* is neuter, so the pronoun is *keins* (or *keines*)."
+      fa: "*Messer* اسم خنثی است، پس ضمیر *keins* (یا *keines*) است."
+      de: "*Messer* ist neutral. Darum *keins* (oder *keines*)."
+  - wrong: Hast du Geld? – Nein, ich habe nicht welche.
+    right: Hast du Geld? – Nein, ich habe keins.
+    why:
+      en: "The answer \"none\" is a form of *kein*; *Geld* is neuter: *keins*."
+      fa: "برای پاسخ منفی، شکلی از *kein* می‌آید؛ *Geld* اسم خنثی است: *keins*."
+      de: "Die negative Antwort ist eine Form von *kein*. *Geld* ist neutral: *keins*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich brauche einen Regenschirm. Hast du ___?
+    options: [einen, eine, eins]
+    answer: einen
+    explanation:
+      en: "*Regenschirm* is masculine and the object: *einen*."
+      fa: "*Regenschirm* اسم مذکر و مفعول است: *einen*."
+      de: "*Regenschirm* ist maskulin und das Objekt: *einen*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Gibt es hier eine Bank? – Ja, da vorne ist ___.
+    options: [eine, einer, eins]
+    answer: eine
+    explanation:
+      en: "*Bank* is feminine: *eine*."
+      fa: "*Bank* اسم مؤنث است: *eine*."
+      de: "*Bank* ist feminin: *eine*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich habe keine Butter mehr. Hast du ___?
+    options: [welche, eine, keine]
+    answer: welche
+    explanation:
+      en: "You cannot count *Butter*, so the pronoun is *welche*."
+      fa: "*Butter* ناشمردنی است، پس ضمیر *welche* می‌آید."
+      de: "*Butter* kann man nicht zählen. Darum *welche*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Hast du einen Hund? – Nein, ich habe ___.
+    options: [keinen, keiner, keins]
+    answer: keinen
+    explanation:
+      en: "*Hund* is masculine and the object: *keinen*."
+      fa: "*Hund* اسم مذکر و مفعول است: *keinen*."
+      de: "*Hund* ist maskulin und das Objekt: *keinen*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ist hier ein Stuhl frei? – Ja, hier ist noch ___.
+    options: [einer, einen, eins]
+    answer: einer
+    explanation:
+      en: "*Stuhl* is masculine and the subject of *ist*: *einer*."
+      fa: "*Stuhl* اسم مذکر و فاعل *ist* است: *einer*."
+      de: "*Stuhl* ist maskulin und das Subjekt von *ist*: *einer*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wir brauchen Äpfel. – Im Korb sind noch ___.
+    options: [welche, eine, einer]
+    answer: welche
+    explanation:
+      en: "*Äpfel* is a plural, and *ein* has no plural: *welche*."
+      fa: "*Äpfel* جمع است و *ein* جمع ندارد: *welche*."
+      de: "*Äpfel* ist Plural, und *ein* hat keinen Plural: *welche*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Hast du ein Auto? – Nein, ich habe ___.
+    options: [keins, keinen, keiner]
+    answer: keins
+    explanation:
+      en: "*Auto* is neuter: *keins* (or *keines*)."
+      fa: "*Auto* اسم خنثی است: *keins* (یا *keines*)."
+      de: "*Auto* ist neutral: *keins* (oder *keines*)."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Was bedeutet „Hast du Brötchen? – Ja, ich habe welche.“?
+    options: [Die Person hat Brötchen., Die Person hat keine Brötchen., Die Person möchte Brötchen kaufen.]
+    answer: Die Person hat Brötchen.
+    explanation:
+      en: "*Welche* stands for *Brötchen*: she has some."
+      fa: "*welche* به جای *Brötchen* آمده است: آن شخص چند تا نان دارد."
+      de: "*Welche* steht für *Brötchen*: Die Person hat Brötchen."
+  - id: true-1
+    type: true-false
+    prompt: Hast du Kinder? – Nein, ich habe keine.
+    answer: true
+    explanation:
+      en: "*Kinder* is a plural; the answer \"none\" is *keine*. The sentence is correct."
+      fa: "*Kinder* جمع است و پاسخ منفی *keine* است. جمله درست است."
+      de: "*Kinder* ist Plural, die negative Antwort ist *keine*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich brauche einen Stift. Hast du ein?
+    answer: false
+    explanation:
+      en: "*Stift* is masculine and the object: *Hast du einen?*"
+      fa: "*Stift* اسم مذکر و مفعول است: *Hast du einen?*"
+      de: "*Stift* ist maskulin und das Objekt: *Hast du einen?*"
+  - id: true-3
+    type: true-false
+    prompt: Möchtest du eine Banane? – Danke, ich habe schon eine.
+    answer: true
+    explanation:
+      en: "*Banane* is feminine: *eine*. The sentence is correct."
+      fa: "*Banane* اسم مؤنث است: *eine*. جمله درست است."
+      de: "*Banane* ist feminin: *eine*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich suche einen Parkplatz, aber hier ist ___ (kein) frei.
+    answers: [keiner]
+    explanation:
+      en: "*Parkplatz* is masculine and the subject of *ist*: *keiner*."
+      fa: "*Parkplatz* اسم مذکر و فاعل *ist* است: *keiner*."
+      de: "*Parkplatz* ist maskulin und das Subjekt von *ist*: *keiner*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir haben keine Eier mehr. Kannst du ___ (welch-) kaufen?
+    answers: [welche]
+    explanation:
+      en: "*Eier* is a plural: *welche*."
+      fa: "*Eier* جمع است: *welche*."
+      de: "*Eier* ist Plural: *welche*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Hast du ein Handy? – Ja, natürlich habe ich ___ (ein).
+    answers: [eins, eines]
+    explanation:
+      en: "*Handy* is neuter: *eins* (or *eines*)."
+      fa: "*Handy* اسم خنثی است: *eins* (یا *eines*)."
+      de: "*Handy* ist neutral: *eins* (oder *eines*)."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich möchte eine Zeitung kaufen, aber am Kiosk gibt es ___ (kein) mehr.
+    answers: [keine]
+    explanation:
+      en: "*Zeitung* is feminine: *keine*."
+      fa: "*Zeitung* اسم مؤنث است: *keine*."
+      de: "*Zeitung* ist feminin: *keine*."
+  - id: error-1
+    type: find-error
+    prompt: Wir brauchen Tomaten. Hast du eine?
+    answer: eine
+    explanation:
+      en: "*Tomaten* is a plural: *Hast du welche?*"
+      fa: "*Tomaten* جمع است: *Hast du welche?*"
+      de: "*Tomaten* ist Plural: *Hast du welche?*"
+  - id: error-2
+    type: find-error
+    prompt: Das Messer ist kaputt. Hast du noch einen?
+    answer: einen
+    explanation:
+      en: "*Messer* is neuter: *Hast du noch eins?*"
+      fa: "*Messer* اسم خنثی است: *Hast du noch eins?*"
+      de: "*Messer* ist neutral: *Hast du noch eins?*"
+  - id: match-1
+    type: matching
+    answer:
+      - [der Stift – Hast du ___?, einen]
+      - [die Tasche – Hast du ___?, eine]
+      - [das Heft – Hast du ___?, eins]
+      - [die Kekse – Hast du ___?, welche]
+    explanation:
+      en: "The pronoun in the *Akkusativ* shows the gender: *einen*, *eine*, *eins*, and *welche* for a plural."
+      fa: "ضمیر در حالت *Akkusativ* جنس را نشان می‌دهد: *einen*، *eine*، *eins* و برای جمع *welche*."
+      de: "Das Pronomen im Akkusativ zeigt das Genus: *einen*, *eine*, *eins*, im Plural *welche*."

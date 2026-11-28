@@ -4,10 +4,260 @@ kind: grammar
 level: A2
 chapter: a2-articles-pronouns
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-085]
 title:
   en: "*jemand*, *niemand*"
   fa: "*jemand* و *niemand*"
   de: "*jemand*, *niemand*"
+
+explanations:
+  en:
+    rule: >
+      *Jemand* means "someone", and in a question "anyone": *Hat jemand meine
+      Schlüssel gesehen?* *Niemand* means "nobody": *Niemand ist zu Hause.*
+      Both stand for a person and take a singular verb, like *er*: *Jemand
+      hat angerufen.* Like *nichts*, *niemand* is already negative, so no
+      *nicht* goes with it, and the verb stays positive. In written German
+      they have case endings: *jemanden*, *niemanden* in the *Akkusativ* and
+      *jemandem*, *niemandem* in the *Dativ*: *Ich kenne hier niemanden.*
+      *Ich habe es niemandem erzählt.* In speech the ending is often left out.
+  fa:
+    rule: >
+      *jemand* یعنی «کسی» و *niemand* یعنی «هیچ‌کس»: *Hat jemand meine
+      Schlüssel gesehen?* (کسی کلیدهایم را دیده است؟) و *Niemand ist zu
+      Hause.* (هیچ‌کس خانه نیست.) این دو ضمیر مبهم برای آدم به کار می‌روند
+      و مانند *er* فعل سوم‌شخص مفرد می‌گیرند: *Jemand hat angerufen.*
+      *niemand* مانند *nichts* خودش منفی است، پس *nicht* کنارش نمی‌آید. در
+      فارسی می‌گوییم «هیچ‌کس نیامد» و فعل هم منفی است، ولی در آلمانی فعل
+      مثبت می‌ماند: *Niemand ist gekommen.* در نوشتار، این دو ضمیر پایانهٔ
+      حالت می‌گیرند: در حالت *Akkusativ* (حالت مفعولی) *jemanden* و
+      *niemanden*، و در حالت *Dativ* (حالت مفعول باواسطه) *jemandem* و
+      *niemandem*: *Ich kenne hier niemanden.* و *Ich habe es niemandem
+      erzählt.* در گفتار این پایانه اغلب حذف می‌شود.
+  de:
+    rule: >
+      *Jemand* ist eine Person, man weiß nicht, wer: *Hat jemand meine
+      Schlüssel gesehen?* *Niemand* heißt: keine Person. *Niemand ist zu
+      Hause.* Das Verb steht im Singular, wie bei *er*: *Jemand hat
+      angerufen.* *Niemand* ist schon negativ, wie *nichts*. Darum steht kein
+      *nicht* dabei. Geschrieben haben beide Endungen: im Akkusativ
+      *jemanden*, *niemanden*, im Dativ *jemandem*, *niemandem*. Beim
+      Sprechen fehlt die Endung oft.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [jemand, jemanden, jemandem, Hat jemand angerufen?]
+    - [niemand, niemanden, niemandem, Niemand ist zu Hause.]
+
+examples:
+  - de: Hat jemand meine Schlüssel gesehen?
+    en: Has anyone seen my keys?
+    fa: کسی کلیدهایم را دیده است؟
+  - de: Niemand ist zu Hause.
+    en: Nobody is at home.
+    fa: هیچ‌کس خانه نیست.
+  - de: Jemand hat für dich angerufen.
+    en: Someone called for you.
+    fa: کسی به تو زنگ زده بود.
+  - de: Kann mir jemand helfen?
+    en: Can anyone help me?
+    fa: کسی می‌تواند به من کمک کند؟
+  - de: Ich rufe an, aber niemand antwortet.
+    en: I'm calling, but nobody answers.
+    fa: زنگ می‌زنم، ولی هیچ‌کس جواب نمی‌دهد.
+  - de: Ich kenne hier niemanden.
+    en: I don't know anyone here.
+    fa: این‌جا هیچ‌کس را نمی‌شناسم.
+  - de: Hast du jemanden gefragt?
+    en: Did you ask anyone?
+    fa: از کسی پرسیدی؟
+  - de: Ich habe es niemandem erzählt.
+    en: I haven't told anyone.
+    fa: به هیچ‌کس نگفته‌ام.
+  - de: Da ist jemand an der Tür.
+    en: There's someone at the door.
+    fa: کسی دم در است.
+
+mistakes:
+  - wrong: Niemand ist nicht zu Hause.
+    right: Niemand ist zu Hause.
+    why:
+      en: "*Niemand* is already negative, so no *nicht*: *Niemand ist zu Hause.*"
+      fa: "*niemand* خودش منفی است، پس *nicht* نمی‌آید: *Niemand ist zu Hause.*"
+      de: "*Niemand* ist schon negativ. Darum kein *nicht*: *Niemand ist zu Hause.*"
+  - wrong: Niemand haben angerufen.
+    right: Niemand hat angerufen.
+    why:
+      en: "*Niemand* takes a singular verb, like *er*: *hat*."
+      fa: "*niemand* مانند *er* فعل سوم‌شخص مفرد می‌گیرد: *hat*."
+      de: "Bei *niemand* steht das Verb im Singular, wie bei *er*: *hat*."
+  - wrong: Ich habe nicht jemanden gesehen.
+    right: Ich habe niemanden gesehen.
+    why:
+      en: "German says *niemanden* (nobody), not *nicht jemanden*."
+      fa: "در آلمانی می‌گوییم *niemanden* (هیچ‌کس را)، نه *nicht jemanden*."
+      de: "Man sagt *niemanden*, nicht *nicht jemanden*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Es klingelt. Da ist ___ an der Tür.
+    options: [jemand, niemand, nichts]
+    answer: jemand
+    explanation:
+      en: "The bell rings, so there is someone: *jemand*."
+      fa: "زنگ در به صدا درمی‌آید، پس کسی پشت در است: *jemand*."
+      de: "Es klingelt. Also ist eine Person an der Tür: *jemand*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Das Haus ist dunkel. ___ ist zu Hause.
+    options: [Niemand, Jemand, Nichts]
+    answer: Niemand
+    explanation:
+      en: "The house is dark, so nobody is there: *niemand*."
+      fa: "خانه تاریک است، پس کسی خانه نیست: *niemand*."
+      de: "Das Haus ist dunkel. Also ist keine Person da: *niemand*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich habe meinen Schlüssel verloren. Hat ihn ___ gefunden? – Ja, hier ist er.
+    options: [jemand, niemand, etwas]
+    answer: jemand
+    explanation:
+      en: "In a question \"anyone\" is *jemand*: *Hat ihn jemand gefunden?*"
+      fa: "در پرسش، «کسی» *jemand* است: *Hat ihn jemand gefunden?*"
+      de: "In der Frage sagt man *jemand*: *Hat ihn jemand gefunden?*"
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich bin neu in der Stadt und kenne hier noch ___.
+    options: [niemanden, niemandem, jemandem]
+    answer: niemanden
+    explanation:
+      en: "*Kennen* takes an *Akkusativ* object: *niemanden*."
+      fa: "فعل *kennen* مفعول در حالت *Akkusativ* می‌گیرد: *niemanden*."
+      de: "*Kennen* hat ein Objekt im Akkusativ: *niemanden*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Das ist ein Geheimnis. Bitte sag es ___!
+    options: [niemandem, niemanden, jemanden]
+    answer: niemandem
+    explanation:
+      en: "The person you tell something to is in the *Dativ*: *niemandem*."
+      fa: "کسی که چیزی به او گفته می‌شود در حالت *Dativ* می‌آید: *niemandem*."
+      de: "Die Person, der man etwas sagt, steht im Dativ: *niemandem*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Niemand hat angerufen., Niemand haben angerufen., Niemand hat nicht angerufen.]
+    answer: Niemand hat angerufen.
+    explanation:
+      en: "*Niemand* takes a singular verb and no *nicht*."
+      fa: "*niemand* فعل مفرد می‌گیرد و *nicht* کنارش نمی‌آید."
+      de: "Bei *niemand* steht das Verb im Singular, und es gibt kein *nicht*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Was bedeutet „Niemand war im Büro.“?
+    options: [Das Büro war leer., Eine Person war im Büro., Alle waren im Büro.]
+    answer: Das Büro war leer.
+    explanation:
+      en: "*Niemand* means nobody, so the office was empty."
+      fa: "*niemand* یعنی «هیچ‌کس»، پس دفتر خالی بود."
+      de: "*Niemand* heißt: keine Person. Das Büro war also leer."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Hast du ___ gefragt?
+    options: [jemanden, jemandem, jemandes]
+    answer: jemanden
+    explanation:
+      en: "*Fragen* takes an *Akkusativ* object: *jemanden*."
+      fa: "فعل *fragen* مفعول در حالت *Akkusativ* می‌گیرد: *jemanden*."
+      de: "*Fragen* hat ein Objekt im Akkusativ: *jemanden*."
+  - id: true-1
+    type: true-false
+    prompt: Kann mir jemand helfen?
+    answer: true
+    explanation:
+      en: "*Jemand* is the subject, so the *Nominativ*. The sentence is correct."
+      fa: "*jemand* فاعل جمله است و در حالت *Nominativ* می‌آید. جمله درست است."
+      de: "*Jemand* ist das Subjekt, darum Nominativ. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Heute kommt niemand nicht.
+    answer: false
+    explanation:
+      en: "*Niemand* is already negative: *Heute kommt niemand.*"
+      fa: "*niemand* خودش منفی است: *Heute kommt niemand.*"
+      de: "*Niemand* ist schon negativ: *Heute kommt niemand.*"
+  - id: true-3
+    type: true-false
+    prompt: Ich habe es niemandem erzählt.
+    answer: true
+    explanation:
+      en: "The person you tell is in the *Dativ*: *niemandem*. The sentence is correct."
+      fa: "کسی که چیزی برایش تعریف می‌شود در حالت *Dativ* می‌آید: *niemandem*. جمله درست است."
+      de: "Die Person, der man etwas erzählt, steht im Dativ: *niemandem*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich rufe bei Anna an, aber ___ (jemand / niemand) geht ans Telefon.
+    answers: [niemand]
+    explanation:
+      en: "No person answers: *niemand*, with a positive verb."
+      fa: "هیچ‌کس گوشی را برنمی‌دارد: *niemand*، با فعل مثبت."
+      de: "Keine Person geht ans Telefon: *niemand*. Das Verb bleibt positiv."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich höre eine Stimme. Ist ___ (jemand / niemand) hier?
+    answers: [jemand]
+    explanation:
+      en: "In a question \"anyone\" is *jemand*."
+      fa: "در پرسش، «کسی» *jemand* است."
+      de: "In der Frage sagt man *jemand*."
+  - id: typed-answer-1
+    type: typed-answer
+    prompt: "Das Gegenteil von jemand"
+    answers: [niemand, keiner]
+    explanation:
+      en: "*Jemand* is someone, *niemand* is nobody."
+      fa: "*jemand* یعنی «کسی» و *niemand* یعنی «هیچ‌کس»."
+      de: "*Jemand* ist eine Person, *niemand* ist keine Person."
+  - id: error-1
+    type: find-error
+    prompt: Niemand haben meine Nachricht gelesen.
+    answer: haben
+    explanation:
+      en: "*Niemand* takes a singular verb: *Niemand hat …*"
+      fa: "*niemand* فعل سوم‌شخص مفرد می‌گیرد: *Niemand hat …*"
+      de: "Bei *niemand* steht das Verb im Singular: *Niemand hat …*"
+  - id: error-2
+    type: find-error
+    prompt: Gestern war ich allein. Ich habe nicht niemanden getroffen.
+    answer: nicht
+    explanation:
+      en: "*Niemanden* is already negative, so the *nicht* must go: *Ich habe niemanden getroffen.*"
+      fa: "*niemanden* خودش منفی است، پس *nicht* باید حذف شود: *Ich habe niemanden getroffen.*"
+      de: "*Niemanden* ist schon negativ. Darum muss *nicht* weg: *Ich habe niemanden getroffen.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [niemand, ist, zu Hause]
+      - [zu Hause, ist, niemand]
+    explanation:
+      en: "The verb comes second. *Niemand* or *zu Hause* can stand first."
+      fa: "فعل در جایگاه دوم می‌آید. *niemand* یا *zu Hause* می‌تواند در آغاز جمله بیاید."
+      de: "Das Verb steht an Position 2. *Niemand* oder *zu Hause* kann am Anfang stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [Ist da ___?, jemand]
+      - [Ich habe ___ gefragt., jemanden]
+      - [Ich gebe ___ das Buch., jemandem]
+    explanation:
+      en: "Subject *jemand* (*Nominativ*), object *jemanden* (*Akkusativ*), the person who gets something *jemandem* (*Dativ*)."
+      fa: "فاعل *jemand* (حالت *Nominativ*)، مفعول *jemanden* (حالت *Akkusativ*) و کسی که چیزی دریافت می‌کند *jemandem* (حالت *Dativ*)."
+      de: "Subjekt: *jemand* (Nominativ). Objekt: *jemanden* (Akkusativ). Die Person, die etwas bekommt: *jemandem* (Dativ)."
