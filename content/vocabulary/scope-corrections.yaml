@@ -1020,6 +1020,12 @@ changes:
       reason: 'the marker "-s/-en" would give "Mensaen"; the plural is "Mensas" or "Mensen"',
     }
   - { word: Müesli, rename: Müsli, reason: '"Müesli" is the Swiss spelling; Germany and Austria write "Müsli" (#92)' }
+  # 99: the marker of the B1 list gives no plural in use.
+  - {
+      word: Girokonto,
+      plural: Girokonten/Girokontos,
+      reason: 'the marker "-en" would give "Girokontoen"; the plural is "Girokonten" or "Girokontos"',
+    }
   # Nouns that the lists print without article or plural.
   - { word: Achtung, article: die, plural: sg }
   - { word: Grad, article: der, plural: "-e" }

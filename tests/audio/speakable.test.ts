@@ -170,11 +170,34 @@ test.each([
   ['Die Rezeption ist im EG, gleich links.', 'Die Rezeption ist im Erd-geschoss, gleich links.'],
   ['Die Praxis ist im zweiten OG.', 'Die Praxis ist im zweiten Ober-geschoss.'],
   ['Die Garage ist im UG.', 'Die Garage ist im Untergeschoss.'],
+  // #99: an English j, letters spelt out, and stress the voice puts on the wrong syllable.
+  ['Ich zahle das Geld auf mein Sparbuch ein.', 'Ich zahle das Geld auf mein Spar-buch ein.'],
+  ['In den Ferien jobbt Lukas in einem Café.', 'In den Ferien dschobbt Lukas in einem Café.'],
+  ['jobben', 'dschobben'],
+  ['Kann ich mit der ec-Karte bezahlen?', 'Kann ich mit der E-Zeh-Karte bezahlen?'],
+  ['die Chipkarte', 'die Tschipkarte'],
+  ['die Mehrwertsteuer', 'die Mehrwert-steuer'],
+  ['der Konsum', 'der Konsuhm'],
+  ['der Rabatt', 'der Ra-batt'],
+  ['das Asyl', 'das A-syl'],
+  ['der Reporter', 'der Re-porter'],
+  ['Die Reporterin berichtet vom Bahnhof.', 'Die Re-porterin berichtet vom Bahnhof.'],
+  ['ein echter Profi', 'ein echter Proh-fi'],
+  ['Unser Azubi macht seine Prüfung.', 'Unser Azuhbi macht seine Prüfung.'],
   // #94: the voice stresses the first syllable of these, or reads "sch" in Berufsschule as "s-ch".
   ['Ich studiere jetzt im dritten Semester Informatik.', 'Ich studiere jetzt im dritten Se-mester Informatik.'],
   ['Im Seminar lesen wir einen Text.', 'Im Semi-nar lesen wir einen Text.'],
   ['die Recherche', 'die Re-scherrsche'],
   ['Er ist in der Berufsschule.', 'Er ist in der Berufs-schule.'],
+  // #97: an English loanword read the German way.
+  ['Homeoffice hat Vorteile.', 'Hohm-offis hat Vorteile.'],
+  ['Ich arbeite im Homeoffice.', 'Ich arbeite im Hohm-offis.'],
+  // #96: the voice stresses the wrong syllable of these.
+  ['Ich finde sie nirgendwo.', 'Ich finde sie nirgendwoh.'],
+  ['Hinterher ist man klüger.', 'Hinterheer ist man klüger.'],
+  ['Ich fahre sowieso.', 'Ich fahre so-wie-so.'],
+  ['Der Unterschied ist minimal.', 'Der Unterschied ist mini-mal.'],
+  ['Maximal acht Personen.', 'Maxi-mal acht Personen.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })

@@ -1,39 +1,357 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A definition in simple German shows the word's place in a sentence with "…", since a small
+# word is hard to say in other words. The adjectives obere, innere, vordere, mittlere, linke and
+# rechte are learned in the form the scope list gives, as they stand after "der". Words that
+# overlap (aufwärts, rauf; dahin, dorthin; drin, rein; innen, innerhalb; außen, im Freien) are
+# never offered as a wrong meaning of each other.
 id: vocabulary-place-direction
 kind: vocabulary
 level: B1
 chapter: b1-words-time-amounts
 order: 7
-status: coming-soon
+status: published
 title:
   en: "Inside, outside, up, down: place and direction"
   fa: "داخل، بیرون، بالا، پایین: جا و جهت"
   de: "Innen, außen, rauf, runter: Ort und Richtung"
+attemptSize: 15
 words:
   - word: abwärts
+    class: adverb
+    level: B1
+    meaning:
+      en: downwards, downhill
+      fa: رو به پایین، سرازیری
+    definition: "in die Richtung nach unten: Ab hier geht der Weg … zum See."
+    example:
+      de: Ab der Hütte geht der Weg nur noch abwärts.
+      en: From the hut the path only goes downhill.
+      fa: از کلبه به بعد، راه فقط سرازیری است.
+    alsoAccepted: [nach unten, bergab]
+
   - word: aufwärts
+    class: adverb
+    level: B1
+    meaning:
+      en: upwards, uphill
+      fa: رو به بالا، سربالایی
+    definition: "in die Richtung nach oben: Der Weg zur Burg geht steil …"
+    example:
+      de: Mit dem Fahrrad geht es hier steil aufwärts.
+      en: On a bike it goes steeply uphill here.
+      fa: اینجا با دوچرخه راه به‌تندی سربالایی می‌رود.
+    alsoAccepted: [nach oben, bergauf]
+    tooCloseTo: [rauf]
+
   - word: rückwärts
+    class: adverb
+    level: B1
+    meaning:
+      en: backwards
+      fa: رو به عقب، عقب‌عقب
+    definition: "nach hinten, mit dem Rücken zuerst: Er fährt das Auto … aus der Garage."
+    example:
+      de: Sie ist rückwärts in die Parklücke gefahren.
+      en: She reversed into the parking space.
+      fa: او با دنده‌عقب وارد جای پارک شد.
+
   - word: außen
+    class: adverb
+    level: B1
+    meaning:
+      en: (on the) outside
+      fa: بیرون، از بیرون (سطح بیرونی)
+    definition: "auf der Seite, die man von draußen sieht: Das Haus ist … weiß und innen gelb."
+    example:
+      de: Die Tür ist außen grün und innen weiß.
+      en: The door is green on the outside and white on the inside.
+      fa: در از بیرون سبز است و از داخل سفید.
+    tooCloseTo: [im Freien]
+
   - word: innen
+    class: adverb
+    level: B1
+    meaning:
+      en: (on the) inside
+      fa: درون، از داخل (سطح درونی)
+    definition: "auf der Seite, die man nur sieht, wenn man hineingeht: Das Haus ist außen weiß und … gelb."
+    example:
+      de: Von außen sieht das Haus alt aus, aber innen ist es ganz modern.
+      en: From the outside the house looks old, but on the inside it is very modern.
+      fa: خانه از بیرون قدیمی به نظر می‌رسد، اما از داخل کاملاً امروزی است.
+    tooCloseTo: [drin, innerhalb]
+
   - word: drin
+    class: adverb
+    level: B1
+    meaning:
+      en: in it, inside (in speech)
+      fa: تویش، داخلش (در گفتار)
+    definition: "in etwas, so sagt man beim Sprechen: Was ist in der Kiste? – Da sind Bücher …"
+    example:
+      de: Die Flasche ist leer, da ist nichts mehr drin.
+      en: The bottle is empty, there's nothing left in it.
+      fa: بطری خالی است، دیگر چیزی تویش نیست.
+    alsoAccepted: [darin, drinnen]
+    tooCloseTo: [rein]
+
   - word: dahin
+    class: adverb
+    level: B1
+    meaning:
+      en: there (to that place)
+      fa: به آنجا
+    definition: "an den Ort, von dem man gerade spricht: Kennst du das neue Café? Wollen wir … gehen?"
+    example:
+      de: Das Museum ist toll, dahin müssen wir unbedingt mal gehen.
+      en: The museum is great; we really must go there some time.
+      fa: موزه عالی است، حتماً باید یک بار به آنجا برویم.
+    alsoAccepted: [dorthin]
+    tooCloseTo: [dorthin]
+
   - word: dorthin
+    class: adverb
+    level: B1
+    meaning:
+      en: (over) there, to that place (further away)
+      fa: به آن طرف، به آنجا (دورتر)
+    definition: "an den Ort dort, nicht hier, oft zeigt man mit der Hand: Siehst du den Turm? … wollen wir laufen."
+    example:
+      de: Siehst du die Bank am See? Dorthin setzen wir uns.
+      en: Can you see the bench by the lake? We'll sit over there.
+      fa: نیمکت کنار دریاچه را می‌بینی؟ آنجا می‌نشینیم.
+    alsoAccepted: [dahin]
+
   - word: hierher
+    class: adverb
+    level: B1
+    meaning:
+      en: here (to this place)
+      fa: به اینجا
+    definition: "an den Ort, wo ich jetzt bin: Komm bitte mal …!"
+    example:
+      de: Komm hierher und setz dich zu mir!
+      en: Come here and sit with me!
+      fa: بیا اینجا و کنار من بنشین!
+    alsoAccepted: [her, hierhin]
+
   - word: heim
+    class: adverb
+    level: B1
+    meaning:
+      en: home (going home)
+      fa: به خانه
+    definition: "nach Hause: Es ist spät, ich fahre jetzt …"
+    example:
+      de: Es ist schon spät, ich möchte jetzt heim.
+      en: It's late already; I'd like to go home now.
+      fa: دیروقت است، دیگر می‌خواهم به خانه بروم.
+    alsoAccepted: [nach Hause, nachhause]
+
   - word: mitten
+    class: adverb
+    level: B1
+    meaning:
+      en: in the middle (of)
+      fa: وسطِ، در میانهٔ
+    definition: "genau in der Mitte von etwas: Das Hotel liegt … in der Altstadt."
+    example:
+      de: Unsere Wohnung liegt mitten in der Stadt.
+      en: Our flat is right in the middle of the city.
+      fa: آپارتمان ما درست وسط شهر است.
+    tooCloseTo: [mittlere]
+    alsoAccepted: [inmitten]
+
   - word: entlang
+    class: preposition
+    level: B1
+    meaning:
+      en: along
+      fa: در امتداد، در طولِ
+    definition: "an der Seite von etwas, in die gleiche Richtung wie es: Wir gehen den Fluss …"
+    example:
+      de: Am Sonntag sind wir mit dem Rad den Rhein entlang bis nach Bonn gefahren.
+      en: On Sunday we cycled along the Rhine as far as Bonn.
+      fa: یکشنبه با دوچرخه در امتداد رود راین تا شهر بن رفتیم.
+
   - word: innerhalb
+    class: preposition
+    level: B1
+    meaning:
+      en: within (a place or a time)
+      fa: در محدودهٔ، در ظرفِ (جا یا زمان)
+    definition: "in einem Gebiet oder in einer Zeit, nicht darüber hinaus: … der Stadt fährt der Bus alle zehn Minuten."
+    example:
+      de: Innerhalb der Altstadt dürfen keine Autos fahren.
+      en: No cars are allowed to drive within the old town.
+      fa: در محدودهٔ شهر قدیمی، خودروها اجازهٔ رفت‌وآمد ندارند.
+
   - word: nirgendwo
+    class: adverb
+    level: B1
+    meaning:
+      en: nowhere
+      fa: هیچ‌جا
+    definition: "an keinem Ort: Ich habe meine Brille gesucht, aber ich finde sie …"
+    example:
+      de: Ich habe meine Schlüssel nirgendwo gefunden.
+      en: I couldn't find my keys anywhere.
+      fa: کلیدهایم را هیچ‌جا پیدا نکردم.
+    alsoAccepted: [nirgends]
+
   - word: rauf
+    class: adverb
+    level: B1
+    meaning:
+      en: up (in speech)
+      fa: بالا (در گفتار)
+    definition: "nach oben, so sagt man beim Sprechen: Komm doch zu uns …, wir sind im zweiten Stock!"
+    example:
+      de: Komm doch rauf, wir sitzen alle auf der Terrasse!
+      en: Come on up, we're all sitting on the terrace!
+      fa: بیا بالا، همه روی تراس نشسته‌ایم!
+    alsoAccepted: [herauf, hinauf, nach oben, hoch]
+
   - word: raus
+    class: adverb
+    level: B1
+    meaning:
+      en: out (in speech)
+      fa: بیرون (در گفتار)
+    definition: "nach draußen, so sagt man beim Sprechen: Die Sonne scheint, wir gehen …!"
+    example:
+      de: Die Sonne scheint, lass uns raus in den Garten gehen!
+      en: The sun is shining, let's go out into the garden!
+      fa: آفتاب درآمده، بیا برویم بیرون توی باغ!
+    alsoAccepted: [heraus, hinaus, nach draußen]
+
   - word: rein
+    class: adverb
+    level: B1
+    meaning:
+      en: in, into (going inside; in speech)
+      fa: تو، به داخل (در گفتار)
+    definition: "nach drinnen, so sagt man beim Sprechen: Komm …, draußen ist es kalt!"
+    example:
+      de: Komm doch rein, draußen regnet es!
+      en: Do come in, it's raining outside!
+      fa: بیا تو، بیرون باران می‌بارد!
+    alsoAccepted: [herein, hinein]
+
   - word: voraus
+    class: adverb
+    level: B1
+    meaning:
+      en: ahead (in front of the others)
+      fa: جلوتر، پیشاپیش (جلوتر از دیگران)
+    definition: "vor den anderen, schon weiter vorn: Geh schon mal …, ich komme gleich nach."
+    example:
+      de: Geht schon mal voraus, ich komme in fünf Minuten nach.
+      en: You go on ahead, I'll follow in five minutes.
+      fa: شما جلوتر بروید، من پنج دقیقهٔ دیگر می‌آیم.
+    alsoAccepted: [vor]
+
   - word: im Freien
+    class: phrase
+    level: B1
+    meaning:
+      en: outdoors, in the open air
+      fa: در فضای باز، بیرون از خانه
+    definition: "draußen, nicht in einem Haus: Im Sommer essen wir gern …"
+    example:
+      de: Bei schönem Wetter findet das Konzert im Freien statt.
+      en: If the weather is good, the concert takes place outdoors.
+      fa: اگر هوا خوب باشد، کنسرت در فضای باز برگزار می‌شود.
+    alsoAccepted: [draußen, an der frischen Luft]
+
   - word: obere
+    class: adjective
+    level: B1
+    meaning:
+      en: "upper (adjective: the upper shelf)"
+      fa: "بالایی (صفت: قفسهٔ بالایی)"
+    definition: "oben, nicht unten: Das … Regal ist für die Gläser."
+    example:
+      de: Die Gläser stehen im oberen Schrank.
+      en: The glasses are in the top cupboard.
+      fa: لیوان‌ها در کمد بالایی هستند.
+
   - word: innere
+    class: adjective
+    level: B1
+    meaning:
+      en: "inner (adjective: the inner pocket)"
+      fa: "درونی (صفت: جیب درونی)"
+    definition: "drinnen, im Kern, nicht am Rand: Der … Teil der Stadt ist sehr alt."
+    example:
+      de: Die Jacke hat eine innere Tasche für das Handy.
+      en: The jacket has an inside pocket for the mobile phone.
+      fa: کاپشن یک جیب داخلی برای تلفن همراه دارد.
+
   - word: vordere
+    class: adjective
+    level: B1
+    meaning:
+      en: "front (adjective: the front row)"
+      fa: "جلویی (صفت: ردیف جلویی)"
+    definition: "vorn, nicht hinten: Die … Reihe im Kino ist noch frei."
+    example:
+      de: Im Kino sitzen wir am liebsten in den vorderen Reihen.
+      en: In the cinema we like sitting in the front rows best.
+      fa: در سینما بیشتر از همه دوست داریم در ردیف‌های جلویی بنشینیم.
+
   - word: mittlere
+    class: adjective
+    level: B1
+    meaning:
+      en: "middle (adjective: the middle room)"
+      fa: "میانی، وسطی (صفت: اتاق وسطی)"
+    definition: "zwischen zwei anderen, in der Mitte: Von den drei Zimmern nehme ich das …"
+    example:
+      de: Von den drei Zimmern ist das mittlere am größten.
+      en: Of the three rooms, the middle one is the biggest.
+      fa: از آن سه اتاق، اتاق وسطی از همه بزرگ‌تر است.
+
   - word: linke
+    class: adjective
+    level: B1
+    meaning:
+      en: "left (adjective: the left hand)"
+      fa: "چپ (صفت: دست چپ)"
+    definition: "auf der Seite, auf der bei den meisten Menschen das Herz ist: Der … Arm tut mir weh."
+    example:
+      de: Ich habe mir den linken Fuß verletzt.
+      en: I've hurt my left foot.
+      fa: پای چپم آسیب دیده است.
+
   - word: rechte
+    class: adjective
+    level: B1
+    meaning:
+      en: "right (adjective: the right hand)"
+      fa: "راست (صفت: دست راست)"
+    definition: "auf der anderen Seite, nicht links: Die … Tür ist offen, die andere ist zu."
+    example:
+      de: Die Toiletten sind auf der rechten Seite.
+      en: The toilets are on the right-hand side.
+      fa: سرویس‌های بهداشتی در سمت راست هستند.
+
   - word: nah
+    class: adjective
+    level: B1
+    meaning:
+      en: near, close
+      fa: نزدیک
+    definition: "nicht weit weg: Der Bahnhof ist ganz …, wir können zu Fuß gehen."
+    example:
+      de: Die Schule ist ganz nah, die Kinder gehen zu Fuß.
+      en: The school is very close; the children walk.
+      fa: مدرسه خیلی نزدیک است، بچه‌ها پیاده می‌روند.
+    alsoAccepted: [nahe]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 43 questions)
+  date: 2026-11-28
+  pool: 40a0c29d3c0940e1

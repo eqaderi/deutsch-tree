@@ -4,7 +4,7 @@ kind: phrases
 level: B1
 chapter: b1-phrases-opinions
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Agreeing"
   fa: "موافقت کردن"
@@ -14,3 +14,276 @@ purpose:
   fa: "بگویید که با نظر کس دیگری موافقید، کاملاً یا تا حدی."
   de: "Sagen, dass man die gleiche Meinung hat wie eine andere Person, ganz oder zum Teil."
 examTasks: [exam-schreiben-2, exam-sprechen-1]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Da hast du recht.
+    meaning:
+      en: You're right there. A quick answer when your partner says something you agree with. To a person you call *Sie*, say *Da haben Sie recht.*
+      fa: «حق با توست.» پاسخی کوتاه وقتی هم‌صحبتتان چیزی می‌گوید که با آن موافقید. به کسی که با *Sie* خطابش می‌کنید می‌گویید *Da haben Sie recht.*
+      de: Eine kurze Antwort, wenn der Partner etwas sagt und man die gleiche Meinung hat. Bei *Sie* sagt man *Da haben Sie recht.*
+    examTasks: [exam-sprechen-1]
+    example:
+      de: Da hast du recht, mit dem Zug sind wir schneller.
+      en: You're right there, we are faster by train.
+      fa: حق با توست، با قطار زودتر می‌رسیم.
+
+  - de: Das stimmt.
+    meaning:
+      en: That's true. A short way to say that what the other person said is right.
+      fa: «درست است.» راهی کوتاه برای گفتن اینکه حرف طرف مقابل درست است.
+      de: So sagt man kurz, dass die andere Person richtig liegt.
+    examTasks: [exam-sprechen-1]
+    example:
+      de: Das stimmt, am Samstag haben alle mehr Zeit.
+      en: That's true, everyone has more time on Saturday.
+      fa: درست است، شنبه همه وقت بیشتری دارند.
+
+  - de: Das sehe ich genauso.
+    meaning:
+      en: I see it exactly the same way. Full agreement, in speaking and in writing. *Das* comes first, so the verb *sehe* comes before *ich*.
+      fa: «من هم دقیقاً همین‌طور فکر می‌کنم.» موافقت کامل، هم در گفتار و هم در نوشتار. *Das* در آغاز جمله است، پس فعل *sehe* پیش از *ich* می‌آید.
+      de: Man hat genau die gleiche Meinung, beim Sprechen und beim Schreiben. *Das* steht vorne, darum kommt das Verb *sehe* vor *ich*.
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Das sehe ich genauso, das Hotel ist zu teuer.
+      en: I see it exactly the same way, the hotel is too expensive.
+      fa: من هم دقیقاً همین‌طور فکر می‌کنم، هتل خیلی گران است.
+
+  - de: Ich bin ganz deiner Meinung.
+    meaning:
+      en: I completely agree with you. *deiner Meinung* has the ending *-er*. With *Sie* it is *Ich bin ganz Ihrer Meinung.*
+      fa: «کاملاً با تو هم‌عقیده‌ام.» *deiner Meinung* پایانهٔ *-er* دارد. با *Sie* می‌شود *Ich bin ganz Ihrer Meinung.*
+      de: Man hat ganz die gleiche Meinung. Es heißt *deiner Meinung*, mit *-er*. Bei *Sie* sagt man *Ich bin ganz Ihrer Meinung.*
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Ich bin ganz deiner Meinung, Lisa.
+      en: I completely agree with you, Lisa.
+      fa: کاملاً با تو هم‌عقیده‌ام، لیزا.
+
+  - de: Ich bin auch der Meinung, dass …
+    meaning:
+      en: I also think that … You agree and say again what you both think. After *dass* the verb goes to the end.
+      fa: «من هم عقیده دارم که …» موافقت می‌کنید و نظر مشترکتان را دوباره می‌گویید. پس از *dass* فعل به پایان جمله می‌رود.
+      de: Man stimmt zu und sagt noch einmal, was man beide denkt. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Ich bin auch der Meinung, dass wir früher anfangen sollten.
+      en: I also think that we should start earlier.
+      fa: من هم عقیده دارم که باید زودتر شروع کنیم.
+
+  - de: Ich stimme dir zu.
+    meaning:
+      en: I agree with you. The verb is *zustimmen*, so *zu* goes to the end. The person is in the dative, *dir*, *Ihnen*, *Anna*.
+      fa: "«با تو موافقم.» فعل *zustimmen* جداشدنی است، پس *zu* به پایان جمله می‌رود. شخص در حالت *Dativ* می‌آید: *dir*، *Ihnen*، *Anna*."
+      de: "Das Verb ist *zustimmen*, darum steht *zu* am Ende. Die Person steht im Dativ: *dir*, *Ihnen*, *Anna*."
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Ich stimme Anna in diesem Punkt völlig zu.
+      en: I fully agree with Anna on this point.
+      fa: در این مورد کاملاً با آنا موافقم.
+
+  - de: Da hast du zwar recht, aber …
+    meaning:
+      en: You're right about that, but … You agree in part and then add your doubt. After *aber* comes a normal sentence.
+      fa: «در این مورد حق با توست، ولی …» تا حدی موافقت می‌کنید و بعد تردیدتان را می‌گویید. پس از *aber* جمله‌ای با ترتیب عادی می‌آید.
+      de: Man stimmt zum Teil zu und sagt dann, was man anders sieht. Nach *aber* kommt ein normaler Satz.
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Da hast du zwar recht, aber das Hotel ist sehr teuer.
+      en: You're right about that, but the hotel is very expensive.
+      fa: در این مورد حق با توست، ولی هتل خیلی گران است.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: "Ihre Partnerin sagt: „Mit dem Zug sind wir schneller.“ Sie finden das auch. Was sagen Sie?"
+    options:
+      - Da bist du recht.
+      - Da hast du recht.
+      - Da machst du recht.
+    answer: Da hast du recht.
+    explanation:
+      en: The phrase is *Da hast du recht.*, with *haben*.
+      fa: عبارت *Da hast du recht.* است، با فعل *haben*.
+      de: Der Ausdruck heißt *Da hast du recht.*, mit *haben*.
+
+  - id: q2
+    type: gap-fill
+    prompt: Tom, ich stimme ___ völlig zu.
+    options: [dich, du, dir]
+    answer: dir
+    explanation:
+      en: "*zustimmen* takes the dative, and the dative of *du* is *dir*."
+      fa: "*zustimmen* حالت *Dativ* می‌خواهد و حالت *Dativ* ضمیر *du* می‌شود *dir*."
+      de: "Nach *zustimmen* kommt der Dativ, und der Dativ von *du* ist *dir*."
+
+  - id: q3
+    type: true-false
+    prompt: Ich bin ganz deine Meinung.
+    answer: false
+    explanation:
+      en: The phrase has the ending *-er*. *Ich bin ganz deiner Meinung.*
+      fa: "این عبارت پایانهٔ *-er* دارد: *Ich bin ganz deiner Meinung.*"
+      de: "Der Ausdruck hat die Endung *-er*: *Ich bin ganz deiner Meinung.*"
+
+  - id: q4
+    type: true-false
+    prompt: Ich bin auch der Meinung, dass wir mehr Pausen brauchen.
+    answer: true
+    explanation:
+      en: "*Ich bin auch der Meinung, dass …* with the verb *brauchen* at the end is correct."
+      fa: عبارت *Ich bin auch der Meinung, dass …* با فعل *brauchen* در پایان جمله درست است.
+      de: "*Ich bin auch der Meinung, dass …* mit dem Verb *brauchen* am Ende ist richtig."
+
+  - id: q5
+    type: find-error
+    prompt: Da bist du recht, das ist eine gute Idee.
+    answer: bist
+    explanation:
+      en: The phrase is *Da hast du recht.*, with *haben*, not *sein*.
+      fa: عبارت *Da hast du recht.* است، با *haben*، نه *sein*.
+      de: Der Ausdruck heißt *Da hast du recht.*, mit *haben*, nicht mit *sein*.
+
+  - id: q6
+    type: word-order
+    answers:
+      - ["ich bin auch der Meinung,", dass, wir, früher, anfangen, sollten]
+    explanation:
+      en: "After *dass* the subject *wir* comes first and *sollten* goes to the very end: *Ich bin auch der Meinung, dass wir früher anfangen sollten.*"
+      fa: "پس از *dass* اول فاعل یعنی *wir* می‌آید و *sollten* به آخر جمله می‌رود: *Ich bin auch der Meinung, dass wir früher anfangen sollten.*"
+      de: "Nach *dass* kommt zuerst das Subjekt *wir*, und *sollten* steht ganz am Ende: *Ich bin auch der Meinung, dass wir früher anfangen sollten.*"
+
+  - id: q7
+    type: gap-fill
+    prompt: Da hast du ___ recht, aber das Hotel ist sehr teuer.
+    options: [zwar, sowohl, weder]
+    answer: zwar
+    explanation:
+      en: Partial agreement is *zwar …, aber …* *sowohl* goes with *als auch*, *weder* with *noch*.
+      fa: موافقت نسبی با *zwar …, aber …* ساخته می‌شود. *sowohl* با *als auch* می‌آید و *weder* با *noch*.
+      de: Teilweise Zustimmung heißt *zwar …, aber …* *sowohl* gehört zu *als auch*, *weder* zu *noch*.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Da ___ (haben) du recht, das ist eine gute Idee.
+    answers: [hast, hattest, hättest]
+    explanation:
+      en: The phrase is *Da hast du recht.* *hattest* and *hättest* are also correct German.
+      fa: عبارت *Da hast du recht.* است. *hattest* و *hättest* هم درست‌اند.
+      de: Der Ausdruck heißt *Da hast du recht.* *hattest* und *hättest* sind auch richtig.
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: "Frau Weber sagt: „Mit dem Zug sind wir schneller.“ Sie stimmen zu: „Da haben Sie ___.“"
+    answers: [recht, Recht]
+    explanation:
+      en: The phrase is *Da haben Sie recht.* *Recht* with a capital letter is also correct.
+      fa: عبارت *Da haben Sie recht.* است. *Recht* با حرف بزرگ هم درست است.
+      de: Der Ausdruck heißt *Da haben Sie recht.* *Recht* mit großem Buchstaben ist auch richtig.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Das ___ (sehen) ich genauso, das Hotel ist zu teuer.
+    answers: [sehe]
+    explanation:
+      en: "*Das* comes first, then the verb: *Das sehe ich genauso.*"
+      fa: "*Das* در آغاز جمله است و پس از آن فعل می‌آید: *Das sehe ich genauso.*"
+      de: "*Das* steht vorne, dann kommt das Verb: *Das sehe ich genauso.*"
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Ich stimme dir völlig ___.
+    answers: [zu]
+    explanation:
+      en: The verb is *zustimmen*, so *zu* goes to the end. *Ich stimme dir zu.*
+      fa: "فعل *zustimmen* جداشدنی است، پس *zu* به پایان جمله می‌رود: *Ich stimme dir zu.*"
+      de: "Das Verb ist *zustimmen*, also steht *zu* am Ende: *Ich stimme dir zu.*"
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Ich ___ (zustimmen) Anna in diesem Punkt zu.
+    answers: [stimme, stimmte]
+    explanation:
+      en: The verb *zustimmen* splits. *stimme* stands in position 2 and *zu* at the end. The past *stimmte* is also correct.
+      fa: فعل *zustimmen* جدا می‌شود. *stimme* در جایگاه دوم می‌آید و *zu* در پایان جمله. گذشتهٔ سادهٔ *stimmte* هم درست است.
+      de: Das Verb *zustimmen* ist trennbar. *stimme* steht auf Position 2, *zu* am Ende. Die Vergangenheit *stimmte* ist auch richtig.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Ich stimme ___ (du) zu.
+    answers: [dir]
+    explanation:
+      en: "*zustimmen* takes the dative, and the dative of *du* is *dir*."
+      fa: "*zustimmen* حالت *Dativ* می‌خواهد و حالت *Dativ* ضمیر *du* می‌شود *dir*."
+      de: "Nach *zustimmen* kommt der Dativ, und der Dativ von *du* ist *dir*."
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Ich bin ganz ___ (dein) Meinung.
+    answers: [deiner]
+    explanation:
+      en: The phrase is *Ich bin ganz deiner Meinung.*, with the ending *-er*.
+      fa: عبارت *Ich bin ganz deiner Meinung.* است، با پایانهٔ *-er*.
+      de: Der Ausdruck heißt *Ich bin ganz deiner Meinung.*, mit der Endung *-er*.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Herr Braun, ich bin ganz ___ (Ihr) Meinung.
+    answers: [Ihrer]
+    explanation:
+      en: With *Sie* the phrase is *Ich bin ganz Ihrer Meinung.*, with a capital *I* and the ending *-er*.
+      fa: با *Sie* عبارت می‌شود *Ich bin ganz Ihrer Meinung.*، با حرف بزرگ *I* و پایانهٔ *-er*.
+      de: Bei *Sie* heißt es *Ich bin ganz Ihrer Meinung.*, mit großem *I* und der Endung *-er*.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Ich bin auch der Meinung, dass wir mehr Pausen ___ (brauchen).
+    answers: [brauchen, brauchten, bräuchten]
+    explanation:
+      en: After *dass* the verb goes to the end. With *wir* it is *brauchen*.
+      fa: پس از *dass* فعل به پایان جمله می‌رود. با *wir* شکل فعل *brauchen* است.
+      de: Nach *dass* steht das Verb am Ende. Bei *wir* heißt es *brauchen*.
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Da hast du zwar recht, ___ das Hotel ist sehr teuer.
+    answers: [aber, doch, jedoch]
+    explanation:
+      en: Partial agreement is *zwar …, aber …*
+      fa: موافقت نسبی با *zwar …, aber …* ساخته می‌شود.
+      de: Teilweise Zustimmung heißt *zwar …, aber …*
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Das ___ (stimmen), am Samstag haben alle mehr Zeit.
+    answers: [stimmt]
+    explanation:
+      en: The phrase is *Das stimmt.* *das* is third person singular, so the verb is *stimmt*.
+      fa: عبارت *Das stimmt.* است. *das* سوم‌شخص مفرد است، پس فعل *stimmt* می‌شود.
+      de: Der Ausdruck heißt *Das stimmt.* Bei *das* heißt das Verb *stimmt*.
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Ich bin auch der ___, dass wir früher anfangen sollten.
+    answers: [Meinung, Ansicht, Auffassung]
+    explanation:
+      en: The phrase is *Ich bin auch der Meinung, dass …* *der Ansicht* means the same.
+      fa: عبارت *Ich bin auch der Meinung, dass …* است. *der Ansicht* هم همین معنا را دارد.
+      de: Der Ausdruck heißt *Ich bin auch der Meinung, dass …* *der Ansicht* bedeutet das Gleiche.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Da ___ (haben) Sie zwar recht, aber der Weg ist sehr weit.
+    answers: [haben, hatten, hätten]
+    explanation:
+      en: With *Sie* the phrase is *Da haben Sie zwar recht, aber …*
+      fa: با *Sie* عبارت می‌شود *Da haben Sie zwar recht, aber …*
+      de: Bei *Sie* heißt es *Da haben Sie zwar recht, aber …*
+
+review:
+  reviewer: an independent AI agent (two fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: c409c92f58183e29

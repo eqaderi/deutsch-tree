@@ -4,7 +4,7 @@ kind: phrases
 level: B1
 chapter: b1-phrases-opinions
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Giving your opinion"
   fa: "بیان نظر خود"
@@ -14,3 +14,276 @@ purpose:
   fa: "نظرتان را دربارهٔ یک موضوع بگویید، هم در نوشتن و هم در صحبت کردن."
   de: "Sagen und schreiben, was man über ein Thema denkt."
 examTasks: [exam-schreiben-2, exam-sprechen-2]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Ich finde, dass …
+    meaning:
+      en: I think that … The most usual way to give your opinion. After *dass* the verb goes to the end. Without *dass* the normal order follows, *Ich finde, Kinder brauchen …*
+      fa: "«به نظرم …» رایج‌ترین راه برای گفتن نظر. پس از *dass* فعل به پایان جمله می‌رود. بدون *dass* ترتیب عادی جمله می‌آید: *Ich finde, Kinder brauchen …*"
+      de: So sagt man am häufigsten seine Meinung. Nach *dass* steht das Verb am Ende. Ohne *dass* kommt ein normaler Satz, zum Beispiel *Ich finde, Kinder brauchen …*
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Ich finde, dass Kinder viel draußen spielen sollten.
+      en: I think that children should play outside a lot.
+      fa: به نظرم بچه‌ها باید زیاد بیرون بازی کنند.
+
+  - de: Meiner Meinung nach …
+    meaning:
+      en: In my opinion … *Meiner Meinung nach* fills position 1, so the verb comes right after it, before the subject.
+      fa: «به عقیدهٔ من …» عبارت *Meiner Meinung nach* جایگاه اول جمله را پر می‌کند، پس فعل بلافاصله پس از آن و پیش از فاعل می‌آید.
+      de: "*Meiner Meinung nach* steht auf Position 1. Darum kommt danach gleich das Verb und dann das Subjekt."
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Meiner Meinung nach ist das Leben auf dem Land ruhiger.
+      en: In my opinion, life in the country is quieter.
+      fa: به عقیدهٔ من زندگی در روستا آرام‌تر است.
+
+  - de: Ich bin der Meinung, dass …
+    meaning:
+      en: I am of the opinion that … A little more formal than *Ich finde*, good for a forum post. After *dass* the verb goes to the end.
+      fa: «عقیده‌ام این است که …» کمی رسمی‌تر از *Ich finde* و برای نوشتن در انجمن اینترنتی مناسب است. پس از *dass* فعل به پایان جمله می‌رود.
+      de: Etwas formeller als *Ich finde*, gut für einen Beitrag im Forum. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Ich bin der Meinung, dass wir weniger Plastik benutzen sollten.
+      en: I am of the opinion that we should use less plastic.
+      fa: عقیده‌ام این است که باید کمتر پلاستیک مصرف کنیم.
+
+  - de: Ich glaube, dass …
+    meaning:
+      en: "I believe that … A careful opinion: you think so, but you are not completely sure. *Ich denke, dass …* works the same way."
+      fa: "«فکر می‌کنم …» نظری محتاطانه: چنین فکر می‌کنید، اما کاملاً مطمئن نیستید. *Ich denke, dass …* هم همین‌طور به کار می‌رود."
+      de: Eine vorsichtige Meinung. Man denkt so, ist aber nicht ganz sicher. *Ich denke, dass …* benutzt man genauso.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Ich glaube, dass viele Menschen zu wenig schlafen.
+      en: I believe that many people sleep too little.
+      fa: فکر می‌کنم خیلی از مردم کم می‌خوابند.
+
+  - de: Ich bin davon überzeugt, dass …
+    meaning:
+      en: I am convinced that … A strong opinion that you are sure of. *davon* may be left out, *Ich bin überzeugt, dass …*
+      fa: "«اطمینان دارم که …» نظری قاطع که از آن مطمئنید. می‌توانید *davon* را نگویید: *Ich bin überzeugt, dass …*"
+      de: Eine starke Meinung. Man ist ganz sicher. Man kann *davon* auch weglassen, *Ich bin überzeugt, dass …*
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Ich bin davon überzeugt, dass Bewegung gegen Stress hilft.
+      en: I am convinced that exercise helps against stress.
+      fa: اطمینان دارم که ورزش به کم شدن استرس کمک می‌کند.
+
+  - de: Ich halte … für …
+    meaning:
+      en: I consider … (to be) … Says what you think of a thing. After *für* comes the accusative, *Ich halte das für einen Fehler.*
+      fa: "«… را … می‌دانم.» می‌گویید چیزی را چگونه ارزیابی می‌کنید. پس از *für* حالت *Akkusativ* می‌آید: *Ich halte das für einen Fehler.*"
+      de: Man sagt, was man über eine Sache denkt. Nach *für* kommt der Akkusativ, zum Beispiel *Ich halte das für einen Fehler.*
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Ich halte Homeoffice für eine gute Lösung.
+      en: I consider working from home a good solution.
+      fa: دورکاری را راه‌حل خوبی می‌دانم.
+
+  - de: Für mich ist …
+    meaning:
+      en: For me, … is … Gives your personal view of what is important or right. After *für* comes the accusative *mich*.
+      fa: «برای من … است.» دیدگاه شخصی‌تان را دربارهٔ اینکه چه چیزی مهم یا درست است می‌گوید. پس از *für* حالت *Akkusativ* یعنی *mich* می‌آید.
+      de: Man sagt, was für einen selbst wichtig oder richtig ist. Nach *für* kommt der Akkusativ *mich*.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Für mich ist ein Garten wichtiger als ein großes Wohnzimmer.
+      en: For me, a garden is more important than a big living room.
+      fa: برای من باغچه از یک اتاق نشیمن بزرگ مهم‌تر است.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Sie schreiben Ihre Meinung in ein Forum. Welcher Satz ist richtig?
+    options:
+      - Meiner Meinung nach Kinder brauchen kein eigenes Handy.
+      - Meiner Meinung nach brauchen Kinder kein eigenes Handy.
+      - Meine Meinung nach brauchen Kinder kein eigenes Handy.
+    answer: Meiner Meinung nach brauchen Kinder kein eigenes Handy.
+    explanation:
+      en: The phrase is *Meiner Meinung nach* (with *-er*), and it fills position 1, so the verb *brauchen* comes next.
+      fa: عبارت درست *Meiner Meinung nach* با *-er* است. این عبارت جایگاه اول را پر می‌کند، پس فعل *brauchen* بلافاصله پس از آن می‌آید.
+      de: Der Ausdruck heißt *Meiner Meinung nach* (mit *-er*). Er steht auf Position 1, darum kommt danach das Verb *brauchen*.
+
+  - id: q2
+    type: gap-fill
+    prompt: Ich bin der ___, dass man im Zug nicht laut telefonieren sollte.
+    options: [Idee, Gedanke, Meinung]
+    answer: Meinung
+    explanation:
+      en: The phrase is *Ich bin der Meinung, dass …* *Idee* and *Gedanke* do not go with *Ich bin der …*
+      fa: عبارت *Ich bin der Meinung, dass …* است. *Idee* و *Gedanke* با *Ich bin der …* به کار نمی‌روند.
+      de: Der Ausdruck heißt *Ich bin der Meinung, dass …* *Idee* und *Gedanke* passen nicht zu *Ich bin der …*
+
+  - id: q3
+    type: true-false
+    prompt: Ich finde, dass das Fahrrad ist das beste Verkehrsmittel in der Stadt.
+    answer: false
+    explanation:
+      en: After *dass* the verb goes to the end. *Ich finde, dass das Fahrrad das beste Verkehrsmittel in der Stadt ist.*
+      fa: "پس از *dass* فعل به پایان جمله می‌رود: *Ich finde, dass das Fahrrad das beste Verkehrsmittel in der Stadt ist.*"
+      de: "Nach *dass* steht das Verb am Ende: *Ich finde, dass das Fahrrad das beste Verkehrsmittel in der Stadt ist.*"
+
+  - id: q4
+    type: true-false
+    prompt: Ich halte das für eine sehr gute Idee.
+    answer: true
+    explanation:
+      en: "*Ich halte … für …* with the accusative *eine sehr gute Idee* is correct."
+      fa: عبارت *Ich halte … für …* با حالت *Akkusativ*، یعنی *eine sehr gute Idee*، درست است.
+      de: "*Ich halte … für …* mit dem Akkusativ *eine sehr gute Idee* ist richtig."
+
+  - id: q5
+    type: find-error
+    prompt: Ich halte dieses Projekt von sehr wichtig.
+    answer: von
+    explanation:
+      en: The phrase is *Ich halte … für …* *Ich halte dieses Projekt für sehr wichtig.*
+      fa: "عبارت *Ich halte … für …* است: *Ich halte dieses Projekt für sehr wichtig.*"
+      de: "Der Ausdruck heißt *Ich halte … für …*: *Ich halte dieses Projekt für sehr wichtig.*"
+
+  - id: q6
+    type: word-order
+    answers:
+      - ["ich finde,", dass, wir, mehr Radwege, brauchen]
+    explanation:
+      en: "After *dass* comes the subject *wir*, and the verb *brauchen* goes to the end: *Ich finde, dass wir mehr Radwege brauchen.*"
+      fa: "پس از *dass* فاعل یعنی *wir* می‌آید و فعل *brauchen* به پایان جمله می‌رود: *Ich finde, dass wir mehr Radwege brauchen.*"
+      de: "Nach *dass* kommt das Subjekt *wir*, und das Verb *brauchen* steht am Ende: *Ich finde, dass wir mehr Radwege brauchen.*"
+
+  - id: q7
+    type: gap-fill
+    prompt: ___ mich ist ein Auto in der Stadt nicht wichtig.
+    options: [Nach, Für, Von]
+    answer: Für
+    explanation:
+      en: The phrase is *Für mich ist …* *mich* is the accusative, and *für* takes the accusative.
+      fa: عبارت *Für mich ist …* است. *mich* در حالت *Akkusativ* است و *für* حالت *Akkusativ* می‌خواهد.
+      de: Der Ausdruck heißt *Für mich ist …* *mich* ist Akkusativ, und nach *für* kommt der Akkusativ.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Meiner ___ nach sollten Kinder erst mit zwölf Jahren ein Handy bekommen.
+    answers: [Meinung, Ansicht, Auffassung]
+    explanation:
+      en: The phrase is *Meiner Meinung nach …* *Meiner Ansicht nach* means the same.
+      fa: عبارت *Meiner Meinung nach …* است. *Meiner Ansicht nach* هم همین معنا را دارد.
+      de: Der Ausdruck heißt *Meiner Meinung nach …* *Meiner Ansicht nach* bedeutet das Gleiche.
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: ___ (mein) Meinung nach ist das Leben auf dem Land ruhiger.
+    answers: [Meiner]
+    explanation:
+      en: "*nach* takes the dative and *Meinung* is feminine, so it is *Meiner Meinung nach*."
+      fa: "*nach* حالت *Dativ* می‌خواهد و *Meinung* اسم مؤنث (*die*) است، پس می‌شود *Meiner Meinung nach*."
+      de: "Nach *nach* kommt der Dativ, und es heißt *die Meinung*. Also: *Meiner Meinung nach*."
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Ich bin der Meinung, ___ wir weniger Plastik benutzen sollten.
+    answers: [dass]
+    explanation:
+      en: The phrase is *Ich bin der Meinung, dass …*, and after *dass* the verb goes to the end.
+      fa: عبارت *Ich bin der Meinung, dass …* است و پس از *dass* فعل به پایان جمله می‌رود.
+      de: Der Ausdruck heißt *Ich bin der Meinung, dass …*, und nach *dass* steht das Verb am Ende.
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Ich ___ (sein) der Meinung, dass Sport in der Schule sehr wichtig ist.
+    answers: [bin, war]
+    explanation:
+      en: The phrase is *Ich bin der Meinung, dass …* The past *war* is also correct German.
+      fa: عبارت *Ich bin der Meinung, dass …* است. گذشتهٔ سادهٔ *war* هم درست است.
+      de: Der Ausdruck heißt *Ich bin der Meinung, dass …* Die Vergangenheit *war* ist auch richtig.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Ich halte das ___ eine gute Idee.
+    answers: [für]
+    explanation:
+      en: The phrase is *Ich halte … für …*
+      fa: عبارت *Ich halte … für …* است.
+      de: Der Ausdruck heißt *Ich halte … für …*
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Ich ___ (halten) Homeoffice für eine gute Lösung.
+    answers: [halte, hielt]
+    explanation:
+      en: With *ich*, *halten* becomes *halte*. The past *hielt* is also correct German.
+      fa: "*halten* با *ich* می‌شود *halte*. گذشتهٔ سادهٔ *hielt* هم درست است."
+      de: Bei *ich* wird *halten* zu *halte*. Die Vergangenheit *hielt* ist auch richtig.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Ich finde, dass man im Zug nicht laut telefonieren ___ (sollen, Konjunktiv II).
+    answers: [sollte]
+    explanation:
+      en: After *dass* the verb goes to the end, after *telefonieren*. With *man* the form is *sollte*.
+      fa: پس از *dass* فعل به پایان جمله و پس از *telefonieren* می‌رود. با *man* شکل فعل *sollte* است.
+      de: Nach *dass* steht das Verb am Ende, nach *telefonieren*. Bei *man* heißt es *sollte*.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Ich ___ (finden), dass Kinder viel draußen spielen sollten.
+    answers: [finde, fand]
+    explanation:
+      en: The phrase is *Ich finde, dass …* The past *fand* is also correct German.
+      fa: عبارت *Ich finde, dass …* است. گذشتهٔ سادهٔ *fand* هم درست است.
+      de: Der Ausdruck heißt *Ich finde, dass …* Die Vergangenheit *fand* ist auch richtig.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Ich bin davon ___ (überzeugen), dass Bewegung gegen Stress hilft.
+    answers: [überzeugt]
+    explanation:
+      en: The phrase is *Ich bin (davon) überzeugt, dass …*, with the participle *überzeugt*.
+      fa: عبارت *Ich bin (davon) überzeugt, dass …* است، با صفت مفعولی (*Partizip II*) یعنی *überzeugt*.
+      de: Der Ausdruck heißt *Ich bin (davon) überzeugt, dass …*, mit dem Partizip *überzeugt*.
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Für ___ (ich) ist ein Garten wichtiger als ein großes Wohnzimmer.
+    answers: [mich]
+    explanation:
+      en: "*für* takes the accusative, and the accusative of *ich* is *mich*."
+      fa: "*für* حالت *Akkusativ* می‌خواهد و حالت *Akkusativ* ضمیر *ich* می‌شود *mich*."
+      de: "Nach *für* kommt der Akkusativ, und der Akkusativ von *ich* ist *mich*."
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Ich ___ (glauben), dass viele Menschen zu wenig schlafen.
+    answers: [glaube, glaubte]
+    explanation:
+      en: The phrase is *Ich glaube, dass …* The past *glaubte* is also correct German.
+      fa: عبارت *Ich glaube, dass …* است. گذشتهٔ سادهٔ *glaubte* هم درست است.
+      de: Der Ausdruck heißt *Ich glaube, dass …* Die Vergangenheit *glaubte* ist auch richtig.
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Meiner Meinung ___ ist Fahrradfahren die beste Lösung.
+    answers: [nach]
+    explanation:
+      en: The phrase is *Meiner Meinung nach*. Here *nach* stands after the noun.
+      fa: عبارت *Meiner Meinung nach* است. اینجا *nach* پس از اسم می‌آید.
+      de: Der Ausdruck heißt *Meiner Meinung nach*. Hier steht *nach* nach dem Nomen.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Meiner Meinung nach ___ (sein) das Essen in der Mensa zu teuer.
+    answers: [ist, war, wäre]
+    explanation:
+      en: After *Meiner Meinung nach* the verb comes next, in position 2. *wäre* and *war* are also correct German.
+      fa: پس از *Meiner Meinung nach* فعل در جایگاه دوم می‌آید. *wäre* و *war* هم درست‌اند.
+      de: Nach *Meiner Meinung nach* kommt das Verb auf Position 2. *wäre* und *war* sind auch richtig.
+
+review:
+  reviewer: an independent AI agent (a fresh subagent, blind to the key)
+  date: 2026-11-28
+  pool: e44d2e241b04b62b

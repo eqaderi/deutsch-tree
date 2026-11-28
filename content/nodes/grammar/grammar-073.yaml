@@ -4,10 +4,310 @@ kind: grammar
 level: B1
 chapter: b1-genitive-nouns
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-107, grammar-108]
 title:
   en: "Adjectives and participles as nouns"
   fa: "صفت و صفت فعلی به‌عنوان اسم"
   de: "Adjektive und Partizipien als Nomen"
+
+explanations:
+  en:
+    rule: >
+      An adjective or a participle can name a person: *bekannt* gives *der
+      Bekannte* (the acquaintance), *angestellt* gives *der Angestellte* (the
+      employee), *reisend* gives *der Reisende* (the traveller). It is
+      written with a capital letter, but it keeps the endings of an adjective,
+      as if a noun came after it. So the ending changes with the article:
+      *der Bekannte*, but *ein Bekannter*; *die Bekannte* and *eine
+      Bekannte*; in the plural *die Bekannten*, but without an article
+      *Bekannte* (*viele Bekannte*). In the *Akkusativ* (masculine) and the
+      *Dativ* the ending is *-en*: *einen Bekannten*, *mit der Bekannten*.
+      Other words of this kind: *der* or *die Verwandte*, *Erwachsene*,
+      *Jugendliche*, *Kranke*, *Deutsche*. *Er ist Deutscher* and *sie ist
+      Deutsche*, with no article.
+  fa:
+    rule: >
+      صفت یا صفت فعلی می‌تواند نام یک شخص باشد: از *bekannt* (آشنا) *der
+      Bekannte* (آشنا، فرد آشنا) ساخته می‌شود، از *angestellt* (استخدام‌شده)
+      *der Angestellte* (کارمند) و از *reisend* (در سفر) *der Reisende*
+      (مسافر). این واژه با حرف بزرگ نوشته می‌شود، ولی پایانه‌های صفت را نگه
+      می‌دارد، گویی اسمی پس از آن آمده است. پس پایانه با حرف تعریف تغییر
+      می‌کند: *der Bekannte* ولی *ein Bekannter*؛ *die Bekannte* و *eine
+      Bekannte*؛ در جمع *die Bekannten* ولی بدون حرف تعریف *Bekannte*
+      (*viele Bekannte*). در حالت *Akkusativ* (حالت مفعولی) مذکر و در حالت
+      *Dativ* (حالت مفعول باواسطه) پایانه *-en* است: *einen Bekannten* و *mit
+      der Bekannten*. واژه‌های دیگر از این دست: *der* یا *die Verwandte*،
+      *Erwachsene*، *Jugendliche*، *Kranke* و *Deutsche*. می‌گوییم *Er ist
+      Deutscher* و *Sie ist Deutsche*، بدون حرف تعریف.
+  de:
+    rule: >
+      Ein Adjektiv oder ein Partizip kann eine Person sein: *bekannt* – *der
+      Bekannte*, *angestellt* – *der Angestellte*, *reisend* – *der
+      Reisende*. Man schreibt es groß, aber es hat die Endungen von einem
+      Adjektiv, so als ob noch ein Nomen kommt. Darum ändert sich die Endung
+      mit dem Artikel: *der Bekannte*, aber *ein Bekannter*; *die Bekannte*
+      und *eine Bekannte*; im Plural *die Bekannten*, aber ohne Artikel
+      *Bekannte* (*viele Bekannte*). Im Akkusativ maskulin und im Dativ ist
+      die Endung *-en*: *einen Bekannten*, *mit der Bekannten*. Weitere Wörter
+      dieser Art: *der* oder *die Verwandte*, *Erwachsene*, *Jugendliche*,
+      *Kranke*, *Deutsche*. Man sagt *Er ist Deutscher* und *Sie ist
+      Deutsche*, ohne Artikel.
+
+# The article-change table of content/README.md, adapted: the words name
+# people, so there is no neuter row (neuter is grammar-206). The column with
+# "ein" holds the plural without an article, which takes the same ending.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *ein* or no article", fa: "با *ein* یا بدون حرف تعریف", de: "Mit *ein* oder ohne Artikel" }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Bekannte, ein Bekannter, den Bekannten, dem Bekannten, Er ist ein Bekannter von mir.]
+    - [die Bekannte, eine Bekannte, die Bekannte, der Bekannten, Ich treffe eine Bekannte.]
+    - [die Bekannten (Plural), Bekannte, die Bekannten, den Bekannten, Wir besuchen Bekannte.]
+
+examples:
+  - de: Ist das die Bekannte, von der du erzählt hast?
+    en: Is that the acquaintance you told me about?
+    fa: این همان آشنایی است که درباره‌اش تعریف کردی؟
+  - de: Gestern habe ich einen Bekannten in der Stadt getroffen.
+    en: Yesterday I met an acquaintance in town.
+    fa: دیروز یکی از آشنایان را در شهر دیدم.
+  - de: Meine Schwester ist Angestellte bei der Post.
+    en: My sister works for the post office.
+    fa: خواهرم کارمند ادارهٔ پست است.
+  - de: Die Angestellten der Firma bekommen mehr Geld.
+    en: The company's employees are getting more money.
+    fa: کارمندان شرکت حقوق بیشتری می‌گیرند.
+  - de: Die Reisenden warten auf den nächsten Zug.
+    en: The travellers are waiting for the next train.
+    fa: مسافران منتظر قطار بعدی‌اند.
+  - de: Am Wochenende besuchen wir Verwandte in Hamburg.
+    en: At the weekend we are visiting relatives in Hamburg.
+    fa: آخر هفته به دیدن خویشاوندانمان در هامبورگ می‌رویم.
+  - de: Für Jugendliche ist der Eintritt frei.
+    en: Entry is free for young people.
+    fa: ورود برای نوجوانان رایگان است.
+  - de: Der Arzt spricht mit dem Kranken.
+    en: The doctor is talking to the sick man.
+    fa: پزشک با بیمار صحبت می‌کند.
+  - de: Ich bin Österreicherin, mein Mann ist Deutscher.
+    en: I am Austrian, my husband is German.
+    fa: من اتریشی‌ام و همسرم آلمانی است.
+  - de: Die Erwachsenen sitzen im Garten, die Kinder spielen.
+    en: The adults are sitting in the garden, the children are playing.
+    fa: بزرگ‌ترها در باغ نشسته‌اند و بچه‌ها بازی می‌کنند.
+
+mistakes:
+  - wrong: Er ist ein Bekannte von mir.
+    right: Er ist ein Bekannter von mir.
+    why:
+      en: "After *ein* the masculine takes *-er*, as an adjective does: *ein Bekannter*."
+      fa: "پس از *ein*، شکل مذکر مانند صفت پایانهٔ *-er* می‌گیرد: *ein Bekannter*."
+      de: "Nach *ein* bekommt die maskuline Form *-er*, wie ein Adjektiv: *ein Bekannter*."
+  - wrong: Ich wohne bei einem Verwandte.
+    right: Ich wohne bei einem Verwandten.
+    why:
+      en: "In the *Dativ* the ending is *-en*: *bei einem Verwandten*."
+      fa: "در حالت *Dativ* پایانه *-en* است: *bei einem Verwandten*."
+      de: "Im Dativ ist die Endung *-en*: *bei einem Verwandten*."
+  - wrong: Für Jugendlichen ist der Eintritt frei.
+    right: Für Jugendliche ist der Eintritt frei.
+    why:
+      en: "A plural without an article takes *-e*: *Jugendliche*. *-en* comes after *die*: *die Jugendlichen*."
+      fa: "جمعِ بدون حرف تعریف پایانهٔ *-e* می‌گیرد: *Jugendliche*. *-en* پس از *die* می‌آید: *die Jugendlichen*."
+      de: "Im Plural ohne Artikel ist die Endung *-e*: *Jugendliche*. Nach *die* steht *-en*: *die Jugendlichen*."
+  - wrong: Die Angestellte der Firma bekommen mehr Geld.
+    right: Die Angestellten der Firma bekommen mehr Geld.
+    why:
+      en: "The verb shows a plural, and after *die* the plural takes *-en*: *die Angestellten*."
+      fa: "فعل جمع است و در جمع، پس از *die* پایانه *-en* می‌آید: *die Angestellten*."
+      de: "Das Verb steht im Plural. Im Plural nach *die* ist die Endung *-en*: *die Angestellten*."
+  - wrong: Der Arzt spricht mit dem kranken.
+    right: Der Arzt spricht mit dem Kranken.
+    why:
+      en: "Used as a noun, the adjective is written with a capital letter: *dem Kranken*."
+      fa: "صفتی که به‌عنوان اسم به کار رود با حرف بزرگ نوشته می‌شود: *dem Kranken*."
+      de: "Als Nomen schreibt man das Adjektiv groß: *dem Kranken*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Gestern habe ich einen ___ getroffen.
+    options: [Bekannte, Bekannten, Bekannter]
+    answer: Bekannten
+    explanation:
+      en: "In the masculine *Akkusativ* the ending is *-en*: *einen Bekannten*."
+      fa: "در حالت *Akkusativ* مذکر پایانه *-en* است: *einen Bekannten*."
+      de: "Im Akkusativ maskulin ist die Endung *-en*: *einen Bekannten*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Er ist ein ___ von mir.
+    options: [Bekannter, Bekannte, Bekannten]
+    answer: Bekannter
+    explanation:
+      en: "After *ein* the masculine *Nominativ* takes *-er*: *ein Bekannter*."
+      fa: "پس از *ein*، مذکر در حالت *Nominativ* پایانهٔ *-er* می‌گیرد: *ein Bekannter*."
+      de: "Nach *ein* hat der Nominativ maskulin *-er*: *ein Bekannter*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die ___ der Firma arbeiten sehr viel.
+    options: [Angestellte, Angestellter, Angestellten]
+    answer: Angestellten
+    explanation:
+      en: "The verb is plural, and after *die* the plural takes *-en*: *die Angestellten*."
+      fa: "فعل جمع است و در جمع، پس از *die* پایانه *-en* می‌آید: *die Angestellten*."
+      de: "Das Verb steht im Plural. Nach *die* im Plural: *die Angestellten*."
+  - id: gap-4
+    type: gap-fill
+    prompt: In unserer Firma arbeiten viele ___.
+    options: [Angestellten, Angestellte, Angestellter]
+    answer: Angestellte
+    explanation:
+      en: "After *viele*, with no article, the plural takes *-e*: *viele Angestellte*."
+      fa: "پس از *viele* که حرف تعریف نیست، جمع پایانهٔ *-e* می‌گیرد: *viele Angestellte*."
+      de: "Nach *viele*, ohne Artikel, hat der Plural *-e*: *viele Angestellte*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ich gehe heute mit einer ___ ins Kino.
+    options: [Bekannter, Bekannten, Bekannte]
+    answer: Bekannten
+    explanation:
+      en: "In the *Dativ* the ending is *-en*: *mit einer Bekannten*."
+      fa: "در حالت *Dativ* پایانه *-en* است: *mit einer Bekannten*."
+      de: "Im Dativ ist die Endung *-en*: *mit einer Bekannten*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Die Bahn bittet alle ___ um Geduld.
+    options: [Reisende, Reisenden, Reisender]
+    answer: Reisenden
+    explanation:
+      en: "After *alle* the plural takes *-en*, as after *die*: *alle Reisenden*."
+      fa: "پس از *alle*، مانند پس از *die*، جمع پایانهٔ *-en* می‌گیرد: *alle Reisenden*."
+      de: "Nach *alle* hat der Plural *-en*, wie nach *die*: *alle Reisenden*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Mein Kollege kommt aus Köln. Er ist ___.
+    options: [Deutsche, Deutscher, Deutschen]
+    answer: Deutscher
+    explanation:
+      en: "Without an article the masculine takes *-er*: *Er ist Deutscher.*"
+      fa: "بدون حرف تعریف، مذکر پایانهٔ *-er* می‌گیرد: *Er ist Deutscher.*"
+      de: "Ohne Artikel hat die maskuline Form *-er*: *Er ist Deutscher.*"
+  - id: choice-3
+    type: multiple-choice
+    prompt: Der Arzt hilft dem ___.
+    options: [Verletzten, Verletzte, Verletzter]
+    answer: Verletzten
+    explanation:
+      en: "In the *Dativ* the ending is *-en*: *dem Verletzten*."
+      fa: "در حالت *Dativ* پایانه *-en* است: *dem Verletzten*."
+      de: "Im Dativ ist die Endung *-en*: *dem Verletzten*."
+  - id: true-1
+    type: true-false
+    prompt: Unsere Verwandten kommen am Sonntag.
+    answer: true
+    explanation:
+      en: "After *unsere* the plural takes *-en*: *unsere Verwandten*. The sentence is correct."
+      fa: "پس از *unsere* جمع پایانهٔ *-en* می‌گیرد: *unsere Verwandten*. جمله درست است."
+      de: "Nach *unsere* hat der Plural *-en*: *unsere Verwandten*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Meine Schwester ist eine Angestellter bei der Post.
+    answer: false
+    explanation:
+      en: "A woman is *eine Angestellte*, with *-e*."
+      fa: "برای زن می‌گوییم *eine Angestellte*، با پایانهٔ *-e*."
+      de: "Eine Frau ist *eine Angestellte*, mit *-e*."
+  - id: true-3
+    type: true-false
+    prompt: Wir haben gestern einen Bekannter getroffen.
+    answer: false
+    explanation:
+      en: "In the masculine *Akkusativ* the ending is *-en*: *einen Bekannten*."
+      fa: "در حالت *Akkusativ* مذکر پایانه *-en* است: *einen Bekannten*."
+      de: "Im Akkusativ maskulin ist die Endung *-en*: *einen Bekannten*."
+  - id: true-4
+    type: true-false
+    prompt: Ein Verwandter von mir wohnt in Wien.
+    answer: true
+    explanation:
+      en: "After *ein* the masculine takes *-er*: *ein Verwandter*. The sentence is correct."
+      fa: "پس از *ein*، مذکر پایانهٔ *-er* می‌گیرد: *ein Verwandter*. جمله درست است."
+      de: "Nach *ein* hat die maskuline Form *-er*: *ein Verwandter*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ist das die ___ (bekannt), von der du erzählt hast?
+    answers: [Bekannte]
+    explanation:
+      en: "After *die* the feminine takes *-e*, and the noun has a capital letter: *die Bekannte*."
+      fa: "پس از *die*، مؤنث پایانهٔ *-e* می‌گیرد و اسم با حرف بزرگ نوشته می‌شود: *die Bekannte*."
+      de: "Nach *die* hat die feminine Form *-e*. Als Nomen schreibt man sie groß: *die Bekannte*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Am Wochenende besuche ich einen ___ (der Verwandte).
+    answers: [Verwandten]
+    explanation:
+      en: "In the masculine *Akkusativ* the ending is *-en*: *einen Verwandten*."
+      fa: "در حالت *Akkusativ* مذکر پایانه *-en* است: *einen Verwandten*."
+      de: "Im Akkusativ maskulin ist die Endung *-en*: *einen Verwandten*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Ärztin spricht mit der ___ (die Kranke).
+    answers: [Kranken]
+    explanation:
+      en: "In the *Dativ* the ending is *-en*: *mit der Kranken*."
+      fa: "در حالت *Dativ* پایانه *-en* است: *mit der Kranken*."
+      de: "Im Dativ ist die Endung *-en*: *mit der Kranken*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wir haben viele ___ (der Bekannte, Plural) in Berlin.
+    answers: [Bekannte]
+    explanation:
+      en: "After *viele*, with no article, the plural takes *-e*: *viele Bekannte*."
+      fa: "پس از *viele* که حرف تعریف نیست، جمع پایانهٔ *-e* می‌گیرد: *viele Bekannte*."
+      de: "Nach *viele*, ohne Artikel, hat der Plural *-e*: *viele Bekannte*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "der Angestellte → ein …"
+    answers: [ein Angestellter, Angestellter]
+    explanation:
+      en: "After *ein* the masculine takes *-er*: *ein Angestellter*."
+      fa: "پس از *ein*، مذکر پایانهٔ *-er* می‌گیرد: *ein Angestellter*."
+      de: "Nach *ein* hat die maskuline Form *-er*: *ein Angestellter*."
+  - id: error-1
+    type: find-error
+    prompt: Ich habe lange mit einer Bekannte telefoniert.
+    answer: Bekannte
+    explanation:
+      en: "In the *Dativ* the ending is *-en*: *mit einer Bekannten*."
+      fa: "در حالت *Dativ* پایانه *-en* است: *mit einer Bekannten*."
+      de: "Im Dativ ist die Endung *-en*: *mit einer Bekannten*."
+  - id: error-2
+    type: find-error
+    prompt: Der Schaffner hilft den Reisende mit dem Gepäck.
+    answer: Reisende
+    explanation:
+      en: "After *den* in the plural *Dativ* the ending is *-en*: *den Reisenden*."
+      fa: "پس از *den* در حالت *Dativ* جمع پایانه *-en* است: *den Reisenden*."
+      de: "Nach *den* im Dativ Plural ist die Endung *-en*: *den Reisenden*."
+  - id: match-1
+    type: matching
+    answer:
+      - [der Deutsche, ein Deutscher]
+      - [die Deutsche, eine Deutsche]
+      - [die Deutschen, viele Deutsche]
+    explanation:
+      en: "The ending follows the word before it, as with an adjective: *-er* after *ein*, *-e* after *eine* and after *viele*."
+      fa: "پایانه، مانند صفت، به واژهٔ پیش از آن بستگی دارد: پس از *ein* پایانهٔ *-er* و پس از *eine* و *viele* پایانهٔ *-e*."
+      de: "Die Endung hängt vom Wort davor ab, wie beim Adjektiv: *-er* nach *ein*, *-e* nach *eine* und nach *viele*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 9c3e0e522a343eb2
