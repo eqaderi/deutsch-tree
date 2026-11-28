@@ -1,33 +1,311 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-food-drink-more
 kind: vocabulary
 level: A2
 chapter: a2-words-home-food
 order: 4
-status: coming-soon
+status: published
 title:
   en: "More food and drink"
   fa: "خوراکی‌ها و نوشیدنی‌های بیشتر"
   de: "Mehr Essen und Trinken"
+attemptSize: 15
 words:
   - word: Käse
+    class: noun
+    article: der
+    number: singular-only
+    level: A2
+    meaning:
+      en: cheese
+      fa: پنیر
+    definition: ein festes Lebensmittel aus Milch, oft gelb und in Scheiben, zum Beispiel aus Holland oder der Schweiz
+    example:
+      de: Zum Frühstück esse ich Brot mit Käse.
+      en: For breakfast I have bread and cheese.
+      fa: صبحانه نان و پنیر می‌خورم.
+
   - word: Wurst
+    class: noun
+    article: die
+    plural: Würste
+    level: A2
+    meaning:
+      en: sausage, cold meat
+      fa: سوسیس، کالباس
+    definition: klein gemachtes Fleisch in einer Haut, lang oder rund; man isst es warm oder kalt in Scheiben auf Brot
+    example:
+      de: Auf dem Markt gibt es heute Würste vom Grill.
+      en: There are grilled sausages at the market today.
+      fa: امروز در بازار سوسیس کبابی هست.
+    alsoAccepted: [das Würstchen, die Bratwurst, der Aufschnitt]
+
   - word: Rind
+    class: noun
+    article: das
+    plural: Rinder
+    level: A2
+    meaning:
+      en: beef; cattle
+      fa: گوشت گاو؛ گاو
+    definition: die Tiere, zu denen die Kuh und der Stier gehören, und ihr Fleisch
+    example:
+      de: Wir essen kein Schweinefleisch, nur Fleisch vom Rind.
+      en: We don't eat pork, only beef.
+      fa: ما گوشت خوک نمی‌خوریم، فقط گوشت گاو.
+    alsoAccepted: [das Rindfleisch, die Kuh]
+
   - word: Schwein
+    class: noun
+    article: das
+    plural: Schweine
+    level: A2
+    meaning:
+      en: pig; pork
+      fa: خوک؛ گوشت خوک
+    definition: ein rosa Tier auf dem Bauernhof mit einer runden Nase; viele Leute essen sein Fleisch
+    example:
+      de: Auf dem Bauernhof gibt es Kühe und Schweine.
+      en: There are cows and pigs on the farm.
+      fa: در این مزرعه گاو و خوک هست.
+    alsoAccepted: [das Schweinefleisch]
+
   - word: Nudel
+    class: noun
+    article: die
+    plural: Nudeln
+    level: A2
+    meaning:
+      en: noodle; pasta
+      fa: رشته، ماکارونی
+    definition: ein Lebensmittel aus Mehl, Wasser und oft Eiern, das man in Wasser kocht, zum Beispiel Spaghetti
+    example:
+      de: Heute gibt es Nudeln mit Tomatensoße.
+      en: Today it's pasta with tomato sauce.
+      fa: امروز ماکارونی با سس گوجه‌فرنگی داریم.
+    alsoAccepted: [die Nudeln, die Pasta, die Teigwaren]
+
   - word: Suppe
+    class: noun
+    article: die
+    plural: Suppen
+    level: A2
+    meaning:
+      en: soup
+      fa: سوپ
+    definition: ein flüssiges, oft warmes Essen, das man mit dem Löffel isst
+    example:
+      de: Im Winter koche ich oft eine Suppe mit Gemüse.
+      en: In winter I often make a vegetable soup.
+      fa: زمستان‌ها اغلب سوپ سبزیجات درست می‌کنم.
+
   - word: Pizza
+    class: noun
+    article: die
+    plural: Pizzen
+    level: A2
+    meaning:
+      en: pizza
+      fa: پیتزا
+    definition: ein flaches, rundes Essen aus Teig mit Tomaten und Käse; es kommt aus Italien und wird im Ofen gebacken
+    example:
+      de: Wollen wir heute Abend Pizza bestellen?
+      en: Shall we order pizza tonight?
+      fa: امشب پیتزا سفارش بدهیم؟
+
   - word: Hamburger
+    class: noun
+    article: der
+    plural: Hamburger
+    level: A2
+    meaning:
+      en: hamburger, burger
+      fa: همبرگر
+    definition: ein rundes Brötchen mit einem Stück warmem Hackfleisch, Salat und Soße darin
+    example:
+      de: Die Kinder möchten am liebsten Hamburger mit Pommes.
+      en: What the children would like most is burgers and chips.
+      fa: بچه‌ها از همه بیشتر همبرگر با سیب‌زمینی سرخ‌کرده می‌خواهند.
+    alsoAccepted: [der Burger]
+
   - word: Bohne
+    class: noun
+    article: die
+    plural: Bohnen
+    level: A2
+    meaning:
+      en: bean
+      fa: لوبیا
+    definition: ein Gemüse aus kleinen, länglichen Samen, weiß, rot oder schwarz, die man lange kocht, zum Beispiel für Chili con Carne
+    example:
+      de: Zum Fleisch gibt es grüne Bohnen.
+      en: There are green beans with the meat.
+      fa: همراه گوشت لوبیا سبز هم هست.
+    alsoAccepted: [die Bohnen]
+
   - word: Orange
+    class: noun
+    article: die
+    plural: Orangen
+    level: A2
+    meaning:
+      en: orange (the fruit)
+      fa: پرتقال
+    definition: eine runde, süße Frucht aus dem Süden mit einer dicken Schale; aus ihr macht man oft Saft
+    example:
+      de: Jeden Morgen presse ich zwei Orangen aus.
+      en: Every morning I squeeze two oranges.
+      fa: هر صبح آب دو پرتقال را می‌گیرم.
+    alsoAccepted: [die Apfelsine]
+
   - word: Zitrone
+    class: noun
+    article: die
+    plural: Zitronen
+    level: A2
+    meaning:
+      en: lemon
+      fa: لیمو، لیموترش
+    definition: eine gelbe Frucht, die sehr sauer schmeckt
+    example:
+      de: Ich trinke den Tee gern mit Zitrone.
+      en: I like my tea with lemon.
+      fa: چای را با لیموترش دوست دارم.
+
   - word: Eis
+    class: noun
+    article: das
+    number: singular-only
+    level: A2
+    meaning:
+      en: ice cream; ice
+      fa: بستنی؛ یخ
+    definition: etwas Kaltes und Süßes, das man besonders im Sommer isst; auch Wasser, das ganz kalt und hart geworden ist
+    example:
+      de: Im Sommer essen wir fast jeden Tag ein Eis.
+      en: In summer we have an ice cream almost every day.
+      fa: تابستان‌ها تقریباً هر روز بستنی می‌خوریم.
+    alsoAccepted: [das Speiseeis, die Eiscreme, die Glace]
+
+  # Chocolate is one of the sweets; neither meaning is offered as a wrong one for the other.
   - word: Schokolade
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: chocolate
+      fa: شکلات
+    definition: etwas Süßes und Braunes aus Kakao, Milch und Zucker, oft als Tafel
+    example:
+      de: Diese Schokolade ist mit Nüssen.
+      en: This chocolate has nuts in it.
+      fa: این شکلات مغزدار است.
+    tooCloseTo: [Süßigkeiten]
+
   - word: Torte
+    class: noun
+    article: die
+    plural: Torten
+    level: A2
+    meaning:
+      en: gateau, cream cake
+      fa: کیک خامه‌ای
+    definition: ein großer, feiner Kuchen mit Sahne oder Creme, zum Beispiel zum Geburtstag
+    example:
+      de: Zum Geburtstag gibt es eine Torte mit Erdbeeren.
+      en: For the birthday there's a strawberry cream cake.
+      fa: برای تولد کیک خامه‌ای توت‌فرنگی داریم.
+    alsoAccepted: [der Kuchen, die Sahnetorte, die Geburtstagstorte]
+
   - word: Süßigkeiten
+    class: noun
+    article: die
+    number: plural-only
+    level: A2
+    meaning:
+      en: sweets, candy
+      fa: آب‌نبات و شکلات، تنقلات شیرین
+    definition: Bonbons, Gummibärchen und andere kleine süße Sachen
+    example:
+      de: Die Kinder dürfen nur am Wochenende Süßigkeiten essen.
+      en: The children are only allowed sweets at the weekend.
+      fa: بچه‌ها فقط آخر هفته اجازه دارند آب‌نبات و شکلات بخورند.
+    alsoAccepted: [die Süßwaren, die Bonbons, die Naschereien]
+
   - word: Zucker
+    class: noun
+    article: der
+    number: singular-only
+    level: A2
+    meaning:
+      en: sugar
+      fa: شکر
+    definition: ein weißes Pulver, das Kaffee, Tee oder Kuchen süß macht
+    example:
+      de: Nimmst du Zucker in den Kaffee?
+      en: Do you take sugar in your coffee?
+      fa: قهوه‌ات را با شکر می‌خوری؟
+
   - word: Mineralwasser
+    class: noun
+    article: das
+    number: singular-only
+    level: A2
+    meaning:
+      en: mineral water
+      fa: آب معدنی
+    definition: Wasser aus der Flasche, oft mit Kohlensäure
+    example:
+      de: Eine Flasche Mineralwasser, bitte.
+      en: A bottle of mineral water, please.
+      fa: یک بطری آب معدنی، لطفاً.
+    alsoAccepted: [das Sprudelwasser, der Sprudel, das Tafelwasser]
+
   - word: Bäcker
+    class: noun
+    article: der
+    plural: Bäcker
+    level: A2
+    meaning:
+      en: baker; baker's (shop)
+      fa: نانوا؛ نانوایی
+    definition: eine Person, die beruflich Brot, Brötchen und Kuchen macht; auch das Geschäft, in dem sie sie verkauft
+    example:
+      de: Ich gehe schnell zum Bäcker und hole Brötchen.
+      en: I'm just popping to the baker's for some rolls.
+      fa: سریع به نانوایی می‌روم و نان می‌خرم.
+    alsoAccepted: [die Bäckerin, die Bäckerei]
+
+  # These are the node's only adjectives, so each is also offered meanings of nouns as wrong options.
   - word: hart
+    class: adjective
+    level: A2
+    meaning:
+      en: hard
+      fa: سفت، سخت
+    definition: nicht weich; man kann es mit dem Finger nicht eindrücken
+    example:
+      de: Das Brot von gestern ist schon hart.
+      en: Yesterday's bread has already gone hard.
+      fa: نان دیروز دیگر سفت شده است.
+
   - word: weich
+    class: adjective
+    level: A2
+    meaning:
+      en: soft
+      fa: نرم
+    definition: nicht hart; es gibt nach, wenn man darauf drückt
+    example:
+      de: Die Kartoffeln sind gekocht und schön weich.
+      en: The potatoes are cooked and nicely soft.
+      fa: سیب‌زمینی‌ها پخته و حسابی نرم شده‌اند.
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 120 questions, then the 17 changed after the first one's
+    objections, then the 7 changed after the second one's; not people)"
+  date: 2026-11-28
+  pool: c4ed7fdf64e16c09
