@@ -4,10 +4,277 @@ kind: grammar
 level: A2
 chapter: a2-subordinate-clauses
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-149, grammar-157]
 title:
   en: "*weil*"
   fa: "*weil*"
   de: "*weil*"
+
+explanations:
+  en:
+    rule: >
+      *Weil* (because) gives a reason. It starts a subordinate clause, so the
+      conjugated verb goes to the end: *Er kommt nicht mit, weil er krank
+      ist.* *Denn* means the same, but it stands in position 0 and leaves the
+      verb in position 2: *…, denn er ist krank.* A comma always comes before
+      *weil*. The *weil* clause can also come first; then the main clause
+      starts with its verb: *Weil es regnet, nehmen wir ein Taxi.* It can even
+      stand alone as the answer to *Warum?*: *Warum kommst du nicht? – Weil
+      ich keine Zeit habe.*
+  fa:
+    rule: >
+      *weil* (چون، زیرا) علت را بیان می‌کند. این حرف ربط جملهٔ پیرو را آغاز
+      می‌کند، پس فعل صرف‌شده به پایان جمله می‌رود: *Er kommt nicht mit, weil
+      er krank ist.* *denn* همین معنا را دارد، ولی در جایگاه صفر می‌آید و فعل
+      را در جایگاه دوم نگه می‌دارد: *…, denn er ist krank.* پیش از *weil*
+      همیشه ویرگول می‌آید. جملهٔ پیرو با *weil* می‌تواند اول هم بیاید؛ در این
+      صورت جملهٔ پایه با فعلش آغاز می‌شود: *Weil es regnet, nehmen wir ein
+      Taxi.* این جمله حتی به‌تنهایی پاسخ پرسش *Warum?* (چرا؟) است: *Warum
+      kommst du nicht? – Weil ich keine Zeit habe.*
+  de:
+    rule: >
+      *Weil* nennt einen Grund. Mit *weil* beginnt ein Nebensatz. Das
+      konjugierte Verb steht am Ende: *Er kommt nicht mit, weil er krank
+      ist.* *Denn* bedeutet das Gleiche. Aber *denn* steht auf Position 0,
+      und das Verb bleibt auf Position 2: *…, denn er ist krank.* Vor *weil*
+      steht immer ein Komma. Der *weil*-Satz kann auch zuerst stehen. Dann
+      beginnt der Hauptsatz mit dem Verb: *Weil es regnet, nehmen wir ein
+      Taxi.* Auf die Frage *Warum?* kann der *weil*-Satz allein die Antwort
+      sein: *Warum kommst du nicht? – Weil ich keine Zeit habe.*
+
+table:
+  columns:
+    - {
+        en: "With *denn*: verb in position 2",
+        fa: "با *denn*: فعل در جایگاه دوم",
+        de: "Mit *denn*: Verb auf Position 2",
+      }
+    - { en: "With *weil*: verb at the end", fa: "با *weil*: فعل در پایان", de: "Mit *weil*: Verb am Ende" }
+  rows:
+    - ["Er kommt nicht mit, denn er ist krank.", "Er kommt nicht mit, weil er krank ist."]
+    - ["Ich lerne Deutsch, denn ich will in Wien arbeiten.", "Ich lerne Deutsch, weil ich in Wien arbeiten will."]
+    - ["Sie ist müde, denn sie hat schlecht geschlafen.", "Sie ist müde, weil sie schlecht geschlafen hat."]
+    - ["Wir gehen zu Fuß, denn der Bus kommt nicht.", "Wir gehen zu Fuß, weil der Bus nicht kommt."]
+    - ["Ich bin nervös, denn mein Kurs fängt morgen an.", "Ich bin nervös, weil mein Kurs morgen anfängt."]
+
+examples:
+  - de: Er kommt nicht mit, weil er krank ist.
+    en: He isn't coming along because he is ill.
+    fa: با ما نمی‌آید، چون بیمار است.
+  - de: Ich lerne Deutsch, weil ich in Wien arbeiten will.
+    en: I'm learning German because I want to work in Vienna.
+    fa: آلمانی یاد می‌گیرم، چون می‌خواهم در وین کار کنم.
+  - de: Warum bist du so müde? – Weil ich schlecht geschlafen habe.
+    en: Why are you so tired? – Because I slept badly.
+    fa: چرا این‌قدر خسته‌ای؟ – چون بد خوابیده‌ام.
+  - de: Weil es so warm ist, gehen wir schwimmen.
+    en: Because it's so warm, we're going swimming.
+    fa: چون هوا خیلی گرم است، به شنا می‌رویم.
+  - de: Wir nehmen ein Taxi, weil der letzte Bus schon weg ist.
+    en: We're taking a taxi because the last bus has already gone.
+    fa: تاکسی می‌گیریم، چون آخرین اتوبوس رفته است.
+  - de: Ich bin nervös, weil mein Kurs morgen anfängt.
+    en: I'm nervous because my course starts tomorrow.
+    fa: نگرانم، چون کلاسم فردا شروع می‌شود.
+  - de: Ich rufe meine Oma an, weil sie heute Geburtstag hat.
+    en: I'm calling my grandma because it's her birthday today.
+    fa: به مادربزرگم زنگ می‌زنم، چون امروز تولدش است.
+  - de: Ich esse kein Fleisch, weil ich Vegetarierin bin.
+    en: I don't eat meat because I'm a vegetarian.
+    fa: گوشت نمی‌خورم، چون گیاه‌خوارم.
+
+mistakes:
+  - wrong: Er kommt nicht mit, weil er ist krank.
+    right: Er kommt nicht mit, weil er krank ist.
+    why:
+      en: "*Weil* sends the conjugated verb to the end: *weil er krank ist*."
+      fa: "*weil* فعل صرف‌شده را به پایان جمله می‌فرستد: *weil er krank ist*."
+      de: "Nach *weil* steht das konjugierte Verb am Ende: *weil er krank ist*."
+  - wrong: Ich bleibe zu Hause, denn ich krank bin.
+    right: Ich bleibe zu Hause, denn ich bin krank.
+    why:
+      en: "*Denn* does not change the word order: the verb stays in position 2, *denn ich bin krank*."
+      fa: "*denn* ترتیب واژه‌ها را تغییر نمی‌دهد و فعل در جایگاه دوم می‌ماند: *denn ich bin krank*."
+      de: "*Denn* ändert die Wortstellung nicht. Das Verb bleibt auf Position 2: *denn ich bin krank*."
+  - wrong: Weil ich keine Zeit habe, ich komme nicht.
+    right: Weil ich keine Zeit habe, komme ich nicht.
+    why:
+      en: "The *weil* clause is position 1, so the main clause goes on with its verb: *komme ich*."
+      fa: "جملهٔ پیرو با *weil* جایگاه اول است، پس جملهٔ پایه با فعلش ادامه می‌یابد: *komme ich*."
+      de: "Der *weil*-Satz ist Position 1. Danach kommt das Verb: *komme ich*."
+  - wrong: Ich lerne Deutsch weil ich in Wien arbeiten will.
+    right: Ich lerne Deutsch, weil ich in Wien arbeiten will.
+    why:
+      en: "A comma always comes before *weil*."
+      fa: "پیش از *weil* همیشه ویرگول می‌آید."
+      de: "Vor *weil* steht immer ein Komma."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich komme heute nicht, ___ ich krank bin.
+    options: [weil, denn, aber]
+    answer: weil
+    explanation:
+      en: "The verb *bin* is at the end, so only *weil* fits; after *denn* and *aber* it would stand in position 2."
+      fa: "فعل *bin* در پایان جمله است، پس فقط *weil* درست است؛ پس از *denn* و *aber* فعل در جایگاه دوم می‌آمد."
+      de: "Das Verb *bin* steht am Ende. Darum passt nur *weil*. Nach *denn* und *aber* stünde es auf Position 2."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich komme heute nicht, ___ ich bin krank.
+    options: [denn, weil, dass]
+    answer: denn
+    explanation:
+      en: "The verb *bin* is in position 2, so the reason needs *denn*: it does not change the word order."
+      fa: "فعل *bin* در جایگاه دوم است، پس برای بیان علت *denn* لازم است که ترتیب واژه‌ها را تغییر نمی‌دهد."
+      de: "Das Verb *bin* steht auf Position 2. Darum passt *denn*: Es ändert die Wortstellung nicht."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Er kommt nicht mit, weil …
+    options: [er krank ist., er ist krank., ist er krank.]
+    answer: er krank ist.
+    explanation:
+      en: "After *weil* the conjugated verb goes to the end: *er krank ist*."
+      fa: "پس از *weil* فعل صرف‌شده به پایان جمله می‌رود: *er krank ist*."
+      de: "Nach *weil* steht das konjugierte Verb am Ende: *er krank ist*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Warum lernst du Deutsch? – …
+    options: [Weil ich in Wien arbeiten will., Weil ich will in Wien arbeiten., Weil will ich in Wien arbeiten.]
+    answer: Weil ich in Wien arbeiten will.
+    explanation:
+      en: "The conjugated modal verb *will* comes last, after the infinitive *arbeiten*."
+      fa: "فعل وجهی صرف‌شدهٔ *will* در آخر و پس از مصدر *arbeiten* می‌آید."
+      de: "Das konjugierte Modalverb *will* steht ganz am Schluss, nach dem Infinitiv *arbeiten*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Weil der Bus nicht kommt, …
+    options: [gehen wir zu Fuß., wir gehen zu Fuß., wir zu Fuß gehen.]
+    answer: gehen wir zu Fuß.
+    explanation:
+      en: "The *weil* clause is position 1, so the main clause starts with its verb: *gehen wir*."
+      fa: "جملهٔ پیرو با *weil* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *gehen wir*."
+      de: "Der *weil*-Satz ist Position 1. Der Hauptsatz beginnt mit dem Verb: *gehen wir*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Sie ist sehr müde, …
+    options: [weil sie schlecht geschlafen hat., weil sie hat schlecht geschlafen., denn sie schlecht geschlafen hat.]
+    answer: weil sie schlecht geschlafen hat.
+    explanation:
+      en: "After *weil*, *hat* goes to the end, after the *Partizip II*. *Denn* would keep *hat* in position 2."
+      fa: "پس از *weil*، فعل *hat* پس از صفت مفعولی و در پایان می‌آید. با *denn*، *hat* در جایگاه دوم می‌ماند."
+      de: "Nach *weil* steht *hat* am Ende, nach dem Partizip II. Bei *denn* bliebe *hat* auf Position 2."
+  - id: true-1
+    type: true-false
+    prompt: Ich nehme einen Schirm mit, weil es regnet.
+    answer: true
+    explanation:
+      en: "The verb *regnet* is at the end of the *weil* clause. The sentence is correct."
+      fa: "فعل *regnet* در پایان جملهٔ پیرو با *weil* است. جمله درست است."
+      de: "Das Verb *regnet* steht am Ende vom *weil*-Satz. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir bleiben zu Hause, weil ist es zu kalt.
+    answer: false
+    explanation:
+      en: "After *weil* the subject comes first and the verb last: *weil es zu kalt ist*."
+      fa: "پس از *weil* اول فاعل و در آخر فعل می‌آید: *weil es zu kalt ist*."
+      de: "Nach *weil* kommt zuerst das Subjekt, das Verb steht am Ende: *weil es zu kalt ist*."
+  - id: true-3
+    type: true-false
+    prompt: Weil ich Hunger habe, koche ich jetzt.
+    answer: true
+    explanation:
+      en: "*Habe* ends the *weil* clause, and the main clause starts with its verb *koche*. The sentence is correct."
+      fa: "*habe* جملهٔ پیرو را می‌بندد و جملهٔ پایه با فعل *koche* آغاز می‌شود. جمله درست است."
+      de: "*Habe* steht am Ende vom *weil*-Satz, der Hauptsatz beginnt mit dem Verb *koche*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Er ist glücklich, denn er hat eine neue Arbeit.
+    answer: true
+    explanation:
+      en: "After *denn* the verb stays in position 2: *er hat*. The sentence is correct."
+      fa: "پس از *denn* فعل در جایگاه دوم می‌ماند: *er hat*. جمله درست است."
+      de: "Nach *denn* bleibt das Verb auf Position 2: *er hat*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Ich rufe dich später an, weil ich jetzt keine Zeit habe.
+    answer: true
+    explanation:
+      en: "The verb *habe* is at the end of the *weil* clause. The sentence is correct."
+      fa: "فعل *habe* در پایان جملهٔ پیرو با *weil* است. جمله درست است."
+      de: "Das Verb *habe* steht am Ende vom *weil*-Satz. Der Satz ist richtig."
+  - id: true-6
+    type: true-false
+    prompt: Sie kann nicht kommen, weil sie muss arbeiten.
+    answer: false
+    explanation:
+      en: "The modal verb goes to the end, after the infinitive: *weil sie arbeiten muss*."
+      fa: "فعل وجهی پس از مصدر به پایان جمله می‌رود: *weil sie arbeiten muss*."
+      de: "Das Modalverb steht am Ende, nach dem Infinitiv: *weil sie arbeiten muss*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir gehen heute nicht schwimmen, weil das Wasser zu kalt ___ (sein).
+    answers: [ist]
+    explanation:
+      en: "*Das Wasser* is third person singular, and the verb stands at the end: *ist*."
+      fa: "*das Wasser* سوم‌شخص مفرد است و فعل در پایان جمله می‌آید: *ist*."
+      de: "*Das Wasser* ist 3. Person Singular, das Verb steht am Ende: *ist*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich muss jetzt gehen, weil mein Zug gleich ___ (abfahren).
+    answers: [abfährt]
+    explanation:
+      en: "In the *weil* clause the separable verb is one word at the end: *abfährt*."
+      fa: "در جملهٔ پیرو با *weil* فعل جداشدنی یک‌جا در پایان می‌آید: *abfährt*."
+      de: "Im *weil*-Satz steht das trennbare Verb zusammen am Ende: *abfährt*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Warum kommst du nicht mit? – ___ ich keine Zeit habe.
+    answers: [Weil]
+    explanation:
+      en: "A clause with its verb at the end can answer *Warum?* alone with *weil*."
+      fa: "جمله‌ای که فعلش در پایان است با *weil* به‌تنهایی پاسخ پرسش *Warum?* است."
+      de: "Ein Satz mit dem Verb am Ende kann mit *weil* allein auf *Warum?* antworten."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["er kommt heute nicht,", weil, er, krank, ist]
+    explanation:
+      en: "*Weil* starts the clause, then the subject, and the verb *ist* comes last."
+      fa: "*weil* جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل *ist* در آخر."
+      de: "*Weil* beginnt den Satz, dann kommt das Subjekt, das Verb *ist* steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["weil es regnet,", nehmen, wir, ein Taxi]
+    explanation:
+      en: "The *weil* clause is position 1, so the verb *nehmen* follows, then the subject."
+      fa: "جملهٔ پیرو با *weil* جایگاه اول است، پس فعل *nehmen* و سپس فاعل می‌آید."
+      de: "Der *weil*-Satz ist Position 1. Dann kommt das Verb *nehmen*, danach das Subjekt."
+  - id: order-3
+    type: word-order
+    answers:
+      - ["ich lerne Deutsch,", weil, ich, in Wien, arbeiten, will]
+    explanation:
+      en: "After *weil* the modal verb *will* goes to the very end, after *arbeiten*."
+      fa: "پس از *weil* فعل وجهی *will* پس از *arbeiten* و در پایان جمله می‌آید."
+      de: "Nach *weil* steht das Modalverb *will* ganz am Ende, nach *arbeiten*."
+  - id: match-1
+    type: matching
+    answer:
+      - [Warum trinkst du so viel Wasser?, Weil ich Durst habe.]
+      - [Warum isst du schon wieder?, Weil ich Hunger habe.]
+      - [Warum gehst du schon ins Bett?, Weil ich müde bin.]
+    explanation:
+      en: "Each *weil* clause gives the reason and answers *Warum?*: thirst for water, hunger for eating, tiredness for bed."
+      fa: "هر جملهٔ پیرو با *weil* علت را می‌گوید و پاسخ *Warum?* است: تشنگی برای آب، گرسنگی برای خوردن، خستگی برای خواب."
+      de: "Jeder *weil*-Satz nennt den Grund und antwortet auf *Warum?*: Durst beim Wasser, Hunger beim Essen, müde beim Bett."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: b09fdc120f08b979
