@@ -1,13 +1,409 @@
-# Grammar list row 130.
+# Grammar list row 130. The principal parts (stand, gestanden; stellte,
+# gestellt), the two past forms of hängen and sich setzen/legen/stellen are B1
+# in the list, so this node keeps to the present tense.
 id: grammar-130
 kind: grammar
 level: A2
 chapter: a2-prepositions
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-129]
 title:
   en: "Position and direction verb pairs"
   fa: "جفت‌فعل‌های مکان و جهت (*stehen* / *stellen* …)"
   de: "Verbpaare für Ort und Richtung (*stehen* / *stellen* …)"
+
+explanations:
+  en:
+    rule: >
+      German has pairs of verbs for a place and for a movement to it.
+      *Stehen*, *liegen* and *sitzen* say where something is (*Wo?*), so the
+      *Dativ* follows, and they have no object: *Die Vase steht auf dem
+      Tisch.* *Stellen*, *legen* and *setzen* say that someone puts something
+      there (*Wohin?*), so the *Akkusativ* follows, and they have an object:
+      *Ich stelle die Vase auf den Tisch.* *Stehen* and *stellen* are for
+      things upright, on their base or their feet (a bottle, a lamp, books on
+      a shelf); *liegen* and *legen* for things flat (a key, a newspaper, a
+      person in bed); *sitzen* and *setzen* for sitting. *Hängen* is both:
+      *Das Bild hängt an der Wand. Ich hänge das Bild an die Wand.* To sit
+      down yourself is *sich setzen*, a later topic.
+  fa:
+    rule: >
+      آلمانی برای جای چیزی و برای حرکت به آن‌جا جفت‌فعل دارد. *stehen*،
+      *liegen* و *sitzen* می‌گویند چیزی کجاست (*Wo?*)، پس پس از آن‌ها حالت
+      *Dativ* (حالت مفعول باواسطه) می‌آید؛ این فعل‌ها مفعول ندارند: *Die Vase
+      steht auf dem Tisch.* *stellen*، *legen* و *setzen* می‌گویند کسی چیزی
+      را جایی می‌گذارد (*Wohin?*)، پس حالت *Akkusativ* (حالت مفعولی) می‌آید؛
+      این فعل‌ها مفعول دارند: *Ich stelle die Vase auf den Tisch.* *stehen* و
+      *stellen* برای چیزهای ایستاده‌اند، روی پایه یا پایه‌هایشان (بطری، چراغ،
+      کتاب در قفسه)؛ *liegen* و *legen* برای چیزهای خوابیده (کلید، روزنامه،
+      کسی که در تخت است)؛ *sitzen* و *setzen* برای حالت نشسته. *hängen* هر دو
+      معنا را دارد: *Das Bild hängt an der Wand.* و *Ich hänge das Bild an die
+      Wand.* برای نشستن خودِ شخص *sich setzen* به کار می‌رود که موضوع درسی
+      دیگر است.
+  de:
+    rule: >
+      Für einen Ort und für eine Bewegung dorthin gibt es Verbpaare. *Stehen*,
+      *liegen* und *sitzen* sagen, wo etwas ist (*Wo?*). Danach steht der
+      Dativ, und sie haben kein Objekt: *Die Vase steht auf dem Tisch.*
+      *Stellen*, *legen* und *setzen* sagen, dass jemand etwas an einen Ort
+      bringt (*Wohin?*). Danach steht der Akkusativ, und sie haben ein Objekt:
+      *Ich stelle die Vase auf den Tisch.* *Stehen* und *stellen*: Die Sache
+      steht gerade, auf dem Boden oder auf Beinen (eine Flasche, eine Lampe,
+      Bücher im Regal). *Liegen* und *legen*: Die Sache ist flach (ein
+      Schlüssel, eine Zeitung, ein Mensch im Bett). *Sitzen* und *setzen*:
+      Jemand sitzt. *Hängen* gibt es für beides: *Das Bild hängt an der Wand.
+      Ich hänge das Bild an die Wand.* Selbst Platz nehmen heißt *sich
+      setzen*. Das kommt später.
+
+# Three rows: a bottle upright, a bottle flat, a picture on a wall. On the
+# left it is there (Wo?), on the right someone puts it there (Wohin?) and the
+# dashed shape is where it ends.
+diagrams:
+  - caption:
+      en: >
+        On the left a thing is somewhere: *steht*, *liegt*, *hängt* + *Dativ*.
+        On the right someone puts it there: *stellt*, *legt*, *hängt* +
+        *Akkusativ*. An upright bottle *steht*, a bottle on its side *liegt*.
+      fa: >
+        در سمت چپ چیزی جایی قرار دارد: *steht*، *liegt*، *hängt* + حالت
+        *Dativ*. در سمت راست کسی آن را آن‌جا می‌گذارد: *stellt*، *legt*،
+        *hängt* + حالت *Akkusativ*. بطری ایستاده *steht* و بطری خوابیده
+        *liegt*.
+      de: >
+        Links ist eine Sache an einem Ort: *steht*, *liegt*, *hängt* + Dativ.
+        Rechts bringt jemand sie dorthin: *stellt*, *legt*, *hängt* +
+        Akkusativ. Eine Flasche, die gerade ist, *steht*. Eine Flasche auf der
+        Seite *liegt*.
+    svg: |
+      <svg viewBox="0 0 320 384">
+        <text class="label" x="80" y="22" text-anchor="middle">Wo?</text>
+        <text class="note" x="80" y="42" text-anchor="middle">Dativ</text>
+        <text class="label" x="240" y="22" text-anchor="middle">Wohin?</text>
+        <text class="note" x="240" y="42" text-anchor="middle">Akkusativ</text>
+        <line class="guide" x1="160" y1="8" x2="160" y2="376"/>
+        <!-- steht: an upright bottle on a table -->
+        <rect class="surface" x="40" y="100" width="80" height="8"/>
+        <line class="line" x1="48" y1="108" x2="48" y2="130"/>
+        <line class="line" x1="112" y1="108" x2="112" y2="130"/>
+        <rect class="object" x="74" y="70" width="12" height="30"/>
+        <rect class="object" x="77" y="62" width="6" height="8"/>
+        <text class="label" x="80" y="152" text-anchor="middle">steht</text>
+        <!-- stellt: the bottle is put upright on the table -->
+        <rect class="surface" x="200" y="100" width="80" height="8"/>
+        <line class="line" x1="208" y1="108" x2="208" y2="130"/>
+        <line class="line" x1="272" y1="108" x2="272" y2="130"/>
+        <rect class="object" x="170" y="58" width="12" height="30"/>
+        <rect class="object" x="173" y="50" width="6" height="8"/>
+        <rect class="guide" x="234" y="70" width="12" height="30"/>
+        <rect class="guide" x="237" y="62" width="6" height="8"/>
+        <path class="line" d="M 188 58 Q 222 40 232 64"/>
+        <polyline class="line" points="225,58 232,66 236,56"/>
+        <text class="label" x="240" y="152" text-anchor="middle">stellt</text>
+        <!-- liegt: a bottle on its side on a table -->
+        <rect class="surface" x="40" y="220" width="80" height="8"/>
+        <line class="line" x1="48" y1="228" x2="48" y2="250"/>
+        <line class="line" x1="112" y1="228" x2="112" y2="250"/>
+        <rect class="object" x="60" y="208" width="30" height="12"/>
+        <rect class="object" x="90" y="211" width="8" height="6"/>
+        <text class="label" x="80" y="272" text-anchor="middle">liegt</text>
+        <!-- legt: the bottle is put flat on the table -->
+        <rect class="surface" x="200" y="220" width="80" height="8"/>
+        <line class="line" x1="208" y1="228" x2="208" y2="250"/>
+        <line class="line" x1="272" y1="228" x2="272" y2="250"/>
+        <rect class="object" x="166" y="174" width="30" height="12"/>
+        <rect class="object" x="196" y="177" width="8" height="6"/>
+        <rect class="guide" x="222" y="208" width="30" height="12"/>
+        <rect class="guide" x="252" y="211" width="8" height="6"/>
+        <path class="line" d="M 208 176 Q 236 170 238 200"/>
+        <polyline class="line" points="232,194 238,203 243,193"/>
+        <text class="label" x="240" y="272" text-anchor="middle">legt</text>
+        <!-- hängt: a picture on a wall -->
+        <rect class="surface" x="30" y="290" width="100" height="56"/>
+        <polyline class="line" points="62,306 80,296 98,306"/>
+        <circle class="object" cx="80" cy="296" r="2"/>
+        <rect class="shade" x="62" y="306" width="36" height="26"/>
+        <text class="label" x="80" y="372" text-anchor="middle">hängt</text>
+        <!-- hängt: the picture is hung on the wall -->
+        <rect class="surface" x="210" y="290" width="96" height="56"/>
+        <circle class="object" cx="258" cy="296" r="2"/>
+        <rect class="guide" x="240" y="306" width="36" height="26"/>
+        <rect class="shade" x="166" y="312" width="30" height="22"/>
+        <path class="line" d="M 198 316 Q 218 300 236 312"/>
+        <polyline class="line" points="227,305 237,313 226,316"/>
+        <text class="label" x="240" y="372" text-anchor="middle">hängt</text>
+      </svg>
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Wo?*: *Dativ*", fa: "*Wo?*: حالت *Dativ*", de: "*Wo?*: Dativ" }
+    - { en: "*Wohin?*: *Akkusativ*", fa: "*Wohin?*: حالت *Akkusativ*", de: "*Wohin?*: Akkusativ" }
+  rows:
+    - [der Tisch, Die Vase steht auf dem Tisch., Ich stelle die Vase auf den Tisch.]
+    - [die Couch, Die Zeitung liegt auf der Couch., Ich lege die Zeitung auf die Couch.]
+    - [das Bett, Das Baby liegt im Bett., Ich lege das Baby ins Bett.]
+    - [ein Stuhl, Das Kind sitzt auf einem Stuhl., Ich setze das Kind auf einen Stuhl.]
+    - [die Haken (Plural), Die Jacken hängen an den Haken., Ich hänge die Jacken an die Haken.]
+
+examples:
+  - de: Die Vase steht auf dem Tisch.
+    en: The vase is on the table.
+    fa: گلدان روی میز است.
+  - de: Ich stelle die Vase auf den Tisch.
+    en: I put the vase on the table.
+    fa: گلدان را روی میز می‌گذارم.
+  - de: Dein Handy liegt neben dem Bett.
+    en: Your phone is next to the bed.
+    fa: گوشی‌ات کنار تخت است.
+  - de: Ich lege dein Handy neben das Bett.
+    en: I put your phone next to the bed.
+    fa: گوشی‌ات را کنار تخت می‌گذارم.
+  - de: Die Kinder sitzen schon im Auto.
+    en: The children are already sitting in the car.
+    fa: بچه‌ها از قبل در ماشین نشسته‌اند.
+  - de: Der Vater setzt das Kind in den Kindersitz.
+    en: The father puts the child in the child seat.
+    fa: پدر بچه را روی صندلی کودک می‌نشاند.
+  - de: Der Mantel hängt an der Garderobe.
+    en: The coat is hanging on the coat rack.
+    fa: پالتو به جالباسی آویزان است.
+  - de: Ich hänge den Mantel an die Garderobe.
+    en: I hang the coat on the coat rack.
+    fa: پالتو را به جالباسی آویزان می‌کنم.
+  - de: Die Bücher stehen im Regal.
+    en: The books are on the shelf.
+    fa: کتاب‌ها در قفسه‌اند.
+  - de: Stell die Flaschen bitte in den Kühlschrank.
+    en: Please put the bottles in the fridge.
+    fa: بطری‌ها را در یخچال بگذار.
+
+mistakes:
+  - wrong: Ich stehe die Vase auf den Tisch.
+    right: Ich stelle die Vase auf den Tisch.
+    why:
+      en: "*Stehen* has no object. To put something upright somewhere is *stellen*."
+      fa: "*stehen* مفعول نمی‌گیرد. برای گذاشتن چیزی به‌صورت ایستاده *stellen* به کار می‌رود."
+      de: "*Stehen* hat kein Objekt. Wenn man etwas gerade hinstellt, sagt man *stellen*."
+  - wrong: Das Buch legt auf dem Tisch.
+    right: Das Buch liegt auf dem Tisch.
+    why:
+      en: "The book is somewhere (*Wo?*) and nobody moves it: *liegen*. *Legen* needs someone who puts something down."
+      fa: "کتاب جایی است (*Wo?*) و کسی آن را جابه‌جا نمی‌کند: *liegen*. *legen* کسی را لازم دارد که چیزی را بگذارد."
+      de: "Das Buch ist an einem Ort (*Wo?*), niemand bewegt es: *liegen*. Bei *legen* bringt jemand etwas an einen Ort."
+  - wrong: Das Kind setzt auf dem Stuhl.
+    right: Das Kind sitzt auf dem Stuhl.
+    why:
+      en: "The child is in a place (*Wo?*): *sitzen*. *Setzen* has an object: *Ich setze das Kind auf den Stuhl.*"
+      fa: "بچه جایی است (*Wo?*): *sitzen*. *setzen* مفعول می‌گیرد: *Ich setze das Kind auf den Stuhl.*"
+      de: "Das Kind ist an einem Ort (*Wo?*): *sitzen*. *Setzen* hat ein Objekt: *Ich setze das Kind auf den Stuhl.*"
+  - wrong: Stell die Tassen auf dem Tisch.
+    right: Stell die Tassen auf den Tisch.
+    why:
+      en: "*Stellen* is a movement (*Wohin?*), so the *Akkusativ* follows: *auf den Tisch*."
+      fa: "*stellen* حرکت است (*Wohin?*)، پس حالت *Akkusativ* می‌آید: *auf den Tisch*."
+      de: "*Stellen* ist eine Bewegung (*Wohin?*). Darum Akkusativ: *auf den Tisch*."
+  - wrong: Die Jacke hängt an die Tür.
+    right: Die Jacke hängt an der Tür.
+    why:
+      en: "Here *hängen* has no object and says where the jacket is (*Wo?*), so the *Dativ*: *an der Tür*."
+      fa: "این‌جا *hängen* مفعول ندارد و می‌گوید کت کجاست (*Wo?*)، پس حالت *Dativ* می‌آید: *an der Tür*."
+      de: "Hier hat *hängen* kein Objekt und sagt, wo die Jacke ist (*Wo?*). Darum Dativ: *an der Tür*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Die Vase ___ auf dem Tisch.
+    options: [steht, stellt, legt]
+    answer: steht
+    explanation:
+      en: "The vase is somewhere (*Wo?*, *dem Tisch*) and has no object: *stehen*."
+      fa: "گلدان جایی است (*Wo?*، *dem Tisch*) و مفعولی در کار نیست: *stehen*."
+      de: "Die Vase ist an einem Ort (*Wo?*, *dem Tisch*), ohne Objekt: *stehen*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich ___ die Vase auf den Tisch.
+    options: [stelle, stehe, liege]
+    answer: stelle
+    explanation:
+      en: "I put the vase there (*Wohin?*, *den Tisch*), and *die Vase* is the object: *stellen*."
+      fa: "گلدان را آن‌جا می‌گذارم (*Wohin?*، *den Tisch*) و *die Vase* مفعول است: *stellen*."
+      de: "Ich bringe die Vase dorthin (*Wohin?*, *den Tisch*). *Die Vase* ist das Objekt: *stellen*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der Schlüssel ___ neben dem Handy.
+    options: [liegt, legt, sitzt]
+    answer: liegt
+    explanation:
+      en: "A key is flat, and it is somewhere (*Wo?*): *liegen*."
+      fa: "کلید چیزی خوابیده است و جایی قرار دارد (*Wo?*): *liegen*."
+      de: "Ein Schlüssel ist flach und an einem Ort (*Wo?*): *liegen*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ dein Handy bitte nicht auf den Boden!
+    options: [Leg, Lieg, Sitz]
+    answer: Leg
+    explanation:
+      en: "Someone puts the phone down (*Wohin?*, *den Boden*), with an object: *legen*, imperative *Leg!*"
+      fa: "کسی گوشی را جایی می‌گذارد (*Wohin?*، *den Boden*) و مفعول دارد: *legen*، امر آن *Leg!*"
+      de: "Jemand bringt das Handy an einen Ort (*Wohin?*, *den Boden*), mit Objekt: *legen*, Imperativ *Leg!*"
+  - id: gap-5
+    type: gap-fill
+    prompt: Die Kinder ___ schon im Auto.
+    options: [sitzen, setzen, stellen]
+    answer: sitzen
+    explanation:
+      en: "The children are somewhere (*Wo?*, *im Auto*) and there is no object: *sitzen*."
+      fa: "بچه‌ها جایی هستند (*Wo?*، *im Auto*) و مفعولی در کار نیست: *sitzen*."
+      de: "Die Kinder sind an einem Ort (*Wo?*, *im Auto*), ohne Objekt: *sitzen*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Der Vater ___ das Kind in den Kindersitz.
+    options: [setzt, sitzt, liegt]
+    answer: setzt
+    explanation:
+      en: "The father puts the child there (*Wohin?*, *den Kindersitz*), and *das Kind* is the object: *setzen*."
+      fa: "پدر بچه را آن‌جا می‌نشاند (*Wohin?*، *den Kindersitz*) و *das Kind* مفعول است: *setzen*."
+      de: "Der Vater bringt das Kind dorthin (*Wohin?*, *den Kindersitz*). *Das Kind* ist das Objekt: *setzen*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Die Flasche ist umgefallen. Jetzt ___ sie auf dem Boden.
+    options: [liegt, steht, legt]
+    answer: liegt
+    explanation:
+      en: "The bottle has fallen over, so it is on its side (*Wo?*): *liegen*."
+      fa: "بطری افتاده است، پس به پهلو قرار دارد (*Wo?*): *liegen*."
+      de: "Die Flasche ist umgefallen. Sie ist jetzt auf der Seite (*Wo?*): *liegen*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wohin ___ du die Bücher? – Ins Regal.
+    options: [stellst, stehst, liegst]
+    answer: stellst
+    explanation:
+      en: "*Wohin?* asks about a movement with an object (*die Bücher*): *stellen*."
+      fa: "*Wohin?* حرکتی با مفعول (*die Bücher*) را می‌پرسد: *stellen*."
+      de: "*Wohin?* fragt nach einer Bewegung mit Objekt (*die Bücher*): *stellen*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Das Bild hängt an ___ Wand.
+    options: [der, die, den]
+    answer: der
+    explanation:
+      en: "*Hängen* without an object says where the picture is (*Wo?*): *die Wand* in the *Dativ* is *der Wand*."
+      fa: "*hängen* بدون مفعول می‌گوید تابلو کجاست (*Wo?*)؛ *die Wand* در حالت *Dativ* می‌شود *der Wand*."
+      de: "*Hängen* ohne Objekt sagt, wo das Bild ist (*Wo?*). *Die Wand* im Dativ: *der Wand*."
+  - id: true-1
+    type: true-false
+    prompt: Ich lege die Zeitung auf den Tisch.
+    answer: true
+    explanation:
+      en: "A newspaper is flat, I put it there (*Wohin?*): *legen* with *auf den Tisch*. The sentence is correct."
+      fa: "روزنامه چیزی خوابیده است و آن را آن‌جا می‌گذارم (*Wohin?*): *legen* با *auf den Tisch*. جمله درست است."
+      de: "Eine Zeitung ist flach, ich bringe sie dorthin (*Wohin?*): *legen* mit *auf den Tisch*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das Kind setzt auf dem Stuhl.
+    answer: false
+    explanation:
+      en: "The child is somewhere and there is no object: *Das Kind sitzt auf dem Stuhl.*"
+      fa: "بچه جایی است و مفعولی در کار نیست: *Das Kind sitzt auf dem Stuhl.*"
+      de: "Das Kind ist an einem Ort, ohne Objekt: *Das Kind sitzt auf dem Stuhl.*"
+  - id: true-3
+    type: true-false
+    prompt: Die Lampe steht neben dem Bett.
+    answer: true
+    explanation:
+      en: "A lamp stands on its base (*Wo?*, *Dativ*): *steht neben dem Bett*. The sentence is correct."
+      fa: "چراغ روی پایه‌اش ایستاده است (*Wo?*، حالت *Dativ*): *steht neben dem Bett*. جمله درست است."
+      de: "Eine Lampe steht auf ihrem Fuß (*Wo?*, Dativ): *steht neben dem Bett*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich stelle die Tassen in dem Schrank.
+    answer: false
+    explanation:
+      en: "*Stellen* is a movement (*Wohin?*), so the *Akkusativ*: *in den Schrank*."
+      fa: "*stellen* حرکت است (*Wohin?*)، پس حالت *Akkusativ* می‌آید: *in den Schrank*."
+      de: "*Stellen* ist eine Bewegung (*Wohin?*). Darum Akkusativ: *in den Schrank*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das Buch ___ (liegen / legen) auf dem Tisch.
+    answers: [liegt]
+    explanation:
+      en: "The book is somewhere (*Wo?*, *dem Tisch*) and has no object: *liegt*."
+      fa: "کتاب جایی است (*Wo?*، *dem Tisch*) و مفعولی در کار نیست: *liegt*."
+      de: "Das Buch ist an einem Ort (*Wo?*, *dem Tisch*), ohne Objekt: *liegt*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Du ___ (stehen / stellen) die Milch in den Kühlschrank.
+    answers: [stellst]
+    explanation:
+      en: "You put the milk there (*Wohin?*, *den Kühlschrank*), with an object: *stellen*, with *du* *stellst*."
+      fa: "شیر را آن‌جا می‌گذاری (*Wohin?*، *den Kühlschrank*) و مفعول هست: *stellen*، با *du* می‌شود *stellst*."
+      de: "Du bringst die Milch dorthin (*Wohin?*, *den Kühlschrank*), mit Objekt: *stellen*, mit *du*: *stellst*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Gäste ___ (sitzen / setzen) schon am Tisch.
+    answers: [sitzen]
+    explanation:
+      en: "The guests are somewhere (*Wo?*, *am Tisch*) and there is no object: *sitzen*."
+      fa: "مهمان‌ها جایی هستند (*Wo?*، *am Tisch*) و مفعولی در کار نیست: *sitzen*."
+      de: "Die Gäste sind an einem Ort (*Wo?*, *am Tisch*), ohne Objekt: *sitzen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich hänge das Foto an ___ (die) Wand.
+    answers: [die]
+    explanation:
+      en: "*Hängen* with an object is a movement (*Wohin?*): *die* stays *die* in the *Akkusativ*."
+      fa: "*hängen* با مفعول حرکت است (*Wohin?*): *die* در حالت *Akkusativ* همان *die* می‌ماند."
+      de: "*Hängen* mit Objekt ist eine Bewegung (*Wohin?*): *die* bleibt im Akkusativ *die*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Das Foto hängt an ___ (die) Wand.
+    answers: [der]
+    explanation:
+      en: "*Hängen* without an object says where (*Wo?*): *die* becomes *der* in the *Dativ*."
+      fa: "*hängen* بدون مفعول جای چیزی را می‌گوید (*Wo?*): *die* در حالت *Dativ* به *der* تبدیل می‌شود."
+      de: "*Hängen* ohne Objekt sagt, wo etwas ist (*Wo?*): *die* wird im Dativ zu *der*."
+  - id: error-1
+    type: find-error
+    prompt: Das Handy legt auf dem Sofa.
+    answer: legt
+    explanation:
+      en: "The phone is somewhere and there is no object: *Das Handy liegt auf dem Sofa.*"
+      fa: "گوشی جایی است و مفعولی در کار نیست: *Das Handy liegt auf dem Sofa.*"
+      de: "Das Handy ist an einem Ort, ohne Objekt: *Das Handy liegt auf dem Sofa.*"
+  - id: error-2
+    type: find-error
+    prompt: Er steht das Fahrrad vor das Haus.
+    answer: steht
+    explanation:
+      en: "*Stehen* has no object. He puts the bike there (*Wohin?*): *Er stellt das Fahrrad vor das Haus.*"
+      fa: "*stehen* مفعول نمی‌گیرد. او دوچرخه را آن‌جا می‌گذارد (*Wohin?*): *Er stellt das Fahrrad vor das Haus.*"
+      de: "*Stehen* hat kein Objekt. Er bringt das Fahrrad dorthin (*Wohin?*): *Er stellt das Fahrrad vor das Haus.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [die Katze, liegt, auf dem Sofa]
+      - [auf dem Sofa, liegt, die Katze]
+    explanation:
+      en: "The verb comes second. The place can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. قید مکان می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. Der Ort kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [Du ___ die Vase auf den Tisch., stellst]
+      - [Er ___ das Kind auf den Stuhl., setzt]
+      - [Das Buch ___ auf dem Tisch., liegt]
+      - [Wir ___ auf dem Sofa., sitzen]
+    explanation:
+      en: "With an object and the *Akkusativ*: *stellst*, *setzt*. Without an object and with the *Dativ*: *liegt*, *sitzen*."
+      fa: "با مفعول و حالت *Akkusativ*: *stellst* و *setzt*. بدون مفعول و با حالت *Dativ*: *liegt* و *sitzen*."
+      de: "Mit Objekt und Akkusativ: *stellst*, *setzt*. Ohne Objekt und mit Dativ: *liegt*, *sitzen*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: acb59063f582a83d
