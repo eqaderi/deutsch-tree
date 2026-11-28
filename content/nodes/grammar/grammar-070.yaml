@@ -4,10 +4,302 @@ kind: grammar
 level: A2
 chapter: a2-dativ-objects
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-192]
 title:
   en: "Time expressions in the *Akkusativ*"
-  fa: "عبارت‌های زمانی در *Akkusativ*"
+  fa: "عبارت‌های زمانی در حالت *Akkusativ*"
   de: "Zeitangaben im Akkusativ"
+
+explanations:
+  en:
+    rule: >
+      A time said without a preposition is in the *Akkusativ*. It answers
+      *Wann?*, *Wie oft?* or *Wie lange?*: *jeden Morgen*, *nächsten
+      Montag*, *letzte Woche*, *diesen Sommer*, *den ganzen Tag*, *einen
+      Monat*. As in every *Akkusativ*, only masculine nouns show it: *jeder*
+      becomes *jeden*, *nächster* becomes *nächsten*, *ein* becomes *einen*.
+      Feminine, neuter and plural times keep their form: *jede Woche*,
+      *jedes Jahr*, *die nächsten Tage*. After *bis* the time is in the
+      *Akkusativ* too: *Bis nächsten Montag!* With a preposition the time
+      follows it instead: *am Montag*, but *nächsten Montag*.
+  fa:
+    rule: >
+      زمانی که بدون حرف اضافه گفته می‌شود در حالت *Akkusativ* (حالت مفعولی)
+      می‌آید. این عبارت‌ها به پرسش‌های *Wann?* (کی؟)، *Wie oft?* (چند وقت
+      یک بار؟) یا *Wie lange?* (چه مدت؟) پاسخ می‌دهند: *jeden Morgen*،
+      *nächsten Montag*، *letzte Woche*، *diesen Sommer*، *den ganzen Tag*،
+      *einen Monat*. مانند هر جای دیگر حالت *Akkusativ*، فقط اسم مذکر تغییر
+      را نشان می‌دهد: *jeder* به *jeden*، *nächster* به *nächsten* و *ein*
+      به *einen* تبدیل می‌شود. زمان‌های مؤنث، خنثی و جمع شکل خود را نگه
+      می‌دارند: *jede Woche*، *jedes Jahr*، *die nächsten Tage*. پس از *bis*
+      نیز زمان در حالت *Akkusativ* می‌آید: *Bis nächsten Montag!* اگر حرف
+      اضافه بیاید، زمان از آن پیروی می‌کند: *am Montag*، ولی *nächsten
+      Montag*.
+  de:
+    rule: >
+      Eine Zeit ohne Präposition steht im Akkusativ. Sie sagt, wann, wie oft
+      oder wie lange: *jeden Morgen*, *nächsten Montag*, *letzte Woche*,
+      *diesen Sommer*, *den ganzen Tag*, *einen Monat*. Wie immer im
+      Akkusativ ändern sich nur maskuline Nomen: *jeder* wird zu *jeden*,
+      *nächster* zu *nächsten*, *ein* zu *einen*. Feminin, neutral und
+      Plural bleiben gleich: *jede Woche*, *jedes Jahr*, *die nächsten Tage*.
+      Auch nach *bis* steht der Akkusativ: *Bis nächsten Montag!* Mit
+      Präposition ist es anders: *am Montag*, aber *nächsten Montag*.
+
+# The article-change table of content/README.md: each time from its
+# Nominativ form to the Akkusativ; the column with ein says how long.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [jeder Tag, jeden Tag, einen Tag, Ich lerne jeden Tag Deutsch.]
+    - [jede Woche, jede Woche, eine Woche, Wir bleiben eine Woche in Wien.]
+    - [jedes Jahr, jedes Jahr, ein Jahr, Sie fährt jedes Jahr nach Italien.]
+    - [die nächsten Tage (Plural), die nächsten Tage, –, Die nächsten Tage bin ich zu Hause.]
+
+examples:
+  - de: Sie steht jeden Morgen um sieben Uhr auf.
+    en: She gets up at seven every morning.
+    fa: او هر روز صبح ساعت هفت بیدار می‌شود.
+  - de: Bis nächsten Montag!
+    en: See you next Monday!
+    fa: تا دوشنبهٔ آینده!
+  - de: Letzte Woche war ich krank.
+    en: I was ill last week.
+    fa: هفتهٔ پیش بیمار بودم.
+  - de: Wir fahren nächstes Jahr nach Kanada.
+    en: We are going to Canada next year.
+    fa: سال آینده به کانادا می‌رویم.
+  - de: Ich habe den ganzen Tag gearbeitet.
+    en: I worked all day.
+    fa: تمام روز کار کردم.
+  - de: Er bleibt einen Monat in Berlin.
+    en: He is staying in Berlin for a month.
+    fa: او یک ماه در برلین می‌ماند.
+  - de: Diesen Sommer machen wir Urlaub am Meer.
+    en: This summer we are having a holiday by the sea.
+    fa: این تابستان کنار دریا به تعطیلات می‌رویم.
+  - de: Jeden Abend sehe ich fern.
+    en: I watch TV every evening.
+    fa: هر شب تلویزیون تماشا می‌کنم.
+  - de: Wir haben eine Stunde gewartet.
+    en: We waited for an hour.
+    fa: یک ساعت منتظر ماندیم.
+  - de: Jedes Wochenende besuche ich meine Eltern.
+    en: I visit my parents every weekend.
+    fa: هر آخر هفته به دیدن پدر و مادرم می‌روم.
+
+mistakes:
+  - wrong: Ich lerne jeder Tag Deutsch.
+    right: Ich lerne jeden Tag Deutsch.
+    why:
+      en: "A time without a preposition is in the *Akkusativ*: *jeder Tag* becomes *jeden Tag*."
+      fa: "زمانِ بدون حرف اضافه در حالت *Akkusativ* می‌آید: *jeder Tag* به *jeden Tag* تبدیل می‌شود."
+      de: "Eine Zeit ohne Präposition steht im Akkusativ: *jeder Tag* wird zu *jeden Tag*."
+  - wrong: Bis nächster Montag!
+    right: Bis nächsten Montag!
+    why:
+      en: "After *bis* the time is in the *Akkusativ*: *nächsten Montag*."
+      fa: "پس از *bis* زمان در حالت *Akkusativ* می‌آید: *nächsten Montag*."
+      de: "Nach *bis* steht die Zeit im Akkusativ: *nächsten Montag*."
+  - wrong: Wir fahren in nächstes Jahr nach Kanada.
+    right: Wir fahren nächstes Jahr nach Kanada.
+    why:
+      en: "*Nächstes Jahr* needs no preposition; it is a time in the *Akkusativ*. With a preposition it would be *im nächsten Jahr*."
+      fa: "*nächstes Jahr* حرف اضافه نمی‌خواهد؛ زمانی در حالت *Akkusativ* است. با حرف اضافه می‌شود *im nächsten Jahr*."
+      de: "*Nächstes Jahr* braucht keine Präposition. Es ist eine Zeit im Akkusativ. Mit Präposition heißt es *im nächsten Jahr*."
+  - wrong: Ich habe der ganze Tag gearbeitet.
+    right: Ich habe den ganzen Tag gearbeitet.
+    why:
+      en: "*Der ganze Tag* says how long, so it is in the *Akkusativ*: *den ganzen Tag*."
+      fa: "*der ganze Tag* مدت را می‌گوید، پس در حالت *Akkusativ* می‌آید: *den ganzen Tag*."
+      de: "*Der ganze Tag* sagt, wie lange. Darum Akkusativ: *den ganzen Tag*."
+  - wrong: Er bleibt ein Monat in Berlin.
+    right: Er bleibt einen Monat in Berlin.
+    why:
+      en: "*Monat* is masculine, so in the *Akkusativ* *ein* becomes *einen*: *einen Monat*."
+      fa: "*Monat* اسم مذکر است، پس در حالت *Akkusativ*، *ein* به *einen* تبدیل می‌شود: *einen Monat*."
+      de: "*Monat* ist maskulin. Im Akkusativ wird *ein* zu *einen*: *einen Monat*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich lerne ___ Tag Deutsch.
+    options: [jeden, jeder, jedem]
+    answer: jeden
+    explanation:
+      en: "A time without a preposition is in the *Akkusativ*: *jeden Tag*."
+      fa: "زمانِ بدون حرف اضافه در حالت *Akkusativ* می‌آید: *jeden Tag*."
+      de: "Eine Zeit ohne Präposition steht im Akkusativ: *jeden Tag*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Bis ___ Montag!
+    options: [nächsten, nächster, nächstem]
+    answer: nächsten
+    explanation:
+      en: "After *bis* the time is in the *Akkusativ*; *Montag* is masculine: *nächsten Montag*."
+      fa: "پس از *bis* زمان در حالت *Akkusativ* می‌آید و *Montag* اسم مذکر است: *nächsten Montag*."
+      de: "Nach *bis* steht der Akkusativ. *Montag* ist maskulin: *nächsten Montag*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ Woche war ich krank.
+    options: [Letzte, Letzten, Letzter]
+    answer: Letzte
+    explanation:
+      en: "*Woche* is feminine, so the *Akkusativ* keeps its form: *letzte Woche*."
+      fa: "*Woche* اسم مؤنث است، پس در حالت *Akkusativ* شکلش تغییر نمی‌کند: *letzte Woche*."
+      de: "*Woche* ist feminin. Im Akkusativ bleibt es gleich: *letzte Woche*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wir fahren ___ Jahr nach Kanada.
+    options: [nächstes, nächsten, nächster]
+    answer: nächstes
+    explanation:
+      en: "*Jahr* is neuter, so the *Akkusativ* keeps its form: *nächstes Jahr*."
+      fa: "*Jahr* اسم خنثی است، پس در حالت *Akkusativ* شکلش تغییر نمی‌کند: *nächstes Jahr*."
+      de: "*Jahr* ist neutral. Im Akkusativ bleibt es gleich: *nächstes Jahr*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ich habe ___ ganzen Tag gearbeitet.
+    options: [den, der, dem]
+    answer: den
+    explanation:
+      en: "How long? *Den ganzen Tag*, in the *Akkusativ*."
+      fa: "چه مدت؟ *den ganzen Tag*، در حالت *Akkusativ*."
+      de: "Wie lange? *Den ganzen Tag*, im Akkusativ."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Er bleibt ___ in Berlin.
+    options: [einen Monat, ein Monat, einem Monat]
+    answer: einen Monat
+    explanation:
+      en: "How long? A time without a preposition is in the *Akkusativ*: *einen Monat*."
+      fa: "چه مدت؟ زمانِ بدون حرف اضافه در حالت *Akkusativ* می‌آید: *einen Monat*."
+      de: "Wie lange? Eine Zeit ohne Präposition steht im Akkusativ: *einen Monat*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wie lange hast du gewartet? – ___
+    options: [Eine Stunde., Um eins., Jede Stunde.]
+    answer: Eine Stunde.
+    explanation:
+      en: "*Wie lange?* asks how long: *eine Stunde*. *Um eins* says when, *jede Stunde* how often."
+      fa: "*Wie lange?* مدت را می‌پرسد: *eine Stunde*. *um eins* زمان را می‌گوید و *jede Stunde* تکرار را."
+      de: "*Wie lange?* fragt nach der Dauer: *eine Stunde*. *Um eins* sagt, wann, *jede Stunde*, wie oft."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wie oft gehst du schwimmen? – ___
+    options: [Jeden Samstag., Letzten Samstag., Diesen Samstag.]
+    answer: Jeden Samstag.
+    explanation:
+      en: "*Wie oft?* asks how often: *jeden Samstag*. *Letzten* and *diesen Samstag* name one day."
+      fa: "*Wie oft?* تکرار را می‌پرسد: *jeden Samstag*. *letzten Samstag* و *diesen Samstag* یک روز را می‌گویند."
+      de: "*Wie oft?* fragt, wie oft: *jeden Samstag*. *Letzten* und *diesen Samstag* sind nur ein Tag."
+  - id: true-1
+    type: true-false
+    prompt: Ich gehe jeden Morgen joggen.
+    answer: true
+    explanation:
+      en: "*Jeden Morgen* is a time in the *Akkusativ*. The sentence is correct."
+      fa: "*jeden Morgen* زمانی در حالت *Akkusativ* است. جمله درست است."
+      de: "*Jeden Morgen* ist eine Zeit im Akkusativ. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir treffen uns nächste Woche.
+    answer: true
+    explanation:
+      en: "*Woche* is feminine: *nächste Woche* does not change. The sentence is correct."
+      fa: "*Woche* اسم مؤنث است: *nächste Woche* تغییر نمی‌کند. جمله درست است."
+      de: "*Woche* ist feminin: *nächste Woche* bleibt gleich. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich habe dich der ganze Abend gesucht.
+    answer: false
+    explanation:
+      en: "How long? *Den ganzen Abend*, in the *Akkusativ*."
+      fa: "چه مدت؟ *den ganzen Abend*، در حالت *Akkusativ*."
+      de: "Wie lange? *Den ganzen Abend*, im Akkusativ."
+  - id: true-4
+    type: true-false
+    prompt: Bis nächsten Freitag!
+    answer: true
+    explanation:
+      en: "After *bis*, the *Akkusativ*: *nächsten Freitag*. The sentence is correct."
+      fa: "پس از *bis* حالت *Akkusativ* می‌آید: *nächsten Freitag*. جمله درست است."
+      de: "Nach *bis* steht der Akkusativ: *nächsten Freitag*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Jeder Sonntag besuchen wir die Oma.
+    answer: false
+    explanation:
+      en: "How often? *Jeden Sonntag*, in the *Akkusativ*."
+      fa: "چند وقت یک بار؟ *jeden Sonntag*، در حالت *Akkusativ*."
+      de: "Wie oft? *Jeden Sonntag*, im Akkusativ."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Sie steht ___ (jeder Morgen) um sieben auf.
+    answers: [jeden Morgen]
+    explanation:
+      en: "*Morgen* is masculine: in the *Akkusativ* *jeder* becomes *jeden*."
+      fa: "*Morgen* اسم مذکر است: در حالت *Akkusativ*، *jeder* به *jeden* تبدیل می‌شود."
+      de: "*Morgen* ist maskulin. Im Akkusativ wird *jeder* zu *jeden*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Bis ___ (nächster Mittwoch)!
+    answers: [nächsten Mittwoch]
+    explanation:
+      en: "After *bis*, the *Akkusativ*: *nächster* becomes *nächsten*."
+      fa: "پس از *bis* حالت *Akkusativ* می‌آید: *nächster* به *nächsten* تبدیل می‌شود."
+      de: "Nach *bis* steht der Akkusativ: *nächster* wird zu *nächsten*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir bleiben ___ (ein Tag) in Hamburg.
+    answers: [einen Tag]
+    explanation:
+      en: "How long? *Tag* is masculine: *einen Tag*."
+      fa: "چه مدت؟ *Tag* اسم مذکر است: *einen Tag*."
+      de: "Wie lange? *Tag* ist maskulin: *einen Tag*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: ___ (dieser Sommer) fahren wir ans Meer.
+    answers: [Diesen Sommer]
+    explanation:
+      en: "*Sommer* is masculine: in the *Akkusativ* *dieser* becomes *diesen*."
+      fa: "*Sommer* اسم مذکر است: در حالت *Akkusativ*، *dieser* به *diesen* تبدیل می‌شود."
+      de: "*Sommer* ist maskulin. Im Akkusativ wird *dieser* zu *diesen*."
+  - id: error-1
+    type: find-error
+    prompt: Er hat letzter Monat viel gearbeitet.
+    answer: letzter
+    explanation:
+      en: "A time without a preposition is in the *Akkusativ*: *letzten Monat*."
+      fa: "زمانِ بدون حرف اضافه در حالت *Akkusativ* می‌آید: *letzten Monat*."
+      de: "Eine Zeit ohne Präposition steht im Akkusativ: *letzten Monat*."
+  - id: error-2
+    type: find-error
+    prompt: Wir sind ein ganzen Monat geblieben.
+    answer: ein
+    explanation:
+      en: "*Monat* is masculine: in the *Akkusativ* it is *einen ganzen Monat*."
+      fa: "*Monat* اسم مذکر است: در حالت *Akkusativ* می‌شود *einen ganzen Monat*."
+      de: "*Monat* ist maskulin. Im Akkusativ heißt es *einen ganzen Monat*."
+  - id: match-1
+    type: matching
+    answer:
+      - [___ Tag, jeden]
+      - [___ Woche, jede]
+      - [___ Jahr, jedes]
+    explanation:
+      en: "In the *Akkusativ* only the masculine changes: *jeden Tag*, but *jede Woche* and *jedes Jahr*."
+      fa: "در حالت *Akkusativ* فقط مذکر تغییر می‌کند: *jeden Tag*، ولی *jede Woche* و *jedes Jahr*."
+      de: "Im Akkusativ ändert sich nur maskulin: *jeden Tag*, aber *jede Woche* und *jedes Jahr*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 996140cb2a676fa0
