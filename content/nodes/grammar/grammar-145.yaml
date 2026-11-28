@@ -4,10 +4,355 @@ kind: grammar
 level: A1
 chapter: a1-building-sentences
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-064, grammar-121]
 title:
   en: "Verb complements"
   fa: "متمم‌های فعل"
   de: "Verben und ihre Ergänzungen"
+
+explanations:
+  en:
+    rule: >
+      The verb decides what else a sentence needs. Some verbs need only a
+      subject: *Das Baby schläft.* Many need an object in the *Akkusativ*:
+      *Ich suche meinen Schlüssel.* A dictionary calls the first kind
+      intransitive and the second transitive. Some verbs need a person in the
+      *Dativ*: *Ich helfe meiner Mutter.* A *Dativ* without a preposition is
+      normally a person. *Geben* takes both, the person in the *Dativ* and the
+      thing in the *Akkusativ*: *Ich gebe dem Kind einen Apfel.* *Wohnen*
+      needs a place: *Wir wohnen in der Heinestraße 7.* *Sein* takes a second
+      *Nominativ* or an adjective: *Das ist mein Bruder.* *Er ist müde.* The
+      subject is always in the *Nominativ*. Learn each verb with what it needs.
+  fa:
+    rule: >
+      فعل تعیین می‌کند که جمله به چه بخش‌های دیگری نیاز دارد؛ به این بخش‌ها
+      متمم‌های فعل می‌گویند. برخی فعل‌ها فقط فاعل لازم دارند: *Das Baby
+      schläft.* بسیاری از فعل‌ها مفعولی در حالت *Akkusativ* (حالت مفعولی)
+      می‌خواهند: *Ich suche meinen Schlüssel.* در فرهنگ لغت، نوع اول را فعل
+      لازم و نوع دوم را فعل متعدی می‌نامند. برخی فعل‌ها شخصی را در حالت
+      *Dativ* (حالت مفعول باواسطه) می‌خواهند: *Ich helfe meiner Mutter.* حالت
+      *Dativ* بدون حرف اضافه معمولاً یک شخص است، مانند «به مادرم» در «به مادرم
+      کمک می‌کنم». *geben* هر دو را می‌گیرد: شخص در حالت *Dativ* و چیز در
+      حالت *Akkusativ*: *Ich gebe dem Kind einen Apfel.* *wohnen* به مکان
+      نیاز دارد: *Wir wohnen in der Heinestraße 7.* پس از *sein* اسمی دیگر در
+      حالت *Nominativ* (حالت فاعلی) یا یک صفت می‌آید: *Das ist mein Bruder.*
+      *Er ist müde.* فاعل همیشه در حالت *Nominativ* است. هر فعل را همراه با
+      متمم‌هایش یاد بگیرید.
+  de:
+    rule: >
+      Das Verb sagt, was ein Satz noch braucht. Manche Verben brauchen nur ein
+      Subjekt: *Das Baby schläft.* Viele Verben brauchen ein Objekt im
+      Akkusativ: *Ich suche meinen Schlüssel.* Im Wörterbuch heißen sie
+      intransitiv und transitiv. Manche Verben brauchen eine Person im Dativ:
+      *Ich helfe meiner Mutter.* Ein Dativ ohne Präposition ist meistens eine
+      Person. *Geben* hat beides, die Person im Dativ und die Sache im
+      Akkusativ: *Ich gebe dem Kind einen Apfel.* *Wohnen* braucht einen Ort:
+      *Wir wohnen in der Heinestraße 7.* Nach *sein* steht noch ein Nominativ
+      oder ein Adjektiv: *Das ist mein Bruder.* *Er ist müde.* Das Subjekt
+      steht immer im Nominativ. Lernen Sie jedes Verb mit seinen Ergänzungen.
+
+table:
+  columns:
+    - { en: Verb, fa: فعل, de: Verb }
+    - { en: What it needs, fa: متمم, de: Ergänzung }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [schlafen, –, Das Baby schläft.]
+    - [suchen, Akkusativ, Ich suche meinen Schlüssel.]
+    - [kaufen, Akkusativ, Wir kaufen einen Tisch.]
+    - [helfen, Dativ, Ich helfe meiner Mutter.]
+    - [gehören, Dativ, Das Fahrrad gehört dem Lehrer.]
+    - [geben, Dativ + Akkusativ, Ich gebe dem Kind einen Apfel.]
+    - [wohnen, Ort, Wir wohnen in der Heinestraße 7.]
+    - [sein, Nominativ / Adjektiv, Das ist mein Bruder. Er ist müde.]
+
+# Four sentences as rows of slots: the verb (shaded) and what it needs, with
+# the case under each part. German only, so no labels.
+diagrams:
+  - caption:
+      en: >
+        Four verbs and what they need. *Schlafen* needs only the subject.
+        *Suchen* needs an object in the *Akkusativ*, *helfen* a person in the
+        *Dativ*, and *geben* both: the person in the *Dativ* and the thing in
+        the *Akkusativ*. The verb is shaded.
+      fa: >
+        چهار فعل و متمم‌هایشان. *schlafen* فقط فاعل لازم دارد. *suchen* مفعولی
+        در حالت *Akkusativ* می‌خواهد، *helfen* شخصی در حالت *Dativ* و *geben*
+        هر دو را: شخص در حالت *Dativ* و چیز در حالت *Akkusativ*. فعل رنگی است.
+      de: >
+        Vier Verben und ihre Ergänzungen. *Schlafen* braucht nur das Subjekt.
+        *Suchen* braucht ein Objekt im Akkusativ, *helfen* eine Person im
+        Dativ und *geben* beides: die Person im Dativ und die Sache im
+        Akkusativ. Das Verb ist farbig.
+    svg: |
+      <svg viewBox="0 0 320 266">
+        <!-- Das Baby schläft. -->
+        <rect class="surface" x="2" y="8" width="92" height="36"/>
+        <rect class="shade" x="98" y="8" width="76" height="36"/>
+        <text class="label" x="48" y="32" text-anchor="middle">Das Baby</text>
+        <text class="label" x="136" y="32" text-anchor="middle">schläft.</text>
+        <text class="note" x="48" y="60" text-anchor="middle">Nominativ</text>
+        <!-- Ich suche meinen Schlüssel. -->
+        <rect class="surface" x="2" y="74" width="44" height="36"/>
+        <rect class="shade" x="50" y="74" width="56" height="36"/>
+        <rect class="surface" x="110" y="74" width="208" height="36"/>
+        <text class="label" x="24" y="98" text-anchor="middle">Ich</text>
+        <text class="label" x="78" y="98" text-anchor="middle">suche</text>
+        <text class="label" x="214" y="98" text-anchor="middle">meinen Schlüssel.</text>
+        <text class="note" x="214" y="126" text-anchor="middle">Akkusativ</text>
+        <!-- Ich helfe meiner Mutter. -->
+        <rect class="surface" x="2" y="140" width="44" height="36"/>
+        <rect class="shade" x="50" y="140" width="56" height="36"/>
+        <rect class="surface" x="110" y="140" width="208" height="36"/>
+        <text class="label" x="24" y="164" text-anchor="middle">Ich</text>
+        <text class="label" x="78" y="164" text-anchor="middle">helfe</text>
+        <text class="label" x="214" y="164" text-anchor="middle">meiner Mutter.</text>
+        <text class="note" x="214" y="192" text-anchor="middle">Dativ</text>
+        <!-- Ich gebe dem Kind einen Apfel. -->
+        <rect class="surface" x="2" y="206" width="44" height="36"/>
+        <rect class="shade" x="50" y="206" width="56" height="36"/>
+        <rect class="surface" x="110" y="206" width="88" height="36"/>
+        <rect class="surface" x="202" y="206" width="116" height="36"/>
+        <text class="label" x="24" y="230" text-anchor="middle">Ich</text>
+        <text class="label" x="78" y="230" text-anchor="middle">gebe</text>
+        <text class="label" x="154" y="230" text-anchor="middle">dem Kind</text>
+        <text class="label" x="260" y="230" text-anchor="middle">einen Apfel.</text>
+        <text class="note" x="154" y="258" text-anchor="middle">Dativ</text>
+        <text class="note" x="260" y="258" text-anchor="middle">Akkusativ</text>
+      </svg>
+
+examples:
+  - de: Das Baby schläft.
+    en: The baby is sleeping.
+    fa: بچه خوابیده است.
+  - de: Ich suche meinen Schlüssel.
+    en: I'm looking for my key.
+    fa: دنبال کلیدم می‌گردم.
+  - de: Wir kaufen einen Tisch.
+    en: We are buying a table.
+    fa: یک میز می‌خریم.
+  - de: Ich helfe meiner Mutter.
+    en: I help my mother.
+    fa: به مادرم کمک می‌کنم.
+  - de: Das Fahrrad gehört dem Lehrer.
+    en: The bike belongs to the teacher.
+    fa: دوچرخه مال معلم است.
+  - de: Ich gebe dem Kind einen Apfel.
+    en: I give the child an apple.
+    fa: به بچه یک سیب می‌دهم.
+  - de: Wir wohnen in der Heinestraße 7.
+    en: We live at Heinestraße 7.
+    fa: ما در خیابان هاینه، پلاک ۷ زندگی می‌کنیم.
+  - de: Das ist mein Bruder.
+    en: This is my brother.
+    fa: این برادر من است.
+  - de: Er ist müde.
+    en: He is tired.
+    fa: او خسته است.
+
+mistakes:
+  - wrong: Ich helfe meine Mutter.
+    right: Ich helfe meiner Mutter.
+    why:
+      en: "*Helfen* takes the person in the *Dativ*: *meine Mutter* becomes *meiner Mutter*."
+      fa: "*helfen* شخص را در حالت *Dativ* می‌گیرد: *meine Mutter* می‌شود *meiner Mutter*."
+      de: "*Helfen* hat die Person im Dativ: *meine Mutter* wird zu *meiner Mutter*."
+  - wrong: Ich suche mein Schlüssel.
+    right: Ich suche meinen Schlüssel.
+    why:
+      en: "*Suchen* takes an *Akkusativ*, and *der Schlüssel* is masculine: *meinen Schlüssel*."
+      fa: "*suchen* مفعولی در حالت *Akkusativ* می‌خواهد و *Schlüssel* اسم مذکر (*der*) است: *meinen Schlüssel*."
+      de: "*Suchen* hat ein Objekt im Akkusativ. *Schlüssel* ist maskulin: *meinen Schlüssel*."
+  - wrong: Wir wohnen Berlin.
+    right: Wir wohnen in Berlin.
+    why:
+      en: "*Wohnen* needs a place, and a place needs its preposition: *in Berlin*."
+      fa: "*wohnen* به مکان نیاز دارد و مکان با حرف اضافه می‌آید: *in Berlin*."
+      de: "*Wohnen* braucht einen Ort. Der Ort hat eine Präposition: *in Berlin*."
+  - wrong: Ich gebe den Kind einen Apfel.
+    right: Ich gebe dem Kind einen Apfel.
+    why:
+      en: "The person who gets something is in the *Dativ*: *das Kind* becomes *dem Kind*."
+      fa: "کسی که چیزی می‌گیرد در حالت *Dativ* می‌آید: *das Kind* می‌شود *dem Kind*."
+      de: "Die Person, die etwas bekommt, steht im Dativ: *das Kind* wird zu *dem Kind*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich helfe ___ Mutter.
+    options: [meiner, meine, meinen]
+    answer: meiner
+    explanation:
+      en: "*Helfen* takes the *Dativ*; *meine Mutter* in the *Dativ* is *meiner Mutter*."
+      fa: "*helfen* با حالت *Dativ* می‌آید؛ *meine Mutter* در حالت *Dativ* می‌شود *meiner Mutter*."
+      de: "*Helfen* hat den Dativ. *Meine Mutter* im Dativ: *meiner Mutter*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich suche ___ Schlüssel.
+    options: [meinen, meinem, mein]
+    answer: meinen
+    explanation:
+      en: "*Suchen* takes the *Akkusativ*; *mein Schlüssel* in the *Akkusativ* is *meinen Schlüssel*."
+      fa: "*suchen* با حالت *Akkusativ* می‌آید؛ *mein Schlüssel* در حالت *Akkusativ* می‌شود *meinen Schlüssel*."
+      de: "*Suchen* hat den Akkusativ. *Mein Schlüssel* im Akkusativ: *meinen Schlüssel*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Fahrrad gehört ___ Lehrer.
+    options: [dem, den, der]
+    answer: dem
+    explanation:
+      en: "*Gehören* takes the person in the *Dativ*: *der Lehrer* becomes *dem Lehrer*."
+      fa: "*gehören* شخص را در حالت *Dativ* می‌گیرد: *der Lehrer* می‌شود *dem Lehrer*."
+      de: "*Gehören* hat die Person im Dativ: *der Lehrer* wird zu *dem Lehrer*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich gebe ___ Kind einen Apfel.
+    options: [dem, das, den]
+    answer: dem
+    explanation:
+      en: "The person who gets the apple is in the *Dativ*: *dem Kind*."
+      fa: "کسی که سیب را می‌گیرد در حالت *Dativ* می‌آید: *dem Kind*."
+      de: "Die Person, die den Apfel bekommt, steht im Dativ: *dem Kind*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wir wohnen ___ Goethestraße.
+    options: [in der, die, der]
+    answer: in der
+    explanation:
+      en: "*Wohnen* needs a place with a preposition: *in der Goethestraße*."
+      fa: "*wohnen* به مکانی با حرف اضافه نیاز دارد: *in der Goethestraße*."
+      de: "*Wohnen* braucht einen Ort mit Präposition: *in der Goethestraße*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Das Baby ___.
+    options: [schläft, sucht, braucht]
+    answer: schläft
+    explanation:
+      en: "*Schlafen* needs nothing but the subject. *Suchen* and *brauchen* need an object."
+      fa: "*schlafen* جز فاعل چیزی لازم ندارد. *suchen* و *brauchen* مفعول می‌خواهند."
+      de: "*Schlafen* braucht nur das Subjekt. *Suchen* und *brauchen* brauchen ein Objekt."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wir ___ in Köln.
+    options: [wohnen, besuchen, brauchen]
+    answer: wohnen
+    explanation:
+      en: "*Wohnen* takes a place. *Besuchen* and *brauchen* need an object in the *Akkusativ*."
+      fa: "*wohnen* با مکان می‌آید. *besuchen* و *brauchen* مفعولی در حالت *Akkusativ* می‌خواهند."
+      de: "*Wohnen* hat einen Ort. *Besuchen* und *brauchen* brauchen ein Objekt im Akkusativ."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Mein Bruder ist ___.
+    options: [müde, den Arzt, dem Kind]
+    answer: müde
+    explanation:
+      en: "After *sein* comes an adjective or a *Nominativ*, never an *Akkusativ* or a *Dativ*."
+      fa: "پس از *sein* صفت یا اسمی در حالت *Nominativ* می‌آید، نه حالت *Akkusativ* یا *Dativ*."
+      de: "Nach *sein* steht ein Adjektiv oder ein Nominativ, kein Akkusativ und kein Dativ."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Die Jacke gehört ___.
+    options: [meiner Schwester, meine Schwester, meinen Schwester]
+    answer: meiner Schwester
+    explanation:
+      en: "*Gehören* takes the person in the *Dativ*: *meiner Schwester*."
+      fa: "*gehören* شخص را در حالت *Dativ* می‌گیرد: *meiner Schwester*."
+      de: "*Gehören* hat die Person im Dativ: *meiner Schwester*."
+  - id: true-1
+    type: true-false
+    prompt: Ich danke dem Lehrer.
+    answer: true
+    explanation:
+      en: "*Danken* takes the person in the *Dativ*: *dem Lehrer*. The sentence is correct."
+      fa: "*danken* شخص را در حالت *Dativ* می‌گیرد: *dem Lehrer*. جمله درست است."
+      de: "*Danken* hat die Person im Dativ: *dem Lehrer*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich brauche einen Computer.
+    answer: true
+    explanation:
+      en: "*Brauchen* takes the *Akkusativ*: *einen Computer*. The sentence is correct."
+      fa: "*brauchen* با حالت *Akkusativ* می‌آید: *einen Computer*. جمله درست است."
+      de: "*Brauchen* hat den Akkusativ: *einen Computer*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich helfe den Mann.
+    answer: false
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *Ich helfe dem Mann.*"
+      fa: "*helfen* با حالت *Dativ* می‌آید: *Ich helfe dem Mann.*"
+      de: "*Helfen* hat den Dativ: *Ich helfe dem Mann.*"
+  - id: true-4
+    type: true-false
+    prompt: Meine Eltern wohnen in Hamburg.
+    answer: true
+    explanation:
+      en: "*Wohnen* with a place: *in Hamburg*. The sentence is correct."
+      fa: "*wohnen* با مکان آمده است: *in Hamburg*. جمله درست است."
+      de: "*Wohnen* mit einem Ort: *in Hamburg*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Kannst du ___ (der) Mann helfen?
+    answers: [dem]
+    explanation:
+      en: "*Helfen* takes the *Dativ*, and *der* becomes *dem*."
+      fa: "*helfen* با حالت *Dativ* می‌آید و *der* به *dem* تبدیل می‌شود."
+      de: "*Helfen* hat den Dativ: *der* wird zu *dem*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich sehe ___ (der) Bus.
+    answers: [den]
+    explanation:
+      en: "*Sehen* takes the *Akkusativ*, and *der* becomes *den*."
+      fa: "*sehen* با حالت *Akkusativ* می‌آید و *der* به *den* تبدیل می‌شود."
+      de: "*Sehen* hat den Akkusativ: *der* wird zu *den*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Tasche gehört ___ (die) Frau.
+    answers: [der]
+    explanation:
+      en: "*Gehören* takes the person in the *Dativ*, and *die* becomes *der*."
+      fa: "*gehören* شخص را در حالت *Dativ* می‌گیرد و *die* به *der* تبدیل می‌شود."
+      de: "*Gehören* hat die Person im Dativ: *die* wird zu *der*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich gebe ___ (der) Lehrer das Heft.
+    answers: [dem]
+    explanation:
+      en: "The person who gets the exercise book is in the *Dativ*: *dem Lehrer*."
+      fa: "کسی که دفتر را می‌گیرد در حالت *Dativ* می‌آید: *dem Lehrer*."
+      de: "Die Person, die das Heft bekommt, steht im Dativ: *dem Lehrer*."
+  - id: error-1
+    type: find-error
+    prompt: Ich helfe meinen Vater.
+    answer: meinen
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *meinem Vater*."
+      fa: "*helfen* با حالت *Dativ* می‌آید: *meinem Vater*."
+      de: "*Helfen* hat den Dativ: *meinem Vater*."
+  - id: error-2
+    type: find-error
+    prompt: Wir kaufen ein Tisch.
+    answer: ein
+    explanation:
+      en: "*Kaufen* takes the *Akkusativ*, and *der Tisch* is masculine: *einen Tisch*."
+      fa: "*kaufen* با حالت *Akkusativ* می‌آید و *Tisch* اسم مذکر (*der*) است: *einen Tisch*."
+      de: "*Kaufen* hat den Akkusativ. *Tisch* ist maskulin: *einen Tisch*."
+  - id: match-1
+    type: matching
+    answer:
+      - [Ich suche, meinen Schlüssel.]
+      - [Ich helfe, meinem Bruder.]
+      - [Ich bin, müde.]
+    explanation:
+      en: "*Suchen* takes the *Akkusativ*, *helfen* the *Dativ*, and *sein* an adjective."
+      fa: "*suchen* با حالت *Akkusativ* می‌آید، *helfen* با حالت *Dativ* و *sein* با صفت."
+      de: "*Suchen* hat den Akkusativ, *helfen* den Dativ und *sein* ein Adjektiv."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: e8d36fbaebff20b0

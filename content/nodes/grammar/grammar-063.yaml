@@ -4,10 +4,315 @@ kind: grammar
 level: A1
 chapter: a1-cases
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062]
 title:
   en: "*Dativ* after prepositions and in chunks"
-  fa: "*Dativ* بعد از حرف اضافه و در عبارت‌های ثابت"
+  fa: "حالت *Dativ* پس از حرف اضافه و در عبارت‌های ثابت"
   de: "Dativ nach Präpositionen und in festen Wendungen"
+
+explanations:
+  en:
+    rule: >
+      Some prepositions are always followed by the *Dativ*. At A1 you meet
+      them mostly in fixed chunks: *mit dem Bus*, *bei der Arbeit*, *zum
+      Arzt*, *aus der Türkei*, *in der Schweiz*. In the *Dativ*, *der* and
+      *das* become *dem*, *die* becomes *der*, and plural *die* becomes *den*,
+      with *-n* on the noun; *ein* becomes *einem* or *einer*. Many are
+      shortened: *zum* (*zu dem*), *zur* (*zu der*), *beim* (*bei dem*), *vom*
+      (*von dem*), *im* (*in dem*). Learn each chunk as a whole.
+  fa:
+    rule: >
+      بعضی از حرف‌های اضافه همیشه با حالت *Dativ* (حالت مفعول باواسطه)
+      می‌آیند. در سطح *A1* این حرف‌ها را بیشتر در عبارت‌های ثابت می‌بینید:
+      *mit dem Bus*، *bei der Arbeit*، *zum Arzt*، *aus der Türkei* و *in der
+      Schweiz*. در حالت *Dativ*، *der* و *das* به *dem* تبدیل می‌شوند، *die*
+      به *der*، و *die* جمع به *den*؛ اسم جمع نیز *-n* می‌گیرد. *ein* هم به
+      *einem* یا *einer* تبدیل می‌شود. بسیاری از این ترکیب‌ها کوتاه می‌شوند:
+      *zum* (*zu dem*)، *zur* (*zu der*)، *beim* (*bei dem*)، *vom* (*von
+      dem*) و *im* (*in dem*). هر عبارت را یک‌جا به خاطر بسپارید.
+  de:
+    rule: >
+      Nach manchen Präpositionen steht immer der Dativ. Auf A1 lernt man sie
+      meistens in festen Wendungen: *mit dem Bus*, *bei der Arbeit*, *zum
+      Arzt*, *aus der Türkei*, *in der Schweiz*. Im Dativ werden *der* und
+      *das* zu *dem*, *die* wird zu *der*, und im Plural steht *den*, das
+      Nomen bekommt *-n*. *Ein* wird zu *einem* oder *einer*. Oft sagt man es
+      kurz: *zum* (*zu dem*), *zur* (*zu der*), *beim* (*bei dem*), *vom*
+      (*von dem*), *im* (*in dem*).
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Bus, dem Bus, einem Bus, mit dem Bus]
+    - [die Freundin, der Freundin, einer Freundin, mit einer Freundin]
+    - [das Auto, dem Auto, einem Auto, mit dem Auto]
+    - [die Kinder (Plural), den Kindern, –, mit den Kindern]
+
+examples:
+  - de: Ich fahre mit dem Bus.
+    en: I go by bus.
+    fa: با اتوبوس می‌روم.
+  - de: Wir wohnen bei Familie Müller.
+    en: We are staying with the Müller family.
+    fa: ما در خانهٔ خانوادهٔ مولر زندگی می‌کنیم.
+  - de: Sie wohnt in der Schweiz.
+    en: She lives in Switzerland.
+    fa: او در سوئیس زندگی می‌کند.
+  - de: Ich gehe zum Arzt.
+    en: I'm going to the doctor.
+    fa: پیش پزشک می‌روم.
+  - de: Die Kinder gehen zur Schule.
+    en: The children go to school.
+    fa: بچه‌ها به مدرسه می‌روند.
+  - de: Er ist noch bei der Arbeit.
+    en: He is still at work.
+    fa: او هنوز سر کار است.
+  - de: Ich komme aus dem Iran.
+    en: I come from Iran.
+    fa: من اهل ایران هستم.
+  - de: Nach dem Essen trinken wir Tee.
+    en: After the meal we drink tea.
+    fa: بعد از غذا چای می‌نوشیم.
+  - de: Ich spiele mit den Kindern.
+    en: I'm playing with the children.
+    fa: با بچه‌ها بازی می‌کنم.
+  - de: Wir wohnen seit einem Jahr hier.
+    en: We have lived here for a year.
+    fa: یک سال است که این‌جا زندگی می‌کنیم.
+  - de: Ich komme gerade vom Bahnhof.
+    en: I'm just coming from the station.
+    fa: همین حالا از ایستگاه قطار می‌آیم.
+
+mistakes:
+  - wrong: Ich fahre mit der Bus.
+    right: Ich fahre mit dem Bus.
+    why:
+      en: "*Mit* takes the *Dativ*. *Bus* is masculine: *der* becomes *dem*."
+      fa: "*mit* با حالت *Dativ* می‌آید. *Bus* اسم مذکر است: *der* به *dem* تبدیل می‌شود."
+      de: "Nach *mit* steht der Dativ. *Bus* ist maskulin: *der* wird zu *dem*."
+  - wrong: Ich gehe zur Arzt.
+    right: Ich gehe zum Arzt.
+    why:
+      en: "*Zur* is *zu der*, for feminine nouns only. *Arzt* is masculine: *zum*, short for *zu dem*."
+      fa: "*zur* کوتاه‌شدهٔ *zu der* است و فقط با اسم مؤنث می‌آید. *Arzt* اسم مذکر است: *zum*، کوتاه‌شدهٔ *zu dem*."
+      de: "*Zur* ist *zu der*, nur für feminine Nomen. *Arzt* ist maskulin: *zum*, kurz für *zu dem*."
+  - wrong: Ich spiele mit den Kinder.
+    right: Ich spiele mit den Kindern.
+    why:
+      en: "In the *Dativ* plural the noun gets *-n* too: *den Kindern*."
+      fa: "در حالت *Dativ* جمع، خود اسم هم *-n* می‌گیرد: *den Kindern*."
+      de: "Im Dativ Plural bekommt auch das Nomen ein *-n*: *den Kindern*."
+  - wrong: Sie kommt aus Türkei.
+    right: Sie kommt aus der Türkei.
+    why:
+      en: "A few countries have an article: *die Türkei*, *die Schweiz*, *der Iran*. After *aus* it is in the *Dativ*: *aus der Türkei*."
+      fa: "چند کشور حرف تعریف دارند: *die Türkei*، *die Schweiz* و *der Iran*. پس از *aus* حرف تعریف در حالت *Dativ* می‌آید: *aus der Türkei*."
+      de: "Manche Länder haben einen Artikel: *die Türkei*, *die Schweiz*, *der Iran*. Nach *aus* steht der Dativ: *aus der Türkei*."
+  - wrong: Ich fahre mit Auto.
+    right: Ich fahre mit dem Auto.
+    why:
+      en: "In this chunk German needs the article: *mit dem Auto*, *mit dem Bus*."
+      fa: "در این عبارت آلمانی به حرف تعریف نیاز دارد: *mit dem Auto*، *mit dem Bus*."
+      de: "Hier braucht man den Artikel: *mit dem Auto*, *mit dem Bus*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich fahre mit ___ Bus.
+    options: [dem, den, der]
+    answer: dem
+    explanation:
+      en: "*Mit* takes the *Dativ*. *Bus* is masculine: *mit dem Bus*."
+      fa: "*mit* با حالت *Dativ* می‌آید. *Bus* اسم مذکر است: *mit dem Bus*."
+      de: "Nach *mit* steht der Dativ. *Bus* ist maskulin: *mit dem Bus*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Kinder gehen ___ Schule.
+    options: [zur, zum, zu]
+    answer: zur
+    explanation:
+      en: "*Schule* is feminine: *zu der Schule*, shortened to *zur Schule*."
+      fa: "*Schule* اسم مؤنث است: *zu der Schule* که کوتاه می‌شود: *zur Schule*."
+      de: "*Schule* ist feminin: *zu der Schule*, kurz *zur Schule*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich gehe heute ___ Arzt.
+    options: [zum, zur, zu]
+    answer: zum
+    explanation:
+      en: "*Arzt* is masculine: *zu dem Arzt*, shortened to *zum Arzt*."
+      fa: "*Arzt* اسم مذکر است: *zu dem Arzt* که کوتاه می‌شود: *zum Arzt*."
+      de: "*Arzt* ist maskulin: *zu dem Arzt*, kurz *zum Arzt*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Er ist noch bei ___ Arbeit.
+    options: [der, die, dem]
+    answer: der
+    explanation:
+      en: "*Bei* takes the *Dativ*. *Arbeit* is feminine: *die* becomes *der*."
+      fa: "*bei* با حالت *Dativ* می‌آید. *Arbeit* اسم مؤنث است: *die* به *der* تبدیل می‌شود."
+      de: "Nach *bei* steht der Dativ. *Arbeit* ist feminin: *die* wird zu *der*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wir spielen mit ___ Kindern.
+    options: [den, die, dem]
+    answer: den
+    explanation:
+      en: "Plural *die* becomes *den* in the *Dativ*: *mit den Kindern*."
+      fa: "*die* جمع در حالت *Dativ* به *den* تبدیل می‌شود: *mit den Kindern*."
+      de: "Im Dativ Plural wird *die* zu *den*: *mit den Kindern*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Woher kommt Leyla? – Sie kommt aus ___.
+    options: [der Türkei, die Türkei, Türkei]
+    answer: der Türkei
+    explanation:
+      en: "*Die Türkei* has an article, and after *aus* it is in the *Dativ*: *aus der Türkei*."
+      fa: "*die Türkei* حرف تعریف دارد و پس از *aus* در حالت *Dativ* می‌آید: *aus der Türkei*."
+      de: "*Die Türkei* hat einen Artikel. Nach *aus* steht der Dativ: *aus der Türkei*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wo wohnt ihr? – Wir wohnen ___.
+    options: [in der Schweiz, in die Schweiz, in Schweiz]
+    answer: in der Schweiz
+    explanation:
+      en: "*Wo?* asks where, so *in* takes the *Dativ*: *in der Schweiz*."
+      fa: "*Wo?* جای چیزی را می‌پرسد، پس *in* با حالت *Dativ* می‌آید: *in der Schweiz*."
+      de: "*Wo?* fragt nach dem Ort. Darum Dativ: *in der Schweiz*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wie fährst du zur Arbeit? – ___
+    options: [Mit dem Fahrrad., Mit das Fahrrad., Mit den Fahrrad.]
+    answer: Mit dem Fahrrad.
+    explanation:
+      en: "*Mit* takes the *Dativ*. *Fahrrad* is neuter: *das* becomes *dem*."
+      fa: "*mit* با حالت *Dativ* می‌آید. *Fahrrad* اسم خنثی است: *das* به *dem* تبدیل می‌شود."
+      de: "Nach *mit* steht der Dativ. *Fahrrad* ist neutral: *das* wird zu *dem*."
+  - id: true-1
+    type: true-false
+    prompt: Nach dem Essen gehen wir spazieren.
+    answer: true
+    explanation:
+      en: "*Nach* takes the *Dativ*: *das Essen* becomes *dem Essen*. The sentence is correct."
+      fa: "*nach* با حالت *Dativ* می‌آید: *das Essen* به *dem Essen* تبدیل می‌شود. جمله درست است."
+      de: "Nach *nach* steht der Dativ: *das Essen* wird zu *dem Essen*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich fahre mit die Bahn.
+    answer: false
+    explanation:
+      en: "*Mit* takes the *Dativ*, and *die* becomes *der*: *mit der Bahn*."
+      fa: "*mit* با حالت *Dativ* می‌آید و *die* به *der* تبدیل می‌شود: *mit der Bahn*."
+      de: "Nach *mit* steht der Dativ: *die* wird zu *der*, also *mit der Bahn*."
+  - id: true-3
+    type: true-false
+    prompt: Wir wohnen seit einem Jahr in Berlin.
+    answer: true
+    explanation:
+      en: "*Seit* takes the *Dativ*: *das Jahr* becomes *einem Jahr*. The sentence is correct."
+      fa: "*seit* با حالت *Dativ* می‌آید: *ein Jahr* به *einem Jahr* تبدیل می‌شود. جمله درست است."
+      de: "Nach *seit* steht der Dativ: *ein Jahr* wird zu *einem Jahr*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich komme gerade von der Bahnhof.
+    answer: false
+    explanation:
+      en: "*Bahnhof* is masculine, so *von dem Bahnhof*, shortened to *vom Bahnhof*."
+      fa: "*Bahnhof* اسم مذکر است، پس *von dem Bahnhof* که کوتاه می‌شود: *vom Bahnhof*."
+      de: "*Bahnhof* ist maskulin: *von dem Bahnhof*, kurz *vom Bahnhof*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich fahre mit ___ (das) Auto.
+    answers: [dem]
+    explanation:
+      en: "In the *Dativ* *das* becomes *dem*: *mit dem Auto*."
+      fa: "*das* در حالت *Dativ* به *dem* تبدیل می‌شود: *mit dem Auto*."
+      de: "Im Dativ wird *das* zu *dem*: *mit dem Auto*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Sie spricht mit ___ (die) Lehrerin.
+    answers: [der]
+    explanation:
+      en: "In the *Dativ* *die* becomes *der*: *mit der Lehrerin*."
+      fa: "*die* در حالت *Dativ* به *der* تبدیل می‌شود: *mit der Lehrerin*."
+      de: "Im Dativ wird *die* zu *der*: *mit der Lehrerin*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich gehe ___ (zu / die Post).
+    answers: [zur Post, zu der Post, zur, zu der]
+    explanation:
+      en: "*Post* is feminine: *zu der Post*, almost always said as *zur Post*."
+      fa: "*Post* اسم مؤنث است: *zu der Post* که تقریباً همیشه کوتاه می‌شود: *zur Post*."
+      de: "*Post* ist feminin: *zu der Post*. Kurz sagt man fast immer *zur Post*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich bin heute ___ (bei / der Arzt).
+    answers: [beim Arzt, bei dem Arzt, beim, bei dem]
+    explanation:
+      en: "*Arzt* is masculine: *bei dem Arzt*, almost always said as *beim Arzt*."
+      fa: "*Arzt* اسم مذکر است: *bei dem Arzt* که تقریباً همیشه کوتاه می‌شود: *beim Arzt*."
+      de: "*Arzt* ist maskulin: *bei dem Arzt*. Kurz sagt man fast immer *beim Arzt*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Wir fahren mit ___ (ein) Taxi.
+    answers: [einem]
+    explanation:
+      en: "*Taxi* is neuter. In the *Dativ* *ein* becomes *einem*."
+      fa: "*Taxi* اسم خنثی است و *ein* در حالت *Dativ* به *einem* تبدیل می‌شود."
+      de: "*Taxi* ist neutral. Im Dativ wird *ein* zu *einem*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "mit + die Freunde"
+    answers: [mit den Freunden]
+    explanation:
+      en: "Plural *die* becomes *den*, and the noun gets *-n*: *mit den Freunden*."
+      fa: "*die* جمع به *den* تبدیل می‌شود و اسم *-n* می‌گیرد: *mit den Freunden*."
+      de: "Im Plural wird *die* zu *den*, und das Nomen bekommt *-n*: *mit den Freunden*."
+  - id: error-1
+    type: find-error
+    prompt: Ich spiele mit den Kinder.
+    answer: Kinder
+    explanation:
+      en: "In the *Dativ* plural the noun gets *-n*: *mit den Kindern*."
+      fa: "در حالت *Dativ* جمع، اسم *-n* می‌گیرد: *mit den Kindern*."
+      de: "Im Dativ Plural bekommt das Nomen *-n*: *mit den Kindern*."
+  - id: error-2
+    type: find-error
+    prompt: Die Kinder gehen zum Schule.
+    answer: zum
+    explanation:
+      en: "*Schule* is feminine, so *zu der Schule*, shortened to *zur Schule*. *Zum* is for masculine and neuter nouns."
+      fa: "*Schule* اسم مؤنث است، پس *zu der Schule* که کوتاه می‌شود: *zur Schule*. *zum* برای اسم‌های مذکر و خنثی است."
+      de: "*Schule* ist feminin: *zu der Schule*, kurz *zur Schule*. *Zum* ist für maskuline und neutrale Nomen."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wir, wohnen, bei Familie Müller]
+      - [bei Familie Müller, wohnen, wir]
+    explanation:
+      en: "The verb comes second. *Bei Familie Müller* can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. *bei Familie Müller* می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. *Bei Familie Müller* kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [mit ___ Bus, dem]
+      - [mit ___ Bahn, der]
+      - [mit ___ Kindern, den]
+    explanation:
+      en: "In the *Dativ*: *der Bus* becomes *dem Bus*, *die Bahn* becomes *der Bahn*, plural *die Kinder* becomes *den Kindern*."
+      fa: "در حالت *Dativ*: *der Bus* به *dem Bus*، *die Bahn* به *der Bahn* و *die Kinder* جمع به *den Kindern* تبدیل می‌شود."
+      de: "Im Dativ: *der Bus* wird zu *dem Bus*, *die Bahn* zu *der Bahn*, *die Kinder* zu *den Kindern*."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question again after the hints were rewritten, then the
+    rewritten gaps once more after their key was widened; not people)"
+  date: 2026-11-28
+  pool: fa52dced2bb10055

@@ -4,10 +4,271 @@ kind: grammar
 level: A1
 chapter: a1-modal-verbs
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-026]
 title:
   en: "*sollen*"
   fa: "*sollen*"
   de: "*sollen*"
+
+explanations:
+  en:
+    rule: >
+      *Sollen* says that another person wants something done. It passes on
+      an instruction: *Der Arzt sagt, ich soll viel trinken.* It asks for one:
+      *Was soll ich machen?* And in a question it offers help or makes a
+      suggestion: *Soll ich das Fenster aufmachen? Sollen wir ein Taxi
+      nehmen?* Like every modal verb, *sollen* is conjugated in position 2 and
+      the second verb goes to the end as an infinitive. *Ich* and *er* /
+      *sie* / *es* have the same form, *soll*, with no ending; the vowel never
+      changes. When the meaning is clear, the infinitive can be dropped:
+      *Wohin soll der Tisch?*
+  fa:
+    rule: >
+      *sollen* می‌گوید کس دیگری انجام کاری را می‌خواهد. با آن دستور یا
+      خواستهٔ کسی را نقل می‌کنیم: *Der Arzt sagt, ich soll viel trinken.*
+      با آن می‌پرسیم چه باید بکنیم: *Was soll ich machen?* و در پرسش، کمک
+      خود را پیشنهاد می‌کنیم یا کاری را به دیگران پیشنهاد می‌دهیم: *Soll ich
+      das Fenster aufmachen? Sollen wir ein Taxi nehmen?*
+      مانند همهٔ فعل‌های وجهی، *sollen* صرف می‌شود و در جایگاه دوم می‌آید و
+      فعل دوم به شکل مصدر به پایان جمله می‌رود. *ich* و *er* / *sie* / *es*
+      صورت یکسان *soll* را دارند، بدون شناسه، و واکهٔ آن هیچ‌گاه تغییر
+      نمی‌کند. اگر معنا روشن باشد، مصدر را می‌توان انداخت: *Wohin soll der
+      Tisch?*
+  de:
+    rule: >
+      Mit *sollen* sagt man: Eine andere Person will das. Man gibt eine
+      Aufgabe weiter: *Der Arzt sagt, ich soll viel trinken.* Man fragt nach
+      einer Aufgabe: *Was soll ich machen?* In einer Frage bietet man Hilfe an
+      oder macht einen Vorschlag: *Soll ich das Fenster aufmachen? Sollen wir
+      ein Taxi nehmen?* *Sollen* ist konjugiert und steht auf Position 2, das
+      zweite Verb steht im Infinitiv am Ende. *Ich* und *er* / *sie* / *es*
+      haben die gleiche Form *soll*, ohne Endung. Ist die Bedeutung klar, kann
+      der Infinitiv fehlen: *Wohin soll der Tisch?*
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*sollen*", fa: "*sollen*", de: "*sollen*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, soll, Soll ich das Fenster aufmachen?]
+    - [du, sollst, Du sollst deine Mutter anrufen.]
+    - [er / sie / es, soll, Er soll morgen früher kommen.]
+    - [wir, sollen, Sollen wir ein Taxi nehmen?]
+    - [ihr, sollt, Ihr sollt die Tür zumachen.]
+    - [sie / Sie, sollen, Sie sollen hier warten.]
+
+examples:
+  - de: Soll ich das Fenster aufmachen?
+    en: Shall I open the window?
+    fa: پنجره را باز کنم؟
+  - de: Sollen wir ein Taxi nehmen?
+    en: Shall we take a taxi?
+    fa: تاکسی بگیریم؟
+  - de: Was soll ich machen?
+    en: What should I do?
+    fa: چه کار کنم؟
+  - de: Der Arzt sagt, ich soll viel trinken.
+    en: The doctor says I should drink a lot.
+    fa: دکتر می‌گوید باید زیاد آب بنوشم.
+  - de: Du sollst deine Mutter anrufen.
+    en: You're supposed to call your mother.
+    fa: مادرت گفته به او زنگ بزنی.
+  - de: Wo soll ich unterschreiben?
+    en: Where should I sign?
+    fa: کجا را امضا کنم؟
+  - de: Frau Wolf, Sie sollen bitte kurz warten.
+    en: Ms Wolf, you are asked to wait a moment.
+    fa: خانم ولف، از شما خواسته‌اند کمی صبر کنید.
+  - de: Wohin soll der Tisch?
+    en: Where should the table go?
+    fa: میز را کجا بگذاریم؟
+
+mistakes:
+  - wrong: Sollst ich die Tür aufmachen?
+    right: Soll ich die Tür aufmachen?
+    why:
+      en: With *ich* the form is *soll*, with no ending.
+      fa: با *ich* صورت فعل *soll* است، بدون شناسه.
+      de: Bei *ich* heißt es *soll*, ohne Endung.
+  - wrong: Er sollt um acht Uhr kommen.
+    right: Er soll um acht Uhr kommen.
+    why:
+      en: With *er*, *sie* and *es* the form is *soll*, with no *-t*.
+      fa: با *er*، *sie* و *es* صورت فعل *soll* است، بدون *-t*.
+      de: Bei *er*, *sie* und *es* heißt es *soll*, ohne *-t*.
+  - wrong: Sollen wir nehmen ein Taxi?
+    right: Sollen wir ein Taxi nehmen?
+    why:
+      en: In a question too, the infinitive goes to the very end.
+      fa: در پرسش هم مصدر به پایان جمله می‌رود.
+      de: Auch in der Frage steht der Infinitiv ganz am Ende.
+  - wrong: Was soll ich mache?
+    right: Was soll ich machen?
+    why:
+      en: Only the modal verb is conjugated. The second verb stays an infinitive.
+      fa: فقط فعل وجهی صرف می‌شود؛ فعل دوم به شکل مصدر می‌ماند.
+      de: Nur das Modalverb ist konjugiert. Das zweite Verb bleibt im Infinitiv.
+
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: ___ ich das Fenster aufmachen?
+    options: [Soll, Sollst, Sollen]
+    answer: Soll
+    explanation:
+      en: With *ich* the form is *soll*, with no ending.
+      fa: با *ich* صورت فعل *soll* است، بدون شناسه.
+      de: Bei *ich* heißt es *soll*, ohne Endung.
+  - id: q2
+    type: multiple-choice
+    prompt: Du ___ deine Mutter anrufen.
+    options: [soll, sollst, sollt]
+    answer: sollst
+    explanation:
+      en: With *du* the form is *sollst*.
+      fa: با *du* صورت فعل *sollst* است.
+      de: Bei *du* heißt es *sollst*.
+  - id: q3
+    type: gap-fill
+    prompt: ___ wir ein Taxi nehmen?
+    options: [Soll, Sollt, Sollen]
+    answer: Sollen
+    explanation:
+      en: With *wir* the form is *sollen*, like the infinitive.
+      fa: با *wir* صورت فعل *sollen* است، همانند مصدر.
+      de: Bei *wir* ist die Form *sollen*, wie der Infinitiv.
+  - id: q4
+    type: gap-fill
+    prompt: Der Lehrer sagt, ihr ___ die Bücher mitbringen.
+    options: [sollt, sollst, sollen]
+    answer: sollt
+    explanation:
+      en: With *ihr* the form is *sollt*.
+      fa: با *ihr* صورت فعل *sollt* است.
+      de: Bei *ihr* heißt es *sollt*.
+  - id: q5
+    type: gap-fill
+    prompt: Paul ___ morgen früher kommen.
+    options: [soll, sollt, sollen]
+    answer: soll
+    explanation:
+      en: "Paul is *er*: the form is *soll*, the same as with *ich*."
+      fa: "پاول سوم‌شخص مفرد است (*er*): صورت فعل *soll* است، همانند *ich*."
+      de: "Paul ist *er*. Die Form ist *soll*, wie bei *ich*."
+  - id: q6
+    type: multiple-choice
+    prompt: "sollen / ich / den Tisch / decken / ?"
+    options: [Soll ich den Tisch decken?, Soll ich decken den Tisch?, Soll den Tisch ich decken?]
+    answer: Soll ich den Tisch decken?
+    explanation:
+      en: "In a yes/no question *soll* comes first, and the infinitive *decken* stays at the end."
+      fa: "در پرسش بله یا نه *soll* در آغاز می‌آید و مصدر *decken* در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht *soll* am Anfang, der Infinitiv *decken* bleibt am Ende."
+  - id: q7
+    type: multiple-choice
+    prompt: "die Ärztin / sagen / ich / sollen / mehr / schlafen"
+    options:
+      [
+        "Die Ärztin sagt, ich soll mehr schlafen.",
+        "Die Ärztin sagt, ich soll schlafen mehr.",
+        "Die Ärztin sagt, ich mehr soll schlafen.",
+      ]
+    answer: Die Ärztin sagt, ich soll mehr schlafen.
+    explanation:
+      en: "After *Die Ärztin sagt,* comes a normal statement: *soll* in position 2, *schlafen* at the end."
+      fa: "پس از *die Ärztin sagt* یک جملهٔ خبری عادی می‌آید: *soll* در جایگاه دوم و *schlafen* در پایان."
+      de: "Nach *Die Ärztin sagt* kommt ein normaler Aussagesatz: *soll* auf Position 2, *schlafen* am Ende."
+  - id: q8
+    type: true-false
+    prompt: Wo soll ich unterschreiben?
+    answer: true
+    explanation:
+      en: "*Soll* is in position 2 after the question word, and the infinitive is at the end. The sentence is correct."
+      fa: "*soll* پس از واژهٔ پرسشی در جایگاه دوم است و مصدر در پایان. جمله درست است."
+      de: "*Soll* steht nach dem Fragewort auf Position 2, der Infinitiv am Ende. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Sie sollt hier warten.
+    answer: false
+    explanation:
+      en: "With *sie* (singular) the form is *soll*, and with *Sie* or *sie* (plural) it is *sollen*. *Sollt* goes only with *ihr*."
+      fa: "با *sie* مفرد صورت فعل *soll* است و با *Sie* یا *sie* جمع *sollen*. *sollt* فقط با *ihr* می‌آید."
+      de: "Bei *sie* (Singular) heißt es *soll*, bei *Sie* oder *sie* (Plural) *sollen*. *Sollt* gibt es nur bei *ihr*."
+  - id: q10
+    type: true-false
+    prompt: Was soll ich kochen?
+    answer: true
+    explanation:
+      en: "This asks what another person wants. *Soll* is in position 2 and *kochen* at the end. The sentence is correct."
+      fa: "این پرسش می‌پرسد دیگری چه می‌خواهد. *soll* در جایگاه دوم و *kochen* در پایان است. جمله درست است."
+      de: "Man fragt, was eine andere Person will. *Soll* steht auf Position 2, *kochen* am Ende. Der Satz ist richtig."
+  - id: q11
+    type: find-error
+    prompt: Sollst ich dir helfen?
+    answer: Sollst
+    explanation:
+      en: "With *ich* the form is *soll*: *Soll ich dir helfen?*"
+      fa: "با *ich* صورت فعل *soll* است: *Soll ich dir helfen?*"
+      de: "Bei *ich* heißt es *soll*: *Soll ich dir helfen?*"
+  - id: q12
+    type: find-error
+    prompt: Wir sollen um neun Uhr da sind.
+    answer: sind
+    explanation:
+      en: "The second verb is an infinitive: *Wir sollen um neun Uhr da sein.*"
+      fa: "فعل دوم مصدر است: *Wir sollen um neun Uhr da sein.*"
+      de: "Das zweite Verb steht im Infinitiv: *Wir sollen um neun Uhr da sein.*"
+  - id: q13
+    type: word-order
+    answers:
+      - [sollen, wir, ins Kino, gehen]
+    end: "?"
+    explanation:
+      en: "A suggestion as a question: *sollen* first, the infinitive at the end."
+      fa: "پیشنهاد به شکل پرسش: *sollen* در آغاز و مصدر در پایان جمله."
+      de: "Ein Vorschlag als Frage: *sollen* am Anfang, der Infinitiv am Ende."
+  - id: q14
+    type: word-order
+    answers:
+      - [wann, soll, ich, kommen]
+    end: "?"
+    explanation:
+      en: "After the question word comes the modal verb in position 2; the infinitive goes to the end."
+      fa: "پس از واژهٔ پرسشی، فعل وجهی در جایگاه دوم می‌آید و مصدر به پایان جمله می‌رود."
+      de: "Nach dem Fragewort steht das Modalverb auf Position 2. Der Infinitiv steht am Ende."
+  - id: q15
+    type: typed-gap-fill
+    prompt: Du ___ (sollen) bitte das Licht ausmachen.
+    answers: [sollst]
+    explanation:
+      en: With *du* the form is *sollst*.
+      fa: با *du* صورت فعل *sollst* است.
+      de: Bei *du* heißt es *sollst*.
+  - id: q16
+    type: typed-gap-fill
+    prompt: Herr Roth, Sie ___ (sollen) morgen den Chef anrufen.
+    answers: [sollen]
+    explanation:
+      en: With the polite *Sie* the form is *sollen*.
+      fa: با *Sie* رسمی صورت فعل *sollen* است.
+      de: Bei *Sie* (höflich) heißt es *sollen*.
+  - id: q17
+    type: matching
+    answer:
+      - [ich, soll]
+      - [du, sollst]
+      - [wir, sollen]
+      - [ihr, sollt]
+    explanation:
+      en: "The forms of *sollen*: *ich soll*, *du sollst*, *wir sollen*, *ihr sollt*."
+      fa: "صورت‌های *sollen*: *ich soll*، *du sollst*، *wir sollen*، *ihr sollt*."
+      de: "Die Formen von *sollen*: *ich soll*, *du sollst*, *wir sollen*, *ihr sollt*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 9227788c522ea78a

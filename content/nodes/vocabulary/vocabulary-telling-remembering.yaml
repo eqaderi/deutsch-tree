@@ -1,36 +1,337 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-telling-remembering
 kind: vocabulary
 level: A2
 chapter: a2-words-people
 order: 6
-status: coming-soon
+status: published
 title:
   en: "Telling and remembering"
   fa: "تعریف کردن و به یاد آوردن"
   de: "Erzählen und Erinnern"
+attemptSize: 15
 words:
   - word: reden
+    class: verb
+    level: A2
+    meaning:
+      en: to talk
+      fa: حرف زدن، صحبت کردن
+    definition: mit Worten etwas sagen, zum Beispiel mit Freunden über ein Problem
+    example:
+      de: Wir müssen mal über das Problem reden.
+      en: We need to talk about the problem.
+      fa: باید دربارهٔ این مشکل حرف بزنیم.
+    alsoAccepted: [sprechen, sich unterhalten, plaudern, quatschen]
+
+  # berichten and informieren both pass news on; neither is offered as a wrong meaning of the other.
   - word: berichten
+    class: verb
+    level: A2
+    meaning:
+      en: to report, to give an account (of)
+      fa: گزارش دادن
+    definition: genau erzählen, was passiert ist, zum Beispiel im Radio oder in der Zeitung
+    example:
+      de: Die Zeitung berichtet über den Unfall.
+      en: The newspaper is reporting on the accident.
+      fa: روزنامه دربارهٔ این تصادف گزارش می‌دهد.
+    alsoAccepted: [erzählen, melden, schildern]
+    tooCloseTo: [informieren, beschreiben]
+
   - word: beschreiben
+    class: verb
+    level: A2
+    meaning:
+      en: to describe
+      fa: توصیف کردن، شرح دادن
+    definition: sagen, wie eine Sache oder eine Person aussieht oder ist
+    example:
+      de: Können Sie Ihre Tasche beschreiben?
+      en: Can you describe your bag?
+      fa: می‌توانید کیفتان را توصیف کنید؟
+    alsoAccepted: [schildern, darstellen]
+
+  # erinnern and merken can both be "remember"; neither is offered as a wrong meaning of the other.
+  # The scope list gives "(sich)": the node teaches "sich erinnern", to remember; without "sich" it is to remind.
   - word: erinnern
+    class: verb
+    reflexive: sich
+    level: A2
+    meaning:
+      en: to remember (something from before)
+      fa: به یاد آوردن، به خاطر آوردن
+    definition: wieder an etwas denken, das früher war
+    example:
+      de: Erinnerst du dich an unseren Urlaub in Italien?
+      en: Do you remember our holiday in Italy?
+      fa: سفرمان به ایتالیا یادت هست؟
+    alsoAccepted: [sich entsinnen, sich erinnern an, sich an etwas erinnern, zurückdenken]
+    tooCloseTo: [merken, vergessen]
+
   - word: vergessen
+    class: verb
+    level: A2
+    meaning:
+      en: to forget
+      fa: فراموش کردن، از یاد بردن
+    definition: etwas nicht mehr wissen oder nicht mehr daran denken
+    example:
+      de: Ich habe meinen Schlüssel zu Hause vergessen.
+      en: I've left my key at home.
+      fa: کلیدم را در خانه جا گذاشته‌ام.
+
   - word: merken
+    class: verb
+    level: A2
+    meaning:
+      en: to notice, to realise
+      fa: متوجه شدن، پی بردن
+    definition: etwas sehen, hören oder fühlen und es verstehen
+    example:
+      de: Hast du gemerkt, dass Tom heute traurig war?
+      en: Did you notice that Tom was sad today?
+      fa: متوجه شدی که تام امروز ناراحت بود؟
+    alsoAccepted: [bemerken, feststellen, mitbekommen, wahrnehmen]
+
   - word: nennen
+    class: verb
+    level: A2
+    meaning:
+      en: to name, to call; to mention
+      fa: نام بردن، نامیدن
+    definition: einen Namen geben oder sagen
+    example:
+      de: Nennen Sie drei Städte in Deutschland.
+      en: Name three cities in Germany.
+      fa: سه شهر در آلمان نام ببرید.
+    alsoAccepted: [benennen, bezeichnen, erwähnen]
+
   - word: aussprechen
+    class: verb
+    level: A2
+    meaning:
+      en: to pronounce
+      fa: تلفظ کردن
+    definition: ein Wort mit dem Mund sagen, zum Beispiel richtig oder falsch
+    example:
+      de: Wie spricht man dieses Wort aus?
+      en: How do you pronounce this word?
+      fa: این واژه را چطور تلفظ می‌کنند؟
+
   - word: zuhören
+    class: verb
+    level: A2
+    meaning:
+      en: to listen (to)
+      fa: گوش دادن، گوش کردن
+    definition: gut und genau hören, was eine Person sagt
+    example:
+      de: Hör mir bitte zu!
+      en: Please listen to me!
+      fa: لطفاً به حرفم گوش بده!
+    alsoAccepted: [hören, horchen, lauschen, anhören]
+
   - word: rufen
+    class: verb
+    level: A2
+    meaning:
+      en: to call, to shout
+      fa: صدا زدن؛ فریاد زدن
+    definition: laut sagen, damit eine Person kommt oder hört
+    example:
+      de: Die Mutter ruft die Kinder zum Essen.
+      en: The mother calls the children to come and eat.
+      fa: مادر بچه‌ها را برای غذا صدا می‌زند.
+    alsoAccepted: [schreien, herbeirufen, brüllen]
+
   - word: Situation
+    class: noun
+    article: die
+    plural: Situationen
+    level: A2
+    meaning:
+      en: situation
+      fa: موقعیت، وضعیت
+    definition: wie die Dinge in einem Moment sind
+    example:
+      de: Das war eine schwierige Situation für mich.
+      en: That was a difficult situation for me.
+      fa: آن موقعیت برایم دشوار بود.
+    alsoAccepted: [die Lage]
+
+  # Used as "Bescheid sagen" (to let someone know) and "Bescheid wissen" (to know about it).
+  # Bescheid and Nachricht both bring news; neither is offered as a wrong meaning of the other.
   - word: Bescheid
+    class: noun
+    article: der
+    plural: Bescheide
+    level: A2
+    meaning:
+      en: word, notice (to let someone know)
+      fa: خبر (در «به کسی خبر دادن» یا «از چیزی خبر داشتن»)
+    definition: "eine kurze Information für eine Person, zum Beispiel: „Sag mir …, wenn du kommst!“"
+    example:
+      de: Sag mir bitte Bescheid, wenn du zu Hause bist.
+      en: Please let me know when you're home.
+      fa: لطفاً وقتی به خانه رسیدی، به من خبر بده.
+    alsoAccepted: [Bescheid, die Information, die Info, die Nachricht, die Mitteilung, die Benachrichtigung]
+    tooCloseTo: [Nachricht, informieren]
+
   - word: Nachricht
+    class: noun
+    article: die
+    plural: Nachrichten
+    level: A2
+    meaning:
+      en: message; (in the plural) the news
+      fa: پیام؛ (در جمع) اخبار
+    definition: eine Information, zum Beispiel auf dem Handy; im Plural auch die Sendung mit dem, was heute in der Welt passiert ist
+    example:
+      de: Ich habe dir eine Nachricht geschrieben.
+      en: I've written you a message.
+      fa: برایت پیام فرستاده‌ام.
+    alsoAccepted: [die Mitteilung, die Botschaft, die Meldung, die Nachrichten]
+
+  # The scope list gives "(sich)": the node teaches "informieren", to inform; "sich informieren" is to find out.
   - word: informieren
+    class: verb
+    level: A2
+    meaning:
+      en: to inform, to let (someone) know
+      fa: اطلاع دادن، باخبر کردن
+    definition: einer Person sagen, was sie wissen muss
+    example:
+      de: Bitte informieren Sie uns, wenn sich Ihre Adresse ändert.
+      en: Please inform us if your address changes.
+      fa: لطفاً اگر نشانی‌تان عوض شد، به ما اطلاع دهید.
+    alsoAccepted: [benachrichtigen, mitteilen, Bescheid sagen, Bescheid geben, unterrichten]
+
   - word: beantworten
+    class: verb
+    level: A2
+    meaning:
+      en: to answer (a question, a letter)
+      fa: پاسخ دادن (به پرسش یا نامه)
+    definition: eine Antwort auf eine Frage, eine E-Mail oder einen Brief geben
+    example:
+      de: Können Sie mir bitte diese Frage beantworten?
+      en: Can you answer this question for me, please?
+      fa: لطفاً می‌توانید به این پرسش من پاسخ بدهید؟
+    alsoAccepted: [antworten, erwidern]
+
   - word: bestätigen
+    class: verb
+    level: A2
+    meaning:
+      en: to confirm
+      fa: تأیید کردن
+    definition: sagen oder schreiben, dass etwas richtig ist oder stimmt
+    example:
+      de: Bitte bestätigen Sie den Termin per E-Mail.
+      en: Please confirm the appointment by email.
+      fa: لطفاً وقت ملاقات را با ایمیل تأیید کنید.
+    alsoAccepted: [bekräftigen]
+
   - word: Witz
+    class: noun
+    article: der
+    plural: Witze
+    level: A2
+    meaning:
+      en: joke
+      fa: لطیفه، جوک
+    definition: eine kurze, lustige Erzählung, über die man lacht
+    example:
+      de: Mein Opa erzählt gern Witze.
+      en: My grandpa likes telling jokes.
+      fa: پدربزرگم دوست دارد جوک تعریف کند.
+    alsoAccepted: [der Scherz]
+    tooCloseTo: [Geschichte]
+
   - word: Geschichte
+    class: noun
+    article: die
+    plural: Geschichten
+    level: A2
+    meaning:
+      en: story; history
+      fa: داستان، قصه؛ تاریخ
+    definition: etwas, das man erzählt oder liest; auch das, was früher in einem Land passiert ist
+    example:
+      de: Am Abend liest der Vater den Kindern eine Geschichte vor.
+      en: In the evening the father reads the children a story.
+      fa: پدر شب‌ها برای بچه‌ها قصه می‌خواند.
+    alsoAccepted: [die Erzählung, die Story]
+
   - word: zeigen
+    class: verb
+    level: A2
+    meaning:
+      en: to show
+      fa: نشان دادن
+    definition: eine Person etwas sehen lassen
+    example:
+      de: Kannst du mir den Weg zum Bahnhof zeigen?
+      en: Can you show me the way to the station?
+      fa: می‌توانی راه ایستگاه قطار را به من نشان بدهی؟
+    alsoAccepted: [vorzeigen]
+
   - word: übersetzen
+    class: verb
+    level: A2
+    meaning:
+      en: to translate
+      fa: ترجمه کردن
+    definition: einen Text in eine andere Sprache bringen
+    example:
+      de: Kannst du mir den Brief ins Englische übersetzen?
+      en: Can you translate the letter into English for me?
+      fa: می‌توانی این نامه را برایم به انگلیسی ترجمه کنی؟
+
   - word: Übersetzung
+    class: noun
+    article: die
+    plural: Übersetzungen
+    level: A2
+    meaning:
+      en: translation
+      fa: ترجمه
+    definition: ein Text, den man aus einer anderen Sprache in die eigene Sprache gebracht hat
+    example:
+      de: Die Übersetzung von dem Buch ist sehr gut.
+      en: The translation of the book is very good.
+      fa: ترجمهٔ این کتاب خیلی خوب است.
+
   - word: auf Deutsch
+    class: phrase
+    level: A2
+    meaning:
+      en: in German
+      fa: به آلمانی
+    definition: in der deutschen Sprache
+    example:
+      de: Wie heißt das auf Deutsch?
+      en: What's that called in German?
+      fa: این به آلمانی چه می‌شود؟
+    alsoAccepted: [in deutscher Sprache]
+
   - word: deutlich
+    class: adjective
+    level: A2
+    meaning:
+      en: clear, distinct
+      fa: واضح، روشن
+    definition: so, dass man es gut hören, sehen oder verstehen kann
+    example:
+      de: Bitte sprechen Sie langsam und deutlich.
+      en: Please speak slowly and clearly.
+      fa: لطفاً آهسته و واضح صحبت کنید.
+    alsoAccepted: [klar, verständlich]
+
+review:
+  reviewer: independent AI agents (six fresh Claude Opus 5.5 subagents, sheet
+    only; 138, then 4, 35, 18, 42 and 12 questions)
+  date: 2026-11-28
+  pool: 9cf68de38886a8bb

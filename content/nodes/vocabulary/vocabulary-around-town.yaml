@@ -1,39 +1,382 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-around-town
 kind: vocabulary
 level: A2
 chapter: a2-words-health-town
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Getting around town"
   fa: "رفت‌وآمد در شهر"
   de: "Unterwegs in der Stadt"
+attemptSize: 15
 words:
   - word: Verkehr
+    class: noun
+    article: der
+    number: singular-only
+    level: A2
+    meaning:
+      en: traffic
+      fa: ترافیک، آمدوشد خودروها
+    definition: alle Autos, Busse, Fahrräder und Menschen, die auf den Straßen fahren und gehen
+    example:
+      de: Am Morgen ist in der Stadt viel Verkehr.
+      en: In the morning there's a lot of traffic in town.
+      fa: صبح‌ها در شهر ترافیک زیاد است.
+
   - word: Verkehrsmittel
+    class: noun
+    article: das
+    plural: Verkehrsmittel
+    level: A2
+    meaning:
+      en: means of transport
+      fa: وسیلهٔ حمل‌ونقل
+    definition: damit kommt man von einem Ort zu einem anderen, zum Beispiel Bus, Bahn oder Auto
+    example:
+      de: Welches Verkehrsmittel nimmst du zur Arbeit?
+      en: Which means of transport do you take to work?
+      fa: برای رفتن به سر کار از کدام وسیلهٔ حمل‌ونقل استفاده می‌کنی؟
+    alsoAccepted: [das Transportmittel, das Fortbewegungsmittel]
+
   - word: Ampel
+    class: noun
+    article: die
+    plural: Ampeln
+    level: A2
+    meaning:
+      en: traffic lights
+      fa: چراغ راهنمایی
+    definition: sie steht an der Straße und zeigt Rot, Gelb oder Grün
+    example:
+      de: Bei Rot musst du an der Ampel warten.
+      en: When it's red you have to wait at the lights.
+      fa: وقتی چراغ قرمز است، باید پشت چراغ منتظر بمانی.
+    alsoAccepted: [die Verkehrsampel]
+
   - word: Kreuzung
+    class: noun
+    article: die
+    plural: Kreuzungen
+    level: A2
+    meaning:
+      en: crossroads, junction
+      fa: چهارراه، تقاطع
+    definition: eine Stelle, an der sich zwei oder mehr Straßen treffen
+    example:
+      de: An der nächsten Kreuzung gehen Sie links.
+      en: At the next crossroads, turn left.
+      fa: سر چهارراه بعدی به چپ بپیچید.
+    alsoAccepted: [die Straßenkreuzung]
+
   - word: Brücke
+    class: noun
+    article: die
+    plural: Brücken
+    level: A2
+    meaning:
+      en: bridge
+      fa: پل
+    definition: auf ihr fährt oder geht man über einen Fluss oder eine Straße
+    example:
+      de: Wir gehen über die Brücke in die Altstadt.
+      en: We walk over the bridge into the old town.
+      fa: از روی پل به بخش قدیمی شهر می‌رویم.
+
   - word: Baustelle
+    class: noun
+    article: die
+    plural: Baustellen
+    level: A2
+    meaning:
+      en: building site; roadworks
+      fa: محل ساخت‌وساز؛ محل تعمیر خیابان
+    definition: ein Ort, an dem Arbeiter ein Haus oder eine Straße bauen
+    example:
+      de: Wegen der Baustelle fährt der Bus heute anders.
+      en: Because of the roadworks the bus is taking a different route today.
+      fa: به‌خاطر تعمیر خیابان، اتوبوس امروز از مسیر دیگری می‌رود.
+
   - word: Weg
+    class: noun
+    article: der
+    plural: Wege
+    level: A2
+    meaning:
+      en: way (to a place)
+      fa: راه (رسیدن به جایی)
+    definition: so geht oder fährt man, um an einen Ort zu kommen; danach fragt man, wenn man den Bahnhof nicht findet
+    example:
+      de: Können Sie mir den Weg zum Bahnhof zeigen?
+      en: Can you show me the way to the station?
+      fa: می‌توانید راه ایستگاه قطار را به من نشان بدهید؟
+
   - word: Nähe
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: nearness, closeness (being not far away)
+      fa: نزدیکی (دور نبودن)
+    definition: ein kleiner Abstand, wenn etwas nicht weit weg ist
+    example:
+      de: Gibt es hier in der Nähe eine Apotheke?
+      en: Is there a pharmacy near here?
+      fa: آیا در این نزدیکی داروخانه‌ای هست؟
+
   - word: Zentrum
+    class: noun
+    article: das
+    plural: Zentren
+    level: A2
+    meaning:
+      en: centre (of a town)
+      fa: مرکز (شهر)
+    definition: der mittlere Teil einer Stadt mit vielen Geschäften
+    example:
+      de: Unsere Wohnung liegt im Zentrum.
+      en: Our flat is in the centre.
+      fa: آپارتمان ما در مرکز شهر است.
+    alsoAccepted: [die Innenstadt, die Stadtmitte, das Stadtzentrum]
+
   - word: Rathaus
+    class: noun
+    article: das
+    plural: Rathäuser
+    level: A2
+    meaning:
+      en: town hall
+      fa: ساختمان شهرداری
+    definition: das Haus, in dem der Bürgermeister und die Verwaltung der Stadt arbeiten
+    example:
+      de: Das Rathaus steht am Marktplatz.
+      en: The town hall is on the market square.
+      fa: ساختمان شهرداری در میدان بازار است.
+
   - word: Kirche
+    class: noun
+    article: die
+    plural: Kirchen
+    level: A2
+    meaning:
+      en: church
+      fa: کلیسا
+    definition: ein Gebäude, in dem Christen beten; fast jedes Dorf hat eins
+    example:
+      de: Die Kirche ist über achthundert Jahre alt.
+      en: The church is over eight hundred years old.
+      fa: این کلیسا بیش از هشتصد سال قدمت دارد.
+
   - word: Park
+    class: noun
+    article: der
+    plural: Parks
+    level: A2
+    meaning:
+      en: park
+      fa: پارک
+    definition: ein großes Stück Land mit Bäumen, Wiesen und Wegen, in dem alle spazieren gehen können
+    example:
+      de: Am Sonntag machen wir ein Picknick im Park.
+      en: On Sunday we're having a picnic in the park.
+      fa: یکشنبه در پارک پیک‌نیک می‌کنیم.
+    alsoAccepted: [die Grünanlage, die Parkanlage]
+
   - word: Stadtplan
+    class: noun
+    article: der
+    plural: Stadtpläne
+    level: A2
+    meaning:
+      en: street map, map of a town
+      fa: نقشهٔ شهر
+    definition: eine Karte, auf der man alle Straßen einer Stadt sieht
+    example:
+      de: Ohne Stadtplan finde ich das Museum nicht.
+      en: I can't find the museum without a street map.
+      fa: بدون نقشهٔ شهر موزه را پیدا نمی‌کنم.
+    alsoAccepted: [die Stadtkarte]
+
   - word: Hauptstadt
+    class: noun
+    article: die
+    plural: Hauptstädte
+    level: A2
+    meaning:
+      en: capital (city)
+      fa: پایتخت
+    definition: die wichtigste Stadt eines Landes; dort sitzt die Regierung
+    example:
+      de: Wien ist die Hauptstadt von Österreich.
+      en: Vienna is the capital of Austria.
+      fa: وین پایتخت اتریش است.
+
   - word: Polizist
+    class: noun
+    article: der
+    plural: Polizisten
+    level: A2
+    meaning:
+      en: police officer, policeman
+      fa: مأمور پلیس
+    definition: ein Mann, der bei der Polizei arbeitet
+    example:
+      de: Der Polizist hilft dem Kind über die Straße.
+      en: The policeman helps the child across the road.
+      fa: مأمور پلیس به بچه کمک می‌کند از خیابان رد شود.
+    alsoAccepted: [die Polizistin, der Polizeibeamte, die Polizeibeamtin]
+
   - word: Fundsachen
+    class: noun
+    article: die
+    number: plural-only
+    level: A2
+    meaning:
+      en: lost property, things that someone has found
+      fa: اشیای پیداشده
+    definition: Dinge, die jemand verloren und ein anderer gefunden hat
+    example:
+      de: Die Fundsachen kann man im Rathaus abholen.
+      en: Lost property can be collected at the town hall.
+      fa: اشیای پیداشده را می‌توان از ساختمان شهرداری تحویل گرفت.
+    alsoAccepted: [die Fundsache, die Fundstücke]
+
   - word: gegenüber
+    class: preposition
+    level: A2
+    meaning:
+      en: opposite, across from (a preposition)
+      fa: روبه‌روی (حرف اضافه)
+    definition: "auf der anderen Seite, mit dem Gesicht zu jemandem, zum Beispiel am Tisch: Er sitzt … von mir"
+    example:
+      de: Die Bank ist gegenüber dem Bahnhof.
+      en: The bank is opposite the station.
+      fa: بانک روبه‌روی ایستگاه قطار است.
+    alsoAccepted: [gegenüber von]
+
   - word: neben
+    class: preposition
+    level: A2
+    meaning:
+      en: next to, beside (a preposition)
+      fa: کنار، پهلوی (حرف اضافه)
+    definition: "ganz nah an der Seite von etwas, zum Beispiel: Der Park liegt … der Schule"
+    example:
+      de: Der Park liegt neben der Schule.
+      en: The park is next to the school.
+      fa: پارک کنار مدرسه است.
+
   - word: hinter
+    class: preposition
+    level: A2
+    meaning:
+      en: behind (a preposition)
+      fa: پشت (حرف اضافه)
+    definition: "auf der Rückseite von etwas, zum Beispiel: Das Fahrrad steht … dem Haus"
+    example:
+      de: Das Fahrrad steht hinter dem Haus.
+      en: The bike is behind the house.
+      fa: دوچرخه پشت خانه است.
+
   - word: außerhalb
+    class: preposition
+    level: A2
+    meaning:
+      en: outside (of) (a preposition)
+      fa: خارج از (حرف اضافه)
+    definition: "nicht drinnen, sondern draußen, zum Beispiel: Rauchen ist nur … des Gebäudes erlaubt"
+    example:
+      de: Wir wohnen außerhalb der Stadt.
+      en: We live outside the town.
+      fa: ما بیرون از شهر زندگی می‌کنیم.
+    alsoAccepted: [außerhalb von]
+
   - word: drüben
+    class: adverb
+    level: A2
+    meaning:
+      en: over there (on the other side)
+      fa: آن طرف، آن‌سو
+    definition: dort, auf der anderen Seite; man zeigt mit der Hand hin
+    example:
+      de: Siehst du das Café da drüben?
+      en: Can you see the café over there?
+      fa: آن کافه را آن طرف می‌بینی؟
+    alsoAccepted: [da drüben, dort drüben]
+
   - word: überall
+    class: adverb
+    level: A2
+    meaning:
+      en: everywhere
+      fa: همه‌جا
+    definition: an jedem Ort
+    example:
+      de: Im Dezember gibt es überall in der Stadt Lichter.
+      en: In December there are lights everywhere in town.
+      fa: در ماه دسامبر همه‌جای شهر چراغانی است.
+
   - word: nirgends
+    class: adverb
+    level: A2
+    meaning:
+      en: nowhere
+      fa: هیچ‌جا
+    definition: an keinem Ort
+    example:
+      de: Ich finde meinen Schlüssel nirgends.
+      en: I can't find my key anywhere.
+      fa: کلیدم را هیچ‌جا پیدا نمی‌کنم.
+    alsoAccepted: [nirgendwo]
+
   - word: direkt
+    class: adjective
+    level: A2
+    meaning:
+      en: direct, directly (without a stop or a detour)
+      fa: مستقیم، بی‌واسطه
+    definition: ohne Umweg und ohne Halt; auch ganz nah bei etwas
+    example:
+      de: Der Bus fährt direkt zum Flughafen.
+      en: The bus goes directly to the airport.
+      fa: این اتوبوس مستقیم به فرودگاه می‌رود.
+    alsoAccepted: [geradewegs]
+
+  # At the front and forwards are close; neither meaning is offered as a wrong one for the other.
   - word: vorn
+    class: adverb
+    level: A2
+    meaning:
+      en: at the front, in front
+      fa: جلو، در قسمت جلو
+    definition: nicht hinten, sondern am Anfang, zum Beispiel im Bus beim Fahrer
+    example:
+      de: Im Kino sitze ich gern ganz vorn.
+      en: At the cinema I like sitting right at the front.
+      fa: در سینما دوست دارم در ردیف‌های جلو بنشینم.
+    alsoAccepted: [vorne]
+    tooCloseTo: [vorwärts]
+
   - word: vorwärts
+    class: adverb
+    level: A2
+    meaning:
+      en: forward, forwards
+      fa: رو به جلو، به جلو
+    definition: in die Richtung nach vorn, nicht zurück
+    example:
+      de: Fahren Sie bitte noch ein Stück vorwärts!
+      en: Please drive forward a little more!
+      fa: لطفاً کمی دیگر جلو بروید!
+    alsoAccepted: [nach vorn, nach vorne]
+    tooCloseTo: [vorn]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 156 questions, then the 59 changed after the first one's
+    answers, then the 17 changed after the second one's; not people)"
+  date: 2026-11-28
+  pool: e281a9a19b5132e0

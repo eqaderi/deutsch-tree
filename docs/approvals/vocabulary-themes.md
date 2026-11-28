@@ -192,7 +192,7 @@ die Familie · die Eltern (Pl.) · die Mutter · der Vater · das Kind · der So
 der Mensch · die Leute (Pl.) · der Mann · das Mädchen · der Junge · der Erwachsene · der/die Jugendliche · der Freund · der/die Bekannte · der Kollege · der Gast · die Gruppe · jung · alt · allein · zusammen · fremd · bekannt · kennen · (sich) treffen · besuchen · einladen · die Einladung · helfen · die Hilfe
 
 **A1-W1.5 Countries and where you live** · کشورها و محل زندگی · Länder und Wohnort · 17 words  
-das Land · das Deutschland · das Europa · das Ausland · die Welt · die Heimat · deutsch · europäisch · ausländisch · international · der Ausländer · der/die Deutsche · der Europäer · kommen · wohnen · leben · der Ort
+das Land · Deutschland · Europa · das Ausland · die Welt · die Heimat · deutsch · europäisch · ausländisch · international · der Ausländer · der/die Deutsche · der Europäer · kommen · wohnen · leben · der Ort
 
 #### A1-W2 Words: numbers and time
 
@@ -230,10 +230,10 @@ das Essen · die Lebensmittel (Pl.) · das Brot · das Brötchen · die Butter �
 das Getränk · das Wasser · die Milch · der Kaffee · der Tee · der Saft · das Bier · der Wein · die Flasche · das Glas · der Durst · das Frühstück · frühstücken · essen · trinken · kochen · grillen · schmecken · der Appetit · das Restaurant · das Café · das Lokal · die Speisekarte · bestellen · bitter · riechen
 
 **A1-W3.3 House and flat** · خانه و آپارتمان · Haus und Wohnung · 21 words  
-das Haus · die Wohnung · das Apartment · das Zimmer · der Raum · die Küche · das Bad · die Toilette · der Balkon · der Garten · die Treppe · der Stock · der Aufzug · der Eingang · der Ausgang · die Miete · mieten · vermieten · der Vermieter · sich umziehen · der Schlüssel
+das Haus · die Wohnung · das Apartment · das Zimmer · der Raum · die Küche · das Bad · die Toilette · der Balkon · der Garten · die Treppe · der Stock · der Aufzug · der Eingang · der Ausgang · die Miete · mieten · vermieten · der Vermieter · (sich) umziehen · der Schlüssel
 
 **A1-W3.4 Furniture and things at home** · مبلمان و وسایل خانه · Möbel und Dinge im Haus · 24 words  
-das Möbel · der Tisch · das Bett · der Schrank · das Sofa · der Herd · der Kühlschrank · die Dusche · das Licht · das Bild · die Maschine · anmachen · ausmachen · an sein · aus sein · auf sein · zu sein · öffnen · schließen · geöffnet · geschlossen · kaputt · reparieren · die Reparatur
+die Möbel (Pl.) · der Tisch · das Bett · der Schrank · das Sofa · der Herd · der Kühlschrank · die Dusche · das Licht · das Bild · die Maschine · anmachen · ausmachen · an sein · aus sein · auf sein · zu sein · öffnen · schließen · geöffnet · geschlossen · kaputt · reparieren · die Reparatur
 
 **A1-W3.5 Shopping and money** · خرید و پول · Einkaufen und Geld · 25 words  
 einkaufen · (sich etwas) kaufen · verkaufen · der Verkäufer · der Kunde · das Geschäft · der Laden · die Kasse · der Preis · kosten · bezahlen · zahlen · das Geld · der Euro · der Cent · billig · teuer · günstig · das Angebot · die Rechnung · bar · die Kreditkarte · das Konto · überweisen · der Prospekt
@@ -311,7 +311,7 @@ ich · er · es · sie · Sie · wir · ihr · man · dich · dir · sich · mei
 wer · was · wann · warum · wie · wo · woher · wohin · welcher · was für ein · und · oder · aber · denn · also · auch · nicht · nur · sehr · so
 
 **A1-W6.5 Prepositions** · حرف‌های اضافه · Präpositionen · 21 words  
-an · auf · aus · bei · bis · durch · für · gegen · in · mit · nach · ohne · seit · über · um · unter · von · vor · zu · zwischen · ab
+in · auf · an · unter · über · vor · zwischen · aus · von · ab · nach · zu · bei · mit · ohne · für · gegen · durch · um · bis · seit
 
 **A1-W6.6 Good, bad, easy: describing** · خوب، بد، آسان: توصیف کردن · Gut, schlecht, einfach: Beschreiben · 18 words  
 gut · schlecht · besser · beste · einfach · normal · klar · wunderbar · glücklich · zufrieden · böse · lieb · ruhig · schnell · eilig · kulturell · automatisch · möglich
@@ -388,7 +388,7 @@ das Radio · die Sendung · die Zeitschrift · der Krimi · der/das Comic · der
 der Blog · das E-Book · die Homepage · die Webseite · der Link · die Datei · das Passwort · der PC · der Laptop · das Tablet · das Mobiltelefon · die/das SMS · die Mailbox · chatten · surfen · speichern · herunterladen · online · austauschen
 
 **A2-W3.5 Festivals and holidays** · جشن‌ها و تعطیلی‌ها · Feste und Feiertage · 17 words  
-das Fest · die Feier · der Feiertag · das Weihnachten · das Ostern · das Silvester · das Neujahr · der Karneval · die Ferien (Pl.) · schenken · die Religion · der Werktag · der Arbeitstag · die Mitternacht · der Kalender · täglich · tagsüber
+das Fest · die Feier · der Feiertag · Weihnachten · Ostern · Silvester · Neujahr · der Karneval · die Ferien (Pl.) · schenken · die Religion · der Werktag · der Arbeitstag · die Mitternacht · der Kalender · täglich · tagsüber
 
 #### A2-W4 Words: health, town and nature
 
@@ -420,13 +420,13 @@ Comes after the grammar chapter: "Polite requests and advice (Konjunktiv II)"
 3 nodes, 74 words:
 
 **A2-W5.1 School and school subjects** · مدرسه و درس‌ها · Schule und Schulfächer · 27 words  
-das Fach · die Biologie · die Chemie · das Deutsch · das Englisch · das Französisch · die Geografie · das Latein · die Mathematik · die Physik · die Sozialkunde · der Stundenplan · die Klassenfahrt · das Sekretariat · der Direktor · die Note · das Zeugnis · das Heft · der Stift · die Tafel · das Wörterbuch · die Bibliothek · die Cafeteria · der Antwortbogen · der Prüfer · bestehen · das Abitur
+das Fach · der Stundenplan · das Deutsch · das Englisch · das Französisch · das Latein · die Mathematik · die Physik · die Chemie · die Biologie · die Geografie · die Sozialkunde · das Heft · der Stift · die Tafel · das Wörterbuch · die Bibliothek · die Cafeteria · das Sekretariat · der Direktor · die Note · das Zeugnis · der Antwortbogen · der Prüfer · bestehen · das Abitur · die Klassenfahrt
 
 **A2-W5.2 Training, studying and exams** · آموزش، تحصیل و امتحان · Ausbildung, Studium und Prüfungen · 21 words  
-die Ausbildung · der/die Auszubildende · die Universität · das Stipendium · die Kenntnisse (Pl.) · die Erfahrung · der Workshop · das Projekt · üben · prüfen · kontrollieren · (sich) eintragen · markieren · das Rätsel · das Quiz · schriftlich · die Reihe · aufpassen · d. h. · usw. · z. B.
+die Ausbildung · der/die Auszubildende · die Universität · das Stipendium · die Kenntnisse (Pl.) · die Erfahrung · der Workshop · das Projekt · üben · prüfen · kontrollieren · (sich) eintragen · markieren · aufpassen · schriftlich · die Reihe · das Rätsel · das Quiz · z. B. · d. h. · usw.
 
 **A2-W5.3 Jobs and the workplace** · شغل‌ها و محل کار · Berufe und Arbeitsplatz · 26 words  
-das Büro · der/die Angestellte · der Mitarbeiter · der Handwerker · der Mechaniker · der Techniker · der Kaufmann · die Kauffrau · das Gehalt · der Vertrag · die Bewerbung · sich bewerben · kündigen · die Messe · herstellen · vereinbaren · die Erlaubnis · erlaubt · verbieten · dringend · geehrt · freiwillig · privat · teilnehmen · ändern · austragen
+das Büro · der/die Angestellte · der Mitarbeiter · der Handwerker · der Mechaniker · der Techniker · der Kaufmann · die Kauffrau · die Bewerbung · sich bewerben · der Vertrag · das Gehalt · kündigen · die Messe · herstellen · vereinbaren · teilnehmen · ändern · austragen · die Erlaubnis · erlaubt · verbieten · dringend · geehrt · freiwillig · privat
 
 #### A2-W6 Words: time, connecting words and amounts
 
@@ -445,7 +445,7 @@ damals · endlich · plötzlich · zuerst · zuletzt · vorher · vorbei · wied
 als · dass · weil · wenn · deshalb · außerdem · sonst · doch · mal · sogar · eigentlich · außer · wegen · anders · selbst · eigen · einzeln · verschieden · her · hin · heraus · herein · dabei · genau · fast
 
 **A2-W6.4 Countries, numbers and amounts** · کشورها، عددها و مقدارها · Länder, Zahlen und Mengen · 26 words  
-das Österreich · die Schweiz · das Luxemburg · der Österreicher · der Schweizer · der Luxemburger · österreichisch · schweizerisch · luxemburgisch · der Franken · der Rappen · die Zahl · rechnen · zweitausendeins · viertel · mindestens · wenigstens · ca. · genug · ein paar · einige · manche · etwas · der Rest · die Menge · teilen
+Österreich · die Schweiz · Luxemburg · der Österreicher · der Schweizer · der Luxemburger · österreichisch · schweizerisch · luxemburgisch · der Franken · der Rappen · die Zahl · rechnen · zweitausendeins · viertel · mindestens · wenigstens · ca. · genug · ein paar · einige · manche · etwas · der Rest · die Menge · teilen
 
 ### B1
 
@@ -469,7 +469,7 @@ ehrlich · höflich · frech · mutig · der Mut · neugierig · stolz · tolera
 hübsch · schlank · mager · blass · elegant · chic · die Figur · die Frisur · der Bart · der Schmuck · schminken · (sich) rasieren · äußerlich · wunderschön · kräftig · die Uniform · das Kostüm · der Hut · die Socke · der Strumpf · der Bikini · der Knopf · das Tuch · anhaben · nähen · die Nadel · die Garderobe
 
 **B1-W1.5 Joy, hope and surprise** · شادی، امید و شگفتی · Freude, Hoffnung und Überraschung · 25 words  
-die Freude · das Gefühl · die Laune · die Stimmung · die Hoffnung · die Überraschung · überraschen · das Vergnügen · sich vergnügen · vergnügt · sich amüsieren · genießen · fröhlich · begeistert · dankbar · gespannt · lächeln · beruhigen · sich wundern · das Wunder · angenehm · gemütlich · entspannend · der Respekt · erwarten
+die Freude · das Gefühl · die Laune · die Stimmung · die Hoffnung · die Überraschung · überraschen · das Vergnügen · sich vergnügen · sich amüsieren · genießen · vergnügt · fröhlich · begeistert · dankbar · gespannt · lächeln · beruhigen · sich wundern · das Wunder · angenehm · gemütlich · entspannend · der Respekt · erwarten
 
 **B1-W1.6 Anger, fear and worry** · خشم، ترس و نگرانی · Ärger, Angst und Sorgen · 24 words  
 der Ärger · ärgerlich · aufregen · wütend · die Sorge · sorgen · (sich) fürchten · ängstlich · erschrecken · der Schreck · die Enttäuschung · enttäuschen · die Langeweile · sich langweilen · das Pech · leiden · klagen · hassen · die Träne · schreien · peinlich · unheimlich · der Nerv · der Druck
@@ -525,7 +525,7 @@ das Material · das Holz · das Metall · das Gold · das Plastik · der Kunstst
 die Aprikose · die Pflaume · die Frucht · die Karotte · die Möhre · die Zwiebel · der Pilz · das Hackfleisch · der Braten · das Schnitzel · das Steak · das Mehl · der Honig · die Marmelade · die Margarine · die Sahne · die Schlagsahne · der Essig · der Pfeffer · das Gewürz · die Soße · der/das Ketchup · der Kloß · der Knödel · die Zutaten (Pl.) · das Fett
 
 **B1-W3.7 Meals, snacks and drinks** · وعده‌ها، میان‌وعده‌ها و نوشیدنی‌ها · Mahlzeiten, Snacks und Getränke · 21 words  
-die Mahlzeit · die Speise · das Menü · die Nachspeise · das Dessert · der Imbiss · der Snack · das/der Sandwich · das Müesli · das Gebäck · der Kakao · die/das Cola · die Limonade · das Buffet · zubereiten · mischen · Tee ziehen lassen · zu Mittag · die Scheibe · das Nahrungsmittel · verpflegen
+die Mahlzeit · die Speise · das Menü · die Nachspeise · das Dessert · der Imbiss · der Snack · das/der Sandwich · das Müsli · das Gebäck · der Kakao · die/das Cola · die Limonade · das Buffet · zubereiten · mischen · Tee ziehen lassen · zu Mittag · die Scheibe · das Nahrungsmittel · verpflegen
 
 **B1-W3.8 Taste and eating out** · مزه و غذا خوردن در بیرون · Geschmack und Essen gehen · 22 words  
 der Geschmack · lecker · salzig · roh · reif · satt · hungrig · durstig · die Gaststätte · das Gasthaus · die Kneipe · die Bar · die Kantine · die Mensa · der Ober · der Wirt · das Trinkgeld · bedienen · Prost · die Reservierung · fressen · konsumieren

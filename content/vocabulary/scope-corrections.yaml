@@ -988,6 +988,44 @@ changes:
   - { word: Gasthaus, variantOf: null, reason: used in Germany too }
   # Word classes the extraction guessed wrong.
   - { word: Prost, class: interjection }
+  # Articles and plurals that the lists print for another sense of the word than the one in scope.
+  - { word: Stock, plural: Stockwerke, reason: '"Stöcke" are sticks; a floor of a house is in the plural "Stockwerke"' }
+  - { word: Möbel, article: die, plural: pl, reason: 'learned as "die Möbel"; one piece is "das Möbelstück"' }
+  - {
+      word: Fitness,
+      plural: sg,
+      reason: 'the marker "-" would make "die Fitness" its own plural; the word has no plural',
+    }
+  # Plurals that the extraction read wrong.
+  - {
+      word: Einkaufszentrum,
+      plural: Einkaufszentren,
+      reason: 'the marker "-en" would give "Einkaufszentrumen"; the plural is "Einkaufszentren"',
+    }
+  - {
+      word: Stipendium,
+      plural: Stipendien,
+      reason: 'the marker "-en" would give "Stipendiumen"; the plural is "Stipendien"',
+    }
+  # 92: three markers of the B1 list give no plural in use.
+  - {
+      word: Sandwich,
+      plural: Sandwiches/Sandwichs,
+      reason: 'the marker "-(e)s/-e" would give "Sandwich(e)s"; the plural is "Sandwiches" or "Sandwichs"',
+    }
+  - { word: Umtausch, plural: "-e", reason: 'the marker "¨-e" would give "Umtäusche"; the plural is "Umtausche"' }
+  - {
+      word: Mensa,
+      plural: Mensas/Mensen,
+      reason: 'the marker "-s/-en" would give "Mensaen"; the plural is "Mensas" or "Mensen"',
+    }
+  - { word: Müesli, rename: Müsli, reason: '"Müesli" is the Swiss spelling; Germany and Austria write "Müsli" (#92)' }
+  # 99: the marker of the B1 list gives no plural in use.
+  - {
+      word: Girokonto,
+      plural: Girokonten/Girokontos,
+      reason: 'the marker "-en" would give "Girokontoen"; the plural is "Girokonten" or "Girokontos"',
+    }
   # Nouns that the lists print without article or plural.
   - { word: Achtung, article: die, plural: sg }
   - { word: Grad, article: der, plural: "-e" }
@@ -1004,8 +1042,30 @@ changes:
   - { word: Gramm, article: das, plural: "-e" }
   - { word: Pfund, article: das, plural: "-e" }
   - { word: Kilogramm, article: das, plural: "-e" }
-  - { word: Deutschland, article: das, plural: sg }
-  - { word: Europa, article: das, plural: sg }
+  - {
+      word: Deutschland,
+      article: none,
+      plural: sg,
+      reason: 'a name of a country, used without article: "in Deutschland", not "das Deutschland"',
+    }
+  - {
+      word: Europa,
+      article: none,
+      plural: sg,
+      reason: 'a name of a continent, used without article: "in Europa", not "das Europa"',
+    }
+  - {
+      word: Österreich,
+      article: none,
+      plural: sg,
+      reason: 'a name of a country, used without article: "in Österreich", not "das Österreich"',
+    }
+  - {
+      word: Luxemburg,
+      article: none,
+      plural: sg,
+      reason: 'a name of a country, used without article: "in Luxemburg", not "das Luxemburg"',
+    }
   - { word: Prüfer, article: der, plural: "-" }
   - { word: Bäcker, article: der, plural: "-" }
   - { word: Kaufmann, article: der, plural: Kaufleute }
@@ -1013,8 +1073,6 @@ changes:
   - { word: Techniker, article: der, plural: "-" }
   - { word: Mama, article: die, plural: "-s" }
   - { word: Papa, article: der, plural: "-s" }
-  - { word: Österreich, article: das, plural: sg }
-  - { word: Luxemburg, article: das, plural: sg }
   - { word: Luxemburger, article: der, plural: "-" }
   - { word: Franken, article: der, plural: "-" }
   - { word: Rappen, article: der, plural: "-" }
@@ -1031,10 +1089,30 @@ changes:
   - { word: Mathematik, article: die, plural: sg }
   - { word: Physik, article: die, plural: sg }
   - { word: Sozialkunde, article: die, plural: sg }
-  - { word: Ostern, article: das, plural: sg }
-  - { word: Weihnachten, article: das, plural: sg }
-  - { word: Neujahr, article: das, plural: sg }
-  - { word: Silvester, article: das, plural: sg }
+  - {
+      word: Ostern,
+      article: none,
+      plural: sg,
+      reason: 'a holiday, usually used without article: "an Ostern", "frohe Ostern", not "das Ostern"',
+    }
+  - {
+      word: Weihnachten,
+      article: none,
+      plural: sg,
+      reason: 'a holiday, usually used without article: "an Weihnachten", "frohe Weihnachten", not "das Weihnachten"',
+    }
+  - {
+      word: Neujahr,
+      article: none,
+      plural: sg,
+      reason: 'a holiday, usually used without article: "an Neujahr", "prosit Neujahr", not "das Neujahr"',
+    }
+  - {
+      word: Silvester,
+      article: none,
+      plural: sg,
+      reason: 'a holiday, usually used without article: "an Silvester", "Silvester feiern", not "das Silvester"',
+    }
   - { word: Arbeitstag, article: der, plural: "-e" }
   - { word: Abgase, article: die, plural: pl }
   - { word: Ratschlag, article: der, plural: "¨-e" }
@@ -1049,6 +1127,11 @@ changes:
   - { word: Drittel, article: das, plural: "-" }
   - { word: Pfingsten, article: das, plural: sg }
   - { word: Nationalfeiertag, article: der, plural: "-e" }
+  - {
+      word: umziehen,
+      reflexive: (sich),
+      reason: 'reflexive only as "sich umziehen" (to change clothes); "umziehen" (to move house) takes no "sich"',
+    }
 
 # Headwords that the lists print in the cell of another word, so the extraction has no row for them.
 additions:

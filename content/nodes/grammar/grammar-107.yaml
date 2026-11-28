@@ -4,10 +4,292 @@ kind: grammar
 level: A2
 chapter: a2-adjectives
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-063, grammar-102]
 title:
   en: "Adjective endings after definite article"
-  fa: "پایانهٔ صفت بعد از حرف تعریف معیّن"
+  fa: "پایانهٔ صفت پس از حرف تعریف معین"
   de: "Adjektivendungen nach bestimmtem Artikel"
+
+explanations:
+  en:
+    rule: >
+      Before a noun an adjective always takes an ending. After *der*, *die*
+      and *das* the ending is short, because the article already shows the
+      gender and the case. It is *-e* in the *Nominativ* singular, and in the
+      *Akkusativ* of feminine and neuter nouns, where the article stays as in
+      the *Nominativ*: *der neue Tisch*, *die neue Lampe*, *das neue Sofa*.
+      Everywhere else it is *-en*: in the masculine *Akkusativ* (*den neuen
+      Tisch*), in the whole *Dativ* (*mit dem neuen Auto*) and in the plural
+      (*die neuen Stühle*). After *dieser* and *welcher* the endings are the
+      same.
+  fa:
+    rule: >
+      صفتی که پیش از اسم بیاید همیشه پایانه می‌گیرد. پس از *der*، *die* و
+      *das* این پایانه کوتاه است، چون خود حرف تعریف جنس و حالت اسم را نشان
+      می‌دهد. در حالت *Nominativ* (حالت فاعلی) مفرد، و در حالت *Akkusativ*
+      (حالت مفعولی) اسم مؤنث و خنثی که حرف تعریفشان تغییر نمی‌کند، پایانه
+      *-e* است: *der neue Tisch*، *die neue Lampe*، *das neue Sofa*. در همهٔ
+      جاهای دیگر پایانه *-en* است: در حالت *Akkusativ* مذکر (*den neuen
+      Tisch*)، در حالت *Dativ* (حالت مفعول باواسطه) با هر جنسی (*mit dem
+      neuen Auto*) و در جمع (*die neuen Stühle*). پس از *dieser* و *welcher*
+      نیز همین پایانه‌ها می‌آیند. در فارسی صفت پس از اسم می‌آید و تغییر
+      نمی‌کند؛ در آلمانی پیش از اسم می‌آید و پایانه می‌گیرد.
+  de:
+    rule: >
+      Vor einem Nomen hat ein Adjektiv immer eine Endung. Nach *der*, *die*
+      und *das* ist die Endung kurz, denn der Artikel zeigt schon Genus und
+      Kasus. Im Nominativ Singular ist die Endung *-e*, und auch im Akkusativ
+      bei feminin und neutral, denn dort bleibt der Artikel gleich: *der neue
+      Tisch*, *die neue Lampe*, *das neue Sofa*. Sonst ist sie immer *-en*: im
+      Akkusativ maskulin (*den neuen Tisch*), im Dativ (*mit dem neuen Auto*)
+      und im Plural (*die neuen Stühle*). Nach *dieser* und *welcher* ist es
+      genauso.
+
+# The article-change table of content/README.md, for the three cases of this
+# topic. The definite article is the topic, so there is no column with "ein"
+# (that is grammar-108).
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der neue Tisch, den neuen Tisch, dem neuen Tisch, Wie findest du den neuen Tisch?]
+    - [die neue Lampe, die neue Lampe, der neuen Lampe, Ich lese mit der neuen Lampe.]
+    - [das neue Sofa, das neue Sofa, dem neuen Sofa, Wir sitzen auf dem neuen Sofa.]
+    - [die neuen Stühle (Plural), die neuen Stühle, den neuen Stühlen, Die neuen Stühle sind bequem.]
+
+examples:
+  - de: Der neue Arbeitsplatz gefällt mir sehr.
+    en: I like the new job a lot.
+    fa: از محل کار جدید خیلی خوشم می‌آید.
+  - de: Ich fahre mit dem neuen Auto zur Arbeit.
+    en: I drive to work in the new car.
+    fa: با ماشین جدید سر کار می‌روم.
+  - de: Siehst du die kleine Katze dort?
+    en: Do you see the little cat over there?
+    fa: آن گربهٔ کوچک را آنجا می‌بینی؟
+  - de: Wir wohnen im alten Haus am Markt.
+    en: We live in the old house on the market square.
+    fa: ما در خانهٔ قدیمی کنار میدان بازار زندگی می‌کنیم.
+  - de: Ich nehme den grünen Pullover.
+    en: I'll take the green jumper.
+    fa: پلیور سبز را برمی‌دارم.
+  - de: Die roten Schuhe sind zu teuer.
+    en: The red shoes are too expensive.
+    fa: کفش‌های قرمز بیش از حد گران‌اند.
+  - de: Kennst du die Frau mit dem langen Mantel?
+    en: Do you know the woman in the long coat?
+    fa: آن زن را که پالتوی بلند پوشیده است می‌شناسی؟
+  - de: Wir helfen den neuen Kollegen.
+    en: We are helping the new colleagues.
+    fa: به همکاران جدید کمک می‌کنیم.
+  - de: Dieses kleine Café ist sehr gemütlich.
+    en: This little café is very cosy.
+    fa: این کافهٔ کوچک خیلی دنج است.
+
+mistakes:
+  - wrong: Der neu Tisch ist schön.
+    right: Der neue Tisch ist schön.
+    why:
+      en: "Before a noun an adjective always takes an ending. Only after *sein* does it have none: *Der Tisch ist neu.*"
+      fa: "صفتی که پیش از اسم بیاید همیشه پایانه می‌گیرد. فقط پس از *sein* بدون پایانه است: *Der Tisch ist neu.*"
+      de: "Vor einem Nomen hat ein Adjektiv immer eine Endung. Nur nach *sein* hat es keine: *Der Tisch ist neu.*"
+  - wrong: Ich kaufe den neue Tisch.
+    right: Ich kaufe den neuen Tisch.
+    why:
+      en: "In the masculine *Akkusativ* the article is *den*, and the adjective takes *-en*."
+      fa: "در حالت *Akkusativ* مذکر حرف تعریف *den* است و صفت پایانهٔ *-en* می‌گیرد."
+      de: "Im Akkusativ maskulin steht *den*, und das Adjektiv bekommt *-en*."
+  - wrong: Wir sitzen auf dem neue Sofa.
+    right: Wir sitzen auf dem neuen Sofa.
+    why:
+      en: "In the *Dativ* the adjective always takes *-en*: *dem neuen Sofa*, *der neuen Lampe*."
+      fa: "در حالت *Dativ* صفت همیشه پایانهٔ *-en* می‌گیرد: *dem neuen Sofa*، *der neuen Lampe*."
+      de: "Im Dativ bekommt das Adjektiv immer *-en*: *dem neuen Sofa*, *der neuen Lampe*."
+  - wrong: Die neue Stühle sind bequem.
+    right: Die neuen Stühle sind bequem.
+    why:
+      en: "In the plural the adjective after *die* takes *-en*, not *-e*."
+      fa: "در جمع، صفت پس از *die* پایانهٔ *-en* می‌گیرد، نه *-e*."
+      de: "Im Plural bekommt das Adjektiv nach *die* die Endung *-en*, nicht *-e*."
+  - wrong: Das neuen Sofa ist bequem.
+    right: Das neue Sofa ist bequem.
+    why:
+      en: "Not every ending is *-en*: in the *Nominativ* singular it is *-e*, also with *das*."
+      fa: "همهٔ پایانه‌ها *-en* نیستند: در حالت *Nominativ* مفرد پایانه *-e* است، با *das* نیز."
+      de: "Nicht jede Endung ist *-en*: Im Nominativ Singular ist sie *-e*, auch bei *das*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Der ___ Kollege heißt Tim.
+    options: [neue, neuen, neuer]
+    answer: neue
+    explanation:
+      en: "*Der Kollege* is the subject (*Nominativ*). After *der* the adjective takes *-e*."
+      fa: "*der Kollege* فاعل است (حالت *Nominativ*). پس از *der* صفت پایانهٔ *-e* می‌گیرد."
+      de: "*Der Kollege* ist das Subjekt (Nominativ). Nach *der* hat das Adjektiv *-e*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich kaufe den ___ Pullover.
+    options: [grünen, grüne, grüner]
+    answer: grünen
+    explanation:
+      en: "*Den Pullover* is masculine *Akkusativ*, so the adjective takes *-en*."
+      fa: "*den Pullover* در حالت *Akkusativ* مذکر است، پس صفت پایانهٔ *-en* می‌گیرد."
+      de: "*Den Pullover* ist Akkusativ maskulin. Das Adjektiv hat *-en*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir fahren mit dem ___ Zug.
+    options: [schnellen, schnelle, schneller]
+    answer: schnellen
+    explanation:
+      en: "After *mit* comes the *Dativ*, and in the *Dativ* the adjective takes *-en*."
+      fa: "پس از *mit* حالت *Dativ* می‌آید و در این حالت صفت پایانهٔ *-en* می‌گیرد."
+      de: "Nach *mit* steht der Dativ. Im Dativ hat das Adjektiv *-en*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Kennst du die ___ Frau?
+    options: [nette, netten, netter]
+    answer: nette
+    explanation:
+      en: "*Die Frau* is feminine *Akkusativ*: the article stays *die*, and the adjective takes *-e*."
+      fa: "*die Frau* در حالت *Akkusativ* مؤنث است: حرف تعریف همان *die* می‌ماند و صفت پایانهٔ *-e* می‌گیرد."
+      de: "*Die Frau* ist Akkusativ feminin. Der Artikel bleibt *die*, das Adjektiv hat *-e*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Die ___ Schuhe sind teuer.
+    options: [roten, rote, roter]
+    answer: roten
+    explanation:
+      en: "*Die Schuhe* is plural, and in the plural the adjective after *die* takes *-en*."
+      fa: "*die Schuhe* جمع است و در جمع صفت پس از *die* پایانهٔ *-en* می‌گیرد."
+      de: "*Die Schuhe* ist Plural. Im Plural hat das Adjektiv nach *die* die Endung *-en*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich wohne in der ___ Wohnung.
+    options: [kleinen, kleine, kleiner]
+    answer: kleinen
+    explanation:
+      en: "*In der Wohnung* says where (*Wo?*), so it is the *Dativ*: the adjective takes *-en*."
+      fa: "*in der Wohnung* جا را نشان می‌دهد (*Wo?*)، پس حالت *Dativ* است و صفت پایانهٔ *-en* می‌گیرد."
+      de: "*In der Wohnung* sagt, wo (*Wo?*). Das ist Dativ, also *-en*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Das ___ Hotel liegt am Meer.
+    options: [alte, alten, altes]
+    answer: alte
+    explanation:
+      en: "*Das Hotel* is the subject (*Nominativ*). After *das* the adjective takes *-e*."
+      fa: "*das Hotel* فاعل است (حالت *Nominativ*). پس از *das* صفت پایانهٔ *-e* می‌گیرد."
+      de: "*Das Hotel* ist das Subjekt (Nominativ). Nach *das* hat das Adjektiv *-e*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wir sprechen mit ___.
+    options: [dem neuen Chef, dem neue Chef, den neuen Chef]
+    answer: dem neuen Chef
+    explanation:
+      en: "*Mit* takes the *Dativ*: *dem*, and the adjective takes *-en*."
+      fa: "*mit* با حالت *Dativ* می‌آید: *dem*، و صفت پایانهٔ *-en* می‌گیرد."
+      de: "Nach *mit* steht der Dativ: *dem*, und das Adjektiv hat *-en*."
+  - id: true-1
+    type: true-false
+    prompt: Ich nehme das blaue Hemd.
+    answer: true
+    explanation:
+      en: "*Das Hemd* is neuter *Akkusativ*: the article stays *das*, and the adjective takes *-e*. The sentence is correct."
+      fa: "*das Hemd* در حالت *Akkusativ* خنثی است: حرف تعریف *das* می‌ماند و صفت پایانهٔ *-e* می‌گیرد. جمله درست است."
+      de: "*Das Hemd* ist Akkusativ neutral. *Das* bleibt, das Adjektiv hat *-e*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir gehen in den neue Park.
+    answer: false
+    explanation:
+      en: "*Den Park* is masculine *Akkusativ*, so the adjective takes *-en*: *in den neuen Park*."
+      fa: "*den Park* در حالت *Akkusativ* مذکر است، پس صفت پایانهٔ *-en* می‌گیرد: *in den neuen Park*."
+      de: "*Den Park* ist Akkusativ maskulin. Richtig ist *in den neuen Park*."
+  - id: true-3
+    type: true-false
+    prompt: Die Kinder spielen mit den kleinen Hunden.
+    answer: true
+    explanation:
+      en: "*Mit* takes the *Dativ*; in the plural that is *den kleinen Hunden*. The sentence is correct."
+      fa: "*mit* با حالت *Dativ* می‌آید و جمع آن *den kleinen Hunden* است. جمله درست است."
+      de: "Nach *mit* steht der Dativ, im Plural *den kleinen Hunden*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wie findest du den ___ (neu) Film?
+    answers: [neuen]
+    explanation:
+      en: "*Den Film* is masculine *Akkusativ*, so *-en*: *den neuen Film*."
+      fa: "*den Film* در حالت *Akkusativ* مذکر است، پس *-en*: *den neuen Film*."
+      de: "*Den Film* ist Akkusativ maskulin, also *-en*: *den neuen Film*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das ___ (alt) Fahrrad ist kaputt.
+    answers: [alte]
+    explanation:
+      en: "*Das Fahrrad* is the subject (*Nominativ*), so *-e*: *das alte Fahrrad*."
+      fa: "*das Fahrrad* فاعل است (حالت *Nominativ*)، پس *-e*: *das alte Fahrrad*."
+      de: "*Das Fahrrad* ist das Subjekt (Nominativ), also *-e*: *das alte Fahrrad*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich helfe der ___ (alt) Dame.
+    answers: [alten]
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *der alten Dame*, with *-en*."
+      fa: "*helfen* با حالت *Dativ* می‌آید: *der alten Dame*، با *-en*."
+      de: "*Helfen* hat den Dativ: *der alten Dame*, mit *-en*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Die ___ (neu) Nachbarn sind sehr nett.
+    answers: [neuen]
+    explanation:
+      en: "*Die Nachbarn* is plural, so *-en*: *die neuen Nachbarn*."
+      fa: "*die Nachbarn* جمع است، پس *-en*: *die neuen Nachbarn*."
+      de: "*Die Nachbarn* ist Plural, also *-en*: *die neuen Nachbarn*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Er wohnt in dem ___ (groß) Haus dort.
+    answers: [großen]
+    explanation:
+      en: "*In dem Haus* says where (*Wo?*): *Dativ*, so *-en*."
+      fa: "*in dem Haus* جا را نشان می‌دهد (*Wo?*): حالت *Dativ*، پس *-en*."
+      de: "*In dem Haus* sagt, wo (*Wo?*): Dativ, also *-en*."
+  - id: error-1
+    type: find-error
+    prompt: Ich spreche mit der nette Lehrerin.
+    answer: nette
+    explanation:
+      en: "After *mit* comes the *Dativ*, and there the adjective takes *-en*: *mit der netten Lehrerin*."
+      fa: "پس از *mit* حالت *Dativ* می‌آید و در این حالت صفت *-en* می‌گیرد: *mit der netten Lehrerin*."
+      de: "Nach *mit* steht der Dativ, das Adjektiv hat *-en*: *mit der netten Lehrerin*."
+  - id: error-2
+    type: find-error
+    prompt: Der kleinen Hund schläft.
+    answer: kleinen
+    explanation:
+      en: "*Der Hund* is the subject (*Nominativ*), so *-e*: *der kleine Hund*."
+      fa: "*der Hund* فاعل است (حالت *Nominativ*)، پس *-e*: *der kleine Hund*."
+      de: "*Der Hund* ist das Subjekt (Nominativ), also *-e*: *der kleine Hund*."
+  - id: match-1
+    type: matching
+    answer:
+      - [der neue Tisch (Akkusativ), den neuen Tisch]
+      - [die neue Lampe (Dativ), der neuen Lampe]
+      - [das neue Sofa (Dativ), dem neuen Sofa]
+      - [die neuen Stühle (Dativ), den neuen Stühlen]
+    explanation:
+      en: "The article changes with the case, and in all four the adjective takes *-en*."
+      fa: "حرف تعریف با حالت تغییر می‌کند و صفت در هر چهار مورد پایانهٔ *-en* می‌گیرد."
+      de: "Der Artikel ändert sich mit dem Kasus. Das Adjektiv hat in allen vier Fällen *-en*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: ff3e71ba81cc5f8c

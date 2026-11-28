@@ -1,30 +1,255 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Deutschland and Europa take no article ("article: none"): they are shown and asked bare (ticket #48).
 id: vocabulary-countries
 kind: vocabulary
 level: A1
 chapter: a1-words-people
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Countries and where you live"
   fa: "کشورها و محل زندگی"
   de: "Länder und Wohnort"
+attemptSize: 15
 words:
   - word: Land
+    class: noun
+    article: das
+    plural: Länder
+    level: A1
+    meaning:
+      en: country
+      fa: کشور
+    definition: zum Beispiel Deutschland, Österreich oder die Schweiz
+    example:
+      de: Aus welchem Land kommen Sie?
+      en: Which country are you from?
+      fa: اهل کدام کشور هستید؟
+    alsoAccepted: [der Staat]
+
   - word: Deutschland
+    class: noun
+    article: none
+    number: singular-only
+    level: A1
+    meaning:
+      en: Germany
+      fa: آلمان
+    definition: das Land, in dem Berlin die Hauptstadt ist
+    example:
+      de: Ich lebe seit drei Jahren in Deutschland.
+      en: I have been living in Germany for three years.
+      fa: سه سال است که در آلمان زندگی می‌کنم.
+
   - word: Europa
+    class: noun
+    article: none
+    number: singular-only
+    level: A1
+    meaning:
+      en: Europe
+      fa: اروپا
+    definition: der Kontinent mit Ländern wie Deutschland, Frankreich und Italien
+    example:
+      de: Spanien und Polen liegen in Europa.
+      en: Spain and Poland are in Europe.
+      fa: اسپانیا و لهستان در اروپا هستند.
+
   - word: Ausland
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: abroad, foreign countries
+      fa: خارج از کشور
+    definition: alle Länder, nur nicht das eigene Land
+    example:
+      de: Meine Schwester arbeitet seit einem Jahr im Ausland.
+      en: My sister has been working abroad for a year.
+      fa: خواهرم یک سال است که در خارج از کشور کار می‌کند.
+
   - word: Welt
+    class: noun
+    article: die
+    plural: Welten
+    level: A1
+    meaning:
+      en: world
+      fa: جهان، دنیا
+    definition: die Erde mit allen Ländern und Menschen
+    example:
+      de: Ich möchte einmal eine Reise um die Welt machen.
+      en: One day I'd like to travel around the world.
+      fa: دوست دارم روزی به دور دنیا سفر کنم.
+    alsoAccepted: [die Erde]
+
   - word: Heimat
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: home country, homeland
+      fa: وطن، زادگاه
+    definition: das Land oder der Ort, wo man herkommt und sich zu Hause fühlt
+    example:
+      de: Meine Heimat ist der Iran, aber jetzt wohne ich in Bremen.
+      en: My home country is Iran, but now I live in Bremen.
+      fa: وطن من ایران است، اما اکنون در برمن زندگی می‌کنم.
+    alsoAccepted: [das Heimatland]
+
   - word: deutsch
+    class: adjective
+    level: A1
+    meaning:
+      en: German (from Germany)
+      fa: آلمانی (صفت)
+    definition: aus Deutschland oder wie in Deutschland
+    example:
+      de: Mein Mann mag das deutsche Brot sehr.
+      en: My husband really likes German bread.
+      fa: شوهرم نان آلمانی را خیلی دوست دارد.
+
   - word: europäisch
+    class: adjective
+    level: A1
+    meaning:
+      en: European (from Europe)
+      fa: اروپایی (صفت)
+    definition: aus Europa oder wie in Europa
+    example:
+      de: Wien ist eine schöne europäische Stadt.
+      en: Vienna is a beautiful European city.
+      fa: وین شهر زیبای اروپایی است.
+
   - word: ausländisch
+    class: adjective
+    level: A1
+    meaning:
+      en: foreign (from another country)
+      fa: خارجی، از کشوری دیگر
+    definition: aus einem anderen Land
+    example:
+      de: In unserer Firma arbeiten viele ausländische Kollegen.
+      en: Many foreign colleagues work at our company.
+      fa: در شرکت ما همکاران خارجی زیادی کار می‌کنند.
+
   - word: international
+    class: adjective
+    level: A1
+    meaning:
+      en: international
+      fa: بین‌المللی
+    definition: zwischen vielen Ländern, nicht nur in einem Land
+    example:
+      de: Unser Deutschkurs ist sehr international.
+      en: Our German course is very international.
+      fa: کلاس آلمانی ما بسیار بین‌المللی است.
+
   - word: Ausländer
+    class: noun
+    article: der
+    plural: Ausländer
+    level: A1
+    meaning:
+      en: foreigner
+      fa: فرد خارجی، تبعهٔ خارجی
+    definition: eine Person aus einem anderen Land
+    example:
+      de: In dieser Stadt leben viele Ausländer.
+      en: Many foreigners live in this city.
+      fa: در این شهر خارجی‌های زیادی زندگی می‌کنند.
+    alsoAccepted: [die Ausländerin]
+
+  # The scope list gives "der/die": a man is "der Deutsche", a woman "die Deutsche".
   - word: Deutsche
+    class: noun
+    article: der
+    plural: Deutschen
+    level: A1
+    meaning:
+      en: German (a person)
+      fa: فرد آلمانی، اهل آلمان
+    definition: eine Person aus Deutschland
+    example:
+      de: Viele Deutsche machen im Sommer Urlaub am Meer.
+      en: Many Germans go on holiday by the sea in summer.
+      fa: بسیاری از آلمانی‌ها تابستان برای تعطیلات به کنار دریا می‌روند.
+    alsoAccepted: [die Deutsche]
+
   - word: Europäer
+    class: noun
+    article: der
+    plural: Europäer
+    level: A1
+    meaning:
+      en: European (a person)
+      fa: فرد اروپایی، اهل اروپا
+    definition: eine Person aus Europa
+    example:
+      de: Mein Kollege ist Europäer, er kommt aus Portugal.
+      en: My colleague is a European; he is from Portugal.
+      fa: همکارم اروپایی است؛ اهل پرتغال است.
+    alsoAccepted: [die Europäerin]
+
   - word: kommen
+    class: verb
+    level: A1
+    meaning:
+      en: to come; to be from (a place)
+      fa: آمدن؛ اهل جایی بودن
+    definition: "hierher gehen oder fahren; mit „aus“: aus einem Land oder Ort sein"
+    example:
+      de: Ich komme aus Syrien.
+      en: I'm from Syria.
+      fa: من اهل سوریه هستم.
+    alsoAccepted: [stammen]
+
+  # One may also say "Ich lebe in Bremen", so "leben" is right for "wohnen".
   - word: wohnen
+    class: verb
+    level: A1
+    meaning:
+      en: to live (somewhere), to reside
+      fa: ساکن بودن، زندگی کردن (در جایی)
+    definition: in einem Haus oder in einer Wohnung zu Hause sein
+    example:
+      de: Wir wohnen in der Goethestraße.
+      en: We live in Goethestraße.
+      fa: ما در خیابان گوته زندگی می‌کنیم.
+    alsoAccepted: [leben]
+    tooCloseTo: [leben]
+
   - word: leben
+    class: verb
+    level: A1
+    meaning:
+      en: to be alive, to live
+      fa: زنده بودن، زیستن
+    definition: nicht tot sein
+    example:
+      de: Mein Opa ist 95 und lebt noch.
+      en: My grandpa is 95 and still alive.
+      fa: پدربزرگم ۹۵ سال دارد و هنوز زنده است.
+
   - word: Ort
+    class: noun
+    article: der
+    plural: Orte
+    level: A1
+    meaning:
+      en: place; small town, village
+      fa: جا، محل؛ شهر کوچک، روستا
+    definition: eine Stelle; auch eine kleine Stadt oder ein Dorf
+    example:
+      de: Ich wohne in einem kleinen Ort bei München.
+      en: I live in a small town near Munich.
+      fa: در شهر کوچکی نزدیک مونیخ زندگی می‌کنم.
+    alsoAccepted: [die Stelle, der Platz, die Ortschaft]
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 2f2e1c1b56700919

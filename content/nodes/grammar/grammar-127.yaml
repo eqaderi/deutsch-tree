@@ -1,13 +1,315 @@
-# Grammar list row 127.
+# Grammar list row 127. Position (Wo?) only; directions with hin/her are row 133.
 id: grammar-127
 kind: grammar
 level: A1
 chapter: a1-prepositions
 order: 9
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-121]
 title:
   en: "Place adverbs"
   fa: "قیدهای مکان (*hier*، *dort*، *oben* …)"
   de: "Ortsadverbien (*hier*, *dort*, *oben* …)"
+
+explanations:
+  en:
+    rule: >
+      A place adverb says where something is in one word, with no preposition
+      and no article: *Ich wohne hier.* *Hier* is here, near the speaker;
+      *dort* and *da* are there (in speech *da* can also mean here). *Oben*
+      is up or upstairs, *unten* down or downstairs, *links* on the left and
+      *rechts* on the right. They answer *Wo?*: *Wo ist das Bad? – Oben.* They
+      can be joined to each other or to a place: *dort links*, *oben im Haus*,
+      and *ganz* makes them stronger: *ganz oben*. A preposition needs a noun
+      after it, an adverb does not: *unter dem Tisch*, but *unten*.
+  fa:
+    rule: >
+      قید مکان در یک واژه می‌گوید چیزی کجاست و حرف اضافه و حرف تعریف
+      نمی‌گیرد: *Ich wohne hier.* *hier* یعنی «این‌جا»، نزدیک گوینده؛ *dort*
+      و *da* یعنی «آن‌جا» (در گفتار *da* به معنای «این‌جا» هم به کار می‌رود).
+      *oben* یعنی «بالا» یا «طبقهٔ بالا»، *unten* یعنی «پایین» یا «طبقهٔ
+      پایین»، *links* یعنی «سمت چپ» و *rechts* یعنی «سمت راست». این قیدها
+      پاسخ پرسش *Wo?* هستند: *Wo ist das Bad? – Oben.* می‌توان آن‌ها را با هم
+      یا با یک مکان آورد: *dort links* و *oben im Haus*؛ و *ganz* معنایشان
+      را قوی‌تر می‌کند: *ganz oben*. پس از حرف اضافه اسم می‌آید، ولی پس از
+      قید نه: *unter dem Tisch*، اما *unten*.
+  de:
+    rule: >
+      Ein Ortsadverb sagt in einem Wort, wo etwas ist, ohne Präposition und
+      ohne Artikel: *Ich wohne hier.* *Hier* ist nah, *dort* und *da* sind
+      weiter weg (im Gespräch heißt *da* auch *hier*). Dazu kommen *oben*,
+      *unten*, *links* und *rechts*. Sie antworten auf die Frage *Wo?*: *Wo
+      ist das Bad? – Oben.* Man kann sie verbinden: *dort links*, *oben im
+      Haus*. Mit *ganz* sind sie stärker: *ganz oben*. Nach einer Präposition
+      steht ein Nomen, nach einem Adverb nicht: *unter dem Tisch*, aber
+      *unten*.
+
+table:
+  columns:
+    - { en: Adverb, fa: قید, de: Adverb }
+    - { en: Opposite, fa: متضاد, de: Gegenteil }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [hier, dort / da, Ich wohne hier.]
+    - [oben, unten, Das Bad ist oben.]
+    - [links, rechts, Die Post ist links.]
+    - [ganz oben, ganz unten, Wir wohnen ganz unten im Haus.]
+
+# A house seen from the front: two floors, and the two sides.
+diagrams:
+  - caption:
+      en: >
+        A house seen from the front. *Oben* is the upper floor, *unten* the
+        lower one. *Links* is on the left, *rechts* on the right.
+      fa: >
+        خانه‌ای از روبه‌رو. *oben* طبقهٔ بالاست و *unten* طبقهٔ پایین. *links*
+        سمت چپ است و *rechts* سمت راست.
+      de: >
+        Ein Haus von vorn. *Oben* ist der obere Stock, *unten* der untere.
+        *Links* ist auf der linken Seite, *rechts* auf der rechten.
+    svg: |
+      <svg viewBox="0 0 320 196">
+        <!-- the house: a roof, two floors -->
+        <polygon class="surface" points="100,60 160,20 220,60"/>
+        <rect class="surface" x="100" y="60" width="120" height="120"/>
+        <line class="line" x1="100" y1="120" x2="220" y2="120"/>
+        <text class="label" x="160" y="96" text-anchor="middle">oben</text>
+        <text class="label" x="160" y="156" text-anchor="middle">unten</text>
+        <!-- links: an arrow to the left -->
+        <text class="label" x="50" y="126" text-anchor="middle">links</text>
+        <line class="line" x1="90" y1="140" x2="24" y2="140"/>
+        <polygon class="object" points="24,134 12,140 24,146"/>
+        <!-- rechts: an arrow to the right -->
+        <text class="label" x="270" y="126" text-anchor="middle">rechts</text>
+        <line class="line" x1="230" y1="140" x2="296" y2="140"/>
+        <polygon class="object" points="296,134 308,140 296,146"/>
+      </svg>
+
+examples:
+  - de: Ich wohne hier.
+    en: I live here.
+    fa: من این‌جا زندگی می‌کنم.
+  - de: Siehst du das Café dort?
+    en: Do you see the café over there?
+    fa: آن کافه را آن‌جا می‌بینی؟
+  - de: Wo ist mein Handy? – Da, auf dem Tisch.
+    en: Where's my phone? – There, on the table.
+    fa: گوشی‌ام کجاست؟ – آن‌جا، روی میز.
+  - de: Das Bad ist oben.
+    en: The bathroom is upstairs.
+    fa: حمام طبقهٔ بالاست.
+  - de: Die Küche ist unten.
+    en: The kitchen is downstairs.
+    fa: آشپزخانه طبقهٔ پایین است.
+  - de: Wir wohnen ganz unten im Haus.
+    en: We live on the bottom floor of the building.
+    fa: ما در پایین‌ترین طبقهٔ ساختمان زندگی می‌کنیم.
+  - de: Mein Zimmer ist ganz oben.
+    en: My room is right at the top.
+    fa: اتاقم در بالاترین طبقه است.
+  - de: Die Apotheke ist links.
+    en: The pharmacy is on the left.
+    fa: داروخانه سمت چپ است.
+  - de: Der Bahnhof ist dort rechts.
+    en: The station is over there on the right.
+    fa: ایستگاه قطار آن‌جا، سمت راست است.
+  - de: Hier links ist die Post.
+    en: The post office is here on the left.
+    fa: ادارهٔ پست همین‌جا سمت چپ است.
+
+mistakes:
+  - wrong: Ich wohne in hier.
+    right: Ich wohne hier.
+    why:
+      en: "*Hier* already says where. It takes no preposition."
+      fa: "در فارسی می‌گوییم «در این‌جا»، ولی *hier* خودش جا را می‌گوید و حرف اضافه نمی‌گیرد."
+      de: "*Hier* sagt schon den Ort. Davor steht keine Präposition."
+  - wrong: Das Kino ist auf links.
+    right: Das Kino ist links.
+    why:
+      en: 'English says "on the left"; German says only *links*.'
+      fa: "*links* خودش جا را می‌گوید و حرف اضافه نمی‌گیرد: *Das Kino ist links.*"
+      de: "Man sagt nur *links*, ohne Präposition."
+  - wrong: Die Toilette ist unter.
+    right: Die Toilette ist unten.
+    why:
+      en: "*Unter* is a preposition and needs a noun: *unter dem Tisch*. Alone, the word is *unten*."
+      fa: "*unter* حرف اضافه است و اسم می‌خواهد: *unter dem Tisch*. بدون اسم، واژهٔ درست *unten* است."
+      de: "*Unter* ist eine Präposition und braucht ein Nomen: *unter dem Tisch*. Allein sagt man *unten*."
+  - wrong: Die Lampe hängt oben dem Tisch.
+    right: Die Lampe hängt über dem Tisch.
+    why:
+      en: "*Oben* is an adverb and takes no noun. With a noun, use the preposition *über*: *über dem Tisch*."
+      fa: "*oben* قید است و اسم نمی‌گیرد. با اسم، حرف اضافهٔ *über* می‌آید: *über dem Tisch*."
+      de: "*Oben* ist ein Adverb, danach steht kein Nomen. Mit Nomen sagt man *über*: *über dem Tisch*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Die Lampe hängt ___ dem Tisch.
+    options: [über, oben, unten]
+    answer: über
+    explanation:
+      en: "A noun follows, so a preposition is needed: *über dem Tisch*."
+      fa: "پس از جای خالی اسم آمده است، پس حرف اضافه لازم است: *über dem Tisch*."
+      de: "Danach kommt ein Nomen. Darum braucht man eine Präposition: *über dem Tisch*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Mein Zimmer ist oben, die Küche ist ___.
+    options: [unten, unter, untere]
+    answer: unten
+    explanation:
+      en: "No noun follows, so the adverb: *unten*, the opposite of *oben*."
+      fa: "پس از آن اسمی نمی‌آید، پس قید لازم است: *unten*، متضاد *oben*."
+      de: "Danach kommt kein Nomen. Darum das Adverb: *unten*, das Gegenteil von *oben*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich wohne ___.
+    options: [hier, in hier, im hier]
+    answer: hier
+    explanation:
+      en: "*Hier* takes no preposition: *Ich wohne hier.*"
+      fa: "*hier* حرف اضافه نمی‌گیرد: *Ich wohne hier.*"
+      de: "Vor *hier* steht keine Präposition: *Ich wohne hier.*"
+  - id: gap-4
+    type: gap-fill
+    prompt: Gehen Sie die Treppe hoch. Das Bad ist ___.
+    options: [oben, über, auf]
+    answer: oben
+    explanation:
+      en: "No noun follows, so the adverb: *oben*, upstairs."
+      fa: "پس از آن اسمی نمی‌آید، پس قید لازم است: *oben*، یعنی طبقهٔ بالا."
+      de: "Danach kommt kein Nomen. Darum das Adverb: *oben*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Die Post ist nicht rechts, sie ist ___.
+    options: [links, linke, auf links]
+    answer: links
+    explanation:
+      en: "The opposite of *rechts* is *links*, with no ending and no preposition."
+      fa: "متضاد *rechts* واژهٔ *links* است، بدون پایانه و بدون حرف اضافه."
+      de: "Das Gegenteil von *rechts* ist *links*, ohne Endung und ohne Präposition."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wo ist das Kino? – ___
+    options: [Dort links., Auf dort links., In dort.]
+    answer: Dort links.
+    explanation:
+      en: "Two place adverbs can stand together, with no preposition: *dort links*."
+      fa: "دو قید مکان می‌توانند بدون حرف اضافه کنار هم بیایند: *dort links*."
+      de: "Zwei Ortsadverbien können zusammen stehen, ohne Präposition: *dort links*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Das Gegenteil von „oben“ ist ___.
+    options: [unten, unter, links]
+    answer: unten
+    explanation:
+      en: "*Oben* and *unten* are a pair. *Unter* is a preposition."
+      fa: "*oben* و *unten* یک جفت متضادند. *unter* حرف اضافه است."
+      de: "*Oben* und *unten* sind ein Paar. *Unter* ist eine Präposition."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Das Gegenteil von „hier“ ist ___.
+    options: [dort, rechts, oben]
+    answer: dort
+    explanation:
+      en: "*Hier* is near, *dort* is further away."
+      fa: "*hier* یعنی نزدیک و *dort* یعنی دورتر."
+      de: "*Hier* ist nah, *dort* ist weiter weg."
+  - id: true-1
+    type: true-false
+    prompt: Die Apotheke ist hier rechts.
+    answer: true
+    explanation:
+      en: "Two place adverbs together, with no preposition. The sentence is correct."
+      fa: "دو قید مکان کنار هم و بدون حرف اضافه. جمله درست است."
+      de: "Zwei Ortsadverbien zusammen, ohne Präposition. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Mein Zimmer ist im oben.
+    answer: false
+    explanation:
+      en: "*Oben* takes no preposition: *Mein Zimmer ist oben.*"
+      fa: "*oben* حرف اضافه نمی‌گیرد: *Mein Zimmer ist oben.*"
+      de: "Vor *oben* steht keine Präposition: *Mein Zimmer ist oben.*"
+  - id: true-3
+    type: true-false
+    prompt: Wir wohnen ganz unten im Haus.
+    answer: true
+    explanation:
+      en: "*Ganz* makes *unten* stronger, and *im Haus* adds the place. The sentence is correct."
+      fa: "*ganz* معنای *unten* را قوی‌تر می‌کند و *im Haus* مکان را می‌گوید. جمله درست است."
+      de: "*Ganz* macht *unten* stärker, *im Haus* sagt den Ort. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Die Toilette ist unter.
+    answer: false
+    explanation:
+      en: "*Unter* needs a noun. Alone, the word is *unten*."
+      fa: "*unter* اسم می‌خواهد. بدون اسم، واژهٔ درست *unten* است."
+      de: "*Unter* braucht ein Nomen. Allein sagt man *unten*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist nicht links, das ist ___.
+    answers: [rechts]
+    explanation:
+      en: "The opposite of *links* is *rechts*."
+      fa: "متضاد *links* واژهٔ *rechts* است."
+      de: "Das Gegenteil von *links* ist *rechts*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Die Küche ist nicht oben, sie ist ___.
+    answers: [unten]
+    explanation:
+      en: "The opposite of *oben* is *unten*."
+      fa: "متضاد *oben* واژهٔ *unten* است."
+      de: "Das Gegenteil von *oben* ist *unten*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich bin nicht dort, ich bin ___.
+    answers: [hier, da]
+    explanation:
+      en: "The opposite of *dort* is *hier*; in speech *da* can mean here too."
+      fa: "متضاد *dort* واژهٔ *hier* است؛ در گفتار *da* هم به معنای «این‌جا» می‌آید."
+      de: "Das Gegenteil von *dort* ist *hier*. Im Gespräch sagt man auch *da*."
+  - id: error-1
+    type: find-error
+    prompt: Die Bank ist auf links.
+    answer: auf
+    explanation:
+      en: "*Links* takes no preposition: *Die Bank ist links.*"
+      fa: "*links* حرف اضافه نمی‌گیرد: *Die Bank ist links.*"
+      de: "Vor *links* steht keine Präposition: *Die Bank ist links.*"
+  - id: error-2
+    type: find-error
+    prompt: Das Bild hängt oben dem Sofa.
+    answer: oben
+    explanation:
+      en: "A noun follows, so the preposition *über*: *über dem Sofa*."
+      fa: "پس از آن اسم آمده است، پس حرف اضافهٔ *über* لازم است: *über dem Sofa*."
+      de: "Danach kommt ein Nomen. Darum die Präposition *über*: *über dem Sofa*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [das Bad, ist, oben]
+      - [oben, ist, das Bad]
+    explanation:
+      en: "The verb comes second. *Oben* can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. *oben* می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. *Oben* kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [oben, unten]
+      - [links, rechts]
+      - [hier, dort]
+    explanation:
+      en: "Each adverb with its opposite: *oben* and *unten*, *links* and *rechts*, *hier* and *dort*."
+      fa: "هر قید با متضادش: *oben* و *unten*، *links* و *rechts*، *hier* و *dort*."
+      de: "Jedes Adverb mit seinem Gegenteil: *oben* und *unten*, *links* und *rechts*, *hier* und *dort*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: c05839364f9d65cf

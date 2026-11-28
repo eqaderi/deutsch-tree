@@ -578,7 +578,7 @@ deutlich	adjective	A2
 deutsch	adjective	A1
 Deutsch	noun	A2	das	sg
 Deutsche	noun	A1	der/die	-n
-Deutschland	noun	A1	das	sg
+Deutschland	noun	A1	none	sg
 Dezember	noun	A1	der
 Dialekt	noun	B1	der	-e
 Dialog	noun	B1	der	-e
@@ -701,7 +701,7 @@ einige	pronoun	A2
 einigen	verb	B1			sich
 Einkauf	noun	B1	der	¨-e
 einkaufen	verb	A1
-Einkaufszentrum	noun	A2	das	-en
+Einkaufszentrum	noun	A2	das	Einkaufszentren
 Einkommen	noun	B1	das	-
 einladen	verb	A1
 Einladung	noun	A1	die	-en
@@ -849,7 +849,7 @@ etwas	pronoun	A2
 EU	noun	B1	die
 euer	article	A1
 Euro	noun	A1	der	-s
-Europa	noun	A1	das	sg
+Europa	noun	A1	none	sg
 Europäer	noun	A1	der	-		Europäerin
 europäisch	adjective	A1
 Europäische Union	noun	B1	die
@@ -939,7 +939,7 @@ Finger	noun	B1	der	-
 Firma	noun	A1	die	Firmen
 Fisch	noun	A1	der	-e
 fit	adjective	A2
-Fitness	noun	B1	die	-
+Fitness	noun	B1	die	sg
 flach	adjective	B1
 Fläche	noun	B1	die	-n
 Flasche	noun	A1	die	-n
@@ -1157,7 +1157,7 @@ gießen	verb	B1
 Gift	noun	B1	das	-e
 giftig	adjective	B1
 Giraffe	noun	B1	die	-n
-Girokonto	noun	B1	das	-en
+Girokonto	noun	B1	das	Girokonten/Girokontos
 Gitarre	noun	A2	die	-n
 Glas	noun	A1	das	¨-er
 glatt	adjective	B1
@@ -1706,7 +1706,7 @@ Lüge	noun	A2	die	-n
 lügen	verb	A2
 Lust	noun	A2	die	sg
 lustig	adjective	A1
-Luxemburg	noun	A2	das	sg
+Luxemburg	noun	A2	none	sg
 Luxemburger	noun	A2	der	-		Luxemburgerin
 luxemburgisch	adjective	A2
 machen	verb	A1
@@ -1768,7 +1768,7 @@ Meister	noun	B1	der	-
 melden	verb	B1
 Meldung	noun	B1	die	-en
 Menge	noun	A2	die	-n
-Mensa	noun	B1	die	-s/-en
+Mensa	noun	B1	die	Mensas/Mensen
 Mensch	noun	A1	der	-en
 menschlich	adjective	B1
 Menü	noun	B1	das	-s
@@ -1820,7 +1820,7 @@ mittlere	adjective	B1
 mittlerweile	adverb	B1
 Mittwoch	noun	A1	der
 mittwochs	adverb	A2
-Möbel	noun	A1	das	-
+Möbel	noun	A1	die	pl
 mobil	adjective	B1
 Mobilbox	noun	B1	die	-en
 Mobilität	noun	B1	die	-en
@@ -1854,7 +1854,6 @@ Motorroller	noun	A2	der	-
 Mountainbike	noun	B1	das	-s
 Mücke	noun	B1	die	-n
 müde	adjective	A1
-Müesli	noun	B1	das	-
 Mühe	noun	B1	die
 Müll	noun	A2	der	sg
 Müllabfuhr	noun	B1	die
@@ -1867,6 +1866,7 @@ Musik	noun	A2	die	sg
 musikalisch	adjective	B1
 Musiker	noun	A2	der	-		Musikerin
 Muskel	noun	B1	der	-n
+Müsli	noun	B1	das	-
 müssen	verb	A1
 Mut	noun	B1	der
 mutig	adjective	B1
@@ -1923,7 +1923,7 @@ Netzwerk	noun	B1	das	-e
 neu	adjective	A1
 neugierig	adjective	B1
 Neuigkeit	noun	B1	die	-en
-Neujahr	noun	A2	das	sg
+Neujahr	noun	A2	none	sg
 neulich	adverb	B1
 neun	numeral	A1
 neunzehn	numeral	A1
@@ -2005,8 +2005,8 @@ original	adjective	B1
 Original	noun	B1	das	-e
 Ort	noun	A1	der	-e
 Osten	noun	A1	der
-Ostern	noun	A2	das	sg
-Österreich	noun	A2	das	sg
+Ostern	noun	A2	none	sg
+Österreich	noun	A2	none	sg
 Österreicher	noun	A2	der	-		Österreicherin
 österreichisch	adjective	A2
 östlich	adjective	B1
@@ -2270,7 +2270,7 @@ Samstag	noun	A1	der
 samstags	adverb	A2
 sämtliche	pronoun	B1
 Sand	noun	B1	der
-Sandwich	noun	B1	das/der	-(e)s/-e
+Sandwich	noun	B1	das/der	Sandwiches/Sandwichs
 Sänger	noun	A2	der	-		Sängerin
 satt	adjective	B1
 Satz	noun	A1	der	¨-e
@@ -2426,7 +2426,7 @@ Sieg	noun	B1	der	-e
 siegen	verb	B1
 Sieger	noun	B1	der	-		Siegerin
 siezen	verb	B1			(sich)
-Silvester	noun	A2	das	sg
+Silvester	noun	A2	none	sg
 singen	verb	A2
 sinken	verb	B1
 Sinn	noun	B1	der
@@ -2560,8 +2560,8 @@ Stimme	noun	B1	die	-n
 stimmen	verb	B1
 Stimmung	noun	B1	die	-en
 stinken	verb	B1
-Stipendium	noun	A2	das	-en
-Stock	noun	A1	der	¨-e
+Stipendium	noun	A2	das	Stipendien
+Stock	noun	A1	der	Stockwerke
 Stockwerk	noun	A2	das	-e
 Stoff	noun	B1	der	-e
 stolz	adjective	B1
@@ -2804,12 +2804,12 @@ Umleitung	noun	B1	die	-en
 umso	adverb	B1
 umsonst	adverb	B1
 umsteigen	verb	A2
-Umtausch	noun	B1	der	¨-e
+Umtausch	noun	B1	der	-e
 umtauschen	verb	B1
 Umwelt	noun	B1	die
 Umweltschutz	noun	B1	der
 Umweltverschmutzung	noun	B1	die	-en
-umziehen	verb	A1			sich
+umziehen	verb	A1			(sich)
 Umzug	noun	A2	der	¨-e
 unbedingt	adverb	A2
 und	conjunction	A1
@@ -3068,7 +3068,7 @@ wehtun	verb	A1
 weiblich	adjective	A1
 weich	adjective	A2
 weigern	verb	B1			sich
-Weihnachten	noun	A2	das	sg
+Weihnachten	noun	A2	none	sg
 weil	conjunction	A2
 Wein	noun	A1	der	-e
 weinen	verb	A2

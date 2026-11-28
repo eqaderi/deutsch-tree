@@ -62,6 +62,47 @@ grüßen\t"jemandem „Hallo“ sagen<br><br>Er sagt: ""Hallo &amp; guten Tag!""
   )
 })
 
+test('a noun that takes no article has the word alone in front; a name that takes one keeps it', () => {
+  const deutschland = word({
+    word: 'Deutschland',
+    class: 'noun',
+    number: 'singular-only',
+    meaning: { en: 'Germany', fa: 'آلمان' },
+    example: { de: 'Ich wohne in Deutschland.', en: 'I live in Germany.', fa: 'من در آلمان زندگی می‌کنم.' },
+  })
+  const schweiz = word({
+    word: 'Schweiz',
+    class: 'noun',
+    article: 'die',
+    number: 'singular-only',
+    meaning: { en: 'Switzerland', fa: 'سوئیس' },
+    example: { de: 'Die Schweiz ist schön.', en: 'Switzerland is beautiful.', fa: 'سوئیس زیباست.' },
+  })
+
+  expect(ankiText([deutschland, schweiz], 'en')).toBe(
+    `${HEADERS}
+Deutschland\tGermany<br><br>Ich wohne in Deutschland.<br>I live in Germany.\tdeutsch-tree\tdeutsch-tree:Deutschland
+die Schweiz\tSwitzerland<br><br>Die Schweiz ist schön.<br>Switzerland is beautiful.\tdeutsch-tree\tdeutsch-tree:Schweiz
+`,
+  )
+})
+
+test('a reflexive verb has its "sich" in front; its note keeps the id of the headword', () => {
+  const freuen = word({
+    word: 'freuen',
+    class: 'verb',
+    reflexive: 'sich',
+    meaning: { en: 'to be glad', fa: 'خوشحال شدن' },
+    example: { de: 'Wir freuen uns.', en: 'We are glad.', fa: 'خوشحالیم.' },
+  })
+
+  expect(ankiText([freuen], 'en')).toBe(
+    `${HEADERS}
+sich freuen\tto be glad<br><br>Wir freuen uns.<br>We are glad.\tdeutsch-tree\tdeutsch-tree:freuen
+`,
+  )
+})
+
 test('the file of one node is named after it; the file of every started node says so', () => {
   expect(ankiFileName('vocabulary-family')).toBe('deutsch-tree-anki-vocabulary-family.txt')
   expect(ankiFileName('started')).toBe('deutsch-tree-anki-started.txt')

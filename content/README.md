@@ -88,9 +88,10 @@ attemptSize: 15          # optional, as for every node
 words:
   - word: Großmutter     # the headword, without article
     class: noun          # a word class of the scope list
-    article: die         # nouns only
+    article: die         # nouns only: der, die, das, or none for a noun that takes no article
     plural: Großmütter   # nouns only: the plural written out, without article
     # number: plural-only  # in place of `plural` for a noun with one number (plural-only, singular-only)
+    # reflexive: sich     # verbs only: what a reflexive verb is learned with (sich, sich etwas)
     level: A1
     meaning:             # plain text, no asterisks; Persian without Latin letters
       en: grandmother
@@ -109,13 +110,27 @@ words:
   give only a marker: `¨-e` on *Stuhl* is *Stühle*. A noun the list gives
   two articles (`der/die` for *Verwandte*) takes one, and lists the other form
   under `alsoAccepted`.
+- **A noun that takes no article** is written `article: none`: most names of
+  countries, continents and cities (*Deutschland*, *Europa*, *Berlin*). It is
+  shown, heard, put on its Anki card and asked bare, so *Deutschland* is the
+  answer and *das Deutschland* is wrong. The scope list says `none` for it
+  too, by a correction in `scope-corrections.yaml` (`article: none`), and the
+  check holds the node to it. A name that takes an article keeps it:
+  *die Schweiz*, *die Türkei*, *der Iran*.
+- **A reflexive verb** is written `reflexive: sich` (or `sich etwas`). It is
+  shown, heard, put on its Anki card, found and asked with it: *sich freuen*
+  is the answer and *freuen* is wrong. A verb the scope list marks `sich` is
+  always reflexive, and a published node must write it so; one it marks
+  `(sich)` is written with it or without, by the sense the node teaches
+  (*sich waschen* or *waschen*). Never put "with sich" into a meaning.
 - A node writes no `questions`: the test is made from the words. Every word
   is asked twice. **From German**: the learner sees the word as it is learned
   (*die Großmutter*) and chooses its meaning among four meanings of words of
   the node, of the same word class where the node has enough. **Into
   German**: the learner sees the meaning and types the word, a noun with its
-  article; *Großmutter* or *der Großmutter* is wrong, and only the slips of
-  any typed answer (umlauts, capitals) are forgiven. A learner who reads in
+  article (if it takes one); *Großmutter* or *der Großmutter* is wrong, and only the slips of
+  any typed answer (umlauts, capitals) are forgiven. A reflexive verb is typed
+  with its *sich* in the same way. A learner who reads in
   simple German sees the `definition` in place of a meaning, in both
   directions. One attempt asks about a word once, half of the words in each
   direction. The reason shown for a wrong answer is the word, its meaning
@@ -125,13 +140,13 @@ words:
   rejected, unless each lists the other in `alsoAccepted` and one names the
   other in `tooCloseTo` (*Oma* and *Großmutter*). List under `alsoAccepted`
   every other German a learner may rightly type: *die Frau* for *Ehefrau*.
-- The page lists every word with its article, plural, word class, level,
+- The page lists every word with its article or its *sich*, plural, word class, level,
   meaning, definition and example. Search finds a word by itself with its
   article and its meaning (in simple German: its definition), not by its
   example.
 - The review covers the questions made from the words, in each of the three
   languages (see "Review before publishing"). A change to a word, its
-  article, a meaning, the definition, `alsoAccepted` or `tooCloseTo` calls
+  article, its `reflexive`, a meaning, the definition, `alsoAccepted` or `tooCloseTo` calls
   for a new review; the example sentence, the plural and the level may change
   freely, because no question shows them.
 
@@ -149,7 +164,7 @@ of date.
 |---|---|---|
 | `scope-list.tsv` | Every word in scope, one per line: `word`, `class`, `level`, `article`, `plural`, `reflexive`, `feminine`, `regional`. The vocabulary nodes must hold each word exactly once. | `pnpm vocabulary:scope` |
 | `left-out.tsv` | Every headword of the word lists that is not in scope, with the reason and the word it is noted on. | `pnpm vocabulary:scope` |
-| `scope-corrections.yaml` | What the extracted lists got wrong or do not print: word classes, missing articles, two spellings of one word. | by hand |
+| `scope-corrections.yaml` | What the extracted lists got wrong or do not print: word classes, missing articles (`none` for a noun that takes no article), two spellings of one word. | by hand |
 
 The words come from the Goethe A1, A2 and B1 word lists. **Only headwords may
 be here**: a word, its article, plural marker, word class and level. Never a
@@ -391,6 +406,14 @@ table:
     - [die Bücher (Plural), den Büchern, –, zwischen den Büchern]
 ```
 
+A gap whose answer is a case form gives its hint as the preposition and the
+noun in its dictionary form, apart: `Ich bin heute ___ (bei / der Arzt).`
+The noun then stands only in the hint, so a learner may fill the gap with
+the whole phrase or with what changes: accept both (`answers: [beim Arzt,
+bei dem Arzt, beim, bei dem]`). Never `(bei + der) Arzt`: reviewers read the
+article joined to the preposition as the article in the case already, here
+a Dativ *der*.
+
 ```yaml
 status: published
 
@@ -593,10 +616,13 @@ and the first is shown as the right one.
   exactly, with its umlauts, its ß and its capitals. An answer that is not
   listed is marked wrong.
 - Do not list variants of spelling. The test ignores extra spaces by itself,
-  and it accepts *ae*, *oe*, *ue* and *ss* in place of *ä*, *ö*, *ü* and *ß*
-  and a capitalisation difference, each with a note that shows the learner
-  the exact spelling. Nothing else is forgiven: a missing word, such as an
-  article, or a plain *u* for *ü* is a wrong answer.
+  and a full stop, exclamation mark or question mark after the last word, so
+  do not list an answer twice, with and without one; a question answer is
+  right with or without its question mark. It accepts *ae*, *oe*, *ue* and
+  *ss* in place of *ä*, *ö*, *ü* and *ß* and a capitalisation difference,
+  each with a note that shows the learner the exact spelling. Nothing else is
+  forgiven: a missing word, such as an article, a comma, or a plain *u* for
+  *ü* is a wrong answer.
 - Pin the answer down. `Wir spielen ___.` can be filled in a hundred ways;
   give the word to use, as in `Du ___ (wohnen) hier.` The blind reviewer types
   an answer without seeing your list, and an answer that is not on it stops
@@ -915,8 +941,39 @@ the command are in the main README, "Audio".
   choice. A chapter or mock-exam ticket that adds listening texts follows
   this rule.
 - Numbers are spoken as words: `85 Jahre`, `14:35 Uhr`, `am 3. Mai`, `1990`,
-  `3,50 €` and `20 %` need nothing. A number in another form (`3.5.2025`) is
+  `3,50 €` and `20 %` need nothing. So do dates at the start of a sentence
+  (`Am 25. Juli`), ranges of days (`vom 3. bis 5. Mai`, `3.–5. Mai`,
+  `bis 5. Mai`) and an ordinal before a noun after an article or `am`, `im`,
+  `zum`, `beim`, `jeden` … (`im 3. Stock`, `der 3. Stock`, `in der 4. Klasse`,
+  `zum 1. Mal`). The ending follows the word before it; after `die` it is
+  always *-e*, so write a plural (`die 3. Klassen`) or a genitive (`am Ende
+  der 2. Woche`) in words. Without such a word the dot ends a sentence
+  (`Er ist 3. Seine …` is "drei"). A number in another form (`3.5.2025`) is
   an error that asks you to write it in words.
+- Words the voice says wrong wherever they stand (*der ICE* as "Ike", *fit*
+  with a long i) and abbreviations it would spell out (*z. B.*, *bzw.*,
+  *usw.* …) are in one table, `PRONUNCIATIONS` in
+  `src/audio/pronunciations.ts`: what is written, and how the voice is to say
+  it. It changes only what the voice says, never what the learner sees, and
+  it applies to the whole word only (*Hals*, not *Halsschmerzen*). When the
+  voice slips on a word every time, add a line with your ticket number:
+  1. Look at Piper's phonemes for the word and for your respelling, with the
+     Python that Piper is installed in, and keep a spelling that gives the
+     right sounds and stress (`ˈ` marks it). A hyphen gives each part a
+     stress (`La-tein`).
+
+     ```sh
+     python -c "import os, piper; from piper.phonemize_espeak import EspeakPhonemizer as E; \
+       print(E(os.path.join(os.path.dirname(piper.__file__), 'espeak-ng-data')).phonemize('de', 'der Halls'))"
+     ```
+  2. Run `pnpm audio:generate` (both voices) and listen to the new files in
+     both voices, or transcribe them with whisper: one voice can slip where
+     the other does not.
+  3. Add the word to the table's test in `tests/audio/speakable.test.ts`.
+
+  The audio key is a hash of the text as the voice says it (after the
+  table), so a new or changed line gives new files to exactly the items that
+  hold the word, and `pnpm audio:generate` removes the old ones.
 - Audio is not part of the review record: changing an example needs new
   audio, never a new review.
 - Listen to new audio once. When the voice slips on an item, say it again with
@@ -940,7 +997,9 @@ one, and again when a question or its answer changes later (explanations may
 change freely). A command writes the record, never a hand:
 
 1. `pnpm review:pool <id> --out /tmp/<id>.json` writes the review sheet: the
-   pool without answers and explanations. For an exam part it holds the texts
+   pool without answers and explanations. The options of a choice stand in
+   an order made from the options alone, so their place tells nothing about
+   the key. For an exam part it holds the texts
    of every practice task and the items without answers; an item is named
    with its task (`t1/i3`). Keep the sheet outside the repository.
 2. Give only that file to a reviewer who has not seen the node file (for an
@@ -1044,7 +1103,8 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   of a node that the scope list does not have. A vocabulary node without
   words, with `questions`, and words in a node of another kind.
 - A word of a published vocabulary node that lacks a part; a word class,
-  level, article or plural that differs from the scope list; an article or
+  level, article or plural that differs from the scope list (an article on a
+  noun the scope list gives `none`, and `none` where it gives one); an article or
   plural on a word that is no noun; a definition that uses the word itself;
   two words with the same meaning or definition that do not accept each
   other; a `tooCloseTo` that is not a word of the node.

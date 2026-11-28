@@ -1,13 +1,427 @@
-# Grammar list row 23.
+# Grammar list row 23. sein, haben and the modal verbs (rows 13, 18) and the
+# five very frequent verbs of row 19 come earlier; this node gives the whole
+# system and the principal parts.
 id: grammar-023
 kind: grammar
 level: B1
 chapter: b1-tenses
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-016, grammar-019]
 title:
   en: "*Präteritum* of all verbs, with principal parts"
   fa: "گذشتهٔ ساده (*Präteritum*) همهٔ فعل‌ها، با سه صورت اصلی فعل"
   de: "Präteritum von allen Verben, mit den Stammformen"
+
+explanations:
+  en:
+    rule: >
+      The *Präteritum* is the tense of written stories, reports and life
+      stories. A regular verb adds *-te* to its stem, then the ending: *ich
+      machte*, *du machtest*, *wir machten*, *ihr machtet*. After a stem in
+      *-t* or *-d* it is *-ete*: *arbeitete*, *redete*. An irregular verb
+      takes no *-te* but has a new stem: *gehen*, *ging*; *fahren*, *fuhr*.
+      A mixed verb does both, a new vowel and *-te*: *bringen*, *brachte*;
+      *denken*, *dachte*; *wissen*, *wusste*. With *ich* and *er* / *sie* /
+      *es* nothing follows the *-te* or the new stem (*ich ging*, *er
+      machte*). The prefix of a separable verb goes to the end: *Der Zug fuhr
+      um acht Uhr ab.* No rule tells you the new stem, so learn each
+      irregular verb with its three principal parts: infinitive,
+      *Präteritum* and *Partizip II* with its auxiliary (*gehen*, *ging*,
+      *ist gegangen*).
+  fa:
+    rule: >
+      گذشتهٔ ساده (*Präteritum*) زمان داستان، گزارش و زندگی‌نامهٔ نوشته‌شده
+      است. فعل باقاعده به بن خود *-te* و سپس شناسه می‌افزاید: *ich machte*،
+      *du machtest*، *wir machten*، *ihr machtet*. اگر بن به *-t* یا *-d*
+      ختم شود، *-ete* می‌آید: *arbeitete*، *redete*. فعل بی‌قاعده *-te*
+      نمی‌گیرد، بلکه بن تازه‌ای دارد: *gehen*، *ging*؛ *fahren*، *fuhr*. فعل
+      آمیخته هر دو را دارد، هم واکهٔ تازه و هم *-te*: *bringen*، *brachte*؛
+      *denken*، *dachte*؛ *wissen*، *wusste*. با *ich* و *er/sie/es* پس از
+      *-te* یا بن تازه شناسه‌ای نمی‌آید (*ich ging*، *er machte*). پیشوند فعل
+      جداشدنی به پایان جمله می‌رود: *Der Zug fuhr um acht Uhr ab.* هیچ قاعده‌ای
+      بن تازه را نشان نمی‌دهد؛ از این رو هر فعل بی‌قاعده را با سه صورت اصلی‌اش
+      از بر کنید: مصدر، گذشتهٔ ساده و صفت مفعولی (*Partizip II*) همراه با فعل
+      کمکی‌اش (*gehen*، *ging*، *ist gegangen*).
+  de:
+    rule: >
+      Das Präteritum benutzt man in Geschichten, Berichten und Lebensläufen,
+      vor allem beim Schreiben. Ein regelmäßiges Verb bekommt *-te* und dann
+      die Endung: *ich machte*, *du machtest*, *wir machten*, *ihr machtet*.
+      Endet der Stamm auf *-t* oder *-d*, dann *-ete*: *arbeitete*,
+      *redete*. Ein unregelmäßiges Verb bekommt kein *-te*, es hat einen
+      neuen Stamm: *gehen*, *ging*; *fahren*, *fuhr*. Ein gemischtes Verb hat
+      beides, einen neuen Vokal und *-te*: *bringen*, *brachte*; *denken*,
+      *dachte*; *wissen*, *wusste*. Bei *ich* und *er/sie/es* kommt nach
+      *-te* oder dem neuen Stamm keine Endung (*ich ging*, *er machte*). Das
+      Präfix von einem trennbaren Verb steht am Ende: *Der Zug fuhr um acht
+      Uhr ab.* Den neuen Stamm kann man nicht raten. Lernen Sie jedes
+      unregelmäßige Verb mit den drei Stammformen: Infinitiv, Präteritum und
+      Partizip II mit dem Hilfsverb (*gehen*, *ging*, *ist gegangen*).
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*Präsens* (*er*)", fa: "زمان حال (*er*)", de: "Präsens (*er*)" }
+    - { en: "*Präteritum* (*er*)", fa: "گذشتهٔ ساده (*er*)", de: "Präteritum (*er*)" }
+    - { en: "*Perfekt* (*er*)", fa: "گذشتهٔ نقلی (*er*)", de: "Perfekt (*er*)" }
+  rows:
+    - [machen (regelmäßig), macht, machte, hat gemacht]
+    - [arbeiten (regelmäßig), arbeitet, arbeitete, hat gearbeitet]
+    - [bleiben, bleibt, blieb, ist geblieben]
+    - [schreiben, schreibt, schrieb, hat geschrieben]
+    - [fliegen, fliegt, flog, ist geflogen]
+    - [finden, findet, fand, hat gefunden]
+    - [trinken, trinkt, trank, hat getrunken]
+    - [sprechen, spricht, sprach, hat gesprochen]
+    - [helfen, hilft, half, hat geholfen]
+    - [nehmen, nimmt, nahm, hat genommen]
+    - [sehen, sieht, sah, hat gesehen]
+    - [fahren, fährt, fuhr, ist gefahren]
+    - [tragen, trägt, trug, hat getragen]
+    - [schlafen, schläft, schlief, hat geschlafen]
+    - [laufen, läuft, lief, ist gelaufen]
+    - [rufen, ruft, rief, hat gerufen]
+    - [sitzen, sitzt, saß, hat gesessen]
+    - [stehen, steht, stand, hat gestanden]
+    - [anfangen, fängt an, fing an, hat angefangen]
+    - [werden, wird, wurde, ist geworden]
+    - [bringen (gemischt), bringt, brachte, hat gebracht]
+    - [denken (gemischt), denkt, dachte, hat gedacht]
+    - [kennen (gemischt), kennt, kannte, hat gekannt]
+    - [wissen (gemischt), weiß, wusste, hat gewusst]
+
+examples:
+  - de: Als ich klein war, wohnten wir in einem Dorf.
+    en: When I was little, we lived in a village.
+    fa: وقتی کوچک بودم، در روستایی زندگی می‌کردیم.
+  - de: Meine Großmutter arbeitete vierzig Jahre in einer Bäckerei.
+    en: My grandmother worked in a bakery for forty years.
+    fa: مادربزرگم چهل سال در یک نانوایی کار کرد.
+  - de: Er schrieb ihr jeden Tag einen Brief.
+    en: He wrote her a letter every day.
+    fa: او هر روز برایش نامه‌ای می‌نوشت.
+  - de: Plötzlich stand ein Mann vor der Tür.
+    en: Suddenly a man was standing at the door.
+    fa: ناگهان مردی جلوی در ایستاده بود.
+  - de: Der Zug fuhr pünktlich um acht Uhr ab.
+    en: The train left on time at eight o'clock.
+    fa: قطار سر وقت، ساعت هشت حرکت کرد.
+  - de: Nach dem Essen tranken wir noch einen Kaffee.
+    en: After the meal we had a coffee as well.
+    fa: بعد از غذا یک قهوه هم خوردیم.
+  - de: Ich wusste nicht, dass du Geburtstag hattest.
+    en: I didn't know it was your birthday.
+    fa: نمی‌دانستم که تولدت بود.
+  - de: Sie brachte ihren Kindern ein Geschenk mit.
+    en: She brought her children a present.
+    fa: او برای بچه‌هایش هدیه‌ای آورد.
+  - de: Damals kannte ich in der Stadt niemanden.
+    en: Back then I didn't know anyone in the town.
+    fa: آن زمان در آن شهر کسی را نمی‌شناختم.
+  - de: Die Kinder schliefen schon, als wir nach Hause kamen.
+    en: The children were already asleep when we got home.
+    fa: وقتی به خانه رسیدیم، بچه‌ها خواب بودند.
+  - de: Der Film fing um neun Uhr an und dauerte zwei Stunden.
+    en: The film started at nine and lasted two hours.
+    fa: فیلم ساعت نه شروع شد و دو ساعت طول کشید.
+
+mistakes:
+  - wrong: Er bringte mir Blumen.
+    right: Er brachte mir Blumen.
+    why:
+      en: "*Bringen* is a mixed verb: a new vowel and *-te*: *brachte*."
+      fa: "*bringen* فعل آمیخته است: هم واکهٔ تازه و هم *-te*: *brachte*."
+      de: "*Bringen* ist gemischt: neuer Vokal und *-te*: *brachte*."
+  - wrong: Letzten Sommer fahrten wir ans Meer.
+    right: Letzten Sommer fuhren wir ans Meer.
+    why:
+      en: "*Fahren* is irregular: the new stem *fuhr*, no *-te*, and *-en* with *wir*."
+      fa: "*fahren* بی‌قاعده است: بن تازهٔ *fuhr*، بدون *-te*، و با *wir* شناسهٔ *-en*."
+      de: "*Fahren* ist unregelmäßig: neuer Stamm *fuhr*, kein *-te*, bei *wir* mit *-en*."
+  - wrong: Sie arbeitte bis spät am Abend.
+    right: Sie arbeitete bis spät am Abend.
+    why:
+      en: "The stem *arbeit-* ends in *-t*, so it takes *-ete*: *arbeitete*."
+      fa: "بن *arbeit-* به *-t* ختم می‌شود، پس *-ete* می‌گیرد: *arbeitete*."
+      de: "Der Stamm *arbeit-* endet auf *-t*. Darum *-ete*: *arbeitete*."
+  - wrong: Der Film anfing um acht Uhr.
+    right: Der Film fing um acht Uhr an.
+    why:
+      en: "*Anfangen* is separable: *fing* stands in position 2 and *an* goes to the end."
+      fa: "*anfangen* فعل جداشدنی است: *fing* در جایگاه دوم می‌آید و *an* به پایان جمله می‌رود."
+      de: "*Anfangen* ist trennbar: *fing* steht auf Position 2, *an* am Ende."
+  - wrong: Ich schriebte meiner Mutter eine Karte.
+    right: Ich schrieb meiner Mutter eine Karte.
+    why:
+      en: "An irregular verb never takes *-te*: *schreiben*, *schrieb*."
+      fa: "فعل بی‌قاعده هیچ‌گاه *-te* نمی‌گیرد: *schreiben*، *schrieb*."
+      de: "Ein unregelmäßiges Verb bekommt nie *-te*: *schreiben*, *schrieb*."
+
+attemptSize: 12
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Früher ___ meine Eltern in einem kleinen Dorf.
+    options: [wohnen, wohnte, wohnten]
+    answer: wohnten
+    explanation:
+      en: "*Wohnen* is regular: *wohn-* + *-te*, and *-n* for *meine Eltern* (*sie*, plural): *wohnten*."
+      fa: "*wohnen* باقاعده است: *wohn-* + *-te*، و برای *meine Eltern* (سوم‌شخص جمع) *-n*: *wohnten*."
+      de: "*Wohnen* ist regelmäßig: *wohn-* + *-te*, bei *meine Eltern* (*sie*, Plural) mit *-n*: *wohnten*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Gestern ___ sie bis spät in der Nacht.
+    options: [arbeitte, arbeitete, arbeitet]
+    answer: arbeitete
+    explanation:
+      en: "*Gestern* asks for the past, and the stem *arbeit-* ends in *-t*, so *-ete*: *arbeitete*."
+      fa: "*gestern* گذشته را می‌خواهد و بن *arbeit-* به *-t* ختم می‌شود، پس *-ete*: *arbeitete*."
+      de: "*Gestern* ist Vergangenheit, und der Stamm *arbeit-* endet auf *-t*. Darum *-ete*: *arbeitete*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Letzten Sommer ___ wir mit dem Zug nach Italien.
+    options: [fahrten, fuhren, fuhrten]
+    answer: fuhren
+    explanation:
+      en: "*Fahren* is irregular: *fuhr*, no *-te*, and *-en* with *wir*: *fuhren*."
+      fa: "*fahren* بی‌قاعده است: *fuhr*، بدون *-te*، و با *wir* *-en*: *fuhren*."
+      de: "*Fahren* ist unregelmäßig: *fuhr*, kein *-te*, bei *wir* mit *-en*: *fuhren*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich ___ nicht, dass du krank warst.
+    options: [wusste, wisste, weißte]
+    answer: wusste
+    explanation:
+      en: "*Wissen* is a mixed verb: *wusste*, with a new vowel and *-te*."
+      fa: "*wissen* فعل آمیخته است: *wusste*، با واکهٔ تازه و *-te*."
+      de: "*Wissen* ist gemischt: *wusste*, mit neuem Vokal und *-te*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Zum Geburtstag ___ er mir Blumen.
+    options: [bringte, gebracht, brachte]
+    answer: brachte
+    explanation:
+      en: "*Bringen* is a mixed verb: *brachte*. *Gebracht* is the *Partizip II* and needs *hat*."
+      fa: "*bringen* فعل آمیخته است: *brachte*. *gebracht* صفت مفعولی است و *hat* لازم دارد."
+      de: "*Bringen* ist gemischt: *brachte*. *Gebracht* ist das Partizip II und braucht *hat*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Der Film ___ um acht Uhr an.
+    options: [fing, anfing, fang]
+    answer: fing
+    explanation:
+      en: "*Anfangen* is separable and irregular: *fing … an*, with *an* at the end."
+      fa: "*anfangen* جداشدنی و بی‌قاعده است: *fing … an*، و *an* در پایان جمله."
+      de: "*Anfangen* ist trennbar und unregelmäßig: *fing … an*, *an* steht am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Plötzlich ___ ein Mann vor der Tür.
+    options: [stehte, stand, standete]
+    answer: stand
+    explanation:
+      en: "*Stehen* is irregular: *stand*, with no *-te* and no ending."
+      fa: "*stehen* بی‌قاعده است: *stand*، بدون *-te* و بدون شناسه."
+      de: "*Stehen* ist unregelmäßig: *stand*, ohne *-te* und ohne Endung."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Warum ___ du gestern nicht ans Telefon?
+    options: [gingt, gehtest, gingst]
+    answer: gingst
+    explanation:
+      en: "*Gehen* is irregular: *ging*, and *-st* with *du*: *gingst*. *Gingt* goes with *ihr*."
+      fa: "*gehen* بی‌قاعده است: *ging*، و با *du* *-st*: *gingst*. *gingt* با *ihr* می‌آید."
+      de: "*Gehen* ist unregelmäßig: *ging*, bei *du* mit *-st*: *gingst*. *Gingt* sagt man bei *ihr*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: nehmen – ___ – hat genommen
+    options: [nehmte, nahm, nimmte]
+    answer: nahm
+    explanation:
+      en: "The principal parts of *nehmen* are *nehmen*, *nahm*, *hat genommen*."
+      fa: "سه صورت اصلی *nehmen* این‌هاست: *nehmen*، *nahm*، *hat genommen*."
+      de: "Die Stammformen von *nehmen* sind *nehmen*, *nahm*, *hat genommen*."
+  - id: choice-5
+    type: multiple-choice
+    prompt: denken – ___ – hat gedacht
+    options: [dachte, denkte, dacht]
+    answer: dachte
+    explanation:
+      en: "*Denken* is a mixed verb: *denken*, *dachte*, *hat gedacht*."
+      fa: "*denken* فعل آمیخته است: *denken*، *dachte*، *hat gedacht*."
+      de: "*Denken* ist gemischt: *denken*, *dachte*, *hat gedacht*."
+  - id: true-1
+    type: true-false
+    prompt: Nach dem Essen tranken wir noch einen Kaffee.
+    answer: true
+    explanation:
+      en: "*Trinken* is irregular: *trank*, and *-en* with *wir*. The sentence is correct."
+      fa: "*trinken* بی‌قاعده است: *trank*، و با *wir* *-en*. جمله درست است."
+      de: "*Trinken* ist unregelmäßig: *trank*, bei *wir* mit *-en*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Gestern schriebte ich meiner Oma einen Brief.
+    answer: false
+    explanation:
+      en: "*Schreiben* is irregular and takes no *-te*: *Gestern schrieb ich meiner Oma einen Brief.*"
+      fa: "*schreiben* بی‌قاعده است و *-te* نمی‌گیرد: *Gestern schrieb ich meiner Oma einen Brief.*"
+      de: "*Schreiben* ist unregelmäßig, ohne *-te*: *Gestern schrieb ich meiner Oma einen Brief.*"
+  - id: true-3
+    type: true-false
+    prompt: Er öffnete langsam die Tür.
+    answer: true
+    explanation:
+      en: "The stem *öffn-* is hard to say with *-te* alone, so it takes *-ete*: *öffnete*. The sentence is correct."
+      fa: "بن *öffn-* با *-te* تنها به‌سختی گفته می‌شود، پس *-ete* می‌گیرد: *öffnete*. جمله درست است."
+      de: "Der Stamm *öffn-* bekommt *-ete*, sonst kann man ihn schwer sprechen: *öffnete*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Der Zug abfuhr pünktlich um acht Uhr.
+    answer: false
+    explanation:
+      en: "*Abfahren* is separable: *Der Zug fuhr pünktlich um acht Uhr ab.*"
+      fa: "*abfahren* فعل جداشدنی است: *Der Zug fuhr pünktlich um acht Uhr ab.*"
+      de: "*Abfahren* ist trennbar: *Der Zug fuhr pünktlich um acht Uhr ab.*"
+  - id: error-1
+    type: find-error
+    prompt: Sie bringte ihrer Mutter einen Kuchen.
+    answer: bringte
+    explanation:
+      en: "*Bringen* is a mixed verb: *Sie brachte ihrer Mutter einen Kuchen.*"
+      fa: "*bringen* فعل آمیخته است: *Sie brachte ihrer Mutter einen Kuchen.*"
+      de: "*Bringen* ist gemischt: *Sie brachte ihrer Mutter einen Kuchen.*"
+  - id: error-2
+    type: find-error
+    prompt: Die Kinder spielte den ganzen Tag im Garten.
+    answer: spielte
+    explanation:
+      en: "*Die Kinder* is *sie* (plural), so *-n* follows the *-te*: *Die Kinder spielten den ganzen Tag im Garten.*"
+      fa: "*die Kinder* سوم‌شخص جمع است (*sie*)، پس پس از *-te* شناسهٔ *-n* می‌آید: *Die Kinder spielten den ganzen Tag im Garten.*"
+      de: "*Die Kinder* ist *sie* (Plural). Nach *-te* kommt *-n*: *Die Kinder spielten den ganzen Tag im Garten.*"
+  - id: error-3
+    type: find-error
+    prompt: Er arbeitte zehn Jahre bei der Post.
+    answer: arbeitte
+    explanation:
+      en: "The stem *arbeit-* ends in *-t*, so *-ete*: *Er arbeitete zehn Jahre bei der Post.*"
+      fa: "بن *arbeit-* به *-t* ختم می‌شود، پس *-ete*: *Er arbeitete zehn Jahre bei der Post.*"
+      de: "Der Stamm *arbeit-* endet auf *-t*. Darum *-ete*: *Er arbeitete zehn Jahre bei der Post.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Früher ___ (spielen) wir jeden Tag Fußball.
+    answers: [spielten]
+    explanation:
+      en: "*Spielen* is regular: *spiel-* + *-te* + *-n* with *wir*: *spielten*."
+      fa: "*spielen* باقاعده است: *spiel-* + *-te* + *-n* با *wir*: *spielten*."
+      de: "*Spielen* ist regelmäßig: *spiel-* + *-te* + *-n* bei *wir*: *spielten*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Letzte Nacht ___ (schlafen) ich sehr schlecht.
+    answers: [schlief]
+    explanation:
+      en: "*Schlafen* is irregular: *schlafen*, *schlief*, *hat geschlafen*. With *ich* there is no ending."
+      fa: "*schlafen* بی‌قاعده است: *schlafen*، *schlief*، *hat geschlafen*. با *ich* شناسه‌ای نمی‌آید."
+      de: "*Schlafen* ist unregelmäßig: *schlafen*, *schlief*, *hat geschlafen*. Bei *ich* keine Endung."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Letztes Jahr ___ (fliegen) meine Schwester nach Kanada.
+    answers: [flog]
+    explanation:
+      en: "*Fliegen* is irregular: *fliegen*, *flog*, *ist geflogen*."
+      fa: "*fliegen* بی‌قاعده است: *fliegen*، *flog*، *ist geflogen*."
+      de: "*Fliegen* ist unregelmäßig: *fliegen*, *flog*, *ist geflogen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Gestern ___ (anrufen) mich mein Chef dreimal an.
+    answers: [rief]
+    explanation:
+      en: "*Anrufen* is separable and irregular: *rief … an*. The *an* is already at the end."
+      fa: "*anrufen* جداشدنی و بی‌قاعده است: *rief … an*. *an* از پیش در پایان جمله هست."
+      de: "*Anrufen* ist trennbar und unregelmäßig: *rief … an*. Das *an* steht schon am Ende."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Damals ___ (sprechen) ihr noch kein Deutsch.
+    answers: [spracht]
+    explanation:
+      en: "*Sprechen* is irregular: *sprach*, and *-t* with *ihr*: *spracht*."
+      fa: "*sprechen* بی‌قاعده است: *sprach*، و با *ihr* *-t*: *spracht*."
+      de: "*Sprechen* ist unregelmäßig: *sprach*, bei *ihr* mit *-t*: *spracht*."
+  - id: typed-gap-6
+    type: typed-gap-fill
+    prompt: Früher ___ (antworten) du immer sofort.
+    answers: [antwortetest]
+    explanation:
+      en: "The stem *antwort-* ends in *-t*, so *-ete*, and *-st* with *du*: *antwortetest*."
+      fa: "بن *antwort-* به *-t* ختم می‌شود، پس *-ete*، و با *du* *-st*: *antwortetest*."
+      de: "Der Stamm *antwort-* endet auf *-t*: *-ete*, bei *du* mit *-st*: *antwortetest*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Präteritum: er nimmt"
+    answers: [er nahm, nahm]
+    explanation:
+      en: "*Nehmen* is irregular: *nehmen*, *nahm*, *hat genommen*."
+      fa: "*nehmen* بی‌قاعده است: *nehmen*، *nahm*، *hat genommen*."
+      de: "*Nehmen* ist unregelmäßig: *nehmen*, *nahm*, *hat genommen*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Präteritum: ich weiß"
+    answers: [ich wusste, wusste]
+    explanation:
+      en: "*Wissen* is a mixed verb: *wissen*, *wusste*, *hat gewusst*."
+      fa: "*wissen* فعل آمیخته است: *wissen*، *wusste*، *hat gewusst*."
+      de: "*Wissen* ist gemischt: *wissen*, *wusste*, *hat gewusst*."
+  - id: typed-3
+    type: typed-answer
+    prompt: "Präteritum: wir fahren ab"
+    answers: [wir fuhren ab, fuhren ab]
+    explanation:
+      en: "*Abfahren* is separable and irregular: *wir fuhren ab*, with *ab* at the end."
+      fa: "*abfahren* جداشدنی و بی‌قاعده است: *wir fuhren ab*، و *ab* در پایان."
+      de: "*Abfahren* ist trennbar und unregelmäßig: *wir fuhren ab*, *ab* am Ende."
+  - id: typed-4
+    type: typed-answer
+    prompt: "Präteritum: sie bleibt"
+    answers: [sie blieb, blieb]
+    explanation:
+      en: "*Bleiben* is irregular: *bleiben*, *blieb*, *ist geblieben*."
+      fa: "*bleiben* بی‌قاعده است: *bleiben*، *blieb*، *ist geblieben*."
+      de: "*Bleiben* ist unregelmäßig: *bleiben*, *blieb*, *ist geblieben*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wann, fing, der Film, an]
+    end: "?"
+    explanation:
+      en: "The question word comes first, *fing* second, and the prefix *an* goes to the end."
+      fa: "واژهٔ پرسشی در آغاز، *fing* در جایگاه دوم و پیشوند *an* در پایان جمله می‌آید."
+      de: "Das Fragewort steht am Anfang, *fing* auf Position 2, das Präfix *an* am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wo, wohntet, ihr, damals]
+    end: "?"
+    explanation:
+      en: "The question word comes first and the verb *wohntet* second."
+      fa: "واژهٔ پرسشی در آغاز و فعل *wohntet* در جایگاه دوم می‌آید."
+      de: "Das Fragewort steht am Anfang, das Verb *wohntet* auf Position 2."
+  - id: match-1
+    type: matching
+    answer:
+      - [schreiben, schrieb]
+      - [fahren, fuhr]
+      - [trinken, trank]
+      - [denken, dachte]
+      - [helfen, half]
+    explanation:
+      en: "Irregular verbs change their stem (*schrieb*, *fuhr*, *trank*, *half*); the mixed *denken* changes its vowel and adds *-te*: *dachte*."
+      fa: "بن فعل‌های بی‌قاعده تغییر می‌کند (*schrieb*، *fuhr*، *trank*، *half*)؛ *denken* آمیخته است: واکه‌اش تغییر می‌کند و *-te* می‌گیرد: *dachte*."
+      de: "Unregelmäßige Verben haben einen neuen Stamm (*schrieb*, *fuhr*, *trank*, *half*); das gemischte *denken* ändert den Vokal und bekommt *-te*: *dachte*."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: the whole pool, then the four typed answers again after their
+    key was widened; not people)"
+  date: 2026-11-28
+  pool: 1316b3a3caf2aa03

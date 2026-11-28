@@ -1,38 +1,385 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Bahn and Zug, Bahnsteig and Gleis, Fahrkarte and Ticket, Durchsage and Ansage are close;
+# `tooCloseTo` keeps a close one from being offered as a wrong meaning, and `alsoAccepted`
+# takes it as right where it fits.
 id: vocabulary-bus-train
 kind: vocabulary
 level: A1
 chapter: a1-words-town-travel
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Bus and train"
   fa: "اتوبوس و قطار"
   de: "Bus und Bahn"
+attemptSize: 15
 words:
   - word: Bus
+    class: noun
+    article: der
+    plural: Busse
+    level: A1
+    meaning:
+      en: bus
+      fa: اتوبوس
+    definition: ein großes Auto für viele Menschen, das an Haltestellen hält
+    example:
+      de: Ich fahre mit dem Bus zur Arbeit.
+      en: I go to work by bus.
+      fa: با اتوبوس سر کار می‌روم.
+
   - word: Bahn
+    class: noun
+    article: die
+    plural: Bahnen
+    level: A1
+    meaning:
+      en: the railway; a train or tram
+      fa: راه‌آهن؛ قطار
+    definition: alle Züge von einem Land zusammen; auch ein einzelner Zug oder eine Straßenbahn
+    example:
+      de: Ich fahre lieber mit der Bahn als mit dem Auto.
+      en: I'd rather go by train than by car.
+      fa: ترجیح می‌دهم با قطار بروم تا با ماشین.
+    alsoAccepted: [der Zug, die Eisenbahn]
+    tooCloseTo: [Zug, S-Bahn, Straßenbahn]
+
   - word: Zug
+    class: noun
+    article: der
+    plural: Züge
+    level: A1
+    meaning:
+      en: train
+      fa: قطار
+    definition: viele Wagen hintereinander, die auf Schienen fahren
+    example:
+      de: Der Zug nach München hat zehn Minuten Verspätung.
+      en: The train to Munich is ten minutes late.
+      fa: قطار مونیخ ده دقیقه تأخیر دارد.
+    alsoAccepted: [die Bahn, die Eisenbahn]
+    tooCloseTo: [Bahn]
+
   - word: S-Bahn
+    class: noun
+    article: die
+    plural: S-Bahnen
+    level: A1
+    meaning:
+      en: suburban train, city rail
+      fa: قطار حومه‌ای، قطار شهری
+    definition: ein schneller Zug in einer großen Stadt und um die Stadt herum
+    example:
+      de: Mit der S-Bahn bist du in zwanzig Minuten am Flughafen.
+      en: By suburban train you'll be at the airport in twenty minutes.
+      fa: با قطار شهری بیست دقیقه‌ای به فرودگاه می‌رسی.
+    tooCloseTo: [Bahn]
+
   - word: Straßenbahn
+    class: noun
+    article: die
+    plural: Straßenbahnen
+    level: A1
+    meaning:
+      en: tram, streetcar
+      fa: تراموا
+    definition: eine kleine Bahn, die mitten auf der Straße fährt
+    example:
+      de: Die Straßenbahn hält direkt vor unserem Haus.
+      en: The tram stops right outside our house.
+      fa: تراموا درست جلوی خانهٔ ما می‌ایستد.
+    alsoAccepted: [die Tram]
+    tooCloseTo: [Bahn]
+
   - word: Bahnhof
+    class: noun
+    article: der
+    plural: Bahnhöfe
+    level: A1
+    meaning:
+      en: (railway) station
+      fa: ایستگاه قطار
+    definition: ein Gebäude in der Stadt, wo die Züge ankommen und abfahren; dort kauft man auch Fahrkarten
+    example:
+      de: Wir treffen uns um acht am Bahnhof.
+      en: We'll meet at the station at eight.
+      fa: ساعت هشت در ایستگاه قطار همدیگر را می‌بینیم.
+    alsoAccepted: [der Hauptbahnhof]
+
   - word: Bahnsteig
+    class: noun
+    article: der
+    plural: Bahnsteige
+    level: A1
+    meaning:
+      en: platform
+      fa: سکو (در ایستگاه قطار)
+    definition: die erhöhte Fläche neben dem Gleis, wo man ein- und aussteigt
+    example:
+      de: Der Bahnsteig ist voll, alle warten auf den Zug.
+      en: The platform is full; everyone is waiting for the train.
+      fa: سکو پر است؛ همه منتظر قطارند.
+    alsoAccepted: [der Perron, das Gleis]
+    tooCloseTo: [Gleis]
+
   - word: Gleis
+    class: noun
+    article: das
+    plural: Gleise
+    level: A1
+    meaning:
+      en: track (it has a number at the station)
+      fa: ریل، خط (در ایستگاه شماره دارد)
+    definition: die Schienen, auf denen ein Zug fährt; im Bahnhof haben sie eine Nummer
+    example:
+      de: Der Zug nach Köln fährt heute von Gleis 7.
+      en: The train to Cologne leaves from track 7 today.
+      fa: قطار کلن امروز از خط ۷ حرکت می‌کند.
+    tooCloseTo: [Bahnsteig]
+
   - word: Haltestelle
+    class: noun
+    article: die
+    plural: Haltestellen
+    level: A1
+    meaning:
+      en: (bus or tram) stop
+      fa: ایستگاه اتوبوس یا تراموا
+    definition: dort hält der Bus oder die Straßenbahn, und man kann einsteigen
+    example:
+      de: Die Haltestelle ist gleich um die Ecke.
+      en: The stop is just round the corner.
+      fa: ایستگاه همین سر کوچه است.
+    alsoAccepted: [die Bushaltestelle]
+
   - word: Fahrkarte
+    class: noun
+    article: die
+    plural: Fahrkarten
+    level: A1
+    meaning:
+      en: ticket (for a bus or train)
+      fa: بلیت اتوبوس یا قطار
+    definition: ein Stück Papier, mit dem man im Bus oder im Zug fahren darf
+    example:
+      de: Eine Fahrkarte nach Hamburg, bitte.
+      en: A ticket to Hamburg, please.
+      fa: یک بلیت به هامبورگ، لطفاً.
+    alsoAccepted: [das Ticket, der Fahrschein, das Billett]
+    tooCloseTo: [Ticket]
+
   - word: Ticket
+    class: noun
+    article: das
+    plural: Tickets
+    level: A1
+    meaning:
+      en: ticket (also for a concert or a flight)
+      fa: بلیت (برای کنسرت یا پرواز هم)
+    definition: damit darf man ins Konzert, in den Zug oder ins Flugzeug
+    example:
+      de: Ich habe das Ticket auf dem Handy.
+      en: I've got the ticket on my phone.
+      fa: بلیت را روی گوشی‌ام دارم.
+    alsoAccepted: [die Fahrkarte, die Karte, die Eintrittskarte, der Fahrschein]
+    tooCloseTo: [Fahrkarte]
+
   - word: Abfahrt
+    class: noun
+    article: die
+    plural: Abfahrten
+    level: A1
+    meaning:
+      en: departure (of a train or bus)
+      fa: حرکت (قطار یا اتوبوس)
+    definition: der Moment, in dem der Zug oder der Bus losfährt
+    example:
+      de: Die Abfahrt ist um 9:15 Uhr.
+      en: Departure is at 9:15.
+      fa: حرکت ساعت ۹:۱۵ است.
+    tooCloseTo: [Ankunft]
+
   - word: Ankunft
+    class: noun
+    article: die
+    plural: Ankünfte
+    level: A1
+    meaning:
+      en: arrival (of a train or bus)
+      fa: ورود، رسیدن
+    definition: der Moment, in dem der Zug oder der Bus am Ziel ankommt
+    example:
+      de: Die Ankunft in Berlin ist um 14:30 Uhr.
+      en: Arrival in Berlin is at 2:30 pm.
+      fa: ورود به برلین ساعت ۱۴:۳۰ است.
+
   - word: abfahren
+    class: verb
+    level: A1
+    meaning:
+      en: to leave, to depart (of a train, bus or car)
+      fa: راه افتادن، حرکت کردن (قطار، اتوبوس یا ماشین)
+    definition: losfahren und einen Ort verlassen
+    example:
+      de: Der Bus fährt in fünf Minuten ab.
+      en: The bus leaves in five minutes.
+      fa: اتوبوس پنج دقیقهٔ دیگر حرکت می‌کند.
+    alsoAccepted: [losfahren, wegfahren]
+    tooCloseTo: [fahren]
+
   - word: ankommen
+    class: verb
+    level: A1
+    meaning:
+      en: to arrive
+      fa: رسیدن (به مقصد)
+    definition: an dem Ort sein, zu dem man gefahren ist
+    example:
+      de: Wann kommt der Zug in Wien an?
+      en: When does the train arrive in Vienna?
+      fa: قطار کی به وین می‌رسد؟
+    alsoAccepted: [eintreffen]
+
   - word: einsteigen
+    class: verb
+    level: A1
+    meaning:
+      en: to get on, to get in (a vehicle)
+      fa: سوار شدن
+    definition: in einen Bus, einen Zug oder ein Auto gehen
+    example:
+      de: Bitte schnell einsteigen, der Zug fährt gleich ab!
+      en: Please get on quickly; the train is about to leave!
+      fa: لطفاً زود سوار شوید، قطار همین الان حرکت می‌کند!
+
   - word: aussteigen
+    class: verb
+    level: A1
+    meaning:
+      en: to get off, to get out (of a vehicle)
+      fa: پیاده شدن
+    definition: aus einem Bus, einem Zug oder einem Auto gehen
+    example:
+      de: Wir müssen an der nächsten Haltestelle aussteigen.
+      en: We have to get off at the next stop.
+      fa: باید در ایستگاه بعدی پیاده شویم.
+
   - word: Anschluss
+    class: noun
+    article: der
+    plural: Anschlüsse
+    level: A1
+    meaning:
+      en: connection (to the next train or bus)
+      fa: قطار یا اتوبوس بعدی برای ادامهٔ سفر
+    definition: der nächste Zug oder Bus, in den man umsteigt, um weiterzufahren
+    example:
+      de: In Frankfurt habe ich nur zehn Minuten für den Anschluss.
+      en: In Frankfurt I only have ten minutes for my connection.
+      fa: در فرانکفورت فقط ده دقیقه وقت دارم تا به قطار بعدی برسم.
+
   - word: Durchsage
+    class: noun
+    article: die
+    plural: Durchsagen
+    level: A1
+    meaning:
+      en: announcement (over the loudspeaker at a station or on a train)
+      fa: اعلام از بلندگو (در ایستگاه یا قطار)
+    definition: eine Information, die man im Bahnhof oder im Zug laut aus dem Lautsprecher hört
+    example:
+      de: "Achtung, eine Durchsage: Der Zug hat zehn Minuten Verspätung."
+      en: "Attention, an announcement: the train is ten minutes late."
+      fa: "توجه، اطلاعیه: قطار ده دقیقه تأخیر دارد."
+    alsoAccepted: [die Ansage, die Lautsprecherdurchsage]
+    tooCloseTo: [Ansage]
+
   - word: Ansage
+    class: noun
+    article: die
+    plural: Ansagen
+    level: A1
+    meaning:
+      en: recorded message, announcement (for example when you call a company)
+      fa: پیام ضبط‌شده (مثلاً وقتی به شرکتی زنگ می‌زنیم)
+    definition: ein kurzer Text, den man am Telefon hört, wenn man zum Beispiel bei einer Firma anruft
+    example:
+      de: "Die Ansage am Telefon sagt: Wir sind ab Montag wieder da."
+      en: "The recorded message on the phone says: we're back from Monday."
+      fa: "پیام تلفنی می‌گوید: از دوشنبه دوباره در خدمتیم."
+    alsoAccepted: [die Durchsage, die Bandansage]
+    tooCloseTo: [Durchsage]
+
   - word: fahren
+    class: verb
+    level: A1
+    meaning:
+      en: to go (by car, bus or train), to drive, to ride
+      fa: رفتن (با وسیلهٔ نقلیه)، رانندگی کردن
+    definition: mit einem Auto, einem Bus oder einem Zug unterwegs sein; auch selbst am Steuer sitzen
+    example:
+      de: Wir fahren am Wochenende nach Salzburg.
+      en: We're going to Salzburg at the weekend.
+      fa: آخر هفته به سالزبورگ می‌رویم.
+    tooCloseTo: [abfahren]
+
   - word: Fahrer
+    class: noun
+    article: der
+    plural: Fahrer
+    level: A1
+    meaning:
+      en: driver
+      fa: راننده
+    definition: die Person am Steuer von einem Bus, einem Taxi oder einem Auto
+    example:
+      de: Der Fahrer wartet noch auf zwei Leute.
+      en: The driver is still waiting for two people.
+      fa: راننده هنوز منتظر دو نفر است.
+    alsoAccepted: [die Fahrerin, der Busfahrer, der Taxifahrer]
+
   - word: halten
+    class: verb
+    level: A1
+    meaning:
+      en: to stop (of a bus or train); to hold
+      fa: ایستادن، توقف کردن (اتوبوس یا قطار)؛ نگه داشتن
+    definition: nicht weiterfahren, stehen bleiben; auch etwas in der Hand haben
+    example:
+      de: Hält dieser Zug in Bonn?
+      en: Does this train stop in Bonn?
+      fa: این قطار در بن توقف می‌کند؟
+    alsoAccepted: [anhalten, stoppen]
+
   - word: warten
+    class: verb
+    level: A1
+    meaning:
+      en: to wait
+      fa: صبر کردن، منتظر ماندن
+    definition: an einem Ort bleiben, bis jemand kommt oder etwas passiert
+    example:
+      de: Wir warten seit zwanzig Minuten auf den Bus.
+      en: We've been waiting for the bus for twenty minutes.
+      fa: بیست دقیقه است که منتظر اتوبوس هستیم.
+
   - word: Taxi
+    class: noun
+    article: das
+    plural: Taxis
+    level: A1
+    meaning:
+      en: taxi
+      fa: تاکسی
+    definition: ein Auto mit Fahrer, der einen für Geld ans Ziel bringt
+    example:
+      de: Nachts fahre ich lieber mit dem Taxi nach Hause.
+      en: At night I'd rather take a taxi home.
+      fa: شب‌ها ترجیح می‌دهم با تاکسی به خانه بروم.
+
+review:
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 57, then 4 questions)
+  date: 2026-11-28
+  pool: 266b78c4a8088d4e

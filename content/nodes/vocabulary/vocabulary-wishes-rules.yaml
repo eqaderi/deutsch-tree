@@ -1,32 +1,271 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# The modal verbs and the words of liking are close in meaning; `tooCloseTo` keeps a close one
+# from being offered as a wrong meaning.
 id: vocabulary-wishes-rules
 kind: vocabulary
 level: A1
 chapter: a1-words-small-words
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Can, must, may: wishes and rules"
   fa: "توانستن، بایستن، اجازه داشتن: خواسته‌ها و قانون‌ها"
   de: "Können, müssen, dürfen: Wünsche und Regeln"
+attemptSize: 15
 words:
   - word: dürfen
+    class: verb
+    level: A1
+    meaning:
+      en: to be allowed to, may
+      fa: اجازه داشتن
+    definition: etwas tun können, weil es erlaubt ist
+    example:
+      de: Darf ich das Fenster öffnen?
+      en: May I open the window?
+      fa: اجازه هست پنجره را باز کنم؟
+
   - word: können
+    class: verb
+    level: A1
+    meaning:
+      en: can, to be able to
+      fa: توانستن
+    definition: gelernt haben, wie etwas geht, zum Beispiel schwimmen oder Auto fahren
+    example:
+      de: Kannst du mir helfen?
+      en: Can you help me?
+      fa: می‌توانی کمکم کنی؟
+
   - word: müssen
+    class: verb
+    level: A1
+    meaning:
+      en: must, to have to
+      fa: مجبور بودن، باید
+    definition: etwas tun, weil es nötig ist oder weil eine Regel es sagt
+    example:
+      de: Ich muss morgen früh aufstehen.
+      en: I have to get up early tomorrow.
+      fa: فردا باید زود بیدار شوم.
+    tooCloseTo: [sollen]
+
   - word: sollen
+    class: verb
+    level: A1
+    meaning:
+      en: should, to be supposed to
+      fa: باید (چون کس دیگری می‌خواهد)، قرار بودن
+    definition: "fast wie „müssen“, aber der Wunsch kommt von einer anderen Person: Mama sagt, ich … mein Zimmer aufräumen."
+    example:
+      de: Der Arzt sagt, ich soll viel Wasser trinken.
+      en: The doctor says I should drink a lot of water.
+      fa: پزشک می‌گوید باید آب زیادی بنوشم.
+    tooCloseTo: [müssen]
+
   - word: wollen
+    class: verb
+    level: A1
+    meaning:
+      en: to want (to)
+      fa: خواستن
+    definition: einen festen Wunsch oder Plan haben
+    example:
+      de: Wir wollen im Sommer nach Italien fahren.
+      en: We want to go to Italy in the summer.
+      fa: می‌خواهیم تابستان به ایتالیا برویم.
+    tooCloseTo: [möchten]
+
   - word: möchten
+    class: verb
+    level: A1
+    meaning:
+      en: would like (to)
+      fa: مایل بودن (مؤدبانه)
+    definition: höflich sagen, was man haben oder tun will
+    example:
+      de: Ich möchte bitte ein Glas Wasser.
+      en: I'd like a glass of water, please.
+      fa: یک لیوان آب، لطفاً.
+    tooCloseTo: [wollen, mögen]
+
   - word: mögen
+    class: verb
+    level: A1
+    meaning:
+      en: to like
+      fa: پسندیدن، دوست داشتن
+    definition: eine Sache oder eine Person gut finden
+    example:
+      de: Ich mag keinen Fisch.
+      en: I don't like fish.
+      fa: ماهی دوست ندارم.
+    alsoAccepted: [gern haben, gefallen]
+    tooCloseTo: [möchten, gern]
+
   - word: brauchen
+    class: verb
+    level: A1
+    meaning:
+      en: to need
+      fa: نیاز داشتن، لازم داشتن
+    definition: ohne etwas nicht gut leben oder arbeiten können
+    example:
+      de: Ich brauche einen neuen Computer.
+      en: I need a new computer.
+      fa: به کامپیوتر تازه‌ای نیاز دارم.
+    alsoAccepted: [benötigen]
+
   - word: erlauben
+    class: verb
+    level: A1
+    meaning:
+      en: to allow, to permit
+      fa: اجازه دادن
+    definition: sagen, dass eine Person etwas tun darf
+    example:
+      de: Der Lehrer erlaubt uns, das Wörterbuch zu benutzen.
+      en: The teacher allows us to use the dictionary.
+      fa: معلم به ما اجازه می‌دهد از واژه‌نامه استفاده کنیم.
+
   - word: verboten
+    class: adjective
+    level: A1
+    meaning:
+      en: forbidden, not allowed
+      fa: ممنوع
+    definition: nicht erlaubt
+    example:
+      de: Parken ist hier verboten.
+      en: Parking is forbidden here.
+      fa: پارک کردن در اینجا ممنوع است.
+
+  # Achtung and Vorsicht both warn; each is right when the other is asked for.
   - word: Achtung
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: attention (a warning or an announcement)
+      fa: توجه (هشدار یا اعلام)
+    definition: "das hört oder liest man vor einer wichtigen Nachricht, zum Beispiel am Bahnhof: „… an Gleis drei!“"
+    example:
+      de: Achtung! Der Boden ist nass.
+      en: Attention! The floor is wet.
+      fa: توجه! زمین خیس است.
+    alsoAccepted: [die Vorsicht]
+    tooCloseTo: [Vorsicht]
+
   - word: Vorsicht
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: caution, care
+      fa: احتیاط
+    definition: "das sagt man, wenn etwas gefährlich ist und eine Person gut aufpassen muss: „…, heiß!“"
+    example:
+      de: Vorsicht, die Suppe ist heiß!
+      en: Careful, the soup is hot!
+      fa: مراقب باش، سوپ داغ است!
+    alsoAccepted: [die Achtung]
+    tooCloseTo: [Achtung]
+
   - word: gültig
+    class: adjective
+    level: A1
+    meaning:
+      en: valid
+      fa: معتبر
+    definition: man kann es noch benutzen, zum Beispiel ein Ticket oder einen Pass
+    example:
+      de: Mein Pass ist noch zwei Jahre gültig.
+      en: My passport is valid for two more years.
+      fa: گذرنامه‌ام تا دو سال دیگر معتبر است.
+
   - word: besetzt
+    class: adjective
+    level: A1
+    meaning:
+      en: occupied, taken; engaged (a phone line)
+      fa: اشغال
+    definition: nicht frei, weil schon eine Person da ist, zum Beispiel ein Platz oder eine Toilette
+    example:
+      de: Ist dieser Platz besetzt?
+      en: Is this seat taken?
+      fa: این صندلی جای کسی است؟
+    tooCloseTo: [frei]
+
   - word: frei
+    class: adjective
+    level: A1
+    meaning:
+      en: free, vacant; off (not working)
+      fa: آزاد، خالی؛ تعطیل (بدون کار)
+    definition: "nicht besetzt; auch: ohne Arbeit, zum Beispiel ein Tag"
+    example:
+      de: Morgen habe ich frei.
+      en: I have the day off tomorrow.
+      fa: فردا تعطیلم.
+    tooCloseTo: [besetzt]
+
   - word: vielleicht
+    class: adverb
+    level: A1
+    meaning:
+      en: maybe, perhaps
+      fa: شاید
+    definition: es ist möglich, aber nicht sicher
+    example:
+      de: Vielleicht regnet es morgen.
+      en: Maybe it will rain tomorrow.
+      fa: شاید فردا باران ببارد.
+    alsoAccepted: [eventuell, möglicherweise]
+
   - word: leider
+    class: adverb
+    level: A1
+    meaning:
+      en: unfortunately
+      fa: متأسفانه
+    definition: das sagt man, wenn etwas schade ist
+    example:
+      de: Ich kann leider nicht kommen.
+      en: Unfortunately I can't come.
+      fa: متأسفانه نمی‌توانم بیایم.
+
   - word: gern
+    class: adverb
+    level: A1
+    meaning:
+      en: gladly, with pleasure (like doing)
+      fa: با کمال میل، با علاقه
+    definition: "mit Freude, zum Beispiel: Ich schwimme …, Schwimmen macht mir Spaß."
+    example:
+      de: Ich trinke gern Tee.
+      en: I like drinking tea.
+      fa: چای را دوست دارم.
+    alsoAccepted: [gerne]
+    tooCloseTo: [lieber, mögen]
+
   - word: lieber
+    class: adverb
+    level: A1
+    meaning:
+      en: rather, preferably
+      fa: ترجیحاً
+    definition: "der Komparativ von „gern“: man findet das eine besser als das andere"
+    example:
+      de: Ich trinke lieber Tee als Kaffee.
+      en: I'd rather drink tea than coffee.
+      fa: چای را به قهوه ترجیح می‌دهم.
+    tooCloseTo: [gern]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 114, then 25 questions)
+  date: 2026-11-28
+  pool: 12f98195113d2a47

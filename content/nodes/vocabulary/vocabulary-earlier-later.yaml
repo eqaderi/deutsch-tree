@@ -1,37 +1,348 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A definition in simple German shows the word's place in a sentence with "…", since a small
+# word is hard to say in other words. Words that overlap (danach, nachher, hinterher; neulich,
+# kürzlich; inzwischen, mittlerweile; anfangs, zunächst) each have one sharpened sense, accept
+# each other and are never offered as a wrong meaning of each other.
 id: vocabulary-earlier-later
 kind: vocabulary
 level: B1
 chapter: b1-words-time-amounts
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Earlier, meanwhile, later"
   fa: "پیش‌تر، در این میان، بعدتر"
   de: "Früher, inzwischen, später"
+attemptSize: 15
 words:
   - word: Monat
+    class: noun
+    article: der
+    plural: Monate
+    level: B1
+    meaning:
+      en: month
+      fa: ماه (سی روز)
+    definition: "ungefähr vier Wochen, zum Beispiel der Januar oder der Mai"
+    example:
+      de: Ich wohne seit einem Monat in Leipzig.
+      en: I've been living in Leipzig for a month.
+      fa: یک ماه است که در لایپزیگ زندگی می‌کنم.
+
   - word: Augenblick
+    class: noun
+    article: der
+    plural: Augenblicke
+    level: B1
+    meaning:
+      en: moment (a very short time)
+      fa: لحظه
+    definition: "eine sehr kurze Zeit: Warten Sie bitte einen …!"
+    example:
+      de: Einen Augenblick, ich hole nur schnell meine Jacke.
+      en: Just a moment, I'm just getting my jacket.
+      fa: یک لحظه، فقط کاپشنم را بردارم.
+    alsoAccepted: [der Moment]
+
   - word: Zeitpunkt
+    class: noun
+    article: der
+    plural: Zeitpunkte
+    level: B1
+    meaning:
+      en: point in time (the exact time when something happens)
+      fa: زمان مشخص، هنگام (زمانی که چیزی رخ می‌دهد)
+    definition: "die genaue Zeit, in der etwas passiert: Zu diesem … war ich noch in der Schule."
+    example:
+      de: Zu diesem Zeitpunkt wusste noch niemand etwas von dem Plan.
+      en: At that point in time nobody knew anything about the plan yet.
+      fa: در آن زمان هنوز هیچ‌کس از این نقشه خبر نداشت.
+
   - word: Dauer
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: duration, length (of time)
+      fa: مدت، طول زمان
+    definition: "wie lange etwas geht: Die … des Kurses ist drei Monate."
+    example:
+      de: Die Dauer der Fahrt hängt vom Verkehr ab.
+      en: The length of the journey depends on the traffic.
+      fa: مدت سفر به ترافیک بستگی دارد.
+
   - word: Beginn
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: beginning, start
+      fa: آغاز، شروع
+    definition: "der Anfang von etwas: Kurz nach … des Films ist er eingeschlafen."
+    example:
+      de: Bitte seien Sie zehn Minuten vor Beginn des Konzerts da.
+      en: Please be there ten minutes before the start of the concert.
+      fa: لطفاً ده دقیقه پیش از شروع کنسرت آنجا باشید.
+    alsoAccepted: [der Anfang, der Start]
+
   - word: anfangs
+    class: adverb
+    level: B1
+    meaning:
+      en: at first, in the early days (later it changed)
+      fa: اوایل، در آغاز (بعدها عوض شد)
+    definition: "in der ersten Zeit, später war es anders: … war alles neu für mich, jetzt kenne ich mich aus."
+    example:
+      de: Anfangs hatte ich in Deutschland viel Heimweh.
+      en: At first I was very homesick in Germany.
+      fa: اوایل در آلمان خیلی دلتنگ وطن بودم.
+    alsoAccepted: [am Anfang, zuerst, zunächst]
+    tooCloseTo: [zunächst]
+
   - word: bisher
+    class: adverb
+    level: B1
+    meaning:
+      en: so far, until now
+      fa: تاکنون، تا حالا
+    definition: "von früher bis jetzt: … habe ich noch keine Antwort bekommen."
+    example:
+      de: Bisher hat mir die Firma noch nicht geantwortet.
+      en: So far the company hasn't replied to me.
+      fa: شرکت تاکنون به من پاسخی نداده است.
+    alsoAccepted: [bis jetzt, bislang]
+
   - word: bereits
+    class: adverb
+    level: B1
+    meaning:
+      en: already
+      fa: از قبل، قبلاً (زودتر از آنچه فکر می‌شد)
+    definition: "früher, als man denkt; das gleiche Wort wie „schon“: Der Zug ist … abgefahren."
+    example:
+      de: Als wir am Bahnhof ankamen, war der Zug bereits weg.
+      en: When we arrived at the station, the train had already gone.
+      fa: وقتی به ایستگاه رسیدیم، قطار رفته بود.
+    alsoAccepted: [schon]
+
   - word: danach
+    class: adverb
+    level: B1
+    meaning:
+      en: after that, then (the next step)
+      fa: پس از آن، بعد از آن (مرحلهٔ بعد)
+    definition: "nach dieser Sache, als Nächstes: Zuerst essen wir, … gehen wir spazieren."
+    example:
+      de: Zuerst gehe ich zum Arzt, danach fahre ich ins Büro.
+      en: First I'm going to the doctor, after that I'm driving to the office.
+      fa: اول پیش پزشک می‌روم، بعد از آن به دفتر می‌روم.
+    alsoAccepted: [dann, anschließend, nachher, hinterher]
+    tooCloseTo: [nachher, hinterher]
+
   - word: nachher
+    class: adverb
+    level: B1
+    meaning:
+      en: later (on), in a little while
+      fa: بعداً، کمی بعد
+    definition: "etwas später, zum Beispiel heute noch: Ich rufe dich … an. Bis …!"
+    example:
+      de: Ich habe jetzt keine Zeit, ich rufe dich nachher an.
+      en: I don't have time now, I'll call you later.
+      fa: الان وقت ندارم، بعداً به تو زنگ می‌زنم.
+    alsoAccepted: [später, danach, hinterher]
+    tooCloseTo: [danach, hinterher]
+
   - word: hinterher
+    class: adverb
+    level: B1
+    meaning:
+      en: afterwards (when it is over)
+      fa: بعد از ماجرا، وقتی کار تمام شد
+    definition: "wenn etwas schon vorbei ist: … ist man immer klüger."
+    example:
+      de: Hinterher wusste ich, dass meine Idee nicht gut war.
+      en: Afterwards I knew that my idea hadn't been good.
+      fa: بعد از ماجرا فهمیدم که فکرم خوب نبود.
+    alsoAccepted: [danach, nachher, anschließend, im Nachhinein]
+    tooCloseTo: [danach, nachher]
+
   - word: vorhin
+    class: adverb
+    level: B1
+    meaning:
+      en: a little while ago (earlier today)
+      fa: کمی پیش، چند ساعت پیش (امروز)
+    definition: "vor einigen Stunden, am gleichen Tag: Wir haben uns heute … beim Frühstück gesehen."
+    example:
+      de: Vorhin hat deine Mutter angerufen.
+      en: Your mother called a little while ago.
+      fa: کمی پیش مادرت زنگ زد.
+    tooCloseTo: [eben]
+
   - word: neulich
+    class: adverb
+    level: B1
+    meaning:
+      en: the other day (on one day not long ago)
+      fa: چند روز پیش، همین روزها (یک بار)
+    definition: "an einem Tag vor ein paar Tagen oder Wochen: Ich habe … einen alten Freund getroffen."
+    example:
+      de: Neulich habe ich im Supermarkt meine alte Lehrerin getroffen.
+      en: The other day I met my old teacher in the supermarket.
+      fa: چند روز پیش معلم قدیمی‌ام را در سوپرمارکت دیدم.
+    alsoAccepted: [kürzlich, letztens, vor Kurzem, vor kurzem]
+    tooCloseTo: [kürzlich]
+
   - word: kürzlich
+    class: adverb
+    level: B1
+    meaning:
+      en: recently, not long ago
+      fa: اخیراً، به‌تازگی
+    definition: "vor nicht langer Zeit: Die Firma hat … ein neues Büro eröffnet."
+    example:
+      de: Unsere Nachbarn sind erst kürzlich hier eingezogen.
+      en: Our neighbours only moved in here recently.
+      fa: همسایه‌هایمان به‌تازگی به اینجا آمده‌اند.
+    alsoAccepted: [neulich, letztens, vor Kurzem, vor kurzem, unlängst]
+
   - word: inzwischen
+    class: adverb
+    level: B1
+    meaning:
+      en: meanwhile, in the meantime (while something else happens)
+      fa: در این فاصله، در همین حین
+    definition: "in der gleichen Zeit, während man etwas anderes macht oder wartet: Ich koche, du kannst … den Tisch decken."
+    example:
+      de: Ich koche, und du kannst inzwischen den Tisch decken.
+      en: I'll cook, and in the meantime you can lay the table.
+      fa: من آشپزی می‌کنم و تو در این فاصله می‌توانی میز را بچینی.
+    alsoAccepted: [in der Zwischenzeit, unterdessen, währenddessen, mittlerweile, solange]
+    tooCloseTo: [mittlerweile]
+
   - word: mittlerweile
+    class: adverb
+    level: B1
+    meaning:
+      en: by now (after some time has passed)
+      fa: حالا دیگر، تا الان (پس از گذشت مدتی)
+    definition: "so ist es jetzt, nachdem viel Zeit vergangen ist und sich etwas geändert hat"
+    example:
+      de: Am Anfang war der Job schwer, aber mittlerweile macht er mir Spaß.
+      en: At first the job was hard, but by now I enjoy it.
+      fa: اوایل کار سخت بود، اما حالا دیگر از آن لذت می‌برم.
+    alsoAccepted: [inzwischen]
+
   - word: seitdem
+    class: adverb
+    level: B1
+    meaning:
+      en: since then
+      fa: از آن زمان، از آن موقع تاکنون
+    definition: "von diesem Tag in der Vergangenheit bis jetzt: Ich habe vor zwei Jahren aufgehört zu rauchen, … geht es mir besser."
+    example:
+      de: Ich habe vor zwei Jahren aufgehört zu rauchen, seitdem schlafe ich besser.
+      en: I stopped smoking two years ago; since then I've been sleeping better.
+      fa: دو سال پیش سیگار را کنار گذاشتم و از آن زمان بهتر می‌خوابم.
+    alsoAccepted: [seither]
+
   - word: längst
+    class: adverb
+    level: B1
+    meaning:
+      en: long ago, for a long time already
+      fa: مدت‌ها پیش، خیلی وقت است که
+    definition: "schon vor langer Zeit, oft mit „schon“: Das weiß ich doch schon …!"
+    example:
+      de: Die Kinder sollten längst im Bett sein.
+      en: The children should have been in bed long ago.
+      fa: بچه‌ها باید مدت‌ها پیش در رختخواب می‌بودند.
+    alsoAccepted: [schon lange, seit langem, seit Langem, lange]
+
   - word: nun
+    class: adverb
+    level: B1
+    meaning:
+      en: now (at this point)
+      fa: اکنون، حالا
+    definition: "jetzt, in diesem Moment: Und was machen wir …?"
+    example:
+      de: Die Ferien sind vorbei, nun beginnt wieder die Arbeit.
+      en: The holidays are over; now work starts again.
+      fa: تعطیلات تمام شد و حالا دوباره کار شروع می‌شود.
+    alsoAccepted: [jetzt]
+
   - word: eben
+    class: adverb
+    level: B1
+    meaning:
+      en: just (a moment ago)
+      fa: همین الان، همین چند لحظه پیش
+    definition: "vor einem ganz kurzen Moment: Er ist … gegangen, du hast ihn knapp verpasst."
+    example:
+      de: Herr Braun ist eben aus dem Büro gegangen.
+      en: Mr Braun has just left the office.
+      fa: آقای براون همین الان از دفتر رفت.
+    alsoAccepted: [gerade, gerade eben, soeben]
+
   - word: diesmal
+    class: adverb
+    level: B1
+    meaning:
+      en: this time
+      fa: این بار
+    definition: "bei diesem einen Mal, nicht wie die anderen Male: Letztes Jahr waren wir am Meer, … fahren wir in die Berge."
+    example:
+      de: Letztes Jahr waren wir am Meer, diesmal fahren wir in die Berge.
+      en: Last year we went to the sea; this time we're going to the mountains.
+      fa: پارسال کنار دریا رفتیم، این بار به کوهستان می‌رویم.
+    alsoAccepted: [dieses Mal]
+
   - word: zunächst
+    class: adverb
+    level: B1
+    meaning:
+      en: first (of all), to begin with
+      fa: نخست، اول از همه
+    definition: "als Erstes, bevor man etwas anderes macht: … müssen Sie das Formular ausfüllen, dann unterschreiben Sie."
+    example:
+      de: Zunächst müssen Sie das Formular ausfüllen.
+      en: First of all you have to fill in the form.
+      fa: اول از همه باید فرم را پر کنید.
+    alsoAccepted: [zuerst, erst, erst einmal, erst mal, als Erstes]
+
   - word: jemals
+    class: adverb
+    level: B1
+    meaning:
+      en: ever (at any time)
+      fa: تا به حال، هیچ‌وقت (در پرسش)
+    definition: "zu einer Zeit im Leben, meistens in Fragen: Warst du … in Japan?"
+    example:
+      de: Hast du jemals so einen schönen Sonnenuntergang gesehen?
+      en: Have you ever seen such a beautiful sunset?
+      fa: تا به حال چنین غروب زیبایی دیده‌ای؟
+    alsoAccepted: [je, schon einmal, schon mal]
+
   - word: irgendwann
+    class: adverb
+    level: B1
+    meaning:
+      en: some day, at some point
+      fa: یک روزی، زمانی (نامعلوم)
+    definition: "an einem Tag, den man noch nicht kennt: … möchte ich nach Australien reisen."
+    example:
+      de: Irgendwann möchte ich ein eigenes Café eröffnen.
+      en: Some day I'd like to open my own café.
+      fa: می‌خواهم یک روزی کافهٔ خودم را باز کنم.
+    alsoAccepted: [eines Tages, einmal, irgendwann einmal]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 144, then 8 questions)
+  date: 2026-11-28
+  pool: 1d1b6984580e6485

@@ -1,13 +1,352 @@
-# Grammar list row 122.
+# Grammar list row 122. A1 core only: nach, zu and in. The systematic choice
+# by type of place (an den See, auf den Markt, nach Hause) is A2.
 id: grammar-122
 kind: grammar
 level: A1
 chapter: a1-prepositions
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-121]
 title:
   en: "Local, *Wohin?*: *nach*, *zu*, *in* + *Akkusativ*"
-  fa: "مقصد، *Wohin?*: *nach*، *zu*، *in* + *Akkusativ*"
+  fa: "مقصد، *Wohin?*: *nach*، *zu*، *in* + حالت *Akkusativ*"
   de: "Richtung, *Wohin?*: *nach*, *zu*, *in* + Akkusativ"
+
+explanations:
+  en:
+    rule: >
+      To say where someone goes (*Wohin?*), A1 uses three prepositions.
+      *Nach* goes with cities and with countries that have no article: *nach
+      Paris*, *nach Deutschland*. *Zu* goes with people and with places you go
+      to, such as a shop or a doctor: *zu meiner Freundin*, *zum Arzt*, *zur
+      Post*. *Zu* always takes the *Dativ* and is usually shortened: *zum*
+      (*zu dem*), *zur* (*zu der*). *In* goes into a place: *in die Stadt*,
+      *ins Kino*, and into a country with an article: *in die Schweiz*. For a
+      direction, *in* takes the *Akkusativ*: only *der* changes, to *den* (*in
+      den Park*), and *in das* is shortened to *ins*.
+  fa:
+    rule: >
+      برای گفتن این‌که کسی به کجا می‌رود (*Wohin?*)، در سطح *A1* سه حرف اضافه
+      به کار می‌رود. *nach* با شهرها و با کشورهای بی‌حرف تعریف می‌آید: *nach
+      Paris* و *nach Deutschland*. *zu* با اشخاص و با جاهایی می‌آید که به آن‌ها
+      سر می‌زنیم، مانند یک مغازه یا پزشک: *zu meiner Freundin*، *zum Arzt* و
+      *zur Post*. *zu* همیشه با حالت *Dativ* (حالت مفعول باواسطه) می‌آید و
+      معمولاً کوتاه می‌شود: *zum* (*zu dem*) و *zur* (*zu der*). *in* یعنی
+      رفتن به درون یک مکان: *in die Stadt* و *ins Kino*؛ و نیز رفتن به کشوری
+      که حرف تعریف دارد: *in die Schweiz*. *in* برای جهت با حالت *Akkusativ*
+      (حالت مفعولی) می‌آید: فقط *der* تغییر می‌کند و *den* می‌شود (*in den
+      Park*)، و *in das* کوتاه می‌شود: *ins*.
+  de:
+    rule: >
+      Auf die Frage *Wohin?* stehen auf A1 drei Präpositionen. *Nach* steht
+      bei Städten und bei Ländern ohne Artikel: *nach Paris*, *nach
+      Deutschland*. *Zu* steht bei Personen und bei Orten, zu denen man geht,
+      zum Beispiel ein Geschäft oder ein Arzt: *zu meiner Freundin*, *zum
+      Arzt*, *zur Post*. Nach *zu* steht immer der Dativ, meistens kurz: *zum*
+      (*zu dem*), *zur* (*zu der*). *In* heißt: hinein, zum Beispiel *in die
+      Stadt*, *ins Kino*, und bei Ländern mit Artikel: *in die Schweiz*. Bei
+      einer Richtung steht nach *in* der Akkusativ: Nur *der* wird zu *den*
+      (*in den Park*), und *in das* sagt man kurz *ins*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*in* + *Akkusativ*", fa: "*in* + حالت *Akkusativ*", de: "*in* + Akkusativ" }
+    - { en: "*zu* + *Dativ*", fa: "*zu* + حالت *Dativ*", de: "*zu* + Dativ" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Park, in den Park, zum Park, Wir gehen in den Park.]
+    - [die Schule, in die Schule, zur Schule, Die Kinder gehen zur Schule.]
+    - [das Kino, ins Kino (in das), zum Kino, Gehen wir ins Kino?]
+    - [die Berge (Plural), in die Berge, zu den Bergen, Wir fahren in die Berge.]
+
+# Three directions: to a city, up to a place, into a place.
+diagrams:
+  - caption:
+      en: >
+        *Wohin?* With *nach* you go to a city. With *zu* you go up to a person
+        or a place. With *in* you go inside: the arrow ends in the room.
+      fa: >
+        *Wohin?* با *nach* به یک شهر می‌روید. با *zu* تا کنار یک شخص یا یک
+        مکان می‌روید. با *in* به درون می‌روید: پیکان درون اتاق تمام می‌شود.
+      de: >
+        *Wohin?* Mit *nach* fährt man in eine Stadt. Mit *zu* geht man bis zu
+        einer Person oder einem Ort. Mit *in* geht man hinein: Der Pfeil endet
+        im Raum.
+    svg: |
+      <svg viewBox="0 0 320 228">
+        <!-- nach: to a city -->
+        <text class="label" x="120" y="36" text-anchor="middle">nach Paris</text>
+        <circle class="object" cx="30" cy="54" r="10"/>
+        <line class="line" x1="44" y1="54" x2="206" y2="54"/>
+        <polygon class="object" points="206,47 220,54 206,61"/>
+        <rect class="surface" x="236" y="38" width="14" height="32"/>
+        <rect class="surface" x="254" y="30" width="16" height="40"/>
+        <rect class="surface" x="274" y="44" width="14" height="26"/>
+        <!-- zu: up to a building, not into it -->
+        <text class="label" x="120" y="110" text-anchor="middle">zum Arzt</text>
+        <circle class="object" cx="30" cy="128" r="10"/>
+        <line class="line" x1="44" y1="128" x2="212" y2="128"/>
+        <polygon class="object" points="212,121 226,128 212,135"/>
+        <rect class="surface" x="232" y="100" width="64" height="48"/>
+        <!-- in: into a room whose edges are dashed -->
+        <text class="label" x="120" y="184" text-anchor="middle">ins Kino</text>
+        <circle class="object" cx="30" cy="202" r="10"/>
+        <rect class="guide" x="232" y="174" width="64" height="48"/>
+        <line class="line" x1="44" y1="202" x2="254" y2="202"/>
+        <polygon class="object" points="254,195 268,202 254,209"/>
+      </svg>
+
+examples:
+  - de: Ich fahre morgen nach Paris.
+    en: I'm going to Paris tomorrow.
+    fa: فردا به پاریس می‌روم.
+  - de: Wir fliegen nach Deutschland.
+    en: We are flying to Germany.
+    fa: ما به آلمان پرواز می‌کنیم.
+  - de: Ich gehe heute zum Arzt.
+    en: I'm going to the doctor today.
+    fa: امروز پیش پزشک می‌روم.
+  - de: Die Kinder gehen zur Schule.
+    en: The children go to school.
+    fa: بچه‌ها به مدرسه می‌روند.
+  - de: Ich fahre zu meiner Freundin.
+    en: I'm going to my friend's place.
+    fa: پیش دوستم می‌روم.
+  - de: Wir gehen in die Stadt.
+    en: We are going into town.
+    fa: ما به مرکز شهر می‌رویم.
+  - de: Gehen wir heute Abend ins Kino?
+    en: Shall we go to the cinema tonight?
+    fa: امشب به سینما برویم؟
+  - de: Er geht in den Supermarkt.
+    en: He is going into the supermarket.
+    fa: او به سوپرمارکت می‌رود.
+  - de: Im Sommer fahren wir in die Berge.
+    en: In summer we go to the mountains.
+    fa: تابستان‌ها به کوهستان می‌رویم.
+  - de: Meine Eltern fliegen in die Türkei.
+    en: My parents are flying to Turkey.
+    fa: پدر و مادرم به ترکیه پرواز می‌کنند.
+
+mistakes:
+  - wrong: Ich fahre in Berlin.
+    right: Ich fahre nach Berlin.
+    why:
+      en: "*In Berlin* says where you are. Going to a city is *nach*: *nach Berlin*."
+      fa: "*in Berlin* می‌گوید کجا هستید. برای رفتن به یک شهر *nach* می‌آید: *nach Berlin*."
+      de: "*In Berlin* sagt, wo man ist. Für die Richtung zu einer Stadt sagt man *nach*: *nach Berlin*."
+  - wrong: Wir fahren nach die Schweiz.
+    right: Wir fahren in die Schweiz.
+    why:
+      en: "A country with an article takes *in* with the *Akkusativ*: *in die Schweiz*, *in die Türkei*."
+      fa: "کشوری که حرف تعریف دارد با *in* و حالت *Akkusativ* می‌آید: *in die Schweiz* و *in die Türkei*."
+      de: "Bei Ländern mit Artikel steht *in* mit Akkusativ: *in die Schweiz*, *in die Türkei*."
+  - wrong: Ich gehe in den Arzt.
+    right: Ich gehe zum Arzt.
+    why:
+      en: "You go to a person, not into one: *zu*, with the *Dativ*, *zum Arzt*."
+      fa: "پیش یک شخص می‌رویم، نه به درون او: *zu* با حالت *Dativ*، یعنی *zum Arzt*."
+      de: "Zu einer Person geht man mit *zu* und Dativ: *zum Arzt*."
+  - wrong: Ich gehe in der Supermarkt.
+    right: Ich gehe in den Supermarkt.
+    why:
+      en: "A direction (*Wohin?*) takes the *Akkusativ* after *in*: *der* becomes *den*."
+      fa: "برای جهت (*Wohin?*) پس از *in* حالت *Akkusativ* می‌آید: *der* به *den* تبدیل می‌شود."
+      de: "Bei *Wohin?* steht nach *in* der Akkusativ: *der* wird zu *den*."
+  - wrong: Ich gehe zu die Post.
+    right: Ich gehe zur Post.
+    why:
+      en: "*Zu* takes the *Dativ*: *zu der Post*, shortened to *zur Post*."
+      fa: "*zu* با حالت *Dativ* می‌آید: *zu der Post* که کوتاه می‌شود: *zur Post*."
+      de: "Nach *zu* steht der Dativ: *zu der Post*, kurz *zur Post*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir fliegen morgen ___ Spanien.
+    options: [nach, zu, zur]
+    answer: nach
+    explanation:
+      en: "A country without an article takes *nach*: *nach Spanien*."
+      fa: "کشور بی‌حرف تعریف با *nach* می‌آید: *nach Spanien*."
+      de: "Bei Ländern ohne Artikel steht *nach*: *nach Spanien*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich gehe heute ___ Arzt.
+    options: [zum, zur, nach]
+    answer: zum
+    explanation:
+      en: "To a person: *zu*. *Arzt* is masculine: *zu dem*, shortened to *zum*."
+      fa: "برای رفتن پیش یک شخص *zu* می‌آید. *Arzt* اسم مذکر است: *zu dem* که کوتاه می‌شود: *zum*."
+      de: "Zu einer Person: *zu*. *Arzt* ist maskulin: *zu dem*, kurz *zum*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Gehen wir heute ___ Kino?
+    options: [ins, im, in]
+    answer: ins
+    explanation:
+      en: "*Wohin?*: *in* + *das Kino* in the *Akkusativ*, shortened to *ins Kino*. *Im* says where you are."
+      fa: "*Wohin?*: *in* + *das Kino* در حالت *Akkusativ* که کوتاه می‌شود: *ins Kino*. *im* می‌گوید کجا هستید."
+      de: "*Wohin?*: *in* + *das Kino* im Akkusativ, kurz *ins Kino*. *Im* sagt, wo man ist."
+  - id: gap-4
+    type: gap-fill
+    prompt: Er geht in ___ Supermarkt.
+    options: [den, dem, der]
+    answer: den
+    explanation:
+      en: "*Wohin?*: *in* takes the *Akkusativ*, and *der* becomes *den*."
+      fa: "*Wohin?*: *in* با حالت *Akkusativ* می‌آید و *der* به *den* تبدیل می‌شود."
+      de: "*Wohin?*: Nach *in* steht der Akkusativ, *der* wird zu *den*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Die Kinder gehen ___ Schule.
+    options: [zur, zum, nach]
+    answer: zur
+    explanation:
+      en: "*Schule* is feminine: *zu der Schule*, shortened to *zur Schule*."
+      fa: "*Schule* اسم مؤنث است: *zu der Schule* که کوتاه می‌شود: *zur Schule*."
+      de: "*Schule* ist feminin: *zu der Schule*, kurz *zur Schule*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wohin fährst du im Urlaub? – ___
+    options: [In die Schweiz., Nach die Schweiz., In der Schweiz.]
+    answer: In die Schweiz.
+    explanation:
+      en: "*Die Schweiz* has an article, so *in* with the *Akkusativ*: *in die Schweiz*."
+      fa: "*die Schweiz* حرف تعریف دارد، پس *in* با حالت *Akkusativ* می‌آید: *in die Schweiz*."
+      de: "*Die Schweiz* hat einen Artikel. Darum *in* mit Akkusativ: *in die Schweiz*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wohin gehst du? – ___ meiner Oma.
+    options: [Zu, Nach, In]
+    answer: Zu
+    explanation:
+      en: "To a person: *zu meiner Oma*."
+      fa: "برای رفتن پیش یک شخص *zu* می‌آید: *zu meiner Oma*."
+      de: "Zu einer Person: *zu meiner Oma*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wohin gehst du? – ___
+    options: [In die Stadt., In der Stadt., Nach der Stadt.]
+    answer: In die Stadt.
+    explanation:
+      en: "*Wohin?* asks for a direction, so *in* takes the *Akkusativ*: *in die Stadt*."
+      fa: "*Wohin?* جهت را می‌پرسد، پس *in* با حالت *Akkusativ* می‌آید: *in die Stadt*."
+      de: "*Wohin?* fragt nach der Richtung. Darum *in* mit Akkusativ: *in die Stadt*."
+  - id: true-1
+    type: true-false
+    prompt: Wir fahren am Wochenende nach Hamburg.
+    answer: true
+    explanation:
+      en: "A city takes *nach*. The sentence is correct."
+      fa: "شهر با *nach* می‌آید. جمله درست است."
+      de: "Bei Städten steht *nach*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich gehe jetzt nach der Bäckerei.
+    answer: false
+    explanation:
+      en: "*Nach* is for cities and countries. To a shop is *zur Bäckerei*."
+      fa: "*nach* برای شهر و کشور است. برای رفتن به مغازه *zur Bäckerei* می‌آید."
+      de: "*Nach* steht bei Städten und Ländern. Zu einem Geschäft: *zur Bäckerei*."
+  - id: true-3
+    type: true-false
+    prompt: Kommst du mit ins Kino?
+    answer: true
+    explanation:
+      en: "*Ins* is *in das*, a direction with the *Akkusativ*. The sentence is correct."
+      fa: "*ins* یعنی *in das*، جهت با حالت *Akkusativ*. جمله درست است."
+      de: "*Ins* ist *in das*, eine Richtung mit Akkusativ. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich fahre morgen zu Berlin.
+    answer: false
+    explanation:
+      en: "A city takes *nach*: *nach Berlin*."
+      fa: "شهر با *nach* می‌آید: *nach Berlin*."
+      de: "Bei Städten steht *nach*: *nach Berlin*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich gehe in ___ (der) Park.
+    answers: [den]
+    explanation:
+      en: "A direction: *in* with the *Akkusativ*, *der* becomes *den*."
+      fa: "جهت: *in* با حالت *Akkusativ*؛ *der* به *den* تبدیل می‌شود."
+      de: "Richtung: *in* mit Akkusativ, *der* wird zu *den*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Sie fliegt im Mai ___ Italien.
+    answers: [nach]
+    explanation:
+      en: "A country without an article takes *nach*: *nach Italien*."
+      fa: "کشور بی‌حرف تعریف با *nach* می‌آید: *nach Italien*."
+      de: "Bei Ländern ohne Artikel steht *nach*: *nach Italien*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir gehen ___ (zu / der Bahnhof).
+    answers: [zum Bahnhof, zu dem Bahnhof, zum, zu dem]
+    explanation:
+      en: "*Zu* takes the *Dativ*: *zu dem Bahnhof*, almost always said as *zum Bahnhof*."
+      fa: "*zu* با حالت *Dativ* می‌آید: *zu dem Bahnhof* که تقریباً همیشه کوتاه می‌شود: *zum Bahnhof*."
+      de: "Nach *zu* steht der Dativ: *zu dem Bahnhof*, fast immer kurz *zum Bahnhof*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich bringe das Kind ___ (zu / die Schule).
+    answers: [zur Schule, zu der Schule, zur, zu der]
+    explanation:
+      en: "*Zu* takes the *Dativ*: *zu der Schule*, almost always said as *zur Schule*."
+      fa: "*zu* با حالت *Dativ* می‌آید: *zu der Schule* که تقریباً همیشه کوتاه می‌شود: *zur Schule*."
+      de: "Nach *zu* steht der Dativ: *zu der Schule*, fast immer kurz *zur Schule*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Wohin? in + das Kino"
+    answers: [ins Kino, in das Kino]
+    explanation:
+      en: "*In das Kino*, almost always said as *ins Kino*."
+      fa: "*in das Kino* که تقریباً همیشه کوتاه می‌شود: *ins Kino*."
+      de: "*In das Kino*, fast immer kurz *ins Kino*."
+  - id: error-1
+    type: find-error
+    prompt: Wir fahren nach die Türkei.
+    answer: nach
+    explanation:
+      en: "A country with an article takes *in*: *in die Türkei*."
+      fa: "کشوری که حرف تعریف دارد با *in* می‌آید: *in die Türkei*."
+      de: "Bei Ländern mit Artikel steht *in*: *in die Türkei*."
+  - id: error-2
+    type: find-error
+    prompt: Ich gehe in der Supermarkt.
+    answer: der
+    explanation:
+      en: "A direction takes the *Akkusativ*: *in den Supermarkt*."
+      fa: "جهت حالت *Akkusativ* می‌گیرد: *in den Supermarkt*."
+      de: "Bei einer Richtung steht der Akkusativ: *in den Supermarkt*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [meine Eltern, fahren, in die Berge]
+      - [in die Berge, fahren, meine Eltern]
+    explanation:
+      en: "The verb comes second. The direction can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. مقصد می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. Die Richtung kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [nach ___, Paris]
+      - [zum ___, Arzt]
+      - [in die ___, Türkei]
+      - [ins ___, Kino]
+    explanation:
+      en: "A city takes *nach*, a person *zu*, a country with an article *in die*, and *das Kino* *ins*."
+      fa: "شهر با *nach*، شخص با *zu*، کشور دارای حرف تعریف با *in die* و *das Kino* با *ins* می‌آید."
+      de: "Stadt: *nach*. Person: *zu*. Land mit Artikel: *in die*. *Das Kino*: *ins*."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question again after the hints were rewritten, then the
+    rewritten gaps once more after their key was widened; not people)"
+  date: 2026-11-28
+  pool: 77ab046dc26d25fe

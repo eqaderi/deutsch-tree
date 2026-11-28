@@ -27,9 +27,23 @@ export { WORD_CLASSES, type WordClass }
 export const ARTICLES = ['der', 'die', 'das'] as const
 export type Article = (typeof ARTICLES)[number]
 
+/**
+ * What a node file writes as the article of a noun that takes none: a name
+ * such as "Deutschland" or "Europa". It is learned, shown and asked bare.
+ */
+export const NO_ARTICLE = 'none'
+
 /** What a noun with one number only has. */
 export const NOUN_NUMBERS = ['singular-only', 'plural-only'] as const
 export type NounNumber = (typeof NOUN_NUMBERS)[number]
+
+/**
+ * What a reflexive verb is learned with, before it: "sich freuen", "sich
+ * etwas gefallen lassen". A verb that the scope list marks as always
+ * reflexive is shown, heard and asked with it.
+ */
+export const REFLEXIVES = ['sich', 'sich etwas'] as const
+export type Reflexive = (typeof REFLEXIVES)[number]
 
 export const NODE_STATUSES = ['published', 'coming-soon'] as const
 export type NodeStatus = (typeof NODE_STATUSES)[number]
@@ -772,12 +786,14 @@ const vocabularyEntry = z
     /** The headword, without article, as the scope list spells it: "Mutter", "kochen". */
     word: text,
     class: z.enum(WORD_CLASSES).optional(),
-    /** Nouns only. */
-    article: z.enum(ARTICLES).optional(),
+    /** Nouns only: der, die or das, or `none` for a noun that takes no article ("Deutschland"). */
+    article: z.enum([...ARTICLES, NO_ARTICLE]).optional(),
     /** Nouns only: the plural form, without article ("Mütter"). */
     plural: text.optional(),
     /** Nouns only, in place of `plural`: the noun has one number only. */
     number: z.enum(NOUN_NUMBERS).optional(),
+    /** Verbs only: what a reflexive verb is learned with, "sich" ("sich freuen") or "sich etwas". */
+    reflexive: z.enum(REFLEXIVES).optional(),
     /** The level of the word; a node may hold words of several levels. */
     level: level.optional(),
     /** What the word means, in English and in Persian. Plain text. */
@@ -799,8 +815,15 @@ const vocabularyEntry = z
         message: `uses the word "${value.word}" itself; the definition is what a learner who reads in German is asked for the word by`,
       })
     }
+    const wordClass = value.class && `${/^[aeiou]/.test(value.class) ? 'an' : 'a'} ${value.class}`
+    if (value.reflexive !== undefined && value.class !== undefined && value.class !== 'verb') {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['reflexive'],
+        message: `only a verb is learned with "${value.reflexive}", and this word is ${wordClass}`,
+      })
+    }
     if (value.class !== undefined && value.class !== 'noun') {
-      const wordClass = `${/^[aeiou]/.test(value.class) ? 'an' : 'a'} ${value.class}`
       for (const field of NOUN_FIELDS) {
         if (value[field] !== undefined) {
           ctx.addIssue({
@@ -1113,7 +1136,9 @@ export const nodeFileSchema = z
           if (entry[field] === undefined) missing(field)
         }
         if (entry.class !== 'noun') return
-        if (entry.article === undefined) missing('article', ': a noun is learned with its article')
+        if (entry.article === undefined) {
+          missing('article', `: a noun is learned with its article, or "${NO_ARTICLE}" when it takes none`)
+        }
         if (entry.plural === undefined && entry.number === undefined) {
           missing(
             'plural',
@@ -1639,12 +1664,14 @@ export interface VocabularyWord {
   /** The headword, without article: "Mutter", "kochen". */
   word: string
   class: WordClass
-  /** Of a noun. */
+  /** Of a noun; absent for a noun that takes none ("Deutschland"). */
   article?: Article
   /** Of a noun: its plural, without article ("Mütter"). Absent when the noun has one number only. */
   plural?: string
   /** Of a noun that has one number only. */
   number?: NounNumber
+  /** Of a reflexive verb: what it is learned with ("sich freuen"). Absent for a verb learned without. */
+  reflexive?: Reflexive
   /** The level the word belongs to; a node may hold words of several. */
   level: string
   /** What the word means, in the learner's language. A learner who reads in German gets the definition. */
@@ -1663,10 +1690,16 @@ export type HeardWord = VocabularyWord & { audio: Spoken; example: HeardExample 
 
 /**
  * A word as it is learned, said and asked for: a noun with its article
- * ("die Mutter"), any other word on its own ("kochen").
+ * ("die Mutter"), a reflexive verb with its "sich" ("sich freuen"), a noun
+ * that takes none and any other word on its own ("Deutschland", "kochen").
  */
-export function asLearned(word: Pick<VocabularyWord, 'word' | 'article'>): string {
-  return word.article ? `${word.article} ${word.word}` : word.word
+export function asLearned(word: {
+  word: string
+  article?: Article | typeof NO_ARTICLE | undefined
+  reflexive?: Reflexive | undefined
+}): string {
+  const before = word.article === NO_ARTICLE ? undefined : (word.article ?? word.reflexive)
+  return before ? `${before} ${word.word}` : word.word
 }
 
 /** The plural of a noun as it is learned ("die Mütter"), or undefined for a word without one. */

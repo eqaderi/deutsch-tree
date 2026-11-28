@@ -169,8 +169,13 @@ function canonical(value: unknown): string {
 interface Reviewed {
   /** A pool question's id, "task/item" for an item of a practice task, or "<question>-<language>" for vocabulary. */
   id: string
-  /** As the reviewer sees it: nothing in it may give the answer away. An item names its task. */
+  /**
+   * The question without its key, as it is written. Nothing in it may give
+   * the answer away but the order of its options; the review record is of this.
+   */
   blind: Record<string, unknown>
+  /** As the reviewer sees it: `blind`, with the options of a choice in an order of their own (`onSheet`). */
+  shown: Record<string, unknown>
   /** The answer key, in the form the reviewer is asked to answer in. */
   key: unknown
   answerFormat: string
@@ -197,9 +202,11 @@ function reviewedIn(node: ReviewedContent): Reviewed[] {
 /** A question written in the node file. An item names its task, whose texts stand at the top of the sheet. */
 function written(id: string, question: QuestionFile, task?: ItemTaskFile): Reviewed {
   const view = viewOf(question)
+  const blind = { ...(task ? { task: task.id } : {}), ...view.blind(question) }
   return {
     id,
-    blind: { ...(task ? { task: task.id } : {}), ...view.blind(question) },
+    blind,
+    shown: onSheet(blind),
     key: view.key(question),
     answerFormat: view.answerFormat,
     agrees: (answer) => view.agrees(question, answer),
@@ -230,14 +237,16 @@ function vocabularyItems(node: ReviewedContent): Reviewed[] {
       }
       if (question.type === 'meaning-of-word') {
         const key = question.options.find((option) => option.word === question.answer)?.meaning[language]
+        const blind = {
+          type: question.type,
+          prompt: question.prompt,
+          options: question.options.map((option) => option.meaning[language]),
+        }
         return [
           {
             ...shared,
-            blind: {
-              type: question.type,
-              prompt: question.prompt,
-              options: question.options.map((option) => option.meaning[language]),
-            },
+            blind,
+            shown: onSheet(blind),
             key,
             answerFormat: 'the exact text of the one option that says what the German word means',
             agrees: (answer) => same(key, answer),
@@ -245,10 +254,12 @@ function vocabularyItems(node: ReviewedContent): Reviewed[] {
         ]
       }
       if (question.type === 'word-for-meaning') {
+        const blind = { type: question.type, prompt: question.prompt[language] }
         return [
           {
             ...shared,
-            blind: { type: question.type, prompt: question.prompt[language] },
+            blind,
+            shown: blind,
             key: question.answers,
             answerFormat: `the German word that the instruction asks for: ${TYPED}`,
             agrees: (answer) => everyAnswerIsAccepted(question.answers, answer),
@@ -258,6 +269,21 @@ function vocabularyItems(node: ReviewedContent): Reviewed[] {
       return []
     }),
   )
+}
+
+/**
+ * A question as the sheet shows it. The options of a choice stand in an
+ * order that follows from the options alone (`mixed`), as the pieces of a
+ * word ordering question do: not as they are written, where the right one
+ * tends to come first, nor as a vocabulary pool holds them, where it tends
+ * to come last. So their places tell a reviewer nothing about the key.
+ * The questions of an exam task that choose a text or a speaker have no
+ * options here; they stand as on the exam's answer sheet.
+ */
+function onSheet(blind: Record<string, unknown>): Record<string, unknown> {
+  const { options } = blind
+  if (!Array.isArray(options) || !options.every((option) => typeof option === 'string')) return blind
+  return { ...blind, options: mixed(options) }
 }
 
 /**
@@ -372,7 +398,7 @@ export async function blindPool(contentDir: string, nodeId: string, only?: strin
     questions: chosen.map((entry) => ({
       id: entry.id,
       ...(entry.language ? { language: entry.language, instruction: entry.instruction } : {}),
-      question: entry.blind,
+      question: entry.shown,
       answerFormat: entry.answerFormat,
       answer: null,
       objection: null,
@@ -448,7 +474,8 @@ export async function recordReview(
       disagree(`no reviewer has seen this question; ${again}`)
       continue
     }
-    if (!same(entry.question, one.blind)) {
+    // A sheet written before the options were mixed for the sheet shows them as written: the same question.
+    if (!same(entry.question, one.shown) && !same(entry.question, one.blind)) {
       disagree(`the question changed after the reviewer saw it; ${again}`)
       continue
     }
@@ -564,8 +591,10 @@ function readOrRefuse<T>(
 
 /**
  * Identifies what a review covers: every question as the reviewer saw it,
- * and its key; for the items of a practice task also the texts they are
- * answered from. Explanations are not part of it; the reviewer never sees
+ * the options of a choice in the order they are written, not the order the
+ * sheet mixes them in (an order says nothing a review checks), and its
+ * key; for the items of a practice task also the texts they are answered
+ * from. Explanations are not part of it; the reviewer never sees
  * them. Takes the node file, or just the parts of it named here.
  */
 export function reviewFingerprint(node: ReviewedContent): string {

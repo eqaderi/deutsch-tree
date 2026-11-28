@@ -1,36 +1,343 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-old-age-care
 kind: vocabulary
 level: B1
 chapter: b1-words-health
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Old age and care"
   fa: "سالمندی و مراقبت"
   de: "Alter und Pflege"
+attemptSize: 15
 words:
   - word: Senioren
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: senior citizens, older people
+      fa: سالمندان
+    definition: ältere Menschen, meistens über 65 Jahre alt
+    example:
+      de: Im Park gibt es jeden Dienstag einen Tanzkurs für Senioren.
+      en: There is a dance class for senior citizens in the park every Tuesday.
+      fa: هر سه‌شنبه در پارک کلاس رقصی برای سالمندان برگزار می‌شود.
+
   - word: Rente
+    class: noun
+    article: die
+    plural: Renten
+    level: B1
+    meaning:
+      en: pension (for old age)
+      fa: حقوق بازنشستگی
+    definition: das Geld, das man jeden Monat bekommt, wenn man alt ist und nicht mehr arbeitet
+    example:
+      de: Meine Rente reicht gerade für die Miete und das Essen.
+      en: My pension is just enough for the rent and food.
+      fa: حقوق بازنشستگی‌ام فقط کفاف اجاره و خورد و خوراک را می‌دهد.
+    alsoAccepted: [die Pension]
+
   - word: in Rente gehen
+    class: verb
+    level: B1
+    meaning:
+      en: to retire
+      fa: بازنشسته شدن
+    definition: aufhören zu arbeiten, weil man alt genug dafür ist
+    example:
+      de: Mein Vater geht nächstes Jahr in Rente.
+      en: My father is retiring next year.
+      fa: پدرم سال آینده بازنشسته می‌شود.
+    alsoAccepted: [in Pension gehen, in den Ruhestand gehen]
+    tooCloseTo: [in Pension gehen]
+
   - word: in Pension gehen
+    class: verb
+    level: B1
+    meaning:
+      en: to retire (as a civil servant, or in Austria)
+      fa: بازنشسته شدن (کارمند دولت، یا در اتریش)
+    definition: als Beamter oder in Österreich aufhören zu arbeiten, weil man alt genug dafür ist
+    example:
+      de: Unsere Lehrerin geht im Sommer in Pension.
+      en: Our teacher is retiring in the summer.
+      fa: معلممان تابستان بازنشسته می‌شود.
+    alsoAccepted: [in Rente gehen, in den Ruhestand gehen]
+    tooCloseTo: [in Rente gehen]
+
   - word: pensioniert
+    class: adjective
+    level: B1
+    meaning:
+      en: retired
+      fa: بازنشسته
+    definition: so, dass man wegen seines Alters nicht mehr arbeitet
+    example:
+      de: Unser Nachbar ist ein pensionierter Lehrer.
+      en: Our neighbour is a retired teacher.
+      fa: همسایهٔ ما معلم بازنشسته است.
+    alsoAccepted: [im Ruhestand]
+
   - word: Altenheim
+    class: noun
+    article: das
+    plural: Altenheime
+    level: B1
+    meaning:
+      en: old people's home, care home
+      fa: خانهٔ سالمندان
+    definition: ein Haus, in dem alte Menschen wohnen und Hilfe bekommen
+    example:
+      de: Meine Großmutter wohnt seit einem Jahr in einem Altenheim.
+      en: My grandmother has been living in an old people's home for a year.
+      fa: مادربزرگم یک سال است که در خانهٔ سالمندان زندگی می‌کند.
+    alsoAccepted: [das Altersheim, das Seniorenheim, das Pflegeheim]
+    tooCloseTo: [Altersheim, Heim]
+
   - word: Altersheim
+    class: noun
+    article: das
+    plural: Altersheime
+    level: B1
+    meaning:
+      en: old people's home, care home
+      fa: خانهٔ سالمندان
+    definition: ein Haus, in dem alte Menschen wohnen und Hilfe bekommen
+    example:
+      de: Am Sonntag besuchen die Kinder ihren Opa im Altersheim.
+      en: On Sunday the children visit their grandpa in the old people's home.
+      fa: یکشنبه بچه‌ها به دیدن پدربزرگشان در خانهٔ سالمندان می‌روند.
+    alsoAccepted: [das Altenheim, das Seniorenheim, das Pflegeheim]
+    tooCloseTo: [Altenheim, Heim]
+
   - word: Tod
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: death
+      fa: مرگ
+    definition: das Ende vom Leben
+    example:
+      de: Nach dem Tod ihres Mannes lebt sie allein.
+      en: Since her husband's death she has lived alone.
+      fa: از زمان مرگ همسرش تنها زندگی می‌کند.
+
+  # The scope list gives "der/die": a man is "der Tote", a woman "die Tote".
   - word: Tote
+    class: noun
+    article: der
+    plural: Toten
+    level: B1
+    meaning:
+      en: dead person
+      fa: مرده، کشته (شخص)
+    definition: ein Mensch, der nicht mehr lebt
+    example:
+      de: Bei dem Unfall gab es zum Glück keine Toten.
+      en: Luckily nobody was killed in the accident.
+      fa: خوشبختانه در آن تصادف کسی کشته نشد.
+    alsoAccepted: [die Tote, der Verstorbene, die Verstorbene]
+
   - word: tödlich
+    class: adjective
+    level: B1
+    meaning:
+      en: deadly, fatal
+      fa: کشنده، مرگبار
+    definition: so, dass jemand daran stirbt oder sterben kann
+    example:
+      de: Diese Krankheit ist heute nicht mehr tödlich.
+      en: This illness is no longer fatal today.
+      fa: این بیماری امروز دیگر کشنده نیست.
+
   - word: Pfleger
+    class: noun
+    article: der
+    plural: Pfleger
+    level: B1
+    meaning:
+      en: male nurse; carer (a man)
+      fa: پرستار مرد، مراقب مرد
+    definition: ein Mann, der beruflich kranke oder alte Menschen versorgt
+    example:
+      de: Der Pfleger hilft dem alten Herrn beim Aufstehen.
+      en: The nurse helps the old gentleman to get up.
+      fa: پرستار به آن آقای سالخورده کمک می‌کند از جایش بلند شود.
+    alsoAccepted: [der Krankenpfleger, der Altenpfleger]
+    tooCloseTo: [Krankenschwester, Betreuer]
+
   - word: pflegen
+    class: verb
+    level: B1
+    meaning:
+      en: to care for, to nurse (a sick or old person)
+      fa: پرستاری کردن (از بیمار یا سالمند)
+    definition: einem kranken oder alten Menschen jeden Tag helfen, zum Beispiel beim Essen und beim Waschen
+    example:
+      de: Sie pflegt ihre kranke Mutter zu Hause.
+      en: She is caring for her sick mother at home.
+      fa: او در خانه از مادر بیمارش پرستاری می‌کند.
+    tooCloseTo: [betreuen]
+
   - word: Betreuer
+    class: noun
+    article: der
+    plural: Betreuer
+    level: B1
+    meaning:
+      en: person in charge (of someone), carer, supervisor
+      fa: سرپرست، مسئول نگهداری (از کسی)
+    definition: eine Person, die sich um andere Menschen kümmert und auf sie aufpasst, zum Beispiel auf Kinder in einem Ferienlager
+    example:
+      de: Im Ferienlager hat jede Gruppe zwei Betreuer.
+      en: At the holiday camp each group has two supervisors.
+      fa: در اردوی تعطیلات هر گروه دو سرپرست دارد.
+    alsoAccepted: [die Betreuerin]
+    tooCloseTo: [Pfleger]
+
   - word: betreuen
+    class: verb
+    level: B1
+    meaning:
+      en: to look after, to supervise (e.g. children, a group)
+      fa: سرپرستی کردن (کودکان یا یک گروه)
+    definition: sich um jemanden kümmern und auf ihn aufpassen, zum Beispiel auf Kinder oder auf Gäste
+    example:
+      de: Am Nachmittag betreut eine Studentin unsere Kinder.
+      en: In the afternoon a student looks after our children.
+      fa: بعدازظهرها دانشجویی از بچه‌هایمان نگهداری می‌کند.
+    alsoAccepted: [beaufsichtigen]
+    tooCloseTo: [pflegen]
+
   - word: Betreuung
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: supervision, looking after (someone)
+      fa: سرپرستی، نگهداری (از کسی)
+    definition: wenn jemand auf Menschen aufpasst und für sie da ist, zum Beispiel auf Kinder am Nachmittag nach der Schule
+    example:
+      de: Die Betreuung im Altenheim ist sehr gut.
+      en: The care in the old people's home is very good.
+      fa: رسیدگی در خانهٔ سالمندان بسیار خوب است.
+    alsoAccepted: [die Beaufsichtigung, die Aufsicht]
+
   - word: Krankenschwester
+    class: noun
+    article: die
+    plural: Krankenschwestern
+    level: B1
+    meaning:
+      en: nurse (a woman)
+      fa: پرستار زن
+    definition: eine Frau, die im Krankenhaus kranke Menschen versorgt
+    example:
+      de: Die Krankenschwester misst jeden Morgen bei allen Patienten Fieber.
+      en: Every morning the nurse takes all the patients' temperatures.
+      fa: پرستار هر روز صبح تب بیماران را اندازه می‌گیرد.
+    alsoAccepted: [die Krankenpflegerin, die Pflegerin, die Pflegefachfrau]
+    tooCloseTo: [Pfleger]
+
   - word: behindert
+    class: adjective
+    level: B1
+    meaning:
+      en: disabled
+      fa: دارای معلولیت، معلول
+    definition: so, dass man wegen einer Krankheit oder eines Unfalls zum Beispiel nicht gut gehen, sehen oder hören kann
+    example:
+      de: Der Bus hat eine Rampe für behinderte Menschen.
+      en: The bus has a ramp for disabled people.
+      fa: اتوبوس برای افراد دارای معلولیت سطح شیب‌دار دارد.
+
   - word: behindern
+    class: verb
+    level: B1
+    meaning:
+      en: to hinder, to get in the way of
+      fa: مانع شدن، سد راه شدن
+    definition: machen, dass jemand etwas nicht gut oder nicht schnell tun kann
+    example:
+      de: Das falsch geparkte Auto behindert den Krankenwagen.
+      en: The badly parked car is getting in the way of the ambulance.
+      fa: آن ماشین که بد پارک شده، سد راه آمبولانس شده است.
+
   - word: Heim
+    class: noun
+    article: das
+    plural: Heime
+    level: B1
+    meaning:
+      en: home (a place where people live and are cared for, e.g. children or old people)
+      fa: آسایشگاه، مرکز نگهداری
+    definition: ein Haus, in dem Menschen zusammen wohnen und versorgt werden, zum Beispiel Kinder oder alte Menschen
+    example:
+      de: Als sie allein nicht mehr zurechtkam, zog sie in ein Heim.
+      en: When she could no longer manage on her own, she moved into a home.
+      fa: وقتی دیگر نمی‌توانست تنها از پس کارهایش برآید، به یک مرکز نگهداری رفت.
+    tooCloseTo: [Altenheim, Altersheim]
+
   - word: Sozialarbeiter
+    class: noun
+    article: der
+    plural: Sozialarbeiter
+    level: B1
+    meaning:
+      en: social worker
+      fa: مددکار اجتماعی
+    definition: eine Person, die beruflich Menschen mit Problemen hilft, zum Beispiel Familien oder Jugendlichen
+    example:
+      de: Ein Sozialarbeiter hilft der Familie bei den Anträgen.
+      en: A social worker is helping the family with the applications.
+      fa: یک مددکار اجتماعی در پر کردن درخواست‌ها به خانواده کمک می‌کند.
+    alsoAccepted: [die Sozialarbeiterin]
+
   - word: blind
+    class: adjective
+    level: B1
+    meaning:
+      en: blind
+      fa: نابینا
+    definition: so, dass man nichts sehen kann
+    example:
+      de: Seit dem Unfall ist er auf einem Auge blind.
+      en: Since the accident he has been blind in one eye.
+      fa: از زمان تصادف یک چشمش نابیناست.
+
   - word: taub
+    class: adjective
+    level: B1
+    meaning:
+      en: deaf
+      fa: ناشنوا
+    definition: so, dass man nichts hören kann
+    example:
+      de: Mein Opa ist fast taub, man muss sehr laut mit ihm sprechen.
+      en: My grandpa is almost deaf; you have to speak to him very loudly.
+      fa: پدربزرگم تقریباً ناشنواست و باید خیلی بلند با او حرف زد.
+    alsoAccepted: [gehörlos]
+
   - word: stumm
+    class: adjective
+    level: B1
+    meaning:
+      en: mute, unable to speak
+      fa: لال، ناتوان از سخن گفتن
+    definition: so, dass man nicht sprechen kann
+    example:
+      de: Das Mädchen ist von Geburt an stumm und spricht mit den Händen.
+      en: The girl has been mute since birth and speaks with her hands.
+      fa: آن دختر از بدو تولد لال است و با دست‌هایش حرف می‌زند.
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: a653945ec44d6ff8

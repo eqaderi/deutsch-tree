@@ -1,39 +1,389 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-drinks-meals
 kind: vocabulary
 level: A1
 chapter: a1-words-food-home
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Drinks, meals and eating out"
   fa: "نوشیدنی‌ها، وعده‌ها و غذا خوردن در بیرون"
   de: "Getränke, Mahlzeiten und Essen gehen"
+attemptSize: 15
 words:
   - word: Getränk
+    class: noun
+    article: das
+    plural: Getränke
+    level: A1
+    meaning:
+      en: drink, beverage
+      fa: نوشیدنی
+    definition: das Wort für alle Sachen, die man trinken kann
+    example:
+      de: Die Getränke stehen im Kühlschrank.
+      en: The drinks are in the fridge.
+      fa: نوشیدنی‌ها در یخچال است.
+
   - word: Wasser
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: water
+      fa: آب
+    definition: das trinkt man; es ist klar und hat keine Farbe
+    example:
+      de: Ein Glas Wasser, bitte.
+      en: A glass of water, please.
+      fa: یک لیوان آب، لطفاً.
+
   - word: Milch
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: milk
+      fa: شیر (نوشیدنی)
+    definition: ein weißes Getränk, zum Beispiel von der Kuh
+    example:
+      de: Trinkst du deinen Kaffee mit Milch?
+      en: Do you take your coffee with milk?
+      fa: قهوه‌ات را با شیر می‌خوری؟
+
   - word: Kaffee
+    class: noun
+    article: der
+    plural: Kaffees
+    level: A1
+    meaning:
+      en: coffee
+      fa: قهوه
+    definition: ein heißes, schwarzes oder braunes Getränk aus gemahlenen Bohnen; viele trinken es am Morgen
+    example:
+      de: Ich trinke morgens zwei Tassen Kaffee.
+      en: I drink two cups of coffee in the morning.
+      fa: صبح‌ها دو فنجان قهوه می‌خورم.
+
   - word: Tee
+    class: noun
+    article: der
+    plural: Tees
+    level: A1
+    meaning:
+      en: tea
+      fa: چای
+    definition: ein heißes Getränk aus Wasser und Blättern
+    example:
+      de: Möchten Sie schwarzen oder grünen Tee?
+      en: Would you like black or green tea?
+      fa: چای سیاه میل دارید یا چای سبز؟
+
   - word: Saft
+    class: noun
+    article: der
+    plural: Säfte
+    level: A1
+    meaning:
+      en: juice
+      fa: آب‌میوه
+    definition: ein Getränk ohne Alkohol aus Obst, zum Beispiel aus Orangen
+    example:
+      de: Zum Frühstück trinke ich einen Saft.
+      en: I have a juice with breakfast.
+      fa: سر صبحانه یک آب‌میوه می‌خورم.
+    alsoAccepted: [der Fruchtsaft, der Obstsaft, der Orangensaft]
+
   - word: Bier
+    class: noun
+    article: das
+    plural: Biere
+    level: A1
+    meaning:
+      en: beer
+      fa: آبجو
+    definition: ein gelbes oder braunes Getränk mit ein bisschen Alkohol; in Bayern trinkt man es oft
+    example:
+      de: Er bestellt ein Bier und eine Pizza.
+      en: He orders a beer and a pizza.
+      fa: او یک آبجو و یک پیتزا سفارش می‌دهد.
+
   - word: Wein
+    class: noun
+    article: der
+    plural: Weine
+    level: A1
+    meaning:
+      en: wine
+      fa: شراب
+    definition: ein rotes oder weißes Getränk mit Alkohol, aus Trauben gemacht
+    example:
+      de: Dieser Wein kommt aus Italien.
+      en: This wine comes from Italy.
+      fa: این شراب از ایتالیا آمده است.
+
   - word: Flasche
+    class: noun
+    article: die
+    plural: Flaschen
+    level: A1
+    meaning:
+      en: bottle
+      fa: بطری
+    definition: darin kauft man zum Beispiel Wasser oder Wein; sie ist aus Glas oder Plastik
+    example:
+      de: Kauf bitte zwei Flaschen Wasser.
+      en: Please buy two bottles of water.
+      fa: لطفاً دو بطری آب بخر.
+
   - word: Glas
+    class: noun
+    article: das
+    plural: Gläser
+    level: A1
+    meaning:
+      en: glass (to drink from)
+      fa: لیوان
+    definition: daraus trinkt man am Tisch; man gießt zum Beispiel Wasser aus der Flasche hinein
+    example:
+      de: Sie trinkt jeden Abend ein Glas Milch.
+      en: She drinks a glass of milk every evening.
+      fa: او هر شب یک لیوان شیر می‌نوشد.
+    alsoAccepted: [das Trinkglas, der Becher]
+
   - word: Durst
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: thirst
+      fa: تشنگی
+    definition: das Gefühl, wenn man etwas trinken möchte
+    example:
+      de: Hast du Durst? Hier ist Wasser.
+      en: Are you thirsty? Here's some water.
+      fa: تشنه‌ای؟ این هم آب.
+
   - word: Frühstück
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: breakfast
+      fa: صبحانه
+    definition: das erste Essen am Tag, am Morgen
+    example:
+      de: Das Frühstück ist um 8 Uhr.
+      en: Breakfast is at 8 o'clock.
+      fa: صبحانه ساعت ۸ است.
+    alsoAccepted: [das Morgenessen]
+
   - word: frühstücken
+    class: verb
+    level: A1
+    meaning:
+      en: to have breakfast
+      fa: صبحانه خوردن
+    definition: am Morgen die erste Mahlzeit vom Tag essen
+    example:
+      de: Am Wochenende frühstücken wir zusammen.
+      en: At the weekend we have breakfast together.
+      fa: آخر هفته‌ها با هم صبحانه می‌خوریم.
+
   - word: essen
+    class: verb
+    level: A1
+    meaning:
+      en: to eat
+      fa: خوردن (غذا)
+    definition: zum Beispiel Brot oder Obst in den Mund nehmen, wenn man Hunger hat
+    example:
+      de: Was essen wir heute Abend?
+      en: What are we eating tonight?
+      fa: امشب چه بخوریم؟
+    alsoAccepted: [speisen]
+
   - word: trinken
+    class: verb
+    level: A1
+    meaning:
+      en: to drink
+      fa: نوشیدن
+    definition: zum Beispiel Wasser oder Saft in den Mund nehmen, wenn man Durst hat
+    example:
+      de: Ich trinke keinen Alkohol.
+      en: I don't drink alcohol.
+      fa: من الکل نمی‌نوشم.
+
   - word: kochen
+    class: verb
+    level: A1
+    meaning:
+      en: to cook
+      fa: آشپزی کردن، پختن
+    definition: Essen auf dem Herd warm und fertig machen
+    example:
+      de: Heute kocht mein Vater für die ganze Familie.
+      en: Today my father is cooking for the whole family.
+      fa: امروز پدرم برای همهٔ خانواده آشپزی می‌کند.
+
   - word: grillen
+    class: verb
+    level: A1
+    meaning:
+      en: to barbecue, to grill
+      fa: کباب کردن، روی آتش پختن
+    definition: draußen Fleisch, Wurst oder Gemüse über dem Feuer heiß machen
+    example:
+      de: Am Samstag grillen wir im Garten.
+      en: On Saturday we're having a barbecue in the garden.
+      fa: شنبه در حیاط کباب درست می‌کنیم.
+    alsoAccepted: [grillieren]
+
   - word: schmecken
+    class: verb
+    level: A1
+    meaning:
+      en: to taste (good or bad)
+      fa: مزه دادن، خوشمزه بودن
+    definition: einen Geschmack haben, zum Beispiel süß oder salzig, gut oder schlecht
+    example:
+      de: Die Suppe schmeckt sehr gut.
+      en: The soup tastes very good.
+      fa: سوپ خیلی خوشمزه است.
+
   - word: Appetit
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: appetite
+      fa: اشتها
+    definition: die Lust auf Essen
+    example:
+      de: Guten Appetit!
+      en: Enjoy your meal!
+      fa: نوش جان!
+
+  # A "Lokal" is any place to eat or drink, a "Restaurant" one kind of it; each is right when the other is asked for.
   - word: Restaurant
+    class: noun
+    article: das
+    plural: Restaurants
+    level: A1
+    meaning:
+      en: restaurant
+      fa: رستوران
+    definition: dort isst man ein warmes Mittagessen oder Abendessen, und ein Kellner bringt es an den Tisch
+    example:
+      de: Wir gehen heute Abend ins Restaurant.
+      en: We're going to a restaurant tonight.
+      fa: امشب به رستوران می‌رویم.
+    alsoAccepted: [das Lokal, die Gaststätte, das Gasthaus, das Wirtshaus, der Gasthof, das Speiselokal]
+    tooCloseTo: [Lokal]
+
   - word: Café
+    class: noun
+    article: das
+    plural: Cafés
+    level: A1
+    meaning:
+      en: café
+      fa: کافه
+    definition: dort trinkt man Kaffee oder Tee und isst ein Stück Kuchen
+    example:
+      de: Treffen wir uns um drei im Café?
+      en: Shall we meet at three in the café?
+      fa: ساعت سه در کافه همدیگر را ببینیم؟
+    alsoAccepted: [das Kaffeehaus, die Konditorei]
+
   - word: Lokal
+    class: noun
+    article: das
+    plural: Lokale
+    level: A1
+    meaning:
+      en: pub, place to eat and drink
+      fa: غذاخوری، کافه‌رستوران
+    definition: ein allgemeines Wort für einen Ort, wo man essen und trinken kann, zum Beispiel eine Kneipe
+    example:
+      de: Das Lokal an der Ecke hat gutes Essen.
+      en: The place on the corner has good food.
+      fa: غذاخوری سر نبش غذای خوبی دارد.
+    alsoAccepted:
+      [
+        das Restaurant,
+        die Kneipe,
+        die Gaststätte,
+        das Gasthaus,
+        das Wirtshaus,
+        die Wirtschaft,
+        die Gastwirtschaft,
+        das Speiselokal,
+        die Bar,
+        das Café,
+      ]
+    tooCloseTo: [Restaurant, Café]
+
   - word: Speisekarte
+    class: noun
+    article: die
+    plural: Speisekarten
+    level: A1
+    meaning:
+      en: menu (in a restaurant)
+      fa: منو، صورت غذا
+    definition: darauf stehen im Restaurant alle Speisen und Getränke mit ihrem Preis
+    example:
+      de: Können wir bitte die Speisekarte haben?
+      en: Could we have the menu, please?
+      fa: ممکن است منو را بیاورید؟
+    alsoAccepted: [die Karte, die Menükarte, das Menü]
+
   - word: bestellen
+    class: verb
+    level: A1
+    meaning:
+      en: to order
+      fa: سفارش دادن
+    definition: sagen, was man haben möchte, zum Beispiel im Restaurant ein Essen
+    example:
+      de: Ich möchte bitte bestellen.
+      en: I'd like to order, please.
+      fa: می‌خواهم سفارش بدهم.
+
   - word: bitter
+    class: adjective
+    level: A1
+    meaning:
+      en: bitter
+      fa: تلخ
+    definition: nicht süß, zum Beispiel wie starker Kaffee ohne Zucker
+    example:
+      de: Der Tee ist mir zu bitter.
+      en: The tea is too bitter for me.
+      fa: این چای برای من زیادی تلخ است.
+
   - word: riechen
+    class: verb
+    level: A1
+    meaning:
+      en: to smell
+      fa: بو کردن؛ بو دادن
+    definition: etwas mit der Nase merken; oder einen Geruch haben
+    example:
+      de: Hier riecht es nach Kuchen!
+      en: It smells of cake in here!
+      fa: اینجا بوی کیک می‌آید!
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 30 questions)
+  date: 2026-11-28
+  pool: cd659c6dec75aa99

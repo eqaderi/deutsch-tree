@@ -4,10 +4,326 @@ kind: grammar
 level: B1
 chapter: b1-genitive-nouns
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-071]
 title:
   en: "*n-Deklination*"
   fa: "صرف اسم با *-n* (*n-Deklination*)"
   de: "n-Deklination"
+
+explanations:
+  en:
+    rule: >
+      Some masculine nouns take *-n* or *-en* in every form except the
+      *Nominativ* singular: in the *Akkusativ*, the *Dativ* and the *Genitiv*
+      (*den Kollegen*, *dem Kollegen*, *des Kollegen*), and in the whole
+      plural. This is the *n-Deklination*. It has most masculine nouns in
+      *-e* that name people or animals (*der Kollege*, *der Kunde*, *der
+      Junge*), masculine nouns in *-ant*, *-ent*, *-ist* and *-at* (*der
+      Praktikant*, *der Student*, *der Polizist*, *der Soldat*), and a few
+      others: *der Herr*, *der Mensch*, *der Nachbar*. *Herr* is *Herrn* in
+      the singular and *Herren* in the plural. *Der Name* takes *-ns* in the
+      *Genitiv* (*des Namens*), and the neuter *das Herz* is *das Herz*,
+      *dem Herzen*, *des Herzens*. Other nouns do not change in the singular
+      *Akkusativ* and *Dativ*: *den Lehrer*, *dem Lehrer*.
+  fa:
+    rule: >
+      برخی اسم‌های مذکر در همهٔ شکل‌ها، جز حالت *Nominativ* (حالت فاعلی)
+      مفرد، پایانهٔ *-n* یا *-en* می‌گیرند: در حالت *Akkusativ* (حالت مفعولی)،
+      حالت *Dativ* (حالت مفعول باواسطه) و حالت *Genitiv* (حالت ملکی)، مانند
+      *den Kollegen*، *dem Kollegen* و *des Kollegen*، و نیز در همهٔ شکل‌های
+      جمع. به این صرف اسم با *-n* (*n-Deklination*) می‌گویند. بیشتر اسم‌های
+      مذکری که به *-e* ختم می‌شوند و نام انسان یا جانورند در این گروه‌اند
+      (*der Kollege*، *der Kunde*، *der Junge*)، همچنین اسم‌های مذکری که به
+      *-ant*، *-ent*، *-ist* و *-at* ختم می‌شوند (*der Praktikant*، *der
+      Student*، *der Polizist*، *der Soldat*)، و چند اسم دیگر: *der Herr*،
+      *der Mensch* و *der Nachbar*. *Herr* در مفرد *Herrn* می‌شود و در جمع
+      *Herren*. *der Name* در حالت *Genitiv* پایانهٔ *-ns* می‌گیرد (*des
+      Namens*) و اسم خنثی *das Herz* این شکل‌ها را دارد: *das Herz*، *dem
+      Herzen* و *des Herzens*. اسم‌های دیگر در حالت *Akkusativ* و *Dativ*
+      مفرد تغییری نمی‌کنند: *den Lehrer* و *dem Lehrer*.
+  de:
+    rule: >
+      Einige maskuline Nomen bekommen *-n* oder *-en*, aber nicht im
+      Nominativ Singular: im Akkusativ, im Dativ und im Genitiv (*den
+      Kollegen*, *dem Kollegen*, *des Kollegen*) und im ganzen Plural. Das ist
+      die n-Deklination. Dazu gehören viele maskuline Nomen auf *-e* für
+      Menschen oder Tiere (*der Kollege*, *der Kunde*, *der Junge*), maskuline
+      Nomen auf *-ant*, *-ent*, *-ist* und *-at* (*der Praktikant*, *der
+      Student*, *der Polizist*, *der Soldat*) und einige andere: *der Herr*,
+      *der Mensch*, *der Nachbar*. *Herr* ist im Singular *Herrn*, im Plural
+      *Herren*. *Der Name* hat im Genitiv *-ns* (*des Namens*). *Das Herz* ist
+      neutral: *das Herz*, *dem Herzen*, *des Herzens*. Andere Nomen ändern
+      sich im Akkusativ und Dativ Singular nicht: *den Lehrer*, *dem Lehrer*.
+
+# The article-change table of content/README.md, adapted: the topic is a
+# group of masculine nouns, so the rows are kinds of noun of that group (and
+# das Herz), each through the four cases, with the plural last. A feminine row
+# would show no change and is left out.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "*Genitiv*", fa: "حالت *Genitiv*", de: Genitiv }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Kollege, den Kollegen, dem Kollegen, des Kollegen, Ich frage den Kollegen.]
+    - [der Student, den Studenten, dem Studenten, des Studenten, Ich helfe dem Studenten.]
+    - [der Herr, den Herrn, dem Herrn, des Herrn, Kennen Sie Herrn Weber?]
+    - [der Name, den Namen, dem Namen, des Namens, Ich weiß seinen Namen nicht.]
+    - [das Herz, das Herz, dem Herzen, des Herzens, Danke von ganzem Herzen!]
+    - [die Kollegen (Plural), die Kollegen, den Kollegen, der Kollegen, Die Kollegen sind nett.]
+
+examples:
+  - de: Ich kenne den neuen Kollegen noch nicht.
+    en: I don't know the new colleague yet.
+    fa: همکار جدید را هنوز نمی‌شناسم.
+  - de: Kennen Sie Herrn Weber?
+    en: Do you know Mr Weber?
+    fa: آقای وبر را می‌شناسید؟
+  - de: Ich schreibe dem Kunden eine E-Mail.
+    en: I'm writing the customer an email.
+    fa: به مشتری ایمیل می‌نویسم.
+  - de: Die Lehrerin spricht mit dem Studenten.
+    en: The teacher is talking to the student.
+    fa: معلم با دانشجو حرف می‌زند.
+  - de: Hast du die Rede des Präsidenten gehört?
+    en: Did you hear the president's speech?
+    fa: سخنرانی رئیس‌جمهور را شنیدی؟
+  - de: Wir haben unseren Nachbarn zum Essen eingeladen.
+    en: We invited our neighbour to dinner.
+    fa: همسایه‌مان را برای شام دعوت کردیم.
+  - de: Der Polizist hilft dem Jungen.
+    en: The police officer is helping the boy.
+    fa: پلیس به پسر کمک می‌کند.
+  - de: Ich habe seinen Namen leider vergessen.
+    en: I'm afraid I've forgotten his name.
+    fa: متأسفانه اسمش را فراموش کرده‌ام.
+  - de: Das Büro des Praktikanten ist im ersten Stock.
+    en: The intern's office is on the first floor.
+    fa: دفتر کارآموز در طبقهٔ اول است.
+  - de: Ich danke Ihnen von ganzem Herzen.
+    en: I thank you with all my heart.
+    fa: از صمیم قلب از شما سپاسگزارم.
+
+mistakes:
+  - wrong: Ich kenne den Kollege nicht.
+    right: Ich kenne den Kollegen nicht.
+    why:
+      en: "*Kollege* follows the *n-Deklination*: in the *Akkusativ* it is *den Kollegen*."
+      fa: "*Kollege* از صرف اسم با *-n* پیروی می‌کند: در حالت *Akkusativ* می‌شود *den Kollegen*."
+      de: "*Kollege* hat die n-Deklination. Im Akkusativ: *den Kollegen*."
+  - wrong: Ich habe mit Herr Weber gesprochen.
+    right: Ich habe mit Herrn Weber gesprochen.
+    why:
+      en: "*Herr* takes *-n* outside the *Nominativ*, also before a name: *mit Herrn Weber*."
+      fa: "*Herr* بیرون از حالت *Nominativ*، پیش از نام هم، *-n* می‌گیرد: *mit Herrn Weber*."
+      de: "*Herr* bekommt außer im Nominativ *-n*, auch vor einem Namen: *mit Herrn Weber*."
+  - wrong: Wir helfen dem Student.
+    right: Wir helfen dem Studenten.
+    why:
+      en: "Masculine nouns in *-ent* take *-en* in the *Dativ*: *dem Studenten*."
+      fa: "اسم مذکری که به *-ent* ختم شود در حالت *Dativ* پایانهٔ *-en* می‌گیرد: *dem Studenten*."
+      de: "Maskuline Nomen auf *-ent* bekommen im Dativ *-en*: *dem Studenten*."
+  - wrong: Ich habe seinen Name vergessen.
+    right: Ich habe seinen Namen vergessen.
+    why:
+      en: "*Name* takes *-n* in the *Akkusativ*: *seinen Namen*."
+      fa: "*Name* در حالت *Akkusativ* پایانهٔ *-n* می‌گیرد: *seinen Namen*."
+      de: "*Name* bekommt im Akkusativ *-n*: *seinen Namen*."
+  - wrong: Hast du die Rede des Präsidents gehört?
+    right: Hast du die Rede des Präsidenten gehört?
+    why:
+      en: "*Präsident* follows the *n-Deklination*, so its *Genitiv* takes *-en*, not *-s*: *des Präsidenten*."
+      fa: "*Präsident* از صرف اسم با *-n* پیروی می‌کند، پس در حالت *Genitiv* پایانهٔ *-en* می‌گیرد، نه *-s*: *des Präsidenten*."
+      de: "*Präsident* hat die n-Deklination. Im Genitiv bekommt es *-en*, nicht *-s*: *des Präsidenten*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich kenne den neuen ___ noch nicht.
+    options: [Kollegin, Kollegen, Kollege]
+    answer: Kollegen
+    explanation:
+      en: "*Der Kollege* in the *Akkusativ* is *den Kollegen*."
+      fa: "*der Kollege* در حالت *Akkusativ* می‌شود *den Kollegen*."
+      de: "*Der Kollege* im Akkusativ: *den Kollegen*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich habe gestern mit ___ Weber telefoniert.
+    options: [Herr, Herren, Herrn]
+    answer: Herrn
+    explanation:
+      en: "After *mit* comes the *Dativ*, and *Herr* takes *-n* in the singular: *mit Herrn Weber*."
+      fa: "پس از *mit* حالت *Dativ* می‌آید و *Herr* در مفرد *-n* می‌گیرد: *mit Herrn Weber*."
+      de: "Nach *mit* steht der Dativ. *Herr* bekommt im Singular *-n*: *mit Herrn Weber*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Lehrerin gibt dem ___ das Buch.
+    options: [Studenten, Student, Studentin]
+    answer: Studenten
+    explanation:
+      en: "*Der Student* in the *Dativ* is *dem Studenten*."
+      fa: "*der Student* در حالت *Dativ* می‌شود *dem Studenten*."
+      de: "*Der Student* im Dativ: *dem Studenten*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich habe seinen ___ vergessen.
+    options: [Name, Namens, Namen]
+    answer: Namen
+    explanation:
+      en: "*Der Name* in the *Akkusativ* is *den Namen*; *-ns* is only for the *Genitiv*."
+      fa: "*der Name* در حالت *Akkusativ* می‌شود *den Namen*؛ *-ns* فقط برای حالت *Genitiv* است."
+      de: "*Der Name* im Akkusativ: *den Namen*. *-ns* gibt es nur im Genitiv."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Hast du die Rede des ___ gehört?
+    options: [Präsident, Präsidenten, Präsidents]
+    answer: Präsidenten
+    explanation:
+      en: "Nouns in *-ent* take *-en* in the *Genitiv* too, not *-s*: *des Präsidenten*."
+      fa: "اسم‌هایی که به *-ent* ختم می‌شوند در حالت *Genitiv* هم *-en* می‌گیرند، نه *-s*: *des Präsidenten*."
+      de: "Nomen auf *-ent* bekommen auch im Genitiv *-en*, nicht *-s*: *des Präsidenten*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Der Polizist zeigt dem ___ den Weg.
+    options: [Touristin, Tourist, Touristen]
+    answer: Touristen
+    explanation:
+      en: "Nouns in *-ist* take *-en* in the *Dativ*: *dem Touristen*."
+      fa: "اسم‌هایی که به *-ist* ختم می‌شوند در حالت *Dativ* پایانهٔ *-en* می‌گیرند: *dem Touristen*."
+      de: "Nomen auf *-ist* bekommen im Dativ *-en*: *dem Touristen*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Der erste Buchstabe des ___ ist ein A.
+    options: [Namens, Namen, Name]
+    answer: Namens
+    explanation:
+      en: "*Name* takes *-ns* in the *Genitiv*: *des Namens*."
+      fa: "*Name* در حالت *Genitiv* پایانهٔ *-ns* می‌گیرد: *des Namens*."
+      de: "*Name* hat im Genitiv *-ns*: *des Namens*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Mein Opa hat ein schwaches ___.
+    options: [Herzen, Herz, Herzens]
+    answer: Herz
+    explanation:
+      en: "*Das Herz* stays *das Herz* in the *Akkusativ*; only the *Dativ* and the *Genitiv* change."
+      fa: "*das Herz* در حالت *Akkusativ* همان *das Herz* می‌ماند؛ فقط حالت *Dativ* و حالت *Genitiv* تغییر می‌کنند."
+      de: "*Das Herz* bleibt im Akkusativ *das Herz*. Nur Dativ und Genitiv ändern sich."
+  - id: true-1
+    type: true-false
+    prompt: Ich frage den Verkäufer.
+    answer: true
+    explanation:
+      en: "*Verkäufer* does not follow the *n-Deklination*, so *den Verkäufer* is right."
+      fa: "*Verkäufer* از صرف اسم با *-n* پیروی نمی‌کند، پس *den Verkäufer* درست است."
+      de: "*Verkäufer* hat keine n-Deklination. *Den Verkäufer* ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir besuchen morgen unseren Nachbar.
+    answer: false
+    explanation:
+      en: "*Nachbar* follows the *n-Deklination*: *unseren Nachbarn*."
+      fa: "*Nachbar* از صرف اسم با *-n* پیروی می‌کند: *unseren Nachbarn*."
+      de: "*Nachbar* hat die n-Deklination: *unseren Nachbarn*."
+  - id: true-3
+    type: true-false
+    prompt: Der Arzt spricht mit dem Patienten.
+    answer: true
+    explanation:
+      en: "*Der Patient* in the *Dativ* is *dem Patienten*. The sentence is correct."
+      fa: "*der Patient* در حالت *Dativ* می‌شود *dem Patienten*. جمله درست است."
+      de: "*Der Patient* im Dativ: *dem Patienten*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Kennst du den Mensch dort?
+    answer: false
+    explanation:
+      en: "*Mensch* follows the *n-Deklination*: *den Menschen*."
+      fa: "*Mensch* از صرف اسم با *-n* پیروی می‌کند: *den Menschen*."
+      de: "*Mensch* hat die n-Deklination: *den Menschen*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich schreibe dem ___ (der Kunde) eine E-Mail.
+    answers: [Kunden]
+    explanation:
+      en: "*Der Kunde* in the *Dativ* is *dem Kunden*."
+      fa: "*der Kunde* در حالت *Dativ* می‌شود *dem Kunden*."
+      de: "*Der Kunde* im Dativ: *dem Kunden*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das ist die Tasche des ___ (der Praktikant).
+    answers: [Praktikanten]
+    explanation:
+      en: "Nouns in *-ant* take *-en* in the *Genitiv*: *des Praktikanten*."
+      fa: "اسم‌هایی که به *-ant* ختم می‌شوند در حالت *Genitiv* پایانهٔ *-en* می‌گیرند: *des Praktikanten*."
+      de: "Nomen auf *-ant* bekommen im Genitiv *-en*: *des Praktikanten*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich danke Ihnen von ganzem ___ (das Herz).
+    answers: [Herzen]
+    explanation:
+      en: "*Von* takes the *Dativ*, and *das Herz* in the *Dativ* is *dem Herzen*."
+      fa: "*von* با حالت *Dativ* می‌آید و *das Herz* در حالت *Dativ* می‌شود *dem Herzen*."
+      de: "Nach *von* steht der Dativ. *Das Herz* im Dativ: *dem Herzen*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Akkusativ: der Herr"
+    answers: [den Herrn, Herrn]
+    explanation:
+      en: "*Herr* takes *-n* in the singular *Akkusativ*: *den Herrn*."
+      fa: "*Herr* در حالت *Akkusativ* مفرد پایانهٔ *-n* می‌گیرد: *den Herrn*."
+      de: "*Herr* bekommt im Akkusativ Singular *-n*: *den Herrn*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Plural: der Herr"
+    answers: [die Herren, Herren]
+    explanation:
+      en: "In the plural *Herr* takes *-en*: *die Herren*."
+      fa: "*Herr* در جمع پایانهٔ *-en* می‌گیرد: *die Herren*."
+      de: "Im Plural bekommt *Herr* *-en*: *die Herren*."
+  - id: error-1
+    type: find-error
+    prompt: Gestern habe ich den Kollege von Anna getroffen.
+    answer: Kollege
+    explanation:
+      en: "*Der Kollege* in the *Akkusativ* is *den Kollegen*."
+      fa: "*der Kollege* در حالت *Akkusativ* می‌شود *den Kollegen*."
+      de: "*Der Kollege* im Akkusativ: *den Kollegen*."
+  - id: error-2
+    type: find-error
+    prompt: Kennen Sie Herr Müller?
+    answer: Herr
+    explanation:
+      en: "*Herr* takes *-n* in the *Akkusativ*: *Herrn Müller*."
+      fa: "*Herr* در حالت *Akkusativ* پایانهٔ *-n* می‌گیرد: *Herrn Müller*."
+      de: "*Herr* bekommt im Akkusativ *-n*: *Herrn Müller*."
+  - id: error-3
+    type: find-error
+    prompt: Der Lehrer hilft dem Student bei der Aufgabe.
+    answer: Student
+    explanation:
+      en: "*Der Student* in the *Dativ* is *dem Studenten*."
+      fa: "*der Student* در حالت *Dativ* می‌شود *dem Studenten*."
+      de: "*Der Student* im Dativ: *dem Studenten*."
+  - id: match-1
+    type: matching
+    answer:
+      - [der Kollege, des Kollegen]
+      - [der Name, des Namens]
+      - [das Herz, des Herzens]
+      - [der Mensch, des Menschen]
+    explanation:
+      en: "In the *Genitiv* the *n-Deklination* gives *-n* or *-en*; *Name* and *Herz* take *-ns* and *-ens*."
+      fa: "در حالت *Genitiv*، صرف اسم با *-n* پایانهٔ *-n* یا *-en* می‌دهد؛ *Name* و *Herz* پایانهٔ *-ns* و *-ens* می‌گیرند."
+      de: "Im Genitiv hat die n-Deklination *-n* oder *-en*. *Name* und *Herz* bekommen *-ns* und *-ens*."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question, then the questions changed or disputed after the
+    first pass; not people)"
+  date: 2026-11-28
+  pool: 6580dec3b0168fc3

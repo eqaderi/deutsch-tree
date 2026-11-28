@@ -4,7 +4,7 @@ kind: phrases
 level: A2
 chapter: a2-phrases-arrangements
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Apologising and saying why"
   fa: "عذرخواهی و گفتن دلیل"
@@ -14,3 +14,283 @@ purpose:
   fa: "عذرخواهی کنید، مثلاً چون نمی‌توانید بیایید، و دلیل کوتاهی بگویید."
   de: "Sich entschuldigen, zum Beispiel weil man nicht kommen kann, und kurz den Grund sagen."
 examTasks: [exam-schreiben-1, exam-schreiben-3]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Entschuldige bitte, dass …
+    meaning:
+      en: Please forgive me for … An apology to a friend. After *dass* the verb goes to the end.
+      fa: «ببخش که …» عذرخواهی از یک دوست. پس از *dass* فعل به پایان جمله می‌رود.
+      de: So entschuldigt man sich bei einem Freund oder einer Freundin. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Entschuldige bitte, dass ich dich gestern nicht angerufen habe.
+      en: Please forgive me for not calling you yesterday.
+      fa: ببخش که دیروز به تو زنگ نزدم.
+
+  - de: Entschuldigen Sie bitte, dass …
+    meaning:
+      en: Please excuse me for … The same apology to a person you call *Sie*, for example in a formal e-mail. It also takes a noun, *Entschuldigen Sie bitte die späte Antwort.*
+      fa: "«ببخشید که …» همان عذرخواهی از کسی که با *Sie* خطابش می‌کنید، مثلاً در ایمیل رسمی. پس از آن اسم هم می‌آید: *Entschuldigen Sie bitte die späte Antwort.*"
+      de: Die gleiche Entschuldigung an eine Person, zu der man *Sie* sagt, zum Beispiel in einer formellen E-Mail. Man kann auch ein Nomen benutzen, *Entschuldigen Sie bitte die späte Antwort.*
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Entschuldigen Sie bitte, dass ich erst heute antworte.
+      en: Please excuse me for only answering today.
+      fa: ببخشید که تازه امروز پاسخ می‌دهم.
+
+  - de: Es tut mir leid, dass …
+    meaning:
+      en: I am sorry that … Says what you are sorry about, to *du* and to *Sie*. *mir* is the dative of *ich*; after *dass* the verb goes to the end.
+      fa: «متأسفم که …» می‌گوید بابت چه متأسفید، هم به *du* و هم به *Sie*. *mir* حالت *Dativ* ضمیر *ich* است و پس از *dass* فعل به پایان جمله می‌رود.
+      de: Man sagt, was einem leidtut, zu *du* und zu *Sie*. *mir* ist der Dativ von *ich*. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Es tut mir leid, dass ich so spät antworte.
+      en: I am sorry that I am answering so late.
+      fa: متأسفم که این‌قدر دیر پاسخ می‌دهم.
+
+  - de: Ich kann leider nicht …, weil …
+    meaning:
+      en: Unfortunately I can't …, because … Says no and gives the reason. After *weil* the verb goes to the end.
+      fa: «متأسفانه نمی‌توانم …، چون …» پاسخ منفی می‌دهد و دلیلش را می‌گوید. پس از *weil* فعل به پایان جمله می‌رود.
+      de: Man sagt nein und nennt den Grund. Nach *weil* steht das Verb am Ende.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Ich kann am Samstag leider nicht kommen, weil ich arbeiten muss.
+      en: Unfortunately I can't come on Saturday, because I have to work.
+      fa: متأسفانه شنبه نمی‌توانم بیایم، چون باید کار کنم.
+
+  - de: …, denn …
+    meaning:
+      en: …, because … Another way to give the reason. After *denn* the order is that of a normal statement, so the verb comes second.
+      fa: «…، چون …» راه دیگری برای گفتن دلیل. پس از *denn* ترتیب واژه‌ها مانند جملهٔ خبری عادی است و فعل در جایگاه دوم می‌آید.
+      de: "So sagt man den Grund auch. Nach *denn* ist die Satzstellung normal: Das Verb steht auf Position 2."
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Ich komme etwas später, denn mein Zug hat Verspätung.
+      en: I am coming a little later, because my train is late.
+      fa: کمی دیرتر می‌رسم، چون قطارم تأخیر دارد.
+
+  - de: Ich hoffe, das ist kein Problem.
+    meaning:
+      en: I hope that is not a problem. Ends an apology in a friendly way, also in a formal e-mail.
+      fa: «امیدوارم مشکلی نباشد.» عذرخواهی را با لحنی دوستانه تمام می‌کند، در ایمیل رسمی هم.
+      de: Damit beendet man eine Entschuldigung freundlich, auch in einer formellen E-Mail.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Ich kann leider erst um zehn kommen. Ich hoffe, das ist kein Problem.
+      en: Unfortunately I can only come at ten. I hope that is not a problem.
+      fa: متأسفانه تازه ساعت ده می‌توانم بیایم. امیدوارم مشکلی نباشد.
+
+  - de: Das macht nichts.
+    meaning:
+      en: That doesn't matter. The friendly answer when someone apologises to you.
+      fa: «اشکالی ندارد.» پاسخ دوستانه وقتی کسی از شما عذرخواهی می‌کند.
+      de: Das antwortet man freundlich, wenn sich jemand bei einem entschuldigt.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Du kommst später? Das macht nichts, ich warte gern.
+      en: You are coming later? That doesn't matter, I am happy to wait.
+      fa: دیرتر می‌آیی؟ اشکالی ندارد، با کمال میل منتظر می‌مانم.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9). The right option stands in
+# a different place from question to question.
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Du hast Tom gestern nicht zurückgerufen. Was schreibst du ihm?
+    options:
+      - Entschuldige bitte, dass ich habe dich nicht zurückgerufen.
+      - Entschuldigen bitte, dass ich dich nicht zurückgerufen habe.
+      - Entschuldige bitte, dass ich dich nicht zurückgerufen habe.
+    answer: Entschuldige bitte, dass ich dich nicht zurückgerufen habe.
+    explanation:
+      en: To *du* it is *Entschuldige bitte*, and after *dass* the verb *habe* goes to the end.
+      fa: به *du* می‌گویید *Entschuldige bitte* و پس از *dass* فعل *habe* به پایان جمله می‌رود.
+      de: Zu *du* sagt man *Entschuldige bitte*, und nach *dass* steht *habe* am Ende.
+
+  - id: q2
+    type: gap-fill
+    prompt: Frau Weber, ___ Sie bitte, dass ich erst heute antworte.
+    options: [entschuldige, entschuldigen, entschuldigt]
+    answer: entschuldigen
+    explanation:
+      en: With *Sie* the imperative is *entschuldigen Sie*.
+      fa: امر با *Sie* می‌شود *entschuldigen Sie*.
+      de: Bei *Sie* heißt der Imperativ *entschuldigen Sie*.
+
+  - id: q3
+    type: true-false
+    prompt: Es tut mir leid, dass ich gestern nicht gekommen bin.
+    answer: true
+    explanation:
+      en: After *dass* the verb *bin* stands at the end, so the sentence is correct.
+      fa: پس از *dass* فعل *bin* در پایان جمله آمده است، پس جمله درست است.
+      de: Nach *dass* steht *bin* am Ende. Der Satz ist richtig.
+
+  - id: q4
+    type: true-false
+    prompt: Ich kann am Samstag leider nicht kommen, weil ich muss arbeiten.
+    answer: false
+    explanation:
+      en: After *weil* the verb goes to the end. *…, weil ich arbeiten muss.*
+      fa: "پس از *weil* فعل به پایان جمله می‌رود: *…, weil ich arbeiten muss.*"
+      de: "Nach *weil* steht das Verb am Ende: *…, weil ich arbeiten muss.*"
+
+  - id: q5
+    type: find-error
+    prompt: Es tut mich leid, dass ich so spät antworte.
+    answer: mich
+    explanation:
+      en: The phrase takes the dative. *Es tut mir leid.*
+      fa: "این عبارت حالت *Dativ* می‌خواهد: *Es tut mir leid.*"
+      de: "Der Satz braucht den Dativ: *Es tut mir leid.*"
+
+  - id: q6
+    type: word-order
+    answers:
+      - [entschuldigen, Sie, bitte, die späte Antwort]
+      - [bitte, entschuldigen, Sie, die späte Antwort]
+      - [entschuldigen, Sie, die späte Antwort, bitte]
+      - [Sie, entschuldigen, bitte, die späte Antwort]
+    explanation:
+      en: "The imperative with *Sie* begins with the verb, and *Sie* comes right after it: *Entschuldigen Sie bitte die späte Antwort.* The formal *Sie entschuldigen bitte …* is also right."
+      fa: "امر با *Sie* با فعل آغاز می‌شود و *Sie* بلافاصله پس از آن می‌آید: *Entschuldigen Sie bitte die späte Antwort.*"
+      de: "Der Imperativ mit *Sie* beginnt mit dem Verb, *Sie* steht direkt danach: *Entschuldigen Sie bitte die späte Antwort.*"
+
+  - id: q7
+    type: multiple-choice
+    prompt: Deine Freundin schreibt, dass sie zehn Minuten später kommt. Was antwortest du?
+    options:
+      - Es tut mir leid.
+      - Das macht nichts.
+      - Entschuldige bitte.
+    answer: Das macht nichts.
+    explanation:
+      en: When someone apologises to you, you answer *Das macht nichts.*
+      fa: وقتی کسی از شما عذرخواهی می‌کند، پاسخ می‌دهید *Das macht nichts.*
+      de: Wenn sich jemand entschuldigt, antwortet man *Das macht nichts.*
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Es tut mir ___, dass ich so spät antworte.
+    answers: [leid]
+    explanation:
+      en: The phrase is *Es tut mir leid, dass …*
+      fa: عبارت *Es tut mir leid, dass …* است.
+      de: Der Satz heißt *Es tut mir leid, dass …*
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Es tut ___ (ich) leid, dass ich so spät antworte.
+    answers: [mir]
+    explanation:
+      en: The phrase takes the dative. The dative of *ich* is *mir*.
+      fa: این عبارت حالت *Dativ* می‌خواهد و حالت *Dativ* ضمیر *ich* واژهٔ *mir* است.
+      de: Der Satz braucht den Dativ. Der Dativ von *ich* ist *mir*.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Es tut mir leid, ___ ich gestern nicht gekommen bin.
+    answers: [dass]
+    explanation:
+      en: The phrase is *Es tut mir leid, dass …*, with the verb at the end.
+      fa: عبارت *Es tut mir leid, dass …* است و فعل به پایان جمله می‌رود.
+      de: Der Satz heißt *Es tut mir leid, dass …*, und das Verb steht am Ende.
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Es tut mir leid, dass ich gestern nicht gekommen ___ (sein, Perfekt).
+    answers: [bin]
+    explanation:
+      en: "*kommen* forms the *Perfekt* with *sein*, and after *dass* *bin* goes to the end."
+      fa: "*kommen* گذشتهٔ نقلی (*Perfekt*) را با *sein* می‌سازد و پس از *dass* فعل *bin* به پایان جمله می‌رود."
+      de: "*kommen* bildet das Perfekt mit *sein*, und nach *dass* steht *bin* am Ende."
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: ___ (entschuldigen) bitte, dass ich dich gestern nicht angerufen habe.
+    answers: [Entschuldige]
+    explanation:
+      en: To one friend the imperative is *Entschuldige*.
+      fa: امر برای یک دوست *Entschuldige* است.
+      de: Zu einer Person sagt man *Entschuldige*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Frau Weber, ___ (entschuldigen) Sie bitte, dass ich erst heute antworte.
+    answers: [entschuldigen]
+    explanation:
+      en: With *Sie* the imperative is *entschuldigen Sie*.
+      fa: امر با *Sie* می‌شود *entschuldigen Sie*.
+      de: Bei *Sie* heißt der Imperativ *entschuldigen Sie*.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Ich kann am Samstag leider nicht kommen, ___ ich arbeiten muss.
+    answers: [weil, da]
+    explanation:
+      en: The verb *muss* is at the end, so the reason comes with *weil*. *da* works the same way.
+      fa: فعل *muss* در پایان جمله است، پس دلیل با *weil* می‌آید. *da* هم همین‌طور به کار می‌رود.
+      de: Das Verb *muss* steht am Ende, also kommt der Grund mit *weil*. *da* geht auch so.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Ich kann am Samstag leider nicht kommen, weil ich arbeiten ___ (müssen).
+    answers: [muss]
+    explanation:
+      en: After *weil* the verb goes to the end. With *ich*, *müssen* is *muss*.
+      fa: پس از *weil* فعل به پایان جمله می‌رود. *müssen* با *ich* می‌شود *muss*.
+      de: Nach *weil* steht das Verb am Ende. Bei *ich* heißt *müssen* *muss*.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Ich kann am Samstag leider nicht kommen, ___ ich muss arbeiten.
+    answers: [denn]
+    explanation:
+      en: "*muss* stands in position 2, so the reason comes with *denn*."
+      fa: "*muss* در جایگاه دوم است، پس دلیل با *denn* می‌آید."
+      de: "*muss* steht auf Position 2, also kommt der Grund mit *denn*."
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Ich komme etwas später, denn mein Zug ___ (haben) Verspätung.
+    answers: [hat, hatte]
+    explanation:
+      en: After *denn* the verb comes second. With *mein Zug* it is *hat*.
+      fa: پس از *denn* فعل در جایگاه دوم می‌آید. با *mein Zug* فعل *hat* است.
+      de: Nach *denn* steht das Verb auf Position 2. Bei *mein Zug* heißt es *hat*.
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Ich kann leider erst um zehn kommen. Ich hoffe, das ___ (sein) kein Problem.
+    answers: [ist]
+    explanation:
+      en: The phrase is *Ich hoffe, das ist kein Problem.* With *das* the verb is *ist*.
+      fa: عبارت *Ich hoffe, das ist kein Problem.* است. با *das* فعل *ist* است.
+      de: Der Satz heißt *Ich hoffe, das ist kein Problem.* Bei *das* heißt es *ist*.
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Ich kann leider erst um zehn kommen. Ich ___ (hoffen), das ist kein Problem.
+    answers: [hoffe]
+    explanation:
+      en: With *ich* the verb is *hoffe*.
+      fa: با *ich* فعل *hoffe* است.
+      de: Bei *ich* heißt es *hoffe*.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Entschuldige, ich bin zu spät! – Kein Problem, das ___ (machen) nichts.
+    answers: [macht]
+    explanation:
+      en: The friendly answer to an apology is *Das macht nichts.* With *das* the verb is *macht*.
+      fa: پاسخ دوستانه به عذرخواهی *Das macht nichts.* است. با *das* فعل *macht* است.
+      de: Auf eine Entschuldigung antwortet man freundlich *Das macht nichts.* Bei *das* heißt es *macht*.
+
+review:
+  reviewer: an independent AI agent (two fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: 4323cb2bb9c06ab9

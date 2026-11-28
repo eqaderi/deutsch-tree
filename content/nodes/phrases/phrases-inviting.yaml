@@ -4,7 +4,8 @@ kind: phrases
 level: A2
 chapter: a2-phrases-emails
 order: 4
-status: coming-soon
+status: published
+prerequisites: [grammar-005, grammar-034, grammar-063]
 title:
   en: "Inviting, accepting and declining"
   fa: "دعوت کردن، پذیرفتن و رد کردن دعوت"
@@ -14,3 +15,302 @@ purpose:
   fa: "کسی را دعوت کنید و به یک دعوت، دوستانه جواب مثبت یا منفی بدهید."
   de: "Jemanden einladen und auf eine Einladung freundlich mit Ja oder Nein antworten."
 examTasks: [exam-schreiben-1, exam-schreiben-3]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Ich möchte dich zu … einladen.
+    meaning:
+      en: I would like to invite you to … A polite invitation. After *zu* comes the dative, and *einladen* goes to the end. With *Sie* it is *Ich möchte Sie …*
+      fa: «می‌خواهم تو را به … دعوت کنم.» دعوتی مؤدبانه. پس از *zu* حالت *Dativ* می‌آید و *einladen* به پایان جمله می‌رود. با *Sie* می‌شود *Ich möchte Sie …*
+      de: Eine höfliche Einladung. Nach *zu* kommt der Dativ, und *einladen* steht am Ende. Bei *Sie* sagt man *Ich möchte Sie …*
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Ich möchte dich zu meiner Geburtstagsparty einladen.
+      en: I would like to invite you to my birthday party.
+      fa: می‌خواهم تو را به جشن تولدم دعوت کنم.
+
+  - de: Ich lade dich zu … ein.
+    meaning:
+      en: I am inviting you to … *einladen* is a separable verb, so *ein* goes to the end.
+      fa: «تو را به … دعوت می‌کنم.» *einladen* فعل جداشدنی است، پس *ein* به پایان جمله می‌رود.
+      de: "*einladen* ist ein trennbares Verb: *ein* steht am Ende."
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Ich lade dich herzlich zu unserem Sommerfest ein.
+      en: I warmly invite you to our summer party.
+      fa: تو را صمیمانه به جشن تابستانی‌مان دعوت می‌کنم.
+
+  - de: Kannst du kommen?
+    meaning:
+      en: Can you come? Asks whether the person will come. With *Sie* it is *Können Sie kommen?*
+      fa: «می‌توانی بیایی؟» می‌پرسد که آیا طرف مقابل می‌آید. با *Sie* می‌شود *Können Sie kommen?*
+      de: So fragt man, ob die Person kommt. Bei *Sie* fragt man *Können Sie kommen?*
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Die Party beginnt am Samstag um acht. Kannst du kommen?
+      en: The party starts on Saturday at eight. Can you come?
+      fa: جشن شنبه ساعت هشت شروع می‌شود. می‌توانی بیایی؟
+
+  - de: Ich komme gern!
+    meaning:
+      en: I would love to come! The usual way to accept. *gern* makes it friendly.
+      fa: «با کمال میل می‌آیم!» راه معمول برای پذیرفتن دعوت. *gern* آن را دوستانه می‌کند.
+      de: So sagt man zu. Mit *gern* klingt es freundlich.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Danke für die Einladung, ich komme sehr gern!
+      en: Thanks for the invitation, I would love to come!
+      fa: ممنون از دعوتت، با کمال میل می‌آیم!
+
+  - de: Ich bin gern dabei!
+    meaning:
+      en: Count me in! An informal way to accept, to friends.
+      fa: «من هم هستم!» راهی خودمانی برای پذیرفتن دعوت دوستان.
+      de: So sagt man locker zu, an Freunde.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Ein Picknick am Sonntag? Ich bin gern dabei!
+      en: A picnic on Sunday? Count me in!
+      fa: پیک‌نیک یکشنبه؟ من هم هستم!
+
+  - de: Ich freue mich schon auf …
+    meaning:
+      en: I am already looking forward to … Ends a yes in a warm way. After *auf* comes the accusative.
+      fa: «از همین حالا منتظر … هستم.» پاسخ مثبت را گرم تمام می‌کند. پس از *auf* حالت *Akkusativ* می‌آید.
+      de: Damit beendet man eine Zusage freundlich. Nach *auf* kommt der Akkusativ.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Ich freue mich schon auf die Party!
+      en: I am already looking forward to the party!
+      fa: از همین حالا منتظر جشنم!
+
+  - de: Leider kann ich nicht kommen.
+    meaning:
+      en: Unfortunately I cannot come. The usual way to decline. *Leider* comes first, so the verb *kann* comes before *ich*. A reason can follow with *denn*.
+      fa: «متأسفانه نمی‌توانم بیایم.» راه معمول برای رد کردن دعوت. *Leider* در آغاز می‌آید، پس فعل *kann* پیش از *ich* قرار می‌گیرد. دلیل را می‌توانید با *denn* بگویید.
+      de: So sagt man ab. *Leider* steht am Anfang, dann kommt das Verb *kann* vor *ich*. Den Grund kann man mit *denn* sagen.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Leider kann ich am Samstag nicht kommen, denn ich muss arbeiten.
+      en: Unfortunately I cannot come on Saturday, because I have to work.
+      fa: متأسفانه شنبه نمی‌توانم بیایم، چون باید کار کنم.
+
+  - de: Ich muss leider absagen.
+    meaning:
+      en: I am afraid I have to say no. A clear, polite no, good in a formal e-mail too. *absagen* goes to the end.
+      fa: «متأسفانه باید دعوت را رد کنم.» پاسخ منفی روشن و مؤدبانه که در ایمیل رسمی هم به کار می‌رود. *absagen* به پایان جمله می‌رود.
+      de: Eine klare, höfliche Absage, auch in einer formellen E-Mail. *absagen* steht am Ende.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Vielen Dank für die Einladung, aber ich muss leider absagen.
+      en: Thank you very much for the invitation, but I am afraid I have to say no.
+      fa: خیلی ممنون از دعوت، ولی متأسفانه باید آن را رد کنم.
+
+  - de: Vielleicht klappt es beim nächsten Mal.
+    meaning:
+      en: Maybe it will work out next time. Softens a no and shows that you would like to come another time.
+      fa: «شاید دفعهٔ بعد بشود.» پاسخ منفی را نرم می‌کند و نشان می‌دهد که دوست دارید دفعهٔ دیگری بیایید.
+      de: Das macht eine Absage freundlicher. Man zeigt, dass man gern ein anderes Mal kommt.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Am Samstag habe ich leider keine Zeit. Vielleicht klappt es beim nächsten Mal.
+      en: Unfortunately I have no time on Saturday. Maybe it will work out next time.
+      fa: متأسفانه شنبه وقت ندارم. شاید دفعهٔ بعد بشود.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Du möchtest Tom zu deiner Party einladen. Was schreibst du?
+    options:
+      - Ich möchte dich zu meiner Party einladen.
+      - Ich möchte dich zu meiner Party ein.
+      - Ich möchte dich zu meine Party einladen.
+    answer: Ich möchte dich zu meiner Party einladen.
+    explanation:
+      en: After *möchte* the whole verb *einladen* goes to the end, and *zu* takes the dative *meiner*.
+      fa: "پس از *möchte* فعل کامل *einladen* به پایان جمله می‌رود و پس از *zu* حالت *Dativ* می‌آید: *meiner*."
+      de: Nach *möchte* steht das ganze Verb *einladen* am Ende, und nach *zu* kommt der Dativ *meiner*.
+
+  - id: q2
+    type: gap-fill
+    prompt: Ich ___ dich zu meinem Geburtstag ein.
+    options: [lade, lädt, einlade]
+    answer: lade
+    explanation:
+      en: "*einladen* is separable. With *ich* it is *lade … ein*."
+      fa: "*einladen* فعل جداشدنی است. با *ich* می‌شود *lade … ein*."
+      de: "*einladen* ist trennbar. Bei *ich* heißt es *lade … ein*."
+
+  - id: q3
+    type: true-false
+    prompt: Leider ich kann am Samstag nicht kommen.
+    answer: false
+    explanation:
+      en: After *Leider* the verb comes second, before *ich*. *Leider kann ich am Samstag nicht kommen.*
+      fa: "پس از *Leider* فعل در جایگاه دوم، پیش از *ich*، می‌آید: *Leider kann ich am Samstag nicht kommen.*"
+      de: "Nach *Leider* steht das Verb an Position 2, vor *ich*: *Leider kann ich am Samstag nicht kommen.*"
+
+  - id: q4
+    type: true-false
+    prompt: Ich freue mich schon auf die Party!
+    answer: true
+    explanation:
+      en: "*Ich freue mich auf …* with the accusative *die Party* is correct."
+      fa: "*Ich freue mich auf …* با حالت *Akkusativ*، یعنی *die Party*، درست است."
+      de: "*Ich freue mich auf …* mit dem Akkusativ *die Party* ist richtig."
+
+  - id: q5
+    type: find-error
+    prompt: Ich lade dich zu meine Party ein.
+    answer: meine
+    explanation:
+      en: After *zu* comes the dative. *die Party*, so *zu meiner Party*.
+      fa: پس از *zu* حالت *Dativ* می‌آید. *Party* اسم مؤنث (*die*) است، پس *zu meiner Party*.
+      de: Nach *zu* kommt der Dativ. *die Party*, also *zu meiner Party*.
+
+  - id: q6
+    type: multiple-choice
+    prompt: Anna lädt dich zum Essen ein, aber du hast am Samstag keine Zeit. Was schreibst du?
+    options:
+      - Leider kann ich nicht kommen.
+      - Ich komme gern!
+      - Ich bin gern dabei!
+    answer: Leider kann ich nicht kommen.
+    explanation:
+      en: You have no time, so you decline with *Leider kann ich nicht kommen.*
+      fa: وقت ندارید، پس با *Leider kann ich nicht kommen.* دعوت را رد می‌کنید.
+      de: Du hast keine Zeit, also sagst du ab mit *Leider kann ich nicht kommen.*
+
+  - id: q7
+    type: gap-fill
+    prompt: Schade! Vielleicht klappt es beim ___ Mal.
+    options: [nächsten, nächste, nächstes]
+    answer: nächsten
+    explanation:
+      en: The phrase is *beim nächsten Mal*, with *-en* after *beim*.
+      fa: عبارت *beim nächsten Mal* است، با *-en* پس از *beim*.
+      de: Es heißt *beim nächsten Mal*, mit *-en* nach *beim*.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Ich ___ (einladen) dich herzlich zu meinem Geburtstag ein.
+    answers: [lade]
+    explanation:
+      en: "*einladen* is separable. With *ich* the first part is *lade*, and *ein* goes to the end."
+      fa: "*einladen* فعل جداشدنی است. با *ich* بخش اول *lade* است و *ein* به پایان جمله می‌رود."
+      de: "*einladen* ist trennbar. Bei *ich* heißt es *lade*, und *ein* steht am Ende."
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Ich lade dich herzlich zu meinem Geburtstag ___.
+    answers: [ein]
+    explanation:
+      en: "*einladen* is separable, so *ein* goes to the end."
+      fa: "*einladen* فعل جداشدنی است، پس *ein* به پایان جمله می‌رود."
+      de: "*einladen* ist trennbar, also steht *ein* am Ende."
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Ich möchte ___ (du) zu meiner Party einladen.
+    answers: [dich]
+    explanation:
+      en: "*einladen* takes the accusative, and the accusative of *du* is *dich*."
+      fa: "*einladen* با حالت *Akkusativ* می‌آید و حالت *Akkusativ* ضمیر *du* واژهٔ *dich* است."
+      de: "Nach *einladen* kommt der Akkusativ. Der Akkusativ von *du* ist *dich*."
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Ich möchte Sie herzlich ___ unserem Sommerfest einladen.
+    answers: [zu]
+    explanation:
+      en: You invite someone *zu* something, with the dative.
+      fa: کسی را *zu* چیزی دعوت می‌کنید، با حالت *Dativ*.
+      de: Man lädt jemanden *zu* etwas ein, mit dem Dativ.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Ich möchte dich zu ___ (mein) Geburtstagsparty einladen.
+    answers: [meiner]
+    explanation:
+      en: After *zu* comes the dative. *die Party*, so *zu meiner Geburtstagsparty*.
+      fa: پس از *zu* حالت *Dativ* می‌آید. *Geburtstagsparty* اسم مؤنث (*die*) است، پس *zu meiner Geburtstagsparty*.
+      de: Nach *zu* kommt der Dativ. *die Geburtstagsparty*, also *zu meiner Geburtstagsparty*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Danke für die Einladung, ich komme sehr ___!
+    answers: [gern, gerne]
+    explanation:
+      en: You accept with *Ich komme gern!*
+      fa: دعوت را با *Ich komme gern!* می‌پذیرید.
+      de: Man sagt zu mit *Ich komme gern!*
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Ich freue mich schon ___ die Party!
+    answers: [auf]
+    explanation:
+      en: The phrase is *Ich freue mich auf …*, with the accusative.
+      fa: عبارت *Ich freue mich auf …* است، با حالت *Akkusativ*.
+      de: Der Satz heißt *Ich freue mich auf …*, mit dem Akkusativ.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Es tut mir leid, aber ich ___ (können) am Samstag nicht kommen.
+    answers: [kann, konnte, könnte]
+    explanation:
+      en: With *ich* the verb is *kann*, and *kommen* goes to the end.
+      fa: با *ich* فعل *kann* است و *kommen* به پایان جمله می‌رود.
+      de: Bei *ich* heißt es *kann*, und *kommen* steht am Ende.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Leider ___ (können) ich am Samstag nicht kommen, denn ich muss arbeiten.
+    answers: [kann]
+    explanation:
+      en: After *Leider* the verb comes second, before *ich*. *Leider kann ich nicht kommen.*
+      fa: "پس از *Leider* فعل در جایگاه دوم، پیش از *ich*، می‌آید: *Leider kann ich nicht kommen.*"
+      de: "Nach *Leider* steht das Verb an Position 2, vor *ich*: *Leider kann ich nicht kommen.*"
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Danke für die Einladung, aber ich kann am Samstag nicht kommen. Ich muss dir leider ___.
+    answers: [absagen, einen Korb geben]
+    explanation:
+      en: A polite no is *Ich muss leider absagen.* To say no to a person, *absagen* takes the dative, *dir* or *Ihnen*.
+      fa: "پاسخ منفی مؤدبانه *Ich muss leider absagen.* است. برای رد کردن دعوت کسی، *absagen* با حالت *Dativ* می‌آید: *dir* یا *Ihnen*."
+      de: Eine höfliche Absage ist *Ich muss leider absagen.* Einer Person sagt man ab, mit dem Dativ *dir* oder *Ihnen*.
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Schade! Vielleicht ___ (klappen) es beim nächsten Mal.
+    answers: [klappt]
+    explanation:
+      en: With *es* the verb ends in *-t*. *Vielleicht klappt es …*
+      fa: "با *es* فعل شناسهٔ *-t* می‌گیرد: *Vielleicht klappt es …*"
+      de: "Bei *es* endet das Verb auf *-t*: *Vielleicht klappt es …*"
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Schade! Vielleicht klappt es beim ___ (nächst) Mal.
+    answers: [nächsten]
+    explanation:
+      en: The phrase is *beim nächsten Mal*.
+      fa: عبارت *beim nächsten Mal* است.
+      de: Es heißt *beim nächsten Mal*.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Die Party beginnt am Samstag um acht. ___ (können) du kommen?
+    answers: [Kannst, Könntest]
+    explanation:
+      en: With *du* the verb is *kannst*, and it comes first in the question.
+      fa: با *du* فعل *kannst* است و در پرسش در آغاز جمله می‌آید.
+      de: Bei *du* heißt es *kannst*, und das Verb steht in der Frage vorne.
+
+review:
+  reviewer: an independent AI agent (three fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: 4ff93d3aeeecde8f

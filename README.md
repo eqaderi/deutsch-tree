@@ -45,13 +45,13 @@ ending, because the pipeline runs directly in Node.
 | `src/vocabulary-scope/` | Which words are in scope: the extracted word lists in, the scope list in `content/vocabulary/` out. `SCOPE_RULE` is the one setting that decides it. `approval.ts` writes the lists of the vocabulary approval document. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress, name the milestones reached. No interface, no storage; randomness is passed in. |
 | `src/assistant-grading/` | Writing and speaking, which the app cannot score: the official marking criteria (`criteria.ts`), the task as the learner reads it, the prompt to paste into an AI assistant, and the rule for the score out of 100. Pure functions on a task; the app calls no AI service. |
-| `src/audio/` | German in the compiled content to the audio files that say it: `speakable` writes numbers as words, `spoken` gives a piece of German one person says its key in each voice a learner may choose and `spokenBy` a dialogue line its key in its speaker's voice, `spokenItems` finds everything a page can play, `generateAudio` makes the missing files with a voice engine passed in (`piper.ts`), and `cli.ts` is the command. The voices are in `src/content-model/audio.ts`. |
+| `src/audio/` | German in the compiled content to the audio files that say it: `speakable` writes numbers as words and respells what the voice misreads (`pronunciations.ts`), `spoken` gives a piece of German one person says its key in each voice a learner may choose and `spokenBy` a dialogue line its key in its speaker's voice, `spokenItems` finds everything a page can play, `generateAudio` makes the missing files with a voice engine passed in (`piper.ts`), and `cli.ts` is the command. The voices are in `src/content-model/audio.ts`. |
 | `src/anki-export/` | Vocabulary words in, the text of a file that Anki imports out. Pure functions; the app saves the file in the browser. |
 | `src/progress-store/` | Keeps progress in browser storage, with a version number, and writes and reads the progress file a learner exports. It reads every older version and refuses a newer one. It only stores; the learning engine decides how progress changes. |
 | `src/app/` | App shell: routes, tree, node page, test, backup, search page, overview page. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. `persian-spelling.ts` holds the spelling rules of `content/persian-style.md` that a program can check, for content and strings alike. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests of code never depend on the real content. |
-| `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows" or "the exam has 15 parts" or "every vocabulary node holds words of its own level". |
+| `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows" or "the exam has 15 parts" or "every vocabulary node holds words of its own level". They read all of the content, so `vitest.config.ts` gives them a minute per test, not the default 5 seconds. |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/vocabulary-scope/` | The scope rule and the corrections, on invented rows of a word list. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
@@ -186,7 +186,8 @@ GitHub Pages and from a local folder.
   of other questions it is `drawAttempt`. Its page is
   `src/app/VocabularySections.tsx`. The words, as `VocabularyWord`, are what
   an export (Anki) or audio of words reads; `asLearned(word)` is the word
-  with its article, as it is said and asked.
+  with its article, or a reflexive verb with its *sich*, as it is said,
+  shown, exported, found and asked.
 - A vocabulary page ends with the export to Anki (`src/app/AnkiExport.tsx`):
   the words of that node, or of every vocabulary node the learner has
   started, as a file the browser saves. "Started" is `startedVocabulary` in

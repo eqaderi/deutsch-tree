@@ -4,7 +4,7 @@ kind: phrases
 level: B1
 chapter: b1-phrases-opinions
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Disagreeing politely"
   fa: "مخالفت مؤدبانه"
@@ -14,3 +14,276 @@ purpose:
   fa: "بگویید که نظر دیگری دارید، بدون اینکه بی‌ادبانه باشد."
   de: "Sagen, dass man etwas anders sieht, ohne unhöflich zu sein."
 examTasks: [exam-schreiben-2, exam-sprechen-1]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Das sehe ich anders.
+    meaning:
+      en: I see that differently. A clear but polite way to disagree. *Das* comes first, so the verb *sehe* comes before *ich*.
+      fa: «من این را طور دیگری می‌بینم.» راهی روشن ولی مؤدبانه برای مخالفت. *Das* در آغاز جمله است، پس فعل *sehe* پیش از *ich* می‌آید.
+      de: So widerspricht man klar, aber höflich. *Das* steht vorne, darum kommt das Verb *sehe* vor *ich*.
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Das sehe ich anders, Autos sind auf dem Land wichtig.
+      en: I see that differently, cars are important in the country.
+      fa: من این را طور دیگری می‌بینم، در روستا ماشین مهم است.
+
+  - de: Da bin ich anderer Meinung.
+    meaning:
+      en: I have a different opinion there. A fixed phrase; *anderer Meinung* always has the ending *-er*.
+      fa: «در این مورد نظر دیگری دارم.» عبارتی ثابت است و *anderer Meinung* همیشه پایانهٔ *-er* دارد.
+      de: Ein fester Ausdruck. Es heißt immer *anderer Meinung*, mit der Endung *-er*.
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Da bin ich anderer Meinung, denn Hausaufgaben sind wichtig.
+      en: I have a different opinion there, because homework is important.
+      fa: در این مورد نظر دیگری دارم، چون تکلیف شب مهم است.
+
+  - de: Ich glaube nicht, dass …
+    meaning:
+      en: I don't think that … You say carefully that you doubt an idea. After *dass* the verb goes to the end.
+      fa: «فکر نمی‌کنم که …» با احتیاط می‌گویید که به فکری شک دارید. پس از *dass* فعل به پایان جمله می‌رود.
+      de: Man sagt vorsichtig, dass man an einer Idee zweifelt. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Ich glaube nicht, dass das Projekt zu teuer ist.
+      en: I don't think that the project is too expensive.
+      fa: فکر نمی‌کنم این پروژه خیلی گران باشد.
+
+  - de: Das stimmt nicht ganz.
+    meaning:
+      en: That's not quite right. Softer than *Das stimmt nicht.*, because *ganz* says that only a part is wrong.
+      fa: «این کاملاً درست نیست.» ملایم‌تر از *Das stimmt nicht.* است، چون *ganz* نشان می‌دهد فقط بخشی از آن نادرست است.
+      de: Weicher als *Das stimmt nicht.*, denn mit *ganz* sagt man, dass nur ein Teil falsch ist.
+    examTasks: [exam-sprechen-1]
+    example:
+      de: Das stimmt nicht ganz, der Bus fährt auch am Sonntag.
+      en: That's not quite right, the bus runs on Sunday too.
+      fa: این کاملاً درست نیست، اتوبوس یکشنبه هم کار می‌کند.
+
+  - de: Ich verstehe, was du meinst, aber …
+    meaning:
+      en: I understand what you mean, but … First you show that you have listened, then you give your own view. With *Sie* it is *was Sie meinen*.
+      fa: «می‌فهمم منظورت چیست، ولی …» اول نشان می‌دهید که حرف طرف مقابل را شنیده‌اید و بعد نظر خودتان را می‌گویید. با *Sie* می‌شود *was Sie meinen*.
+      de: Zuerst zeigt man, dass man zugehört hat. Dann sagt man die eigene Meinung. Bei *Sie* heißt es *was Sie meinen*.
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Ich verstehe, was du meinst, aber ich möchte lieber zu Hause feiern.
+      en: I understand what you mean, but I would rather celebrate at home.
+      fa: می‌فهمم منظورت چیست، ولی ترجیح می‌دهم در خانه جشن بگیریم.
+
+  - de: Ich bin nicht sicher, ob …
+    meaning:
+      en: I'm not sure whether … A soft doubt about a plan or an idea. After *ob* the verb goes to the end. You can also say *Ich bin mir nicht sicher, ob …*
+      fa: «مطمئن نیستم که …» تردیدی ملایم دربارهٔ برنامه یا فکری. پس از *ob* فعل به پایان جمله می‌رود. شکل *Ich bin mir nicht sicher, ob …* هم به کار می‌رود.
+      de: Ein leiser Zweifel an einem Plan oder einer Idee. Nach *ob* steht das Verb am Ende. Man kann auch sagen *Ich bin mir nicht sicher, ob …*
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Ich bin nicht sicher, ob das Hotel noch Zimmer frei hat.
+      en: I'm not sure whether the hotel still has free rooms.
+      fa: مطمئن نیستم که هتل هنوز اتاق خالی داشته باشد.
+
+  - de: Da muss ich dir widersprechen.
+    meaning:
+      en: I have to disagree with you there. Clear, but still polite. *widersprechen* takes the dative, *dir*, *Ihnen*, *Tom*.
+      fa: "«در این مورد باید با تو مخالفت کنم.» روشن ولی همچنان مؤدبانه. *widersprechen* حالت *Dativ* می‌خواهد: *dir*، *Ihnen*، *Tom*."
+      de: "Klar, aber noch höflich. Nach *widersprechen* kommt der Dativ: *dir*, *Ihnen*, *Tom*."
+    examTasks: [exam-schreiben-2, exam-sprechen-1]
+    example:
+      de: Da muss ich dir widersprechen, Tom, das Museum ist am Montag zu.
+      en: I have to disagree with you there, Tom, the museum is closed on Monday.
+      fa: در این مورد باید با تو مخالفت کنم، تام، موزه دوشنبه‌ها تعطیل است.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: "Lisa schreibt im Forum: „Autos sollten in der Stadt verboten sein.“ Sie sehen das anders und antworten höflich. Was schreiben Sie?"
+    options:
+      - Das ist doch Quatsch, Lisa.
+      - Ich sehe das andere, Lisa.
+      - Das sehe ich anders, Lisa.
+    answer: Das sehe ich anders, Lisa.
+    explanation:
+      en: The polite phrase is *Das sehe ich anders.* *Das ist doch Quatsch* is rude, and *das andere* means "the other one".
+      fa: عبارت مؤدبانه *Das sehe ich anders.* است. *Das ist doch Quatsch* بی‌ادبانه است و *das andere* یعنی «آن یکی».
+      de: Höflich ist *Das sehe ich anders.* *Das ist doch Quatsch* ist unhöflich, und *das andere* heißt etwas anderes.
+
+  - id: q2
+    type: gap-fill
+    prompt: Da bin ich ___ Meinung, denn Hausaufgaben sind wichtig.
+    options: [anderer, andere, anderen]
+    answer: anderer
+    explanation:
+      en: The fixed phrase is *anderer Meinung*, with the ending *-er*.
+      fa: عبارت ثابت *anderer Meinung* است، با پایانهٔ *-er*.
+      de: Der feste Ausdruck heißt *anderer Meinung*, mit der Endung *-er*.
+
+  - id: q3
+    type: true-false
+    prompt: Ich glaube nicht, dass das eine gute Idee ist.
+    answer: true
+    explanation:
+      en: "*Ich glaube nicht, dass …* with the verb *ist* at the end is correct."
+      fa: عبارت *Ich glaube nicht, dass …* با فعل *ist* در پایان جمله درست است.
+      de: "*Ich glaube nicht, dass …* mit dem Verb *ist* am Ende ist richtig."
+
+  - id: q4
+    type: true-false
+    prompt: Ich bin nicht sicher, ob das ist eine gute Lösung.
+    answer: false
+    explanation:
+      en: After *ob* the verb goes to the end. *Ich bin nicht sicher, ob das eine gute Lösung ist.*
+      fa: "پس از *ob* فعل به پایان جمله می‌رود: *Ich bin nicht sicher, ob das eine gute Lösung ist.*"
+      de: "Nach *ob* steht das Verb am Ende: *Ich bin nicht sicher, ob das eine gute Lösung ist.*"
+
+  - id: q5
+    type: find-error
+    prompt: Da muss ich dich leider widersprechen.
+    answer: dich
+    explanation:
+      en: "*widersprechen* takes the dative. *Da muss ich dir leider widersprechen.*"
+      fa: "*widersprechen* حالت *Dativ* می‌خواهد: *Da muss ich dir leider widersprechen.*"
+      de: "Nach *widersprechen* kommt der Dativ: *Da muss ich dir leider widersprechen.*"
+
+  - id: q6
+    type: word-order
+    answers:
+      - ["ich glaube nicht,", dass, das Projekt, zu teuer, ist]
+    explanation:
+      en: "After *dass* comes the subject *das Projekt*, and the verb *ist* goes to the end: *Ich glaube nicht, dass das Projekt zu teuer ist.*"
+      fa: "پس از *dass* فاعل یعنی *das Projekt* می‌آید و فعل *ist* به پایان جمله می‌رود: *Ich glaube nicht, dass das Projekt zu teuer ist.*"
+      de: "Nach *dass* kommt das Subjekt *das Projekt*, und das Verb *ist* steht am Ende: *Ich glaube nicht, dass das Projekt zu teuer ist.*"
+
+  - id: q7
+    type: gap-fill
+    prompt: Ich verstehe, ___ du meinst, aber ich sehe das anders.
+    options: [dass, was, ob]
+    answer: was
+    explanation:
+      en: The phrase is *Ich verstehe, was du meinst, aber …* *was* asks for the thing you mean.
+      fa: عبارت *Ich verstehe, was du meinst, aber …* است. *was* به آنچه منظور طرف مقابل است اشاره دارد.
+      de: Der Ausdruck heißt *Ich verstehe, was du meinst, aber …* Mit *was* fragt man nach der Sache, die man meint.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Das ___ (sehen) ich anders, Autos sind auf dem Land wichtig.
+    answers: [sehe]
+    explanation:
+      en: "*Das* comes first, then the verb: *Das sehe ich anders.*"
+      fa: "*Das* در آغاز جمله است و پس از آن فعل می‌آید: *Das sehe ich anders.*"
+      de: "*Das* steht vorne, dann kommt das Verb: *Das sehe ich anders.*"
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Tut mir leid, aber das sehe ich ganz ___.
+    answers: [anders]
+    explanation:
+      en: The phrase is *Das sehe ich anders.*
+      fa: عبارت *Das sehe ich anders.* است.
+      de: Der Ausdruck heißt *Das sehe ich anders.*
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Da bin ich ___ (ander-) Meinung.
+    answers: [anderer]
+    explanation:
+      en: The fixed phrase is *anderer Meinung*, with the ending *-er*.
+      fa: عبارت ثابت *anderer Meinung* است، با پایانهٔ *-er*.
+      de: Der feste Ausdruck heißt *anderer Meinung*, mit der Endung *-er*.
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Ich glaube nicht, ___ das eine gute Idee ist.
+    answers: [dass]
+    explanation:
+      en: The phrase is *Ich glaube nicht, dass …*, and after *dass* the verb goes to the end.
+      fa: عبارت *Ich glaube nicht, dass …* است و پس از *dass* فعل به پایان جمله می‌رود.
+      de: Der Ausdruck heißt *Ich glaube nicht, dass …*, und nach *dass* steht das Verb am Ende.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Ich bin nicht sicher, ___ das eine gute Idee ist.
+    answers: [ob, dass]
+    explanation:
+      en: The phrase is *Ich bin nicht sicher, ob …* *dass* is also possible, but *ob* is more usual.
+      fa: عبارت *Ich bin nicht sicher, ob …* است. *dass* هم ممکن است، ولی *ob* رایج‌تر است.
+      de: Der Ausdruck heißt *Ich bin nicht sicher, ob …* *dass* geht auch, aber *ob* ist üblicher.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Ich bin ___ (ich) nicht sicher, ob wir genug Zeit haben.
+    answers: [mir]
+    explanation:
+      en: "*Ich bin mir nicht sicher, ob …* is the same phrase with the dative *mir*."
+      fa: عبارت *Ich bin mir nicht sicher, ob …* همان عبارت است، با *mir* در حالت *Dativ*.
+      de: "*Ich bin mir nicht sicher, ob …* ist der gleiche Ausdruck, mit dem Dativ *mir*."
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Da muss ich ___ (du) widersprechen.
+    answers: [dir]
+    explanation:
+      en: "*widersprechen* takes the dative, and the dative of *du* is *dir*."
+      fa: "*widersprechen* حالت *Dativ* می‌خواهد و حالت *Dativ* ضمیر *du* می‌شود *dir*."
+      de: "Nach *widersprechen* kommt der Dativ, und der Dativ von *du* ist *dir*."
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Da ___ (müssen) ich dir widersprechen, Tom.
+    answers: [muss, musste, müsste]
+    explanation:
+      en: The phrase is *Da muss ich dir widersprechen.* *müsste* is a little softer and also right.
+      fa: عبارت *Da muss ich dir widersprechen.* است. *müsste* کمی ملایم‌تر است و آن هم درست است.
+      de: Der Ausdruck heißt *Da muss ich dir widersprechen.* *müsste* ist etwas weicher und auch richtig.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Ich ___ (verstehen), was du meinst, aber ich möchte lieber zu Hause feiern.
+    answers: [verstehe]
+    explanation:
+      en: The phrase is *Ich verstehe, was du meinst, aber …*
+      fa: عبارت *Ich verstehe, was du meinst, aber …* است.
+      de: Der Ausdruck heißt *Ich verstehe, was du meinst, aber …*
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Ich verstehe, ___ Sie meinen, aber das ist zu teuer.
+    answers: [was]
+    explanation:
+      en: The phrase is *Ich verstehe, was Sie meinen, aber …*
+      fa: عبارت *Ich verstehe, was Sie meinen, aber …* است.
+      de: Der Ausdruck heißt *Ich verstehe, was Sie meinen, aber …*
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Das ___ (stimmen) nicht ganz, der Bus fährt auch am Sonntag.
+    answers: [stimmt]
+    explanation:
+      en: The phrase is *Das stimmt nicht ganz.* With *das* the verb is *stimmt*.
+      fa: عبارت *Das stimmt nicht ganz.* است. با *das* فعل *stimmt* می‌شود.
+      de: Der Ausdruck heißt *Das stimmt nicht ganz.* Bei *das* heißt das Verb *stimmt*.
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Ich glaube nicht, dass das Projekt zu teuer ___ (sein).
+    answers: [ist, wäre, war]
+    explanation:
+      en: After *dass* the verb goes to the end. *wäre* and *war* are also correct German.
+      fa: پس از *dass* فعل به پایان جمله می‌رود. *wäre* و *war* هم درست‌اند.
+      de: Nach *dass* steht das Verb am Ende. *wäre* und *war* sind auch richtig.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Ich bin nicht sicher, ob das Hotel noch Zimmer frei ___ (haben).
+    answers: [hat, hätte, hatte]
+    explanation:
+      en: After *ob* the verb goes to the end. With *das Hotel* it is *hat*.
+      fa: پس از *ob* فعل به پایان جمله می‌رود. با *das Hotel* شکل فعل *hat* است.
+      de: Nach *ob* steht das Verb am Ende. Bei *das Hotel* heißt es *hat*.
+
+review:
+  reviewer: an independent AI agent (a fresh subagent, blind to the key)
+  date: 2026-11-28
+  pool: 905da81eb271555b

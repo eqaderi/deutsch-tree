@@ -1,38 +1,353 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A definition in simple German shows the word's place in a sentence with "…", since a small
+# word is hard to say in other words. Each word with several uses is taught in one of them:
+# "als" for one time in the past, "doch" as the answer to a negative question, "mal" in a
+# request, "dabei" as "with you".
 id: vocabulary-connectors
 kind: vocabulary
 level: A2
 chapter: a2-words-small-words
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Because, that, if: connecting words"
   fa: "چون، که، اگر: واژه‌های ربط"
   de: "Weil, dass, wenn: Verbindungswörter"
+attemptSize: 15
 words:
   - word: als
+    class: conjunction
+    level: A2
+    meaning:
+      en: when (one time in the past)
+      fa: وقتی که (یک بار در گذشته)
+    definition: "für eine Zeit in der Vergangenheit, die nur einmal war: … ich klein war, wohnten wir in Köln."
+    example:
+      de: Als ich nach Deutschland kam, konnte ich kein Deutsch.
+      en: When I came to Germany, I couldn't speak any German.
+      fa: وقتی به آلمان آمدم، آلمانی بلد نبودم.
+
   - word: dass
+    class: conjunction
+    level: A2
+    meaning:
+      en: that (I know that …)
+      fa: که (می‌دانم که …)
+    definition: "leitet einen Satz ein, der sagt, was man hofft, denkt oder weiß: Ich hoffe, … du bald kommst."
+    example:
+      de: Ich hoffe, dass du bald wieder gesund bist.
+      en: I hope that you'll soon be well again.
+      fa: امیدوارم که به‌زودی حالت خوب شود.
+
   - word: weil
+    class: conjunction
+    level: A2
+    meaning:
+      en: because
+      fa: چون، زیرا
+    definition: "nennt den Grund: Ich bleibe zu Hause, … ich krank bin."
+    example:
+      de: Ich komme heute nicht, weil ich arbeiten muss.
+      en: I'm not coming today because I have to work.
+      fa: امروز نمی‌آیم، چون باید کار کنم.
+    alsoAccepted: [da, denn]
+
   - word: wenn
+    class: conjunction
+    level: A2
+    meaning:
+      en: if; whenever
+      fa: اگر؛ هر وقت که
+    definition: "für eine Bedingung oder für jedes Mal: … es regnet, bleiben wir zu Hause."
+    example:
+      de: Wenn du Zeit hast, ruf mich an.
+      en: If you have time, give me a call.
+      fa: اگر وقت داری، به من زنگ بزن.
+    alsoAccepted: [falls]
+    tooCloseTo: [als]
+
   - word: deshalb
+    class: adverb
+    level: A2
+    meaning:
+      en: that's why, for this reason
+      fa: به همین دلیل، برای همین
+    definition: "aus diesem Grund: Ich bin krank, … bleibe ich zu Hause."
+    example:
+      de: Es regnet, deshalb nehme ich den Bus.
+      en: It's raining, that's why I'm taking the bus.
+      fa: باران می‌بارد، به همین دلیل با اتوبوس می‌روم.
+    alsoAccepted: [deswegen, darum, daher, also]
+
   - word: außerdem
+    class: adverb
+    level: A2
+    meaning:
+      en: besides, in addition
+      fa: علاوه بر این، به‌علاوه
+    definition: "und noch dazu: Die Wohnung ist schön, … ist sie billig."
+    example:
+      de: Das Hotel liegt zentral, außerdem ist das Frühstück sehr gut.
+      en: The hotel is central; besides, the breakfast is very good.
+      fa: هتل در مرکز شهر است؛ علاوه بر این، صبحانه‌اش هم خیلی خوب است.
+    alsoAccepted: [zudem, dazu, darüber hinaus, zusätzlich]
+
   - word: sonst
+    class: adverb
+    level: A2
+    meaning:
+      en: otherwise, or else
+      fa: وگرنه، در غیر این صورت
+    definition: "wenn nicht: Beeil dich, … kommen wir zu spät."
+    example:
+      de: Nimm einen Schirm mit, sonst wirst du nass.
+      en: Take an umbrella, otherwise you'll get wet.
+      fa: چتر با خودت ببر، وگرنه خیس می‌شوی.
+    alsoAccepted: [andernfalls, ansonsten]
+
   - word: doch
+    class: particle
+    level: A2
+    meaning:
+      en: yes (to contradict a negative question)
+      fa: چرا (در پاسخ مثبت به پرسش منفی)
+    definition: "ja, als Antwort auf eine Frage mit „nicht“ oder „kein“: Kommst du nicht mit? – …, ich komme!"
+    example:
+      de: Hast du keinen Hunger? – Doch, ich habe großen Hunger.
+      en: Aren't you hungry? – Yes, I'm very hungry.
+      fa: گرسنه نیستی؟ – چرا، خیلی گرسنه‌ام.
+    tooCloseTo: [mal]
+
   - word: mal
+    class: particle
+    level: A2
+    meaning:
+      en: just (makes a request softer, as in "Just listen!")
+      fa: یک لحظه، یک (برای نرم‌تر کردن خواهش)
+    definition: "macht eine Bitte freundlicher und lockerer: Komm bitte … her!"
+    example:
+      de: Kannst du mir mal helfen?
+      en: Can you give me a hand for a moment?
+      fa: می‌توانی یک لحظه کمکم کنی؟
+    alsoAccepted: [einmal, doch]
+    tooCloseTo: [doch]
+
   - word: sogar
+    class: adverb
+    level: A2
+    meaning:
+      en: even (more than you would expect)
+      fa: حتی
+    definition: "und das ist mehr, als man denkt: Er spricht fünf Sprachen, … Chinesisch."
+    example:
+      de: Im Winter schwimmt mein Opa sogar im See.
+      en: My grandpa even swims in the lake in winter.
+      fa: پدربزرگم در زمستان حتی در دریاچه شنا می‌کند.
+    alsoAccepted: [selbst]
+
   - word: eigentlich
+    class: adverb
+    level: A2
+    meaning:
+      en: actually (what was really meant or planned)
+      fa: در اصل، راستش
+    definition: "so, wie es geplant war oder wirklich ist: … wollte ich heute joggen, aber es regnet."
+    example:
+      de: Eigentlich wollte ich heute joggen, aber es regnet.
+      en: I actually wanted to go jogging today, but it's raining.
+      fa: در اصل می‌خواستم امروز بدوم، اما باران می‌بارد.
+    alsoAccepted: [ursprünglich]
+
   - word: außer
+    class: preposition
+    level: A2
+    meaning:
+      en: except, apart from
+      fa: به جز، غیر از
+    definition: "ohne diese eine Person oder Sache: Alle kommen, … Peter."
+    example:
+      de: Außer mir waren alle schon da.
+      en: Apart from me, everyone was already there.
+      fa: به جز من، همه آنجا بودند.
+    alsoAccepted: [bis auf, abgesehen von, ausgenommen]
+
   - word: wegen
+    class: preposition
+    level: A2
+    meaning:
+      en: because of
+      fa: به خاطر، به دلیل
+    definition: "nennt den Grund, mit einem Nomen: Das Spiel fällt … des Regens aus."
+    example:
+      de: Wegen des Streiks fährt heute kein Zug.
+      en: Because of the strike there are no trains today.
+      fa: به خاطر اعتصاب، امروز هیچ قطاری حرکت نمی‌کند.
+    alsoAccepted: [aufgrund, infolge]
+
   - word: anders
+    class: adverb
+    level: A2
+    meaning:
+      en: differently, in another way
+      fa: جور دیگر، به شکل دیگری
+    definition: nicht so, sondern auf eine andere Art
+    example:
+      de: In Österreich sagt man das anders.
+      en: In Austria they say that differently.
+      fa: در اتریش این را جور دیگری می‌گویند.
+    tooCloseTo: [verschieden]
+
   - word: selbst
+    class: pronoun
+    level: A2
+    meaning:
+      en: myself, yourself … (in person, without help)
+      fa: خود (خودم، خودت …، بدون کمک دیگران)
+    definition: "ohne Hilfe von einer anderen Person: Das habe ich ganz allein … gemacht."
+    example:
+      de: Hast du den Kuchen selbst gebacken?
+      en: Did you bake the cake yourself?
+      fa: این کیک را خودت پختی؟
+    alsoAccepted: [selber]
+    tooCloseTo: [sogar, eigen]
+
   - word: eigen
+    class: adjective
+    level: A2
+    meaning:
+      en: own (belonging to oneself)
+      fa: شخصی، مال خود
+    definition: so, dass es nur dieser einen Person gehört und nicht anderen
+    example:
+      de: Meine Tochter möchte ein eigenes Zimmer.
+      en: My daughter would like her own room.
+      fa: دخترم اتاق شخصی می‌خواهد.
+    alsoAccepted: [eigene, eigenes, eigener]
+    tooCloseTo: [selbst]
+
   - word: einzeln
+    class: adjective
+    level: A2
+    meaning:
+      en: one by one, individually (not together)
+      fa: تک‌تک، جداجدا
+    definition: nicht zusammen mit den anderen, sondern jeder für sich allein
+    example:
+      de: Die Schüler kommen einzeln ins Zimmer.
+      en: The pupils come into the room one by one.
+      fa: دانش‌آموزان تک‌تک وارد اتاق می‌شوند.
+
   - word: verschieden
+    class: adjective
+    level: A2
+    meaning:
+      en: different, various
+      fa: گوناگون، مختلف
+    definition: nicht gleich, sondern von mehreren Arten
+    example:
+      de: In der Bäckerei gibt es verschiedene Brötchen.
+      en: There are various kinds of rolls at the bakery.
+      fa: در نانوایی نان‌های گوناگونی هست.
+    alsoAccepted: [unterschiedlich, verschiedene, unterschiedliche, diverse]
+    tooCloseTo: [anders]
+
   - word: her
+    class: adverb
+    level: A2
+    meaning:
+      en: (to) here, towards the speaker (as in "Come here!")
+      fa: به این سو، به طرف گوینده
+    definition: "zu mir, zu dem Ort, wo ich bin: Komm …!"
+    example:
+      de: Komm bitte mal her!
+      en: Come here for a moment, please!
+      fa: لطفاً یک لحظه بیا اینجا!
+    alsoAccepted: [hierher]
+    tooCloseTo: [hin]
+
   - word: hin
+    class: adverb
+    level: A2
+    meaning:
+      en: there, away from the speaker (as in "Go there!")
+      fa: به آن سو، دور از گوینده
+    definition: "von mir weg, zu einem anderen Ort: Das Konzert ist heute. Gehst du …?"
+    example:
+      de: Das Konzert ist am Samstag. Gehst du hin?
+      en: The concert is on Saturday. Are you going?
+      fa: کنسرت شنبه است. تو هم می‌روی؟
+    alsoAccepted: [dahin, dorthin]
+    tooCloseTo: [her]
+
   - word: heraus
+    class: adverb
+    level: A2
+    meaning:
+      en: out (from inside, towards the speaker)
+      fa: بیرون (از درون به سوی گوینده)
+    definition: "von drinnen nach draußen, zu mir: Komm aus dem Wasser …!"
+    example:
+      de: Er holt sein Handy aus der Tasche heraus.
+      en: He takes his phone out of his bag.
+      fa: تلفن همراهش را از کیفش بیرون می‌آورد.
+    alsoAccepted: [raus]
+    tooCloseTo: [herein]
+
   - word: herein
+    class: adverb
+    level: A2
+    meaning:
+      en: in (from outside, towards the speaker, as in "Come in!")
+      fa: تو، داخل (از بیرون به سوی گوینده)
+    definition: "von draußen nach drinnen, zu mir: Kommen Sie doch …!"
+    example:
+      de: Kommen Sie doch herein!
+      en: Do come in!
+      fa: بفرمایید داخل!
+    alsoAccepted: [rein]
+    tooCloseTo: [heraus]
+
   - word: dabei
+    class: adverb
+    level: A2
+    meaning:
+      en: with you, on you (to have something with you)
+      fa: همراه (با خود)
+    definition: "so, dass man es bei sich hat: Hast du deinen Ausweis …?"
+    example:
+      de: Ich habe leider kein Geld dabei.
+      en: Unfortunately I don't have any money on me.
+      fa: متأسفانه پولی همراهم نیست.
+
   - word: genau
+    class: adjective
+    level: A2
+    meaning:
+      en: exact, exactly
+      fa: دقیق، دقیقاً
+    definition: "ganz richtig, ohne Fehler: Meine Uhr geht sehr …"
+    example:
+      de: Weißt du die genaue Adresse?
+      en: Do you know the exact address?
+      fa: نشانی دقیق را می‌دانی؟
+    alsoAccepted: [exakt, genaue, exakte]
+
   - word: fast
+    class: adverb
+    level: A2
+    meaning:
+      en: almost, nearly
+      fa: تقریباً (هنوز نه کاملاً)
+    definition: "nicht ganz, aber nur ein bisschen weniger: Das Glas ist … voll."
+    example:
+      de: Ich bin fast fertig.
+      en: I'm almost done.
+      fa: تقریباً کارم تمام شده است.
+    alsoAccepted: [beinahe, nahezu]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 102 questions)
+  date: 2026-11-28
+  pool: 7ef1fdf3d89f9b29

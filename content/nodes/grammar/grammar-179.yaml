@@ -4,10 +4,359 @@ kind: grammar
 level: A2
 chapter: a2-relative-clauses
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-177]
 title:
   en: "Embedded relative clause"
-  fa: "جملهٔ موصولی در میان جملهٔ اصلی"
+  fa: "جملهٔ موصولی در میان جملهٔ پایه"
   de: "Relativsatz in der Mitte vom Hauptsatz"
+
+explanations:
+  en:
+    rule: >
+      A relative clause stands right after its noun. When the noun begins the
+      main clause, the relative clause goes into the middle of it: *Der Mann,
+      der dort steht, ist mein Chef.* It then has a comma before it and a
+      comma after it. The noun and its relative clause together are position
+      1, so after the second comma comes the conjugated verb of the main
+      clause, in position 2, and then the rest. Each clause keeps its own
+      verb: *steht* goes with *der* and stands at the end of the relative
+      clause; *ist* goes with *der Mann*. The pronoun is in the *Nominativ*
+      or the *Akkusativ*, as in any relative clause: *Der Tisch, den wir
+      gekauft haben, war kaputt.*
+  fa:
+    rule: >
+      جملهٔ موصولی درست پس از اسم خود می‌آید. اگر این اسم در آغاز جملهٔ
+      پایه باشد، جملهٔ موصولی در میان جملهٔ پایه قرار می‌گیرد: *Der Mann,
+      der dort steht, ist mein Chef.* فارسی هم همین‌طور است: «مردی که آن‌جا
+      ایستاده رئیس من است». در آلمانی جملهٔ موصولی در این حالت یک ویرگول پیش
+      از خود و یک ویرگول پس از خود دارد. اسم و جملهٔ موصولی‌اش روی هم جایگاه
+      اول جملهٔ پایه‌اند؛ بنابراین پس از ویرگول دوم فعل صرف‌شدهٔ جملهٔ پایه در
+      جایگاه دوم می‌آید و سپس بقیهٔ جمله. هر جمله فعل خودش را دارد: *steht*
+      به *der* برمی‌گردد و در پایان جملهٔ موصولی می‌آید و *ist* به *der
+      Mann*. ضمیر موصولی مانند هر جملهٔ موصولی دیگر در حالت *Nominativ* یا
+      *Akkusativ* است: *Der Tisch, den wir gekauft haben, war kaputt.*
+  de:
+    rule: >
+      Ein Relativsatz steht direkt nach seinem Nomen. Steht das Nomen am
+      Anfang vom Hauptsatz, kommt der Relativsatz in die Mitte: *Der Mann,
+      der dort steht, ist mein Chef.* Dann steht vor dem Relativsatz ein
+      Komma und nach ihm auch. Das Nomen und der Relativsatz sind zusammen
+      Position 1. Nach dem zweiten Komma kommt also das konjugierte Verb vom
+      Hauptsatz auf Position 2, dann der Rest. Jeder Satz hat sein eigenes
+      Verb: *steht* gehört zu *der* und steht am Ende vom Relativsatz. *Ist*
+      gehört zu *der Mann*. Das Relativpronomen steht wie immer im Nominativ
+      oder im Akkusativ: *Der Tisch, den wir gekauft haben, war kaputt.*
+
+table:
+  columns:
+    - { en: "Position 1: noun", fa: "جایگاه اول: اسم", de: "Position 1: Nomen" }
+    - { en: Relative clause, fa: جملهٔ موصولی, de: Relativsatz }
+    - { en: "Position 2: verb", fa: "جایگاه دوم: فعل", de: "Position 2: Verb" }
+    - { en: Rest of the main clause, fa: بقیهٔ جملهٔ پایه, de: Rest vom Hauptsatz }
+  rows:
+    - ["Der Mann,", "der dort steht,", ist, mein Chef.]
+    - ["Die Frau,", "die neben uns wohnt,", arbeitet, im Krankenhaus.]
+    - ["Das Auto,", "das vor dem Haus steht,", gehört, meinem Bruder.]
+    - ["Die Leute,", "die hier warten,", haben, einen Termin.]
+    - ["Der Tisch,", "den wir gekauft haben,", war, kaputt.]
+    - ["Das Buch,", "das du mir geschenkt hast,", ist, sehr spannend.]
+
+# Top: a main clause in three slots, the verb (shaded) in position 2. Below:
+# the same clause with a relative clause after the noun. The noun and the
+# relative clause (shaded inside) are one tall slot, position 1, and the verb
+# still comes second.
+diagrams:
+  - caption:
+      en: >
+        *Der Mann ist mein Chef.* has *Der Mann* in position 1 and *ist* in
+        position 2. In *Der Mann, der dort steht, ist mein Chef.* the relative
+        clause comes right after *Der Mann*. Both together are position 1, so
+        *ist* still comes second, after the second comma.
+      fa: >
+        در *Der Mann ist mein Chef.* عبارت *Der Mann* در جایگاه اول و *ist* در
+        جایگاه دوم است. در *Der Mann, der dort steht, ist mein Chef.* جملهٔ
+        موصولی درست پس از *Der Mann* می‌آید. این دو روی هم جایگاه اول‌اند، پس
+        *ist* باز هم دوم است و پس از ویرگول دوم می‌آید.
+      de: >
+        In *Der Mann ist mein Chef.* ist *Der Mann* Position 1 und *ist*
+        Position 2. In *Der Mann, der dort steht, ist mein Chef.* steht der
+        Relativsatz direkt nach *Der Mann*. Beides zusammen ist Position 1.
+        Darum kommt *ist* nach dem zweiten Komma auf Position 2.
+    labels:
+      main: { en: main clause, fa: جملهٔ پایه, de: Hauptsatz }
+      inside: { en: with a relative clause, fa: با جملهٔ موصولی, de: mit Relativsatz }
+      pos1: { en: position 1, fa: جایگاه اول, de: Position 1 }
+      pos2: { en: position 2, fa: جایگاه دوم, de: Position 2 }
+    svg: |
+      <svg viewBox="0 0 320 254">
+        <text class="note" x="160" y="16" text-anchor="middle">{{main}}</text>
+        <!-- Der Mann ist mein Chef. -->
+        <rect class="surface" x="2" y="24" width="148" height="40"/>
+        <rect class="shade" x="154" y="24" width="40" height="40"/>
+        <rect class="surface" x="198" y="24" width="120" height="40"/>
+        <text class="label" x="76" y="50" text-anchor="middle">Der Mann</text>
+        <text class="label" x="174" y="50" text-anchor="middle">ist</text>
+        <text class="label" x="258" y="50" text-anchor="middle">mein Chef.</text>
+        <text class="note" x="76" y="84" text-anchor="middle">{{pos1}}</text>
+        <text class="note" x="174" y="84" text-anchor="middle">{{pos2}}</text>
+        <text class="note" x="160" y="122" text-anchor="middle">{{inside}}</text>
+        <!-- Der Mann, der dort steht, ist mein Chef. -->
+        <rect class="surface" x="2" y="130" width="148" height="92"/>
+        <rect class="shade" x="154" y="130" width="40" height="92"/>
+        <rect class="surface" x="198" y="130" width="120" height="92"/>
+        <text class="label" x="76" y="156" text-anchor="middle">Der Mann,</text>
+        <rect class="shade" x="6" y="170" width="140" height="44"/>
+        <text class="label" x="76" y="198" text-anchor="middle">der dort steht,</text>
+        <text class="label" x="174" y="182" text-anchor="middle">ist</text>
+        <text class="label" x="258" y="182" text-anchor="middle">mein Chef.</text>
+        <text class="note" x="76" y="244" text-anchor="middle">{{pos1}}</text>
+        <text class="note" x="174" y="244" text-anchor="middle">{{pos2}}</text>
+      </svg>
+
+examples:
+  - de: Der Mann, der dort steht, ist mein Chef.
+    en: The man standing over there is my boss.
+    fa: مردی که آن‌جا ایستاده رئیس من است.
+  - de: Die Frau, die neben uns wohnt, arbeitet im Krankenhaus.
+    en: The woman who lives next door to us works at the hospital.
+    fa: خانمی که همسایهٔ ماست در بیمارستان کار می‌کند.
+  - de: Das Auto, das vor dem Haus steht, gehört meinem Bruder.
+    en: The car in front of the house belongs to my brother.
+    fa: ماشینی که جلوی خانه پارک شده مال برادرم است.
+  - de: Die Leute, die hier warten, haben einen Termin.
+    en: The people waiting here have an appointment.
+    fa: کسانی که این‌جا منتظرند وقت قبلی دارند.
+  - de: Der Tisch, den wir gekauft haben, war kaputt.
+    en: The table we bought was broken.
+    fa: میزی که خریدیم خراب بود.
+  - de: Das Buch, das du mir geschenkt hast, ist sehr spannend.
+    en: The book you gave me is very exciting.
+    fa: کتابی که به من هدیه دادی خیلی هیجان‌انگیز است.
+  - de: Der Zug, der um acht Uhr fährt, ist heute sehr voll.
+    en: The train that leaves at eight is very full today.
+    fa: قطاری که ساعت هشت حرکت می‌کند امروز خیلی شلوغ است.
+  - de: Die Kinder, die im Garten spielen, sind meine Neffen.
+    en: The children playing in the garden are my nephews.
+    fa: بچه‌هایی که در باغ بازی می‌کنند برادرزاده‌های من‌اند.
+
+mistakes:
+  - wrong: Der Mann, der dort steht, mein Chef ist.
+    right: Der Mann, der dort steht, ist mein Chef.
+    why:
+      en: "Only the relative clause has its verb at the end. The main clause goes on with its verb in position 2: *ist*."
+      fa: "فقط فعل جملهٔ موصولی به پایان می‌رود. جملهٔ پایه با فعلش در جایگاه دوم ادامه پیدا می‌کند: *ist*."
+      de: "Nur im Relativsatz steht das Verb am Ende. Im Hauptsatz steht das Verb auf Position 2: *ist*."
+  - wrong: Der Mann, der dort steht ist mein Chef.
+    right: Der Mann, der dort steht, ist mein Chef.
+    why:
+      en: "A relative clause in the middle has a comma at both ends: one before *der* and one after *steht*."
+      fa: "جملهٔ موصولی میانی در هر دو سو ویرگول دارد: یکی پیش از *der* و یکی پس از *steht*."
+      de: "Ein Relativsatz in der Mitte hat zwei Kommas: vor *der* und nach *steht*."
+  - wrong: Der Mann ist, der dort steht, mein Chef.
+    right: Der Mann, der dort steht, ist mein Chef.
+    why:
+      en: "The relative clause comes right after its noun, *der Mann*, not after the verb."
+      fa: "جملهٔ موصولی درست پس از اسم خود، *der Mann*، می‌آید، نه پس از فعل."
+      de: "Der Relativsatz steht direkt nach dem Nomen *der Mann*, nicht nach dem Verb."
+  - wrong: Die Frau, die ich gestern getroffen habe, heiße Anna.
+    right: Die Frau, die ich gestern getroffen habe, heißt Anna.
+    why:
+      en: "The verb of the main clause goes with *die Frau*, not with *ich* from the relative clause: *heißt*."
+      fa: "فعل جملهٔ پایه به *die Frau* برمی‌گردد، نه به *ich* در جملهٔ موصولی: *heißt*."
+      de: "Das Verb vom Hauptsatz gehört zu *die Frau*, nicht zu *ich*: *heißt*."
+  - wrong: Der Mann, der dort steht, er ist mein Chef.
+    right: Der Mann, der dort steht, ist mein Chef.
+    why:
+      en: "*Der Mann* is already the subject of the main clause; do not repeat it with *er*."
+      fa: "*der Mann* خودش فاعل جملهٔ پایه است و نباید آن را با *er* تکرار کرد."
+      de: "*Der Mann* ist schon das Subjekt. Man sagt nicht noch einmal *er*."
+
+questions:
+  - id: choice-1
+    type: multiple-choice
+    prompt: Der Mann, der dort steht, …
+    options: [mein Chef ist., ist er mein Chef., ist mein Chef.]
+    answer: ist mein Chef.
+    explanation:
+      en: "*Der Mann, der dort steht,* is position 1, so the verb *ist* comes next, in position 2."
+      fa: "*Der Mann, der dort steht,* جایگاه اول است، پس فعل *ist* بلافاصله پس از آن در جایگاه دوم می‌آید."
+      de: "*Der Mann, der dort steht,* ist Position 1. Darum kommt das Verb *ist* direkt danach."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Die Frau, ___, arbeitet bei der Post.
+    options: [die wohnt neben mir, die neben mir wohnt, wohnt die neben mir]
+    answer: die neben mir wohnt
+    explanation:
+      en: "In the relative clause the verb goes to the end: *die neben mir wohnt*."
+      fa: "در جملهٔ موصولی فعل به پایان می‌رود: *die neben mir wohnt*."
+      de: "Im Relativsatz steht das Verb am Ende: *die neben mir wohnt*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Das Buch ist sehr spannend. Du hast es mir geschenkt.
+    options:
+      - Das Buch ist, das du mir geschenkt hast, sehr spannend.
+      - Das Buch, das du mir geschenkt hast, sehr spannend ist.
+      - Das Buch, das du mir geschenkt hast, ist sehr spannend.
+    answer: Das Buch, das du mir geschenkt hast, ist sehr spannend.
+    explanation:
+      en: "The relative clause comes right after *Das Buch*, and then the main verb *ist* in position 2."
+      fa: "جملهٔ موصولی درست پس از *Das Buch* می‌آید و پس از آن فعل جملهٔ پایه، *ist*، در جایگاه دوم."
+      de: "Der Relativsatz steht direkt nach *Das Buch*. Dann kommt das Verb *ist* auf Position 2."
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Mann, den ich suche, ___ Herr Braun.
+    options: [heiße, heißt, heißen]
+    answer: heißt
+    explanation:
+      en: "The main verb goes with *der Mann*, third person singular: *heißt*. *Ich* belongs to the relative clause."
+      fa: "فعل جملهٔ پایه به *der Mann* برمی‌گردد که سوم‌شخص مفرد است: *heißt*. *ich* به جملهٔ موصولی تعلق دارد."
+      de: "Das Verb gehört zu *der Mann*: *heißt*. *Ich* gehört zum Relativsatz."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Kinder, die im Garten spielen, ___ meine Neffen.
+    options: [ist, seid, sind]
+    answer: sind
+    explanation:
+      en: "The subject of the main clause is *die Kinder*, a plural: *sind*."
+      fa: "فاعل جملهٔ پایه *die Kinder* است که جمع است: *sind*."
+      de: "Das Subjekt vom Hauptsatz ist *die Kinder*, also Plural: *sind*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der Kuchen, ___ du gebacken hast, schmeckt sehr gut.
+    options: [der, den, das]
+    answer: den
+    explanation:
+      en: "*Du hast den Kuchen gebacken*: the cake is the object, so the pronoun is *den*."
+      fa: "*Du hast den Kuchen gebacken*: کیک مفعول است، پس ضمیر موصولی *den* است."
+      de: "*Du hast den Kuchen gebacken.* Der Kuchen ist das Objekt: *den*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Frau, ___ mir geholfen hat, heißt Frau Weber.
+    options: [der, die, den]
+    answer: die
+    explanation:
+      en: "*Die Frau hat mir geholfen*: the woman is the subject, so *die*."
+      fa: "*Die Frau hat mir geholfen*: زن فاعل است، پس *die*."
+      de: "*Die Frau hat mir geholfen.* Die Frau ist das Subjekt: *die*."
+  - id: true-1
+    type: true-false
+    prompt: Der Zug, der um acht Uhr fährt, ist heute sehr voll.
+    answer: true
+    explanation:
+      en: "Commas on both sides of the relative clause, *fährt* at its end, *ist* in position 2. The sentence is correct."
+      fa: "جملهٔ موصولی در دو سو ویرگول دارد، *fährt* در پایان آن است و *ist* در جایگاه دوم. جمله درست است."
+      de: "Zwei Kommas, *fährt* am Ende vom Relativsatz, *ist* auf Position 2. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Die Jacke, die ich gekauft habe, zu klein ist.
+    answer: false
+    explanation:
+      en: "After the relative clause the main clause goes on with its verb: *…, ist zu klein.*"
+      fa: "پس از جملهٔ موصولی، جملهٔ پایه با فعلش ادامه پیدا می‌کند: *…, ist zu klein.*"
+      de: "Nach dem Relativsatz kommt das Verb vom Hauptsatz: *…, ist zu klein.*"
+  - id: true-3
+    type: true-false
+    prompt: Das Fahrrad, das vor der Tür steht, gehört mir.
+    answer: true
+    explanation:
+      en: "The relative clause follows *Das Fahrrad*, and *gehört* comes after the second comma. The sentence is correct."
+      fa: "جملهٔ موصولی پس از *Das Fahrrad* آمده و *gehört* پس از ویرگول دوم. جمله درست است."
+      de: "Der Relativsatz steht nach *Das Fahrrad*, *gehört* nach dem zweiten Komma. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Der Kollege, der ich gestern getroffen habe, ist sehr nett.
+    answer: false
+    explanation:
+      en: "*Ich habe den Kollegen getroffen*: the colleague is the object, so *den ich gestern getroffen habe*."
+      fa: "*Ich habe den Kollegen getroffen*: همکار مفعول است، پس *den ich gestern getroffen habe*."
+      de: "*Ich habe den Kollegen getroffen.* Richtig ist: *den ich gestern getroffen habe*."
+  - id: true-5
+    type: true-false
+    prompt: Die Frau, die neben uns wohnt, arbeitet im Krankenhaus.
+    answer: true
+    explanation:
+      en: "*Die* is the subject of *wohnt*, and *arbeitet* is in position 2 of the main clause. The sentence is correct."
+      fa: "*die* فاعل *wohnt* است و *arbeitet* در جایگاه دوم جملهٔ پایه. جمله درست است."
+      de: "*Die* ist das Subjekt von *wohnt*, *arbeitet* steht auf Position 2. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Der Bus, ___ zum Bahnhof fährt, kommt gleich.
+    answers: [der, welcher]
+    explanation:
+      en: "*Der Bus fährt zum Bahnhof*: the bus is the subject, so *der*."
+      fa: "*Der Bus fährt zum Bahnhof*: اتوبوس فاعل است، پس *der*."
+      de: "*Der Bus fährt zum Bahnhof.* Der Bus ist das Subjekt: *der*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das Fahrrad, das ich gestern gekauft habe, ___ (sein) schon kaputt.
+    answers: [ist, war]
+    explanation:
+      en: "The main verb goes with *das Fahrrad*, third person singular: *ist*."
+      fa: "فعل جملهٔ پایه به *das Fahrrad* برمی‌گردد که سوم‌شخص مفرد است: *ist*."
+      de: "Das Verb gehört zu *das Fahrrad*: *ist*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Leute, ___ wir eingeladen haben, kommen um acht.
+    answers: [die, welche]
+    explanation:
+      en: "*Leute* is plural, and plural *die* stays *die* in the *Akkusativ*."
+      fa: "*Leute* جمع است و *die* جمع در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Leute* ist Plural. Im Akkusativ bleibt *die*."
+  - id: error-1
+    type: find-error
+    prompt: Der Mann, der dort steht, sind mein Chef.
+    answer: sind
+    explanation:
+      en: "The subject of the main clause is *der Mann*, one person: *ist*."
+      fa: "فاعل جملهٔ پایه *der Mann* است که مفرد است: *ist*."
+      de: "Das Subjekt ist *der Mann*, also Singular: *ist*."
+  - id: error-2
+    type: find-error
+    prompt: Die Frau, die ich gestern getroffen habe, heiße Anna.
+    answer: heiße
+    explanation:
+      en: "The main verb goes with *die Frau*, not with *ich*: *heißt*."
+      fa: "فعل جملهٔ پایه به *die Frau* برمی‌گردد، نه به *ich*: *heißt*."
+      de: "Das Verb gehört zu *die Frau*, nicht zu *ich*: *heißt*."
+  - id: error-3
+    type: find-error
+    prompt: Das Auto, den wir gekauft haben, ist rot.
+    answer: den
+    explanation:
+      en: "*Auto* is a *das* noun, and *das* stays *das* in the *Akkusativ*."
+      fa: "*Auto* اسم خنثی (*das*) است و *das* در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Auto* hat den Artikel *das*. Im Akkusativ bleibt *das*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["der Kuchen,", den, du, "gebacken hast,", schmeckt sehr gut]
+    explanation:
+      en: "The relative clause follows *der Kuchen*, with *hast* at its end; then the main verb *schmeckt*."
+      fa: "جملهٔ موصولی پس از *der Kuchen* می‌آید و *hast* در پایان آن است؛ سپس فعل جملهٔ پایه، *schmeckt*."
+      de: "Der Relativsatz steht nach *der Kuchen*, *hast* am Ende. Dann kommt das Verb *schmeckt*."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["die Leute,", die, "hier warten,", haben, einen Termin]
+    explanation:
+      en: "The relative clause follows *die Leute*; after the second comma comes the main verb *haben*."
+      fa: "جملهٔ موصولی پس از *die Leute* می‌آید و پس از ویرگول دوم فعل جملهٔ پایه، *haben*."
+      de: "Der Relativsatz steht nach *die Leute*. Nach dem zweiten Komma kommt das Verb *haben*."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Der Zug, ___ ich nehme, fährt um acht.", den]
+      - ["Der Zug, ___ um acht fährt, ist voll.", der]
+      - ["Das Auto, ___ ich fahre, ist neu.", das]
+    explanation:
+      en: "*Ich nehme den Zug*: object, *den*. *Der Zug fährt*: subject, *der*. *Das Auto* keeps *das* in both cases."
+      fa: "*Ich nehme den Zug*: مفعول است، پس *den*. *Der Zug fährt*: فاعل است، پس *der*. *das Auto* در هر دو حالت *das* می‌ماند."
+      de: "*Ich nehme den Zug*: Objekt, also *den*. *Der Zug fährt*: Subjekt, also *der*. Bei *das Auto* bleibt es *das*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 20cd4f457fe23193

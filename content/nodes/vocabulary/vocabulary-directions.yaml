@@ -1,35 +1,303 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# hier, dort and da, and gehen and laufen, are close; `tooCloseTo` keeps a close one from
+# being offered as a wrong meaning, and `alsoAccepted` takes it as right where it fits.
 id: vocabulary-directions
 kind: vocabulary
 level: A1
 chapter: a1-words-town-travel
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Left, right, here, there"
   fa: "چپ، راست، اینجا، آنجا"
   de: "Links, rechts, hier, dort"
+attemptSize: 15
 words:
   - word: links
+    class: adverb
+    level: A1
+    meaning:
+      en: left, on the left
+      fa: چپ، سمت چپ
+    definition: auf der Seite, wo bei den meisten Menschen das Herz ist
+    example:
+      de: Gehen Sie hier nach links.
+      en: Go left here.
+      fa: از اینجا به سمت چپ بروید.
+
   - word: rechts
+    class: adverb
+    level: A1
+    meaning:
+      en: right, on the right
+      fa: راست، سمت راست
+    definition: auf der anderen Seite, nicht links
+    example:
+      de: Der Bahnhof ist rechts.
+      en: The station is on the right.
+      fa: ایستگاه قطار سمت راست است.
+
   - word: geradeaus
+    class: adverb
+    level: A1
+    meaning:
+      en: straight on, straight ahead
+      fa: مستقیم، رو به جلو
+    definition: immer nach vorn, nicht nach links und nicht nach rechts
+    example:
+      de: Fahren Sie geradeaus bis zur Ampel.
+      en: Drive straight on to the traffic lights.
+      fa: تا چراغ راهنما مستقیم بروید.
+
   - word: hier
+    class: adverb
+    level: A1
+    meaning:
+      en: here
+      fa: اینجا
+    definition: an diesem Ort, wo ich jetzt bin
+    example:
+      de: Hier ist die Haltestelle.
+      en: Here is the bus stop.
+      fa: ایستگاه اتوبوس اینجاست.
+    alsoAccepted: [da]
+    tooCloseTo: [da]
+
   - word: dort
+    class: adverb
+    level: A1
+    meaning:
+      en: there, over there
+      fa: آنجا
+    definition: an einem Ort, wo ich nicht bin, ein Stück weiter weg
+    example:
+      de: Siehst du das Café? Dort warte ich auf dich.
+      en: Can you see the café? I'll wait for you there.
+      fa: آن کافه را می‌بینی؟ آنجا منتظرت می‌مانم.
+    alsoAccepted: [da, drüben, dort drüben, da drüben]
+    tooCloseTo: [da]
+
   - word: da
+    class: adverb
+    level: A1
+    meaning:
+      en: there; here (at the place you point to)
+      fa: آنجا یا اینجا (جایی که به آن اشاره می‌کنیم)
+    definition: an dem Ort, den man gerade zeigt
+    example:
+      de: Da ist ja mein Schlüssel!
+      en: There's my key!
+      fa: کلیدم آنجاست!
+    alsoAccepted: [dort, hier]
+    tooCloseTo: [dort, hier]
+
   - word: oben
+    class: adverb
+    level: A1
+    meaning:
+      en: up, at the top, upstairs
+      fa: بالا، طبقهٔ بالا
+    definition: an einem hohen Ort, zum Beispiel im dritten Stock
+    example:
+      de: Das Bad ist oben.
+      en: The bathroom is upstairs.
+      fa: حمام طبقهٔ بالاست.
+
   - word: unten
+    class: adverb
+    level: A1
+    meaning:
+      en: down, at the bottom, downstairs
+      fa: پایین، طبقهٔ پایین
+    definition: nicht oben, sondern zum Beispiel im Keller oder im Erdgeschoss
+    example:
+      de: Ich warte unten vor der Tür.
+      en: I'll wait downstairs at the door.
+      fa: پایین، جلوی در منتظر می‌مانم.
+
   - word: hinten
+    class: adverb
+    level: A1
+    meaning:
+      en: at the back, behind
+      fa: عقب، پشت
+    definition: nicht vorn, sondern am Ende
+    example:
+      de: Im Bus sitzen die Kinder immer hinten.
+      en: On the bus the children always sit at the back.
+      fa: بچه‌ها در اتوبوس همیشه عقب می‌نشینند.
+
   - word: daneben
+    class: adverb
+    level: A1
+    meaning:
+      en: next to it, beside it
+      fa: کنارش، کنار آن
+    definition: direkt bei einer Sache, links oder rechts von ihr
+    example:
+      de: Da ist die Post, und daneben ist eine Bäckerei.
+      en: There's the post office, and next to it is a bakery.
+      fa: آنجا ادارهٔ پست است و کنارش یک نانوایی.
+
   - word: draußen
+    class: adverb
+    level: A1
+    meaning:
+      en: outside, outdoors
+      fa: بیرون، در هوای آزاد
+    definition: nicht im Haus, sondern an der frischen Luft
+    example:
+      de: Die Kinder spielen draußen.
+      en: The children are playing outside.
+      fa: بچه‌ها بیرون بازی می‌کنند.
+
   - word: weit
+    class: adjective
+    level: A1
+    meaning:
+      en: far; wide
+      fa: دور؛ گشاد
+    definition: nicht nah, man braucht lange bis dorthin
+    example:
+      de: Ist der Bahnhof weit von hier?
+      en: Is the station far from here?
+      fa: ایستگاه قطار از اینجا دور است؟
+    alsoAccepted: [entfernt, weit weg, fern]
+
   - word: zurück
+    class: adverb
+    level: A1
+    meaning:
+      en: back (to where you were before)
+      fa: برگشته، به جای قبلی
+    definition: wieder an den Ort, wo man vorher war
+    example:
+      de: Ich bin um sechs Uhr zurück.
+      en: I'll be back at six o'clock.
+      fa: ساعت شش برمی‌گردم.
+
   - word: weiter
+    class: adverb
+    level: A1
+    meaning:
+      en: further, on (to go on)
+      fa: جلوتر، باز هم پیش‌تر
+    definition: noch mehr nach vorn, ohne aufzuhören
+    example:
+      de: Gehen Sie noch hundert Meter weiter.
+      en: Go on another hundred metres.
+      fa: صد متر دیگر جلوتر بروید.
+
   - word: weg
+    class: adverb
+    level: A1
+    meaning:
+      en: away, gone
+      fa: رفته، دیگر اینجا نیست
+    definition: nicht mehr da, jetzt an einem anderen Ort
+    example:
+      de: Schnell, sonst ist der Bus weg!
+      en: Quick, or the bus will be gone!
+      fa: زود باش، وگرنه اتوبوس می‌رود!
+    alsoAccepted: [fort]
+
   - word: Ecke
+    class: noun
+    article: die
+    plural: Ecken
+    level: A1
+    meaning:
+      en: corner
+      fa: گوشه، نبش
+    definition: da, wo zwei Wände zusammenkommen, zum Beispiel in einem Zimmer oder an einem Haus
+    example:
+      de: Das Café ist an der Ecke.
+      en: The café is on the corner.
+      fa: کافه سر نبش است.
+    alsoAccepted: [das Eck]
+
   - word: Mitte
+    class: noun
+    article: die
+    plural: Mitten
+    level: A1
+    meaning:
+      en: middle, centre
+      fa: وسط، میان
+    definition: der Ort, der von allen Seiten gleich weit entfernt ist
+    example:
+      de: Der Tisch steht in der Mitte vom Zimmer.
+      en: The table is in the middle of the room.
+      fa: میز وسط اتاق است.
+    alsoAccepted: [das Zentrum, der Mittelpunkt]
+
   - word: suchen
+    class: verb
+    level: A1
+    meaning:
+      en: to look for, to search
+      fa: دنبال چیزی گشتن، جست‌وجو کردن
+    definition: versuchen, etwas oder jemanden zu finden
+    example:
+      de: Ich suche den Bahnhof.
+      en: I'm looking for the station.
+      fa: دنبال ایستگاه قطار می‌گردم.
+
   - word: finden
+    class: verb
+    level: A1
+    meaning:
+      en: to find
+      fa: پیدا کردن
+    definition: etwas sehen, das man gesucht hat
+    example:
+      de: Ich finde meinen Schlüssel nicht.
+      en: I can't find my key.
+      fa: کلیدم را پیدا نمی‌کنم.
+
   - word: gehen
+    class: verb
+    level: A1
+    meaning:
+      en: to go, to walk
+      fa: رفتن
+    definition: sich zu Fuß von einem Ort zu einem anderen bewegen
+    example:
+      de: Wir gehen zu Fuß zur Schule.
+      en: We walk to school.
+      fa: ما پیاده به مدرسه می‌رویم.
+    alsoAccepted: [laufen]
+    tooCloseTo: [laufen]
+
   - word: laufen
+    class: verb
+    level: A1
+    meaning:
+      en: to run; also to walk
+      fa: دویدن؛ پیاده رفتن
+    definition: sich schnell auf den Füßen bewegen; auch einfach ein Stück zu Fuß gehen
+    example:
+      de: Ich laufe jeden Morgen im Park.
+      en: I run in the park every morning.
+      fa: هر صبح در پارک می‌دوم.
+    alsoAccepted: [rennen]
+    tooCloseTo: [gehen]
+
   - word: bleiben
+    class: verb
+    level: A1
+    meaning:
+      en: to stay, to remain
+      fa: ماندن
+    definition: an einem Ort sein und nicht weggehen
+    example:
+      de: Heute bleibe ich zu Hause.
+      en: Today I'm staying at home.
+      fa: امروز در خانه می‌مانم.
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 132, then 27 questions)
+  date: 2026-11-28
+  pool: 405918d0992de5a7

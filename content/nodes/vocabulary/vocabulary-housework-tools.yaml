@@ -1,39 +1,380 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-housework-tools
 kind: vocabulary
 level: B1
 chapter: b1-words-home-food
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Cleaning, tools and repairs"
   fa: "نظافت، ابزار و تعمیر"
   de: "Putzen, Werkzeug und Reparaturen"
+attemptSize: 15
 words:
+  # "abwaschen" and "spülen" both name washing the dishes; each is right when the other is asked for.
   - word: abwaschen
+    class: verb
+    level: B1
+    meaning:
+      en: to wash up, to do the dishes
+      fa: ظرف شستن
+    definition: Teller, Tassen und Töpfe nach dem Essen mit Wasser sauber machen
+    example:
+      de: Wer kocht, muss nicht abwaschen.
+      en: Whoever cooks doesn't have to wash up.
+      fa: هر کس آشپزی کند، لازم نیست ظرف بشوید.
+    alsoAccepted: [spülen, abspülen, Geschirr spülen]
+    tooCloseTo: [spülen]
+
   - word: spülen
+    class: verb
+    level: B1
+    meaning:
+      en: to rinse; to wash up; to flush (the toilet)
+      fa: آب کشیدن؛ ظرف شستن؛ سیفون کشیدن
+    definition: etwas mit viel Wasser sauber machen, zum Beispiel das Geschirr; auch das Wasser in der Toilette laufen lassen
+    example:
+      de: Kannst du heute spülen? Ich habe gekocht.
+      en: Can you do the washing-up today? I cooked.
+      fa: امروز تو ظرف‌ها را می‌شویی؟ من آشپزی کردم.
+    alsoAccepted: [abwaschen, abspülen, ausspülen]
+    tooCloseTo: [abwaschen]
+
   - word: staubsaugen
+    class: verb
+    level: B1
+    meaning:
+      en: to vacuum, to hoover
+      fa: جاروبرقی کشیدن
+    definition: den Boden mit einem elektrischen Gerät sauber machen, das den Schmutz in sich hineinzieht
+    example:
+      de: Ich muss noch staubsaugen, dann kommen die Gäste.
+      en: I still have to vacuum, and then the guests are coming.
+      fa: هنوز باید جاروبرقی بکشم، بعد مهمان‌ها می‌آیند.
+    alsoAccepted: [Staub saugen, saugen]
+
   - word: trocknen
+    class: verb
+    level: B1
+    meaning:
+      en: to dry
+      fa: خشک کردن، خشک شدن
+    definition: trocken werden; auch etwas trocken machen, zum Beispiel die Haare oder die Wäsche
+    example:
+      de: Die Wäsche trocknet auf dem Balkon.
+      en: The washing is drying on the balcony.
+      fa: رخت‌ها روی بالکن خشک می‌شود.
+    alsoAccepted: [abtrocknen]
+
   - word: reinigen
+    class: verb
+    level: B1
+    meaning:
+      en: to clean (thoroughly)
+      fa: تمیز کردن (کامل)، پاک کردن
+    definition: ganz sauber machen, oft mit einem besonderen Mittel oder von einer Firma
+    example:
+      de: Den Teppich lassen wir einmal im Jahr reinigen.
+      en: We have the carpet cleaned once a year.
+      fa: سالی یک بار فرش را می‌دهیم بشویند.
+    alsoAccepted: [putzen, säubern, sauber machen, saubermachen]
+
   - word: Waschmittel
+    class: noun
+    article: das
+    plural: Waschmittel
+    level: B1
+    meaning:
+      en: washing powder, laundry detergent
+      fa: پودر لباسشویی، مایع لباسشویی
+    definition: ein Pulver oder eine Flüssigkeit, die man in die Waschmaschine gibt
+    example:
+      de: Das Waschmittel ist fast leer.
+      en: We've almost run out of washing powder.
+      fa: پودر لباسشویی تقریباً تمام شده است.
+    alsoAccepted: [das Waschpulver]
+
   - word: Staub
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: dust
+      fa: گرد و خاک، غبار
+    definition: ganz kleine, graue Teilchen, die nach einiger Zeit auf Möbeln und auf dem Boden liegen
+    example:
+      de: Auf dem Regal liegt viel Staub.
+      en: There's a lot of dust on the shelf.
+      fa: روی قفسه گرد و خاک زیادی نشسته است.
+
+  # "Schmutz" and "Dreck" are both dirt; each is right when the other is asked for.
   - word: Schmutz
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: dirt
+      fa: کثیفی، چرک
+    definition: das, was eine Sache schmutzig macht, zum Beispiel Erde an den Schuhen
+    example:
+      de: Zieh die Schuhe aus, sonst bringst du den ganzen Schmutz in die Wohnung.
+      en: Take your shoes off, or you'll bring all the dirt into the flat.
+      fa: کفش‌هایت را دربیاور، وگرنه همهٔ کثیفی را به خانه می‌آوری.
+    alsoAccepted: [der Dreck]
+    tooCloseTo: [Dreck]
+
   - word: Dreck
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: dirt, muck (informal)
+      fa: کثافت، گل‌ولای (عامیانه)
+    definition: umgangssprachlich für Erde, Schlamm und alles, was nicht sauber ist
+    example:
+      de: Nach dem Fußballspiel sind die Kinder voller Dreck.
+      en: After the football match the children are covered in muck.
+      fa: بچه‌ها بعد از فوتبال سرتاپا گلی‌اند.
+    alsoAccepted: [der Schmutz]
+    tooCloseTo: [Schmutz]
+
   - word: Fleck
+    class: noun
+    article: der
+    plural: Flecken
+    level: B1
+    meaning:
+      en: stain, spot
+      fa: لک
+    definition: eine kleine schmutzige Stelle, zum Beispiel von Kaffee auf einem Hemd
+    example:
+      de: Ich habe einen Fleck auf meiner Hose.
+      en: I've got a stain on my trousers.
+      fa: روی شلوارم لک افتاده است.
+    alsoAccepted: [der Flecken]
+
   - word: entsorgen
+    class: verb
+    level: B1
+    meaning:
+      en: to dispose of (properly)
+      fa: دور انداختن (به روش درست)، دفع کردن
+    definition: Müll oder alte Dinge so wegbringen, wie es die Regeln sagen
+    example:
+      de: Alte Batterien muss man richtig entsorgen.
+      en: Old batteries have to be disposed of properly.
+      fa: باتری‌های کهنه را باید به روش درست دور انداخت.
+    alsoAccepted: [beseitigen]
+
   - word: Werkzeug
+    class: noun
+    article: das
+    plural: Werkzeuge
+    level: B1
+    meaning:
+      en: tool; tools
+      fa: ابزار
+    definition: Dinge, mit denen man etwas baut oder repariert, zum Beispiel eine Säge
+    example:
+      de: Das Werkzeug liegt im Keller.
+      en: The tools are in the cellar.
+      fa: ابزارها در زیرزمین است.
+
   - word: Hammer
+    class: noun
+    article: der
+    plural: Hämmer
+    level: B1
+    meaning:
+      en: hammer
+      fa: چکش
+    definition: ein Werkzeug mit einem schweren Kopf aus Metall, mit dem man auf etwas schlägt
+    example:
+      de: Gibst du mir bitte mal den Hammer?
+      en: Could you pass me the hammer, please?
+      fa: لطفاً چکش را به من می‌دهی؟
+
   - word: Zange
+    class: noun
+    article: die
+    plural: Zangen
+    level: B1
+    meaning:
+      en: pliers
+      fa: انبردست
+    definition: ein Werkzeug mit zwei Armen, mit dem man etwas fest halten oder einen Draht schneiden kann
+    example:
+      de: Mit der Zange ziehe ich den Nagel aus dem Holz.
+      en: I pull the nail out of the wood with the pliers.
+      fa: با انبردست میخ را از چوب بیرون می‌کشم.
+
   - word: Nagel
+    class: noun
+    article: der
+    plural: Nägel
+    level: B1
+    meaning:
+      en: nail
+      fa: میخ؛ ناخن
+    definition: ein kleines, spitzes Stück Metall, das man in die Wand oder in Holz schlägt; auch das Harte am Ende der Finger
+    example:
+      de: Für das Bild brauche ich nur einen Nagel.
+      en: I only need one nail for the picture.
+      fa: برای این تابلو فقط یک میخ لازم دارم.
+
   - word: kleben
+    class: verb
+    level: B1
+    meaning:
+      en: to stick, to glue
+      fa: چسباندن؛ چسبیدن
+    definition: zwei Dinge mit Klebstoff fest zusammenmachen; auch an etwas hängen bleiben
+    example:
+      de: Ich klebe die Briefmarke auf den Umschlag.
+      en: I stick the stamp on the envelope.
+      fa: تمبر را روی پاکت می‌چسبانم.
+
   - word: gießen
+    class: verb
+    level: B1
+    meaning:
+      en: to water (plants); to pour
+      fa: آب دادن (به گیاه)؛ ریختن (مایع)
+    definition: Wasser auf Pflanzen geben; auch Wasser oder Kaffee aus einem Gefäß in etwas laufen lassen
+    example:
+      de: Kannst du im Urlaub meine Blumen gießen?
+      en: Can you water my plants while I'm on holiday?
+      fa: وقتی در سفرم، می‌توانی به گل‌هایم آب بدهی؟
+
   - word: aufheben
+    class: verb
+    level: B1
+    meaning:
+      en: to pick up (from the floor); to keep
+      fa: برداشتن (از زمین)؛ نگه داشتن
+    definition: etwas vom Boden nehmen; auch etwas behalten und nicht wegwerfen
+    example:
+      de: Heb bitte das Papier vom Boden auf.
+      en: Please pick the paper up off the floor.
+      fa: لطفاً کاغذ را از روی زمین بردار.
+
   - word: runterwerfen
+    class: verb
+    level: B1
+    meaning:
+      en: to throw down
+      fa: پایین انداختن
+    definition: etwas von oben nach unten werfen oder fallen lassen
+    example:
+      de: Wirf mir bitte den Schlüssel runter!
+      en: Throw the key down to me, please!
+      fa: لطفاً کلید را برایم پایین بینداز!
+    alsoAccepted: [herunterwerfen, hinunterwerfen]
+
+  # "Streichholz" and "Zündholz" are both a match; each is right when the other is asked for.
   - word: Streichholz
+    class: noun
+    article: das
+    plural: Streichhölzer
+    level: B1
+    meaning:
+      en: match (for lighting a fire)
+      fa: کبریت
+    definition: ein kleines Stück Holz mit einem roten Kopf; man reibt es an der Schachtel, dann brennt es
+    example:
+      de: Hast du ein Streichholz für die Kerze?
+      en: Have you got a match for the candle?
+      fa: برای شمع کبریت داری؟
+    alsoAccepted: [das Zündholz, der Zünder]
+    tooCloseTo: [Zündholz]
+
   - word: Zündholz
+    class: noun
+    article: das
+    plural: Zündhölzer
+    level: B1
+    meaning:
+      en: match (for lighting a fire; said especially in the south)
+      fa: کبریت
+    definition: ein dünnes Hölzchen, mit dem man Feuer macht; so sagt man vor allem in Süddeutschland, Österreich und der Schweiz
+    example:
+      de: In der Hütte liegen Zündhölzer neben dem Ofen.
+      en: In the cabin there are matches next to the stove.
+      fa: در کلبه، کنار بخاری کبریت هست.
+    alsoAccepted: [das Streichholz]
+    tooCloseTo: [Streichholz]
+
   - word: Feuerzeug
+    class: noun
+    article: das
+    plural: Feuerzeuge
+    level: B1
+    meaning:
+      en: lighter
+      fa: فندک
+    definition: ein kleines Gerät mit Gas, mit dem man eine Zigarette oder eine Kerze anmacht
+    example:
+      de: Mein Feuerzeug funktioniert nicht mehr.
+      en: My lighter doesn't work any more.
+      fa: فندکم دیگر کار نمی‌کند.
+
   - word: ordnen
+    class: verb
+    level: B1
+    meaning:
+      en: to put in order, to sort
+      fa: مرتب کردن، به ترتیب چیدن
+    definition: Dinge so legen oder stellen, dass sie in einer bestimmten Reihenfolge sind
+    example:
+      de: Ich ordne die Bücher nach dem Alphabet.
+      en: I'm putting the books in alphabetical order.
+      fa: کتاب‌ها را به ترتیب الفبا مرتب می‌کنم.
+    alsoAccepted: [sortieren, anordnen]
+
   - word: erledigen
+    class: verb
+    level: B1
+    meaning:
+      en: to deal with, to get (a task) done
+      fa: انجام دادن (کار)، رسیدگی کردن
+    definition: eine Aufgabe fertig machen, so dass man nicht mehr daran denken muss
+    example:
+      de: Ich muss heute noch ein paar Sachen erledigen.
+      en: I still have a few things to get done today.
+      fa: امروز هنوز باید چند کار را انجام بدهم.
+
   - word: besorgen
+    class: verb
+    level: B1
+    meaning:
+      en: to get (hold of), to buy
+      fa: تهیه کردن، خریدن
+    definition: etwas, das man braucht, holen oder kaufen
+    example:
+      de: Kannst du auf dem Heimweg noch Brot besorgen?
+      en: Can you get some bread on the way home?
+      fa: می‌توانی سر راه خانه نان هم بگیری؟
+    alsoAccepted: [kaufen, holen, beschaffen]
+
   - word: stinken
+    class: verb
+    level: B1
+    meaning:
+      en: to stink, to smell bad
+      fa: بوی بد دادن، بو گرفتن
+    definition: sehr unangenehm riechen
+    example:
+      de: Der Müll stinkt, bring ihn bitte raus.
+      en: The rubbish stinks; please take it out.
+      fa: زباله بو گرفته است، لطفاً ببرش بیرون.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: 485d4453d6e92625

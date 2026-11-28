@@ -4,10 +4,330 @@ kind: grammar
 level: A1
 chapter: a1-first-sentences
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-001]
 title:
   en: "W-question words"
   fa: "واژه‌های پرسشی (*wo*، *woher*، *wann*، *wie* …)"
   de: "W-Fragewörter (*wo*, *woher*, *wann*, *wie* …)"
+
+explanations:
+  en:
+    rule: >
+      A question word asks for one piece of information and stands at the
+      start of the question: *wo* (where), *woher* (where from), *wohin*
+      (where to), *wann* (when), *wie* (how), *wie viel* (how much) and
+      *warum* (why). English has one "where", German has three: *wo* asks for
+      the place, *woher* for the starting point, *wohin* for the goal. *Wie*
+      also asks for a name (*Wie heißt du?*) and goes with an adjective (*Wie
+      alt bist du?*). *Wie viel* is two words; before a plural noun it is *wie
+      viele*: *Wie viele Kinder hast du?*
+  fa:
+    rule: >
+      واژهٔ پرسشی یک آگاهی مشخص را می‌پرسد و در آغاز پرسش می‌آید: *wo*
+      (کجا)، *woher* (از کجا)، *wohin* (به کجا)، *wann* (کی، چه وقت)، *wie*
+      (چطور، چگونه)، *wie viel* (چقدر) و *warum* (چرا). آلمانی برای «کجا» سه
+      واژه دارد: *wo* جای چیزی را می‌پرسد، *woher* مبدأ را و *wohin* مقصد را.
+      *wie* برای پرسیدن نام هم به کار می‌رود (*Wie heißt du?*) و با صفت هم
+      می‌آید (*Wie alt bist du?*، «چند سالت است؟»). *wie viel* دو واژهٔ جداست؛
+      پیش از اسم جمع *wie viele* می‌آید: *Wie viele Kinder hast du?*
+  de:
+    rule: >
+      Ein Fragewort fragt nach einer Information. Es steht am Anfang von der
+      Frage: *wo*, *woher*, *wohin*, *wann*, *wie*, *wie viel* und *warum*.
+      *Wo* fragt nach dem Ort, *woher* nach dem Start und *wohin* nach dem
+      Ziel. Mit *wie* fragt man auch nach dem Namen (*Wie heißt du?*) und mit
+      einem Adjektiv (*Wie alt bist du?*). *Wie viel* schreibt man in zwei
+      Wörtern, vor einem Nomen im Plural sagt man *wie viele*.
+
+table:
+  columns:
+    - { en: Question word, fa: واژهٔ پرسشی, de: Fragewort }
+    - { en: Question, fa: پرسش, de: Frage }
+    - { en: Answer, fa: پاسخ, de: Antwort }
+  rows:
+    - [wo, Wo wohnst du?, In Berlin.]
+    - [woher, Woher kommst du?, Aus Polen.]
+    - [wohin, Wohin fährst du?, Nach Wien.]
+    - [wann, Wann kommst du?, Um 8 Uhr.]
+    - [wie, Wie heißt du?, Ich heiße Sara.]
+    - [wie viel, Wie viel kostet das?, 3 Euro.]
+    - [wie viele, Wie viele Kinder hast du?, Zwei.]
+    - [warum, Warum lernst du Deutsch?, Ich wohne jetzt hier.]
+
+# Three ways to say "where": the place, where something comes from, where it goes.
+diagrams:
+  - caption:
+      en: >
+        *wo?* asks for the place where something is, *woher?* for the place it
+        comes from, *wohin?* for the place it goes to. The dashed circle shows
+        where the ball was or will be.
+      fa: >
+        *wo?* جایی را می‌پرسد که چیزی در آن است، *woher?* جایی را که از آن
+        می‌آید و *wohin?* جایی را که به آن می‌رود. دایرهٔ خط‌چین جای پیشین یا
+        جای بعدی توپ را نشان می‌دهد.
+      de: >
+        *Wo?* fragt nach dem Ort, an dem etwas ist. *Woher?* fragt nach dem
+        Ort, von dem es kommt. *Wohin?* fragt nach dem Ort, zu dem es geht. Der
+        Kreis mit Strichen zeigt, wo der Ball war oder sein wird.
+    svg: |
+      <svg viewBox="0 0 320 216">
+        <!-- wo: the ball is in the box -->
+        <text class="label" x="10" y="40">wo?</text>
+        <rect class="surface" x="130" y="12" width="64" height="44"/>
+        <circle class="object" cx="162" cy="34" r="9"/>
+        <text class="note" x="232" y="40">in Berlin</text>
+        <!-- woher: the ball comes out of the box -->
+        <text class="label" x="10" y="112">woher?</text>
+        <rect class="surface" x="110" y="84" width="44" height="44"/>
+        <circle class="guide" cx="132" cy="106" r="9"/>
+        <line class="line" x1="158" y1="106" x2="196" y2="106"/>
+        <polyline class="line" points="188,100 196,106 188,112"/>
+        <circle class="object" cx="208" cy="106" r="9"/>
+        <text class="note" x="232" y="112">aus Berlin</text>
+        <!-- wohin: the ball goes into the box -->
+        <text class="label" x="10" y="184">wohin?</text>
+        <circle class="object" cx="108" cy="178" r="9"/>
+        <line class="line" x1="122" y1="178" x2="166" y2="178"/>
+        <polyline class="line" points="158,172 166,178 158,184"/>
+        <rect class="surface" x="172" y="156" width="44" height="44"/>
+        <circle class="guide" cx="194" cy="178" r="9"/>
+        <text class="note" x="232" y="184">nach Berlin</text>
+      </svg>
+
+examples:
+  - de: Wo wohnst du? – In Hamburg.
+    en: Where do you live? – In Hamburg.
+    fa: کجا زندگی می‌کنی؟ – در هامبورگ.
+  - de: Woher kommen Sie? – Ich komme aus dem Iran.
+    en: Where are you from? – I am from Iran.
+    fa: اهل کجا هستید؟ – اهل ایرانم.
+  - de: Wohin fahrt ihr im Sommer? – Nach Italien.
+    en: Where are you (plural) going in the summer? – To Italy.
+    fa: تابستان کجا می‌روید؟ – به ایتالیا.
+  - de: Wann beginnt der Kurs? – Um neun Uhr.
+    en: When does the course start? – At nine o'clock.
+    fa: کلاس کی شروع می‌شود؟ – ساعت نه.
+  - de: Wie heißen Sie? – Ich heiße Karim Rahimi.
+    en: What is your name? – My name is Karim Rahimi.
+    fa: نام شما چیست؟ – نام من کریم رحیمی است.
+  - de: Wie alt bist du? – Ich bin dreißig.
+    en: How old are you? – I am thirty.
+    fa: چند سالت است؟ – سی سالم است.
+  - de: Wie viel kostet der Kaffee? – Zwei Euro.
+    en: How much is the coffee? – Two euros.
+    fa: قهوه چند است؟ – دو یورو.
+  - de: Wie viele Geschwister hast du? – Zwei.
+    en: How many brothers and sisters do you have? – Two.
+    fa: چند خواهر و برادر داری؟ – دو تا.
+  - de: Warum lernst du Deutsch? – Ich arbeite bald in Wien.
+    en: Why are you learning German? – I will soon work in Vienna.
+    fa: چرا آلمانی یاد می‌گیری؟ – به‌زودی در وین کار می‌کنم.
+
+mistakes:
+  - wrong: Wo kommst du?
+    right: Woher kommst du?
+    why:
+      en: "To ask where someone is from, say *woher*. *Wo* asks only where someone or something is."
+      fa: "برای پرسیدن این‌که کسی اهل کجاست *woher* به کار می‌رود. *wo* فقط جای کسی یا چیزی را می‌پرسد."
+      de: "Man fragt *Woher kommst du?* *Wo* fragt nur nach dem Ort, an dem etwas ist."
+  - wrong: Wo fährst du?
+    right: Wohin fährst du?
+    why:
+      en: "*Fahren* goes to a goal, so ask with *wohin*."
+      fa: "*fahren* به سوی مقصدی است، پس با *wohin* می‌پرسیم."
+      de: "Bei *fahren* gibt es ein Ziel. Darum fragt man mit *wohin*."
+  - wrong: Wenn kommst du?
+    right: Wann kommst du?
+    why:
+      en: 'The question word for "when" is *wann*. *Wenn* is a different word that you will meet later.'
+      fa: "واژهٔ پرسشی برای «کی» *wann* است. *wenn* واژهٔ دیگری است که بعدها با آن آشنا می‌شوید."
+      de: "Das Fragewort ist *wann*. *Wenn* ist ein anderes Wort. Das kommt später."
+  - wrong: Wieviel kostet das?
+    right: Wie viel kostet das?
+    why:
+      en: "*Wie viel* is written as two words."
+      fa: "*wie viel* دو واژهٔ جدا نوشته می‌شود."
+      de: "*Wie viel* schreibt man in zwei Wörtern."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ wohnst du? – In Köln.
+    options: [Wo, Woher, Wohin]
+    answer: Wo
+    explanation:
+      en: "The answer is a place where someone is, so *wo*."
+      fa: "پاسخ، جایی است که کسی در آن است، پس *wo* می‌آید."
+      de: "Die Antwort ist ein Ort: *wo*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ kommen Sie? – Aus der Türkei.
+    options: [Woher, Wo, Wann]
+    answer: Woher
+    explanation:
+      en: "*Aus der Türkei* is where someone comes from, so *woher*."
+      fa: "*aus der Türkei* مبدأ را نشان می‌دهد، پس *woher* می‌آید."
+      de: "*Aus der Türkei* ist der Start: *woher*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ fahrt ihr? – Nach Berlin.
+    options: [Wohin, Wo, Woher]
+    answer: Wohin
+    explanation:
+      en: "*Nach Berlin* is a goal, so *wohin*."
+      fa: "*nach Berlin* مقصد را نشان می‌دهد، پس *wohin* می‌آید."
+      de: "*Nach Berlin* ist das Ziel: *wohin*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ beginnt der Film? – Um acht Uhr.
+    options: [Wann, Wo, Wie]
+    answer: Wann
+    explanation:
+      en: "The answer is a time, so *wann*."
+      fa: "پاسخ یک زمان است، پس *wann* می‌آید."
+      de: "Die Antwort ist eine Zeit: *wann*."
+  - id: gap-5
+    type: gap-fill
+    prompt: ___ heißt du? – Ich heiße Jonas.
+    options: [Wie, Wo, Wann]
+    answer: Wie
+    explanation:
+      en: "You ask for a name with *wie*: *Wie heißt du?*"
+      fa: "نام را با *wie* می‌پرسیم: *Wie heißt du?*"
+      de: "Nach dem Namen fragt man mit *wie*: *Wie heißt du?*"
+  - id: gap-6
+    type: gap-fill
+    prompt: ___ kostet die Tasche? – Zwanzig Euro.
+    options: [Wie viel, Wie, Wann]
+    answer: Wie viel
+    explanation:
+      en: "You ask for a price with *wie viel*."
+      fa: "قیمت را با *wie viel* می‌پرسیم."
+      de: "Nach dem Preis fragt man mit *wie viel*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: ___ lernst du Deutsch? – Meine Frau ist aus Wien.
+    options: [Warum, Wann, Wo]
+    answer: Warum
+    explanation:
+      en: "The answer gives a reason, so *warum*."
+      fa: "پاسخ دلیلی را می‌گوید، پس *warum* می‌آید."
+      de: "Die Antwort ist ein Grund: *warum*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: ___ Kinder hast du? – Drei.
+    options: [Wie viele, Wie, Wann]
+    answer: Wie viele
+    explanation:
+      en: "You ask for a number of things with *wie viele* before a plural noun."
+      fa: "شمار چیزها را با *wie viele* پیش از اسم جمع می‌پرسیم."
+      de: "Nach einer Zahl fragt man vor einem Nomen im Plural mit *wie viele*."
+  - id: true-1
+    type: true-false
+    prompt: Wo kommst du? – Aus Spanien.
+    answer: false
+    explanation:
+      en: "*Aus Spanien* is where someone comes from, so the question is *Woher kommst du?*"
+      fa: "*aus Spanien* مبدأ را نشان می‌دهد، پس پرسش درست *Woher kommst du?* است."
+      de: "*Aus Spanien* ist der Start. Richtig ist: *Woher kommst du?*"
+  - id: true-2
+    type: true-false
+    prompt: Wohin gehst du? – Nach Hause.
+    answer: true
+    explanation:
+      en: "*Nach Hause* is a goal, so *wohin* is right. The sentence is correct."
+      fa: "*nach Hause* مقصد است، پس *wohin* درست است. جمله درست است."
+      de: "*Nach Hause* ist das Ziel, also *wohin*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Wann ist der Kurs? – Am Montag.
+    answer: true
+    explanation:
+      en: "*Am Montag* is a time, so *wann* is right. The sentence is correct."
+      fa: "*am Montag* یک زمان است، پس *wann* درست است. جمله درست است."
+      de: "*Am Montag* ist eine Zeit, also *wann*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wenn kommt der Bus?
+    answer: false
+    explanation:
+      en: "The question word is *wann*: *Wann kommt der Bus?*"
+      fa: "واژهٔ پرسشی *wann* است: *Wann kommt der Bus?*"
+      de: "Das Fragewort ist *wann*: *Wann kommt der Bus?*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: ___ kommst du? – Aus Syrien.
+    answers: [Woher, Von wo]
+    explanation:
+      en: "*Aus Syrien* is where someone comes from, so *woher*."
+      fa: "*aus Syrien* مبدأ را نشان می‌دهد، پس *woher* می‌آید."
+      de: "*Aus Syrien* ist der Start: *woher*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ fährst du am Wochenende? – Nach Hamburg.
+    answers: [Wohin]
+    explanation:
+      en: "*Nach Hamburg* is a goal, so *wohin*."
+      fa: "*nach Hamburg* مقصد را نشان می‌دهد، پس *wohin* می‌آید."
+      de: "*Nach Hamburg* ist das Ziel: *wohin*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ ist das Café? – In der Bahnhofstraße.
+    answers: [Wo]
+    explanation:
+      en: "The answer is a place where something is, so *wo*."
+      fa: "پاسخ، جایی است که چیزی در آن است، پس *wo* می‌آید."
+      de: "Die Antwort ist ein Ort: *wo*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: ___ alt bist du? – Ich bin dreißig.
+    answers: [Wie]
+    explanation:
+      en: "*Wie* goes with an adjective: *Wie alt bist du?*"
+      fa: "*wie* با صفت می‌آید: *Wie alt bist du?*"
+      de: "*Wie* steht mit einem Adjektiv: *Wie alt bist du?*"
+  - id: error-1
+    type: find-error
+    prompt: Wann kommen Sie? – Aus Österreich.
+    answer: Wann
+    explanation:
+      en: "*Aus Österreich* is where someone comes from, so the question word is *woher*."
+      fa: "*aus Österreich* مبدأ را نشان می‌دهد، پس واژهٔ پرسشی *woher* است."
+      de: "*Aus Österreich* ist der Start. Das Fragewort ist *woher*."
+  - id: match-1
+    type: matching
+    answer:
+      - [wo, in Berlin]
+      - [woher, aus Berlin]
+      - [wohin, nach Berlin]
+    explanation:
+      en: "*Wo*: the place (*in*). *Woher*: where from (*aus*). *Wohin*: where to (*nach*)."
+      fa: "*wo*: جای چیزی (*in*). *woher*: مبدأ (*aus*). *wohin*: مقصد (*nach*)."
+      de: "*Wo*: der Ort (*in*). *Woher*: der Start (*aus*). *Wohin*: das Ziel (*nach*)."
+  - id: match-2
+    type: matching
+    answer:
+      - [wann, am Montag]
+      - [wie viel, zehn Euro]
+      - [wie alt, dreißig Jahre]
+    explanation:
+      en: "*Wann* asks for a time, *wie viel* for a price, *wie alt* for an age."
+      fa: "*wann* زمان را می‌پرسد، *wie viel* قیمت را و *wie alt* سن را."
+      de: "*Wann* fragt nach der Zeit, *wie viel* nach dem Preis, *wie alt* nach dem Alter."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wann, beginnt, der Kurs]
+    end: "?"
+    explanation:
+      en: "The question word comes first, then the verb, then the subject."
+      fa: "اول واژهٔ پرسشی می‌آید، سپس فعل و بعد فاعل."
+      de: "Zuerst kommt das Fragewort, dann das Verb, dann das Subjekt."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: bad006e0b7b50eb6

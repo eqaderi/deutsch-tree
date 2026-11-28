@@ -1,38 +1,377 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-joy-hope
 kind: vocabulary
 level: B1
 chapter: b1-words-people-feelings
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Joy, hope and surprise"
   fa: "شادی، امید و شگفتی"
   de: "Freude, Hoffnung und Überraschung"
+attemptSize: 15
 words:
   - word: Freude
+    class: noun
+    article: die
+    plural: Freuden
+    level: B1
+    meaning:
+      en: joy
+      fa: شادی
+    definition: das schöne Gefühl, wenn man glücklich ist
+    example:
+      de: Die Kinder haben vor Freude laut gelacht.
+      en: The children laughed out loud with joy.
+      fa: بچه‌ها از شادی بلند خندیدند.
+    tooCloseTo: [Vergnügen]
+
   - word: Gefühl
+    class: noun
+    article: das
+    plural: Gefühle
+    level: B1
+    meaning:
+      en: feeling
+      fa: احساس
+    definition: was man innen spürt, zum Beispiel Angst, Liebe oder Glück
+    example:
+      de: Ich habe ein gutes Gefühl bei dieser Prüfung.
+      en: I have a good feeling about this exam.
+      fa: دربارهٔ این امتحان حس خوبی دارم.
+    alsoAccepted: [die Empfindung, die Emotion]
+
+  # Laune and Stimmung are near each other; neither is offered as a wrong meaning of the other.
   - word: Laune
+    class: noun
+    article: die
+    plural: Launen
+    level: B1
+    meaning:
+      en: mood (how one person feels)
+      fa: حال و حوصله، خلق
+    definition: wie sich eine Person gerade fühlt, gut oder schlecht
+    example:
+      de: Heute hat der Chef gute Laune.
+      en: The boss is in a good mood today.
+      fa: امروز رئیس سر حال است.
+    alsoAccepted: [die Stimmung]
+    tooCloseTo: [Stimmung]
+
   - word: Stimmung
+    class: noun
+    article: die
+    plural: Stimmungen
+    level: B1
+    meaning:
+      en: atmosphere (of a group or a place)
+      fa: حال و هوا، فضای جمع
+    definition: wie sich die Menschen an einem Ort zusammen fühlen, zum Beispiel auf einer Party
+    example:
+      de: Die Stimmung auf der Party war super.
+      en: The atmosphere at the party was great.
+      fa: حال و هوای مهمانی عالی بود.
+    alsoAccepted: [die Atmosphäre]
+    tooCloseTo: [Laune]
+
   - word: Hoffnung
+    class: noun
+    article: die
+    plural: Hoffnungen
+    level: B1
+    meaning:
+      en: hope
+      fa: امید
+    definition: das Gefühl, dass etwas Gutes, das man sich wünscht, passieren kann
+    example:
+      de: Die Ärzte haben noch Hoffnung.
+      en: The doctors still have hope.
+      fa: پزشکان هنوز امیدوارند.
+
   - word: Überraschung
+    class: noun
+    article: die
+    plural: Überraschungen
+    level: B1
+    meaning:
+      en: a surprise
+      fa: غافلگیری، چیز غیرمنتظره
+    definition: etwas, mit dem man nicht gerechnet hat
+    example:
+      de: Zum Geburtstag haben wir eine Überraschung für dich.
+      en: We have a surprise for you for your birthday.
+      fa: برای تولدت غافلگیری‌ای در نظر گرفته‌ایم.
+
   - word: überraschen
+    class: verb
+    level: B1
+    meaning:
+      en: to surprise (someone)
+      fa: غافلگیر کردن
+    definition: etwas tun, womit eine andere Person nicht rechnet
+    example:
+      de: Wir wollen Oma mit einem Besuch überraschen.
+      en: We want to surprise Grandma with a visit.
+      fa: می‌خواهیم با یک دیدار سرزده مادربزرگ را غافلگیر کنیم.
+    tooCloseTo: [wundern]
+
   - word: Vergnügen
+    class: noun
+    article: das
+    plural: Vergnügen
+    level: B1
+    meaning:
+      en: pleasure, enjoyment
+      fa: لذت، خوشی
+    definition: „Es war mir ein …“, sagt man höflich, wenn man gern geholfen hat
+    example:
+      de: Es war mir ein Vergnügen, Ihnen zu helfen.
+      en: It was a pleasure to help you.
+      fa: کمک به شما برایم مایهٔ خوشحالی بود.
+    alsoAccepted: [der Spaß, der Genuss]
+    tooCloseTo: [Freude]
+
+  # vergnügen and amüsieren overlap; each accepts the other, and neither is offered as a wrong meaning of the other.
   - word: vergnügen
-  - word: vergnügt
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to have a good time, to enjoy oneself
+      fa: خوش گذراندن
+    definition: eine schöne Zeit haben und dabei viel Spaß haben
+    example:
+      de: Die Kinder vergnügen sich im Schwimmbad.
+      en: The children are having a good time at the swimming pool.
+      fa: بچه‌ها در استخر خوش می‌گذرانند.
+    alsoAccepted: [sich amüsieren, Spaß haben]
+    tooCloseTo: [amüsieren, genießen]
+
   - word: amüsieren
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to be amused (by something), to have fun
+      fa: سرگرم شدن، کیف کردن (از چیزی)
+    definition: etwas lustig finden und darüber lachen; Spaß haben
+    example:
+      de: Die Zuschauer amüsieren sich über den Clown.
+      en: The audience is amused by the clown.
+      fa: تماشاگران از کارهای دلقک کیف می‌کنند.
+    alsoAccepted: [sich vergnügen, Spaß haben]
+    tooCloseTo: [vergnügen, genießen]
+
   - word: genießen
+    class: verb
+    level: B1
+    meaning:
+      en: to enjoy (something)
+      fa: لذت بردن (از چیزی)
+    definition: etwas Schönes ganz bewusst und mit Freude erleben
+    example:
+      de: Im Urlaub genießen wir die Sonne und das Meer.
+      en: On holiday we enjoy the sun and the sea.
+      fa: در تعطیلات از آفتاب و دریا لذت می‌بریم.
+    tooCloseTo: [vergnügen, amüsieren]
+
+  # vergnügt and fröhlich overlap; each accepts the other, and neither is offered as a wrong meaning of the other.
+  - word: vergnügt
+    class: adjective
+    level: B1
+    meaning:
+      en: merry, in high spirits (enjoying oneself)
+      fa: سرخوش، سر حال
+    definition: froh, weil man gerade eine schöne Zeit hat
+    example:
+      de: Nach dem Fest gingen alle vergnügt nach Hause.
+      en: After the party everyone went home in high spirits.
+      fa: بعد از جشن، همه سرخوش به خانه رفتند.
+    alsoAccepted: [fröhlich, heiter, gut gelaunt, ausgelassen]
+    tooCloseTo: [fröhlich, begeistert]
+
   - word: fröhlich
+    class: adjective
+    level: B1
+    meaning:
+      en: cheerful, happy (by nature)
+      fa: شاد و خندان، بشاش
+    definition: gut gelaunt; so, dass man viel lacht und gern singt
+    example:
+      de: Meine Kollegin ist immer fröhlich und lacht viel.
+      en: My colleague is always cheerful and laughs a lot.
+      fa: همکارم همیشه شاد است و زیاد می‌خندد.
+    alsoAccepted: [vergnügt, heiter, gut gelaunt, ausgelassen]
+    tooCloseTo: [vergnügt]
+
   - word: begeistert
+    class: adjective
+    level: B1
+    meaning:
+      en: thrilled, enthusiastic
+      fa: ذوق‌زده، شیفته
+    definition: voller Freude, weil man etwas ganz toll findet
+    example:
+      de: Die Kinder waren vom Zirkus begeistert.
+      en: The children were thrilled with the circus.
+      fa: بچه‌ها از سیرک ذوق‌زده بودند.
+    tooCloseTo: [vergnügt, gespannt]
+
   - word: dankbar
+    class: adjective
+    level: B1
+    meaning:
+      en: grateful, thankful
+      fa: سپاسگزار، ممنون
+    definition: so, dass man „danke“ sagen möchte, weil eine Person einem geholfen hat
+    example:
+      de: Ich bin dir sehr dankbar für deine Hilfe.
+      en: I'm very grateful to you for your help.
+      fa: از کمکت خیلی سپاسگزارم.
+
   - word: gespannt
+    class: adjective
+    level: B1
+    meaning:
+      en: eager to know (what will happen)
+      fa: مشتاق دانستن، منتظر و کنجکاو
+    definition: so, dass man nicht warten kann, bis man weiß, was passiert
+    example:
+      de: Ich bin gespannt, wie der Film endet.
+      en: I can't wait to see how the film ends.
+      fa: کنجکاوم ببینم فیلم چطور تمام می‌شود.
+    alsoAccepted: [neugierig]
+    tooCloseTo: [begeistert]
+
   - word: lächeln
+    class: verb
+    level: B1
+    meaning:
+      en: to smile
+      fa: لبخند زدن
+    definition: mit dem Mund freundlich zeigen, dass man froh ist, ohne laut zu lachen
+    example:
+      de: Auf dem Foto lächelt sie.
+      en: She's smiling in the photo.
+      fa: او در عکس لبخند می‌زند.
+
   - word: beruhigen
+    class: verb
+    level: B1
+    meaning:
+      en: to calm (someone) down, to reassure
+      fa: آرام کردن (کسی)
+    definition: machen, dass eine Person keine Angst mehr hat und ruhig wird
+    example:
+      de: Die Mutter beruhigt das weinende Kind.
+      en: The mother calms the crying child down.
+      fa: مادر بچهٔ گریان را آرام می‌کند.
+    alsoAccepted: [besänftigen]
+
+  # The scope list gives "sich": the verb is always "sich wundern".
   - word: wundern
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to be surprised, to wonder (why)
+      fa: تعجب کردن
+    definition: überrascht sein, weil etwas anders ist, als man gedacht hat
+    example:
+      de: Ich wundere mich, dass er heute nicht gekommen ist.
+      en: I'm surprised that he didn't come today.
+      fa: تعجب می‌کنم که امروز نیامده است.
+    alsoAccepted: [staunen, überrascht sein, erstaunt sein]
+    tooCloseTo: [überraschen]
+
   - word: Wunder
+    class: noun
+    article: das
+    plural: Wunder
+    level: B1
+    meaning:
+      en: miracle
+      fa: معجزه
+    definition: etwas sehr Gutes und Unglaubliches, das man nicht erklären kann
+    example:
+      de: Es ist ein Wunder, dass niemand verletzt wurde.
+      en: It's a miracle that nobody was hurt.
+      fa: معجزه است که کسی زخمی نشد.
+
+  # angenehm, gemütlich and entspannend all describe good feelings; none is offered as a wrong meaning of the others.
   - word: angenehm
+    class: adjective
+    level: B1
+    meaning:
+      en: pleasant
+      fa: خوشایند، دلپذیر
+    definition: so, dass man es gern spürt und es einen nicht stört, zum Beispiel warmes Wetter oder eine ruhige Stimme
+    example:
+      de: Heute ist es draußen angenehm warm.
+      en: It's pleasantly warm outside today.
+      fa: امروز هوای بیرون گرم و دلپذیر است.
+    alsoAccepted: [wohltuend]
+    tooCloseTo: [gemütlich, entspannend]
+
   - word: gemütlich
+    class: adjective
+    level: B1
+    meaning:
+      en: cosy (warm, comfortable and relaxed)
+      fa: دنج، گرم و صمیمی
+    definition: so, dass man sich warm, ruhig und wie zu Hause fühlt
+    example:
+      de: Unser Wohnzimmer ist klein, aber gemütlich.
+      en: Our living room is small but cosy.
+      fa: اتاق نشیمن ما کوچک اما دنج است.
+    alsoAccepted: [behaglich]
+    tooCloseTo: [angenehm, entspannend]
+
   - word: entspannend
+    class: adjective
+    level: B1
+    meaning:
+      en: relaxing
+      fa: آرامش‌بخش، خستگی‌درکن
+    definition: so, dass man danach ruhig ist und keinen Stress mehr hat
+    example:
+      de: Ein warmes Bad am Abend ist sehr entspannend.
+      en: A warm bath in the evening is very relaxing.
+      fa: یک حمام گرم در شب خیلی آرامش‌بخش است.
+    alsoAccepted: [erholsam]
+    tooCloseTo: [angenehm, gemütlich]
+
   - word: Respekt
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: respect
+      fa: احترام
+    definition: wenn man eine Person achtet und sie gut und höflich behandelt
+    example:
+      de: Man sollte alten Menschen mit Respekt begegnen.
+      en: One should treat elderly people with respect.
+      fa: باید با سالمندان با احترام رفتار کرد.
+    alsoAccepted: [die Achtung]
+
   - word: erwarten
+    class: verb
+    level: B1
+    meaning:
+      en: to expect
+      fa: انتظار داشتن
+    definition: glauben, dass etwas bestimmt passieren wird
+    example:
+      de: Ich habe nicht erwartet, dass so viele Leute kommen.
+      en: I didn't expect so many people to come.
+      fa: انتظار نداشتم این‌همه آدم بیایند.
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 150 questions, then the 8 and the 12 changed after the
+    earlier answers; not people)"
+  date: 2026-11-28
+  pool: d06729f11841f7aa

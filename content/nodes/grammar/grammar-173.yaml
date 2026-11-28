@@ -4,10 +4,315 @@ kind: grammar
 level: B1
 chapter: b1-reason-condition-clauses
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-159]
 title:
   en: "*so … dass* / *sodass*"
   fa: "*so … dass* / *sodass*"
   de: "*so … dass* / *sodass*"
+
+explanations:
+  en:
+    rule: >
+      A result clause says what follows from something, and German has two
+      ways to build one. Put *so* before an adjective or adverb in the main
+      clause, and give the result in a *dass* clause: *Es wurde so kalt,
+      dass wir nach Hause mussten.* (so cold that …). *So* stresses the
+      adjective; *so viel* and *so viele* work the same way: *Ich hatte so
+      viel Arbeit, dass ich nicht kommen konnte.* When there is no adjective
+      to stress, *sodass* (also written *so dass*) joins the result to the
+      whole main clause: *Es regnete stark, sodass das Spiel ausfiel.* Either
+      way the result is a subordinate clause with the conjugated verb at the
+      end, and it comes second, after a comma. A plain *sehr* cannot take a
+      *dass* clause: say *so kalt, dass …*, not *sehr kalt, dass …*. The same
+      result with the verb in position 2 is *deshalb*: *Es regnete stark,
+      deshalb fiel das Spiel aus.*
+  fa:
+    rule: >
+      جملهٔ پیروِ نتیجه می‌گوید از چیزی چه پیامدی به بار آمده است و آلمانی
+      دو راه برای ساختن آن دارد. در جملهٔ پایه *so* را پیش از صفت یا قید
+      بگذارید و نتیجه را با جملهٔ پیرو *dass* بیاورید: *Es wurde so kalt, dass
+      wir nach Hause mussten.* (آن‌قدر سرد که …). *so* بر صفت تأکید می‌کند؛
+      *so viel* و *so viele* هم همین‌طورند: *Ich hatte so viel Arbeit, dass
+      ich nicht kommen konnte.* اگر صفتی برای تأکید در کار نباشد، *sodass*
+      (که *so dass* هم نوشته می‌شود) نتیجه را به کل جملهٔ پایه می‌پیوندد:
+      *Es regnete stark, sodass das Spiel ausfiel.* در هر دو حالت، نتیجه
+      جملهٔ پیرو است و فعل صرف‌شده به پایان آن می‌رود، و همیشه دوم و پس از
+      ویرگول می‌آید. *sehr* به‌تنهایی جملهٔ *dass* نمی‌گیرد: *so kalt,
+      dass …*، نه *sehr kalt, dass …*. همین نتیجه با فعل در جایگاه دوم با
+      *deshalb* گفته می‌شود: *Es regnete stark, deshalb fiel das Spiel aus.*
+  de:
+    rule: >
+      Ein Folgesatz sagt, was aus etwas folgt. Es gibt zwei Formen. Im
+      Hauptsatz steht *so* vor einem Adjektiv oder Adverb, und die Folge
+      kommt in einem *dass*-Satz: *Es wurde so kalt, dass wir nach Hause
+      mussten.* *So* macht das Adjektiv stark. Mit *so viel* und *so viele*
+      geht es genauso: *Ich hatte so viel Arbeit, dass ich nicht kommen
+      konnte.* Ohne Adjektiv verbindet *sodass* (auch *so dass*) die Folge
+      mit dem ganzen Hauptsatz: *Es regnete stark, sodass das Spiel
+      ausfiel.* In beiden Formen ist die Folge ein Nebensatz. Das
+      konjugierte Verb steht am Ende, und der Satz steht immer danach, nach
+      einem Komma. Mit *sehr* geht kein *dass*-Satz: *so kalt, dass …*, nicht
+      *sehr kalt, dass …*. Mit dem Verb auf Position 2 sagt man das Gleiche
+      mit *deshalb*: *Es regnete stark, deshalb fiel das Spiel aus.*
+
+table:
+  columns:
+    - { en: "Main clause: the cause", fa: "جملهٔ پایه: علت", de: "Hauptsatz: der Grund" }
+    - {
+        en: "*dass* or *sodass*: the result, verb at the end",
+        fa: "*dass* یا *sodass*: نتیجه، فعل در پایان",
+        de: "*dass* oder *sodass*: die Folge, Verb am Ende",
+      }
+  rows:
+    - ["Es wurde so kalt,", dass wir nach Hause mussten.]
+    - ["Der Film war so langweilig,", dass ich eingeschlafen bin.]
+    - ["Ich hatte so viel Arbeit,", dass ich nicht kommen konnte.]
+    - ["Er spricht so schnell,", dass ich ihn nicht verstehe.]
+    - ["Es hat stark geregnet,", sodass das Spiel ausgefallen ist.]
+    - ["Der Bus hatte Verspätung,", sodass ich zu spät zur Arbeit kam.]
+
+examples:
+  - de: Es wurde so kalt, dass wir nach Hause mussten.
+    en: It got so cold that we had to go home.
+    fa: هوا آن‌قدر سرد شد که مجبور شدیم به خانه برگردیم.
+  - de: Der Film war so langweilig, dass ich eingeschlafen bin.
+    en: The film was so boring that I fell asleep.
+    fa: فیلم آن‌قدر کسل‌کننده بود که خوابم برد.
+  - de: Ich hatte so viel Arbeit, dass ich nicht kommen konnte.
+    en: I had so much work that I couldn't come.
+    fa: آن‌قدر کار داشتم که نتوانستم بیایم.
+  - de: Er spricht so schnell, dass ich ihn nicht verstehe.
+    en: He speaks so fast that I can't understand him.
+    fa: آن‌قدر تند حرف می‌زند که حرفش را نمی‌فهمم.
+  - de: Es hat stark geregnet, sodass das Spiel ausgefallen ist.
+    en: It rained heavily, so the match was called off.
+    fa: باران تندی بارید، به‌طوری که مسابقه لغو شد.
+  - de: Der Bus hatte Verspätung, sodass ich zu spät zur Arbeit kam.
+    en: The bus was late, so I got to work late.
+    fa: اتوبوس تأخیر داشت و در نتیجه دیر به سر کار رسیدم.
+  - de: Die Straße war gesperrt, sodass wir einen Umweg fahren mussten.
+    en: The road was closed, so we had to take a detour.
+    fa: جاده بسته بود و در نتیجه مجبور شدیم از راه دیگری برویم.
+  - de: Es regnete stark, deshalb fiel das Spiel aus.
+    en: It rained heavily, so the match was called off.
+    fa: باران تندی بارید، برای همین مسابقه لغو شد.
+
+mistakes:
+  - wrong: Es war sehr kalt, dass wir nach Hause gegangen sind.
+    right: Es war so kalt, dass wir nach Hause gegangen sind.
+    why:
+      en: "A result clause with *dass* needs *so* before the adjective, not *sehr*."
+      fa: "جملهٔ نتیجه با *dass* پیش از صفت *so* لازم دارد، نه *sehr*."
+      de: "Vor einem *dass*-Satz der Folge steht *so* vor dem Adjektiv, nicht *sehr*."
+  - wrong: Es war so kalt, dass wir sind nach Hause gegangen.
+    right: Es war so kalt, dass wir nach Hause gegangen sind.
+    why:
+      en: "In the *dass* clause the conjugated *sind* comes last, after the *Partizip II*."
+      fa: "در جملهٔ پیرو با *dass* فعل صرف‌شدهٔ *sind* پس از صفت مفعولی و در آخر می‌آید."
+      de: "Im *dass*-Satz steht das konjugierte *sind* am Schluss, nach dem Partizip II."
+  - wrong: Sodass es stark regnete, fiel das Spiel aus.
+    right: Es regnete stark, sodass das Spiel ausfiel.
+    why:
+      en: "The *sodass* clause gives the result, and it always comes second."
+      fa: "جملهٔ *sodass* نتیجه را می‌گوید و همیشه دوم می‌آید."
+      de: "Der *sodass*-Satz nennt die Folge. Er steht immer danach."
+  - wrong: Er war so müde, das er sofort eingeschlafen ist.
+    right: Er war so müde, dass er sofort eingeschlafen ist.
+    why:
+      en: "The conjunction is spelt *dass*, with *ss*, also after *so*."
+      fa: "حرف ربط، پس از *so* هم، با *ss* نوشته می‌شود: *dass*."
+      de: "Die Konjunktion schreibt man auch nach *so* mit *ss*: *dass*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Film war ___ langweilig, dass ich eingeschlafen bin.
+    options: [sehr, so, zu]
+    answer: so
+    explanation:
+      en: "A *dass* clause of result needs *so* before the adjective."
+      fa: "جملهٔ نتیجه با *dass* پیش از صفت *so* لازم دارد."
+      de: "Vor einem *dass*-Satz der Folge steht *so* vor dem Adjektiv."
+  - id: gap-2
+    type: gap-fill
+    prompt: Es hat die ganze Nacht geschneit, ___ die Straßen heute weiß sind.
+    options: [deshalb, obwohl, sodass]
+    answer: sodass
+    explanation:
+      en: "The clause gives the result, with the verb *sind* at the end: *sodass*."
+      fa: "جمله نتیجه را می‌گوید و فعل *sind* در پایان است: *sodass*."
+      de: "Der Satz nennt die Folge, das Verb *sind* steht am Ende: *sodass*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Er spricht so schnell, ___ ich ihn nicht verstehe.
+    options: [das, dass, weil]
+    answer: dass
+    explanation:
+      en: "*So schnell* is followed by the result in a *dass* clause, spelt with *ss*."
+      fa: "پس از *so schnell* نتیجه با جملهٔ *dass* می‌آید که با *ss* نوشته می‌شود."
+      de: "Nach *so schnell* kommt die Folge in einem *dass*-Satz, mit *ss*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Der Zug hatte Verspätung, ___ kam ich zu spät.
+    options: [sodass, deshalb, dass]
+    answer: deshalb
+    explanation:
+      en: "The verb *kam* comes right after the gap, in position 2, so the adverb *deshalb*."
+      fa: "فعل *kam* بلافاصله پس از جای خالی و در جایگاه دوم است، پس قید *deshalb* می‌آید."
+      de: "Das Verb *kam* steht direkt danach, auf Position 2. Darum das Adverb *deshalb*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Es war so heiß, dass …
+    options: [wir sind schwimmen gegangen., wir schwimmen gegangen sind., sind wir schwimmen gegangen.]
+    answer: wir schwimmen gegangen sind.
+    explanation:
+      en: "In the *dass* clause the conjugated *sind* goes to the very end."
+      fa: "در جملهٔ پیرو با *dass* فعل صرف‌شدهٔ *sind* به پایان جمله می‌رود."
+      de: "Im *dass*-Satz steht das konjugierte *sind* ganz am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Ich war so müde, dass ich sofort eingeschlafen bin. Das heißt: …"
+    options:
+      - Ich war müde, aber ich bin nicht eingeschlafen.
+      - Ich bin eingeschlafen, weil ich sehr müde war.
+      - Ich bin eingeschlafen, obwohl ich nicht müde war.
+    answer: Ich bin eingeschlafen, weil ich sehr müde war.
+    explanation:
+      en: "The *dass* clause is the result of the tiredness: being so tired made me fall asleep."
+      fa: "جملهٔ *dass* نتیجهٔ خستگی است: خستگی زیاد باعث شد خوابم ببرد."
+      de: "Der *dass*-Satz ist die Folge: Ich war sehr müde, darum bin ich eingeschlafen."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Welcher Satz ist richtig?"
+    options:
+      - Sodass es regnete, fiel das Spiel aus.
+      - Es regnete, sodass fiel das Spiel aus.
+      - Es regnete, sodass das Spiel ausfiel.
+    answer: Es regnete, sodass das Spiel ausfiel.
+    explanation:
+      en: "The *sodass* clause comes second, and its verb *ausfiel* is one word at the end."
+      fa: "جملهٔ *sodass* دوم می‌آید و فعلش *ausfiel* یک‌جا در پایان قرار می‌گیرد."
+      de: "Der *sodass*-Satz steht danach, und sein Verb *ausfiel* steht zusammen am Ende."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Die Suppe war so salzig, …
+    options: [dass niemand wollte sie essen., dass niemand sie essen wollte., dass wollte niemand sie essen.]
+    answer: dass niemand sie essen wollte.
+    explanation:
+      en: "In the *dass* clause the modal verb *wollte* comes last, after the infinitive."
+      fa: "در جملهٔ پیرو با *dass* فعل وجهی *wollte* پس از مصدر و در آخر می‌آید."
+      de: "Im *dass*-Satz steht das Modalverb *wollte* am Schluss, nach dem Infinitiv."
+  - id: true-1
+    type: true-false
+    prompt: Ich hatte so viel Arbeit, dass ich nicht kommen konnte.
+    answer: true
+    explanation:
+      en: "*So viel* is followed by the result in a *dass* clause, with *konnte* at the end. The sentence is correct."
+      fa: "پس از *so viel* نتیجه با جملهٔ *dass* می‌آید و *konnte* در پایان است. جمله درست است."
+      de: "Nach *so viel* kommt die Folge im *dass*-Satz, *konnte* steht am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Es war so kalt, dass wir blieben zu Hause.
+    answer: false
+    explanation:
+      en: "In the *dass* clause the verb goes to the end: *dass wir zu Hause blieben*."
+      fa: "در جملهٔ پیرو با *dass* فعل به پایان جمله می‌رود: *dass wir zu Hause blieben*."
+      de: "Im *dass*-Satz steht das Verb am Ende: *dass wir zu Hause blieben*."
+  - id: true-3
+    type: true-false
+    prompt: Der Bus kam nicht, sodass wir ein Taxi nehmen mussten.
+    answer: true
+    explanation:
+      en: "The *sodass* clause comes second and ends with *mussten*. The sentence is correct."
+      fa: "جملهٔ *sodass* دوم آمده و با *mussten* پایان می‌یابد. جمله درست است."
+      de: "Der *sodass*-Satz steht danach und endet mit *mussten*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Das Wasser war sehr kalt, dass niemand schwimmen wollte.
+    answer: false
+    explanation:
+      en: "A result clause with *dass* needs *so*: *so kalt, dass niemand schwimmen wollte*."
+      fa: "جملهٔ نتیجه با *dass* به *so* نیاز دارد: *so kalt, dass niemand schwimmen wollte*."
+      de: "Vor dem *dass*-Satz der Folge braucht man *so*: *so kalt, dass niemand schwimmen wollte*."
+  - id: true-5
+    type: true-false
+    prompt: Sie hat so leise gesprochen, dass ich sie kaum verstanden habe.
+    answer: true
+    explanation:
+      en: "*So leise* is followed by the result, and *habe* closes the *dass* clause. The sentence is correct."
+      fa: "پس از *so leise* نتیجه می‌آید و *habe* جملهٔ *dass* را می‌بندد. جمله درست است."
+      de: "Nach *so leise* kommt die Folge, *habe* steht am Ende vom *dass*-Satz. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Die Musik ist so laut, dass ich nichts ___ (hören).
+    answers: [höre]
+    explanation:
+      en: "The subject is *ich*, and the verb stands at the end of the *dass* clause: *höre*."
+      fa: "فاعل *ich* است و فعل در پایان جملهٔ *dass* می‌آید: *höre*."
+      de: "Das Subjekt ist *ich*, das Verb steht am Ende vom *dass*-Satz: *höre*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Es hat so stark geregnet, dass der Keller jetzt voll Wasser ___ (sein).
+    answers: [ist]
+    explanation:
+      en: "*Jetzt* puts the result in the present, and the verb stands at the end: *ist*."
+      fa: "*jetzt* نتیجه را در زمان حال می‌گذارد و فعل در پایان جمله می‌آید: *ist*."
+      de: "*Jetzt* zeigt: Die Folge ist im Präsens. Das Verb steht am Ende: *ist*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich habe ___ viel gegessen, dass mir jetzt schlecht ist.
+    answers: [so, derart, dermaßen]
+    explanation:
+      en: "A *dass* clause of result needs *so* before *viel*: *so viel …, dass*."
+      fa: "جملهٔ نتیجه با *dass* پیش از *viel* به *so* نیاز دارد: *so viel …, dass*."
+      de: "Vor dem *dass*-Satz der Folge steht *so* vor *viel*: *so viel …, dass*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Die Straße war gesperrt, sodass wir einen Umweg fahren ___ (müssen).
+    answers: [mussten]
+    explanation:
+      en: "The modal verb comes last in the *sodass* clause, in the *Präteritum* like *war*: *mussten*."
+      fa: "فعل وجهی در پایان جملهٔ *sodass* می‌آید و مانند *war* در گذشتهٔ ساده (*Präteritum*) است: *mussten*."
+      de: "Das Modalverb steht am Ende vom *sodass*-Satz, im Präteritum wie *war*: *mussten*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["es wurde so kalt,", dass, wir, nach Hause, gingen]
+    explanation:
+      en: "*Dass* starts the result clause, then the subject, and the verb *gingen* comes last."
+      fa: "*dass* جملهٔ نتیجه را آغاز می‌کند، سپس فاعل می‌آید و فعل *gingen* در آخر."
+      de: "*Dass* beginnt den Folgesatz, dann kommt das Subjekt, das Verb *gingen* steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["der Bus hatte Verspätung,", sodass, ich, zu spät, kam]
+    explanation:
+      en: "*Sodass* starts the clause, and the verb *kam* comes last."
+      fa: "*sodass* جمله را آغاز می‌کند و فعل *kam* در آخر می‌آید."
+      de: "*Sodass* beginnt den Satz, und das Verb *kam* steht am Ende."
+  - id: order-3
+    type: word-order
+    answers:
+      - ["er war so müde,", dass, er, sofort, eingeschlafen, ist]
+    explanation:
+      en: "In the *dass* clause the *Partizip II* comes before the conjugated *ist*, which ends the sentence."
+      fa: "در جملهٔ *dass* صفت مفعولی پیش از فعل صرف‌شدهٔ *ist* می‌آید و *ist* جمله را می‌بندد."
+      de: "Im *dass*-Satz steht das Partizip II vor dem konjugierten *ist*. *Ist* steht ganz am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Ich hatte so großen Hunger,", dass ich drei Teller Suppe gegessen habe.]
+      - ["Die Musik war so laut,", dass ich mir die Ohren zugehalten habe.]
+      - ["Der Koffer war so schwer,", dass ich ihn nicht tragen konnte.]
+    explanation:
+      en: "Each result fits its cause: hunger and soup, loud music and covered ears, a heavy case that cannot be carried."
+      fa: "هر نتیجه با علت خود جور است: گرسنگی و سوپ، موسیقی بلند و گرفتن گوش‌ها، چمدان سنگین که نمی‌شود حملش کرد."
+      de: "Jede Folge passt zu ihrem Grund: Hunger und Suppe, laute Musik und Ohren zuhalten, ein schwerer Koffer."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 62ec1d6ed3fb7ff4

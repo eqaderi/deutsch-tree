@@ -1,38 +1,381 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# abfliegen and fliegen, and Koffer and Gepäck, are close; `tooCloseTo` keeps a close one
+# from being offered as a wrong meaning, and `alsoAccepted` takes it as right where it fits.
+# The scope list gives Abflug and Einzelzimmer no plural marker; their plurals are written
+# out from the dictionary.
 id: vocabulary-travel
 kind: vocabulary
 level: A1
 chapter: a1-words-town-travel
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Car, plane and holidays"
   fa: "ماشین، هواپیما و تعطیلات"
   de: "Auto, Flugzeug und Urlaub"
+attemptSize: 15
 words:
   - word: Auto
+    class: noun
+    article: das
+    plural: Autos
+    level: A1
+    meaning:
+      en: car
+      fa: ماشین، خودرو
+    definition: ein Fahrzeug mit vier Rädern für ein paar Personen
+    example:
+      de: Unser Auto ist schon zwölf Jahre alt.
+      en: Our car is already twelve years old.
+      fa: ماشین ما دوازده سال دارد.
+    alsoAccepted: [der Wagen, der Pkw, der PKW]
+
   - word: Lkw
+    class: noun
+    article: der
+    plural: Lkws
+    level: A1
+    meaning:
+      en: lorry, truck
+      fa: کامیون
+    definition: ein großes, schweres Auto, das Waren von Ort zu Ort bringt
+    example:
+      de: Auf der Autobahn fahren heute viele Lkws.
+      en: There are a lot of lorries on the motorway today.
+      fa: امروز کامیون‌های زیادی در بزرگراه هستند.
+    alsoAccepted: [der LKW, der Lastwagen, der Laster, der Lastkraftwagen]
+
   - word: Autobahn
+    class: noun
+    article: die
+    plural: Autobahnen
+    level: A1
+    meaning:
+      en: motorway, highway
+      fa: بزرگراه، آزادراه
+    definition: eine breite Straße zwischen den Städten, auf der man sehr schnell fahren darf
+    example:
+      de: Nach Köln fahren wir zwei Stunden auf der Autobahn.
+      en: We drive for two hours on the motorway to Cologne.
+      fa: تا کلن دو ساعت در بزرگراه رانندگی می‌کنیم.
+
   - word: Fahrrad
+    class: noun
+    article: das
+    plural: Fahrräder
+    level: A1
+    meaning:
+      en: bicycle, bike
+      fa: دوچرخه
+    definition: ein Fahrzeug mit zwei Rädern und Pedalen, ohne Motor
+    example:
+      de: Ich fahre jeden Tag mit dem Fahrrad zur Arbeit.
+      en: I cycle to work every day.
+      fa: هر روز با دوچرخه سر کار می‌روم.
+    alsoAccepted: [das Rad, das Velo]
+
   - word: Rad fahren
+    class: verb
+    level: A1
+    meaning:
+      en: to cycle, to ride a bike
+      fa: دوچرخه‌سواری کردن
+    definition: mit dem Fahrrad unterwegs sein
+    example:
+      de: Im Sommer fahren wir oft Rad.
+      en: In summer we often go cycling.
+      fa: تابستان‌ها اغلب دوچرخه‌سواری می‌کنیم.
+    alsoAccepted: [radeln, Fahrrad fahren]
+
   - word: Flugzeug
+    class: noun
+    article: das
+    plural: Flugzeuge
+    level: A1
+    meaning:
+      en: plane, aeroplane
+      fa: هواپیما
+    definition: damit reist man durch die Luft in andere Länder
+    example:
+      de: Das Flugzeug landet um 18 Uhr.
+      en: The plane lands at 6 pm.
+      fa: هواپیما ساعت ۱۸ فرود می‌آید.
+    alsoAccepted: [die Maschine, der Flieger]
+
   - word: Flughafen
+    class: noun
+    article: der
+    plural: Flughäfen
+    level: A1
+    meaning:
+      en: airport
+      fa: فرودگاه
+    definition: dort fliegen die Flugzeuge ab und kommen an
+    example:
+      de: Wie komme ich zum Flughafen?
+      en: How do I get to the airport?
+      fa: چطور به فرودگاه بروم؟
+    alsoAccepted: [der Flugplatz]
+
   - word: Abflug
+    class: noun
+    article: der
+    plural: Abflüge
+    level: A1
+    meaning:
+      en: departure (of a plane), take-off
+      fa: حرکت هواپیما، عزیمت
+    definition: der Start von einem Flugzeug, wenn es den Flughafen verlässt
+    example:
+      de: Der Abflug ist um 7:40 Uhr.
+      en: The flight leaves at 7:40.
+      fa: پرواز ساعت ۷:۴۰ است.
+    alsoAccepted: [der Start]
+
   - word: abfliegen
+    class: verb
+    level: A1
+    meaning:
+      en: to take off, to leave (by plane)
+      fa: با هواپیما عازم شدن، از زمین بلند شدن
+    definition: mit dem Flugzeug einen Ort verlassen
+    example:
+      de: Wir fliegen morgen früh in Frankfurt ab.
+      en: We're flying out of Frankfurt tomorrow morning.
+      fa: فردا صبح از فرانکفورت پرواز می‌کنیم.
+    alsoAccepted: [losfliegen, starten, fliegen, wegfliegen]
+    tooCloseTo: [fliegen]
+
   - word: fliegen
+    class: verb
+    level: A1
+    meaning:
+      en: to fly
+      fa: پرواز کردن
+    definition: durch die Luft reisen, wie ein Vogel oder mit dem Flugzeug
+    example:
+      de: Im Sommer fliegen wir nach Teheran.
+      en: In summer we're flying to Tehran.
+      fa: تابستان با هواپیما به تهران می‌رویم.
+    tooCloseTo: [abfliegen]
+
   - word: Reise
+    class: noun
+    article: die
+    plural: Reisen
+    level: A1
+    meaning:
+      en: journey, trip
+      fa: سفر
+    definition: eine lange Fahrt an einen anderen Ort, oft für mehrere Tage
+    example:
+      de: Wir machen eine Reise nach Italien.
+      en: We're going on a trip to Italy.
+      fa: سفری به ایتالیا می‌رویم.
+    alsoAccepted: [die Fahrt]
+
   - word: reisen
+    class: verb
+    level: A1
+    meaning:
+      en: to travel
+      fa: سفر کردن
+    definition: an andere Orte oder in andere Länder fahren oder fliegen
+    example:
+      de: Meine Eltern reisen gern.
+      en: My parents like travelling.
+      fa: پدر و مادرم سفر کردن را دوست دارند.
+    alsoAccepted: [verreisen]
+
   - word: Reisebüro
+    class: noun
+    article: das
+    plural: Reisebüros
+    level: A1
+    meaning:
+      en: travel agency
+      fa: آژانس مسافرتی
+    definition: ein Geschäft, in dem man Flüge und Hotels für den Urlaub buchen kann
+    example:
+      de: Wir haben die Reise im Reisebüro gebucht.
+      en: We booked the trip at the travel agency.
+      fa: سفر را در آژانس مسافرتی رزرو کردیم.
+
   - word: Reiseführer
+    class: noun
+    article: der
+    plural: Reiseführer
+    level: A1
+    meaning:
+      en: guidebook; tour guide
+      fa: کتاب راهنمای سفر؛ راهنمای تور
+    definition: ein Buch mit Informationen über ein Land oder eine Stadt; auch eine Person, die Touristen alles zeigt
+    example:
+      de: Im Reiseführer stehen die schönsten Sehenswürdigkeiten.
+      en: The guidebook lists the finest sights.
+      fa: زیباترین جاهای دیدنی در کتاب راهنما آمده است.
+    alsoAccepted: [die Reiseführerin, der Führer, der Fremdenführer]
+
   - word: Urlaub
+    class: noun
+    article: der
+    plural: Urlaube
+    level: A1
+    meaning:
+      en: holiday, vacation; time off work
+      fa: تعطیلات، مرخصی
+    definition: freie Tage, an denen man nicht arbeitet und oft verreist
+    example:
+      de: Im August haben wir drei Wochen Urlaub.
+      en: In August we have three weeks' holiday.
+      fa: ماه اوت سه هفته مرخصی داریم.
+    alsoAccepted: [die Ferien]
+
   - word: Ausflug
+    class: noun
+    article: der
+    plural: Ausflüge
+    level: A1
+    meaning:
+      en: outing, day trip
+      fa: گردش یک‌روزه
+    definition: eine kurze Fahrt zu einem schönen Ort, und am Abend ist man wieder zu Hause
+    example:
+      de: Am Sonntag machen wir einen Ausflug an den See.
+      en: On Sunday we're going on a trip to the lake.
+      fa: یکشنبه برای گردش به کنار دریاچه می‌رویم.
+    alsoAccepted: [der Tagesausflug]
+
   - word: Koffer
+    class: noun
+    article: der
+    plural: Koffer
+    level: A1
+    meaning:
+      en: suitcase
+      fa: چمدان
+    definition: eine große, feste Tasche, in die man für die Reise Kleider packt
+    example:
+      de: Mein Koffer ist zu schwer.
+      en: My suitcase is too heavy.
+      fa: چمدانم خیلی سنگین است.
+
   - word: Gepäck
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: luggage, baggage
+      fa: بار، وسایل سفر
+    definition: alle Koffer und Taschen, die man auf eine Reise mitnimmt
+    example:
+      de: Wo kann ich mein Gepäck abgeben?
+      en: Where can I leave my luggage?
+      fa: بارم را کجا می‌توانم تحویل بدهم؟
+    alsoAccepted: [das Reisegepäck]
+    tooCloseTo: [Koffer]
+
   - word: Zoll
+    class: noun
+    article: der
+    plural: Zölle
+    level: A1
+    meaning:
+      en: customs
+      fa: گمرک
+    definition: dort kontrolliert man an der Grenze, was die Reisenden mitbringen
+    example:
+      de: Am Zoll muss ich meinen Koffer öffnen.
+      en: At customs I have to open my suitcase.
+      fa: در گمرک باید چمدانم را باز کنم.
+
   - word: Hotel
+    class: noun
+    article: das
+    plural: Hotels
+    level: A1
+    meaning:
+      en: hotel
+      fa: هتل
+    definition: ein großes Haus mit vielen Zimmern für Gäste, mit Rezeption und oft mit Restaurant
+    example:
+      de: Unser Hotel liegt direkt am Meer.
+      en: Our hotel is right by the sea.
+      fa: هتل ما درست کنار دریاست.
+
   - word: Rezeption
+    class: noun
+    article: die
+    plural: Rezeptionen
+    level: A1
+    meaning:
+      en: reception (desk)
+      fa: پذیرش (هتل)
+    definition: dort meldet man sich im Hotel an und bekommt den Schlüssel
+    example:
+      de: Den Schlüssel bekommen Sie an der Rezeption.
+      en: You get the key at reception.
+      fa: کلید را از پذیرش می‌گیرید.
+    alsoAccepted: [der Empfang]
+
   - word: Einzelzimmer
+    class: noun
+    article: das
+    plural: Einzelzimmer
+    level: A1
+    meaning:
+      en: single room
+      fa: اتاق یک‌نفره
+    definition: ein Zimmer im Hotel für eine Person
+    example:
+      de: Ein Einzelzimmer kostet 80 Euro pro Nacht.
+      en: A single room costs 80 euros a night.
+      fa: اتاق یک‌نفره شبی ۸۰ یورو است.
+
   - word: Doppelzimmer
+    class: noun
+    article: das
+    plural: Doppelzimmer
+    level: A1
+    meaning:
+      en: double room
+      fa: اتاق دونفره
+    definition: ein Zimmer im Hotel für zwei Personen
+    example:
+      de: Haben Sie noch ein Doppelzimmer frei?
+      en: Do you still have a double room free?
+      fa: هنوز اتاق دونفرهٔ خالی دارید؟
+
   - word: Halbpension
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: half board
+      fa: نیم‌پانسیون (صبحانه و شام)
+    definition: im Hotel bekommt man Frühstück und Abendessen, aber kein Mittagessen
+    example:
+      de: Wir haben ein Zimmer mit Halbpension gebucht.
+      en: We have booked a room with half board.
+      fa: اتاقی با صبحانه و شام رزرو کرده‌ایم.
+
   - word: übernachten
+    class: verb
+    level: A1
+    meaning:
+      en: to stay the night, to spend the night
+      fa: شب ماندن، شب را گذراندن
+    definition: eine Nacht an einem Ort schlafen, der nicht das eigene Zuhause ist
+    example:
+      de: Wir übernachten bei Freunden in Graz.
+      en: We're staying the night with friends in Graz.
+      fa: شب را پیش دوستانمان در گراتس می‌مانیم.
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 22 questions)
+  date: 2026-11-28
+  pool: 04e38cf6dd783bc0

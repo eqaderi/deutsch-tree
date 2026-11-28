@@ -19,6 +19,9 @@ const NODE = 'vocabulary-fixture-home'
 const GERMAN_QUESTION_OF = (place: number, total: number) => `Frage ${place} von ${total}`
 const GERMAN_NEXT = 'Weiter'
 
+/** What a question into German asks of a learner who reads in English. */
+const INTO_GERMAN = 'Type the German word. A noun needs its article, if it takes one, and a reflexive verb its sich.'
+
 /** The word list on the page, one item per word. */
 const wordsOnPage = (page: Page) => page.getByRole('list', { name: 'Words' }).getByRole('listitem')
 
@@ -132,10 +135,8 @@ test('into German the learner reads the meaning and must type a noun with its ar
   const [learned = ''] = question.answers
   const bare = learned.replace(/^(der|die|das) /, '')
 
-  await expect(page.getByText('Type the German word. A noun needs its article.')).toBeVisible()
-  await expect(
-    page.getByRole('textbox', { name: `Type the German word. A noun needs its article. ${question.prompt.en}` }),
-  ).toBeVisible()
+  await expect(page.getByText(INTO_GERMAN)).toBeVisible()
+  await expect(page.getByRole('textbox', { name: `${INTO_GERMAN} ${question.prompt.en}` })).toBeVisible()
   await page.getByRole('textbox').fill(bare)
   const place = Number(/\d+/.exec((await page.getByRole('heading', { level: 2 }).first().textContent()) ?? '')?.[0])
   await page.getByRole('button', { name: place < 10 ? 'Next' : 'Check answers' }).click()
@@ -149,6 +150,28 @@ test('into German the learner reads the meaning and must type a noun with its ar
   await expect(wrong.getByRole('term')).toHaveText(['Your answer', 'Right answer'])
   await expect(wrong.getByRole('definition').nth(0)).toContainText(bare)
   await expect(wrong.getByRole('definition').nth(1)).toContainText(learned)
+})
+
+test('a name that takes no article is shown bare, and typed with an article it is wrong', async ({ page }) => {
+  await page.goto(`./#/node/${NODE}`)
+  const deutschland = wordsOnPage(page).filter({ hasText: 'Germany' })
+  await expect(deutschland.locator('[lang="de"]').first()).toHaveText('Deutschland')
+  await expect(deutschland).toContainText('noun')
+
+  await page.goto(`./#/node/${NODE}/test`)
+  const question = await firstOfType(page, 'word-for-meaning', (one) => 'word' in one && one.word === 'Deutschland')
+  await expect(page.getByText(INTO_GERMAN)).toBeVisible()
+  await page.getByRole('textbox').fill('das Deutschland')
+  const place = Number(/\d+/.exec((await page.getByRole('heading', { level: 2 }).first().textContent()) ?? '')?.[0])
+  await page.getByRole('button', { name: place < 10 ? 'Next' : 'Check answers' }).click()
+  await takeTest(page, () => 'right', { node: NODE, from: place + 1 })
+
+  await expect(page.getByRole('main')).toContainText('9 of 10 right')
+  const wrong = page.getByRole('list', { name: 'Wrong answers' }).getByRole('listitem')
+  await expect(wrong).toHaveCount(1)
+  if (question.type === 'word-for-meaning') await expect(wrong).toContainText(question.prompt.en)
+  await expect(wrong.getByRole('definition').nth(0)).toContainText('das Deutschland')
+  await expect(wrong.getByRole('definition').nth(1)).toHaveText('Deutschland')
 })
 
 test('a Persian learner is asked by the Persian meaning; the report of a problem names the word’s question', async ({
@@ -182,7 +205,9 @@ test('a learner who reads in German is asked for the word by its German definiti
 /**
  * Answers the attempt on screen right until a question of `type` (that also
  * passes `also`) comes, and leaves that one unanswered. An attempt asks half
- * of its words in each direction, so one comes within the first attempt.
+ * of its words in each direction, so a question of a type comes within the
+ * first attempt; one about a given word may not, and then another attempt is
+ * taken.
  */
 async function firstOfType(
   page: Page,
@@ -190,14 +215,17 @@ async function firstOfType(
   also: (question: FixtureQuestion) => boolean = () => true,
   words: TestWords = ENGLISH,
 ): Promise<FixtureQuestion> {
-  for (let place = 1; place <= 10; place += 1) {
-    await expect(page.getByText(words.questionOf(place, 10))).toBeVisible()
-    const question = await questionOnScreen(page)
-    if (question.type === type && also(question)) return question
-    await giveAnswer(page, question, 'right', words)
-    await page.getByRole('button', { name: place < 10 ? words.next : words.checkAnswers }).click()
+  for (let attempt = 1; attempt <= 40; attempt += 1) {
+    if (attempt > 1) await page.getByRole('button', { name: words.tryAgain }).click()
+    for (let place = 1; place <= 10; place += 1) {
+      await expect(page.getByText(words.questionOf(place, 10))).toBeVisible()
+      const question = await questionOnScreen(page)
+      if (question.type === type && also(question)) return question
+      await giveAnswer(page, question, 'right', words)
+      await page.getByRole('button', { name: place < 10 ? words.next : words.checkAnswers }).click()
+    }
   }
-  throw new Error(`no ${type} question in the attempt`)
+  throw new Error(`no such ${type} question came up in 40 attempts`)
 }
 
 /** Text for a pattern that matches it as written. */

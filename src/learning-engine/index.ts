@@ -214,16 +214,23 @@ const MEANINGS_OFFERED = 4
  *
  * From German (`meaning-of-word`) the learner reads the word as it is learned
  * and chooses its meaning among the meanings of other words of the node:
- * words of the same class before others, and never a word that either of the
- * two names in `tooCloseTo`.
+ * words of the same class before others, never a word that either of the
+ * two names in `tooCloseTo`, and never a meaning that reads, in any language,
+ * like one already offered (the case and the spaces aside).
  *
  * Into German (`word-for-meaning`) the learner reads the meaning and types
- * the word as it is learned: a noun with its article. The accepted answers
- * are that form and what the word lists under `alsoAccepted`, so a noun
- * without its article, or with another one, is a wrong answer.
+ * the word as it is learned: a noun with its article, a noun that takes none
+ * ("Deutschland") bare. The accepted answers are that form and what the word
+ * lists under `alsoAccepted`, so a noun without its article, with another
+ * one, or with one it does not take, is a wrong answer.
  *
  * The reason of both questions is the word with its meaning and its example
  * sentence.
+ *
+ * The meanings stand in an order fixed by the words, with the right one
+ * mostly last. No one sees that order: a test draws one for each attempt
+ * (`asAsked`) and the review sheet mixes them by themselves alone. It stays
+ * because the review records of the published nodes are of the pool in it.
  */
 export function vocabularyPool(words: readonly VocabularyWord[]): Question[] {
   const ids = questionIds(words)
@@ -271,7 +278,23 @@ function wrongOptions(word: VocabularyWord, words: readonly VocabularyWord[]): V
   )
   const sameClass = others.filter((other) => other.class === word.class)
   const otherClass = others.filter((other) => other.class !== word.class)
-  return [...sameClass, ...otherClass].slice(0, MEANINGS_OFFERED - 1)
+  const shown = new Set(shownMeanings(word))
+  const offered: VocabularyWord[] = []
+  for (const other of [...sameClass, ...otherClass]) {
+    if (offered.length === MEANINGS_OFFERED - 1) break
+    const meanings = shownMeanings(other)
+    if (meanings.some((meaning) => shown.has(meaning))) continue
+    for (const meaning of meanings) shown.add(meaning)
+    offered.push(other)
+  }
+  return offered
+}
+
+/** How the meaning of a word reads as an option in each language, the case and the spaces aside. */
+function shownMeanings(word: VocabularyWord): string[] {
+  return [word.meaning.en, word.meaning.fa, word.definition].map(
+    (text, language) => `${language}:${text.trim().replace(/\s+/g, ' ').toLowerCase()}`,
+  )
 }
 
 /**
@@ -354,7 +377,8 @@ export type AnswerNote = 'umlaut-substitute' | 'capitalisation'
  * Compares typed text with the accepted answers of a question. Any question
  * whose answer is typed uses this, whatever it asks for.
  *
- * Spaces at the ends and doubled spaces are ignored. An answer that then
+ * Spaces at the ends and doubled spaces are ignored, and so are the marks
+ * that end a sentence (. ! ?) after the last word. An answer that then
  * differs from an accepted one only by the slips of `AnswerNote` is right,
  * and `notes` names those slips. Nothing else is forgiven: a missing word
  * (an article, say) or a missing letter is a wrong answer.
@@ -415,9 +439,20 @@ function standsFor(typed: string, exact: string): boolean {
   return place === typed.length
 }
 
-/** Text without spaces at its ends and with one space wherever it has several. Never worth a note. */
+/**
+ * Text without spaces at its ends, with one space wherever it has several,
+ * and without the full stops, exclamation marks and question marks after its
+ * last word. Never worth a note. A question mark goes too: the words and
+ * their order are what a typed answer tests, and they show a question
+ * without it. A mark inside the text (a comma, a full stop between words)
+ * stays and must be typed.
+ */
 function spaced(text: string): string {
-  return text.normalize('NFC').replace(/\s+/g, ' ').trim()
+  return text
+    .normalize('NFC')
+    .replace(/[\s.!?]+$/, '')
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
 export interface AttemptResult {

@@ -1,36 +1,367 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-roads
 kind: vocabulary
 level: B1
 chapter: b1-words-travel-nature
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Roads and traffic rules"
   fa: "جاده‌ها و قانون‌های رانندگی"
   de: "Straßen und Verkehrsregeln"
+attemptSize: 15
 words:
   - word: Fahrbahn
+    class: noun
+    article: die
+    plural: Fahrbahnen
+    level: B1
+    meaning:
+      en: roadway, carriageway (the part of the road where vehicles drive)
+      fa: سواره‌رو (بخشی از خیابان که خودروها در آن حرکت می‌کنند)
+    definition: der Teil der Straße, auf dem die Autos fahren
+    example:
+      de: Kinder dürfen nicht auf der Fahrbahn spielen.
+      en: Children must not play on the roadway.
+      fa: بچه‌ها نباید در سواره‌رو بازی کنند.
+
   - word: Einbahnstraße
+    class: noun
+    article: die
+    plural: Einbahnstraßen
+    level: B1
+    meaning:
+      en: one-way street
+      fa: خیابان یک‌طرفه
+    definition: eine Straße, in der man nur in eine Richtung fahren darf
+    example:
+      de: Das ist eine Einbahnstraße, du musst die nächste Straße nehmen.
+      en: This is a one-way street, you have to take the next road.
+      fa: این خیابان یک‌طرفه است، باید از خیابان بعدی بروی.
+
   - word: Ausfahrt
+    class: noun
+    article: die
+    plural: Ausfahrten
+    level: B1
+    meaning:
+      en: exit (where vehicles leave a motorway, a car park or a yard)
+      fa: خروجی (جایی که خودروها از بزرگراه یا پارکینگ بیرون می‌روند)
+    definition: die Stelle, an der man mit dem Auto die Autobahn, einen Parkplatz oder einen Hof verlässt
+    example:
+      de: Nehmen Sie die nächste Ausfahrt Richtung Köln.
+      en: Take the next exit towards Cologne.
+      fa: از خروجی بعدی به سمت کلن خارج شوید.
+    alsoAccepted: [die Abfahrt]
+
   - word: Einfahrt
+    class: noun
+    article: die
+    plural: Einfahrten
+    level: B1
+    meaning:
+      en: entrance for vehicles, driveway (where you drive in)
+      fa: ورودی خودرو (جایی که خودرو وارد حیاط، پارکینگ یا بزرگراه می‌شود)
+    definition: die Stelle, an der man mit dem Auto in einen Hof, eine Garage oder auf die Autobahn hineinfährt
+    example:
+      de: Bitte parken Sie nicht vor der Einfahrt.
+      en: Please do not park in front of the driveway.
+      fa: لطفاً جلوی ورودی پارک نکنید.
+    alsoAccepted: [die Zufahrt, die Auffahrt]
+
   - word: Kurve
+    class: noun
+    article: die
+    plural: Kurven
+    level: B1
+    meaning:
+      en: bend, curve (in a road)
+      fa: پیچ (جاده)
+    definition: eine Stelle, an der die Straße nicht gerade weitergeht
+    example:
+      de: Fahr in der Kurve bitte langsam!
+      en: Please drive slowly on the bend!
+      fa: لطفاً سر پیچ آهسته برو!
+    alsoAccepted: [die Biegung]
+
   - word: Umleitung
+    class: noun
+    article: die
+    plural: Umleitungen
+    level: B1
+    meaning:
+      en: diversion, detour (another way to drive because a road is closed)
+      fa: مسیر انحرافی (راه دیگری به‌جای جادهٔ بسته)
+    definition: ein anderer Weg, den man fahren muss, weil eine Straße gesperrt ist
+    example:
+      de: Wegen einer Baustelle gibt es eine Umleitung.
+      en: There is a diversion because of road works.
+      fa: به دلیل عملیات ساختمانی، مسیر انحرافی در نظر گرفته شده است.
+
   - word: Stau
+    class: noun
+    article: der
+    plural: Staus
+    level: B1
+    meaning:
+      en: traffic jam
+      fa: راه‌بندان، ترافیک سنگین
+    definition: eine lange Reihe von Autos, die nicht oder nur sehr langsam weiterfahren können
+    example:
+      de: Auf der Autobahn war ein langer Stau, deshalb bin ich zu spät gekommen.
+      en: There was a long traffic jam on the motorway, so I was late.
+      fa: در بزرگراه راه‌بندان طولانی‌ای بود، برای همین دیر رسیدم.
+    alsoAccepted: [der Verkehrsstau]
+
   - word: Vorfahrt
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: right of way (the right to drive first at a junction)
+      fa: حق تقدم (در رانندگی)
+    definition: das Recht, an einer Kreuzung als Erster zu fahren
+    example:
+      de: An dieser Kreuzung hat der Bus Vorfahrt.
+      en: At this junction the bus has right of way.
+      fa: در این تقاطع، اتوبوس حق تقدم دارد.
+    alsoAccepted: [der Vorrang]
+
   - word: Verkehrszeichen
+    class: noun
+    article: das
+    plural: Verkehrszeichen
+    level: B1
+    meaning:
+      en: traffic sign, road sign
+      fa: تابلوی راهنمایی و رانندگی
+    definition: ein Schild an der Straße, das den Fahrern eine Regel zeigt
+    example:
+      de: "Dieses Verkehrszeichen bedeutet: Hier darf man nicht parken."
+      en: "This road sign means: you must not park here."
+      fa: "این تابلو یعنی: اینجا پارک ممنوع است."
+    alsoAccepted: [das Verkehrsschild]
+
+  # Geschwindigkeit and Tempo both say how fast; each is right for the other.
   - word: Geschwindigkeit
+    class: noun
+    article: die
+    plural: Geschwindigkeiten
+    level: B1
+    meaning:
+      en: speed (how fast a vehicle goes, for example in km/h)
+      fa: سرعت (مثلاً سرعت خودرو بر حسب کیلومتر در ساعت)
+    definition: wie schnell sich etwas bewegt, zum Beispiel ein Auto oder ein Zug
+    example:
+      de: Die Polizei misst die Geschwindigkeit der Autos.
+      en: The police measure the speed of the cars.
+      fa: پلیس سرعت خودروها را اندازه می‌گیرد.
+    alsoAccepted: [das Tempo]
+    tooCloseTo: [Tempo]
+
   - word: Geschwindigkeitsbeschränkung
+    class: noun
+    article: die
+    plural: Geschwindigkeitsbeschränkungen
+    level: B1
+    meaning:
+      en: speed limit
+      fa: محدودیت سرعت
+    definition: eine Regel, wie schnell man auf einer Straße höchstens fahren darf
+    example:
+      de: Auf vielen deutschen Autobahnen gibt es keine Geschwindigkeitsbeschränkung.
+      en: On many German motorways there is no speed limit.
+      fa: در بسیاری از بزرگراه‌های آلمان محدودیت سرعت وجود ندارد.
+    alsoAccepted: [das Tempolimit, die Geschwindigkeitsbegrenzung]
+
   - word: Tempo
+    class: noun
+    article: das
+    plural: Tempos
+    level: B1
+    meaning:
+      en: pace, speed (how fast someone walks, drives or works)
+      fa: سرعت حرکت، تندی (اینکه کسی با چه سرعتی راه می‌رود یا کار می‌کند)
+    definition: wie schnell jemand geht, fährt oder arbeitet
+    example:
+      de: Bei diesem Tempo kommen wir nie an!
+      en: At this pace we'll never get there!
+      fa: با این سرعت هیچ‌وقت نمی‌رسیم!
+    alsoAccepted: [die Geschwindigkeit]
+    tooCloseTo: [Geschwindigkeit]
+
   - word: Kilometer pro Stunde
+    class: noun
+    article: der
+    plural: Kilometer pro Stunde
+    level: B1
+    meaning:
+      en: kilometres per hour (km/h)
+      fa: کیلومتر در ساعت
+    definition: die Einheit, in der man misst, wie schnell ein Auto fährt
+    example:
+      de: In der Stadt darf man nur 50 Kilometer pro Stunde fahren.
+      en: In town you may only drive at 50 kilometres per hour.
+      fa: در شهر فقط با سرعت ۵۰ کیلومتر در ساعت می‌توان رانندگی کرد.
+    alsoAccepted: [Kilometer pro Stunde, der Stundenkilometer, Stundenkilometer]
+
   - word: Fußgänger
+    class: noun
+    article: der
+    plural: Fußgänger
+    level: B1
+    meaning:
+      en: pedestrian
+      fa: عابر پیاده
+    definition: eine Person, die zu Fuß auf der Straße unterwegs ist
+    example:
+      de: Der Fußgänger wartet an der Ampel, bis sie grün wird.
+      en: The pedestrian waits at the traffic lights until they turn green.
+      fa: عابر پیاده پشت چراغ راهنمایی منتظر می‌ماند تا سبز شود.
+    alsoAccepted: [die Fußgängerin]
+
   - word: Fußgängerzone
+    class: noun
+    article: die
+    plural: Fußgängerzonen
+    level: B1
+    meaning:
+      en: pedestrian zone (streets in a town centre where no cars may drive)
+      fa: پیاده‌راه (خیابان‌هایی در مرکز شهر که خودرو در آن‌ها حق رفت‌وآمد ندارد)
+    definition: ein Teil der Stadt, in dem keine Autos fahren dürfen und man zu Fuß einkaufen kann
+    example:
+      de: In der Fußgängerzone gibt es viele Geschäfte und Cafés.
+      en: There are lots of shops and cafés in the pedestrian zone.
+      fa: در پیاده‌راه مغازه‌ها و کافه‌های زیادی هست.
+    alsoAccepted: [der Fußgängerbereich]
+
+  # The scope list notes the Swiss word, das Trottoir.
   - word: Gehsteig
+    class: noun
+    article: der
+    plural: Gehsteige
+    level: B1
+    meaning:
+      en: pavement, sidewalk (the path beside a road for people on foot)
+      fa: پیاده‌رو (کنار خیابان)
+    definition: der Weg neben der Straße, auf dem man zu Fuß geht
+    example:
+      de: Fahr nicht mit dem Fahrrad auf dem Gehsteig!
+      en: Don't ride your bike on the pavement!
+      fa: با دوچرخه در پیاده‌رو نران!
+    alsoAccepted: [der Bürgersteig, der Gehweg, das Trottoir]
+
   - word: Radfahrer
+    class: noun
+    article: der
+    plural: Radfahrer
+    level: B1
+    meaning:
+      en: cyclist
+      fa: دوچرخه‌سوار
+    definition: eine Person, die mit dem Fahrrad fährt
+    example:
+      de: Für Radfahrer gibt es in unserer Stadt viele Radwege.
+      en: In our town there are lots of cycle paths for cyclists.
+      fa: در شهر ما برای دوچرخه‌سوارها مسیرهای دوچرخه‌سواری زیادی هست.
+    alsoAccepted: [die Radfahrerin, der Fahrradfahrer, die Fahrradfahrerin]
+
+  # Strecke, Entfernung and Distanz are near in meaning; none is offered as a wrong meaning of another.
   - word: Strecke
+    class: noun
+    article: die
+    plural: Strecken
+    level: B1
+    meaning:
+      en: route, stretch (the way you travel between two places)
+      fa: مسیر (راهی که میان دو جا طی می‌شود)
+    definition: der Weg zwischen zwei Orten, den man fährt oder läuft
+    example:
+      de: Die Strecke von Hamburg nach Berlin fahre ich oft mit dem Zug.
+      en: I often travel the route from Hamburg to Berlin by train.
+      fa: مسیر هامبورگ تا برلین را اغلب با قطار می‌روم.
+    alsoAccepted: [die Route]
+    tooCloseTo: [Entfernung, Distanz]
+
   - word: Entfernung
+    class: noun
+    article: die
+    plural: Entfernungen
+    level: B1
+    meaning:
+      en: distance (how far apart two places are)
+      fa: فاصله، مسافت (میان دو جا)
+    definition: wie weit zwei Orte voneinander weg sind
+    example:
+      de: Die Entfernung zwischen den beiden Städten beträgt 80 Kilometer.
+      en: The distance between the two towns is 80 kilometres.
+      fa: فاصلهٔ این دو شهر ۸۰ کیلومتر است.
+    alsoAccepted: [die Distanz]
+    tooCloseTo: [Distanz, Strecke]
+
   - word: Distanz
+    class: noun
+    article: die
+    plural: Distanzen
+    level: B1
+    meaning:
+      en: distance (also keeping your distance from someone)
+      fa: فاصله (همچنین فاصله گرفتن از کسی)
+    definition: der Abstand zwischen zwei Punkten oder zwischen Menschen
+    example:
+      de: Aus dieser Distanz kann ich das Schild nicht lesen.
+      en: I can't read the sign from this distance.
+      fa: از این فاصله نمی‌توانم تابلو را بخوانم.
+    alsoAccepted: [die Entfernung, der Abstand]
+    tooCloseTo: [Entfernung, Strecke]
+
   - word: Richtung
+    class: noun
+    article: die
+    plural: Richtungen
+    level: B1
+    meaning:
+      en: direction
+      fa: جهت، سمت
+    definition: wohin man geht oder fährt, zum Beispiel nach Norden oder nach links
+    example:
+      de: Entschuldigung, in welche Richtung muss ich zum Bahnhof gehen?
+      en: Excuse me, which way do I have to go to get to the station?
+      fa: ببخشید، برای رفتن به ایستگاه قطار باید به کدام سمت بروم؟
+
   - word: Zone
+    class: noun
+    article: die
+    plural: Zonen
+    level: B1
+    meaning:
+      en: zone (an area with its own rules, for example for parking or tickets)
+      fa: محدوده، منطقه (با قانون‌های خاص خود، مثلاً برای پارک یا بلیت)
+    definition: ein Gebiet mit eigenen Regeln, zum Beispiel für das Parken oder für Fahrkarten
+    example:
+      de: Unsere Straße liegt in einer Zone, in der man nur langsam fahren darf.
+      en: Our street is in a zone where you may only drive slowly.
+      fa: خیابان ما در محدوده‌ای است که فقط می‌توان آهسته رانندگی کرد.
+    alsoAccepted: [der Bereich]
+
   - word: verlaufen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to get lost (on foot)
+      fa: راه را گم کردن (هنگام پیاده رفتن)
+    definition: beim Gehen den falschen Weg nehmen und nicht mehr wissen, wo man ist
+    example:
+      de: Ohne Stadtplan habe ich mich in der Altstadt verlaufen.
+      en: Without a map I got lost in the old town.
+      fa: بدون نقشهٔ شهر، در محلهٔ قدیمی راه را گم کردم.
+    alsoAccepted: [sich verirren]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 138 questions, then 3 changed or disputed ones; not people)"
+  date: 2026-11-28
+  pool: 2afd15311e1ac59e

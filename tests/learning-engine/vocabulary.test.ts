@@ -53,6 +53,36 @@ test('a noun that has only a plural is typed with the article of the plural', ()
   expect(checkAnswer(question, 'das Möbel').correct).toBe(false)
 })
 
+test('a name that takes no article is shown and typed bare; one that takes an article keeps it', () => {
+  const deutschland = word({ word: 'Deutschland', class: 'noun', number: 'singular-only' })
+  const schweiz = word({ word: 'Schweiz', class: 'noun', article: 'die', number: 'singular-only' })
+  const pool = vocabularyPool([...HOME, deutschland, schweiz])
+
+  expect(fromGerman(pool, 'Deutschland').prompt).toBe('Deutschland')
+  expect(checkAnswer(intoGerman(pool, 'Deutschland'), 'Deutschland')).toEqual({
+    correct: true,
+    notes: [],
+    accepted: 'Deutschland',
+  })
+  expect(checkAnswer(intoGerman(pool, 'Deutschland'), 'das Deutschland').correct).toBe(false)
+  expect(checkAnswer(intoGerman(pool, 'Schweiz'), 'die Schweiz').correct).toBe(true)
+  expect(checkAnswer(intoGerman(pool, 'Schweiz'), 'Schweiz').correct).toBe(false)
+})
+
+test('a reflexive verb is shown and asked with its "sich", and typed with it', () => {
+  const freuen = word({ word: 'freuen', class: 'verb', reflexive: 'sich' })
+  const pool = vocabularyPool([...HOME, freuen])
+
+  expect(fromGerman(pool, 'freuen').prompt).toBe('sich freuen')
+  expect(rightAnswer(intoGerman(pool, 'freuen'))).toBe('sich freuen')
+  expect(checkAnswer(intoGerman(pool, 'freuen'), 'sich freuen')).toEqual({
+    correct: true,
+    notes: [],
+    accepted: 'sich freuen',
+  })
+  expect(checkAnswer(intoGerman(pool, 'freuen'), 'freuen').correct).toBe(false)
+})
+
 test('the small slips of any typed answer are accepted with a note, but never a missing article', () => {
   const question = intoGerman(vocabularyPool(HOME), 'Tür')
 
@@ -125,6 +155,27 @@ test('the meaning of a word that is too close is never offered as a wrong option
       .options.map((option) => option.word)
       .sort(),
   ).toEqual(['Bett', 'Großmutter', 'Tisch', 'Tür'])
+})
+
+test('no two options read the same in any language, and no wrong option reads like the right one', () => {
+  // Two verbs with the same English meaning, as #52 found in real content: offered side by side,
+  // a learner could not tell them apart.
+  const anfangen = word({ word: 'anfangen', class: 'verb', meaning: { en: 'to begin, to start', fa: 'شروع کردن' } })
+  const beginnen = word({ word: 'beginnen', class: 'verb', meaning: { en: 'to begin, to start', fa: 'آغاز کردن' } })
+  const aufhoeren = word({ word: 'aufhören', class: 'verb', meaning: { en: 'to stop', fa: 'تمام کردن' } })
+  const enden = word({ word: 'enden', class: 'verb', meaning: { en: 'to end', fa: 'پایان یافتن' } })
+  // The same text but for the case and the spaces reads the same too.
+  const starten = word({ word: 'starten', class: 'verb', meaning: { en: ' To begin,  to start', fa: 'راه انداختن' } })
+  const pool = vocabularyPool([anfangen, beginnen, aufhoeren, enden, starten, ...HOME])
+
+  for (const question of pool) {
+    if (question.type !== 'meaning-of-word') continue
+    expect(question.options).toHaveLength(4)
+    for (const language of ['en', 'fa', 'de'] as const) {
+      const shown = question.options.map((option) => option.meaning[language].trim().replace(/\s+/g, ' ').toLowerCase())
+      expect(new Set(shown).size, `${question.word}, ${language}: ${shown.join(' | ')}`).toBe(4)
+    }
+  }
 })
 
 test('the right option does not always stand in the same place', () => {

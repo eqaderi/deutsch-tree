@@ -1,40 +1,421 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-school-subjects
 kind: vocabulary
 level: A2
 chapter: a2-words-school-work
 order: 1
-status: coming-soon
+status: published
 title:
   en: "School and school subjects"
   fa: "مدرسه و درس‌ها"
   de: "Schule und Schulfächer"
+attemptSize: 15
 words:
   - word: Fach
-  - word: Biologie
-  - word: Chemie
-  - word: Deutsch
-  - word: Englisch
-  - word: Französisch
-  - word: Geografie
-  - word: Latein
-  - word: Mathematik
-  - word: Physik
-  - word: Sozialkunde
+    class: noun
+    article: das
+    plural: Fächer
+    level: A2
+    meaning:
+      en: subject (at school)
+      fa: درس، مادهٔ درسی
+    definition: ein Teil vom Unterricht in der Schule, zum Beispiel Kunst oder Sport
+    example:
+      de: Welches Fach hast du am liebsten?
+      en: Which subject do you like best?
+      fa: کدام درس را از همه بیشتر دوست داری؟
+    alsoAccepted: [das Schulfach, das Unterrichtsfach]
+
   - word: Stundenplan
-  - word: Klassenfahrt
-  - word: Sekretariat
-  - word: Direktor
-  - word: Note
-  - word: Zeugnis
+    class: noun
+    article: der
+    plural: Stundenpläne
+    level: A2
+    meaning:
+      en: timetable (of lessons)
+      fa: برنامهٔ هفتگی کلاس‌ها
+    definition: eine Liste, auf der steht, an welchem Tag und um wie viel Uhr man welchen Unterricht hat
+    example:
+      de: Laut Stundenplan haben wir am Montag zuerst Sport.
+      en: According to the timetable we have PE first on Monday.
+      fa: طبق برنامهٔ هفتگی، دوشنبه اول ورزش داریم.
+
+  # Languages are mostly said without an article ("Ich lerne Deutsch"), but they are neuter
+  # ("Mein Deutsch ist nicht so gut"): the node teaches the article and accepts the bare word.
+  - word: Deutsch
+    class: noun
+    article: das
+    number: singular-only
+    level: A2
+    meaning:
+      en: German (the language, also the school subject)
+      fa: زبان آلمانی، آلمانی (درس)
+    definition: die Sprache, die man in Deutschland, in Österreich und in der Schweiz spricht
+    example:
+      de: Mein Deutsch wird jeden Tag ein bisschen besser.
+      en: My German is getting a little better every day.
+      fa: آلمانی‌ام هر روز کمی بهتر می‌شود.
+    alsoAccepted: [Deutsch, das Deutsche]
+
+  - word: Englisch
+    class: noun
+    article: das
+    number: singular-only
+    level: A2
+    meaning:
+      en: English (the language, also the school subject)
+      fa: زبان انگلیسی، انگلیسی (درس)
+    definition: die Sprache, die man in England, in den USA und in Australien spricht
+    example:
+      de: Wir haben dreimal in der Woche Englisch.
+      en: We have English three times a week.
+      fa: هفته‌ای سه بار انگلیسی داریم.
+    alsoAccepted: [Englisch, das Englische]
+
+  - word: Französisch
+    class: noun
+    article: das
+    number: singular-only
+    level: A2
+    meaning:
+      en: French (the language, also the school subject)
+      fa: زبان فرانسوی، فرانسوی (درس)
+    definition: die Sprache, die man in Frankreich spricht
+    example:
+      de: Meine Schwester lernt seit zwei Jahren Französisch.
+      en: My sister has been learning French for two years.
+      fa: خواهرم دو سال است که فرانسوی یاد می‌گیرد.
+    alsoAccepted: [Französisch, das Französische]
+
+  - word: Latein
+    class: noun
+    article: das
+    number: singular-only
+    level: A2
+    meaning:
+      en: Latin (the old language, also the school subject)
+      fa: زبان لاتین، لاتین (درس)
+    definition: die alte Sprache der Römer, die man heute fast nur noch in der Schule lernt
+    example:
+      de: Latein ist schwer, aber es hilft beim Lernen von anderen Sprachen.
+      en: Latin is hard, but it helps with learning other languages.
+      fa: لاتین سخت است، اما به یادگیری زبان‌های دیگر کمک می‌کند.
+    alsoAccepted: [Latein, das Lateinische]
+
+  - word: Mathematik
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: mathematics, maths
+      fa: ریاضی، ریاضیات
+    definition: das Fach, in dem man mit Zahlen rechnet und Aufgaben löst
+    example:
+      de: Mathematik war in der Schule nie mein Lieblingsfach.
+      en: Maths was never my favourite subject at school.
+      fa: ریاضی در مدرسه هیچ‌وقت درس محبوبم نبود.
+    alsoAccepted: [die Mathe]
+
+  - word: Physik
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: physics
+      fa: فیزیک
+    definition: das Fach, in dem man lernt, wie Licht, Wärme, Strom und Bewegung funktionieren
+    example:
+      de: In Physik machen wir heute ein Experiment mit Magneten.
+      en: In physics we are doing an experiment with magnets today.
+      fa: امروز در درس فیزیک با آهن‌ربا آزمایش انجام می‌دهیم.
+
+  - word: Chemie
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: chemistry
+      fa: شیمی
+    definition: das Fach, in dem man lernt, woraus Wasser, Luft und andere Materialien bestehen
+    example:
+      de: Morgen schreiben wir einen Test in Chemie.
+      en: Tomorrow we have a chemistry test.
+      fa: فردا امتحان شیمی داریم.
+
+  - word: Biologie
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: biology
+      fa: زیست‌شناسی
+    definition: das Fach, in dem man etwas über Pflanzen, Tiere und den menschlichen Körper lernt
+    example:
+      de: In Biologie sprechen wir gerade über Bienen.
+      en: In biology we are talking about bees at the moment.
+      fa: این روزها در درس زیست‌شناسی دربارهٔ زنبورهای عسل صحبت می‌کنیم.
+    alsoAccepted: [die Bio]
+
+  - word: Geografie
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: geography
+      fa: جغرافیا
+    definition: das Fach, in dem man etwas über Länder, Berge, Flüsse und das Klima auf der Erde lernt
+    example:
+      de: In Geografie lernen wir die Hauptstädte von Europa.
+      en: In geography we are learning the capitals of Europe.
+      fa: در درس جغرافیا پایتخت‌های اروپا را یاد می‌گیریم.
+    alsoAccepted: [die Geographie, die Erdkunde]
+
+  # The subject has other names in some German states: Gemeinschaftskunde, Politik.
+  - word: Sozialkunde
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: social studies, civics
+      fa: علوم اجتماعی (درس)
+    definition: das Fach, in dem man etwas über Politik und das Leben in der Gesellschaft lernt
+    example:
+      de: In Sozialkunde sprechen wir über die Wahlen.
+      en: In social studies we are talking about the elections.
+      fa: در درس علوم اجتماعی دربارهٔ انتخابات صحبت می‌کنیم.
+    alsoAccepted: [die Gemeinschaftskunde, die Politik]
+
   - word: Heft
+    class: noun
+    article: das
+    plural: Hefte
+    level: A2
+    meaning:
+      en: exercise book
+      fa: دفتر مشق، دفترچه
+    definition: einige Blätter Papier mit einem dünnen Umschlag, in die man in der Schule schreibt
+    example:
+      de: Schreibt die neuen Wörter bitte in euer Heft.
+      en: Please write the new words in your exercise books.
+      fa: لطفاً واژه‌های تازه را در دفترتان بنویسید.
+    alsoAccepted: [das Schulheft, das Übungsheft]
+
   - word: Stift
+    class: noun
+    article: der
+    plural: Stifte
+    level: A2
+    meaning:
+      en: pen or pencil (the general word for anything you write with)
+      fa: قلم، خودکار یا مداد
+    definition: das allgemeine Wort für Kuli, Bleistift oder Füller, also für eine Sache zum Schreiben oder Malen
+    example:
+      de: Kannst du mir bitte einen Stift leihen?
+      en: Can you lend me a pen, please?
+      fa: می‌توانی یک خودکار به من قرض بدهی؟
+    alsoAccepted: [der Schreibstift]
+
   - word: Tafel
+    class: noun
+    article: die
+    plural: Tafeln
+    level: A2
+    meaning:
+      en: board (in a classroom)
+      fa: تخته (کلاس)
+    definition: die große Fläche an der Wand im Klassenzimmer, auf die die Lehrerin schreibt
+    example:
+      de: Die Lehrerin schreibt die Aufgabe an die Tafel.
+      en: The teacher writes the exercise on the board.
+      fa: معلم تمرین را روی تخته می‌نویسد.
+    alsoAccepted: [die Wandtafel, die Schultafel]
+
   - word: Wörterbuch
+    class: noun
+    article: das
+    plural: Wörterbücher
+    level: A2
+    meaning:
+      en: dictionary
+      fa: فرهنگ لغت، واژه‌نامه
+    definition: ein Buch, in dem man nachsehen kann, was ein Wort bedeutet
+    example:
+      de: Darf man in der Prüfung ein Wörterbuch benutzen?
+      en: Are you allowed to use a dictionary in the exam?
+      fa: در امتحان می‌شود از فرهنگ لغت استفاده کرد؟
+
   - word: Bibliothek
+    class: noun
+    article: die
+    plural: Bibliotheken
+    level: A2
+    meaning:
+      en: library
+      fa: کتابخانه
+    definition: ein Haus oder ein Raum mit vielen Büchern, die man dort lesen oder nach Hause mitnehmen kann
+    example:
+      de: Nach dem Unterricht lerne ich oft in der Bibliothek.
+      en: After lessons I often study in the library.
+      fa: بعد از کلاس اغلب در کتابخانه درس می‌خوانم.
+    alsoAccepted: [die Bücherei]
+
   - word: Cafeteria
+    class: noun
+    article: die
+    plural: Cafeterias
+    level: A2
+    meaning:
+      en: cafeteria (a small, simple café at a school, a university or a firm)
+      fa: کافه‌تریا
+    definition: ein kleines, einfaches Café in einer Schule, einer Universität oder einer Firma, wo man Kaffee und kleine Snacks kauft
+    example:
+      de: In der Pause kaufen wir uns etwas in der Cafeteria.
+      en: In the break we buy ourselves something in the cafeteria.
+      fa: زنگ تفریح از کافه‌تریا چیزی برای خودمان می‌خریم.
+
+  - word: Sekretariat
+    class: noun
+    article: das
+    plural: Sekretariate
+    level: A2
+    meaning:
+      en: (school) office, secretary's office
+      fa: دبیرخانه، دفتر مدرسه
+    definition: das Büro in einer Schule, in dem man Formulare bekommt und Fragen stellen kann
+    example:
+      de: Die Formulare für die Klassenfahrt bekommst du im Sekretariat.
+      en: You can get the forms for the school trip from the office.
+      fa: فرم‌های اردو را از دفتر مدرسه می‌گیری.
+
+  - word: Direktor
+    class: noun
+    article: der
+    plural: Direktoren
+    level: A2
+    meaning:
+      en: head teacher, principal
+      fa: مدیر مدرسه
+    definition: der Mann, der eine Schule leitet und dort der Chef ist
+    example:
+      de: Der Direktor begrüßt die neuen Schüler.
+      en: The head teacher welcomes the new pupils.
+      fa: مدیر مدرسه به دانش‌آموزان تازه خوشامد می‌گوید.
+    alsoAccepted: [die Direktorin, der Schulleiter, die Schulleiterin, der Rektor, die Rektorin]
+
+  - word: Note
+    class: noun
+    article: die
+    plural: Noten
+    level: A2
+    meaning:
+      en: mark, grade (at school)
+      fa: نمره
+    definition: eine Zahl, die zeigt, wie gut eine Arbeit oder ein Test in der Schule war
+    example:
+      de: In Mathe habe ich eine gute Note bekommen.
+      en: I got a good mark in maths.
+      fa: در ریاضی نمرهٔ خوبی گرفتم.
+    alsoAccepted: [die Zensur, die Schulnote]
+
+  - word: Zeugnis
+    class: noun
+    article: das
+    plural: Zeugnisse
+    level: A2
+    meaning:
+      en: school report (with the marks)
+      fa: کارنامه
+    definition: ein Papier, auf dem die Noten von einem Schuljahr stehen
+    example:
+      de: Am letzten Schultag bekommen die Kinder ihr Zeugnis.
+      en: On the last day of school the children get their reports.
+      fa: بچه‌ها روز آخر مدرسه کارنامه‌شان را می‌گیرند.
+    alsoAccepted: [das Schulzeugnis]
+
   - word: Antwortbogen
+    class: noun
+    article: der
+    plural: Antwortbögen
+    level: A2
+    meaning:
+      en: answer sheet
+      fa: پاسخ‌نامه
+    definition: das Blatt Papier in einer Prüfung, auf das man die Lösungen schreibt
+    example:
+      de: Schreiben Sie Ihre Lösungen auf den Antwortbogen.
+      en: Write your answers on the answer sheet.
+      fa: پاسخ‌هایتان را روی پاسخ‌نامه بنویسید.
+    alsoAccepted: [das Antwortblatt]
+
   - word: Prüfer
+    class: noun
+    article: der
+    plural: Prüfer
+    level: A2
+    meaning:
+      en: examiner
+      fa: ممتحن، آزمونگر
+    definition: eine Person, die in einer Prüfung Fragen stellt und dann sagt, wie gut die Antworten waren
+    example:
+      de: Der Prüfer stellt Ihnen ein paar Fragen über Ihre Familie.
+      en: The examiner asks you a few questions about your family.
+      fa: ممتحن چند پرسش دربارهٔ خانواده‌تان از شما می‌پرسد.
+    alsoAccepted: [die Prüferin]
+
+  # The node teaches "bestehen" = to pass (an exam), not "bestehen aus" = to consist of.
   - word: bestehen
+    class: verb
+    level: A2
+    meaning:
+      en: to pass (an exam or a test)
+      fa: قبول شدن (در امتحان)
+    definition: bei einer Prüfung genug Punkte bekommen und nicht durchfallen
+    example:
+      de: Ich habe die Prüfung bestanden!
+      en: I passed the exam!
+      fa: در امتحان قبول شدم!
+    alsoAccepted: [schaffen]
+
   - word: Abitur
+    class: noun
+    article: das
+    number: singular-only
+    level: A2
+    meaning:
+      en: school-leaving exam (needed to go to university)
+      fa: دیپلم متوسطه (امتحان پایان دبیرستان)
+    definition: die Prüfung am Ende vom Gymnasium, nach der man studieren darf
+    example:
+      de: Nach dem Abitur möchte sie Medizin studieren.
+      en: After her school-leaving exams she wants to study medicine.
+      fa: او می‌خواهد پس از گرفتن دیپلم پزشکی بخواند.
+    alsoAccepted: [das Abi, die Matura, die Reifeprüfung]
+
+  - word: Klassenfahrt
+    class: noun
+    article: die
+    plural: Klassenfahrten
+    level: A2
+    meaning:
+      en: class trip of several days (with nights away)
+      fa: اردوی چندروزهٔ مدرسه
+    definition: eine Reise von einer Schulklasse mit ihren Lehrern für ein paar Tage, mit Übernachtung
+    example:
+      de: Im Juni machen wir eine Klassenfahrt nach Berlin.
+      en: In June we are going on a class trip to Berlin.
+      fa: ژوئن با کلاس به اردوی برلین می‌رویم.
+    alsoAccepted: [die Klassenreise]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; the first one's objections were settled, its answers set aside because
+    it chose options by position; all 162 questions answered by the second)
+  date: 2026-11-28
+  pool: cbddc02ba1467c2b

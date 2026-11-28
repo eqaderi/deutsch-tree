@@ -45,12 +45,8 @@ const WORDS: Record<string, { german: string; en: string; fa: string; de: string
     de: 'in der Nacht im Bett liegen und die Augen zu haben',
   },
   gross: { german: 'groß', en: 'big', fa: 'بزرگ', de: 'nicht klein' },
-  schrank: {
-    german: 'der Schrank',
-    en: 'cupboard',
-    fa: 'کمد',
-    de: 'ein Möbelstück mit Türen, in dem man Sachen aufbewahrt',
-  },
+  // A name that takes no article.
+  deutschland: { german: 'Deutschland', en: 'Germany', fa: 'آلمان', de: 'das Land mit der Hauptstadt Berlin' },
 }
 
 let compiled: ReturnType<typeof compileContent> | undefined
@@ -79,7 +75,7 @@ const HEADWORD: Record<string, string> = {
   moebel: 'Möbel',
   schlafen: 'schlafen',
   gross: 'groß',
-  schrank: 'Schrank',
+  deutschland: 'Deutschland',
 }
 
 /** The sheet id of the question about a word, in a direction and a language: "tisch", "word", "fa". */
@@ -136,7 +132,7 @@ test('the review sheet of a vocabulary node asks every question once in each lan
   expect(entry(ids.wordEn)).toEqual({
     id: ids.wordEn,
     language: 'en',
-    instruction: 'Type the German word. A noun needs its article.',
+    instruction: 'Type the German word. A noun needs its article, if it takes one, and a reflexive verb its sich.',
     question: { type: 'word-for-meaning', prompt: 'table' },
     answerFormat: expect.any(String),
     answer: null,
@@ -144,7 +140,8 @@ test('the review sheet of a vocabulary node asks every question once in each lan
   })
   expect(entry(ids.wordFa)?.question).toEqual({ type: 'word-for-meaning', prompt: 'میز' })
   expect(entry(ids.wordDe)).toMatchObject({
-    instruction: 'Welches Wort ist das? Schreib es. Ein Nomen braucht seinen Artikel.',
+    instruction:
+      'Welches Wort ist das? Schreib es. Ein Nomen braucht seinen Artikel, wenn es einen hat, ein reflexives Verb sein „sich“.',
     question: { type: 'word-for-meaning', prompt: 'ein Möbelstück mit einer Platte und vier Beinen' },
   })
 })

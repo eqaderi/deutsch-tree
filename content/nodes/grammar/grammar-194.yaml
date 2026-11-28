@@ -1,13 +1,376 @@
-# Grammar list row 194.
+# Grammar list row 194. "am Montag", "am Abend" and "heute Abend" are
+# grammar-192 and grammar-193; here is the adverb that means "every time".
 id: grammar-194
 kind: grammar
 level: A2
 chapter: a2-adverbs
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-192, grammar-193]
 title:
   en: "Adverbs in *-s*"
   fa: "قیدهای مختوم به *-s* (*montags*، *abends*)"
   de: "Adverbien auf *-s* (*montags*, *abends*)"
+
+explanations:
+  en:
+    rule: >
+      A day of the week or a time of day with *-s* added says that something
+      happens regularly, every time: *Montags habe ich Deutschkurs.* (every
+      Monday), *Abends sehe ich fern.* (every evening, in the evening). These
+      words are adverbs, not nouns: they have no article and no *am*, and they
+      are written with a small letter, except at the start of a sentence. The
+      same goes for *morgens*, *vormittags*, *mittags*, *nachmittags* and
+      *nachts*; *nachts* takes the *-s* too, although it comes from *die Nacht*.
+      *Am Montag* usually means one Monday: *Am Montag habe ich einen Termin.*
+      After *heute*, *gestern* and *morgen* the time of day is a noun with a
+      capital: *heute Morgen*, *gestern Abend*, not *heute morgens*. Like other time adverbs, the word can
+      stand first or after the verb: *Ich arbeite vormittags.*
+  fa:
+    rule: >
+      وقتی به نام روزهای هفته یا بخش‌های روز *-s* افزوده شود، معنای «هر بار،
+      به‌طور منظم» می‌دهد: *Montags habe ich Deutschkurs.* (دوشنبه‌ها، هر
+      دوشنبه)، *Abends sehe ich fern.* (شب‌ها، هر شب). این واژه‌ها قیدند، نه
+      اسم: حرف تعریف و *am* ندارند و با حرف کوچک نوشته می‌شوند، مگر در آغاز
+      جمله. *morgens*، *vormittags*، *mittags*، *nachmittags* و *nachts* نیز
+      همین‌طورند؛ *nachts* هم با آن‌که از *die Nacht* می‌آید، *-s* می‌گیرد.
+      *am Montag* بیشتر به یک دوشنبهٔ مشخص اشاره دارد: *Am Montag habe ich einen
+      Termin.* پس از *heute*، *gestern* و *morgen*، بخش روز اسم است و با حرف
+      بزرگ نوشته می‌شود: *heute Morgen*، *gestern Abend*، نه *heute morgens*. این قیدها نیز مانند دیگر قیدهای زمان
+      می‌توانند در آغاز جمله یا پس از فعل بیایند: *Ich arbeite vormittags.*
+  de:
+    rule: >
+      Ein Tag oder eine Tageszeit mit *-s* sagt: Das passiert regelmäßig, jedes
+      Mal. *Montags habe ich Deutschkurs.* (jeden Montag), *Abends sehe ich
+      fern.* (jeden Abend). Diese Wörter sind Adverbien, keine Nomen: Sie haben
+      keinen Artikel und kein *am*, und man schreibt sie klein, nur am
+      Satzanfang groß. So ist es auch bei *morgens*, *vormittags*, *mittags*,
+      *nachmittags* und *nachts*. Auch *nachts* hat ein *-s*, obwohl es *die
+      Nacht* heißt. *Am Montag* meint meistens einen Montag: *Am Montag habe
+      ich einen Termin.* Nach *heute*, *gestern* und *morgen* ist die
+      Tageszeit ein Nomen und groß: *heute Morgen*, *gestern Abend*, nicht
+      *heute morgens*. Wie andere Zeitadverbien
+      steht das Wort am Anfang oder nach dem Verb: *Ich arbeite vormittags.*
+
+table:
+  columns:
+    - { en: Noun, fa: اسم, de: Nomen }
+    - { en: "One time: *Wann?*", fa: "یک بار: *Wann?*", de: "Ein Mal: *Wann?*" }
+    - { en: "Every time: *-s*", fa: "هر بار: *-s*", de: "Jedes Mal: *-s*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Montag, am Montag, montags, Montags habe ich Deutschkurs.]
+    - [der Samstag, am Samstag, samstags, Samstags gehen wir auf den Markt.]
+    - [der Sonntag, am Sonntag, sonntags, Sonntags schlafe ich lange.]
+    - [der Morgen, am Morgen, morgens, Morgens trinke ich Kaffee.]
+    - [der Vormittag, am Vormittag, vormittags, Ich arbeite vormittags.]
+    - [der Mittag, am Mittag, mittags, Mittags esse ich in der Kantine.]
+    - [der Nachmittag, am Nachmittag, nachmittags, Nachmittags gehe ich spazieren.]
+    - [der Abend, am Abend, abends, Abends sehen wir fern.]
+    - [die Nacht, in der Nacht, nachts, Nachts ist es hier ruhig.]
+
+# Two weeks as two strips of seven days: "am Montag" marks one Monday,
+# "montags" marks every Monday.
+diagrams:
+  - caption:
+      en: >
+        Two weeks, Monday (*Mo*) to Sunday. *Am Montag* is one Monday;
+        *montags* is every Monday.
+      fa: >
+        دو هفته، از دوشنبه (*Mo*) تا یکشنبه. *am Montag* یک دوشنبه است؛
+        *montags* یعنی هر دوشنبه.
+      de: >
+        Zwei Wochen, von Montag (*Mo*) bis Sonntag. *Am Montag* ist ein Montag,
+        *montags* ist jeden Montag.
+    svg: |
+      <svg viewBox="0 0 320 196">
+        <!-- am Montag: only the first Monday -->
+        <text class="label" x="160" y="20" text-anchor="middle">am Montag</text>
+        <rect class="object" x="6" y="32" width="20" height="28"/>
+        <rect class="surface" x="28" y="32" width="20" height="28"/>
+        <rect class="surface" x="50" y="32" width="20" height="28"/>
+        <rect class="surface" x="72" y="32" width="20" height="28"/>
+        <rect class="surface" x="94" y="32" width="20" height="28"/>
+        <rect class="surface" x="116" y="32" width="20" height="28"/>
+        <rect class="surface" x="138" y="32" width="20" height="28"/>
+        <rect class="surface" x="164" y="32" width="20" height="28"/>
+        <rect class="surface" x="186" y="32" width="20" height="28"/>
+        <rect class="surface" x="208" y="32" width="20" height="28"/>
+        <rect class="surface" x="230" y="32" width="20" height="28"/>
+        <rect class="surface" x="252" y="32" width="20" height="28"/>
+        <rect class="surface" x="274" y="32" width="20" height="28"/>
+        <rect class="surface" x="296" y="32" width="20" height="28"/>
+        <text class="note" x="16" y="78" text-anchor="middle">Mo</text>
+        <text class="note" x="174" y="78" text-anchor="middle">Mo</text>
+        <!-- montags: every Monday -->
+        <text class="label" x="160" y="118" text-anchor="middle">montags</text>
+        <rect class="object" x="6" y="130" width="20" height="28"/>
+        <rect class="surface" x="28" y="130" width="20" height="28"/>
+        <rect class="surface" x="50" y="130" width="20" height="28"/>
+        <rect class="surface" x="72" y="130" width="20" height="28"/>
+        <rect class="surface" x="94" y="130" width="20" height="28"/>
+        <rect class="surface" x="116" y="130" width="20" height="28"/>
+        <rect class="surface" x="138" y="130" width="20" height="28"/>
+        <rect class="object" x="164" y="130" width="20" height="28"/>
+        <rect class="surface" x="186" y="130" width="20" height="28"/>
+        <rect class="surface" x="208" y="130" width="20" height="28"/>
+        <rect class="surface" x="230" y="130" width="20" height="28"/>
+        <rect class="surface" x="252" y="130" width="20" height="28"/>
+        <rect class="surface" x="274" y="130" width="20" height="28"/>
+        <rect class="surface" x="296" y="130" width="20" height="28"/>
+        <text class="note" x="16" y="176" text-anchor="middle">Mo</text>
+        <text class="note" x="174" y="176" text-anchor="middle">Mo</text>
+      </svg>
+
+examples:
+  - de: Montags habe ich Deutschkurs.
+    en: I have German class on Mondays.
+    fa: دوشنبه‌ها کلاس آلمانی دارم.
+  - de: Am Montag habe ich einen Termin beim Arzt.
+    en: On Monday I have a doctor's appointment.
+    fa: دوشنبه نزد پزشک وقت دارم.
+  - de: Samstags gehen wir auf den Markt.
+    en: On Saturdays we go to the market.
+    fa: شنبه‌ها به بازار می‌رویم.
+  - de: Sonntags schlafe ich lange.
+    en: On Sundays I sleep in.
+    fa: یکشنبه‌ها تا دیروقت می‌خوابم.
+  - de: Morgens trinke ich immer einen Kaffee.
+    en: In the morning I always drink a coffee.
+    fa: صبح‌ها همیشه یک قهوه می‌نوشم.
+  - de: Meine Mutter arbeitet vormittags im Büro.
+    en: My mother works in the office in the mornings.
+    fa: مادرم پیش از ظهرها در دفتر کار می‌کند.
+  - de: Mittags esse ich in der Kantine.
+    en: At lunchtime I eat in the canteen.
+    fa: ظهرها در غذاخوری محل کار غذا می‌خورم.
+  - de: Abends sehen wir oft fern.
+    en: In the evenings we often watch TV.
+    fa: شب‌ها اغلب تلویزیون تماشا می‌کنیم.
+  - de: Nachts ist es in unserer Straße sehr ruhig.
+    en: At night it is very quiet in our street.
+    fa: شب‌ها خیابان ما خیلی آرام است.
+  - de: Heute Morgen war ich beim Bäcker.
+    en: This morning I was at the baker's.
+    fa: امروز صبح به نانوایی رفتم.
+
+mistakes:
+  - wrong: Am Montags habe ich frei.
+    right: Montags habe ich frei.
+    why:
+      en: "*Montags* is an adverb and takes no *am*. With *am* it is the noun: *am Montag*."
+      fa: "*montags* قید است و *am* نمی‌گیرد. با *am* باید اسم بیاید: *am Montag*."
+      de: "*Montags* ist ein Adverb, ohne *am*. Mit *am* steht das Nomen: *am Montag*."
+  - wrong: Ich arbeite Abends im Restaurant.
+    right: Ich arbeite abends im Restaurant.
+    why:
+      en: "*Abends* is an adverb, not a noun, so it has a small letter inside the sentence."
+      fa: "*abends* قید است، نه اسم؛ پس در میان جمله با حرف کوچک نوشته می‌شود."
+      de: "*Abends* ist ein Adverb, kein Nomen. Darum schreibt man es im Satz klein."
+  - wrong: Heute morgens war ich beim Arzt.
+    right: Heute Morgen war ich beim Arzt.
+    why:
+      en: "After *heute* comes the noun with a capital: *heute Morgen*. *Morgens* means every morning."
+      fa: "پس از *heute* اسم با حرف بزرگ می‌آید: *heute Morgen*. *morgens* یعنی هر روز صبح."
+      de: "Nach *heute* steht das Nomen, groß: *heute Morgen*. *Morgens* heißt: jeden Morgen."
+  - wrong: In der Nachts schlafe ich schlecht.
+    right: Nachts schlafe ich schlecht.
+    why:
+      en: "Either the adverb *nachts* alone, or the noun with its article: *in der Nacht*."
+      fa: "یا قید *nachts* به‌تنهایی، یا اسم با حرف تعریفش: *in der Nacht*."
+      de: "Entweder das Adverb *nachts* allein oder das Nomen mit Artikel: *in der Nacht*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Jede Woche ist es gleich. ___ habe ich Deutschkurs.
+    options: [Montags, Am Montags, Der Montag]
+    answer: Montags
+    explanation:
+      en: "Every week, so the adverb *montags*, without an article or *am*."
+      fa: "هر هفته تکرار می‌شود، پس قید *montags* می‌آید، بدون حرف تعریف و بدون *am*."
+      de: "Jede Woche, also das Adverb *montags*, ohne Artikel und ohne *am*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich trinke ___ immer Tee.
+    options: [morgens, am Morgens, im Morgen]
+    answer: morgens
+    explanation:
+      en: "*Morgens* is an adverb: no *am*, no article. With *am* it would be the noun: *am Morgen*."
+      fa: "*morgens* قید است: بدون *am* و بدون حرف تعریف. با *am* باید اسم بیاید: *am Morgen*."
+      de: "*Morgens* ist ein Adverb, ohne *am* und ohne Artikel. Mit *am* steht das Nomen: *am Morgen*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Heute ___ war ich beim Bäcker.
+    options: [Morgen, morgens, Morgens]
+    answer: Morgen
+    explanation:
+      en: "After *heute* comes the noun with a capital: *heute Morgen* (this morning)."
+      fa: "پس از *heute* اسم با حرف بزرگ می‌آید: *heute Morgen* (امروز صبح)."
+      de: "Nach *heute* steht das Nomen, groß: *heute Morgen*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Freitags gehe ich schwimmen.
+    options:
+      - Ich gehe jeden Freitag schwimmen.
+      - Ich gehe nur an einem Freitag schwimmen.
+      - Ich gehe heute schwimmen.
+    answer: Ich gehe jeden Freitag schwimmen.
+    explanation:
+      en: "*Freitags* means every Friday."
+      fa: "*freitags* یعنی هر جمعه."
+      de: "*Freitags* heißt: jeden Freitag."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Mein Vater arbeitet nachts.
+    options:
+      - Er arbeitet in der Nacht.
+      - Er arbeitet am Abend.
+      - Er arbeitet am Morgen.
+    answer: Er arbeitet in der Nacht.
+    explanation:
+      en: "*Nachts* comes from *die Nacht*: he works at night."
+      fa: "*nachts* از *die Nacht* می‌آید: او شب‌ها کار می‌کند."
+      de: "*Nachts* kommt von *die Nacht*: Er arbeitet in der Nacht."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wann hast du Deutschkurs? – ___ und donnerstags.
+    options: [Dienstags, Am Dienstags, Die Dienstage]
+    answer: Dienstags
+    explanation:
+      en: "Every week: the adverb *dienstags*, with a capital only at the start."
+      fa: "هر هفته: قید *dienstags* که فقط در آغاز جمله با حرف بزرگ نوشته می‌شود."
+      de: "Jede Woche: das Adverb *dienstags*, nur am Anfang groß."
+  - id: true-1
+    type: true-false
+    prompt: Sonntags schlafe ich lange.
+    answer: true
+    explanation:
+      en: "*Sonntags* (every Sunday) stands first, with a capital at the start. The sentence is correct."
+      fa: "*sonntags* (هر یکشنبه) در آغاز جمله آمده و با حرف بزرگ نوشته شده است. جمله درست است."
+      de: "*Sonntags* (jeden Sonntag) steht am Anfang, darum groß. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich gehe Mittwochs zum Sport.
+    answer: false
+    explanation:
+      en: "*Mittwochs* is an adverb, so it has a small letter inside the sentence: *mittwochs*."
+      fa: "*mittwochs* قید است، پس در میان جمله با حرف کوچک نوشته می‌شود: *mittwochs*."
+      de: "*Mittwochs* ist ein Adverb. Im Satz schreibt man es klein: *mittwochs*."
+  - id: true-3
+    type: true-false
+    prompt: Am Freitags habe ich frei.
+    answer: false
+    explanation:
+      en: "Either *freitags* without *am*, or *am Freitag* without *-s*."
+      fa: "یا *freitags* بدون *am*، یا *am Freitag* بدون *-s*."
+      de: "Entweder *freitags* ohne *am* oder *am Freitag* ohne *-s*."
+  - id: true-4
+    type: true-false
+    prompt: Nachts ist es hier sehr ruhig.
+    answer: true
+    explanation:
+      en: "*Nachts* takes the *-s* although it comes from *die Nacht*. The sentence is correct."
+      fa: "*nachts* با آن‌که از *die Nacht* می‌آید، *-s* می‌گیرد. جمله درست است."
+      de: "*Nachts* hat ein *-s*, obwohl es *die Nacht* heißt. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Heute morgens habe ich lange geschlafen.
+    answer: false
+    explanation:
+      en: "After *heute* comes the noun with a capital: *heute Morgen*."
+      fa: "پس از *heute* اسم با حرف بزرگ می‌آید: *heute Morgen*."
+      de: "Nach *heute* steht das Nomen, groß: *heute Morgen*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir frühstücken ___ (Adverb auf -s / der Sonntag) zusammen.
+    answers: [sonntags]
+    explanation:
+      en: "*Der Sonntag* with *-s* is the adverb *sonntags*, with a small letter."
+      fa: "*der Sonntag* با *-s* قید *sonntags* می‌شود که با حرف کوچک نوشته می‌شود."
+      de: "*Der Sonntag* mit *-s* ist das Adverb *sonntags*, klein geschrieben."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich gehe ___ (Adverb auf -s / der Abend) gern spazieren.
+    answers: [abends]
+    explanation:
+      en: "*Der Abend* with *-s* is the adverb *abends*: every evening."
+      fa: "*der Abend* با *-s* قید *abends* می‌شود: هر شب."
+      de: "*Der Abend* mit *-s* ist das Adverb *abends*: jeden Abend."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (Adverb auf -s / die Nacht) schlafe ich schlecht.
+    answers: [Nachts]
+    explanation:
+      en: "*Die Nacht* gives *nachts*, with the *-s* too. At the start of the sentence it has a capital."
+      fa: "از *die Nacht* واژهٔ *nachts* ساخته می‌شود، آن هم با *-s*. در آغاز جمله با حرف بزرگ نوشته می‌شود."
+      de: "Aus *die Nacht* wird *nachts*, auch mit *-s*. Am Satzanfang schreibt man es groß."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Mein Bruder arbeitet ___ (Adverb auf -s / der Vormittag).
+    answers: [vormittags]
+    explanation:
+      en: "*Der Vormittag* with *-s* is the adverb *vormittags*."
+      fa: "*der Vormittag* با *-s* قید *vormittags* می‌شود."
+      de: "*Der Vormittag* mit *-s* ist das Adverb *vormittags*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Adverb auf -s: der Mittwoch"
+    answers: [mittwochs]
+    explanation:
+      en: "*Der Mittwoch* with *-s* is *mittwochs*: every Wednesday."
+      fa: "*der Mittwoch* با *-s* می‌شود *mittwochs*: هر چهارشنبه."
+      de: "*Der Mittwoch* mit *-s* ist *mittwochs*: jeden Mittwoch."
+  - id: error-1
+    type: find-error
+    prompt: Heute morgens war ich im Park.
+    answer: morgens
+    explanation:
+      en: "After *heute* comes the noun with a capital: *heute Morgen*."
+      fa: "پس از *heute* اسم با حرف بزرگ می‌آید: *heute Morgen*."
+      de: "Nach *heute* steht das Nomen, groß: *heute Morgen*."
+  - id: error-2
+    type: find-error
+    prompt: Mittags essen wir in der Kantine, und Abends kochen wir zu Hause.
+    answer: Abends
+    explanation:
+      en: "Inside the sentence the adverb has a small letter: *und abends kochen wir*."
+      fa: "قید در میان جمله با حرف کوچک نوشته می‌شود: *und abends kochen wir*."
+      de: "Im Satz schreibt man das Adverb klein: *und abends kochen wir*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [montags, habe, ich, Deutschkurs]
+      - [ich, habe, montags, Deutschkurs]
+    explanation:
+      en: "The verb stays in position 2. *Montags* can stand first or after the verb."
+      fa: "فعل در جایگاه دوم می‌ماند. *montags* می‌تواند در آغاز جمله یا پس از فعل بیاید."
+      de: "Das Verb bleibt auf Position 2. *Montags* steht am Anfang oder nach dem Verb."
+  - id: order-2
+    type: word-order
+    answers:
+      - [abends, sehen, wir, fern]
+      - [wir, sehen, abends, fern]
+    explanation:
+      en: "The verb *sehen* stays in position 2 and its prefix *fern* goes to the end."
+      fa: "فعل *sehen* در جایگاه دوم می‌ماند و پیشوندش *fern* به پایان جمله می‌رود."
+      de: "Das Verb *sehen* bleibt auf Position 2, das Präfix *fern* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [jeden Morgen, morgens]
+      - [jeden Abend, abends]
+      - [jede Nacht, nachts]
+      - [jeden Samstag, samstags]
+    explanation:
+      en: "Each adverb in *-s* means every time: *morgens* is every morning, *nachts* every night."
+      fa: "هر قید مختوم به *-s* معنای «هر بار» دارد: *morgens* یعنی هر روز صبح و *nachts* یعنی هر شب."
+      de: "Jedes Adverb auf *-s* heißt: jedes Mal. *Morgens* ist jeden Morgen, *nachts* jede Nacht."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question, then order-1 again after its key was narrowed;
+    not people)"
+  date: 2026-11-28
+  pool: a962361980af8c36

@@ -149,21 +149,22 @@ words:
       en: The room is big.
       fa: اتاق بزرگ است.
 
-  - word: Schrank
+  # A name that takes no article: it is learned, shown and asked as "Deutschland".
+  - word: Deutschland
     class: noun
-    article: der
-    plural: Schränke
+    article: none
+    number: singular-only
     level: A1
     meaning:
-      en: cupboard
-      fa: کمد
-    definition: ein Möbelstück mit Türen, in dem man Sachen aufbewahrt
+      en: Germany
+      fa: آلمان
+    definition: das Land mit der Hauptstadt Berlin
     example:
-      de: Der Schrank ist voll.
-      en: The cupboard is full.
-      fa: کمد پر است.
+      de: Ich wohne in Deutschland.
+      en: I live in Germany.
+      fa: من در آلمان زندگی می‌کنم.
 
 review:
   reviewer: Fixture reviewer
-  date: 2026-11-26
-  pool: f3f5b70dc39d798e
+  date: 2026-11-28
+  pool: d7463581d7e454d7

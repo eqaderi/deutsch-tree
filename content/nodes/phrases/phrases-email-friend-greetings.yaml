@@ -4,7 +4,8 @@ kind: phrases
 level: A2
 chapter: a2-phrases-emails
 order: 1
-status: coming-soon
+status: published
+prerequisites: [grammar-077]
 title:
   en: "Greeting and signing off in an e-mail to a friend"
   fa: "سلام و خداحافظی در ایمیل به دوست"
@@ -14,3 +15,321 @@ purpose:
   fa: "ایمیل غیررسمی را با سلام مناسب شروع کنید و با خداحافظی مناسب تمام کنید."
   de: "Eine informelle E-Mail richtig beginnen und richtig beenden."
 examTasks: [exam-schreiben-1]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Lieber …,
+    meaning:
+      en: Dear … A friendly greeting to a man or a boy, with his first name. A comma follows the name, and the first sentence then begins with a small letter.
+      fa: «… عزیز» سلامی دوستانه به یک مرد یا پسر، با نام کوچکش. پس از نام ویرگول می‌آید و جملهٔ اول با حرف کوچک شروع می‌شود.
+      de: So beginnt man eine E-Mail an einen Freund. Nach dem Namen kommt ein Komma, dann schreibt man klein weiter.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Lieber Tom, wie geht es dir?
+      en: Dear Tom, how are you?
+      fa: تام عزیز، حالت چطور است؟
+
+  - de: Liebe …,
+    meaning:
+      en: Dear … The same greeting to a woman or a girl. To several people it is *Liebe* too, as in *Liebe Freunde*.
+      fa: «… عزیز» همین سلام برای یک زن یا دختر. برای چند نفر هم *Liebe* می‌آید، مانند *Liebe Freunde*.
+      de: So beginnt man eine E-Mail an eine Freundin. An mehrere Personen schreibt man auch *Liebe*, zum Beispiel *Liebe Freunde*.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Liebe Anna, ich habe tolle Neuigkeiten!
+      en: Dear Anna, I have great news!
+      fa: آنای عزیز، خبرهای خیلی خوبی دارم!
+
+  - de: Liebe …, lieber …,
+    meaning:
+      en: Dear … and … To two friends, each name gets its own greeting word, and the second one has a small letter, as in *Liebe Anna, lieber Tom*.
+      fa: «… و … عزیز» برای دو دوست، هر نام واژهٔ سلام خودش را می‌گیرد و دومی با حرف کوچک نوشته می‌شود، مانند *Liebe Anna, lieber Tom*.
+      de: An zwei Personen schreibt man für jede Person *Liebe* oder *Lieber*. Das zweite Wort schreibt man klein, zum Beispiel *Liebe Anna, lieber Tom*.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Liebe Anna, lieber Tom, wie war euer Urlaub?
+      en: Dear Anna and Tom, how was your holiday?
+      fa: آنا و تام عزیز، تعطیلاتتان چطور بود؟
+
+  - de: Hallo …,
+    meaning:
+      en: Hello … A casual greeting, the same for a man and a woman. To a group of friends you write *Hallo zusammen*.
+      fa: «سلام …» سلامی خودمانی که برای مرد و زن یکسان است. به گروهی از دوستان می‌نویسید *Hallo zusammen*.
+      de: Ein lockerer Gruß, für Männer und Frauen gleich. An eine Gruppe von Freunden schreibt man *Hallo zusammen*.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Hallo Lisa, hast du am Wochenende Zeit?
+      en: Hi Lisa, are you free at the weekend?
+      fa: سلام لیزا، آخر هفته وقت داری؟
+
+  - de: Viele Grüße
+    meaning:
+      en: Best wishes. The usual closing to friends. It stands on a line of its own without a comma, and your name goes on the next line.
+      fa: «سلام فراوان» پایان‌بندی معمول ایمیل به دوستان. این عبارت در سطری جداگانه و بدون ویرگول می‌آید و نامتان در سطر بعد نوشته می‌شود.
+      de: Der normale Gruß am Ende einer E-Mail an Freunde. Er steht allein in einer Zeile, ohne Komma. In der nächsten Zeile steht der Name.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Viele Grüße und bis Samstag!
+      en: Best wishes, and see you on Saturday!
+      fa: سلام فراوان و تا شنبه!
+
+  - de: Liebe Grüße
+    meaning:
+      en: Love. A warmer closing, for good friends and the family.
+      fa: «با مهر» پایان‌بندی‌ای گرم‌تر، برای دوستان نزدیک و خانواده.
+      de: Ein herzlicher Gruß am Ende, für gute Freunde und für die Familie.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Liebe Grüße aus Hamburg!
+      en: Love from Hamburg!
+      fa: سلام گرم از هامبورگ!
+
+  - de: Herzliche Grüße
+    meaning:
+      en: Warm regards. Warm, but less close than *Liebe Grüße*, so it also suits a person you address with *Sie* and know well.
+      fa: «با درود صمیمانه» گرم است، ولی نه به صمیمیت *Liebe Grüße*؛ پس برای کسی هم مناسب است که با *Sie* خطابش می‌کنید و خوب می‌شناسید.
+      de: Ein warmer Gruß. Er passt zu Freunden und auch zu Personen, zu denen man *Sie* sagt und die man gut kennt.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Herzliche Grüße von uns allen!
+      en: Warm regards from all of us!
+      fa: درود صمیمانه از همهٔ ما!
+
+  - de: Dein … / Deine …
+    meaning:
+      en: Yours … Written before your name, under the closing. A man writes *Dein Tom*, a woman *Deine Anna*, because the ending follows the writer. To several readers it is *Euer Tom*, *Eure Anna*.
+      fa: «دوستدارت، …» پیش از نامتان و زیر پایان‌بندی نوشته می‌شود. مرد می‌نویسد *Dein Tom* و زن *Deine Anna*؛ یعنی پایانه به نویسنده بستگی دارد. اگر برای چند نفر بنویسید، *Euer Tom* و *Eure Anna* می‌شود.
+      de: Das schreibt man vor den eigenen Namen. Ein Mann schreibt *Dein Tom*, eine Frau *Deine Anna*. An mehrere Personen schreibt man *Euer Tom* oder *Eure Anna*.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Bis bald! Deine Anna
+      en: See you soon! Love, Anna
+      fa: تا بعد! دوستدارت، آنا
+
+  - de: Bis bald!
+    meaning:
+      en: See you soon! A short, friendly end, before the closing or in place of it.
+      fa: «تا بعد!» پایانی کوتاه و دوستانه، پیش از پایان‌بندی یا به جای آن.
+      de: Ein kurzer, freundlicher Schluss. Man schreibt es vor *Viele Grüße* oder statt *Viele Grüße*.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Schreib mir, wann du Zeit hast. Bis bald!
+      en: Write and tell me when you are free. See you soon!
+      fa: برایم بنویس کی وقت داری. تا بعد!
+
+  - de: Viele Grüße an …!
+    meaning:
+      en: Say hello to … Sends greetings to other people at the end. After *an* comes the accusative, as in *an deine Eltern*.
+      fa: «به … سلام برسان!» در پایان ایمیل به دیگران هم سلام می‌فرستد. پس از *an* حالت *Akkusativ* می‌آید، مانند *an deine Eltern*.
+      de: So grüßt man am Ende auch andere Personen. Nach *an* kommt der Akkusativ, zum Beispiel *an deine Eltern*.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Viele Grüße an deine Eltern!
+      en: Say hello to your parents!
+      fa: به پدر و مادرت سلام برسان!
+
+  - de: Grüß … von mir!
+    meaning:
+      en: Say hello to … from me. The same wish as an imperative to one friend.
+      fa: «از طرف من به … سلام برسان!» همان آرزو، به‌صورت امر به یک دوست.
+      de: Derselbe Wunsch als Imperativ an einen Freund oder eine Freundin.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Grüß deine Schwester von mir!
+      en: Say hello to your sister from me!
+      fa: از طرف من به خواهرت سلام برسان!
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Du schreibst deiner Freundin Lena eine E-Mail. Wie beginnst du?
+    options:
+      - Liebe Lena,
+      - Lieber Lena,
+      - Sehr geehrte Lena,
+    answer: Liebe Lena,
+    explanation:
+      en: To a woman you write *Liebe*. *Sehr geehrte* is for formal e-mails, with the surname.
+      fa: به یک زن *Liebe* می‌نویسید. *Sehr geehrte* مخصوص ایمیل رسمی است و با نام خانوادگی می‌آید.
+      de: An eine Frau schreibt man *Liebe*. *Sehr geehrte* ist für formelle E-Mails, mit dem Familiennamen.
+
+  - id: q2
+    type: gap-fill
+    prompt: ___ Tom, wie geht es dir?
+    options: [Lieber, Liebe, Lieben]
+    answer: Lieber
+    explanation:
+      en: Tom is a man, so the greeting is *Lieber Tom*.
+      fa: تام مرد است، پس سلام *Lieber Tom* است.
+      de: Tom ist ein Mann, also heißt es *Lieber Tom*.
+
+  - id: q3
+    type: true-false
+    prompt: Liebe Anna, Wie geht es dir?
+    answer: false
+    explanation:
+      en: After the comma of the greeting the first sentence begins with a small letter. *Liebe Anna, wie geht es dir?*
+      fa: "پس از ویرگولِ سلام، جملهٔ اول با حرف کوچک شروع می‌شود: *Liebe Anna, wie geht es dir?*"
+      de: "Nach dem Komma von der Anrede schreibt man klein weiter: *Liebe Anna, wie geht es dir?*"
+
+  - id: q4
+    type: find-error
+    prompt: Lieber Anna, wie geht es dir?
+    answer: Lieber
+    explanation:
+      en: Anna is a woman, so the greeting is *Liebe Anna*.
+      fa: آنا زن است، پس سلام *Liebe Anna* است.
+      de: Anna ist eine Frau, also heißt es *Liebe Anna*.
+
+  - id: q5
+    type: multiple-choice
+    prompt: Tom schreibt eine E-Mail an seine Freundin Anna. Was schreibt er vor seinen Namen?
+    options: [Dein Tom, Deine Tom, Deinen Tom]
+    answer: Dein Tom
+    explanation:
+      en: The ending follows the writer. Tom is a man, so he writes *Dein Tom*.
+      fa: پایانه به نویسنده بستگی دارد. تام مرد است، پس می‌نویسد *Dein Tom*.
+      de: Die Endung passt zur Person, die schreibt. Tom ist ein Mann, also schreibt er *Dein Tom*.
+
+  - id: q6
+    type: true-false
+    prompt: Viele Grüße an deine Eltern!
+    answer: true
+    explanation:
+      en: "*Viele Grüße an …* with the accusative *deine Eltern* is correct."
+      fa: "*Viele Grüße an …* با حالت *Akkusativ*، یعنی *deine Eltern*، درست است."
+      de: "*Viele Grüße an …* mit dem Akkusativ *deine Eltern* ist richtig."
+
+  - id: q7
+    type: gap-fill
+    prompt: Liebe Grüße und bis ___!
+    options: [bald, schnell, früh]
+    answer: bald
+    explanation:
+      en: The friendly end is *Bis bald!*, "see you soon".
+      fa: پایان دوستانه *Bis bald!* است، یعنی «تا بعد».
+      de: Der freundliche Schluss heißt *Bis bald!*
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: ___ (lieb) Anna, wie geht es dir?
+    answers: [Liebe, Liebste]
+    explanation:
+      en: Anna is a woman, so the greeting is *Liebe Anna*.
+      fa: آنا زن است، پس سلام *Liebe Anna* است.
+      de: Anna ist eine Frau, also heißt es *Liebe Anna*.
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: ___ (lieb) Tom, wie geht es dir?
+    answers: [Lieber, Liebster]
+    explanation:
+      en: Tom is a man, so the greeting is *Lieber Tom*.
+      fa: تام مرد است، پس سلام *Lieber Tom* است.
+      de: Tom ist ein Mann, also heißt es *Lieber Tom*.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Liebe Anna, ___ (lieb) Tom, wie war euer Urlaub?
+    answers: [lieber, liebster]
+    explanation:
+      en: Each name gets its own greeting word. Tom is a man, so *lieber*, with a small letter.
+      fa: هر نام واژهٔ سلام خودش را می‌گیرد. تام مرد است، پس *lieber* با حرف کوچک.
+      de: Jeder Name bekommt sein eigenes Wort. Tom ist ein Mann, also *lieber*, kleingeschrieben.
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: ___ (lieb) Freunde, wie geht es euch?
+    answers: [Liebe, Liebste]
+    explanation:
+      en: To several people the greeting is *Liebe*, as in *Liebe Freunde*.
+      fa: برای چند نفر سلام با *Liebe* است، مانند *Liebe Freunde*.
+      de: An mehrere Personen schreibt man *Liebe*, zum Beispiel *Liebe Freunde*.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Viele ___ (der Gruß) und bis bald!
+    answers: [Grüße]
+    explanation:
+      en: The closing is plural, *Viele Grüße*.
+      fa: "پایان‌بندی جمع است: *Viele Grüße*."
+      de: Der Gruß steht im Plural, *Viele Grüße*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: ___ (lieb) Grüße aus Hamburg!
+    answers: [Liebe, Liebste]
+    explanation:
+      en: The warm closing is *Liebe Grüße*.
+      fa: پایان‌بندی گرم *Liebe Grüße* است.
+      de: Der herzliche Gruß heißt *Liebe Grüße*.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: ___ (herzlich) Grüße von uns allen!
+    answers: [Herzliche, Herzlichste]
+    explanation:
+      en: The closing is *Herzliche Grüße*, with *-e* before the plural *Grüße*.
+      fa: پایان‌بندی *Herzliche Grüße* است، با *-e* پیش از اسم جمع *Grüße*.
+      de: Der Gruß heißt *Herzliche Grüße*, mit *-e* vor dem Plural *Grüße*.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: "Anna schreibt an Tom. Unter ihren Gruß schreibt sie: ___ (dein) Anna"
+    answers: [Deine]
+    explanation:
+      en: The ending follows the writer. Anna is a woman, so she writes *Deine Anna*.
+      fa: پایانه به نویسنده بستگی دارد. آنا زن است، پس می‌نویسد *Deine Anna*.
+      de: Die Endung passt zur Person, die schreibt. Anna ist eine Frau, also *Deine Anna*.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: "Tom schreibt an Anna. Unter seinen Gruß schreibt er: ___ (dein) Tom"
+    answers: [Dein]
+    explanation:
+      en: The ending follows the writer. Tom is a man, so he writes *Dein Tom*.
+      fa: پایانه به نویسنده بستگی دارد. تام مرد است، پس می‌نویسد *Dein Tom*.
+      de: Die Endung passt zur Person, die schreibt. Tom ist ein Mann, also *Dein Tom*.
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: "Anna schreibt an Lena und Paul. Unter ihren Gruß schreibt sie: ___ (euer) Anna"
+    answers: [Eure]
+    explanation:
+      en: To several readers it is *euer*, and Anna is a woman, so *Eure Anna*.
+      fa: برای چند خواننده *euer* می‌آید و آنا زن است، پس *Eure Anna*.
+      de: An mehrere Personen schreibt man *euer*. Anna ist eine Frau, also *Eure Anna*.
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: ___ (grüßen) deine Eltern von mir!
+    answers: [Grüß, Grüße]
+    explanation:
+      en: The imperative to one friend is *Grüß …!* (also *Grüße …!*).
+      fa: امر به یک دوست *Grüß …!* است (یا *Grüße …!*).
+      de: Der Imperativ an eine Person heißt *Grüß …!* (auch *Grüße …!*).
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Viele Grüße ___ deine Eltern!
+    answers: [an, auch an]
+    explanation:
+      en: The phrase is *Viele Grüße an …!*, with the accusative after *an*.
+      fa: عبارت *Viele Grüße an …!* است و پس از *an* حالت *Akkusativ* می‌آید.
+      de: Der Satz heißt *Viele Grüße an …!*, nach *an* kommt der Akkusativ.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Grüß deine Schwester ___ mir!
+    answers: [von]
+    explanation:
+      en: The phrase is *Grüß … von mir!*
+      fa: عبارت *Grüß … von mir!* است.
+      de: Der Satz heißt *Grüß … von mir!*
+
+review:
+  reviewer: an independent AI agent (a fresh subagent, blind to the key)
+  date: 2026-11-28
+  pool: 6d9989373d24ad03

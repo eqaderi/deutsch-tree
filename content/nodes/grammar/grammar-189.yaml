@@ -4,10 +4,341 @@ kind: grammar
 level: B1
 chapter: b1-two-part-connectors
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-110, grammar-157]
 title:
   en: "*je … desto* / *umso*"
   fa: "*je … desto* / *umso*"
   de: "*je … desto* / *umso*"
+
+explanations:
+  en:
+    rule: >
+      *Je … desto* (the … the …) links two changes: as one grows, so does the
+      other. *Je* starts a subordinate clause. Right after *je* comes a
+      *Komparativ*, and the conjugated verb goes to the end: *Je mehr du
+      übst, …* The main clause starts with *desto* or *umso*, which mean the
+      same, and a second *Komparativ*. Together they are position 1, so the
+      verb comes next and then the subject: *…, desto besser wird dein
+      Deutsch.* A noun stays right after its *Komparativ*: *Je mehr Zeit ich
+      habe, desto mehr Bücher lese ich.* Short and fixed: *Je früher, desto
+      besser.* When the main clause comes first, *umso* or *desto* stands
+      inside it: *Die Wohnungen sind umso teurer, je näher sie am Zentrum
+      liegen.*
+  fa:
+    rule: >
+      *je … desto* (هرچه … ، … تر) دو تغییر را به هم پیوند می‌دهد: هرچه یکی
+      بیشتر شود، دیگری هم بیشتر می‌شود. *je* جملهٔ پیرو را آغاز می‌کند. درست
+      پس از *je* صفت تفضیلی (*Komparativ*) می‌آید و فعل صرف‌شده به پایان جمله
+      می‌رود: *Je mehr du übst, …* جملهٔ پایه با *desto* یا *umso*، که یک
+      معنا دارند، و صفت تفضیلی دوم آغاز می‌شود. این دو با هم جایگاه اول‌اند،
+      پس فعل پس از آن‌ها می‌آید و سپس فاعل: *…, desto besser wird dein
+      Deutsch.* اسم درست پس از صفت تفضیلی‌اش می‌ماند: *Je mehr Zeit ich habe,
+      desto mehr Bücher lese ich.* کوتاه و ثابت: *Je früher, desto besser.*
+      اگر جملهٔ پایه اول بیاید، *umso* یا *desto* درون آن قرار می‌گیرد: *Die
+      Wohnungen sind umso teurer, je näher sie am Zentrum liegen.*
+  de:
+    rule: >
+      Mit *je … desto* verbindet man zwei Veränderungen: Wird das eine mehr,
+      wird auch das andere mehr. *Je* beginnt einen Nebensatz. Direkt nach
+      *je* kommt ein Komparativ, und das konjugierte Verb steht am Ende: *Je
+      mehr du übst, …* Der Hauptsatz beginnt mit *desto* oder *umso* (beide
+      bedeuten das Gleiche) und einem zweiten Komparativ. Zusammen sind sie
+      Position 1. Dann kommt das Verb und danach das Subjekt: *…, desto besser
+      wird dein Deutsch.* Ein Nomen steht direkt nach seinem Komparativ: *Je
+      mehr Zeit ich habe, desto mehr Bücher lese ich.* Kurz sagt man: *Je
+      früher, desto besser.* Kommt der Hauptsatz zuerst, steht *umso* oder
+      *desto* im Satz: *Die Wohnungen sind umso teurer, je näher sie am
+      Zentrum liegen.*
+
+table:
+  columns:
+    - { en: "*Je* clause: verb at the end", fa: "جملهٔ پیرو با *je*: فعل در پایان", de: "*Je*-Satz: Verb am Ende" }
+    - { en: "*Desto* / *umso* + comparative", fa: "*desto* / *umso* + صفت تفضیلی", de: "*Desto* / *umso* + Komparativ" }
+    - { en: Verb, fa: فعل, de: Verb }
+    - { en: The rest, fa: بقیهٔ جمله, de: Rest }
+  rows:
+    - ["Je mehr du übst,", desto besser, wird, dein Deutsch.]
+    - ["Je älter mein Opa wird,", umso ruhiger, wird, er.]
+    - ["Je früher wir losfahren,", desto weniger Verkehr, gibt, es.]
+    - ["Je mehr Geld er verdient,", umso mehr, gibt, er aus.]
+
+# Two sets of three bars that grow together: the left set is the je clause,
+# the right set the desto clause, with an arrow from one to the other.
+diagrams:
+  - caption:
+      en: >
+        *Je mehr du übst, desto besser wird dein Deutsch.* The more you
+        practise (left), the better your German gets (right): the two grow
+        together.
+      fa: >
+        هرچه بیشتر تمرین کنید (چپ)، آلمانی‌تان بهتر می‌شود (راست): این دو با
+        هم بالا می‌روند. *Je mehr du übst, desto besser wird dein Deutsch.*
+      de: >
+        *Je mehr du übst, desto besser wird dein Deutsch.* Mehr Übung (links),
+        besseres Deutsch (rechts): Beides wächst zusammen.
+    svg: |
+      <svg viewBox="0 0 320 196">
+        <text class="label" x="78" y="40" text-anchor="middle">je mehr</text>
+        <text class="label" x="242" y="40" text-anchor="middle">desto besser</text>
+        <!-- left: practice grows -->
+        <rect class="surface" x="30" y="120" width="26" height="30"/>
+        <rect class="surface" x="65" y="90" width="26" height="60"/>
+        <rect class="surface" x="100" y="60" width="26" height="90"/>
+        <!-- arrow -->
+        <line class="line" x1="138" y1="105" x2="174" y2="105"/>
+        <polygon class="object" points="174,98 183,105 174,112"/>
+        <!-- right: German gets better -->
+        <rect class="shade" x="194" y="120" width="26" height="30"/>
+        <rect class="shade" x="229" y="90" width="26" height="60"/>
+        <rect class="shade" x="264" y="60" width="26" height="90"/>
+        <line class="line" x1="20" y1="150" x2="300" y2="150"/>
+        <text class="note" x="78" y="176" text-anchor="middle">du übst</text>
+        <text class="note" x="242" y="176" text-anchor="middle">dein Deutsch</text>
+      </svg>
+
+examples:
+  - de: Je mehr du übst, desto besser wird dein Deutsch.
+    en: The more you practise, the better your German gets.
+    fa: هرچه بیشتر تمرین کنی، آلمانی‌ات بهتر می‌شود.
+  - de: Je älter mein Opa wird, umso ruhiger wird er.
+    en: The older my grandpa gets, the calmer he becomes.
+    fa: پدربزرگم هرچه پیرتر می‌شود، آرام‌تر می‌شود.
+  - de: Je länger ich warte, desto nervöser werde ich.
+    en: The longer I wait, the more nervous I get.
+    fa: هرچه بیشتر منتظر می‌مانم، عصبی‌تر می‌شوم.
+  - de: Je früher wir losfahren, desto weniger Verkehr gibt es.
+    en: The earlier we set off, the less traffic there is.
+    fa: هرچه زودتر راه بیفتیم، ترافیک کمتر است.
+  - de: Je mehr Geld er verdient, umso mehr gibt er aus.
+    en: The more money he earns, the more he spends.
+    fa: هرچه بیشتر پول درمی‌آورد، بیشتر خرج می‌کند.
+  - de: Je öfter ich Deutsch spreche, desto leichter fällt es mir.
+    en: The more often I speak German, the easier it gets for me.
+    fa: هرچه بیشتر آلمانی صحبت می‌کنم، برایم آسان‌تر می‌شود.
+  - de: Je früher, desto besser.
+    en: The sooner, the better.
+    fa: هرچه زودتر، بهتر.
+  - de: Die Wohnungen sind umso teurer, je näher sie am Zentrum liegen.
+    en: The closer the flats are to the centre, the more expensive they are.
+    fa: آپارتمان‌ها هرچه به مرکز شهر نزدیک‌تر باشند، گران‌ترند.
+
+mistakes:
+  - wrong: Je mehr du übst, desto dein Deutsch wird besser.
+    right: Je mehr du übst, desto besser wird dein Deutsch.
+    why:
+      en: "The *Komparativ* stands right after *desto*, then the verb, then the subject."
+      fa: "صفت تفضیلی درست پس از *desto* می‌آید، سپس فعل و سپس فاعل."
+      de: "Der Komparativ steht direkt nach *desto*, dann das Verb, dann das Subjekt."
+  - wrong: Je mehr du übst, desto besser dein Deutsch wird.
+    right: Je mehr du übst, desto besser wird dein Deutsch.
+    why:
+      en: "The *desto* clause is a main clause: the verb comes right after *desto besser*, not at the end."
+      fa: "جملهٔ *desto* جملهٔ پایه است: فعل بی‌درنگ پس از *desto besser* می‌آید، نه در پایان."
+      de: "Der *desto*-Satz ist ein Hauptsatz. Das Verb kommt direkt nach *desto besser*, nicht am Ende."
+  - wrong: Je mehr übst du, desto besser wird dein Deutsch.
+    right: Je mehr du übst, desto besser wird dein Deutsch.
+    why:
+      en: "The *je* clause is a subordinate clause, so its verb goes to the end: *je mehr du übst*."
+      fa: "جملهٔ *je* جملهٔ پیرو است، پس فعلش به پایان می‌رود: *je mehr du übst*."
+      de: "Der *je*-Satz ist ein Nebensatz. Das Verb steht am Ende: *je mehr du übst*."
+  - wrong: Je mehr du übst, desto gut wird dein Deutsch.
+    right: Je mehr du übst, desto besser wird dein Deutsch.
+    why:
+      en: "Both halves take a *Komparativ*: *gut* becomes *besser*."
+      fa: "هر دو بخش صفت تفضیلی می‌گیرند: *gut* می‌شود *besser*."
+      de: "In beiden Teilen steht ein Komparativ: *gut* wird zu *besser*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Je mehr du übst, ___ besser wird dein Deutsch.
+    options: [als, desto, dann]
+    answer: desto
+    explanation:
+      en: "*Je* is answered by *desto* (or *umso*)."
+      fa: "جفت *je*، *desto* (یا *umso*) است."
+      de: "Zu *je* gehört *desto* (oder *umso*)."
+  - id: gap-2
+    type: gap-fill
+    prompt: Je älter mein Opa wird, ___ ruhiger wird er.
+    options: [so, als, umso]
+    answer: umso
+    explanation:
+      en: "*Umso* means the same as *desto*: *umso ruhiger*."
+      fa: "*umso* همان معنای *desto* را دارد: *umso ruhiger*."
+      de: "*Umso* bedeutet das Gleiche wie *desto*: *umso ruhiger*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Je länger ich warte, desto ___.
+    options: [ich werde nervöser, nervöser werde ich, nervöser ich werde]
+    answer: nervöser werde ich
+    explanation:
+      en: "The *Komparativ* right after *desto*, then the verb *werde*, then *ich*."
+      fa: "صفت تفضیلی درست پس از *desto*، سپس فعل *werde* و سپس *ich*."
+      de: "Direkt nach *desto* der Komparativ, dann das Verb *werde*, dann *ich*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Je ___ wir losfahren, desto weniger Verkehr gibt es.
+    options: [früh, am frühesten, früher]
+    answer: früher
+    explanation:
+      en: "After *je* comes the *Komparativ*: *früher*."
+      fa: "پس از *je* صفت تفضیلی می‌آید: *früher*."
+      de: "Nach *je* kommt der Komparativ: *früher*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Je mehr ich schlafe, desto müder bin ich.
+    options:
+      [
+        "Ich schlafe viel, weil ich müde bin.",
+        "Wenn ich mehr schlafe, bin ich müder.",
+        "Wenn ich mehr schlafe, bin ich weniger müde.",
+      ]
+    answer: Wenn ich mehr schlafe, bin ich müder.
+    explanation:
+      en: "The two grow together: more sleep, more tired."
+      fa: "این دو با هم بیشتر می‌شوند: خواب بیشتر، خستگی بیشتر."
+      de: "Beides wird zusammen mehr: mehr Schlaf, mehr Müdigkeit."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Welcher Satz ist richtig?"
+    options:
+      [
+        "Je mehr arbeitet er, desto mehr verdient er.",
+        "Je mehr er arbeitet, desto er verdient mehr.",
+        "Je mehr er arbeitet, desto mehr verdient er.",
+      ]
+    answer: Je mehr er arbeitet, desto mehr verdient er.
+    explanation:
+      en: "*Je* clause: verb at the end. *Desto* clause: *desto mehr*, then the verb, then the subject."
+      fa: "در جملهٔ *je* فعل در پایان است. در جملهٔ *desto*: نخست *desto mehr*، سپس فعل و سپس فاعل."
+      de: "Im *je*-Satz steht das Verb am Ende. Im *desto*-Satz: *desto mehr*, dann das Verb, dann das Subjekt."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Je öfter ich Deutsch spreche, ___.
+    options: [desto es fällt mir leichter, desto leichter fällt es mir, desto leicht fällt es mir]
+    answer: desto leichter fällt es mir
+    explanation:
+      en: "*Desto* takes a *Komparativ*, *leichter*, and then the verb *fällt* follows."
+      fa: "*desto* صفت تفضیلی می‌گیرد، *leichter*، و سپس فعل *fällt* می‌آید."
+      de: "Nach *desto* kommt ein Komparativ, *leichter*, und dann das Verb *fällt*."
+  - id: true-1
+    type: true-false
+    prompt: Je früher, desto besser.
+    answer: true
+    explanation:
+      en: "A short fixed phrase with two comparatives. It is correct."
+      fa: "عبارتی کوتاه و ثابت با دو صفت تفضیلی. درست است."
+      de: "Ein kurzer fester Ausdruck mit zwei Komparativen. Er ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Je mehr du liest, desto dein Wortschatz wird größer.
+    answer: false
+    explanation:
+      en: "The *Komparativ* comes right after *desto*, then the verb: *desto größer wird dein Wortschatz*."
+      fa: "صفت تفضیلی درست پس از *desto* می‌آید و سپس فعل: *desto größer wird dein Wortschatz*."
+      de: "Der Komparativ steht direkt nach *desto*, dann das Verb: *desto größer wird dein Wortschatz*."
+  - id: true-3
+    type: true-false
+    prompt: Je älter die Kinder werden, umso selbstständiger sind sie.
+    answer: true
+    explanation:
+      en: "*Je* clause with the verb at the end, then *umso* + *Komparativ* + verb + subject. The sentence is correct."
+      fa: "جملهٔ *je* با فعل در پایان، سپس *umso* + صفت تفضیلی + فعل + فاعل. جمله درست است."
+      de: "*Je*-Satz mit dem Verb am Ende, dann *umso* + Komparativ + Verb + Subjekt. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Je du mehr liest, desto mehr Wörter lernst du.
+    answer: false
+    explanation:
+      en: "The *Komparativ* comes right after *je*: *Je mehr du liest*."
+      fa: "صفت تفضیلی درست پس از *je* می‌آید: *Je mehr du liest*."
+      de: "Der Komparativ steht direkt nach *je*: *Je mehr du liest*."
+  - id: true-5
+    type: true-false
+    prompt: Je mehr Geld er verdient, umso mehr gibt er aus.
+    answer: true
+    explanation:
+      en: "The noun *Geld* stays right after *mehr*, and the verb *verdient* goes to the end. The sentence is correct."
+      fa: "اسم *Geld* درست پس از *mehr* مانده و فعل *verdient* به پایان رفته است. جمله درست است."
+      de: "Das Nomen *Geld* steht direkt nach *mehr*, das Verb *verdient* am Ende. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Je mehr du übst, desto ___ (gut) wird dein Deutsch.
+    answers: [besser]
+    explanation:
+      en: "After *desto* comes the *Komparativ* of *gut*: *besser*."
+      fa: "پس از *desto* صفت تفضیلی *gut* می‌آید: *besser*."
+      de: "Nach *desto* kommt der Komparativ von *gut*: *besser*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Je ___ (alt) die Kinder werden, desto selbstständiger sind sie.
+    answers: [älter]
+    explanation:
+      en: "After *je* comes the *Komparativ* of *alt*, with an umlaut: *älter*."
+      fa: "پس از *je* صفت تفضیلی *alt* با دو نقطه (*Umlaut*) می‌آید: *älter*."
+      de: "Nach *je* kommt der Komparativ von *alt*, mit Umlaut: *älter*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Je länger ich warte, desto nervöser ___ (werden) ich.
+    answers: [werde]
+    explanation:
+      en: "After *desto nervöser* the verb comes next, with the ending for *ich*: *werde*."
+      fa: "پس از *desto nervöser* فعل با شناسهٔ *ich* می‌آید: *werde*."
+      de: "Nach *desto nervöser* kommt das Verb mit der Endung für *ich*: *werde*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Je mehr ich lerne, ___ mehr weiß ich.
+    answers: [desto, umso]
+    explanation:
+      en: "*Je* is answered by *desto* or *umso*."
+      fa: "جفت *je*، *desto* یا *umso* است."
+      de: "Zu *je* gehört *desto* oder *umso*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Je öfter du Deutsch ___ (sprechen), desto leichter wird es.
+    answers: [sprichst]
+    explanation:
+      en: "The *je* clause has its verb at the end, with the ending for *du*: *sprichst*."
+      fa: "در جملهٔ *je* فعل با شناسهٔ *du* در پایان می‌آید: *sprichst*."
+      de: "Im *je*-Satz steht das Verb am Ende, mit der Endung für *du*: *sprichst*."
+  - id: error-1
+    type: find-error
+    prompt: Je mehr du übst, desto gut wird dein Deutsch.
+    answer: gut
+    explanation:
+      en: "After *desto* comes a *Komparativ*: *besser*."
+      fa: "پس از *desto* صفت تفضیلی می‌آید: *besser*."
+      de: "Nach *desto* kommt ein Komparativ: *besser*."
+  - id: error-2
+    type: find-error
+    prompt: Je mehr du übst, als besser wird dein Deutsch.
+    answer: als
+    explanation:
+      en: "*Je* is answered by *desto* or *umso*, not *als*."
+      fa: "جفت *je*، *desto* یا *umso* است، نه *als*."
+      de: "Zu *je* gehört *desto* oder *umso*, nicht *als*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["je mehr du übst,", desto besser, wird, dein Deutsch]
+    explanation:
+      en: "*Desto besser* is position 1, then the verb *wird*, then the subject."
+      fa: "*desto besser* جایگاه اول است، سپس فعل *wird* و سپس فاعل."
+      de: "*Desto besser* ist Position 1, dann das Verb *wird*, dann das Subjekt."
+  - id: order-2
+    type: word-order
+    answers:
+      - [je mehr, du, "liest,", desto mehr Wörter, lernst, du]
+    explanation:
+      en: "*Je mehr*, the subject, the verb at the end; then *desto mehr Wörter*, the verb, the subject."
+      fa: "*je mehr*، فاعل و فعل در پایان؛ سپس *desto mehr Wörter*، فعل و فاعل."
+      de: "*Je mehr*, das Subjekt, das Verb am Ende; dann *desto mehr Wörter*, das Verb, das Subjekt."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: cdd602698d6e0c70

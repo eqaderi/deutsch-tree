@@ -4,10 +4,339 @@ kind: grammar
 level: A1
 chapter: a1-word-building
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-060, grammar-205]
 title:
   en: "*-in*, *-er*, *-ung*"
   fa: "پسوندهای *-in*، *-er*، *-ung*"
   de: "Nomen mit *-in*, *-er*, *-ung*"
+
+explanations:
+  en:
+    rule: >
+      Three endings make new nouns, and each one fixes the gender and the
+      plural. *-er* on a verb stem gives a masculine noun: the person who does
+      it (*fahren* → *der Fahrer*) or a device that does it (*drucken* → *der
+      Drucker*); after the name of a city or country it gives the people who
+      live there (*Berlin* → *der Berliner*). These nouns add nothing in the
+      plural: *die Fahrer*. *-in* makes the noun for a woman (*der Lehrer* →
+      *die Lehrerin*), sometimes with an umlaut (*der Arzt* → *die Ärztin*);
+      its plural is *-innen*: *die Lehrerinnen*. *-ung* on a verb stem gives a
+      feminine noun, usually the action or its result (*wohnen* → *die
+      Wohnung*); its plural is *-en*: *die Wohnungen*.
+  fa:
+    rule: >
+      سه پسوند از واژه‌های دیگر اسم می‌سازند، و هر کدام جنس دستوری و جمع اسم
+      تازه را هم تعیین می‌کند. *-er* پس از بن فعل اسم مذکر می‌سازد: کسی که
+      آن کار را می‌کند (*fahren* – *der Fahrer*، راننده) یا دستگاهی که آن
+      کار را انجام می‌دهد (*drucken* – *der Drucker*، چاپگر). پس از نام شهر
+      یا کشور، *-er* اهل آن‌جا را نشان می‌دهد (*Berlin* – *der Berliner*).
+      این اسم‌ها در جمع پایانه‌ای نمی‌گیرند: *die Fahrer*. *-in* اسم زن را
+      می‌سازد (*der Lehrer* – *die Lehrerin*)، گاهی با دو نقطه (*Umlaut*):
+      *der Arzt* – *die Ärztin*. جمع آن *-innen* است: *die Lehrerinnen*.
+      *-ung* پس از بن فعل اسم مؤنث می‌سازد که معمولاً خودِ کار یا نتیجهٔ آن
+      است (*wohnen* – *die Wohnung*)؛ جمع آن *-en* است: *die Wohnungen*.
+  de:
+    rule: >
+      Mit drei Endungen macht man neue Nomen. Die Endung gibt auch den Artikel
+      und den Plural. *-er* nach einem Verb: die Person, die etwas macht
+      (*fahren* – *der Fahrer*), oder ein Gerät (*drucken* – *der Drucker*).
+      *-er* nach einer Stadt oder einem Land: die Menschen von dort (*Berlin* –
+      *der Berliner*). Diese Nomen sind maskulin und haben im Plural keine
+      Endung: *die Fahrer*. *-in* sagt: Es ist eine Frau (*der Lehrer* – *die
+      Lehrerin*), manchmal mit Umlaut (*der Arzt* – *die Ärztin*). Der Plural
+      ist *-innen*: *die Lehrerinnen*. *-ung* nach einem Verb macht ein
+      feminines Nomen (*wohnen* – *die Wohnung*). Der Plural ist *-en*: *die
+      Wohnungen*.
+
+table:
+  columns:
+    - { en: Ending, fa: پسوند, de: Endung }
+    - { en: Made from, fa: واژهٔ پایه, de: Gemacht aus }
+    - { en: New noun, fa: اسم تازه, de: Neues Nomen }
+    - { en: Plural, fa: جمع, de: Plural }
+  rows:
+    - ["-er (Person)", fahren, der Fahrer, die Fahrer]
+    - ["-er (Person)", spielen, der Spieler, die Spieler]
+    - ["-er (Gerät)", drucken, der Drucker, die Drucker]
+    - ["-er (Gerät)", fernsehen, der Fernseher, die Fernseher]
+    - ["-er (aus einer Stadt, einem Land)", Berlin, der Berliner, die Berliner]
+    - ["-er (aus einer Stadt, einem Land)", Österreich, der Österreicher, die Österreicher]
+    - ["-in", der Lehrer, die Lehrerin, die Lehrerinnen]
+    - ["-in", der Berliner, die Berlinerin, die Berlinerinnen]
+    - ["-in (mit Umlaut)", der Arzt, die Ärztin, die Ärztinnen]
+    - ["-ung", wohnen, die Wohnung, die Wohnungen]
+    - ["-ung", rechnen, die Rechnung, die Rechnungen]
+    - ["-ung", einladen, die Einladung, die Einladungen]
+
+examples:
+  - de: Der Fahrer wartet vor dem Hotel.
+    en: The driver is waiting in front of the hotel.
+    fa: راننده جلوی هتل منتظر است.
+  - de: Meine Lehrerin kommt aus Österreich.
+    en: My teacher (a woman) comes from Austria.
+    fa: خانم معلمم اهل اتریش است.
+  - de: Nach dem Spiel sind die Spieler müde.
+    en: After the game the players are tired.
+    fa: بازیکنان بعد از بازی خسته‌اند.
+  - de: Der Drucker im Büro ist kaputt.
+    en: The printer in the office is broken.
+    fa: چاپگر دفتر خراب است.
+  - de: Ich bin Berlinerin, aber ich wohne in München.
+    en: I'm from Berlin (a woman), but I live in Munich.
+    fa: اهل برلینم، ولی در مونیخ زندگی می‌کنم.
+  - de: In der Praxis arbeiten zwei Ärztinnen.
+    en: Two doctors (women) work at the practice.
+    fa: در این مطب دو پزشک زن کار می‌کنند.
+  - de: Unsere Wohnung hat drei Zimmer.
+    en: Our flat has three rooms.
+    fa: آپارتمان ما سه اتاق دارد.
+  - de: Die Rechnung kommt per E-Mail.
+    en: The bill comes by e-mail.
+    fa: صورت‌حساب با ایمیل می‌آید.
+  - de: Vielen Dank für die Einladung!
+    en: Thank you very much for the invitation!
+    fa: از دعوتتان خیلی ممنونم!
+
+mistakes:
+  - wrong: Die Lehrerinen sind sehr nett.
+    right: Die Lehrerinnen sind sehr nett.
+    why:
+      en: "The plural of *-in* is *-innen*, with two *n*."
+      fa: "جمع *-in* با دو *n* است: *-innen*."
+      de: "Der Plural von *-in* ist *-innen*, mit zwei *n*."
+  - wrong: Das Wohnung ist groß.
+    right: Die Wohnung ist groß.
+    why:
+      en: "Nouns in *-ung* are always feminine: *die Wohnung*."
+      fa: "اسم‌هایی که به *-ung* ختم می‌شوند همیشه مؤنث‌اند: *die Wohnung*."
+      de: "Nomen auf *-ung* sind immer feminin: *die Wohnung*."
+  - wrong: Die Fahrers warten schon.
+    right: Die Fahrer warten schon.
+    why:
+      en: "Masculine nouns in *-er* add nothing in the plural: *die Fahrer*."
+      fa: "اسم‌های مذکری که به *-er* ختم می‌شوند در جمع پایانه‌ای نمی‌گیرند: *die Fahrer*."
+      de: "Maskuline Nomen auf *-er* haben im Plural keine Endung: *die Fahrer*."
+  - wrong: Sie ist Arztin.
+    right: Sie ist Ärztin.
+    why:
+      en: "*Arzt* takes an umlaut when *-in* is added: *die Ärztin*."
+      fa: "*Arzt* با پسوند *-in* دو نقطه می‌گیرد: *die Ärztin*."
+      de: "Bei *Arzt* kommt mit *-in* ein Umlaut: *die Ärztin*."
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: ___ Übung ist leicht.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "Nouns in *-ung* are feminine: *die Übung*."
+      fa: "اسم‌هایی که به *-ung* ختم می‌شوند مؤنث‌اند: *die Übung*."
+      de: "Nomen auf *-ung* sind feminin: *die Übung*."
+  - id: q2
+    type: gap-fill
+    prompt: ___ Drucker druckt nicht.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "A device in *-er* made from a verb is masculine: *der Drucker*."
+      fa: "دستگاهی که با *-er* از فعل ساخته می‌شود مذکر است: *der Drucker*."
+      de: "Ein Gerät auf *-er* ist maskulin: *der Drucker*."
+  - id: q3
+    type: gap-fill
+    prompt: Frau Weber ist ___.
+    options: [Lehrer, Lehrerin, Lehrerinnen]
+    answer: Lehrerin
+    explanation:
+      en: "One woman: *-in*, so *Lehrerin*."
+      fa: "یک زن است، پس با *-in*: *Lehrerin*."
+      de: "Eine Frau: *-in*, also *Lehrerin*."
+  - id: q4
+    type: gap-fill
+    prompt: Die zwei ___ kommen aus München.
+    options: [Fahrer, Fahrers, Fahrerin]
+    answer: Fahrer
+    explanation:
+      en: "Plural of *der Fahrer*: no ending, *die Fahrer*."
+      fa: "جمع *der Fahrer* پایانه‌ای ندارد: *die Fahrer*."
+      de: "Der Plural von *der Fahrer* hat keine Endung: *die Fahrer*."
+  - id: q5
+    type: gap-fill
+    prompt: In der Klinik arbeiten drei ___.
+    options: [Ärztin, Ärztinen, Ärztinnen]
+    answer: Ärztinnen
+    explanation:
+      en: "The plural of *-in* is *-innen*: *die Ärztinnen*."
+      fa: "جمع *-in* می‌شود *-innen*: *die Ärztinnen*."
+      de: "Der Plural von *-in* ist *-innen*: *die Ärztinnen*."
+  - id: q6
+    type: gap-fill
+    prompt: Wir suchen eine neue ___.
+    options: [Wohnen, Wohnung, Wohner]
+    answer: Wohnung
+    explanation:
+      en: "*wohnen* + *-ung* = *die Wohnung*, a flat; it fits *eine neue*."
+      fa: "*wohnen* + *-ung* = *die Wohnung* (آپارتمان)، که با *eine neue* جور است."
+      de: "*wohnen* + *-ung* = *die Wohnung*. Das passt zu *eine neue*."
+  - id: q7
+    type: gap-fill
+    prompt: Herr Huber kommt aus Wien. Er ist ___.
+    options: [Wiener, Wienerin, Wienung]
+    answer: Wiener
+    explanation:
+      en: "A man from Vienna is a *Wiener*; *Wienerin* is a woman."
+      fa: "مردی اهل وین *Wiener* است؛ *Wienerin* برای زن است."
+      de: "Ein Mann aus Wien ist *Wiener*. *Wienerin* ist eine Frau."
+  - id: q8
+    type: gap-fill
+    prompt: Ich sehe am Abend fern. Der ___ ist neu.
+    options: [Fernseher, Fernsehung, Fernseherin]
+    answer: Fernseher
+    explanation:
+      en: "The device for *fernsehen* ends in *-er*: *der Fernseher*."
+      fa: "دستگاهِ *fernsehen* با *-er* ساخته می‌شود: *der Fernseher*."
+      de: "Das Gerät zum Fernsehen hat *-er*: *der Fernseher*."
+  - id: q9
+    type: multiple-choice
+    prompt: Was ist ein Spieler?
+    options: ["eine Person, die spielt", ein Platz zum Spielen, ein Spiel für Kinder]
+    answer: "eine Person, die spielt"
+    explanation:
+      en: "*-er* on a verb stem gives the person who does it: *spielen* → *der Spieler*."
+      fa: "*-er* پس از بن فعل کسی را می‌سازد که آن کار را می‌کند: *spielen* – *der Spieler*."
+      de: "*-er* nach einem Verb ist die Person: *spielen* – *der Spieler*."
+  - id: q10
+    type: multiple-choice
+    prompt: Welches Nomen hat den Artikel die?
+    options: [Wohnung, Drucker, Fahrer]
+    answer: Wohnung
+    explanation:
+      en: "*-ung* is feminine (*die Wohnung*); *Drucker* and *Fahrer* are masculine."
+      fa: "*-ung* مؤنث است (*die Wohnung*)؛ *Drucker* و *Fahrer* مذکرند."
+      de: "*-ung* ist feminin: *die Wohnung*. *Drucker* und *Fahrer* sind maskulin."
+  - id: q11
+    type: multiple-choice
+    prompt: Die Einladung ist von Maria. Was hat Maria gemacht?
+    options: [Sie hat uns eingeladen., Sie hat uns angerufen., Sie hat uns besucht.]
+    answer: Sie hat uns eingeladen.
+    explanation:
+      en: "*die Einladung* comes from *einladen* (to invite)."
+      fa: "*die Einladung* از *einladen* (دعوت کردن) ساخته شده است."
+      de: "*Die Einladung* kommt von *einladen*."
+  - id: q12
+    type: true-false
+    prompt: Die Studentinnen lernen zusammen.
+    answer: true
+    explanation:
+      en: "*die Studentin*, plural *die Studentinnen*: right."
+      fa: "*die Studentin*، جمع: *die Studentinnen*؛ درست است."
+      de: "*Die Studentin*, Plural *die Studentinnen*: richtig."
+  - id: q13
+    type: true-false
+    prompt: Das Rechnung ist falsch.
+    answer: false
+    explanation:
+      en: "Nouns in *-ung* are feminine: *Die Rechnung ist falsch.*"
+      fa: "اسم‌هایی که به *-ung* ختم می‌شوند مؤنث‌اند: *Die Rechnung ist falsch.*"
+      de: "Nomen auf *-ung* sind feminin: *Die Rechnung ist falsch.*"
+  - id: q14
+    type: true-false
+    prompt: Die Fahrers sind müde.
+    answer: false
+    explanation:
+      en: "The plural of *der Fahrer* has no ending: *Die Fahrer sind müde.*"
+      fa: "جمع *der Fahrer* پایانه‌ای ندارد: *Die Fahrer sind müde.*"
+      de: "Der Plural von *der Fahrer* hat keine Endung: *Die Fahrer sind müde.*"
+  - id: q15
+    type: true-false
+    prompt: Meine Ärztin heißt Frau Novak.
+    answer: true
+    explanation:
+      en: "A woman doctor is *die Ärztin*, with an umlaut: right."
+      fa: "پزشک زن *die Ärztin* است، با دو نقطه؛ درست است."
+      de: "Eine Frau ist *die Ärztin*, mit Umlaut: richtig."
+  - id: q16
+    type: find-error
+    prompt: Der Zeitung liegt auf dem Tisch.
+    answer: Der
+    explanation:
+      en: "Nouns in *-ung* are feminine: *die Zeitung*."
+      fa: "اسم‌هایی که به *-ung* ختم می‌شوند مؤنث‌اند: *die Zeitung*."
+      de: "Nomen auf *-ung* sind feminin: *die Zeitung*."
+  - id: q17
+    type: find-error
+    prompt: Die Freundinen von Lisa kommen heute.
+    answer: Freundinen
+    explanation:
+      en: "The plural of *-in* is *-innen*: *die Freundinnen*."
+      fa: "جمع *-in* می‌شود *-innen*: *die Freundinnen*."
+      de: "Der Plural von *-in* ist *-innen*: *die Freundinnen*."
+  - id: q18
+    type: matching
+    answer:
+      - [fahren, der Fahrer]
+      - [wohnen, die Wohnung]
+      - [drucken, der Drucker]
+      - [einladen, die Einladung]
+    explanation:
+      en: "Each noun is the verb stem with *-er* or *-ung*."
+      fa: "هر اسم از بن فعل با *-er* یا *-ung* ساخته شده است."
+      de: "Jedes Nomen ist der Stamm vom Verb mit *-er* oder *-ung*."
+  - id: q19
+    type: matching
+    answer:
+      - [der Lehrer, die Lehrerin]
+      - [der Arzt, die Ärztin]
+      - [der Koch, die Köchin]
+      - [der Freund, die Freundin]
+    explanation:
+      en: "*-in* makes the noun for a woman; *Arzt* and *Koch* take an umlaut."
+      fa: "*-in* اسم زن را می‌سازد؛ *Arzt* و *Koch* دو نقطه می‌گیرند."
+      de: "Mit *-in* ist es eine Frau. *Arzt* und *Koch* bekommen einen Umlaut."
+  - id: q20
+    type: typed-gap-fill
+    prompt: eine Lehrerin, zwei ___
+    answers: [Lehrerinnen]
+    explanation:
+      en: "The plural of *-in* is *-innen*: *Lehrerinnen*."
+      fa: "جمع *-in* می‌شود *-innen*: *Lehrerinnen*."
+      de: "Der Plural von *-in* ist *-innen*: *Lehrerinnen*."
+  - id: q21
+    type: typed-gap-fill
+    prompt: ein Fahrer, zwei ___
+    answers: [Fahrer]
+    explanation:
+      en: "Masculine nouns in *-er* add nothing in the plural: *Fahrer*."
+      fa: "اسم‌های مذکری که به *-er* ختم می‌شوند در جمع پایانه‌ای نمی‌گیرند: *Fahrer*."
+      de: "Maskuline Nomen auf *-er* haben im Plural keine Endung: *Fahrer*."
+  - id: q22
+    type: typed-gap-fill
+    prompt: bestellen – die ___
+    answers: [Bestellung]
+    explanation:
+      en: "The verb stem *bestell-* + *-ung*: *die Bestellung*."
+      fa: "بن فعل *bestell-* + *-ung*: *die Bestellung*."
+      de: "Der Stamm *bestell-* + *-ung*: *die Bestellung*."
+  - id: q23
+    type: typed-answer
+    prompt: "Plural: die Wohnung"
+    answers: [die Wohnungen, Wohnungen]
+    explanation:
+      en: "Nouns in *-ung* take *-en* in the plural: *die Wohnungen*."
+      fa: "اسم‌هایی که به *-ung* ختم می‌شوند در جمع *-en* می‌گیرند: *die Wohnungen*."
+      de: "Nomen auf *-ung* haben im Plural *-en*: *die Wohnungen*."
+  - id: q24
+    type: typed-gap-fill
+    prompt: Herr Roth ist Koch. Frau Roth ist auch ___.
+    answers: [Köchin]
+    explanation:
+      en: "A woman cook is *die Köchin*: *-in* and an umlaut."
+      fa: "آشپز زن *die Köchin* است: با *-in* و دو نقطه."
+      de: "Eine Frau ist *Köchin*: mit *-in* und Umlaut."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 75203aa7c6d4f9a0

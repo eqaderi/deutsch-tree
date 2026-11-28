@@ -1,29 +1,236 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-weather
 kind: vocabulary
 level: A2
 chapter: a2-words-health-town
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Weather"
   fa: "هوا"
   de: "Wetter"
+attemptSize: 15
 words:
   - word: Gewitter
+    class: noun
+    article: das
+    plural: Gewitter
+    level: A2
+    meaning:
+      en: thunderstorm
+      fa: توفان همراه با رعدوبرق
+    definition: schlechtes Wetter mit Blitz, Donner und starkem Regen
+    example:
+      de: Gestern Abend gab es ein starkes Gewitter.
+      en: Yesterday evening there was a heavy thunderstorm.
+      fa: دیشب توفان شدیدی همراه با رعدوبرق آمد.
+
   - word: Schnee
+    class: noun
+    article: der
+    number: singular-only
+    level: A2
+    meaning:
+      en: snow
+      fa: برف
+    definition: weiße, kalte Flocken; im Winter liegen sie auf den Straßen und Dächern
+    example:
+      de: Die Kinder spielen im Schnee.
+      en: The children are playing in the snow.
+      fa: بچه‌ها در برف بازی می‌کنند.
+
   - word: schneien
+    class: verb
+    level: A2
+    meaning:
+      en: to snow
+      fa: برف باریدن، برف آمدن
+    definition: das Verb dafür, dass im Winter weiße Flocken vom Himmel fallen
+    example:
+      de: Es schneit schon seit heute Morgen.
+      en: It's been snowing since this morning.
+      fa: از امروز صبح برف می‌بارد.
+
   - word: Wolke
+    class: noun
+    article: die
+    plural: Wolken
+    level: A2
+    meaning:
+      en: cloud
+      fa: ابر
+    definition: sie ist weiß oder grau und zieht oben am Himmel; aus ihr kommt der Regen
+    example:
+      de: Am Himmel ist keine einzige Wolke.
+      en: There isn't a single cloud in the sky.
+      fa: در آسمان حتی یک ابر هم نیست.
+
   - word: bewölkt
+    class: adjective
+    level: A2
+    meaning:
+      en: cloudy
+      fa: ابری
+    definition: so ist der Himmel, wenn viele Wolken da sind
+    example:
+      de: Morgen ist es bewölkt, aber trocken.
+      en: Tomorrow it will be cloudy but dry.
+      fa: فردا هوا ابری اما خشک است.
+    alsoAccepted: [wolkig]
+
   - word: neblig
+    class: adjective
+    level: A2
+    meaning:
+      en: foggy, misty
+      fa: مه‌آلود
+    definition: so ist das Wetter, wenn Nebel in der Luft ist und man nicht weit sehen kann
+    example:
+      de: Am Morgen ist es oft neblig, fahr bitte langsam!
+      en: It's often foggy in the morning; please drive slowly!
+      fa: صبح‌ها هوا اغلب مه‌آلود است؛ لطفاً آهسته رانندگی کن!
+    alsoAccepted: [nebelig]
+
   - word: sonnig
+    class: adjective
+    level: A2
+    meaning:
+      en: sunny
+      fa: آفتابی
+    definition: so ist das Wetter, wenn die Sonne scheint und der Himmel blau ist
+    example:
+      de: Am Wochenende wird es sonnig und warm.
+      en: It will be sunny and warm at the weekend.
+      fa: آخر هفته هوا آفتابی و گرم می‌شود.
+
   - word: windig
+    class: adjective
+    level: A2
+    meaning:
+      en: windy
+      fa: پرباد، همراه با باد
+    definition: so ist das Wetter, wenn Wind weht, aber noch kein Sturm ist
+    example:
+      de: An der Küste ist es oft windig.
+      en: It's often windy on the coast.
+      fa: کنار ساحل هوا اغلب پرباد است.
+
+  # Warm and hot are close; neither meaning is offered as a wrong one for the other.
   - word: warm
+    class: adjective
+    level: A2
+    meaning:
+      en: warm
+      fa: گرم
+    definition: zwischen kühl und heiß, so dass man im T-Shirt draußen sitzen kann
+    example:
+      de: Im Mai ist es schon warm.
+      en: It's already warm in May.
+      fa: در ماه مه هوا دیگر گرم است.
+    tooCloseTo: [heiß]
+
+  # Cold and cool are close; neither meaning is offered as a wrong one for the other.
   - word: kalt
+    class: adjective
+    level: A2
+    meaning:
+      en: cold
+      fa: سرد
+    definition: nicht warm; so ist es im Winter oft, und man braucht Mütze und Handschuhe
+    example:
+      de: Im Januar ist es hier sehr kalt.
+      en: It's very cold here in January.
+      fa: اینجا در ژانویه هوا خیلی سرد است.
+    tooCloseTo: [kühl]
+
   - word: kühl
+    class: adjective
+    level: A2
+    meaning:
+      en: cool
+      fa: خنک
+    definition: ein bisschen kalt, aber nicht sehr
+    example:
+      de: Am Abend wird es kühl, nimm einen Pullover mit.
+      en: It gets cool in the evening; take a jumper.
+      fa: عصر هوا خنک می‌شود؛ یک پلیور با خودت ببر.
+    alsoAccepted: [frisch]
+    tooCloseTo: [kalt]
+
   - word: Grad Celsius
+    class: noun
+    article: der
+    plural: Grad Celsius
+    level: A2
+    meaning:
+      en: degree Celsius
+      fa: درجهٔ سانتی‌گراد
+    definition: die Einheit der Temperatur; bei null friert das Wasser, bei hundert kocht es
+    example:
+      de: Heute haben wir 25 Grad Celsius.
+      en: Today it's 25 degrees Celsius.
+      fa: امروز دما ۲۵ درجهٔ سانتی‌گراد است.
+    alsoAccepted: [der Grad]
+
   - word: Himmel
+    class: noun
+    article: der
+    number: singular-only
+    level: A2
+    meaning:
+      en: sky
+      fa: آسمان
+    definition: das, was man sieht, wenn man draußen nach oben schaut; dort sind Sonne, Wolken und Sterne
+    example:
+      de: Der Himmel ist heute ganz blau.
+      en: The sky is completely blue today.
+      fa: آسمان امروز کاملاً آبی است.
+
   - word: tief
+    class: adjective
+    level: A2
+    meaning:
+      en: deep; low (clouds, temperatures)
+      fa: عمیق؛ پایین (ابر، دما)
+    definition: weit nach unten, zum Beispiel ein See; auch niedrig, zum Beispiel Wolken
+    example:
+      de: Die Wolken hängen heute sehr tief.
+      en: The clouds are hanging very low today.
+      fa: امروز ابرها خیلی پایین آمده‌اند.
+
   - word: Schirm
+    class: noun
+    article: der
+    plural: Schirme
+    level: A2
+    meaning:
+      en: umbrella
+      fa: چتر
+    definition: das nimmt man bei Regen mit und hält es über den Kopf
+    example:
+      de: Nimm einen Schirm mit, gleich regnet es!
+      en: Take an umbrella, it's about to rain!
+      fa: چتر با خودت ببر، الان باران می‌بارد!
+    alsoAccepted: [der Regenschirm]
+
   - word: heiß
+    class: adjective
+    level: A2
+    meaning:
+      en: hot
+      fa: داغ، خیلی گرم
+    definition: sehr, sehr warm, wie im Sommer am Mittag
+    example:
+      de: Im Juli war es sehr heiß.
+      en: It was very hot in July.
+      fa: در ماه ژوئیه هوا خیلی گرم بود.
+    tooCloseTo: [warm]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 96 questions, then the 23 changed after the first one's
+    answers, then the 4 changed and 1 disputed after the second one's; not
+    people)"
+  date: 2026-11-28
+  pool: b831986f1cabd12b

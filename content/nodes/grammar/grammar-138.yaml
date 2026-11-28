@@ -4,10 +4,310 @@ kind: grammar
 level: B1
 chapter: b1-prepositions
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-126]
 title:
   en: "*außer* + *Dativ*"
   fa: "*außer* + *Dativ*"
   de: "*außer* + Dativ"
+
+explanations:
+  en:
+    rule: >
+      *Außer* (except, apart from) names who or what is left out: *Alle außer
+      meiner Schwester waren auf der Party.* It takes the *Dativ*: *der* and
+      *das* become *dem*, *die* becomes *der*, and the plural *den*, with
+      *-n* on the noun; the pronouns are *mir*, *dir*, *ihm*, *ihr*, *uns*,
+      *euch*, *ihnen*. It often goes with *alle*, *niemand*, *nichts*,
+      *alles* or *jeden Tag*: *Niemand außer dir weiß das.* Before a time or
+      a place with its own preposition, that preposition keeps its case:
+      *jeden Tag außer am Sonntag*. *Außer* can also mean besides, in
+      addition to: *Außer Deutsch spricht sie auch Englisch.* Do not mix it up
+      with *außerdem* (also, moreover), an adverb that stands alone, or with
+      *außerhalb* (outside).
+  fa:
+    rule: >
+      *außer* (جز، به‌جز) کسی یا چیزی را نام می‌برد که بیرون گذاشته می‌شود:
+      *Alle außer meiner Schwester waren auf der Party.* (همه جز خواهرم در
+      مهمانی بودند). *außer* با حالت *Dativ* (حالت مفعول باواسطه) می‌آید:
+      *der* و *das* به *dem* تبدیل می‌شوند، *die* به *der*، و در جمع *den*
+      می‌آید و اسم *-n* می‌گیرد. ضمیرها *mir*، *dir*، *ihm*، *ihr*، *uns*،
+      *euch* و *ihnen* هستند. *außer* اغلب با *alle*، *niemand*، *nichts*،
+      *alles* یا *jeden Tag* می‌آید: *Niemand außer dir weiß das.* (هیچ‌کس جز
+      تو این را نمی‌داند). اگر پس از آن زمان یا مکانی با حرف اضافهٔ خودش
+      بیاید، همان حرف اضافه حالت را تعیین می‌کند: *jeden Tag außer am
+      Sonntag* (هر روز جز یکشنبه). *außer* به معنای «علاوه بر» هم می‌آید:
+      *Außer Deutsch spricht sie auch Englisch.* (علاوه بر آلمانی، انگلیسی هم
+      حرف می‌زند). آن را با *außerdem* (افزون بر این) که قید است و تنها
+      می‌آید، یا با *außerhalb* (بیرون از) اشتباه نگیرید.
+  de:
+    rule: >
+      *Außer* sagt, wer oder was nicht dazugehört: *Alle außer meiner
+      Schwester waren auf der Party.* Nach *außer* steht der Dativ: *der* und
+      *das* werden zu *dem*, *die* wird zu *der*, und im Plural steht *den*,
+      das Nomen bekommt *-n*. Die Pronomen sind *mir*, *dir*, *ihm*, *ihr*,
+      *uns*, *euch*, *ihnen*. Oft steht *außer* mit *alle*, *niemand*,
+      *nichts*, *alles* oder *jeden Tag*: *Niemand außer dir weiß das.* Steht
+      danach eine Zeit oder ein Ort mit einer eigenen Präposition, bestimmt
+      diese den Kasus: *jeden Tag außer am Sonntag*. *Außer* kann auch
+      bedeuten: nicht nur das, auch noch etwas anderes, zum Beispiel *Außer
+      Deutsch spricht sie auch Englisch.* Verwechseln Sie *außer* nicht mit
+      *außerdem*, einem Adverb, das allein steht, und nicht mit *außerhalb*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Lehrer, dem Lehrer, einem Lehrer, alle außer dem Lehrer]
+    - [die Schwester, der Schwester, einer Schwester, alle außer meiner Schwester]
+    - [das Kind, dem Kind, einem Kind, alle außer dem Kind]
+    - [die Kinder (Plural), den Kindern, –, alle außer den Kindern]
+    - [ich, mir, –, niemand außer mir]
+    - [er, ihm, –, alle außer ihm]
+
+examples:
+  - de: Alle außer meiner Schwester waren auf der Party.
+    en: Everyone except my sister was at the party.
+    fa: همه جز خواهرم در مهمانی بودند.
+  - de: Niemand außer dir weiß das.
+    en: Nobody apart from you knows that.
+    fa: هیچ‌کس جز تو این را نمی‌داند.
+  - de: Die Praxis ist jeden Tag außer am Mittwoch geöffnet.
+    en: The practice is open every day except on Wednesday.
+    fa: مطب هر روز جز چهارشنبه باز است.
+  - de: Ich esse alles außer Fisch.
+    en: I eat everything except fish.
+    fa: من همه‌چیز می‌خورم جز ماهی.
+  - de: Außer dem Kaffee war das Frühstück sehr gut.
+    en: Apart from the coffee, the breakfast was very good.
+    fa: جز قهوه، صبحانه خیلی خوب بود.
+  - de: Außer den Kindern waren alle müde.
+    en: Everyone except the children was tired.
+    fa: همه جز بچه‌ها خسته بودند.
+  - de: Außer ihm sind alle pünktlich gekommen.
+    en: Everyone except him came on time.
+    fa: همه جز او سر وقت آمدند.
+  - de: Ich habe keine Zeit, außer am Wochenende.
+    en: I have no time, except at the weekend.
+    fa: وقت ندارم، مگر آخر هفته.
+  - de: Außer einem Rucksack hatte er kein Gepäck.
+    en: Apart from a rucksack he had no luggage.
+    fa: جز یک کوله‌پشتی هیچ باری نداشت.
+  - de: Außer Deutsch spricht sie auch Englisch und Persisch.
+    en: Besides German she also speaks English and Persian.
+    fa: او علاوه بر آلمانی، انگلیسی و فارسی هم حرف می‌زند.
+
+mistakes:
+  - wrong: Alle außer meinen Bruder sind gekommen.
+    right: Alle außer meinem Bruder sind gekommen.
+    why:
+      en: "*Außer* takes the *Dativ*: *mein Bruder* becomes *meinem Bruder*, not the *Akkusativ* *meinen*."
+      fa: "*außer* با حالت *Dativ* می‌آید: *mein Bruder* به *meinem Bruder* تبدیل می‌شود، نه به *meinen* (حالت *Akkusativ*)."
+      de: "Nach *außer* steht der Dativ: *mein Bruder* wird zu *meinem Bruder*, nicht zum Akkusativ *meinen*."
+  - wrong: Außer den Kinder waren alle müde.
+    right: Außer den Kindern waren alle müde.
+    why:
+      en: "In the *Dativ* plural the noun gets *-n*: *den Kindern*."
+      fa: "در حالت *Dativ* جمع اسم *-n* می‌گیرد: *den Kindern*."
+      de: "Im Dativ Plural bekommt das Nomen *-n*: *den Kindern*."
+  - wrong: Ich habe keine Zeit, außerdem am Wochenende.
+    right: Ich habe keine Zeit, außer am Wochenende.
+    why:
+      en: "*Außer* means except. *Außerdem* means also, moreover, and adds a new point."
+      fa: "*außer* یعنی «جز». *außerdem* یعنی «افزون بر این» و نکتهٔ تازه‌ای می‌افزاید."
+      de: "*Außer* heißt: nicht das. *Außerdem* heißt: auch noch, und bringt einen neuen Punkt."
+  - wrong: Wir wohnen außer der Stadt.
+    right: Wir wohnen außerhalb der Stadt.
+    why:
+      en: "Outside a place is *außerhalb* with the *Genitiv*. *Außer* means except."
+      fa: "برای «بیرون از» یک مکان *außerhalb* با حالت *Genitiv* می‌آید. *außer* یعنی «جز»."
+      de: "Für einen Ort draußen sagt man *außerhalb* mit Genitiv. *Außer* heißt: nicht das."
+  - wrong: Alle außer ihn waren pünktlich.
+    right: Alle außer ihm waren pünktlich.
+    why:
+      en: "The pronoun after *außer* is in the *Dativ*: *ihm*, not *ihn*."
+      fa: "ضمیر پس از *außer* در حالت *Dativ* می‌آید: *ihm*، نه *ihn*."
+      de: "Das Pronomen nach *außer* steht im Dativ: *ihm*, nicht *ihn*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Alle außer ___ Lehrer haben gelacht.
+    options: [den, des, dem]
+    answer: dem
+    explanation:
+      en: "*Außer* takes the *Dativ*: *der Lehrer* becomes *dem Lehrer*."
+      fa: "*außer* با حالت *Dativ* می‌آید: *der Lehrer* به *dem Lehrer* تبدیل می‌شود."
+      de: "Nach *außer* steht der Dativ: *der Lehrer* wird zu *dem Lehrer*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Niemand außer ___ weiß das.
+    options: [dich, dir, deiner]
+    answer: dir
+    explanation:
+      en: "The pronoun after *außer* is in the *Dativ*: *du* becomes *dir*."
+      fa: "ضمیر پس از *außer* در حالت *Dativ* می‌آید: *du* به *dir* تبدیل می‌شود."
+      de: "Das Pronomen nach *außer* steht im Dativ: *du* wird zu *dir*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Praxis ist jeden Tag ___ am Mittwoch geöffnet.
+    options: [außerdem, außerhalb, außer]
+    answer: außer
+    explanation:
+      en: "Every day, but not on Wednesday: *außer am Mittwoch*."
+      fa: "هر روز، ولی نه چهارشنبه: *außer am Mittwoch*."
+      de: "Jeden Tag, aber nicht am Mittwoch: *außer am Mittwoch*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich habe heute keine Zeit. ___ bin ich sehr müde.
+    options: [Außer, Außerdem, Außerhalb]
+    answer: Außerdem
+    explanation:
+      en: "A new point is added and the verb follows directly: the adverb *außerdem*."
+      fa: "نکتهٔ تازه‌ای افزوده می‌شود و فعل بلافاصله می‌آید: قید *außerdem*."
+      de: "Ein neuer Punkt kommt dazu, und direkt danach steht das Verb: das Adverb *außerdem*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Außer ___ Kindern waren alle müde.
+    options: [der, den, die]
+    answer: den
+    explanation:
+      en: "*Dativ* plural: *den Kindern*, with *-n* on the noun."
+      fa: "حالت *Dativ* جمع: *den Kindern* و اسم *-n* می‌گیرد."
+      de: "Dativ Plural: *den Kindern*, mit *-n* am Nomen."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wer kommt zur Party? – Alle ___
+    options: [außer meinen Bruder., außer meinem Bruder., außer meines Bruders.]
+    answer: außer meinem Bruder.
+    explanation:
+      en: "*Außer* takes the *Dativ*: *meinem Bruder*."
+      fa: "*außer* با حالت *Dativ* می‌آید: *meinem Bruder*."
+      de: "Nach *außer* steht der Dativ: *meinem Bruder*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "„Außer Deutsch spricht sie auch Englisch.“ Was bedeutet das?"
+    options: [Sie spricht nur Englisch., Sie spricht Deutsch und Englisch., Sie spricht kein Deutsch.]
+    answer: Sie spricht Deutsch und Englisch.
+    explanation:
+      en: "Here *außer* with *auch* means besides: German, and English too."
+      fa: "این‌جا *außer* همراه *auch* یعنی «علاوه بر»: آلمانی و انگلیسی هم."
+      de: "Hier heißt *außer* mit *auch*: nicht nur Deutsch, auch Englisch."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Die Bibliothek liegt ___ der Stadt.
+    options: [außer, außerhalb, außerdem]
+    answer: außerhalb
+    explanation:
+      en: "Outside a place is *außerhalb* with the *Genitiv*: *außerhalb der Stadt*."
+      fa: "«بیرون از» یک مکان *außerhalb* با حالت *Genitiv* است: *außerhalb der Stadt*."
+      de: "Für einen Ort draußen: *außerhalb* mit Genitiv, *außerhalb der Stadt*."
+  - id: true-1
+    type: true-false
+    prompt: Niemand außer meiner Mutter kennt das Rezept.
+    answer: true
+    explanation:
+      en: "*Außer* with the *Dativ*: *meine Mutter* becomes *meiner Mutter*. The sentence is correct."
+      fa: "*außer* با حالت *Dativ*: *meine Mutter* به *meiner Mutter* تبدیل می‌شود. جمله درست است."
+      de: "*Außer* mit Dativ: *meine Mutter* wird zu *meiner Mutter*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Außer ihn sind alle mitgekommen.
+    answer: false
+    explanation:
+      en: "The pronoun after *außer* is in the *Dativ*: *außer ihm*."
+      fa: "ضمیر پس از *außer* در حالت *Dativ* می‌آید: *außer ihm*."
+      de: "Das Pronomen nach *außer* steht im Dativ: *außer ihm*."
+  - id: true-3
+    type: true-false
+    prompt: Wir haben außer am Freitag jeden Tag Unterricht.
+    answer: true
+    explanation:
+      en: "*Außer* before a time with its own preposition: *außer am Freitag*. The sentence is correct."
+      fa: "*außer* پیش از قید زمانی که حرف اضافهٔ خودش را دارد: *außer am Freitag*. جمله درست است."
+      de: "*Außer* vor einer Zeit mit eigener Präposition: *außer am Freitag*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Außer den Kinder sind alle schwimmen gegangen.
+    answer: false
+    explanation:
+      en: "In the *Dativ* plural the noun gets *-n*: *außer den Kindern*."
+      fa: "در حالت *Dativ* جمع اسم *-n* می‌گیرد: *außer den Kindern*."
+      de: "Im Dativ Plural bekommt das Nomen *-n*: *außer den Kindern*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das Essen hat allen außer ___ (ich) geschmeckt.
+    answers: [mir]
+    explanation:
+      en: "The pronoun after *außer* is in the *Dativ*: *ich* becomes *mir*."
+      fa: "ضمیر پس از *außer* در حالت *Dativ* می‌آید: *ich* به *mir* تبدیل می‌شود."
+      de: "Das Pronomen nach *außer* steht im Dativ: *ich* wird zu *mir*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: In allen Zimmern außer ___ (die) Küche gibt es ein Fenster.
+    answers: [der]
+    explanation:
+      en: "*Die Küche* in the *Dativ* is *der Küche*."
+      fa: "*die Küche* در حالت *Dativ* می‌شود *der Küche*."
+      de: "*Die Küche* im Dativ: *der Küche*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir haben mit allen außer ___ (der) Chef gesprochen.
+    answers: [dem]
+    explanation:
+      en: "*Der Chef* in the *Dativ* is *dem Chef*."
+      fa: "*der Chef* در حالت *Dativ* می‌شود *dem Chef*."
+      de: "*Der Chef* im Dativ: *dem Chef*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich habe allen in der Familie geschrieben, ___ (außer / mein Bruder).
+    answers: [außer meinem Bruder, außer meinem]
+    explanation:
+      en: "*Außer* takes the *Dativ*: *mein Bruder* becomes *meinem Bruder*."
+      fa: "*außer* با حالت *Dativ* می‌آید: *mein Bruder* به *meinem Bruder* تبدیل می‌شود."
+      de: "Nach *außer* steht der Dativ: *mein Bruder* wird zu *meinem Bruder*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "außer + die Kinder"
+    answers: [außer den Kindern]
+    explanation:
+      en: "*Außer* takes the *Dativ*: plural *den Kindern*, with *-n* on the noun."
+      fa: "*außer* با حالت *Dativ* می‌آید: در جمع *den Kindern* و اسم *-n* می‌گیرد."
+      de: "Nach *außer* steht der Dativ: im Plural *den Kindern*, mit *-n* am Nomen."
+  - id: error-1
+    type: find-error
+    prompt: Niemand außer meinen Opa kennt den Weg.
+    answer: meinen
+    explanation:
+      en: "*Außer* takes the *Dativ*: *außer meinem Opa*."
+      fa: "*außer* با حالت *Dativ* می‌آید: *außer meinem Opa*."
+      de: "Nach *außer* steht der Dativ: *außer meinem Opa*."
+  - id: error-2
+    type: find-error
+    prompt: Das Café ist täglich geöffnet, außerdem am Montag.
+    answer: außerdem
+    explanation:
+      en: "Every day but not on Monday: *außer am Montag*. *Außerdem* adds a new point."
+      fa: "هر روز، ولی نه دوشنبه: *außer am Montag*. *außerdem* نکتهٔ تازه‌ای می‌افزاید."
+      de: "Jeden Tag, aber nicht am Montag: *außer am Montag*. *Außerdem* bringt einen neuen Punkt."
+  - id: match-1
+    type: matching
+    answer:
+      - [außer, aber nicht]
+      - [außerdem, und auch noch]
+      - [außerhalb, nicht in]
+    explanation:
+      en: "*Außer* leaves something out, *außerdem* adds something, and *außerhalb* is outside a place or a time."
+      fa: "*außer* چیزی را بیرون می‌گذارد، *außerdem* چیزی می‌افزاید و *außerhalb* یعنی بیرون از یک مکان یا یک زمان."
+      de: "*Außer* lässt etwas weg, *außerdem* bringt etwas dazu, *außerhalb* heißt: nicht in einem Ort oder einer Zeit."
+
+review:
+  reviewer: "independent AI agents (two fresh subagents, review sheet only: the
+    whole pool, then the disputed question again after it was rewritten; not
+    people)"
+  date: 2026-11-28
+  pool: cf57238eb47ac853

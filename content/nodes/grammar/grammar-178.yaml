@@ -4,10 +4,369 @@ kind: grammar
 level: A2
 chapter: a2-relative-clauses
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-177]
 title:
   en: "Relative clause, *Akkusativ*"
-  fa: "جملهٔ موصولی در *Akkusativ*"
+  fa: "جملهٔ موصولی در حالت *Akkusativ*"
   de: "Relativsatz im Akkusativ"
+
+explanations:
+  en:
+    rule: >
+      When the relative pronoun is the direct object of the relative clause,
+      it is in the *Akkusativ*: *Der Tisch, den wir gekauft haben, war
+      kaputt.* As with the article, only the masculine changes: *der* becomes
+      *den*. *Die*, *das* and plural *die* stay the same. The gender and
+      number come from the noun; the case comes from the pronoun's job in the
+      relative clause, never from the main clause. To find the case, say the
+      relative clause as a sentence of its own: *Wir haben den Tisch
+      gekauft.* *Den Tisch* is the object, so the pronoun is *den*. The
+      relative clause then has a subject of its own (*wir*), which usually
+      comes right after the pronoun, and its verb fits that subject and goes
+      to the end: *der Mann, den ich kenne*, but *der Mann, der mich kennt*.
+  fa:
+    rule: >
+      اگر ضمیر موصولی مفعول مستقیم جملهٔ موصولی باشد، در حالت *Akkusativ*
+      (حالت مفعولی) می‌آید: *Der Tisch, den wir gekauft haben, war kaputt.*
+      مانند حرف تعریف، فقط مذکر تغییر می‌کند و *der* به *den* تبدیل
+      می‌شود؛ *die*، *das* و *die* جمع همان می‌مانند. جنس و شمار ضمیر از
+      اسم می‌آید، ولی حالت آن را نقشش در جملهٔ موصولی تعیین می‌کند، نه
+      جملهٔ پایه. برای یافتن حالت، جملهٔ موصولی را جمله‌ای مستقل فرض کنید:
+      *Wir haben den Tisch gekauft.* در این جمله *den Tisch* مفعول است، پس
+      ضمیر موصولی *den* است. در چنین جمله‌ای فاعل دیگری هم هست (*wir*) که
+      معمولاً درست پس از ضمیر موصولی می‌آید. فعل با همین فاعل صرف می‌شود و
+      به پایان جمله می‌رود. این دو را با هم مقایسه کنید: *der Mann, den ich
+      kenne* (مردی که من می‌شناسم) و *der Mann, der mich kennt* (مردی که مرا
+      می‌شناسد).
+  de:
+    rule: >
+      Ist das Relativpronomen im Relativsatz das Objekt, steht es im
+      Akkusativ: *Der Tisch, den wir gekauft haben, war kaputt.* Wie beim
+      Artikel ändert sich nur das Maskulinum: *der* wird zu *den*. *Die*,
+      *das* und *die* im Plural bleiben gleich. Das Genus kommt vom Nomen,
+      der Kasus vom Relativsatz, nicht vom Hauptsatz. So finden Sie den
+      Kasus: Sagen Sie den Relativsatz als eigenen Satz: *Wir haben den Tisch
+      gekauft.* *Den Tisch* ist Akkusativ, also *den*. Der Relativsatz hat
+      dann ein eigenes Subjekt (*wir*). Es steht meistens direkt nach dem
+      Relativpronomen. Das Verb passt zu diesem Subjekt und steht am Ende:
+      *der Mann, den ich kenne*, aber *der Mann, der mich kennt*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "Pronoun in the *Nominativ*", fa: "ضمیر موصولی در حالت *Nominativ*", de: Relativpronomen im Nominativ }
+    - { en: "Pronoun in the *Akkusativ*", fa: "ضمیر موصولی در حالت *Akkusativ*", de: Relativpronomen im Akkusativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Tisch, der, den, "der Tisch, den wir kaufen"]
+    - [die Lampe, die, die, "die Lampe, die wir kaufen"]
+    - [das Sofa, das, das, "das Sofa, das wir kaufen"]
+    - [die Stühle (Plural), die, die, "die Stühle, die wir kaufen"]
+
+# Top: the main clause with its noun (shaded). Middle: the relative clause,
+# the pronoun (shaded) under the noun. Bottom: the relative clause said as a
+# sentence of its own, which shows that the pronoun is the object.
+diagrams:
+  - caption:
+      en: >
+        *Das ist der Tisch, den ich kaufe.* The pronoun *den* has the gender
+        of *Tisch*. It is in the *Akkusativ* because, as a sentence of its
+        own, the relative clause is *Ich kaufe den Tisch.*
+      fa: >
+        *Das ist der Tisch, den ich kaufe.* ضمیر *den* با *Tisch* هم‌جنس
+        است. حالت آن *Akkusativ* است، زیرا جملهٔ موصولی به‌تنهایی چنین
+        می‌شود: *Ich kaufe den Tisch.*
+      de: >
+        *Das ist der Tisch, den ich kaufe.* Das Pronomen *den* passt zu
+        *Tisch*. Es steht im Akkusativ, denn der Relativsatz allein heißt:
+        *Ich kaufe den Tisch.*
+    labels:
+      main: { en: main clause, fa: جملهٔ پایه, de: Hauptsatz }
+      relative: { en: relative clause, fa: جملهٔ موصولی, de: Relativsatz }
+      same: { en: same gender, fa: هم‌جنس, de: gleiches Genus }
+      alone: { en: "the relative clause on its own:", fa: جملهٔ موصولی به‌تنهایی, de: "der Relativsatz allein:" }
+    svg: |
+      <svg viewBox="0 0 320 236">
+        <!-- Das ist der Tisch, -->
+        <rect class="surface" x="2" y="10" width="110" height="40"/>
+        <rect class="shade" x="116" y="10" width="64" height="40"/>
+        <text class="label" x="57" y="36" text-anchor="middle">Das ist der</text>
+        <text class="label" x="148" y="36" text-anchor="middle">Tisch,</text>
+        <text class="note" x="250" y="36" text-anchor="middle">{{main}}</text>
+        <!-- from the noun to its pronoun -->
+        <line class="line" x1="148" y1="54" x2="148" y2="80"/>
+        <polygon class="line" points="142,78 154,78 148,86"/>
+        <text class="note" x="162" y="74">{{same}}</text>
+        <!-- den ich kaufe. -->
+        <rect class="shade" x="116" y="90" width="64" height="40"/>
+        <rect class="surface" x="184" y="90" width="44" height="40"/>
+        <rect class="surface" x="232" y="90" width="76" height="40"/>
+        <text class="label" x="148" y="116" text-anchor="middle">den</text>
+        <text class="label" x="206" y="116" text-anchor="middle">ich</text>
+        <text class="label" x="270" y="116" text-anchor="middle">kaufe.</text>
+        <text class="note" x="57" y="116" text-anchor="middle">{{relative}}</text>
+        <!-- the same as a sentence of its own -->
+        <text class="note" x="160" y="164" text-anchor="middle">{{alone}}</text>
+        <text class="label" x="152" y="194" text-anchor="end">Ich kaufe</text>
+        <text class="label" x="160" y="194">den Tisch.</text>
+        <line class="guide" x1="160" y1="202" x2="244" y2="202"/>
+        <text class="note" x="202" y="222" text-anchor="middle">Akkusativ</text>
+      </svg>
+
+examples:
+  - de: Der Tisch, den wir gekauft haben, war kaputt.
+    en: The table we bought was broken.
+    fa: میزی که خریدیم خراب بود.
+  - de: Das ist der Mann, den ich gestern im Park gesehen habe.
+    en: That's the man I saw in the park yesterday.
+    fa: این همان مردی است که دیروز در پارک دیدم.
+  - de: Wie findest du die Jacke, die ich gestern gekauft habe?
+    en: What do you think of the jacket I bought yesterday?
+    fa: کاپشنی را که دیروز خریدم چطور می‌بینی؟
+  - de: Das ist das Fahrrad, das mein Vater repariert hat.
+    en: This is the bike my father repaired.
+    fa: این دوچرخه‌ای است که پدرم تعمیرش کرد.
+  - de: Hier ist der Schlüssel, den du gesucht hast.
+    en: Here's the key you were looking for.
+    fa: کلیدی که دنبالش می‌گشتی این‌جاست.
+  - de: Ich lese gerade ein Buch, das ich sehr spannend finde.
+    en: I'm reading a book that I find very exciting.
+    fa: دارم کتابی می‌خوانم که به نظرم خیلی هیجان‌انگیز است.
+  - de: Die Leute, die wir eingeladen haben, kommen um acht.
+    en: The people we invited are coming at eight.
+    fa: کسانی که دعوت کرده‌ایم ساعت هشت می‌آیند.
+  - de: Das ist ein Wort, das ich nicht verstehe.
+    en: That's a word I don't understand.
+    fa: این واژه‌ای است که معنایش را نمی‌فهمم.
+  - de: Das ist der Kollege, der mich gestern angerufen hat.
+    en: That's the colleague who called me yesterday.
+    fa: این همان همکاری است که دیروز به من زنگ زد.
+
+mistakes:
+  - wrong: Das ist der Film, der ich gestern gesehen habe.
+    right: Das ist der Film, den ich gestern gesehen habe.
+    why:
+      en: "*Ich* is the subject; the film is the object (*Ich habe den Film gesehen*), so the pronoun is *den*."
+      fa: "فاعل *ich* است و فیلم مفعول است (*Ich habe den Film gesehen*)، پس ضمیر موصولی *den* است."
+      de: "*Ich* ist das Subjekt. Der Film ist das Objekt: *Ich habe den Film gesehen*. Darum: *den*."
+  - wrong: Wo ist die Zeitung, den ich gekauft habe?
+    right: Wo ist die Zeitung, die ich gekauft habe?
+    why:
+      en: "Only the masculine changes in the *Akkusativ*. *Zeitung* is a *die* noun, so the pronoun stays *die*."
+      fa: "در حالت *Akkusativ* فقط مذکر تغییر می‌کند. *Zeitung* اسم مؤنث (*die*) است، پس ضمیر موصولی همان *die* می‌ماند."
+      de: "Im Akkusativ ändert sich nur das Maskulinum. *Zeitung* hat den Artikel *die*. Das Pronomen bleibt *die*."
+  - wrong: Ich suche den Schlüssel, den ich verloren hat.
+    right: Ich suche den Schlüssel, den ich verloren habe.
+    why:
+      en: "The subject of the relative clause is *ich*, so the verb is *habe*, not the third person *hat*."
+      fa: "فاعل جملهٔ موصولی *ich* است، پس فعل *habe* است، نه سوم‌شخص مفرد *hat*."
+      de: "Das Subjekt im Relativsatz ist *ich*. Darum: *habe*, nicht *hat*."
+  - wrong: Kennst du den Mann, den neben Anna sitzt?
+    right: Kennst du den Mann, der neben Anna sitzt?
+    why:
+      en: "Here the pronoun is the subject of *sitzt*, so it is *der*. *Den Mann* in the main clause does not count."
+      fa: "این‌جا ضمیر موصولی فاعل *sitzt* است، پس *der* می‌آید. *den Mann* در جملهٔ پایه اثری ندارد."
+      de: "Hier ist das Pronomen das Subjekt von *sitzt*, also *der*. *Den Mann* im Hauptsatz ist egal."
+  - wrong: Das ist der Pullover, den ich habe gekauft.
+    right: Das ist der Pullover, den ich gekauft habe.
+    why:
+      en: "In a relative clause the conjugated verb goes to the very end, after the *Partizip II*."
+      fa: "در جملهٔ موصولی فعل صرف‌شده در آخر جمله می‌آید، پس از صفت مفعولی (*Partizip II*)."
+      de: "Im Relativsatz steht das konjugierte Verb ganz am Ende, nach dem Partizip II."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Tisch, ___ wir gekauft haben, war kaputt.
+    options: [der, den, dem]
+    answer: den
+    explanation:
+      en: "*Wir haben den Tisch gekauft*: the table is the object, so the pronoun is *den*."
+      fa: "*Wir haben den Tisch gekauft*: میز مفعول است، پس ضمیر موصولی *den* است."
+      de: "*Wir haben den Tisch gekauft.* Der Tisch ist das Objekt: *den*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Das ist der Mann, ___ ich gestern im Park gesehen habe.
+    options: [dem, der, den]
+    answer: den
+    explanation:
+      en: "*Ich* is the subject and the man is the object (*Ich habe den Mann gesehen*): *den*."
+      fa: "فاعل *ich* است و مرد مفعول است (*Ich habe den Mann gesehen*): *den*."
+      de: "*Ich* ist das Subjekt, der Mann das Objekt: *Ich habe den Mann gesehen.* Also *den*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das ist der Mann, ___ mir gestern geholfen hat.
+    options: [der, den, dem]
+    answer: der
+    explanation:
+      en: "Here the man is the subject (*Der Mann hat mir geholfen*), so the pronoun stays in the *Nominativ*: *der*."
+      fa: "این‌جا مرد فاعل است (*Der Mann hat mir geholfen*)، پس ضمیر موصولی در حالت *Nominativ* می‌ماند: *der*."
+      de: "Hier ist der Mann das Subjekt: *Der Mann hat mir geholfen.* Also Nominativ: *der*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wie findest du die Jacke, ___ ich gestern gekauft habe?
+    options: [den, der, die]
+    answer: die
+    explanation:
+      en: "*Jacke* is a *die* noun. In the *Akkusativ* *die* stays *die*."
+      fa: "*Jacke* اسم مؤنث (*die*) است و *die* در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Jacke* hat den Artikel *die*. Im Akkusativ bleibt *die*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Das ist das Fahrrad, ___ mein Vater repariert hat.
+    options: [den, das, dem]
+    answer: das
+    explanation:
+      en: "*Fahrrad* is a *das* noun. In the *Akkusativ* *das* stays *das*."
+      fa: "*Fahrrad* اسم خنثی (*das*) است و *das* در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Fahrrad* hat den Artikel *das*. Im Akkusativ bleibt *das*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Hier ist der Schlüssel, …
+    options: [der du gesucht hast., den du gesucht hast., den du hast gesucht.]
+    answer: den du gesucht hast.
+    explanation:
+      en: "*Du hast den Schlüssel gesucht*: the key is the object, so *den*. The conjugated *hast* goes to the end."
+      fa: "*Du hast den Schlüssel gesucht*: کلید مفعول است، پس *den*. فعل صرف‌شدهٔ *hast* به پایان جمله می‌رود."
+      de: "*Du hast den Schlüssel gesucht.* Also *den*. Das konjugierte Verb *hast* steht am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Das ist der Film, …
+    options: [der ich sehr mag., den mir sehr gefällt., den ich sehr mag.]
+    answer: den ich sehr mag.
+    explanation:
+      en: "*Ich mag den Film*: the film is the object of *mögen*, so *den*. With *gefallen* the film would be the subject: *der mir gefällt*."
+      fa: "*Ich mag den Film*: فیلم مفعول *mögen* است، پس *den*. با *gefallen* فیلم فاعل می‌شود: *der mir gefällt*."
+      de: "*Ich mag den Film.* Der Film ist das Objekt: *den*. Mit *gefallen* ist der Film das Subjekt: *der mir gefällt*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich lese gerade ein Buch, …
+    options: [den ich sehr spannend finde., das ich sehr spannend finde., der ich sehr spannend finde.]
+    answer: das ich sehr spannend finde.
+    explanation:
+      en: "*Buch* is a *das* noun, and *das* stays *das* in the *Akkusativ*."
+      fa: "*Buch* اسم خنثی (*das*) است و *das* در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Buch* hat den Artikel *das*. Im Akkusativ bleibt *das*."
+  - id: true-1
+    type: true-false
+    prompt: Wo ist der Kuchen, den du gebacken hast?
+    answer: true
+    explanation:
+      en: "*Du hast den Kuchen gebacken*: the cake is the object, so *den*. The sentence is correct."
+      fa: "*Du hast den Kuchen gebacken*: کیک مفعول است، پس *den*. جمله درست است."
+      de: "*Du hast den Kuchen gebacken.* Also *den*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist der Kollege, der ich gestern getroffen habe.
+    answer: false
+    explanation:
+      en: "*Ich* is the subject and the colleague the object (*Ich habe den Kollegen getroffen*): *den ich gestern getroffen habe*."
+      fa: "فاعل *ich* است و همکار مفعول است (*Ich habe den Kollegen getroffen*): *den ich gestern getroffen habe*."
+      de: "*Ich* ist das Subjekt, der Kollege das Objekt: *den ich gestern getroffen habe*."
+  - id: true-3
+    type: true-false
+    prompt: Ich trage heute das Kleid, das du mir geschenkt hast.
+    answer: true
+    explanation:
+      en: "*Kleid* is a *das* noun, and *das* stays *das* in the *Akkusativ*. The sentence is correct."
+      fa: "*Kleid* اسم خنثی (*das*) است و *das* در حالت *Akkusativ* تغییر نمی‌کند. جمله درست است."
+      de: "*Kleid* hat den Artikel *das*. Im Akkusativ bleibt *das*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Kennst du den Mann, den neben Anna sitzt?
+    answer: false
+    explanation:
+      en: "The man is the subject of *sitzt*, so the pronoun is *der*: *der neben Anna sitzt*."
+      fa: "مرد فاعل *sitzt* است، پس ضمیر موصولی *der* است: *der neben Anna sitzt*."
+      de: "Der Mann ist das Subjekt von *sitzt*. Richtig ist: *der neben Anna sitzt*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist der Pullover, ___ ich mir gekauft habe.
+    answers: [den, welchen]
+    explanation:
+      en: "*Ich habe mir den Pullover gekauft*: the pullover is the object, so *den*."
+      fa: "*Ich habe mir den Pullover gekauft*: پلیور مفعول است، پس *den*."
+      de: "*Ich habe mir den Pullover gekauft.* Der Pullover ist das Objekt: *den*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wo ist der Brief, ___ du heute bekommen hast?
+    answers: [den, welchen]
+    explanation:
+      en: "*Du hast den Brief bekommen*: the letter is the object, so *den*."
+      fa: "*Du hast den Brief bekommen*: نامه مفعول است، پس *den*."
+      de: "*Du hast den Brief bekommen.* Der Brief ist das Objekt: *den*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wien ist eine Stadt, ___ ich sehr liebe.
+    answers: [die, welche]
+    explanation:
+      en: "*Stadt* is a *die* noun, and *die* stays *die* in the *Akkusativ*."
+      fa: "*Stadt* اسم مؤنث (*die*) است و *die* در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Stadt* hat den Artikel *die*. Im Akkusativ bleibt *die*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Das ist ein Wort, ___ ich nicht verstehe.
+    answers: [das, welches]
+    explanation:
+      en: "*Wort* is a *das* noun, and *das* stays *das* in the *Akkusativ*."
+      fa: "*Wort* اسم خنثی (*das*) است و *das* در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Wort* hat den Artikel *das*. Im Akkusativ bleibt *das*."
+  - id: error-1
+    type: find-error
+    prompt: Das ist ein Film, der ich schon zweimal gesehen habe.
+    answer: der
+    explanation:
+      en: "*Ich habe den Film gesehen*: the film is the object, so the pronoun is *den*."
+      fa: "*Ich habe den Film gesehen*: فیلم مفعول است، پس ضمیر موصولی *den* است."
+      de: "*Ich habe den Film gesehen.* Der Film ist das Objekt. Richtig ist *den*."
+  - id: error-2
+    type: find-error
+    prompt: Ich suche meinen Schlüssel, den ich gestern verloren hat.
+    answer: hat
+    explanation:
+      en: "The subject of the relative clause is *ich*, so the verb is *habe*."
+      fa: "فاعل جملهٔ موصولی *ich* است، پس فعل *habe* است."
+      de: "Das Subjekt im Relativsatz ist *ich*. Richtig ist *habe*."
+  - id: error-3
+    type: find-error
+    prompt: Wo ist die Zeitung, den ich heute gekauft habe?
+    answer: den
+    explanation:
+      en: "*Zeitung* is a *die* noun, and *die* stays *die* in the *Akkusativ*."
+      fa: "*Zeitung* اسم مؤنث (*die*) است و *die* در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Zeitung* hat den Artikel *die*. Im Akkusativ bleibt *die*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["das ist der Mann,", den, ich, gestern, getroffen, habe]
+    explanation:
+      en: "After the pronoun *den* comes the subject *ich*; the conjugated *habe* goes last, after *getroffen*."
+      fa: "پس از ضمیر *den* فاعل *ich* می‌آید و فعل صرف‌شدهٔ *habe* در آخر، پس از *getroffen*."
+      de: "Nach *den* kommt das Subjekt *ich*. Das konjugierte Verb *habe* steht ganz am Ende, nach *getroffen*."
+  - id: order-2
+    type: word-order
+    end: "?"
+    answers:
+      - ["wo ist der Kuchen,", den, du, heute, gebacken, hast]
+    explanation:
+      en: "After the pronoun *den* comes the subject *du*; the conjugated *hast* goes last."
+      fa: "پس از ضمیر *den* فاعل *du* می‌آید و فعل صرف‌شدهٔ *hast* در آخر."
+      de: "Nach *den* kommt das Subjekt *du*. Das konjugierte Verb *hast* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - ["der Rock, ___ ich kaufe", den]
+      - ["die Bluse, ___ ich kaufe", die]
+      - ["das Hemd, ___ ich kaufe", das]
+    explanation:
+      en: "Each pronoun is the object of *kaufe*, so the *Akkusativ*: only the masculine changes, *der Rock* to *den*."
+      fa: "در هر سه، ضمیر موصولی مفعول *kaufe* است و در حالت *Akkusativ* می‌آید؛ فقط مذکر تغییر می‌کند: *den* برای *der Rock*."
+      de: "Das Pronomen ist immer das Objekt von *kaufe*, also Akkusativ. Nur das Maskulinum ändert sich: *der Rock*, *den*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 3ac841bf66ce2016

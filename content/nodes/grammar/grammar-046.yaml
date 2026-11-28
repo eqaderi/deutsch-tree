@@ -4,10 +4,254 @@ kind: grammar
 level: A1
 chapter: a1-past
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-014, grammar-016]
 title:
   en: "*sein* + *Partizip II* as vocabulary"
-  fa: "*sein* + *Partizip II* به‌عنوان واژه (*geöffnet*، *geschlossen*)"
+  fa: "*sein* + صفت مفعولی (*Partizip II*) در نقش واژه (*geöffnet*، *geschlossen*)"
   de: "*sein* + Partizip II als Wortschatz (*geöffnet*, *geschlossen*)"
+
+explanations:
+  en:
+    rule: >
+      Some forms of the *Partizip II* work like adjectives and say what state
+      something is in, not what someone did. You meet them on signs and
+      notices, often with *sein*: *Die Apotheke ist geöffnet* (the pharmacy is
+      open), *Das Café ist geschlossen* (the café is closed). On a sign *sein*
+      is often left out: *Heute geöffnet*, *Rauchen verboten*. Learn these
+      forms as words: *geöffnet* (*öffnen*), *geschlossen* (*schließen*),
+      *besetzt* (taken, engaged), *verboten* (*verbieten*, not allowed).
+  fa:
+    rule: >
+      برخی از صفت‌های مفعولی (*Partizip II*) مانند صفت به کار می‌روند و حالت
+      چیزی را نشان می‌دهند، نه کاری را که کسی کرده است. این صورت‌ها را بیشتر
+      روی تابلوها و اطلاعیه‌ها می‌بینید، اغلب همراه با *sein*: *Die Apotheke
+      ist geöffnet* (داروخانه باز است)، *Das Café ist geschlossen* (کافه بسته
+      است). روی تابلو *sein* اغلب حذف می‌شود: *Heute geöffnet*، *Rauchen
+      verboten*. این صورت‌ها را مانند واژه از بر کنید: *geöffnet* (از
+      *öffnen*)، *geschlossen* (از *schließen*)، *besetzt* (اشغال)، *verboten*
+      (از *verbieten*، ممنوع).
+  de:
+    rule: >
+      Manche Partizipien II sind wie Adjektive. Sie sagen, wie etwas ist,
+      nicht was jemand gemacht hat. Man sieht sie oft auf Schildern, oft mit
+      *sein*: *Die Apotheke ist geöffnet. Das Café ist geschlossen.* Auf einem
+      Schild fehlt *sein* oft: *Heute geöffnet. Rauchen verboten.* Lernen Sie
+      diese Formen als Wörter: *geöffnet*, *geschlossen*, *besetzt*,
+      *verboten*.
+
+table:
+  columns:
+    - { en: Verb, fa: فعل, de: Verb }
+    - { en: "*Partizip II*", fa: "صفت مفعولی (*Partizip II*)", de: Partizip II }
+    - { en: On a sign, fa: روی تابلو, de: Auf einem Schild }
+    - { en: In a sentence, fa: در جمله, de: Im Satz }
+  rows:
+    - [öffnen, geöffnet, Heute geöffnet, Die Bank ist heute geöffnet.]
+    - [schließen, geschlossen, Bis Donnerstag geschlossen, Das Museum ist geschlossen.]
+    - [besetzen, besetzt, Besetzt, Die Toilette ist besetzt.]
+    - [verbieten, verboten, Rauchen verboten, Hier ist Parken verboten.]
+    - [reservieren, reserviert, Reserviert, Der Tisch ist reserviert.]
+
+examples:
+  - de: Heute geöffnet.
+    en: Open today.
+    fa: امروز باز است.
+  - de: Bis Donnerstag geschlossen.
+    en: Closed until Thursday.
+    fa: تا پنجشنبه تعطیل است.
+  - de: Die Apotheke ist auch am Samstag geöffnet.
+    en: The pharmacy is open on Saturday too.
+    fa: داروخانه شنبه‌ها هم باز است.
+  - de: Wir haben heute geschlossen.
+    en: We are closed today.
+    fa: امروز تعطیل هستیم.
+  - de: Entschuldigung, ist der Platz hier frei? – Nein, leider besetzt.
+    en: Excuse me, is this seat free? – No, sorry, it's taken.
+    fa: ببخشید، این صندلی خالی است؟ – نه، متأسفانه جایش گرفته است.
+  - de: Hier ist Rauchen verboten.
+    en: Smoking is not allowed here.
+    fa: سیگار کشیدن این‌جا ممنوع است.
+  - de: Die Toilette ist besetzt.
+    en: The toilet is engaged.
+    fa: دستشویی اشغال است.
+  - de: Der Tisch am Fenster ist reserviert.
+    en: The table by the window is reserved.
+    fa: میز کنار پنجره رزرو شده است.
+
+mistakes:
+  - wrong: Das Geschäft ist heute geschließt.
+    right: Das Geschäft ist heute geschlossen.
+    why:
+      en: "*Schließen* is irregular: the form is *geschlossen*."
+      fa: "*schließen* بی‌قاعده است: صورت درست *geschlossen* است."
+      de: "*Schließen* ist unregelmäßig. Die Form ist *geschlossen*."
+  - wrong: Die Bibliothek ist heute öffnen.
+    right: Die Bibliothek ist heute geöffnet.
+    why:
+      en: "To say what state something is in, use the *Partizip II*, not the infinitive: *geöffnet*."
+      fa: "برای بیان حالت چیزی، صفت مفعولی به کار می‌رود، نه مصدر: *geöffnet*."
+      de: "Für den Zustand sagt man das Partizip II, nicht den Infinitiv: *geöffnet*."
+  - wrong: Hier ist Rauchen verbietet.
+    right: Hier ist Rauchen verboten.
+    why:
+      en: "*Verbieten* is irregular: the form is *verboten*."
+      fa: "*verbieten* بی‌قاعده است: صورت درست *verboten* است."
+      de: "*Verbieten* ist unregelmäßig. Die Form ist *verboten*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Sie können jetzt einkaufen. Das Geschäft ist ___.
+    options: [geöffnet, geschlossen, besetzt]
+    answer: geöffnet
+    explanation:
+      en: "You can shop now, so the shop is open: *geöffnet*."
+      fa: "اکنون می‌توانید خرید کنید، پس فروشگاه باز است: *geöffnet*."
+      de: "Man kann jetzt einkaufen. Das Geschäft ist offen: *geöffnet*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Tür ist zu, und niemand ist da. Das Museum ist heute ___.
+    options: [geschlossen, geöffnet, reserviert]
+    answer: geschlossen
+    explanation:
+      en: "The door is shut and nobody is there: the museum is closed, *geschlossen*."
+      fa: "در بسته است و کسی آن‌جا نیست: موزه تعطیل است، *geschlossen*."
+      de: "Die Tür ist zu, niemand ist da. Das Museum ist *geschlossen*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Hier dürfen Sie nicht rauchen. Rauchen ___!
+    options: [verboten, besetzt, geöffnet]
+    answer: verboten
+    explanation:
+      en: "Something you may not do is *verboten*."
+      fa: "کاری که اجازهٔ انجامش را ندارید *verboten* است."
+      de: "Was man nicht darf, ist *verboten*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ist der Platz hier noch frei? – Nein, er ist leider ___.
+    options: [besetzt, geöffnet, verboten]
+    answer: besetzt
+    explanation:
+      en: "A seat that is not free is *besetzt* (taken)."
+      fa: "صندلی‌ای که خالی نیست *besetzt* (اشغال) است."
+      de: "Ein Platz, der nicht frei ist, ist *besetzt*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Auf dem Schild steht: „Heute geschlossen“. Was bedeutet das?"
+    options: [Man kann heute nicht hineingehen., Man kann heute hineingehen., Man muss heute bezahlen.]
+    answer: Man kann heute nicht hineingehen.
+    explanation:
+      en: "*Geschlossen* means closed: you cannot go in today."
+      fa: "*geschlossen* یعنی بسته؛ امروز نمی‌توان وارد شد."
+      de: "*Geschlossen* heißt: Heute kann man nicht hineingehen."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Auf der Tür steht: „Montag bis Freitag 9 bis 18 Uhr geöffnet“. Wann können Sie hineingehen?"
+    options: [am Dienstag um 10 Uhr, am Samstag um 10 Uhr, am Montag um 20 Uhr]
+    answer: am Dienstag um 10 Uhr
+    explanation:
+      en: "*Geöffnet* means open: Monday to Friday, from 9 to 6. Tuesday at 10 fits."
+      fa: "*geöffnet* یعنی باز؛ از دوشنبه تا جمعه، از ساعت ۹ تا ۱۸. سه‌شنبه ساعت ۱۰ در این بازه است."
+      de: "*Geöffnet* heißt offen: Montag bis Freitag von 9 bis 18 Uhr. Dienstag um 10 Uhr passt."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Der Kellner sagt: „Dieser Tisch ist reserviert.“ Was bedeutet das?"
+    options: [Andere Gäste haben den Tisch bestellt., Der Tisch ist kaputt., Hier darf man nicht essen.]
+    answer: Andere Gäste haben den Tisch bestellt.
+    explanation:
+      en: "A *reserviert* table has been booked by other guests."
+      fa: "میزی که *reserviert* است، از پیش برای مهمانان دیگری رزرو شده است."
+      de: "Ein Tisch ist *reserviert*: Andere Gäste haben ihn bestellt."
+  - id: true-1
+    type: true-false
+    prompt: Die Apotheke ist heute geöffnet.
+    answer: true
+    explanation:
+      en: "*Geöffnet* says that the pharmacy is open. The sentence is correct."
+      fa: "*geöffnet* می‌گوید که داروخانه باز است. جمله درست است."
+      de: "*Geöffnet* sagt: Die Apotheke ist offen. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das Restaurant ist am Montag geschließt.
+    answer: false
+    explanation:
+      en: "*Schließen* is irregular: *Das Restaurant ist am Montag geschlossen.*"
+      fa: "*schließen* بی‌قاعده است: *Das Restaurant ist am Montag geschlossen.*"
+      de: "*Schließen* ist unregelmäßig: *Das Restaurant ist am Montag geschlossen.*"
+  - id: true-3
+    type: true-false
+    prompt: Wir haben am Sonntag geschlossen.
+    answer: true
+    explanation:
+      en: "A shop or café often says *Wir haben geschlossen* (we are closed). The sentence is correct."
+      fa: "فروشگاه یا کافه اغلب می‌گوید *Wir haben geschlossen* (تعطیل هستیم). جمله درست است."
+      de: "Ein Geschäft oder Café sagt oft: *Wir haben geschlossen.* Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Die Bibliothek ist am Sonntag geschließt.
+    answer: geschließt
+    explanation:
+      en: "*Schließen* is irregular: *geschlossen*."
+      fa: "*schließen* بی‌قاعده است: *geschlossen*."
+      de: "*Schließen* ist unregelmäßig: *geschlossen*."
+  - id: error-2
+    type: find-error
+    prompt: Der Tisch am Fenster ist schon reservieren.
+    answer: reservieren
+    explanation:
+      en: "For the state, use the *Partizip II*: *Der Tisch ist schon reserviert.*"
+      fa: "برای بیان حالت، صفت مفعولی به کار می‌رود: *Der Tisch ist schon reserviert.*"
+      de: "Für den Zustand sagt man das Partizip II: *Der Tisch ist schon reserviert.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Die Post ist heute ___ (schließen).
+    answers: [geschlossen]
+    explanation:
+      en: "The *Partizip II* of *schließen* is *geschlossen*."
+      fa: "صفت مفعولی *schließen* می‌شود *geschlossen*."
+      de: "Das Partizip II von *schließen* ist *geschlossen*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das Schwimmbad ist im Sommer jeden Tag ___ (öffnen).
+    answers: [geöffnet]
+    explanation:
+      en: "The *Partizip II* of *öffnen* is *geöffnet*."
+      fa: "صفت مفعولی *öffnen* می‌شود *geöffnet*."
+      de: "Das Partizip II von *öffnen* ist *geöffnet*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Parken ___ (verbieten)!
+    answers: [verboten]
+    explanation:
+      en: "The *Partizip II* of *verbieten* is *verboten*."
+      fa: "صفت مفعولی *verbieten* می‌شود *verboten*."
+      de: "Das Partizip II von *verbieten* ist *verboten*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ist, die Apotheke, heute, geöffnet]
+      - [ist, heute, die Apotheke, geöffnet]
+    end: "?"
+    explanation:
+      en: "In a yes/no question *ist* comes first, and *geöffnet* stays at the end."
+      fa: "در پرسش بله یا نه *ist* در آغاز می‌آید و *geöffnet* در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht *ist* am Anfang. *Geöffnet* bleibt am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [öffnen, geöffnet]
+      - [schließen, geschlossen]
+      - [verbieten, verboten]
+      - [reservieren, reserviert]
+    explanation:
+      en: "The words on the signs come from these verbs: *geöffnet*, *geschlossen*, *verboten*, *reserviert*."
+      fa: "واژه‌های روی تابلوها از این فعل‌ها می‌آیند: *geöffnet*، *geschlossen*، *verboten*، *reserviert*."
+      de: "Die Wörter auf den Schildern kommen von diesen Verben: *geöffnet*, *geschlossen*, *verboten*, *reserviert*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: f1cb585dc043966e

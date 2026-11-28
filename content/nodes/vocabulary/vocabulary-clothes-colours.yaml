@@ -1,33 +1,280 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-clothes-colours
 kind: vocabulary
 level: A1
 chapter: a1-words-daily-life
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Clothes and colours"
   fa: "لباس و رنگ‌ها"
   de: "Kleidung und Farben"
+attemptSize: 15
 words:
   - word: Kleidung
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: clothes, clothing
+      fa: لباس، پوشاک
+    definition: alles, was man am Körper trägt, zum Beispiel Hosen und Hemden
+    example:
+      de: Im Winter braucht man warme Kleidung.
+      en: In winter you need warm clothing.
+      fa: در زمستان لباس گرم لازم است.
+    alsoAccepted: [die Kleider, die Sachen, die Klamotten]
+
   - word: Jacke
+    class: noun
+    article: die
+    plural: Jacken
+    level: A1
+    meaning:
+      en: jacket
+      fa: کت، کاپشن
+    definition: man trägt sie über dem Hemd oder dem Pullover, oft draußen, wenn es kühl ist
+    example:
+      de: Nimm eine Jacke mit, es ist kalt.
+      en: Take a jacket with you, it's cold.
+      fa: یک کاپشن با خودت ببر، هوا سرد است.
+    alsoAccepted: [das Jackett, das Sakko, der Anorak]
+
   - word: Schuh
+    class: noun
+    article: der
+    plural: Schuhe
+    level: A1
+    meaning:
+      en: shoe
+      fa: کفش
+    definition: man trägt ihn am Fuß, wenn man nach draußen geht
+    example:
+      de: Diese Schuhe sind sehr bequem.
+      en: These shoes are very comfortable.
+      fa: این کفش‌ها خیلی راحت است.
+    alsoAccepted: [die Schuhe]
+
+  # The scope list gives "(sich)": "sich anziehen" is to get dressed.
   - word: anziehen
+    class: verb
+    level: A1
+    meaning:
+      en: to put on (clothes), to get dressed
+      fa: پوشیدن (لباس)
+    definition: Kleidung an den Körper tun
+    example:
+      de: Zieh dir eine warme Jacke an!
+      en: Put on a warm jacket!
+      fa: یک کاپشن گرم بپوش!
+    alsoAccepted: [sich anziehen]
+
+  # The scope list gives "(sich)": "sich ausziehen" is to get undressed.
   - word: ausziehen
+    class: verb
+    level: A1
+    meaning:
+      en: to take off (clothes), to get undressed
+      fa: درآوردن (لباس)
+    definition: Kleidung vom Körper nehmen
+    example:
+      de: Bitte ziehen Sie die Schuhe aus.
+      en: Please take your shoes off.
+      fa: لطفاً کفش‌هایتان را دربیاورید.
+    alsoAccepted: [sich ausziehen, ablegen]
+
   - word: Tasche
+    class: noun
+    article: die
+    plural: Taschen
+    level: A1
+    meaning:
+      en: bag; pocket
+      fa: کیف؛ جیب
+    definition: man trägt sie in der Hand oder über der Schulter, mit Büchern, Schlüsseln oder einem Handy darin; auch ein kleiner Platz in der Hose
+    example:
+      de: Meine Schlüssel sind in der Tasche.
+      en: My keys are in my bag.
+      fa: کلیدهایم در کیفم است.
+    alsoAccepted: [die Handtasche, die Hosentasche]
+
   - word: aussehen
+    class: verb
+    level: A1
+    meaning:
+      en: to look (a certain way), to appear
+      fa: به نظر رسیدن، ظاهری داشتن
+    definition: so wirken, wenn andere einen ansehen
+    example:
+      de: Du siehst heute sehr gut aus.
+      en: You look very good today.
+      fa: امروز خیلی خوب به نظر می‌رسی.
+    alsoAccepted: [wirken, scheinen]
+
   - word: gefallen
+    class: verb
+    level: A1
+    meaning:
+      en: to please, to appeal to (someone)
+      fa: خوش آمدن، به دل نشستن
+    definition: von einer Person schön oder gut gefunden werden
+    example:
+      de: Das Kleid gefällt mir sehr.
+      en: I really like the dress.
+      fa: از این پیراهن خیلی خوشم می‌آید.
+    alsoAccepted: [zusagen]
+
   - word: schön
+    class: adjective
+    level: A1
+    meaning:
+      en: beautiful, nice
+      fa: زیبا، قشنگ
+    definition: so, dass man es gern ansieht oder gern hat
+    example:
+      de: Das ist eine schöne Jacke.
+      en: That's a nice jacket.
+      fa: کاپشن قشنگی است.
+    alsoAccepted: [hübsch]
+
   - word: neu
+    class: adjective
+    level: A1
+    meaning:
+      en: new
+      fa: نو، تازه
+    definition: das Gegenteil von „alt“; man hat es erst seit kurzer Zeit
+    example:
+      de: Ich brauche neue Schuhe.
+      en: I need new shoes.
+      fa: کفش نو لازم دارم.
+
   - word: Farbe
+    class: noun
+    article: die
+    plural: Farben
+    level: A1
+    meaning:
+      en: colour
+      fa: رنگ
+    definition: Rot, Blau und Grün sind Beispiele dafür
+    example:
+      de: Welche Farbe hat dein Auto?
+      en: What colour is your car?
+      fa: ماشینت چه رنگی است؟
+
   - word: schwarz
+    class: adjective
+    level: A1
+    meaning:
+      en: black
+      fa: سیاه، مشکی
+    definition: die Farbe von Kohle und von der Nacht ohne Licht
+    example:
+      de: Er trägt eine schwarze Hose.
+      en: He's wearing black trousers.
+      fa: او شلوار مشکی پوشیده است.
+
   - word: weiß
+    class: adjective
+    level: A1
+    meaning:
+      en: white
+      fa: سفید
+    definition: die Farbe von Schnee und Milch
+    example:
+      de: Im Winter ist alles weiß.
+      en: In winter everything is white.
+      fa: زمستان همه‌جا سفید است.
+
   - word: rot
+    class: adjective
+    level: A1
+    meaning:
+      en: red
+      fa: قرمز، سرخ
+    definition: die Farbe von Blut und reifen Tomaten
+    example:
+      de: Die Ampel ist rot.
+      en: The traffic light is red.
+      fa: چراغ راهنمایی قرمز است.
+
   - word: blau
+    class: adjective
+    level: A1
+    meaning:
+      en: blue
+      fa: آبی
+    definition: die Farbe vom Himmel, wenn keine Wolken da sind
+    example:
+      de: Der Himmel ist heute ganz blau.
+      en: The sky is completely blue today.
+      fa: آسمان امروز کاملاً آبی است.
+
   - word: grün
+    class: adjective
+    level: A1
+    meaning:
+      en: green
+      fa: سبز
+    definition: die Farbe von Gras und von Blättern im Sommer
+    example:
+      de: Im Frühling wird alles grün.
+      en: In spring everything turns green.
+      fa: بهار همه‌جا سبز می‌شود.
+
   - word: gelb
+    class: adjective
+    level: A1
+    meaning:
+      en: yellow
+      fa: زرد
+    definition: die Farbe von Zitronen und Bananen
+    example:
+      de: Ich möchte die gelbe Tasche.
+      en: I'd like the yellow bag.
+      fa: کیف زرد را می‌خواهم.
+
   - word: grau
+    class: adjective
+    level: A1
+    meaning:
+      en: grey
+      fa: خاکستری
+    definition: zwischen Schwarz und Weiß; die Farbe von Wolken, wenn es regnet
+    example:
+      de: Mein Opa hat graue Haare.
+      en: My grandpa has grey hair.
+      fa: موهای بابابزرگم خاکستری است.
+
   - word: braun
+    class: adjective
+    level: A1
+    meaning:
+      en: brown
+      fa: قهوه‌ای
+    definition: die Farbe von Schokolade und Kaffee
+    example:
+      de: Sie hat braune Augen.
+      en: She has brown eyes.
+      fa: چشم‌هایش قهوه‌ای است.
+
   - word: hell
+    class: adjective
+    level: A1
+    meaning:
+      en: light, bright
+      fa: روشن
+    definition: mit viel Licht; das Gegenteil von dunkel
+    example:
+      de: Die Wohnung ist schön hell.
+      en: The flat is nice and bright.
+      fa: آپارتمان حسابی روشن است.
+
+review:
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 120, then 14, then 7 questions)
+  date: 2026-11-28
+  pool: bc86eb133d6d45b8

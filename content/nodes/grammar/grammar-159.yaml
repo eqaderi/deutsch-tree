@@ -4,10 +4,273 @@ kind: grammar
 level: A2
 chapter: a2-subordinate-clauses
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-157]
 title:
   en: "*dass*"
   fa: "*dass*"
   de: "*dass*"
+
+explanations:
+  en:
+    rule: >
+      *Dass* (that) starts a subordinate clause that says what someone
+      thinks, knows, hopes, says or feels: *Es tut mir leid, dass ich zu spät
+      komme.* The conjugated verb goes to the end, and a comma comes before
+      *dass*. It often follows *glauben*, *denken*, *wissen*, *hoffen*,
+      *sagen* and *finden*, and phrases such as *Es tut mir leid, …*, *Ich
+      freue mich, …* and *Es ist schön, …*. After *glauben*, *denken* and
+      *sagen* you may also leave out *dass*; then the second clause keeps
+      main-clause order: *Ich glaube, er kommt heute nicht.* Mind the spelling:
+      the conjunction is *dass* with *ss*; *das* with one *s* is the article
+      or a pronoun (*das Buch*).
+  fa:
+    rule: >
+      *dass* (که) جملهٔ پیروی را آغاز می‌کند که می‌گوید کسی چه فکر می‌کند،
+      چه می‌داند، به چه امید دارد، چه می‌گوید یا چه احساسی دارد: *Es tut mir
+      leid, dass ich zu spät komme.* فعل صرف‌شده به پایان جمله می‌رود و پیش
+      از *dass* ویرگول می‌آید. *dass* بیشتر پس از *glauben*، *denken*،
+      *wissen*، *hoffen*، *sagen* و *finden* و پس از عبارت‌هایی مانند *Es tut
+      mir leid, …*، *Ich freue mich, …* و *Es ist schön, …* می‌آید. پس از
+      *glauben*، *denken* و *sagen* می‌توان *dass* را انداخت؛ آن‌گاه جملهٔ
+      دوم ترتیب جملهٔ پایه را نگه می‌دارد: *Ich glaube, er kommt heute nicht.*
+      به املای آن دقت کنید: حرف ربط *dass* با *ss* نوشته می‌شود؛ *das* با یک
+      *s* حرف تعریف یا ضمیر است (*das Buch*).
+  de:
+    rule: >
+      Mit *dass* beginnt ein Nebensatz. Er sagt, was jemand denkt, weiß,
+      hofft, sagt oder fühlt: *Es tut mir leid, dass ich zu spät komme.* Das
+      konjugierte Verb steht am Ende, vor *dass* steht ein Komma. *Dass* kommt
+      oft nach *glauben*, *denken*, *wissen*, *hoffen*, *sagen* und *finden*
+      und nach Sätzen wie *Es tut mir leid, …*, *Ich freue mich, …* und *Es ist
+      schön, …*. Nach *glauben*, *denken* und *sagen* kann *dass* auch fehlen.
+      Dann hat der zweite Satz die Wortstellung vom Hauptsatz: *Ich glaube, er
+      kommt heute nicht.* Achtung beim Schreiben: Die Konjunktion ist *dass*
+      mit *ss*. *Das* mit einem *s* ist der Artikel oder ein Pronomen (*das
+      Buch*).
+
+table:
+  columns:
+    - { en: Main clause, fa: جملهٔ پایه, de: Hauptsatz }
+    - { en: Conjunction, fa: حرف ربط, de: Konjunktion }
+    - { en: The rest, fa: بقیهٔ جمله, de: Rest }
+    - { en: "End: verb", fa: "پایان جمله: فعل", de: "Ende: Verb" }
+  rows:
+    - ["Es tut mir leid,", dass, ich zu spät, komme.]
+    - ["Ich glaube,", dass, Anna heute nicht, kommt.]
+    - ["Ich hoffe,", dass, du bald wieder gesund, bist.]
+    - ["Er sagt,", dass, er keine Zeit, hat.]
+    - ["Ich finde es toll,", dass, du Deutsch, lernst.]
+    - ["Wir freuen uns,", dass, ihr uns, besucht.]
+    - ["Weißt du,", dass, Tom morgen Geburtstag, hat?]
+
+examples:
+  - de: Es tut mir leid, dass ich zu spät komme.
+    en: I'm sorry that I'm late.
+    fa: متأسفم که دیر کردم.
+  - de: Ich glaube, dass Anna heute nicht kommt.
+    en: I think that Anna isn't coming today.
+    fa: فکر می‌کنم آنا امروز نمی‌آید.
+  - de: Ich hoffe, dass du bald wieder gesund bist.
+    en: I hope that you'll be well again soon.
+    fa: امیدوارم زود خوب شوی.
+  - de: Mein Chef sagt, dass ich morgen frei habe.
+    en: My boss says that I have tomorrow off.
+    fa: رئیسم می‌گوید که فردا مرخصی دارم.
+  - de: Ich finde es toll, dass du Deutsch lernst.
+    en: I think it's great that you're learning German.
+    fa: به نظرم عالی است که آلمانی یاد می‌گیری.
+  - de: Wir freuen uns, dass ihr uns besucht.
+    en: We're glad that you're visiting us.
+    fa: خوشحالیم که به دیدن ما می‌آیید.
+  - de: Weißt du, dass Tom morgen Geburtstag hat?
+    en: Do you know that it's Tom's birthday tomorrow?
+    fa: می‌دانی که فردا تولد تام است؟
+  - de: Ich glaube, er kommt heute nicht.
+    en: I don't think he's coming today.
+    fa: فکر نمی‌کنم امروز بیاید.
+
+mistakes:
+  - wrong: Ich glaube, dass er kommt heute.
+    right: Ich glaube, dass er heute kommt.
+    why:
+      en: "After *dass* the conjugated verb goes to the end: *dass er heute kommt*."
+      fa: "پس از *dass* فعل صرف‌شده به پایان جمله می‌رود: *dass er heute kommt*."
+      de: "Nach *dass* steht das konjugierte Verb am Ende: *dass er heute kommt*."
+  - wrong: Ich hoffe, das du bald kommst.
+    right: Ich hoffe, dass du bald kommst.
+    why:
+      en: "The conjunction is spelt *dass*, with *ss*. *Das* is the article or a pronoun."
+      fa: "حرف ربط با *ss* نوشته می‌شود: *dass*. *das* حرف تعریف یا ضمیر است."
+      de: "Die Konjunktion schreibt man mit *ss*: *dass*. *Das* ist der Artikel oder ein Pronomen."
+  - wrong: Ich weiß, dass du hast keine Zeit.
+    right: Ich weiß, dass du keine Zeit hast.
+    why:
+      en: "In the *dass* clause the verb *hast* goes to the very end."
+      fa: "در جملهٔ پیرو با *dass* فعل *hast* به پایان جمله می‌رود."
+      de: "Im *dass*-Satz steht das Verb *hast* ganz am Ende."
+  - wrong: Es tut mir leid, dass ich habe deinen Geburtstag vergessen.
+    right: Es tut mir leid, dass ich deinen Geburtstag vergessen habe.
+    why:
+      en: "In the *Perfekt* the conjugated *habe* comes last, after the *Partizip II*: *vergessen habe*."
+      fa: "در گذشتهٔ نقلی (*Perfekt*) فعل صرف‌شدهٔ *habe* پس از صفت مفعولی و در آخر می‌آید: *vergessen habe*."
+      de: "Im Perfekt steht das konjugierte *habe* am Schluss, nach dem Partizip II: *vergessen habe*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich hoffe, ___ du bald wieder gesund bist.
+    options: [dass, das, weil]
+    answer: dass
+    explanation:
+      en: "After *hoffen* the clause says what you hope, so the conjunction *dass*, with *ss*."
+      fa: "پس از *hoffen* جمله می‌گوید به چه امید دارید، پس حرف ربط *dass* با *ss* می‌آید."
+      de: "Nach *hoffen* sagt der Satz, was man hofft. Darum die Konjunktion *dass*, mit *ss*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ Buch ist sehr spannend.
+    options: [Das, Dass]
+    answer: Das
+    explanation:
+      en: "Here it is the article of *das Buch*, with one *s*. *Dass* is only the conjunction."
+      fa: "این‌جا حرف تعریف *das Buch* است و با یک *s* نوشته می‌شود. *dass* فقط حرف ربط است."
+      de: "Hier ist es der Artikel von *das Buch*, mit einem *s*. *Dass* ist nur die Konjunktion."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich weiß, ___ das Restaurant heute geschlossen ist.
+    options: [dass, das]
+    answer: dass
+    explanation:
+      en: "The verb *ist* is at the end, so this is a *dass* clause: the conjunction, with *ss*."
+      fa: "فعل *ist* در پایان جمله است، پس این جملهٔ پیرو با حرف ربط *dass* است که با *ss* نوشته می‌شود."
+      de: "Das Verb *ist* steht am Ende. Das ist ein *dass*-Satz: die Konjunktion, mit *ss*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Es tut mir leid, dass …
+    options: [ich zu spät komme., ich komme zu spät., komme ich zu spät.]
+    answer: ich zu spät komme.
+    explanation:
+      en: "After *dass* the conjugated verb goes to the end: *ich zu spät komme*."
+      fa: "پس از *dass* فعل صرف‌شده به پایان جمله می‌رود: *ich zu spät komme*."
+      de: "Nach *dass* steht das konjugierte Verb am Ende: *ich zu spät komme*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich glaube, …
+    options: [dass er heute nicht kommt., dass er kommt heute nicht., dass kommt er heute nicht.]
+    answer: dass er heute nicht kommt.
+    explanation:
+      en: "With *dass* the subject comes first and the verb *kommt* last."
+      fa: "با *dass* اول فاعل و در آخر فعل *kommt* می‌آید."
+      de: "Mit *dass* kommt zuerst das Subjekt, das Verb *kommt* steht am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Was sagt Lisa? – Sie sagt, …
+    options: [dass sie morgen keine Zeit hat., dass sie hat morgen keine Zeit., dass hat sie morgen keine Zeit.]
+    answer: dass sie morgen keine Zeit hat.
+    explanation:
+      en: "In the *dass* clause the verb *hat* goes to the very end."
+      fa: "در جملهٔ پیرو با *dass* فعل *hat* به پایان جمله می‌رود."
+      de: "Im *dass*-Satz steht das Verb *hat* ganz am Ende."
+  - id: true-1
+    type: true-false
+    prompt: Ich finde es gut, dass du Sport machst.
+    answer: true
+    explanation:
+      en: "The verb *machst* is at the end of the *dass* clause. The sentence is correct."
+      fa: "فعل *machst* در پایان جملهٔ پیرو با *dass* است. جمله درست است."
+      de: "Das Verb *machst* steht am Ende vom *dass*-Satz. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich glaube, dass der Film ist sehr lang.
+    answer: false
+    explanation:
+      en: "After *dass* the verb goes to the end: *dass der Film sehr lang ist*."
+      fa: "پس از *dass* فعل به پایان جمله می‌رود: *dass der Film sehr lang ist*."
+      de: "Nach *dass* steht das Verb am Ende: *dass der Film sehr lang ist*."
+  - id: true-3
+    type: true-false
+    prompt: Ich glaube, der Film ist sehr lang.
+    answer: true
+    explanation:
+      en: "Without *dass* the second clause keeps main-clause order, verb in position 2. The sentence is correct."
+      fa: "بدون *dass* جملهٔ دوم ترتیب جملهٔ پایه را نگه می‌دارد و فعل در جایگاه دوم است. جمله درست است."
+      de: "Ohne *dass* hat der zweite Satz die Wortstellung vom Hauptsatz, das Verb auf Position 2. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wir freuen uns, das ihr kommt.
+    answer: false
+    explanation:
+      en: "The conjunction is spelt with *ss*: *dass ihr kommt*."
+      fa: "حرف ربط با *ss* نوشته می‌شود: *dass ihr kommt*."
+      de: "Die Konjunktion schreibt man mit *ss*: *dass ihr kommt*."
+  - id: true-5
+    type: true-false
+    prompt: Er hat gesagt, dass er später kommt.
+    answer: true
+    explanation:
+      en: "*Dass* starts the clause, and the verb *kommt* closes it. The sentence is correct."
+      fa: "*dass* جمله را آغاز می‌کند و فعل *kommt* آن را می‌بندد. جمله درست است."
+      de: "*Dass* beginnt den Satz, das Verb *kommt* steht am Ende. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich hoffe, dass du morgen ___ (kommen).
+    answers: [kommst]
+    explanation:
+      en: "With *du* the verb is *kommst*, and it stands at the end of the *dass* clause."
+      fa: "با *du* فعل *kommst* است و در پایان جملهٔ پیرو با *dass* می‌آید."
+      de: "Bei *du* heißt das Verb *kommst*. Es steht am Ende vom *dass*-Satz."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Es tut mir leid, dass ich so spät ___ (kommen).
+    answers: [komme, gekommen bin, kam]
+    explanation:
+      en: "With *ich* the verb is *komme*, at the end of the *dass* clause."
+      fa: "با *ich* فعل *komme* است و در پایان جملهٔ پیرو با *dass* می‌آید."
+      de: "Bei *ich* heißt das Verb *komme*. Es steht am Ende vom *dass*-Satz."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich finde es schön, dass ihr uns ___ (besuchen).
+    answers: [besucht, besucht habt]
+    explanation:
+      en: "With *ihr* the verb is *besucht*, at the end of the *dass* clause."
+      fa: "با *ihr* فعل *besucht* است و در پایان جملهٔ پیرو با *dass* می‌آید."
+      de: "Bei *ihr* heißt das Verb *besucht*. Es steht am Ende vom *dass*-Satz."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich glaube, dass der Supermarkt heute geschlossen ___ (sein).
+    answers: [ist, war]
+    explanation:
+      en: "*Der Supermarkt* is third person singular: *ist*, at the end of the *dass* clause."
+      fa: "*der Supermarkt* سوم‌شخص مفرد است: *ist*، در پایان جملهٔ پیرو با *dass*."
+      de: "*Der Supermarkt* ist 3. Person Singular: *ist*, am Ende vom *dass*-Satz."
+  - id: error-1
+    type: find-error
+    prompt: Ich hoffe, das du bald wieder gesund bist.
+    answer: das
+    explanation:
+      en: "The conjunction is spelt with *ss*: *dass du bald wieder gesund bist*."
+      fa: "حرف ربط با *ss* نوشته می‌شود: *dass du bald wieder gesund bist*."
+      de: "Die Konjunktion schreibt man mit *ss*: *dass du bald wieder gesund bist*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["es tut mir leid,", dass, ich, zu spät, komme]
+    explanation:
+      en: "*Dass* starts the clause, then the subject, and the verb *komme* comes last."
+      fa: "*dass* جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل *komme* در آخر."
+      de: "*Dass* beginnt den Satz, dann kommt das Subjekt, das Verb *komme* steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["wir wissen,", dass, ihr, keine Zeit, habt]
+    explanation:
+      en: "After *dass* the subject *ihr* comes first and the verb *habt* last."
+      fa: "پس از *dass* اول فاعل *ihr* و در آخر فعل *habt* می‌آید."
+      de: "Nach *dass* kommt zuerst das Subjekt *ihr*, das Verb *habt* steht am Ende."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: c566b4c4354c8206

@@ -4,10 +4,307 @@ kind: grammar
 level: B1
 chapter: b1-prepositions
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-071, grammar-152]
 title:
   en: "*trotz* + *Genitiv*"
   fa: "*trotz* + *Genitiv*"
   de: "*trotz* + Genitiv"
+
+explanations:
+  en:
+    rule: >
+      *Trotz* (despite, in spite of) names, as a noun, a fact that speaks
+      against what happens: *Trotz des Regens gehen wir spazieren.* It takes
+      the *Genitiv*, like *wegen*: *des* with *-s* or *-es* on a masculine or
+      neuter noun (*trotz des Regens*), *der* for a feminine noun and the
+      plural (*trotz der Kälte*, *trotz der Schmerzen*), *eines* and *einer*
+      with *ein*. A noun without an article stays as it is: *trotz Regen*,
+      *trotz Fieber*. The same idea can be said with a clause, *obwohl* with
+      the verb at the end (*Obwohl es regnet, gehen wir spazieren.*), or with
+      the adverb *trotzdem* in the second clause (*Es regnet, trotzdem gehen
+      wir spazieren.*). Only *trotz* stands before a noun.
+  fa:
+    rule: >
+      *trotz* (با وجود، به‌رغم) با یک اسم واقعیتی را نام می‌برد که با آنچه رخ
+      می‌دهد جور درنمی‌آید: *Trotz des Regens gehen wir spazieren.* (با وجود
+      باران به پیاده‌روی می‌رویم). *trotz* هم مانند *wegen* با حالت *Genitiv*
+      (حالت ملکی) می‌آید: *des* برای اسم مذکر یا خنثی که *-s* یا *-es*
+      می‌گیرد (*trotz des Regens*)، *der* برای اسم مؤنث و جمع (*trotz der
+      Kälte*، *trotz der Schmerzen*)، و با *ein* صورت‌های *eines* و *einer*.
+      اسمی که حرف تعریف ندارد تغییر نمی‌کند: *trotz Regen* و *trotz Fieber*.
+      همین معنا را می‌توان با جملهٔ پیرو گفت، با *obwohl* و فعل در پایان
+      (*Obwohl es regnet, gehen wir spazieren.*)، یا با قید *trotzdem* در
+      جملهٔ دوم (*Es regnet, trotzdem gehen wir spazieren.*). فقط *trotz*
+      پیش از اسم می‌آید.
+  de:
+    rule: >
+      *Trotz* nennt mit einem Nomen etwas, das dagegen spricht: *Trotz des
+      Regens gehen wir spazieren.* Nach *trotz* steht der Genitiv, wie nach
+      *wegen*: *des* und am maskulinen oder neutralen Nomen *-s* oder *-es*
+      (*trotz des Regens*). Bei femininen Nomen und im Plural steht *der*
+      (*trotz der Kälte*, *trotz der Schmerzen*). Mit *ein*: *eines*,
+      *einer*. Ein Nomen ohne Artikel bleibt gleich: *trotz Regen*, *trotz
+      Fieber*. Man kann das Gleiche auch mit einem Satz sagen: mit *obwohl*
+      und dem Verb am Ende (*Obwohl es regnet, gehen wir spazieren.*) oder
+      mit *trotzdem* im zweiten Satz (*Es regnet, trotzdem gehen wir
+      spazieren.*). Nur *trotz* steht vor einem Nomen.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Genitiv*", fa: "حالت *Genitiv*", de: Genitiv }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Fehler, des Fehlers, eines Fehlers, trotz des Fehlers]
+    - [die Verspätung, der Verspätung, einer Verspätung, trotz der Verspätung]
+    - [das Problem, des Problems, eines Problems, trotz eines Problems]
+    - [die Schmerzen (Plural), der Schmerzen, –, trotz der Schmerzen]
+
+examples:
+  - de: Trotz des Regens gehen wir spazieren.
+    en: We're going for a walk despite the rain.
+    fa: با وجود باران به پیاده‌روی می‌رویم.
+  - de: Trotz der Kälte trägt er nur eine dünne Jacke.
+    en: Despite the cold he's only wearing a thin jacket.
+    fa: او با وجود سرما فقط یک کاپشن نازک پوشیده است.
+  - de: Trotz Fieber ist sie zur Arbeit gegangen.
+    en: She went to work in spite of a fever.
+    fa: با وجود تب سر کار رفت.
+  - de: Trotz der Verspätung haben wir den Anschlusszug bekommen.
+    en: Despite the delay we caught our connecting train.
+    fa: با وجود تأخیر به قطار بعدی رسیدیم.
+  - de: Trotz seines Alters fährt mein Großvater jeden Tag Fahrrad.
+    en: In spite of his age my grandfather rides his bike every day.
+    fa: پدربزرگم با وجود سن بالایش هر روز دوچرخه‌سواری می‌کند.
+  - de: Das Konzert findet trotz des schlechten Wetters statt.
+    en: The concert is going ahead despite the bad weather.
+    fa: کنسرت با وجود هوای بد برگزار می‌شود.
+  - de: Trotz der hohen Miete wohnen wir gern in der Stadt.
+    en: Despite the high rent we like living in the city.
+    fa: با وجود اجارهٔ بالا، زندگی در شهر را دوست داریم.
+  - de: Trotz eines kleinen Fehlers hat er die Prüfung bestanden.
+    en: He passed the exam despite a small mistake.
+    fa: با وجود یک اشتباه کوچک در امتحان قبول شد.
+  - de: Obwohl es regnet, gehen wir spazieren.
+    en: Although it's raining, we're going for a walk.
+    fa: با این‌که باران می‌بارد، به پیاده‌روی می‌رویم.
+  - de: Es regnet, trotzdem gehen wir spazieren.
+    en: It's raining; we're going for a walk anyway.
+    fa: باران می‌بارد، با این حال به پیاده‌روی می‌رویم.
+
+mistakes:
+  - wrong: Trotz das Wetter gehen wir baden.
+    right: Trotz des Wetters gehen wir baden.
+    why:
+      en: "*Trotz* takes the *Genitiv*: *das Wetter* becomes *des Wetters*, with *-s* on the noun."
+      fa: "*trotz* با حالت *Genitiv* می‌آید: *das Wetter* به *des Wetters* تبدیل می‌شود و اسم *-s* می‌گیرد."
+      de: "Nach *trotz* steht der Genitiv: *das Wetter* wird zu *des Wetters*, mit *-s* am Nomen."
+  - wrong: Trotzdem des Regens spielen die Kinder draußen.
+    right: Trotz des Regens spielen die Kinder draußen.
+    why:
+      en: "*Trotzdem* is an adverb and never stands before a noun. Before a noun it is *trotz*."
+      fa: "*trotzdem* قید است و هیچ‌وقت پیش از اسم نمی‌آید. پیش از اسم *trotz* به کار می‌رود."
+      de: "*Trotzdem* ist ein Adverb und steht nie vor einem Nomen. Vor einem Nomen steht *trotz*."
+  - wrong: Trotz es regnet, gehen wir spazieren.
+    right: Obwohl es regnet, gehen wir spazieren.
+    why:
+      en: "*Trotz* needs a noun. Before a clause with the verb at the end it is *obwohl*."
+      fa: "*trotz* اسم لازم دارد. پیش از جمله‌ای که فعلش در پایان است *obwohl* می‌آید."
+      de: "Nach *trotz* steht ein Nomen. Vor einem Satz mit dem Verb am Ende steht *obwohl*."
+  - wrong: Trotz des Stau sind wir pünktlich angekommen.
+    right: Trotz des Staus sind wir pünktlich angekommen.
+    why:
+      en: "After *des* the masculine noun needs its *-s*: *des Staus*."
+      fa: "پس از *des* اسم مذکر باید *-s* بگیرد: *des Staus*."
+      de: "Nach *des* braucht das maskuline Nomen ein *-s*: *des Staus*."
+  - wrong: Trotz der Kälte, gehen wir schwimmen.
+    right: Trotz der Kälte gehen wir schwimmen.
+    why:
+      en: "*Trotz der Kälte* is position 1 of the sentence, not a clause: no comma, and the verb comes next."
+      fa: "*trotz der Kälte* جایگاه اول جمله است، نه یک جملهٔ جدا: ویرگول نمی‌خواهد و فعل بلافاصله پس از آن می‌آید."
+      de: "*Trotz der Kälte* ist Position 1, kein eigener Satz. Darum kein Komma, und danach kommt das Verb."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Trotz ___ Regens spielen die Kinder draußen.
+    options: [den, des, dem]
+    answer: des
+    explanation:
+      en: "*Der Regen* in the *Genitiv* is *des Regens*; the *-s* on *Regens* fits only *des*."
+      fa: "*der Regen* در حالت *Genitiv* می‌شود *des Regens*؛ *-s* در *Regens* فقط با *des* جور است."
+      de: "*Der Regen* im Genitiv: *des Regens*. Das *-s* an *Regens* passt nur zu *des*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Trotz ___ Verspätung haben wir den Anschlusszug bekommen.
+    options: [der, die, des]
+    answer: der
+    explanation:
+      en: "*Verspätung* is feminine: in the *Genitiv*, *die* becomes *der*."
+      fa: "*Verspätung* اسم مؤنث است: در حالت *Genitiv*، *die* به *der* تبدیل می‌شود."
+      de: "*Verspätung* ist feminin. Im Genitiv wird *die* zu *der*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ es kalt ist, geht sie schwimmen.
+    options: [Trotz, Obwohl, Trotzdem]
+    answer: Obwohl
+    explanation:
+      en: "A clause with the verb at the end (*es kalt ist*) follows *obwohl*."
+      fa: "جمله‌ای که فعلش در پایان است (*es kalt ist*) پس از *obwohl* می‌آید."
+      de: "Ein Satz mit dem Verb am Ende (*es kalt ist*) kommt nach *obwohl*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Es ist kalt, ___ geht sie schwimmen.
+    options: [obwohl, trotz, trotzdem]
+    answer: trotzdem
+    explanation:
+      en: "The verb follows directly (*geht sie*), so the word is the adverb *trotzdem* in position 1."
+      fa: "فعل بلافاصله پس از جای خالی آمده است (*geht sie*)، پس قید *trotzdem* در جایگاه اول است."
+      de: "Direkt danach kommt das Verb (*geht sie*). Darum steht hier das Adverb *trotzdem* auf Position 1."
+  - id: gap-5
+    type: gap-fill
+    prompt: ___ der Kälte geht sie schwimmen.
+    options: [Obwohl, Trotzdem, Trotz]
+    answer: Trotz
+    explanation:
+      en: "Before a noun in the *Genitiv* (*der Kälte*) the preposition is *trotz*."
+      fa: "پیش از اسمی در حالت *Genitiv* (*der Kälte*) حرف اضافهٔ *trotz* می‌آید."
+      de: "Vor einem Nomen im Genitiv (*der Kälte*) steht die Präposition *trotz*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: ___ hat er die Prüfung bestanden.
+    options: [Trotz seine Fehler, Trotzdem seiner Fehler, Trotz seiner Fehler]
+    answer: Trotz seiner Fehler
+    explanation:
+      en: "*Trotz* with the *Genitiv* plural: *seine Fehler* becomes *seiner Fehler*."
+      fa: "*trotz* با حالت *Genitiv* جمع: *seine Fehler* به *seiner Fehler* تبدیل می‌شود."
+      de: "*Trotz* mit Genitiv Plural: *seine Fehler* wird zu *seiner Fehler*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "„Obwohl er Fieber hat, geht er zur Arbeit.“ Welcher Satz sagt dasselbe?"
+    options:
+      - Wegen des Fiebers geht er zur Arbeit.
+      - Trotz des Fiebers geht er zur Arbeit.
+      - Während des Fiebers geht er zur Arbeit.
+    answer: Trotz des Fiebers geht er zur Arbeit.
+    explanation:
+      en: "*Obwohl* and *trotz* both name a fact that speaks against what happens: *obwohl* with a clause, *trotz* with a noun."
+      fa: "*obwohl* و *trotz* هر دو واقعیتی مخالف را نام می‌برند: *obwohl* با جملهٔ پیرو و *trotz* با اسم."
+      de: "*Obwohl* und *trotz* nennen beide etwas, das dagegen spricht: *obwohl* mit einem Satz, *trotz* mit einem Nomen."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Trotz ___ fahren wir in die Berge.
+    options: [das schlechte Wetter, dem schlechten Wetters, des schlechten Wetters]
+    answer: des schlechten Wetters
+    explanation:
+      en: "*Genitiv*: *des*, the adjective ending *-en* and *-s* on the noun: *des schlechten Wetters*."
+      fa: "حالت *Genitiv*: *des*، پایانهٔ صفت *-en* و *-s* در اسم: *des schlechten Wetters*."
+      de: "Genitiv: *des*, das Adjektiv mit *-en* und das Nomen mit *-s*: *des schlechten Wetters*."
+  - id: true-1
+    type: true-false
+    prompt: Trotz der Schmerzen hat sie weitergespielt.
+    answer: true
+    explanation:
+      en: "Plural *die Schmerzen* in the *Genitiv* is *der Schmerzen*. The sentence is correct."
+      fa: "*die Schmerzen* جمع در حالت *Genitiv* می‌شود *der Schmerzen*. جمله درست است."
+      de: "*Die Schmerzen* (Plural) im Genitiv: *der Schmerzen*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Trotzdem des Regens gehen wir spazieren.
+    answer: false
+    explanation:
+      en: "Before a noun it is *trotz*: *Trotz des Regens …*. *Trotzdem* stands alone."
+      fa: "پیش از اسم *trotz* می‌آید: *Trotz des Regens …*. *trotzdem* تنها می‌آید."
+      de: "Vor einem Nomen steht *trotz*: *Trotz des Regens …*. *Trotzdem* steht allein."
+  - id: true-3
+    type: true-false
+    prompt: Trotz der Hitze sind wir den ganzen Tag gewandert.
+    answer: true
+    explanation:
+      en: "*Hitze* is feminine, so its *Genitiv* is *der Hitze*. The sentence is correct."
+      fa: "*Hitze* اسم مؤنث است و حالت *Genitiv* آن *der Hitze* است. جمله درست است."
+      de: "*Hitze* ist feminin. Der Genitiv ist *der Hitze*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Trotz wir müde waren, sind wir weitergelaufen.
+    answer: false
+    explanation:
+      en: "Before a clause with the verb at the end it is *obwohl*: *Obwohl wir müde waren, …*"
+      fa: "پیش از جمله‌ای که فعلش در پایان است *obwohl* می‌آید: *Obwohl wir müde waren, …*"
+      de: "Vor einem Satz mit dem Verb am Ende steht *obwohl*: *Obwohl wir müde waren, …*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Trotz ___ (ein) Staus waren wir pünktlich.
+    answers: [eines]
+    explanation:
+      en: "*Ein Stau* in the *Genitiv* is *eines Staus*."
+      fa: "*ein Stau* در حالت *Genitiv* می‌شود *eines Staus*."
+      de: "*Ein Stau* im Genitiv: *eines Staus*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Trotz ___ (die) Kälte trägt er nur eine dünne Jacke.
+    answers: [der]
+    explanation:
+      en: "*Die* becomes *der* in the *Genitiv*: *trotz der Kälte*."
+      fa: "*die* در حالت *Genitiv* می‌شود *der*: *trotz der Kälte*."
+      de: "*Die* wird im Genitiv zu *der*: *trotz der Kälte*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Trotz des ___ (Lärm) konnte das Baby schlafen.
+    answers: [Lärms, Lärmes]
+    explanation:
+      en: "After *des* the masculine noun gets *-s* or *-es*: *des Lärms*."
+      fa: "پس از *des* اسم مذکر *-s* یا *-es* می‌گیرد: *des Lärms*."
+      de: "Nach *des* bekommt das maskuline Nomen *-s* oder *-es*: *des Lärms*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wir sind ___ (trotz / das Gewitter) losgefahren.
+    answers: [trotz des Gewitters, trotz des]
+    explanation:
+      en: "*Das Gewitter* in the *Genitiv* is *des Gewitters*: *trotz des Gewitters*."
+      fa: "*das Gewitter* در حالت *Genitiv* می‌شود *des Gewitters*: *trotz des Gewitters*."
+      de: "*Das Gewitter* im Genitiv: *des Gewitters*. Also: *trotz des Gewitters*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "trotz + der Regen"
+    answers: [trotz des Regens]
+    explanation:
+      en: "*Trotz* takes the *Genitiv*: *der Regen* becomes *des Regens*."
+      fa: "*trotz* با حالت *Genitiv* می‌آید: *der Regen* به *des Regens* تبدیل می‌شود."
+      de: "Nach *trotz* steht der Genitiv: *der Regen* wird zu *des Regens*."
+  - id: error-1
+    type: find-error
+    prompt: Trotz des Verkehr sind wir pünktlich angekommen.
+    answer: Verkehr
+    explanation:
+      en: "After *des* the masculine noun needs *-s*: *des Verkehrs*."
+      fa: "پس از *des* اسم مذکر باید *-s* بگیرد: *des Verkehrs*."
+      de: "Nach *des* braucht das maskuline Nomen ein *-s*: *des Verkehrs*."
+  - id: error-2
+    type: find-error
+    prompt: Trotzdem des Lärms habe ich gut geschlafen.
+    answer: Trotzdem
+    explanation:
+      en: "Before a noun it is the preposition *trotz*: *Trotz des Lärms …*"
+      fa: "پیش از اسم حرف اضافهٔ *trotz* می‌آید: *Trotz des Lärms …*"
+      de: "Vor einem Nomen steht die Präposition *trotz*: *Trotz des Lärms …*"
+  - id: match-1
+    type: matching
+    answer:
+      - [obwohl, es regnet]
+      - [trotz, des Regens]
+      - [trotzdem, gehen wir raus]
+    explanation:
+      en: "*Obwohl* comes before a clause with the verb at the end, *trotz* before a noun, and *trotzdem* is followed by the verb."
+      fa: "*obwohl* پیش از جمله‌ای که فعلش در پایان است می‌آید، *trotz* پیش از اسم، و پس از *trotzdem* فعل می‌آید."
+      de: "*Obwohl* steht vor einem Satz mit dem Verb am Ende, *trotz* vor einem Nomen, und nach *trotzdem* kommt das Verb."
+
+review:
+  reviewer: "independent AI agents (two fresh subagents, review sheet only: the
+    whole pool, then the disputed question again after it was rewritten; not
+    people)"
+  date: 2026-11-28
+  pool: 9b2ede1767df6006

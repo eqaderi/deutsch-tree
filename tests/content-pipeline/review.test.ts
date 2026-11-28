@@ -16,19 +16,29 @@ test('the blind pool holds every question without its answer or its explanation'
   expect(sheet.questions.slice(0, 2)).toEqual([
     {
       id: 'q1',
-      question: { type: 'multiple-choice', prompt: 'Ich ___ in Berlin.', options: ['wohne', 'wohnst', 'wohnt'] },
+      question: {
+        type: 'multiple-choice',
+        prompt: 'Ich ___ in Berlin.',
+        options: expect.arrayContaining(['wohne', 'wohnst', 'wohnt']),
+      },
       answerFormat: expect.any(String),
       answer: null,
       objection: null,
     },
     {
       id: 'q2',
-      question: { type: 'multiple-choice', prompt: 'Du ___ hier.', options: ['wohne', 'wohnst', 'wohnen'] },
+      question: {
+        type: 'multiple-choice',
+        prompt: 'Du ___ hier.',
+        options: expect.arrayContaining(['wohne', 'wohnst', 'wohnen']),
+      },
       answerFormat: expect.any(String),
       answer: null,
       objection: null,
     },
   ])
+  // In an order of their own (review-option-order.test.ts), each option once.
+  for (const entry of sheet.questions.slice(0, 2)) expect(entry.question.options).toHaveLength(3)
   const SHOWN: Record<string, string[]> = {
     'multiple-choice': ['options', 'prompt', 'type'],
     'gap-fill': ['options', 'prompt', 'type'],

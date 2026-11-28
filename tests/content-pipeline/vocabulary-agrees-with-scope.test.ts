@@ -5,7 +5,7 @@ import { changeNode, fixtureContentWith, VOCABULARY } from './fixture.ts'
 /**
  * The fixture's scope list gives, for the words of the published vocabulary
  * node: Tisch der -e, Stuhl der ¨-e, Fenster das -, Möbel die pl (A2),
- * schlafen a verb, groß an adjective.
+ * schlafen a verb, groß an adjective, Deutschland no article (`none`) sg.
  */
 const SCOPE_LIST = 'vocabulary/scope-list.tsv'
 const NODE = 'vocabulary-fixture-home'
@@ -90,10 +90,68 @@ test('the plural markers of the lists are written out as a German reader expects
   expect(errors.filter((problem) => problem.where?.endsWith('.plural'))).toEqual([])
 })
 
+test('a noun that the scope list gives no article ("none") takes none, and one with an article keeps it', async () => {
+  const errors = await errorsAfter({
+    [VOCABULARY]: changeNode((node) => {
+      node.words[10].article = 'das'
+      node.words[0].article = 'none'
+    }),
+  })
+
+  expect(errors).toEqual(
+    expect.arrayContaining([
+      inWords('words[0].article', 'is "none", but the scope list gives "der" for "Tisch"'),
+      inWords(
+        'words[10].article',
+        'is "das", but the scope list gives no article for "Deutschland"; write "article: none"',
+      ),
+    ]),
+  )
+})
+
 test('a word the scope list gives two articles may take either', async () => {
   const errors = await errorsAfter({
     [SCOPE_LIST]: (text) => text.replace('Bett\tnoun\tA1\tdas\t-en', 'Bett\tnoun\tA1\tder/das\t-en'),
   })
 
   expect(errors.filter((problem) => problem.where?.endsWith('.article'))).toEqual([])
+})
+
+/** The fixture's scope list, with a marker in the reflexive column of "schlafen". */
+const schlafenMarked = (marker: string) => ({
+  [SCOPE_LIST]: (text: string) => text.replace('schlafen\tverb\tA1', `schlafen\tverb\tA1\t\t\t${marker}`),
+})
+
+const reflexiveProblems = async (edits: Record<string, (text: string) => string>) =>
+  (await errorsAfter(edits)).filter((problem) => problem.where?.endsWith('.reflexive'))
+
+test('a verb that the scope list marks as always reflexive is written with what it is learned with', async () => {
+  expect(await reflexiveProblems(schlafenMarked('sich'))).toEqual([
+    inWords(
+      'words[8].reflexive',
+      'is missing, but the scope list gives "sich" for "schlafen": the verb is learned with it; write "reflexive: sich"',
+    ),
+  ])
+})
+
+test('a verb of a node that is coming soon may still be named bare, whatever the scope list marks', async () => {
+  const kochenMarked = {
+    [SCOPE_LIST]: (text: string) => text.replace('kochen\tverb\tA1', 'kochen\tverb\tA1\t\t\tsich'),
+  }
+
+  expect(await reflexiveProblems(kochenMarked)).toEqual([])
+})
+
+test('a verb that the scope list marks "(sich)" may be written with it or without, but not with another', async () => {
+  const written = (reflexive: string) => ({
+    [VOCABULARY]: changeNode((node) => {
+      node.words[8].reflexive = reflexive
+    }),
+  })
+
+  expect(await reflexiveProblems(schlafenMarked('(sich)'))).toEqual([])
+  expect(await reflexiveProblems({ ...schlafenMarked('(sich)'), ...written('sich') })).toEqual([])
+  expect(await reflexiveProblems({ ...schlafenMarked('(sich)'), ...written('sich etwas') })).toEqual([
+    inWords('words[8].reflexive', 'is "sich etwas", but the scope list gives "(sich)" for "schlafen"'),
+  ])
 })

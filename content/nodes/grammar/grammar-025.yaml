@@ -1,13 +1,434 @@
-# Grammar list row 25.
+# Grammar list row 25. The Präsens for the future is row 12 and werden as a
+# full verb row 21; Futur I for assumptions is taught here and only recognised
+# again in row 33.
 id: grammar-025
 kind: grammar
 level: B1
 chapter: b1-tenses
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-012, grammar-021]
 title:
   en: "*Futur I*"
-  fa: "آینده (*Futur I*)"
+  fa: "زمان آینده (*Futur I*)"
   de: "Futur I"
+
+explanations:
+  en:
+    rule: >
+      The *Futur I* is a form of *werden* in position 2 and the infinitive at
+      the end: *Ich werde dich anrufen.* It is used for a prediction (*Morgen
+      wird es regnen.*), for a promise or a firm plan (*Ich werde dich
+      bestimmt besuchen.*) and, with *wohl*, *wahrscheinlich* or *sicher*,
+      for a guess about now (*Er wird wohl noch im Büro sein.*). The forms of
+      *werden* are *ich werde*, *du wirst*, *er* / *sie* / *es wird*, *wir
+      werden*, *ihr werdet*, *sie* / *Sie werden*. In a subordinate clause
+      *werden* goes to the very end, after the infinitive: *…, dass er
+      pünktlich kommen wird.* For plans, speech mostly uses the *Präsens*
+      with a time word (*Morgen fahre ich nach Hamburg.*); the *Futur I* is
+      more formal and the choice for promises, predictions and guesses. Only
+      *werden* with an infinitive is the *Futur I*: with an adjective or a
+      noun it means "become" (*Er wird Arzt.*).
+  fa:
+    rule: >
+      زمان آینده (*Futur I*) از صورت صرف‌شدهٔ *werden* در جایگاه دوم و مصدر
+      در پایان جمله ساخته می‌شود: *Ich werde dich anrufen.* این زمان برای
+      پیش‌بینی (*Morgen wird es regnen.*)، برای قول یا تصمیم قطعی (*Ich werde
+      dich bestimmt besuchen.*) و همراه با *wohl*، *wahrscheinlich* یا
+      *sicher* برای حدس دربارهٔ اکنون به کار می‌رود (*Er wird wohl noch im
+      Büro sein.*). صورت‌های *werden* این‌هاست: *ich werde*، *du wirst*،
+      *er/sie/es wird*، *wir werden*، *ihr werdet*، *sie/Sie werden*. در
+      جملهٔ پیرو، *werden* پس از مصدر به پایان جمله می‌رود: *…, dass er
+      pünktlich kommen wird.* در گفتار، برای برنامه‌ها بیشتر زمان حال
+      (*Präsens*) همراه با قید زمان به کار می‌رود (*Morgen fahre ich nach
+      Hamburg.*)؛ زمان آینده رسمی‌تر است و برای قول، پیش‌بینی و حدس انتخاب
+      می‌شود. فقط *werden* همراه با مصدر زمان آینده است؛ *werden* همراه با
+      صفت یا اسم یعنی «شدن» (*Er wird Arzt.*).
+  de:
+    rule: >
+      Das Futur I bildet man mit einer Form von *werden* auf Position 2 und
+      dem Infinitiv am Ende: *Ich werde dich anrufen.* Man benutzt es für
+      eine Vorhersage (*Morgen wird es regnen.*), für ein Versprechen oder
+      einen festen Plan (*Ich werde dich bestimmt besuchen.*) und mit *wohl*,
+      *wahrscheinlich* oder *sicher* für eine Vermutung über jetzt (*Er wird
+      wohl noch im Büro sein.*). Die Formen von *werden* sind *ich werde*,
+      *du wirst*, *er/sie/es wird*, *wir werden*, *ihr werdet*, *sie/Sie
+      werden*. Im Nebensatz steht *werden* ganz am Ende, nach dem Infinitiv:
+      *…, dass er pünktlich kommen wird.* Für Pläne benutzt man beim Sprechen
+      meistens das Präsens mit einer Zeitangabe (*Morgen fahre ich nach
+      Hamburg.*). Das Futur I ist formeller. Man nimmt es für Versprechen,
+      Vorhersagen und Vermutungen. Nur *werden* mit Infinitiv ist Futur I.
+      Mit einem Adjektiv oder Nomen heißt *werden* etwas anderes: *Er wird
+      Arzt.*
+
+diagrams:
+  - caption:
+      en: >
+        *Ich werde dich morgen anrufen.* and *…, dass er morgen kommen
+        wird.* In a main clause *werden* (shaded) stands in position 2 and the
+        infinitive (shaded) at the end: the *Satzklammer*. In a subordinate
+        clause both are at the end, *werden* last.
+      fa: >
+        *Ich werde dich morgen anrufen.* و *…, dass er morgen kommen wird.*
+        در جملهٔ پایه *werden* (رنگی) در جایگاه دوم و مصدر (رنگی) در پایان
+        جمله است: قاب جمله (*Satzklammer*). در جملهٔ پیرو هر دو در پایان
+        می‌آیند و *werden* در آخر.
+      de: >
+        *Ich werde dich morgen anrufen.* und *…, dass er morgen kommen
+        wird.* Im Hauptsatz steht *werden* (farbig) auf Position 2 und der
+        Infinitiv (farbig) am Ende: die Satzklammer. Im Nebensatz stehen beide
+        am Ende, *werden* ganz zuletzt.
+    labels:
+      second: { en: position 2, fa: جایگاه دوم, de: Position 2 }
+      end: { en: the end, fa: پایان جمله, de: Ende }
+    svg: |
+      <svg viewBox="0 0 320 180">
+        <!-- Ich werde dich morgen anrufen. -->
+        <text class="note" x="84" y="18" text-anchor="middle">{{second}}</text>
+        <text class="note" x="276" y="18" text-anchor="middle">{{end}}</text>
+        <rect class="surface" x="2" y="26" width="48" height="40"/>
+        <rect class="shade" x="54" y="26" width="60" height="40"/>
+        <rect class="surface" x="118" y="26" width="112" height="40"/>
+        <rect class="shade" x="234" y="26" width="84" height="40"/>
+        <text class="label" x="26" y="52" text-anchor="middle">Ich</text>
+        <text class="label" x="84" y="52" text-anchor="middle">werde</text>
+        <text class="label" x="174" y="52" text-anchor="middle">dich morgen</text>
+        <text class="label" x="276" y="52" text-anchor="middle">anrufen.</text>
+        <polyline class="line" points="84,70 84,80 276,80 276,70"/>
+        <text class="note" x="180" y="98" text-anchor="middle">Satzklammer</text>
+        <!-- …, dass er morgen kommen wird. -->
+        <text class="note" x="250" y="124" text-anchor="middle">{{end}}</text>
+        <rect class="surface" x="2" y="132" width="60" height="40"/>
+        <rect class="surface" x="66" y="132" width="104" height="40"/>
+        <rect class="shade" x="174" y="132" width="80" height="40"/>
+        <rect class="shade" x="258" y="132" width="60" height="40"/>
+        <text class="label" x="32" y="158" text-anchor="middle">…, dass</text>
+        <text class="label" x="118" y="158" text-anchor="middle">er morgen</text>
+        <text class="label" x="214" y="158" text-anchor="middle">kommen</text>
+        <text class="label" x="288" y="158" text-anchor="middle">wird.</text>
+      </svg>
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*werden*", fa: "*werden*", de: "*werden*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, werde, Ich werde dich morgen anrufen.]
+    - [du, wirst, Du wirst das bestimmt schaffen.]
+    - [er / sie / es, wird, Es wird bald regnen.]
+    - [wir, werden, Wir werden pünktlich sein.]
+    - [ihr, werdet, Ihr werdet viel Spaß haben.]
+    - [sie / Sie, werden, Sie werden es nicht glauben.]
+
+examples:
+  - de: Morgen wird es regnen.
+    en: It will rain tomorrow.
+    fa: فردا باران خواهد بارید.
+  - de: Ich werde dich bestimmt besuchen.
+    en: I will definitely visit you.
+    fa: حتماً به دیدنت خواهم آمد.
+  - de: Keine Sorge, ich werde pünktlich sein.
+    en: Don't worry, I will be on time.
+    fa: نگران نباش، سر وقت خواهم آمد.
+  - de: Er wird wohl noch im Büro sein.
+    en: He is probably still at the office.
+    fa: لابد هنوز در دفتر است.
+  - de: Wirst du mir beim Umzug helfen?
+    en: Will you help me with the move?
+    fa: در اسباب‌کشی به من کمک خواهی کرد؟
+  - de: Nächstes Jahr werden wir nach Spanien fahren.
+    en: Next year we will go to Spain.
+    fa: سال آینده به اسپانیا خواهیم رفت.
+  - de: Ich glaube, dass sie die Prüfung bestehen wird.
+    en: I think she will pass the exam.
+    fa: فکر می‌کنم در امتحان قبول خواهد شد.
+  - de: Das Hotel wird Ihnen bestimmt gefallen.
+    en: You will certainly like the hotel.
+    fa: حتماً از هتل خوشتان خواهد آمد.
+  - de: Die Kinder werden jetzt wahrscheinlich schon schlafen.
+    en: The children are probably asleep by now.
+    fa: بچه‌ها حالا احتمالاً خوابند.
+
+mistakes:
+  - wrong: Morgen wird es regnet.
+    right: Morgen wird es regnen.
+    why:
+      en: "After *werden* the verb stays in the infinitive: *regnen*."
+      fa: "پس از *werden* فعل به صورت مصدر می‌آید: *regnen*."
+      de: "Mit *werden* steht das Verb im Infinitiv: *regnen*."
+  - wrong: Ich werde morgen anrufen dich.
+    right: Ich werde dich morgen anrufen.
+    why:
+      en: "The infinitive goes to the very end, after everything else."
+      fa: "مصدر به پایان جمله می‌رود، پس از همهٔ اجزای دیگر."
+      de: "Der Infinitiv steht ganz am Ende, nach allen anderen Wörtern."
+  - wrong: Du wird das schaffen.
+    right: Du wirst das schaffen.
+    why:
+      en: "With *du* the form of *werden* is *wirst*."
+      fa: "با *du* صورت *werden* *wirst* است."
+      de: "Bei *du* heißt es *wirst*."
+  - wrong: Ich weiß, dass er wird kommen.
+    right: Ich weiß, dass er kommen wird.
+    why:
+      en: "In a subordinate clause *werden* goes to the very end, after the infinitive."
+      fa: "در جملهٔ پیرو *werden* پس از مصدر به پایان جمله می‌رود."
+      de: "Im Nebensatz steht *werden* ganz am Ende, nach dem Infinitiv."
+
+attemptSize: 12
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Morgen ___ es regnen.
+    options: [wirst, wird, werdet]
+    answer: wird
+    explanation:
+      en: "With *es* the form of *werden* is *wird*."
+      fa: "با *es* صورت *werden* *wird* است."
+      de: "Bei *es* heißt es *wird*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich ___ dich bestimmt besuchen.
+    options: [wird, werden, werde]
+    answer: werde
+    explanation:
+      en: "With *ich* the form of *werden* is *werde*."
+      fa: "با *ich* صورت *werden* *werde* است."
+      de: "Bei *ich* heißt es *werde*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ du mir morgen helfen?
+    options: [Wirst, Wird, Werdet]
+    answer: Wirst
+    explanation:
+      en: "With *du* the form of *werden* is *wirst*. In a yes/no question it stands first."
+      fa: "با *du* صورت *werden* *wirst* است. در پرسش بله یا نه در آغاز جمله می‌آید."
+      de: "Bei *du* heißt es *wirst*. In der Ja/Nein-Frage steht es am Anfang."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ihr ___ das schon schaffen.
+    options: [werden, werdet, wird]
+    answer: werdet
+    explanation:
+      en: "With *ihr* the form of *werden* is *werdet*."
+      fa: "با *ihr* صورت *werden* *werdet* است."
+      de: "Bei *ihr* heißt es *werdet*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wir werden nächstes Jahr nach Spanien ___.
+    options: [gefahren, fahren, fahrt]
+    answer: fahren
+    explanation:
+      en: "After *werden* the infinitive comes at the end: *fahren*."
+      fa: "پس از *werden* مصدر در پایان جمله می‌آید: *fahren*."
+      de: "Mit *werden* steht der Infinitiv am Ende: *fahren*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Er wird wohl noch im Büro sein. Was bedeutet das?"
+    options: [Er kommt später ins Büro., Er ist wahrscheinlich noch im Büro., Er war gestern im Büro.]
+    answer: Er ist wahrscheinlich noch im Büro.
+    explanation:
+      en: "*Werden* with *wohl* is a guess about now: he is probably still at the office."
+      fa: "*werden* همراه با *wohl* حدسی دربارهٔ اکنون است: او احتمالاً هنوز در دفتر است."
+      de: "*Werden* mit *wohl* ist eine Vermutung über jetzt: Er ist wahrscheinlich noch im Büro."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich weiß, dass du die Prüfung ___.
+    options: [wirst bestehen, bestanden wirst, bestehen wirst]
+    answer: bestehen wirst
+    explanation:
+      en: "After *dass*, *werden* goes to the very end, after the infinitive: *bestehen wirst*."
+      fa: "پس از *dass*، *werden* پس از مصدر به پایان جمله می‌رود: *bestehen wirst*."
+      de: "Nach *dass* steht *werden* ganz am Ende, nach dem Infinitiv: *bestehen wirst*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Sie sagt, dass sie morgen früher kommen ___.
+    options: [werden, wird, wirst]
+    answer: wird
+    explanation:
+      en: "*Sie* here is one woman (*sagt*), so *wird*, at the end of the subordinate clause."
+      fa: "*sie* این‌جا سوم‌شخص مفرد است (*sagt*)، پس *wird* در پایان جملهٔ پیرو می‌آید."
+      de: "*Sie* ist hier eine Frau (*sagt*). Darum *wird*, am Ende vom Nebensatz."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Morgen ___ wir zu Hause bleiben.
+    options: [wird, werdet, werden]
+    answer: werden
+    explanation:
+      en: "With *wir* the form of *werden* is *werden*."
+      fa: "با *wir* صورت *werden* همان *werden* است."
+      de: "Bei *wir* heißt es *werden*."
+  - id: true-1
+    type: true-false
+    prompt: Ich werde dich morgen anrufen.
+    answer: true
+    explanation:
+      en: "*Werde* stands in position 2 and the infinitive *anrufen* at the end. The sentence is correct."
+      fa: "*werde* در جایگاه دوم و مصدر *anrufen* در پایان جمله است. جمله درست است."
+      de: "*Werde* steht auf Position 2, der Infinitiv *anrufen* am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Er wird morgen kommt.
+    answer: false
+    explanation:
+      en: "After *werden* comes the infinitive: *Er wird morgen kommen.*"
+      fa: "پس از *werden* مصدر می‌آید: *Er wird morgen kommen.*"
+      de: "Mit *werden* steht der Infinitiv: *Er wird morgen kommen.*"
+  - id: true-3
+    type: true-false
+    prompt: Ich wird dir am Wochenende helfen.
+    answer: false
+    explanation:
+      en: "With *ich* the form is *werde*: *Ich werde dir am Wochenende helfen.*"
+      fa: "با *ich* صورت فعل *werde* است: *Ich werde dir am Wochenende helfen.*"
+      de: "Bei *ich* heißt es *werde*: *Ich werde dir am Wochenende helfen.*"
+  - id: true-4
+    type: true-false
+    prompt: Ich glaube, dass es morgen schneien wird.
+    answer: true
+    explanation:
+      en: "After *dass*, *wird* stands at the very end, after the infinitive. The sentence is correct."
+      fa: "پس از *dass*، *wird* پس از مصدر در پایان جمله است. جمله درست است."
+      de: "Nach *dass* steht *wird* ganz am Ende, nach dem Infinitiv. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Wirst du am Samstag zu meiner Party kommen?
+    answer: true
+    explanation:
+      en: "*Wirst* goes with *du*, and *kommen* is at the end. The sentence is correct."
+      fa: "*wirst* با *du* می‌آید و *kommen* در پایان جمله است. جمله درست است."
+      de: "*Wirst* passt zu *du*, und *kommen* steht am Ende. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Morgen wird es bestimmt regnet.
+    answer: regnet
+    explanation:
+      en: "After *werden* comes the infinitive: *Morgen wird es bestimmt regnen.*"
+      fa: "پس از *werden* مصدر می‌آید: *Morgen wird es bestimmt regnen.*"
+      de: "Mit *werden* steht der Infinitiv: *Morgen wird es bestimmt regnen.*"
+  - id: error-2
+    type: find-error
+    prompt: Ich weiß, dass er nicht kommen werdet.
+    answer: werdet
+    explanation:
+      en: "With *er* the form is *wird*: *Ich weiß, dass er nicht kommen wird.*"
+      fa: "با *er* صورت فعل *wird* است: *Ich weiß, dass er nicht kommen wird.*"
+      de: "Bei *er* heißt es *wird*: *Ich weiß, dass er nicht kommen wird.*"
+  - id: error-3
+    type: find-error
+    prompt: Du wird das bestimmt schaffen.
+    answer: wird
+    explanation:
+      en: "With *du* the form is *wirst*: *Du wirst das bestimmt schaffen.*"
+      fa: "با *du* صورت فعل *wirst* است: *Du wirst das bestimmt schaffen.*"
+      de: "Bei *du* heißt es *wirst*: *Du wirst das bestimmt schaffen.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Keine Sorge, ich ___ (werden) pünktlich sein.
+    answers: [werde]
+    explanation:
+      en: "With *ich* the form of *werden* is *werde*."
+      fa: "با *ich* صورت *werden* *werde* است."
+      de: "Bei *ich* heißt es *werde*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Du ___ (werden) sehen, der Film ist super.
+    answers: [wirst]
+    explanation:
+      en: "With *du* the form of *werden* is *wirst*."
+      fa: "با *du* صورت *werden* *wirst* است."
+      de: "Bei *du* heißt es *wirst*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir werden euch nächste Woche ___ (besuchen).
+    answers: [besuchen]
+    explanation:
+      en: "After *werden* the verb stays in the infinitive: *besuchen*."
+      fa: "پس از *werden* فعل به صورت مصدر می‌آید: *besuchen*."
+      de: "Mit *werden* bleibt das Verb im Infinitiv: *besuchen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ihr ___ (werden) bestimmt viel Spaß haben.
+    answers: [werdet]
+    explanation:
+      en: "With *ihr* the form of *werden* is *werdet*."
+      fa: "با *ihr* صورت *werden* *werdet* است."
+      de: "Bei *ihr* heißt es *werdet*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Ich glaube, dass es morgen regnen ___ (werden).
+    answers: [wird]
+    explanation:
+      en: "With *es* the form is *wird*, at the very end of the clause with *dass*."
+      fa: "با *es* صورت فعل *wird* است، در پایان جملهٔ پیرو با *dass*."
+      de: "Bei *es* heißt es *wird*, ganz am Ende vom Nebensatz mit *dass*."
+  - id: typed-gap-6
+    type: typed-gap-fill
+    prompt: Die Kinder ___ (werden) jetzt wahrscheinlich schon schlafen.
+    answers: [werden]
+    explanation:
+      en: "*Die Kinder* is *sie* (plural): *werden*. With *wahrscheinlich* it is a guess about now."
+      fa: "*die Kinder* سوم‌شخص جمع است: *werden*. همراه با *wahrscheinlich* حدسی دربارهٔ اکنون است."
+      de: "*Die Kinder* ist *sie* (Plural): *werden*. Mit *wahrscheinlich* ist es eine Vermutung über jetzt."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Futur I: es regnet"
+    answers: [es wird regnen]
+    explanation:
+      en: "*Wird* in position 2 and the infinitive at the end: *es wird regnen*."
+      fa: "*wird* در جایگاه دوم و مصدر در پایان: *es wird regnen*."
+      de: "*Wird* auf Position 2, der Infinitiv am Ende: *es wird regnen*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Futur I: ich rufe dich an"
+    answers: [ich werde dich anrufen]
+    explanation:
+      en: "The separable verb stays whole in the infinitive at the end: *ich werde dich anrufen*."
+      fa: "فعل جداشدنی به صورت مصدر، یکپارچه، در پایان می‌آید: *ich werde dich anrufen*."
+      de: "Das trennbare Verb steht ganz als Infinitiv am Ende: *ich werde dich anrufen*."
+  - id: typed-3
+    type: typed-answer
+    prompt: "Futur I: sie kommt"
+    answers: [sie wird kommen]
+    explanation:
+      en: "*Sie kommt* is one person, so *wird*: *sie wird kommen*."
+      fa: "*sie kommt* سوم‌شخص مفرد است، پس *wird*: *sie wird kommen*."
+      de: "*Sie kommt* ist eine Person. Darum *wird*: *sie wird kommen*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wann, wirst, du, kommen]
+    end: "?"
+    explanation:
+      en: "The question word comes first, *wirst* second and the infinitive at the end."
+      fa: "واژهٔ پرسشی در آغاز، *wirst* در جایگاه دوم و مصدر در پایان جمله می‌آید."
+      de: "Das Fragewort steht am Anfang, *wirst* auf Position 2, der Infinitiv am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wo, werdet, ihr, wohnen]
+    end: "?"
+    explanation:
+      en: "The question word comes first, *werdet* second and the infinitive at the end."
+      fa: "واژهٔ پرسشی در آغاز، *werdet* در جایگاه دوم و مصدر در پایان جمله می‌آید."
+      de: "Das Fragewort steht am Anfang, *werdet* auf Position 2, der Infinitiv am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, werde]
+      - [du, wirst]
+      - [er, wird]
+      - [ihr, werdet]
+    explanation:
+      en: "The forms of *werden*: *ich werde*, *du wirst*, *er wird*, *ihr werdet*."
+      fa: "صورت‌های *werden*: *ich werde*، *du wirst*، *er wird*، *ihr werdet*."
+      de: "Die Formen von *werden*: *ich werde*, *du wirst*, *er wird*, *ihr werdet*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 19c3b0d42bbf7eb5

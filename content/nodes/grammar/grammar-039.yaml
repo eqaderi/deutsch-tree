@@ -4,10 +4,313 @@ kind: grammar
 level: A2
 chapter: a2-polite-forms
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-035, grammar-036, grammar-037]
 title:
   en: "*wäre*, *hätte*, *würde*, *könnte* as a paradigm"
   fa: "*wäre*، *hätte*، *würde* و *könnte*: همهٔ صیغه‌ها"
   de: "*wäre*, *hätte*, *würde*, *könnte*: alle Formen"
+
+explanations:
+  en:
+    rule: >
+      *Wäre*, *hätte*, *würde* and *könnte* are the *Konjunktiv II* of *sein*,
+      *haben*, *werden* and *können*. Each is the past (*Präteritum*) with an
+      umlaut: *war* → *wäre*, *hatte* → *hätte*, *wurde* → *würde*, *konnte* →
+      *könnte*. All four take the same endings: *ich* and *er* / *sie* / *es*
+      end in *-e*, *du* in *-st* (*du hättest*, *du würdest*, *du könntest*,
+      *du wärst* or *wärest*), *wir* and *sie* / *Sie* in *-n*, *ihr* in *-t*
+      (*ihr wärt* or *wäret*). They say what is wished or imagined, not what
+      is real: a wish (*Ich wäre jetzt gern zu Hause.*), a suggestion (*Wir
+      könnten morgen wandern.*), a polite question (*Würdest du mir helfen?*)
+      or what you think of an idea (*Das wäre schön!*). The umlaut matters:
+      without it, *war*, *hatte*, *wurde* and *konnte* are the past.
+  fa:
+    rule: >
+      *wäre*، *hätte*، *würde* و *könnte* صورت *Konjunktiv II* (وجه شرطی)
+      فعل‌های *sein*، *haben*، *werden* و *können* هستند. هر کدام همان گذشتهٔ
+      ساده (*Präteritum*) است با دو نقطه (*Umlaut*): *wäre* از *war*، *hätte* از
+      *hatte*، *würde* از *wurde* و *könnte* از *konnte*. هر چهار فعل شناسه‌های
+      یکسانی دارند: *ich* و *er* / *sie* / *es* به *-e* ختم می‌شوند، *du* به
+      *-st* (*du hättest*، *du würdest*، *du könntest*، *du wärst* یا
+      *wärest*)، *wir* و *sie* / *Sie* به *-n* و *ihr* به *-t* (*ihr wärt* یا
+      *wäret*). این صورت‌ها از آرزو یا تصور سخن می‌گویند، نه از واقعیت: آرزو
+      (*Ich wäre jetzt gern zu Hause.*)، پیشنهاد (*Wir könnten morgen
+      wandern.*)، پرسش مؤدبانه (*Würdest du mir helfen?*) یا نظر دربارهٔ یک
+      فکر (*Das wäre schön!*). دو نقطه مهم است: بی آن، *war*، *hatte*، *wurde*
+      و *konnte* گذشته‌اند.
+  de:
+    rule: >
+      *Wäre*, *hätte*, *würde* und *könnte* sind der Konjunktiv II von *sein*,
+      *haben*, *werden* und *können*. Man bildet sie aus dem Präteritum mit
+      Umlaut: *war* → *wäre*, *hatte* → *hätte*, *wurde* → *würde*, *konnte*
+      → *könnte*. Alle vier haben die gleichen Endungen: *ich* und *er* /
+      *sie* / *es* enden auf *-e*, *du* auf *-st* (*du hättest*, *du würdest*,
+      *du könntest*, *du wärst* oder *wärest*), *wir* und *sie* / *Sie* auf
+      *-n*, *ihr* auf *-t* (*ihr wärt* oder *wäret*). Die Formen sagen, was
+      man sich wünscht oder vorstellt, nicht was wirklich ist: einen Wunsch
+      (*Ich wäre jetzt gern zu Hause.*), einen Vorschlag (*Wir könnten morgen
+      wandern.*), eine höfliche Frage (*Würdest du mir helfen?*) oder eine
+      Meinung zu einer Idee (*Das wäre schön!*). Der Umlaut ist wichtig: Ohne
+      Umlaut sind *war*, *hatte*, *wurde* und *konnte* Präteritum.
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*sein*", fa: "*sein*", de: "*sein*" }
+    - { en: "*haben*", fa: "*haben*", de: "*haben*" }
+    - { en: "*werden*", fa: "*werden*", de: "*werden*" }
+    - { en: "*können*", fa: "*können*", de: "*können*" }
+  rows:
+    - [ich, wäre, hätte, würde, könnte]
+    - [du, wärst, hättest, würdest, könntest]
+    - [er / sie / es, wäre, hätte, würde, könnte]
+    - [wir, wären, hätten, würden, könnten]
+    - [ihr, wärt, hättet, würdet, könntet]
+    - [sie / Sie, wären, hätten, würden, könnten]
+
+examples:
+  - de: Ich wäre jetzt gern zu Hause.
+    en: I'd like to be at home now.
+    fa: کاش الان خانه بودم.
+  - de: Ich hätte gern mehr Zeit für meine Familie.
+    en: I'd like to have more time for my family.
+    fa: دلم می‌خواهد وقت بیشتری برای خانواده‌ام داشته باشم.
+  - de: Das wäre schön!
+    en: That would be nice!
+    fa: چه خوب می‌شد!
+  - de: Wir könnten am Sonntag wandern gehen.
+    en: We could go hiking on Sunday.
+    fa: می‌توانیم یکشنبه به کوه‌پیمایی برویم.
+  - de: Würdest du mir kurz helfen?
+    en: Would you help me for a moment?
+    fa: می‌شود یک لحظه کمکم کنی؟
+  - de: Hättet ihr am Samstag Zeit?
+    en: Would you (plural) have time on Saturday?
+    fa: شنبه وقت دارید؟
+  - de: Ein Urlaub am Meer wäre toll.
+    en: A holiday by the sea would be great.
+    fa: یک سفر به کنار دریا عالی می‌شد.
+  - de: Mein Sohn würde gern in Spanien leben.
+    en: My son would like to live in Spain.
+    fa: پسرم دلش می‌خواهد در اسپانیا زندگی کند.
+
+mistakes:
+  - wrong: Ich war jetzt gern zu Hause.
+    right: Ich wäre jetzt gern zu Hause.
+    why:
+      en: "*War* is the past. For a wish about now you need *wäre*, with *ä*."
+      fa: "*war* گذشته است. برای آرزویی دربارهٔ اکنون، *wäre* با *ä* لازم است."
+      de: "*War* ist Präteritum. Für einen Wunsch jetzt braucht man *wäre* mit *ä*."
+  - wrong: Wäre du gern Lehrer?
+    right: Wärst du gern Lehrer?
+    why:
+      en: "With *du* the form ends in *-st*: *wärst* (or *wärest*)."
+      fa: "با *du* صورت فعل به *-st* ختم می‌شود: *wärst* (یا *wärest*)."
+      de: "Bei *du* endet die Form auf *-st*: *wärst* (oder *wärest*)."
+  - wrong: Ihr hätten bestimmt viel Spaß.
+    right: Ihr hättet bestimmt viel Spaß.
+    why:
+      en: "With *ihr* the form ends in *-t*: *hättet*."
+      fa: "با *ihr* صورت فعل به *-t* ختم می‌شود: *hättet*."
+      de: "Bei *ihr* endet die Form auf *-t*: *hättet*."
+  - wrong: Wir konnten morgen ins Schwimmbad gehen.
+    right: Wir könnten morgen ins Schwimmbad gehen.
+    why:
+      en: "*Konnten* is the past, which does not fit *morgen*. A suggestion needs *könnten*, with *ö*."
+      fa: "*konnten* گذشته است و با *morgen* جور نیست. پیشنهاد *könnten* با *ö* لازم دارد."
+      de: "*Konnten* ist Präteritum und passt nicht zu *morgen*. Ein Vorschlag braucht *könnten* mit *ö*."
+  - wrong: Ich würde gern ein Eis.
+    right: Ich hätte gern ein Eis.
+    why:
+      en: "*Würde* needs an infinitive at the end. For a thing you want, say *hätte gern*."
+      fa: "*würde* در پایان جمله مصدر لازم دارد. برای خواستن یک چیز، *hätte gern* بگویید."
+      de: "*Würde* braucht einen Infinitiv am Ende. Für eine Sache sagt man *hätte gern*."
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: Ich ___ jetzt gern am Strand.
+    options: [wäre, hätte, würde]
+    answer: wäre
+    explanation:
+      en: "Where you would like to be: *sein*, so *wäre*."
+      fa: "سخن از جایی است که دوست دارید باشید: فعل *sein*، پس *wäre*."
+      de: "Wo man gern sein möchte: *sein*, also *wäre*."
+  - id: q2
+    type: gap-fill
+    prompt: Wir ___ gern mehr Urlaub.
+    options: [hätten, wären, würden]
+    answer: hätten
+    explanation:
+      en: "What you would like to have: *haben*, so *hätten*."
+      fa: "سخن از چیزی است که دوست دارید داشته باشید: فعل *haben*، پس *hätten*."
+      de: "Was man gern haben möchte: *haben*, also *hätten*."
+  - id: q3
+    type: gap-fill
+    prompt: ___ du mir bitte das Buch geben?
+    options: [Würdest, Wärst, Hättest]
+    answer: Würdest
+    explanation:
+      en: "A request with an infinitive at the end: *würdest* + *geben*."
+      fa: "درخواستی با مصدر در پایان جمله: *würdest* همراه با *geben*."
+      de: "Eine Bitte mit Infinitiv am Ende: *würdest* + *geben*."
+  - id: q4
+    type: multiple-choice
+    prompt: Ein Picknick im Park? Das ___ toll!
+    options: [wäre, hätte, würde]
+    answer: wäre
+    explanation:
+      en: "*Das ist toll* becomes *das wäre toll*: the idea would be great."
+      fa: "*das ist toll* می‌شود *das wäre toll*: این فکر عالی می‌شد."
+      de: "*Das ist toll* wird zu *das wäre toll*: Die Idee wäre toll."
+  - id: q5
+    type: multiple-choice
+    prompt: Ihr ___ am Wochenende zu uns kommen.
+    options: [könntet, könntest, könnten]
+    answer: könntet
+    explanation:
+      en: "With *ihr* the form ends in *-t*: *könntet*."
+      fa: "با *ihr* صورت فعل به *-t* ختم می‌شود: *könntet*."
+      de: "Bei *ihr* endet die Form auf *-t*: *könntet*."
+  - id: q6
+    type: multiple-choice
+    prompt: ___ du gern Lehrer?
+    options: [Wärst, Wäre, Wärt]
+    answer: Wärst
+    explanation:
+      en: "With *du* the form ends in *-st*: *wärst*."
+      fa: "با *du* صورت فعل به *-st* ختم می‌شود: *wärst*."
+      de: "Bei *du* endet die Form auf *-st*: *wärst*."
+  - id: q7
+    type: multiple-choice
+    prompt: "Was bedeutet „Ich wäre gern in Paris.“?"
+    options: [Ich bin nicht in Paris und möchte dort sein., Ich war in Paris., Ich bin gern in Paris.]
+    answer: Ich bin nicht in Paris und möchte dort sein.
+    explanation:
+      en: "*Wäre gern* is a wish: you are not there, but you would like to be."
+      fa: "*wäre gern* آرزوست: آن‌جا نیستید، ولی دوست دارید آن‌جا باشید."
+      de: "*Wäre gern* ist ein Wunsch: Man ist nicht dort, aber man möchte dort sein."
+  - id: q8
+    type: true-false
+    prompt: Hättet ihr morgen Zeit?
+    answer: true
+    explanation:
+      en: "With *ihr* the form is *hättet*. The sentence is correct."
+      fa: "با *ihr* صورت فعل *hättet* است. جمله درست است."
+      de: "Bei *ihr* heißt es *hättet*. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Er wärt gern Pilot.
+    answer: false
+    explanation:
+      en: "With *er* the form is *wäre*: *Er wäre gern Pilot.*"
+      fa: "با *er* صورت فعل *wäre* است: *Er wäre gern Pilot.*"
+      de: "Bei *er* heißt es *wäre*: *Er wäre gern Pilot.*"
+  - id: q10
+    type: true-false
+    prompt: Wir könnten heute Abend Pizza bestellen.
+    answer: true
+    explanation:
+      en: "*Könnten* with *wir*, the infinitive at the end: a suggestion. The sentence is correct."
+      fa: "*könnten* با *wir* و مصدر در پایان: یک پیشنهاد. جمله درست است."
+      de: "*Könnten* bei *wir*, der Infinitiv am Ende: ein Vorschlag. Der Satz ist richtig."
+  - id: q11
+    type: find-error
+    prompt: Du hätte bestimmt keine Probleme.
+    answer: hätte
+    explanation:
+      en: "With *du* the form is *hättest*: *Du hättest bestimmt keine Probleme.*"
+      fa: "با *du* صورت فعل *hättest* است: *Du hättest bestimmt keine Probleme.*"
+      de: "Bei *du* heißt es *hättest*: *Du hättest bestimmt keine Probleme.*"
+  - id: q12
+    type: find-error
+    prompt: Ich war jetzt gern im Bett.
+    answer: war
+    explanation:
+      en: "A wish about now needs *wäre*: *Ich wäre jetzt gern im Bett.*"
+      fa: "آرزویی دربارهٔ اکنون *wäre* لازم دارد: *Ich wäre jetzt gern im Bett.*"
+      de: "Ein Wunsch jetzt braucht *wäre*: *Ich wäre jetzt gern im Bett.*"
+  - id: q13
+    type: word-order
+    answers:
+      - [wo, wärst, du, jetzt, gern]
+    end: "?"
+    explanation:
+      en: "Question word, *wärst*, the subject, then *jetzt gern*."
+      fa: "واژهٔ پرسشی، *wärst*، فاعل و سپس *jetzt gern*."
+      de: "Fragewort, *wärst*, Subjekt, dann *jetzt gern*."
+  - id: q14
+    type: typed-gap-fill
+    prompt: Du ___ (wäre) bestimmt eine gute Ärztin.
+    answers: [wärst, wärest]
+    explanation:
+      en: "With *du* the form is *wärst* (or *wärest*)."
+      fa: "با *du* صورت فعل *wärst* (یا *wärest*) است."
+      de: "Bei *du* heißt es *wärst* (oder *wärest*)."
+  - id: q15
+    type: typed-gap-fill
+    prompt: Ihr ___ (hätte) dort viel Spaß.
+    answers: [hättet]
+    explanation:
+      en: With *ihr* the form is *hättet*.
+      fa: با *ihr* صورت فعل *hättet* است.
+      de: Bei *ihr* heißt es *hättet*.
+  - id: q16
+    type: typed-gap-fill
+    prompt: ___ (könnte) ihr mir beim Umzug helfen?
+    answers: [Könntet]
+    explanation:
+      en: With *ihr* the form is *könntet*.
+      fa: با *ihr* صورت فعل *könntet* است.
+      de: Bei *ihr* heißt es *könntet*.
+  - id: q17
+    type: typed-gap-fill
+    prompt: Wir ___ (wäre) jetzt gern im Urlaub.
+    answers: [wären]
+    explanation:
+      en: With *wir* the form is *wären*.
+      fa: با *wir* صورت فعل *wären* است.
+      de: Bei *wir* heißt es *wären*.
+  - id: q18
+    type: typed-gap-fill
+    prompt: Was ___ (würde) du an meiner Stelle machen?
+    answers: [würdest]
+    explanation:
+      en: With *du* the form is *würdest*.
+      fa: با *du* صورت فعل *würdest* است.
+      de: Bei *du* heißt es *würdest*.
+  - id: q19
+    type: typed-answer
+    prompt: "Präteritum: er hatte → Konjunktiv II: er ___"
+    answers: [hätte, er hätte]
+    explanation:
+      en: "*Hatte* with an umlaut: *er hätte*."
+      fa: "*hatte* با دو نقطه (*Umlaut*): *er hätte*."
+      de: "*Hatte* mit Umlaut: *er hätte*."
+  - id: q20
+    type: typed-answer
+    prompt: "Präteritum: wir konnten → Konjunktiv II: wir ___"
+    answers: [könnten, wir könnten]
+    explanation:
+      en: "*Konnten* with an umlaut: *wir könnten*."
+      fa: "*konnten* با دو نقطه (*Umlaut*): *wir könnten*."
+      de: "*Konnten* mit Umlaut: *wir könnten*."
+  - id: q21
+    type: matching
+    answer:
+      - [ich wäre, ich war]
+      - [ich hätte, ich hatte]
+      - [ich würde, ich wurde]
+      - [ich könnte, ich konnte]
+    explanation:
+      en: "Each *Konjunktiv II* form is its past with an umlaut: *war* → *wäre*, *hatte* → *hätte*, *wurde* → *würde*, *konnte* → *könnte*."
+      fa: "هر صورت *Konjunktiv II* همان گذشتهٔ ساده است با دو نقطه (*Umlaut*): *wäre* از *war*، *hätte* از *hatte*، *würde* از *wurde* و *könnte* از *konnte*."
+      de: "Jede Form im Konjunktiv II ist das Präteritum mit Umlaut: *war* → *wäre*, *hatte* → *hätte*, *wurde* → *würde*, *konnte* → *könnte*."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, blind,
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: d773079d8ea1960e

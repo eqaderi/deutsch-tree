@@ -1,38 +1,382 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Telefon and Handy, and anrufen and telefonieren, are close; `tooCloseTo` keeps a close one
+# from being offered as a wrong meaning, and `alsoAccepted` takes it as right where it fits.
+# The scope list gives E-Mail "die/das": the node takes "die" and accepts "das E-Mail".
 id: vocabulary-post-phone-computer
 kind: vocabulary
 level: A1
 chapter: a1-words-town-travel
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Post, phone and computer"
   fa: "پست، تلفن و کامپیوتر"
   de: "Post, Telefon und Computer"
+attemptSize: 15
 words:
   - word: Brief
+    class: noun
+    article: der
+    plural: Briefe
+    level: A1
+    meaning:
+      en: letter (that you send)
+      fa: نامه
+    definition: ein Text auf Papier, den man in einem Umschlag an eine Person schickt
+    example:
+      de: Ich schreibe meiner Oma einen Brief.
+      en: I'm writing my grandma a letter.
+      fa: برای مامان‌بزرگم نامه می‌نویسم.
+
   - word: Karte
+    class: noun
+    article: die
+    plural: Karten
+    level: A1
+    meaning:
+      en: card, postcard
+      fa: کارت، کارت‌پستال
+    definition: ein Stück festes Papier, auf das man einen kurzen Gruß schreibt
+    example:
+      de: Wir schicken euch eine Karte aus Spanien.
+      en: We'll send you a card from Spain.
+      fa: از اسپانیا برایتان کارت‌پستال می‌فرستیم.
+    alsoAccepted: [die Postkarte, die Ansichtskarte, die Grußkarte]
+
   - word: Briefmarke
+    class: noun
+    article: die
+    plural: Briefmarken
+    level: A1
+    meaning:
+      en: (postage) stamp
+      fa: تمبر
+    definition: ein kleines Bild aus Papier; man klebt es auf den Brief und bezahlt so die Post
+    example:
+      de: Ich brauche zwei Briefmarken, bitte.
+      en: I need two stamps, please.
+      fa: لطفاً دو تمبر می‌خواهم.
+
   - word: Absender
+    class: noun
+    article: der
+    plural: Absender
+    level: A1
+    meaning:
+      en: sender
+      fa: فرستنده
+    definition: die Person, von der ein Brief oder ein Paket kommt
+    example:
+      de: Auf dem Brief steht kein Absender.
+      en: There's no sender's name on the letter.
+      fa: روی نامه نام فرستنده نیامده است.
+    alsoAccepted: [die Absenderin]
+
   - word: Empfänger
+    class: noun
+    article: der
+    plural: Empfänger
+    level: A1
+    meaning:
+      en: recipient, addressee
+      fa: گیرنده
+    definition: die Person, die einen Brief oder ein Paket bekommt
+    example:
+      de: Schreiben Sie die Adresse vom Empfänger in die Mitte.
+      en: Write the recipient's address in the middle.
+      fa: نشانی گیرنده را وسط بنویسید.
+    alsoAccepted: [die Empfängerin, der Adressat]
+
   - word: schicken
+    class: verb
+    level: A1
+    meaning:
+      en: to send
+      fa: فرستادن
+    definition: etwas mit der Post oder per E-Mail an eine andere Person senden
+    example:
+      de: Kannst du mir die Fotos schicken?
+      en: Can you send me the photos?
+      fa: می‌توانی عکس‌ها را برایم بفرستی؟
+    alsoAccepted: [senden, verschicken, abschicken, versenden]
+
   - word: Telefon
+    class: noun
+    article: das
+    plural: Telefone
+    level: A1
+    meaning:
+      en: telephone, phone
+      fa: تلفن
+    definition: damit spricht man mit Menschen, die weit weg sind; oft steht es zu Hause oder im Büro
+    example:
+      de: Das Telefon klingelt!
+      en: The phone is ringing!
+      fa: تلفن زنگ می‌زند!
+    alsoAccepted: [das Handy, der Telefonapparat]
+    tooCloseTo: [Handy]
+
   - word: Handy
+    class: noun
+    article: das
+    plural: Handys
+    level: A1
+    meaning:
+      en: mobile phone, cell phone
+      fa: تلفن همراه، گوشی
+    definition: ein kleines Telefon, das man immer in der Tasche mitnehmen kann
+    example:
+      de: Mein Handy ist leer, ich muss es laden.
+      en: My mobile is flat; I have to charge it.
+      fa: شارژ گوشی‌ام تمام شده و باید شارژش کنم.
+    alsoAccepted: [das Mobiltelefon, das Smartphone]
+    tooCloseTo: [Telefon]
+
   - word: Anruf
+    class: noun
+    article: der
+    plural: Anrufe
+    level: A1
+    meaning:
+      en: (phone) call
+      fa: تماس تلفنی
+    definition: ein Gespräch am Telefon, oder der Versuch, jemanden am Telefon zu erreichen
+    example:
+      de: Danke für deinen Anruf!
+      en: Thanks for your call!
+      fa: ممنون که زنگ زدی!
+    alsoAccepted: [das Telefonat, der Telefonanruf, das Telefongespräch]
+
   - word: anrufen
+    class: verb
+    level: A1
+    meaning:
+      en: to call, to ring (someone)
+      fa: زنگ زدن (به کسی)
+    definition: die Nummer von einer Person wählen, um mit ihr zu sprechen
+    example:
+      de: Ich rufe dich heute Abend an.
+      en: I'll ring you this evening.
+      fa: امشب به تو زنگ می‌زنم.
+    tooCloseTo: [telefonieren]
+
   - word: telefonieren
+    class: verb
+    level: A1
+    meaning:
+      en: to be on the phone, to talk on the phone
+      fa: تلفنی صحبت کردن
+    definition: mit jemandem am Telefon sprechen
+    example:
+      de: Mein Vater telefoniert gerade mit seinem Bruder.
+      en: My father is on the phone with his brother right now.
+      fa: پدرم الان با برادرش تلفنی صحبت می‌کند.
+    tooCloseTo: [anrufen]
+
   - word: Anrufbeantworter
+    class: noun
+    article: der
+    plural: Anrufbeantworter
+    level: A1
+    meaning:
+      en: answering machine, voicemail
+      fa: پیغام‌گیر
+    definition: ein Gerät am Telefon; wenn niemand da ist, kann man darauf eine Nachricht sprechen
+    example:
+      de: Ich habe dir eine Nachricht auf den Anrufbeantworter gesprochen.
+      en: I left you a message on the answering machine.
+      fa: روی پیغام‌گیرت برایت پیغام گذاشتم.
+    alsoAccepted: [die Mailbox]
+
   - word: Vorwahl
+    class: noun
+    article: die
+    plural: Vorwahlen
+    level: A1
+    meaning:
+      en: dialling code, area code
+      fa: پیش‌شماره
+    definition: die Zahlen vor der Telefonnummer, zum Beispiel für eine Stadt oder ein Land
+    example:
+      de: Wie ist die Vorwahl von Wien?
+      en: What's the dialling code for Vienna?
+      fa: پیش‌شمارهٔ وین چند است؟
+    alsoAccepted: [die Vorwahlnummer]
+
   - word: Nummer
+    class: noun
+    article: die
+    plural: Nummern
+    level: A1
+    meaning:
+      en: number (for example a phone number)
+      fa: شماره
+    definition: die Zahlen, mit denen man eine Person am Telefon erreicht; auch die Zahl von einem Haus
+    example:
+      de: Kannst du mir deine Nummer geben?
+      en: Can you give me your number?
+      fa: شماره‌ات را به من می‌دهی؟
+    alsoAccepted: [die Telefonnummer, die Handynummer, die Hausnummer]
+
   - word: Fax
+    class: noun
+    article: das
+    plural: Faxe
+    level: A1
+    meaning:
+      en: fax
+      fa: فکس، دورنگار
+    definition: ein Blatt Papier, das man über das Telefon an ein anderes Gerät schickt
+    example:
+      de: Bitte schicken Sie uns das Formular per Fax.
+      en: Please send us the form by fax.
+      fa: لطفاً فرم را با فکس برایمان بفرستید.
+    alsoAccepted: [das Telefax]
+
   - word: E-Mail
+    class: noun
+    article: die
+    plural: E-Mails
+    level: A1
+    meaning:
+      en: email
+      fa: ایمیل، نامهٔ الکترونیکی
+    definition: ein Brief, den man über das Internet schickt
+    example:
+      de: Ich schreibe dir morgen eine E-Mail.
+      en: I'll write you an email tomorrow.
+      fa: فردا برایت ایمیل می‌نویسم.
+    alsoAccepted: [das E-Mail, die Mail]
+
   - word: Internet
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: internet
+      fa: اینترنت
+    definition: das große Netz, in dem Computer auf der ganzen Welt verbunden sind
+    example:
+      de: Im Hotel gibt es kostenlos Internet.
+      en: There's free internet at the hotel.
+      fa: در هتل اینترنت رایگان هست.
+    alsoAccepted: [das Netz]
+
   - word: Computer
+    class: noun
+    article: der
+    plural: Computer
+    level: A1
+    meaning:
+      en: computer
+      fa: کامپیوتر، رایانه
+    definition: ein Gerät mit Bildschirm und Tastatur, oft auf dem Schreibtisch; damit arbeitet man und geht ins Internet
+    example:
+      de: Mein Computer ist sehr langsam.
+      en: My computer is very slow.
+      fa: کامپیوترم خیلی کند است.
+    alsoAccepted: [der Rechner, der PC, der Laptop]
+
   - word: Drucker
+    class: noun
+    article: der
+    plural: Drucker
+    level: A1
+    meaning:
+      en: printer
+      fa: چاپگر، پرینتر
+    definition: ein Gerät, das Texte und Bilder vom Computer auf Papier bringt
+    example:
+      de: Der Drucker hat kein Papier mehr.
+      en: The printer has run out of paper.
+      fa: کاغذ چاپگر تمام شده است.
+
   - word: drucken
+    class: verb
+    level: A1
+    meaning:
+      en: to print
+      fa: چاپ کردن
+    definition: einen Text oder ein Bild vom Computer auf Papier bringen
+    example:
+      de: Kannst du mir die Fahrkarte drucken?
+      en: Can you print the ticket for me?
+      fa: می‌توانی بلیت را برایم چاپ کنی؟
+    alsoAccepted: [ausdrucken]
+
   - word: anklicken
+    class: verb
+    level: A1
+    meaning:
+      en: to click (on)
+      fa: کلیک کردن (روی چیزی)
+    definition: am Computer mit der Maus auf ein Bild oder ein Wort klicken
+    example:
+      de: Klicken Sie das Bild an.
+      en: Click on the picture.
+      fa: روی تصویر کلیک کنید.
+    alsoAccepted: [klicken]
+
   - word: drücken
+    class: verb
+    level: A1
+    meaning:
+      en: to press (for example a button)
+      fa: فشار دادن (مثلاً دکمه)
+    definition: einen Knopf oder eine Taste mit dem Finger nach unten bewegen
+    example:
+      de: Drück auf den grünen Knopf.
+      en: Press the green button.
+      fa: دکمهٔ سبز را فشار بده.
+    alsoAccepted: [pressen, betätigen]
+
   - word: Zeitung
+    class: noun
+    article: die
+    plural: Zeitungen
+    level: A1
+    meaning:
+      en: newspaper
+      fa: روزنامه
+    definition: große Blätter Papier mit Nachrichten, jeden Tag oder jede Woche neu
+    example:
+      de: Steht das schon in der Zeitung?
+      en: Is that in the paper already?
+      fa: این خبر در روزنامه هم آمده است؟
+
   - word: Anzeige
+    class: noun
+    article: die
+    plural: Anzeigen
+    level: A1
+    meaning:
+      en: advertisement, (small) ad
+      fa: آگهی
+    definition: ein kurzer Text in der Zeitung oder im Internet; jemand sucht oder verkauft etwas
+    example:
+      de: Ich habe die Wohnung über eine Anzeige gefunden.
+      en: I found the flat through an ad.
+      fa: آپارتمان را از طریق یک آگهی پیدا کردم.
+    alsoAccepted: [die Annonce, das Inserat, die Kleinanzeige, die Werbung]
+
   - word: Papier
+    class: noun
+    article: das
+    plural: Papiere
+    level: A1
+    meaning:
+      en: paper
+      fa: کاغذ
+    definition: das Material von Büchern und Heften; man schreibt oder druckt darauf
+    example:
+      de: Hast du ein Blatt Papier für mich?
+      en: Have you got a sheet of paper for me?
+      fa: یک برگ کاغذ برایم داری؟
+
+review:
+  reviewer: independent AI agents (four fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 44, then 12, then 6 questions)
+  date: 2026-11-28
+  pool: 472f61f5e4fbc8e4

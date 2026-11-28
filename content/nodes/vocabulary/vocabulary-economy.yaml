@@ -1,37 +1,372 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-economy
 kind: vocabulary
 level: B1
 chapter: b1-words-work-money
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Business and the economy"
   fa: "کسب‌وکار و اقتصاد"
   de: "Wirtschaft und Handel"
+attemptSize: 15
 words:
   - word: Konsum
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: consumption (of goods)
+      fa: مصرف (کالا)
+    definition: wenn Menschen Waren kaufen und benutzen, zum Beispiel Essen, Kleidung oder Strom
+    example:
+      de: Der Konsum von Fleisch ist in Deutschland in den letzten Jahren gesunken.
+      en: Meat consumption in Germany has fallen in recent years.
+      fa: مصرف گوشت در آلمان در سال‌های اخیر کاهش یافته است.
+    alsoAccepted: [der Verbrauch]
+
+  # Nachfrage is how much people want to buy, Bedarf what is needed; neither is offered beside the other.
   - word: Nachfrage
+    class: noun
+    article: die
+    plural: Nachfragen
+    level: B1
+    meaning:
+      en: demand (for goods, from buyers)
+      fa: تقاضا (برای کالا)
+    definition: wie viele Leute eine Ware oder eine Leistung kaufen wollen
+    example:
+      de: Im Sommer ist die Nachfrage nach Ventilatoren besonders groß.
+      en: In summer the demand for fans is especially high.
+      fa: در تابستان تقاضا برای پنکه بسیار زیاد است.
+    tooCloseTo: [Bedarf]
+
   - word: Bedarf
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: need, requirement (the amount needed)
+      fa: نیاز (مقدار لازم)
+    definition: das, was man braucht, und wie viel davon man braucht
+    example:
+      de: In vielen Krankenhäusern gibt es einen großen Bedarf an Pflegekräften.
+      en: Many hospitals have a great need for nursing staff.
+      fa: بسیاری از بیمارستان‌ها به پرستار نیاز زیادی دارند.
+    tooCloseTo: [Nachfrage, benötigen]
+
   - word: benötigen
+    class: verb
+    level: B1
+    meaning:
+      en: to need, to require
+      fa: نیاز داشتن، لازم داشتن
+    definition: etwas haben müssen, weil es fehlt oder weil man es für etwas braucht
+    example:
+      de: Für den Antrag benötigen Sie einen gültigen Ausweis.
+      en: You need a valid ID for the application.
+      fa: برای این درخواست، کارت شناسایی معتبر لازم دارید.
+    alsoAccepted: [brauchen]
+    tooCloseTo: [Bedarf]
+
   - word: verbrauchen
+    class: verb
+    level: B1
+    meaning:
+      en: to use up, to consume
+      fa: مصرف کردن
+    definition: etwas benutzen, bis es weniger wird oder nichts mehr da ist, zum Beispiel Strom oder Benzin
+    example:
+      de: Unser neuer Kühlschrank verbraucht viel weniger Strom als der alte.
+      en: Our new fridge uses much less electricity than the old one.
+      fa: یخچال تازهٔ ما خیلی کمتر از یخچال قبلی برق مصرف می‌کند.
+    alsoAccepted: [aufbrauchen, konsumieren]
+
+  # Handel is the trade, handeln doing it; neither is offered as a wrong meaning of the other.
   - word: Handel
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: trade, commerce
+      fa: تجارت، بازرگانی
+    definition: das Kaufen und Verkaufen von Waren, zwischen Firmen oder zwischen Ländern
+    example:
+      de: Der Handel zwischen Europa und Asien wächst jedes Jahr.
+      en: Trade between Europe and Asia grows every year.
+      fa: تجارت میان اروپا و آسیا هر سال بیشتر می‌شود.
+    tooCloseTo: [handeln]
+
   - word: handeln
+    class: verb
+    level: B1
+    meaning:
+      en: to trade, to deal (in goods); to act
+      fa: تجارت کردن، معامله کردن؛ عمل کردن
+    definition: Waren kaufen und verkaufen; auch etwas tun, wenn eine Situation es verlangt
+    example:
+      de: Die Firma handelt seit vierzig Jahren mit Holz aus Skandinavien.
+      en: The company has been trading in wood from Scandinavia for forty years.
+      fa: این شرکت چهل سال است که با چوب اسکاندیناوی تجارت می‌کند.
+    tooCloseTo: [Handel]
+
   - word: Import
+    class: noun
+    article: der
+    plural: Importe
+    level: B1
+    meaning:
+      en: import, importing (of goods into a country)
+      fa: واردات
+    definition: wenn ein Land Waren aus anderen Ländern kauft und ins Land bringt
+    example:
+      de: Deutschland ist beim Import von Öl und Gas von anderen Ländern abhängig.
+      en: Germany depends on other countries for its imports of oil and gas.
+      fa: آلمان در واردات نفت و گاز به کشورهای دیگر وابسته است.
+    alsoAccepted: [die Einfuhr]
+
   - word: Export
+    class: noun
+    article: der
+    plural: Exporte
+    level: B1
+    meaning:
+      en: export, exporting (of goods to other countries)
+      fa: صادرات
+    definition: wenn ein Land Waren in andere Länder verkauft und dorthin schickt
+    example:
+      de: Autos und Maschinen sind für den deutschen Export sehr wichtig.
+      en: Cars and machines are very important for German exports.
+      fa: خودرو و ماشین‌آلات برای صادرات آلمان اهمیت زیادی دارند.
+    alsoAccepted: [die Ausfuhr]
+
+  # Hersteller makes a product, Anbieter offers it; neither is offered as a wrong meaning of the other.
   - word: Hersteller
+    class: noun
+    article: der
+    plural: Hersteller
+    level: B1
+    meaning:
+      en: manufacturer, maker
+      fa: تولیدکننده، سازنده
+    definition: eine Firma, die eine Ware macht, zum Beispiel Autos oder Handys
+    example:
+      de: Bei einem Fehler können Sie das Gerät direkt an den Hersteller schicken.
+      en: If there is a fault you can send the device straight to the manufacturer.
+      fa: اگر دستگاه ایرادی داشت، می‌توانید آن را مستقیم برای سازنده بفرستید.
+    alsoAccepted: [der Produzent]
+    tooCloseTo: [Anbieter]
+
   - word: Anbieter
+    class: noun
+    article: der
+    plural: Anbieter
+    level: B1
+    meaning:
+      en: provider (of a product or service)
+      fa: ارائه‌دهنده (کالا یا خدمات)
+    definition: eine Firma, die eine Ware oder eine Leistung verkauft, zum Beispiel Strom oder Internet
+    example:
+      de: Wir haben den Anbieter gewechselt und zahlen jetzt weniger für das Internet.
+      en: We changed provider and now pay less for the internet.
+      fa: شرکت ارائه‌دهنده را عوض کردیم و حالا برای اینترنت کمتر می‌پردازیم.
+    alsoAccepted: [die Anbieterin]
+    tooCloseTo: [Hersteller]
+
   - word: Konkurrenz
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: competition; the competitors
+      fa: رقابت؛ رقیبان
+    definition: andere Firmen, die das Gleiche verkaufen und die gleichen Kunden haben wollen
+    example:
+      de: Die Konkurrenz im Internet ist für kleine Geschäfte sehr stark.
+      en: The competition on the internet is very tough for small shops.
+      fa: رقابت در اینترنت برای مغازه‌های کوچک بسیار سخت است.
+    alsoAccepted: [die Konkurrenten]
+
   - word: Wirtschaft
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: economy
+      fa: اقتصاد
+    definition: alles, was in einem Land mit Arbeit, Geld, Waren und Firmen zu tun hat
+    example:
+      de: Die Wirtschaft ist im letzten Jahr nur wenig gewachsen.
+      en: The economy grew only a little last year.
+      fa: اقتصاد در سال گذشته فقط کمی رشد کرد.
+    alsoAccepted: [die Ökonomie]
+
   - word: Industrie
+    class: noun
+    article: die
+    plural: Industrien
+    level: B1
+    meaning:
+      en: industry
+      fa: صنعت
+    definition: alle großen Firmen und Fabriken, die mit Maschinen viele Waren machen
+    example:
+      de: In dieser Region arbeiten viele Menschen in der Industrie.
+      en: In this region many people work in industry.
+      fa: در این منطقه بسیاری از مردم در صنعت کار می‌کنند.
+
   - word: Produktion
+    class: noun
+    article: die
+    plural: Produktionen
+    level: B1
+    meaning:
+      en: production
+      fa: تولید
+    definition: das Machen von Waren, oft in großer Zahl in einer Fabrik
+    example:
+      de: Die Produktion der neuen Fahrräder beginnt im März.
+      en: Production of the new bicycles starts in March.
+      fa: تولید دوچرخه‌های تازه در ماه مارس آغاز می‌شود.
+    alsoAccepted: [die Herstellung]
+
   - word: produzieren
+    class: verb
+    level: B1
+    meaning:
+      en: to produce, to make (goods)
+      fa: تولید کردن
+    definition: Waren machen, meistens in einer Fabrik
+    example:
+      de: Die kleine Firma produziert Möbel aus Holz.
+      en: The small company produces wooden furniture.
+      fa: این شرکت کوچک مبلمان چوبی تولید می‌کند.
+    alsoAccepted: [herstellen]
+
   - word: Krise
+    class: noun
+    article: die
+    plural: Krisen
+    level: B1
+    meaning:
+      en: crisis
+      fa: بحران
+    definition: eine schwere, gefährliche Zeit, in der viele Probleme auf einmal da sind
+    example:
+      de: Während der Krise haben viele Firmen Mitarbeiter entlassen.
+      en: During the crisis many companies laid off staff.
+      fa: در دوران بحران، بسیاری از شرکت‌ها کارکنانشان را اخراج کردند.
+
   - word: gründen
+    class: verb
+    level: B1
+    meaning:
+      en: to found, to set up (a company, a club)
+      fa: تأسیس کردن، بنیان گذاشتن
+    definition: etwas Neues anfangen, das es vorher nicht gab, zum Beispiel eine Firma oder einen Verein
+    example:
+      de: Meine Tante hat vor zehn Jahren ihre eigene Firma gegründet.
+      en: My aunt set up her own company ten years ago.
+      fa: عمه‌ام ده سال پیش شرکت خودش را تأسیس کرد.
+
   - word: Trend
+    class: noun
+    article: der
+    plural: Trends
+    level: B1
+    meaning:
+      en: trend
+      fa: روند، گرایش رایج
+    definition: eine Entwicklung, bei der etwas immer häufiger wird, weil viele Menschen es gerade gut finden oder machen
+    example:
+      de: Fahrradfahren in der Stadt ist ein klarer Trend.
+      en: Cycling in the city is a clear trend.
+      fa: دوچرخه‌سواری در شهر به گرایشی آشکار تبدیل شده است.
+    alsoAccepted: [die Tendenz]
+
+  # Transport is the moving of goods, transportieren doing it.
   - word: Transport
+    class: noun
+    article: der
+    plural: Transporte
+    level: B1
+    meaning:
+      en: transport, transportation (of goods or people)
+      fa: حمل‌ونقل
+    definition: wenn man Waren oder Menschen mit einem Auto, Zug, Schiff oder Flugzeug an einen anderen Ort bringt
+    example:
+      de: Der Transport der Möbel kostet extra.
+      en: Transporting the furniture costs extra.
+      fa: حمل‌ونقل مبلمان هزینهٔ جداگانه دارد.
+    alsoAccepted: [die Beförderung]
+    tooCloseTo: [transportieren]
+
   - word: transportieren
+    class: verb
+    level: B1
+    meaning:
+      en: to transport, to carry (goods or people)
+      fa: حمل کردن، جابه‌جا کردن
+    definition: Waren oder Menschen von einem Ort an einen anderen bringen
+    example:
+      de: Der Lastwagen transportiert jeden Tag Obst und Gemüse nach Berlin.
+      en: The lorry carries fruit and vegetables to Berlin every day.
+      fa: این کامیون هر روز میوه و سبزی به برلین می‌برد.
+    alsoAccepted: [befördern]
+    tooCloseTo: [Transport]
+
+  # weltweit and global say the same; each is right when the other is asked for.
   - word: weltweit
+    class: adjective
+    level: B1
+    meaning:
+      en: worldwide
+      fa: در سراسر جهان
+    definition: auf der ganzen Erde, in allen Ländern
+    example:
+      de: Die Firma hat weltweit über tausend Mitarbeiter.
+      en: The company has more than a thousand employees worldwide.
+      fa: این شرکت در سراسر جهان بیش از هزار کارمند دارد.
+    alsoAccepted: [global]
+    tooCloseTo: [global]
+
   - word: Reform
+    class: noun
+    article: die
+    plural: Reformen
+    level: B1
+    meaning:
+      en: reform
+      fa: اصلاحات (در قانون یا نظام)
+    definition: eine große, geplante Änderung, zum Beispiel bei den Gesetzen oder in den Schulen
+    example:
+      de: Die Regierung plant eine Reform der Rente.
+      en: The government is planning a pension reform.
+      fa: دولت اصلاحاتی در نظام بازنشستگی در نظر دارد.
+
   - word: global
+    class: adjective
+    level: B1
+    meaning:
+      en: global
+      fa: جهانی
+    definition: so, dass es die ganze Welt betrifft
+    example:
+      de: Der Klimawandel ist ein globales Problem.
+      en: Climate change is a global problem.
+      fa: تغییر اقلیم مسئله‌ای جهانی است.
+    alsoAccepted: [weltweit]
+    tooCloseTo: [weltweit]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: fecab7383458e15f

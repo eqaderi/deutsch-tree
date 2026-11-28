@@ -77,12 +77,17 @@ its first mention in a node.
 | stem (of a verb) | Stamm | بن |
 | personal ending (of a verb) | Personalendung | شناسه |
 | ending (of an article, adjective or noun) | Endung | پایانه |
+| umlaut (*ä*, *ö*, *ü*) | Umlaut | دو نقطه (*Umlaut*) |
 | conjugation; to conjugate | Konjugation | صرف؛ صرف کردن |
 | regular / irregular | regelmäßig / unregelmäßig | باقاعده / بی‌قاعده |
+| mixed verb (*bringen*, *gebracht*) | gemischtes Verb | فعل آمیخته |
 | person; first person singular | Person | شخص؛ اول‌شخص مفرد (also دوم‌شخص، سوم‌شخص) |
 | singular / plural | Singular / Plural | مفرد / جمع |
 | polite *Sie* | Höflichkeitsform | *Sie* رسمی |
 | noun | Nomen | اسم |
+| *n-Deklination* (*der Kollege*, *den Kollegen*) | n-Deklination | صرف اسم با *-n* (*n-Deklination*) |
+| compound noun (*die Haustür*) | Kompositum | اسم مرکب |
+| linking letter (*-s-* in *Arbeitsplatz*) | Fugenelement | حرف میانجی |
 | article; definite / indefinite | Artikel | حرف تعریف؛ معین / نامعین |
 | masculine / feminine / neuter | maskulin / feminin / neutral | مذکر / مؤنث / خنثی |
 | case | Kasus | حالت |
@@ -91,18 +96,32 @@ its first mention in a node.
 | Dativ | Dativ | حالت *Dativ* (حالت مفعول باواسطه) |
 | Genitiv | Genitiv | حالت *Genitiv* (حالت ملکی) |
 | subject / object | Subjekt / Objekt | فاعل / مفعول |
+| direct / indirect object | direktes / indirektes Objekt | مفعول مستقیم / مفعول باواسطه |
 | pronoun; personal, possessive, reflexive, relative | Pronomen | ضمیر؛ شخصی، ملکی، انعکاسی، موصولی |
 | possessive article (*mein*) | Possessivartikel | حرف تعریف ملکی |
+| demonstrative article (*dieser*) | Demonstrativartikel | حرف تعریف اشاره |
+| interrogative article (*welch-*) | Frageartikel | حرف تعریف پرسشی |
 | preposition | Präposition | حرف اضافه |
 | two-way preposition | Wechselpräposition | حرف اضافهٔ دوحالته |
 | adjective; comparative / superlative | Adjektiv; Komparativ / Superlativ | صفت؛ صفت تفضیلی / صفت عالی |
 | adverb | Adverb | قید |
+| degree word (*sehr*, *ziemlich*, *total*) | Gradwort | قید شدت |
+| particle (*doch*, *mal*, *denn*) | Partikel | ادات |
 | conjunction | Konjunktion | حرف ربط |
 | sentence, clause | Satz | جمله |
 | main clause / subordinate clause | Hauptsatz / Nebensatz | جملهٔ پایه / جملهٔ پیرو |
 | relative clause | Relativsatz | جملهٔ موصولی |
+| indirect question | indirekte Frage | پرسش غیرمستقیم |
 | word order; position 2 | Wortstellung; Position 2 | ترتیب واژه‌ها؛ جایگاه دوم |
+| position 0 (of *und*, *aber* …) | Position 0 | جایگاه صفر |
+| sentence bracket | Satzklammer | قاب جمله (*Satzklammer*) |
+| complement (of a verb) | Ergänzung | متمم |
+| intransitive / transitive (verb) | intransitiv / transitiv | (فعل) لازم / متعدی |
 | separable verb; prefix | trennbares Verb; Präfix | فعل جداشدنی؛ پیشوند |
+| suffix (*-ung*, *-bar*) | Suffix | پسوند |
+| diminutive (*das Brötchen*) | Diminutiv | اسم مصغّر |
+| stress (of a word) | Betonung, Wortakzent | تکیه |
+| inseparable verb | untrennbares Verb | فعل جدانشدنی |
 | modal verb | Modalverb | فعل وجهی |
 | reflexive verb | reflexives Verb | فعل انعکاسی |
 | auxiliary verb | Hilfsverb | فعل کمکی |
@@ -113,10 +132,16 @@ its first mention in a node.
 | Plusquamperfekt | Plusquamperfekt | گذشتهٔ بعید (*Plusquamperfekt*) |
 | future | Futur I | زمان آینده (*Futur I*) |
 | past participle | Partizip II | صفت مفعولی (*Partizip II*) |
+| present participle (*spielend*) | Partizip I | صفت فاعلی (*Partizip I*) |
+| participle (*Partizip I* or *II*), in general | Partizip | صفت فعلی |
+| principal parts (*gehen*, *ging*, *ist gegangen*) | Stammformen | سه صورت اصلی فعل |
 | Konjunktiv II | Konjunktiv II | *Konjunktiv II* (وجه شرطی) |
 | passive | Passiv | مجهول |
+| active (the opposite of passive) | Aktiv | معلوم |
 | negation | Negation | نفی |
 | question word | Fragewort | واژهٔ پرسشی |
+| question pronoun (*wer*, *was*) | Fragepronomen | ضمیر پرسشی |
+| indefinite pronoun (*jemand*, *einer*, *welche*) | Indefinitpronomen | ضمیر مبهم |
 
 A case is always named with «حالت» before it: «با حالت *Dativ* می‌آید», not
 «با *Dativ* می‌آید». A noun is named by its gender, with the article in

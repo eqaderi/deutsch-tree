@@ -4,10 +4,271 @@ kind: grammar
 level: A2
 chapter: a2-adjectives
 order: 8
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-104]
 title:
   en: "Degree words"
-  fa: "واژه‌های شدت (*sehr*، *ziemlich*، *total* …)"
+  fa: "قیدهای شدت (*sehr*، *ziemlich*، *total* …)"
   de: "Gradwörter (*sehr*, *ziemlich*, *total* …)"
+
+explanations:
+  en:
+    rule: >
+      Degree words say how strong an adjective is: *ein bisschen* (a
+      little), *ziemlich* (quite, fairly), *sehr* (very), *besonders*
+      (especially, particularly), and *total* and *echt* (totally, really).
+      They stand directly before the adjective and never take an ending,
+      also when the adjective does: *ein ziemlich großes Haus*. *Total* and
+      *echt* are spoken words: say them to friends, but write *sehr* or
+      *besonders* in a formal letter. *Nicht besonders* means "not very":
+      *Der Film war nicht besonders gut.* With a verb alone, *sehr* goes
+      after the object, never before it: *Ich mag Pizza sehr.*
+  fa:
+    rule: >
+      قیدهای شدت می‌گویند صفت چقدر قوی است: *ein bisschen* (کمی)، *ziemlich*
+      (نسبتاً)، *sehr* (خیلی)، *besonders* (به‌خصوص، به‌ویژه)، و *total* و
+      *echt* (واقعاً، کاملاً). این قیدها درست پیش از صفت می‌آیند و هرگز
+      پایانه نمی‌گیرند، حتی وقتی خود صفت پایانه می‌گیرد: *ein ziemlich
+      großes Haus*. *total* و *echt* گفتاری‌اند: با دوستان آن‌ها را به کار
+      ببرید، ولی در نامهٔ رسمی *sehr* یا *besonders* بنویسید. *nicht
+      besonders* یعنی «چندان … نه»: *Der Film war nicht besonders gut.* (فیلم
+      چندان خوب نبود). وقتی *sehr* فقط با فعل می‌آید، پس از مفعول قرار
+      می‌گیرد، نه پیش از آن: *Ich mag Pizza sehr.* در فارسی می‌گوییم «خیلی
+      پیتزا دوست دارم»، ولی در آلمانی *sehr* پیش از *Pizza* نمی‌آید.
+  de:
+    rule: >
+      Gradwörter sagen, wie stark ein Adjektiv ist: *ein bisschen*,
+      *ziemlich*, *sehr*, *besonders*, *total* und *echt*. Sie stehen direkt
+      vor dem Adjektiv und haben nie eine Endung, auch wenn das Adjektiv eine
+      hat: *ein ziemlich großes Haus*. *Total* und *echt* sagt man, wenn man
+      mit Freunden spricht. In einem formellen Brief schreibt man *sehr* oder
+      *besonders*. *Nicht besonders* heißt: nicht sehr. *Der Film war nicht
+      besonders gut.* Steht *sehr* nur mit einem Verb, kommt es nach dem
+      Objekt: *Ich mag Pizza sehr.*
+
+table:
+  columns:
+    - { en: Degree word, fa: قید شدت, de: Gradwort }
+    - { en: Where it is used, fa: کاربرد, de: Wo man es benutzt }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ein bisschen, überall, Ich bin ein bisschen müde.]
+    - [ziemlich, überall, Die Wohnung ist ziemlich klein.]
+    - [sehr, überall, Das Essen war sehr gut.]
+    - [besonders, überall, Heute ist es besonders kalt.]
+    - [nicht besonders, überall, Der Film war nicht besonders gut.]
+    - [echt, vor allem gesprochen, Das Konzert war echt super!]
+    - [total, vor allem gesprochen, Die Serie ist total langweilig.]
+
+examples:
+  - de: Die Serie ist total langweilig.
+    en: The series is totally boring.
+    fa: این سریال واقعاً کسل‌کننده است.
+  - de: Die Wohnung ist ziemlich klein, aber hell.
+    en: The flat is fairly small, but bright.
+    fa: آپارتمان نسبتاً کوچک است، ولی روشن است.
+  - de: Heute ist es besonders kalt.
+    en: It is especially cold today.
+    fa: امروز هوا به‌خصوص سرد است.
+  - de: Das Konzert war echt super!
+    en: The concert was really great!
+    fa: کنسرت واقعاً عالی بود!
+  - de: Der Film war nicht besonders spannend.
+    en: The film was not very exciting.
+    fa: فیلم چندان هیجان‌انگیز نبود.
+  - de: Wir haben ein ziemlich großes Problem.
+    en: We have a fairly big problem.
+    fa: مشکل نسبتاً بزرگی داریم.
+  - de: Ich bin ein bisschen müde.
+    en: I am a little tired.
+    fa: کمی خسته‌ام.
+  - de: Sie spricht sehr gut Deutsch.
+    en: She speaks German very well.
+    fa: او خیلی خوب آلمانی حرف می‌زند.
+  - de: Ich mag deine Musik sehr.
+    en: I like your music very much.
+    fa: موسیقی‌ات را خیلی دوست دارم.
+
+mistakes:
+  - wrong: Das ist ein ziemlicher großes Haus.
+    right: Das ist ein ziemlich großes Haus.
+    why:
+      en: "A degree word never takes an ending; only the adjective does: *ziemlich großes*."
+      fa: "قید شدت هرگز پایانه نمی‌گیرد؛ فقط صفت پایانه می‌گیرد: *ziemlich großes*."
+      de: "Ein Gradwort hat nie eine Endung, nur das Adjektiv: *ziemlich großes*."
+  - wrong: Ich mag sehr Pizza.
+    right: Ich mag Pizza sehr.
+    why:
+      en: "With a verb alone, *sehr* goes after the object, not before it."
+      fa: "وقتی *sehr* فقط با فعل می‌آید، پس از مفعول قرار می‌گیرد، نه پیش از آن."
+      de: "Steht *sehr* nur mit einem Verb, kommt es nach dem Objekt."
+  - wrong: Die Wohnung ist klein ziemlich.
+    right: Die Wohnung ist ziemlich klein.
+    why:
+      en: "A degree word stands directly before its adjective."
+      fa: "قید شدت درست پیش از صفت خود می‌آید."
+      de: "Ein Gradwort steht direkt vor dem Adjektiv."
+  - wrong: Der Film war besonders nicht gut.
+    right: Der Film war nicht besonders gut.
+    why:
+      en: '"Not very" is *nicht besonders*: *nicht* comes first.'
+      fa: "«چندان … نه» در آلمانی *nicht besonders* است: *nicht* اول می‌آید."
+      de: "Es heißt *nicht besonders*: *nicht* steht zuerst."
+  - wrong: "Sehr geehrte Frau Weber, das Zimmer war total schmutzig."
+    right: "Sehr geehrte Frau Weber, das Zimmer war sehr schmutzig."
+    why:
+      en: "*Total* and *echt* are spoken words. In a formal letter write *sehr*."
+      fa: "*total* و *echt* گفتاری‌اند. در نامهٔ رسمی *sehr* بنویسید."
+      de: "*Total* und *echt* sagt man beim Sprechen. In einem formellen Brief schreibt man *sehr*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist ein ___ großes Haus.
+    options: [ziemlich, ziemliches, ziemlicher]
+    answer: ziemlich
+    explanation:
+      en: "A degree word never takes an ending: *ein ziemlich großes Haus*."
+      fa: "قید شدت هرگز پایانه نمی‌گیرد: *ein ziemlich großes Haus*."
+      de: "Ein Gradwort hat nie eine Endung: *ein ziemlich großes Haus*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Der Film war nicht ___ gut.
+    options: [besonders, besonderer, besondere]
+    answer: besonders
+    explanation:
+      en: "*Nicht besonders gut*: not very good. The degree word has no ending."
+      fa: "*nicht besonders gut* یعنی چندان خوب نه. قید شدت پایانه ندارد."
+      de: "*Nicht besonders gut* heißt: nicht sehr gut. Das Gradwort hat keine Endung."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir hatten ein ___ schönes Wochenende.
+    options: [total, totales, totalen]
+    answer: total
+    explanation:
+      en: "Only the adjective takes the ending: *ein total schönes Wochenende*."
+      fa: "فقط صفت پایانه می‌گیرد: *ein total schönes Wochenende*."
+      de: "Nur das Adjektiv hat eine Endung: *ein total schönes Wochenende*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welches Wort sagt man vor allem mit Freunden, nicht in einem formellen Brief?
+    options: [echt, sehr, besonders]
+    answer: echt
+    explanation:
+      en: "*Echt* is a spoken word; *sehr* and *besonders* fit everywhere."
+      fa: "*echt* گفتاری است؛ *sehr* و *besonders* همه‌جا به کار می‌روند."
+      de: "*Echt* sagt man beim Sprechen. *Sehr* und *besonders* passen überall."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Der Film war nicht besonders gut. Das heißt:"
+    options: [Der Film war nicht sehr gut., Der Film war sehr gut., Der Film war besonders schlecht.]
+    answer: Der Film war nicht sehr gut.
+    explanation:
+      en: '*Nicht besonders* means "not very".'
+      fa: "*nicht besonders* یعنی «چندان … نه»."
+      de: "*Nicht besonders* heißt: nicht sehr."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Ich mag Pizza sehr., Ich mag sehr Pizza., Ich sehr mag Pizza.]
+    answer: Ich mag Pizza sehr.
+    explanation:
+      en: "With a verb alone, *sehr* goes after the object: *Ich mag Pizza sehr.*"
+      fa: "وقتی *sehr* فقط با فعل می‌آید، پس از مفعول قرار می‌گیرد: *Ich mag Pizza sehr.*"
+      de: "Steht *sehr* nur mit einem Verb, kommt es nach dem Objekt: *Ich mag Pizza sehr.*"
+  - id: choice-4
+    type: multiple-choice
+    prompt: Sonst ist es im März mild, aber heute ist es ___ kalt.
+    options: [besonders, nicht besonders, gar nicht]
+    answer: besonders
+    explanation:
+      en: "*Aber* sets today against the usual mild weather: today it is *besonders kalt*, colder than usual."
+      fa: "*aber* امروز را در برابر هوای معمولاً ملایم قرار می‌دهد: امروز هوا *besonders kalt* است، سردتر از معمول."
+      de: "*Aber* zeigt: Heute ist es anders als sonst, also *besonders kalt*."
+  - id: true-1
+    type: true-false
+    prompt: Das ist echt toll!
+    answer: true
+    explanation:
+      en: "*Echt* stands before the adjective, with no ending. The sentence is correct, and spoken."
+      fa: "*echt* بدون پایانه پیش از صفت آمده است. جمله درست و گفتاری است."
+      de: "*Echt* steht ohne Endung vor dem Adjektiv. Der Satz ist richtig, man sagt ihn beim Sprechen."
+  - id: true-2
+    type: true-false
+    prompt: Die Wohnung ist klein ziemlich.
+    answer: false
+    explanation:
+      en: "A degree word stands before its adjective: *ziemlich klein*."
+      fa: "قید شدت پیش از صفت خود می‌آید: *ziemlich klein*."
+      de: "Ein Gradwort steht vor dem Adjektiv: *ziemlich klein*."
+  - id: true-3
+    type: true-false
+    prompt: Er hat ein sehr schnelles Auto.
+    answer: true
+    explanation:
+      en: "*Sehr* has no ending; the adjective takes *-es* after *ein*. The sentence is correct."
+      fa: "*sehr* پایانه ندارد و صفت پس از *ein* پایانهٔ *-es* می‌گیرد. جمله درست است."
+      de: "*Sehr* hat keine Endung, das Adjektiv nach *ein* hat *-es*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Sie hat eine ziemliche große Wohnung.
+    answer: false
+    explanation:
+      en: "The degree word takes no ending: *eine ziemlich große Wohnung*."
+      fa: "قید شدت پایانه نمی‌گیرد: *eine ziemlich große Wohnung*."
+      de: "Das Gradwort hat keine Endung: *eine ziemlich große Wohnung*."
+  - id: true-5
+    type: true-false
+    prompt: Mein Bruder ist echt nett, aber ein bisschen faul.
+    answer: true
+    explanation:
+      en: "Both degree words stand before their adjectives. The sentence is correct."
+      fa: "هر دو قید شدت پیش از صفت خود آمده‌اند. جمله درست است."
+      de: "Beide Gradwörter stehen vor dem Adjektiv. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist ein ___ (ziemlich) teures Auto.
+    answers: [ziemlich]
+    explanation:
+      en: "Only the adjective takes the ending: *ein ziemlich teures Auto*."
+      fa: "فقط صفت پایانه می‌گیرد: *ein ziemlich teures Auto*."
+      de: "Nur das Adjektiv hat eine Endung: *ein ziemlich teures Auto*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das ist ein sehr ___ (schön) Lied.
+    answers: [schönes]
+    explanation:
+      en: "*Lied* is a *das* noun: after *ein* the adjective takes *-es*, even after *sehr*."
+      fa: "*Lied* اسم خنثی (*das*) است: پس از *ein* صفت *-es* می‌گیرد، پس از *sehr* نیز."
+      de: "*Lied* hat den Artikel *das*. Nach *ein* hat das Adjektiv *-es*, auch nach *sehr*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir haben eine ziemlich ___ (groß) Wohnung.
+    answers: [große]
+    explanation:
+      en: "*Eine Wohnung* is feminine *Akkusativ*: *-e*. *Ziemlich* changes nothing."
+      fa: "*eine Wohnung* در حالت *Akkusativ* مؤنث است: *-e*. *ziemlich* چیزی را تغییر نمی‌دهد."
+      de: "*Eine Wohnung* ist Akkusativ feminin: *-e*. *Ziemlich* ändert nichts."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Er hat einen total ___ (nett) Chef.
+    answers: [netten]
+    explanation:
+      en: "*Einen Chef* is masculine *Akkusativ*: *-en*. *Total* has no ending."
+      fa: "*einen Chef* در حالت *Akkusativ* مذکر است: *-en*. *total* پایانه ندارد."
+      de: "*Einen Chef* ist Akkusativ maskulin: *-en*. *Total* hat keine Endung."
+  - id: error-1
+    type: find-error
+    prompt: Er hat einen ziemlichen großen Hund.
+    answer: ziemlichen
+    explanation:
+      en: "The degree word takes no ending: *einen ziemlich großen Hund*."
+      fa: "قید شدت پایانه نمی‌گیرد: *einen ziemlich großen Hund*."
+      de: "Das Gradwort hat keine Endung: *einen ziemlich großen Hund*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: d28a9dd46fe9dd27

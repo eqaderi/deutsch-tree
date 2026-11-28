@@ -1,16 +1,21 @@
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
+import { NO_ARTICLE } from '../../content-model/index.ts'
 import { parseScopeList, SCOPE_LIST_FILE, type ScopeWord } from '../../content-model/scope-list.ts'
 import { type ContentCheck, type ContentProblem, problemIn } from './check.ts'
 
 /**
  * What a vocabulary node says about a word's grammar agrees with the scope
- * list: its word class, level and article, and its plural.
+ * list: its word class, level and article, its plural, and the "sich" of a
+ * reflexive verb.
  *
  * The node file writes them out because its page, its test and an Anki
  * export read them from there, and because the lists print a plural only as
  * a marker ("¨-e"), never as the word ("Stühle"). This check keeps the two
- * from drifting apart. A word that the scope list does not have is reported
+ * from drifting apart. A noun that takes no article ("Deutschland") is `none`
+ * in both. A verb the scope list marks as always reflexive ("sich") is
+ * written with it; one it marks in brackets ("(sich)") may be, by the sense
+ * the node teaches. A word that the scope list does not have is reported
  * by `vocabulary-covers-the-scope-list`; an empty column is not compared.
  */
 export const vocabularyAgreesWithTheScopeList: ContentCheck = async ({ contentDir, nodes }) => {
@@ -36,10 +41,16 @@ export const vocabularyAgreesWithTheScopeList: ContentCheck = async ({ contentDi
       differs('level', entry.level)
       const articles = listed.article.split('/').filter(Boolean)
       if (entry.article !== undefined && articles.length > 0 && !articles.includes(entry.article)) {
-        problem('article', `is "${entry.article}", but the scope list gives "${listed.article}" for "${entry.word}"`)
+        const gives =
+          listed.article === NO_ARTICLE
+            ? `no article for "${entry.word}"; write "article: ${NO_ARTICLE}"`
+            : `"${listed.article}" for "${entry.word}"`
+        problem('article', `is "${entry.article}", but the scope list gives ${gives}`)
       }
       const plural = pluralProblem(entry, listed)
       if (plural) problem('plural', plural)
+      const reflexive = reflexiveProblem(entry, listed, checked.node.status === 'published')
+      if (reflexive) problem('reflexive', reflexive)
     }
   }
   return problems
@@ -61,6 +72,27 @@ function pluralProblem(
   if (entry.plural !== undefined && forms.includes(entry.plural)) return undefined
   const given = entry.plural === undefined ? `"number: ${entry.number}"` : `"${entry.plural}"`
   return `is ${given}, but the scope list marks "${marker}" for "${entry.word}": "${forms.join('" or "')}"`
+}
+
+/**
+ * What is wrong with the "sich" of a verb, measured by the scope list, or
+ * nothing. A node that is coming soon may name its verbs bare.
+ */
+function reflexiveProblem(
+  entry: { word: string; reflexive?: string | undefined },
+  listed: ScopeWord,
+  published: boolean,
+): string | undefined {
+  const marker = listed.reflexive.trim()
+  if (marker === '') return undefined
+  const optional = /^\(.*\)$/.test(marker)
+  const learnedWith = marker.replace(/^\((.*)\)$/, '$1')
+  if (entry.reflexive === undefined) {
+    if (optional || !published) return undefined
+    return `is missing, but the scope list gives "${marker}" for "${entry.word}": the verb is learned with it; write "reflexive: ${learnedWith}"`
+  }
+  if (entry.reflexive === learnedWith) return undefined
+  return `is "${entry.reflexive}", but the scope list gives "${marker}" for "${entry.word}"`
 }
 
 /**
