@@ -1,39 +1,374 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A definition in simple German shows the word's place in a sentence with "…", since a small
+# word is hard to say in other words. Each word with several uses is taught in one of them:
+# "knapp" as "just under", "extra" as "specially", "per" as "by" (per E-Mail), "so viel" as
+# "as much as". Words that overlap (etwa, ungefähr; höchstens, maximal; minimal, gering;
+# gesamt, insgesamt; einzig, ausschließlich) accept each other where they mean the same and
+# are never offered as a wrong meaning of each other.
 id: vocabulary-quantity
 kind: vocabulary
 level: B1
 chapter: b1-words-time-amounts
 order: 6
-status: coming-soon
+status: published
 title:
   en: "How much? About, at most, in total"
   fa: "چقدر؟ حدوداً، حداکثر، در مجموع"
   de: "Wie viel? Ungefähr, höchstens, insgesamt"
+attemptSize: 15
 words:
   - word: etwa
+    class: adverb
+    level: B1
+    meaning:
+      en: about, around (before a number)
+      fa: حدوداً، در حدودِ
+    definition: "vor einer Zahl, die nicht genau gezählt ist: Es waren … dreißig Leute da."
+    example:
+      de: Die Fahrt nach Hamburg dauert etwa drei Stunden.
+      en: The journey to Hamburg takes about three hours.
+      fa: سفر به هامبورگ حدوداً سه ساعت طول می‌کشد.
+    alsoAccepted: [ungefähr, zirka, circa, rund]
+    tooCloseTo: [ungefähr, knapp]
+
   - word: ungefähr
+    class: adverb
+    level: B1
+    meaning:
+      en: roughly, approximately
+      fa: به‌طور تقریبی، نه دقیق
+    definition: "nicht ganz genau, nur so ähnlich: Ich bin in … zehn Minuten da."
+    example:
+      de: Ich bin in ungefähr zehn Minuten bei dir.
+      en: I'll be at your place in roughly ten minutes.
+      fa: تقریباً ده دقیقهٔ دیگر پیش تو هستم.
+    alsoAccepted: [etwa, zirka, circa, rund]
+    tooCloseTo: [knapp]
+
   - word: höchstens
+    class: adverb
+    level: B1
+    meaning:
+      en: at (the) most, not more than
+      fa: حداکثر، نه بیشتر از
+    definition: "nicht mehr als: Ich kann … eine Stunde bleiben, dann muss ich gehen."
+    example:
+      de: Ich kann höchstens eine Stunde bleiben.
+      en: I can stay for an hour at most.
+      fa: حداکثر یک ساعت می‌توانم بمانم.
+    alsoAccepted: [maximal]
+    tooCloseTo: [maximal]
+
   - word: zumindest
+    class: adverb
+    level: B1
+    meaning:
+      en: at least (if nothing more)
+      fa: دست‌کم، لااقل
+    definition: "wenn es schon nicht mehr ist, dann das: Du hättest … anrufen können!"
+    example:
+      de: Es hat geregnet, aber zumindest war es warm.
+      en: It rained, but at least it was warm.
+      fa: باران بارید، اما دست‌کم هوا گرم بود.
+    alsoAccepted: [wenigstens, mindestens]
+
   - word: maximal
+    class: adjective
+    level: B1
+    meaning:
+      en: maximum, the most allowed
+      fa: بیشینه، حداکثرِ مجاز
+    definition: "so viel, wie erlaubt oder möglich ist, nicht mehr: In den Aufzug passen … acht Personen."
+    example:
+      de: In den Aufzug dürfen maximal acht Personen.
+      en: A maximum of eight people are allowed in the lift.
+      fa: حداکثر هشت نفر اجازه دارند سوار آسانسور شوند.
+    alsoAccepted: [höchstens]
+
   - word: minimal
+    class: adjective
+    level: B1
+    meaning:
+      en: minimal, the least possible
+      fa: کمترین، حداقلی
+    definition: "so klein, wie es geht; das Gegenteil von „maximal“: Der Unterschied ist nur …"
+    example:
+      de: Der Unterschied zwischen den beiden Angeboten ist minimal.
+      en: The difference between the two offers is minimal.
+      fa: تفاوت میان این دو پیشنهاد بسیار ناچیز است.
+    tooCloseTo: [gering]
+
   - word: knapp
+    class: adjective
+    level: B1
+    meaning:
+      en: just under, barely (a little less than)
+      fa: کمی کمتر از، به‌زور
+    definition: "ein bisschen weniger als die Zahl: Wir haben … zwei Stunden gewartet, nicht ganz zwei."
+    example:
+      de: Bis zum Bahnhof sind es knapp fünf Kilometer.
+      en: It's just under five kilometres to the station.
+      fa: تا ایستگاه کمی کمتر از پنج کیلومتر راه است.
+    alsoAccepted: [fast, beinahe]
+    tooCloseTo: [gering]
+
   - word: gering
+    class: adjective
+    level: B1
+    meaning:
+      en: small, low (an amount or a risk)
+      fa: کم، اندک (مقدار یا خطر)
+    definition: "klein, nicht viel, zum Beispiel ein Preis oder eine Gefahr: Das Risiko ist sehr …"
+    example:
+      de: Die Kosten für den Kurs sind gering.
+      en: The cost of the course is low.
+      fa: هزینهٔ این کلاس اندک است.
+    alsoAccepted: [klein, niedrig, wenig]
+
   - word: zahlreich
+    class: adjective
+    level: B1
+    meaning:
+      en: numerous, many
+      fa: پرشمار، فراوان
+    definition: "sehr viele, in großer Zahl: Die Gäste sind … gekommen."
+    example:
+      de: Zum Konzert im Park kamen zahlreiche Besucher.
+      en: Numerous visitors came to the concert in the park.
+      fa: بازدیدکنندگان فراوانی به کنسرت پارک آمدند.
+    alsoAccepted: [zahlreiche, viele]
+
   - word: mehrere
+    class: pronoun
+    level: B1
+    meaning:
+      en: several
+      fa: چندین، چند
+    definition: "mehr als zwei, aber nicht sehr viele: Ich habe … Briefe geschrieben."
+    example:
+      de: Ich habe schon mehrere Male angerufen.
+      en: I've already called several times.
+      fa: تا حالا چندین بار زنگ زده‌ام.
+    alsoAccepted: [einige, ein paar]
+
   - word: sämtliche
+    class: pronoun
+    level: B1
+    meaning:
+      en: all (every single one, without exception)
+      fa: همهٔ، تمامیِ (بی‌استثنا)
+    definition: "alle, ohne Ausnahme: … Plätze im Saal waren besetzt."
+    example:
+      de: Sämtliche Zimmer im Hotel waren ausgebucht.
+      en: All the rooms in the hotel were booked up.
+      fa: تمامی اتاق‌های هتل رزرو شده بود.
+    alsoAccepted: [alle]
+
   - word: einzig
+    class: adjective
+    level: B1
+    meaning:
+      en: only, single (there is no other)
+      fa: تنها، یگانه (دیگری نیست)
+    definition: "nur diese eine Person oder Sache, keine andere; steht meistens vor einem Nomen"
+    example:
+      de: Er ist der einzige Mensch, der mein Geheimnis kennt.
+      en: He is the only person who knows my secret.
+      fa: او تنها کسی است که راز مرا می‌داند.
+    tooCloseTo: [ausschließlich]
+    alsoAccepted: [einzige]
+
   - word: gesamt
+    class: adjective
+    level: B1
+    meaning:
+      en: whole, entire (before a noun)
+      fa: کل، تمامِ (پیش از اسم)
+    definition: "ganz, mit allen Teilen zusammen; steht vor einem Nomen"
+    example:
+      de: Die gesamte Familie hat beim Umzug geholfen.
+      en: The whole family helped with the move.
+      fa: کل خانواده در اسباب‌کشی کمک کرد.
+    alsoAccepted: [gesamte, ganz]
+    tooCloseTo: [insgesamt]
+
   - word: insgesamt
+    class: adverb
+    level: B1
+    meaning:
+      en: in total, altogether
+      fa: روی هم، در مجموع
+    definition: "alles zusammengezählt: Das Essen und die Getränke kosten … sechzig Euro."
+    example:
+      de: Insgesamt haben an dem Kurs zwölf Leute teilgenommen.
+      en: Altogether twelve people took part in the course.
+      fa: روی هم دوازده نفر در این کلاس شرکت کردند.
+    alsoAccepted: [zusammen, im Ganzen]
+
   - word: übrig
+    class: adjective
+    level: B1
+    meaning:
+      en: left (over), remaining
+      fa: باقی‌مانده، اضافه
+    definition: "noch da, wenn das andere schon weg ist: Ist noch Kuchen …?"
+    example:
+      de: Von der Party ist noch viel Essen übrig.
+      en: There's still a lot of food left over from the party.
+      fa: از مهمانی هنوز غذای زیادی باقی مانده است.
+
   - word: Anzahl
+    class: noun
+    article: die
+    plural: Anzahlen
+    level: B1
+    meaning:
+      en: number (how many there are)
+      fa: تعداد
+    definition: "wie viele Personen oder Sachen es gibt: Die … der Plätze im Kurs ist begrenzt."
+    example:
+      de: Die Anzahl der Teilnehmer ist auf zwanzig begrenzt.
+      en: The number of participants is limited to twenty.
+      fa: تعداد شرکت‌کنندگان به بیست نفر محدود است.
+    alsoAccepted: [die Zahl]
+
   - word: Hälfte
+    class: noun
+    article: die
+    plural: Hälften
+    level: B1
+    meaning:
+      en: half
+      fa: نصف، نیمه
+    definition: "einer von zwei gleich großen Teilen: Ich esse nur die … von der Pizza."
+    example:
+      de: Die Hälfte der Klasse ist heute krank.
+      en: Half of the class is ill today.
+      fa: نصف کلاس امروز بیمار است.
+
   - word: Drittel
+    class: noun
+    article: das
+    plural: Drittel
+    level: B1
+    meaning:
+      en: third (one of three equal parts)
+      fa: یک‌سوم
+    definition: "einer von drei gleich großen Teilen"
+    example:
+      de: Ein Drittel meines Gehalts geht für die Miete weg.
+      en: A third of my salary goes on rent.
+      fa: یک‌سوم حقوقم صرف اجاره می‌شود.
+
   - word: so viel
+    class: phrase
+    level: B1
+    meaning:
+      en: as much (as), so much
+      fa: این‌قدر، به همان اندازه که
+    definition: "eine Menge, die gleich groß ist wie eine andere oder sehr groß: Nimm dir, … du möchtest."
+    example:
+      de: Nimm dir so viel Kuchen, wie du möchtest.
+      en: Take as much cake as you like.
+      fa: هر قدر کیک که می‌خواهی بردار.
+    alsoAccepted: [genauso viel, ebenso viel]
+
   - word: zusätzlich
+    class: adjective
+    level: B1
+    meaning:
+      en: additional, in addition
+      fa: اضافی، علاوه بر آن
+    definition: "noch dazu, mehr als das Normale: Für den Koffer zahlt man … zwanzig Euro."
+    example:
+      de: Für einen Koffer zahlen Sie zusätzlich dreißig Euro.
+      en: For a suitcase you pay an additional thirty euros.
+      fa: برای یک چمدان سی یورو اضافه می‌پردازید.
+    alsoAccepted: [extra]
+
   - word: extra
+    class: adverb
+    level: B1
+    meaning:
+      en: specially, on purpose (just for this)
+      fa: مخصوصاً، فقط برای همین
+    definition: "nur für diesen einen Zweck, mit Absicht: Ich habe den Kuchen … für dich gebacken."
+    example:
+      de: Ich bin extra früher aufgestanden, um dir zu helfen.
+      en: I got up earlier specially to help you.
+      fa: مخصوصاً زودتر بیدار شدم تا کمکت کنم.
+    alsoAccepted: [eigens, speziell]
+    tooCloseTo: [zusätzlich]
+
   - word: einschließlich
+    class: preposition
+    level: B1
+    meaning:
+      en: including
+      fa: با احتسابِ، شاملِ
+    definition: "mit dabei, mitgezählt: Der Preis ist … Frühstück."
+    example:
+      de: Das Zimmer kostet neunzig Euro einschließlich Frühstück.
+      en: The room costs ninety euros including breakfast.
+      fa: اتاق با احتساب صبحانه نود یورو است.
+    alsoAccepted: [inklusive]
+
   - word: ausschließlich
+    class: adverb
+    level: B1
+    meaning:
+      en: exclusively, solely
+      fa: منحصراً، فقط و فقط
+    definition: "nur das und nichts anderes: Der Parkplatz ist … für Kunden."
+    example:
+      de: Dieser Parkplatz ist ausschließlich für Kunden.
+      en: This car park is exclusively for customers.
+      fa: این پارکینگ منحصراً برای مشتریان است.
+    alsoAccepted: [nur, allein]
+
   - word: plus
+    class: preposition
+    level: B1
+    meaning:
+      en: plus, and on top
+      fa: به‌علاوهٔ، به اضافهٔ
+    definition: "das Zeichen + beim Rechnen; auch: und noch dazu"
+    example:
+      de: Die Miete beträgt sechshundert Euro plus Nebenkosten.
+      en: The rent is six hundred euros plus bills.
+      fa: اجاره ششصد یورو است، به اضافهٔ هزینه‌های جانبی.
+    alsoAccepted: [zuzüglich]
+
   - word: minus
+    class: preposition
+    level: B1
+    meaning:
+      en: minus, less (taken away)
+      fa: منهای، کم از
+    definition: "weniger, abgezogen, das Zeichen −: Zehn … drei ist sieben."
+    example:
+      de: Heute Nacht wird es minus zehn Grad kalt.
+      en: Tonight it will be minus ten degrees.
+      fa: امشب دما به منفی ده درجه می‌رسد.
+    alsoAccepted: [weniger, abzüglich]
+
   - word: per
+    class: preposition
+    level: B1
+    meaning:
+      en: by (by e-mail, by post)
+      fa: با، از راهِ (مثلاً با ایمیل یا پست)
+    definition: "mit, auf diesem Weg geschickt: Ich schicke Ihnen die Rechnung … E-Mail."
+    example:
+      de: Wir schicken Ihnen die Unterlagen per Post.
+      en: We'll send you the documents by post.
+      fa: مدارک را با پست برایتان می‌فرستیم.
+
+    alsoAccepted: [via]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 40 questions)
+  date: 2026-11-28
+  pool: f08499840503cf52

@@ -1,38 +1,356 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A definition in simple German shows the word's place in a sentence with "…", since a small
+# word is hard to say in other words. Each word with several uses is taught in one of them:
+# "bloß" as "only", "je" as "ever", "überhaupt" in a question ("even"), "meinetwegen" as
+# "fine by me". Words that overlap (absolut, völlig, komplett; ziemlich, relativ; extrem,
+# wahnsinnig, unglaublich; gar, überhaupt; wohl, offenbar) accept each other where they mean
+# the same and are never offered as a wrong meaning of each other.
 id: vocabulary-degree
 kind: vocabulary
 level: B1
 chapter: b1-words-time-amounts
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Quite, hardly, absolutely: words of degree"
   fa: "نسبتاً، به‌سختی، کاملاً: واژه‌های شدت"
   de: "Ziemlich, kaum, absolut: Gradwörter"
+attemptSize: 15
 words:
   - word: absolut
+    class: adjective
+    level: B1
+    meaning:
+      en: absolutely (one hundred per cent, without doubt)
+      fa: مطلقاً، صددرصد (بی هیچ تردیدی)
+    definition: "ohne jeden Zweifel, zu hundert Prozent: Da hast du … recht."
+    example:
+      de: Da hast du absolut recht.
+      en: You're absolutely right there.
+      fa: در این مورد صددرصد حق با توست.
+    alsoAccepted: [völlig, vollkommen, total, komplett, hundertprozentig]
+    tooCloseTo: [völlig, komplett]
+
   - word: völlig
+    class: adjective
+    level: B1
+    meaning:
+      en: completely, totally
+      fa: به‌کلی، کاملاً
+    definition: "ganz und gar, in jeder Hinsicht: Nach der Arbeit bin ich … kaputt."
+    example:
+      de: Nach dem langen Tag war ich völlig erschöpft.
+      en: After the long day I was completely exhausted.
+      fa: بعد از آن روز طولانی کاملاً از پا افتاده بودم.
+    alsoAccepted: [vollkommen, total, komplett, ganz, absolut]
+    tooCloseTo: [komplett]
+
   - word: komplett
+    class: adjective
+    level: B1
+    meaning:
+      en: complete, whole (nothing is missing)
+      fa: کامل، تمام و کمال (چیزی کم نیست)
+    definition: "mit allen Teilen, ohne dass etwas fehlt: Die Küche ist … neu."
+    example:
+      de: Wir haben die Wohnung komplett renoviert.
+      en: We've completely renovated the flat.
+      fa: آپارتمان را به‌طور کامل نوسازی کرده‌ایم.
+    alsoAccepted: [vollständig, völlig, ganz, total]
+
   - word: ziemlich
+    class: adverb
+    level: B1
+    meaning:
+      en: quite, rather (more than a little)
+      fa: نسبتاً، کمابیش زیاد
+    definition: "mehr als normal, aber nicht sehr: Heute ist es … kalt."
+    example:
+      de: Der Weg zum Bahnhof ist ziemlich weit.
+      en: The way to the station is quite far.
+      fa: راه ایستگاه نسبتاً دور است.
+    alsoAccepted: [relativ, recht, ganz schön]
+    tooCloseTo: [relativ]
+
   - word: relativ
+    class: adjective
+    level: B1
+    meaning:
+      en: relatively (compared with others)
+      fa: در مقایسه، به نسبت دیگران
+    definition: "wenn man es mit anderen Sachen vergleicht: Für Berlin ist die Miete … billig."
+    example:
+      de: Für eine Großstadt ist die Wohnung relativ günstig.
+      en: For a big city the flat is relatively cheap.
+      fa: برای یک شهر بزرگ، این آپارتمان به نسبت ارزان است.
+    alsoAccepted: [verhältnismäßig, vergleichsweise, ziemlich]
+
   - word: extrem
+    class: adjective
+    level: B1
+    meaning:
+      en: extremely, extreme
+      fa: بی‌اندازه، بسیار شدید
+    definition: "sehr, sehr stark, mehr geht fast nicht: Im Sommer ist es hier … heiß."
+    example:
+      de: Im Juli war es extrem heiß.
+      en: In July it was extremely hot.
+      fa: در ماه ژوئیه هوا بی‌اندازه گرم بود.
+    alsoAccepted: [äußerst, wahnsinnig, unglaublich]
+    tooCloseTo: [wahnsinnig, unglaublich]
+
   - word: wahnsinnig
+    class: adjective
+    level: B1
+    meaning:
+      en: insanely, incredibly (very, in speech)
+      fa: فوق‌العاده، به‌شدت (در گفتار)
+    definition: "eigentlich: verrückt; beim Sprechen meistens: sehr, sehr stark"
+    example:
+      de: Ich habe mich wahnsinnig über dein Geschenk gefreut.
+      en: I was terribly pleased about your present.
+      fa: از هدیه‌ات فوق‌العاده خوشحال شدم.
+    alsoAccepted: [unglaublich, total, extrem, irre]
+    tooCloseTo: [unglaublich]
+
   - word: unglaublich
+    class: adjective
+    level: B1
+    meaning:
+      en: unbelievable, incredible
+      fa: باورنکردنی، غیرقابل باور
+    definition: "so, dass man es kaum glauben kann: Das Konzert war … schön."
+    example:
+      de: Die Aussicht vom Berg war unglaublich schön.
+      en: The view from the mountain was incredibly beautiful.
+      fa: منظره از بالای کوه به طرز باورنکردنی زیبا بود.
+    alsoAccepted: [unfassbar, wahnsinnig]
+
   - word: kaum
+    class: adverb
+    level: B1
+    meaning:
+      en: hardly, scarcely
+      fa: به‌سختی، تقریباً اصلاً
+    definition: "fast nicht, nur sehr wenig: Ich habe heute Nacht … geschlafen."
+    example:
+      de: Es war so laut, dass ich dich kaum verstanden habe.
+      en: It was so loud that I could hardly understand you.
+      fa: آن‌قدر سروصدا بود که به‌سختی حرفت را فهمیدم.
+
   - word: beinahe
+    class: adverb
+    level: B1
+    meaning:
+      en: almost, nearly
+      fa: نزدیک بود، تقریباً
+    definition: "nicht ganz, aber fast: Ich habe … den Zug verpasst."
+    example:
+      de: Ich habe beinahe meinen Schlüssel im Büro vergessen.
+      en: I almost forgot my key in the office.
+      fa: نزدیک بود کلیدم را در دفتر جا بگذارم.
+    alsoAccepted: [fast]
+
   - word: möglichst
+    class: adverb
+    level: B1
+    meaning:
+      en: as … as possible
+      fa: تا حد امکان، تا جایی که بشود
+    definition: "so viel oder so gut, wie es geht: Bitte antworten Sie … schnell."
+    example:
+      de: Bitte schicken Sie mir die Unterlagen möglichst bald.
+      en: Please send me the documents as soon as possible.
+      fa: لطفاً مدارک را هرچه زودتر برایم بفرستید.
+
   - word: eher
+    class: adverb
+    level: B1
+    meaning:
+      en: rather, more (one thing than the other)
+      fa: بیشتر، بیشتر به … نزدیک است
+    definition: "mehr das eine als das andere: Der Film war … langweilig als spannend."
+    example:
+      de: Ich bin eher ein ruhiger Mensch.
+      en: I'm more of a quiet person.
+      fa: من بیشتر آدم آرامی هستم.
+    alsoAccepted: [mehr]
+
   - word: halt
+    class: particle
+    level: B1
+    meaning:
+      en: just, simply (that's how it is)
+      fa: دیگر، خب (همین است که هست)
+    definition: "sagt man beim Sprechen, wenn man etwas nicht ändern kann: Das ist … so."
+    example:
+      de: Der Bus ist weg, dann müssen wir halt laufen.
+      en: The bus has gone, so we'll just have to walk.
+      fa: اتوبوس رفته، خب دیگر باید پیاده برویم.
+    alsoAccepted: [eben, nun mal, nun einmal, einfach]
+
   - word: wohl
+    class: adverb
+    level: B1
+    meaning:
+      en: probably, I suppose
+      fa: احتمالاً، لابد
+    definition: "man ist nicht sicher, aber man glaubt es: Er ist heute nicht da, er ist … krank."
+    example:
+      de: Das Licht ist aus, sie sind wohl schon im Bett.
+      en: The light is off, they've probably gone to bed already.
+      fa: چراغ خاموش است، لابد خوابیده‌اند.
+    alsoAccepted: [wahrscheinlich, vermutlich]
+    tooCloseTo: [offenbar]
+
   - word: bloß
+    class: adverb
+    level: B1
+    meaning:
+      en: only, merely
+      fa: فقط، تنها
+    definition: "nicht mehr als das: Ich habe … zehn Euro dabei."
+    example:
+      de: Ich wollte dich bloß kurz etwas fragen.
+      en: I only wanted to ask you something quickly.
+      fa: فقط می‌خواستم چیزی کوتاه از تو بپرسم.
+    alsoAccepted: [nur, lediglich]
+
   - word: gar
+    class: adverb
+    level: B1
+    meaning:
+      en: at all (makes not or no stronger)
+      fa: اصلاً (همراه نه یا هیچ)
+    definition: "macht „nicht“ oder „kein“ stärker: Das ist … nicht schwer."
+    example:
+      de: Ich habe heute gar keine Lust auf Sport.
+      en: I don't feel like sport at all today.
+      fa: امروز اصلاً حوصلهٔ ورزش ندارم.
+    alsoAccepted: [überhaupt]
+    tooCloseTo: [überhaupt]
+
   - word: umso
+    class: adverb
+    level: B1
+    meaning:
+      en: all the (more, better)
+      fa: چه بهتر، به همان نسبت بیشتر
+    definition: "noch mehr, aus diesem Grund: Du kommst auch mit? … besser!"
+    example:
+      de: Du hast morgen frei? Umso besser, dann können wir zusammen frühstücken.
+      en: You're off tomorrow? All the better, then we can have breakfast together.
+      fa: فردا تعطیلی؟ چه بهتر، پس می‌توانیم با هم صبحانه بخوریم.
+    alsoAccepted: [um so, desto]
+
   - word: je
+    class: adverb
+    level: B1
+    meaning:
+      en: ever (at any time, mostly in questions)
+      fa: تا حالا، تا به حال (در پرسش)
+    definition: "zu einer Zeit im Leben, meistens in einer Frage: Hast du so etwas … gesehen?"
+    example:
+      de: Das ist das beste Essen, das ich je gegessen habe.
+      en: That's the best food I've ever eaten.
+      fa: این بهترین غذایی است که تا به حال خورده‌ام.
+    alsoAccepted: [jemals, schon mal, schon einmal]
+
   - word: jeweils
+    class: adverb
+    level: B1
+    meaning:
+      en: each (for each one separately)
+      fa: هر کدام، برای هر یک جداگانه
+    definition: "für jede Person oder Sache einzeln: Die beiden Kinder bekommen … fünf Euro."
+    example:
+      de: Die beiden Tickets kosten jeweils zwölf Euro.
+      en: The two tickets cost twelve euros each.
+      fa: آن دو بلیت هر کدام دوازده یورو قیمت دارند.
+    alsoAccepted: [je]
+    tooCloseTo: [je]
+
   - word: meinetwegen
+    class: adverb
+    level: B1
+    meaning:
+      en: fine by me, I don't mind
+      fa: از نظر من اشکالی ندارد، باشد
+    definition: "ich habe nichts dagegen: Du willst heute das Auto haben? …, ich brauche es nicht."
+    example:
+      de: Meinetwegen können wir auch später essen.
+      en: We can eat later too, I don't mind.
+      fa: از نظر من اشکالی ندارد، می‌توانیم دیرتر هم غذا بخوریم.
+    alsoAccepted: [von mir aus]
+
   - word: sowieso
+    class: adverb
+    level: B1
+    meaning:
+      en: anyway, in any case
+      fa: به هر حال (حتی بدون این موضوع هم)
+    definition: "auch ohne das, egal, was passiert: Ich fahre … in die Stadt, ich kann dich mitnehmen."
+    example:
+      de: Ich fahre sowieso zum Supermarkt, soll ich dir etwas mitbringen?
+      en: I'm going to the supermarket anyway; shall I bring you something?
+      fa: به هر حال به سوپرمارکت می‌روم، چیزی برایت بیاورم؟
+    alsoAccepted: [ohnehin, eh]
+
   - word: überhaupt
+    class: adverb
+    level: B1
+    meaning:
+      en: even, at all (in a question)
+      fa: اصلاً (در پرسش)، اساساً
+    definition: "in einer Frage, wenn man zweifelt, ob es wirklich so ist; mit „nicht“: gar nicht"
+    example:
+      de: Weißt du überhaupt, wie spät es ist?
+      en: Do you even know what time it is?
+      fa: اصلاً می‌دانی ساعت چند است؟
+    alsoAccepted: [gar]
+
   - word: selbstverständlich
+    class: adjective
+    level: B1
+    meaning:
+      en: of course, naturally
+      fa: البته، بدیهی است
+    definition: "so klar, dass man nicht danach fragen oder darüber sprechen muss"
+    example:
+      de: Selbstverständlich helfe ich dir beim Umzug.
+      en: Of course I'll help you with the move.
+      fa: البته که در اسباب‌کشی کمکت می‌کنم.
+    alsoAccepted: [natürlich, klar]
+
   - word: eindeutig
+    class: adjective
+    level: B1
+    meaning:
+      en: clear, unambiguous (only one answer is possible)
+      fa: آشکارا، روشن (فقط یک پاسخ ممکن است)
+    definition: "so klar, dass man es nur auf eine Art verstehen kann: Das Ergebnis ist …, wir haben gewonnen."
+    example:
+      de: "Die Antwort war eindeutig: Sie wollte nicht mitkommen."
+      en: "The answer was clear: she didn't want to come along."
+      fa: "پاسخ روشن بود: او نمی‌خواست همراه ما بیاید."
+    alsoAccepted: [klar, deutlich]
+
   - word: offenbar
+    class: adjective
+    level: B1
+    meaning:
+      en: apparently, evidently (as it seems)
+      fa: ظاهراً، پیداست که
+    definition: "so, wie man es sehen oder merken kann, ohne es genau zu wissen"
+    example:
+      de: Die Nachbarn sind offenbar in den Urlaub gefahren.
+      en: The neighbours have apparently gone on holiday.
+      fa: ظاهراً همسایه‌ها به تعطیلات رفته‌اند.
+    alsoAccepted: [offensichtlich, anscheinend]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 37 questions)
+  date: 2026-11-28
+  pool: ad23776aae6666d5

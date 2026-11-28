@@ -1,40 +1,425 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-tasks-meetings
 kind: vocabulary
 level: B1
 chapter: b1-words-work-money
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Tasks, meetings and the office"
   fa: "وظیفه‌ها، جلسه‌ها و دفتر کار"
   de: "Aufgaben, Besprechungen und Büro"
+attemptSize: 15
 words:
+  # Tagesablauf, Alltag and alltäglich overlap; none is offered as a wrong meaning of another.
   - word: Tagesablauf
+    class: noun
+    article: der
+    plural: Tagesabläufe
+    level: B1
+    meaning:
+      en: daily routine, the course of a day
+      fa: روال روزانه، جریان یک روز
+    definition: was man an einem Tag nacheinander macht, vom Aufstehen bis zum Schlafengehen
+    example:
+      de: Beschreiben Sie bitte Ihren Tagesablauf.
+      en: Please describe your daily routine.
+      fa: لطفاً برنامهٔ روزانه‌تان را شرح دهید.
+    alsoAccepted: [die Tagesroutine]
+    tooCloseTo: [Alltag]
+
   - word: Alltag
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: everyday life
+      fa: زندگی روزمره
+    definition: das normale Leben, wie es jeden Tag ist, ohne Feste und Urlaub
+    example:
+      de: Nach dem Urlaub beginnt wieder der Alltag.
+      en: After the holiday, everyday life begins again.
+      fa: پس از تعطیلات، زندگی روزمره دوباره شروع می‌شود.
+    alsoAccepted: [das Alltagsleben]
+    tooCloseTo: [Tagesablauf, alltäglich]
+
   - word: alltäglich
+    class: adjective
+    level: B1
+    meaning:
+      en: everyday, day-to-day
+      fa: روزمره
+    definition: so, wie es jeden Tag passiert, und nichts Besonderes
+    example:
+      de: Staus sind in dieser Stadt etwas ganz Alltägliches.
+      en: Traffic jams are a completely ordinary thing in this city.
+      fa: ترافیک در این شهر چیزی کاملاً معمولی است.
+    tooCloseTo: [Alltag]
+
+  # Besprechung, Konferenz and Versammlung are all meetings; none is offered as a wrong meaning of another.
   - word: Besprechung
+    class: noun
+    article: die
+    plural: Besprechungen
+    level: B1
+    meaning:
+      en: meeting (to discuss work), discussion
+      fa: جلسهٔ کاری
+    definition: ein Treffen, bei dem Kollegen über ihre Arbeit sprechen und zusammen etwas planen
+    example:
+      de: Herr Wagner ist gerade in einer Besprechung.
+      en: Mr Wagner is in a meeting at the moment.
+      fa: آقای واگنر الان در جلسه است.
+    alsoAccepted: [die Sitzung, das Meeting]
+    tooCloseTo: [Konferenz, Versammlung]
+
   - word: Konferenz
+    class: noun
+    article: die
+    plural: Konferenzen
+    level: B1
+    meaning:
+      en: conference
+      fa: کنفرانس، همایش
+    definition: ein großes Treffen, oft über mehrere Tage, bei dem Fachleute Vorträge halten und über ein Thema diskutieren
+    example:
+      de: Im März fliegt sie zu einer Konferenz nach Kanada.
+      en: In March she is flying to a conference in Canada.
+      fa: او در ماه مارس برای یک کنفرانس به کانادا پرواز می‌کند.
+    alsoAccepted: [die Tagung, der Kongress]
+    tooCloseTo: [Besprechung, Versammlung]
+
   - word: Versammlung
+    class: noun
+    article: die
+    plural: Versammlungen
+    level: B1
+    meaning:
+      en: assembly, gathering (of many people)
+      fa: گردهمایی، مجمع
+    definition: ein Treffen von vielen Menschen an einem Ort, bei dem sie gemeinsam über etwas sprechen oder entscheiden
+    example:
+      de: Am Donnerstag gibt es eine Versammlung für alle Eltern der Schule.
+      en: On Thursday there is a meeting for all the parents at the school.
+      fa: پنجشنبه گردهمایی‌ای برای همهٔ اولیای مدرسه برگزار می‌شود.
+    alsoAccepted: [die Zusammenkunft, die Sitzung]
+    tooCloseTo: [Besprechung, Konferenz]
+
   - word: Zusammenarbeit
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: cooperation, collaboration
+      fa: همکاری
+    definition: wenn mehrere Personen oder Firmen gemeinsam an etwas arbeiten
+    example:
+      de: Vielen Dank für die gute Zusammenarbeit!
+      en: Many thanks for the good cooperation!
+      fa: از همکاری خوبتان بسیار سپاسگزارم!
+    alsoAccepted: [die Kooperation]
+
+  # Auftrag, Tätigkeit and Dienst all name work you do; none is offered as a wrong meaning of another.
   - word: Auftrag
+    class: noun
+    article: der
+    plural: Aufträge
+    level: B1
+    meaning:
+      en: order (from a customer); assignment
+      fa: سفارش (کار)؛ مأموریت
+    definition: eine Arbeit, die ein Kunde bei einer Firma bestellt, oder eine Aufgabe, die man von jemandem bekommt
+    example:
+      de: Unsere Firma hat einen großen Auftrag aus China bekommen.
+      en: Our company has received a big order from China.
+      fa: شرکت ما سفارش بزرگی از چین گرفته است.
+    tooCloseTo: [Tätigkeit, Dienst]
+
   - word: Tätigkeit
+    class: noun
+    article: die
+    plural: Tätigkeiten
+    level: B1
+    meaning:
+      en: occupation, activity (the work you do)
+      fa: فعالیت شغلی، نوع کار
+    definition: das, was man tut, besonders als Arbeit im Beruf
+    example:
+      de: Zu meinen Tätigkeiten gehört auch die Arbeit mit Kunden.
+      en: My work also includes dealing with customers.
+      fa: کار با مشتری‌ها هم جزو فعالیت‌های من است.
+    alsoAccepted: [die Beschäftigung]
+    tooCloseTo: [Auftrag, Dienst]
+
   - word: Dienst
+    class: noun
+    article: der
+    plural: Dienste
+    level: B1
+    meaning:
+      en: duty, shift (at work); service
+      fa: نوبت کاری، کشیک؛ خدمت
+    definition: die Arbeit, die man zu bestimmten Zeiten machen muss, zum Beispiel nachts im Krankenhaus; auch eine Hilfe, die man anbietet
+    example:
+      de: Die Ärztin hat heute Nacht Dienst.
+      en: The doctor is on duty tonight.
+      fa: این خانم دکتر امشب کشیک است.
+    tooCloseTo: [Auftrag, Tätigkeit]
+
+  # Vertretung, vertreten and Vertreter overlap; none is offered as a wrong meaning of another.
   - word: Vertretung
+    class: noun
+    article: die
+    plural: Vertretungen
+    level: B1
+    meaning:
+      en: stand-in, substitute (for someone who is away)
+      fa: جانشین موقت
+    definition: eine Person, die für kurze Zeit die Arbeit von einer anderen macht, wenn diese nicht da ist
+    example:
+      de: Während meines Urlaubs ist Frau Klein meine Vertretung.
+      en: While I'm on holiday Ms Klein is standing in for me.
+      fa: در مدت مرخصی من، خانم کلاین جانشین موقت من است.
+    alsoAccepted: [der Vertreter, die Vertreterin, der Stellvertreter, die Stellvertreterin]
+    tooCloseTo: [vertreten, Vertreter]
+
   - word: vertreten
+    class: verb
+    level: B1
+    meaning:
+      en: to stand in for, to represent
+      fa: جای کسی کار کردن، نمایندگی کردن
+    definition: für eine andere Person arbeiten oder sprechen, wenn sie nicht da ist
+    example:
+      de: Kannst du mich morgen bei der Besprechung vertreten?
+      en: Can you stand in for me at the meeting tomorrow?
+      fa: می‌توانی فردا در جلسه به جای من باشی؟
+    tooCloseTo: [Vertretung, Vertreter]
+
   - word: Vertreter
+    class: noun
+    article: der
+    plural: Vertreter
+    level: B1
+    meaning:
+      en: representative, sales rep
+      fa: نماینده (مثلاً نمایندهٔ فروش)
+    definition: eine Person, die für eine Firma oder eine Gruppe spricht oder ihre Waren bei Kunden verkauft
+    example:
+      de: Ein Vertreter der Firma kommt nächste Woche zu uns ins Büro.
+      en: A representative of the company is coming to our office next week.
+      fa: هفتهٔ آینده نماینده‌ای از آن شرکت به دفتر ما می‌آید.
+    alsoAccepted: [die Vertreterin]
+    tooCloseTo: [Vertretung, vertreten]
+
   - word: Terminkalender
+    class: noun
+    article: der
+    plural: Terminkalender
+    level: B1
+    meaning:
+      en: diary, appointment book
+      fa: سررسید، تقویم قرارها
+    definition: ein kleines Buch oder ein Programm, in das man seine Termine schreibt
+    example:
+      de: Moment, ich schaue kurz in meinen Terminkalender.
+      en: Just a moment, I'll have a quick look in my diary.
+      fa: یک لحظه، نگاهی به سررسیدم می‌اندازم.
+    alsoAccepted: [der Kalender, der Terminplaner]
+
+  # Mappe and Ordner both hold papers; neither is offered as a wrong meaning of the other.
   - word: Mappe
+    class: noun
+    article: die
+    plural: Mappen
+    level: B1
+    meaning:
+      en: folder, document wallet (for loose papers)
+      fa: پوشهٔ کاغذ، کیف اسناد
+    definition: eine dünne Hülle aus Pappe oder Plastik, in die man lose Blätter legt
+    example:
+      de: Die Rechnungen liegen in der roten Mappe auf meinem Schreibtisch.
+      en: The invoices are in the red folder on my desk.
+      fa: فاکتورها در پوشهٔ قرمز روی میز من است.
+    alsoAccepted: [die Dokumentenmappe]
+    tooCloseTo: [Ordner]
+
   - word: Ordner
+    class: noun
+    article: der
+    plural: Ordner
+    level: B1
+    meaning:
+      en: ring binder, file; folder (on a computer)
+      fa: زونکن؛ پوشه (در رایانه)
+    definition: eine feste Hülle aus Pappe mit zwei Metallringen, in der man gelochte Blätter sammelt; auch ein Platz für Dateien am Computer
+    example:
+      de: Alle Verträge sind in diesem Ordner.
+      en: All the contracts are in this binder.
+      fa: همهٔ قراردادها در این زونکن است.
+    alsoAccepted: [der Aktenordner]
+    tooCloseTo: [Mappe]
+
   - word: Kuli
+    class: noun
+    article: der
+    plural: Kulis
+    level: B1
+    meaning:
+      en: ballpoint pen, biro
+      fa: خودکار
+    definition: ein einfacher Stift mit einer kleinen Kugel an der Spitze; so sagt man kurz und locker
+    example:
+      de: Kannst du mir mal deinen Kuli leihen?
+      en: Can you lend me your pen?
+      fa: می‌توانی خودکارت را به من قرض بدهی؟
+    alsoAccepted: [der Kugelschreiber]
+
   - word: Kopie
+    class: noun
+    article: die
+    plural: Kopien
+    level: B1
+    meaning:
+      en: copy, photocopy
+      fa: کپی، رونوشت
+    definition: ein Blatt, auf dem genau das Gleiche steht wie auf einem anderen Blatt
+    example:
+      de: Bitte bringen Sie eine Kopie Ihres Passes mit.
+      en: Please bring a copy of your passport.
+      fa: لطفاً یک کپی از گذرنامه‌تان همراه بیاورید.
+    alsoAccepted: [die Fotokopie]
+
   - word: kopieren
+    class: verb
+    level: B1
+    meaning:
+      en: to copy, to photocopy
+      fa: کپی کردن، رونوشت گرفتن
+    definition: mit einer Maschine von einem Blatt ein zweites, gleiches Blatt machen; auch eine Datei noch einmal speichern
+    example:
+      de: Ich kopiere die Unterlagen und bringe sie Ihnen gleich.
+      en: I'll copy the documents and bring them to you straight away.
+      fa: مدارک را کپی می‌کنم و همین الان برایتان می‌آورم.
+    alsoAccepted: [fotokopieren]
+
   - word: Kopierer
+    class: noun
+    article: der
+    plural: Kopierer
+    level: B1
+    meaning:
+      en: photocopier
+      fa: دستگاه فتوکپی
+    definition: eine Maschine im Büro, die von Blättern gleiche Blätter macht
+    example:
+      de: Der Kopierer im zweiten Stock ist schon wieder kaputt.
+      en: The photocopier on the second floor is broken again.
+      fa: دستگاه فتوکپی طبقهٔ دوم باز هم خراب است.
+    alsoAccepted: [das Kopiergerät]
+
   - word: Stempel
+    class: noun
+    article: der
+    plural: Stempel
+    level: B1
+    meaning:
+      en: (rubber) stamp
+      fa: مهر (لاستیکی)
+    definition: ein kleines Gerät, mit dem man ein Zeichen oder einen Namen mit Farbe auf Papier drückt; auch das Zeichen selbst
+    example:
+      de: Ohne Stempel ist das Formular nicht gültig.
+      en: The form is not valid without a stamp.
+      fa: این فرم بدون مهر اعتبار ندارد.
+
   - word: Dokument
+    class: noun
+    article: das
+    plural: Dokumente
+    level: B1
+    meaning:
+      en: document
+      fa: سند، مدرک (کاغذی یا فایل)
+    definition: ein Papier oder eine Datei mit wichtigen Informationen, zum Beispiel ein Vertrag oder ein Brief
+    example:
+      de: Speichern Sie das Dokument, bevor Sie den Computer ausschalten.
+      en: Save the document before you switch off the computer.
+      fa: پیش از خاموش کردن رایانه، سند را ذخیره کنید.
+    alsoAccepted: [die Unterlage]
+
   - word: Visitenkarte
+    class: noun
+    article: die
+    plural: Visitenkarten
+    level: B1
+    meaning:
+      en: business card
+      fa: کارت ویزیت
+    definition: eine kleine Karte mit Namen, Beruf, Telefonnummer und Adresse, die man anderen Leuten gibt
+    example:
+      de: Hier ist meine Visitenkarte, rufen Sie mich gern an.
+      en: Here is my business card; feel free to call me.
+      fa: این کارت ویزیت من است، هر وقت خواستید با من تماس بگیرید.
+
   - word: übernehmen
+    class: verb
+    level: B1
+    meaning:
+      en: to take over, to take on (a task)
+      fa: به عهده گرفتن، تحویل گرفتن (کاری)
+    definition: eine Aufgabe oder eine Arbeit von einer anderen Person bekommen und sie ab jetzt selbst machen
+    example:
+      de: Nach seiner Rente übernimmt seine Tochter das Geschäft.
+      en: After he retires his daughter is taking over the shop.
+      fa: پس از بازنشستگی او، دخترش مغازه را تحویل می‌گیرد.
+
+  # zuständig and verantwortlich overlap; neither is offered as a wrong meaning of the other.
   - word: zuständig
+    class: adjective
+    level: B1
+    meaning:
+      en: in charge (of a matter), the right person or office (for it)
+      fa: متصدی، مسئول رسیدگی (به کاری)
+    definition: so, dass eine Person oder ein Amt eine bestimmte Arbeit macht und man mit seiner Frage dorthin gehen muss
+    example:
+      de: Wer ist hier für die Anmeldung zuständig?
+      en: Who is in charge of registration here?
+      fa: اینجا چه کسی متصدی ثبت‌نام است؟
+    tooCloseTo: [verantwortlich]
+
   - word: verantwortlich
+    class: adjective
+    level: B1
+    meaning:
+      en: responsible, accountable
+      fa: مسئول، پاسخ‌گو
+    definition: so, dass man dafür sorgen muss, dass etwas gut geht, und Schuld hat, wenn es nicht gut geht
+    example:
+      de: Eltern sind für ihre Kinder verantwortlich.
+      en: Parents are responsible for their children.
+      fa: پدر و مادر مسئول فرزندانشان هستند.
+    tooCloseTo: [zuständig]
+
   - word: Verantwortung
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: responsibility
+      fa: مسئولیت
+    definition: die Pflicht, für etwas oder jemanden zu sorgen und für Fehler geradezustehen
+    example:
+      de: In ihrer neuen Stelle hat sie viel mehr Verantwortung.
+      en: In her new job she has much more responsibility.
+      fa: او در کار تازه‌اش مسئولیت خیلی بیشتری دارد.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: f6262c3b3dd194fe

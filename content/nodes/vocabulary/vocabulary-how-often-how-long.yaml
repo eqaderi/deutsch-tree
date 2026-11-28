@@ -1,39 +1,356 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A definition in simple German shows the word's place in a sentence with "…", since a small
+# word is hard to say in other words. Words that overlap (dauernd, ständig; gewöhnlich,
+# normalerweise; wochentags, werktags; noch mal, nochmals) each have one sharpened sense,
+# accept each other and are never offered as a wrong meaning of each other.
 id: vocabulary-how-often-how-long
 kind: vocabulary
 level: B1
 chapter: b1-words-time-amounts
 order: 2
-status: coming-soon
+status: published
 title:
   en: "How often and how long"
   fa: "چند وقت یک‌بار و چه مدت"
   de: "Wie oft und wie lange"
+attemptSize: 15
 words:
   - word: jedes Mal
+    class: phrase
+    level: B1
+    meaning:
+      en: every time
+      fa: هر بار
+    definition: "immer, wenn etwas passiert: …, wenn ich sie anrufe, ist sie nicht zu Hause."
+    example:
+      de: Jedes Mal, wenn ich koche, klingelt das Telefon.
+      en: Every time I cook, the phone rings.
+      fa: هر بار که آشپزی می‌کنم، تلفن زنگ می‌زند.
+    alsoAccepted: [jedesmal]
+
   - word: jederzeit
+    class: adverb
+    level: B1
+    meaning:
+      en: at any time
+      fa: هر وقت، در هر زمان
+    definition: "zu jeder Zeit, wann man will: Sie können mich … anrufen."
+    example:
+      de: Bei Fragen können Sie mich jederzeit anrufen.
+      en: If you have questions, you can call me at any time.
+      fa: اگر پرسشی داشتید، هر وقت خواستید می‌توانید به من زنگ بزنید.
+
   - word: endgültig
+    class: adjective
+    level: B1
+    meaning:
+      en: final, for good (it will not change)
+      fa: قطعی، برای همیشه (دیگر تغییر نمی‌کند)
+    definition: "so, dass es sich nicht mehr ändert: Die Entscheidung ist …, wir ziehen nach Wien."
+    example:
+      de: Nach langem Überlegen hat sie sich endgültig gegen das Angebot entschieden.
+      en: After thinking it over for a long time, she has turned the offer down for good.
+      fa: او پس از مدت‌ها فکر کردن، سرانجام به‌طور قطعی پیشنهاد را رد کرد.
+    alsoAccepted: [definitiv]
+
   - word: vorläufig
+    class: adjective
+    level: B1
+    meaning:
+      en: provisional, for the time being
+      fa: موقت، فعلاً
+    definition: "nur für die erste Zeit; später kann es anders werden: Ich wohne … bei meinem Bruder."
+    example:
+      de: Ich wohne vorläufig bei meinem Bruder, bis ich eine Wohnung finde.
+      en: For the time being I'm living at my brother's until I find a flat.
+      fa: فعلاً تا وقتی آپارتمانی پیدا کنم، پیش برادرم زندگی می‌کنم.
+    alsoAccepted: [vorübergehend, provisorisch, erst mal, erst einmal]
+
   - word: rechtzeitig
+    class: adjective
+    level: B1
+    meaning:
+      en: in time (early enough)
+      fa: به‌موقع (به اندازهٔ کافی زود)
+    definition: "früh genug, nicht zu spät: Wir sind … zum Zug gekommen."
+    example:
+      de: Zum Glück waren wir rechtzeitig am Flughafen.
+      en: Luckily we were at the airport in time.
+      fa: خوشبختانه به‌موقع در فرودگاه بودیم.
+
   - word: spätestens
+    class: adverb
+    level: B1
+    meaning:
+      en: at the latest
+      fa: حداکثر تا، نه دیرتر از
+    definition: "nicht später als: Bitte schicken Sie das Formular … am Freitag."
+    example:
+      de: Ich bin spätestens um acht Uhr zu Hause.
+      en: I'll be home by eight o'clock at the latest.
+      fa: حداکثر تا ساعت هشت خانه هستم.
+
   - word: gleichzeitig
+    class: adjective
+    level: B1
+    meaning:
+      en: at the same time, simultaneous
+      fa: هم‌زمان
+    definition: "zur gleichen Zeit: Ich kann nicht … kochen und telefonieren."
+    example:
+      de: Alle Gäste sind gleichzeitig angekommen.
+      en: All the guests arrived at the same time.
+      fa: همهٔ مهمان‌ها هم‌زمان رسیدند.
+    alsoAccepted: [zugleich]
+
   - word: dauernd
+    class: adjective
+    level: B1
+    meaning:
+      en: all the time, non-stop (it gets on your nerves)
+      fa: مدام، یک‌ریز (طوری که آدم کلافه می‌شود)
+    definition: "immer wieder, ohne Pause, sodass es stört: Das Telefon klingelt …, ich kann nicht arbeiten."
+    example:
+      de: Mein Bruder fragt mich dauernd nach Geld.
+      en: My brother keeps asking me for money all the time.
+      fa: برادرم مدام از من پول می‌خواهد.
+    alsoAccepted: [ständig, andauernd, ununterbrochen, die ganze Zeit]
+    tooCloseTo: [ständig]
+
   - word: ständig
+    class: adjective
+    level: B1
+    meaning:
+      en: constantly, again and again
+      fa: پیوسته، همیشه و بارها
+    definition: "sehr oft, fast immer: Er kommt … zu spät."
+    example:
+      de: In diesem Sommer regnet es ständig.
+      en: It's raining constantly this summer.
+      fa: این تابستان پیوسته باران می‌بارد.
+    alsoAccepted: [dauernd, andauernd, immer wieder, die ganze Zeit]
+
   - word: häufig
+    class: adjective
+    level: B1
+    meaning:
+      en: frequent, often
+      fa: اغلب، بارها
+    definition: "oft, viele Male: Im Winter ist sie … erkältet."
+    example:
+      de: Auf dieser Straße gibt es häufig Unfälle.
+      en: There are often accidents on this road.
+      fa: در این خیابان اغلب تصادف رخ می‌دهد.
+    alsoAccepted: [oft, öfter]
+
   - word: selten
+    class: adjective
+    level: B1
+    meaning:
+      en: rare, seldom
+      fa: به‌ندرت، کم‌پیش‌آمده
+    definition: "nicht oft, nur wenige Male: Wir gehen nur … ins Kino."
+    example:
+      de: Meine Großeltern fahren nur selten in die Stadt.
+      en: My grandparents only rarely go into town.
+      fa: پدربزرگ و مادربزرگم فقط به‌ندرت به شهر می‌روند.
+
   - word: regelmäßig
+    class: adjective
+    level: B1
+    meaning:
+      en: regular, at fixed times
+      fa: منظم، مرتب (در زمان‌های ثابت)
+    definition: "immer wieder in den gleichen Abständen, zum Beispiel jeden Montag: Ich gehe … schwimmen."
+    example:
+      de: Sie sollten die Tabletten regelmäßig nehmen.
+      en: You should take the tablets regularly.
+      fa: باید قرص‌ها را به‌طور منظم بخورید.
+
   - word: gewöhnlich
+    class: adjective
+    level: B1
+    meaning:
+      en: usual, as a rule (what one does by habit)
+      fa: معمولاً، طبق عادت
+    definition: "so, wie man es meistens aus Gewohnheit macht: Ich stehe … um sechs Uhr auf."
+    example:
+      de: Am Sonntag frühstücken wir gewöhnlich lange.
+      en: On Sundays we usually have a long breakfast.
+      fa: یکشنبه‌ها طبق عادت صبحانهٔ مفصلی می‌خوریم.
+    alsoAccepted: [normalerweise, meistens, üblicherweise]
+    tooCloseTo: [normalerweise]
+
   - word: normalerweise
+    class: adverb
+    level: B1
+    meaning:
+      en: normally (when nothing special happens)
+      fa: در حالت عادی (وقتی اتفاق خاصی نیفتد)
+    definition: "an den meisten Tagen, wenn nichts Besonderes passiert"
+    example:
+      de: Normalerweise fahre ich mit dem Rad, aber heute nehme ich den Bus.
+      en: Normally I cycle, but today I'm taking the bus.
+      fa: در حالت عادی با دوچرخه می‌روم، اما امروز با اتوبوس می‌روم.
+    alsoAccepted: [gewöhnlich, meistens, üblicherweise]
+
   - word: stündlich
+    class: adjective
+    level: B1
+    meaning:
+      en: hourly, every hour
+      fa: هر ساعت، ساعتی یک بار
+    definition: "jede Stunde, einmal in sechzig Minuten: Der Zug nach Bonn fährt …"
+    example:
+      de: Der Bus zum Flughafen fährt stündlich.
+      en: The bus to the airport runs every hour.
+      fa: اتوبوس فرودگاه هر ساعت حرکت می‌کند.
+
   - word: wöchentlich
+    class: adjective
+    level: B1
+    meaning:
+      en: weekly, every week
+      fa: هفتگی، هر هفته
+    definition: "jede Woche, einmal in sieben Tagen: Wir treffen uns …"
+    example:
+      de: Der Deutschkurs findet wöchentlich am Dienstag statt.
+      en: The German course takes place every week on Tuesday.
+      fa: کلاس آلمانی هر هفته سه‌شنبه برگزار می‌شود.
+
   - word: monatlich
+    class: adjective
+    level: B1
+    meaning:
+      en: monthly, every month
+      fa: ماهانه، هر ماه
+    definition: "jeden Monat, zwölfmal im Jahr: Die Miete zahlt man …"
+    example:
+      de: Die Miete kostet monatlich 750 Euro.
+      en: The rent is 750 euros a month.
+      fa: اجاره ماهانه ۷۵۰ یورو است.
+
   - word: jährlich
+    class: adjective
+    level: B1
+    meaning:
+      en: yearly, every year
+      fa: سالانه، هر سال
+    definition: "jedes Jahr, einmal in zwölf Monaten: Das Stadtfest findet … im Juli statt."
+    example:
+      de: Das Stadtfest findet jährlich im August statt.
+      en: The town festival takes place every year in August.
+      fa: جشن شهر هر سال در ماه اوت برگزار می‌شود.
+
   - word: wochentags
+    class: adverb
+    level: B1
+    meaning:
+      en: on weekdays (not at the weekend)
+      fa: در روزهای هفته (نه آخر هفته)
+    definition: "an den Tagen von Montag bis Freitag, nicht am Wochenende: … stehe ich früh auf."
+    example:
+      de: Wochentags stehe ich um halb sechs auf.
+      en: On weekdays I get up at half past five.
+      fa: در روزهای هفته ساعت پنج و نیم بیدار می‌شوم.
+    alsoAccepted: [werktags]
+    tooCloseTo: [werktags]
+
   - word: werktags
+    class: adverb
+    level: B1
+    meaning:
+      en: on working days (not on Sundays and public holidays)
+      fa: در روزهای کاری (نه یکشنبه‌ها و روزهای تعطیل)
+    definition: "an allen Tagen, an denen man arbeitet, nicht an Sonntagen und Feiertagen: Die Post ist … geöffnet."
+    example:
+      de: Das Geschäft ist werktags von neun bis zwanzig Uhr geöffnet.
+      en: The shop is open on working days from nine a.m. to eight p.m.
+      fa: فروشگاه در روزهای کاری از ساعت نه صبح تا هشت شب باز است.
+    alsoAccepted: [wochentags]
+
   - word: sonnabends
+    class: adverb
+    level: B1
+    meaning:
+      en: on Saturdays (said mostly in the north and east of Germany)
+      fa: شنبه‌ها (بیشتر در شمال و شرق آلمان)
+    definition: "an jedem Samstag; so sagt man vor allem in Nord- und Ostdeutschland"
+    example:
+      de: Sonnabends gehen wir immer auf den Markt.
+      en: On Saturdays we always go to the market.
+      fa: شنبه‌ها همیشه به بازار می‌رویم.
+    alsoAccepted: [samstags]
+
   - word: ewig
+    class: adjective
+    level: B1
+    meaning:
+      en: forever, eternal; for ages
+      fa: همیشگی، تا ابد؛ مدتی بسیار طولانی
+    definition: "ohne Ende, für immer; auch: sehr lange: Ich warte schon … auf den Bus!"
+    example:
+      de: Wir haben uns ewig nicht gesehen!
+      en: We haven't seen each other for ages!
+      fa: خیلی وقت است همدیگر را ندیده‌ایم!
+
   - word: fortsetzen
+    class: verb
+    level: B1
+    meaning:
+      en: to continue (after a break)
+      fa: ادامه دادن (پس از وقفه)
+    definition: "nach einer Pause mit etwas weitermachen"
+    example:
+      de: Nach dem Mittagessen setzen wir die Sitzung fort.
+      en: After lunch we'll continue the meeting.
+      fa: بعد از ناهار جلسه را ادامه می‌دهیم.
+    alsoAccepted: [weitermachen, fortführen, weiterführen]
+
   - word: Fortsetzung
+    class: noun
+    article: die
+    plural: Fortsetzungen
+    level: B1
+    meaning:
+      en: continuation, sequel (the next part)
+      fa: ادامه، دنباله (قسمت بعدی)
+    definition: "das Weitermachen nach einer Pause; auch: ein zweiter Film oder ein zweites Buch, das die Geschichte weitererzählt"
+    example:
+      de: Die Fortsetzung des Films kommt nächstes Jahr ins Kino.
+      en: The sequel to the film is coming to cinemas next year.
+      fa: دنبالهٔ این فیلم سال آینده به سینماها می‌آید.
+
   - word: noch mal
+    class: phrase
+    level: B1
+    meaning:
+      en: one more time, again (in speech)
+      fa: یک بار دیگر، دوباره (در گفتار)
+    definition: "ein weiteres Mal, so sagt man oft beim Sprechen: Kannst du das bitte … sagen?"
+    example:
+      de: Kannst du das bitte noch mal erklären?
+      en: Can you explain that one more time, please?
+      fa: می‌شود لطفاً یک بار دیگر توضیحش بدهی؟
+    alsoAccepted: [nochmal, noch einmal, nochmals, wieder]
+    tooCloseTo: [nochmals]
+
   - word: nochmals
+    class: adverb
+    level: B1
+    meaning:
+      en: once again (more formal, often in writing)
+      fa: بار دیگر (رسمی‌تر، بیشتر در نوشتار)
+    definition: "ein weiteres Mal, so schreibt man oft in Briefen: Ich danke Ihnen … für Ihre Hilfe."
+    example:
+      de: Vielen Dank nochmals für Ihre schnelle Antwort.
+      en: Thank you once again for your quick reply.
+      fa: بار دیگر از پاسخ سریعتان سپاسگزارم.
+    alsoAccepted: [noch mal, nochmal, noch einmal, erneut]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 7 questions)
+  date: 2026-11-28
+  pool: 183b1052138cdc04
