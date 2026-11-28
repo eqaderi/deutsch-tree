@@ -11,3 +11,371 @@ title:
   en: "Relative clause with preposition"
   fa: "جملهٔ موصولی با حرف اضافه"
   de: "Relativsatz mit Präposition"
+
+explanations:
+  en:
+    rule: >
+      When a preposition belongs to the relative pronoun, the two go
+      together to the front of the relative clause, right after the comma:
+      *Das ist der Moment, auf den ich gewartet habe.* The preposition never
+      stays at the end, as it does in English ("the moment I waited for").
+      The gender and number of the pronoun come from the noun; its case comes
+      from the preposition: *mit*, *bei*, *von* and *zu* take the *Dativ*
+      (*mit dem*, *mit der*, *mit denen* in the plural), *für* takes the
+      *Akkusativ* (*für den*, *für die*, *für das*). With a verb that has its
+      own preposition (*warten auf*, *sich freuen auf*, *sprechen über*), the
+      verb decides: *auf den*, *über das*. A two-way preposition takes the
+      *Dativ* for *Wo?* and the *Akkusativ* for *Wohin?*: *das Haus, in dem
+      ich wohne*, *die Stadt, in die wir ziehen*. Preposition and pronoun are
+      never shortened: *in dem*, never *im*. To find the form, say the
+      relative clause as a sentence of its own: *Ich habe auf den Moment
+      gewartet.*
+  fa:
+    rule: >
+      اگر ضمیر موصولی با حرف اضافه بیاید، حرف اضافه و ضمیر با هم به آغاز
+      جملهٔ موصولی می‌روند، درست پس از ویرگول: *Das ist der Moment, auf den
+      ich gewartet habe.* حرف اضافه هرگز مانند انگلیسی در پایان جمله
+      نمی‌ماند. جنس و شمار ضمیر از اسم می‌آید، ولی حالت آن را حرف اضافه
+      تعیین می‌کند: *mit*، *bei*، *von* و *zu* با حالت *Dativ* (حالت مفعول
+      باواسطه) می‌آیند (*mit dem*، *mit der* و برای جمع *mit denen*) و *für*
+      با حالت *Akkusativ* (حالت مفعولی) (*für den*، *für die*، *für das*).
+      اگر فعل حرف اضافهٔ خاص خود را داشته باشد (*warten auf*، *sich freuen
+      auf*، *sprechen über*)، فعل تعیین می‌کند: *auf den*، *über das*. حرف
+      اضافهٔ دوحالته برای *Wo?* با حالت *Dativ* و برای *Wohin?* با حالت
+      *Akkusativ* می‌آید: *das Haus, in dem ich wohne* و *die Stadt, in die
+      wir ziehen*. حرف اضافه و ضمیر هرگز کوتاه نمی‌شوند: *in dem*، نه *im*.
+      برای یافتن شکل درست، جملهٔ موصولی را جمله‌ای مستقل فرض کنید: *Ich habe
+      auf den Moment gewartet.*
+  de:
+    rule: >
+      Gehört eine Präposition zum Relativpronomen, stehen beide zusammen am
+      Anfang vom Relativsatz, direkt nach dem Komma: *Das ist der Moment, auf
+      den ich gewartet habe.* Die Präposition steht nie am Ende. Das Genus
+      kommt vom Nomen, der Kasus von der Präposition: Nach *mit*, *bei*,
+      *von* und *zu* steht der Dativ (*mit dem*, *mit der*, im Plural *mit
+      denen*), nach *für* der Akkusativ (*für den*, *für die*, *für das*). Hat
+      das Verb eine feste Präposition (*warten auf*, *sich freuen auf*,
+      *sprechen über*), bestimmt das Verb den Kasus: *auf den*, *über das*.
+      Bei Wechselpräpositionen gilt: *Wo?* mit Dativ, *Wohin?* mit
+      Akkusativ: *das Haus, in dem ich wohne*, *die Stadt, in die wir
+      ziehen*. Präposition und Pronomen werden nie kurz: *in dem*, nie *im*.
+      So finden Sie die Form: Sagen Sie den Relativsatz als eigenen Satz:
+      *Ich habe auf den Moment gewartet.*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*mit* + *Dativ*", fa: "*mit* و حالت *Dativ*", de: "*mit* + Dativ" }
+    - { en: "*für* + *Akkusativ*", fa: "*für* و حالت *Akkusativ*", de: "*für* + Akkusativ" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Freund, mit dem, für den, "der Freund, mit dem ich reise"]
+    - [die Freundin, mit der, für die, "die Freundin, für die ich koche"]
+    - [das Kind, mit dem, für das, "das Kind, mit dem ich spiele"]
+    - [die Freunde (Plural), mit denen, für die, "die Freunde, mit denen ich reise"]
+
+# Top: the main clause with its noun (shaded). Middle: the relative clause,
+# preposition and pronoun together in one shaded slot under the noun.
+# Bottom: the relative clause as a sentence of its own: the preposition
+# stands before the noun there too, and gives the case.
+diagrams:
+  - caption:
+      en: >
+        *Das ist die Freundin, mit der ich reise.* *Mit der* goes to the front
+        together. *Der* has the gender of *Freundin*, and *mit* gives the
+        *Dativ*, as in the relative clause on its own: *Ich reise mit der
+        Freundin.*
+      fa: >
+        حرف اضافه و ضمیر، یعنی *mit der*، با هم به آغاز جملهٔ موصولی
+        می‌روند. *der* با *Freundin* هم‌جنس است و *mit* حالت *Dativ* را
+        می‌خواهد، همان‌طور که در جملهٔ موصولی به‌تنهایی: *Ich reise mit der
+        Freundin.* جملهٔ کامل: *Das ist die Freundin, mit der ich reise.*
+      de: >
+        *Das ist die Freundin, mit der ich reise.* *Mit der* steht zusammen
+        am Anfang. *Der* passt zu *Freundin*, und nach *mit* steht der Dativ,
+        wie im Relativsatz allein: *Ich reise mit der Freundin.*
+    labels:
+      main: { en: main clause, fa: جملهٔ پایه, de: Hauptsatz }
+      relative: { en: relative clause, fa: جملهٔ موصولی, de: Relativsatz }
+      same: { en: same gender, fa: هم‌جنس, de: gleiches Genus }
+      alone: { en: "the relative clause on its own:", fa: جملهٔ موصولی به‌تنهایی, de: "der Relativsatz allein:" }
+    svg: |
+      <svg viewBox="0 0 320 236">
+        <!-- Das ist die Freundin, -->
+        <rect class="surface" x="2" y="10" width="104" height="40"/>
+        <rect class="shade" x="110" y="10" width="96" height="40"/>
+        <text class="label" x="54" y="36" text-anchor="middle">Das ist die</text>
+        <text class="label" x="158" y="36" text-anchor="middle">Freundin,</text>
+        <text class="note" x="264" y="36" text-anchor="middle">{{main}}</text>
+        <!-- from the noun to preposition and pronoun -->
+        <line class="line" x1="158" y1="54" x2="158" y2="80"/>
+        <polygon class="line" points="152,78 164,78 158,86"/>
+        <text class="note" x="172" y="74">{{same}}</text>
+        <!-- mit der ich reise. -->
+        <rect class="shade" x="110" y="90" width="96" height="40"/>
+        <rect class="surface" x="210" y="90" width="40" height="40"/>
+        <rect class="surface" x="254" y="90" width="64" height="40"/>
+        <text class="label" x="158" y="116" text-anchor="middle">mit der</text>
+        <text class="label" x="230" y="116" text-anchor="middle">ich</text>
+        <text class="label" x="286" y="116" text-anchor="middle">reise.</text>
+        <text class="note" x="54" y="116" text-anchor="middle">{{relative}}</text>
+        <!-- the same as a sentence of its own -->
+        <text class="note" x="160" y="164" text-anchor="middle">{{alone}}</text>
+        <text class="label" x="124" y="194" text-anchor="end">Ich reise</text>
+        <text class="label" x="132" y="194">mit der Freundin.</text>
+        <line class="guide" x1="132" y1="202" x2="270" y2="202"/>
+        <text class="note" x="201" y="222" text-anchor="middle">mit + Dativ</text>
+      </svg>
+
+examples:
+  - de: Das ist der Moment, auf den ich lange gewartet habe.
+    en: That's the moment I've waited a long time for.
+    fa: این همان لحظه‌ای است که مدت‌ها منتظرش بودم.
+  - de: Die Freundin, mit der ich in Urlaub fahre, kommt aus Wien.
+    en: The friend I'm going on holiday with is from Vienna.
+    fa: دوستی که با او به تعطیلات می‌روم اهل وین است.
+  - de: Das ist das Haus, in dem ich geboren bin.
+    en: That's the house I was born in.
+    fa: این همان خانه‌ای است که در آن به دنیا آمدم.
+  - de: Die Kollegen, mit denen ich arbeite, sind sehr nett.
+    en: The colleagues I work with are very nice.
+    fa: همکارانی که با آن‌ها کار می‌کنم خیلی مهربان‌اند.
+  - de: Der Kurs, für den ich mich angemeldet habe, beginnt im März.
+    en: The course I signed up for starts in March.
+    fa: دوره‌ای که برایش ثبت‌نام کرده‌ام در ماه مارس شروع می‌شود.
+  - de: Gibt es ein Thema, über das du nicht gern sprichst?
+    en: Is there a topic you don't like talking about?
+    fa: موضوعی هست که دوست نداری درباره‌اش حرف بزنی؟
+  - de: Der Urlaub, auf den wir uns so gefreut haben, war leider zu kurz.
+    en: The holiday we were so looking forward to was too short, unfortunately.
+    fa: تعطیلاتی که آن‌همه انتظارش را می‌کشیدیم، متأسفانه خیلی کوتاه بود.
+  - de: Wie heißt der Mann, von dem du mir erzählt hast?
+    en: What's the name of the man you told me about?
+    fa: اسم مردی که درباره‌اش برایم تعریف کردی چیست؟
+  - de: Das ist die Stadt, in die wir nächstes Jahr ziehen.
+    en: That's the city we're moving to next year.
+    fa: این همان شهری است که سال آینده به آن نقل مکان می‌کنیم.
+  - de: Die Firma, bei der meine Schwester arbeitet, sucht neue Leute.
+    en: The company my sister works for is looking for new people.
+    fa: شرکتی که خواهرم در آن کار می‌کند، دنبال نیروی تازه است.
+
+mistakes:
+  - wrong: Das ist die Frau, die ich gestern mit gesprochen habe.
+    right: Das ist die Frau, mit der ich gestern gesprochen habe.
+    why:
+      en: 'German never leaves the preposition at the end, as English does ("the woman I spoke with"). *Mit der* goes to the front together.'
+      fa: "در آلمانی حرف اضافه، برخلاف انگلیسی، هرگز در پایان جمله نمی‌ماند. *mit der* با هم به آغاز جملهٔ موصولی می‌رود."
+      de: "Die Präposition steht nie am Ende. *Mit der* steht zusammen am Anfang vom Relativsatz."
+  - wrong: Das ist das Haus, im ich wohne.
+    right: Das ist das Haus, in dem ich wohne.
+    why:
+      en: "A preposition and a relative pronoun are never shortened: *in dem*, not *im*."
+      fa: "حرف اضافه و ضمیر موصولی هرگز کوتاه نمی‌شوند: *in dem*، نه *im*."
+      de: "Präposition und Relativpronomen werden nie kurz: *in dem*, nicht *im*."
+  - wrong: Die Kollegen, mit den ich arbeite, sind sehr nett.
+    right: Die Kollegen, mit denen ich arbeite, sind sehr nett.
+    why:
+      en: "*Mit* takes the *Dativ*, and the plural *Dativ* relative pronoun is *denen*, not *den*."
+      fa: "*mit* با حالت *Dativ* می‌آید و ضمیر موصولی جمع در این حالت *denen* است، نه *den*."
+      de: "Nach *mit* steht der Dativ. Im Plural heißt das Relativpronomen *denen*, nicht *den*."
+  - wrong: Der Termin, auf dem ich warte, ist um zehn Uhr.
+    right: Der Termin, auf den ich warte, ist um zehn Uhr.
+    why:
+      en: "*Warten auf* takes the *Akkusativ* (*Ich warte auf den Termin*), so *auf den*."
+      fa: "*warten auf* با حالت *Akkusativ* می‌آید (*Ich warte auf den Termin*)، پس *auf den*."
+      de: "*Warten auf* hat den Akkusativ: *Ich warte auf den Termin.* Also *auf den*."
+  - wrong: Das ist meine Nachbarin, mit die ich oft spazieren gehe.
+    right: Das ist meine Nachbarin, mit der ich oft spazieren gehe.
+    why:
+      en: "*Mit* always takes the *Dativ*, and feminine *die* becomes *der*."
+      fa: "*mit* همیشه با حالت *Dativ* می‌آید و *die* مؤنث به *der* تبدیل می‌شود."
+      de: "Nach *mit* steht immer der Dativ: *die* wird zu *der*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist der Moment, auf ___ ich lange gewartet habe.
+    options: [dem, der, den]
+    answer: den
+    explanation:
+      en: "*Warten auf* takes the *Akkusativ* (*Ich habe auf den Moment gewartet*), so *auf den*."
+      fa: "*warten auf* با حالت *Akkusativ* می‌آید (*Ich habe auf den Moment gewartet*)، پس *auf den*."
+      de: "*Warten auf* hat den Akkusativ: *Ich habe auf den Moment gewartet.* Also *auf den*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Kollegen, mit ___ ich arbeite, sind sehr nett.
+    options: [den, denen, die]
+    answer: denen
+    explanation:
+      en: "*Mit* takes the *Dativ*; in the plural the relative pronoun is *denen*."
+      fa: "*mit* با حالت *Dativ* می‌آید و ضمیر موصولی جمع در این حالت *denen* است."
+      de: "Nach *mit* steht der Dativ. Im Plural heißt das Relativpronomen *denen*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das ist das Haus, ___ ich seit zehn Jahren wohne.
+    options: [im, in das, in dem]
+    answer: in dem
+    explanation:
+      en: "*Wo?*, so *in* takes the *Dativ*: *in dem*. With a relative pronoun it is never shortened to *im*."
+      fa: "پرسش *Wo?* است، پس *in* با حالت *Dativ* می‌آید: *in dem*. با ضمیر موصولی هرگز به *im* کوتاه نمی‌شود."
+      de: "Frage *Wo?*, also Dativ: *in dem*. Mit Relativpronomen sagt man nie *im*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Freundin, ___ ich in Urlaub fahre, kommt aus Wien.
+    options: [die mit, mit der, mit die]
+    answer: mit der
+    explanation:
+      en: "The preposition comes first, and *mit* takes the *Dativ*: *mit der*."
+      fa: "حرف اضافه اول می‌آید و *mit* با حالت *Dativ* می‌آید: *mit der*."
+      de: "Die Präposition steht zuerst, nach *mit* steht der Dativ: *mit der*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Der Kurs, für ___ ich mich angemeldet habe, beginnt im März.
+    options: [den, das, dem]
+    answer: den
+    explanation:
+      en: "*Für* takes the *Akkusativ*, and *Kurs* is a *der* noun: *für den*."
+      fa: "*für* با حالت *Akkusativ* می‌آید و *Kurs* اسم مذکر (*der*) است: *für den*."
+      de: "Nach *für* steht der Akkusativ. *Kurs* hat den Artikel *der*: *für den*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wie heißt der Mann, …
+    options: [von den du mir erzählt hast?, dem du mir von erzählt hast?, von dem du mir erzählt hast?]
+    answer: von dem du mir erzählt hast?
+    explanation:
+      en: "The preposition comes first, and *von* takes the *Dativ*: *von dem*."
+      fa: "حرف اضافه اول می‌آید و *von* با حالت *Dativ* می‌آید: *von dem*."
+      de: "Die Präposition steht zuerst, nach *von* steht der Dativ: *von dem*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Gibt es ein Thema, …
+    options: [über das du nicht gern sprichst?, über dem du nicht gern sprichst?, das du nicht gern über sprichst?]
+    answer: über das du nicht gern sprichst?
+    explanation:
+      en: "*Sprechen über* takes the *Akkusativ*, and *Thema* is a *das* noun: *über das*, at the front."
+      fa: "*sprechen über* با حالت *Akkusativ* می‌آید و *Thema* اسم خنثی (*das*) است: *über das*، در آغاز جملهٔ موصولی."
+      de: "*Sprechen über* hat den Akkusativ. *Thema* hat den Artikel *das*: *über das*, am Anfang."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Das ist die Stadt, …
+    options: [in der wir nächstes Jahr ziehen., in dem wir nächstes Jahr ziehen., in die wir nächstes Jahr ziehen.]
+    answer: in die wir nächstes Jahr ziehen.
+    explanation:
+      en: "Moving to a place answers *Wohin?*, so *in* takes the *Akkusativ*: *in die*."
+      fa: "نقل مکان به جایی پاسخ *Wohin?* است، پس *in* با حالت *Akkusativ* می‌آید: *in die*."
+      de: "Umziehen beantwortet die Frage *Wohin?*. Also Akkusativ: *in die*."
+  - id: true-1
+    type: true-false
+    prompt: Die Firma, bei der meine Schwester arbeitet, sucht neue Leute.
+    answer: true
+    explanation:
+      en: "*Bei* takes the *Dativ*, and *Firma* is a *die* noun: *bei der*. The sentence is correct."
+      fa: "*bei* با حالت *Dativ* می‌آید و *Firma* اسم مؤنث (*die*) است: *bei der*. جمله درست است."
+      de: "Nach *bei* steht der Dativ. *Firma* hat den Artikel *die*: *bei der*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist der Lehrer, den ich gestern mit gesprochen habe.
+    answer: false
+    explanation:
+      en: "The preposition goes to the front with the pronoun, and *mit* takes the *Dativ*: *mit dem ich gestern gesprochen habe*."
+      fa: "حرف اضافه با ضمیر به آغاز جمله می‌رود و *mit* با حالت *Dativ* می‌آید: *mit dem ich gestern gesprochen habe*."
+      de: "Die Präposition steht mit dem Pronomen am Anfang, nach *mit* steht der Dativ: *mit dem ich gestern gesprochen habe*."
+  - id: true-3
+    type: true-false
+    prompt: Der Urlaub, auf den wir uns so gefreut haben, war zu kurz.
+    answer: true
+    explanation:
+      en: "*Sich freuen auf* takes the *Akkusativ*: *auf den*. The sentence is correct."
+      fa: "*sich freuen auf* با حالت *Akkusativ* می‌آید: *auf den*. جمله درست است."
+      de: "*Sich freuen auf* hat den Akkusativ: *auf den*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Das ist das Restaurant, im wir uns kennengelernt haben.
+    answer: false
+    explanation:
+      en: "Preposition and relative pronoun are never shortened: *in dem wir uns kennengelernt haben*."
+      fa: "حرف اضافه و ضمیر موصولی هرگز کوتاه نمی‌شوند: *in dem wir uns kennengelernt haben*."
+      de: "Präposition und Relativpronomen werden nie kurz: *in dem wir uns kennengelernt haben*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Die Kinder, mit ___ ich am Nachmittag spiele, sind meine Neffen.
+    answers: [denen, welchen]
+    explanation:
+      en: "*Mit* takes the *Dativ*; in the plural the relative pronoun is *denen*."
+      fa: "*mit* با حالت *Dativ* می‌آید و ضمیر موصولی جمع در این حالت *denen* است."
+      de: "Nach *mit* steht der Dativ. Im Plural: *denen*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das ist der Stuhl, auf ___ ich immer sitze.
+    answers: [dem, welchem]
+    explanation:
+      en: "Sitting somewhere answers *Wo?*, so *auf* takes the *Dativ*: *auf dem*."
+      fa: "نشستن در جایی پاسخ *Wo?* است، پس *auf* با حالت *Dativ* می‌آید: *auf dem*."
+      de: "Sitzen beantwortet die Frage *Wo?*. Also Dativ: *auf dem*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Frau, von ___ ich das Fahrrad gekauft habe, wohnt in Bonn.
+    answers: [der, welcher]
+    explanation:
+      en: "*Von* takes the *Dativ*, and *die* becomes *der*: *von der*."
+      fa: "*von* با حالت *Dativ* می‌آید و *die* به *der* تبدیل می‌شود: *von der*."
+      de: "Nach *von* steht der Dativ: *die* wird zu *der*, also *von der*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Das ist ein Problem, über ___ wir morgen sprechen müssen.
+    answers: [das, welches]
+    explanation:
+      en: "*Sprechen über* takes the *Akkusativ*, and *Problem* is a *das* noun: *über das*."
+      fa: "*sprechen über* با حالت *Akkusativ* می‌آید و *Problem* اسم خنثی (*das*) است: *über das*."
+      de: "*Sprechen über* hat den Akkusativ. *Problem* hat den Artikel *das*: *über das*."
+  - id: error-1
+    type: find-error
+    prompt: Die Freunde, mit den ich nach Italien fahre, kommen aus Köln.
+    answer: den
+    explanation:
+      en: "*Mit* takes the *Dativ*; in the plural the relative pronoun is *denen*: *mit denen*."
+      fa: "*mit* با حالت *Dativ* می‌آید و ضمیر موصولی جمع در این حالت *denen* است: *mit denen*."
+      de: "Nach *mit* steht der Dativ. Im Plural: *mit denen*."
+  - id: error-2
+    type: find-error
+    prompt: Der Brief, auf dem ich warte, ist noch nicht gekommen.
+    answer: dem
+    explanation:
+      en: "*Warten auf* takes the *Akkusativ* (*Ich warte auf den Brief*): *auf den*."
+      fa: "*warten auf* با حالت *Akkusativ* می‌آید (*Ich warte auf den Brief*): *auf den*."
+      de: "*Warten auf* hat den Akkusativ: *Ich warte auf den Brief.* Richtig ist *auf den*."
+  - id: error-3
+    type: find-error
+    prompt: Das ist meine Nachbarin, mit die ich oft spazieren gehe.
+    answer: die
+    explanation:
+      en: "*Mit* always takes the *Dativ*, and feminine *die* becomes *der*: *mit der*."
+      fa: "*mit* همیشه با حالت *Dativ* می‌آید و *die* مؤنث به *der* تبدیل می‌شود: *mit der*."
+      de: "Nach *mit* steht immer der Dativ: *mit der*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["das ist die Freundin,", mit der, ich, in Urlaub, fahre]
+    explanation:
+      en: "*Mit der* opens the relative clause, then the subject *ich*; the conjugated *fahre* goes last."
+      fa: "*mit der* جملهٔ موصولی را آغاز می‌کند، سپس فاعل *ich* می‌آید و فعل صرف‌شدهٔ *fahre* در آخر."
+      de: "*Mit der* steht am Anfang vom Relativsatz, dann das Subjekt *ich*. Das konjugierte Verb *fahre* steht am Ende."
+  - id: order-2
+    type: word-order
+    end: "?"
+    answers:
+      - ["wie heißt der Film,", über den, ihr, gesprochen, habt]
+    explanation:
+      en: "*Über den* opens the relative clause, then the subject *ihr*; the conjugated *habt* goes last."
+      fa: "*über den* جملهٔ موصولی را آغاز می‌کند، سپس فاعل *ihr* می‌آید و فعل صرف‌شدهٔ *habt* در آخر."
+      de: "*Über den* steht am Anfang vom Relativsatz, dann das Subjekt *ihr*. Das konjugierte Verb *habt* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - ["der Freund, mit ___ ich reise", dem]
+      - ["der Freund, für ___ ich koche", den]
+      - ["die Freunde, mit ___ ich reise", denen]
+    explanation:
+      en: "*Mit* takes the *Dativ* (*dem*, plural *denen*), *für* the *Akkusativ* (*den*)."
+      fa: "*mit* با حالت *Dativ* می‌آید (*dem* و برای جمع *denen*) و *für* با حالت *Akkusativ* (*den*)."
+      de: "Nach *mit* steht der Dativ (*dem*, im Plural *denen*), nach *für* der Akkusativ (*den*)."

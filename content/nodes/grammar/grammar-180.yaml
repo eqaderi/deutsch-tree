@@ -9,5 +9,362 @@ recogniseOnly: false
 prerequisites: [grammar-066, grammar-178]
 title:
   en: "Relative clause, *Dativ*"
-  fa: "جملهٔ موصولی در *Dativ*"
+  fa: "جملهٔ موصولی در حالت *Dativ*"
   de: "Relativsatz im Dativ"
+
+explanations:
+  en:
+    rule: >
+      When the relative pronoun is the *Dativ* object of the relative clause,
+      it is in the *Dativ*: *Das ist der Kollege, dem ich geholfen habe.* The
+      forms are almost those of the article: *dem* for masculine and neuter,
+      *der* for feminine, but *denen* for the plural, not *den*: *die
+      Nachbarn, denen wir geholfen haben*. As always, the gender and number
+      come from the noun, and the case comes from the relative clause. The
+      *Dativ* follows verbs such as *helfen*, *danken*, *gehören*,
+      *gefallen*, *schmecken* and *antworten*, and it marks the person who
+      is given, shown or told something (*geben*, *schenken*, *zeigen*,
+      *erklären*, *erzählen*). To find the case, say the relative clause as
+      a sentence of its own: *Ich habe dem Kollegen geholfen.* The conjugated
+      verb goes to the end.
+  fa:
+    rule: >
+      اگر ضمیر موصولی در جملهٔ موصولی مفعول باواسطه باشد، در حالت *Dativ*
+      (حالت مفعول باواسطه) می‌آید: *Das ist der Kollege, dem ich geholfen
+      habe.* شکل‌های آن تقریباً همان شکل‌های حرف تعریف است: *dem* برای مذکر
+      و خنثی و *der* برای مؤنث. ولی ضمیر موصولی جمع *denen* است، نه *den*:
+      *die Nachbarn, denen wir geholfen haben*. مانند همیشه، جنس و شمار ضمیر
+      از اسم می‌آید و حالت آن از جملهٔ موصولی. حالت *Dativ* پس از فعل‌هایی
+      مانند *helfen*، *danken*، *gehören*، *gefallen*، *schmecken* و
+      *antworten* می‌آید و نیز برای کسی که چیزی به او داده، نشان داده یا
+      گفته می‌شود (*geben*، *schenken*، *zeigen*، *erklären*، *erzählen*).
+      برای یافتن حالت، جملهٔ موصولی را جمله‌ای مستقل فرض کنید: *Ich habe dem
+      Kollegen geholfen.* فعل صرف‌شده به پایان جمله می‌رود.
+  de:
+    rule: >
+      Ist das Relativpronomen im Relativsatz das Dativobjekt, steht es im
+      Dativ: *Das ist der Kollege, dem ich geholfen habe.* Die Formen sind
+      fast wie beim Artikel: *dem* für maskulin und neutral, *der* für
+      feminin. Aber im Plural heißt es *denen*, nicht *den*: *die Nachbarn,
+      denen wir geholfen haben*. Das Genus kommt vom Nomen, der Kasus vom
+      Relativsatz. Den Dativ haben Verben wie *helfen*, *danken*, *gehören*,
+      *gefallen*, *schmecken* und *antworten*. Auch die Person, der man etwas
+      gibt, zeigt oder erzählt, steht im Dativ (*geben*, *schenken*, *zeigen*,
+      *erklären*, *erzählen*). So finden Sie den Kasus: Sagen Sie den
+      Relativsatz als eigenen Satz: *Ich habe dem Kollegen geholfen.* Das
+      konjugierte Verb steht am Ende.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "Article in the *Dativ*", fa: "حرف تعریف در حالت *Dativ*", de: Artikel im Dativ }
+    - { en: "Pronoun in the *Dativ*", fa: "ضمیر موصولی در حالت *Dativ*", de: Relativpronomen im Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Kollege, dem Kollegen, dem, "der Kollege, dem ich helfe"]
+    - [die Freundin, der Freundin, der, "die Freundin, der ich helfe"]
+    - [das Kind, dem Kind, dem, "das Kind, dem ich helfe"]
+    - [die Nachbarn (Plural), den Nachbarn, denen, "die Nachbarn, denen ich helfe"]
+
+# Top: the main clause with its noun (shaded). Middle: the relative clause,
+# the pronoun (shaded) under the noun. Bottom: the relative clause said as a
+# sentence of its own, which shows that the pronoun is in the Dativ.
+diagrams:
+  - caption:
+      en: >
+        *Das ist der Mann, dem ich helfe.* The pronoun *dem* has the gender of
+        *Mann*. It is in the *Dativ* because, as a sentence of its own, the
+        relative clause is *Ich helfe dem Mann.*
+      fa: >
+        ضمیر *dem* با *Mann* هم‌جنس است و حالت آن *Dativ* است، زیرا جملهٔ
+        موصولی به‌تنهایی چنین می‌شود: *Ich helfe dem Mann.* جملهٔ کامل:
+        *Das ist der Mann, dem ich helfe.*
+      de: >
+        *Das ist der Mann, dem ich helfe.* Das Pronomen *dem* passt zu
+        *Mann*. Es steht im Dativ, denn der Relativsatz allein heißt: *Ich
+        helfe dem Mann.*
+    labels:
+      main: { en: main clause, fa: جملهٔ پایه, de: Hauptsatz }
+      relative: { en: relative clause, fa: جملهٔ موصولی, de: Relativsatz }
+      same: { en: same gender, fa: هم‌جنس, de: gleiches Genus }
+      alone: { en: "the relative clause on its own:", fa: جملهٔ موصولی به‌تنهایی, de: "der Relativsatz allein:" }
+    svg: |
+      <svg viewBox="0 0 320 236">
+        <!-- Das ist der Mann, -->
+        <rect class="surface" x="2" y="10" width="110" height="40"/>
+        <rect class="shade" x="116" y="10" width="64" height="40"/>
+        <text class="label" x="57" y="36" text-anchor="middle">Das ist der</text>
+        <text class="label" x="148" y="36" text-anchor="middle">Mann,</text>
+        <text class="note" x="250" y="36" text-anchor="middle">{{main}}</text>
+        <!-- from the noun to its pronoun -->
+        <line class="line" x1="148" y1="54" x2="148" y2="80"/>
+        <polygon class="line" points="142,78 154,78 148,86"/>
+        <text class="note" x="162" y="74">{{same}}</text>
+        <!-- dem ich helfe. -->
+        <rect class="shade" x="116" y="90" width="64" height="40"/>
+        <rect class="surface" x="184" y="90" width="44" height="40"/>
+        <rect class="surface" x="232" y="90" width="76" height="40"/>
+        <text class="label" x="148" y="116" text-anchor="middle">dem</text>
+        <text class="label" x="206" y="116" text-anchor="middle">ich</text>
+        <text class="label" x="270" y="116" text-anchor="middle">helfe.</text>
+        <text class="note" x="57" y="116" text-anchor="middle">{{relative}}</text>
+        <!-- the same as a sentence of its own -->
+        <text class="note" x="160" y="164" text-anchor="middle">{{alone}}</text>
+        <text class="label" x="152" y="194" text-anchor="end">Ich helfe</text>
+        <text class="label" x="160" y="194">dem Mann.</text>
+        <line class="guide" x1="160" y1="202" x2="244" y2="202"/>
+        <text class="note" x="202" y="222" text-anchor="middle">Dativ</text>
+      </svg>
+
+examples:
+  - de: Das ist der Kollege, dem ich geholfen habe.
+    en: That's the colleague I helped.
+    fa: این همان همکاری است که به او کمک کردم.
+  - de: Die Nachbarn, denen wir beim Umzug geholfen haben, haben uns zum Essen eingeladen.
+    en: The neighbours we helped with their move have invited us to dinner.
+    fa: همسایه‌هایی که در اسباب‌کشی به آن‌ها کمک کردیم، ما را به شام دعوت کرده‌اند.
+  - de: Die Frau, der das Auto gehört, wohnt nebenan.
+    en: The woman who owns the car lives next door.
+    fa: زنی که صاحب این ماشین است، در خانهٔ بغلی زندگی می‌کند.
+  - de: Das ist das Kind, dem ich das Fahrrad geschenkt habe.
+    en: That's the child I gave the bike to.
+    fa: این همان بچه‌ای است که دوچرخه را به او هدیه دادم.
+  - de: Kennst du die Leute, denen das Haus gehört?
+    en: Do you know the people who own the house?
+    fa: کسانی را که صاحب این خانه‌اند می‌شناسی؟
+  - de: Ich habe eine Freundin, der ich alles erzählen kann.
+    en: I have a friend I can tell everything.
+    fa: دوستی دارم که می‌توانم همه‌چیز را به او بگویم.
+  - de: Der Arzt, dem ich am meisten vertraue, hat jetzt eine eigene Praxis.
+    en: The doctor I trust most now has his own practice.
+    fa: پزشکی که بیش از همه به او اعتماد دارم، حالا مطب خودش را دارد.
+  - de: Die Gäste, denen das Essen nicht geschmeckt hat, sind früh gegangen.
+    en: The guests who didn't like the food left early.
+    fa: مهمان‌هایی که غذا به دهانشان مزه نکرد، زود رفتند.
+  - de: Wie heißt die Kollegin, der du die E-Mail geschickt hast?
+    en: What's the name of the colleague you sent the e-mail to?
+    fa: اسم همکاری که ایمیل را برایش فرستادی چیست؟
+  - de: Das ist der Mann, der mir geholfen hat.
+    en: That's the man who helped me.
+    fa: این همان مردی است که به من کمک کرد.
+
+mistakes:
+  - wrong: Die Kinder, den ich helfe, sind sehr nett.
+    right: Die Kinder, denen ich helfe, sind sehr nett.
+    why:
+      en: "In the plural the *Dativ* relative pronoun is *denen*. *Den* is only the article: *den Kindern*."
+      fa: "ضمیر موصولی جمع در حالت *Dativ* *denen* است. *den* فقط حرف تعریف است: *den Kindern*."
+      de: "Im Plural heißt das Relativpronomen im Dativ *denen*. *Den* ist nur der Artikel: *den Kindern*."
+  - wrong: Das ist die Kollegin, die ich geholfen habe.
+    right: Das ist die Kollegin, der ich geholfen habe.
+    why:
+      en: "*Helfen* takes the *Dativ* (*Ich habe der Kollegin geholfen*), so the pronoun is *der*."
+      fa: "*helfen* با حالت *Dativ* می‌آید (*Ich habe der Kollegin geholfen*)، پس ضمیر موصولی *der* است."
+      de: "*Helfen* hat den Dativ: *Ich habe der Kollegin geholfen.* Darum: *der*."
+  - wrong: Der Mann, den das Auto gehört, ist nicht da.
+    right: Der Mann, dem das Auto gehört, ist nicht da.
+    why:
+      en: "*Das Auto gehört dem Mann*: the car is the subject, and the owner is in the *Dativ*, so *dem*."
+      fa: "*Das Auto gehört dem Mann*: ماشین فاعل است و صاحب آن در حالت *Dativ* می‌آید، پس *dem*."
+      de: "*Das Auto gehört dem Mann.* Das Auto ist das Subjekt, der Mann steht im Dativ: *dem*."
+  - wrong: Die Nachbarin, dem ich die Blumen gebe, hat heute Geburtstag.
+    right: Die Nachbarin, der ich die Blumen gebe, hat heute Geburtstag.
+    why:
+      en: "*Nachbarin* is a *die* noun. In the *Dativ* *die* becomes *der*, not *dem*."
+      fa: "*Nachbarin* اسم مؤنث (*die*) است و *die* در حالت *Dativ* به *der* تبدیل می‌شود، نه *dem*."
+      de: "*Nachbarin* hat den Artikel *die*. Im Dativ wird *die* zu *der*, nicht zu *dem*."
+  - wrong: Das ist der Freund, dem ich habe das Buch geschenkt.
+    right: Das ist der Freund, dem ich das Buch geschenkt habe.
+    why:
+      en: "In a relative clause the conjugated verb goes to the very end, after the *Partizip II*."
+      fa: "در جملهٔ موصولی فعل صرف‌شده در آخر جمله می‌آید، پس از صفت مفعولی (*Partizip II*)."
+      de: "Im Relativsatz steht das konjugierte Verb ganz am Ende, nach dem Partizip II."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist der Kollege, ___ ich gestern geholfen habe.
+    options: [den, der, dem]
+    answer: dem
+    explanation:
+      en: "*Ich habe dem Kollegen geholfen*: *helfen* takes the *Dativ*, so *dem*."
+      fa: "*Ich habe dem Kollegen geholfen*: *helfen* با حالت *Dativ* می‌آید، پس *dem*."
+      de: "*Ich habe dem Kollegen geholfen.* *Helfen* hat den Dativ: *dem*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Nachbarn, ___ wir geholfen haben, haben uns eingeladen.
+    options: [denen, den, die]
+    answer: denen
+    explanation:
+      en: "Plural and *Dativ* (*Wir haben den Nachbarn geholfen*): the pronoun is *denen*, not *den*."
+      fa: "جمع و حالت *Dativ* (*Wir haben den Nachbarn geholfen*): ضمیر موصولی *denen* است، نه *den*."
+      de: "Plural und Dativ: *Wir haben den Nachbarn geholfen.* Das Pronomen heißt *denen*, nicht *den*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Frau, ___ das Auto gehört, wohnt nebenan.
+    options: [die, dem, der]
+    answer: der
+    explanation:
+      en: "*Das Auto gehört der Frau*: the owner is in the *Dativ*, and *die* becomes *der*."
+      fa: "*Das Auto gehört der Frau*: صاحب ماشین در حالت *Dativ* است و *die* به *der* تبدیل می‌شود."
+      de: "*Das Auto gehört der Frau.* Die Besitzerin steht im Dativ: *die* wird zu *der*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Das ist das Kind, ___ ich das Fahrrad geschenkt habe.
+    options: [dem, das, den]
+    answer: dem
+    explanation:
+      en: "*Ich habe dem Kind das Fahrrad geschenkt*: the child gets the present, so the *Dativ*, *dem*."
+      fa: "*Ich habe dem Kind das Fahrrad geschenkt*: بچه هدیه را می‌گیرد، پس حالت *Dativ* و *dem*."
+      de: "*Ich habe dem Kind das Fahrrad geschenkt.* Das Kind bekommt das Geschenk: Dativ, *dem*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Das ist der Mann, ___ mir gestern geholfen hat.
+    options: [dem, den, der]
+    answer: der
+    explanation:
+      en: "Here the man is the subject (*Der Mann hat mir geholfen*); *mir* is the *Dativ*. So the pronoun is *der*."
+      fa: "این‌جا مرد فاعل است (*Der Mann hat mir geholfen*) و *mir* در حالت *Dativ* است. پس ضمیر موصولی *der* است."
+      de: "Hier ist der Mann das Subjekt: *Der Mann hat mir geholfen.* *Mir* ist der Dativ. Also *der*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich habe eine Freundin, …
+    options: [die ich alles erzählen kann., der ich kann alles erzählen., der ich alles erzählen kann.]
+    answer: der ich alles erzählen kann.
+    explanation:
+      en: "*Ich kann der Freundin alles erzählen*: the friend is in the *Dativ*, *der*. The conjugated *kann* goes to the end."
+      fa: "*Ich kann der Freundin alles erzählen*: دوست در حالت *Dativ* است، پس *der*. فعل صرف‌شدهٔ *kann* به پایان جمله می‌رود."
+      de: "*Ich kann der Freundin alles erzählen.* Dativ: *der*. Das konjugierte Verb *kann* steht am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Kennst du die Leute, …
+    options: [den das Haus gehört?, denen das Haus gehört?, die das Haus gehört?]
+    answer: denen das Haus gehört?
+    explanation:
+      en: "*Das Haus gehört den Leuten*: plural *Dativ*, so the pronoun is *denen*."
+      fa: "*Das Haus gehört den Leuten*: جمع در حالت *Dativ*، پس ضمیر موصولی *denen* است."
+      de: "*Das Haus gehört den Leuten.* Plural im Dativ: *denen*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Das ist der Arzt, …
+    options: [dem ich vertraue., den ich vertraue., der ich vertraue.]
+    answer: dem ich vertraue.
+    explanation:
+      en: "*Vertrauen* takes the *Dativ* (*Ich vertraue dem Arzt*), so *dem*."
+      fa: "*vertrauen* با حالت *Dativ* می‌آید (*Ich vertraue dem Arzt*)، پس *dem*."
+      de: "*Vertrauen* hat den Dativ: *Ich vertraue dem Arzt.* Also *dem*."
+  - id: true-1
+    type: true-false
+    prompt: Die Kinder, denen der Kuchen geschmeckt hat, wollen noch ein Stück.
+    answer: true
+    explanation:
+      en: "*Der Kuchen hat den Kindern geschmeckt*: plural *Dativ*, *denen*. The sentence is correct."
+      fa: "*Der Kuchen hat den Kindern geschmeckt*: جمع در حالت *Dativ*، پس *denen*. جمله درست است."
+      de: "*Der Kuchen hat den Kindern geschmeckt.* Plural im Dativ: *denen*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist die Kollegin, die ich die Stadt gezeigt habe.
+    answer: false
+    explanation:
+      en: "*Ich habe der Kollegin die Stadt gezeigt*: the person shown something is in the *Dativ*, so *der ich die Stadt gezeigt habe*."
+      fa: "*Ich habe der Kollegin die Stadt gezeigt*: کسی که چیزی به او نشان داده می‌شود در حالت *Dativ* است، پس *der ich die Stadt gezeigt habe*."
+      de: "*Ich habe der Kollegin die Stadt gezeigt.* Die Person steht im Dativ. Richtig ist: *der ich die Stadt gezeigt habe*."
+  - id: true-3
+    type: true-false
+    prompt: Wie heißt der Junge, dem du das Buch gegeben hast?
+    answer: true
+    explanation:
+      en: "*Du hast dem Jungen das Buch gegeben*: *Dativ*, *dem*. The sentence is correct."
+      fa: "*Du hast dem Jungen das Buch gegeben*: حالت *Dativ*، پس *dem*. جمله درست است."
+      de: "*Du hast dem Jungen das Buch gegeben.* Dativ: *dem*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Meine Eltern, den ich jede Woche schreibe, wohnen in Graz.
+    answer: false
+    explanation:
+      en: "*Ich schreibe meinen Eltern*: plural *Dativ*, so the pronoun is *denen*, not *den*."
+      fa: "*Ich schreibe meinen Eltern*: جمع در حالت *Dativ*، پس ضمیر موصولی *denen* است، نه *den*."
+      de: "*Ich schreibe meinen Eltern.* Plural im Dativ: *denen*, nicht *den*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist mein Onkel, ___ das Restaurant gehört.
+    answers: [dem, welchem]
+    explanation:
+      en: "*Das Restaurant gehört dem Onkel*: masculine *Dativ*, *dem*."
+      fa: "*Das Restaurant gehört dem Onkel*: مذکر در حالت *Dativ*، پس *dem*."
+      de: "*Das Restaurant gehört dem Onkel.* Maskulin im Dativ: *dem*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Die Gäste, ___ wir das Essen gebracht haben, waren sehr zufrieden.
+    answers: [denen, welchen]
+    explanation:
+      en: "*Wir haben den Gästen das Essen gebracht*: plural *Dativ*, *denen*."
+      fa: "*Wir haben den Gästen das Essen gebracht*: جمع در حالت *Dativ*، پس *denen*."
+      de: "*Wir haben den Gästen das Essen gebracht.* Plural im Dativ: *denen*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Meine Schwester, ___ ich zum Geburtstag gratuliert habe, hat sich sehr gefreut.
+    answers: [der, welcher]
+    explanation:
+      en: "*Gratulieren* takes the *Dativ* (*Ich habe meiner Schwester gratuliert*), and feminine *die* becomes *der*."
+      fa: "*gratulieren* با حالت *Dativ* می‌آید (*Ich habe meiner Schwester gratuliert*) و *die* مؤنث به *der* تبدیل می‌شود."
+      de: "*Gratulieren* hat den Dativ: *Ich habe meiner Schwester gratuliert.* *Die* wird zu *der*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Das Mädchen, ___ ich den Weg erklärt habe, war aus Spanien.
+    answers: [dem, welchem]
+    explanation:
+      en: "*Ich habe dem Mädchen den Weg erklärt*: neuter *Dativ*, *dem*."
+      fa: "*Ich habe dem Mädchen den Weg erklärt*: خنثی در حالت *Dativ*، پس *dem*."
+      de: "*Ich habe dem Mädchen den Weg erklärt.* Neutral im Dativ: *dem*."
+  - id: error-1
+    type: find-error
+    prompt: Die Schüler, den ich manchmal helfe, sind sehr fleißig.
+    answer: den
+    explanation:
+      en: "*Ich helfe den Schülern*: plural *Dativ*, so the pronoun is *denen*."
+      fa: "*Ich helfe den Schülern*: جمع در حالت *Dativ*، پس ضمیر موصولی *denen* است."
+      de: "*Ich helfe den Schülern.* Plural im Dativ: Richtig ist *denen*."
+  - id: error-2
+    type: find-error
+    prompt: Das ist der Nachbar, den ich immer die Post bringe.
+    answer: den
+    explanation:
+      en: "*Ich bringe dem Nachbarn die Post*: the person who gets the post is in the *Dativ*, *dem*."
+      fa: "*Ich bringe dem Nachbarn die Post*: کسی که نامه‌ها را می‌گیرد در حالت *Dativ* است، پس *dem*."
+      de: "*Ich bringe dem Nachbarn die Post.* Er bekommt die Post: Dativ, *dem*."
+  - id: error-3
+    type: find-error
+    prompt: Die Firma, dem ich geschrieben habe, hat noch nicht geantwortet.
+    answer: dem
+    explanation:
+      en: "*Firma* is a *die* noun, and *die* becomes *der* in the *Dativ*: *der ich geschrieben habe*."
+      fa: "*Firma* اسم مؤنث (*die*) است و *die* در حالت *Dativ* به *der* تبدیل می‌شود: *der ich geschrieben habe*."
+      de: "*Firma* hat den Artikel *die*. Im Dativ wird *die* zu *der*: *der ich geschrieben habe*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["das ist die Kollegin,", der, ich, gestern, geholfen, habe]
+    explanation:
+      en: "After the pronoun *der* comes the subject *ich*; the conjugated *habe* goes last, after *geholfen*."
+      fa: "پس از ضمیر *der* فاعل *ich* می‌آید و فعل صرف‌شدهٔ *habe* در آخر، پس از *geholfen*."
+      de: "Nach *der* kommt das Subjekt *ich*. Das konjugierte Verb *habe* steht ganz am Ende, nach *geholfen*."
+  - id: order-2
+    type: word-order
+    end: "?"
+    answers:
+      - ["wo sind die Kinder,", denen, du, das Eis, gegeben, hast]
+    explanation:
+      en: "After the pronoun *denen* comes the subject *du*, then the object; the conjugated *hast* goes last."
+      fa: "پس از ضمیر *denen* فاعل *du* می‌آید، سپس مفعول، و فعل صرف‌شدهٔ *hast* در آخر."
+      de: "Nach *denen* kommt das Subjekt *du*, dann das Objekt. Das konjugierte Verb *hast* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - ["der Mann, ___ ich helfe", dem]
+      - ["die Frau, ___ ich helfe", der]
+      - ["die Kinder, ___ ich helfe", denen]
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *dem* for masculine, *der* for feminine, and *denen* for the plural."
+      fa: "*helfen* با حالت *Dativ* می‌آید: *dem* برای مذکر، *der* برای مؤنث و *denen* برای جمع."
+      de: "*Helfen* hat den Dativ: *dem* (maskulin), *der* (feminin) und *denen* (Plural)."

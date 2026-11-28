@@ -9,5 +9,312 @@ recogniseOnly: true
 prerequisites: [grammar-071, grammar-180]
 title:
   en: "Relative pronoun in the *Genitiv*"
-  fa: "ضمیر موصولی در *Genitiv* (*dessen*، *deren*)"
+  fa: "ضمیر موصولی در حالت *Genitiv* (*dessen*، *deren*)"
   de: "Relativpronomen im Genitiv (*dessen*, *deren*)"
+
+explanations:
+  en:
+    rule: >
+      *Dessen* and *deren* open a relative clause that says whose something
+      is, like English "whose": *Florian Bader, dessen Zwillinge in die
+      Krippe gehen, …* *Dessen* refers back to a masculine or neuter noun,
+      *deren* to a feminine noun or a plural. The owner decides, not the
+      thing owned: *die Frau, deren Sohn hier arbeitet* has *deren*, although
+      *Sohn* is masculine. It helps to read *dessen* as *sein* and *deren* as
+      *ihr*: *die Frau, deren Sohn …* is *die Frau – ihr Sohn …*. The noun
+      after *dessen* or *deren* has no article of its own. You meet these
+      forms mostly in written texts, and you only need to understand them; in
+      your own sentences, two sentences do the same job: *Ich kenne die Frau.
+      Ihr Sohn arbeitet hier.*
+  fa:
+    rule: >
+      *dessen* و *deren* جملهٔ موصولی‌ای را آغاز می‌کنند که می‌گوید چیزی از
+      آنِ کیست: *Florian Bader, dessen Zwillinge in die Krippe gehen, …* (فلوریان
+      بادر که دوقلوهایش به مهدکودک می‌روند). *dessen* به اسم مذکر یا خنثی
+      برمی‌گردد و *deren* به اسم مؤنث یا جمع. ملاک، صاحب چیز است، نه خود آن
+      چیز: در *die Frau, deren Sohn hier arbeitet* ضمیر *deren* است، هرچند
+      *Sohn* مذکر است. *dessen* را مانند *sein* و *deren* را مانند *ihr*
+      بخوانید: *die Frau, deren Sohn …* یعنی «زنی که پسرش …». اسمِ پس از
+      *dessen* یا *deren* حرف تعریف نمی‌گیرد. این شکل‌ها بیشتر در متن‌های
+      نوشتاری می‌آیند و کافی است آن‌ها را بفهمید. در جمله‌های خودتان می‌توانید
+      همین را با دو جمله بگویید: *Ich kenne die Frau. Ihr Sohn arbeitet hier.*
+  de:
+    rule: >
+      Mit *dessen* und *deren* beginnt ein Relativsatz, der sagt, wem etwas
+      gehört: *Florian Bader, dessen Zwillinge in die Krippe gehen, …*
+      *Dessen* steht für ein maskulines oder neutrales Nomen, *deren* für ein
+      feminines Nomen oder für den Plural. Wichtig ist der Besitzer, nicht die
+      Sache: *die Frau, deren Sohn hier arbeitet*. *Sohn* ist maskulin, aber
+      es heißt *deren*, wegen *die Frau*. Lesen Sie *dessen* wie *sein* und
+      *deren* wie *ihr*: *die Frau, deren Sohn …* heißt *die Frau – ihr Sohn
+      …*. Das Nomen nach *dessen* oder *deren* hat keinen Artikel. Die Formen
+      stehen meistens in geschriebenen Texten. Sie müssen sie nur verstehen.
+      Selbst können Sie zwei Sätze sagen: *Ich kenne die Frau. Ihr Sohn
+      arbeitet hier.*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "Article in the *Genitiv*", fa: "حرف تعریف در حالت *Genitiv*", de: Artikel im Genitiv }
+    - { en: "Pronoun in the *Genitiv*", fa: "ضمیر موصولی در حالت *Genitiv*", de: Relativpronomen im Genitiv }
+    - { en: Read it as, fa: به معنای, de: Wie }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Mann, des Mannes, dessen, sein, "der Mann, dessen Auto kaputt ist"]
+    - [die Frau, der Frau, deren, ihr, "die Frau, deren Sohn hier arbeitet"]
+    - [das Kind, des Kindes, dessen, sein, "das Kind, dessen Eltern arbeiten"]
+    - [die Nachbarn (Plural), der Nachbarn, deren, ihr, "die Nachbarn, deren Hund bellt"]
+
+# Top: the main clause with the owner (shaded). Middle: the relative clause,
+# deren (shaded) under the owner, then the thing owned without an article.
+# Bottom: the relative clause said as a sentence of its own, with ihr.
+diagrams:
+  - caption:
+      en: >
+        *Das ist die Frau, deren Sohn Max heißt.* *Deren* has the gender of
+        the owner, *Frau*, not of *Sohn*. On its own the relative clause is
+        *Ihr Sohn heißt Max.*, so *deren* reads like *ihr*.
+      fa: >
+        *deren* با صاحب، یعنی *Frau*، هم‌جنس است، نه با *Sohn*. جملهٔ موصولی
+        به‌تنهایی چنین می‌شود: *Ihr Sohn heißt Max.* پس *deren* را مانند
+        *ihr* بخوانید. جملهٔ کامل: *Das ist die Frau, deren Sohn Max heißt.*
+      de: >
+        *Das ist die Frau, deren Sohn Max heißt.* *Deren* passt zum Besitzer,
+        zu *Frau*, nicht zu *Sohn*. Der Relativsatz allein heißt: *Ihr Sohn
+        heißt Max.* *Deren* ist also wie *ihr*.
+    labels:
+      main: { en: main clause, fa: جملهٔ پایه, de: Hauptsatz }
+      relative: { en: relative clause, fa: جملهٔ موصولی, de: Relativsatz }
+      owner: { en: the owner, fa: صاحب, de: der Besitzer }
+      alone: { en: "the relative clause on its own:", fa: جملهٔ موصولی به‌تنهایی, de: "der Relativsatz allein:" }
+    svg: |
+      <svg viewBox="0 0 320 236">
+        <!-- Das ist die Frau, -->
+        <rect class="surface" x="2" y="10" width="110" height="40"/>
+        <rect class="shade" x="116" y="10" width="60" height="40"/>
+        <text class="label" x="57" y="36" text-anchor="middle">Das ist die</text>
+        <text class="label" x="146" y="36" text-anchor="middle">Frau,</text>
+        <text class="note" x="250" y="36" text-anchor="middle">{{main}}</text>
+        <!-- from the owner to its pronoun -->
+        <line class="line" x1="146" y1="54" x2="146" y2="80"/>
+        <polygon class="line" points="140,78 152,78 146,86"/>
+        <text class="note" x="160" y="74">{{owner}}</text>
+        <!-- deren Sohn Max heißt. -->
+        <rect class="shade" x="116" y="90" width="60" height="40"/>
+        <rect class="surface" x="180" y="90" width="50" height="40"/>
+        <rect class="surface" x="234" y="90" width="84" height="40"/>
+        <text class="label" x="146" y="116" text-anchor="middle">deren</text>
+        <text class="label" x="205" y="116" text-anchor="middle">Sohn</text>
+        <text class="label" x="276" y="116" text-anchor="middle">Max heißt.</text>
+        <text class="note" x="57" y="116" text-anchor="middle">{{relative}}</text>
+        <!-- the same as a sentence of its own -->
+        <text class="note" x="160" y="164" text-anchor="middle">{{alone}}</text>
+        <text class="label" x="150" y="194" text-anchor="end">Ihr Sohn</text>
+        <text class="label" x="158" y="194">heißt Max.</text>
+        <line class="guide" x1="80" y1="202" x2="150" y2="202"/>
+        <text class="note" x="115" y="222" text-anchor="middle">deren = ihr</text>
+      </svg>
+
+examples:
+  - de: Florian Bader, dessen Zwillinge in die Krippe gehen, arbeitet jetzt halbtags.
+    en: Florian Bader, whose twins go to nursery, now works part-time.
+    fa: فلوریان بادر که دوقلوهایش به مهدکودک می‌روند، حالا نیمه‌وقت کار می‌کند.
+  - de: Das ist die Frau, deren Sohn in meiner Klasse ist.
+    en: That's the woman whose son is in my class.
+    fa: این همان زنی است که پسرش در کلاس من است.
+  - de: Ich habe einen Freund, dessen Schwester in Kanada lebt.
+    en: I have a friend whose sister lives in Canada.
+    fa: دوستی دارم که خواهرش در کانادا زندگی می‌کند.
+  - de: Die Nachbarn, deren Hund immer bellt, sind im Urlaub.
+    en: The neighbours whose dog is always barking are on holiday.
+    fa: همسایه‌هایی که سگشان همیشه پارس می‌کند، به تعطیلات رفته‌اند.
+  - de: Das Kind, dessen Eltern noch arbeiten, wartet in der Schule.
+    en: The child whose parents are still at work is waiting at school.
+    fa: بچه‌ای که پدر و مادرش هنوز سر کارند، در مدرسه منتظر است.
+  - de: Die Firma, deren Produkte wir verkaufen, sitzt in München.
+    en: The company whose products we sell is based in Munich.
+    fa: شرکتی که محصولاتش را می‌فروشیم در مونیخ است.
+  - de: Der Schriftsteller, dessen Buch ich gerade lese, kommt morgen in unsere Stadt.
+    en: The writer whose book I'm reading is coming to our town tomorrow.
+    fa: نویسنده‌ای که دارم کتابش را می‌خوانم، فردا به شهر ما می‌آید.
+  - de: Wir suchen Mitarbeiter, deren Muttersprache Deutsch ist.
+    en: We are looking for staff whose mother tongue is German.
+    fa: به دنبال کارمندانی هستیم که زبان مادری‌شان آلمانی است.
+
+mistakes:
+  - wrong: Das ist die Frau, dessen Sohn hier arbeitet.
+    right: Das ist die Frau, deren Sohn hier arbeitet.
+    why:
+      en: "The owner decides: *Frau* is feminine, so *deren*, although *Sohn* is masculine."
+      fa: "ملاک، صاحب است: *Frau* مؤنث است، پس *deren*، هرچند *Sohn* مذکر است."
+      de: "Wichtig ist der Besitzer: *Frau* ist feminin, also *deren*. *Sohn* ist egal."
+  - wrong: Ich kenne einen Mann, deren Tochter Ärztin ist.
+    right: Ich kenne einen Mann, dessen Tochter Ärztin ist.
+    why:
+      en: "The owner, *Mann*, is masculine, so *dessen* (like *seine Tochter*), although *Tochter* is feminine."
+      fa: "صاحب، یعنی *Mann*، مذکر است، پس *dessen* (مانند *seine Tochter*)، هرچند *Tochter* مؤنث است."
+      de: "Der Besitzer, *Mann*, ist maskulin, also *dessen* (wie *seine Tochter*)."
+  - wrong: Das ist der Nachbar, dessen der Hund so laut ist.
+    right: Das ist der Nachbar, dessen Hund so laut ist.
+    why:
+      en: "After *dessen* or *deren* the noun has no article, just as after *sein* or *ihr*."
+      fa: "اسمِ پس از *dessen* یا *deren* حرف تعریف نمی‌گیرد، همان‌طور که پس از *sein* یا *ihr*."
+      de: "Nach *dessen* oder *deren* hat das Nomen keinen Artikel, wie nach *sein* oder *ihr*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist die Frau, ___ Sohn in meiner Klasse ist.
+    options: [dessen, deren]
+    answer: deren
+    explanation:
+      en: "The owner, *Frau*, is feminine: *deren* (like *ihr Sohn*)."
+      fa: "صاحب، یعنی *Frau*، مؤنث است: *deren* (مانند *ihr Sohn*)."
+      de: "Der Besitzer, *Frau*, ist feminin: *deren* (wie *ihr Sohn*)."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich habe einen Freund, ___ Schwester in Kanada lebt.
+    options: [deren, dessen]
+    answer: dessen
+    explanation:
+      en: "The owner, *Freund*, is masculine: *dessen* (like *seine Schwester*)."
+      fa: "صاحب، یعنی *Freund*، مذکر است: *dessen* (مانند *seine Schwester*)."
+      de: "Der Besitzer, *Freund*, ist maskulin: *dessen* (wie *seine Schwester*)."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Nachbarn, ___ Hund immer bellt, sind im Urlaub.
+    options: [dessen, deren]
+    answer: deren
+    explanation:
+      en: "The owners, *die Nachbarn*, are plural: *deren* (like *ihr Hund*)."
+      fa: "صاحبان، یعنی *die Nachbarn*، جمع‌اند: *deren* (مانند *ihr Hund*)."
+      de: "Die Besitzer, *die Nachbarn*, sind Plural: *deren* (wie *ihr Hund*)."
+  - id: gap-4
+    type: gap-fill
+    prompt: Das Kind, ___ Eltern noch arbeiten, wartet in der Schule.
+    options: [deren, dessen]
+    answer: dessen
+    explanation:
+      en: "The owner, *Kind*, is neuter: *dessen* (like *seine Eltern*). *Eltern* being plural does not count."
+      fa: "صاحب، یعنی *Kind*، خنثی است: *dessen* (مانند *seine Eltern*). جمع بودن *Eltern* اثری ندارد."
+      de: "Der Besitzer, *Kind*, ist neutral: *dessen* (wie *seine Eltern*). Dass *Eltern* Plural ist, ist egal."
+  - id: gap-5
+    type: gap-fill
+    prompt: Die Firma, ___ Produkte wir verkaufen, sitzt in München.
+    options: [dessen, deren]
+    answer: deren
+    explanation:
+      en: "The owner, *Firma*, is feminine: *deren* (like *ihre Produkte*)."
+      fa: "صاحب، یعنی *Firma*، مؤنث است: *deren* (مانند *ihre Produkte*)."
+      de: "Der Besitzer, *Firma*, ist feminin: *deren* (wie *ihre Produkte*)."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Florian, dessen Zwillinge in die Krippe gehen, arbeitet halbtags. Was stimmt?"
+    options: [Florian ist ein Zwilling., Florian hat Zwillinge., Florian arbeitet in einer Krippe.]
+    answer: Florian hat Zwillinge.
+    explanation:
+      en: "*Dessen Zwillinge* are *seine Zwillinge*: Florian's twins."
+      fa: "*dessen Zwillinge* یعنی *seine Zwillinge*: دوقلوهای فلوریان."
+      de: "*Dessen Zwillinge* heißt *seine Zwillinge*: Florian hat Zwillinge."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Das ist die Frau, deren Mann Koch ist. Was stimmt?"
+    options: [Sie ist Köchin., Sie sucht einen Koch., Ihr Mann ist Koch.]
+    answer: Ihr Mann ist Koch.
+    explanation:
+      en: "*Deren Mann* is *ihr Mann*: the woman's husband is a cook."
+      fa: "*deren Mann* یعنی *ihr Mann*: شوهر این زن آشپز است."
+      de: "*Deren Mann* heißt *ihr Mann*: Ihr Mann ist Koch."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Das ist der Sohn meiner Kollegin, dessen Freundin in Rom lebt. Wer hat eine Freundin in Rom?"
+    options: [Der Sohn., Die Kollegin., Ich.]
+    answer: Der Sohn.
+    explanation:
+      en: "*Dessen* refers to a masculine or neuter noun. *Kollegin* is feminine, so *dessen* means the son."
+      fa: "*dessen* به اسم مذکر یا خنثی برمی‌گردد. *Kollegin* مؤنث است، پس *dessen* به پسر برمی‌گردد."
+      de: "*Dessen* steht für ein maskulines oder neutrales Nomen. *Kollegin* ist feminin, also ist der Sohn gemeint."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "Der Arzt, dessen Praxis neben unserem Haus ist, heißt Dr. Lang. Was stimmt?"
+    options: [Dr. Lang sucht eine Praxis., Dr. Lang hat eine Praxis neben unserem Haus., Dr. Lang wohnt in unserem Haus.]
+    answer: Dr. Lang hat eine Praxis neben unserem Haus.
+    explanation:
+      en: "*Dessen Praxis* is *seine Praxis*: the doctor's practice is next to our house."
+      fa: "*dessen Praxis* یعنی *seine Praxis*: مطب این پزشک کنار خانهٔ ماست."
+      de: "*Dessen Praxis* heißt *seine Praxis*: Die Praxis von Dr. Lang ist neben unserem Haus."
+  - id: true-1
+    type: true-false
+    prompt: Die Frau, deren Sohn hier arbeitet, ist meine Nachbarin.
+    answer: true
+    explanation:
+      en: "The owner, *Frau*, is feminine, so *deren*. The sentence is correct."
+      fa: "صاحب، یعنی *Frau*، مؤنث است، پس *deren*. جمله درست است."
+      de: "Der Besitzer, *Frau*, ist feminin, also *deren*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist die Lehrerin, dessen Klasse ich besuche.
+    answer: false
+    explanation:
+      en: "The owner, *Lehrerin*, is feminine, so it is *deren Klasse*."
+      fa: "صاحب، یعنی *Lehrerin*، مؤنث است، پس درست آن *deren Klasse* است."
+      de: "Der Besitzer, *Lehrerin*, ist feminin. Richtig ist *deren Klasse*."
+  - id: true-3
+    type: true-false
+    prompt: Der Mann, dessen Auto vor dem Haus steht, wohnt im ersten Stock.
+    answer: true
+    explanation:
+      en: "The owner, *Mann*, is masculine, so *dessen*, and *Auto* has no article. The sentence is correct."
+      fa: "صاحب، یعنی *Mann*، مذکر است، پس *dessen* و *Auto* حرف تعریف ندارد. جمله درست است."
+      de: "Der Besitzer, *Mann*, ist maskulin, also *dessen*. *Auto* hat keinen Artikel. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich kenne einen Mann, dessen die Frau Ärztin ist.
+    answer: false
+    explanation:
+      en: "After *dessen* the noun has no article: *dessen Frau Ärztin ist*."
+      fa: "اسمِ پس از *dessen* حرف تعریف نمی‌گیرد: *dessen Frau Ärztin ist*."
+      de: "Nach *dessen* hat das Nomen keinen Artikel: *dessen Frau Ärztin ist*."
+  - id: true-5
+    type: true-false
+    prompt: Die Kinder, deren Eltern heute nicht kommen können, essen in der Schule.
+    answer: true
+    explanation:
+      en: "The owners, *die Kinder*, are plural, so *deren* (like *ihre Eltern*). The sentence is correct."
+      fa: "صاحبان، یعنی *die Kinder*، جمع‌اند، پس *deren* (مانند *ihre Eltern*). جمله درست است."
+      de: "Die Besitzer, *die Kinder*, sind Plural, also *deren* (wie *ihre Eltern*). Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Das ist die Frau, dessen Hund so laut bellt.
+    answer: dessen
+    explanation:
+      en: "The owner, *Frau*, is feminine: *deren Hund*, although *Hund* is masculine."
+      fa: "صاحب، یعنی *Frau*، مؤنث است: *deren Hund*، هرچند *Hund* مذکر است."
+      de: "Der Besitzer, *Frau*, ist feminin: *deren Hund*. *Hund* ist egal."
+  - id: error-2
+    type: find-error
+    prompt: Mein Bruder, deren Frau aus Polen kommt, lebt in Leipzig.
+    answer: deren
+    explanation:
+      en: "The owner, *Bruder*, is masculine: *dessen Frau* (like *seine Frau*)."
+      fa: "صاحب، یعنی *Bruder*، مذکر است: *dessen Frau* (مانند *seine Frau*)."
+      de: "Der Besitzer, *Bruder*, ist maskulin: *dessen Frau* (wie *seine Frau*)."
+  - id: error-3
+    type: find-error
+    prompt: Die Nachbarn, dessen Garten so schön ist, sind sehr nett.
+    answer: dessen
+    explanation:
+      en: "The owners, *die Nachbarn*, are plural: *deren Garten* (like *ihr Garten*)."
+      fa: "صاحبان، یعنی *die Nachbarn*، جمع‌اند: *deren Garten* (مانند *ihr Garten*)."
+      de: "Die Besitzer, *die Nachbarn*, sind Plural: *deren Garten* (wie *ihr Garten*)."
+  - id: match-1
+    type: matching
+    answer:
+      - ["der Mann, dessen Tochter", seine Tochter]
+      - ["die Frau, deren Tochter", ihre Tochter]
+      - ["das Kind, dessen Hund", sein Hund]
+      - ["die Kinder, deren Hund", ihr Hund]
+    explanation:
+      en: "*Dessen* reads like *sein*, for a masculine or neuter owner; *deren* like *ihr*, for a feminine owner or a plural."
+      fa: "*dessen* مانند *sein* است، برای صاحب مذکر یا خنثی؛ *deren* مانند *ihr*، برای صاحب مؤنث یا جمع."
+      de: "*Dessen* ist wie *sein* (maskulin, neutral), *deren* wie *ihr* (feminin, Plural)."

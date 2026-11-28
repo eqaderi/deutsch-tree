@@ -11,3 +11,323 @@ title:
   en: "Relative clause with *wo* and *was*"
   fa: "جملهٔ موصولی با *wo* و *was*"
   de: "Relativsatz mit *wo* und *was*"
+
+explanations:
+  en:
+    rule: >
+      Two relative words never change for gender or case. *Was* does not
+      refer to a noun but to a word for "everything" or "nothing": *alles*,
+      *nichts*, *vieles*, *etwas*, and *das* in *das, was …*: *Das ist alles,
+      was ich weiß.* It also follows a superlative used as a noun (*das
+      Beste*, *das Schönste*): *Das ist das Beste, was ich je gegessen habe.*
+      *Was* stays *was* as subject and as object: *alles, was mir gefällt*,
+      *alles, was ich kenne*. After *alles* it is never *das*; after *etwas*
+      you will also read *das*. *Wo* refers to a place. After the name of a
+      city or a country it is the only choice: *In Ankara, wo ich geboren
+      bin, …* After a noun for a place it can stand instead of a preposition
+      and a pronoun: *die Stadt, wo ich wohne* means *die Stadt, in der ich
+      wohne*. Both open a subordinate clause: a comma comes before it, and
+      the conjugated verb goes to the end.
+  fa:
+    rule: >
+      دو واژهٔ موصولی هرگز با جنس و حالت تغییر نمی‌کنند. *was* به اسم
+      برنمی‌گردد، بلکه به واژه‌هایی مانند «همه‌چیز» و «هیچ‌چیز»: *alles*،
+      *nichts*، *vieles*، *etwas* و *das* در *das, was …*: *Das ist alles,
+      was ich weiß.* پس از صفت عالی‌ای که در نقش اسم آمده (*das Beste*،
+      *das Schönste*) نیز *was* می‌آید: *Das ist das Beste, was ich je
+      gegessen habe.* *was* چه فاعل باشد و چه مفعول، همان *was* می‌ماند:
+      *alles, was mir gefällt* و *alles, was ich kenne*. پس از *alles* هرگز
+      *das* نمی‌آید؛ پس از *etwas* گاهی *das* هم دیده می‌شود. *wo* به مکان
+      برمی‌گردد. پس از نام شهر یا کشور تنها همین واژه درست است: *In Ankara,
+      wo ich geboren bin, …* پس از اسمی که بر مکان دلالت می‌کند، *wo* می‌تواند
+      جای حرف اضافه و ضمیر را بگیرد: *die Stadt, wo ich wohne* همان *die
+      Stadt, in der ich wohne* است. هر دو جملهٔ پیرو را آغاز می‌کنند: پیش از
+      آن ویرگول می‌آید و فعل صرف‌شده به پایان جمله می‌رود.
+  de:
+    rule: >
+      Zwei Relativwörter ändern sich nie, nicht nach Genus und nicht nach
+      Kasus. *Was* steht nicht nach einem Nomen, sondern nach Wörtern wie
+      *alles*, *nichts*, *vieles*, *etwas* und *das* (*das, was …*): *Das ist
+      alles, was ich weiß.* Auch nach einem Superlativ als Nomen (*das
+      Beste*, *das Schönste*) steht *was*: *Das ist das Beste, was ich je
+      gegessen habe.* *Was* bleibt immer *was*, als Subjekt und als Objekt:
+      *alles, was mir gefällt*, *alles, was ich kenne*. Nach *alles* steht
+      nie *das*. Nach *etwas* liest man auch *das*. *Wo* steht für einen Ort.
+      Nach dem Namen einer Stadt oder eines Landes ist nur *wo* richtig: *In
+      Ankara, wo ich geboren bin, …* Nach einem Nomen für einen Ort kann *wo*
+      für Präposition und Pronomen stehen: *die Stadt, wo ich wohne*, also
+      *die Stadt, in der ich wohne*. Beide beginnen einen Nebensatz: Vor ihm
+      steht ein Komma, und das konjugierte Verb steht am Ende.
+
+table:
+  columns:
+    - { en: Refers to, fa: برمی‌گردد به, de: Bezugswort }
+    - { en: Relative word, fa: واژهٔ موصولی, de: Relativwort }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [alles, was, "Das ist alles, was ich weiß."]
+    - [nichts, was, "Es gibt nichts, was mir hier fehlt."]
+    - [vieles, was, "Vieles, was er sagt, stimmt."]
+    - [das Beste, was, "Das ist das Beste, was ich kenne."]
+    - [in Berlin, wo, "in Berlin, wo ich wohne"]
+    - [die Stadt, wo / in der, "die Stadt, wo ich wohne"]
+
+examples:
+  - de: Das ist alles, was ich weiß.
+    en: That's all I know.
+    fa: همهٔ آنچه می‌دانم همین است.
+  - de: In Ankara, wo ich geboren bin, wohnt noch meine Großmutter.
+    en: My grandmother still lives in Ankara, where I was born.
+    fa: مادربزرگم هنوز در آنکارا زندگی می‌کند، شهری که من در آن به دنیا آمده‌ام.
+  - de: Es gibt nichts, was ich lieber esse als Pizza.
+    en: There's nothing I'd rather eat than pizza.
+    fa: هیچ غذایی را بیشتر از پیتزا دوست ندارم.
+  - de: Das ist das Beste, was mir heute passiert ist.
+    en: That's the best thing that has happened to me today.
+    fa: این بهترین اتفاقی است که امروز برایم افتاده است.
+  - de: Hast du alles, was du für die Reise brauchst?
+    en: Have you got everything you need for the trip?
+    fa: هرچه برای سفر لازم داری همراهت هست؟
+  - de: Die Stadt, wo ich studiert habe, ist sehr klein.
+    en: The town where I studied is very small.
+    fa: شهری که در آن درس خوانده‌ام خیلی کوچک است.
+  - de: Ich besuche Freunde in Hamburg, wo es fast jeden Tag regnet.
+    en: I'm visiting friends in Hamburg, where it rains almost every day.
+    fa: به دیدن دوستانم در هامبورگ می‌روم؛ آن‌جا تقریباً هر روز باران می‌بارد.
+  - de: Vieles, was er erzählt, ist nicht wahr.
+    en: A lot of what he says isn't true.
+    fa: بسیاری از چیزهایی که تعریف می‌کند راست نیست.
+  - de: Das, was du gesagt hast, stimmt nicht.
+    en: What you said isn't right.
+    fa: آنچه گفتی درست نیست.
+  - de: Gibt es hier ein Café, wo man gut frühstücken kann?
+    en: Is there a café here where you can have a good breakfast?
+    fa: این‌جا کافه‌ای هست که بشود در آن صبحانهٔ خوبی خورد؟
+
+mistakes:
+  - wrong: Das ist alles, das ich weiß.
+    right: Das ist alles, was ich weiß.
+    why:
+      en: "*Alles* is not a noun, so the relative word is *was*, never *das*."
+      fa: "*alles* اسم نیست، پس واژهٔ موصولی *was* است، هرگز *das*."
+      de: "*Alles* ist kein Nomen. Darum steht *was*, nie *das*."
+  - wrong: Ich wohne in Berlin, in dem es viele Parks gibt.
+    right: Ich wohne in Berlin, wo es viele Parks gibt.
+    why:
+      en: "After the name of a city the relative word is *wo*."
+      fa: "پس از نام شهر واژهٔ موصولی *wo* است."
+      de: "Nach dem Namen einer Stadt steht *wo*."
+  - wrong: Die Stadt, was ich wohne, ist klein.
+    right: Die Stadt, wo ich wohne, ist klein.
+    why:
+      en: "For a place the relative word is *wo* (or *in der*). *Was* is for *alles*, *nichts* and the like."
+      fa: "برای مکان واژهٔ موصولی *wo* است (یا *in der*). *was* برای *alles*، *nichts* و مانند آن‌هاست."
+      de: "Für einen Ort steht *wo* (oder *in der*). *Was* steht nach *alles*, *nichts* und so weiter."
+  - wrong: Das ist alles, was ich habe gesehen.
+    right: Das ist alles, was ich gesehen habe.
+    why:
+      en: "A relative clause with *was* is a subordinate clause: the conjugated verb goes to the very end."
+      fa: "جملهٔ موصولی با *was* جملهٔ پیرو است و فعل صرف‌شده در آخر جمله می‌آید."
+      de: "Der Relativsatz mit *was* ist ein Nebensatz. Das konjugierte Verb steht ganz am Ende."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist alles, ___ ich weiß.
+    options: [das, wo, was]
+    answer: was
+    explanation:
+      en: "After *alles* the relative word is *was*."
+      fa: "پس از *alles* واژهٔ موصولی *was* است."
+      de: "Nach *alles* steht *was*."
+  - id: gap-2
+    type: gap-fill
+    prompt: In Ankara, ___ ich geboren bin, wohnt noch meine Großmutter.
+    options: [wo, was, die]
+    answer: wo
+    explanation:
+      en: "After the name of a city the relative word is *wo*."
+      fa: "پس از نام شهر واژهٔ موصولی *wo* است."
+      de: "Nach dem Namen einer Stadt steht *wo*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das ist das Beste, ___ ich je gegessen habe.
+    options: [wo, den, was]
+    answer: was
+    explanation:
+      en: "After a superlative used as a noun (*das Beste*) the relative word is *was*."
+      fa: "پس از صفت عالی در نقش اسم (*das Beste*) واژهٔ موصولی *was* است."
+      de: "Nach einem Superlativ als Nomen (*das Beste*) steht *was*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Es gibt nichts, ___ ich lieber esse als Pizza.
+    options: [was, wo, den]
+    answer: was
+    explanation:
+      en: "After *nichts* the relative word is *was*."
+      fa: "پس از *nichts* واژهٔ موصولی *was* است."
+      de: "Nach *nichts* steht *was*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ich verbringe den Sommer in Spanien, ___ meine Eltern ein Haus haben.
+    options: [was, wo, das]
+    answer: wo
+    explanation:
+      en: "After the name of a country the relative word is *wo*."
+      fa: "پس از نام کشور واژهٔ موصولی *wo* است."
+      de: "Nach dem Namen eines Landes steht *wo*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Hast du alles, …
+    options: [das du für die Reise brauchst?, was du für die Reise brauchst?, wo du für die Reise brauchst?]
+    answer: was du für die Reise brauchst?
+    explanation:
+      en: "After *alles* the relative word is *was*, never *das*."
+      fa: "پس از *alles* واژهٔ موصولی *was* است، هرگز *das*."
+      de: "Nach *alles* steht *was*, nie *das*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Die Stadt, …
+    options:
+      [
+        "in die ich studiert habe, ist sehr klein.",
+        "was ich studiert habe, ist sehr klein.",
+        "wo ich studiert habe, ist sehr klein.",
+      ]
+    answer: wo ich studiert habe, ist sehr klein.
+    explanation:
+      en: "For a place the relative word is *wo* (or *in der*, for *Wo?*). *In die* would be for *Wohin?*."
+      fa: "برای مکان واژهٔ موصولی *wo* است (یا *in der* برای *Wo?*). *in die* برای *Wohin?* است."
+      de: "Für einen Ort steht *wo* (oder *in der*, Frage *Wo?*). *In die* passt zur Frage *Wohin?*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Das ist alles, was ich weiß. Was heißt das?"
+    options: [Ich weiß alles., Mehr weiß ich nicht., "Ich weiß, wo alles ist."]
+    answer: Mehr weiß ich nicht.
+    explanation:
+      en: "*Alles, was ich weiß*: everything I know, and there is no more."
+      fa: "*alles, was ich weiß* یعنی همهٔ آنچه می‌دانم؛ بیش از این نمی‌دانم."
+      de: "*Alles, was ich weiß*: Das ist alles. Mehr weiß ich nicht."
+  - id: true-1
+    type: true-false
+    prompt: Gibt es hier ein Café, wo man gut frühstücken kann?
+    answer: true
+    explanation:
+      en: "A café is a place, so *wo* fits, and *kann* stands at the end. The sentence is correct."
+      fa: "کافه مکان است، پس *wo* درست است و *kann* در پایان جمله آمده. جمله درست است."
+      de: "Ein Café ist ein Ort, also passt *wo*. *Kann* steht am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist alles, das ich gesehen habe.
+    answer: false
+    explanation:
+      en: "After *alles* the relative word is *was*: *alles, was ich gesehen habe*."
+      fa: "پس از *alles* واژهٔ موصولی *was* است: *alles, was ich gesehen habe*."
+      de: "Nach *alles* steht *was*: *alles, was ich gesehen habe*."
+  - id: true-3
+    type: true-false
+    prompt: Das, was du gesagt hast, stimmt nicht.
+    answer: true
+    explanation:
+      en: "*Das, was …*: after *das* standing alone, the relative word is *was*. The sentence is correct."
+      fa: "در *das, was …* پس از *das* که تنها آمده، واژهٔ موصولی *was* است. جمله درست است."
+      de: "*Das, was …*: Nach *das* allein steht *was*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich wohne jetzt in Köln, in dem es viele Brücken gibt.
+    answer: false
+    explanation:
+      en: "After the name of a city the relative word is *wo*: *in Köln, wo es viele Brücken gibt*."
+      fa: "پس از نام شهر واژهٔ موصولی *wo* است: *in Köln, wo es viele Brücken gibt*."
+      de: "Nach dem Namen einer Stadt steht *wo*: *in Köln, wo es viele Brücken gibt*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich mache alles, ___ du willst.
+    answers: [was]
+    explanation:
+      en: "After *alles* the relative word is *was*."
+      fa: "پس از *alles* واژهٔ موصولی *was* است."
+      de: "Nach *alles* steht *was*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: In Hamburg, ___ mein Bruder wohnt, regnet es oft.
+    answers: [wo]
+    explanation:
+      en: "After the name of a city the relative word is *wo*."
+      fa: "پس از نام شهر واژهٔ موصولی *wo* است."
+      de: "Nach dem Namen einer Stadt steht *wo*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Es gibt hier nichts, ___ mir nicht gefällt.
+    answers: [was]
+    explanation:
+      en: "After *nichts* the relative word is *was*, here as the subject of *gefällt*."
+      fa: "پس از *nichts* واژهٔ موصولی *was* است؛ این‌جا فاعل *gefällt*."
+      de: "Nach *nichts* steht *was*. Hier ist *was* das Subjekt von *gefällt*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wir fahren nach Salzburg, ___ wir letztes Jahr schon einmal waren.
+    answers: [wo]
+    explanation:
+      en: "After the name of a city the relative word is *wo*."
+      fa: "پس از نام شهر واژهٔ موصولی *wo* است."
+      de: "Nach dem Namen einer Stadt steht *wo*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Vieles, ___ in der Zeitung steht, ist nicht wahr.
+    answers: [was]
+    explanation:
+      en: "After *vieles* the relative word is *was*."
+      fa: "پس از *vieles* واژهٔ موصولی *was* است."
+      de: "Nach *vieles* steht *was*."
+  - id: error-1
+    type: find-error
+    prompt: Ich habe alles gemacht, das du mir gesagt hast.
+    answer: das
+    explanation:
+      en: "After *alles* the relative word is *was*: *alles, was du mir gesagt hast*."
+      fa: "پس از *alles* واژهٔ موصولی *was* است: *alles, was du mir gesagt hast*."
+      de: "Nach *alles* steht *was*: *alles, was du mir gesagt hast*."
+  - id: error-2
+    type: find-error
+    prompt: Die Stadt, was ich geboren bin, liegt am Meer.
+    answer: was
+    explanation:
+      en: "For a place the relative word is *wo* (or *in der*), not *was*."
+      fa: "برای مکان واژهٔ موصولی *wo* است (یا *in der*)، نه *was*."
+      de: "Für einen Ort steht *wo* (oder *in der*), nicht *was*."
+  - id: error-3
+    type: find-error
+    prompt: In Wien, was mein Onkel wohnt, gibt es viele Cafés.
+    answer: was
+    explanation:
+      en: "After the name of a city the relative word is *wo*."
+      fa: "پس از نام شهر واژهٔ موصولی *wo* است."
+      de: "Nach dem Namen einer Stadt steht *wo*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["das ist alles,", was, ich, gehört, habe]
+    explanation:
+      en: "*Was* opens the relative clause, then the subject *ich*; the conjugated *habe* goes last."
+      fa: "*was* جملهٔ موصولی را آغاز می‌کند، سپس فاعل *ich* می‌آید و فعل صرف‌شدهٔ *habe* در آخر."
+      de: "*Was* steht am Anfang vom Relativsatz, dann das Subjekt *ich*. Das konjugierte Verb *habe* steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["ich wohne in Graz,", wo, meine Eltern, auch, wohnen]
+      - ["ich wohne in Graz,", wo, auch, meine Eltern, wohnen]
+    explanation:
+      en: "*Wo* opens the relative clause, and the conjugated *wohnen* goes last. *Auch* may stand before or after *meine Eltern*."
+      fa: "*wo* جملهٔ موصولی را آغاز می‌کند و فعل صرف‌شدهٔ *wohnen* در آخر می‌آید. *auch* می‌تواند پیش یا پس از *meine Eltern* بیاید."
+      de: "*Wo* steht am Anfang vom Relativsatz, das konjugierte Verb *wohnen* am Ende. *Auch* kann vor oder nach *meine Eltern* stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - ["alles, ___ ich weiß", was]
+      - ["in Berlin, ___ ich wohne", wo]
+      - ["der Mann, ___ ich kenne", den]
+    explanation:
+      en: "*Was* after *alles*, *wo* after the name of a city, and after a noun a relative pronoun: *den* (*Ich kenne den Mann*)."
+      fa: "*was* پس از *alles*، *wo* پس از نام شهر و پس از اسم، ضمیر موصولی: *den* (*Ich kenne den Mann*)."
+      de: "*Was* nach *alles*, *wo* nach dem Namen einer Stadt, und nach einem Nomen ein Relativpronomen: *den* (*Ich kenne den Mann*)."
