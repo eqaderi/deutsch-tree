@@ -95,4 +95,7 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Kunststoff: 'Kunstschtoff',
   // #92: [bˈʊx] with a short u; the hyphen keeps the long u of "Buch".
   Buchhandlung: 'Buch-handlung',
+
+  // #97: read letter by letter in the German way, [hˈoːmeːˌɔfiːkə]; the hyphen gives [hˈoːmˈɔfɪs].
+  Homeoffice: 'Hohm-offis',
 }

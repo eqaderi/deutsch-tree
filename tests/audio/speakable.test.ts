@@ -170,6 +170,9 @@ test.each([
   ['Die Rezeption ist im EG, gleich links.', 'Die Rezeption ist im Erd-geschoss, gleich links.'],
   ['Die Praxis ist im zweiten OG.', 'Die Praxis ist im zweiten Ober-geschoss.'],
   ['Die Garage ist im UG.', 'Die Garage ist im Untergeschoss.'],
+  // #97: an English loanword read the German way.
+  ['Homeoffice hat Vorteile.', 'Hohm-offis hat Vorteile.'],
+  ['Ich arbeite im Homeoffice.', 'Ich arbeite im Hohm-offis.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })
