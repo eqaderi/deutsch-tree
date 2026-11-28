@@ -237,7 +237,8 @@ questions:
   - id: choice-4
     type: multiple-choice
     prompt: "Der Arzt, dessen Praxis neben unserem Haus ist, heißt Dr. Lang. Was stimmt?"
-    options: [Dr. Lang sucht eine Praxis., Dr. Lang hat eine Praxis neben unserem Haus., Dr. Lang wohnt in unserem Haus.]
+    options:
+      [Dr. Lang sucht eine Praxis., Dr. Lang hat eine Praxis neben unserem Haus., Dr. Lang wohnt in unserem Haus.]
     answer: Dr. Lang hat eine Praxis neben unserem Haus.
     explanation:
       en: "*Dessen Praxis* is *seine Praxis*: the doctor's practice is next to our house."
