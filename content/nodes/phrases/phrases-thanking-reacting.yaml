@@ -4,7 +4,8 @@ kind: phrases
 level: A2
 chapter: a2-phrases-emails
 order: 3
-status: coming-soon
+status: published
+prerequisites: [grammar-063, grammar-064, grammar-083]
 title:
   en: "Thanking and reacting to news"
   fa: "تشکر و واکنش به خبر"
@@ -14,3 +15,324 @@ purpose:
   fa: "از کسی تشکر کنید، تبریک بگویید و بگویید که از چیزی خوشحال یا متأسفید."
   de: "Jemandem danken, gratulieren und sagen, dass man sich freut oder dass etwas schade ist."
 examTasks: [exam-schreiben-1, exam-schreiben-3]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Vielen Dank für …
+    meaning:
+      en: Thank you very much for … The usual thanks, to a friend and in a formal e-mail. After *für* comes the accusative.
+      fa: «خیلی ممنون برای …» تشکر معمول، هم به دوست و هم در ایمیل رسمی. پس از *für* حالت *Akkusativ* می‌آید.
+      de: So dankt man für etwas, an Freunde und auch in einer formellen E-Mail. Nach *für* kommt der Akkusativ.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Vielen Dank für deine E-Mail!
+      en: Thank you very much for your e-mail!
+      fa: خیلی ممنون برای ایمیلت!
+
+  - de: Ich danke dir für …
+    meaning:
+      en: I thank you for … *danken* takes the dative, so *dir* to a friend and *Ihnen* in a formal e-mail.
+      fa: "«از تو برای … تشکر می‌کنم» فعل *danken* با حالت *Dativ* می‌آید: به دوست *dir* و در ایمیل رسمی *Ihnen*."
+      de: Nach *danken* kommt der Dativ. An Freunde schreibt man *dir*, in einer formellen E-Mail *Ihnen*.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Ich danke Ihnen für Ihre Hilfe.
+      en: Thank you for your help.
+      fa: از کمکتان سپاسگزارم.
+
+  - de: Das ist sehr nett von dir!
+    meaning:
+      en: That is very kind of you! Thanks a person for a kind act. With *Sie* it is *von Ihnen*.
+      fa: «خیلی لطف کردی!» برای کار محبت‌آمیز کسی تشکر می‌کند. با *Sie* می‌شود *von Ihnen*.
+      de: So dankt man, wenn jemand etwas Nettes macht. Bei *Sie* sagt man *von Ihnen*.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Du hast mir beim Umzug geholfen. Das ist sehr nett von dir!
+      en: You helped me with the move. That is very kind of you!
+      fa: در اسباب‌کشی کمکم کردی. خیلی لطف کردی!
+
+  - de: Herzlichen Glückwunsch zum …!
+    meaning:
+      en: Congratulations on …! After *zu* comes the dative, *zum Geburtstag* (*der*), *zur Hochzeit* (*die*).
+      fa: "«… مبارک!» پس از *zu* حالت *Dativ* می‌آید: *zum Geburtstag* (اسم مذکر، *der*) و *zur Hochzeit* (اسم مؤنث، *die*)."
+      de: So gratuliert man. Nach *zu* kommt der Dativ, *zum Geburtstag* (*der*), *zur Hochzeit* (*die*).
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Herzlichen Glückwunsch zum Geburtstag!
+      en: Happy birthday!
+      fa: تولدت مبارک!
+
+  - de: Ich gratuliere dir zum …!
+    meaning:
+      en: I congratulate you on … *gratulieren* takes the dative, like *danken*, so *dir* or *Ihnen*.
+      fa: "«… را به تو تبریک می‌گویم!» فعل *gratulieren* هم مانند *danken* با حالت *Dativ* می‌آید: *dir* یا *Ihnen*."
+      de: Nach *gratulieren* kommt der Dativ, wie nach *danken*, also *dir* oder *Ihnen*.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Ich gratuliere dir zur neuen Stelle!
+      en: Congratulations on your new job!
+      fa: کار تازه‌ات را تبریک می‌گویم!
+
+  - de: Das freut mich!
+    meaning:
+      en: I am glad! Reacts to good news. To show more joy you add *sehr* or *für dich*.
+      fa: «خوشحالم!» واکنش به خبر خوب. برای خوشحالی بیشتر *sehr* یا *für dich* را اضافه می‌کنید.
+      de: So reagiert man auf eine gute Nachricht. Mit *sehr* oder *für dich* freut man sich noch mehr.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Du hast eine neue Wohnung? Das freut mich sehr für dich!
+      en: You have a new flat? I am really glad for you!
+      fa: خانهٔ تازه گرفته‌ای؟ خیلی برایت خوشحالم!
+
+  - de: Wie schön!
+    meaning:
+      en: How nice! A short, happy reaction to good news.
+      fa: «چه خوب!» واکنشی کوتاه و شاد به خبر خوب.
+      de: Eine kurze, frohe Antwort auf eine gute Nachricht.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Ihr bekommt ein Baby? Wie schön!
+      en: You are having a baby? How lovely!
+      fa: بچه‌دار می‌شوید؟ چه خوب!
+
+  - de: Das tut mir leid.
+    meaning:
+      en: I am sorry. Reacts to bad news. *tun* has the dative *mir*, and *leid* has a small letter.
+      fa: «متأسفم.» واکنش به خبر بد. *tun* با *mir* در حالت *Dativ* می‌آید و *leid* با حرف کوچک نوشته می‌شود.
+      de: So reagiert man auf eine schlechte Nachricht. Es heißt *mir* (Dativ), und *leid* schreibt man klein.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Du hast die Prüfung nicht bestanden? Das tut mir sehr leid.
+      en: You did not pass the exam? I am very sorry.
+      fa: در امتحان قبول نشدی؟ خیلی متأسفم.
+
+  - de: Schade!
+    meaning:
+      en: What a pity! Reacts to news that disappoints you a little, for example when a friend cannot come.
+      fa: «حیف شد!» واکنش به خبری که کمی ناامیدتان می‌کند، مثلاً وقتی دوستی نمی‌تواند بیاید.
+      de: So reagiert man, wenn etwas nicht klappt, zum Beispiel wenn ein Freund nicht kommen kann.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Du kannst am Samstag nicht kommen? Schade!
+      en: You cannot come on Saturday? What a pity!
+      fa: شنبه نمی‌توانی بیایی؟ حیف شد!
+
+  - de: Gute Besserung!
+    meaning:
+      en: Get well soon! The wish to a person who is ill.
+      fa: «بهتر شوی!» آرزویی برای کسی که بیمار است.
+      de: Das wünscht man einer Person, die krank ist.
+    examTasks: [exam-schreiben-1, exam-schreiben-3]
+    example:
+      de: Du bist krank? Ich wünsche dir gute Besserung!
+      en: You are ill? I hope you get well soon!
+      fa: بیماری؟ امیدوارم زود خوب شوی!
+
+  - de: Viel Glück bei …!
+    meaning:
+      en: Good luck with …! A wish before an exam, an interview or a match. After *bei* comes the dative, as in *bei der Prüfung*.
+      fa: «در … موفق باشی!» آرزویی پیش از امتحان، مصاحبه یا مسابقه. پس از *bei* حالت *Dativ* می‌آید، مانند *bei der Prüfung*.
+      de: Das wünscht man vor einer Prüfung, einem Gespräch oder einem Spiel. Nach *bei* kommt der Dativ, zum Beispiel *bei der Prüfung*.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Viel Glück bei der Prüfung morgen!
+      en: Good luck with the exam tomorrow!
+      fa: در امتحان فردا موفق باشی!
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Deine Freundin hat heute Geburtstag. Was schreibst du ihr?
+    options:
+      - Herzlichen Glückwunsch zum Geburtstag!
+      - Herzlichen Glückwunsch zur Geburtstag!
+      - Gute Besserung zum Geburtstag!
+    answer: Herzlichen Glückwunsch zum Geburtstag!
+    explanation:
+      en: "*der Geburtstag* is masculine, so *zu* + *dem* = *zum Geburtstag*."
+      fa: "*Geburtstag* اسم مذکر (*der*) است، پس *zu* و *dem* می‌شود *zum Geburtstag*."
+      de: "*der Geburtstag*, also *zu* + *dem* = *zum Geburtstag*."
+
+  - id: q2
+    type: gap-fill
+    prompt: Du bist krank? Gute ___!
+    options: [Besserung, Reise, Glück]
+    answer: Besserung
+    explanation:
+      en: To a person who is ill you write *Gute Besserung!*
+      fa: به کسی که بیمار است می‌نویسید *Gute Besserung!*
+      de: Einer kranken Person wünscht man *Gute Besserung!*
+
+  - id: q3
+    type: true-false
+    prompt: Vielen Dank für deine Einladung!
+    answer: true
+    explanation:
+      en: "*Vielen Dank für …* with the accusative *deine Einladung* is correct."
+      fa: "*Vielen Dank für …* با حالت *Akkusativ*، یعنی *deine Einladung*، درست است."
+      de: "*Vielen Dank für …* mit dem Akkusativ *deine Einladung* ist richtig."
+
+  - id: q4
+    type: true-false
+    prompt: Ich danke dich für die Blumen.
+    answer: false
+    explanation:
+      en: "*danken* takes the dative. *Ich danke dir für die Blumen.*"
+      fa: "*danken* با حالت *Dativ* می‌آید: *Ich danke dir für die Blumen.*"
+      de: "Nach *danken* kommt der Dativ: *Ich danke dir für die Blumen.*"
+
+  - id: q5
+    type: find-error
+    prompt: Herzlichen Glückwunsch zur Geburtstag!
+    answer: zur
+    explanation:
+      en: "*der Geburtstag* is masculine, so it is *zum Geburtstag*."
+      fa: "*Geburtstag* اسم مذکر (*der*) است، پس *zum Geburtstag* درست است."
+      de: "*der Geburtstag*, also heißt es *zum Geburtstag*."
+
+  - id: q6
+    type: multiple-choice
+    prompt: "Tom schreibt dir: Ich habe die Prüfung leider nicht bestanden. Was antwortest du?"
+    options:
+      - Das tut mir leid!
+      - Das freut mich!
+      - Herzlichen Glückwunsch!
+    answer: Das tut mir leid!
+    explanation:
+      en: To bad news you react with *Das tut mir leid!*
+      fa: به خبر بد با *Das tut mir leid!* واکنش نشان می‌دهید.
+      de: Auf eine schlechte Nachricht antwortet man *Das tut mir leid!*
+
+  - id: q7
+    type: gap-fill
+    prompt: "Lena schreibt: Ich habe eine neue Arbeit! Du antwortest: Das ___ mich sehr!"
+    options: [freut, tut, dankt]
+    answer: freut
+    explanation:
+      en: To good news you react with *Das freut mich!*
+      fa: به خبر خوب با *Das freut mich!* واکنش نشان می‌دهید.
+      de: Auf eine gute Nachricht antwortet man *Das freut mich!*
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Vielen Dank ___ deine E-Mail!
+    answers: [für]
+    explanation:
+      en: The phrase is *Vielen Dank für …*
+      fa: عبارت *Vielen Dank für …* است.
+      de: Der Satz heißt *Vielen Dank für …*
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Vielen ___ für deine Einladung!
+    answers: [Dank, lieben Dank, herzlichen Dank]
+    explanation:
+      en: The phrase is *Vielen Dank für …*
+      fa: عبارت *Vielen Dank für …* است.
+      de: Der Satz heißt *Vielen Dank für …*
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Ich danke ___ (du) für deine Hilfe.
+    answers: [dir]
+    explanation:
+      en: "*danken* takes the dative, and the dative of *du* is *dir*."
+      fa: "*danken* با حالت *Dativ* می‌آید و حالت *Dativ* ضمیر *du* واژهٔ *dir* است."
+      de: "Nach *danken* kommt der Dativ. Der Dativ von *du* ist *dir*."
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Ich danke ___ (Sie) für Ihre schnelle Antwort.
+    answers: [Ihnen]
+    explanation:
+      en: "*danken* takes the dative, and the dative of *Sie* is *Ihnen*."
+      fa: "*danken* با حالت *Dativ* می‌آید و حالت *Dativ* ضمیر *Sie* واژهٔ *Ihnen* است."
+      de: "Nach *danken* kommt der Dativ. Der Dativ von *Sie* ist *Ihnen*."
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Herzlichen Glückwunsch ___ Geburtstag!
+    answers: [zum]
+    explanation:
+      en: "*der Geburtstag*, so *zu* + *dem* = *zum*."
+      fa: "*Geburtstag* اسم مذکر (*der*) است، پس *zu* و *dem* می‌شود *zum*."
+      de: "*der Geburtstag*, also *zu* + *dem* = *zum*."
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Herzlichen Glückwunsch ___ Hochzeit!
+    answers: [zur, zu eurer, zu deiner, zu Ihrer]
+    explanation:
+      en: "*die Hochzeit* is feminine, so *zu* + *der* = *zur*."
+      fa: "*Hochzeit* اسم مؤنث (*die*) است، پس *zu* و *der* می‌شود *zur*."
+      de: "*die Hochzeit*, also *zu* + *der* = *zur*."
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Herzlichen ___ zum Geburtstag!
+    answers: [Glückwunsch]
+    explanation:
+      en: The phrase is *Herzlichen Glückwunsch zum …!*
+      fa: عبارت *Herzlichen Glückwunsch zum …!* است.
+      de: Der Satz heißt *Herzlichen Glückwunsch zum …!*
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Ich ___ (gratulieren) dir zum Geburtstag!
+    answers: [gratuliere]
+    explanation:
+      en: With *ich* the verb ends in *-e*. *Ich gratuliere dir …*
+      fa: "با *ich* فعل شناسهٔ *-e* می‌گیرد: *Ich gratuliere dir …*"
+      de: "Bei *ich* endet das Verb auf *-e*: *Ich gratuliere dir …*"
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Das tut ___ (ich) sehr leid.
+    answers: [mir]
+    explanation:
+      en: The phrase has the dative, *Das tut mir leid*.
+      fa: "این عبارت حالت *Dativ* دارد: *Das tut mir leid*."
+      de: "Der Satz hat den Dativ: *Das tut mir leid*."
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Du hast die Prüfung nicht bestanden? Das tut mir sehr ___.
+    answers: [leid]
+    explanation:
+      en: The phrase is *Das tut mir leid*, with *leid* in a small letter.
+      fa: عبارت *Das tut mir leid* است و *leid* با حرف کوچک نوشته می‌شود.
+      de: Der Satz heißt *Das tut mir leid*, *leid* schreibt man klein.
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Du bist krank? Ich wünsche dir gute ___!
+    answers: [Besserung]
+    explanation:
+      en: The wish to a person who is ill is *Gute Besserung!*
+      fa: آرزو برای کسی که بیمار است *Gute Besserung!* است.
+      de: Einer kranken Person wünscht man *Gute Besserung!*
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Viel Glück ___ der Prüfung morgen!
+    answers: [bei, in]
+    explanation:
+      en: The phrase is *Viel Glück bei …!*, with the dative after *bei*.
+      fa: عبارت *Viel Glück bei …!* است و پس از *bei* حالت *Dativ* می‌آید.
+      de: Der Satz heißt *Viel Glück bei …!*, nach *bei* kommt der Dativ.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Du hast mir beim Umzug geholfen. Das ist sehr nett von ___ (du)!
+    answers: [dir]
+    explanation:
+      en: After *von* comes the dative, and the dative of *du* is *dir*.
+      fa: پس از *von* حالت *Dativ* می‌آید و حالت *Dativ* ضمیر *du* واژهٔ *dir* است.
+      de: Nach *von* kommt der Dativ. Der Dativ von *du* ist *dir*.
+
+review:
+  reviewer: an independent AI agent (a fresh subagent, blind to the key)
+  date: 2026-11-28
+  pool: c9937be601ffc56c

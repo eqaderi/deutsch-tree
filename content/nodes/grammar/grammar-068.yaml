@@ -4,10 +4,346 @@ kind: grammar
 level: A2
 chapter: a2-dativ-objects
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-067, grammar-082, grammar-083]
 title:
   en: "Order of objects and pronouns"
   fa: "ترتیب مفعول‌ها و ضمیرها"
   de: "Reihenfolge von Objekten und Pronomen"
+
+explanations:
+  en:
+    rule: >
+      When a verb has a *Dativ* and an *Akkusativ* object, the order depends
+      on whether they are nouns or pronouns. Two nouns: the *Dativ* comes
+      first, *Ich gebe dem Kind den Ball.* A pronoun comes before a noun,
+      whatever its case: *Ich gebe ihm den Ball. Ich gebe ihn dem Kind.* Two
+      pronouns: the *Akkusativ* comes first, *Ich gebe ihn ihm.* In short:
+      pronouns first, and of two pronouns the *Akkusativ* first. Pronouns
+      also stand right after the verb, before a time such as *gestern*: *Er
+      hat ihn ihr gestern geschenkt.*
+  fa:
+    rule: >
+      وقتی فعل یک مفعول در حالت *Dativ* و یک مفعول در حالت *Akkusativ* دارد،
+      ترتیب آن‌ها به این بستگی دارد که اسم باشند یا ضمیر. اگر هر دو اسم
+      باشند، حالت *Dativ* اول می‌آید: *Ich gebe dem Kind den Ball.* ضمیر، در
+      هر حالتی که باشد، پیش از اسم می‌آید: *Ich gebe ihm den Ball.* و *Ich
+      gebe ihn dem Kind.* اگر هر دو ضمیر باشند، حالت *Akkusativ* اول می‌آید:
+      *Ich gebe ihn ihm.* خلاصه: ضمیر پیش از اسم، و از دو ضمیر، اول ضمیر
+      حالت *Akkusativ*. ضمیرها درست پس از فعل و پیش از قید زمانی مانند
+      *gestern* می‌آیند: *Er hat ihn ihr gestern geschenkt.*
+  de:
+    rule: >
+      Hat ein Verb ein Objekt im Dativ und eins im Akkusativ, kommt es darauf
+      an: Nomen oder Pronomen? Zwei Nomen: zuerst der Dativ, *Ich gebe dem
+      Kind den Ball.* Ein Pronomen steht vor einem Nomen: *Ich gebe ihm den
+      Ball. Ich gebe ihn dem Kind.* Zwei Pronomen: zuerst der Akkusativ,
+      *Ich gebe ihn ihm.* Kurz: Pronomen zuerst, und bei zwei Pronomen der
+      Akkusativ zuerst. Pronomen stehen auch vor einer Zeit wie *gestern*:
+      *Er hat ihn ihr gestern geschenkt.*
+
+# The same sentence four times. A tinted box is a pronoun, a plain box a
+# noun; under each box its case. German only, so no labels.
+diagrams:
+  - caption:
+      en: >
+        *Ich gebe …* with the ball and the child as nouns or pronouns. A
+        tinted box is a pronoun, a plain box a noun. Two nouns: *Dativ*
+        first. A pronoun comes before a noun. Two pronouns: *Akkusativ*
+        first.
+      fa: >
+        جملهٔ *Ich gebe …* با توپ و بچه، یک بار به صورت اسم و یک بار به صورت
+        ضمیر. خانهٔ رنگی ضمیر است و خانهٔ بی‌رنگ اسم. دو اسم: اول حالت *Dativ*.
+        ضمیر پیش از اسم می‌آید. دو ضمیر: اول حالت *Akkusativ*.
+      de: >
+        *Ich gebe …* mit dem Ball und dem Kind als Nomen oder Pronomen. Ein
+        farbiger Kasten ist ein Pronomen, ein einfacher Kasten ein Nomen. Zwei
+        Nomen: zuerst der Dativ. Ein Pronomen steht vor einem Nomen. Zwei
+        Pronomen: zuerst der Akkusativ.
+    svg: |
+      <svg viewBox="0 0 320 330">
+        <!-- two nouns: Dativ, Akkusativ -->
+        <text class="label" x="44" y="36" text-anchor="middle">Ich gebe</text>
+        <rect class="surface" x="96" y="10" width="104" height="40"/>
+        <text class="label" x="148" y="36" text-anchor="middle">dem Kind</text>
+        <rect class="surface" x="208" y="10" width="104" height="40"/>
+        <text class="label" x="260" y="36" text-anchor="middle">den Ball.</text>
+        <text class="note" x="148" y="68" text-anchor="middle">Dativ</text>
+        <text class="note" x="260" y="68" text-anchor="middle">Akkusativ</text>
+        <!-- pronoun before noun: Dativ pronoun -->
+        <text class="label" x="44" y="116" text-anchor="middle">Ich gebe</text>
+        <rect class="shade" x="96" y="90" width="104" height="40"/>
+        <text class="label" x="148" y="116" text-anchor="middle">ihm</text>
+        <rect class="surface" x="208" y="90" width="104" height="40"/>
+        <text class="label" x="260" y="116" text-anchor="middle">den Ball.</text>
+        <text class="note" x="148" y="148" text-anchor="middle">Dativ</text>
+        <text class="note" x="260" y="148" text-anchor="middle">Akkusativ</text>
+        <!-- pronoun before noun: Akkusativ pronoun -->
+        <text class="label" x="44" y="196" text-anchor="middle">Ich gebe</text>
+        <rect class="shade" x="96" y="170" width="104" height="40"/>
+        <text class="label" x="148" y="196" text-anchor="middle">ihn</text>
+        <rect class="surface" x="208" y="170" width="104" height="40"/>
+        <text class="label" x="260" y="196" text-anchor="middle">dem Kind.</text>
+        <text class="note" x="148" y="228" text-anchor="middle">Akkusativ</text>
+        <text class="note" x="260" y="228" text-anchor="middle">Dativ</text>
+        <!-- two pronouns: Akkusativ, Dativ -->
+        <text class="label" x="44" y="276" text-anchor="middle">Ich gebe</text>
+        <rect class="shade" x="96" y="250" width="104" height="40"/>
+        <text class="label" x="148" y="276" text-anchor="middle">ihn</text>
+        <rect class="shade" x="208" y="250" width="104" height="40"/>
+        <text class="label" x="260" y="276" text-anchor="middle">ihm.</text>
+        <text class="note" x="148" y="308" text-anchor="middle">Akkusativ</text>
+        <text class="note" x="260" y="308" text-anchor="middle">Dativ</text>
+      </svg>
+
+table:
+  columns:
+    - { en: Objects, fa: مفعول‌ها, de: Objekte }
+    - { en: Order, fa: ترتیب, de: Reihenfolge }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [Nomen + Nomen, Dativ vor Akkusativ, Ich gebe dem Kind den Ball.]
+    - [Pronomen + Nomen, Pronomen vor Nomen, Ich gebe ihm den Ball.]
+    - [Nomen + Pronomen, Pronomen vor Nomen, Ich gebe ihn dem Kind.]
+    - [Pronomen + Pronomen, Akkusativ vor Dativ, Ich gebe ihn ihm.]
+
+examples:
+  - de: Ich gebe dem Kind den Ball.
+    en: I give the child the ball.
+    fa: توپ را به بچه می‌دهم.
+  - de: Ich gebe ihm den Ball.
+    en: I give him the ball.
+    fa: توپ را به او می‌دهم.
+  - de: Ich gebe ihn dem Kind.
+    en: I give it to the child.
+    fa: آن را به بچه می‌دهم.
+  - de: Ich gebe ihn ihm.
+    en: I give it to him.
+    fa: آن را به او می‌دهم.
+  - de: Er hat ihn ihr gestern geschenkt.
+    en: He gave it to her yesterday.
+    fa: دیروز آن را به او هدیه داد.
+  - de: Kannst du es mir erklären?
+    en: Can you explain it to me?
+    fa: می‌توانی آن را برایم توضیح بدهی؟
+  - de: Zeigst du mir dein Zimmer?
+    en: Will you show me your room?
+    fa: اتاقت را به من نشان می‌دهی؟
+  - de: Wo ist mein Handy? – Ich habe es dir doch gegeben.
+    en: Where is my phone? – But I gave it to you.
+    fa: گوشی‌ام کجاست؟ – من که آن را به تو دادم.
+  - de: Der Kellner bringt uns die Rechnung.
+    en: The waiter brings us the bill.
+    fa: پیشخدمت صورت‌حساب را برای ما می‌آورد.
+  - de: Die Fotos? Ich schicke sie dir morgen.
+    en: The photos? I will send them to you tomorrow.
+    fa: عکس‌ها؟ فردا آن‌ها را برایت می‌فرستم.
+
+mistakes:
+  - wrong: Ich gebe dem Kind ihn.
+    right: Ich gebe ihn dem Kind.
+    why:
+      en: "A pronoun comes before a noun: *ihn* before *dem Kind*."
+      fa: "ضمیر پیش از اسم می‌آید: *ihn* پیش از *dem Kind*."
+      de: "Ein Pronomen steht vor einem Nomen: *ihn* vor *dem Kind*."
+  - wrong: Kannst du mir es erklären?
+    right: Kannst du es mir erklären?
+    why:
+      en: "Of two pronouns the *Akkusativ* comes first: *es* before *mir*."
+      fa: "از دو ضمیر، ضمیر حالت *Akkusativ* اول می‌آید: *es* پیش از *mir*."
+      de: "Bei zwei Pronomen steht der Akkusativ zuerst: *es* vor *mir*."
+  - wrong: Ich gebe ihm es.
+    right: Ich gebe es ihm.
+    why:
+      en: "Two pronouns: the *Akkusativ* (*es*) before the *Dativ* (*ihm*). With two nouns it is the other way round."
+      fa: "دو ضمیر: ضمیر حالت *Akkusativ* (*es*) پیش از ضمیر حالت *Dativ* (*ihm*). با دو اسم ترتیب برعکس است."
+      de: "Zwei Pronomen: der Akkusativ (*es*) vor dem Dativ (*ihm*). Bei zwei Nomen ist es umgekehrt."
+  - wrong: Er hat gestern ihr das Buch gegeben.
+    right: Er hat ihr gestern das Buch gegeben.
+    why:
+      en: "An unstressed pronoun stands right after the verb, before a time such as *gestern*."
+      fa: "ضمیر درست پس از فعل و پیش از قید زمانی مانند *gestern* می‌آید."
+      de: "Das Pronomen steht direkt nach dem Verb, vor einer Zeit wie *gestern*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das Buch? Ich gebe ___ morgen.
+    options: [es dir, dir es]
+    answer: es dir
+    explanation:
+      en: "Two pronouns: the *Akkusativ* *es* comes before the *Dativ* *dir*."
+      fa: "دو ضمیر: *es* (حالت *Akkusativ*) پیش از *dir* (حالت *Dativ*) می‌آید."
+      de: "Zwei Pronomen: der Akkusativ *es* steht vor dem Dativ *dir*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Der Schlüssel? Ich habe ___ gegeben.
+    options: [ihn dem Kind, dem Kind ihn]
+    answer: ihn dem Kind
+    explanation:
+      en: "A pronoun comes before a noun: *ihn* before *dem Kind*."
+      fa: "ضمیر پیش از اسم می‌آید: *ihn* پیش از *dem Kind*."
+      de: "Ein Pronomen steht vor einem Nomen: *ihn* vor *dem Kind*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Blumen? Er hat ___ geschenkt.
+    options: [sie ihr, ihr sie]
+    answer: sie ihr
+    explanation:
+      en: "Two pronouns: the *Akkusativ* *sie* (the flowers) before the *Dativ* *ihr*."
+      fa: "دو ضمیر: *sie* (گل‌ها، حالت *Akkusativ*) پیش از *ihr* (حالت *Dativ*)."
+      de: "Zwei Pronomen: der Akkusativ *sie* (die Blumen) vor dem Dativ *ihr*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Das verstehe ich nicht. Kannst du ___ erklären?
+    options: [es mir, mir es]
+    answer: es mir
+    explanation:
+      en: "Two pronouns: the *Akkusativ* *es* before the *Dativ* *mir*."
+      fa: "دو ضمیر: *es* (حالت *Akkusativ*) پیش از *mir* (حالت *Dativ*)."
+      de: "Zwei Pronomen: der Akkusativ *es* vor dem Dativ *mir*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wo ist die Zeitung? – Ich habe ___ gegeben.
+    options: [sie dem Vater, dem Vater sie, sie den Vater]
+    answer: sie dem Vater
+    explanation:
+      en: "The pronoun *sie* comes before the noun, and the father is in the *Dativ*: *dem Vater*."
+      fa: "ضمیر *sie* پیش از اسم می‌آید و پدر در حالت *Dativ* است: *dem Vater*."
+      de: "Das Pronomen *sie* steht vor dem Nomen, der Vater steht im Dativ: *dem Vater*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Die Fotos? ___
+    options: [Ich zeige sie dir., Ich zeige dir sie., Ich zeige dich sie.]
+    answer: Ich zeige sie dir.
+    explanation:
+      en: "Two pronouns: the *Akkusativ* *sie* first, then the *Dativ* *dir*."
+      fa: "دو ضمیر: اول *sie* (حالت *Akkusativ*)، سپس *dir* (حالت *Dativ*)."
+      de: "Zwei Pronomen: zuerst der Akkusativ *sie*, dann der Dativ *dir*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Das Fahrrad? ___
+    options: [Ich leihe es meinem Bruder., Ich leihe meinem Bruder es., Ich leihe es meinen Bruder.]
+    answer: Ich leihe es meinem Bruder.
+    explanation:
+      en: "The pronoun *es* comes before the noun; the brother is in the *Dativ*: *meinem Bruder*."
+      fa: "ضمیر *es* پیش از اسم می‌آید؛ برادر در حالت *Dativ* است: *meinem Bruder*."
+      de: "Das Pronomen *es* steht vor dem Nomen. Der Bruder steht im Dativ: *meinem Bruder*."
+  - id: true-1
+    type: true-false
+    prompt: Ich gebe dem Kind den Ball.
+    answer: true
+    explanation:
+      en: "Two nouns: the *Dativ* first. The sentence is correct."
+      fa: "دو اسم: اول حالت *Dativ*. جمله درست است."
+      de: "Zwei Nomen: zuerst der Dativ. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Kannst du mir es zeigen?
+    answer: false
+    explanation:
+      en: "Of two pronouns the *Akkusativ* comes first: *Kannst du es mir zeigen?*"
+      fa: "از دو ضمیر، ضمیر حالت *Akkusativ* اول می‌آید: *Kannst du es mir zeigen?*"
+      de: "Bei zwei Pronomen steht der Akkusativ zuerst: *Kannst du es mir zeigen?*"
+  - id: true-3
+    type: true-false
+    prompt: Ich schicke sie dir morgen.
+    answer: true
+    explanation:
+      en: "Two pronouns, the *Akkusativ* *sie* first, then the time. The sentence is correct."
+      fa: "دو ضمیر، اول *sie* (حالت *Akkusativ*)، سپس قید زمان. جمله درست است."
+      de: "Zwei Pronomen, zuerst der Akkusativ *sie*, dann die Zeit. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Er hat dem Kind ihn gegeben.
+    answer: false
+    explanation:
+      en: "A pronoun comes before a noun: *Er hat ihn dem Kind gegeben.*"
+      fa: "ضمیر پیش از اسم می‌آید: *Er hat ihn dem Kind gegeben.*"
+      de: "Ein Pronomen steht vor einem Nomen: *Er hat ihn dem Kind gegeben.*"
+  - id: true-5
+    type: true-false
+    prompt: Der Kellner bringt uns die Speisekarte.
+    answer: true
+    explanation:
+      en: "The pronoun *uns* comes before the noun *die Speisekarte*. The sentence is correct."
+      fa: "ضمیر *uns* پیش از اسم *die Speisekarte* آمده است. جمله درست است."
+      de: "Das Pronomen *uns* steht vor dem Nomen *die Speisekarte*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das Geld? Ich gebe ___ (es / dir) morgen.
+    answers: [es dir]
+    explanation:
+      en: "Two pronouns: the *Akkusativ* *es* before the *Dativ* *dir*."
+      fa: "دو ضمیر: *es* (حالت *Akkusativ*) پیش از *dir* (حالت *Dativ*)."
+      de: "Zwei Pronomen: der Akkusativ *es* vor dem Dativ *dir*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Die Tasche? Ich habe ___ (sie / meine Schwester) geliehen.
+    answers: [sie meiner Schwester]
+    explanation:
+      en: "The pronoun *sie* comes before the noun, which is in the *Dativ*: *meiner Schwester*."
+      fa: "ضمیر *sie* پیش از اسم می‌آید و اسم در حالت *Dativ* است: *meiner Schwester*."
+      de: "Das Pronomen *sie* steht vor dem Nomen. Das Nomen steht im Dativ: *meiner Schwester*."
+  - id: match-1
+    type: matching
+    answer:
+      - [Den Ball? Ich gebe ___ dem Kind., ihn]
+      - [Das Buch? Ich gebe ___ dem Kind., es]
+      - [Die Tasche? Ich gebe ___ dem Kind., sie]
+    explanation:
+      en: "The pronoun takes the gender of its noun (*der Ball*: *ihn*, *das Buch*: *es*, *die Tasche*: *sie*) and stands before the noun."
+      fa: "ضمیر از جنس اسم خود پیروی می‌کند (*der Ball*: *ihn*، *das Buch*: *es*، *die Tasche*: *sie*) و پیش از اسم می‌آید."
+      de: "Das Pronomen passt zum Nomen (*der Ball*: *ihn*, *das Buch*: *es*, *die Tasche*: *sie*) und steht vor dem Nomen."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wann, gibst, du, ihn, dem Kind]
+    end: "?"
+    explanation:
+      en: "The pronoun *ihn* comes before the noun *dem Kind*."
+      fa: "ضمیر *ihn* پیش از اسم *dem Kind* می‌آید."
+      de: "Das Pronomen *ihn* steht vor dem Nomen *dem Kind*."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wann, schenkst, du, es, ihr]
+    end: "?"
+    explanation:
+      en: "Two pronouns: the *Akkusativ* *es* before the *Dativ* *ihr*."
+      fa: "دو ضمیر: *es* (حالت *Akkusativ*) پیش از *ihr* (حالت *Dativ*)."
+      de: "Zwei Pronomen: der Akkusativ *es* vor dem Dativ *ihr*."
+  - id: order-3
+    type: word-order
+    answers:
+      - [warum, hast, du, ihm, das Geld, gegeben]
+    end: "?"
+    explanation:
+      en: "The pronoun *ihm* comes before the noun *das Geld*; the participle goes to the end."
+      fa: "ضمیر *ihm* پیش از اسم *das Geld* می‌آید و صفت مفعولی (*Partizip II*) به پایان جمله می‌رود."
+      de: "Das Pronomen *ihm* steht vor dem Nomen *das Geld*. Das Partizip steht am Ende."
+  - id: order-4
+    type: word-order
+    answers:
+      - [wer, hat, es, dir, gegeben]
+    end: "?"
+    explanation:
+      en: "Two pronouns: the *Akkusativ* *es* before the *Dativ* *dir*."
+      fa: "دو ضمیر: *es* (حالت *Akkusativ*) پیش از *dir* (حالت *Dativ*)."
+      de: "Zwei Pronomen: der Akkusativ *es* vor dem Dativ *dir*."
+  - id: order-5
+    type: word-order
+    answers:
+      - [wann, bringst, du, mir, das Buch]
+    end: "?"
+    explanation:
+      en: "The pronoun *mir* comes before the noun *das Buch*."
+      fa: "ضمیر *mir* پیش از اسم *das Buch* می‌آید."
+      de: "Das Pronomen *mir* steht vor dem Nomen *das Buch*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 491e3de9123d2090
