@@ -1,39 +1,374 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Several of these words are close in meaning; `tooCloseTo` keeps a close one from being
+# offered as a wrong meaning, and `alsoAccepted` takes it as right where it fits.
 id: vocabulary-time-words
 kind: vocabulary
 level: A1
 chapter: a1-words-numbers-time
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Now, soon, always: words for time"
   fa: "حالا، زود، همیشه: واژه‌های زمان"
   de: "Jetzt, bald, immer: Wörter für die Zeit"
+attemptSize: 15
 words:
   - word: jetzt
+    class: adverb
+    level: A1
+    meaning:
+      en: now
+      fa: حالا، اکنون
+    definition: zu dieser Zeit, nicht vorher und nicht nachher
+    example:
+      de: Ich habe jetzt keine Zeit.
+      en: I don't have time now.
+      fa: حالا وقت ندارم.
+    alsoAccepted: [nun, gerade]
+    tooCloseTo: [gerade, zurzeit, sofort, gleich]
+
   - word: bald
+    class: adverb
+    level: A1
+    meaning:
+      en: soon
+      fa: به‌زودی
+    definition: in kurzer Zeit, nicht jetzt, aber auch nicht viel später
+    example:
+      de: Der Zug kommt bald.
+      en: The train is coming soon.
+      fa: قطار به‌زودی می‌رسد.
+    alsoAccepted: [gleich, demnächst]
+    tooCloseTo: [gleich, später, dann]
+
   - word: sofort
+    class: adverb
+    level: A1
+    meaning:
+      en: immediately, at once
+      fa: فوراً، بی‌درنگ
+    definition: jetzt, ohne zu warten
+    example:
+      de: Komm bitte sofort nach Hause!
+      en: Please come home at once!
+      fa: لطفاً فوراً به خانه بیا!
+    alsoAccepted: [gleich]
+    tooCloseTo: [gleich, jetzt]
+
   - word: gleich
+    class: adjective
+    level: A1
+    meaning:
+      en: in a moment, right away; the same
+      fa: تا چند لحظهٔ دیگر؛ یکسان
+    definition: in ein paar Minuten; auch so, dass es keinen Unterschied gibt
+    example:
+      de: Warte, ich komme gleich!
+      en: Wait, I'm coming in a moment!
+      fa: صبر کن، الان می‌آیم!
+    alsoAccepted: [sofort, bald]
+    tooCloseTo: [sofort, bald, jetzt]
+
   - word: später
+    class: adverb
+    level: A1
+    meaning:
+      en: later
+      fa: بعداً، دیرتر
+    definition: nach einiger Zeit, nicht jetzt
+    example:
+      de: Ich rufe dich später an.
+      en: I'll call you later.
+      fa: بعداً به تو زنگ می‌زنم.
+    alsoAccepted: [danach, nachher]
+    tooCloseTo: [dann, bald]
+
   - word: früher
+    class: adverb
+    level: A1
+    meaning:
+      en: earlier; in the past
+      fa: زودتر؛ در گذشته
+    definition: vor dieser Zeit; auch vor vielen Jahren
+    example:
+      de: Früher habe ich in Teheran gewohnt.
+      en: I used to live in Tehran.
+      fa: قبلاً در تهران زندگی می‌کردم.
+    alsoAccepted: [eher]
+    tooCloseTo: [schon]
+
   - word: spät
+    class: adjective
+    level: A1
+    meaning:
+      en: late
+      fa: دیر
+    definition: nicht früh, nach der normalen Zeit
+    example:
+      de: Es ist schon spät, ich gehe nach Hause.
+      en: It's late already; I'm going home.
+      fa: دیروقت است، به خانه می‌روم.
+    alsoAccepted: [verspätet]
+
   - word: immer
+    class: adverb
+    level: A1
+    meaning:
+      en: always
+      fa: همیشه
+    definition: jedes Mal, zu jeder Zeit
+    example:
+      de: Er kommt immer zu spät.
+      en: He is always late.
+      fa: او همیشه دیر می‌آید.
+    alsoAccepted: [stets]
+
   - word: oft
+    class: adverb
+    level: A1
+    meaning:
+      en: often
+      fa: اغلب، بیشتر وقت‌ها
+    definition: viele Male
+    example:
+      de: Wir essen oft Reis.
+      en: We often eat rice.
+      fa: ما اغلب برنج می‌خوریم.
+    alsoAccepted: [häufig, oftmals]
+
   - word: nie
+    class: adverb
+    level: A1
+    meaning:
+      en: never
+      fa: هرگز، هیچ‌وقت
+    definition: kein einziges Mal
+    example:
+      de: Am Abend trinke ich nie Kaffee.
+      en: I never drink coffee in the evening.
+      fa: شب‌ها هیچ‌وقت قهوه نمی‌نوشم.
+    alsoAccepted: [niemals]
+
   - word: einmal
+    class: adverb
+    level: A1
+    meaning:
+      en: once
+      fa: یک بار
+    definition: nicht zweimal oder dreimal, nur ein einziges Mal
+    example:
+      de: Ich war einmal in Berlin.
+      en: I have been to Berlin once.
+      fa: یک بار به برلین رفته‌ام.
+
   - word: schon
+    class: adverb
+    level: A1
+    meaning:
+      en: already
+      fa: قبلاً، دیگر
+    definition: früher, als man denkt
+    example:
+      de: Bist du schon fertig?
+      en: Are you finished already?
+      fa: به این زودی کارت تمام شد؟
+    alsoAccepted: [bereits]
+    tooCloseTo: [früher]
+
   - word: noch
+    class: adverb
+    level: A1
+    meaning:
+      en: still, yet
+      fa: هنوز
+    definition: bis jetzt und weiter, nicht zu Ende
+    example:
+      de: Das Baby schläft noch.
+      en: The baby is still asleep.
+      fa: نوزاد هنوز خواب است.
+    alsoAccepted: [immer noch]
+
   - word: lange
+    class: adverb
+    level: A1
+    meaning:
+      en: for a long time, long
+      fa: مدت زیادی، مدت طولانی
+    definition: viel Zeit, viele Stunden oder Tage
+    example:
+      de: Wir haben lange auf den Bus gewartet.
+      en: We waited a long time for the bus.
+      fa: مدت زیادی منتظر اتوبوس ماندیم.
+    alsoAccepted: [lang]
+
   - word: zurzeit
+    class: adverb
+    level: A1
+    meaning:
+      en: at the moment, currently
+      fa: در حال حاضر، فعلاً
+    definition: in dieser Zeit, in diesen Tagen und Wochen
+    example:
+      de: Zurzeit wohne ich bei meinem Bruder.
+      en: At the moment I'm living with my brother.
+      fa: فعلاً پیش برادرم زندگی می‌کنم.
+    alsoAccepted: [momentan, derzeit, im Moment, gerade, jetzt]
+    tooCloseTo: [jetzt, gerade]
+
   - word: gerade
+    class: adverb
+    level: A1
+    meaning:
+      en: right now, just
+      fa: همین الان، درست در همین لحظه
+    definition: genau in diesem Moment
+    example:
+      de: Ich koche gerade, ich rufe dich später zurück.
+      en: I'm cooking right now; I'll call you back later.
+      fa: دارم آشپزی می‌کنم، بعداً به تو زنگ می‌زنم.
+    alsoAccepted: [jetzt, eben]
+    tooCloseTo: [jetzt, zurzeit]
+
   - word: dann
+    class: adverb
+    level: A1
+    meaning:
+      en: then, after that
+      fa: بعد، سپس
+    definition: danach, als Nächstes
+    example:
+      de: Zuerst essen wir, dann gehen wir spazieren.
+      en: First we eat, then we go for a walk.
+      fa: اول غذا می‌خوریم، بعد قدم می‌زنیم.
+    alsoAccepted: [danach, anschließend]
+    tooCloseTo: [später]
+
   - word: pünktlich
+    class: adjective
+    level: A1
+    meaning:
+      en: on time, punctual
+      fa: سر وقت، وقت‌شناس
+    definition: genau zur richtigen Zeit, nicht zu spät
+    example:
+      de: Der Zug ist heute pünktlich.
+      en: The train is on time today.
+      fa: قطار امروز سر وقت است.
+    alsoAccepted: [rechtzeitig]
+
   - word: dauern
+    class: verb
+    level: A1
+    meaning:
+      en: to last, to take (time)
+      fa: طول کشیدن
+    definition: eine bestimmte Zeit brauchen
+    example:
+      de: Die Reise dauert drei Stunden.
+      en: The journey takes three hours.
+      fa: سفر سه ساعت طول می‌کشد.
+
+  # anfangen and beginnen mean the same; each is right when the other is asked for.
   - word: anfangen
+    class: verb
+    level: A1
+    meaning:
+      en: to start
+      fa: شروع کردن، شروع شدن
+    definition: mit etwas starten
+    example:
+      de: Der Unterricht fängt um acht Uhr an.
+      en: Lessons start at eight o'clock.
+      fa: کلاس ساعت هشت شروع می‌شود.
+    alsoAccepted: [beginnen, starten]
+    tooCloseTo: [beginnen]
+
   - word: beginnen
+    class: verb
+    level: A1
+    meaning:
+      en: to begin
+      fa: آغاز کردن، آغاز شدن
+    definition: den ersten Schritt von etwas machen
+    example:
+      de: Das Konzert beginnt um zwanzig Uhr.
+      en: The concert begins at eight p.m.
+      fa: کنسرت ساعت هشت شب آغاز می‌شود.
+    alsoAccepted: [anfangen, starten]
+    tooCloseTo: [anfangen]
+
   - word: aufhören
+    class: verb
+    level: A1
+    meaning:
+      en: to stop (doing something)
+      fa: دست کشیدن، دست برداشتن
+    definition: etwas nicht mehr machen
+    example:
+      de: Um fünf Uhr höre ich mit der Arbeit auf.
+      en: I stop work at five o'clock.
+      fa: ساعت پنج دست از کار می‌کشم.
+    alsoAccepted: [stoppen, beenden]
+    tooCloseTo: [enden]
+
   - word: enden
+    class: verb
+    level: A1
+    meaning:
+      en: to end, to come to an end
+      fa: تمام شدن، به پایان رسیدن
+    definition: nicht mehr weitergehen
+    example:
+      de: Der Kurs endet im Juli.
+      en: The course ends in July.
+      fa: کلاس در ژوئیه تمام می‌شود.
+    alsoAccepted: [aufhören, zu Ende gehen]
+    tooCloseTo: [aufhören]
+
   - word: Schluss
+    class: noun
+    article: der
+    plural: Schlüsse
+    level: A1
+    meaning:
+      en: end, close
+      fa: پایان، آخر کار
+    definition: der letzte Teil von etwas
+    example:
+      de: Zum Schluss singen alle zusammen.
+      en: At the end everyone sings together.
+      fa: در پایان همه با هم آواز می‌خوانند.
+    alsoAccepted: [das Ende]
+
   - word: letzte
+    class: adjective
+    level: A1
+    meaning:
+      en: last (final; the one before)
+      fa: آخرین؛ گذشته
+    definition: ganz am Ende; auch die Woche oder das Jahr vor dieser Zeit
+    example:
+      de: Letzte Woche war ich krank.
+      en: Last week I was ill.
+      fa: هفتهٔ گذشته بیمار بودم.
+    alsoAccepted: [letzter, letztes, letzten, vorige]
+
   - word: nächste
+    class: adjective
+    level: A1
+    meaning:
+      en: next
+      fa: بعدی؛ آینده
+    definition: als Erstes danach; auch die Woche oder das Jahr nach dieser Zeit
+    example:
+      de: Die nächste Haltestelle ist der Bahnhof.
+      en: The next stop is the station.
+      fa: ایستگاه بعدی ایستگاه قطار است.
+    alsoAccepted: [nächster, nächstes, nächsten, kommende]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 18 questions)
+  date: 2026-11-28
+  pool: "6619351949936838"

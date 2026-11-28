@@ -1,38 +1,370 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-day-and-week
 kind: vocabulary
 level: A1
 chapter: a1-words-numbers-time
 order: 3
-status: coming-soon
+status: published
 title:
   en: "The day and the week"
   fa: "روز و هفته"
   de: "Der Tag und die Woche"
+attemptSize: 15
 words:
   - word: Tag
+    class: noun
+    article: der
+    plural: Tage
+    level: A1
+    meaning:
+      en: day
+      fa: روز
+    definition: vierundzwanzig Stunden
+    example:
+      de: Wir bleiben drei Tage in Wien.
+      en: We are staying in Vienna for three days.
+      fa: سه روز در وین می‌مانیم.
+
+  # "der Morgen" is the morning, "morgen" is tomorrow.
   - word: Morgen
+    class: noun
+    article: der
+    plural: Morgen
+    level: A1
+    meaning:
+      en: morning
+      fa: صبح
+    definition: die Zeit am Anfang vom Tag, nach der Nacht
+    example:
+      de: Am Morgen trinke ich immer Tee.
+      en: In the morning I always drink tea.
+      fa: صبح‌ها همیشه چای می‌نوشم.
+    alsoAccepted: [der Vormittag]
+    tooCloseTo: [Vormittag]
+
   - word: Vormittag
+    class: noun
+    article: der
+    plural: Vormittage
+    level: A1
+    meaning:
+      en: late morning, before noon
+      fa: پیش از ظهر
+    definition: die Zeit zwischen dem frühen Morgen und zwölf Uhr
+    example:
+      de: Am Vormittag habe ich einen Deutschkurs.
+      en: In the late morning I have a German course.
+      fa: پیش از ظهر کلاس آلمانی دارم.
+    tooCloseTo: [Morgen]
+
   - word: Mittag
+    class: noun
+    article: der
+    plural: Mittage
+    level: A1
+    meaning:
+      en: midday, noon
+      fa: ظهر
+    definition: die Mitte vom Tag, um zwölf Uhr
+    example:
+      de: Zu Mittag essen wir in der Kantine.
+      en: At midday we eat in the canteen.
+      fa: ظهرها در غذاخوری محل کار ناهار می‌خوریم.
+
   - word: Nachmittag
+    class: noun
+    article: der
+    plural: Nachmittage
+    level: A1
+    meaning:
+      en: afternoon
+      fa: بعدازظهر
+    definition: die Zeit zwischen zwölf Uhr und dem Abend
+    example:
+      de: Am Nachmittag gehe ich mit dem Hund spazieren.
+      en: In the afternoon I take the dog for a walk.
+      fa: بعدازظهر سگ را به گردش می‌برم.
+
   - word: Abend
+    class: noun
+    article: der
+    plural: Abende
+    level: A1
+    meaning:
+      en: evening
+      fa: عصر، اول شب
+    definition: die Zeit am Ende vom Tag, vor der Nacht
+    example:
+      de: Am Abend sehen wir oft fern.
+      en: In the evening we often watch TV.
+      fa: شب‌ها اغلب تلویزیون تماشا می‌کنیم.
+
   - word: Nacht
+    class: noun
+    article: die
+    plural: Nächte
+    level: A1
+    meaning:
+      en: night
+      fa: شب
+    definition: die dunkle Zeit, wenn die meisten Menschen schlafen
+    example:
+      de: Gute Nacht, schlaf gut!
+      en: Good night, sleep well!
+      fa: شب بخیر، خوب بخوابی!
+
   - word: Woche
+    class: noun
+    article: die
+    plural: Wochen
+    level: A1
+    meaning:
+      en: week
+      fa: هفته
+    definition: sieben Tage, von Montag bis Sonntag
+    example:
+      de: Ich gehe zweimal in der Woche schwimmen.
+      en: I go swimming twice a week.
+      fa: هفته‌ای دو بار شنا می‌روم.
+
   - word: Wochentag
+    class: noun
+    article: der
+    plural: Wochentage
+    level: A1
+    meaning:
+      en: day of the week
+      fa: روز هفته
+    definition: einer von den sieben Tagen, zum Beispiel Montag oder Freitag
+    example:
+      de: Welcher Wochentag ist heute?
+      en: What day of the week is it today?
+      fa: امروز چندشنبه است؟
+
   - word: Wochenende
+    class: noun
+    article: das
+    plural: Wochenenden
+    level: A1
+    meaning:
+      en: weekend
+      fa: آخر هفته
+    definition: Samstag und Sonntag
+    example:
+      de: Was machst du am Wochenende?
+      en: What are you doing at the weekend?
+      fa: آخر هفته چه کار می‌کنی؟
+
   - word: Montag
+    class: noun
+    article: der
+    plural: Montage
+    level: A1
+    meaning:
+      en: Monday
+      fa: دوشنبه
+    definition: der Tag nach dem Sonntag
+    example:
+      de: Am Montag fängt die Arbeit wieder an.
+      en: On Monday work starts again.
+      fa: دوشنبه کار دوباره شروع می‌شود.
+
   - word: Dienstag
+    class: noun
+    article: der
+    plural: Dienstage
+    level: A1
+    meaning:
+      en: Tuesday
+      fa: سه‌شنبه
+    definition: der Tag nach dem Montag
+    example:
+      de: Am Dienstag habe ich frei.
+      en: I have Tuesday off.
+      fa: سه‌شنبه کار ندارم.
+
   - word: Mittwoch
+    class: noun
+    article: der
+    plural: Mittwoche
+    level: A1
+    meaning:
+      en: Wednesday
+      fa: چهارشنبه
+    definition: der Tag nach dem Dienstag
+    example:
+      de: Wir treffen uns am Mittwoch um sieben.
+      en: We are meeting on Wednesday at seven.
+      fa: چهارشنبه ساعت هفت همدیگر را می‌بینیم.
+
   - word: Donnerstag
+    class: noun
+    article: der
+    plural: Donnerstage
+    level: A1
+    meaning:
+      en: Thursday
+      fa: پنجشنبه
+    definition: der Tag nach dem Mittwoch
+    example:
+      de: Am Donnerstag ist der Supermarkt bis zehn Uhr offen.
+      en: On Thursday the supermarket is open until ten o'clock.
+      fa: سوپرمارکت پنجشنبه تا ساعت ده باز است.
+
   - word: Freitag
+    class: noun
+    article: der
+    plural: Freitage
+    level: A1
+    meaning:
+      en: Friday
+      fa: جمعه
+    definition: der Tag nach dem Donnerstag
+    example:
+      de: Am Freitag gehen wir ins Kino.
+      en: On Friday we are going to the cinema.
+      fa: جمعه به سینما می‌رویم.
+
   - word: Samstag
+    class: noun
+    article: der
+    plural: Samstage
+    level: A1
+    meaning:
+      en: Saturday
+      fa: شنبه
+    definition: der Tag nach dem Freitag
+    example:
+      de: Am Samstag kaufe ich auf dem Markt ein.
+      en: On Saturday I do my shopping at the market.
+      fa: شنبه از بازار خرید می‌کنم.
+    alsoAccepted: [der Sonnabend]
+
   - word: Sonntag
+    class: noun
+    article: der
+    plural: Sonntage
+    level: A1
+    meaning:
+      en: Sunday
+      fa: یکشنبه
+    definition: der Tag nach dem Samstag
+    example:
+      de: Am Sonntag sind die Geschäfte geschlossen.
+      en: On Sunday the shops are closed.
+      fa: یکشنبه‌ها مغازه‌ها بسته‌اند.
+
   - word: heute
+    class: adverb
+    level: A1
+    meaning:
+      en: today
+      fa: امروز
+    definition: an dem Tag, der gerade ist, nicht gestern und nicht morgen
+    example:
+      de: Heute ist das Wetter schön.
+      en: The weather is nice today.
+      fa: امروز هوا خوب است.
+
   - word: morgen
+    class: adverb
+    level: A1
+    meaning:
+      en: tomorrow
+      fa: فردا
+    definition: am Tag nach heute
+    example:
+      de: Morgen habe ich keine Zeit.
+      en: I have no time tomorrow.
+      fa: فردا وقت ندارم.
+
   - word: gestern
+    class: adverb
+    level: A1
+    meaning:
+      en: yesterday
+      fa: دیروز
+    definition: am Tag vor heute
+    example:
+      de: Gestern war ich beim Arzt.
+      en: Yesterday I was at the doctor's.
+      fa: دیروز پیش پزشک بودم.
+
+  # "die Uhr" is the clock and the time it shows; "die Stunde" is sixty minutes.
   - word: Uhr
+    class: noun
+    article: die
+    plural: Uhren
+    level: A1
+    meaning:
+      en: clock, watch; o'clock
+      fa: ساعت (وسیلهٔ نشان‌دادن وقت)
+    definition: das Ding an der Wand oder am Arm, das die Zeit zeigt
+    example:
+      de: Wie viel Uhr ist es?
+      en: What time is it?
+      fa: ساعت چند است؟
+
   - word: Stunde
+    class: noun
+    article: die
+    plural: Stunden
+    level: A1
+    meaning:
+      en: hour
+      fa: ساعت (شصت دقیقه)
+    definition: sechzig Minuten
+    example:
+      de: Ich lerne jeden Tag eine Stunde Deutsch.
+      en: I study German for an hour every day.
+      fa: هر روز یک ساعت آلمانی می‌خوانم.
+
   - word: Minute
+    class: noun
+    article: die
+    plural: Minuten
+    level: A1
+    meaning:
+      en: minute
+      fa: دقیقه
+    definition: sechzig Sekunden
+    example:
+      de: Der Bus kommt in zehn Minuten.
+      en: The bus is coming in ten minutes.
+      fa: اتوبوس ده دقیقهٔ دیگر می‌آید.
+
   - word: Sekunde
+    class: noun
+    article: die
+    plural: Sekunden
+    level: A1
+    meaning:
+      en: second (of time)
+      fa: ثانیه
+    definition: der sechzigste Teil von einer Minute
+    example:
+      de: Das Video dauert nur dreißig Sekunden.
+      en: The video is only thirty seconds long.
+      fa: این ویدیو فقط سی ثانیه است.
+
   - word: Moment
+    class: noun
+    article: der
+    plural: Momente
+    level: A1
+    meaning:
+      en: moment
+      fa: لحظه
+    definition: eine sehr kurze Zeit
+    example:
+      de: Einen Moment, bitte!
+      en: One moment, please!
+      fa: یک لحظه، لطفاً!
+    alsoAccepted: [der Augenblick]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 15 questions)
+  date: 2026-11-28
+  pool: dec7906b6d6b6ad8
