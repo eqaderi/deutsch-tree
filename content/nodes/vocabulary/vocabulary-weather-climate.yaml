@@ -1,31 +1,268 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-weather-climate
 kind: vocabulary
 level: B1
 chapter: b1-words-travel-nature
 order: 6
-status: coming-soon
+status: published
 title:
   en: "Weather and climate"
   fa: "هوا و اقلیم"
   de: "Wetter und Klima"
+attemptSize: 15
 words:
   - word: Klima
+    class: noun
+    article: das
+    plural: Klimas
+    level: B1
+    meaning:
+      en: climate
+      fa: اقلیم، آب‌وهوا
+    definition: das Wetter, wie es in einem Land über viele Jahre meistens ist
+    example:
+      de: In Spanien ist das Klima wärmer und trockener als bei uns.
+      en: In Spain the climate is warmer and drier than here.
+      fa: آب‌وهوای اسپانیا از اینجا گرم‌تر و خشک‌تر است.
+
   - word: Temperatur
+    class: noun
+    article: die
+    plural: Temperaturen
+    level: B1
+    meaning:
+      en: temperature
+      fa: دما
+    definition: wie warm oder kalt etwas ist, gemessen in Grad
+    example:
+      de: Morgen steigt die Temperatur auf 30 Grad.
+      en: Tomorrow the temperature will rise to 30 degrees.
+      fa: فردا دما به ۳۰ درجه می‌رسد.
+
+  # Hitze is great heat, Wärme a pleasant warmth; neither is offered as a wrong meaning of the other.
   - word: Hitze
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: heat (when it is very hot)
+      fa: گرمای شدید
+    definition: eine sehr hohe Temperatur, wenn es sehr heiß ist
+    example:
+      de: Bei dieser Hitze kann ich nicht schlafen.
+      en: I can't sleep in this heat.
+      fa: در این گرما نمی‌توانم بخوابم.
+    tooCloseTo: [Wärme]
+
   - word: Kälte
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: cold (cold weather)
+      fa: سرما
+    definition: eine sehr niedrige Temperatur, wenn es kalt ist
+    example:
+      de: Bei dieser Kälte bleibe ich lieber zu Hause.
+      en: In this cold I'd rather stay at home.
+      fa: در این سرما ترجیح می‌دهم در خانه بمانم.
+
   - word: Wärme
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: warmth (a pleasant heat)
+      fa: گرما (گرمای مطبوع)
+    definition: eine angenehme Temperatur, nicht kalt und nicht zu heiß
+    example:
+      de: Nach dem Spaziergang im Schnee hat die Wärme am Ofen gutgetan.
+      en: After the walk in the snow the warmth by the stove felt good.
+      fa: بعد از پیاده‌روی در برف، گرمای کنار بخاری لذت‌بخش بود.
+    tooCloseTo: [Hitze]
+
   - word: Nebel
+    class: noun
+    article: der
+    plural: Nebel
+    level: B1
+    meaning:
+      en: fog, mist
+      fa: مه
+    definition: viele sehr kleine Tropfen Wasser in der Luft, so dass man nicht weit sehen kann
+    example:
+      de: Wegen Nebel konnte das Flugzeug nicht landen.
+      en: The plane couldn't land because of fog.
+      fa: هواپیما به دلیل مه نتوانست فرود بیاید.
+
   - word: Sturm
+    class: noun
+    article: der
+    plural: Stürme
+    level: B1
+    meaning:
+      en: storm, gale (very strong wind)
+      fa: طوفان (باد بسیار شدید)
+    definition: ein sehr starker Wind
+    example:
+      de: In der Nacht hat der Sturm viele Bäume umgeworfen.
+      en: In the night the storm blew down lots of trees.
+      fa: دیشب طوفان درخت‌های زیادی را انداخت.
+
   - word: Blitz
+    class: noun
+    article: der
+    plural: Blitze
+    level: B1
+    meaning:
+      en: lightning, a flash of lightning
+      fa: آذرخش، صاعقه
+    definition: ein helles Licht, das bei einem Gewitter plötzlich am Himmel zu sehen ist
+    example:
+      de: Der Blitz hat in den Kirchturm eingeschlagen.
+      en: Lightning struck the church tower.
+      fa: صاعقه به برج کلیسا خورد.
+
   - word: blitzen
+    class: verb
+    level: B1
+    meaning:
+      en: to flash with lightning (it is lightning)
+      fa: برق زدن آسمان، آذرخش زدن
+    definition: bei einem Gewitter plötzlich hell am Himmel leuchten
+    example:
+      de: Es blitzt, schnell ins Haus!
+      en: There's lightning, quick, into the house!
+      fa: آسمان برق می‌زند، زود برویم داخل خانه!
+
   - word: Donner
+    class: noun
+    article: der
+    plural: Donner
+    level: B1
+    meaning:
+      en: thunder
+      fa: رعد، تندر
+    definition: das laute Geräusch bei einem Gewitter, nach dem hellen Licht am Himmel
+    example:
+      de: Nach dem Blitz hörten wir einen lauten Donner.
+      en: After the lightning we heard a loud clap of thunder.
+      fa: بعد از آذرخش صدای رعد بلندی شنیدیم.
+
   - word: donnern
+    class: verb
+    level: B1
+    meaning:
+      en: to thunder (it is thundering)
+      fa: غریدن آسمان، رعد زدن
+    definition: bei einem Gewitter laut krachen
+    example:
+      de: Hörst du? Es donnert, gleich kommt ein Gewitter.
+      en: Can you hear it? It's thundering, a storm is coming.
+      fa: می‌شنوی؟ آسمان می‌غرد، الان رگبار می‌گیرد.
+
   - word: hageln
+    class: verb
+    level: B1
+    meaning:
+      en: to hail (it is hailing)
+      fa: تگرگ باریدن
+    definition: so regnen, dass kleine, harte Stücke Eis vom Himmel fallen
+    example:
+      de: Gestern hat es so stark gehagelt, dass unser Auto jetzt Beulen hat.
+      en: Yesterday it hailed so hard that our car now has dents.
+      fa: دیروز آن‌قدر تگرگ بارید که ماشینمان حالا فرورفتگی دارد.
+
+  # Wetterbericht and Wettervorhersage both say what the weather will be; each is right for the other.
   - word: Wetterbericht
+    class: noun
+    article: der
+    plural: Wetterberichte
+    level: B1
+    meaning:
+      en: weather report (on the radio, on TV or in the paper)
+      fa: گزارش هواشناسی (در رادیو، تلویزیون یا روزنامه)
+    definition: die Nachricht im Radio, im Fernsehen oder in der Zeitung, wie das Wetter ist und wie es wird
+    example:
+      de: Laut Wetterbericht wird es morgen sonnig.
+      en: According to the weather report it will be sunny tomorrow.
+      fa: طبق گزارش هواشناسی، فردا آفتابی است.
+    alsoAccepted: [die Wettervorhersage]
+    tooCloseTo: [Wettervorhersage]
+
   - word: Wettervorhersage
+    class: noun
+    article: die
+    plural: Wettervorhersagen
+    level: B1
+    meaning:
+      en: weather forecast
+      fa: پیش‌بینی وضع هوا
+    definition: was Fachleute über das Wetter der nächsten Tage sagen
+    example:
+      de: Die Wettervorhersage für das Wochenende ist leider schlecht.
+      en: Unfortunately the weather forecast for the weekend is bad.
+      fa: متأسفانه پیش‌بینی وضع هوا برای آخر هفته خوب نیست.
+    alsoAccepted: [der Wetterbericht, die Wetterprognose]
+    tooCloseTo: [Wetterbericht]
+
   - word: mild
+    class: adjective
+    level: B1
+    meaning:
+      en: mild (not cold, pleasant)
+      fa: معتدل، ملایم (هوا)
+    definition: nicht kalt und angenehm, besonders im Winter
+    example:
+      de: Der Winter war dieses Jahr sehr mild, es gab kaum Schnee.
+      en: The winter was very mild this year, there was hardly any snow.
+      fa: زمستان امسال خیلی معتدل بود و تقریباً برف نیامد.
+
   - word: feucht
+    class: adjective
+    level: B1
+    meaning:
+      en: damp, humid, moist
+      fa: مرطوب، نمناک
+    definition: ein bisschen nass
+    example:
+      de: Die Luft im Badezimmer ist immer feucht.
+      en: The air in the bathroom is always damp.
+      fa: هوای حمام همیشه مرطوب است.
+
   - word: sinken
+    class: verb
+    level: B1
+    meaning:
+      en: to fall, to go down (temperature, prices); to sink
+      fa: پایین آمدن (دما یا قیمت)؛ غرق شدن
+    definition: nach unten gehen oder niedriger werden, zum Beispiel die Temperatur oder ein Schiff im Wasser
+    example:
+      de: In der Nacht sinkt die Temperatur unter null Grad.
+      en: At night the temperature falls below zero.
+      fa: شب دما به زیر صفر می‌رسد.
+    alsoAccepted: [fallen]
+
   - word: steigen
+    class: verb
+    level: B1
+    meaning:
+      en: to rise, to go up (temperature, prices); to climb
+      fa: بالا رفتن (دما یا قیمت)؛ صعود کردن
+    definition: nach oben gehen oder höher werden, zum Beispiel die Temperatur oder ein Flugzeug
+    example:
+      de: Ab Mittwoch steigen die Temperaturen wieder.
+      en: From Wednesday the temperatures will rise again.
+      fa: از چهارشنبه دوباره دما بالا می‌رود.
+    alsoAccepted: [ansteigen]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 108 questions, then 15 changed or disputed ones; not
+    people)"
+  date: 2026-11-28
+  pool: d09e4e4ead3f7f90

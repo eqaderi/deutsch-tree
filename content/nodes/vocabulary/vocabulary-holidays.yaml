@@ -1,35 +1,334 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-holidays
 kind: vocabulary
 level: B1
 chapter: b1-words-travel-nature
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Holidays and sightseeing"
   fa: "تعطیلات و دیدن جاهای دیدنی"
   de: "Urlaub und Sehenswürdigkeiten"
+attemptSize: 15
 words:
   - word: Tourismus
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: tourism
+      fa: گردشگری، جهانگردی
+    definition: das Reisen von vielen Menschen in ihrem Urlaub und alles, was damit zu tun hat, wie Hotels und Ausflüge
+    example:
+      de: Viele Menschen auf der Insel leben vom Tourismus.
+      en: Many people on the island live from tourism.
+      fa: بسیاری از مردم این جزیره از راه گردشگری زندگی می‌کنند.
+    alsoAccepted: [der Fremdenverkehr]
+
   - word: Saison
+    class: noun
+    article: die
+    plural: Saisons
+    level: B1
+    meaning:
+      en: season (the busy time of year, for example for holidays or a sport)
+      fa: فصل (زمان شلوغ سال، مثلاً برای سفر یا یک ورزش)
+    definition: die Zeit im Jahr, in der etwas stattfindet oder in der viele Touristen kommen
+    example:
+      de: In der Saison sind die Hotels am Meer oft ausgebucht.
+      en: In the season the hotels by the sea are often fully booked.
+      fa: در فصل سفر، هتل‌های کنار دریا اغلب پر هستند.
+
   - word: Übernachtung
+    class: noun
+    article: die
+    plural: Übernachtungen
+    level: B1
+    meaning:
+      en: overnight stay, a night (in a hotel)
+      fa: اقامت شبانه، یک شب ماندن (در هتل)
+    definition: das Schlafen für eine Nacht in einem Hotel oder bei anderen Leuten
+    example:
+      de: Eine Übernachtung mit Frühstück kostet 80 Euro.
+      en: One night with breakfast costs 80 euros.
+      fa: یک شب اقامت با صبحانه ۸۰ یورو است.
+
   - word: Rundfahrt
+    class: noun
+    article: die
+    plural: Rundfahrten
+    level: B1
+    meaning:
+      en: tour (by bus or boat, round a place and back to the start)
+      fa: گشت (با اتوبوس یا قایق، دور یک جا و بازگشت به نقطهٔ شروع)
+    definition: eine Fahrt mit dem Bus oder dem Schiff durch einen Ort, bei der man viel sieht und am Ende wieder am Anfang ankommt
+    example:
+      de: Wir haben eine Rundfahrt mit dem Schiff durch den Hafen gemacht.
+      en: We took a boat tour round the harbour.
+      fa: با کشتی گشتی در بندر زدیم.
+
   - word: Wanderung
+    class: noun
+    article: die
+    plural: Wanderungen
+    level: B1
+    meaning:
+      en: hike, long walk (in nature)
+      fa: پیاده‌روی طولانی در طبیعت، کوه‌پیمایی
+    definition: ein langer Weg zu Fuß in der Natur, zum Beispiel in den Bergen
+    example:
+      de: Nach der langen Wanderung waren wir sehr müde.
+      en: After the long hike we were very tired.
+      fa: بعد از پیاده‌روی طولانی خیلی خسته بودیم.
+
   - word: Abenteuer
+    class: noun
+    article: das
+    plural: Abenteuer
+    level: B1
+    meaning:
+      en: adventure
+      fa: ماجراجویی
+    definition: etwas Spannendes und manchmal Gefährliches, das man erlebt
+    example:
+      de: Die Reise durch die Wüste war ein echtes Abenteuer.
+      en: The journey through the desert was a real adventure.
+      fa: سفر در بیابان یک ماجراجویی واقعی بود.
+
   - word: Erlebnis
+    class: noun
+    article: das
+    plural: Erlebnisse
+    level: B1
+    meaning:
+      en: experience (something that happens to you and that you remember)
+      fa: تجربه، رویداد به‌یادماندنی
+    definition: etwas Besonderes, das man selbst mitgemacht hat und nicht vergisst
+    example:
+      de: Das Konzert am Strand war ein tolles Erlebnis.
+      en: The concert on the beach was a great experience.
+      fa: کنسرت کنار ساحل تجربه‌ای فوق‌العاده بود.
+
   - word: erleben
+    class: verb
+    level: B1
+    meaning:
+      en: to experience, to go through
+      fa: تجربه کردن، از سر گذراندن
+    definition: etwas selbst mitmachen oder sehen, wenn es passiert
+    example:
+      de: Im Urlaub haben wir viel Schönes erlebt.
+      en: We experienced lots of lovely things on holiday.
+      fa: در تعطیلات چیزهای زیبای زیادی را تجربه کردیم.
+    alsoAccepted: [miterleben]
+
   - word: Souvenir
+    class: noun
+    article: das
+    plural: Souvenirs
+    level: B1
+    meaning:
+      en: souvenir
+      fa: سوغاتی، یادگاری
+    definition: ein kleiner Gegenstand, den man auf einer Reise kauft, um sich später an sie zu erinnern
+    example:
+      de: Als Souvenir habe ich eine kleine Tasse aus Wien mitgebracht.
+      en: I brought back a little cup from Vienna as a souvenir.
+      fa: یک فنجان کوچک از وین سوغاتی آوردم.
+    alsoAccepted: [das Andenken, das Mitbringsel]
+
   - word: Camp
+    class: noun
+    article: das
+    plural: Camps
+    level: B1
+    meaning:
+      en: camp (a place with tents or huts where people stay together for a time)
+      fa: اردوگاه (جایی با چادر یا کلبه که مردم مدتی با هم در آن می‌مانند)
+    definition: ein Platz mit Zelten oder kleinen Häusern, wo Menschen für eine Zeit zusammen wohnen
+    example:
+      de: Im Sommer fahren die Kinder in ein Camp am See.
+      en: In the summer the children go to a camp by the lake.
+      fa: بچه‌ها تابستان به اردوگاهی کنار دریاچه می‌روند.
+    alsoAccepted: [das Lager, das Zeltlager]
+
+  # campen is with a tent or a caravan, zelten with a tent only; neither is offered as a wrong meaning of the other.
   - word: campen
+    class: verb
+    level: B1
+    meaning:
+      en: to camp, to go camping (in a tent or a caravan)
+      fa: کمپینگ رفتن (با چادر یا کاروان)
+    definition: Urlaub machen und dabei im Zelt oder im Wohnwagen schlafen
+    example:
+      de: Letzten Sommer haben wir an der Ostsee gecampt.
+      en: Last summer we went camping on the Baltic coast.
+      fa: تابستان گذشته کنار دریای بالتیک کمپینگ رفتیم.
+    tooCloseTo: [zelten]
+
   - word: zelten
+    class: verb
+    level: B1
+    meaning:
+      en: to camp in a tent, to sleep in a tent
+      fa: چادر زدن، در چادر خوابیدن
+    definition: draußen in einem Zelt übernachten
+    example:
+      de: Wir haben drei Nächte am See gezeltet.
+      en: We camped in a tent by the lake for three nights.
+      fa: سه شب کنار دریاچه چادر زدیم.
+    alsoAccepted: [campen]
+    tooCloseTo: [campen]
+
   - word: Aussicht
+    class: noun
+    article: die
+    plural: Aussichten
+    level: B1
+    meaning:
+      en: view (what you can see from a high place)
+      fa: منظره، چشم‌انداز (از جایی بلند)
+    definition: das, was man von einem hohen Ort aus sehen kann
+    example:
+      de: Vom Turm hat man eine wunderbare Aussicht auf die Stadt.
+      en: From the tower you have a wonderful view of the town.
+      fa: از بالای برج منظرهٔ شگفت‌انگیزی از شهر دیده می‌شود.
+    alsoAccepted: [der Ausblick, der Blick]
+
   - word: Denkmal
+    class: noun
+    article: das
+    plural: Denkmäler
+    level: B1
+    meaning:
+      en: monument, memorial
+      fa: بنای یادبود، یادمان
+    definition: eine Figur oder ein Bau, der an eine Person oder an ein wichtiges Ereignis erinnert
+    example:
+      de: Vor dem Rathaus steht ein Denkmal für den Gründer der Stadt.
+      en: In front of the town hall there is a monument to the founder of the town.
+      fa: جلوی شهرداری بنای یادبودی برای بنیان‌گذار شهر هست.
+    alsoAccepted: [das Monument, das Mahnmal, die Gedenkstätte]
+
   - word: Burg
+    class: noun
+    article: die
+    plural: Burgen
+    level: B1
+    meaning:
+      en: castle (an old fortified building with thick walls, often on a hill)
+      fa: قلعه، دژ
+    definition: ein altes, starkes Gebäude mit dicken Mauern, oft auf einem Berg
+    example:
+      de: Auf dem Hügel über dem Dorf steht eine alte Burg.
+      en: An old castle stands on the hill above the village.
+      fa: روی تپهٔ بالای روستا قلعه‌ای قدیمی هست.
+    alsoAccepted: [die Festung]
+
   - word: Turm
+    class: noun
+    article: der
+    plural: Türme
+    level: B1
+    meaning:
+      en: tower
+      fa: برج
+    definition: ein hoher, schmaler Bau, zum Beispiel an einer Kirche
+    example:
+      de: Der Turm der Kirche ist über hundert Meter hoch.
+      en: The church tower is over a hundred metres high.
+      fa: برج کلیسا بیش از صد متر ارتفاع دارد.
+
   - word: Metropole
+    class: noun
+    article: die
+    plural: Metropolen
+    level: B1
+    meaning:
+      en: metropolis (a very large and important city)
+      fa: کلان‌شهر
+    definition: eine sehr große und wichtige Stadt, zum Beispiel Paris oder London
+    example:
+      de: Berlin ist eine Metropole mit fast vier Millionen Einwohnern.
+      en: Berlin is a metropolis with almost four million inhabitants.
+      fa: برلین کلان‌شهری با نزدیک به چهار میلیون نفر جمعیت است.
+    alsoAccepted: [die Weltstadt, die Großstadt]
+
   - word: City
+    class: noun
+    article: die
+    plural: Citys
+    level: B1
+    meaning:
+      en: city centre, town centre (with the shops)
+      fa: مرکز شهر (با مغازه‌ها)
+    definition: die Mitte einer großen Stadt mit vielen Geschäften
+    example:
+      de: Am Samstag ist die City voller Menschen.
+      en: On Saturdays the city centre is full of people.
+      fa: شنبه‌ها مرکز شهر پر از آدم است.
+    alsoAccepted: [die Innenstadt, das Zentrum, das Stadtzentrum]
+
   - word: verbringen
+    class: verb
+    level: B1
+    meaning:
+      en: to spend (time)
+      fa: گذراندن (وقت)
+    definition: eine Zeit, zum Beispiel den Urlaub oder einen Abend, an einem Ort oder mit einer Sache zubringen
+    example:
+      de: Wir verbringen unseren Urlaub dieses Jahr in den Bergen.
+      en: We're spending our holiday in the mountains this year.
+      fa: امسال تعطیلاتمان را در کوهستان می‌گذرانیم.
+    alsoAccepted: [zubringen]
+
   - word: Empfang
+    class: noun
+    article: der
+    plural: Empfänge
+    level: B1
+    meaning:
+      en: reception (the desk in a hotel where guests arrive)
+      fa: پذیرش (در هتل)
+    definition: der Platz im Hotel, wo die Gäste ankommen und ihren Schlüssel bekommen
+    example:
+      de: Den Schlüssel bekommen Sie am Empfang.
+      en: You'll get the key at reception.
+      fa: کلید را از پذیرش می‌گیرید.
+    alsoAccepted: [die Rezeption]
+
   - word: empfangen
+    class: verb
+    level: B1
+    meaning:
+      en: to receive, to welcome (guests)
+      fa: پذیرفتن، استقبال کردن (از مهمان)
+    definition: Gäste begrüßen, wenn sie ankommen
+    example:
+      de: Der Besitzer des Hotels hat uns sehr freundlich empfangen.
+      en: The owner of the hotel welcomed us very warmly.
+      fa: صاحب هتل خیلی گرم از ما استقبال کرد.
+    alsoAccepted: [begrüßen]
+
   - word: Pension
+    class: noun
+    article: die
+    plural: Pensionen
+    level: B1
+    meaning:
+      en: guest house, B&B (a small, simple hotel)
+      fa: مهمان‌خانه، پانسیون (هتل کوچک و ساده)
+    definition: ein kleines, einfaches Hotel, oft von einer Familie geführt
+    example:
+      de: Wir haben in einer kleinen Pension direkt am Meer gewohnt.
+      en: We stayed in a small guest house right by the sea.
+      fa: در مهمان‌خانهٔ کوچکی درست کنار دریا اقامت داشتیم.
+    alsoAccepted: [das Gästehaus, der Gasthof]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 132 questions, then 4 changed or disputed ones; not people)"
+  date: 2026-11-28
+  pool: 6a4b45c6d3ec0451
