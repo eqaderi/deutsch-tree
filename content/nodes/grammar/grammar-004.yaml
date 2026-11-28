@@ -1,13 +1,283 @@
-# Grammar list row 4.
+# Grammar list row 4. The file format is described in content/README.md.
 id: grammar-004
 kind: grammar
 level: A1
 chapter: a1-verbs-present
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-001]
 title:
   en: "Stem-ending specials"
-  fa: "ستاک‌های ویژه (*-t*، *-d*، *-s*، *-eln*)"
+  fa: "فعل‌هایی با بن ویژه (*-t*، *-d*، *-s*، *-eln*)"
   de: "Besondere Verbstämme (*-t*, *-d*, *-s*, *-eln*)"
+
+explanations:
+  en:
+    rule: >
+      When the stem ends in *-t* or *-d*, an *e* goes before the endings *-st*
+      and *-t*, so that they can be heard: *du arbeitest*, *er arbeitet*, *ihr
+      findet*. When the stem ends in *-s*, *-ß* or *-z*, *du* adds only *-t*:
+      *du heißt*, *du tanzt*, the same form as *er heißt*. Verbs in *-eln*
+      usually drop the *e* of the stem with *ich* (*ich sammle*) and add only
+      *-n* with *wir* and *sie/Sie* (*wir sammeln*).
+  fa:
+    rule: >
+      اگر بن فعل به *-t* یا *-d* ختم شود، پیش از شناسه‌های *-st* و *-t* یک *e*
+      می‌آید تا شناسه شنیده شود: *du arbeitest*، *er arbeitet*، *ihr findet*.
+      اگر بن به *-s*، *-ß* یا *-z* ختم شود، *du* فقط *-t* می‌گیرد: *du heißt*،
+      *du tanzt*؛ این صورت با صرف سوم‌شخص مفرد یکی است: *er heißt*. فعل‌هایی که
+      مصدرشان به *-eln* ختم می‌شود، با *ich* معمولاً *e* بن را از دست می‌دهند
+      (*ich sammle*) و با *wir* و *sie/Sie* فقط *-n* می‌گیرند (*wir sammeln*).
+  de:
+    rule: >
+      Endet der Stamm auf *-t* oder *-d*, kommt vor *-st* und *-t* ein *e*:
+      *du arbeitest*, *er arbeitet*, *ihr findet*. Endet der Stamm auf *-s*,
+      *-ß* oder *-z*, bekommt *du* nur *-t*: *du heißt*, *du tanzt*. Das ist
+      die gleiche Form wie bei *er*. Bei Verben auf *-eln* fällt bei *ich* das
+      *e* meistens weg (*ich sammle*), und bei *wir* und *sie/Sie* kommt nur
+      *-n* (*wir sammeln*).
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*arbeiten*", fa: "*arbeiten*", de: "*arbeiten*" }
+    - { en: "*heißen*", fa: "*heißen*", de: "*heißen*" }
+    - { en: "*sammeln*", fa: "*sammeln*", de: "*sammeln*" }
+  rows:
+    - [ich, arbeite, heiße, sammle]
+    - [du, arbeitest, heißt, sammelst]
+    - [er / sie / es, arbeitet, heißt, sammelt]
+    - [wir, arbeiten, heißen, sammeln]
+    - [ihr, arbeitet, heißt, sammelt]
+    - [sie / Sie, arbeiten, heißen, sammeln]
+
+examples:
+  - de: Du arbeitest viel.
+    en: You work a lot.
+    fa: تو خیلی کار می‌کنی.
+  - de: Er wartet auf den Bus.
+    en: He is waiting for the bus.
+    fa: او منتظر اتوبوس است.
+  - de: Findest du das gut?
+    en: Do you think that is good?
+    fa: به نظرت این خوب است؟
+  - de: Was kostet das?
+    en: How much is that?
+    fa: قیمتش چند است؟
+  - de: Wie heißt du?
+    en: What is your name?
+    fa: اسمت چیست؟
+  - de: Du tanzt sehr gut.
+    en: You dance very well.
+    fa: تو خیلی خوب می‌رقصی.
+  - de: Ihr redet zu laut.
+    en: You (plural) are talking too loudly.
+    fa: شما (جمع) خیلی بلند حرف می‌زنید.
+  - de: Ich sammle Briefmarken.
+    en: I collect stamps.
+    fa: من تمبر جمع می‌کنم.
+
+mistakes:
+  - wrong: Du arbeitst viel.
+    right: Du arbeitest viel.
+    why:
+      en: "The stem *arbeit-* ends in *-t*, so an *e* goes before *-st*: *du arbeitest*."
+      fa: "بن *arbeit-* به *-t* ختم می‌شود، پس پیش از *-st* یک *e* می‌آید: *du arbeitest*."
+      de: "Der Stamm *arbeit-* endet auf *-t*. Darum kommt vor *-st* ein *e*: *du arbeitest*."
+  - wrong: Er wart auf dich.
+    right: Er wartet auf dich.
+    why:
+      en: "The stem *wart-* ends in *-t*, so *er* takes *-et*: *er wartet*."
+      fa: "بن *wart-* به *-t* ختم می‌شود، پس سوم‌شخص مفرد *-et* می‌گیرد: *er wartet*."
+      de: "Der Stamm *wart-* endet auf *-t*. Darum heißt es bei *er*: *er wartet*."
+  - wrong: Du heißst Tom.
+    right: Du heißt Tom.
+    why:
+      en: "The stem *heiß-* ends in *-ß*, so *du* adds only *-t*: *du heißt*."
+      fa: "بن *heiß-* به *-ß* ختم می‌شود، پس *du* فقط *-t* می‌گیرد: *du heißt*."
+      de: "Der Stamm *heiß-* endet auf *-ß*. Darum bekommt *du* nur *-t*: *du heißt*."
+  - wrong: Wir sammelen Briefmarken.
+    right: Wir sammeln Briefmarken.
+    why:
+      en: "With *wir* the form is the infinitive, and *sammeln* ends in *-n* only: *wir sammeln*."
+      fa: "صرف فعل با *wir* همان مصدر است و *sammeln* فقط به *-n* ختم می‌شود: *wir sammeln*."
+      de: "Bei *wir* ist die Form wie der Infinitiv, und *sammeln* hat nur *-n*: *wir sammeln*."
+
+# 20 questions, every question type.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Du ___ viel.
+    options: [arbeitest, arbeitst, arbeiten]
+    answer: arbeitest
+    explanation:
+      en: "The stem *arbeit-* ends in *-t*, so an *e* goes before *-st*: *du arbeitest*."
+      fa: "بن *arbeit-* به *-t* ختم می‌شود، پس پیش از *-st* یک *e* می‌آید: *du arbeitest*."
+      de: "Der Stamm *arbeit-* endet auf *-t*. Darum kommt vor *-st* ein *e*: *du arbeitest*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wie ___ du?
+    options: [heißt, heißst, heiße]
+    answer: heißt
+    explanation:
+      en: "The stem *heiß-* ends in *-ß*, so *du* adds only *-t*: *du heißt*."
+      fa: "بن *heiß-* به *-ß* ختم می‌شود، پس *du* فقط *-t* می‌گیرد: *du heißt*."
+      de: "Der Stamm *heiß-* endet auf *-ß*. Darum bekommt *du* nur *-t*: *du heißt*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Er ___ im Café auf seine Freundin.
+    options: [wartet, wart, warten]
+    answer: wartet
+    explanation:
+      en: "The stem *wart-* ends in *-t*, so *er* takes *-et*: *er wartet*."
+      fa: "بن *wart-* به *-t* ختم می‌شود، پس سوم‌شخص مفرد *-et* می‌گیرد: *er wartet*."
+      de: "Der Stamm *wart-* endet auf *-t*. Bei *er* heißt es: *er wartet*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ihr ___ die Wohnung schön.
+    options: [findet, findt, finden]
+    answer: findet
+    explanation:
+      en: "The stem *find-* ends in *-d*, so *ihr* takes *-et*: *ihr findet*."
+      fa: "بن *find-* به *-d* ختم می‌شود، پس *ihr* شناسهٔ *-et* می‌گیرد: *ihr findet*."
+      de: "Der Stamm *find-* endet auf *-d*. Bei *ihr* heißt es: *ihr findet*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich ___ Briefmarken.
+    options: [sammle, sammelt, sammeln]
+    answer: sammle
+    explanation:
+      en: "With *ich*, *sammeln* drops the *e* of its stem: *ich sammle*."
+      fa: "*sammeln* با *ich* حرف *e* بن خود را از دست می‌دهد: *ich sammle*."
+      de: "Bei *ich* fällt bei *sammeln* das *e* weg: *ich sammle*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Du ___ sehr gut.
+    options: [tanzt, tanzst, tanze]
+    answer: tanzt
+    explanation:
+      en: "The stem *tanz-* ends in *-z*, so *du* adds only *-t*: *du tanzt*."
+      fa: "بن *tanz-* به *-z* ختم می‌شود، پس *du* فقط *-t* می‌گیرد: *du tanzt*."
+      de: "Der Stamm *tanz-* endet auf *-z*. Darum bekommt *du* nur *-t*: *du tanzt*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Du ___ (arbeiten) am Samstag.
+    answers: [arbeitest]
+    explanation:
+      en: "The stem *arbeit-* ends in *-t*, so *du* takes *-est*: *du arbeitest*."
+      fa: "بن *arbeit-* به *-t* ختم می‌شود، پس *du* شناسهٔ *-est* می‌گیرد: *du arbeitest*."
+      de: "Der Stamm *arbeit-* endet auf *-t*. Bei *du* heißt es: *du arbeitest*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Was ___ (kosten) das Buch?
+    answers: [kostet]
+    explanation:
+      en: "*Das Buch* is *es*, and the stem *kost-* ends in *-t*: *es kostet*."
+      fa: "*das Buch* سوم‌شخص مفرد است (*es*) و بن *kost-* به *-t* ختم می‌شود: *es kostet*."
+      de: "*Das Buch* ist *es*. Der Stamm *kost-* endet auf *-t*: *es kostet*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (finden) du den Schlüssel?
+    answers: [Findest]
+    explanation:
+      en: "The stem *find-* ends in *-d*, so *du* takes *-est*: *du findest*."
+      fa: "بن *find-* به *-d* ختم می‌شود، پس *du* شناسهٔ *-est* می‌گیرد: *du findest*."
+      de: "Der Stamm *find-* endet auf *-d*. Bei *du* heißt es: *du findest*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Du ___ (reisen) gern.
+    answers: [reist]
+    explanation:
+      en: "The stem *reis-* ends in *-s*, so *du* adds only *-t*: *du reist*."
+      fa: "بن *reis-* به *-s* ختم می‌شود، پس *du* فقط *-t* می‌گیرد: *du reist*."
+      de: "Der Stamm *reis-* endet auf *-s*. Darum bekommt *du* nur *-t*: *du reist*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Du ___ (sitzen) neben mir.
+    answers: [sitzt]
+    explanation:
+      en: "The stem *sitz-* ends in *-z*, so *du* adds only *-t*: *du sitzt*."
+      fa: "بن *sitz-* به *-z* ختم می‌شود، پس *du* فقط *-t* می‌گیرد: *du sitzt*."
+      de: "Der Stamm *sitz-* endet auf *-z*. Darum bekommt *du* nur *-t*: *du sitzt*."
+  - id: typed-gap-6
+    type: typed-gap-fill
+    prompt: Ich ___ (sammeln) alte Münzen.
+    answers: [sammle, sammele]
+    explanation:
+      en: "With *ich*, *sammeln* usually drops the *e* of its stem: *ich sammle*."
+      fa: "*sammeln* با *ich* معمولاً حرف *e* بن خود را از دست می‌دهد: *ich sammle*."
+      de: "Bei *ich* fällt bei *sammeln* meistens das *e* weg: *ich sammle*."
+  - id: typed-gap-7
+    type: typed-gap-fill
+    prompt: Wir ___ (sammeln) Briefmarken.
+    answers: [sammeln]
+    explanation:
+      en: "With *wir* the form is the infinitive, with *-n* only: *wir sammeln*."
+      fa: "صرف فعل با *wir* همان مصدر است و فقط *-n* دارد: *wir sammeln*."
+      de: "Bei *wir* ist die Form wie der Infinitiv, nur mit *-n*: *wir sammeln*."
+  - id: true-1
+    type: true-false
+    prompt: Er arbeitet in einer Bank.
+    answer: true
+    explanation:
+      en: "The stem *arbeit-* ends in *-t*, so *er* takes *-et*: *er arbeitet*. The sentence is correct."
+      fa: "بن *arbeit-* به *-t* ختم می‌شود، پس سوم‌شخص مفرد *-et* می‌گیرد: *er arbeitet*. جمله درست است."
+      de: "Der Stamm *arbeit-* endet auf *-t*: *er arbeitet*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Du heißst Anna.
+    answer: false
+    explanation:
+      en: "The stem *heiß-* ends in *-ß*, so *du* adds only *-t*: *Du heißt Anna*."
+      fa: "بن *heiß-* به *-ß* ختم می‌شود، پس *du* فقط *-t* می‌گیرد: *Du heißt Anna.*"
+      de: "Der Stamm *heiß-* endet auf *-ß*. Richtig ist: *Du heißt Anna.*"
+  - id: true-3
+    type: true-false
+    prompt: Ihr redet zu viel.
+    answer: true
+    explanation:
+      en: "The stem *red-* ends in *-d*, so *ihr* takes *-et*: *ihr redet*. The sentence is correct."
+      fa: "بن *red-* به *-d* ختم می‌شود، پس *ihr* شناسهٔ *-et* می‌گیرد: *ihr redet*. جمله درست است."
+      de: "Der Stamm *red-* endet auf *-d*: *ihr redet*. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Der Kurs kostt zehn Euro.
+    answer: kostt
+    explanation:
+      en: "The stem *kost-* ends in *-t*, so *er* takes *-et*: *Der Kurs kostet zehn Euro*."
+      fa: "بن *kost-* به *-t* ختم می‌شود، پس سوم‌شخص مفرد *-et* می‌گیرد: *Der Kurs kostet zehn Euro.*"
+      de: "Der Stamm *kost-* endet auf *-t*. Richtig ist: *Der Kurs kostet zehn Euro.*"
+  - id: error-2
+    type: find-error
+    prompt: Du sitzst am Fenster.
+    answer: sitzst
+    explanation:
+      en: "The stem *sitz-* ends in *-z*, so *du* adds only *-t*: *du sitzt*."
+      fa: "بن *sitz-* به *-z* ختم می‌شود، پس *du* فقط *-t* می‌گیرد: *du sitzt*."
+      de: "Der Stamm *sitz-* endet auf *-z*. Darum bekommt *du* nur *-t*: *du sitzt*."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, sammle]
+      - [du, sammelst]
+      - [wir, sammeln]
+      - [ihr, sammelt]
+    explanation:
+      en: "*Sammeln*: *ich sammle* without the *e*, *wir sammeln* with *-n* only; *du* and *ihr* take the usual endings."
+      fa: "*sammeln*: *ich sammle* بدون *e*، *wir sammeln* فقط با *-n*؛ *du* و *ihr* شناسه‌های معمول را می‌گیرند."
+      de: "*Sammeln*: *ich sammle* ohne *e*, *wir sammeln* nur mit *-n*. *Du* und *ihr* haben die normalen Endungen."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wo, arbeitest, du]
+    end: "?"
+    explanation:
+      en: "In a question with a question word, the verb comes second: *Wo arbeitest du?*"
+      fa: "در جملهٔ پرسشی با واژهٔ پرسشی، فعل در جایگاه دوم می‌آید: *Wo arbeitest du?*"
+      de: "In einer W-Frage steht das Verb an Position 2: *Wo arbeitest du?*"
+
+review:
+  reviewer: an independent AI agent (Claude, fresh blind subagent; not a person)
+  date: 2026-11-28
+  pool: e69881b3ce5bbd87
