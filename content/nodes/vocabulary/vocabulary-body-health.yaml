@@ -1,36 +1,340 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-body-health
 kind: vocabulary
 level: A1
 chapter: a1-words-daily-life
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Body and health"
   fa: "بدن و سلامت"
   de: "Körper und Gesundheit"
+attemptSize: 15
 words:
   - word: Kopf
+    class: noun
+    article: der
+    plural: Köpfe
+    level: A1
+    meaning:
+      en: head
+      fa: سر
+    definition: der oberste Teil vom Körper, mit den Augen, dem Mund und den Haaren
+    example:
+      de: Der Kopf tut mir weh.
+      en: My head hurts.
+      fa: سرم درد می‌کند.
+
   - word: Auge
+    class: noun
+    article: das
+    plural: Augen
+    level: A1
+    meaning:
+      en: eye
+      fa: چشم
+    definition: der Teil vom Kopf, mit dem man sieht
+    example:
+      de: Sie hat blaue Augen.
+      en: She has blue eyes.
+      fa: چشم‌هایش آبی است.
+
   - word: Mund
+    class: noun
+    article: der
+    plural: Münder
+    level: A1
+    meaning:
+      en: mouth
+      fa: دهان
+    definition: damit isst und spricht man
+    example:
+      de: Mach bitte den Mund auf.
+      en: Open your mouth, please.
+      fa: لطفاً دهانت را باز کن.
+
   - word: Haar
+    class: noun
+    article: das
+    plural: Haare
+    level: A1
+    meaning:
+      en: hair
+      fa: مو
+    definition: es wächst auf dem Kopf; man kann es schneiden und kämmen
+    example:
+      de: Er hat kurze, schwarze Haare.
+      en: He has short black hair.
+      fa: موهایش کوتاه و مشکی است.
+    alsoAccepted: [die Haare]
+
   - word: Hand
+    class: noun
+    article: die
+    plural: Hände
+    level: A1
+    meaning:
+      en: hand
+      fa: دست (از مچ تا سر انگشتان)
+    definition: der Teil am Ende vom Arm, mit fünf Fingern
+    example:
+      de: Wasch dir bitte die Hände.
+      en: Please wash your hands.
+      fa: لطفاً دست‌هایت را بشوی.
+
   - word: Arm
+    class: noun
+    article: der
+    plural: Arme
+    level: A1
+    meaning:
+      en: arm
+      fa: بازو (از شانه تا مچ)
+    definition: der Teil vom Körper zwischen der Schulter und der Hand
+    example:
+      de: Er hat sich den Arm gebrochen.
+      en: He has broken his arm.
+      fa: بازویش شکسته است.
+
+  # Persian says «پا» for both; the meanings say which part is meant.
   - word: Bein
+    class: noun
+    article: das
+    plural: Beine
+    level: A1
+    meaning:
+      en: leg
+      fa: پا (از ران تا مچ)
+    definition: damit geht und steht man; es ist zwischen dem Bauch und dem Fuß
+    example:
+      de: Nach dem Wandern tun mir die Beine weh.
+      en: My legs hurt after hiking.
+      fa: بعد از کوه‌پیمایی پاهایم درد می‌کند.
+
   - word: Fuß
+    class: noun
+    article: der
+    plural: Füße
+    level: A1
+    meaning:
+      en: foot
+      fa: پا (از مچ به پایین)، کف پا
+    definition: der unterste Teil vom Bein, auf dem man steht
+    example:
+      de: Mein Fuß ist kalt.
+      en: My foot is cold.
+      fa: پایم سرد است.
+
   - word: Bauch
+    class: noun
+    article: der
+    plural: Bäuche
+    level: A1
+    meaning:
+      en: belly, stomach
+      fa: شکم
+    definition: der vordere Teil vom Körper zwischen der Brust und den Beinen
+    example:
+      de: Mir tut der Bauch weh.
+      en: My stomach hurts.
+      fa: شکمم درد می‌کند.
+
   - word: krank
+    class: adjective
+    level: A1
+    meaning:
+      en: ill, sick
+      fa: بیمار، مریض
+    definition: nicht gesund
+    example:
+      de: Ich bin krank und bleibe heute zu Hause.
+      en: I'm ill and am staying at home today.
+      fa: بیمارم و امروز در خانه می‌مانم.
+
   - word: Fieber
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: fever, (high) temperature
+      fa: تب
+    definition: der Körper ist zu warm, weil man krank ist
+    example:
+      de: Das Kind hat hohes Fieber.
+      en: The child has a high temperature.
+      fa: بچه تب بالایی دارد.
+
   - word: wehtun
+    class: verb
+    level: A1
+    meaning:
+      en: to hurt, to ache
+      fa: درد کردن
+    definition: Schmerzen machen
+    example:
+      de: Wo tut es weh?
+      en: Where does it hurt?
+      fa: کجایت درد می‌کند؟
+    alsoAccepted: [weh tun, schmerzen]
+
   - word: müde
+    class: adjective
+    level: A1
+    meaning:
+      en: tired
+      fa: خسته
+    definition: so, dass man schlafen möchte
+    example:
+      de: Nach der Arbeit bin ich immer sehr müde.
+      en: I'm always very tired after work.
+      fa: بعد از کار همیشه خیلی خسته‌ام.
+
+  # "Arzt" is the doctor; "Doktor" is the title, and what people often call the doctor.
+  # Neither is offered as a wrong meaning of the other.
   - word: Arzt
+    class: noun
+    article: der
+    plural: Ärzte
+    level: A1
+    meaning:
+      en: doctor, physician
+      fa: پزشک
+    definition: eine Person, die Medizin studiert hat und kranken Menschen hilft
+    example:
+      de: Du hast Fieber, geh bitte zum Arzt.
+      en: You have a temperature; please go to the doctor.
+      fa: تب داری، لطفاً پیش پزشک برو.
+    alsoAccepted: [die Ärztin, der Doktor, die Doktorin, der Hausarzt, die Hausärztin, der Mediziner, die Medizinerin]
+    tooCloseTo: [Doktor]
+
   - word: Doktor
+    class: noun
+    article: der
+    plural: Doktoren
+    level: A1
+    meaning:
+      en: Doctor (the title, also a word for the doctor)
+      fa: دکتر (عنوان)
+    definition: ein Titel nach einer langen Arbeit an der Universität; so sagt man auch oft zum Arzt
+    example:
+      de: Herr Doktor, ich habe Kopfschmerzen.
+      en: Doctor, I have a headache.
+      fa: آقای دکتر، سرم درد می‌کند.
+    alsoAccepted: [die Doktorin, der Arzt, die Ärztin]
+    tooCloseTo: [Arzt]
+
+  # In Austria the doctor's practice is "die Ordination".
   - word: Praxis
+    class: noun
+    article: die
+    plural: Praxen
+    level: A1
+    meaning:
+      en: (doctor's) practice, surgery
+      fa: مطب
+    definition: die Räume, in denen ein Arzt arbeitet und Kranke empfängt
+    example:
+      de: Die Praxis ist am Mittwochnachmittag geschlossen.
+      en: The practice is closed on Wednesday afternoon.
+      fa: مطب چهارشنبه بعدازظهر تعطیل است.
+    alsoAccepted: [die Arztpraxis, die Ordination]
+
   - word: rauchen
+    class: verb
+    level: A1
+    meaning:
+      en: to smoke
+      fa: سیگار کشیدن
+    definition: eine Zigarette anzünden und den Rauch einatmen
+    example:
+      de: Hier darf man nicht rauchen.
+      en: You aren't allowed to smoke here.
+      fa: اینجا سیگار کشیدن ممنوع است.
+
   - word: Zigarette
+    class: noun
+    article: die
+    plural: Zigaretten
+    level: A1
+    meaning:
+      en: cigarette
+      fa: سیگار
+    definition: ein kleines, dünnes Ding aus Papier und Tabak zum Rauchen
+    example:
+      de: Er raucht zehn Zigaretten am Tag.
+      en: He smokes ten cigarettes a day.
+      fa: او روزی ده نخ سیگار می‌کشد.
+    alsoAccepted: [die Kippe]
+
   - word: schlafen
+    class: verb
+    level: A1
+    meaning:
+      en: to sleep
+      fa: خوابیدن
+    definition: mit geschlossenen Augen im Bett liegen und sich in der Nacht ausruhen
+    example:
+      de: Ich schlafe jede Nacht acht Stunden.
+      en: I sleep eight hours every night.
+      fa: هر شب هشت ساعت می‌خوابم.
+
   - word: aufstehen
+    class: verb
+    level: A1
+    meaning:
+      en: to get up
+      fa: از جا بلند شدن، از خواب برخاستن
+    definition: am Morgen aus dem Bett kommen, oder vom Stuhl hochkommen
+    example:
+      de: Ich stehe jeden Tag um sechs Uhr auf.
+      en: I get up at six o'clock every day.
+      fa: هر روز ساعت شش از خواب بلند می‌شوم.
+
+  # The scope list gives "(sich)": "sich waschen" is to wash oneself.
   - word: waschen
+    class: verb
+    level: A1
+    meaning:
+      en: to wash
+      fa: شستن
+    definition: mit Wasser und Seife sauber machen
+    example:
+      de: Am Samstag wasche ich mein Auto.
+      en: On Saturday I wash my car.
+      fa: شنبه ماشینم را می‌شویم.
+    alsoAccepted: [sich waschen]
+
   - word: baden
+    class: verb
+    level: A1
+    meaning:
+      en: to have a bath, to bathe
+      fa: در وان حمام کردن، آب‌تنی کردن
+    definition: in einer Wanne voll Wasser sitzen und sich sauber machen, oder im See schwimmen
+    example:
+      de: Die Kinder baden gern am Abend.
+      en: The children like having a bath in the evening.
+      fa: بچه‌ها دوست دارند شب‌ها در وان حمام کنند.
+    alsoAccepted: [sich baden]
+
+  # The scope list gives "(sich)": "sich duschen" is said too.
   - word: duschen
+    class: verb
+    level: A1
+    meaning:
+      en: to shower, to have a shower
+      fa: دوش گرفتن
+    definition: sich waschen, während Wasser von oben auf einen fällt
+    example:
+      de: Nach dem Sport dusche ich immer.
+      en: I always shower after sport.
+      fa: بعد از ورزش همیشه دوش می‌گیرم.
+    alsoAccepted: [sich duschen]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 138, then 16 questions)
+  date: 2026-11-28
+  pool: 7f847d0f5a5e1c34

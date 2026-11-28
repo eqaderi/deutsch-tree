@@ -4,10 +4,262 @@ kind: grammar
 level: A1
 chapter: a1-modal-verbs
 order: 8
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-034]
 title:
   en: "*würde gern* + *Infinitiv*"
   fa: "*würde gern* + مصدر"
   de: "*würde gern* + Infinitiv"
+
+explanations:
+  en:
+    rule: >
+      *Würde gern* + infinitive says what you would like to do: a wish, often
+      for something that is not happening now. *Ich würde gern ins Kino
+      gehen.* Learn it as a fixed chunk. *Würde* is conjugated and stands in
+      position 2, *gern* follows straight after it (in a question, after the
+      subject), and the infinitive goes to the end, as with a modal verb.
+      *Ich* and *er* / *sie* / *es* have the same form, *würde*. *Was würdest
+      du gern machen?* asks someone about their wishes.
+  fa:
+    rule: >
+      *würde gern* همراه با مصدر آرزو یا خواسته‌ای را بیان می‌کند، اغلب برای
+      کاری که الان انجام نمی‌شود: *Ich würde gern ins Kino gehen.* آن را
+      همچون یک عبارت ثابت یاد بگیرید. *würde*
+      صرف می‌شود و در جایگاه دوم می‌آید، *gern* بلافاصله پس از آن می‌آید (در
+      پرسش پس از فاعل) و مصدر مانند جملهٔ فعل وجهی به پایان جمله می‌رود.
+      *ich* و *er* / *sie* / *es* صورت یکسان *würde* را دارند. با *Was würdest
+      du gern machen?* از کسی دربارهٔ آرزوهایش می‌پرسیم.
+  de:
+    rule: >
+      Mit *würde gern* + Infinitiv sagt man einen Wunsch, oft für etwas, das
+      jetzt nicht passiert: *Ich würde gern ins Kino gehen.* Lernen Sie es als
+      feste Form. *Würde* ist konjugiert und steht auf Position 2. *Gern*
+      steht direkt danach (in der Frage nach dem Subjekt). Der Infinitiv steht
+      am Ende, wie beim Modalverb. *Ich* und *er* / *sie* / *es* haben die
+      gleiche Form *würde*. Mit *Was würdest du gern machen?* fragt man nach
+      Wünschen.
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*würde gern*", fa: "*würde gern*", de: "*würde gern*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, würde gern, Ich würde gern ins Kino gehen.]
+    - [du, würdest gern, Was würdest du gern machen?]
+    - [er / sie / es, würde gern, Er würde gern Gitarre spielen.]
+    - [wir, würden gern, Wir würden gern ans Meer fahren.]
+    - [ihr, würdet gern, Würdet ihr gern mitkommen?]
+    - [sie / Sie, würden gern, Würden Sie gern etwas trinken?]
+
+examples:
+  - de: Ich würde gern ins Kino gehen.
+    en: I would like to go to the cinema.
+    fa: دلم می‌خواهد به سینما بروم.
+  - de: Was würdest du gern machen?
+    en: What would you like to do?
+    fa: دلت می‌خواهد چه کار کنی؟
+  - de: Wir würden gern ans Meer fahren.
+    en: We would like to go to the seaside.
+    fa: دلمان می‌خواهد به کنار دریا برویم.
+  - de: Mein Sohn würde gern Gitarre spielen.
+    en: My son would like to play the guitar.
+    fa: پسرم دلش می‌خواهد گیتار بزند.
+  - de: Würden Sie gern etwas trinken?
+    en: Would you like something to drink?
+    fa: چیزی برای نوشیدن میل دارید؟
+  - de: Ich würde gern in Wien wohnen.
+    en: I would like to live in Vienna.
+    fa: دلم می‌خواهد در وین زندگی کنم.
+  - de: Am Wochenende würde ich gern lange schlafen.
+    en: At the weekend I would like to sleep in.
+    fa: آخر هفته دلم می‌خواهد تا دیروقت بخوابم.
+
+mistakes:
+  - wrong: Ich würde gern gehe ins Kino.
+    right: Ich würde gern ins Kino gehen.
+    why:
+      en: Only *würde* is conjugated. The second verb is an infinitive at the end.
+      fa: فقط *würde* صرف می‌شود؛ فعل دوم به شکل مصدر در پایان جمله می‌آید.
+      de: Nur *würde* ist konjugiert. Das zweite Verb steht im Infinitiv am Ende.
+  - wrong: Ich gern würde Tennis spielen.
+    right: Ich würde gern Tennis spielen.
+    why:
+      en: "*Würde* stands in position 2, and *gern* comes after it."
+      fa: "*würde* در جایگاه دوم می‌آید و *gern* پس از آن."
+      de: "*Würde* steht auf Position 2, *gern* kommt danach."
+  - wrong: Er würdet gern reisen.
+    right: Er würde gern reisen.
+    why:
+      en: With *er*, *sie* and *es* the form is *würde*, the same as with *ich*.
+      fa: با *er*، *sie* و *es* صورت فعل *würde* است، همانند *ich*.
+      de: Bei *er*, *sie* und *es* heißt es *würde*, wie bei *ich*.
+  - wrong: Würdest du gern mitkommst?
+    right: Würdest du gern mitkommen?
+    why:
+      en: The second verb stays an infinitive, also in a question.
+      fa: فعل دوم در پرسش هم به شکل مصدر می‌ماند.
+      de: Das zweite Verb bleibt im Infinitiv, auch in der Frage.
+
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Ich ___ gern ins Kino gehen.
+    options: [würde, würdest, würden]
+    answer: würde
+    explanation:
+      en: With *ich* the form is *würde*.
+      fa: با *ich* صورت فعل *würde* است.
+      de: Bei *ich* heißt es *würde*.
+  - id: q2
+    type: multiple-choice
+    prompt: Was ___ du gern machen?
+    options: [würde, würdest, würdet]
+    answer: würdest
+    explanation:
+      en: With *du* the form is *würdest*.
+      fa: با *du* صورت فعل *würdest* است.
+      de: Bei *du* heißt es *würdest*.
+  - id: q3
+    type: gap-fill
+    prompt: Wir ___ gern ans Meer fahren.
+    options: [würde, würdet, würden]
+    answer: würden
+    explanation:
+      en: With *wir* the form is *würden*.
+      fa: با *wir* صورت فعل *würden* است.
+      de: Bei *wir* heißt es *würden*.
+  - id: q4
+    type: gap-fill
+    prompt: ___ ihr gern mitkommen?
+    options: [Würdet, Würdest, Würden]
+    answer: Würdet
+    explanation:
+      en: With *ihr* the form is *würdet*.
+      fa: با *ihr* صورت فعل *würdet* است.
+      de: Bei *ihr* heißt es *würdet*.
+  - id: q5
+    type: gap-fill
+    prompt: Meine Mutter ___ gern Spanisch lernen.
+    options: [würde, würdet, würdest]
+    answer: würde
+    explanation:
+      en: "*Meine Mutter* is *sie* (singular): *würde*, the same as with *ich*."
+      fa: "*meine Mutter* سوم‌شخص مفرد است (*sie*): *würde*، همانند *ich*."
+      de: "*Meine Mutter* ist *sie* (Singular): *würde*, wie bei *ich*."
+  - id: q6
+    type: multiple-choice
+    prompt: "ich / würde / gern / in Wien / wohnen"
+    options: [Ich würde gern in Wien wohnen., Ich würde gern wohnen in Wien., Ich gern würde in Wien wohnen.]
+    answer: Ich würde gern in Wien wohnen.
+    explanation:
+      en: "*Würde* is in position 2, *gern* right after it, the infinitive at the end."
+      fa: "*würde* در جایگاه دوم است، *gern* بلافاصله پس از آن و مصدر در پایان جمله."
+      de: "*Würde* steht auf Position 2, *gern* direkt danach, der Infinitiv am Ende."
+  - id: q7
+    type: multiple-choice
+    prompt: "am Wochenende / ich / würde / gern / lange / schlafen"
+    options:
+      [
+        Am Wochenende würde ich gern lange schlafen.,
+        Am Wochenende ich würde gern lange schlafen.,
+        Am Wochenende würde ich gern schlafen lange.,
+      ]
+    answer: Am Wochenende würde ich gern lange schlafen.
+    explanation:
+      en: "*Am Wochenende* is position 1, so *würde* comes second and *ich* after it; *schlafen* closes the sentence."
+      fa: "*am Wochenende* جایگاه اول است، پس *würde* در جایگاه دوم و *ich* پس از آن می‌آید؛ *schlafen* جمله را به پایان می‌برد."
+      de: "*Am Wochenende* ist Position 1. *Würde* steht auf Position 2, dann *ich*. *Schlafen* steht am Ende."
+  - id: q8
+    type: true-false
+    prompt: Würden Sie gern etwas trinken?
+    answer: true
+    explanation:
+      en: "*Würden* first, *gern* after the subject, the infinitive at the end. The sentence is correct."
+      fa: "*würden* در آغاز، *gern* پس از فاعل و مصدر در پایان است. جمله درست است."
+      de: "*Würden* am Anfang, *gern* nach dem Subjekt, der Infinitiv am Ende. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Ich würde gern fahre nach Italien.
+    answer: false
+    explanation:
+      en: "The second verb is an infinitive at the end: *Ich würde gern nach Italien fahren.*"
+      fa: "فعل دوم به شکل مصدر در پایان جمله می‌آید: *Ich würde gern nach Italien fahren.*"
+      de: "Das zweite Verb steht im Infinitiv am Ende: *Ich würde gern nach Italien fahren.*"
+  - id: q10
+    type: true-false
+    prompt: Tom würdet gern Koch werden.
+    answer: false
+    explanation:
+      en: "With *er* (Tom) the form is *würde*: *Tom würde gern Koch werden.*"
+      fa: "با *er* (تام) صورت فعل *würde* است: *Tom würde gern Koch werden.*"
+      de: "Bei *er* (Tom) heißt es *würde*: *Tom würde gern Koch werden.*"
+  - id: q11
+    type: find-error
+    prompt: Ihr würden gern in Berlin wohnen.
+    answer: würden
+    explanation:
+      en: "With *ihr* the form is *würdet*: *Ihr würdet gern in Berlin wohnen.*"
+      fa: "با *ihr* صورت فعل *würdet* است: *Ihr würdet gern in Berlin wohnen.*"
+      de: "Bei *ihr* heißt es *würdet*: *Ihr würdet gern in Berlin wohnen.*"
+  - id: q12
+    type: find-error
+    prompt: Mein Bruder würde gern ein Auto kauft.
+    answer: kauft
+    explanation:
+      en: "The second verb is an infinitive: *Mein Bruder würde gern ein Auto kaufen.*"
+      fa: "فعل دوم مصدر است: *Mein Bruder würde gern ein Auto kaufen.*"
+      de: "Das zweite Verb steht im Infinitiv: *Mein Bruder würde gern ein Auto kaufen.*"
+  - id: q13
+    type: word-order
+    answers:
+      - [wohin, würdest, du, gern, reisen]
+    end: "?"
+    explanation:
+      en: "Question word, *würdest*, the subject, *gern*, and the infinitive at the end."
+      fa: "واژهٔ پرسشی، *würdest*، فاعل، *gern* و در پایان مصدر."
+      de: "Fragewort, *würdest*, Subjekt, *gern*, am Ende der Infinitiv."
+  - id: q14
+    type: word-order
+    answers:
+      - [würdest, du, gern, mitkommen]
+    end: "?"
+    explanation:
+      en: "In a yes/no question *würdest* comes first, *gern* after the subject, and the infinitive at the end."
+      fa: "در پرسش بله یا نه *würdest* در آغاز می‌آید، *gern* پس از فاعل و مصدر در پایان جمله."
+      de: "In der Ja/Nein-Frage steht *würdest* am Anfang, *gern* nach dem Subjekt, der Infinitiv am Ende."
+  - id: q15
+    type: typed-gap-fill
+    prompt: Herr Becker, ___ (würde) Sie gern einen Tee trinken?
+    answers: [würden]
+    explanation:
+      en: With the polite *Sie* the form is *würden*.
+      fa: با *Sie* رسمی صورت فعل *würden* است.
+      de: Bei *Sie* (höflich) heißt es *würden*.
+  - id: q16
+    type: typed-gap-fill
+    prompt: Du ___ (würde) gern einen Hund haben, oder?
+    answers: [würdest]
+    explanation:
+      en: With *du* the form is *würdest*.
+      fa: با *du* صورت فعل *würdest* است.
+      de: Bei *du* heißt es *würdest*.
+  - id: q17
+    type: matching
+    answer:
+      - [ich, würde]
+      - [du, würdest]
+      - [wir, würden]
+      - [ihr, würdet]
+    explanation:
+      en: "The forms of *würde*: *ich würde*, *du würdest*, *wir würden*, *ihr würdet*."
+      fa: "صورت‌های *würde*: *ich würde*، *du würdest*، *wir würden*، *ihr würdet*."
+      de: "Die Formen von *würde*: *ich würde*, *du würdest*, *wir würden*, *ihr würdet*."
+
+review:
+  reviewer: two independent AI agents (Claude Opus 5.5 subagents, blind passes on
+    the review sheet only; the second on q13; not people)
+  date: 2026-11-28
+  pool: 314ae5022b115902

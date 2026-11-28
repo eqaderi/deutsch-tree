@@ -4,10 +4,275 @@ kind: grammar
 level: A1
 chapter: a1-verb-patterns
 order: 8
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-140, grammar-193]
 title:
   en: "*Präsens* with future meaning"
   fa: "زمان حال با معنای آینده"
   de: "Präsens für die Zukunft"
+
+explanations:
+  en:
+    rule: >
+      German usually talks about the future in the present tense (*Präsens*).
+      A time expression such as *morgen*, *heute Abend*, *am Montag*,
+      *nächste Woche* or *bald* shows that the action is still to come:
+      *Morgen fahre ich nach Stuttgart.* The verb takes its normal present
+      form. When the time expression stands in position 1, the verb stays in
+      position 2 and the subject follows it. Without such a word or a context,
+      the present usually means now.
+  fa:
+    rule: >
+      آلمانی برای آینده معمولاً زمان حال (*Präsens*) را به کار می‌برد، همان‌طور
+      که فارسی می‌گوید «فردا به اشتوتگارت می‌روم». قیدی مانند *morgen*، *heute
+      Abend*، *am Montag*، *nächste Woche* یا *bald* نشان می‌دهد که کار هنوز
+      انجام نشده است: *Morgen fahre ich nach Stuttgart.* فعل همان صرف معمول زمان
+      حال را دارد. اگر قید زمان در جایگاه اول بیاید، فعل در جایگاه دوم می‌ماند
+      و فاعل پس از آن می‌آید. بدون چنین قیدی یا قرینه‌ای، زمان حال معمولاً به
+      معنای همین حالاست.
+  de:
+    rule: >
+      Im Deutschen spricht man über die Zukunft meistens im Präsens. Eine
+      Zeitangabe wie *morgen*, *heute Abend*, *am Montag*, *nächste Woche*
+      oder *bald* zeigt: Das passiert noch. *Morgen fahre ich nach
+      Stuttgart.* Das Verb hat die normale Präsens-Form. Steht die Zeitangabe
+      auf Position 1, bleibt das Verb auf Position 2, und das Subjekt kommt
+      danach.
+
+table:
+  columns:
+    - { en: Time expression, fa: قید زمان, de: Zeitangabe }
+    - { en: "Sentence in *Präsens*", fa: "جمله در زمان حال", de: Satz im Präsens }
+  rows:
+    - [morgen, Morgen fahre ich nach Stuttgart.]
+    - [heute Abend, Heute Abend kochen wir Pasta.]
+    - [am Montag, Am Montag beginnt der Kurs.]
+    - [nächste Woche, Nächste Woche besuche ich meine Eltern.]
+    - [im Sommer, Im Sommer fliegen wir nach Spanien.]
+    - [bald, Wir sind bald zu Hause.]
+    - [später, Ich rufe dich später an.]
+
+examples:
+  - de: Morgen fahre ich nach Stuttgart.
+    en: Tomorrow I'm going to Stuttgart.
+    fa: فردا به اشتوتگارت می‌روم.
+  - de: Heute Abend kochen wir Pasta.
+    en: Tonight we're cooking pasta.
+    fa: امشب ماکارونی می‌پزیم.
+  - de: Am Montag beginnt der Kurs.
+    en: The course starts on Monday.
+    fa: کلاس دوشنبه شروع می‌شود.
+  - de: Nächste Woche besuche ich meine Eltern.
+    en: Next week I'm visiting my parents.
+    fa: هفتهٔ آینده به دیدن پدر و مادرم می‌روم.
+  - de: Im Sommer fliegen wir nach Spanien.
+    en: In the summer we're flying to Spain.
+    fa: تابستان با هواپیما به اسپانیا می‌رویم.
+  - de: Wir sind bald zu Hause.
+    en: We'll be home soon.
+    fa: به‌زودی خانه‌ایم.
+  - de: Ich rufe dich später an.
+    en: I'll call you later.
+    fa: بعداً به تو زنگ می‌زنم.
+  - de: Was machst du am Wochenende?
+    en: What are you doing at the weekend?
+    fa: آخر هفته چه کار می‌کنی؟
+
+mistakes:
+  - wrong: Morgen ich fahre nach Stuttgart.
+    right: Morgen fahre ich nach Stuttgart.
+    why:
+      en: "*Morgen* is position 1, so the verb comes second and *ich* after it."
+      fa: "*morgen* جایگاه اول است، پس فعل در جایگاه دوم می‌آید و *ich* پس از آن."
+      de: "*Morgen* ist Position 1. Das Verb kommt auf Position 2, *ich* danach."
+  - wrong: Ich fahre gestern nach Berlin.
+    right: Ich fahre morgen nach Berlin.
+    why:
+      en: "The present can mean the future, never the past: *gestern* needs a past tense."
+      fa: "زمان حال می‌تواند معنای آینده داشته باشد، اما هرگز معنای گذشته ندارد: *gestern* زمان گذشته می‌خواهد."
+      de: "Das Präsens kann Zukunft bedeuten, aber nicht Vergangenheit. Mit *gestern* braucht man eine andere Zeit."
+  - wrong: Nächste Woche ich habe Urlaub.
+    right: Nächste Woche habe ich Urlaub.
+    why:
+      en: "*Nächste Woche* fills position 1 together; the verb comes right after it."
+      fa: "*nächste Woche* با هم جایگاه اول را پر می‌کنند و فعل بلافاصله پس از آن می‌آید."
+      de: "*Nächste Woche* ist zusammen Position 1. Das Verb kommt direkt danach."
+
+# 20 questions.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ fahre ich nach Hamburg. Heute habe ich keine Zeit.
+    options: [Morgen, Gestern, Jetzt]
+    answer: Morgen
+    explanation:
+      en: "Today there is no time, so the trip is in the future: *morgen*, with the verb in the present."
+      fa: "امروز وقتی نیست، پس سفر در آینده است: *morgen*، با فعل در زمان حال."
+      de: "Heute hat die Person keine Zeit. Die Reise ist also in der Zukunft: *morgen*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Nächste Woche ___ ich meine Eltern.
+    options: [besuche, besucht, besuchen]
+    answer: besuche
+    explanation:
+      en: "The present for the future: *ich besuche*, with the ending *-e*."
+      fa: "زمان حال برای آینده: *ich besuche*، با شناسهٔ *-e*."
+      de: "Präsens für die Zukunft: *ich besuche*, mit der Endung *-e*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Morgen ___ ich nach Stuttgart.
+    options: [fahre, fährt, fahren]
+    answer: fahre
+    explanation:
+      en: "With *ich* the verb is *fahre*; *morgen* makes it the future."
+      fa: "با *ich* فعل *fahre* است و *morgen* معنای آینده را می‌دهد."
+      de: "Bei *ich* heißt es *fahre*. *Morgen* zeigt die Zukunft."
+  - id: gap-4
+    type: gap-fill
+    prompt: Am Montag ___ der Kurs.
+    options: [beginnt, beginnen, beginne]
+    answer: beginnt
+    explanation:
+      en: "*Der Kurs* is *er*, so *beginnt*, in position 2 after *am Montag*."
+      fa: "*der Kurs* سوم‌شخص مفرد است (*er*)، پس *beginnt*، در جایگاه دوم پس از *am Montag*."
+      de: "*Der Kurs* ist *er*: *beginnt*, auf Position 2 nach *am Montag*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz spricht über die Zukunft?
+    options: [Am Freitag besuche ich Oma., Gestern war ich bei Oma., Ich bin jetzt bei Oma.]
+    answer: Am Freitag besuche ich Oma.
+    explanation:
+      en: "*Am Freitag* with a present-tense verb points to a day still to come."
+      fa: "*am Freitag* همراه با فعل زمان حال به روزی اشاره می‌کند که هنوز نیامده است."
+      de: "*Am Freitag* mit einem Verb im Präsens zeigt einen Tag in der Zukunft."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Ich rufe dich später an. Das heißt:"
+    options: [Ich telefoniere bald mit dir., Ich telefoniere jetzt mit dir., Ich habe schon mit dir telefoniert.]
+    answer: Ich telefoniere bald mit dir.
+    explanation:
+      en: "*Später* means the call is still to come, so it is in the future."
+      fa: "*später* یعنی تماس هنوز انجام نشده است، پس دربارهٔ آینده است."
+      de: "*Später* heißt: Der Anruf kommt noch, also in der Zukunft."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "morgen / ich / arbeiten / zu Hause"
+    options: [Morgen arbeite ich zu Hause., Morgen ich arbeite zu Hause., Morgen arbeiten ich zu Hause.]
+    answer: Morgen arbeite ich zu Hause.
+    explanation:
+      en: "*Morgen* in position 1, the verb *arbeite* second, then *ich*."
+      fa: "*morgen* در جایگاه اول، فعل *arbeite* در جایگاه دوم و سپس *ich*."
+      de: "*Morgen* auf Position 1, das Verb *arbeite* auf Position 2, dann *ich*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Morgen ___ (arbeiten) ich nicht.
+    answers: [arbeite]
+    explanation:
+      en: "With *ich* the verb is *arbeite*, in the present with future meaning."
+      fa: "با *ich* فعل *arbeite* است، در زمان حال با معنای آینده."
+      de: "Bei *ich* heißt es *arbeite*, im Präsens mit Bedeutung Zukunft."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Nächste Woche ___ (haben) wir Urlaub.
+    answers: [haben]
+    explanation:
+      en: "With *wir* the verb is *haben*; *nächste Woche* makes it the future."
+      fa: "با *wir* فعل *haben* است و *nächste Woche* معنای آینده را می‌دهد."
+      de: "Bei *wir* heißt es *haben*. *Nächste Woche* zeigt die Zukunft."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Im Sommer ___ (fliegen) meine Eltern nach Spanien.
+    answers: [fliegen]
+    explanation:
+      en: "*Meine Eltern* is *sie* (plural), so the ending is *-en*: *sie fliegen*."
+      fa: "*meine Eltern* سوم‌شخص جمع است (*sie*)، پس شناسهٔ فعل *-en* است: *sie fliegen*."
+      de: "*Meine Eltern* sind *sie* (Plural). Die Endung ist *-en*: *sie fliegen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Heute Abend ___ (sehen) Lisa einen Film.
+    answers: [sieht]
+    explanation:
+      en: "Lisa is *sie* (singular), and *sehen* changes *e* to *ie*: *sie sieht*."
+      fa: "لیزا سوم‌شخص مفرد است (*sie*) و واکهٔ *sehen* از *e* به *ie* تغییر می‌کند: *sie sieht*."
+      de: "Lisa ist *sie* (Singular). Bei *sehen* wird *e* zu *ie*: *sie sieht*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Bald ___ (sein) wir zu Hause.
+    answers: [sind]
+    explanation:
+      en: "With *wir* the form of *sein* is *sind*; *bald* makes it the future."
+      fa: "با *wir* شکل *sein* می‌شود *sind* و *bald* معنای آینده را می‌دهد."
+      de: "Bei *wir* heißt *sein* *sind*. *Bald* zeigt die Zukunft."
+  - id: true-1
+    type: true-false
+    prompt: Nächste Woche habe ich Urlaub.
+    answer: true
+    explanation:
+      en: "Present tense with future meaning, verb in position 2. The sentence is correct."
+      fa: "زمان حال با معنای آینده و فعل در جایگاه دوم. جمله درست است."
+      de: "Präsens für die Zukunft, das Verb auf Position 2. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Morgen ich fahre nach Berlin.
+    answer: false
+    explanation:
+      en: "After *morgen* in position 1 comes the verb: *Morgen fahre ich nach Berlin.*"
+      fa: "پس از *morgen* در جایگاه اول، فعل می‌آید: *Morgen fahre ich nach Berlin.*"
+      de: "Nach *morgen* auf Position 1 kommt das Verb: *Morgen fahre ich nach Berlin.*"
+  - id: true-3
+    type: true-false
+    prompt: Morgen gehe ich ins Kino.
+    answer: true
+    explanation:
+      en: "*Morgen* with the present tense means the future. The sentence is correct."
+      fa: "*morgen* همراه با زمان حال معنای آینده دارد. جمله درست است."
+      de: "*Morgen* mit Präsens bedeutet Zukunft. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich fahre gestern nach Berlin.
+    answer: false
+    explanation:
+      en: "The present can mean the future, but not the past: *gestern* does not fit."
+      fa: "زمان حال می‌تواند معنای آینده داشته باشد، اما نه گذشته: *gestern* با آن جور نیست."
+      de: "Das Präsens kann Zukunft bedeuten, aber nicht Vergangenheit: *gestern* passt nicht."
+  - id: error-1
+    type: find-error
+    prompt: Am Wochenende besuchst ich meine Freunde.
+    answer: besuchst
+    explanation:
+      en: "With *ich* the ending is *-e*: *Am Wochenende besuche ich meine Freunde.*"
+      fa: "با *ich* شناسهٔ فعل *-e* است: *Am Wochenende besuche ich meine Freunde.*"
+      de: "Bei *ich* ist die Endung *-e*: *Am Wochenende besuche ich meine Freunde.*"
+  - id: error-2
+    type: find-error
+    prompt: Heute Abend kocht wir Pasta.
+    answer: kocht
+    explanation:
+      en: "With *wir* the ending is *-en*: *Heute Abend kochen wir Pasta.*"
+      fa: "با *wir* شناسهٔ فعل *-en* است: *Heute Abend kochen wir Pasta.*"
+      de: "Bei *wir* ist die Endung *-en*: *Heute Abend kochen wir Pasta.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [morgen, fahre, ich, nach Stuttgart]
+      - [ich, fahre, morgen, nach Stuttgart]
+      - [nach Stuttgart, fahre, ich, morgen]
+    explanation:
+      en: "The verb *fahre* stays in position 2; *morgen* can open the sentence, and then *ich* follows the verb."
+      fa: "فعل *fahre* در جایگاه دوم می‌ماند؛ *morgen* می‌تواند جمله را آغاز کند و آن‌گاه *ich* پس از فعل می‌آید."
+      de: "Das Verb *fahre* bleibt auf Position 2. *Morgen* kann am Anfang stehen, dann kommt *ich* nach dem Verb."
+  - id: order-2
+    type: word-order
+    answers:
+      - [am Montag, beginnt, der Kurs]
+      - [der Kurs, beginnt, am Montag]
+    explanation:
+      en: "*Beginnt* is in position 2, with *am Montag* or *der Kurs* in position 1."
+      fa: "*beginnt* در جایگاه دوم است و *am Montag* یا *der Kurs* در جایگاه اول."
+      de: "*Beginnt* steht auf Position 2, *am Montag* oder *der Kurs* auf Position 1."
+
+review:
+  reviewer: an independent AI agent (Claude, fresh blind subagent; not a person)
+  date: 2026-11-28
+  pool: 5a4cb45a58a2b0ab

@@ -6,9 +6,11 @@
  * with the audio files that its published nodes say (and no other).
  * Dev: the bundle is compiled on the first request for it, served from memory,
  * and compiled again on the first request after a content file changed; audio
- * is served from the content folder.
+ * is served from the content folder. The watcher may report one change more
+ * than once (on a loaded machine it does); a report of a file that has not
+ * changed since its last report compiles and reloads nothing.
  */
-import { readFile } from 'node:fs/promises'
+import { readFile, stat } from 'node:fs/promises'
 import path from 'node:path'
 import type { Plugin } from 'vite'
 import { spokenInBundle } from '../audio/index.ts'
@@ -50,7 +52,12 @@ export function contentPipeline(contentDir: string): Plugin {
       const root = path.resolve(contentDir)
       // The files of the last compile, kept until a content file changes. A failed compile is not kept.
       let compiled: Promise<Map<string, string>> | undefined
-      const files = () => {
+      // Each reported file as it was at its last report, and the reports still being looked at:
+      // a request waits for them, so it never gets files that a reported change has made old.
+      const reported = new Map<string, string>()
+      let reports = Promise.resolve()
+      const files = async () => {
+        await reports
         compiled ??= compile().catch((error: unknown) => {
           compiled = undefined
           throw error
@@ -60,8 +67,13 @@ export function contentPipeline(contentDir: string): Plugin {
       server.watcher.add(root)
       server.watcher.on('all', (_event, file) => {
         if (!file.startsWith(root + path.sep)) return
-        compiled = undefined
-        server.ws.send({ type: 'full-reload' })
+        reports = reports.then(async () => {
+          const now = await fileState(file)
+          if (reported.get(file) === now) return
+          reported.set(file, now)
+          compiled = undefined
+          server.ws.send({ type: 'full-reload' })
+        })
       })
 
       server.middlewares.use(async (request, response, next) => {
@@ -90,4 +102,10 @@ export function contentPipeline(contentDir: string): Plugin {
       })
     },
   }
+}
+
+/** What a file is on disk now, as far as a change to it would show; a missing file is "missing". */
+async function fileState(file: string): Promise<string> {
+  const info = await stat(file).catch(() => undefined)
+  return info ? [info.ino, info.size, info.mtimeMs, info.ctimeMs].join(':') : 'missing'
 }

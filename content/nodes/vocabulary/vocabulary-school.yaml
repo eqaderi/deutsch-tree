@@ -1,39 +1,399 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-school
 kind: vocabulary
 level: A1
 chapter: a1-words-daily-life
 order: 1
-status: coming-soon
+status: published
 title:
   en: "School and the German course"
   fa: "مدرسه و کلاس آلمانی"
   de: "Schule und Deutschkurs"
+attemptSize: 15
 words:
   - word: Schule
+    class: noun
+    article: die
+    plural: Schulen
+    level: A1
+    meaning:
+      en: school
+      fa: مدرسه
+    definition: dort lernen Kinder lesen, schreiben und rechnen
+    example:
+      de: Die Schule beginnt um acht Uhr.
+      en: School starts at eight o'clock.
+      fa: مدرسه ساعت هشت شروع می‌شود.
+    alsoAccepted: [die Grundschule]
+
   - word: Schüler
+    class: noun
+    article: der
+    plural: Schüler
+    level: A1
+    meaning:
+      en: pupil, schoolchild
+      fa: دانش‌آموز
+    definition: ein Kind oder ein junger Mensch, der in die Schule geht
+    example:
+      de: Die Schüler machen gerade eine Pause.
+      en: The pupils are having a break right now.
+      fa: دانش‌آموزان الان زنگ تفریح دارند.
+    alsoAccepted: [die Schülerin, das Schulkind]
+
   - word: Lehrer
+    class: noun
+    article: der
+    plural: Lehrer
+    level: A1
+    meaning:
+      en: teacher
+      fa: معلم
+    definition: eine Person, die in einer Schule oder in einem Kurs unterrichtet
+    example:
+      de: Der Lehrer erklärt die Grammatik.
+      en: The teacher explains the grammar.
+      fa: معلم دستور زبان را توضیح می‌دهد.
+    alsoAccepted: [die Lehrerin, der Kursleiter, die Kursleiterin]
+
   - word: Student
+    class: noun
+    article: der
+    plural: Studenten
+    level: A1
+    meaning:
+      en: university student
+      fa: دانشجو
+    definition: eine Person, die an einer Universität lernt
+    example:
+      de: Mein Bruder ist Student in Leipzig.
+      en: My brother is a student in Leipzig.
+      fa: برادرم در لایپزیگ دانشجوست.
+    alsoAccepted: [die Studentin, der Studierende, die Studierende]
+
   - word: studieren
+    class: verb
+    level: A1
+    meaning:
+      en: to study (at university)
+      fa: در دانشگاه درس خواندن، تحصیل کردن
+    definition: an einer Universität ein Fach lernen
+    example:
+      de: Sie studiert Medizin in Wien.
+      en: She is studying medicine in Vienna.
+      fa: او در وین پزشکی می‌خواند.
+
   - word: Studium
+    class: noun
+    article: das
+    plural: Studien
+    level: A1
+    meaning:
+      en: university studies, degree course
+      fa: تحصیلات دانشگاهی
+    definition: die Zeit, in der man an einer Universität lernt
+    example:
+      de: Nach dem Studium möchte ich in Berlin arbeiten.
+      en: After my studies I'd like to work in Berlin.
+      fa: بعد از پایان دانشگاه می‌خواهم در برلین کار کنم.
+    alsoAccepted: [das Hochschulstudium, der Studiengang, die Studienzeit]
+
   - word: Kurs
+    class: noun
+    article: der
+    plural: Kurse
+    level: A1
+    meaning:
+      en: course (for example a German course)
+      fa: دورهٔ آموزشی (مثلاً دورهٔ زبان)
+    definition: dort lernt man ein paar Wochen oder Monate zusammen mit anderen etwas, zum Beispiel eine Sprache
+    example:
+      de: Der Kurs beginnt am Montag.
+      en: The course starts on Monday.
+      fa: دوره از دوشنبه شروع می‌شود.
+    alsoAccepted: [der Deutschkurs, der Sprachkurs, der Lehrgang]
+
   - word: Unterricht
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: lessons, teaching
+      fa: درس (در کلاس)، آموزش
+    definition: die Zeit, in der ein Lehrer etwas zeigt und erklärt und die Schüler lernen
+    example:
+      de: Der Unterricht dauert neunzig Minuten.
+      en: The lesson lasts ninety minutes.
+      fa: کلاس نود دقیقه طول می‌کشد.
+    alsoAccepted: [die Unterrichtsstunde, die Stunde, die Lektion]
+
   - word: Klasse
+    class: noun
+    article: die
+    plural: Klassen
+    level: A1
+    meaning:
+      en: class, form (a group of pupils)
+      fa: کلاس (گروهی از دانش‌آموزان)
+    definition: die Schüler, die in der Schule jeden Tag zusammen in einem Raum Unterricht haben
+    example:
+      de: In meiner Klasse sind zwanzig Kinder.
+      en: There are twenty children in my class.
+      fa: در کلاس ما بیست بچه هست.
+    alsoAccepted: [die Schulklasse]
+
   - word: lernen
+    class: verb
+    level: A1
+    meaning:
+      en: to learn
+      fa: یاد گرفتن، آموختن
+    definition: üben, bis man etwas weiß oder kann
+    example:
+      de: Ich lerne seit einem Jahr Deutsch.
+      en: I have been learning German for a year.
+      fa: یک سال است که آلمانی یاد می‌گیرم.
+
   - word: lesen
+    class: verb
+    level: A1
+    meaning:
+      en: to read
+      fa: خواندن (متن یا کتاب)
+    definition: einen Text mit den Augen ansehen und verstehen
+    example:
+      de: Am Abend lese ich gern ein Buch.
+      en: In the evening I like to read a book.
+      fa: شب‌ها دوست دارم کتاب بخوانم.
+
   - word: schreiben
+    class: verb
+    level: A1
+    meaning:
+      en: to write
+      fa: نوشتن
+    definition: Buchstaben und Wörter mit einem Stift auf Papier oder am Computer machen
+    example:
+      de: Schreiben Sie bitte Ihren Namen hier.
+      en: Please write your name here.
+      fa: لطفاً نامتان را اینجا بنویسید.
+
   - word: Buch
+    class: noun
+    article: das
+    plural: Bücher
+    level: A1
+    meaning:
+      en: book
+      fa: کتاب
+    definition: ein langer Text auf vielen Seiten, fest gebunden, zum Beispiel ein Roman oder ein Wörterbuch
+    example:
+      de: Das Buch liegt auf dem Tisch.
+      en: The book is on the table.
+      fa: کتاب روی میز است.
+
   - word: Bleistift
+    class: noun
+    article: der
+    plural: Bleistifte
+    level: A1
+    meaning:
+      en: pencil
+      fa: مداد
+    definition: ein Stift aus Holz; was man mit ihm schreibt, ist grau und geht wieder weg
+    example:
+      de: Hast du einen Bleistift für mich?
+      en: Do you have a pencil for me?
+      fa: یک مداد برای من داری؟
+    alsoAccepted: [der Stift]
+
   - word: Kugelschreiber
+    class: noun
+    article: der
+    plural: Kugelschreiber
+    level: A1
+    meaning:
+      en: ballpoint pen, pen
+      fa: خودکار
+    definition: ein Stift mit einer kleinen Kugel an der Spitze; was man mit ihm schreibt, geht nicht weg
+    example:
+      de: Mein Kugelschreiber schreibt nicht mehr.
+      en: My pen doesn't write any more.
+      fa: خودکارم دیگر نمی‌نویسد.
+    alsoAccepted: [der Kuli, der Stift]
+
+  # A homework is a task too; neither is offered as a wrong meaning of the other.
   - word: Aufgabe
+    class: noun
+    article: die
+    plural: Aufgaben
+    level: A1
+    meaning:
+      en: task, exercise
+      fa: تمرین، کار خواسته‌شده
+    definition: etwas, das man machen oder lösen soll, zum Beispiel in einem Buch oder in einer Prüfung
+    example:
+      de: Lesen Sie die Aufgabe genau.
+      en: Read the task carefully.
+      fa: تمرین را با دقت بخوانید.
+    alsoAccepted: [die Übung]
+    tooCloseTo: [Hausaufgabe]
+
   - word: Hausaufgabe
+    class: noun
+    article: die
+    plural: Hausaufgaben
+    level: A1
+    meaning:
+      en: homework
+      fa: تکلیف خانه، مشق
+    definition: Arbeit für die Schule oder für den Kurs, die man zu Hause macht
+    example:
+      de: Hast du deine Hausaufgaben schon gemacht?
+      en: Have you done your homework yet?
+      fa: تکلیف‌هایت را انجام داده‌ای؟
+    alsoAccepted: [die Hausaufgaben]
+    tooCloseTo: [Aufgabe]
+
+  # A test is a small exam; neither is offered as a wrong meaning of the other.
   - word: Test
+    class: noun
+    article: der
+    plural: Tests
+    level: A1
+    meaning:
+      en: test (a short one), quiz
+      fa: آزمون کوتاه، تست
+    definition: eine kleine, kurze Prüfung, zum Beispiel im Kurs am Ende einer Woche
+    example:
+      de: Morgen schreiben wir einen Test.
+      en: We are having a test tomorrow.
+      fa: فردا یک آزمون کوتاه داریم.
+    alsoAccepted: [die Prüfung, der Kurztest, die Klassenarbeit]
+    tooCloseTo: [Prüfung]
+
   - word: Prüfung
+    class: noun
+    article: die
+    plural: Prüfungen
+    level: A1
+    meaning:
+      en: exam, examination
+      fa: امتحان
+    definition: ein großer, wichtiger Test am Ende von einem Kurs oder von der Schule; danach bekommt man ein Zeugnis oder ein Zertifikat
+    example:
+      de: Die Prüfung ist im Juni.
+      en: The exam is in June.
+      fa: امتحان در ماه ژوئن است.
+    alsoAccepted: [das Examen, die Abschlussprüfung, die Klausur, der Test]
+    tooCloseTo: [Test]
+
   - word: Fehler
+    class: noun
+    article: der
+    plural: Fehler
+    level: A1
+    meaning:
+      en: mistake, error
+      fa: اشتباه
+    definition: etwas, das man falsch gemacht hat
+    example:
+      de: Im Text sind drei Fehler.
+      en: There are three mistakes in the text.
+      fa: در متن سه اشتباه هست.
+    alsoAccepted: [der Irrtum]
+
   - word: Lösung
+    class: noun
+    article: die
+    plural: Lösungen
+    level: A1
+    meaning:
+      en: solution, answer (to a task)
+      fa: راه‌حل، پاسخ (تمرین)
+    definition: die richtige Antwort auf eine Aufgabe oder auf ein Problem
+    example:
+      de: Die Lösungen stehen hinten im Buch.
+      en: The answers are at the back of the book.
+      fa: پاسخ‌ها آخر کتاب آمده است.
+    alsoAccepted: [die Antwort]
+
   - word: Ergebnis
+    class: noun
+    article: das
+    plural: Ergebnisse
+    level: A1
+    meaning:
+      en: result
+      fa: نتیجه
+    definition: das, was am Ende herauskommt, zum Beispiel bei einer Prüfung
+    example:
+      de: Das Ergebnis kommt in zwei Wochen.
+      en: The result comes in two weeks.
+      fa: نتیجه دو هفتهٔ دیگر اعلام می‌شود.
+    alsoAccepted: [das Resultat]
+
   - word: richtig
+    class: adjective
+    level: A1
+    meaning:
+      en: right, correct
+      fa: درست، صحیح
+    definition: so, wie es sein soll; ohne Fehler
+    example:
+      de: Ihre Antwort ist richtig.
+      en: Your answer is right.
+      fa: پاسخ شما درست است.
+    alsoAccepted: [korrekt, fehlerfrei]
+
   - word: falsch
+    class: adjective
+    level: A1
+    meaning:
+      en: wrong, incorrect
+      fa: نادرست، غلط
+    definition: nicht so, wie es sein soll; mit Fehlern
+    example:
+      de: Die Telefonnummer ist leider falsch.
+      en: Unfortunately the phone number is wrong.
+      fa: متأسفانه شمارهٔ تلفن غلط است.
+    alsoAccepted: [inkorrekt, unrichtig, fehlerhaft]
+
   - word: Pause
+    class: noun
+    article: die
+    plural: Pausen
+    level: A1
+    meaning:
+      en: break (a short rest)
+      fa: استراحت کوتاه، زنگ تفریح
+    definition: eine kurze Zeit, in der man nicht arbeitet oder lernt
+    example:
+      de: Wir machen jetzt zehn Minuten Pause.
+      en: We're taking a ten-minute break now.
+      fa: حالا ده دقیقه استراحت می‌کنیم.
+
+  # In a course "der Bogen" is a sheet of paper, often with questions on it.
   - word: Bogen
+    class: noun
+    article: der
+    plural: Bögen
+    level: A1
+    meaning:
+      en: sheet (a printed sheet to fill in)
+      fa: برگه (برگهٔ چاپی برای پر کردن)
+    definition: ein Blatt Papier mit Fragen oder Feldern, die man ausfüllen soll, zum Beispiel in einer Prüfung
+    example:
+      de: Bitte füllen Sie diesen Bogen aus.
+      en: Please fill in this form.
+      fa: لطفاً این برگه را پر کنید.
+    alsoAccepted:
+      [das Blatt, das Formular, der Fragebogen, der Antwortbogen, das Arbeitsblatt, das Blatt Papier, der Zettel]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 31 questions)
+  date: 2026-11-28
+  pool: da2866cfbba7c39d
