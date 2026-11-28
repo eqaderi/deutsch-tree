@@ -179,7 +179,12 @@ questions:
   - id: choice-2
     type: multiple-choice
     prompt: "Die reparierte Waschmaschine steht im Keller. Das heißt:"
-    options: [Man muss die Waschmaschine noch reparieren., Die Waschmaschine ist kaputt., Jemand hat die Waschmaschine repariert.]
+    options:
+      [
+        Man muss die Waschmaschine noch reparieren.,
+        Die Waschmaschine ist kaputt.,
+        Jemand hat die Waschmaschine repariert.,
+      ]
     answer: Jemand hat die Waschmaschine repariert.
     explanation:
       en: "The *Partizip II* before a noun says what has been done to it: someone has repaired it."
