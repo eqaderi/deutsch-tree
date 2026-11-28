@@ -1,34 +1,325 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-work
 kind: vocabulary
 level: A1
 chapter: a1-words-daily-life
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Work and jobs"
   fa: "کار و شغل"
   de: "Arbeit und Beruf"
+attemptSize: 15
 words:
+  # Arbeit, Job, Beruf, Stelle and Arbeitsplatz overlap: each has a meaning of its own,
+  # and the closest ones are never offered as wrong meanings of each other.
   - word: Arbeit
+    class: noun
+    article: die
+    plural: Arbeiten
+    level: A1
+    meaning:
+      en: work
+      fa: کار
+    definition: eine Tätigkeit, für die man Geld bekommt, oder etwas, das viel Mühe macht
+    example:
+      de: Ich fahre mit dem Fahrrad zur Arbeit.
+      en: I cycle to work.
+      fa: با دوچرخه سر کار می‌روم.
+    alsoAccepted: [der Job]
+    tooCloseTo: [Job, Stelle, Beruf]
+
   - word: arbeiten
+    class: verb
+    level: A1
+    meaning:
+      en: to work
+      fa: کار کردن
+    definition: einen Beruf ausüben; in einer Firma, in einem Büro oder in einem Geschäft tätig sein
+    example:
+      de: Meine Schwester arbeitet in einem Krankenhaus.
+      en: My sister works in a hospital.
+      fa: خواهرم در یک بیمارستان کار می‌کند.
+
   - word: Beruf
+    class: noun
+    article: der
+    plural: Berufe
+    level: A1
+    meaning:
+      en: profession, occupation
+      fa: شغل، حرفه
+    definition: was man gelernt hat und viele Jahre lang macht, um Geld zu verdienen, zum Beispiel Koch oder Lehrerin
+    example:
+      de: Was sind Sie von Beruf?
+      en: What do you do for a living?
+      fa: شغلتان چیست؟
+    alsoAccepted: [der Job, die Tätigkeit]
+    tooCloseTo: [Job]
+
   - word: Job
+    class: noun
+    article: der
+    plural: Jobs
+    level: A1
+    meaning:
+      en: job (often a short or side job)
+      fa: کار (اغلب موقت یا پاره‌وقت)
+    definition: eine Arbeit, oft nur für kurze Zeit oder neben der Schule oder dem Studium
+    example:
+      de: Im Sommer habe ich einen Job in einem Café.
+      en: In the summer I have a job in a café.
+      fa: تابستان‌ها در یک کافه کار موقت دارم.
+    alsoAccepted:
+      [die Arbeit, die Stelle, der Nebenjob, der Teilzeitjob, die Teilzeitarbeit, die Aushilfe, der Ferienjob]
+    tooCloseTo: [Arbeit, Beruf, Stelle]
+
   - word: Arbeitsplatz
+    class: noun
+    article: der
+    plural: Arbeitsplätze
+    level: A1
+    meaning:
+      en: workplace, place of work
+      fa: محل کار
+    definition: der Ort, an dem man jeden Tag arbeitet, zum Beispiel ein Tisch im Büro
+    example:
+      de: Mein Arbeitsplatz ist im dritten Stock.
+      en: My workplace is on the third floor.
+      fa: محل کار من در طبقهٔ سوم است.
+    alsoAccepted: [die Arbeitsstelle, die Arbeitsstätte]
+    tooCloseTo: [Stelle]
+
   - word: Firma
+    class: noun
+    article: die
+    plural: Firmen
+    level: A1
+    meaning:
+      en: company, firm
+      fa: شرکت
+    definition: ein Unternehmen, das Waren macht oder verkauft oder Dienste anbietet
+    example:
+      de: Die Firma hat fünfzig Mitarbeiter.
+      en: The company has fifty employees.
+      fa: این شرکت پنجاه کارمند دارد.
+    alsoAccepted: [das Unternehmen, der Betrieb]
+
   - word: Chef
+    class: noun
+    article: der
+    plural: Chefs
+    level: A1
+    meaning:
+      en: boss, head
+      fa: رئیس
+    definition: die Person, die bei der Arbeit sagt, was die anderen tun sollen
+    example:
+      de: Der Chef ist heute nicht im Büro.
+      en: The boss isn't in the office today.
+      fa: رئیس امروز در دفتر نیست.
+    alsoAccepted: [die Chefin, der Vorgesetzte, die Vorgesetzte, der Leiter, die Leiterin]
+
+  # A woman is "die Beamtin"; without an article it is "ein Beamter".
   - word: Beamte
+    class: noun
+    article: der
+    plural: Beamten
+    level: A1
+    meaning:
+      en: civil servant, official
+      fa: کارمند دولت
+    definition: eine Person, die für den Staat arbeitet, zum Beispiel in einem Amt
+    example:
+      de: Der Beamte hilft mir mit dem Formular.
+      en: The official helps me with the form.
+      fa: کارمند اداره در پر کردن فرم کمکم می‌کند.
+    alsoAccepted: [die Beamtin, ein Beamter, der Staatsbeamte]
+
   - word: Hausfrau
+    class: noun
+    article: die
+    plural: Hausfrauen
+    level: A1
+    meaning:
+      en: housewife
+      fa: زن خانه‌دار
+    definition: eine Frau, die keinen Beruf hat und zu Hause für die Familie sorgt
+    example:
+      de: Meine Mutter war lange Hausfrau.
+      en: My mother was a housewife for a long time.
+      fa: مادرم سال‌ها خانه‌دار بود.
+
   - word: Hausmann
+    class: noun
+    article: der
+    plural: Hausmänner
+    level: A1
+    meaning:
+      en: househusband
+      fa: مرد خانه‌دار
+    definition: ein Mann, der zu Hause bleibt, kocht und sich um die Kinder kümmert
+    example:
+      de: Mein Mann ist zurzeit Hausmann.
+      en: My husband is a househusband at the moment.
+      fa: شوهرم فعلاً خانه‌دار است.
+
   - word: Praktikum
+    class: noun
+    article: das
+    plural: Praktika
+    level: A1
+    meaning:
+      en: internship, work placement
+      fa: کارآموزی کوتاه‌مدت (در یک شرکت)
+    definition: man arbeitet eine Zeit lang in einer Firma, um einen Beruf kennenzulernen
+    example:
+      de: Im Juli mache ich ein Praktikum bei einer Bank.
+      en: In July I'm doing an internship at a bank.
+      fa: در ماه ژوئیه در یک بانک کارآموزی می‌کنم.
+
   - word: Stelle
+    class: noun
+    article: die
+    plural: Stellen
+    level: A1
+    meaning:
+      en: position, post (a job in a company)
+      fa: موقعیت شغلی، پست
+    definition: eine Arbeit in einer Firma, für die man sich bewerben kann
+    example:
+      de: Ich suche eine neue Stelle.
+      en: I'm looking for a new position.
+      fa: دنبال موقعیت شغلی تازه‌ای هستم.
+    alsoAccepted: [die Arbeitsstelle, die Position, der Posten, der Job, der Arbeitsplatz]
+    tooCloseTo: [Arbeit, Job, Arbeitsplatz]
+
   - word: verdienen
+    class: verb
+    level: A1
+    meaning:
+      en: to earn
+      fa: درآمد داشتن، پول درآوردن
+    definition: für die Arbeit Geld bekommen
+    example:
+      de: Er verdient nicht viel.
+      en: He doesn't earn much.
+      fa: درآمد زیادی ندارد.
+
   - word: arbeitslos
+    class: adjective
+    level: A1
+    meaning:
+      en: unemployed, out of work
+      fa: بیکار
+    definition: ohne Arbeit; man sucht eine Stelle
+    example:
+      de: Seit März ist er arbeitslos.
+      en: He has been unemployed since March.
+      fa: از ماه مارس بیکار است.
+    alsoAccepted: [erwerbslos, ohne Arbeit]
+
   - word: selbstständig
+    class: adjective
+    level: A1
+    meaning:
+      en: self-employed
+      fa: خویش‌فرما، دارای کار آزاد
+    definition: so, dass man für sich selbst arbeitet und keinen Chef hat
+    example:
+      de: Meine Tante ist selbstständig, sie hat ein kleines Geschäft.
+      en: My aunt is self-employed; she has a small shop.
+      fa: خاله‌ام کار آزاد دارد؛ مغازهٔ کوچکی دارد.
+    alsoAccepted: [selbständig, freiberuflich]
+
   - word: Termin
+    class: noun
+    article: der
+    plural: Termine
+    level: A1
+    meaning:
+      en: appointment
+      fa: وقت قبلی، قرار ملاقات
+    definition: eine feste Zeit, zu der man zum Beispiel zum Arzt geht oder eine Person trifft
+    example:
+      de: Ich habe morgen um zehn einen Termin beim Arzt.
+      en: I have a doctor's appointment at ten tomorrow.
+      fa: فردا ساعت ده وقت دکتر دارم.
+    alsoAccepted: [die Verabredung]
+
   - word: Plan
+    class: noun
+    article: der
+    plural: Pläne
+    level: A1
+    meaning:
+      en: plan
+      fa: طرح، نقشه (برای کارهای آینده)
+    definition: was man machen will und wann, zum Beispiel für eine Woche
+    example:
+      de: Hast du schon Pläne für das Wochenende?
+      en: Do you have any plans for the weekend yet?
+      fa: برای آخر هفته برنامه‌ای داری؟
+    alsoAccepted: [der Zeitplan, der Wochenplan]
+
   - word: Problem
+    class: noun
+    article: das
+    plural: Probleme
+    level: A1
+    meaning:
+      en: problem
+      fa: مشکل
+    definition: etwas Schwieriges, für das man eine Lösung braucht
+    example:
+      de: Kein Problem, ich helfe dir.
+      en: No problem, I'll help you.
+      fa: مشکلی نیست، کمکت می‌کنم.
+    alsoAccepted: [die Schwierigkeit]
+
   - word: Ordnung
+    class: noun
+    article: die
+    plural: Ordnungen
+    level: A1
+    meaning:
+      en: order, tidiness
+      fa: نظم، ترتیب
+    definition: der Zustand, wenn alles an seinem Platz ist
+    example:
+      de: Auf meinem Schreibtisch ist immer Ordnung.
+      en: My desk is always tidy.
+      fa: میز کارم همیشه مرتب است.
+
   - word: wichtig
+    class: adjective
+    level: A1
+    meaning:
+      en: important
+      fa: مهم
+    definition: von großer Bedeutung
+    example:
+      de: Morgen habe ich ein wichtiges Gespräch.
+      en: I have an important meeting tomorrow.
+      fa: فردا گفت‌وگوی مهمی دارم.
+    alsoAccepted: [bedeutend, bedeutsam]
+
   - word: fertig
+    class: adjective
+    level: A1
+    meaning:
+      en: finished, done, ready
+      fa: تمام، آماده
+    definition: so, dass nichts mehr zu tun ist
+    example:
+      de: Bist du fertig? Wir müssen los.
+      en: Are you ready? We have to go.
+      fa: آماده‌ای؟ باید راه بیفتیم.
+    alsoAccepted: [bereit, erledigt, beendet]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 126, then 34 questions)
+  date: 2026-11-28
+  pool: 00d24c99cb2b16c7
