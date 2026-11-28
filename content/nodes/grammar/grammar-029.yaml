@@ -4,10 +4,266 @@ kind: grammar
 level: A1
 chapter: a1-modal-verbs
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-026, grammar-146]
 title:
   en: "*dürfen* / *nicht dürfen*"
   fa: "*dürfen* و *nicht dürfen*"
   de: "*dürfen* / *nicht dürfen*"
+
+explanations:
+  en:
+    rule: >
+      *Dürfen* says that something is allowed: *Darf ich das Fenster
+      aufmachen?* With *nicht* it says that something is forbidden: *Sie
+      dürfen hier nicht rauchen.* *Nicht* stands before the infinitive at the
+      end. Rules and signs often use *man* (with the form of *er*): *Hier darf
+      man nicht parken.* Like every modal verb, *dürfen* is conjugated in
+      position 2 and the second verb goes to the end as an infinitive. *Ich*
+      and *er* / *sie* / *es* have the same form, *darf*, with no ending, and
+      the vowel changes to *a* in the singular. When the meaning is clear, the
+      infinitive can be dropped: *Darf ich heute ins Kino?*
+  fa:
+    rule: >
+      *dürfen* می‌گوید کاری مجاز است و اجازهٔ آن هست: *Darf ich das Fenster
+      aufmachen?* همراه با *nicht* می‌گوید کاری ممنوع است: *Sie dürfen hier
+      nicht rauchen.* در این حالت *nicht* پیش از مصدرِ پایان جمله می‌آید.
+      قاعده‌ها و تابلوها اغلب با *man* بیان می‌شوند که صورت سوم‌شخص مفرد
+      می‌گیرد: *Hier darf man nicht parken.* مانند همهٔ فعل‌های وجهی، *dürfen*
+      صرف می‌شود و در جایگاه دوم می‌آید و فعل دوم به شکل مصدر به پایان جمله
+      می‌رود. *ich* و *er* / *sie* / *es* صورت یکسان *darf* را دارند، بدون
+      شناسه، و در مفرد واکهٔ *ü* به *a* تبدیل می‌شود. اگر معنا روشن باشد،
+      مصدر را می‌توان انداخت: *Darf ich heute ins Kino?*
+  de:
+    rule: >
+      Mit *dürfen* sagt man: Etwas ist erlaubt. *Darf ich das Fenster
+      aufmachen?* Mit *nicht* heißt es: Etwas ist verboten. *Sie dürfen hier
+      nicht rauchen.* *Nicht* steht vor dem Infinitiv am Ende. Regeln und
+      Schilder sagen oft *man* (mit der Form von *er*): *Hier darf man nicht
+      parken.* *Dürfen* ist konjugiert und steht auf Position 2, das zweite
+      Verb steht im Infinitiv am Ende. *Ich* und *er* / *sie* / *es* haben die
+      gleiche Form *darf*, ohne Endung. Ist die Bedeutung klar, kann der
+      Infinitiv fehlen: *Darf ich heute ins Kino?*
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*dürfen*", fa: "*dürfen*", de: "*dürfen*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, darf, Darf ich hier sitzen?]
+    - [du, darfst, Du darfst heute lange fernsehen.]
+    - [er / sie / es, darf, Hier darf man nicht rauchen.]
+    - [wir, dürfen, Wir dürfen hier fotografieren.]
+    - [ihr, dürft, Ihr dürft nicht laut sein.]
+    - [sie / Sie, dürfen, Sie dürfen hier nicht parken.]
+
+examples:
+  - de: Darf ich das Fenster aufmachen?
+    en: May I open the window?
+    fa: اجازه هست پنجره را باز کنم؟
+  - de: Sie dürfen hier nicht rauchen.
+    en: You are not allowed to smoke here.
+    fa: این‌جا سیگار کشیدن ممنوع است.
+  - de: Hier darf man nicht parken.
+    en: You can't park here.
+    fa: این‌جا پارک کردن ممنوع است.
+  - de: Die Kinder dürfen heute im Garten spielen.
+    en: The children are allowed to play in the garden today.
+    fa: بچه‌ها امروز اجازه دارند در باغ بازی کنند.
+  - de: Du darfst nicht so viel Süßes essen.
+    en: You mustn't eat so many sweets.
+    fa: نباید این‌قدر شیرینی بخوری.
+  - de: Dürfen wir hier fotografieren?
+    en: Are we allowed to take photos here?
+    fa: اجازه داریم این‌جا عکس بگیریم؟
+  - de: Im Kino darf man nicht telefonieren.
+    en: You mustn't make phone calls in the cinema.
+    fa: در سینما تلفن زدن ممنوع است.
+  - de: Darf ich heute ins Kino?
+    en: May I go to the cinema today?
+    fa: امروز اجازه دارم به سینما بروم؟
+
+mistakes:
+  - wrong: Hier darf man rauchen nicht.
+    right: Hier darf man nicht rauchen.
+    why:
+      en: "*Nicht* stands before the infinitive, and the infinitive is last."
+      fa: "*nicht* پیش از مصدر می‌آید و مصدر در پایان جمله است."
+      de: "*Nicht* steht vor dem Infinitiv. Der Infinitiv steht am Ende."
+  - wrong: Darfe ich hier sitzen?
+    right: Darf ich hier sitzen?
+    why:
+      en: With *ich* the form is *darf*, with no ending.
+      fa: با *ich* صورت فعل *darf* است، بدون شناسه.
+      de: Bei *ich* heißt es *darf*, ohne Endung.
+  - wrong: Du darf hier nicht spielen.
+    right: Du darfst hier nicht spielen.
+    why:
+      en: With *du* the form is *darfst*.
+      fa: با *du* صورت فعل *darfst* است.
+      de: Bei *du* heißt es *darfst*.
+  - wrong: Man dürfen hier nicht schwimmen.
+    right: Man darf hier nicht schwimmen.
+    why:
+      en: "*Man* takes the form of *er*: *darf*."
+      fa: "*man* صورت سوم‌شخص مفرد می‌گیرد: *darf*."
+      de: "*Man* hat die Form von *er*: *darf*."
+
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: ___ ich das Fenster aufmachen?
+    options: [Darf, Darfst, Dürfen]
+    answer: Darf
+    explanation:
+      en: With *ich* the form is *darf*, with no ending.
+      fa: با *ich* صورت فعل *darf* است، بدون شناسه.
+      de: Bei *ich* heißt es *darf*, ohne Endung.
+  - id: q2
+    type: multiple-choice
+    prompt: Du ___ heute lange fernsehen.
+    options: [darf, darfst, dürft]
+    answer: darfst
+    explanation:
+      en: With *du* the form is *darfst*.
+      fa: با *du* صورت فعل *darfst* است.
+      de: Bei *du* heißt es *darfst*.
+  - id: q3
+    type: gap-fill
+    prompt: Hier ___ man nicht parken.
+    options: [darf, darfst, dürfen]
+    answer: darf
+    explanation:
+      en: "*Man* takes the form of *er*: *darf*."
+      fa: "*man* صورت سوم‌شخص مفرد می‌گیرد: *darf*."
+      de: "*Man* hat die Form von *er*: *darf*."
+  - id: q4
+    type: gap-fill
+    prompt: Ihr ___ im Museum nicht essen.
+    options: [dürft, darfst, dürfen]
+    answer: dürft
+    explanation:
+      en: With *ihr* the form is *dürft*.
+      fa: با *ihr* صورت فعل *dürft* است.
+      de: Bei *ihr* heißt es *dürft*.
+  - id: q5
+    type: gap-fill
+    prompt: Die Kinder ___ heute im Garten spielen.
+    options: [darf, dürft, dürfen]
+    answer: dürfen
+    explanation:
+      en: "*Die Kinder* is *sie* (plural): the form is *dürfen*."
+      fa: "*die Kinder* سوم‌شخص جمع است (*sie*): صورت فعل *dürfen* است."
+      de: "*Die Kinder* ist *sie* (Plural). Die Form ist *dürfen*."
+  - id: q6
+    type: multiple-choice
+    prompt: "Sie / dürfen / hier / nicht / rauchen"
+    options: [Sie dürfen hier nicht rauchen., Sie dürfen hier rauchen nicht., Sie nicht dürfen hier rauchen.]
+    answer: Sie dürfen hier nicht rauchen.
+    explanation:
+      en: "*Dürfen* is in position 2; *nicht* stands before the infinitive at the end."
+      fa: "*dürfen* در جایگاه دوم است و *nicht* پیش از مصدرِ پایان جمله می‌آید."
+      de: "*Dürfen* steht auf Position 2, *nicht* vor dem Infinitiv am Ende."
+  - id: q7
+    type: multiple-choice
+    prompt: "im Kino / man / dürfen / nicht / telefonieren"
+    options:
+      [Im Kino darf man nicht telefonieren., Im Kino man darf nicht telefonieren., Im Kino darf man telefonieren nicht.]
+    answer: Im Kino darf man nicht telefonieren.
+    explanation:
+      en: "*Im Kino* is position 1, so *darf* comes second and *man* after it; *nicht telefonieren* closes the sentence."
+      fa: "*im Kino* جایگاه اول است، پس *darf* در جایگاه دوم و *man* پس از آن می‌آید؛ *nicht telefonieren* جمله را به پایان می‌برد."
+      de: "*Im Kino* ist Position 1. *Darf* steht auf Position 2, dann *man*. *Nicht telefonieren* steht am Ende."
+  - id: q8
+    type: true-false
+    prompt: Dürfen wir hier fotografieren?
+    answer: true
+    explanation:
+      en: "The question starts with *dürfen*, and the infinitive is at the end. The sentence is correct."
+      fa: "پرسش با *dürfen* آغاز می‌شود و مصدر در پایان است. جمله درست است."
+      de: "Die Frage beginnt mit *dürfen*, der Infinitiv steht am Ende. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Hier darf man schwimmen nicht.
+    answer: false
+    explanation:
+      en: "*Nicht* stands before the infinitive: *Hier darf man nicht schwimmen.*"
+      fa: "*nicht* پیش از مصدر می‌آید: *Hier darf man nicht schwimmen.*"
+      de: "*Nicht* steht vor dem Infinitiv: *Hier darf man nicht schwimmen.*"
+  - id: q10
+    type: true-false
+    prompt: Er darft heute nicht kommen.
+    answer: false
+    explanation:
+      en: "With *er* the form is *darf*, with no *-t*: *Er darf heute nicht kommen.*"
+      fa: "با *er* صورت فعل *darf* است، بدون *-t*: *Er darf heute nicht kommen.*"
+      de: "Bei *er* heißt es *darf*, ohne *-t*: *Er darf heute nicht kommen.*"
+  - id: q11
+    type: find-error
+    prompt: Man dürfen hier nicht laut sprechen.
+    answer: dürfen
+    explanation:
+      en: "*Man* takes the form of *er*: *Man darf hier nicht laut sprechen.*"
+      fa: "*man* صورت سوم‌شخص مفرد می‌گیرد: *Man darf hier nicht laut sprechen.*"
+      de: "*Man* hat die Form von *er*: *Man darf hier nicht laut sprechen.*"
+  - id: q12
+    type: find-error
+    prompt: Du darf das Auto nehmen.
+    answer: darf
+    explanation:
+      en: "With *du* the form is *darfst*: *Du darfst das Auto nehmen.*"
+      fa: "با *du* صورت فعل *darfst* است: *Du darfst das Auto nehmen.*"
+      de: "Bei *du* heißt es *darfst*: *Du darfst das Auto nehmen.*"
+  - id: q13
+    type: word-order
+    answers:
+      - [darf, ich, hier, sitzen]
+    end: "?"
+    explanation:
+      en: "In a yes/no question the modal verb comes first, and the infinitive stays at the end."
+      fa: "در پرسش بله یا نه فعل وجهی در آغاز می‌آید و مصدر در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht das Modalverb am Anfang. Der Infinitiv bleibt am Ende."
+  - id: q14
+    type: word-order
+    answers:
+      - [wo, darf, man, hier, rauchen]
+    end: "?"
+    explanation:
+      en: "After the question word comes the modal verb in position 2; the infinitive goes to the end."
+      fa: "پس از واژهٔ پرسشی، فعل وجهی در جایگاه دوم می‌آید و مصدر به پایان جمله می‌رود."
+      de: "Nach dem Fragewort steht das Modalverb auf Position 2. Der Infinitiv steht am Ende."
+  - id: q15
+    type: typed-gap-fill
+    prompt: Mein Sohn ___ (dürfen) heute bei seinem Freund schlafen.
+    answers: [darf]
+    explanation:
+      en: "*Mein Sohn* is *er*: the form is *darf*."
+      fa: "*mein Sohn* سوم‌شخص مفرد است (*er*): صورت فعل *darf* است."
+      de: "*Mein Sohn* ist *er*. Die Form ist *darf*."
+  - id: q16
+    type: typed-gap-fill
+    prompt: Entschuldigung, ___ (dürfen) wir hier parken?
+    answers: [dürfen]
+    explanation:
+      en: With *wir* the form is *dürfen*, like the infinitive.
+      fa: با *wir* صورت فعل *dürfen* است، همانند مصدر.
+      de: Bei *wir* ist die Form *dürfen*, wie der Infinitiv.
+  - id: q17
+    type: matching
+    answer:
+      - [ich, darf]
+      - [du, darfst]
+      - [wir, dürfen]
+      - [ihr, dürft]
+    explanation:
+      en: "The forms of *dürfen*: *ich darf*, *du darfst*, *wir dürfen*, *ihr dürft*."
+      fa: "صورت‌های *dürfen*: *ich darf*، *du darfst*، *wir dürfen*، *ihr dürft*."
+      de: "Die Formen von *dürfen*: *ich darf*, *du darfst*, *wir dürfen*, *ihr dürft*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: ae5a141db6071a65

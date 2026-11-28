@@ -105,6 +105,7 @@ its first mention in a node.
 | relative clause | Relativsatz | جملهٔ موصولی |
 | word order; position 2 | Wortstellung; Position 2 | ترتیب واژه‌ها؛ جایگاه دوم |
 | separable verb; prefix | trennbares Verb; Präfix | فعل جداشدنی؛ پیشوند |
+| inseparable verb | untrennbares Verb | فعل جدانشدنی |
 | modal verb | Modalverb | فعل وجهی |
 | reflexive verb | reflexives Verb | فعل انعکاسی |
 | auxiliary verb | Hilfsverb | فعل کمکی |

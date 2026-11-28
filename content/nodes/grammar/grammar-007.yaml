@@ -4,10 +4,284 @@ kind: grammar
 level: A1
 chapter: a1-verb-patterns
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-001, grammar-002]
 title:
   en: "*Imperativ*, *Sie*-form"
   fa: "امر (*Imperativ*) با *Sie*"
   de: "Imperativ mit *Sie*"
+
+explanations:
+  en:
+    rule: >
+      The polite imperative (*Imperativ*) asks or tells one or more people you
+      call *Sie* to do something. Take the *Sie* form of the present tense and
+      put the verb first, with *Sie* right after it: *Sie kommen mit* becomes
+      *Kommen Sie bitte mit!* There is never a vowel change, and a separable
+      prefix still goes to the end. The one special form is *sein*: *Seien Sie
+      pünktlich!* *Bitte* makes the request polite.
+  fa:
+    rule: >
+      امر (*Imperativ*) مؤدبانه از یک یا چند نفر که آن‌ها را *Sie* خطاب
+      می‌کنیم، می‌خواهد کاری انجام دهند. صرف *Sie* در زمان حال را بردارید و
+      فعل را به آغاز جمله ببرید؛ *Sie* بلافاصله پس از آن می‌آید: *Sie kommen
+      mit* می‌شود *Kommen Sie bitte mit!* در این امر هیچ‌گاه واکه تغییر
+      نمی‌کند و پیشوند فعل جداشدنی همچنان به پایان جمله می‌رود. تنها شکل
+      ویژه از آنِ *sein* است: *Seien Sie pünktlich!* واژهٔ *bitte* درخواست را
+      مؤدبانه می‌کند.
+  de:
+    rule: >
+      Mit dem Imperativ mit *Sie* bittet man eine Person oder mehrere
+      Personen (*Sie*), etwas zu tun. Man nimmt die *Sie*-Form im Präsens.
+      Das Verb steht am Anfang, *Sie* direkt danach: *Kommen Sie bitte mit!*
+      Der Vokal ändert sich nie, und das Präfix steht am Ende. Bei *sein*
+      heißt es: *Seien Sie pünktlich!*
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*Imperativ* (*Sie*)", fa: "امر با *Sie*", de: "Imperativ (*Sie*)" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [warten, Warten Sie!, Warten Sie bitte hier!]
+    - [sprechen, Sprechen Sie!, Sprechen Sie bitte langsam!]
+    - [nehmen, Nehmen Sie!, Nehmen Sie Platz!]
+    - [fahren, Fahren Sie!, Fahren Sie bitte langsam!]
+    - [mitkommen, Kommen Sie mit!, Kommen Sie bitte mit!]
+    - [zumachen, Machen Sie zu!, Machen Sie bitte die Tür zu!]
+    - [sein, Seien Sie!, Seien Sie bitte pünktlich!]
+    - [haben, Haben Sie!, Haben Sie keine Angst!]
+
+examples:
+  - de: Kommen Sie bitte mit!
+    en: Please come with me!
+    fa: لطفاً با من بیایید!
+  - de: Warten Sie bitte hier.
+    en: Please wait here.
+    fa: لطفاً اینجا منتظر بمانید.
+  - de: Sprechen Sie bitte langsam.
+    en: Please speak slowly.
+    fa: لطفاً آهسته صحبت کنید.
+  - de: Nehmen Sie Platz!
+    en: Have a seat!
+    fa: بفرمایید بنشینید!
+  - de: Machen Sie bitte das Fenster zu.
+    en: Please close the window.
+    fa: لطفاً پنجره را ببندید.
+  - de: Seien Sie unbesorgt.
+    en: Don't worry.
+    fa: نگران نباشید.
+  - de: Rufen Sie mich morgen an!
+    en: Call me tomorrow!
+    fa: فردا به من زنگ بزنید!
+  - de: Gehen Sie hier geradeaus.
+    en: Go straight ahead here.
+    fa: از اینجا مستقیم بروید.
+
+mistakes:
+  - wrong: Kommen bitte mit!
+    right: Kommen Sie bitte mit!
+    why:
+      en: "The polite imperative keeps *Sie*, right after the verb."
+      fa: "امر مؤدبانه *Sie* را نگه می‌دارد، بلافاصله پس از فعل."
+      de: "Der Imperativ mit *Sie* braucht *Sie*, direkt nach dem Verb."
+  - wrong: Sind Sie bitte pünktlich!
+    right: Seien Sie bitte pünktlich!
+    why:
+      en: "*Sein* has its own imperative form: *Seien Sie!*"
+      fa: "*sein* شکل امری ویژهٔ خود را دارد: *Seien Sie!*"
+      de: "*Sein* hat eine eigene Form: *Seien Sie!*"
+  - wrong: Sprich Sie bitte langsam!
+    right: Sprechen Sie bitte langsam!
+    why:
+      en: "The *Sie* form never changes the vowel: *sprechen*, *Sprechen Sie!*"
+      fa: "در امر با *Sie* واکه هرگز تغییر نمی‌کند: *sprechen*، *Sprechen Sie!*"
+      de: "Mit *Sie* ändert sich der Vokal nie: *sprechen*, *Sprechen Sie!*"
+  - wrong: Machen Sie zu das Fenster!
+    right: Machen Sie das Fenster zu!
+    why:
+      en: "The prefix *zu* goes to the end, also in the imperative."
+      fa: "پیشوند *zu* در جملهٔ امری هم به پایان جمله می‌رود."
+      de: "Das Präfix *zu* steht auch im Imperativ am Ende."
+
+# 20 questions, every question type.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ Sie bitte hier!
+    options: [Warten, Wartet, Warte]
+    answer: Warten
+    explanation:
+      en: "The polite imperative is the *Sie* form: *Warten Sie!*"
+      fa: "امر مؤدبانه همان صرف *Sie* است: *Warten Sie!*"
+      de: "Der Imperativ mit *Sie* ist die *Sie*-Form: *Warten Sie!*"
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ Sie bitte pünktlich!
+    options: [Seien, Sind, Sein]
+    answer: Seien
+    explanation:
+      en: "*Sein* has a special form: *Seien Sie!*"
+      fa: "*sein* شکل ویژه‌ای دارد: *Seien Sie!*"
+      de: "*Sein* hat eine eigene Form: *Seien Sie!*"
+  - id: gap-3
+    type: gap-fill
+    prompt: Machen Sie bitte das Fenster ___!
+    options: [zu, zumachen, machen]
+    answer: zu
+    explanation:
+      en: "*Machen* is first; the prefix *zu* goes to the end."
+      fa: "*machen* در آغاز آمده است و پیشوند *zu* به پایان جمله می‌رود."
+      de: "*Machen* steht am Anfang, das Präfix *zu* am Ende."
+  - id: gap-4
+    type: gap-fill
+    prompt: Nehmen ___ Platz!
+    options: [Sie, du, ihr]
+    answer: Sie
+    explanation:
+      en: "*Nehmen* without a vowel change is the *Sie* form, so *Sie* follows it."
+      fa: "*nehmen* بدون تغییر واکه صرف *Sie* است، پس پس از آن *Sie* می‌آید."
+      de: "*Nehmen* ohne Vokalwechsel ist die *Sie*-Form. Danach steht *Sie*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "sprechen, Imperativ mit Sie:"
+    options: [Sprechen Sie bitte langsam!, Sprecht Sie bitte langsam!, Sprich Sie bitte langsam!]
+    answer: Sprechen Sie bitte langsam!
+    explanation:
+      en: "The *Sie* form keeps the infinitive's vowel and ending: *Sprechen Sie!*"
+      fa: "صرف *Sie* واکه و شناسهٔ مصدر را نگه می‌دارد: *Sprechen Sie!*"
+      de: "Die *Sie*-Form ist wie der Infinitiv: *Sprechen Sie!*"
+  - id: choice-2
+    type: multiple-choice
+    prompt: "anrufen, Imperativ mit Sie:"
+    options: [Rufen Sie mich morgen an!, Anrufen Sie mich morgen!, Rufen Sie an mich morgen!]
+    answer: Rufen Sie mich morgen an!
+    explanation:
+      en: "The verb part comes first, *Sie* after it, and *an* at the end."
+      fa: "بخش فعلی در آغاز می‌آید، *Sie* پس از آن و *an* در پایان جمله."
+      de: "Der Verbteil steht am Anfang, dann *Sie*, und *an* am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "sein, Imperativ mit Sie:"
+    options: [Seien Sie leise!, Sind Sie leise!, Sein Sie leise!]
+    answer: Seien Sie leise!
+    explanation:
+      en: "*Sein* has its own form: *Seien Sie!*"
+      fa: "*sein* شکل ویژهٔ خود را دارد: *Seien Sie!*"
+      de: "*Sein* hat eine eigene Form: *Seien Sie!*"
+  - id: choice-4
+    type: multiple-choice
+    prompt: "fahren, Imperativ mit Sie:"
+    options: [Fahren Sie bitte langsam!, Fährst Sie bitte langsam!, Fahrt Sie bitte langsam!]
+    answer: Fahren Sie bitte langsam!
+    explanation:
+      en: "No vowel change with *Sie*: *Fahren Sie!*"
+      fa: "با *Sie* واکه تغییر نمی‌کند: *Fahren Sie!*"
+      de: "Mit *Sie* gibt es keinen Vokalwechsel: *Fahren Sie!*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: ___ (kommen) Sie bitte herein!
+    answers: [Kommen]
+    explanation:
+      en: "The *Sie* form of *kommen* is *kommen*; at the start it has a capital: *Kommen Sie …!*"
+      fa: "صرف *Sie* فعل *kommen* همان *kommen* است و در آغاز جمله با حرف بزرگ نوشته می‌شود: *Kommen Sie …!*"
+      de: "Die *Sie*-Form von *kommen* ist *kommen*. Am Anfang schreibt man groß: *Kommen Sie …!*"
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (sein) Sie bitte vorsichtig!
+    answers: [Seien]
+    explanation:
+      en: "*Sein* has a special form: *Seien Sie!*"
+      fa: "*sein* شکل ویژه‌ای دارد: *Seien Sie!*"
+      de: "*Sein* hat eine eigene Form: *Seien Sie!*"
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Rufen Sie mich bitte ___ (anrufen)!
+    answers: [an]
+    explanation:
+      en: "*Rufen* is first, so the prefix *an* goes to the end."
+      fa: "*rufen* در آغاز آمده است، پس پیشوند *an* به پایان جمله می‌رود."
+      de: "*Rufen* steht am Anfang. Das Präfix *an* steht am Ende."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: ___ (lesen) Sie bitte den Text!
+    answers: [Lesen]
+    explanation:
+      en: "No vowel change with *Sie*: *Lesen Sie!*, not *Liest*."
+      fa: "با *Sie* واکه تغییر نمی‌کند: *Lesen Sie!*، نه *Liest*."
+      de: "Mit *Sie* gibt es keinen Vokalwechsel: *Lesen Sie!*, nicht *Liest*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Frau Klein, ___ (nehmen) Sie bitte Platz!
+    answers: [nehmen]
+    explanation:
+      en: "The *Sie* form is *nehmen*, without a vowel change; after the comma it is lower case."
+      fa: "صرف *Sie* همان *nehmen* است، بدون تغییر واکه؛ پس از ویرگول با حرف کوچک نوشته می‌شود."
+      de: "Die *Sie*-Form ist *nehmen*, ohne Vokalwechsel. Nach dem Komma schreibt man klein."
+  - id: true-1
+    type: true-false
+    prompt: Warten Sie bitte hier!
+    answer: true
+    explanation:
+      en: "Verb first, *Sie* after it. The sentence is correct."
+      fa: "فعل در آغاز و *Sie* پس از آن. جمله درست است."
+      de: "Das Verb steht am Anfang, dann *Sie*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Sind Sie bitte ruhig!
+    answer: false
+    explanation:
+      en: "The imperative of *sein* is *seien*: *Seien Sie bitte ruhig!*"
+      fa: "امر *sein* با *Sie* می‌شود *seien*: *Seien Sie bitte ruhig!*"
+      de: "Der Imperativ von *sein* ist *seien*: *Seien Sie bitte ruhig!*"
+  - id: true-3
+    type: true-false
+    prompt: Machen Sie bitte die Tür zu!
+    answer: true
+    explanation:
+      en: "*Machen Sie* first, the prefix *zu* at the end. The sentence is correct."
+      fa: "*Machen Sie* در آغاز و پیشوند *zu* در پایان جمله. جمله درست است."
+      de: "*Machen Sie* am Anfang, das Präfix *zu* am Ende. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Gehst Sie bitte geradeaus!
+    answer: Gehst
+    explanation:
+      en: "With *Sie* the verb is the *Sie* form: *Gehen Sie bitte geradeaus!*"
+      fa: "با *Sie* فعل به صرف *Sie* می‌آید: *Gehen Sie bitte geradeaus!*"
+      de: "Mit *Sie* steht die *Sie*-Form: *Gehen Sie bitte geradeaus!*"
+  - id: error-2
+    type: find-error
+    prompt: Sein Sie bitte pünktlich!
+    answer: Sein
+    explanation:
+      en: "The imperative of *sein* is *seien*, not the infinitive: *Seien Sie bitte pünktlich!*"
+      fa: "امر *sein* با *Sie* می‌شود *seien*، نه خودِ مصدر: *Seien Sie bitte pünktlich!*"
+      de: "Der Imperativ von *sein* ist *seien*, nicht der Infinitiv: *Seien Sie bitte pünktlich!*"
+  - id: match-1
+    type: matching
+    answer:
+      - [kommen, Kommen Sie!]
+      - [sein, Seien Sie!]
+      - [anfangen, Fangen Sie an!]
+      - [lesen, Lesen Sie!]
+    explanation:
+      en: "The *Sie* form, verb first; only *sein* is special, and a prefix goes to the end."
+      fa: "صرف *Sie* با فعل در آغاز؛ فقط *sein* شکل ویژه دارد و پیشوند به پایان می‌رود."
+      de: "Die *Sie*-Form, das Verb am Anfang. Nur *sein* ist besonders, das Präfix steht am Ende."
+  - id: order-1
+    type: word-order
+    answers:
+      - [kommen, Sie, bitte, mit]
+      - [bitte, kommen, Sie, mit]
+    end: "!"
+    explanation:
+      en: "*Kommen Sie* stays together, *mit* goes to the end, and *bitte* can stand after *Sie* or first."
+      fa: "*Kommen Sie* با هم می‌مانند، *mit* به پایان جمله می‌رود و *bitte* می‌تواند پس از *Sie* یا در آغاز بیاید."
+      de: "*Kommen Sie* bleibt zusammen, *mit* steht am Ende. *Bitte* steht nach *Sie* oder am Anfang."
+
+review:
+  reviewer: an independent AI agent (Claude, fresh blind subagent; not a person)
+  date: 2026-11-28
+  pool: eb398c9c5cecd182

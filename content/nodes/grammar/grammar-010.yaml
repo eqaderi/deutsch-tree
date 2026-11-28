@@ -4,10 +4,296 @@ kind: grammar
 level: A1
 chapter: a1-verb-patterns
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062]
 title:
   en: "*es gibt* + *Akkusativ*"
   fa: "*es gibt* با *Akkusativ*"
   de: "*es gibt* + Akkusativ"
+
+explanations:
+  en:
+    rule: >
+      *Es gibt* says that something exists or is to be found somewhere: "there
+      is", "there are". *Es* never changes and the verb is always *gibt*,
+      also with a plural: *Es gibt viele Cafés.* What there is stands in the
+      *Akkusativ*, so a masculine noun changes: *ein* becomes *einen*, *kein*
+      becomes *keinen* (*Hier gibt es keinen Aufzug.*). When another part
+      fills position 1, or in a question, *es* comes right after *gibt*:
+      *Hier gibt es …*, *Gibt es hier ein Café?*
+  fa:
+    rule: >
+      *es gibt* می‌گوید چیزی وجود دارد یا جایی پیدا می‌شود؛ مانند «هست» و
+      «وجود دارد» در فارسی. *es* هرگز تغییر نمی‌کند و فعل همیشه *gibt* است،
+      حتی با اسم جمع: *Es gibt viele Cafés.* آنچه وجود دارد در حالت
+      *Akkusativ* (حالت مفعولی) می‌آید، پس اسم مذکر تغییر می‌کند: *ein* به
+      *einen* و *kein* به *keinen* تبدیل می‌شود (*Hier gibt es keinen
+      Aufzug.*). اگر جزء دیگری جایگاه اول را پر کند، یا در جملهٔ پرسشی، *es*
+      بلافاصله پس از *gibt* می‌آید: *Hier gibt es …*، *Gibt es hier ein
+      Café?*
+  de:
+    rule: >
+      Mit *es gibt* sagt man, dass etwas da ist. *Es* bleibt immer gleich,
+      und das Verb ist immer *gibt*, auch im Plural: *Es gibt viele Cafés.*
+      Danach steht der Akkusativ: Bei maskulinen Nomen wird *ein* zu *einen*
+      und *kein* zu *keinen* (*Hier gibt es keinen Aufzug.*). Steht etwas
+      anderes auf Position 1 oder ist es eine Frage, kommt *es* direkt nach
+      *gibt*: *Hier gibt es …*, *Gibt es hier ein Café?*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: "With *kein*", fa: "با *kein*", de: "Mit *kein*" }
+    - { en: "Example with *es gibt*", fa: "مثال با *es gibt*", de: "Beispiel mit *es gibt*" }
+  rows:
+    - [der Park, den Park, einen Park, keinen Park, Hier gibt es einen Park.]
+    - [die Apotheke, die Apotheke, eine Apotheke, keine Apotheke, Hier gibt es keine Apotheke.]
+    - [das Kino, das Kino, ein Kino, kein Kino, Gibt es hier ein Kino?]
+    - [die Geschäfte (Plural), die Geschäfte, –, keine Geschäfte, Es gibt viele Geschäfte.]
+
+examples:
+  - de: In diesem Haus gibt es keinen Aufzug.
+    en: There is no lift in this building.
+    fa: این ساختمان آسانسور ندارد.
+  - de: Gibt es hier ein Café?
+    en: Is there a café here?
+    fa: این‌جا کافه‌ای هست؟
+  - de: In unserer Stadt gibt es einen Park.
+    en: There is a park in our town.
+    fa: در شهر ما یک پارک هست.
+  - de: Im Zentrum gibt es viele Geschäfte.
+    en: There are many shops in the centre.
+    fa: در مرکز شهر مغازه‌های زیادی هست.
+  - de: Heute gibt es Fisch.
+    en: There's fish today.
+    fa: امروز غذا ماهی است.
+  - de: Gibt es noch Brot?
+    en: Is there any bread left?
+    fa: هنوز نان داریم؟
+  - de: Im Kühlschrank gibt es keine Milch.
+    en: There's no milk in the fridge.
+    fa: در یخچال شیر نیست.
+  - de: Hier gibt es eine Apotheke.
+    en: There's a pharmacy here.
+    fa: این‌جا یک داروخانه هست.
+
+mistakes:
+  - wrong: Hier gibt es ein Park.
+    right: Hier gibt es einen Park.
+    why:
+      en: "After *es gibt* comes the *Akkusativ*: masculine *ein* becomes *einen*."
+      fa: "پس از *es gibt* حالت *Akkusativ* می‌آید: *ein* مذکر به *einen* تبدیل می‌شود."
+      de: "Nach *es gibt* steht der Akkusativ: Maskulin wird *ein* zu *einen*."
+  - wrong: Es geben viele Cafés.
+    right: Es gibt viele Cafés.
+    why:
+      en: "The verb is always *gibt*, also before a plural."
+      fa: "فعل همیشه *gibt* است، حتی پیش از اسم جمع."
+      de: "Das Verb ist immer *gibt*, auch mit Plural."
+  - wrong: In diesem Haus gibt es kein Aufzug.
+    right: In diesem Haus gibt es keinen Aufzug.
+    why:
+      en: "*Der Aufzug* is masculine, so *kein* becomes *keinen* in the *Akkusativ*."
+      fa: "*Aufzug* اسم مذکر (*der*) است، پس *kein* در حالت *Akkusativ* می‌شود *keinen*."
+      de: "*Der Aufzug* ist maskulin. Im Akkusativ wird *kein* zu *keinen*."
+  - wrong: Hier es gibt ein Kino.
+    right: Hier gibt es ein Kino.
+    why:
+      en: "*Gibt* stays in position 2, so *es* comes after it."
+      fa: "*gibt* در جایگاه دوم می‌ماند، پس *es* پس از آن می‌آید."
+      de: "*Gibt* steht auf Position 2, *es* kommt danach."
+
+# 21 questions, every question type.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: In der Stadt gibt es ___ Park.
+    options: [einen, ein, einem]
+    answer: einen
+    explanation:
+      en: "*Der Park* is masculine, and after *es gibt* comes the *Akkusativ*: *einen Park*."
+      fa: "*Park* اسم مذکر (*der*) است و پس از *es gibt* حالت *Akkusativ* می‌آید: *einen Park*."
+      de: "*Der Park* ist maskulin. Nach *es gibt* steht der Akkusativ: *einen Park*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Hier gibt es ___ Supermarkt.
+    options: [keinen, kein, keiner]
+    answer: keinen
+    explanation:
+      en: "*Der Supermarkt* is masculine: in the *Akkusativ*, *kein* becomes *keinen*."
+      fa: "*Supermarkt* اسم مذکر (*der*) است: در حالت *Akkusativ*، *kein* می‌شود *keinen*."
+      de: "*Der Supermarkt* ist maskulin. Im Akkusativ wird *kein* zu *keinen*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Im Zentrum ___ es viele Cafés.
+    options: [gibt, geben, gebt]
+    answer: gibt
+    explanation:
+      en: "The verb is always *gibt*, also before a plural like *viele Cafés*."
+      fa: "فعل همیشه *gibt* است، حتی پیش از اسم جمعی مانند *viele Cafés*."
+      de: "Das Verb ist immer *gibt*, auch mit Plural wie *viele Cafés*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Gibt es hier ___ Apotheke?
+    options: [eine, einen, ein]
+    answer: eine
+    explanation:
+      en: "*Die Apotheke* is feminine, and feminine *eine* does not change in the *Akkusativ*."
+      fa: "*Apotheke* اسم مؤنث (*die*) است و *eine* مؤنث در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Die Apotheke* ist feminin. *Eine* bleibt im Akkusativ gleich."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Gibt es hier ein Kino?, Gibt es hier einen Kino?, Gibt hier es ein Kino?]
+    answer: Gibt es hier ein Kino?
+    explanation:
+      en: "*Das Kino* is neuter, so *ein* stays; in the question *es* comes right after *gibt*."
+      fa: "*Kino* اسم خنثی (*das*) است، پس *ein* تغییر نمی‌کند؛ در جملهٔ پرسشی *es* بلافاصله پس از *gibt* می‌آید."
+      de: "*Das Kino* ist neutral, *ein* bleibt. In der Frage kommt *es* direkt nach *gibt*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "hier / es gibt / ein Bahnhof"
+    options: [Hier gibt es einen Bahnhof., Hier gibt es ein Bahnhof., Hier es gibt einen Bahnhof.]
+    answer: Hier gibt es einen Bahnhof.
+    explanation:
+      en: "*Gibt* in position 2, *es* after it, and masculine *einen* in the *Akkusativ*."
+      fa: "*gibt* در جایگاه دوم، *es* پس از آن، و *einen* مذکر در حالت *Akkusativ*."
+      de: "*Gibt* auf Position 2, *es* danach, und *einen* (maskulin) im Akkusativ."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Im Kühlschrank gibt es ___ Eier mehr.
+    options: [keine, keinen, kein]
+    answer: keine
+    explanation:
+      en: "*Eier* is plural, and the plural of *kein* is *keine*."
+      fa: "*Eier* جمع است و *kein* در جمع می‌شود *keine*."
+      de: "*Eier* ist Plural. Im Plural heißt es *keine*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: In unserem Dorf ___ es zwei Schulen.
+    options: [gibt, geben, gebt]
+    answer: gibt
+    explanation:
+      en: "*Es gibt* never changes: *es gibt zwei Schulen*."
+      fa: "*es gibt* هرگز تغییر نمی‌کند: *es gibt zwei Schulen*."
+      de: "*Es gibt* bleibt immer gleich: *es gibt zwei Schulen*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Hier gibt es ___ (ein) Bäckerei.
+    answers: [eine]
+    explanation:
+      en: "*Die Bäckerei* is feminine: *eine Bäckerei*, also in the *Akkusativ*."
+      fa: "*Bäckerei* اسم مؤنث (*die*) است: *eine Bäckerei*، در حالت *Akkusativ* هم."
+      de: "*Die Bäckerei* ist feminin: *eine Bäckerei*, auch im Akkusativ."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: In diesem Haus gibt es ___ (kein) Aufzug.
+    answers: [keinen]
+    explanation:
+      en: "*Der Aufzug* is masculine: *keinen Aufzug* in the *Akkusativ*."
+      fa: "*Aufzug* اسم مذکر (*der*) است: در حالت *Akkusativ* می‌شود *keinen Aufzug*."
+      de: "*Der Aufzug* ist maskulin: im Akkusativ *keinen Aufzug*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (geben) es hier einen Parkplatz?
+    answers: [Gibt]
+    explanation:
+      en: "The verb of *es gibt* is *gibt*; it starts the question, so it has a capital."
+      fa: "فعل *es gibt* همان *gibt* است و چون در آغاز جملهٔ پرسشی آمده، با حرف بزرگ نوشته می‌شود."
+      de: "Das Verb ist *gibt*. Am Satzanfang schreibt man groß."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Heute gibt es ___ (ein) Test.
+    answers: [einen]
+    explanation:
+      en: "*Der Test* is masculine: *einen Test* in the *Akkusativ*."
+      fa: "*Test* اسم مذکر (*der*) است: در حالت *Akkusativ* می‌شود *einen Test*."
+      de: "*Der Test* ist maskulin: im Akkusativ *einen Test*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: In der Nähe gibt es ___ (kein) Kino.
+    answers: [kein]
+    explanation:
+      en: "*Das Kino* is neuter, and neuter *kein* does not change in the *Akkusativ*."
+      fa: "*Kino* اسم خنثی (*das*) است و *kein* خنثی در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Das Kino* ist neutral. *Kein* bleibt im Akkusativ gleich."
+  - id: true-1
+    type: true-false
+    prompt: Es gibt hier keinen Bus.
+    answer: true
+    explanation:
+      en: "*Der Bus* is masculine, so *keinen Bus*. The sentence is correct."
+      fa: "*Bus* اسم مذکر (*der*) است، پس *keinen Bus*. جمله درست است."
+      de: "*Der Bus* ist maskulin, also *keinen Bus*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Es geben viele Restaurants.
+    answer: false
+    explanation:
+      en: "The verb is always *gibt*: *Es gibt viele Restaurants.*"
+      fa: "فعل همیشه *gibt* است: *Es gibt viele Restaurants.*"
+      de: "Das Verb ist immer *gibt*: *Es gibt viele Restaurants.*"
+  - id: true-3
+    type: true-false
+    prompt: Hier gibt es ein Supermarkt.
+    answer: false
+    explanation:
+      en: "*Der Supermarkt* is masculine: *Hier gibt es einen Supermarkt.*"
+      fa: "*Supermarkt* اسم مذکر (*der*) است: *Hier gibt es einen Supermarkt.*"
+      de: "*Der Supermarkt* ist maskulin: *Hier gibt es einen Supermarkt.*"
+  - id: error-1
+    type: find-error
+    prompt: In meiner Straße gibt es ein Spielplatz.
+    answer: ein
+    explanation:
+      en: "*Der Spielplatz* is masculine, so the *Akkusativ* is *einen Spielplatz*."
+      fa: "*Spielplatz* اسم مذکر (*der*) است، پس در حالت *Akkusativ* می‌شود *einen Spielplatz*."
+      de: "*Der Spielplatz* ist maskulin. Im Akkusativ heißt es *einen Spielplatz*."
+  - id: error-2
+    type: find-error
+    prompt: Gibt es hier keine Arzt?
+    answer: keine
+    explanation:
+      en: "*Der Arzt* is masculine: *Gibt es hier keinen Arzt?*"
+      fa: "*Arzt* اسم مذکر (*der*) است: *Gibt es hier keinen Arzt?*"
+      de: "*Der Arzt* ist maskulin: *Gibt es hier keinen Arzt?*"
+  - id: match-1
+    type: matching
+    answer:
+      - [der Tisch, Es gibt einen Tisch.]
+      - [die Lampe, Es gibt eine Lampe.]
+      - [das Bett, Es gibt ein Bett.]
+      - [die Stühle, Es gibt Stühle.]
+    explanation:
+      en: "Only the masculine changes: *einen Tisch*; *eine Lampe* and *ein Bett* stay, and a plural has no *ein*."
+      fa: "فقط مذکر تغییر می‌کند: *einen Tisch*؛ *eine Lampe* و *ein Bett* همان می‌مانند و جمع *ein* ندارد."
+      de: "Nur maskulin ändert sich: *einen Tisch*. *Eine Lampe* und *ein Bett* bleiben, der Plural hat kein *ein*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [gibt, es, noch, Brot]
+    end: "?"
+    explanation:
+      en: "In a yes/no question *gibt* comes first and *es* right after it: *Gibt es noch Brot?*"
+      fa: "در پرسش بله و خیر، *gibt* در آغاز می‌آید و *es* بلافاصله پس از آن: *Gibt es noch Brot?*"
+      de: "In einer Ja/Nein-Frage steht *gibt* am Anfang, *es* direkt danach: *Gibt es noch Brot?*"
+  - id: order-2
+    type: word-order
+    answers:
+      - [im Zentrum, gibt, es, viele Cafés]
+      - [es, gibt, viele Cafés, im Zentrum]
+      - [es, gibt, im Zentrum, viele Cafés]
+      - [viele Cafés, gibt, es, im Zentrum]
+    explanation:
+      en: "*Gibt* stays in position 2; when *es* is not in position 1, it comes right after *gibt*."
+      fa: "*gibt* در جایگاه دوم می‌ماند؛ اگر *es* در جایگاه اول نباشد، بلافاصله پس از *gibt* می‌آید."
+      de: "*Gibt* steht auf Position 2. Steht *es* nicht auf Position 1, kommt es direkt nach *gibt*."
+
+review:
+  reviewer: two independent AI agents (Claude, fresh blind subagents; the second
+    answered order-1 after it was rewritten; not a person)
+  date: 2026-11-28
+  pool: 48eeddab1c1d7a98
