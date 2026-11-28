@@ -1,13 +1,377 @@
-# Grammar list row 207.
+# Grammar list row 207. The negative of "noch" (nicht mehr, kein … mehr) is
+# grammar-148; here it is the counterpart of "schon".
 id: grammar-207
 kind: grammar
 level: A2
 chapter: a2-adverbs
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-148]
 title:
   en: "*schon* / *noch* and their negative answers"
   fa: "*schon* و *noch* و پاسخ‌های منفی آن‌ها"
   de: "*schon* / *noch* und ihre negativen Antworten"
+
+explanations:
+  en:
+    rule: >
+      *Schon* (already) says that something has happened by now: *Hast du die
+      Hausaufgaben schon gemacht?* *Noch* (still) says that something goes on
+      and has not stopped: *Die Kinder schlafen noch.* Each has its own
+      negative answer. *Schon* becomes *noch nicht* (not yet): *Nein, noch
+      nicht.* *Schon einmal* (*schon mal*, ever) becomes *noch nie* (never so
+      far): *Warst du schon einmal in Wien? – Nein, noch nie.* *Schon etwas*
+      becomes *noch nichts*, and *schon ein* becomes *noch kein*: *Nein, ich
+      habe noch keine Wohnung.* *Noch* becomes *nicht mehr* (not any more), and
+      *noch* with a noun becomes *kein … mehr*: *Hast du noch Hunger? – Nein,
+      ich habe keinen Hunger mehr.* So the negative of *schon* keeps *noch*:
+      it has not happened yet, but it may. The negative of *noch* has *mehr*:
+      it is over.
+  fa:
+    rule: >
+      *schon* (دیگر، تاکنون) می‌گوید کاری تا این لحظه انجام شده است: *Hast du
+      die Hausaufgaben schon gemacht?* *noch* (هنوز) می‌گوید چیزی ادامه دارد و
+      تمام نشده است: *Die Kinder schlafen noch.* هر کدام پاسخ منفی خودش را
+      دارد. *schon* به *noch nicht* (هنوز نه) تبدیل می‌شود: *Nein, noch nicht.*
+      *schon einmal* (*schon mal*، تاکنون) به *noch nie* (تاکنون هرگز): *Warst
+      du schon einmal in Wien? – Nein, noch nie.* *schon etwas* به *noch nichts*
+      و *schon ein* به *noch kein*: *Nein, ich habe noch keine Wohnung.* *noch*
+      به *nicht mehr* (دیگر نه) تبدیل می‌شود و *noch* همراه اسم به *kein …
+      mehr*: *Hast du noch Hunger? – Nein, ich habe keinen Hunger mehr.* پس در
+      پاسخ منفی *schon*، واژهٔ *noch* می‌ماند: کار هنوز انجام نشده، ولی ممکن
+      است انجام شود. در پاسخ منفی *noch*، واژهٔ *mehr* می‌آید: آن چیز تمام
+      شده است.
+  de:
+    rule: >
+      *Schon* sagt: Etwas ist bis jetzt passiert. *Hast du die Hausaufgaben
+      schon gemacht?* *Noch* sagt: Etwas geht weiter und ist nicht zu Ende.
+      *Die Kinder schlafen noch.* Jedes Wort hat eine eigene negative Antwort.
+      Aus *schon* wird *noch nicht*: *Nein, noch nicht.* Aus *schon einmal*
+      (*schon mal*) wird *noch nie*: *Warst du schon einmal in Wien? – Nein,
+      noch nie.* Aus *schon etwas* wird *noch nichts*, aus *schon ein* wird
+      *noch kein*: *Nein, ich habe noch keine Wohnung.* Aus *noch* wird *nicht
+      mehr*, und aus *noch* mit einem Nomen wird *kein … mehr*: *Hast du noch
+      Hunger? – Nein, ich habe keinen Hunger mehr.* Bei *schon* bleibt in der
+      Antwort also *noch*: Es ist noch nicht passiert, aber es kann kommen. Bei
+      *noch* kommt *mehr*: Es ist zu Ende.
+
+table:
+  columns:
+    - { en: Question, fa: پرسش, de: Frage }
+    - { en: Negative answer, fa: پاسخ منفی, de: Negative Antwort }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - ["schon", "noch nicht", "Ist der Bus schon da? – Nein, noch nicht."]
+    - ["schon einmal (schon mal)", "noch nie", "Warst du schon einmal in Wien? – Nein, noch nie."]
+    - ["schon etwas", "noch nichts", "Hast du schon etwas gegessen? – Nein, noch nichts."]
+    - ["schon ein", "noch kein", "Hast du schon einen Termin? – Nein, noch keinen."]
+    - ["noch", "nicht mehr", "Wohnst du noch in Köln? – Nein, nicht mehr."]
+    - ["noch + Nomen", "kein … mehr", "Hast du noch Geld? – Nein, ich habe kein Geld mehr."]
+    - ["noch etwas", "nichts mehr", "Möchten Sie noch etwas? – Nein, danke, nichts mehr."]
+
+# A line for time, with "jetzt" as a dashed line: schon before it, noch nicht
+# after it; noch across it, nicht mehr ending before it.
+diagrams:
+  - caption:
+      en: >
+        The dashed line is now (*jetzt*). *Schon*: it has happened before now.
+        *Noch nicht*: it has not happened yet, but it can come later. *Noch*: it
+        began before now and goes on. *Nicht mehr*: it was so before, and it is
+        over now.
+      fa: >
+        خط‌چین لحظهٔ حال است (*jetzt*). *schon*: پیش از حالا انجام شده است.
+        *noch nicht*: هنوز انجام نشده، ولی ممکن است بعداً انجام شود. *noch*:
+        پیش از حالا آغاز شده و ادامه دارد. *nicht mehr*: پیش‌تر چنین بوده و
+        حالا تمام شده است.
+      de: >
+        Die gestrichelte Linie ist *jetzt*. *Schon*: Es ist vor jetzt passiert.
+        *Noch nicht*: Es ist noch nicht passiert, aber es kann später kommen.
+        *Noch*: Es hat vor jetzt begonnen und geht weiter. *Nicht mehr*: Früher
+        war es so, jetzt ist es zu Ende.
+    svg: |
+      <svg viewBox="0 0 320 236">
+        <!-- now -->
+        <line class="guide" x1="212" y1="24" x2="212" y2="222"/>
+        <text class="label" x="212" y="16" text-anchor="middle">jetzt</text>
+        <!-- schon: a point before now -->
+        <text class="label" x="94" y="57" text-anchor="end">schon</text>
+        <line class="line" x1="104" y1="52" x2="312" y2="52"/>
+        <circle class="object" cx="166" cy="52" r="9"/>
+        <!-- noch nicht: a point after now, not there yet (dashed) -->
+        <text class="label" x="94" y="105" text-anchor="end">noch nicht</text>
+        <line class="line" x1="104" y1="100" x2="312" y2="100"/>
+        <circle class="surface" cx="266" cy="100" r="9"/>
+        <circle class="guide" cx="266" cy="100" r="9"/>
+        <!-- noch: a bar across now -->
+        <text class="label" x="94" y="153" text-anchor="end">noch</text>
+        <line class="line" x1="104" y1="148" x2="312" y2="148"/>
+        <rect class="object" x="140" y="140" width="140" height="16"/>
+        <!-- nicht mehr: a bar that ends before now -->
+        <text class="label" x="94" y="201" text-anchor="end">nicht mehr</text>
+        <line class="line" x1="104" y1="196" x2="312" y2="196"/>
+        <rect class="object" x="120" y="188" width="64" height="16"/>
+      </svg>
+
+examples:
+  - de: Hast du die Hausaufgaben schon gemacht? – Nein, noch nicht.
+    en: Have you done your homework yet? – No, not yet.
+    fa: تکلیف‌هایت را انجام داده‌ای؟ – نه، هنوز نه.
+  - de: Warst du schon einmal in Wien? – Nein, noch nie.
+    en: Have you ever been to Vienna? – No, never.
+    fa: تا حالا وین بوده‌ای؟ – نه، هرگز.
+  - de: Ist der Bus schon da? – Nein, noch nicht.
+    en: Is the bus here yet? – No, not yet.
+    fa: اتوبوس آمده است؟ – نه، هنوز نه.
+  - de: Hast du schon etwas gegessen? – Nein, ich habe noch nichts gegessen.
+    en: Have you eaten anything yet? – No, I haven't eaten anything yet.
+    fa: چیزی خورده‌ای؟ – نه، هنوز چیزی نخورده‌ام.
+  - de: Hat Lena schon einen Job? – Nein, sie hat noch keinen.
+    en: Does Lena have a job yet? – No, she doesn't have one yet.
+    fa: لنا کار پیدا کرده است؟ – نه، هنوز کاری ندارد.
+  - de: Die Kinder schlafen noch.
+    en: The children are still asleep.
+    fa: بچه‌ها هنوز خواب‌اند.
+  - de: Arbeitest du noch bei der Post? – Nein, nicht mehr.
+    en: Do you still work at the post office? – No, not any more.
+    fa: هنوز در ادارهٔ پست کار می‌کنی؟ – نه، دیگر نه.
+  - de: Hast du noch Hunger? – Nein, ich habe keinen Hunger mehr.
+    en: Are you still hungry? – No, I'm not hungry any more.
+    fa: هنوز گرسنه‌ای؟ – نه، دیگر گرسنه نیستم.
+  - de: Möchten Sie noch etwas? – Nein, danke, nichts mehr.
+    en: Would you like anything else? – No, thank you, nothing more.
+    fa: چیز دیگری میل دارید؟ – نه، ممنون، دیگر چیزی نمی‌خواهم.
+
+mistakes:
+  - wrong: Hast du schon gegessen? – Nein, schon nicht.
+    right: Hast du schon gegessen? – Nein, noch nicht.
+    why:
+      en: "The negative of *schon* is *noch nicht*: it has not happened yet."
+      fa: "پاسخ منفی *schon*، *noch nicht* است: کار هنوز انجام نشده است."
+      de: "Die negative Antwort auf *schon* ist *noch nicht*: Es ist noch nicht passiert."
+  - wrong: Wohnst du noch in Berlin? – Nein, noch nicht.
+    right: Wohnst du noch in Berlin? – Nein, nicht mehr.
+    why:
+      en: "The negative of *noch* is *nicht mehr*: you lived there, and that is over. *Noch nicht* would mean you will live there later."
+      fa: "پاسخ منفی *noch*، *nicht mehr* است: آن‌جا زندگی می‌کردی و آن دوره تمام شده است. *noch nicht* یعنی بعداً آن‌جا زندگی خواهی کرد."
+      de: "Die negative Antwort auf *noch* ist *nicht mehr*: Du hast dort gewohnt, das ist zu Ende. *Noch nicht* heißt: Das kommt erst später."
+  - wrong: Hast du noch Zeit? – Nein, ich habe noch keine Zeit.
+    right: Hast du noch Zeit? – Nein, ich habe keine Zeit mehr.
+    why:
+      en: "*Noch* with a noun becomes *kein … mehr* when it is over. *Noch kein* is the negative of *schon ein*: not yet."
+      fa: "*noch* همراه اسم، وقتی آن چیز تمام شده باشد، به *kein … mehr* تبدیل می‌شود. *noch kein* پاسخ منفی *schon ein* است، یعنی «هنوز نه»."
+      de: "*Noch* mit Nomen wird *kein … mehr*, wenn etwas zu Ende ist. *Noch kein* ist die Antwort auf *schon ein*: noch nicht."
+  - wrong: Warst du schon einmal in Rom? – Nein, schon nie.
+    right: Warst du schon einmal in Rom? – Nein, noch nie.
+    why:
+      en: "The negative of *schon einmal* is *noch nie*: never up to now."
+      fa: "پاسخ منفی *schon einmal*، *noch nie* است: تا این لحظه هرگز."
+      de: "Die negative Antwort auf *schon einmal* ist *noch nie*: bis jetzt nie."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Hast du die Hausaufgaben schon gemacht? – Nein, noch ___. Ich mache sie gleich.
+    options: [nicht, nie, mehr]
+    answer: nicht
+    explanation:
+      en: "The homework will be done soon, it just has not happened yet: *noch nicht*."
+      fa: "تکلیف به‌زودی انجام می‌شود، فقط هنوز انجام نشده است: *noch nicht*."
+      de: "Die Hausaufgaben kommen gleich, sie sind nur noch nicht gemacht: *noch nicht*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Warst du schon einmal in Wien? – Nein, ___. Aber ich möchte gern einmal hinfahren.
+    options: [noch nie, nicht mehr, schon nie]
+    answer: noch nie
+    explanation:
+      en: "The negative of *schon einmal* is *noch nie*: never up to now."
+      fa: "پاسخ منفی *schon einmal*، *noch nie* است: تا این لحظه هرگز."
+      de: "Die negative Antwort auf *schon einmal* ist *noch nie*: bis jetzt nie."
+  - id: gap-3
+    type: gap-fill
+    prompt: Früher habe ich Fußball gespielt, aber jetzt spiele ich ___.
+    options: [nicht mehr, noch nicht, noch nie]
+    answer: nicht mehr
+    explanation:
+      en: "He played before, and that is over now: *nicht mehr*."
+      fa: "پیش‌تر فوتبال بازی می‌کرد و حالا این کار تمام شده است: *nicht mehr*."
+      de: "Früher hat er gespielt, jetzt ist das zu Ende: *nicht mehr*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Milch ist alle. Wir haben ___ Milch mehr.
+    options: [keine, nicht, noch]
+    answer: keine
+    explanation:
+      en: "A noun that is used up takes *kein … mehr*; *Milch* is a *die* noun: *keine Milch mehr*."
+      fa: "برای اسمی که تمام شده است *kein … mehr* می‌آید؛ *Milch* اسم مؤنث (*die*) است: *keine Milch mehr*."
+      de: "Ein Nomen, das alle ist: *kein … mehr*. *Milch* hat den Artikel *die*: *keine Milch mehr*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Hast du schon etwas gegessen? – Nein, ich habe noch ___ gegessen.
+    options: [nichts, nicht etwas, kein]
+    answer: nichts
+    explanation:
+      en: "The negative of *schon etwas* is *noch nichts*."
+      fa: "پاسخ منفی *schon etwas*، *noch nichts* است."
+      de: "Die negative Antwort auf *schon etwas* ist *noch nichts*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Hast du schon einen Termin beim Arzt? – Nein, noch ___.
+    options: [keinen, kein, keine]
+    answer: keinen
+    explanation:
+      en: "*Schon einen Termin* becomes *noch keinen*, with the same ending as *einen*: *der Termin* in the *Akkusativ*."
+      fa: "*schon einen Termin* به *noch keinen* تبدیل می‌شود، با همان پایانهٔ *einen*: *der Termin* در حالت *Akkusativ*."
+      de: "Aus *schon einen Termin* wird *noch keinen*, mit der gleichen Endung wie *einen*: *der Termin* im Akkusativ."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ist das Essen schon fertig?
+    options:
+      - Nein, noch nicht.
+      - Nein, nicht mehr.
+      - Nein, noch nie.
+    answer: Nein, noch nicht.
+    explanation:
+      en: "The food will be ready soon, it is just not ready yet: *noch nicht*."
+      fa: "غذا به‌زودی آماده می‌شود، فقط هنوز آماده نیست: *noch nicht*."
+      de: "Das Essen ist bald fertig, nur jetzt noch nicht: *noch nicht*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Lena wohnt nicht mehr in Berlin.
+    options:
+      - Früher hat sie in Berlin gewohnt.
+      - Sie wohnt jetzt in Berlin.
+      - Sie war noch nie in Berlin.
+    answer: Früher hat sie in Berlin gewohnt.
+    explanation:
+      en: "*Nicht mehr* says it was so before and is over now: she used to live in Berlin."
+      fa: "*nicht mehr* می‌گوید چیزی پیش‌تر بوده و حالا تمام شده است: او قبلاً در برلین زندگی می‌کرد."
+      de: "*Nicht mehr* heißt: Früher war es so, jetzt nicht. Sie hat früher in Berlin gewohnt."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Tom hat noch keinen Führerschein.
+    options:
+      - Er hat jetzt keinen, aber vielleicht bald.
+      - Er hatte früher einen Führerschein.
+      - Er möchte nie einen Führerschein.
+    answer: Er hat jetzt keinen, aber vielleicht bald.
+    explanation:
+      en: "*Noch kein* means not yet: he has none now, but it may come."
+      fa: "*noch kein* یعنی «هنوز نه»: اکنون گواهی‌نامه ندارد، ولی ممکن است بگیرد."
+      de: "*Noch kein* heißt: jetzt nicht, aber es kann noch kommen."
+  - id: true-1
+    type: true-false
+    prompt: Hast du schon gegessen? – Nein, schon nicht.
+    answer: false
+    explanation:
+      en: "The negative of *schon* is *noch nicht*: *Nein, noch nicht.*"
+      fa: "پاسخ منفی *schon*، *noch nicht* است: *Nein, noch nicht.*"
+      de: "Die negative Antwort auf *schon* ist *noch nicht*: *Nein, noch nicht.*"
+  - id: true-2
+    type: true-false
+    prompt: Wohnst du noch in Hamburg? – Nein, nicht mehr.
+    answer: true
+    explanation:
+      en: "The negative of *noch* is *nicht mehr*. The sentence is correct."
+      fa: "پاسخ منفی *noch*، *nicht mehr* است. جمله درست است."
+      de: "Die negative Antwort auf *noch* ist *nicht mehr*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Hast du schon ein Fahrrad? – Nein, noch keins.
+    answer: true
+    explanation:
+      en: "*Schon ein Fahrrad* becomes *noch keins* (*das Fahrrad*). The sentence is correct."
+      fa: "*schon ein Fahrrad* به *noch keins* تبدیل می‌شود (*das Fahrrad*). جمله درست است."
+      de: "Aus *schon ein Fahrrad* wird *noch keins* (*das Fahrrad*). Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Warst du schon einmal in Rom? – Nein, schon nie.
+    answer: false
+    explanation:
+      en: "The negative of *schon einmal* is *noch nie*: *Nein, noch nie.*"
+      fa: "پاسخ منفی *schon einmal*، *noch nie* است: *Nein, noch nie.*"
+      de: "Die negative Antwort auf *schon einmal* ist *noch nie*: *Nein, noch nie.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ist der Bus schon da? – Nein, er ist noch ___ da.
+    answers: [nicht]
+    explanation:
+      en: "The negative of *schon* is *noch nicht*: the bus is not here yet."
+      fa: "پاسخ منفی *schon*، *noch nicht* است: اتوبوس هنوز نیامده است."
+      de: "Die negative Antwort auf *schon* ist *noch nicht*: Der Bus ist noch nicht da."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Hast du schon eine Wohnung? – Nein, ich habe noch ___ (kein) Wohnung.
+    answers: [keine]
+    explanation:
+      en: "*Schon eine* becomes *noch keine*: *Wohnung* is a *die* noun."
+      fa: "*schon eine* به *noch keine* تبدیل می‌شود: *Wohnung* اسم مؤنث (*die*) است."
+      de: "Aus *schon eine* wird *noch keine*: *Wohnung* hat den Artikel *die*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Früher hat er hier gewohnt. Jetzt wohnt er ___ hier.
+    answers: [nicht mehr]
+    explanation:
+      en: "He lived here before, and that is over: *nicht mehr*."
+      fa: "پیش‌تر این‌جا زندگی می‌کرد و آن دوره تمام شده است: *nicht mehr*."
+      de: "Früher hat er hier gewohnt, das ist zu Ende: *nicht mehr*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich habe großen Hunger. Ich habe heute noch ___ (etwas) gegessen.
+    answers: [nichts]
+    explanation:
+      en: "The negative of *schon etwas* is *noch nichts*: nothing up to now."
+      fa: "پاسخ منفی *schon etwas*، *noch nichts* است: تا این لحظه هیچ‌چیز."
+      de: "Die negative Antwort auf *schon etwas* ist *noch nichts*: bis jetzt nichts."
+  - id: error-1
+    type: find-error
+    prompt: Wir haben kein Brot noch.
+    answer: noch
+    explanation:
+      en: "Something used up is *kein … mehr*: *Wir haben kein Brot mehr.*"
+      fa: "برای چیزی که تمام شده است *kein … mehr* می‌آید: *Wir haben kein Brot mehr.*"
+      de: "Wenn etwas alle ist, sagt man *kein … mehr*: *Wir haben kein Brot mehr.*"
+  - id: error-2
+    type: find-error
+    prompt: Ich war schon nie in Italien.
+    answer: schon
+    explanation:
+      en: "Never up to now is *noch nie*: *Ich war noch nie in Italien.*"
+      fa: "«تاکنون هرگز» در آلمانی *noch nie* است: *Ich war noch nie in Italien.*"
+      de: "Bis jetzt nie heißt *noch nie*: *Ich war noch nie in Italien.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [die Kinder, schlafen, noch]
+      - [noch, schlafen, die Kinder]
+    explanation:
+      en: "The verb stays in position 2. *Noch* usually stands after the verb; at the start, the subject goes after the verb."
+      fa: "فعل در جایگاه دوم می‌ماند. *noch* معمولاً پس از فعل می‌آید؛ اگر در آغاز بیاید، فاعل پس از فعل می‌رود."
+      de: "Das Verb bleibt auf Position 2. *Noch* steht meistens nach dem Verb. Steht es am Anfang, kommt das Subjekt nach dem Verb."
+  - id: order-2
+    type: word-order
+    answers:
+      - [er, arbeitet, nicht mehr, hier]
+      - [er, arbeitet, hier, nicht mehr]
+      - [hier, arbeitet, er, nicht mehr]
+    explanation:
+      en: "The verb stays in position 2. *Nicht mehr* stays together and stands before or after *hier*."
+      fa: "فعل در جایگاه دوم می‌ماند. *nicht mehr* با هم می‌آیند و پیش یا پس از *hier* قرار می‌گیرند."
+      de: "Das Verb bleibt auf Position 2. *Nicht mehr* bleibt zusammen und steht vor oder nach *hier*."
+  - id: match-1
+    type: matching
+    answer:
+      - [schon, noch nicht]
+      - [schon einmal, noch nie]
+      - [schon etwas, noch nichts]
+      - [noch, nicht mehr]
+    explanation:
+      en: "Each question word with its negative answer: *schon* – *noch nicht*, *schon einmal* – *noch nie*, *schon etwas* – *noch nichts*, *noch* – *nicht mehr*."
+      fa: "هر واژه با پاسخ منفی‌اش: *schon* و *noch nicht*، *schon einmal* و *noch nie*، *schon etwas* و *noch nichts*، *noch* و *nicht mehr*."
+      de: "Jedes Wort mit seiner negativen Antwort: *schon* – *noch nicht*, *schon einmal* – *noch nie*, *schon etwas* – *noch nichts*, *noch* – *nicht mehr*."
+
+review:
+  reviewer: an independent AI agent (fresh Claude Opus 5.5 subagent, blind pass on
+    the review sheet only; not a person)
+  date: 2026-11-28
+  pool: 13fb3de8b5c1e4b3

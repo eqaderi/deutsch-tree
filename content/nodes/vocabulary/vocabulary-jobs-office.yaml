@@ -1,39 +1,388 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-jobs-office
 kind: vocabulary
 level: A2
 chapter: a2-words-school-work
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Jobs and the workplace"
   fa: "شغل‌ها و محل کار"
   de: "Berufe und Arbeitsplatz"
+attemptSize: 15
 words:
   - word: Büro
+    class: noun
+    article: das
+    plural: Büros
+    level: A2
+    meaning:
+      en: office
+      fa: دفتر کار
+    definition: ein Raum in einer Firma, in dem Leute am Schreibtisch und am Computer arbeiten
+    example:
+      de: Ich bin morgen erst ab zehn Uhr im Büro.
+      en: Tomorrow I won't be in the office until ten o'clock.
+      fa: فردا تا ساعت ده به دفتر نمی‌روم.
+
+  # The scope list gives "der/die": a man is "der Angestellte", a woman "die Angestellte".
+  # Angestellte and Mitarbeiter both name a person who works for a firm; each is right when the other is asked for.
   - word: Angestellte
+    class: noun
+    article: der
+    plural: Angestellten
+    level: A2
+    meaning:
+      en: employee (on a salary)
+      fa: کارمند (به‌ویژه در یک شرکت)
+    definition: eine Person, die in einer Firma arbeitet und jeden Monat ein festes Gehalt bekommt
+    example:
+      de: Die Bank hat in dieser Stadt dreißig Angestellte.
+      en: The bank has thirty employees in this town.
+      fa: این بانک در این شهر سی کارمند دارد.
+    alsoAccepted: [die Angestellte, der Mitarbeiter, die Mitarbeiterin, der Arbeitnehmer, die Arbeitnehmerin]
+    tooCloseTo: [Mitarbeiter]
+
   - word: Mitarbeiter
+    class: noun
+    article: der
+    plural: Mitarbeiter
+    level: A2
+    meaning:
+      en: member of staff, co-worker
+      fa: همکار، کارکن (یک شرکت)
+    definition: eine Person, die mit anderen zusammen in einer Firma oder einem Team arbeitet
+    example:
+      de: Unsere Firma hat über zweihundert Mitarbeiter.
+      en: Our company has over two hundred staff.
+      fa: شرکت ما بیش از دویست کارکن دارد.
+    alsoAccepted: [die Mitarbeiterin, der Angestellte, die Angestellte, der Kollege, die Kollegin]
+    tooCloseTo: [Angestellte]
+
   - word: Handwerker
+    class: noun
+    article: der
+    plural: Handwerker
+    level: A2
+    meaning:
+      en: tradesman, craftsman (for example a plumber or an electrician)
+      fa: استادکار، صنعتگر (مثلاً لوله‌کش یا برق‌کار)
+    definition: eine Person, die mit den Händen arbeitet und zum Beispiel Heizungen, Dächer oder Möbel macht und repariert
+    example:
+      de: Morgen kommt ein Handwerker und repariert die Heizung.
+      en: Tomorrow a tradesman is coming to repair the heating.
+      fa: فردا یک استادکار می‌آید و شوفاژ را تعمیر می‌کند.
+    alsoAccepted: [die Handwerkerin]
+
   - word: Mechaniker
+    class: noun
+    article: der
+    plural: Mechaniker
+    level: A2
+    meaning:
+      en: mechanic
+      fa: مکانیک
+    definition: eine Person, die Autos und Maschinen repariert
+    example:
+      de: Der Mechaniker sagt, die Bremsen sind kaputt.
+      en: The mechanic says the brakes are broken.
+      fa: مکانیک می‌گوید ترمزها خراب است.
+    alsoAccepted: [die Mechanikerin, der Mechatroniker, die Mechatronikerin]
+    tooCloseTo: [Techniker]
+
   - word: Techniker
+    class: noun
+    article: der
+    plural: Techniker
+    level: A2
+    meaning:
+      en: technician
+      fa: تکنسین
+    definition: eine Person mit einer technischen Ausbildung, die zum Beispiel Computer, Netzwerke oder Telefonanlagen einrichtet und repariert
+    example:
+      de: Heute Nachmittag kommt ein Techniker und repariert das Internet.
+      en: This afternoon a technician is coming to fix the internet.
+      fa: امروز بعدازظهر یک تکنسین می‌آید و اینترنت را درست می‌کند.
+    alsoAccepted: [die Technikerin]
+    tooCloseTo: [Mechaniker]
+
+  # Kaufmann and Kauffrau are one job, for a man and for a woman; neither is offered as a wrong meaning of the other.
   - word: Kaufmann
+    class: noun
+    article: der
+    plural: Kaufleute
+    level: A2
+    meaning:
+      en: businessman; (trained) commercial clerk (a man)
+      fa: بازرگان؛ کارمند بازرگانی (مرد)
+    definition: ein Mann, der einen Beruf im Handel gelernt hat und Waren kauft und verkauft
+    example:
+      de: Mein Onkel ist Kaufmann und hat ein kleines Geschäft.
+      en: My uncle is a businessman and has a small shop.
+      fa: عمویم بازرگان است و مغازهٔ کوچکی دارد.
+    alsoAccepted: [der Geschäftsmann]
+    tooCloseTo: [Kauffrau]
+
   - word: Kauffrau
-  - word: Gehalt
-  - word: Vertrag
+    class: noun
+    article: die
+    plural: Kauffrauen
+    level: A2
+    meaning:
+      en: businesswoman; (trained) commercial clerk (a woman)
+      fa: بازرگان؛ کارمند بازرگانی (زن)
+    definition: eine Frau, die einen Beruf im Handel gelernt hat und Waren kauft und verkauft
+    example:
+      de: Sie macht eine Ausbildung zur Kauffrau.
+      en: She is training to be a commercial clerk.
+      fa: او دورهٔ آموزش کارمندی بازرگانی را می‌گذراند.
+    alsoAccepted: [die Geschäftsfrau]
+    tooCloseTo: [Kaufmann]
+
   - word: Bewerbung
+    class: noun
+    article: die
+    plural: Bewerbungen
+    level: A2
+    meaning:
+      en: application (for a job)
+      fa: درخواست کار، تقاضانامه
+    definition: ein Brief mit Lebenslauf, mit dem man zeigt, dass man eine Arbeitsstelle haben möchte
+    example:
+      de: Ich schicke meine Bewerbung heute per E-Mail.
+      en: I'm sending my application by e-mail today.
+      fa: درخواست کارم را امروز با ایمیل می‌فرستم.
+    alsoAccepted: [das Bewerbungsschreiben]
+
   - word: bewerben
+    class: verb
+    reflexive: sich
+    level: A2
+    meaning:
+      en: to apply (for a job or a place)
+      fa: درخواست دادن (برای کار یا پذیرش)
+    definition: schreiben, dass man eine Arbeitsstelle oder einen Platz bekommen möchte
+    example:
+      de: Ich bewerbe mich bei einer Bank in Frankfurt.
+      en: I'm applying to a bank in Frankfurt.
+      fa: برای کار در بانکی در فرانکفورت درخواست می‌دهم.
+
+  - word: Vertrag
+    class: noun
+    article: der
+    plural: Verträge
+    level: A2
+    meaning:
+      en: contract
+      fa: قرارداد
+    definition: ein Papier, auf dem steht, was zwei Seiten miteinander ausgemacht haben, und das beide unterschreiben
+    example:
+      de: Ich habe den Vertrag gestern unterschrieben.
+      en: I signed the contract yesterday.
+      fa: دیروز قرارداد را امضا کردم.
+    alsoAccepted: [der Arbeitsvertrag]
+
+  - word: Gehalt
+    class: noun
+    article: das
+    plural: Gehälter
+    level: A2
+    meaning:
+      en: salary
+      fa: حقوق (ماهانه)
+    definition: das Geld, das man jeden Monat von seiner Firma für die Arbeit bekommt
+    example:
+      de: In der neuen Stelle bekomme ich ein höheres Gehalt.
+      en: In my new job I get a higher salary.
+      fa: در شغل تازه‌ام حقوق بیشتری می‌گیرم.
+    alsoAccepted: [der Lohn]
+
   - word: kündigen
+    class: verb
+    level: A2
+    meaning:
+      en: to quit, to hand in your notice; to cancel (a contract)
+      fa: استعفا دادن؛ فسخ کردن (قرارداد)
+    definition: sagen oder schreiben, dass eine Arbeitsstelle oder ein Vertrag bald zu Ende sein soll
+    example:
+      de: Sie hat ihre Stelle gekündigt, weil sie nach Wien zieht.
+      en: She has handed in her notice because she is moving to Vienna.
+      fa: او از کارش استعفا داده است، چون به وین می‌رود.
+
   - word: Messe
+    class: noun
+    article: die
+    plural: Messen
+    level: A2
+    meaning:
+      en: trade fair
+      fa: نمایشگاه تجاری
+    definition: eine große Ausstellung, auf der Firmen ihre neuen Produkte zeigen
+    example:
+      de: Nächste Woche fahre ich mit meiner Chefin zur Messe nach Hannover.
+      en: Next week I'm going to the trade fair in Hanover with my boss.
+      fa: هفتهٔ آینده با رئیسم به نمایشگاه تجاری هانوفر می‌روم.
+
   - word: herstellen
+    class: verb
+    level: A2
+    meaning:
+      en: to make, to produce, to manufacture
+      fa: تولید کردن، ساختن
+    definition: Waren machen, zum Beispiel in einer Fabrik
+    example:
+      de: Die Firma stellt Möbel aus Holz her.
+      en: The company makes wooden furniture.
+      fa: این شرکت مبل و اثاثیهٔ چوبی تولید می‌کند.
+    alsoAccepted: [produzieren, fertigen, erzeugen]
+
   - word: vereinbaren
-  - word: Erlaubnis
-  - word: erlaubt
-  - word: verbieten
-  - word: dringend
-  - word: geehrt
-  - word: freiwillig
-  - word: privat
+    class: verb
+    level: A2
+    meaning:
+      en: to agree on, to arrange (for example an appointment)
+      fa: توافق کردن، تعیین کردن (مثلاً وقت ملاقات)
+    definition: mit einer anderen Person zusammen etwas festmachen, zum Beispiel einen Termin
+    example:
+      de: Ich möchte gern einen Termin mit Frau Braun vereinbaren.
+      en: I would like to arrange an appointment with Ms Braun.
+      fa: می‌خواهم با خانم براون وقت ملاقات بگذارم.
+    alsoAccepted: [ausmachen, abmachen, verabreden]
+
   - word: teilnehmen
+    class: verb
+    level: A2
+    meaning:
+      en: to take part, to participate
+      fa: شرکت کردن
+    definition: bei etwas mitmachen, zum Beispiel bei einem Kurs oder bei einer Sitzung
+    example:
+      de: Nächste Woche nehme ich an einem Computerkurs teil.
+      en: Next week I'm taking part in a computer course.
+      fa: هفتهٔ آینده در یک دورهٔ رایانه شرکت می‌کنم.
+    alsoAccepted: [mitmachen]
+
   - word: ändern
+    class: verb
+    level: A2
+    meaning:
+      en: to change (something)
+      fa: تغییر دادن
+    definition: etwas anders machen
+    example:
+      de: Wir müssen den Termin leider ändern.
+      en: Unfortunately we have to change the appointment.
+      fa: متأسفانه باید وقت ملاقات را تغییر بدهیم.
+    alsoAccepted: [verändern, abändern]
+
   - word: austragen
+    class: verb
+    level: A2
+    meaning:
+      en: to deliver (newspapers or post to people's homes)
+      fa: پخش کردن، رساندن (روزنامه یا نامه به خانه‌ها)
+    definition: Zeitungen, Briefe oder Pakete zu den Leuten nach Hause bringen
+    example:
+      de: Als Schüler habe ich morgens Zeitungen ausgetragen.
+      en: When I was at school I delivered newspapers in the mornings.
+      fa: در دوران مدرسه صبح‌ها روزنامه پخش می‌کردم.
+    alsoAccepted: [zustellen, ausliefern, verteilen]
+
+  - word: Erlaubnis
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: permission
+      fa: اجازه
+    definition: das Recht, etwas zu tun, weil eine andere Person Ja gesagt hat
+    example:
+      de: Ohne Erlaubnis darfst du hier nicht parken.
+      en: You're not allowed to park here without permission.
+      fa: بدون اجازه حق نداری این‌جا پارک کنی.
+    alsoAccepted: [die Genehmigung]
+
+  - word: erlaubt
+    class: adjective
+    level: A2
+    meaning:
+      en: allowed, permitted
+      fa: مجاز
+    definition: so, dass man es tun darf und es nicht verboten ist
+    example:
+      de: Rauchen ist im Büro nicht erlaubt.
+      en: Smoking is not allowed in the office.
+      fa: سیگار کشیدن در دفتر کار مجاز نیست.
+    alsoAccepted: [gestattet, zulässig, genehmigt]
+
+  - word: verbieten
+    class: verb
+    level: A2
+    meaning:
+      en: to forbid, to ban
+      fa: ممنوع کردن، قدغن کردن
+    definition: sagen, dass eine Person etwas nicht tun darf
+    example:
+      de: Der Arzt hat mir das Rauchen verboten.
+      en: The doctor has forbidden me to smoke.
+      fa: پزشک سیگار کشیدن را برایم ممنوع کرده است.
+    alsoAccepted: [untersagen]
+
+  - word: dringend
+    class: adjective
+    level: A2
+    meaning:
+      en: urgent, urgently
+      fa: فوری، ضروری
+    definition: so wichtig, dass man es sofort machen muss
+    example:
+      de: Ich muss dringend mit Ihnen sprechen.
+      en: I need to speak to you urgently.
+      fa: باید فوراً با شما صحبت کنم.
+    alsoAccepted: [eilig]
+
+  - word: geehrt
+    class: adjective
+    level: A2
+    meaning:
+      en: dear (at the start of a formal letter, after Sehr)
+      fa: محترم، گرامی (در آغاز نامهٔ رسمی)
+    definition: das schreibt man nach „Sehr“ am Anfang von einem offiziellen Brief, zum Beispiel vor „Frau Braun“
+    example:
+      de: Sehr geehrte Damen und Herren, ich interessiere mich für die Stelle als Techniker.
+      en: Dear Sir or Madam, I am interested in the position of technician.
+      fa: خانم‌ها و آقایان محترم، به این شغل تکنسینی علاقه‌مندم.
+    alsoAccepted: [geehrte, geehrter, sehr geehrte, sehr geehrter, verehrt, verehrte, verehrter]
+
+  - word: freiwillig
+    class: adjective
+    level: A2
+    meaning:
+      en: voluntary, voluntarily
+      fa: داوطلبانه
+    definition: weil man es selbst will und nicht, weil man es muss
+    example:
+      de: Am Wochenende hilft sie freiwillig im Altenheim.
+      en: At the weekend she helps out at the old people's home as a volunteer.
+      fa: او آخر هفته‌ها داوطلبانه در خانهٔ سالمندان کمک می‌کند.
+
+  - word: privat
+    class: adjective
+    level: A2
+    meaning:
+      en: private, personal
+      fa: خصوصی، شخصی
+    definition: nur für einen selbst oder die Familie, nicht für die Arbeit und nicht für alle
+    example:
+      de: Im Büro telefoniere ich nicht privat.
+      en: I don't make personal calls at the office.
+      fa: در دفتر کار تلفن شخصی نمی‌زنم.
+    alsoAccepted: [persönlich]
+
+review:
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 29 and 7 questions)
+  date: 2026-11-28
+  pool: 32dd71d147f5f2f6

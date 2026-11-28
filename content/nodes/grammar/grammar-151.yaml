@@ -4,10 +4,380 @@ kind: grammar
 level: A2
 chapter: a2-adverbs
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-140, grammar-150]
 title:
   en: "*deshalb*, *sonst*"
   fa: "*deshalb* و *sonst*"
   de: "*deshalb*, *sonst*"
+
+explanations:
+  en:
+    rule: >
+      *Deshalb* (that's why, so) joins a result to its reason: the reason comes
+      first, *deshalb* starts the result. *Sonst* (otherwise, or else) says what
+      happens if something is not done: *Schreib es dir auf, sonst vergisst du
+      es.* Both are adverbs, not conjunctions like *und* or *denn*: at the start
+      of a clause they take position 1, so the verb comes next and the subject
+      after it: *Peter muss lernen, deshalb kommt er nicht mit.* After *und*
+      (position 0) they are position 1 too: *und deshalb bleibe ich zu Hause*.
+      *Deshalb* can also stand after the verb: *Ich bleibe deshalb zu Hause.*
+      *Denn* goes the other way: it gives the reason after the result, and the
+      subject stays before the verb: *Peter kommt nicht mit, denn er muss
+      lernen.* *Darum* and *deswegen* mean the same as *deshalb*.
+  fa:
+    rule: >
+      *deshalb* (به همین دلیل، برای همین) نتیجه را به دلیلش وصل می‌کند: نخست
+      دلیل می‌آید و جملهٔ نتیجه با *deshalb* آغاز می‌شود. *sonst* (وگرنه)
+      می‌گوید اگر کاری انجام نشود، چه پیش می‌آید: *Schreib es dir auf, sonst
+      vergisst du es.* هر دو قیدند، نه حرف ربط مانند *und* یا *denn*. وقتی در
+      آغاز جمله بیایند، خودشان جایگاه اول را می‌گیرند؛ پس فعل پس از آن‌ها می‌آید
+      و فاعل پس از فعل: *Peter muss lernen, deshalb kommt er nicht mit.* پس از
+      *und* (جایگاه صفر) هم جایگاه اول‌اند: *und deshalb bleibe ich zu Hause*.
+      *deshalb* می‌تواند پس از فعل هم بیاید: *Ich bleibe deshalb zu Hause.*
+      *denn* راه وارونه را می‌رود: دلیل را پس از نتیجه می‌آورد و فاعل پیش از
+      فعل می‌ماند: *Peter kommt nicht mit, denn er muss lernen.* *darum* و
+      *deswegen* همان معنای *deshalb* را دارند.
+  de:
+    rule: >
+      *Deshalb* verbindet einen Grund mit seiner Folge: Zuerst kommt der Grund,
+      dann die Folge mit *deshalb*. *Sonst* sagt, was passiert, wenn man etwas
+      nicht macht: *Schreib es dir auf, sonst vergisst du es.* Beide sind
+      Adverbien, keine Konjunktionen wie *und* oder *denn*. Am Anfang vom Satz
+      sind sie Position 1. Dann kommt das Verb und danach das Subjekt: *Peter
+      muss lernen, deshalb kommt er nicht mit.* Auch nach *und* (Position 0)
+      sind sie Position 1: *und deshalb bleibe ich zu Hause*. *Deshalb* kann
+      auch nach dem Verb stehen: *Ich bleibe deshalb zu Hause.* Mit *denn* ist
+      es umgekehrt: Der Grund kommt nach der Folge, und das Subjekt steht vor
+      dem Verb: *Peter kommt nicht mit, denn er muss lernen.* *Darum* und
+      *deswegen* bedeuten das Gleiche wie *deshalb*.
+
+table:
+  columns:
+    - { en: First clause, fa: جملهٔ نخست, de: Erster Satz }
+    - { en: Position 1, fa: جایگاه اول, de: Position 1 }
+    - { en: "Position 2: verb", fa: "جایگاه دوم: فعل", de: "Position 2: Verb" }
+    - { en: Subject, fa: فاعل, de: Subjekt }
+    - { en: The rest, fa: بقیهٔ جمله, de: Rest }
+  rows:
+    - ["Peter muss lernen,", deshalb, kommt, er, nicht mit.]
+    - ["Es regnet,", deshalb, nehme, ich, den Bus.]
+    - ["Mein Auto ist kaputt, und", deshalb, fahre, ich, mit dem Rad.]
+    - ["Schreib es dir auf,", sonst, vergisst, du, es.]
+    - ["Beeil dich,", sonst, verpassen, wir, den Zug.]
+
+# Which way each word points: deshalb from the reason to the result, denn from
+# the result back to the reason, sonst to what happens if you don't.
+diagrams:
+  - caption:
+      en: >
+        *Ich bin müde, deshalb schlafe ich.* The reason comes first and
+        *deshalb* starts the result. *Ich schlafe, denn ich bin müde.* The same
+        two facts the other way round: *denn* adds the reason after the result.
+        *Beeil dich, sonst kommst du zu spät.* *Sonst* says what happens if you
+        don't.
+      fa: >
+        *Ich bin müde, deshalb schlafe ich.* نخست دلیل می‌آید و جملهٔ نتیجه با
+        *deshalb* آغاز می‌شود. *Ich schlafe, denn ich bin müde.* همان دو واقعیت
+        به ترتیب وارونه: *denn* دلیل را پس از نتیجه می‌آورد. *Beeil dich, sonst
+        kommst du zu spät.* *sonst* می‌گوید اگر آن کار انجام نشود، چه پیش
+        می‌آید.
+      de: >
+        *Ich bin müde, deshalb schlafe ich.* Zuerst kommt der Grund, dann die
+        Folge mit *deshalb*. *Ich schlafe, denn ich bin müde.* Das Gleiche
+        umgekehrt: Mit *denn* kommt der Grund nach der Folge. *Beeil dich, sonst
+        kommst du zu spät.* *Sonst* sagt, was passiert, wenn man es nicht macht.
+    labels:
+      reason: { en: the reason, fa: دلیل, de: der Grund }
+      result: { en: the result, fa: نتیجه, de: die Folge }
+      advice: { en: what to do, fa: کار لازم, de: was man tun soll }
+      ifnot: { en: "if you don't", fa: اگر انجام نشود, de: wenn nicht }
+    svg: |
+      <svg viewBox="0 0 320 306">
+        <!-- deshalb: reason, then result -->
+        <rect class="surface" x="4" y="8" width="132" height="60"/>
+        <rect class="surface" x="184" y="8" width="132" height="60"/>
+        <text class="label" x="70" y="34" text-anchor="middle">Ich bin müde,</text>
+        <text class="note" x="70" y="56" text-anchor="middle">{{reason}}</text>
+        <text class="label" x="250" y="34" text-anchor="middle">deshalb …</text>
+        <text class="note" x="250" y="56" text-anchor="middle">{{result}}</text>
+        <line class="line" x1="140" y1="38" x2="172" y2="38"/>
+        <polygon class="object" points="180,38 170,32 170,44"/>
+        <text class="note" x="160" y="90" text-anchor="middle">Ich bin müde, deshalb schlafe ich.</text>
+        <!-- denn: result, then reason; the arrow points back -->
+        <rect class="surface" x="4" y="110" width="132" height="60"/>
+        <rect class="surface" x="184" y="110" width="132" height="60"/>
+        <text class="label" x="70" y="136" text-anchor="middle">Ich schlafe,</text>
+        <text class="note" x="70" y="158" text-anchor="middle">{{result}}</text>
+        <text class="label" x="250" y="136" text-anchor="middle">denn …</text>
+        <text class="note" x="250" y="158" text-anchor="middle">{{reason}}</text>
+        <line class="line" x1="148" y1="140" x2="180" y2="140"/>
+        <polygon class="object" points="140,140 150,134 150,146"/>
+        <text class="note" x="160" y="192" text-anchor="middle">Ich schlafe, denn ich bin müde.</text>
+        <!-- sonst: what to do, and what happens if not (dashed: it may not happen) -->
+        <rect class="surface" x="4" y="212" width="132" height="60"/>
+        <rect class="guide" x="184" y="212" width="132" height="60"/>
+        <text class="label" x="70" y="238" text-anchor="middle">Beeil dich,</text>
+        <text class="note" x="70" y="260" text-anchor="middle">{{advice}}</text>
+        <text class="label" x="250" y="238" text-anchor="middle">sonst …</text>
+        <text class="note" x="250" y="260" text-anchor="middle">{{ifnot}}</text>
+        <line class="guide" x1="140" y1="242" x2="172" y2="242"/>
+        <polygon class="object" points="180,242 170,236 170,248"/>
+        <text class="note" x="160" y="294" text-anchor="middle">Beeil dich, sonst kommst du zu spät.</text>
+      </svg>
+
+examples:
+  - de: Peter muss lernen, deshalb kommt er nicht mit.
+    en: Peter has to study, so he isn't coming along.
+    fa: پیتر باید درس بخواند، برای همین با ما نمی‌آید.
+  - de: Es regnet, deshalb nehme ich den Bus.
+    en: It's raining, so I'm taking the bus.
+    fa: باران می‌بارد، برای همین با اتوبوس می‌روم.
+  - de: Ich habe heute keine Zeit, deshalb rufe ich dich morgen an.
+    en: I have no time today, so I'll call you tomorrow.
+    fa: امروز وقت ندارم، برای همین فردا به تو زنگ می‌زنم.
+  - de: Mein Auto ist kaputt, und deshalb fahre ich mit dem Rad.
+    en: My car is broken, and that's why I'm going by bike.
+    fa: ماشینم خراب است و به همین دلیل با دوچرخه می‌روم.
+  - de: Ich bin erkältet. Ich bleibe deshalb zu Hause.
+    en: I have a cold. That's why I'm staying at home.
+    fa: سرما خورده‌ام. به همین دلیل در خانه می‌مانم.
+  - de: Schreib es dir auf, sonst vergisst du es.
+    en: Write it down, or else you'll forget it.
+    fa: یادداشتش کن، وگرنه فراموشش می‌کنی.
+  - de: Beeil dich, sonst verpassen wir den Zug.
+    en: Hurry up, otherwise we'll miss the train.
+    fa: عجله کن، وگرنه به قطار نمی‌رسیم.
+  - de: Wir müssen jetzt gehen, sonst kommen wir zu spät.
+    en: We have to go now, or else we'll be late.
+    fa: باید همین حالا برویم، وگرنه دیر می‌رسیم.
+  - de: Nimm eine Jacke mit, sonst wird dir kalt.
+    en: Take a jacket with you, otherwise you'll get cold.
+    fa: یک کاپشن با خودت ببر، وگرنه سردت می‌شود.
+
+mistakes:
+  - wrong: Es regnet, deshalb ich nehme den Bus.
+    right: Es regnet, deshalb nehme ich den Bus.
+    why:
+      en: "*Deshalb* is position 1, so the verb comes next and the subject after it: *deshalb nehme ich*."
+      fa: "*deshalb* جایگاه اول است، پس فعل پس از آن می‌آید و فاعل پس از فعل: *deshalb nehme ich*."
+      de: "*Deshalb* ist Position 1. Danach kommt das Verb, dann das Subjekt: *deshalb nehme ich*."
+  - wrong: Beeil dich, sonst wir verpassen den Zug.
+    right: Beeil dich, sonst verpassen wir den Zug.
+    why:
+      en: "*Sonst* is an adverb, not a conjunction: it takes position 1, and the verb follows it."
+      fa: "*sonst* قید است، نه حرف ربط: جایگاه اول را می‌گیرد و فعل پس از آن می‌آید."
+      de: "*Sonst* ist ein Adverb, keine Konjunktion. Es ist Position 1, danach kommt das Verb."
+  - wrong: Ich nehme den Bus, deshalb regnet es.
+    right: Ich nehme den Bus, denn es regnet.
+    why:
+      en: "The rain is the reason, not the result. *Deshalb* starts the result; to give the reason after the result, use *denn*."
+      fa: "باران دلیل است، نه نتیجه. جملهٔ نتیجه با *deshalb* آغاز می‌شود؛ برای آوردن دلیل پس از نتیجه، *denn* به کار می‌رود."
+      de: "Der Regen ist der Grund, nicht die Folge. Mit *deshalb* beginnt die Folge. Den Grund nach der Folge sagt man mit *denn*."
+  - wrong: Peter muss lernen, denn kommt er nicht mit.
+    right: Peter muss lernen, deshalb kommt er nicht mit.
+    why:
+      en: "Not coming along is the result of having to study, so *deshalb*, with the verb right after it. *Denn* would give a reason, with the subject first."
+      fa: "نیامدن نتیجهٔ درس خواندن است، پس *deshalb* می‌آید و فعل درست پس از آن. *denn* دلیل را می‌آورد و پس از آن نخست فاعل می‌آید."
+      de: "Er kommt nicht mit, weil er lernen muss: Das ist die Folge, also *deshalb*, direkt danach das Verb. *Denn* sagt einen Grund, danach kommt zuerst das Subjekt."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Es ist schon spät, deshalb ___ jetzt nach Hause.
+    options: [gehe ich, ich gehe, gehen ich]
+    answer: gehe ich
+    explanation:
+      en: "*Deshalb* is position 1, so the verb *gehe* comes next and *ich* after it."
+      fa: "*deshalb* جایگاه اول است، پس فعل *gehe* پس از آن می‌آید و *ich* پس از فعل."
+      de: "*Deshalb* ist Position 1. Dann kommt das Verb *gehe* und danach *ich*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich bin müde, ___ gehe ich früh ins Bett.
+    options: [deshalb, denn, sonst]
+    answer: deshalb
+    explanation:
+      en: "Going to bed early is the result of being tired, and the verb follows the gap: *deshalb*."
+      fa: "زود خوابیدن نتیجهٔ خستگی است و فعل درست پس از جای خالی آمده است: *deshalb*."
+      de: "Früh ins Bett gehen ist die Folge von müde sein, und das Verb steht direkt danach: *deshalb*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich gehe früh ins Bett, ___ ich bin müde.
+    options: [denn, deshalb, sonst]
+    answer: denn
+    explanation:
+      en: "Being tired is the reason, given after the result, and the subject *ich* comes before the verb: *denn*."
+      fa: "خستگی دلیل است که پس از نتیجه آمده و فاعل *ich* پیش از فعل است: *denn*."
+      de: "Müde sein ist der Grund. Er kommt nach der Folge, und *ich* steht vor dem Verb: *denn*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Zieh eine Jacke an, ___ wirst du krank.
+    options: [sonst, deshalb, denn]
+    answer: sonst
+    explanation:
+      en: "Getting ill is what happens if you don't put a jacket on: *sonst*."
+      fa: "بیمار شدن چیزی است که اگر کاپشن نپوشی پیش می‌آید: *sonst*."
+      de: "Krank werden passiert, wenn du keine Jacke anziehst: *sonst*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wir müssen uns beeilen, sonst ___ zu spät.
+    options: [kommen wir, wir kommen, kommt wir]
+    answer: kommen wir
+    explanation:
+      en: "*Sonst* is position 1: the verb *kommen* comes next, then *wir*."
+      fa: "*sonst* جایگاه اول است: نخست فعل *kommen* و سپس *wir*."
+      de: "*Sonst* ist Position 1: zuerst das Verb *kommen*, dann *wir*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Der Laden ist zu. Ich kaufe das Brot morgen."
+    options:
+      - Der Laden ist zu, deshalb kaufe ich das Brot morgen.
+      - Der Laden ist zu, deshalb ich kaufe das Brot morgen.
+      - Der Laden ist zu, sonst kaufe ich das Brot morgen.
+    answer: Der Laden ist zu, deshalb kaufe ich das Brot morgen.
+    explanation:
+      en: "Buying the bread tomorrow is the result of the shop being shut: *deshalb*, with the verb *kaufe* right after it."
+      fa: "خریدن نان در روز بعد نتیجهٔ بسته بودن مغازه است: *deshalb* و فعل *kaufe* درست پس از آن."
+      de: "Morgen Brot kaufen ist die Folge: *deshalb*, direkt danach das Verb *kaufe*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Nimm einen Schirm mit, ___ wirst du nass.
+    options: [sonst, deshalb, denn]
+    answer: sonst
+    explanation:
+      en: "Getting wet is what happens if you don't take an umbrella: *sonst*."
+      fa: "خیس شدن چیزی است که اگر چتر نبری پیش می‌آید: *sonst*."
+      de: "Nass werden passiert, wenn du keinen Schirm mitnimmst: *sonst*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Mein Handy ist leer, ___ kann ich dich nicht anrufen.
+    options: [deshalb, sonst, denn]
+    answer: deshalb
+    explanation:
+      en: "Not being able to call is the result of the flat phone, and the verb follows the gap: *deshalb*."
+      fa: "نتوانستن از زنگ زدن نتیجهٔ خالی بودن باتری گوشی است و فعل درست پس از جای خالی آمده است: *deshalb*."
+      de: "Nicht anrufen können ist die Folge vom leeren Handy, und das Verb steht direkt danach: *deshalb*."
+  - id: true-1
+    type: true-false
+    prompt: Es regnet, deshalb bleiben wir zu Hause.
+    answer: true
+    explanation:
+      en: "*Deshalb* in position 1, the verb *bleiben* next, then *wir*. The sentence is correct."
+      fa: "*deshalb* در جایگاه اول، فعل *bleiben* پس از آن و سپس *wir*. جمله درست است."
+      de: "*Deshalb* auf Position 1, dann das Verb *bleiben*, dann *wir*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich habe keine Zeit, deshalb ich komme nicht.
+    answer: false
+    explanation:
+      en: "*Deshalb* is position 1, so the verb comes before the subject: *deshalb komme ich nicht*."
+      fa: "*deshalb* جایگاه اول است، پس فعل پیش از فاعل می‌آید: *deshalb komme ich nicht*."
+      de: "*Deshalb* ist Position 1. Das Verb steht vor dem Subjekt: *deshalb komme ich nicht*."
+  - id: true-3
+    type: true-false
+    prompt: Mach das Fenster zu, sonst wird es kalt.
+    answer: true
+    explanation:
+      en: "*Sonst* in position 1, the verb *wird* next, then *es*. The sentence is correct."
+      fa: "*sonst* در جایگاه اول، فعل *wird* پس از آن و سپس *es*. جمله درست است."
+      de: "*Sonst* auf Position 1, dann das Verb *wird*, dann *es*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Beeil dich, sonst du verpasst den Bus.
+    answer: false
+    explanation:
+      en: "*Sonst* is position 1, so the verb comes next: *sonst verpasst du den Bus*."
+      fa: "*sonst* جایگاه اول است، پس فعل پس از آن می‌آید: *sonst verpasst du den Bus*."
+      de: "*Sonst* ist Position 1, dann kommt das Verb: *sonst verpasst du den Bus*."
+  - id: true-5
+    type: true-false
+    prompt: Ich bin krank. Ich bleibe deshalb im Bett.
+    answer: true
+    explanation:
+      en: "*Deshalb* can also stand after the verb, in the middle of the sentence. The sentence is correct."
+      fa: "*deshalb* می‌تواند پس از فعل، در میانهٔ جمله هم بیاید. جمله درست است."
+      de: "*Deshalb* kann auch nach dem Verb in der Mitte stehen. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich habe kein Geld mehr, deshalb ___ (kaufen) ich nichts.
+    answers: [kaufe]
+    explanation:
+      en: "After *deshalb* the verb comes in position 2, with the ending for *ich*: *kaufe*."
+      fa: "پس از *deshalb*، فعل با شناسهٔ *ich* در جایگاه دوم می‌آید: *kaufe*."
+      de: "Nach *deshalb* steht das Verb auf Position 2, mit der Endung für *ich*: *kaufe*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Iss etwas, sonst ___ (haben) du später Hunger.
+    answers: [hast]
+    explanation:
+      en: "After *sonst* the verb comes next, with the form for *du*: *hast*."
+      fa: "پس از *sonst*، فعل با صرف *du* می‌آید: *hast*."
+      de: "Nach *sonst* kommt das Verb, in der Form für *du*: *hast*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Anna ist krank, deshalb ___ (kommen) sie heute nicht.
+    answers: [kommt]
+    explanation:
+      en: "The subject *sie* (Anna) comes after the verb, which takes *-t*: *kommt*."
+      fa: "فاعل *sie* (آنا) پس از فعل آمده است و فعل شناسهٔ *-t* می‌گیرد: *kommt*."
+      de: "Das Subjekt *sie* (Anna) steht nach dem Verb: *kommt*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Lern die Wörter jeden Tag, ___ (deshalb / sonst) vergisst du sie.
+    answers: [sonst]
+    explanation:
+      en: "Forgetting the words is what happens if you don't learn them: *sonst*."
+      fa: "فراموش کردن واژه‌ها چیزی است که اگر آن‌ها را یاد نگیری پیش می‌آید: *sonst*."
+      de: "Die Wörter vergessen passiert, wenn du sie nicht lernst: *sonst*."
+  - id: error-1
+    type: find-error
+    prompt: Ich bin müde, denn gehe ich ins Bett.
+    answer: denn
+    explanation:
+      en: "Going to bed is the result of being tired, and the verb comes right after the connecting word: *deshalb gehe ich ins Bett*."
+      fa: "به رختخواب رفتن نتیجهٔ خستگی است و فعل درست پس از واژهٔ پیونددهنده آمده است: *deshalb gehe ich ins Bett*."
+      de: "Ins Bett gehen ist die Folge von müde sein, und das Verb steht direkt danach: *deshalb gehe ich ins Bett*."
+  - id: error-2
+    type: find-error
+    prompt: Mach schnell, deshalb fährt der Bus ohne uns.
+    answer: deshalb
+    explanation:
+      en: "The bus leaving without us is what happens if we are not quick: *sonst fährt der Bus ohne uns*."
+      fa: "رفتن اتوبوس بدون ما چیزی است که اگر عجله نکنیم پیش می‌آید: *sonst fährt der Bus ohne uns*."
+      de: "Der Bus fährt ohne uns, wenn wir nicht schnell sind: *sonst fährt der Bus ohne uns*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [deshalb, kommt, er, nicht mit]
+      - [er, kommt, deshalb, nicht mit]
+    explanation:
+      en: "The verb stays in position 2. If *deshalb* comes first, the subject goes after the verb."
+      fa: "فعل در جایگاه دوم می‌ماند. اگر *deshalb* در آغاز بیاید، فاعل پس از فعل می‌رود."
+      de: "Das Verb bleibt auf Position 2. Steht *deshalb* am Anfang, kommt das Subjekt nach dem Verb."
+  - id: order-2
+    type: word-order
+    answers:
+      - [sonst, verpassen, wir, den Zug]
+      - [wir, verpassen, sonst, den Zug]
+      - [den Zug, verpassen, wir, sonst]
+    explanation:
+      en: "The verb stays in position 2. If *sonst* comes first, the subject goes after the verb."
+      fa: "فعل در جایگاه دوم می‌ماند. اگر *sonst* در آغاز بیاید، فاعل پس از فعل می‌رود."
+      de: "Das Verb bleibt auf Position 2. Steht *sonst* am Anfang, kommt das Subjekt nach dem Verb."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Ich habe Hunger, …", deshalb koche ich jetzt.]
+      - ["Ich gehe zur Post, …", denn ich brauche Briefmarken.]
+      - ["Nimm eine Jacke mit, …", sonst wird dir kalt.]
+    explanation:
+      en: "Hunger is the reason for cooking (*deshalb*), stamps are the reason for the post office (*denn*), and the cold is what happens without a jacket (*sonst*)."
+      fa: "گرسنگی دلیل آشپزی است (*deshalb*)، تمبر دلیل رفتن به ادارهٔ پست است (*denn*) و سرما چیزی است که بی‌کاپشن پیش می‌آید (*sonst*)."
+      de: "Hunger ist der Grund fürs Kochen (*deshalb*), die Briefmarken sind der Grund für die Post (*denn*), und ohne Jacke wird dir kalt (*sonst*)."
+
+review:
+  reviewer: an independent AI agent (fresh Claude Opus 5.5 subagent, blind pass on
+    the review sheet only; not a person)
+  date: 2026-11-28
+  pool: 06e2334917b641c5
