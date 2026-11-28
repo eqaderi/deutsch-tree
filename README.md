@@ -51,7 +51,7 @@ ending, because the pipeline runs directly in Node.
 | `src/app/` | App shell: routes, tree, node page, test, backup, search page, overview page. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
 | `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. `persian-spelling.ts` holds the spelling rules of `content/persian-style.md` that a program can check, for content and strings alike. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests of code never depend on the real content. |
-| `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows" or "the exam has 15 parts" or "every vocabulary node holds words of its own level". |
+| `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows" or "the exam has 15 parts" or "every vocabulary node holds words of its own level". They read all of the content, so `vitest.config.ts` gives them a minute per test, not the default 5 seconds. |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
 | `tests/vocabulary-scope/` | The scope rule and the corrections, on invented rows of a word list. |
 | `tests/learning-engine/` | Seam 2: the learning engine's functions, with a seeded stand-in for randomness. |
