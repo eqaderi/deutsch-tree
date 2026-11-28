@@ -8,8 +8,9 @@
  * content pipeline refuses spoken text that still holds a digit and names it,
  * so the voice never meets one.
  *
- * Words the voice says wrong however they stand are respelt for the voice
- * first, from the table in pronunciations.ts.
+ * Words the voice says wrong however they stand, and abbreviations it would
+ * spell out ("z. B."), are first respelt for the voice from the table in
+ * pronunciations.ts.
  *
  * The audio key is a hash of this text, so a change here (or in that table)
  * gives new audio to exactly the items whose spoken text changes.
@@ -194,28 +195,41 @@ const RULES: Array<[RegExp, (...groups: string[]) => string]> = [
   ],
 ]
 
-/** Each word of the table, also with a capital at the start of a sentence, and how the voice is to say it. */
+/** Each entry of the table, also with a capital at the start of a sentence, and how the voice is to say it. */
 const RESPELT = new Map(
-  Object.entries(PRONUNCIATIONS).flatMap(([word, said]) => {
+  Object.entries(PRONUNCIATIONS).flatMap(([written, said]) => {
     const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1)
     return [
-      [capital(word), capital(said)],
-      [word, said],
+      [capital(written), capital(said)],
+      [written, said],
     ]
   }),
 )
-const ALTERNATIVES = [...RESPELT.keys()]
-  .sort((a, b) => b.length - a.length)
-  .map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-const WORD = new RegExp(`${WORD_START}(?:${ALTERNATIVES.join('|')})(?![\\p{L}\\p{N}])`, 'gu')
+/** A space in an entry may be left out in the text: "z. B." stands for "z.B." too. */
+const asWritten = (written: string) => written.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replaceAll(' ', ' ?')
+const ENTRY = new RegExp(
+  `${WORD_START}(?:${[...RESPELT.keys()]
+    .sort((a, b) => b.length - a.length)
+    .map(asWritten)
+    .join('|')})(?![\\p{L}\\p{N}])`,
+  'gu',
+)
 
-/** The text as the voice says it: tidied, with the words it misreads respelt and every number it knows written as words. */
+/** How the voice is to say what the table matched: "z.B." is found under "z. B.". */
+function respelt(match: string): string {
+  return RESPELT.get(match) ?? (RESPELT.get(match.replace(/\.(?=\p{L})/gu, '. ')) as string)
+}
+
+/** The text as the voice says it: tidied, with what the table respells and every number it knows written as words. */
 export function speakable(text: string): string {
   let spoken = text
     .normalize('NFC')
     .replace(/\s+/g, ' ')
     .trim()
-    .replace(WORD, (word) => RESPELT.get(word) as string)
+    // An abbreviation that ends the text keeps the full stop that also ends the sentence: "… usw." is "… und so weiter.".
+    .replace(ENTRY, (match: string, at: number, whole: string) =>
+      at > 0 && match.endsWith('.') && at + match.length === whole.length ? `${respelt(match)}.` : respelt(match),
+    )
   for (const [pattern, words] of RULES) {
     spoken = spoken.replace(pattern, (...args) => words(...(args.slice(0, -2) as string[])))
   }

@@ -126,14 +126,18 @@ test('a number in a form this does not know stays as written, so the content che
  * phonemes.
  */
 test.each([
-  ['der ICE', 'der I-C-E'],
-  ['Ich fahre mit dem ICE nach Köln.', 'Ich fahre mit dem I-C-E nach Köln.'],
+  ['der ICE', 'der I C E'],
+  ['Ich fahre mit dem ICE nach Köln.', 'Ich fahre mit dem I C E nach Köln.'],
   ['fit', 'fitt'],
   ['Ich bin wieder fit.', 'Ich bin wieder fitt.'],
   ['der Hals', 'der Halls'],
   ['Mein Hals tut weh.', 'Mein Halls tut weh.'],
   ['Fit bleiben ist schwer.', 'Fitt bleiben ist schwer.'],
-  ['Der ICE-Zug ist voll.', 'Der I-C-E-Zug ist voll.'],
+  ['Der ICE-Zug ist voll.', 'Der I C E-Zug ist voll.'],
+  // #79: the voice stresses the first syllable of these, or garbles it.
+  ['Latein ist schwer.', 'La-tein ist schwer.'],
+  ['in der Cafeteria', 'in der Kaffeterihja'],
+  ['das Sekretariat', 'das Sekretarijat'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })
@@ -144,3 +148,30 @@ test.each(['Ich habe Halsschmerzen.', 'Er geht ins Fitnessstudio.', 'Sie ist fit
     expect(speakable(written)).toBe(written)
   },
 )
+
+/**
+ * Piper spells an abbreviation out letter by letter, or worse: "z. B." comes
+ * out as "zett. Beh." and "usw." as "usf". A German reader says the words it
+ * stands for, so the voice does too (ticket #79).
+ */
+test.each([
+  ['z. B.', 'zum Beispiel'],
+  ['Ich esse gern Obst, z. B. Äpfel und Bananen.', 'Ich esse gern Obst, zum Beispiel Äpfel und Bananen.'],
+  ['Ich esse gern Obst, z.B. Äpfel.', 'Ich esse gern Obst, zum Beispiel Äpfel.'],
+  ['d. h.', 'das heißt'],
+  ['Der Kurs ist am Wochenende, d. h. am Samstag.', 'Der Kurs ist am Wochenende, das heißt am Samstag.'],
+  ['usw.', 'und so weiter'],
+  ['Im Koffer sind Hosen, Hemden, Socken usw.', 'Im Koffer sind Hosen, Hemden, Socken und so weiter.'],
+  ['bzw.', 'beziehungsweise'],
+  ['Kreuzen Sie a bzw. b an.', 'Kreuzen Sie a beziehungsweise b an.'],
+  ['vgl.', 'vergleiche'],
+  ['etc.', 'ett zetera'],
+  ['Wir brauchen Brot, Milch etc.', 'Wir brauchen Brot, Milch ett zetera.'],
+  ['Z. B. Äpfel.', 'Zum Beispiel Äpfel.'],
+])('the abbreviation in "%s" is spoken as its words', (written, spoken) => {
+  expect(speakable(written)).toBe(spoken)
+})
+
+test('a letter with a full stop that is no abbreviation is left as written', () => {
+  expect(speakable('Das ist Herr Z. Bauer.')).toBe('Das ist Herr Z. Bauer.')
+})

@@ -189,8 +189,10 @@ test('a word the voice misreads is respelt only in what the voice says: the lear
     }),
   })
 
-  const { bundle } = await compileContent(content, { requireAudio: false })
-  const [example] = (bundle?.nodes.find((node) => node.id === 'grammar-001')?.content as GrammarContent).examples
+  const { report, bundle } = await compileContent(content, { requireAudio: false })
+  expect(report.errors).toEqual([])
+  const grammar = bundle?.nodes.find((node) => node.id === 'grammar-001')?.content as GrammarContent | undefined
+  const example = grammar?.examples[0]
 
   expect(example?.de).toBe('Mein Hals tut weh.')
   expect(example?.audio.text).toBe('Mein Halls tut weh.')
