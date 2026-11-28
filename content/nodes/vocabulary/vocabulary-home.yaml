@@ -178,20 +178,21 @@ words:
       fa: آسانسور خراب است، از پله‌ها می‌رویم.
     alsoAccepted: [die Stiege, die Stufen, das Treppenhaus]
 
-  # In this sense the scope list gives "¨-e" (Stöcke); "Stockwerke" is the plural of "Stockwerk".
+  # A floor of a house. "Stöcke" are sticks, so the plural taught is "Stockwerke" (scope-corrections.yaml);
+  # after a number "Stock" stays as it is: "drei Stock hoch".
   - word: Stock
     class: noun
     article: der
-    plural: Stöcke
+    plural: Stockwerke
     level: A1
     meaning:
       en: floor, storey (of a building)
       fa: طبقه (ساختمان)
     definition: "ein Teil von einem Haus auf einer Höhe; man zählt: der erste, der zweite, der dritte"
     example:
-      de: Ich wohne im vierten Stock.
-      en: I live on the fourth floor.
-      fa: من در طبقهٔ چهارم زندگی می‌کنم.
+      de: Ich wohne im vierten Stock, und das Haus hat sechs Stockwerke.
+      en: I live on the fourth floor, and the building has six storeys.
+      fa: من در طبقهٔ چهارم زندگی می‌کنم و این ساختمان شش طبقه دارد.
     alsoAccepted: [das Stockwerk, die Etage, das Geschoss, das Obergeschoss]
 
   - word: Aufzug
