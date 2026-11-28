@@ -4,10 +4,352 @@ kind: grammar
 level: A1
 chapter: a1-prepositions
 order: 8
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-120, grammar-123, grammar-125]
 title:
   en: "*Dativ* set and *Akkusativ* set"
-  fa: "حرف‌های اضافه با *Dativ* و حرف‌های اضافه با *Akkusativ*"
+  fa: "حرف‌های اضافه با حالت *Dativ* و حرف‌های اضافه با حالت *Akkusativ*"
   de: "Präpositionen mit Dativ und Präpositionen mit Akkusativ"
+
+explanations:
+  en:
+    rule: >
+      Some prepositions always take the same case, whatever the sentence
+      says. Always *Dativ*: *aus*, *bei*, *mit*, *nach*, *seit*, *von*, *zu*.
+      Always *Akkusativ*: *durch*, *für*, *gegen*, *ohne*, *um*. Learn the two
+      sets by heart. Three of them are new: *durch* means through (*durch den
+      Park*), *gegen* against (*gegen die Wand*, *gegen Bayern*), and *um*
+      around (*um den See*); you already know *um* with a clock time. In the
+      *Dativ*, *der* and *das* become *dem*, *die* becomes *der*, and plural
+      *die* becomes *den*, with *-n* on the noun. In the *Akkusativ* only
+      *der* changes, to *den*.
+  fa:
+    rule: >
+      بعضی از حرف‌های اضافه همیشه با یک حالت می‌آیند، معنای جمله هر چه باشد.
+      همیشه با حالت *Dativ* (حالت مفعول باواسطه): *aus*، *bei*، *mit*،
+      *nach*، *seit*، *von* و *zu*. همیشه با حالت *Akkusativ* (حالت مفعولی):
+      *durch*، *für*، *gegen*، *ohne* و *um*. این دو گروه را از بر کنید. سه
+      حرف اضافه تازه است: *durch* یعنی «از میان» (*durch den Park*)، *gegen*
+      یعنی «به» یا «علیه» (*gegen die Wand* و *gegen Bayern*) و *um* یعنی «دور»
+      (*um den See*)؛ *um* را با ساعت پیش‌تر دیده‌اید. در حالت *Dativ*، *der*
+      و *das* به *dem* تبدیل می‌شوند، *die* به *der*، و *die* جمع به *den*؛
+      اسم جمع نیز *-n* می‌گیرد. در حالت *Akkusativ* فقط *der* تغییر می‌کند و
+      *den* می‌شود.
+  de:
+    rule: >
+      Nach manchen Präpositionen steht immer derselbe Kasus. Immer Dativ:
+      *aus*, *bei*, *mit*, *nach*, *seit*, *von*, *zu*. Immer Akkusativ:
+      *durch*, *für*, *gegen*, *ohne*, *um*. Lernen Sie die zwei Gruppen
+      auswendig. Neu sind *durch* (*durch den Park*), *gegen* (*gegen die
+      Wand*, *gegen Bayern*) und *um* für einen Kreis (*um den See*). *Um* mit
+      der Uhrzeit kennen Sie schon. Im Dativ werden *der* und *das* zu *dem*,
+      *die* wird zu *der*, und im Plural steht *den*, das Nomen bekommt *-n*.
+      Im Akkusativ ändert sich nur *der*: Er wird zu *den*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - en: "*Dativ*: *aus*, *bei*, *mit*, *nach*, *seit*, *von*, *zu*"
+      fa: "حالت *Dativ*: *aus*، *bei*، *mit*، *nach*، *seit*، *von*، *zu*"
+      de: "Dativ: *aus*, *bei*, *mit*, *nach*, *seit*, *von*, *zu*"
+    - en: "*Akkusativ*: *durch*, *für*, *gegen*, *ohne*, *um*"
+      fa: "حالت *Akkusativ*: *durch*، *für*، *gegen*، *ohne*، *um*"
+      de: "Akkusativ: *durch*, *für*, *gegen*, *ohne*, *um*"
+  rows:
+    - [der Park, aus dem Park, durch den Park]
+    - [die Stadt, aus der Stadt, durch die Stadt]
+    - [das Haus, aus dem Haus, um das Haus]
+    - [die Kinder (Plural), mit den Kindern, für die Kinder]
+    - [ein Freund, mit einem Freund, für einen Freund]
+    - [eine Freundin, mit einer Freundin, ohne eine Freundin]
+
+# The three Akkusativ prepositions that are new here, as movements.
+diagrams:
+  - caption:
+      en: >
+        Three *Akkusativ* prepositions as pictures: *durch* goes through
+        something, *um* goes around it, and *gegen* runs into it.
+      fa: >
+        سه حرف اضافه با حالت *Akkusativ* در تصویر: *durch* از میان چیزی
+        می‌گذرد، *um* دور آن می‌چرخد و *gegen* به آن می‌خورد.
+      de: >
+        Drei Präpositionen mit Akkusativ als Bild: *durch* geht durch etwas
+        hindurch, *um* geht im Kreis darum herum, *gegen* stößt daran.
+    svg: |
+      <svg viewBox="0 0 320 136">
+        <!-- durch: the arrow is drawn over the box, so it goes through -->
+        <rect class="surface" x="35" y="30" width="40" height="60"/>
+        <line class="line" x1="10" y1="60" x2="90" y2="60"/>
+        <polygon class="object" points="90,53 102,60 90,67"/>
+        <text class="label" x="55" y="124" text-anchor="middle">durch</text>
+        <!-- um: an arc around the circle, ending upwards on the left -->
+        <circle class="surface" cx="160" cy="60" r="22"/>
+        <path class="line" d="M 160 26 A 34 34 0 1 1 126 60"/>
+        <polygon class="object" points="120,64 126,52 132,64"/>
+        <text class="label" x="160" y="124" text-anchor="middle">um</text>
+        <!-- gegen: the arrow stops at a wall -->
+        <rect class="surface" x="285" y="20" width="14" height="80"/>
+        <line class="line" x1="220" y1="60" x2="272" y2="60"/>
+        <polygon class="object" points="272,53 285,60 272,67"/>
+        <text class="label" x="262" y="124" text-anchor="middle">gegen</text>
+      </svg>
+
+examples:
+  - de: Nach dem Kurs trinken wir einen Kaffee.
+    en: After the course we have a coffee.
+    fa: بعد از کلاس قهوه می‌نوشیم.
+  - de: Seit einer Woche bin ich krank.
+    en: I've been ill for a week.
+    fa: یک هفته است که بیمارم.
+  - de: Ich wohne bei meinen Eltern.
+    en: I live with my parents.
+    fa: پیش پدر و مادرم زندگی می‌کنم.
+  - de: Sie fährt zu ihrer Schwester.
+    en: She is going to her sister's.
+    fa: او پیش خواهرش می‌رود.
+  - de: Wir gehen durch den Park.
+    en: We walk through the park.
+    fa: ما از میان پارک می‌رویم.
+  - de: Der Hund läuft um das Haus.
+    en: The dog runs around the house.
+    fa: سگ دور خانه می‌دود.
+  - de: Das Auto fährt gegen einen Baum.
+    en: The car crashes into a tree.
+    fa: ماشین به درختی می‌خورد.
+  - de: Heute spielt Dortmund gegen Bayern.
+    en: Today Dortmund plays against Bayern.
+    fa: امروز دورتموند با بایرن بازی می‌کند.
+  - de: Das Geschenk ist für meinen Freund.
+    en: The present is for my boyfriend.
+    fa: این هدیه برای دوستم است.
+  - de: Ich trinke Kaffee ohne Milch.
+    en: I drink coffee without milk.
+    fa: قهوه را بدون شیر می‌نوشم.
+
+mistakes:
+  - wrong: Wir gehen durch dem Park.
+    right: Wir gehen durch den Park.
+    why:
+      en: "*Durch* always takes the *Akkusativ*: *der Park* becomes *den Park*."
+      fa: "*durch* همیشه با حالت *Akkusativ* می‌آید: *der Park* به *den Park* تبدیل می‌شود."
+      de: "Nach *durch* steht immer der Akkusativ: *der Park* wird zu *den Park*."
+  - wrong: Ich wohne bei meine Eltern.
+    right: Ich wohne bei meinen Eltern.
+    why:
+      en: "*Bei* always takes the *Dativ*: plural *meine* becomes *meinen*."
+      fa: "*bei* همیشه با حالت *Dativ* می‌آید: *meine* جمع به *meinen* تبدیل می‌شود."
+      de: "Nach *bei* steht immer der Dativ: Im Plural wird *meine* zu *meinen*."
+  - wrong: Das Buch ist für dem Kind.
+    right: Das Buch ist für das Kind.
+    why:
+      en: "*Für* takes the *Akkusativ*, and neuter *das* stays *das*."
+      fa: "*für* با حالت *Akkusativ* می‌آید و *das* خنثی تغییر نمی‌کند."
+      de: "Nach *für* steht der Akkusativ. Neutral bleibt *das*."
+  - wrong: Sie spielt mit den Hund.
+    right: Sie spielt mit dem Hund.
+    why:
+      en: "*Mit* takes the *Dativ*: *der Hund* becomes *dem Hund*. *Den* is *Akkusativ*."
+      fa: "*mit* با حالت *Dativ* می‌آید: *der Hund* به *dem Hund* تبدیل می‌شود. *den* حالت *Akkusativ* است."
+      de: "Nach *mit* steht der Dativ: *der Hund* wird zu *dem Hund*. *Den* ist Akkusativ."
+  - wrong: Er läuft gegen der Tür.
+    right: Er läuft gegen die Tür.
+    why:
+      en: "*Gegen* takes the *Akkusativ*, and feminine *die* stays *die*."
+      fa: "*gegen* با حالت *Akkusativ* می‌آید و *die* مؤنث تغییر نمی‌کند."
+      de: "Nach *gegen* steht der Akkusativ. Feminin bleibt *die*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir gehen durch ___ Park.
+    options: [den, dem, der]
+    answer: den
+    explanation:
+      en: "*Durch* takes the *Akkusativ*: *der* becomes *den*."
+      fa: "*durch* با حالت *Akkusativ* می‌آید: *der* به *den* تبدیل می‌شود."
+      de: "Nach *durch* steht der Akkusativ: *der* wird zu *den*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich wohne bei ___ Tante.
+    options: [meiner, meine, meinen]
+    answer: meiner
+    explanation:
+      en: "*Bei* takes the *Dativ*. *Tante* is feminine: *meine* becomes *meiner*."
+      fa: "*bei* با حالت *Dativ* می‌آید. *Tante* اسم مؤنث است: *meine* به *meiner* تبدیل می‌شود."
+      de: "Nach *bei* steht der Dativ. *Tante* ist feminin: *meine* wird zu *meiner*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der Hund läuft um ___ Haus.
+    options: [das, dem, den]
+    answer: das
+    explanation:
+      en: "*Um* takes the *Akkusativ*, and neuter *das* stays *das*."
+      fa: "*um* با حالت *Akkusativ* می‌آید و *das* خنثی تغییر نمی‌کند."
+      de: "Nach *um* steht der Akkusativ. Neutral bleibt *das*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Er spricht mit ___ Lehrer.
+    options: [dem, den, der]
+    answer: dem
+    explanation:
+      en: "*Mit* takes the *Dativ*: *der Lehrer* becomes *dem Lehrer*."
+      fa: "*mit* با حالت *Dativ* می‌آید: *der Lehrer* به *dem Lehrer* تبدیل می‌شود."
+      de: "Nach *mit* steht der Dativ: *der Lehrer* wird zu *dem Lehrer*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Heute spielt Bremen gegen ___ Team aus Köln.
+    options: [das, dem, der]
+    answer: das
+    explanation:
+      en: "*Gegen* takes the *Akkusativ*, and neuter *das* stays *das*."
+      fa: "*gegen* با حالت *Akkusativ* می‌آید و *das* خنثی تغییر نمی‌کند."
+      de: "Nach *gegen* steht der Akkusativ. Neutral bleibt *das*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welche Präposition hat immer den Akkusativ?
+    options: [ohne, mit, seit]
+    answer: ohne
+    explanation:
+      en: "*Ohne* is in the *Akkusativ* set; *mit* and *seit* are in the *Dativ* set."
+      fa: "*ohne* در گروه حالت *Akkusativ* است؛ *mit* و *seit* در گروه حالت *Dativ*."
+      de: "*Ohne* hat den Akkusativ, *mit* und *seit* haben den Dativ."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welche Präposition hat immer den Dativ?
+    options: [zu, für, durch]
+    answer: zu
+    explanation:
+      en: "*Zu* is in the *Dativ* set; *für* and *durch* are in the *Akkusativ* set."
+      fa: "*zu* در گروه حالت *Dativ* است؛ *für* و *durch* در گروه حالت *Akkusativ*."
+      de: "*Zu* hat den Dativ, *für* und *durch* haben den Akkusativ."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Der Zug fährt ___ einen Tunnel.
+    options: [durch, mit, aus]
+    answer: durch
+    explanation:
+      en: "*Einen Tunnel* is *Akkusativ*, and of these three only *durch* takes it."
+      fa: "*einen Tunnel* در حالت *Akkusativ* است و از این سه، فقط *durch* با این حالت می‌آید."
+      de: "*Einen Tunnel* ist Akkusativ. Von den drei steht nur *durch* mit Akkusativ."
+  - id: true-1
+    type: true-false
+    prompt: Seit einem Monat lerne ich Deutsch.
+    answer: true
+    explanation:
+      en: "*Seit* takes the *Dativ*: *einem Monat*. The sentence is correct."
+      fa: "*seit* با حالت *Dativ* می‌آید: *einem Monat*. جمله درست است."
+      de: "Nach *seit* steht der Dativ: *einem Monat*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das Geschenk ist für dem Kind.
+    answer: false
+    explanation:
+      en: "*Für* takes the *Akkusativ*: *für das Kind*."
+      fa: "*für* با حالت *Akkusativ* می‌آید: *für das Kind*."
+      de: "Nach *für* steht der Akkusativ: *für das Kind*."
+  - id: true-3
+    type: true-false
+    prompt: Wir laufen durch die Stadt.
+    answer: true
+    explanation:
+      en: "*Durch* takes the *Akkusativ*, and *die* stays *die*. The sentence is correct."
+      fa: "*durch* با حالت *Akkusativ* می‌آید و *die* تغییر نمی‌کند. جمله درست است."
+      de: "Nach *durch* steht der Akkusativ, *die* bleibt *die*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich fahre mit meinen Auto.
+    answer: false
+    explanation:
+      en: "*Mit* takes the *Dativ*. *Auto* is neuter: *mit meinem Auto*."
+      fa: "*mit* با حالت *Dativ* می‌آید. *Auto* اسم خنثی است: *mit meinem Auto*."
+      de: "Nach *mit* steht der Dativ. *Auto* ist neutral: *mit meinem Auto*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Er läuft gegen ___ (die) Tür.
+    answers: [die]
+    explanation:
+      en: "*Gegen* takes the *Akkusativ*, and feminine *die* stays *die*."
+      fa: "*gegen* با حالت *Akkusativ* می‌آید و *die* مؤنث تغییر نمی‌کند."
+      de: "Nach *gegen* steht der Akkusativ. Feminin bleibt *die*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich komme gerade aus ___ (das) Haus.
+    answers: [dem]
+    explanation:
+      en: "*Aus* takes the *Dativ*: *das* becomes *dem*."
+      fa: "*aus* با حالت *Dativ* می‌آید: *das* به *dem* تبدیل می‌شود."
+      de: "Nach *aus* steht der Dativ: *das* wird zu *dem*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir sitzen um ___ (der) Tisch.
+    answers: [den]
+    explanation:
+      en: "*Um* takes the *Akkusativ*: *der* becomes *den*."
+      fa: "*um* با حالت *Akkusativ* می‌آید: *der* به *den* تبدیل می‌شود."
+      de: "Nach *um* steht der Akkusativ: *der* wird zu *den*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Sie wohnt seit ___ (ein) Jahr in Bonn.
+    answers: [einem]
+    explanation:
+      en: "*Seit* takes the *Dativ*: neuter *ein* becomes *einem*."
+      fa: "*seit* با حالت *Dativ* می‌آید: *ein* خنثی به *einem* تبدیل می‌شود."
+      de: "Nach *seit* steht der Dativ: Neutral wird *ein* zu *einem*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "durch + der Wald"
+    answers: [durch den Wald]
+    explanation:
+      en: "*Durch* takes the *Akkusativ*: *durch den Wald*."
+      fa: "*durch* با حالت *Akkusativ* می‌آید: *durch den Wald*."
+      de: "Nach *durch* steht der Akkusativ: *durch den Wald*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "zu + die Kinder"
+    answers: [zu den Kindern]
+    explanation:
+      en: "*Zu* takes the *Dativ*: plural *den*, and the noun gets *-n*: *zu den Kindern*."
+      fa: "*zu* با حالت *Dativ* می‌آید: جمع *den* و اسم نیز *-n* می‌گیرد: *zu den Kindern*."
+      de: "Nach *zu* steht der Dativ: im Plural *den*, das Nomen bekommt *-n*: *zu den Kindern*."
+  - id: error-1
+    type: find-error
+    prompt: Wir fahren durch dem Tunnel.
+    answer: dem
+    explanation:
+      en: "*Durch* takes the *Akkusativ*: *durch den Tunnel*."
+      fa: "*durch* با حالت *Akkusativ* می‌آید: *durch den Tunnel*."
+      de: "Nach *durch* steht der Akkusativ: *durch den Tunnel*."
+  - id: error-2
+    type: find-error
+    prompt: Ich fahre morgen zu meine Mutter.
+    answer: meine
+    explanation:
+      en: "*Zu* takes the *Dativ*: *zu meiner Mutter*."
+      fa: "*zu* با حالت *Dativ* می‌آید: *zu meiner Mutter*."
+      de: "Nach *zu* steht der Dativ: *zu meiner Mutter*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [der Hund, läuft, durch den Garten]
+      - [durch den Garten, läuft, der Hund]
+    explanation:
+      en: "The verb comes second. *Durch den Garten* can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. *durch den Garten* می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. *Durch den Garten* kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [durch ___ Wald, den]
+      - [mit ___ Bus, dem]
+      - [für ___ Kinder, die]
+      - [aus ___ Stadt, der]
+    explanation:
+      en: "*Durch* and *für* take the *Akkusativ* (*den Wald*, *die Kinder*); *mit* and *aus* take the *Dativ* (*dem Bus*, *der Stadt*)."
+      fa: "*durch* و *für* با حالت *Akkusativ* می‌آیند (*den Wald* و *die Kinder*)؛ *mit* و *aus* با حالت *Dativ* (*dem Bus* و *der Stadt*)."
+      de: "Nach *durch* und *für* steht der Akkusativ (*den Wald*, *die Kinder*), nach *mit* und *aus* der Dativ (*dem Bus*, *der Stadt*)."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: b5cd8594a369f6be

@@ -1,40 +1,382 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-free-time
 kind: vocabulary
 level: A1
 chapter: a1-words-daily-life
 order: 6
-status: coming-soon
+status: published
 title:
   en: "Free time and celebrations"
   fa: "اوقات فراغت و جشن‌ها"
   de: "Freizeit und Feste"
+attemptSize: 15
 words:
   - word: Freizeit
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: free time, leisure
+      fa: اوقات فراغت، وقت آزاد
+    definition: die Zeit, in der man nicht arbeiten oder lernen muss
+    example:
+      de: Was machst du in deiner Freizeit?
+      en: What do you do in your free time?
+      fa: در اوقات فراغتت چه می‌کنی؟
+
   - word: Hobby
+    class: noun
+    article: das
+    plural: Hobbys
+    level: A1
+    meaning:
+      en: hobby
+      fa: سرگرمی
+    definition: etwas, das man in der Freizeit oft und gern macht
+    example:
+      de: Mein Hobby ist Kochen.
+      en: My hobby is cooking.
+      fa: سرگرمی من آشپزی است.
+
   - word: Sport
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: sport, sports
+      fa: ورزش
+    definition: Bewegung wie Laufen, Schwimmen oder Fußball, oft mit anderen zusammen
+    example:
+      de: Ich mache dreimal pro Woche Sport.
+      en: I do sport three times a week.
+      fa: هفته‌ای سه بار ورزش می‌کنم.
+
   - word: Fußball
+    class: noun
+    article: der
+    plural: Fußbälle
+    level: A1
+    meaning:
+      en: football, soccer
+      fa: فوتبال
+    definition: zwei Mannschaften spielen und schießen einen Ball mit dem Fuß ins Tor
+    example:
+      de: Am Samstag spielen wir Fußball.
+      en: On Saturday we're playing football.
+      fa: شنبه فوتبال بازی می‌کنیم.
+
   - word: spielen
+    class: verb
+    level: A1
+    meaning:
+      en: to play
+      fa: بازی کردن، نواختن
+    definition: zum Spaß etwas machen, zum Beispiel mit einem Ball oder mit Karten; auch Musik machen
+    example:
+      de: Die Kinder spielen im Park.
+      en: The children are playing in the park.
+      fa: بچه‌ها در پارک بازی می‌کنند.
+
   - word: schwimmen
+    class: verb
+    level: A1
+    meaning:
+      en: to swim
+      fa: شنا کردن
+    definition: sich im Wasser mit Armen und Beinen bewegen
+    example:
+      de: Im Sommer schwimme ich gern im See.
+      en: In summer I like swimming in the lake.
+      fa: تابستان‌ها دوست دارم در دریاچه شنا کنم.
+
   - word: tanzen
+    class: verb
+    level: A1
+    meaning:
+      en: to dance
+      fa: رقصیدن
+    definition: sich zur Musik bewegen
+    example:
+      de: Tanzt du gern?
+      en: Do you like dancing?
+      fa: رقصیدن را دوست داری؟
+
   - word: wandern
+    class: verb
+    level: A1
+    meaning:
+      en: to hike, to go walking (in the country)
+      fa: کوه‌پیمایی کردن، پیاده‌روی کردن در طبیعت
+    definition: lange zu Fuß gehen, in der Natur oder in den Bergen
+    example:
+      de: Am Sonntag wandern wir in den Bergen.
+      en: On Sunday we're going hiking in the mountains.
+      fa: یکشنبه در کوهستان پیاده‌روی می‌کنیم.
+
   - word: Verein
+    class: noun
+    article: der
+    plural: Vereine
+    level: A1
+    meaning:
+      en: club, association
+      fa: باشگاه، انجمن
+    definition: eine Gruppe von Menschen mit festen Regeln, die zusammen etwas machen, zum Beispiel Sport
+    example:
+      de: Mein Sohn ist in einem Verein und spielt dort Fußball.
+      en: My son is in a club and plays football there.
+      fa: پسرم عضو باشگاهی است و آنجا فوتبال بازی می‌کند.
+    alsoAccepted: [der Club, der Klub]
+
   - word: Film
+    class: noun
+    article: der
+    plural: Filme
+    level: A1
+    meaning:
+      en: film, movie
+      fa: فیلم
+    definition: eine Geschichte in bewegten Bildern, im Kino oder im Fernsehen
+    example:
+      de: Der Film beginnt um acht.
+      en: The film starts at eight.
+      fa: فیلم ساعت هشت شروع می‌شود.
+
   - word: Lied
+    class: noun
+    article: das
+    plural: Lieder
+    level: A1
+    meaning:
+      en: song
+      fa: آهنگ، ترانه
+    definition: Musik mit Worten, die man singt
+    example:
+      de: Kennst du dieses Lied?
+      en: Do you know this song?
+      fa: این آهنگ را می‌شناسی؟
+    alsoAccepted: [der Song]
+
   - word: fernsehen
+    class: verb
+    level: A1
+    meaning:
+      en: to watch television
+      fa: تلویزیون تماشا کردن
+    definition: zu Hause Filme oder Nachrichten auf dem Bildschirm ansehen
+    example:
+      de: Am Abend sehen wir oft fern.
+      en: In the evening we often watch TV.
+      fa: شب‌ها اغلب تلویزیون تماشا می‌کنیم.
+    alsoAccepted: [fernschauen, fernsehen schauen]
+
   - word: Foto
+    class: noun
+    article: das
+    plural: Fotos
+    level: A1
+    meaning:
+      en: photo, photograph
+      fa: عکس
+    definition: ein Bild, das man mit einer Kamera oder mit einem Handy macht
+    example:
+      de: Kannst du ein Foto von uns machen?
+      en: Can you take a photo of us?
+      fa: می‌توانی از ما عکس بگیری؟
+    alsoAccepted: [das Bild, das Photo, die Aufnahme]
+
   - word: CD
+    class: noun
+    article: die
+    plural: CDs
+    level: A1
+    meaning:
+      en: CD, compact disc
+      fa: سی‌دی، لوح فشرده
+    definition: eine kleine, silberne Scheibe mit Musik darauf, zum Beispiel mit einem Album von einer Band
+    example:
+      de: Ich habe noch viele alte CDs.
+      en: I still have lots of old CDs.
+      fa: هنوز سی‌دی‌های قدیمی زیادی دارم.
+
   - word: Party
+    class: noun
+    article: die
+    plural: Partys
+    level: A1
+    meaning:
+      en: party
+      fa: مهمانی
+    definition: ein Fest mit Musik, Essen und Freunden, oft am Abend
+    example:
+      de: Am Samstag mache ich eine Party.
+      en: I'm having a party on Saturday.
+      fa: شنبه مهمانی می‌گیرم.
+    alsoAccepted: [die Feier, das Fest, die Fete]
+
   - word: feiern
+    class: verb
+    level: A1
+    meaning:
+      en: to celebrate
+      fa: جشن گرفتن
+    definition: ein Fest machen, weil heute ein besonderer Tag ist
+    example:
+      de: Heute feiern wir den Geburtstag von Oma.
+      en: Today we're celebrating Grandma's birthday.
+      fa: امروز تولد مامان‌بزرگ را جشن می‌گیریم.
+
   - word: Geschenk
+    class: noun
+    article: das
+    plural: Geschenke
+    level: A1
+    meaning:
+      en: present, gift
+      fa: هدیه، کادو
+    definition: etwas, das man einer Person gibt, ohne Geld dafür zu wollen, zum Beispiel zum Geburtstag
+    example:
+      de: Danke für das schöne Geschenk!
+      en: Thanks for the lovely present!
+      fa: ممنون برای هدیهٔ قشنگ!
+
   - word: Geburtstag
+    class: noun
+    article: der
+    plural: Geburtstage
+    level: A1
+    meaning:
+      en: birthday
+      fa: تولد، سالروز تولد
+    definition: der Tag im Jahr, an dem man geboren ist
+    example:
+      de: Wann hast du Geburtstag?
+      en: When is your birthday?
+      fa: تولدت کی است؟
+
   - word: Glückwunsch
+    class: noun
+    article: der
+    plural: Glückwünsche
+    level: A1
+    meaning:
+      en: congratulations, good wishes
+      fa: تبریک
+    definition: freundliche Worte, die man zu einem Fest oder nach einem Erfolg sagt
+    example:
+      de: Herzlichen Glückwunsch zum Geburtstag!
+      en: Happy birthday!
+      fa: تولدت مبارک!
+    alsoAccepted: [die Glückwünsche, die Gratulation]
+
   - word: gratulieren
+    class: verb
+    level: A1
+    meaning:
+      en: to congratulate
+      fa: تبریک گفتن
+    definition: einer Person zu einem Fest oder einem Erfolg Gutes wünschen
+    example:
+      de: Ich gratuliere dir zur bestandenen Prüfung!
+      en: Congratulations on passing your exam!
+      fa: قبولی‌ات در امتحان را تبریک می‌گویم!
+    alsoAccepted: [beglückwünschen]
+
   - word: Glück
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: luck; happiness
+      fa: شانس؛ خوشبختی
+    definition: wenn etwas Gutes passiert, das man nicht planen kann; auch ein sehr gutes Gefühl
+    example:
+      de: Viel Glück bei der Prüfung!
+      en: Good luck in the exam!
+      fa: در امتحان موفق باشی!
+
   - word: gewinnen
+    class: verb
+    level: A1
+    meaning:
+      en: to win
+      fa: بردن، برنده شدن
+    definition: bei einem Spiel als Erster oder als Bester am Ende stehen
+    example:
+      de: Unsere Mannschaft hat gewonnen.
+      en: Our team won.
+      fa: تیم ما برد.
+    alsoAccepted: [siegen]
+
   - word: lachen
+    class: verb
+    level: A1
+    meaning:
+      en: to laugh
+      fa: خندیدن
+    definition: mit dem Mund und mit Tönen zeigen, dass man etwas komisch findet
+    example:
+      de: Warum lachst du?
+      en: Why are you laughing?
+      fa: چرا می‌خندی؟
+
   - word: lustig
+    class: adjective
+    level: A1
+    meaning:
+      en: funny, fun
+      fa: خنده‌دار، بامزه
+    definition: so, dass man lachen muss oder viel Spaß hat
+    example:
+      de: Der Film war sehr lustig.
+      en: The film was very funny.
+      fa: فیلم خیلی خنده‌دار بود.
+    alsoAccepted: [komisch, witzig]
+
   - word: mitkommen
+    class: verb
+    level: A1
+    meaning:
+      en: to come along (with someone)
+      fa: همراه کسی آمدن
+    definition: mit anderen Personen zusammen an einen Ort gehen
+    example:
+      de: Wir gehen ins Kino. Kommst du mit?
+      en: We're going to the cinema. Are you coming along?
+      fa: به سینما می‌رویم. تو هم می‌آیی؟
+    alsoAccepted: [mitgehen]
+
   - word: mitmachen
+    class: verb
+    level: A1
+    meaning:
+      en: to take part, to join in
+      fa: شرکت کردن (در کاری یا بازی)
+    definition: bei etwas dabei sein und es zusammen mit anderen tun
+    example:
+      de: Möchtest du beim Spiel mitmachen?
+      en: Would you like to join in the game?
+      fa: می‌خواهی در بازی شرکت کنی؟
+    alsoAccepted: [teilnehmen, mitspielen]
+
   - word: mitbringen
+    class: verb
+    level: A1
+    meaning:
+      en: to bring (along)
+      fa: با خود آوردن
+    definition: etwas zu einem Besuch oder zu einem Treffen bringen
+    example:
+      de: Bring bitte einen Salat zur Party mit.
+      en: Please bring a salad to the party.
+      fa: لطفاً برای مهمانی یک سالاد بیاور.
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 162, then 17 questions)
+  date: 2026-11-28
+  pool: 4d9066650038507a

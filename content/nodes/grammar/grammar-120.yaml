@@ -4,10 +4,352 @@ kind: grammar
 level: A1
 chapter: a1-prepositions
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-063, grammar-119]
 title:
   en: "Temporal: *vor*, *nach*, *in*, *für*, *seit*, *bis*"
   fa: "حرف‌های اضافهٔ زمان: *vor*، *nach*، *in*، *für*، *seit*، *bis*"
   de: "Zeit: *vor*, *nach*, *in*, *für*, *seit*, *bis*"
+
+explanations:
+  en:
+    rule: >
+      *Vor* (before) and *nach* (after) place one thing before or after
+      another: *vor dem Konzert*, *nach der Arbeit*. With a length of time,
+      *vor* means ago: *vor einer Woche*, and *in* means from now: *in einer
+      Stunde*. *Seit* says that something began in the past and is still
+      going on, so the verb stays in the present: *Ich wohne seit einem Jahr
+      hier*. *Für* gives a planned length of time: *für zwei Wochen*. *Bis*
+      gives the end: *bis Freitag*, *bis 18 Uhr*. *Vor*, *nach*, *in* and
+      *seit* take the *Dativ* (*einer Woche*, *dem Konzert*, plural *drei
+      Tagen* with *-n*); *für* takes the *Akkusativ* (*eine Woche*).
+  fa:
+    rule: >
+      *vor* (پیش از) و *nach* (پس از) نشان می‌دهند که کاری پیش یا پس از کاری
+      دیگر است: *vor dem Konzert* و *nach der Arbeit*. با یک مدت زمان، *vor*
+      یعنی «پیش»: *vor einer Woche* (یک هفته پیش) و *in* یعنی «دیگر»: *in
+      einer Stunde* (یک ساعت دیگر). *seit* می‌گوید کاری در گذشته شروع شده و
+      هنوز ادامه دارد؛ به همین دلیل فعل در زمان حال (*Präsens*) می‌ماند: *Ich
+      wohne seit einem Jahr hier* (یک سال است که این‌جا زندگی می‌کنم). *für*
+      مدتی از پیش تعیین‌شده را می‌گوید: *für zwei Wochen*. *bis* پایان را
+      نشان می‌دهد: *bis Freitag* و *bis 18 Uhr*. *vor*، *nach*، *in* و *seit*
+      با حالت *Dativ* (حالت مفعول باواسطه) می‌آیند (*einer Woche*، *dem
+      Konzert* و در جمع *drei Tagen* با *-n*)؛ *für* با حالت *Akkusativ*
+      (حالت مفعولی) می‌آید (*eine Woche*).
+  de:
+    rule: >
+      *Vor* und *nach* sagen, was vorher und was nachher ist: *vor dem
+      Konzert*, *nach der Arbeit*. Mit einer Zeitdauer heißt *vor*: Das war
+      früher, zum Beispiel *vor einer Woche*. *In* heißt: Das kommt später,
+      zum Beispiel *in einer Stunde*. *Seit* sagt: Es hat früher begonnen und
+      ist noch nicht vorbei. Das Verb steht im Präsens: *Ich wohne seit einem
+      Jahr hier.* *Für* sagt, wie lange etwas dauern soll: *für zwei Wochen*.
+      *Bis* sagt das Ende: *bis Freitag*, *bis 18 Uhr*. Nach *vor*, *nach*,
+      *in* und *seit* steht der Dativ (*einer Woche*, *dem Konzert*, im Plural
+      *drei Tagen* mit *-n*), nach *für* der Akkusativ (*eine Woche*).
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Monat, dem Monat, einem Monat, vor einem Monat]
+    - [die Woche, der Woche, einer Woche, seit einer Woche]
+    - [das Jahr, dem Jahr, einem Jahr, in einem Jahr]
+    - [die Tage (Plural), den Tagen, –, vor drei Tagen]
+
+# A time line with "jetzt" in the middle: vor to the left, in to the right,
+# seit from the left up to now, bis from now up to an end.
+diagrams:
+  - caption:
+      en: >
+        Time runs to the right, and *jetzt* is now. *Vor einer Woche* is a
+        week back, *in einer Woche* a week ahead. *Seit einer Woche* began a
+        week ago and goes on until now. *Bis Freitag* goes from now to an end.
+      fa: >
+        زمان به سمت راست پیش می‌رود و *jetzt* یعنی اکنون. *vor einer Woche*
+        یک هفته به عقب است و *in einer Woche* یک هفته به جلو. *seit einer
+        Woche* یک هفته پیش شروع شده و تا اکنون ادامه دارد. *bis Freitag* از
+        اکنون تا یک پایان می‌رود.
+      de: >
+        Die Zeit läuft nach rechts, *jetzt* ist in der Mitte. *Vor einer
+        Woche* ist eine Woche zurück, *in einer Woche* eine Woche nach vorn.
+        *Seit einer Woche* hat vor einer Woche begonnen und geht bis jetzt.
+        *Bis Freitag* geht von jetzt bis zu einem Ende.
+    svg: |
+      <svg viewBox="0 0 320 180">
+        <!-- seit: from a week ago up to now -->
+        <text class="label" x="110" y="30" text-anchor="middle">seit einer Woche</text>
+        <rect class="object" x="60" y="40" width="100" height="12"/>
+        <line class="guide" x1="60" y1="52" x2="60" y2="134"/>
+        <!-- bis: from now up to an end -->
+        <text class="label" x="210" y="82" text-anchor="middle">bis Freitag</text>
+        <rect class="object" x="160" y="92" width="100" height="12"/>
+        <line class="guide" x1="260" y1="104" x2="260" y2="134"/>
+        <line class="guide" x1="160" y1="52" x2="160" y2="134"/>
+        <!-- the time line, with an arrow to the right -->
+        <line class="line" x1="10" y1="140" x2="304" y2="140"/>
+        <polygon class="object" points="304,134 316,140 304,146"/>
+        <circle class="object" cx="60" cy="140" r="6"/>
+        <circle class="object" cx="160" cy="140" r="6"/>
+        <circle class="object" cx="260" cy="140" r="6"/>
+        <text class="note" x="60" y="166" text-anchor="middle">vor einer Woche</text>
+        <text class="label" x="160" y="168" text-anchor="middle">jetzt</text>
+        <text class="note" x="260" y="166" text-anchor="middle">in einer Woche</text>
+      </svg>
+
+examples:
+  - de: Vor dem Konzert essen wir etwas.
+    en: Before the concert we eat something.
+    fa: پیش از کنسرت چیزی می‌خوریم.
+  - de: Nach der Arbeit gehe ich einkaufen.
+    en: After work I go shopping.
+    fa: بعد از کار به خرید می‌روم.
+  - de: Ich war vor einer Woche in Hamburg.
+    en: I was in Hamburg a week ago.
+    fa: یک هفته پیش در هامبورگ بودم.
+  - de: Der Zug kommt in zehn Minuten.
+    en: The train comes in ten minutes.
+    fa: قطار ده دقیقهٔ دیگر می‌رسد.
+  - de: In einem Monat habe ich Urlaub.
+    en: In a month I'll be on holiday.
+    fa: یک ماه دیگر به مرخصی می‌روم.
+  - de: Ich lerne seit drei Monaten Deutsch.
+    en: I have been learning German for three months.
+    fa: سه ماه است که آلمانی یاد می‌گیرم.
+  - de: Wir wohnen seit 2020 in Köln.
+    en: We have lived in Cologne since 2020.
+    fa: از سال ۲۰۲۰ در کلن زندگی می‌کنیم.
+  - de: Ich fahre für zwei Wochen nach Spanien.
+    en: I'm going to Spain for two weeks.
+    fa: برای دو هفته به اسپانیا می‌روم.
+  - de: Der Kurs dauert bis Freitag.
+    en: The course lasts until Friday.
+    fa: کلاس تا جمعه ادامه دارد.
+  - de: Ich arbeite heute bis 18 Uhr.
+    en: Today I work until 6 p.m.
+    fa: امروز تا ساعت ۶ عصر کار می‌کنم.
+  - de: Bis morgen!
+    en: See you tomorrow!
+    fa: تا فردا!
+
+mistakes:
+  - wrong: Ich lerne Deutsch für drei Monate.
+    right: Ich lerne seit drei Monaten Deutsch.
+    why:
+      en: 'English says "for three months", but the learning began in the past and goes on: German says *seit*, with the *Dativ* *drei Monaten*.'
+      fa: "یادگیری در گذشته شروع شده و هنوز ادامه دارد، پس آلمانی *seit* می‌گوید و حالت *Dativ* می‌آید: *seit drei Monaten*."
+      de: "Das Lernen hat früher begonnen und geht weiter. Darum *seit* mit Dativ: *seit drei Monaten*."
+  - wrong: Ich war zwei Wochen vor in Berlin.
+    right: Ich war vor zwei Wochen in Berlin.
+    why:
+      en: 'English puts "ago" after the time. German *vor* stands before it: *vor zwei Wochen*.'
+      fa: "*vor* همیشه پیش از مدت زمان می‌آید: *vor zwei Wochen*."
+      de: "*Vor* steht immer vor der Zeit: *vor zwei Wochen*."
+  - wrong: Der Bus kommt nach zehn Minuten.
+    right: Der Bus kommt in zehn Minuten.
+    why:
+      en: "Counted from now, German says *in*: *in zehn Minuten*. *Nach* goes with an event: *nach dem Essen*."
+      fa: "وقتی از اکنون حساب می‌کنیم، آلمانی *in* می‌گوید: *in zehn Minuten*. *nach* با یک رویداد می‌آید: *nach dem Essen*."
+      de: "Von jetzt an gerechnet sagt man *in*: *in zehn Minuten*. *Nach* steht bei einem Ereignis: *nach dem Essen*."
+  - wrong: Ich wohne seit ein Jahr hier.
+    right: Ich wohne seit einem Jahr hier.
+    why:
+      en: "*Seit* takes the *Dativ*: *ein Jahr* becomes *einem Jahr*."
+      fa: "*seit* با حالت *Dativ* می‌آید: *ein Jahr* به *einem Jahr* تبدیل می‌شود."
+      de: "Nach *seit* steht der Dativ: *ein Jahr* wird zu *einem Jahr*."
+  - wrong: Nach dem Essen ich trinke Kaffee.
+    right: Nach dem Essen trinke ich Kaffee.
+    why:
+      en: "When the time comes first, the verb still comes second, and the subject goes after it."
+      fa: "وقتی قید زمان در آغاز جمله می‌آید، فعل باز هم در جایگاه دوم است و فاعل پس از آن می‌آید."
+      de: "Steht die Zeit am Anfang, steht das Verb trotzdem an Position 2. Das Subjekt kommt danach."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich lerne ___ drei Monaten Deutsch.
+    options: [seit, für, vor]
+    answer: seit
+    explanation:
+      en: "The learning began in the past and goes on: *seit drei Monaten*."
+      fa: "یادگیری در گذشته شروع شده و ادامه دارد: *seit drei Monaten*."
+      de: "Das Lernen hat früher begonnen und geht weiter: *seit drei Monaten*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Der Bus kommt ___ fünf Minuten.
+    options: [in, vor, seit]
+    answer: in
+    explanation:
+      en: "Five minutes from now: *in fünf Minuten*."
+      fa: "پنج دقیقه از اکنون: *in fünf Minuten*."
+      de: "Fünf Minuten von jetzt an: *in fünf Minuten*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Nach ___ Arbeit gehe ich einkaufen.
+    options: [der, dem, die]
+    answer: der
+    explanation:
+      en: "*Nach* takes the *Dativ*. *Arbeit* is feminine: *die* becomes *der*."
+      fa: "*nach* با حالت *Dativ* می‌آید. *Arbeit* اسم مؤنث است: *die* به *der* تبدیل می‌شود."
+      de: "Nach *nach* steht der Dativ. *Arbeit* ist feminin: *die* wird zu *der*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wir fahren ___ eine Woche nach Wien.
+    options: [für, seit, vor]
+    answer: für
+    explanation:
+      en: "A planned length of time takes *für* with the *Akkusativ*: *für eine Woche*."
+      fa: "مدت از پیش تعیین‌شده با *für* و حالت *Akkusativ* می‌آید: *für eine Woche*."
+      de: "Wie lange es dauern soll, sagt *für* mit Akkusativ: *für eine Woche*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ich war ___ zwei Tagen beim Arzt.
+    options: [vor, in, seit]
+    answer: vor
+    explanation:
+      en: "It is over (*war*): two days ago is *vor zwei Tagen*."
+      fa: "کار تمام شده است (*war*)؛ دو روز پیش می‌شود *vor zwei Tagen*."
+      de: "Es ist vorbei (*war*): *vor zwei Tagen*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wie lange wohnst du schon hier? – ___
+    options: [Seit einem Jahr., Vor einem Jahr., Für ein Jahr.]
+    answer: Seit einem Jahr.
+    explanation:
+      en: "*Wie lange … schon?* asks about something still going on: *seit einem Jahr*."
+      fa: "*Wie lange … schon?* دربارهٔ کاری می‌پرسد که هنوز ادامه دارد: *seit einem Jahr*."
+      de: "*Wie lange … schon?* fragt nach etwas, das noch weitergeht: *seit einem Jahr*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wann beginnt der Film? – ___
+    options: [In zehn Minuten., Seit zehn Minuten., Für zehn Minuten.]
+    answer: In zehn Minuten.
+    explanation:
+      en: "*Wann?* asks for a point in time; from now, that is *in zehn Minuten*."
+      fa: "*Wann?* زمان را می‌پرسد؛ از اکنون می‌شود *in zehn Minuten*."
+      de: "*Wann?* fragt nach dem Zeitpunkt. Von jetzt an: *in zehn Minuten*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich bleibe heute ___ 17 Uhr im Büro.
+    options: [bis, seit, für]
+    answer: bis
+    explanation:
+      en: "*Bis* gives the end: *bis 17 Uhr*."
+      fa: "*bis* پایان را نشان می‌دهد: *bis 17 Uhr*."
+      de: "*Bis* sagt das Ende: *bis 17 Uhr*."
+  - id: true-1
+    type: true-false
+    prompt: Ich wohne seit zwei Jahren in München.
+    answer: true
+    explanation:
+      en: "*Seit* with the *Dativ* plural *zwei Jahren*, and the verb in the present. The sentence is correct."
+      fa: "*seit* با حالت *Dativ* جمع (*zwei Jahren*) و فعل در زمان حال. جمله درست است."
+      de: "*Seit* mit Dativ Plural (*zwei Jahren*), das Verb im Präsens. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir wohnen seit ein Jahr hier.
+    answer: false
+    explanation:
+      en: "*Seit* takes the *Dativ*: *seit einem Jahr*."
+      fa: "*seit* با حالت *Dativ* می‌آید: *seit einem Jahr*."
+      de: "Nach *seit* steht der Dativ: *seit einem Jahr*."
+  - id: true-3
+    type: true-false
+    prompt: Nach dem Kurs gehen wir in ein Café.
+    answer: true
+    explanation:
+      en: "*Nach* with the *Dativ* *dem Kurs*, and the verb second. The sentence is correct."
+      fa: "*nach* با حالت *Dativ* (*dem Kurs*) و فعل در جایگاه دوم. جمله درست است."
+      de: "*Nach* mit Dativ (*dem Kurs*), das Verb an Position 2. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Der Zug kommt in eine Stunde.
+    answer: false
+    explanation:
+      en: "*In* with a length of time takes the *Dativ*: *in einer Stunde*."
+      fa: "*in* با مدت زمان، حالت *Dativ* می‌گیرد: *in einer Stunde*."
+      de: "*In* mit einer Zeitdauer hat den Dativ: *in einer Stunde*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Der Kurs beginnt in ___ (eine) Woche.
+    answers: [einer]
+    explanation:
+      en: "*In* with a length of time takes the *Dativ*: *eine* becomes *einer*."
+      fa: "*in* با مدت زمان، حالت *Dativ* می‌گیرد: *eine* به *einer* تبدیل می‌شود."
+      de: "*In* mit einer Zeitdauer hat den Dativ: *eine* wird zu *einer*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich wohne seit ___ (ein) Monat hier.
+    answers: [einem]
+    explanation:
+      en: "*Seit* takes the *Dativ*. *Monat* is masculine: *ein* becomes *einem*."
+      fa: "*seit* با حالت *Dativ* می‌آید. *Monat* اسم مذکر است: *ein* به *einem* تبدیل می‌شود."
+      de: "Nach *seit* steht der Dativ. *Monat* ist maskulin: *ein* wird zu *einem*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir fahren für ___ (eine) Woche nach Italien.
+    answers: [eine]
+    explanation:
+      en: "*Für* takes the *Akkusativ*, and feminine *eine* stays *eine*."
+      fa: "*für* با حالت *Akkusativ* می‌آید و *eine* مؤنث تغییر نمی‌کند."
+      de: "Nach *für* steht der Akkusativ. Feminin bleibt *eine*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich war vor zwei ___ (Woche) in Paris.
+    answers: [Wochen]
+    explanation:
+      en: "Two weeks is plural: *Wochen*. After *vor* it is in the *Dativ*, which for *Wochen* looks the same."
+      fa: "دو هفته جمع است: *Wochen*. پس از *vor* حالت *Dativ* می‌آید که برای *Wochen* همان شکل را دارد."
+      de: "Zwei Wochen ist Plural: *Wochen*. Nach *vor* steht der Dativ; *Wochen* bleibt gleich."
+  - id: typed-1
+    type: typed-answer
+    prompt: "seit + drei Jahre"
+    answers: [seit drei Jahren]
+    explanation:
+      en: "*Seit* takes the *Dativ*, and a plural noun gets *-n*: *seit drei Jahren*."
+      fa: "*seit* با حالت *Dativ* می‌آید و اسم جمع *-n* می‌گیرد: *seit drei Jahren*."
+      de: "Nach *seit* steht der Dativ, das Nomen im Plural bekommt *-n*: *seit drei Jahren*."
+  - id: error-1
+    type: find-error
+    prompt: Ich lerne seit drei Monate Deutsch.
+    answer: Monate
+    explanation:
+      en: "*Seit* takes the *Dativ*, so the plural gets *-n*: *seit drei Monaten*."
+      fa: "*seit* با حالت *Dativ* می‌آید، پس اسم جمع *-n* می‌گیرد: *seit drei Monaten*."
+      de: "Nach *seit* steht der Dativ, der Plural bekommt *-n*: *seit drei Monaten*."
+  - id: error-2
+    type: find-error
+    prompt: Wir warten seit eine Stunde.
+    answer: eine
+    explanation:
+      en: "*Seit* takes the *Dativ*: *eine* becomes *einer*."
+      fa: "*seit* با حالت *Dativ* می‌آید: *eine* به *einer* تبدیل می‌شود."
+      de: "Nach *seit* steht der Dativ: *eine* wird zu *einer*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [nach der Arbeit, gehe, ich, einkaufen]
+      - [ich, gehe, nach der Arbeit, einkaufen]
+    explanation:
+      en: "The verb comes second and *einkaufen* last. The time can stand first or after the verb and the subject."
+      fa: "فعل در جایگاه دوم و *einkaufen* در پایان جمله می‌آید. قید زمان می‌تواند در آغاز یا پس از فعل و فاعل باشد."
+      de: "Das Verb steht an Position 2, *einkaufen* am Ende. Die Zeit steht am Anfang oder nach Verb und Subjekt."
+  - id: match-1
+    type: matching
+    answer:
+      - [vor einer Woche, letzte Woche]
+      - [in einer Woche, nächste Woche]
+      - [seit einer Woche, schon eine Woche lang]
+    explanation:
+      en: "*Vor* looks back, *in* looks ahead, and *seit* runs from the past up to now."
+      fa: "*vor* به گذشته نگاه می‌کند، *in* به آینده، و *seit* از گذشته تا اکنون ادامه دارد."
+      de: "*Vor* geht zurück, *in* geht nach vorn, *seit* geht von früher bis jetzt."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 97cdb8d8e1c36f37

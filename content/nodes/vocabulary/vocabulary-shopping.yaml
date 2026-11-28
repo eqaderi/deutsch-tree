@@ -1,38 +1,372 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-shopping
 kind: vocabulary
 level: A1
 chapter: a1-words-food-home
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Shopping and money"
   fa: "خرید و پول"
   de: "Einkaufen und Geld"
+attemptSize: 15
 words:
+  # "einkaufen" (go shopping) and "kaufen" (buy) are close; neither is offered as a wrong meaning of the other.
   - word: einkaufen
+    class: verb
+    level: A1
+    meaning:
+      en: to go shopping, to do the shopping
+      fa: به خرید رفتن، خرید کردن
+    definition: in Geschäfte gehen und dort zum Beispiel Lebensmittel für die Woche holen
+    example:
+      de: Ich kaufe immer am Samstag ein.
+      en: I always do the shopping on Saturday.
+      fa: من همیشه شنبه‌ها خرید می‌کنم.
+    alsoAccepted: [einkaufen gehen, shoppen, kaufen, besorgen]
+    tooCloseTo: [kaufen]
+
   - word: kaufen
+    class: verb
+    level: A1
+    meaning:
+      en: to buy
+      fa: خریدن
+    definition: für Geld eine Sache bekommen
+    example:
+      de: Ich kaufe mir eine neue Jacke.
+      en: I'm buying myself a new jacket.
+      fa: برای خودم یک کاپشن نو می‌خرم.
+    alsoAccepted: [einkaufen, erwerben, besorgen]
+
   - word: verkaufen
+    class: verb
+    level: A1
+    meaning:
+      en: to sell
+      fa: فروختن
+    definition: eine Sache einer anderen Person geben und dafür Geld bekommen
+    example:
+      de: Wir verkaufen unser altes Auto.
+      en: We're selling our old car.
+      fa: ماشین قدیمی‌مان را می‌فروشیم.
+
   - word: Verkäufer
+    class: noun
+    article: der
+    plural: Verkäufer
+    level: A1
+    meaning:
+      en: salesperson, shop assistant
+      fa: فروشنده
+    definition: eine Person, die in einem Laden arbeitet und den Leuten Sachen verkauft
+    example:
+      de: Der Verkäufer ist sehr freundlich.
+      en: The shop assistant is very friendly.
+      fa: فروشنده خیلی خوش‌برخورد است.
+    alsoAccepted: [die Verkäuferin]
+
   - word: Kunde
+    class: noun
+    article: der
+    plural: Kunden
+    level: A1
+    meaning:
+      en: customer
+      fa: مشتری
+    definition: eine Person, die in einem Laden etwas kauft
+    example:
+      de: Im Laden warten viele Kunden.
+      en: Lots of customers are waiting in the shop.
+      fa: در مغازه مشتری‌های زیادی منتظرند.
+    alsoAccepted: [die Kundin, der Käufer, die Käuferin]
+
+  # "Geschäft" and "Laden" are both a shop; each is right when the other is asked for.
   - word: Geschäft
+    class: noun
+    article: das
+    plural: Geschäfte
+    level: A1
+    meaning:
+      en: shop, store
+      fa: فروشگاه، مغازه
+    definition: dort verkauft man Sachen, zum Beispiel Schuhe, Bücher oder Kleidung
+    example:
+      de: Das Geschäft öffnet um neun Uhr.
+      en: The shop opens at nine o'clock.
+      fa: فروشگاه ساعت نه باز می‌شود.
+    alsoAccepted: [der Laden, das Ladengeschäft, das Kaufhaus]
+    tooCloseTo: [Laden]
+
   - word: Laden
+    class: noun
+    article: der
+    plural: Läden
+    level: A1
+    meaning:
+      en: shop
+      fa: مغازه
+    definition: ein Geschäft, in dem man etwas kaufen kann, zum Beispiel Brot oder Blumen
+    example:
+      de: Der kleine Laden an der Ecke hat auch am Sonntag auf.
+      en: The little shop on the corner is open on Sundays too.
+      fa: مغازهٔ کوچک سر نبش یکشنبه‌ها هم باز است.
+    alsoAccepted: [das Geschäft, das Ladengeschäft]
+
   - word: Kasse
+    class: noun
+    article: die
+    plural: Kassen
+    level: A1
+    meaning:
+      en: checkout, till
+      fa: صندوق (پرداخت)
+    definition: dort bezahlt man im Supermarkt
+    example:
+      de: Bitte zahlen Sie an der Kasse.
+      en: Please pay at the checkout.
+      fa: لطفاً پای صندوق پرداخت کنید.
+    alsoAccepted: [die Kassa]
+
   - word: Preis
+    class: noun
+    article: der
+    plural: Preise
+    level: A1
+    meaning:
+      en: price
+      fa: قیمت
+    definition: so viel Geld kostet eine Sache
+    example:
+      de: Der Preis steht auf dem Schild.
+      en: The price is on the label.
+      fa: قیمت روی برچسب نوشته شده است.
+
   - word: kosten
+    class: verb
+    level: A1
+    meaning:
+      en: to cost
+      fa: قیمت داشتن، هزینه داشتن
+    definition: einen Preis haben
+    example:
+      de: Was kostet das T-Shirt?
+      en: How much is the T-shirt?
+      fa: این تی‌شرت چند است؟
+
+  # "bezahlen" and "zahlen" both mean to pay; each is right when the other is asked for.
   - word: bezahlen
+    class: verb
+    level: A1
+    meaning:
+      en: to pay for
+      fa: پول (چیزی را) دادن
+    definition: Geld für eine Sache geben, die man kauft oder bekommt
+    example:
+      de: Wer bezahlt das Essen?
+      en: Who's paying for the meal?
+      fa: چه کسی پول غذا را می‌دهد؟
+    alsoAccepted: [zahlen]
+    tooCloseTo: [zahlen]
+
   - word: zahlen
+    class: verb
+    level: A1
+    meaning:
+      en: to pay
+      fa: پرداختن، پرداخت کردن
+    definition: Geld geben, zum Beispiel an der Kasse oder im Restaurant
+    example:
+      de: Zahlen, bitte!
+      en: The bill, please!
+      fa: صورت‌حساب، لطفاً!
+    alsoAccepted: [bezahlen]
+
   - word: Geld
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: money
+      fa: پول
+    definition: Münzen und Scheine; damit kauft man etwas
+    example:
+      de: Ich habe kein Geld dabei.
+      en: I don't have any money on me.
+      fa: پول همراهم نیست.
+    alsoAccepted: [das Bargeld]
+
   - word: Euro
+    class: noun
+    article: der
+    plural: Euros
+    level: A1
+    meaning:
+      en: euro
+      fa: یورو
+    definition: das Geld in Deutschland, Österreich und vielen anderen Ländern in Europa
+    example:
+      de: Das Buch kostet 12 Euro.
+      en: The book costs 12 euros.
+      fa: این کتاب ۱۲ یورو است.
+
   - word: Cent
+    class: noun
+    article: der
+    plural: Cents
+    level: A1
+    meaning:
+      en: cent
+      fa: سنت (پول)
+    definition: eine kleine Münze; hundert davon sind ein Euro
+    example:
+      de: Die Tüte kostet 20 Cent.
+      en: The bag costs 20 cents.
+      fa: کیسه ۲۰ سنت است.
+
+  # "billig" and "günstig" both say a thing costs little; each is right when the other is asked for.
   - word: billig
+    class: adjective
+    level: A1
+    meaning:
+      en: cheap
+      fa: ارزان
+    definition: so ist eine Sache, wenn sie wenig Geld kostet, manchmal auch nicht gut
+    example:
+      de: Die Schuhe sind billig, aber nicht gut.
+      en: The shoes are cheap, but not good.
+      fa: این کفش‌ها ارزان‌اند، ولی خوب نیستند.
+    alsoAccepted: [günstig, preiswert, preisgünstig]
+    tooCloseTo: [günstig]
+
   - word: teuer
+    class: adjective
+    level: A1
+    meaning:
+      en: expensive
+      fa: گران
+    definition: so ist eine Sache, wenn sie viel Geld kostet
+    example:
+      de: Das Restaurant ist schön, aber teuer.
+      en: The restaurant is nice, but expensive.
+      fa: رستوران قشنگ است، ولی گران.
+    alsoAccepted: [kostspielig]
+
   - word: günstig
+    class: adjective
+    level: A1
+    meaning:
+      en: good value, reasonably priced
+      fa: به‌صرفه، با قیمت مناسب
+    definition: für den Preis gut; nicht teuer
+    example:
+      de: Im Moment sind die Flüge sehr günstig.
+      en: Flights are very good value at the moment.
+      fa: این روزها قیمت پروازها خیلی مناسب است.
+    alsoAccepted: [billig, preiswert, preisgünstig]
+
   - word: Angebot
+    class: noun
+    article: das
+    plural: Angebote
+    level: A1
+    meaning:
+      en: special offer, offer
+      fa: پیشنهاد ویژه، حراج
+    definition: etwas, das im Geschäft für kurze Zeit weniger kostet als sonst
+    example:
+      de: Heute sind Äpfel im Angebot.
+      en: Apples are on special offer today.
+      fa: امروز سیب حراج است.
+    alsoAccepted: [das Sonderangebot]
+
   - word: Rechnung
+    class: noun
+    article: die
+    plural: Rechnungen
+    level: A1
+    meaning:
+      en: bill, invoice
+      fa: صورت‌حساب، فاکتور
+    definition: ein Papier, auf dem steht, wie viel man bezahlen muss
+    example:
+      de: Die Rechnung kommt mit der Post.
+      en: The bill comes by post.
+      fa: صورت‌حساب با پست می‌آید.
+
   - word: bar
+    class: adjective
+    level: A1
+    meaning:
+      en: in cash
+      fa: نقد، نقدی
+    definition: mit Münzen und Scheinen, nicht mit einer Karte
+    example:
+      de: Ich zahle bar.
+      en: I'll pay in cash.
+      fa: نقد پرداخت می‌کنم.
+    alsoAccepted: [in bar, mit Bargeld]
+
   - word: Kreditkarte
+    class: noun
+    article: die
+    plural: Kreditkarten
+    level: A1
+    meaning:
+      en: credit card
+      fa: کارت اعتباری
+    definition: eine Karte von der Bank; damit bezahlt man jetzt, und das Geld geht später vom Konto weg
+    example:
+      de: Nehmen Sie Kreditkarten?
+      en: Do you take credit cards?
+      fa: کارت اعتباری قبول می‌کنید؟
+
   - word: Konto
+    class: noun
+    article: das
+    plural: Konten
+    level: A1
+    meaning:
+      en: bank account
+      fa: حساب بانکی
+    definition: dort ist das Geld von einer Person bei der Bank
+    example:
+      de: Mein Gehalt kommt jeden Monat auf mein Konto.
+      en: My salary goes into my account every month.
+      fa: حقوقم هر ماه به حسابم واریز می‌شود.
+    alsoAccepted: [das Bankkonto, das Girokonto]
+
   - word: überweisen
+    class: verb
+    level: A1
+    meaning:
+      en: to transfer (money)
+      fa: واریز کردن، انتقال دادن (پول)
+    definition: Geld von einem Konto auf ein anderes Konto schicken
+    example:
+      de: Ich überweise die Miete immer am Monatsanfang.
+      en: I always transfer the rent at the start of the month.
+      fa: اجاره را همیشه اول ماه واریز می‌کنم.
+
   - word: Prospekt
+    class: noun
+    article: der
+    plural: Prospekte
+    level: A1
+    meaning:
+      en: brochure, leaflet
+      fa: بروشور، آگهی تبلیغاتی
+    definition: ein Heft oder ein Papier mit Bildern und Preisen, zum Beispiel vom Supermarkt
+    example:
+      de: Im Prospekt stehen die Angebote der Woche.
+      en: The week's special offers are in the brochure.
+      fa: پیشنهادهای ویژهٔ این هفته در بروشور آمده است.
+    alsoAccepted: [die Broschüre, das Faltblatt, der Flyer]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 32 questions)
+  date: 2026-11-28
+  pool: 443b988eb6d3a20d

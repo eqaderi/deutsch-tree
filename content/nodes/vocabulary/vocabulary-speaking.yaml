@@ -1,40 +1,380 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-speaking
 kind: vocabulary
 level: A1
 chapter: a1-words-daily-life
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Speaking and understanding"
   fa: "حرف زدن و فهمیدن"
   de: "Sprechen und Verstehen"
+attemptSize: 15
 words:
   - word: Sprache
+    class: noun
+    article: die
+    plural: Sprachen
+    level: A1
+    meaning:
+      en: language
+      fa: زبان (مانند فارسی یا آلمانی)
+    definition: die Wörter und Regeln, mit denen die Menschen in einem Land sprechen, zum Beispiel Deutsch
+    example:
+      de: Wie viele Sprachen sprichst du?
+      en: How many languages do you speak?
+      fa: به چند زبان صحبت می‌کنی؟
+
   - word: sprechen
+    class: verb
+    level: A1
+    meaning:
+      en: to speak, to talk
+      fa: صحبت کردن، حرف زدن
+    definition: eine Sprache benutzen und mit dem Mund Wörter bilden
+    example:
+      de: Sprechen Sie Deutsch?
+      en: Do you speak German?
+      fa: آلمانی صحبت می‌کنید؟
+    alsoAccepted: [reden, sich unterhalten]
+
+  # The scope list gives "(sich)": "sich verstehen" is to get on well with someone.
   - word: verstehen
+    class: verb
+    level: A1
+    meaning:
+      en: to understand
+      fa: فهمیدن
+    definition: wissen, was eine Person meint oder was ein Wort bedeutet
+    example:
+      de: Entschuldigung, das verstehe ich nicht.
+      en: Sorry, I don't understand that.
+      fa: ببخشید، این را نمی‌فهمم.
+    alsoAccepted: [begreifen, kapieren]
+
   - word: sagen
+    class: verb
+    level: A1
+    meaning:
+      en: to say
+      fa: گفتن
+    definition: etwas Bestimmtes in Worten ausdrücken, zum Beispiel „Ja“ oder „Danke“
+    example:
+      de: Was hat die Lehrerin gesagt?
+      en: What did the teacher say?
+      fa: معلم چه گفت؟
+
   - word: fragen
+    class: verb
+    level: A1
+    meaning:
+      en: to ask (a question)
+      fa: پرسیدن
+    definition: eine Person ansprechen, weil man etwas wissen möchte
+    example:
+      de: Darf ich Sie etwas fragen?
+      en: May I ask you something?
+      fa: اجازه هست چیزی از شما بپرسم؟
+
   - word: Frage
+    class: noun
+    article: die
+    plural: Fragen
+    level: A1
+    meaning:
+      en: question
+      fa: پرسش، سؤال
+    definition: ein Satz, mit dem man etwas wissen möchte; am Ende steht ein Fragezeichen
+    example:
+      de: Haben Sie noch Fragen?
+      en: Do you have any more questions?
+      fa: باز هم پرسشی دارید؟
+
   - word: antworten
+    class: verb
+    level: A1
+    meaning:
+      en: to answer, to reply
+      fa: پاسخ دادن، جواب دادن
+    definition: etwas sagen oder schreiben, nachdem eine Person gefragt hat
+    example:
+      de: Bitte antworten Sie bis Freitag.
+      en: Please reply by Friday.
+      fa: لطفاً تا جمعه پاسخ دهید.
+    alsoAccepted: [beantworten, erwidern]
+
   - word: Antwort
+    class: noun
+    article: die
+    plural: Antworten
+    level: A1
+    meaning:
+      en: answer, reply
+      fa: پاسخ، جواب
+    definition: das, was man auf eine Frage sagt oder schreibt
+    example:
+      de: Danke für deine schnelle Antwort.
+      en: Thanks for your quick reply.
+      fa: ممنون از پاسخ سریعت.
+
   - word: erzählen
+    class: verb
+    level: A1
+    meaning:
+      en: to tell (a story), to recount
+      fa: تعریف کردن (ماجرا یا داستان)
+    definition: einer Person von etwas berichten, zum Beispiel von einem Erlebnis
+    example:
+      de: Erzähl mal, wie war dein Urlaub?
+      en: Tell me, how was your holiday?
+      fa: تعریف کن ببینم، تعطیلاتت چطور بود؟
+    alsoAccepted: [berichten]
+
   - word: erklären
+    class: verb
+    level: A1
+    meaning:
+      en: to explain
+      fa: توضیح دادن
+    definition: so sprechen, dass eine andere Person etwas versteht
+    example:
+      de: Kannst du mir das Wort erklären?
+      en: Can you explain the word to me?
+      fa: می‌توانی این واژه را برایم توضیح بدهی؟
+
   - word: wiederholen
+    class: verb
+    level: A1
+    meaning:
+      en: to repeat
+      fa: تکرار کردن
+    definition: etwas noch einmal sagen oder machen
+    example:
+      de: Können Sie das bitte wiederholen?
+      en: Could you repeat that, please?
+      fa: ممکن است لطفاً آن را تکرار کنید؟
+
   - word: bedeuten
+    class: verb
+    level: A1
+    meaning:
+      en: to mean
+      fa: معنا داشتن، معنی دادن
+    definition: einen bestimmten Sinn haben
+    example:
+      de: Was bedeutet dieses Wort?
+      en: What does this word mean?
+      fa: این واژه چه معنایی دارد؟
+    alsoAccepted: [heißen, meinen]
+
   - word: Wort
+    class: noun
+    article: das
+    plural: Wörter
+    level: A1
+    meaning:
+      en: word
+      fa: واژه، کلمه
+    definition: ein kleiner Teil von einem Satz, zum Beispiel „Haus“ oder „gehen“
+    example:
+      de: Ich kenne das Wort nicht.
+      en: I don't know the word.
+      fa: این واژه را بلد نیستم.
+
   - word: Satz
+    class: noun
+    article: der
+    plural: Sätze
+    level: A1
+    meaning:
+      en: sentence
+      fa: جمله
+    definition: mehrere Wörter mit einem Verb; am Ende steht ein Punkt oder ein Fragezeichen
+    example:
+      de: Lesen Sie den ersten Satz laut.
+      en: Read the first sentence aloud.
+      fa: جملهٔ اول را بلند بخوانید.
+
   - word: Gespräch
+    class: noun
+    article: das
+    plural: Gespräche
+    level: A1
+    meaning:
+      en: conversation, talk
+      fa: گفت‌وگو
+    definition: wenn zwei oder mehr Personen miteinander sprechen
+    example:
+      de: Das Gespräch mit meinem Chef war gut.
+      en: The conversation with my boss went well.
+      fa: گفت‌وگو با رئیسم خوب پیش رفت.
+    alsoAccepted: [die Unterhaltung, der Dialog]
+
   - word: Aussage
+    class: noun
+    article: die
+    plural: Aussagen
+    level: A1
+    meaning:
+      en: statement
+      fa: گزاره، گفته
+    definition: ein Satz, der sagt, wie etwas ist; er kann richtig oder falsch sein
+    example:
+      de: Ist die Aussage richtig oder falsch?
+      en: Is the statement right or wrong?
+      fa: این گزاره درست است یا نادرست؟
+    alsoAccepted: [die Behauptung, die Äußerung, der Satz]
+
+  # "das Beispiel" and "zum Beispiel" are close; neither is offered as a wrong meaning of the other.
   - word: Beispiel
+    class: noun
+    article: das
+    plural: Beispiele
+    level: A1
+    meaning:
+      en: example
+      fa: مثال، نمونه
+    definition: eine Sache, die man zeigt, damit andere eine Regel oder eine Idee besser verstehen
+    example:
+      de: Können Sie mir ein Beispiel geben?
+      en: Can you give me an example?
+      fa: می‌توانید برایم مثالی بزنید؟
+    tooCloseTo: [zum Beispiel]
+
   - word: zum Beispiel
+    class: phrase
+    level: A1
+    meaning:
+      en: for example, for instance
+      fa: مثلاً، برای نمونه
+    definition: das sagt man vor einer Sache, die zeigt, was man meint; kurz „z. B.“
+    example:
+      de: Ich esse gern Obst, zum Beispiel Äpfel.
+      en: I like eating fruit, for example apples.
+      fa: میوه دوست دارم، مثلاً سیب.
+    alsoAccepted: [beispielsweise, z. B., z.B.]
+    tooCloseTo: [Beispiel]
+
   - word: Text
+    class: noun
+    article: der
+    plural: Texte
+    level: A1
+    meaning:
+      en: text
+      fa: متن
+    definition: mehrere Sätze zusammen, zum Beispiel ein Brief oder ein Artikel
+    example:
+      de: Lesen Sie den Text und antworten Sie dann.
+      en: Read the text and then answer.
+      fa: متن را بخوانید و بعد پاسخ دهید.
+
   - word: Thema
+    class: noun
+    article: das
+    plural: Themen
+    level: A1
+    meaning:
+      en: topic, subject
+      fa: موضوع
+    definition: das, worüber man spricht oder schreibt
+    example:
+      de: Unser Thema heute ist das Wetter.
+      en: Our topic today is the weather.
+      fa: موضوع امروز ما آب‌وهواست.
+
   - word: hören
+    class: verb
+    level: A1
+    meaning:
+      en: to hear, to listen
+      fa: شنیدن، گوش دادن
+    definition: etwas mit den Ohren wahrnehmen
+    example:
+      de: Hörst du die Musik?
+      en: Can you hear the music?
+      fa: صدای موسیقی را می‌شنوی؟
+    alsoAccepted: [zuhören, anhören]
+
   - word: Anrede
+    class: noun
+    article: die
+    plural: Anreden
+    level: A1
+    meaning:
+      en: form of address (at the start of a letter)
+      fa: عنوان خطاب (در آغاز نامه)
+    definition: die Wörter für eine Person am Anfang von einem Brief, zum Beispiel „Liebe Anna“ oder „Sehr geehrte Frau Weber“
+    example:
+      de: Achten Sie im Brief auf die richtige Anrede.
+      en: Make sure you use the right form of address in the letter.
+      fa: در نامه به عنوان خطاب درست دقت کنید.
+
   - word: laut
+    class: adjective
+    level: A1
+    meaning:
+      en: loud, aloud
+      fa: بلند (صدا)، پرصدا
+    definition: so, dass man es gut und weit hört
+    example:
+      de: Die Musik ist zu laut.
+      en: The music is too loud.
+      fa: صدای موسیقی خیلی بلند است.
+
   - word: leise
+    class: adjective
+    level: A1
+    meaning:
+      en: quiet, soft (of a sound)
+      fa: کم‌صدا
+    definition: so, dass man es kaum hört
+    example:
+      de: Bitte sprecht leise, das Baby schläft.
+      en: Please talk quietly, the baby is asleep.
+      fa: لطفاً آرام حرف بزنید، نوزاد خواب است.
+    alsoAccepted: [still]
+
   - word: langsam
+    class: adjective
+    level: A1
+    meaning:
+      en: slow, slowly
+      fa: آهسته، کم‌سرعت
+    definition: das Gegenteil von schnell; man braucht viel Zeit
+    example:
+      de: Der Bus fährt heute sehr langsam.
+      en: The bus is going very slowly today.
+      fa: اتوبوس امروز خیلی آهسته می‌رود.
+
   - word: wissen
+    class: verb
+    level: A1
+    meaning:
+      en: to know (a fact)
+      fa: دانستن
+    definition: eine Information im Kopf haben
+    example:
+      de: Weißt du, wo der Bahnhof ist?
+      en: Do you know where the station is?
+      fa: می‌دانی ایستگاه قطار کجاست؟
+
   - word: glauben
+    class: verb
+    level: A1
+    meaning:
+      en: to believe, to think
+      fa: باور داشتن، گمان کردن
+    definition: denken, dass etwas so ist, aber es nicht sicher wissen
+    example:
+      de: Ich glaube, morgen regnet es.
+      en: I think it will rain tomorrow.
+      fa: فکر می‌کنم فردا باران ببارد.
+    alsoAccepted: [denken, meinen, vermuten, annehmen]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 162, then 31 questions)
+  date: 2026-11-28
+  pool: 8052f8f1001601a5

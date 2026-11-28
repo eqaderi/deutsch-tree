@@ -1,38 +1,358 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-sizes-amounts
 kind: vocabulary
 level: A1
 chapter: a1-words-food-home
 order: 6
-status: coming-soon
+status: published
 title:
   en: "Sizes, weights and amounts"
   fa: "اندازه، وزن و مقدار"
   de: "Größen, Gewichte und Mengen"
+attemptSize: 15
 words:
   - word: Gramm
+    class: noun
+    article: das
+    plural: Gramme
+    level: A1
+    meaning:
+      en: gram
+      fa: گرم (وزن)
+    definition: ein ganz kleines Gewicht; tausend davon sind ein Kilo
+    example:
+      de: Ich brauche 200 Gramm Käse.
+      en: I need 200 grams of cheese.
+      fa: ۲۰۰ گرم پنیر لازم دارم.
+    alsoAccepted: [der Gramm]
+
   - word: Kilogramm
+    class: noun
+    article: das
+    plural: Kilogramme
+    level: A1
+    meaning:
+      en: kilogram
+      fa: کیلوگرم
+    definition: tausend Gramm
+    example:
+      de: Ein Kilogramm Tomaten kostet drei Euro.
+      en: A kilogram of tomatoes costs three euros.
+      fa: یک کیلو گوجه‌فرنگی سه یورو است.
+    alsoAccepted: [das Kilo, der Kilogramm]
+
   - word: Pfund
+    class: noun
+    article: das
+    plural: Pfunde
+    level: A1
+    meaning:
+      en: pound (half a kilo)
+      fa: نیم کیلو
+    definition: ein halbes Kilo, also fünfhundert Gramm
+    example:
+      de: Ein Pfund Hackfleisch, bitte.
+      en: A pound of mince, please.
+      fa: نیم کیلو گوشت چرخ‌کرده، لطفاً.
+
   - word: Liter
+    class: noun
+    article: der
+    plural: Liter
+    level: A1
+    meaning:
+      en: litre
+      fa: لیتر
+    definition: damit misst man, wie viel Milch oder Wasser es ist
+    example:
+      de: Ich trinke jeden Tag zwei Liter Wasser.
+      en: I drink two litres of water every day.
+      fa: هر روز دو لیتر آب می‌نوشم.
+    alsoAccepted: [das Liter]
+
   - word: Meter
+    class: noun
+    article: der
+    plural: Meter
+    level: A1
+    meaning:
+      en: metre
+      fa: متر
+    definition: hundert Zentimeter
+    example:
+      de: Das Zimmer ist vier Meter lang.
+      en: The room is four metres long.
+      fa: اتاق چهار متر طول دارد.
+    alsoAccepted: [das Meter]
+
   - word: Zentimeter
+    class: noun
+    article: der
+    plural: Zentimeter
+    level: A1
+    meaning:
+      en: centimetre
+      fa: سانتی‌متر
+    definition: ein ganz kleines Stück von einem Meter; hundert davon sind ein Meter
+    example:
+      de: Das Baby ist 50 Zentimeter groß.
+      en: The baby is 50 centimetres long.
+      fa: نوزاد ۵۰ سانتی‌متر قد دارد.
+    alsoAccepted: [das Zentimeter]
+
   - word: Kilometer
+    class: noun
+    article: der
+    plural: Kilometer
+    level: A1
+    meaning:
+      en: kilometre
+      fa: کیلومتر
+    definition: tausend Meter
+    example:
+      de: Bis zum Bahnhof sind es zwei Kilometer.
+      en: It's two kilometres to the station.
+      fa: تا ایستگاه قطار دو کیلومتر راه است.
+
   - word: Quadratmeter
+    class: noun
+    article: der
+    plural: Quadratmeter
+    level: A1
+    meaning:
+      en: square metre
+      fa: متر مربع
+    definition: ein Quadrat, einen Meter lang und einen Meter breit; damit misst man Wohnungen
+    example:
+      de: Die Wohnung hat 70 Quadratmeter.
+      en: The flat is 70 square metres.
+      fa: این آپارتمان ۷۰ متر مربع است.
+    alsoAccepted: [das Quadratmeter]
+
   - word: Gewicht
+    class: noun
+    article: das
+    plural: Gewichte
+    level: A1
+    meaning:
+      en: weight
+      fa: وزن
+    definition: wie schwer eine Sache oder eine Person ist, zum Beispiel in Kilo
+    example:
+      de: Das Gewicht steht auf der Packung.
+      en: The weight is on the packet.
+      fa: وزن روی بسته نوشته شده است.
+
   - word: Größe
+    class: noun
+    article: die
+    plural: Größen
+    level: A1
+    meaning:
+      en: size; height
+      fa: اندازه، سایز؛ قد
+    definition: wie groß eine Sache oder eine Person ist, zum Beispiel bei Kleidung oder Schuhen
+    example:
+      de: Haben Sie die Hose auch in Größe 40?
+      en: Do you have the trousers in size 40 too?
+      fa: این شلوار را در سایز ۴۰ هم دارید؟
+
   - word: groß
+    class: adjective
+    level: A1
+    meaning:
+      en: big, large
+      fa: بزرگ
+    definition: nicht klein, zum Beispiel ein Elefant
+    example:
+      de: Unsere Küche ist groß und hell.
+      en: Our kitchen is big and bright.
+      fa: آشپزخانهٔ ما بزرگ و روشن است.
+
   - word: klein
+    class: adjective
+    level: A1
+    meaning:
+      en: small, little
+      fa: کوچک
+    definition: nicht groß, zum Beispiel eine Maus
+    example:
+      de: Ich wohne in einer kleinen Wohnung.
+      en: I live in a small flat.
+      fa: من در آپارتمان کوچکی زندگی می‌کنم.
+
   - word: lang
+    class: adjective
+    level: A1
+    meaning:
+      en: long
+      fa: دراز، طولانی
+    definition: nicht kurz, zum Beispiel ein Fluss oder ein Weg von hundert Kilometern
+    example:
+      de: Sie hat lange Haare.
+      en: She has long hair.
+      fa: او موهای بلندی دارد.
+
   - word: kurz
+    class: adjective
+    level: A1
+    meaning:
+      en: short
+      fa: کوتاه
+    definition: nicht lang, zum Beispiel eine Pause von fünf Minuten
+    example:
+      de: Der Weg zur Schule ist kurz.
+      en: The way to school is short.
+      fa: راه مدرسه کوتاه است.
+
   - word: breit
+    class: adjective
+    level: A1
+    meaning:
+      en: wide, broad
+      fa: پهن، عریض
+    definition: von einer Seite bis zur anderen Seite groß, zum Beispiel eine Straße mit viel Platz für Autos
+    example:
+      de: Die Straße ist hier sehr breit.
+      en: The road is very wide here.
+      fa: خیابان اینجا خیلی پهن است.
+
   - word: hoch
+    class: adjective
+    level: A1
+    meaning:
+      en: high, tall (a building, a mountain)
+      fa: بلند، مرتفع
+    definition: weit nach oben, zum Beispiel ein Berg oder ein Turm
+    example:
+      de: Der Berg ist fast 3000 Meter hoch.
+      en: The mountain is almost 3,000 metres high.
+      fa: این کوه نزدیک به ۳۰۰۰ متر ارتفاع دارد.
+
   - word: schwer
+    class: adjective
+    level: A1
+    meaning:
+      en: heavy; difficult
+      fa: سنگین؛ سخت
+    definition: mit viel Gewicht, man kann es kaum tragen; oder nicht einfach
+    example:
+      de: Der Koffer ist sehr schwer.
+      en: The suitcase is very heavy.
+      fa: چمدان خیلی سنگین است.
+    alsoAccepted: [schwierig]
+
   - word: leicht
+    class: adjective
+    level: A1
+    meaning:
+      en: light (not heavy); easy
+      fa: سبک؛ آسان
+    definition: mit wenig Gewicht, man kann es gut tragen; oder einfach
+    example:
+      de: Die Tasche ist ganz leicht.
+      en: The bag is really light.
+      fa: کیف خیلی سبک است.
+    alsoAccepted: [einfach]
+
   - word: viel
+    class: pronoun
+    level: A1
+    meaning:
+      en: much, a lot (of)
+      fa: زیاد، مقدار زیادی
+    definition: eine große Menge, nicht wenig
+    example:
+      de: Er trinkt viel Kaffee.
+      en: He drinks a lot of coffee.
+      fa: او قهوهٔ زیادی می‌نوشد.
+    alsoAccepted: [viele, eine Menge, sehr viel]
+
+  # "wenig" (not much) and "bisschen" (a little) are close; neither is offered as a wrong meaning of the other.
   - word: wenig
+    class: pronoun
+    level: A1
+    meaning:
+      en: little, not much
+      fa: کم، نه چندان زیاد
+    definition: nicht viel, oft weniger, als man braucht
+    example:
+      de: Ich habe heute wenig Zeit.
+      en: I have little time today.
+      fa: امروز وقت کمی دارم.
+    alsoAccepted: [wenige, nicht viel]
+    tooCloseTo: [bisschen]
+
   - word: mehr
+    class: adverb
+    level: A1
+    meaning:
+      en: more
+      fa: بیشتر
+    definition: eine größere Menge als vorher oder als bei einer anderen Sache
+    example:
+      de: Möchtest du noch mehr Suppe?
+      en: Would you like some more soup?
+      fa: باز هم سوپ می‌خواهی؟
+
   - word: bisschen
+    class: adverb
+    level: A1
+    meaning:
+      en: a little, a bit
+      fa: کمی، اندکی
+    definition: eine kleine Menge, aber nicht nichts, zum Beispiel etwas Salz in der Suppe
+    example:
+      de: Ich spreche ein bisschen Deutsch.
+      en: I speak a little German.
+      fa: کمی آلمانی صحبت می‌کنم.
+    alsoAccepted: [ein bisschen, ein wenig, etwas]
+
+  # The scope list gives "das/der": "der Teil" is a part of a whole, "das Teil" also a single piece.
   - word: Teil
+    class: noun
+    article: der
+    plural: Teile
+    level: A1
+    meaning:
+      en: part
+      fa: بخش، قسمت
+    definition: ein Stück von einer Sache, aber nicht alles
+    example:
+      de: Ein Teil von der Pizza ist noch da.
+      en: Part of the pizza is still there.
+      fa: بخشی از پیتزا هنوز مانده است.
+    alsoAccepted: [das Teil, das Stück]
+
   - word: meiste
+    class: adjective
+    level: A1
+    meaning:
+      en: most
+      fa: بیشترین، اکثر
+    definition: mehr als die Hälfte; die größte Zahl oder Menge
+    example:
+      de: Die meisten Kinder in der Klasse sprechen zwei Sprachen.
+      en: Most of the children in the class speak two languages.
+      fa: بیشتر بچه‌های کلاس دو زبان صحبت می‌کنند.
+    alsoAccepted: [die meisten, meisten, das meiste, der meiste, am meisten, die Mehrheit]
+
   - word: wie viel
+    class: phrase
+    level: A1
+    meaning:
+      en: how much, how many
+      fa: چقدر، چند تا
+    definition: damit fragt man nach einer Zahl oder einer Menge
+    example:
+      de: Wie viel Zucker nimmst du in den Tee?
+      en: How much sugar do you take in your tea?
+      fa: چقدر شکر در چایت می‌ریزی؟
+    alsoAccepted: [wie viele]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 17 questions)
+  date: 2026-11-28
+  pool: d7211214bb00d6c7
