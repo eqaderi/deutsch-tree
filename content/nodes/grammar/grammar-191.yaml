@@ -90,7 +90,7 @@ diagrams:
         <line class="line" x1="160" y1="185" x2="160" y2="175"/>
         <line class="line" x1="100" y1="125" x2="110" y2="125"/>
         <!-- the two halves -->
-        <text class="label" x="190" y="131" text-anchor="middle">nach</text>
+        <text class="label" x="185" y="131" text-anchor="middle">nach</text>
         <text class="label" x="130" y="131" text-anchor="middle">vor</text>
         <!-- what each quarter is called -->
         <text class="label" x="160" y="48" text-anchor="middle">sieben Uhr</text>
