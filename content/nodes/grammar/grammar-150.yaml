@@ -139,7 +139,7 @@ questions:
     options: [da, denn, und]
     answer: da
     explanation:
-      en: "*Da* means \"then, on Friday\" here. It is position 1, so the verb *habe* comes next. After *denn* or *und* the subject would come first."
+      en: '*Da* means "then, on Friday" here. It is position 1, so the verb *habe* comes next. After *denn* or *und* the subject would come first.'
       fa: "*da* در این‌جا یعنی «آن وقت، جمعه». جایگاه اول است، پس فعل *habe* پس از آن می‌آید. پس از *denn* یا *und* باید نخست فاعل بیاید."
       de: "*Da* heißt hier: am Freitag. Es ist Position 1, darum kommt das Verb *habe* danach. Nach *denn* oder *und* käme zuerst das Subjekt."
   - id: choice-1

@@ -158,7 +158,12 @@ questions:
   - id: choice-1
     type: multiple-choice
     prompt: "es regnet / aber / wir gehen spazieren"
-    options: ["Es regnet, aber wir gehen spazieren.", "Es regnet, aber gehen wir spazieren.", "Es regnet, aber wir spazieren gehen."]
+    options:
+      [
+        "Es regnet, aber wir gehen spazieren.",
+        "Es regnet, aber gehen wir spazieren.",
+        "Es regnet, aber wir spazieren gehen.",
+      ]
     answer: Es regnet, aber wir gehen spazieren.
     explanation:
       en: "*Aber* is position 0: subject *wir*, then the verb *gehen*, as in any statement."

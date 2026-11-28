@@ -226,7 +226,8 @@ questions:
   - id: choice-3
     type: multiple-choice
     prompt: "Perfekt: wir / gestern / ins Kino / gehen"
-    options: [Wir sind gestern ins Kino gegangen., Wir sind gegangen gestern ins Kino., Wir gestern sind ins Kino gegangen.]
+    options:
+      [Wir sind gestern ins Kino gegangen., Wir sind gegangen gestern ins Kino., Wir gestern sind ins Kino gegangen.]
     answer: Wir sind gestern ins Kino gegangen.
     explanation:
       en: "*Sind* in position 2, the *Partizip II* *gegangen* at the end, the rest in the middle."
