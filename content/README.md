@@ -940,6 +940,9 @@ the command are in the main README, "Audio".
 - Numbers are spoken as words: `85 Jahre`, `14:35 Uhr`, `am 3. Mai`, `1990`,
   `3,50 €` and `20 %` need nothing. A number in another form (`3.5.2025`) is
   an error that asks you to write it in words.
+- The abbreviations *z. B.*, *d. h.* and *usw.* are spoken as their words
+  (*zum Beispiel*, *das heißt*, *und so weiter*); Piper would spell them out.
+  Another abbreviation needs a line in `ABBREVIATIONS` (`src/audio/speakable.ts`).
 - Audio is not part of the review record: changing an example needs new
   audio, never a new review.
 - Listen to new audio once. When the voice slips on an item, say it again with

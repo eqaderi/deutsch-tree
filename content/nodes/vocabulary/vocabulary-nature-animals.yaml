@@ -1,31 +1,286 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-nature-animals
 kind: vocabulary
 level: A2
 chapter: a2-words-health-town
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Nature, animals and plants"
   fa: "طبیعت، حیوانات و گیاهان"
   de: "Natur, Tiere und Pflanzen"
+attemptSize: 15
 words:
+  # Nature and landscape overlap; neither meaning is offered as a wrong one for the other.
   - word: Natur
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: nature
+      fa: طبیعت
+    definition: alles, was nicht der Mensch gemacht hat, zum Beispiel Berge, Wälder, Tiere und Pflanzen
+    example:
+      de: Am Wochenende sind wir gern draußen in der Natur.
+      en: At weekends we like being out in nature.
+      fa: آخر هفته‌ها دوست داریم در طبیعت باشیم.
+    tooCloseTo: [Landschaft]
+
   - word: Landschaft
+    class: noun
+    article: die
+    plural: Landschaften
+    level: A2
+    meaning:
+      en: landscape, scenery
+      fa: چشم‌انداز، منظرهٔ طبیعی
+    definition: wie ein großes Stück Land aussieht, mit Bergen, Feldern, Wäldern und Flüssen
+    example:
+      de: Die Landschaft in den Alpen ist wunderschön.
+      en: The scenery in the Alps is beautiful.
+      fa: چشم‌انداز کوه‌های آلپ بسیار زیباست.
+    tooCloseTo: [Natur]
+
   - word: Berg
+    class: noun
+    article: der
+    plural: Berge
+    level: A2
+    meaning:
+      en: mountain
+      fa: کوه
+    definition: ein sehr hoher Teil der Erde; oben liegt oft Schnee
+    example:
+      de: Von dem Berg sieht man bis zum See.
+      en: From the mountain you can see as far as the lake.
+      fa: از بالای کوه تا دریاچه پیداست.
+
   - word: Fluss
+    class: noun
+    article: der
+    plural: Flüsse
+    level: A2
+    meaning:
+      en: river (also a small one)
+      fa: رودخانه، رود (بزرگ یا کوچک)
+    definition: Wasser, das durch das Land fließt; es kann klein oder groß sein
+    example:
+      de: Der Rhein ist ein langer Fluss.
+      en: The Rhine is a long river.
+      fa: راین رودخانهٔ درازی است.
+
   - word: Insel
+    class: noun
+    article: die
+    plural: Inseln
+    level: A2
+    meaning:
+      en: island
+      fa: جزیره
+    definition: ein Stück Land mitten im Wasser
+    example:
+      de: Im Urlaub fahren wir auf eine Insel in der Nordsee.
+      en: On holiday we're going to an island in the North Sea.
+      fa: در تعطیلات به جزیره‌ای در دریای شمال می‌رویم.
+
   - word: Strand
+    class: noun
+    article: der
+    plural: Strände
+    level: A2
+    meaning:
+      en: beach
+      fa: ساحل (شنی)
+    definition: der Platz mit Sand am Meer oder am See, an dem man in der Sonne liegt
+    example:
+      de: Die Kinder bauen am Strand eine Burg aus Sand.
+      en: The children are building a sandcastle on the beach.
+      fa: بچه‌ها در ساحل قلعهٔ شنی می‌سازند.
+
   - word: Wald
+    class: noun
+    article: der
+    plural: Wälder
+    level: A2
+    meaning:
+      en: forest, woods
+      fa: جنگل
+    definition: ein großes Stück Land mit sehr vielen Bäumen
+    example:
+      de: Hinter dem Dorf beginnt der Wald.
+      en: The forest begins behind the village.
+      fa: جنگل از پشت روستا شروع می‌شود.
+
+  # A rose is one kind of plant; neither meaning is offered as a wrong one for the other.
   - word: Pflanze
+    class: noun
+    article: die
+    plural: Pflanzen
+    level: A2
+    meaning:
+      en: plant
+      fa: گیاه
+    definition: etwas Lebendiges, das aus der Erde wächst, zum Beispiel ein Baum oder eine Blume
+    example:
+      de: Vergiss nicht, die Pflanzen zu gießen!
+      en: Don't forget to water the plants!
+      fa: یادت نرود به گیاه‌ها آب بدهی!
+    tooCloseTo: [Rose]
+
   - word: Rose
+    class: noun
+    article: die
+    plural: Rosen
+    level: A2
+    meaning:
+      en: rose
+      fa: گل رز، گل سرخ
+    definition: eine schöne Blume, oft rot, mit Dornen am Stiel
+    example:
+      de: Zum Geburtstag bekommt sie rote Rosen.
+      en: For her birthday she gets red roses.
+      fa: برای تولدش گل رز قرمز می‌گیرد.
+    tooCloseTo: [Pflanze]
+
   - word: Blatt
+    class: noun
+    article: das
+    plural: Blätter
+    level: A2
+    meaning:
+      en: leaf; sheet (of paper)
+      fa: برگ؛ برگه (کاغذ)
+    definition: ein grüner, flacher Teil von einem Baum; auch ein Stück Papier
+    example:
+      de: Im Herbst werden die Blätter gelb und rot.
+      en: In autumn the leaves turn yellow and red.
+      fa: در پاییز برگ‌ها زرد و قرمز می‌شوند.
+
+  # A cat, a horse and a bird are animals; "animal" is never offered as a wrong meaning of them, nor they of it.
   - word: Tier
+    class: noun
+    article: das
+    plural: Tiere
+    level: A2
+    meaning:
+      en: animal
+      fa: حیوان، جانور
+    definition: es lebt und kann sich bewegen, aber es ist kein Mensch, zum Beispiel ein Hund
+    example:
+      de: Auf dem Bauernhof leben viele Tiere.
+      en: Lots of animals live on the farm.
+      fa: در مزرعه حیوانات زیادی زندگی می‌کنند.
+    tooCloseTo: [Katze, Pferd, Vogel]
+
   - word: Katze
+    class: noun
+    article: die
+    plural: Katzen
+    level: A2
+    meaning:
+      en: cat
+      fa: گربه
+    definition: ein kleines Haustier, das „miau“ macht und Mäuse fängt
+    example:
+      de: Unsere Katze schläft am liebsten auf dem Sofa.
+      en: Our cat likes sleeping on the sofa best.
+      fa: گربهٔ ما بیش از همه دوست دارد روی مبل بخوابد.
+    tooCloseTo: [Tier]
+
   - word: Pferd
+    class: noun
+    article: das
+    plural: Pferde
+    level: A2
+    meaning:
+      en: horse
+      fa: اسب
+    definition: ein großes, schnelles Tier mit einer Mähne; es frisst Heu, und man kann auf ihm reiten
+    example:
+      de: Das Pferd frisst gern Äpfel und Karotten.
+      en: The horse likes eating apples and carrots.
+      fa: اسب سیب و هویج را دوست دارد.
+    alsoAccepted: [das Ross, der Hengst, die Stute]
+    tooCloseTo: [Tier]
+
   - word: Vogel
+    class: noun
+    article: der
+    plural: Vögel
+    level: A2
+    meaning:
+      en: bird
+      fa: پرنده
+    definition: ein Tier mit Federn und Flügeln, das meistens fliegen kann
+    example:
+      de: Am Morgen singen die Vögel im Garten.
+      en: In the morning the birds sing in the garden.
+      fa: صبح‌ها پرنده‌ها در باغ آواز می‌خوانند.
+    tooCloseTo: [Tier]
+
   - word: Zoo
+    class: noun
+    article: der
+    plural: Zoos
+    level: A2
+    meaning:
+      en: zoo
+      fa: باغ وحش
+    definition: ein großer Park, in dem man Tiere aus vielen Ländern ansehen kann
+    example:
+      de: Im Zoo gibt es zwei junge Elefanten.
+      en: There are two young elephants at the zoo.
+      fa: در باغ وحش دو بچه‌فیل هست.
+    alsoAccepted: [der Tierpark, der Tiergarten]
+
+  # The walk and to go for a walk are one thing as a noun and as a verb; neither is offered as a wrong meaning of the other.
   - word: Spaziergang
+    class: noun
+    article: der
+    plural: Spaziergänge
+    level: A2
+    meaning:
+      en: a walk (for pleasure)
+      fa: پیاده‌روی (برای تفریح)
+    definition: ein kurzer, langsamer Gang zu Fuß, zum Beispiel durch den Park, nur zum Vergnügen
+    example:
+      de: Nach dem Essen machen wir einen Spaziergang.
+      en: After the meal we go for a walk.
+      fa: بعد از غذا کمی پیاده‌روی می‌کنیم.
+    alsoAccepted: [der Bummel]
+    tooCloseTo: [spazieren gehen]
+
   - word: spazieren gehen
+    class: verb
+    level: A2
+    meaning:
+      en: to go for a walk
+      fa: به پیاده‌روی رفتن
+    definition: draußen zu Fuß gehen, um sich zu erholen, zum Beispiel im Park oder im Wald
+    example:
+      de: Wir gehen jeden Abend mit dem Hund spazieren.
+      en: We go for a walk with the dog every evening.
+      fa: هر شب با سگ به پیاده‌روی می‌رویم.
+    alsoAccepted: [spazieren]
+    tooCloseTo: [Spaziergang]
+
   - word: reiten
+    class: verb
+    level: A2
+    meaning:
+      en: to ride (a horse)
+      fa: اسب‌سواری کردن
+    definition: auf einem Pferd sitzen und sich von ihm tragen lassen
+    example:
+      de: Meine Tochter lernt reiten.
+      en: My daughter is learning to ride.
+      fa: دخترم اسب‌سواری یاد می‌گیرد.
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 108 questions, then the 35 changed after the first one's
+    answers, then the 6 changed after the second one's; not people)"
+  date: 2026-11-28
+  pool: 3e96ed116fbdd0d9

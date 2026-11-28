@@ -1,34 +1,310 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-learning-exams
 kind: vocabulary
 level: A2
 chapter: a2-words-school-work
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Training, studying and exams"
   fa: "آموزش، تحصیل و امتحان"
   de: "Ausbildung, Studium und Prüfungen"
+attemptSize: 15
 words:
   - word: Ausbildung
+    class: noun
+    article: die
+    plural: Ausbildungen
+    level: A2
+    meaning:
+      en: vocational training, apprenticeship
+      fa: آموزش حرفه‌ای، دورهٔ کارآموزی
+    definition: die Zeit, in der man einen Beruf lernt, oft in einer Firma und in einer Berufsschule
+    example:
+      de: Mein Bruder macht eine Ausbildung zum Koch.
+      en: My brother is training to be a cook.
+      fa: برادرم دورهٔ آموزش آشپزی می‌گذراند.
+    alsoAccepted: [die Berufsausbildung, die Lehre]
+
+  # The scope list gives "der/die": a man is "der Auszubildende", a woman "die Auszubildende".
   - word: Auszubildende
+    class: noun
+    article: der
+    plural: Auszubildenden
+    level: A2
+    meaning:
+      en: trainee, apprentice
+      fa: کارآموز (در دورهٔ آموزش حرفه‌ای)
+    definition: eine Person, die in einer Firma einen Beruf lernt
+    example:
+      de: Die Bäckerei sucht zwei Auszubildende.
+      en: The bakery is looking for two apprentices.
+      fa: نانوایی دو کارآموز می‌خواهد.
+    alsoAccepted: [die Auszubildende, der Azubi, die Azubi, der Lehrling]
+
   - word: Universität
+    class: noun
+    article: die
+    plural: Universitäten
+    level: A2
+    meaning:
+      en: university
+      fa: دانشگاه
+    definition: eine große Hochschule, an der man nach dem Abitur studieren kann
+    example:
+      de: Sie studiert Medizin an der Universität in Heidelberg.
+      en: She is studying medicine at the university in Heidelberg.
+      fa: او در دانشگاه هایدلبرگ پزشکی می‌خواند.
+    alsoAccepted: [die Uni, die Hochschule]
+
   - word: Stipendium
+    class: noun
+    article: das
+    plural: Stipendien
+    level: A2
+    meaning:
+      en: scholarship, grant (for studying)
+      fa: بورس تحصیلی، کمک‌هزینهٔ تحصیلی
+    definition: Geld, das gute Schüler oder Studenten für die Schule oder das Studium bekommen und nicht zurückzahlen müssen
+    example:
+      de: Er hat ein Stipendium für ein Jahr in Kanada bekommen.
+      en: He got a scholarship for a year in Canada.
+      fa: او برای یک سال تحصیل در کانادا بورس گرفته است.
+
   - word: Kenntnisse
+    class: noun
+    article: die
+    number: plural-only
+    level: A2
+    meaning:
+      en: knowledge of a subject or a language (a plural word)
+      fa: دانش، آشنایی با یک زمینه یا یک زبان (واژهٔ جمع)
+    definition: die Dinge, die man über ein Thema oder eine Sprache weiß (ein Wort im Plural)
+    example:
+      de: Für diese Stelle braucht man gute Kenntnisse in Englisch.
+      en: For this job you need a good knowledge of English.
+      fa: برای این شغل آشنایی خوب با زبان انگلیسی لازم است.
+    alsoAccepted: [das Wissen]
+
   - word: Erfahrung
+    class: noun
+    article: die
+    plural: Erfahrungen
+    level: A2
+    meaning:
+      en: experience (what you know from doing something often)
+      fa: تجربه (دانشی که از بارها انجام دادن کاری به دست می‌آید)
+    definition: das, was man weiß und kann, weil man es schon oft gemacht oder erlebt hat
+    example:
+      de: Haben Sie schon Erfahrung mit Kindern?
+      en: Do you already have experience with children?
+      fa: تجربهٔ کار با بچه‌ها را دارید؟
+
   - word: Workshop
+    class: noun
+    article: der
+    plural: Workshops
+    level: A2
+    meaning:
+      en: workshop (a short practical course)
+      fa: کارگاه آموزشی
+    definition: ein kurzer Kurs, in dem eine kleine Gruppe zusammen etwas lernt und gleich ausprobiert
+    example:
+      de: Am Samstag gibt es einen Workshop zum Thema Bewerbung.
+      en: On Saturday there is a workshop on job applications.
+      fa: شنبه یک کارگاه آموزشی دربارهٔ درخواست کار برگزار می‌شود.
+
   - word: Projekt
+    class: noun
+    article: das
+    plural: Projekte
+    level: A2
+    meaning:
+      en: project
+      fa: پروژه
+    definition: eine größere Arbeit mit einem Ziel, die man plant und oft in einer Gruppe macht
+    example:
+      de: In der Schule machen wir gerade ein Projekt über Wasser.
+      en: At school we are doing a project about water at the moment.
+      fa: این روزها در مدرسه پروژه‌ای دربارهٔ آب انجام می‌دهیم.
+
   - word: üben
+    class: verb
+    level: A2
+    meaning:
+      en: to practise
+      fa: تمرین کردن
+    definition: etwas oft machen, damit man es besser kann
+    example:
+      de: Ich übe jeden Tag zehn Minuten die Aussprache.
+      en: I practise pronunciation for ten minutes every day.
+      fa: هر روز ده دقیقه تلفظ تمرین می‌کنم.
+    alsoAccepted: [trainieren]
+
+  # prüfen and kontrollieren can both be "to check"; neither is offered as a wrong meaning of the other.
   - word: prüfen
+    class: verb
+    level: A2
+    meaning:
+      en: to test (what a person knows or how good a thing is)
+      fa: امتحان گرفتن، سنجیدن
+    definition: in einer Prüfung fragen, was eine Person weiß, oder genau ansehen, ob eine Sache gut ist
+    example:
+      de: Morgen prüft uns Frau Weber in Mathe.
+      en: Tomorrow Ms Weber is testing us in maths.
+      fa: فردا خانم وبر از ما ریاضی امتحان می‌گیرد.
+    alsoAccepted: [testen, überprüfen]
+    tooCloseTo: [kontrollieren]
+
   - word: kontrollieren
+    class: verb
+    level: A2
+    meaning:
+      en: to check, to inspect
+      fa: کنترل کردن، وارسی کردن
+    definition: nachsehen, ob alles richtig oder in Ordnung ist, zum Beispiel die Fahrkarten im Zug
+    example:
+      de: Im Zug kontrolliert der Schaffner die Fahrkarten.
+      en: On the train the conductor checks the tickets.
+      fa: در قطار، مأمور قطار بلیت‌ها را کنترل می‌کند.
+    alsoAccepted: [prüfen, überprüfen, checken]
+    tooCloseTo: [prüfen]
+
   - word: eintragen
+    class: verb
+    level: A2
+    meaning:
+      en: to write in (on a form, a list or in a calendar)
+      fa: نوشتن، ثبت کردن (در فرم، فهرست یا تقویم)
+    definition: etwas an die richtige Stelle in einem Formular, einer Liste oder einem Kalender schreiben
+    example:
+      de: Tragen Sie bitte Ihren Namen in die Liste ein.
+      en: Please enter your name on the list.
+      fa: لطفاً نامتان را در فهرست بنویسید.
+
   - word: markieren
-  - word: Rätsel
-  - word: Quiz
-  - word: schriftlich
-  - word: Reihe
+    class: verb
+    level: A2
+    meaning:
+      en: to mark (with a sign or a colour)
+      fa: علامت زدن، مشخص کردن (با نشانه یا رنگ)
+    definition: ein Zeichen oder eine Farbe auf etwas machen, damit man es gut sieht
+    example:
+      de: Markieren Sie die richtige Antwort mit einem Kreuz.
+      en: Mark the right answer with a cross.
+      fa: پاسخ درست را با ضربدر مشخص کنید.
+    alsoAccepted: [kennzeichnen]
+
   - word: aufpassen
-  - word: "d. h."
-  - word: "usw."
-  - word: "z. B."
+    class: verb
+    level: A2
+    meaning:
+      en: to pay attention, to watch out
+      fa: مواظب بودن، دقت کردن
+    definition: gut zuhören und hinsehen, damit man nichts falsch macht und nichts verpasst
+    example:
+      de: Passt bitte gut auf, das kommt in der Prüfung!
+      en: Please pay close attention, this will be in the exam!
+      fa: خوب دقت کنید، این در امتحان می‌آید!
+    alsoAccepted: [achtgeben, Acht geben]
+
+  - word: schriftlich
+    class: adjective
+    level: A2
+    meaning:
+      en: written, in writing
+      fa: کتبی
+    definition: auf Papier oder am Computer, nicht mit dem Mund gesagt
+    example:
+      de: Die schriftliche Prüfung dauert drei Stunden.
+      en: The written exam takes three hours.
+      fa: امتحان کتبی سه ساعت طول می‌کشد.
+
+  - word: Reihe
+    class: noun
+    article: die
+    plural: Reihen
+    level: A2
+    meaning:
+      en: row (of seats, people or things)
+      fa: ردیف (صندلی‌ها، آدم‌ها یا چیزها)
+    definition: Personen oder Sachen, die nebeneinander stehen oder sitzen, zum Beispiel Stühle im Kino
+    example:
+      de: Wir sitzen in der ersten Reihe.
+      en: We are sitting in the front row.
+      fa: ما در ردیف اول نشسته‌ایم.
+
+  - word: Rätsel
+    class: noun
+    article: das
+    plural: Rätsel
+    level: A2
+    meaning:
+      en: riddle, brain-teaser
+      fa: معما، چیستان
+    definition: eine Frage oder Aufgabe, bei der man lange nachdenken muss, bis man die Lösung findet
+    example:
+      de: Am Sonntag löst mein Vater gern das Rätsel in der Zeitung.
+      en: On Sundays my father likes doing the puzzle in the newspaper.
+      fa: پدرم یکشنبه‌ها دوست دارد جدول روزنامه را حل کند.
+    alsoAccepted: [die Denksportaufgabe]
+
+  - word: Quiz
+    class: noun
+    article: das
+    number: singular-only
+    level: A2
+    meaning:
+      en: quiz
+      fa: کوئیز (مسابقهٔ کوتاه پرسش و پاسخ)
+    definition: ein Spiel mit Fragen, bei dem man zeigt, was man weiß
+    example:
+      de: Zum Schluss machen wir ein kleines Quiz über die neuen Wörter.
+      en: At the end we'll do a little quiz on the new words.
+      fa: در پایان یک مسابقهٔ کوچک پرسش و پاسخ دربارهٔ واژه‌های تازه برگزار می‌کنیم.
+
+  - word: z. B.
+    class: abbreviation
+    level: A2
+    meaning:
+      en: e.g., for example
+      fa: مثلاً، برای مثال
+    definition: kurz für „zum Beispiel“
+    example:
+      de: Ich esse gern Obst, z. B. Äpfel und Bananen.
+      en: I like eating fruit, e.g. apples and bananas.
+      fa: میوه دوست دارم، مثلاً سیب و موز.
+    alsoAccepted: [z.B., zum Beispiel, beispielsweise, bspw.]
+
+  - word: d. h.
+    class: abbreviation
+    level: A2
+    meaning:
+      en: i.e., that is
+      fa: یعنی (به‌صورت کوتاه‌نوشت)
+    definition: kurz für „das heißt“, wenn man etwas noch einmal genauer sagt
+    example:
+      de: Der Kurs ist am Wochenende, d. h. am Samstag und am Sonntag.
+      en: The course is at the weekend, i.e. on Saturday and Sunday.
+      fa: کلاس آخر هفته است، یعنی شنبه و یکشنبه.
+    alsoAccepted: [d.h., das heißt]
+
+  - word: usw.
+    class: abbreviation
+    level: A2
+    meaning:
+      en: etc., and so on
+      fa: و غیره، و مانند این‌ها
+    definition: kurz für „und so weiter“, wenn es noch mehr davon gibt
+    example:
+      de: Im Koffer sind Hosen, Hemden, Socken usw.
+      en: In the suitcase there are trousers, shirts, socks, etc.
+      fa: در چمدان شلوار، پیراهن، جوراب و غیره هست.
+    alsoAccepted: [und so weiter, etc.]
+
+review:
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 126, then 69 and 11 questions)
+  date: 2026-11-28
+  pool: eb90d8774d706bf9
