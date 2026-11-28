@@ -4,10 +4,348 @@ kind: grammar
 level: B1
 chapter: b1-time-clauses
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-120, grammar-157]
 title:
   en: "*seit* / *seitdem*"
   fa: "*seit* / *seitdem*"
   de: "*seit* / *seitdem*"
+
+explanations:
+  en:
+    rule: >
+      *Seit* and *seitdem* (since) mean the same. Both start a subordinate
+      clause, so the conjugated verb goes to the end. The clause says when
+      something began; the main clause says what has gone on since then, up
+      to now. So the main clause is usually in the *Präsens*, where English
+      says "have been" or "have …": *Seitdem ich in Hamburg wohne, fahre ich
+      viel Fahrrad.* If the start was one event, the clause is often in the
+      *Perfekt*: *Seit ich umgezogen bin, brauche ich nur zehn Minuten zur
+      Arbeit.* Before a noun, *seit* is the preposition with the *Dativ* that
+      you know (*seit einem Jahr*). *Seitdem* can also stand alone as an
+      adverb, "since then"; then the verb follows it: *Wir sind 2020 nach
+      Köln gezogen. Seitdem wohnen wir dort.*
+  fa:
+    rule: >
+      *seit* و *seitdem* (از وقتی که) یک معنا دارند. هر دو جملهٔ پیرو را
+      آغاز می‌کنند، پس فعل صرف‌شده به پایان جمله می‌رود. جملهٔ پیرو می‌گوید
+      کاری از کی آغاز شده است و جملهٔ پایه می‌گوید از آن زمان تا اکنون چه
+      ادامه دارد. برای همین جملهٔ پایه معمولاً در زمان حال (*Präsens*) است:
+      *Seitdem ich in Hamburg wohne, fahre ich viel Fahrrad.* اگر آغاز کار
+      یک رویداد باشد، جملهٔ پیرو بیشتر در گذشتهٔ نقلی (*Perfekt*) می‌آید:
+      *Seit ich umgezogen bin, brauche ich nur zehn Minuten zur Arbeit.* پیش
+      از اسم، *seit* همان حرف اضافه با حالت *Dativ* است که می‌شناسید (*seit
+      einem Jahr*). *seitdem* به‌تنهایی هم به‌عنوان قید می‌آید، یعنی «از آن
+      وقت»؛ آن‌گاه فعل پس از آن می‌آید: *Wir sind 2020 nach Köln gezogen.
+      Seitdem wohnen wir dort.*
+  de:
+    rule: >
+      *Seit* und *seitdem* bedeuten dasselbe. Mit beiden beginnt ein
+      Nebensatz. Das konjugierte Verb steht am Ende. Der Nebensatz sagt, wann
+      etwas angefangen hat. Der Hauptsatz sagt, was seitdem bis jetzt so ist.
+      Darum steht der Hauptsatz meistens im Präsens: *Seitdem ich in Hamburg
+      wohne, fahre ich viel Fahrrad.* War der Anfang ein Ereignis, steht der
+      Nebensatz oft im Perfekt: *Seit ich umgezogen bin, brauche ich nur zehn
+      Minuten zur Arbeit.* Vor einem Nomen ist *seit* die Präposition mit
+      Dativ (*seit einem Jahr*). *Seitdem* kann auch allein stehen, dann kommt
+      danach das Verb: *Wir sind 2020 nach Köln gezogen. Seitdem wohnen wir
+      dort.*
+
+table:
+  columns:
+    - { en: "*Seit* / *seitdem* clause: since when?", fa: "جملهٔ پیرو با *seit* / *seitdem*: از کی؟", de: "*Seit*- / *seitdem*-Satz: seit wann?" }
+    - { en: "Main clause: up to now, in the *Präsens*", fa: "جملهٔ پایه: تا اکنون، در زمان حال", de: "Hauptsatz: bis jetzt, im Präsens" }
+  rows:
+    - ["Seitdem ich in Hamburg wohne,", fahre ich viel Fahrrad.]
+    - ["Seit sie ein Baby hat,", schläft sie sehr wenig.]
+    - ["Seit ich umgezogen bin,", brauche ich nur zehn Minuten zur Arbeit.]
+    - ["Seitdem er jeden Tag Deutsch lernt,", versteht er die Nachrichten besser.]
+    - ["Seit wir uns kennen,", sind wir gute Freunde.]
+
+# A time line: a point where it began (the seit clause), and a bar from that
+# point up to "jetzt" (the main clause).
+diagrams:
+  - caption:
+      en: >
+        *Seit ich umgezogen bin, fahre ich mit dem Rad.* The *seit* clause
+        marks the start. The main clause runs from there up to *jetzt*, so it
+        is in the *Präsens*.
+      fa: >
+        جملهٔ پیرو (*seit ich umgezogen bin*) نقطهٔ آغاز را نشان می‌دهد.
+        جملهٔ پایه (*fahre ich mit dem Rad*) از آن‌جا تا *jetzt* ادامه دارد،
+        پس در زمان حال است.
+      de: >
+        *Seit ich umgezogen bin, fahre ich mit dem Rad.* Der *seit*-Satz zeigt
+        den Anfang. Der Hauptsatz geht von dort bis *jetzt*. Darum steht er im
+        Präsens.
+    svg: |
+      <svg viewBox="0 0 320 166">
+        <!-- the start: the seit clause -->
+        <text class="label" x="14" y="24">seit ich umgezogen bin</text>
+        <line class="guide" x1="60" y1="32" x2="60" y2="118"/>
+        <!-- what goes on from then up to now: the main clause -->
+        <text class="label" x="155" y="66" text-anchor="middle">fahre ich mit dem Rad</text>
+        <rect class="object" x="60" y="76" width="190" height="12"/>
+        <line class="guide" x1="250" y1="88" x2="250" y2="118"/>
+        <!-- the time line, with an arrow to the right -->
+        <line class="line" x1="10" y1="124" x2="304" y2="124"/>
+        <polygon class="object" points="304,118 316,124 304,130"/>
+        <circle class="object" cx="60" cy="124" r="6"/>
+        <circle class="object" cx="250" cy="124" r="6"/>
+        <text class="label" x="250" y="152" text-anchor="middle">jetzt</text>
+      </svg>
+
+examples:
+  - de: Seitdem ich in Hamburg wohne, fahre ich viel Fahrrad.
+    en: Since I've been living in Hamburg, I've been cycling a lot.
+    fa: از وقتی در هامبورگ زندگی می‌کنم، زیاد دوچرخه‌سواری می‌کنم.
+  - de: Seit sie ein Baby hat, schläft sie sehr wenig.
+    en: Since she's had a baby, she has slept very little.
+    fa: از وقتی بچه‌دار شده است، خیلی کم می‌خوابد.
+  - de: Seit ich umgezogen bin, brauche ich nur zehn Minuten zur Arbeit.
+    en: Since I moved, it only takes me ten minutes to get to work.
+    fa: از وقتی اسباب‌کشی کرده‌ام، فقط ده دقیقه تا سر کار راه دارم.
+  - de: Er versteht die Nachrichten viel besser, seit er jeden Tag Deutsch lernt.
+    en: He has understood the news much better since he started learning German every day.
+    fa: از وقتی هر روز آلمانی یاد می‌گیرد، اخبار را خیلی بهتر می‌فهمد.
+  - de: Seitdem wir uns kennen, sind wir gute Freunde.
+    en: We've been good friends ever since we met.
+    fa: از وقتی با هم آشنا شده‌ایم، دوستان خوبی برای هم هستیم.
+  - de: Seit ich nicht mehr rauche, geht es mir viel besser.
+    en: Since I stopped smoking, I've been feeling much better.
+    fa: از وقتی سیگار را کنار گذاشته‌ام، حالم خیلی بهتر است.
+  - de: Ich lerne seit einem Jahr Deutsch.
+    en: I've been learning German for a year.
+    fa: یک سال است که آلمانی یاد می‌گیرم.
+  - de: Wir sind 2020 nach Köln gezogen. Seitdem wohnen wir dort.
+    en: We moved to Cologne in 2020. We've lived there ever since.
+    fa: سال ۲۰۲۰ به کلن رفتیم و از آن وقت آن‌جا زندگی می‌کنیم.
+
+mistakes:
+  - wrong: Seit ich in Wien wohne, arbeitete ich in einer Bank.
+    right: Seit ich in Wien wohne, arbeite ich in einer Bank.
+    why:
+      en: "The work began then and still goes on, so the main clause is in the *Präsens*: *arbeite ich*. English says \"I have worked\" here."
+      fa: "کار از آن زمان آغاز شده و هنوز ادامه دارد، پس آلمانی زمان حال را به کار می‌برد: *arbeite ich*."
+      de: "Die Arbeit hat damals angefangen und geht noch weiter. Darum steht das Präsens: *arbeite ich*."
+  - wrong: Seit ich wohne in Hamburg, fahre ich viel Fahrrad.
+    right: Seit ich in Hamburg wohne, fahre ich viel Fahrrad.
+    why:
+      en: "In the *seit* clause the conjugated verb *wohne* goes to the end."
+      fa: "در جملهٔ پیرو با *seit* فعل صرف‌شدهٔ *wohne* به پایان جمله می‌رود."
+      de: "Im *seit*-Satz steht das konjugierte Verb *wohne* am Ende."
+  - wrong: Seitdem ich ein Auto habe, ich fahre kaum Bus.
+    right: Seitdem ich ein Auto habe, fahre ich kaum Bus.
+    why:
+      en: "The *seitdem* clause is position 1, so the main clause starts with its verb: *fahre ich*."
+      fa: "جملهٔ پیرو با *seitdem* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *fahre ich*."
+      de: "Der *seitdem*-Satz ist Position 1. Danach kommt sofort das Verb: *fahre ich*."
+  - wrong: Seit dem ich ein Auto habe, fahre ich kaum Bus.
+    right: Seitdem ich ein Auto habe, fahre ich kaum Bus.
+    why:
+      en: "The conjunction *seitdem* is one word."
+      fa: "حرف ربط *seitdem* یک واژه است و سرهم نوشته می‌شود."
+      de: "Die Konjunktion *seitdem* schreibt man zusammen."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ ich in Hamburg wohne, fahre ich viel Fahrrad.
+    options: [Als, Seit, Bevor]
+    answer: Seit
+    explanation:
+      en: "Living in Hamburg began and still goes on, and so does the cycling: *seit*."
+      fa: "زندگی در هامبورگ آغاز شده و ادامه دارد و دوچرخه‌سواری هم: *seit*."
+      de: "Das Wohnen in Hamburg hat angefangen und geht weiter, das Fahrradfahren auch: *seit*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Seitdem ich nicht mehr rauche, ___ es mir besser.
+    options: [ging, geht, ist gegangen]
+    answer: geht
+    explanation:
+      en: "Feeling better goes on up to now, so the main clause is in the *Präsens*: *geht*."
+      fa: "بهتر بودن حال تا اکنون ادامه دارد، پس جملهٔ پایه در زمان حال است: *geht*."
+      de: "Es geht mir bis jetzt besser. Darum steht der Hauptsatz im Präsens: *geht*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Seit ich umgezogen ___, brauche ich nur zehn Minuten zur Arbeit.
+    options: [habe, war, bin]
+    answer: bin
+    explanation:
+      en: "The move was one event, in the *Perfekt*, and *umziehen* takes *sein*: *umgezogen bin*."
+      fa: "اسباب‌کشی یک رویداد است و در گذشتهٔ نقلی می‌آید؛ *umziehen* با *sein* صرف می‌شود: *umgezogen bin*."
+      de: "Der Umzug war ein Ereignis, im Perfekt. *Umziehen* bildet das Perfekt mit *sein*: *umgezogen bin*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich lerne ___ einem Jahr Deutsch.
+    options: [seitdem, seit, als]
+    answer: seit
+    explanation:
+      en: "A noun follows, *einem Jahr*, so the preposition *seit*."
+      fa: "پس از جای خالی اسم می‌آید (*einem Jahr*)، پس حرف اضافهٔ *seit*."
+      de: "Danach kommt ein Nomen, *einem Jahr*. Darum die Präposition *seit*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wir sind 2020 nach Köln gezogen. ___ wohnen wir dort.
+    options: [Seit, Als, Seitdem]
+    answer: Seitdem
+    explanation:
+      en: "No clause and no noun follows; the verb *wohnen* comes right after the gap. So the adverb *seitdem*, \"since then\"."
+      fa: "پس از جای خالی نه جملهٔ پیرو می‌آید و نه اسم، بلکه بی‌درنگ فعل *wohnen*. پس قید *seitdem* یعنی «از آن وقت»."
+      de: "Danach kommt kein Nebensatz und kein Nomen, sondern sofort das Verb *wohnen*. Darum *seitdem*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Seitdem sie ein Baby hat, …
+    options: [sie schläft wenig., schläft sie wenig., sie wenig schläft.]
+    answer: schläft sie wenig.
+    explanation:
+      en: "The *seitdem* clause is position 1, so the main clause starts with its verb: *schläft sie*."
+      fa: "جملهٔ پیرو با *seitdem* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *schläft sie*."
+      de: "Der *seitdem*-Satz ist Position 1. Der Hauptsatz beginnt mit dem Verb: *schläft sie*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Seit Tom in Wien wohnt, geht er oft ins Theater. Was stimmt?"
+    options: [Tom wohnt nicht mehr in Wien., Tom wohnt bald in Wien., Tom wohnt noch in Wien.]
+    answer: Tom wohnt noch in Wien.
+    explanation:
+      en: "*Seit* with the *Präsens*: it began and still goes on. Tom still lives in Vienna."
+      fa: "*seit* با زمان حال یعنی کار آغاز شده و هنوز ادامه دارد. تام هنوز در وین زندگی می‌کند."
+      de: "*Seit* mit Präsens: Es hat angefangen und geht weiter. Tom wohnt noch in Wien."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Er versteht die Nachrichten besser, …
+    options: [seit er lernt jeden Tag Deutsch., seit er jeden Tag Deutsch lernt., seitdem lernt er jeden Tag Deutsch.]
+    answer: seit er jeden Tag Deutsch lernt.
+    explanation:
+      en: "After the comma comes a *seit* clause, with its verb *lernt* at the end."
+      fa: "پس از ویرگول جملهٔ پیرو با *seit* می‌آید و فعل آن، *lernt*، در پایان است."
+      de: "Nach dem Komma kommt ein *seit*-Satz, das Verb *lernt* steht am Ende."
+  - id: true-1
+    type: true-false
+    prompt: Seitdem wir uns kennen, sind wir gute Freunde.
+    answer: true
+    explanation:
+      en: "*Kennen* at the end, and the main clause in the *Präsens*, verb first. The sentence is correct."
+      fa: "*kennen* در پایان جملهٔ پیرو و جملهٔ پایه در زمان حال، با فعل در آغاز. جمله درست است."
+      de: "*Kennen* steht am Ende, der Hauptsatz steht im Präsens und beginnt mit dem Verb. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Seit ich wohne in Wien, arbeite ich in einer Bank.
+    answer: false
+    explanation:
+      en: "In the *seit* clause the verb goes to the end: *Seit ich in Wien wohne, …*"
+      fa: "در جملهٔ پیرو با *seit* فعل به پایان جمله می‌رود: *Seit ich in Wien wohne, …*"
+      de: "Im *seit*-Satz steht das Verb am Ende: *Seit ich in Wien wohne, …*"
+  - id: true-3
+    type: true-false
+    prompt: Ich bin letztes Jahr umgezogen. Seitdem wohne ich in Bonn.
+    answer: true
+    explanation:
+      en: "*Seitdem* as an adverb, \"since then\": the verb *wohne* comes right after it. The sentence is correct."
+      fa: "*seitdem* این‌جا قید است، یعنی «از آن وقت»، و فعل *wohne* بی‌درنگ پس از آن می‌آید. جمله درست است."
+      de: "*Seitdem* steht hier allein, danach kommt sofort das Verb *wohne*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Seitdem ich ein Auto habe, ich fahre kaum Bus.
+    answer: false
+    explanation:
+      en: "After the *seitdem* clause the verb comes first: *…, fahre ich kaum Bus.*"
+      fa: "پس از جملهٔ پیرو با *seitdem* فعل اول می‌آید: *…, fahre ich kaum Bus.*"
+      de: "Nach dem *seitdem*-Satz kommt zuerst das Verb: *…, fahre ich kaum Bus.*"
+  - id: true-5
+    type: true-false
+    prompt: Seit sie Yoga macht, hat sie keine Rückenschmerzen mehr.
+    answer: true
+    explanation:
+      en: "*Macht* at the end, and the main clause in the *Präsens*, verb first. The sentence is correct."
+      fa: "*macht* در پایان جملهٔ پیرو و جملهٔ پایه در زمان حال، با فعل در آغاز. جمله درست است."
+      de: "*Macht* steht am Ende, der Hauptsatz steht im Präsens und beginnt mit dem Verb. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Seitdem ich in Berlin ___ (wohnen), gehe ich oft ins Museum.
+    answers: [wohne]
+    explanation:
+      en: "Living there still goes on: *Präsens*, *wohne*, at the end of the clause."
+      fa: "زندگی در آن‌جا هنوز ادامه دارد: زمان حال، *wohne*، در پایان جملهٔ پیرو."
+      de: "Das Wohnen geht noch weiter: Präsens, *wohne*, am Ende vom Nebensatz."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Seit ich nicht mehr rauche, ___ (fühlen) ich mich viel besser.
+    answers: [fühle]
+    explanation:
+      en: "The main clause says how it is up to now: *Präsens*, and its verb comes first: *fühle ich mich*."
+      fa: "جملهٔ پایه وضع کنونی را می‌گوید: زمان حال، و فعلش اول می‌آید: *fühle ich mich*."
+      de: "Der Hauptsatz sagt, wie es bis jetzt ist: Präsens. Das Verb kommt zuerst: *fühle ich mich*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Seit wir umgezogen ___ (sein), haben wir einen Garten.
+    answers: [sind]
+    explanation:
+      en: "The move was one event, in the *Perfekt* with *sein*: *umgezogen sind*."
+      fa: "اسباب‌کشی یک رویداد است و در گذشتهٔ نقلی با *sein* می‌آید: *umgezogen sind*."
+      de: "Der Umzug war ein Ereignis, im Perfekt mit *sein*: *umgezogen sind*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich lerne seit ___ (ein) Jahr Deutsch.
+    answers: [einem]
+    explanation:
+      en: "The preposition *seit* takes the *Dativ*: *seit einem Jahr*."
+      fa: "حرف اضافهٔ *seit* با حالت *Dativ* می‌آید: *seit einem Jahr*."
+      de: "Die Präposition *seit* hat den Dativ: *seit einem Jahr*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Ich habe 2019 mein Studium beendet. ___ (seit / seitdem) arbeite ich als Ingenieur.
+    answers: [Seitdem]
+    explanation:
+      en: "No clause and no noun follows, but the verb *arbeite*: the adverb *seitdem*."
+      fa: "پس از جای خالی نه جملهٔ پیرو می‌آید و نه اسم، بلکه فعل *arbeite*: قید *seitdem*."
+      de: "Danach kommt kein Nebensatz und kein Nomen, sondern das Verb *arbeite*: *seitdem*."
+  - id: error-1
+    type: find-error
+    prompt: Ich wohne seitdem einem Jahr in Bonn.
+    answer: seitdem
+    explanation:
+      en: "Before a noun it is the preposition *seit*: *seit einem Jahr*."
+      fa: "پیش از اسم حرف اضافهٔ *seit* می‌آید: *seit einem Jahr*."
+      de: "Vor einem Nomen steht die Präposition *seit*: *seit einem Jahr*."
+  - id: error-2
+    type: find-error
+    prompt: Seit ich umgezogen habe, fahre ich mit dem Rad zur Arbeit.
+    answer: habe
+    explanation:
+      en: "*Umziehen* takes *sein*: *Seit ich umgezogen bin, …*"
+      fa: "*umziehen* با *sein* صرف می‌شود: *Seit ich umgezogen bin, …*"
+      de: "*Umziehen* bildet das Perfekt mit *sein*: *Seit ich umgezogen bin, …*"
+  - id: order-1
+    type: word-order
+    answers:
+      - ["seitdem ich in Hamburg wohne,", fahre, ich, viel Fahrrad]
+    explanation:
+      en: "The *seitdem* clause is position 1, so the verb *fahre* comes next, then the subject."
+      fa: "جملهٔ پیرو با *seitdem* جایگاه اول است، پس فعل *fahre* و سپس فاعل می‌آید."
+      de: "Der *seitdem*-Satz ist Position 1. Dann kommt das Verb *fahre*, danach das Subjekt."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["es geht mir besser,", seit, ich, keinen Kaffee mehr, trinke]
+    explanation:
+      en: "*Seit* starts the clause, then the subject, and the verb *trinke* comes last."
+      fa: "*seit* جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل *trinke* در آخر."
+      de: "*Seit* beginnt den Satz, dann kommt das Subjekt, das Verb *trinke* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Seit Anna in Rom wohnt,", spricht sie gut Italienisch.]
+      - ["Seit Tom ein Auto hat,", fährt er nie mehr Bus.]
+      - ["Seit die Kinder in der Schule sind,", haben sie wenig Freizeit.]
+    explanation:
+      en: "Each main clause, verb first, says what has been so since then: Anna speaks Italian, Tom no longer takes the bus, the children have little free time."
+      fa: "هر جملهٔ پایه، با فعل در آغاز، می‌گوید از آن زمان چه چیزی ادامه دارد: آنا ایتالیایی حرف می‌زند، تام دیگر سوار اتوبوس نمی‌شود، بچه‌ها وقت آزاد کمی دارند."
+      de: "Jeder Hauptsatz beginnt mit dem Verb und sagt, was seitdem so ist: Anna spricht Italienisch, Tom fährt nicht mehr Bus, die Kinder haben wenig Freizeit."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 841c4cf79b9e0349

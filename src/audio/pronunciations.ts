@@ -47,4 +47,8 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Cafeteria: 'Kaffeterihja',
   // #79: Thorsten says "das Sekretariat" as "das ist der Kriteriat"; the j keeps it whole.
   Sekretariat: 'Sekretarijat',
+  // #89: said with [ʃ], [ʃaˈoːtɪʃ]; "kaotisch" gives [kaˈoːtɪʃ].
+  chaotisch: 'kaotisch',
+  // #89: said [ˈzaɪtdəm], stress on "seit" and a weak "dem"; "seit deem" gives [zaɪt ˈdeːm].
+  seitdem: 'seit deem',
 }

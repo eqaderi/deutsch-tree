@@ -138,6 +138,10 @@ test.each([
   ['Latein ist schwer.', 'La-tein ist schwer.'],
   ['in der Cafeteria', 'in der Kaffeterihja'],
   ['das Sekretariat', 'das Sekretarijat'],
+  // #89: "chaotisch" is said with [ʃ], "seitdem" with the stress on "seit" and a weak "dem".
+  ['Ich bin eher chaotisch.', 'Ich bin eher kaotisch.'],
+  ['Seitdem ich hier wohne, bin ich froh.', 'Seit deem ich hier wohne, bin ich froh.'],
+  ['Wir sind seitdem Freunde.', 'Wir sind seit deem Freunde.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })

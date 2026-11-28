@@ -4,10 +4,369 @@ kind: grammar
 level: B1
 chapter: b1-time-clauses
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-024, grammar-167]
 title:
   en: "*nachdem*"
   fa: "*nachdem*"
   de: "*nachdem*"
+
+explanations:
+  en:
+    rule: >
+      *Nachdem* (after) starts a subordinate clause, so the conjugated verb
+      goes to the end. What the *nachdem* clause says happened first and was
+      finished before the main clause. That is why the *nachdem* clause goes
+      one tense back. Main clause in the *Präteritum* or *Perfekt*:
+      *nachdem* clause in the *Plusquamperfekt* (*hatte* or *war* + *Partizip
+      II*): *Nachdem wir gegessen hatten, gingen wir spazieren.* Main clause
+      in the *Präsens*: *nachdem* clause in the *Perfekt*: *Nachdem ich
+      gegessen habe, gehe ich spazieren.* *Haben* or *sein* is chosen as in
+      the *Perfekt*: *Nachdem er angekommen war, …* Before a noun, "after" is
+      the preposition *nach* with the *Dativ* (*nach dem Essen*), and "after
+      that" on its own is *danach*.
+  fa:
+    rule: >
+      *nachdem* (پس از آن‌که) جملهٔ پیرو را آغاز می‌کند، پس فعل صرف‌شده به
+      پایان جمله می‌رود. کاری که جملهٔ پیرو با *nachdem* می‌گوید اول رخ داده
+      و پیش از کار جملهٔ پایه تمام شده است. برای همین زمان فعل در جملهٔ
+      پیرو یک پله عقب‌تر می‌رود. اگر جملهٔ پایه در گذشتهٔ ساده
+      (*Präteritum*) یا گذشتهٔ نقلی (*Perfekt*) باشد، جملهٔ پیرو در گذشتهٔ
+      بعید (*Plusquamperfekt*) می‌آید، یعنی *hatte* یا *war* با صفت مفعولی:
+      *Nachdem wir gegessen hatten, gingen wir spazieren.* اگر جملهٔ پایه در
+      زمان حال (*Präsens*) باشد، جملهٔ پیرو در گذشتهٔ نقلی می‌آید: *Nachdem
+      ich gegessen habe, gehe ich spazieren.* انتخاب *haben* یا *sein* مانند
+      گذشتهٔ نقلی است: *Nachdem er angekommen war, …* پیش از اسم، «پس از»
+      حرف اضافهٔ *nach* با حالت *Dativ* است (*nach dem Essen*) و «پس از آن»
+      به‌تنهایی *danach* است.
+  de:
+    rule: >
+      Mit *nachdem* beginnt ein Nebensatz. Das konjugierte Verb steht am
+      Ende. Was im *nachdem*-Satz steht, ist zuerst passiert und war schon
+      fertig. Darum geht der *nachdem*-Satz eine Zeitform zurück. Steht der
+      Hauptsatz im Präteritum oder Perfekt, steht der *nachdem*-Satz im
+      Plusquamperfekt (*hatte* oder *war* + Partizip II): *Nachdem wir
+      gegessen hatten, gingen wir spazieren.* Steht der Hauptsatz im Präsens,
+      steht der *nachdem*-Satz im Perfekt: *Nachdem ich gegessen habe, gehe
+      ich spazieren.* *Haben* oder *sein* wählt man wie im Perfekt: *Nachdem
+      er angekommen war, …* Vor einem Nomen sagt man *nach* mit Dativ (*nach
+      dem Essen*), und allein sagt man *danach*.
+
+table:
+  columns:
+    - { en: "*Nachdem* clause: earlier", fa: "جملهٔ پیرو با *nachdem*: زودتر", de: "*Nachdem*-Satz: früher" }
+    - { en: "Main clause: later", fa: "جملهٔ پایه: بعدتر", de: "Hauptsatz: später" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [Plusquamperfekt, Präteritum, "Nachdem wir gegessen hatten, gingen wir spazieren."]
+    - [Plusquamperfekt, Perfekt, "Nachdem er angekommen war, hat er mich angerufen."]
+    - [Perfekt, Präsens, "Nachdem ich gegessen habe, gehe ich spazieren."]
+    - [Perfekt, Präsens, "Nachdem die Kinder eingeschlafen sind, sehen wir fern."]
+
+# Two rows. In each, the earlier action (the nachdem clause) on the left, an
+# arrow, and the later one (the main clause) on the right, with the tense of
+# each underneath. Top: in the past; bottom: in the present.
+diagrams:
+  - caption:
+      en: >
+        First the *nachdem* clause, then the main clause. In the past the
+        *nachdem* clause is in the *Plusquamperfekt* and the main clause in
+        the *Präteritum*. In the present the *nachdem* clause is in the
+        *Perfekt* and the main clause in the *Präsens*.
+      fa: >
+        اول جملهٔ پیرو با *nachdem* و سپس جملهٔ پایه. در گذشته جملهٔ پیرو در
+        گذشتهٔ بعید (*Plusquamperfekt*) است و جملهٔ پایه در گذشتهٔ ساده
+        (*Präteritum*). در زمان حال جملهٔ پیرو در گذشتهٔ نقلی (*Perfekt*) است
+        و جملهٔ پایه در زمان حال (*Präsens*).
+      de: >
+        Zuerst der *nachdem*-Satz, dann der Hauptsatz. In der Vergangenheit
+        steht der *nachdem*-Satz im Plusquamperfekt und der Hauptsatz im
+        Präteritum. In der Gegenwart steht der *nachdem*-Satz im Perfekt und
+        der Hauptsatz im Präsens.
+    labels:
+      first: { en: first, fa: اول, de: zuerst }
+      then: { en: then, fa: سپس, de: danach }
+    svg: |
+      <svg viewBox="0 0 320 200">
+        <text class="note" x="78" y="20" text-anchor="middle">{{first}}</text>
+        <text class="note" x="242" y="20" text-anchor="middle">{{then}}</text>
+        <!-- in the past -->
+        <rect class="surface" x="8" y="34" width="140" height="40"/>
+        <text class="label" x="78" y="60" text-anchor="middle">gegessen hatten</text>
+        <line class="line" x1="152" y1="54" x2="162" y2="54"/>
+        <polygon class="object" points="162,48 170,54 162,60"/>
+        <rect class="shade" x="174" y="34" width="136" height="40"/>
+        <text class="label" x="242" y="60" text-anchor="middle">gingen</text>
+        <text class="note" x="78" y="96" text-anchor="middle">Plusquamperfekt</text>
+        <text class="note" x="242" y="96" text-anchor="middle">Präteritum</text>
+        <!-- in the present -->
+        <rect class="surface" x="8" y="126" width="140" height="40"/>
+        <text class="label" x="78" y="152" text-anchor="middle">gegessen habe</text>
+        <line class="line" x1="152" y1="146" x2="162" y2="146"/>
+        <polygon class="object" points="162,140 170,146 162,152"/>
+        <rect class="shade" x="174" y="126" width="136" height="40"/>
+        <text class="label" x="242" y="152" text-anchor="middle">gehe</text>
+        <text class="note" x="78" y="188" text-anchor="middle">Perfekt</text>
+        <text class="note" x="242" y="188" text-anchor="middle">Präsens</text>
+      </svg>
+
+examples:
+  - de: Nachdem wir gegessen hatten, gingen wir spazieren.
+    en: After we had eaten, we went for a walk.
+    fa: پس از آن‌که غذا خوردیم، به پیاده‌روی رفتیم.
+  - de: Nachdem Lea geduscht hatte, frühstückte sie.
+    en: After Lea had showered, she had breakfast.
+    fa: لئا پس از آن‌که دوش گرفت، صبحانه خورد.
+  - de: Nachdem er angekommen war, hat er mich sofort angerufen.
+    en: After he had arrived, he called me straight away.
+    fa: پس از آن‌که رسید، فوراً به من زنگ زد.
+  - de: Wir haben ein Taxi genommen, nachdem wir den letzten Bus verpasst hatten.
+    en: We took a taxi after we had missed the last bus.
+    fa: پس از آن‌که آخرین اتوبوس را از دست دادیم، تاکسی گرفتیم.
+  - de: Nachdem ich gefrühstückt habe, gehe ich zur Arbeit.
+    en: After I've had breakfast, I go to work.
+    fa: پس از آن‌که صبحانه خوردم، سر کار می‌روم.
+  - de: Nachdem du die Prüfung bestanden hast, kannst du dich ausruhen.
+    en: Once you've passed the exam, you can have a rest.
+    fa: پس از آن‌که در امتحان قبول شدی، می‌توانی استراحت کنی.
+  - de: Nach dem Essen gingen wir spazieren.
+    en: After the meal we went for a walk.
+    fa: پس از غذا به پیاده‌روی رفتیم.
+  - de: Wir haben eingekauft. Danach haben wir zusammen gekocht.
+    en: We did the shopping. After that we cooked together.
+    fa: خرید کردیم. پس از آن با هم آشپزی کردیم.
+
+mistakes:
+  - wrong: Nachdem ich aß, ging ich spazieren.
+    right: Nachdem ich gegessen hatte, ging ich spazieren.
+    why:
+      en: "The main clause is in the *Präteritum*, so the *nachdem* clause goes one step back, to the *Plusquamperfekt*: *gegessen hatte*."
+      fa: "جملهٔ پایه در گذشتهٔ ساده است، پس جملهٔ پیرو با *nachdem* یک پله عقب‌تر، در گذشتهٔ بعید، می‌آید: *gegessen hatte*."
+      de: "Der Hauptsatz steht im Präteritum. Darum geht der *nachdem*-Satz eine Zeitform zurück, ins Plusquamperfekt: *gegessen hatte*."
+  - wrong: Nachdem ich gegessen hatte, gehe ich spazieren.
+    right: Nachdem ich gegessen habe, gehe ich spazieren.
+    why:
+      en: "The main clause is in the *Präsens*, so the *nachdem* clause is in the *Perfekt*: *gegessen habe*."
+      fa: "جملهٔ پایه در زمان حال است، پس جملهٔ پیرو با *nachdem* در گذشتهٔ نقلی می‌آید: *gegessen habe*."
+      de: "Der Hauptsatz steht im Präsens. Darum steht der *nachdem*-Satz im Perfekt: *gegessen habe*."
+  - wrong: Nachdem sie angekommen hatte, rief sie an.
+    right: Nachdem sie angekommen war, rief sie an.
+    why:
+      en: "*Ankommen* forms its *Perfekt* with *sein*, so its *Plusquamperfekt* is with *war*."
+      fa: "گذشتهٔ نقلی *ankommen* با *sein* ساخته می‌شود، پس گذشتهٔ بعید آن با *war* است."
+      de: "*Ankommen* bildet das Perfekt mit *sein*. Darum steht im Plusquamperfekt *war*."
+  - wrong: Nachdem wir hatten gegessen, gingen wir spazieren.
+    right: Nachdem wir gegessen hatten, gingen wir spazieren.
+    why:
+      en: "In the *nachdem* clause the conjugated verb *hatten* goes to the very end, after the *Partizip II*."
+      fa: "در جملهٔ پیرو با *nachdem* فعل صرف‌شدهٔ *hatten* پس از صفت مفعولی و در آخر جمله می‌آید."
+      de: "Im *nachdem*-Satz steht das konjugierte Verb *hatten* ganz am Ende, nach dem Partizip II."
+  - wrong: Nachdem dem Kurs gehen wir essen.
+    right: Nach dem Kurs gehen wir essen.
+    why:
+      en: "Before a noun it is the preposition *nach*: *nach dem Kurs*. *Nachdem* starts a clause."
+      fa: "پیش از اسم حرف اضافهٔ *nach* می‌آید: *nach dem Kurs*. *nachdem* جملهٔ پیرو را آغاز می‌کند."
+      de: "Vor einem Nomen steht die Präposition *nach*: *nach dem Kurs*. Mit *nachdem* beginnt ein Nebensatz."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Nachdem wir gegessen ___, gingen wir spazieren.
+    options: [haben, sind, hatten]
+    answer: hatten
+    explanation:
+      en: "Main clause in the *Präteritum* (*gingen*), so the *Plusquamperfekt*: *gegessen hatten*."
+      fa: "جملهٔ پایه در گذشتهٔ ساده است (*gingen*)، پس گذشتهٔ بعید می‌آید: *gegessen hatten*."
+      de: "Der Hauptsatz steht im Präteritum (*gingen*). Darum Plusquamperfekt: *gegessen hatten*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Nachdem ich gefrühstückt ___, gehe ich zur Arbeit.
+    options: [habe, hatte, bin]
+    answer: habe
+    explanation:
+      en: "Main clause in the *Präsens* (*gehe*), so the *Perfekt*: *gefrühstückt habe*."
+      fa: "جملهٔ پایه در زمان حال است (*gehe*)، پس گذشتهٔ نقلی می‌آید: *gefrühstückt habe*."
+      de: "Der Hauptsatz steht im Präsens (*gehe*). Darum Perfekt: *gefrühstückt habe*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Nachdem der Zug abgefahren ___, gingen wir nach Hause.
+    options: [hatte, war, ist]
+    answer: war
+    explanation:
+      en: "*Abfahren* takes *sein*, and the main clause is in the *Präteritum*: *abgefahren war*."
+      fa: "*abfahren* با *sein* می‌آید و جملهٔ پایه در گذشتهٔ ساده است: *abgefahren war*."
+      de: "*Abfahren* bildet das Perfekt mit *sein*, der Hauptsatz steht im Präteritum: *abgefahren war*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ dem Kurs gehen wir essen.
+    options: [Nachdem, Danach, Nach]
+    answer: Nach
+    explanation:
+      en: "A noun follows, *dem Kurs*, so the preposition *nach*."
+      fa: "پس از جای خالی اسم می‌آید (*dem Kurs*)، پس حرف اضافهٔ *nach*."
+      de: "Danach kommt ein Nomen, *dem Kurs*. Darum die Präposition *nach*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wir haben eingekauft. ___ haben wir gekocht.
+    options: [Nachdem, Danach, Nach]
+    answer: Danach
+    explanation:
+      en: "No clause and no noun follows; the verb *haben* comes right after the gap. So *danach*, \"after that\"."
+      fa: "پس از جای خالی نه جملهٔ پیرو می‌آید و نه اسم، بلکه بی‌درنگ فعل *haben*. پس *danach* یعنی «پس از آن»."
+      de: "Danach kommt kein Nebensatz und kein Nomen, sondern sofort das Verb *haben*. Darum *danach*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Nachdem sie die Prüfung bestanden hatte, …
+    options: [sie feierte mit Freunden., feiert sie mit Freunden., feierte sie mit Freunden.]
+    answer: feierte sie mit Freunden.
+    explanation:
+      en: "*Plusquamperfekt* in the *nachdem* clause goes with the *Präteritum*, and the main clause starts with its verb: *feierte sie*."
+      fa: "گذشتهٔ بعید در جملهٔ پیرو با گذشتهٔ ساده در جملهٔ پایه می‌آید و جملهٔ پایه با فعلش آغاز می‌شود: *feierte sie*."
+      de: "Zum Plusquamperfekt im *nachdem*-Satz passt das Präteritum. Der Hauptsatz beginnt mit dem Verb: *feierte sie*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Nachdem ich die E-Mail gelesen hatte, rief ich Tom an. Was war zuerst?"
+    options: [Ich las die E-Mail., Ich rief Tom an., Beides war zur gleichen Zeit.]
+    answer: Ich las die E-Mail.
+    explanation:
+      en: "What the *nachdem* clause says happened first: first the e-mail, then the call."
+      fa: "کار جملهٔ پیرو با *nachdem* اول رخ داده است: اول ایمیل، سپس تماس."
+      de: "Was im *nachdem*-Satz steht, war zuerst: erst die E-Mail, dann der Anruf."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich rufe dich an, …
+    options: [nachdem ich angekommen war., nachdem ich bin angekommen., nachdem ich angekommen bin.]
+    answer: nachdem ich angekommen bin.
+    explanation:
+      en: "Main clause in the *Präsens*, so the *Perfekt*, with *bin* at the very end."
+      fa: "جملهٔ پایه در زمان حال است، پس گذشتهٔ نقلی می‌آید و *bin* در آخر جمله."
+      de: "Der Hauptsatz steht im Präsens. Darum Perfekt, und *bin* steht ganz am Ende."
+  - id: true-1
+    type: true-false
+    prompt: Nachdem er die Tür abgeschlossen hatte, ging er zur Arbeit.
+    answer: true
+    explanation:
+      en: "*Plusquamperfekt* in the *nachdem* clause, *Präteritum* in the main clause. The sentence is correct."
+      fa: "گذشتهٔ بعید در جملهٔ پیرو و گذشتهٔ ساده در جملهٔ پایه. جمله درست است."
+      de: "Plusquamperfekt im *nachdem*-Satz, Präteritum im Hauptsatz. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Nachdem ich aß, ging ich ins Bett.
+    answer: false
+    explanation:
+      en: "The *nachdem* clause goes one tense back: *Nachdem ich gegessen hatte, …*"
+      fa: "زمان جملهٔ پیرو با *nachdem* یک پله عقب‌تر می‌رود: *Nachdem ich gegessen hatte, …*"
+      de: "Der *nachdem*-Satz geht eine Zeitform zurück: *Nachdem ich gegessen hatte, …*"
+  - id: true-3
+    type: true-false
+    prompt: Nachdem du die Prüfung bestanden hast, kannst du dich ausruhen.
+    answer: true
+    explanation:
+      en: "*Perfekt* in the *nachdem* clause, *Präsens* in the main clause. The sentence is correct."
+      fa: "گذشتهٔ نقلی در جملهٔ پیرو و زمان حال در جملهٔ پایه. جمله درست است."
+      de: "Perfekt im *nachdem*-Satz, Präsens im Hauptsatz. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Nachdem sie nach Hause gekommen hatte, kochte sie.
+    answer: false
+    explanation:
+      en: "*Kommen* takes *sein*: *Nachdem sie nach Hause gekommen war, …*"
+      fa: "*kommen* با *sein* می‌آید: *Nachdem sie nach Hause gekommen war, …*"
+      de: "*Kommen* bildet das Perfekt mit *sein*: *Nachdem sie nach Hause gekommen war, …*"
+  - id: true-5
+    type: true-false
+    prompt: Nachdem wir gegessen hatten, wir gingen spazieren.
+    answer: false
+    explanation:
+      en: "After the *nachdem* clause the verb comes first: *…, gingen wir spazieren.*"
+      fa: "پس از جملهٔ پیرو با *nachdem* فعل اول می‌آید: *…, gingen wir spazieren.*"
+      de: "Nach dem *nachdem*-Satz kommt zuerst das Verb: *…, gingen wir spazieren.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Nachdem wir den Film gesehen ___ (haben), gingen wir essen.
+    answers: [hatten]
+    explanation:
+      en: "Main clause in the *Präteritum*, so the *Plusquamperfekt*: *gesehen hatten*."
+      fa: "جملهٔ پایه در گذشتهٔ ساده است، پس گذشتهٔ بعید می‌آید: *gesehen hatten*."
+      de: "Der Hauptsatz steht im Präteritum. Darum Plusquamperfekt: *gesehen hatten*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Nachdem er in Berlin angekommen ___ (sein), rief er seine Mutter an.
+    answers: [war]
+    explanation:
+      en: "Main clause in the *Präteritum*, so the *Plusquamperfekt* with *sein*: *angekommen war*."
+      fa: "جملهٔ پایه در گذشتهٔ ساده است، پس گذشتهٔ بعید با *sein* می‌آید: *angekommen war*."
+      de: "Der Hauptsatz steht im Präteritum. Darum Plusquamperfekt mit *sein*: *angekommen war*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Nachdem ich die Hausaufgaben gemacht ___ (haben), gehe ich zum Training.
+    answers: [habe]
+    explanation:
+      en: "Main clause in the *Präsens*, so the *Perfekt*: *gemacht habe*."
+      fa: "جملهٔ پایه در زمان حال است، پس گذشتهٔ نقلی می‌آید: *gemacht habe*."
+      de: "Der Hauptsatz steht im Präsens. Darum Perfekt: *gemacht habe*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Nachdem sie lange ___ (arbeiten) hatte, war sie müde.
+    answers: [gearbeitet]
+    explanation:
+      en: "The *Plusquamperfekt* is *hatte* + *Partizip II*: *gearbeitet hatte*."
+      fa: "گذشتهٔ بعید با *hatte* و صفت مفعولی ساخته می‌شود: *gearbeitet hatte*."
+      de: "Das Plusquamperfekt ist *hatte* + Partizip II: *gearbeitet hatte*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: ___ (nach / nachdem) der Arbeit gehe ich einkaufen.
+    answers: [Nach]
+    explanation:
+      en: "A noun follows, *der Arbeit*: the preposition *nach*."
+      fa: "پس از جای خالی اسم می‌آید (*der Arbeit*): حرف اضافهٔ *nach*."
+      de: "Danach kommt ein Nomen, *der Arbeit*: die Präposition *nach*."
+  - id: error-1
+    type: find-error
+    prompt: Nachdem sie angekommen hatte, rief sie mich an.
+    answer: hatte
+    explanation:
+      en: "*Ankommen* takes *sein*: *Nachdem sie angekommen war, …*"
+      fa: "*ankommen* با *sein* می‌آید: *Nachdem sie angekommen war, …*"
+      de: "*Ankommen* bildet das Perfekt mit *sein*: *Nachdem sie angekommen war, …*"
+  - id: error-2
+    type: find-error
+    prompt: Nachdem dem Essen gingen wir spazieren.
+    answer: Nachdem
+    explanation:
+      en: "A noun follows, so the preposition *nach*: *Nach dem Essen gingen wir spazieren.*"
+      fa: "پس از آن اسم می‌آید، پس حرف اضافهٔ *nach*: *Nach dem Essen gingen wir spazieren.*"
+      de: "Danach kommt ein Nomen. Darum die Präposition *nach*: *Nach dem Essen gingen wir spazieren.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - ["nachdem wir gegessen hatten,", gingen, wir, spazieren]
+    explanation:
+      en: "The *nachdem* clause is position 1, so the verb *gingen* comes next, then the subject, and *spazieren* last."
+      fa: "جملهٔ پیرو با *nachdem* جایگاه اول است، پس فعل *gingen*، سپس فاعل و در آخر *spazieren* می‌آید."
+      de: "Der *nachdem*-Satz ist Position 1. Dann kommt das Verb *gingen*, danach das Subjekt, *spazieren* steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["ich gehe ins Bett,", nachdem, ich, die Zähne, geputzt, habe]
+    explanation:
+      en: "*Nachdem* starts the clause, then the subject and the object; *geputzt habe* comes last, with *habe* at the very end."
+      fa: "*nachdem* جمله را آغاز می‌کند، سپس فاعل و مفعول می‌آیند و در آخر *geputzt habe*، با *habe* در پایان."
+      de: "*Nachdem* beginnt den Satz, dann kommen Subjekt und Objekt. Am Ende steht *geputzt habe*, *habe* ganz zuletzt."
+  - id: match-1
+    type: matching
+    answer:
+      - [nach, der Arbeit]
+      - [nachdem, ich gearbeitet habe]
+      - [danach, gehe ich einkaufen]
+    explanation:
+      en: "*Nach* comes before a noun, *nachdem* before a clause with the verb at the end, and *danach* stands alone, so the verb follows it."
+      fa: "*nach* پیش از اسم می‌آید، *nachdem* پیش از جمله‌ای که فعلش در پایان است، و *danach* تنها می‌آید و فعل پس از آن."
+      de: "*Nach* steht vor einem Nomen, *nachdem* vor einem Satz mit dem Verb am Ende. *Danach* steht allein, danach kommt das Verb."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 3c86264813693484

@@ -4,10 +4,262 @@ kind: grammar
 level: B1
 chapter: b1-time-clauses
 order: 7
-status: coming-soon
+status: published
 recogniseOnly: true
 prerequisites: [grammar-160]
 title:
   en: "*sobald*, *solange*"
   fa: "*sobald* و *solange*"
   de: "*sobald*, *solange*"
+
+explanations:
+  en:
+    rule: >
+      *Sobald* means "as soon as": what the main clause says happens right
+      after what the *sobald* clause says: *Sobald ich zu Hause bin, rufe ich
+      dich an.* *Solange* means "as long as": two things last the same time,
+      *Solange es regnet, bleiben wir drinnen.* It can also set a condition
+      that holds for a while: *Solange du Fieber hast, bleibst du im Bett.*
+      Both start a subordinate clause, so the conjugated verb goes to the
+      end, and if the clause comes first, the main clause starts with its
+      verb. You only need to understand them when you read or hear them; in
+      your own sentences, *wenn* and *während* do the same job.
+  fa:
+    rule: >
+      *sobald* یعنی «به محض این‌که»: کار جملهٔ پایه بی‌درنگ پس از کار جملهٔ
+      پیرو رخ می‌دهد: *Sobald ich zu Hause bin, rufe ich dich an.* *solange*
+      یعنی «تا وقتی که، تا زمانی که»: دو چیز به یک اندازه طول می‌کشند،
+      *Solange es regnet, bleiben wir drinnen.* *solange* می‌تواند شرطی را
+      هم بگوید که مدتی برقرار است: *Solange du Fieber hast, bleibst du im
+      Bett.* هر دو جملهٔ پیرو را آغاز می‌کنند، پس فعل صرف‌شده به پایان جمله
+      می‌رود و اگر جملهٔ پیرو اول بیاید، جملهٔ پایه با فعلش آغاز می‌شود.
+      کافی است این دو را هنگام خواندن و شنیدن بفهمید؛ در جمله‌های خودتان
+      *wenn* و *während* همین کار را می‌کنند.
+  de:
+    rule: >
+      *Sobald* heißt: gleich, wenn etwas passiert. Was im Hauptsatz steht,
+      passiert direkt danach: *Sobald ich zu Hause bin, rufe ich dich an.*
+      *Solange* heißt: die ganze Zeit, während etwas passiert. Beides dauert
+      gleich lang: *Solange es regnet, bleiben wir drinnen.* *Solange* kann
+      auch eine Bedingung für eine Zeit sein: *Solange du Fieber hast,
+      bleibst du im Bett.* Mit beiden beginnt ein Nebensatz. Das konjugierte
+      Verb steht am Ende. Steht der Nebensatz zuerst, beginnt der Hauptsatz
+      mit dem Verb. Sie müssen die Wörter nur verstehen, wenn Sie sie lesen
+      oder hören. Selbst können Sie *wenn* und *während* sagen.
+
+table:
+  columns:
+    - { en: "*Sobald*: as soon as", fa: "*sobald*: به محض این‌که", de: "*Sobald*: gleich, wenn" }
+    - { en: "*Solange*: as long as", fa: "*solange*: تا وقتی که", de: "*Solange*: die ganze Zeit, während" }
+  rows:
+    - ["Sobald ich zu Hause bin, rufe ich dich an.", "Solange es regnet, bleiben wir drinnen."]
+    - ["Sobald der Zug hält, steigen wir aus.", "Solange das Baby schläft, ist es ruhig."]
+    - ["Ich komme, sobald ich Zeit habe.", "Du kannst bleiben, solange du willst."]
+
+examples:
+  - de: Sobald ich zu Hause bin, rufe ich dich an.
+    en: As soon as I'm home, I'll call you.
+    fa: به محض این‌که به خانه برسم، به تو زنگ می‌زنم.
+  - de: Sobald das Wetter besser wird, fahren wir ans Meer.
+    en: As soon as the weather gets better, we'll go to the seaside.
+    fa: به محض این‌که هوا بهتر شود، به کنار دریا می‌رویم.
+  - de: Bitte schreiben Sie mir, sobald Sie die Unterlagen haben.
+    en: Please write to me as soon as you have the documents.
+    fa: لطفاً به محض این‌که مدارک به دستتان رسید، برایم بنویسید.
+  - de: Ich komme, sobald ich Zeit habe.
+    en: I'll come as soon as I have time.
+    fa: به محض این‌که وقت داشته باشم، می‌آیم.
+  - de: Solange es regnet, bleiben wir drinnen.
+    en: As long as it's raining, we'll stay inside.
+    fa: تا وقتی باران می‌بارد، در خانه می‌مانیم.
+  - de: Du kannst bei uns wohnen, solange du willst.
+    en: You can stay with us as long as you like.
+    fa: تا هر وقت بخواهی می‌توانی پیش ما بمانی.
+  - de: Solange du Fieber hast, bleibst du im Bett.
+    en: As long as you have a temperature, you stay in bed.
+    fa: تا وقتی تب داری، در رختخواب می‌مانی.
+  - de: Solange das Baby schläft, kann ich in Ruhe arbeiten.
+    en: As long as the baby is asleep, I can work in peace.
+    fa: تا وقتی بچه خواب است، می‌توانم با آرامش کار کنم.
+
+mistakes:
+  - wrong: Solange ich in Berlin ankomme, rufe ich dich an.
+    right: Sobald ich in Berlin ankomme, rufe ich dich an.
+    why:
+      en: "Arriving takes a moment, and the call comes right after it: *sobald*. *Solange* is for something that lasts."
+      fa: "رسیدن یک لحظه است و تماس بی‌درنگ پس از آن می‌آید: *sobald*. *solange* برای چیزی است که مدتی طول می‌کشد."
+      de: "Ankommen dauert nur einen Moment, der Anruf kommt gleich danach: *sobald*. *Solange* sagt man, wenn etwas dauert."
+  - wrong: Du kannst bleiben, sobald du willst.
+    right: Du kannst bleiben, solange du willst.
+    why:
+      en: "Staying lasts a while, as long as you want: *solange*."
+      fa: "ماندن مدتی طول می‌کشد، تا هر وقت بخواهی: *solange*."
+      de: "Das Bleiben dauert, so lange du willst: *solange*."
+  - wrong: Sobald ich bin zu Hause, rufe ich dich an.
+    right: Sobald ich zu Hause bin, rufe ich dich an.
+    why:
+      en: "In the *sobald* clause the conjugated verb *bin* goes to the end."
+      fa: "در جملهٔ پیرو با *sobald* فعل صرف‌شدهٔ *bin* به پایان جمله می‌رود."
+      de: "Im *sobald*-Satz steht das konjugierte Verb *bin* am Ende."
+  - wrong: Solange es regnet, wir bleiben drinnen.
+    right: Solange es regnet, bleiben wir drinnen.
+    why:
+      en: "The *solange* clause is position 1, so the main clause starts with its verb: *bleiben wir*."
+      fa: "جملهٔ پیرو با *solange* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *bleiben wir*."
+      de: "Der *solange*-Satz ist Position 1. Danach kommt sofort das Verb: *bleiben wir*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich bin um sechs am Bahnhof. ___ ich ankomme, schreibe ich dir.
+    options: [Solange, Sobald]
+    answer: Sobald
+    explanation:
+      en: "Arriving takes a moment, and the message comes right after it: *sobald*, \"as soon as\"."
+      fa: "رسیدن یک لحظه است و پیام بی‌درنگ پس از آن می‌آید: *sobald*، یعنی «به محض این‌که»."
+      de: "Ankommen dauert nur einen Moment, die Nachricht kommt gleich danach: *sobald*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Du kannst bei uns bleiben, ___ du willst.
+    options: [solange, sobald]
+    answer: solange
+    explanation:
+      en: "Staying lasts as long as you want: *solange*, \"as long as\". *Sobald* would need a start, not something that lasts."
+      fa: "ماندن تا هر وقت بخواهی ادامه دارد: *solange*، یعنی «تا وقتی که»."
+      de: "Das Wohnen dauert, so lange du willst: *solange*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir warten nicht länger. ___ der Bus da ist, steigen wir ein.
+    options: [Sobald, Solange]
+    answer: Sobald
+    explanation:
+      en: "Getting on happens right after the bus arrives: *sobald*."
+      fa: "سوار شدن بی‌درنگ پس از رسیدن اتوبوس است: *sobald*."
+      de: "Das Einsteigen kommt gleich, wenn der Bus da ist: *sobald*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Sie dürfen hier parken, ___ Sie im Geschäft einkaufen.
+    options: [sobald, solange]
+    answer: solange
+    explanation:
+      en: "Parking is allowed for the whole time you are shopping: *solange*."
+      fa: "پارک کردن در تمام مدتی که خرید می‌کنید مجاز است: *solange*."
+      de: "Parken darf man die ganze Zeit, während man einkauft: *solange*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Sobald ich zu Hause bin, rufe ich dich an. Was heißt das?"
+    options: [Ich rufe dich die ganze Zeit an., "Ich rufe dich gleich an, wenn ich zu Hause ankomme.", "Ich rufe dich an, bevor ich nach Hause komme."]
+    answer: Ich rufe dich gleich an, wenn ich zu Hause ankomme.
+    explanation:
+      en: "*Sobald*: as soon as. The call comes right after getting home."
+      fa: "*sobald* یعنی «به محض این‌که»: تماس بی‌درنگ پس از رسیدن به خانه است."
+      de: "*Sobald*: gleich, wenn. Der Anruf kommt direkt nach der Ankunft."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Solange es regnet, bleiben wir drinnen. Was heißt das?"
+    options: ["Wir gehen raus, sobald es regnet.", "Wir bleiben drinnen, bevor es regnet.", "Wir bleiben drinnen, bis der Regen aufhört."]
+    answer: Wir bleiben drinnen, bis der Regen aufhört.
+    explanation:
+      en: "*Solange*: as long as. Staying inside lasts as long as the rain."
+      fa: "*solange* یعنی «تا وقتی که»: در خانه ماندن به اندازهٔ باران طول می‌کشد."
+      de: "*Solange*: die ganze Zeit, während. Wir bleiben drinnen, so lange der Regen dauert."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Solange du Fieber hast, darfst du nicht in die Schule gehen. Wann darf das Kind wieder in die Schule?"
+    options: [Wenn das Fieber weg ist., Sobald es Fieber hat., Während es Fieber hat.]
+    answer: Wenn das Fieber weg ist.
+    explanation:
+      en: "The rule holds as long as the fever lasts, so school again only when it is gone."
+      fa: "این قاعده تا وقتی تب هست برقرار است، پس مدرسه فقط وقتی است که تب رفته باشد."
+      de: "Die Regel gilt, so lange das Fieber dauert. Schule also erst, wenn es weg ist."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "Ich gebe Ihnen Bescheid, sobald ich mehr weiß. Wann bekommen Sie Bescheid?"
+    options: [Bevor ich mehr weiß., "Gleich, wenn ich mehr weiß.", "Die ganze Zeit, während ich mehr weiß."]
+    answer: Gleich, wenn ich mehr weiß.
+    explanation:
+      en: "*Sobald*: right when I know more, not before."
+      fa: "*sobald*: درست وقتی بیشتر بدانم، نه زودتر."
+      de: "*Sobald*: gleich, wenn ich mehr weiß, nicht vorher."
+  - id: choice-5
+    type: multiple-choice
+    prompt: "Solange ich in Berlin wohne, gehe ich oft ins Theater. Was stimmt?"
+    options: ["Ich gehe einmal ins Theater, wenn ich in Berlin ankomme.", "Ich gehe ins Theater, bevor ich nach Berlin ziehe.", Während der ganzen Zeit in Berlin gehe ich oft ins Theater.]
+    answer: Während der ganzen Zeit in Berlin gehe ich oft ins Theater.
+    explanation:
+      en: "*Solange*: the theatre visits last as long as I live in Berlin."
+      fa: "*solange*: رفتن به تئاتر تا وقتی ادامه دارد که در برلین زندگی می‌کنم."
+      de: "*Solange*: Die Theaterbesuche dauern, so lange ich in Berlin wohne."
+  - id: true-1
+    type: true-false
+    prompt: Sobald ich mehr weiß, gebe ich Ihnen Bescheid.
+    answer: true
+    explanation:
+      en: "*Weiß* at the end of the *sobald* clause, and the main clause starts with *gebe*. The sentence is correct."
+      fa: "*weiß* در پایان جملهٔ پیرو با *sobald* است و جملهٔ پایه با *gebe* آغاز می‌شود. جمله درست است."
+      de: "*Weiß* steht am Ende vom *sobald*-Satz, der Hauptsatz beginnt mit *gebe*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Sobald ich bin zu Hause, rufe ich dich an.
+    answer: false
+    explanation:
+      en: "In the *sobald* clause the verb goes to the end: *Sobald ich zu Hause bin, …*"
+      fa: "در جملهٔ پیرو با *sobald* فعل به پایان جمله می‌رود: *Sobald ich zu Hause bin, …*"
+      de: "Im *sobald*-Satz steht das Verb am Ende: *Sobald ich zu Hause bin, …*"
+  - id: true-3
+    type: true-false
+    prompt: Solange du Fieber hast, bleibst du im Bett.
+    answer: true
+    explanation:
+      en: "*Hast* at the end of the *solange* clause, and the main clause starts with *bleibst*. The sentence is correct."
+      fa: "*hast* در پایان جملهٔ پیرو با *solange* است و جملهٔ پایه با *bleibst* آغاز می‌شود. جمله درست است."
+      de: "*Hast* steht am Ende vom *solange*-Satz, der Hauptsatz beginnt mit *bleibst*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Solange es regnet, wir bleiben drinnen.
+    answer: false
+    explanation:
+      en: "After the *solange* clause the verb comes first: *…, bleiben wir drinnen.*"
+      fa: "پس از جملهٔ پیرو با *solange* فعل اول می‌آید: *…, bleiben wir drinnen.*"
+      de: "Nach dem *solange*-Satz kommt zuerst das Verb: *…, bleiben wir drinnen.*"
+  - id: true-5
+    type: true-false
+    prompt: Ruf mich bitte an, sobald du angekommen bist.
+    answer: true
+    explanation:
+      en: "*Sobald* with *angekommen bist* at the end. The sentence is correct."
+      fa: "*sobald* با *angekommen bist* در پایان جمله. جمله درست است."
+      de: "*Sobald* mit *angekommen bist* am Ende. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Solange ich in Wien ankomme, rufe ich dich an.
+    answer: Solange
+    explanation:
+      en: "Arriving takes a moment, and the call comes right after it: *Sobald ich in Wien ankomme, …*"
+      fa: "رسیدن یک لحظه است و تماس بی‌درنگ پس از آن می‌آید: *Sobald ich in Wien ankomme, …*"
+      de: "Ankommen dauert nur einen Moment, der Anruf kommt gleich danach: *Sobald ich in Wien ankomme, …*"
+  - id: error-2
+    type: find-error
+    prompt: Du kannst hier bleiben, sobald du willst.
+    answer: sobald
+    explanation:
+      en: "Staying lasts as long as you want: *…, solange du willst.*"
+      fa: "ماندن تا هر وقت بخواهی ادامه دارد: *…, solange du willst.*"
+      de: "Das Bleiben dauert, so lange du willst: *…, solange du willst.*"
+  - id: match-1
+    type: matching
+    answer:
+      - [sobald, "gleich, wenn"]
+      - [solange, "die ganze Zeit, während"]
+      - [bevor, früher als]
+    explanation:
+      en: "*Sobald*: as soon as. *Solange*: as long as. *Bevor*: before."
+      fa: "*sobald*: به محض این‌که. *solange*: تا وقتی که. *bevor*: پیش از آن‌که."
+      de: "*Sobald*: gleich, wenn. *Solange*: die ganze Zeit, während. *Bevor*: früher als."
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: every question, then gap-2 and choice-5 again after a fix, then
+    choice-5 once more after rewording; not people)"
+  date: 2026-11-28
+  pool: 70faa0b3531f4342

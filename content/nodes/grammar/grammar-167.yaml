@@ -4,10 +4,308 @@ kind: grammar
 level: B1
 chapter: b1-time-clauses
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-157]
 title:
   en: "*bevor*"
   fa: "*bevor*"
   de: "*bevor*"
+
+explanations:
+  en:
+    rule: >
+      *Bevor* (before) starts a subordinate clause, so the conjugated verb
+      goes to the end: *Ruf bitte an, bevor du kommst.* What the main clause
+      says happens first; what the *bevor* clause says comes later. Both
+      clauses usually have the same tense. The *bevor* clause can also come
+      first; then the main clause starts with its verb: *Bevor ich ins Bett
+      gehe, lese ich noch ein bisschen.* Do not mix up *bevor* with the
+      preposition *vor*, which goes with a noun in the *Dativ*: *vor dem
+      Essen*, but *bevor wir essen*. And "before that", without a clause or
+      a noun, is the adverb *vorher*: *Ich gehe ins Kino, aber vorher esse
+      ich etwas.*
+  fa:
+    rule: >
+      *bevor* (پیش از آن‌که) جملهٔ پیرو را آغاز می‌کند، پس فعل صرف‌شده به
+      پایان جمله می‌رود: *Ruf bitte an, bevor du kommst.* کاری که جملهٔ پایه
+      می‌گوید اول رخ می‌دهد و کاری که جملهٔ پیرو با *bevor* می‌گوید پس از
+      آن. زمان فعل در هر دو جمله معمولاً یکی است. جملهٔ پیرو با *bevor*
+      می‌تواند اول هم بیاید؛ آن‌گاه جملهٔ پایه با فعلش آغاز می‌شود: *Bevor
+      ich ins Bett gehe, lese ich noch ein bisschen.* *bevor* را با حرف اضافهٔ
+      *vor* اشتباه نگیرید. *vor* پیش از اسم می‌آید و حالت *Dativ* می‌خواهد:
+      *vor dem Essen*، ولی *bevor wir essen*. «پیش از آن» بدون جمله و بدون
+      اسم، قید *vorher* است: *Ich gehe ins Kino, aber vorher esse ich etwas.*
+  de:
+    rule: >
+      Mit *bevor* beginnt ein Nebensatz. Das konjugierte Verb steht am Ende:
+      *Ruf bitte an, bevor du kommst.* Was im Hauptsatz steht, passiert
+      zuerst. Was im *bevor*-Satz steht, passiert danach. Meistens haben
+      beide Sätze dieselbe Zeitform. Der *bevor*-Satz kann auch zuerst
+      stehen. Dann beginnt der Hauptsatz mit dem Verb: *Bevor ich ins Bett
+      gehe, lese ich noch ein bisschen.* Verwechseln Sie *bevor* nicht mit
+      der Präposition *vor*. Nach *vor* kommt ein Nomen im Dativ: *vor dem
+      Essen*, aber *bevor wir essen*. Ohne Satz und ohne Nomen sagt man
+      *vorher*: *Ich gehe ins Kino, aber vorher esse ich etwas.*
+
+table:
+  columns:
+    - { en: "Main clause: this comes first", fa: "جملهٔ پایه: این اول رخ می‌دهد", de: "Hauptsatz: das passiert zuerst" }
+    - { en: "*Bevor* clause: this comes later", fa: "جملهٔ پیرو با *bevor*: این بعد رخ می‌دهد", de: "*Bevor*-Satz: das passiert danach" }
+  rows:
+    - ["Ruf bitte an,", bevor du kommst.]
+    - ["Ich wasche mir die Hände,", bevor ich esse.]
+    - ["Wir kaufen noch Brot,", bevor der Laden zumacht.]
+    - ["Lies den Vertrag genau,", bevor du ihn unterschreibst.]
+    - ["Sie hat in Wien gewohnt,", bevor sie nach Berlin gezogen ist.]
+
+examples:
+  - de: Ruf bitte an, bevor du kommst.
+    en: Please call before you come.
+    fa: پیش از آن‌که بیایی، لطفاً زنگ بزن.
+  - de: Bevor ich ins Bett gehe, lese ich noch ein bisschen.
+    en: Before I go to bed, I read for a little while.
+    fa: پیش از آن‌که بخوابم، کمی کتاب می‌خوانم.
+  - de: Ich wasche mir die Hände, bevor ich esse.
+    en: I wash my hands before I eat.
+    fa: پیش از غذا خوردن دست‌هایم را می‌شویم.
+  - de: Lies den Vertrag genau, bevor du ihn unterschreibst.
+    en: Read the contract carefully before you sign it.
+    fa: پیش از آن‌که قرارداد را امضا کنی، آن را با دقت بخوان.
+  - de: Bevor wir in Urlaub fahren, bringen wir die Katze zu den Nachbarn.
+    en: Before we go on holiday, we take the cat to the neighbours.
+    fa: پیش از آن‌که به تعطیلات برویم، گربه را پیش همسایه‌ها می‌بریم.
+  - de: Sie hat in Wien gewohnt, bevor sie nach Berlin gezogen ist.
+    en: She lived in Vienna before she moved to Berlin.
+    fa: او پیش از آن‌که به برلین برود، در وین زندگی می‌کرد.
+  - de: Vor dem Essen wasche ich mir die Hände.
+    en: Before the meal I wash my hands.
+    fa: پیش از غذا دست‌هایم را می‌شویم.
+  - de: Ich gehe gleich ins Kino, aber vorher esse ich noch etwas.
+    en: I'm going to the cinema soon, but before that I'll eat something.
+    fa: کمی بعد به سینما می‌روم، ولی پیش از آن چیزی می‌خورم.
+
+mistakes:
+  - wrong: Vor ich esse, wasche ich mir die Hände.
+    right: Bevor ich esse, wasche ich mir die Hände.
+    why:
+      en: "Before a clause with a subject and a verb it is *bevor*. *Vor* goes only before a noun: *vor dem Essen*."
+      fa: "پیش از جمله‌ای با فاعل و فعل *bevor* می‌آید. *vor* فقط پیش از اسم می‌آید: *vor dem Essen*."
+      de: "Vor einem Satz mit Subjekt und Verb steht *bevor*. *Vor* steht nur vor einem Nomen: *vor dem Essen*."
+  - wrong: Ich trinke einen Kaffee bevor dem Unterricht.
+    right: Ich trinke einen Kaffee vor dem Unterricht.
+    why:
+      en: "Before a noun it is the preposition *vor*, with the *Dativ*: *vor dem Unterricht*."
+      fa: "پیش از اسم حرف اضافهٔ *vor* می‌آید، با حالت *Dativ*: *vor dem Unterricht*."
+      de: "Vor einem Nomen steht die Präposition *vor*, mit Dativ: *vor dem Unterricht*."
+  - wrong: Bevor du gehst ins Bett, putz dir die Zähne.
+    right: Bevor du ins Bett gehst, putz dir die Zähne.
+    why:
+      en: "In the *bevor* clause the conjugated verb *gehst* goes to the end."
+      fa: "در جملهٔ پیرو با *bevor* فعل صرف‌شدهٔ *gehst* به پایان جمله می‌رود."
+      de: "Im *bevor*-Satz steht das konjugierte Verb *gehst* am Ende."
+  - wrong: Bevor ich frühstücke, ich dusche.
+    right: Bevor ich frühstücke, dusche ich.
+    why:
+      en: "The *bevor* clause is position 1, so the main clause starts with its verb: *dusche ich*."
+      fa: "جملهٔ پیرو با *bevor* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *dusche ich*."
+      de: "Der *bevor*-Satz ist Position 1. Danach kommt sofort das Verb: *dusche ich*."
+  - wrong: Bevor ich fahre los, rufe ich dich an.
+    right: Bevor ich losfahre, rufe ich dich an.
+    why:
+      en: "In the *bevor* clause a separable verb is one word at the end: *losfahre*."
+      fa: "در جملهٔ پیرو با *bevor* فعل جداشدنی یک‌جا در پایان جمله می‌آید: *losfahre*."
+      de: "Im *bevor*-Satz steht ein trennbares Verb zusammen am Ende: *losfahre*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ruf mich bitte an, ___ du kommst.
+    options: [vor, vorher, bevor]
+    answer: bevor
+    explanation:
+      en: "A clause with a subject and a verb follows, so *bevor*."
+      fa: "پس از جای خالی جمله‌ای با فاعل و فعل می‌آید، پس *bevor*."
+      de: "Danach kommt ein Satz mit Subjekt und Verb. Darum *bevor*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ dem Frühstück gehe ich joggen.
+    options: [Bevor, Vor, Vorher]
+    answer: Vor
+    explanation:
+      en: "A noun follows, *dem Frühstück*, so the preposition *vor*."
+      fa: "پس از جای خالی اسم می‌آید (*dem Frühstück*)، پس حرف اضافهٔ *vor*."
+      de: "Danach kommt ein Nomen, *dem Frühstück*. Darum die Präposition *vor*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich gehe gleich ins Kino, aber ___ esse ich etwas.
+    options: [vorher, bevor, vor]
+    answer: vorher
+    explanation:
+      en: "No clause and no noun follows; the verb *esse* comes right after the gap. So the adverb *vorher*, \"before that\"."
+      fa: "پس از جای خالی نه جملهٔ پیرو می‌آید و نه اسم، بلکه بی‌درنگ فعل *esse*. پس قید *vorher* یعنی «پیش از آن»."
+      de: "Danach kommt kein Nebensatz und kein Nomen, sondern sofort das Verb *esse*. Darum *vorher*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Bevor wir ___, räumen wir die Küche auf.
+    options: [fahren los, los fahren, losfahren]
+    answer: losfahren
+    explanation:
+      en: "In the *bevor* clause the separable verb is one word at the end: *losfahren*."
+      fa: "در جملهٔ پیرو با *bevor* فعل جداشدنی یک‌جا در پایان جمله می‌آید: *losfahren*."
+      de: "Im *bevor*-Satz steht das trennbare Verb zusammen am Ende: *losfahren*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Bevor ich zur Arbeit fahre, …
+    options: [ich trinke einen Kaffee., trinke ich einen Kaffee., einen Kaffee ich trinke.]
+    answer: trinke ich einen Kaffee.
+    explanation:
+      en: "The *bevor* clause is position 1, so the main clause starts with its verb: *trinke ich*."
+      fa: "جملهٔ پیرو با *bevor* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *trinke ich*."
+      de: "Der *bevor*-Satz ist Position 1. Der Hauptsatz beginnt mit dem Verb: *trinke ich*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wasch dir die Hände, …
+    options: [vor du isst., bevor isst du., bevor du isst.]
+    answer: bevor du isst.
+    explanation:
+      en: "Before a clause it is *bevor*, and its verb *isst* goes to the end."
+      fa: "پیش از جمله *bevor* می‌آید و فعل آن، *isst*، به پایان جمله می‌رود."
+      de: "Vor einem Satz steht *bevor*. Das Verb *isst* steht am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Ich lese die Zeitung, bevor ich frühstücke. Was mache ich zuerst?"
+    options: [Ich frühstücke., Ich lese die Zeitung., Ich mache beides zur gleichen Zeit.]
+    answer: Ich lese die Zeitung.
+    explanation:
+      en: "The main clause happens first, the *bevor* clause later: first the paper, then breakfast."
+      fa: "کار جملهٔ پایه اول رخ می‌دهد و کار جملهٔ پیرو با *bevor* پس از آن: اول روزنامه، سپس صبحانه."
+      de: "Der Hauptsatz passiert zuerst, der *bevor*-Satz danach: erst die Zeitung, dann das Frühstück."
+  - id: true-1
+    type: true-false
+    prompt: Bevor du gehst, mach bitte das Licht aus.
+    answer: true
+    explanation:
+      en: "*Gehst* is at the end of the *bevor* clause, and the main clause starts with its verb. The sentence is correct."
+      fa: "*gehst* در پایان جملهٔ پیرو با *bevor* است و جملهٔ پایه با فعلش آغاز می‌شود. جمله درست است."
+      de: "*Gehst* steht am Ende vom *bevor*-Satz, der Hauptsatz beginnt mit dem Verb. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Vor ich schlafe, lese ich ein Buch.
+    answer: false
+    explanation:
+      en: "Before a clause it is *bevor*: *Bevor ich schlafe, …*"
+      fa: "پیش از جمله *bevor* می‌آید: *Bevor ich schlafe, …*"
+      de: "Vor einem Satz steht *bevor*: *Bevor ich schlafe, …*"
+  - id: true-3
+    type: true-false
+    prompt: Bevor wir essen, ich decke den Tisch.
+    answer: false
+    explanation:
+      en: "After the *bevor* clause the verb comes first: *…, decke ich den Tisch.*"
+      fa: "پس از جملهٔ پیرو با *bevor* فعل اول می‌آید: *…, decke ich den Tisch.*"
+      de: "Nach dem *bevor*-Satz kommt zuerst das Verb: *…, decke ich den Tisch.*"
+  - id: true-4
+    type: true-false
+    prompt: Ich lerne die Wörter, bevor ich den Test schreibe.
+    answer: true
+    explanation:
+      en: "*Bevor* with *schreibe* at the end. The sentence is correct."
+      fa: "*bevor* با *schreibe* در پایان جمله. جمله درست است."
+      de: "*Bevor* mit *schreibe* am Ende. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Bevor der Film anfängt, kaufen wir Popcorn.
+    answer: true
+    explanation:
+      en: "The separable verb *anfängt* is one word at the end, and the main clause starts with *kaufen*. The sentence is correct."
+      fa: "فعل جداشدنی *anfängt* یک‌جا در پایان آمده و جملهٔ پایه با *kaufen* آغاز می‌شود. جمله درست است."
+      de: "Das trennbare Verb *anfängt* steht zusammen am Ende, der Hauptsatz beginnt mit *kaufen*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Bevor du ___ (losfahren), ruf mich bitte an.
+    answers: [losfährst]
+    explanation:
+      en: "With *du*: *fährst*, and the separable verb is one word at the end: *losfährst*."
+      fa: "با *du* می‌شود *fährst* و فعل جداشدنی یک‌جا در پایان جمله می‌آید: *losfährst*."
+      de: "Bei *du*: *fährst*. Das trennbare Verb steht zusammen am Ende: *losfährst*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (vor / bevor) wir essen, waschen wir uns die Hände.
+    answers: [Bevor]
+    explanation:
+      en: "A clause with a subject and a verb follows: *bevor*."
+      fa: "پس از جای خالی جمله‌ای با فاعل و فعل می‌آید: *bevor*."
+      de: "Danach kommt ein Satz mit Subjekt und Verb: *bevor*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (vor / bevor) dem Essen waschen wir uns die Hände.
+    answers: [Vor]
+    explanation:
+      en: "A noun follows, *dem Essen*: the preposition *vor*."
+      fa: "پس از جای خالی اسم می‌آید (*dem Essen*): حرف اضافهٔ *vor*."
+      de: "Danach kommt ein Nomen, *dem Essen*: die Präposition *vor*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Bevor ich ins Bett gehe, ___ (putzen) ich mir die Zähne.
+    answers: [putze]
+    explanation:
+      en: "The *bevor* clause is position 1, so the verb *putze* comes next, before *ich*."
+      fa: "جملهٔ پیرو با *bevor* جایگاه اول است، پس فعل *putze* پیش از *ich* می‌آید."
+      de: "Der *bevor*-Satz ist Position 1. Danach kommt das Verb *putze*, vor *ich*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Lies den Vertrag genau, bevor du ihn ___ (unterschreiben).
+    answers: [unterschreibst]
+    explanation:
+      en: "With *du* the verb is *unterschreibst*, at the end of the *bevor* clause. *Unter-* is not separated here."
+      fa: "با *du* فعل *unterschreibst* است و در پایان جملهٔ پیرو با *bevor* می‌آید. *unter-* در این فعل جدا نمی‌شود."
+      de: "Bei *du* heißt das Verb *unterschreibst*. Es steht am Ende vom *bevor*-Satz. *Unter-* trennt man hier nicht."
+  - id: error-1
+    type: find-error
+    prompt: Wir kaufen noch ein, vor der Supermarkt zumacht.
+    answer: vor
+    explanation:
+      en: "A clause follows, so *bevor*: *…, bevor der Supermarkt zumacht.*"
+      fa: "پس از آن جمله می‌آید، پس *bevor*: *…, bevor der Supermarkt zumacht.*"
+      de: "Danach kommt ein Satz. Darum *bevor*: *…, bevor der Supermarkt zumacht.*"
+  - id: error-2
+    type: find-error
+    prompt: Bevor dem Konzert essen wir etwas.
+    answer: Bevor
+    explanation:
+      en: "A noun follows, so the preposition *vor*: *Vor dem Konzert essen wir etwas.*"
+      fa: "پس از آن اسم می‌آید، پس حرف اضافهٔ *vor*: *Vor dem Konzert essen wir etwas.*"
+      de: "Danach kommt ein Nomen. Darum die Präposition *vor*: *Vor dem Konzert essen wir etwas.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - ["bevor ich ins Bett gehe,", lese, ich, ein bisschen]
+    explanation:
+      en: "The *bevor* clause is position 1, so the verb *lese* comes next, then the subject."
+      fa: "جملهٔ پیرو با *bevor* جایگاه اول است، پس فعل *lese* و سپس فاعل می‌آید."
+      de: "Der *bevor*-Satz ist Position 1. Dann kommt das Verb *lese*, danach das Subjekt."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["ruf mich bitte an,", bevor, du, losfährst]
+    explanation:
+      en: "*Bevor* starts the clause, then the subject, and the separable verb *losfährst* comes last as one word."
+      fa: "*bevor* جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل جداشدنی *losfährst* یک‌جا در آخر."
+      de: "*Bevor* beginnt den Satz, dann kommt das Subjekt, das trennbare Verb *losfährst* steht zusammen am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [vor, dem Essen]
+      - [bevor, wir essen]
+      - [vorher, esse ich etwas]
+    explanation:
+      en: "*Vor* comes before a noun, *bevor* before a clause with the verb at the end, and *vorher* stands alone, so the verb follows it."
+      fa: "*vor* پیش از اسم می‌آید، *bevor* پیش از جمله‌ای که فعلش در پایان است، و *vorher* تنها می‌آید و فعل پس از آن."
+      de: "*Vor* steht vor einem Nomen, *bevor* vor einem Satz mit dem Verb am Ende. *Vorher* steht allein, danach kommt das Verb."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 8c630e904ef0c068
