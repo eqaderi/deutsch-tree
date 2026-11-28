@@ -282,6 +282,19 @@ test('a correction can set the class, article and plural, and decide what the li
   ])
 })
 
+test('a correction can say that a noun takes no article: "none"', () => {
+  const result = build([merged('Deutschland', { article: 'das', number: 'sg' }), merged('Schweiz')], {
+    corrections: {
+      changes: [
+        { word: 'Deutschland', article: 'none' },
+        { word: 'Schweiz', article: 'die', plural: 'sg' },
+      ],
+    },
+  })
+
+  expect(inWords(result)).toEqual(['none Deutschland (sg) A1', 'die Schweiz (sg) A1'])
+})
+
 test('a correction for a word the lists do not have stops the build: the corrections are out of date', () => {
   expect(() => build([merged('Tisch')], { corrections: { changes: [{ word: 'Tish', article: 'der' }] } })).toThrow(
     'the corrections name words that the lists do not have: Tish',

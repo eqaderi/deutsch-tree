@@ -88,7 +88,7 @@ attemptSize: 15          # optional, as for every node
 words:
   - word: Großmutter     # the headword, without article
     class: noun          # a word class of the scope list
-    article: die         # nouns only
+    article: die         # nouns only: der, die, das, or none for a noun that takes no article
     plural: Großmütter   # nouns only: the plural written out, without article
     # number: plural-only  # in place of `plural` for a noun with one number (plural-only, singular-only)
     level: A1
@@ -109,12 +109,19 @@ words:
   give only a marker: `¨-e` on *Stuhl* is *Stühle*. A noun the list gives
   two articles (`der/die` for *Verwandte*) takes one, and lists the other form
   under `alsoAccepted`.
+- **A noun that takes no article** is written `article: none`: most names of
+  countries, continents and cities (*Deutschland*, *Europa*, *Berlin*). It is
+  shown, heard, put on its Anki card and asked bare, so *Deutschland* is the
+  answer and *das Deutschland* is wrong. The scope list says `none` for it
+  too, by a correction in `scope-corrections.yaml` (`article: none`), and the
+  check holds the node to it. A name that takes an article keeps it:
+  *die Schweiz*, *die Türkei*, *der Iran*.
 - A node writes no `questions`: the test is made from the words. Every word
   is asked twice. **From German**: the learner sees the word as it is learned
   (*die Großmutter*) and chooses its meaning among four meanings of words of
   the node, of the same word class where the node has enough. **Into
   German**: the learner sees the meaning and types the word, a noun with its
-  article; *Großmutter* or *der Großmutter* is wrong, and only the slips of
+  article (if it takes one); *Großmutter* or *der Großmutter* is wrong, and only the slips of
   any typed answer (umlauts, capitals) are forgiven. A learner who reads in
   simple German sees the `definition` in place of a meaning, in both
   directions. One attempt asks about a word once, half of the words in each
@@ -149,7 +156,7 @@ of date.
 |---|---|---|
 | `scope-list.tsv` | Every word in scope, one per line: `word`, `class`, `level`, `article`, `plural`, `reflexive`, `feminine`, `regional`. The vocabulary nodes must hold each word exactly once. | `pnpm vocabulary:scope` |
 | `left-out.tsv` | Every headword of the word lists that is not in scope, with the reason and the word it is noted on. | `pnpm vocabulary:scope` |
-| `scope-corrections.yaml` | What the extracted lists got wrong or do not print: word classes, missing articles, two spellings of one word. | by hand |
+| `scope-corrections.yaml` | What the extracted lists got wrong or do not print: word classes, missing articles (`none` for a noun that takes no article), two spellings of one word. | by hand |
 
 The words come from the Goethe A1, A2 and B1 word lists. **Only headwords may
 be here**: a word, its article, plural marker, word class and level. Never a
@@ -1044,7 +1051,8 @@ A key that the schema does not know is an error, so a misspelt key is caught.
   of a node that the scope list does not have. A vocabulary node without
   words, with `questions`, and words in a node of another kind.
 - A word of a published vocabulary node that lacks a part; a word class,
-  level, article or plural that differs from the scope list; an article or
+  level, article or plural that differs from the scope list (an article on a
+  noun the scope list gives `none`, and `none` where it gives one); an article or
   plural on a word that is no noun; a definition that uses the word itself;
   two words with the same meaning or definition that do not accept each
   other; a `tooCloseTo` that is not a word of the node.

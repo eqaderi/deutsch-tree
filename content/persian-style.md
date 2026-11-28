@@ -79,6 +79,7 @@ its first mention in a node.
 | ending (of an article, adjective or noun) | Endung | پایانه |
 | conjugation; to conjugate | Konjugation | صرف؛ صرف کردن |
 | regular / irregular | regelmäßig / unregelmäßig | باقاعده / بی‌قاعده |
+| mixed verb (*bringen*, *gebracht*) | gemischtes Verb | فعل آمیخته |
 | person; first person singular | Person | شخص؛ اول‌شخص مفرد (also دوم‌شخص، سوم‌شخص) |
 | singular / plural | Singular / Plural | مفرد / جمع |
 | polite *Sie* | Höflichkeitsform | *Sie* رسمی |

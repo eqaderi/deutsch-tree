@@ -578,7 +578,7 @@ deutlich	adjective	A2
 deutsch	adjective	A1
 Deutsch	noun	A2	das	sg
 Deutsche	noun	A1	der/die	-n
-Deutschland	noun	A1	das	sg
+Deutschland	noun	A1	none	sg
 Dezember	noun	A1	der
 Dialekt	noun	B1	der	-e
 Dialog	noun	B1	der	-e
@@ -849,7 +849,7 @@ etwas	pronoun	A2
 EU	noun	B1	die
 euer	article	A1
 Euro	noun	A1	der	-s
-Europa	noun	A1	das	sg
+Europa	noun	A1	none	sg
 Europäer	noun	A1	der	-		Europäerin
 europäisch	adjective	A1
 Europäische Union	noun	B1	die

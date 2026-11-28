@@ -1,34 +1,275 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A preposition has several meanings; each entry names the one or two met first, with a word in
+# brackets that tells it apart from its neighbours (aus, von, ab; nach, zu). The definition in
+# simple German shows the word's place in a sentence with "…".
 id: vocabulary-prepositions
 kind: vocabulary
 level: A1
 chapter: a1-words-small-words
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Prepositions"
   fa: "حرف‌های اضافه"
   de: "Präpositionen"
+attemptSize: 15
 words:
-  - word: an
-  - word: auf
-  - word: aus
-  - word: bei
-  - word: bis
-  - word: durch
-  - word: für
-  - word: gegen
   - word: in
-  - word: mit
-  - word: nach
-  - word: ohne
-  - word: seit
-  - word: über
-  - word: um
+    class: preposition
+    level: A1
+    meaning:
+      en: in, into
+      fa: در، داخل
+    definition: "drinnen, nicht draußen: … dem Haus, … der Stadt"
+    example:
+      de: Ich wohne in Hamburg.
+      en: I live in Hamburg.
+      fa: در هامبورگ زندگی می‌کنم.
+
+  - word: auf
+    class: preposition
+    level: A1
+    meaning:
+      en: on (on top of)
+      fa: روی
+    definition: "oben, mit Kontakt: Die Tasse steht … dem Tisch."
+    example:
+      de: Die Katze schläft auf dem Sofa.
+      en: The cat is sleeping on the sofa.
+      fa: گربه روی مبل خوابیده است.
+
+  - word: an
+    class: preposition
+    level: A1
+    meaning:
+      en: at, on (at the side of, touching)
+      fa: کنار، به (چسبیده به چیزی)
+    definition: "ganz nah, mit Kontakt zur Seite: Das Bild hängt … der Wand."
+    example:
+      de: Wir treffen uns an der Haltestelle.
+      en: We're meeting at the bus stop.
+      fa: سر ایستگاه اتوبوس همدیگر را می‌بینیم.
+
   - word: unter
-  - word: von
+    class: preposition
+    level: A1
+    meaning:
+      en: under, below
+      fa: زیر
+    definition: "tiefer als etwas: Die Katze liegt … dem Bett."
+    example:
+      de: Der Hund schläft unter dem Tisch.
+      en: The dog sleeps under the table.
+      fa: سگ زیر میز می‌خوابد.
+
+  - word: über
+    class: preposition
+    level: A1
+    meaning:
+      en: above, over; about (a topic)
+      fa: بالای (بدون تماس)؛ دربارهٔ
+    definition: "oben, aber ohne Kontakt: Die Lampe hängt … dem Tisch. Auch das Thema: ein Buch … Berlin"
+    example:
+      de: Wir sprechen über das Wetter.
+      en: We're talking about the weather.
+      fa: دربارهٔ هوا صحبت می‌کنیم.
+
   - word: vor
-  - word: zu
+    class: preposition
+    level: A1
+    meaning:
+      en: in front of; before; ago
+      fa: جلوی؛ قبل از؛ پیش
+    definition: "auf der Seite vorne: Das Auto steht … dem Haus. Auch: früher als, zum Beispiel … dem Essen"
+    example:
+      de: Das Auto steht vor dem Haus.
+      en: The car is in front of the house.
+      fa: ماشین جلوی خانه است.
+
   - word: zwischen
+    class: preposition
+    level: A1
+    meaning:
+      en: between
+      fa: بین، میان
+    definition: "in der Mitte von zwei Sachen: Das Kind sitzt … Mama und Papa."
+    example:
+      de: Die Apotheke ist zwischen der Bank und der Post.
+      en: The pharmacy is between the bank and the post office.
+      fa: داروخانه بین بانک و ادارهٔ پست است.
+
+  - word: aus
+    class: preposition
+    level: A1
+    meaning:
+      en: out of; from (a country or a town)
+      fa: از (درون چیزی، از کشوری یا شهری)
+    definition: "von innen nach draußen; auch das Land, wo man herkommt: Ich komme … Polen."
+    example:
+      de: Sie kommt aus Afghanistan.
+      en: She is from Afghanistan.
+      fa: او اهل افغانستان است.
+
+  - word: von
+    class: preposition
+    level: A1
+    meaning:
+      en: from (a person or a starting point); of
+      fa: از (کسی یا نقطهٔ شروع)
+    definition: "nennt den Anfang oder die Person: ein Brief … meiner Mutter, … Montag bis Freitag"
+    example:
+      de: Ich habe eine E-Mail von meinem Chef bekommen.
+      en: I got an e-mail from my boss.
+      fa: از رئیسم ایمیلی گرفتم.
+
   - word: ab
+    class: preposition
+    level: A1
+    meaning:
+      en: from (a time on), starting at
+      fa: از (این زمان به بعد)
+    definition: "nennt den Anfang, und es geht danach weiter: … Montag habe ich Urlaub."
+    example:
+      de: Ab Montag arbeite ich wieder.
+      en: From Monday I'm working again.
+      fa: از دوشنبه دوباره کار می‌کنم.
+    tooCloseTo: [von]
+
+  - word: nach
+    class: preposition
+    level: A1
+    meaning:
+      en: after; to (a town or a country)
+      fa: بعد از؛ به (شهری یا کشوری)
+    definition: "später als: … dem Essen; auch das Ziel einer Reise: Ich fahre … Berlin."
+    example:
+      de: Nach der Arbeit fahre ich nach Hause.
+      en: After work I go home.
+      fa: بعد از کار به خانه می‌روم.
+
+  - word: zu
+    class: preposition
+    level: A1
+    meaning:
+      en: to (a person, or a place such as the doctor's)
+      fa: به سوی (کسی یا جایی)، پیش (کسی)
+    definition: "nennt das Ziel, eine Person oder einen Ort: Ich gehe … meiner Oma."
+    example:
+      de: Ich fahre mit dem Rad zu meiner Freundin.
+      en: I'm cycling to my friend's.
+      fa: با دوچرخه پیش دوستم می‌روم.
+
+  - word: bei
+    class: preposition
+    level: A1
+    meaning:
+      en: at (someone's home or company), near
+      fa: نزد (کسی)، در (شرکتی)، نزدیک
+    definition: "am Ort von einer Person oder Firma: Ich wohne … meinen Eltern."
+    example:
+      de: Ich arbeite bei einer Bank.
+      en: I work at a bank.
+      fa: در یک بانک کار می‌کنم.
+
+  - word: mit
+    class: preposition
+    level: A1
+    meaning:
+      en: with
+      fa: با
+    definition: "zusammen; auch womit man etwas macht: Ich fahre … dem Bus."
+    example:
+      de: Ich gehe mit meiner Freundin ins Kino.
+      en: I'm going to the cinema with my friend.
+      fa: با دوستم به سینما می‌روم.
+
+  - word: ohne
+    class: preposition
+    level: A1
+    meaning:
+      en: without
+      fa: بدون
+    definition: "nicht mit: Kaffee … Zucker"
+    example:
+      de: Ich trinke Kaffee ohne Milch.
+      en: I drink coffee without milk.
+      fa: قهوه را بدون شیر می‌نوشم.
+
+  - word: für
+    class: preposition
+    level: A1
+    meaning:
+      en: for
+      fa: برای
+    definition: "nennt die Person, die etwas bekommt, oder den Zweck: Das Geschenk ist … dich."
+    example:
+      de: Das Geschenk ist für meine Mutter.
+      en: The present is for my mother.
+      fa: هدیه برای مادرم است.
+
+  - word: gegen
+    class: preposition
+    level: A1
+    meaning:
+      en: against; at about (a time)
+      fa: علیه، در برابر؛ حدود (ساعتی)
+    definition: "nicht für, sondern dagegen; auch: ungefähr um, zum Beispiel … acht Uhr"
+    example:
+      de: Heute spielen wir gegen Bremen.
+      en: Today we're playing against Bremen.
+      fa: امروز مقابل برمن بازی می‌کنیم.
+
+  - word: durch
+    class: preposition
+    level: A1
+    meaning:
+      en: through
+      fa: از میان، از وسط
+    definition: "von einer Seite zur anderen Seite: … den Park gehen"
+    example:
+      de: Wir gehen durch den Park.
+      en: We walk through the park.
+      fa: از وسط پارک می‌رویم.
+
+  - word: um
+    class: preposition
+    level: A1
+    meaning:
+      en: at (a clock time); around
+      fa: ساعت (زمان دقیق)؛ دور (چیزی)
+    definition: "nennt die genaue Uhrzeit: … acht Uhr; auch: rundherum"
+    example:
+      de: Der Film beginnt um acht Uhr.
+      en: The film starts at eight o'clock.
+      fa: فیلم ساعت هشت شروع می‌شود.
+
+  - word: bis
+    class: preposition
+    level: A1
+    meaning:
+      en: until, up to
+      fa: تا
+    definition: "nennt das Ende von einer Zeit oder einem Weg: von Montag … Freitag"
+    example:
+      de: Der Laden ist bis acht Uhr offen.
+      en: The shop is open until eight o'clock.
+      fa: مغازه تا ساعت هشت باز است.
+
+  - word: seit
+    class: preposition
+    level: A1
+    meaning:
+      en: since, for (a time up to now)
+      fa: از (زمانی در گذشته تا حالا)
+    definition: "von einem Punkt in der Vergangenheit bis jetzt: … zwei Jahren"
+    example:
+      de: Ich lerne seit drei Monaten Deutsch.
+      en: I've been learning German for three months.
+      fa: سه ماه است که آلمانی یاد می‌گیرم.
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 126, then 14 questions)
+  date: 2026-11-28
+  pool: db2553b0078a9d73

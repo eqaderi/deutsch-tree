@@ -156,7 +156,7 @@ export const de: Strings = {
     'typed-answer': 'Schreib die Antwort.',
     'typed-gap-fill': 'Schreib das Wort für die Lücke.',
     'meaning-of-word': 'Was bedeutet dieses Wort?',
-    'word-for-meaning': 'Welches Wort ist das? Schreib es. Ein Nomen braucht seinen Artikel.',
+    'word-for-meaning': 'Welches Wort ist das? Schreib es. Ein Nomen braucht seinen Artikel, wenn es einen hat.',
     'richtig-falsch': 'Ist dieser Satz richtig oder falsch? Die Antwort steht im Text.',
     'ja-nein': 'Ja oder Nein? Die Antwort steht im Text von dieser Person.',
     'which-text': 'Welche Anzeige passt? Wähle den Buchstaben. Wenn keine passt: 0.',

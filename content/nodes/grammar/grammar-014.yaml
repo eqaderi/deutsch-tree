@@ -4,10 +4,348 @@ kind: grammar
 level: A1
 chapter: a1-past
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-002]
 title:
   en: "*Perfekt* with *haben*, regular *Partizip II*"
-  fa: "*Perfekt* با *haben* و *Partizip II* باقاعده"
+  fa: "گذشتهٔ نقلی (*Perfekt*) با *haben* و صفت مفعولی باقاعده"
   de: "Perfekt mit *haben*, regelmäßiges Partizip II"
+
+explanations:
+  en:
+    rule: >
+      In speech, German talks about the past mostly with the *Perfekt*. It has
+      two parts: *haben* in the present tense in position 2, and the past
+      participle (*Partizip II*) at the very end of the sentence. A regular
+      verb makes its *Partizip II* with *ge-* + stem + *-t*: *machen* becomes
+      *gemacht*, so *Ich habe Tee gemacht* (I made tea). When the stem ends in
+      *-t* or *-d*, add *-et*: *arbeiten*, *gearbeitet*.
+  fa:
+    rule: >
+      در گفتار، آلمانی بیشتر با گذشتهٔ نقلی (*Perfekt*) از گذشته سخن می‌گوید.
+      این زمان دو بخش دارد: فعل کمکی *haben* که در زمان حال صرف می‌شود و در
+      جایگاه دوم می‌آید، و صفت مفعولی (*Partizip II*) که در پایان جمله
+      می‌نشیند. صفت مفعولی فعل باقاعده از *ge-* + بن فعل + *-t* ساخته می‌شود:
+      *machen* می‌شود *gemacht*؛ پس *Ich habe Tee gemacht* یعنی «چای درست
+      کردم». اگر بن فعل به *-t* یا *-d* ختم شود، *-et* می‌گیرد: *arbeiten*،
+      *gearbeitet*.
+  de:
+    rule: >
+      Wenn man über die Vergangenheit spricht, sagt man meistens das Perfekt.
+      Es hat zwei Teile: *haben* im Präsens auf Position 2 und das Partizip II
+      ganz am Ende. Bei regelmäßigen Verben ist das Partizip II *ge-* + Stamm
+      + *-t*: *machen*, *gemacht*. *Ich habe Tee gemacht.* Endet der Stamm auf
+      *-t* oder *-d*, kommt *-et* dazu: *arbeiten*, *gearbeitet*.
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*Partizip II*", fa: "صفت مفعولی (*Partizip II*)", de: Partizip II }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [machen, gemacht, Ich habe Tee gemacht.]
+    - [kaufen, gekauft, Du hast Brot gekauft.]
+    - [spielen, gespielt, Er hat Fußball gespielt.]
+    - [lernen, gelernt, Wir haben Deutsch gelernt.]
+    - [kochen, gekocht, Ihr habt Suppe gekocht.]
+    - [hören, gehört, Sie haben Musik gehört.]
+    - [arbeiten, gearbeitet, Ich habe lange gearbeitet.]
+    - [warten, gewartet, Wir haben lange gewartet.]
+
+diagrams:
+  - caption:
+      en: >
+        *Ich habe gestern Tee gemacht.* and *Was hast du gestern gemacht?*
+        The form of *haben* (shaded) stands in position 2 and the
+        *Partizip II* (shaded) at the end. Together they frame the rest of the
+        sentence: the *Satzklammer*.
+      fa: >
+        *Ich habe gestern Tee gemacht.* و *Was hast du gestern gemacht?*
+        صورت صرف‌شدهٔ *haben* (رنگی) در جایگاه دوم و صفت مفعولی (رنگی) در
+        پایان جمله است. این دو با هم بقیهٔ جمله را در میان می‌گیرند: قاب جمله
+        (*Satzklammer*).
+      de: >
+        *Ich habe gestern Tee gemacht.* und *Was hast du gestern gemacht?*
+        Die Form von *haben* (farbig) steht auf Position 2, das Partizip II
+        (farbig) am Ende. Zusammen sind sie die Satzklammer um den Rest.
+    labels:
+      second: { en: position 2, fa: جایگاه دوم, de: Position 2 }
+      end: { en: the end, fa: پایان جمله, de: Ende }
+    svg: |
+      <svg viewBox="0 0 320 212">
+        <!-- Ich habe gestern Tee gemacht. -->
+        <text class="note" x="84" y="18" text-anchor="middle">{{second}}</text>
+        <text class="note" x="276" y="18" text-anchor="middle">{{end}}</text>
+        <rect class="surface" x="2" y="26" width="48" height="40"/>
+        <rect class="shade" x="54" y="26" width="60" height="40"/>
+        <rect class="surface" x="118" y="26" width="112" height="40"/>
+        <rect class="shade" x="234" y="26" width="84" height="40"/>
+        <text class="label" x="26" y="52" text-anchor="middle">Ich</text>
+        <text class="label" x="84" y="52" text-anchor="middle">habe</text>
+        <text class="label" x="174" y="52" text-anchor="middle">gestern Tee</text>
+        <text class="label" x="276" y="52" text-anchor="middle">gemacht.</text>
+        <polyline class="line" points="84,70 84,80 276,80 276,70"/>
+        <text class="note" x="180" y="98" text-anchor="middle">Satzklammer</text>
+        <!-- Was hast du gestern gemacht? -->
+        <text class="note" x="84" y="124" text-anchor="middle">{{second}}</text>
+        <text class="note" x="276" y="124" text-anchor="middle">{{end}}</text>
+        <rect class="surface" x="2" y="132" width="48" height="40"/>
+        <rect class="shade" x="54" y="132" width="60" height="40"/>
+        <rect class="surface" x="118" y="132" width="112" height="40"/>
+        <rect class="shade" x="234" y="132" width="84" height="40"/>
+        <text class="label" x="26" y="158" text-anchor="middle">Was</text>
+        <text class="label" x="84" y="158" text-anchor="middle">hast</text>
+        <text class="label" x="174" y="158" text-anchor="middle">du gestern</text>
+        <text class="label" x="276" y="158" text-anchor="middle">gemacht?</text>
+        <polyline class="line" points="84,176 84,186 276,186 276,176"/>
+        <text class="note" x="180" y="204" text-anchor="middle">Satzklammer</text>
+      </svg>
+
+examples:
+  - de: Ich habe Tee gemacht.
+    en: I made tea.
+    fa: چای درست کردم.
+  - de: Was hast du gestern gemacht?
+    en: What did you do yesterday?
+    fa: دیروز چه کار کردی؟
+  - de: Wir haben am Samstag Fußball gespielt.
+    en: We played football on Saturday.
+    fa: ما شنبه فوتبال بازی کردیم.
+  - de: Anna hat eine Jacke gekauft.
+    en: Anna bought a jacket.
+    fa: آنا یک کاپشن خرید.
+  - de: Habt ihr gestern lange gearbeitet?
+    en: Did you (plural) work late yesterday?
+    fa: شما (جمع) دیروز تا دیروقت کار کردید؟
+  - de: Meine Eltern haben in Hamburg gewohnt.
+    en: My parents lived in Hamburg.
+    fa: پدر و مادرم در هامبورگ زندگی می‌کردند.
+  - de: Ich habe lange auf den Bus gewartet.
+    en: I waited a long time for the bus.
+    fa: مدت زیادی منتظر اتوبوس ماندم.
+  - de: Tom hat gestern Abend Suppe gekocht.
+    en: Tom cooked soup yesterday evening.
+    fa: تام دیروز عصر سوپ پخت.
+
+mistakes:
+  - wrong: Ich habe gemacht Tee.
+    right: Ich habe Tee gemacht.
+    why:
+      en: "The *Partizip II* goes to the very end, after everything else."
+      fa: "صفت مفعولی به پایان جمله می‌رود، پس از همهٔ اجزای دیگر."
+      de: "Das Partizip II steht ganz am Ende, nach allen anderen Wörtern."
+  - wrong: Er hat lange gearbeit.
+    right: Er hat lange gearbeitet.
+    why:
+      en: "The stem *arbeit-* ends in *-t*, so the *Partizip II* ends in *-et*: *gearbeitet*."
+      fa: "بن *arbeit-* به *-t* ختم می‌شود، پس صفت مفعولی *-et* می‌گیرد: *gearbeitet*."
+      de: "Der Stamm *arbeit-* endet auf *-t*. Darum endet das Partizip II auf *-et*: *gearbeitet*."
+  - wrong: Sie hat eine Pizza gekochen.
+    right: Sie hat eine Pizza gekocht.
+    why:
+      en: "*Kochen* is regular: its *Partizip II* ends in *-t*, not *-en*."
+      fa: "*kochen* باقاعده است: صفت مفعولی آن به *-t* ختم می‌شود، نه به *-en*."
+      de: "*Kochen* ist regelmäßig. Das Partizip II endet auf *-t*, nicht auf *-en*."
+  - wrong: Ich gekauft ein Buch.
+    right: Ich habe ein Buch gekauft.
+    why:
+      en: "The *Partizip II* never stands alone: *haben* comes in position 2, the *Partizip II* at the end."
+      fa: "صفت مفعولی هرگز تنها نمی‌آید: *haben* در جایگاه دوم است و صفت مفعولی در پایان جمله."
+      de: "Das Partizip II steht nie allein. *Haben* steht auf Position 2, das Partizip II am Ende."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich habe gestern Tee ___.
+    options: [gemacht, machen, gemachen]
+    answer: gemacht
+    explanation:
+      en: "After *haben* the *Partizip II* comes at the end: *ge-* + *mach* + *-t*."
+      fa: "پس از *haben*، صفت مفعولی در پایان جمله می‌آید: *ge-* + *mach* + *-t*."
+      de: "Mit *haben* steht das Partizip II am Ende: *ge-* + *mach* + *-t*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir ___ am Samstag Fußball gespielt.
+    options: [haben, habt, hat]
+    answer: haben
+    explanation:
+      en: "With *wir* the form of *haben* is *haben*."
+      fa: "با *wir* صورت فعل کمکی *haben* است."
+      de: "Bei *wir* heißt es *haben*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ du das Buch gekauft?
+    options: [Hast, Hat, Habt]
+    answer: Hast
+    explanation:
+      en: "With *du* the form of *haben* is *hast*. In a yes/no question it stands first."
+      fa: "با *du* صورت فعل کمکی *hast* است. در پرسش بله یا نه در آغاز جمله می‌آید."
+      de: "Bei *du* heißt es *hast*. In der Ja/Nein-Frage steht es am Anfang."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Anna hat gestern lange ___.
+    options: [gearbeitet, gearbeit, arbeitet]
+    answer: gearbeitet
+    explanation:
+      en: "The stem *arbeit-* ends in *-t*, so the *Partizip II* is *gearbeitet*."
+      fa: "بن *arbeit-* به *-t* ختم می‌شود، پس صفت مفعولی *gearbeitet* است."
+      de: "Der Stamm *arbeit-* endet auf *-t*. Das Partizip II ist *gearbeitet*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Was habt ihr gestern ___?
+    options: [gekocht, gekochen, kocht]
+    answer: gekocht
+    explanation:
+      en: "*Kochen* is regular: *ge-* + *koch* + *-t*."
+      fa: "*kochen* باقاعده است: *ge-* + *koch* + *-t*."
+      de: "*Kochen* ist regelmäßig: *ge-* + *koch* + *-t*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Meine Eltern ___ früher in Köln gewohnt.
+    options: [haben, hat, habt]
+    answer: haben
+    explanation:
+      en: "*Meine Eltern* are *sie* (plural), so the form of *haben* is *haben*."
+      fa: "*meine Eltern* سوم‌شخص جمع است (*sie*)، پس صورت فعل کمکی *haben* است."
+      de: "*Meine Eltern* sind *sie* (Plural). Die Form ist *haben*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "ich / haben / gestern / Musik / hören"
+    options: [Ich habe gestern Musik gehört., Ich habe gehört gestern Musik., Ich gehört habe gestern Musik.]
+    answer: Ich habe gestern Musik gehört.
+    explanation:
+      en: "*Habe* stands in position 2 and the *Partizip II* *gehört* at the end."
+      fa: "*habe* در جایگاه دوم و صفت مفعولی *gehört* در پایان جمله است."
+      de: "*Habe* steht auf Position 2, das Partizip II *gehört* am Ende."
+  - id: true-1
+    type: true-false
+    prompt: Er hat eine Pizza gekauft.
+    answer: true
+    explanation:
+      en: "*Hat* is in position 2 and *gekauft* at the end. The sentence is correct."
+      fa: "*hat* در جایگاه دوم و *gekauft* در پایان جمله است. جمله درست است."
+      de: "*Hat* steht auf Position 2, *gekauft* am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir haben gewartet lange.
+    answer: false
+    explanation:
+      en: "The *Partizip II* goes to the end: *Wir haben lange gewartet.*"
+      fa: "صفت مفعولی به پایان جمله می‌رود: *Wir haben lange gewartet.*"
+      de: "Das Partizip II steht am Ende: *Wir haben lange gewartet.*"
+  - id: true-3
+    type: true-false
+    prompt: Ihr habt am Sonntag Tennis gespielt.
+    answer: true
+    explanation:
+      en: "With *ihr* the form is *habt*, and *gespielt* is at the end. The sentence is correct."
+      fa: "با *ihr* صورت فعل کمکی *habt* است و *gespielt* در پایان جمله است. جمله درست است."
+      de: "Bei *ihr* heißt es *habt*, und *gespielt* steht am Ende. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich habe gestern Deutsch gelernen.
+    answer: false
+    explanation:
+      en: "*Lernen* is regular: *Ich habe gestern Deutsch gelernt.*"
+      fa: "*lernen* باقاعده است: *Ich habe gestern Deutsch gelernt.*"
+      de: "*Lernen* ist regelmäßig: *Ich habe gestern Deutsch gelernt.*"
+  - id: error-1
+    type: find-error
+    prompt: Tom hat am Montag lange gearbeit.
+    answer: gearbeit
+    explanation:
+      en: "The stem *arbeit-* ends in *-t*, so add *-et*: *gearbeitet*."
+      fa: "بن *arbeit-* به *-t* ختم می‌شود، پس *-et* می‌گیرد: *gearbeitet*."
+      de: "Der Stamm *arbeit-* endet auf *-t*. Darum kommt *-et* dazu: *gearbeitet*."
+  - id: error-2
+    type: find-error
+    prompt: Ich hat gestern viel gelernt.
+    answer: hat
+    explanation:
+      en: "With *ich* the form of *haben* is *habe*: *Ich habe gestern viel gelernt.*"
+      fa: "با *ich* صورت فعل کمکی *habe* است: *Ich habe gestern viel gelernt.*"
+      de: "Bei *ich* heißt es *habe*: *Ich habe gestern viel gelernt.*"
+  - id: error-3
+    type: find-error
+    prompt: Habt du die Musik gehört?
+    answer: Habt
+    explanation:
+      en: "With *du* the form of *haben* is *hast*: *Hast du die Musik gehört?*"
+      fa: "با *du* صورت فعل کمکی *hast* است: *Hast du die Musik gehört?*"
+      de: "Bei *du* heißt es *hast*: *Hast du die Musik gehört?*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Die Kinder haben im Garten ___ (spielen).
+    answers: [gespielt]
+    explanation:
+      en: "*Spielen* is regular: *ge-* + *spiel* + *-t* = *gespielt*."
+      fa: "*spielen* باقاعده است: *ge-* + *spiel* + *-t* = *gespielt*."
+      de: "*Spielen* ist regelmäßig: *ge-* + *spiel* + *-t* = *gespielt*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Hast du lange ___ (warten)?
+    answers: [gewartet]
+    explanation:
+      en: "The stem *wart-* ends in *-t*, so the *Partizip II* is *gewartet*."
+      fa: "بن *wart-* به *-t* ختم می‌شود، پس صفت مفعولی *gewartet* است."
+      de: "Der Stamm *wart-* endet auf *-t*. Das Partizip II ist *gewartet*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Er ___ (haben) am Wochenende viel gelernt.
+    answers: [hat]
+    explanation:
+      en: "With *er* the form of *haben* is *hat*."
+      fa: "با *er* صورت فعل کمکی *hat* است."
+      de: "Bei *er* heißt es *hat*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Was habt ihr am Sonntag ___ (machen)?
+    answers: [gemacht]
+    explanation:
+      en: "*Machen* is regular: *gemacht*."
+      fa: "*machen* باقاعده است: *gemacht*."
+      de: "*Machen* ist regelmäßig: *gemacht*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Partizip II: kaufen"
+    answers: [gekauft]
+    explanation:
+      en: "*Ge-* + *kauf* + *-t* = *gekauft*."
+      fa: "*ge-* + *kauf* + *-t* = *gekauft*."
+      de: "*Ge-* + *kauf* + *-t* = *gekauft*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [was, hast, du, gestern, gemacht]
+    end: "?"
+    explanation:
+      en: "After the question word comes *hast* in position 2; the *Partizip II* goes to the end."
+      fa: "پس از واژهٔ پرسشی، *hast* در جایگاه دوم می‌آید و صفت مفعولی به پایان جمله می‌رود."
+      de: "Nach dem Fragewort steht *hast* auf Position 2. Das Partizip II steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [habt, ihr, Fußball, gespielt]
+    end: "?"
+    explanation:
+      en: "In a yes/no question *haben* comes first, and the *Partizip II* stays at the end."
+      fa: "در پرسش بله یا نه *haben* در آغاز می‌آید و صفت مفعولی در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht *haben* am Anfang. Das Partizip II bleibt am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [kaufen, gekauft]
+      - [arbeiten, gearbeitet]
+      - [hören, gehört]
+      - [warten, gewartet]
+    explanation:
+      en: "Regular verbs: *ge-* + stem + *-t*, and *-et* after a stem in *-t*: *gearbeitet*, *gewartet*."
+      fa: "فعل‌های باقاعده: *ge-* + بن + *-t*، و پس از بنی که به *-t* ختم می‌شود *-et*: *gearbeitet*، *gewartet*."
+      de: "Regelmäßige Verben: *ge-* + Stamm + *-t*. Endet der Stamm auf *-t*, dann *-et*: *gearbeitet*, *gewartet*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: a4eaa95d0ca628a9

@@ -1007,8 +1007,18 @@ changes:
   - { word: Gramm, article: das, plural: "-e" }
   - { word: Pfund, article: das, plural: "-e" }
   - { word: Kilogramm, article: das, plural: "-e" }
-  - { word: Deutschland, article: das, plural: sg }
-  - { word: Europa, article: das, plural: sg }
+  - {
+      word: Deutschland,
+      article: none,
+      plural: sg,
+      reason: 'a name of a country, used without article: "in Deutschland", not "das Deutschland"',
+    }
+  - {
+      word: Europa,
+      article: none,
+      plural: sg,
+      reason: 'a name of a continent, used without article: "in Europa", not "das Europa"',
+    }
   - { word: Prüfer, article: der, plural: "-" }
   - { word: Bäcker, article: der, plural: "-" }
   - { word: Kaufmann, article: der, plural: Kaufleute }

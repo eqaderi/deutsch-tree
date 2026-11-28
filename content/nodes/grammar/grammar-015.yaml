@@ -4,10 +4,300 @@ kind: grammar
 level: A1
 chapter: a1-past
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-014]
 title:
   en: "*Perfekt* with *sein*"
-  fa: "*Perfekt* با *sein*"
+  fa: "گذشتهٔ نقلی (*Perfekt*) با *sein*"
   de: "Perfekt mit *sein*"
+
+explanations:
+  en:
+    rule: >
+      Most verbs make the *Perfekt* with *haben*, but some take *sein*: verbs
+      of movement from one place to another (*gehen*, *fahren*, *kommen*,
+      *fliegen*, *laufen*, *reisen*), verbs of a change such as *werden* (to
+      become, *ist geworden*), *passieren* (to happen), and *bleiben* and
+      *sein* themselves. *Sein* stands in position
+      2 and the *Partizip II* at the end, as with *haben*: *Ich bin nach Hause
+      gegangen.* Many of these verbs have an irregular *Partizip II* ending in
+      *-en*; learn it together with *ist*: *ist gegangen*, *ist geblieben*.
+  fa:
+    rule: >
+      بیشتر فعل‌ها گذشتهٔ نقلی (*Perfekt*) را با *haben* می‌سازند، اما برخی
+      با *sein* می‌آیند: فعل‌هایی که حرکت از جایی به جای دیگر را نشان
+      می‌دهند (*gehen*، *fahren*، *kommen*، *fliegen*، *laufen*، *reisen*)،
+      فعل‌هایی که تغییر یا رخدادی را بیان می‌کنند، مانند *werden* (شدن،
+      *ist geworden*) و *passieren* (رخ دادن)، و خود *bleiben* و *sein*. در این‌جا نیز *sein* در جایگاه دوم و
+      صفت مفعولی (*Partizip II*) در پایان جمله می‌آید: *Ich bin nach Hause
+      gegangen.* صفت مفعولی بسیاری از این فعل‌ها بی‌قاعده است و به *-en* ختم
+      می‌شود؛ آن را همراه با *ist* از بر کنید: *ist gegangen*، *ist geblieben*.
+  de:
+    rule: >
+      Die meisten Verben bilden das Perfekt mit *haben*. Manche Verben haben
+      *sein*: Verben der Bewegung von einem Ort zu einem anderen Ort
+      (*gehen*, *fahren*, *kommen*, *fliegen*, *laufen*, *reisen*), Verben wie
+      *werden* (*ist geworden*) und *passieren* und auch *bleiben* und *sein*. *Sein* steht auf Position 2,
+      das Partizip II am Ende: *Ich bin nach Hause gegangen.* Viele dieser
+      Verben haben ein unregelmäßiges Partizip II auf *-en*. Lernen Sie es mit
+      *ist*: *ist gegangen*, *ist geblieben*.
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*Perfekt*", fa: "گذشتهٔ نقلی (*Perfekt*)", de: Perfekt }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [gehen, ist gegangen, Ich bin nach Hause gegangen.]
+    - [fahren, ist gefahren, Du bist mit dem Bus gefahren.]
+    - [kommen, ist gekommen, Er ist spät gekommen.]
+    - [fliegen, ist geflogen, Wir sind nach Wien geflogen.]
+    - [laufen, ist gelaufen, Ihr seid schnell gelaufen.]
+    - [reisen, ist gereist, Sie sind nach Italien gereist.]
+    - [passieren, ist passiert, Was ist passiert?]
+    - [bleiben, ist geblieben, Ich bin zu Hause geblieben.]
+    - [sein, ist gewesen, Sie ist in Berlin gewesen.]
+
+examples:
+  - de: Ich bin nach Hause gegangen.
+    en: I went home.
+    fa: به خانه رفتم.
+  - de: Bist du mit dem Zug gefahren?
+    en: Did you go by train?
+    fa: با قطار رفتی؟
+  - de: Mein Bruder ist gestern aus Berlin gekommen.
+    en: My brother came from Berlin yesterday.
+    fa: برادرم دیروز از برلین آمد.
+  - de: Wir sind im Sommer nach Spanien geflogen.
+    en: We flew to Spain in the summer.
+    fa: ما تابستان با هواپیما به اسپانیا رفتیم.
+  - de: Seid ihr am Wochenende zu Hause geblieben?
+    en: Did you (plural) stay at home at the weekend?
+    fa: شما (جمع) آخر هفته در خانه ماندید؟
+  - de: Was ist passiert?
+    en: What happened?
+    fa: چه اتفاقی افتاد؟
+  - de: Die Kinder sind in den Park gelaufen.
+    en: The children ran to the park.
+    fa: بچه‌ها دوان‌دوان به پارک رفتند.
+  - de: Ich bin noch nie in Japan gewesen.
+    en: I have never been to Japan.
+    fa: هیچ‌وقت به ژاپن نرفته‌ام.
+
+mistakes:
+  - wrong: Ich habe nach Hause gegangen.
+    right: Ich bin nach Hause gegangen.
+    why:
+      en: "*Gehen* is a movement from one place to another, so the *Perfekt* takes *sein*."
+      fa: "*gehen* حرکت از جایی به جای دیگر است، پس گذشتهٔ نقلی آن با *sein* ساخته می‌شود."
+      de: "*Gehen* ist eine Bewegung von einem Ort zu einem anderen. Das Perfekt hat *sein*."
+  - wrong: Was hat passiert?
+    right: Was ist passiert?
+    why:
+      en: "*Passieren* always takes *sein*: *Was ist passiert?*"
+      fa: "*passieren* همیشه با *sein* می‌آید: *Was ist passiert?*"
+      de: "*Passieren* hat immer *sein*: *Was ist passiert?*"
+  - wrong: Wir sind gestern Fußball gespielt.
+    right: Wir haben gestern Fußball gespielt.
+    why:
+      en: "*Spielen* is no movement from place to place, so it takes *haben*."
+      fa: "*spielen* حرکت از جایی به جای دیگر نیست، پس با *haben* می‌آید."
+      de: "*Spielen* ist keine Bewegung zu einem anderen Ort. Darum steht *haben*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich ___ gestern nach Hause gegangen.
+    options: [bin, habe, ist]
+    answer: bin
+    explanation:
+      en: "*Gehen* is a movement, so *sein*; with *ich* the form is *bin*."
+      fa: "*gehen* نشان‌دهندهٔ حرکت است، پس *sein* می‌آید؛ با *ich* صورت آن *bin* است."
+      de: "*Gehen* ist eine Bewegung, also *sein*. Bei *ich*: *bin*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir ___ im Sommer nach Spanien geflogen.
+    options: [sind, haben, seid]
+    answer: sind
+    explanation:
+      en: "*Fliegen* is a movement, so *sein*; with *wir* the form is *sind*."
+      fa: "*fliegen* نشان‌دهندهٔ حرکت است، پس *sein* می‌آید؛ با *wir* صورت آن *sind* است."
+      de: "*Fliegen* ist eine Bewegung, also *sein*. Bei *wir*: *sind*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Was ___ gestern passiert?
+    options: [ist, hat, sind]
+    answer: ist
+    explanation:
+      en: "*Passieren* takes *sein*: *Was ist passiert?*"
+      fa: "*passieren* با *sein* می‌آید: *Was ist passiert?*"
+      de: "*Passieren* hat *sein*: *Was ist passiert?*"
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ ihr mit dem Bus gefahren?
+    options: [Seid, Habt, Sind]
+    answer: Seid
+    explanation:
+      en: "*Fahren* is a movement, so *sein*; with *ihr* the form is *seid*."
+      fa: "*fahren* نشان‌دهندهٔ حرکت است، پس *sein* می‌آید؛ با *ihr* صورت آن *seid* است."
+      de: "*Fahren* ist eine Bewegung, also *sein*. Bei *ihr*: *seid*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Anna ___ gestern Tennis gespielt.
+    options: [hat, ist, sind]
+    answer: hat
+    explanation:
+      en: "*Spielen* is no movement from place to place, so it takes *haben*: *hat gespielt*."
+      fa: "*spielen* حرکت از جایی به جای دیگر نیست، پس با *haben* می‌آید: *hat gespielt*."
+      de: "*Spielen* ist keine Bewegung zu einem anderen Ort. Darum *haben*: *hat gespielt*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Mein Bruder ___ am Sonntag zu Hause geblieben.
+    options: [ist, hat, bist]
+    answer: ist
+    explanation:
+      en: "*Bleiben* takes *sein*; with *er* the form is *ist*."
+      fa: "*bleiben* با *sein* می‌آید؛ با *er* صورت آن *ist* است."
+      de: "*Bleiben* hat *sein*. Bei *er*: *ist*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Du ___ heute sehr spät gekommen.
+    options: [bist, hast, ist]
+    answer: bist
+    explanation:
+      en: "*Kommen* is a movement, so *sein*; with *du* the form is *bist*."
+      fa: "*kommen* نشان‌دهندهٔ حرکت است، پس *sein* می‌آید؛ با *du* صورت آن *bist* است."
+      de: "*Kommen* ist eine Bewegung, also *sein*. Bei *du*: *bist*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Frau Lang, ___ Sie schon einmal in Wien gewesen?
+    options: [sind, haben, seid]
+    answer: sind
+    explanation:
+      en: "*Sein* makes its own *Perfekt* with *sein*: *Sie sind … gewesen*."
+      fa: "گذشتهٔ نقلی خود *sein* نیز با *sein* ساخته می‌شود: *Sie sind … gewesen*."
+      de: "*Sein* bildet das Perfekt auch mit *sein*: *Sie sind … gewesen*."
+  - id: true-1
+    type: true-false
+    prompt: Wir sind am Sonntag nach Hamburg gefahren.
+    answer: true
+    explanation:
+      en: "*Fahren* is a movement, so *sein*: *wir sind … gefahren*. The sentence is correct."
+      fa: "*fahren* نشان‌دهندهٔ حرکت است، پس *sein* می‌آید: *wir sind … gefahren*. جمله درست است."
+      de: "*Fahren* ist eine Bewegung, also *sein*: *wir sind … gefahren*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich habe in die Stadt gegangen.
+    answer: false
+    explanation:
+      en: "*Gehen* takes *sein*: *Ich bin in die Stadt gegangen.*"
+      fa: "*gehen* با *sein* می‌آید: *Ich bin in die Stadt gegangen.*"
+      de: "*Gehen* hat *sein*: *Ich bin in die Stadt gegangen.*"
+  - id: true-3
+    type: true-false
+    prompt: Er hat im Supermarkt Brot gekauft.
+    answer: true
+    explanation:
+      en: "*Kaufen* is no movement, so it takes *haben*. The sentence is correct."
+      fa: "*kaufen* نشان‌دهندهٔ حرکت نیست، پس با *haben* می‌آید. جمله درست است."
+      de: "*Kaufen* ist keine Bewegung. Darum *haben*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Die Kinder haben in den Park gelaufen.
+    answer: false
+    explanation:
+      en: "The children move to the park, so *sein*: *Die Kinder sind in den Park gelaufen.*"
+      fa: "بچه‌ها به سوی پارک حرکت می‌کنند، پس *sein* می‌آید: *Die Kinder sind in den Park gelaufen.*"
+      de: "Die Kinder bewegen sich zum Park, also *sein*: *Die Kinder sind in den Park gelaufen.*"
+  - id: error-1
+    type: find-error
+    prompt: Was hat bei der Arbeit passiert?
+    answer: hat
+    explanation:
+      en: "*Passieren* takes *sein*: *Was ist bei der Arbeit passiert?*"
+      fa: "*passieren* با *sein* می‌آید: *Was ist bei der Arbeit passiert?*"
+      de: "*Passieren* hat *sein*: *Was ist bei der Arbeit passiert?*"
+  - id: error-2
+    type: find-error
+    prompt: Seid du schon in Berlin gewesen?
+    answer: Seid
+    explanation:
+      en: "With *du* the form of *sein* is *bist*: *Bist du schon in Berlin gewesen?*"
+      fa: "با *du* صورت *sein* می‌شود *bist*: *Bist du schon in Berlin gewesen?*"
+      de: "Bei *du* heißt es *bist*: *Bist du schon in Berlin gewesen?*"
+  - id: error-3
+    type: find-error
+    prompt: Meine Eltern ist nach Italien gereist.
+    answer: ist
+    explanation:
+      en: "*Meine Eltern* are *sie* (plural): *Meine Eltern sind nach Italien gereist.*"
+      fa: "*meine Eltern* سوم‌شخص جمع است (*sie*): *Meine Eltern sind nach Italien gereist.*"
+      de: "*Meine Eltern* sind *sie* (Plural): *Meine Eltern sind nach Italien gereist.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich bin gestern ins Kino ___ (gehen).
+    answers: [gegangen]
+    explanation:
+      en: "The *Partizip II* of *gehen* is *gegangen*."
+      fa: "صفت مفعولی *gehen* می‌شود *gegangen*."
+      de: "Das Partizip II von *gehen* ist *gegangen*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Was ist hier ___ (passieren)?
+    answers: [passiert]
+    explanation:
+      en: "The *Partizip II* of *passieren* is *passiert*, with no *ge-*."
+      fa: "صفت مفعولی *passieren* می‌شود *passiert*، بدون *ge-*."
+      de: "Das Partizip II von *passieren* ist *passiert*, ohne *ge-*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir sind mit dem Zug nach Köln ___ (fahren).
+    answers: [gefahren]
+    explanation:
+      en: "The *Partizip II* of *fahren* is *gefahren*."
+      fa: "صفت مفعولی *fahren* می‌شود *gefahren*."
+      de: "Das Partizip II von *fahren* ist *gefahren*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Perfekt: er kommt"
+    answers: [er ist gekommen]
+    explanation:
+      en: "*Kommen* takes *sein*: *er ist gekommen*."
+      fa: "*kommen* با *sein* می‌آید: *er ist gekommen*."
+      de: "*Kommen* hat *sein*: *er ist gekommen*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [bist, du, nach Hause, gegangen]
+    end: "?"
+    explanation:
+      en: "In a yes/no question *sein* comes first, and the *Partizip II* stays at the end."
+      fa: "در پرسش بله یا نه *sein* در آغاز می‌آید و صفت مفعولی در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht *sein* am Anfang. Das Partizip II bleibt am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wann, seid, ihr, gekommen]
+    end: "?"
+    explanation:
+      en: "After the question word comes *seid* in position 2; the *Partizip II* goes to the end."
+      fa: "پس از واژهٔ پرسشی، *seid* در جایگاه دوم می‌آید و صفت مفعولی به پایان جمله می‌رود."
+      de: "Nach dem Fragewort steht *seid* auf Position 2. Das Partizip II steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [gehen, ist gegangen]
+      - [spielen, hat gespielt]
+      - [fahren, ist gefahren]
+      - [kaufen, hat gekauft]
+    explanation:
+      en: "Movement takes *sein* (*gehen*, *fahren*); *spielen* and *kaufen* take *haben*."
+      fa: "فعل‌های حرکتی با *sein* می‌آیند (*gehen*، *fahren*)؛ *spielen* و *kaufen* با *haben*."
+      de: "Bewegung hat *sein* (*gehen*, *fahren*). *Spielen* und *kaufen* haben *haben*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 3ddcb6e45b7fdc51

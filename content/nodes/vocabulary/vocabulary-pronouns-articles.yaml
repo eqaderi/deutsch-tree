@@ -1,37 +1,326 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# An article or a pronoun that changes with the gender is learned in its dictionary form (der,
+# ein, dieser); its other forms are taken as right where they fit (die, das; eine; diese, dieses).
 id: vocabulary-pronouns-articles
 kind: vocabulary
 level: A1
 chapter: a1-words-small-words
 order: 3
-status: coming-soon
+status: published
 title:
   en: "I, you, my, this: pronouns and articles"
   fa: "من، تو، مالِ من، این: ضمیرها و حرف‌های تعریف"
   de: "Ich, du, mein, dieser: Pronomen und Artikel"
+attemptSize: 15
 words:
   - word: ich
+    class: pronoun
+    level: A1
+    meaning:
+      en: I
+      fa: من
+    definition: "das sagt die Person, die spricht, über sich: … heiße Anna."
+    example:
+      de: Ich komme aus dem Iran.
+      en: I come from Iran.
+      fa: من اهل ایران هستم.
+
   - word: er
+    class: pronoun
+    level: A1
+    meaning:
+      en: he; it (for a masculine noun)
+      fa: او (مرد)؛ آن (برای اسم مذکر)
+    definition: "für einen Mann oder ein Nomen mit „der“: Peter ist krank, … bleibt zu Hause."
+    example:
+      de: Das ist Peter. Er arbeitet bei einer Bank.
+      en: This is Peter. He works at a bank.
+      fa: این پیتر است. او در یک بانک کار می‌کند.
+    tooCloseTo: [es]
+
   - word: es
+    class: pronoun
+    level: A1
+    meaning:
+      en: it (for a neuter noun)
+      fa: آن (برای اسم خنثی)
+    definition: "für ein Nomen mit „das“: Das Kind spielt, … ist fünf Jahre alt."
+    example:
+      de: Wo ist das Buch? Es liegt auf dem Tisch.
+      en: Where is the book? It's on the table.
+      fa: کتاب کجاست؟ روی میز است.
+    tooCloseTo: [er, sie]
+
   - word: sie
+    class: pronoun
+    level: A1
+    meaning:
+      en: she; they
+      fa: او (زن)؛ آن‌ها
+    definition: "für eine Frau oder ein Nomen mit „die“, und für mehrere Personen: Anna ist krank, … bleibt zu Hause."
+    example:
+      de: Meine Eltern? Sie wohnen in Köln.
+      en: My parents? They live in Cologne.
+      fa: پدر و مادرم؟ آن‌ها در کلن زندگی می‌کنند.
+    tooCloseTo: [es]
+
   - word: Sie
+    class: pronoun
+    level: A1
+    meaning:
+      en: you (polite, to one or more people)
+      fa: شما (رسمی)
+    definition: die höfliche Form für eine Person oder mehrere Personen, mit denen man spricht
+    example:
+      de: Sprechen Sie Deutsch?
+      en: Do you speak German?
+      fa: آلمانی صحبت می‌کنید؟
+
   - word: wir
+    class: pronoun
+    level: A1
+    meaning:
+      en: we
+      fa: ما
+    definition: die Person, die spricht, und andere Personen zusammen
+    example:
+      de: Wir lernen zusammen Deutsch.
+      en: We're learning German together.
+      fa: ما با هم آلمانی یاد می‌گیریم.
+
   - word: ihr
+    class: pronoun
+    level: A1
+    meaning:
+      en: you (informal, to more than one person)
+      fa: شما (جمع، خودمانی)
+    definition: mehrere Personen, zu denen man „du“ sagt
+    example:
+      de: Kommt ihr heute Abend mit?
+      en: Are you coming along this evening?
+      fa: شما امشب با ما می‌آیید؟
+
   - word: man
+    class: pronoun
+    level: A1
+    meaning:
+      en: one, you, people (in general)
+      fa: آدم، مردم (به‌طور کلی)
+    definition: "alle Leute, keine bestimmte Person: In Deutschland isst … oft um zwölf."
+    example:
+      de: Hier kann man gut essen.
+      en: You can eat well here.
+      fa: اینجا می‌شود غذای خوبی خورد.
+    alsoAccepted: [die Leute, der Mensch]
+
   - word: dich
+    class: pronoun
+    level: A1
+    meaning:
+      en: you (informal, one person, accusative)
+      fa: تو را
+    definition: "„du“ im Akkusativ: Ich besuche … am Sonntag."
+    example:
+      de: Ich besuche dich am Sonntag.
+      en: I'll visit you on Sunday.
+      fa: یکشنبه به دیدنت می‌آیم.
+    tooCloseTo: [dir]
+
   - word: dir
+    class: pronoun
+    level: A1
+    meaning:
+      en: (to) you (informal, one person, dative)
+      fa: به تو
+    definition: "„du“ im Dativ: Ich helfe … gern."
+    example:
+      de: Ich gebe dir mein Buch.
+      en: I'll give you my book.
+      fa: کتابم را به تو می‌دهم.
+    tooCloseTo: [dich]
+
   - word: sich
+    class: pronoun
+    level: A1
+    meaning:
+      en: himself, herself, itself, themselves (reflexive)
+      fa: خودش، خودشان (ضمیر انعکاسی)
+    definition: "das Reflexivpronomen für er, sie und es: Er wäscht … die Hände."
+    example:
+      de: Sie freut sich über das Geschenk.
+      en: She is pleased with the present.
+      fa: او از هدیه خوشحال است.
+
   - word: mein
+    class: article
+    level: A1
+    meaning:
+      en: my
+      fa: مال من
+    definition: "zeigt, dass etwas zu „ich“ gehört: … Buch, meine Tasche"
+    example:
+      de: Das ist mein Bruder.
+      en: This is my brother.
+      fa: این برادرم است.
+    alsoAccepted: [meine]
+
   - word: dein
+    class: article
+    level: A1
+    meaning:
+      en: your (informal, one person)
+      fa: مال تو
+    definition: "zeigt, dass etwas zu „du“ gehört: … Buch, deine Tasche"
+    example:
+      de: Ist das dein Fahrrad?
+      en: Is that your bike?
+      fa: این دوچرخهٔ توست؟
+    alsoAccepted: [deine]
+
   - word: unser
+    class: article
+    level: A1
+    meaning:
+      en: our
+      fa: مال ما
+    definition: "zeigt, dass etwas zu „wir“ gehört: … Haus, unsere Wohnung"
+    example:
+      de: Unser Haus ist klein, aber schön.
+      en: Our house is small but nice.
+      fa: خانهٔ ما کوچک اما زیباست.
+    alsoAccepted: [unsere]
+
   - word: euer
+    class: article
+    level: A1
+    meaning:
+      en: your (informal, more than one person)
+      fa: مال شما (جمع، خودمانی)
+    definition: "zeigt, dass etwas zu „ihr“ gehört: … Garten, eure Wohnung"
+    example:
+      de: Wo ist euer Auto?
+      en: Where is your car?
+      fa: ماشینتان کجاست؟
+    alsoAccepted: [eure]
+
   - word: der
+    class: article
+    level: A1
+    meaning:
+      en: the (definite article)
+      fa: حرف تعریف معین
+    definition: "bestimmter Artikel: … Mann, die Frau, das Kind"
+    example:
+      de: Der Kaffee ist heiß.
+      en: The coffee is hot.
+      fa: قهوه داغ است.
+    alsoAccepted: [die, das]
+
   - word: ein
+    class: article
+    level: A1
+    meaning:
+      en: a, an (indefinite article)
+      fa: حرف تعریف نامعین، یک
+    definition: "unbestimmter Artikel: … Mann, eine Frau, … Kind"
+    example:
+      de: Ich habe ein Fahrrad.
+      en: I have a bike.
+      fa: یک دوچرخه دارم.
+    alsoAccepted: [eine]
+
   - word: kein
+    class: article
+    level: A1
+    meaning:
+      en: no, not a (negative article)
+      fa: هیچ (حرف تعریف منفی)
+    definition: "negativer Artikel: … Mann, keine Frau, … Kind"
+    example:
+      de: Ich habe heute keine Zeit.
+      en: I have no time today.
+      fa: امروز وقت ندارم.
+    alsoAccepted: [keine]
+
   - word: dieser
+    class: article
+    level: A1
+    meaning:
+      en: this, these
+      fa: این (حرف تعریف اشاره)
+    definition: "zeigt auf eine bestimmte Sache oder Person hier: … Tisch, diese Lampe"
+    example:
+      de: Dieser Pullover ist sehr schön.
+      en: This jumper is very nice.
+      fa: این پلیور خیلی قشنگ است.
+    alsoAccepted: [diese, dieses]
+
   - word: jeder
+    class: pronoun
+    level: A1
+    meaning:
+      en: every, each
+      fa: هر
+    definition: alle, aber man denkt an eine Person oder Sache nach der anderen
+    example:
+      de: Ich gehe jeden Tag spazieren.
+      en: I go for a walk every day.
+      fa: هر روز پیاده‌روی می‌کنم.
+    alsoAccepted: [jede, jedes]
+
   - word: alle
+    class: pronoun
+    level: A1
+    meaning:
+      en: all, all of them
+      fa: همه
+    definition: jede Person oder jede Sache, keine fehlt
+    example:
+      de: Alle sind schon da.
+      en: Everyone is already here.
+      fa: همه آمده‌اند.
+    alsoAccepted: [sämtliche]
+
   - word: andere
+    class: pronoun
+    level: A1
+    meaning:
+      en: other, others
+      fa: دیگر، دیگران
+    definition: nicht diese Person oder Sache, sondern eine zweite
+    example:
+      de: Die anderen kommen später.
+      en: The others are coming later.
+      fa: بقیه بعداً می‌آیند.
+    alsoAccepted: [anderer, anderes]
+
   - word: beide
+    class: pronoun
+    level: A1
+    meaning:
+      en: both
+      fa: هر دو
+    definition: die zwei zusammen, nicht nur eine Person oder Sache
+    example:
+      de: Beide Kinder gehen schon zur Schule.
+      en: Both children already go to school.
+      fa: هر دو بچه به مدرسه می‌روند.
+
   - word: nichts
+    class: pronoun
+    level: A1
+    meaning:
+      en: nothing
+      fa: هیچ‌چیز
+    definition: keine Sache, null
+    example:
+      de: Ich habe heute noch nichts gegessen.
+      en: I haven't eaten anything yet today.
+      fa: امروز هنوز چیزی نخورده‌ام.
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 144, then 21 questions)
+  date: 2026-11-28
+  pool: ce366542b994882b
