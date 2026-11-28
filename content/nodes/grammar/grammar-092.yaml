@@ -4,10 +4,296 @@ kind: grammar
 level: A2
 chapter: a2-articles-pronouns
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-078]
 title:
   en: "*alle*, *jeder*"
   fa: "*alle* و *jeder*"
   de: "*alle*, *jeder*"
+
+explanations:
+  en:
+    rule: >
+      *Jeder* (every, each) goes with a singular noun and has the endings of
+      *dieser*: *jeder Tag*, *jede Woche*, *jedes Jahr*; in the *Akkusativ*
+      *jeden Tag*, in the *Dativ* *jedem*, *jeder*, *jedem*. *Alle* (all)
+      goes with a plural noun, and the verb is plural: *Alle Kursteilnehmer
+      machen mit.* In the *Dativ* it is *allen*, with *-n* on the noun:
+      *mit allen Kindern*. Both can stand alone for people: *Jeder kennt das.*
+      (everyone, singular verb) and *Alle sind da.* (everyone, plural verb).
+      Time phrases such as *jeden Tag* and *jede Woche* are in the
+      *Akkusativ* and need no preposition.
+  fa:
+    rule: >
+      *jeder* (هر) با اسم مفرد می‌آید و پایانه‌هایش همان پایانه‌های *dieser*
+      است: *jeder Tag*، *jede Woche*، *jedes Jahr*. در حالت *Akkusativ* (حالت
+      مفعولی) مذکر *jeden* می‌شود و در حالت *Dativ* (حالت مفعول باواسطه)
+      *jedem*، *jeder* و *jedem*. *alle* (همهٔ) با اسم جمع می‌آید و فعل نیز
+      جمع است: *Alle Kursteilnehmer machen mit.* در حالت *Dativ* می‌شود
+      *allen* و اسم نیز *-n* می‌گیرد: *mit allen Kindern*. هر دو بی‌اسم هم
+      برای آدم‌ها به کار می‌روند: *Jeder kennt das.* (همه این را می‌شناسند؛
+      فعل مفرد) و *Alle sind da.* (همه آمده‌اند؛ فعل جمع). در فارسی «هر» با
+      اسم مفرد می‌آید و «همهٔ» با اسم جمع؛ آلمانی هم همین‌طور است. قیدهای
+      زمانی مانند *jeden Tag* (هر روز) و *jede Woche* (هر هفته) در حالت
+      *Akkusativ* می‌آیند و حرف اضافه نمی‌خواهند.
+  de:
+    rule: >
+      *Jeder* steht bei einem Nomen im Singular und hat die Endungen von
+      *dieser*: *jeder Tag*, *jede Woche*, *jedes Jahr*. Im Akkusativ heißt
+      es *jeden Tag*, im Dativ *jedem*, *jeder*, *jedem*. *Alle* steht bei
+      einem Nomen im Plural, und das Verb steht im Plural: *Alle
+      Kursteilnehmer machen mit.* Im Dativ heißt es *allen*, und das Nomen
+      bekommt *-n*: *mit allen Kindern*. Beide stehen auch allein für
+      Personen: *Jeder kennt das.* (Verb im Singular), *Alle sind da.* (Verb
+      im Plural). *Jeden Tag* und *jede Woche* stehen im Akkusativ, ohne
+      Präposition.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *jeder* / *alle*", fa: "با *jeder* / *alle*", de: "Mit *jeder* / *alle*" }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Tag, jeder Tag, jeden Tag, jedem Tag, Ich lerne jeden Tag.]
+    - [die Woche, jede Woche, jede Woche, jeder Woche, Wir telefonieren jede Woche.]
+    - [das Kind, jedes Kind, jedes Kind, jedem Kind, Jedes Kind bekommt ein Eis.]
+    - [die Kinder (Plural), alle Kinder, alle Kinder, allen Kindern, Alle Kinder spielen draußen.]
+
+examples:
+  - de: Alle Kursteilnehmer machen mit.
+    en: All the course participants take part.
+    fa: همهٔ زبان‌آموزان کلاس شرکت می‌کنند.
+  - de: Ich gehe jeden Morgen joggen.
+    en: I go jogging every morning.
+    fa: هر روز صبح برای دویدن بیرون می‌روم.
+  - de: Jede Woche besuche ich meine Oma.
+    en: I visit my grandma every week.
+    fa: هر هفته به دیدن مادربزرگم می‌روم.
+  - de: Jedes Zimmer hat einen Balkon.
+    en: Every room has a balcony.
+    fa: هر اتاق یک بالکن دارد.
+  - de: Jeder weiß das.
+    en: Everyone knows that.
+    fa: همه این را می‌دانند.
+  - de: Sind alle da? Dann fangen wir an.
+    en: Is everyone here? Then let's start.
+    fa: همه آمده‌اند؟ پس شروع می‌کنیم.
+  - de: Der Lehrer spricht mit jedem Schüler.
+    en: The teacher talks to every pupil.
+    fa: معلم با تک‌تک دانش‌آموزان صحبت می‌کند.
+  - de: Ich habe allen Freunden eine Karte geschrieben.
+    en: I have written a card to all my friends.
+    fa: برای همهٔ دوستانم کارت پستال نوشته‌ام.
+  - de: Alle meine Freunde wohnen in Berlin.
+    en: All my friends live in Berlin.
+    fa: همهٔ دوستانم در برلین زندگی می‌کنند.
+  - de: Der Bus fährt jede Stunde.
+    en: The bus runs every hour.
+    fa: اتوبوس هر ساعت یک بار حرکت می‌کند.
+
+mistakes:
+  - wrong: Jeder Kinder bekommt ein Eis.
+    right: Jedes Kind bekommt ein Eis.
+    why:
+      en: "*Jeder* goes with a singular noun: *jedes Kind*. For the plural say *alle Kinder*."
+      fa: "*jeder* با اسم مفرد می‌آید: *jedes Kind*. برای جمع می‌گوییم *alle Kinder*."
+      de: "*Jeder* steht beim Singular: *jedes Kind*. Im Plural sagt man *alle Kinder*."
+  - wrong: Ich lerne jede Tag Deutsch.
+    right: Ich lerne jeden Tag Deutsch.
+    why:
+      en: "*Tag* is masculine, and a time phrase like this is in the *Akkusativ*: *jeden Tag*."
+      fa: "*Tag* اسم مذکر است و این قید زمان در حالت *Akkusativ* می‌آید: *jeden Tag*."
+      de: "*Tag* ist maskulin, und diese Zeitangabe steht im Akkusativ: *jeden Tag*."
+  - wrong: Jeder Schüler haben ein Buch.
+    right: Jeder Schüler hat ein Buch.
+    why:
+      en: "*Jeder Schüler* is singular, so the verb is singular too: *hat*."
+      fa: "*jeder Schüler* مفرد است، پس فعل هم مفرد می‌آید: *hat*."
+      de: "*Jeder Schüler* ist Singular. Darum steht das Verb im Singular: *hat*."
+  - wrong: Alle ist schon da.
+    right: Alle sind schon da.
+    why:
+      en: "*Alle* is plural, so the verb is plural: *sind*. In the singular you say *Jeder ist da*."
+      fa: "*alle* جمع است، پس فعل هم جمع می‌آید: *sind*. با فعل مفرد می‌گوییم *Jeder ist da*."
+      de: "*Alle* ist Plural. Darum *sind*. Im Singular sagt man *Jeder ist da*."
+  - wrong: Ich spreche mit allen Freunde.
+    right: Ich spreche mit allen Freunden.
+    why:
+      en: "In the *Dativ* plural the noun takes *-n* too: *allen Freunden*."
+      fa: "در حالت *Dativ* جمع، خود اسم نیز *-n* می‌گیرد: *allen Freunden*."
+      de: "Im Dativ Plural bekommt auch das Nomen *-n*: *allen Freunden*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ Kursteilnehmer machen mit.
+    options: [Alle, Jeder, Jede]
+    answer: Alle
+    explanation:
+      en: "*Machen* is plural, so the plural: *alle Kursteilnehmer*."
+      fa: "فعل *machen* جمع است، پس *alle* با اسم جمع می‌آید: *alle Kursteilnehmer*."
+      de: "*Machen* ist Plural. Darum *alle Kursteilnehmer*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich trinke ___ Morgen einen Kaffee.
+    options: [jeden, jeder, jedem]
+    answer: jeden
+    explanation:
+      en: "*Morgen* is masculine, and the time phrase is in the *Akkusativ*: *jeden Morgen*."
+      fa: "*Morgen* اسم مذکر است و این قید زمان در حالت *Akkusativ* می‌آید: *jeden Morgen*."
+      de: "*Morgen* ist maskulin, und die Zeitangabe steht im Akkusativ: *jeden Morgen*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ Wohnung hat eine Küche.
+    options: [Jede, Jeder, Alle]
+    answer: Jede
+    explanation:
+      en: "*Wohnung* is feminine and singular (*hat*): *jede Wohnung*."
+      fa: "*Wohnung* اسم مؤنث و مفرد است (*hat*): *jede Wohnung*."
+      de: "*Wohnung* ist feminin und Singular (*hat*): *jede Wohnung*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Der Arzt spricht mit ___ Patienten allein.
+    options: [jedem, jeden, jeder]
+    answer: jedem
+    explanation:
+      en: "*Mit* takes the *Dativ*; *Patient* is masculine: *mit jedem Patienten*."
+      fa: "*mit* با حالت *Dativ* می‌آید و *Patient* اسم مذکر است: *mit jedem Patienten*."
+      de: "Nach *mit* steht der Dativ. *Patient* ist maskulin: *mit jedem Patienten*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Sind ___ da? Dann fangen wir an.
+    options: [alle, jeder, jede]
+    answer: alle
+    explanation:
+      en: "*Sind* is plural, so *alle*. *Jeder* would need *ist*."
+      fa: "*sind* جمع است، پس *alle* می‌آید. با *jeder* فعل *ist* لازم است."
+      de: "*Sind* ist Plural. Darum *alle*. Bei *jeder* steht *ist*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Jeder weiß das., Jeder wissen das., Alle weiß das.]
+    answer: Jeder weiß das.
+    explanation:
+      en: "*Jeder* alone means everyone and takes a singular verb: *weiß*."
+      fa: "*jeder* به‌تنهایی یعنی «همه» و فعل مفرد می‌گیرد: *weiß*."
+      de: "*Jeder* allein heißt alle Personen. Das Verb steht im Singular: *weiß*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wir fahren ___ in die Berge.
+    options: [jedes Jahr, jeder Jahr, jedem Jahr]
+    answer: jedes Jahr
+    explanation:
+      en: "*Jahr* is neuter; the time phrase in the *Akkusativ* is *jedes Jahr*."
+      fa: "*Jahr* اسم خنثی است و این قید زمان در حالت *Akkusativ*: *jedes Jahr*."
+      de: "*Jahr* ist neutral. Die Zeitangabe im Akkusativ: *jedes Jahr*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Die Lehrerin gibt ___ ein Heft.
+    options: [allen Schülern, alle Schüler, allen Schüler]
+    answer: allen Schülern
+    explanation:
+      en: "The pupils receive something, so the *Dativ* plural: *allen Schülern*, with *-n* on the noun."
+      fa: "دانش‌آموزان چیزی دریافت می‌کنند، پس حالت *Dativ* جمع می‌آید: *allen Schülern*، با *-n* روی اسم."
+      de: "Die Schüler bekommen etwas. Darum Dativ Plural: *allen Schülern*, mit *-n*."
+  - id: true-1
+    type: true-false
+    prompt: Jeder Gast bekommt ein Glas Sekt.
+    answer: true
+    explanation:
+      en: "*Gast* is masculine and singular: *jeder Gast bekommt*. The sentence is correct."
+      fa: "*Gast* اسم مذکر و مفرد است: *jeder Gast bekommt*. جمله درست است."
+      de: "*Gast* ist maskulin und Singular: *jeder Gast bekommt*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Alle Schüler hat Ferien.
+    answer: false
+    explanation:
+      en: "*Alle Schüler* is plural, so the verb is plural: *Alle Schüler haben Ferien.*"
+      fa: "*alle Schüler* جمع است، پس فعل هم جمع می‌آید: *Alle Schüler haben Ferien.*"
+      de: "*Alle Schüler* ist Plural. Darum: *Alle Schüler haben Ferien.*"
+  - id: true-3
+    type: true-false
+    prompt: Wir telefonieren jede Woche.
+    answer: true
+    explanation:
+      en: "*Woche* is feminine: *jede Woche*, in the *Akkusativ* too. The sentence is correct."
+      fa: "*Woche* اسم مؤنث است: *jede Woche*، در حالت *Akkusativ* هم. جمله درست است."
+      de: "*Woche* ist feminin: *jede Woche*, auch im Akkusativ. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich gehe ___ (jeder) Tag zu Fuß zur Arbeit.
+    answers: [jeden]
+    explanation:
+      en: "*Tag* is masculine; the time phrase is in the *Akkusativ*: *jeden Tag*."
+      fa: "*Tag* اسم مذکر است و این قید زمان در حالت *Akkusativ* می‌آید: *jeden Tag*."
+      de: "*Tag* ist maskulin. Die Zeitangabe steht im Akkusativ: *jeden Tag*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (jeder) Zimmer hat einen Balkon.
+    answers: [Jedes]
+    explanation:
+      en: "*Zimmer* is neuter and the subject: *jedes Zimmer*."
+      fa: "*Zimmer* اسم خنثی و فاعل جمله است: *jedes Zimmer*."
+      de: "*Zimmer* ist neutral und das Subjekt: *jedes Zimmer*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich habe mit ___ (alle) Kollegen gesprochen.
+    answers: [allen]
+    explanation:
+      en: "*Mit* takes the *Dativ*; in the plural: *allen Kollegen*."
+      fa: "*mit* با حالت *Dativ* می‌آید و در جمع: *allen Kollegen*."
+      de: "Nach *mit* steht der Dativ. Im Plural: *allen Kollegen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Der Bus fährt ___ (jeder) Stunde.
+    answers: [jede]
+    explanation:
+      en: "*Stunde* is feminine: *jede Stunde*."
+      fa: "*Stunde* اسم مؤنث است: *jede Stunde*."
+      de: "*Stunde* ist feminin: *jede Stunde*."
+  - id: error-1
+    type: find-error
+    prompt: Alle Kinder bekommt ein Geschenk.
+    answer: bekommt
+    explanation:
+      en: "*Alle Kinder* is plural, so the verb is plural: *Alle Kinder bekommen ein Geschenk.*"
+      fa: "*alle Kinder* جمع است، پس فعل هم جمع می‌آید: *Alle Kinder bekommen ein Geschenk.*"
+      de: "*Alle Kinder* ist Plural. Darum steht das Verb im Plural: *Alle Kinder bekommen ein Geschenk.*"
+  - id: error-2
+    type: find-error
+    prompt: Am Wochenende helfe ich allen Nachbarn und jeden Freund.
+    answer: jeden
+    explanation:
+      en: "*Helfen* takes the *Dativ*; *Freund* is masculine: *jedem Freund*."
+      fa: "فعل *helfen* با حالت *Dativ* می‌آید و *Freund* اسم مذکر است: *jedem Freund*."
+      de: "*Helfen* hat den Dativ. *Freund* ist maskulin: *jedem Freund*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wir, telefonieren, jede Woche]
+      - [jede Woche, telefonieren, wir]
+    explanation:
+      en: "The verb comes second. *Jede Woche* can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. *jede Woche* می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. *Jede Woche* kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [___ Tag, jeden]
+      - [___ Woche, jede]
+      - [___ Jahr, jedes]
+    explanation:
+      en: "Time phrases in the *Akkusativ*: masculine *jeden*, feminine *jede*, neuter *jedes*."
+      fa: "قیدهای زمان در حالت *Akkusativ*: مذکر *jeden*، مؤنث *jede* و خنثی *jedes*."
+      de: "Zeitangaben im Akkusativ: maskulin *jeden*, feminin *jede*, neutral *jedes*."
+
+review:
+  reviewer: two independent AI agents (fresh Claude Opus 5.5 subagents, blind
+    passes on the review sheet only; the second on the rewritten error-1; not
+    people)
+  date: 2026-11-28
+  pool: 477387ee0019c764

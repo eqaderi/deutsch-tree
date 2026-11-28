@@ -1,13 +1,350 @@
-# Grammar list row 97.
+# Grammar list row 97. Taught right after grammar-204, as the list asks.
 id: grammar-097
 kind: grammar
 level: A2
 chapter: a2-reflexive-prepositional
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-086, grammar-204]
 title:
   en: "*da(r)-* and *wo(r)-* adverbs"
   fa: "قیدهای *da(r)-* و *wo(r)-*"
   de: "Adverbien mit *da(r)-* und *wo(r)-*"
+
+explanations:
+  en:
+    rule: >
+      When the object of a preposition is a thing or an idea, the preposition
+      and a pronoun for it become one word with *da-*: not *auf es* but
+      *darauf*. *Wartest du auf den Bus? – Ja, ich warte darauf.* You ask
+      about the thing with *wo-*: *Worauf wartest du?* When the preposition
+      begins with a vowel, an *-r-* comes between: *darauf*, *worüber*,
+      *daran*, *worum*. Otherwise there is none: *dafür*, *wovon*, *damit*.
+      This is only for things. For a person you keep the preposition with a
+      personal pronoun, and you ask with the preposition and *wen* or *wem*:
+      *Wartest du auf Anna? – Ja, ich warte auf sie. Auf wen wartest du?* (In
+      speech you also hear *Auf was wartest du?*) Some *da-* words also say
+      where or when: *Links ist die Bank, daneben die Apotheke.* *Zuerst
+      essen wir, danach gehen wir spazieren.*
+  fa:
+    rule: >
+      وقتی مفعول حرف اضافه چیز یا مفهومی است، حرف اضافه و ضمیر آن با *da-*
+      یک واژه می‌شوند: به‌جای *auf es* می‌گوییم *darauf*. *Wartest du auf den
+      Bus? – Ja, ich warte darauf.* برای پرسیدن دربارهٔ آن چیز *wo-* به کار
+      می‌رود: *Worauf wartest du?* اگر حرف اضافه با واکه (*a*، *e*، *i*، *o*،
+      *u*) شروع شود، یک *-r-* میان آن‌ها می‌آید: *darauf*، *worüber*،
+      *daran*، *worum*. در غیر این صورت *-r-* نمی‌آید: *dafür*، *wovon*،
+      *damit*. این قاعده فقط برای چیزهاست. برای شخص، حرف اضافه با ضمیر شخصی
+      می‌ماند و پرسش با حرف اضافه و *wen* یا *wem* ساخته می‌شود: *Wartest du
+      auf Anna? – Ja, ich warte auf sie. Auf wen wartest du?* (در گفتار
+      *Auf was wartest du?* هم شنیده می‌شود.) برخی از واژه‌های *da-* جا یا
+      زمان را هم نشان می‌دهند: *Links ist die Bank, daneben die Apotheke.*
+      *Zuerst essen wir, danach gehen wir spazieren.*
+  de:
+    rule: >
+      Steht nach einer Präposition eine Sache, sagt man für *Präposition +
+      es* ein Wort mit *da-*: nicht *auf es*, sondern *darauf*. *Wartest du
+      auf den Bus? – Ja, ich warte darauf.* Die Frage nach der Sache macht
+      man mit *wo-*: *Worauf wartest du?* Beginnt die Präposition mit einem
+      Vokal, kommt ein *-r-* dazwischen: *darauf*, *worüber*, *daran*,
+      *worum*. Sonst nicht: *dafür*, *wovon*, *damit*. Das gilt nur für
+      Sachen. Bei Personen bleibt die Präposition mit dem Pronomen, und man
+      fragt mit Präposition + *wen* oder *wem*: *Wartest du auf Anna? – Ja,
+      ich warte auf sie. Auf wen wartest du?* (Gesprochen hört man auch *Auf
+      was wartest du?*) Manche Wörter mit *da-* sagen auch, wo oder wann:
+      *Links ist die Bank, daneben die Apotheke.* *Zuerst essen wir, danach
+      gehen wir spazieren.*
+
+table:
+  columns:
+    - { en: Preposition, fa: حرف اضافه, de: Präposition }
+    - { en: "*da(r)-*: the answer", fa: "*da(r)-*: در پاسخ", de: "*da(r)-*: die Antwort" }
+    - { en: "*wo(r)-*: the question", fa: "*wo(r)-*: در پرسش", de: "*wo(r)-*: die Frage" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [auf, darauf, worauf, Worauf wartest du?]
+    - [über, darüber, worüber, Wir haben darüber gesprochen.]
+    - [an, daran, woran, Ich denke oft daran.]
+    - [um, darum, worum, Worum geht es?]
+    - [für, dafür, wofür, Ich interessiere mich nicht dafür.]
+    - [von, davon, wovon, Wovon träumst du?]
+    - [mit, damit, womit, Was machst du damit?]
+    - [vor, davor, wovor, Wovor hast du Angst?]
+    - [nach, danach, wonach, Wonach hat er gefragt?]
+    - [zu, dazu, wozu, Ich habe keine Zeit dazu.]
+
+examples:
+  - de: Worüber habt ihr gesprochen? – Über den Urlaub.
+    en: What did you talk about? – About the holiday.
+    fa: دربارهٔ چه حرف زدید؟ – دربارهٔ تعطیلات.
+  - de: Ich habe mich darüber gefreut.
+    en: I was pleased about it.
+    fa: از این موضوع خوشحال شدم.
+  - de: Wartest du auf den Bus? – Ja, ich warte schon lange darauf.
+    en: Are you waiting for the bus? – Yes, I've been waiting for it for a long time.
+    fa: منتظر اتوبوسی؟ – بله، خیلی وقت است منتظرش هستم.
+  - de: Wofür interessierst du dich? – Für Musik.
+    en: What are you interested in? – In music.
+    fa: به چه چیزی علاقه داری؟ – به موسیقی.
+  - de: Denkst du an den Termin? – Ja, ich denke daran.
+    en: Will you remember the appointment? – Yes, I'll remember it.
+    fa: قرار را یادت هست؟ – بله، یادم هست.
+  - de: Auf wen wartest du? – Auf meine Freundin.
+    en: Who are you waiting for? – For my girlfriend.
+    fa: منتظر چه کسی هستی؟ – منتظر دوست‌دخترم.
+  - de: Hast du mit Herrn Weber gesprochen? – Ja, ich habe mit ihm gesprochen.
+    en: Did you speak to Mr Weber? – Yes, I spoke to him.
+    fa: با آقای وبر حرف زدی؟ – بله، با او حرف زدم.
+  - de: Wovor hast du Angst? – Vor der Prüfung.
+    en: What are you afraid of? – Of the exam.
+    fa: از چه می‌ترسی؟ – از امتحان.
+  - de: Worum geht es in dem Film? – Um eine Familie in Berlin.
+    en: What is the film about? – About a family in Berlin.
+    fa: موضوع فیلم چیست؟ – دربارهٔ خانواده‌ای در برلین است.
+  - de: Links ist die Bank, daneben die Apotheke.
+    en: On the left is the bank, and next to it the chemist's.
+    fa: سمت چپ بانک است و کنارش داروخانه.
+  - de: Zuerst kaufen wir ein, danach kochen wir.
+    en: First we do the shopping, then we cook.
+    fa: اول خرید می‌کنیم، بعد آشپزی می‌کنیم.
+
+mistakes:
+  - wrong: Ich warte auf es.
+    right: Ich warte darauf.
+    why:
+      en: "For a thing, the preposition and *es* become one word: *darauf*."
+      fa: "برای چیزها، حرف اضافه و *es* یک واژه می‌شوند: *darauf*."
+      de: "Bei Sachen wird aus Präposition und *es* ein Wort: *darauf*."
+  - wrong: Wofür wartest du?
+    right: Worauf wartest du?
+    why:
+      en: "The verb is *warten auf*, so the question word is built from *auf*: *worauf*."
+      fa: "فعل *warten auf* است، پس واژهٔ پرسشی از *auf* ساخته می‌شود: *worauf*."
+      de: "Das Verb heißt *warten auf*. Darum fragt man mit *worauf*."
+  - wrong: Woüber habt ihr gesprochen?
+    right: Worüber habt ihr gesprochen?
+    why:
+      en: "*Über* begins with a vowel, so an *-r-* comes between: *worüber*."
+      fa: "*über* با واکه شروع می‌شود، پس یک *-r-* میان آن‌ها می‌آید: *worüber*."
+      de: "*Über* beginnt mit einem Vokal. Darum kommt ein *-r-* dazwischen: *worüber*."
+  - wrong: Wartest du auf Anna? – Ja, ich warte darauf.
+    right: Wartest du auf Anna? – Ja, ich warte auf sie.
+    why:
+      en: "*Darauf* is only for things. For a person: the preposition and a personal pronoun, *auf sie*."
+      fa: "*darauf* فقط برای چیزهاست. برای شخص، حرف اضافه با ضمیر شخصی می‌آید: *auf sie*."
+      de: "*Darauf* sagt man nur für Sachen. Bei Personen: Präposition + Pronomen, *auf sie*."
+  - wrong: Wovon hast du Angst?
+    right: Wovor hast du Angst?
+    why:
+      en: "The phrase is *Angst haben vor*, so the question word is *wovor*."
+      fa: "عبارت *Angst haben vor* است، پس واژهٔ پرسشی *wovor* است."
+      de: "Es heißt *Angst haben vor*. Darum fragt man mit *wovor*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wartest du auf den Bus? – Ja, ich warte schon lange ___.
+    options: [darauf, dafür, worauf]
+    answer: darauf
+    explanation:
+      en: "*Warten auf* and a thing (*den Bus*): *darauf*."
+      fa: "*warten auf* و یک چیز (*den Bus*): *darauf*."
+      de: "*Warten auf* und eine Sache (*den Bus*): *darauf*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ hast du Angst? – Vor dem Hund.
+    options: [Wovor, Wofür, Wovon]
+    answer: Wovor
+    explanation:
+      en: "The phrase is *Angst haben vor*, so the question word is *wovor*."
+      fa: "عبارت *Angst haben vor* است، پس واژهٔ پرسشی *wovor* است."
+      de: "Es heißt *Angst haben vor*. Darum: *Wovor?*"
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ habt ihr gesprochen? – Über den Film.
+    options: [Worüber, Woüber, Wofür]
+    answer: Worüber
+    explanation:
+      en: "*Über* begins with a vowel, so *wo-* takes an *-r-*: *worüber*."
+      fa: "*über* با واکه شروع می‌شود، پس *wo-* یک *-r-* می‌گیرد: *worüber*."
+      de: "*Über* beginnt mit einem Vokal. Darum: *worüber*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wartest du auf Lisa? – Ja, ich warte ___.
+    options: [auf sie, darauf, worauf]
+    answer: auf sie
+    explanation:
+      en: "Lisa is a person, so the preposition stays with a pronoun: *auf sie*."
+      fa: "لیزا شخص است، پس حرف اضافه با ضمیر می‌ماند: *auf sie*."
+      de: "Lisa ist eine Person. Darum: Präposition + Pronomen, *auf sie*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Interessierst du dich für Fußball? – Nein, ___ interessiere ich mich nicht.
+    options: [dafür, darauf, davon]
+    answer: dafür
+    explanation:
+      en: "The verb is *sich interessieren für*, so the *da-* word is *dafür*."
+      fa: "فعل *sich interessieren für* است، پس واژهٔ *da-* آن *dafür* است."
+      de: "Das Verb heißt *sich interessieren für*. Darum: *dafür*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Links ist die Post, ___ ist ein Café.
+    options: [daneben, danach, dafür]
+    answer: daneben
+    explanation:
+      en: "*Daneben* says where: next to it, next to the post office."
+      fa: "*daneben* جا را نشان می‌دهد: کنار آن، یعنی کنار ادارهٔ پست."
+      de: "*Daneben* sagt, wo: neben der Post."
+  - id: choice-1
+    type: multiple-choice
+    prompt: ___ denkst du? – An meine Prüfung.
+    options: [Woran, Worauf, An wen]
+    answer: Woran
+    explanation:
+      en: "*Denken an* and a thing (*die Prüfung*): *woran*. *An wen* is for a person."
+      fa: "*denken an* و یک چیز (*die Prüfung*): *woran*. *an wen* برای شخص است."
+      de: "*Denken an* und eine Sache (*die Prüfung*): *woran*. *An wen* fragt nach einer Person."
+  - id: choice-2
+    type: multiple-choice
+    prompt: ___ wartest du? – Auf meinen Bruder.
+    options: [Auf wen, Worauf, Wofür]
+    answer: Auf wen
+    explanation:
+      en: "The answer is a person, so you ask with the preposition and *wen*: *Auf wen?*"
+      fa: "پاسخ یک شخص است، پس با حرف اضافه و *wen* می‌پرسیم: *Auf wen?*"
+      de: "Die Antwort ist eine Person. Darum: Präposition + *wen*, *Auf wen?*"
+  - id: choice-3
+    type: multiple-choice
+    prompt: Zuerst machen wir die Hausaufgaben, ___ spielen wir Fußball.
+    options: [danach, davor, damit]
+    answer: danach
+    explanation:
+      en: "*Danach* says when: after that, after the homework."
+      fa: "*danach* زمان را نشان می‌دهد: پس از آن، یعنی پس از تکلیف‌های مدرسه."
+      de: "*Danach* sagt, wann: nach den Hausaufgaben."
+  - id: true-1
+    type: true-false
+    prompt: Ich habe mich sehr darüber gefreut.
+    answer: true
+    explanation:
+      en: "*Sich freuen über* and a thing: *darüber*. The sentence is correct."
+      fa: "*sich freuen über* و یک چیز: *darüber*. جمله درست است."
+      de: "*Sich freuen über* und eine Sache: *darüber*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Woüber sprecht ihr?
+    answer: false
+    explanation:
+      en: "*Über* begins with a vowel, so it is *worüber*: *Worüber sprecht ihr?*"
+      fa: "*über* با واکه شروع می‌شود، پس *worüber* درست است: *Worüber sprecht ihr?*"
+      de: "*Über* beginnt mit einem Vokal. Richtig ist: *Worüber sprecht ihr?*"
+  - id: true-3
+    type: true-false
+    prompt: Hast du mit Frau Kaya gesprochen? – Ja, ich habe damit gesprochen.
+    answer: false
+    explanation:
+      en: "Frau Kaya is a person: *mit ihr*, not *damit*."
+      fa: "خانم کایا شخص است: *mit ihr*، نه *damit*."
+      de: "Frau Kaya ist eine Person: *mit ihr*, nicht *damit*."
+  - id: true-4
+    type: true-false
+    prompt: Wofür interessierst du dich?
+    answer: true
+    explanation:
+      en: "*Sich interessieren für*, a question about a thing: *wofür*. The sentence is correct."
+      fa: "*sich interessieren für* و پرسش دربارهٔ یک چیز: *wofür*. جمله درست است."
+      de: "*Sich interessieren für*, Frage nach einer Sache: *wofür*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wovon träumst du? – Von einem Haus am Meer. Ich träume schon lange ___.
+    answers: [davon]
+    explanation:
+      en: "*Träumen von* and a thing: *davon*. *Von* begins with a consonant, so no *-r-*."
+      fa: "*träumen von* و یک چیز: *davon*. *von* با واکه شروع نمی‌شود، پس *-r-* نمی‌آید."
+      de: "*Träumen von* und eine Sache: *davon*. *Von* beginnt nicht mit einem Vokal, also kein *-r-*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ denkst du gerade? – An das Wochenende.
+    answers: [Woran, An was]
+    explanation:
+      en: "*Denken an* and a thing: *woran*. *An* begins with a vowel, so *wo-* takes an *-r-*."
+      fa: "*denken an* و یک چیز: *woran*. *an* با واکه شروع می‌شود، پس *wo-* یک *-r-* می‌گیرد."
+      de: "*Denken an* und eine Sache: *woran*. *An* beginnt mit einem Vokal, darum *-r-*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Morgen beginnt der Urlaub. Ich freue mich schon ___ (da- / auf).
+    answers: [darauf, drauf]
+    explanation:
+      en: "The holiday is still to come: *sich freuen auf*, and for a thing *darauf*."
+      fa: "تعطیلات هنوز در پیش است: *sich freuen auf* و برای یک چیز *darauf*."
+      de: "Der Urlaub kommt noch: *sich freuen auf*, für eine Sache *darauf*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Hast du mit deinem Chef gesprochen? – Ja, ich habe gestern mit ___ gesprochen.
+    answers: [ihm]
+    explanation:
+      en: "The boss is a person, so *mit* stays with a pronoun in the *Dativ*: *mit ihm*."
+      fa: "رئیس شخص است، پس *mit* با ضمیر حالت *Dativ* می‌ماند: *mit ihm*."
+      de: "Der Chef ist eine Person. Darum *mit* + Pronomen im Dativ: *mit ihm*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: ___ geht es in dem Buch? – Um eine Reise.
+    answers: [Worum, Um was]
+    explanation:
+      en: "*Es geht um* and a thing: *worum*."
+      fa: "*es geht um* و یک چیز: *worum*."
+      de: "*Es geht um* und eine Sache: *worum*."
+  - id: error-1
+    type: find-error
+    prompt: Wofür wartest du?
+    answer: Wofür
+    explanation:
+      en: "The verb is *warten auf*: *Worauf wartest du?*"
+      fa: "فعل *warten auf* است: *Worauf wartest du?*"
+      de: "Das Verb heißt *warten auf*: *Worauf wartest du?*"
+  - id: error-2
+    type: find-error
+    prompt: Ich interessiere mich nicht davon.
+    answer: davon
+    explanation:
+      en: "The verb is *sich interessieren für*: *dafür*."
+      fa: "فعل *sich interessieren für* است: *dafür*."
+      de: "Das Verb heißt *sich interessieren für*: *dafür*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [worüber, habt, ihr, gesprochen]
+    end: "?"
+    explanation:
+      en: "The question word comes first, the verb second, the participle last."
+      fa: "واژهٔ پرسشی اول می‌آید، فعل در جایگاه دوم و صفت مفعولی در پایان."
+      de: "Das Fragewort steht vorne, das Verb an Position 2, das Partizip am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wofür, interessierst, du, dich]
+    end: "?"
+    explanation:
+      en: "The question word comes first, then the verb, the subject and *dich*."
+      fa: "واژهٔ پرسشی اول می‌آید، سپس فعل، فاعل و *dich*."
+      de: "Zuerst das Fragewort, dann Verb, Subjekt und *dich*."
+  - id: match-1
+    type: matching
+    answer:
+      - [warten auf, worauf]
+      - [träumen von, wovon]
+      - [denken an, woran]
+      - [sich interessieren für, wofür]
+      - [Angst haben vor, wovor]
+    explanation:
+      en: "The question word is built from the verb's preposition: *auf* – *worauf*, *von* – *wovon*, *an* – *woran*, *für* – *wofür*, *vor* – *wovor*."
+      fa: "واژهٔ پرسشی از حرف اضافهٔ فعل ساخته می‌شود: *auf* – *worauf*، *von* – *wovon*، *an* – *woran*، *für* – *wofür*، *vor* – *wovor*."
+      de: "Das Fragewort kommt von der Präposition des Verbs: *auf* – *worauf*, *von* – *wovon*, *an* – *woran*, *für* – *wofür*, *vor* – *wovor*."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question, then typed-gap-3 again after its hint was added;
+    not people)"
+  date: 2026-11-28
+  pool: fd57ca1cb94416e0

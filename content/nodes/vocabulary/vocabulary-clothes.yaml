@@ -1,39 +1,384 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-clothes
 kind: vocabulary
 level: A2
 chapter: a2-words-home-food
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Clothes and fashion"
   fa: "لباس و مد"
   de: "Kleidung und Mode"
+attemptSize: 15
 words:
+  # Jeans are one kind of trousers; neither meaning is offered as a wrong one for the other.
   - word: Hose
+    class: noun
+    article: die
+    plural: Hosen
+    level: A2
+    meaning:
+      en: trousers, pants
+      fa: شلوار
+    definition: Kleidung von der Mitte des Körpers nach unten, mit einem Teil für jedes Bein
+    example:
+      de: Die Hose ist zu lang, ich muss sie kürzen.
+      en: The trousers are too long; I need to shorten them.
+      fa: شلوار زیادی بلند است، باید کوتاهش کنم.
+    tooCloseTo: [Jeans]
+
   - word: Hemd
+    class: noun
+    article: das
+    plural: Hemden
+    level: A2
+    meaning:
+      en: shirt
+      fa: پیراهن (مردانه)
+    definition: ein Oberteil mit Knöpfen und Kragen, oft für Männer
+    example:
+      de: Zur Arbeit trägt er immer ein weißes Hemd.
+      en: He always wears a white shirt to work.
+      fa: او همیشه سر کار پیراهن سفید می‌پوشد.
+
   - word: Bluse
+    class: noun
+    article: die
+    plural: Blusen
+    level: A2
+    meaning:
+      en: blouse
+      fa: بلوز (زنانه)
+    definition: ein leichtes Oberteil für Frauen, oft mit Knöpfen
+    example:
+      de: Die blaue Bluse passt gut zu dem Rock.
+      en: The blue blouse goes well with the skirt.
+      fa: این بلوز آبی به آن دامن خیلی می‌آید.
+
   - word: Kleid
+    class: noun
+    article: das
+    plural: Kleider
+    level: A2
+    meaning:
+      en: dress
+      fa: پیراهن زنانه (یک‌تکه)
+    definition: Kleidung für Frauen aus einem Stück, oben und unten zusammen
+    example:
+      de: Zur Hochzeit trägt sie ein langes rotes Kleid.
+      en: She's wearing a long red dress to the wedding.
+      fa: او برای عروسی یک پیراهن بلند قرمز می‌پوشد.
+
   - word: Rock
+    class: noun
+    article: der
+    plural: Röcke
+    level: A2
+    meaning:
+      en: skirt
+      fa: دامن
+    definition: Kleidung für Frauen, die von der Mitte des Körpers nach unten geht, ohne ein Teil für jedes Bein
+    example:
+      de: Im Sommer trage ich gern einen kurzen Rock.
+      en: In summer I like wearing a short skirt.
+      fa: تابستان‌ها دوست دارم دامن کوتاه بپوشم.
+
   - word: Pullover
+    class: noun
+    article: der
+    plural: Pullover
+    level: A2
+    meaning:
+      en: jumper, sweater
+      fa: پلیور، بافتنی
+    definition: ein warmes Oberteil mit langen Ärmeln, oft aus Wolle
+    example:
+      de: Nimm einen Pullover mit, am Abend wird es kalt.
+      en: Take a jumper; it gets cold in the evening.
+      fa: یک پلیور با خودت ببر، شب هوا سرد می‌شود.
+    alsoAccepted: [der Pulli, der Sweater]
+
   - word: T-Shirt
+    class: noun
+    article: das
+    plural: T-Shirts
+    level: A2
+    meaning:
+      en: T-shirt
+      fa: تی‌شرت
+    definition: ein leichtes Oberteil aus Baumwolle mit kurzen Ärmeln und ohne Knöpfe
+    example:
+      de: Es ist heiß, ich ziehe nur ein T-Shirt an.
+      en: It's hot; I'm just putting on a T-shirt.
+      fa: هوا گرم است و فقط یک تی‌شرت می‌پوشم.
+    alsoAccepted: [das Shirt]
+
   - word: Jeans
+    class: noun
+    article: die
+    number: plural-only
+    level: A2
+    meaning:
+      en: jeans
+      fa: شلوار جین
+    definition: eine Hose aus festem Baumwollstoff, oft blau
+    example:
+      de: Am Wochenende trage ich am liebsten Jeans.
+      en: At the weekend I like wearing jeans best.
+      fa: آخر هفته‌ها از همه بیشتر شلوار جین می‌پوشم.
+    alsoAccepted: [die Jeanshose]
+
   - word: Mantel
+    class: noun
+    article: der
+    plural: Mäntel
+    level: A2
+    meaning:
+      en: coat
+      fa: پالتو
+    definition: lange, warme Kleidung, die man im Winter über der anderen Kleidung trägt
+    example:
+      de: Es ist kalt, zieh deinen Mantel an!
+      en: It's cold; put your coat on!
+      fa: هوا سرد است، پالتویت را بپوش!
+    alsoAccepted: [der Wintermantel]
+
   - word: Anzug
+    class: noun
+    article: der
+    plural: Anzüge
+    level: A2
+    meaning:
+      en: suit
+      fa: کت‌وشلوار
+    definition: eine Jacke und eine Hose aus demselben Stoff, die zusammen getragen werden, oft von Männern
+    example:
+      de: Zum Vorstellungsgespräch trägt er einen dunklen Anzug.
+      en: He's wearing a dark suit to the job interview.
+      fa: او برای مصاحبهٔ کاری کت‌وشلوار تیره می‌پوشد.
+
   - word: Mütze
+    class: noun
+    article: die
+    plural: Mützen
+    level: A2
+    meaning:
+      en: cap, woolly hat
+      fa: کلاه (بافتنی یا نقاب‌دار)
+    definition: etwas Weiches und Warmes für den Kopf, oft aus Wolle
+    example:
+      de: Im Winter trägt mein Sohn eine Mütze.
+      en: In winter my son wears a woolly hat.
+      fa: پسرم زمستان‌ها کلاه بافتنی سر می‌گذارد.
+    alsoAccepted: [die Kappe, die Wollmütze, die Haube]
+
   - word: Stiefel
+    class: noun
+    article: der
+    plural: Stiefel
+    level: A2
+    meaning:
+      en: boot
+      fa: چکمه، پوتین
+    definition: ein hoher Schuh, der über den Knöchel oder bis zum Knie geht
+    example:
+      de: Bei Schnee ziehe ich meine warmen Stiefel an.
+      en: When it snows I put on my warm boots.
+      fa: وقتی برف می‌آید، چکمه‌های گرمم را می‌پوشم.
+    alsoAccepted: [der Winterstiefel, der Gummistiefel]
+
   - word: Brille
+    class: noun
+    article: die
+    plural: Brillen
+    level: A2
+    meaning:
+      en: glasses, spectacles
+      fa: عینک
+    definition: zwei Gläser in einem Rahmen vor den Augen; damit sieht man besser
+    example:
+      de: Ohne Brille kann ich nicht lesen.
+      en: I can't read without my glasses.
+      fa: بدون عینک نمی‌توانم بخوانم.
+    alsoAccepted: [die Lesebrille]
+
   - word: Ring
+    class: noun
+    article: der
+    plural: Ringe
+    level: A2
+    meaning:
+      en: ring
+      fa: انگشتر، حلقه
+    definition: ein kleiner, runder Schmuck für den Finger, oft aus Gold oder Silber
+    example:
+      de: Sie trägt einen Ring aus Gold.
+      en: She wears a gold ring.
+      fa: او انگشتر طلا به دست دارد.
+    alsoAccepted: [der Ehering, der Fingerring]
+
   - word: Kette
+    class: noun
+    article: die
+    plural: Ketten
+    level: A2
+    meaning:
+      en: necklace; chain
+      fa: گردنبند؛ زنجیر
+    definition: Schmuck, den man um den Hals trägt; auch viele kleine Ringe aus Metall hintereinander
+    example:
+      de: Die Kette hat sie von ihrer Mutter.
+      en: She got the necklace from her mother.
+      fa: این گردنبند را از مادرش گرفته است.
+    alsoAccepted: [die Halskette]
+
   - word: Rucksack
+    class: noun
+    article: der
+    plural: Rucksäcke
+    level: A2
+    meaning:
+      en: rucksack, backpack
+      fa: کوله‌پشتی
+    definition: eine Tasche, die man auf dem Rücken trägt
+    example:
+      de: Für die Wanderung packe ich Wasser und Brot in den Rucksack.
+      en: For the hike I pack water and bread in my backpack.
+      fa: برای کوه‌پیمایی آب و نان در کوله‌پشتی می‌گذارم.
+
   - word: Mode
+    class: noun
+    article: die
+    plural: Moden
+    level: A2
+    meaning:
+      en: fashion
+      fa: مد
+    definition: die Kleidung, die viele Leute zu einer Zeit gern tragen, weil sie modern ist
+    example:
+      de: Sie interessiert sich sehr für Mode.
+      en: She's very interested in fashion.
+      fa: او به مد خیلی علاقه دارد.
+
   - word: Model
+    class: noun
+    article: das
+    plural: Models
+    level: A2
+    meaning:
+      en: (fashion) model
+      fa: مدل (مانکن)
+    definition: eine Person, die beruflich für Fotos und Modenschauen neue Kleidung trägt
+    example:
+      de: Meine Cousine arbeitet als Model in Mailand.
+      en: My cousin works as a model in Milan.
+      fa: دخترخاله‌ام در میلان مدل است.
+    alsoAccepted: [das Fotomodell, das Mannequin]
+
+  # The node's only verbs; each is also offered meanings of other words as wrong options.
   - word: tragen
+    class: verb
+    level: A2
+    meaning:
+      en: to wear; to carry
+      fa: به تن داشتن، پوشیدن؛ حمل کردن
+    definition: Kleidung am Körper haben; auch etwas Schweres in der Hand oder auf dem Rücken haben
+    example:
+      de: Kannst du mir helfen, den Koffer zu tragen?
+      en: Can you help me carry the suitcase?
+      fa: می‌توانی کمکم کنی چمدان را ببرم؟
+    alsoAccepted: [anhaben]
+
   - word: passen
+    class: verb
+    level: A2
+    meaning:
+      en: to fit; to suit
+      fa: اندازه بودن؛ جور بودن، مناسب بودن
+    definition: die richtige Größe haben; auch zusammen gut aussehen, oder zeitlich günstig sein, zum Beispiel ein Termin
+    example:
+      de: Die Schuhe passen mir nicht, sie sind zu klein.
+      en: The shoes don't fit me; they're too small.
+      fa: این کفش‌ها اندازه‌ام نیست، کوچک‌اند.
+
   - word: eng
+    class: adjective
+    level: A2
+    meaning:
+      en: tight; narrow
+      fa: تنگ؛ باریک
+    definition: so klein, dass kaum Platz ist, zum Beispiel eine Hose oder eine Straße
+    example:
+      de: Der Rock ist mir zu eng.
+      en: The skirt is too tight for me.
+      fa: این دامن برایم تنگ است.
+
   - word: bunt
+    class: adjective
+    level: A2
+    meaning:
+      en: colourful
+      fa: رنگارنگ
+    definition: mit vielen Farben, nicht nur schwarz oder weiß
+    example:
+      de: Im Sommer trage ich gern bunte Kleider.
+      en: In summer I like wearing colourful dresses.
+      fa: تابستان‌ها دوست دارم لباس‌های رنگارنگ بپوشم.
+
   - word: lila
+    class: adjective
+    level: A2
+    meaning:
+      en: purple, lilac
+      fa: بنفش
+    definition: eine Farbe aus Rot und Blau zusammen
+    example:
+      de: Meine Tochter möchte ein lila Fahrrad.
+      en: My daughter wants a purple bike.
+      fa: دخترم دوچرخهٔ بنفش می‌خواهد.
+    alsoAccepted: [violett]
+
   - word: rosa
+    class: adjective
+    level: A2
+    meaning:
+      en: pink
+      fa: صورتی
+    definition: eine helle Farbe aus Rot und Weiß zusammen
+    example:
+      de: Das Baby trägt eine rosa Mütze.
+      en: The baby is wearing a pink hat.
+      fa: نوزاد کلاه صورتی سرش است.
+    alsoAccepted: [pink]
+
   - word: orange
+    class: adjective
+    level: A2
+    meaning:
+      en: orange (the colour)
+      fa: نارنجی
+    definition: eine Farbe zwischen Rot und Gelb, wie eine Apfelsine
+    example:
+      de: Die Arbeiter auf der Straße tragen orange Westen.
+      en: The workers on the road wear orange vests.
+      fa: کارگرانی که در خیابان کار می‌کنند جلیقهٔ نارنجی می‌پوشند.
+
   - word: dunkel
+    class: adjective
+    level: A2
+    meaning:
+      en: dark
+      fa: تیره، تاریک
+    definition: mit wenig Licht; auch eine Farbe, die fast schwarz ist
+    example:
+      de: Im Winter ist es um fünf Uhr schon dunkel.
+      en: In winter it's already dark at five o'clock.
+      fa: زمستان‌ها ساعت پنج هوا دیگر تاریک است.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 156 questions, then the 8 changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: da31c7cbf98eca60

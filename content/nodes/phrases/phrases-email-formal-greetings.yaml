@@ -4,7 +4,8 @@ kind: phrases
 level: A2
 chapter: a2-phrases-emails
 order: 2
-status: coming-soon
+status: published
+prerequisites: [phrases-email-friend-greetings, grammar-007]
 title:
   en: "Greeting and signing off in a formal e-mail"
   fa: "سلام و خداحافظی در ایمیل رسمی"
@@ -14,3 +15,306 @@ purpose:
   fa: "ایمیل به کسی را که با *Sie* خطابش می‌کنید، مثل معلم یا صاحب‌خانه، درست شروع و تمام کنید."
   de: "Eine E-Mail an eine Person, zu der man *Sie* sagt, richtig beginnen und beenden."
 examTasks: [exam-schreiben-3]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Sehr geehrte Frau …,
+    meaning:
+      en: Dear Ms … The formal greeting to a woman, with her surname. A comma follows the name, and the first sentence begins with a small letter.
+      fa: «خانم … گرامی» سلام رسمی به یک زن، با نام خانوادگی‌اش. پس از نام ویرگول می‌آید و جملهٔ اول با حرف کوچک شروع می‌شود.
+      de: So beginnt man eine formelle E-Mail an eine Frau, mit dem Familiennamen. Nach dem Namen kommt ein Komma, dann schreibt man klein weiter.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Sehr geehrte Frau Müller, ich habe eine Frage zum Kurs.
+      en: Dear Ms Müller, I have a question about the course.
+      fa: خانم مولر گرامی، دربارهٔ کلاس پرسشی دارم.
+
+  - de: Sehr geehrter Herr …,
+    meaning:
+      en: Dear Mr … The formal greeting to a man. With *Herr* the word is *geehrter*, with *-r*.
+      fa: «آقای … گرامی» سلام رسمی به یک مرد. با *Herr* واژهٔ *geehrter* می‌آید، با *-r*.
+      de: So beginnt man eine formelle E-Mail an einen Mann. Vor *Herr* schreibt man *geehrter*, mit *-r*.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Sehr geehrter Herr Becker, vielen Dank für Ihre schnelle Antwort.
+      en: Dear Mr Becker, thank you very much for your quick reply.
+      fa: آقای بکر گرامی، از پاسخ سریعتان بسیار سپاسگزارم.
+
+  - de: Sehr geehrte Damen und Herren,
+    meaning:
+      en: Dear Sir or Madam. The formal greeting when you do not know the name, for example to a company or an office.
+      fa: «با سلام و احترام» سلام رسمی وقتی نام گیرنده را نمی‌دانید، مثلاً در نامه به یک شرکت یا اداره.
+      de: So beginnt man eine formelle E-Mail, wenn man den Namen nicht kennt, zum Beispiel an eine Firma oder ein Amt.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Sehr geehrte Damen und Herren, ich interessiere mich für Ihren Deutschkurs.
+      en: Dear Sir or Madam, I am interested in your German course.
+      fa: با سلام و احترام، به کلاس آلمانی شما علاقه دارم.
+
+  - de: Liebe Frau …,
+    meaning:
+      en: Dear Ms … A warm greeting to a woman you address with *Sie* and know well, such as your course teacher. Use it with the surname, as with *Sehr geehrte*.
+      fa: «خانم … عزیز» سلامی گرم به زنی که با *Sie* خطابش می‌کنید و خوب می‌شناسید، مثلاً معلم کلاستان. مانند *Sehr geehrte* با نام خانوادگی می‌آید.
+      de: Ein freundlicher Gruß an eine Frau, zu der man *Sie* sagt und die man gut kennt, zum Beispiel die Kursleiterin. Danach kommt der Familienname.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Liebe Frau Weber, leider kann ich morgen nicht zum Kurs kommen.
+      en: Dear Ms Weber, unfortunately I cannot come to the class tomorrow.
+      fa: خانم وبر عزیز، متأسفانه فردا نمی‌توانم به کلاس بیایم.
+
+  - de: Lieber Herr …,
+    meaning:
+      en: Dear Mr … The same warm greeting to a man you address with *Sie*.
+      fa: «آقای … عزیز» همین سلام گرم به مردی که با *Sie* خطابش می‌کنید.
+      de: Derselbe freundliche Gruß an einen Mann, zu dem man *Sie* sagt.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Lieber Herr Becker, haben Sie am Freitag kurz Zeit?
+      en: Dear Mr Becker, do you have a moment on Friday?
+      fa: آقای بکر عزیز، جمعه کمی وقت دارید؟
+
+  - de: Guten Tag, Frau …,
+    meaning:
+      en: Good day, Ms … A neutral greeting, polite but less formal than *Sehr geehrte*. To a man it is *Guten Tag, Herr …*
+      fa: «روز بخیر، خانم …» سلامی خنثی؛ مؤدبانه است ولی نه به رسمیت *Sehr geehrte*. به یک مرد می‌نویسید *Guten Tag, Herr …*
+      de: Ein neutraler Gruß. Er ist höflich, aber nicht so formell wie *Sehr geehrte*. An einen Mann schreibt man *Guten Tag, Herr …*
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Guten Tag, Frau Schmidt, ich möchte einen Termin vereinbaren.
+      en: Hello Ms Schmidt, I would like to make an appointment.
+      fa: روز بخیر، خانم اشمیت، می‌خواهم وقت ملاقات بگیرم.
+
+  - de: Mit freundlichen Grüßen
+    meaning:
+      en: Yours sincerely. The usual formal closing. It stands on a line of its own without a comma, and your first name and surname go on the next line.
+      fa: «با احترام» پایان‌بندی معمول ایمیل رسمی. این عبارت در سطری جداگانه و بدون ویرگول می‌آید و نام و نام خانوادگی‌تان در سطر بعد نوشته می‌شود.
+      de: Der normale Gruß am Ende einer formellen E-Mail. Er steht allein in einer Zeile, ohne Komma. In der nächsten Zeile stehen Vorname und Familienname.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Ich danke Ihnen im Voraus. Mit freundlichen Grüßen
+      en: Thank you in advance. Yours sincerely
+      fa: پیشاپیش از شما سپاسگزارم. با احترام
+
+  - de: Freundliche Grüße
+    meaning:
+      en: Kind regards. A shorter closing, polite but a little less formal than *Mit freundlichen Grüßen*.
+      fa: «با درود» پایان‌بندی کوتاه‌تر؛ مؤدبانه است ولی کمی کمتر از *Mit freundlichen Grüßen* رسمی است.
+      de: Ein kürzerer Gruß am Ende. Er ist höflich, aber nicht ganz so formell wie *Mit freundlichen Grüßen*.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Freundliche Grüße und ein schönes Wochenende!
+      en: Kind regards, and have a nice weekend!
+      fa: با درود، آخر هفتهٔ خوبی داشته باشید!
+
+  - de: Ihr … / Ihre …
+    meaning:
+      en: Yours … Can stand before your full name under a warm closing to a person you address with *Sie*. A man writes *Ihr*, a woman *Ihre*, always with a capital *I*.
+      fa: «ارادتمند، …» زیر پایان‌بندی گرم به کسی که با *Sie* خطابش می‌کنید، پیش از نام کاملتان می‌آید. مرد *Ihr* و زن *Ihre* می‌نویسد، همیشه با *I* بزرگ.
+      de: Das kann man vor den vollen Namen schreiben, an eine Person, zu der man *Sie* sagt. Ein Mann schreibt *Ihr*, eine Frau *Ihre*, immer mit großem *I*.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Herzliche Grüße! Ihre Sara Ahmadi
+      en: Warm regards! Yours, Sara Ahmadi
+      fa: با درود صمیمانه! ارادتمند، سارا احمدی
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Du schreibst deiner Vermieterin, Frau Wagner. Wie beginnst du die E-Mail?
+    options:
+      - Sehr geehrte Frau Wagner,
+      - Sehr geehrter Frau Wagner,
+      - Sehr geehrte Wagner,
+    answer: Sehr geehrte Frau Wagner,
+    explanation:
+      en: To a woman it is *Sehr geehrte*, followed by *Frau* and the surname.
+      fa: به یک زن *Sehr geehrte* می‌نویسید و پس از آن *Frau* و نام خانوادگی می‌آید.
+      de: An eine Frau schreibt man *Sehr geehrte*, dann *Frau* und den Familiennamen.
+
+  - id: q2
+    type: gap-fill
+    prompt: Sehr ___ Herr Becker, vielen Dank für Ihre Antwort.
+    options: [geehrter, geehrte, geehrten]
+    answer: geehrter
+    explanation:
+      en: With *Herr* the greeting is *Sehr geehrter*, with *-r*.
+      fa: با *Herr* سلام *Sehr geehrter* است، با *-r*.
+      de: Vor *Herr* heißt es *Sehr geehrter*, mit *-r*.
+
+  - id: q3
+    type: multiple-choice
+    prompt: Du schreibst an eine Sprachschule und kennst keinen Namen. Wie beginnst du?
+    options:
+      - Sehr geehrte Damen und Herren,
+      - Sehr geehrter Damen und Herren,
+      - Hallo Damen und Herren,
+    answer: Sehr geehrte Damen und Herren,
+    explanation:
+      en: Without a name the formal greeting is *Sehr geehrte Damen und Herren*.
+      fa: بدون نام، سلام رسمی *Sehr geehrte Damen und Herren* است.
+      de: Ohne Namen heißt die formelle Anrede *Sehr geehrte Damen und Herren*.
+
+  - id: q4
+    type: true-false
+    prompt: Sehr geehrte Frau Müller, ich kann leider nicht zum Kurs kommen.
+    answer: true
+    explanation:
+      en: The greeting is right, and after its comma the sentence begins with a small letter.
+      fa: سلام درست است و پس از ویرگولش جمله با حرف کوچک شروع می‌شود.
+      de: Die Anrede ist richtig, und nach dem Komma schreibt man klein weiter.
+
+  - id: q5
+    type: find-error
+    prompt: Sehr geehrter Frau Müller, ich habe eine Frage.
+    answer: geehrter
+    explanation:
+      en: To a woman it is *Sehr geehrte Frau Müller*, without *-r*.
+      fa: به یک زن *Sehr geehrte Frau Müller* می‌نویسید، بدون *-r*.
+      de: An eine Frau schreibt man *Sehr geehrte Frau Müller*, ohne *-r*.
+
+  - id: q6
+    type: multiple-choice
+    prompt: Frau Weber ist deine Kursleiterin. Du sagst Sie zu ihr, aber du kennst sie gut. Wie beginnst du die E-Mail?
+    options:
+      - Liebe Frau Weber,
+      - Lieber Frau Weber,
+      - Liebe Weber,
+    answer: Liebe Frau Weber,
+    explanation:
+      en: A warm greeting with *Sie* is *Liebe Frau* and the surname.
+      fa: سلام گرم همراه با *Sie* با *Liebe Frau* و نام خانوادگی ساخته می‌شود.
+      de: Eine freundliche Anrede mit *Sie* ist *Liebe Frau* und der Familienname.
+
+  - id: q7
+    type: multiple-choice
+    prompt: Ali Karimi schreibt eine E-Mail an Frau Weber. Er sagt Sie zu ihr. Was kann er vor seinen Namen schreiben?
+    options: [Ihr Ali Karimi, Ihre Ali Karimi, Dein Ali Karimi]
+    answer: Ihr Ali Karimi
+    explanation:
+      en: With *Sie* it is *Ihr*, and a man writes *Ihr*, without *-e*.
+      fa: با *Sie* واژهٔ *Ihr* می‌آید و مرد *Ihr* را بدون *-e* می‌نویسد.
+      de: Bei *Sie* schreibt man *Ihr*. Ein Mann schreibt *Ihr*, ohne *-e*.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Sehr ___ (geehrt) Frau Müller, ich habe eine Frage zum Kurs.
+    answers: [geehrte]
+    explanation:
+      en: To a woman it is *Sehr geehrte Frau …*
+      fa: به یک زن *Sehr geehrte Frau …* می‌نویسید.
+      de: An eine Frau schreibt man *Sehr geehrte Frau …*
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Sehr ___ (geehrt) Herr Becker, vielen Dank für Ihre schnelle Antwort.
+    answers: [geehrter]
+    explanation:
+      en: To a man it is *Sehr geehrter Herr …*, with *-r*.
+      fa: به یک مرد *Sehr geehrter Herr …* می‌نویسید، با *-r*.
+      de: An einen Mann schreibt man *Sehr geehrter Herr …*, mit *-r*.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Sehr geehrte Damen und ___, ich interessiere mich für Ihren Deutschkurs.
+    answers: [Herren]
+    explanation:
+      en: The greeting without a name is *Sehr geehrte Damen und Herren*.
+      fa: سلام بدون نام *Sehr geehrte Damen und Herren* است.
+      de: Die Anrede ohne Namen heißt *Sehr geehrte Damen und Herren*.
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Sehr geehrte ___ und Herren, ich habe eine Frage zu Ihrem Angebot.
+    answers: [Damen]
+    explanation:
+      en: The greeting without a name is *Sehr geehrte Damen und Herren*.
+      fa: سلام بدون نام *Sehr geehrte Damen und Herren* است.
+      de: Die Anrede ohne Namen heißt *Sehr geehrte Damen und Herren*.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Mit ___ (freundlich) Grüßen
+    answers: [freundlichen, freundlichsten]
+    explanation:
+      en: The formal closing is *Mit freundlichen Grüßen*. After *mit* comes the dative, so *-en*.
+      fa: پایان‌بندی رسمی *Mit freundlichen Grüßen* است. پس از *mit* حالت *Dativ* می‌آید، پس *-en*.
+      de: Der formelle Gruß heißt *Mit freundlichen Grüßen*. Nach *mit* kommt der Dativ, also *-en*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Mit freundlichen ___ (der Gruß)
+    answers: [Grüßen]
+    explanation:
+      en: After *mit* comes the dative plural, *Grüßen*, with *-n*.
+      fa: "پس از *mit* حالت *Dativ* جمع می‌آید: *Grüßen*، با *-n*."
+      de: Nach *mit* kommt der Dativ Plural, *Grüßen*, mit *-n*.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: ___ (lieb) Frau Weber, leider kann ich morgen nicht zum Kurs kommen.
+    answers: [Liebe]
+    explanation:
+      en: A warm greeting to a woman is *Liebe Frau …*
+      fa: سلام گرم به یک زن *Liebe Frau …* است.
+      de: Eine freundliche Anrede an eine Frau ist *Liebe Frau …*
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: ___ (lieb) Herr Becker, haben Sie am Freitag kurz Zeit?
+    answers: [Lieber]
+    explanation:
+      en: A warm greeting to a man is *Lieber Herr …*
+      fa: سلام گرم به یک مرد *Lieber Herr …* است.
+      de: Eine freundliche Anrede an einen Mann ist *Lieber Herr …*
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: "Sara Ahmadi schreibt an Herrn Becker. Unter ihren Gruß schreibt sie: ___ (Ihr) Sara Ahmadi"
+    answers: [Ihre]
+    explanation:
+      en: Sara is a woman, so she writes *Ihre*, with a capital *I*.
+      fa: سارا زن است، پس *Ihre* را با *I* بزرگ می‌نویسد.
+      de: Sara ist eine Frau, also schreibt sie *Ihre*, mit großem *I*.
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: "Ali Karimi schreibt an Frau Weber. Unter seinen Gruß schreibt er: ___ (Ihr) Ali Karimi"
+    answers: [Ihr]
+    explanation:
+      en: Ali is a man, so he writes *Ihr*, with a capital *I*.
+      fa: علی مرد است، پس *Ihr* را با *I* بزرگ می‌نویسد.
+      de: Ali ist ein Mann, also schreibt er *Ihr*, mit großem *I*.
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Guten ___, Frau Schmidt, ich möchte einen Termin vereinbaren.
+    answers: [Tag, Morgen, Abend]
+    explanation:
+      en: The neutral greeting is *Guten Tag, Frau …*
+      fa: سلام خنثی *Guten Tag, Frau …* است.
+      de: Die neutrale Anrede heißt *Guten Tag, Frau …*
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: ___ (freundlich) Grüße und ein schönes Wochenende!
+    answers: [Freundliche]
+    explanation:
+      en: The shorter closing is *Freundliche Grüße*, with *-e* before the plural *Grüße*.
+      fa: پایان‌بندی کوتاه‌تر *Freundliche Grüße* است، با *-e* پیش از اسم جمع *Grüße*.
+      de: Der kürzere Gruß heißt *Freundliche Grüße*, mit *-e* vor dem Plural *Grüße*.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Sehr geehrter Herr Becker, ich danke ___ (Sie) für Ihre Hilfe.
+    answers: [Ihnen]
+    explanation:
+      en: "*danken* takes the dative, and the dative of *Sie* is *Ihnen*, with a capital letter."
+      fa: "*danken* با حالت *Dativ* می‌آید و حالت *Dativ* ضمیر *Sie* واژهٔ *Ihnen* است، با حرف بزرگ."
+      de: "*danken* hat den Dativ. Der Dativ von *Sie* ist *Ihnen*, mit großem Buchstaben."
+
+review:
+  reviewer: an independent AI agent (a fresh subagent, blind to the key)
+  date: 2026-11-28
+  pool: ccb78e06636408d4
