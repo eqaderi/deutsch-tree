@@ -4,10 +4,367 @@ kind: grammar
 level: B1
 chapter: b1-connectors-negation
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-151]
 title:
   en: "*darum*, *deswegen*, *daher*, *nämlich*, *also*"
   fa: "*darum*، *deswegen*، *daher*، *nämlich*، *also*"
   de: "*darum*, *deswegen*, *daher*, *nämlich*, *also*"
+
+explanations:
+  en:
+    rule: >
+      *Darum*, *deswegen* and *daher* mean the same as *deshalb* (that's why,
+      so): the reason comes first, and they start the result. *Daher* sounds
+      a little more formal. *Also* (so, therefore) starts a conclusion: *Es
+      regnet, also nehme ich den Schirm.* It never means "also", which is
+      *auch*. All four are adverbs: in position 1 the verb comes next (*darum
+      gehe ich*), and they can also stand after the verb (*Ich gehe darum
+      jetzt.*). *Nämlich* goes the other way, like *denn*: it gives the reason
+      after the result, usually in a new sentence. But it never stands in
+      position 1: it comes after the verb, and after a pronoun such as *ich*
+      or *es*. *Ich komme heute nicht. Ich bin nämlich krank.*
+  fa:
+    rule: >
+      *darum*، *deswegen* و *daher* همان معنای *deshalb* را دارند (برای همین،
+      به همین دلیل): نخست دلیل می‌آید و جملهٔ نتیجه با این واژه‌ها آغاز
+      می‌شود. *daher* کمی رسمی‌تر است. *also* (پس) نتیجه‌گیری را آغاز می‌کند:
+      *Es regnet, also nehme ich den Schirm.* این واژه هرگز به معنای «هم»
+      نیست؛ «هم» در آلمانی *auch* است. هر چهار واژه قیدند: در جایگاه اول، فعل
+      پس از آن‌ها می‌آید (*darum gehe ich*) و می‌توانند پس از فعل هم بیایند
+      (*Ich gehe darum jetzt.*). *nämlich* راه وارونه را می‌رود، مانند
+      *denn*: دلیل را پس از نتیجه می‌آورد، معمولاً در جمله‌ای تازه. اما هرگز
+      در جایگاه اول نمی‌آید؛ جای آن پس از فعل است و پس از ضمیری مانند *ich*
+      یا *es*: *Ich komme heute nicht. Ich bin nämlich krank.*
+  de:
+    rule: >
+      *Darum*, *deswegen* und *daher* bedeuten das Gleiche wie *deshalb*:
+      Zuerst kommt der Grund, dann die Folge mit *darum*, *deswegen* oder
+      *daher*. *Daher* klingt etwas formeller. Mit *also* zieht man einen
+      Schluss: *Es regnet, also nehme ich den Schirm.* Es bedeutet nicht
+      *auch*. Alle vier sind Adverbien. Auf Position 1 kommt danach das Verb
+      (*darum gehe ich*). Sie können auch nach dem Verb stehen (*Ich gehe
+      darum jetzt.*). Mit *nämlich* ist es umgekehrt, wie mit *denn*: Es
+      nennt den Grund nach der Folge, meistens in einem neuen Satz. Aber
+      *nämlich* steht nie auf Position 1. Es steht nach dem Verb und nach
+      einem Pronomen wie *ich* oder *es*: *Ich komme heute nicht. Ich bin
+      nämlich krank.*
+
+table:
+  columns:
+    - { en: Word, fa: واژه, de: Wort }
+    - { en: In position 1, fa: در جایگاه اول, de: Auf Position 1 }
+    - { en: After the verb, fa: پس از فعل, de: Nach dem Verb }
+  rows:
+    - [darum, "Ich muss früh aufstehen, darum gehe ich jetzt.", "Ich muss früh aufstehen. Ich gehe darum jetzt."]
+    - [deswegen, "Sie ist krank, deswegen bleibt sie zu Hause.", "Sie ist krank. Sie bleibt deswegen zu Hause."]
+    - [
+        daher,
+        "Die Straße ist gesperrt, daher fährt der Bus nicht.",
+        "Die Straße ist gesperrt. Der Bus fährt daher nicht.",
+      ]
+    - [also, "Es regnet, also nehme ich den Schirm.", "Es regnet. Ich nehme also den Schirm."]
+    - [nämlich, –, "Ich komme heute nicht. Ich bin nämlich krank."]
+
+# Which way each word points: darum, deswegen, daher and also from the reason
+# to the result; nämlich from the result back to the reason, as denn does.
+diagrams:
+  - caption:
+      en: >
+        The same two facts in both directions. With *darum*, *deswegen*,
+        *daher* or *also* the reason comes first. With *nämlich* the result
+        comes first, and the reason follows in a new sentence, with *nämlich*
+        after the verb.
+      fa: >
+        دو واقعیتِ یکسان در دو جهت. با *darum*، *deswegen*، *daher* یا *also*
+        نخست دلیل می‌آید. با *nämlich* نخست نتیجه می‌آید و دلیل در جمله‌ای
+        تازه پس از آن، و *nämlich* پس از فعل می‌نشیند.
+      de: >
+        Zwei Sätze in zwei Richtungen. Mit *darum*, *deswegen*, *daher* oder
+        *also* kommt zuerst der Grund. Mit *nämlich* kommt zuerst die Folge.
+        Der Grund kommt danach in einem neuen Satz, *nämlich* steht nach dem
+        Verb.
+    labels:
+      reason: { en: the reason, fa: دلیل, de: der Grund }
+      result: { en: the result, fa: نتیجه, de: die Folge }
+    svg: |
+      <svg viewBox="0 0 320 228">
+        <!-- darum and its kin: reason, then result -->
+        <rect class="surface" x="4" y="8" width="132" height="60"/>
+        <rect class="surface" x="184" y="8" width="132" height="60"/>
+        <text class="label" x="70" y="34" text-anchor="middle">Ich bin krank,</text>
+        <text class="note" x="70" y="56" text-anchor="middle">{{reason}}</text>
+        <text class="label" x="250" y="34" text-anchor="middle">darum …</text>
+        <text class="note" x="250" y="56" text-anchor="middle">{{result}}</text>
+        <line class="line" x1="140" y1="38" x2="172" y2="38"/>
+        <polygon class="object" points="180,38 170,32 170,44"/>
+        <text class="note" x="160" y="90" text-anchor="middle">darum / deswegen / daher / also</text>
+        <text class="note" x="160" y="110" text-anchor="middle">Ich bin krank, darum bleibe ich zu Hause.</text>
+        <!-- nämlich: result first, the reason after it; the arrow points back -->
+        <rect class="surface" x="4" y="132" width="132" height="60"/>
+        <rect class="surface" x="184" y="132" width="132" height="60"/>
+        <text class="label" x="70" y="158" text-anchor="middle">Ich bleibe …</text>
+        <text class="note" x="70" y="180" text-anchor="middle">{{result}}</text>
+        <text class="label" x="250" y="158" text-anchor="middle">… nämlich …</text>
+        <text class="note" x="250" y="180" text-anchor="middle">{{reason}}</text>
+        <line class="line" x1="148" y1="162" x2="180" y2="162"/>
+        <polygon class="object" points="140,162 150,156 150,168"/>
+        <text class="note" x="160" y="214" text-anchor="middle">Ich bleibe zu Hause. Ich bin nämlich krank.</text>
+      </svg>
+
+examples:
+  - de: Ich muss früh aufstehen, darum gehe ich jetzt.
+    en: I have to get up early, so I'm going now.
+    fa: باید صبح زود بیدار شوم، برای همین الان می‌روم.
+  - de: Der Zug hatte Verspätung, deswegen bin ich zu spät gekommen.
+    en: The train was late, that's why I was late.
+    fa: قطار تأخیر داشت، به همین دلیل دیر رسیدم.
+  - de: Die Straße ist gesperrt, daher fährt der Bus heute nicht.
+    en: The road is closed, so the bus isn't running today.
+    fa: خیابان بسته است، از این رو اتوبوس امروز حرکت نمی‌کند.
+  - de: Unser Hotel liegt direkt am Meer. Wir gehen deswegen jeden Tag schwimmen.
+    en: Our hotel is right by the sea. That's why we go swimming every day.
+    fa: هتل ما درست کنار دریاست. برای همین هر روز به شنا می‌رویم.
+  - de: Es regnet, also nehme ich den Schirm mit.
+    en: It's raining, so I'll take the umbrella.
+    fa: باران می‌بارد، پس چتر را با خودم می‌برم.
+  - de: Der Laden ist schon zu. Wir kaufen also morgen ein.
+    en: The shop is already shut. So we'll do the shopping tomorrow.
+    fa: مغازه دیگر بسته است. پس فردا خرید می‌کنیم.
+  - de: Ich komme heute nicht. Ich bin nämlich krank.
+    en: I'm not coming today. I'm ill, you see.
+    fa: امروز نمی‌آیم، چون بیمارم.
+  - de: Paul spricht gut Spanisch. Er hat nämlich zwei Jahre in Madrid gelebt.
+    en: Paul speaks good Spanish. He lived in Madrid for two years, you know.
+    fa: پاول خوب اسپانیایی حرف می‌زند، چون دو سال در مادرید زندگی کرده است.
+  - de: Wir nehmen heute das Auto. Es ist nämlich sehr kalt.
+    en: We're taking the car today. It's very cold, you see.
+    fa: امروز با ماشین می‌رویم، چون هوا خیلی سرد است.
+
+mistakes:
+  - wrong: Ich bin krank, darum ich bleibe zu Hause.
+    right: Ich bin krank, darum bleibe ich zu Hause.
+    why:
+      en: "*Darum* is position 1, so the verb comes next and the subject after it: *darum bleibe ich*."
+      fa: "*darum* جایگاه اول است، پس فعل پس از آن می‌آید و فاعل پس از فعل: *darum bleibe ich*."
+      de: "*Darum* ist Position 1. Danach kommt das Verb, dann das Subjekt: *darum bleibe ich*."
+  - wrong: Ich komme heute nicht. Nämlich bin ich krank.
+    right: Ich komme heute nicht. Ich bin nämlich krank.
+    why:
+      en: "*Nämlich* never stands in position 1. It comes after the verb: *Ich bin nämlich krank.*"
+      fa: "*nämlich* هرگز در جایگاه اول نمی‌آید. جای آن پس از فعل است: *Ich bin nämlich krank.*"
+      de: "*Nämlich* steht nie auf Position 1. Es steht nach dem Verb: *Ich bin nämlich krank.*"
+  - wrong: Ich lerne Deutsch und also Englisch.
+    right: Ich lerne Deutsch und auch Englisch.
+    why:
+      en: 'German *also* means "so, therefore". English "also" is *auch*.'
+      fa: "*also* در آلمانی یعنی «پس». برای «هم» باید *auch* گفت."
+      de: "*Also* heißt: Daraus folgt etwas. Für ein Plus sagt man *auch*."
+  - wrong: Ich bleibe zu Hause, deswegen bin ich krank.
+    right: Ich bleibe zu Hause, denn ich bin krank.
+    why:
+      en: "Being ill is the reason, not the result. *Deswegen* starts the result; a reason after the result takes *denn*, or *nämlich* in a new sentence."
+      fa: "بیماری دلیل است، نه نتیجه. جملهٔ نتیجه با *deswegen* آغاز می‌شود؛ برای آوردن دلیل پس از نتیجه *denn* به کار می‌رود، یا *nämlich* در جمله‌ای تازه."
+      de: "Krank sein ist der Grund, nicht die Folge. Mit *deswegen* beginnt die Folge. Den Grund danach sagt man mit *denn* oder in einem neuen Satz mit *nämlich*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich habe morgen eine Prüfung, darum ___ heute Abend zu Hause.
+    options: [ich bleibe, bleibe ich, bleiben ich]
+    answer: bleibe ich
+    explanation:
+      en: "*Darum* is position 1, so the verb *bleibe* comes next and *ich* after it."
+      fa: "*darum* جایگاه اول است، پس فعل *bleibe* پس از آن می‌آید و *ich* پس از فعل."
+      de: "*Darum* ist Position 1. Dann kommt das Verb *bleibe* und danach *ich*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich gehe heute früh ins Bett. Ich bin ___ sehr müde.
+    options: [deswegen, also, nämlich]
+    answer: nämlich
+    explanation:
+      en: "Being tired is the reason, and it comes after the result: *nämlich*."
+      fa: "خستگی دلیل است و پس از نتیجه آمده است: *nämlich*."
+      de: "Müde sein ist der Grund. Er kommt nach der Folge: *nämlich*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich bin sehr müde. Ich gehe ___ heute früh ins Bett.
+    options: [nämlich, deswegen, denn]
+    answer: deswegen
+    explanation:
+      en: "Going to bed early is the result of being tired: *deswegen*, after the verb."
+      fa: "زود خوابیدن نتیجهٔ خستگی است: *deswegen*، پس از فعل."
+      de: "Früh ins Bett gehen ist die Folge: *deswegen*, hier nach dem Verb."
+  - id: gap-4
+    type: gap-fill
+    prompt: Der Kühlschrank ist leer, ___ müssen wir einkaufen gehen.
+    options: [nämlich, denn, also]
+    answer: also
+    explanation:
+      en: "Shopping follows from the empty fridge, and the verb *müssen* follows the gap: *also*. *Nämlich* cannot be position 1, and *denn* gives a reason."
+      fa: "خرید کردن نتیجهٔ خالی بودن یخچال است و فعل *müssen* پس از جای خالی آمده است: *also*. *nämlich* جایگاه اول را نمی‌گیرد و *denn* دلیل می‌آورد."
+      de: "Einkaufen ist die Folge, und das Verb *müssen* kommt direkt danach: *also*. *Nämlich* steht nie auf Position 1, *denn* nennt einen Grund."
+  - id: gap-5
+    type: gap-fill
+    prompt: Die Brücke ist gesperrt, daher ___ einen Umweg.
+    options: [fahren wir, wir fahren, fahren]
+    answer: fahren wir
+    explanation:
+      en: "*Daher* is position 1, so the verb *fahren* comes next and *wir* after it."
+      fa: "*daher* جایگاه اول است، پس فعل *fahren* پس از آن می‌آید و *wir* پس از فعل."
+      de: "*Daher* ist Position 1. Dann kommt das Verb *fahren* und danach *wir*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Welcher Satz ist richtig?"
+    options:
+      - Ich rufe dich später an. Nämlich habe ich jetzt keine Zeit.
+      - Ich rufe dich später an. Ich habe nämlich jetzt keine Zeit.
+      - Ich rufe dich später an, nämlich ich habe jetzt keine Zeit.
+    answer: Ich rufe dich später an. Ich habe nämlich jetzt keine Zeit.
+    explanation:
+      en: "*Nämlich* never stands in position 1 and is not a conjunction: it comes after the verb, *Ich habe nämlich …*."
+      fa: "*nämlich* هرگز در جایگاه اول نمی‌آید و حرف ربط نیست: جای آن پس از فعل است، *Ich habe nämlich …*."
+      de: "*Nämlich* steht nie auf Position 1 und ist keine Konjunktion. Es steht nach dem Verb: *Ich habe nämlich …*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Was bedeutet also in: Du hast Fieber, also bleibst du im Bett."
+    options: [auch, deshalb, trotzdem]
+    answer: deshalb
+    explanation:
+      en: "Here *also* starts the result of the fever: it means *deshalb*, not *auch*."
+      fa: "این‌جا *also* نتیجهٔ تب را آغاز می‌کند و به معنای *deshalb* است، نه *auch*."
+      de: "Hier beginnt mit *also* die Folge vom Fieber. Es bedeutet *deshalb*, nicht *auch*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Welches Wort bedeutet nicht das Gleiche wie deshalb?"
+    options: [darum, nämlich, deswegen]
+    answer: nämlich
+    explanation:
+      en: "*Darum* and *deswegen* start the result, like *deshalb*. *Nämlich* gives the reason."
+      fa: "*darum* و *deswegen* مانند *deshalb* نتیجه را آغاز می‌کنند. *nämlich* دلیل را می‌آورد."
+      de: "*Darum* und *deswegen* nennen die Folge wie *deshalb*. *Nämlich* nennt den Grund."
+  - id: true-1
+    type: true-false
+    prompt: Es ist sehr warm, deswegen öffne ich das Fenster.
+    answer: true
+    explanation:
+      en: "*Deswegen* in position 1, then the verb *öffne*, then *ich*. The sentence is correct."
+      fa: "*deswegen* در جایگاه اول، سپس فعل *öffne* و پس از آن *ich*. جمله درست است."
+      de: "*Deswegen* auf Position 1, dann das Verb *öffne*, dann *ich*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich trinke keinen Kaffee mehr. Ich schlafe nämlich sonst schlecht.
+    answer: true
+    explanation:
+      en: "*Nämlich* stands after the verb and gives the reason. The sentence is correct."
+      fa: "*nämlich* پس از فعل آمده و دلیل را می‌آورد. جمله درست است."
+      de: "*Nämlich* steht nach dem Verb und nennt den Grund. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Wir haben kein Brot mehr, daher ich gehe zum Bäcker.
+    answer: false
+    explanation:
+      en: "After *daher* the verb comes first: *daher gehe ich zum Bäcker*."
+      fa: "پس از *daher* نخست فعل می‌آید: *daher gehe ich zum Bäcker*."
+      de: "Nach *daher* kommt zuerst das Verb: *daher gehe ich zum Bäcker*."
+  - id: true-4
+    type: true-false
+    prompt: Meine Schwester spielt Gitarre und also Klavier.
+    answer: false
+    explanation:
+      en: '*Also* means "so, therefore". For "also" German says *auch*: *und auch Klavier*.'
+      fa: "*also* یعنی «پس». برای «هم» در آلمانی *auch* می‌آید: *und auch Klavier*."
+      de: "*Also* nennt eine Folge. Hier passt *auch*: *und auch Klavier*."
+  - id: true-5
+    type: true-false
+    prompt: Der Film beginnt um acht. Wir müssen also bald losgehen.
+    answer: true
+    explanation:
+      en: "*Also* draws the conclusion and stands after the verb *müssen*. The sentence is correct."
+      fa: "*also* نتیجه را می‌گیرد و پس از فعل *müssen* آمده است. جمله درست است."
+      de: "Mit *also* zieht man den Schluss, es steht nach dem Verb *müssen*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Es ist schon spät, darum ___ (nehmen) wir ein Taxi.
+    answers: [nehmen]
+    explanation:
+      en: "After *darum* comes the verb, with the ending for *wir*: *nehmen*."
+      fa: "پس از *darum* فعل می‌آید، با شناسهٔ اول‌شخص جمع (*wir*): *nehmen*."
+      de: "Nach *darum* kommt das Verb, passend zu *wir*: *nehmen*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Tim kann heute nicht kommen. Er ___ (haben) nämlich Besuch.
+    answers: [hat]
+    explanation:
+      en: "*Er* is position 1 and the verb *hat* position 2; *nämlich* follows the verb."
+      fa: "*er* در جایگاه اول و فعل *hat* در جایگاه دوم است؛ *nämlich* پس از فعل می‌آید."
+      de: "*Er* ist Position 1, das Verb *hat* Position 2. *Nämlich* steht nach dem Verb."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich habe keine Zeit. Ich muss ___ (nämlich / deswegen) noch arbeiten.
+    answers: [nämlich]
+    explanation:
+      en: "Having to work is the reason for having no time, so it is *nämlich*."
+      fa: "کار داشتن دلیل نداشتن وقت است؛ پس *nämlich* می‌آید."
+      de: "Arbeiten müssen ist der Grund für keine Zeit. Darum *nämlich*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Mein Handy ist kaputt, deswegen ___ (können) ich dich nicht anrufen.
+    answers: [kann]
+    explanation:
+      en: "After *deswegen* comes the verb, with the form for *ich*: *kann*."
+      fa: "پس از *deswegen* فعل می‌آید، با صورت اول‌شخص مفرد (*ich*): *kann*."
+      de: "Nach *deswegen* kommt das Verb, passend zu *ich*: *kann*."
+  - id: error-1
+    type: find-error
+    prompt: Ich bin heute müde. Nämlich habe ich schlecht geschlafen.
+    answer: Nämlich
+    explanation:
+      en: "*Nämlich* cannot take position 1: *Ich habe nämlich schlecht geschlafen.*"
+      fa: "*nämlich* جایگاه اول را نمی‌گیرد: *Ich habe nämlich schlecht geschlafen.*"
+      de: "*Nämlich* steht nie auf Position 1: *Ich habe nämlich schlecht geschlafen.*"
+  - id: error-2
+    type: find-error
+    prompt: Der Bus ist schon weg, nämlich laufen wir nach Hause.
+    answer: nämlich
+    explanation:
+      en: "Walking home is the result of the bus being gone, so *deswegen* (or *darum*, *daher*, *also*). *Nämlich* gives a reason and never stands in position 1."
+      fa: "پیاده رفتن به خانه نتیجهٔ رفتن اتوبوس است، پس *deswegen* (یا *darum*، *daher*، *also*) لازم است. *nämlich* دلیل می‌آورد و هرگز در جایگاه اول نمی‌آید."
+      de: "Nach Hause laufen ist die Folge. Darum *deswegen* (oder *darum*, *daher*, *also*). *Nämlich* nennt einen Grund und steht nie auf Position 1."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ich, bin, nämlich, krank]
+      - [krank, bin, ich, nämlich]
+    explanation:
+      en: "*Nämlich* never takes position 1. It comes after the verb *bin*, and after *ich* when *ich* follows the verb."
+      fa: "*nämlich* هرگز جایگاه اول را نمی‌گیرد. جای آن پس از فعل *bin* است و اگر *ich* پس از فعل بیاید، پس از *ich*."
+      de: "*Nämlich* steht nie auf Position 1. Es steht nach dem Verb *bin*, und nach *ich*, wenn *ich* nach dem Verb steht."
+  - id: order-2
+    type: word-order
+    answers:
+      - [deswegen, bleibt, sie, zu Hause]
+      - [sie, bleibt, deswegen, zu Hause]
+      - [zu Hause, bleibt, sie, deswegen]
+    explanation:
+      en: "The verb *bleibt* is position 2. *Deswegen* stands in position 1 or after the verb and subject."
+      fa: "فعل *bleibt* در جایگاه دوم است. *deswegen* یا جایگاه اول را می‌گیرد یا پس از فعل و فاعل می‌آید."
+      de: "Das Verb *bleibt* steht auf Position 2. *Deswegen* ist Position 1 oder steht nach Verb und Subjekt."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Ich habe Hunger, …", darum koche ich jetzt.]
+      - ["Ich koche jetzt. …", Ich habe nämlich Hunger.]
+      - ["Ich bin schon satt, …", also esse ich nichts mehr.]
+    explanation:
+      en: "Hunger is the reason for cooking: *darum* starts the result. After the result, *nämlich* gives the reason. *Also* draws the conclusion from being full."
+      fa: "گرسنگی دلیل آشپزی است: *darum* جملهٔ نتیجه را آغاز می‌کند. پس از نتیجه، *nämlich* دلیل را می‌آورد. *also* از سیر بودن نتیجه می‌گیرد."
+      de: "Hunger ist der Grund fürs Kochen: Mit *darum* beginnt die Folge. Nach der Folge nennt *nämlich* den Grund. Mit *also* zieht man den Schluss aus *satt*."
+
+review:
+  reviewer: an independent AI agent (fresh Claude Opus 5.5 subagents, blind passes
+    on the review sheet only, a second one on the disputed questions; not a
+    person)
+  date: 2026-11-28
+  pool: a4db02182719c0d4

@@ -4,10 +4,366 @@ kind: grammar
 level: B1
 chapter: b1-connectors-negation
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-146, grammar-149]
 title:
   en: "*nicht …, sondern …*"
   fa: "*nicht …, sondern …*"
   de: "*nicht …, sondern …*"
+
+explanations:
+  en:
+    rule: >
+      *Sondern* (but, rather) follows a negation with *nicht* or *kein* and
+      gives the right thing in place of the wrong one: *Er kommt nicht heute,
+      sondern morgen.* *Nicht* then stands directly before the part that is
+      replaced (*nicht heute*), and a noun with *ein* takes *kein*: *Das ist
+      kein Kuli, sondern ein Bleistift.* There is always a
+      comma before *sondern*. After it often only the new part follows; a
+      whole clause after it keeps its order, because *sondern*, like *und* and
+      *aber*, stands in position 0: *sondern ich gehe ins Kino*. *Aber* is
+      different: it does not replace anything, it adds something that is also
+      true: *Das Hotel ist nicht neu, aber sehr sauber.*
+  fa:
+    rule: >
+      *sondern* (بلکه) پس از نفی با *nicht* یا *kein* می‌آید و چیز درست را به
+      جای چیز نادرست می‌نشاند: *Er kommt nicht heute, sondern morgen.* در این
+      حالت *nicht* درست پیش از بخشی می‌آید که جایگزین می‌شود (*nicht
+      heute*)، و اسمی که با *ein* می‌آید با *kein* منفی می‌شود: *Das ist
+      kein Kuli, sondern ein Bleistift.* پیش از *sondern* همیشه
+      ویرگول می‌آید. پس از آن اغلب فقط بخش تازه می‌آید؛ اگر جملهٔ کاملی بیاید،
+      ترتیب واژه‌هایش تغییر نمی‌کند، چون *sondern* نیز مانند *und* و *aber*
+      در جایگاه صفر است: *sondern ich gehe ins Kino*. *aber* فرق دارد: چیزی را
+      جایگزین نمی‌کند، بلکه چیزی می‌افزاید که آن هم درست است: *Das Hotel ist
+      nicht neu, aber sehr sauber.*
+  de:
+    rule: >
+      *Sondern* kommt nach einer Verneinung mit *nicht* oder *kein*. Es nennt
+      das Richtige statt dem Falschen: *Er kommt nicht heute, sondern morgen.*
+      *Nicht* steht dann direkt vor dem Teil, den man ersetzt (*nicht
+      heute*). Ein Nomen mit *ein* verneint man mit *kein*: *Das ist kein
+      Kuli, sondern ein Bleistift.* Vor *sondern* steht immer ein Komma.
+      Danach kommt oft nur der neue Teil. Kommt ein ganzer Satz, bleibt die
+      Wortstellung gleich, denn *sondern* steht wie *und* und *aber* auf
+      Position 0: *sondern ich gehe ins Kino*. *Aber* ist anders: Es ersetzt
+      nichts, es nennt etwas, das auch stimmt: *Das Hotel ist nicht neu,
+      aber sehr sauber.*
+
+table:
+  columns:
+    - { en: "Not this: *nicht* / *kein*", fa: "نه این: *nicht* / *kein*", de: "Nicht das: *nicht* / *kein*" }
+    - { en: "*sondern*", fa: "*sondern*", de: "*sondern*" }
+    - { en: But this, fa: بلکه این, de: Sondern das }
+  rows:
+    - ["Er kommt nicht heute,", sondern, morgen.]
+    - ["Sie wohnt nicht in Wien,", sondern, in Graz.]
+    - ["Wir fahren nicht mit dem Auto,", sondern, mit dem Zug.]
+    - ["Das ist kein Tee,", sondern, Kaffee.]
+    - ["Ich habe keinen Bruder,", sondern, eine Schwester.]
+    - ["Ich bleibe nicht zu Hause,", sondern, ich gehe ins Kino.]
+
+# sondern crosses out the first part and puts another in its place;
+# aber keeps both parts, and both are true.
+diagrams:
+  - caption:
+      en: >
+        *Sondern* replaces: the first part is wrong, and the part after
+        *sondern* takes its place. *Aber* adds: both parts are true.
+      fa: >
+        واژهٔ *sondern* جایگزین می‌کند: بخش نخست نادرست است و بخش پس از
+        *sondern* جای آن را می‌گیرد. واژهٔ *aber* می‌افزاید: هر دو بخش درست‌اند.
+      de: >
+        *Sondern* ersetzt: Der erste Teil ist falsch, der Teil nach *sondern*
+        kommt an seine Stelle. *Aber* fügt etwas hinzu: Beide Teile stimmen.
+    labels:
+      wrong: { en: wrong, fa: نادرست, de: falsch }
+      right: { en: right, fa: درست, de: richtig }
+      holds: { en: "true", fa: درست, de: stimmt }
+      alsotrue: { en: also true, fa: این هم درست, de: stimmt auch }
+    svg: |
+      <svg viewBox="0 0 320 252">
+        <!-- sondern: the first part is crossed out, the second takes its place -->
+        <text class="label" x="160" y="22" text-anchor="middle">Er kommt nicht heute, sondern morgen.</text>
+        <rect class="guide" x="24" y="40" width="104" height="44"/>
+        <text class="label" x="76" y="68" text-anchor="middle">heute</text>
+        <line class="line" x1="46" y1="62" x2="106" y2="62"/>
+        <rect class="shade" x="192" y="40" width="104" height="44"/>
+        <text class="label" x="244" y="68" text-anchor="middle">morgen</text>
+        <line class="line" x1="134" y1="62" x2="178" y2="62"/>
+        <polygon class="object" points="186,62 176,56 176,68"/>
+        <text class="note" x="76" y="104" text-anchor="middle">{{wrong}}</text>
+        <text class="note" x="244" y="104" text-anchor="middle">{{right}}</text>
+        <!-- aber: both parts stand, side by side -->
+        <text class="label" x="160" y="152" text-anchor="middle">Das Hotel ist nicht neu, aber sauber.</text>
+        <rect class="surface" x="24" y="170" width="104" height="44"/>
+        <text class="label" x="76" y="198" text-anchor="middle">nicht neu</text>
+        <rect class="surface" x="192" y="170" width="104" height="44"/>
+        <text class="label" x="244" y="198" text-anchor="middle">sauber</text>
+        <text class="label" x="160" y="198" text-anchor="middle">+</text>
+        <text class="note" x="76" y="234" text-anchor="middle">{{holds}}</text>
+        <text class="note" x="244" y="234" text-anchor="middle">{{alsotrue}}</text>
+      </svg>
+
+examples:
+  - de: Er kommt nicht heute, sondern morgen.
+    en: He isn't coming today but tomorrow.
+    fa: او امروز نمی‌آید، بلکه فردا می‌آید.
+  - de: Sie wohnt nicht in Wien, sondern in Graz.
+    en: She doesn't live in Vienna but in Graz.
+    fa: او در وین زندگی نمی‌کند، بلکه در گراتس.
+  - de: Wir fahren nicht mit dem Auto, sondern mit dem Zug.
+    en: We're going not by car but by train.
+    fa: ما با ماشین نمی‌رویم، بلکه با قطار.
+  - de: Das ist kein Tee, sondern Kaffee.
+    en: That isn't tea, it's coffee.
+    fa: این چای نیست، بلکه قهوه است.
+  - de: Ich habe keinen Bruder, sondern eine Schwester.
+    en: I don't have a brother but a sister.
+    fa: من برادر ندارم، بلکه یک خواهر دارم.
+  - de: Das Buch gehört nicht mir, sondern meiner Kollegin.
+    en: The book doesn't belong to me but to my colleague.
+    fa: این کتاب مال من نیست، بلکه مال همکارم است.
+  - de: Ich bleibe am Wochenende nicht zu Hause, sondern ich fahre zu meinen Eltern.
+    en: I'm not staying at home at the weekend; I'm going to my parents'.
+    fa: آخر هفته در خانه نمی‌مانم، بلکه پیش پدر و مادرم می‌روم.
+  - de: Der Kurs beginnt nicht um neun, sondern um halb zehn.
+    en: The course doesn't start at nine but at half past nine.
+    fa: کلاس ساعت نه شروع نمی‌شود، بلکه ساعت نه و نیم.
+  - de: Das Hotel ist nicht neu, aber sehr sauber.
+    en: The hotel isn't new, but it's very clean.
+    fa: هتل نو نیست، اما خیلی تمیز است.
+
+mistakes:
+  - wrong: Sie wohnt nicht in Wien, aber in Graz.
+    right: Sie wohnt nicht in Wien, sondern in Graz.
+    why:
+      en: "*In Graz* takes the place of *in Wien*, so the word is *sondern*. *Aber* would add something that is also true."
+      fa: "*in Graz* جای *in Wien* را می‌گیرد، پس *sondern* لازم است. *aber* چیزی می‌افزاید که آن هم درست است."
+      de: "*In Graz* kommt an die Stelle von *in Wien*. Darum *sondern*. Mit *aber* nennt man etwas, das auch stimmt."
+  - wrong: Das ist nicht ein Kuli, sondern ein Bleistift.
+    right: Das ist kein Kuli, sondern ein Bleistift.
+    why:
+      en: "A noun with *ein* is negated with *kein*, not with *nicht ein*."
+      fa: "اسمی که با *ein* می‌آید با *kein* منفی می‌شود، نه با *nicht ein*."
+      de: "Ein Nomen mit *ein* verneint man mit *kein*, nicht mit *nicht ein*."
+  - wrong: Ich bleibe nicht zu Hause, sondern gehe ich ins Kino.
+    right: Ich bleibe nicht zu Hause, sondern ich gehe ins Kino.
+    why:
+      en: "*Sondern* is position 0, like *und* and *aber*: the subject *ich* comes first, then the verb."
+      fa: "*sondern* مانند *und* و *aber* در جایگاه صفر است: نخست فاعل *ich* می‌آید و سپس فعل."
+      de: "*Sondern* steht wie *und* und *aber* auf Position 0: zuerst das Subjekt *ich*, dann das Verb."
+  - wrong: Wir fahren heute nicht mit dem Auto sondern mit dem Zug.
+    right: Wir fahren heute nicht mit dem Auto, sondern mit dem Zug.
+    why:
+      en: "There is always a comma before *sondern*."
+      fa: "پیش از *sondern* همیشه ویرگول می‌آید."
+      de: "Vor *sondern* steht immer ein Komma."
+  - wrong: Das Hotel ist nicht neu, sondern sehr sauber.
+    right: Das Hotel ist nicht neu, aber sehr sauber.
+    why:
+      en: "*Clean* does not replace *new*: both things are said about the hotel. That is *aber*."
+      fa: "«تمیز» جای «نو» را نمی‌گیرد؛ هر دو دربارهٔ هتل گفته می‌شوند. این‌جا *aber* لازم است."
+      de: "*Sauber* ersetzt nicht *neu*. Beides stimmt für das Hotel. Darum *aber*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Mein Auto ist nicht rot, ___ blau.
+    options: [aber, sondern, oder]
+    answer: sondern
+    explanation:
+      en: "A car has one colour: *blau* takes the place of *rot*, so *sondern*."
+      fa: "ماشین یک رنگ دارد: *blau* جای *rot* را می‌گیرد، پس *sondern*."
+      de: "Ein Auto hat eine Farbe: *blau* kommt an die Stelle von *rot*. Darum *sondern*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Wohnung ist nicht groß, ___ sie ist sehr hell.
+    options: [sondern, aber, denn]
+    answer: aber
+    explanation:
+      en: "Being bright does not replace being big; both are said about the flat: *aber*."
+      fa: "روشن بودن جای بزرگ بودن را نمی‌گیرد؛ هر دو دربارهٔ آپارتمان گفته می‌شوند: *aber*."
+      de: "*Hell* ersetzt nicht *groß*. Beides stimmt für die Wohnung: *aber*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das ist ___ Kuli, sondern ein Bleistift.
+    options: [nicht, keine, kein]
+    answer: kein
+    explanation:
+      en: "A noun with *ein* is negated with *kein*. *Kuli* is masculine (*der*), and after *das ist* it stays *kein*: *kein Kuli*."
+      fa: "اسمی که با *ein* می‌آید با *kein* منفی می‌شود. *Kuli* مذکر (*der*) است و پس از *das ist* همان *kein* می‌ماند: *kein Kuli*."
+      de: "Ein Nomen mit *ein* verneint man mit *kein*. *Kuli* hat den Artikel *der*, nach *das ist* heißt es *kein Kuli*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich gehe heute nicht ins Fitnessstudio, sondern ___ im Park.
+    options: [ich laufe, laufe ich, ich laufen]
+    answer: ich laufe
+    explanation:
+      en: "*Sondern* is position 0, so the clause after it starts with the subject: *sondern ich laufe*."
+      fa: "*sondern* در جایگاه صفر است، پس جملهٔ پس از آن با فاعل آغاز می‌شود: *sondern ich laufe*."
+      de: "*Sondern* steht auf Position 0. Danach kommt zuerst das Subjekt: *sondern ich laufe*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Der Termin ist ___, sondern am Mittwoch.
+    options: [am Dienstag nicht, nicht am Dienstag, kein Dienstag]
+    answer: nicht am Dienstag
+    explanation:
+      en: "With *sondern*, *nicht* stands directly before the part that is replaced: *nicht am Dienstag*."
+      fa: "با *sondern*، *nicht* درست پیش از بخشی می‌آید که جایگزین می‌شود: *nicht am Dienstag*."
+      de: "Bei *sondern* steht *nicht* direkt vor dem Teil, den man ersetzt: *nicht am Dienstag*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Was bedeutet: Nicht Anna hat angerufen, sondern ihre Schwester."
+    options:
+      - Anna und ihre Schwester haben angerufen.
+      - Annas Schwester hat angerufen, Anna nicht.
+      - Anna hat angerufen, ihre Schwester nicht.
+    answer: Annas Schwester hat angerufen, Anna nicht.
+    explanation:
+      en: "*Sondern* replaces *Anna* with *ihre Schwester*: the sister called, Anna did not."
+      fa: "*sondern* به جای *Anna*، *ihre Schwester* را می‌نشاند: خواهرش زنگ زد، نه آنا."
+      de: "*Sondern* setzt *ihre Schwester* an die Stelle von *Anna*: Die Schwester hat angerufen, Anna nicht."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Welcher Satz ist richtig?"
+    options:
+      - Ich trinke keinen Kaffee, sondern Tee.
+      - Ich trinke nicht Kaffee, aber Tee.
+      - Ich trinke keinen Kaffee sondern Tee.
+    answer: Ich trinke keinen Kaffee, sondern Tee.
+    explanation:
+      en: "*Tee* takes the place of *Kaffee*, so *sondern*, and there is always a comma before *sondern*."
+      fa: "*Tee* جای *Kaffee* را می‌گیرد، پس *sondern* لازم است، و پیش از *sondern* همیشه ویرگول می‌آید."
+      de: "*Tee* kommt an die Stelle von *Kaffee*: *sondern*. Und vor *sondern* steht immer ein Komma."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Unser Sohn ist nicht acht, ___ neun Jahre alt.
+    options: [aber, denn, sondern]
+    answer: sondern
+    explanation:
+      en: "He has one age: *neun* takes the place of *acht*, so *sondern*."
+      fa: "پسر یک سن دارد: *neun* جای *acht* را می‌گیرد، پس *sondern*."
+      de: "Er hat ein Alter: *neun* kommt an die Stelle von *acht*. Darum *sondern*."
+  - id: true-1
+    type: true-false
+    prompt: Das Konzert ist nicht am Freitag, sondern am Samstag.
+    answer: true
+    explanation:
+      en: "*Nicht* stands before *am Freitag*, and *am Samstag* replaces it. The sentence is correct."
+      fa: "*nicht* پیش از *am Freitag* آمده و *am Samstag* جای آن را می‌گیرد. جمله درست است."
+      de: "*Nicht* steht vor *am Freitag*, *am Samstag* kommt an seine Stelle. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir treffen uns nicht im Café, sondern treffen wir uns im Park.
+    answer: false
+    explanation:
+      en: "*Sondern* is position 0, so the subject comes first: *sondern wir treffen uns im Park*, or just *sondern im Park*."
+      fa: "*sondern* در جایگاه صفر است، پس نخست فاعل می‌آید: *sondern wir treffen uns im Park*، یا فقط *sondern im Park*."
+      de: "*Sondern* steht auf Position 0. Zuerst kommt das Subjekt: *sondern wir treffen uns im Park*, oder kurz *sondern im Park*."
+  - id: true-3
+    type: true-false
+    prompt: Wir bleiben nicht im Hotel, sondern wir schlafen bei Freunden.
+    answer: true
+    explanation:
+      en: "After *sondern* (position 0) the subject *wir* comes first, then the verb. The sentence is correct."
+      fa: "پس از *sondern* (جایگاه صفر) نخست فاعل *wir* می‌آید و سپس فعل. جمله درست است."
+      de: "Nach *sondern* (Position 0) kommt zuerst *wir*, dann das Verb. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Der Pullover ist nicht billig, sondern sehr schön.
+    answer: false
+    explanation:
+      en: "*Schön* does not replace *billig*; both are said about the pullover. That is *aber*: *nicht billig, aber sehr schön*."
+      fa: "*schön* جای *billig* را نمی‌گیرد؛ هر دو دربارهٔ پلیور گفته می‌شوند. این‌جا *aber* لازم است: *nicht billig, aber sehr schön*."
+      de: "*Schön* ersetzt nicht *billig*. Beides stimmt für den Pullover. Darum *aber*: *nicht billig, aber sehr schön*."
+  - id: true-5
+    type: true-false
+    prompt: Ich fahre nicht mit dem Bus, sondern ich gehe zu Fuß.
+    answer: true
+    explanation:
+      en: "Walking replaces the bus, and after *sondern* the clause starts with its subject *ich*. The sentence is correct."
+      fa: "پیاده رفتن جای اتوبوس را می‌گیرد و جملهٔ پس از *sondern* با فاعلش، *ich*، آغاز می‌شود. جمله درست است."
+      de: "Zu Fuß gehen kommt an die Stelle vom Bus. Nach *sondern* beginnt der Satz mit dem Subjekt *ich*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich komme nicht aus Österreich, ___ (sondern / aber) aus der Schweiz.
+    answers: [sondern]
+    explanation:
+      en: "*Aus der Schweiz* replaces *aus Österreich*: *sondern*."
+      fa: "*aus der Schweiz* جای *aus Österreich* را می‌گیرد: *sondern*."
+      de: "*Aus der Schweiz* kommt an die Stelle von *aus Österreich*: *sondern*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das Essen war nicht teuer, ___ (sondern / aber) sehr lecker.
+    answers: [aber]
+    explanation:
+      en: "Tasty does not replace cheap; both are true of the meal: *aber*."
+      fa: "خوشمزه بودن جای ارزان بودن را نمی‌گیرد؛ هر دو دربارهٔ غذا درست‌اند: *aber*."
+      de: "*Lecker* ersetzt nicht *teuer*. Beides stimmt für das Essen: *aber*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir haben ___ (kein) Auto, sondern zwei Fahrräder.
+    answers: [kein]
+    explanation:
+      en: "*Das Auto* is neuter, and in the *Akkusativ* the neuter form is *kein*: *kein Auto*."
+      fa: "*Auto* اسم خنثی (*das*) است و در حالت *Akkusativ* صورت خنثی همان *kein* است: *kein Auto*."
+      de: "*Das Auto* ist neutral. Im Akkusativ heißt es *kein*: *kein Auto*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich suche keinen Rock, sondern ___ (eine) Hose.
+    answers: [eine]
+    explanation:
+      en: "After *sondern* the new part is positive, with its own article: *eine Hose*."
+      fa: "بخش تازه پس از *sondern* مثبت است و حرف تعریف خودش را دارد: *eine Hose*."
+      de: "Nach *sondern* steht das Neue ohne Verneinung, mit seinem Artikel: *eine Hose*."
+  - id: error-1
+    type: find-error
+    prompt: Sie wohnt nicht in Hamburg, aber in Bremen.
+    answer: aber
+    explanation:
+      en: "*In Bremen* replaces *in Hamburg*, so it must be *sondern*."
+      fa: "*in Bremen* جای *in Hamburg* را می‌گیرد، پس باید *sondern* بیاید."
+      de: "*In Bremen* kommt an die Stelle von *in Hamburg*. Darum muss es *sondern* heißen."
+  - id: error-2
+    type: find-error
+    prompt: Nicht Paul hat angerufen, aber Tom.
+    answer: aber
+    explanation:
+      en: "*Tom* takes the place of *Paul*: only Tom called. So it must be *sondern*."
+      fa: "*Tom* جای *Paul* را می‌گیرد: فقط تام زنگ زده است. پس باید *sondern* بیاید."
+      de: "*Tom* kommt an die Stelle von *Paul*: Nur Tom hat angerufen. Darum muss es *sondern* heißen."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wir, fliegen, "nicht nach Rom,", sondern nach Paris]
+      - ["nicht nach Rom,", sondern nach Paris, fliegen, wir]
+    explanation:
+      en: "The verb *fliegen* is position 2. The part with *nicht* comes before the part with *sondern*; together they may also take position 1."
+      fa: "فعل *fliegen* در جایگاه دوم است. بخشِ با *nicht* پیش از بخشِ با *sondern* می‌آید و این دو با هم می‌توانند جایگاه اول را هم بگیرند."
+      de: "Das Verb *fliegen* steht auf Position 2. Der Teil mit *nicht* steht vor dem Teil mit *sondern*. Zusammen können sie auch Position 1 sein."
+  - id: order-2
+    type: word-order
+    answers:
+      - [das ist, "nicht mein Handy,", sondern das Handy von Paul]
+    explanation:
+      en: "The part with *nicht* comes first, and the part with *sondern* replaces it."
+      fa: "بخشِ با *nicht* نخست می‌آید و بخشِ با *sondern* جای آن را می‌گیرد."
+      de: "Zuerst kommt der Teil mit *nicht*, dann der Teil mit *sondern* an seiner Stelle."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Das ist kein Saft, …", sondern Wasser.]
+      - ["Das Hotel ist alt, …", aber sehr gemütlich.]
+      - ["Ich arbeite heute nicht, …", denn ich habe Urlaub.]
+    explanation:
+      en: "Water replaces juice: *sondern*. Cosy is also true of the old hotel: *aber*. Being on holiday is the reason: *denn*."
+      fa: "آب جای آب‌میوه را می‌گیرد: *sondern*. دنج بودن هم دربارهٔ هتل قدیمی درست است: *aber*. مرخصی دلیل است: *denn*."
+      de: "Wasser kommt an die Stelle von Saft: *sondern*. Gemütlich stimmt auch für das alte Hotel: *aber*. Urlaub ist der Grund: *denn*."
+
+review:
+  reviewer: an independent AI agent (fresh Claude Opus 5.5 subagents, blind passes
+    on the review sheet only, a second one on the disputed questions; not a
+    person)
+  date: 2026-11-28
+  pool: 159759c08f993e2d
