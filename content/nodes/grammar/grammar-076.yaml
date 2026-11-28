@@ -4,10 +4,251 @@ kind: grammar
 level: A1
 chapter: a1-nouns-articles
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-074]
 title:
   en: "*Negativartikel* *kein*"
   fa: "حرف تعریف منفی *kein*"
   de: "Negativartikel *kein*"
+
+explanations:
+  en:
+    rule: >
+      *Kein* negates a noun that would have *ein* or no article: *Das ist ein
+      Tisch. – Das ist kein Tisch.* *Er ist Lehrer. – Er ist kein Lehrer.* It
+      has the endings of *ein*: *kein* for masculine and neuter nouns, *keine*
+      for feminine ones. Unlike *ein*, it has a plural: *keine Äpfel*. The
+      verb stays as it is; *kein* alone makes the sentence negative.
+  fa:
+    rule: >
+      *kein* اسمی را منفی می‌کند که با *ein* یا بدون حرف تعریف می‌آید: *Das
+      ist ein Tisch. – Das ist kein Tisch.* و *Er ist Lehrer. – Er ist kein
+      Lehrer.* پایانه‌های آن مانند *ein* است: *kein* برای اسم‌های مذکر و خنثی
+      و *keine* برای اسم‌های مؤنث. ولی برخلاف *ein*، شکل جمع هم دارد: *keine
+      Äpfel*. در فارسی فعل را منفی می‌کنیم: «او معلم نیست». در آلمانی فعل
+      مثبت می‌ماند و *kein* پیش از اسم، جمله را منفی می‌کند.
+  de:
+    rule: >
+      *Kein* verneint ein Nomen mit *ein* oder ohne Artikel: *Das ist ein
+      Tisch. – Das ist kein Tisch.* *Er ist Lehrer. – Er ist kein Lehrer.*
+      *Kein* hat die Endungen von *ein*: *kein* bei maskulinen und neutralen
+      Nomen, *keine* bei femininen Nomen. Anders als *ein* hat *kein* einen
+      Plural: *keine Äpfel*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: "With *kein*", fa: "با *kein*", de: "Mit *kein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Tisch, ein Tisch, kein Tisch, Das ist kein Tisch.]
+    - [die Lampe, eine Lampe, keine Lampe, Das ist keine Lampe.]
+    - [das Buch, ein Buch, kein Buch, Das ist kein Buch.]
+    - [die Tische (Plural), –, keine Tische, Das sind keine Tische.]
+
+examples:
+  - de: Er ist kein Lehrer.
+    en: He is not a teacher.
+    fa: او معلم نیست.
+  - de: Das ist keine Katze, das ist ein Hund.
+    en: That is not a cat, it is a dog.
+    fa: این گربه نیست، سگ است.
+  - de: Das ist kein Problem.
+    en: That is no problem.
+    fa: مشکلی نیست.
+  - de: Das sind keine Äpfel, das sind Birnen.
+    en: These are not apples, they are pears.
+    fa: این‌ها سیب نیستند، گلابی‌اند.
+  - de: Heute ist kein Unterricht.
+    en: There are no classes today.
+    fa: امروز کلاس نیست.
+  - de: Im Kühlschrank ist keine Milch.
+    en: There is no milk in the fridge.
+    fa: در یخچال شیر نیست.
+  - de: Sie ist keine Ärztin.
+    en: She is not a doctor.
+    fa: او پزشک نیست.
+  - de: Hier ist kein Platz.
+    en: There is no room here.
+    fa: این‌جا جا نیست.
+
+mistakes:
+  - wrong: Das ist nicht ein Tisch.
+    right: Das ist kein Tisch.
+    why:
+      en: "*Nicht* and *ein* together become *kein*."
+      fa: "*nicht* و *ein* با هم *kein* می‌شوند."
+      de: "*Nicht* und *ein* zusammen sind *kein*."
+  - wrong: Das ist kein Lampe.
+    right: Das ist keine Lampe.
+    why:
+      en: "*Lampe* is feminine, so *keine*, as in *eine Lampe*."
+      fa: "*Lampe* اسم مؤنث است، پس *keine* می‌آید، مانند *eine Lampe*."
+      de: "*Lampe* ist feminin. Darum *keine*, wie bei *eine Lampe*."
+  - wrong: Das sind kein Äpfel.
+    right: Das sind keine Äpfel.
+    why:
+      en: "In the plural it is always *keine*."
+      fa: "در جمع همیشه *keine* می‌آید."
+      de: "Im Plural heißt es immer *keine*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist ___ Lampe.
+    options: [kein, keine]
+    answer: keine
+    explanation:
+      en: "*Lampe* is feminine: *keine Lampe*."
+      fa: "*Lampe* اسم مؤنث است: *keine Lampe*."
+      de: "*Lampe* ist feminin: *keine Lampe*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Das ist ___ Stuhl.
+    options: [kein, keine]
+    answer: kein
+    explanation:
+      en: "*Stuhl* is masculine: *kein Stuhl*."
+      fa: "*Stuhl* اسم مذکر است: *kein Stuhl*."
+      de: "*Stuhl* ist maskulin: *kein Stuhl*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das ist ___ Fahrrad.
+    options: [kein, keine]
+    answer: kein
+    explanation:
+      en: "*Fahrrad* is neuter: *kein Fahrrad*."
+      fa: "*Fahrrad* اسم خنثی است: *kein Fahrrad*."
+      de: "*Fahrrad* ist neutral: *kein Fahrrad*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Das sind ___ Äpfel.
+    options: [kein, keine]
+    answer: keine
+    explanation:
+      en: "*Äpfel* is a plural: *keine Äpfel*."
+      fa: "*Äpfel* جمع است: *keine Äpfel*."
+      de: "*Äpfel* ist Plural: *keine Äpfel*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Im Kühlschrank ist ___ Milch.
+    options: [kein, keine]
+    answer: keine
+    explanation:
+      en: "*Milch* is feminine: *keine Milch*."
+      fa: "*Milch* اسم مؤنث است: *keine Milch*."
+      de: "*Milch* ist feminin: *keine Milch*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Er ist ___ Lehrer.
+    options: [kein, keine]
+    answer: kein
+    explanation:
+      en: "*Lehrer* is masculine: *kein Lehrer*."
+      fa: "*Lehrer* اسم مذکر است: *kein Lehrer*."
+      de: "*Lehrer* ist maskulin: *kein Lehrer*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Das ist kein Hund., Das ist keine Hund., Das ist keinen Hund.]
+    answer: Das ist kein Hund.
+    explanation:
+      en: "*Hund* is masculine: *kein Hund*."
+      fa: "*Hund* اسم مذکر است: *kein Hund*."
+      de: "*Hund* ist maskulin: *kein Hund*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Das ist eine Tasse. Verneinung:"
+    options: [Das ist keine Tasse., Das ist kein Tasse., Das ist keinen Tasse.]
+    answer: Das ist keine Tasse.
+    explanation:
+      en: "*Eine* becomes *keine*: *Das ist keine Tasse.*"
+      fa: "*eine* به *keine* تبدیل می‌شود: *Das ist keine Tasse.*"
+      de: "Aus *eine* wird *keine*: *Das ist keine Tasse.*"
+  - id: true-1
+    type: true-false
+    prompt: Das ist kein Problem.
+    answer: true
+    explanation:
+      en: "*Problem* is neuter: *kein Problem*. The sentence is correct."
+      fa: "*Problem* اسم خنثی است: *kein Problem*. جمله درست است."
+      de: "*Problem* ist neutral: *kein Problem*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das sind kein Bananen.
+    answer: false
+    explanation:
+      en: "In the plural it is *keine*: *Das sind keine Bananen.*"
+      fa: "در جمع *keine* می‌آید: *Das sind keine Bananen.*"
+      de: "Im Plural heißt es *keine*: *Das sind keine Bananen.*"
+  - id: true-3
+    type: true-false
+    prompt: Heute ist keine Schule.
+    answer: true
+    explanation:
+      en: "*Schule* is feminine: *keine Schule*. The sentence is correct."
+      fa: "*Schule* اسم مؤنث است: *keine Schule*. جمله درست است."
+      de: "*Schule* ist feminin: *keine Schule*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Sie ist kein Ärztin.
+    answer: false
+    explanation:
+      en: "*Ärztin* is feminine (*-in*): *Sie ist keine Ärztin.*"
+      fa: "*Ärztin* اسم مؤنث است (*-in*): *Sie ist keine Ärztin.*"
+      de: "*Ärztin* ist feminin (*-in*): *Sie ist keine Ärztin.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist ___ (kein) Brille.
+    answers: [keine]
+    explanation:
+      en: "*Brille* is feminine: *keine Brille*."
+      fa: "*Brille* اسم مؤنث است: *keine Brille*."
+      de: "*Brille* ist feminin: *keine Brille*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Hier ist ___ (kein) Supermarkt.
+    answers: [kein]
+    explanation:
+      en: "*Supermarkt* is masculine: *kein Supermarkt*."
+      fa: "*Supermarkt* اسم مذکر است: *kein Supermarkt*."
+      de: "*Supermarkt* ist maskulin: *kein Supermarkt*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Das sind ___ (kein) Tomaten.
+    answers: [keine]
+    explanation:
+      en: "*Tomaten* is a plural: *keine Tomaten*."
+      fa: "*Tomaten* جمع است: *keine Tomaten*."
+      de: "*Tomaten* ist Plural: *keine Tomaten*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Er ist Arzt. – Nein, er ist ___ (kein) Arzt.
+    answers: [kein]
+    explanation:
+      en: "*Arzt* is masculine: *kein Arzt*. A job without an article is negated with *kein*."
+      fa: "*Arzt* اسم مذکر است: *kein Arzt*. شغلی که بدون حرف تعریف می‌آید با *kein* منفی می‌شود."
+      de: "*Arzt* ist maskulin: *kein Arzt*. Ein Beruf ohne Artikel wird mit *kein* verneint."
+  - id: error-1
+    type: find-error
+    prompt: Das ist keine Computer.
+    answer: keine
+    explanation:
+      en: "*Computer* is masculine: *Das ist kein Computer.*"
+      fa: "*Computer* اسم مذکر است: *Das ist kein Computer.*"
+      de: "*Computer* ist maskulin: *Das ist kein Computer.*"
+  - id: error-2
+    type: find-error
+    prompt: Hier sind kein Stühle.
+    answer: kein
+    explanation:
+      en: "*Stühle* is a plural: *Hier sind keine Stühle.*"
+      fa: "*Stühle* جمع است: *Hier sind keine Stühle.*"
+      de: "*Stühle* ist Plural: *Hier sind keine Stühle.*"
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: c18e41f9b86e9a15

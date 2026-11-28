@@ -4,10 +4,299 @@ kind: grammar
 level: A1
 chapter: a1-first-sentences
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-139]
 title:
   en: "Inversion"
   fa: "جابه‌جایی فاعل و فعل (*Inversion*)"
   de: "Inversion: Das Subjekt steht nach dem Verb"
+
+explanations:
+  en:
+    rule: >
+      Position 1 does not have to be the subject. A time (*morgen*, *am
+      Montag*), a place (*in Berlin*) or another part of the sentence can
+      stand there. The verb still stays in position 2, so the subject moves
+      behind the verb: *Morgen fahre ich nach Stuttgart.* This is called
+      inversion, and it is very common, above all with a time at the start.
+      English keeps the subject before the verb ("Tomorrow I go"); German
+      does not.
+  fa:
+    rule: >
+      جایگاه اول همیشه از آنِ فاعل نیست. یک قید زمان (*morgen*، *am Montag*)،
+      یک قید مکان (*in Berlin*) یا جزء دیگری از جمله هم می‌تواند در آغاز
+      بیاید. فعل باز هم در جایگاه دوم می‌ماند، پس فاعل به پس از فعل می‌رود:
+      *Morgen fahre ich nach Stuttgart.* به این جابه‌جایی *Inversion* می‌گویند
+      و بسیار رایج است، به‌ویژه وقتی جمله با قید زمان آغاز شود. در فارسی
+      می‌توان گفت «فردا من می‌روم»، ولی در آلمانی، وقتی جزء دیگری در آغاز آمده
+      باشد، فاعل نمی‌تواند پیش از فعل بماند.
+  de:
+    rule: >
+      Auf Position 1 muss nicht das Subjekt stehen. Dort kann auch eine Zeit
+      (*morgen*, *am Montag*), ein Ort (*in Berlin*) oder ein anderer Satzteil
+      stehen. Das Verb bleibt auf Position 2. Das Subjekt steht dann nach dem
+      Verb: *Morgen fahre ich nach Stuttgart.* Das heißt Inversion. Man macht
+      das sehr oft, vor allem mit einer Zeit am Anfang.
+
+table:
+  columns:
+    - { en: Position 1, fa: جایگاه اول, de: Position 1 }
+    - { en: "Position 2: verb", fa: "جایگاه دوم: فعل", de: "Position 2: Verb" }
+    - { en: Subject, fa: فاعل, de: Subjekt }
+    - { en: The rest, fa: بقیهٔ جمله, de: Rest }
+  rows:
+    - [Ich, fahre, –, morgen nach Stuttgart.]
+    - [Morgen, fahre, ich, nach Stuttgart.]
+    - [Heute, kocht, mein Vater, –]
+    - [Am Montag, beginnt, der Kurs, um 9 Uhr.]
+    - [In Hamburg, wohnt, meine Schwester, –]
+    - [Jetzt, habe, ich, Zeit.]
+
+# The subject and the time change places; the verb stays in position 2.
+diagrams:
+  - caption:
+      en: >
+        *Ich trinke heute Tee.* and *Heute trinke ich Tee.*: *ich* and *heute*
+        change places. The verb, shaded, stays in position 2.
+      fa: >
+        *Ich trinke heute Tee.* و *Heute trinke ich Tee.*: جای *ich* و *heute*
+        عوض می‌شود. فعل، که رنگی است، در جایگاه دوم می‌ماند.
+      de: >
+        *Ich trinke heute Tee.* und *Heute trinke ich Tee.*: *Ich* und *heute*
+        tauschen den Platz. Das Verb (farbig) bleibt auf Position 2.
+    labels:
+      first: { en: position 1, fa: جایگاه اول, de: Position 1 }
+      second: { en: position 2, fa: جایگاه دوم, de: Position 2 }
+      third: { en: position 3, fa: جایگاه سوم, de: Position 3 }
+    svg: |
+      <svg viewBox="0 0 320 196">
+        <text class="note" x="44" y="20" text-anchor="middle">{{first}}</text>
+        <text class="note" x="125" y="20" text-anchor="middle">{{second}}</text>
+        <text class="note" x="206" y="20" text-anchor="middle">{{third}}</text>
+        <!-- Ich trinke heute Tee. -->
+        <rect class="surface" x="4" y="32" width="80" height="40"/>
+        <rect class="shade" x="90" y="32" width="70" height="40"/>
+        <rect class="surface" x="166" y="32" width="80" height="40"/>
+        <rect class="surface" x="252" y="32" width="64" height="40"/>
+        <text class="label" x="44" y="58" text-anchor="middle">Ich</text>
+        <text class="label" x="125" y="58" text-anchor="middle">trinke</text>
+        <text class="label" x="206" y="58" text-anchor="middle">heute</text>
+        <text class="label" x="284" y="58" text-anchor="middle">Tee.</text>
+        <!-- the two parts change places; the verb stays -->
+        <line class="line" x1="44" y1="78" x2="200" y2="140"/>
+        <polyline class="line" points="190,141 200,140 193,132"/>
+        <line class="line" x1="206" y1="78" x2="50" y2="140"/>
+        <polyline class="line" points="57,132 50,140 60,141"/>
+        <!-- Heute trinke ich Tee. -->
+        <rect class="surface" x="4" y="148" width="80" height="40"/>
+        <rect class="shade" x="90" y="148" width="70" height="40"/>
+        <rect class="surface" x="166" y="148" width="80" height="40"/>
+        <rect class="surface" x="252" y="148" width="64" height="40"/>
+        <text class="label" x="44" y="174" text-anchor="middle">Heute</text>
+        <text class="label" x="125" y="174" text-anchor="middle">trinke</text>
+        <text class="label" x="206" y="174" text-anchor="middle">ich</text>
+        <text class="label" x="284" y="174" text-anchor="middle">Tee.</text>
+      </svg>
+
+examples:
+  - de: Morgen fahre ich nach Stuttgart.
+    en: Tomorrow I am going to Stuttgart.
+    fa: فردا به اشتوتگارت می‌روم.
+  - de: Heute kocht mein Vater.
+    en: Today my father is cooking.
+    fa: امروز پدرم آشپزی می‌کند.
+  - de: Am Wochenende besuchen wir unsere Oma.
+    en: At the weekend we visit our grandma.
+    fa: آخر هفته به دیدن مادربزرگمان می‌رویم.
+  - de: In Hamburg wohnt meine Schwester.
+    en: My sister lives in Hamburg.
+    fa: خواهرم در هامبورگ زندگی می‌کند.
+  - de: Um acht Uhr beginnt der Unterricht.
+    en: Class starts at eight o'clock.
+    fa: کلاس ساعت هشت شروع می‌شود.
+  - de: Jetzt habe ich Zeit.
+    en: Now I have time.
+    fa: الان وقت دارم.
+  - de: Im Sommer fahren wir nach Spanien.
+    en: In the summer we are going to Spain.
+    fa: تابستان به اسپانیا می‌رویم.
+
+mistakes:
+  - wrong: Morgen ich fahre nach Stuttgart.
+    right: Morgen fahre ich nach Stuttgart.
+    why:
+      en: "*Morgen* is position 1, so the verb comes next and the subject *ich* after it."
+      fa: "*morgen* جایگاه اول است، پس فعل بلافاصله پس از آن می‌آید و فاعل *ich* پس از فعل."
+      de: "*Morgen* ist Position 1. Dann kommt das Verb und danach das Subjekt *ich*."
+  - wrong: Heute ich bin müde.
+    right: Heute bin ich müde.
+    why:
+      en: "The verb stays in position 2, also when *heute* comes first."
+      fa: "فعل در جایگاه دوم می‌ماند، حتی وقتی *heute* در آغاز جمله است."
+      de: "Das Verb bleibt auf Position 2, auch wenn *heute* am Anfang steht."
+  - wrong: Am Montag der Kurs beginnt.
+    right: Am Montag beginnt der Kurs.
+    why:
+      en: "*Am Montag* is one position. The verb comes right after it, then the subject."
+      fa: "*am Montag* یک جایگاه است. فعل بلافاصله پس از آن می‌آید و سپس فاعل."
+      de: "*Am Montag* ist eine Position. Danach kommt das Verb, dann das Subjekt."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Morgen ___ nach Berlin.
+    options: [fahre ich, ich fahre, fahren ich]
+    answer: fahre ich
+    explanation:
+      en: "After *morgen* in position 1 the verb comes next, then *ich*."
+      fa: "پس از *morgen* در جایگاه اول، فعل می‌آید و سپس *ich*."
+      de: "Nach *morgen* auf Position 1 kommt das Verb, dann *ich*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Heute ___ müde.
+    options: [bin ich, ich bin, ist ich]
+    answer: bin ich
+    explanation:
+      en: "The verb stays in position 2: *Heute bin ich müde.*"
+      fa: "فعل در جایگاه دوم می‌ماند: *Heute bin ich müde.*"
+      de: "Das Verb bleibt auf Position 2: *Heute bin ich müde.*"
+  - id: gap-3
+    type: gap-fill
+    prompt: Am Samstag ___ Fußball.
+    options: [spielen wir, wir spielen, spielt wir]
+    answer: spielen wir
+    explanation:
+      en: "*Am Samstag* is position 1, then the verb, then *wir*."
+      fa: "*am Samstag* جایگاه اول است، سپس فعل و بعد *wir* می‌آید."
+      de: "*Am Samstag* ist Position 1, dann das Verb, dann *wir*."
+  - id: gap-4
+    type: gap-fill
+    prompt: In Wien ___ meine Tante.
+    options: [wohnt, wohnen, wohnst]
+    answer: wohnt
+    explanation:
+      en: "The subject is *meine Tante* (*sie*), after the verb. So the verb ends in *-t*."
+      fa: "فاعل *meine Tante* (*sie*) است که پس از فعل آمده، پس شناسهٔ فعل *-t* است."
+      de: "Das Subjekt ist *meine Tante* (*sie*). Es steht nach dem Verb. Das Verb hat *-t*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "am Abend / kochen / mein Mann"
+    options: [Am Abend kocht mein Mann., Am Abend mein Mann kocht., Am Abend kochen mein Mann.]
+    answer: Am Abend kocht mein Mann.
+    explanation:
+      en: "The verb in position 2, the subject *mein Mann* after it, with *-t*."
+      fa: "فعل در جایگاه دوم می‌آید و فاعل *mein Mann* پس از آن؛ شناسهٔ فعل *-t* است."
+      de: "Das Verb auf Position 2, danach das Subjekt *mein Mann*. Das Verb hat *-t*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "jetzt / haben / wir / Zeit"
+    options: [Jetzt haben wir Zeit., Jetzt wir haben Zeit., Jetzt wir Zeit haben.]
+    answer: Jetzt haben wir Zeit.
+    explanation:
+      en: "*Jetzt* is position 1, so the verb comes next and *wir* after it."
+      fa: "*jetzt* جایگاه اول است، پس فعل پس از آن می‌آید و *wir* پس از فعل."
+      de: "*Jetzt* ist Position 1. Dann kommt das Verb und danach *wir*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "im Sommer / fahren / meine Eltern / nach Italien"
+    options:
+      [
+        Im Sommer fahren meine Eltern nach Italien.,
+        Im Sommer meine Eltern fahren nach Italien.,
+        Meine Eltern im Sommer fahren nach Italien.,
+      ]
+    answer: Im Sommer fahren meine Eltern nach Italien.
+    explanation:
+      en: "The verb in position 2, the subject right after it, then the rest."
+      fa: "فعل در جایگاه دوم می‌آید، فاعل بلافاصله پس از آن و سپس بقیهٔ جمله."
+      de: "Das Verb auf Position 2, das Subjekt direkt danach, dann der Rest."
+  - id: true-1
+    type: true-false
+    prompt: Heute ich arbeite zu Hause.
+    answer: false
+    explanation:
+      en: "After *heute* the verb comes next: *Heute arbeite ich zu Hause.*"
+      fa: "پس از *heute* فعل می‌آید: *Heute arbeite ich zu Hause.*"
+      de: "Nach *heute* kommt das Verb: *Heute arbeite ich zu Hause.*"
+  - id: true-2
+    type: true-false
+    prompt: Am Sonntag schlafen wir lange.
+    answer: true
+    explanation:
+      en: "*Am Sonntag* is position 1, *schlafen* position 2, *wir* after it. The sentence is correct."
+      fa: "*am Sonntag* جایگاه اول است، *schlafen* جایگاه دوم و *wir* پس از آن. جمله درست است."
+      de: "*Am Sonntag* ist Position 1, *schlafen* Position 2, dann *wir*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Um neun Uhr beginnt der Film.
+    answer: true
+    explanation:
+      en: "The time is position 1, the verb position 2, then the subject. The sentence is correct."
+      fa: "زمان در جایگاه اول است، فعل در جایگاه دوم و سپس فاعل. جمله درست است."
+      de: "Die Zeit ist Position 1, das Verb Position 2, dann das Subjekt. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Morgen Lisa kommt aus Paris.
+    answer: false
+    explanation:
+      en: "The verb must come second: *Morgen kommt Lisa aus Paris.*"
+      fa: "فعل باید در جایگاه دوم باشد: *Morgen kommt Lisa aus Paris.*"
+      de: "Das Verb steht auf Position 2: *Morgen kommt Lisa aus Paris.*"
+  - id: true-5
+    type: true-false
+    prompt: In Berlin wohnen meine Eltern.
+    answer: true
+    explanation:
+      en: "*In Berlin* is position 1, the verb position 2, the subject after it. The sentence is correct."
+      fa: "*in Berlin* جایگاه اول است، فعل جایگاه دوم و فاعل پس از آن. جمله درست است."
+      de: "*In Berlin* ist Position 1, das Verb Position 2, dann das Subjekt. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Heute ___ (kochen) mein Bruder.
+    answers: [kocht]
+    explanation:
+      en: "The verb is in position 2; its subject *mein Bruder* (*er*) comes after it, so *-t*."
+      fa: "فعل در جایگاه دوم است و فاعلش *mein Bruder* (*er*) پس از آن می‌آید، پس شناسهٔ *-t* می‌گیرد."
+      de: "Das Verb steht auf Position 2. Das Subjekt *mein Bruder* (*er*) kommt danach: *-t*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Morgen ___ (fahren) wir nach Hamburg.
+    answers: [fahren]
+    explanation:
+      en: "The subject *wir* comes after the verb, and with *wir* the ending is *-en*."
+      fa: "فاعل *wir* پس از فعل آمده و با *wir* شناسهٔ فعل *-en* است."
+      de: "Das Subjekt *wir* steht nach dem Verb. Bei *wir* ist die Endung *-en*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [heute, kocht, mein Vater]
+      - [mein Vater, kocht, heute]
+    explanation:
+      en: "The verb stays in position 2. If *heute* comes first, the subject goes after the verb."
+      fa: "فعل در جایگاه دوم می‌ماند. اگر *heute* در آغاز بیاید، فاعل پس از فعل می‌رود."
+      de: "Das Verb bleibt auf Position 2. Steht *heute* am Anfang, kommt das Subjekt nach dem Verb."
+  - id: order-2
+    type: word-order
+    answers:
+      - [am Montag, beginnt, der Kurs]
+      - [der Kurs, beginnt, am Montag]
+    explanation:
+      en: "The verb stays in position 2. If *am Montag* comes first, the subject goes after the verb."
+      fa: "فعل در جایگاه دوم می‌ماند. اگر *am Montag* در آغاز بیاید، فاعل پس از فعل می‌رود."
+      de: "Das Verb bleibt auf Position 2. Steht *am Montag* am Anfang, kommt das Subjekt nach dem Verb."
+  - id: order-3
+    type: word-order
+    answers:
+      - [in Hamburg, wohnt, meine Schwester]
+      - [meine Schwester, wohnt, in Hamburg]
+    explanation:
+      en: "The verb stays in position 2. If *in Hamburg* comes first, the subject goes after the verb."
+      fa: "فعل در جایگاه دوم می‌ماند. اگر *in Hamburg* در آغاز بیاید، فاعل پس از فعل می‌رود."
+      de: "Das Verb bleibt auf Position 2. Steht *in Hamburg* am Anfang, kommt das Subjekt nach dem Verb."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 0e32d8c6ae07d6a2

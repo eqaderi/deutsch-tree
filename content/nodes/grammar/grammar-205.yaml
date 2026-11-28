@@ -4,10 +4,299 @@ kind: grammar
 level: A1
 chapter: a1-nouns-articles
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-059]
 title:
   en: "Gender rules of thumb"
   fa: "قاعده‌های سرانگشتی برای جنس دستوری"
   de: "Faustregeln für das Genus"
+
+explanations:
+  en:
+    rule: >
+      The meaning or the ending of a noun often tells you its gender. Days,
+      months, seasons, weather words, alcoholic drinks and car makes are
+      masculine (*der*). Nouns ending in *-ung*, *-heit*, *-keit*, *-ion* and
+      *-in* are feminine (*die*), and so are most nouns in *-e*. Nouns in
+      *-chen* and *-lein* are always neuter (*das*), and so are most nouns
+      that begin with *Ge-* and many that end in *-o*. These are rules of
+      thumb: learn the common exceptions in the table with them, and still
+      learn every noun with its article.
+  fa:
+    rule: >
+      معنا یا پایانهٔ اسم اغلب جنس دستوری آن را نشان می‌دهد. نام روزها،
+      ماه‌ها و فصل‌ها، واژه‌های مربوط به هوا، نوشیدنی‌های الکلی و مارک‌های
+      خودرو مذکرند (*der*). اسم‌هایی که به *-ung*، *-heit*، *-keit*، *-ion* و
+      *-in* ختم می‌شوند مؤنث‌اند (*die*)؛ بیشتر اسم‌هایی که به *-e* ختم
+      می‌شوند نیز مؤنث‌اند. اسم‌هایی که به *-chen* و *-lein* ختم می‌شوند
+      همیشه خنثی‌اند (*das*)، و همچنین بیشتر اسم‌هایی که با *Ge-* آغاز
+      می‌شوند و بسیاری از اسم‌هایی که به *-o* ختم می‌شوند. این‌ها قاعده‌های
+      سرانگشتی‌اند: استثناهای رایج جدول را همراه آن‌ها یاد بگیرید و باز هم هر
+      اسم را با حرف تعریفش بیاموزید.
+  de:
+    rule: >
+      Oft zeigt die Bedeutung oder die Endung das Genus. Wochentage, Monate,
+      Jahreszeiten, Wörter für das Wetter, alkoholische Getränke und
+      Automarken sind maskulin: *der*. Nomen auf *-ung*, *-heit*, *-keit*,
+      *-ion* und *-in* sind feminin: *die*. Die meisten Nomen auf *-e* sind
+      auch feminin. Nomen auf *-chen* und *-lein* sind immer neutral: *das*.
+      Die meisten Nomen mit *Ge-* und viele Nomen auf *-o* sind auch neutral.
+      Es gibt Ausnahmen. Lernen Sie den Artikel immer mit.
+
+table:
+  columns:
+    - { en: Sign, fa: نشانه, de: Merkmal }
+    - { en: Article, fa: حرف تعریف, de: Artikel }
+    - { en: Examples, fa: مثال, de: Beispiele }
+    - { en: Exceptions, fa: استثنا, de: Ausnahmen }
+  rows:
+    - ["Wochentage, Monate, Jahreszeiten", der, "der Montag, der Mai, der Herbst", das Frühjahr]
+    - [Wetter, der, "der Regen, der Schnee, der Nebel", "das Wetter, das Gewitter"]
+    - [alkoholische Getränke, der, "der Wein, der Sekt, der Schnaps", das Bier]
+    - [Automarken, der, "der BMW, der Mercedes, der VW", –]
+    - ["-ung, -heit, -keit, -ion", die, "die Rechnung, die Möglichkeit, die Station", –]
+    - ["-in (Frauen)", die, "die Lehrerin, die Freundin", –]
+    - ["-e (die meisten)", die, "die Lampe, die Straße, die Woche", "der Name, der Junge, der Käse, das Ende"]
+    - ["-chen, -lein", das, "das Mädchen, das Tischchen, das Brötchen", –]
+    - ["Ge- (die meisten)", das, "das Gebäude, das Gemüse, das Geschenk", "der Geburtstag, die Geschichte"]
+    - ["-o (viele)", das, "das Auto, das Konto, das Kino", der Euro]
+
+examples:
+  - de: Der Montag ist mein Lieblingstag.
+    en: Monday is my favourite day.
+    fa: دوشنبه روز محبوب من است.
+  - de: Der Herbst ist in Berlin oft kalt.
+    en: Autumn in Berlin is often cold.
+    fa: پاییز در برلین اغلب سرد است.
+  - de: Der Nebel ist heute sehr dicht.
+    en: The fog is very thick today.
+    fa: امروز مه خیلی غلیظ است.
+  - de: Die Rechnung ist zu hoch.
+    en: The bill is too high.
+    fa: مبلغ صورت‌حساب خیلی بالاست.
+  - de: Die Lehrerin heißt Frau Schmidt.
+    en: The teacher is called Ms Schmidt.
+    fa: نام معلم خانم *Schmidt* است.
+  - de: Das Brötchen ist noch warm.
+    en: The bread roll is still warm.
+    fa: نان هنوز گرم است.
+  - de: Das Gemüse ist frisch.
+    en: The vegetables are fresh.
+    fa: سبزی‌ها تازه‌اند.
+  - de: Das Konto ist leer.
+    en: The account is empty.
+    fa: حساب بانکی خالی است.
+  - de: Der Käse kommt aus Holland.
+    en: The cheese comes from Holland.
+    fa: پنیر از هلند می‌آید.
+  - de: Das Bier ist kalt.
+    en: The beer is cold.
+    fa: آبجو سرد است.
+
+mistakes:
+  - wrong: Das Zeitung liegt hier.
+    right: Die Zeitung liegt hier.
+    why:
+      en: "Nouns in *-ung* are always feminine: *die Zeitung*."
+      fa: "اسم‌هایی که به *-ung* ختم می‌شوند همیشه مؤنث‌اند: *die Zeitung*."
+      de: "Nomen auf *-ung* sind immer feminin: *die Zeitung*."
+  - wrong: Die Brötchen ist warm.
+    right: Das Brötchen ist warm.
+    why:
+      en: "Nouns in *-chen* are always neuter: *das Brötchen*."
+      fa: "اسم‌هایی که به *-chen* ختم می‌شوند همیشه خنثی‌اند: *das Brötchen*."
+      de: "Nomen auf *-chen* sind immer neutral: *das Brötchen*."
+  - wrong: Die Käse ist gut.
+    right: Der Käse ist gut.
+    why:
+      en: "Most nouns in *-e* are feminine, but *Käse* is an exception: *der Käse*."
+      fa: "بیشتر اسم‌هایی که به *-e* ختم می‌شوند مؤنث‌اند، ولی *Käse* استثناست: *der Käse*."
+      de: "Die meisten Nomen auf *-e* sind feminin. *Käse* ist eine Ausnahme: *der Käse*."
+  - wrong: Der Bier ist kalt.
+    right: Das Bier ist kalt.
+    why:
+      en: "Alcoholic drinks are masculine, but *Bier* is the exception: *das Bier*."
+      fa: "نوشیدنی‌های الکلی مذکرند، ولی *Bier* استثناست: *das Bier*."
+      de: "Alkoholische Getränke sind maskulin. *Bier* ist die Ausnahme: *das Bier*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ Wohnung ist groß.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "Nouns in *-ung* are feminine: *die Wohnung*."
+      fa: "اسم‌هایی که به *-ung* ختم می‌شوند مؤنث‌اند: *die Wohnung*."
+      de: "Nomen auf *-ung* sind feminin: *die Wohnung*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ Sommer ist warm.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "Seasons are masculine: *der Sommer*."
+      fa: "نام فصل‌ها مذکر است: *der Sommer*."
+      de: "Jahreszeiten sind maskulin: *der Sommer*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ Gebäude ist alt.
+    options: [Der, Die, Das]
+    answer: Das
+    explanation:
+      en: "Most nouns that begin with *Ge-* are neuter: *das Gebäude*."
+      fa: "بیشتر اسم‌هایی که با *Ge-* آغاز می‌شوند خنثی‌اند: *das Gebäude*."
+      de: "Die meisten Nomen mit *Ge-* sind neutral: *das Gebäude*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ Freiheit ist wichtig.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "Nouns in *-heit* are feminine: *die Freiheit*."
+      fa: "اسم‌هایی که به *-heit* ختم می‌شوند مؤنث‌اند: *die Freiheit*."
+      de: "Nomen auf *-heit* sind feminin: *die Freiheit*."
+  - id: gap-5
+    type: gap-fill
+    prompt: ___ Büro ist im ersten Stock.
+    options: [Der, Die, Das]
+    answer: Das
+    explanation:
+      en: "Many nouns in *-o* are neuter: *das Büro*."
+      fa: "بسیاری از اسم‌هایی که به *-o* ختم می‌شوند خنثی‌اند: *das Büro*."
+      de: "Viele Nomen auf *-o* sind neutral: *das Büro*."
+  - id: gap-6
+    type: gap-fill
+    prompt: ___ Wein kommt aus Italien.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "Alcoholic drinks are masculine: *der Wein*."
+      fa: "نوشیدنی‌های الکلی مذکرند: *der Wein*."
+      de: "Alkoholische Getränke sind maskulin: *der Wein*."
+  - id: gap-7
+    type: gap-fill
+    prompt: ___ Information ist richtig.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "Nouns in *-ion* are feminine: *die Information*."
+      fa: "اسم‌هایی که به *-ion* ختم می‌شوند مؤنث‌اند: *die Information*."
+      de: "Nomen auf *-ion* sind feminin: *die Information*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welches Nomen ist feminin?
+    options: [Zeitung, Tischchen, Dienstag]
+    answer: Zeitung
+    explanation:
+      en: "*-ung* is feminine: *die Zeitung*. *Das Tischchen* is neuter (*-chen*) and *der Dienstag* masculine (a day)."
+      fa: "*-ung* مؤنث است: *die Zeitung*. *das Tischchen* خنثی است (*-chen*) و *der Dienstag* مذکر (نام روز)."
+      de: "*-ung* ist feminin: *die Zeitung*. *Das Tischchen* ist neutral (*-chen*), *der Dienstag* ist maskulin (ein Tag)."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welches Nomen ist neutral?
+    options: [Brötchen, Freundin, Schnee]
+    answer: Brötchen
+    explanation:
+      en: "*-chen* is always neuter: *das Brötchen*. *Die Freundin* is feminine (*-in*) and *der Schnee* masculine (weather)."
+      fa: "*-chen* همیشه خنثی است: *das Brötchen*. *die Freundin* مؤنث است (*-in*) و *der Schnee* مذکر (هوا)."
+      de: "*-chen* ist immer neutral: *das Brötchen*. *Die Freundin* ist feminin (*-in*), *der Schnee* ist maskulin (Wetter)."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Welches Nomen ist maskulin?
+    options: [Name, Lampe, Straße]
+    answer: Name
+    explanation:
+      en: "Most nouns in *-e* are feminine (*die Lampe*, *die Straße*), but *Name* is an exception: *der Name*."
+      fa: "بیشتر اسم‌هایی که به *-e* ختم می‌شوند مؤنث‌اند (*die Lampe*، *die Straße*)، ولی *Name* استثناست: *der Name*."
+      de: "Die meisten Nomen auf *-e* sind feminin (*die Lampe*, *die Straße*). *Name* ist eine Ausnahme: *der Name*."
+  - id: true-1
+    type: true-false
+    prompt: Das Bier ist sehr kalt.
+    answer: true
+    explanation:
+      en: "*Bier* is the exception among alcoholic drinks: *das Bier*. The sentence is correct."
+      fa: "*Bier* در میان نوشیدنی‌های الکلی استثناست: *das Bier*. جمله درست است."
+      de: "*Bier* ist die Ausnahme: *das Bier*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Die Käse ist aus Frankreich.
+    answer: false
+    explanation:
+      en: "*Käse* is an exception to the *-e* rule: *der Käse*."
+      fa: "*Käse* از قاعدهٔ *-e* پیروی نمی‌کند: *der Käse*."
+      de: "*Käse* ist eine Ausnahme: *der Käse*."
+  - id: true-3
+    type: true-false
+    prompt: Der Herbst ist meine Lieblingsjahreszeit.
+    answer: true
+    explanation:
+      en: "Seasons are masculine: *der Herbst*. The sentence is correct."
+      fa: "نام فصل‌ها مذکر است: *der Herbst*. جمله درست است."
+      de: "Jahreszeiten sind maskulin: *der Herbst*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: ___ (der / die / das) Rechnung kommt morgen.
+    answers: [Die]
+    explanation:
+      en: "Nouns in *-ung* are feminine: *die Rechnung*."
+      fa: "اسم‌هایی که به *-ung* ختم می‌شوند مؤنث‌اند: *die Rechnung*."
+      de: "Nomen auf *-ung* sind feminin: *die Rechnung*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (der / die / das) Gemüse ist frisch.
+    answers: [Das]
+    explanation:
+      en: "Most nouns that begin with *Ge-* are neuter: *das Gemüse*."
+      fa: "بیشتر اسم‌هایی که با *Ge-* آغاز می‌شوند خنثی‌اند: *das Gemüse*."
+      de: "Die meisten Nomen mit *Ge-* sind neutral: *das Gemüse*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (der / die / das) Mai ist schön.
+    answers: [Der]
+    explanation:
+      en: "Months are masculine: *der Mai*."
+      fa: "نام ماه‌ها مذکر است: *der Mai*."
+      de: "Monate sind maskulin: *der Mai*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Mit Artikel: Lehrerin"
+    answers: [die Lehrerin]
+    explanation:
+      en: "Nouns in *-in* for a woman are feminine: *die Lehrerin*."
+      fa: "اسم‌هایی که با *-in* برای زن ساخته می‌شوند مؤنث‌اند: *die Lehrerin*."
+      de: "Nomen auf *-in* für Frauen sind feminin: *die Lehrerin*."
+  - id: error-1
+    type: find-error
+    prompt: Das Möglichkeit ist gut.
+    answer: Das
+    explanation:
+      en: "Nouns in *-keit* are feminine: *Die Möglichkeit ist gut.*"
+      fa: "اسم‌هایی که به *-keit* ختم می‌شوند مؤنث‌اند: *Die Möglichkeit ist gut.*"
+      de: "Nomen auf *-keit* sind feminin: *Die Möglichkeit ist gut.*"
+  - id: match-1
+    type: matching
+    answer:
+      - [Wohnung, die]
+      - [Konto, das]
+      - [Regen, der]
+    explanation:
+      en: "*-ung* is feminine (*die Wohnung*), many nouns in *-o* are neuter (*das Konto*), and weather words are masculine (*der Regen*)."
+      fa: "*-ung* مؤنث است (*die Wohnung*)، بسیاری از اسم‌های مختوم به *-o* خنثی‌اند (*das Konto*) و واژه‌های مربوط به هوا مذکرند (*der Regen*)."
+      de: "*-ung* ist feminin (*die Wohnung*), viele Nomen auf *-o* sind neutral (*das Konto*), Wetter ist maskulin (*der Regen*)."
+  - id: match-2
+    type: matching
+    answer:
+      - [Brötchen, das]
+      - [Station, die]
+      - [Januar, der]
+    explanation:
+      en: "*-chen* is neuter (*das Brötchen*), *-ion* feminine (*die Station*), and months masculine (*der Januar*)."
+      fa: "*-chen* خنثی است (*das Brötchen*)، *-ion* مؤنث (*die Station*) و نام ماه‌ها مذکر (*der Januar*)."
+      de: "*-chen* ist neutral (*das Brötchen*), *-ion* ist feminin (*die Station*), Monate sind maskulin (*der Januar*)."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 70eab9fd048b6fed

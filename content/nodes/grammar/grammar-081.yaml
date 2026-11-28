@@ -4,10 +4,341 @@ kind: grammar
 level: A1
 chapter: a1-first-sentences
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-001]
 title:
   en: "*Personalpronomen*, *Nominativ*"
   fa: "ضمیرهای شخصی در *Nominativ*"
   de: "Personalpronomen im Nominativ"
+
+explanations:
+  en:
+    rule: >
+      A personal pronoun stands for a person or a thing and is the subject of
+      the sentence: *ich*, *du*, *er*, *sie*, *es*, *wir*, *ihr*, *sie* and
+      *Sie*. Say *du* (and *ihr* to several people) to family, friends and
+      children, and *Sie* to adults you do not know well; *Sie* always has a
+      capital letter. For a thing the pronoun follows the article of the noun:
+      *der* becomes *er*, *die* becomes *sie*, *das* becomes *es*, and plural
+      *die* becomes *sie*. So *sie* can mean "she", "it" or "they", and *Sie*
+      means polite "you": the ending of the verb and the context tell you which.
+  fa:
+    rule: >
+      ضمیر شخصی جای اسمِ یک شخص یا یک چیز می‌نشیند و فاعل جمله است: *ich*،
+      *du*، *er*، *sie*، *es*، *wir*، *ihr*، *sie* و *Sie*. با خانواده، دوستان
+      و کودکان *du* به کار می‌رود (و برای چند نفر *ihr*)، و با بزرگسالی که او
+      را خوب نمی‌شناسید *Sie*؛ *Sie* رسمی همیشه با حرف بزرگ نوشته می‌شود. ضمیرِ
+      یک چیز از حرف تعریف اسم پیروی می‌کند: به جای *der* می‌آید *er*، به جای
+      *die* می‌آید *sie*، به جای *das* می‌آید *es* و به جای *die* جمع می‌آید
+      *sie*. در فارسی برای همهٔ این‌ها «آن» یا «آن‌ها» می‌گوییم، ولی در آلمانی
+      جنس اسم تعیین‌کننده است. از این رو *sie* می‌تواند «او» (زن)، «آن» یا
+      «آن‌ها» باشد و *Sie* همان «شما»ی رسمی است؛ شناسهٔ فعل و بافت جمله معنا را
+      روشن می‌کنند.
+  de:
+    rule: >
+      Ein Personalpronomen steht für eine Person oder eine Sache. Es ist das
+      Subjekt im Satz: *ich*, *du*, *er*, *sie*, *es*, *wir*, *ihr*, *sie* und
+      *Sie*. Zu Familie, Freunden und Kindern sagt man *du* (zu mehreren
+      Personen *ihr*). Zu Erwachsenen, die man nicht gut kennt, sagt man *Sie*.
+      *Sie* schreibt man immer groß. Bei Sachen kommt das Pronomen vom Artikel:
+      *der* wird zu *er*, *die* zu *sie*, *das* zu *es*, und im Plural *die* zu
+      *sie*.
+
+# Persons at a glance: who speaks, who is spoken to, who is spoken about.
+# The table below is the article-change table of content/README.md.
+diagrams:
+  - caption:
+      en: >
+        The persons: *ich* and *wir* speak, *du* and *ihr* are spoken to, *er*,
+        *sie*, *es* and plural *sie* are spoken about. Polite *Sie* is for one
+        person or for several.
+      fa: >
+        شخص‌ها: *ich* و *wir* گوینده‌اند، *du* و *ihr* شنونده، و *er*، *sie*،
+        *es* و *sie* جمع کسی یا چیزی که درباره‌اش حرف می‌زنیم. *Sie* رسمی هم
+        برای یک نفر به کار می‌رود و هم برای چند نفر.
+      de: >
+        Die Personen: *ich* und *wir* sprechen, mit *du* und *ihr* spricht man,
+        über *er*, *sie*, *es* und *sie* (Plural) spricht man. Das höfliche
+        *Sie* ist für eine Person oder für mehrere.
+    labels:
+      singular: { en: singular, fa: مفرد, de: Singular }
+      plural: { en: plural, fa: جمع, de: Plural }
+      first: { en: 1st person, fa: اول‌شخص, de: 1. Person }
+      second: { en: 2nd person, fa: دوم‌شخص, de: 2. Person }
+      third: { en: 3rd person, fa: سوم‌شخص, de: 3. Person }
+      polite: { en: polite, fa: رسمی, de: höflich }
+    svg: |
+      <svg viewBox="0 0 320 232">
+        <!-- column headings -->
+        <text class="note" x="146" y="20" text-anchor="middle">{{singular}}</text>
+        <text class="note" x="264" y="20" text-anchor="middle">{{plural}}</text>
+        <!-- 1st person -->
+        <text class="note" x="44" y="58" text-anchor="middle">{{first}}</text>
+        <rect class="surface" x="92" y="32" width="108" height="40"/>
+        <rect class="surface" x="210" y="32" width="108" height="40"/>
+        <text class="label" x="146" y="58" text-anchor="middle">ich</text>
+        <text class="label" x="264" y="58" text-anchor="middle">wir</text>
+        <!-- 2nd person -->
+        <text class="note" x="44" y="106" text-anchor="middle">{{second}}</text>
+        <rect class="surface" x="92" y="80" width="108" height="40"/>
+        <rect class="surface" x="210" y="80" width="108" height="40"/>
+        <text class="label" x="146" y="106" text-anchor="middle">du</text>
+        <text class="label" x="264" y="106" text-anchor="middle">ihr</text>
+        <!-- 3rd person -->
+        <text class="note" x="44" y="154" text-anchor="middle">{{third}}</text>
+        <rect class="surface" x="92" y="128" width="108" height="40"/>
+        <rect class="surface" x="210" y="128" width="108" height="40"/>
+        <text class="label" x="112" y="154" text-anchor="middle">er</text>
+        <text class="label" x="146" y="154" text-anchor="middle">sie</text>
+        <text class="label" x="180" y="154" text-anchor="middle">es</text>
+        <text class="label" x="264" y="154" text-anchor="middle">sie</text>
+        <!-- polite Sie: one box over both columns -->
+        <text class="note" x="44" y="210" text-anchor="middle">{{polite}}</text>
+        <rect class="shade" x="92" y="184" width="226" height="40"/>
+        <text class="label" x="205" y="210" text-anchor="middle">Sie</text>
+      </svg>
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: Pronoun, fa: ضمیر, de: Pronomen }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Tisch, er, ein Tisch → er, Der Tisch ist neu. Er ist schön.]
+    - [die Lampe, sie, eine Lampe → sie, Die Lampe ist alt. Sie ist schön.]
+    - [das Handy, es, ein Handy → es, Das Handy ist neu. Es ist teuer.]
+    - [die Stühle (Plural), sie, –, Die Stühle sind neu. Sie sind bequem.]
+
+examples:
+  - de: Ich heiße Sara. Und du?
+    en: My name is Sara. And you?
+    fa: اسم من سارا است. تو چطور؟
+  - de: Wir haben eine neue Lehrerin. Sie kommt aus Wien.
+    en: We have a new teacher. She comes from Vienna.
+    fa: ما معلم تازه‌ای داریم. او اهل وین است.
+  - de: Wo ist der Schlüssel? – Er liegt hier.
+    en: Where is the key? – It is here.
+    fa: کلید کجاست؟ – این‌جاست.
+  - de: Das Handy ist neu. Es ist sehr teuer.
+    en: The phone is new. It is very expensive.
+    fa: گوشی نو است. خیلی گران است.
+  - de: Wie ist die Wohnung? – Sie ist klein.
+    en: What is the flat like? – It is small.
+    fa: آپارتمان چطور است؟ – کوچک است.
+  - de: Kommen Sie aus Berlin, Frau Klein?
+    en: Are you from Berlin, Ms Klein?
+    fa: خانم کلاین، شما اهل برلین هستید؟
+  - de: Peter und Lisa wohnen in Köln. Sie arbeiten dort.
+    en: Peter and Lisa live in Cologne. They work there.
+    fa: پیتر و لیزا در کلن زندگی می‌کنند. آن‌ها همان‌جا کار می‌کنند.
+  - de: Ihr seid sehr nett.
+    en: You (plural) are very kind.
+    fa: شما (جمع) خیلی مهربان هستید.
+
+mistakes:
+  - wrong: Der Tisch ist neu. Es ist schön.
+    right: Der Tisch ist neu. Er ist schön.
+    why:
+      en: '*Tisch* is a *der* noun, so the pronoun is *er*, also for a thing. Do not copy the English "it".'
+      fa: "*Tisch* اسم مذکر (*der*) است، پس ضمیرش *er* است، حتی برای یک چیز. «آن» فارسی را به *es* برنگردانید."
+      de: "*Tisch* hat den Artikel *der*. Das Pronomen ist *er*, auch bei einer Sache."
+  - wrong: Die Kinder sind im Garten. Sie spielt.
+    right: Die Kinder sind im Garten. Sie spielen.
+    why:
+      en: '*Die Kinder* are plural, so *sie* means "they" and the verb ends in *-en*. *Sie spielt* means "she plays".'
+      fa: "*die Kinder* جمع است، پس *sie* یعنی «آن‌ها» و شناسهٔ فعل *-en* است. *sie spielt* یعنی «او (زن) بازی می‌کند»."
+      de: "*Die Kinder* ist Plural. Dann ist *sie* Plural, und das Verb hat *-en*. *Sie spielt* ist eine Frau."
+  - wrong: Frau Weber, kommst du morgen?
+    right: Frau Weber, kommen Sie morgen?
+    why:
+      en: "You call Ms Weber by her surname, so you say *Sie*, and the verb takes *-en*."
+      fa: "خانم وبر را با نام خانوادگی صدا می‌زنید، پس *Sie* رسمی به کار می‌رود و شناسهٔ فعل *-en* است."
+      de: "Man sagt *Frau Weber*. Dann sagt man *Sie*, und das Verb hat *-en*."
+  - wrong: Wo wohnen sie, Herr Braun?
+    right: Wo wohnen Sie, Herr Braun?
+    why:
+      en: 'Polite *Sie* always has a capital letter. Small *sie* means "they".'
+      fa: "*Sie* رسمی همیشه با حرف بزرگ نوشته می‌شود. *sie* با حرف کوچک یعنی «آن‌ها»."
+      de: "Das höfliche *Sie* schreibt man immer groß. Klein geschrieben ist *sie* eine Frau oder mehrere Personen."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Tisch ist neu. ___ ist schön.
+    options: [Er, Sie, Es]
+    answer: Er
+    explanation:
+      en: "*Der Tisch* becomes *er*, also for a thing."
+      fa: "به جای *der Tisch* ضمیر *er* می‌آید، حتی برای یک چیز."
+      de: "*Der Tisch* wird zu *er*, auch bei einer Sache."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Lampe ist alt. ___ ist aber schön.
+    options: [Er, Sie, Es]
+    answer: Sie
+    explanation:
+      en: "*Die Lampe* becomes *sie*."
+      fa: "به جای *die Lampe* ضمیر *sie* می‌آید."
+      de: "*Die Lampe* wird zu *sie*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Auto ist neu. ___ ist rot.
+    options: [Er, Sie, Es]
+    answer: Es
+    explanation:
+      en: "*Das Auto* becomes *es*."
+      fa: "به جای *das Auto* ضمیر *es* می‌آید."
+      de: "*Das Auto* wird zu *es*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Bücher sind teuer. ___ sind aber gut.
+    options: [Sie, Er, Es]
+    answer: Sie
+    explanation:
+      en: "*Die Bücher* is plural, and plural *die* becomes *sie*, with the verb *sind*."
+      fa: "*die Bücher* جمع است و به جای *die* جمع ضمیر *sie* می‌آید، با فعل *sind*."
+      de: "*Die Bücher* ist Plural. *Die* im Plural wird zu *sie*, das Verb ist *sind*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Paul, ___ bist sehr nett.
+    options: [du, Sie, er]
+    answer: du
+    explanation:
+      en: "You speak to Paul by his first name, and *bist* goes only with *du*."
+      fa: "پاول را با نام کوچک صدا می‌زنید و *bist* فقط با *du* می‌آید."
+      de: "Man spricht mit Paul und sagt seinen Vornamen. *Bist* passt nur zu *du*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Herr Müller, kommen ___ aus Hamburg?
+    options: [Sie, du, ihr]
+    answer: Sie
+    explanation:
+      en: "Mr Müller is addressed by his surname, so the polite *Sie*, with *kommen*."
+      fa: "آقای مولر با نام خانوادگی خطاب می‌شود، پس *Sie* رسمی می‌آید، با فعل *kommen*."
+      de: "Man sagt *Herr Müller*. Dann sagt man *Sie*: *kommen Sie*."
+  - id: gap-7
+    type: gap-fill
+    prompt: Lena und Tim, wo wohnt ___?
+    options: [ihr, du, Sie]
+    answer: ihr
+    explanation:
+      en: "You speak to two friends, so *ihr*, and *wohnt* fits *ihr*."
+      fa: "با دو دوست حرف می‌زنید، پس *ihr* می‌آید و *wohnt* با *ihr* جور است."
+      de: "Man spricht mit zwei Freunden. Dann sagt man *ihr*: *wohnt ihr*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Anna und ich wohnen in Bonn. ___ lernen Deutsch.
+    options: [Wir, Ihr, Er]
+    answer: Wir
+    explanation:
+      en: "*Anna und ich* is *wir*, and *lernen* fits *wir*."
+      fa: "*Anna und ich* یعنی *wir* (ما)، و *lernen* با *wir* جور است."
+      de: "*Anna und ich*, das ist *wir*. *Lernen* passt zu *wir*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Maria ist meine Freundin. ___ wohnt in Graz.
+    options: [Sie, Er, Es]
+    answer: Sie
+    explanation:
+      en: "Maria is a woman, so *sie*, with *wohnt*."
+      fa: "ماریا زن است، پس ضمیرش *sie* است، با فعل *wohnt*."
+      de: "Maria ist eine Frau. Das Pronomen ist *sie*."
+  - id: true-1
+    type: true-false
+    prompt: Wo ist die Tasche? – Er ist hier.
+    answer: false
+    explanation:
+      en: "*Die Tasche* becomes *sie*: *Sie ist hier.*"
+      fa: "به جای *die Tasche* ضمیر *sie* می‌آید: *Sie ist hier.*"
+      de: "*Die Tasche* wird zu *sie*: *Sie ist hier.*"
+  - id: true-2
+    type: true-false
+    prompt: Frau Schmidt, haben Sie heute Zeit?
+    answer: true
+    explanation:
+      en: "Ms Schmidt is addressed with the polite *Sie*, with a capital and *haben*. The sentence is correct."
+      fa: "خانم اشمیت با *Sie* رسمی خطاب شده است، با حرف بزرگ و فعل *haben*. جمله درست است."
+      de: "Bei *Frau Schmidt* sagt man *Sie*, groß geschrieben, mit *haben*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Das Fahrrad ist neu. Er ist blau.
+    answer: false
+    explanation:
+      en: "*Das Fahrrad* becomes *es*: *Es ist blau.*"
+      fa: "به جای *das Fahrrad* ضمیر *es* می‌آید: *Es ist blau.*"
+      de: "*Das Fahrrad* wird zu *es*: *Es ist blau.*"
+  - id: true-4
+    type: true-false
+    prompt: Die Kinder sind müde. Sie schlafen.
+    answer: true
+    explanation:
+      en: "*Die Kinder* is plural, so *sie* with *schlafen*. The sentence is correct."
+      fa: "*die Kinder* جمع است، پس *sie* با فعل *schlafen* می‌آید. جمله درست است."
+      de: "*Die Kinder* ist Plural: *sie schlafen*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wo ist der Schlüssel? – ___ (Personalpronomen) liegt hier.
+    answers: [Er]
+    explanation:
+      en: "*Der Schlüssel* becomes *er*."
+      fa: "به جای *der Schlüssel* ضمیر *er* می‌آید."
+      de: "*Der Schlüssel* wird zu *er*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das Handy ist kaputt. ___ (Personalpronomen) ist alt.
+    answers: [Es]
+    explanation:
+      en: "*Das Handy* becomes *es*."
+      fa: "به جای *das Handy* ضمیر *es* می‌آید."
+      de: "*Das Handy* wird zu *es*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Maria und Tom kommen aus Wien. ___ (Personalpronomen) wohnen jetzt in Berlin.
+    answers: [Sie]
+    explanation:
+      en: "Two people you talk about are *sie* (plural), with *wohnen*."
+      fa: "برای دو نفری که درباره‌شان حرف می‌زنیم *sie* جمع می‌آید، با فعل *wohnen*."
+      de: "Zwei Personen, über die man spricht: *sie* (Plural), mit *wohnen*."
+  - id: error-1
+    type: find-error
+    prompt: Die Suppe ist heiß. Er ist sehr gut.
+    answer: Er
+    explanation:
+      en: "*Die Suppe* becomes *sie*: *Sie ist sehr gut.*"
+      fa: "به جای *die Suppe* ضمیر *sie* می‌آید: *Sie ist sehr gut.*"
+      de: "*Die Suppe* wird zu *sie*: *Sie ist sehr gut.*"
+  - id: error-2
+    type: find-error
+    prompt: Tim und ich sind Freunde. Ihr spielen zusammen Fußball.
+    answer: Ihr
+    explanation:
+      en: "*Tim und ich* is *wir*: *Wir spielen zusammen Fußball.*"
+      fa: "*Tim und ich* یعنی *wir* (ما): *Wir spielen zusammen Fußball.*"
+      de: "*Tim und ich*, das ist *wir*: *Wir spielen zusammen Fußball.*"
+  - id: match-1
+    type: matching
+    answer:
+      - [der Tisch, er]
+      - [die Uhr, sie]
+      - [das Bett, es]
+    explanation:
+      en: "The pronoun follows the article: *der* → *er*, *die* → *sie*, *das* → *es*."
+      fa: "ضمیر از حرف تعریف پیروی می‌کند: *der* → *er*، *die* → *sie*، *das* → *es*."
+      de: "Das Pronomen kommt vom Artikel: *der* → *er*, *die* → *sie*, *das* → *es*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [sie, wohnt, in Wien]
+      - [in Wien, wohnt, sie]
+    explanation:
+      en: 'The verb comes second. *Sie* with *wohnt* is "she".'
+      fa: "فعل در جایگاه دوم می‌آید. *sie* با *wohnt* یعنی «او» (زن)."
+      de: "Das Verb steht an Position 2. *Sie* mit *wohnt* ist eine Frau."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: a4a301d0601a7cd9
