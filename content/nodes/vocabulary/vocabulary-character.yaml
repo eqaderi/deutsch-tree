@@ -1,36 +1,325 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-character
 kind: vocabulary
 level: B1
 chapter: b1-words-people-feelings
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Character"
   fa: "شخصیت و اخلاق"
   de: "Charakter"
+attemptSize: 15
 words:
   - word: ehrlich
+    class: adjective
+    level: B1
+    meaning:
+      en: honest
+      fa: صادق، روراست
+    definition: so, dass man immer die Wahrheit sagt
+    example:
+      de: Sei ehrlich, gefällt dir mein neues Kleid?
+      en: Be honest, do you like my new dress?
+      fa: راستش را بگو، لباس تازه‌ام را دوست داری؟
+    alsoAccepted: [aufrichtig]
+
   - word: höflich
+    class: adjective
+    level: B1
+    meaning:
+      en: polite
+      fa: مؤدب
+    definition: so, dass man freundlich „bitte“ und „danke“ sagt und andere mit Respekt behandelt
+    example:
+      de: Der Verkäufer war sehr höflich zu uns.
+      en: The shop assistant was very polite to us.
+      fa: فروشنده با ما خیلی مؤدب بود.
+
   - word: frech
+    class: adjective
+    level: B1
+    meaning:
+      en: cheeky, rude (especially a child)
+      fa: گستاخ، پررو
+    definition: so, dass man zu Erwachsenen Dinge sagt, die man nicht sagen soll, besonders als Kind
+    example:
+      de: Der Junge war heute sehr frech zu seiner Lehrerin.
+      en: The boy was very cheeky to his teacher today.
+      fa: پسرک امروز با معلمش خیلی گستاخی کرد.
+    alsoAccepted: [unverschämt, vorlaut, dreist]
+
   - word: mutig
+    class: adjective
+    level: B1
+    meaning:
+      en: brave
+      fa: شجاع، دلیر
+    definition: so, dass man keine Angst hat, etwas Gefährliches oder Schwieriges zu tun
+    example:
+      de: Die mutige Frau hat das Kind aus dem Wasser geholt.
+      en: The brave woman pulled the child out of the water.
+      fa: آن زن شجاع بچه را از آب بیرون کشید.
+    alsoAccepted: [tapfer, couragiert, furchtlos]
+
   - word: Mut
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: courage
+      fa: شجاعت، جرئت
+    definition: die Kraft, etwas Schwieriges oder Gefährliches trotz Angst zu tun
+    example:
+      de: Es hat viel Mut gekostet, vor allen Leuten zu sprechen.
+      en: It took a lot of courage to speak in front of everyone.
+      fa: صحبت کردن جلوی همه جرئت زیادی می‌خواست.
+    alsoAccepted: [die Tapferkeit, die Courage]
+
   - word: neugierig
+    class: adjective
+    level: B1
+    meaning:
+      en: curious, nosy
+      fa: کنجکاو (گاهی فضول)
+    definition: so, dass man alles wissen möchte, auch Dinge, die einen nichts angehen
+    example:
+      de: Kleine Kinder sind neugierig und fragen sehr viel.
+      en: Small children are curious and ask a lot of questions.
+      fa: بچه‌های کوچک کنجکاوند و زیاد می‌پرسند.
+
   - word: stolz
+    class: adjective
+    level: B1
+    meaning:
+      en: proud (of someone or something)
+      fa: مفتخر، سربلند
+    definition: froh, weil man selbst oder eine Person, die man gern hat, etwas Gutes geschafft hat
+    example:
+      de: Wir sind sehr stolz auf unsere Tochter.
+      en: We are very proud of our daughter.
+      fa: به دخترمان خیلی افتخار می‌کنیم.
+
   - word: tolerant
+    class: adjective
+    level: B1
+    meaning:
+      en: tolerant
+      fa: اهل مدارا، روادار
+    definition: so, dass man andere Meinungen und Arten zu leben akzeptiert, auch wenn man sie selbst nicht gut findet
+    example:
+      de: Meine Eltern sind tolerant, ich darf meine eigenen Entscheidungen treffen.
+      en: My parents are tolerant; I'm allowed to make my own decisions.
+      fa: پدر و مادرم اهل مدارا هستند و می‌گذارند خودم تصمیم بگیرم.
+    alsoAccepted: [duldsam]
+
   - word: zuverlässig
+    class: adjective
+    level: B1
+    meaning:
+      en: reliable
+      fa: قابل اعتماد، خوش‌قول
+    definition: so, dass man immer das macht, was man versprochen hat
+    example:
+      de: Mein Kollege ist sehr zuverlässig, er kommt nie zu spät.
+      en: My colleague is very reliable; he's never late.
+      fa: همکارم خیلی قابل اعتماد است؛ هیچ‌وقت دیر نمی‌آید.
+    alsoAccepted: [verlässlich]
+
   - word: ordentlich
+    class: adjective
+    level: B1
+    meaning:
+      en: tidy, orderly (a person who keeps things in order)
+      fa: مرتب، منظم
+    definition: so, dass alles immer an seinem Platz ist
+    example:
+      de: Meine Schwester ist sehr ordentlich, auf ihrem Schreibtisch liegt nie etwas herum.
+      en: My sister is very tidy; nothing is ever lying around on her desk.
+      fa: خواهرم خیلی منظم است؛ روی میزش هیچ‌وقت چیزی پخش‌وپلا نیست.
+    alsoAccepted: [aufgeräumt, ordnungsliebend]
+
   - word: sparsam
+    class: adjective
+    level: B1
+    meaning:
+      en: thrifty, careful with money
+      fa: صرفه‌جو
+    definition: so, dass man wenig Geld ausgibt und nichts verschwendet
+    example:
+      de: Mein Opa ist sehr sparsam und kauft nur das Nötigste.
+      en: My grandpa is very thrifty and only buys what he really needs.
+      fa: پدربزرگم خیلی صرفه‌جوست و فقط چیزهای ضروری می‌خرد.
+
   - word: kreativ
+    class: adjective
+    level: B1
+    meaning:
+      en: creative
+      fa: خلاق
+    definition: so, dass man viele neue Ideen hat und gern etwas Neues macht
+    example:
+      de: Meine Tochter malt gern und ist sehr kreativ.
+      en: My daughter likes painting and is very creative.
+      fa: دخترم نقاشی را دوست دارد و خیلی خلاق است.
+    alsoAccepted: [schöpferisch, einfallsreich]
+
   - word: optimistisch
+    class: adjective
+    level: B1
+    meaning:
+      en: optimistic
+      fa: خوش‌بین
+    definition: so, dass man glaubt, dass am Ende alles gut wird
+    example:
+      de: Trotz der Probleme bleibt sie optimistisch.
+      en: Despite the problems she remains optimistic.
+      fa: با وجود مشکلات، همچنان خوش‌بین است.
+    alsoAccepted: [zuversichtlich]
+
   - word: realistisch
+    class: adjective
+    level: B1
+    meaning:
+      en: realistic
+      fa: واقع‌بین
+    definition: so, dass man die Dinge so sieht, wie sie wirklich sind
+    example:
+      de: Sei realistisch, in zwei Wochen lernst du nicht fließend Deutsch.
+      en: Be realistic, you won't learn fluent German in two weeks.
+      fa: واقع‌بین باش، در دو هفته آلمانی را روان یاد نمی‌گیری.
+
   - word: vernünftig
+    class: adjective
+    level: B1
+    meaning:
+      en: sensible, reasonable
+      fa: عاقل، معقول
+    definition: so, dass man nicht verrückt handelt, sondern ruhig überlegt, was sinnvoll ist
+    example:
+      de: Es ist vernünftig, vor der Prüfung früh ins Bett zu gehen.
+      en: It's sensible to go to bed early before the exam.
+      fa: عاقلانه است که پیش از امتحان زود بخوابی.
+    alsoAccepted: [verständig, besonnen]
+
   - word: verrückt
+    class: adjective
+    level: B1
+    meaning:
+      en: crazy, mad
+      fa: دیوانه
+    definition: ganz anders als normal, ohne Vernunft
+    example:
+      de: Bei diesem Wetter willst du schwimmen gehen? Du bist ja verrückt!
+      en: You want to go swimming in this weather? You're crazy!
+      fa: در این هوا می‌خواهی شنا بروی؟ دیوانه‌ای!
+    alsoAccepted: [wahnsinnig, irre]
+
+  # ernst and ernsthaft overlap; each accepts the other, and neither is offered as a wrong meaning of the other.
   - word: ernst
+    class: adjective
+    level: B1
+    meaning:
+      en: serious (not laughing or joking)
+      fa: جدی (بی‌شوخی و خنده)
+    definition: mit einem Gesicht ohne Lächeln, weil etwas wichtig oder schwierig ist
+    example:
+      de: Warum machst du so ein ernstes Gesicht?
+      en: Why are you looking so serious?
+      fa: چرا این‌قدر قیافه‌ات جدی است؟
+    alsoAccepted: [ernsthaft]
+    tooCloseTo: [ernsthaft]
+
   - word: ernsthaft
+    class: adjective
+    level: B1
+    meaning:
+      en: serious, really meant (not as a joke)
+      fa: جدی، از روی قصد واقعی
+    definition: wirklich so gemeint und nicht als Spaß
+    example:
+      de: Denkst du ernsthaft darüber nach, nach Kanada zu ziehen?
+      en: Are you seriously thinking about moving to Canada?
+      fa: جداً به رفتن به کانادا فکر می‌کنی؟
+    alsoAccepted: [ernst, ernstlich, ernst gemeint]
+    tooCloseTo: [ernst]
+
+  # locker and cool are near each other; neither is offered as a wrong meaning of the other.
   - word: locker
+    class: adjective
+    level: B1
+    meaning:
+      en: easy-going, relaxed (a person)
+      fa: راحت، بی‌تکلف (آدم)
+    definition: entspannt und nicht streng, so dass man sich mit dieser Person wohlfühlt
+    example:
+      de: Unser neuer Chef ist ganz locker.
+      en: Our new boss is really easy-going.
+      fa: رئیس تازه‌مان آدم خیلی راحتی است.
+    alsoAccepted: [entspannt, lässig, unkompliziert, gelassen]
+    tooCloseTo: [cool]
+
   - word: cool
+    class: adjective
+    level: B1
+    meaning:
+      en: cool, great (said by young people)
+      fa: باحال، عالی (در زبان جوان‌ها)
+    definition: sehr gut und toll; so sagen es besonders junge Leute
+    example:
+      de: Deine neue Jacke ist echt cool!
+      en: Your new jacket is really cool!
+      fa: کاپشن تازه‌ات واقعاً باحال است!
+    alsoAccepted: [toll, super, klasse, spitze, geil, krass, mega, großartig]
+    tooCloseTo: [locker]
+
   - word: fair
+    class: adjective
+    level: B1
+    meaning:
+      en: fair, just
+      fa: منصف، منصفانه
+    definition: so, dass man alle Menschen gleich und richtig behandelt
+    example:
+      de: Es ist nicht fair, dass nur ich die Küche putzen muss.
+      en: It isn't fair that I'm the only one who has to clean the kitchen.
+      fa: منصفانه نیست که فقط من آشپزخانه را تمیز کنم.
+    alsoAccepted: [gerecht]
+
   - word: Humor
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: sense of humour
+      fa: شوخ‌طبعی
+    definition: wenn man gern lacht, Witze macht und auch über sich selbst lachen kann
+    example:
+      de: Mein Vater hat viel Humor.
+      en: My father has a great sense of humour.
+      fa: پدرم خیلی شوخ‌طبع است.
+    alsoAccepted: [der Sinn für Humor]
+
   - word: Geduld
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: patience
+      fa: صبر، حوصله
+    definition: wenn man ruhig warten kann und nicht schnell nervös wird
+    example:
+      de: Mit kleinen Kindern braucht man viel Geduld.
+      en: You need a lot of patience with small children.
+      fa: با بچه‌های کوچک باید صبر زیادی داشت.
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 138 questions, then the 24 and the 14 changed after the
+    earlier answers; not people)"
+  date: 2026-11-28
+  pool: 6b718baabea84ed1

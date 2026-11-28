@@ -1,40 +1,404 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-looks-clothes
 kind: vocabulary
 level: B1
 chapter: b1-words-people-feelings
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Looks and what you wear"
   fa: "ظاهر و پوشش"
   de: "Aussehen und Kleidung"
+attemptSize: 15
 words:
+  # hübsch and wunderschön are near each other; neither is offered as a wrong meaning of the other.
   - word: hübsch
+    class: adjective
+    level: B1
+    meaning:
+      en: pretty, good-looking
+      fa: قشنگ، خوش‌قیافه
+    definition: schön anzusehen, besonders ein Gesicht, eine Person oder ein Kleid
+    example:
+      de: Du siehst heute sehr hübsch aus.
+      en: You look very pretty today.
+      fa: امروز خیلی قشنگ شده‌ای.
+    alsoAccepted: [schön, gut aussehend, gutaussehend]
+    tooCloseTo: [wunderschön]
+
+  # schlank and mager both mean thin; neither is offered as a wrong meaning of the other.
   - word: schlank
+    class: adjective
+    level: B1
+    meaning:
+      en: slim (thin in an attractive way)
+      fa: باریک‌اندام، خوش‌اندام
+    definition: dünn auf eine schöne und gesunde Art
+    example:
+      de: Meine Schwester ist groß und schlank.
+      en: My sister is tall and slim.
+      fa: خواهرم قدبلند و باریک‌اندام است.
+    tooCloseTo: [mager]
+
   - word: mager
+    class: adjective
+    level: B1
+    meaning:
+      en: skinny, too thin
+      fa: نحیف، بیش از حد لاغر
+    definition: viel zu dünn, so dass man die Knochen sieht
+    example:
+      de: Nach der langen Krankheit war er ganz mager.
+      en: After the long illness he was very skinny.
+      fa: بعد از آن بیماری طولانی خیلی نحیف شده بود.
+    alsoAccepted: [dürr]
+    tooCloseTo: [schlank]
+
   - word: blass
+    class: adjective
+    level: B1
+    meaning:
+      en: pale
+      fa: رنگ‌پریده
+    definition: mit einem sehr hellen, fast weißen Gesicht, zum Beispiel wenn man krank ist
+    example:
+      de: Du bist so blass, geht es dir nicht gut?
+      en: You're so pale, are you not feeling well?
+      fa: چقدر رنگت پریده، حالت خوب نیست؟
+    alsoAccepted: [bleich]
+
+  # elegant and chic overlap; each accepts the other, and neither is offered as a wrong meaning of the other.
   - word: elegant
+    class: adjective
+    level: B1
+    meaning:
+      en: elegant (finely dressed)
+      fa: برازنده، باوقار (در لباس)
+    definition: fein und schön angezogen, zum Beispiel für ein Konzert oder eine Hochzeit
+    example:
+      de: Für die Hochzeit hat sie ein elegantes Kleid gekauft.
+      en: She bought an elegant dress for the wedding.
+      fa: برای عروسی لباس برازنده‌ای خریده است.
+    alsoAccepted: [chic, schick]
+    tooCloseTo: [chic]
+
   - word: chic
+    class: adjective
+    level: B1
+    meaning:
+      en: chic, stylish
+      fa: شیک، خوش‌پوش
+    definition: modern und schön angezogen, so dass es gut aussieht
+    example:
+      de: Mit dem neuen Mantel siehst du richtig chic aus.
+      en: You look really stylish in that new coat.
+      fa: با این پالتوی تازه حسابی شیک شده‌ای.
+    alsoAccepted: [schick, elegant, modisch, stilvoll]
+    tooCloseTo: [elegant]
+
   - word: Figur
+    class: noun
+    article: die
+    plural: Figuren
+    level: B1
+    meaning:
+      en: figure (the shape of the body)
+      fa: اندام (شکل بدن)
+    definition: die Form vom Körper einer Person
+    example:
+      de: Durch das viele Schwimmen hat sie eine sportliche Figur.
+      en: From all the swimming she has an athletic figure.
+      fa: با این‌همه شنا، اندام ورزیده‌ای دارد.
+    alsoAccepted: [die Statur, der Körperbau]
+
   - word: Frisur
+    class: noun
+    article: die
+    plural: Frisuren
+    level: B1
+    meaning:
+      en: hairstyle
+      fa: مدل مو
+    definition: die Art, wie die Haare geschnitten und gemacht sind
+    example:
+      de: Deine neue Frisur steht dir gut.
+      en: Your new hairstyle suits you.
+      fa: مدل موی تازه‌ات به تو می‌آید.
+    alsoAccepted: [der Haarschnitt]
+
   - word: Bart
+    class: noun
+    article: der
+    plural: Bärte
+    level: B1
+    meaning:
+      en: beard
+      fa: ریش
+    definition: die Haare im Gesicht von einem Mann, am Kinn und um den Mund
+    example:
+      de: Mein Bruder trägt seit dem Sommer einen Bart.
+      en: My brother has had a beard since the summer.
+      fa: برادرم از تابستان ریش گذاشته است.
+
   - word: Schmuck
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: jewellery
+      fa: زیورآلات (انگشتر، گردنبند و مانند آن)
+    definition: schöne Dinge, zum Beispiel aus Gold oder Silber, die man am Hals, an den Ohren oder an den Fingern trägt
+    example:
+      de: Sie trägt wenig Schmuck, meistens nur einen Ring.
+      en: She wears little jewellery, usually just a ring.
+      fa: زیورآلات زیادی به خود نمی‌زند؛ معمولاً فقط یک انگشتر.
+
+  # The scope list gives no "sich": the node teaches "sich schminken", to put on one's own make-up.
   - word: schminken
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to put on make-up
+      fa: آرایش کردن (صورت)
+    definition: Farbe auf das Gesicht machen, zum Beispiel auf die Augen und die Lippen
+    example:
+      de: Sie schminkt sich jeden Morgen vor dem Spiegel.
+      en: She puts on her make-up in front of the mirror every morning.
+      fa: هر روز صبح جلوی آینه آرایش می‌کند.
+
+  # The scope list gives "(sich)": the node teaches "sich rasieren", to shave oneself.
   - word: rasieren
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to shave
+      fa: اصلاح کردن، تراشیدن (مو)
+    definition: mit einem scharfen Messer oder einem Apparat die Haare im Gesicht oder am Körper wegmachen
+    example:
+      de: Mein Mann rasiert sich jeden Morgen.
+      en: My husband shaves every morning.
+      fa: شوهرم هر روز صبح صورتش را اصلاح می‌کند.
+    alsoAccepted: [rasieren]
+
   - word: äußerlich
+    class: adjective
+    level: B1
+    meaning:
+      en: outward, in appearance
+      fa: ظاهری، از نظر ظاهر
+    definition: "so, wie man es von außen sieht, zum Beispiel: „… sieht er ruhig aus, aber innen ist er nervös.“"
+    example:
+      de: Äußerlich sind die Zwillinge kaum zu unterscheiden.
+      en: In appearance the twins are almost impossible to tell apart.
+      fa: دوقلوها از نظر ظاهر تقریباً هیچ فرقی با هم ندارند.
+
   - word: wunderschön
+    class: adjective
+    level: B1
+    meaning:
+      en: gorgeous, very beautiful
+      fa: بسیار زیبا
+    definition: sehr, sehr schön
+    example:
+      de: Du hast wunderschöne Augen.
+      en: You have gorgeous eyes.
+      fa: چشم‌های بسیار زیبایی داری.
+    alsoAccepted: [bildschön, sehr schön]
+    tooCloseTo: [hübsch]
+
   - word: kräftig
+    class: adjective
+    level: B1
+    meaning:
+      en: strong, sturdy (well built)
+      fa: قوی‌هیکل، تنومند
+    definition: mit viel Kraft und starken Muskeln
+    example:
+      de: Der kräftige Mann trägt den Schrank allein.
+      en: The sturdy man is carrying the wardrobe on his own.
+      fa: آن مرد قوی‌هیکل کمد را به‌تنهایی می‌برد.
+    alsoAccepted: [stark, muskulös, stämmig]
+
   - word: Uniform
+    class: noun
+    article: die
+    plural: Uniformen
+    level: B1
+    meaning:
+      en: uniform
+      fa: لباس فرم، اونیفورم
+    definition: die gleiche Kleidung für alle in einem Beruf, zum Beispiel bei der Polizei
+    example:
+      de: Die Piloten tragen eine dunkelblaue Uniform.
+      en: The pilots wear a dark blue uniform.
+      fa: خلبان‌ها لباس فرم سرمه‌ای می‌پوشند.
+    alsoAccepted: [die Dienstkleidung]
+
   - word: Kostüm
+    class: noun
+    article: das
+    plural: Kostüme
+    level: B1
+    meaning:
+      en: costume, fancy dress
+      fa: لباس مبدل، لباس نمایش
+    definition: Kleidung, mit der man eine andere Person spielt, zum Beispiel im Theater oder im Karneval
+    example:
+      de: Zum Karneval trägt mein Sohn ein Kostüm als Pirat.
+      en: For carnival my son wears a pirate costume.
+      fa: پسرم در کارناوال لباس دزد دریایی می‌پوشد.
+    alsoAccepted: [die Verkleidung]
+
   - word: Hut
+    class: noun
+    article: der
+    plural: Hüte
+    level: B1
+    meaning:
+      en: hat (with a brim)
+      fa: کلاه (لبه‌دار)
+    definition: etwas mit einem festen Rand rundherum, das man auf dem Kopf trägt
+    example:
+      de: Im Sommer trägt mein Opa immer einen Hut.
+      en: In summer my grandpa always wears a hat.
+      fa: پدربزرگم تابستان‌ها همیشه کلاه سرش می‌گذارد.
+
+  # Socke and Strumpf are near each other; neither is offered as a wrong meaning of the other.
   - word: Socke
+    class: noun
+    article: die
+    plural: Socken
+    level: B1
+    meaning:
+      en: sock
+      fa: جوراب (ساق‌کوتاه)
+    definition: ein kurzes Kleidungsstück für den Fuß, das man im Schuh trägt
+    example:
+      de: Ich finde immer nur eine Socke, wo ist die andere?
+      en: I can only ever find one sock, where's the other one?
+      fa: همیشه فقط یک لنگه جوراب را پیدا می‌کنم؛ آن یکی کجاست؟
+    alsoAccepted: [der Socken, der Strumpf]
+    tooCloseTo: [Strumpf]
+
   - word: Strumpf
+    class: noun
+    article: der
+    plural: Strümpfe
+    level: B1
+    meaning:
+      en: stocking (a long, thin sock)
+      fa: جوراب بلند و نازک
+    definition: ein langes, dünnes Kleidungsstück für einen Fuß und ein Bein; man trägt zwei davon
+    example:
+      de: Zum Rock trägt sie schwarze Strümpfe.
+      en: She wears black stockings with the skirt.
+      fa: با دامن، جوراب بلند مشکی می‌پوشد.
+    tooCloseTo: [Socke]
+
   - word: Bikini
+    class: noun
+    article: der
+    plural: Bikinis
+    level: B1
+    meaning:
+      en: bikini
+      fa: مایوی دوتکه
+    definition: Badekleidung für Frauen aus zwei Teilen
+    example:
+      de: Für den Urlaub am Meer kauft sie einen neuen Bikini.
+      en: She's buying a new bikini for the holiday by the sea.
+      fa: برای تعطیلات کنار دریا یک مایوی دوتکهٔ تازه می‌خرد.
+
   - word: Knopf
+    class: noun
+    article: der
+    plural: Knöpfe
+    level: B1
+    meaning:
+      en: button
+      fa: دکمه
+    definition: ein kleines rundes Ding an einem Hemd oder einer Jacke, mit dem man sie zumacht
+    example:
+      de: An meinem Mantel fehlt ein Knopf.
+      en: There's a button missing on my coat.
+      fa: یکی از دکمه‌های پالتویم افتاده است.
+
   - word: Tuch
+    class: noun
+    article: das
+    plural: Tücher
+    level: B1
+    meaning:
+      en: cloth; scarf (a square piece of fabric)
+      fa: دستمال‌گردن، روسری (تکه‌ای پارچه)
+    definition: ein Stück Stoff, zum Beispiel für den Hals oder den Kopf oder zum Putzen
+    example:
+      de: Sie bindet sich ein buntes Tuch um den Hals.
+      en: She ties a colourful scarf around her neck.
+      fa: دستمال‌گردن رنگارنگی دور گردنش می‌بندد.
+    alsoAccepted: [das Halstuch, das Kopftuch]
+
   - word: anhaben
+    class: verb
+    level: B1
+    meaning:
+      en: to have on, to be wearing
+      fa: به تن داشتن، پوشیده بودن
+    definition: ein Kleidungsstück gerade am Körper tragen
+    example:
+      de: Was hattest du gestern auf der Party an?
+      en: What were you wearing at the party yesterday?
+      fa: دیروز در مهمانی چه پوشیده بودی؟
+    alsoAccepted: [tragen]
+
   - word: nähen
+    class: verb
+    level: B1
+    meaning:
+      en: to sew
+      fa: دوختن
+    definition: mit Nadel und Faden Stoff zusammenmachen, zum Beispiel ein Kleid
+    example:
+      de: Meine Mutter näht mir einen neuen Rock.
+      en: My mother is sewing me a new skirt.
+      fa: مادرم برایم دامن تازه‌ای می‌دوزد.
+
   - word: Nadel
+    class: noun
+    article: die
+    plural: Nadeln
+    level: B1
+    meaning:
+      en: needle
+      fa: سوزن
+    definition: ein dünnes, spitzes Ding aus Metall mit einem kleinen Loch für den Faden
+    example:
+      de: Hast du eine Nadel und schwarzen Faden?
+      en: Do you have a needle and black thread?
+      fa: سوزن و نخ مشکی داری؟
+    alsoAccepted: [die Nähnadel]
+
   - word: Garderobe
+    class: noun
+    article: die
+    plural: Garderoben
+    level: B1
+    meaning:
+      en: cloakroom (where you leave your coat)
+      fa: رخت‌کن (جای تحویل پالتو و کاپشن)
+    definition: der Ort, wo man im Theater, im Museum oder im Restaurant Mantel und Jacke abgibt
+    example:
+      de: Bitte geben Sie Ihre Jacke an der Garderobe ab.
+      en: Please leave your jacket at the cloakroom.
+      fa: لطفاً کاپشن‌تان را در رخت‌کن تحویل بدهید.
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 162 questions, then the 36 and the 15 changed after the
+    earlier answers; not people)"
+  date: 2026-11-28
+  pool: 1eabdf2cb723161e

@@ -138,6 +138,11 @@ test.each([
   ['Latein ist schwer.', 'La-tein ist schwer.'],
   ['in der Cafeteria', 'in der Kaffeterihja'],
   ['das Sekretariat', 'das Sekretarijat'],
+  // #88: the voice stresses the first syllable of these, or says chic with a long i.
+  ['das Kostüm', 'das Koss-tüm'],
+  ['Bitte geben Sie Ihre Jacke an der Garderobe ab.', 'Bitte geben Sie Ihre Jacke an der Garde-robe ab.'],
+  ['Sie kann gut mit Kindern umgehen.', 'Sie kann gut mit Kindern ummgehen.'],
+  ['Du siehst richtig chic aus.', 'Du siehst richtig schick aus.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })
