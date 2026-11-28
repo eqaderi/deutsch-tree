@@ -44,6 +44,36 @@ test('a vocabulary question from German shows its meanings in an order drawn for
   expect([...placesOfAnswer(question, (option) => option.word === question.answer)].sort()).toEqual([0, 1, 2, 3])
 })
 
+test('over many attempts the right option stands in each place about as often, whatever place the pool gives it', () => {
+  const meaning = vocabularyPool([TISCH, TUER, BETT, LAMPE, STUHL]).find(
+    (asked): asked is MeaningOfWordQuestion => asked.type === 'meaning-of-word',
+  )
+  if (!meaning) throw new Error('the pool asks every word from German')
+  // The right option last, as the vocabulary pool tends to hold it, and first, as writers tend to write it.
+  const choice = multipleChoice('q1', 'wohnen', ['wohne', 'wohnst', 'wohnt'])
+  const gap = gapFill('q2', 'wohnen', ['wohne', 'wohnst', 'wohnt'])
+  const attempts = 4000
+
+  for (const [question, place] of [
+    [
+      meaning,
+      (asked: Question) => (asked as MeaningOfWordQuestion).options.findIndex((o) => o.word === meaning.answer),
+    ],
+    [choice, (asked: Question) => (asked as typeof choice).options.indexOf('wohnen')],
+    [gap, (asked: Question) => (asked as typeof gap).options.indexOf('wohnen')],
+  ] as const) {
+    const counts = [0, 0, 0, 0]
+    for (let seed = 0; seed < attempts; seed += 1) {
+      const at = place(asAsked(question, seededRandom(seed)))
+      counts[at] = (counts[at] ?? 0) + 1
+    }
+    for (const count of counts) {
+      expect(count / attempts).toBeGreaterThan(0.22)
+      expect(count / attempts).toBeLessThan(0.28)
+    }
+  }
+})
+
 /** ich – wohne, du – wohnst, wir – wohnen. The partners as the node file pairs them are the answer. */
 function matching(answer: string[]): MatchingQuestion {
   return {
