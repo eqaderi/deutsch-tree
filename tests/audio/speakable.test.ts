@@ -138,6 +138,12 @@ test.each([
   ['Latein ist schwer.', 'La-tein ist schwer.'],
   ['in der Cafeteria', 'in der Kaffeterihja'],
   ['das Sekretariat', 'das Sekretarijat'],
+  // #90: wrong stress, a schwa that is not there, and an English [sk].
+  ['ein Kurs für Senioren', 'ein Kurs für Senjoren'],
+  ['Die Zahncreme ist leer.', 'Die Zahnkreem ist leer.'],
+  ['Beim Skifahren', 'Beim Schifahren'],
+  ['eine Diät', 'eine Di-ät'],
+  ['Ein Sozialarbeiter hilft.', 'Ein So-zial-arbeiter hilft.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })

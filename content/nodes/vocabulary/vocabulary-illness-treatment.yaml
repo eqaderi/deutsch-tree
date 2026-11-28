@@ -1,40 +1,404 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-illness-treatment
 kind: vocabulary
 level: B1
 chapter: b1-words-health
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Illness and treatment"
   fa: "بیماری و درمان"
   de: "Krankheit und Behandlung"
+attemptSize: 15
 words:
   - word: Erkältung
+    class: noun
+    article: die
+    plural: Erkältungen
+    level: B1
+    meaning:
+      en: a cold (the illness)
+      fa: سرماخوردگی
+    definition: eine leichte Krankheit mit Husten, Schnupfen und Halsschmerzen
+    example:
+      de: Ich habe eine starke Erkältung und bleibe heute zu Hause.
+      en: I have a bad cold and am staying at home today.
+      fa: سرماخوردگی شدیدی دارم و امروز در خانه می‌مانم.
+
   - word: erkälten
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to catch a cold
+      fa: سرما خوردن
+    definition: eine leichte Krankheit mit Husten und Schnupfen bekommen, zum Beispiel nach einem Spaziergang im Regen
+    example:
+      de: Ich habe mich beim Fußballspiel im Regen erkältet.
+      en: I caught a cold at the football match in the rain.
+      fa: در مسابقهٔ فوتبال زیر باران سرما خوردم.
+
   - word: Schnupfen
+    class: noun
+    article: der
+    plural: Schnupfen
+    level: B1
+    meaning:
+      en: runny nose, sniffles
+      fa: آب‌ریزش بینی
+    definition: wenn die Nase läuft und man oft ein Taschentuch braucht
+    example:
+      de: Mit Schnupfen kann ich nachts schlecht schlafen.
+      en: With a runny nose I sleep badly at night.
+      fa: با آب‌ریزش بینی شب‌ها بد می‌خوابم.
+
   - word: Husten
+    class: noun
+    article: der
+    plural: Husten
+    level: B1
+    meaning:
+      en: cough
+      fa: سرفه
+    definition: wenn man immer wieder laut Luft aus dem Hals stoßen muss, zum Beispiel bei einer Erkältung
+    example:
+      de: Gegen den Husten trinke ich heißen Tee mit Honig.
+      en: For my cough I drink hot tea with honey.
+      fa: برای سرفه چای داغ با عسل می‌نوشم.
+
   - word: Infektion
+    class: noun
+    article: die
+    plural: Infektionen
+    level: B1
+    meaning:
+      en: infection
+      fa: عفونت
+    definition: eine Krankheit, die entsteht, wenn sehr kleine Lebewesen wie Bakterien in den Körper kommen
+    example:
+      de: Die Wunde ist ganz rot, vielleicht hat sie eine Infektion.
+      en: The wound is very red; perhaps it is infected.
+      fa: زخم خیلی قرمز شده است؛ شاید عفونت کرده باشد.
+
   - word: Virus
+    class: noun
+    article: der
+    plural: Viren
+    level: B1
+    meaning:
+      en: virus
+      fa: ویروس
+    definition: etwas sehr Kleines, das man nicht sieht und das Krankheiten wie die Grippe bringt
+    example:
+      de: Im Winter gehen viele Viren um, also wasch dir oft die Hände.
+      en: Lots of viruses go around in winter, so wash your hands often.
+      fa: در زمستان ویروس‌های زیادی در گردش است، پس دست‌هایت را زیاد بشوی.
+    alsoAccepted: [das Virus]
+
   - word: Verletzung
+    class: noun
+    article: die
+    plural: Verletzungen
+    level: B1
+    meaning:
+      en: injury
+      fa: آسیب‌دیدگی، جراحت
+    definition: ein Schaden am Körper, zum Beispiel nach einem Unfall oder beim Sport
+    example:
+      de: Nach dem Unfall kam er mit schweren Verletzungen ins Krankenhaus.
+      en: After the accident he was taken to hospital with serious injuries.
+      fa: بعد از تصادف با جراحت‌های شدید به بیمارستان منتقل شد.
+    tooCloseTo: [Wunde]
+
   - word: Wunde
+    class: noun
+    article: die
+    plural: Wunden
+    level: B1
+    meaning:
+      en: wound
+      fa: زخم
+    definition: eine Stelle, an der die Haut offen ist und vielleicht blutet
+    example:
+      de: Die Wunde am Finger muss sauber und trocken bleiben.
+      en: The wound on your finger must stay clean and dry.
+      fa: زخم انگشت باید تمیز و خشک بماند.
+    tooCloseTo: [Verletzung]
+
   - word: Pflaster
+    class: noun
+    article: das
+    plural: Pflaster
+    level: B1
+    meaning:
+      en: plaster, sticking plaster
+      fa: چسب زخم
+    definition: ein kleines Stück Stoff, das man auf eine kleine Wunde klebt
+    example:
+      de: Hast du ein Pflaster für mich? Ich habe mich geschnitten.
+      en: Have you got a plaster for me? I've cut myself.
+      fa: چسب زخم داری؟ دستم را بریده‌ام.
+
   - word: Salbe
+    class: noun
+    article: die
+    plural: Salben
+    level: B1
+    meaning:
+      en: ointment (from the pharmacy)
+      fa: پماد (دارویی)
+    definition: eine weiche Masse aus der Apotheke, die man auf die Haut reibt
+    example:
+      de: Reiben Sie die Salbe zweimal am Tag auf das Knie.
+      en: Rub the ointment onto your knee twice a day.
+      fa: روزی دو بار پماد را روی زانو بمالید.
+
   - word: Tropfen
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: drops (a medicine)
+      fa: قطره (دارو)
+    definition: ein flüssiges Medikament, das man in sehr kleinen Mengen nimmt, zum Beispiel für die Augen oder die Nase
+    example:
+      de: Die Tropfen gegen den Schnupfen bekommen Sie ohne Rezept in der Apotheke.
+      en: You can get the drops for a runny nose at the pharmacy without a prescription.
+      fa: قطرهٔ آب‌ریزش بینی را بدون نسخه از داروخانه می‌گیرید.
+
   - word: Pille
+    class: noun
+    article: die
+    plural: Pillen
+    level: B1
+    meaning:
+      en: pill
+      fa: قرص
+    definition: ein kleines, rundes Medikament, das man schluckt
+    example:
+      de: Diese Pille muss man vor dem Essen mit viel Wasser nehmen.
+      en: You have to take this pill before meals with plenty of water.
+      fa: این قرص را باید پیش از غذا با آب زیاد خورد.
+    alsoAccepted: [die Tablette]
+
   - word: Spritze
+    class: noun
+    article: die
+    plural: Spritzen
+    level: B1
+    meaning:
+      en: injection; syringe
+      fa: آمپول، تزریق
+    definition: damit bringt man ein Medikament mit einer Nadel direkt in den Körper
+    example:
+      de: Vor der Operation bekommt der Patient eine Spritze.
+      en: The patient gets an injection before the operation.
+      fa: بیمار پیش از عمل یک آمپول می‌گیرد.
+    alsoAccepted: [die Injektion]
+
   - word: Schmerzmittel
+    class: noun
+    article: das
+    plural: Schmerzmittel
+    level: B1
+    meaning:
+      en: painkiller
+      fa: مسکن، داروی ضددرد
+    definition: ein Medikament, das gegen Kopfweh und andere Schmerzen hilft
+    example:
+      de: Bei starken Kopfschmerzen nehme ich ein Schmerzmittel.
+      en: When I have a bad headache I take a painkiller.
+      fa: وقتی سردرد شدید دارم، مسکن می‌خورم.
+    alsoAccepted: [die Schmerztablette]
+
   - word: Medizin
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: medicine (the science)
+      fa: پزشکی (علم پزشکی)
+    definition: die Wissenschaft von den Krankheiten und davon, wie man sie heilt
+    example:
+      de: Meine Schwester studiert Medizin in Leipzig.
+      en: My sister is studying medicine in Leipzig.
+      fa: خواهرم در لایپزیگ پزشکی می‌خواند.
+    alsoAccepted: [die Heilkunde]
+
   - word: Therapie
+    class: noun
+    article: die
+    plural: Therapien
+    level: B1
+    meaning:
+      en: therapy (e.g. physiotherapy, psychotherapy)
+      fa: تراپی (مثل فیزیوتراپی یا روان‌درمانی)
+    definition: eine Behandlung über längere Zeit, zum Beispiel mit Übungen oder mit Gesprächen
+    example:
+      de: Nach dem Unfall macht sie eine Therapie für ihr Knie.
+      en: After the accident she is having therapy for her knee.
+      fa: بعد از تصادف برای زانویش درمان می‌شود.
+
   - word: Operation
+    class: noun
+    article: die
+    plural: Operationen
+    level: B1
+    meaning:
+      en: operation, surgery
+      fa: عمل جراحی
+    definition: wenn ein Arzt im Krankenhaus den Körper öffnet, um etwas zu heilen
+    example:
+      de: Die Operation hat zwei Stunden gedauert.
+      en: The operation took two hours.
+      fa: عمل جراحی دو ساعت طول کشید.
+
   - word: operieren
+    class: verb
+    level: B1
+    meaning:
+      en: to operate (on someone)
+      fa: عمل کردن (جراحی)
+    definition: als Arzt den Körper eines Kranken öffnen, um etwas zu heilen
+    example:
+      de: Morgen wird mein Vater am Knie operiert.
+      en: My father is having an operation on his knee tomorrow.
+      fa: فردا زانوی پدرم را عمل می‌کنند.
+
   - word: Klinik
+    class: noun
+    article: die
+    plural: Kliniken
+    level: B1
+    meaning:
+      en: clinic, hospital
+      fa: کلینیک، بیمارستان
+    definition: ein Krankenhaus, oft für eine bestimmte Art von Krankheiten
+    example:
+      de: Nach dem Unfall kam sie in eine Klinik in München.
+      en: After the accident she was taken to a clinic in Munich.
+      fa: بعد از تصادف او را به کلینیکی در مونیخ بردند.
+    alsoAccepted: [das Krankenhaus, das Spital]
+
   - word: Patient
+    class: noun
+    article: der
+    plural: Patienten
+    level: B1
+    meaning:
+      en: patient
+      fa: بیمار (در مطب یا بیمارستان)
+    definition: eine Person, die bei einem Arzt oder im Krankenhaus behandelt wird
+    example:
+      de: Im Wartezimmer sitzen schon fünf Patienten.
+      en: There are already five patients sitting in the waiting room.
+      fa: پنج بیمار همین حالا در اتاق انتظار نشسته‌اند.
+    alsoAccepted: [die Patientin]
+    tooCloseTo: [Kranke]
+
+  # The scope list gives "der/die": a man is "der Kranke", a woman "die Kranke".
   - word: Kranke
+    class: noun
+    article: der
+    plural: Kranken
+    level: B1
+    meaning:
+      en: sick person
+      fa: آدم بیمار، مریض
+    definition: ein Mensch, der krank ist
+    example:
+      de: Die Krankenschwester bringt dem Kranken einen Tee.
+      en: The nurse brings the sick man a cup of tea.
+      fa: پرستار برای مرد بیمار چای می‌آورد.
+    alsoAccepted: [die Kranke]
+    tooCloseTo: [Patient]
+
   - word: Untersuchung
+    class: noun
+    article: die
+    plural: Untersuchungen
+    level: B1
+    meaning:
+      en: (medical) examination
+      fa: معاینه
+    definition: wenn ein Arzt genau prüft, ob jemand gesund ist oder was ihm fehlt
+    example:
+      de: Einmal im Jahr gehe ich zur Untersuchung zum Zahnarzt.
+      en: Once a year I go to the dentist for a check-up.
+      fa: سالی یک بار برای معاینه پیش دندان‌پزشک می‌روم.
+
   - word: verschreiben
+    class: verb
+    level: B1
+    meaning:
+      en: to prescribe
+      fa: تجویز کردن
+    definition: als Arzt aufschreiben, welches Medikament ein Kranker bekommen soll
+    example:
+      de: Die Ärztin hat mir Tropfen gegen den Husten verschrieben.
+      en: The doctor prescribed me drops for my cough.
+      fa: دکتر برای سرفه‌ام قطره تجویز کرد.
+    alsoAccepted: [verordnen]
+
   - word: behandeln
+    class: verb
+    level: B1
+    meaning:
+      en: to treat (an illness, a patient)
+      fa: درمان کردن، معالجه کردن
+    definition: als Arzt etwas gegen die Krankheit oder die Schmerzen von einem Menschen tun
+    example:
+      de: Der Hausarzt behandelt mich schon seit vielen Jahren.
+      en: My family doctor has been treating me for many years.
+      fa: پزشک خانواده سال‌هاست که مرا معالجه می‌کند.
+
   - word: Besserung
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: getting better (after an illness)
+      fa: بهبود
+    definition: wenn es einem kranken Menschen langsam wieder gut geht
+    example:
+      de: Gute Besserung! Hoffentlich bist du bald wieder gesund.
+      en: Get well soon! I hope you're healthy again soon.
+      fa: آرزوی بهبودی برایت دارم! امیدوارم به‌زودی دوباره سالم شوی.
+    alsoAccepted: [die Genesung, die Erholung]
+
   - word: erschöpft
+    class: adjective
+    level: B1
+    meaning:
+      en: exhausted
+      fa: خسته و کوفته، از پا افتاده
+    definition: so müde nach einer großen Anstrengung, dass man nicht mehr weitermachen kann
+    example:
+      de: Nach der langen Nachtschicht war sie völlig erschöpft.
+      en: After the long night shift she was completely exhausted.
+      fa: بعد از آن شیفت شب طولانی کاملاً از پا افتاده بود.
+    alsoAccepted: [kaputt, ausgelaugt]
+
   - word: Versichertenkarte
+    class: noun
+    article: die
+    plural: Versichertenkarten
+    level: B1
+    meaning:
+      en: health insurance card
+      fa: کارت بیمهٔ درمانی
+    definition: die Karte von der Krankenkasse, die man beim Arzt zeigen muss
+    example:
+      de: Bitte bringen Sie zum Termin Ihre Versichertenkarte mit.
+      en: Please bring your health insurance card to the appointment.
+      fa: لطفاً کارت بیمهٔ درمانی‌تان را به وقت ملاقات بیاورید.
+    alsoAccepted: [die Gesundheitskarte, die Krankenversichertenkarte, die Krankenkassenkarte]
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 44c81ed66c584a51

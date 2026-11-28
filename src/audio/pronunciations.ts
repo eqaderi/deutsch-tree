@@ -47,4 +47,14 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Cafeteria: 'Kaffeterihja',
   // #79: Thorsten says "das Sekretariat" as "das ist der Kriteriat"; the j keeps it whole.
   Sekretariat: 'Sekretarijat',
+  // #90: stressed on the first syllable ("SEE-nioren"); the j gives [zɛnˈjoːrən].
+  Senioren: 'Senjoren',
+  // #90: "Creme" comes out with a final schwa, [kreːmə]; this spelling gives [kreːm].
+  Zahncreme: 'Zahnkreem',
+  // #90: read with [sk] as in English; German says [ʃiː].
+  Skifahren: 'Schifahren',
+  // #90: stressed on the first syllable; the hyphen stresses "ät" too.
+  Diät: 'Di-ät',
+  // #90: stressed on "So"; the hyphens stress "zial" and "arbeiter" as German does.
+  Sozialarbeiter: 'So-zial-arbeiter',
 }
