@@ -1,36 +1,339 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-greetings
 kind: vocabulary
 level: A1
 chapter: a1-words-people
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Hello, please, thank you"
   fa: "سلام، لطفاً، ممنون"
   de: "Hallo, bitte, danke"
+attemptSize: 15
 words:
   - word: hallo
+    class: interjection
+    level: A1
+    meaning:
+      en: hello, hi
+      fa: سلام
+    definition: ein lockeres Wort, wenn man eine Person trifft
+    example:
+      de: Hallo, Maria! Wie geht es dir?
+      en: Hello, Maria! How are you?
+      fa: سلام ماریا! حالت چطور است؟
+    alsoAccepted: [hi, servus, moin, Guten Tag, Grüß Gott, Grüß dich]
+
+  # tschüss, Wiedersehen and Wiederhören all end a meeting; none is offered as a wrong meaning of another.
   - word: tschüss
+    class: interjection
+    level: A1
+    meaning:
+      en: bye
+      fa: خداحافظ (خودمانی)
+    definition: das sagt man locker zu Freunden, wenn man geht
+    example:
+      de: Tschüss, bis morgen!
+      en: Bye, see you tomorrow!
+      fa: خداحافظ، تا فردا!
+    alsoAccepted: [tschüs, ciao, servus, Auf Wiedersehen, bis bald, bis dann, bis später]
+    tooCloseTo: [Wiedersehen, Wiederhören]
+
   - word: bitte
+    class: interjection
+    level: A1
+    meaning:
+      en: please; you're welcome
+      fa: لطفاً؛ خواهش می‌کنم
+    definition: das sagt man höflich, wenn man etwas möchte, oder als Antwort auf „danke“
+    example:
+      de: Einen Kaffee, bitte.
+      en: A coffee, please.
+      fa: یک قهوه، لطفاً.
+    alsoAccepted: [bitte schön, bitte sehr, gern geschehen, gerne]
+
   - word: danke
+    class: interjection
+    level: A1
+    meaning:
+      en: thank you, thanks
+      fa: ممنون، متشکرم
+    definition: das sagt man, wenn eine Person etwas für einen tut oder einem etwas gibt
+    example:
+      de: Danke, das ist sehr nett von dir.
+      en: Thank you, that's very kind of you.
+      fa: ممنون، خیلی لطف کردی.
+    alsoAccepted: [danke schön, danke sehr, dankeschön, vielen Dank]
+    tooCloseTo: [Dank]
+
   - word: ja
+    class: particle
+    level: A1
+    meaning:
+      en: "yes"
+      fa: بله، آره
+    definition: das Gegenteil von „nein“
+    example:
+      de: Ja, ich komme gern mit.
+      en: Yes, I'd like to come along.
+      fa: بله، با کمال میل می‌آیم.
+    alsoAccepted: [jawohl]
+
   - word: nein
+    class: particle
+    level: A1
+    meaning:
+      en: "no"
+      fa: نه، خیر
+    definition: das Gegenteil von „ja“
+    example:
+      de: Nein, danke, ich habe keinen Hunger.
+      en: No, thanks, I'm not hungry.
+      fa: نه، ممنون، گرسنه نیستم.
+    alsoAccepted: [nee, nö]
+
   - word: willkommen
+    class: adjective
+    level: A1
+    meaning:
+      en: welcome
+      fa: خوش آمدید
+    definition: gern gesehen; man freut sich, dass eine Person kommt
+    example:
+      de: Herzlich willkommen in Hamburg!
+      en: A warm welcome to Hamburg!
+      fa: به هامبورگ خوش آمدید!
+    alsoAccepted: [herzlich willkommen]
+
   - word: herzlich
+    class: adjective
+    level: A1
+    meaning:
+      en: warm, heartfelt, cordial
+      fa: صمیمانه، گرم
+    definition: sehr freundlich und warm, von ganzem Herzen
+    example:
+      de: Vielen Dank für die herzliche Einladung!
+      en: Many thanks for the warm invitation!
+      fa: از دعوت صمیمانه‌تان بسیار سپاسگزارم!
+    alsoAccepted: [warmherzig, herzlichst]
+
+  # Said as a word alone ("Entschuldigung!") the noun has no article, so that form is right too.
   - word: Entschuldigung
+    class: noun
+    article: die
+    plural: Entschuldigungen
+    level: A1
+    meaning:
+      en: excuse me, sorry; apology
+      fa: ببخشید، معذرت می‌خواهم؛ عذرخواهی
+    definition: das sagt man, wenn man einen Fehler gemacht hat oder eine fremde Person etwas fragen möchte
+    example:
+      de: Entschuldigung, wo ist der Bahnhof?
+      en: Excuse me, where is the station?
+      fa: ببخشید، ایستگاه قطار کجاست؟
+    alsoAccepted: [Entschuldigung, Verzeihung, die Verzeihung, Entschuldigen Sie]
+
   - word: entschuldigen
+    class: verb
+    level: A1
+    meaning:
+      en: to excuse; to apologise
+      fa: بخشیدن؛ عذرخواهی کردن
+    definition: sagen, dass einem ein Fehler leidtut; einer Person einen Fehler nicht böse nehmen
+    example:
+      de: Ich möchte mich für meinen Fehler entschuldigen.
+      en: I would like to apologise for my mistake.
+      fa: می‌خواهم بابت اشتباهم عذرخواهی کنم.
+    alsoAccepted: [sich entschuldigen, verzeihen]
+
   - word: Dank
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: gratitude, thanks
+      fa: سپاس، قدردانی
+    definition: das Nomen zu „danken“, zum Beispiel in „Vielen …!“
+    example:
+      de: Herzlichen Dank für das schöne Geschenk!
+      en: Warm thanks for the lovely present!
+      fa: برای هدیهٔ زیبا صمیمانه سپاسگزارم!
+    alsoAccepted: [die Dankbarkeit]
+    tooCloseTo: [danke]
+
   - word: danken
+    class: verb
+    level: A1
+    meaning:
+      en: to thank
+      fa: تشکر کردن
+    definition: einer Person „danke“ sagen
+    example:
+      de: Ich danke dir für deine Hilfe.
+      en: I thank you for your help.
+      fa: از کمکت تشکر می‌کنم.
+    alsoAccepted: [sich bedanken, bedanken]
+
   - word: Bitte
+    class: noun
+    article: die
+    plural: Bitten
+    level: A1
+    meaning:
+      en: request
+      fa: خواهش، درخواست
+    definition: das Nomen zu „bitten“, also das, was man höflich von einer Person möchte
+    example:
+      de: Ich habe eine Bitte. Kannst du mir das Salz geben?
+      en: I have a request. Can you pass me the salt?
+      fa: خواهشی دارم. نمک را به من می‌دهی؟
+    alsoAccepted: [die Anfrage]
+
   - word: bitten
+    class: verb
+    level: A1
+    meaning:
+      en: to ask (for something), to request
+      fa: خواهش کردن، درخواست کردن
+    definition: höflich sagen, dass man etwas möchte oder dass eine Person etwas tun soll
+    example:
+      de: Er bittet seine Nachbarin um Hilfe.
+      en: He asks his neighbour for help.
+      fa: او از همسایه‌اش کمک می‌خواهد.
+
   - word: Gruß
+    class: noun
+    article: der
+    plural: Grüße
+    level: A1
+    meaning:
+      en: greeting; regards (in a letter)
+      fa: درود، سلام (در نامه)
+    definition: freundliche Worte, wenn man kommt oder geht, oder am Ende von einem Brief
+    example:
+      de: Viele Grüße an deine Eltern!
+      en: Best regards to your parents!
+      fa: به پدر و مادرت سلام برسان!
+    alsoAccepted: [die Grüße, die Begrüßung]
+
   - word: Wiedersehen
+    class: noun
+    article: das
+    plural: Wiedersehen
+    level: A1
+    meaning:
+      en: goodbye (formal, when leaving); seeing each other again
+      fa: خداحافظ (رسمی، هنگام رفتن)، دیدار دوباره
+    definition: „Auf …!“ sagt man höflich, wenn man geht
+    example:
+      de: Auf Wiedersehen, Frau Becker!
+      en: Goodbye, Mrs Becker!
+      fa: خداحافظ، خانم بکر!
+    alsoAccepted: [Auf Wiedersehen, das Wiederschauen, Auf Wiederschauen]
+    tooCloseTo: [tschüss, Wiederhören]
+
   - word: Wiederhören
+    class: noun
+    article: das
+    plural: Wiederhören
+    level: A1
+    meaning:
+      en: goodbye (formal, on the phone)
+      fa: خداحافظ (رسمی، پشت تلفن)
+    definition: „Auf …!“ sagt man höflich am Ende von einem Telefongespräch
+    example:
+      de: Vielen Dank für Ihren Anruf. Auf Wiederhören!
+      en: Thank you for your call. Goodbye!
+      fa: از تماستان سپاسگزارم. خداحافظ!
+    alsoAccepted: [Auf Wiederhören]
+    tooCloseTo: [tschüss, Wiedersehen]
+
   - word: Herr
+    class: noun
+    article: der
+    plural: Herren
+    level: A1
+    meaning:
+      en: Mr; gentleman
+      fa: آقا
+    definition: ein höfliches Wort für einen Mann, zum Beispiel vor seinem Familiennamen
+    example:
+      de: Guten Tag, Herr Schmidt!
+      en: Good afternoon, Mr Schmidt!
+      fa: روز بخیر، آقای اشمیت!
+
   - word: Frau
+    class: noun
+    article: die
+    plural: Frauen
+    level: A1
+    meaning:
+      en: woman; Mrs, Ms
+      fa: زن؛ خانم
+    definition: eine erwachsene Person, kein Mann; auch höflich vor ihrem Familiennamen
+    example:
+      de: Frau Weber wohnt im zweiten Stock.
+      en: Mrs Weber lives on the second floor.
+      fa: خانم وبر در طبقهٔ دوم زندگی می‌کند.
+    tooCloseTo: [Dame]
+
   - word: Dame
+    class: noun
+    article: die
+    plural: Damen
+    level: A1
+    meaning:
+      en: lady
+      fa: بانو
+    definition: ein sehr höfliches Wort für eine Frau, zum Beispiel in „Meine … und Herren“
+    example:
+      de: Die Dame an der Kasse ist sehr freundlich.
+      en: The lady at the till is very friendly.
+      fa: بانویی که پشت صندوق است، بسیار مهربان است.
+
   - word: heißen
+    class: verb
+    level: A1
+    meaning:
+      en: to be called
+      fa: نام داشتن
+    definition: einen Namen haben
+    example:
+      de: Ich heiße Sara. Und wie heißt du?
+      en: My name is Sara. And what's your name?
+      fa: اسم من ساراست. اسم تو چیست؟
+
   - word: vorstellen
+    class: verb
+    level: A1
+    meaning:
+      en: to introduce (oneself or someone)
+      fa: معرفی کردن
+    definition: einer Person sagen, wer man selbst ist oder wer eine andere Person ist
+    example:
+      de: Darf ich vorstellen? Das ist mein Freund Ali.
+      en: May I introduce you? This is my friend Ali.
+      fa: اجازه می‌دهید معرفی کنم؟ این دوستم علی است.
+    alsoAccepted: [sich vorstellen]
+
   - word: kennenlernen
+    class: verb
+    level: A1
+    meaning:
+      en: to get to know, to meet for the first time
+      fa: آشنا شدن
+    definition: eine Person zum ersten Mal treffen und mit ihr sprechen
+    example:
+      de: Ich möchte deine Familie gern kennenlernen.
+      en: I'd like to get to know your family.
+      fa: دوست دارم با خانواده‌ات آشنا شوم.
+    alsoAccepted: [kennen lernen]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 138, then 12 questions)
+  date: 2026-11-28
+  pool: c113ae88497b9309

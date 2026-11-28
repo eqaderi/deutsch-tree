@@ -1,39 +1,383 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-personal-details
 kind: vocabulary
 level: A1
 chapter: a1-words-people
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Name, address and forms"
   fa: "نام، نشانی و فرم‌ها"
   de: "Name, Adresse und Formulare"
+attemptSize: 15
 words:
+  # A first name and a surname are names too; neither is offered as a wrong meaning of "Name".
   - word: Name
+    class: noun
+    article: der
+    plural: Namen
+    level: A1
+    meaning:
+      en: name
+      fa: نام، اسم
+    definition: so heißt eine Person oder eine Sache
+    example:
+      de: Wie ist Ihr Name, bitte?
+      en: What is your name, please?
+      fa: لطفاً بفرمایید نامتان چیست؟
+    tooCloseTo: [Vorname, Familienname]
+
   - word: Vorname
+    class: noun
+    article: der
+    plural: Vornamen
+    level: A1
+    meaning:
+      en: first name
+      fa: نام کوچک
+    definition: der Name, den die Eltern einem Kind geben, zum Beispiel Anna oder Paul
+    example:
+      de: Mein Vorname ist Reza.
+      en: My first name is Reza.
+      fa: نام کوچک من رضاست.
+    alsoAccepted: [der Rufname]
+
   - word: Familienname
+    class: noun
+    article: der
+    plural: Familiennamen
+    level: A1
+    meaning:
+      en: surname, family name
+      fa: نام خانوادگی
+    definition: der Name, den alle in einer Familie haben, zum Beispiel Müller
+    example:
+      de: Schreiben Sie bitte Ihren Familiennamen in großen Buchstaben.
+      en: Please write your surname in capital letters.
+      fa: لطفاً نام خانوادگی‌تان را با حروف بزرگ بنویسید.
+    alsoAccepted: [der Nachname, der Zuname]
+
   - word: Adresse
+    class: noun
+    article: die
+    plural: Adressen
+    level: A1
+    meaning:
+      en: address
+      fa: نشانی، آدرس
+    definition: die Straße, die Hausnummer und die Stadt, wo man wohnt
+    example:
+      de: Meine Adresse ist Bahnhofstraße 12 in Leipzig.
+      en: My address is Bahnhofstraße 12 in Leipzig.
+      fa: نشانی من خیابان بانهوف، پلاک ۱۲ در لایپزیگ است.
+    alsoAccepted: [die Anschrift, die Wohnadresse]
+
   - word: Alter
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: age
+      fa: سن
+    definition: wie viele Jahre eine Person schon lebt
+    example:
+      de: Bitte schreiben Sie Ihr Alter in das Formular.
+      en: Please write your age on the form.
+      fa: لطفاً سنتان را در فرم بنویسید.
+    alsoAccepted: [das Lebensalter]
+
   - word: Geburtsjahr
+    class: noun
+    article: das
+    plural: Geburtsjahre
+    level: A1
+    meaning:
+      en: year of birth
+      fa: سال تولد
+    definition: das Jahr, in dem eine Person auf die Welt gekommen ist
+    example:
+      de: Mein Geburtsjahr ist 1990.
+      en: My year of birth is 1990.
+      fa: سال تولد من ۱۹۹۰ است.
+
   - word: Geburtsort
+    class: noun
+    article: der
+    plural: Geburtsorte
+    level: A1
+    meaning:
+      en: place of birth
+      fa: محل تولد
+    definition: die Stadt oder das Dorf, wo eine Person auf die Welt gekommen ist
+    example:
+      de: Mein Geburtsort ist Teheran.
+      en: My place of birth is Tehran.
+      fa: محل تولد من تهران است.
+    alsoAccepted: [die Geburtsstadt]
+
   - word: Familienstand
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: marital status
+      fa: وضعیت تأهل
+    definition: ob man ledig, verheiratet oder geschieden ist
+    example:
+      de: Im Formular fragt man auch nach dem Familienstand.
+      en: The form also asks for your marital status.
+      fa: در فرم وضعیت تأهل را هم می‌پرسند.
+
   - word: ledig
+    class: adjective
+    level: A1
+    meaning:
+      en: single, unmarried
+      fa: مجرد
+    definition: nicht verheiratet
+    example:
+      de: Mein Bruder ist 40 und noch ledig.
+      en: My brother is 40 and still single.
+      fa: برادرم ۴۰ سال دارد و هنوز مجرد است.
+    alsoAccepted: [unverheiratet, single, alleinstehend]
+
   - word: verheiratet
+    class: adjective
+    level: A1
+    meaning:
+      en: married
+      fa: متأهل
+    definition: so ist man nach der Hochzeit, mit einem Ehemann oder einer Ehefrau
+    example:
+      de: Sind Sie verheiratet?
+      en: Are you married?
+      fa: شما متأهل هستید؟
+    alsoAccepted: [vermählt]
+
   - word: geboren
+    class: adjective
+    level: A1
+    meaning:
+      en: born
+      fa: متولد، به دنیا آمده
+    definition: auf die Welt gekommen
+    example:
+      de: Ich bin 1995 in Kabul geboren.
+      en: I was born in Kabul in 1995.
+      fa: من سال ۱۹۹۵ در کابل به دنیا آمده‌ام.
+
   - word: männlich
+    class: adjective
+    level: A1
+    meaning:
+      en: male
+      fa: مذکر (جنسیت)
+    definition: so ist ein Mann oder ein Junge
+    example:
+      de: Unser Hund ist männlich und heißt Bello.
+      en: Our dog is male and is called Bello.
+      fa: سگ ما نر است و اسمش بلو است.
+
   - word: weiblich
+    class: adjective
+    level: A1
+    meaning:
+      en: female
+      fa: مؤنث (جنسیت)
+    definition: so ist eine Frau oder ein Mädchen
+    example:
+      de: Im Formular kreuzt sie „weiblich“ an.
+      en: On the form she ticks "female".
+      fa: او در فرم گزینهٔ «زن» را علامت می‌زند.
+
   - word: Postleitzahl
+    class: noun
+    article: die
+    plural: Postleitzahlen
+    level: A1
+    meaning:
+      en: postcode, zip code
+      fa: کد پستی
+    definition: die Zahl vor der Stadt in einer Adresse, für die Post
+    example:
+      de: Wie ist Ihre Postleitzahl?
+      en: What is your postcode?
+      fa: کد پستی‌تان چیست؟
+    alsoAccepted: [die PLZ]
+
   - word: Formular
+    class: noun
+    article: das
+    plural: Formulare
+    level: A1
+    meaning:
+      en: form (to fill in)
+      fa: فرم، برگهٔ درخواست
+    definition: ein Blatt mit Fragen, auf das man zum Beispiel Name und Adresse schreibt
+    example:
+      de: Für die Anmeldung brauchen Sie dieses Formular.
+      en: You need this form to register.
+      fa: برای ثبت‌نام به این فرم نیاز دارید.
+    alsoAccepted: [der Vordruck, der Fragebogen, der Antrag, das Antragsformular]
+
   - word: ausfüllen
+    class: verb
+    level: A1
+    meaning:
+      en: to fill in, to fill out (a form)
+      fa: پر کردن (فرم)
+    definition: in ein Formular alles schreiben, was es fragt
+    example:
+      de: Füllen Sie bitte das Formular aus.
+      en: Please fill in the form.
+      fa: لطفاً فرم را پر کنید.
+
   - word: ankreuzen
+    class: verb
+    level: A1
+    meaning:
+      en: to tick, to mark with a cross
+      fa: علامت زدن (با ضربدر)
+    definition: ein Kreuz in ein kleines Feld auf einem Blatt machen
+    example:
+      de: Kreuzen Sie bitte die richtige Antwort an.
+      en: Please tick the right answer.
+      fa: لطفاً پاسخ درست را علامت بزنید.
+    alsoAccepted: [markieren, anhaken, abhaken]
+
   - word: unterschreiben
+    class: verb
+    level: A1
+    meaning:
+      en: to sign
+      fa: امضا کردن
+    definition: den eigenen Namen mit der Hand unter einen Text schreiben
+    example:
+      de: Bitte unterschreiben Sie hier unten.
+      en: Please sign down here.
+      fa: لطفاً این پایین را امضا کنید.
+    alsoAccepted: [unterzeichnen, signieren]
+
   - word: Unterschrift
+    class: noun
+    article: die
+    plural: Unterschriften
+    level: A1
+    meaning:
+      en: signature
+      fa: امضا
+    definition: der Name, den man mit der Hand unter einen Text schreibt
+    example:
+      de: Auf dem Formular fehlt noch Ihre Unterschrift.
+      en: Your signature is still missing from the form.
+      fa: امضای شما هنوز روی فرم نیست.
+    alsoAccepted: [die Signatur]
+
   - word: buchstabieren
+    class: verb
+    level: A1
+    meaning:
+      en: to spell (out)
+      fa: هجی کردن
+    definition: ein Wort Buchstabe für Buchstabe sagen
+    example:
+      de: Können Sie Ihren Namen bitte buchstabieren?
+      en: Could you spell your name, please?
+      fa: لطفاً نامتان را هجی می‌کنید؟
+
   - word: Buchstabe
+    class: noun
+    article: der
+    plural: Buchstaben
+    level: A1
+    meaning:
+      en: letter (of the alphabet)
+      fa: حرف (الفبا)
+    definition: ein Zeichen im Alphabet, zum Beispiel A, B oder C
+    example:
+      de: Mein Name hat nur vier Buchstaben.
+      en: My name has only four letters.
+      fa: نام من فقط چهار حرف دارد.
+
   - word: Ausweis
+    class: noun
+    article: der
+    plural: Ausweise
+    level: A1
+    meaning:
+      en: ID card, identity card
+      fa: کارت شناسایی
+    definition: eine kleine Karte mit Foto, die zeigt, wer man ist
+    example:
+      de: Darf ich bitte Ihren Ausweis sehen?
+      en: May I see your ID card, please?
+      fa: اجازه می‌دهید کارت شناسایی‌تان را ببینم؟
+    alsoAccepted: [der Personalausweis]
+
   - word: Pass
+    class: noun
+    article: der
+    plural: Pässe
+    level: A1
+    meaning:
+      en: passport
+      fa: گذرنامه، پاسپورت
+    definition: ein kleines Buch mit Foto, mit dem man in andere Länder reisen kann
+    example:
+      de: Für die Reise nach Kanada brauche ich einen Pass.
+      en: I need a passport for the trip to Canada.
+      fa: برای سفر به کانادا گذرنامه لازم دارم.
+    alsoAccepted: [der Reisepass]
+
   - word: Papiere
+    class: noun
+    article: die
+    number: plural-only
+    level: A1
+    meaning:
+      en: papers, identity documents
+      fa: مدارک شناسایی
+    definition: Ausweis, Pass und andere Dokumente von einer Person
+    example:
+      de: Die Polizei möchte unsere Papiere sehen.
+      en: The police want to see our papers.
+      fa: پلیس می‌خواهد مدارک شناسایی ما را ببیند.
+    alsoAccepted: [die Dokumente, die Unterlagen, die Ausweispapiere, die Ausweisdokumente]
+
   - word: Anmeldung
+    class: noun
+    article: die
+    plural: Anmeldungen
+    level: A1
+    meaning:
+      en: registration
+      fa: ثبت‌نام
+    definition: wenn man sich für einen Kurs einträgt oder der Stadt die neue Adresse sagt
+    example:
+      de: Die Anmeldung für den Kurs ist bis Freitag.
+      en: Registration for the course is open until Friday.
+      fa: ثبت‌نام این دوره تا جمعه است.
+    alsoAccepted: [die Registrierung, die Einschreibung]
+
   - word: anmelden
+    class: verb
+    level: A1
+    meaning:
+      en: to register, to sign up
+      fa: ثبت‌نام کردن
+    definition: sagen oder schreiben, dass man bei etwas mitmacht, zum Beispiel bei einem Kurs
+    example:
+      de: Ich melde mich für den Deutschkurs an.
+      en: I'm signing up for the German course.
+      fa: در کلاس آلمانی ثبت‌نام می‌کنم.
+    alsoAccepted:
+      [sich anmelden, registrieren, sich registrieren, einschreiben, sich einschreiben, eintragen, sich eintragen]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 7 questions)
+  date: 2026-11-28
+  pool: b5bfecc626a7a978
