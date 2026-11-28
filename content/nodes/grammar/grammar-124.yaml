@@ -228,48 +228,48 @@ questions:
       de: "In *vom* steckt schon *dem*. *Arbeit* ist feminin: *von der Arbeit*."
   - id: typed-gap-1
     type: typed-gap-fill
-    prompt: Ich bringe das Paket ___ (zu + der) Post.
-    answers: [zur, zu der]
+    prompt: Ich bringe das Paket ___ (zu / die Post).
+    answers: [zur Post, zu der Post, zur, zu der]
     explanation:
       en: "*Zu* takes the *Dativ*: *zu der Post*, almost always said as *zur Post*."
       fa: "*zu* با حالت *Dativ* می‌آید: *zu der Post* که تقریباً همیشه کوتاه می‌شود: *zur Post*."
       de: "Nach *zu* steht der Dativ: *zu der Post*, fast immer kurz *zur Post*."
   - id: typed-gap-2
     type: typed-gap-fill
-    prompt: Im Urlaub fahren wir ___ (an + das) Meer.
-    answers: [ans, an das]
+    prompt: Im Urlaub fahren wir ___ (an / das Meer).
+    answers: [ans Meer, an das Meer, ans, an das]
     explanation:
       en: "A direction: *an das Meer*, almost always said as *ans Meer*."
       fa: "جهت: *an das Meer* که تقریباً همیشه کوتاه می‌شود: *ans Meer*."
       de: "Richtung: *an das Meer*, fast immer kurz *ans Meer*."
   - id: typed-gap-3
     type: typed-gap-fill
-    prompt: Ich bin heute ___ (bei + dem) Friseur.
-    answers: [beim, bei dem]
+    prompt: Ich bin heute ___ (bei / der Friseur).
+    answers: [beim Friseur, bei dem Friseur, beim, bei dem]
     explanation:
       en: "*Bei* takes the *Dativ*: *bei dem Friseur*, almost always said as *beim Friseur*."
       fa: "*bei* با حالت *Dativ* می‌آید: *bei dem Friseur* که تقریباً همیشه کوتاه می‌شود: *beim Friseur*."
       de: "Nach *bei* steht der Dativ: *bei dem Friseur*, fast immer kurz *beim Friseur*."
   - id: typed-gap-4
     type: typed-gap-fill
-    prompt: Er kommt ___ (von + dem) Training.
-    answers: [vom, von dem]
+    prompt: Er kommt ___ (von / das Training).
+    answers: [vom Training, von dem Training, vom, von dem]
     explanation:
       en: "*Von* takes the *Dativ*: *von dem Training*, almost always said as *vom Training*."
       fa: "*von* با حالت *Dativ* می‌آید: *von dem Training* که تقریباً همیشه کوتاه می‌شود: *vom Training*."
       de: "Nach *von* steht der Dativ: *von dem Training*, fast immer kurz *vom Training*."
   - id: typed-gap-5
     type: typed-gap-fill
-    prompt: Wir fahren mit dem Taxi ___ (zu + dem) Bahnhof.
-    answers: [zum, zu dem]
+    prompt: Wir fahren mit dem Taxi ___ (zu / der Bahnhof).
+    answers: [zum Bahnhof, zu dem Bahnhof, zum, zu dem]
     explanation:
       en: "*Zu dem Bahnhof*, almost always said as *zum Bahnhof*."
       fa: "*zu dem Bahnhof* که تقریباً همیشه کوتاه می‌شود: *zum Bahnhof*."
       de: "*Zu dem Bahnhof*, fast immer kurz *zum Bahnhof*."
   - id: typed-gap-6
     type: typed-gap-fill
-    prompt: Wir haben ___ (an + dem) Montag frei.
-    answers: [am, an dem]
+    prompt: Wir haben ___ (an / der Montag) frei.
+    answers: [am Montag, an dem Montag, am, an dem]
     explanation:
       en: "*An dem Montag*, almost always said as *am Montag*."
       fa: "*an dem Montag* که تقریباً همیشه کوتاه می‌شود: *am Montag*."
@@ -313,6 +313,8 @@ questions:
       de: "*Ins* ist *in das*, *zur* ist *zu der*, *beim* ist *bei dem*, *vom* ist *von dem*."
 
 review:
-  reviewer: two independent AI agents
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question again after the hints were rewritten, then the
+    rewritten gaps once more after their key was widened; not people)"
   date: 2026-11-28
-  pool: 4b308a772bdab3f6
+  pool: 7236968d066a794b

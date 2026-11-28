@@ -398,6 +398,14 @@ table:
     - [die Bücher (Plural), den Büchern, –, zwischen den Büchern]
 ```
 
+A gap whose answer is a case form gives its hint as the preposition and the
+noun in its dictionary form, apart: `Ich bin heute ___ (bei / der Arzt).`
+The noun then stands only in the hint, so a learner may fill the gap with
+the whole phrase or with what changes: accept both (`answers: [beim Arzt,
+bei dem Arzt, beim, bei dem]`). Never `(bei + der) Arzt`: reviewers read the
+article joined to the preposition as the article in the case already, here
+a Dativ *der*.
+
 ```yaml
 status: published
 
