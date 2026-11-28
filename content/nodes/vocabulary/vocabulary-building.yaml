@@ -1,39 +1,403 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-building
 kind: vocabulary
 level: B1
 chapter: b1-words-home-food
 order: 1
-status: coming-soon
+status: published
 title:
   en: "The building"
   fa: "ساختمان"
   de: "Das Gebäude"
+attemptSize: 15
 words:
   - word: Gebäude
+    class: noun
+    article: das
+    plural: Gebäude
+    level: B1
+    meaning:
+      en: building
+      fa: ساختمان، بنا
+    definition: ein großes Haus, zum Beispiel eine Schule, ein Krankenhaus oder ein Haus mit Büros
+    example:
+      de: Das Gebäude hat zwölf Stockwerke.
+      en: The building has twelve storeys.
+      fa: این ساختمان دوازده طبقه دارد.
+    alsoAccepted: [der Bau]
+
   - word: Dach
+    class: noun
+    article: das
+    plural: Dächer
+    level: B1
+    meaning:
+      en: roof
+      fa: بام، پشت‌بام
+    definition: der oberste Teil von einem Haus; es schützt vor Regen und Schnee
+    example:
+      de: Im Winter liegt oft Schnee auf dem Dach.
+      en: In winter there is often snow on the roof.
+      fa: زمستان‌ها اغلب روی بام برف نشسته است.
+
+  # "Wand" is the wall of a room, "Mauer" a wall of stone outside; neither is offered as a wrong meaning of the other.
   - word: Wand
+    class: noun
+    article: die
+    plural: Wände
+    level: B1
+    meaning:
+      en: wall (of a room)
+      fa: دیوار (اتاق)
+    definition: eine Seite von einem Zimmer; man kann Bilder oder Regale daran hängen
+    example:
+      de: An der Wand hängt ein großes Foto von meinen Eltern.
+      en: A big photo of my parents hangs on the wall.
+      fa: عکس بزرگی از پدر و مادرم به دیوار آویزان است.
+    tooCloseTo: [Mauer]
+
   - word: Mauer
+    class: noun
+    article: die
+    plural: Mauern
+    level: B1
+    meaning:
+      en: wall (outside, of stone or brick)
+      fa: دیوار (بیرونی، از سنگ یا آجر)
+    definition: eine feste Wand aus Steinen, oft draußen um einen Garten, einen Hof oder eine alte Stadt
+    example:
+      de: Um den Garten steht eine alte Mauer.
+      en: There is an old wall around the garden.
+      fa: دور باغ دیواری قدیمی کشیده‌اند.
+    tooCloseTo: [Wand]
+
   - word: Boden
+    class: noun
+    article: der
+    plural: Böden
+    level: B1
+    meaning:
+      en: floor (that you stand on); ground
+      fa: کف (اتاق)؛ زمین
+    definition: die Fläche unten in einem Zimmer, auf der man steht; auch die Erde draußen
+    example:
+      de: Die Kinder sitzen auf dem Boden und spielen.
+      en: The children are sitting on the floor, playing.
+      fa: بچه‌ها روی زمین نشسته‌اند و بازی می‌کنند.
+    alsoAccepted: [der Fußboden]
+
   - word: Decke
+    class: noun
+    article: die
+    plural: Decken
+    level: B1
+    meaning:
+      en: ceiling; blanket
+      fa: سقف (اتاق)؛ پتو
+    definition: die Fläche oben in einem Zimmer; auch ein großes, warmes Stück Stoff für das Bett oder das Sofa
+    example:
+      de: Die Decke in unserem Wohnzimmer ist sehr hoch.
+      en: The ceiling in our living room is very high.
+      fa: سقف اتاق نشیمن ما خیلی بلند است.
+
+  # "Flur", "Gang" and "Korridor" all name a corridor; each is right when another is asked for.
   - word: Flur
+    class: noun
+    article: der
+    plural: Flure
+    level: B1
+    meaning:
+      en: hall, hallway
+      fa: راهرو (ورودی خانه)
+    definition: der Raum direkt hinter der Wohnungstür, von dem man in die anderen Zimmer kommt
+    example:
+      de: Die Schuhe bleiben bitte im Flur.
+      en: Please leave your shoes in the hall.
+      fa: لطفاً کفش‌ها را در راهرو بگذارید.
+    alsoAccepted: [der Gang, der Korridor, die Diele]
+    tooCloseTo: [Gang, Korridor]
+
   - word: Gang
+    class: noun
+    article: der
+    plural: Gänge
+    level: B1
+    meaning:
+      en: passage, corridor; aisle
+      fa: راهرو، دالان
+    definition: ein langer, schmaler Weg in einem Gebäude oder zwischen den Regalen im Supermarkt
+    example:
+      de: Die Toiletten sind am Ende des Gangs links.
+      en: The toilets are on the left at the end of the corridor.
+      fa: دستشویی‌ها ته راهرو، سمت چپ است.
+    alsoAccepted: [der Flur, der Korridor]
+    tooCloseTo: [Flur, Korridor]
+
   - word: Korridor
+    class: noun
+    article: der
+    plural: Korridore
+    level: B1
+    meaning:
+      en: corridor
+      fa: کریدور، راهروی دراز
+    definition: ein langer Raum in einem großen Haus, zum Beispiel in einem Hotel, an dem viele Zimmer liegen
+    example:
+      de: Im Korridor des Hotels liegt ein roter Teppich.
+      en: There is a red carpet in the hotel corridor.
+      fa: در راهروی هتل فرش قرمزی پهن است.
+    alsoAccepted: [der Gang, der Flur]
+    tooCloseTo: [Flur, Gang]
+
   - word: Treppenhaus
+    class: noun
+    article: das
+    plural: Treppenhäuser
+    level: B1
+    meaning:
+      en: stairwell
+      fa: راه‌پله (فضای پله‌های ساختمان)
+    definition: der Teil von einem Haus mit den Stufen, die zu allen Stockwerken führen
+    example:
+      de: Im Treppenhaus ist das Licht schon wieder kaputt.
+      en: The light in the stairwell is broken again.
+      fa: چراغ راه‌پله باز هم خراب شده است.
+    alsoAccepted: [das Stiegenhaus]
+
   - word: Lift
+    class: noun
+    article: der
+    plural: Lifte
+    level: B1
+    meaning:
+      en: lift, elevator
+      fa: آسانسور
+    definition: eine kleine Kabine, die Menschen in einem Haus nach oben und nach unten bringt
+    example:
+      de: Der Lift ist leider kaputt, wir müssen die Treppe nehmen.
+      en: Unfortunately the lift is out of order; we have to take the stairs.
+      fa: متأسفانه آسانسور خراب است و باید از پله‌ها برویم.
+    alsoAccepted: [der Aufzug, der Fahrstuhl]
+
   - word: Etage
+    class: noun
+    article: die
+    plural: Etagen
+    level: B1
+    meaning:
+      en: floor, storey (level of a building)
+      fa: طبقه (ساختمان)
+    definition: alle Räume von einem Haus, die auf der gleichen Höhe liegen
+    example:
+      de: Wir wohnen in der vierten Etage, ganz oben.
+      en: We live on the fourth floor, right at the top.
+      fa: ما در طبقهٔ چهارم زندگی می‌کنیم، بالای بالا.
+    alsoAccepted: [der Stock, das Stockwerk, das Geschoss]
+
+  # EG, OG and UG are the short forms on signs and in flat adverts; the voice reads them out in full.
   - word: EG
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: ground floor (short form)
+      fa: طبقهٔ همکف (کوتاه‌شده)
+    definition: kurz für das Stockwerk, das auf der Höhe der Straße liegt
+    example:
+      de: Die Rezeption ist im EG, gleich links.
+      en: Reception is on the ground floor, just on the left.
+      fa: پذیرش در طبقهٔ همکف است، همین سمت چپ.
+    alsoAccepted: [das Erdgeschoss, das Parterre]
+
   - word: OG
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: upper floor (short form)
+      fa: طبقهٔ بالا (کوتاه‌شده)
+    definition: kurz für ein Stockwerk über dem Stockwerk auf der Höhe der Straße
+    example:
+      de: Die Arztpraxis ist im zweiten OG.
+      en: The doctor's surgery is on the second floor.
+      fa: مطب در طبقهٔ دوم است.
+    alsoAccepted: [das Obergeschoss]
+
   - word: UG
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: basement level (short form)
+      fa: طبقهٔ زیرزمین (کوتاه‌شده)
+    definition: kurz für ein Stockwerk unter der Erde
+    example:
+      de: Die Garage ist im UG.
+      en: The garage is on the basement level.
+      fa: پارکینگ در طبقهٔ زیرزمین است.
+    alsoAccepted: [das Untergeschoss, das KG, das Kellergeschoss]
+
   - word: Terrasse
+    class: noun
+    article: die
+    plural: Terrassen
+    level: B1
+    meaning:
+      en: terrace, patio
+      fa: تراس
+    definition: ein Platz direkt am Haus, draußen, mit einem festen Boden, wo man sitzen und essen kann
+    example:
+      de: Bei schönem Wetter frühstücken wir auf der Terrasse.
+      en: In nice weather we have breakfast on the terrace.
+      fa: در هوای خوب روی تراس صبحانه می‌خوریم.
+
   - word: Hof
+    class: noun
+    article: der
+    plural: Höfe
+    level: B1
+    meaning:
+      en: courtyard, yard; farm
+      fa: حیاط؛ مزرعه
+    definition: ein Platz ohne Dach hinter oder zwischen Häusern; auch ein Bauernhaus mit Feldern und Tieren
+    example:
+      de: Unsere Fahrräder stehen im Hof.
+      en: Our bikes are in the courtyard.
+      fa: دوچرخه‌هایمان در حیاط است.
+
   - word: Grundstück
+    class: noun
+    article: das
+    plural: Grundstücke
+    level: B1
+    meaning:
+      en: plot (of land), property
+      fa: قطعه‌زمین، ملک
+    definition: ein Stück Land, das einer Person gehört, oft mit einem Haus darauf
+    example:
+      de: Sie haben ein Grundstück am Stadtrand gekauft.
+      en: They have bought a plot of land on the edge of town.
+      fa: آن‌ها در حاشیهٔ شهر قطعه‌زمینی خریده‌اند.
+
   - word: Klingel
+    class: noun
+    article: die
+    plural: Klingeln
+    level: B1
+    meaning:
+      en: (door)bell
+      fa: زنگ (در)
+    definition: der Knopf an der Haustür; wenn man darauf drückt, hört man drinnen einen Ton
+    example:
+      de: Die Klingel geht nicht, bitte klopf einfach.
+      en: The bell isn't working; just knock.
+      fa: زنگ کار نمی‌کند، لطفاً در بزن.
+    alsoAccepted: [die Türklingel, der Klingelknopf]
+
   - word: klingeln
+    class: verb
+    level: B1
+    meaning:
+      en: to ring (a bell), to ring the doorbell
+      fa: زنگ زدن (زنگ در)، زنگ خوردن
+    definition: auf den Knopf an der Tür drücken, damit jemand aufmacht; auch einen Ton machen wie ein Telefon oder ein Wecker
+    example:
+      de: Es hat geklingelt. Machst du bitte auf?
+      en: Someone has rung the bell. Will you get the door, please?
+      fa: زنگ در را زدند. لطفاً در را باز می‌کنی؟
+    alsoAccepted: [läuten]
+
   - word: klopfen
+    class: verb
+    level: B1
+    meaning:
+      en: to knock
+      fa: در زدن، ضربه زدن
+    definition: mit der Hand ein paar Mal leicht gegen eine Tür schlagen
+    example:
+      de: Bitte klopfen Sie, bevor Sie hereinkommen.
+      en: Please knock before you come in.
+      fa: لطفاً پیش از وارد شدن در بزنید.
+    alsoAccepted: [anklopfen]
+
   - word: Briefkasten
+    class: noun
+    article: der
+    plural: Briefkästen
+    level: B1
+    meaning:
+      en: letterbox, mailbox
+      fa: صندوق پست
+    definition: ein Kasten am Haus oder an der Straße, in den Briefe kommen
+    example:
+      de: Ich schaue jeden Abend in den Briefkasten.
+      en: I check the letterbox every evening.
+      fa: هر شب صندوق پست را نگاه می‌کنم.
+
   - word: Steckdose
+    class: noun
+    article: die
+    plural: Steckdosen
+    level: B1
+    meaning:
+      en: (power) socket
+      fa: پریز (برق)
+    definition: die Stelle an der Wand, aus der der Strom für ein Gerät kommt
+    example:
+      de: Gibt es hier eine Steckdose für mein Handy?
+      en: Is there a socket here for my phone?
+      fa: اینجا پریزی برای گوشی‌ام هست؟
+
   - word: Stecker
+    class: noun
+    article: der
+    plural: Stecker
+    level: B1
+    meaning:
+      en: (electric) plug
+      fa: دوشاخه
+    definition: das Teil am Ende von einem Kabel, das man in die Wand steckt, damit ein Gerät Strom bekommt
+    example:
+      de: Zieh bitte den Stecker, bevor du das Gerät putzt.
+      en: Please pull the plug out before you clean the appliance.
+      fa: لطفاً پیش از تمیز کردن دستگاه، دوشاخه را از پریز بکش.
+    alsoAccepted: [der Netzstecker]
+
   - word: heizen
+    class: verb
+    level: B1
+    meaning:
+      en: to heat (a room, a home)
+      fa: گرم کردن (خانه یا اتاق)
+    definition: ein Zimmer oder eine Wohnung warm machen, zum Beispiel mit Gas oder Holz
+    example:
+      de: Im Winter heizen wir nur das Wohnzimmer.
+      en: In winter we only heat the living room.
+      fa: زمستان‌ها فقط اتاق نشیمن را گرم می‌کنیم.
+    alsoAccepted: [beheizen]
+
   - word: Klimaanlage
+    class: noun
+    article: die
+    plural: Klimaanlagen
+    level: B1
+    meaning:
+      en: air conditioning
+      fa: کولر، دستگاه تهویهٔ مطبوع
+    definition: ein Gerät, das die Luft in einem Raum oder einem Auto kühl macht
+    example:
+      de: Im Sommer läuft im Büro den ganzen Tag die Klimaanlage.
+      en: In summer the air conditioning runs all day in the office.
+      fa: تابستان‌ها کولر دفتر تمام روز روشن است.
+    alsoAccepted: [das Klimagerät]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: d01f7b32628a2983

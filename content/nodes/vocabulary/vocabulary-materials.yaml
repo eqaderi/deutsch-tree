@@ -1,38 +1,374 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-materials
 kind: vocabulary
 level: B1
 chapter: b1-words-home-food
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Materials and things"
   fa: "جنس‌ها و چیزها"
   de: "Materialien und Dinge"
+attemptSize: 15
 words:
+  # "Material" is any material, "Stoff" a fabric; neither is offered as a wrong meaning of the other.
   - word: Material
+    class: noun
+    article: das
+    plural: Materialien
+    level: B1
+    meaning:
+      en: material
+      fa: جنس، ماده
+    definition: das, woraus eine Sache gemacht ist, zum Beispiel Glas oder Papier
+    example:
+      de: Aus welchem Material ist die Tasche?
+      en: What material is the bag made of?
+      fa: این کیف از چه جنسی است؟
+    alsoAccepted: [der Werkstoff, der Stoff]
+    tooCloseTo: [Stoff]
+
   - word: Holz
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: wood
+      fa: چوب
+    definition: das harte Material, aus dem Bäume sind; man macht daraus Möbel und Papier
+    example:
+      de: Der Tisch ist aus Holz.
+      en: The table is made of wood.
+      fa: این میز چوبی است.
+
   - word: Metall
+    class: noun
+    article: das
+    plural: Metalle
+    level: B1
+    meaning:
+      en: metal
+      fa: فلز
+    definition: ein hartes Material wie Eisen oder Kupfer, das kalt ist, wenn man es anfasst
+    example:
+      de: Die Stühle im Garten sind aus Metall.
+      en: The garden chairs are made of metal.
+      fa: صندلی‌های باغ فلزی است.
+
   - word: Gold
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: gold
+      fa: طلا
+    definition: ein teures, gelbes Metall, aus dem man zum Beispiel Ringe macht
+    example:
+      de: Sie trägt einen Ring aus Gold.
+      en: She is wearing a gold ring.
+      fa: او انگشتری از طلا به دست دارد.
+
+  # "Plastik" and "Kunststoff" are the same material; each is right when the other is asked for.
   - word: Plastik
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: plastic
+      fa: پلاستیک
+    definition: ein leichtes Material, das nicht aus der Natur kommt; viele Flaschen und Tüten sind daraus
+    example:
+      de: Wir wollen weniger Plastik kaufen.
+      en: We want to buy less plastic.
+      fa: می‌خواهیم کمتر پلاستیک بخریم.
+    alsoAccepted: [der Kunststoff]
+    tooCloseTo: [Kunststoff]
+
   - word: Kunststoff
+    class: noun
+    article: der
+    plural: Kunststoffe
+    level: B1
+    meaning:
+      en: synthetic material, plastic
+      fa: مادهٔ مصنوعی، پلاستیک
+    definition: ein Material, das man in Fabriken zum Beispiel aus Öl macht; das Wort benutzt man oft in der Technik
+    example:
+      de: Die Fenster haben Rahmen aus Kunststoff.
+      en: The windows have plastic frames.
+      fa: قاب پنجره‌ها پلاستیکی است.
+    alsoAccepted: [das Plastik]
+    tooCloseTo: [Plastik]
+
   - word: Leder
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: leather
+      fa: چرم
+    definition: die Haut von Tieren, aus der man Schuhe, Taschen und Jacken macht
+    example:
+      de: Die Jacke ist aus echtem Leder.
+      en: The jacket is made of real leather.
+      fa: این کاپشن از چرم طبیعی است.
+
   - word: Wolle
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: wool
+      fa: پشم
+    definition: die weichen Haare von Schafen, aus denen man warme Kleidung macht
+    example:
+      de: Im Winter trage ich Socken aus Wolle.
+      en: In winter I wear woollen socks.
+      fa: زمستان‌ها جوراب پشمی می‌پوشم.
+
   - word: Stoff
+    class: noun
+    article: der
+    plural: Stoffe
+    level: B1
+    meaning:
+      en: fabric, cloth; substance
+      fa: پارچه؛ ماده (شیمیایی)
+    definition: das Material, aus dem Kleidung und Vorhänge gemacht sind; auch eine Substanz in der Chemie
+    example:
+      de: Für die Vorhänge kaufe ich drei Meter Stoff.
+      en: I'm buying three metres of fabric for the curtains.
+      fa: برای پرده‌ها سه متر پارچه می‌خرم.
+    tooCloseTo: [Material]
+
   - word: Gas
+    class: noun
+    article: das
+    plural: Gase
+    level: B1
+    meaning:
+      en: gas
+      fa: گاز
+    definition: etwas wie Luft, das man meistens nicht sehen kann; man kocht und heizt auch damit
+    example:
+      de: In unserer Küche kochen wir mit Gas.
+      en: In our kitchen we cook with gas.
+      fa: در آشپزخانهٔ ما با گاز غذا می‌پزیم.
+
   - word: Flüssigkeit
+    class: noun
+    article: die
+    plural: Flüssigkeiten
+    level: B1
+    meaning:
+      en: liquid, fluid
+      fa: مایع
+    definition: etwas wie Wasser, Milch oder Öl, das fließt und keine feste Form hat
+    example:
+      de: Im Flugzeug darf man nur wenig Flüssigkeit mitnehmen.
+      en: You may only take a little liquid on the plane.
+      fa: در هواپیما فقط مقدار کمی مایعات می‌شود همراه برد.
+
   - word: Stein
+    class: noun
+    article: der
+    plural: Steine
+    level: B1
+    meaning:
+      en: stone, rock
+      fa: سنگ
+    definition: ein hartes Stück aus der Erde; alte Häuser und Mauern sind oft daraus gebaut
+    example:
+      de: Das alte Haus ist aus Stein gebaut.
+      en: The old house is built of stone.
+      fa: این خانهٔ قدیمی از سنگ ساخته شده است.
+
   - word: Sand
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: sand
+      fa: ماسه، شن
+    definition: ganz kleine, helle Körner, zum Beispiel am Strand oder in der Wüste
+    example:
+      de: Die Kinder spielen am Strand im Sand.
+      en: The children are playing in the sand on the beach.
+      fa: بچه‌ها کنار دریا روی ماسه‌ها بازی می‌کنند.
+
   - word: künstlich
+    class: adjective
+    level: B1
+    meaning:
+      en: artificial
+      fa: مصنوعی
+    definition: von Menschen gemacht, nicht aus der Natur
+    example:
+      de: Die Blumen auf dem Tisch sind künstlich.
+      en: The flowers on the table are artificial.
+      fa: گل‌های روی میز مصنوعی است.
+
   - word: fest
+    class: adjective
+    level: B1
+    meaning:
+      en: solid, firm; fixed
+      fa: سفت، جامد؛ ثابت
+    definition: hart, so dass es seine Form behält; auch so, dass es sich nicht bewegt oder nicht ändert
+    example:
+      de: Im Kühlschrank ist die Butter fest, in der Sonne wird sie weich.
+      en: In the fridge the butter is firm; in the sun it goes soft.
+      fa: کره در یخچال سفت است و زیر آفتاب نرم می‌شود.
+
   - word: dicht
+    class: adjective
+    level: B1
+    meaning:
+      en: tight, sealed (lets nothing through); dense, thick
+      fa: درزبندی‌شده (چیزی از آن رد نمی‌شود)؛ انبوه، غلیظ
+    definition: so, dass kein Wasser und keine Luft durchkommt; auch sehr eng zusammen, wie die Bäume in einem Wald
+    example:
+      de: Das Fenster ist nicht dicht, es zieht.
+      en: The window isn't sealed properly; there's a draught.
+      fa: این پنجره درز دارد و باد از آن می‌آید.
+
   - word: glatt
+    class: adjective
+    level: B1
+    meaning:
+      en: smooth; slippery
+      fa: صاف؛ لیز
+    definition: ohne Ecken, Löcher oder raue Stellen; auch so, dass man leicht ausrutscht, zum Beispiel auf Eis
+    example:
+      de: Vorsicht, die Straße ist heute sehr glatt!
+      en: Careful, the road is very slippery today!
+      fa: مواظب باشید، خیابان امروز خیلی لیز است!
+
+  # "Gegenstand" is an object, "Zeug" stuff in general; neither is offered as a wrong meaning of the other.
   - word: Gegenstand
+    class: noun
+    article: der
+    plural: Gegenstände
+    level: B1
+    meaning:
+      en: object, item
+      fa: شیء
+    definition: eine Sache, die man anfassen kann, zum Beispiel ein Stift oder eine Tasse
+    example:
+      de: Im Fundbüro liegen viele verlorene Gegenstände.
+      en: There are many lost items at the lost property office.
+      fa: در دفتر اشیای گمشده چیزهای گمشدهٔ زیادی هست.
+    alsoAccepted: [das Ding, die Sache, das Objekt]
+    tooCloseTo: [Zeug]
+
   - word: Zeug
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: stuff, things (informal)
+      fa: خرت‌وپرت، وسایل (عامیانه)
+    definition: umgangssprachlich für Dinge, deren Namen man nicht nennt oder die nicht wichtig sind
+    example:
+      de: Räum bitte dein Zeug vom Tisch!
+      en: Please clear your stuff off the table!
+      fa: لطفاً وسایلت را از روی میز جمع کن!
+    alsoAccepted: [die Sachen, das Zeugs, der Kram]
+    tooCloseTo: [Gegenstand]
+
   - word: haltbar
+    class: adjective
+    level: B1
+    meaning:
+      en: durable, long-lasting; (of food) that keeps
+      fa: بادوام؛ ماندگار (خوراکی)
+    definition: so, dass es lange gut bleibt und nicht schnell kaputt oder schlecht wird
+    example:
+      de: Die Milch ist bis Freitag haltbar.
+      en: The milk keeps until Friday.
+      fa: این شیر تا جمعه قابل مصرف است.
+    alsoAccepted: [beständig, dauerhaft, strapazierfähig]
+
+  # The adjective "original" and the noun "das Original" are told apart by their class; neither is offered as a wrong meaning of the other.
   - word: original
+    class: adjective
+    level: B1
+    meaning:
+      en: original, genuine (not copied)
+      fa: اصل، اصیل (بدلی نیست)
+    definition: echt, nicht nachgemacht; so, wie es zuerst war
+    example:
+      de: Das ist eine original italienische Pizza.
+      en: That is a genuine Italian pizza.
+      fa: این یک پیتزای اصل ایتالیایی است.
+    alsoAccepted: [echt]
+    tooCloseTo: [Original]
+
   - word: Original
+    class: noun
+    article: das
+    plural: Originale
+    level: B1
+    meaning:
+      en: the original (not a copy)
+      fa: نسخهٔ اصل (کپی نیست)
+    definition: das erste, echte Stück, zum Beispiel ein Bild oder ein Dokument, von dem es Kopien geben kann
+    example:
+      de: Bringen Sie bitte das Original und eine Kopie mit.
+      en: Please bring the original and a copy.
+      fa: لطفاً اصل مدرک و یک کپی از آن را همراه بیاورید.
+    tooCloseTo: [original]
+
   - word: Folie
+    class: noun
+    article: die
+    plural: Folien
+    level: B1
+    meaning:
+      en: foil, film (e.g. cling film)
+      fa: فویل، سلفون (ورقهٔ نازک)
+    definition: eine sehr dünne Schicht aus Plastik oder Metall, mit der man zum Beispiel Essen frisch hält
+    example:
+      de: Ich decke den Kuchen mit Folie ab.
+      en: I cover the cake with foil.
+      fa: روی کیک را با فویل می‌پوشانم.
+
   - word: farbig
+    class: adjective
+    level: B1
+    meaning:
+      en: coloured, colourful
+      fa: رنگی
+    definition: mit Farbe, nicht schwarz, weiß oder grau
+    example:
+      de: Die Kinder malen mit farbigen Stiften.
+      en: The children are drawing with coloured pencils.
+      fa: بچه‌ها با مدادرنگی نقاشی می‌کنند.
+    alsoAccepted: [bunt]
+
   - word: violett
+    class: adjective
+    level: B1
+    meaning:
+      en: violet, purple
+      fa: بنفش
+    definition: eine Farbe zwischen Blau und Rot
+    example:
+      de: Sie trägt heute ein violettes Kleid.
+      en: She's wearing a purple dress today.
+      fa: او امروز لباس بنفش پوشیده است.
+    alsoAccepted: [lila]
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent that saw
+    only the review sheet; not a person)
+  date: 2026-11-28
+  pool: 6e45ad7431da0e80
