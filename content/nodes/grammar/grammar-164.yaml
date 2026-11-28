@@ -52,7 +52,11 @@ explanations:
 table:
   columns:
     - { en: "Once in the past: *als*", fa: "یک بار در گذشته: *als*", de: "Einmal in der Vergangenheit: *als*" }
-    - { en: "Again and again in the past: *wenn*", fa: "بارها در گذشته: *wenn*", de: "Oft in der Vergangenheit: *wenn*" }
+    - {
+        en: "Again and again in the past: *wenn*",
+        fa: "بارها در گذشته: *wenn*",
+        de: "Oft in der Vergangenheit: *wenn*",
+      }
     - { en: "Now or later: *wenn*", fa: "حال یا آینده: *wenn*", de: "Jetzt oder später: *wenn*" }
   rows:
     - ["Als ich krank war, …", "Immer wenn ich krank war, …", "Wenn ich krank bin, …"]
@@ -135,7 +139,7 @@ mistakes:
   - wrong: Wenn ich gestern nach Hause kam, war niemand da.
     right: Als ich gestern nach Hause kam, war niemand da.
     why:
-      en: "*Gestern* is one event in the past, so *als*. *Wenn* in the past means \"every time\"."
+      en: '*Gestern* is one event in the past, so *als*. *Wenn* in the past means "every time".'
       fa: "*gestern* یک رویداد در گذشته است، پس *als* می‌آید. *wenn* در گذشته یعنی «هر بار»."
       de: "*Gestern* ist ein Ereignis in der Vergangenheit. Darum *als*. *Wenn* heißt in der Vergangenheit: jedes Mal."
   - wrong: Als ich morgen Zeit habe, rufe ich dich an.

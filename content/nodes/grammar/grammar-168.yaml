@@ -212,7 +212,7 @@ questions:
     options: [Nachdem, Danach, Nach]
     answer: Danach
     explanation:
-      en: "No clause and no noun follows; the verb *haben* comes right after the gap. So *danach*, \"after that\"."
+      en: 'No clause and no noun follows; the verb *haben* comes right after the gap. So *danach*, "after that".'
       fa: "پس از جای خالی نه جملهٔ پیرو می‌آید و نه اسم، بلکه بی‌درنگ فعل *haben*. پس *danach* یعنی «پس از آن»."
       de: "Danach kommt kein Nebensatz und kein Nomen, sondern sofort das Verb *haben*. Darum *danach*."
   - id: choice-1

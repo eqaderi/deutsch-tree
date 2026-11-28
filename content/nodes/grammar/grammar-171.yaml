@@ -123,7 +123,7 @@ mistakes:
   - wrong: Warte bitte, bevor ich fertig bin.
     right: Warte bitte, bis ich fertig bin.
     why:
-      en: "The waiting lasts up to the moment I am finished: *bis*, \"until\". *Bevor* only says what comes earlier."
+      en: 'The waiting lasts up to the moment I am finished: *bis*, "until". *Bevor* only says what comes earlier.'
       fa: "منتظر ماندن تا لحظه‌ای ادامه دارد که کار من تمام شود: *bis*. *bevor* فقط می‌گوید چه چیزی زودتر است."
       de: "Das Warten dauert bis zu dem Moment, in dem ich fertig bin: *bis*. *Bevor* sagt nur, was früher passiert."
   - wrong: Bis der Film anfängt, wir trinken noch etwas.
@@ -146,7 +146,7 @@ questions:
     options: [als, seit, bis]
     answer: bis
     explanation:
-      en: "The waiting lasts up to your return: *bis*, \"until\"."
+      en: 'The waiting lasts up to your return: *bis*, "until".'
       fa: "منتظر ماندن تا برگشتن تو ادامه دارد: *bis*، یعنی «تا»."
       de: "Das Warten dauert bis zu deiner Rückkehr: *bis*."
   - id: gap-2
@@ -164,7 +164,7 @@ questions:
     options: [bevor, bis, als]
     answer: bis
     explanation:
-      en: "Before a time, \"until\" is the preposition *bis*: *bis 20 Uhr*."
+      en: 'Before a time, "until" is the preposition *bis*: *bis 20 Uhr*.'
       fa: "پیش از زمان، «تا» حرف اضافهٔ *bis* است: *bis 20 Uhr*."
       de: "Vor einer Uhrzeit steht die Präposition *bis*: *bis 20 Uhr*."
   - id: gap-4
@@ -224,7 +224,7 @@ questions:
     prompt: Bis du kommst, bin ich fertig.
     answer: true
     explanation:
-      en: "The *bis* clause is position 1, *bin* comes next. \"By the time you come, I'll be finished.\" The sentence is correct."
+      en: 'The *bis* clause is position 1, *bin* comes next. "By the time you come, I''ll be finished." The sentence is correct.'
       fa: "جملهٔ پیرو با *bis* جایگاه اول است و *bin* پس از آن می‌آید: «تا تو برسی، کارم تمام شده است». جمله درست است."
       de: "Der *bis*-Satz ist Position 1, danach kommt *bin*. Der Satz ist richtig."
   - id: true-4

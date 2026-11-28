@@ -54,8 +54,16 @@ explanations:
 
 table:
   columns:
-    - { en: "*Seit* / *seitdem* clause: since when?", fa: "جملهٔ پیرو با *seit* / *seitdem*: از کی؟", de: "*Seit*- / *seitdem*-Satz: seit wann?" }
-    - { en: "Main clause: up to now, in the *Präsens*", fa: "جملهٔ پایه: تا اکنون، در زمان حال", de: "Hauptsatz: bis jetzt, im Präsens" }
+    - {
+        en: "*Seit* / *seitdem* clause: since when?",
+        fa: "جملهٔ پیرو با *seit* / *seitdem*: از کی؟",
+        de: "*Seit*- / *seitdem*-Satz: seit wann?",
+      }
+    - {
+        en: "Main clause: up to now, in the *Präsens*",
+        fa: "جملهٔ پایه: تا اکنون، در زمان حال",
+        de: "Hauptsatz: bis jetzt, im Präsens",
+      }
   rows:
     - ["Seitdem ich in Hamburg wohne,", fahre ich viel Fahrrad.]
     - ["Seit sie ein Baby hat,", schläft sie sehr wenig.]
@@ -126,7 +134,7 @@ mistakes:
   - wrong: Seit ich in Wien wohne, arbeitete ich in einer Bank.
     right: Seit ich in Wien wohne, arbeite ich in einer Bank.
     why:
-      en: "The work began then and still goes on, so the main clause is in the *Präsens*: *arbeite ich*. English says \"I have worked\" here."
+      en: 'The work began then and still goes on, so the main clause is in the *Präsens*: *arbeite ich*. English says "I have worked" here.'
       fa: "کار از آن زمان آغاز شده و هنوز ادامه دارد، پس آلمانی زمان حال را به کار می‌برد: *arbeite ich*."
       de: "Die Arbeit hat damals angefangen und geht noch weiter. Darum steht das Präsens: *arbeite ich*."
   - wrong: Seit ich wohne in Hamburg, fahre ich viel Fahrrad.
@@ -191,7 +199,7 @@ questions:
     options: [Seit, Als, Seitdem]
     answer: Seitdem
     explanation:
-      en: "No clause and no noun follows; the verb *wohnen* comes right after the gap. So the adverb *seitdem*, \"since then\"."
+      en: 'No clause and no noun follows; the verb *wohnen* comes right after the gap. So the adverb *seitdem*, "since then".'
       fa: "پس از جای خالی نه جملهٔ پیرو می‌آید و نه اسم، بلکه بی‌درنگ فعل *wohnen*. پس قید *seitdem* یعنی «از آن وقت»."
       de: "Danach kommt kein Nebensatz und kein Nomen, sondern sofort das Verb *wohnen*. Darum *seitdem*."
   - id: choice-1
@@ -242,7 +250,7 @@ questions:
     prompt: Ich bin letztes Jahr umgezogen. Seitdem wohne ich in Bonn.
     answer: true
     explanation:
-      en: "*Seitdem* as an adverb, \"since then\": the verb *wohne* comes right after it. The sentence is correct."
+      en: '*Seitdem* as an adverb, "since then": the verb *wohne* comes right after it. The sentence is correct.'
       fa: "*seitdem* این‌جا قید است، یعنی «از آن وقت»، و فعل *wohne* بی‌درنگ پس از آن می‌آید. جمله درست است."
       de: "*Seitdem* steht hier allein, danach kommt sofort das Verb *wohne*. Der Satz ist richtig."
   - id: true-4

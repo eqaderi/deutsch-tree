@@ -115,7 +115,7 @@ questions:
     options: [Solange, Sobald]
     answer: Sobald
     explanation:
-      en: "Arriving takes a moment, and the message comes right after it: *sobald*, \"as soon as\"."
+      en: 'Arriving takes a moment, and the message comes right after it: *sobald*, "as soon as".'
       fa: "رسیدن یک لحظه است و پیام بی‌درنگ پس از آن می‌آید: *sobald*، یعنی «به محض این‌که»."
       de: "Ankommen dauert nur einen Moment, die Nachricht kommt gleich danach: *sobald*."
   - id: gap-2
@@ -124,7 +124,7 @@ questions:
     options: [solange, sobald]
     answer: solange
     explanation:
-      en: "Staying lasts as long as you want: *solange*, \"as long as\". *Sobald* would need a start, not something that lasts."
+      en: 'Staying lasts as long as you want: *solange*, "as long as". *Sobald* would need a start, not something that lasts.'
       fa: "ماندن تا هر وقت بخواهی ادامه دارد: *solange*، یعنی «تا وقتی که»."
       de: "Das Wohnen dauert, so lange du willst: *solange*."
   - id: gap-3
@@ -148,7 +148,12 @@ questions:
   - id: choice-1
     type: multiple-choice
     prompt: "Sobald ich zu Hause bin, rufe ich dich an. Was heißt das?"
-    options: [Ich rufe dich die ganze Zeit an., "Ich rufe dich gleich an, wenn ich zu Hause ankomme.", "Ich rufe dich an, bevor ich nach Hause komme."]
+    options:
+      [
+        Ich rufe dich die ganze Zeit an.,
+        "Ich rufe dich gleich an, wenn ich zu Hause ankomme.",
+        "Ich rufe dich an, bevor ich nach Hause komme.",
+      ]
     answer: Ich rufe dich gleich an, wenn ich zu Hause ankomme.
     explanation:
       en: "*Sobald*: as soon as. The call comes right after getting home."
@@ -157,7 +162,12 @@ questions:
   - id: choice-2
     type: multiple-choice
     prompt: "Solange es regnet, bleiben wir drinnen. Was heißt das?"
-    options: ["Wir gehen raus, sobald es regnet.", "Wir bleiben drinnen, bevor es regnet.", "Wir bleiben drinnen, bis der Regen aufhört."]
+    options:
+      [
+        "Wir gehen raus, sobald es regnet.",
+        "Wir bleiben drinnen, bevor es regnet.",
+        "Wir bleiben drinnen, bis der Regen aufhört.",
+      ]
     answer: Wir bleiben drinnen, bis der Regen aufhört.
     explanation:
       en: "*Solange*: as long as. Staying inside lasts as long as the rain."
@@ -184,7 +194,12 @@ questions:
   - id: choice-5
     type: multiple-choice
     prompt: "Solange ich in Berlin wohne, gehe ich oft ins Theater. Was stimmt?"
-    options: ["Ich gehe einmal ins Theater, wenn ich in Berlin ankomme.", "Ich gehe ins Theater, bevor ich nach Berlin ziehe.", Während der ganzen Zeit in Berlin gehe ich oft ins Theater.]
+    options:
+      [
+        "Ich gehe einmal ins Theater, wenn ich in Berlin ankomme.",
+        "Ich gehe ins Theater, bevor ich nach Berlin ziehe.",
+        Während der ganzen Zeit in Berlin gehe ich oft ins Theater.,
+      ]
     answer: Während der ganzen Zeit in Berlin gehe ich oft ins Theater.
     explanation:
       en: "*Solange*: the theatre visits last as long as I live in Berlin."

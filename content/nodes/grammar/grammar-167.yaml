@@ -51,7 +51,11 @@ explanations:
 table:
   columns:
     - { en: "Main clause: this comes first", fa: "جملهٔ پایه: این اول رخ می‌دهد", de: "Hauptsatz: das passiert zuerst" }
-    - { en: "*Bevor* clause: this comes later", fa: "جملهٔ پیرو با *bevor*: این بعد رخ می‌دهد", de: "*Bevor*-Satz: das passiert danach" }
+    - {
+        en: "*Bevor* clause: this comes later",
+        fa: "جملهٔ پیرو با *bevor*: این بعد رخ می‌دهد",
+        de: "*Bevor*-Satz: das passiert danach",
+      }
   rows:
     - ["Ruf bitte an,", bevor du kommst.]
     - ["Ich wasche mir die Hände,", bevor ich esse.]
@@ -142,7 +146,7 @@ questions:
     options: [vorher, bevor, vor]
     answer: vorher
     explanation:
-      en: "No clause and no noun follows; the verb *esse* comes right after the gap. So the adverb *vorher*, \"before that\"."
+      en: 'No clause and no noun follows; the verb *esse* comes right after the gap. So the adverb *vorher*, "before that".'
       fa: "پس از جای خالی نه جملهٔ پیرو می‌آید و نه اسم، بلکه بی‌درنگ فعل *esse*. پس قید *vorher* یعنی «پیش از آن»."
       de: "Danach kommt kein Nebensatz und kein Nomen, sondern sofort das Verb *esse*. Darum *vorher*."
   - id: gap-4

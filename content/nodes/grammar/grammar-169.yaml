@@ -152,7 +152,7 @@ questions:
     options: [während, bevor, nachdem]
     answer: während
     explanation:
-      en: "Two people are set side by side as a contrast: *während*, \"whereas\"."
+      en: 'Two people are set side by side as a contrast: *während*, "whereas".'
       fa: "دو نفر در برابر هم گذاشته شده‌اند: *während*، یعنی «در حالی که»."
       de: "Man vergleicht zwei Personen, die verschieden sind: *während*."
   - id: gap-3
@@ -185,7 +185,8 @@ questions:
   - id: choice-2
     type: multiple-choice
     prompt: "Während Anna gern liest, sieht ihr Mann lieber fern. Was sagt der Satz?"
-    options: ["Anna liest, bevor ihr Mann fernsieht.", Anna und ihr Mann mögen verschiedene Dinge., Anna liest nur am Abend.]
+    options:
+      ["Anna liest, bevor ihr Mann fernsieht.", Anna und ihr Mann mögen verschiedene Dinge., Anna liest nur am Abend.]
     answer: Anna und ihr Mann mögen verschiedene Dinge.
     explanation:
       en: "Here *während* sets two people side by side as a contrast: she likes reading, he likes television."
@@ -194,10 +195,11 @@ questions:
   - id: choice-3
     type: multiple-choice
     prompt: "Er hört Musik, während er arbeitet. Was sagt der Satz?"
-    options: [Er hört Musik nach der Arbeit., Er hört Musik und arbeitet zur gleichen Zeit., Er hört Musik vor der Arbeit.]
+    options:
+      [Er hört Musik nach der Arbeit., Er hört Musik und arbeitet zur gleichen Zeit., Er hört Musik vor der Arbeit.]
     answer: Er hört Musik und arbeitet zur gleichen Zeit.
     explanation:
-      en: "Here *während* means \"while\": the music and the work happen at the same time."
+      en: 'Here *während* means "while": the music and the work happen at the same time.'
       fa: "این‌جا *während* یعنی «هنگامی که»: موسیقی و کار هم‌زمان‌اند."
       de: "Hier heißt *während*: zur gleichen Zeit. Musik und Arbeit passieren gleichzeitig."
   - id: true-1
@@ -269,7 +271,7 @@ questions:
     prompt: Meine Schwester trinkt nur Tee, ___ (während / bevor) ich viel Kaffee trinke.
     answers: [während]
     explanation:
-      en: "Two habits are set side by side as a contrast: *während*, \"whereas\"."
+      en: 'Two habits are set side by side as a contrast: *während*, "whereas".'
       fa: "دو عادت در برابر هم گذاشته شده‌اند: *während*، یعنی «در حالی که»."
       de: "Man vergleicht zwei Gewohnheiten, die verschieden sind: *während*."
   - id: error-1
