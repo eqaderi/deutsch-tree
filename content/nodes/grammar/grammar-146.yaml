@@ -142,7 +142,7 @@ mistakes:
   - wrong: Das ist nein gut.
     right: Das ist nicht gut.
     why:
-      en: "*Nein* is only an answer (\"no\"). Inside a sentence the negation is *nicht*."
+      en: '*Nein* is only an answer ("no"). Inside a sentence the negation is *nicht*.'
       fa: "*nein* فقط پاسخ است («نه»). برای منفی کردن جمله *nicht* به کار می‌رود."
       de: "*Nein* ist nur eine Antwort. Im Satz verneint man mit *nicht*."
   - wrong: Er wohnt in Berlin nicht.
@@ -154,7 +154,7 @@ mistakes:
   - wrong: Ich tanze gern nicht.
     right: Ich tanze nicht gern.
     why:
-      en: "*Nicht* stands before *gern*: *nicht gern* means \"don't like to\"."
+      en: '*Nicht* stands before *gern*: *nicht gern* means "don''t like to".'
       fa: "*nicht* پیش از *gern* می‌آید: *nicht gern* یعنی «دوست ندارم که …»."
       de: "*Nicht* steht vor *gern*: *nicht gern*."
   - wrong: Ich arbeite nicht heute.

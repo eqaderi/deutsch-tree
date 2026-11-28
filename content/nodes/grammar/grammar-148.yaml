@@ -133,7 +133,7 @@ questions:
     options: [nichts, nicht, kein]
     answer: nichts
     explanation:
-      en: "*Nichts* means \"not anything\": the fridge is empty."
+      en: '*Nichts* means "not anything": the fridge is empty.'
       fa: "*nichts* یعنی «هیچ‌چیز»: یخچال خالی است."
       de: "*Nichts* ist das Gegenteil von *etwas*: Der Kühlschrank ist leer."
   - id: gap-4
@@ -201,7 +201,7 @@ questions:
     prompt: Das Kind isst heute nichts.
     answer: true
     explanation:
-      en: "*Nichts* means \"not anything\". The sentence is correct."
+      en: '*Nichts* means "not anything". The sentence is correct.'
       fa: "*nichts* یعنی «هیچ‌چیز». جمله درست است."
       de: "*Nichts* ist das Gegenteil von *etwas*. Der Satz ist richtig."
   - id: true-5
@@ -249,7 +249,7 @@ questions:
     prompt: Er hat Hunger, aber im Kühlschrank ist ___ (nichts / nie).
     answers: [nichts]
     explanation:
-      en: "*Nichts* means \"not anything\": there is no food in the fridge."
+      en: '*Nichts* means "not anything": there is no food in the fridge.'
       fa: "*nichts* یعنی «هیچ‌چیز»: در یخچال غذایی نیست."
       de: "*Nichts* ist das Gegenteil von *etwas*: Im Kühlschrank gibt es kein Essen."
   - id: order-1
