@@ -87,6 +87,22 @@ die Schweiz\tSwitzerland<br><br>Die Schweiz ist schön.<br>Switzerland is beauti
   )
 })
 
+test('a reflexive verb has its "sich" in front; its note keeps the id of the headword', () => {
+  const freuen = word({
+    word: 'freuen',
+    class: 'verb',
+    reflexive: 'sich',
+    meaning: { en: 'to be glad', fa: 'خوشحال شدن' },
+    example: { de: 'Wir freuen uns.', en: 'We are glad.', fa: 'خوشحالیم.' },
+  })
+
+  expect(ankiText([freuen], 'en')).toBe(
+    `${HEADERS}
+sich freuen\tto be glad<br><br>Wir freuen uns.<br>We are glad.\tdeutsch-tree\tdeutsch-tree:freuen
+`,
+  )
+})
+
 test('the file of one node is named after it; the file of every started node says so', () => {
   expect(ankiFileName('vocabulary-family')).toBe('deutsch-tree-anki-vocabulary-family.txt')
   expect(ankiFileName('started')).toBe('deutsch-tree-anki-started.txt')

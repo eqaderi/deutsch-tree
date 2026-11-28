@@ -77,6 +77,7 @@ its first mention in a node.
 | stem (of a verb) | Stamm | بن |
 | personal ending (of a verb) | Personalendung | شناسه |
 | ending (of an article, adjective or noun) | Endung | پایانه |
+| umlaut (*ä*, *ö*, *ü*) | Umlaut | دو نقطه (*Umlaut*) |
 | conjugation; to conjugate | Konjugation | صرف؛ صرف کردن |
 | regular / irregular | regelmäßig / unregelmäßig | باقاعده / بی‌قاعده |
 | mixed verb (*bringen*, *gebracht*) | gemischtes Verb | فعل آمیخته |

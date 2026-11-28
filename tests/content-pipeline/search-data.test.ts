@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest'
+import { SCOPE_LIST_FILE } from '../../src/content-model/scope-list.ts'
 import { bundleFiles, compileContent } from '../../src/content-pipeline/index.ts'
-import { fixtureContent } from './fixture.ts'
+import { changeReviewedNode, fixtureContent, fixtureContentWith, VOCABULARY } from './fixture.ts'
 
 test('the search data of a language holds what a published node says, in that language and in German', async () => {
   const { bundle } = await compileContent(fixtureContent)
@@ -63,6 +64,27 @@ test('a vocabulary node is found by each word with its article and what it means
   expect(passages('en')?.[8]).toEqual([{ de: 'schlafen' }, ' – to sleep'])
   // The example sentences are left out: they would make the file several times larger.
   expect(JSON.stringify(passages('en'))).not.toContain('Das Essen steht auf dem Tisch.')
+})
+
+test('a reflexive verb is found with its "sich", as it is learned', async () => {
+  const content = await fixtureContentWith({
+    [SCOPE_LIST_FILE]: (text) => `${text}freuen\tverb\tA1\t\t\tsich\n`,
+    [VOCABULARY]: changeReviewedNode((node) => {
+      node.words.push({
+        ...node.words[8],
+        word: 'freuen',
+        reflexive: 'sich',
+        meaning: { en: 'to be glad', fa: 'خوشحال شدن' },
+        definition: 'froh sein, zum Beispiel über ein Geschenk',
+        example: { de: 'Wir freuen uns.', en: 'We are glad.', fa: 'خوشحالیم.' },
+      })
+    }),
+  })
+  // The new word has no audio; that is not what this test is about.
+  const { bundle } = await compileContent(content, { requireAudio: false })
+
+  const passages = bundle?.search.en.entries.find((entry) => entry.node === 'vocabulary-fixture-home')?.passages
+  expect(passages?.[11]).toEqual([{ de: 'sich freuen' }, ' – to be glad'])
 })
 
 test('the search data of an exam part holds what its page explains, and nothing of its practice tasks', async () => {
