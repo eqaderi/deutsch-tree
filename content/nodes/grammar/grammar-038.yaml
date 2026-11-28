@@ -4,10 +4,277 @@ kind: grammar
 level: A2
 chapter: a2-polite-forms
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-030]
 title:
   en: "*sollte* for advice"
   fa: "*sollte* برای توصیه"
   de: "*sollte* für Ratschläge"
+
+explanations:
+  en:
+    rule: >
+      *Sollte* gives advice: *Du solltest mehr schlafen.* It says what would be
+      good to do, not what you must do, so it is softer than *musst*. *Sollte*
+      is the *Konjunktiv II* of *sollen*. It has no umlaut, so it looks the same
+      as the past (*Präteritum*); the situation tells you which is meant. It
+      works like a modal verb: *sollte* is conjugated in position 2 and the
+      second verb goes to the end as an infinitive. *Ich* and *er* / *sie* /
+      *es* have the same form, *sollte*; *du solltest*, *wir* / *sie* / *Sie
+      sollten*, *ihr solltet*. With *nicht* it is a warning: *Sie sollten
+      nicht so viel arbeiten.* To ask for advice, say *Was sollte ich machen?*
+  fa:
+    rule: >
+      با *sollte* توصیه می‌کنیم: *Du solltest mehr schlafen.* این صورت
+      می‌گوید چه کاری خوب است، نه چه کاری واجب است؛ از این رو نرم‌تر از
+      *musst* است. *sollte* صورت *Konjunktiv II* (وجه شرطی) فعل *sollen* است.
+      دو نقطه (*Umlaut*) ندارد و بنابراین با گذشتهٔ ساده (*Präteritum*) یکسان
+      است؛ موقعیت نشان می‌دهد کدام منظور است. *sollte* مانند فعل وجهی رفتار
+      می‌کند: صرف می‌شود و در جایگاه دوم می‌آید و فعل دوم به شکل مصدر به
+      پایان جمله می‌رود. *ich* و *er* / *sie* / *es* صورت یکسان *sollte* را
+      دارند؛ *du solltest*، *wir* / *sie* / *Sie sollten*، *ihr solltet*. با
+      *nicht* هشدار می‌دهیم: *Sie sollten nicht so viel arbeiten.* برای
+      نظرخواهی می‌پرسیم: *Was sollte ich machen?*
+  de:
+    rule: >
+      Mit *sollte* gibt man einen Rat: *Du solltest mehr schlafen.* Man sagt,
+      was gut wäre, nicht was man muss. *Sollte* ist also freundlicher als
+      *musst*. *Sollte* ist der Konjunktiv II von *sollen*. Es hat keinen
+      Umlaut und sieht aus wie das Präteritum. Die Situation zeigt, was man
+      meint. *Sollte* funktioniert wie ein Modalverb: Es ist konjugiert und
+      steht auf Position 2, das zweite Verb steht im Infinitiv am Ende. *Ich*
+      und *er* / *sie* / *es* haben die gleiche Form *sollte*; *du solltest*,
+      *wir* / *sie* / *Sie sollten*, *ihr solltet*. Mit *nicht* ist es eine
+      Warnung: *Sie sollten nicht so viel arbeiten.* Wenn man einen Rat
+      braucht, fragt man: *Was sollte ich machen?*
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*sollte*", fa: "*sollte*", de: "*sollte*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, sollte, Ich sollte mehr Wasser trinken.]
+    - [du, solltest, Du solltest mehr schlafen.]
+    - [er / sie / es, sollte, Er sollte zum Arzt gehen.]
+    - [wir, sollten, Wir sollten jetzt gehen.]
+    - [ihr, solltet, Ihr solltet eine Jacke mitnehmen.]
+    - [sie / Sie, sollten, Sie sollten nicht so viel arbeiten.]
+
+examples:
+  - de: Du solltest mehr schlafen.
+    en: You should sleep more.
+    fa: بهتر است بیشتر بخوابی.
+  - de: Sie sollten zum Arzt gehen.
+    en: You should see a doctor.
+    fa: بهتر است پیش پزشک بروید.
+  - de: Ihr solltet eine Jacke mitnehmen. Es ist kalt.
+    en: You should take a jacket. It's cold.
+    fa: بهتر است کاپشن با خودتان ببرید. هوا سرد است.
+  - de: Wir sollten jetzt gehen. Es ist schon spät.
+    en: We should go now. It's already late.
+    fa: بهتر است الان برویم. دیر شده است.
+  - de: Du solltest nicht so viel Kaffee trinken.
+    en: You shouldn't drink so much coffee.
+    fa: بهتر است این‌قدر قهوه نخوری.
+  - de: Was sollte ich jetzt machen?
+    en: What should I do now?
+    fa: به نظرتان حالا چه کار کنم؟
+  - de: Mein Vater sollte weniger rauchen.
+    en: My father should smoke less.
+    fa: پدرم بهتر است کمتر سیگار بکشد.
+  - de: Man sollte jeden Tag ein bisschen Deutsch lernen.
+    en: You should learn a bit of German every day.
+    fa: خوب است آدم هر روز کمی آلمانی یاد بگیرد.
+
+mistakes:
+  - wrong: Du söllst mehr schlafen.
+    right: Du solltest mehr schlafen.
+    why:
+      en: "*Sollte* has no umlaut, unlike *könnte*. With *du* the form is *solltest*."
+      fa: "*sollte* برخلاف *könnte* دو نقطه (*Umlaut*) ندارد. با *du* صورت فعل *solltest* است."
+      de: "*Sollte* hat keinen Umlaut, anders als *könnte*. Bei *du* heißt es *solltest*."
+  - wrong: Er solltest zum Arzt gehen.
+    right: Er sollte zum Arzt gehen.
+    why:
+      en: "With *er*, *sie* and *es* the form is *sollte*, the same as with *ich*."
+      fa: "با *er*، *sie* و *es* صورت فعل *sollte* است، همانند *ich*."
+      de: "Bei *er*, *sie* und *es* heißt es *sollte*, wie bei *ich*."
+  - wrong: Du solltest mehr Sport machst.
+    right: Du solltest mehr Sport machen.
+    why:
+      en: "Only *solltest* is conjugated. The second verb is an infinitive."
+      fa: "فقط *solltest* صرف می‌شود؛ فعل دوم مصدر است."
+      de: "Nur *solltest* ist konjugiert. Das zweite Verb steht im Infinitiv."
+  - wrong: Sie sollten gehen zum Arzt.
+    right: Sie sollten zum Arzt gehen.
+    why:
+      en: "The infinitive goes to the very end of the sentence."
+      fa: "مصدر در پایان جمله می‌آید."
+      de: "Der Infinitiv steht ganz am Ende."
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: Du hast Fieber. Du ___ im Bett bleiben.
+    options: [solltest, sollte, solltet]
+    answer: solltest
+    explanation:
+      en: With *du* the form is *solltest*.
+      fa: با *du* صورت فعل *solltest* است.
+      de: Bei *du* heißt es *solltest*.
+  - id: q2
+    type: gap-fill
+    prompt: Herr Weber, Sie ___ weniger arbeiten.
+    options: [sollten, solltest, sollte]
+    answer: sollten
+    explanation:
+      en: With the polite *Sie* the form is *sollten*.
+      fa: با *Sie* رسمی صورت فعل *sollten* است.
+      de: Bei *Sie* (höflich) heißt es *sollten*.
+  - id: q3
+    type: gap-fill
+    prompt: Ihr ___ mehr Obst essen.
+    options: [solltet, sollten, solltest]
+    answer: solltet
+    explanation:
+      en: With *ihr* the form is *solltet*.
+      fa: با *ihr* صورت فعل *solltet* است.
+      de: Bei *ihr* heißt es *solltet*.
+  - id: q4
+    type: multiple-choice
+    prompt: Mein Bruder ___ mehr schlafen.
+    options: [sollte, solltest, söllte]
+    answer: sollte
+    explanation:
+      en: "*Mein Bruder* is *er*: *sollte*, without an umlaut."
+      fa: "*mein Bruder* سوم‌شخص مفرد است (*er*): *sollte*، بی دو نقطه (*Umlaut*)."
+      de: "*Mein Bruder* ist *er*: *sollte*, ohne Umlaut."
+  - id: q5
+    type: multiple-choice
+    prompt: "Was bedeutet „Du solltest zum Arzt gehen.“?"
+    options: [Das ist ein Rat., Das ist ein Verbot., Das ist eine Frage.]
+    answer: Das ist ein Rat.
+    explanation:
+      en: "*Sollte* gives advice: it would be good to see a doctor."
+      fa: "*sollte* توصیه می‌کند: رفتن پیش پزشک کار خوبی است."
+      de: "Mit *sollte* gibt man einen Rat: Es wäre gut, zum Arzt zu gehen."
+  - id: q6
+    type: multiple-choice
+    prompt: "du / solltest / nicht so viel / fernsehen"
+    options: [Du solltest nicht so viel fernsehen., Du solltest fernsehen nicht so viel., Du nicht so viel solltest fernsehen.]
+    answer: Du solltest nicht so viel fernsehen.
+    explanation:
+      en: "*Solltest* is in position 2 and the infinitive *fernsehen* at the end."
+      fa: "*solltest* در جایگاه دوم است و مصدر *fernsehen* در پایان جمله."
+      de: "*Solltest* steht auf Position 2, der Infinitiv *fernsehen* am Ende."
+  - id: q7
+    type: multiple-choice
+    prompt: Welcher Satz ist ein Rat?
+    options: [Du solltest öfter spazieren gehen., Du musst um acht Uhr hier sein., Du darfst hier nicht rauchen.]
+    answer: Du solltest öfter spazieren gehen.
+    explanation:
+      en: "*Sollte* gives advice. *Musst* is an obligation and *darfst nicht* a ban."
+      fa: "*sollte* توصیه است. *musst* اجبار را نشان می‌دهد و *darfst nicht* ممنوعیت را."
+      de: "*Sollte* ist ein Rat. *Musst* ist eine Pflicht, *darfst nicht* ein Verbot."
+  - id: q8
+    type: true-false
+    prompt: Sie sollten mehr Wasser trinken.
+    answer: true
+    explanation:
+      en: "*Sollten* in position 2, the infinitive at the end. The sentence is correct."
+      fa: "*sollten* در جایگاه دوم و مصدر در پایان جمله است. جمله درست است."
+      de: "*Sollten* auf Position 2, der Infinitiv am Ende. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Du solltest mehr Gemüse isst.
+    answer: false
+    explanation:
+      en: "The second verb is an infinitive: *Du solltest mehr Gemüse essen.*"
+      fa: "فعل دوم مصدر است: *Du solltest mehr Gemüse essen.*"
+      de: "Das zweite Verb steht im Infinitiv: *Du solltest mehr Gemüse essen.*"
+  - id: q10
+    type: true-false
+    prompt: Wir sollten jetzt nach Hause gehen.
+    answer: true
+    explanation:
+      en: "With *wir* the form is *sollten*. The sentence is correct."
+      fa: "با *wir* صورت فعل *sollten* است. جمله درست است."
+      de: "Bei *wir* heißt es *sollten*. Der Satz ist richtig."
+  - id: q11
+    type: find-error
+    prompt: Er solltest mehr Sport machen.
+    answer: solltest
+    explanation:
+      en: "With *er* the form is *sollte*: *Er sollte mehr Sport machen.*"
+      fa: "با *er* صورت فعل *sollte* است: *Er sollte mehr Sport machen.*"
+      de: "Bei *er* heißt es *sollte*: *Er sollte mehr Sport machen.*"
+  - id: q12
+    type: find-error
+    prompt: Ihr solltet die Tabletten nehmt.
+    answer: nehmt
+    explanation:
+      en: "The second verb is an infinitive: *Ihr solltet die Tabletten nehmen.*"
+      fa: "فعل دوم مصدر است: *Ihr solltet die Tabletten nehmen.*"
+      de: "Das zweite Verb steht im Infinitiv: *Ihr solltet die Tabletten nehmen.*"
+  - id: q13
+    type: word-order
+    answers:
+      - [wie viel Wasser, sollte, ich, am Tag, trinken]
+    end: "?"
+    explanation:
+      en: "*Wie viel Wasser* is the question word, then *sollte*, the subject, and the infinitive at the end."
+      fa: "*wie viel Wasser* بخش پرسشی است، سپس *sollte*، فاعل و در پایان مصدر."
+      de: "*Wie viel Wasser* ist das Fragewort, dann *sollte*, Subjekt, am Ende der Infinitiv."
+  - id: q14
+    type: word-order
+    answers:
+      - [wann, sollten, wir, losfahren]
+    end: "?"
+    explanation:
+      en: "Question word, *sollten*, the subject, and the infinitive at the end."
+      fa: "واژهٔ پرسشی، *sollten*، فاعل و در پایان مصدر."
+      de: "Fragewort, *sollten*, Subjekt, am Ende der Infinitiv."
+  - id: q15
+    type: typed-gap-fill
+    prompt: Du ___ (sollte) mehr Wasser trinken.
+    answers: [solltest]
+    explanation:
+      en: With *du* the form is *solltest*.
+      fa: با *du* صورت فعل *solltest* است.
+      de: Bei *du* heißt es *solltest*.
+  - id: q16
+    type: typed-gap-fill
+    prompt: Frau Ahmadi, Sie ___ (sollte) sich ein bisschen ausruhen.
+    answers: [sollten]
+    explanation:
+      en: With the polite *Sie* the form is *sollten*.
+      fa: با *Sie* رسمی صورت فعل *sollten* است.
+      de: Bei *Sie* (höflich) heißt es *sollten*.
+  - id: q17
+    type: typed-gap-fill
+    prompt: Ihr ___ (sollte) nicht so laut sein. Das Baby schläft.
+    answers: [solltet]
+    explanation:
+      en: With *ihr* the form is *solltet*.
+      fa: با *ihr* صورت فعل *solltet* است.
+      de: Bei *ihr* heißt es *solltet*.
+  - id: q18
+    type: matching
+    answer:
+      - [ich, sollte]
+      - [du, solltest]
+      - [wir, sollten]
+      - [ihr, solltet]
+    explanation:
+      en: "The forms of *sollte*: *ich sollte*, *du solltest*, *wir sollten*, *ihr solltet*."
+      fa: "صورت‌های *sollte*: *ich sollte*، *du solltest*، *wir sollten*، *ihr solltet*."
+      de: "Die Formen von *sollte*: *ich sollte*, *du solltest*, *wir sollten*, *ihr solltet*."
+
+review:
+  reviewer: two independent AI agents (fresh Claude Opus 5.5 subagents, blind
+    passes on the review sheet only; the second on q13 after it was rewritten;
+    not people)
+  date: 2026-11-28
+  pool: e98fadf0198bd77b

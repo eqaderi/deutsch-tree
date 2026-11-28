@@ -4,10 +4,286 @@ kind: grammar
 level: A2
 chapter: a2-polite-forms
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-026, grammar-036]
 title:
   en: "*könnte* for polite requests and suggestions"
   fa: "*könnte* برای درخواست مؤدبانه و پیشنهاد"
   de: "*könnte* für höfliche Bitten und Vorschläge"
+
+explanations:
+  en:
+    rule: >
+      To ask politely, say *könnte* instead of *kann*: *Könnten Sie mir bitte
+      helfen?* sounds softer than *Können Sie mir helfen?* *Könnte* is the
+      *Konjunktiv II* of *können*: the past *konnte* with an umlaut, *ö*. It
+      works like *kann*: in a yes/no question it comes first, in a statement
+      in position 2, and the second verb goes to the end as an infinitive.
+      *Ich* and *er* / *sie* / *es* have the same form, *könnte*; *du
+      könntest*, *wir* / *sie* / *Sie könnten*, *ihr könntet*. Two more polite
+      forms work the same way: *Würden Sie bitte kurz warten?* asks someone to
+      do something, and *Dürfte ich Sie etwas fragen?* asks for permission. In
+      a statement, *könnte* makes a suggestion: *Wir könnten ins Kino gehen.*
+  fa:
+    rule: >
+      برای درخواست مؤدبانه به جای *kann* از *könnte* استفاده کنید: *Könnten
+      Sie mir bitte helfen?* نرم‌تر از *Können Sie mir helfen?* است. *könnte*
+      صورت *Konjunktiv II* (وجه شرطی) فعل *können* است: همان گذشتهٔ *konnte*
+      با دو نقطه (*Umlaut*) روی *ö*. این صورت مانند *kann* رفتار می‌کند: در
+      پرسش بله یا نه در آغاز جمله و در جملهٔ خبری در جایگاه دوم می‌آید و فعل
+      دوم به شکل مصدر به پایان جمله می‌رود. *ich* و *er* / *sie* / *es* صورت
+      یکسان *könnte* را دارند؛ *du könntest*، *wir* / *sie* / *Sie könnten*،
+      *ihr könntet*. دو صورت مؤدبانهٔ دیگر نیز همین‌گونه‌اند: با *Würden Sie
+      bitte kurz warten?* از کسی می‌خواهیم کاری بکند و با *Dürfte ich Sie
+      etwas fragen?* اجازه می‌گیریم. در جملهٔ خبری، *könnte* پیشنهاد می‌دهد:
+      *Wir könnten ins Kino gehen.*
+  de:
+    rule: >
+      Für eine höfliche Bitte sagt man *könnte* statt *kann*: *Könnten Sie mir
+      bitte helfen?* klingt freundlicher als *Können Sie mir helfen?*
+      *Könnte* ist der Konjunktiv II von *können*: das Präteritum *konnte* mit
+      Umlaut, *ö*. Es funktioniert wie *kann*: In der Ja/Nein-Frage steht es am
+      Anfang, im Aussagesatz auf Position 2. Das zweite Verb steht im
+      Infinitiv am Ende. *Ich* und *er* / *sie* / *es* haben die gleiche Form
+      *könnte*; *du könntest*, *wir* / *sie* / *Sie könnten*, *ihr könntet*.
+      Zwei andere höfliche Formen funktionieren genauso: Mit *Würden Sie bitte
+      kurz warten?* bittet man um etwas, mit *Dürfte ich Sie etwas fragen?*
+      fragt man um Erlaubnis. Im Aussagesatz macht *könnte* einen Vorschlag:
+      *Wir könnten ins Kino gehen.*
+
+table:
+  columns:
+    - { en: Direct, fa: مستقیم, de: Direkt }
+    - { en: Polite, fa: مؤدبانه, de: Höflich }
+  rows:
+    - [Kannst du mir helfen?, Könntest du mir helfen?]
+    - [Können Sie das Fenster öffnen?, Könnten Sie bitte das Fenster öffnen?]
+    - [Warten Sie!, Würden Sie bitte kurz warten?]
+    - [Kann ich Sie etwas fragen?, Dürfte ich Sie etwas fragen?]
+    - [Wir gehen ins Kino., Wir könnten ins Kino gehen.]
+    - [Nehmt den Bus!, Ihr könntet den Bus nehmen.]
+
+examples:
+  - de: Könnten Sie mir bitte helfen?
+    en: Could you help me, please?
+    fa: ممکن است لطفاً به من کمک کنید؟
+  - de: Könntest du mir das Salz geben?
+    en: Could you pass me the salt?
+    fa: می‌شود نمک را به من بدهی؟
+  - de: Würden Sie bitte kurz warten?
+    en: Would you wait a moment, please?
+    fa: ممکن است لطفاً لحظه‌ای صبر کنید؟
+  - de: Dürfte ich Sie etwas fragen?
+    en: May I ask you something?
+    fa: اجازه می‌دهید چیزی از شما بپرسم؟
+  - de: Könnten Sie das bitte noch einmal sagen?
+    en: Could you say that again, please?
+    fa: ممکن است لطفاً دوباره بگویید؟
+  - de: Wir könnten am Wochenende ins Kino gehen.
+    en: We could go to the cinema at the weekend.
+    fa: می‌توانیم آخر هفته به سینما برویم.
+  - de: Du könntest deine Schwester fragen.
+    en: You could ask your sister.
+    fa: می‌توانی از خواهرت بپرسی.
+  - de: Könnten wir uns morgen treffen?
+    en: Could we meet tomorrow?
+    fa: می‌شود فردا همدیگر را ببینیم؟
+
+mistakes:
+  - wrong: Konnten Sie mir bitte helfen?
+    right: Könnten Sie mir bitte helfen?
+    why:
+      en: "*Konnten*, without the umlaut, is the past (*Präteritum*). A polite request needs *könnten*, with *ö*."
+      fa: "*konnten* بی دو نقطه (*Umlaut*) گذشتهٔ ساده (*Präteritum*) است. درخواست مؤدبانه *könnten* با *ö* لازم دارد."
+      de: "*Konnten* ohne Umlaut ist Präteritum. Für eine höfliche Bitte braucht man *könnten* mit *ö*."
+  - wrong: Könntest Sie bitte das Fenster öffnen?
+    right: Könnten Sie bitte das Fenster öffnen?
+    why:
+      en: "With the polite *Sie* the form is *könnten*, as with *wir*."
+      fa: "با *Sie* رسمی صورت فعل *könnten* است، همانند *wir*."
+      de: "Bei *Sie* (höflich) heißt es *könnten*, wie bei *wir*."
+  - wrong: Könntest du mir hilfst?
+    right: Könntest du mir helfen?
+    why:
+      en: "Only *könntest* is conjugated. The second verb is an infinitive at the end."
+      fa: "فقط *könntest* صرف می‌شود؛ فعل دوم به شکل مصدر در پایان جمله می‌آید."
+      de: "Nur *könntest* ist konjugiert. Das zweite Verb steht im Infinitiv am Ende."
+  - wrong: Ihr könntest den Bus nehmen.
+    right: Ihr könntet den Bus nehmen.
+    why:
+      en: "With *ihr* the form is *könntet*."
+      fa: "با *ihr* صورت فعل *könntet* است."
+      de: "Bei *ihr* heißt es *könntet*."
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: ___ Sie mir bitte helfen?
+    options: [Könnten, Könntest, Könntet]
+    answer: Könnten
+    explanation:
+      en: With the polite *Sie* the form is *könnten*.
+      fa: با *Sie* رسمی صورت فعل *könnten* است.
+      de: Bei *Sie* (höflich) heißt es *könnten*.
+  - id: q2
+    type: gap-fill
+    prompt: ___ du mir bitte das Salz geben?
+    options: [Könntest, Könnten, Könnte]
+    answer: Könntest
+    explanation:
+      en: With *du* the form is *könntest*.
+      fa: با *du* صورت فعل *könntest* است.
+      de: Bei *du* heißt es *könntest*.
+  - id: q3
+    type: multiple-choice
+    prompt: Ihr ___ mit dem Zug fahren. Das ist billiger.
+    options: [könntet, könntest, könnten]
+    answer: könntet
+    explanation:
+      en: "With *ihr* the form is *könntet*. The sentence is a suggestion."
+      fa: "با *ihr* صورت فعل *könntet* است. این جمله یک پیشنهاد است."
+      de: "Bei *ihr* heißt es *könntet*. Der Satz ist ein Vorschlag."
+  - id: q4
+    type: gap-fill
+    prompt: ___ ich Sie etwas fragen?
+    options: [Dürfte, Dürften, Dürftest]
+    answer: Dürfte
+    explanation:
+      en: "With *ich* the form is *dürfte*: a polite way to ask for permission."
+      fa: "با *ich* صورت فعل *dürfte* است: شیوه‌ای مؤدبانه برای اجازه گرفتن."
+      de: "Bei *ich* heißt es *dürfte*: So fragt man höflich um Erlaubnis."
+  - id: q5
+    type: gap-fill
+    prompt: ___ Sie bitte kurz warten?
+    options: [Würden, Würdest, Würde]
+    answer: Würden
+    explanation:
+      en: With the polite *Sie* the form is *würden*.
+      fa: با *Sie* رسمی صورت فعل *würden* است.
+      de: Bei *Sie* (höflich) heißt es *würden*.
+  - id: q6
+    type: multiple-choice
+    prompt: Welcher Satz ist am höflichsten?
+    options: [Könnten Sie bitte das Fenster schließen?, Schließen Sie das Fenster!, Sie müssen das Fenster schließen.]
+    answer: Könnten Sie bitte das Fenster schließen?
+    explanation:
+      en: "*Könnten* with *bitte* makes a polite request. The other two are an order and an obligation."
+      fa: "*könnten* همراه با *bitte* درخواستی مؤدبانه می‌سازد. دو جملهٔ دیگر دستور و اجبارند."
+      de: "*Könnten* mit *bitte* ist eine höfliche Bitte. Die anderen Sätze sind ein Befehl und eine Pflicht."
+  - id: q7
+    type: multiple-choice
+    prompt: "Wir könnten am Samstag schwimmen gehen. – Was ist das?"
+    options: [ein Vorschlag, eine Bitte um Erlaubnis, ein Befehl]
+    answer: ein Vorschlag
+    explanation:
+      en: "*Könnte* in a statement makes a suggestion."
+      fa: "*könnte* در جملهٔ خبری پیشنهاد می‌دهد."
+      de: "*Könnte* im Aussagesatz macht einen Vorschlag."
+  - id: q8
+    type: true-false
+    prompt: Würden Sie bitte die Tür schließen?
+    answer: true
+    explanation:
+      en: "*Würden* first, the infinitive at the end: a polite request. The sentence is correct."
+      fa: "*würden* در آغاز و مصدر در پایان: درخواستی مؤدبانه. جمله درست است."
+      de: "*Würden* am Anfang, der Infinitiv am Ende: eine höfliche Bitte. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Könnten du mir das Buch geben?
+    answer: false
+    explanation:
+      en: "With *du* the form is *könntest*: *Könntest du mir das Buch geben?*"
+      fa: "با *du* صورت فعل *könntest* است: *Könntest du mir das Buch geben?*"
+      de: "Bei *du* heißt es *könntest*: *Könntest du mir das Buch geben?*"
+  - id: q10
+    type: true-false
+    prompt: Konnten Sie bitte langsamer sprechen?
+    answer: false
+    explanation:
+      en: "*Konnten* is the past. A polite request needs the umlaut: *Könnten Sie bitte langsamer sprechen?*"
+      fa: "*konnten* گذشته است. درخواست مؤدبانه دو نقطه (*Umlaut*) لازم دارد: *Könnten Sie bitte langsamer sprechen?*"
+      de: "*Konnten* ist Präteritum. Die höfliche Bitte braucht den Umlaut: *Könnten Sie bitte langsamer sprechen?*"
+  - id: q11
+    type: find-error
+    prompt: Könntest Sie mir bitte den Weg zeigen?
+    answer: Könntest
+    explanation:
+      en: "With the polite *Sie* the form is *könnten*: *Könnten Sie mir bitte den Weg zeigen?*"
+      fa: "با *Sie* رسمی صورت فعل *könnten* است: *Könnten Sie mir bitte den Weg zeigen?*"
+      de: "Bei *Sie* (höflich) heißt es *könnten*: *Könnten Sie mir bitte den Weg zeigen?*"
+  - id: q12
+    type: find-error
+    prompt: Wir könnten am Sonntag ins Museum gehst.
+    answer: gehst
+    explanation:
+      en: "The second verb is an infinitive: *Wir könnten am Sonntag ins Museum gehen.*"
+      fa: "فعل دوم مصدر است: *Wir könnten am Sonntag ins Museum gehen.*"
+      de: "Das zweite Verb steht im Infinitiv: *Wir könnten am Sonntag ins Museum gehen.*"
+  - id: q13
+    type: word-order
+    answers:
+      - [wann, könnten, wir, uns, treffen]
+    end: "?"
+    explanation:
+      en: "Question word, *könnten*, the subject, and the infinitive at the end."
+      fa: "واژهٔ پرسشی، *könnten*، فاعل و در پایان مصدر."
+      de: "Fragewort, *könnten*, Subjekt, am Ende der Infinitiv."
+  - id: q14
+    type: word-order
+    answers:
+      - [wo, könnte, ich, hier, parken]
+    end: "?"
+    explanation:
+      en: "Question word, *könnte*, the subject, and the infinitive at the end."
+      fa: "واژهٔ پرسشی، *könnte*، فاعل و در پایان مصدر."
+      de: "Fragewort, *könnte*, Subjekt, am Ende der Infinitiv."
+  - id: q15
+    type: typed-gap-fill
+    prompt: ___ (könnte) Sie bitte langsamer sprechen?
+    answers: [Könnten]
+    explanation:
+      en: With the polite *Sie* the form is *könnten*.
+      fa: با *Sie* رسمی صورت فعل *könnten* است.
+      de: Bei *Sie* (höflich) heißt es *könnten*.
+  - id: q16
+    type: typed-gap-fill
+    prompt: Du ___ (könnte) doch deine Oma besuchen.
+    answers: [könntest]
+    explanation:
+      en: With *du* the form is *könntest*.
+      fa: با *du* صورت فعل *könntest* است.
+      de: Bei *du* heißt es *könntest*.
+  - id: q17
+    type: typed-gap-fill
+    prompt: Ihr ___ (könnte) uns am Samstag besuchen.
+    answers: [könntet]
+    explanation:
+      en: With *ihr* the form is *könntet*.
+      fa: با *ihr* صورت فعل *könntet* است.
+      de: Bei *ihr* heißt es *könntet*.
+  - id: q18
+    type: typed-gap-fill
+    prompt: ___ (würde) Sie bitte das Formular unterschreiben?
+    answers: [Würden]
+    explanation:
+      en: With the polite *Sie* the form is *würden*.
+      fa: با *Sie* رسمی صورت فعل *würden* است.
+      de: Bei *Sie* (höflich) heißt es *würden*.
+  - id: q19
+    type: matching
+    answer:
+      - [ich, könnte]
+      - [du, könntest]
+      - [ihr, könntet]
+      - [wir, könnten]
+    explanation:
+      en: "The forms of *könnte*: *ich könnte*, *du könntest*, *ihr könntet*, *wir könnten*."
+      fa: "صورت‌های *könnte*: *ich könnte*، *du könntest*، *ihr könntet*، *wir könnten*."
+      de: "Die Formen von *könnte*: *ich könnte*, *du könntest*, *ihr könntet*, *wir könnten*."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, blind,
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 1c0505cebd78a625
