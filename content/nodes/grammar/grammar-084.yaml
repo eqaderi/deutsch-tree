@@ -4,10 +4,272 @@ kind: grammar
 level: A1
 chapter: a1-pronouns
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-081]
 title:
   en: "*man*"
   fa: "*man*"
   de: "*man*"
+
+explanations:
+  en:
+    rule: >
+      *Man* means people in general, or anyone; English says "you", "one" or
+      "they": *Kann man hier Fahrkarten kaufen?* (Can you buy tickets here?)
+      *Man* is the subject, and the verb takes the *er*/*sie*/*es* form: *man
+      spricht*, *man kann*, *man isst*. Use it for what is usual, possible or
+      allowed: *Hier darf man nicht rauchen.* *Man* is written with one *n* and
+      a small letter; *der Mann* (the man) has two.
+  fa:
+    rule: >
+      *man* یعنی «مردم به طور کلی» یا «هر کسی». فارسی در این معنا اغلب فعل را
+      سوم‌شخص جمع می‌آورد یا از «می‌شود» کمک می‌گیرد: «این‌جا بلیت
+      می‌فروشند»، «این‌جا می‌شود بلیت خرید». در آلمانی *man* فاعل جمله است و
+      فعل شکل سوم‌شخص مفرد را می‌گیرد، مانند *er*، *sie* و *es*: *man
+      spricht*، *man kann*، *man isst*. با *man* از کار معمول، ممکن یا مجاز
+      سخن می‌گوییم: *Kann man hier Fahrkarten kaufen?* (این‌جا می‌شود بلیت
+      خرید؟) و *Hier darf man nicht rauchen.* (این‌جا سیگار کشیدن ممنوع است.)
+      *man* با یک *n* و با حرف کوچک نوشته می‌شود؛ *der Mann* (مرد) دو *n* دارد.
+  de:
+    rule: >
+      *Man* heißt: alle Leute, jede Person. *Man* ist das Subjekt, und das
+      Verb hat die Form von *er*, *sie* und *es*: *man spricht*, *man kann*,
+      *man isst*. Mit *man* sagt man, was normal, möglich oder erlaubt ist:
+      *Kann man hier Fahrkarten kaufen?* *Man* schreibt man klein und mit
+      einem *n*. *Der Mann* hat zwei *n*.
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "With *man*", fa: "با *man*", de: "Mit *man*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [sprechen, man spricht, In Österreich spricht man Deutsch.]
+    - [kaufen, man kauft, Wo kauft man Fahrkarten?]
+    - [essen, man isst, In Italien isst man viel Pasta.]
+    - [sagen, man sagt, Wie sagt man das auf Deutsch?]
+    - [können, man kann, Kann man hier parken?]
+    - [dürfen, man darf, Hier darf man nicht rauchen.]
+    - [müssen, man muss, Im Zug muss man eine Fahrkarte haben.]
+
+examples:
+  - de: Kann man hier Fahrkarten kaufen?
+    en: Can you buy tickets here?
+    fa: این‌جا می‌شود بلیت خرید؟
+  - de: Wie schreibt man das?
+    en: How do you spell that?
+    fa: این را چطور می‌نویسند؟
+  - de: Hier darf man nicht rauchen.
+    en: You are not allowed to smoke here.
+    fa: این‌جا سیگار کشیدن ممنوع است.
+  - de: In Österreich spricht man Deutsch.
+    en: In Austria people speak German.
+    fa: در اتریش آلمانی حرف می‌زنند.
+  - de: Von hier sieht man den Bahnhof.
+    en: You can see the station from here.
+    fa: از این‌جا ایستگاه قطار دیده می‌شود.
+  - de: Am Sonntag arbeitet man in Deutschland meistens nicht.
+    en: In Germany people mostly don't work on Sundays.
+    fa: در آلمان یکشنبه‌ها معمولاً کسی کار نمی‌کند.
+  - de: Im Bus muss man eine Fahrkarte haben.
+    en: On the bus you must have a ticket.
+    fa: در اتوبوس باید بلیت داشت.
+
+mistakes:
+  - wrong: Hier können man nicht parken.
+    right: Hier kann man nicht parken.
+    why:
+      en: "*Man* takes the *er*/*sie*/*es* form of the verb: *man kann*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *man kann*."
+      de: "Bei *man* hat das Verb die Form von *er*, *sie*, *es*: *man kann*."
+  - wrong: Wie schreiben man das?
+    right: Wie schreibt man das?
+    why:
+      en: "*Man* is one subject, not several: *man schreibt*, like *er schreibt*."
+      fa: "*man* سوم‌شخص مفرد است، نه جمع: *man schreibt*، مانند *er schreibt*."
+      de: "*Man* ist wie *er*: *man schreibt*, nicht *man schreiben*."
+  - wrong: Hier spricht Mann Deutsch.
+    right: Hier spricht man Deutsch.
+    why:
+      en: "“People” is *man*, with one *n* and a small letter. *Mann* means “man”."
+      fa: "«مردم» در این‌جا *man* است، با یک *n* و حرف کوچک. *Mann* یعنی «مرد»."
+      de: "*Man* (alle Leute) schreibt man klein und mit einem *n*. *Mann* ist eine Person."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Hier ___ man Deutsch.
+    options: [spricht, sprechen, sprichst]
+    answer: spricht
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *man spricht*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *man spricht*."
+      de: "Bei *man* hat das Verb die Form von *er*: *man spricht*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ man hier parken?
+    options: [Kann, Können, Kannst]
+    answer: Kann
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *kann man*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *kann man*."
+      de: "Bei *man* hat das Verb die Form von *er*: *kann man*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Im Kino ___ man nicht telefonieren.
+    options: [darf, dürfen, darfst]
+    answer: darf
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *man darf*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *man darf*."
+      de: "Bei *man* hat das Verb die Form von *er*: *man darf*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wie ___ man das auf Deutsch?
+    options: [sagt, sagen, sagst]
+    answer: sagt
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *sagt man*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *sagt man*."
+      de: "Bei *man* hat das Verb die Form von *er*: *sagt man*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: In der Bibliothek ___ man leise sein.
+    options: [muss, müssen, musst]
+    answer: muss
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *man muss*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *man muss*."
+      de: "Bei *man* hat das Verb die Form von *er*: *man muss*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wo kauft ___ hier Briefmarken?
+    options: [man, Mann, wir]
+    answer: man
+    explanation:
+      en: "“People in general” is *man*, with one *n*; *kauft* fits *man*, not *wir*."
+      fa: "برای «هر کسی» *man* با یک *n* می‌آید؛ *kauft* با *man* جور است، نه با *wir*."
+      de: "Für alle Leute sagt man *man*, mit einem *n*. *Kauft* passt zu *man*, nicht zu *wir*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Am Sonntag ___ man in Deutschland nicht einkaufen.
+    options: [kann, können, kannst]
+    answer: kann
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *man kann*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *man kann*."
+      de: "Bei *man* hat das Verb die Form von *er*: *man kann*."
+  - id: true-1
+    type: true-false
+    prompt: Kann man hier Fahrkarten kaufen?
+    answer: true
+    explanation:
+      en: "*Kann man* is the *er*/*sie*/*es* form. The sentence is correct."
+      fa: "*kann man* شکل سوم‌شخص مفرد است. جمله درست است."
+      de: "*Kann man* hat die Form von *er*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: In Spanien sprechen man Spanisch.
+    answer: false
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *In Spanien spricht man Spanisch.*"
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *In Spanien spricht man Spanisch.*"
+      de: "Bei *man* hat das Verb die Form von *er*: *In Spanien spricht man Spanisch.*"
+  - id: true-3
+    type: true-false
+    prompt: In diesem Restaurant isst man sehr gut.
+    answer: true
+    explanation:
+      en: "*Man isst* is the *er*/*sie*/*es* form of *essen*. The sentence is correct."
+      fa: "*man isst* شکل سوم‌شخص مفرد *essen* است. جمله درست است."
+      de: "*Man isst* hat die Form von *er*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Hier darf Mann nicht parken.
+    answer: false
+    explanation:
+      en: "“People in general” is *man*, small and with one *n*: *Hier darf man nicht parken.*"
+      fa: "برای «هر کسی» *man* با حرف کوچک و یک *n* می‌آید: *Hier darf man nicht parken.*"
+      de: "Für alle Leute schreibt man *man*, klein und mit einem *n*: *Hier darf man nicht parken.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wie ___ (schreiben) man das?
+    answers: [schreibt]
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *schreibt man*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *schreibt man*."
+      de: "Bei *man* hat das Verb die Form von *er*: *schreibt man*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Hier ___ (dürfen) man nicht schwimmen.
+    answers: [darf]
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *darf man*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *darf man*."
+      de: "Bei *man* hat das Verb die Form von *er*: *darf man*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: In Österreich ___ (sprechen) man Deutsch.
+    answers: [spricht]
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form, and *sprechen* changes its vowel: *spricht man*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد و واکهٔ *sprechen* تغییر می‌کند: *spricht man*."
+      de: "Bei *man* hat das Verb die Form von *er*: *spricht man*, mit *i*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Was ___ (essen) man in Deutschland zum Frühstück?
+    answers: [isst]
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form, and *essen* changes its vowel: *isst man*."
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد و واکهٔ *essen* تغییر می‌کند: *isst man*."
+      de: "Bei *man* hat das Verb die Form von *er*: *isst man*, mit *i*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: ___ (können) man hier Kaffee trinken?
+    answers: [Kann]
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *Kann man …?*"
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *Kann man …?*"
+      de: "Bei *man* hat das Verb die Form von *er*: *Kann man …?*"
+  - id: error-1
+    type: find-error
+    prompt: Im Bus müssen man eine Fahrkarte haben.
+    answer: müssen
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *Im Bus muss man eine Fahrkarte haben.*"
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *Im Bus muss man eine Fahrkarte haben.*"
+      de: "Bei *man* hat das Verb die Form von *er*: *Im Bus muss man eine Fahrkarte haben.*"
+  - id: error-2
+    type: find-error
+    prompt: Wo kaufen man hier Brot?
+    answer: kaufen
+    explanation:
+      en: "*Man* takes the *er*/*sie*/*es* form: *Wo kauft man hier Brot?*"
+      fa: "فعلِ *man* شکل سوم‌شخص مفرد را می‌گیرد: *Wo kauft man hier Brot?*"
+      de: "Bei *man* hat das Verb die Form von *er*: *Wo kauft man hier Brot?*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [wo, kann, man, Fahrkarten kaufen]
+    end: "?"
+    explanation:
+      en: "The question word comes first, then the verb; *man* follows it, and the infinitive goes to the end."
+      fa: "واژهٔ پرسشی در آغاز می‌آید و سپس فعل؛ *man* پس از فعل و مصدر در پایان جمله می‌آید."
+      de: "Das Fragewort steht am Anfang, dann das Verb. Danach kommt *man*, der Infinitiv steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [hier, spricht, man, Deutsch]
+      - [man, spricht, hier, Deutsch]
+      - [Deutsch, spricht, man, hier]
+    explanation:
+      en: "The verb comes second. *Man* stands just before or just after it."
+      fa: "فعل در جایگاه دوم می‌آید و *man* درست پیش یا پس از آن."
+      de: "Das Verb steht an Position 2. *Man* steht direkt davor oder danach."
+
+review:
+  reviewer: two independent AI agents (Claude Opus 5.5 subagents, blind passes on
+    the review sheet only; the second on the rewritten order-1; not people)
+  date: 2026-11-28
+  pool: 1db03042af89f8ca

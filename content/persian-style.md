@@ -121,6 +121,7 @@ its first mention in a node.
 | passive | Passiv | مجهول |
 | negation | Negation | نفی |
 | question word | Fragewort | واژهٔ پرسشی |
+| question pronoun (*wer*, *was*) | Fragepronomen | ضمیر پرسشی |
 
 A case is always named with «حالت» before it: «با حالت *Dativ* می‌آید», not
 «با *Dativ* می‌آید». A noun is named by its gender, with the article in
