@@ -104,6 +104,7 @@ its first mention in a node.
 | two-way preposition | Wechselpräposition | حرف اضافهٔ دوحالته |
 | adjective; comparative / superlative | Adjektiv; Komparativ / Superlativ | صفت؛ صفت تفضیلی / صفت عالی |
 | adverb | Adverb | قید |
+| degree word (*sehr*, *ziemlich*, *total*) | Gradwort | قید شدت |
 | conjunction | Konjunktion | حرف ربط |
 | sentence, clause | Satz | جمله |
 | main clause / subordinate clause | Hauptsatz / Nebensatz | جملهٔ پایه / جملهٔ پیرو |
