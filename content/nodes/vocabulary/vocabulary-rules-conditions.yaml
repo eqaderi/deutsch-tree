@@ -1,39 +1,391 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-rules-conditions
 kind: vocabulary
 level: B1
 chapter: b1-words-work-money
 order: 9
-status: coming-soon
+status: published
 title:
   en: "Rules, conditions and insurance"
   fa: "قانون‌ها، شرط‌ها و بیمه"
   de: "Regeln, Bedingungen und Versicherung"
+attemptSize: 15
 words:
+  # Die Versicherung and versichern are the noun and the verb; neither is offered as a wrong meaning of the other.
   - word: Versicherung
+    class: noun
+    article: die
+    plural: Versicherungen
+    level: B1
+    meaning:
+      en: insurance
+      fa: بیمه
+    definition: ein Vertrag mit einer Firma, der man regelmäßig Geld zahlt und die bei einem Schaden bezahlt
+    example:
+      de: Die Versicherung hat den Schaden am Auto bezahlt.
+      en: The insurance paid for the damage to the car.
+      fa: بیمه خسارت ماشین را پرداخت کرد.
+    tooCloseTo: [versichern]
+
   - word: versichern
+    class: verb
+    level: B1
+    meaning:
+      en: to insure
+      fa: بیمه کردن
+    definition: für etwas einen Vertrag mit einer Firma machen, die bei einem Schaden bezahlt, zum Beispiel für ein Auto
+    example:
+      de: Wir haben unsere Wohnung gegen Feuer versichert.
+      en: We've insured our flat against fire.
+      fa: آپارتمانمان را در برابر آتش‌سوزی بیمه کرده‌ایم.
+    tooCloseTo: [Versicherung]
+
+  # Der Anspruch is a right one has, die Forderung what one asks for; neither is offered as a wrong meaning of the other.
   - word: Anspruch
+    class: noun
+    article: der
+    plural: Ansprüche
+    level: B1
+    meaning:
+      en: right, entitlement (to something)
+      fa: حق، استحقاق
+    definition: das Recht, etwas zu bekommen, zum Beispiel Geld oder Urlaub
+    example:
+      de: Jeder Arbeitnehmer hat Anspruch auf bezahlten Urlaub.
+      en: Every employee is entitled to paid holiday.
+      fa: هر کارمندی حق مرخصی با حقوق دارد.
+    alsoAccepted: [das Recht]
+    tooCloseTo: [Forderung]
+
   - word: Bedingung
+    class: noun
+    article: die
+    plural: Bedingungen
+    level: B1
+    meaning:
+      en: condition (something that must be true first)
+      fa: شرط
+    definition: etwas, das zuerst da sein oder passieren muss, damit etwas anderes möglich ist
+    example:
+      de: "Ich helfe dir, unter einer Bedingung: Du kochst heute."
+      en: "I'll help you on one condition: you cook today."
+      fa: "کمکت می‌کنم، به یک شرط: امروز تو آشپزی کنی."
+    alsoAccepted: [die Voraussetzung]
+
   - word: gelten
+    class: verb
+    level: B1
+    meaning:
+      en: to be valid, to apply
+      fa: معتبر بودن، اعتبار داشتن
+    definition: richtig oder erlaubt sein, für eine bestimmte Zeit oder für bestimmte Menschen
+    example:
+      de: Das Ticket gilt den ganzen Tag.
+      en: The ticket is valid all day.
+      fa: این بلیت تمام روز اعتبار دارد.
+
   - word: Regel
+    class: noun
+    article: die
+    plural: Regeln
+    level: B1
+    meaning:
+      en: rule
+      fa: قاعده
+    definition: etwas, das sagt, wie man etwas machen muss oder was man nicht machen darf
+    example:
+      de: "In unserer Familie gibt es eine Regel: Beim Essen gibt es kein Handy."
+      en: "There's a rule in our family: no phones at meals."
+      fa: "در خانوادهٔ ما یک قانون هست: سر غذا گوشی ممنوع است."
+    alsoAccepted: [die Vorschrift]
+
+  # regeln, festlegen and festsetzen all decide how something is to be; none is offered as a wrong meaning of another.
   - word: regeln
+    class: verb
+    level: B1
+    meaning:
+      en: to regulate, to settle, to arrange
+      fa: تنظیم کردن، سامان دادن
+    definition: bestimmen, wie etwas gemacht wird, oder ein Problem in Ordnung bringen
+    example:
+      de: Das Gesetz regelt, wie lange man am Sonntag arbeiten darf.
+      en: The law regulates how long you may work on Sundays.
+      fa: قانون تعیین می‌کند که یکشنبه‌ها چقدر می‌توان کار کرد.
+    tooCloseTo: [festlegen, festsetzen]
+
   - word: Ausnahme
+    class: noun
+    article: die
+    plural: Ausnahmen
+    level: B1
+    meaning:
+      en: exception
+      fa: استثنا
+    definition: etwas, für das eine Regel nicht gilt
+    example:
+      de: "Heute machen wir eine Ausnahme: Du darfst länger aufbleiben."
+      en: "Today we'll make an exception: you can stay up later."
+      fa: "امروز یک استثنا قائل می‌شویم: می‌توانی دیرتر بیدار بمانی."
+
+  # Das Verbot is the ban, untersagt what it forbids; neither is offered as a wrong meaning of the other.
   - word: Verbot
+    class: noun
+    article: das
+    plural: Verbote
+    level: B1
+    meaning:
+      en: ban, prohibition
+      fa: ممنوعیت
+    definition: eine Regel, die sagt, dass man etwas nicht machen darf
+    example:
+      de: Seit Januar gibt es in der Innenstadt ein Verbot für Autos.
+      en: Since January there has been a ban on cars in the city centre.
+      fa: از ژانویه ورود خودرو به مرکز شهر ممنوع شده است.
+    tooCloseTo: [untersagt]
+
   - word: untersagt
+    class: adjective
+    level: B1
+    meaning:
+      en: prohibited, forbidden
+      fa: ممنوع
+    definition: nicht erlaubt; so steht es oft auf offiziellen Schildern
+    example:
+      de: Das Betreten der Baustelle ist untersagt.
+      en: Entering the building site is prohibited.
+      fa: ورود به کارگاه ساختمانی ممنوع است.
+    alsoAccepted: [verboten]
+    tooCloseTo: [Verbot]
+
   - word: unterlassen
+    class: verb
+    level: B1
+    meaning:
+      en: to refrain from (doing something)
+      fa: از انجام (کاری) خودداری کردن، ترک کردن (عملی)
+    definition: etwas mit Absicht nicht tun, obwohl man es tun könnte
+    example:
+      de: Bitte unterlassen Sie das Rauchen im Zimmer.
+      en: Please refrain from smoking in the room.
+      fa: لطفاً در اتاق از سیگار کشیدن خودداری کنید.
+    alsoAccepted: [sich enthalten, lassen, verzichten, sein lassen, bleiben lassen]
+
+  # erfordern and verlangen can both mean "to need"; neither is offered as a wrong meaning of the other.
   - word: erfordern
+    class: verb
+    level: B1
+    meaning:
+      en: to require (make necessary)
+      fa: ایجاب کردن، مستلزم (چیزی) بودن
+    definition: so sein, dass etwas anderes unbedingt nötig ist, zum Beispiel viel Zeit oder Geduld
+    example:
+      de: Diese Arbeit erfordert viel Geduld.
+      en: This work requires a lot of patience.
+      fa: این کار صبر زیادی لازم دارد.
+    alsoAccepted: [verlangen, voraussetzen, bedingen, brauchen, benötigen]
+    tooCloseTo: [verlangen]
+
   - word: erfüllen
+    class: verb
+    level: B1
+    meaning:
+      en: to fulfil, to meet (a condition, a wish)
+      fa: برآورده کردن، تحقق بخشیدن
+    definition: machen, was jemand wünscht oder was nötig ist
+    example:
+      de: Leider erfüllt er die Bedingungen für das Stipendium nicht.
+      en: Unfortunately he doesn't meet the conditions for the grant.
+      fa: متأسفانه او شرایط لازم برای بورسیه را ندارد.
+
+  # festlegen and festsetzen both mean "to set, to fix"; each is right when the other is asked for.
   - word: festlegen
+    class: verb
+    level: B1
+    meaning:
+      en: to fix, to set, to lay down
+      fa: تعیین کردن، مشخص کردن
+    definition: genau bestimmen, wie oder wann etwas sein soll
+    example:
+      de: Wir haben den Termin für die Hochzeit noch nicht festgelegt.
+      en: We haven't set the date for the wedding yet.
+      fa: هنوز تاریخ عروسی را تعیین نکرده‌ایم.
+    alsoAccepted: [festsetzen, bestimmen]
+    tooCloseTo: [festsetzen, regeln, feststehen]
+
   - word: festsetzen
+    class: verb
+    level: B1
+    meaning:
+      en: to set, to fix (a price, an amount or a date)
+      fa: تعیین کردن (قیمت، مبلغ یا تاریخ)
+    definition: offiziell bestimmen, zum Beispiel einen Preis oder eine Strafe
+    example:
+      de: Die Stadt hat die Gebühr auf 30 Euro festgesetzt.
+      en: The town has set the fee at 30 euros.
+      fa: شهرداری این هزینه را ۳۰ یورو تعیین کرده است.
+    alsoAccepted: [festlegen, bestimmen]
+    tooCloseTo: [festlegen, regeln, feststehen]
+
   - word: feststehen
+    class: verb
+    level: B1
+    meaning:
+      en: to be certain, to be fixed (decided)
+      fa: قطعی بودن، معلوم بودن
+    definition: sicher sein, sodass man nichts mehr ändert
+    example:
+      de: Das Datum der Prüfung steht schon fest.
+      en: The date of the exam is already fixed.
+      fa: تاریخ امتحان دیگر قطعی است.
+    tooCloseTo: [festlegen, festsetzen]
+
+  # beachten is to follow a rule, achten (auf) to pay attention; neither is offered as a wrong meaning of the other.
   - word: beachten
+    class: verb
+    level: B1
+    meaning:
+      en: to observe, to follow (a rule); to take note of
+      fa: رعایت کردن (قاعده یا دستور)، در نظر گرفتن
+    definition: sich an etwas halten oder es nicht vergessen, zum Beispiel eine Regel oder einen Hinweis
+    example:
+      de: Bitte beachten Sie die Hinweise auf der Packung.
+      en: Please note the instructions on the packet.
+      fa: لطفاً نکته‌های روی بسته را در نظر بگیرید.
+    alsoAccepted: [einhalten, befolgen]
+    tooCloseTo: [achten]
+
   - word: achten
+    class: verb
+    level: B1
+    meaning:
+      en: to pay attention (to), to watch out (for)
+      fa: توجه کردن (به چیزی)، مراقب بودن
+    definition: aufpassen und an etwas oder jemanden denken
+    example:
+      de: Achte bitte darauf, dass die Tür immer zu ist.
+      en: Please make sure the door is always closed.
+      fa: لطفاً حواست باشد که در همیشه بسته باشد.
+    alsoAccepted: [aufpassen]
+    tooCloseTo: [beachten]
+
+  # Die Kontrolle and überprüfen are the noun and the verb; neither is offered as a wrong meaning of the other.
   - word: Kontrolle
+    class: noun
+    article: die
+    plural: Kontrollen
+    level: B1
+    meaning:
+      en: check, inspection
+      fa: بازرسی، کنترل
+    definition: wenn jemand genau prüft, ob alles richtig ist, zum Beispiel die Fahrkarten im Zug
+    example:
+      de: Bei der Kontrolle im Zug hatte ich meine Fahrkarte nicht dabei.
+      en: At the ticket check on the train I didn't have my ticket with me.
+      fa: موقع کنترل بلیت در قطار، بلیتم همراهم نبود.
+    alsoAccepted: [die Überprüfung, die Prüfung]
+    tooCloseTo: [überprüfen]
+
   - word: überprüfen
+    class: verb
+    level: B1
+    meaning:
+      en: to check, to verify
+      fa: بررسی کردن، وارسی کردن
+    definition: genau ansehen, ob etwas richtig oder in Ordnung ist
+    example:
+      de: Überprüfen Sie bitte noch einmal Ihre Adresse.
+      en: Please check your address once more.
+      fa: لطفاً یک بار دیگر نشانی‌تان را بررسی کنید.
+    alsoAccepted: [prüfen, kontrollieren]
+    tooCloseTo: [Kontrolle]
+
+  # verlangen, fordern, die Forderung and auffordern all ask for something; none is offered as a wrong meaning of another.
   - word: verlangen
+    class: verb
+    level: B1
+    meaning:
+      en: to ask for, to demand (a price, a document)
+      fa: خواستن، مطالبه کردن
+    definition: sagen, dass man etwas haben will, zum Beispiel einen Preis oder ein Papier
+    example:
+      de: Der Händler verlangt 200 Euro für das alte Sofa.
+      en: The dealer is asking 200 euros for the old sofa.
+      fa: فروشنده برای کاناپهٔ کهنه ۲۰۰ یورو می‌خواهد.
+    alsoAccepted: [fordern]
+    tooCloseTo: [fordern, erfordern, auffordern, Forderung]
+
   - word: fordern
+    class: verb
+    level: B1
+    meaning:
+      en: to demand (firmly)
+      fa: خواستار (چیزی) شدن
+    definition: deutlich und stark sagen, dass man etwas will oder dass sich etwas ändern muss
+    example:
+      de: Die Eltern fordern mehr Lehrer für die Schule.
+      en: The parents are calling for more teachers for the school.
+      fa: والدین خواستار معلم‌های بیشتری برای مدرسه هستند.
+    alsoAccepted: [verlangen]
+    tooCloseTo: [verlangen, auffordern, Forderung]
+
   - word: Forderung
+    class: noun
+    article: die
+    plural: Forderungen
+    level: B1
+    meaning:
+      en: demand (made by someone)
+      fa: خواسته، مطالبه
+    definition: das, was jemand deutlich und stark von anderen haben will
+    example:
+      de: Die Gewerkschaft hat ihre Forderungen auf den Tisch gelegt.
+      en: The union has put its demands on the table.
+      fa: اتحادیه خواسته‌هایش را مطرح کرده است.
+    tooCloseTo: [fordern, verlangen, Anspruch]
+
   - word: auffordern
+    class: verb
+    level: B1
+    meaning:
+      en: to call on, to urge (someone to do something)
+      fa: فراخواندن، دعوت به انجام کاری (با تأکید)
+    definition: jemandem sagen, dass er etwas tun soll
+    example:
+      de: Der Schaffner hat uns aufgefordert, den Zug zu verlassen.
+      en: The conductor asked us to leave the train.
+      fa: مأمور قطار از ما خواست قطار را ترک کنیم.
+    alsoAccepted: [aufrufen, drängen]
+    tooCloseTo: [verlangen, fordern]
+
   - word: ausschließen
+    class: verb
+    level: B1
+    meaning:
+      en: to exclude, to rule out
+      fa: کنار گذاشتن، منتفی دانستن
+    definition: sagen, dass jemand nicht mitmachen darf oder dass etwas nicht möglich ist
+    example:
+      de: Einen Fehler im System kann man nicht ausschließen.
+      en: An error in the system can't be ruled out.
+      fa: خطا در سیستم را نمی‌توان منتفی دانست.
+
   - word: beschränken
+    class: verb
+    level: B1
+    meaning:
+      en: to limit, to restrict
+      fa: محدود کردن
+    definition: machen, dass etwas nicht größer als eine bestimmte Menge oder Zahl wird
+    example:
+      de: Die Zahl der Besucher ist auf 50 beschränkt.
+      en: The number of visitors is limited to 50.
+      fa: تعداد بازدیدکنندگان به ۵۰ نفر محدود است.
+    alsoAccepted: [begrenzen, einschränken]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections, then the ones changed after the second one's; not people)"
+  date: 2026-11-28
+  pool: da01ec9d5577814b
