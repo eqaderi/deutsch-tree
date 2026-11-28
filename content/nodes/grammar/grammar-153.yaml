@@ -59,7 +59,11 @@ table:
   rows:
     - [darum, "Ich muss früh aufstehen, darum gehe ich jetzt.", "Ich muss früh aufstehen. Ich gehe darum jetzt."]
     - [deswegen, "Sie ist krank, deswegen bleibt sie zu Hause.", "Sie ist krank. Sie bleibt deswegen zu Hause."]
-    - [daher, "Die Straße ist gesperrt, daher fährt der Bus nicht.", "Die Straße ist gesperrt. Der Bus fährt daher nicht."]
+    - [
+        daher,
+        "Die Straße ist gesperrt, daher fährt der Bus nicht.",
+        "Die Straße ist gesperrt. Der Bus fährt daher nicht.",
+      ]
     - [also, "Es regnet, also nehme ich den Schirm.", "Es regnet. Ich nehme also den Schirm."]
     - [nämlich, –, "Ich komme heute nicht. Ich bin nämlich krank."]
 
@@ -154,7 +158,7 @@ mistakes:
   - wrong: Ich lerne Deutsch und also Englisch.
     right: Ich lerne Deutsch und auch Englisch.
     why:
-      en: "German *also* means \"so, therefore\". English \"also\" is *auch*."
+      en: 'German *also* means "so, therefore". English "also" is *auch*.'
       fa: "*also* در آلمانی یعنی «پس». برای «هم» باید *auch* گفت."
       de: "*Also* heißt: Daraus folgt etwas. Für ein Plus sagt man *auch*."
   - wrong: Ich bleibe zu Hause, deswegen bin ich krank.
@@ -269,7 +273,7 @@ questions:
     prompt: Meine Schwester spielt Gitarre und also Klavier.
     answer: false
     explanation:
-      en: "*Also* means \"so, therefore\". For \"also\" German says *auch*: *und auch Klavier*."
+      en: '*Also* means "so, therefore". For "also" German says *auch*: *und auch Klavier*.'
       fa: "*also* یعنی «پس». برای «هم» در آلمانی *auch* می‌آید: *und auch Klavier*."
       de: "*Also* nennt eine Folge. Hier passt *auch*: *und auch Klavier*."
   - id: true-5
