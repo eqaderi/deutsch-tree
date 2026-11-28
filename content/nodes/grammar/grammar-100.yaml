@@ -4,10 +4,305 @@ kind: grammar
 level: B1
 chapter: b1-pronouns
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-093]
 title:
   en: "*irgend-*"
   fa: "*irgend-*"
   de: "*irgend-*"
+
+explanations:
+  en:
+    rule: >
+      *Irgend-* before a question word, *jemand*, *etwas* or *ein* makes it
+      vague: some person, place or time, and you do not know or it does not
+      matter which. *Irgendjemand* or *irgendwer* (someone, anyone),
+      *irgendetwas* or *irgendwas* (something, anything), *irgendwo*
+      (somewhere), *irgendwann* (at some time), *irgendwie* (somehow). It is
+      always one word: *Hat irgendjemand unseren Nachbarn gesehen?*
+      *Irgendein* (some, any) has the endings of *ein*: *irgendeinen Film*,
+      *in irgendeinem Hotel*, *irgendeine Idee*. *Ein* has no plural, so the
+      plural is *irgendwelche*: *Hast du irgendwelche Fragen?* In a question
+      *irgend-* often means "any": *Hast du irgendeine Idee?* (Do you have
+      any idea?)
+  fa:
+    rule: >
+      *irgend-* پیش از واژهٔ پرسشی، *jemand*، *etwas* یا *ein* معنا را مبهم
+      می‌کند: کسی، جایی یا زمانی که نمی‌دانیم کدام است یا برایمان مهم
+      نیست. *irgendjemand* یا *irgendwer* (کسی، یک نفر)، *irgendetwas* یا
+      *irgendwas* (چیزی)، *irgendwo* (جایی)، *irgendwann* (یک وقتی، روزی)،
+      *irgendwie* (به نحوی، یک جوری). این واژه‌ها همیشه سرهم نوشته می‌شوند:
+      *Hat irgendjemand unseren Nachbarn gesehen?* (کسی همسایه‌مان را دیده
+      است؟) *irgendein* (یک ... ای، هر ... ای) همان پایانه‌های *ein* را
+      می‌گیرد: *irgendeinen Film*، *in irgendeinem Hotel*، *irgendeine Idee*.
+      *ein* جمع ندارد؛ پس جمع آن *irgendwelche* است: *Hast du irgendwelche
+      Fragen?* (پرسشی داری؟) در جملهٔ پرسشی، *irgend-* اغلب معنای «هیچ» یا
+      «اصلاً» دارد: *Hast du irgendeine Idee?* (هیچ نظری داری؟)
+  de:
+    rule: >
+      *Irgend-* vor einem Fragewort, vor *jemand*, *etwas* oder *ein* heißt:
+      Man weiß nicht genau, wer, was, wo oder wann, oder es ist egal.
+      *Irgendjemand* oder *irgendwer* ist eine Person, *irgendetwas* oder
+      *irgendwas* eine Sache, *irgendwo* ein Ort, *irgendwann* eine Zeit,
+      *irgendwie* eine Art und Weise. Man schreibt es immer zusammen: *Hat
+      irgendjemand unseren Nachbarn gesehen?* *Irgendein* hat die Endungen
+      von *ein*: *irgendeinen Film*, *in irgendeinem Hotel*, *irgendeine
+      Idee*. *Ein* hat keinen Plural. Darum heißt der Plural *irgendwelche*:
+      *Hast du irgendwelche Fragen?*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *irgendein*", fa: "با *irgendein*", de: "Mit *irgendein*" }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Film, irgendein Film, irgendeinen Film, irgendeinem Film, Lass uns irgendeinen Film ansehen.]
+    - [die Zeitung, irgendeine Zeitung, irgendeine Zeitung, irgendeiner Zeitung, Das stand in irgendeiner Zeitung.]
+    - [das Hotel, irgendein Hotel, irgendein Hotel, irgendeinem Hotel, Wir schlafen in irgendeinem Hotel.]
+    - [die Fragen (Plural), irgendwelche Fragen, irgendwelche Fragen, irgendwelchen Fragen, Hast du irgendwelche Fragen?]
+
+examples:
+  - de: Hat irgendjemand unseren Nachbarn gesehen?
+    en: Has anyone seen our neighbour?
+    fa: کسی همسایه‌مان را دیده است؟
+  - de: Ich habe meine Brille irgendwo vergessen.
+    en: I've left my glasses somewhere.
+    fa: عینکم را یک جایی جا گذاشته‌ام.
+  - de: Irgendwann möchte ich nach Japan fahren.
+    en: Some day I'd like to go to Japan.
+    fa: دوست دارم روزی به ژاپن بروم.
+  - de: Irgendwie habe ich heute keine Lust.
+    en: Somehow I don't feel like it today.
+    fa: امروز یک جوری حوصله ندارم.
+  - de: Hast du irgendetwas gehört?
+    en: Did you hear anything?
+    fa: چیزی شنیدی؟
+  - de: Irgendwer hat die Tür offen gelassen.
+    en: Someone left the door open.
+    fa: یک نفر در را باز گذاشته است.
+  - de: Hast du irgendeine Idee?
+    en: Do you have any idea?
+    fa: هیچ نظری داری؟
+  - de: Wir übernachten einfach in irgendeinem Hotel.
+    en: We'll just stay at some hotel or other.
+    fa: شب را در یک هتلی می‌مانیم، فرقی نمی‌کند کدام.
+  - de: Haben Sie noch irgendwelche Fragen?
+    en: Do you have any more questions?
+    fa: باز هم پرسشی دارید؟
+  - de: Er hat irgendeinen Freund aus der Schule angerufen.
+    en: He called some friend from school.
+    fa: به یکی از دوستان مدرسه‌اش زنگ زد.
+
+mistakes:
+  - wrong: Irgend jemand hat angerufen.
+    right: Irgendjemand hat angerufen.
+    why:
+      en: "Words with *irgend-* are always written as one word."
+      fa: "واژه‌هایی که با *irgend-* ساخته می‌شوند همیشه سرهم نوشته می‌شوند."
+      de: "Wörter mit *irgend-* schreibt man immer zusammen."
+  - wrong: Hast du irgendeinen Idee?
+    right: Hast du irgendeine Idee?
+    why:
+      en: "*Idee* is feminine, so *irgendeine*, like *eine Idee*."
+      fa: "*Idee* اسم مؤنث است، پس *irgendeine* می‌آید، مانند *eine Idee*."
+      de: "*Idee* ist feminin. Darum *irgendeine*, wie *eine Idee*."
+  - wrong: Wir treffen uns in irgendeinen Café.
+    right: Wir treffen uns in irgendeinem Café.
+    why:
+      en: "*Sich treffen in* says where, so the *Dativ*; *Café* is neuter: *irgendeinem Café*."
+      fa: "*sich treffen in* جا را نشان می‌دهد، پس حالت *Dativ* می‌آید؛ *Café* اسم خنثی است: *irgendeinem Café*."
+      de: "*Sich treffen in* sagt, wo. Darum Dativ. *Café* ist neutral: *irgendeinem Café*."
+  - wrong: Hast du irgendeine Fragen?
+    right: Hast du irgendwelche Fragen?
+    why:
+      en: "*Ein* has no plural, so with a plural noun say *irgendwelche*."
+      fa: "*ein* جمع ندارد، پس با اسم جمع *irgendwelche* می‌آید."
+      de: "*Ein* hat keinen Plural. Beim Plural sagt man *irgendwelche*."
+  - wrong: Ich habe meinen Schlüssel irgendwann vergessen, aber ich weiß nicht, wo.
+    right: Ich habe meinen Schlüssel irgendwo vergessen, aber ich weiß nicht, wo.
+    why:
+      en: "For a place say *irgendwo*; *irgendwann* is for a time."
+      fa: "برای جا *irgendwo* به کار می‌رود؛ *irgendwann* برای زمان است."
+      de: "Für einen Ort sagt man *irgendwo*. *Irgendwann* ist für eine Zeit."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Hat ___ meinen Schlüssel gesehen?
+    options: [irgendwo, irgendjemand, irgendwann]
+    answer: irgendjemand
+    explanation:
+      en: "The sentence asks about a person who has seen the key: *irgendjemand*."
+      fa: "جمله دربارهٔ کسی می‌پرسد که کلید را دیده است: *irgendjemand*."
+      de: "Der Satz fragt nach einer Person: *irgendjemand*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich habe mein Handy ___ liegen lassen, aber ich weiß nicht mehr, wo.
+    options: [irgendwann, irgendwie, irgendwo]
+    answer: irgendwo
+    explanation:
+      en: "*Wo* shows it is a place: *irgendwo*."
+      fa: "*wo* نشان می‌دهد که منظور جایی است: *irgendwo*."
+      de: "*Wo* zeigt: Es ist ein Ort. Darum *irgendwo*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich möchte ___ einmal nach Island fahren.
+    options: [irgendwann, irgendwer, irgendwas]
+    answer: irgendwann
+    explanation:
+      en: "The sentence needs a time: *irgendwann einmal*, some day."
+      fa: "جمله به زمان نیاز دارد: *irgendwann einmal* یعنی روزی."
+      de: "Hier fehlt eine Zeit: *irgendwann einmal*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Hast du ___ Idee, wo Lisa ist?
+    options: [irgendeinen, irgendeine, irgendein]
+    answer: irgendeine
+    explanation:
+      en: "*Idee* is feminine, so *irgendeine*, like *eine Idee*."
+      fa: "*Idee* اسم مؤنث است، پس *irgendeine* می‌آید، مانند *eine Idee*."
+      de: "*Idee* ist feminin. Darum *irgendeine*, wie *eine Idee*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Er wohnt jetzt in ___ Dorf in Bayern.
+    options: [irgendeinem, irgendeinen, irgendein]
+    answer: irgendeinem
+    explanation:
+      en: "*Wohnen in* says where, so the *Dativ*; *Dorf* is neuter: *irgendeinem Dorf*."
+      fa: "*wohnen in* جا را نشان می‌دهد، پس حالت *Dativ* می‌آید؛ *Dorf* اسم خنثی است: *irgendeinem Dorf*."
+      de: "*Wohnen in* sagt, wo. Darum Dativ. *Dorf* ist neutral: *irgendeinem Dorf*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Was bedeutet der Satz? Irgendwer hat angerufen."
+    options:
+      - Niemand hat angerufen.
+      - Alle haben angerufen.
+      - Eine Person hat angerufen, aber man weiß nicht, wer.
+    answer: Eine Person hat angerufen, aber man weiß nicht, wer.
+    explanation:
+      en: "*Irgendwer* is a person, and you do not know who."
+      fa: "*irgendwer* یعنی کسی که نمی‌دانیم کیست."
+      de: "*Irgendwer* ist eine Person, aber man weiß nicht, wer."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Was bedeutet das Wort? irgendwie"
+    options:
+      - zu einer Zeit, die man nicht genau kennt
+      - auf eine Art, die man nicht genau kennt
+      - an einem Ort, den man nicht genau kennt
+    answer: auf eine Art, die man nicht genau kennt
+    explanation:
+      en: "*Wie* asks about the way, so *irgendwie* is in some way, somehow."
+      fa: "*wie* دربارهٔ چگونگی می‌پرسد، پس *irgendwie* یعنی «به نحوی، یک جوری»."
+      de: "*Wie* fragt nach der Art. Darum heißt *irgendwie*: auf eine Art."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Haben Sie noch ___ Fragen?
+    options: [irgendwelche, irgendeine, irgendein]
+    answer: irgendwelche
+    explanation:
+      en: "*Fragen* is plural, and *ein* has no plural: *irgendwelche Fragen*."
+      fa: "*Fragen* جمع است و *ein* جمع ندارد: *irgendwelche Fragen*."
+      de: "*Fragen* ist Plural, und *ein* hat keinen Plural: *irgendwelche Fragen*."
+  - id: true-1
+    type: true-false
+    prompt: Ich habe meinen Regenschirm irgendwo im Zug vergessen.
+    answer: true
+    explanation:
+      en: "*Irgendwo* is somewhere, a place you do not know exactly. The sentence is correct."
+      fa: "*irgendwo* یعنی جایی که دقیقاً نمی‌دانیم. جمله درست است."
+      de: "*Irgendwo* ist ein Ort, den man nicht genau kennt. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich habe irgendein Problem mit meinem Laptop.
+    answer: true
+    explanation:
+      en: "*Problem* is neuter, and in the *Akkusativ* it stays *irgendein*, like *ein Problem*. The sentence is correct."
+      fa: "*Problem* اسم خنثی است و در حالت *Akkusativ* همان *irgendein* می‌ماند، مانند *ein Problem*. جمله درست است."
+      de: "*Problem* ist neutral. Im Akkusativ bleibt es *irgendein*, wie *ein Problem*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Kauf einfach irgendeinen Zeitung!
+    answer: false
+    explanation:
+      en: "*Zeitung* is feminine: *irgendeine Zeitung*, like *eine Zeitung*."
+      fa: "*Zeitung* اسم مؤنث است: *irgendeine Zeitung*، مانند *eine Zeitung*."
+      de: "*Zeitung* ist feminin: *irgendeine Zeitung*, wie *eine Zeitung*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich suche ___ (irgendein) Geschenk für meine Mutter.
+    answers: [irgendein]
+    explanation:
+      en: "*Geschenk* is neuter, and in the *Akkusativ* it stays *irgendein*."
+      fa: "*Geschenk* اسم خنثی است و در حالت *Akkusativ* همان *irgendein* می‌ماند."
+      de: "*Geschenk* ist neutral. Im Akkusativ bleibt es *irgendein*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir essen heute Abend in ___ (irgendein) Restaurant in der Stadt.
+    answers: [irgendeinem]
+    explanation:
+      en: "*Essen in* says where, so the *Dativ*; *Restaurant* is neuter: *irgendeinem Restaurant*."
+      fa: "*essen in* جا را نشان می‌دهد، پس حالت *Dativ* می‌آید؛ *Restaurant* اسم خنثی است: *irgendeinem Restaurant*."
+      de: "*Essen in* sagt, wo. Darum Dativ. *Restaurant* ist neutral: *irgendeinem Restaurant*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Er hat ___ (irgendein) Kollegen um Hilfe gebeten.
+    answers: [irgendeinen]
+    explanation:
+      en: "*Kollege* is masculine and the object, so the *Akkusativ*: *irgendeinen Kollegen*."
+      fa: "*Kollege* اسم مذکر و مفعول است، پس در حالت *Akkusativ* می‌آید: *irgendeinen Kollegen*."
+      de: "*Kollege* ist maskulin und das Objekt, also Akkusativ: *irgendeinen Kollegen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich kenne dich, ich habe dich schon ___ (irgend-) gesehen, aber ich weiß nicht mehr, wo.
+    answers: [irgendwo]
+    explanation:
+      en: "*Wo* shows it is a place: *irgendwo*."
+      fa: "*wo* نشان می‌دهد که منظور جایی است: *irgendwo*."
+      de: "*Wo* zeigt: Es ist ein Ort. Darum *irgendwo*."
+  - id: error-1
+    type: find-error
+    prompt: Hast du irgendeinen Frage zur Prüfung?
+    answer: irgendeinen
+    explanation:
+      en: "*Frage* is feminine: *irgendeine Frage*."
+      fa: "*Frage* اسم مؤنث است: *irgendeine Frage*."
+      de: "*Frage* ist feminin: *irgendeine Frage*."
+  - id: error-2
+    type: find-error
+    prompt: Wir treffen uns morgen in irgendeinen Café.
+    answer: irgendeinen
+    explanation:
+      en: "*Sich treffen in* says where, so the *Dativ*; *Café* is neuter: *in irgendeinem Café*."
+      fa: "*sich treffen in* جا را نشان می‌دهد، پس حالت *Dativ* می‌آید؛ *Café* اسم خنثی است: *in irgendeinem Café*."
+      de: "*Sich treffen in* sagt, wo. Darum Dativ. *Café* ist neutral: *in irgendeinem Café*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [irgendwann, fahre, ich, nach Japan]
+      - [ich, fahre, irgendwann, nach Japan]
+      - [nach Japan, fahre, ich, irgendwann]
+    explanation:
+      en: "The verb *fahre* comes second. *Irgendwann* can stand first or after *ich fahre*, before *nach Japan*."
+      fa: "فعل *fahre* در جایگاه دوم می‌آید. *irgendwann* می‌تواند در آغاز جمله باشد یا پس از *ich fahre* و پیش از *nach Japan*."
+      de: "*Fahre* steht an Position 2. *Irgendwann* kann am Anfang stehen oder nach *ich fahre*, vor *nach Japan*."
+  - id: match-1
+    type: matching
+    answer:
+      - [irgendwo, an einem Ort]
+      - [irgendwann, zu einer Zeit]
+      - [irgendwie, auf eine Art]
+      - [irgendwer, eine Person]
+    explanation:
+      en: "*Irgend-* keeps the meaning of the question word: *wo* a place, *wann* a time, *wie* a way, *wer* a person."
+      fa: "*irgend-* معنای واژهٔ پرسشی را نگه می‌دارد: *wo* جا، *wann* زمان، *wie* چگونگی و *wer* شخص."
+      de: "*Irgend-* behält die Bedeutung vom Fragewort: *wo* ein Ort, *wann* eine Zeit, *wie* eine Art, *wer* eine Person."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, blind pass
+    on the review sheet only; not a person)
+  date: 2026-11-28
+  pool: 4122f7b1b56959ef

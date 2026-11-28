@@ -4,10 +4,344 @@ kind: grammar
 level: B1
 chapter: b1-pronouns
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-067, grammar-096]
 title:
   en: "Reflexive pronoun in the *Dativ*"
-  fa: "ضمیر انعکاسی در *Dativ*"
+  fa: "ضمیر انعکاسی در حالت *Dativ*"
   de: "Reflexivpronomen im Dativ"
+
+explanations:
+  en:
+    rule: >
+      A reflexive pronoun is in the *Dativ* when the verb also has an object
+      in the *Akkusativ*: *Ich wasche mich*, but *Ich wasche mir die Hände.*
+      You see the difference only with *ich* and *du*: *mir* and *dir*
+      instead of *mich* and *dich*; *uns*, *euch* and *sich* stay the same.
+      Some verbs always take a *Dativ* pronoun and a thing: *sich etwas
+      wünschen*, *sich etwas vornehmen* (to plan), *sich etwas merken* (to
+      remember), *sich etwas ansehen* (to look at). *Sich vorstellen* means
+      "to introduce yourself" (*Darf ich mich vorstellen?*), but *sich etwas
+      vorstellen* means "to imagine" (*Ich kann mir das gut vorstellen.*).
+      For parts of the body German usually says the *Dativ* pronoun and
+      *der*, *die*, *das* where English says "my": *Ich putze mir die
+      Zähne.* The pronoun comes before a noun object: *Ich kaufe mir ein
+      Fahrrad.*
+  fa:
+    rule: >
+      اگر فعل جز ضمیر انعکاسی مفعولی در حالت *Akkusativ* (حالت مفعولی) هم
+      داشته باشد، ضمیر انعکاسی در حالت *Dativ* (حالت مفعول باواسطه) می‌آید:
+      *Ich wasche mich* (خودم را می‌شویم)، ولی *Ich wasche mir die Hände.*
+      (دست‌هایم را می‌شویم.) این تفاوت فقط در *ich* و *du* دیده می‌شود:
+      *mir* و *dir* به‌جای *mich* و *dich*؛ *uns*، *euch* و *sich* تغییر
+      نمی‌کنند. برخی فعل‌ها همیشه ضمیر انعکاسی در حالت *Dativ* و یک مفعول
+      می‌گیرند: *sich etwas wünschen* (آرزو کردن، خواستن)، *sich etwas
+      vornehmen* (تصمیم گرفتن، برنامه ریختن)، *sich etwas merken* (به خاطر
+      سپردن) و *sich etwas ansehen* (تماشا کردن). *sich vorstellen* یعنی
+      «خود را معرفی کردن» (*Darf ich mich vorstellen?*)، ولی *sich etwas
+      vorstellen* یعنی «چیزی را تصور کردن» (*Ich kann mir das gut
+      vorstellen.*). برای اعضای بدن، آلمانی معمولاً ضمیر انعکاسی در حالت
+      *Dativ* و حرف تعریف *der*، *die* یا *das* را به کار می‌برد، جایی که
+      فارسی ضمیر ملکی می‌آورد: *Ich putze mir die Zähne.* (دندان‌هایم را
+      مسواک می‌زنم.) ضمیر انعکاسی پیش از مفعولی می‌آید که اسم است: *Ich
+      kaufe mir ein Fahrrad.*
+  de:
+    rule: >
+      Hat das Verb noch ein Objekt im Akkusativ, steht das Reflexivpronomen
+      im Dativ: *Ich wasche mich*, aber *Ich wasche mir die Hände.* Man sieht
+      das nur bei *ich* und *du*: *mir* und *dir* statt *mich* und *dich*.
+      *Uns*, *euch* und *sich* bleiben gleich. Manche Verben haben immer ein
+      Pronomen im Dativ und eine Sache: *sich etwas wünschen*, *sich etwas
+      vornehmen*, *sich etwas merken*, *sich etwas ansehen*. *Sich
+      vorstellen* heißt: seinen Namen sagen (*Darf ich mich vorstellen?*).
+      *Sich etwas vorstellen* heißt: ein Bild im Kopf haben (*Ich kann mir
+      das gut vorstellen.*). Bei Teilen vom Körper sagt man meistens das
+      Pronomen im Dativ und *der*, *die*, *das*: *Ich putze mir die Zähne.*
+      Das Pronomen steht vor einem Nomen als Objekt: *Ich kaufe mir ein
+      Fahrrad.*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - en: "Reflexive, *Akkusativ*"
+      fa: "ضمیر انعکاسی، حالت *Akkusativ*"
+      de: "Reflexivpronomen, Akkusativ"
+    - en: "Reflexive, *Dativ*"
+      fa: "ضمیر انعکاسی، حالت *Dativ*"
+      de: "Reflexivpronomen, Dativ"
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, mich, mir, Ich wasche mir die Hände.]
+    - [du, dich, dir, Was wünschst du dir?]
+    - [er / sie / es, sich, sich, Er putzt sich die Zähne.]
+    - [wir, uns, uns, Wir sehen uns die Wohnung an.]
+    - [ihr, euch, euch, Merkt euch das!]
+    - [sie (Plural) / Sie, sich, sich, Stellen Sie sich das vor!]
+
+examples:
+  - de: Ich wasche mir die Hände.
+    en: I wash my hands.
+    fa: دست‌هایم را می‌شویم.
+  - de: Ich kann mir das gut vorstellen.
+    en: I can easily imagine that.
+    fa: این را خوب می‌توانم تصور کنم.
+  - de: Was wünschst du dir zum Geburtstag?
+    en: What would you like for your birthday?
+    fa: برای تولدت چه می‌خواهی؟
+  - de: Ich habe mir für dieses Jahr viel vorgenommen.
+    en: I've planned a lot for this year.
+    fa: برای امسال برنامه‌های زیادی ریخته‌ام.
+  - de: Putz dir bitte die Zähne!
+    en: Please brush your teeth!
+    fa: لطفاً دندان‌هایت را مسواک بزن!
+  - de: Darf ich mich vorstellen? Ich bin die neue Kollegin.
+    en: May I introduce myself? I'm the new colleague.
+    fa: اجازه می‌دهید خودم را معرفی کنم؟ من همکار جدید هستم.
+  - de: Merk dir bitte meine Telefonnummer.
+    en: Please remember my phone number.
+    fa: لطفاً شمارهٔ تلفنم را به خاطر بسپار.
+  - de: Wir sehen uns morgen die Wohnung an.
+    en: We're going to look at the flat tomorrow.
+    fa: فردا آپارتمان را می‌بینیم.
+  - de: Ich habe mir beim Skifahren das Bein gebrochen.
+    en: I broke my leg skiing.
+    fa: موقع اسکی پایم شکست.
+  - de: Stell dir vor, ich habe die Stelle bekommen!
+    en: Imagine, I got the job!
+    fa: فکرش را بکن، کار را گرفتم!
+
+mistakes:
+  - wrong: Ich wasche mich die Hände.
+    right: Ich wasche mir die Hände.
+    why:
+      en: "*Die Hände* is the *Akkusativ* object, so the reflexive pronoun is in the *Dativ*: *mir*."
+      fa: "*die Hände* مفعول در حالت *Akkusativ* است، پس ضمیر انعکاسی در حالت *Dativ* می‌آید: *mir*."
+      de: "*Die Hände* ist das Objekt im Akkusativ. Darum steht das Reflexivpronomen im Dativ: *mir*."
+  - wrong: Stell dich vor, ich habe gewonnen!
+    right: Stell dir vor, ich habe gewonnen!
+    why:
+      en: "To imagine is *sich etwas vorstellen*, with the *Dativ*: *dir*. *Stell dich vor* means introduce yourself."
+      fa: "«تصور کردن» *sich etwas vorstellen* است و با حالت *Dativ* می‌آید: *dir*. *Stell dich vor* یعنی «خودت را معرفی کن»."
+      de: "*Sich etwas vorstellen* (ein Bild im Kopf haben) hat den Dativ: *dir*. *Stell dich vor* heißt: Sag deinen Namen."
+  - wrong: Ich muss mich die Adresse merken.
+    right: Ich muss mir die Adresse merken.
+    why:
+      en: "*Sich etwas merken* always takes the *Dativ* pronoun: *mir*."
+      fa: "*sich etwas merken* همیشه ضمیر انعکاسی در حالت *Dativ* می‌گیرد: *mir*."
+      de: "*Sich etwas merken* hat immer das Pronomen im Dativ: *mir*."
+  - wrong: Ich habe mir sehr gefreut.
+    right: Ich habe mich sehr gefreut.
+    why:
+      en: "*Sich freuen* has no other object, so the *Akkusativ*: *mich*."
+      fa: "*sich freuen* مفعول دیگری ندارد، پس ضمیر در حالت *Akkusativ* می‌آید: *mich*."
+      de: "*Sich freuen* hat kein anderes Objekt. Darum Akkusativ: *mich*."
+  - wrong: Ich kaufe ein neues Handy mir.
+    right: Ich kaufe mir ein neues Handy.
+    why:
+      en: "The reflexive pronoun comes before a noun object: *mir ein neues Handy*."
+      fa: "ضمیر انعکاسی پیش از مفعولی می‌آید که اسم است: *mir ein neues Handy*."
+      de: "Das Reflexivpronomen steht vor dem Nomen: *mir ein neues Handy*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Vor dem Essen wasche ich ___ die Hände.
+    options: [mich, mir, mein]
+    answer: mir
+    explanation:
+      en: "*Die Hände* is the *Akkusativ* object, so the reflexive pronoun is in the *Dativ*: *mir*."
+      fa: "*die Hände* مفعول در حالت *Akkusativ* است، پس ضمیر انعکاسی در حالت *Dativ* می‌آید: *mir*."
+      de: "*Die Hände* ist das Objekt im Akkusativ. Darum Dativ: *mir*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich ziehe ___ schnell an, dann gehen wir.
+    options: [mich, mir, mein]
+    answer: mich
+    explanation:
+      en: "There is no other object, so the *Akkusativ*: *mich*."
+      fa: "مفعول دیگری در جمله نیست، پس ضمیر در حالت *Akkusativ* می‌آید: *mich*."
+      de: "Es gibt kein anderes Objekt. Darum Akkusativ: *mich*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Was wünschst du ___ zum Geburtstag?
+    options: [dich, du, dir]
+    answer: dir
+    explanation:
+      en: "*Sich etwas wünschen*: *was* is the thing, so the pronoun is in the *Dativ*: *dir*."
+      fa: "*sich etwas wünschen*: *was* همان چیز خواسته‌شده است، پس ضمیر در حالت *Dativ* می‌آید: *dir*."
+      de: "*Sich etwas wünschen*: *was* ist die Sache. Darum Dativ: *dir*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Kannst du ___ das vorstellen?
+    options: [dir, dich, du]
+    answer: dir
+    explanation:
+      en: "To imagine is *sich etwas vorstellen*, with the *Dativ*: *dir*."
+      fa: "«تصور کردن» *sich etwas vorstellen* است و با حالت *Dativ* می‌آید: *dir*."
+      de: "*Sich etwas vorstellen* (ein Bild im Kopf haben) hat den Dativ: *dir*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Darf ich ___ vorstellen? Mein Name ist Paul Weber.
+    options: [mir, mich, mein]
+    answer: mich
+    explanation:
+      en: "Here *sich vorstellen* means introduce yourself, with no other object: *mich*."
+      fa: "این‌جا *sich vorstellen* یعنی «خود را معرفی کردن» و مفعول دیگری ندارد: *mich*."
+      de: "Hier heißt *sich vorstellen*: seinen Namen sagen. Es gibt kein anderes Objekt: *mich*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options:
+      - Ich putze mich die Zähne.
+      - Ich putze die Zähne mir.
+      - Ich putze mir die Zähne.
+    answer: Ich putze mir die Zähne.
+    explanation:
+      en: "*Die Zähne* is the *Akkusativ* object, so *mir*, and it comes before the noun."
+      fa: "*die Zähne* مفعول در حالت *Akkusativ* است، پس *mir* می‌آید و پیش از اسم قرار می‌گیرد."
+      de: "*Die Zähne* ist das Objekt im Akkusativ. Darum *mir*, und es steht vor dem Nomen."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Was bedeutet der Satz? Ich kann mir das gut vorstellen."
+    options:
+      - Ich sage den anderen meinen Namen.
+      - Ich habe ein Bild davon im Kopf, das ist gut möglich.
+      - Ich kann das sehr gut machen.
+    answer: Ich habe ein Bild davon im Kopf, das ist gut möglich.
+    explanation:
+      en: "*Sich etwas vorstellen* with the *Dativ* means to imagine."
+      fa: "*sich etwas vorstellen* با حالت *Dativ* یعنی «تصور کردن»."
+      de: "*Sich etwas vorstellen* mit Dativ heißt: ein Bild im Kopf haben."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich habe ___ für das neue Jahr viel vorgenommen.
+    options: [mich, mir, mein]
+    answer: mir
+    explanation:
+      en: "*Sich etwas vornehmen* always takes the *Dativ* pronoun: *mir*."
+      fa: "*sich etwas vornehmen* همیشه ضمیر انعکاسی در حالت *Dativ* می‌گیرد: *mir*."
+      de: "*Sich etwas vornehmen* hat immer das Pronomen im Dativ: *mir*."
+  - id: true-1
+    type: true-false
+    prompt: Du musst dir die Adresse gut merken.
+    answer: true
+    explanation:
+      en: "*Sich etwas merken* takes the *Dativ*: *dir*. The sentence is correct."
+      fa: "*sich etwas merken* با حالت *Dativ* می‌آید: *dir*. جمله درست است."
+      de: "*Sich etwas merken* hat den Dativ: *dir*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich habe mich ein neues Fahrrad gekauft.
+    answer: false
+    explanation:
+      en: "*Ein neues Fahrrad* is the *Akkusativ* object, so the *Dativ*: *Ich habe mir ein neues Fahrrad gekauft.*"
+      fa: "*ein neues Fahrrad* مفعول در حالت *Akkusativ* است، پس ضمیر در حالت *Dativ* می‌آید: *Ich habe mir ein neues Fahrrad gekauft.*"
+      de: "*Ein neues Fahrrad* ist das Objekt im Akkusativ. Darum Dativ: *Ich habe mir ein neues Fahrrad gekauft.*"
+  - id: true-3
+    type: true-false
+    prompt: Stell dich vor, ich habe im Lotto gewonnen!
+    answer: false
+    explanation:
+      en: "To imagine is *sich etwas vorstellen*, with the *Dativ*: *Stell dir vor*."
+      fa: "«تصور کردن» *sich etwas vorstellen* است و با حالت *Dativ* می‌آید: *Stell dir vor*."
+      de: "*Sich etwas vorstellen* (ein Bild im Kopf haben) hat den Dativ: *Stell dir vor*."
+  - id: true-4
+    type: true-false
+    prompt: Wir sehen uns heute Abend einen Film an.
+    answer: true
+    explanation:
+      en: "With *wir* the pronoun is *uns* in both cases. The sentence is correct."
+      fa: "با *wir* ضمیر در هر دو حالت *uns* است. جمله درست است."
+      de: "Bei *wir* heißt das Pronomen in beiden Fällen *uns*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich kaufe ___ (sich) eine neue Jacke.
+    answers: [mir]
+    explanation:
+      en: "*Eine neue Jacke* is the *Akkusativ* object, so the pronoun for *ich* is *mir*."
+      fa: "*eine neue Jacke* مفعول در حالت *Akkusativ* است، پس ضمیر برای *ich* می‌شود *mir*."
+      de: "*Eine neue Jacke* ist das Objekt im Akkusativ. Darum heißt das Pronomen bei *ich* *mir*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Du sollst ___ (sich) vor dem Essen die Hände waschen.
+    answers: [dir]
+    explanation:
+      en: "*Die Hände* is the *Akkusativ* object, so the pronoun for *du* is *dir*."
+      fa: "*die Hände* مفعول در حالت *Akkusativ* است، پس ضمیر برای *du* می‌شود *dir*."
+      de: "*Die Hände* ist das Objekt im Akkusativ. Darum heißt das Pronomen bei *du* *dir*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Beim Fußball habe ich ___ (sich) den Arm gebrochen.
+    answers: [mir]
+    explanation:
+      en: "*Den Arm* is the *Akkusativ* object, so the pronoun for *ich* is *mir*."
+      fa: "*den Arm* مفعول در حالت *Akkusativ* است، پس ضمیر برای *ich* می‌شود *mir*."
+      de: "*Den Arm* ist das Objekt im Akkusativ. Darum heißt das Pronomen bei *ich* *mir*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Merk ___ (sich) bitte die Nummer!
+    answers: [dir]
+    explanation:
+      en: "*Sich etwas merken* takes the *Dativ*; the imperative speaks to *du*: *dir*."
+      fa: "*sich etwas merken* با حالت *Dativ* می‌آید و فعل امر خطاب به *du* است: *dir*."
+      de: "*Sich etwas merken* hat den Dativ. Der Imperativ spricht zu *du*: *dir*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Ich freue ___ (sich) schon auf das Wochenende.
+    answers: [mich]
+    explanation:
+      en: "*Sich freuen auf* has no *Akkusativ* object besides the pronoun, so *mich*."
+      fa: "*sich freuen auf* جز ضمیر مفعولی در حالت *Akkusativ* ندارد، پس *mich* می‌آید."
+      de: "*Sich freuen auf* hat kein anderes Objekt im Akkusativ. Darum *mich*."
+  - id: error-1
+    type: find-error
+    prompt: Ich habe mich gestern die Haare geschnitten.
+    answer: mich
+    explanation:
+      en: "*Die Haare* is the *Akkusativ* object, so the *Dativ*: *mir*."
+      fa: "*die Haare* مفعول در حالت *Akkusativ* است، پس ضمیر در حالت *Dativ* می‌آید: *mir*."
+      de: "*Die Haare* ist das Objekt im Akkusativ. Darum Dativ: *mir*."
+  - id: error-2
+    type: find-error
+    prompt: Kannst du dich meinen Namen merken?
+    answer: dich
+    explanation:
+      en: "*Sich etwas merken* takes the *Dativ*: *dir*."
+      fa: "*sich etwas merken* با حالت *Dativ* می‌آید: *dir*."
+      de: "*Sich etwas merken* hat den Dativ: *dir*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [was, wünschst, du, dir]
+    end: "?"
+    explanation:
+      en: "The question word comes first, then the verb, the subject *du* and the pronoun *dir*."
+      fa: "واژهٔ پرسشی در آغاز می‌آید، سپس فعل، فاعل *du* و ضمیر *dir*."
+      de: "Das Fragewort steht am Anfang, dann das Verb, das Subjekt *du* und das Pronomen *dir*."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wann, hast, du, dir, das Auto, gekauft]
+    end: "?"
+    explanation:
+      en: "The pronoun *dir* comes right after *du* and before the noun object *das Auto*; *gekauft* goes last."
+      fa: "ضمیر *dir* درست پس از *du* و پیش از مفعول *das Auto* می‌آید و *gekauft* در پایان جمله است."
+      de: "Das Pronomen *dir* steht direkt nach *du* und vor dem Nomen *das Auto*. *Gekauft* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [Ich beeile ___., mich]
+      - [Du beeilst ___., dich]
+      - [Ich merke ___ die Nummer., mir]
+      - [Du merkst ___ den Namen., dir]
+    explanation:
+      en: "*Sich beeilen* has no other object (*mich*, *dich*); *sich etwas merken* has one, so the *Dativ* (*mir*, *dir*)."
+      fa: "*sich beeilen* مفعول دیگری ندارد (*mich*، *dich*)؛ *sich etwas merken* مفعول دارد، پس حالت *Dativ* می‌آید (*mir*، *dir*)."
+      de: "*Sich beeilen* hat kein anderes Objekt (*mich*, *dich*). *Sich etwas merken* hat eins, darum Dativ (*mir*, *dir*)."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, blind pass
+    on the review sheet only; not a person)
+  date: 2026-11-28
+  pool: fd43cdff1092eed6
