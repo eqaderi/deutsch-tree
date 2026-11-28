@@ -1,36 +1,368 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-tv-audio
 kind: vocabulary
 level: B1
 chapter: b1-words-media-free-time
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Television, film and sound"
   fa: "تلویزیون، فیلم و صدا"
   de: "Fernsehen, Film und Ton"
+attemptSize: 15
 words:
+  # Fernsehen and TV are the same thing; each is right when the other is asked for.
   - word: Fernsehen
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: television (the medium and its programmes)
+      fa: تلویزیون (رسانه و برنامه‌هایش)
+    definition: das Medium, das Sendungen mit Bild und Ton nach Hause bringt, und die Programme, die man dort sieht
+    example:
+      de: Was kommt heute Abend im Fernsehen?
+      en: What's on television tonight?
+      fa: امشب تلویزیون چه برنامه‌ای دارد؟
+    alsoAccepted: [das TV]
+    tooCloseTo: [TV]
+
   - word: TV
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: TV (short word for television as a medium)
+      fa: تی‌وی (شکل کوتاه تلویزیون به‌عنوان رسانه)
+    definition: ein kurzes Wort aus zwei Buchstaben für das Fernsehen
+    example:
+      de: Das Endspiel läuft am Sonntag im TV.
+      en: The final is on TV on Sunday.
+      fa: فینال یکشنبه از تلویزیون پخش می‌شود.
+    alsoAccepted: [das Fernsehen]
+    tooCloseTo: [Fernsehen]
+
+  # Sender, senden and übertragen are all about broadcasting; none is offered as a wrong meaning of another.
   - word: Sender
+    class: noun
+    article: der
+    plural: Sender
+    level: B1
+    meaning:
+      en: (TV or radio) channel, station
+      fa: شبکه (تلویزیونی یا رادیویی)
+    definition: eine Firma, die Programme für das Radio oder das Fernsehen macht und ausstrahlt
+    example:
+      de: Auf welchem Sender läuft das Fußballspiel?
+      en: Which channel is the football match on?
+      fa: مسابقهٔ فوتبال از کدام شبکه پخش می‌شود؟
+    alsoAccepted: [der Kanal, das Programm]
+    tooCloseTo: [senden, übertragen]
+
   - word: senden
-  - word: Serie
-  - word: Show
-  - word: Castingshow
-  - word: Spot
-  - word: Studio
+    class: verb
+    level: B1
+    meaning:
+      en: to broadcast; to send
+      fa: پخش کردن (برنامه)؛ فرستادن
+    definition: eine Sendung im Radio oder im Fernsehen bringen; auch etwas an jemanden schicken
+    example:
+      de: Das Konzert wird am Samstag im Radio gesendet.
+      en: The concert will be broadcast on the radio on Saturday.
+      fa: این کنسرت شنبه از رادیو پخش می‌شود.
+    alsoAccepted: [ausstrahlen]
+    tooCloseTo: [Sender, übertragen]
+
   - word: übertragen
+    class: verb
+    level: B1
+    meaning:
+      en: to broadcast (an event, usually live), to transmit
+      fa: پخش کردن (مسابقه یا رویداد، معمولاً زنده)
+    definition: ein Spiel oder eine Veranstaltung im Radio oder im Fernsehen bringen, während sie stattfindet
+    example:
+      de: Das Endspiel wird live im Fernsehen übertragen.
+      en: The final is being broadcast live on television.
+      fa: فینال به‌طور زنده از تلویزیون پخش می‌شود.
+    alsoAccepted: [senden, ausstrahlen, live übertragen, live senden]
+    tooCloseTo: [Sender, senden, live]
+
+  # Serie, Show, Castingshow and Spot are all things on TV; none is offered as a wrong meaning of another.
+  - word: Serie
+    class: noun
+    article: die
+    plural: Serien
+    level: B1
+    meaning:
+      en: series (on TV or online)
+      fa: سریال
+    definition: eine Geschichte im Fernsehen oder im Internet, die in vielen Teilen gezeigt wird
+    example:
+      de: Kennst du die neue Serie über die Polizei in Hamburg?
+      en: Do you know the new series about the police in Hamburg?
+      fa: سریال تازه دربارهٔ پلیس هامبورگ را می‌شناسی؟
+    tooCloseTo: [Show, Castingshow]
+
+  - word: Show
+    class: noun
+    article: die
+    plural: Shows
+    level: B1
+    meaning:
+      en: show (entertainment with music, games or guests)
+      fa: شو، برنامهٔ سرگرمی
+    definition: eine Sendung oder Veranstaltung mit Musik, Spielen oder Gästen, die das Publikum unterhalten soll
+    example:
+      de: In der Show am Samstag singt eine bekannte Sängerin.
+      en: A famous singer is singing on the show on Saturday.
+      fa: در برنامهٔ شنبه یک خوانندهٔ معروف آواز می‌خواند.
+    tooCloseTo: [Serie, Castingshow, Spot]
+
+  - word: Castingshow
+    class: noun
+    article: die
+    plural: Castingshows
+    level: B1
+    meaning:
+      en: talent show (on TV)
+      fa: مسابقهٔ استعدادیابی تلویزیونی
+    definition: eine Sendung im Fernsehen, in der Menschen singen oder tanzen und eine Jury die Besten aussucht
+    example:
+      de: Sie ist durch eine Castingshow berühmt geworden.
+      en: She became famous through a talent show.
+      fa: او با یک مسابقهٔ استعدادیابی تلویزیونی مشهور شد.
+    alsoAccepted: [die Talentshow]
+    tooCloseTo: [Serie, Show]
+
+  - word: Spot
+    class: noun
+    article: der
+    plural: Spots
+    level: B1
+    meaning:
+      en: (TV or radio) commercial, ad
+      fa: آگهی تبلیغاتی کوتاه (تلویزیون یا رادیو)
+    definition: ein kurzer Film im Fernsehen oder im Kino, der für ein Produkt Werbung macht
+    example:
+      de: Den Spot für das neue Auto sieht man jeden Abend.
+      en: You see the commercial for the new car every evening.
+      fa: آگهی آن خودروی جدید را هر شب می‌شود دید.
+    alsoAccepted: [der Werbespot, der Werbefilm, die Werbung]
+    tooCloseTo: [Show]
+
+  - word: Studio
+    class: noun
+    article: das
+    plural: Studios
+    level: B1
+    meaning:
+      en: studio
+      fa: استودیو
+    definition: ein Raum, in dem man Sendungen, Filme oder Musik aufnimmt
+    example:
+      de: Die Sängerin nimmt ihre neuen Lieder in einem Studio in Berlin auf.
+      en: The singer is recording her new songs in a studio in Berlin.
+      fa: این خواننده آهنگ‌های تازه‌اش را در استودیویی در برلین ضبط می‌کند.
+
   - word: live
+    class: adverb
+    level: B1
+    meaning:
+      en: live (as it happens)
+      fa: زنده (پخش یا اجرا)
+    definition: genau in dem Moment, in dem es passiert, und nicht vorher aufgenommen
+    example:
+      de: Das Konzert kommt heute Abend live im Radio.
+      en: The concert is on the radio live tonight.
+      fa: این کنسرت امشب به‌طور زنده از رادیو پخش می‌شود.
+    tooCloseTo: [übertragen]
+
+  # Video, DVD and Kassette all hold films or music; none is offered as a wrong meaning of another.
   - word: Video
+    class: noun
+    article: das
+    plural: Videos
+    level: B1
+    meaning:
+      en: video
+      fa: ویدیو
+    definition: ein kurzer Film, den man zum Beispiel mit dem Handy macht oder im Internet sieht
+    example:
+      de: Hast du das Video von unserem Ausflug schon gesehen?
+      en: Have you seen the video of our trip yet?
+      fa: ویدیوی گردشمان را دیده‌ای؟
+    alsoAccepted: [der Clip]
+    tooCloseTo: [DVD, Kassette]
+
   - word: DVD
+    class: noun
+    article: die
+    plural: DVDs
+    level: B1
+    meaning:
+      en: DVD
+      fa: دی‌وی‌دی
+    definition: eine runde, flache Scheibe, die aussieht wie eine CD und auf der meistens ein ganzer Film gespeichert ist
+    example:
+      de: Den Film gibt es jetzt auch auf DVD.
+      en: The film is now also available on DVD.
+      fa: این فیلم حالا روی دی‌وی‌دی هم هست.
+    tooCloseTo: [Video, Kassette]
+
   - word: Kassette
+    class: noun
+    article: die
+    plural: Kassetten
+    level: B1
+    meaning:
+      en: cassette (tape)
+      fa: نوار کاست
+    definition: ein kleiner Kasten aus Plastik mit einem Band darin, auf dem früher Musik oder Filme waren
+    example:
+      de: Meine Eltern haben noch alte Kassetten mit Musik aus den Achtzigern.
+      en: My parents still have old cassettes with music from the eighties.
+      fa: پدر و مادرم هنوز نوارهای کاست قدیمی با آهنگ‌های دههٔ هشتاد دارند.
+    tooCloseTo: [Video, DVD]
+
   - word: CD-Player
+    class: noun
+    article: der
+    plural: CD-Player
+    level: B1
+    meaning:
+      en: CD player
+      fa: دستگاه پخش سی‌دی
+    definition: ein Gerät, mit dem man Musik von runden, silbernen Scheiben hört
+    example:
+      de: Im alten Auto gibt es noch einen CD-Player.
+      en: There's still a CD player in the old car.
+      fa: در آن ماشین قدیمی هنوز دستگاه پخش سی‌دی هست.
+    alsoAccepted: [der CD-Spieler]
+
   - word: Fernbedienung
+    class: noun
+    article: die
+    plural: Fernbedienungen
+    level: B1
+    meaning:
+      en: remote control
+      fa: کنترل از راه دور
+    definition: ein kleines Gerät mit Tasten, mit dem man zum Beispiel den Fernseher vom Sofa aus bedient
+    example:
+      de: Wo ist denn schon wieder die Fernbedienung?
+      en: Where on earth is the remote control this time?
+      fa: باز کنترل تلویزیون کجا رفته؟
+
   - word: Lautsprecher
+    class: noun
+    article: der
+    plural: Lautsprecher
+    level: B1
+    meaning:
+      en: loudspeaker, speaker
+      fa: بلندگو
+    definition: ein Gerät, aus dem Musik oder Stimmen laut herauskommen
+    example:
+      de: Aus den Lautsprechern kam laute Musik.
+      en: Loud music was coming out of the speakers.
+      fa: از بلندگوها موسیقی بلندی پخش می‌شد.
+    alsoAccepted: [die Box, die Lautsprecherbox]
+
   - word: Kabel
+    class: noun
+    article: das
+    plural: Kabel
+    level: B1
+    meaning:
+      en: cable, lead
+      fa: کابل، سیم
+    definition: ein langer, dünner Draht mit Plastik darum, der Strom oder Daten zu einem Gerät bringt
+    example:
+      de: Das Kabel ist zu kurz, ich komme nicht bis zur Steckdose.
+      en: The cable is too short; I can't reach the socket.
+      fa: کابل کوتاه است و به پریز نمی‌رسد.
+
+  # zuschauen, gucken and schauen are all ways of watching; none is offered as a wrong meaning of another.
   - word: zuschauen
+    class: verb
+    level: B1
+    meaning:
+      en: to watch (what others do or what happens), to look on
+      fa: تماشا کردن (کار دیگران یا اتفاقی)
+    definition: ansehen, was andere machen oder was gerade passiert
+    example:
+      de: Darf ich beim Training zuschauen?
+      en: May I watch the training session?
+      fa: می‌توانم تمرین را تماشا کنم؟
+    alsoAccepted: [zusehen]
+    tooCloseTo: [gucken, schauen]
+
+  # gucken and schauen are the same word in the north and in the south; each is right when the other is asked for.
   - word: gucken
+    class: verb
+    level: B1
+    meaning:
+      en: to look, to watch (informal, esp. in the north)
+      fa: نگاه کردن، تماشا کردن (محاوره‌ای، بیشتر در شمال آلمان)
+    definition: mit den Augen auf etwas sehen; man sagt es locker, vor allem im Norden von Deutschland
+    example:
+      de: Wollen wir heute Abend einen Film gucken?
+      en: Shall we watch a film tonight?
+      fa: امشب فیلم ببینیم؟
+    alsoAccepted: [kucken, schauen]
+    tooCloseTo: [schauen, zuschauen]
+
   - word: schauen
+    class: verb
+    level: B1
+    meaning:
+      en: to look, to watch (esp. in the south)
+      fa: نگاه کردن، تماشا کردن (بیشتر در جنوب آلمان)
+    definition: mit den Augen auf etwas sehen; so sagt man vor allem im Süden von Deutschland, in Österreich und in der Schweiz
+    example:
+      de: Schau mal, da drüben sitzt ein Eichhörnchen!
+      en: Look, there's a squirrel sitting over there!
+      fa: نگاه کن، آنجا یک سنجاب نشسته!
+    alsoAccepted: [gucken, kucken]
+    tooCloseTo: [gucken, zuschauen]
+
+  # Aufnahme and aufnehmen belong together; neither is offered as a wrong meaning of the other.
   - word: Aufnahme
+    class: noun
+    article: die
+    plural: Aufnahmen
+    level: B1
+    meaning:
+      en: recording (of sound or pictures)
+      fa: صدا یا تصویر ضبط‌شده
+    definition: Musik, Töne oder Bilder, die man mit einem Gerät gespeichert hat, damit man sie später noch einmal hören oder sehen kann
+    example:
+      de: Auf dieser alten Aufnahme hört man meinen Großvater singen.
+      en: On this old recording you can hear my grandfather singing.
+      fa: در این صدای ضبط‌شدهٔ قدیمی، آواز پدربزرگم را می‌شنوید.
+    alsoAccepted: [die Aufzeichnung]
+    tooCloseTo: [aufnehmen]
+
   - word: aufnehmen
+    class: verb
+    level: B1
+    meaning:
+      en: to record (sound or film)
+      fa: ضبط کردن
+    definition: Musik, Töne oder einen Film mit einem Gerät speichern
+    example:
+      de: Kannst du die Sendung für mich aufnehmen? Ich bin heute Abend nicht da.
+      en: Can you record the programme for me? I'm out tonight.
+      fa: می‌توانی آن برنامه را برایم ضبط کنی؟ امشب خانه نیستم.
+    alsoAccepted: [aufzeichnen]
+    tooCloseTo: [Aufnahme]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed to settle the first one's
+    answers and objections; not people)"
+  date: 2026-11-28
+  pool: be01e3a44a66b31e

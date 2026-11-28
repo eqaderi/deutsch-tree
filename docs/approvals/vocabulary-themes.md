@@ -668,10 +668,10 @@ das Netz · das Netzwerk · die Plattform · das Forum · der Chat · der User �
 die Medien (Pl.) · die Presse · das Magazin · die Broschüre · die Annonce · das Inserat · der Verlag · veröffentlichen · der Bericht · die Reportage · die Meldung · die Neuigkeit · der Kommentar · der Leser · der Hörer · der Zuhörer · der Zuschauer · das Publikum · die Öffentlichkeit · öffentlich · der Beitrag
 
 **B1-W8.4 Television, film and sound** · تلویزیون، فیلم و صدا · Fernsehen, Film und Ton · 23 words  
-das Fernsehen · das TV · der Sender · senden · die Serie · die Show · die Castingshow · der Spot · das Studio · übertragen · live · das Video · die DVD · die Kassette · der CD-Player · die Fernbedienung · der Lautsprecher · das Kabel · zuschauen · gucken · schauen · die Aufnahme · aufnehmen
+das Fernsehen · das TV · der Sender · senden · übertragen · die Serie · die Show · die Castingshow · der Spot · das Studio · live · das Video · die DVD · die Kassette · der CD-Player · die Fernbedienung · der Lautsprecher · das Kabel · zuschauen · gucken · schauen · die Aufnahme · aufnehmen
 
 **B1-W8.5 Books, writing and art** · کتاب، نوشتن و هنر · Bücher, Schreiben und Kunst · 20 words  
-die Literatur · der Roman · das Märchen · das Gedicht · die Erzählung · das Kapitel · der Stil · stilistisch · die Fantasie · die Schrift · die Zeichnung · die Fotografie · die Galerie · das Werk · darstellen · die Darstellung · das Schreiben · der Schriftsteller · der Maler · der Fotograf
+die Literatur · der Roman · das Märchen · das Gedicht · die Erzählung · das Kapitel · der Stil · stilistisch · die Fantasie · die Schrift · das Schreiben · die Zeichnung · die Fotografie · die Galerie · das Werk · darstellen · die Darstellung · der Schriftsteller · der Maler · der Fotograf
 
 **B1-W8.6 Stage and music** · صحنه و موسیقی · Bühne und Musik · 21 words  
 die Oper · das Orchester · das Ballett · der Tanz · der Jazz · der Hit · der Song · die Flöte · die Bühne · der Auftritt · auftreten · aufführen · die Vorstellung · die Rolle · die Szene · musikalisch · der Saal · klingen · der Held · der Lärm · still
@@ -680,7 +680,7 @@ die Oper · das Orchester · das Ballett · der Tanz · der Jazz · der Hit · d
 die Sportart · der Sportler · der Profisportler · der Spieler · der Trainer · der Gegner · der Sieg · der Sieger · siegen · der Verlierer · der Rekord · das Stadion · das Tor · das Golf · klettern · tauchen · springen · rennen · werfen · fangen · schießen · treten · kämpfen · der Kampf · unentschieden · die Runde · wetten
 
 **B1-W8.8 Free time, play and festivals** · اوقات فراغت، بازی و جشن‌ها · Freizeit, Spiel und Feste · 21 words  
-die Aktivität · der Spielplatz · das Spielzeug · die Puppe · das Puzzle · faulenzen · der Fasching · das Pfingsten · der Nationalfeiertag · der Sonnabend · die Tradition · traditionell · die Gratulation · dekorieren · die Kerze · die Diskothek · die Unterhaltung · das Hallenbad · der Swimmingpool · das Picknick · der Grill
+die Aktivität · der Spielplatz · das Spielzeug · die Puppe · das Puzzle · faulenzen · der Fasching · Pfingsten · der Nationalfeiertag · der Sonnabend · die Tradition · traditionell · die Gratulation · dekorieren · die Kerze · die Diskothek · die Unterhaltung · das Hallenbad · der Swimmingpool · das Picknick · der Grill
 
 #### B1-W9 Words: thinking and discussing
 

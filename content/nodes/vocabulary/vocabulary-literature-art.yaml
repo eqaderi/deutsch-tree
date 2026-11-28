@@ -1,33 +1,326 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-literature-art
 kind: vocabulary
 level: B1
 chapter: b1-words-media-free-time
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Books, writing and art"
   fa: "کتاب، نوشتن و هنر"
   de: "Bücher, Schreiben und Kunst"
+attemptSize: 15
 words:
   - word: Literatur
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: literature
+      fa: ادبیات
+    definition: Romane, Gedichte und andere Texte, die Schriftsteller geschrieben haben
+    example:
+      de: Sie studiert deutsche Literatur in Leipzig.
+      en: She is studying German literature in Leipzig.
+      fa: او در لایپزیگ ادبیات آلمانی می‌خواند.
+
+  # Roman, Märchen and Erzählung all tell a story; none is offered as a wrong meaning of another.
   - word: Roman
+    class: noun
+    article: der
+    plural: Romane
+    level: B1
+    meaning:
+      en: novel
+      fa: رمان
+    definition: ein langes Buch, das eine erfundene Geschichte erzählt
+    example:
+      de: Im Urlaub lese ich am liebsten dicke Romane.
+      en: On holiday I like reading thick novels best.
+      fa: در تعطیلات بیشتر از همه دوست دارم رمان‌های قطور بخوانم.
+    tooCloseTo: [Märchen, Erzählung]
+
   - word: Märchen
+    class: noun
+    article: das
+    plural: Märchen
+    level: B1
+    meaning:
+      en: fairy tale
+      fa: قصهٔ پریان، افسانه
+    definition: eine alte Geschichte, oft für Kinder, in der es Zauberei, Könige und sprechende Tiere gibt
+    example:
+      de: Meine Oma hat mir früher jeden Abend ein Märchen vorgelesen.
+      en: My grandma used to read me a fairy tale every evening.
+      fa: مادربزرگم قدیم‌ها هر شب برایم یک قصهٔ پریان می‌خواند.
+    tooCloseTo: [Roman, Erzählung]
+
   - word: Gedicht
+    class: noun
+    article: das
+    plural: Gedichte
+    level: B1
+    meaning:
+      en: poem
+      fa: شعر (یک قطعه)
+    definition: ein kurzer Text in Zeilen, oft mit Wörtern, die am Ende gleich klingen
+    example:
+      de: Zum Muttertag hat mein Sohn ein Gedicht für mich geschrieben.
+      en: My son wrote a poem for me for Mother's Day.
+      fa: پسرم به مناسبت روز مادر برایم شعری نوشت.
+
   - word: Erzählung
+    class: noun
+    article: die
+    plural: Erzählungen
+    level: B1
+    meaning:
+      en: story, tale (shorter than a novel)
+      fa: داستان، روایت
+    definition: ein Text, der eine Geschichte erzählt und kürzer ist als ein Roman
+    example:
+      de: In dem Buch sind zwölf Erzählungen aus seiner Kindheit.
+      en: The book contains twelve stories from his childhood.
+      fa: این کتاب دوازده داستان از دوران کودکی او دارد.
+    alsoAccepted: [die Geschichte, die Kurzgeschichte, die Novelle]
+    tooCloseTo: [Roman, Märchen]
+
   - word: Kapitel
+    class: noun
+    article: das
+    plural: Kapitel
+    level: B1
+    meaning:
+      en: chapter
+      fa: فصل (کتاب)
+    definition: ein Teil von einem Buch, oft mit einer Nummer und einem eigenen Titel
+    example:
+      de: Gestern Abend habe ich nur noch ein Kapitel gelesen.
+      en: Last night I only read one more chapter.
+      fa: دیشب فقط یک فصل دیگر خواندم.
+
+  # Stil and stilistisch belong together; neither is offered as a wrong meaning of the other.
   - word: Stil
+    class: noun
+    article: der
+    plural: Stile
+    level: B1
+    meaning:
+      en: style
+      fa: سبک
+    definition: die besondere Art, wie jemand schreibt, malt, baut oder sich kleidet
+    example:
+      de: Mir gefällt der einfache Stil dieser Autorin.
+      en: I like this author's simple style.
+      fa: سبک سادهٔ این نویسنده را دوست دارم.
+    tooCloseTo: [stilistisch]
+
   - word: stilistisch
+    class: adjective
+    level: B1
+    meaning:
+      en: stylistic, in terms of style
+      fa: از نظر سبک، سبکی
+    definition: so, dass es mit der Art zu tun hat, wie etwas geschrieben oder gemacht ist
+    example:
+      de: Der Aufsatz ist stilistisch gut, aber leider zu kurz.
+      en: The essay is good in terms of style, but unfortunately too short.
+      fa: این انشا از نظر سبک خوب است، ولی متأسفانه خیلی کوتاه است.
+    tooCloseTo: [Stil]
+
   - word: Fantasie
+    class: noun
+    article: die
+    plural: Fantasien
+    level: B1
+    meaning:
+      en: imagination
+      fa: قوهٔ تخیل، خیال‌پردازی
+    definition: die Fähigkeit, sich im Kopf Bilder und Geschichten auszudenken, die es nicht gibt
+    example:
+      de: Kinder haben oft eine große Fantasie.
+      en: Children often have a vivid imagination.
+      fa: بچه‌ها اغلب تخیل قوی‌ای دارند.
+    alsoAccepted: [die Phantasie, die Vorstellungskraft, die Einbildungskraft]
+
+  # Schrift and Schreiben are both about writing; neither is offered as a wrong meaning of the other.
   - word: Schrift
-  - word: Zeichnung
-  - word: Fotografie
-  - word: Galerie
-  - word: Werk
-  - word: darstellen
-  - word: Darstellung
+    class: noun
+    article: die
+    plural: Schriften
+    level: B1
+    meaning:
+      en: handwriting; script, writing system
+      fa: دست‌خط؛ خط (الفبا)
+    definition: die Art, wie jemand mit der Hand schreibt; auch die Zeichen, mit denen man eine Sprache schreibt
+    example:
+      de: Ich kann deine Schrift leider kaum lesen.
+      en: I'm afraid I can hardly read your handwriting.
+      fa: متأسفانه دست‌خطت را به‌سختی می‌توانم بخوانم.
+    alsoAccepted: [die Handschrift]
+    tooCloseTo: [Schreiben]
+
   - word: Schreiben
+    class: noun
+    article: das
+    plural: Schreiben
+    level: B1
+    meaning:
+      en: (formal) letter; writing (the activity)
+      fa: نامهٔ رسمی؛ نوشتن
+    definition: ein offizieller Brief, zum Beispiel von einer Firma oder einem Amt; auch wenn man Texte schreibt
+    example:
+      de: Vielen Dank für Ihr Schreiben vom 10. März.
+      en: Thank you very much for your letter of 10 March.
+      fa: از نامهٔ دهم مارس شما بسیار سپاسگزارم.
+    alsoAccepted: [der Brief]
+    tooCloseTo: [Schrift]
+
+  # Zeichnung and Fotografie are both pictures; neither is offered as a wrong meaning of the other.
+  - word: Zeichnung
+    class: noun
+    article: die
+    plural: Zeichnungen
+    level: B1
+    meaning:
+      en: drawing
+      fa: نقاشی با مداد یا خودکار
+    definition: ein Bild, das man mit einem Stift macht, meistens nur mit Linien
+    example:
+      de: An der Wand im Kindergarten hängen Zeichnungen der Kinder.
+      en: The children's drawings hang on the wall in the nursery.
+      fa: روی دیوار مهدکودک نقاشی‌های بچه‌ها آویزان است.
+    tooCloseTo: [Fotografie]
+
+  # Fotografie and Fotograf belong together; neither is offered as a wrong meaning of the other.
+  - word: Fotografie
+    class: noun
+    article: die
+    plural: Fotografien
+    level: B1
+    meaning:
+      en: photography; photograph
+      fa: عکاسی؛ عکس
+    definition: die Kunst, Bilder mit einer Kamera zu machen; auch so ein Bild
+    example:
+      de: Die Ausstellung zeigt Fotografien von Berlin nach dem Krieg.
+      en: The exhibition shows photographs of Berlin after the war.
+      fa: این نمایشگاه عکس‌هایی از برلین پس از جنگ نشان می‌دهد.
+    alsoAccepted: [das Foto, die Photographie]
+    tooCloseTo: [Zeichnung, Fotograf]
+
+  - word: Galerie
+    class: noun
+    article: die
+    plural: Galerien
+    level: B1
+    meaning:
+      en: (art) gallery
+      fa: نگارخانه، گالری
+    definition: ein Raum oder ein Geschäft, in dem man Bilder und andere Kunst ansehen und kaufen kann
+    example:
+      de: In der Galerie am Markt gibt es eine neue Ausstellung.
+      en: There's a new exhibition in the gallery on the market square.
+      fa: در نگارخانهٔ کنار میدان بازار نمایشگاه تازه‌ای برپاست.
+    alsoAccepted: [die Kunstgalerie]
+
+  - word: Werk
+    class: noun
+    article: das
+    plural: Werke
+    level: B1
+    meaning:
+      en: work (of art, literature or music)
+      fa: اثر (هنری یا ادبی)
+    definition: etwas, das ein Künstler, ein Schriftsteller oder ein Musiker gemacht hat, zum Beispiel ein Bild oder ein Buch
+    example:
+      de: Im Museum sind die wichtigsten Werke des Malers zu sehen.
+      en: The painter's most important works can be seen in the museum.
+      fa: مهم‌ترین آثار این نقاش را می‌شود در موزه دید.
+    alsoAccepted: [das Kunstwerk]
+
+  # darstellen and Darstellung belong together; neither is offered as a wrong meaning of the other.
+  - word: darstellen
+    class: verb
+    level: B1
+    meaning:
+      en: to depict, to portray (in a picture, a text or on stage)
+      fa: به تصویر کشیدن
+    definition: in einem Bild, einem Text oder auf der Bühne zeigen, wie jemand oder etwas ist
+    example:
+      de: Das Bild stellt eine Familie beim Essen dar.
+      en: The picture shows a family having a meal.
+      fa: این تابلو خانواده‌ای را سر غذا نشان می‌دهد.
+    alsoAccepted: [abbilden, schildern, porträtieren]
+    tooCloseTo: [Darstellung]
+
+  - word: Darstellung
+    class: noun
+    article: die
+    plural: Darstellungen
+    level: B1
+    meaning:
+      en: depiction, portrayal, representation
+      fa: تصویر، شیوهٔ نمایش (در هنر یا متن)
+    definition: die Art, wie jemand oder etwas in einem Bild, einem Text oder einem Film gezeigt wird
+    example:
+      de: Die Darstellung der Stadt in dem Film ist sehr realistisch.
+      en: The portrayal of the city in the film is very realistic.
+      fa: تصویری که این فیلم از شهر نشان می‌دهد بسیار واقع‌گرایانه است.
+    alsoAccepted: [die Abbildung, die Schilderung]
+    tooCloseTo: [darstellen]
+
   - word: Schriftsteller
+    class: noun
+    article: der
+    plural: Schriftsteller
+    level: B1
+    meaning:
+      en: writer, author
+      fa: نویسنده
+    definition: eine Person, die Romane, Gedichte oder andere Bücher schreibt, oft als Beruf
+    example:
+      de: Thomas Mann ist einer der bekanntesten deutschen Schriftsteller.
+      en: Thomas Mann is one of the best-known German writers.
+      fa: توماس مان یکی از مشهورترین نویسندگان آلمانی است.
+    alsoAccepted: [die Schriftstellerin, der Autor, die Autorin]
+
   - word: Maler
+    class: noun
+    article: der
+    plural: Maler
+    level: B1
+    meaning:
+      en: painter (an artist, or a house painter)
+      fa: نقاش
+    definition: eine Person, die Bilder mit Farbe macht; auch eine Person, die beruflich Wände streicht
+    example:
+      de: Der Maler hat für dieses Bild nur zwei Wochen gebraucht.
+      en: The painter only needed two weeks for this picture.
+      fa: این نقاش برای این تابلو فقط دو هفته وقت گذاشت.
+    alsoAccepted: [die Malerin]
+
   - word: Fotograf
+    class: noun
+    article: der
+    plural: Fotografen
+    level: B1
+    meaning:
+      en: photographer
+      fa: عکاس
+    definition: eine Person, die Fotos macht, oft als Beruf
+    example:
+      de: Für die Hochzeit haben wir einen Fotografen gebucht.
+      en: We booked a photographer for the wedding.
+      fa: برای عروسی یک عکاس گرفتیم.
+    alsoAccepted: [die Fotografin]
+    tooCloseTo: [Fotografie]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed to settle the first one's
+    answers and objections; not people)"
+  date: 2026-11-28
+  pool: 6511b51290984941

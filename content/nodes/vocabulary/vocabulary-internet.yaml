@@ -1,36 +1,348 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-internet
 kind: vocabulary
 level: B1
 chapter: b1-words-media-free-time
 order: 2
-status: coming-soon
+status: published
 title:
   en: "The internet and messages"
   fa: "اینترنت و پیام‌ها"
   de: "Internet und Nachrichten"
+attemptSize: 15
 words:
+  # Netz and Netzwerk are both networks; neither is offered as a wrong meaning of the other.
   - word: Netz
+    class: noun
+    article: das
+    plural: Netze
+    level: B1
+    meaning:
+      en: (mobile) network, signal; the net (internet)
+      fa: آنتن (تلفن همراه)؛ اینترنت
+    definition: das Internet, oder die Verbindung, die ein Handy zum Telefonieren braucht
+    example:
+      de: Hier in den Bergen habe ich leider kein Netz.
+      en: Unfortunately I've got no signal up here in the mountains.
+      fa: متأسفانه اینجا در کوهستان آنتن ندارم.
+    tooCloseTo: [Netzwerk]
+
   - word: Netzwerk
+    class: noun
+    article: das
+    plural: Netzwerke
+    level: B1
+    meaning:
+      en: network (of computers or of people)
+      fa: شبکه (رایانه‌ها یا آدم‌ها)
+    definition: mehrere Computer, die miteinander verbunden sind; auch eine Gruppe von Menschen, die sich kennen und helfen
+    example:
+      de: Alle Computer im Büro sind in einem Netzwerk verbunden.
+      en: All the computers in the office are connected in a network.
+      fa: همهٔ رایانه‌های دفتر در یک شبکه به هم وصل‌اند.
+    tooCloseTo: [Netz]
+
+  # Plattform, Forum and Chat are all places to meet online; none is offered as a wrong meaning of another.
   - word: Plattform
+    class: noun
+    article: die
+    plural: Plattformen
+    level: B1
+    meaning:
+      en: (online) platform
+      fa: بستر اینترنتی، پلتفرم
+    definition: ein Dienst im Internet, bei dem viele Menschen etwas anbieten, suchen oder mit anderen teilen
+    example:
+      de: Auf dieser Plattform kann man gebrauchte Möbel verkaufen.
+      en: You can sell second-hand furniture on this platform.
+      fa: روی این بستر اینترنتی می‌شود مبلمان دست‌دوم فروخت.
+    alsoAccepted: [das Portal, die Internetplattform, die Onlineplattform]
+    tooCloseTo: [Forum, Chat]
+
   - word: Forum
+    class: noun
+    article: das
+    plural: Foren
+    level: B1
+    meaning:
+      en: (online) forum
+      fa: انجمن اینترنتی، تالار گفت‌وگو
+    definition: eine Seite im Internet, auf der Menschen über ein Thema schreiben, Fragen stellen und diskutieren
+    example:
+      de: In einem Forum habe ich eine Lösung für mein Problem gefunden.
+      en: I found a solution to my problem in a forum.
+      fa: در یک انجمن اینترنتی راه‌حل مشکلم را پیدا کردم.
+    tooCloseTo: [Plattform, Chat]
+
   - word: Chat
+    class: noun
+    article: der
+    plural: Chats
+    level: B1
+    meaning:
+      en: chat (online), chat group
+      fa: گفت‌وگوی اینترنتی، چت
+    definition: ein Gespräch im Internet, bei dem man kurze Texte schreibt und sofort eine Antwort bekommt
+    example:
+      de: Im Chat haben wir schnell einen Termin für das Treffen gefunden.
+      en: In the chat we quickly found a date for the meeting.
+      fa: در گروه گفت‌وگو زود یک وقت برای دیدار پیدا کردیم.
+    alsoAccepted: [das Chat]
+    tooCloseTo: [Plattform, Forum]
+
   - word: User
+    class: noun
+    article: der
+    plural: User
+    level: B1
+    meaning:
+      en: user (of a computer, an app or a website)
+      fa: کاربر
+    definition: eine Person, die einen Computer, ein Programm oder eine Seite im Internet benutzt
+    example:
+      de: Die Seite hat schon über eine Million User.
+      en: The site already has over a million users.
+      fa: این سایت تا حالا بیش از یک میلیون کاربر دارد.
+    alsoAccepted: [die Userin, der Nutzer, die Nutzerin, der Benutzer, die Benutzerin]
+
   - word: Daten
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: data
+      fa: داده‌ها، اطلاعات
+    definition: Informationen, die man auf einem Computer speichert oder schickt, zum Beispiel Namen, Zahlen und Bilder
+    example:
+      de: Bitte geben Sie Ihre persönlichen Daten in das Formular ein.
+      en: Please enter your personal details in the form.
+      fa: لطفاً اطلاعات شخصی‌تان را در فرم وارد کنید.
+
+  # Klick and klicken name the same act; neither is offered as a wrong meaning of the other.
   - word: Klick
+    class: noun
+    article: der
+    plural: Klicks
+    level: B1
+    meaning:
+      en: a click (of the mouse)
+      fa: کلیک
+    definition: ein kurzes Drücken auf die Maustaste oder auf den Bildschirm
+    example:
+      de: Mit einem Klick können Sie das Ticket kaufen.
+      en: You can buy the ticket with one click.
+      fa: با یک کلیک می‌توانید بلیت را بخرید.
+    alsoAccepted: [der Mausklick]
+    tooCloseTo: [klicken]
+
   - word: klicken
+    class: verb
+    level: B1
+    meaning:
+      en: to click
+      fa: کلیک کردن
+    definition: mit der Maus kurz auf etwas auf dem Bildschirm drücken, zum Beispiel auf einen Link
+    example:
+      de: Klicken Sie hier, um sich anzumelden.
+      en: Click here to log in.
+      fa: برای ورود به حساب کاربری اینجا کلیک کنید.
+    alsoAccepted: [anklicken]
+    tooCloseTo: [Klick]
+
   - word: googeln
+    class: verb
+    level: B1
+    meaning:
+      en: to google, to look up online
+      fa: در گوگل جست‌وجو کردن
+    definition: mit einer Suchmaschine im Internet nach etwas suchen
+    example:
+      de: Die Öffnungszeiten habe ich schnell gegoogelt.
+      en: I quickly googled the opening hours.
+      fa: ساعت کار را زود در گوگل پیدا کردم.
+
+  # bloggen and twittern both mean writing online for others to read; neither is offered as a wrong meaning of the other.
   - word: bloggen
+    class: verb
+    level: B1
+    meaning:
+      en: to blog, to write a blog
+      fa: وبلاگ نوشتن
+    definition: regelmäßig Texte über ein Thema oder über sein Leben ins Internet schreiben, die alle lesen können
+    example:
+      de: Meine Schwester bloggt über ihre Reisen durch Asien.
+      en: My sister blogs about her travels through Asia.
+      fa: خواهرم دربارهٔ سفرهایش در آسیا وبلاگ می‌نویسد.
+    tooCloseTo: [twittern]
+
   - word: twittern
+    class: verb
+    level: B1
+    meaning:
+      en: to tweet, to post short messages
+      fa: توییت کردن
+    definition: sehr kurze Nachrichten auf einer bekannten Plattform im Internet schreiben, die viele lesen
+    example:
+      de: Der Minister hat am Morgen über die Wahl getwittert.
+      en: The minister tweeted about the election in the morning.
+      fa: وزیر صبح دربارهٔ انتخابات توییت کرد.
+    tooCloseTo: [bloggen]
+
   - word: mailen
+    class: verb
+    level: B1
+    meaning:
+      en: to email, to send by email
+      fa: ایمیل کردن، با ایمیل فرستادن
+    definition: eine Nachricht oder eine Datei per E-Mail schicken
+    example:
+      de: Können Sie mir den Vertrag bis morgen mailen?
+      en: Can you email me the contract by tomorrow?
+      fa: می‌توانید قرارداد را تا فردا برایم ایمیل کنید؟
+    alsoAccepted: [e-mailen]
+
   - word: hochladen
+    class: verb
+    level: B1
+    meaning:
+      en: to upload
+      fa: بارگذاری کردن، آپلود کردن
+    definition: eine Datei vom eigenen Computer oder Handy ins Internet bringen
+    example:
+      de: Ich lade die Fotos von der Hochzeit heute Abend hoch.
+      en: I'll upload the wedding photos this evening.
+      fa: عکس‌های عروسی را امشب بارگذاری می‌کنم.
+    alsoAccepted: [uploaden]
+
   - word: löschen
+    class: verb
+    level: B1
+    meaning:
+      en: to delete, to erase
+      fa: پاک کردن، حذف کردن
+    definition: eine Datei, eine Nachricht oder ein Foto wegmachen, sodass es nicht mehr da ist
+    example:
+      de: Ich habe aus Versehen alle Nachrichten gelöscht.
+      en: I accidentally deleted all my messages.
+      fa: ناخواسته همهٔ پیام‌ها را پاک کردم.
+    alsoAccepted: [entfernen]
+
   - word: tippen
+    class: verb
+    level: B1
+    meaning:
+      en: to type, to tap (on a keyboard or screen)
+      fa: تایپ کردن
+    definition: mit den Fingern auf einer Tastatur oder einem Bildschirm schreiben
+    example:
+      de: Sie tippt im Bus eine lange Nachricht an ihre Freundin.
+      en: On the bus she's typing a long message to her friend.
+      fa: او در اتوبوس پیام بلندی برای دوستش تایپ می‌کند.
+
+  # virtuell and digital are near each other; neither is offered as a wrong meaning of the other.
   - word: virtuell
+    class: adjective
+    level: B1
+    meaning:
+      en: virtual
+      fa: مجازی
+    definition: nicht wirklich da, sondern nur im Computer oder im Internet
+    example:
+      de: Das Museum bietet auch einen virtuellen Rundgang an.
+      en: The museum also offers a virtual tour.
+      fa: موزه بازدید مجازی هم دارد.
+    tooCloseTo: [digital]
+
   - word: digital
+    class: adjective
+    level: B1
+    meaning:
+      en: digital (as data, not on paper)
+      fa: دیجیتال (به‌صورت داده، نه روی کاغذ)
+    definition: als Daten auf einem Computer gespeichert oder geschickt, nicht auf Papier
+    example:
+      de: Die Zeitung kann man auch digital lesen.
+      en: You can also read the newspaper digitally.
+      fa: این روزنامه را به‌صورت دیجیتال هم می‌شود خواند.
+    alsoAccepted: [elektronisch]
+    tooCloseTo: [virtuell]
+
   - word: checken
+    class: verb
+    level: B1
+    meaning:
+      en: to check (informal), to have a quick look
+      fa: (محاوره‌ای) سریع بررسی کردن، نگاهی انداختن
+    definition: schnell nachsehen, ob etwas stimmt oder ob es etwas Neues gibt
+    example:
+      de: Ich checke kurz meine E-Mails, dann können wir los.
+      en: I'll quickly check my emails, then we can go.
+      fa: یک نگاه سریع به ایمیل‌هایم می‌اندازم، بعد می‌توانیم برویم.
+    alsoAccepted: [kontrollieren, überprüfen, prüfen, nachsehen, nachschauen, nachgucken, abchecken, nachchecken]
+
   - word: Mobilbox
+    class: noun
+    article: die
+    plural: Mobilboxen
+    level: B1
+    meaning:
+      en: voicemail (of a mobile phone)
+      fa: پیغام‌گیر تلفن همراه
+    definition: ein Dienst, bei dem ein Anrufer eine Nachricht sprechen kann, wenn man nicht ans Handy geht
+    example:
+      de: Ich habe dir eine Nachricht auf die Mobilbox gesprochen.
+      en: I left you a message on your voicemail.
+      fa: روی پیغام‌گیر گوشی‌ات برایت پیغام گذاشتم.
+    alsoAccepted: [die Mailbox]
+
   - word: Rufnummer
+    class: noun
+    article: die
+    plural: Rufnummern
+    level: B1
+    meaning:
+      en: (telephone) number
+      fa: شمارهٔ تلفن
+    definition: die Zahlen, die man wählt, wenn man jemanden anrufen will
+    example:
+      de: Unsere Rufnummer finden Sie auf der Webseite.
+      en: You'll find our phone number on the website.
+      fa: شمارهٔ تلفن ما را در وب‌سایت پیدا می‌کنید.
+    alsoAccepted: [die Telefonnummer, die Nummer]
+
   - word: faxen
+    class: verb
+    level: B1
+    meaning:
+      en: to fax
+      fa: فکس کردن
+    definition: ein Blatt über die Telefonleitung an ein anderes Gerät schicken, das es dort ausdruckt
+    example:
+      de: Die Arztpraxis faxt das Rezept direkt an die Apotheke.
+      en: The doctor's surgery faxes the prescription straight to the pharmacy.
+      fa: مطب نسخه را مستقیم به داروخانه فکس می‌کند.
+
   - word: Briefumschlag
+    class: noun
+    article: der
+    plural: Briefumschläge
+    level: B1
+    meaning:
+      en: envelope
+      fa: پاکت نامه
+    definition: eine Hülle aus Papier, in die man einen Brief steckt, bevor man ihn schickt
+    example:
+      de: Vergiss nicht, die Briefmarke auf den Briefumschlag zu kleben.
+      en: Don't forget to stick the stamp on the envelope.
+      fa: یادت نرود تمبر را روی پاکت بچسبانی.
+    alsoAccepted: [der Umschlag, das Kuvert, das Couvert]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed to settle the first one's
+    answers and objections, then the ones left open after the second one's; not
+    people)"
+  date: 2026-11-28
+  pool: cc9429a971690cf8

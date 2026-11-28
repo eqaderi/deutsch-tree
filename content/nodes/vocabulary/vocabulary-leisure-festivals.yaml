@@ -1,34 +1,333 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-leisure-festivals
 kind: vocabulary
 level: B1
 chapter: b1-words-media-free-time
 order: 8
-status: coming-soon
+status: published
 title:
   en: "Free time, play and festivals"
   fa: "اوقات فراغت، بازی و جشن‌ها"
   de: "Freizeit, Spiel und Feste"
+attemptSize: 15
 words:
   - word: Aktivität
+    class: noun
+    article: die
+    plural: Aktivitäten
+    level: B1
+    meaning:
+      en: activity (on offer in your free time, e.g. a sport or an outing)
+      fa: فعالیت تفریحی
+    definition: etwas, das man in der Freizeit macht, oft mit anderen, zum Beispiel einen Ausflug, ein Spiel oder einen Sport
+    example:
+      de: Das Hotel bietet viele Aktivitäten für Kinder an.
+      en: The hotel offers lots of activities for children.
+      fa: این هتل برای بچه‌ها فعالیت‌های زیادی دارد.
+    alsoAccepted: [die Freizeitaktivität, die Freizeitbeschäftigung, die Unternehmung, die Beschäftigung]
+
   - word: Spielplatz
+    class: noun
+    article: der
+    plural: Spielplätze
+    level: B1
+    meaning:
+      en: playground
+      fa: زمین بازی کودکان
+    definition: ein Platz draußen mit Rutschen und Schaukeln, wo Kinder spielen können
+    example:
+      de: Nachmittags gehen wir mit den Kindern auf den Spielplatz.
+      en: In the afternoons we take the children to the playground.
+      fa: بعدازظهرها با بچه‌ها به زمین بازی می‌رویم.
+    alsoAccepted: [der Kinderspielplatz]
+
+  # Spielzeug and Puppe are both toys; neither is offered as a wrong meaning of the other.
   - word: Spielzeug
+    class: noun
+    article: das
+    plural: Spielzeuge
+    level: B1
+    meaning:
+      en: toy, toys
+      fa: اسباب‌بازی
+    definition: Dinge, mit denen Kinder spielen, zum Beispiel kleine Autos oder Bälle
+    example:
+      de: Räum bitte dein Spielzeug auf, bevor wir essen.
+      en: Please tidy away your toys before we eat.
+      fa: لطفاً پیش از غذا اسباب‌بازی‌هایت را جمع کن.
+    alsoAccepted: [die Spielsachen]
+    tooCloseTo: [Puppe]
+
   - word: Puppe
+    class: noun
+    article: die
+    plural: Puppen
+    level: B1
+    meaning:
+      en: doll; puppet
+      fa: عروسک
+    definition: ein Spielzeug, das wie ein kleiner Mensch aussieht
+    example:
+      de: Meine Tochter nimmt ihre Puppe überallhin mit.
+      en: My daughter takes her doll everywhere.
+      fa: دخترم عروسکش را همه‌جا با خودش می‌برد.
+    tooCloseTo: [Spielzeug]
+
   - word: Puzzle
+    class: noun
+    article: das
+    plural: Puzzles
+    level: B1
+    meaning:
+      en: jigsaw (puzzle)
+      fa: پازل
+    definition: ein Spiel aus vielen kleinen Teilen, die man zu einem Bild zusammenlegt
+    example:
+      de: Im Winter machen wir oft ein Puzzle mit tausend Teilen.
+      en: In winter we often do a thousand-piece jigsaw.
+      fa: زمستان‌ها اغلب یک پازل هزارتکه درست می‌کنیم.
+    alsoAccepted: [das Puzzlespiel]
+
   - word: faulenzen
+    class: verb
+    level: B1
+    meaning:
+      en: to laze about, to lounge around
+      fa: تنبلی کردن، وقت را به بطالت گذراندن
+    definition: nichts arbeiten und sich nur ausruhen, weil man keine Lust hat, etwas zu tun
+    example:
+      de: Am Sonntag will ich nur auf dem Sofa liegen und faulenzen.
+      en: On Sunday I just want to lie on the sofa and laze about.
+      fa: یکشنبه فقط می‌خواهم روی مبل دراز بکشم و تنبلی کنم.
+    alsoAccepted: [gammeln, herumhängen, rumhängen, chillen]
+
   - word: Fasching
+    class: noun
+    article: der
+    plural: Faschinge
+    level: B1
+    meaning:
+      en: carnival (in February, before Lent)
+      fa: کارناوال (جشن پیش از ایام روزهٔ مسیحیان)
+    definition: die Tage im Februar, an denen sich viele Leute verkleiden und feiern, vor allem im Süden von Deutschland
+    example:
+      de: Zum Fasching verkleidet sich mein Sohn als Pirat.
+      en: For carnival my son is dressing up as a pirate.
+      fa: پسرم برای کارناوال لباس دزد دریایی می‌پوشد.
+    alsoAccepted: [der Karneval, die Fastnacht, die Fasnacht]
+
   - word: Pfingsten
+    class: noun
+    article: none
+    number: singular-only
+    level: B1
+    meaning:
+      en: Pentecost, Whitsun
+      fa: عید پنجاهه (پنتیکاست)
+    definition: ein christliches Fest im Mai oder Juni, fünfzig Tage nach Ostern
+    example:
+      de: An Pfingsten fahren wir für ein paar Tage an die Ostsee.
+      en: At Whitsun we're going to the Baltic coast for a few days.
+      fa: عید پنجاهه چند روزی به کنار دریای بالتیک می‌رویم.
+
   - word: Nationalfeiertag
+    class: noun
+    article: der
+    plural: Nationalfeiertage
+    level: B1
+    meaning:
+      en: national holiday
+      fa: روز ملی، تعطیل ملی
+    definition: ein Tag, an dem ein ganzes Land einen wichtigen Tag aus seiner Geschichte feiert und nicht arbeitet
+    example:
+      de: Der Nationalfeiertag in Deutschland ist am 3. Oktober.
+      en: Germany's national holiday is on 3 October.
+      fa: روز ملی آلمان سوم اکتبر است.
+    alsoAccepted: [der Staatsfeiertag]
+
   - word: Sonnabend
+    class: noun
+    article: der
+    plural: Sonnabende
+    level: B1
+    meaning:
+      en: Saturday (esp. in the north and east of Germany)
+      fa: شنبه (بیشتر در شمال و شرق آلمان)
+    definition: der Tag zwischen Freitag und Sonntag; so sagt man vor allem im Norden und Osten von Deutschland
+    example:
+      de: Am Sonnabend ist der Markt schon ab sieben Uhr offen.
+      en: On Saturday the market is open from seven o'clock.
+      fa: شنبه بازار از ساعت هفت باز است.
+    alsoAccepted: [der Samstag]
+
+  # Tradition and traditionell belong together; neither is offered as a wrong meaning of the other.
   - word: Tradition
+    class: noun
+    article: die
+    plural: Traditionen
+    level: B1
+    meaning:
+      en: tradition
+      fa: سنت
+    definition: etwas, das man in einer Familie oder in einem Land schon sehr lange immer wieder gleich macht
+    example:
+      de: Bei uns ist es Tradition, an Heiligabend Fisch zu essen.
+      en: In our family it's a tradition to eat fish on Christmas Eve.
+      fa: در خانوادهٔ ما رسم است که شب کریسمس ماهی بخوریم.
+    alsoAccepted: [der Brauch, die Sitte]
+    tooCloseTo: [traditionell]
+
   - word: traditionell
+    class: adjective
+    level: B1
+    meaning:
+      en: traditional
+      fa: سنتی
+    definition: so, wie man es schon sehr lange macht
+    example:
+      de: Zum Fest tragen viele Leute traditionelle Kleidung.
+      en: Many people wear traditional clothes for the festival.
+      fa: بسیاری از مردم در این جشن لباس سنتی می‌پوشند.
+    alsoAccepted: [herkömmlich]
+    tooCloseTo: [Tradition]
+
   - word: Gratulation
+    class: noun
+    article: die
+    plural: Gratulationen
+    level: B1
+    meaning:
+      en: congratulations
+      fa: تبریک
+    definition: freundliche Worte zu einem schönen Ereignis, zum Beispiel zum Geburtstag oder zu einer bestandenen Prüfung
+    example:
+      de: Herzliche Gratulation zur bestandenen Prüfung!
+      en: Warmest congratulations on passing your exam!
+      fa: قبولی‌ات در امتحان را صمیمانه تبریک می‌گویم!
+    alsoAccepted: [der Glückwunsch, die Glückwünsche]
+
   - word: dekorieren
+    class: verb
+    level: B1
+    meaning:
+      en: to decorate
+      fa: تزئین کردن
+    definition: etwas mit Blumen, Bändern oder Lichtern schöner machen, zum Beispiel für ein Fest
+    example:
+      de: Für das Fest haben wir den Garten mit bunten Lampen dekoriert.
+      en: We decorated the garden with coloured lights for the party.
+      fa: برای مهمانی، باغ را با چراغ‌های رنگی تزئین کردیم.
+    alsoAccepted: [schmücken, verzieren]
+
   - word: Kerze
+    class: noun
+    article: die
+    plural: Kerzen
+    level: B1
+    meaning:
+      en: candle
+      fa: شمع
+    definition: ein Stück Wachs mit einem Faden in der Mitte, das man anzündet, damit es Licht gibt
+    example:
+      de: Auf dem Kuchen brennen sieben Kerzen.
+      en: Seven candles are burning on the cake.
+      fa: روی کیک هفت شمع روشن است.
+
   - word: Diskothek
+    class: noun
+    article: die
+    plural: Diskotheken
+    level: B1
+    meaning:
+      en: discotheque, (night)club
+      fa: دیسکو، باشگاه شبانه
+    definition: ein Lokal, in dem man am Abend und in der Nacht zu lauter Musik tanzen kann
+    example:
+      de: Am Samstag gehen wir in die Diskothek am Bahnhof.
+      en: On Saturday we're going to the disco by the station.
+      fa: شنبه به دیسکوی نزدیک ایستگاه قطار می‌رویم.
+    alsoAccepted: [die Disko, die Disco, der Klub, der Club, der Nachtclub]
+
   - word: Unterhaltung
+    class: noun
+    article: die
+    plural: Unterhaltungen
+    level: B1
+    meaning:
+      en: entertainment; conversation
+      fa: سرگرمی؛ گفت‌وگو
+    definition: etwas, das Spaß macht und die Zeit angenehm macht, zum Beispiel Musik oder ein Film; auch ein Gespräch
+    example:
+      de: Zur Unterhaltung der Gäste spielt eine Musikgruppe.
+      en: A band is playing to entertain the guests.
+      fa: برای سرگرمی مهمان‌ها یک گروه موسیقی می‌نوازد.
+
+  # Hallenbad and Swimmingpool are both pools; neither is offered as a wrong meaning of the other.
   - word: Hallenbad
+    class: noun
+    article: das
+    plural: Hallenbäder
+    level: B1
+    meaning:
+      en: indoor swimming pool
+      fa: استخر سرپوشیده
+    definition: ein Schwimmbad in einem Gebäude, in dem man auch im Winter schwimmen kann
+    example:
+      de: Im Winter gehen wir jeden Mittwoch ins Hallenbad.
+      en: In winter we go to the indoor pool every Wednesday.
+      fa: زمستان‌ها هر چهارشنبه به استخر سرپوشیده می‌رویم.
+    alsoAccepted: [das Hallenschwimmbad]
+    tooCloseTo: [Swimmingpool]
+
   - word: Swimmingpool
+    class: noun
+    article: der
+    plural: Swimmingpools
+    level: B1
+    meaning:
+      en: swimming pool (esp. at a house or hotel)
+      fa: استخر (بیشتر در خانه یا هتل)
+    definition: ein Becken mit Wasser zum Schwimmen, oft im Garten von einem Haus oder bei einem Hotel
+    example:
+      de: Das Ferienhaus hat sogar einen eigenen Swimmingpool.
+      en: The holiday home even has its own swimming pool.
+      fa: این خانهٔ ییلاقی حتی استخر شخصی دارد.
+    alsoAccepted: [der Pool, das Schwimmbecken]
+    tooCloseTo: [Hallenbad]
+
   - word: Picknick
+    class: noun
+    article: das
+    plural: Picknicks
+    level: B1
+    meaning:
+      en: picnic
+      fa: پیک‌نیک
+    definition: ein Essen draußen in der Natur, das man in einem Korb oder einer Tasche mitgebracht hat
+    example:
+      de: Bei schönem Wetter machen wir ein Picknick am See.
+      en: If the weather is nice we'll have a picnic by the lake.
+      fa: اگر هوا خوب باشد، کنار دریاچه پیک‌نیک می‌کنیم.
+
   - word: Grill
+    class: noun
+    article: der
+    plural: Grills
+    level: B1
+    meaning:
+      en: grill, barbecue
+      fa: منقل کباب، کباب‌پز
+    definition: ein Gerät, auf dem man draußen Fleisch, Fisch oder Gemüse über Feuer oder Kohle brät
+    example:
+      de: Wer bringt am Samstag den Grill mit?
+      en: Who's bringing the barbecue on Saturday?
+      fa: شنبه چه کسی منقل کباب را می‌آورد؟
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed to settle the first one's
+    answers and objections, then the ones left open after the second one's; not
+    people)"
+  date: 2026-11-28
+  pool: 695db68b64ea3e17

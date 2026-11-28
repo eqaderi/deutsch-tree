@@ -1,40 +1,402 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-sport-competition
 kind: vocabulary
 level: B1
 chapter: b1-words-media-free-time
 order: 7
-status: coming-soon
+status: published
 title:
   en: "Sport and competition"
   fa: "ورزش و رقابت"
   de: "Sport und Wettkampf"
+attemptSize: 15
 words:
   - word: Sportart
+    class: noun
+    article: die
+    plural: Sportarten
+    level: B1
+    meaning:
+      en: (kind of) sport, e.g. tennis or swimming
+      fa: رشتهٔ ورزشی
+    definition: eine bestimmte Art von Sport, zum Beispiel Fußball, Tennis oder Schwimmen
+    example:
+      de: Welche Sportart machst du am liebsten?
+      en: Which sport do you like doing best?
+      fa: کدام رشتهٔ ورزشی را بیشتر از همه دوست داری؟
+    alsoAccepted: [die Disziplin, der Sport]
+
+  # Sportler, Profisportler and Spieler all do sport; none is offered as a wrong meaning of another.
   - word: Sportler
+    class: noun
+    article: der
+    plural: Sportler
+    level: B1
+    meaning:
+      en: athlete, sportsman
+      fa: ورزشکار
+    definition: eine Person, die regelmäßig und viel Sport treibt
+    example:
+      de: Viele Sportler essen am Abend vor dem Wettkampf Nudeln.
+      en: Many athletes eat pasta the evening before a competition.
+      fa: بسیاری از ورزشکاران شب پیش از مسابقه ماکارونی می‌خورند.
+    alsoAccepted: [die Sportlerin, der Athlet, die Athletin]
+    tooCloseTo: [Profisportler, Spieler]
+
   - word: Profisportler
+    class: noun
+    article: der
+    plural: Profisportler
+    level: B1
+    meaning:
+      en: professional athlete
+      fa: ورزشکار حرفه‌ای
+    definition: eine Person, für die Sport der Beruf ist und die damit ihr Geld verdient
+    example:
+      de: Als Profisportler trainiert er jeden Tag sechs Stunden.
+      en: As a professional athlete he trains for six hours every day.
+      fa: او در مقام ورزشکار حرفه‌ای هر روز شش ساعت تمرین می‌کند.
+    alsoAccepted: [die Profisportlerin, der Profi, der Berufssportler, die Berufssportlerin]
+    tooCloseTo: [Sportler, Spieler]
+
   - word: Spieler
+    class: noun
+    article: der
+    plural: Spieler
+    level: B1
+    meaning:
+      en: player
+      fa: بازیکن
+    definition: eine Person, die bei einem Spiel mitmacht oder in einer Mannschaft spielt
+    example:
+      de: Ein Spieler hat sich am Knie verletzt und muss vom Platz.
+      en: One player has hurt his knee and has to leave the pitch.
+      fa: یکی از بازیکنان از ناحیهٔ زانو آسیب دیده و باید از زمین بیرون برود.
+    alsoAccepted: [die Spielerin]
+    tooCloseTo: [Sportler, Profisportler]
+
   - word: Trainer
+    class: noun
+    article: der
+    plural: Trainer
+    level: B1
+    meaning:
+      en: coach, trainer
+      fa: مربی
+    definition: eine Person, die Sportlern zeigt, wie sie besser werden, und die Übungen leitet
+    example:
+      de: Der Trainer ist mit der Mannschaft sehr zufrieden.
+      en: The coach is very pleased with the team.
+      fa: مربی از تیم بسیار راضی است.
+    alsoAccepted: [die Trainerin, der Coach]
+
   - word: Gegner
+    class: noun
+    article: der
+    plural: Gegner
+    level: B1
+    meaning:
+      en: opponent
+      fa: حریف
+    definition: die Person oder die Mannschaft, gegen die man spielt oder kämpft
+    example:
+      de: Unser Gegner im Finale ist sehr stark.
+      en: Our opponent in the final is very strong.
+      fa: حریف ما در فینال بسیار قوی است.
+    alsoAccepted: [die Gegnerin]
+
+  # Sieg, Sieger and siegen belong together; none is offered as a wrong meaning of another.
   - word: Sieg
+    class: noun
+    article: der
+    plural: Siege
+    level: B1
+    meaning:
+      en: victory, win
+      fa: پیروزی
+    definition: wenn man ein Spiel oder einen Kampf gewinnt
+    example:
+      de: Nach dem Sieg haben die Spieler die ganze Nacht gefeiert.
+      en: After the win the players celebrated all night.
+      fa: پس از پیروزی، بازیکنان تمام شب جشن گرفتند.
+    tooCloseTo: [Sieger, siegen]
+
   - word: Sieger
+    class: noun
+    article: der
+    plural: Sieger
+    level: B1
+    meaning:
+      en: winner
+      fa: برنده
+    definition: die Person oder die Mannschaft, die ein Spiel oder einen Wettkampf gewonnen hat
+    example:
+      de: Der Sieger bekommt einen Pokal und tausend Euro.
+      en: The winner gets a cup and a thousand euros.
+      fa: برنده یک جام و هزار یورو جایزه می‌گیرد.
+    alsoAccepted: [die Siegerin, der Gewinner, die Gewinnerin]
+    tooCloseTo: [Sieg, siegen]
+
   - word: siegen
+    class: verb
+    level: B1
+    meaning:
+      en: to win, to be victorious
+      fa: پیروز شدن
+    definition: in einem Spiel, einem Kampf oder einer Wahl besser sein als die anderen
+    example:
+      de: Am Ende hat die Mannschaft aus München mit zwei zu eins gesiegt.
+      en: In the end the team from Munich won two-one.
+      fa: در پایان تیم مونیخ دو بر یک پیروز شد.
+    alsoAccepted: [gewinnen]
+    tooCloseTo: [Sieg, Sieger]
+
   - word: Verlierer
+    class: noun
+    article: der
+    plural: Verlierer
+    level: B1
+    meaning:
+      en: loser
+      fa: بازنده
+    definition: die Person oder die Mannschaft, die bei einem Spiel oder einem Wettkampf nicht gewonnen hat
+    example:
+      de: Auch die Verlierer haben heute gut gespielt.
+      en: The losers played well today too.
+      fa: بازنده‌ها هم امروز خوب بازی کردند.
+    alsoAccepted: [die Verliererin]
+
   - word: Rekord
+    class: noun
+    article: der
+    plural: Rekorde
+    level: B1
+    meaning:
+      en: record (the best result so far)
+      fa: رکورد
+    definition: das beste Ergebnis, das es in einer Sportart bis jetzt gegeben hat
+    example:
+      de: Bei den Olympischen Spielen ist sie einen neuen Rekord geschwommen.
+      en: At the Olympic Games she swam a new record.
+      fa: او در بازی‌های المپیک در شنا رکورد تازه‌ای ثبت کرد.
+
   - word: Stadion
+    class: noun
+    article: das
+    plural: Stadien
+    level: B1
+    meaning:
+      en: stadium
+      fa: ورزشگاه، استادیوم
+    definition: ein großer Platz für Sport, um den herum Sitzplätze für viele Zuschauer sind
+    example:
+      de: Zum Spiel am Samstag fahren wir mit der Straßenbahn ins Stadion.
+      en: We're taking the tram to the stadium for Saturday's match.
+      fa: برای مسابقهٔ شنبه با تراموا به ورزشگاه می‌رویم.
+
   - word: Tor
+    class: noun
+    article: das
+    plural: Tore
+    level: B1
+    meaning:
+      en: goal (in football); gate
+      fa: گل، دروازه (در فوتبال)؛ دروازهٔ بزرگ
+    definition: beim Fußball das Netz zwischen zwei Stangen, in das der Ball soll, und auch ein Punkt dafür; auch eine sehr große Tür
+    example:
+      de: In der letzten Minute hat er noch ein Tor geschossen.
+      en: He scored a goal in the very last minute.
+      fa: او در دقیقهٔ آخر یک گل زد.
+
   - word: Golf
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: golf
+      fa: گلف
+    definition: ein Sport, bei dem man einen kleinen Ball mit einem Schläger in ein Loch im Rasen schlägt
+    example:
+      de: Mein Chef spielt am Wochenende gern Golf.
+      en: My boss likes playing golf at the weekend.
+      fa: رئیسم آخر هفته‌ها گلف بازی می‌کند.
+
   - word: klettern
+    class: verb
+    level: B1
+    meaning:
+      en: to climb
+      fa: بالا رفتن، صخره‌نوردی کردن
+    definition: mit Händen und Füßen auf einen Berg, einen Baum oder eine Wand steigen
+    example:
+      de: Am Wochenende gehen wir in den Alpen klettern.
+      en: At the weekend we're going climbing in the Alps.
+      fa: آخر هفته برای صخره‌نوردی به کوه‌های آلپ می‌رویم.
+
   - word: tauchen
+    class: verb
+    level: B1
+    meaning:
+      en: to dive (under water)
+      fa: غواصی کردن، زیر آب رفتن
+    definition: mit dem ganzen Körper unter das Wasser gehen und dort schwimmen
+    example:
+      de: Im Urlaub am Roten Meer haben wir jeden Tag getaucht.
+      en: On holiday at the Red Sea we went diving every day.
+      fa: در تعطیلات کنار دریای سرخ هر روز غواصی کردیم.
+
   - word: springen
+    class: verb
+    level: B1
+    meaning:
+      en: to jump
+      fa: پریدن
+    definition: sich mit den Beinen kräftig vom Boden wegdrücken, sodass man kurz in der Luft ist
+    example:
+      de: Die Kinder springen vom Beckenrand ins Wasser.
+      en: The children jump into the water from the edge of the pool.
+      fa: بچه‌ها از لبهٔ استخر توی آب می‌پرند.
+
   - word: rennen
+    class: verb
+    level: B1
+    meaning:
+      en: to run fast, to dash
+      fa: به‌سرعت دویدن
+    definition: sehr schnell laufen
+    example:
+      de: Ich musste rennen, um den Bus noch zu bekommen.
+      en: I had to run to catch the bus.
+      fa: مجبور شدم بدوم تا به اتوبوس برسم.
+    alsoAccepted: [sprinten]
+
+  # werfen and fangen belong together; neither is offered as a wrong meaning of the other.
   - word: werfen
+    class: verb
+    level: B1
+    meaning:
+      en: to throw
+      fa: پرتاب کردن، انداختن
+    definition: etwas mit der Hand kräftig durch die Luft fliegen lassen
+    example:
+      de: Er kann den Ball sehr weit werfen.
+      en: He can throw the ball a very long way.
+      fa: او می‌تواند توپ را خیلی دور پرتاب کند.
+    tooCloseTo: [fangen]
+
   - word: fangen
+    class: verb
+    level: B1
+    meaning:
+      en: to catch
+      fa: گرفتن (چیزی در هوا)
+    definition: etwas, das durch die Luft fliegt, mit den Händen festhalten
+    example:
+      de: Der Hund fängt den Ball mit dem Maul.
+      en: The dog catches the ball in its mouth.
+      fa: سگ توپ را با دهانش می‌گیرد.
+    tooCloseTo: [werfen]
+
+  # schießen and treten are both done with the foot; neither is offered as a wrong meaning of the other.
   - word: schießen
+    class: verb
+    level: B1
+    meaning:
+      en: to shoot; to kick (a ball hard)
+      fa: شوت کردن؛ تیراندازی کردن
+    definition: einen Ball kräftig mit dem Fuß ins Tor oder zu einem Spieler bringen; auch mit einer Waffe auf jemanden oder etwas feuern
+    example:
+      de: Er hat den Ball direkt ins Tor geschossen.
+      en: He shot the ball straight into the goal.
+      fa: او توپ را مستقیم به دروازه شوت کرد.
+    tooCloseTo: [treten]
+
   - word: treten
+    class: verb
+    level: B1
+    meaning:
+      en: to kick (someone or something); to step
+      fa: لگد زدن؛ پا گذاشتن
+    definition: mit dem Fuß gegen jemanden oder etwas stoßen; auch einen Schritt irgendwohin machen
+    example:
+      de: Der Spieler hat seinen Gegner absichtlich getreten.
+      en: The player kicked his opponent on purpose.
+      fa: آن بازیکن عمداً به حریفش لگد زد.
+    tooCloseTo: [schießen]
+
+  # kämpfen and Kampf belong together; neither is offered as a wrong meaning of the other.
   - word: kämpfen
+    class: verb
+    level: B1
+    meaning:
+      en: to fight, to struggle
+      fa: جنگیدن، مبارزه کردن
+    definition: mit aller Kraft gegen jemanden oder für etwas aktiv sein, um zu gewinnen
+    example:
+      de: Die Mannschaft hat bis zur letzten Minute gekämpft.
+      en: The team fought until the very last minute.
+      fa: تیم تا دقیقهٔ آخر جنگید.
+    tooCloseTo: [Kampf]
+
   - word: Kampf
+    class: noun
+    article: der
+    plural: Kämpfe
+    level: B1
+    meaning:
+      en: fight, battle, struggle
+      fa: نبرد، مبارزه
+    definition: eine Situation, in der Menschen sich schlagen oder mit Waffen gegeneinander vorgehen; auch große Mühe für ein Ziel
+    example:
+      de: Der Kampf um den ersten Platz war bis zum Ende spannend.
+      en: The battle for first place was exciting right to the end.
+      fa: نبرد بر سر مقام اول تا پایان هیجان‌انگیز بود.
+    tooCloseTo: [kämpfen]
+
   - word: unentschieden
+    class: adjective
+    level: B1
+    meaning:
+      en: drawn, tied (with no winner)
+      fa: مساوی
+    definition: so, dass am Ende beide Seiten gleich viele Punkte oder Tore haben
+    example:
+      de: Das Spiel endete unentschieden, eins zu eins.
+      en: The match ended in a draw, one all.
+      fa: بازی یک بر یک مساوی شد.
+
   - word: Runde
+    class: noun
+    article: die
+    plural: Runden
+    level: B1
+    meaning:
+      en: round (of a competition); lap
+      fa: دور (مسابقه یا پیست)
+    definition: ein Teil von einem Wettkampf oder einem Spiel; auch einmal ganz um eine Strecke herum
+    example:
+      de: Unsere Mannschaft ist schon in der ersten Runde ausgeschieden.
+      en: Our team was knocked out in the very first round.
+      fa: تیم ما همان دور اول حذف شد.
+
   - word: wetten
+    class: verb
+    level: B1
+    meaning:
+      en: to bet
+      fa: شرط بستن
+    definition: sagen, was passieren wird, und Geld oder etwas anderes verlieren, wenn man nicht recht hat
+    example:
+      de: Ich wette, dass es morgen regnet.
+      en: I bet it'll rain tomorrow.
+      fa: شرط می‌بندم فردا باران می‌بارد.
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed to settle the first one's
+    answers and objections, then the ones left open after the second one's; not
+    people)"
+  date: 2026-11-28
+  pool: d5e42b383f7fc47c

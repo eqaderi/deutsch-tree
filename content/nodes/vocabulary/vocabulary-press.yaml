@@ -1,34 +1,349 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-press
 kind: vocabulary
 level: B1
 chapter: b1-words-media-free-time
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Press and the public"
   fa: "مطبوعات و افکار عمومی"
   de: "Presse und Öffentlichkeit"
+attemptSize: 15
 words:
+  # Medien and Presse overlap; neither is offered as a wrong meaning of the other.
   - word: Medien
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: (the) media
+      fa: رسانه‌ها
+    definition: Zeitungen, Radio, Fernsehen und Internet, durch die viele Menschen Informationen bekommen
+    example:
+      de: Über den Unfall haben alle Medien berichtet.
+      en: All the media reported on the accident.
+      fa: همهٔ رسانه‌ها دربارهٔ این تصادف خبر دادند.
+    alsoAccepted: [die Massenmedien]
+    tooCloseTo: [Presse]
+
   - word: Presse
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: (the) press
+      fa: مطبوعات
+    definition: alle Zeitungen und Zeitschriften und die Journalisten, die für sie arbeiten
+    example:
+      de: Der Schauspieler wollte mit der Presse nicht sprechen.
+      en: The actor didn't want to talk to the press.
+      fa: آن بازیگر نمی‌خواست با مطبوعات حرف بزند.
+    tooCloseTo: [Medien]
+
   - word: Magazin
+    class: noun
+    article: das
+    plural: Magazine
+    level: B1
+    meaning:
+      en: magazine
+      fa: مجله
+    definition: ein Heft mit Bildern und Texten, das jede Woche oder jeden Monat neu erscheint
+    example:
+      de: Im Wartezimmer liegen nur alte Magazine.
+      en: There are only old magazines in the waiting room.
+      fa: در اتاق انتظار فقط مجله‌های قدیمی هست.
+    alsoAccepted: [die Zeitschrift, die Illustrierte]
+    tooCloseTo: [Broschüre]
+
   - word: Broschüre
+    class: noun
+    article: die
+    plural: Broschüren
+    level: B1
+    meaning:
+      en: brochure, booklet
+      fa: بروشور، کتابچهٔ اطلاعات
+    definition: ein dünnes Heft mit Informationen, zum Beispiel über eine Stadt oder ein Produkt
+    example:
+      de: Im Hotel gibt es Broschüren über Ausflüge in der Gegend.
+      en: At the hotel there are brochures about trips in the area.
+      fa: در هتل بروشورهایی دربارهٔ گردش‌های اطراف هست.
+    alsoAccepted: [der Prospekt]
+    tooCloseTo: [Magazin]
+
+  # Annonce and Inserat are both advertisements in a newspaper; each is right when the other is asked for.
   - word: Annonce
+    class: noun
+    article: die
+    plural: Annoncen
+    level: B1
+    meaning:
+      en: (classified) advertisement, ad
+      fa: آگهی (در روزنامه یا اینترنت)
+    definition: ein kurzer Text in einer Zeitung oder im Internet, mit dem man etwas verkaufen, suchen oder anbieten will
+    example:
+      de: Die Wohnung habe ich über eine Annonce in der Zeitung gefunden.
+      en: I found the flat through an advertisement in the paper.
+      fa: این آپارتمان را از طریق یک آگهی در روزنامه پیدا کردم.
+    alsoAccepted: [das Inserat, die Anzeige, die Kleinanzeige]
+    tooCloseTo: [Inserat]
+
   - word: Inserat
+    class: noun
+    article: das
+    plural: Inserate
+    level: B1
+    meaning:
+      en: advertisement, listing (that you pay to place)
+      fa: آگهی درج‌شده (با پرداخت هزینه)
+    definition: ein Text, den man gegen Geld in einer Zeitung oder im Internet veröffentlichen lässt, um etwas zu suchen oder anzubieten
+    example:
+      de: Für ihr altes Fahrrad hat sie ein Inserat aufgegeben.
+      en: She placed an ad for her old bike.
+      fa: او برای دوچرخهٔ قدیمی‌اش آگهی داد.
+    alsoAccepted: [die Annonce, die Anzeige, die Kleinanzeige]
+    tooCloseTo: [Annonce]
+
   - word: Verlag
+    class: noun
+    article: der
+    plural: Verlage
+    level: B1
+    meaning:
+      en: publisher, publishing house
+      fa: انتشارات، ناشر
+    definition: eine Firma, die Bücher, Zeitungen oder Zeitschriften macht und verkauft
+    example:
+      de: Mein Onkel arbeitet in einem Verlag für Kinderbücher.
+      en: My uncle works at a publisher of children's books.
+      fa: عمویم در یک انتشارات کتاب کودک کار می‌کند.
+    tooCloseTo: [veröffentlichen]
+
   - word: veröffentlichen
+    class: verb
+    level: B1
+    meaning:
+      en: to publish
+      fa: منتشر کردن
+    definition: einen Text, ein Buch oder ein Foto drucken oder ins Internet stellen, sodass alle es lesen oder sehen können
+    example:
+      de: Die Zeitung hat gestern ein Gespräch mit der Bürgermeisterin veröffentlicht.
+      en: Yesterday the newspaper published an interview with the mayor.
+      fa: روزنامه دیروز گفت‌وگویی با خانم شهردار منتشر کرد.
+    alsoAccepted: [publizieren, herausgeben, herausbringen]
+    tooCloseTo: [Verlag]
+
+  # Bericht, Reportage, Meldung, Neuigkeit and Beitrag are all pieces of news; none is offered as a wrong meaning of another.
   - word: Bericht
+    class: noun
+    article: der
+    plural: Berichte
+    level: B1
+    meaning:
+      en: report
+      fa: گزارش
+    definition: ein Text, in dem jemand genau erzählt, was passiert ist; auch so etwas im Radio oder im Fernsehen
+    example:
+      de: Hast du den Bericht über das Hochwasser im Fernsehen gesehen?
+      en: Did you see the report about the flood on TV?
+      fa: گزارش سیل را در تلویزیون دیدی؟
+    tooCloseTo: [Reportage, Meldung, Beitrag]
+
   - word: Reportage
+    class: noun
+    article: die
+    plural: Reportagen
+    level: B1
+    meaning:
+      en: (in-depth) report, feature from the scene
+      fa: گزارش میدانی، گزارش مستند
+    definition: ein langer Text oder Film, für den ein Journalist an einen Ort fährt und zeigt, was er dort sieht und hört
+    example:
+      de: Die Reportage zeigt, wie die Menschen auf der Insel leben.
+      en: The feature shows how the people on the island live.
+      fa: این گزارش میدانی نشان می‌دهد مردم آن جزیره چطور زندگی می‌کنند.
+    tooCloseTo: [Bericht, Beitrag]
+
   - word: Meldung
+    class: noun
+    article: die
+    plural: Meldungen
+    level: B1
+    meaning:
+      en: (short) news item, announcement
+      fa: خبر کوتاه، اطلاعیه
+    definition: eine kurze Nachricht in der Zeitung, im Radio oder im Fernsehen, oft von einer Behörde
+    example:
+      de: Nach einer Meldung der Polizei ist die Autobahn wieder frei.
+      en: According to a police announcement, the motorway is clear again.
+      fa: طبق اطلاعیهٔ پلیس، بزرگراه دوباره باز است.
+    alsoAccepted: [die Mitteilung, die Kurzmeldung]
+    tooCloseTo: [Bericht, Neuigkeit]
+
   - word: Neuigkeit
+    class: noun
+    article: die
+    plural: Neuigkeiten
+    level: B1
+    meaning:
+      en: (piece of) news
+      fa: خبر تازه
+    definition: etwas, das gerade passiert ist und das man noch nicht wusste
+    example:
+      de: Ich habe eine tolle Neuigkeit, wir bekommen ein Baby!
+      en: I've got some great news, we're having a baby!
+      fa: یک خبر عالی دارم؛ داریم بچه‌دار می‌شویم!
+    alsoAccepted: [die Nachricht]
+    tooCloseTo: [Meldung]
+
   - word: Kommentar
+    class: noun
+    article: der
+    plural: Kommentare
+    level: B1
+    meaning:
+      en: comment, commentary
+      fa: نظر یا تفسیر (دربارهٔ یک خبر یا مطلب)
+    definition: ein kurzer Text unter einem Artikel oder Video oder in der Zeitung, in dem jemand seine Meinung zu einer Nachricht schreibt
+    example:
+      de: Unter dem Video stehen schon über hundert Kommentare.
+      en: There are already over a hundred comments under the video.
+      fa: زیر آن ویدیو تا حالا بیش از صد نظر نوشته شده است.
+    tooCloseTo: [Beitrag]
+
   - word: Leser
+    class: noun
+    article: der
+    plural: Leser
+    level: B1
+    meaning:
+      en: reader
+      fa: خواننده (کتاب یا روزنامه)
+    definition: eine Person, die ein Buch, eine Zeitung oder einen Text liest
+    example:
+      de: Die Zeitung hat jeden Tag fast eine Million Leser.
+      en: The newspaper has almost a million readers every day.
+      fa: این روزنامه هر روز نزدیک به یک میلیون خواننده دارد.
+    alsoAccepted: [die Leserin]
+
+  # Hörer, Zuhörer, Zuschauer and Publikum all name people who take something in; none is offered as a wrong meaning of another.
   - word: Hörer
+    class: noun
+    article: der
+    plural: Hörer
+    level: B1
+    meaning:
+      en: (radio) listener; (telephone) receiver
+      fa: شنوندهٔ رادیو؛ گوشی تلفن
+    definition: eine Person, die Radio hört; auch der Teil vom Telefon, den man ans Ohr hält
+    example:
+      de: Liebe Hörerinnen und Hörer, hier ist das Wetter für morgen.
+      en: Dear listeners, here is the weather for tomorrow.
+      fa: شنوندگان عزیز، این هم وضع هوای فردا.
+    alsoAccepted: [die Hörerin]
+    tooCloseTo: [Zuhörer, Zuschauer, Publikum]
+
   - word: Zuhörer
+    class: noun
+    article: der
+    plural: Zuhörer
+    level: B1
+    meaning:
+      en: listener (in an audience, at a talk)
+      fa: شنونده (در جمع یا سخنرانی)
+    definition: eine Person, die da ist und genau hinhört, wenn jemand spricht, zum Beispiel bei einem Vortrag
+    example:
+      de: Nach dem Vortrag durften die Zuhörer Fragen stellen.
+      en: After the talk the audience were allowed to ask questions.
+      fa: پس از سخنرانی، شنوندگان اجازه داشتند پرسش کنند.
+    alsoAccepted: [die Zuhörerin]
+    tooCloseTo: [Hörer, Zuschauer, Publikum]
+
   - word: Zuschauer
+    class: noun
+    article: der
+    plural: Zuschauer
+    level: B1
+    meaning:
+      en: spectator, viewer
+      fa: تماشاگر، بیننده
+    definition: eine Person, die bei einem Spiel, im Theater oder im Fernsehen etwas ansieht
+    example:
+      de: Zum Finale kamen fünfzigtausend Zuschauer ins Stadion.
+      en: Fifty thousand spectators came to the stadium for the final.
+      fa: پنجاه هزار تماشاگر برای فینال به ورزشگاه آمدند.
+    alsoAccepted: [die Zuschauerin]
+    tooCloseTo: [Hörer, Zuhörer, Publikum]
+
   - word: Publikum
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: audience (all the people watching or listening)
+      fa: حاضران، تماشاگران (همه با هم)
+    definition: alle Menschen, die bei einem Konzert, im Theater oder bei einem Vortrag zusehen und zuhören
+    example:
+      de: Am Ende hat das Publikum lange geklatscht.
+      en: At the end the audience applauded for a long time.
+      fa: در پایان حاضران مدت زیادی دست زدند.
+    tooCloseTo: [Hörer, Zuhörer, Zuschauer, Öffentlichkeit]
+
+  # Öffentlichkeit and öffentlich belong together; neither is offered as a wrong meaning of the other.
   - word: Öffentlichkeit
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: the public, the general public
+      fa: عموم مردم، همگان
+    definition: alle Leute außerhalb einer privaten Gruppe, die von etwas erfahren, wenn man es bekannt macht
+    example:
+      de: Die Pläne für den neuen Flughafen wurden gestern der Öffentlichkeit vorgestellt.
+      en: The plans for the new airport were presented to the public yesterday.
+      fa: طرح فرودگاه جدید دیروز به عموم مردم معرفی شد.
+    alsoAccepted: [die Allgemeinheit]
+    tooCloseTo: [öffentlich, Publikum]
+
   - word: öffentlich
+    class: adjective
+    level: B1
+    meaning:
+      en: public (open to everyone)
+      fa: عمومی (برای همه، نه خصوصی)
+    definition: so, dass alle es benutzen, sehen oder hören dürfen; nicht privat
+    example:
+      de: In öffentlichen Gebäuden darf man nicht rauchen.
+      en: You are not allowed to smoke in public buildings.
+      fa: در ساختمان‌های عمومی سیگار کشیدن ممنوع است.
+    tooCloseTo: [Öffentlichkeit]
+
   - word: Beitrag
+    class: noun
+    article: der
+    plural: Beiträge
+    level: B1
+    meaning:
+      en: piece, contribution (in a newspaper, a programme or online)
+      fa: مطلب یا گزارش کوتاه (در روزنامه، رادیو یا اینترنت)
+    definition: ein Text für eine Zeitung oder das Internet, oder ein kurzes Stück in einer Sendung im Radio oder im Fernsehen
+    example:
+      de: Der Beitrag über arme Kinder in unserer Stadt hat viele Leser bewegt.
+      en: The piece about poor children in our town moved many readers.
+      fa: مطلب مربوط به کودکان فقیر شهر ما بسیاری از خوانندگان را متأثر کرد.
+    alsoAccepted: [der Artikel]
+    tooCloseTo: [Bericht, Reportage, Kommentar]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed to settle the first one's
+    answers and objections; not people)"
+  date: 2026-11-28
+  pool: e3ed66927cb3407f

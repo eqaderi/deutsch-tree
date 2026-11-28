@@ -138,4 +138,44 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   // #96: stressed on the first syllable; the hyphen stresses "mal" too, as German does.
   minimal: 'mini-mal',
   maximal: 'maxi-mal',
+
+  // #104: English loanwords read letter by letter in the German way: "live" as [liːvə], "Jazz"
+  // as [jats], "Castingshow" as [kastɪŋshoːf], "Chat" as [tʃat], "googeln" as [ɡoːɡəln], "mailen"
+  // as [maɪlən], "checken" as [çɛkən], "Hit" with a long i, "Puzzle" as [pʊtslə]; the spellings
+  // give the sounds German speakers use ("mehlen" is [meːlən]). "Spot" comes out as [ʃpoːt];
+  // "Spott" gives [ʃpɔt]. Whisper hears "Dschäss" as "Tschüss" in both voices, although its
+  // phonemes are the right [dʒɛs]; no other spelling tried did better.
+  live: 'leif',
+  Jazz: 'Dschäss',
+  Spot: 'Spott',
+  Castingshow: 'Kasting-Schoh',
+  Chat: 'Tschätt',
+  googeln: 'guhgeln',
+  gegoogelt: 'geguhgelt',
+  mailen: 'mehlen',
+  checken: 'tschecken',
+  checke: 'tschecke',
+  Hit: 'Hitt',
+  Puzzle: 'Passel',
+  Smartphone: 'Smart-fohn',
+  // #104: said [treːnɜ] and heard as "Triner"; "Träner" gives the German [trɛːnɐ].
+  Trainer: 'Träner',
+  // #104: stressed on the first syllable: "Mobilbox" as [ˈmoːbɪlbɔks], "Reportage" as
+  // [ˈreːpɔɾtɑːɡə] with a hard g, "Annonce" as [ˈanɒns] ("Annongse" keeps the first stress
+  // but gives the [ŋz] and the final e, heard as "Annonce" in both voices), "Broschüre" as [ˈbrɔʃyːrə],
+  // "Profisportler" as [proːfˈɪspɔɾtlɜ], "Kassette" as [ˈkasɛtə], "Kapitel" as [ˈkɑpiːtəl],
+  // "Rekord" as [ˈreːkɔɾt], "faulenzen" as [faʊlˈɛntsən]; a hyphen or a respelling gives the
+  // right syllable its stress. "stilistisch" starts with [st] and "faxen" has a long a.
+  Mobilbox: 'Mobil-box',
+  Reportage: 'Repor-tahsche',
+  Annonce: 'Annongse',
+  Broschüre: 'Bro-schüre',
+  Broschüren: 'Bro-schüren',
+  Profisportler: 'Proh-fi-Sportler',
+  Kassette: 'Kass-ette',
+  Kapitel: 'Ka-pittel',
+  Rekord: 'Re-kort',
+  faulenzen: 'faulentzen',
+  stilistisch: 'stihlistisch',
+  faxen: 'fakßen',
 }

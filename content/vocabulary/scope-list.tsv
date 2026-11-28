@@ -891,7 +891,7 @@ Fantasie	noun	B1	die	-n
 fantastisch	adjective	A2
 Farbe	noun	A1	die	-n
 farbig	adjective	B1
-Fasching	noun	B1	der	-			Fasnacht (CH)
+Fasching	noun	B1	der	Faschinge/Faschings			Fasnacht (CH)
 fassen	verb	B1
 fast	adverb	A2
 faul	adjective	A2
@@ -2051,7 +2051,7 @@ persönlich	adjective	B1
 Pfanne	noun	B1	die	-n
 Pfeffer	noun	B1	der
 Pferd	noun	A2	das	-e
-Pfingsten	noun	B1	das	sg
+Pfingsten	noun	B1	none	sg
 Pflanze	noun	A2	die	-n
 pflanzen	verb	B1
 Pflaster	noun	B1	das	-
@@ -2749,7 +2749,7 @@ türkisch	adjective	B1
 Türkisch	noun	B1	das	sg
 Turm	noun	B1	der	¨-e
 Tüte	noun	B1	die	-n
-TV	noun	B1	das	-
+TV	noun	B1	das	sg
 twittern	verb	B1
 Typ	noun	B1	der	-en
 typisch	adjective	A2

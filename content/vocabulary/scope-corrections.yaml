@@ -1026,6 +1026,17 @@ changes:
       plural: Girokonten/Girokontos,
       reason: 'the marker "-en" would give "Girokontoen"; the plural is "Girokonten" or "Girokontos"',
     }
+  # 104: markers of the B1 list that give no plural in use.
+  - {
+      word: Fasching,
+      plural: Faschinge/Faschings,
+      reason: 'the marker "-" would give the plural "Fasching"; the plural is "Faschinge" or "Faschings"',
+    }
+  - {
+      word: TV,
+      plural: sg,
+      reason: 'the marker "-" gives a plural "TV" that is not in use; "das TV" (television) is used in the singular',
+    }
   # Nouns that the lists print without article or plural.
   - { word: Achtung, article: die, plural: sg }
   - { word: Grad, article: der, plural: "-e" }
@@ -1125,7 +1136,12 @@ changes:
   - { word: Bundesrepublik Deutschland, article: die, plural: sg }
   - { word: Kilometer pro Stunde, article: der, plural: "-" }
   - { word: Drittel, article: das, plural: "-" }
-  - { word: Pfingsten, article: das, plural: sg }
+  - {
+      word: Pfingsten,
+      article: none,
+      plural: sg,
+      reason: 'a holiday, usually used without article: "an Pfingsten", "frohe Pfingsten", not "das Pfingsten" (#104)',
+    }
   - { word: Nationalfeiertag, article: der, plural: "-e" }
   - {
       word: umziehen,

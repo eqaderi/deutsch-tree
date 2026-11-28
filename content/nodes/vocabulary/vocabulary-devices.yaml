@@ -1,38 +1,390 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-devices
 kind: vocabulary
 level: B1
 chapter: b1-words-media-free-time
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Devices and how to use them"
   fa: "دستگاه‌ها و طرز استفاده"
   de: "Geräte und ihre Bedienung"
+attemptSize: 15
 words:
+  # Bildschirm and Monitor are both screens; each is right when the other is asked for.
   - word: Bildschirm
+    class: noun
+    article: der
+    plural: Bildschirme
+    level: B1
+    meaning:
+      en: screen
+      fa: صفحه‌نمایش
+    definition: der Teil von einem Computer, einem Handy oder einem Fernseher, auf dem man Bilder und Texte sieht
+    example:
+      de: Mein Handy ist heruntergefallen, jetzt ist der Bildschirm kaputt.
+      en: My phone fell on the floor, and now the screen is broken.
+      fa: گوشی‌ام از دستم افتاد و حالا صفحه‌نمایشش شکسته است.
+    alsoAccepted: [der Monitor, das Display]
+    tooCloseTo: [Monitor]
+
   - word: Monitor
+    class: noun
+    article: der
+    plural: Monitore
+    level: B1
+    meaning:
+      en: monitor (of a computer)
+      fa: مانیتور (رایانه)
+    definition: ein Bildschirm, den man mit einem Kabel an einen Computer anschließt
+    example:
+      de: Für die Arbeit zu Hause habe ich mir einen zweiten Monitor gekauft.
+      en: I bought myself a second monitor for working at home.
+      fa: برای کار در خانه یک مانیتور دوم خریده‌ام.
+    alsoAccepted: [der Bildschirm]
+    tooCloseTo: [Bildschirm]
+
+  # Tastatur and Taste belong together; neither is offered as a wrong meaning of the other.
   - word: Tastatur
+    class: noun
+    article: die
+    plural: Tastaturen
+    level: B1
+    meaning:
+      en: keyboard
+      fa: صفحه‌کلید
+    definition: alle Tasten mit Buchstaben und Zahlen zusammen, mit denen man in einen Computer schreibt
+    example:
+      de: Ich habe aus Versehen Kaffee über die Tastatur geschüttet.
+      en: I accidentally spilt coffee over the keyboard.
+      fa: ناخواسته روی صفحه‌کلید قهوه ریختم.
+    tooCloseTo: [Taste]
+
   - word: Taste
+    class: noun
+    article: die
+    plural: Tasten
+    level: B1
+    meaning:
+      en: key (on a keyboard), button
+      fa: دکمه، کلید (صفحه‌کلید یا دستگاه)
+    definition: ein kleiner Teil auf einem Gerät oder einer Tastatur, auf den man drückt, damit etwas passiert
+    example:
+      de: Drücken Sie die grüne Taste, um das Gerät zu starten.
+      en: Press the green button to start the machine.
+      fa: برای روشن کردن دستگاه، دکمهٔ سبز را فشار دهید.
+    alsoAccepted: [der Knopf]
+    tooCloseTo: [Tastatur]
+
+  # Festplatte and Laufwerk both store data; neither is offered as a wrong meaning of the other.
   - word: Festplatte
+    class: noun
+    article: die
+    plural: Festplatten
+    level: B1
+    meaning:
+      en: hard disk, hard drive
+      fa: دیسک سخت، هارد
+    definition: der Teil in einem Computer, auf dem alle Dateien und Programme gespeichert sind
+    example:
+      de: Meine Fotos speichere ich auch auf einer externen Festplatte.
+      en: I also save my photos on an external hard drive.
+      fa: عکس‌هایم را روی یک هارد بیرونی هم ذخیره می‌کنم.
+    tooCloseTo: [Laufwerk]
+
   - word: Laufwerk
+    class: noun
+    article: das
+    plural: Laufwerke
+    level: B1
+    meaning:
+      en: drive (of a computer, e.g. for CDs)
+      fa: درایو (رایانه)
+    definition: ein Teil in oder an einem Computer, das CDs, DVDs oder andere Datenträger lesen und beschreiben kann
+    example:
+      de: Neue Laptops haben oft kein Laufwerk für CDs mehr.
+      en: New laptops often no longer have a CD drive.
+      fa: لپ‌تاپ‌های جدید اغلب دیگر درایو سی‌دی ندارند.
+    tooCloseTo: [Festplatte]
+
   - word: Rechner
+    class: noun
+    article: der
+    plural: Rechner
+    level: B1
+    meaning:
+      en: computer; calculator
+      fa: رایانه؛ ماشین‌حساب
+    definition: ein Computer oder ein kleines Gerät, mit dem man Zahlen zusammenzählt und teilt
+    example:
+      de: Mein Rechner ist so alt, dass das neue Programm nicht darauf läuft.
+      en: My computer is so old that the new program won't run on it.
+      fa: رایانه‌ام آن‌قدر قدیمی است که برنامهٔ جدید روی آن اجرا نمی‌شود.
+    alsoAccepted: [der Computer, der Taschenrechner]
+
   - word: Software
+    class: noun
+    article: die
+    plural: Softwares
+    level: B1
+    meaning:
+      en: software
+      fa: نرم‌افزار
+    definition: die Programme, die auf einem Computer oder einem Handy laufen
+    example:
+      de: Für die Steuererklärung gibt es eine kostenlose Software.
+      en: There is free software for doing your tax return.
+      fa: برای اظهارنامهٔ مالیاتی یک نرم‌افزار رایگان هست.
+
   - word: Smartphone
+    class: noun
+    article: das
+    plural: Smartphones
+    level: B1
+    meaning:
+      en: smartphone
+      fa: تلفن هوشمند، گوشی هوشمند
+    definition: ein Handy, mit dem man auch ins Internet gehen, Fotos machen und Apps benutzen kann
+    example:
+      de: Die Fahrkarte habe ich auf meinem Smartphone.
+      en: I've got the ticket on my smartphone.
+      fa: بلیت را روی گوشی هوشمندم دارم.
+    alsoAccepted: [das Handy]
+
+  # Akku and Batterie both give a device its power; each is right when the other is asked for.
   - word: Akku
+    class: noun
+    article: der
+    plural: Akkus
+    level: B1
+    meaning:
+      en: rechargeable battery
+      fa: باتری قابل‌شارژ
+    definition: ein Teil in einem Handy oder Laptop, das Strom speichert und das man immer wieder laden kann
+    example:
+      de: Mein Akku ist fast leer. Hast du ein Ladekabel?
+      en: My battery is nearly flat. Have you got a charging cable?
+      fa: باتری‌ام تقریباً خالی است. کابل شارژ داری؟
+    alsoAccepted: [die Batterie, der Akkumulator]
+    tooCloseTo: [Batterie]
+
   - word: Batterie
+    class: noun
+    article: die
+    plural: Batterien
+    level: B1
+    meaning:
+      en: battery
+      fa: باتری
+    definition: ein kleines Teil, das einem Gerät Strom gibt, zum Beispiel einer Uhr oder einer Fernbedienung
+    example:
+      de: Die Fernbedienung geht nicht mehr, wir brauchen neue Batterien.
+      en: The remote control has stopped working; we need new batteries.
+      fa: کنترل تلویزیون دیگر کار نمی‌کند؛ باتری نو لازم داریم.
+    alsoAccepted: [der Akku]
+    tooCloseTo: [Akku]
+
   - word: aufladen
+    class: verb
+    level: B1
+    meaning:
+      en: to charge (a battery or phone)
+      fa: شارژ کردن
+    definition: Strom in einen Akku bringen, bis er wieder voll ist
+    example:
+      de: Ich muss mein Handy noch aufladen, bevor wir losgehen.
+      en: I still have to charge my phone before we leave.
+      fa: پیش از اینکه راه بیفتیم، باید گوشی‌ام را شارژ کنم.
+    alsoAccepted: [laden]
+
+  # einschalten and schalten are both about a device's setting; neither is offered as a wrong meaning of the other.
   - word: einschalten
+    class: verb
+    level: B1
+    meaning:
+      en: to switch on, to turn on
+      fa: روشن کردن (دستگاه یا چراغ)
+    definition: ein Gerät oder das Licht anmachen, sodass es läuft oder leuchtet
+    example:
+      de: Kannst du bitte den Fernseher einschalten? Das Spiel fängt gleich an.
+      en: Can you switch the TV on, please? The match is about to start.
+      fa: لطفاً تلویزیون را روشن می‌کنی؟ مسابقه الان شروع می‌شود.
+    alsoAccepted: [anschalten, anmachen]
+    tooCloseTo: [schalten]
+
   - word: schalten
+    class: verb
+    level: B1
+    meaning:
+      en: to switch (to another setting); to change gear
+      fa: (دستگاه را) روی حالت دیگری گذاشتن؛ دنده عوض کردن
+    definition: ein Gerät auf eine andere Stufe oder einen anderen Sender stellen; im Auto einen anderen Gang nehmen
+    example:
+      de: Im Winter schalte ich die Heizung abends auf die kleinste Stufe.
+      en: In winter I switch the heating to the lowest setting in the evening.
+      fa: زمستان‌ها شب‌ها شوفاژ را روی کمترین درجه می‌گذارم.
+    tooCloseTo: [einschalten]
+
   - word: anschließen
+    class: verb
+    level: B1
+    meaning:
+      en: to connect, to plug in
+      fa: وصل کردن
+    definition: ein Gerät mit einem Kabel mit einem anderen Gerät oder mit dem Strom verbinden
+    example:
+      de: Wo kann ich den Drucker an den Laptop anschließen?
+      en: Where can I connect the printer to the laptop?
+      fa: چاپگر را کجای لپ‌تاپ می‌توانم وصل کنم؟
+    alsoAccepted: [verbinden]
+
   - word: herunterfahren
+    class: verb
+    level: B1
+    meaning:
+      en: to shut down (a computer)
+      fa: خاموش کردن اصولی رایانه (با بستن همهٔ برنامه‌ها)
+    definition: einen Computer richtig ausmachen, sodass er vorher alle Programme schließt
+    example:
+      de: Bitte fahren Sie abends Ihren Computer herunter.
+      en: Please shut down your computer in the evening.
+      fa: لطفاً عصرها رایانه‌تان را خاموش کنید.
+    alsoAccepted: [runterfahren]
+
   - word: installieren
+    class: verb
+    level: B1
+    meaning:
+      en: to install
+      fa: نصب کردن
+    definition: ein neues Programm oder eine App auf einen Computer oder ein Handy bringen, damit man es benutzen kann
+    example:
+      de: Gestern habe ich ein neues Programm für meine Fotos installiert.
+      en: Yesterday I installed a new program for my photos.
+      fa: دیروز یک برنامهٔ تازه برای عکس‌هایم نصب کردم.
+
   - word: ausdrucken
+    class: verb
+    level: B1
+    meaning:
+      en: to print (out)
+      fa: چاپ کردن، پرینت گرفتن
+    definition: einen Text oder ein Bild vom Computer mit einem Drucker auf Papier bringen
+    example:
+      de: Können Sie mir die Bestätigung bitte ausdrucken?
+      en: Could you print out the confirmation for me, please?
+      fa: ممکن است لطفاً تأییدیه را برایم چاپ کنید؟
+    alsoAccepted: [drucken]
+
+  # Bedienungsanleitung, Gebrauchsanweisung and Anleitung all tell you how to use something; each is right when another is asked for.
   - word: Bedienungsanleitung
+    class: noun
+    article: die
+    plural: Bedienungsanleitungen
+    level: B1
+    meaning:
+      en: user manual, operating instructions (of a device)
+      fa: دفترچهٔ راهنمای دستگاه
+    definition: ein kleines Heft, in dem steht, wie man ein Gerät benutzt
+    example:
+      de: Lies doch erst mal die Bedienungsanleitung, bevor du anfängst!
+      en: Why don't you read the user manual first before you start!
+      fa: اول دفترچهٔ راهنما را بخوان، بعد شروع کن!
+    alsoAccepted: [die Gebrauchsanweisung, die Gebrauchsanleitung, die Anleitung, das Handbuch]
+    tooCloseTo: [Gebrauchsanweisung, Anleitung]
+
   - word: Gebrauchsanweisung
+    class: noun
+    article: die
+    plural: Gebrauchsanweisungen
+    level: B1
+    meaning:
+      en: instructions for use, directions
+      fa: دستور استفاده
+    definition: ein Text, der erklärt, wie man ein Produkt richtig benutzt, zum Beispiel ein Medikament oder eine Maschine
+    example:
+      de: Laut Gebrauchsanweisung soll man das Pulver in Wasser auflösen.
+      en: According to the directions, you should dissolve the powder in water.
+      fa: طبق دستور استفاده، پودر را باید در آب حل کرد.
+    alsoAccepted: [die Bedienungsanleitung, die Gebrauchsanleitung, die Anleitung]
+    tooCloseTo: [Bedienungsanleitung, Anleitung]
+
   - word: Anleitung
+    class: noun
+    article: die
+    plural: Anleitungen
+    level: B1
+    meaning:
+      en: instructions (on how to do or build something)
+      fa: دستورالعمل، راهنما
+    definition: ein Text oder Bilder, die Schritt für Schritt zeigen, wie man etwas macht oder baut
+    example:
+      de: Ohne Anleitung kann ich das Regal nicht aufbauen.
+      en: I can't put the shelf together without instructions.
+      fa: بدون دستورالعمل نمی‌توانم این قفسه را سر هم کنم.
+    alsoAccepted: [die Gebrauchsanweisung, die Bedienungsanleitung, die Anweisung]
+    tooCloseTo: [Bedienungsanleitung, Gebrauchsanweisung]
+
   - word: funktionieren
+    class: verb
+    level: B1
+    meaning:
+      en: to work, to function (of a machine)
+      fa: کار کردن (دستگاه)
+    definition: so laufen, wie es soll, und nicht kaputt sein
+    example:
+      de: Der Kaffeeautomat funktioniert schon wieder nicht.
+      en: The coffee machine isn't working again.
+      fa: دستگاه قهوه باز هم کار نمی‌کند.
+    alsoAccepted: [laufen, gehen]
+    tooCloseTo: [Störung]
+
   - word: Störung
+    class: noun
+    article: die
+    plural: Störungen
+    level: B1
+    meaning:
+      en: disruption, (temporary) fault (of a service or device)
+      fa: اختلال (در کار دستگاه یا خدمات)
+    definition: wenn ein Gerät, eine Leitung oder ein Zug für eine Zeit nicht richtig läuft
+    example:
+      de: Wegen einer technischen Störung fährt die U-Bahn heute nicht.
+      en: Because of a technical fault, the underground isn't running today.
+      fa: به دلیل یک اختلال فنی، مترو امروز کار نمی‌کند.
+    tooCloseTo: [funktionieren]
+
+  # elektrisch and elektronisch are near each other; neither is offered as a wrong meaning of the other.
   - word: elektrisch
+    class: adjective
+    level: B1
+    meaning:
+      en: electric, electrical
+      fa: برقی
+    definition: so, dass es mit Strom läuft oder mit Strom zu tun hat
+    example:
+      de: Zum Geburtstag habe ich eine elektrische Zahnbürste bekommen.
+      en: I got an electric toothbrush for my birthday.
+      fa: برای تولدم یک مسواک برقی هدیه گرفتم.
+    tooCloseTo: [elektronisch]
+
   - word: elektronisch
+    class: adjective
+    level: B1
+    meaning:
+      en: electronic
+      fa: الکترونیکی
+    definition: so, dass es mit Chips und kleinen elektrischen Teilen arbeitet, zum Beispiel ein Taschenrechner
+    example:
+      de: Viele elektronische Geräte enthalten wertvolle Metalle.
+      en: Many electronic devices contain valuable metals.
+      fa: بسیاری از دستگاه‌های الکترونیکی فلزهای باارزشی دارند.
+    tooCloseTo: [elektrisch]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed to settle the first one's
+    answers and objections; not people)"
+  date: 2026-11-28
+  pool: e81bb4868468744b

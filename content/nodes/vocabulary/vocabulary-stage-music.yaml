@@ -1,34 +1,327 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-stage-music
 kind: vocabulary
 level: B1
 chapter: b1-words-media-free-time
 order: 6
-status: coming-soon
+status: published
 title:
   en: "Stage and music"
   fa: "صحنه و موسیقی"
   de: "Bühne und Musik"
+attemptSize: 15
 words:
   - word: Oper
+    class: noun
+    article: die
+    plural: Opern
+    level: B1
+    meaning:
+      en: opera; opera house
+      fa: اپرا؛ سالن اپرا
+    definition: ein Stück auf der Bühne, in dem die Personen singen statt sprechen; auch das Haus, in dem man es zeigt
+    example:
+      de: Am Samstag gehen wir in die Oper.
+      en: We're going to the opera on Saturday.
+      fa: شنبه به اپرا می‌رویم.
+
   - word: Orchester
+    class: noun
+    article: das
+    plural: Orchester
+    level: B1
+    meaning:
+      en: orchestra
+      fa: ارکستر
+    definition: eine große Gruppe von Musikern, die zusammen vor allem klassische Musik spielen
+    example:
+      de: Das Orchester spielt heute Abend Musik von Mozart.
+      en: The orchestra is playing music by Mozart tonight.
+      fa: ارکستر امشب قطعه‌هایی از موتسارت می‌نوازد.
+
+  # Ballett and Tanz are both dancing; neither is offered as a wrong meaning of the other.
   - word: Ballett
+    class: noun
+    article: das
+    plural: Ballette
+    level: B1
+    meaning:
+      en: ballet
+      fa: باله
+    definition: ein klassischer Tanz auf der Bühne, der ohne Worte eine Geschichte erzählt
+    example:
+      de: Meine Tochter geht zweimal pro Woche zum Ballett.
+      en: My daughter goes to ballet twice a week.
+      fa: دخترم هفته‌ای دو بار به کلاس باله می‌رود.
+    tooCloseTo: [Tanz]
+
   - word: Tanz
+    class: noun
+    article: der
+    plural: Tänze
+    level: B1
+    meaning:
+      en: (a) dance, e.g. a waltz
+      fa: رقص
+    definition: eine bestimmte Folge von Schritten, mit der man sich zu Musik bewegt, zum Beispiel ein Walzer
+    example:
+      de: Darf ich Sie um den nächsten Tanz bitten?
+      en: May I have the next dance?
+      fa: اجازه می‌دهید رقص بعدی را با شما باشم؟
+    tooCloseTo: [Ballett]
+
   - word: Jazz
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: jazz
+      fa: موسیقی جاز
+    definition: eine Musik aus Amerika, bei der die Musiker oft frei spielen, was ihnen gerade einfällt
+    example:
+      de: Mein Vater hört am liebsten Jazz.
+      en: My father likes listening to jazz best.
+      fa: پدرم بیشتر از همه موسیقی جاز گوش می‌دهد.
+
+  # Hit and Song are both songs; neither is offered as a wrong meaning of the other.
   - word: Hit
+    class: noun
+    article: der
+    plural: Hits
+    level: B1
+    meaning:
+      en: hit (a very popular song)
+      fa: آهنگ پرطرفدار
+    definition: ein Lied, das sehr viele Menschen hören und kaufen
+    example:
+      de: Dieses Lied war in den Neunzigern ein großer Hit.
+      en: This song was a big hit in the nineties.
+      fa: این آهنگ در دههٔ نود خیلی پرطرفدار بود.
+    tooCloseTo: [Song]
+
   - word: Song
+    class: noun
+    article: der
+    plural: Songs
+    level: B1
+    meaning:
+      en: song (pop or rock)
+      fa: ترانه (پاپ یا راک)
+    definition: ein Lied, vor allem in der Pop- oder Rockmusik
+    example:
+      de: Die Sängerin hat einen neuen Song über ihre Heimat geschrieben.
+      en: The singer has written a new song about her home town.
+      fa: این خواننده ترانهٔ تازه‌ای دربارهٔ زادگاهش ساخته است.
+    alsoAccepted: [das Lied]
+    tooCloseTo: [Hit]
+
   - word: Flöte
+    class: noun
+    article: die
+    plural: Flöten
+    level: B1
+    meaning:
+      en: flute; recorder
+      fa: فلوت، نی
+    definition: ein dünnes Instrument, das man zum Spielen quer vor den Mund hält; auch ein kleines aus Holz, das viele Kinder in der Schule lernen
+    example:
+      de: Mit sechs Jahren hat sie angefangen, Flöte zu spielen.
+      en: She started playing the recorder at the age of six.
+      fa: او از شش‌سالگی فلوت زدن را شروع کرد.
+    alsoAccepted: [die Blockflöte, die Querflöte]
+
+  # Bühne and Szene are both a "stage"; neither is offered as a wrong meaning of the other.
   - word: Bühne
+    class: noun
+    article: die
+    plural: Bühnen
+    level: B1
+    meaning:
+      en: stage (in a theatre or hall)
+      fa: سکوی صحنه (در تئاتر یا سالن)
+    definition: der hohe Platz vorne im Theater, auf dem die Schauspieler oder Musiker stehen
+    example:
+      de: Nach dem Konzert kam die Sängerin noch einmal auf die Bühne.
+      en: After the concert the singer came back onto the stage once more.
+      fa: پس از کنسرت، خواننده یک بار دیگر روی صحنه آمد.
+    tooCloseTo: [Szene]
+
+  # Auftritt, auftreten, aufführen and Vorstellung are all about performing; none is offered as a wrong meaning of another.
   - word: Auftritt
+    class: noun
+    article: der
+    plural: Auftritte
+    level: B1
+    meaning:
+      en: appearance, performance (of an artist on stage)
+      fa: اجرای هنرمند (روی صحنه)
+    definition: wenn ein Künstler vor Publikum auf die Bühne kommt und singt, spielt oder spricht
+    example:
+      de: Vor ihrem ersten Auftritt war die Sängerin sehr nervös.
+      en: The singer was very nervous before her first performance.
+      fa: خواننده پیش از نخستین اجرایش خیلی مضطرب بود.
+    tooCloseTo: [auftreten, aufführen, Vorstellung]
+
   - word: auftreten
+    class: verb
+    level: B1
+    meaning:
+      en: to perform, to appear (on stage)
+      fa: روی صحنه رفتن، برنامه اجرا کردن
+    definition: vor Publikum singen, spielen oder sprechen, zum Beispiel bei einem Konzert
+    example:
+      de: Der Chor tritt am Freitag im Jugendzentrum auf.
+      en: The choir is performing at the youth centre on Friday.
+      fa: این گروه کر جمعه در مرکز جوانان برنامه اجرا می‌کند.
+    tooCloseTo: [Auftritt, aufführen, Vorstellung]
+
   - word: aufführen
+    class: verb
+    level: B1
+    meaning:
+      en: to stage, to put on (a play or piece)
+      fa: به صحنه بردن (نمایش)
+    definition: ein Theaterstück, eine Oper oder ein Konzert vor Publikum zeigen
+    example:
+      de: Die Schüler führen am Ende des Schuljahres ein Theaterstück auf.
+      en: The pupils are putting on a play at the end of the school year.
+      fa: دانش‌آموزان در پایان سال تحصیلی یک نمایش به صحنه می‌برند.
+    alsoAccepted: [inszenieren]
+    tooCloseTo: [Auftritt, auftreten, Vorstellung]
+
   - word: Vorstellung
+    class: noun
+    article: die
+    plural: Vorstellungen
+    level: B1
+    meaning:
+      en: performance, show (in a theatre or cinema)
+      fa: سانس، اجرا (در تئاتر یا سینما)
+    definition: wenn ein Theaterstück oder ein Film zu einer bestimmten Zeit für das Publikum gezeigt wird
+    example:
+      de: Die Vorstellung beginnt um 20 Uhr, bitte seien Sie pünktlich.
+      en: The performance begins at 8 p.m.; please be on time.
+      fa: اجرا ساعت ۲۰ شروع می‌شود؛ لطفاً سر وقت بیایید.
+    alsoAccepted: [die Aufführung]
+    tooCloseTo: [Auftritt, auftreten, aufführen]
+
+  # Rolle and Szene are both parts of a play; neither is offered as a wrong meaning of the other.
   - word: Rolle
+    class: noun
+    article: die
+    plural: Rollen
+    level: B1
+    meaning:
+      en: role, part (in a play or film)
+      fa: نقش
+    definition: der Teil, den ein Schauspieler in einem Film oder einem Theaterstück bekommt und spielt
+    example:
+      de: In dem neuen Film spielt sie die Rolle einer Ärztin.
+      en: In the new film she plays the part of a doctor.
+      fa: او در فیلم تازه نقش یک پزشک را بازی می‌کند.
+    tooCloseTo: [Szene]
+
   - word: Szene
+    class: noun
+    article: die
+    plural: Szenen
+    level: B1
+    meaning:
+      en: scene (a part of a film or play)
+      fa: صحنه (بخشی از فیلم یا نمایش)
+    definition: ein kurzer Teil von einem Film oder einem Theaterstück, der an einem Ort spielt
+    example:
+      de: Die letzte Szene des Films war sehr traurig.
+      en: The last scene of the film was very sad.
+      fa: صحنهٔ آخر فیلم خیلی غم‌انگیز بود.
+    tooCloseTo: [Bühne, Rolle]
+
   - word: musikalisch
+    class: adjective
+    level: B1
+    meaning:
+      en: musical (good at music; to do with music)
+      fa: اهل موسیقی، با استعداد در موسیقی؛ موسیقایی
+    definition: so, dass jemand gut singen oder ein Instrument spielen kann; auch was mit Musik zu tun hat
+    example:
+      de: Unsere ganze Familie ist sehr musikalisch.
+      en: Our whole family is very musical.
+      fa: همهٔ اعضای خانواده‌مان خیلی اهل موسیقی‌اند.
+
   - word: Saal
+    class: noun
+    article: der
+    plural: Säle
+    level: B1
+    meaning:
+      en: (large) hall, auditorium (a room inside a building)
+      fa: سالن (اتاق بزرگ درون ساختمان)
+    definition: ein sehr großer Raum in einem Gebäude, in dem viele Menschen sitzen können, zum Beispiel für Konzerte oder Feste
+    example:
+      de: Der Saal war bis auf den letzten Platz voll.
+      en: The hall was full to the last seat.
+      fa: سالن تا آخرین صندلی پر بود.
+
   - word: klingen
+    class: verb
+    level: B1
+    meaning:
+      en: to sound
+      fa: به گوش رسیدن، صدا دادن
+    definition: einen bestimmten Ton haben oder einen bestimmten Eindruck machen, wenn man es hört
+    example:
+      de: Deine Idee klingt gut, lass uns das so machen!
+      en: Your idea sounds good, let's do it that way!
+      fa: فکرت خوب به نظر می‌رسد؛ بیا همین کار را بکنیم!
+    alsoAccepted: [sich anhören]
+
   - word: Held
+    class: noun
+    article: der
+    plural: Helden
+    level: B1
+    meaning:
+      en: hero
+      fa: قهرمان (داستان یا ماجرا)
+    definition: eine Person, die etwas sehr Mutiges tut, oder die wichtigste Person in einer Geschichte
+    example:
+      de: Der Held des Films rettet am Ende die ganze Stadt.
+      en: The hero of the film saves the whole city in the end.
+      fa: قهرمان فیلم در پایان تمام شهر را نجات می‌دهد.
+    alsoAccepted: [die Heldin]
+
   - word: Lärm
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: noise (loud and unpleasant)
+      fa: سروصدا
+    definition: laute Töne, die stören und unangenehm sind
+    example:
+      de: Wegen des Lärms von der Baustelle kann ich nicht schlafen.
+      en: I can't sleep because of the noise from the building site.
+      fa: به خاطر سروصدای کارگاه ساختمانی نمی‌توانم بخوابم.
+    alsoAccepted: [der Krach]
+
   - word: still
+    class: adjective
+    level: B1
+    meaning:
+      en: quiet and still (no sound, no movement)
+      fa: ساکت و آرام، بی‌حرکت
+    definition: so, dass man nichts hört und sich nichts bewegt
+    example:
+      de: Als der Film anfing, wurde es im Saal ganz still.
+      en: When the film started, the hall went completely silent.
+      fa: وقتی فیلم شروع شد، سالن کاملاً ساکت شد.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed to settle the first one's
+    answers and objections; not people)"
+  date: 2026-11-28
+  pool: 2690a3aa0e2f2125
