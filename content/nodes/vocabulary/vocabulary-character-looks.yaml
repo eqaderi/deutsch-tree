@@ -1,40 +1,380 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-character-looks
 kind: vocabulary
 level: A2
 chapter: a2-words-people
 order: 2
-status: coming-soon
+status: published
 title:
   en: "What people are like"
   fa: "آدم‌ها چه‌جور هستند"
   de: "Wie Menschen sind"
+attemptSize: 15
 words:
+  # nett, freundlich and sympathisch all praise a person; none is offered as a wrong meaning of another.
   - word: nett
+    class: adjective
+    level: A2
+    meaning:
+      en: nice, kind
+      fa: مهربان، خوش‌اخلاق
+    definition: so ist eine Person, die gut und lieb zu anderen ist
+    example:
+      de: Deine Kollegin ist wirklich nett.
+      en: Your colleague is really nice.
+      fa: همکارت واقعاً مهربان است.
+    alsoAccepted: [lieb, freundlich, sympathisch]
+    tooCloseTo: [freundlich, sympathisch]
+
+  # "sympathisch" is not "sympathetic": it is a person you like at once.
   - word: sympathisch
+    class: adjective
+    level: A2
+    meaning:
+      en: likeable, pleasant (of a person)
+      fa: دوست‌داشتنی، خوشایند (آدم)
+    definition: so ist eine Person, die man gleich mag
+    example:
+      de: Der neue Nachbar ist mir sehr sympathisch.
+      en: I really like the new neighbour.
+      fa: همسایهٔ تازه به نظرم خیلی دوست‌داشتنی است.
+    alsoAccepted: [nett, angenehm, liebenswert]
+    tooCloseTo: [freundlich]
+
   - word: freundlich
+    class: adjective
+    level: A2
+    meaning:
+      en: friendly
+      fa: خوش‌برخورد، دوستانه
+    definition: so ist eine Person, die gern lächelt und höflich zu anderen ist
+    example:
+      de: Die Verkäuferin war sehr freundlich.
+      en: The shop assistant was very friendly.
+      fa: فروشنده خیلی خوش‌برخورد بود.
+    alsoAccepted: [nett, höflich]
+
+  # klug and intelligent are near each other; each is right when the other is asked for.
   - word: klug
+    class: adjective
+    level: A2
+    meaning:
+      en: clever, wise
+      fa: عاقل، دانا
+    definition: so ist eine Person, die viel weiß und gut nachdenkt
+    example:
+      de: Das war eine kluge Entscheidung.
+      en: That was a wise decision.
+      fa: تصمیم عاقلانه‌ای بود.
+    alsoAccepted: [intelligent, schlau, weise, gescheit, clever, vernünftig]
+    tooCloseTo: [intelligent]
+
   - word: intelligent
+    class: adjective
+    level: A2
+    meaning:
+      en: intelligent
+      fa: باهوش
+    definition: so ist eine Person, die schnell lernt und Probleme gut lösen kann
+    example:
+      de: Delfine sind sehr intelligente Tiere.
+      en: Dolphins are very intelligent animals.
+      fa: دلفین‌ها حیوان‌های بسیار باهوشی هستند.
+    alsoAccepted: [klug, schlau, gescheit]
+
+  # dumm and blöd are near each other; each is right when the other is asked for.
   - word: dumm
+    class: adjective
+    level: A2
+    meaning:
+      en: stupid, not clever
+      fa: نادان، کودن
+    definition: so ist eine Person, die nicht klug ist und wenig versteht
+    example:
+      de: Es gibt keine dummen Fragen.
+      en: There are no stupid questions.
+      fa: هیچ پرسشی احمقانه نیست.
+    alsoAccepted: [blöd, doof, dämlich]
+    tooCloseTo: [blöd]
+
   - word: blöd
+    class: adjective
+    level: A2
+    meaning:
+      en: silly, stupid; annoying (a thing)
+      fa: احمقانه، مسخره؛ اعصاب‌خردکن
+    definition: (umgangssprachlich) nicht klug, oder so, dass man sich ärgert
+    example:
+      de: So ein blöder Fehler!
+      en: What a silly mistake!
+      fa: چه اشتباه احمقانه‌ای!
+    alsoAccepted: [doof, dumm, dämlich, ärgerlich]
+
   - word: faul
+    class: adjective
+    level: A2
+    meaning:
+      en: lazy
+      fa: تنبل
+    definition: so ist eine Person, die nicht gern arbeitet und lieber nichts tut
+    example:
+      de: Am Sonntag bin ich gern faul.
+      en: On Sundays I like being lazy.
+      fa: یکشنبه‌ها دوست دارم تنبلی کنم.
+    alsoAccepted: [träge]
+
   - word: fleißig
+    class: adjective
+    level: A2
+    meaning:
+      en: hard-working
+      fa: سخت‌کوش، کوشا
+    definition: so ist eine Person, die viel und gern arbeitet oder lernt
+    example:
+      de: Sie ist eine fleißige Studentin.
+      en: She is a hard-working student.
+      fa: او دانشجوی سخت‌کوشی است.
+    alsoAccepted: [arbeitsam, eifrig]
+
   - word: streng
+    class: adjective
+    level: A2
+    meaning:
+      en: strict
+      fa: سخت‌گیر
+    definition: so ist eine Person, die viele Regeln macht und wenig erlaubt
+    example:
+      de: Unser Mathelehrer ist sehr streng.
+      en: Our maths teacher is very strict.
+      fa: معلم ریاضی ما خیلی سخت‌گیر است.
+
+  # komisch and witzig can both mean "funny"; neither is offered as a wrong meaning of the other.
   - word: komisch
+    class: adjective
+    level: A2
+    meaning:
+      en: strange, odd; funny
+      fa: عجیب، غریب؛ خنده‌دار
+    definition: anders als normal, so dass man sich wundert; auch so, dass man lacht
+    example:
+      de: Das Essen schmeckt komisch.
+      en: The food tastes strange.
+      fa: مزهٔ غذا عجیب است.
+    alsoAccepted: [seltsam, merkwürdig, eigenartig, sonderbar, lustig, witzig]
+    tooCloseTo: [witzig]
+
   - word: witzig
+    class: adjective
+    level: A2
+    meaning:
+      en: funny, witty
+      fa: بامزه، شوخ
+    definition: so, dass andere lachen, zum Beispiel eine Person, die gute Witze macht
+    example:
+      de: Mein Bruder ist sehr witzig.
+      en: My brother is very funny.
+      fa: برادرم خیلی بامزه است.
+    alsoAccepted: [lustig, komisch, humorvoll, spaßig]
+
+  # sportlich and aktiv are near each other; neither is offered as a wrong meaning of the other.
   - word: sportlich
+    class: adjective
+    level: A2
+    meaning:
+      en: sporty, athletic
+      fa: اهل ورزش، ورزیده
+    definition: so ist eine Person, die viel Sport macht und fit ist
+    example:
+      de: Meine Schwester ist sehr sportlich, sie läuft jeden Morgen.
+      en: My sister is very sporty; she runs every morning.
+      fa: خواهرم خیلی اهل ورزش است و هر صبح می‌دود.
+    alsoAccepted: [athletisch]
+    tooCloseTo: [aktiv]
+
   - word: aktiv
+    class: adjective
+    level: A2
+    meaning:
+      en: active
+      fa: فعال
+    definition: so ist eine Person, die viel macht und nicht nur zu Hause sitzt
+    example:
+      de: Mein Opa ist mit achtzig noch sehr aktiv.
+      en: At eighty my grandpa is still very active.
+      fa: پدربزرگم در هشتادسالگی هنوز خیلی فعال است.
+    alsoAccepted: [tätig, rege]
+
   - word: romantisch
+    class: adjective
+    level: A2
+    meaning:
+      en: romantic
+      fa: عاشقانه، رمانتیک
+    definition: voller Gefühl und Liebe, zum Beispiel ein Abend mit Kerzen
+    example:
+      de: Wir hatten ein romantisches Essen am See.
+      en: We had a romantic dinner by the lake.
+      fa: کنار دریاچه یک شام عاشقانه خوردیم.
+
   - word: nervös
+    class: adjective
+    level: A2
+    meaning:
+      en: nervous
+      fa: مضطرب، دستپاچه
+    definition: unruhig, weil man vor etwas Angst hat, zum Beispiel vor einer Prüfung
+    example:
+      de: Vor der Prüfung bin ich immer nervös.
+      en: I'm always nervous before the exam.
+      fa: قبل از امتحان همیشه مضطربم.
+    alsoAccepted: [aufgeregt, unruhig]
+
   - word: vorsichtig
+    class: adjective
+    level: A2
+    meaning:
+      en: careful, cautious
+      fa: محتاط، بااحتیاط
+    definition: so ist eine Person, die gut aufpasst, damit nichts Schlimmes passiert
+    example:
+      de: Fahr bitte vorsichtig, die Straße ist glatt.
+      en: Please drive carefully, the road is slippery.
+      fa: لطفاً با احتیاط رانندگی کن، جاده لغزنده است.
+    alsoAccepted: [achtsam, behutsam, umsichtig]
+
+  # berühmt and beliebt are near each other; neither is offered as a wrong meaning of the other.
   - word: berühmt
+    class: adjective
+    level: A2
+    meaning:
+      en: famous
+      fa: مشهور، معروف
+    definition: so ist eine Person oder eine Sache, die sehr viele Menschen kennen
+    example:
+      de: Sie möchte einmal eine berühmte Sängerin werden.
+      en: One day she would like to become a famous singer.
+      fa: او دوست دارد روزی خوانندهٔ مشهوری بشود.
+    alsoAccepted: [bekannt, prominent]
+    tooCloseTo: [beliebt]
+
   - word: beliebt
+    class: adjective
+    level: A2
+    meaning:
+      en: popular, well-liked
+      fa: محبوب
+    definition: so ist eine Person oder eine Sache, die viele Menschen mögen
+    example:
+      de: Fußball ist in Deutschland sehr beliebt.
+      en: Football is very popular in Germany.
+      fa: فوتبال در آلمان خیلی محبوب است.
+    alsoAccepted: [populär, begehrt]
+
   - word: reich
+    class: adjective
+    level: A2
+    meaning:
+      en: rich
+      fa: ثروتمند، پولدار
+    definition: so ist eine Person, die sehr viel Geld hat
+    example:
+      de: Er ist mit seiner Firma reich geworden.
+      en: He got rich with his company.
+      fa: او با شرکتش ثروتمند شد.
+    alsoAccepted: [wohlhabend, vermögend]
+
   - word: arm
+    class: adjective
+    level: A2
+    meaning:
+      en: poor
+      fa: فقیر، تهی‌دست
+    definition: so ist eine Person, die sehr wenig Geld hat
+    example:
+      de: Viele Familien in der Stadt sind arm.
+      en: Many families in the city are poor.
+      fa: خانواده‌های زیادی در این شهر فقیرند.
+    alsoAccepted: [bedürftig, mittellos]
+
   - word: blond
+    class: adjective
+    level: A2
+    meaning:
+      en: blond, fair-haired
+      fa: بور، موطلایی
+    definition: mit hellen, gelben Haaren
+    example:
+      de: Das Mädchen hat lange blonde Haare.
+      en: The girl has long blond hair.
+      fa: آن دختر موهای بلند طلایی دارد.
+
   - word: dick
+    class: adjective
+    level: A2
+    meaning:
+      en: fat; thick
+      fa: چاق؛ کلفت، ضخیم
+    definition: mit viel Fett am Körper, nicht schlank; auch so ist zum Beispiel ein Buch mit sehr vielen Seiten
+    example:
+      de: Unsere Katze ist zu dick, sie frisst zu viel.
+      en: Our cat is too fat; it eats too much.
+      fa: گربه‌مان خیلی چاق است، زیادی می‌خورد.
+    alsoAccepted: [übergewichtig, mollig]
+
   - word: dünn
+    class: adjective
+    level: A2
+    meaning:
+      en: thin
+      fa: لاغر؛ نازک
+    definition: mit wenig Fett am Körper; auch so ist zum Beispiel ein Blatt Papier
+    example:
+      de: Im Winter ist diese Jacke zu dünn.
+      en: In winter this jacket is too thin.
+      fa: این کاپشن برای زمستان خیلی نازک است.
+    alsoAccepted: [schlank, mager]
+
   - word: hässlich
+    class: adjective
+    level: A2
+    meaning:
+      en: ugly
+      fa: زشت
+    definition: gar nicht schön
+    example:
+      de: Ich finde das Gebäude hässlich.
+      en: I think the building is ugly.
+      fa: به نظرم آن ساختمان زشت است.
+
   - word: stark
+    class: adjective
+    level: A2
+    meaning:
+      en: strong
+      fa: قوی، نیرومند
+    definition: mit viel Kraft
+    example:
+      de: Mein Vater ist sehr stark, er trägt den Schrank allein.
+      en: My father is very strong; he carries the wardrobe on his own.
+      fa: پدرم خیلی قوی است، کمد را تنهایی می‌برد.
+    alsoAccepted: [kräftig]
+
   - word: schwach
+    class: adjective
+    level: A2
+    meaning:
+      en: weak
+      fa: ضعیف
+    definition: mit wenig Kraft
+    example:
+      de: Nach der Krankheit war sie noch sehr schwach.
+      en: After the illness she was still very weak.
+      fa: بعد از بیماری هنوز خیلی ضعیف بود.
+    alsoAccepted: [kraftlos]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 162, then 18 questions)
+  date: 2026-11-28
+  pool: 91cd3480358cc403

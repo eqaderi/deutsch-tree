@@ -1,39 +1,371 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Many words here are near each other (very bad, very good, real, whole); such words are never
+# offered as wrong meanings of each other (tooCloseTo) and are right when the other is asked for.
 id: vocabulary-great-or-terrible
 kind: vocabulary
 level: A2
 chapter: a2-words-people
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Great or terrible? Saying how something is"
   fa: "عالی یا افتضاح؟ گفتنِ اینکه چیزی چطور است"
   de: "Toll oder schrecklich? Sagen, wie etwas ist"
+attemptSize: 15
 words:
   - word: furchtbar
+    class: adjective
+    level: A2
+    meaning:
+      en: awful, dreadful
+      fa: افتضاح، خیلی بد
+    definition: sehr, sehr schlecht und gar nicht angenehm, zum Beispiel das Wetter
+    example:
+      de: Das Wetter ist heute furchtbar.
+      en: The weather is awful today.
+      fa: هوا امروز افتضاح است.
+    alsoAccepted: [schrecklich, fürchterlich, entsetzlich, grauenhaft, grässlich, scheußlich, schlimm, mies]
+    tooCloseTo: [schrecklich, schlimm]
+
   - word: schrecklich
+    class: adjective
+    level: A2
+    meaning:
+      en: terrible, horrible
+      fa: وحشتناک
+    definition: so schlecht, dass man Angst oder einen Schock bekommt
+    example:
+      de: Gestern habe ich einen schrecklichen Unfall gesehen.
+      en: Yesterday I saw a terrible accident.
+      fa: دیروز تصادف وحشتناکی دیدم.
+    alsoAccepted: [furchtbar, fürchterlich, entsetzlich, grauenhaft, grässlich, scheußlich, schlimm, schockierend]
+    tooCloseTo: [schlimm]
+
   - word: schlimm
+    class: adjective
+    level: A2
+    meaning:
+      en: bad, serious (a problem, an illness)
+      fa: بد، جدی، وخیم
+    definition: schlecht und ernst, zum Beispiel ein Unfall oder eine Krankheit
+    example:
+      de: Keine Sorge, das ist nicht so schlimm.
+      en: Don't worry, it's not that bad.
+      fa: نگران نباش، آن‌قدرها بد نیست.
+    alsoAccepted: [schlecht, ernst, schwer, übel, schrecklich, furchtbar]
+
   - word: toll
+    class: adjective
+    level: A2
+    meaning:
+      en: great, brilliant
+      fa: عالی، معرکه
+    definition: sehr gut und schön, so dass man sich freut
+    example:
+      de: Das war ein toller Abend!
+      en: That was a great evening!
+      fa: شب معرکه‌ای بود!
+    alsoAccepted: [super, fantastisch, prima, klasse, spitze, großartig, wunderbar, genial, cool, phantastisch, ausgezeichnet, herrlich]
+    tooCloseTo: [super, fantastisch]
+
   - word: super
+    class: adjective
+    level: A2
+    meaning:
+      en: super, really good
+      fa: محشر، خیلی خوب
+    definition: (umgangssprachlich) sehr, sehr gut
+    example:
+      de: Dein Kuchen schmeckt super!
+      en: Your cake tastes really good!
+      fa: کیکت محشر است!
+    alsoAccepted: [toll, fantastisch, prima, klasse, spitze, großartig, wunderbar, genial, cool, phantastisch]
+    tooCloseTo: [fantastisch]
+
   - word: fantastisch
+    class: adjective
+    level: A2
+    meaning:
+      en: fantastic, amazing
+      fa: فوق‌العاده، شگفت‌انگیز
+    definition: so gut, dass man es kaum glauben kann
+    example:
+      de: Von hier hat man einen fantastischen Blick auf die Berge.
+      en: From here you have a fantastic view of the mountains.
+      fa: از اینجا منظرهٔ فوق‌العاده‌ای از کوه‌ها پیداست.
+    alsoAccepted: [phantastisch, toll, super, großartig, wunderbar, genial, unglaublich, erstaunlich, klasse, spitze, prima, außergewöhnlich, sagenhaft, traumhaft]
+
   - word: langweilig
+    class: adjective
+    level: A2
+    meaning:
+      en: boring
+      fa: کسل‌کننده، خسته‌کننده
+    definition: so, dass man keine Lust hat und immer auf die Uhr schaut
+    example:
+      de: Der Film war so langweilig, dass ich eingeschlafen bin.
+      en: The film was so boring that I fell asleep.
+      fa: فیلم آن‌قدر کسل‌کننده بود که خوابم برد.
+    alsoAccepted: [öde, fad, uninteressant, ermüdend]
+
   - word: interessant
+    class: adjective
+    level: A2
+    meaning:
+      en: interesting
+      fa: جالب
+    definition: so, dass man mehr wissen oder sehen möchte
+    example:
+      de: Das Buch ist sehr interessant.
+      en: The book is very interesting.
+      fa: این کتاب خیلی جالب است.
+    alsoAccepted: [spannend]
+
   - word: spannend
+    class: adjective
+    level: A2
+    meaning:
+      en: gripping, thrilling (a story, a film)
+      fa: پرکشش، نفس‌گیر (داستان یا فیلم)
+    definition: so, dass man unbedingt wissen will, wie es weitergeht, zum Beispiel ein Krimi
+    example:
+      de: Das Fußballspiel war bis zum Ende spannend.
+      en: The football match was gripping right to the end.
+      fa: بازی فوتبال تا آخر نفس‌گیر بود.
+    alsoAccepted: [aufregend, packend, fesselnd, interessant, atemberaubend]
+    tooCloseTo: [aufregend, interessant]
+
   - word: aufregend
+    class: adjective
+    level: A2
+    meaning:
+      en: exciting (an event, a day)
+      fa: پرهیجان، هیجان‌انگیز
+    definition: so, dass man ein bisschen nervös ist und sich sehr freut, zum Beispiel der erste Tag in einer neuen Stadt
+    example:
+      de: Die erste Reise allein war sehr aufregend.
+      en: The first trip on my own was very exciting.
+      fa: اولین سفر تنهایی‌ام خیلی هیجان‌انگیز بود.
+    alsoAccepted: [spannend]
+    tooCloseTo: [stressig]
+
   - word: stressig
+    class: adjective
+    level: A2
+    meaning:
+      en: stressful
+      fa: پراسترس، پرفشار
+    definition: mit viel Arbeit und wenig Zeit, so dass man unruhig wird
+    example:
+      de: Die Woche vor dem Urlaub war sehr stressig.
+      en: The week before the holiday was very stressful.
+      fa: هفتهٔ قبل از سفر خیلی پرفشار بود.
+    alsoAccepted: [anstrengend, hektisch, belastend]
+
   - word: echt
+    class: adjective
+    level: A2
+    meaning:
+      en: real, genuine; (spoken) really
+      fa: اصل، واقعی؛ واقعاً (در گفتار)
+    definition: nicht künstlich und nicht kopiert, zum Beispiel Gold oder Leder; auch sehr
+    example:
+      de: Ist die Tasche aus echtem Leder?
+      en: Is the bag made of real leather?
+      fa: این کیف از چرم اصل است؟
+    alsoAccepted: [wirklich, original, authentisch]
+    tooCloseTo: [wirklich, wahr, total]
+
   - word: wirklich
+    class: adjective
+    level: A2
+    meaning:
+      en: really, truly; real
+      fa: واقعاً، به‌راستی؛ واقعی
+    definition: in der Wahrheit so, nicht nur gedacht; auch sehr
+    example:
+      de: Das Hotel war wirklich schön.
+      en: The hotel was really nice.
+      fa: هتل واقعاً قشنگ بود.
+    alsoAccepted: [echt, tatsächlich, wahrhaftig]
+    tooCloseTo: [wahr, total, besonders]
+
   - word: total
+    class: adjective
+    level: A2
+    meaning:
+      en: total; totally, completely
+      fa: کلی؛ کاملاً، به‌کلی
+    definition: (umgangssprachlich) völlig, ohne Ausnahme; auch sehr
+    example:
+      de: Nach dem Umzug war ich total müde.
+      en: After the move I was totally exhausted.
+      fa: بعد از اسباب‌کشی کاملاً خسته بودم.
+    alsoAccepted: [völlig, komplett, ganz, gänzlich, vollkommen, absolut, voll]
+    tooCloseTo: [ganz, besonders]
+
   - word: ganz
+    class: adjective
+    level: A2
+    meaning:
+      en: whole, entire; quite
+      fa: تمام، کل؛ نسبتاً
+    definition: alles, nichts fehlt; auch ziemlich, zum Beispiel „… gut“
+    example:
+      de: Ich habe den ganzen Tag gearbeitet.
+      en: I worked the whole day.
+      fa: تمام روز کار کردم.
+    alsoAccepted: [gesamt, völlig, komplett, total, ziemlich, vollständig]
+    tooCloseTo: [besonders]
+
   - word: besonders
+    class: adverb
+    level: A2
+    meaning:
+      en: especially, particularly
+      fa: به‌خصوص، مخصوصاً
+    definition: mehr als bei anderen Dingen oder Personen
+    example:
+      de: Ich mag Obst, besonders Erdbeeren.
+      en: I like fruit, especially strawberries.
+      fa: میوه دوست دارم، به‌خصوص توت‌فرنگی.
+    alsoAccepted: [vor allem, speziell, insbesondere, vorwiegend]
+
   - word: typisch
+    class: adjective
+    level: A2
+    meaning:
+      en: typical
+      fa: معمول، مخصوص (یک آدم یا یک جا)
+    definition: so, wie es oft oder immer bei einer Person, einem Land oder einer Sache ist
+    example:
+      de: Das ist typisch für ihn, er kommt immer zu spät.
+      en: That's typical of him; he's always late.
+      fa: این کار همیشگی اوست، همیشه دیر می‌آید.
+    alsoAccepted: [charakteristisch, üblich, bezeichnend]
+
   - word: modern
+    class: adjective
+    level: A2
+    meaning:
+      en: modern
+      fa: امروزی، مدرن
+    definition: neu und von heute, nicht alt
+    example:
+      de: Die Wohnung hat eine moderne Küche.
+      en: The flat has a modern kitchen.
+      fa: این آپارتمان آشپزخانهٔ مدرنی دارد.
+    alsoAccepted: [zeitgemäß, aktuell, heutig]
+
   - word: praktisch
+    class: adjective
+    level: A2
+    meaning:
+      en: practical, handy
+      fa: کاربردی، به‌دردبخور
+    definition: gut und einfach zu benutzen
+    example:
+      de: Die kleine Tasche ist sehr praktisch für die Reise.
+      en: The small bag is very handy for the trip.
+      fa: این کیف کوچک برای سفر خیلی کاربردی است.
+    alsoAccepted: [nützlich, zweckmäßig, handlich, benutzerfreundlich]
+    tooCloseTo: [nützlich, bequem]
+
   - word: nützlich
+    class: adjective
+    level: A2
+    meaning:
+      en: useful
+      fa: مفید، سودمند
+    definition: so, dass es einem hilft
+    example:
+      de: Danke für die nützlichen Tipps!
+      en: Thanks for the useful tips!
+      fa: ممنون برای نکته‌های مفید!
+    alsoAccepted: [praktisch, hilfreich, sinnvoll, brauchbar]
+
   - word: notwendig
+    class: adjective
+    level: A2
+    meaning:
+      en: necessary
+      fa: لازم، ضروری
+    definition: so, dass man es unbedingt braucht
+    example:
+      de: Für die Reise ist ein Pass notwendig.
+      en: A passport is necessary for the trip.
+      fa: برای این سفر گذرنامه لازم است.
+    alsoAccepted: [nötig, erforderlich, unbedingt nötig, unerlässlich, unverzichtbar, unentbehrlich]
+
   - word: schwierig
+    class: adjective
+    level: A2
+    meaning:
+      en: difficult
+      fa: دشوار، سخت
+    definition: nicht leicht, man braucht viel Arbeit oder Zeit
+    example:
+      de: Die letzte Aufgabe war sehr schwierig.
+      en: The last task was very difficult.
+      fa: تکلیف آخر خیلی دشوار بود.
+    alsoAccepted: [schwer, kompliziert, mühsam]
+
   - word: gefährlich
+    class: adjective
+    level: A2
+    meaning:
+      en: dangerous
+      fa: خطرناک
+    definition: so, dass man sich verletzen oder sterben kann
+    example:
+      de: Im Winter ist diese Straße gefährlich.
+      en: In winter this road is dangerous.
+      fa: این جاده در زمستان خطرناک است.
+    alsoAccepted: [riskant, gefährdend, lebensgefährlich]
+
   - word: wahr
+    class: adjective
+    level: A2
+    meaning:
+      en: "true"
+      fa: درست، راست
+    definition: so, wie es wirklich ist, keine Lüge
+    example:
+      de: Ist das wahr, du ziehst nach Wien?
+      en: Is it true you're moving to Vienna?
+      fa: راست است که به وین اسباب‌کشی می‌کنی؟
+    alsoAccepted: [richtig, zutreffend, wirklich]
+
   - word: schädlich
+    class: adjective
+    level: A2
+    meaning:
+      en: harmful
+      fa: زیان‌آور، مضر
+    definition: schlecht für die Gesundheit oder für die Natur
+    example:
+      de: Rauchen ist schädlich für die Gesundheit.
+      en: Smoking is harmful to your health.
+      fa: سیگار کشیدن برای سلامتی زیان‌آور است.
+    alsoAccepted: [ungesund, gefährlich, giftig]
+    tooCloseTo: [gefährlich]
+
   - word: bequem
+    class: adjective
+    level: A2
+    meaning:
+      en: comfortable
+      fa: راحت (مثلاً کفش یا مبل)
+    definition: angenehm für den Körper, zum Beispiel ein Sofa oder Schuhe
+    example:
+      de: Diese Schuhe sind sehr bequem.
+      en: These shoes are very comfortable.
+      fa: این کفش‌ها خیلی راحت‌اند.
+    alsoAccepted: [gemütlich, komfortabel, angenehm]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 4 questions)
+  date: 2026-11-28
+  pool: 57a9b6f437dc5e95

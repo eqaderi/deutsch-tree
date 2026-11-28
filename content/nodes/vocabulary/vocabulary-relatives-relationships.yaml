@@ -1,39 +1,406 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-relatives-relationships
 kind: vocabulary
 level: A2
 chapter: a2-words-people
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Relatives and relationships"
   fa: "خویشاوندان و رابطه‌ها"
   de: "Verwandte und Beziehungen"
+attemptSize: 15
 words:
   - word: Onkel
+    class: noun
+    article: der
+    plural: Onkel
+    level: A2
+    meaning:
+      en: uncle
+      fa: عمو، دایی
+    definition: der Bruder von der Mutter oder vom Vater
+    example:
+      de: Mein Onkel wohnt in München.
+      en: My uncle lives in Munich.
+      fa: عمویم در مونیخ زندگی می‌کند.
+
   - word: Tante
+    class: noun
+    article: die
+    plural: Tanten
+    level: A2
+    meaning:
+      en: aunt
+      fa: عمه، خاله
+    definition: die Schwester von der Mutter oder vom Vater
+    example:
+      de: Meine Tante backt den besten Kuchen.
+      en: My aunt bakes the best cake.
+      fa: خاله‌ام بهترین کیک را می‌پزد.
+
   - word: Cousin
+    class: noun
+    article: der
+    plural: Cousins
+    level: A2
+    meaning:
+      en: cousin (a man or a boy)
+      fa: پسرعمو، پسردایی، پسرعمه، پسرخاله
+    definition: der Sohn von einem Onkel oder einer Tante
+    example:
+      de: Mein Cousin studiert in Köln.
+      en: My cousin is studying in Cologne.
+      fa: پسرعمویم در کلن درس می‌خواند.
+    alsoAccepted: [der Vetter]
+
   - word: Cousine
+    class: noun
+    article: die
+    plural: Cousinen
+    level: A2
+    meaning:
+      en: cousin (a woman or a girl)
+      fa: دخترعمو، دختردایی، دخترعمه، دخترخاله
+    definition: die Tochter von einem Onkel oder einer Tante
+    example:
+      de: Am Samstag feiert meine Cousine ihren Geburtstag.
+      en: On Saturday my cousin is celebrating her birthday.
+      fa: دخترخاله‌ام شنبه تولدش را جشن می‌گیرد.
+    alsoAccepted: [die Kusine]
+
+  # The scope list gives the feminine "Enkelin"; "das Enkelkind" is either.
   - word: Enkel
+    class: noun
+    article: der
+    plural: Enkel
+    level: A2
+    meaning:
+      en: grandchild, grandson
+      fa: نوه
+    definition: das Kind von dem eigenen Sohn oder der eigenen Tochter
+    example:
+      de: Meine Eltern haben schon drei Enkel.
+      en: My parents already have three grandchildren.
+      fa: پدر و مادرم الان سه نوه دارند.
+    alsoAccepted: [die Enkelin, das Enkelkind, der Enkelsohn]
+
+  # Mama and Papa are what children say; the A1 words Mutter and Vater are right too.
   - word: Mama
+    class: noun
+    article: die
+    plural: Mamas
+    level: A2
+    meaning:
+      en: mum, mom
+      fa: مامان
+    definition: so sagen Kinder zu ihrer Mutter
+    example:
+      de: Mama, wann essen wir?
+      en: Mum, when are we eating?
+      fa: مامان، کی غذا می‌خوریم؟
+    alsoAccepted: [die Mutter, die Mutti, die Mami]
+
   - word: Papa
+    class: noun
+    article: der
+    plural: Papas
+    level: A2
+    meaning:
+      en: dad
+      fa: بابا
+    definition: so sagen Kinder zu ihrem Vater
+    example:
+      de: Mein Papa holt mich heute von der Schule ab.
+      en: My dad is picking me up from school today.
+      fa: امروز بابام دنبالم به مدرسه می‌آید.
+    alsoAccepted: [der Vater, der Vati, der Papi]
+
   - word: Ehepartner
+    class: noun
+    article: der
+    plural: Ehepartner
+    level: A2
+    meaning:
+      en: spouse, husband or wife
+      fa: همسر
+    definition: der Mann oder die Frau, mit dem oder mit der man verheiratet ist
+    example:
+      de: Bitte bringen Sie auch Ihren Ehepartner mit.
+      en: Please bring your spouse too.
+      fa: لطفاً همسرتان را هم با خود بیاورید.
+    alsoAccepted:
+      [
+        die Ehepartnerin,
+        der Ehegatte,
+        die Ehegattin,
+        der Gatte,
+        die Gattin,
+        der Ehemann,
+        die Ehefrau,
+        der Mann,
+        die Frau,
+      ]
+
   - word: Paar
+    class: noun
+    article: das
+    plural: Paare
+    level: A2
+    meaning:
+      en: couple; pair
+      fa: زوج؛ جفت
+    definition: zwei Menschen, die zusammen sind, oder zwei Sachen, die zusammengehören
+    example:
+      de: Anna und Tom sind seit drei Jahren ein Paar.
+      en: Anna and Tom have been a couple for three years.
+      fa: آنا و تام سه سال است که با هم هستند.
+    alsoAccepted: [das Pärchen, das Ehepaar, das Liebespaar]
+
+  # The scope list gives the feminine "Nachbarin".
   - word: Nachbar
+    class: noun
+    article: der
+    plural: Nachbarn
+    level: A2
+    meaning:
+      en: neighbour
+      fa: همسایه
+    definition: eine Person, die neben einem oder im selben Haus wohnt
+    example:
+      de: Unser Nachbar gießt im Urlaub unsere Blumen.
+      en: Our neighbour waters our flowers when we're on holiday.
+      fa: همسایه‌مان وقتی به سفر می‌رویم، گل‌هایمان را آب می‌دهد.
+    alsoAccepted: [die Nachbarin]
+
   - word: Person
+    class: noun
+    article: die
+    plural: Personen
+    level: A2
+    meaning:
+      en: person
+      fa: شخص، نفر
+    definition: ein Mensch, zum Beispiel ein Mann, eine Frau oder ein Kind
+    example:
+      de: Der Tisch ist für vier Personen.
+      en: The table is for four people.
+      fa: میز برای چهار نفر است.
+    alsoAccepted: [der Mensch]
+    tooCloseTo: [jemand]
+
   - word: Besuch
+    class: noun
+    article: der
+    plural: Besuche
+    level: A2
+    meaning:
+      en: visit; visitors
+      fa: دیدار، ملاقات؛ مهمان
+    definition: Gäste, die zu einem kommen, oder die Zeit, in der man bei einer Person zu Gast ist
+    example:
+      de: Am Sonntag bekommen wir Besuch von meiner Tante.
+      en: On Sunday my aunt is coming to visit us.
+      fa: یکشنبه خاله‌ام به دیدنمان می‌آید.
+
   - word: Kontakt
+    class: noun
+    article: der
+    plural: Kontakte
+    level: A2
+    meaning:
+      en: contact
+      fa: تماس، ارتباط
+    definition: die Verbindung zu einer Person, mit der man spricht, schreibt oder sich trifft
+    example:
+      de: Ich habe noch Kontakt zu meinen Freunden aus der Schule.
+      en: I'm still in contact with my friends from school.
+      fa: هنوز با دوستان دوران مدرسه‌ام در ارتباطم.
+    alsoAccepted: [die Verbindung]
+
+  # The scope list gives the feminine "Rentnerin" and the Austrian "Pensionist".
   - word: Rentner
+    class: noun
+    article: der
+    plural: Rentner
+    level: A2
+    meaning:
+      en: pensioner, retired person
+      fa: بازنشسته
+    definition: eine Person, die alt ist, nicht mehr arbeitet und jeden Monat Geld vom Staat bekommt
+    example:
+      de: Mein Großvater ist seit zwei Jahren Rentner.
+      en: My grandfather has been retired for two years.
+      fa: پدربزرگم دو سال است که بازنشسته است.
+    alsoAccepted: [die Rentnerin, der Pensionist, die Pensionistin, der Pensionär, die Pensionärin, der Ruheständler, die Ruheständlerin]
+
+  # Divorced and separated are near each other; neither is offered as a wrong meaning of the other.
   - word: geschieden
+    class: adjective
+    level: A2
+    meaning:
+      en: divorced
+      fa: طلاق‌گرفته، جداشده با طلاق
+    definition: nicht mehr verheiratet, weil die Ehe offiziell zu Ende ist
+    example:
+      de: Meine Eltern sind seit zehn Jahren geschieden.
+      en: My parents have been divorced for ten years.
+      fa: پدر و مادرم ده سال است که از هم طلاق گرفته‌اند.
+    tooCloseTo: [getrennt]
+
   - word: getrennt
+    class: adjective
+    level: A2
+    meaning:
+      en: separated, apart; separately
+      fa: جدا، جدا از هم
+    definition: "nicht mehr zusammen, zum Beispiel als Paar; auch: jeder für sich"
+    example:
+      de: Sie leben getrennt, aber sie sind noch verheiratet.
+      en: They live apart, but they are still married.
+      fa: آن‌ها جدا از هم زندگی می‌کنند، اما هنوز زن و شوهرند.
+    alsoAccepted: [separat]
+    tooCloseTo: [geschieden]
+
   - word: schwanger
+    class: adjective
+    level: A2
+    meaning:
+      en: pregnant
+      fa: باردار
+    definition: so ist eine Frau, wenn sie ein Baby im Bauch hat
+    example:
+      de: Meine Schwester ist im fünften Monat schwanger.
+      en: My sister is five months pregnant.
+      fa: خواهرم پنج‌ماهه باردار است.
+
+  # The scope list gives "sich": the verb is always "sich verlieben".
   - word: verlieben
+    class: verb
+    level: A2
+    meaning:
+      en: to fall in love (with sich)
+      fa: عاشق شدن (فعل انعکاسی)
+    definition: "mit „sich“: anfangen, eine Person zu lieben"
+    example:
+      de: Er hat sich im Urlaub in eine Spanierin verliebt.
+      en: He fell in love with a Spanish woman on holiday.
+      fa: او در سفر عاشق یک زن اسپانیایی شد.
+    alsoAccepted: [sich verlieben]
+
+  # The scope list gives "(sich)": "sich streiten" is the everyday form.
   - word: streiten
+    class: verb
+    level: A2
+    meaning:
+      en: to argue, to quarrel
+      fa: دعوا کردن، مشاجره کردن
+    definition: laut und böse mit einer Person sprechen, weil man nicht derselben Meinung ist
+    example:
+      de: Die Kinder streiten sich oft um das Tablet.
+      en: The children often argue about the tablet.
+      fa: بچه‌ها اغلب سر تبلت دعوا می‌کنند.
+    alsoAccepted: [sich streiten, zanken, sich zanken, sich zoffen]
+
   - word: sterben
+    class: verb
+    level: A2
+    meaning:
+      en: to die
+      fa: مردن، درگذشتن
+    definition: aufhören zu leben
+    example:
+      de: Ohne Wasser sterben die Pflanzen.
+      en: Without water the plants die.
+      fa: گیاه‌ها بی‌آب می‌میرند.
+    alsoAccepted: [versterben]
+
+  # The scope list gives the feminine "Babysitterin".
   - word: Babysitter
+    class: noun
+    article: der
+    plural: Babysitter
+    level: A2
+    meaning:
+      en: babysitter
+      fa: پرستار بچه
+    definition: eine Person, die für Geld auf kleine Kinder aufpasst, wenn die Eltern weg sind
+    example:
+      de: Wir suchen einen Babysitter für Freitagabend.
+      en: We're looking for a babysitter for Friday evening.
+      fa: برای جمعه‌شب دنبال پرستار بچه می‌گردیم.
+    alsoAccepted: [die Babysitterin, das Kindermädchen]
+
   - word: Taschengeld
+    class: noun
+    article: das
+    plural: Taschengelder
+    level: A2
+    meaning:
+      en: pocket money
+      fa: پول توجیبی
+    definition: Geld, das Kinder jede Woche oder jeden Monat von den Eltern bekommen
+    example:
+      de: Mein Sohn bekommt zehn Euro Taschengeld in der Woche.
+      en: My son gets ten euros pocket money a week.
+      fa: پسرم هفته‌ای ده یورو پول توجیبی می‌گیرد.
+
   - word: jemand
+    class: pronoun
+    level: A2
+    meaning:
+      en: somebody, someone, anybody
+      fa: کسی، یک نفر
+    definition: eine Person, aber man weiß nicht, welche
+    example:
+      de: Hat jemand meinen Schlüssel gesehen?
+      en: Has anybody seen my key?
+      fa: کسی کلیدم را دیده است؟
+    alsoAccepted: [irgendjemand, irgendwer, einer]
+
   - word: niemand
+    class: pronoun
+    level: A2
+    meaning:
+      en: nobody, no one
+      fa: هیچ‌کس
+    definition: keine Person
+    example:
+      de: Am Sonntag ist niemand im Büro.
+      en: On Sunday nobody is in the office.
+      fa: یکشنبه هیچ‌کس در دفتر نیست.
+    alsoAccepted: [keiner, kein Mensch]
+
+  # The scope list gives "(sich)": "sich unterhalten" is to talk; without "sich" it is to entertain.
   - word: unterhalten
+    class: verb
+    level: A2
+    meaning:
+      en: to talk, to have a chat (with sich)
+      fa: گپ زدن، گفت‌وگو کردن (فعل انعکاسی)
+    definition: "mit „sich“: mit einer Person in Ruhe über etwas sprechen"
+    example:
+      de: Wir haben uns lange über den Urlaub unterhalten.
+      en: We talked about the holiday for a long time.
+      fa: مدت زیادی دربارهٔ سفرمان با هم گپ زدیم.
+    alsoAccepted: [sich unterhalten, plaudern, quatschen, reden, sprechen, sich austauschen]
+
   - word: verabredet
+    class: adjective
+    level: A2
+    meaning:
+      en: having arranged to meet (someone)
+      fa: با کسی قرار داشتن
+    definition: so ist man, wenn man mit einer Person eine Zeit und einen Ort zum Treffen hat
+    example:
+      de: Ich bin heute Abend mit Anna verabredet.
+      en: I've arranged to meet Anna this evening.
+      fa: امشب با آنا قرار دارم.
+    alsoAccepted: [verabredet sein]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 13 questions)
+  date: 2026-11-28
+  pool: e3959e7f3adb142e
