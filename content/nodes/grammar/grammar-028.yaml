@@ -4,10 +4,263 @@ kind: grammar
 level: A1
 chapter: a1-modal-verbs
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-026]
 title:
   en: "*müssen*"
   fa: "*müssen*"
   de: "*müssen*"
+
+explanations:
+  en:
+    rule: >
+      *Müssen* says that something is necessary: there is no choice, because
+      of a rule, a plan or the situation. *Du musst zuerst die Hausaufgaben
+      machen.* Like every modal verb, *müssen* is conjugated in position 2
+      and the second verb goes to the end as an infinitive. *Ich* and *er* /
+      *sie* / *es* have the same form, *muss*, with no ending, and the
+      singular has no umlaut: *ich muss*, *du musst*. When the meaning is
+      clear, the infinitive can be dropped: *Ich muss jetzt nach Hause.*
+  fa:
+    rule: >
+      *müssen* می‌گوید کاری لازم است و چاره‌ای جز آن نیست؛ به‌خاطر یک قاعده،
+      یک برنامه یا شرایط. در فارسی معمولاً «باید» معادل آن است: *Du musst
+      zuerst die Hausaufgaben machen.* مانند همهٔ فعل‌های وجهی، *müssen* صرف
+      می‌شود و در جایگاه دوم می‌آید و فعل دوم به شکل مصدر به پایان جمله
+      می‌رود. *ich* و *er* / *sie* / *es* صورت یکسان *muss* را دارند، بدون
+      شناسه، و در مفرد دو نقطه (*Umlaut*) می‌افتد: *ich muss*،
+      *du musst*. اگر معنا روشن باشد، مصدر را می‌توان انداخت: *Ich muss jetzt
+      nach Hause.*
+  de:
+    rule: >
+      Mit *müssen* sagt man: Etwas ist nötig. Es gibt keine andere
+      Möglichkeit, wegen einer Regel, eines Plans oder der Situation: *Du
+      musst zuerst die Hausaufgaben machen.* *Müssen* ist konjugiert und
+      steht auf Position 2, das zweite Verb steht im Infinitiv am Ende. *Ich*
+      und *er* / *sie* / *es* haben die gleiche Form *muss*, ohne Endung. Im
+      Singular gibt es keinen Umlaut. Ist die Bedeutung klar, kann der
+      Infinitiv fehlen: *Ich muss jetzt nach Hause.*
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*müssen*", fa: "*müssen*", de: "*müssen*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, muss, Ich muss heute arbeiten.]
+    - [du, musst, Du musst zuerst die Hausaufgaben machen.]
+    - [er / sie / es, muss, Er muss um sieben Uhr aufstehen.]
+    - [wir, müssen, Wir müssen jetzt gehen.]
+    - [ihr, müsst, Ihr müsst leise sein.]
+    - [sie / Sie, müssen, Sie müssen hier unterschreiben.]
+
+examples:
+  - de: Ich muss heute lange arbeiten.
+    en: I have to work late today.
+    fa: امروز باید تا دیروقت کار کنم.
+  - de: Du musst zuerst die Hausaufgaben machen.
+    en: You have to do your homework first.
+    fa: اول باید تکالیفت را انجام بدهی.
+  - de: Mein Vater muss jeden Tag um sechs Uhr aufstehen.
+    en: My father has to get up at six o'clock every day.
+    fa: پدرم هر روز باید ساعت شش بیدار شود.
+  - de: Wir müssen noch Milch kaufen.
+    en: We still have to buy milk.
+    fa: هنوز باید شیر بخریم.
+  - de: Müsst ihr morgen in die Schule gehen?
+    en: Do you (plural) have to go to school tomorrow?
+    fa: فردا باید به مدرسه بروید؟
+  - de: Sie müssen hier unterschreiben.
+    en: You have to sign here.
+    fa: این‌جا را باید امضا کنید.
+  - de: Ich muss jetzt nach Hause.
+    en: I have to go home now.
+    fa: الان باید به خانه بروم.
+
+mistakes:
+  - wrong: Ich müsse heute arbeiten.
+    right: Ich muss heute arbeiten.
+    why:
+      en: With *ich* the form is *muss*, with no umlaut and no ending.
+      fa: با *ich* صورت فعل *muss* است، بدون دو نقطه (*Umlaut*) و بدون شناسه.
+      de: Bei *ich* heißt es *muss*, ohne Umlaut und ohne Endung.
+  - wrong: Du muss mehr schlafen.
+    right: Du musst mehr schlafen.
+    why:
+      en: With *du* the form is *musst*.
+      fa: با *du* صورت فعل *musst* است.
+      de: Bei *du* heißt es *musst*.
+  - wrong: Wir müssen arbeiten am Samstag.
+    right: Wir müssen am Samstag arbeiten.
+    why:
+      en: The infinitive goes to the very end, after the time.
+      fa: مصدر به پایان جمله می‌رود، پس از قید زمان.
+      de: Der Infinitiv steht ganz am Ende, nach der Zeit.
+  - wrong: Er muss kauft Brot.
+    right: Er muss Brot kaufen.
+    why:
+      en: Only the modal verb is conjugated. The second verb is an infinitive at the end.
+      fa: فقط فعل وجهی صرف می‌شود؛ فعل دوم به شکل مصدر در پایان جمله می‌آید.
+      de: Nur das Modalverb ist konjugiert. Das zweite Verb steht im Infinitiv am Ende.
+
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Ich ___ heute lange arbeiten.
+    options: [muss, musst, müssen]
+    answer: muss
+    explanation:
+      en: With *ich* the form is *muss*, with no ending.
+      fa: با *ich* صورت فعل *muss* است، بدون شناسه.
+      de: Bei *ich* heißt es *muss*, ohne Endung.
+  - id: q2
+    type: multiple-choice
+    prompt: Du ___ mehr Wasser trinken.
+    options: [muss, musst, müsst]
+    answer: musst
+    explanation:
+      en: With *du* the form is *musst*.
+      fa: با *du* صورت فعل *musst* است.
+      de: Bei *du* heißt es *musst*.
+  - id: q3
+    type: gap-fill
+    prompt: Das Kind ___ um acht Uhr ins Bett gehen.
+    options: [muss, musst, müssen]
+    answer: muss
+    explanation:
+      en: "*Das Kind* is *es*: the form is *muss*, the same as with *ich*."
+      fa: "*das Kind* سوم‌شخص مفرد است (*es*): صورت فعل *muss* است، همانند *ich*."
+      de: "*Das Kind* ist *es*. Die Form ist *muss*, wie bei *ich*."
+  - id: q4
+    type: gap-fill
+    prompt: Ihr ___ jetzt leise sein.
+    options: [müsst, musst, müssen]
+    answer: müsst
+    explanation:
+      en: With *ihr* the form is *müsst*, with the umlaut.
+      fa: با *ihr* صورت فعل *müsst* است، با دو نقطه (*Umlaut*).
+      de: Bei *ihr* heißt es *müsst*, mit Umlaut.
+  - id: q5
+    type: gap-fill
+    prompt: Wir ___ noch Milch kaufen.
+    options: [muss, müsst, müssen]
+    answer: müssen
+    explanation:
+      en: With *wir* the form is *müssen*, like the infinitive.
+      fa: با *wir* صورت فعل *müssen* است، همانند مصدر.
+      de: Bei *wir* ist die Form *müssen*, wie der Infinitiv.
+  - id: q6
+    type: multiple-choice
+    prompt: "mein Vater / müssen / jeden Tag / früh / aufstehen"
+    options:
+      [
+        Mein Vater muss jeden Tag früh aufstehen.,
+        Mein Vater muss aufstehen jeden Tag früh.,
+        Mein Vater jeden Tag muss früh aufstehen.,
+      ]
+    answer: Mein Vater muss jeden Tag früh aufstehen.
+    explanation:
+      en: "*Muss* stands in position 2, the infinitive *aufstehen* at the very end."
+      fa: "*muss* در جایگاه دوم می‌آید و مصدر *aufstehen* در پایان جمله."
+      de: "*Muss* steht auf Position 2, der Infinitiv *aufstehen* ganz am Ende."
+  - id: q7
+    type: multiple-choice
+    prompt: "Sie / müssen / hier / unterschreiben"
+    options: [Sie müssen hier unterschreiben., Sie müssen unterschreiben hier., Sie hier müssen unterschreiben.]
+    answer: Sie müssen hier unterschreiben.
+    explanation:
+      en: "The modal verb is in position 2 and the infinitive closes the sentence."
+      fa: "فعل وجهی در جایگاه دوم است و مصدر جمله را به پایان می‌برد."
+      de: "Das Modalverb steht auf Position 2. Der Infinitiv steht am Ende."
+  - id: q8
+    type: true-false
+    prompt: Wir müssen morgen früh aufstehen.
+    answer: true
+    explanation:
+      en: "*Müssen* is in position 2 and the infinitive at the end. The sentence is correct."
+      fa: "*müssen* در جایگاه دوم و مصدر در پایان است. جمله درست است."
+      de: "*Müssen* steht auf Position 2, der Infinitiv am Ende. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Er muss geht zum Arzt.
+    answer: false
+    explanation:
+      en: "Only the modal verb is conjugated: *Er muss zum Arzt gehen.*"
+      fa: "فقط فعل وجهی صرف می‌شود: *Er muss zum Arzt gehen.*"
+      de: "Nur das Modalverb ist konjugiert: *Er muss zum Arzt gehen.*"
+  - id: q10
+    type: true-false
+    prompt: Ich muss jetzt zur Arbeit.
+    answer: true
+    explanation:
+      en: "The meaning is clear, so the infinitive (*gehen*) can be left out. The sentence is correct."
+      fa: "معنا روشن است، پس مصدر (*gehen*) را می‌توان انداخت. جمله درست است."
+      de: "Die Bedeutung ist klar. Der Infinitiv (*gehen*) kann fehlen. Der Satz ist richtig."
+  - id: q11
+    type: find-error
+    prompt: Ich müsse heute einkaufen.
+    answer: müsse
+    explanation:
+      en: "With *ich* the form is *muss*: *Ich muss heute einkaufen.*"
+      fa: "با *ich* صورت فعل *muss* است: *Ich muss heute einkaufen.*"
+      de: "Bei *ich* heißt es *muss*: *Ich muss heute einkaufen.*"
+  - id: q12
+    type: find-error
+    prompt: Du muss die Tür zumachen.
+    answer: muss
+    explanation:
+      en: "With *du* the form is *musst*: *Du musst die Tür zumachen.*"
+      fa: "با *du* صورت فعل *musst* است: *Du musst die Tür zumachen.*"
+      de: "Bei *du* heißt es *musst*: *Du musst die Tür zumachen.*"
+  - id: q13
+    type: word-order
+    answers:
+      - [müsst, ihr, morgen, arbeiten]
+    end: "?"
+    explanation:
+      en: "In a yes/no question the modal verb comes first, and the infinitive stays at the end."
+      fa: "در پرسش بله یا نه فعل وجهی در آغاز می‌آید و مصدر در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht das Modalverb am Anfang. Der Infinitiv bleibt am Ende."
+  - id: q14
+    type: word-order
+    answers:
+      - [wann, musst, du, zum Zahnarzt, gehen]
+    end: "?"
+    explanation:
+      en: "After the question word comes the modal verb in position 2; the infinitive goes to the end."
+      fa: "پس از واژهٔ پرسشی، فعل وجهی در جایگاه دوم می‌آید و مصدر به پایان جمله می‌رود."
+      de: "Nach dem Fragewort steht das Modalverb auf Position 2. Der Infinitiv steht am Ende."
+  - id: q15
+    type: typed-gap-fill
+    prompt: Frau Kaya ___ (müssen) heute nach Hamburg fahren.
+    answers: [muss]
+    explanation:
+      en: "Frau Kaya is *sie* (singular): the form is *muss*."
+      fa: "خانم کایا سوم‌شخص مفرد است (*sie*): صورت فعل *muss* است."
+      de: "Frau Kaya ist *sie* (Singular). Die Form ist *muss*."
+  - id: q16
+    type: typed-gap-fill
+    prompt: Die Kinder ___ (müssen) zuerst die Hausaufgaben machen.
+    answers: [müssen]
+    explanation:
+      en: "*Die Kinder* is *sie* (plural): the form is *müssen*."
+      fa: "*die Kinder* سوم‌شخص جمع است (*sie*): صورت فعل *müssen* است."
+      de: "*Die Kinder* ist *sie* (Plural). Die Form ist *müssen*."
+  - id: q17
+    type: matching
+    answer:
+      - [ich, muss]
+      - [du, musst]
+      - [wir, müssen]
+      - [ihr, müsst]
+    explanation:
+      en: "The forms of *müssen*: *ich muss*, *du musst*, *wir müssen*, *ihr müsst*."
+      fa: "صورت‌های *müssen*: *ich muss*، *du musst*، *wir müssen*، *ihr müsst*."
+      de: "Die Formen von *müssen*: *ich muss*, *du musst*, *wir müssen*, *ihr müsst*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 9df420032210b64f

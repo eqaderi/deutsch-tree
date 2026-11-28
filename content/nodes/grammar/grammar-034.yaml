@@ -4,10 +4,266 @@ kind: grammar
 level: A1
 chapter: a1-modal-verbs
 order: 7
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-009, grammar-026]
 title:
   en: "*möchte* as a fixed polite form"
   fa: "*möchte* به‌عنوان صورت مؤدبانهٔ ثابت"
   de: "*möchte* als feste höfliche Form"
+
+explanations:
+  en:
+    rule: >
+      *Möchte* is the polite way to say what you want: *Ich möchte mehr
+      Deutsch lernen.* It sounds softer than *will*, so it is the usual form
+      in a shop, at a counter and with people you don't know. Use it like a
+      modal verb: *möchte* is conjugated in position 2 and the second verb goes
+      to the end as an infinitive. Learn it as a fixed set of forms. Unlike the
+      other modal verbs, *ich möchte* and *er* / *sie* / *es möchte* end in
+      *-e*, and the endings are those of a regular verb: *du möchtest*, *ihr
+      möchtet*. When the meaning is clear, the infinitive can be dropped: *Ich
+      möchte nach Hause.*
+  fa:
+    rule: >
+      *möchte* شیوهٔ مؤدبانهٔ گفتن خواسته است: *Ich möchte mehr Deutsch
+      lernen.* این صورت از *will* نرم‌تر است، از این رو در فروشگاه، پشت باجه
+      و با کسی که او را نمی‌شناسید همین را به کار ببرید. *möchte* مانند فعل
+      وجهی رفتار می‌کند: صرف می‌شود و در جایگاه دوم می‌آید و فعل دوم به شکل
+      مصدر به پایان جمله می‌رود.
+      صورت‌های آن را همچون مجموعه‌ای ثابت یاد بگیرید. برخلاف فعل‌های وجهی
+      دیگر، *ich möchte* و *er* / *sie* / *es möchte* به *-e* ختم می‌شوند و
+      شناسه‌ها همان شناسه‌های فعل باقاعده‌اند: *du möchtest*، *ihr möchtet*.
+      اگر معنا روشن باشد، مصدر را می‌توان انداخت: *Ich möchte nach Hause.*
+  de:
+    rule: >
+      Mit *möchte* sagt man höflich, was man will: *Ich möchte mehr Deutsch
+      lernen.* *Möchte* klingt freundlicher als *will*. Man sagt es im
+      Geschäft, am Schalter und bei Personen, die man nicht kennt. *Möchte*
+      funktioniert wie ein Modalverb: Es ist konjugiert und steht auf
+      Position 2, das zweite Verb steht im Infinitiv am Ende. *Ich möchte* und
+      *er* / *sie* / *es möchte* enden auf *-e*. Die anderen Endungen sind wie
+      bei einem regelmäßigen Verb: *du möchtest*, *ihr möchtet*. Ist die
+      Bedeutung klar, kann der Infinitiv fehlen: *Ich möchte nach Hause.*
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*möchte*", fa: "*möchte*", de: "*möchte*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, möchte, Ich möchte mehr Deutsch lernen.]
+    - [du, möchtest, Möchtest du mitkommen?]
+    - [er / sie / es, möchte, Sie möchte Ärztin werden.]
+    - [wir, möchten, Wir möchten bezahlen.]
+    - [ihr, möchtet, Was möchtet ihr trinken?]
+    - [sie / Sie, möchten, Möchten Sie etwas essen?]
+
+examples:
+  - de: Ich möchte mehr Deutsch lernen.
+    en: I would like to learn more German.
+    fa: دوست دارم بیشتر آلمانی یاد بگیرم.
+  - de: Möchten Sie etwas trinken?
+    en: Would you like something to drink?
+    fa: چیزی برای نوشیدن میل دارید؟
+  - de: Wir möchten bitte bezahlen.
+    en: We would like to pay, please.
+    fa: لطفاً می‌خواهیم حساب کنیم.
+  - de: Möchtest du heute Abend mitkommen?
+    en: Would you like to come along tonight?
+    fa: دوست داری امشب با ما بیایی؟
+  - de: Meine Tochter möchte Ärztin werden.
+    en: My daughter would like to become a doctor.
+    fa: دخترم دوست دارد پزشک شود.
+  - de: Was möchtet ihr am Sonntag machen?
+    en: What would you (plural) like to do on Sunday?
+    fa: یکشنبه دوست دارید چه کار کنید؟
+  - de: Ich möchte einen Termin machen.
+    en: I would like to make an appointment.
+    fa: می‌خواهم وقت بگیرم.
+  - de: Ich möchte jetzt nach Hause.
+    en: I would like to go home now.
+    fa: دلم می‌خواهد الان به خانه بروم.
+
+mistakes:
+  - wrong: Er möcht ins Kino gehen.
+    right: Er möchte ins Kino gehen.
+    why:
+      en: With *er*, *sie* and *es* the form is *möchte*, ending in *-e*, like *ich*.
+      fa: با *er*، *sie* و *es* صورت فعل *möchte* است، با *-e* در پایان، همانند *ich*.
+      de: Bei *er*, *sie* und *es* heißt es *möchte*, mit *-e*, wie bei *ich*.
+  - wrong: Ich möchte bestelle einen Kaffee.
+    right: Ich möchte einen Kaffee bestellen.
+    why:
+      en: Only *möchte* is conjugated. The second verb is an infinitive at the end.
+      fa: فقط *möchte* صرف می‌شود؛ فعل دوم به شکل مصدر در پایان جمله می‌آید.
+      de: Nur *möchte* ist konjugiert. Das zweite Verb steht im Infinitiv am Ende.
+  - wrong: Möchtest du gehen ins Kino?
+    right: Möchtest du ins Kino gehen?
+    why:
+      en: In a question too, the infinitive goes to the very end.
+      fa: در پرسش هم مصدر به پایان جمله می‌رود.
+      de: Auch in der Frage steht der Infinitiv ganz am Ende.
+  - wrong: Ihr möchten etwas essen.
+    right: Ihr möchtet etwas essen.
+    why:
+      en: With *ihr* the form is *möchtet*.
+      fa: با *ihr* صورت فعل *möchtet* است.
+      de: Bei *ihr* heißt es *möchtet*.
+
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Ich ___ mehr Deutsch lernen.
+    options: [möchte, möchtest, möchten]
+    answer: möchte
+    explanation:
+      en: With *ich* the form is *möchte*.
+      fa: با *ich* صورت فعل *möchte* است.
+      de: Bei *ich* heißt es *möchte*.
+  - id: q2
+    type: multiple-choice
+    prompt: ___ Sie etwas trinken?
+    options: [Möchte, Möchtet, Möchten]
+    answer: Möchten
+    explanation:
+      en: With the polite *Sie* the form is *möchten*.
+      fa: با *Sie* رسمی صورت فعل *möchten* است.
+      de: Bei *Sie* (höflich) heißt es *möchten*.
+  - id: q3
+    type: gap-fill
+    prompt: Meine Tochter ___ Ärztin werden.
+    options: [möchte, möcht, möchtet]
+    answer: möchte
+    explanation:
+      en: "*Meine Tochter* is *sie* (singular): *möchte*, with *-e*, like *ich*."
+      fa: "*meine Tochter* سوم‌شخص مفرد است (*sie*): *möchte*، با *-e*، همانند *ich*."
+      de: "*Meine Tochter* ist *sie* (Singular): *möchte*, mit *-e*, wie bei *ich*."
+  - id: q4
+    type: gap-fill
+    prompt: Was ___ ihr am Sonntag machen?
+    options: [möchtet, möchtest, möchten]
+    answer: möchtet
+    explanation:
+      en: With *ihr* the form is *möchtet*.
+      fa: با *ihr* صورت فعل *möchtet* است.
+      de: Bei *ihr* heißt es *möchtet*.
+  - id: q5
+    type: gap-fill
+    prompt: ___ du heute Abend mitkommen?
+    options: [Möchte, Möchtest, Möchtet]
+    answer: Möchtest
+    explanation:
+      en: With *du* the form is *möchtest*.
+      fa: با *du* صورت فعل *möchtest* است.
+      de: Bei *du* heißt es *möchtest*.
+  - id: q6
+    type: multiple-choice
+    prompt: "wir / möchten / heute / im Garten / essen"
+    options:
+      [Wir möchten heute im Garten essen., Wir möchten essen heute im Garten., Wir heute möchten im Garten essen.]
+    answer: Wir möchten heute im Garten essen.
+    explanation:
+      en: "*Möchten* is in position 2 and the infinitive *essen* at the end."
+      fa: "*möchten* در جایگاه دوم و مصدر *essen* در پایان جمله است."
+      de: "*Möchten* steht auf Position 2, der Infinitiv *essen* am Ende."
+  - id: q7
+    type: multiple-choice
+    prompt: "ich / möchten / einen Termin / machen"
+    options: [Ich möchte einen Termin machen., Ich möchte machen einen Termin., Ich einen Termin möchte machen.]
+    answer: Ich möchte einen Termin machen.
+    explanation:
+      en: "With *ich* the form is *möchte*, in position 2; the infinitive closes the sentence."
+      fa: "با *ich* صورت *möchte* در جایگاه دوم می‌آید و مصدر جمله را به پایان می‌برد."
+      de: "Bei *ich* heißt es *möchte*, auf Position 2. Der Infinitiv steht am Ende."
+  - id: q8
+    type: true-false
+    prompt: Herr Klein möchte ein Zimmer reservieren.
+    answer: true
+    explanation:
+      en: "With *er* the form is *möchte*, and the infinitive is at the end. The sentence is correct."
+      fa: "با *er* صورت فعل *möchte* است و مصدر در پایان آمده است. جمله درست است."
+      de: "Bei *er* heißt es *möchte*, der Infinitiv steht am Ende. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Sie möcht ein Eis essen.
+    answer: false
+    explanation:
+      en: "With *sie* (singular) the form is *möchte*, and with *sie* (plural) *möchten*; *möcht* is never right."
+      fa: "با *sie* مفرد صورت فعل *möchte* است و با *sie* جمع *möchten*؛ *möcht* هیچ‌گاه درست نیست."
+      de: "Bei *sie* (Singular) heißt es *möchte*, bei *sie* (Plural) *möchten*. *Möcht* ist nie richtig."
+  - id: q10
+    type: true-false
+    prompt: Wir möchten jetzt nach Hause.
+    answer: true
+    explanation:
+      en: "The meaning is clear, so the infinitive (*gehen*) can be left out. The sentence is correct."
+      fa: "معنا روشن است، پس مصدر (*gehen*) را می‌توان انداخت. جمله درست است."
+      de: "Die Bedeutung ist klar. Der Infinitiv (*gehen*) kann fehlen. Der Satz ist richtig."
+  - id: q11
+    type: find-error
+    prompt: Ihr möchten heute Pizza essen.
+    answer: möchten
+    explanation:
+      en: "With *ihr* the form is *möchtet*: *Ihr möchtet heute Pizza essen.*"
+      fa: "با *ihr* صورت فعل *möchtet* است: *Ihr möchtet heute Pizza essen.*"
+      de: "Bei *ihr* heißt es *möchtet*: *Ihr möchtet heute Pizza essen.*"
+  - id: q12
+    type: find-error
+    prompt: Ich möchte morgen nach Berlin fahre.
+    answer: fahre
+    explanation:
+      en: "The second verb is an infinitive: *Ich möchte morgen nach Berlin fahren.*"
+      fa: "فعل دوم مصدر است: *Ich möchte morgen nach Berlin fahren.*"
+      de: "Das zweite Verb steht im Infinitiv: *Ich möchte morgen nach Berlin fahren.*"
+  - id: q13
+    type: word-order
+    answers:
+      - [möchten, Sie, etwas, essen]
+    end: "?"
+    explanation:
+      en: "In a yes/no question *möchten* comes first, and the infinitive stays at the end."
+      fa: "در پرسش بله یا نه *möchten* در آغاز می‌آید و مصدر در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht *möchten* am Anfang. Der Infinitiv bleibt am Ende."
+  - id: q14
+    type: word-order
+    answers:
+      - [wohin, möchtest, du, fahren]
+    end: "?"
+    explanation:
+      en: "After the question word comes *möchtest* in position 2; the infinitive goes to the end."
+      fa: "پس از واژهٔ پرسشی، *möchtest* در جایگاه دوم می‌آید و مصدر به پایان جمله می‌رود."
+      de: "Nach dem Fragewort steht *möchtest* auf Position 2. Der Infinitiv steht am Ende."
+  - id: q15
+    type: typed-gap-fill
+    prompt: Guten Tag, ich ___ (möchte) ein Ticket nach Hamburg kaufen.
+    answers: [möchte]
+    explanation:
+      en: With *ich* the form is *möchte*.
+      fa: با *ich* صورت فعل *möchte* است.
+      de: Bei *ich* heißt es *möchte*.
+  - id: q16
+    type: typed-gap-fill
+    prompt: Lena und Max ___ (möchte) im Sommer ans Meer fahren.
+    answers: [möchten]
+    explanation:
+      en: "*Lena und Max* is *sie* (plural): the form is *möchten*."
+      fa: "*Lena und Max* سوم‌شخص جمع است (*sie*): صورت فعل *möchten* است."
+      de: "*Lena und Max* ist *sie* (Plural). Die Form ist *möchten*."
+  - id: q17
+    type: matching
+    answer:
+      - [ich, möchte]
+      - [du, möchtest]
+      - [wir, möchten]
+      - [ihr, möchtet]
+    explanation:
+      en: "The forms of *möchte*: *ich möchte*, *du möchtest*, *wir möchten*, *ihr möchtet*."
+      fa: "صورت‌های *möchte*: *ich möchte*، *du möchtest*، *wir möchten*، *ihr möchtet*."
+      de: "Die Formen von *möchte*: *ich möchte*, *du möchtest*, *wir möchten*, *ihr möchtet*."
+
+review:
+  reviewer: two independent AI agents (Claude Opus 5.5 subagents, blind passes on
+    the review sheet only; the second on q14; not people)
+  date: 2026-11-28
+  pool: fcde38a282e0131b

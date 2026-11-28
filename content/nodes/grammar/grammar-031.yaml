@@ -4,10 +4,252 @@ kind: grammar
 level: A1
 chapter: a1-modal-verbs
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-028, grammar-029, grammar-030]
 title:
   en: "*müssen* vs *sollen*; *nicht müssen* vs *nicht dürfen*"
   fa: "*müssen* در برابر *sollen*؛ *nicht müssen* در برابر *nicht dürfen*"
   de: "*müssen* oder *sollen*; *nicht müssen* oder *nicht dürfen*"
+
+explanations:
+  en:
+    rule: >
+      *Müssen* says that something is necessary: there is no choice (*Ich
+      muss heute arbeiten.*). *Sollen* says that another person wants it: it
+      passes on what someone asks or advises (*Mein Chef sagt, ich soll heute
+      arbeiten.*). With *nicht* the two modal verbs that look alike part
+      completely. *Nicht müssen* means "it is not necessary": you may, but you
+      don't have to (*Du musst nicht kommen.*). *Nicht dürfen* means "it is
+      forbidden" (*Du darfst nicht kommen.*). Careful: English "you must not"
+      is *du darfst nicht*, and "you don't have to" is *du musst nicht*.
+  fa:
+    rule: >
+      *müssen* می‌گوید کاری لازم است و چاره‌ای جز آن نیست (*Ich muss heute
+      arbeiten.*). *sollen* می‌گوید کس دیگری آن را می‌خواهد و درخواست یا
+      توصیهٔ او را نقل می‌کند (*Mein Chef sagt, ich soll heute arbeiten.*).
+      همراه با *nicht* معنای *müssen* و *dürfen* کاملاً از هم جدا می‌شود.
+      *nicht müssen* یعنی «لازم نیست»: می‌توانید این کار را بکنید، ولی مجبور
+      نیستید (*Du musst nicht kommen.*). *nicht dürfen* یعنی «ممنوع است» یا
+      «نباید» (*Du darfst nicht kommen.*). «باید» فارسی به *müssen* نزدیک
+      است، اما «نباید» به *nicht dürfen*؛ پس «لازم نیست بیایی» را با *du musst
+      nicht* بگویید و «نباید بیایی» را با *du darfst nicht*.
+  de:
+    rule: >
+      *Müssen* heißt: Etwas ist nötig. Es gibt keine andere Möglichkeit
+      (*Ich muss heute arbeiten.*). *Sollen* heißt: Eine andere Person will
+      es. Man sagt weiter, was jemand möchte oder rät (*Mein Chef sagt, ich
+      soll heute arbeiten.*). Mit *nicht* ist der Unterschied sehr groß.
+      *Nicht müssen* heißt: Es ist nicht nötig. Man kann es machen, aber man
+      muss nicht (*Du musst nicht kommen.*). *Nicht dürfen* heißt: Es ist
+      verboten (*Du darfst nicht kommen.*).
+
+table:
+  columns:
+    - { en: Modal verb, fa: فعل وجهی, de: Modalverb }
+    - { en: Meaning, fa: معنا, de: Bedeutung }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [müssen, Es ist nötig., Ich muss heute arbeiten.]
+    - [sollen, Eine andere Person will es., "Mein Chef sagt, ich soll heute arbeiten."]
+    - [nicht müssen, Es ist nicht nötig., Du musst nicht kommen.]
+    - [nicht dürfen, Es ist verboten., Du darfst nicht kommen.]
+
+examples:
+  - de: Ich muss heute arbeiten.
+    en: I have to work today.
+    fa: امروز باید کار کنم.
+  - de: Mein Chef sagt, ich soll heute arbeiten.
+    en: My boss says I'm supposed to work today.
+    fa: رئیسم می‌گوید امروز کار کنم.
+  - de: Du musst nicht kommen.
+    en: You don't have to come.
+    fa: لازم نیست بیایی.
+  - de: Du darfst nicht kommen.
+    en: You mustn't come.
+    fa: نباید بیایی.
+  - de: Morgen ist Sonntag, ich muss nicht früh aufstehen.
+    en: Tomorrow is Sunday, I don't have to get up early.
+    fa: فردا یکشنبه است و لازم نیست زود بیدار شوم.
+  - de: Im Krankenhaus darf man nicht rauchen.
+    en: You mustn't smoke in the hospital.
+    fa: در بیمارستان سیگار کشیدن ممنوع است.
+  - de: Der Eintritt ist frei, Sie müssen nicht bezahlen.
+    en: Entry is free, you don't have to pay.
+    fa: ورود رایگان است و لازم نیست پولی بپردازید.
+  - de: Die Ärztin sagt, ich soll mehr schlafen.
+    en: The doctor says I should sleep more.
+    fa: دکتر می‌گوید بیشتر بخوابم.
+
+mistakes:
+  - wrong: Der Eintritt ist frei, Sie dürfen nicht bezahlen.
+    right: Der Eintritt ist frei, Sie müssen nicht bezahlen.
+    why:
+      en: Paying is not forbidden, only not necessary, so it is *nicht müssen*.
+      fa: پرداختن ممنوع نیست، فقط لازم نیست؛ پس *nicht müssen* درست است.
+      de: Bezahlen ist nicht verboten, nur nicht nötig. Also *nicht müssen*.
+  - wrong: Im Krankenhaus muss man nicht rauchen.
+    right: Im Krankenhaus darf man nicht rauchen.
+    why:
+      en: 'Smoking there is forbidden: "must not" is *nicht dürfen*.'
+      fa: سیگار کشیدن در آن‌جا ممنوع است و برای ممنوع بودن *nicht dürfen* به کار می‌رود.
+      de: Rauchen ist dort verboten. Das sagt man mit *nicht dürfen*.
+  - wrong: Ich kann das allein machen, du darfst mir nicht helfen.
+    right: Ich kann das allein machen, du musst mir nicht helfen.
+    why:
+      en: Help is not forbidden, only not needed, so it is *nicht müssen*.
+      fa: کمک ممنوع نیست، فقط لازم نیست؛ پس *nicht müssen* درست است.
+      de: Hilfe ist nicht verboten, nur nicht nötig. Also *nicht müssen*.
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: Morgen ist Sonntag. Du ___ nicht früh aufstehen.
+    options: [musst, darfst]
+    answer: musst
+    explanation:
+      en: "On Sunday getting up early is not necessary, but not forbidden: *nicht müssen*."
+      fa: "روز یکشنبه زود بیدار شدن لازم نیست، ولی ممنوع هم نیست: *nicht müssen*."
+      de: Am Sonntag ist früh aufstehen nicht nötig, aber nicht verboten. Also *nicht müssen*.
+  - id: q2
+    type: gap-fill
+    prompt: Im Krankenhaus ___ man nicht rauchen.
+    options: [muss, darf]
+    answer: darf
+    explanation:
+      en: "Smoking in a hospital is forbidden: *nicht dürfen*."
+      fa: "سیگار کشیدن در بیمارستان ممنوع است: *nicht dürfen*."
+      de: Rauchen im Krankenhaus ist verboten. Also *nicht dürfen*.
+  - id: q3
+    type: gap-fill
+    prompt: Der Eintritt ist frei. Sie ___ nicht bezahlen.
+    options: [müssen, dürfen]
+    answer: müssen
+    explanation:
+      en: "Entry is free, so paying is not necessary: *nicht müssen*."
+      fa: "ورود رایگان است، پس پرداخت لازم نیست: *nicht müssen*."
+      de: Der Eintritt ist frei. Bezahlen ist nicht nötig, also *nicht müssen*.
+  - id: q4
+    type: gap-fill
+    prompt: Das Messer ist gefährlich! Du ___ es nicht anfassen.
+    options: [musst, darfst]
+    answer: darfst
+    explanation:
+      en: "Something dangerous is forbidden: *nicht dürfen*."
+      fa: "دست زدن به چیز خطرناک ممنوع است: *nicht dürfen*."
+      de: Etwas Gefährliches ist verboten. Also *nicht dürfen*.
+  - id: q5
+    type: gap-fill
+    prompt: Hier ist eine Schule. Man ___ nicht schnell fahren.
+    options: [muss, darf]
+    answer: darf
+    explanation:
+      en: "Driving fast near a school is forbidden: *nicht dürfen*."
+      fa: "تند رانندگی کردن کنار مدرسه ممنوع است: *nicht dürfen*."
+      de: Schnell fahren ist an einer Schule verboten. Also *nicht dürfen*.
+  - id: q6
+    type: gap-fill
+    prompt: Ich kann das allein machen. Du ___ mir nicht helfen.
+    options: [musst, darfst]
+    answer: musst
+    explanation:
+      en: "Help is not needed, but not forbidden: *nicht müssen*."
+      fa: "کمک لازم نیست، ولی ممنوع هم نیست: *nicht müssen*."
+      de: Hilfe ist nicht nötig, aber nicht verboten. Also *nicht müssen*.
+  - id: q7
+    type: multiple-choice
+    prompt: "Du musst nicht kommen. Das heißt:"
+    options: [Kommen ist nicht nötig., Kommen ist verboten., Du willst nicht kommen.]
+    answer: Kommen ist nicht nötig.
+    explanation:
+      en: "*Nicht müssen* means that something is not necessary."
+      fa: "*nicht müssen* یعنی کاری لازم نیست."
+      de: "*Nicht müssen* heißt: Es ist nicht nötig."
+  - id: q8
+    type: multiple-choice
+    prompt: "Du darfst nicht kommen. Das heißt:"
+    options: [Kommen ist verboten., Kommen ist nicht nötig., Du kannst nicht kommen.]
+    answer: Kommen ist verboten.
+    explanation:
+      en: "*Nicht dürfen* means that something is forbidden."
+      fa: "*nicht dürfen* یعنی کاری ممنوع است."
+      de: "*Nicht dürfen* heißt: Es ist verboten."
+  - id: q9
+    type: multiple-choice
+    prompt: "Der Arzt sagt, ich soll weniger arbeiten. Wer will das?"
+    options: [der Arzt, ich, mein Chef]
+    answer: der Arzt
+    explanation:
+      en: "*Sollen* passes on what another person wants: here, the doctor."
+      fa: "*sollen* خواستهٔ کس دیگری را نقل می‌کند؛ این‌جا خواستهٔ دکتر را."
+      de: "*Sollen* sagt, was eine andere Person will: hier der Arzt."
+  - id: q10
+    type: multiple-choice
+    prompt: "Rauchen ist hier verboten."
+    options: [Hier darf man nicht rauchen., Hier muss man nicht rauchen., Hier will man nicht rauchen.]
+    answer: Hier darf man nicht rauchen.
+    explanation:
+      en: Forbidden is *nicht dürfen*.
+      fa: ممنوع بودن با *nicht dürfen* بیان می‌شود.
+      de: Verboten heißt *nicht dürfen*.
+  - id: q11
+    type: multiple-choice
+    prompt: "Bezahlen ist hier nicht nötig."
+    options: [Sie müssen hier nicht bezahlen., Sie dürfen hier nicht bezahlen., Sie wollen hier nicht bezahlen.]
+    answer: Sie müssen hier nicht bezahlen.
+    explanation:
+      en: Not necessary is *nicht müssen*.
+      fa: لازم نبودن با *nicht müssen* بیان می‌شود.
+      de: Nicht nötig heißt *nicht müssen*.
+  - id: q12
+    type: multiple-choice
+    prompt: "Die Lehrerin sagt zu Tom: „Lern die Wörter!“ Tom sagt zu Hause:"
+    options: [Ich soll die Wörter lernen., Ich darf die Wörter nicht lernen., Ich muss die Wörter nicht lernen.]
+    answer: Ich soll die Wörter lernen.
+    explanation:
+      en: "Tom passes on what the teacher wants, so he uses *sollen*."
+      fa: "تام خواستهٔ معلم را نقل می‌کند، پس *sollen* به کار می‌برد."
+      de: "Tom sagt weiter, was die Lehrerin will. Darum *sollen*."
+  - id: q13
+    type: typed-gap-fill
+    prompt: Es ist Samstag. Die Kinder ___ (müssen / dürfen) nicht in die Schule gehen.
+    answers: [müssen]
+    explanation:
+      en: "School on Saturday is not necessary, not forbidden: *nicht müssen*, with *sie* (plural) *müssen*."
+      fa: "مدرسه رفتن روز شنبه لازم نیست، نه ممنوع: *nicht müssen*، و با *sie* جمع صورت *müssen*."
+      de: Am Samstag ist Schule nicht nötig, nicht verboten. Also *nicht müssen*, bei *sie* (Plural) *müssen*.
+  - id: q14
+    type: typed-gap-fill
+    prompt: "Achtung, Prüfung! Ihr ___ (müssen / dürfen) jetzt nicht sprechen."
+    answers: [dürft]
+    explanation:
+      en: "Talking in an exam is forbidden: *nicht dürfen*, with *ihr* *dürft*."
+      fa: "حرف زدن سر امتحان ممنوع است: *nicht dürfen*، و با *ihr* صورت *dürft*."
+      de: Sprechen in der Prüfung ist verboten. Also *nicht dürfen*, bei *ihr* *dürft*.
+  - id: q15
+    type: matching
+    answer:
+      - [Du musst kommen., Es ist nötig.]
+      - [Du musst nicht kommen., Es ist nicht nötig.]
+      - [Du darfst kommen., Es ist erlaubt.]
+      - [Du darfst nicht kommen., Es ist verboten.]
+      - [Du sollst kommen., Eine andere Person will es.]
+    explanation:
+      en: "*Müssen*: necessary; *nicht müssen*: not necessary; *dürfen*: allowed; *nicht dürfen*: forbidden; *sollen*: another person wants it."
+      fa: "*müssen*: لازم است؛ *nicht müssen*: لازم نیست؛ *dürfen*: مجاز است؛ *nicht dürfen*: ممنوع است؛ *sollen*: کس دیگری آن را می‌خواهد."
+      de: "*Müssen*: nötig; *nicht müssen*: nicht nötig; *dürfen*: erlaubt; *nicht dürfen*: verboten; *sollen*: eine andere Person will es."
+  - id: q16
+    type: multiple-choice
+    prompt: "Mein Chef sagt, ich soll morgen früher kommen. Das heißt:"
+    options: [Mein Chef will das., Ich will das., Früher kommen ist verboten.]
+    answer: Mein Chef will das.
+    explanation:
+      en: "*Sollen* passes on what another person wants: here, the boss."
+      fa: "*sollen* خواستهٔ کس دیگری را نقل می‌کند؛ این‌جا خواستهٔ رئیس را."
+      de: "*Sollen* sagt, was eine andere Person will: hier der Chef."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 67a0555d13898eaf
