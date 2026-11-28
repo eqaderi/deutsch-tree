@@ -4,10 +4,294 @@ kind: grammar
 level: B1
 chapter: b1-genitive-nouns
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-073, grammar-085]
 title:
   en: "Adjectives as neuter nouns"
   fa: "صفت به‌عنوان اسم خنثی (*etwas Neues*، *nichts Besonderes*)"
   de: "Adjektive als neutrale Nomen (*etwas Neues*, *nichts Besonderes*)"
+
+explanations:
+  en:
+    rule: >
+      An adjective can also name a thing or an idea: *etwas Neues*
+      (something new), *nichts Besonderes* (nothing special), *das Gute*
+      (the good thing). It is then a neuter noun and is written with a
+      capital letter. After *etwas*, *nichts*, *viel* and *wenig* it takes
+      *-es*: *etwas Neues*, *nichts Gutes*, *viel Interessantes*, *wenig
+      Neues*. After *alles* and *das* it takes *-e*: *alles Gute*, *das
+      Schöne*, also with a superlative (*das Beste*, *das Wichtigste*). The
+      *Akkusativ* has the same form: *Ich habe etwas Schönes gekauft.*
+      *Alles Gute!* and *Alles Liebe!* are fixed wishes for a birthday or at
+      the end of a letter.
+  fa:
+    rule: >
+      صفت می‌تواند نام یک چیز یا یک مفهوم هم باشد: *etwas Neues* (چیزی تازه)،
+      *nichts Besonderes* (هیچ چیز خاصی) و *das Gute* (نکتهٔ خوب).
+      در این حالت اسم خنثی است و با حرف بزرگ نوشته می‌شود. پس از *etwas*،
+      *nichts*، *viel* و *wenig* پایانهٔ *-es* می‌گیرد: *etwas Neues*، *nichts
+      Gutes*، *viel Interessantes* و *wenig Neues*. پس از *alles* و *das*
+      پایانهٔ *-e* می‌گیرد: *alles Gute* و *das Schöne*، و نیز با صفت عالی
+      (*das Beste*، *das Wichtigste*). در حالت *Akkusativ* (حالت مفعولی) هم
+      همین شکل می‌آید: *Ich habe etwas Schönes gekauft.* عبارت‌های *Alles
+      Gute!* و *Alles Liebe!* آرزوهای ثابتی‌اند برای تولد یا پایان نامه.
+  de:
+    rule: >
+      Ein Adjektiv kann auch eine Sache sein: *etwas Neues*, *nichts
+      Besonderes*, *das Gute*. Dann ist es ein neutrales Nomen, und man
+      schreibt es groß. Nach *etwas*, *nichts*, *viel* und *wenig* hat es
+      *-es*: *etwas Neues*, *nichts Gutes*, *viel Interessantes*, *wenig
+      Neues*. Nach *alles* und *das* hat es *-e*: *alles Gute*, *das Schöne*,
+      auch beim Superlativ (*das Beste*, *das Wichtigste*). Im Akkusativ ist
+      die Form gleich: *Ich habe etwas Schönes gekauft.* *Alles Gute!* und
+      *Alles Liebe!* sagt man zum Geburtstag oder schreibt man am Ende von
+      einem Brief.
+
+# The article-change table of content/README.md, adapted: the topic has one
+# gender (neuter), so the rows are adjectives, the first column the adjective
+# as it stands in the dictionary, and the next two the forms after the two
+# groups of words.
+table:
+  columns:
+    - { en: Adjective, fa: صفت, de: Adjektiv }
+    - {
+        en: "After *etwas*, *nichts*, *viel*, *wenig*",
+        fa: "پس از *etwas*، *nichts*، *viel*، *wenig*",
+        de: "Nach *etwas*, *nichts*, *viel*, *wenig*",
+      }
+    - { en: "After *alles*, *das*", fa: "پس از *alles*، *das*", de: "Nach *alles*, *das*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [neu, etwas Neues, alles Neue, Gibt es etwas Neues?]
+    - [gut, nichts Gutes, alles Gute, Alles Gute zum Geburtstag!]
+    - [interessant, viel Interessantes, das Interessante, Wir haben viel Interessantes gesehen.]
+    - [schön, wenig Schönes, das Schöne, Das Schöne ist der Garten.]
+
+examples:
+  - de: Im Urlaub haben wir viel Interessantes gesehen, aber nichts Gefährliches erlebt.
+    en: On holiday we saw a lot of interesting things, but had no dangerous experiences.
+    fa: در تعطیلات چیزهای جالب زیادی دیدیم، ولی هیچ اتفاق خطرناکی برایمان نیفتاد.
+  - de: Alles Liebe zum Geburtstag!
+    en: Lots of love on your birthday!
+    fa: تولدت مبارک، با بهترین آرزوها!
+  - de: Gibt es etwas Neues?
+    en: Is there any news?
+    fa: خبر تازه‌ای هست؟
+  - de: Im Fernsehen kommt heute nichts Besonderes.
+    en: There's nothing special on TV today.
+    fa: امروز تلویزیون برنامهٔ خاصی ندارد.
+  - de: Ich habe dir etwas Schönes mitgebracht.
+    en: I've brought you something nice.
+    fa: برایت چیز قشنگی آورده‌ام.
+  - de: Das Gute an der Wohnung ist der große Balkon.
+    en: The good thing about the flat is the big balcony.
+    fa: خوبی این آپارتمان بالکن بزرگ آن است.
+  - de: In der Zeitung steht heute wenig Neues.
+    en: There is little news in the paper today.
+    fa: امروز در روزنامه خبر تازهٔ چندانی نیست.
+  - de: Ich wünsche dir alles Gute für die Prüfung.
+    en: I wish you all the best for the exam.
+    fa: برای امتحانت بهترین‌ها را آرزو می‌کنم.
+  - de: Das Wichtigste ist die Gesundheit.
+    en: The most important thing is health.
+    fa: مهم‌ترین چیز سلامتی است.
+  - de: Hast du etwas Süßes für die Kinder?
+    en: Do you have something sweet for the children?
+    fa: چیز شیرینی برای بچه‌ها داری؟
+
+mistakes:
+  - wrong: Gibt es etwas neues?
+    right: Gibt es etwas Neues?
+    why:
+      en: "Used as a noun, the adjective is written with a capital letter: *etwas Neues*."
+      fa: "صفتی که به‌عنوان اسم به کار رود با حرف بزرگ نوشته می‌شود: *etwas Neues*."
+      de: "Als Nomen schreibt man das Adjektiv groß: *etwas Neues*."
+  - wrong: Alles Gutes zum Geburtstag!
+    right: Alles Gute zum Geburtstag!
+    why:
+      en: "After *alles* the ending is *-e*: *alles Gute*."
+      fa: "پس از *alles* پایانه *-e* است: *alles Gute*."
+      de: "Nach *alles* ist die Endung *-e*: *alles Gute*."
+  - wrong: Wir haben nichts Gefährliche erlebt.
+    right: Wir haben nichts Gefährliches erlebt.
+    why:
+      en: "After *nichts* the ending is *-es*: *nichts Gefährliches*."
+      fa: "پس از *nichts* پایانه *-es* است: *nichts Gefährliches*."
+      de: "Nach *nichts* ist die Endung *-es*: *nichts Gefährliches*."
+  - wrong: Das Gutes an der Wohnung ist der Balkon.
+    right: Das Gute an der Wohnung ist der Balkon.
+    why:
+      en: "After *das* the ending is *-e*: *das Gute*."
+      fa: "پس از *das* پایانه *-e* است: *das Gute*."
+      de: "Nach *das* ist die Endung *-e*: *das Gute*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Gibt es etwas ___?
+    options: [Neue, Neues, Neuen]
+    answer: Neues
+    explanation:
+      en: "After *etwas* the ending is *-es*: *etwas Neues*."
+      fa: "پس از *etwas* پایانه *-es* است: *etwas Neues*."
+      de: "Nach *etwas* ist die Endung *-es*: *etwas Neues*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Alles ___ zum Geburtstag!
+    options: [Gute, Gutes, Guten]
+    answer: Gute
+    explanation:
+      en: "After *alles* the ending is *-e*: *Alles Gute!*"
+      fa: "پس از *alles* پایانه *-e* است: *Alles Gute!*"
+      de: "Nach *alles* ist die Endung *-e*: *Alles Gute!*"
+  - id: gap-3
+    type: gap-fill
+    prompt: Im Urlaub haben wir viel ___ gesehen.
+    options: [Interessante, Interessanten, Interessantes]
+    answer: Interessantes
+    explanation:
+      en: "After *viel* the ending is *-es*: *viel Interessantes*."
+      fa: "پس از *viel* پایانه *-es* است: *viel Interessantes*."
+      de: "Nach *viel* ist die Endung *-es*: *viel Interessantes*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Das ___ an der Wohnung ist der Balkon.
+    options: [Schöne, Schönes, Schönen]
+    answer: Schöne
+    explanation:
+      en: "After *das* the ending is *-e*: *das Schöne*."
+      fa: "پس از *das* پایانه *-e* است: *das Schöne*."
+      de: "Nach *das* ist die Endung *-e*: *das Schöne*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Zum Glück haben wir nichts ___ erlebt.
+    options: [gefährlich, Gefährliche, Gefährliches]
+    answer: Gefährliches
+    explanation:
+      en: "After *nichts* the adjective is a noun with *-es* and a capital letter: *nichts Gefährliches*."
+      fa: "پس از *nichts* صفت به اسم تبدیل می‌شود، با پایانهٔ *-es* و حرف بزرگ: *nichts Gefährliches*."
+      de: "Nach *nichts* ist das Adjektiv ein Nomen, mit *-es* und groß: *nichts Gefährliches*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Liebe Oma, ich wünsche dir alles ___!
+    options: [Lieben, Liebe, Liebes]
+    answer: Liebe
+    explanation:
+      en: "After *alles* the ending is *-e*: *alles Liebe*."
+      fa: "پس از *alles* پایانه *-e* است: *alles Liebe*."
+      de: "Nach *alles* ist die Endung *-e*: *alles Liebe*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: In der Zeitung steht heute wenig ___.
+    options: [Neues, Neue, neu]
+    answer: Neues
+    explanation:
+      en: "After *wenig* the ending is *-es*: *wenig Neues*."
+      fa: "پس از *wenig* پایانه *-es* است: *wenig Neues*."
+      de: "Nach *wenig* ist die Endung *-es*: *wenig Neues*."
+  - id: true-1
+    type: true-false
+    prompt: Hast du etwas Schönes gekauft?
+    answer: true
+    explanation:
+      en: "After *etwas* the ending is *-es*, with a capital letter: *etwas Schönes*. The sentence is correct."
+      fa: "پس از *etwas* پایانه *-es* است و واژه با حرف بزرگ نوشته می‌شود: *etwas Schönes*. جمله درست است."
+      de: "Nach *etwas* ist die Endung *-es*, und man schreibt groß: *etwas Schönes*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich habe heute nichts neues gehört.
+    answer: false
+    explanation:
+      en: "Used as a noun, the adjective is written with a capital letter: *nichts Neues*."
+      fa: "صفتی که به‌عنوان اسم به کار رود با حرف بزرگ نوشته می‌شود: *nichts Neues*."
+      de: "Als Nomen schreibt man das Adjektiv groß: *nichts Neues*."
+  - id: true-3
+    type: true-false
+    prompt: Alles Gutes zum Geburtstag!
+    answer: false
+    explanation:
+      en: "After *alles* the ending is *-e*: *Alles Gute!*"
+      fa: "پس از *alles* پایانه *-e* است: *Alles Gute!*"
+      de: "Nach *alles* ist die Endung *-e*: *Alles Gute!*"
+  - id: true-4
+    type: true-false
+    prompt: Das Wichtigste ist die Gesundheit.
+    answer: true
+    explanation:
+      en: "After *das* the superlative takes *-e*: *das Wichtigste*. The sentence is correct."
+      fa: "پس از *das* صفت عالی پایانهٔ *-e* می‌گیرد: *das Wichtigste*. جمله درست است."
+      de: "Nach *das* hat der Superlativ *-e*: *das Wichtigste*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Gibt es bei dir etwas ___ (neu)?
+    answers: [Neues]
+    explanation:
+      en: "After *etwas*: *-es* and a capital letter, *etwas Neues*."
+      fa: "پس از *etwas*: پایانهٔ *-es* و حرف بزرگ، *etwas Neues*."
+      de: "Nach *etwas*: *-es* und groß, *etwas Neues*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich wünsche dir alles ___ (gut) für die Prüfung.
+    answers: [Gute]
+    explanation:
+      en: "After *alles* the ending is *-e*: *alles Gute*."
+      fa: "پس از *alles* پایانه *-e* است: *alles Gute*."
+      de: "Nach *alles* ist die Endung *-e*: *alles Gute*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: In Rom haben wir viel ___ (interessant) gesehen.
+    answers: [Interessantes]
+    explanation:
+      en: "After *viel* the ending is *-es*: *viel Interessantes*."
+      fa: "پس از *viel* پایانه *-es* است: *viel Interessantes*."
+      de: "Nach *viel* ist die Endung *-es*: *viel Interessantes*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Im Fernsehen kommt heute nichts ___ (gut).
+    answers: [Gutes]
+    explanation:
+      en: "After *nichts* the ending is *-es*: *nichts Gutes*."
+      fa: "پس از *nichts* پایانه *-es* است: *nichts Gutes*."
+      de: "Nach *nichts* ist die Endung *-es*: *nichts Gutes*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Das ___ (gut) an dem Job ist das Team.
+    answers: [Gute, Beste]
+    explanation:
+      en: "After *das* the ending is *-e*: *das Gute*; the superlative *das Beste* is right too."
+      fa: "پس از *das* پایانه *-e* است: *das Gute*؛ صفت عالی *das Beste* هم درست است."
+      de: "Nach *das* ist die Endung *-e*: *das Gute*. Der Superlativ *das Beste* ist auch richtig."
+  - id: error-1
+    type: find-error
+    prompt: Hast du etwas süßes für die Kinder?
+    answer: süßes
+    explanation:
+      en: "Used as a noun, the adjective is written with a capital letter: *etwas Süßes*."
+      fa: "صفتی که به‌عنوان اسم به کار رود با حرف بزرگ نوشته می‌شود: *etwas Süßes*."
+      de: "Als Nomen schreibt man das Adjektiv groß: *etwas Süßes*."
+  - id: error-2
+    type: find-error
+    prompt: Ich wünsche dir alles Liebes zum Geburtstag.
+    answer: Liebes
+    explanation:
+      en: "After *alles* the ending is *-e*: *alles Liebe*."
+      fa: "پس از *alles* پایانه *-e* است: *alles Liebe*."
+      de: "Nach *alles* ist die Endung *-e*: *alles Liebe*."
+  - id: match-1
+    type: matching
+    answer:
+      - [etwas ___ (neu), Neues]
+      - [alles ___ (gut), Gute]
+      - [das ___ (schön), Schöne]
+      - [viel ___ (interessant), Interessantes]
+    explanation:
+      en: "*-es* after *etwas*, *nichts*, *viel* and *wenig*; *-e* after *alles* and *das*."
+      fa: "پس از *etwas*، *nichts*، *viel* و *wenig* پایانهٔ *-es*؛ پس از *alles* و *das* پایانهٔ *-e*."
+      de: "*-es* nach *etwas*, *nichts*, *viel* und *wenig*. *-e* nach *alles* und *das*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 7a276947ba20e0e3

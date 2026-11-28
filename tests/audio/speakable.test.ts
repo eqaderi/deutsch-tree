@@ -184,6 +184,20 @@ test.each([
   ['Die Reporterin berichtet vom Bahnhof.', 'Die Re-porterin berichtet vom Bahnhof.'],
   ['ein echter Profi', 'ein echter Proh-fi'],
   ['Unser Azubi macht seine Prüfung.', 'Unser Azuhbi macht seine Prüfung.'],
+  // #94: the voice stresses the first syllable of these, or reads "sch" in Berufsschule as "s-ch".
+  ['Ich studiere jetzt im dritten Semester Informatik.', 'Ich studiere jetzt im dritten Se-mester Informatik.'],
+  ['Im Seminar lesen wir einen Text.', 'Im Semi-nar lesen wir einen Text.'],
+  ['die Recherche', 'die Re-scherrsche'],
+  ['Er ist in der Berufsschule.', 'Er ist in der Berufs-schule.'],
+  // #97: an English loanword read the German way.
+  ['Homeoffice hat Vorteile.', 'Hohm-offis hat Vorteile.'],
+  ['Ich arbeite im Homeoffice.', 'Ich arbeite im Hohm-offis.'],
+  // #96: the voice stresses the wrong syllable of these.
+  ['Ich finde sie nirgendwo.', 'Ich finde sie nirgendwoh.'],
+  ['Hinterher ist man klüger.', 'Hinterheer ist man klüger.'],
+  ['Ich fahre sowieso.', 'Ich fahre so-wie-so.'],
+  ['Der Unterschied ist minimal.', 'Der Unterschied ist mini-mal.'],
+  ['Maximal acht Personen.', 'Maxi-mal acht Personen.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })

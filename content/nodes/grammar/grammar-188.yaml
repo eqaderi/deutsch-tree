@@ -4,10 +4,272 @@ kind: grammar
 level: B1
 chapter: b1-two-part-connectors
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-149]
 title:
   en: "*zwar … aber*"
   fa: "*zwar … aber*"
   de: "*zwar … aber*"
+
+explanations:
+  en:
+    rule: >
+      *Zwar … aber* (it is true that … but) first grants one point and then
+      sets a stronger one against it: *Es war zwar schön, aber zu kalt.*
+      *Zwar* stands in the first clause, usually after the conjugated verb.
+      It can also take position 1; then the verb follows it straight away:
+      *Zwar ist die Wohnung klein, aber sie ist billig.* *Aber* starts the
+      second part after a comma. It is in position 0, so the clause after it
+      keeps statement order (*aber sie ist billig*), or it stands inside the
+      second clause, after the verb (*sie ist aber billig*). *Doch* or
+      *jedoch* can stand in place of *aber*, but never *sondern*.
+  fa:
+    rule: >
+      با *zwar … aber* (درست است که … اما) نخست نکته‌ای پذیرفته می‌شود و سپس
+      نکتهٔ مهم‌تری در برابر آن می‌آید: *Es war zwar schön, aber zu kalt.*
+      *zwar* در جملهٔ اول می‌آید، معمولاً پس از فعل صرف‌شده. می‌تواند
+      جایگاه اول را نیز بگیرد که در این صورت فعل بی‌درنگ پس از آن می‌آید:
+      *Zwar ist die Wohnung klein, aber sie ist billig.* *aber* پس از ویرگول
+      بخش دوم را آغاز می‌کند. یا در جایگاه صفر است و جملهٔ پس از آن ترتیب
+      جملهٔ خبری را نگه می‌دارد (*aber sie ist billig*)، یا درون جملهٔ دوم و
+      پس از فعل می‌آید (*sie ist aber billig*). به جای *aber* می‌توان *doch*
+      یا *jedoch* آورد، ولی هرگز *sondern*.
+  de:
+    rule: >
+      Mit *zwar … aber* sagt man zuerst: Das stimmt. Dann kommt ein
+      Gegensatz, und der ist wichtiger: *Es war zwar schön, aber zu kalt.*
+      *Zwar* steht im ersten Satz, meistens nach dem konjugierten Verb. Es
+      kann auch auf Position 1 stehen. Dann kommt sofort das Verb: *Zwar ist
+      die Wohnung klein, aber sie ist billig.* *Aber* beginnt nach einem
+      Komma den zweiten Teil. Es steht auf Position 0, und danach kommt ein
+      normaler Aussagesatz (*aber sie ist billig*). Oder es steht im zweiten
+      Satz nach dem Verb (*sie ist aber billig*). Statt *aber* kann auch
+      *doch* oder *jedoch* stehen, aber nie *sondern*.
+
+table:
+  columns:
+    - { en: "First part: *zwar*", fa: "بخش اول: *zwar*", de: "Erster Teil: *zwar*" }
+    - { en: "Second part: *aber*", fa: "بخش دوم: *aber*", de: "Zweiter Teil: *aber*" }
+  rows:
+    - ["Es war zwar schön,", aber zu kalt.]
+    - ["Die Wohnung ist zwar klein,", aber sie ist billig.]
+    - ["Zwar ist die Wohnung klein,", aber sie ist billig.]
+    - ["Die Wohnung ist zwar klein,", sie ist aber billig.]
+
+examples:
+  - de: Es war zwar schön, aber zu kalt.
+    en: It was nice, but too cold.
+    fa: درست است که خوب بود، اما زیادی سرد بود.
+  - de: Die Wohnung ist zwar klein, aber sie ist sehr günstig.
+    en: The flat may be small, but it is very cheap.
+    fa: درست است که آپارتمان کوچک است، اما خیلی ارزان است.
+  - de: Zwar ist das Hotel teuer, aber das Frühstück ist super.
+    en: The hotel is expensive, it's true, but the breakfast is great.
+    fa: درست است که هتل گران است، اما صبحانه‌اش عالی است.
+  - de: Ich habe zwar wenig Zeit, aber ich helfe dir gern.
+    en: I don't have much time, it's true, but I'm happy to help you.
+    fa: درست است که وقت کمی دارم، اما با کمال میل کمکت می‌کنم.
+  - de: Er spricht zwar gut Deutsch, aber er schreibt nicht gern.
+    en: He speaks German well, but he doesn't like writing.
+    fa: درست است که خوب آلمانی صحبت می‌کند، اما نوشتن را دوست ندارد.
+  - de: Der Film war zwar lang, er war aber spannend.
+    en: The film was long, but it was exciting.
+    fa: درست است که فیلم طولانی بود، اما هیجان‌انگیز بود.
+  - de: Das Auto ist zwar alt, aber es fährt noch gut.
+    en: The car may be old, but it still runs well.
+    fa: درست است که ماشین قدیمی است، اما هنوز خوب کار می‌کند.
+  - de: Wir haben zwar viel gelernt, aber die Prüfung war trotzdem schwer.
+    en: We did study a lot, but the exam was still hard.
+    fa: درست است که زیاد درس خواندیم، اما امتحان باز هم سخت بود.
+
+mistakes:
+  - wrong: Zwar die Wohnung ist klein, aber sie ist billig.
+    right: Zwar ist die Wohnung klein, aber sie ist billig.
+    why:
+      en: "*Zwar* at the start is position 1, so the verb *ist* comes right after it."
+      fa: "*zwar* در آغاز جمله جایگاه اول است، پس فعل *ist* بی‌درنگ پس از آن می‌آید."
+      de: "*Zwar* am Anfang ist Position 1. Darum kommt das Verb *ist* direkt danach."
+  - wrong: Das Hotel ist zwar teuer, sondern es ist sehr schön.
+    right: Das Hotel ist zwar teuer, aber es ist sehr schön.
+    why:
+      en: "*Zwar* goes with *aber*, not with *sondern*."
+      fa: "*zwar* با *aber* می‌آید، نه با *sondern*."
+      de: "Zu *zwar* gehört *aber*, nicht *sondern*."
+  - wrong: Es war zwar schön, aber war es zu kalt.
+    right: Es war zwar schön, aber es war zu kalt.
+    why:
+      en: "*Aber* is position 0, so the subject *es* comes before the verb."
+      fa: "*aber* در جایگاه صفر است، پس فاعل *es* پیش از فعل می‌آید."
+      de: "*Aber* steht auf Position 0. Das Subjekt *es* kommt vor dem Verb."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Es war zwar schön, ___ zu kalt.
+    options: [sondern, oder, aber]
+    answer: aber
+    explanation:
+      en: "*Zwar* goes with *aber*: nice, but too cold."
+      fa: "*zwar* با *aber* می‌آید: خوب بود، اما زیادی سرد."
+      de: "Zu *zwar* gehört *aber*: schön, aber zu kalt."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Wohnung ist ___ klein, aber sie ist sehr günstig.
+    options: [weder, zwar, sowohl]
+    answer: zwar
+    explanation:
+      en: "A point granted, then a stronger one with *aber*: *zwar … aber*. *Weder* goes with *noch*, *sowohl* with *als auch*."
+      fa: "نخست نکته‌ای پذیرفته می‌شود و سپس با *aber* نکتهٔ مهم‌تری می‌آید: *zwar … aber*. *weder* با *noch* می‌آید و *sowohl* با *als auch*."
+      de: "Erst gibt man etwas zu, dann kommt mit *aber* das Wichtigere: *zwar … aber*. *Weder* steht mit *noch*, *sowohl* mit *als auch*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Zwar ___ teuer, aber das Essen ist super.
+    options: [das Hotel ist, ist das Hotel, das Hotel sein]
+    answer: ist das Hotel
+    explanation:
+      en: "*Zwar* is position 1 here, so the verb *ist* comes next, then the subject."
+      fa: "این‌جا *zwar* در جایگاه اول است، پس فعل *ist* پس از آن می‌آید و سپس فاعل."
+      de: "Hier ist *zwar* Position 1. Dann kommt das Verb *ist* und danach das Subjekt."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich habe zwar wenig Zeit, aber ___ dir gern.
+    options: [ich helfe, helfe ich, ich helfen]
+    answer: ich helfe
+    explanation:
+      en: "*Aber* is position 0, so the subject *ich* comes first, then the verb *helfe*."
+      fa: "*aber* در جایگاه صفر است، پس نخست فاعل *ich* می‌آید و سپس فعل *helfe*."
+      de: "*Aber* steht auf Position 0. Zuerst das Subjekt *ich*, dann das Verb *helfe*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Das Auto ist zwar alt, aber es fährt noch gut.
+    options:
+      [
+        Das Auto ist neu und fährt gut.,
+        Das Auto ist alt und fährt nicht mehr.,
+        Das Auto ist alt. Trotzdem fährt es gut.,
+      ]
+    answer: Das Auto ist alt. Trotzdem fährt es gut.
+    explanation:
+      en: "*Zwar* grants that the car is old; *aber* says what matters more: it still runs well."
+      fa: "*zwar* می‌پذیرد که ماشین قدیمی است و *aber* نکتهٔ مهم‌تر را می‌گوید: هنوز خوب کار می‌کند."
+      de: "Mit *zwar* gibt man zu: Das Auto ist alt. Mit *aber* kommt das Wichtigere: Es fährt noch gut."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Welcher Satz ist richtig?"
+    options:
+      [
+        "Zwar ist das Zimmer klein, aber es ist hell.",
+        "Zwar das Zimmer ist klein, aber es ist hell.",
+        "Zwar ist das Zimmer klein, aber ist es hell.",
+      ]
+    answer: Zwar ist das Zimmer klein, aber es ist hell.
+    explanation:
+      en: "*Zwar* in position 1 is followed by the verb; after *aber* in position 0 comes statement order."
+      fa: "پس از *zwar* در جایگاه اول فعل می‌آید؛ پس از *aber* در جایگاه صفر ترتیب جملهٔ خبری می‌آید."
+      de: "Nach *zwar* auf Position 1 kommt das Verb. Nach *aber* auf Position 0 kommt ein normaler Aussagesatz."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Der Film war zwar lang, ___.
+    options: [sondern er war spannend, aber er war spannend, aber war er spannend]
+    answer: aber er war spannend
+    explanation:
+      en: "*Zwar* goes with *aber*, and after *aber* the subject *er* comes before the verb."
+      fa: "*zwar* با *aber* می‌آید و پس از *aber* فاعل *er* پیش از فعل می‌آید."
+      de: "Zu *zwar* gehört *aber*. Nach *aber* kommt das Subjekt *er* vor dem Verb."
+  - id: true-1
+    type: true-false
+    prompt: Er spricht zwar gut Deutsch, aber er schreibt nicht gern.
+    answer: true
+    explanation:
+      en: "*Zwar* after the verb in the first clause, *aber* in position 0 before the second. The sentence is correct."
+      fa: "*zwar* پس از فعل در جملهٔ اول آمده و *aber* در جایگاه صفر پیش از جملهٔ دوم. جمله درست است."
+      de: "*Zwar* steht im ersten Satz nach dem Verb, *aber* auf Position 0 vor dem zweiten. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Zwar die Prüfung war schwer, aber ich habe sie bestanden.
+    answer: false
+    explanation:
+      en: "*Zwar* at the start is position 1, so the verb comes next: *Zwar war die Prüfung schwer*."
+      fa: "*zwar* در آغاز جمله جایگاه اول است، پس فعل پس از آن می‌آید: *Zwar war die Prüfung schwer*."
+      de: "*Zwar* am Anfang ist Position 1. Dann kommt das Verb: *Zwar war die Prüfung schwer*."
+  - id: true-3
+    type: true-false
+    prompt: Der Film war zwar lang, er war aber spannend.
+    answer: true
+    explanation:
+      en: "*Aber* may also stand inside the second clause, after the verb. The sentence is correct."
+      fa: "*aber* می‌تواند درون جملهٔ دوم و پس از فعل نیز بیاید. جمله درست است."
+      de: "*Aber* kann auch im zweiten Satz nach dem Verb stehen. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Das Essen ist zwar gut, sondern es ist teuer.
+    answer: false
+    explanation:
+      en: "*Zwar* goes with *aber*: *aber es ist teuer*."
+      fa: "*zwar* با *aber* می‌آید: *aber es ist teuer*."
+      de: "Zu *zwar* gehört *aber*: *aber es ist teuer*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das Wetter war zwar kalt, ___ es war sonnig.
+    answers: [aber, doch, jedoch]
+    explanation:
+      en: "*Zwar* is answered by *aber* (or *doch*, *jedoch*)."
+      fa: "جفت *zwar*، *aber* است (یا *doch* و *jedoch*)."
+      de: "Zu *zwar* gehört *aber* (oder *doch*, *jedoch*)."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Zwar ___ (sein) die Wohnung klein, aber sie ist hell.
+    answers: [ist]
+    explanation:
+      en: "*Zwar* is position 1, so the verb comes next: *ist die Wohnung*."
+      fa: "*zwar* در جایگاه اول است، پس فعل پس از آن می‌آید: *ist die Wohnung*."
+      de: "*Zwar* ist Position 1. Dann kommt das Verb: *ist die Wohnung*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich bin zwar müde, aber ich ___ (gehen) noch ins Kino.
+    answers: [gehe]
+    explanation:
+      en: "After *aber ich* the verb comes in position 2, with the ending for *ich*: *gehe*."
+      fa: "پس از *aber ich*، فعل با شناسهٔ *ich* در جایگاه دوم می‌آید: *gehe*."
+      de: "Nach *aber ich* steht das Verb auf Position 2, mit der Endung für *ich*: *gehe*."
+  - id: error-1
+    type: find-error
+    prompt: Das Hotel ist zwar teuer, sondern es ist sehr schön.
+    answer: sondern
+    explanation:
+      en: "*Zwar* goes with *aber*: *aber es ist sehr schön*."
+      fa: "*zwar* با *aber* می‌آید: *aber es ist sehr schön*."
+      de: "Zu *zwar* gehört *aber*: *aber es ist sehr schön*."
+  - id: error-2
+    type: find-error
+    prompt: Es war zwar sonnig, oder es war sehr kalt.
+    answer: oder
+    explanation:
+      en: "A point granted with *zwar*, then the stronger one with *aber*: *aber es war sehr kalt*."
+      fa: "نکته‌ای با *zwar* پذیرفته شده و نکتهٔ مهم‌تر با *aber* می‌آید: *aber es war sehr kalt*."
+      de: "Mit *zwar* gibt man etwas zu, dann kommt *aber*: *aber es war sehr kalt*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["zwar ist das Zimmer klein,", aber, es, ist sehr hell]
+    explanation:
+      en: "*Aber* is position 0, then statement order: *es ist sehr hell*."
+      fa: "*aber* در جایگاه صفر است و سپس ترتیب جملهٔ خبری می‌آید: *es ist sehr hell*."
+      de: "*Aber* steht auf Position 0. Dann kommt ein Aussagesatz: *es ist sehr hell*."
+  - id: order-2
+    type: word-order
+    answers:
+      - [das Auto, ist, zwar, "alt,", aber es fährt noch gut]
+      - [zwar, ist, das Auto, "alt,", aber es fährt noch gut]
+    explanation:
+      en: "*Zwar* stands after the verb (*das Auto ist zwar alt*) or in position 1, with the verb right after it (*Zwar ist das Auto alt*)."
+      fa: "*zwar* یا پس از فعل می‌آید (*das Auto ist zwar alt*) یا در جایگاه اول و فعل بی‌درنگ پس از آن (*Zwar ist das Auto alt*)."
+      de: "*Zwar* steht nach dem Verb (*das Auto ist zwar alt*) oder auf Position 1, dann direkt mit dem Verb (*Zwar ist das Auto alt*)."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question, then typed-gap-1 again after its prompt was
+    tightened; not people)"
+  date: 2026-11-28
+  pool: b258eb28227478c7

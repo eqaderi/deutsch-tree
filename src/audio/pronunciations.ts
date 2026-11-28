@@ -117,4 +117,25 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Profi: 'Proh-fi',
   // #99: "Azubi" alone comes out as [ˈatsuːbˌiː], heard as "A zu B"; the h gives [atsˈuːbiː].
   Azubi: 'Azuhbi',
+
+  // #94: stressed on the first syllable, [ˈzeːməstɐ]; the hyphen stresses "mes" as German does.
+  Semester: 'Se-mester',
+  // #94: stressed on the first syllable, [ˈzeːminaːɐ]; the hyphen stresses "nar".
+  Seminar: 'Semi-nar',
+  // #94: read as German, [ˈrɛçɐçə]; this spelling gives the French "sch" and the stress on "scher".
+  Recherche: 'Re-scherrsche',
+  // #94: "fss" is read as "fs" + "ch", [bəˈrʊfsçuːlə]; the hyphen keeps "schule" whole.
+  Berufsschule: 'Berufs-schule',
+
+  // #97: read letter by letter in the German way, [hˈoːmeːˌɔfiːkə]; the hyphen gives [hˈoːmˈɔfɪs].
+  Homeoffice: 'Hohm-offis',
+  // #96: stressed on "gend", [nɪɾɡˈɛndvoː]; this spelling gives [ˈnɪɾɡəndvˌoː].
+  nirgendwo: 'nirgendwoh',
+  // #96: stressed on "hin" only; this spelling gives [hˌɪntɜhˈeːɾ].
+  hinterher: 'hinterheer',
+  // #96: stressed on the first "so"; the hyphens stress the last one, [zoːviːzˈoː].
+  sowieso: 'so-wie-so',
+  // #96: stressed on the first syllable; the hyphen stresses "mal" too, as German does.
+  minimal: 'mini-mal',
+  maximal: 'maxi-mal',
 }

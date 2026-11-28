@@ -1,35 +1,324 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-learning-languages
 kind: vocabulary
 level: B1
 chapter: b1-words-learning
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Learning and languages"
   fa: "یادگیری و زبان‌ها"
   de: "Lernen und Sprachen"
+attemptSize: 15
 words:
   - word: Wissen
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: knowledge
+      fa: دانش، دانسته‌ها
+    definition: alles, was man weiß und gelernt hat
+    example:
+      de: Mit diesem Quiz können Sie Ihr Wissen testen.
+      en: With this quiz you can test your knowledge.
+      fa: با این مسابقه می‌توانید دانسته‌هایتان را بسنجید.
+    alsoAccepted: [die Kenntnisse, die Kenntnis]
+
+  # Fremdsprache and Zweitsprache are both a language that is not your first.
   - word: Fremdsprache
+    class: noun
+    article: die
+    plural: Fremdsprachen
+    level: B1
+    meaning:
+      en: foreign language
+      fa: زبان خارجی
+    definition: eine Sprache, die nicht die eigene ist und die man lernt, oft in der Schule
+    example:
+      de: Englisch ist für viele Deutsche die erste Fremdsprache.
+      en: For many Germans English is their first foreign language.
+      fa: انگلیسی برای بسیاری از آلمانی‌ها نخستین زبان خارجی است.
+    tooCloseTo: [Zweitsprache]
+
   - word: Muttersprache
+    class: noun
+    article: die
+    plural: Muttersprachen
+    level: B1
+    meaning:
+      en: mother tongue, native language
+      fa: زبان مادری
+    definition: die Sprache, die man als kleines Kind zuerst gelernt hat
+    example:
+      de: Meine Muttersprache ist Persisch, aber zu Hause sprechen wir auch Deutsch.
+      en: My mother tongue is Persian, but at home we also speak German.
+      fa: زبان مادری‌ام فارسی است، اما در خانه آلمانی هم حرف می‌زنیم.
+
   - word: Zweitsprache
+    class: noun
+    article: die
+    plural: Zweitsprachen
+    level: B1
+    meaning:
+      en: second language (learned after your first and used in daily life)
+      fa: زبان دوم (که بعد از زبان مادری یاد می‌گیرند و هر روز به کار می‌برند)
+    definition: eine Sprache, die man nach der ersten lernt und im Alltag braucht, zum Beispiel in einem neuen Land
+    example:
+      de: An vielen Schulen gibt es Unterricht in Deutsch als Zweitsprache.
+      en: Many schools offer lessons in German as a second language.
+      fa: در بسیاری از مدرسه‌ها کلاس آلمانی به‌عنوان زبان دوم برگزار می‌شود.
+    tooCloseTo: [Fremdsprache]
+
   - word: Dialekt
+    class: noun
+    article: der
+    plural: Dialekte
+    level: B1
+    meaning:
+      en: dialect
+      fa: گویش، لهجهٔ محلی
+    definition: die Sprache, wie man sie nur in einer Region spricht, zum Beispiel in Bayern
+    example:
+      de: Mein Opa spricht einen starken Dialekt, den ich kaum verstehe.
+      en: My grandpa speaks a strong dialect that I can hardly understand.
+      fa: پدربزرگم با گویش غلیظی حرف می‌زند که به‌زحمت آن را می‌فهمم.
+    alsoAccepted: [die Mundart]
+
   - word: Aussprache
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: pronunciation
+      fa: تلفظ
+    definition: wie man ein Wort oder eine Sprache spricht, wie es klingt
+    example:
+      de: Ihre Aussprache ist schon sehr gut.
+      en: Your pronunciation is already very good.
+      fa: تلفظتان همین حالا هم خیلی خوب است.
+
   - word: Alphabet
+    class: noun
+    article: das
+    plural: Alphabete
+    level: B1
+    meaning:
+      en: alphabet
+      fa: الفبا
+    definition: alle Buchstaben einer Sprache in ihrer festen Reihenfolge
+    example:
+      de: Die Kinder lernen das Alphabet in der ersten Klasse.
+      en: The children learn the alphabet in year one.
+      fa: بچه‌ها الفبا را در کلاس اول یاد می‌گیرند.
+
   - word: Lexikon
+    class: noun
+    article: das
+    plural: Lexika
+    level: B1
+    meaning:
+      en: encyclopedia
+      fa: دانشنامه، دائرةالمعارف
+    definition: ein Buch oder eine Webseite mit Informationen zu sehr vielen Themen, von A bis Z
+    example:
+      de: Früher hat man im Lexikon nachgeschlagen, heute sucht man im Internet.
+      en: In the past people looked things up in an encyclopedia; today they search the internet.
+      fa: قدیم مطالب را در دانشنامه پیدا می‌کردند، امروز در اینترنت جست‌وجو می‌کنند.
+    alsoAccepted: [die Enzyklopädie]
+
   - word: nachschlagen
+    class: verb
+    level: B1
+    meaning:
+      en: to look up (in a dictionary or a book)
+      fa: پیدا کردن، جست‌وجو کردن (در فرهنگ لغت یا کتاب)
+    definition: in einem Buch oder Wörterbuch eine Information suchen
+    example:
+      de: Wenn ich ein Wort nicht kenne, schlage ich es im Wörterbuch nach.
+      en: When I don't know a word, I look it up in the dictionary.
+      fa: وقتی واژه‌ای را نمی‌دانم، آن را در فرهنگ لغت پیدا می‌کنم.
+    alsoAccepted: [nachsehen]
+
   - word: abschreiben
+    class: verb
+    level: B1
+    meaning:
+      en: to copy (a text, or from someone else in a test)
+      fa: رونویسی کردن، از روی دست دیگری نوشتن
+    definition: einen Text genau so schreiben, wie er schon irgendwo steht, oft heimlich in einer Prüfung
+    example:
+      de: In der Prüfung darf man nicht vom Nachbarn abschreiben.
+      en: In the exam you mustn't copy from the person next to you.
+      fa: در امتحان نباید از روی دست بغل‌دستی نوشت.
+
   - word: aufschreiben
+    class: verb
+    level: B1
+    meaning:
+      en: to write down, to note down
+      fa: یادداشت کردن، نوشتن (برای فراموش نکردن)
+    definition: etwas auf Papier schreiben, damit man es nicht vergisst
+    example:
+      de: Schreib dir die neuen Wörter auf!
+      en: Write down the new words!
+      fa: واژه‌های تازه را یادداشت کن!
+    alsoAccepted: [notieren]
+
   - word: vorlesen
+    class: verb
+    level: B1
+    meaning:
+      en: to read aloud (to someone)
+      fa: بلند خواندن (برای کسی)
+    definition: einen Text laut lesen, damit andere ihn hören
+    example:
+      de: Abends liest meine Frau den Kindern eine Geschichte vor.
+      en: In the evenings my wife reads the children a story.
+      fa: شب‌ها همسرم برای بچه‌ها قصه می‌خواند.
+
   - word: unterstreichen
+    class: verb
+    level: B1
+    meaning:
+      en: to underline
+      fa: زیر چیزی خط کشیدن
+    definition: einen Strich unter ein Wort oder einen Satz machen
+    example:
+      de: Unterstreichen Sie alle Verben im Text.
+      en: Underline all the verbs in the text.
+      fa: زیر همهٔ فعل‌های متن خط بکشید.
+
+  # Fähigkeit and Talent can both be "a gift for something".
   - word: Fähigkeit
+    class: noun
+    article: die
+    plural: Fähigkeiten
+    level: B1
+    meaning:
+      en: ability, skill
+      fa: توانایی، مهارت
+    definition: das Können, das man braucht, um etwas zu tun, zum Beispiel gut zuhören oder schnell rechnen
+    example:
+      de: Für diesen Beruf braucht man die Fähigkeit, gut zuzuhören.
+      en: For this job you need the ability to listen well.
+      fa: برای این شغل باید توانایی خوب گوش دادن داشت.
+    alsoAccepted: [die Fertigkeit]
+    tooCloseTo: [Talent]
+
   - word: Intelligenz
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: intelligence
+      fa: هوش
+    definition: wie gut und schnell eine Person denken und Probleme lösen kann
+    example:
+      de: Intelligenz allein reicht nicht, man muss auch fleißig sein.
+      en: Intelligence alone isn't enough; you also have to work hard.
+      fa: هوش به‌تنهایی کافی نیست؛ باید سخت‌کوش هم بود.
+
   - word: Talent
+    class: noun
+    article: das
+    plural: Talente
+    level: B1
+    meaning:
+      en: talent, gift (for something)
+      fa: استعداد
+    definition: wenn man etwas von Natur aus sehr gut kann, ohne viel zu üben
+    example:
+      de: Sie hat großes Talent für Sprachen.
+      en: She has a great talent for languages.
+      fa: او استعداد زیادی در یادگیری زبان دارد.
+    alsoAccepted: [die Begabung]
+    tooCloseTo: [Fähigkeit]
+
   - word: konzentrieren
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to concentrate
+      fa: تمرکز کردن
+    definition: mit allen Gedanken nur bei einer Sache sein
+    example:
+      de: Bei dem Lärm kann ich mich nicht konzentrieren.
+      en: I can't concentrate with this noise.
+      fa: با این سر و صدا نمی‌توانم تمرکز کنم.
+
   - word: aufmerksam
+    class: adjective
+    level: B1
+    meaning:
+      en: attentive, paying close attention
+      fa: با دقت، حواس‌جمع
+    definition: so, dass man genau zuhört und hinsieht
+    example:
+      de: Die Kinder hören der Geschichte aufmerksam zu.
+      en: The children listen attentively to the story.
+      fa: بچه‌ها با دقت به قصه گوش می‌دهند.
+
   - word: fließend
+    class: adjective
+    level: B1
+    meaning:
+      en: fluent, fluently (of speaking a language)
+      fa: روان (دربارهٔ صحبت کردن به یک زبان)
+    definition: ohne Pausen und ohne Probleme gesprochen
+    example:
+      de: Nach drei Jahren in Berlin spricht er fließend Deutsch.
+      en: After three years in Berlin he speaks fluent German.
+      fa: پس از سه سال زندگی در برلین، روان آلمانی حرف می‌زند.
+
   - word: mündlich
+    class: adjective
+    level: B1
+    meaning:
+      en: oral, spoken
+      fa: شفاهی
+    definition: gesprochen, nicht geschrieben
+    example:
+      de: Die mündliche Prüfung ist am Nachmittag.
+      en: The oral exam is in the afternoon.
+      fa: امتحان شفاهی بعدازظهر است.
+
   - word: unterrichten
+    class: verb
+    level: B1
+    meaning:
+      en: to teach
+      fa: درس دادن، تدریس کردن
+    definition: in einer Schule oder einem Kurs Schülern etwas beibringen
+    example:
+      de: Frau Schulz unterrichtet Deutsch und Musik.
+      en: Ms Schulz teaches German and music.
+      fa: خانم شولتس آلمانی و موسیقی درس می‌دهد.
+    alsoAccepted: [lehren, beibringen]
+
   - word: Lehre
+    class: noun
+    article: die
+    plural: Lehren
+    level: B1
+    meaning:
+      en: apprenticeship
+      fa: دورهٔ کارآموزی (برای یادگیری یک حرفه)
+    definition: die Zeit, in der man in einer Firma einen Beruf lernt, zum Beispiel als Bäcker
+    example:
+      de: Nach der Schule hat er eine Lehre als Elektriker gemacht.
+      en: After school he did an apprenticeship as an electrician.
+      fa: او بعد از مدرسه دورهٔ کارآموزی برق‌کاری را گذراند.
+    alsoAccepted: [die Ausbildung]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 132 questions, then the 5 changed after the first one's
+    answers; not people)"
+  date: 2026-11-28
+  pool: 87da2bd7c1376bae
