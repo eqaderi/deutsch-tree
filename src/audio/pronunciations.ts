@@ -69,4 +69,13 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Diät: 'Di-ät',
   // #90: stressed on "So"; the hyphens stress "zial" and "arbeiter" as German does.
   Sozialarbeiter: 'So-zial-arbeiter',
+  // #96: stressed on "gend", [nɪɾɡˈɛndvoː]; this spelling gives [ˈnɪɾɡəndvˌoː].
+  nirgendwo: 'nirgendwoh',
+  // #96: stressed on "hin" only; this spelling gives [hˌɪntɜhˈeːɾ].
+  hinterher: 'hinterheer',
+  // #96: stressed on the first "so"; the hyphens stress the last one, [zoːviːzˈoː].
+  sowieso: 'so-wie-so',
+  // #96: stressed on the first syllable; the hyphen stresses "mal" too, as German does.
+  minimal: 'mini-mal',
+  maximal: 'maxi-mal',
 }

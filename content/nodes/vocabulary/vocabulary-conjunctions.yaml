@@ -1,34 +1,304 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A definition in simple German shows the word's place in a sentence with "…", since a small
+# word is hard to say in other words. "während" is taught as the conjunction (the scope list's
+# class), "soviel" as "soviel ich weiß". A two-part connector is written with "…" between its
+# parts, which few keyboards have, so it also accepts "..." and the parts with a space between.
+# Pairs that are easy to confuse (damit, sodass, um … zu; obwohl, trotz; statt, sondern) are
+# never offered as a wrong meaning of each other.
 id: vocabulary-conjunctions
 kind: vocabulary
 level: B1
 chapter: b1-words-time-amounts
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Although, as soon as, in order to: conjunctions"
   fa: "اگرچه، همین‌که، برای اینکه: حرف‌های ربط"
   de: "Obwohl, sobald, um … zu: Konjunktionen"
+attemptSize: 15
 words:
   - word: sobald
+    class: conjunction
+    level: B1
+    meaning:
+      en: as soon as
+      fa: همین‌که، به محض اینکه
+    definition: "gleich in dem Moment, wenn etwas passiert ist: Ich rufe dich an, … ich zu Hause bin."
+    example:
+      de: Ich rufe dich an, sobald ich in Berlin angekommen bin.
+      en: I'll call you as soon as I've arrived in Berlin.
+      fa: همین‌که به برلین رسیدم، به تو زنگ می‌زنم.
+    alsoAccepted: [sowie]
+
   - word: solange
+    class: conjunction
+    level: B1
+    meaning:
+      en: as long as (for the whole time that)
+      fa: تا وقتی که، در تمام مدتی که
+    definition: "die ganze Zeit, in der etwas so ist: … du Fieber hast, bleibst du im Bett."
+    example:
+      de: Solange es regnet, bleiben die Kinder im Haus.
+      en: As long as it's raining, the children are staying indoors.
+      fa: تا وقتی باران می‌بارد، بچه‌ها در خانه می‌مانند.
+
   - word: bevor
+    class: conjunction
+    level: B1
+    meaning:
+      en: before (+ a clause)
+      fa: پیش از آنکه، قبل از اینکه
+    definition: "früher als etwas anderes: … wir essen, waschen wir uns die Hände."
+    example:
+      de: Bevor ich zur Arbeit gehe, trinke ich einen Kaffee.
+      en: Before I go to work, I have a coffee.
+      fa: پیش از آنکه سر کار بروم، یک قهوه می‌نوشم.
+    alsoAccepted: [ehe]
+
   - word: nachdem
+    class: conjunction
+    level: B1
+    meaning:
+      en: after (+ a clause)
+      fa: پس از آنکه، بعد از اینکه
+    definition: "wenn eine Sache schon fertig ist, kommt die nächste: … er gegessen hatte, ging er schlafen."
+    example:
+      de: Nachdem wir das Museum besucht hatten, gingen wir essen.
+      en: After we had visited the museum, we went for a meal.
+      fa: پس از آنکه از موزه بازدید کردیم، برای غذا خوردن رفتیم.
+
   - word: während
+    class: conjunction
+    level: B1
+    meaning:
+      en: while (at the same time as)
+      fa: در حالی که، هنگامی که
+    definition: "in der gleichen Zeit, in der etwas anderes passiert: … ich koche, hört mein Mann Musik."
+    example:
+      de: Während ich koche, deckt mein Sohn den Tisch.
+      en: While I cook, my son lays the table.
+      fa: در حالی که من آشپزی می‌کنم، پسرم میز را می‌چیند.
+    tooCloseTo: [solange]
+
   - word: falls
+    class: conjunction
+    level: B1
+    meaning:
+      en: in case, if (it should happen)
+      fa: در صورتی که، اگر احیاناً
+    definition: "für den Fall, dass: … es regnet, bleiben wir zu Hause."
+    example:
+      de: Falls du später kommst, schreib mir bitte eine Nachricht.
+      en: In case you come later, please send me a message.
+      fa: اگر احیاناً دیرتر آمدی، لطفاً برایم پیام بفرست.
+    alsoAccepted: [wenn, sofern]
+
   - word: indem
+    class: conjunction
+    level: B1
+    meaning:
+      en: by (doing something)
+      fa: با این کار که، از این راه که
+    definition: "sagt, wie man etwas macht, mit welchem Mittel: Man lernt eine Sprache, … man viel spricht."
+    example:
+      de: Man lernt eine Sprache am besten, indem man viel mit Leuten spricht.
+      en: You learn a language best by talking to people a lot.
+      fa: زبان را از همه بهتر با زیاد حرف زدن با مردم یاد می‌گیرند.
+
   - word: ob
+    class: conjunction
+    level: B1
+    meaning:
+      en: whether (in an indirect yes-or-no question)
+      fa: آیا، که آیا (در پرسش غیرمستقیم)
+    definition: "für eine Frage mit Ja oder Nein in einem Nebensatz: Ich weiß nicht, … er heute kommt."
+    example:
+      de: Weißt du, ob die Apotheke am Samstag geöffnet ist?
+      en: Do you know whether the pharmacy is open on Saturday?
+      fa: می‌دانی که آیا داروخانه شنبه باز است؟
+
   - word: obwohl
+    class: conjunction
+    level: B1
+    meaning:
+      en: although (+ a clause)
+      fa: با اینکه، اگرچه (همراه جمله)
+    definition: "man denkt, etwas passiert nicht, aber es passiert doch: Er geht spazieren, … es regnet."
+    example:
+      de: Obwohl sie müde war, ist sie noch ins Kino gegangen.
+      en: Although she was tired, she still went to the cinema.
+      fa: با اینکه خسته بود، باز هم به سینما رفت.
+    alsoAccepted: [obgleich, obschon, wenngleich]
+    tooCloseTo: [trotz]
+
   - word: sodass
+    class: conjunction
+    level: B1
+    meaning:
+      en: so that (with the result that)
+      fa: به‌طوری که، چنان‌که (نتیجه)
+    definition: "nennt die Folge von etwas: Es regnete stark, … das Spiel ausfallen musste."
+    example:
+      de: Der Zug hatte Verspätung, sodass ich den Anschluss verpasst habe.
+      en: The train was late, so that I missed my connection.
+      fa: قطار تأخیر داشت، به‌طوری که به قطار بعدی‌ام نرسیدم.
+    alsoAccepted: [so dass]
+    tooCloseTo: [damit]
+
   - word: damit
+    class: conjunction
+    level: B1
+    meaning:
+      en: so that (with a goal), in order that
+      fa: تا، برای اینکه (هدف)
+    definition: "nennt das Ziel, mit einem eigenen Subjekt: Ich spreche laut, … alle mich hören."
+    example:
+      de: Ich schreibe dir die Adresse auf, damit du sie nicht vergisst.
+      en: I'll write the address down for you so that you don't forget it.
+      fa: نشانی را برایت می‌نویسم تا فراموشش نکنی.
+    tooCloseTo: [um … zu]
+
   - word: als ob
+    class: conjunction
+    level: B1
+    meaning:
+      en: as if, as though
+      fa: انگار که، مثل اینکه
+    definition: "so, wie es aussieht, aber es ist vielleicht nicht wahr: Er tut so, … er nichts gehört hätte."
+    example:
+      de: Er tut so, als ob er mich nicht kennen würde.
+      en: He acts as if he didn't know me.
+      fa: طوری رفتار می‌کند که انگار مرا نمی‌شناسد.
+    alsoAccepted: [als wenn, wie wenn]
+
   - word: sondern
+    class: conjunction
+    level: B1
+    meaning:
+      en: but (rather), after a negative
+      fa: بلکه
+    definition: "nach „nicht“ oder „kein“, für das Richtige: Ich komme nicht heute, … morgen."
+    example:
+      de: Das ist kein Tee, sondern Kaffee.
+      en: That isn't tea, it's coffee.
+      fa: این چای نیست، بلکه قهوه است.
+    tooCloseTo: [statt]
+
   - word: "entweder … oder"
+    class: conjunction
+    level: B1
+    meaning:
+      en: either … or
+      fa: یا … یا
+    definition: "nur eine von zwei Möglichkeiten, nicht beide: Wir fahren … ans Meer … in die Berge."
+    example:
+      de: Wir fahren im Sommer entweder nach Italien oder nach Spanien.
+      en: In the summer we're going either to Italy or to Spain.
+      fa: تابستان یا به ایتالیا می‌رویم یا به اسپانیا.
+    alsoAccepted: ["entweder ... oder", "entweder...oder", "entweder…oder", "entweder oder"]
+
   - word: "weder … noch"
+    class: conjunction
+    level: B1
+    meaning:
+      en: neither … nor
+      fa: نه … نه
+    definition: "nicht das eine und auch nicht das andere: Er trinkt … Kaffee … Tee."
+    example:
+      de: Ich habe weder Zeit noch Lust auf eine Party.
+      en: I have neither the time nor the wish to go to a party.
+      fa: نه وقت مهمانی دارم، نه حوصله‌اش را.
+    alsoAccepted: ["weder ... noch", "weder...noch", "weder…noch", "weder noch"]
+
   - word: "sowohl … als auch"
+    class: conjunction
+    level: B1
+    meaning:
+      en: both … and, … as well as …
+      fa: هم … هم
+    definition: "das eine und das andere, beide: Sie spricht … Englisch … Französisch."
+    example:
+      de: Sie spricht sowohl Englisch als auch Französisch.
+      en: She speaks both English and French.
+      fa: او هم انگلیسی صحبت می‌کند و هم فرانسوی.
+    alsoAccepted:
+      [
+        "sowohl ... als auch",
+        "sowohl...als auch",
+        "sowohl…als auch",
+        "sowohl als auch",
+        "sowohl … wie auch",
+        "sowohl ... wie auch",
+      ]
+
   - word: "je … desto"
+    class: conjunction
+    level: B1
+    meaning:
+      en: the more …, the more … (the …, the …)
+      fa: هرچه …، … (هرچه بیشتر، بهتر)
+    definition: "eine Sache wächst mit der anderen: … mehr ich übe, … besser spreche ich."
+    example:
+      de: Je mehr ich übe, desto besser spreche ich Deutsch.
+      en: The more I practise, the better I speak German.
+      fa: هرچه بیشتر تمرین می‌کنم، آلمانی را بهتر صحبت می‌کنم.
+    alsoAccepted: ["je ... desto", "je...desto", "je…desto", "je desto", "je … umso", "je ... umso"]
+
   - word: "um … zu"
+    class: conjunction
+    level: B1
+    meaning:
+      en: in order to (+ an infinitive)
+      fa: برای اینکه، به این منظور که (همراه مصدر)
+    definition: "nennt das Ziel, mit einem Infinitiv am Ende: Ich lerne Deutsch, … in Deutschland … arbeiten."
+    example:
+      de: Ich lerne Deutsch, um in Deutschland zu studieren.
+      en: I'm learning German in order to study in Germany.
+      fa: آلمانی یاد می‌گیرم تا در آلمان درس بخوانم.
+    alsoAccepted: ["um ... zu", "um...zu", "um…zu", "um zu"]
+
   - word: soviel
+    class: conjunction
+    level: B1
+    meaning:
+      en: as far as (as far as I know)
+      fa: تا جایی که (تا جایی که می‌دانم)
+    definition: "nach dem, was man weiß oder gehört hat: … ich weiß, ist das Büro heute geschlossen."
+    example:
+      de: Soviel ich weiß, ist die Bibliothek heute geschlossen.
+      en: As far as I know, the library is closed today.
+      fa: تا جایی که می‌دانم، کتابخانه امروز تعطیل است.
+    alsoAccepted: [soweit]
+
   - word: statt
+    class: preposition
+    level: B1
+    meaning:
+      en: instead of
+      fa: به جای
+    definition: "nicht diese Sache, eine andere: Ich trinke heute Tee … Kaffee."
+    example:
+      de: Statt eines Autos hat er sich ein Fahrrad gekauft.
+      en: Instead of a car, he bought himself a bicycle.
+      fa: او به جای ماشین برای خودش یک دوچرخه خرید.
+    alsoAccepted: [anstatt, anstelle, an Stelle]
+
   - word: trotz
+    class: preposition
+    level: B1
+    meaning:
+      en: despite, in spite of (+ a noun)
+      fa: با وجودِ، به‌رغمِ (همراه اسم)
+    definition: "auch wenn etwas dagegen spricht, mit einem Nomen: Wir gehen … des Regens spazieren."
+    example:
+      de: Trotz des schlechten Wetters sind wir wandern gegangen.
+      en: Despite the bad weather we went hiking.
+      fa: با وجود هوای بد، به پیاده‌روی رفتیم.
+    alsoAccepted: [ungeachtet]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 126, then 5 questions)
+  date: 2026-11-28
+  pool: a7af111849a2c94f

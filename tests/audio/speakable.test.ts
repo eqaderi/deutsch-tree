@@ -153,6 +153,12 @@ test.each([
   ['Beim Skifahren', 'Beim Schifahren'],
   ['eine Diät', 'eine Di-ät'],
   ['Ein Sozialarbeiter hilft.', 'Ein So-zial-arbeiter hilft.'],
+  // #96: the voice stresses the wrong syllable of these.
+  ['Ich finde sie nirgendwo.', 'Ich finde sie nirgendwoh.'],
+  ['Hinterher ist man klüger.', 'Hinterheer ist man klüger.'],
+  ['Ich fahre sowieso.', 'Ich fahre so-wie-so.'],
+  ['Der Unterschied ist minimal.', 'Der Unterschied ist mini-mal.'],
+  ['Maximal acht Personen.', 'Maxi-mal acht Personen.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })

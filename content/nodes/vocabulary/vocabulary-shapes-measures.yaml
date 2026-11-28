@@ -1,39 +1,363 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# "Kreuz" is taught as the mark on a form, "schätzen" as "to estimate" (the sense of the theme),
+# "quer" as "across". "doppelt" and "zweifach" overlap; they accept each other and are never
+# offered as a wrong meaning of each other.
 id: vocabulary-shapes-measures
 kind: vocabulary
 level: B1
 chapter: b1-words-time-amounts
 order: 8
-status: coming-soon
+status: published
 title:
   en: "Shapes and measures"
   fa: "شکل‌ها و اندازه‌ها"
   de: "Formen und Maße"
+attemptSize: 15
 words:
   - word: Form
+    class: noun
+    article: die
+    plural: Formen
+    level: B1
+    meaning:
+      en: shape, form
+      fa: شکل، فرم
+    definition: "wie etwas von außen aussieht, zum Beispiel rund oder mit Ecken: Der Tisch hat die … von einem Ei."
+    example:
+      de: Die Lampe hat die Form einer Kugel.
+      en: The lamp is in the shape of a ball.
+      fa: این چراغ به شکل یک گوی است.
+    alsoAccepted: [die Gestalt]
+
   - word: Kreis
+    class: noun
+    article: der
+    plural: Kreise
+    level: B1
+    meaning:
+      en: circle
+      fa: دایره
+    definition: "eine runde Linie, bei der jeder Punkt gleich weit von der Mitte weg ist"
+    example:
+      de: Die Kinder sitzen im Kreis auf dem Boden.
+      en: The children are sitting in a circle on the floor.
+      fa: بچه‌ها دایره‌وار روی زمین نشسته‌اند.
+
   - word: Kreuz
+    class: noun
+    article: das
+    plural: Kreuze
+    level: B1
+    meaning:
+      en: cross (a mark like x)
+      fa: علامت ضربدر، صلیب
+    definition: "zwei kurze Linien, die sich in der Mitte treffen: Machen Sie ein … in das richtige Kästchen."
+    example:
+      de: Machen Sie bitte ein Kreuz bei der richtigen Antwort.
+      en: Please put a cross by the right answer.
+      fa: لطفاً کنار پاسخ درست علامت ضربدر بگذارید.
+
   - word: Fläche
+    class: noun
+    article: die
+    plural: Flächen
+    level: B1
+    meaning:
+      en: area, surface
+      fa: سطح، مساحت
+    definition: "ein Stück Land oder Boden, das man in Quadratmetern misst: Der Garten hat eine … von hundert Quadratmetern."
+    example:
+      de: Die Wohnung hat eine Fläche von achtzig Quadratmetern.
+      en: The flat has an area of eighty square metres.
+      fa: این آپارتمان هشتاد متر مربع مساحت دارد.
+
   - word: Rand
+    class: noun
+    article: der
+    plural: Ränder
+    level: B1
+    meaning:
+      en: edge, rim
+      fa: لبه، کناره
+    definition: "die Linie oder der Teil ganz außen an einer Sache: Das Glas ist bis zum … voll."
+    example:
+      de: Wir wohnen am Rand der Stadt, direkt am Wald.
+      en: We live on the edge of the town, right by the forest.
+      fa: ما در حاشیهٔ شهر، درست کنار جنگل زندگی می‌کنیم.
+
   - word: Loch
+    class: noun
+    article: das
+    plural: Löcher
+    level: B1
+    meaning:
+      en: hole
+      fa: سوراخ
+    definition: "eine offene Stelle in etwas, durch die man hindurchsehen kann: Meine Socke hat ein …"
+    example:
+      de: In meiner Hose ist ein großes Loch.
+      en: There's a big hole in my trousers.
+      fa: شلوارم سوراخ بزرگی دارد.
+
   - word: eckig
+    class: adjective
+    level: B1
+    meaning:
+      en: with corners, square or angular (not round)
+      fa: گوشه‌دار (نه گرد)
+    definition: "mit Ecken, nicht rund: Der Tisch ist nicht rund, er ist …"
+    example:
+      de: Möchtest du einen runden oder einen eckigen Tisch?
+      en: Would you like a round table or a square one?
+      fa: میز گرد می‌خواهی یا گوشه‌دار؟
+
   - word: spitz
+    class: adjective
+    level: B1
+    meaning:
+      en: pointed, sharp (at the end)
+      fa: نوک‌تیز، تیز
+    definition: "mit einem sehr dünnen Ende wie eine Nadel: Der Bleistift ist ganz …"
+    example:
+      de: Vorsicht, das Messer ist sehr spitz!
+      en: Careful, the knife has a very sharp point!
+      fa: مواظب باش، نوک چاقو خیلی تیز است!
+
   - word: flach
+    class: adjective
+    level: B1
+    meaning:
+      en: flat, level
+      fa: صاف، هموار
+    definition: "ohne Berge und ohne hohe Teile: Im Norden ist das Land sehr …"
+    example:
+      de: Norddeutschland ist sehr flach, ideal zum Radfahren.
+      en: Northern Germany is very flat, ideal for cycling.
+      fa: شمال آلمان بسیار هموار است و برای دوچرخه‌سواری عالی است.
+    alsoAccepted: [eben]
+
   - word: schief
+    class: adjective
+    level: B1
+    meaning:
+      en: slanting, askew (tilted to one side)
+      fa: کج، مایل (به یک طرف)
+    definition: "nicht gerade, auf einer Seite höher als auf der anderen: Das Bild hängt …"
+    example:
+      de: Das Bild an der Wand hängt schief.
+      en: The picture on the wall is crooked.
+      fa: تابلوی روی دیوار کج است.
+    alsoAccepted: [schräg]
+
   - word: schmal
+    class: adjective
+    level: B1
+    meaning:
+      en: narrow
+      fa: باریک
+    definition: "nicht breit: Die Straße ist so …, dass zwei Autos nicht nebeneinander passen."
+    example:
+      de: Die Gassen in der Altstadt sind sehr schmal.
+      en: The lanes in the old town are very narrow.
+      fa: کوچه‌های شهر قدیمی بسیار باریک‌اند.
+    alsoAccepted: [eng]
+
   - word: steil
+    class: adjective
+    level: B1
+    meaning:
+      en: steep
+      fa: پرشیب، تند (سربالایی یا سرازیری)
+    definition: "es geht sehr schnell nach oben oder nach unten: Der Weg auf den Berg ist sehr …"
+    example:
+      de: Die Straße zur Burg ist steil.
+      en: The road to the castle is steep.
+      fa: جادهٔ قلعه پرشیب است.
+
   - word: senkrecht
+    class: adjective
+    level: B1
+    meaning:
+      en: vertical, upright
+      fa: عمودی
+    definition: "gerade von oben nach unten, wie eine Wand"
+    example:
+      de: Die Felswand geht fast senkrecht nach oben.
+      en: The rock face goes up almost vertically.
+      fa: دیوارهٔ صخره تقریباً عمودی بالا می‌رود.
+    alsoAccepted: [vertikal]
+
   - word: waagerecht
+    class: adjective
+    level: B1
+    meaning:
+      en: horizontal, level
+      fa: افقی
+    definition: "gerade von links nach rechts, wie der Boden oder ein Tisch"
+    example:
+      de: Das Regal hängt nicht waagerecht, die Bücher rutschen nach links.
+      en: The shelf isn't level; the books are sliding to the left.
+      fa: قفسه افقی نصب نشده، کتاب‌ها به سمت چپ سُر می‌خورند.
+    alsoAccepted: [waagrecht, horizontal]
+    tooCloseTo: [flach]
+
   - word: parallel
+    class: adjective
+    level: B1
+    meaning:
+      en: parallel
+      fa: موازی
+    definition: "zwei Linien gehen immer im gleichen Abstand nebeneinander: Die beiden Straßen laufen …"
+    example:
+      de: Die Bahnlinie verläuft parallel zur Autobahn.
+      en: The railway line runs parallel to the motorway.
+      fa: خط راه‌آهن به موازات بزرگراه کشیده شده است.
+
   - word: Länge
+    class: noun
+    article: die
+    plural: Längen
+    level: B1
+    meaning:
+      en: length
+      fa: طول، درازا
+    definition: "wie lang etwas ist, von einem Ende bis zum anderen: Der Tisch hat eine … von zwei Metern."
+    example:
+      de: Die Brücke hat eine Länge von dreihundert Metern.
+      en: The bridge has a length of three hundred metres.
+      fa: طول این پل سیصد متر است.
+
   - word: Breite
+    class: noun
+    article: die
+    plural: Breiten
+    level: B1
+    meaning:
+      en: width
+      fa: عرض، پهنا
+    definition: "wie weit etwas von der linken bis zur rechten Seite geht: Der Schrank hat eine … von einem Meter."
+    example:
+      de: Messen Sie bitte die Breite des Fensters.
+      en: Please measure the width of the window.
+      fa: لطفاً عرض پنجره را اندازه بگیرید.
+
   - word: Höhe
+    class: noun
+    article: die
+    plural: Höhen
+    level: B1
+    meaning:
+      en: height
+      fa: ارتفاع، بلندی
+    definition: "wie hoch etwas ist, von unten bis oben: Der Turm hat eine … von fünfzig Metern."
+    example:
+      de: Das Flugzeug fliegt in einer Höhe von zehn Kilometern.
+      en: The plane is flying at a height of ten kilometres.
+      fa: هواپیما در ارتفاع ده کیلومتری پرواز می‌کند.
+
   - word: quer
+    class: adverb
+    level: B1
+    meaning:
+      en: across, crosswise
+      fa: از عرض، به‌صورت عرضی
+    definition: "von einer Seite zur anderen, nicht der Länge nach: Das Auto steht … auf dem Parkplatz."
+    example:
+      de: Ein Baum liegt quer über der Straße.
+      en: A tree is lying across the road.
+      fa: درختی از عرض روی جاده افتاده است.
+
   - word: niedrig
+    class: adjective
+    level: B1
+    meaning:
+      en: low (not high)
+      fa: کوتاه، کم‌ارتفاع
+    definition: "nicht hoch: Die Decke ist so …, dass ich mit dem Kopf anstoße."
+    example:
+      de: Die Tür ist sehr niedrig, pass auf deinen Kopf auf!
+      en: The door is very low, mind your head!
+      fa: در خیلی کوتاه است، مواظب سرت باش!
+
   - word: riesig
+    class: adjective
+    level: B1
+    meaning:
+      en: huge, enormous
+      fa: بسیار بزرگ، غول‌آسا
+    definition: "sehr, sehr groß: Der neue Supermarkt ist …"
+    example:
+      de: Im Zoo haben wir einen riesigen Elefanten gesehen.
+      en: At the zoo we saw a huge elephant.
+      fa: در باغ‌وحش یک فیل غول‌آسا دیدیم.
+    alsoAccepted: [riesengroß, gewaltig, enorm, gigantisch]
+
   - word: doppelt
+    class: adjective
+    level: B1
+    meaning:
+      en: double, twice (as much)
+      fa: دوبرابر، دوتایی
+    definition: "zweimal so viel oder zweimal da: Die Miete ist jetzt … so hoch wie früher."
+    example:
+      de: Das Ticket kostet jetzt doppelt so viel wie letztes Jahr.
+      en: The ticket now costs twice as much as last year.
+      fa: بلیت حالا دوبرابر پارسال قیمت دارد.
+    alsoAccepted: [zweifach]
+    tooCloseTo: [zweifach]
+
   - word: zweifach
+    class: adjective
+    level: B1
+    meaning:
+      en: twofold, two times (over)
+      fa: دوگانه، دو بار
+    definition: "zwei Mal: Die Tür ist … abgeschlossen, mit zwei Schlössern."
+    example:
+      de: Sie ist zweifache Mutter und arbeitet als Ärztin.
+      en: She is a mother of two and works as a doctor.
+      fa: او مادرِ دو فرزند است و پزشک است.
+    alsoAccepted: [doppelt]
+
   - word: zählen
+    class: verb
+    level: B1
+    meaning:
+      en: to count
+      fa: شمردن
+    definition: "eins, zwei, drei … sagen, um zu wissen, wie viele es sind"
+    example:
+      de: Kannst du bitte zählen, wie viele Stühle wir haben?
+      en: Can you count how many chairs we have, please?
+      fa: لطفاً می‌توانی بشماری چند صندلی داریم؟
+
   - word: messen
+    class: verb
+    level: B1
+    meaning:
+      en: to measure
+      fa: اندازه گرفتن، سنجیدن
+    definition: "mit einem Maßband, einer Waage oder einem Thermometer feststellen, wie lang, schwer oder warm etwas ist"
+    example:
+      de: Die Ärztin hat mein Fieber gemessen.
+      en: The doctor took my temperature.
+      fa: پزشک تبم را اندازه گرفت.
+
   - word: schätzen
+    class: verb
+    level: B1
+    meaning:
+      en: to estimate, to guess (a number)
+      fa: تخمین زدن
+    definition: "eine Zahl ungefähr sagen, ohne genau zu messen oder zu zählen: Wie alt ist der Baum? Kannst du das …?"
+    example:
+      de: Ich schätze, dass etwa hundert Leute auf der Party waren.
+      en: I'd estimate that about a hundred people were at the party.
+      fa: تخمین می‌زنم حدود صد نفر در مهمانی بودند.
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 30 questions)
+  date: 2026-11-28
+  pool: 2a445b6600c59284
