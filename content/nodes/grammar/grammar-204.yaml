@@ -4,10 +4,394 @@ kind: grammar
 level: A2
 chapter: a2-reflexive-prepositional
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-096, grammar-126]
 title:
   en: "Verbs with fixed prepositions"
   fa: "فعل‌هایی با حرف اضافهٔ ثابت"
   de: "Verben mit festen Präpositionen"
+
+explanations:
+  en:
+    rule: >
+      Many verbs go with a fixed preposition: *warten auf* (to wait for),
+      *sich interessieren für* (to be interested in), *träumen von* (to dream
+      of). The preposition belongs to the verb and often differs from the
+      English one, so learn the verb with its preposition and its case:
+      *warten auf* + *Akkusativ*, *Ich warte auf den Bus.* The verb decides
+      the case, also after a two-way preposition: *denken an* takes the
+      *Akkusativ* (*an den Urlaub*), *teilnehmen an* the *Dativ* (*am Kurs*).
+      With these verbs *auf* and *über* mostly take the *Akkusativ*, *vor*
+      the *Dativ* (*Angst vor dem Hund*). After *mit*, *von*, *zu*, *bei* and
+      *nach* it is always the *Dativ*, after *für* and *um* always the
+      *Akkusativ*. One verb can take two prepositions with two meanings:
+      *sich freuen auf* is for something still to come (to look forward to),
+      *sich freuen über* for something that is here or has happened (to be
+      glad about). To ask about a person, put the preposition before *wen*
+      or *wem*: *Auf wen wartest du?* About a thing you ask with *wo(r)-*:
+      *Worauf wartest du?*, the next topic.
+  fa:
+    rule: >
+      بسیاری از فعل‌ها با حرف اضافهٔ ثابتی می‌آیند: *warten auf* (منتظر کسی
+      یا چیزی بودن)، *sich interessieren für* (به چیزی علاقه داشتن)، *träumen
+      von* (آرزوی چیزی را داشتن). این حرف اضافه جزئی از فعل است و اغلب با
+      حرف اضافهٔ فارسی جور درنمی‌آید؛ پس فعل را همراه حرف اضافه و حالتش یاد
+      بگیرید: *warten auf* با حالت *Akkusativ*، *Ich warte auf den Bus.* حالت
+      را فعل تعیین می‌کند، حتی پس از حرف اضافهٔ دوحالته: *denken an* با حالت
+      *Akkusativ* می‌آید (*an den Urlaub*) و *teilnehmen an* با حالت *Dativ*
+      (*am Kurs*). در این فعل‌ها *auf* و *über* بیشتر با حالت *Akkusativ*
+      می‌آیند و *vor* با حالت *Dativ* (*Angst vor dem Hund*). پس از *mit*،
+      *von*، *zu*، *bei* و *nach* همیشه حالت *Dativ* می‌آید و پس از *für* و
+      *um* همیشه حالت *Akkusativ*. یک فعل می‌تواند دو حرف اضافه با دو معنا
+      داشته باشد: *sich freuen auf* برای چیزی است که هنوز در پیش است (مشتاق
+      چیزی بودن) و *sich freuen über* برای چیزی که هست یا رخ داده است (از
+      چیزی خوشحال بودن). برای پرسیدن دربارهٔ شخص، حرف اضافه پیش از *wen* یا
+      *wem* می‌آید: *Auf wen wartest du?* دربارهٔ چیزها با *wo(r)-* می‌پرسیم:
+      *Worauf wartest du?* که موضوع درس بعدی است.
+  de:
+    rule: >
+      Viele Verben haben eine feste Präposition: *warten auf*, *sich
+      interessieren für*, *träumen von*. Die Präposition gehört zum Verb.
+      Lernen Sie das Verb darum mit Präposition und Kasus: *warten auf* +
+      Akkusativ, *Ich warte auf den Bus.* Das Verb bestimmt den Kasus, auch
+      bei Wechselpräpositionen: *denken an* + Akkusativ (*an den Urlaub*),
+      aber *teilnehmen an* + Dativ (*am Kurs*). Bei diesen Verben haben *auf*
+      und *über* meistens den Akkusativ, *vor* den Dativ (*Angst vor dem
+      Hund*). Nach *mit*, *von*, *zu*, *bei* und *nach* steht immer der
+      Dativ, nach *für* und *um* immer der Akkusativ. Ein Verb kann zwei
+      Präpositionen mit zwei Bedeutungen haben: *sich freuen auf* für etwas,
+      das noch kommt, *sich freuen über* für etwas, das schon da ist oder
+      passiert ist. Fragen nach Personen: Präposition + *wen* oder *wem*:
+      *Auf wen wartest du?* Fragen nach Sachen: mit *wo(r)-*, *Worauf wartest
+      du?* Das kommt im nächsten Thema.
+
+table:
+  columns:
+    - { en: Verb with preposition, fa: فعل و حرف اضافه, de: Verb mit Präposition }
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: After the preposition, fa: پس از حرف اضافه, de: Nach der Präposition }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [warten auf + Akkusativ, der Bus, auf den Bus, Ich warte auf den Bus.]
+    - [sich freuen auf + Akkusativ, der Urlaub, auf den Urlaub, Wir freuen uns auf den Urlaub.]
+    - [sich freuen über + Akkusativ, das Geschenk, über das Geschenk, Sie freut sich über das Geschenk.]
+    - [sich interessieren für + Akkusativ, das Angebot, für das Angebot, Ich interessiere mich für das Angebot.]
+    - [denken an + Akkusativ, die Kinder (Plural), an die Kinder, Sie denkt oft an die Kinder.]
+    - [sich kümmern um + Akkusativ, die Katze, um die Katze, Wer kümmert sich um die Katze?]
+    - [sich ärgern über + Akkusativ, der Fehler, über den Fehler, Er ärgert sich über den Fehler.]
+    - [Angst haben vor + Dativ, der Hund, vor dem Hund, Das Kind hat Angst vor dem Hund.]
+    - [teilnehmen an + Dativ, der Kurs, am Kurs (an dem Kurs), Ich nehme am Kurs teil.]
+    - [träumen von + Dativ, eine Reise, von einer Reise, Er träumt von einer Reise nach Japan.]
+    - [sprechen mit + Dativ, die Lehrerin, mit der Lehrerin, Ich spreche mit der Lehrerin.]
+    - [sich bedanken bei + Dativ, die Nachbarin, bei der Nachbarin, Ich bedanke mich bei der Nachbarin.]
+    - [gehören zu + Dativ, die Familie, zur Familie (zu der Familie), Der Hund gehört zur Familie.]
+
+examples:
+  - de: Ich warte schon seit zehn Minuten auf den Bus.
+    en: I've been waiting for the bus for ten minutes.
+    fa: ده دقیقه است که منتظر اتوبوسم.
+  - de: Wir freuen uns auf die Ferien.
+    en: We are looking forward to the holidays.
+    fa: مشتاق تعطیلات هستیم.
+  - de: Sie hat sich sehr über die Blumen gefreut.
+    en: She was very pleased with the flowers.
+    fa: از گل‌ها خیلی خوشحال شد.
+  - de: Interessierst du dich für Fußball?
+    en: Are you interested in football?
+    fa: به فوتبال علاقه داری؟
+  - de: Ich denke oft an meine Großeltern.
+    en: I often think of my grandparents.
+    fa: اغلب به پدربزرگ و مادربزرگم فکر می‌کنم.
+  - de: Wer kümmert sich um die Katze, wenn ihr im Urlaub seid?
+    en: Who looks after the cat when you are on holiday?
+    fa: وقتی به تعطیلات می‌روید، چه کسی از گربه مراقبت می‌کند؟
+  - de: Das Kind hat Angst vor dem Hund.
+    en: The child is afraid of the dog.
+    fa: بچه از سگ می‌ترسد.
+  - de: Nächste Woche nehme ich an einem Deutschkurs teil.
+    en: Next week I'm taking part in a German course.
+    fa: هفتهٔ آینده در یک کلاس آلمانی شرکت می‌کنم.
+  - de: Er träumt von einem eigenen Haus.
+    en: He dreams of a house of his own.
+    fa: آرزوی خانه‌ای از آن خودش را دارد.
+  - de: Wir haben lange über den Film gesprochen.
+    en: We talked about the film for a long time.
+    fa: مدت زیادی دربارهٔ فیلم حرف زدیم.
+  - de: Ich möchte mich bei Ihnen für die Hilfe bedanken.
+    en: I would like to thank you for your help.
+    fa: می‌خواهم از شما برای کمکتان تشکر کنم.
+  - de: Auf wen wartest du? – Auf meine Schwester.
+    en: Who are you waiting for? – For my sister.
+    fa: منتظر چه کسی هستی؟ – منتظر خواهرم.
+  - de: Mit wem hast du telefoniert? – Mit meinem Chef.
+    en: Who did you talk to on the phone? – With my boss.
+    fa: با چه کسی تلفنی حرف زدی؟ – با رئیسم.
+  - de: Das hängt vom Wetter ab.
+    en: That depends on the weather.
+    fa: این به هوا بستگی دارد.
+
+mistakes:
+  - wrong: Ich warte für den Bus.
+    right: Ich warte auf den Bus.
+    why:
+      en: 'English says "wait for", German says *warten auf*.'
+      fa: "در آلمانی حرف اضافهٔ این فعل *auf* است: *warten auf*."
+      de: "Das Verb heißt *warten auf*, nicht *für*."
+  - wrong: Ich interessiere mich in Musik.
+    right: Ich interessiere mich für Musik.
+    why:
+      en: 'English says "interested in", German says *sich interessieren für*.'
+      fa: "حرف اضافهٔ این فعل *für* است: *sich interessieren für*."
+      de: "Das Verb heißt *sich interessieren für*."
+  - wrong: Das Kind hat Angst vor den Hund.
+    right: Das Kind hat Angst vor dem Hund.
+    why:
+      en: "*Angst haben vor* takes the *Dativ*: *vor dem Hund*."
+      fa: "*Angst haben vor* با حالت *Dativ* می‌آید: *vor dem Hund*."
+      de: "*Angst haben vor* hat den Dativ: *vor dem Hund*."
+  - wrong: Nächste Woche haben wir Ferien. Wir freuen uns über die Ferien.
+    right: Nächste Woche haben wir Ferien. Wir freuen uns auf die Ferien.
+    why:
+      en: "The holidays are still to come, so *sich freuen auf*. *Über* is for what is already here."
+      fa: "تعطیلات هنوز در پیش است، پس *sich freuen auf* می‌آید. *über* برای چیزی است که اکنون هست یا رخ داده است."
+      de: "Die Ferien kommen noch. Darum *sich freuen auf*. *Über* sagt man, wenn etwas schon da ist."
+  - wrong: Ich denke oft an dir.
+    right: Ich denke oft an dich.
+    why:
+      en: "*Denken an* takes the *Akkusativ*: *an dich*."
+      fa: "*denken an* با حالت *Akkusativ* می‌آید: *an dich*."
+      de: "*Denken an* hat den Akkusativ: *an dich*."
+  - wrong: Wen wartest du?
+    right: Auf wen wartest du?
+    why:
+      en: "The preposition belongs to the verb, so it stays in the question: *auf wen*."
+      fa: "حرف اضافه جزئی از فعل است و در پرسش هم می‌ماند: *auf wen*."
+      de: "Die Präposition gehört zum Verb. Sie steht auch in der Frage: *auf wen*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich warte schon lange ___ dich.
+    options: [auf, für, an]
+    answer: auf
+    explanation:
+      en: "The verb is *warten auf*."
+      fa: "حرف اضافهٔ این فعل *auf* است: *warten auf*."
+      de: "Das Verb heißt *warten auf*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Interessierst du dich ___ Sport?
+    options: [für, an, in]
+    answer: für
+    explanation:
+      en: "The verb is *sich interessieren für*."
+      fa: "حرف اضافهٔ این فعل *für* است: *sich interessieren für*."
+      de: "Das Verb heißt *sich interessieren für*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Kind hat Angst vor ___ Hund.
+    options: [dem, den, der]
+    answer: dem
+    explanation:
+      en: "*Angst haben vor* takes the *Dativ*, and *der Hund* becomes *dem Hund*."
+      fa: "*Angst haben vor* با حالت *Dativ* می‌آید و *der Hund* می‌شود *dem Hund*."
+      de: "*Angst haben vor* hat den Dativ: *der Hund* wird *dem Hund*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich denke oft an ___ Urlaub in Spanien.
+    options: [den, dem, der]
+    answer: den
+    explanation:
+      en: "*Denken an* takes the *Akkusativ*, and *der Urlaub* becomes *den Urlaub*."
+      fa: "*denken an* با حالت *Akkusativ* می‌آید و *der Urlaub* می‌شود *den Urlaub*."
+      de: "*Denken an* hat den Akkusativ: *der Urlaub* wird *den Urlaub*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Nächste Woche beginnen die Ferien. Wir freuen uns schon ___ die Ferien.
+    options: [auf, über]
+    answer: auf
+    explanation:
+      en: "The holidays are still to come: *sich freuen auf*."
+      fa: "تعطیلات هنوز در پیش است: *sich freuen auf*."
+      de: "Die Ferien kommen noch: *sich freuen auf*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Danke für die Blumen! Ich freue mich sehr ___ die Blumen.
+    options: [über, auf]
+    answer: über
+    explanation:
+      en: "The flowers are already here: *sich freuen über*."
+      fa: "گل‌ها اکنون این‌جا هستند: *sich freuen über*."
+      de: "Die Blumen sind schon da: *sich freuen über*."
+  - id: gap-7
+    type: gap-fill
+    prompt: ___ wen wartest du? – Auf meinen Bruder.
+    options: [Auf, Für, An]
+    answer: Auf
+    explanation:
+      en: "The verb is *warten auf*, so the question about a person is *Auf wen …?*"
+      fa: "فعل *warten auf* است، پس پرسش دربارهٔ شخص با *auf wen* شروع می‌شود."
+      de: "Das Verb heißt *warten auf*. Die Frage nach einer Person: *Auf wen …?*"
+  - id: choice-1
+    type: multiple-choice
+    prompt: Er nimmt nächsten Monat ___ teil.
+    options: [an einem Kurs, an einen Kurs, einen Kurs]
+    answer: an einem Kurs
+    explanation:
+      en: "*Teilnehmen an* takes the *Dativ*: *an einem Kurs*."
+      fa: "*teilnehmen an* با حالت *Dativ* می‌آید: *an einem Kurs*."
+      de: "*Teilnehmen an* hat den Dativ: *an einem Kurs*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Mit ___ hast du gestern telefoniert? – Mit meiner Mutter.
+    options: [wem, wen, wer]
+    answer: wem
+    explanation:
+      en: "*Mit* takes the *Dativ*, so the question about a person is *mit wem*."
+      fa: "*mit* با حالت *Dativ* می‌آید، پس پرسش دربارهٔ شخص *mit wem* است."
+      de: "*Mit* hat den Dativ. Die Frage nach einer Person: *mit wem*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Ich freue mich auf das Wochenende. Das heißt: …"
+    options:
+      - Das Wochenende kommt noch.
+      - Das Wochenende ist schon vorbei.
+      - Ich habe am Wochenende keine Zeit.
+    answer: Das Wochenende kommt noch.
+    explanation:
+      en: "*Sich freuen auf* is for something still to come."
+      fa: "*sich freuen auf* برای چیزی است که هنوز در پیش است."
+      de: "*Sich freuen auf* sagt man für etwas, das noch kommt."
+  - id: true-1
+    type: true-false
+    prompt: Ich interessiere mich für Sport.
+    answer: true
+    explanation:
+      en: "The verb is *sich interessieren für*. The sentence is correct."
+      fa: "فعل *sich interessieren für* است. جمله درست است."
+      de: "Das Verb heißt *sich interessieren für*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir haben lange über den Film gesprochen.
+    answer: true
+    explanation:
+      en: "*Sprechen über* takes the *Akkusativ*: *über den Film*. The sentence is correct."
+      fa: "*sprechen über* با حالت *Akkusativ* می‌آید: *über den Film*. جمله درست است."
+      de: "*Sprechen über* hat den Akkusativ: *über den Film*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Sie träumt von eine Reise nach Italien.
+    answer: false
+    explanation:
+      en: "*Von* takes the *Dativ*: *von einer Reise*."
+      fa: "*von* با حالت *Dativ* می‌آید: *von einer Reise*."
+      de: "*Von* hat den Dativ: *von einer Reise*."
+  - id: true-4
+    type: true-false
+    prompt: Ich warte für meine Freundin.
+    answer: false
+    explanation:
+      en: "The verb is *warten auf*: *Ich warte auf meine Freundin.*"
+      fa: "فعل *warten auf* است: *Ich warte auf meine Freundin.*"
+      de: "Das Verb heißt *warten auf*: *Ich warte auf meine Freundin.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir warten ___ den Zug.
+    answers: [auf]
+    explanation:
+      en: "The verb is *warten auf*."
+      fa: "حرف اضافهٔ این فعل *auf* است: *warten auf*."
+      de: "Das Verb heißt *warten auf*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Sie interessiert sich ___ Kunst.
+    answers: [für]
+    explanation:
+      en: "The verb is *sich interessieren für*."
+      fa: "حرف اضافهٔ این فعل *für* است: *sich interessieren für*."
+      de: "Das Verb heißt *sich interessieren für*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Er träumt ___ einem neuen Auto.
+    answers: [von]
+    explanation:
+      en: "The verb is *träumen von*, with the *Dativ*: *von einem neuen Auto*."
+      fa: "فعل *träumen von* است و با حالت *Dativ* می‌آید: *von einem neuen Auto*."
+      de: "Das Verb heißt *träumen von*, mit Dativ: *von einem neuen Auto*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Viele Schüler haben Angst ___ der Prüfung.
+    answers: [vor]
+    explanation:
+      en: "The phrase is *Angst haben vor*, with the *Dativ*: *vor der Prüfung*."
+      fa: "عبارت *Angst haben vor* است و با حالت *Dativ* می‌آید: *vor der Prüfung*."
+      de: "Es heißt *Angst haben vor*, mit Dativ: *vor der Prüfung*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Er ärgert sich über ___ (der) Fehler.
+    answers: [den]
+    explanation:
+      en: "*Sich ärgern über* takes the *Akkusativ*: *der* becomes *den*."
+      fa: "*sich ärgern über* با حالت *Akkusativ* می‌آید: *der* می‌شود *den*."
+      de: "*Sich ärgern über* hat den Akkusativ: *der* wird *den*."
+  - id: error-1
+    type: find-error
+    prompt: Ich denke oft an dir.
+    answer: dir
+    explanation:
+      en: "*Denken an* takes the *Akkusativ*: *an dich*."
+      fa: "*denken an* با حالت *Akkusativ* می‌آید: *an dich*."
+      de: "*Denken an* hat den Akkusativ: *an dich*."
+  - id: error-2
+    type: find-error
+    prompt: Sie hat Angst vor den Hund.
+    answer: den
+    explanation:
+      en: "*Angst haben vor* takes the *Dativ*: *vor dem Hund*."
+      fa: "*Angst haben vor* با حالت *Dativ* می‌آید: *vor dem Hund*."
+      de: "*Angst haben vor* hat den Dativ: *vor dem Hund*."
+  - id: error-3
+    type: find-error
+    prompt: Ich interessiere mich in Musik.
+    answer: in
+    explanation:
+      en: "The verb is *sich interessieren für*: *für Musik*."
+      fa: "فعل *sich interessieren für* است: *für Musik*."
+      de: "Das Verb heißt *sich interessieren für*: *für Musik*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [auf wen, wartet, ihr, hier]
+    end: "?"
+    explanation:
+      en: "The question about a person starts with the preposition and *wen*; then the verb and the subject."
+      fa: "پرسش دربارهٔ شخص با حرف اضافه و *wen* شروع می‌شود؛ سپس فعل و فاعل می‌آیند."
+      de: "Die Frage nach einer Person beginnt mit Präposition und *wen*, dann kommen Verb und Subjekt."
+  - id: order-2
+    type: word-order
+    answers:
+      - [mit wem, hast, du, gesprochen]
+    end: "?"
+    explanation:
+      en: "*Mit wem* comes first, the verb second, the participle last."
+      fa: "*mit wem* اول می‌آید، فعل در جایگاه دوم و صفت مفعولی در پایان."
+      de: "*Mit wem* steht vorne, das Verb an Position 2, das Partizip am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [warten, auf]
+      - [sich interessieren, für]
+      - [träumen, von]
+      - [Angst haben, vor]
+      - [sich kümmern, um]
+    explanation:
+      en: "Each verb has its fixed preposition: *warten auf*, *sich interessieren für*, *träumen von*, *Angst haben vor*, *sich kümmern um*."
+      fa: "هر فعل حرف اضافهٔ ثابت خودش را دارد: *warten auf*، *sich interessieren für*، *träumen von*، *Angst haben vor*، *sich kümmern um*."
+      de: "Jedes Verb hat seine feste Präposition: *warten auf*, *sich interessieren für*, *träumen von*, *Angst haben vor*, *sich kümmern um*."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, blind pass
+    on the review sheet only; not a person)
+  date: 2026-11-28
+  pool: 5599dd6e79298ae6
