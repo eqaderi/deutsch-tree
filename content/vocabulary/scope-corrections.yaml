@@ -992,7 +992,11 @@ changes:
   - { word: Stock, plural: Stockwerke, reason: '"Stöcke" are sticks; a floor of a house is in the plural "Stockwerke"' }
   - { word: Möbel, article: die, plural: pl, reason: 'learned as "die Möbel"; one piece is "das Möbelstück"' }
   # Plurals that the extraction read wrong.
-  - { word: Einkaufszentrum, plural: Einkaufszentren, reason: 'the marker "-en" would give "Einkaufszentrumen"; the plural is "Einkaufszentren"' }
+  - {
+      word: Einkaufszentrum,
+      plural: Einkaufszentren,
+      reason: 'the marker "-en" would give "Einkaufszentrumen"; the plural is "Einkaufszentren"',
+    }
   # Nouns that the lists print without article or plural.
   - { word: Achtung, article: die, plural: sg }
   - { word: Grad, article: der, plural: "-e" }

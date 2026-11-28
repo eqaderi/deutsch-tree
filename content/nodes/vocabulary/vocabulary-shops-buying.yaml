@@ -132,7 +132,8 @@ words:
       de: Mit dem Studentenausweis bekommst du eine Ermäßigung.
       en: With your student card you get a discount.
       fa: با کارت دانشجویی تخفیف می‌گیری.
-    alsoAccepted: [der Rabatt, die Preisermäßigung, der Nachlass, der Preisnachlass, die Reduzierung, der ermäßigte Preis]
+    alsoAccepted:
+      [der Rabatt, die Preisermäßigung, der Nachlass, der Preisnachlass, die Reduzierung, der ermäßigte Preis]
 
   - word: preiswert
     class: adjective

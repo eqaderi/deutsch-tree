@@ -310,7 +310,8 @@ words:
       de: Der Kellner bringt uns die Speisekarte.
       en: The waiter brings us the menu.
       fa: پیشخدمت منو را برایمان می‌آورد.
-    alsoAccepted: [die Kellnerin, die Bedienung, der Ober, der Serviceangestellte, die Serviceangestellte, die Servicekraft]
+    alsoAccepted:
+      [die Kellnerin, die Bedienung, der Ober, der Serviceangestellte, die Serviceangestellte, die Servicekraft]
 
   - word: Koch
     class: noun
