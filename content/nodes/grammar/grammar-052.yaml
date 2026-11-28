@@ -4,10 +4,281 @@ kind: grammar
 level: A1
 chapter: a1-verb-patterns
 order: 9
-status: coming-soon
+status: published
 recogniseOnly: true
 prerequisites: [grammar-007]
 title:
   en: "Infinitive as an instruction"
   fa: "مصدر به‌جای جملهٔ امری"
   de: "Infinitiv als Aufforderung"
+
+explanations:
+  en:
+    rule: >
+      On signs, in recipes, in instructions and in exam tasks, German often
+      gives an instruction with the infinitive alone, at the end: *Bitte hier
+      klicken.* *Nicht rauchen!* *Zwiebeln klein schneiden.* It speaks to
+      nobody in particular and means the same as the imperative with *Sie*:
+      *Bitte hier klicken* is *Klicken Sie bitte hier.* A separable verb
+      stays one word: *Bitte einsteigen!* You need to understand this form
+      when you read or hear it.
+  fa:
+    rule: >
+      روی تابلوها، در دستور پخت غذا، در راهنماها و در تکلیف‌های امتحان،
+      آلمانی اغلب دستور را فقط با مصدر می‌دهد که در پایان جمله می‌آید: *Bitte
+      hier klicken.* *Nicht rauchen!* *Zwiebeln klein schneiden.* این شکل
+      کسی را به‌طور خاص خطاب نمی‌کند و همان معنای امر با *Sie* را دارد: *Bitte
+      hier klicken* یعنی *Klicken Sie bitte hier.* فعل جداشدنی در این شکل یک
+      واژه می‌ماند: *Bitte einsteigen!* کافی است این شکل را هنگام خواندن یا
+      شنیدن بفهمید.
+  de:
+    rule: >
+      Auf Schildern, in Rezepten, in Anleitungen und in Prüfungen steht oft
+      nur der Infinitiv am Ende: *Bitte hier klicken.* *Nicht rauchen!*
+      *Zwiebeln klein schneiden.* Das ist eine Aufforderung an alle. Es
+      bedeutet dasselbe wie der Imperativ mit *Sie*: *Klicken Sie bitte
+      hier.* Ein trennbares Verb bleibt ein Wort: *Bitte einsteigen!*
+
+table:
+  columns:
+    - { en: Infinitive as an instruction, fa: مصدر به‌جای امر, de: Infinitiv als Aufforderung }
+    - { en: "*Imperativ* with *Sie*", fa: "امر با *Sie*", de: "Imperativ mit *Sie*" }
+    - { en: Where you see it, fa: کجا دیده می‌شود, de: Wo man das sieht }
+  rows:
+    - [Bitte hier klicken., Klicken Sie bitte hier., Internetseite]
+    - [Nicht rauchen!, Rauchen Sie nicht!, Schild]
+    - [Zwiebeln klein schneiden., Schneiden Sie die Zwiebeln klein., Rezept]
+    - [Bitte nicht stören!, Stören Sie bitte nicht!, Hotel]
+    - [Bitte einsteigen!, Steigen Sie bitte ein!, Bahnhof]
+    - [Die richtige Antwort ankreuzen., Kreuzen Sie die richtige Antwort an., Prüfung]
+
+examples:
+  - de: Bitte hier klicken.
+    en: Please click here.
+    fa: لطفاً این‌جا کلیک کنید.
+  - de: Nicht rauchen!
+    en: No smoking!
+    fa: سیگار نکشید!
+  - de: Bitte nicht stören.
+    en: Please do not disturb.
+    fa: لطفاً مزاحم نشوید.
+  - de: Zwiebeln klein schneiden.
+    en: Chop the onions finely.
+    fa: پیازها را ریز خرد کنید.
+  - de: Bitte einsteigen!
+    en: All aboard, please!
+    fa: لطفاً سوار شوید!
+  - de: Bitte die Tür schließen.
+    en: Please close the door.
+    fa: لطفاً در را ببندید.
+  - de: Den Text lesen und die richtige Antwort ankreuzen.
+    en: Read the text and tick the right answer.
+    fa: متن را بخوانید و پاسخ درست را علامت بزنید.
+  - de: Vor Gebrauch schütteln.
+    en: Shake before use.
+    fa: پیش از مصرف تکان دهید.
+
+mistakes:
+  - wrong: Bitte hier klickt.
+    right: Bitte hier klicken.
+    why:
+      en: "The instruction uses the infinitive, with no personal ending."
+      fa: "این دستور با مصدر می‌آید، بدون شناسه."
+      de: "Die Aufforderung hat den Infinitiv, ohne Personalendung."
+  - wrong: Rauchen nicht!
+    right: Nicht rauchen!
+    why:
+      en: "The infinitive stands at the end; *nicht* comes before it."
+      fa: "مصدر در پایان جمله می‌آید و *nicht* پیش از آن."
+      de: "Der Infinitiv steht am Ende, *nicht* steht davor."
+  - wrong: Bitte steigen ein!
+    right: Bitte einsteigen!
+    why:
+      en: "In the infinitive a separable verb stays one word: *einsteigen*."
+      fa: "فعل جداشدنی در شکل مصدر یک واژه می‌ماند: *einsteigen*."
+      de: "Im Infinitiv bleibt ein trennbares Verb ein Wort: *einsteigen*."
+
+# 20 questions, recognise only: no typed answers and no word ordering.
+questions:
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Ein Schild im Zug: Bitte nicht rauchen. Das heißt:"
+    options: [Rauchen ist hier verboten., Rauchen ist hier erlaubt., Hier gibt es Zigaretten.]
+    answer: Rauchen ist hier verboten.
+    explanation:
+      en: "*Nicht rauchen* is an instruction to everyone: do not smoke here."
+      fa: "*nicht rauchen* دستوری به همه است: این‌جا سیگار نکشید."
+      de: "*Nicht rauchen* ist eine Aufforderung an alle: Hier raucht man nicht."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Bitte hier klicken. Das heißt:"
+    options: [Klicken Sie bitte hier., Ich klicke hier., Hier klickt niemand.]
+    answer: Klicken Sie bitte hier.
+    explanation:
+      en: "The infinitive instruction means the same as the imperative with *Sie*."
+      fa: "دستور با مصدر همان معنای امر با *Sie* را دارد."
+      de: "Der Infinitiv als Aufforderung bedeutet dasselbe wie der Imperativ mit *Sie*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Zwiebeln klein schneiden. Wo liest man das?"
+    options: [in einem Rezept, auf einem Fahrplan, auf einem Stadtplan]
+    answer: in einem Rezept
+    explanation:
+      en: "Recipes give their steps as infinitives: cut the onions small."
+      fa: "دستور پخت غذا مرحله‌ها را با مصدر می‌گوید: پیازها را ریز خرد کنید."
+      de: "Rezepte sagen die Schritte im Infinitiv: Zwiebeln klein schneiden."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "Bitte nicht stören. Wo hängt dieses Schild?"
+    options: [an einer Hoteltür, an einer Bushaltestelle, an einem Kühlschrank]
+    answer: an einer Hoteltür
+    explanation:
+      en: "*Bitte nicht stören* asks people not to disturb, as on a hotel room door."
+      fa: "*Bitte nicht stören* از دیگران می‌خواهد مزاحم نشوند، مانند تابلوی در اتاق هتل."
+      de: "*Bitte nicht stören* heißt: Niemand soll stören, zum Beispiel im Hotel."
+  - id: choice-5
+    type: multiple-choice
+    prompt: Welcher Satz ist eine Aufforderung mit Infinitiv?
+    options: [Bitte die Tür schließen., Ich schließe die Tür., Die Tür ist zu.]
+    answer: Bitte die Tür schließen.
+    explanation:
+      en: "Only this one asks for something, with the infinitive *schließen* at the end."
+      fa: "فقط این جمله چیزی را می‌خواهد، با مصدر *schließen* در پایان."
+      de: "Nur dieser Satz ist eine Bitte, mit dem Infinitiv *schließen* am Ende."
+  - id: choice-6
+    type: multiple-choice
+    prompt: "Den Text lesen und die richtige Antwort ankreuzen. Was macht man zuerst?"
+    options: [Man liest den Text., Man kreuzt eine Antwort an., Man schreibt einen Text.]
+    answer: Man liest den Text.
+    explanation:
+      en: "The first infinitive is *lesen*: first read the text, then tick."
+      fa: "نخستین مصدر *lesen* است: اول متن را بخوانید، بعد علامت بزنید."
+      de: "Der erste Infinitiv ist *lesen*: zuerst den Text lesen, dann ankreuzen."
+  - id: gap-1
+    type: gap-fill
+    prompt: Bitte hier ___.
+    options: [klicken, klickt, klickst]
+    answer: klicken
+    explanation:
+      en: "The instruction uses the infinitive: *klicken*."
+      fa: "این دستور با مصدر می‌آید: *klicken*."
+      de: "Die Aufforderung hat den Infinitiv: *klicken*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Nicht ___!
+    options: [rauchen, raucht, rauche]
+    answer: rauchen
+    explanation:
+      en: "A sign with *nicht* and the infinitive: *Nicht rauchen!*"
+      fa: "تابلویی با *nicht* و مصدر: *Nicht rauchen!*"
+      de: "Ein Schild mit *nicht* und dem Infinitiv: *Nicht rauchen!*"
+  - id: gap-3
+    type: gap-fill
+    prompt: "Am Bahnsteig: Bitte ___!"
+    options: [einsteigen, steigen ein, einsteigt]
+    answer: einsteigen
+    explanation:
+      en: "The infinitive of a separable verb is one word: *einsteigen*."
+      fa: "مصدر فعل جداشدنی یک واژه است: *einsteigen*."
+      de: "Der Infinitiv von einem trennbaren Verb ist ein Wort: *einsteigen*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Vor Gebrauch ___.
+    options: [schütteln, schüttelt, schüttelst]
+    answer: schütteln
+    explanation:
+      en: "A label gives the instruction as an infinitive: *schütteln*."
+      fa: "برچسب کالا دستور را با مصدر می‌دهد: *schütteln*."
+      de: "Auf der Packung steht der Infinitiv: *schütteln*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Bitte nicht ___!
+    options: [stören, stört, störst]
+    answer: stören
+    explanation:
+      en: "*Bitte nicht* and the infinitive: *Bitte nicht stören!*"
+      fa: "*bitte nicht* همراه با مصدر: *Bitte nicht stören!*"
+      de: "*Bitte nicht* und der Infinitiv: *Bitte nicht stören!*"
+  - id: true-1
+    type: true-false
+    prompt: Bitte hier klicken.
+    answer: true
+    explanation:
+      en: "An instruction with the infinitive at the end. The sentence is correct."
+      fa: "دستوری با مصدر در پایان جمله. جمله درست است."
+      de: "Eine Aufforderung mit dem Infinitiv am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Bitte die Tür schließen.
+    answer: true
+    explanation:
+      en: "*Schließen* is the infinitive, at the end. The sentence is correct."
+      fa: "*schließen* مصدر است و در پایان جمله آمده است. جمله درست است."
+      de: "*Schließen* ist der Infinitiv am Ende. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Bitte hier unterschreibt.
+    answer: false
+    explanation:
+      en: "The instruction needs the infinitive: *Bitte hier unterschreiben.*"
+      fa: "این دستور مصدر لازم دارد: *Bitte hier unterschreiben.*"
+      de: "Die Aufforderung braucht den Infinitiv: *Bitte hier unterschreiben.*"
+  - id: true-4
+    type: true-false
+    prompt: Bitte steigen aus.
+    answer: false
+    explanation:
+      en: "The infinitive of a separable verb is one word: *Bitte aussteigen.*"
+      fa: "مصدر فعل جداشدنی یک واژه است: *Bitte aussteigen.*"
+      de: "Der Infinitiv von einem trennbaren Verb ist ein Wort: *Bitte aussteigen.*"
+  - id: true-5
+    type: true-false
+    prompt: Nach dem Essen die Zähne putzen.
+    answer: true
+    explanation:
+      en: "An instruction with the infinitive *putzen* at the end. The sentence is correct."
+      fa: "دستوری با مصدر *putzen* در پایان جمله. جمله درست است."
+      de: "Eine Aufforderung mit dem Infinitiv *putzen* am Ende. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Bitte das Formular ausfüllt.
+    answer: ausfüllt
+    explanation:
+      en: "The instruction needs the infinitive: *Bitte das Formular ausfüllen.*"
+      fa: "این دستور مصدر لازم دارد: *Bitte das Formular ausfüllen.*"
+      de: "Die Aufforderung braucht den Infinitiv: *Bitte das Formular ausfüllen.*"
+  - id: error-2
+    type: find-error
+    prompt: Den Text lesen und die richtige Antwort ankreuzt.
+    answer: ankreuzt
+    explanation:
+      en: "Both steps are infinitives: *lesen* and *ankreuzen*."
+      fa: "هر دو مرحله با مصدر می‌آیند: *lesen* و *ankreuzen*."
+      de: "Beide Schritte stehen im Infinitiv: *lesen* und *ankreuzen*."
+  - id: match-1
+    type: matching
+    answer:
+      - [Bitte hier klicken., Klicken Sie bitte hier.]
+      - [Nicht rauchen!, Rauchen Sie nicht!]
+      - [Bitte einsteigen!, Steigen Sie bitte ein!]
+      - [Bitte nicht stören!, Stören Sie bitte nicht!]
+    explanation:
+      en: "Each infinitive instruction means the same as the imperative with *Sie*."
+      fa: "هر دستور با مصدر همان معنای امر با *Sie* را دارد."
+      de: "Jede Aufforderung im Infinitiv bedeutet dasselbe wie der Imperativ mit *Sie*."
+  - id: match-2
+    type: matching
+    answer:
+      - [Zwiebeln klein schneiden., Rezept]
+      - [Bitte einsteigen!, Bahnhof]
+      - [Bitte nicht stören!, Hotelzimmer]
+      - [Hier klicken., Internetseite]
+    explanation:
+      en: "Recipes, stations, hotels and websites all give instructions as infinitives."
+      fa: "دستور پخت غذا، ایستگاه قطار، هتل و وب‌سایت همه دستور را با مصدر می‌دهند."
+      de: "Rezepte, Bahnhöfe, Hotels und Internetseiten geben Aufforderungen im Infinitiv."
+
+review:
+  reviewer: an independent AI agent (Claude, fresh blind subagent; not a person)
+  date: 2026-11-28
+  pool: 3ba9a25ca1275dc4

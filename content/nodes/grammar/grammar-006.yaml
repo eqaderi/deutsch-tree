@@ -4,10 +4,280 @@ kind: grammar
 level: A1
 chapter: a1-verb-patterns
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-005]
 title:
   en: "*Untrennbare Verben* (*be-*, *ver-*, *er-*, *ent-*)"
   fa: "فعل‌های جدانشدنی (*be-*، *ver-*، *er-*، *ent-*)"
   de: "Untrennbare Verben (*be-*, *ver-*, *er-*, *ent-*)"
+
+explanations:
+  en:
+    rule: >
+      Verbs with the prefixes *be-*, *ver-*, *er-* and *ent-* are inseparable
+      (*untrennbare Verben*): the prefix is not stressed and never leaves the
+      verb. *Ich verstehe dich nicht*, not *Ich stehe dich nicht ver*. A
+      separable verb splits (*aufstehen*: *Ich stehe auf*); an inseparable one
+      stays one word, with the usual endings and vowel changes (*vergessen*,
+      *du vergisst*). Later, in the *Perfekt*, these verbs take no *ge-*:
+      *verstanden*, *bekommen*.
+  fa:
+    rule: >
+      فعل‌هایی که پیشوند *be-*، *ver-*، *er-* یا *ent-* دارند جدانشدنی‌اند
+      (*untrennbare Verben*): پیشوند آن‌ها تکیه ندارد و هرگز از فعل جدا
+      نمی‌شود. می‌گوییم *Ich verstehe dich nicht*، نه *Ich stehe dich nicht
+      ver*. فعل جداشدنی دو بخش می‌شود (*aufstehen*: *Ich stehe auf*)، اما فعل
+      جدانشدنی یک واژه می‌ماند و شناسه‌ها و تغییر واکه‌های معمول را می‌گیرد
+      (*vergessen*، *du vergisst*). بعدها در گذشتهٔ نقلی (*Perfekt*) خواهید دید
+      که این فعل‌ها *ge-* نمی‌گیرند: *verstanden*، *bekommen*.
+  de:
+    rule: >
+      Verben mit den Präfixen *be-*, *ver-*, *er-* und *ent-* sind
+      untrennbar. Das Präfix ist nicht betont und bleibt immer beim Verb:
+      *Ich verstehe dich nicht.* Ein trennbares Verb teilt sich (*aufstehen*:
+      *Ich stehe auf*), ein untrennbares Verb bleibt ein Wort. Im Perfekt
+      haben diese Verben kein *ge-*: *verstanden*, *bekommen*.
+
+table:
+  columns:
+    - { en: Prefix, fa: پیشوند, de: Präfix }
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [be-, bekommen, Ich bekomme eine E-Mail.]
+    - [be-, besuchen, Wir besuchen unsere Oma.]
+    - [be-, bezahlen, Er bezahlt die Rechnung.]
+    - [ver-, verstehen, Ich verstehe dich nicht.]
+    - [ver-, verkaufen, Sie verkauft ihr Auto.]
+    - [ver-, vergessen, Du vergisst deinen Schlüssel.]
+    - [er-, erklären, Die Lehrerin erklärt die Regel.]
+    - [er-, erzählen, Opa erzählt eine Geschichte.]
+    - [ent-, entscheiden, Wir entscheiden das morgen.]
+    - ["auf- (trennbar)", aufstehen, Ich stehe um 7 Uhr auf.]
+
+examples:
+  - de: Ich verstehe dich nicht.
+    en: I don't understand you.
+    fa: حرفت را نمی‌فهمم.
+  - de: Wir besuchen am Sonntag unsere Oma.
+    en: We are visiting our grandma on Sunday.
+    fa: ما یکشنبه به دیدن مادربزرگمان می‌رویم.
+  - de: Er bezahlt die Rechnung.
+    en: He pays the bill.
+    fa: او صورت‌حساب را می‌پردازد.
+  - de: Bekommst du viele E-Mails?
+    en: Do you get a lot of e-mails?
+    fa: ایمیل زیاد می‌گیری؟
+  - de: Die Lehrerin erklärt die Regel.
+    en: The teacher explains the rule.
+    fa: معلم قاعده را توضیح می‌دهد.
+  - de: Mein Opa erzählt gern Geschichten.
+    en: My grandpa likes telling stories.
+    fa: پدربزرگم دوست دارد قصه تعریف کند.
+  - de: Du vergisst immer deinen Schlüssel.
+    en: You always forget your key.
+    fa: تو همیشه کلیدت را فراموش می‌کنی.
+  - de: Herr Lang verkauft sein Auto.
+    en: Mr Lang is selling his car.
+    fa: آقای لانگ ماشینش را می‌فروشد.
+
+mistakes:
+  - wrong: Ich stehe dich nicht ver.
+    right: Ich verstehe dich nicht.
+    why:
+      en: "*Ver-* is inseparable: it never leaves the verb."
+      fa: "*ver-* پیشوندی جدانشدنی است و هرگز از فعل جدا نمی‌شود."
+      de: "*Ver-* ist untrennbar und bleibt immer beim Verb."
+  - wrong: Wir suchen am Sonntag unsere Oma be.
+    right: Wir besuchen am Sonntag unsere Oma.
+    why:
+      en: "*Besuchen* stays one word in position 2; nothing goes to the end."
+      fa: "*besuchen* یک واژه می‌ماند و در جایگاه دوم می‌آید؛ چیزی به پایان جمله نمی‌رود."
+      de: "*Besuchen* bleibt ein Wort auf Position 2. Nichts steht am Ende."
+  - wrong: Du vergesst alles.
+    right: Du vergisst alles.
+    why:
+      en: "The prefix does not stop the vowel change: *vergessen*, *du vergisst*."
+      fa: "پیشوند جلوی تغییر واکه را نمی‌گیرد: *vergessen*، *du vergisst*."
+      de: "Der Vokalwechsel bleibt auch mit Präfix: *vergessen*, *du vergisst*."
+
+# 20 questions, every question type.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich ___ dich nicht.
+    options: [verstehe, verstehst, versteht]
+    answer: verstehe
+    explanation:
+      en: "With *ich* the ending is *-e*, and *ver-* stays on the verb: *ich verstehe*."
+      fa: "با *ich* شناسهٔ فعل *-e* است و *ver-* به فعل چسبیده می‌ماند: *ich verstehe*."
+      de: "Bei *ich* ist die Endung *-e*, und *ver-* bleibt beim Verb: *ich verstehe*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir ___ am Sonntag unsere Oma.
+    options: [besuchen, besucht, besuchst]
+    answer: besuchen
+    explanation:
+      en: "With *wir* the ending is *-en*: *wir besuchen*, one word."
+      fa: "با *wir* شناسهٔ فعل *-en* است: *wir besuchen*، در یک واژه."
+      de: "Bei *wir* ist die Endung *-en*: *wir besuchen*, ein Wort."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Lehrerin ___ die Regel.
+    options: [erklärt, erkläre, erklären]
+    answer: erklärt
+    explanation:
+      en: "*Die Lehrerin* is *sie* (singular), so the ending is *-t*: *sie erklärt*."
+      fa: "*die Lehrerin* سوم‌شخص مفرد است (*sie*)، پس شناسهٔ فعل *-t* است: *sie erklärt*."
+      de: "*Die Lehrerin* ist *sie* (Singular). Die Endung ist *-t*: *sie erklärt*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Was ___ du zum Geburtstag?
+    options: [bekommst, bekommt, bekomme]
+    answer: bekommst
+    explanation:
+      en: "With *du* the ending is *-st*: *du bekommst*."
+      fa: "با *du* شناسهٔ فعل *-st* است: *du bekommst*."
+      de: "Bei *du* ist die Endung *-st*: *du bekommst*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "ich / verstehen / das / nicht"
+    options: [Ich verstehe das nicht., Ich stehe das nicht ver., Ich verstehe nicht das.]
+    answer: Ich verstehe das nicht.
+    explanation:
+      en: "*Verstehen* stays one word in position 2, and *nicht* comes after *das*."
+      fa: "*verstehen* یک واژه می‌ماند و در جایگاه دوم می‌آید؛ *nicht* پس از *das* می‌آید."
+      de: "*Verstehen* bleibt ein Wort auf Position 2. *Nicht* steht nach *das*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "er / bezahlen / die Rechnung"
+    options: [Er bezahlt die Rechnung., Er zahlt die Rechnung be., Er bezahlen die Rechnung.]
+    answer: Er bezahlt die Rechnung.
+    explanation:
+      en: "*Be-* never leaves the verb, and with *er* the ending is *-t*: *er bezahlt*."
+      fa: "*be-* هرگز از فعل جدا نمی‌شود و با *er* شناسهٔ فعل *-t* است: *er bezahlt*."
+      de: "*Be-* bleibt beim Verb, und bei *er* ist die Endung *-t*: *er bezahlt*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Welches Verb ist trennbar?
+    options: [aufstehen, verstehen, bekommen]
+    answer: aufstehen
+    explanation:
+      en: "*Auf-* is a separable prefix (*ich stehe auf*); *ver-* and *be-* are not."
+      fa: "*auf-* پیشوندی جداشدنی است (*ich stehe auf*)؛ *ver-* و *be-* جدانشدنی‌اند."
+      de: "*Auf-* ist trennbar (*ich stehe auf*), *ver-* und *be-* sind untrennbar."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Welches Verb ist untrennbar?
+    options: [erzählen, einkaufen, anrufen]
+    answer: erzählen
+    explanation:
+      en: "*Er-* is inseparable (*ich erzähle*); *ein-* and *an-* are separable."
+      fa: "*er-* جدانشدنی است (*ich erzähle*)؛ *ein-* و *an-* جداشدنی‌اند."
+      de: "*Er-* ist untrennbar (*ich erzähle*), *ein-* und *an-* sind trennbar."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Du ___ (vergessen) immer deinen Schlüssel.
+    answers: [vergisst]
+    explanation:
+      en: "*Vergessen* changes *e* to *i* with *du*, like *essen*: *du vergisst*."
+      fa: "واکهٔ *vergessen* با *du* از *e* به *i* تغییر می‌کند، مانند *essen*: *du vergisst*."
+      de: "Bei *vergessen* wird *e* bei *du* zu *i*, wie bei *essen*: *du vergisst*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Herr Lang ___ (verkaufen) sein Auto.
+    answers: [verkauft]
+    explanation:
+      en: "*Herr Lang* is *er*, so the ending is *-t*: *er verkauft*."
+      fa: "*Herr Lang* سوم‌شخص مفرد است (*er*)، پس شناسهٔ فعل *-t* است: *er verkauft*."
+      de: "*Herr Lang* ist *er*. Die Endung ist *-t*: *er verkauft*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (bekommen) ihr viele Hausaufgaben?
+    answers: [Bekommt]
+    explanation:
+      en: "With *ihr* the ending is *-t*: *ihr bekommt*. It starts the question, so it has a capital."
+      fa: "با *ihr* شناسهٔ فعل *-t* است: *ihr bekommt*. فعل در آغاز جملهٔ پرسشی آمده است، پس با حرف بزرگ نوشته می‌شود."
+      de: "Bei *ihr* ist die Endung *-t*: *ihr bekommt*. Am Satzanfang schreibt man groß."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Mein Opa ___ (erzählen) gern Geschichten.
+    answers: [erzählt]
+    explanation:
+      en: "*Mein Opa* is *er*, so the ending is *-t*: *er erzählt*."
+      fa: "*mein Opa* سوم‌شخص مفرد است (*er*)، پس شناسهٔ فعل *-t* است: *er erzählt*."
+      de: "*Mein Opa* ist *er*. Die Endung ist *-t*: *er erzählt*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Ich ___ (besuchen) morgen meine Freundin.
+    answers: [besuche]
+    explanation:
+      en: "With *ich* the ending is *-e*: *ich besuche*, one word."
+      fa: "با *ich* شناسهٔ فعل *-e* است: *ich besuche*، در یک واژه."
+      de: "Bei *ich* ist die Endung *-e*: *ich besuche*, ein Wort."
+  - id: true-1
+    type: true-false
+    prompt: Sie bekommt einen Brief.
+    answer: true
+    explanation:
+      en: "*Bekommen* stays one word: *sie bekommt*. The sentence is correct."
+      fa: "*bekommen* یک واژه می‌ماند: *sie bekommt*. جمله درست است."
+      de: "*Bekommen* bleibt ein Wort: *sie bekommt*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir suchen unsere Oma be.
+    answer: false
+    explanation:
+      en: "*Be-* is inseparable: *Wir besuchen unsere Oma.*"
+      fa: "*be-* جدانشدنی است: *Wir besuchen unsere Oma.*"
+      de: "*Be-* ist untrennbar: *Wir besuchen unsere Oma.*"
+  - id: true-3
+    type: true-false
+    prompt: Er zählt eine Geschichte er.
+    answer: false
+    explanation:
+      en: "*Er-* never leaves the verb: *Er erzählt eine Geschichte.*"
+      fa: "*er-* هرگز از فعل جدا نمی‌شود: *Er erzählt eine Geschichte.*"
+      de: "*Er-* bleibt beim Verb: *Er erzählt eine Geschichte.*"
+  - id: error-1
+    type: find-error
+    prompt: Ich verstehst die Frage nicht.
+    answer: verstehst
+    explanation:
+      en: "With *ich* the ending is *-e*: *Ich verstehe die Frage nicht.*"
+      fa: "با *ich* شناسهٔ فعل *-e* است: *Ich verstehe die Frage nicht.*"
+      de: "Bei *ich* ist die Endung *-e*: *Ich verstehe die Frage nicht.*"
+  - id: error-2
+    type: find-error
+    prompt: Er vergesst oft seine Brille.
+    answer: vergesst
+    explanation:
+      en: "*Vergessen* changes *e* to *i* with *er*: *er vergisst*."
+      fa: "واکهٔ *vergessen* در سوم‌شخص مفرد از *e* به *i* تغییر می‌کند: *er vergisst*."
+      de: "Bei *vergessen* wird *e* bei *er* zu *i*: *er vergisst*."
+  - id: match-1
+    type: matching
+    answer:
+      - [verstehen, er versteht]
+      - [aufstehen, er steht auf]
+      - [bekommen, er bekommt]
+      - [ankommen, er kommt an]
+    explanation:
+      en: "*Ver-* and *be-* stay on the verb; *auf-* and *an-* go to the end."
+      fa: "*ver-* و *be-* به فعل چسبیده می‌مانند؛ *auf-* و *an-* به پایان جمله می‌روند."
+      de: "*Ver-* und *be-* bleiben beim Verb, *auf-* und *an-* stehen am Ende."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ich, verstehe, die Frage, nicht]
+      - [die Frage, verstehe, ich, nicht]
+    explanation:
+      en: "*Verstehe* is one word in position 2; *nicht* comes last."
+      fa: "*verstehe* یک واژه است و در جایگاه دوم می‌آید؛ *nicht* در آخر می‌آید."
+      de: "*Verstehe* ist ein Wort auf Position 2. *Nicht* steht am Ende."
+
+review:
+  reviewer: an independent AI agent (Claude, fresh blind subagent; not a person)
+  date: 2026-11-28
+  pool: 6939dbe981bb5079
