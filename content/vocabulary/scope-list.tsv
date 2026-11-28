@@ -1923,7 +1923,7 @@ Netzwerk	noun	B1	das	-e
 neu	adjective	A1
 neugierig	adjective	B1
 Neuigkeit	noun	B1	die	-en
-Neujahr	noun	A2	das	sg
+Neujahr	noun	A2	none	sg
 neulich	adverb	B1
 neun	numeral	A1
 neunzehn	numeral	A1
@@ -2005,7 +2005,7 @@ original	adjective	B1
 Original	noun	B1	das	-e
 Ort	noun	A1	der	-e
 Osten	noun	A1	der
-Ostern	noun	A2	das	sg
+Ostern	noun	A2	none	sg
 Österreich	noun	A2	das	sg
 Österreicher	noun	A2	der	-		Österreicherin
 österreichisch	adjective	A2
@@ -2426,7 +2426,7 @@ Sieg	noun	B1	der	-e
 siegen	verb	B1
 Sieger	noun	B1	der	-		Siegerin
 siezen	verb	B1			(sich)
-Silvester	noun	A2	das	sg
+Silvester	noun	A2	none	sg
 singen	verb	A2
 sinken	verb	B1
 Sinn	noun	B1	der
@@ -3068,7 +3068,7 @@ wehtun	verb	A1
 weiblich	adjective	A1
 weich	adjective	A2
 weigern	verb	B1			sich
-Weihnachten	noun	A2	das	sg
+Weihnachten	noun	A2	none	sg
 weil	conjunction	A2
 Wein	noun	A1	der	-e
 weinen	verb	A2

@@ -1044,10 +1044,30 @@ changes:
   - { word: Mathematik, article: die, plural: sg }
   - { word: Physik, article: die, plural: sg }
   - { word: Sozialkunde, article: die, plural: sg }
-  - { word: Ostern, article: das, plural: sg }
-  - { word: Weihnachten, article: das, plural: sg }
-  - { word: Neujahr, article: das, plural: sg }
-  - { word: Silvester, article: das, plural: sg }
+  - {
+      word: Ostern,
+      article: none,
+      plural: sg,
+      reason: 'a holiday, usually used without article: "an Ostern", "frohe Ostern", not "das Ostern"',
+    }
+  - {
+      word: Weihnachten,
+      article: none,
+      plural: sg,
+      reason: 'a holiday, usually used without article: "an Weihnachten", "frohe Weihnachten", not "das Weihnachten"',
+    }
+  - {
+      word: Neujahr,
+      article: none,
+      plural: sg,
+      reason: 'a holiday, usually used without article: "an Neujahr", "prosit Neujahr", not "das Neujahr"',
+    }
+  - {
+      word: Silvester,
+      article: none,
+      plural: sg,
+      reason: 'a holiday, usually used without article: "an Silvester", "Silvester feiern", not "das Silvester"',
+    }
   - { word: Arbeitstag, article: der, plural: "-e" }
   - { word: Abgase, article: die, plural: pl }
   - { word: Ratschlag, article: der, plural: "¨-e" }
