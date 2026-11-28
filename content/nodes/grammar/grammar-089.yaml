@@ -4,10 +4,280 @@ kind: grammar
 level: A1
 chapter: a1-pronouns
 order: 7
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-081]
 title:
   en: "Impersonal *es*"
   fa: "*es* غیرشخصی"
   de: "Unpersönliches *es*"
+
+explanations:
+  en:
+    rule: >
+      Some verbs and phrases have *es* as their subject, and this *es* stands
+      for nothing: the weather (*es regnet*, *es schneit*, *es ist kalt*), the
+      time (*Wie spät ist es? – Es ist acht Uhr.*), how someone is (*Wie geht
+      es dir? – Es geht mir gut.*) and *es gibt* (there is, there are), which
+      takes the *Akkusativ*: *Es gibt einen Park.* Many languages leave such a
+      subject out, but a German sentence always needs one, so *es* cannot be
+      dropped. When another word comes first, *es* moves behind the verb:
+      *Heute regnet es.*
+  fa:
+    rule: >
+      بعضی فعل‌ها و عبارت‌ها *es* را فاعل خود دارند، بی‌آن‌که این *es* به کسی
+      یا چیزی اشاره کند: برای هوا (*es regnet*: باران می‌بارد، *es schneit*:
+      برف می‌بارد، *es ist kalt*: هوا سرد است)، برای ساعت (*Wie spät ist es? –
+      Es ist acht Uhr.*)، برای حال کسی (*Wie geht es dir? – Es geht mir gut.*)
+      و در *es gibt* (هست، وجود دارد) که حالت *Akkusativ* می‌گیرد: *Es gibt
+      einen Park.* در فارسی این جمله‌ها فاعلی مانند *es* ندارند، ولی جملهٔ
+      آلمانی همیشه فاعل می‌خواهد؛ پس *es* را نمی‌توان حذف کرد. اگر واژهٔ
+      دیگری در آغاز جمله بیاید، *es* پس از فعل می‌نشیند: *Heute regnet es.*
+  de:
+    rule: >
+      Bei manchen Verben ist *es* das Subjekt, aber *es* ist keine Person und
+      keine Sache: beim Wetter (*es regnet*, *es ist kalt*), bei der Uhrzeit
+      (*Es ist acht Uhr.*), bei *Wie geht es dir?* und bei *es gibt* mit
+      Akkusativ (*Es gibt einen Park.*). Ein deutscher Satz braucht immer ein
+      Subjekt. Darum kann *es* nicht fehlen. Steht ein anderes Wort am Anfang,
+      kommt *es* nach dem Verb: *Heute regnet es.*
+
+table:
+  columns:
+    - { en: Use, fa: کاربرد, de: Gebrauch }
+    - { en: Question, fa: پرسش, de: Frage }
+    - { en: Answer, fa: پاسخ, de: Antwort }
+  rows:
+    - [Wetter, Wie ist das Wetter?, Es regnet. Es ist kalt.]
+    - [Uhrzeit, Wie spät ist es?, Es ist acht Uhr.]
+    - [Befinden, Wie geht es dir?, Es geht mir gut.]
+    - [es gibt + Akkusativ, Gibt es hier ein Café?, "Ja, es gibt ein Café am Markt."]
+
+examples:
+  - de: Es regnet schon wieder.
+    en: It's raining again.
+    fa: باز هم باران می‌بارد.
+  - de: Im Winter schneit es oft.
+    en: In winter it often snows.
+    fa: زمستان‌ها اغلب برف می‌بارد.
+  - de: Heute ist es sehr warm.
+    en: It's very warm today.
+    fa: امروز هوا خیلی گرم است.
+  - de: Wie spät ist es? – Es ist halb neun.
+    en: What time is it? – It's half past eight.
+    fa: ساعت چند است؟ – ساعت هشت و نیم است.
+  - de: Wie geht es Ihnen? – Danke, es geht mir gut.
+    en: How are you? – Fine, thank you.
+    fa: حالتان چطور است؟ – ممنون، خوبم.
+  - de: Gibt es hier einen Supermarkt?
+    en: Is there a supermarket here?
+    fa: این‌جا سوپرمارکت هست؟
+  - de: In unserer Stadt gibt es zwei Kinos.
+    en: There are two cinemas in our town.
+    fa: در شهر ما دو سینما هست.
+
+mistakes:
+  - wrong: Regnet heute.
+    right: Heute regnet es.
+    why:
+      en: "A German sentence needs a subject. For the weather it is *es*."
+      fa: "جملهٔ آلمانی فاعل می‌خواهد و برای هوا این فاعل *es* است."
+      de: "Ein deutscher Satz braucht ein Subjekt. Beim Wetter ist es *es*."
+  - wrong: Heute es regnet.
+    right: Heute regnet es.
+    why:
+      en: "The verb comes second. When *heute* is first, *es* moves behind the verb."
+      fa: "فعل در جایگاه دوم می‌آید. وقتی *heute* در آغاز است، *es* پس از فعل می‌نشیند."
+      de: "Das Verb steht an Position 2. Steht *heute* am Anfang, kommt *es* nach dem Verb."
+  - wrong: Wie geht es du?
+    right: Wie geht es dir?
+    why:
+      en: "The person in *Wie geht es …?* is in the *Dativ*: *dir*, *Ihnen*."
+      fa: "شخص در *Wie geht es …?* در حالت *Dativ* می‌آید: *dir*، *Ihnen*."
+      de: "Bei *Wie geht es …?* steht die Person im Dativ: *dir*, *Ihnen*."
+  - wrong: Hier gibt es ein Park.
+    right: Hier gibt es einen Park.
+    why:
+      en: "*Es gibt* takes the *Akkusativ*, so *der Park* becomes *einen Park*."
+      fa: "*es gibt* حالت *Akkusativ* می‌گیرد، پس *der Park* می‌شود *einen Park*."
+      de: "Nach *es gibt* steht der Akkusativ: *einen Park*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Im Winter schneit ___ oft.
+    options: [es, er, sie]
+    answer: es
+    explanation:
+      en: "For the weather the subject is *es*: *es schneit*."
+      fa: "برای هوا فاعل *es* است: *es schneit*."
+      de: "Beim Wetter ist das Subjekt *es*: *es schneit*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wie spät ist ___?
+    options: [es, er, sie]
+    answer: es
+    explanation:
+      en: "For the time the subject is *es*: *Wie spät ist es?*"
+      fa: "برای ساعت فاعل *es* است: *Wie spät ist es?*"
+      de: "Bei der Uhrzeit ist das Subjekt *es*: *Wie spät ist es?*"
+  - id: gap-3
+    type: gap-fill
+    prompt: Wie geht ___ Ihnen?
+    options: [es, er, sie]
+    answer: es
+    explanation:
+      en: "The phrase is *Wie geht es …?*, always with *es*."
+      fa: "این عبارت همیشه با *es* است: *Wie geht es …?*"
+      de: "Man sagt immer *Wie geht es …?*, mit *es*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Hier ___ es einen Park.
+    options: [gibt, ist, sind]
+    answer: gibt
+    explanation:
+      en: "“There is” is *es gibt*, with the *Akkusativ*: *einen Park*."
+      fa: "«هست، وجود دارد» می‌شود *es gibt*، با حالت *Akkusativ*: *einen Park*."
+      de: "Man sagt *es gibt* mit Akkusativ: *einen Park*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Heute ___ sehr kalt.
+    options: [ist es, es ist, ist]
+    answer: ist es
+    explanation:
+      en: "*Heute* is first, so the verb comes second and *es* behind it: *Heute ist es sehr kalt.*"
+      fa: "*heute* در آغاز است، پس فعل در جایگاه دوم و *es* پس از آن می‌آید: *Heute ist es sehr kalt.*"
+      de: "*Heute* steht am Anfang. Dann kommt das Verb und danach *es*: *Heute ist es sehr kalt.*"
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wie ist das Wetter? – ___
+    options: [Es regnet., Regnet., Er regnet.]
+    answer: Es regnet.
+    explanation:
+      en: "The sentence needs a subject, and for the weather it is *es*."
+      fa: "جمله فاعل می‌خواهد و برای هوا این فاعل *es* است."
+      de: "Der Satz braucht ein Subjekt. Beim Wetter ist es *es*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Gibt ___ hier ein Café?
+    options: [es, er, sie]
+    answer: es
+    explanation:
+      en: "“Is there …?” is *Gibt es …?*"
+      fa: "«… هست؟» می‌شود *Gibt es …?*"
+      de: "Man fragt mit *Gibt es …?*"
+  - id: true-1
+    type: true-false
+    prompt: Heute regnet es.
+    answer: true
+    explanation:
+      en: "The verb is second and *es* follows it. The sentence is correct."
+      fa: "فعل در جایگاه دوم است و *es* پس از آن آمده. جمله درست است."
+      de: "Das Verb steht an Position 2, *es* steht danach. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ist kalt heute.
+    answer: false
+    explanation:
+      en: "The sentence has no subject: *Heute ist es kalt.*"
+      fa: "جمله فاعل ندارد: *Heute ist es kalt.*"
+      de: "Das Subjekt fehlt: *Heute ist es kalt.*"
+  - id: true-3
+    type: true-false
+    prompt: Es ist halb neun.
+    answer: true
+    explanation:
+      en: "For the time the subject is *es*. The sentence is correct."
+      fa: "برای ساعت فاعل *es* است. جمله درست است."
+      de: "Bei der Uhrzeit ist das Subjekt *es*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Heute es schneit.
+    answer: false
+    explanation:
+      en: "The verb comes second: *Heute schneit es.*"
+      fa: "فعل در جایگاه دوم می‌آید: *Heute schneit es.*"
+      de: "Das Verb steht an Position 2: *Heute schneit es.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wie spät ist ___? – Zehn Uhr.
+    answers: [es]
+    explanation:
+      en: "The time is asked with *es*: *Wie spät ist es?*"
+      fa: "ساعت را با *es* می‌پرسند: *Wie spät ist es?*"
+      de: "Nach der Uhrzeit fragt man mit *es*: *Wie spät ist es?*"
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wie geht es dir? – Danke, ___ geht mir gut.
+    answers: [es]
+    explanation:
+      en: "The answer keeps *es* as its subject: *Es geht mir gut.*"
+      fa: "پاسخ هم *es* را فاعل دارد: *Es geht mir gut.*"
+      de: "Auch die Antwort hat *es* als Subjekt: *Es geht mir gut.*"
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Heute regnet ___ nicht. Die Sonne scheint!
+    answers: [es]
+    explanation:
+      en: "For the weather the subject is *es*, here behind the verb: *Heute regnet es nicht.*"
+      fa: "برای هوا فاعل *es* است که این‌جا پس از فعل آمده: *Heute regnet es nicht.*"
+      de: "Beim Wetter ist das Subjekt *es*, hier nach dem Verb: *Heute regnet es nicht.*"
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Hier ___ (geben) es viele Restaurants.
+    answers: [gibt]
+    explanation:
+      en: "*Es gibt* stays singular, also before a plural: *es gibt viele Restaurants*."
+      fa: "*es gibt* مفرد می‌ماند، پیش از اسم جمع نیز: *es gibt viele Restaurants*."
+      de: "*Es gibt* bleibt Singular, auch vor einem Plural: *es gibt viele Restaurants*."
+  - id: error-1
+    type: find-error
+    prompt: Im Winter schneit er oft.
+    answer: er
+    explanation:
+      en: "For the weather the subject is *es*: *Im Winter schneit es oft.*"
+      fa: "برای هوا فاعل *es* است: *Im Winter schneit es oft.*"
+      de: "Beim Wetter ist das Subjekt *es*: *Im Winter schneit es oft.*"
+  - id: error-2
+    type: find-error
+    prompt: Hier ist es einen Park.
+    answer: ist
+    explanation:
+      en: "“There is” is *es gibt*: *Hier gibt es einen Park.*"
+      fa: "«هست، وجود دارد» می‌شود *es gibt*: *Hier gibt es einen Park.*"
+      de: "Man sagt *es gibt*: *Hier gibt es einen Park.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [heute, regnet, es]
+      - [es, regnet, heute]
+    explanation:
+      en: "The verb comes second. *Es* stands first, or right behind the verb."
+      fa: "فعل در جایگاه دوم می‌آید. *es* یا در آغاز جمله است یا درست پس از فعل."
+      de: "Das Verb steht an Position 2. *Es* steht am Anfang oder direkt nach dem Verb."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wie, geht, es, Ihnen]
+    end: "?"
+    explanation:
+      en: "The question word comes first, then the verb, *es* and the person in the *Dativ*."
+      fa: "واژهٔ پرسشی در آغاز می‌آید، سپس فعل، *es* و شخص در حالت *Dativ*."
+      de: "Das Fragewort steht am Anfang, dann das Verb, *es* und die Person im Dativ."
+  - id: match-1
+    type: matching
+    answer:
+      - [Wie spät ist es?, Es ist neun Uhr.]
+      - [Wie geht es dir?, Es geht mir gut.]
+      - [Wie ist das Wetter?, Es regnet.]
+      - [Gibt es hier eine Bank?, "Ja, am Markt."]
+    explanation:
+      en: "Each question and its answer use the same *es*: time, how someone is, weather, *es gibt*."
+      fa: "هر پرسش و پاسخش همان *es* را دارند: ساعت، حال، هوا و *es gibt*."
+      de: "Frage und Antwort haben das gleiche *es*: Uhrzeit, Befinden, Wetter, *es gibt*."
+
+review:
+  reviewer: two independent AI agents (Claude Opus 5.5 subagents, blind passes on
+    the review sheet only; the second on the rewritten typed-gap-3; not people)
+  date: 2026-11-28
+  pool: fb8a6dd024cbfa1b
