@@ -1,40 +1,412 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-offices-documents
 kind: vocabulary
 level: B1
 chapter: b1-words-work-money
 order: 8
-status: coming-soon
+status: published
 title:
   en: "Offices and documents"
   fa: "اداره‌ها و مدارک"
   de: "Ämter und Dokumente"
+attemptSize: 15
 words:
+  # Das Amt and die Behörde are the same thing in everyday use; each is right when the other is asked for.
   - word: Amt
+    class: noun
+    article: das
+    plural: Ämter
+    level: B1
+    meaning:
+      en: (government) office
+      fa: اداره (دولتی)
+    definition: ein Büro des Staates oder der Stadt, das sich um bestimmte Aufgaben kümmert, zum Beispiel um Pässe oder Steuern
+    example:
+      de: Morgen muss ich wegen meines Passes aufs Amt.
+      en: Tomorrow I have to go to the office about my passport.
+      fa: فردا به خاطر گذرنامه‌ام باید به اداره بروم.
+    alsoAccepted: [die Behörde]
+    tooCloseTo: [Behörde, Verwaltung]
+
   - word: Behörde
+    class: noun
+    article: die
+    plural: Behörden
+    level: B1
+    meaning:
+      en: authority, public body
+      fa: مرجع دولتی، سازمان دولتی
+    definition: eine Stelle des Staates, die öffentliche Aufgaben erledigt und Entscheidungen trifft
+    example:
+      de: Die Behörde hat meinen Antrag abgelehnt.
+      en: The authority rejected my application.
+      fa: سازمان دولتی درخواستم را رد کرد.
+    alsoAccepted: [das Amt]
+    tooCloseTo: [Amt, Verwaltung]
+
   - word: Verwaltung
+    class: noun
+    article: die
+    plural: Verwaltungen
+    level: B1
+    meaning:
+      en: administration
+      fa: امور اداری، مدیریت اداری
+    definition: die Leute und Büros, die in einer Stadt, einer Firma oder einer Schule alles organisieren
+    example:
+      de: Die Verwaltung der Universität ist im ersten Stock.
+      en: The university administration is on the first floor.
+      fa: بخش امور اداری دانشگاه در طبقهٔ اول است.
+    alsoAccepted: [die Administration]
+    tooCloseTo: [Amt, Behörde]
+
   - word: Gemeinde
+    class: noun
+    article: die
+    plural: Gemeinden
+    level: B1
+    meaning:
+      en: municipality, local council
+      fa: شهرداری (واحد محلی)
+    definition: ein Dorf oder eine kleine Stadt, die sich selbst organisiert und eigene Aufgaben hat
+    example:
+      de: Unsere Gemeinde baut einen neuen Kindergarten.
+      en: Our municipality is building a new nursery school.
+      fa: شهرداری ما یک مهدکودک جدید می‌سازد.
+    alsoAccepted: [die Kommune]
+
+  # Der Antrag is the written request, beantragen is to make it; neither is offered as a wrong meaning of the other.
   - word: Antrag
+    class: noun
+    article: der
+    plural: Anträge
+    level: B1
+    meaning:
+      en: application (a written request to an office)
+      fa: درخواست‌نامه، تقاضای کتبی
+    definition: ein Formular oder ein Brief, mit dem man ein Amt um etwas bittet
+    example:
+      de: Den Antrag für das Kindergeld müssen Sie online ausfüllen.
+      en: You have to fill in the application for child benefit online.
+      fa: درخواست‌نامهٔ کمک‌هزینهٔ فرزند را باید آنلاین پر کنید.
+    tooCloseTo: [beantragen]
+
   - word: beantragen
+    class: verb
+    level: B1
+    meaning:
+      en: to apply for (a document or a permit, at an office)
+      fa: درخواست دادن (برای مدرک یا مجوز)
+    definition: bei einem Amt offiziell um etwas bitten, meistens mit einem Formular
+    example:
+      de: Ich habe einen neuen Pass beantragt.
+      en: I've applied for a new passport.
+      fa: برای گذرنامهٔ جدید درخواست داده‌ام.
+    alsoAccepted: [einen Antrag stellen]
+    tooCloseTo: [Antrag]
+
   - word: genehmigen
+    class: verb
+    level: B1
+    meaning:
+      en: to approve, to permit (officially)
+      fa: تأیید کردن، مجوز دادن (به‌طور رسمی)
+    definition: offiziell Ja zu etwas sagen, sodass man es machen darf
+    example:
+      de: Die Stadt hat den Bau des neuen Spielplatzes genehmigt.
+      en: The town has approved the building of the new playground.
+      fa: شهر ساخت زمین بازی جدید را تأیید کرده است.
+    alsoAccepted: [bewilligen, erlauben]
+
   - word: Frist
+    class: noun
+    article: die
+    plural: Fristen
+    level: B1
+    meaning:
+      en: deadline, time limit
+      fa: مهلت
+    definition: die Zeit, die man hat, um etwas zu erledigen, zum Beispiel zwei Wochen
+    example:
+      de: Die Frist für die Steuererklärung endet am 31. Juli.
+      en: The deadline for the tax return is 31 July.
+      fa: مهلت اظهارنامهٔ مالیاتی ۳۱ ژوئیه تمام می‌شود.
+    alsoAccepted: [die Deadline]
+
   - word: Personalien
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: personal details (name, date of birth, address)
+      fa: مشخصات فردی
+    definition: Name, Geburtstag, Adresse und andere Informationen über eine Person
+    example:
+      de: Die Polizistin hat meine Personalien aufgeschrieben.
+      en: The police officer wrote down my personal details.
+      fa: مأمور پلیس مشخصات فردی‌ام را یادداشت کرد.
+    alsoAccepted: [die persönlichen Daten, die Personendaten]
+
   - word: Visum
+    class: noun
+    article: das
+    plural: Visa
+    level: B1
+    meaning:
+      en: visa
+      fa: روادید، ویزا
+    definition: ein Stempel oder ein Papier im Pass, mit dem man in ein anderes Land reisen darf
+    example:
+      de: Für die Reise nach Indien brauche ich ein Visum.
+      en: I need a visa for the trip to India.
+      fa: برای سفر به هند روادید لازم دارم.
+
+  # Das Konsulat and die Botschaft both stand for a country abroad; neither is offered as a wrong meaning of the other.
   - word: Konsulat
+    class: noun
+    article: das
+    plural: Konsulate
+    level: B1
+    meaning:
+      en: consulate
+      fa: کنسولگری
+    definition: ein Büro eines Landes im Ausland, oft in einer großen Stadt, die nicht die Hauptstadt ist; dort bekommt man zum Beispiel einen Pass oder ein Visum
+    example:
+      de: Den neuen Pass bekomme ich beim Konsulat in Frankfurt.
+      en: I get the new passport at the consulate in Frankfurt.
+      fa: گذرنامهٔ جدید را از کنسولگری در فرانکفورت می‌گیرم.
+    alsoAccepted: [das Generalkonsulat]
+    tooCloseTo: [Botschaft]
+
   - word: Botschaft
+    class: noun
+    article: die
+    plural: Botschaften
+    level: B1
+    meaning:
+      en: embassy
+      fa: سفارت
+    definition: das wichtigste Büro eines Landes in der Hauptstadt eines anderen Landes
+    example:
+      de: Die iranische Botschaft ist in Berlin.
+      en: The Iranian embassy is in Berlin.
+      fa: سفارت ایران در برلین است.
+    tooCloseTo: [Konsulat]
+
   - word: Asyl
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: asylum
+      fa: پناهندگی
+    definition: Schutz, den ein Staat Menschen gibt, die in ihrem Land in Gefahr sind
+    example:
+      de: Die Familie hat in Deutschland Asyl beantragt.
+      en: The family applied for asylum in Germany.
+      fa: این خانواده در آلمان درخواست پناهندگی داده است.
+
   - word: Aufenthalt
+    class: noun
+    article: der
+    plural: Aufenthalte
+    level: B1
+    meaning:
+      en: a stay (in a place)
+      fa: اقامت (مدت ماندن در جایی)
+    definition: die Zeit, die man an einem Ort ist, zum Beispiel in einem anderen Land
+    example:
+      de: Während meines Aufenthalts in Wien habe ich viel gelernt.
+      en: During my stay in Vienna I learned a lot.
+      fa: در مدت اقامتم در وین چیزهای زیادی یاد گرفتم.
+
   - word: Bestätigung
+    class: noun
+    article: die
+    plural: Bestätigungen
+    level: B1
+    meaning:
+      en: confirmation
+      fa: تأییدیه
+    definition: wenn jemand offiziell sagt oder schreibt, dass etwas stimmt, zum Beispiel dass ein Termin fest ist
+    example:
+      de: Die Bestätigung der Buchung kommt per E-Mail.
+      en: The booking confirmation comes by email.
+      fa: تأییدیهٔ رزرو با ایمیل می‌آید.
+
   - word: ausstellen
+    class: verb
+    level: B1
+    meaning:
+      en: to issue (a document)
+      fa: صادر کردن (مدرک)
+    definition: ein offizielles Papier schreiben und jemandem geben, zum Beispiel einen Pass
+    example:
+      de: Das Bürgeramt stellt den Ausweis in drei Wochen aus.
+      en: The citizens' office issues the ID card in three weeks.
+      fa: ادارهٔ امور شهروندی کارت شناسایی را ظرف سه هفته صادر می‌کند.
+
   - word: verlängern
+    class: verb
+    level: B1
+    meaning:
+      en: to extend, to renew
+      fa: تمدید کردن
+    definition: machen, dass etwas länger gilt oder länger dauert
+    example:
+      de: Ich muss mein Visum bis Ende März verlängern.
+      en: I have to renew my visa by the end of March.
+      fa: باید روادیدم را تا آخر مارس تمدید کنم.
+    alsoAccepted: [erneuern]
+
   - word: fällig
+    class: adjective
+    level: B1
+    meaning:
+      en: due (to be paid or done)
+      fa: سررسیده (وقت پرداخت یا انجامش رسیده)
+    definition: so, dass man etwas jetzt bezahlen oder machen muss, weil der Termin da ist
+    example:
+      de: Die Miete ist am Ersten des Monats fällig.
+      en: The rent is due on the first of the month.
+      fa: موعد پرداخت اجاره اول ماه است.
+
   - word: erforderlich
+    class: adjective
+    level: B1
+    meaning:
+      en: required, necessary
+      fa: لازم، ضروری
+    definition: so, dass man es unbedingt haben oder machen muss
+    example:
+      de: Für die Anmeldung ist ein gültiger Pass erforderlich.
+      en: A valid passport is required for registration.
+      fa: برای ثبت‌نام، گذرنامهٔ معتبر لازم است.
+    alsoAccepted: [notwendig, nötig]
+
+  # Die Vorschrift, die Pflicht and verpflichtet all say what must be done; none is offered as a wrong meaning of another.
   - word: Vorschrift
+    class: noun
+    article: die
+    plural: Vorschriften
+    level: B1
+    meaning:
+      en: regulation (an official rule you must follow)
+      fa: مقررات، آیین‌نامه
+    definition: eine Regel von einem Amt oder einer Firma, an die man sich halten muss
+    example:
+      de: Nach der Vorschrift muss jeder Mitarbeiter einen Helm tragen.
+      en: According to the regulations every worker must wear a helmet.
+      fa: طبق مقررات، هر کارمندی باید کلاه ایمنی بگذارد.
+    alsoAccepted: [die Regelung, die Bestimmung, die Verordnung, die Vorschriften]
+    tooCloseTo: [Pflicht]
+
   - word: Pflicht
+    class: noun
+    article: die
+    plural: Pflichten
+    level: B1
+    meaning:
+      en: duty, obligation
+      fa: وظیفه، الزام
+    definition: etwas, das man machen muss, weil ein Gesetz oder eine Regel es so will
+    example:
+      de: In Deutschland ist der Schulbesuch Pflicht.
+      en: In Germany going to school is compulsory.
+      fa: در آلمان رفتن به مدرسه اجباری است.
+    alsoAccepted: [die Verpflichtung]
+    tooCloseTo: [Vorschrift, verpflichtet]
+
   - word: verpflichtet
+    class: adjective
+    level: B1
+    meaning:
+      en: obliged, bound (to do something)
+      fa: موظف، ملزم
+    definition: so, dass man etwas machen muss, weil eine Regel oder ein Vertrag es sagt
+    example:
+      de: Der Vermieter ist verpflichtet, die Heizung zu reparieren.
+      en: The landlord is obliged to repair the heating.
+      fa: صاحب‌خانه موظف است شوفاژ را تعمیر کند.
+    tooCloseTo: [Pflicht, erforderlich]
+
   - word: offiziell
+    class: adjective
+    level: B1
+    meaning:
+      en: official
+      fa: رسمی (از طرف اداره یا دولت)
+    definition: so, wie es ein Amt oder eine Regierung sagt oder macht
+    example:
+      de: Die offizielle Sprache in Österreich ist Deutsch.
+      en: The official language in Austria is German.
+      fa: زبان رسمی اتریش آلمانی است.
+    alsoAccepted: [amtlich, behördlich]
+
   - word: Einschreiben
+    class: noun
+    article: das
+    plural: Einschreiben
+    level: B1
+    meaning:
+      en: registered letter
+      fa: نامهٔ سفارشی
+    definition: ein Brief, bei dem die Post bestätigt, dass er angekommen ist
+    example:
+      de: Die Kündigung schicke ich per Einschreiben.
+      en: I'm sending the notice by registered letter.
+      fa: نامهٔ فسخ قرارداد را سفارشی می‌فرستم.
+    alsoAccepted: [der Einschreibebrief]
+
   - word: Kennzeichen
+    class: noun
+    article: das
+    plural: Kennzeichen
+    level: B1
+    meaning:
+      en: number plate, licence plate
+      fa: پلاک (خودرو)
+    definition: das Schild mit Buchstaben und Zahlen vorne und hinten am Auto
+    example:
+      de: Der Zeuge hat sich das Kennzeichen des Autos gemerkt.
+      en: The witness remembered the car's number plate.
+      fa: شاهد شمارهٔ پلاک ماشین را به خاطر سپرد.
+    alsoAccepted: [das Nummernschild, das Autokennzeichen]
+
   - word: Anlage
+    class: noun
+    article: die
+    plural: Anlagen
+    level: B1
+    meaning:
+      en: enclosure, attachment (to a letter or an email)
+      fa: پیوست
+    definition: ein Dokument, das man zusammen mit einem Brief oder einer E-Mail schickt
+    example:
+      de: In der Anlage finden Sie meinen Lebenslauf.
+      en: Please find my CV enclosed.
+      fa: رزومه‌ام پیوست است.
+    alsoAccepted: [der Anhang]
+
   - word: angeben
+    class: verb
+    level: B1
+    meaning:
+      en: to state, to give (information)
+      fa: اعلام کردن (اطلاعاتی مثل شمارهٔ تلفن)
+    definition: eine Information sagen oder in ein Formular schreiben
+    example:
+      de: Bitte geben Sie Ihre Telefonnummer an.
+      en: Please give your phone number.
+      fa: لطفاً شمارهٔ تلفنتان را ذکر کنید.
+    alsoAccepted: [nennen, mitteilen]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections, then the ones changed after the second one's; not people)"
+  date: 2026-11-28
+  pool: c40a128fa459c987

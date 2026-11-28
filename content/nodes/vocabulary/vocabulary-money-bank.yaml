@@ -1,38 +1,401 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-money-bank
 kind: vocabulary
 level: B1
 chapter: b1-words-work-money
 order: 6
-status: coming-soon
+status: published
 title:
   en: "Money and the bank"
   fa: "پول و بانک"
   de: "Geld und Bank"
+attemptSize: 15
 words:
   - word: Bargeld
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: cash
+      fa: پول نقد
+    definition: Geld in Münzen und Scheinen, das man in der Hand hat, nicht auf dem Konto
+    example:
+      de: Auf dem Markt kann man oft nur mit Bargeld bezahlen.
+      en: At the market you can often only pay in cash.
+      fa: در بازار اغلب فقط می‌شود نقدی پرداخت کرد.
+
   - word: Münze
+    class: noun
+    article: die
+    plural: Münzen
+    level: B1
+    meaning:
+      en: coin
+      fa: سکه
+    definition: ein kleines, rundes Stück Metall, das Geld ist, zum Beispiel ein Euro
+    example:
+      de: Für den Einkaufswagen brauche ich eine Münze.
+      en: I need a coin for the shopping trolley.
+      fa: برای چرخ خرید یک سکه لازم دارم.
+    alsoAccepted: [das Geldstück]
+
   - word: Schein
+    class: noun
+    article: der
+    plural: Scheine
+    level: B1
+    meaning:
+      en: (bank)note, bill
+      fa: اسکناس
+    definition: Geld aus Papier, zum Beispiel zehn oder fünfzig Euro
+    example:
+      de: Können Sie mir den Fünfzig-Euro-Schein wechseln?
+      en: Can you change this fifty-euro note for me?
+      fa: می‌توانید این اسکناس پنجاه یورویی را برایم خرد کنید؟
+    alsoAccepted: [der Geldschein, die Banknote]
+
   - word: Geldautomat
+    class: noun
+    article: der
+    plural: Geldautomaten
+    level: B1
+    meaning:
+      en: cash machine, ATM
+      fa: دستگاه خودپرداز
+    definition: eine Maschine an der Bank oder auf der Straße, an der man mit einer Karte Geld bekommt
+    example:
+      de: Der nächste Geldautomat ist gleich neben dem Supermarkt.
+      en: The nearest cash machine is right next to the supermarket.
+      fa: نزدیک‌ترین خودپرداز درست کنار سوپرمارکت است.
+    alsoAccepted: [der Bankautomat, der Bancomat, der Bankomat]
+
+  # ec-Karte, Chipkarte and Chip are near each other; none is offered as a wrong meaning of another.
   - word: ec-Karte
+    class: noun
+    article: die
+    plural: ec-Karten
+    level: B1
+    meaning:
+      en: bank card, debit card
+      fa: کارت بانکی
+    definition: eine kleine Karte von der Bank, mit der man im Geschäft bezahlt oder am Automaten Geld holt
+    example:
+      de: Kann ich hier mit der ec-Karte bezahlen?
+      en: Can I pay by debit card here?
+      fa: می‌توانم این‌جا با کارت بانکی پرداخت کنم؟
+    alsoAccepted: [die Bankkarte, die Girocard, die Bankomat-Karte, die EC-Karte, die Girokarte, die Debitkarte]
+    tooCloseTo: [Chipkarte, Chip]
+
   - word: Girokonto
+    class: noun
+    article: das
+    plural: Girokonten
+    level: B1
+    meaning:
+      en: current account, checking account
+      fa: حساب جاری
+    definition: ein Konto bei der Bank, auf das zum Beispiel der Lohn kommt und von dem man die Miete bezahlt
+    example:
+      de: Für das Gehalt brauchen Sie ein Girokonto bei einer deutschen Bank.
+      en: For your salary you need a current account with a German bank.
+      fa: برای دریافت حقوق، به یک حساب جاری در بانکی آلمانی نیاز دارید.
+
   - word: Bankleitzahl
+    class: noun
+    article: die
+    plural: Bankleitzahlen
+    level: B1
+    meaning:
+      en: bank code, sort code
+      fa: کد بانکی (شمارهٔ هشت‌رقمی بانک در آلمان)
+    definition: eine Nummer, an der man erkennt, welche Bank es ist
+    example:
+      de: Früher musste man bei jeder Überweisung die Bankleitzahl angeben.
+      en: In the past you had to give the bank code with every transfer.
+      fa: در گذشته برای هر انتقال پول باید کد شناسایی بانک را می‌نوشتید.
+    alsoAccepted: [die BLZ]
+
   - word: Überweisung
+    class: noun
+    article: die
+    plural: Überweisungen
+    level: B1
+    meaning:
+      en: (bank) transfer
+      fa: انتقال پول (بانکی)، حوالهٔ بانکی
+    definition: wenn man Geld von seinem Konto auf das Konto von einer anderen Person schickt
+    example:
+      de: Die Miete bezahle ich jeden Monat per Überweisung.
+      en: I pay the rent by bank transfer every month.
+      fa: اجاره را هر ماه با انتقال بانکی می‌پردازم.
+
+  # Einzahlung is the deposit, einzahlen making it; neither is offered as a wrong meaning of the other.
   - word: Einzahlung
+    class: noun
+    article: die
+    plural: Einzahlungen
+    level: B1
+    meaning:
+      en: deposit, payment in (to an account)
+      fa: واریز (پول به حساب)
+    definition: wenn man Geld auf ein Konto bringt, zum Beispiel am Schalter der Bank
+    example:
+      de: Für eine Einzahlung am Schalter brauchen Sie Ihren Ausweis.
+      en: For a deposit at the counter you need your ID.
+      fa: برای واریز پول در باجهٔ بانک، کارت شناسایی‌تان را لازم دارید.
+    tooCloseTo: [einzahlen]
+
   - word: einzahlen
+    class: verb
+    level: B1
+    meaning:
+      en: to pay in, to deposit (cash into an account)
+      fa: واریز کردن (پول نقد به حساب)
+    definition: Bargeld auf ein Konto bringen, zum Beispiel am Schalter oder am Automaten
+    example:
+      de: Ich zahle das Geld von meiner Oma morgen auf mein Sparbuch ein.
+      en: Tomorrow I'll pay the money from my grandma into my savings book.
+      fa: فردا پولی را که مادربزرگم داده به دفترچهٔ پس‌اندازم واریز می‌کنم.
+    tooCloseTo: [Einzahlung]
+
   - word: abheben
+    class: verb
+    level: B1
+    meaning:
+      en: to withdraw (money from an account)
+      fa: برداشت کردن (پول از حساب)
+    definition: Geld von seinem Konto nehmen, zum Beispiel am Automaten
+    example:
+      de: Ich muss noch schnell Geld abheben, bevor wir essen gehen.
+      en: I still need to quickly withdraw some money before we go out to eat.
+      fa: پیش از این‌که برای غذا بیرون برویم، باید سریع کمی پول برداشت کنم.
+
   - word: Zinsen
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: interest (on money)
+      fa: بهره، سود بانکی
+    definition: das Geld, das man von der Bank extra bekommt, wenn man spart, oder extra bezahlt, wenn man sich Geld leiht
+    example:
+      de: Für den Kredit zahlen wir vier Prozent Zinsen.
+      en: We pay four per cent interest on the loan.
+      fa: برای این وام چهار درصد بهره می‌پردازیم.
+    alsoAccepted: [der Zins]
+
   - word: Schulden
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: debts
+      fa: بدهی، قرض
+    definition: das Geld, das man einer Person oder einer Bank noch zurückgeben muss
+    example:
+      de: Nach dem Hauskauf hatten sie hohe Schulden bei der Bank.
+      en: After buying the house they had large debts with the bank.
+      fa: پس از خرید خانه، بدهی زیادی به بانک داشتند.
+
+  # Brieftasche and Portemonnaie are both a wallet; each is right when the other is asked for.
   - word: Brieftasche
+    class: noun
+    article: die
+    plural: Brieftaschen
+    level: B1
+    meaning:
+      en: wallet (flat, for notes and cards)
+      fa: کیف بغلی، کیف پول جیبی
+    definition: eine kleine, flache Tasche für Geldscheine, Karten und Ausweis, die man oft in der Jacke trägt
+    example:
+      de: Er steckt die Brieftasche in die Innentasche seiner Jacke.
+      en: He puts his wallet in the inside pocket of his jacket.
+      fa: او کیف بغلی‌اش را در جیب داخلی کتش می‌گذارد.
+    alsoAccepted: [das Portemonnaie, die Geldbörse]
+    tooCloseTo: [Portemonnaie]
+
   - word: Portemonnaie
+    class: noun
+    article: das
+    plural: Portemonnaies
+    level: B1
+    meaning:
+      en: purse, wallet (also for coins)
+      fa: کیف پول
+    definition: eine kleine Tasche für Münzen, Geldscheine und Karten
+    example:
+      de: Mist, ich habe mein Portemonnaie zu Hause vergessen!
+      en: Damn, I've left my purse at home!
+      fa: ای وای، کیف پولم را در خانه جا گذاشته‌ام!
+    alsoAccepted: [die Geldbörse, der Geldbeutel, das Portmonee, die Brieftasche]
+    tooCloseTo: [Brieftasche]
+
   - word: Chipkarte
+    class: noun
+    article: die
+    plural: Chipkarten
+    level: B1
+    meaning:
+      en: chip card, smart card
+      fa: کارت هوشمند (تراشه‌دار)
+    definition: eine Karte aus Plastik mit einem kleinen Teil aus Metall, auf dem Daten gespeichert sind
+    example:
+      de: Beim Arzt müssen Sie Ihre Chipkarte von der Krankenkasse zeigen.
+      en: At the doctor's you have to show your health insurance chip card.
+      fa: در مطب پزشک باید کارت هوشمند بیمهٔ درمانی‌تان را نشان دهید.
+    tooCloseTo: [ec-Karte, Chip]
+
   - word: Chip
+    class: noun
+    article: der
+    plural: Chips
+    level: B1
+    meaning:
+      en: (micro)chip
+      fa: تراشه، ریزتراشه
+    definition: ein sehr kleines elektronisches Teil, auf dem Daten gespeichert sind, zum Beispiel in einer Karte oder im Handy
+    example:
+      de: Der Chip auf meiner Karte ist kaputt, deshalb funktioniert sie nicht mehr.
+      en: The chip on my card is broken, so it doesn't work any more.
+      fa: تراشهٔ کارتم خراب شده، برای همین دیگر کار نمی‌کند.
+    alsoAccepted: [der Mikrochip]
+    tooCloseTo: [ec-Karte, Chipkarte]
+
+  # Betrag and Summe both name an amount of money; each is right when the other is asked for.
   - word: Betrag
+    class: noun
+    article: der
+    plural: Beträge
+    level: B1
+    meaning:
+      en: amount (of money)
+      fa: مبلغ
+    definition: eine bestimmte Zahl in Euro oder in einer anderen Währung, zum Beispiel auf einer Rechnung oder bei einer Überweisung
+    example:
+      de: Bitte überweisen Sie den Betrag bis Ende des Monats.
+      en: Please transfer the amount by the end of the month.
+      fa: لطفاً این مبلغ را تا پایان ماه واریز کنید.
+    alsoAccepted: [die Summe, der Geldbetrag]
+    tooCloseTo: [Summe]
+
   - word: Summe
+    class: noun
+    article: die
+    plural: Summen
+    level: B1
+    meaning:
+      en: sum, total
+      fa: جمع کل، مجموع
+    definition: das Ergebnis, wenn man mehrere Zahlen oder Preise zusammenrechnet
+    example:
+      de: Die Summe auf der Rechnung ist falsch, es sind nur achtzig Euro.
+      en: The total on the bill is wrong, it's only eighty euros.
+      fa: جمع کل صورت‌حساب اشتباه است؛ فقط هشتاد یورو می‌شود.
+    alsoAccepted: [der Betrag, der Gesamtbetrag, die Gesamtsumme]
+    tooCloseTo: [Betrag]
+
+  # Gebühr is a fee for one service, Kosten all you pay; neither is offered beside the other.
   - word: Gebühr
+    class: noun
+    article: die
+    plural: Gebühren
+    level: B1
+    meaning:
+      en: fee, charge (for a service)
+      fa: کارمزد، عوارض
+    definition: Geld, das man für eine bestimmte Leistung bezahlen muss, zum Beispiel bei der Bank oder bei einem Amt
+    example:
+      de: Für einen neuen Pass zahlt man eine Gebühr.
+      en: You pay a fee for a new passport.
+      fa: برای گذرنامهٔ تازه باید عوارض پرداخت کرد.
+    tooCloseTo: [Kosten]
+
   - word: Kosten
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: costs
+      fa: هزینه‌ها
+    definition: das ganze Geld, das man für etwas ausgeben muss
+    example:
+      de: Die Kosten für die Reparatur übernimmt die Versicherung.
+      en: The insurance covers the costs of the repair.
+      fa: هزینهٔ تعمیر را بیمه می‌پردازد.
+    alsoAccepted: [die Unkosten, die Ausgaben]
+    tooCloseTo: [Gebühr]
+
   - word: Zahlung
+    class: noun
+    article: die
+    plural: Zahlungen
+    level: B1
+    meaning:
+      en: payment
+      fa: پرداخت
+    definition: wenn man Geld für etwas gibt, das man gekauft oder bekommen hat
+    example:
+      de: Die Zahlung ist innerhalb von vierzehn Tagen fällig.
+      en: Payment is due within fourteen days.
+      fa: مهلت پرداخت چهارده روز است.
+    alsoAccepted: [die Bezahlung]
+
   - word: Mahnung
+    class: noun
+    article: die
+    plural: Mahnungen
+    level: B1
+    meaning:
+      en: payment reminder, demand for payment
+      fa: اخطار پرداخت
+    definition: ein Brief, der sagt, dass man eine Rechnung noch nicht bezahlt hat und es bald tun muss
+    example:
+      de: Ich habe die Rechnung vergessen und jetzt eine Mahnung bekommen.
+      en: I forgot the bill and have now received a payment reminder.
+      fa: پرداخت صورت‌حساب را فراموش کردم و حالا اخطار پرداخت گرفته‌ام.
+    alsoAccepted: [die Zahlungserinnerung]
+
+  # Quittung and Beleg are both a paper that proves a payment; each is right when the other is asked for.
   - word: Quittung
+    class: noun
+    article: die
+    plural: Quittungen
+    level: B1
+    meaning:
+      en: receipt (signed, confirming a payment)
+      fa: رسید (پرداخت)
+    definition: ein Papier, auf dem steht, dass man Geld bezahlt hat
+    example:
+      de: Können Sie mir bitte eine Quittung für das Taxi geben?
+      en: Could you give me a receipt for the taxi, please?
+      fa: ممکن است لطفاً برای کرایهٔ تاکسی به من رسید بدهید؟
+    alsoAccepted: [der Beleg]
+    tooCloseTo: [Beleg]
+
   - word: Beleg
+    class: noun
+    article: der
+    plural: Belege
+    level: B1
+    meaning:
+      en: proof (of payment), voucher, receipt
+      fa: سند (پرداخت)، رسید
+    definition: ein Papier, das zeigt, dass etwas bezahlt oder gemacht wurde, zum Beispiel für die Steuer
+    example:
+      de: Heben Sie alle Belege für die Steuererklärung auf.
+      en: Keep all the receipts for your tax return.
+      fa: همهٔ رسیدها را برای اظهارنامهٔ مالیاتی نگه دارید.
+    alsoAccepted: [die Quittung, der Nachweis]
+    tooCloseTo: [Quittung]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections, then the ones changed after the second one's; not people)"
+  date: 2026-11-28
+  pool: 3bc2c053a08eaf3a
