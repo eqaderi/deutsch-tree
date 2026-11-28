@@ -1,31 +1,272 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-weather-nature
 kind: vocabulary
 level: A1
 chapter: a1-words-daily-life
 order: 7
-status: coming-soon
+status: published
 title:
   en: "Weather and nature"
   fa: "هوا و طبیعت"
   de: "Wetter und Natur"
+attemptSize: 15
 words:
   - word: Wetter
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: weather
+      fa: هوا، وضع هوا
+    definition: wie es draußen ist, zum Beispiel warm oder kalt, sonnig oder nass
+    example:
+      de: Wie ist das Wetter heute?
+      en: What's the weather like today?
+      fa: هوا امروز چطور است؟
+
   - word: Sonne
+    class: noun
+    article: die
+    plural: Sonnen
+    level: A1
+    meaning:
+      en: sun
+      fa: خورشید، آفتاب
+    definition: sie steht am Himmel und gibt am Tag Licht und Wärme
+    example:
+      de: Morgen kommt endlich die Sonne.
+      en: Tomorrow the sun will finally come out.
+      fa: فردا بالاخره آفتاب درمی‌آید.
+
   - word: Regen
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: rain
+      fa: باران
+    definition: Wassertropfen, die aus den Wolken fallen
+    example:
+      de: Bei Regen bleiben wir zu Hause.
+      en: When it rains we stay at home.
+      fa: وقتی باران می‌بارد، در خانه می‌مانیم.
+
   - word: regnen
+    class: verb
+    level: A1
+    meaning:
+      en: to rain
+      fa: باران باریدن، باران آمدن
+    definition: als Wasser aus den Wolken auf die Erde fallen
+    example:
+      de: Es regnet schon den ganzen Tag.
+      en: It has been raining all day.
+      fa: از صبح یکسره باران می‌بارد.
+
   - word: Wind
+    class: noun
+    article: der
+    plural: Winde
+    level: A1
+    meaning:
+      en: wind
+      fa: باد
+    definition: Luft, die sich draußen schnell bewegt
+    example:
+      de: Heute weht ein starker Wind.
+      en: There's a strong wind today.
+      fa: امروز باد شدیدی می‌وزد.
+
   - word: scheinen
+    class: verb
+    level: A1
+    meaning:
+      en: to shine; to seem
+      fa: تابیدن؛ به نظر رسیدن
+    definition: Licht geben, wie die Sonne am Himmel
+    example:
+      de: Heute scheint die Sonne.
+      en: The sun is shining today.
+      fa: امروز آفتاب می‌تابد.
+    alsoAccepted: [leuchten, strahlen]
+
   - word: Grad
+    class: noun
+    article: der
+    plural: Grade
+    level: A1
+    meaning:
+      en: degree (of temperature)
+      fa: درجه (دما)
+    definition: das Maß für die Temperatur; heute sind es zum Beispiel zwanzig davon
+    example:
+      de: Heute sind es 25 Grad.
+      en: It's 25 degrees today.
+      fa: امروز هوا ۲۵ درجه است.
+
   - word: Blick
+    class: noun
+    article: der
+    plural: Blicke
+    level: A1
+    meaning:
+      en: view; look, glance
+      fa: منظره، چشم‌انداز؛ نگاه
+    definition: was man von einem Ort aus sieht, zum Beispiel aus dem Fenster; auch ein kurzes Ansehen
+    example:
+      de: Vom Balkon hat man einen schönen Blick auf das Meer.
+      en: From the balcony there's a lovely view of the sea.
+      fa: از بالکن منظرهٔ زیبایی از دریا پیداست.
+    alsoAccepted: [die Aussicht, der Ausblick]
+
   - word: Meer
+    class: noun
+    article: das
+    plural: Meere
+    level: A1
+    meaning:
+      en: sea
+      fa: دریا
+    definition: sehr viel salziges Wasser, so groß, dass man oft kein Land mehr sieht
+    example:
+      de: Im Urlaub fahren wir ans Meer.
+      en: On holiday we're going to the seaside.
+      fa: در تعطیلات به کنار دریا می‌رویم.
+    alsoAccepted: [die See, der Ozean]
+
+  # The scope list gives "der/die": "der See" is a lake, "die See" the sea (in the north of Germany).
+  # This node teaches "der See"; "die See" means the same as "das Meer", so it is accepted there.
   - word: See
+    class: noun
+    article: der
+    plural: Seen
+    level: A1
+    meaning:
+      en: lake
+      fa: دریاچه
+    definition: ein großes Wasser mitten im Land, rundherum ist Land
+    example:
+      de: Im Sommer schwimmen wir im See.
+      en: In summer we swim in the lake.
+      fa: تابستان‌ها در دریاچه شنا می‌کنیم.
+
   - word: Baum
+    class: noun
+    article: der
+    plural: Bäume
+    level: A1
+    meaning:
+      en: tree
+      fa: درخت
+    definition: eine große Pflanze aus Holz mit Blättern
+    example:
+      de: Vor unserem Haus steht ein alter Baum.
+      en: There's an old tree in front of our house.
+      fa: جلوی خانهٔ ما درختی کهنسال هست.
+
   - word: Blume
+    class: noun
+    article: die
+    plural: Blumen
+    level: A1
+    meaning:
+      en: flower
+      fa: گل
+    definition: eine Pflanze mit schönen, bunten Blüten
+    example:
+      de: Ich bringe dir Blumen mit.
+      en: I'll bring you some flowers.
+      fa: برایت گل می‌آورم.
+
   - word: Hund
+    class: noun
+    article: der
+    plural: Hunde
+    level: A1
+    meaning:
+      en: dog
+      fa: سگ
+    definition: ein Tier, das bellt und oft bei Menschen im Haus lebt
+    example:
+      de: Unser Hund heißt Bello.
+      en: Our dog is called Bello.
+      fa: اسم سگ ما بلو است.
+
   - word: Feuer
+    class: noun
+    article: das
+    plural: Feuer
+    level: A1
+    meaning:
+      en: fire
+      fa: آتش
+    definition: es ist heiß und hell und brennt, zum Beispiel im Kamin
+    example:
+      de: Am Abend machen wir ein Feuer am See.
+      en: In the evening we make a fire by the lake.
+      fa: شب کنار دریاچه آتش روشن می‌کنیم.
+
   - word: Norden
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: north
+      fa: شمال
+    definition: die Richtung, die auf einer Landkarte oben ist
+    example:
+      de: Hamburg liegt im Norden von Deutschland.
+      en: Hamburg is in the north of Germany.
+      fa: هامبورگ در شمال آلمان است.
+
   - word: Süden
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: south
+      fa: جنوب
+    definition: die Richtung, die auf einer Landkarte unten ist
+    example:
+      de: Im Süden ist es oft wärmer.
+      en: It's often warmer in the south.
+      fa: در جنوب هوا اغلب گرم‌تر است.
+
   - word: Osten
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: east
+      fa: شرق
+    definition: die Richtung, in der am Morgen die Sonne aufgeht
+    example:
+      de: Dresden liegt im Osten.
+      en: Dresden is in the east.
+      fa: درسدن در شرق است.
+
   - word: Westen
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: west
+      fa: غرب
+    definition: die Richtung, in der am Abend die Sonne untergeht
+    example:
+      de: Köln liegt im Westen von Deutschland.
+      en: Cologne is in the west of Germany.
+      fa: کلن در غرب آلمان است.
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 108, then 9 questions)
+  date: 2026-11-28
+  pool: b208bc78c2733218

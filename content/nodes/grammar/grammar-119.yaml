@@ -4,10 +4,360 @@ kind: grammar
 level: A1
 chapter: a1-prepositions
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-191, grammar-192]
 title:
   en: "Temporal: *am*, *um*, *im*, *von … bis*, *ab*"
   fa: "حرف‌های اضافهٔ زمان: *am*، *um*، *im*، *von … bis*، *ab*"
   de: "Zeit: *am*, *um*, *im*, *von … bis*, *ab*"
+
+explanations:
+  en:
+    rule: >
+      To say when, German uses a few fixed prepositions. *Am* goes with days,
+      dates and times of day: *am Montag*, *am 3. Mai*, *am Abend*, *am
+      Wochenende*. The one exception is *in der Nacht*. *Um* goes with clock
+      times: *um 8 Uhr*, *um halb sieben*. *Im* goes with months and seasons:
+      *im Februar*, *im Sommer*. *Am* is short for *an dem* and *im* for *in
+      dem*: the article is in the *Dativ*. *Von … bis* gives a start and an
+      end: *von Montag bis Freitag*. *Ab* gives only the start: *ab Montag*,
+      from Monday on. A year takes no preposition: *Ich bin 1998 geboren*, or
+      *im Jahr 1998*.
+  fa:
+    rule: >
+      آلمانی برای بیان زمان چند حرف اضافهٔ ثابت دارد. *am* با روزهای هفته،
+      تاریخ و بخش‌های روز می‌آید: *am Montag*، *am 3. Mai*، *am Abend* و *am
+      Wochenende*. تنها استثنا *in der Nacht* است. *um* با ساعت می‌آید: *um
+      8 Uhr* و *um halb sieben*. *im* با ماه‌ها و فصل‌ها می‌آید: *im Februar*
+      و *im Sommer*. *am* کوتاه‌شدهٔ *an dem* است و *im* کوتاه‌شدهٔ *in dem*؛
+      یعنی حرف تعریف در حالت *Dativ* (حالت مفعول باواسطه) است. *von … bis*
+      آغاز و پایان یک بازه را نشان می‌دهد: *von Montag bis Freitag*. *ab* فقط
+      آغاز را می‌گوید: *ab Montag*، یعنی از دوشنبه به بعد. سال حرف اضافه
+      نمی‌گیرد: *Ich bin 1998 geboren* یا *im Jahr 1998*.
+  de:
+    rule: >
+      Für die Zeit gibt es feste Präpositionen. *Am* steht bei Tagen, beim
+      Datum und bei Tageszeiten: *am Montag*, *am 3. Mai*, *am Abend*, *am
+      Wochenende*. Aber: *in der Nacht*. *Um* steht bei der Uhrzeit: *um 8
+      Uhr*, *um halb sieben*. *Im* steht bei Monaten und Jahreszeiten: *im
+      Februar*, *im Sommer*. *Am* ist kurz für *an dem*, *im* für *in dem*:
+      Der Artikel steht im Dativ. *Von … bis* sagt Anfang und Ende: *von
+      Montag bis Freitag*. *Ab* sagt nur den Anfang: *ab Montag*. Vor einer
+      Jahreszahl steht keine Präposition: *Ich bin 1998 geboren* oder *im Jahr
+      1998*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: With the preposition, fa: با حرف اضافه, de: Mit Präposition }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Montag, dem Montag, am Montag (an dem), Am Montag arbeite ich.]
+    - [der Juli, dem Juli, im Juli (in dem), Im Juli ist es heiß.]
+    - [die Nacht, der Nacht, in der Nacht, In der Nacht regnet es.]
+    - [das Wochenende, dem Wochenende, am Wochenende (an dem), Am Wochenende habe ich frei.]
+    - [die Ferien (Plural), den Ferien, in den Ferien, In den Ferien fahren wir weg.]
+
+# A week as a line: von … bis closes the time on both sides, ab only on the left.
+diagrams:
+  - caption:
+      en: >
+        A week from Monday (*Mo*) to Sunday (*So*). *Von Montag bis Freitag*
+        has a start and an end. *Ab Samstag* has only a start: the arrow goes
+        on.
+      fa: >
+        یک هفته از دوشنبه (*Mo*) تا یکشنبه (*So*). *von Montag bis Freitag*
+        آغاز و پایان دارد. *ab Samstag* فقط آغاز دارد و پیکان ادامه پیدا
+        می‌کند.
+      de: >
+        Eine Woche von Montag (*Mo*) bis Sonntag (*So*). *Von Montag bis
+        Freitag* hat einen Anfang und ein Ende. *Ab Samstag* hat nur einen
+        Anfang: Der Pfeil geht weiter.
+    svg: |
+      <svg viewBox="0 0 320 172">
+        <!-- von Montag bis Freitag -->
+        <text class="label" x="116" y="32" text-anchor="middle">von Montag bis Freitag</text>
+        <rect class="object" x="30" y="44" width="172" height="14"/>
+        <line class="guide" x1="30" y1="58" x2="30" y2="134"/>
+        <line class="guide" x1="202" y1="58" x2="202" y2="134"/>
+        <!-- ab Samstag: open to the right -->
+        <text class="label" x="270" y="82" text-anchor="middle">ab Samstag</text>
+        <rect class="object" x="245" y="94" width="56" height="14"/>
+        <polygon class="object" points="300,88 316,101 300,114"/>
+        <line class="guide" x1="245" y1="108" x2="245" y2="134"/>
+        <!-- the week -->
+        <line class="line" x1="10" y1="140" x2="310" y2="140"/>
+        <line class="line" x1="30" y1="134" x2="30" y2="146"/>
+        <line class="line" x1="73" y1="134" x2="73" y2="146"/>
+        <line class="line" x1="116" y1="134" x2="116" y2="146"/>
+        <line class="line" x1="159" y1="134" x2="159" y2="146"/>
+        <line class="line" x1="202" y1="134" x2="202" y2="146"/>
+        <line class="line" x1="245" y1="134" x2="245" y2="146"/>
+        <line class="line" x1="288" y1="134" x2="288" y2="146"/>
+        <text class="note" x="30" y="164" text-anchor="middle">Mo</text>
+        <text class="note" x="73" y="164" text-anchor="middle">Di</text>
+        <text class="note" x="116" y="164" text-anchor="middle">Mi</text>
+        <text class="note" x="159" y="164" text-anchor="middle">Do</text>
+        <text class="note" x="202" y="164" text-anchor="middle">Fr</text>
+        <text class="note" x="245" y="164" text-anchor="middle">Sa</text>
+        <text class="note" x="288" y="164" text-anchor="middle">So</text>
+      </svg>
+
+examples:
+  - de: Am Montag beginnt der Kurs.
+    en: The course starts on Monday.
+    fa: کلاس دوشنبه شروع می‌شود.
+  - de: Ich habe am 3. Mai Geburtstag.
+    en: My birthday is on the third of May.
+    fa: تولدم سوم مه است.
+  - de: Am Abend lese ich gern.
+    en: In the evening I like to read.
+    fa: شب‌ها دوست دارم کتاب بخوانم.
+  - de: In der Nacht ist es hier sehr ruhig.
+    en: At night it is very quiet here.
+    fa: شب‌ها این‌جا خیلی آرام است.
+  - de: Der Film beginnt um 20 Uhr.
+    en: The film starts at 8 p.m.
+    fa: فیلم ساعت ۸ شب شروع می‌شود.
+  - de: Wir stehen um halb sieben auf.
+    en: We get up at half past six.
+    fa: ما ساعت شش و نیم بیدار می‌شویم.
+  - de: Im Februar ist es oft kalt.
+    en: It is often cold in February.
+    fa: در فوریه هوا اغلب سرد است.
+  - de: Im Sommer gehen wir oft schwimmen.
+    en: In summer we often go swimming.
+    fa: تابستان‌ها اغلب به شنا می‌رویم.
+  - de: Das Geschäft ist von Montag bis Samstag geöffnet.
+    en: The shop is open from Monday to Saturday.
+    fa: مغازه از دوشنبه تا شنبه باز است.
+  - de: Ich arbeite von 9 bis 17 Uhr.
+    en: I work from 9 a.m. to 5 p.m.
+    fa: من از ساعت ۹ تا ۱۷ کار می‌کنم.
+  - de: Ab Montag habe ich Urlaub.
+    en: From Monday on I'm on holiday.
+    fa: از دوشنبه به بعد مرخصی هستم.
+  - de: Ich bin 1998 geboren.
+    en: I was born in 1998.
+    fa: من سال ۱۹۹۸ به دنیا آمده‌ام.
+
+mistakes:
+  - wrong: Ich komme am 8 Uhr.
+    right: Ich komme um 8 Uhr.
+    why:
+      en: "A clock time takes *um*: *um 8 Uhr*. *Am* is for days, dates and times of day."
+      fa: "ساعت با *um* می‌آید: *um 8 Uhr*. *am* برای روز، تاریخ و بخش‌های روز است."
+      de: "Bei der Uhrzeit steht *um*: *um 8 Uhr*. *Am* steht bei Tagen, beim Datum und bei Tageszeiten."
+  - wrong: Wir fahren in Juli nach Spanien.
+    right: Wir fahren im Juli nach Spanien.
+    why:
+      en: "A month needs the article too: *in dem Juli*, always shortened to *im Juli*."
+      fa: "ماه هم حرف تعریف می‌خواهد: *in dem Juli* که همیشه کوتاه می‌شود: *im Juli*."
+      de: "Beim Monat braucht man auch den Artikel: *in dem Juli*, immer kurz *im Juli*."
+  - wrong: Ich bin in 1998 geboren.
+    right: Ich bin 1998 geboren.
+    why:
+      en: 'English says "in 1998"; German puts no preposition before a year, or says *im Jahr 1998*.'
+      fa: "در انگلیسی می‌گویند *in 1998*، ولی آلمانی پیش از سال حرف اضافه نمی‌گذارد؛ یا می‌گوید *im Jahr 1998*."
+      de: "Vor einer Jahreszahl steht keine Präposition. Man kann auch sagen: *im Jahr 1998*."
+  - wrong: Ich arbeite am Nacht.
+    right: Ich arbeite in der Nacht.
+    why:
+      en: "*Nacht* is the exception among the times of day: *am Morgen*, *am Abend*, but *in der Nacht*."
+      fa: "*Nacht* در میان بخش‌های روز استثناست: *am Morgen* و *am Abend*، ولی *in der Nacht*."
+      de: "*Nacht* ist die Ausnahme: *am Morgen*, *am Abend*, aber *in der Nacht*."
+  - wrong: Im Montag habe ich frei.
+    right: Am Montag habe ich frei.
+    why:
+      en: "Days of the week take *am*. *Im* is for months and seasons."
+      fa: "روزهای هفته با *am* می‌آیند. *im* برای ماه‌ها و فصل‌هاست."
+      de: "Bei Wochentagen steht *am*. *Im* steht bei Monaten und Jahreszeiten."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Kurs beginnt ___ Montag.
+    options: [am, um, im]
+    answer: am
+    explanation:
+      en: "A day of the week takes *am*: *am Montag*."
+      fa: "روز هفته با *am* می‌آید: *am Montag*."
+      de: "Beim Wochentag steht *am*: *am Montag*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir essen ___ 19 Uhr.
+    options: [um, am, im]
+    answer: um
+    explanation:
+      en: "A clock time takes *um*: *um 19 Uhr*."
+      fa: "ساعت با *um* می‌آید: *um 19 Uhr*."
+      de: "Bei der Uhrzeit steht *um*: *um 19 Uhr*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ Winter ist es kalt.
+    options: [Im, Am, Um]
+    answer: Im
+    explanation:
+      en: "A season takes *im*: *im Winter*."
+      fa: "فصل با *im* می‌آید: *im Winter*."
+      de: "Bei Jahreszeiten steht *im*: *im Winter*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Das Baby schläft ___ Nacht nicht gut.
+    options: [in der, am, im]
+    answer: in der
+    explanation:
+      en: "*Nacht* is the exception: *in der Nacht*, not *am*."
+      fa: "*Nacht* استثناست: *in der Nacht*، نه *am*."
+      de: "*Nacht* ist die Ausnahme: *in der Nacht*, nicht *am*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Die Praxis ist von Montag ___ Freitag geöffnet.
+    options: [bis, ab, um]
+    answer: bis
+    explanation:
+      en: "*Von … bis* gives the start and the end: *von Montag bis Freitag*."
+      fa: "*von … bis* آغاز و پایان را نشان می‌دهد: *von Montag bis Freitag*."
+      de: "*Von … bis* sagt Anfang und Ende: *von Montag bis Freitag*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wann hast du Geburtstag? – ___ 12. Oktober.
+    options: [Am, Im, Um]
+    answer: Am
+    explanation:
+      en: "A date takes *am*: *am 12. Oktober*."
+      fa: "تاریخ با *am* می‌آید: *am 12. Oktober*."
+      de: "Beim Datum steht *am*: *am 12. Oktober*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Mein Bruder ist ___ geboren.
+    options: ["1990", im 1990, in 1990]
+    answer: "1990"
+    explanation:
+      en: "A year stands alone, with no preposition: *Er ist 1990 geboren*."
+      fa: "سال تنها و بدون حرف اضافه می‌آید: *Er ist 1990 geboren*."
+      de: "Vor der Jahreszahl steht keine Präposition: *Er ist 1990 geboren*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Der Laden ist neu. Er ist ___ heute geöffnet.
+    options: [ab, um, im]
+    answer: ab
+    explanation:
+      en: "*Ab* gives a start with no end: *ab heute*, from today on."
+      fa: "*ab* آغازی را می‌گوید که پایان ندارد: *ab heute*، یعنی از امروز به بعد."
+      de: "*Ab* sagt einen Anfang ohne Ende: *ab heute*."
+  - id: true-1
+    type: true-false
+    prompt: Wir treffen uns um halb acht.
+    answer: true
+    explanation:
+      en: "A clock time takes *um*. The sentence is correct."
+      fa: "ساعت با *um* می‌آید. جمله درست است."
+      de: "Bei der Uhrzeit steht *um*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Im Sonntag gehen wir spazieren.
+    answer: false
+    explanation:
+      en: "A day of the week takes *am*: *am Sonntag*."
+      fa: "روز هفته با *am* می‌آید: *am Sonntag*."
+      de: "Beim Wochentag steht *am*: *am Sonntag*."
+  - id: true-3
+    type: true-false
+    prompt: Meine Mutter arbeitet in der Nacht.
+    answer: true
+    explanation:
+      en: "*Nacht* takes *in der*, not *am*. The sentence is correct."
+      fa: "*Nacht* با *in der* می‌آید، نه با *am*. جمله درست است."
+      de: "Bei *Nacht* steht *in der*, nicht *am*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Sie ist in 2001 geboren.
+    answer: false
+    explanation:
+      en: "No preposition before a year: *Sie ist 2001 geboren*."
+      fa: "پیش از سال حرف اضافه نمی‌آید: *Sie ist 2001 geboren*."
+      de: "Vor der Jahreszahl steht keine Präposition: *Sie ist 2001 geboren*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Der Zug fährt genau ___ 6 Uhr ab.
+    answers: [um]
+    explanation:
+      en: "An exact clock time takes *um*: *um 6 Uhr*."
+      fa: "ساعت دقیق با *um* می‌آید: *um 6 Uhr*."
+      de: "Bei der genauen Uhrzeit steht *um*: *um 6 Uhr*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir fahren ___ (in) August nach Italien.
+    answers: [im]
+    explanation:
+      en: "A month takes *im*, short for *in dem*: *im August*."
+      fa: "ماه با *im* می‌آید که کوتاه‌شدهٔ *in dem* است: *im August*."
+      de: "Beim Monat steht *im*, kurz für *in dem*: *im August*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich habe ___ (an) Wochenende Zeit.
+    answers: [am]
+    explanation:
+      en: "*Das Wochenende* takes *am*, short for *an dem*: *am Wochenende*."
+      fa: "*das Wochenende* با *am* می‌آید که کوتاه‌شدهٔ *an dem* است: *am Wochenende*."
+      de: "Bei *das Wochenende* steht *am*, kurz für *an dem*: *am Wochenende*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Das Café ist ___ 8 bis 18 Uhr geöffnet.
+    answers: [von]
+    explanation:
+      en: "*Bis* gives the end; the start goes with *von*: *von 8 bis 18 Uhr*."
+      fa: "*bis* پایان را می‌گوید و آغاز با *von* می‌آید: *von 8 bis 18 Uhr*."
+      de: "*Bis* sagt das Ende, den Anfang sagt *von*: *von 8 bis 18 Uhr*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Wann? an + der Abend"
+    answers: [am Abend, an dem Abend]
+    explanation:
+      en: "*An dem Abend* is almost always said as *am Abend*."
+      fa: "*an dem Abend* تقریباً همیشه کوتاه می‌شود: *am Abend*."
+      de: "*An dem Abend* sagt man fast immer kurz: *am Abend*."
+  - id: error-1
+    type: find-error
+    prompt: Der Unterricht beginnt am 9 Uhr.
+    answer: am
+    explanation:
+      en: "A clock time takes *um*: *um 9 Uhr*."
+      fa: "ساعت با *um* می‌آید: *um 9 Uhr*."
+      de: "Bei der Uhrzeit steht *um*: *um 9 Uhr*."
+  - id: error-2
+    type: find-error
+    prompt: Wir arbeiten von Montag ab Freitag.
+    answer: ab
+    explanation:
+      en: "*Von* goes with *bis*: *von Montag bis Freitag*."
+      fa: "*von* با *bis* همراه می‌شود: *von Montag bis Freitag*."
+      de: "Zu *von* gehört *bis*: *von Montag bis Freitag*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [der Unterricht, beginnt, um acht Uhr]
+      - [um acht Uhr, beginnt, der Unterricht]
+    explanation:
+      en: "The verb comes second. The time can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. قید زمان می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. Die Zeit kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [___ Dienstag, am]
+      - [___ 10 Uhr, um]
+      - [___ Frühling, im]
+      - [___ Nacht, in der]
+    explanation:
+      en: "A day takes *am*, a clock time *um*, a season *im*, and *Nacht* takes *in der*."
+      fa: "روز با *am*، ساعت با *um* و فصل با *im* می‌آید؛ *Nacht* با *in der*."
+      de: "Beim Tag steht *am*, bei der Uhrzeit *um*, bei der Jahreszeit *im*, bei *Nacht* *in der*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: c7444411602dfed9

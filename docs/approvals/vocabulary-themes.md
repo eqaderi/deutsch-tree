@@ -233,7 +233,7 @@ das Getränk · das Wasser · die Milch · der Kaffee · der Tee · der Saft · 
 das Haus · die Wohnung · das Apartment · das Zimmer · der Raum · die Küche · das Bad · die Toilette · der Balkon · der Garten · die Treppe · der Stock · der Aufzug · der Eingang · der Ausgang · die Miete · mieten · vermieten · der Vermieter · sich umziehen · der Schlüssel
 
 **A1-W3.4 Furniture and things at home** · مبلمان و وسایل خانه · Möbel und Dinge im Haus · 24 words  
-das Möbel · der Tisch · das Bett · der Schrank · das Sofa · der Herd · der Kühlschrank · die Dusche · das Licht · das Bild · die Maschine · anmachen · ausmachen · an sein · aus sein · auf sein · zu sein · öffnen · schließen · geöffnet · geschlossen · kaputt · reparieren · die Reparatur
+die Möbel (Pl.) · der Tisch · das Bett · der Schrank · das Sofa · der Herd · der Kühlschrank · die Dusche · das Licht · das Bild · die Maschine · anmachen · ausmachen · an sein · aus sein · auf sein · zu sein · öffnen · schließen · geöffnet · geschlossen · kaputt · reparieren · die Reparatur
 
 **A1-W3.5 Shopping and money** · خرید و پول · Einkaufen und Geld · 25 words  
 einkaufen · (sich etwas) kaufen · verkaufen · der Verkäufer · der Kunde · das Geschäft · der Laden · die Kasse · der Preis · kosten · bezahlen · zahlen · das Geld · der Euro · der Cent · billig · teuer · günstig · das Angebot · die Rechnung · bar · die Kreditkarte · das Konto · überweisen · der Prospekt

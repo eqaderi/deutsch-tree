@@ -4,10 +4,335 @@ kind: grammar
 level: A1
 chapter: a1-prepositions
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-121]
 title:
   en: "Local, *Woher?*: *aus*; *von*"
   fa: "مبدأ، *Woher?*: *aus* و *von*"
   de: "Herkunft, *Woher?*: *aus*; *von*"
+
+explanations:
+  en:
+    rule: >
+      To say where someone or something comes from (*Woher?*), German uses
+      *aus* and *von*. Both always take the *Dativ*. *Aus* is out of a place
+      you were in: a room, a building, a city or a country. So it also says
+      where a person is from: *aus der Küche*, *aus dem Kino*, *aus Berlin*,
+      *aus dem Iran*. *Von* is away from a person, an activity or a place you
+      were at: *von meiner Freundin*, *vom Arzt*, *von der Arbeit*. *Von dem*
+      is shortened to *vom*. So *aus* answers *in*, and *von* answers *zu* and
+      *bei*: *im Kino* – *aus dem Kino*, *beim Arzt* – *vom Arzt*. *Von zu
+      Hause* means from home.
+  fa:
+    rule: >
+      برای گفتن این‌که کسی یا چیزی از کجا می‌آید (*Woher?*)، آلمانی *aus* و
+      *von* را به کار می‌برد. هر دو همیشه با حالت *Dativ* (حالت مفعول
+      باواسطه) می‌آیند. *aus* یعنی بیرون آمدن از جایی که درونش بوده‌اید: یک
+      اتاق، یک ساختمان، یک شهر یا یک کشور. به همین دلیل *aus* اهل جایی بودن
+      را هم نشان می‌دهد: *aus der Küche*، *aus dem Kino*، *aus Berlin* و *aus
+      dem Iran*. *von* یعنی دور شدن از یک شخص، یک کار یا جایی که کنارش
+      بوده‌اید: *von meiner Freundin*، *vom Arzt* و *von der Arbeit*. *von
+      dem* کوتاه می‌شود: *vom*. پس *aus* در برابر *in* است و *von* در برابر
+      *zu* و *bei*: *im Kino* و *aus dem Kino*، *beim Arzt* و *vom Arzt*.
+      *von zu Hause* یعنی «از خانه».
+  de:
+    rule: >
+      Auf die Frage *Woher?* stehen *aus* und *von*, beide immer mit Dativ.
+      *Aus* heißt: Man war in einem Raum, einem Haus, einer Stadt oder einem
+      Land und kommt heraus. Darum sagt *aus* auch die Herkunft: *aus der
+      Küche*, *aus dem Kino*, *aus Berlin*, *aus dem Iran*. *Von* steht bei
+      Personen, bei einer Tätigkeit und bei Orten, an denen man war: *von
+      meiner Freundin*, *vom Arzt*, *von der Arbeit*. *Von dem* sagt man kurz
+      *vom*. Also: *im Kino* – *aus dem Kino*, *beim Arzt* – *vom Arzt*. *Von
+      zu Hause* heißt: von der eigenen Wohnung.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Arzt, dem Arzt, einem Arzt, vom Arzt (von dem)]
+    - [die Freundin, der Freundin, einer Freundin, von einer Freundin]
+    - [das Dorf, dem Dorf, einem Dorf, aus einem Dorf]
+    - [die Eltern (Plural), den Eltern, –, von den Eltern]
+
+# The mirror of the Wohin? diagram: out of a room, away from a place.
+diagrams:
+  - caption:
+      en: >
+        *Woher?* With *aus* you come out of a place you were in. With *von*
+        you come away from a person or a place you were at, not in.
+      fa: >
+        *Woher?* با *aus* از جایی بیرون می‌آیید که درونش بوده‌اید. با *von* از
+        کنار یک شخص یا یک مکان دور می‌شوید، نه از درون آن.
+      de: >
+        *Woher?* Mit *aus* kommt man aus einem Raum heraus. Mit *von* kommt
+        man von einer Person oder einem Ort weg, an dem man war.
+    svg: |
+      <svg viewBox="0 0 320 168">
+        <!-- aus: out of a room whose edges are dashed -->
+        <text class="label" x="176" y="34" text-anchor="middle">aus dem Haus</text>
+        <rect class="guide" x="24" y="24" width="64" height="48"/>
+        <line class="line" x1="56" y1="48" x2="250" y2="48"/>
+        <polygon class="object" points="250,41 264,48 250,55"/>
+        <circle class="object" cx="288" cy="48" r="10"/>
+        <!-- von: away from the side of a building -->
+        <text class="label" x="176" y="114" text-anchor="middle">vom Arzt</text>
+        <rect class="surface" x="24" y="104" width="64" height="48"/>
+        <line class="line" x1="96" y1="128" x2="250" y2="128"/>
+        <polygon class="object" points="250,121 264,128 250,135"/>
+        <circle class="object" cx="288" cy="128" r="10"/>
+      </svg>
+
+examples:
+  - de: Ich komme aus dem Iran.
+    en: I come from Iran.
+    fa: من اهل ایران هستم.
+  - de: Maria kommt aus Italien.
+    en: Maria comes from Italy.
+    fa: ماریا اهل ایتالیاست.
+  - de: Er kommt gerade aus der Küche.
+    en: He is just coming out of the kitchen.
+    fa: او همین حالا از آشپزخانه بیرون می‌آید.
+  - de: Die Kinder kommen um vier aus der Schule.
+    en: The children come out of school at four.
+    fa: بچه‌ها ساعت چهار از مدرسه بیرون می‌آیند.
+  - de: Ich komme gerade vom Arzt.
+    en: I'm just coming from the doctor's.
+    fa: همین حالا از پیش پزشک می‌آیم.
+  - de: Wann kommst du von der Arbeit?
+    en: When do you get back from work?
+    fa: کی از سر کار برمی‌گردی؟
+  - de: Das Geschenk ist von meiner Schwester.
+    en: The present is from my sister.
+    fa: این هدیه از طرف خواهرم است.
+  - de: Ich habe eine E-Mail von meinem Chef.
+    en: I have an e-mail from my boss.
+    fa: یک ایمیل از رئیسم دارم.
+  - de: Der Zug aus München hat Verspätung.
+    en: The train from Munich is late.
+    fa: قطاری که از مونیخ می‌آید تأخیر دارد.
+  - de: Heute arbeite ich von zu Hause.
+    en: Today I'm working from home.
+    fa: امروز از خانه کار می‌کنم.
+
+mistakes:
+  - wrong: Mein Mann kommt von Spanien.
+    right: Mein Mann kommt aus Spanien.
+    why:
+      en: "Where a person is from is *aus*: *aus Spanien*, *aus Berlin*."
+      fa: "اهل جایی بودن با *aus* گفته می‌شود: *aus Spanien* و *aus Berlin*."
+      de: "Die Herkunft sagt man mit *aus*: *aus Spanien*, *aus Berlin*."
+  - wrong: Ich komme gerade aus dem Arzt.
+    right: Ich komme gerade vom Arzt.
+    why:
+      en: "You were with a person, not inside one: *von*, shortened *vom Arzt*."
+      fa: "پیش یک شخص بوده‌اید، نه درون او: *von* که کوتاه می‌شود: *vom Arzt*."
+      de: "Man war bei einer Person: *von*, kurz *vom Arzt*."
+  - wrong: Er kommt von der Küche.
+    right: Er kommt aus der Küche.
+    why:
+      en: "He was inside the kitchen and comes out: *aus der Küche*."
+      fa: "او درون آشپزخانه بوده و بیرون می‌آید: *aus der Küche*."
+      de: "Er war in der Küche und kommt heraus: *aus der Küche*."
+  - wrong: Ich komme von die Arbeit.
+    right: Ich komme von der Arbeit.
+    why:
+      en: "*Von* takes the *Dativ*: *die* becomes *der*."
+      fa: "*von* با حالت *Dativ* می‌آید: *die* به *der* تبدیل می‌شود."
+      de: "Nach *von* steht der Dativ: *die* wird zu *der*."
+  - wrong: Das Paket ist aus meiner Mutter.
+    right: Das Paket ist von meiner Mutter.
+    why:
+      en: "A thing that a person sends or gives is *von* that person."
+      fa: "چیزی که کسی می‌فرستد یا می‌دهد، *von* آن شخص است."
+      de: "Was eine Person schickt oder schenkt, ist *von* dieser Person."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich komme ___ Brasilien.
+    options: [aus, von, nach]
+    answer: aus
+    explanation:
+      en: "Where you are from: *aus Brasilien*."
+      fa: "اهل جایی بودن: *aus Brasilien*."
+      de: "Herkunft: *aus Brasilien*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich komme gerade ___ Arzt.
+    options: [vom, aus dem, aus]
+    answer: vom
+    explanation:
+      en: "From a person: *von dem Arzt*, shortened to *vom Arzt*."
+      fa: "از پیش یک شخص: *von dem Arzt* که کوتاه می‌شود: *vom Arzt*."
+      de: "Von einer Person: *von dem Arzt*, kurz *vom Arzt*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Er kommt ___ Küche.
+    options: [aus der, aus die, aus dem]
+    answer: aus der
+    explanation:
+      en: "*Aus* takes the *Dativ*. *Küche* is feminine: *die* becomes *der*."
+      fa: "*aus* با حالت *Dativ* می‌آید. *Küche* اسم مؤنث است: *die* به *der* تبدیل می‌شود."
+      de: "Nach *aus* steht der Dativ. *Küche* ist feminin: *die* wird zu *der*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wann kommst du von ___ Arbeit?
+    options: [der, die, dem]
+    answer: der
+    explanation:
+      en: "*Von* takes the *Dativ*. *Arbeit* is feminine: *von der Arbeit*."
+      fa: "*von* با حالت *Dativ* می‌آید. *Arbeit* اسم مؤنث است: *von der Arbeit*."
+      de: "Nach *von* steht der Dativ. *Arbeit* ist feminin: *von der Arbeit*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Das Geschenk ist ___ meinem Bruder.
+    options: [von, aus, zu]
+    answer: von
+    explanation:
+      en: "A present that a person gives is *von* that person."
+      fa: "هدیه‌ای که کسی می‌دهد، *von* آن شخص است."
+      de: "Ein Geschenk von einer Person: *von meinem Bruder*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Woher kommst du? – Ich komme ___.
+    options: [aus der Schweiz, von der Schweiz, aus die Schweiz]
+    answer: aus der Schweiz
+    explanation:
+      en: "Where you are from is *aus*, with the *Dativ*: *aus der Schweiz*."
+      fa: "اهل جایی بودن با *aus* و حالت *Dativ* می‌آید: *aus der Schweiz*."
+      de: "Herkunft: *aus* mit Dativ, *aus der Schweiz*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Woher kommst du gerade? – ___
+    options: [Vom Supermarkt., Aus den Supermarkt., Von den Supermarkt.]
+    answer: Vom Supermarkt.
+    explanation:
+      en: "*Von* and *aus* take the *Dativ*: *von dem Supermarkt*, shortened to *vom*."
+      fa: "*von* و *aus* با حالت *Dativ* می‌آیند: *von dem Supermarkt* که کوتاه می‌شود: *vom*."
+      de: "Nach *von* und *aus* steht der Dativ: *von dem Supermarkt*, kurz *vom*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: ___ kommt der Zug? – Aus Hamburg.
+    options: [Woher, Wohin, Wo]
+    answer: Woher
+    explanation:
+      en: "*Aus Hamburg* says where the train comes from: *Woher?*"
+      fa: "*aus Hamburg* می‌گوید قطار از کجا می‌آید: *Woher?*"
+      de: "*Aus Hamburg* sagt die Herkunft: *Woher?*"
+  - id: true-1
+    type: true-false
+    prompt: Meine Kollegin kommt aus Polen.
+    answer: true
+    explanation:
+      en: "Where a person is from is *aus*. The sentence is correct."
+      fa: "اهل جایی بودن با *aus* می‌آید. جمله درست است."
+      de: "Herkunft mit *aus*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Mein Kollege kommt von Spanien. Er ist Spanier.
+    answer: false
+    explanation:
+      en: "Where a person is from is *aus*: *aus Spanien*."
+      fa: "اهل جایی بودن با *aus* می‌آید: *aus Spanien*."
+      de: "Herkunft mit *aus*: *aus Spanien*."
+  - id: true-3
+    type: true-false
+    prompt: Die Kinder kommen aus dem Garten.
+    answer: true
+    explanation:
+      en: "Out of the garden: *aus* with the *Dativ* *dem Garten*. The sentence is correct."
+      fa: "بیرون آمدن از باغ: *aus* با حالت *Dativ* (*dem Garten*). جمله درست است."
+      de: "Aus dem Garten heraus: *aus* mit Dativ. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich komme von die Schule.
+    answer: false
+    explanation:
+      en: "*Von* takes the *Dativ*: *von der Schule*."
+      fa: "*von* با حالت *Dativ* می‌آید: *von der Schule*."
+      de: "Nach *von* steht der Dativ: *von der Schule*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Sie kommt aus ___ (der) Iran.
+    answers: [dem]
+    explanation:
+      en: "*Der Iran* has an article. After *aus* it is in the *Dativ*: *aus dem Iran*."
+      fa: "*der Iran* حرف تعریف دارد و پس از *aus* در حالت *Dativ* می‌آید: *aus dem Iran*."
+      de: "*Der Iran* hat einen Artikel. Nach *aus* steht der Dativ: *aus dem Iran*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich komme gerade ___ (von + der) Bahnhof.
+    answers: [vom, von dem]
+    explanation:
+      en: "*Von dem Bahnhof*, almost always said as *vom Bahnhof*."
+      fa: "*von dem Bahnhof* که تقریباً همیشه کوتاه می‌شود: *vom Bahnhof*."
+      de: "*Von dem Bahnhof*, fast immer kurz *vom Bahnhof*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Der Brief ist von ___ (die) Bank.
+    answers: [der]
+    explanation:
+      en: "*Von* takes the *Dativ*: *die* becomes *der*."
+      fa: "*von* با حالت *Dativ* می‌آید: *die* به *der* تبدیل می‌شود."
+      de: "Nach *von* steht der Dativ: *die* wird zu *der*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich bin Österreicherin. Ich komme ___ Wien.
+    answers: [aus]
+    explanation:
+      en: "Where you are from is *aus*: *aus Wien*."
+      fa: "اهل جایی بودن با *aus* می‌آید: *aus Wien*."
+      de: "Herkunft mit *aus*: *aus Wien*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Woher? von + die Arbeit"
+    answers: [von der Arbeit]
+    explanation:
+      en: "*Von* takes the *Dativ*: *von der Arbeit*."
+      fa: "*von* با حالت *Dativ* می‌آید: *von der Arbeit*."
+      de: "Nach *von* steht der Dativ: *von der Arbeit*."
+  - id: error-1
+    type: find-error
+    prompt: Er kommt gerade aus die Küche.
+    answer: die
+    explanation:
+      en: "*Aus* takes the *Dativ*: *aus der Küche*."
+      fa: "*aus* با حالت *Dativ* می‌آید: *aus der Küche*."
+      de: "Nach *aus* steht der Dativ: *aus der Küche*."
+  - id: error-2
+    type: find-error
+    prompt: Das Paket ist aus meiner Mutter.
+    answer: aus
+    explanation:
+      en: "A thing that a person sends is *von* that person: *von meiner Mutter*."
+      fa: "چیزی که کسی می‌فرستد، *von* آن شخص است: *von meiner Mutter*."
+      de: "Was eine Person schickt, ist *von* ihr: *von meiner Mutter*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wann, kommst, du, von der Arbeit]
+    end: "?"
+    explanation:
+      en: "A question with a question word: the question word first, then the verb, then the subject."
+      fa: "در پرسش با واژهٔ پرسشی، اول واژهٔ پرسشی، سپس فعل و بعد فاعل می‌آید."
+      de: "Bei einer W-Frage steht das Fragewort am Anfang, dann das Verb, dann das Subjekt."
+  - id: match-1
+    type: matching
+    answer:
+      - [Ich komme ___ Arzt., vom]
+      - [Sie kommt ___ Türkei., aus der]
+      - [Er kommt ___ Arbeit., von der]
+    explanation:
+      en: "From a person: *vom Arzt*. From a country: *aus der Türkei*. From an activity: *von der Arbeit*."
+      fa: "از پیش یک شخص: *vom Arzt*؛ از یک کشور: *aus der Türkei*؛ از سر یک کار: *von der Arbeit*."
+      de: "Von einer Person: *vom Arzt*. Aus einem Land: *aus der Türkei*. Von einer Tätigkeit: *von der Arbeit*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 1be4d566efab0118
