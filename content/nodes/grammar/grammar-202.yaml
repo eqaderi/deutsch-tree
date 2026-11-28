@@ -4,10 +4,349 @@ kind: grammar
 level: A2
 chapter: a2-word-building-particles
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-008, grammar-141]
 title:
   en: "*doch*, *mal*, *denn* in requests and questions"
   fa: "*doch*، *mal* و *denn* در درخواست و پرسش"
   de: "*doch*, *mal*, *denn* in Bitten und Fragen"
+
+explanations:
+  en:
+    rule: >
+      *doch*, *mal* and *denn* are particles: short, unstressed words that
+      change the tone of a sentence, not its facts. They stand in the middle,
+      after the verb and a pronoun, never in first place. *mal* makes a
+      request casual, a small thing: *Gib mir bitte mal dein Wörterbuch.*
+      *doch* turns a request into friendly encouragement: *Komm doch mit!*
+      Together it is always *doch mal*: *Ruf mich doch mal an!* *denn* in a
+      question sounds interested and less abrupt: *Wie heißt du denn?* In a
+      statement, *doch* reminds someone of what they already know, or
+      reproaches them: *Das habe ich dir doch gesagt!* *mal* makes a
+      statement less binding: *Ich frage mal.* Keep them apart from the
+      conjunction *denn* (because) in position 0, and from the stressed
+      answer *Doch!* to a negative question.
+  fa:
+    rule: >
+      *doch*، *mal* و *denn* ادات‌اند: واژه‌هایی کوتاه و بی‌تکیه که لحن جمله
+      را تغییر می‌دهند، نه محتوای آن را. این واژه‌ها در میانهٔ جمله می‌آیند،
+      پس از فعل و ضمیر، و هرگز در جایگاه اول نیستند. *mal* درخواست را
+      خودمانی و سبک می‌کند، گویی کار کوچکی است: *Gib mir bitte mal dein
+      Wörterbuch.* *doch* درخواست را به تشویقی دوستانه تبدیل می‌کند: *Komm
+      doch mit!* این دو با هم همیشه به ترتیب *doch mal* می‌آیند: *Ruf mich
+      doch mal an!* *denn* در پرسش، پرسش را علاقه‌مندانه و کمتر خشک می‌کند:
+      *Wie heißt du denn?* در جملهٔ خبری، *doch* چیزی را یادآوری می‌کند که
+      شنونده از پیش می‌داند، یا گله می‌کند، مانند «که» در فارسی گفتاری: *Das
+      habe ich dir doch gesagt!* (من که به تو گفته بودم!). *mal* جملهٔ خبری را
+      کم‌تعهدتر می‌کند: *Ich frage mal.* این ادات را با حرف ربط *denn* (زیرا)
+      در جایگاه صفر، و با پاسخ تکیه‌دار *Doch!* به پرسش منفی اشتباه نگیرید.
+  de:
+    rule: >
+      *Doch*, *mal* und *denn* sind Partikeln. Sie sind kurz und nicht
+      betont. Sie ändern nicht den Inhalt, sondern den Ton. Sie stehen in der
+      Satzmitte, nach dem Verb und dem Pronomen, nie auf Position 1. *Mal*
+      macht eine Bitte locker: *Gib mir bitte mal dein Wörterbuch.* *Doch*
+      macht eine Bitte freundlich: *Komm doch mit!* Zusammen sagt man immer
+      *doch mal*: *Ruf mich doch mal an!* *Denn* macht eine Frage interessiert
+      und freundlich: *Wie heißt du denn?* In einer Aussage sagt *doch*: Das
+      weißt du schon! *Das habe ich dir doch gesagt!* *Mal* macht eine Aussage
+      weniger fest: *Ich frage mal.* Achtung: Die Konjunktion *denn* (= weil)
+      steht auf Position 0. Die Antwort *Doch!* auf eine Frage mit *nicht* ist
+      betont.
+
+table:
+  columns:
+    - { en: Word, fa: واژه, de: Wort }
+    - { en: Where, fa: کجا, de: Wo? }
+    - { en: What it does, fa: کاربرد, de: Was macht es? }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [mal, in einer Bitte, macht die Bitte locker, Gib mir bitte mal dein Wörterbuch.]
+    - [doch, in einer Bitte, macht die Bitte freundlich, Komm doch mit!]
+    - [doch mal, in einer Bitte, beides zusammen, Ruf mich doch mal an!]
+    - [denn, in einer Frage, macht die Frage freundlich, Wie heißt du denn?]
+    - [doch, in einer Aussage, „Das weißt du schon!“, Das habe ich dir doch gesagt!]
+    - [mal, in einer Aussage, macht die Aussage weniger fest, Ich frage mal.]
+    - [denn (Konjunktion), auf Position 0, gibt einen Grund, "Ich bleibe zu Hause, denn ich bin krank."]
+    - [Doch! (Antwort), nach einer Frage mit nicht, „Das stimmt nicht!“, Kommst du nicht? – Doch!]
+
+examples:
+  - de: Gib mir bitte mal dein Wörterbuch.
+    en: Could you give me your dictionary for a moment?
+    fa: لطفاً یک لحظه فرهنگ لغتت را به من بده.
+  - de: Komm doch mit! Das wird lustig.
+    en: Why don't you come along? It'll be fun.
+    fa: تو هم با ما بیا! خوش می‌گذرد.
+  - de: Setzen Sie sich doch!
+    en: Do sit down!
+    fa: بفرمایید بنشینید!
+  - de: Wie heißt du denn?
+    en: So what's your name?
+    fa: خب، اسمت چیست؟
+  - de: Was ist denn los?
+    en: What's the matter?
+    fa: چه شده؟
+  - de: Wo wohnen Sie denn?
+    en: And where do you live?
+    fa: شما کجا زندگی می‌کنید؟
+  - de: Ruf mich doch mal an!
+    en: Give me a call sometime!
+    fa: یک وقت به من زنگ بزن!
+  - de: Warte mal!
+    en: Wait a moment!
+    fa: یک لحظه صبر کن!
+  - de: Das habe ich dir doch gesagt!
+    en: But I told you that!
+    fa: من که این را به تو گفته بودم!
+  - de: Du kennst doch Anna.
+    en: You know Anna, don't you.
+    fa: تو که آنا را می‌شناسی.
+  - de: Ich frage mal den Kellner.
+    en: I'll just ask the waiter.
+    fa: بگذار از پیش‌خدمت بپرسم.
+
+mistakes:
+  - wrong: Denn wie heißt du?
+    right: Wie heißt du denn?
+    why:
+      en: "A particle never stands first: *denn* comes after the verb and the pronoun."
+      fa: "ادات هرگز در آغاز جمله نمی‌آیند: *denn* پس از فعل و ضمیر می‌آید."
+      de: "Eine Partikel steht nie am Anfang. *Denn* steht nach dem Verb und dem Pronomen."
+  - wrong: Mal gib mir das Salz!
+    right: Gib mir mal das Salz!
+    why:
+      en: "In a request the verb comes first; *mal* follows it and the pronoun."
+      fa: "در جملهٔ امری فعل در آغاز می‌آید و *mal* پس از فعل و ضمیر."
+      de: "In einer Bitte steht das Verb am Anfang. *Mal* steht danach, nach dem Pronomen."
+  - wrong: Komm mal doch vorbei!
+    right: Komm doch mal vorbei!
+    why:
+      en: "Together the order is always *doch mal*."
+      fa: "وقتی هر دو با هم می‌آیند، ترتیب همیشه *doch mal* است."
+      de: "Zusammen sagt man immer *doch mal*."
+  - wrong: Ich habe denn keine Zeit.
+    right: Ich habe doch keine Zeit.
+    why:
+      en: "The particle *denn* is only for questions. To remind someone, use *doch*."
+      fa: "ادات *denn* فقط در پرسش می‌آید. برای یادآوری، *doch* به کار می‌رود."
+      de: "Die Partikel *denn* gibt es nur in Fragen. Zum Erinnern sagt man *doch*."
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: Was ist ___ los? Du siehst so traurig aus.
+    options: [mal, denn]
+    answer: denn
+    explanation:
+      en: "*Denn* makes a question sound interested: *Was ist denn los?* *Mal* does not fit here."
+      fa: "*denn* پرسش را علاقه‌مندانه می‌کند: *Was ist denn los?* *mal* این‌جا مناسب نیست."
+      de: "*Denn* macht die Frage interessiert: *Was ist denn los?* *Mal* passt hier nicht."
+  - id: q2
+    type: gap-fill
+    prompt: Warte ___! Ich komme gleich.
+    options: [denn, mal]
+    answer: mal
+    explanation:
+      en: "*Mal* makes a request casual: *Warte mal!* The particle *denn* is only for questions."
+      fa: "*mal* درخواست را خودمانی می‌کند: *Warte mal!* ادات *denn* فقط در پرسش می‌آید."
+      de: "*Mal* macht die Bitte locker: *Warte mal!* *Denn* gibt es nur in Fragen."
+  - id: q3
+    type: gap-fill
+    prompt: Du kennst ___ meinen Bruder. Er war auch auf der Party.
+    options: [mal, doch, denn]
+    answer: doch
+    explanation:
+      en: "*Doch* in a statement reminds someone of what they know: you met him at the party."
+      fa: "*doch* در جملهٔ خبری چیزی را یادآوری می‌کند که شنونده می‌داند: او را در مهمانی دیده است."
+      de: "*Doch* in einer Aussage sagt: Das weißt du schon. Du hast ihn auf der Party gesehen."
+  - id: q4
+    type: gap-fill
+    prompt: Ich bleibe heute zu Hause, ___ ich bin krank.
+    options: [denn, doch, mal]
+    answer: denn
+    explanation:
+      en: 'Here *denn* is the conjunction "because": it gives the reason, in position 0.'
+      fa: "این‌جا *denn* حرف ربط به معنای «زیرا» است: علت را می‌گوید و در جایگاه صفر می‌آید."
+      de: "Hier ist *denn* die Konjunktion (= weil). Sie gibt den Grund und steht auf Position 0."
+  - id: q5
+    type: gap-fill
+    prompt: Kommst du nicht mit? – ___, ich komme gern mit!
+    options: [Mal, Denn, Doch]
+    answer: Doch
+    explanation:
+      en: "*Doch!* answers yes to a question with *nicht*. This *doch* is stressed."
+      fa: "*Doch!* پاسخ مثبت به پرسشی با *nicht* است. این *doch* تکیه‌دار است."
+      de: "*Doch!* ist die Antwort „ja“ auf eine Frage mit *nicht*. Dieses *doch* ist betont."
+  - id: q6
+    type: gap-fill
+    prompt: Setzen Sie sich ___! Hier ist noch ein Platz frei.
+    options: [denn, doch]
+    answer: doch
+    explanation:
+      en: "*Doch* makes the request a friendly invitation. The particle *denn* is only for questions."
+      fa: "*doch* درخواست را به دعوتی دوستانه تبدیل می‌کند. ادات *denn* فقط در پرسش می‌آید."
+      de: "*Doch* macht die Bitte freundlich. *Denn* gibt es nur in Fragen."
+  - id: q7
+    type: multiple-choice
+    prompt: "„Komm doch mit!“ Was meint die Person?"
+    options: ["Ich möchte nicht, dass du mitkommst.", "Ich möchte gern, dass du mitkommst.", Warum kommst du mit?]
+    answer: "Ich möchte gern, dass du mitkommst."
+    explanation:
+      en: "*Doch* in a request is friendly encouragement: the speaker would like you to come."
+      fa: "*doch* در درخواست تشویقی دوستانه است: گوینده دوست دارد شما هم بیایید."
+      de: "*Doch* in einer Bitte ist freundlich: Die Person möchte, dass du mitkommst."
+  - id: q8
+    type: multiple-choice
+    prompt: "„Das habe ich dir doch gesagt!“ Was meint die Person?"
+    options:
+      [
+        Ich sage es dir jetzt zum ersten Mal.,
+        "Ich weiß nicht, ob ich es dir gesagt habe.",
+        "Du weißt das schon, ich habe es dir gesagt.",
+      ]
+    answer: "Du weißt das schon, ich habe es dir gesagt."
+    explanation:
+      en: "*Doch* in a statement reminds, here with a reproach: you already knew it."
+      fa: "*doch* در جملهٔ خبری یادآوری می‌کند، این‌جا همراه با گله: شما این را از پیش می‌دانستید."
+      de: "*Doch* in einer Aussage erinnert: Du weißt das schon."
+  - id: q9
+    type: multiple-choice
+    prompt: In welchem Satz ist „denn“ eine Konjunktion (= weil)?
+    options: [Wie spät ist es denn?, "Ich gehe nach Hause, denn ich bin müde.", Was machst du denn hier?]
+    answer: "Ich gehe nach Hause, denn ich bin müde."
+    explanation:
+      en: "The conjunction *denn* joins two clauses and gives a reason; in a question, *denn* is the particle."
+      fa: "حرف ربط *denn* دو جمله را به هم می‌پیوندد و علت را می‌گوید؛ *denn* در پرسش، ادات است."
+      de: "Die Konjunktion *denn* verbindet zwei Sätze und gibt einen Grund. In einer Frage ist *denn* eine Partikel."
+  - id: q10
+    type: multiple-choice
+    prompt: "„Ich frage mal den Kellner.“ Was bedeutet das?"
+    options:
+      [
+        Ich frage den Kellner jeden Tag.,
+        Ich frage den Kellner kurz. Das ist kein Problem.,
+        Ich frage den Kellner morgen.,
+      ]
+    answer: Ich frage den Kellner kurz. Das ist kein Problem.
+    explanation:
+      en: "*Mal* makes the statement casual: a quick question, no big thing."
+      fa: "*mal* جمله را سبک و خودمانی می‌کند: پرسشی کوتاه، چیز مهمی نیست."
+      de: "*Mal* macht die Aussage locker: eine kurze Frage, kein Problem."
+  - id: q11
+    type: true-false
+    prompt: Wo arbeitest du denn?
+    answer: true
+    explanation:
+      en: "*Denn* in a W-question, after the verb and the pronoun. The sentence is correct."
+      fa: "*denn* در پرسش با واژهٔ پرسشی، پس از فعل و ضمیر آمده است. جمله درست است."
+      de: "*Denn* in einer W-Frage, nach dem Verb und dem Pronomen. Der Satz ist richtig."
+  - id: q12
+    type: true-false
+    prompt: Hilf mir doch mal!
+    answer: true
+    explanation:
+      en: "*Doch mal* in a request, in this order. The sentence is correct."
+      fa: "*doch mal* در جملهٔ امری، به همین ترتیب. جمله درست است."
+      de: "*Doch mal* in einer Bitte, in dieser Reihenfolge. Der Satz ist richtig."
+  - id: q13
+    type: true-false
+    prompt: Ich bin denn sehr müde.
+    answer: false
+    explanation:
+      en: "The particle *denn* is only for questions, not for statements."
+      fa: "ادات *denn* فقط در پرسش می‌آید، نه در جملهٔ خبری."
+      de: "Die Partikel *denn* gibt es nur in Fragen, nicht in Aussagen."
+  - id: q14
+    type: true-false
+    prompt: Mal gib mir das Buch!
+    answer: false
+    explanation:
+      en: "A particle never stands first: *Gib mir mal das Buch!*"
+      fa: "ادات هرگز در آغاز جمله نمی‌آیند: *Gib mir mal das Buch!*"
+      de: "Eine Partikel steht nie am Anfang: *Gib mir mal das Buch!*"
+  - id: q15
+    type: true-false
+    prompt: Komm mal doch vorbei!
+    answer: false
+    explanation:
+      en: "Together the order is always *doch mal*: *Komm doch mal vorbei!*"
+      fa: "وقتی هر دو با هم می‌آیند، ترتیب همیشه *doch mal* است: *Komm doch mal vorbei!*"
+      de: "Zusammen sagt man immer *doch mal*: *Komm doch mal vorbei!*"
+  - id: q16
+    type: find-error
+    prompt: Das habe ich dir denn gesagt!
+    answer: denn
+    explanation:
+      en: "To remind someone in a statement, use *doch*: *Das habe ich dir doch gesagt!*"
+      fa: "برای یادآوری در جملهٔ خبری *doch* به کار می‌رود: *Das habe ich dir doch gesagt!*"
+      de: "Zum Erinnern in einer Aussage sagt man *doch*: *Das habe ich dir doch gesagt!*"
+  - id: q17
+    type: find-error
+    prompt: Komm denn mit ins Kino!
+    answer: denn
+    explanation:
+      en: "The particle *denn* is only for questions; a friendly request takes *doch*: *Komm doch mit ins Kino!*"
+      fa: "ادات *denn* فقط در پرسش می‌آید؛ درخواست دوستانه *doch* می‌گیرد: *Komm doch mit ins Kino!*"
+      de: "*Denn* gibt es nur in Fragen. Eine freundliche Bitte hat *doch*: *Komm doch mit ins Kino!*"
+  - id: q18
+    type: typed-gap-fill
+    prompt: Ruf mich ___ (mal + doch) an!
+    answers: [doch mal]
+    explanation:
+      en: "Together the order is always *doch mal*: *Ruf mich doch mal an!*"
+      fa: "وقتی هر دو با هم می‌آیند، ترتیب همیشه *doch mal* است: *Ruf mich doch mal an!*"
+      de: "Zusammen sagt man immer *doch mal*: *Ruf mich doch mal an!*"
+  - id: q19
+    type: typed-gap-fill
+    prompt: Besuch uns ___ (doch + mal) am Wochenende!
+    answers: [doch mal]
+    explanation:
+      en: "*Doch mal* makes the invitation friendly and casual, always in this order."
+      fa: "*doch mal* دعوت را دوستانه و خودمانی می‌کند، همیشه به همین ترتیب."
+      de: "*Doch mal* macht die Einladung freundlich und locker, immer in dieser Reihenfolge."
+  - id: q20
+    type: word-order
+    answers:
+      - [was, ist, denn, los]
+    end: "?"
+    explanation:
+      en: "The question word first, then the verb, then *denn*."
+      fa: "نخست واژهٔ پرسشی، سپس فعل و پس از آن *denn*."
+      de: "Zuerst das Fragewort, dann das Verb, dann *denn*."
+  - id: q21
+    type: word-order
+    answers:
+      - [wann, beginnt, denn, der Film]
+      - [wann, beginnt, der Film, denn]
+    end: "?"
+    explanation:
+      en: "*Denn* never stands first; it comes after the verb, before or after the subject."
+      fa: "*denn* هرگز در آغاز نمی‌آید؛ پس از فعل، پیش یا پس از فاعل می‌آید."
+      de: "*Denn* steht nie am Anfang. Es steht nach dem Verb, vor oder nach dem Subjekt."
+  - id: q22
+    type: word-order
+    answers:
+      - [ruf, mich, doch, mal, an]
+    end: "!"
+    explanation:
+      en: "The verb first, then the pronoun, *doch mal*, and the prefix *an* at the end."
+      fa: "نخست فعل، سپس ضمیر، *doch mal* و پیشوند *an* در پایان جمله."
+      de: "Zuerst das Verb, dann das Pronomen, *doch mal* und am Ende das Präfix *an*."
+  - id: q23
+    type: matching
+    answer:
+      - [Komm doch mit!, eine freundliche Einladung]
+      - [Was ist denn los?, eine interessierte Frage]
+      - [Das habe ich dir doch gesagt!, Das weißt du schon.]
+    explanation:
+      en: "*Doch* in a request invites, *denn* in a question shows interest, *doch* in a statement reminds."
+      fa: "*doch* در درخواست دعوت می‌کند، *denn* در پرسش علاقه نشان می‌دهد و *doch* در جملهٔ خبری یادآوری می‌کند."
+      de: "*Doch* in einer Bitte lädt ein, *denn* in einer Frage zeigt Interesse, *doch* in einer Aussage erinnert."
+
+review:
+  reviewer: an independent AI agent (fresh Claude Opus 5.5 subagent, blind pass on
+    the whole review sheet only, after an earlier blind reviewer's objections to
+    q8, q9, q18 and q19 were settled by rewriting them; not a person)
+  date: 2026-11-28
+  pool: fa54b0a893e6b5bc

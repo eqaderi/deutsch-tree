@@ -105,6 +105,7 @@ its first mention in a node.
 | adjective; comparative / superlative | Adjektiv; Komparativ / Superlativ | صفت؛ صفت تفضیلی / صفت عالی |
 | adverb | Adverb | قید |
 | degree word (*sehr*, *ziemlich*, *total*) | Gradwort | قید شدت |
+| particle (*doch*, *mal*, *denn*) | Partikel | ادات |
 | conjunction | Konjunktion | حرف ربط |
 | sentence, clause | Satz | جمله |
 | main clause / subordinate clause | Hauptsatz / Nebensatz | جملهٔ پایه / جملهٔ پیرو |
@@ -117,6 +118,7 @@ its first mention in a node.
 | intransitive / transitive (verb) | intransitiv / transitiv | (فعل) لازم / متعدی |
 | separable verb; prefix | trennbares Verb; Präfix | فعل جداشدنی؛ پیشوند |
 | suffix (*-ung*, *-bar*) | Suffix | پسوند |
+| diminutive (*das Brötchen*) | Diminutiv | اسم مصغّر |
 | stress (of a word) | Betonung, Wortakzent | تکیه |
 | inseparable verb | untrennbares Verb | فعل جدانشدنی |
 | modal verb | Modalverb | فعل وجهی |
