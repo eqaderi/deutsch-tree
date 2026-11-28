@@ -1,35 +1,341 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-family-growing-up
 kind: vocabulary
 level: B1
 chapter: b1-words-people-feelings
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Family and growing up"
   fa: "خانواده و بزرگ شدن"
   de: "Familie und Aufwachsen"
+attemptSize: 15
 words:
   - word: Geburt
+    class: noun
+    article: die
+    plural: Geburten
+    level: B1
+    meaning:
+      en: birth
+      fa: تولد، به دنیا آمدن
+    definition: der Moment, in dem ein Baby auf die Welt kommt
+    example:
+      de: Bei der Geburt wog unsere Tochter drei Kilo.
+      en: At birth our daughter weighed three kilos.
+      fa: دخترمان هنگام تولد سه کیلو وزن داشت.
+    alsoAccepted: [die Entbindung]
+
   - word: Kindheit
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: childhood
+      fa: کودکی، دوران کودکی
+    definition: die Zeit im Leben, in der man ein Kind ist
+    example:
+      de: Ich habe meine Kindheit auf dem Land verbracht.
+      en: I spent my childhood in the countryside.
+      fa: کودکی‌ام را در روستا گذراندم.
+
   - word: Jugend
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: youth (the years as a teenager)
+      fa: جوانی، دوران نوجوانی
+    definition: die Zeit im Leben, in der man jung ist, ungefähr von 14 bis 20 Jahren
+    example:
+      de: In seiner Jugend hat er viel Fußball gespielt.
+      en: In his youth he played a lot of football.
+      fa: در جوانی زیاد فوتبال بازی می‌کرد.
+    alsoAccepted: [die Jugendzeit]
+
   - word: Generation
+    class: noun
+    article: die
+    plural: Generationen
+    level: B1
+    meaning:
+      en: generation
+      fa: نسل
+    definition: alle Menschen, die ungefähr zur gleichen Zeit geboren sind, zum Beispiel Eltern oder Großeltern
+    example:
+      de: In unserem Haus wohnen drei Generationen zusammen.
+      en: Three generations live together in our house.
+      fa: در خانهٔ ما سه نسل با هم زندگی می‌کنند.
+
   - word: Nachwuchs
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: offspring, a new baby (in a family)
+      fa: فرزند تازه، اولاد
+    definition: ein Kind oder mehrere Kinder, die neu in eine Familie kommen
+    example:
+      de: Familie Becker hat Nachwuchs bekommen, ein kleines Mädchen.
+      en: The Becker family has had a baby, a little girl.
+      fa: خانوادهٔ بکر صاحب فرزند شده است، یک دختر کوچک.
+    alsoAccepted: [die Nachkommen]
+
   - word: Neffe
+    class: noun
+    article: der
+    plural: Neffen
+    level: B1
+    meaning:
+      en: nephew
+      fa: پسر برادر یا پسر خواهر
+    definition: der Sohn von meinem Bruder oder von meiner Schwester
+    example:
+      de: Mein Neffe kommt im Herbst in die Schule.
+      en: My nephew starts school in the autumn.
+      fa: خواهرزاده‌ام از پاییز به مدرسه می‌رود.
+
   - word: Nichte
+    class: noun
+    article: die
+    plural: Nichten
+    level: B1
+    meaning:
+      en: niece
+      fa: دختر برادر یا دختر خواهر
+    definition: die Tochter von meinem Bruder oder von meiner Schwester
+    example:
+      de: Meine Nichte studiert Medizin in Leipzig.
+      en: My niece is studying medicine in Leipzig.
+      fa: برادرزاده‌ام در لایپزیگ پزشکی می‌خواند.
+
+  # The scope list gives "der/die": a man is "der Angehörige", a woman "die Angehörige".
   - word: Angehörige
+    class: noun
+    article: der
+    plural: Angehörigen
+    level: B1
+    meaning:
+      en: family member, next of kin
+      fa: عضو خانواده، از بستگان نزدیک
+    definition: eine Person aus der engen Familie, zum Beispiel wenn jemand im Krankenhaus liegt
+    example:
+      de: Nur Angehörige dürfen den Patienten auf der Intensivstation besuchen.
+      en: Only family members may visit the patient in intensive care.
+      fa: فقط اعضای خانواده می‌توانند به ملاقات بیمار در بخش مراقبت‌های ویژه بروند.
+    alsoAccepted:
+      [
+        die Angehörige,
+        das Familienmitglied,
+        der Verwandte,
+        die Verwandte,
+        der Familienangehörige,
+        die Familienangehörige,
+      ]
+
   - word: verwandt
+    class: adjective
+    level: B1
+    meaning:
+      en: related (by family)
+      fa: دارای نسبت خانوادگی (با کسی)
+    definition: aus der gleichen Familie, zum Beispiel Cousin und Cousine
+    example:
+      de: Wir haben den gleichen Nachnamen, aber wir sind nicht verwandt.
+      en: We have the same surname, but we're not related.
+      fa: نام خانوادگی‌مان یکی است، اما با هم خویشاوند نیستیم.
+
   - word: Ehe
+    class: noun
+    article: die
+    plural: Ehen
+    level: B1
+    meaning:
+      en: marriage (being married)
+      fa: زندگی زناشویی، پیوند ازدواج
+    definition: das Zusammenleben von zwei Menschen, die verheiratet sind
+    example:
+      de: Ihre Ehe hat über vierzig Jahre gehalten.
+      en: Their marriage lasted over forty years.
+      fa: ازدواجشان بیش از چهل سال دوام آورد.
+
   - word: Ehepaar
+    class: noun
+    article: das
+    plural: Ehepaare
+    level: B1
+    meaning:
+      en: married couple
+      fa: زن و شوهر، زوج
+    definition: zwei Menschen, die miteinander verheiratet sind
+    example:
+      de: Neben uns wohnt ein älteres Ehepaar.
+      en: An elderly married couple lives next door to us.
+      fa: کنار ما زن و شوهر مسنی زندگی می‌کنند.
+    alsoAccepted: [die Eheleute]
+
   - word: Scheidung
+    class: noun
+    article: die
+    plural: Scheidungen
+    level: B1
+    meaning:
+      en: divorce
+      fa: طلاق
+    definition: das offizielle Ende von einer Ehe, vor Gericht
+    example:
+      de: Nach der Scheidung sind die Kinder bei der Mutter geblieben.
+      en: After the divorce the children stayed with their mother.
+      fa: بعد از طلاق، بچه‌ها پیش مادرشان ماندند.
+    alsoAccepted: [die Ehescheidung]
+
+  # The scope list gives "sich": the verb is always "sich scheiden lassen".
   - word: scheiden lassen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to get divorced
+      fa: طلاق گرفتن
+    definition: eine Ehe vor Gericht offiziell beenden
+    example:
+      de: Meine Eltern haben sich vor zehn Jahren scheiden lassen.
+      en: My parents got divorced ten years ago.
+      fa: پدر و مادرم ده سال پیش از هم طلاق گرفتند.
+    tooCloseTo: [trennen]
+
   - word: Trennung
+    class: noun
+    article: die
+    plural: Trennungen
+    level: B1
+    meaning:
+      en: separation, break-up (of a couple)
+      fa: جدایی (زوج)
+    definition: das Ende, wenn ein Paar nicht mehr zusammen sein will
+    example:
+      de: Nach der Trennung ist er in eine kleine Wohnung gezogen.
+      en: After the break-up he moved into a small flat.
+      fa: بعد از جدایی به آپارتمان کوچکی رفت.
+
   - word: getrennt leben
+    class: verb
+    level: B1
+    meaning:
+      en: to live apart (while still married)
+      fa: جدا از هم زندگی کردن (پیش از طلاق)
+    definition: noch verheiratet sein, aber nicht mehr zusammen wohnen
+    example:
+      de: Meine Nachbarn leben seit einem Jahr getrennt.
+      en: My neighbours have been living apart for a year.
+      fa: همسایه‌هایم یک سال است که جدا از هم زندگی می‌کنند.
+    tooCloseTo: [trennen, scheiden lassen]
+
+  # The scope list gives "(sich)": the node teaches "sich trennen", to split up as a couple.
   - word: trennen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to split up, to break up (as a couple)
+      fa: از هم جدا شدن (زوج)
+    definition: als Paar nicht mehr zusammenbleiben
+    example:
+      de: Tim und Lisa haben sich nach fünf Jahren getrennt.
+      en: Tim and Lisa split up after five years.
+      fa: تیم و لیزا بعد از پنج سال از هم جدا شدند.
+    alsoAccepted: [Schluss machen, auseinandergehen]
+    tooCloseTo: [scheiden lassen, getrennt leben]
+
   - word: erziehen
+    class: verb
+    level: B1
+    meaning:
+      en: to bring up, to raise (a child)
+      fa: تربیت کردن، بزرگ کردن (فرزند)
+    definition: einem Kind zeigen, wie man lebt und was richtig und falsch ist
+    example:
+      de: Sie hat ihre drei Kinder allein erzogen.
+      en: She brought up her three children on her own.
+      fa: او سه فرزندش را به‌تنهایی بزرگ کرد.
+    alsoAccepted: [großziehen, aufziehen]
+
   - word: Erziehung
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: upbringing
+      fa: تربیت
+    definition: was Eltern tun, damit ihr Kind lernt, wie man sich benimmt und lebt
+    example:
+      de: Bei der Erziehung sind sich meine Eltern nicht immer einig.
+      en: My parents don't always agree on how to bring up children.
+      fa: پدر و مادرم در تربیت بچه‌ها همیشه هم‌نظر نیستند.
+
   - word: erwachsen
+    class: adjective
+    level: B1
+    meaning:
+      en: grown up (no longer a child)
+      fa: بالغ، بزرگ‌شده
+    definition: kein Kind mehr, sondern alt genug, um selbst für sich zu sorgen
+    example:
+      de: Unsere Kinder sind schon erwachsen und wohnen nicht mehr bei uns.
+      en: Our children are grown up now and don't live with us any more.
+      fa: بچه‌هایمان دیگر بزرگ شده‌اند و پیش ما زندگی نمی‌کنند.
+
   - word: Schwangerschaft
+    class: noun
+    article: die
+    plural: Schwangerschaften
+    level: B1
+    meaning:
+      en: pregnancy
+      fa: بارداری
+    definition: die Zeit, in der eine Frau ein Baby im Bauch hat
+    example:
+      de: In der Schwangerschaft soll man keinen Alkohol trinken.
+      en: You shouldn't drink alcohol during pregnancy.
+      fa: در دوران بارداری نباید الکل نوشید.
+
   - word: Geschlecht
+    class: noun
+    article: das
+    plural: Geschlechter
+    level: B1
+    meaning:
+      en: sex, gender (male or female)
+      fa: جنسیت
+    definition: ob eine Person männlich, weiblich oder divers ist, zum Beispiel in einem Formular
+    example:
+      de: Im Formular müssen Sie auch Ihr Geschlecht angeben.
+      en: In the form you also have to state your sex.
+      fa: در فرم باید جنسیت خود را هم مشخص کنید.
+
   - word: Personenstand
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: marital status
+      fa: وضعیت تأهل
+    definition: ob man ledig, verheiratet, geschieden oder verwitwet ist, zum Beispiel in einem Formular
+    example:
+      de: Beim Personenstand habe ich „verheiratet“ angekreuzt.
+      en: Under marital status I ticked "married".
+      fa: در قسمت وضعیت تأهل، گزینهٔ «متأهل» را علامت زدم.
+    alsoAccepted: [der Familienstand, der Zivilstand]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 132 questions, then the 9 changed after the first one's
+    answers; not people)"
+  date: 2026-11-28
+  pool: ccf0f464db3001ef

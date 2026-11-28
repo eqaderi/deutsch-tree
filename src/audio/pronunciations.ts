@@ -51,4 +51,12 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   chaotisch: 'kaotisch',
   // #89: said [ˈzaɪtdəm], stress on "seit" and a weak "dem"; "seit deem" gives [zaɪt ˈdeːm].
   seitdem: 'seit deem',
+  // #88: said [ˈkɔʃtyːm], stressed first and with "scht"; the hyphen gives [kɔsˈtyːm].
+  Kostüm: 'Koss-tüm',
+  // #88: stressed on the first syllable; the hyphen stresses "ro" as German does.
+  Garderobe: 'Garde-robe',
+  // #88: stressed on "geh", as the other verb "umgehen" (to avoid); this spelling stresses "um".
+  umgehen: 'ummgehen',
+  // #88: said with a long i, [ʃiːk]; "schick" gives the short [ʃɪk].
+  chic: 'schick',
 }
