@@ -1,13 +1,425 @@
-# Grammar list row 24.
+# Grammar list row 24. The list says: recognise it, produce it with nachdem.
+# The conjunction nachdem itself and its tense rule with the Präsens are row
+# 168; here it only frames the Plusquamperfekt.
 id: grammar-024
 kind: grammar
 level: B1
 chapter: b1-tenses
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-020, grammar-023]
 title:
   en: "*Plusquamperfekt*"
-  fa: "ماضی بعید (*Plusquamperfekt*)"
+  fa: "گذشتهٔ بعید (*Plusquamperfekt*)"
   de: "Plusquamperfekt"
+
+explanations:
+  en:
+    rule: >
+      The *Plusquamperfekt* tells what had already happened before another
+      moment in the past. It is the *Präteritum* of *haben* or *sein* with
+      the *Partizip II* at the end: *ich hatte gegessen*, *wir waren
+      gegangen*. A verb that takes *haben* in the *Perfekt* takes *hatte*
+      here, and one that takes *sein* takes *war*: *ich habe gegessen*, so
+      *ich hatte gegessen*; *ich bin gegangen*, so *ich war gegangen*. The
+      later action is usually in the *Präteritum* or the *Perfekt*: *Als ich
+      ankam, war der Zug schon abgefahren.* You meet it most often after
+      *nachdem*: *Nachdem wir gegessen hatten, gingen wir nach Hause.* In a
+      subordinate clause the form of *hatte* or *war* goes to the very end.
+  fa:
+    rule: >
+      گذشتهٔ بعید (*Plusquamperfekt*) کاری را نشان می‌دهد که پیش از لحظه‌ای
+      دیگر در گذشته انجام شده بود. این زمان از گذشتهٔ ساده (*Präteritum*)
+      *haben* یا *sein* و صفت مفعولی (*Partizip II*) در پایان جمله ساخته
+      می‌شود: *ich hatte gegessen*، *wir waren gegangen*. فعلی که در گذشتهٔ
+      نقلی (*Perfekt*) با *haben* می‌آید، در این زمان با *hatte* می‌آید و فعلی
+      که با *sein* می‌آید، با *war*: *ich habe gegessen*، پس *ich hatte
+      gegessen*؛ *ich bin gegangen*، پس *ich war gegangen*. کار بعدی معمولاً
+      در گذشتهٔ ساده یا گذشتهٔ نقلی است: *Als ich ankam, war der Zug schon
+      abgefahren.* این زمان را بیش از همه پس از *nachdem* می‌بینید: *Nachdem
+      wir gegessen hatten, gingen wir nach Hause.* در جملهٔ پیرو، *hatte* یا
+      *war* به پایان جمله می‌رود.
+  de:
+    rule: >
+      Das Plusquamperfekt sagt, was vor einem anderen Moment in der
+      Vergangenheit schon passiert war. Man bildet es mit dem Präteritum von
+      *haben* oder *sein* und dem Partizip II am Ende: *ich hatte gegessen*,
+      *wir waren gegangen*. Ein Verb mit *haben* im Perfekt hat hier
+      *hatte*, ein Verb mit *sein* hat *war*: *ich habe gegessen*, also *ich
+      hatte gegessen*; *ich bin gegangen*, also *ich war gegangen*. Die
+      spätere Handlung steht meistens im Präteritum oder im Perfekt: *Als ich
+      ankam, war der Zug schon abgefahren.* Sehr oft steht das
+      Plusquamperfekt nach *nachdem*: *Nachdem wir gegessen hatten, gingen
+      wir nach Hause.* Im Nebensatz steht *hatte* oder *war* ganz am Ende.
+
+# Two time lines, one for each sentence of the caption. The earlier action
+# (Plusquamperfekt) and the later one (Präteritum) both lie before now.
+diagrams:
+  - caption:
+      en: >
+        *Nachdem wir gegessen hatten, gingen wir nach Hause.* and *Als ich
+        ankam, war der Zug schon abgefahren.* On the time line the
+        *Plusquamperfekt* is the earlier of two past actions and the
+        *Präteritum* the later one. Both lie before now.
+      fa: >
+        *Nachdem wir gegessen hatten, gingen wir nach Hause.* و *Als ich
+        ankam, war der Zug schon abgefahren.* روی خط زمان، گذشتهٔ بعید
+        (*Plusquamperfekt*) کار زودتر از دو کار گذشته است و گذشتهٔ ساده
+        (*Präteritum*) کار بعدی. هر دو پیش از اکنون‌اند.
+      de: >
+        *Nachdem wir gegessen hatten, gingen wir nach Hause.* und *Als ich
+        ankam, war der Zug schon abgefahren.* Auf der Zeitlinie ist das
+        Plusquamperfekt die frühere von zwei Handlungen, das Präteritum die
+        spätere. Beide sind vor jetzt.
+    labels:
+      first: { en: first, fa: اول, de: zuerst }
+      then: { en: then, fa: سپس, de: danach }
+      now: { en: now, fa: اکنون, de: jetzt }
+    svg: |
+      <svg viewBox="0 0 320 236">
+        <!-- Nachdem wir gegessen hatten, gingen wir nach Hause. -->
+        <text class="label" x="70" y="22" text-anchor="middle">gegessen hatten</text>
+        <text class="label" x="184" y="22" text-anchor="middle">gingen</text>
+        <line class="line" x1="6" y1="46" x2="300" y2="46"/>
+        <polygon class="line" points="300,40 314,46 300,52"/>
+        <circle class="object" cx="70" cy="46" r="7"/>
+        <circle class="object" cx="184" cy="46" r="7"/>
+        <circle class="guide" cx="282" cy="46" r="7"/>
+        <text class="note" x="70" y="76" text-anchor="middle">Plusquamperfekt</text>
+        <text class="note" x="184" y="76" text-anchor="middle">Präteritum</text>
+        <text class="note" x="282" y="76" text-anchor="middle">Präsens</text>
+        <text class="note" x="70" y="96" text-anchor="middle">{{first}}</text>
+        <text class="note" x="184" y="96" text-anchor="middle">{{then}}</text>
+        <text class="note" x="282" y="96" text-anchor="middle">{{now}}</text>
+        <!-- Als ich ankam, war der Zug schon abgefahren. -->
+        <text class="label" x="70" y="140" text-anchor="middle">abgefahren war</text>
+        <text class="label" x="184" y="140" text-anchor="middle">ankam</text>
+        <line class="line" x1="6" y1="164" x2="300" y2="164"/>
+        <polygon class="line" points="300,158 314,164 300,170"/>
+        <circle class="object" cx="70" cy="164" r="7"/>
+        <circle class="object" cx="184" cy="164" r="7"/>
+        <circle class="guide" cx="282" cy="164" r="7"/>
+        <text class="note" x="70" y="194" text-anchor="middle">Plusquamperfekt</text>
+        <text class="note" x="184" y="194" text-anchor="middle">Präteritum</text>
+        <text class="note" x="282" y="194" text-anchor="middle">Präsens</text>
+        <text class="note" x="70" y="214" text-anchor="middle">{{first}}</text>
+        <text class="note" x="184" y="214" text-anchor="middle">{{then}}</text>
+        <text class="note" x="282" y="214" text-anchor="middle">{{now}}</text>
+      </svg>
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "With *haben*", fa: "با *haben*", de: "Mit *haben*" }
+    - { en: "With *sein*", fa: "با *sein*", de: "Mit *sein*" }
+  rows:
+    - [ich, hatte gegessen, war gegangen]
+    - [du, hattest gegessen, warst gegangen]
+    - [er / sie / es, hatte gegessen, war gegangen]
+    - [wir, hatten gegessen, waren gegangen]
+    - [ihr, hattet gegessen, wart gegangen]
+    - [sie / Sie, hatten gegessen, waren gegangen]
+
+examples:
+  - de: Nachdem wir gegessen hatten, gingen wir spazieren.
+    en: After we had eaten, we went for a walk.
+    fa: پس از آن‌که غذا خوردیم، به پیاده‌روی رفتیم.
+  - de: Als ich am Bahnhof ankam, war der Zug schon abgefahren.
+    en: When I got to the station, the train had already left.
+    fa: وقتی به ایستگاه رسیدم، قطار رفته بود.
+  - de: Sie hatte den Film schon zweimal gesehen.
+    en: She had already seen the film twice.
+    fa: او فیلم را پیش‌تر دو بار دیده بود.
+  - de: Ich hatte meinen Schlüssel vergessen, deshalb musste ich warten.
+    en: I had forgotten my key, so I had to wait.
+    fa: کلیدم را جا گذاشته بودم، برای همین ناچار شدم منتظر بمانم.
+  - de: Er war noch nie in Wien gewesen.
+    en: He had never been to Vienna.
+    fa: او تا آن زمان هرگز به وین نرفته بود.
+  - de: Bevor sie nach Deutschland kam, hatte sie schon ein Jahr Deutsch gelernt.
+    en: Before she came to Germany, she had already learned German for a year.
+    fa: پیش از آن‌که به آلمان بیاید، یک سال آلمانی خوانده بود.
+  - de: Nachdem er die Prüfung bestanden hatte, feierte er mit seinen Freunden.
+    en: After he had passed the exam, he celebrated with his friends.
+    fa: پس از آن‌که در امتحان قبول شد، با دوستانش جشن گرفت.
+  - de: Wir waren gerade eingeschlafen, als das Telefon klingelte.
+    en: We had just fallen asleep when the phone rang.
+    fa: تازه خوابمان برده بود که تلفن زنگ زد.
+  - de: Am Morgen war die Straße weiß, denn in der Nacht hatte es geschneit.
+    en: In the morning the street was white, because it had snowed in the night.
+    fa: صبح خیابان سفید بود، چون شب برف باریده بود.
+
+mistakes:
+  - wrong: Als ich ankam, hatte der Zug schon abgefahren.
+    right: Als ich ankam, war der Zug schon abgefahren.
+    why:
+      en: "*Abfahren* takes *sein* in the *Perfekt* (*ist abgefahren*), so *war* in the *Plusquamperfekt*."
+      fa: "*abfahren* در گذشتهٔ نقلی با *sein* می‌آید (*ist abgefahren*)، پس در گذشتهٔ بعید با *war*."
+      de: "*Abfahren* hat im Perfekt *sein* (*ist abgefahren*). Darum im Plusquamperfekt *war*."
+  - wrong: Nachdem sie hatte gefrühstückt, ging sie zur Arbeit.
+    right: Nachdem sie gefrühstückt hatte, ging sie zur Arbeit.
+    why:
+      en: "After *nachdem* the clause is a subordinate clause, so *hatte* goes to the very end."
+      fa: "جمله‌ای که با *nachdem* آغاز می‌شود جملهٔ پیرو است، پس *hatte* به پایان آن می‌رود."
+      de: "Nach *nachdem* kommt ein Nebensatz. Darum steht *hatte* ganz am Ende."
+  - wrong: Nachdem wir gegessen haben, gingen wir nach Hause.
+    right: Nachdem wir gegessen hatten, gingen wir nach Hause.
+    why:
+      en: "The later action is in the *Präteritum* (*gingen*), so the earlier one after *nachdem* takes the *Plusquamperfekt*: *hatten*."
+      fa: "کار بعدی در گذشتهٔ ساده است (*gingen*)، پس کار زودتر پس از *nachdem* در گذشتهٔ بعید می‌آید: *hatten*."
+      de: "Die spätere Handlung steht im Präteritum (*gingen*). Darum steht die frühere nach *nachdem* im Plusquamperfekt: *hatten*."
+  - wrong: Ich war meinen Schlüssel vergessen.
+    right: Ich hatte meinen Schlüssel vergessen.
+    why:
+      en: "*Vergessen* takes *haben* in the *Perfekt* (*habe vergessen*), so *hatte* in the *Plusquamperfekt*."
+      fa: "*vergessen* در گذشتهٔ نقلی با *haben* می‌آید (*habe vergessen*)، پس در گذشتهٔ بعید با *hatte*."
+      de: "*Vergessen* hat im Perfekt *haben* (*habe vergessen*). Darum im Plusquamperfekt *hatte*."
+
+attemptSize: 12
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Nachdem wir gegessen ___, gingen wir spazieren.
+    options: [haben, waren, hatten]
+    answer: hatten
+    explanation:
+      en: "*Essen* takes *haben*, and before the *Präteritum* *gingen* the *Plusquamperfekt* is needed: *hatten*."
+      fa: "*essen* با *haben* می‌آید و پیش از گذشتهٔ سادهٔ *gingen* گذشتهٔ بعید لازم است: *hatten*."
+      de: "*Essen* hat *haben*, und vor dem Präteritum *gingen* braucht man das Plusquamperfekt: *hatten*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Als ich am Bahnhof ankam, ___ der Zug schon abgefahren.
+    options: [war, hatte, ist]
+    answer: war
+    explanation:
+      en: "*Abfahren* takes *sein*, and the train left before I arrived: *war abgefahren*."
+      fa: "*abfahren* با *sein* می‌آید و قطار پیش از رسیدن من رفته بود: *war abgefahren*."
+      de: "*Abfahren* hat *sein*, und der Zug fuhr vor meiner Ankunft: *war abgefahren*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Sie war sehr müde, denn sie ___ die ganze Nacht nicht geschlafen.
+    options: [wurde, hatte, war]
+    answer: hatte
+    explanation:
+      en: "*Schlafen* takes *haben*: *hatte geschlafen*. The sleepless night came before she was tired."
+      fa: "*schlafen* با *haben* می‌آید: *hatte geschlafen*. بی‌خوابی شب پیش از خستگی او بود."
+      de: "*Schlafen* hat *haben*: *hatte geschlafen*. Die Nacht ohne Schlaf war vor der Müdigkeit."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ihr ___ schon gegangen, als wir kamen.
+    options: [hattet, wurdet, wart]
+    answer: wart
+    explanation:
+      en: "*Gehen* takes *sein*, and with *ihr* its *Präteritum* is *wart*."
+      fa: "*gehen* با *sein* می‌آید و گذشتهٔ سادهٔ آن با *ihr* *wart* است."
+      de: "*Gehen* hat *sein*. Bei *ihr* ist das Präteritum *wart*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Bevor er nach Berlin zog, ___ er drei Jahre in Hamburg gewohnt.
+    options: [war, hatte, ist]
+    answer: hatte
+    explanation:
+      en: "*Wohnen* takes *haben*: *hatte gewohnt*, before the move."
+      fa: "*wohnen* با *haben* می‌آید: *hatte gewohnt*، پیش از اسباب‌کشی."
+      de: "*Wohnen* hat *haben*: *hatte gewohnt*, vor dem Umzug."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Als wir ins Kino kamen, hatte der Film schon angefangen. Was passierte zuerst?
+    options: [Wir kamen ins Kino., Der Film fing an., Beides passierte gleichzeitig.]
+    answer: Der Film fing an.
+    explanation:
+      en: "*Hatte angefangen* is the *Plusquamperfekt*: the film started first, then we came."
+      fa: "*hatte angefangen* گذشتهٔ بعید است: اول فیلم شروع شد، سپس ما رسیدیم."
+      de: "*Hatte angefangen* ist Plusquamperfekt: Zuerst fing der Film an, dann kamen wir."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Nachdem sie die Prüfung ___ hatte, feierte sie mit ihren Freunden.
+    options: [bestehen, bestanden, bestand]
+    answer: bestanden
+    explanation:
+      en: "After *hatte* comes the *Partizip II*: *bestanden*."
+      fa: "پس از *hatte* صفت مفعولی می‌آید: *bestanden*."
+      de: "Mit *hatte* steht das Partizip II: *bestanden*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich konnte nicht in die Wohnung, weil ich meinen Schlüssel ___.
+    options: [hatte vergessen, vergessen war, vergessen hatte]
+    answer: vergessen hatte
+    explanation:
+      en: "*Weil* starts a subordinate clause, so *hatte* goes to the end; *vergessen* takes *haben*."
+      fa: "*weil* جملهٔ پیرو می‌سازد، پس *hatte* به پایان می‌رود؛ *vergessen* با *haben* می‌آید."
+      de: "Nach *weil* kommt ein Nebensatz, *hatte* steht am Ende. *Vergessen* hat *haben*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Wir waren gerade eingeschlafen, als das Telefon klingelte. Was passierte zuerst?
+    options: [Das Telefon klingelte., Wir standen auf., Wir schliefen ein.]
+    answer: Wir schliefen ein.
+    explanation:
+      en: "*Waren eingeschlafen* is the *Plusquamperfekt*: we fell asleep first, then the phone rang."
+      fa: "*waren eingeschlafen* گذشتهٔ بعید است: اول خوابمان برد، سپس تلفن زنگ زد."
+      de: "*Waren eingeschlafen* ist Plusquamperfekt: Zuerst schliefen wir ein, dann klingelte das Telefon."
+  - id: true-1
+    type: true-false
+    prompt: Er war noch nie in Wien gewesen.
+    answer: true
+    explanation:
+      en: "*Sein* takes *sein* in the *Perfekt* too: *war gewesen*. The sentence is correct."
+      fa: "*sein* در گذشتهٔ نقلی نیز با *sein* می‌آید: *war gewesen*. جمله درست است."
+      de: "*Sein* hat im Perfekt auch *sein*: *war gewesen*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Nachdem sie gefrühstückt hatte, ging sie zur Arbeit.
+    answer: true
+    explanation:
+      en: "*Hatte* stands at the end of the clause with *nachdem*. The sentence is correct."
+      fa: "*hatte* در پایان جملهٔ پیرو با *nachdem* آمده است. جمله درست است."
+      de: "*Hatte* steht am Ende vom Nebensatz mit *nachdem*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Als ich ankam, hatte der Bus schon abgefahren.
+    answer: false
+    explanation:
+      en: "*Abfahren* takes *sein*: *Als ich ankam, war der Bus schon abgefahren.*"
+      fa: "*abfahren* با *sein* می‌آید: *Als ich ankam, war der Bus schon abgefahren.*"
+      de: "*Abfahren* hat *sein*: *Als ich ankam, war der Bus schon abgefahren.*"
+  - id: true-4
+    type: true-false
+    prompt: Nachdem er hatte geduscht, zog er sich an.
+    answer: false
+    explanation:
+      en: "In the clause with *nachdem*, *hatte* goes to the end: *Nachdem er geduscht hatte, zog er sich an.*"
+      fa: "در جملهٔ پیرو با *nachdem*، *hatte* به پایان می‌رود: *Nachdem er geduscht hatte, zog er sich an.*"
+      de: "Im Nebensatz mit *nachdem* steht *hatte* am Ende: *Nachdem er geduscht hatte, zog er sich an.*"
+  - id: true-5
+    type: true-false
+    prompt: In der Nacht hatte es geschneit.
+    answer: true
+    explanation:
+      en: "*Schneien* takes *haben*: *hatte geschneit*. The sentence is correct."
+      fa: "*schneien* با *haben* می‌آید: *hatte geschneit*. جمله درست است."
+      de: "*Schneien* hat *haben*: *hatte geschneit*. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Nachdem wir gegessen hattet, gingen wir nach Hause.
+    answer: hattet
+    explanation:
+      en: "*Hattet* goes with *ihr*; with *wir* it is *hatten*: *Nachdem wir gegessen hatten, gingen wir nach Hause.*"
+      fa: "*hattet* با *ihr* می‌آید؛ با *wir* *hatten* است: *Nachdem wir gegessen hatten, gingen wir nach Hause.*"
+      de: "*Hattet* sagt man bei *ihr*, bei *wir* heißt es *hatten*: *Nachdem wir gegessen hatten, gingen wir nach Hause.*"
+  - id: error-2
+    type: find-error
+    prompt: Nachdem die Kinder ins Bett gegangen war, sahen wir einen Film.
+    answer: war
+    explanation:
+      en: "*Die Kinder* is *sie* (plural): *Nachdem die Kinder ins Bett gegangen waren, sahen wir einen Film.*"
+      fa: "*die Kinder* سوم‌شخص جمع است (*sie*): *Nachdem die Kinder ins Bett gegangen waren, sahen wir einen Film.*"
+      de: "*Die Kinder* ist *sie* (Plural): *Nachdem die Kinder ins Bett gegangen waren, sahen wir einen Film.*"
+  - id: error-3
+    type: find-error
+    prompt: Nachdem er die E-Mail geschreibt hatte, ging er nach Hause.
+    answer: geschreibt
+    explanation:
+      en: "*Schreiben* is irregular: *Nachdem er die E-Mail geschrieben hatte, ging er nach Hause.*"
+      fa: "*schreiben* بی‌قاعده است: *Nachdem er die E-Mail geschrieben hatte, ging er nach Hause.*"
+      de: "*Schreiben* ist unregelmäßig: *Nachdem er die E-Mail geschrieben hatte, ging er nach Hause.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Nachdem ich die E-Mail ___ (schreiben) hatte, machte ich den Computer aus.
+    answers: [geschrieben]
+    explanation:
+      en: "After *hatte* comes the *Partizip II*: *schreiben*, *geschrieben*."
+      fa: "پس از *hatte* صفت مفعولی می‌آید: *schreiben*، *geschrieben*."
+      de: "Mit *hatte* steht das Partizip II: *schreiben*, *geschrieben*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Nachdem wir lange gewartet ___ (haben), kam endlich der Bus.
+    answers: [hatten]
+    explanation:
+      en: "Before the *Präteritum* *kam* the *Plusquamperfekt*: *hatten*, at the end of the clause with *nachdem*."
+      fa: "پیش از گذشتهٔ سادهٔ *kam* گذشتهٔ بعید می‌آید: *hatten*، در پایان جملهٔ پیرو با *nachdem*."
+      de: "Vor dem Präteritum *kam* steht das Plusquamperfekt: *hatten*, am Ende vom Nebensatz mit *nachdem*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Nachdem er nach Hause ___ (kommen) war, aß er etwas.
+    answers: [gekommen]
+    explanation:
+      en: "After *war* comes the *Partizip II*: *kommen*, *gekommen*."
+      fa: "پس از *war* صفت مفعولی می‌آید: *kommen*، *gekommen*."
+      de: "Mit *war* steht das Partizip II: *kommen*, *gekommen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Nachdem die Gäste gegangen ___ (sein), räumten wir die Küche auf.
+    answers: [waren]
+    explanation:
+      en: "*Gehen* takes *sein*; with *die Gäste* (*sie*, plural) it is *waren*."
+      fa: "*gehen* با *sein* می‌آید؛ با *die Gäste* (سوم‌شخص جمع) *waren* است."
+      de: "*Gehen* hat *sein*. Bei *die Gäste* (*sie*, Plural) heißt es *waren*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Als ich anrief, ___ (sein) meine Schwester schon weggefahren.
+    answers: [war]
+    explanation:
+      en: "My sister left before I called: *war weggefahren*."
+      fa: "خواهرم پیش از تماس من رفته بود: *war weggefahren*."
+      de: "Meine Schwester fuhr vor meinem Anruf weg: *war weggefahren*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Plusquamperfekt: ich gehe"
+    answers: [ich war gegangen]
+    explanation:
+      en: "*Gehen* takes *sein*: *ich war gegangen*."
+      fa: "*gehen* با *sein* می‌آید: *ich war gegangen*."
+      de: "*Gehen* hat *sein*: *ich war gegangen*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Plusquamperfekt: er isst"
+    answers: [er hatte gegessen]
+    explanation:
+      en: "*Essen* takes *haben*: *er hatte gegessen*."
+      fa: "*essen* با *haben* می‌آید: *er hatte gegessen*."
+      de: "*Essen* hat *haben*: *er hatte gegessen*."
+  - id: typed-3
+    type: typed-answer
+    prompt: "Plusquamperfekt: wir fahren ab"
+    answers: [wir waren abgefahren]
+    explanation:
+      en: "*Abfahren* takes *sein*: *wir waren abgefahren*."
+      fa: "*abfahren* با *sein* می‌آید: *wir waren abgefahren*."
+      de: "*Abfahren* hat *sein*: *wir waren abgefahren*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wohin, war, er, gefahren]
+    end: "?"
+    explanation:
+      en: "The question word comes first, *war* second and the *Partizip II* at the end."
+      fa: "واژهٔ پرسشی در آغاز، *war* در جایگاه دوم و صفت مفعولی در پایان جمله می‌آید."
+      de: "Das Fragewort steht am Anfang, *war* auf Position 2, das Partizip II am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [warum, hattest, du, nichts, gesagt]
+    end: "?"
+    explanation:
+      en: "The question word comes first, *hattest* second and the *Partizip II* at the end."
+      fa: "واژهٔ پرسشی در آغاز، *hattest* در جایگاه دوم و صفت مفعولی در پایان جمله می‌آید."
+      de: "Das Fragewort steht am Anfang, *hattest* auf Position 2, das Partizip II am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich gehe, ich war gegangen]
+      - [ich esse, ich hatte gegessen]
+      - [ich bleibe, ich war geblieben]
+      - [ich schlafe, ich hatte geschlafen]
+    explanation:
+      en: "*Gehen* and *bleiben* take *sein* (*war*); *essen* and *schlafen* take *haben* (*hatte*)."
+      fa: "*gehen* و *bleiben* با *sein* می‌آیند (*war*)؛ *essen* و *schlafen* با *haben* (*hatte*)."
+      de: "*Gehen* und *bleiben* haben *sein* (*war*); *essen* und *schlafen* haben *haben* (*hatte*)."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 01c7130569160013
