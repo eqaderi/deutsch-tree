@@ -4,10 +4,285 @@ kind: grammar
 level: A1
 chapter: a1-negation
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-146, grammar-147]
 title:
   en: "*kein … mehr*, *nicht mehr*, *nichts*, *nie*"
   fa: "*kein … mehr*، *nicht mehr*، *nichts*، *nie*"
   de: "*kein … mehr*, *nicht mehr*, *nichts*, *nie*"
+
+explanations:
+  en:
+    rule: >
+      *Kein … mehr* and *nicht mehr* say that something has stopped or is used
+      up: *Ich habe kein Geld mehr.* (no more money), *Er wohnt nicht mehr
+      hier.* (not any more). *Mehr* comes right after the noun with *kein*, and
+      right after *nicht*. *Nichts* means "not anything" (*Ich sehe nichts.*)
+      and *nie* means "not ever" (*Sie ist nie krank.*). A German sentence has
+      only one negation word: *Er sagt nie etwas*, not *nie nichts*.
+  fa:
+    rule: >
+      *kein … mehr* و *nicht mehr* نشان می‌دهند که کاری دیگر انجام نمی‌شود یا
+      چیزی تمام شده است: *Ich habe kein Geld mehr.* (دیگر پول ندارم)، *Er wohnt
+      nicht mehr hier.* (دیگر این‌جا زندگی نمی‌کند). *mehr* با *kein* درست پس
+      از اسم می‌آید و با *nicht* درست پس از *nicht*. *nichts* یعنی «هیچ‌چیز»
+      (*Ich sehe nichts.*) و *nie* یعنی «هیچ‌وقت» (*Sie ist nie krank.*). در
+      فارسی «هیچ» با فعل منفی می‌آید («هیچ‌وقت چیزی نمی‌گوید»)، ولی جملهٔ
+      آلمانی فقط یک واژهٔ نفی دارد: *Er sagt nie etwas*، نه *nie nichts*.
+  de:
+    rule: >
+      *Kein … mehr* und *nicht mehr* sagen: Etwas ist zu Ende oder alle. *Ich
+      habe kein Geld mehr.* *Er wohnt nicht mehr hier.* Mit *kein* steht *mehr*
+      direkt nach dem Nomen, mit *nicht* direkt nach *nicht*. *Nichts* ist das
+      Gegenteil von *etwas* (*Ich sehe nichts.*), *nie* ist das Gegenteil von
+      *immer* (*Sie ist nie krank.*). Ein deutscher Satz hat nur ein Wort für
+      die Verneinung: *Er sagt nie etwas*, nicht *nie nichts*.
+
+table:
+  columns:
+    - { en: Word, fa: واژه, de: Wort }
+    - { en: Positive, fa: جملهٔ مثبت, de: Ohne Verneinung }
+    - { en: Negative, fa: جملهٔ منفی, de: Mit Verneinung }
+  rows:
+    - [kein … mehr, Ich habe noch Geld., Ich habe kein Geld mehr.]
+    - [nicht mehr, Er wohnt noch hier., Er wohnt nicht mehr hier.]
+    - [nichts, Ich sehe etwas., Ich sehe nichts.]
+    - [nie, Er kommt immer pünktlich., Er kommt nie pünktlich.]
+
+examples:
+  - de: Wir haben keine Eier mehr.
+    en: We have no more eggs.
+    fa: دیگر تخم‌مرغ نداریم.
+  - de: Ich habe keine Zeit mehr.
+    en: I have no time left.
+    fa: دیگر وقت ندارم.
+  - de: Mein Opa arbeitet nicht mehr.
+    en: My grandpa doesn't work any more.
+    fa: پدربزرگم دیگر کار نمی‌کند.
+  - de: Anna wohnt nicht mehr in Hamburg.
+    en: Anna doesn't live in Hamburg any more.
+    fa: آنا دیگر در هامبورگ زندگی نمی‌کند.
+  - de: Im Kühlschrank ist nichts.
+    en: There is nothing in the fridge.
+    fa: در یخچال هیچ‌چیز نیست.
+  - de: Das Kind isst heute nichts.
+    en: The child isn't eating anything today.
+    fa: بچه امروز هیچ‌چیز نمی‌خورد.
+  - de: Er hat nie Zeit.
+    en: He never has time.
+    fa: او هیچ‌وقت وقت ندارد.
+  - de: Ich trinke nie Kaffee.
+    en: I never drink coffee.
+    fa: من هیچ‌وقت قهوه نمی‌نوشم.
+
+mistakes:
+  - wrong: Ich habe nicht Geld mehr.
+    right: Ich habe kein Geld mehr.
+    why:
+      en: "*Geld* has no article, so it takes *kein*, also with *mehr*."
+      fa: "*Geld* حرف تعریف ندارد، پس با *mehr* هم *kein* می‌گیرد."
+      de: "*Geld* steht ohne Artikel. Darum *kein*, auch mit *mehr*."
+  - wrong: Ich habe kein mehr Geld.
+    right: Ich habe kein Geld mehr.
+    why:
+      en: "*Mehr* comes after the noun: *kein Geld mehr*."
+      fa: "*mehr* پس از اسم می‌آید: *kein Geld mehr*."
+      de: "*Mehr* steht nach dem Nomen: *kein Geld mehr*."
+  - wrong: Mein Vater raucht kein mehr.
+    right: Mein Vater raucht nicht mehr.
+    why:
+      en: "There is no noun to negate, only the verb, so it is *nicht mehr*."
+      fa: "این‌جا اسمی نیست که منفی شود، فقط فعل؛ پس *nicht mehr* درست است."
+      de: "Hier gibt es kein Nomen, nur das Verb. Darum *nicht mehr*."
+  - wrong: Er sagt nie nichts.
+    right: Er sagt nie etwas.
+    why:
+      en: "Only one negation word: with *nie*, *nichts* becomes *etwas*."
+      fa: "جمله فقط یک واژهٔ نفی دارد: با *nie*، به جای *nichts* واژهٔ *etwas* می‌آید."
+      de: "Nur ein Wort für die Verneinung: Mit *nie* sagt man *etwas*, nicht *nichts*."
+  - wrong: Ich verstehe nicht etwas.
+    right: Ich verstehe nichts.
+    why:
+      en: "*Nicht* and *etwas* together become *nichts*."
+      fa: "*nicht* و *etwas* با هم می‌شوند *nichts*."
+      de: "*Nicht* und *etwas* zusammen werden zu *nichts*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich habe ___ Geld mehr.
+    options: [kein, nicht, nichts]
+    answer: kein
+    explanation:
+      en: "*Geld* has no article, so *kein Geld mehr*."
+      fa: "*Geld* حرف تعریف ندارد، پس *kein Geld mehr*."
+      de: "*Geld* steht ohne Artikel. Darum: *kein Geld mehr*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Mein Opa arbeitet ___ mehr.
+    options: [nicht, kein, keine]
+    answer: nicht
+    explanation:
+      en: "Only the verb is negated, so *nicht mehr*."
+      fa: "فقط فعل منفی می‌شود، پس *nicht mehr*."
+      de: "Man verneint nur das Verb. Darum: *nicht mehr*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Im Kühlschrank ist ___.
+    options: [nichts, nicht, kein]
+    answer: nichts
+    explanation:
+      en: "*Nichts* means \"not anything\": the fridge is empty."
+      fa: "*nichts* یعنی «هیچ‌چیز»: یخچال خالی است."
+      de: "*Nichts* ist das Gegenteil von *etwas*: Der Kühlschrank ist leer."
+  - id: gap-4
+    type: gap-fill
+    prompt: Tom ist ___ pünktlich. Er kommt immer zu spät.
+    options: [nie, nichts, kein]
+    answer: nie
+    explanation:
+      en: "He is always late, so he is *nie* (never) on time."
+      fa: "او همیشه دیر می‌آید، پس *nie* (هیچ‌وقت) به‌موقع نیست."
+      de: "Er kommt immer zu spät. Er ist also *nie* pünktlich."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wir haben ___ Brot mehr.
+    options: [kein, nicht, nie]
+    answer: kein
+    explanation:
+      en: "*Brot* has no article, so *kein Brot mehr*."
+      fa: "*Brot* حرف تعریف ندارد، پس *kein Brot mehr*."
+      de: "*Brot* steht ohne Artikel. Darum: *kein Brot mehr*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Er wohnt jetzt in Köln. Er wohnt ___ in Berlin.
+    options: [nicht mehr, kein mehr, nichts mehr]
+    answer: nicht mehr
+    explanation:
+      en: "He lived in Berlin before and has stopped: *nicht mehr* before the place."
+      fa: "او پیش‌تر در برلین زندگی می‌کرد و حالا نه: *nicht mehr* پیش از مکان می‌آید."
+      de: "Früher war er in Berlin, jetzt nicht: *nicht mehr* vor dem Ort."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Die Flasche ist leer. →"
+    options: [Wir haben kein Wasser mehr., Wir haben nicht Wasser mehr., Wir haben kein mehr Wasser.]
+    answer: Wir haben kein Wasser mehr.
+    explanation:
+      en: "*Wasser* has no article, so *kein*, and *mehr* comes after the noun."
+      fa: "*Wasser* حرف تعریف ندارد، پس *kein* می‌گیرد و *mehr* پس از اسم می‌آید."
+      de: "*Wasser* steht ohne Artikel. Darum *kein*, und *mehr* steht nach dem Nomen."
+  - id: true-1
+    type: true-false
+    prompt: Wir haben keine Eier mehr.
+    answer: true
+    explanation:
+      en: "*Keine Eier* (plural), and *mehr* after the noun. The sentence is correct."
+      fa: "*keine Eier* (جمع) و *mehr* پس از اسم. جمله درست است."
+      de: "*Keine Eier* (Plural) und *mehr* nach dem Nomen. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich habe nicht Geld mehr.
+    answer: false
+    explanation:
+      en: "*Geld* has no article, so *kein*: *Ich habe kein Geld mehr.*"
+      fa: "*Geld* حرف تعریف ندارد، پس *kein*: *Ich habe kein Geld mehr.*"
+      de: "*Geld* steht ohne Artikel. Darum: *Ich habe kein Geld mehr.*"
+  - id: true-3
+    type: true-false
+    prompt: Anna wohnt nicht mehr in Hamburg.
+    answer: true
+    explanation:
+      en: "*Nicht mehr* stands before the place. The sentence is correct."
+      fa: "*nicht mehr* پیش از مکان آمده است. جمله درست است."
+      de: "*Nicht mehr* steht vor dem Ort. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Das Kind isst heute nichts.
+    answer: true
+    explanation:
+      en: "*Nichts* means \"not anything\". The sentence is correct."
+      fa: "*nichts* یعنی «هیچ‌چیز». جمله درست است."
+      de: "*Nichts* ist das Gegenteil von *etwas*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Ich habe kein mehr Brot.
+    answer: false
+    explanation:
+      en: "*Mehr* comes after the noun: *kein Brot mehr*."
+      fa: "*mehr* پس از اسم می‌آید: *kein Brot mehr*."
+      de: "*Mehr* steht nach dem Nomen: *kein Brot mehr*."
+  - id: error-1
+    type: find-error
+    prompt: Ich habe nicht Milch mehr.
+    answer: nicht
+    explanation:
+      en: "*Milch* has no article, so *keine Milch mehr*."
+      fa: "*Milch* حرف تعریف ندارد، پس *keine Milch mehr*."
+      de: "*Milch* steht ohne Artikel. Richtig ist *keine Milch mehr*."
+  - id: error-2
+    type: find-error
+    prompt: Mein Vater raucht kein mehr.
+    answer: kein
+    explanation:
+      en: "There is no noun, only the verb, so *nicht mehr*."
+      fa: "اسمی در کار نیست، فقط فعل؛ پس *nicht mehr*."
+      de: "Hier gibt es kein Nomen, nur das Verb. Richtig ist *nicht mehr*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich habe ___ (kein) Zeit mehr.
+    answers: [keine]
+    explanation:
+      en: "*Zeit* is feminine (*die*): *keine Zeit mehr*."
+      fa: "*Zeit* اسم مؤنث (*die*) است: *keine Zeit mehr*."
+      de: "*Zeit* hat den Artikel *die*: *keine Zeit mehr*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Er wohnt ___ (mehr / nicht) in Bonn.
+    answers: [nicht mehr]
+    explanation:
+      en: "*Mehr* comes right after *nicht*: *nicht mehr in Bonn*."
+      fa: "*mehr* درست پس از *nicht* می‌آید: *nicht mehr in Bonn*."
+      de: "*Mehr* steht direkt nach *nicht*: *nicht mehr in Bonn*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Er hat Hunger, aber im Kühlschrank ist ___ (nichts / nie).
+    answers: [nichts]
+    explanation:
+      en: "*Nichts* means \"not anything\": there is no food in the fridge."
+      fa: "*nichts* یعنی «هیچ‌چیز»: در یخچال غذایی نیست."
+      de: "*Nichts* ist das Gegenteil von *etwas*: Im Kühlschrank gibt es kein Essen."
+  - id: order-1
+    type: word-order
+    end: "?"
+    answers:
+      - [hast, du, kein Geld, mehr]
+    explanation:
+      en: "In a yes/no question the verb comes first. *Mehr* comes after the noun."
+      fa: "در پرسش بله و خیر، فعل در آغاز می‌آید. *mehr* پس از اسم است."
+      de: "In einer Ja/Nein-Frage steht das Verb am Anfang. *Mehr* steht nach dem Nomen."
+  - id: order-2
+    type: word-order
+    answers:
+      - [sie, ist, nie, krank]
+      - [nie, ist, sie, krank]
+      - [krank, ist, sie, nie]
+    explanation:
+      en: "The verb comes second. Like *nicht*, *nie* stands before the adjective."
+      fa: "فعل در جایگاه دوم می‌آید. *nie* هم مانند *nicht* پیش از صفت می‌آید."
+      de: "Das Verb steht auf Position 2. *Nie* steht wie *nicht* vor dem Adjektiv."
+  - id: match-1
+    type: matching
+    answer:
+      - [Ich habe ___ Geld mehr., kein]
+      - [Er wohnt ___ mehr hier., nicht]
+      - [Hier ist ___., nichts]
+    explanation:
+      en: "*Kein Geld mehr* (a noun without an article), *nicht mehr* (no noun), and *nichts* (not anything)."
+      fa: "*kein Geld mehr* (اسم بدون حرف تعریف)، *nicht mehr* (بدون اسم) و *nichts* (هیچ‌چیز)."
+      de: "*Kein Geld mehr* (Nomen ohne Artikel), *nicht mehr* (kein Nomen) und *nichts* (Gegenteil von *etwas*)."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 175584ff729e8e61
