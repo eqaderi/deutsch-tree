@@ -27,6 +27,12 @@ export { WORD_CLASSES, type WordClass }
 export const ARTICLES = ['der', 'die', 'das'] as const
 export type Article = (typeof ARTICLES)[number]
 
+/**
+ * What a node file writes as the article of a noun that takes none: a name
+ * such as "Deutschland" or "Europa". It is learned, shown and asked bare.
+ */
+export const NO_ARTICLE = 'none'
+
 /** What a noun with one number only has. */
 export const NOUN_NUMBERS = ['singular-only', 'plural-only'] as const
 export type NounNumber = (typeof NOUN_NUMBERS)[number]
@@ -772,8 +778,8 @@ const vocabularyEntry = z
     /** The headword, without article, as the scope list spells it: "Mutter", "kochen". */
     word: text,
     class: z.enum(WORD_CLASSES).optional(),
-    /** Nouns only. */
-    article: z.enum(ARTICLES).optional(),
+    /** Nouns only: der, die or das, or `none` for a noun that takes no article ("Deutschland"). */
+    article: z.enum([...ARTICLES, NO_ARTICLE]).optional(),
     /** Nouns only: the plural form, without article ("Mütter"). */
     plural: text.optional(),
     /** Nouns only, in place of `plural`: the noun has one number only. */
@@ -1113,7 +1119,9 @@ export const nodeFileSchema = z
           if (entry[field] === undefined) missing(field)
         }
         if (entry.class !== 'noun') return
-        if (entry.article === undefined) missing('article', ': a noun is learned with its article')
+        if (entry.article === undefined) {
+          missing('article', `: a noun is learned with its article, or "${NO_ARTICLE}" when it takes none`)
+        }
         if (entry.plural === undefined && entry.number === undefined) {
           missing(
             'plural',
@@ -1639,7 +1647,7 @@ export interface VocabularyWord {
   /** The headword, without article: "Mutter", "kochen". */
   word: string
   class: WordClass
-  /** Of a noun. */
+  /** Of a noun; absent for a noun that takes none ("Deutschland"). */
   article?: Article
   /** Of a noun: its plural, without article ("Mütter"). Absent when the noun has one number only. */
   plural?: string
@@ -1663,10 +1671,11 @@ export type HeardWord = VocabularyWord & { audio: Spoken; example: HeardExample 
 
 /**
  * A word as it is learned, said and asked for: a noun with its article
- * ("die Mutter"), any other word on its own ("kochen").
+ * ("die Mutter"), a noun that takes none and any other word on its own
+ * ("Deutschland", "kochen").
  */
-export function asLearned(word: Pick<VocabularyWord, 'word' | 'article'>): string {
-  return word.article ? `${word.article} ${word.word}` : word.word
+export function asLearned(word: { word: string; article?: Article | typeof NO_ARTICLE | undefined }): string {
+  return word.article && word.article !== NO_ARTICLE ? `${word.article} ${word.word}` : word.word
 }
 
 /** The plural of a noun as it is learned ("die Mütter"), or undefined for a word without one. */

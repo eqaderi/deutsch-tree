@@ -53,6 +53,22 @@ test('a noun that has only a plural is typed with the article of the plural', ()
   expect(checkAnswer(question, 'das Möbel').correct).toBe(false)
 })
 
+test('a name that takes no article is shown and typed bare; one that takes an article keeps it', () => {
+  const deutschland = word({ word: 'Deutschland', class: 'noun', number: 'singular-only' })
+  const schweiz = word({ word: 'Schweiz', class: 'noun', article: 'die', number: 'singular-only' })
+  const pool = vocabularyPool([...HOME, deutschland, schweiz])
+
+  expect(fromGerman(pool, 'Deutschland').prompt).toBe('Deutschland')
+  expect(checkAnswer(intoGerman(pool, 'Deutschland'), 'Deutschland')).toEqual({
+    correct: true,
+    notes: [],
+    accepted: 'Deutschland',
+  })
+  expect(checkAnswer(intoGerman(pool, 'Deutschland'), 'das Deutschland').correct).toBe(false)
+  expect(checkAnswer(intoGerman(pool, 'Schweiz'), 'die Schweiz').correct).toBe(true)
+  expect(checkAnswer(intoGerman(pool, 'Schweiz'), 'Schweiz').correct).toBe(false)
+})
+
 test('the small slips of any typed answer are accepted with a note, but never a missing article', () => {
   const question = intoGerman(vocabularyPool(HOME), 'Tür')
 

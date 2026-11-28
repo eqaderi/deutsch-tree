@@ -192,7 +192,7 @@ die Familie · die Eltern (Pl.) · die Mutter · der Vater · das Kind · der So
 der Mensch · die Leute (Pl.) · der Mann · das Mädchen · der Junge · der Erwachsene · der/die Jugendliche · der Freund · der/die Bekannte · der Kollege · der Gast · die Gruppe · jung · alt · allein · zusammen · fremd · bekannt · kennen · (sich) treffen · besuchen · einladen · die Einladung · helfen · die Hilfe
 
 **A1-W1.5 Countries and where you live** · کشورها و محل زندگی · Länder und Wohnort · 17 words  
-das Land · das Deutschland · das Europa · das Ausland · die Welt · die Heimat · deutsch · europäisch · ausländisch · international · der Ausländer · der/die Deutsche · der Europäer · kommen · wohnen · leben · der Ort
+das Land · Deutschland · Europa · das Ausland · die Welt · die Heimat · deutsch · europäisch · ausländisch · international · der Ausländer · der/die Deutsche · der Europäer · kommen · wohnen · leben · der Ort
 
 #### A1-W2 Words: numbers and time
 
@@ -311,7 +311,7 @@ ich · er · es · sie · Sie · wir · ihr · man · dich · dir · sich · mei
 wer · was · wann · warum · wie · wo · woher · wohin · welcher · was für ein · und · oder · aber · denn · also · auch · nicht · nur · sehr · so
 
 **A1-W6.5 Prepositions** · حرف‌های اضافه · Präpositionen · 21 words  
-an · auf · aus · bei · bis · durch · für · gegen · in · mit · nach · ohne · seit · über · um · unter · von · vor · zu · zwischen · ab
+in · auf · an · unter · über · vor · zwischen · aus · von · ab · nach · zu · bei · mit · ohne · für · gegen · durch · um · bis · seit
 
 **A1-W6.6 Good, bad, easy: describing** · خوب، بد، آسان: توصیف کردن · Gut, schlecht, einfach: Beschreiben · 18 words  
 gut · schlecht · besser · beste · einfach · normal · klar · wunderbar · glücklich · zufrieden · böse · lieb · ruhig · schnell · eilig · kulturell · automatisch · möglich

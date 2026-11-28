@@ -5,7 +5,7 @@ import { changeNode, fixtureContentWith, VOCABULARY } from './fixture.ts'
 /**
  * The fixture's scope list gives, for the words of the published vocabulary
  * node: Tisch der -e, Stuhl der ¨-e, Fenster das -, Möbel die pl (A2),
- * schlafen a verb, groß an adjective.
+ * schlafen a verb, groß an adjective, Deutschland no article (`none`) sg.
  */
 const SCOPE_LIST = 'vocabulary/scope-list.tsv'
 const NODE = 'vocabulary-fixture-home'
@@ -88,6 +88,25 @@ test('the plural markers of the lists are written out as a German reader expects
   })
 
   expect(errors.filter((problem) => problem.where?.endsWith('.plural'))).toEqual([])
+})
+
+test('a noun that the scope list gives no article ("none") takes none, and one with an article keeps it', async () => {
+  const errors = await errorsAfter({
+    [VOCABULARY]: changeNode((node) => {
+      node.words[10].article = 'das'
+      node.words[0].article = 'none'
+    }),
+  })
+
+  expect(errors).toEqual(
+    expect.arrayContaining([
+      inWords('words[0].article', 'is "none", but the scope list gives "der" for "Tisch"'),
+      inWords(
+        'words[10].article',
+        'is "das", but the scope list gives no article for "Deutschland"; write "article: none"',
+      ),
+    ]),
+  )
 })
 
 test('a word the scope list gives two articles may take either', async () => {
