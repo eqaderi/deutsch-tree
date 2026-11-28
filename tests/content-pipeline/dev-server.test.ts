@@ -1,4 +1,4 @@
-import { readFile, realpath, writeFile } from 'node:fs/promises'
+import { readFile, realpath, rename, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { createServer, type ViteDevServer } from 'vite'
 import { afterEach, expect, test, vi } from 'vitest'
@@ -53,17 +53,31 @@ test('the dev server compiles the content once and serves every file from it unt
 
   // A changed node file is compiled again, and the next request sees it.
   const file = path.join(content, PUBLISHED)
-  const retitle = changeNode((node) => {
-    node.title.en = 'Changed while the server runs'
-  })
-  await writeFile(file, retitle(await readFile(file, 'utf8')))
-  await expect
-    .poll(async () => (await (await get('nodes/grammar-001.json')).json()).title.en, { timeout: 10_000 })
-    .toEqual(['Changed while the server runs'])
+  const retitle = async (title: string) => {
+    // Written beside the folder and moved in, so the file goes from its old text to its new one in one step
+    // (an in-place write passes through an empty file, which the watcher may see and report on its own).
+    const next = `${content}-next.yaml`
+    const edit = changeNode((node) => {
+      node.title.en = title
+    })
+    await writeFile(next, edit(await readFile(file, 'utf8')))
+    await rename(next, file)
+    await expect
+      .poll(async () => (await (await get('nodes/grammar-001.json')).json()).title.en, { timeout: 10_000 })
+      .toEqual([title])
+  }
+  await retitle('Changed while the server runs')
   const afterTheChange = compiled.times
   expect(afterTheChange).toBeGreaterThan(1)
 
+  // The watcher can report one change twice (on a loaded machine it does): a file that has not changed since is not compiled again.
+  server?.watcher.emit('change', file)
+  server?.watcher.emit('all', 'change', file)
   await get('index.json')
   await get('nodes/grammar-001.json')
   expect(compiled.times).toBe(afterTheChange)
+
+  // A second change to the same file is compiled again.
+  await retitle('Changed a second time')
+  expect(compiled.times).toBeGreaterThan(afterTheChange)
 }, 20_000)
