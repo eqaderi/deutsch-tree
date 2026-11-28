@@ -259,9 +259,10 @@ words:
       fa: می‌توانی فردا ساعت شش بیدارم کنی؟
     alsoAccepted: [aufwecken]
 
-  # The scope list gives "(sich)": it is used as "sich ausruhen".
+  # The scope list gives "(sich)": the verb is used as "sich ausruhen".
   - word: ausruhen
     class: verb
+    reflexive: sich
     level: A2
     meaning:
       en: to rest, to have a rest
@@ -271,7 +272,7 @@ words:
       de: Nach dem Putzen ruhe ich mich auf dem Sofa aus.
       en: After the cleaning I have a rest on the sofa.
       fa: بعد از نظافت روی کاناپه استراحت می‌کنم.
-    alsoAccepted: [sich ausruhen, sich erholen, ausspannen, sich entspannen, entspannen, ruhen]
+    alsoAccepted: [sich erholen, ausspannen, sich entspannen, ruhen]
 
   # "packen" is to pack a bag, "einpacken" to put a thing into a bag or paper; neither is offered as a wrong meaning of the other.
   - word: packen
@@ -329,19 +330,20 @@ words:
       fa: با این ماده اجاق دوباره تمیز می‌شود.
     alsoAccepted: [das Putzmittel, das Reinigungsmittel]
 
-  # The scope list gives "(sich)": "sich setzen" is to sit down.
+  # The scope list gives "(sich)": the node teaches "sich setzen", to sit down.
   - word: setzen
     class: verb
+    reflexive: sich
     level: A2
     meaning:
-      en: to sit down (with sich), to seat (someone)
-      fa: نشستن، نشاندن
-    definition: sich auf einen Stuhl oder ein Sofa tun, oder eine andere Person dorthin bringen
+      en: to sit down
+      fa: نشستن
+    definition: vom Stehen zum Sitzen kommen, zum Beispiel auf einen Stuhl oder ein Sofa
     example:
       de: Setz dich bitte, das Essen ist gleich fertig.
       en: Do sit down; the food is nearly ready.
       fa: لطفاً بنشین، غذا الان آماده می‌شود.
-    alsoAccepted: [sich setzen, sich hinsetzen, hinsetzen, Platz nehmen]
+    alsoAccepted: [sich hinsetzen, Platz nehmen]
 
   - word: ziehen
     class: verb
