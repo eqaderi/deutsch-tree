@@ -1,33 +1,313 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-living-renting
 kind: vocabulary
 level: B1
 chapter: b1-words-home-food
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Where and how you live"
   fa: "کجا و چطور زندگی می‌کنی"
   de: "Wo und wie man wohnt"
+attemptSize: 15
 words:
   - word: Mieter
+    class: noun
+    article: der
+    plural: Mieter
+    level: B1
+    meaning:
+      en: tenant
+      fa: مستأجر
+    definition: eine Person, die jeden Monat Geld bezahlt, damit sie in der Wohnung von einer anderen Person wohnen darf
+    example:
+      de: Die neuen Mieter ziehen im Mai ein.
+      en: The new tenants are moving in in May.
+      fa: مستأجرهای تازه در ماه مه اسباب‌کشی می‌کنند.
+    alsoAccepted: [die Mieterin]
+
   - word: Vermietung
+    class: noun
+    article: die
+    plural: Vermietungen
+    level: B1
+    meaning:
+      en: letting, renting out
+      fa: اجاره‌دهی (ملک یا خودرو)
+    definition: wenn man eine Wohnung, ein Zimmer oder ein Auto anderen Leuten gegen Geld zur Nutzung gibt
+    example:
+      de: Die Vermietung der Ferienwohnung bringt im Sommer gutes Geld.
+      en: Letting the holiday flat brings in good money in summer.
+      fa: اجاره دادن آپارتمان تعطیلات در تابستان درآمد خوبی دارد.
+    alsoAccepted: [das Vermieten]
+
   - word: Hausmeister
+    class: noun
+    article: der
+    plural: Hausmeister
+    level: B1
+    meaning:
+      en: caretaker, janitor
+      fa: سرایدار
+    definition: eine Person, die in einem großen Wohnhaus oder einer Schule kleine Reparaturen macht und sich um alles kümmert
+    example:
+      de: Der Hausmeister repariert morgen die Heizung.
+      en: The caretaker is repairing the heating tomorrow.
+      fa: سرایدار فردا شوفاژ را تعمیر می‌کند.
+    alsoAccepted: [die Hausmeisterin, der Abwart, die Abwartin]
+
   - word: Bewohner
+    class: noun
+    article: der
+    plural: Bewohner
+    level: B1
+    meaning:
+      en: resident, inhabitant
+      fa: ساکن
+    definition: eine Person, die in einem bestimmten Haus, Ort oder Land lebt
+    example:
+      de: Alle Bewohner des Hauses treffen sich einmal im Jahr zu einem Fest.
+      en: All the residents of the building get together once a year for a party.
+      fa: همهٔ ساکنان این ساختمان سالی یک بار برای جشنی دور هم جمع می‌شوند.
+    alsoAccepted: [die Bewohnerin, der Einwohner, die Einwohnerin]
+
   - word: WG
+    class: noun
+    article: die
+    plural: WGs
+    level: B1
+    meaning:
+      en: flat share, shared flat
+      fa: خانهٔ اشتراکی (هم‌خانگی)
+    definition: kurz für eine Wohnung, in der mehrere Leute zusammen wohnen, die keine Familie sind
+    example:
+      de: Während des Studiums habe ich in einer WG gewohnt.
+      en: When I was a student I lived in a flat share.
+      fa: در دوران دانشجویی در یک خانهٔ اشتراکی زندگی می‌کردم.
+    alsoAccepted: [die Wohngemeinschaft]
+
+  # "Wohnort" is where you live, "Wohnsitz" the same place as written in official papers; each is right when the other is asked for.
   - word: Wohnort
+    class: noun
+    article: der
+    plural: Wohnorte
+    level: B1
+    meaning:
+      en: place of residence, town where you live
+      fa: محل سکونت
+    definition: die Stadt oder das Dorf, in dem man lebt
+    example:
+      de: Bitte schreiben Sie Ihren Wohnort in das Formular.
+      en: Please write your place of residence on the form.
+      fa: لطفاً محل سکونتتان را در فرم بنویسید.
+    alsoAccepted: [der Wohnsitz]
+    tooCloseTo: [Wohnsitz]
+
   - word: Wohnsitz
+    class: noun
+    article: der
+    plural: Wohnsitze
+    level: B1
+    meaning:
+      en: (official) residence, domicile
+      fa: اقامتگاه (رسمی)
+    definition: der Ort, an dem man offiziell gemeldet ist und lebt
+    example:
+      de: Seit 2020 hat sie ihren Wohnsitz in Österreich.
+      en: She has had her residence in Austria since 2020.
+      fa: از سال ۲۰۲۰ اقامتگاه رسمی او در اتریش است.
+    alsoAccepted: [der Wohnort]
+    tooCloseTo: [Wohnort]
+
   - word: Zuhause
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: home (the place where you live and feel at ease)
+      fa: خانه و کاشانه (جایی که در آن زندگی می‌کنی و آسوده‌ای)
+    definition: der Ort, an dem man lebt und sich wohlfühlt
+    example:
+      de: Nach zwei Jahren ist Leipzig mein Zuhause geworden.
+      en: After two years Leipzig has become my home.
+      fa: پس از دو سال، لایپزیگ خانهٔ من شده است.
+    alsoAccepted: [das Heim, das Daheim]
+
   - word: Einrichtung
+    class: noun
+    article: die
+    plural: Einrichtungen
+    level: B1
+    meaning:
+      en: furnishings, furniture (of a home); facility, institution
+      fa: اثاثیه و چیدمان (خانه)؛ مؤسسه
+    definition: alle Möbel und Dinge in einer Wohnung; auch ein Ort wie ein Heim oder ein Krankenhaus, der Menschen hilft
+    example:
+      de: Die Einrichtung der Wohnung ist modern und hell.
+      en: The furnishings of the flat are modern and light.
+      fa: اثاثیهٔ این آپارتمان مدرن و روشن است.
+
   - word: einrichten
+    class: verb
+    level: B1
+    meaning:
+      en: to furnish, to fit out (a room, a flat)
+      fa: مبله کردن، چیدن (اتاق یا خانه)
+    definition: Möbel und andere Dinge in eine Wohnung oder ein Zimmer stellen
+    example:
+      de: Wir richten gerade das Kinderzimmer ein.
+      en: We're furnishing the children's room at the moment.
+      fa: داریم اتاق بچه را می‌چینیم.
+    alsoAccepted: [möblieren, ausstatten]
+
   - word: möbliert
+    class: adjective
+    level: B1
+    meaning:
+      en: furnished
+      fa: مبله
+    definition: so, dass die Möbel schon da sind, wenn man einzieht
+    example:
+      de: Ich suche ein möbliertes Zimmer für drei Monate.
+      en: I'm looking for a furnished room for three months.
+      fa: دنبال یک اتاق مبله برای سه ماه می‌گردم.
+    alsoAccepted: [eingerichtet]
+
   - word: Vorort
+    class: noun
+    article: der
+    plural: Vororte
+    level: B1
+    meaning:
+      en: suburb
+      fa: حومهٔ شهر (شهرک یا محله‌ای بیرون از شهر بزرگ)
+    definition: ein kleiner Ort oder Stadtteil am Rand von einer großen Stadt
+    example:
+      de: Viele Familien ziehen in einen Vorort, weil die Mieten dort niedriger sind.
+      en: Many families move to a suburb because the rents are lower there.
+      fa: خیلی از خانواده‌ها به حومهٔ شهر می‌روند، چون اجاره‌ها آنجا ارزان‌تر است.
+    alsoAccepted: [die Vorstadt]
+
+  # "Umgebung" (what is around a place) and "Gegend" (an area) overlap; neither is offered as a wrong meaning of the other.
   - word: Umgebung
+    class: noun
+    article: die
+    plural: Umgebungen
+    level: B1
+    meaning:
+      en: surroundings, surrounding area
+      fa: اطراف، محیط اطراف
+    definition: alles, was in der Nähe von einem Ort liegt
+    example:
+      de: In der Umgebung von unserem Dorf gibt es viele Seen.
+      en: There are lots of lakes in the area around our village.
+      fa: در اطراف روستای ما دریاچه‌های زیادی هست.
+    alsoAccepted: [die Umgegend]
+    tooCloseTo: [Gegend]
+
   - word: Gegend
+    class: noun
+    article: die
+    plural: Gegenden
+    level: B1
+    meaning:
+      en: area, region (part of a town or a country)
+      fa: منطقه، ناحیه (بخشی از شهر یا کشور، بی‌مرز دقیق)
+    definition: ein Teil von einer Stadt oder einem Land, ohne genaue Grenzen
+    example:
+      de: Das ist eine ruhige Gegend mit vielen Parks.
+      en: It's a quiet area with lots of parks.
+      fa: اینجا منطقهٔ آرامی است و پارک زیاد دارد.
+    alsoAccepted: [die Region, das Gebiet]
+    tooCloseTo: [Umgebung]
+
   - word: Lage
+    class: noun
+    article: die
+    plural: Lagen
+    level: B1
+    meaning:
+      en: location, position; situation
+      fa: موقعیت (مکانی)؛ وضعیت
+    definition: der Platz, an dem etwas ist, zum Beispiel nah am Zentrum oder am See; auch wie eine Sache gerade steht
+    example:
+      de: Die Wohnung ist klein, aber die Lage ist super.
+      en: The flat is small, but the location is great.
+      fa: آپارتمان کوچک است، ولی موقعیتش عالی است.
+
   - word: zentral
+    class: adjective
+    level: B1
+    meaning:
+      en: central, centrally located
+      fa: مرکزی، نزدیک مرکز شهر
+    definition: in der Mitte, nah am Zentrum von einer Stadt
+    example:
+      de: Unser Hotel liegt sehr zentral.
+      en: Our hotel is very central.
+      fa: هتل ما خیلی نزدیک مرکز شهر است.
+
   - word: städtisch
+    class: adjective
+    level: B1
+    meaning:
+      en: municipal, city (run by the town); urban
+      fa: شهری؛ (وابسته به) شهرداری
+    definition: so, dass es zu einer Stadt gehört oder von der Stadt bezahlt wird
+    example:
+      de: Die Kinder gehen in einen städtischen Kindergarten.
+      en: The children go to a municipal nursery school.
+      fa: بچه‌ها به مهدکودکی می‌روند که زیر نظر شهرداری است.
+    alsoAccepted: [kommunal]
+
   - word: Bau
+    class: noun
+    article: der
+    plural: Bauten
+    level: B1
+    meaning:
+      en: construction (of a building); building
+      fa: ساخت، ساخت‌وساز؛ بنا
+    definition: die Arbeit, wenn man ein Haus oder eine Brücke macht; auch ein großes Haus selbst
+    example:
+      de: Der Bau der neuen Schule dauert zwei Jahre.
+      en: Building the new school takes two years.
+      fa: ساخت مدرسهٔ جدید دو سال طول می‌کشد.
+    alsoAccepted: [das Bauen]
+
   - word: Hütte
+    class: noun
+    article: die
+    plural: Hütten
+    level: B1
+    meaning:
+      en: hut, cabin
+      fa: کلبه
+    definition: ein kleines, einfaches Haus, oft aus Holz, zum Beispiel in den Bergen
+    example:
+      de: Im Urlaub wohnen wir in einer Hütte in den Alpen.
+      en: On holiday we're staying in a cabin in the Alps.
+      fa: در تعطیلات در کلبه‌ای در کوه‌های آلپ می‌مانیم.
+
   - word: Zugang
+    class: noun
+    article: der
+    plural: Zugänge
+    level: B1
+    meaning:
+      en: access, way in
+      fa: دسترسی، راه ورود
+    definition: der Weg, auf dem man in ein Haus oder an einen Ort kommt; auch das Recht, etwas zu benutzen
+    example:
+      de: Die Wohnung hat einen eigenen Zugang zum Garten.
+      en: The flat has its own access to the garden.
+      fa: این آپارتمان راه جداگانه‌ای به باغ دارد.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: bd00ef5906a22631
