@@ -4,10 +4,231 @@ kind: grammar
 level: A1
 chapter: a1-first-sentences
 order: 7
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-142]
 title:
   en: "*ja* – *nein* – *doch*"
   fa: "*ja* – *nein* – *doch*"
   de: "*ja* – *nein* – *doch*"
+
+explanations:
+  en:
+    rule: >
+      A yes/no question is answered with *ja* (yes) or *nein* (no). A
+      negative question has *nicht* (not) or *kein* (no, not a) in it: *Kommst
+      du nicht?* When the answer to it is positive, say *doch*: *Doch, ich
+      komme.* When you agree with the negative, say *nein*: *Nein, ich komme
+      nicht.* So after a negative question *ja* is wrong; *doch* says "yes,
+      it is so after all".
+  fa:
+    rule: >
+      پاسخ پرسش بله یا نه *ja* (بله) یا *nein* (نه) است. پرسش منفی *nicht*
+      (نه، نمی‌…) یا *kein* (هیچ) دارد: *Kommst du nicht?* («نمی‌آیی؟»). اگر
+      پاسخ این پرسش مثبت باشد، *doch* می‌گوییم: *Doch, ich komme.* *doch* درست
+      مانند «چرا» در فارسی است: «نمی‌آیی؟ – چرا، می‌آیم.» اگر منفی بودن را
+      تأیید کنیم، *nein* می‌گوییم: *Nein, ich komme nicht.* بنابراین پس از پرسش منفی
+      *ja* نادرست است.
+  de:
+    rule: >
+      Auf eine Ja/Nein-Frage antwortet man mit *ja* oder *nein*. Eine negative
+      Frage hat *nicht* oder *kein*: *Kommst du nicht?* Ist die Antwort
+      positiv, sagt man *doch*: *Doch, ich komme.* Ist die Antwort negativ,
+      sagt man *nein*: *Nein, ich komme nicht.* Nach einer negativen Frage ist
+      *ja* falsch.
+
+table:
+  columns:
+    - { en: Question, fa: پرسش, de: Frage }
+    - { en: Positive answer, fa: پاسخ مثبت, de: Positive Antwort }
+    - { en: Negative answer, fa: پاسخ منفی, de: Negative Antwort }
+  rows:
+    - [Kommst du?, "Ja, ich komme.", "Nein, ich komme nicht."]
+    - [Kommst du nicht?, "Doch, ich komme.", "Nein, ich komme nicht."]
+    - [Hast du Zeit?, "Ja, ich habe Zeit.", "Nein, ich habe keine Zeit."]
+    - [Hast du keine Zeit?, "Doch, ich habe Zeit.", "Nein, ich habe keine Zeit."]
+
+examples:
+  - de: Bist du müde? – Ja, sehr.
+    en: Are you tired? – Yes, very.
+    fa: خسته‌ای؟ – بله، خیلی.
+  - de: Bist du nicht müde? – Doch, ein bisschen.
+    en: Aren't you tired? – Yes, a little.
+    fa: خسته نیستی؟ – چرا، کمی.
+  - de: Kommt Anna nicht? – Doch, sie kommt später.
+    en: Isn't Anna coming? – Yes, she is coming later.
+    fa: آنا نمی‌آید؟ – چرا، دیرتر می‌آید.
+  - de: Hast du keine Zeit? – Nein, heute nicht.
+    en: Don't you have time? – No, not today.
+    fa: وقت نداری؟ – نه، امروز نه.
+  - de: Hast du kein Handy? – Doch, hier ist es.
+    en: Don't you have a phone? – Yes, here it is.
+    fa: گوشی نداری؟ – چرا، این‌جاست.
+  - de: Sprechen Sie Deutsch? – Ja, ein bisschen.
+    en: Do you speak German? – Yes, a little.
+    fa: آلمانی صحبت می‌کنید؟ – بله، کمی.
+
+mistakes:
+  - wrong: Kommst du nicht? – Ja, ich komme.
+    right: Kommst du nicht? – Doch, ich komme.
+    why:
+      en: "After a negative question a positive answer starts with *doch*, not *ja*."
+      fa: "پس از پرسش منفی، پاسخ مثبت با *doch* آغاز می‌شود، نه با *ja*؛ مانند «چرا» در فارسی."
+      de: "Nach einer negativen Frage beginnt eine positive Antwort mit *doch*, nicht mit *ja*."
+  - wrong: Hast du keine Zeit? – Doch, ich habe keine Zeit.
+    right: Hast du keine Zeit? – Nein, ich habe keine Zeit.
+    why:
+      en: "*Doch* says the opposite of the negative. To agree that you have no time, say *nein*."
+      fa: "*doch* خلاف منفی بودن پرسش را می‌گوید. برای تأیید این‌که وقت ندارید، *nein* بگویید."
+      de: "*Doch* sagt das Gegenteil. Hat man keine Zeit, sagt man *nein*."
+  - wrong: Bist du müde? – Doch, sehr.
+    right: Bist du müde? – Ja, sehr.
+    why:
+      en: "*Doch* answers only a negative question. A question without *nicht* or *kein* gets *ja*."
+      fa: "*doch* فقط پاسخ پرسش منفی است. پرسش بی *nicht* یا *kein* پاسخ *ja* می‌گیرد."
+      de: "*Doch* sagt man nur nach einer negativen Frage. Ohne *nicht* oder *kein* sagt man *ja*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Kommst du nicht? – ___, ich komme.
+    options: [Doch, Ja, Nein]
+    answer: Doch
+    explanation:
+      en: "A negative question with a positive answer: *doch*."
+      fa: "پرسش منفی با پاسخ مثبت: *doch*."
+      de: "Negative Frage, positive Antwort: *doch*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Kommst du? – ___, ich komme.
+    options: [Ja, Doch, Nein]
+    answer: Ja
+    explanation:
+      en: "The question has no *nicht*, so a positive answer is *ja*."
+      fa: "پرسش *nicht* ندارد، پس پاسخ مثبت *ja* است."
+      de: "Die Frage hat kein *nicht*. Die positive Antwort ist *ja*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Hast du keine Zeit? – ___, ich habe keine Zeit.
+    options: [Nein, Doch, Ja]
+    answer: Nein
+    explanation:
+      en: "You agree with the negative question, so *nein*."
+      fa: "پاسخ، منفی بودن پرسش را تأیید می‌کند، پس *nein* می‌آید."
+      de: "Die Antwort ist auch negativ: *nein*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Bist du nicht müde? – ___, ich bin sehr müde.
+    options: [Doch, Ja, Nein]
+    answer: Doch
+    explanation:
+      en: "A negative question with a positive answer: *doch*."
+      fa: "پرسش منفی با پاسخ مثبت: *doch*."
+      de: "Negative Frage, positive Antwort: *doch*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Sprechen Sie Englisch? – ___, ich spreche kein Englisch.
+    options: [Nein, Doch, Ja]
+    answer: Nein
+    explanation:
+      en: "The answer is negative, so *nein*."
+      fa: "پاسخ منفی است، پس *nein* می‌آید."
+      de: "Die Antwort ist negativ: *nein*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Haben Sie keine Kinder? – ___, wir haben zwei Kinder.
+    options: [Doch, Ja, Nein]
+    answer: Doch
+    explanation:
+      en: "A negative question (*keine*) with a positive answer: *doch*."
+      fa: "پرسش منفی (*keine*) با پاسخ مثبت: *doch*."
+      de: "Negative Frage (*keine*), positive Antwort: *doch*."
+  - id: gap-7
+    type: gap-fill
+    prompt: Ist das dein Fahrrad? – ___, das ist mein Fahrrad.
+    options: [Ja, Doch, Nein]
+    answer: Ja
+    explanation:
+      en: "The question has no *nicht* or *kein*, so a positive answer is *ja*."
+      fa: "پرسش *nicht* یا *kein* ندارد، پس پاسخ مثبت *ja* است."
+      de: "Die Frage hat kein *nicht* und kein *kein*. Die positive Antwort ist *ja*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Hast du kein Handy? – ___
+    options: ["Doch, ich habe ein Handy.", "Ja, ich habe ein Handy.", "Nein, ich habe ein Handy."]
+    answer: Doch, ich habe ein Handy.
+    explanation:
+      en: "You do have a phone, so the answer to the negative question is *doch*."
+      fa: "گوشی دارید، پس پاسخ پرسش منفی *doch* است."
+      de: "Man hat ein Handy. Die Antwort auf die negative Frage ist *doch*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wohnst du nicht in Berlin? – ___
+    options: ["Nein, ich wohne in Hamburg.", "Doch, ich wohne in Hamburg.", "Ja, ich wohne in Hamburg."]
+    answer: Nein, ich wohne in Hamburg.
+    explanation:
+      en: "You agree that you do not live in Berlin, so *nein*."
+      fa: "تأیید می‌کنید که در برلین زندگی نمی‌کنید، پس *nein* می‌آید."
+      de: "Man wohnt nicht in Berlin. Die Antwort ist negativ: *nein*."
+  - id: true-1
+    type: true-false
+    prompt: Bist du nicht hungrig? – Ja, sehr.
+    answer: false
+    explanation:
+      en: "After a negative question a positive answer is *doch*: *Doch, sehr.*"
+      fa: "پس از پرسش منفی، پاسخ مثبت *doch* است: *Doch, sehr.*"
+      de: "Nach einer negativen Frage sagt man positiv *doch*: *Doch, sehr.*"
+  - id: true-2
+    type: true-false
+    prompt: Kommst du heute nicht? – Doch, ich komme um acht.
+    answer: true
+    explanation:
+      en: "A negative question with a positive answer: *doch*. The sentence is correct."
+      fa: "پرسش منفی با پاسخ مثبت: *doch*. جمله درست است."
+      de: "Negative Frage, positive Antwort: *doch*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Hast du Hunger? – Doch, ich habe Hunger.
+    answer: false
+    explanation:
+      en: "The question is not negative, so the answer is *ja*: *Ja, ich habe Hunger.*"
+      fa: "پرسش منفی نیست، پس پاسخ *ja* است: *Ja, ich habe Hunger.*"
+      de: "Die Frage ist nicht negativ. Die Antwort ist *ja*: *Ja, ich habe Hunger.*"
+  - id: true-4
+    type: true-false
+    prompt: Hast du kein Auto? – Nein, ich habe kein Auto.
+    answer: true
+    explanation:
+      en: "You agree with the negative question, so *nein*. The sentence is correct."
+      fa: "پاسخ، منفی بودن پرسش را تأیید می‌کند، پس *nein* درست است. جمله درست است."
+      de: "Die Antwort ist auch negativ: *nein*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Arbeitest du heute nicht? – ___, ich arbeite bis sechs.
+    answers: [Doch]
+    explanation:
+      en: "A negative question with a positive answer: *doch*."
+      fa: "پرسش منفی با پاسخ مثبت: *doch*."
+      de: "Negative Frage, positive Antwort: *doch*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Hast du keine Geschwister? – ___, ich habe keine Geschwister.
+    answers: [Nein]
+    explanation:
+      en: "You agree with the negative question, so *nein*."
+      fa: "پاسخ، منفی بودن پرسش را تأیید می‌کند، پس *nein* می‌آید."
+      de: "Die Antwort ist auch negativ: *nein*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Lernst du Deutsch? – ___, jeden Tag.
+    answers: [Ja]
+    explanation:
+      en: "The question is not negative, so a positive answer is *ja*."
+      fa: "پرسش منفی نیست، پس پاسخ مثبت *ja* است."
+      de: "Die Frage ist nicht negativ. Die positive Antwort ist *ja*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: f9cf7a57d808aae8
