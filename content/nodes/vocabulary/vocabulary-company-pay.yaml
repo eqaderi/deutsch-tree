@@ -1,34 +1,335 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-company-pay
 kind: vocabulary
 level: B1
 chapter: b1-words-work-money
 order: 2
-status: coming-soon
+status: published
 title:
   en: "The company, working hours and pay"
   fa: "شرکت، ساعت کار و دستمزد"
   de: "Betrieb, Arbeitszeit und Lohn"
+attemptSize: 15
 words:
+  # A Betrieb may be a factory; neither is offered as a wrong meaning of the other.
   - word: Betrieb
+    class: noun
+    article: der
+    plural: Betriebe
+    level: B1
+    meaning:
+      en: business, firm (as a workplace)
+      fa: بنگاه، محل کار (شرکت یا کارگاه)
+    definition: eine Firma, in der Menschen zusammen arbeiten und etwas herstellen oder anbieten
+    example:
+      de: Mein Onkel hat einen kleinen Betrieb mit zwölf Mitarbeitern.
+      en: My uncle has a small business with twelve employees.
+      fa: عمویم بنگاه کوچکی با دوازده کارمند دارد.
+    alsoAccepted: [die Firma, das Unternehmen]
+    tooCloseTo: [Fabrik]
+
   - word: Abteilung
+    class: noun
+    article: die
+    plural: Abteilungen
+    level: B1
+    meaning:
+      en: department
+      fa: بخش، واحد (در شرکت یا اداره)
+    definition: ein Teil von einer Firma, einem Kaufhaus oder einem Krankenhaus mit eigenen Aufgaben
+    example:
+      de: Frau Becker arbeitet in der Abteilung für Werbung.
+      en: Ms Becker works in the advertising department.
+      fa: خانم بکر در واحد تبلیغات کار می‌کند.
+
   - word: Personal
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: staff, personnel
+      fa: کارکنان
+    definition: alle Menschen, die in einer Firma, einem Hotel oder einem Krankenhaus arbeiten
+    example:
+      de: Das Personal im Hotel war sehr freundlich.
+      en: The staff at the hotel were very friendly.
+      fa: کارکنان هتل خیلی مهربان بودند.
+    alsoAccepted: [die Belegschaft, die Mitarbeiter]
+
   - word: Betriebsrat
+    class: noun
+    article: der
+    plural: Betriebsräte
+    level: B1
+    meaning:
+      en: works council; member of the works council
+      fa: شورای کارکنان؛ عضو شورای کارکنان
+    definition: eine Gruppe, die von den Kollegen gewählt wird und für ihre Interessen in der Firma spricht; auch eine Person aus dieser Gruppe
+    example:
+      de: Der Betriebsrat spricht mit der Firmenleitung über die neuen Arbeitszeiten.
+      en: The works council is talking to the management about the new working hours.
+      fa: شورای کارکنان دربارهٔ ساعت‌های کاری تازه با مدیریت شرکت گفت‌وگو می‌کند.
+    alsoAccepted: [die Betriebsrätin]
+
   - word: Gewerkschaft
+    class: noun
+    article: die
+    plural: Gewerkschaften
+    level: B1
+    meaning:
+      en: trade union
+      fa: اتحادیهٔ کارگری، سندیکا
+    definition: eine große Organisation, die für mehr Geld und bessere Arbeitsbedingungen der Arbeitnehmer kämpft
+    example:
+      de: Die Gewerkschaft fordert sechs Prozent mehr Lohn.
+      en: The union is demanding six per cent more pay.
+      fa: اتحادیهٔ کارگری شش درصد افزایش دستمزد می‌خواهد.
+
   - word: Streik
+    class: noun
+    article: der
+    plural: Streiks
+    level: B1
+    meaning:
+      en: strike
+      fa: اعتصاب
+    definition: wenn viele Arbeitnehmer zusammen nicht arbeiten, damit sie mehr Geld oder bessere Bedingungen bekommen
+    example:
+      de: Wegen eines Streiks fahren heute keine Busse.
+      en: Because of a strike there are no buses today.
+      fa: امروز به‌خاطر اعتصاب هیچ اتوبوسی کار نمی‌کند.
+
   - word: streiken
+    class: verb
+    level: B1
+    meaning:
+      en: to go on strike
+      fa: اعتصاب کردن
+    definition: mit den Kollegen zusammen nicht arbeiten, um mehr Geld oder bessere Bedingungen zu bekommen
+    example:
+      de: Die Piloten streiken seit zwei Tagen.
+      en: The pilots have been on strike for two days.
+      fa: خلبان‌ها دو روز است که اعتصاب کرده‌اند.
+
+  # Lohn and Einkommen overlap; neither is offered as a wrong meaning of the other.
   - word: Lohn
+    class: noun
+    article: der
+    plural: Löhne
+    level: B1
+    meaning:
+      en: wage(s), pay (of a worker)
+      fa: دستمزد
+    definition: das Geld, das man für seine Arbeit bekommt, oft nach Stunden oder Wochen berechnet
+    example:
+      de: Der Lohn wird immer am Ende des Monats überwiesen.
+      en: The wages are always transferred at the end of the month.
+      fa: دستمزد همیشه آخر ماه واریز می‌شود.
+    tooCloseTo: [Einkommen]
+
   - word: Einkommen
+    class: noun
+    article: das
+    plural: Einkommen
+    level: B1
+    meaning:
+      en: income
+      fa: درآمد
+    definition: alles Geld, das eine Person in einem Monat oder einem Jahr bekommt, zum Beispiel für ihre Arbeit oder aus einer Miete
+    example:
+      de: Mit nur einem Einkommen kann die Familie kaum leben.
+      en: The family can hardly live on just one income.
+      fa: این خانواده فقط با یک درآمد به‌سختی زندگی می‌کند.
+    tooCloseTo: [Lohn]
+
   - word: Überstunde
+    class: noun
+    article: die
+    plural: Überstunden
+    level: B1
+    meaning:
+      en: hour of overtime
+      fa: ساعت اضافه‌کاری
+    definition: eine Stunde, die man mehr arbeitet, als im Arbeitsvertrag steht
+    example:
+      de: Diese Woche habe ich schon fünf Überstunden gemacht.
+      en: I've already done five hours of overtime this week.
+      fa: این هفته تا حالا پنج ساعت اضافه‌کاری کرده‌ام.
+
   - word: Feierabend
+    class: noun
+    article: der
+    plural: Feierabende
+    level: B1
+    meaning:
+      en: end of the working day, time after work
+      fa: پایان ساعت کار، وقت بعد از کار
+    definition: die Zeit am Ende des Arbeitstages, wenn man mit der Arbeit fertig ist und nach Hause geht
+    example:
+      de: Um 17 Uhr habe ich Feierabend.
+      en: I finish work at 5 pm.
+      fa: ساعت ۱۷ کارم تمام می‌شود.
+
+  # Teilzeit and halbtags overlap; neither is offered as a wrong meaning of the other.
   - word: Teilzeit
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: part-time work
+      fa: کار پاره‌وقت
+    definition: wenn man weniger Stunden in der Woche arbeitet als normal
+    example:
+      de: Seit der Geburt ihrer Tochter arbeitet sie in Teilzeit.
+      en: Since her daughter was born she has worked part-time.
+      fa: او از وقتی دخترش به دنیا آمده، پاره‌وقت کار می‌کند.
+    alsoAccepted: [die Teilzeitarbeit]
+    tooCloseTo: [halbtags]
+
   - word: Vollzeit
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: full-time work
+      fa: کار تمام‌وقت
+    definition: wenn man alle Stunden in der Woche arbeitet, die normal sind, zum Beispiel 40 Stunden
+    example:
+      de: Die Stelle ist in Vollzeit, also 40 Stunden pro Woche.
+      en: The job is full-time, that is 40 hours a week.
+      fa: این شغل تمام‌وقت است، یعنی ۴۰ ساعت در هفته.
+    alsoAccepted: [die Vollzeitarbeit]
+
   - word: halbtags
+    class: adverb
+    level: B1
+    meaning:
+      en: half-days, for half the day
+      fa: نیمه‌وقت، نصف روز
+    definition: nur am Vormittag oder nur am Nachmittag
+    example:
+      de: Meine Mutter arbeitet halbtags in einer Bäckerei.
+      en: My mother works half-days in a bakery.
+      fa: مادرم نیمه‌وقت در یک نانوایی کار می‌کند.
+    tooCloseTo: [Teilzeit]
+
   - word: Beschäftigung
+    class: noun
+    article: die
+    plural: Beschäftigungen
+    level: B1
+    meaning:
+      en: employment, job; occupation (something to do)
+      fa: اشتغال، کار؛ سرگرمی (کاری برای گذراندن وقت)
+    definition: eine Arbeit, für die man bezahlt wird; auch etwas, womit man seine Zeit verbringt
+    example:
+      de: Er sucht eine Beschäftigung in der Nähe seiner Wohnung.
+      en: He is looking for employment near his flat.
+      fa: او دنبال کاری نزدیک خانه‌اش می‌گردد.
+
   - word: beschäftigen
+    class: verb
+    level: B1
+    meaning:
+      en: to employ (have people working for you)
+      fa: در استخدام داشتن (کارمند داشتن)
+    definition: Mitarbeiter haben, die für einen arbeiten und Lohn bekommen
+    example:
+      de: Die Firma beschäftigt über 200 Mitarbeiter.
+      en: The company employs more than 200 people.
+      fa: این شرکت بیش از ۲۰۰ کارمند دارد.
+
+  # Leiter (the person) and Leitung (the management) overlap; neither is offered as a wrong meaning of the other.
   - word: Leiter
+    class: noun
+    article: der
+    plural: Leiter
+    level: B1
+    meaning:
+      en: head, manager (of a department or group)
+      fa: رئیس، سرپرست (یک بخش یا گروه)
+    definition: die Person, die eine Abteilung oder eine Gruppe führt
+    example:
+      de: Der Leiter der Abteilung ist heute auf einer Konferenz.
+      en: The head of the department is at a conference today.
+      fa: مدیر این واحد امروز در یک کنفرانس است.
+    alsoAccepted:
+      [
+        die Leiterin,
+        der Chef,
+        die Chefin,
+        der Abteilungsleiter,
+        die Abteilungsleiterin,
+        der Gruppenleiter,
+        die Gruppenleiterin,
+      ]
+    tooCloseTo: [Leitung]
+
   - word: leiten
+    class: verb
+    level: B1
+    meaning:
+      en: to run, to lead, to manage
+      fa: اداره کردن، رهبری کردن
+    definition: eine Gruppe, eine Firma oder ein Projekt führen und bestimmen, was gemacht wird
+    example:
+      de: Seit zwei Jahren leitet sie ein Hotel in Salzburg.
+      en: She has been running a hotel in Salzburg for two years.
+      fa: او دو سال است که هتلی را در سالزبورگ اداره می‌کند.
+    alsoAccepted: [führen]
+
   - word: Leitung
+    class: noun
+    article: die
+    plural: Leitungen
+    level: B1
+    meaning:
+      en: management, direction; (water, power or telephone) line
+      fa: مدیریت؛ خط (لوله، برق یا تلفن)
+    definition: die Personen, die eine Firma oder ein Projekt führen; auch ein Rohr oder Kabel für Wasser, Strom oder Telefon
+    example:
+      de: Die Leitung der Firma hat neue Regeln beschlossen.
+      en: The company's management has decided on new rules.
+      fa: مدیریت شرکت قانون‌های تازه‌ای تصویب کرده است.
+    tooCloseTo: [Leiter]
+
   - word: Fabrik
+    class: noun
+    article: die
+    plural: Fabriken
+    level: B1
+    meaning:
+      en: factory
+      fa: کارخانه
+    definition: ein großes Gebäude, in dem Arbeiter mit Maschinen Waren herstellen
+    example:
+      de: In dieser Fabrik werden Autos gebaut.
+      en: Cars are built in this factory.
+      fa: در این کارخانه خودرو می‌سازند.
+    alsoAccepted: [das Werk]
+    tooCloseTo: [Betrieb]
+
   - word: Lager
+    class: noun
+    article: das
+    plural: Lager
+    level: B1
+    meaning:
+      en: warehouse, storeroom
+      fa: انبار
+    definition: ein Raum oder ein Gebäude, in dem eine Firma Waren aufbewahrt, bis sie gebraucht werden
+    example:
+      de: Die Schuhe in Ihrer Größe haben wir leider nicht mehr im Lager.
+      en: Unfortunately we no longer have the shoes in your size in the storeroom.
+      fa: متأسفانه کفش‌ها را در اندازهٔ شما دیگر در انبار نداریم.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: 08dde392a3106a3b

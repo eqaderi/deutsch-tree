@@ -95,6 +95,28 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Kunststoff: 'Kunstschtoff',
   // #92: [bˈʊx] with a short u; the hyphen keeps the long u of "Buch".
   Buchhandlung: 'Buch-handlung',
+  Sparbuch: 'Spar-buch',
+
+  // #99: "jobben" is said with the German j, [jˈɔbən]; "dsch" gives the English sound.
+  jobben: 'dschobben',
+  jobbt: 'dschobbt',
+  // #99: the letters of "ec" are read as one syllable, [ˈeːk]; spelt out they are "E-Zeh".
+  'ec-Karte': 'E-Zeh-Karte',
+  // #99: "Chip" alone is [tʃˈɪp], but inside "Chipkarte" the voice says [çˈɪp].
+  Chipkarte: 'Tschipkarte',
+  // #99: "steuer" after "Mehrwert" comes out as [st]; the hyphen gives [ʃt].
+  Mehrwertsteuer: 'Mehrwert-steuer',
+  // #99: the stress falls on the wrong syllable: "Konsum" as [kɔnzˈʊm] with a short u, "Rabatt"
+  // as [rˈɑbat], "Asyl" as [ˈɑzyːl], "Reporter" as [rˈeːpɔɾtɜ], "Profi" as [proːfˈiː]; a hyphen
+  // gives the right syllable its stress.
+  Konsum: 'Konsuhm',
+  Rabatt: 'Ra-batt',
+  Asyl: 'A-syl',
+  Reporter: 'Re-porter',
+  Reporterin: 'Re-porterin',
+  Profi: 'Proh-fi',
+  // #99: "Azubi" alone comes out as [ˈatsuːbˌiː], heard as "A zu B"; the h gives [atsˈuːbiː].
+  Azubi: 'Azuhbi',
 
   // #94: stressed on the first syllable, [ˈzeːməstɐ]; the hyphen stresses "mes" as German does.
   Semester: 'Se-mester',

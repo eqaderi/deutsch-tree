@@ -1,31 +1,305 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-professions
 kind: vocabulary
 level: B1
 chapter: b1-words-work-money
 order: 4
-status: coming-soon
+status: published
 title:
   en: "More jobs"
   fa: "شغل‌های بیشتر"
   de: "Mehr Berufe"
+attemptSize: 15
 words:
   - word: Architekt
+    class: noun
+    article: der
+    plural: Architekten
+    level: B1
+    meaning:
+      en: architect
+      fa: معمار
+    definition: eine Person, die Häuser und andere Gebäude plant und zeichnet
+    example:
+      de: Die Architektin zeigt uns die Pläne für das neue Rathaus.
+      en: The architect is showing us the plans for the new town hall.
+      fa: معمار نقشه‌های ساختمان تازهٔ شهرداری را به ما نشان می‌دهد.
+    alsoAccepted: [die Architektin]
+
   - word: Briefträger
+    class: noun
+    article: der
+    plural: Briefträger
+    level: B1
+    meaning:
+      en: postman, mail carrier
+      fa: نامه‌رسان، پستچی
+    definition: eine Person, die bei der Post arbeitet und Briefe und Pakete zu den Häusern bringt
+    example:
+      de: Der Briefträger kommt bei uns meistens gegen elf Uhr.
+      en: The postman usually comes to us at around eleven.
+      fa: پستچی معمولاً حدود ساعت یازده به خانهٔ ما می‌آید.
+    alsoAccepted: [die Briefträgerin, der Postbote, die Postbotin, der Pöstler, die Pöstlerin]
+
   - word: Händler
+    class: noun
+    article: der
+    plural: Händler
+    level: B1
+    meaning:
+      en: dealer, trader
+      fa: تاجر، بازرگان
+    definition: eine Person, die Waren kauft und weiterverkauft, oft in einem eigenen Geschäft
+    example:
+      de: Den Gebrauchtwagen haben wir bei einem Händler in der Nähe gekauft.
+      en: We bought the used car from a dealer nearby.
+      fa: این خودروی دست‌دوم را از فروشنده‌ای در همین نزدیکی خریدیم.
+    alsoAccepted: [die Händlerin, der Kaufmann, die Kauffrau]
+
   - word: Ingenieur
+    class: noun
+    article: der
+    plural: Ingenieure
+    level: B1
+    meaning:
+      en: engineer
+      fa: مهندس
+    definition: eine Person, die an einer Hochschule Technik studiert hat und zum Beispiel Maschinen oder Brücken plant
+    example:
+      de: Mein Bruder arbeitet als Ingenieur bei einer Autofirma.
+      en: My brother works as an engineer at a car company.
+      fa: برادرم در یک شرکت خودروسازی مهندس است.
+    alsoAccepted: [die Ingenieurin]
+
   - word: Metzger
+    class: noun
+    article: der
+    plural: Metzger
+    level: B1
+    meaning:
+      en: butcher
+      fa: قصاب
+    definition: eine Person, die Fleisch und Wurst macht und verkauft
+    example:
+      de: Beim Metzger gibt es heute frische Bratwürste.
+      en: The butcher has fresh sausages today.
+      fa: قصابی امروز سوسیس تازه دارد.
+    alsoAccepted:
+      [
+        die Metzgerin,
+        der Fleischer,
+        die Fleischerin,
+        der Fleischhauer,
+        die Fleischhauerin,
+        der Schlachter,
+        die Schlachterin,
+      ]
+
   - word: Übersetzer
+    class: noun
+    article: der
+    plural: Übersetzer
+    level: B1
+    meaning:
+      en: translator
+      fa: مترجم (متن نوشتاری)
+    definition: eine Person, die Texte aus einer Sprache in eine andere Sprache bringt
+    example:
+      de: Für die Dokumente brauche ich einen Übersetzer für Persisch und Deutsch.
+      en: For the documents I need a translator for Persian and German.
+      fa: برای این مدارک به مترجم فارسی و آلمانی نیاز دارم.
+    alsoAccepted: [die Übersetzerin]
+
+  # Fachmann, Fachfrau and Fachleute are one word in three forms; the meaning names the form.
+  # Spezialist and Profi are near them, so none of them is offered as a wrong meaning of another.
   - word: Fachmann
+    class: noun
+    article: der
+    plural: Fachleute
+    level: B1
+    meaning:
+      en: expert, specialist (a man)
+      fa: کارشناس، متخصص (مرد)
+    definition: ein Mann, der in einem Bereich viel weiß und kann, weil er ihn gelernt hat
+    example:
+      de: Für die Heizung sollten Sie lieber einen Fachmann rufen.
+      en: You'd better call an expert for the heating.
+      fa: بهتر است برای شوفاژ یک متخصص خبر کنید.
+    alsoAccepted: [der Spezialist, der Experte]
+    tooCloseTo: [Fachfrau, Fachleute, Spezialist, Profi]
+
   - word: Fachfrau
+    class: noun
+    article: die
+    plural: Fachfrauen
+    level: B1
+    meaning:
+      en: expert, specialist (a woman)
+      fa: کارشناس، متخصص (زن)
+    definition: eine Frau, die in einem Bereich viel weiß und kann, weil sie ihn gelernt hat
+    example:
+      de: Frau Yilmaz ist bei uns die Fachfrau für Steuern.
+      en: Ms Yilmaz is our expert on taxes.
+      fa: خانم ییلماز در شرکت ما کارشناس امور مالیاتی است.
+    alsoAccepted: [die Spezialistin, die Expertin]
+    tooCloseTo: [Fachmann, Fachleute, Spezialist, Profi]
+
   - word: Fachleute
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: experts, specialists (several people)
+      fa: کارشناسان، متخصصان
+    definition: mehrere Personen, die in einem Bereich viel wissen und können
+    example:
+      de: Fachleute erwarten, dass die Preise weiter steigen.
+      en: Experts expect prices to keep rising.
+      fa: کارشناسان پیش‌بینی می‌کنند که قیمت‌ها باز هم بالا برود.
+    alsoAccepted: [die Experten, die Spezialisten, die Fachmänner]
+    tooCloseTo: [Fachmann, Fachfrau, Spezialist, Profi]
+
   - word: Spezialist
+    class: noun
+    article: der
+    plural: Spezialisten
+    level: B1
+    meaning:
+      en: specialist (in one narrow field)
+      fa: متخصص (در یک رشتهٔ خاص)
+    definition: eine Person, die sich in einem kleinen, genauen Bereich sehr gut auskennt, zum Beispiel ein Arzt für das Herz
+    example:
+      de: Der Hausarzt hat mich zu einem Spezialisten für Hautkrankheiten geschickt.
+      en: My GP sent me to a specialist in skin diseases.
+      fa: پزشک خانواده مرا پیش متخصص بیماری‌های پوست فرستاد.
+    alsoAccepted: [die Spezialistin, der Fachmann, der Experte, der Facharzt]
+    tooCloseTo: [Fachmann, Fachfrau, Fachleute, Profi]
+
   - word: Profi
+    class: noun
+    article: der
+    plural: Profis
+    level: B1
+    meaning:
+      en: pro, professional (who does something very well or for money)
+      fa: حرفه‌ای (کسی که کاری را خیلی خوب یا برای پول انجام می‌دهد)
+    definition: eine Person, die etwas sehr gut kann oder mit einer Sache, zum Beispiel einem Sport, ihr Geld verdient
+    example:
+      de: Beim Fotografieren ist meine Schwester ein echter Profi.
+      en: When it comes to taking photos, my sister is a real pro.
+      fa: خواهرم در عکاسی واقعاً حرفه‌ای است.
+    tooCloseTo: [Fachmann, Fachfrau, Fachleute, Spezialist]
+
   - word: Sekretär
+    class: noun
+    article: der
+    plural: Sekretäre
+    level: B1
+    meaning:
+      en: secretary
+      fa: منشی
+    definition: eine Person, die im Büro Briefe schreibt, Termine macht und Anrufe annimmt
+    example:
+      de: Bitte melden Sie sich bei der Sekretärin im ersten Stock.
+      en: Please report to the secretary on the first floor.
+      fa: لطفاً به منشی طبقهٔ اول مراجعه کنید.
+    alsoAccepted: [die Sekretärin]
+
   - word: Meister
+    class: noun
+    article: der
+    plural: Meister
+    level: B1
+    meaning:
+      en: master craftsman
+      fa: استادکار
+    definition: eine Person, die nach der Lehre noch eine schwere Prüfung im Handwerk gemacht hat und Lehrlinge ausbilden darf
+    example:
+      de: Nach drei Jahren als Geselle will Jonas Meister werden.
+      en: After three years as a journeyman, Jonas wants to become a master craftsman.
+      fa: یوناس پس از سه سال کار به‌عنوان کارگر ماهر می‌خواهد استادکار شود.
+    alsoAccepted: [die Meisterin, der Handwerksmeister, die Handwerksmeisterin]
+
   - word: Arbeiter
+    class: noun
+    article: der
+    plural: Arbeiter
+    level: B1
+    meaning:
+      en: worker, labourer
+      fa: کارگر
+    definition: eine Person, die mit den Händen arbeitet, zum Beispiel in einer Fabrik oder auf dem Bau
+    example:
+      de: In der Fabrik sind über zweihundert Arbeiter beschäftigt.
+      en: More than two hundred workers are employed in the factory.
+      fa: بیش از دویست کارگر در این کارخانه کار می‌کنند.
+    alsoAccepted: [die Arbeiterin]
+
   - word: Manager
+    class: noun
+    article: der
+    plural: Manager
+    level: B1
+    meaning:
+      en: manager, executive
+      fa: مدیر اجرایی (شرکت)
+    definition: eine Person, die in einer großen Firma wichtige Entscheidungen trifft und andere führt
+    example:
+      de: Der Manager fliegt jede Woche zu einem anderen Kunden.
+      en: The manager flies to a different client every week.
+      fa: آن مدیر هر هفته برای دیدن مشتری دیگری سفر می‌کند.
+    alsoAccepted: [die Managerin, der Geschäftsführer, die Geschäftsführerin]
+
   - word: Unternehmer
+    class: noun
+    article: der
+    plural: Unternehmer
+    level: B1
+    meaning:
+      en: entrepreneur, business owner
+      fa: کارآفرین، صاحب کسب‌وکار
+    definition: eine Person, der eine Firma gehört und die sie selbst führt
+    example:
+      de: Als Unternehmer trägt er das Risiko für seine Firma allein.
+      en: As a business owner he alone bears the risk for his company.
+      fa: او در مقام صاحب کسب‌وکار، خطر شرکتش را به‌تنهایی به دوش می‌کشد.
+    alsoAccepted: [die Unternehmerin, der Firmeninhaber, die Firmeninhaberin]
+
   - word: Reporter
+    class: noun
+    article: der
+    plural: Reporter
+    level: B1
+    meaning:
+      en: reporter
+      fa: گزارشگر (خبری)
+    definition: eine Person, die für eine Zeitung, das Radio oder das Fernsehen dorthin geht, wo etwas passiert, und davon berichtet
+    example:
+      de: Die Reporterin spricht direkt vom Bahnhof, wo der Streik begonnen hat.
+      en: The reporter is speaking live from the station where the strike has begun.
+      fa: خبرنگار به‌طور زنده از ایستگاه قطار، جایی که اعتصاب آغاز شده، گزارش می‌دهد.
+    alsoAccepted: [die Reporterin, der Berichterstatter, die Berichterstatterin]
+
   - word: Moderator
+    class: noun
+    article: der
+    plural: Moderatoren
+    level: B1
+    meaning:
+      en: presenter, host (of a show)
+      fa: مجری (برنامه)
+    definition: eine Person, die eine Sendung im Radio oder Fernsehen leitet und die Gäste vorstellt
+    example:
+      de: Der Moderator begrüßt die Zuschauer und stellt die Gäste vor.
+      en: The presenter welcomes the viewers and introduces the guests.
+      fa: مجری به بینندگان خوش‌آمد می‌گوید و مهمان‌ها را معرفی می‌کند.
+    alsoAccepted: [die Moderatorin]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: f9ea9f4ba7ceea62
