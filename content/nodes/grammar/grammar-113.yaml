@@ -4,10 +4,307 @@ kind: grammar
 level: A2
 chapter: a2-adjectives
 order: 7
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-102, grammar-126]
 title:
   en: "Adjectives with fixed prepositions"
   fa: "صفت‌هایی با حرف اضافهٔ ثابت"
   de: "Adjektive mit festen Präpositionen"
+
+explanations:
+  en:
+    rule: >
+      Some adjectives go with one fixed preposition. Learn the two together,
+      like one word: *zufrieden mit* (pleased with), *stolz auf* (proud of).
+      The preposition is often not the one English or Persian would use:
+      *stolz auf*, not *von*; *interessiert an*, not *in*. The noun after it
+      takes the case of the preposition: after *mit* always the *Dativ*,
+      after *für* always the *Akkusativ*. With these adjectives *auf* and
+      *über* take the *Akkusativ*, and *an* (*interessiert an*) the *Dativ*.
+      The preposition with its noun usually stands before the adjective, at
+      the end of the sentence: *Ich bin mit meiner Note zufrieden.*
+  fa:
+    rule: >
+      بعضی صفت‌ها با یک حرف اضافهٔ ثابت می‌آیند. این دو را با هم، مانند یک
+      واژه، یاد بگیرید: *zufrieden mit* (راضی از)، *stolz auf* (مفتخر به).
+      این حرف اضافه اغلب همانی نیست که فارسی به کار می‌برد: «راضی از» در
+      آلمانی *zufrieden mit* است، نه *von*؛ «علاقه‌مند به» *interessiert an*
+      است، نه *zu*. اسم پس از حرف اضافه در حالت همان حرف اضافه می‌آید: پس از
+      *mit* همیشه حالت *Dativ* (حالت مفعول باواسطه) و پس از *für* همیشه حالت
+      *Akkusativ* (حالت مفعولی). با این صفت‌ها *auf* و *über* با حالت
+      *Akkusativ* می‌آیند و *an* (در *interessiert an*) با حالت *Dativ*. حرف
+      اضافه و اسمش معمولاً پیش از صفت، در پایان جمله، می‌آیند: *Ich bin mit
+      meiner Note zufrieden.*
+  de:
+    rule: >
+      Manche Adjektive haben eine feste Präposition. Lernen Sie beide
+      zusammen, wie ein Wort: *zufrieden mit*, *stolz auf*. Das Nomen danach
+      hat den Kasus von der Präposition: nach *mit* immer Dativ, nach *für*
+      immer Akkusativ. Bei diesen Adjektiven steht nach *auf* und *über* der
+      Akkusativ, nach *an* (*interessiert an*) der Dativ. Die Präposition mit
+      dem Nomen steht meistens vor dem Adjektiv, am Ende vom Satz: *Ich bin
+      mit meiner Note zufrieden.*
+
+table:
+  columns:
+    - { en: Adjective and preposition, fa: صفت و حرف اضافه, de: Adjektiv und Präposition }
+    - { en: Case, fa: حالت, de: Kasus }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [zufrieden mit, Dativ, Ich bin mit meiner Note zufrieden.]
+    - [fertig mit, Dativ, Bist du mit dem Essen fertig?]
+    - [verheiratet mit, Dativ, Sie ist mit einem Arzt verheiratet.]
+    - [befreundet mit, Dativ, Ich bin mit seiner Schwester befreundet.]
+    - [interessiert an, Dativ, Er ist an Musik interessiert.]
+    - [stolz auf, Akkusativ, Wir sind stolz auf unsere Tochter.]
+    - [neugierig auf, Akkusativ, Ich bin neugierig auf den Film.]
+    - [böse auf, Akkusativ, Bist du böse auf mich?]
+    - [froh über, Akkusativ, Ich bin froh über das gute Wetter.]
+    - [traurig über, Akkusativ, Sie ist traurig über die Nachricht.]
+    - [typisch für, Akkusativ, Das ist typisch für ihn.]
+    - [verantwortlich für, Akkusativ, Wer ist für die Kinder verantwortlich?]
+
+examples:
+  - de: Ich bin mit meiner Note zufrieden.
+    en: I am pleased with my grade.
+    fa: از نمره‌ام راضی‌ام.
+  - de: Wir sind sehr stolz auf unsere Tochter.
+    en: We are very proud of our daughter.
+    fa: به دخترمان خیلی افتخار می‌کنیم.
+  - de: Bist du schon mit den Hausaufgaben fertig?
+    en: Have you finished your homework yet?
+    fa: تکلیف‌هایت را تمام کرده‌ای؟
+  - de: Meine Schwester ist mit einem Spanier verheiratet.
+    en: My sister is married to a Spaniard.
+    fa: خواهرم با مردی اسپانیایی ازدواج کرده است.
+  - de: Ich bin neugierig auf deine Fotos.
+    en: I am curious to see your photos.
+    fa: مشتاقم عکس‌هایت را ببینم.
+  - de: Er ist sehr an Politik interessiert.
+    en: He is very interested in politics.
+    fa: او به سیاست خیلی علاقه دارد.
+  - de: Wir sind froh über die gute Nachricht.
+    en: We are glad about the good news.
+    fa: از این خبر خوب خوشحالیم.
+  - de: Bist du noch böse auf mich?
+    en: Are you still angry with me?
+    fa: هنوز از دستم عصبانی هستی؟
+  - de: Das ist typisch für meinen Bruder.
+    en: That is typical of my brother.
+    fa: این کار کاملاً به برادرم می‌آید.
+  - de: Wer ist für die Organisation verantwortlich?
+    en: Who is responsible for the organisation?
+    fa: چه کسی مسئول برگزاری است؟
+
+mistakes:
+  - wrong: Ich bin stolz von meinem Sohn.
+    right: Ich bin stolz auf meinen Sohn.
+    why:
+      en: "*Stolz* goes with *auf* and the *Akkusativ*: *auf meinen Sohn*."
+      fa: "*stolz* با *auf* و حالت *Akkusativ* می‌آید: *auf meinen Sohn*."
+      de: "*Stolz* hat *auf* mit Akkusativ: *auf meinen Sohn*."
+  - wrong: Ich bin zufrieden von dem Hotel.
+    right: Ich bin mit dem Hotel zufrieden.
+    why:
+      en: "*Zufrieden* goes with *mit*, not *von*: *mit dem Hotel zufrieden*."
+      fa: "فارسی می‌گوید «راضی از»، ولی *zufrieden* با *mit* می‌آید، نه *von*: *mit dem Hotel zufrieden*."
+      de: "*Zufrieden* hat *mit*, nicht *von*: *mit dem Hotel zufrieden*."
+  - wrong: Er ist interessiert in Musik.
+    right: Er ist an Musik interessiert.
+    why:
+      en: 'English says "interested in", German says *interessiert an*.'
+      fa: "در آلمانی «علاقه‌مند به» *interessiert an* است، نه *in*."
+      de: "Es heißt *interessiert an*, nicht *in*."
+  - wrong: Wir sind stolz auf unserer Tochter.
+    right: Wir sind stolz auf unsere Tochter.
+    why:
+      en: "With *stolz*, *auf* takes the *Akkusativ*: *unsere Tochter*, not the *Dativ* *unserer*."
+      fa: "با *stolz*، حرف اضافهٔ *auf* حالت *Akkusativ* می‌گیرد: *unsere Tochter*، نه حالت *Dativ* یعنی *unserer*."
+      de: "Bei *stolz* hat *auf* den Akkusativ: *unsere Tochter*, nicht den Dativ *unserer*."
+  - wrong: Ich bin mit die Arbeit fertig.
+    right: Ich bin mit der Arbeit fertig.
+    why:
+      en: "After *mit* always the *Dativ*: *die Arbeit* becomes *der Arbeit*."
+      fa: "پس از *mit* همیشه حالت *Dativ* می‌آید: *die Arbeit* می‌شود *der Arbeit*."
+      de: "Nach *mit* steht immer der Dativ: *die Arbeit* wird zu *der Arbeit*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir sind stolz ___ unseren Sohn.
+    options: [auf, von, mit]
+    answer: auf
+    explanation:
+      en: "*Stolz auf* + *Akkusativ*."
+      fa: "*stolz auf* + حالت *Akkusativ*."
+      de: "*Stolz auf* + Akkusativ."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich bin mit dem Hotel ___.
+    options: [zufrieden, stolz, neugierig]
+    answer: zufrieden
+    explanation:
+      en: "*Zufrieden mit*; *stolz* and *neugierig* go with *auf*."
+      fa: "*zufrieden mit*؛ *stolz* و *neugierig* با *auf* می‌آیند."
+      de: "*Zufrieden mit*. *Stolz* und *neugierig* haben *auf*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Bist du schon ___ dem Essen fertig?
+    options: [mit, von, an]
+    answer: mit
+    explanation:
+      en: "*Fertig mit* + *Dativ*: *mit dem Essen*."
+      fa: "*fertig mit* + حالت *Dativ*: *mit dem Essen*."
+      de: "*Fertig mit* + Dativ: *mit dem Essen*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Er ist sehr ___ Fußball interessiert.
+    options: [an, in, zu]
+    answer: an
+    explanation:
+      en: "*Interessiert an* + *Dativ*."
+      fa: "*interessiert an* + حالت *Dativ*."
+      de: "*Interessiert an* + Dativ."
+  - id: gap-5
+    type: gap-fill
+    prompt: Das ist typisch ___ meine Mutter.
+    options: [für, von, an]
+    answer: für
+    explanation:
+      en: "*Typisch für* + *Akkusativ*: *für meine Mutter*."
+      fa: "*typisch für* + حالت *Akkusativ*: *für meine Mutter*."
+      de: "*Typisch für* + Akkusativ: *für meine Mutter*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Sie ist mit ___ verheiratet.
+    options: [einem Lehrer, einen Lehrer, ein Lehrer]
+    answer: einem Lehrer
+    explanation:
+      en: "*Verheiratet mit*, and *mit* takes the *Dativ*: *einem Lehrer*."
+      fa: "*verheiratet mit* و *mit* با حالت *Dativ* می‌آید: *einem Lehrer*."
+      de: "*Verheiratet mit*, und nach *mit* steht der Dativ: *einem Lehrer*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich bin neugierig auf ___.
+    options: [den neuen Film, dem neuen Film, der neue Film]
+    answer: den neuen Film
+    explanation:
+      en: "With *neugierig*, *auf* takes the *Akkusativ*: *den neuen Film*."
+      fa: "با *neugierig*، حرف اضافهٔ *auf* حالت *Akkusativ* می‌گیرد: *den neuen Film*."
+      de: "Bei *neugierig* hat *auf* den Akkusativ: *den neuen Film*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wir sind froh über ___.
+    options: [das gute Wetter, dem guten Wetter, der gute Wetter]
+    answer: das gute Wetter
+    explanation:
+      en: "With *froh*, *über* takes the *Akkusativ*; neuter *das* stays *das*."
+      fa: "با *froh*، حرف اضافهٔ *über* حالت *Akkusativ* می‌گیرد و *das* خنثی همان *das* می‌ماند."
+      de: "Bei *froh* hat *über* den Akkusativ. *Das* bleibt *das*."
+  - id: true-1
+    type: true-false
+    prompt: Ich bin mit meiner Arbeit zufrieden.
+    answer: true
+    explanation:
+      en: "*Zufrieden mit* + *Dativ*: *mit meiner Arbeit*. The sentence is correct."
+      fa: "*zufrieden mit* + حالت *Dativ*: *mit meiner Arbeit*. جمله درست است."
+      de: "*Zufrieden mit* + Dativ: *mit meiner Arbeit*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Er ist stolz von seiner Tochter.
+    answer: false
+    explanation:
+      en: "*Stolz* goes with *auf* and the *Akkusativ*: *stolz auf seine Tochter*."
+      fa: "*stolz* با *auf* و حالت *Akkusativ* می‌آید: *stolz auf seine Tochter*."
+      de: "*Stolz* hat *auf* mit Akkusativ: *stolz auf seine Tochter*."
+  - id: true-3
+    type: true-false
+    prompt: Bist du noch böse auf mich?
+    answer: true
+    explanation:
+      en: "*Böse auf* + *Akkusativ*: *auf mich*. The sentence is correct."
+      fa: "*böse auf* + حالت *Akkusativ*: *auf mich*. جمله درست است."
+      de: "*Böse auf* + Akkusativ: *auf mich*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir sind neugierig ___ eure Fotos.
+    answers: [auf]
+    explanation:
+      en: "*Neugierig auf* + *Akkusativ*."
+      fa: "*neugierig auf* + حالت *Akkusativ*."
+      de: "*Neugierig auf* + Akkusativ."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich bin ___ meiner Note zufrieden.
+    answers: [mit]
+    explanation:
+      en: "*Zufrieden mit* + *Dativ*: *mit meiner Note*."
+      fa: "*zufrieden mit* + حالت *Dativ*: *mit meiner Note*."
+      de: "*Zufrieden mit* + Dativ: *mit meiner Note*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Sie ist traurig ___ die schlechte Nachricht.
+    answers: [über]
+    explanation:
+      en: "*Traurig über* + *Akkusativ*."
+      fa: "*traurig über* + حالت *Akkusativ*."
+      de: "*Traurig über* + Akkusativ."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wer ist ___ die Kinder verantwortlich?
+    answers: [für]
+    explanation:
+      en: "*Verantwortlich für* + *Akkusativ*."
+      fa: "*verantwortlich für* + حالت *Akkusativ*."
+      de: "*Verantwortlich für* + Akkusativ."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Ich bin mit ___ (das) Ergebnis zufrieden.
+    answers: [dem]
+    explanation:
+      en: "After *mit* comes the *Dativ*: *das* becomes *dem*."
+      fa: "پس از *mit* حالت *Dativ* می‌آید: *das* می‌شود *dem*."
+      de: "Nach *mit* steht der Dativ: *das* wird zu *dem*."
+  - id: typed-gap-6
+    type: typed-gap-fill
+    prompt: Er ist stolz auf ___ (sein) Garten.
+    answers: [seinen]
+    explanation:
+      en: "With *stolz*, *auf* takes the *Akkusativ*; *Garten* is masculine: *seinen Garten*."
+      fa: "با *stolz*، حرف اضافهٔ *auf* حالت *Akkusativ* می‌گیرد و *Garten* مذکر است: *seinen Garten*."
+      de: "Bei *stolz* hat *auf* den Akkusativ. *Garten* ist maskulin: *seinen Garten*."
+  - id: error-1
+    type: find-error
+    prompt: Ich bin sehr interessiert in moderner Kunst.
+    answer: in
+    explanation:
+      en: "The fixed preposition is *an*: *interessiert an moderner Kunst*."
+      fa: "حرف اضافهٔ ثابت *an* است: *interessiert an moderner Kunst*."
+      de: "Die feste Präposition ist *an*: *interessiert an moderner Kunst*."
+  - id: error-2
+    type: find-error
+    prompt: Sie ist mit den Ergebnis zufrieden.
+    answer: den
+    explanation:
+      en: "After *mit* comes the *Dativ*: *mit dem Ergebnis*."
+      fa: "پس از *mit* حالت *Dativ* می‌آید: *mit dem Ergebnis*."
+      de: "Nach *mit* steht der Dativ: *mit dem Ergebnis*."
+  - id: match-1
+    type: matching
+    answer:
+      - [zufrieden, mit]
+      - [stolz, auf]
+      - [interessiert, an]
+      - [verantwortlich, für]
+      - [froh, über]
+    explanation:
+      en: "Each of these adjectives has its own fixed preposition; learn them together."
+      fa: "هر یک از این صفت‌ها حرف اضافهٔ ثابت خود را دارد؛ آن‌ها را با هم یاد بگیرید."
+      de: "Jedes dieser Adjektive hat eine feste Präposition. Lernen Sie sie zusammen."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: ae092413b94f4e87

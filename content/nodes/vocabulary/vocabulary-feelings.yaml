@@ -1,38 +1,371 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-feelings
 kind: vocabulary
 level: A2
 chapter: a2-words-people
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Feelings"
   fa: "احساس‌ها"
   de: "Gefühle"
+attemptSize: 15
 words:
   - word: Angst
+    class: noun
+    article: die
+    plural: Ängste
+    level: A2
+    meaning:
+      en: fear
+      fa: ترس
+    definition: das Gefühl, wenn etwas gefährlich ist oder etwas Schlimmes passieren kann
+    example:
+      de: Mein Sohn hat Angst vor Hunden.
+      en: My son is afraid of dogs.
+      fa: پسرم از سگ می‌ترسد.
+    alsoAccepted: [die Furcht]
+
   - word: Lust
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: wanting to do something, being in the mood
+      fa: میل، حوصله (برای کاری)
+    definition: das Gefühl, dass man etwas gern machen möchte
+    example:
+      de: Hast du Lust auf ein Eis?
+      en: Do you fancy an ice cream?
+      fa: حوصلهٔ بستنی داری؟
+
   - word: Spaß
+    class: noun
+    article: der
+    number: singular-only
+    level: A2
+    meaning:
+      en: fun
+      fa: تفریح، لذت
+    definition: das gute Gefühl, wenn etwas lustig ist oder man es gern macht
+    example:
+      de: Das Spiel macht den Kindern viel Spaß.
+      en: The children have a lot of fun with the game.
+      fa: بچه‌ها از این بازی خیلی لذت می‌برند.
+    alsoAccepted: [das Vergnügen]
+
   - word: Stress
+    class: noun
+    article: der
+    number: singular-only
+    level: A2
+    meaning:
+      en: stress
+      fa: استرس، فشار (کار و زندگی)
+    definition: das Gefühl, wenn man zu viel Arbeit und zu wenig Zeit hat
+    example:
+      de: Im Moment habe ich viel Stress bei der Arbeit.
+      en: At the moment I'm under a lot of stress at work.
+      fa: این روزها در کار خیلی استرس دارم.
+    alsoAccepted: [die Belastung]
+
   - word: Ruhe
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: peace and quiet, calm
+      fa: آرامش، سکوت
+    definition: kein Lärm, keine Hektik und keine Arbeit
+    example:
+      de: Nach der Arbeit brauche ich ein bisschen Ruhe.
+      en: After work I need a bit of peace and quiet.
+      fa: بعد از کار کمی آرامش لازم دارم.
+    alsoAccepted: [die Stille]
+
+  # Traum and Wunsch are near each other; neither is offered as a wrong meaning of the other.
   - word: Traum
+    class: noun
+    article: der
+    plural: Träume
+    level: A2
+    meaning:
+      en: dream
+      fa: خواب، رؤیا
+    definition: Bilder im Kopf in der Nacht, oder etwas, das man sich sehr wünscht
+    example:
+      de: Ein Haus am Meer ist mein Traum.
+      en: A house by the sea is my dream.
+      fa: خانه‌ای کنار دریا رؤیای من است.
+    tooCloseTo: [Wunsch]
+
   - word: Wunsch
+    class: noun
+    article: der
+    plural: Wünsche
+    level: A2
+    meaning:
+      en: wish
+      fa: آرزو، خواسته
+    definition: etwas, das man gern haben möchte, zum Beispiel zum Geburtstag
+    example:
+      de: Hast du einen Wunsch zum Geburtstag?
+      en: Is there anything you'd like for your birthday?
+      fa: برای تولدت چیزی می‌خواهی؟
+
   - word: froh
+    class: adjective
+    level: A2
+    meaning:
+      en: glad
+      fa: خوشحال
+    definition: "glücklich über etwas, zum Beispiel: „Ich bin …, dass du da bist.“"
+    example:
+      de: Ich bin froh, dass du da bist.
+      en: I'm glad you're here.
+      fa: خوشحالم که اینجایی.
+    alsoAccepted: [glücklich, erfreut]
+
   - word: traurig
+    class: adjective
+    level: A2
+    meaning:
+      en: sad
+      fa: غمگین، ناراحت
+    definition: mit einem schlechten Gefühl, so dass man vielleicht weinen möchte
+    example:
+      de: Das Kind ist traurig, weil sein Freund wegzieht.
+      en: The child is sad because his friend is moving away.
+      fa: بچه غمگین است، چون دوستش از اینجا می‌رود.
+    alsoAccepted: [unglücklich, betrübt, bedrückt]
+
+  # The scope list gives "(sich)": the node teaches "sich ärgern", to be annoyed.
   - word: ärgern
+    class: verb
+    reflexive: sich
+    level: A2
+    meaning:
+      en: to be annoyed, to get cross
+      fa: عصبانی شدن، حرص خوردن
+    definition: böse werden, weil etwas nicht so ist, wie man es möchte
+    example:
+      de: Ich ärgere mich, weil der Bus schon wieder zu spät ist.
+      en: I'm annoyed because the bus is late again.
+      fa: عصبانی‌ام، چون اتوبوس باز هم دیر کرده است.
+    alsoAccepted: [sich aufregen, böse werden, sauer werden]
+
+  # The scope list gives "(sich)": the node teaches "sich fühlen", to feel well, ill or tired.
   - word: fühlen
+    class: verb
+    reflexive: sich
+    level: A2
+    meaning:
+      en: to feel (well, ill or tired)
+      fa: احساس کردن (حال خوب یا بد)
+    definition: merken, wie es einem geht, zum Beispiel gut, krank oder müde
+    example:
+      de: Ich fühle mich heute nicht gut.
+      en: I don't feel well today.
+      fa: امروز احساس خوبی ندارم.
+
+  # hoffen and wünschen are near each other; neither is offered as a wrong meaning of the other.
   - word: hoffen
+    class: verb
+    level: A2
+    meaning:
+      en: to hope
+      fa: امیدوار بودن
+    definition: wünschen und glauben, dass etwas Gutes passiert
+    example:
+      de: Ich hoffe, du kommst bald wieder.
+      en: I hope you come back soon.
+      fa: امیدوارم زود برگردی.
+    tooCloseTo: [wünschen, hoffentlich]
+
   - word: hoffentlich
+    class: adverb
+    level: A2
+    meaning:
+      en: hopefully
+      fa: امیدوارم، خدا کند
+    definition: so sagt man, wenn man sich etwas Gutes wünscht
+    example:
+      de: Hoffentlich regnet es morgen nicht.
+      en: Hopefully it won't rain tomorrow.
+      fa: خدا کند فردا باران نبارد.
+
   - word: weinen
+    class: verb
+    level: A2
+    meaning:
+      en: to cry
+      fa: گریه کردن
+    definition: Tränen in den Augen haben, weil man traurig ist oder Schmerzen hat
+    example:
+      de: Das Baby weint, es hat Hunger.
+      en: The baby is crying; it's hungry.
+      fa: نوزاد گریه می‌کند، گرسنه است.
+    alsoAccepted: [heulen]
+
   - word: träumen
+    class: verb
+    level: A2
+    meaning:
+      en: to dream
+      fa: خواب دیدن؛ رؤیا داشتن
+    definition: in der Nacht im Schlaf Bilder sehen; oder sich etwas sehr wünschen
+    example:
+      de: Ich habe heute Nacht von dir geträumt.
+      en: I dreamed about you last night.
+      fa: دیشب خوابت را دیدم.
+
+  # The scope list gives "(sich)": the node teaches "wünschen"; "sich etwas wünschen" is accepted too.
   - word: wünschen
+    class: verb
+    level: A2
+    meaning:
+      en: to wish; to want (as a gift)
+      fa: آرزو کردن؛ خواستن (مثلاً هدیه)
+    definition: sagen oder denken, dass man etwas gern haben möchte oder dass es einer Person gut geht
+    example:
+      de: Ich wünsche dir viel Glück!
+      en: I wish you lots of luck!
+      fa: برایت آرزوی موفقیت می‌کنم!
+    alsoAccepted: [sich wünschen, sich etwas wünschen]
+
+  # schimpfen and beschweren both voice displeasure; neither is offered as a wrong meaning of the other.
   - word: schimpfen
+    class: verb
+    level: A2
+    meaning:
+      en: to tell off, to scold; to grumble
+      fa: سرزنش کردن، دعوا کردن (کسی)؛ غر زدن
+    definition: laut und böse sagen, dass etwas nicht gut ist oder dass eine Person etwas falsch gemacht hat
+    example:
+      de: Mein Vater schimpft, wenn ich zu spät nach Hause komme.
+      en: My father tells me off when I come home late.
+      fa: وقتی دیر به خانه می‌آیم، پدرم دعوایم می‌کند.
+    alsoAccepted: [ausschimpfen, meckern, tadeln, motzen]
+    tooCloseTo: [beschweren, ärgern]
+
+  # The scope list gives "sich": the verb is always "sich beschweren".
   - word: beschweren
+    class: verb
+    reflexive: sich
+    level: A2
+    meaning:
+      en: to complain
+      fa: شکایت کردن
+    definition: sagen, dass man mit etwas nicht zufrieden ist, zum Beispiel im Hotel
+    example:
+      de: Der Gast beschwert sich über das kalte Essen.
+      en: The guest is complaining about the cold food.
+      fa: مهمان از غذای سرد شکایت می‌کند.
+    alsoAccepted: [sich beklagen, reklamieren]
+
+  # The scope list gives "sich": the verb is always "sich bedanken".
   - word: bedanken
+    class: verb
+    reflexive: sich
+    level: A2
+    meaning:
+      en: to say thank you
+      fa: تشکر کردن
+    definition: Danke sagen
+    example:
+      de: Ich möchte mich für Ihre Hilfe bedanken.
+      en: I would like to thank you for your help.
+      fa: می‌خواهم از کمکتان تشکر کنم.
+    alsoAccepted: [danken, Danke sagen, danke sagen]
+
+  # Said as "Es tut mir leid."
   - word: leidtun
+    class: verb
+    level: A2
+    meaning:
+      en: to be sorry (about something)
+      fa: متأسف بودن
+    definition: traurig sein, weil man einen Fehler gemacht hat oder weil es einer Person schlecht geht
+    example:
+      de: Es tut mir leid, dass ich zu spät komme.
+      en: I'm sorry I'm late.
+      fa: متأسفم که دیر کردم.
+    alsoAccepted: [leid tun, es tut mir leid, bedauern]
+    tooCloseTo: [schade]
+
   - word: schade
+    class: adjective
+    level: A2
+    meaning:
+      en: a pity, a shame
+      fa: حیف
+    definition: bedauerlich, nicht so, wie man es sich gewünscht hat
+    example:
+      de: Schade, dass du nicht kommen kannst.
+      en: What a pity you can't come.
+      fa: حیف که نمی‌توانی بیایی.
+    alsoAccepted: [bedauerlich, ein Jammer]
+
   - word: egal
+    class: adjective
+    level: A2
+    meaning:
+      en: all the same, doesn't matter
+      fa: یکسان، بی‌تفاوت (برای کسی)
+    definition: nicht wichtig; es ist gleich, ob so oder so
+    example:
+      de: Kaffee oder Tee? Das ist mir egal.
+      en: Coffee or tea? I don't mind.
+      fa: قهوه یا چای؟ برایم فرقی نمی‌کند.
+    alsoAccepted: [gleich, gleichgültig, einerlei, wurscht, wurst]
+
   - word: Lüge
+    class: noun
+    article: die
+    plural: Lügen
+    level: A2
+    meaning:
+      en: lie (something untrue)
+      fa: دروغ
+    definition: etwas, das nicht wahr ist, aber man sagt es trotzdem
+    example:
+      de: Das ist eine Lüge, ich war gestern nicht im Kino!
+      en: That's a lie, I wasn't at the cinema yesterday!
+      fa: این دروغ است، من دیروز سینما نبودم!
+    alsoAccepted: [die Unwahrheit]
+
   - word: lügen
+    class: verb
+    level: A2
+    meaning:
+      en: to lie, to tell lies
+      fa: دروغ گفتن
+    definition: etwas sagen, das nicht stimmt, und das genau wissen
+    example:
+      de: Ich glaube, er lügt.
+      en: I think he's lying.
+      fa: فکر می‌کنم دروغ می‌گوید.
+    alsoAccepted: [schwindeln, flunkern, die Unwahrheit sagen]
+
   - word: stören
+    class: verb
+    level: A2
+    meaning:
+      en: to disturb, to bother
+      fa: مزاحم (کسی) شدن
+    definition: eine Person bei der Arbeit oder beim Schlafen nicht in Ruhe lassen
+    example:
+      de: Entschuldigung, störe ich?
+      en: Excuse me, am I disturbing you?
+      fa: ببخشید، مزاحمتان هستم؟
+    alsoAccepted: [belästigen, nerven]
+    tooCloseTo: [ärgern]
+
+review:
+  reviewer: independent AI agents (six fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 11, 33, 53, 10 and 5 questions)
+  date: 2026-11-28
+  pool: 50d17a9019407a6c

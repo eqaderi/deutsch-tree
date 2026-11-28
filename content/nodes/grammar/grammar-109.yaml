@@ -4,10 +4,294 @@ kind: grammar
 level: A2
 chapter: a2-adjectives
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-075, grammar-108]
 title:
   en: "Adjective endings without article"
   fa: "پایانهٔ صفت بدون حرف تعریف"
   de: "Adjektivendungen ohne Artikel"
+
+explanations:
+  en:
+    rule: >
+      When no article stands before the noun, the adjective takes the ending
+      the article would have had, so it shows the gender and the case by
+      itself: *der* gives *-er*, *die* gives *-e*, *das* gives *-es*, *den*
+      gives *-en*, and *dem* gives *-em*. So *frischer Fisch*, *frische
+      Milch*, *frisches Brot*; *Ich esse gern frischen Fisch*; *Tee mit
+      frischer Milch*; *bei schlechtem Wetter*. This happens with food,
+      drinks and materials, with plurals (*kleine Kinder*), and in many
+      greetings and wishes: *Guten Morgen!*, *Schönes Wochenende!*, *Mit
+      freundlichen Grüßen*.
+  fa:
+    rule: >
+      وقتی پیش از اسم حرف تعریفی نیاید، صفت همان پایانه‌ای را می‌گیرد که
+      حرف تعریف می‌داشت و خودش جنس و حالت اسم را نشان می‌دهد: از *der*
+      پایانهٔ *-er*، از *die* پایانهٔ *-e*، از *das* پایانهٔ *-es*، از *den*
+      پایانهٔ *-en* و از *dem* پایانهٔ *-em*. بنابراین *frischer Fisch*،
+      *frische Milch*، *frisches Brot*؛ *Ich esse gern frischen Fisch*؛ *Tee
+      mit frischer Milch*؛ *bei schlechtem Wetter*. این حالت با خوراکی‌ها،
+      نوشیدنی‌ها و جنس چیزها پیش می‌آید، با اسم جمع (*kleine Kinder*)، و در
+      بسیاری از سلام‌ها و آرزوها: *Guten Morgen!*، *Schönes Wochenende!*،
+      *Mit freundlichen Grüßen*.
+  de:
+    rule: >
+      Steht kein Artikel vor dem Nomen, bekommt das Adjektiv die Endung von
+      dem Artikel. Es zeigt dann selbst Genus und Kasus: aus *der* wird
+      *-er*, aus *die* wird *-e*, aus *das* wird *-es*, aus *den* wird *-en*
+      und aus *dem* wird *-em*. Also *frischer Fisch*, *frische Milch*,
+      *frisches Brot*; *Ich esse gern frischen Fisch*; *Tee mit frischer
+      Milch*; *bei schlechtem Wetter*. Das gibt es bei Essen, Getränken und
+      Material, im Plural (*kleine Kinder*) und in vielen Grüßen und
+      Wünschen: *Guten Morgen!*, *Schönes Wochenende!*, *Mit freundlichen
+      Grüßen*.
+
+# The article-change table of content/README.md without an article: each
+# ending is the ending of the article that is missing (der -> -er, dem -> -em).
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [frischer Fisch, frischen Fisch, frischem Fisch, Ich esse gern frischen Fisch.]
+    - [frische Milch, frische Milch, frischer Milch, Ich trinke Tee mit frischer Milch.]
+    - [frisches Brot, frisches Brot, frischem Brot, Hier gibt es frisches Brot.]
+    - [frische Äpfel (Plural), frische Äpfel, frischen Äpfeln, ein Kuchen mit frischen Äpfeln]
+
+examples:
+  - de: Ich esse gern frischen Fisch.
+    en: I like eating fresh fish.
+    fa: ماهی تازه را دوست دارم.
+  - de: Ich trinke Kaffee mit warmer Milch.
+    en: I drink coffee with warm milk.
+    fa: قهوه را با شیر گرم می‌نوشم.
+  - de: Kleine Kinder brauchen viel Schlaf.
+    en: Small children need a lot of sleep.
+    fa: بچه‌های کوچک به خواب زیادی نیاز دارند.
+  - de: Bei schlechtem Wetter bleiben wir zu Hause.
+    en: In bad weather we stay at home.
+    fa: در هوای بد در خانه می‌مانیم.
+  - de: Wir suchen eine Wohnung mit großem Balkon.
+    en: We are looking for a flat with a big balcony.
+    fa: دنبال آپارتمانی با بالکن بزرگ می‌گردیم.
+  - de: Der Tisch ist aus altem Holz.
+    en: The table is made of old wood.
+    fa: این میز از چوب کهنه ساخته شده است.
+  - de: Ich habe neue Schuhe gekauft.
+    en: I have bought new shoes.
+    fa: کفش نو خریده‌ام.
+  - de: Schönes Wochenende!
+    en: Have a nice weekend!
+    fa: آخر هفتهٔ خوبی داشته باشید!
+  - de: Herzlichen Glückwunsch zum Geburtstag!
+    en: Happy birthday!
+    fa: تولدت مبارک!
+  - de: Mit freundlichen Grüßen
+    en: Kind regards (at the end of a formal letter)
+    fa: با احترام (در پایان نامهٔ رسمی)
+
+mistakes:
+  - wrong: Ich trinke gern kalte Wasser.
+    right: Ich trinke gern kaltes Wasser.
+    why:
+      en: "*Wasser* is a *das* noun. Without an article the adjective takes the *-es* of *das*."
+      fa: "*Wasser* اسم خنثی (*das*) است. بدون حرف تعریف، صفت *-es* حرف تعریف *das* را می‌گیرد."
+      de: "*Wasser* hat den Artikel *das*. Ohne Artikel hat das Adjektiv *-es*."
+  - wrong: Ich esse gern frische Fisch.
+    right: Ich esse gern frischen Fisch.
+    why:
+      en: "*Fisch* is masculine and the object (*Akkusativ*): *den* gives *-en*."
+      fa: "*Fisch* مذکر و مفعول است (حالت *Akkusativ*): از *den* پایانهٔ *-en* می‌آید."
+      de: "*Fisch* ist maskulin und steht im Akkusativ: aus *den* wird *-en*."
+  - wrong: Wir trinken Tee mit warme Milch.
+    right: Wir trinken Tee mit warmer Milch.
+    why:
+      en: "After *mit* comes the *Dativ*. *Milch* is feminine, and the *Dativ* article *der* gives *-er*."
+      fa: "پس از *mit* حالت *Dativ* می‌آید. *Milch* مؤنث است و حرف تعریف *der* در این حالت پایانهٔ *-er* را می‌دهد."
+      de: "Nach *mit* steht der Dativ. *Milch* ist feminin, und aus *der* wird *-er*."
+  - wrong: Bei schlechten Wetter bleiben wir zu Hause.
+    right: Bei schlechtem Wetter bleiben wir zu Hause.
+    why:
+      en: "Without an article the *Dativ* ending of *der* and *das* nouns is *-em*, like *dem*."
+      fa: "بدون حرف تعریف، پایانهٔ حالت *Dativ* اسم مذکر و خنثی *-em* است، مانند *dem*."
+      de: "Ohne Artikel ist die Dativ-Endung bei *der* und *das* *-em*, wie bei *dem*."
+  - wrong: Gute Morgen!
+    right: Guten Morgen!
+    why:
+      en: "A greeting is a wish (*Ich wünsche dir einen guten Morgen*), so *Morgen* is masculine *Akkusativ*: *-en*."
+      fa: "سلام در واقع یک آرزوست (*Ich wünsche dir einen guten Morgen*)، پس *Morgen* در حالت *Akkusativ* مذکر است: *-en*."
+      de: "Ein Gruß ist ein Wunsch (*Ich wünsche dir einen guten Morgen*). *Morgen* steht im Akkusativ: *-en*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich trinke gern ___ Wasser.
+    options: [kaltes, kalte, kalten]
+    answer: kaltes
+    explanation:
+      en: "*Wasser* is a *das* noun, so without an article the adjective takes *-es*."
+      fa: "*Wasser* اسم خنثی (*das*) است، پس بدون حرف تعریف صفت *-es* می‌گیرد."
+      de: "*Wasser* hat den Artikel *das*. Ohne Artikel: *-es*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir essen heute ___ Fisch.
+    options: [frischen, frischer, frisches]
+    answer: frischen
+    explanation:
+      en: "*Fisch* is masculine and the object (*Akkusativ*), so *-en*, as in *den*."
+      fa: "*Fisch* مذکر و مفعول است (حالت *Akkusativ*)، پس *-en*، مانند *den*."
+      de: "*Fisch* ist maskulin und im Akkusativ, also *-en* wie bei *den*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich trinke Kaffee mit ___ Milch.
+    options: [warmer, warme, warmem]
+    answer: warmer
+    explanation:
+      en: "*Mit* takes the *Dativ*; *Milch* is feminine, so *-er*, as in *der*."
+      fa: "*mit* با حالت *Dativ* می‌آید و *Milch* مؤنث است، پس *-er*، مانند *der*."
+      de: "Nach *mit* steht der Dativ. *Milch* ist feminin, also *-er* wie bei *der*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ Kinder spielen im Park.
+    options: [Kleine, Kleinen, Kleiner]
+    answer: Kleine
+    explanation:
+      en: "*Kinder* is plural and the subject, without an article: *-e*, as in *die*."
+      fa: "*Kinder* جمع و فاعل است و حرف تعریف ندارد: *-e*، مانند *die*."
+      de: "*Kinder* ist Plural und Subjekt, ohne Artikel: *-e* wie bei *die*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Bei ___ Wetter fahren wir nicht.
+    options: [schlechtem, schlechten, schlechtes]
+    answer: schlechtem
+    explanation:
+      en: "*Bei* takes the *Dativ*; *Wetter* is a *das* noun, so *-em*, as in *dem*."
+      fa: "*bei* با حالت *Dativ* می‌آید و *Wetter* خنثی است، پس *-em*، مانند *dem*."
+      de: "Nach *bei* steht der Dativ. *Wetter* hat *das*, also *-em* wie bei *dem*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: ___ Wochenende!
+    options: [Schönes, Schöne, Schönen]
+    answer: Schönes
+    explanation:
+      en: "*Wochenende* is a *das* noun, so the wish without an article is *Schönes Wochenende!*"
+      fa: "*Wochenende* اسم خنثی (*das*) است، پس این آرزو بدون حرف تعریف *Schönes Wochenende!* است."
+      de: "*Wochenende* hat den Artikel *das*. Ohne Artikel: *Schönes Wochenende!*"
+  - id: choice-2
+    type: multiple-choice
+    prompt: Mit ___ Grüßen
+    options: [freundlichen, freundliche, freundlicher]
+    answer: freundlichen
+    explanation:
+      en: "*Mit* takes the *Dativ*, and in the *Dativ* plural the ending is *-en*, as in *den*."
+      fa: "*mit* با حالت *Dativ* می‌آید و در حالت *Dativ* جمع پایانه *-en* است، مانند *den*."
+      de: "Nach *mit* steht der Dativ. Im Dativ Plural ist die Endung *-en* wie bei *den*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Hier gibt es ___ Brot.
+    options: [frisches, frische, frischen]
+    answer: frisches
+    explanation:
+      en: "*Brot* is a *das* noun (*es gibt* takes the *Akkusativ*, which is the same for *das*): *-es*."
+      fa: "*Brot* اسم خنثی (*das*) است (*es gibt* با حالت *Akkusativ* می‌آید که برای *das* تغییری ندارد): *-es*."
+      de: "*Brot* hat den Artikel *das* (*es gibt* + Akkusativ, bei *das* gleich): *-es*."
+  - id: true-1
+    type: true-false
+    prompt: Herzlichen Glückwunsch zum Geburtstag!
+    answer: true
+    explanation:
+      en: "A wish is in the *Akkusativ*: masculine *Glückwunsch* takes *-en*. The sentence is correct."
+      fa: "آرزو در حالت *Akkusativ* است و *Glückwunsch* مذکر است، پس *-en*. جمله درست است."
+      de: "Ein Wunsch steht im Akkusativ. *Glückwunsch* ist maskulin: *-en*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich trinke gern heiße Tee.
+    answer: false
+    explanation:
+      en: "*Tee* is masculine and the object (*Akkusativ*), so *-en*: *heißen Tee*."
+      fa: "*Tee* مذکر و مفعول است (حالت *Akkusativ*)، پس *-en*: *heißen Tee*."
+      de: "*Tee* ist maskulin und im Akkusativ, also *-en*: *heißen Tee*."
+  - id: true-3
+    type: true-false
+    prompt: Das Zimmer hat große Fenster.
+    answer: true
+    explanation:
+      en: "*Fenster* here is plural and has no article, so *-e*, as in *die*. The sentence is correct."
+      fa: "*Fenster* در اینجا جمع است و حرف تعریف ندارد، پس *-e*، مانند *die*. جمله درست است."
+      de: "*Fenster* ist hier Plural ohne Artikel, also *-e* wie bei *die*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich trinke morgens ___ (schwarz) Tee.
+    answers: [schwarzen]
+    explanation:
+      en: "*Tee* is masculine *Akkusativ*: *-en*, as in *den*."
+      fa: "*Tee* در حالت *Akkusativ* مذکر است: *-en*، مانند *den*."
+      de: "*Tee* ist Akkusativ maskulin: *-en* wie bei *den*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Er isst gern ___ (frisch) Obst.
+    answers: [frisches]
+    explanation:
+      en: "*Obst* is a *das* noun: *-es*, as in *das*."
+      fa: "*Obst* اسم خنثی (*das*) است: *-es*، مانند *das*."
+      de: "*Obst* hat den Artikel *das*: *-es*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir suchen eine Wohnung mit ___ (groß) Balkon.
+    answers: [großem]
+    explanation:
+      en: "*Mit* takes the *Dativ*; *Balkon* is masculine, so *-em*, as in *dem*."
+      fa: "*mit* با حالت *Dativ* می‌آید و *Balkon* مذکر است، پس *-em*، مانند *dem*."
+      de: "Nach *mit* steht der Dativ. *Balkon* ist maskulin, also *-em* wie bei *dem*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: ___ (gut) Morgen, Frau Weber!
+    answers: [Guten]
+    explanation:
+      en: "A greeting is a wish in the *Akkusativ*; *Morgen* is masculine: *Guten Morgen*."
+      fa: "سلام آرزویی در حالت *Akkusativ* است و *Morgen* مذکر است: *Guten Morgen*."
+      de: "Ein Gruß ist ein Wunsch im Akkusativ. *Morgen* ist maskulin: *Guten Morgen*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Ich mag ___ (rot) Äpfel.
+    answers: [rote]
+    explanation:
+      en: "*Äpfel* is plural without an article: *-e*, as in *die*."
+      fa: "*Äpfel* جمع است و حرف تعریف ندارد: *-e*، مانند *die*."
+      de: "*Äpfel* ist Plural ohne Artikel: *-e* wie bei *die*."
+  - id: error-1
+    type: find-error
+    prompt: Ich trinke Tee mit kalte Milch.
+    answer: kalte
+    explanation:
+      en: "After *mit* comes the *Dativ*; feminine *Milch* takes *-er*: *mit kalter Milch*."
+      fa: "پس از *mit* حالت *Dativ* می‌آید و *Milch* مؤنث است، پس *-er*: *mit kalter Milch*."
+      de: "Nach *mit* steht der Dativ. *Milch* ist feminin: *mit kalter Milch*."
+  - id: error-2
+    type: find-error
+    prompt: Ich wasche die Hände mit warmen Wasser.
+    answer: warmen
+    explanation:
+      en: "*Wasser* is a *das* noun in the *Dativ*, and without an article that is *-em*: *mit warmem Wasser*."
+      fa: "*Wasser* اسم خنثی در حالت *Dativ* است و بدون حرف تعریف پایانه‌اش *-em* است: *mit warmem Wasser*."
+      de: "*Wasser* hat *das* und steht im Dativ. Ohne Artikel: *-em*, also *mit warmem Wasser*."
+  - id: match-1
+    type: matching
+    answer:
+      - [___ Kaffee (Nominativ), heißer]
+      - [___ Suppe (Nominativ), heiße]
+      - [___ Wasser (Nominativ), heißes]
+      - [mit ___ Wasser (Dativ), heißem]
+    explanation:
+      en: "Without an article the adjective takes the article's ending: *der* gives *-er*, *die* gives *-e*, *das* gives *-es*, *dem* gives *-em*."
+      fa: "بدون حرف تعریف، صفت پایانهٔ حرف تعریف را می‌گیرد: از *der* پایانهٔ *-er*، از *die* پایانهٔ *-e*، از *das* پایانهٔ *-es* و از *dem* پایانهٔ *-em*."
+      de: "Ohne Artikel hat das Adjektiv die Endung vom Artikel: *der* → *-er*, *die* → *-e*, *das* → *-es*, *dem* → *-em*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: b51ba5237947adb0

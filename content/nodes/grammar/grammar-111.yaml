@@ -4,10 +4,298 @@ kind: grammar
 level: A2
 chapter: a2-adjectives
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-110]
 title:
   en: "*Superlativ*"
   fa: "صفت عالی (*Superlativ*)"
   de: "Superlativ"
+
+explanations:
+  en:
+    rule: >
+      The *Superlativ* says that something has the most of a quality. After
+      a verb it is *am* + adjective + *-sten*: *Im Winter sind die Tage am
+      kürzesten.* Before a noun it is *der*, *die*, *das* + adjective +
+      *-ste*, with the endings you know from the definite article: *der
+      schnellste Zug*, *die besten Freunde*. After *-t*, *-d*, *-s*, *-ß* and
+      *-z* an *-e-* comes in, so that it can be said: *am ältesten*, *am
+      kürzesten*; *groß* is the exception: *am größten*. Umlauts and
+      irregular forms are as in the *Komparativ*: *am höchsten*, *am
+      nächsten*, *am besten*, *am meisten*, *am liebsten*. Never use *meist*
+      for "most" before an adjective: *der schönste Tag*.
+  fa:
+    rule: >
+      صفت عالی (*Superlativ*) می‌گوید چیزی صفتی را بیش از همه دارد. پس از
+      فعل، ساختار آن *am* + صفت + *-sten* است: *Im Winter sind die Tage am
+      kürzesten.* پیش از اسم، ساختار آن *der*، *die* یا *das* + صفت + *-ste*
+      است، با همان پایانه‌هایی که پس از حرف تعریف معین می‌شناسید: *der
+      schnellste Zug*، *die besten Freunde*. پس از *-t*، *-d*، *-s*، *-ß* و
+      *-z* یک *-e-* افزوده می‌شود تا تلفظ آسان شود: *am ältesten*، *am
+      kürzesten*؛ *groß* استثناست: *am größten*. دو نقطه (*Umlaut*) و
+      شکل‌های بی‌قاعده مانند صفت تفضیلی‌اند: *am höchsten*، *am nächsten*،
+      *am besten*، *am meisten*، *am liebsten*. صفت عالی را هرگز با *meist* پیش از
+      صفت نسازید: *der schönste Tag*.
+  de:
+    rule: >
+      Der Superlativ sagt: Das ist am meisten von allen. Nach einem Verb
+      heißt er *am* + Adjektiv + *-sten*: *Im Winter sind die Tage am
+      kürzesten.* Vor einem Nomen heißt er *der*, *die*, *das* + Adjektiv +
+      *-ste*, mit den Endungen nach dem bestimmten Artikel: *der schnellste
+      Zug*, *die besten Freunde*. Nach *-t*, *-d*, *-s*, *-ß* und *-z* kommt
+      ein *-e-* dazu: *am ältesten*, *am kürzesten*. Aber *groß*: *am
+      größten*. Umlaut und unregelmäßige Formen sind wie im Komparativ: *am
+      höchsten*, *am nächsten*, *am besten*, *am meisten*, *am liebsten*. Man
+      sagt nie *meist* vor dem Adjektiv: *der schönste Tag*.
+
+table:
+  columns:
+    - { en: Adjective, fa: صفت, de: Adjektiv }
+    - { en: "*Komparativ*", fa: "صفت تفضیلی (*Komparativ*)", de: Komparativ }
+    - { en: "*Superlativ*", fa: "صفت عالی (*Superlativ*)", de: Superlativ }
+    - { en: Before a noun, fa: پیش از اسم, de: Vor einem Nomen }
+  rows:
+    - [schnell, schneller, am schnellsten, der schnellste Zug]
+    - [klein, kleiner, am kleinsten, das kleinste Zimmer]
+    - [alt, älter, am ältesten, die älteste Stadt]
+    - [kurz, kürzer, am kürzesten, der kürzeste Tag]
+    - [groß, größer, am größten, das größte Land]
+    - [hoch, höher, am höchsten, der höchste Berg]
+    - [nah, näher, am nächsten, die nächste Haltestelle]
+    - [gut, besser, am besten, die besten Freunde (Plural)]
+    - [viel, mehr, am meisten, die meisten Leute (Plural)]
+    - [gern, lieber, am liebsten, –]
+
+examples:
+  - de: Im Winter sind die Tage am kürzesten.
+    en: In winter the days are at their shortest.
+    fa: روزها در زمستان از همه کوتاه‌ترند.
+  - de: Wer läuft am schnellsten?
+    en: Who runs the fastest?
+    fa: چه کسی از همه تندتر می‌دود؟
+  - de: Die Zugspitze ist der höchste Berg in Deutschland.
+    en: The Zugspitze is the highest mountain in Germany.
+    fa: "*Zugspitze* بلندترین کوه آلمان است."
+  - de: Das ist die beste Pizza in Berlin.
+    en: This is the best pizza in Berlin.
+    fa: این بهترین پیتزای برلین است.
+  - de: Am liebsten fahre ich mit dem Fahrrad.
+    en: Best of all, I like going by bike.
+    fa: از همه بیشتر دوست دارم با دوچرخه بروم.
+  - de: Wo ist die nächste Apotheke?
+    en: Where is the nearest pharmacy?
+    fa: نزدیک‌ترین داروخانه کجاست؟
+  - de: Im Juli ist es hier am heißesten.
+    en: It is hottest here in July.
+    fa: اینجا هوا در ژوئیه از همه گرم‌تر است.
+  - de: Meine älteste Schwester wohnt in Wien.
+    en: My eldest sister lives in Vienna.
+    fa: بزرگ‌ترین خواهرم در وین زندگی می‌کند.
+  - de: Die meisten Leute fahren mit dem Bus.
+    en: Most people go by bus.
+    fa: بیشتر مردم با اتوبوس می‌روند.
+
+mistakes:
+  - wrong: Der Zug ist am schnellste.
+    right: Der Zug ist am schnellsten.
+    why:
+      en: "After *am* the *Superlativ* always ends in *-sten*."
+      fa: "پس از *am* صفت عالی همیشه به *-sten* ختم می‌شود."
+      de: "Nach *am* endet der Superlativ immer auf *-sten*."
+  - wrong: Das ist das am größten Zimmer.
+    right: Das ist das größte Zimmer.
+    why:
+      en: "Before a noun there is no *am*: the article, then the adjective with *-ste*."
+      fa: "پیش از اسم *am* نمی‌آید: حرف تعریف و پس از آن صفت با *-ste*."
+      de: "Vor einem Nomen steht kein *am*: Artikel, dann Adjektiv mit *-ste*."
+  - wrong: Im Winter sind die Tage am kürzsten.
+    right: Im Winter sind die Tage am kürzesten.
+    why:
+      en: "After *-z* an *-e-* comes in: *am kürzesten*."
+      fa: "پس از *-z* یک *-e-* افزوده می‌شود: *am kürzesten*."
+      de: "Nach *-z* kommt ein *-e-* dazu: *am kürzesten*."
+  - wrong: Das ist der meist schöne Tag.
+    right: Das ist der schönste Tag.
+    why:
+      en: "German makes the *Superlativ* with *-st-*, never with *meist* before the adjective."
+      fa: "آلمانی صفت عالی را با *-st-* می‌سازد، هرگز با *meist* پیش از صفت."
+      de: "Den Superlativ macht man mit *-st-*, nie mit *meist* vor dem Adjektiv."
+  - wrong: Wo ist die nahste Apotheke?
+    right: Wo ist die nächste Apotheke?
+    why:
+      en: "*Nah* is irregular: *näher*, *am nächsten*, *die nächste*."
+      fa: "*nah* بی‌قاعده است: *näher*، *am nächsten*، *die nächste*."
+      de: "*Nah* ist unregelmäßig: *näher*, *am nächsten*, *die nächste*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Im Winter sind die Tage am ___.
+    options: [kürzesten, kürzsten, kürzeste]
+    answer: kürzesten
+    explanation:
+      en: "After *am* comes *-sten*, and after *-z* an *-e-*: *am kürzesten*."
+      fa: "پس از *am* پایانهٔ *-sten* می‌آید و پس از *-z* یک *-e-*: *am kürzesten*."
+      de: "Nach *am* kommt *-sten*, nach *-z* ein *-e-*: *am kürzesten*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wer läuft am ___?
+    options: [schnellsten, schnellste, schneller]
+    answer: schnellsten
+    explanation:
+      en: "After *am* the *Superlativ* ends in *-sten*."
+      fa: "پس از *am* صفت عالی به *-sten* ختم می‌شود."
+      de: "Nach *am* endet der Superlativ auf *-sten*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das ist der ___ Berg in Österreich.
+    options: [höchste, höchsten, hochste]
+    answer: höchste
+    explanation:
+      en: "Before a noun: *der* + *höchste*, the *Nominativ* ending *-e*."
+      fa: "پیش از اسم: *der* + *höchste*، با پایانهٔ *-e* حالت *Nominativ*."
+      de: "Vor einem Nomen: *der* + *höchste*, mit *-e* im Nominativ."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wo ist die ___ Bushaltestelle?
+    options: [nächste, nahste, näheste]
+    answer: nächste
+    explanation:
+      en: "*Nah* is irregular: *die nächste*."
+      fa: "*nah* بی‌قاعده است: *die nächste*."
+      de: "*Nah* ist unregelmäßig: *die nächste*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Am ___ trinke ich Tee.
+    options: [liebsten, gernsten, liebste]
+    answer: liebsten
+    explanation:
+      en: "*Gern* – *lieber* – *am liebsten*."
+      fa: "*gern* – *lieber* – *am liebsten*."
+      de: "*Gern* – *lieber* – *am liebsten*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Das ist das ___ Zimmer im Haus.
+    options: [größte, am größten, größeste]
+    answer: größte
+    explanation:
+      en: "Before a noun there is no *am*, and *groß* takes no *-e-*: *das größte Zimmer*."
+      fa: "پیش از اسم *am* نمی‌آید و *groß* هم *-e-* نمی‌گیرد: *das größte Zimmer*."
+      de: "Vor einem Nomen steht kein *am*, und *groß* hat kein *-e-*: *das größte Zimmer*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Von allen Kuchen schmeckt dieser ___.
+    options: [am besten, der beste, am gutesten]
+    answer: am besten
+    explanation:
+      en: "After a verb the *Superlativ* is *am* + *-sten*; *gut* becomes *am besten*."
+      fa: "پس از فعل صفت عالی *am* + *-sten* است و *gut* می‌شود *am besten*."
+      de: "Nach einem Verb: *am* + *-sten*. *Gut* wird zu *am besten*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: ___ Leute kommen mit dem Auto.
+    options: [Die meisten, Am meisten, Die mehrsten]
+    answer: Die meisten
+    explanation:
+      en: "*Viel* – *mehr* – *am meisten*; before a noun: *die meisten Leute*."
+      fa: "*viel* – *mehr* – *am meisten*؛ پیش از اسم: *die meisten Leute*."
+      de: "*Viel* – *mehr* – *am meisten*. Vor einem Nomen: *die meisten Leute*."
+  - id: true-1
+    type: true-false
+    prompt: Meine älteste Schwester ist Ärztin.
+    answer: true
+    explanation:
+      en: "*Alt* – *älter* – *älteste*, with an *-e-* after *-t*. The sentence is correct."
+      fa: "*alt* – *älter* – *älteste*، با *-e-* پس از *-t*. جمله درست است."
+      de: "*Alt* – *älter* – *älteste*, mit *-e-* nach *-t*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist der meist schöne Tag.
+    answer: false
+    explanation:
+      en: "The *Superlativ* is made with *-st-*: *der schönste Tag*."
+      fa: "صفت عالی با *-st-* ساخته می‌شود: *der schönste Tag*."
+      de: "Den Superlativ macht man mit *-st-*: *der schönste Tag*."
+  - id: true-3
+    type: true-false
+    prompt: Im Juli ist es am heißesten.
+    answer: true
+    explanation:
+      en: "After *-ß* an *-e-* comes in: *am heißesten*. The sentence is correct."
+      fa: "پس از *-ß* یک *-e-* افزوده می‌شود: *am heißesten*. جمله درست است."
+      de: "Nach *-ß* kommt ein *-e-* dazu: *am heißesten*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: In unserer Familie ist mein Opa am ___ (alt).
+    answers: [ältesten]
+    explanation:
+      en: "Umlaut, and an *-e-* after *-t*: *am ältesten*."
+      fa: "دو نقطه، و یک *-e-* پس از *-t*: *am ältesten*."
+      de: "Umlaut und *-e-* nach *-t*: *am ältesten*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wer spricht in deiner Klasse am ___ (gut) Deutsch?
+    answers: [besten]
+    explanation:
+      en: "*Gut* – *besser* – *am besten*."
+      fa: "*gut* – *besser* – *am besten*."
+      de: "*Gut* – *besser* – *am besten*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Das ist das ___ (klein) Zimmer in der Wohnung.
+    answers: [kleinste]
+    explanation:
+      en: "Before a noun: *das* + *kleinste*."
+      fa: "پیش از اسم: *das* + *kleinste*."
+      de: "Vor einem Nomen: *das* + *kleinste*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Im Dezember sind die Nächte am ___ (lang).
+    answers: [längsten]
+    explanation:
+      en: "*Lang* takes an umlaut: *am längsten*."
+      fa: "*lang* دو نقطه می‌گیرد: *am längsten*."
+      de: "*Lang* bekommt einen Umlaut: *am längsten*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Berlin ist die ___ (groß) Stadt in Deutschland.
+    answers: [größte]
+    explanation:
+      en: "Before a noun: *die* + *größte*; *groß* takes no *-e-*."
+      fa: "پیش از اسم: *die* + *größte*؛ *groß* هم *-e-* نمی‌گیرد."
+      de: "Vor einem Nomen: *die* + *größte*. *Groß* hat kein *-e-*."
+  - id: error-1
+    type: find-error
+    prompt: Im Winter ist es hier am kaltesten.
+    answer: kaltesten
+    explanation:
+      en: "*Kalt* takes an umlaut, as in *kälter*: *am kältesten*."
+      fa: "*kalt* مانند *kälter* دو نقطه می‌گیرد: *am kältesten*."
+      de: "*Kalt* hat einen Umlaut wie in *kälter*: *am kältesten*."
+  - id: error-2
+    type: find-error
+    prompt: Das ist der schnellsten Zug.
+    answer: schnellsten
+    explanation:
+      en: "Before a noun in the *Nominativ* singular the ending is *-e*: *der schnellste Zug*."
+      fa: "پیش از اسم در حالت *Nominativ* مفرد پایانه *-e* است: *der schnellste Zug*."
+      de: "Vor einem Nomen im Nominativ Singular: *-e*, also *der schnellste Zug*."
+  - id: match-1
+    type: matching
+    answer:
+      - [gut, am besten]
+      - [viel, am meisten]
+      - [gern, am liebsten]
+      - [hoch, am höchsten]
+      - [nah, am nächsten]
+    explanation:
+      en: "These five are irregular, as in the *Komparativ*: *besser*, *mehr*, *lieber*, *höher*, *näher*."
+      fa: "این پنج صفت مانند صفت تفضیلی بی‌قاعده‌اند: *besser*، *mehr*، *lieber*، *höher*، *näher*."
+      de: "Diese fünf sind unregelmäßig wie im Komparativ: *besser*, *mehr*, *lieber*, *höher*, *näher*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: be0cdb9ffc81803d

@@ -4,10 +4,291 @@ kind: grammar
 level: A2
 chapter: a2-adjectives
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-077, grammar-107]
 title:
   en: "Adjective endings after indefinite, *kein*, possessive"
-  fa: "پایانهٔ صفت بعد از حرف تعریف نامعیّن، *kein* و صفت ملکی"
+  fa: "پایانهٔ صفت پس از حرف تعریف نامعین، *kein* و حرف تعریف ملکی"
   de: "Adjektivendungen nach unbestimmtem Artikel, *kein* und Possessivartikel"
+
+explanations:
+  en:
+    rule: >
+      After *ein*, *kein* and the possessive articles (*mein*, *dein*,
+      *sein*, *ihr*, *unser*, *euer*, *Ihr*) the adjective takes the same
+      endings as after *der*, *die*, *das*, with three exceptions. In the
+      masculine *Nominativ* and in the neuter *Nominativ* and *Akkusativ*,
+      *ein* has no ending of its own, so the adjective shows the gender: it
+      takes the *-r* of *der* or the *-s* of *das*. So *ein neuer Tisch*, *ein
+      neues Sofa*, but *eine neue Lampe*, *einen neuen Tisch* and *mit einem
+      neuen Auto*. In the plural there is no *ein*; after *keine* and
+      *meine* the adjective takes *-en*: *meine neuen Stühle*.
+  fa:
+    rule: >
+      پس از *ein*، *kein* و حرف‌های تعریف ملکی (*mein*، *dein*، *sein*،
+      *ihr*، *unser*، *euer*، *Ihr*) صفت همان پایانه‌هایی را می‌گیرد که پس
+      از *der*، *die* و *das* می‌گیرد، جز در سه جا. در حالت *Nominativ* (حالت
+      فاعلی) مذکر، و در حالت *Nominativ* و *Akkusativ* (حالت مفعولی) خنثی،
+      خود *ein* پایانه‌ای ندارد؛ پس صفت جنس اسم را نشان می‌دهد و *-r* حرف
+      تعریف *der* یا *-s* حرف تعریف *das* را می‌گیرد. بنابراین *ein neuer
+      Tisch* و *ein neues Sofa*، ولی *eine neue Lampe*، *einen neuen Tisch* و
+      *mit einem neuen Auto*. در جمع *ein* وجود ندارد؛ پس از *keine* و
+      *meine* صفت پایانهٔ *-en* می‌گیرد: *meine neuen Stühle*.
+  de:
+    rule: >
+      Nach *ein*, *kein* und den Possessivartikeln (*mein*, *dein*, *sein*,
+      *ihr*, *unser*, *euer*, *Ihr*) hat das Adjektiv dieselben Endungen wie
+      nach *der*, *die*, *das*. Nur an drei Stellen ist es anders: im
+      Nominativ maskulin und im Nominativ und Akkusativ neutral. Dort hat
+      *ein* keine Endung. Darum zeigt das Adjektiv das Genus: *-r* wie bei
+      *der*, *-s* wie bei *das*. Also *ein neuer Tisch*, *ein neues Sofa*, aber
+      *eine neue Lampe*, *einen neuen Tisch* und *mit einem neuen Auto*. Im
+      Plural gibt es kein *ein*. Nach *keine* und *meine* hat das Adjektiv
+      *-en*: *meine neuen Stühle*.
+
+# The article-change table of content/README.md, with ein in every cell: the
+# indefinite article is the topic. The plural, which has no ein, uses meine.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ein neuer Tisch, einen neuen Tisch, einem neuen Tisch, Das ist ein neuer Tisch.]
+    - [eine neue Lampe, eine neue Lampe, einer neuen Lampe, Ich brauche eine neue Lampe.]
+    - [ein neues Sofa, ein neues Sofa, einem neuen Sofa, Wir kaufen ein neues Sofa.]
+    - [meine neuen Stühle (Plural), meine neuen Stühle, meinen neuen Stühlen, Meine neuen Stühle sind bequem.]
+
+examples:
+  - de: Ich habe einen neuen Arbeitsplatz.
+    en: I have a new job.
+    fa: محل کار جدیدی دارم.
+  - de: Sie sucht eine neue Stelle.
+    en: She is looking for a new job.
+    fa: او دنبال کار تازه‌ای می‌گردد.
+  - de: Wir haben ein neues Haus gekauft.
+    en: We have bought a new house.
+    fa: ما خانهٔ تازه‌ای خریده‌ایم.
+  - de: Mein alter Computer ist sehr langsam.
+    en: My old computer is very slow.
+    fa: کامپیوتر قدیمی‌ام خیلی کند است.
+  - de: Er wohnt mit seiner kleinen Schwester zusammen.
+    en: He lives with his little sister.
+    fa: او با خواهر کوچکش زندگی می‌کند.
+  - de: Kennst du ein gutes Restaurant hier?
+    en: Do you know a good restaurant around here?
+    fa: این اطراف رستوران خوبی می‌شناسی؟
+  - de: Das ist kein gutes Zeichen.
+    en: That is not a good sign.
+    fa: این نشانهٔ خوبی نیست.
+  - de: Unsere neuen Nachbarn kommen aus Polen.
+    en: Our new neighbours come from Poland.
+    fa: همسایه‌های جدیدمان اهل لهستان‌اند.
+  - de: Sie arbeitet in einer großen Firma.
+    en: She works for a big company.
+    fa: او در یک شرکت بزرگ کار می‌کند.
+
+mistakes:
+  - wrong: Das ist ein neue Tisch.
+    right: Das ist ein neuer Tisch.
+    why:
+      en: "*Ein* does not show that *Tisch* is masculine, so the adjective does, with *-er*."
+      fa: "*ein* نشان نمی‌دهد که *Tisch* مذکر است، پس صفت این را با *-er* نشان می‌دهد."
+      de: "*Ein* zeigt nicht, dass *Tisch* maskulin ist. Das macht das Adjektiv mit *-er*."
+  - wrong: Wir haben ein neue Auto.
+    right: Wir haben ein neues Auto.
+    why:
+      en: "*Auto* is a *das* noun. After *ein* the adjective takes the *-s* of *das*: *ein neues Auto*."
+      fa: "*Auto* اسم خنثی (*das*) است. پس از *ein* صفت *-s* حرف تعریف *das* را می‌گیرد: *ein neues Auto*."
+      de: "*Auto* hat den Artikel *das*. Nach *ein* bekommt das Adjektiv *-es*: *ein neues Auto*."
+  - wrong: Ich suche einen neuer Job.
+    right: Ich suche einen neuen Job.
+    why:
+      en: "*Einen* already shows the masculine *Akkusativ*, so the adjective takes *-en*."
+      fa: "*einen* خودش حالت *Akkusativ* مذکر را نشان می‌دهد، پس صفت پایانهٔ *-en* می‌گیرد."
+      de: "*Einen* zeigt schon den Akkusativ maskulin. Das Adjektiv hat *-en*."
+  - wrong: Mein Bruder wohnt in einem kleines Dorf.
+    right: Mein Bruder wohnt in einem kleinen Dorf.
+    why:
+      en: "In the *Dativ* the adjective always takes *-en*, also after *einem*."
+      fa: "در حالت *Dativ* صفت همیشه پایانهٔ *-en* می‌گیرد، پس از *einem* نیز."
+      de: "Im Dativ hat das Adjektiv immer *-en*, auch nach *einem*."
+  - wrong: Meine alte Freunde besuchen mich.
+    right: Meine alten Freunde besuchen mich.
+    why:
+      en: "In the plural, after *meine* or *keine*, the adjective takes *-en*."
+      fa: "در جمع، پس از *meine* یا *keine*، صفت پایانهٔ *-en* می‌گیرد."
+      de: "Im Plural hat das Adjektiv nach *meine* oder *keine* die Endung *-en*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist ein ___ Problem.
+    options: [großes, große, großer]
+    answer: großes
+    explanation:
+      en: "*Problem* is a *das* noun, and *ein* has no ending, so the adjective takes *-es*."
+      fa: "*Problem* اسم خنثی (*das*) است و *ein* پایانه‌ای ندارد، پس صفت *-es* می‌گیرد."
+      de: "*Problem* hat den Artikel *das*. *Ein* hat keine Endung, also *-es*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich habe einen ___ Hund.
+    options: [kleinen, kleiner, kleines]
+    answer: kleinen
+    explanation:
+      en: "*Einen* shows the masculine *Akkusativ*, so the adjective takes *-en*."
+      fa: "*einen* حالت *Akkusativ* مذکر را نشان می‌دهد، پس صفت *-en* می‌گیرد."
+      de: "*Einen* zeigt den Akkusativ maskulin. Das Adjektiv hat *-en*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Mein ___ Bruder heißt Jonas.
+    options: [kleiner, kleine, kleinen]
+    answer: kleiner
+    explanation:
+      en: "*Mein Bruder* is the subject (*Nominativ*). *Mein* has no ending, so the adjective takes *-er*."
+      fa: "*mein Bruder* فاعل است (حالت *Nominativ*). *mein* پایانه‌ای ندارد، پس صفت *-er* می‌گیرد."
+      de: "*Mein Bruder* ist das Subjekt (Nominativ). *Mein* hat keine Endung, also *-er*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Sie trägt eine ___ Jacke.
+    options: [rote, roten, roter]
+    answer: rote
+    explanation:
+      en: "*Eine Jacke* is feminine *Akkusativ*, and there the adjective takes *-e*."
+      fa: "*eine Jacke* در حالت *Akkusativ* مؤنث است و در اینجا صفت *-e* می‌گیرد."
+      de: "*Eine Jacke* ist Akkusativ feminin. Das Adjektiv hat *-e*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wir wohnen in einer ___ Stadt.
+    options: [kleinen, kleine, kleiner]
+    answer: kleinen
+    explanation:
+      en: "*In einer Stadt* says where (*Wo?*), so it is the *Dativ*: *-en*."
+      fa: "*in einer Stadt* جا را نشان می‌دهد (*Wo?*)، پس حالت *Dativ* است: *-en*."
+      de: "*In einer Stadt* sagt, wo (*Wo?*). Das ist Dativ, also *-en*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Das ist kein ___ Wetter für einen Ausflug.
+    options: [gutes, gute, guten]
+    answer: gutes
+    explanation:
+      en: "*Wetter* is a *das* noun, and *kein* has no ending, so the adjective takes *-es*."
+      fa: "*Wetter* اسم خنثی (*das*) است و *kein* پایانه‌ای ندارد، پس صفت *-es* می‌گیرد."
+      de: "*Wetter* hat den Artikel *das*. *Kein* hat keine Endung, also *-es*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich schreibe meinen ___ Freunden eine Karte.
+    options: [alten, alte, alter]
+    answer: alten
+    explanation:
+      en: "*Meinen Freunden* is *Dativ* plural, so the adjective takes *-en*."
+      fa: "*meinen Freunden* در حالت *Dativ* جمع است، پس صفت *-en* می‌گیرد."
+      de: "*Meinen Freunden* ist Dativ Plural, also *-en*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Er fährt mit ___ zur Arbeit.
+    options: [seinem neuen Fahrrad, seinem neues Fahrrad, seinen neuen Fahrrad]
+    answer: seinem neuen Fahrrad
+    explanation:
+      en: "*Mit* takes the *Dativ*: *seinem*, and the adjective takes *-en*."
+      fa: "*mit* با حالت *Dativ* می‌آید: *seinem*، و صفت *-en* می‌گیرد."
+      de: "Nach *mit* steht der Dativ: *seinem*, und das Adjektiv hat *-en*."
+  - id: true-1
+    type: true-false
+    prompt: Ich habe ein neues Handy.
+    answer: true
+    explanation:
+      en: "*Handy* is a *das* noun: after *ein* the adjective takes *-es*. The sentence is correct."
+      fa: "*Handy* اسم خنثی (*das*) است: پس از *ein* صفت *-es* می‌گیرد. جمله درست است."
+      de: "*Handy* hat den Artikel *das*. Nach *ein* hat das Adjektiv *-es*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist ein schöne Tag.
+    answer: false
+    explanation:
+      en: "*Tag* is masculine, and *ein* has no ending, so the adjective takes *-er*: *ein schöner Tag*."
+      fa: "*Tag* مذکر است و *ein* پایانه‌ای ندارد، پس صفت *-er* می‌گیرد: *ein schöner Tag*."
+      de: "*Tag* ist maskulin. *Ein* hat keine Endung, also *-er*: *ein schöner Tag*."
+  - id: true-3
+    type: true-false
+    prompt: Wir haben keine frischen Brötchen mehr.
+    answer: true
+    explanation:
+      en: "In the plural, after *keine* the adjective takes *-en*. The sentence is correct."
+      fa: "در جمع، پس از *keine* صفت *-en* می‌گیرد. جمله درست است."
+      de: "Im Plural hat das Adjektiv nach *keine* die Endung *-en*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Hast du einen ___ (gut) Tipp für mich?
+    answers: [guten]
+    explanation:
+      en: "*Einen Tipp* is masculine *Akkusativ*, so *-en*: *einen guten Tipp*."
+      fa: "*einen Tipp* در حالت *Akkusativ* مذکر است، پس *-en*: *einen guten Tipp*."
+      de: "*Einen Tipp* ist Akkusativ maskulin, also *-en*: *einen guten Tipp*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das ist ein ___ (neu) Auto.
+    answers: [neues]
+    explanation:
+      en: "*Auto* is a *das* noun, and *ein* has no ending: *ein neues Auto*."
+      fa: "*Auto* اسم خنثی (*das*) است و *ein* پایانه‌ای ندارد: *ein neues Auto*."
+      de: "*Auto* hat den Artikel *das*, *ein* hat keine Endung: *ein neues Auto*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Unser ___ (alt) Lehrer ist sehr nett.
+    answers: [alter]
+    explanation:
+      en: "*Unser Lehrer* is the subject (*Nominativ*), and *unser* has no ending: *unser alter Lehrer*."
+      fa: "*unser Lehrer* فاعل است (حالت *Nominativ*) و *unser* پایانه‌ای ندارد: *unser alter Lehrer*."
+      de: "*Unser Lehrer* ist das Subjekt (Nominativ). *Unser* hat keine Endung: *unser alter Lehrer*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich spiele mit meiner ___ (klein) Tochter.
+    answers: [kleinen]
+    explanation:
+      en: "*Mit* takes the *Dativ*, so *-en*: *mit meiner kleinen Tochter*."
+      fa: "*mit* با حالت *Dativ* می‌آید، پس *-en*: *mit meiner kleinen Tochter*."
+      de: "Nach *mit* steht der Dativ, also *-en*: *mit meiner kleinen Tochter*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Sie haben keine ___ (groß) Wohnung.
+    answers: [große]
+    explanation:
+      en: "*Keine Wohnung* is feminine *Akkusativ* singular, so *-e*: *keine große Wohnung*."
+      fa: "*keine Wohnung* در حالت *Akkusativ* مؤنث مفرد است، پس *-e*: *keine große Wohnung*."
+      de: "*Keine Wohnung* ist Akkusativ feminin Singular, also *-e*: *keine große Wohnung*."
+  - id: error-1
+    type: find-error
+    prompt: Er hat ein kleines Haus mit einem großer Garten.
+    answer: großer
+    explanation:
+      en: "After *mit* comes the *Dativ*, and there the adjective takes *-en*: *mit einem großen Garten*."
+      fa: "پس از *mit* حالت *Dativ* می‌آید و صفت *-en* می‌گیرد: *mit einem großen Garten*."
+      de: "Nach *mit* steht der Dativ, das Adjektiv hat *-en*: *mit einem großen Garten*."
+  - id: error-2
+    type: find-error
+    prompt: Meine neue Kollegen sind nett.
+    answer: neue
+    explanation:
+      en: "*Kollegen* is plural, and after *meine* the plural adjective takes *-en*: *meine neuen Kollegen*."
+      fa: "*Kollegen* جمع است و پس از *meine* صفت جمع *-en* می‌گیرد: *meine neuen Kollegen*."
+      de: "*Kollegen* ist Plural. Nach *meine* hat das Adjektiv *-en*: *meine neuen Kollegen*."
+  - id: match-1
+    type: matching
+    answer:
+      - [ein ___ Tisch (Nominativ), neuer]
+      - [ein ___ Sofa (Nominativ), neues]
+      - [eine ___ Lampe (Nominativ), neue]
+      - [einem ___ Sofa (Dativ), neuen]
+    explanation:
+      en: "Where *ein* has no ending the adjective shows the gender (*-er*, *-es*); otherwise *-e* or *-en*."
+      fa: "جایی که *ein* پایانه ندارد، صفت جنس را نشان می‌دهد (*-er*، *-es*)؛ در جاهای دیگر *-e* یا *-en*."
+      de: "Wo *ein* keine Endung hat, zeigt das Adjektiv das Genus (*-er*, *-es*). Sonst *-e* oder *-en*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 91a61f4d2de2ae59

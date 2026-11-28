@@ -104,6 +104,7 @@ its first mention in a node.
 | two-way preposition | Wechselpräposition | حرف اضافهٔ دوحالته |
 | adjective; comparative / superlative | Adjektiv; Komparativ / Superlativ | صفت؛ صفت تفضیلی / صفت عالی |
 | adverb | Adverb | قید |
+| degree word (*sehr*, *ziemlich*, *total*) | Gradwort | قید شدت |
 | conjunction | Konjunktion | حرف ربط |
 | sentence, clause | Satz | جمله |
 | main clause / subordinate clause | Hauptsatz / Nebensatz | جملهٔ پایه / جملهٔ پیرو |
@@ -132,6 +133,7 @@ its first mention in a node.
 | negation | Negation | نفی |
 | question word | Fragewort | واژهٔ پرسشی |
 | question pronoun (*wer*, *was*) | Fragepronomen | ضمیر پرسشی |
+| indefinite pronoun (*jemand*, *einer*, *welche*) | Indefinitpronomen | ضمیر مبهم |
 
 A case is always named with «حالت» before it: «با حالت *Dativ* می‌آید», not
 «با *Dativ* می‌آید». A noun is named by its gender, with the article in
