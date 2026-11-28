@@ -4,10 +4,395 @@ kind: grammar
 level: A2
 chapter: a2-reflexive-prepositional
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-082, grammar-088]
 title:
   en: "Reflexive verbs and pronouns, *Akkusativ*"
-  fa: "فعل‌ها و ضمیرهای انعکاسی در *Akkusativ*"
+  fa: "فعل‌ها و ضمیرهای انعکاسی در حالت *Akkusativ*"
   de: "Reflexive Verben und Reflexivpronomen im Akkusativ"
+
+explanations:
+  en:
+    rule: >
+      A reflexive verb has a pronoun that points back to the subject: *Ich
+      wasche mich.* (I wash myself.) In the *Akkusativ* the reflexive pronoun
+      is *mich*, *dich*, *uns* and *euch*, as you know them, and *sich* for
+      *er*, *sie*, *es*, plural *sie* and polite *Sie*. Some verbs are always
+      reflexive, such as *sich beeilen* (to hurry) and *sich freuen* (to be
+      glad); English often has no "myself" there, but German needs the
+      pronoun: *Ich beeile mich.* Others can take another object instead:
+      *Ich wasche mich* or *Ich wasche das Auto*. The pronoun stands right
+      after the conjugated verb, and after a pronoun subject that follows the
+      verb: *Heute hat sie sich verspätet.* With a modal verb it stays in the
+      middle and the infinitive goes to the end: *Ich kann mich nicht
+      erinnern.* In the *Perfekt* a reflexive verb always takes *haben*: *Ich
+      habe mich beeilt.*
+  fa:
+    rule: >
+      فعل انعکاسی ضمیری دارد که به خود فاعل برمی‌گردد: *Ich wasche mich.*
+      (خودم را می‌شویم.) ضمیر انعکاسی در حالت *Akkusativ* (حالت مفعولی) برای
+      *ich*، *du*، *wir* و *ihr* همان ضمیرهای آشنای *mich*، *dich*، *uns* و
+      *euch* است و برای *er*، *sie*، *es*، *sie* جمع و *Sie* رسمی *sich*.
+      برخی فعل‌ها همیشه انعکاسی‌اند، مانند *sich beeilen* (عجله کردن) و *sich
+      freuen* (خوشحال شدن). در فارسی این فعل‌ها «خود» ندارند، ولی در آلمانی
+      ضمیر لازم است: *Ich beeile mich.* برخی دیگر می‌توانند به‌جای ضمیر
+      انعکاسی مفعول دیگری بگیرند: *Ich wasche mich* یا *Ich wasche das Auto*.
+      ضمیر انعکاسی درست پس از فعل صرف‌شده می‌آید؛ اگر فاعل ضمیر باشد و پس از
+      فعل بیاید، ضمیر انعکاسی پس از فاعل قرار می‌گیرد: *Heute hat sie sich
+      verspätet.* با فعل وجهی، ضمیر در میانهٔ جمله می‌ماند و مصدر به پایان
+      می‌رود: *Ich kann mich nicht erinnern.* در گذشتهٔ نقلی (*Perfekt*) فعل
+      انعکاسی همیشه با *haben* می‌آید: *Ich habe mich beeilt.*
+  de:
+    rule: >
+      Ein reflexives Verb hat ein Pronomen, das zum Subjekt zurückgeht: *Ich
+      wasche mich.* Im Akkusativ heißt das Reflexivpronomen *mich*, *dich*,
+      *uns* und *euch* wie bekannt, und *sich* bei *er*, *sie*, *es*, *sie*
+      (Plural) und *Sie*. Manche Verben sind immer reflexiv, zum Beispiel
+      *sich beeilen* und *sich freuen*: *Ich beeile mich.* Andere können auch
+      ein anderes Objekt haben: *Ich wasche mich* oder *Ich wasche das Auto*.
+      Das Pronomen steht direkt nach dem konjugierten Verb. Steht ein
+      Pronomen als Subjekt nach dem Verb, kommt es danach: *Heute hat sie
+      sich verspätet.* Mit einem Modalverb steht es in der Mitte, der
+      Infinitiv am Ende: *Ich kann mich nicht erinnern.* Im Perfekt haben
+      reflexive Verben immer *haben*: *Ich habe mich beeilt.*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - en: "*Akkusativ*: another person"
+      fa: "حالت *Akkusativ*: شخص دیگر"
+      de: "Akkusativ: eine andere Person"
+    - en: "Reflexive: the subject itself"
+      fa: "ضمیر انعکاسی: خود فاعل"
+      de: "Reflexivpronomen: das Subjekt selbst"
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, mich, mich, Ich ziehe mich an.]
+    - [du, dich, dich, Beeil dich!]
+    - [er, ihn, sich, Er wäscht sich.]
+    - [sie (Singular), sie, sich, Sie fühlt sich gut.]
+    - [es, es, sich, Das Kind freut sich.]
+    - [wir, uns, uns, Wir haben uns verspätet.]
+    - [ihr, euch, euch, Setzt euch!]
+    - [sie (Plural), sie, sich, Die Kinder ziehen sich an.]
+    - [Sie, Sie, sich, Setzen Sie sich bitte!]
+
+# One arrow to another man for "Er wäscht ihn", one arrow that comes back
+# for "Er wäscht sich". German only, so no labels.
+diagrams:
+  - caption:
+      en: >
+        Above, *Er wäscht ihn*: the arrow goes to another person. Below, *Er
+        wäscht sich*: the arrow comes back to the subject. *Sich* is the same
+        person as *er*.
+      fa: >
+        بالا، *Er wäscht ihn*: پیکان به سوی شخص دیگری می‌رود. پایین، *Er
+        wäscht sich*: پیکان به خود فاعل برمی‌گردد. *sich* همان کسی است که
+        *er* به او اشاره می‌کند.
+      de: >
+        Oben, *Er wäscht ihn*: Der Pfeil geht zu einer anderen Person. Unten,
+        *Er wäscht sich*: Der Pfeil geht zum Subjekt zurück. *Sich* ist
+        dieselbe Person wie *er*.
+    svg: |
+      <svg viewBox="0 0 320 272">
+        <!-- Er wäscht ihn: one arrow to another person -->
+        <circle class="object" cx="60" cy="28" r="14"/>
+        <rect class="object" x="46" y="46" width="28" height="34" rx="6"/>
+        <circle class="object" cx="260" cy="28" r="14"/>
+        <rect class="object" x="246" y="46" width="28" height="34" rx="6"/>
+        <line class="line" x1="84" y1="62" x2="226" y2="62"/>
+        <polygon class="object" points="224,56 236,62 224,68"/>
+        <text class="note" x="60" y="100" text-anchor="middle">er</text>
+        <text class="note" x="260" y="100" text-anchor="middle">ihn</text>
+        <text class="label" x="160" y="124" text-anchor="middle">Er wäscht ihn.</text>
+        <!-- Er wäscht sich: the arrow leaves him and comes back to him -->
+        <circle class="object" cx="140" cy="168" r="14"/>
+        <rect class="object" x="126" y="186" width="28" height="34" rx="6"/>
+        <path class="line" d="M 160 204 C 230 204 230 150 168 160"/>
+        <polygon class="object" points="172,153 158,161 172,167"/>
+        <text class="note" x="140" y="240" text-anchor="middle">er = sich</text>
+        <text class="label" x="160" y="264" text-anchor="middle">Er wäscht sich.</text>
+      </svg>
+
+examples:
+  - de: Ich kann mich nicht erinnern.
+    en: I can't remember.
+    fa: یادم نمی‌آید.
+  - de: Heute hat sie sich verspätet.
+    en: She was late today.
+    fa: امروز دیر کرد.
+  - de: Wir freuen uns sehr.
+    en: We are very pleased.
+    fa: خیلی خوشحالیم.
+  - de: Beeil dich, der Bus kommt!
+    en: Hurry up, the bus is coming!
+    fa: عجله کن، اتوبوس آمد!
+  - de: Ich ziehe mich schnell an.
+    en: I get dressed quickly.
+    fa: سریع لباس می‌پوشم.
+  - de: Der Vater zieht das Kind an.
+    en: The father dresses the child.
+    fa: پدر به بچه لباس می‌پوشاند.
+  - de: Setzen Sie sich bitte!
+    en: Please sit down.
+    fa: لطفاً بنشینید!
+  - de: Darf ich mich vorstellen? Ich heiße Lena Berg.
+    en: May I introduce myself? My name is Lena Berg.
+    fa: اجازه می‌دهید خودم را معرفی کنم؟ اسمم لنا برگ است.
+  - de: Habt ihr euch schon angemeldet?
+    en: Have you (plural) registered yet?
+    fa: شما (جمع) ثبت‌نام کرده‌اید؟
+  - de: Er hat sich beim Fußball verletzt.
+    en: He hurt himself playing football.
+    fa: موقع فوتبال آسیب دید.
+  - de: Fühlst du dich nicht gut?
+    en: Don't you feel well?
+    fa: حالت خوب نیست؟
+  - de: Am Sonntag ruhe ich mich aus.
+    en: On Sunday I'm having a rest.
+    fa: یکشنبه استراحت می‌کنم.
+
+mistakes:
+  - wrong: Ich beeile sich.
+    right: Ich beeile mich.
+    why:
+      en: "With *ich* the reflexive pronoun is *mich*. *Sich* is only for *er*, *sie*, *es* and *Sie*."
+      fa: "با *ich* ضمیر انعکاسی *mich* است. *sich* فقط برای *er*، *sie*، *es* و *Sie* است."
+      de: "Bei *ich* heißt das Pronomen *mich*. *Sich* gibt es nur bei *er*, *sie*, *es* und *Sie*."
+  - wrong: Ich muss beeilen.
+    right: Ich muss mich beeilen.
+    why:
+      en: 'English says "I must hurry", but *sich beeilen* is always reflexive: *mich* is needed.'
+      fa: "در فارسی می‌گوییم «باید عجله کنم»، ولی *sich beeilen* همیشه انعکاسی است و *mich* لازم است."
+      de: "*Sich beeilen* ist immer reflexiv. Das Pronomen *mich* muss im Satz stehen."
+  - wrong: Sie ist sich verspätet.
+    right: Sie hat sich verspätet.
+    why:
+      en: "A reflexive verb always forms the *Perfekt* with *haben*, even where *zu spät kommen* takes *sein*."
+      fa: "فعل انعکاسی گذشتهٔ نقلی را همیشه با *haben* می‌سازد، هرچند *zu spät kommen* با *sein* می‌آید."
+      de: "Reflexive Verben bilden das Perfekt immer mit *haben*, auch wenn *zu spät kommen* mit *sein* geht."
+  - wrong: Kannst du sich erinnern?
+    right: Kannst du dich erinnern?
+    why:
+      en: "With *du* the reflexive pronoun is *dich*."
+      fa: "با *du* ضمیر انعکاسی *dich* است."
+      de: "Bei *du* heißt das Pronomen *dich*."
+  - wrong: Ich freue mir.
+    right: Ich freue mich.
+    why:
+      en: "*Sich freuen* takes the *Akkusativ*: *mich*. *Mir* is the *Dativ*."
+      fa: "*sich freuen* با ضمیر حالت *Akkusativ* می‌آید: *mich*. *mir* ضمیر حالت *Dativ* است."
+      de: "*Sich freuen* hat den Akkusativ: *mich*. *Mir* ist Dativ."
+  - wrong: Setzen Sie Sich bitte!
+    right: Setzen Sie sich bitte!
+    why:
+      en: "Only polite *Sie* has a capital letter. *Sich* is always small."
+      fa: "فقط *Sie* رسمی با حرف بزرگ نوشته می‌شود. *sich* همیشه با حرف کوچک است."
+      de: "Nur das höfliche *Sie* schreibt man groß. *Sich* schreibt man immer klein."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich freue ___ sehr.
+    options: [mich, mir, sich]
+    answer: mich
+    explanation:
+      en: "With *ich* the reflexive pronoun in the *Akkusativ* is *mich*."
+      fa: "با *ich* ضمیر انعکاسی در حالت *Akkusativ* *mich* است."
+      de: "Bei *ich* heißt das Reflexivpronomen im Akkusativ *mich*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Beeil ___, der Zug fährt gleich!
+    options: [dich, sich, dir]
+    answer: dich
+    explanation:
+      en: "The imperative speaks to *du*, so the pronoun is *dich*."
+      fa: "فعل امر خطاب به *du* است، پس ضمیر *dich* است."
+      de: "Der Imperativ spricht zu *du*. Darum: *dich*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir haben ___ gestern verspätet.
+    options: [uns, sich, euch]
+    answer: uns
+    explanation:
+      en: "With *wir* the reflexive pronoun is *uns*."
+      fa: "با *wir* ضمیر انعکاسی *uns* است."
+      de: "Bei *wir* heißt das Pronomen *uns*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Frau Klein, setzen Sie ___ bitte!
+    options: [sich, Sie, Ihnen]
+    answer: sich
+    explanation:
+      en: "With polite *Sie* the reflexive pronoun is *sich*, with a small letter."
+      fa: "با *Sie* رسمی ضمیر انعکاسی *sich* است، با حرف کوچک."
+      de: "Bei *Sie* heißt das Reflexivpronomen *sich*, klein geschrieben."
+  - id: gap-5
+    type: gap-fill
+    prompt: Gestern ___ er sich beim Sport verletzt.
+    options: [hat, ist]
+    answer: hat
+    explanation:
+      en: "A reflexive verb forms the *Perfekt* with *haben*: *er hat sich verletzt*."
+      fa: "فعل انعکاسی گذشتهٔ نقلی را با *haben* می‌سازد: *er hat sich verletzt*."
+      de: "Reflexive Verben bilden das Perfekt mit *haben*: *er hat sich verletzt*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Paul zieht sich an. Wen zieht Paul an?
+    options: [sich selbst, seinen Sohn, niemanden]
+    answer: sich selbst
+    explanation:
+      en: "*Sich* points back to the subject: Paul dresses himself."
+      fa: "*sich* به خود فاعل برمی‌گردد: پاول خودش لباس می‌پوشد."
+      de: "*Sich* geht zum Subjekt zurück: Paul zieht sich selbst an."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welches Verb ist immer reflexiv?
+    options: [sich beeilen, sich waschen, sich anziehen]
+    answer: sich beeilen
+    explanation:
+      en: "*Beeilen* never goes without *sich*. You can wash or dress another person too: *Ich wasche das Auto.*"
+      fa: "*beeilen* هرگز بی *sich* نمی‌آید. شستن و لباس پوشاندن را می‌توان برای کس یا چیز دیگری هم به کار برد: *Ich wasche das Auto.*"
+      de: "*Beeilen* geht nie ohne *sich*. Waschen und anziehen kann man auch andere: *Ich wasche das Auto.*"
+  - id: choice-3
+    type: multiple-choice
+    prompt: Heute ___ verspätet.
+    options: [hat sie sich, hat sich sie, sie hat sich]
+    answer: hat sie sich
+    explanation:
+      en: "The verb comes second; the pronoun subject follows it, then *sich*."
+      fa: "فعل در جایگاه دوم می‌آید، فاعل ضمیری پس از آن و سپس *sich*."
+      de: "Das Verb steht an Position 2, dann das Subjekt *sie*, dann *sich*."
+  - id: true-1
+    type: true-false
+    prompt: Ich kann mich nicht erinnern.
+    answer: true
+    explanation:
+      en: "With *ich* the pronoun is *mich*, and the infinitive goes to the end. The sentence is correct."
+      fa: "با *ich* ضمیر *mich* می‌آید و مصدر در پایان جمله است. جمله درست است."
+      de: "Bei *ich* heißt es *mich*, der Infinitiv steht am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Er hat sich gestern verletzt.
+    answer: true
+    explanation:
+      en: "*Perfekt* with *haben*, and *sich* for *er*. The sentence is correct."
+      fa: "گذشتهٔ نقلی با *haben* و *sich* برای *er*. جمله درست است."
+      de: "Perfekt mit *haben*, *sich* bei *er*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Wir sind uns schnell angezogen.
+    answer: false
+    explanation:
+      en: "A reflexive verb takes *haben* in the *Perfekt*: *Wir haben uns schnell angezogen.*"
+      fa: "فعل انعکاسی در گذشتهٔ نقلی با *haben* می‌آید: *Wir haben uns schnell angezogen.*"
+      de: "Reflexive Verben haben im Perfekt *haben*: *Wir haben uns schnell angezogen.*"
+  - id: true-4
+    type: true-false
+    prompt: Du musst sich beeilen.
+    answer: false
+    explanation:
+      en: "With *du* the pronoun is *dich*: *Du musst dich beeilen.*"
+      fa: "با *du* ضمیر *dich* می‌آید: *Du musst dich beeilen.*"
+      de: "Bei *du* heißt es *dich*: *Du musst dich beeilen.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Entschuldigung, wir haben ___ verspätet.
+    answers: [uns]
+    explanation:
+      en: "With *wir* the reflexive pronoun is *uns*."
+      fa: "با *wir* ضمیر انعکاسی *uns* است."
+      de: "Bei *wir* heißt das Pronomen *uns*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Lisa fühlt ___ heute nicht gut.
+    answers: [sich]
+    explanation:
+      en: "*Lisa* is *sie*, so the reflexive pronoun is *sich*."
+      fa: "*Lisa* سوم‌شخص مفرد است (*sie*)، پس ضمیر انعکاسی *sich* است."
+      de: "*Lisa* ist *sie*. Darum: *sich*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Am Sonntag ruht ihr ___ aus, oder?
+    answers: [euch]
+    explanation:
+      en: "With *ihr* the reflexive pronoun is *euch*."
+      fa: "با *ihr* ضمیر انعکاسی *euch* است."
+      de: "Bei *ihr* heißt das Pronomen *euch*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wir ___ (haben / sein) uns schon angemeldet.
+    answers: [haben]
+    explanation:
+      en: "A reflexive verb forms the *Perfekt* with *haben*: *wir haben uns angemeldet*."
+      fa: "فعل انعکاسی گذشتهٔ نقلی را با *haben* می‌سازد: *wir haben uns angemeldet*."
+      de: "Reflexive Verben bilden das Perfekt mit *haben*: *wir haben uns angemeldet*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Reflexivpronomen im Akkusativ: er"
+    answers: [sich]
+    explanation:
+      en: "For *er*, *sie*, *es*, plural *sie* and *Sie* the reflexive pronoun is *sich*."
+      fa: "برای *er*، *sie*، *es*، *sie* جمع و *Sie* ضمیر انعکاسی *sich* است."
+      de: "Bei *er*, *sie*, *es*, *sie* (Plural) und *Sie* heißt das Reflexivpronomen *sich*."
+  - id: error-1
+    type: find-error
+    prompt: Ich habe sich sehr gefreut.
+    answer: sich
+    explanation:
+      en: "With *ich* the pronoun is *mich*: *Ich habe mich sehr gefreut.*"
+      fa: "با *ich* ضمیر *mich* می‌آید: *Ich habe mich sehr gefreut.*"
+      de: "Bei *ich* heißt es *mich*: *Ich habe mich sehr gefreut.*"
+  - id: error-2
+    type: find-error
+    prompt: Heute ist sie sich verspätet.
+    answer: ist
+    explanation:
+      en: "A reflexive verb takes *haben* in the *Perfekt*: *Heute hat sie sich verspätet.*"
+      fa: "فعل انعکاسی در گذشتهٔ نقلی با *haben* می‌آید: *Heute hat sie sich verspätet.*"
+      de: "Reflexive Verben haben im Perfekt *haben*: *Heute hat sie sich verspätet.*"
+  - id: error-3
+    type: find-error
+    prompt: Herr Roth, setzen Sie Sich doch!
+    answer: Sich
+    explanation:
+      en: "*Sich* is always written with a small letter, also with *Sie*."
+      fa: "*sich* همیشه با حرف کوچک نوشته می‌شود، حتی با *Sie*."
+      de: "*Sich* schreibt man immer klein, auch bei *Sie*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [warum, hast, du, dich, verspätet]
+    end: "?"
+    explanation:
+      en: "The question word, then the verb, the subject *du* and *dich*; the participle goes to the end."
+      fa: "اول واژهٔ پرسشی، سپس فعل، فاعل *du* و *dich*؛ صفت مفعولی به پایان جمله می‌رود."
+      de: "Fragewort, Verb, Subjekt *du*, dann *dich*. Das Partizip steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wann, ziehst, du, dich, an]
+    end: "?"
+    explanation:
+      en: "The pronoun follows the subject *du*; the prefix *an* goes to the end."
+      fa: "ضمیر پس از فاعل *du* می‌آید و پیشوند *an* به پایان جمله می‌رود."
+      de: "Das Pronomen steht nach dem Subjekt *du*. *An* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, mich]
+      - [du, dich]
+      - [wir, uns]
+      - [ihr, euch]
+      - [Sie, sich]
+    explanation:
+      en: "The reflexive pronoun follows the subject: *mich*, *dich*, *uns*, *euch*, and *sich* for *Sie*."
+      fa: "ضمیر انعکاسی با فاعل جور می‌شود: *mich*، *dich*، *uns*، *euch* و برای *Sie* *sich*."
+      de: "Das Reflexivpronomen passt zum Subjekt: *mich*, *dich*, *uns*, *euch*, und bei *Sie* *sich*."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, blind pass
+    on the review sheet only; not a person)
+  date: 2026-11-28
+  pool: 8009e8cdffccf329

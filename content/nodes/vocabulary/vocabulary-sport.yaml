@@ -1,32 +1,290 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Mannschaft and Team are the same thing in sport; `tooCloseTo` keeps one from being
+# offered as a wrong meaning of the other, and `alsoAccepted` takes it as right.
 id: vocabulary-sport
 kind: vocabulary
 level: A2
 chapter: a2-words-free-time
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Sport and games"
   fa: "ورزش و بازی"
   de: "Sport und Spiele"
+attemptSize: 15
 words:
   - word: Ball
+    class: noun
+    article: der
+    plural: Bälle
+    level: A2
+    meaning:
+      en: ball
+      fa: توپ
+    definition: ein runder Gegenstand aus Leder oder Gummi, den man wirft, fängt oder mit dem Fuß tritt
+    example:
+      de: Die Kinder spielen im Park mit dem Ball.
+      en: The children are playing with the ball in the park.
+      fa: بچه‌ها در پارک با توپ بازی می‌کنند.
+
   - word: Basketball
+    class: noun
+    article: der
+    plural: Basketbälle
+    level: A2
+    meaning:
+      en: basketball
+      fa: بسکتبال
+    definition: ein Spiel mit zwei Mannschaften; man wirft den Ball von oben in einen hohen Korb
+    example:
+      de: Mein Bruder spielt zweimal pro Woche Basketball.
+      en: My brother plays basketball twice a week.
+      fa: برادرم هفته‌ای دو بار بسکتبال بازی می‌کند.
+
   - word: Volleyball
+    class: noun
+    article: der
+    plural: Volleybälle
+    level: A2
+    meaning:
+      en: volleyball
+      fa: والیبال
+    definition: ein Spiel mit zwei Mannschaften; man schlägt den Ball mit den Händen über ein hohes Netz
+    example:
+      de: Im Sommer spielen wir am Strand Volleyball.
+      en: In summer we play volleyball on the beach.
+      fa: تابستان‌ها کنار دریا والیبال بازی می‌کنیم.
+
   - word: Tennis
+    class: noun
+    article: das
+    number: singular-only
+    level: A2
+    meaning:
+      en: tennis
+      fa: تنیس
+    definition: ein Spiel für zwei oder vier Personen auf einem großen Platz; man schlägt einen kleinen gelben Ball mit einem Schläger über ein Netz
+    example:
+      de: Spielst du am Samstag mit mir Tennis?
+      en: Will you play tennis with me on Saturday?
+      fa: شنبه با من تنیس بازی می‌کنی؟
+
   - word: Ski
+    class: noun
+    article: der
+    plural: Skier
+    level: A2
+    meaning:
+      en: ski
+      fa: چوب اسکی
+    definition: ein langes, schmales Brett unter dem Schuh; damit fährt man im Schnee den Berg hinunter
+    example:
+      de: Im Winter fahren wir in Österreich Ski.
+      en: In winter we go skiing in Austria.
+      fa: زمستان‌ها در اتریش اسکی می‌کنیم.
+    alsoAccepted: [der Schi]
+
   - word: Mannschaft
+    class: noun
+    article: die
+    plural: Mannschaften
+    level: A2
+    meaning:
+      en: team (in sport), side
+      fa: تیم (ورزشی)
+    definition: eine Gruppe von Spielern, die zusammen gegen eine andere Gruppe spielen
+    example:
+      de: Unsere Mannschaft hat heute zum ersten Mal gewonnen.
+      en: Our team won today for the first time.
+      fa: تیم ما امروز برای اولین بار برد.
+    alsoAccepted: [das Team]
+    tooCloseTo: [Team]
+
   - word: Team
+    class: noun
+    article: das
+    plural: Teams
+    level: A2
+    meaning:
+      en: team (at work or in sport)
+      fa: تیم، گروه (در کار یا ورزش)
+    definition: eine Gruppe von Menschen, die zusammen arbeiten oder zusammen spielen
+    example:
+      de: Im Büro arbeite ich in einem kleinen Team.
+      en: At the office I work in a small team.
+      fa: در اداره در یک تیم کوچک کار می‌کنم.
+    alsoAccepted: [die Mannschaft]
+    tooCloseTo: [Mannschaft]
+
   - word: Training
+    class: noun
+    article: das
+    plural: Trainings
+    level: A2
+    meaning:
+      en: training, practice (session)
+      fa: تمرین (ورزشی)
+    definition: die Stunden, in denen man regelmäßig übt, damit man im Sport besser wird
+    example:
+      de: Das Training ist jeden Dienstag und Donnerstag.
+      en: Training is every Tuesday and Thursday.
+      fa: تمرین هر سه‌شنبه و پنج‌شنبه است.
+
   - word: trainieren
+    class: verb
+    level: A2
+    meaning:
+      en: to train, to practise
+      fa: تمرین کردن
+    definition: regelmäßig Sport machen und üben, damit man besser oder stärker wird
+    example:
+      de: Sie trainiert jeden Morgen für den Marathon.
+      en: She trains every morning for the marathon.
+      fa: او هر روز صبح برای ماراتن تمرین می‌کند.
+    alsoAccepted: [üben]
+
   - word: joggen
+    class: verb
+    level: A2
+    meaning:
+      en: to jog
+      fa: آهسته دویدن (برای ورزش)
+    definition: nicht schnell laufen, weil man fit bleiben will, zum Beispiel im Park
+    example:
+      de: Am Wochenende gehe ich im Park joggen.
+      en: At the weekend I go jogging in the park.
+      fa: آخر هفته‌ها برای دویدن به پارک می‌روم.
+
   - word: Sportplatz
+    class: noun
+    article: der
+    plural: Sportplätze
+    level: A2
+    meaning:
+      en: sports ground (outdoors, often at a school or a club)
+      fa: زمین ورزشی روباز (مثلاً کنار مدرسه یا باشگاه)
+    definition: ein Platz draußen, oft bei einer Schule oder einem Verein, auf dem man Sport macht, zum Beispiel Fußball oder Laufen
+    example:
+      de: Nach der Schule treffen wir uns auf dem Sportplatz.
+      en: After school we meet at the sports ground.
+      fa: بعد از مدرسه در زمین ورزش همدیگر را می‌بینیم.
+
   - word: Spiel
+    class: noun
+    article: das
+    plural: Spiele
+    level: A2
+    meaning:
+      en: game, match
+      fa: بازی
+    definition: etwas, das man nach festen Regeln spielt, zum Beispiel mit Karten oder mit einem Ball
+    example:
+      de: Hast du gestern das Spiel im Fernsehen gesehen?
+      en: Did you see the match on TV yesterday?
+      fa: دیروز مسابقه را در تلویزیون دیدی؟
+    alsoAccepted: [das Match]
+    tooCloseTo: [Basketball, Volleyball, Tennis]
+
   - word: Wettbewerb
+    class: noun
+    article: der
+    plural: Wettbewerbe
+    level: A2
+    meaning:
+      en: competition, contest
+      fa: مسابقه، رقابت
+    definition: Menschen zeigen, was sie können, und am Ende bekommt der Beste einen Preis
+    example:
+      de: Unsere Schule macht bei einem Wettbewerb für junge Musiker mit.
+      en: Our school is taking part in a competition for young musicians.
+      fa: مدرسهٔ ما در مسابقه‌ای برای نوازندگان جوان شرکت می‌کند.
+    alsoAccepted: [der Wettkampf]
+
   - word: verlieren
+    class: verb
+    level: A2
+    meaning:
+      en: to lose (a game; a thing)
+      fa: باختن؛ گم کردن
+    definition: ein Spiel nicht gewinnen; auch etwas nicht mehr haben, weil man es nicht mehr findet
+    example:
+      de: Leider haben wir das Spiel verloren.
+      en: Unfortunately we lost the match.
+      fa: متأسفانه بازی را باختیم.
+
   - word: Fan
+    class: noun
+    article: der
+    plural: Fans
+    level: A2
+    meaning:
+      en: fan, supporter
+      fa: طرفدار
+    definition: eine Person, die eine Mannschaft, einen Sänger oder eine Band sehr gern mag
+    example:
+      de: Er ist ein großer Fan von Bayern München.
+      en: He's a big Bayern Munich fan.
+      fa: او طرفدار سرسخت بایرن مونیخ است.
+    alsoAccepted: [der Anhänger, die Anhängerin]
+
   - word: Club
+    class: noun
+    article: der
+    plural: Clubs
+    level: A2
+    meaning:
+      en: club
+      fa: کلوب، باشگاه (انجمن ورزشی یا تفریحی)
+    definition: eine Gruppe von Menschen mit dem gleichen Hobby, zum Beispiel Sport, und der Ort, wo sie sich treffen
+    example:
+      de: Er spielt seit fünf Jahren in diesem Club.
+      en: He has been playing at this club for five years.
+      fa: او پنج سال است که در این باشگاه بازی می‌کند.
+    alsoAccepted: [der Klub, der Verein]
+
   - word: Ziel
+    class: noun
+    article: das
+    plural: Ziele
+    level: A2
+    meaning:
+      en: aim, goal (what you want to reach); finish (of a race)
+      fa: هدف؛ خط پایان (مسابقه)
+    definition: das, was man erreichen will; beim Laufen auch das Ende der Strecke
+    example:
+      de: Mein Ziel ist, nächstes Jahr einen Marathon zu laufen.
+      en: My aim is to run a marathon next year.
+      fa: هدفم این است که سال آینده در یک ماراتن بدوم.
+
   - word: schaffen
+    class: verb
+    level: A2
+    meaning:
+      en: to manage (to do), to make it
+      fa: از پس کاری برآمدن، موفق شدن
+    definition: etwas Schweres am Ende doch machen können
+    example:
+      de: Das ist schwer, aber du schaffst das!
+      en: It's hard, but you can do it!
+      fa: سخت است، ولی از پسش برمی‌آیی!
+
   - word: Punkt
+    class: noun
+    article: der
+    plural: Punkte
+    level: A2
+    meaning:
+      en: point (in a game or test); full stop
+      fa: امتیاز؛ نقطه
+    definition: das, was man in einem Spiel bekommt, und wer am Ende mehr hat, gewinnt; auch das kleine Zeichen am Ende von einem Satz
+    example:
+      de: Unsere Mannschaft hat jetzt zehn Punkte.
+      en: Our team now has ten points.
+      fa: تیم ما حالا ده امتیاز دارد.
+
+review:
+  reviewer: "an independent AI agent (two fresh reviewers: the whole sheet, then
+    the changed and disputed questions)"
+  date: 2026-11-28
+  pool: 28988378614e541b

@@ -4,10 +4,375 @@ kind: grammar
 level: A2
 chapter: a2-prepositions
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-122, grammar-128]
 title:
   en: "Two-way prepositions, *Wohin?* + *Akkusativ*, and the contrast"
-  fa: "حرف‌های اضافهٔ دوحالته، *Wohin?* + *Akkusativ*، و تفاوت آن با *Wo?*"
+  fa: "حرف‌های اضافهٔ دوحالته، *Wohin?* + حالت *Akkusativ*، و تفاوت آن با *Wo?*"
   de: "Wechselpräpositionen, *Wohin?* + Akkusativ, und der Unterschied zu *Wo?*"
+
+explanations:
+  en:
+    rule: >
+      The nine two-way prepositions *an*, *auf*, *hinter*, *in*, *neben*,
+      *über*, *unter*, *vor* and *zwischen* take two cases. For a place, in
+      answer to *Wo?* (where?), they take the *Dativ*: *Der Computer steht
+      unter dem Tisch.* For a movement to a new place, in answer to *Wohin?*
+      (where to?), they take the *Akkusativ*: *Ich stelle den Computer unter
+      den Tisch.* In the *Akkusativ* only *der* changes, to *den* (*ein* to
+      *einen*); *die*, *das* and plural *die* stay as they are. *In das* and
+      *an das* are usually shortened to *ins* and *ans*. A movement that stays
+      inside one place is still *Wo?*: *Die Kinder laufen im Park.*
+  fa:
+    rule: >
+      نُه حرف اضافهٔ دوحالته، یعنی *an*، *auf*، *hinter*، *in*، *neben*،
+      *über*، *unter*، *vor* و *zwischen*، با دو حالت می‌آیند. وقتی جای چیزی
+      را نشان می‌دهند، یعنی در پاسخ به پرسش *Wo?* (کجا؟)، با حالت *Dativ*
+      (حالت مفعول باواسطه) می‌آیند: *Der Computer steht unter dem Tisch.* وقتی
+      حرکت به جایی تازه را نشان می‌دهند، یعنی در پاسخ به پرسش *Wohin?* (به
+      کجا؟)، با حالت *Akkusativ* (حالت مفعولی) می‌آیند: *Ich stelle den
+      Computer unter den Tisch.* در حالت *Akkusativ* فقط *der* تغییر می‌کند و
+      *den* می‌شود (*ein* نیز *einen*)؛ *die*، *das* و *die* جمع همان می‌مانند.
+      *in das* و *an das* معمولاً کوتاه می‌شوند: *ins* و *ans*. حرکتی که درون
+      یک مکان می‌ماند همچنان پاسخ *Wo?* است: *Die Kinder laufen im Park.*
+  de:
+    rule: >
+      Die Wechselpräpositionen *an*, *auf*, *hinter*, *in*, *neben*, *über*,
+      *unter*, *vor* und *zwischen* haben zwei Kasus. Auf die Frage *Wo?* (ein
+      Ort) steht der Dativ: *Der Computer steht unter dem Tisch.* Auf die
+      Frage *Wohin?* (eine Bewegung zu einem neuen Ort) steht der Akkusativ:
+      *Ich stelle den Computer unter den Tisch.* Im Akkusativ ändert sich nur
+      *der*: Er wird zu *den* (*ein* zu *einen*). *Die*, *das* und *die* im
+      Plural bleiben gleich. *In das* und *an das* sagt man meistens kurz:
+      *ins* und *ans*. Bleibt eine Bewegung an einem Ort, fragt man *Wo?*:
+      *Die Kinder laufen im Park.*
+
+# Two columns: on the left the ball is in or on the box (Wo?), on the right
+# it moves there (Wohin?), and the dashed ball is where it ends.
+diagrams:
+  - caption:
+      en: >
+        On the left the ball is somewhere: *Wo?* + *Dativ*. On the right it
+        moves there: *Wohin?* + *Akkusativ*. The dashed ball shows where the
+        movement ends.
+      fa: >
+        در سمت چپ توپ جایی قرار دارد: *Wo?* + حالت *Dativ*. در سمت راست توپ
+        به آن‌جا می‌رود: *Wohin?* + حالت *Akkusativ*. توپ خط‌چین جایی را نشان
+        می‌دهد که حرکت در آن تمام می‌شود.
+      de: >
+        Links ist der Ball an einem Ort: *Wo?* + Dativ. Rechts bewegt er sich
+        dorthin: *Wohin?* + Akkusativ. Der Ball mit Strichen zeigt, wo die
+        Bewegung endet.
+    svg: |
+      <svg viewBox="0 0 320 296">
+        <text class="label" x="80" y="22" text-anchor="middle">Wo?</text>
+        <text class="note" x="80" y="42" text-anchor="middle">Dativ</text>
+        <text class="label" x="240" y="22" text-anchor="middle">Wohin?</text>
+        <text class="note" x="240" y="42" text-anchor="middle">Akkusativ</text>
+        <line class="guide" x1="160" y1="8" x2="160" y2="288"/>
+        <!-- Wo? in: the ball inside a box you can see into -->
+        <circle class="object" cx="80" cy="112" r="9"/>
+        <rect class="guide" x="58" y="96" width="44" height="36"/>
+        <polygon class="guide" points="58,96 70,87 114,87 102,96"/>
+        <polygon class="guide" points="102,96 114,87 114,123 102,132"/>
+        <text class="label" x="84" y="160" text-anchor="middle">in der Kiste</text>
+        <!-- Wohin? in: the ball goes into the box -->
+        <circle class="object" cx="180" cy="70" r="9"/>
+        <rect class="guide" x="218" y="96" width="44" height="36"/>
+        <polygon class="guide" points="218,96 230,87 274,87 262,96"/>
+        <polygon class="guide" points="262,96 274,87 274,123 262,132"/>
+        <circle class="guide" cx="240" cy="114" r="9"/>
+        <path class="line" d="M 192 64 Q 232 52 238 98"/>
+        <polyline class="line" points="232,90 238,100 244,91"/>
+        <text class="label" x="244" y="160" text-anchor="middle">in die Kiste</text>
+        <!-- Wo? auf: the ball on top of the box -->
+        <rect class="surface" x="58" y="216" width="44" height="36"/>
+        <polygon class="surface" points="58,216 70,207 114,207 102,216"/>
+        <polygon class="shade" points="102,216 114,207 114,243 102,252"/>
+        <circle class="object" cx="86" cy="203" r="9"/>
+        <text class="label" x="84" y="280" text-anchor="middle">auf der Kiste</text>
+        <!-- Wohin? auf: the ball goes onto the box -->
+        <rect class="surface" x="218" y="216" width="44" height="36"/>
+        <polygon class="surface" points="218,216 230,207 274,207 262,216"/>
+        <polygon class="shade" points="262,216 274,207 274,243 262,252"/>
+        <circle class="object" cx="180" cy="243" r="9"/>
+        <circle class="guide" cx="246" cy="203" r="9"/>
+        <path class="line" d="M 184 230 Q 196 178 232 194"/>
+        <polyline class="line" points="222,188 233,195 223,200"/>
+        <text class="label" x="244" y="280" text-anchor="middle">auf die Kiste</text>
+      </svg>
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Wohin?*: *Akkusativ*", fa: "*Wohin?*: حالت *Akkusativ*", de: "*Wohin?*: Akkusativ" }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: "*Wo?*: *Dativ*", fa: "*Wo?*: حالت *Dativ*", de: "*Wo?*: Dativ" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Tisch, den Tisch, einen Tisch, dem Tisch, Ich lege das Heft auf den Tisch.]
+    - [die Wand, die Wand, eine Wand, der Wand, Er hängt das Bild an die Wand.]
+    - [das Regal, das Regal, ein Regal, dem Regal, Sie stellt das Buch ins Regal.]
+    - [die Gläser (Plural), die Gläser, –, den Gläsern, Stell die Flasche zwischen die Gläser.]
+
+examples:
+  - de: Ich stelle den Computer unter den Tisch.
+    en: I put the computer under the table.
+    fa: کامپیوتر را زیر میز می‌گذارم.
+  - de: Jetzt steht der Computer unter dem Tisch.
+    en: Now the computer is under the table.
+    fa: حالا کامپیوتر زیر میز است.
+  - de: Wir gehen heute Abend ins Kino.
+    en: We are going to the cinema tonight.
+    fa: امشب به سینما می‌رویم.
+  - de: Am Abend sind wir im Kino.
+    en: In the evening we are at the cinema.
+    fa: شب در سینما هستیم.
+  - de: Sie hängt das Bild an die Wand.
+    en: She hangs the picture on the wall.
+    fa: او تابلو را به دیوار آویزان می‌کند.
+  - de: Leg den Schlüssel bitte auf den Tisch.
+    en: Please put the key on the table.
+    fa: کلید را روی میز بگذار.
+  - de: Im Sommer fahren wir oft ans Meer.
+    en: In summer we often go to the seaside.
+    fa: تابستان‌ها اغلب به کنار دریا می‌رویم.
+  - de: Er fährt das Auto in die Garage.
+    en: He drives the car into the garage.
+    fa: او ماشین را به داخل پارکینگ می‌برد.
+  - de: Stell die Flasche zwischen die Gläser.
+    en: Put the bottle between the glasses.
+    fa: بطری را میان لیوان‌ها بگذار.
+  - de: Die Kinder laufen im Park.
+    en: The children are running in the park.
+    fa: بچه‌ها در پارک می‌دوند.
+
+mistakes:
+  - wrong: Ich lege das Buch auf dem Tisch.
+    right: Ich lege das Buch auf den Tisch.
+    why:
+      en: "*Legen* is a movement to a new place (*Wohin?*), so the *Akkusativ* follows: *den Tisch*."
+      fa: "*legen* حرکت به جایی تازه است (*Wohin?*)، پس حالت *Akkusativ* می‌آید: *den Tisch*."
+      de: "*Legen* ist eine Bewegung zu einem neuen Ort (*Wohin?*). Darum Akkusativ: *den Tisch*."
+  - wrong: Wir gehen in dem Park.
+    right: Wir gehen in den Park.
+    why:
+      en: "You go from outside into the park (*Wohin?*): *in den Park*. *Im Park* says where you already are."
+      fa: "از بیرون به درون پارک می‌روید (*Wohin?*): *in den Park*. *im Park* می‌گوید که از پیش کجا هستید."
+      de: "Man geht von draußen in den Park (*Wohin?*): *in den Park*. *Im Park* sagt, wo man schon ist."
+  - wrong: Er geht in die Kino.
+    right: Er geht ins Kino.
+    why:
+      en: "*Kino* is a *das* noun. *Das* stays *das* in the *Akkusativ*: *in das Kino*, shortened to *ins Kino*."
+      fa: "*Kino* اسم خنثی (*das*) است. *das* در حالت *Akkusativ* همان *das* می‌ماند: *in das Kino* که کوتاه می‌شود: *ins Kino*."
+      de: "*Kino* hat den Artikel *das*. Im Akkusativ bleibt *das*: *in das Kino*, kurz *ins Kino*."
+  - wrong: Sie hängt die Lampe über dem Tisch.
+    right: Sie hängt die Lampe über den Tisch.
+    why:
+      en: "She moves the lamp to a new place (*Wohin?*), so *über* takes the *Akkusativ*: *über den Tisch*."
+      fa: "او چراغ را به جایی تازه می‌برد (*Wohin?*)، پس *über* با حالت *Akkusativ* می‌آید: *über den Tisch*."
+      de: "Sie bringt die Lampe an einen neuen Ort (*Wohin?*). Darum *über* mit Akkusativ: *über den Tisch*."
+  - wrong: Ich stelle die Tasche neben der Stuhl.
+    right: Ich stelle die Tasche neben den Stuhl.
+    why:
+      en: "*Stuhl* is a *der* noun. In the *Akkusativ* *der* becomes *den*: *neben den Stuhl*."
+      fa: "*Stuhl* اسم مذکر (*der*) است. در حالت *Akkusativ*، *der* به *den* تبدیل می‌شود: *neben den Stuhl*."
+      de: "*Stuhl* hat den Artikel *der*. Im Akkusativ wird *der* zu *den*: *neben den Stuhl*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich lege das Buch auf ___ Tisch.
+    options: [den, dem, der]
+    answer: den
+    explanation:
+      en: "*Legen* is a movement (*Wohin?*): *der Tisch* in the *Akkusativ* is *den Tisch*."
+      fa: "*legen* حرکت است (*Wohin?*)؛ *der Tisch* در حالت *Akkusativ* می‌شود *den Tisch*."
+      de: "*Legen* ist eine Bewegung (*Wohin?*). *Der Tisch* im Akkusativ: *den Tisch*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Das Buch liegt auf ___ Tisch.
+    options: [dem, den, das]
+    answer: dem
+    explanation:
+      en: "*Liegen* says where something is (*Wo?*): *der Tisch* in the *Dativ* is *dem Tisch*."
+      fa: "*liegen* جای چیزی را نشان می‌دهد (*Wo?*)؛ *der Tisch* در حالت *Dativ* می‌شود *dem Tisch*."
+      de: "*Liegen* sagt, wo etwas ist (*Wo?*). *Der Tisch* im Dativ: *dem Tisch*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Sie hängt das Foto an ___ Wand.
+    options: [die, der, den]
+    answer: die
+    explanation:
+      en: "She moves the photo to the wall (*Wohin?*). *Die* stays *die* in the *Akkusativ*."
+      fa: "او عکس را به دیوار می‌برد (*Wohin?*). *die* در حالت *Akkusativ* همان *die* می‌ماند."
+      de: "Sie bringt das Foto an die Wand (*Wohin?*). *Die* bleibt im Akkusativ *die*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wir gehen heute Abend ___ Kino.
+    options: [ins, im, in den]
+    answer: ins
+    explanation:
+      en: "A movement into the cinema (*Wohin?*): *in das Kino*, shortened to *ins*. *Im* says where you are."
+      fa: "حرکت به درون سینما (*Wohin?*): *in das Kino* که کوتاه می‌شود: *ins*. *im* می‌گوید کجا هستید."
+      de: "Bewegung ins Kino (*Wohin?*): *in das Kino*, kurz *ins*. *Im* sagt, wo man ist."
+  - id: gap-5
+    type: gap-fill
+    prompt: Am Abend sind wir ___ Kino.
+    options: [im, ins, in die]
+    answer: im
+    explanation:
+      en: "*Sein* says where you are (*Wo?*): *in dem Kino*, shortened to *im Kino*."
+      fa: "*sein* جای کسی را نشان می‌دهد (*Wo?*): *in dem Kino* که کوتاه می‌شود: *im Kino*."
+      de: "*Sein* sagt, wo man ist (*Wo?*): *in dem Kino*, kurz *im Kino*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wohin stellst du die Blumen? – ___ Fenster.
+    options: [Ans, Am, Im]
+    answer: Ans
+    explanation:
+      en: "*Wohin?* asks for the *Akkusativ*: *an das Fenster*, shortened to *ans Fenster*."
+      fa: "*Wohin?* حالت *Akkusativ* می‌خواهد: *an das Fenster* که کوتاه می‌شود: *ans Fenster*."
+      de: "*Wohin?* braucht den Akkusativ: *an das Fenster*, kurz *ans Fenster*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich stelle die Lampe neben ___ Sofa.
+    options: [das, dem, den]
+    answer: das
+    explanation:
+      en: "*Stellen* is a movement (*Wohin?*). *Das Sofa* stays *das Sofa* in the *Akkusativ*."
+      fa: "*stellen* حرکت است (*Wohin?*). *das Sofa* در حالت *Akkusativ* همان *das Sofa* می‌ماند."
+      de: "*Stellen* ist eine Bewegung (*Wohin?*). *Das Sofa* bleibt im Akkusativ *das Sofa*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Der Vater setzt das Kind ___ Stuhl.
+    options: [auf den, auf dem, auf der]
+    answer: auf den
+    explanation:
+      en: "*Setzen* moves the child to a new place (*Wohin?*): *der Stuhl* in the *Akkusativ* is *den Stuhl*."
+      fa: "*setzen* بچه را به جایی تازه می‌برد (*Wohin?*)؛ *der Stuhl* در حالت *Akkusativ* می‌شود *den Stuhl*."
+      de: "*Setzen* bringt das Kind an einen neuen Ort (*Wohin?*). *Der Stuhl* im Akkusativ: *den Stuhl*."
+  - id: true-1
+    type: true-false
+    prompt: Ich hänge die Jacke in den Schrank.
+    answer: true
+    explanation:
+      en: "The jacket moves into the wardrobe (*Wohin?*): *in den Schrank*. The sentence is correct."
+      fa: "کت به درون کمد می‌رود (*Wohin?*): *in den Schrank*. جمله درست است."
+      de: "Die Jacke kommt in den Schrank (*Wohin?*): *in den Schrank*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Sie legt das Handy in der Tasche.
+    answer: false
+    explanation:
+      en: "*Legen* is a movement (*Wohin?*), so the *Akkusativ*: *in die Tasche*."
+      fa: "*legen* حرکت است (*Wohin?*)، پس حالت *Akkusativ* می‌آید: *in die Tasche*."
+      de: "*Legen* ist eine Bewegung (*Wohin?*). Darum Akkusativ: *in die Tasche*."
+  - id: true-3
+    type: true-false
+    prompt: Die Kinder spielen im Garten.
+    answer: true
+    explanation:
+      en: "Playing stays inside the garden (*Wo?*), so the *Dativ*: *im Garten*. The sentence is correct."
+      fa: "بازی درون باغ می‌ماند (*Wo?*)، پس حالت *Dativ* می‌آید: *im Garten*. جمله درست است."
+      de: "Das Spielen bleibt im Garten (*Wo?*). Darum Dativ: *im Garten*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Er fährt das Auto in die Garage.
+    answer: true
+    explanation:
+      en: "The car moves into the garage (*Wohin?*). *Die* stays *die* in the *Akkusativ*. The sentence is correct."
+      fa: "ماشین به درون پارکینگ می‌رود (*Wohin?*). *die* در حالت *Akkusativ* همان می‌ماند. جمله درست است."
+      de: "Das Auto kommt in die Garage (*Wohin?*). *Die* bleibt im Akkusativ gleich. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich stelle die Milch in ___ (der) Kühlschrank.
+    answers: [den]
+    explanation:
+      en: "*Stellen* is a movement (*Wohin?*): *der* becomes *den* in the *Akkusativ*."
+      fa: "*stellen* حرکت است (*Wohin?*): *der* در حالت *Akkusativ* به *den* تبدیل می‌شود."
+      de: "*Stellen* ist eine Bewegung (*Wohin?*): *der* wird im Akkusativ zu *den*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Die Milch steht in ___ (der) Kühlschrank.
+    answers: [dem]
+    explanation:
+      en: "*Stehen* says where something is (*Wo?*): *der* becomes *dem* in the *Dativ*."
+      fa: "*stehen* جای چیزی را نشان می‌دهد (*Wo?*): *der* در حالت *Dativ* به *dem* تبدیل می‌شود."
+      de: "*Stehen* sagt, wo etwas ist (*Wo?*): *der* wird im Dativ zu *dem*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Am Nachmittag gehe ich ___ (in / der Garten).
+    answers: [in den Garten, in den]
+    explanation:
+      en: "A movement into the garden (*Wohin?*): *in* with the *Akkusativ*, *in den Garten*."
+      fa: "حرکت به درون باغ (*Wohin?*): *in* با حالت *Akkusativ*، یعنی *in den Garten*."
+      de: "Bewegung in den Garten (*Wohin?*): *in* mit Akkusativ, *in den Garten*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Er geht ___ (an / das Fenster) und macht es auf.
+    answers: [ans Fenster, an das Fenster, ans, an das]
+    explanation:
+      en: "He moves to a new place (*Wohin?*): *an das Fenster*, shortened to *ans Fenster*."
+      fa: "او به جایی تازه می‌رود (*Wohin?*): *an das Fenster* که کوتاه می‌شود: *ans Fenster*."
+      de: "Er geht an einen neuen Ort (*Wohin?*): *an das Fenster*, kurz *ans Fenster*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Wohin? (auf / der Balkon)"
+    answers: [auf den Balkon]
+    explanation:
+      en: "*Wohin?* takes the *Akkusativ*: *der* becomes *den*, *auf den Balkon*."
+      fa: "*Wohin?* حالت *Akkusativ* می‌گیرد: *der* به *den* تبدیل می‌شود، یعنی *auf den Balkon*."
+      de: "*Wohin?* braucht den Akkusativ: *der* wird zu *den*, *auf den Balkon*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Wo? (auf / der Balkon)"
+    answers: [auf dem Balkon]
+    explanation:
+      en: "*Wo?* takes the *Dativ*: *der* becomes *dem*, *auf dem Balkon*."
+      fa: "*Wo?* حالت *Dativ* می‌گیرد: *der* به *dem* تبدیل می‌شود، یعنی *auf dem Balkon*."
+      de: "*Wo?* braucht den Dativ: *der* wird zu *dem*, *auf dem Balkon*."
+  - id: error-1
+    type: find-error
+    prompt: Wohin legst du den Schlüssel? – Auf dem Tisch.
+    answer: dem
+    explanation:
+      en: "The question is *Wohin?*, so the answer takes the *Akkusativ*: *auf den Tisch*."
+      fa: "پرسش *Wohin?* است، پس پاسخ با حالت *Akkusativ* می‌آید: *auf den Tisch*."
+      de: "Die Frage ist *Wohin?*. Darum steht in der Antwort der Akkusativ: *auf den Tisch*."
+  - id: error-2
+    type: find-error
+    prompt: Wo wartest du? – Vor das Kino.
+    answer: das
+    explanation:
+      en: "The question is *Wo?*, so the answer takes the *Dativ*: *vor dem Kino*."
+      fa: "پرسش *Wo?* است، پس پاسخ با حالت *Dativ* می‌آید: *vor dem Kino*."
+      de: "Die Frage ist *Wo?*. Darum steht in der Antwort der Dativ: *vor dem Kino*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [die Kinder, gehen, ins Kino]
+      - [ins Kino, gehen, die Kinder]
+    explanation:
+      en: "The verb comes second. The direction can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. مقصد می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. Die Richtung kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [Ich lege es auf ___ Tisch., den]
+      - [Es liegt auf ___ Tisch., dem]
+      - [Ich lege es auf ___ Bank., die]
+      - [Es liegt auf ___ Bank., der]
+    explanation:
+      en: "*Legen* is *Wohin?* (*Akkusativ*: *den Tisch*, *die Bank*); *liegen* is *Wo?* (*Dativ*: *dem Tisch*, *der Bank*)."
+      fa: "*legen* پاسخ *Wohin?* است (حالت *Akkusativ*: *den Tisch* و *die Bank*) و *liegen* پاسخ *Wo?* (حالت *Dativ*: *dem Tisch* و *der Bank*)."
+      de: "*Legen*: *Wohin?*, Akkusativ (*den Tisch*, *die Bank*). *Liegen*: *Wo?*, Dativ (*dem Tisch*, *der Bank*)."
+
+review:
+  reviewer: two independent AI agents (Claude Opus 5.5 subagents, blind passes on
+    the review sheet only; a second fresh agent re-answered the changed
+    questions; not a person)
+  date: 2026-11-28
+  pool: 8dcc49aac48f49e0

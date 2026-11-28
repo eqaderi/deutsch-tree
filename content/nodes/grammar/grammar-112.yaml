@@ -4,10 +4,267 @@ kind: grammar
 level: A2
 chapter: a2-adjectives
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-110]
 title:
   en: "Comparisons with *(genau)so … wie*"
   fa: "مقایسه با *(genau)so … wie*"
   de: "Vergleiche mit *(genau)so … wie*"
+
+explanations:
+  en:
+    rule: >
+      To say that two things are the same in some way, put *so* before the
+      adjective and *wie* (as) before the second thing: *Ich bin so müde wie
+      du.* *Genauso* (just as) makes it stronger: *Ich bin genauso müde wie
+      du.* The adjective keeps its plain form, with no *-er*. *Nicht so … wie*
+      says that the first has less of it: *Der Bus ist nicht so schnell wie
+      der Zug* means the bus is slower. As after *als*, a person after *wie*
+      is in the *Nominativ*: *wie ich*, *wie du*. So: the same, *so … wie*;
+      different, *Komparativ* + *als*.
+  fa:
+    rule: >
+      برای گفتن این‌که دو چیز از جهتی یکسان‌اند، پیش از صفت *so* و پیش از
+      چیز دوم *wie* (مانند، به اندازهٔ) می‌آید: *Ich bin so müde wie du.*
+      *genauso* (درست به همان اندازه) معنا را قوی‌تر می‌کند: *Ich bin genauso
+      müde wie du.* صفت به شکل ساده می‌ماند و *-er* نمی‌گیرد. *nicht so …
+      wie* می‌گوید که اولی کمتر از دومی است: *Der Bus ist nicht so schnell
+      wie der Zug* یعنی اتوبوس کندتر است. مانند پس از *als*، شخص پس از *wie*
+      در حالت *Nominativ* (حالت فاعلی) می‌آید: *wie ich*، *wie du*. پس برای
+      برابری *so … wie* و برای تفاوت صفت تفضیلی (*Komparativ*) + *als*.
+  de:
+    rule: >
+      Sind zwei Sachen gleich, steht *so* vor dem Adjektiv und *wie* vor der
+      zweiten Sache: *Ich bin so müde wie du.* Mit *genauso* ist es stärker:
+      *Ich bin genauso müde wie du.* Das Adjektiv bleibt in der normalen Form,
+      ohne *-er*. *Nicht so … wie* heißt: Die erste Sache hat weniger davon.
+      *Der Bus ist nicht so schnell wie der Zug* heißt: Der Bus ist
+      langsamer. Wie nach *als* steht eine Person nach *wie* im Nominativ:
+      *wie ich*, *wie du*. Also: gleich mit *so … wie*, anders mit Komparativ
+      + *als*.
+
+table:
+  columns:
+    - { en: Pattern, fa: ساختار, de: Struktur }
+    - { en: Example, fa: مثال, de: Beispiel }
+    - { en: In other words, fa: به بیان دیگر, de: Anders gesagt }
+  rows:
+    - [so … wie, Ich bin so alt wie du., Wir sind gleich alt.]
+    - [genauso … wie, Tom ist genauso groß wie sein Vater., Sie sind genau gleich groß.]
+    - [nicht so … wie, Der Bus ist nicht so schnell wie der Zug., Der Bus ist langsamer als der Zug.]
+    - [Komparativ + als, Der Zug ist schneller als der Bus., Der Bus ist nicht so schnell wie der Zug.]
+
+examples:
+  - de: Ich bin genauso müde wie du.
+    en: I am just as tired as you.
+    fa: من هم درست به اندازهٔ تو خسته‌ام.
+  - de: Meine Schwester ist so groß wie ich.
+    en: My sister is as tall as me.
+    fa: خواهرم هم‌قد من است.
+  - de: Der Bus ist nicht so schnell wie der Zug.
+    en: The bus is not as fast as the train.
+    fa: اتوبوس به سرعت قطار نیست.
+  - de: Heute ist das Wetter genauso schlecht wie gestern.
+    en: Today the weather is just as bad as yesterday.
+    fa: امروز هوا درست به بدی دیروز است.
+  - de: Die Prüfung war nicht so schwer wie gedacht.
+    en: The exam was not as hard as expected.
+    fa: امتحان به آن سختی که فکر می‌کردم نبود.
+  - de: Er spricht so gut Deutsch wie seine Frau.
+    en: He speaks German as well as his wife does.
+    fa: او به خوبی همسرش آلمانی حرف می‌زند.
+  - de: Mein Zimmer ist genauso groß wie das Wohnzimmer.
+    en: My room is just as big as the living room.
+    fa: اتاق من درست به اندازهٔ اتاق نشیمن بزرگ است.
+  - de: Kannst du so schnell wie möglich kommen?
+    en: Can you come as quickly as possible?
+    fa: می‌توانی هر چه زودتر بیایی؟
+
+mistakes:
+  - wrong: Ich bin so alt als du.
+    right: Ich bin so alt wie du.
+    why:
+      en: "With *so* the second word is *wie*. *Als* goes with the *Komparativ*: *älter als du*."
+      fa: "با *so* واژهٔ دوم *wie* است. *als* با صفت تفضیلی می‌آید: *älter als du*."
+      de: "Mit *so* steht *wie*. *Als* steht nach dem Komparativ: *älter als du*."
+  - wrong: Er ist genauso größer wie ich.
+    right: Er ist genauso groß wie ich.
+    why:
+      en: "Between *so* and *wie* the adjective keeps its plain form, with no *-er*."
+      fa: "میان *so* و *wie* صفت به شکل ساده می‌ماند و *-er* نمی‌گیرد."
+      de: "Zwischen *so* und *wie* bleibt das Adjektiv normal, ohne *-er*."
+  - wrong: Sie ist so groß wie mich.
+    right: Sie ist so groß wie ich.
+    why:
+      en: "The person after *wie* is in the *Nominativ*, like the first one: *wie ich*."
+      fa: "شخص پس از *wie* مانند شخص اول در حالت *Nominativ* است: *wie ich*."
+      de: "Die Person nach *wie* steht im Nominativ wie die erste: *wie ich*."
+  - wrong: Der Bus ist so nicht schnell wie der Zug.
+    right: Der Bus ist nicht so schnell wie der Zug.
+    why:
+      en: "*Nicht* stands before *so*: *nicht so schnell wie*."
+      fa: "*nicht* پیش از *so* می‌آید: *nicht so schnell wie*."
+      de: "*Nicht* steht vor *so*: *nicht so schnell wie*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich bin genauso müde ___ du.
+    options: [wie, als, so]
+    answer: wie
+    explanation:
+      en: "*Genauso* goes with *wie*."
+      fa: "*genauso* با *wie* می‌آید."
+      de: "*Genauso* steht mit *wie*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Mein Bruder ist ___ groß wie mein Vater.
+    options: [so, als, mehr]
+    answer: so
+    explanation:
+      en: "The same size: *so groß wie*."
+      fa: "اندازهٔ یکسان: *so groß wie*."
+      de: "Gleich groß: *so groß wie*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der Bus ist nicht so ___ wie der Zug.
+    options: [schnell, schneller, am schnellsten]
+    answer: schnell
+    explanation:
+      en: "Between *so* and *wie* the adjective keeps its plain form."
+      fa: "میان *so* و *wie* صفت به شکل ساده می‌ماند."
+      de: "Zwischen *so* und *wie* bleibt das Adjektiv normal."
+  - id: gap-4
+    type: gap-fill
+    prompt: Lisa ist älter ___ ihr Bruder.
+    options: [als, wie, so]
+    answer: als
+    explanation:
+      en: "*Älter* is a *Komparativ*, so *als* follows."
+      fa: "*älter* صفت تفضیلی است، پس *als* پس از آن می‌آید."
+      de: "*Älter* ist ein Komparativ, also *als*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Komm bitte so schnell wie ___!
+    options: [möglich, möglicher, am möglichsten]
+    answer: möglich
+    explanation:
+      en: "*So schnell wie möglich*: as fast as possible, with the plain form."
+      fa: "*so schnell wie möglich* یعنی «هر چه زودتر»، با شکل سادهٔ صفت."
+      de: "*So schnell wie möglich*, mit der normalen Form."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Tom ist 1,80 m groß, Paul auch. Tom ist ___ Paul.
+    options: [genauso groß wie, größer als, nicht so groß wie]
+    answer: genauso groß wie
+    explanation:
+      en: "They are the same height: *genauso groß wie*."
+      fa: "قد هر دو یکسان است: *genauso groß wie*."
+      de: "Beide sind gleich groß: *genauso groß wie*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Der Zug fährt 200 km/h, das Auto 120 km/h. Das Auto ist ___ der Zug.
+    options: [nicht so schnell wie, genauso schnell wie, schneller als]
+    answer: nicht so schnell wie
+    explanation:
+      en: "The car is slower, so it is *nicht so schnell wie* the train."
+      fa: "ماشین کندتر است، پس *nicht so schnell wie* قطار است."
+      de: "Das Auto ist langsamer, also *nicht so schnell wie* der Zug."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Der Film war nicht so gut wie das Buch. Das heißt:"
+    options: [Das Buch war besser., Der Film war besser., Beide waren gleich gut.]
+    answer: Das Buch war besser.
+    explanation:
+      en: "*Nicht so gut wie* the book: the film was worse, so the book was better."
+      fa: "*nicht so gut wie* کتاب: فیلم بدتر بود، پس کتاب بهتر بود."
+      de: "*Nicht so gut wie* das Buch: Der Film war schlechter, das Buch war besser."
+  - id: true-1
+    type: true-false
+    prompt: Ich bin so alt wie du.
+    answer: true
+    explanation:
+      en: "*So* + plain adjective + *wie* + *Nominativ*. The sentence is correct."
+      fa: "*so* + شکل سادهٔ صفت + *wie* + حالت *Nominativ*. جمله درست است."
+      de: "*So* + Adjektiv + *wie* + Nominativ. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Er ist genauso größer wie sein Vater.
+    answer: false
+    explanation:
+      en: "Between *genauso* and *wie* the adjective keeps its plain form: *genauso groß wie*."
+      fa: "میان *genauso* و *wie* صفت به شکل ساده می‌ماند: *genauso groß wie*."
+      de: "Zwischen *genauso* und *wie* bleibt das Adjektiv normal: *genauso groß wie*."
+  - id: true-3
+    type: true-false
+    prompt: Sie spricht nicht so gut Englisch wie ihr Mann.
+    answer: true
+    explanation:
+      en: "*Nicht so gut … wie*: her husband speaks better. The sentence is correct."
+      fa: "*nicht so gut … wie*: شوهرش بهتر حرف می‌زند. جمله درست است."
+      de: "*Nicht so gut … wie*: Ihr Mann spricht besser. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Heute ist es genauso kalt ___ gestern.
+    answers: [wie]
+    explanation:
+      en: "*Genauso* goes with *wie*."
+      fa: "*genauso* با *wie* می‌آید."
+      de: "*Genauso* steht mit *wie*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Meine Wohnung ist so ___ (groß) wie deine.
+    answers: [groß]
+    explanation:
+      en: "Between *so* and *wie* the adjective keeps its plain form: *so groß wie*."
+      fa: "میان *so* و *wie* صفت به شکل ساده می‌ماند: *so groß wie*."
+      de: "Zwischen *so* und *wie* bleibt das Adjektiv normal: *so groß wie*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Das Essen ist nicht ___ gut wie bei meiner Mutter.
+    answers: [so, genauso, ebenso]
+    explanation:
+      en: "*Nicht so … wie*: the food is less good than at my mother's."
+      fa: "*nicht so … wie*: غذا به خوبی غذای مادرم نیست."
+      de: "*Nicht so … wie*: Das Essen ist schlechter als bei meiner Mutter."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Er ist so alt wie ___ (ich).
+    answers: [ich]
+    explanation:
+      en: "After *wie* the person stays in the *Nominativ*: *wie ich*."
+      fa: "پس از *wie* شخص در حالت *Nominativ* می‌ماند: *wie ich*."
+      de: "Nach *wie* bleibt die Person im Nominativ: *wie ich*."
+  - id: error-1
+    type: find-error
+    prompt: Mein Auto ist so teuer als dein Auto.
+    answer: als
+    explanation:
+      en: "With *so* the second word is *wie*: *so teuer wie*."
+      fa: "با *so* واژهٔ دوم *wie* است: *so teuer wie*."
+      de: "Mit *so* steht *wie*: *so teuer wie*."
+  - id: error-2
+    type: find-error
+    prompt: Paul ist genauso älter wie Tim.
+    answer: älter
+    explanation:
+      en: "Between *genauso* and *wie* the adjective keeps its plain form: *genauso alt wie*."
+      fa: "میان *genauso* و *wie* صفت به شکل ساده می‌ماند: *genauso alt wie*."
+      de: "Zwischen *genauso* und *wie* bleibt das Adjektiv normal: *genauso alt wie*."
+  - id: match-1
+    type: matching
+    answer:
+      - [Ich bin so alt wie du., Wir sind gleich alt.]
+      - [Ich bin nicht so alt wie du., Ich bin jünger als du.]
+      - [Du bist nicht so alt wie ich., Ich bin älter als du.]
+    explanation:
+      en: "*So … wie* is the same; *nicht so … wie* says the first has less: younger, not as old."
+      fa: "*so … wie* یعنی برابر؛ *nicht so … wie* یعنی اولی کمتر دارد: *nicht so alt* یعنی جوان‌تر."
+      de: "*So … wie* heißt gleich. *Nicht so … wie* heißt weniger: nicht so alt, also jünger."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 1de2ce142a7c5bd2
