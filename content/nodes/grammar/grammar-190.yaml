@@ -1,13 +1,365 @@
-# Grammar list row 190.
+# Grammar list row 190. The file format is described in content/README.md.
 id: grammar-190
 kind: grammar
 level: A1
 chapter: a1-numbers-time
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: []
 title:
   en: "Cardinal numbers to one million; prices, quantities"
   fa: "عددهای اصلی تا یک میلیون؛ قیمت و مقدار"
   de: "Zahlen bis eine Million; Preise und Mengen"
+
+explanations:
+  en:
+    rule: >
+      The numbers 0 to 12 have their own words; 13 to 19 add *-zehn*:
+      *dreizehn*, *sechzehn*, *siebzehn*. From 21 on, German says the ones
+      first, then *und*, then the tens: *21* is *einundzwanzig*, *45* is
+      *fünfundvierzig*. Hundreds and thousands join the rest into one word
+      (*dreihundertzwanzig*), but *Million* is a noun: *eine Million*, *zwei
+      Millionen*. German writes a comma before the cents and a point between
+      the thousands (*3,50 €*, *1.000*), and a price is said in euros, then
+      cents: *drei Euro fünfzig*. After a number, *Euro*, *Cent*, *Kilo*,
+      *Gramm* and *Liter* stay singular: *zwei Kilo*, *zehn Euro*.
+  fa:
+    rule: >
+      عددهای ۰ تا ۱۲ هر کدام نام خود را دارند و عددهای ۱۳ تا ۱۹ با *-zehn*
+      ساخته می‌شوند: *dreizehn*، *sechzehn*، *siebzehn*. از ۲۱ به بعد، ترتیب
+      وارونهٔ فارسی است: اول یکان، سپس *und* و در آخر دهگان. پس *21* می‌شود
+      *einundzwanzig* (یعنی «یک و بیست») و *45* می‌شود *fünfundvierzig*. صدها
+      و هزارها با بقیهٔ عدد در یک واژه نوشته می‌شوند (*dreihundertzwanzig*)،
+      ولی *Million* اسم است: *eine Million*، *zwei Millionen*. در آلمانی پیش
+      از سنت ویرگول می‌گذارند و هزارها را با نقطه جدا می‌کنند (*3,50 €*،
+      *1.000*). قیمت را اول با یورو و بعد با سنت می‌گویند: *drei Euro
+      fünfzig*. پس از عدد، *Euro*، *Cent*، *Kilo*، *Gramm* و *Liter* مفرد
+      می‌مانند: *zwei Kilo*، *zehn Euro*.
+  de:
+    rule: >
+      Die Zahlen von 0 bis 12 haben eigene Wörter. Von 13 bis 19 kommt
+      *-zehn* dazu: *dreizehn*, *sechzehn*, *siebzehn*. Ab 21 sagt man zuerst
+      die Einer, dann *und*, dann die Zehner: *einundzwanzig*,
+      *fünfundvierzig*. Hunderter und Tausender schreibt man mit dem Rest in
+      ein Wort: *dreihundertzwanzig*. Aber *Million* ist ein Nomen: *eine
+      Million*, *zwei Millionen*. Vor den Cent steht ein Komma, bei den
+      Tausendern ein Punkt: *3,50 €*, *1.000*. Den Preis sagt man so: *drei
+      Euro fünfzig*. Nach einer Zahl bleiben *Euro*, *Cent*, *Kilo*, *Gramm*
+      und *Liter* im Singular: *zwei Kilo*, *zehn Euro*.
+
+table:
+  columns:
+    - { en: Number, fa: عدد, de: Zahl }
+    - { en: In words, fa: به حروف, de: In Worten }
+  rows:
+    - ["0", "null"]
+    - ["1", "eins (ein Kilo, eine Flasche)"]
+    - ["12", zwölf]
+    - ["13", dreizehn]
+    - ["16", sechzehn]
+    - ["17", siebzehn]
+    - ["20", zwanzig]
+    - ["21", einundzwanzig]
+    - ["30", dreißig]
+    - ["45", fünfundvierzig]
+    - ["100", (ein)hundert]
+    - ["101", hunderteins]
+    - ["320", dreihundertzwanzig]
+    - ["1.000", (ein)tausend]
+    - ["2.500", zweitausendfünfhundert]
+    - ["1.000.000", eine Million]
+    - ["3,50 €", drei Euro fünfzig]
+    - ["0,80 €", achtzig Cent]
+    - ["2 kg", zwei Kilo]
+    - ["500 g", fünfhundert Gramm]
+
+# The digits of 42 and the order in which they are said: the lines cross.
+diagrams:
+  - caption:
+      en: >
+        *42* is said *zweiundvierzig*: first the ones (*zwei*), then *und*,
+        then the tens (*vierzig*). The lines cross because German says the two
+        digits in the opposite order to the one in which they are written.
+      fa: >
+        *42* را *zweiundvierzig* می‌خوانند: اول یکان (*zwei*)، سپس *und* و در
+        آخر دهگان (*vierzig*). خط‌ها یکدیگر را قطع می‌کنند، زیرا آلمانی دو رقم
+        را به ترتیبی وارونهٔ ترتیب نوشتنشان می‌خواند.
+      de: >
+        *42* sagt man *zweiundvierzig*: zuerst die Einer (*zwei*), dann *und*,
+        dann die Zehner (*vierzig*). Die Linien kreuzen sich: Man spricht die
+        zwei Ziffern in der anderen Reihenfolge, als man sie schreibt.
+    svg: |
+      <svg viewBox="0 0 320 186">
+        <!-- the two digits as written -->
+        <rect class="surface" x="95" y="20" width="50" height="50"/>
+        <text class="label" x="120" y="51" text-anchor="middle">4</text>
+        <rect class="surface" x="175" y="20" width="50" height="50"/>
+        <text class="label" x="200" y="51" text-anchor="middle">2</text>
+        <!-- the 2 is said first, the 4 last -->
+        <line class="line" x1="200" y1="72" x2="68" y2="109"/>
+        <polygon class="object" points="64,110 71.5,103.3 73.9,111.9"/>
+        <line class="line" x1="120" y1="72" x2="252" y2="109"/>
+        <polygon class="object" points="256,110 246.1,111.9 248.5,103.3"/>
+        <!-- the words in the order they are said -->
+        <text class="label" x="60" y="134" text-anchor="middle">zwei</text>
+        <text class="note" x="160" y="134" text-anchor="middle">und</text>
+        <text class="label" x="260" y="134" text-anchor="middle">vierzig</text>
+        <text class="label" x="160" y="174" text-anchor="middle">zweiundvierzig</text>
+      </svg>
+
+examples:
+  - de: Das kostet 3,50 Euro.
+    en: That costs 3.50 euros.
+    fa: قیمتش سه یورو و پنجاه سنت است.
+  - de: Ich bin 34 Jahre alt.
+    en: I am 34 years old.
+    fa: من ۳۴ سال دارم.
+  - de: Ein Kilo Tomaten kostet 2,99 €.
+    en: A kilo of tomatoes costs 2.99 euros.
+    fa: یک کیلو گوجه‌فرنگی دو یورو و نود و نه سنت است.
+  - de: Ich nehme zwei Flaschen Wasser und 500 Gramm Käse.
+    en: I'll have two bottles of water and 500 grams of cheese.
+    fa: دو بطری آب و ۵۰۰ گرم پنیر می‌خواهم.
+  - de: Wir brauchen drei Liter Milch.
+    en: We need three litres of milk.
+    fa: سه لیتر شیر لازم داریم.
+  - de: Die Wohnung kostet 850 Euro im Monat.
+    en: The flat costs 850 euros a month.
+    fa: اجارهٔ آپارتمان ماهی ۸۵۰ یورو است.
+  - de: Das Auto kostet 12.500 Euro.
+    en: The car costs 12,500 euros.
+    fa: قیمت این خودرو ۱۲۵۰۰ یورو است.
+  - de: Der Kaffee kostet nur 80 Cent.
+    en: The coffee costs only 80 cents.
+    fa: قهوه فقط ۸۰ سنت است.
+  - de: Unsere Stadt hat 250.000 Einwohner.
+    en: Our town has 250,000 inhabitants.
+    fa: شهر ما ۲۵۰ هزار نفر جمعیت دارد.
+  - de: Hamburg hat fast zwei Millionen Einwohner.
+    en: Hamburg has almost two million inhabitants.
+    fa: هامبورگ نزدیک به دو میلیون نفر جمعیت دارد.
+  - de: Das macht zusammen 17,40 Euro.
+    en: That comes to 17.40 euros altogether.
+    fa: روی هم می‌شود هفده یورو و چهل سنت.
+
+mistakes:
+  - wrong: Ich bin zwanzigvier Jahre alt.
+    right: Ich bin vierundzwanzig Jahre alt.
+    why:
+      en: "From 21 on, the ones come first, then *und*, then the tens: *vierundzwanzig*."
+      fa: "از ۲۱ به بعد، اول یکان می‌آید، سپس *und* و در آخر دهگان: *vierundzwanzig*."
+      de: "Ab 21 kommen zuerst die Einer, dann *und*, dann die Zehner: *vierundzwanzig*."
+  - wrong: Das kostet drei Komma fünfzig Euro.
+    right: Das kostet drei Euro fünfzig.
+    why:
+      en: "A price is said in euros, then cents, without *Komma*: *drei Euro fünfzig*."
+      fa: "قیمت را اول با یورو و بعد با سنت می‌گویند و *Komma* را نمی‌خوانند: *drei Euro fünfzig*."
+      de: "Einen Preis sagt man ohne *Komma*: zuerst die Euro, dann die Cent. *Drei Euro fünfzig*."
+  - wrong: Ich nehme drei Liters Milch.
+    right: Ich nehme drei Liter Milch.
+    why:
+      en: "After a number, *Liter* has no plural ending: *drei Liter*, like *zwei Kilo* and *zehn Euro*."
+      fa: "*Liter* پس از عدد پایانهٔ جمع نمی‌گیرد: *drei Liter*؛ مانند *zwei Kilo* و *zehn Euro*."
+      de: "Nach einer Zahl bekommt *Liter* keine Endung: *drei Liter*, wie *zwei Kilo* und *zehn Euro*."
+  - wrong: Berlin hat fast vier Million Einwohner.
+    right: Berlin hat fast vier Millionen Einwohner.
+    why:
+      en: "*Million* is a noun, and from two on it is plural: *zwei Millionen*, *vier Millionen*."
+      fa: "*Million* اسم است و از دو به بالا جمع می‌شود: *zwei Millionen*، *vier Millionen*."
+      de: "*Million* ist ein Nomen. Ab zwei steht der Plural: *zwei Millionen*, *vier Millionen*."
+  - wrong: Ich möchte eins Kilo Äpfel.
+    right: Ich möchte ein Kilo Äpfel.
+    why:
+      en: "*Eins* is the number on its own. Before a noun it is *ein* or *eine*: *ein Kilo*, *eine Flasche*."
+      fa: "*eins* فقط وقتی به کار می‌رود که عدد تنها بیاید. پیش از اسم، *ein* یا *eine* می‌آید: *ein Kilo*، *eine Flasche*."
+      de: "*Eins* sagt man nur allein. Vor einem Nomen steht *ein* oder *eine*: *ein Kilo*, *eine Flasche*."
+
+# 20 questions.
+questions:
+  - id: choice-1
+    type: multiple-choice
+    prompt: "21: ___"
+    options: [einundzwanzig, zwanzigeins, einszwanzig]
+    answer: einundzwanzig
+    explanation:
+      en: "The ones first, then *und*, then the tens. Before *und*, *eins* is *ein*: *einundzwanzig*."
+      fa: "اول یکان، سپس *und* و بعد دهگان. پیش از *und*، *eins* می‌شود *ein*: *einundzwanzig*."
+      de: "Zuerst die Einer, dann *und*, dann die Zehner. Vor *und* sagt man *ein*: *einundzwanzig*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "36: ___"
+    options: [sechsunddreißig, dreißigsechs, sechsunddreizig]
+    answer: sechsunddreißig
+    explanation:
+      en: "Six, then *und*, then thirty. Thirty is *dreißig*, with *ß* and without *-zig*."
+      fa: "اول شش، سپس *und* و بعد سی. سی در آلمانی *dreißig* است، با *ß* و بدون *-zig*."
+      de: "Zuerst sechs, dann *und*, dann dreißig. *Dreißig* schreibt man mit *ß*, nicht mit *-zig*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "17: ___"
+    options: [siebzehn, siebzig, siebenundzehn]
+    answer: siebzehn
+    explanation:
+      en: "13 to 19 add *-zehn*, and *sieben* loses its *-en*: *siebzehn*. *Siebzig* is 70."
+      fa: "عددهای ۱۳ تا ۱۹ با *-zehn* ساخته می‌شوند و *sieben* بخش *-en* خود را از دست می‌دهد: *siebzehn*. *siebzig* یعنی ۷۰."
+      de: "Von 13 bis 19 kommt *-zehn* dazu, und *sieben* verliert *-en*: *siebzehn*. *Siebzig* ist 70."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "Das kostet 3,50 €. Man sagt: Das kostet ___."
+    options: [drei Euro fünfzig, drei Komma fünfzig Euro, dreihundertfünfzig Euro]
+    answer: drei Euro fünfzig
+    explanation:
+      en: "A price is said in euros, then cents: *drei Euro fünfzig*."
+      fa: "قیمت را اول با یورو و بعد با سنت می‌گویند: *drei Euro fünfzig*."
+      de: "Einen Preis sagt man so: zuerst die Euro, dann die Cent. *Drei Euro fünfzig*."
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir brauchen 500 ___ Käse.
+    options: [Gramm, Gramms]
+    answer: Gramm
+    explanation:
+      en: "After a number, *Gramm* stays singular: *500 Gramm*."
+      fa: "*Gramm* پس از عدد مفرد می‌ماند: *500 Gramm*."
+      de: "Nach einer Zahl bleibt *Gramm* im Singular: *500 Gramm*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich nehme zwei ___ Wasser.
+    options: [Flaschen, Flasche]
+    answer: Flaschen
+    explanation:
+      en: "*Flasche* is not a unit like *Kilo* or *Liter*, so it takes its plural: *zwei Flaschen*."
+      fa: "*Flasche* واحد اندازه‌گیری مانند *Kilo* یا *Liter* نیست، پس جمع می‌شود: *zwei Flaschen*."
+      de: "*Flasche* ist keine Maßeinheit wie *Kilo* oder *Liter*. Darum steht der Plural: *zwei Flaschen*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Buch kostet zehn ___.
+    options: [Euro, Euros]
+    answer: Euro
+    explanation:
+      en: "In a price, *Euro* stays singular: *zehn Euro*."
+      fa: "در قیمت، *Euro* مفرد می‌ماند: *zehn Euro*."
+      de: "Bei einem Preis bleibt *Euro* im Singular: *zehn Euro*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich möchte ___ Kilo Äpfel.
+    options: [ein, eins, eine]
+    answer: ein
+    explanation:
+      en: "Before a noun, *eins* becomes *ein* or *eine*. *Kilo* is a *das* noun: *ein Kilo*."
+      fa: "پیش از اسم، *eins* به *ein* یا *eine* تبدیل می‌شود. *Kilo* اسم خنثی (*das*) است: *ein Kilo*."
+      de: "Vor einem Nomen wird *eins* zu *ein* oder *eine*. *Kilo* hat den Artikel *das*: *ein Kilo*."
+  - id: true-1
+    type: true-false
+    prompt: Unsere Stadt hat zweihunderttausend Einwohner.
+    answer: true
+    explanation:
+      en: "Hundreds and thousands are one word with the rest: *zweihunderttausend*. The sentence is correct."
+      fa: "صدها و هزارها با بقیهٔ عدد در یک واژه نوشته می‌شوند: *zweihunderttausend*. جمله درست است."
+      de: "Hunderter und Tausender schreibt man in ein Wort: *zweihunderttausend*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Mein Opa ist achtzigdrei Jahre alt.
+    answer: false
+    explanation:
+      en: "The ones come first: 83 is *dreiundachtzig*."
+      fa: "یکان اول می‌آید: ۸۳ می‌شود *dreiundachtzig*."
+      de: "Die Einer kommen zuerst: 83 ist *dreiundachtzig*."
+  - id: true-3
+    type: true-false
+    prompt: Hamburg hat fast zwei Million Einwohner.
+    answer: false
+    explanation:
+      en: "From two on, *Million* is plural: *zwei Millionen*."
+      fa: "*Million* از دو به بالا جمع می‌شود: *zwei Millionen*."
+      de: "Ab zwei steht *Million* im Plural: *zwei Millionen*."
+  - id: true-4
+    type: true-false
+    prompt: Der Kaffee kostet zwei Euro achtzig.
+    answer: true
+    explanation:
+      en: "Euros first, then cents: *zwei Euro achtzig* is 2,80 €. The sentence is correct."
+      fa: "اول یورو و بعد سنت: *zwei Euro achtzig* یعنی *2,80 €*. جمله درست است."
+      de: "Zuerst die Euro, dann die Cent: *zwei Euro achtzig* ist *2,80 €*. Der Satz ist richtig."
+  - id: typed-1
+    type: typed-answer
+    prompt: "In Worten: 45"
+    answers: [fünfundvierzig]
+    explanation:
+      en: "Five, then *und*, then forty: *fünfundvierzig*, written as one word."
+      fa: "اول پنج، سپس *und* و بعد چهل: *fünfundvierzig*، در یک واژه."
+      de: "Zuerst fünf, dann *und*, dann vierzig: *fünfundvierzig*, in einem Wort."
+  - id: typed-2
+    type: typed-answer
+    prompt: "In Worten: 99"
+    answers: [neunundneunzig]
+    explanation:
+      en: "Nine, then *und*, then ninety: *neunundneunzig*."
+      fa: "اول نه، سپس *und* و بعد نود: *neunundneunzig*."
+      de: "Zuerst neun, dann *und*, dann neunzig: *neunundneunzig*."
+  - id: typed-3
+    type: typed-answer
+    prompt: "In Worten: 16"
+    answers: [sechzehn]
+    explanation:
+      en: "*Sechs* loses its *-s* before *-zehn*: *sechzehn*."
+      fa: "*sechs* پیش از *-zehn* حرف *-s* خود را از دست می‌دهد: *sechzehn*."
+      de: "*Sechs* verliert vor *-zehn* das *-s*: *sechzehn*."
+  - id: typed-4
+    type: typed-answer
+    prompt: "In Worten: 300"
+    answers: [dreihundert]
+    explanation:
+      en: "Hundreds are one word: *dreihundert*."
+      fa: "صدها در یک واژه نوشته می‌شوند: *dreihundert*."
+      de: "Hunderter schreibt man in ein Wort: *dreihundert*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Berlin hat fast vier ___ (Million) Einwohner.
+    answers: [Millionen]
+    explanation:
+      en: "From two on, *Million* is plural: *vier Millionen*."
+      fa: "*Million* از دو به بالا جمع می‌شود: *vier Millionen*."
+      de: "Ab zwei steht *Million* im Plural: *vier Millionen*."
+  - id: error-1
+    type: find-error
+    prompt: Ich bin zwanzigdrei Jahre alt.
+    answer: zwanzigdrei
+    explanation:
+      en: "The ones come first, then *und*: 23 is *dreiundzwanzig*."
+      fa: "اول یکان می‌آید و سپس *und*: ۲۳ می‌شود *dreiundzwanzig*."
+      de: "Zuerst die Einer, dann *und*: 23 ist *dreiundzwanzig*."
+  - id: error-2
+    type: find-error
+    prompt: Wir kaufen drei Flasche Saft.
+    answer: Flasche
+    explanation:
+      en: "*Flasche* is not a unit like *Liter*, so after *drei* it is plural: *drei Flaschen*."
+      fa: "*Flasche* واحد اندازه‌گیری مانند *Liter* نیست، پس پس از *drei* جمع می‌شود: *drei Flaschen*."
+      de: "*Flasche* ist keine Maßeinheit wie *Liter*. Nach *drei* steht der Plural: *drei Flaschen*."
+  - id: match-1
+    type: matching
+    answer:
+      - ["13", dreizehn]
+      - ["30", dreißig]
+      - ["17", siebzehn]
+      - ["70", siebzig]
+    explanation:
+      en: "*-zehn* is 13 to 19, *-zig* the tens; thirty is the exception, *dreißig*. *Sieben* loses *-en*: *siebzehn*, *siebzig*."
+      fa: "*-zehn* برای ۱۳ تا ۱۹ است و *-zig* برای دهگان؛ سی استثناست: *dreißig*. *sieben* بخش *-en* را از دست می‌دهد: *siebzehn*، *siebzig*."
+      de: "*-zehn* ist für 13 bis 19, *-zig* für die Zehner; nur 30 ist anders: *dreißig*. *Sieben* verliert *-en*: *siebzehn*, *siebzig*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [die Wohnung, kostet, 900 Euro, im Monat]
+      - [die Wohnung, kostet, im Monat, 900 Euro]
+      - [im Monat, kostet, die Wohnung, 900 Euro]
+    explanation:
+      en: "The verb comes second. *Im Monat* can stand first, after the verb or at the end."
+      fa: "فعل در جایگاه دوم می‌آید. *im Monat* می‌تواند در آغاز جمله، پس از فعل یا در پایان بیاید."
+      de: "Das Verb steht an Position 2. *Im Monat* kann am Anfang, nach dem Verb oder am Ende stehen."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 2b1877156ff62b4e
