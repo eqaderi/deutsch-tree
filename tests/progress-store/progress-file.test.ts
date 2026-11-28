@@ -6,6 +6,7 @@ import { expect, test } from 'vitest'
 import {
   applyAttempt,
   applyEnteredScore,
+  chooseVoice,
   emptyProgress,
   enteredScores,
   isDone,
@@ -61,6 +62,15 @@ test('the scores a learner typed in for writing and speaking go into the file an
   expect(isDone(back, 'exam-schreiben-1')).toBe(true)
   expect(isDone(back, 'exam-sprechen-1')).toBe(false)
   expect(back).toEqual(progress)
+})
+
+test('the voice a learner chose goes into the file and comes back from it', () => {
+  const progress = chooseVoice(someProgress(), 'kerstin')
+
+  const file = exportProgress(progress, morning, ABOUT)
+
+  expect(file.text).toContain('  "voice": "kerstin"')
+  expect(imported(file.text).progress.voice).toBe('kerstin')
 })
 
 test('the file says in its name and in its first lines what it is, and when it was made', () => {

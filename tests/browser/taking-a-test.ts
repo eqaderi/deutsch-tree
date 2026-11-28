@@ -81,7 +81,7 @@ export const ENGLISH: TestWords = {
 
 export const PERSIAN: TestWords = {
   language: 'fa',
-  questionOf: (place, total) => `سؤال ${persianDigits(place)} از ${persianDigits(total)}`,
+  questionOf: (place, total) => `پرسش ${persianDigits(place)} از ${persianDigits(total)}`,
   next: 'بعدی',
   checkAnswers: 'بررسی پاسخ‌ها',
   tryAgain: 'تلاش دوباره',

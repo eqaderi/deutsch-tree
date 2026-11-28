@@ -22,7 +22,7 @@ machine `pnpm exec playwright install chromium` for the browser tests.
 | `pnpm test:unit` | All Vitest tests (`tests/**/*.test.ts`). `pnpm test:pipeline` runs only the content pipeline tests. |
 | `pnpm test:browser` | Playwright journeys (`tests/browser/*.spec.ts`) against the built site with fixture content. |
 | `pnpm vocabulary:scope --lists <folder>` | Writes the vocabulary scope list from the extracted word lists, which are not in the repository. `pnpm vocabulary:approval` then rewrites the lists in `docs/approvals/vocabulary-themes.md`. See [content/README.md](content/README.md), "The vocabulary scope list". |
-| `pnpm audio:generate --voices <folder>` | Says every German example and word of the published nodes with Piper and stores it as `content/audio/<key>.mp3`. Says only what is new or changed. Needs Piper and ffmpeg on this computer; nothing else does. See "Audio" below. |
+| `pnpm audio:generate --voices <folder>` | Says every German example and word of the published nodes with Piper, in both voices a learner may choose, and stores it as `content/audio/<key>.mp3`. Says only what is new or changed. Needs Piper and ffmpeg on this computer; nothing else does. See "Audio" below. |
 | `pnpm pack:build` | Builds a private pack from a book the learner owns. Options and format: [docs/private-packs.md](docs/private-packs.md). |
 | `pnpm share` | Builds the site and writes the folder that runs the app at home, with the packs and the start files (default `share/`, `--out <folder>`). See [Running the app at home](#running-the-app-at-home). |
 | `pnpm dev` | Dev server on the real content. Content files reload on save. |
@@ -40,16 +40,16 @@ ending, because the pipeline runs directly in Node.
 |---|---|
 | `content/` | The real content: one YAML file per node under `content/nodes/`, the chapters that group them in `content/chapters.yaml`, the original mock exams in `content/mock-exams/`, and the official mock exams the app links to in `content/official-mock-exams.yaml`. |
 | `src/content-model/` | The schema of a node file and the types of the compiled bundle. Everything else depends on it. |
-| `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state. |
+| `src/content-pipeline/` | Node files in, compiled bundle and report out. `cli.ts` is the command; `vite-plugin.ts` runs it inside the build and the dev server. `checks/` holds one file per rule that the schema cannot state; `persian-texts.ts` lists the Persian texts of a node and holds every Persian rule for one text (`persianProblem`). |
 | `src/search/` | Search as pure functions: the node summaries and the search data of one language in, the nodes found for a query out. It decides how typed text meets content (umlauts, capitals, Persian letter forms). No interface, no loading. |
 | `src/vocabulary-scope/` | Which words are in scope: the extracted word lists in, the scope list in `content/vocabulary/` out. `SCOPE_RULE` is the one setting that decides it. `approval.ts` writes the lists of the vocabulary approval document. |
 | `src/learning-engine/` | The rules of learning as pure functions: draw an attempt, check answers, score, apply a result to progress, name the milestones reached. No interface, no storage; randomness is passed in. |
 | `src/assistant-grading/` | Writing and speaking, which the app cannot score: the official marking criteria (`criteria.ts`), the task as the learner reads it, the prompt to paste into an AI assistant, and the rule for the score out of 100. Pure functions on a task; the app calls no AI service. |
-| `src/audio/` | German in the compiled content to the audio files that say it: `speakable` writes numbers as words, `spoken` gives a piece of German its key, `spokenItems` finds everything a page can play, `generateAudio` makes the missing files with a voice engine passed in (`piper.ts`), and `cli.ts` is the command. The voices are in `src/content-model/audio.ts`. |
+| `src/audio/` | German in the compiled content to the audio files that say it: `speakable` writes numbers as words, `spoken` gives a piece of German one person says its key in each voice a learner may choose and `spokenBy` a dialogue line its key in its speaker's voice, `spokenItems` finds everything a page can play, `generateAudio` makes the missing files with a voice engine passed in (`piper.ts`), and `cli.ts` is the command. The voices are in `src/content-model/audio.ts`. |
 | `src/anki-export/` | Vocabulary words in, the text of a file that Anki imports out. Pure functions; the app saves the file in the browser. |
 | `src/progress-store/` | Keeps progress in browser storage, with a version number, and writes and reads the progress file a learner exports. It reads every older version and refuses a newer one. It only stores; the learning engine decides how progress changes. |
 | `src/app/` | App shell: routes, tree, node page, test, backup, search page, overview page. `styles.css` holds the design tokens. `progress.ts` gives components the progress. |
-| `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. |
+| `src/language/` | Interface strings in English, Persian and simple German, the language in use and the page direction. Components take every word from here. `persian-spelling.ts` holds the spelling rules of `content/persian-style.md` that a program can check, for content and strings alike. |
 | `tests/fixtures/content/` | Small invented content that tests run on. Tests of code never depend on the real content. |
 | `tests/real-content/` | The one exception: the real content held against facts of the approved lists that no check can know, such as "the grammar list has 212 rows" or "the exam has 15 parts" or "every vocabulary node holds words of its own level". |
 | `tests/content-pipeline/` | Seam 1: run the pipeline on fixture content and assert on the report. |
@@ -65,7 +65,7 @@ ending, because the pipeline runs directly in Node.
 | `src/pack-builder/` | A learner's own exam book in, a private pack out. `cli.ts` is the command; `vite-plugin.ts` keeps packs out of the site build. The pack format's schema is `src/content-model/pack.ts`. |
 | `tests/pack-builder/` | Seam 4: build a pack from a synthetic book (`fixture.ts`) and assert on the pack. |
 | `src/pack-loader/` | Finds the private packs in the browser (`private/packs.json`, then each `pack.json`) and hands them to the private exam view (`#/packs`, `src/app/PacksPage.tsx` and `PackExamPage.tsx`). How detection works and what a start file must serve: [docs/private-packs.md](docs/private-packs.md), "Finding packs in the app". |
-| `src/start-files/` | The folder that runs the app at home: `index.ts` copies the built site and the packs and adds the templates in `folder/` (the two start files, their servers in `folder/server/`, the learner's instructions in English and Persian). `cli.ts` is `pnpm share`. |
+| `src/start-files/` | The folder that runs the app at home: `index.ts` copies the built site and the packs and adds the templates in `folder/` (the two start files, their servers in `folder/server/`, the learner's instructions in English, Persian and German). `cli.ts` is `pnpm share`. |
 | `tests/start-files/` | The two servers run on a temporary folder (`server.ts` starts them as the start files do), and the folder that `pnpm share` writes. The browser journey `tests/browser/start-files.spec.ts` runs the app from that folder with the Mac start file. |
 
 The app never reads node files. It fetches files that the pipeline writes at
@@ -199,6 +199,10 @@ GitHub Pages and from a local folder.
   marked right to left) and the example on the back. Each note has a GUID
   made from its word, so an updated file updates the cards instead of
   copying them. The top of that file says why each header is there.
+  Anki costs money on the iPhone, so the panel's text (`ankiText` in the
+  string files) and the start-folder instructions give the free route:
+  Anki on a Mac or Windows computer, sync to a free AnkiWeb account, then
+  study in the phone's browser at ankiweb.net (on Android, AnkiDroid).
 - Whether a node has a pool or is graded by an assistant: `hasPool` and
   `isAssistantGraded` in `src/content-model/scoring.ts`; which page it has:
   `isGrammar`, `isVocabulary`, `isPhrases`, `hasPractice`, `hasExamTask`. Use these
@@ -304,7 +308,9 @@ The rules are in the learning engine, like every rule. The tree
   (`src/app/NodeRow.tsx`).
 - A setting of the device that is not progress (the dismissed first-visit
   steps in `src/app/firstVisit.ts`, the language) has its own storage key
-  and stays out of the progress store.
+  and stays out of the progress store. The voice is the exception (ticket
+  #41): it is `voice` in the progress (saved since version 4), so that an
+  export carries it to another device; `hasProgress` does not count it.
 - The tree has no streaks, points, reminders or daily goals, and a browser
   test keeps it so.
 
@@ -420,12 +426,15 @@ The rules are in the learning engine, like every rule. The tree
   `node.title[language]` for content, `strings.number(7)` for a number shown
   on its own (Persian digits in Persian).
 - To add an interface string, add it to `src/language/strings.ts` (English),
-  `strings.fa.ts` (Persian) and `strings.de.ts` (simple German, about A2
-  level). `pnpm check` fails until all three have it. A string with a number
+  `strings.fa.ts` (Persian, written to
+  [content/persian-style.md](content/persian-style.md)) and `strings.de.ts`
+  (simple German, about A2 level). `pnpm check` fails until all three have it. A string with a number
   in it is a function, so Persian can write its own digits.
 - Persian pages are right to left. Use logical CSS properties, and put every
   piece of German in `<German>` or `<RichText>` (`src/app/German.tsx`) so it
-  still reads left to right.
+  still reads left to right. Inside a Persian string, Latin text (German, a name, a
+  command) goes in `german()` in `strings.fa.ts`; `pnpm test:unit` rejects
+  Latin letters or digits outside it.
 
 ## Writing tests
 
@@ -493,11 +502,21 @@ The rules are in the learning engine, like every rule. The tree
   passed as `--speaker`), for the third speaker of Hören Teil 4: a woman's
   voice clearly higher than Kerstin's. They are `VOICES` in
   `src/content-model/audio.ts`. The format is MP3, 48 kbit/s, mono.
+- **The voice a learner chooses** (ticket #41): Thorsten (male, the main
+  voice and the default) or Kerstin (female), for everything one person
+  says. `CHOOSABLE_VOICES` in `src/content-model/audio.ts`; the choice is
+  `voice` in the progress, set by `chooseVoice` from the switch at the foot
+  of every page (`src/app/VoiceSwitch.tsx`). A line of a dialogue keeps its
+  speaker's voice whatever the learner chose.
 - The pipeline attaches `audio` (a `Spoken`: `key`, `voice`, `text`) to every
   piece of German that has a play button: each example of a grammar node and
   of a phrase, the right sentence of each common mistake (never the wrong
   one), each phrase itself, and each vocabulary word (with its article) and
-  its example.
+  its example. These are said by one person, so `spoken(text)` also gives
+  them `byVoice`, the key of the text in each voice a learner may choose;
+  `key` and `voice` are the main voice's. A play button plays
+  `keyFor(audio, voice)`: the chosen voice's file, or for a dialogue line
+  (no `byVoice`) its speaker's.
   `text` is what the voice says: `speakable` in `src/audio/speakable.ts`
   writes numbers, times, dates, years and amounts as words, because Piper
   misreads digits ("14:35 Uhr").
@@ -507,8 +526,9 @@ The rules are in the learning engine, like every rule. The tree
   Piper, the same words in the same voice are one file wherever they stand,
   and a changed text gets a new file. The file is `content/audio/<key>.mp3`,
   in the site `content/audio/<key>.mp3`.
-- The content check fails for a published node whose spoken item has no file,
-  and for spoken text that still holds a digit (`src/content-pipeline/audio.ts`).
+- The content check fails for a published node whose spoken item has no file
+  in one of its voices (both chosen voices for what one person says, the
+  speaker's voice for a dialogue line), and for spoken text that still holds a digit (`src/content-pipeline/audio.ts`).
   Neither needs Piper, and nor does `pnpm check` or CI. A "coming soon" node
   needs no audio. The build copies only the files that published nodes play.
 - **Generating.** Piper (`piper-tts`) and the voice files
@@ -529,6 +549,12 @@ The rules are in the learning engine, like every rule. The tree
   changed. Commit the MP3 files with the content change. Never commit a WAV
   (`.gitignore` ignores them), and keep full regenerations rare: each adds
   the whole audio to the history again.
+- **Size** (measured on ticket #41, on the 8 published sample nodes): what
+  one person says is 88 files, 0.86 MB in Thorsten and 0.98 MB in Kerstin
+  (about 10 and 11 KB a file, so Kerstin is about 14% larger); the 19
+  dialogue lines are 1.28 MB. Ticket #5 projected about 200 MB for one voice;
+  with the second voice the whole tree stays under about 430 MB (43%),
+  under half of GitHub Pages' 1 GB.
 - **Fixture content** gets a silent file per item, without Piper:
   `pnpm audio:generate --content tests/fixtures/content --silent`. A test
   that changes spoken German of a fixture node compiles with
@@ -540,7 +566,7 @@ The rules are in the learning engine, like every rule. The tree
 - **A second voice: the lines of a conversation.** A text to hear in a
   listening part names its speakers, each with a voice (`voiceSchema` from
   `src/content-model/audio.ts`: `voice: kerstin`), and `compileTaskText`
-  gives each line `audio: spoken(line.text, <its speaker's voice>)`. Anything
+  gives each line `audio: spokenBy(line.text, <its speaker's voice>)`, with no `byVoice`. Anything
   in a compiled node that carries `audio` is found by `spokenItems`, so the
   command generates it, the check asks for its file and the build ships it
   with no other change; a mock exam's lines are found the same way
@@ -561,7 +587,7 @@ control because it holds the packs):
 |---|---|
 | `Start on Mac.command` | Double-click on a Mac. Runs `server/serve.pl` with `/usr/bin/perl`, which ships with macOS. |
 | `Start on Windows.bat` | Double-click on Windows 10 or 11. Runs `server/serve.ps1` with Windows PowerShell 5.1, which ships with Windows, without administrator rights. |
-| `instructions-en.html`, `instructions-fa.html` | The learner's instructions: starting, first-time prompts, the phone, progress, passing the folder on. |
+| `instructions-en.html`, `instructions-fa.html`, `instructions-de.html` | The learner's instructions: starting, first-time prompts, the phone, Anki on the phone for free, progress, passing the folder on. |
 | `app/` | The built site, with the packs in `app/private/`. A pack copied there by hand is found at the next start. |
 
 The decision for a local server, and the trial of the candidate servers, are on issue #4. Both

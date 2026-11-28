@@ -77,9 +77,9 @@ test('the page of an exam part is there in Persian and in simple German too', as
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('خواندن آزمایشی، بخش ۱')
   await expect(page.getByRole('main').getByRole('heading', { level: 2 })).toHaveText([
-    'این بخش چه می‌خواهد',
-    'نمره چطور حساب می‌شود',
-    'چطور این بخش را حل کنید',
+    'آنچه این بخش می‌خواهد',
+    'نمره‌دهی',
+    'روش حل این بخش',
     'تمرین',
   ])
   await expect(page.getByRole('main').getByText('خواندن', { exact: true })).toBeVisible()
@@ -88,7 +88,7 @@ test('the page of an exam part is there in Persian and in simple German too', as
   // The exam's own words stay German and read left to right.
   const german = page.getByRole('main').locator('[lang="de"]').filter({ hasText: 'Richtig' })
   await expect(german).toHaveAttribute('dir', 'ltr')
-  await expect(page.getByRole('list', { name: 'چطور این بخش را حل کنید' }).getByRole('listitem')).toHaveText([
+  await expect(page.getByRole('list', { name: 'روش حل این بخش' }).getByRole('listitem')).toHaveText([
     'اول شش جمله را بخوانید.',
     'بعد هر جمله را در متن پیدا کنید.',
   ])
@@ -261,7 +261,7 @@ test('in Persian the practice task keeps its German text left to right, and the 
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('تمرین: خواندن آزمایشی، بخش ۱')
   await expect(page.getByRole('article')).toHaveAttribute('dir', 'ltr')
-  expect((await taskOnScreen(page, 'سؤال‌ها')).id).toBe(task.id)
+  expect((await taskOnScreen(page, 'پرسش‌ها')).id).toBe(task.id)
   await expect(page.getByText('۶ از ۶ پاسخ داده شده')).toBeVisible()
   expect(await sidewaysScroll(page)).toBe(0)
 
@@ -270,7 +270,7 @@ test('in Persian the practice task keeps its German text left to right, and the 
   await expect(page.getByRole('heading', { name: 'هنوز قبول نشده‌اید' })).toBeVisible()
   await expect(page.getByRole('main')).toContainText('۵ از ۶ درست')
   const results = itemsOnScreen(page, 'پاسخ‌های شما')
-  await expect(results.nth(0)).toContainText('پاسخ شما درست نیست')
+  await expect(results.nth(0)).toContainText('پاسخ شما نادرست است')
   await expect(results.nth(0)).toContainText(asShown(task.items[0]?.explanation.fa ?? ''))
   await expect(results.nth(1)).toContainText('پاسخ شما درست است')
   expect(await sidewaysScroll(page)).toBe(0)

@@ -173,6 +173,24 @@ test('German in the Persian of a note stands in asterisks, as in every other Per
   ])
 })
 
+test('the Persian of a note is held to the spelling of every Persian text', async () => {
+  const content = await fixtureContentWith({
+    [EXAMS]: changeExams((exams) => {
+      exams[1].links[1].note = { en: 'With the recordings.', fa: 'همراه با فايل‌های صوتی است.', de: 'Mit Hörtexten.' }
+    }),
+  })
+
+  const { report } = await compileContent(content)
+
+  expect(report.errors).toEqual([
+    {
+      file: EXAMS,
+      where: '[1].links[1].note.fa',
+      message: 'Arabic letter "ي" in Persian text: write the Persian "ی"',
+    },
+  ])
+})
+
 test('the pages of the candidate sheets run from a first page to a later last page', async () => {
   const content = await fixtureContentWith({
     [EXAMS]: changeExams((exams) => {

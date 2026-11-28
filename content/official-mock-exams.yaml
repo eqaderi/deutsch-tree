@@ -31,7 +31,7 @@
       url: https://bfu.goethe.de/b1_mod/
       note:
         en: The same exam to work through online, made for screen readers. The listening recordings play in the page.
-        fa: همین امتحان به شکل آنلاین، ساخته‌شده برای صفحه‌خوان‌ها. فایل‌های شنیداری در خود صفحه پخش می‌شوند.
+        fa: همین امتحان به‌صورت آنلاین، مناسب برای صفحه‌خوان‌ها. فایل‌های صوتی در خود صفحه پخش می‌شوند.
         de: Die gleiche Prüfung online, auch für Screenreader. Die Hörtexte kannst du auf der Seite hören.
       checked: 2026-11-26
     - kind: audio
@@ -42,9 +42,9 @@
           with its four recordings. The file also holds the answers. Do not take *ZDÖ B1*; that
           is another exam.
         fa: >
-          در آن صفحه، زیر *Stufe B1*، فایل *Modellsatz ÖSD Zertifikat B1* را دانلود کنید: همین
-          امتحان با چهار فایل شنیداری آن. پاسخ‌ها هم در همین فایل هستند. *ZDÖ B1* را نگیرید؛
-          آن امتحان دیگری است.
+          در آن صفحه، زیر *Stufe B1*، فایل *Modellsatz ÖSD Zertifikat B1* را دانلود کنید که همین
+          امتحان را با چهار فایل صوتی آن دارد. پاسخ‌ها هم در همین فایل آمده‌اند. *ZDÖ B1* را دانلود
+          نکنید؛ آن امتحان دیگری است.
         de: >
           Such auf der Seite unter *Stufe B1* und lade *Modellsatz ÖSD Zertifikat B1* herunter.
           Das ist die gleiche Prüfung mit vier Hörtexten. In der Datei sind auch die Lösungen.
@@ -68,7 +68,7 @@
       url: https://www.goethe.de/de/spr/prf/ueb/pb1.html
       note:
         en: Look for the recordings of this set on the practice page of the Goethe-Institut for B1.
-        fa: فایل‌های شنیداری این مجموعه را در صفحهٔ تمرین *Goethe-Institut* برای *B1* پیدا کنید.
+        fa: فایل‌های صوتی این مجموعه را در صفحهٔ تمرین *Goethe-Institut* برای *B1* می‌یابید.
         de: Such die Hörtexte zu diesem Satz auf der Übungsseite vom Goethe-Institut für B1.
 
 - id: goethe-b1-modellsatz-jugendliche
@@ -89,7 +89,7 @@
           the same exam with its recording. The file also holds the answers.
         fa: >
           در آن صفحه، زیر *Stufe B1*، فایل *Modellsatz ÖSD Zertifikat B1 / Jugendliche* را
-          دانلود کنید: همین امتحان با فایل شنیداری آن. پاسخ‌ها هم در همین فایل هستند.
+          دانلود کنید که همین امتحان را با فایل صوتی آن دارد. پاسخ‌ها هم در همین فایل آمده‌اند.
         de: >
           Such auf der Seite unter *Stufe B1* und lade *Modellsatz ÖSD Zertifikat B1 / Jugendliche*
           herunter. Das ist die gleiche Prüfung mit dem Hörtext. In der Datei sind auch die Lösungen.
@@ -110,5 +110,5 @@
       url: https://www.goethe.de/de/spr/prf/ueb/pb1.html
       note:
         en: Look for the recordings of this set on the practice page of the Goethe-Institut for B1.
-        fa: فایل‌های شنیداری این مجموعه را در صفحهٔ تمرین *Goethe-Institut* برای *B1* پیدا کنید.
+        fa: فایل‌های صوتی این مجموعه را در صفحهٔ تمرین *Goethe-Institut* برای *B1* می‌یابید.
         de: Such die Hörtexte zu diesem Satz auf der Übungsseite vom Goethe-Institut für B1.

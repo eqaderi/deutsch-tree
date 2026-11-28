@@ -9,6 +9,7 @@
 - Writing and speaking nodes have a task and no questions, so no pool and no review: `content/README.md`, "A published writing or speaking node". The official marking criteria live in `src/assistant-grading/criteria.ts` and stay word for word as printed; the prompt and the score rule are in the same folder.
 - Every screen follows `docs/design-direction.md`. Colours and sizes come from the tokens in `src/app/styles.css`; every interface word comes from `src/language/strings.ts`.
 - A new interface string goes into `src/language/strings.ts`, `strings.fa.ts` and `strings.de.ts`; `pnpm check` fails until all three have it. Never write wording, or a bare number, in a component. See `README.md`, "Languages".
+- Every Persian text, in a node, a mock exam, `chapters.yaml` or `strings.fa.ts`, follows `content/persian-style.md`: register, the term for each grammar word, spelling, and German kept left to right. Read it before writing Persian.
 - A new kind of node, or a new section of a node, that learners should find by search adds its passages in `src/content-pipeline/search-data.ts`. Text that only one page needs never goes into `content/index.json`. See `README.md`, "Search and the overview page".
 - Never commit `research/`, `private/` or `share/`.
 - The start files and their servers (`src/start-files/folder/`) use only what macOS and Windows ship with: `/usr/bin/perl` with core modules, and Windows PowerShell 5.1 in ASCII. No other runtime, no installs. See `README.md`, "Running the app at home".

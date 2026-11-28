@@ -6,14 +6,17 @@
  *
  * `PlayButton` takes the `audio` that the content pipeline attached to a
  * piece of German (`Spoken`): an example, a word, a line of a conversation.
+ * What one person says plays in the voice the learner chose (`voice` in the
+ * progress, `VoiceSwitch.tsx`); a line of a conversation in its speaker's.
  * `PlayRecording` plays the lines of a heard text one after the other, each
  * in its speaker's voice, as the recording of a listening task.
  */
 import { useEffect, useRef, useState } from 'react'
-import { audioFile, type Spoken } from '../content-model/audio.ts'
+import { audioFile, keyFor, type Spoken } from '../content-model/audio.ts'
 import type { HeardExample, HeardLine } from '../content-model/index.ts'
 import { useLanguage } from '../language/index.tsx'
 import { German } from './German.tsx'
+import { useProgress } from './progress.ts'
 
 type State = 'idle' | 'playing' | 'failed'
 
@@ -29,6 +32,7 @@ let playing: { stop: () => void } | null = null
  */
 function useSound(): { state: State; play: (pieces: readonly Spoken[]) => void; stop: () => void } {
   const [state, setState] = useState<State>('idle')
+  const { voice } = useProgress()
   const stopRef = useRef<(() => void) | null>(null)
 
   // A page that is left stops what it plays.
@@ -61,7 +65,7 @@ function useSound(): { state: State; play: (pieces: readonly Spoken[]) => void; 
         self.stop()
         return
       }
-      sound.src = new URL(`content/${audioFile(piece.key)}`, document.baseURI).href
+      sound.src = new URL(`content/${audioFile(keyFor(piece, voice))}`, document.baseURI).href
       sound.play().catch(fail)
     }
     let place = 0

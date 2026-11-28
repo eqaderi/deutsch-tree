@@ -7,7 +7,9 @@
  * - Spoken German must not hold a number that was not written as words: the
  *   voice misreads digits.
  * - Every spoken item of a published node must have its file,
- *   `audio/<key>.mp3`. `pnpm audio:generate` makes the missing ones.
+ *   `audio/<key>.mp3`, in every voice it is said in: what one person says
+ *   in each voice the learner may choose, a line of a dialogue in its
+ *   speaker's. `pnpm audio:generate` makes the missing ones.
  *
  * Neither rule needs Piper: the key is a hash of the text and the voice.
  */
@@ -29,15 +31,24 @@ export function audioProblems(
   present: ReadonlySet<string> | null,
 ): ContentProblem[] {
   const problems: ContentProblem[] = []
+  // A text said in two voices holds its number in both, and is named once.
+  const misread = new Set<string>()
   for (const item of spokenItems(nodes)) {
     const at = { file: fileOf.get(item.node) ?? '', node: item.node, where: item.where }
     const number = item.text.match(/\S*\d\S*/)?.[0].replace(/[.,!?;:]+$/, '')
     if (number) {
-      problems.push({ ...at, message: `holds a number that the voice would misread ("${number}"): write it in words` })
+      const place = `${item.node}\n${item.where}`
+      if (!misread.has(place)) {
+        problems.push({
+          ...at,
+          message: `holds a number that the voice would misread ("${number}"): write it in words`,
+        })
+      }
+      misread.add(place)
     } else if (present && !present.has(item.key)) {
       problems.push({
         ...at,
-        message: `has no audio for "${item.text}" (${audioFile(item.key)}): run pnpm audio:generate`,
+        message: `has no audio for "${item.text}" in the voice ${item.voice} (${audioFile(item.key)}): run pnpm audio:generate`,
       })
     }
   }

@@ -34,6 +34,11 @@ section below names a complete example of it; for grammar it is
    asterisks, also a level such as `*B1*`. Without them a Persian page shows
    the German in the wrong order (`-st` as `st-`).
 
+Every Persian text follows the Persian style guide,
+[persian-style.md](persian-style.md): formal standard written Persian, natural
+sentences rather than translated ones, one fixed term for each grammar term,
+and its spelling. Read it before you write or change any Persian.
+
 ## Every node
 
 ```yaml
@@ -354,11 +359,37 @@ sprechen:                # Sprechen, Teil 1 to Teil 3, in order
 ## A published grammar node
 
 Add the sections below. The page shows them in this fixed order: rule,
-diagram, table, examples, common mistakes, test. A node needs a table, a
+table, diagrams, examples, common mistakes, test, on a phone as on a
+computer, so the forms come right after the rule. A node needs a table, a
 diagram or both: a table for forms (endings, articles), a diagram for a
 structure that is hard to picture from text (positions, word order, cases).
 The diagram is written as described in "Diagrams" below. A complete example
 with both is `content/nodes/grammar/grammar-128.yaml`, the grammar sample.
+
+A topic that changes articles or endings (cases, prepositions, adjective
+endings, pronouns) has a table that shows the change from the Nominativ
+form: one row each for masculine, feminine, neuter and plural (der, die,
+das, die), with the changed form beside it (dem, der, dem, den for the
+Dativ), the form with *ein* where it applies (*–* in a row without one), and
+a short example. The first column is headed Nominativ, the next one names
+the form it changes to. A heading marks German in asterisks, as a title does,
+and in Persian a case is named with «حالت» (`content/persian-style.md`, §3
+and §5): «حالت *Dativ*», «با *ein*». The table of `grammar-128` is this
+table for the Dativ:
+
+```yaml
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Schrank, dem Schrank, einem Schrank, neben dem Schrank]
+    - [die Tür, der Tür, einer Tür, hinter der Tür]
+    - [das Regal, dem Regal, einem Regal, auf dem Regal]
+    - [die Bücher (Plural), den Büchern, –, zwischen den Büchern]
+```
 
 ```yaml
 status: published
@@ -380,7 +411,7 @@ diagrams:                # optional; see "Diagrams"
       <svg viewBox="0 0 320 200"> … </svg>
 
 table:                   # optional when the node has a diagram
-  columns:               # headings, in three languages; plain text, no asterisks
+  columns:               # headings, in three languages; German in asterisks, as in a title
     - { en: Person, fa: شخص, de: Person }
     - { en: Ending, fa: پایانه, de: Endung }
   rows:                  # cells are German; every row has one cell per column
@@ -859,8 +890,10 @@ publish it.
 
 Every German example of a published node can be heard, and so can every
 vocabulary word (with its article) and its example sentence, and every line
-of a listening part, in the voice of its speaker. The audio is
-made from the text by one command, in the voice chosen on ticket #5:
+of a listening part, in the voice of its speaker. What one person says
+(examples, words, phrases, mistakes) is made in both voices a learner may
+choose, Thorsten and Kerstin (ticket #41); a line of a dialogue only in its
+speaker's voice. The audio is made from the text by one command:
 
 ```sh
 pnpm audio:generate --voices <folder of the Piper voice files> --piper <path to piper>
@@ -869,10 +902,18 @@ pnpm audio:generate --voices <folder of the Piper voice files> --piper <path to 
 Run it after changing or adding German that is spoken, and commit the files it
 writes in `content/audio/` with the change. It says only what is new or
 changed and removes what is no longer needed. `pnpm content:check` names
-every spoken item of a published node whose file is missing. Piper and its
+every spoken item of a published node whose file is missing, with the voice
+it is missing in. Piper and its
 voice files are not in the repository; how to install them and the options of
 the command are in the main README, "Audio".
 
+- A line of a listening text (a Hören part of an exam-part node or of a
+  mock exam) keeps the voice of its named speaker, also in a text with one
+  speaker, and whatever voice the learner chose: the recordings of the exam
+  have fixed voices, and the practice sounds like them. Only German without a
+  named speaker (examples, words, phrases, mistakes) follows the learner's
+  choice. A chapter or mock-exam ticket that adds listening texts follows
+  this rule.
 - Numbers are spoken as words: `85 Jahre`, `14:35 Uhr`, `am 3. Mai`, `1990`,
   `3,50 €` and `20 %` need nothing. A number in another form (`3.5.2025`) is
   an error that asks you to write it in words.
@@ -943,11 +984,17 @@ A key that the schema does not know is an error, so a misspelt key is caught.
 - A node without a chapter, with a chapter that `chapters.yaml` does not
   have, or of another level or kind than its chapter. A chapter name that
   lacks a language.
-- Persian text (a title, a chapter name, a purpose, an explanation, the
-  caption of a diagram, the meaning of a phrase, the reason of a mistake, of a question or of an item)
+- Persian text (a title, a chapter name, a purpose, an explanation, a
+  heading of a table, the caption of a diagram, the meaning of a phrase, the
+  reason of a mistake, of a question or of an item)
   with a Latin letter
   outside asterisks. The Persian meaning of a vocabulary word is plain text
   and may hold no Latin letter at all.
+- Persian text (the same texts, the meaning of a word, and the Persian of a
+  mock exam or of an official mock exam's note) spelt against
+  [persian-style.md](persian-style.md): an Arabic ي, ى or ك, a Latin or
+  Arabic digit outside asterisks, or a space instead of a half-space after
+  «می» or «نمی» or before «ها».
 - Text for the learner that lacks one of the three languages.
 - A question with no correct answer, or with two where one is required.
 - A wrong word that stands in its sentence twice, a right order that is not

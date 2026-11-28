@@ -12,6 +12,8 @@
  * `--piper` (or PIPER) is the piper command, `--ffmpeg` (or FFMPEG) the ffmpeg
  * command; both default to the name on the PATH.
  *
+ * What one person says is said in both voices a learner may choose (Thorsten
+ * and Kerstin); a line of a dialogue in its speaker's voice only.
  * Only what is new or changed is said; a file that no content needs any more
  * is removed. Exits with status 1 when the content has errors.
  */

@@ -4,7 +4,7 @@
  *
  *   <out>/Start on Mac.command     runs server/serve.pl with the Perl of macOS
  *   <out>/Start on Windows.bat     runs server/serve.ps1 with Windows PowerShell
- *   <out>/instructions-en.html, instructions-fa.html
+ *   <out>/instructions-en.html, instructions-fa.html, instructions-de.html
  *   <out>/server/                  the two servers
  *   <out>/app/                     the built site (dist/), with private/ beside index.html
  *

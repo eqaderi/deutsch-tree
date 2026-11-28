@@ -41,25 +41,25 @@ explanations:
       - "Mark each answer at once and keep listening. The exam plays the conversation only once, so play it here only once too before you check your answers."
   fa:
     task: >
-      یک گفت‌وگوی روزمره میان دو نفر را می‌شنوید که همدیگر را می‌شناسند، یک زن
-      و یک مرد: در قطار، در کافه، در خیابان. گفت‌وگو را یک بار می‌شنوید. پیش از
-      شروع آن ۶۰ ثانیه وقت دارید تا هفت جمله را بخوانید. بعد دربارهٔ هر جمله
-      تصمیم می‌گیرید که طبق گفت‌وگو درست است (*Richtig*) یا غلط (*Falsch*).
+      گفت‌وگویی روزمره میان دو آشنا را می‌شنوید، یک زن و یک مرد، مثلاً در
+      قطار، در کافه یا در خیابان. گفت‌وگو فقط یک بار پخش می‌شود. پیش از آغاز آن
+      ۶۰ ثانیه فرصت دارید تا هفت جمله را بخوانید. سپس دربارهٔ هر جمله تصمیم
+      می‌گیرید که بنا بر گفت‌وگو درست است (*Richtig*) یا نادرست (*Falsch*).
       این بخش نمونهٔ حل‌شده ندارد.
     scoring: >
-      هر پاسخ درست یک امتیاز دارد؛ پاسخ غلط یا خالی امتیازی کم نمی‌کند. کل
-      *Hören* با چهار بخشش ۳۰ امتیاز دارد که به نمره‌ای از ۱۰۰ تبدیل می‌شود و
-      با ۶۰ قبول می‌شوید. این بخش ۷ امتیاز از آن ۳۰ امتیاز است. *Hören*
-      زمان‌سنج ندارد: فایل صوتی سرعت را تعیین می‌کند و برای هر چهار بخش حدود
-      ۴۰ دقیقه طول می‌کشد. در این برنامه، این بخش وقتی تمام‌شده حساب می‌شود که
-      در یک تمرین هر هفت پاسخ درست باشد.
+      هر پاسخ درست یک امتیاز دارد و پاسخ نادرست یا خالی امتیازی کم نمی‌کند.
+      کل مهارت *Hören* با چهار بخشش ۳۰ امتیاز دارد که به نمره‌ای از ۱۰۰ تبدیل
+      می‌شود؛ نمرهٔ قبولی ۶۰ است. سهم این بخش ۷ امتیاز از این ۳۰ امتیاز است.
+      *Hören* زمان‌سنج ندارد: فایل صوتی سرعت را تعیین می‌کند و هر چهار بخش روی
+      هم حدود ۴۰ دقیقه طول می‌کشد. در این برنامه، این بخش وقتی تمام‌شده به
+      شمار می‌آید که در یک تمرین هر هفت پاسخ درست باشد.
     approach:
-      - "از آن ۶۰ ثانیه برای خواندن هر هفت جمله استفاده کنید. برای هر جمله ببینید دربارهٔ چه کسی است و چه می‌گوید."
-      - "جمله‌ها به ترتیب گفت‌وگو می‌آیند. منتظر جملهٔ اول بمانید؛ وقتی گفت‌وگو از آن گذشت، سراغ جملهٔ بعدی بروید."
-      - "دو گوینده را از هم جدا نگه دارید. بسیاری از جمله‌ها می‌گویند کدام یک از آن دو کاری می‌کند یا چیزی فکر می‌کند، و آن دو را از صدایشان می‌شناسید."
-      - "به معنا گوش کنید، نه به یک کلمه. گوینده‌ها معمولاً همان مطلب را با کلمه‌های دیگری می‌گویند، و جمله‌ای که کلمه‌ای شنیده‌شده را تکرار می‌کند هم می‌تواند غلط باشد."
-      - "حرف هر گوینده را تا آخر گوش کنید. آدم‌ها اغلب حرفشان را اصلاح می‌کنند یا یک *aber*، یک *nicht mehr* یا یک *erst* اضافه می‌کنند."
-      - "هر پاسخ را فوراً علامت بزنید و به گوش دادن ادامه دهید. امتحان گفت‌وگو را فقط یک بار پخش می‌کند؛ پس این‌جا هم پیش از بررسی پاسخ‌ها آن را فقط یک بار پخش کنید."
+      - "از آن ۶۰ ثانیه برای خواندن هر هفت جمله استفاده کنید و برای هر جمله ببینید دربارهٔ چه کسی است و چه ادعایی دارد."
+      - "جمله‌ها به ترتیب گفت‌وگو می‌آیند. منتظر جملهٔ نخست بمانید و وقتی گفت‌وگو از آن گذشت، به سراغ جملهٔ بعدی بروید."
+      - "دو گوینده را از هم جدا کنید. بسیاری از جمله‌ها دربارهٔ این‌اند که کدام‌یک از آن دو کاری می‌کند یا نظری دارد، و آن دو را از صدایشان بازمی‌شناسید."
+      - "به معنا گوش کنید، نه به تک‌واژه‌ها. گوینده‌ها معمولاً همان مطلب را با واژه‌های دیگری بیان می‌کنند، و جمله‌ای که واژه‌ای شنیده‌شده را تکرار می‌کند ممکن است نادرست باشد."
+      - "حرف هر گوینده را تا پایان بشنوید. آدم‌ها اغلب حرف خود را اصلاح می‌کنند یا واژه‌ای مانند *aber*، *nicht mehr* یا *erst* به آن می‌افزایند."
+      - "هر پاسخ را بی‌درنگ علامت بزنید و به شنیدن ادامه دهید. در امتحان گفت‌وگو فقط یک بار پخش می‌شود؛ پس این‌جا هم پیش از بررسی پاسخ‌ها آن را فقط یک بار پخش کنید."
   de:
     task: >
       Du hörst ein Gespräch aus dem Alltag. Zwei Personen sprechen
@@ -140,7 +140,7 @@ practice:
         answer: true
         explanation:
           en: "Michael says *seit du bei uns in der Firma aufgehört hast*: she worked at his company until three years ago."
-          fa: "*Michael* می‌گوید *seit du bei uns in der Firma aufgehört hast*: یعنی ساندرا تا سه سال پیش در شرکت او کار می‌کرد."
+          fa: "*Michael* می‌گوید *seit du bei uns in der Firma aufgehört hast*؛ یعنی ساندرا تا سه سال پیش در شرکت او کار می‌کرد."
           de: "Michael sagt: *Seit du bei uns in der Firma aufgehört hast*. Sandra hat also früher in seiner Firma gearbeitet."
       - id: i2
         type: richtig-falsch
@@ -156,7 +156,7 @@ practice:
         answer: false
         explanation:
           en: "He usually drives; he takes the train *nur* today, *weil mein Auto in der Werkstatt ist*."
-          fa: "او معمولاً با ماشین می‌رود؛ فقط امروز با قطار می‌آید، *weil mein Auto in der Werkstatt ist*."
+          fa: "او معمولاً با خودرو می‌رود و فقط امروز با قطار آمده است، *weil mein Auto in der Werkstatt ist*."
           de: "Er fährt sonst mit dem Auto. Nur heute fährt er mit dem Zug, *weil mein Auto in der Werkstatt ist*."
       - id: i4
         type: richtig-falsch
@@ -164,7 +164,7 @@ practice:
         answer: true
         explanation:
           en: "She visits them in Hannover *einmal im Monat*: once a month."
-          fa: "او پدر و مادرش را در هانوفر *einmal im Monat* می‌بیند: ماهی یک بار."
+          fa: "او پدر و مادرش را در هانوفر *einmal im Monat*، یعنی ماهی یک بار، می‌بیند."
           de: "Sie besucht ihre Eltern *einmal im Monat*."
       - id: i5
         type: richtig-falsch
@@ -172,7 +172,7 @@ practice:
         answer: false
         explanation:
           en: "Her father is well (*Meinem Vater geht es gut*); it is her mother who had the knee operation."
-          fa: "حال پدرش خوب است (*Meinem Vater geht es gut*)؛ مادرش بود که زانویش را عمل کرد."
+          fa: "حال پدرش خوب است (*Meinem Vater geht es gut*)؛ این مادرش بود که زانویش را عمل کرد."
           de: "*Meinem Vater geht es gut.* Die Mutter hatte die Operation am Knie."
       - id: i6
         type: richtig-falsch
@@ -180,7 +180,7 @@ practice:
         answer: true
         explanation:
           en: "She began to sing in a choir, *und da habe ich schnell Freunde gefunden*."
-          fa: "او در یک گروه کُر شروع به خواندن کرد، *und da habe ich schnell Freunde gefunden*."
+          fa: "او در یک گروه کُر به آواز خواندن پرداخت، *und da habe ich schnell Freunde gefunden*."
           de: "Sie singt in einem Chor, *und da habe ich schnell Freunde gefunden*."
       - id: i7
         type: richtig-falsch
@@ -242,7 +242,7 @@ practice:
         answer: false
         explanation:
           en: "His flat is *zu klein*: too small, because his girlfriend is moving in."
-          fa: "خانه‌اش *zu klein* است: خیلی کوچک، چون دوست‌دخترش پیش او می‌آید."
+          fa: "خانه‌اش *zu klein*، یعنی بیش از اندازه کوچک است، چون دوست‌دخترش پیش او می‌آید."
           de: "Seine Wohnung ist *zu klein*, denn seine Freundin zieht zu ihm."
       - id: i2
         type: richtig-falsch
@@ -258,7 +258,7 @@ practice:
         answer: true
         explanation:
           en: "At the viewing there were *noch dreißig andere Leute*: thirty other people."
-          fa: "هنگام دیدن خانه *noch dreißig andere Leute* آن‌جا بودند: سی نفر دیگر."
+          fa: "هنگام بازدید از خانه *noch dreißig andere Leute*، یعنی سی نفر دیگر هم، آن‌جا بودند."
           de: "Bei der Wohnung waren *noch dreißig andere Leute*."
       - id: i4
         type: richtig-falsch
@@ -290,7 +290,7 @@ practice:
         answer: false
         explanation:
           en: "She runs *meistens morgens vor der Arbeit*: mostly in the morning, before work."
-          fa: "او *meistens morgens vor der Arbeit* می‌دود: بیشتر صبح‌ها، پیش از کار."
+          fa: "او *meistens morgens vor der Arbeit*، یعنی بیشتر صبح‌ها پیش از کار، می‌دود."
           de: "Sie läuft *meistens morgens vor der Arbeit*."
 
 review:
