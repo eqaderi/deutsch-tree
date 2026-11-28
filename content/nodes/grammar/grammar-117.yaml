@@ -4,10 +4,346 @@ kind: grammar
 level: B1
 chapter: b1-adjectives-participles
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-017, grammar-107]
 title:
   en: "*Partizip II* as adjective"
-  fa: "*Partizip II* در نقش صفت"
+  fa: "صفت مفعولی (*Partizip II*) پیش از اسم"
   de: "Partizip II als Adjektiv"
+
+explanations:
+  en:
+    rule: >
+      The *Partizip II* can stand before a noun like an adjective. It then
+      takes the usual adjective endings, after the whole participle: *ein
+      gemietetes Fahrrad* (a rented bike), *die geschlossene Tür*, *mit
+      gekochten Eiern*. It says what has been done to the thing: *ein
+      repariertes Auto* is a car that someone has repaired. Every kind of
+      participle can do this: regular (*gemietet*), irregular (*das
+      gestohlene Auto*), separable (*die eingeladenen Gäste*) and without
+      *ge-* (*der reparierte Computer*). After *sein* the participle takes no
+      ending: *Die Tür ist geschlossen.*
+  fa:
+    rule: >
+      صفت مفعولی (*Partizip II*) می‌تواند مانند صفت پیش از اسم بیاید. در این
+      صورت همان پایانه‌های معمول صفت را می‌گیرد که به آخر خود صفت مفعولی
+      افزوده می‌شوند: *ein gemietetes Fahrrad* (دوچرخهٔ اجاره‌ای)، *die
+      geschlossene Tür* (در بسته)، *mit gekochten Eiern* (با تخم‌مرغ
+      آب‌پز). این صفت می‌گوید چه کاری روی آن چیز انجام شده است: *ein
+      repariertes Auto* ماشینی است که کسی آن را تعمیر کرده است. فارسی هم
+      همین کار را می‌کند: *das zerbrochene Glas* یعنی «شیشهٔ شکسته». همهٔ
+      صفت‌های مفعولی این‌طور به کار می‌روند: باقاعده (*gemietet*)، بی‌قاعده
+      (*das gestohlene Auto*)، از فعل جداشدنی (*die eingeladenen Gäste*) و
+      بدون *ge-* (*der reparierte Computer*). پس از *sein* صفت مفعولی پایانه
+      نمی‌گیرد: *Die Tür ist geschlossen.*
+  de:
+    rule: >
+      Das Partizip II kann wie ein Adjektiv vor einem Nomen stehen. Dann hat
+      es die normalen Adjektivendungen, am Ende vom ganzen Partizip: *ein
+      gemietetes Fahrrad*, *die geschlossene Tür*, *mit gekochten Eiern*. Es
+      sagt, was man mit der Sache gemacht hat: *Ein repariertes Auto* ist ein
+      Auto, das jemand repariert hat. Das geht mit jedem Partizip:
+      regelmäßig (*gemietet*), unregelmäßig (*das gestohlene Auto*),
+      trennbar (*die eingeladenen Gäste*) und ohne *ge-* (*der reparierte
+      Computer*). Nach *sein* hat das Partizip keine Endung: *Die Tür ist
+      geschlossen.*
+
+# How the form is made, with one example each. The endings themselves are the
+# ones of grammar-107 to grammar-109, so this table shows the participle.
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*Partizip II*", fa: "صفت مفعولی (*Partizip II*)", de: Partizip II }
+    - { en: Before a noun, fa: پیش از اسم, de: Vor einem Nomen }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [mieten, gemietet, ein gemietetes Fahrrad, Wir fahren mit gemieteten Fahrrädern.]
+    - [kochen, gekocht, gekochte Eier (Plural), Zum Frühstück gibt es gekochte Eier.]
+    - [schließen, geschlossen, die geschlossene Tür, Hinter der geschlossenen Tür ist es still.]
+    - [stehlen, gestohlen, das gestohlene Auto, Die Polizei hat das gestohlene Auto gefunden.]
+    - [einladen, eingeladen, die eingeladenen Gäste (Plural), Die eingeladenen Gäste sind alle gekommen.]
+    - [ausfüllen, ausgefüllt, das ausgefüllte Formular, Bitte bringen Sie das ausgefüllte Formular mit.]
+    - [reparieren, repariert, der reparierte Computer, Der reparierte Computer funktioniert wieder.]
+
+examples:
+  - de: Im Urlaub fahren wir mit gemieteten Fahrrädern.
+    en: On holiday we ride rented bikes.
+    fa: در تعطیلات با دوچرخه‌های اجاره‌ای گردش می‌کنیم.
+  - de: Zum Frühstück gibt es gekochte Eier.
+    en: There are boiled eggs for breakfast.
+    fa: برای صبحانه تخم‌مرغ آب‌پز داریم.
+  - de: Die Polizei hat das gestohlene Auto gefunden.
+    en: The police have found the stolen car.
+    fa: پلیس ماشین دزدیده‌شده را پیدا کرده است.
+  - de: Die eingeladenen Gäste sind alle gekommen.
+    en: The invited guests have all come.
+    fa: مهمان‌های دعوت‌شده همه آمده‌اند.
+  - de: Ich habe ein gebrauchtes Auto gekauft.
+    en: I bought a used car.
+    fa: یک ماشین دست‌دوم خریدم.
+  - de: Bitte bringen Sie das ausgefüllte Formular mit.
+    en: Please bring the completed form with you.
+    fa: لطفاً فرم پرشده را با خودتان بیاورید.
+  - de: Der reparierte Computer funktioniert wieder.
+    en: The repaired computer works again.
+    fa: کامپیوتر تعمیرشده دوباره کار می‌کند.
+  - de: Hinter der geschlossenen Tür war es ganz still.
+    en: Behind the closed door it was completely quiet.
+    fa: پشت در بسته کاملاً ساکت بود.
+  - de: Wir haben eine renovierte Wohnung gemietet.
+    en: We have rented a renovated flat.
+    fa: یک آپارتمان بازسازی‌شده اجاره کرده‌ایم.
+
+mistakes:
+  - wrong: Das ist ein gestohlen Fahrrad.
+    right: Das ist ein gestohlenes Fahrrad.
+    why:
+      en: "Before a noun the *Partizip II* takes an adjective ending: after *ein* with a neuter noun, *-es*."
+      fa: "صفت مفعولی پیش از اسم پایانهٔ صفت می‌گیرد: پس از *ein* و با اسم خنثی، *-es*."
+      de: "Vor einem Nomen hat das Partizip II eine Adjektivendung: nach *ein* bei *das*-Nomen *-es*."
+  - wrong: Die Gäste sind eingeladenen.
+    right: Die Gäste sind eingeladen.
+    why:
+      en: "After *sein* the participle takes no ending, like any adjective after *sein*."
+      fa: "پس از *sein* صفت مفعولی پایانه نمی‌گیرد، مانند هر صفت دیگری پس از *sein*."
+      de: "Nach *sein* hat das Partizip keine Endung, wie jedes Adjektiv nach *sein*."
+  - wrong: Der gereparierte Computer funktioniert wieder.
+    right: Der reparierte Computer funktioniert wieder.
+    why:
+      en: "Verbs in *-ieren* have no *ge-* in the *Partizip II*, also before a noun: *repariert*."
+      fa: "فعل‌های *-ieren* در صفت مفعولی *ge-* نمی‌گیرند، پیش از اسم هم: *repariert*."
+      de: "Verben auf *-ieren* haben im Partizip II kein *ge-*, auch nicht vor einem Nomen: *repariert*."
+  - wrong: Wir begrüßen die eingeladene Gäste.
+    right: Wir begrüßen die eingeladenen Gäste.
+    why:
+      en: "After plural *die* the ending is *-en*, also on a participle: *die eingeladenen Gäste*."
+      fa: "پس از *die* جمع پایانه *-en* است، روی صفت مفعولی هم: *die eingeladenen Gäste*."
+      de: "Nach *die* im Plural ist die Endung *-en*, auch beim Partizip: *die eingeladenen Gäste*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Im Urlaub fahren wir mit ___ Fahrrädern.
+    options: [gemieteten, gemietet, gemietete]
+    answer: gemieteten
+    explanation:
+      en: "*Mit* takes the *Dativ*; plural without an article: *-en*, after the whole participle."
+      fa: "*mit* با حالت *Dativ* می‌آید. در جمع و بدون حرف تعریف، پایانه *-en* است که به آخر صفت مفعولی افزوده می‌شود."
+      de: "Nach *mit* steht der Dativ. Plural ohne Artikel: *-en*, am Ende vom Partizip."
+  - id: gap-2
+    type: gap-fill
+    prompt: Zum Frühstück gibt es ___ Eier.
+    options: [gekocht, gekochten, gekochte]
+    answer: gekochte
+    explanation:
+      en: "Plural *Akkusativ* without an article: the participle takes *-e*, as in *die*."
+      fa: "جمع در حالت *Akkusativ* و بدون حرف تعریف: صفت مفعولی پایانهٔ *-e* می‌گیرد، مانند *die*."
+      de: "Plural, Akkusativ, ohne Artikel: Das Partizip hat *-e* wie *die*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Polizei hat das ___ Auto gefunden.
+    options: [gestohlenes, gestohlene, gestohlen]
+    answer: gestohlene
+    explanation:
+      en: "After *das* in the *Akkusativ* the ending is *-e*: *das gestohlene Auto*."
+      fa: "پس از *das* در حالت *Akkusativ* پایانه *-e* است: *das gestohlene Auto*."
+      de: "Nach *das* im Akkusativ ist die Endung *-e*: *das gestohlene Auto*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die ___ Gäste sind alle gekommen.
+    options: [eingeladene, eingeladenen, eingeladener]
+    answer: eingeladenen
+    explanation:
+      en: "After plural *die* the ending is *-en*: *die eingeladenen Gäste*."
+      fa: "پس از *die* جمع پایانه *-en* است: *die eingeladenen Gäste*."
+      de: "Nach *die* im Plural ist die Endung *-en*: *die eingeladenen Gäste*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Bitte bringen Sie das ___ Formular mit.
+    options: [ausgefüllte, ausgefülltes, ausgefüllten]
+    answer: ausgefüllte
+    explanation:
+      en: "After *das* in the *Akkusativ* the ending is *-e*: *das ausgefüllte Formular*."
+      fa: "پس از *das* در حالت *Akkusativ* پایانه *-e* است: *das ausgefüllte Formular*."
+      de: "Nach *das* im Akkusativ ist die Endung *-e*: *das ausgefüllte Formular*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Ich habe ein gebrauchtes Auto gekauft. Das heißt:"
+    options: [Das Auto ist ganz neu., Jemand hat das Auto schon benutzt., Ich brauche das Auto dringend.]
+    answer: Jemand hat das Auto schon benutzt.
+    explanation:
+      en: "*Gebraucht* is the *Partizip II* of *gebrauchen* (to use): a used car, one that someone had before."
+      fa: "*gebraucht* صفت مفعولی *gebrauchen* (به کار بردن) است: ماشین دست‌دوم، یعنی ماشینی که پیش‌تر کسی از آن استفاده کرده است."
+      de: "*Gebraucht* ist das Partizip II von *gebrauchen*: Jemand hatte das Auto schon vorher."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Die reparierte Waschmaschine steht im Keller. Das heißt:"
+    options:
+      [
+        Man muss die Waschmaschine noch reparieren.,
+        Die Waschmaschine ist kaputt.,
+        Jemand hat die Waschmaschine repariert.,
+      ]
+    answer: Jemand hat die Waschmaschine repariert.
+    explanation:
+      en: "The *Partizip II* before a noun says what has been done to it: someone has repaired it."
+      fa: "صفت مفعولی پیش از اسم می‌گوید چه کاری روی آن انجام شده است: کسی آن را تعمیر کرده است."
+      de: "Das Partizip II vor dem Nomen sagt, was man damit gemacht hat: Jemand hat sie repariert."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Die Tür ist ___.
+    options: [geschlossene, geschlossen, geschlossenen]
+    answer: geschlossen
+    explanation:
+      en: "After *sein* the participle takes no ending."
+      fa: "پس از *sein* صفت مفعولی پایانه نمی‌گیرد."
+      de: "Nach *sein* hat das Partizip keine Endung."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Ich esse gern ___ Kartoffeln.
+    options: [gebratene, gebratenen, gebratet]
+    answer: gebratene
+    explanation:
+      en: "*Braten* is irregular: *gebraten*. Plural *Akkusativ* without an article: *-e*."
+      fa: "*braten* بی‌قاعده است: *gebraten*. جمع در حالت *Akkusativ* و بدون حرف تعریف: *-e*."
+      de: "*Braten* ist unregelmäßig: *gebraten*. Plural, Akkusativ, ohne Artikel: *-e*."
+  - id: choice-5
+    type: multiple-choice
+    prompt: Wir wohnen in einer frisch ___ Wohnung.
+    options: [renovierten, renoviert, gerenovierten]
+    answer: renovierten
+    explanation:
+      en: "*Renovieren* has no *ge-*: *renoviert*. After *einer* in the *Dativ*: *-en*."
+      fa: "*renovieren* بدون *ge-* است: *renoviert*. پس از *einer* در حالت *Dativ*: *-en*."
+      de: "*Renovieren* hat kein *ge-*: *renoviert*. Nach *einer* im Dativ: *-en*."
+  - id: true-1
+    type: true-false
+    prompt: Ich habe ein gebrauchtes Fahrrad gekauft.
+    answer: true
+    explanation:
+      en: "After *ein* with a neuter noun the participle takes *-es*. The sentence is correct."
+      fa: "پس از *ein* و با اسم خنثی، صفت مفعولی پایانهٔ *-es* می‌گیرد. جمله درست است."
+      de: "Nach *ein* bei *das*-Nomen hat das Partizip *-es*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist ein gestohlen Handy.
+    answer: false
+    explanation:
+      en: "Before a noun the participle needs an ending: *ein gestohlenes Handy*."
+      fa: "صفت مفعولی پیش از اسم پایانه لازم دارد: *ein gestohlenes Handy*."
+      de: "Vor einem Nomen braucht das Partizip eine Endung: *ein gestohlenes Handy*."
+  - id: true-3
+    type: true-false
+    prompt: Die Fenster sind geöffnet.
+    answer: true
+    explanation:
+      en: "After *sein* the participle takes no ending. The sentence is correct."
+      fa: "پس از *sein* صفت مفعولی پایانه نمی‌گیرد. جمله درست است."
+      de: "Nach *sein* hat das Partizip keine Endung. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wir trinken frisch gepressten Orangensaft.
+    answer: true
+    explanation:
+      en: "Masculine *Akkusativ* without an article: *-en*, as in *den*. The sentence is correct."
+      fa: "اسم مذکر در حالت *Akkusativ* و بدون حرف تعریف: *-en*، مانند *den*. جمله درست است."
+      de: "Maskulin, Akkusativ, ohne Artikel: *-en* wie *den*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Die Gäste sind eingeladenen.
+    answer: false
+    explanation:
+      en: "After *sein* the participle takes no ending: *Die Gäste sind eingeladen.*"
+      fa: "پس از *sein* صفت مفعولی پایانه نمی‌گیرد: *Die Gäste sind eingeladen.*"
+      de: "Nach *sein* hat das Partizip keine Endung: *Die Gäste sind eingeladen.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir fahren mit dem ___ (mieten) Auto.
+    answers: [gemieteten]
+    explanation:
+      en: "*Gemietet*, then *-en* after *dem* in the *Dativ*."
+      fa: "*gemietet* و سپس *-en* پس از *dem* در حالت *Dativ*."
+      de: "*Gemietet*, dann *-en* nach *dem* im Dativ."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich esse gern ___ (kochen) Eier.
+    answers: [gekochte]
+    explanation:
+      en: "*Gekocht*, then *-e* for the plural *Akkusativ* without an article."
+      fa: "*gekocht* و سپس *-e* برای جمع در حالت *Akkusativ* بدون حرف تعریف."
+      de: "*Gekocht*, dann *-e* im Akkusativ Plural ohne Artikel."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Polizei sucht das ___ (stehlen) Fahrrad.
+    answers: [gestohlene]
+    explanation:
+      en: "*Stehlen* is irregular: *gestohlen*, then *-e* after *das*."
+      fa: "*stehlen* بی‌قاعده است: *gestohlen* و سپس *-e* پس از *das*."
+      de: "*Stehlen* ist unregelmäßig: *gestohlen*, dann *-e* nach *das*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Bitte unterschreiben Sie das ___ (ausfüllen) Formular.
+    answers: [ausgefüllte]
+    explanation:
+      en: "A separable verb has *-ge-* inside: *ausgefüllt*, then *-e* after *das*."
+      fa: "فعل جداشدنی *-ge-* را در میان می‌گیرد: *ausgefüllt* و سپس *-e* پس از *das*."
+      de: "Ein trennbares Verb hat *-ge-* in der Mitte: *ausgefüllt*, dann *-e* nach *das*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Das ist eine oft ___ (stellen) Frage.
+    answers: [gestellte]
+    explanation:
+      en: "*Gestellt*, then *-e* after *eine*: *eine oft gestellte Frage* (a question people often ask)."
+      fa: "*gestellt* و سپس *-e* پس از *eine*: *eine oft gestellte Frage* (پرسشی که زیاد پرسیده می‌شود)."
+      de: "*Gestellt*, dann *-e* nach *eine*: *eine oft gestellte Frage*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Ganze Nominalgruppe, Partizip II vor dem Nomen: die Gäste (einladen)"
+    answers: [die eingeladenen Gäste]
+    explanation:
+      en: "*Einladen* gives *eingeladen*; after plural *die* the ending is *-en*."
+      fa: "صفت مفعولی *einladen* می‌شود *eingeladen*؛ پس از *die* جمع پایانه *-en* است."
+      de: "*Einladen* hat das Partizip *eingeladen*. Nach *die* im Plural ist die Endung *-en*."
+  - id: error-1
+    type: find-error
+    prompt: Wir begrüßen die eingeladene Gäste.
+    answer: eingeladene
+    explanation:
+      en: "After plural *die* the ending is *-en*: *die eingeladenen Gäste*."
+      fa: "پس از *die* جمع پایانه *-en* است: *die eingeladenen Gäste*."
+      de: "Nach *die* im Plural ist die Endung *-en*: *die eingeladenen Gäste*."
+  - id: error-2
+    type: find-error
+    prompt: Ich habe ein gebrauchter Auto gekauft.
+    answer: gebrauchter
+    explanation:
+      en: "*Auto* is neuter: after *ein* the ending is *-es*: *ein gebrauchtes Auto*."
+      fa: "*Auto* خنثی است: پس از *ein* پایانه *-es* است: *ein gebrauchtes Auto*."
+      de: "*Auto* hat den Artikel *das*. Nach *ein*: *ein gebrauchtes Auto*."
+  - id: error-3
+    type: find-error
+    prompt: Der gereparierte Computer funktioniert wieder.
+    answer: gereparierte
+    explanation:
+      en: "Verbs in *-ieren* have no *ge-*: *der reparierte Computer*."
+      fa: "فعل‌های *-ieren* بدون *ge-* هستند: *der reparierte Computer*."
+      de: "Verben auf *-ieren* haben kein *ge-*: *der reparierte Computer*."
+  - id: match-1
+    type: matching
+    answer:
+      - [kochen, gekocht]
+      - [stehlen, gestohlen]
+      - [einladen, eingeladen]
+      - [reparieren, repariert]
+    explanation:
+      en: "Regular *ge-…-t*, irregular *ge-…-en*, separable with *-ge-* inside, and *-ieren* without *ge-*."
+      fa: "باقاعده با *ge-…-t*، بی‌قاعده با *ge-…-en*، جداشدنی با *-ge-* در میان، و فعل‌های *-ieren* بدون *ge-*."
+      de: "Regelmäßig *ge-…-t*, unregelmäßig *ge-…-en*, trennbar mit *-ge-* in der Mitte, *-ieren* ohne *ge-*."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question, then the typed answer whose prompt was clarified
+    after an objection; not people)"
+  date: 2026-11-28
+  pool: bf4d6bed8d998e38

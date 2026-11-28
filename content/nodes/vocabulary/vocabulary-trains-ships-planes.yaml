@@ -1,35 +1,338 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-trains-ships-planes
 kind: vocabulary
 level: B1
 chapter: b1-words-travel-nature
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Trains, ships and planes"
   fa: "قطار، کشتی و هواپیما"
   de: "Züge, Schiffe und Flugzeuge"
+attemptSize: 15
 words:
   - word: U-Bahn
+    class: noun
+    article: die
+    plural: U-Bahnen
+    level: B1
+    meaning:
+      en: underground, subway, metro
+      fa: مترو
+    definition: ein Zug in der Stadt, der meistens unter der Erde fährt
+    example:
+      de: Ich fahre jeden Tag mit der U-Bahn zur Arbeit.
+      en: I take the underground to work every day.
+      fa: هر روز با مترو سر کار می‌روم.
+    alsoAccepted: [die Metro]
+
   - word: Eisenbahn
+    class: noun
+    article: die
+    plural: Eisenbahnen
+    level: B1
+    meaning:
+      en: railway, railroad
+      fa: راه‌آهن
+    definition: die Züge und die Schienen, auf denen sie fahren
+    example:
+      de: Die erste deutsche Eisenbahn fuhr 1835 von Nürnberg nach Fürth.
+      en: The first German railway ran from Nuremberg to Fürth in 1835.
+      fa: نخستین راه‌آهن آلمان در سال ۱۸۳۵ میان نورنبرگ و فورت راه افتاد.
+    alsoAccepted: [die Bahn]
+
   - word: Hauptbahnhof
+    class: noun
+    article: der
+    plural: Hauptbahnhöfe
+    level: B1
+    meaning:
+      en: main station, central station (of a town)
+      fa: ایستگاه مرکزی راه‌آهن (در یک شهر)
+    definition: der größte und wichtigste Bahnhof einer Stadt
+    example:
+      de: Treffen wir uns um acht am Hauptbahnhof?
+      en: Shall we meet at the main station at eight?
+      fa: ساعت هشت در ایستگاه مرکزی راه‌آهن همدیگر را ببینیم؟
+
   - word: Station
+    class: noun
+    article: die
+    plural: Stationen
+    level: B1
+    meaning:
+      en: stop, station (of the underground, a tram or a bus)
+      fa: ایستگاه (مترو، تراموا یا اتوبوس)
+    definition: ein Ort, an dem eine U-Bahn, eine Straßenbahn oder ein Bus hält
+    example:
+      de: Sie müssen an der nächsten Station aussteigen.
+      en: You have to get off at the next stop.
+      fa: باید در ایستگاه بعدی پیاده شوید.
+    alsoAccepted: [die Haltestelle]
+
   - word: Linie
+    class: noun
+    article: die
+    plural: Linien
+    level: B1
+    meaning:
+      en: line, route (of a bus, a tram or the underground, with a number)
+      fa: خط (اتوبوس، تراموا یا مترو)
+    definition: der feste Weg mit einer Nummer, den ein Bus oder eine Bahn immer fährt
+    example:
+      de: Nehmen Sie die Linie 5 bis zum Rathaus.
+      en: Take the number 5 to the town hall.
+      fa: با خط ۵ تا شهرداری بروید.
+
   - word: Speisewagen
+    class: noun
+    article: der
+    plural: Speisewagen
+    level: B1
+    meaning:
+      en: dining car, restaurant car (of a train)
+      fa: واگن رستوران (در قطار)
+    definition: der Teil eines Zuges, in dem man essen und trinken kann
+    example:
+      de: Im Speisewagen gibt es warmes Essen und Kaffee.
+      en: There is hot food and coffee in the dining car.
+      fa: در واگن رستوران غذای گرم و قهوه هست.
+    alsoAccepted: [das Bordrestaurant]
+
+  # Rückfahrt is the journey back, Rückkehr the coming back; neither is offered as a wrong meaning of the other.
   - word: Rückfahrt
+    class: noun
+    article: die
+    plural: Rückfahrten
+    level: B1
+    meaning:
+      en: return journey, the way back (by car, bus or train)
+      fa: راه برگشت، سفر برگشت (با خودرو، اتوبوس یا قطار)
+    definition: die Fahrt zurück an den Ort, von dem man gekommen ist
+    example:
+      de: Auf der Rückfahrt haben wir im Zug geschlafen.
+      en: We slept on the train on the way back.
+      fa: در راه برگشت در قطار خوابیدیم.
+    alsoAccepted: [die Rückreise, der Rückweg]
+    tooCloseTo: [Rückkehr]
+
   - word: Verbindung
+    class: noun
+    article: die
+    plural: Verbindungen
+    level: B1
+    meaning:
+      en: connection (a train, bus or flight that takes you from one place to another)
+      fa: اتصال (قطار، اتوبوس یا پروازی که از جایی به جای دیگر می‌رود)
+    definition: ein Zug, ein Bus oder ein Flug, mit dem man von einem Ort zu einem anderen kommt
+    example:
+      de: Gibt es eine direkte Verbindung von Köln nach Wien?
+      en: Is there a direct connection from Cologne to Vienna?
+      fa: از کلن به وین قطار یا پرواز مستقیم هست؟
+    alsoAccepted: [der Anschluss]
+
   - word: Fähre
+    class: noun
+    article: die
+    plural: Fähren
+    level: B1
+    meaning:
+      en: ferry
+      fa: کشتی مسافربری کوتاه‌مسیر (برای عبور از رود یا دریا)
+    definition: ein Schiff, das Menschen und Autos über einen Fluss oder über das Meer bringt
+    example:
+      de: Mit der Fähre dauert es eine Stunde bis zur Insel.
+      en: It takes an hour by ferry to the island.
+      fa: با کشتی تا جزیره یک ساعت راه است.
+
   - word: Boot
+    class: noun
+    article: das
+    plural: Boote
+    level: B1
+    meaning:
+      en: boat
+      fa: قایق
+    definition: ein kleines Schiff
+    example:
+      de: Am Sonntag haben wir auf dem See ein Boot gemietet.
+      en: On Sunday we hired a boat on the lake.
+      fa: یکشنبه روی دریاچه یک قایق کرایه کردیم.
+
   - word: Hafen
+    class: noun
+    article: der
+    plural: Häfen
+    level: B1
+    meaning:
+      en: port, harbour
+      fa: بندر
+    definition: ein Ort an der Küste oder an einem Fluss, wo Schiffe ankommen und abfahren
+    example:
+      de: Hamburg hat einen der größten Häfen Europas.
+      en: Hamburg has one of the largest ports in Europe.
+      fa: هامبورگ یکی از بزرگ‌ترین بندرهای اروپا را دارد.
+
   - word: Landung
+    class: noun
+    article: die
+    plural: Landungen
+    level: B1
+    meaning:
+      en: landing (of a plane)
+      fa: فرود (هواپیما)
+    definition: der Moment, in dem ein Flugzeug wieder auf den Boden kommt
+    example:
+      de: Bitte bleiben Sie bis nach der Landung angeschnallt.
+      en: Please keep your seat belt fastened until after landing.
+      fa: لطفاً تا پس از فرود، کمربند ایمنی‌تان را باز نکنید.
+
   - word: landen
+    class: verb
+    level: B1
+    meaning:
+      en: to land
+      fa: فرود آمدن، به زمین نشستن
+    definition: nach dem Flug wieder auf den Boden kommen
+    example:
+      de: Unser Flugzeug ist pünktlich in Frankfurt gelandet.
+      en: Our plane landed in Frankfurt on time.
+      fa: هواپیمای ما سر وقت در فرانکفورت به زمین نشست.
+
   - word: starten
+    class: verb
+    level: B1
+    meaning:
+      en: to take off (of a plane); to start
+      fa: از زمین بلند شدن (هواپیما)؛ شروع کردن
+    definition: vom Boden abheben und losfliegen; auch mit etwas anfangen
+    example:
+      de: Das Flugzeug startet in zehn Minuten.
+      en: The plane takes off in ten minutes.
+      fa: هواپیما ده دقیقهٔ دیگر از زمین بلند می‌شود.
+
   - word: Start
+    class: noun
+    article: der
+    plural: Starts
+    level: B1
+    meaning:
+      en: take-off (of a plane); start
+      fa: برخاست (هواپیما)؛ آغاز
+    definition: der Moment, in dem ein Flugzeug vom Boden abhebt; auch der Anfang
+    example:
+      de: Beim Start müssen alle Handys im Flugmodus sein.
+      en: During take-off all mobile phones must be in flight mode.
+      fa: هنگام برخاستن هواپیما، همهٔ تلفن‌های همراه باید در حالت پرواز باشند.
+
   - word: Terminal
+    class: noun
+    article: der
+    plural: Terminals
+    level: B1
+    meaning:
+      en: terminal (a building at an airport)
+      fa: ترمینال (ساختمان فرودگاه)
+    definition: ein großes Gebäude am Flughafen, in dem die Reisenden auf ihren Flug warten
+    example:
+      de: Unser Flug geht von Terminal 2.
+      en: Our flight leaves from Terminal 2.
+      fa: پرواز ما از ترمینال ۲ است.
+    alsoAccepted: [das Terminal]
+
   - word: Passagier
+    class: noun
+    article: der
+    plural: Passagiere
+    level: B1
+    meaning:
+      en: passenger (on a plane, a ship or a train)
+      fa: مسافر (هواپیما، کشتی یا قطار)
+    definition: eine Person, die mit einem Flugzeug, einem Schiff oder einem Zug reist
+    example:
+      de: Die Passagiere warten seit zwei Stunden auf ihren Flug.
+      en: The passengers have been waiting two hours for their flight.
+      fa: مسافران دو ساعت است که منتظر پروازشان هستند.
+    alsoAccepted: [die Passagierin, der Fahrgast, der Fluggast, der Reisende, die Reisende]
+
   - word: Kabine
+    class: noun
+    article: die
+    plural: Kabinen
+    level: B1
+    meaning:
+      en: cabin (a small room on a ship; the room for passengers in a plane)
+      fa: کابین (اتاقک کشتی؛ بخش مسافران در هواپیما)
+    definition: ein kleiner Raum auf einem Schiff; auch der Raum für die Reisenden im Flugzeug
+    example:
+      de: Unsere Kabine auf dem Schiff hatte ein kleines Fenster.
+      en: Our cabin on the ship had a small window.
+      fa: کابین ما در کشتی پنجرهٔ کوچکی داشت.
+
   - word: Sitz
+    class: noun
+    article: der
+    plural: Sitze
+    level: B1
+    meaning:
+      en: seat (in a car, a train, a plane or a cinema)
+      fa: صندلی (در خودرو، قطار، هواپیما یا سینما)
+    definition: ein Platz zum Sitzen, zum Beispiel im Auto, im Zug oder im Kino
+    example:
+      de: Bitte stellen Sie Ihr Gepäck nicht auf den Sitz.
+      en: Please don't put your luggage on the seat.
+      fa: لطفاً چمدانتان را روی صندلی نگذارید.
+    alsoAccepted: [der Sitzplatz, der Platz]
+
   - word: Rückkehr
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: return, coming back (home or to a place)
+      fa: بازگشت (به خانه یا به جایی)
+    definition: das Zurückkommen nach Hause oder an einen Ort
+    example:
+      de: Nach seiner Rückkehr aus Japan hat er viel erzählt.
+      en: After his return from Japan he had a lot to tell.
+      fa: پس از بازگشتش از ژاپن، چیزهای زیادی تعریف کرد.
+    tooCloseTo: [Rückfahrt]
+
   - word: Steward
+    class: noun
+    article: der
+    plural: Stewards
+    level: B1
+    meaning:
+      en: steward, flight attendant (a man)
+      fa: مهماندار مرد (هواپیما یا کشتی)
+    definition: ein Mann, der im Flugzeug oder auf einem Schiff für die Reisenden sorgt
+    example:
+      de: Der Steward bringt uns Wasser und ein Sandwich.
+      en: The steward brings us water and a sandwich.
+      fa: مهماندار برایمان آب و ساندویچ می‌آورد.
+    alsoAccepted: [der Flugbegleiter]
+
   - word: Stewardess
+    class: noun
+    article: die
+    plural: Stewardessen
+    level: B1
+    meaning:
+      en: stewardess, flight attendant (a woman)
+      fa: مهماندار زن (هواپیما)
+    definition: eine Frau, die im Flugzeug für die Reisenden sorgt
+    example:
+      de: Die Stewardess erklärt, wie man die Schwimmweste anzieht.
+      en: The stewardess explains how to put on the life jacket.
+      fa: مهماندار توضیح می‌دهد که جلیقهٔ نجات را چطور باید پوشید.
+    alsoAccepted: [die Flugbegleiterin]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 132 questions, then 19 changed or disputed ones; not
+    people)"
+  date: 2026-11-28
+  pool: f36c311ea2731bf9

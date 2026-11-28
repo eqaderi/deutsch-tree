@@ -1,35 +1,327 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-farming-environment
 kind: vocabulary
 level: B1
 chapter: b1-words-travel-nature
 order: 8
-status: coming-soon
+status: published
 title:
   en: "Farming and the environment"
   fa: "کشاورزی و محیط زیست"
   de: "Landwirtschaft und Umwelt"
+attemptSize: 15
 words:
   - word: Bauernhof
+    class: noun
+    article: der
+    plural: Bauernhöfe
+    level: B1
+    meaning:
+      en: farm (the house, the animals and the land of a farmer)
+      fa: مزرعه (خانه، حیوانات و زمین یک کشاورز)
+    definition: ein Hof auf dem Land mit Tieren und Feldern, wo eine Familie von der Landwirtschaft lebt
+    example:
+      de: In den Ferien waren die Kinder auf einem Bauernhof und haben Kühe gesehen.
+      en: In the holidays the children stayed on a farm and saw cows.
+      fa: بچه‌ها در تعطیلات به مزرعه‌ای رفتند و گاو دیدند.
+    alsoAccepted: [der Hof]
+
   - word: Bauer
+    class: noun
+    article: der
+    plural: Bauern
+    level: B1
+    meaning:
+      en: farmer
+      fa: کشاورز
+    definition: eine Person, die auf dem Land Tiere hält und Pflanzen anbaut
+    example:
+      de: Der Bauer steht jeden Morgen um fünf Uhr auf.
+      en: The farmer gets up at five every morning.
+      fa: کشاورز هر روز ساعت پنج صبح بیدار می‌شود.
+    alsoAccepted: [die Bäuerin, der Landwirt, die Landwirtin]
+
   - word: Ernte
+    class: noun
+    article: die
+    plural: Ernten
+    level: B1
+    meaning:
+      en: harvest
+      fa: برداشت محصول، محصول
+    definition: das Sammeln von Obst, Gemüse oder Getreide, wenn es reif ist
+    example:
+      de: Wegen des trockenen Sommers war die Ernte dieses Jahr schlecht.
+      en: Because of the dry summer the harvest was poor this year.
+      fa: به دلیل تابستان خشک، محصول امسال کم بود.
+    alsoAccepted: [das Ernten]
+
   - word: Landwirtschaft
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: agriculture, farming
+      fa: کشاورزی
+    definition: die Arbeit mit Tieren und Pflanzen, um Lebensmittel zu produzieren
+    example:
+      de: Früher haben in unserem Dorf fast alle in der Landwirtschaft gearbeitet.
+      en: In the past almost everyone in our village worked in farming.
+      fa: در گذشته تقریباً همهٔ اهالی روستای ما در کشاورزی کار می‌کردند.
+
   - word: pflanzen
+    class: verb
+    level: B1
+    meaning:
+      en: to plant
+      fa: کاشتن (گیاه یا نهال در خاک)
+    definition: etwas in die Erde setzen, damit es dort wächst
+    example:
+      de: Im Frühling pflanzen wir Tomaten im Garten.
+      en: In spring we plant tomatoes in the garden.
+      fa: بهار در باغچه گوجه‌فرنگی می‌کاریم.
+    alsoAccepted: [anpflanzen, einpflanzen]
+
   - word: wachsen
+    class: verb
+    level: B1
+    meaning:
+      en: to grow (get bigger)
+      fa: رشد کردن، روییدن
+    definition: größer werden, so wie eine Pflanze oder ein Kind
+    example:
+      de: Bei diesem warmen Wetter wächst das Gras sehr schnell.
+      en: In this warm weather the grass grows very fast.
+      fa: در این هوای گرم، علف‌ها خیلی سریع رشد می‌کنند.
+
   - word: blühen
+    class: verb
+    level: B1
+    meaning:
+      en: to bloom, to flower, to blossom
+      fa: شکوفه دادن، گل دادن
+    definition: Blüten haben, zum Beispiel im Frühling
+    example:
+      de: Im April blühen die Apfelbäume.
+      en: The apple trees blossom in April.
+      fa: درخت‌های سیب در آوریل شکوفه می‌دهند.
+    alsoAccepted: [aufblühen, erblühen]
+
   - word: Gras
+    class: noun
+    article: das
+    plural: Gräser
+    level: B1
+    meaning:
+      en: grass
+      fa: علف
+    definition: die grünen, dünnen Pflanzen, die auf einer Wiese wachsen
+    example:
+      de: Die Kühe fressen frisches Gras.
+      en: The cows are eating fresh grass.
+      fa: گاوها علف تازه می‌خورند.
+
   - word: Rasen
+    class: noun
+    article: der
+    plural: Rasen
+    level: B1
+    meaning:
+      en: lawn
+      fa: چمن (کوتاه‌شده، در باغ یا پارک)
+    definition: kurzes, gepflegtes Gras in einem Garten oder in einem Park
+    example:
+      de: Am Samstag muss ich den Rasen mähen.
+      en: On Saturday I have to mow the lawn.
+      fa: شنبه باید چمن را کوتاه کنم.
+
   - word: Wiese
+    class: noun
+    article: die
+    plural: Wiesen
+    level: B1
+    meaning:
+      en: meadow (a large piece of land with grass and flowers)
+      fa: مرغزار (زمین پر از علف و گل)
+    definition: ein großes Stück Land mit hohem Gras und Blumen
+    example:
+      de: Im Sommer machen wir gern ein Picknick auf der Wiese.
+      en: In summer we like having a picnic in the meadow.
+      fa: تابستان دوست داریم در مرغزار پیک‌نیک کنیم.
+
   - word: Feld
+    class: noun
+    article: das
+    plural: Felder
+    level: B1
+    meaning:
+      en: field (for crops)
+      fa: کشتزار، زمین کشاورزی
+    definition: ein großes Stück Land, auf dem ein Bauer zum Beispiel Getreide oder Kartoffeln anbaut
+    example:
+      de: Auf diesem Feld wächst im Sommer Mais.
+      en: Maize grows in this field in summer.
+      fa: در این کشتزار تابستان ذرت می‌روید.
+    alsoAccepted: [der Acker]
+
   - word: Erde
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: soil, earth; the Earth (the planet)
+      fa: خاک؛ کرهٔ زمین
+    definition: das, worin Pflanzen wachsen; auch der Planet, auf dem wir leben
+    example:
+      de: Die Erde im Garten ist nach dem Regen ganz nass.
+      en: The soil in the garden is completely wet after the rain.
+      fa: خاک باغچه بعد از باران کاملاً خیس است.
+
   - word: Umwelt
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: environment (the natural world around us)
+      fa: محیط زیست
+    definition: die Natur um uns herum, also Luft, Wasser, Boden, Pflanzen und Tiere
+    example:
+      de: Wer mit dem Rad fährt, schützt die Umwelt.
+      en: Anyone who cycles protects the environment.
+      fa: کسی که با دوچرخه رفت‌وآمد می‌کند، از محیط زیست محافظت می‌کند.
+
   - word: Umweltschutz
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: environmental protection, protecting the environment
+      fa: حفاظت از محیط زیست
+    definition: alles, was man tut, damit die Natur, die Luft und das Wasser sauber und gesund bleiben
+    example:
+      de: Umweltschutz beginnt im Alltag, zum Beispiel beim Einkaufen.
+      en: Protecting the environment starts in everyday life, for example when you go shopping.
+      fa: حفاظت از محیط زیست از زندگی روزمره شروع می‌شود، مثلاً هنگام خرید.
+
   - word: Umweltverschmutzung
+    class: noun
+    article: die
+    plural: Umweltverschmutzungen
+    level: B1
+    meaning:
+      en: pollution (of the environment)
+      fa: آلودگی محیط زیست
+    definition: der Schmutz in der Luft, im Wasser und im Boden, den die Menschen machen
+    example:
+      de: Autos und Fabriken sind schuld an der Umweltverschmutzung.
+      en: Cars and factories are to blame for pollution.
+      fa: خودروها و کارخانه‌ها مقصر آلودگی محیط زیست هستند.
+
   - word: Abgase
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: exhaust fumes, exhaust gases
+      fa: دود اگزوز، گازهای خروجی
+    definition: die schmutzige Luft, die aus Autos und Fabriken kommt
+    example:
+      de: In der Innenstadt riecht man die Abgase der vielen Autos.
+      en: In the city centre you can smell the exhaust fumes of all the cars.
+      fa: در مرکز شهر بوی دود اگزوز خودروهای زیاد به مشام می‌رسد.
+    alsoAccepted: [das Abgas]
+
   - word: verschmutzen
+    class: verb
+    level: B1
+    meaning:
+      en: to pollute, to make dirty
+      fa: آلوده کردن
+    definition: etwas schmutzig machen, zum Beispiel Wasser oder Luft
+    example:
+      de: Die Fabrik hat jahrelang den Fluss verschmutzt.
+      en: The factory polluted the river for years.
+      fa: این کارخانه سال‌ها رودخانه را آلوده کرد.
+    alsoAccepted: [verunreinigen, beschmutzen]
+
   - word: Energie
+    class: noun
+    article: die
+    plural: Energien
+    level: B1
+    meaning:
+      en: energy
+      fa: انرژی
+    definition: die Kraft, mit der Maschinen arbeiten, zum Beispiel aus Sonne, Wind oder Kohle
+    example:
+      de: Wir sparen Energie und machen das Licht aus, wenn wir gehen.
+      en: We save energy and turn off the light when we leave.
+      fa: ما در مصرف انرژی صرفه‌جویی می‌کنیم و هنگام رفتن چراغ را خاموش می‌کنیم.
+
   - word: Kraftwerk
+    class: noun
+    article: das
+    plural: Kraftwerke
+    level: B1
+    meaning:
+      en: power station, power plant
+      fa: نیروگاه
+    definition: eine große Anlage, die Strom produziert
+    example:
+      de: Das alte Kraftwerk am Fluss wird bald geschlossen.
+      en: The old power station by the river will soon be closed.
+      fa: نیروگاه قدیمی کنار رودخانه به‌زودی تعطیل می‌شود.
+    alsoAccepted: [das Elektrizitätswerk]
+
   - word: Strom
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: electricity, power
+      fa: برق
+    definition: die Energie, die durch Kabel kommt und mit der Lampen leuchten und Geräte laufen
+    example:
+      de: Seit gestern Abend haben wir keinen Strom.
+      en: We've had no electricity since yesterday evening.
+      fa: از دیشب برق نداریم.
+    alsoAccepted: [die Elektrizität]
+
   - word: biologisch
+    class: adjective
+    level: B1
+    meaning:
+      en: organic (grown without chemicals); biological
+      fa: ارگانیک (بدون مواد شیمیایی)؛ زیستی
+    definition: ohne Chemie angebaut oder hergestellt; auch das Leben und die Natur betreffend
+    example:
+      de: Dieses Gemüse kommt aus biologischem Anbau.
+      en: These vegetables are organically grown.
+      fa: این سبزی‌ها به روش ارگانیک کشت شده‌اند.
+    alsoAccepted: [bio, ökologisch]
+
   - word: alternativ
+    class: adjective
+    level: B1
+    meaning:
+      en: alternative (different from the usual, another possibility)
+      fa: جایگزین (مثلاً در «انرژی جایگزین»)
+    definition: anders als das Übliche, als andere Möglichkeit
+    example:
+      de: Wind und Sonne sind alternative Energien.
+      en: Wind and sun are alternative sources of energy.
+      fa: باد و خورشید منابع جایگزین انرژی هستند.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 132 questions, then 29 changed or disputed ones; not
+    people)"
+  date: 2026-11-28
+  pool: caa46b5258878667

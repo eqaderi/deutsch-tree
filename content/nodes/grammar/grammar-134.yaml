@@ -4,10 +4,342 @@ kind: grammar
 level: B1
 chapter: b1-prepositions
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-071]
 title:
   en: "*während* + *Genitiv*/*Dativ*"
   fa: "*während* + *Genitiv* یا *Dativ*"
   de: "*während* + Genitiv / Dativ"
+
+explanations:
+  en:
+    rule: >
+      *Während* (during) before a noun says that something happens in the
+      time of an event: *während des Essens*, *während der Pause*. In written
+      German it takes the *Genitiv*: *der* and *das* become *des*, and the
+      masculine or neuter noun gets *-s* or *-es* (*des Urlaubs*, *des
+      Fluges*); *die* becomes *der*, in the plural too (*während der
+      Ferien*). With *ein* it is *eines* and *einer*. In everyday speech many
+      people use the *Dativ* (*während dem Essen*); in a letter, an e-mail to
+      an office and in the exam, write the *Genitiv*. Before a clause with
+      the verb at the end, *während* is a conjunction, a topic of its own.
+  fa:
+    rule: >
+      *während* (در طول، هنگام) پیش از اسم می‌گوید کاری در زمان یک رویداد رخ
+      می‌دهد: *während des Essens* (سر غذا) و *während der Pause* (در وقت
+      استراحت). در زبان نوشتاری، *während* با حالت *Genitiv* (حالت ملکی)
+      می‌آید: *der* و *das* به *des* تبدیل می‌شوند و اسم مذکر یا خنثی پایانهٔ
+      *-s* یا *-es* می‌گیرد (*des Urlaubs*، *des Fluges*). *die* به *der*
+      تبدیل می‌شود، در جمع نیز (*während der Ferien*). با *ein* صورت‌ها
+      *eines* و *einer* است. در گفتار روزمره بسیاری از آلمانی‌زبان‌ها حالت
+      *Dativ* را به کار می‌برند (*während dem Essen*)، ولی در نامه، ایمیل
+      اداری و امتحان حالت *Genitiv* را بنویسید. *während* پیش از جمله‌ای که
+      فعلش در پایان می‌آید حرف ربط است و موضوع درسی دیگری است.
+  de:
+    rule: >
+      *Während* vor einem Nomen sagt: Etwas passiert in der Zeit von etwas
+      anderem, zum Beispiel *während des Essens*, *während der Pause*. In der
+      geschriebenen Sprache steht nach *während* der Genitiv: *der* und *das*
+      werden zu *des*, und das Nomen bekommt *-s* oder *-es* (*des Urlaubs*,
+      *des Fluges*). *Die* wird zu *der*, auch im Plural (*während der
+      Ferien*). Mit *ein*: *eines*, *einer*. Im Alltag sagen viele Leute auch
+      den Dativ (*während dem Essen*). In einem Brief, in einer E-Mail an ein
+      Amt und in der Prüfung schreibt man den Genitiv. Vor einem Nebensatz
+      mit dem Verb am Ende ist *während* eine Konjunktion. Das ist ein
+      anderes Thema.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Genitiv*", fa: "حالت *Genitiv*", de: Genitiv }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Urlaub, des Urlaubs, eines Urlaubs, während des Urlaubs]
+    - [die Pause, der Pause, einer Pause, während der Pause]
+    - [das Spiel, des Spiels, eines Spiels, während des Spiels]
+    - [die Ferien (Plural), der Ferien, –, während der Ferien]
+
+# The meal is a box on the time line; the reading, a dark bar, lies inside
+# its time. Dashed lines show where the meal begins and ends.
+diagrams:
+  - caption:
+      en: >
+        *Während des Essens liest er Zeitung.* The box is the meal, and the
+        dark bar is his reading: it happens inside the time of the meal.
+      fa: >
+        جعبه زمان غذا خوردن است و نوار تیره روزنامه خواندن او: این کار در
+        زمان غذا رخ می‌دهد. جملهٔ آلمانی: *Während des Essens liest er
+        Zeitung.*
+      de: >
+        *Während des Essens liest er Zeitung.* Der Kasten ist das Essen, der
+        dunkle Balken ist das Lesen. Das Lesen passiert in der Zeit vom Essen.
+    svg: |
+      <svg viewBox="0 0 320 150">
+        <text class="label" x="160" y="22" text-anchor="middle">während des Essens</text>
+        <!-- the meal -->
+        <rect class="surface" x="50" y="34" width="220" height="54"/>
+        <text class="note" x="160" y="54" text-anchor="middle">das Essen</text>
+        <!-- the reading, inside the time of the meal -->
+        <rect class="object" x="100" y="64" width="120" height="14"/>
+        <line class="guide" x1="50" y1="88" x2="50" y2="124"/>
+        <line class="guide" x1="270" y1="88" x2="270" y2="124"/>
+        <text class="note" x="160" y="108" text-anchor="middle">er liest Zeitung</text>
+        <!-- the time line, with an arrow to the right -->
+        <line class="line" x1="10" y1="130" x2="304" y2="130"/>
+        <polygon class="object" points="304,124 316,130 304,136"/>
+      </svg>
+
+examples:
+  - de: Während des Essens schaut er nie auf sein Handy.
+    en: During the meal he never looks at his phone.
+    fa: او سر غذا هیچ‌وقت به گوشی‌اش نگاه نمی‌کند.
+  - de: Während der Pause trinken wir einen Kaffee.
+    en: During the break we have a coffee.
+    fa: در وقت استراحت قهوه می‌نوشیم.
+  - de: Während des Urlaubs hat sie viele Bücher gelesen.
+    en: She read a lot of books during the holiday.
+    fa: او در تعطیلات کتاب‌های زیادی خواند.
+  - de: Während der Ferien arbeitet mein Sohn in einem Café.
+    en: During the school holidays my son works in a café.
+    fa: پسرم در تعطیلات مدرسه در یک کافه کار می‌کند.
+  - de: Während des Films hat mein Handy geklingelt.
+    en: My phone rang during the film.
+    fa: وسط فیلم گوشی‌ام زنگ زد.
+  - de: Bitte schalten Sie während der Prüfung Ihr Handy aus.
+    en: Please switch off your phone during the exam.
+    fa: لطفاً در طول امتحان گوشی‌تان را خاموش کنید.
+  - de: Während eines Gewitters soll man nicht schwimmen.
+    en: You shouldn't swim during a thunderstorm.
+    fa: هنگام رعد و برق نباید شنا کرد.
+  - de: Während der Fahrt hat das Kind die ganze Zeit geschlafen.
+    en: The child slept the whole time during the journey.
+    fa: کودک در طول سفر تمام مدت خوابید.
+  - de: Während des Fluges dürfen Sie nicht rauchen.
+    en: You may not smoke during the flight.
+    fa: در طول پرواز نمی‌توانید سیگار بکشید.
+  - de: Er hat während des ganzen Konzerts geredet.
+    en: He talked during the whole concert.
+    fa: او در تمام مدت کنسرت حرف زد.
+
+mistakes:
+  - wrong: Während das Essen sehen wir nicht fern.
+    right: Während des Essens sehen wir nicht fern.
+    why:
+      en: "*Während* takes the *Genitiv*: *das Essen* becomes *des Essens*, with *-s* on the noun."
+      fa: "*während* با حالت *Genitiv* می‌آید: *das Essen* به *des Essens* تبدیل می‌شود و اسم *-s* می‌گیرد."
+      de: "Nach *während* steht der Genitiv: *das Essen* wird zu *des Essens*, mit *-s* am Nomen."
+  - wrong: Während der Film habe ich geschlafen.
+    right: Während des Films habe ich geschlafen.
+    why:
+      en: "*Film* is masculine, so its *Genitiv* is *des Films*. *Der* stays only before a feminine or plural noun."
+      fa: "*Film* اسم مذکر است و حالت *Genitiv* آن *des Films* است. *der* فقط پیش از اسم مؤنث یا جمع می‌ماند."
+      de: "*Film* ist maskulin. Der Genitiv ist *des Films*. *Der* bleibt nur bei femininen Nomen und im Plural."
+  - wrong: Während des Urlaub war ich in Spanien.
+    right: Während des Urlaubs war ich in Spanien.
+    why:
+      en: "In the *Genitiv* a masculine or neuter noun gets *-s* or *-es*: *des Urlaubs*."
+      fa: "در حالت *Genitiv* اسم مذکر یا خنثی پایانهٔ *-s* یا *-es* می‌گیرد: *des Urlaubs*."
+      de: "Im Genitiv bekommt ein maskulines oder neutrales Nomen *-s* oder *-es*: *des Urlaubs*."
+  - wrong: Während dem Unterricht darf man nicht essen.
+    right: Während des Unterrichts darf man nicht essen.
+    why:
+      en: "You will hear the *Dativ* in speech, but in writing *während* takes the *Genitiv*: *des Unterrichts*."
+      fa: "حالت *Dativ* را در گفتار می‌شنوید، ولی در نوشتار *während* با حالت *Genitiv* می‌آید: *des Unterrichts*."
+      de: "Beim Sprechen hört man oft den Dativ. Geschrieben steht nach *während* der Genitiv: *des Unterrichts*."
+  - wrong: Während der Pause ich trinke einen Kaffee.
+    right: Während der Pause trinke ich einen Kaffee.
+    why:
+      en: "*Während der Pause* is position 1, so the verb comes next and the subject after it."
+      fa: "*während der Pause* جایگاه اول است، پس فعل بلافاصله پس از آن می‌آید و فاعل پس از فعل."
+      de: "*Während der Pause* ist Position 1. Danach kommt das Verb, dann das Subjekt."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Während ___ Films hat mein Handy geklingelt.
+    options: [dem, des, der]
+    answer: des
+    explanation:
+      en: "*Der Film* in the *Genitiv* is *des Films*; the *-s* on *Films* fits only *des*."
+      fa: "*der Film* در حالت *Genitiv* می‌شود *des Films*؛ *-s* در *Films* فقط با *des* جور است."
+      de: "*Der Film* im Genitiv: *des Films*. Das *-s* an *Films* passt nur zu *des*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Während ___ Pause trinken wir einen Kaffee.
+    options: [die, des, der]
+    answer: der
+    explanation:
+      en: "*Pause* is feminine: in the *Genitiv*, *die* becomes *der*."
+      fa: "*Pause* اسم مؤنث است: در حالت *Genitiv*، *die* به *der* تبدیل می‌شود."
+      de: "*Pause* ist feminin. Im Genitiv wird *die* zu *der*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Während des ___ hat es jeden Tag geregnet.
+    options: [Urlaub, Urlauben, Urlaubs]
+    answer: Urlaubs
+    explanation:
+      en: "After *des* the masculine noun gets *-s*: *des Urlaubs*."
+      fa: "پس از *des* اسم مذکر *-s* می‌گیرد: *des Urlaubs*."
+      de: "Nach *des* bekommt das maskuline Nomen *-s*: *des Urlaubs*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Während ___ Ferien fahren wir an die Ostsee.
+    options: [des, der, die]
+    answer: der
+    explanation:
+      en: "*Die Ferien* is plural. In the *Genitiv* plural, *die* becomes *der*."
+      fa: "*die Ferien* جمع است. در حالت *Genitiv* جمع، *die* به *der* تبدیل می‌شود."
+      de: "*Die Ferien* ist Plural. Im Genitiv Plural wird *die* zu *der*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Er hat während ___ Konzerts die ganze Zeit geredet.
+    options: [einen, eines, einem]
+    answer: eines
+    explanation:
+      en: "*Ein Konzert* in the *Genitiv* is *eines Konzerts*."
+      fa: "*ein Konzert* در حالت *Genitiv* می‌شود *eines Konzerts*."
+      de: "*Ein Konzert* im Genitiv: *eines Konzerts*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich konnte ___ leider nicht ans Telefon gehen.
+    options: [während die Besprechung, während der Besprechung, während den Besprechung]
+    answer: während der Besprechung
+    explanation:
+      en: "*Besprechung* is feminine: *während der Besprechung*."
+      fa: "*Besprechung* اسم مؤنث است: *während der Besprechung*."
+      de: "*Besprechung* ist feminin: *während der Besprechung*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wann hat das Kind geschlafen? – ___
+    options: [Während die Fahrt., Während dem Fahrt., Während der Fahrt.]
+    answer: Während der Fahrt.
+    explanation:
+      en: "*Fahrt* is feminine, so after *während* it is *der Fahrt*."
+      fa: "*Fahrt* اسم مؤنث است، پس پس از *während* می‌شود *der Fahrt*."
+      de: "*Fahrt* ist feminin. Nach *während*: *der Fahrt*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Während ___ Unterrichts muss das Handy aus sein.
+    options: [des, den, dem]
+    answer: des
+    explanation:
+      en: "*Unterrichts* has the *Genitiv* *-s*, so the article is *des*."
+      fa: "*Unterrichts* پایانهٔ *-s* حالت *Genitiv* را دارد، پس حرف تعریف *des* است."
+      de: "*Unterrichts* hat das *-s* vom Genitiv. Darum ist der Artikel *des*."
+  - id: true-1
+    type: true-false
+    prompt: Während des Fluges hat er die ganze Zeit geschlafen.
+    answer: true
+    explanation:
+      en: "*Der Flug* in the *Genitiv* is *des Fluges* (or *des Flugs*). The sentence is correct."
+      fa: "*der Flug* در حالت *Genitiv* می‌شود *des Fluges* (یا *des Flugs*). جمله درست است."
+      de: "*Der Flug* im Genitiv: *des Fluges* oder *des Flugs*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Während der Urlaub war ich in Italien.
+    answer: false
+    explanation:
+      en: "*Urlaub* is masculine: *während des Urlaubs*."
+      fa: "*Urlaub* اسم مذکر است: *während des Urlaubs*."
+      de: "*Urlaub* ist maskulin: *während des Urlaubs*."
+  - id: true-3
+    type: true-false
+    prompt: Während der Ferien besuchen wir unsere Großeltern.
+    answer: true
+    explanation:
+      en: "Plural *die Ferien* in the *Genitiv* is *der Ferien*. The sentence is correct."
+      fa: "*die Ferien* جمع در حالت *Genitiv* می‌شود *der Ferien*. جمله درست است."
+      de: "*Die Ferien* (Plural) im Genitiv: *der Ferien*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Während des Essen liest er die Zeitung.
+    answer: false
+    explanation:
+      en: "After *des* the noun needs its *-s*: *während des Essens*."
+      fa: "پس از *des* اسم باید *-s* بگیرد: *während des Essens*."
+      de: "Nach *des* braucht das Nomen ein *-s*: *während des Essens*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Während ___ (das) Spiels haben die Fans laut gesungen.
+    answers: [des]
+    explanation:
+      en: "*Das* becomes *des* in the *Genitiv*: *während des Spiels*."
+      fa: "*das* در حالت *Genitiv* می‌شود *des*: *während des Spiels*."
+      de: "*Das* wird im Genitiv zu *des*: *während des Spiels*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Während ___ (die) Prüfung muss das Handy aus sein.
+    answers: [der]
+    explanation:
+      en: "*Die* becomes *der* in the *Genitiv*: *während der Prüfung*."
+      fa: "*die* در حالت *Genitiv* می‌شود *der*: *während der Prüfung*."
+      de: "*Die* wird im Genitiv zu *der*: *während der Prüfung*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Während ___ (ein) Gewitters soll man nicht schwimmen.
+    answers: [eines]
+    explanation:
+      en: "*Ein Gewitter* is neuter; in the *Genitiv* it is *eines Gewitters*."
+      fa: "*ein Gewitter* خنثی است و در حالت *Genitiv* می‌شود *eines Gewitters*."
+      de: "*Ein Gewitter* ist neutral. Im Genitiv: *eines Gewitters*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Während des ___ (Unterricht) dürfen die Schüler nicht essen.
+    answers: [Unterrichts, Unterrichtes]
+    explanation:
+      en: "After *des* the masculine noun gets *-s*: *des Unterrichts*."
+      fa: "پس از *des* اسم مذکر *-s* می‌گیرد: *des Unterrichts*."
+      de: "Nach *des* bekommt das maskuline Nomen *-s*: *des Unterrichts*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Genitiv: während + der Urlaub"
+    answers: [während des Urlaubs, während des Urlaubes]
+    explanation:
+      en: "*Während* takes the *Genitiv*: *der Urlaub* becomes *des Urlaubs*."
+      fa: "*während* با حالت *Genitiv* می‌آید: *der Urlaub* به *des Urlaubs* تبدیل می‌شود."
+      de: "Nach *während* steht der Genitiv: *der Urlaub* wird zu *des Urlaubs*."
+  - id: error-1
+    type: find-error
+    prompt: Während das Abendessens hat mein Telefon geklingelt.
+    answer: das
+    explanation:
+      en: "In the *Genitiv*, *das* becomes *des*: *während des Abendessens*."
+      fa: "در حالت *Genitiv*، *das* به *des* تبدیل می‌شود: *während des Abendessens*."
+      de: "Im Genitiv wird *das* zu *des*: *während des Abendessens*."
+  - id: error-2
+    type: find-error
+    prompt: Während des Spaziergang hat es angefangen zu regnen.
+    answer: Spaziergang
+    explanation:
+      en: "After *des* the masculine noun needs *-s*: *des Spaziergangs*."
+      fa: "پس از *des* اسم مذکر باید *-s* بگیرد: *des Spaziergangs*."
+      de: "Nach *des* braucht das maskuline Nomen ein *-s*: *des Spaziergangs*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [was, macht, ihr, während der Ferien]
+    end: "?"
+    explanation:
+      en: "The question word first, the verb second, then the subject and the time."
+      fa: "واژهٔ پرسشی در آغاز، فعل در جایگاه دوم، سپس فاعل و قید زمان."
+      de: "Zuerst das Fragewort, dann das Verb an Position 2, dann das Subjekt und die Zeit."
+  - id: match-1
+    type: matching
+    answer:
+      - [der Flug, des Flugs]
+      - [die Reise, der Reise]
+      - [ein Gewitter, eines Gewitters]
+      - [die Ferien, der Ferien]
+    explanation:
+      en: "In the *Genitiv*: *der*/*das* become *des* with *-s* on the noun, *ein* becomes *eines*, and *die* becomes *der*, also in the plural."
+      fa: "در حالت *Genitiv*: *der* و *das* به *des* تبدیل می‌شوند و اسم *-s* می‌گیرد، *ein* به *eines*، و *die* به *der*، در جمع نیز."
+      de: "Im Genitiv: *der* und *das* werden zu *des*, das Nomen bekommt *-s*; *ein* wird zu *eines*; *die* wird zu *der*, auch im Plural."
+
+review:
+  reviewer: "independent AI agents (two fresh subagents, review sheet only: the
+    whole pool, then the disputed question again after it was rewritten; not
+    people)"
+  date: 2026-11-28
+  pool: 6f5c8f90e2baff57

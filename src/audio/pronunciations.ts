@@ -138,4 +138,20 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   // #96: stressed on the first syllable; the hyphen stresses "mal" too, as German does.
   minimal: 'mini-mal',
   maximal: 'maxi-mal',
+  // #101: English loanwords the voice reads as German, a wrong stress, "Geh" and "Fuß" read short.
+  Mountainbike: 'Maunten-beik',
+  Steward: 'Stiu-ard',
+  Stewardess: 'Stiuar-dess',
+  Camp: 'Kämp',
+  campen: 'kämpen',
+  gecampt: 'gekämpt',
+  Souvenir: 'Suwe-nier',
+  Giraffe: 'Gi-raffe',
+  Pinguin: 'Pinggu-ien',
+  Pinguine: 'Pinggu-iene',
+  Distanz: 'Diss-tanz',
+  Gehsteig: 'Geh-steig',
+  Einbahnstraße: 'Einbahn-straße',
+  Fußgänger: 'Fuhs-gänger',
+  Fußgängerzone: 'Fuhs-gängerzone',
 }
