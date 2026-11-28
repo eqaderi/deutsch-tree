@@ -1,39 +1,390 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-opinions
 kind: vocabulary
 level: A2
 chapter: a2-words-people
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Opinions and advice"
   fa: "نظر و توصیه"
   de: "Meinungen und Ratschläge"
+attemptSize: 15
 words:
   - word: Meinung
+    class: noun
+    article: die
+    plural: Meinungen
+    level: A2
+    meaning:
+      en: opinion
+      fa: نظر، عقیده
+    definition: was eine Person über eine Sache denkt
+    example:
+      de: Meiner Meinung nach ist der Film zu lang.
+      en: In my opinion the film is too long.
+      fa: به نظر من فیلم زیادی طولانی است.
+    alsoAccepted: [die Ansicht, die Auffassung, der Standpunkt]
+
+  # meinen and denken are near each other; neither is offered as a wrong meaning of the other.
   - word: meinen
+    class: verb
+    level: A2
+    meaning:
+      en: to think, to be of the opinion; to mean
+      fa: عقیده داشتن؛ منظور داشتن
+    definition: eine Sache so sehen und es sagen; auch sagen wollen
+    example:
+      de: Was meinst du, sollen wir den Zug nehmen?
+      en: What do you think, shall we take the train?
+      fa: نظرت چیست، با قطار برویم؟
+    alsoAccepted: [denken, glauben, finden, der Meinung sein]
+    tooCloseTo: [denken]
+
   - word: denken
+    class: verb
+    level: A2
+    meaning:
+      en: to think (use your mind)
+      fa: فکر کردن، اندیشیدن
+    definition: mit dem Kopf arbeiten; auch glauben
+    example:
+      de: Ich denke, wir sind zu früh.
+      en: I think we're too early.
+      fa: فکر می‌کنم زیادی زود آمده‌ایم.
+    alsoAccepted: [nachdenken, überlegen]
+
   - word: diskutieren
+    class: verb
+    level: A2
+    meaning:
+      en: to discuss, to debate
+      fa: بحث کردن
+    definition: mit anderen über ein Thema sprechen und verschiedene Meinungen sagen
+    example:
+      de: Im Kurs diskutieren wir oft über Politik.
+      en: In the course we often discuss politics.
+      fa: در کلاس اغلب دربارهٔ سیاست بحث می‌کنیم.
+    alsoAccepted: [besprechen, debattieren, erörtern]
+
+  # Idee, Vorschlag and Tipp are near each other; none is offered as a wrong meaning of another.
   - word: Idee
+    class: noun
+    article: die
+    plural: Ideen
+    level: A2
+    meaning:
+      en: idea
+      fa: ایده، فکر
+    definition: ein neuer Gedanke, zum Beispiel für ein Problem oder ein Geschenk
+    example:
+      de: Das ist eine gute Idee!
+      en: That's a good idea!
+      fa: فکر خوبی است!
+    alsoAccepted: [der Einfall, der Gedanke]
+    tooCloseTo: [Vorschlag, Tipp, Ahnung]
+
   - word: Vorschlag
+    class: noun
+    article: der
+    plural: Vorschläge
+    level: A2
+    meaning:
+      en: suggestion, proposal
+      fa: پیشنهاد (برای کاری که می‌شود کرد)
+    definition: "das, was man einer Person sagt, damit sie es vielleicht macht, zum Beispiel: „Gehen wir ins Kino?“"
+    example:
+      de: Hast du einen Vorschlag für das Wochenende?
+      en: Do you have a suggestion for the weekend?
+      fa: برای آخر هفته پیشنهادی داری؟
+    alsoAccepted: [die Anregung]
+    tooCloseTo: [Tipp]
+
   - word: Tipp
+    class: noun
+    article: der
+    plural: Tipps
+    level: A2
+    meaning:
+      en: tip, piece of advice
+      fa: نکته، توصیه
+    definition: ein kleiner, guter Rat, der einer Person hilft
+    example:
+      de: Kannst du mir einen Tipp für ein gutes Restaurant geben?
+      en: Can you give me a tip for a good restaurant?
+      fa: می‌توانی یک رستوران خوب به من توصیه کنی؟
+    alsoAccepted: [der Rat, der Ratschlag, der Hinweis, die Empfehlung]
+
+  # raten and beraten are near each other; neither is offered as a wrong meaning of the other.
   - word: raten
+    class: verb
+    level: A2
+    meaning:
+      en: to advise; to guess
+      fa: توصیه کردن؛ حدس زدن
+    definition: einer Person sagen, was sie am besten tun soll; auch eine Antwort suchen, die man nicht weiß
+    example:
+      de: Der Arzt rät mir, mehr Sport zu machen.
+      en: The doctor advises me to do more sport.
+      fa: دکتر به من توصیه می‌کند بیشتر ورزش کنم.
+    alsoAccepted: [empfehlen, einen Rat geben, schätzen, vermuten, tippen]
+    tooCloseTo: [beraten]
+
   - word: beraten
+    class: verb
+    level: A2
+    meaning:
+      en: to give advice, to advise (a customer, a client)
+      fa: مشاوره دادن، راهنمایی کردن
+    definition: einer Person helfen, die richtige Entscheidung zu finden, zum Beispiel im Geschäft
+    example:
+      de: Die Verkäuferin hat mich sehr gut beraten.
+      en: The shop assistant gave me very good advice.
+      fa: فروشنده خیلی خوب راهنمایی‌ام کرد.
+    alsoAccepted: [raten, einen Rat geben]
+
   - word: begründen
+    class: verb
+    level: A2
+    meaning:
+      en: to give reasons for, to justify
+      fa: دلیل آوردن (برای چیزی)
+    definition: Gründe für eine Meinung oder eine Entscheidung nennen
+    example:
+      de: Bitte begründen Sie Ihre Meinung.
+      en: Please give reasons for your opinion.
+      fa: لطفاً برای نظرتان دلیل بیاورید.
+    alsoAccepted: [rechtfertigen]
+
   - word: recht haben
+    class: verb
+    level: A2
+    meaning:
+      en: to be right
+      fa: حق داشتن، درست گفتن
+    definition: das Richtige sagen oder denken
+    example:
+      de: Du hast recht, das war mein Fehler.
+      en: You're right, that was my mistake.
+      fa: حق با توست، اشتباه از من بود.
+    alsoAccepted: [Recht haben, richtigliegen, richtig liegen]
+
+  # einverstanden and dafür are near each other; neither is offered as a wrong meaning of the other.
   - word: einverstanden
+    class: adjective
+    level: A2
+    meaning:
+      en: agreed, in agreement
+      fa: موافق، رضایت‌داده (به پیشنهاد کسی)
+    definition: so ist man, wenn man zu dem Plan von einer anderen Person Ja sagt und nichts dagegen hat
+    example:
+      de: Wir treffen uns um acht. Bist du einverstanden?
+      en: We'll meet at eight. Is that all right with you?
+      fa: ساعت هشت همدیگر را می‌بینیم. موافقی؟
+    alsoAccepted: [einig, abgemacht]
+    tooCloseTo: [dafür, natürlich]
+
   - word: dafür
+    class: adverb
+    level: A2
+    meaning:
+      en: for it, in favour (of it)
+      fa: طرفدار آن، به نفع آن
+    definition: so, dass man eine Sache gut findet und sie will; auch für diese Sache
+    example:
+      de: Ich bin dafür, dass wir am Samstag grillen.
+      en: I'm in favour of having a barbecue on Saturday.
+      fa: من طرفدار این هستم که شنبه کباب درست کنیم.
+    alsoAccepted: [pro]
+    tooCloseTo: [dagegen]
+
   - word: dagegen
+    class: adverb
+    level: A2
+    meaning:
+      en: against it
+      fa: مخالف آن، علیه آن
+    definition: so, dass man eine Sache nicht gut findet und sie nicht will
+    example:
+      de: Mein Mann ist dagegen, dass wir einen Hund kaufen.
+      en: My husband is against us buying a dog.
+      fa: شوهرم مخالف این است که سگ بخریم.
+    alsoAccepted: [contra, kontra]
+
+  # auf jeden Fall, unbedingt, sicher and natürlich are near each other; none is offered as a wrong meaning of another.
   - word: auf jeden Fall
+    class: phrase
+    level: A2
+    meaning:
+      en: in any case, definitely
+      fa: در هر صورت، قطعاً
+    definition: ganz sicher, egal was passiert
+    example:
+      de: Ich komme auf jeden Fall zu deiner Party.
+      en: I'm definitely coming to your party.
+      fa: در هر صورت به مهمانی‌ات می‌آیم.
+    alsoAccepted: [auf alle Fälle, in jedem Fall, bestimmt, definitiv, garantiert]
+    tooCloseTo: [unbedingt, sicher, natürlich, wahrscheinlich]
+
   - word: natürlich
+    class: adjective
+    level: A2
+    meaning:
+      en: of course; natural
+      fa: البته؛ طبیعی
+    definition: das ist klar, so erwartet man es; auch von der Natur und nicht künstlich
+    example:
+      de: Natürlich helfe ich dir.
+      en: Of course I'll help you.
+      fa: البته که کمکت می‌کنم.
+    alsoAccepted: [selbstverständlich, klar, logisch]
+    tooCloseTo: [sicher, unbedingt]
+
   - word: sicher
+    class: adjective
+    level: A2
+    meaning:
+      en: sure, certain; safe
+      fa: مطمئن؛ امن
+    definition: ohne Zweifel; auch ohne Gefahr
+    example:
+      de: Bist du sicher, dass der Laden heute offen ist?
+      en: Are you sure that the shop is open today?
+      fa: مطمئنی که مغازه امروز باز است؟
+    alsoAccepted: [bestimmt, gewiss, sicherlich, überzeugt]
+    tooCloseTo: [unbedingt, wahrscheinlich]
+
   - word: wahrscheinlich
+    class: adverb
+    level: A2
+    meaning:
+      en: probably
+      fa: احتمالاً
+    definition: nicht ganz sicher, aber man glaubt es
+    example:
+      de: Morgen regnet es wahrscheinlich.
+      en: It will probably rain tomorrow.
+      fa: فردا احتمالاً باران می‌آید.
+    alsoAccepted: [vermutlich, wohl, voraussichtlich]
+
   - word: unbedingt
+    class: adverb
+    level: A2
+    meaning:
+      en: absolutely, by all means, at all costs
+      fa: حتماً، به هر قیمتی
+    definition: "das sagt man, wenn etwas sehr wichtig ist, zum Beispiel: „Du musst … kommen!“"
+    example:
+      de: Den Film musst du unbedingt sehen!
+      en: You absolutely have to see that film!
+      fa: این فیلم را حتماً باید ببینی!
+    alsoAccepted: [auf jeden Fall, auf alle Fälle, in jedem Fall, absolut, definitiv, um jeden Preis]
+
   - word: Unterschied
+    class: noun
+    article: der
+    plural: Unterschiede
+    level: A2
+    meaning:
+      en: difference
+      fa: تفاوت، فرق
+    definition: was bei zwei Sachen oder Personen nicht gleich ist
+    example:
+      de: Was ist der Unterschied zwischen den beiden Handys?
+      en: What's the difference between the two mobile phones?
+      fa: فرق این دو گوشی چیست؟
+    alsoAccepted: [die Differenz]
+    tooCloseTo: [Gegenteil]
+
   - word: Gegenteil
+    class: noun
+    article: das
+    plural: Gegenteile
+    level: A2
+    meaning:
+      en: the opposite
+      fa: عکس، ضد
+    definition: etwas, das ganz anders ist, zum Beispiel „groß“ und „klein“
+    alsoAccepted: [der Gegensatz]
+    example:
+      de: Das Gegenteil von „warm“ ist „kalt“.
+      en: The opposite of "warm" is "cold".
+      fa: متضاد «گرم»، «سرد» است.
+
   - word: vergleichen
+    class: verb
+    level: A2
+    meaning:
+      en: to compare
+      fa: مقایسه کردن
+    definition: sehen, was bei zwei Sachen gleich und was anders ist
+    example:
+      de: Vergleichen Sie die Preise im Internet.
+      en: Compare the prices on the internet.
+      fa: قیمت‌ها را در اینترنت مقایسه کنید.
+    alsoAccepted: [gegenüberstellen]
+
   - word: Ahnung
+    class: noun
+    article: die
+    plural: Ahnungen
+    level: A2
+    meaning:
+      en: notion, clue (as in "no clue")
+      fa: تصور (مثلاً در «هیچ تصوری ندارم»)
+    definition: "ein bisschen Wissen über etwas; „keine …“ heißt: Ich weiß es nicht"
+    example:
+      de: Hast du eine Ahnung, wo mein Handy ist?
+      en: Do you have any idea where my phone is?
+      fa: خبر داری گوشی‌ام کجاست؟
+    alsoAccepted: [die Vorstellung, der Schimmer]
+
+  # Interesse and interessieren are noun and verb of one idea.
   - word: Interesse
+    class: noun
+    article: das
+    plural: Interessen
+    level: A2
+    meaning:
+      en: interest (in something)
+      fa: علاقه
+    definition: die Lust, mehr über eine Sache zu wissen oder sie zu machen, zum Beispiel bei Musik oder Sport
+    example:
+      de: Mein Sohn hat großes Interesse an Musik.
+      en: My son has a great interest in music.
+      fa: پسرم علاقهٔ زیادی به موسیقی دارد.
+
+  # The scope list gives "(sich)": the node teaches "sich interessieren (für)", to be interested in.
   - word: interessieren
+    class: verb
+    reflexive: sich
+    level: A2
+    meaning:
+      en: to be interested (in)
+      fa: علاقه داشتن (به چیزی)
+    definition: etwas gern wissen oder kennenlernen wollen, zum Beispiel ein Hobby
+    example:
+      de: Meine Tochter interessiert sich für Autos.
+      en: My daughter is interested in cars.
+      fa: دخترم به ماشین علاقه دارد.
+    alsoAccepted: [sich interessieren für, Interesse haben]
+
   - word: wählen
+    class: verb
+    level: A2
+    meaning:
+      en: to choose; to vote
+      fa: انتخاب کردن؛ رأی دادن
+    definition: aus mehreren Sachen eine nehmen; auch bei einer Wahl die Stimme geben
+    example:
+      de: Sie können zwischen Fisch und Fleisch wählen.
+      en: You can choose between fish and meat.
+      fa: می‌توانید بین ماهی و گوشت انتخاب کنید.
+    alsoAccepted: [aussuchen, auswählen, abstimmen]
+
+review:
+  reviewer: independent AI agents (six fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 50, 23, 48, 16 and 4 questions)
+  date: 2026-11-28
+  pool: a49988a3266341a0
