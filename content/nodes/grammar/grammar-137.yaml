@@ -4,10 +4,349 @@ kind: grammar
 level: B1
 chapter: b1-prepositions
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-071]
 title:
   en: "*innerhalb*, *außerhalb* + *Genitiv*"
   fa: "*innerhalb* و *außerhalb* + *Genitiv*"
   de: "*innerhalb*, *außerhalb* + Genitiv"
+
+explanations:
+  en:
+    rule: >
+      *Innerhalb* (inside, within) and *außerhalb* (outside) take the
+      *Genitiv*: *des* with *-s* or *-es* on a masculine or neuter noun
+      (*innerhalb des Hauses*), *der* for a feminine noun and the plural
+      (*außerhalb der Stadt*), *eines* and *einer* with *ein*. For a place
+      they say inside or outside an area: *Unser Hotel liegt außerhalb der
+      Stadt.* For time, *innerhalb* gives a span inside which something
+      happens, at the latest at its end: *Sie bekommen die Antwort innerhalb
+      einer Woche.* *Außerhalb* gives a time outside a span: *außerhalb der
+      Öffnungszeiten*. Before a number without an article, or before a name,
+      you usually say *von* + *Dativ*: *innerhalb von drei Tagen*,
+      *außerhalb von München*.
+  fa:
+    rule: >
+      *innerhalb* (درون، در مدت) و *außerhalb* (بیرون از) با حالت *Genitiv*
+      (حالت ملکی) می‌آیند: *des* برای اسم مذکر یا خنثی که *-s* یا *-es*
+      می‌گیرد (*innerhalb des Hauses*)، *der* برای اسم مؤنث و جمع
+      (*außerhalb der Stadt*)، و با *ein* صورت‌های *eines* و *einer*. برای
+      مکان، این دو حرف اضافه می‌گویند چیزی درون یا بیرون یک محدوده است:
+      *Unser Hotel liegt außerhalb der Stadt.* (هتل ما بیرون از شهر است).
+      برای زمان، *innerhalb* مدتی را نشان می‌دهد که کاری در آن، و حداکثر تا
+      پایانش، انجام می‌شود: *Sie bekommen die Antwort innerhalb einer Woche.*
+      (ظرف یک هفته پاسخ را دریافت می‌کنید). *außerhalb* زمانی بیرون از یک
+      بازه را می‌گوید: *außerhalb der Öffnungszeiten* (خارج از ساعات کاری).
+      پیش از عددی که حرف تعریف ندارد، یا پیش از نام، معمولاً *von* با حالت
+      *Dativ* می‌آید: *innerhalb von drei Tagen* و *außerhalb von München*.
+  de:
+    rule: >
+      Nach *innerhalb* und *außerhalb* steht der Genitiv: *des* und am
+      maskulinen oder neutralen Nomen *-s* oder *-es* (*innerhalb des
+      Hauses*). Bei femininen Nomen und im Plural steht *der* (*außerhalb der
+      Stadt*). Mit *ein*: *eines*, *einer*. Für einen Ort sagen sie: drinnen
+      oder draußen, zum Beispiel *Unser Hotel liegt außerhalb der Stadt.* Für
+      die Zeit sagt *innerhalb*: Es passiert in dieser Zeit, spätestens an
+      ihrem Ende, zum Beispiel *Sie bekommen die Antwort innerhalb einer
+      Woche.* *Außerhalb* sagt: nicht in dieser Zeit, zum Beispiel
+      *außerhalb der Öffnungszeiten*. Vor einer Zahl ohne Artikel und vor
+      einem Namen sagt man meistens *von* + Dativ: *innerhalb von drei
+      Tagen*, *außerhalb von München*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Genitiv*", fa: "حالت *Genitiv*", de: Genitiv }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Monat, des Monats, eines Monats, innerhalb eines Monats]
+    - [die Stadt, der Stadt, einer Stadt, außerhalb der Stadt]
+    - [das Haus, des Hauses, eines Hauses, innerhalb des Hauses]
+    - [die Öffnungszeiten (Plural), der Öffnungszeiten, –, außerhalb der Öffnungszeiten]
+
+# Two pictures. Place: a town as an oval, one dot inside it and one outside.
+# Time: a span from now to a week later; the dot, when the answer comes, can
+# be anywhere inside it.
+diagrams:
+  - caption:
+      en: >
+        Above, a place: one dot is inside the town (*innerhalb der Stadt*),
+        the other outside it (*außerhalb der Stadt*). Below, time: the band
+        runs from now to a week later, and the answer comes at some point
+        inside it (*innerhalb einer Woche*).
+      fa: >
+        بالا مکان را نشان می‌دهد: یک نقطه درون شهر است (*innerhalb der
+        Stadt*) و دیگری بیرون از آن (*außerhalb der Stadt*). پایین زمان را
+        نشان می‌دهد: نوار از اکنون تا یک هفته بعد است و پاسخ در لحظه‌ای درون
+        همین نوار می‌رسد (*innerhalb einer Woche*).
+      de: >
+        Oben ein Ort: Ein Punkt ist in der Stadt (*innerhalb der Stadt*), der
+        andere draußen (*außerhalb der Stadt*). Unten die Zeit: Der Balken
+        geht von jetzt bis eine Woche später. Die Antwort kommt irgendwann in
+        dieser Zeit (*innerhalb einer Woche*).
+    labels:
+      answer: { en: the answer, fa: پاسخ, de: die Antwort }
+    svg: |
+      <svg viewBox="0 0 320 300">
+        <!-- place: the town, a dot inside and a dot outside -->
+        <ellipse class="surface" cx="116" cy="72" rx="96" ry="56"/>
+        <text class="note" x="116" y="46" text-anchor="middle">die Stadt</text>
+        <circle class="object" cx="116" cy="74" r="8"/>
+        <text class="label" x="116" y="106" text-anchor="middle">innerhalb</text>
+        <circle class="object" cx="264" cy="74" r="8"/>
+        <text class="label" x="264" y="106" text-anchor="middle">außerhalb</text>
+        <!-- time: a span of one week from now -->
+        <text class="label" x="140" y="186" text-anchor="middle">innerhalb einer Woche</text>
+        <rect class="shade" x="60" y="198" width="160" height="22"/>
+        <line class="guide" x1="60" y1="220" x2="60" y2="250"/>
+        <line class="guide" x1="220" y1="220" x2="220" y2="250"/>
+        <!-- the time line, with an arrow to the right -->
+        <line class="line" x1="10" y1="250" x2="304" y2="250"/>
+        <polygon class="object" points="304,244 316,250 304,256"/>
+        <circle class="object" cx="60" cy="250" r="6"/>
+        <!-- the answer, at some point inside the span -->
+        <circle class="object" cx="164" cy="209" r="7"/>
+        <text class="note" x="164" y="240" text-anchor="middle">{{answer}}</text>
+        <text class="label" x="60" y="276" text-anchor="middle">jetzt</text>
+        <text class="note" x="220" y="274" text-anchor="middle">eine Woche später</text>
+      </svg>
+
+examples:
+  - de: Unser Ferienhaus liegt etwas außerhalb der Stadt.
+    en: Our holiday home is a little way outside the town.
+    fa: خانهٔ تعطیلات ما کمی بیرون از شهر است.
+  - de: Innerhalb der Altstadt dürfen keine Autos fahren.
+    en: No cars may drive inside the old town.
+    fa: درون شهر قدیمی هیچ خودرویی اجازهٔ رفت‌وآمد ندارد.
+  - de: Sie bekommen die Antwort innerhalb einer Woche.
+    en: You will get the answer within a week.
+    fa: ظرف یک هفته پاسخ را دریافت می‌کنید.
+  - de: Bitte bezahlen Sie die Rechnung innerhalb von 14 Tagen.
+    en: Please pay the bill within 14 days.
+    fa: لطفاً صورت‌حساب را ظرف ۱۴ روز بپردازید.
+  - de: Außerhalb der Öffnungszeiten können Sie uns eine E-Mail schreiben.
+    en: Outside opening hours you can write us an e-mail.
+    fa: خارج از ساعات کاری می‌توانید به ما ایمیل بزنید.
+  - de: Wir wohnen außerhalb von München, in einem kleinen Dorf.
+    en: We live outside Munich, in a small village.
+    fa: ما بیرون از مونیخ، در یک روستای کوچک، زندگی می‌کنیم.
+  - de: Innerhalb des Hauses ist Rauchen verboten.
+    en: Smoking is not allowed inside the building.
+    fa: کشیدن سیگار درون ساختمان ممنوع است.
+  - de: Das Paket kommt innerhalb von drei Tagen.
+    en: The parcel will arrive within three days.
+    fa: بسته ظرف سه روز می‌رسد.
+  - de: Innerhalb eines Jahres hat sie sehr gut Deutsch gelernt.
+    en: Within a year she learned German very well.
+    fa: او در مدت یک سال آلمانی را خیلی خوب یاد گرفت.
+  - de: Außerhalb der Saison sind die Flüge viel billiger.
+    en: Out of season the flights are much cheaper.
+    fa: خارج از فصل، پروازها خیلی ارزان‌ترند.
+
+mistakes:
+  - wrong: Der Bahnhof liegt außerhalb die Stadt.
+    right: Der Bahnhof liegt außerhalb der Stadt.
+    why:
+      en: "*Außerhalb* takes the *Genitiv*: feminine *die Stadt* becomes *der Stadt*."
+      fa: "*außerhalb* با حالت *Genitiv* می‌آید: *die Stadt* مؤنث به *der Stadt* تبدیل می‌شود."
+      de: "Nach *außerhalb* steht der Genitiv: *die Stadt* (feminin) wird zu *der Stadt*."
+  - wrong: Sie bekommen die Antwort innerhalb eine Woche.
+    right: Sie bekommen die Antwort innerhalb einer Woche.
+    why:
+      en: "*Innerhalb* takes the *Genitiv*: *eine Woche* becomes *einer Woche*."
+      fa: "*innerhalb* با حالت *Genitiv* می‌آید: *eine Woche* به *einer Woche* تبدیل می‌شود."
+      de: "Nach *innerhalb* steht der Genitiv: *eine Woche* wird zu *einer Woche*."
+  - wrong: Innerhalb des Haus ist Rauchen verboten.
+    right: Innerhalb des Hauses ist Rauchen verboten.
+    why:
+      en: "After *des* the neuter noun gets *-es* here, because *Haus* ends in *-s*: *des Hauses*."
+      fa: "پس از *des* اسم خنثی این‌جا *-es* می‌گیرد، چون *Haus* به *-s* ختم می‌شود: *des Hauses*."
+      de: "Nach *des* bekommt das neutrale Nomen hier *-es*, weil *Haus* auf *-s* endet: *des Hauses*."
+  - wrong: Innerhalb einer Woche Sie bekommen Bescheid.
+    right: Innerhalb einer Woche bekommen Sie Bescheid.
+    why:
+      en: "*Innerhalb einer Woche* is position 1, so the verb comes next and the subject after it."
+      fa: "*innerhalb einer Woche* جایگاه اول است، پس فعل بلافاصله پس از آن می‌آید و فاعل پس از فعل."
+      de: "*Innerhalb einer Woche* ist Position 1. Danach kommt das Verb, dann das Subjekt."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Unser Hotel liegt außerhalb ___ Stadt.
+    options: [die, dem, der]
+    answer: der
+    explanation:
+      en: "*Stadt* is feminine: in the *Genitiv*, *die* becomes *der*."
+      fa: "*Stadt* اسم مؤنث است: در حالت *Genitiv*، *die* به *der* تبدیل می‌شود."
+      de: "*Stadt* ist feminin. Im Genitiv wird *die* zu *der*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Sie bekommen die Antwort innerhalb ___ Woche.
+    options: [eine, einer, einem]
+    answer: einer
+    explanation:
+      en: "*Eine Woche* in the *Genitiv* is *einer Woche*."
+      fa: "*eine Woche* در حالت *Genitiv* می‌شود *einer Woche*."
+      de: "*Eine Woche* im Genitiv: *einer Woche*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Paket kommt innerhalb ___ drei Tagen.
+    options: [seit, der, von]
+    answer: von
+    explanation:
+      en: "Before a number without an article you say *innerhalb von* with the *Dativ*: *von drei Tagen*."
+      fa: "پیش از عدد بدون حرف تعریف *innerhalb von* با حالت *Dativ* می‌آید: *von drei Tagen*."
+      de: "Vor einer Zahl ohne Artikel sagt man *innerhalb von* mit Dativ: *von drei Tagen*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wir wohnen nicht in der Stadt, sondern ___ der Stadt, in einem kleinen Dorf.
+    options: [innerhalb, außerhalb, außerdem]
+    answer: außerhalb
+    explanation:
+      en: "Not in the town but in a village: outside the town, *außerhalb der Stadt*."
+      fa: "در شهر نیستند بلکه در روستا: یعنی بیرون از شهر، *außerhalb der Stadt*."
+      de: "Nicht in der Stadt, sondern in einem Dorf: *außerhalb der Stadt*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Innerhalb des ___ ist Rauchen verboten.
+    options: [Häuser, Hauses, Haus]
+    answer: Hauses
+    explanation:
+      en: "After *des* the neuter noun *Haus* gets *-es*: *des Hauses*."
+      fa: "پس از *des* اسم خنثی *Haus* پایانهٔ *-es* می‌گیرد: *des Hauses*."
+      de: "Nach *des* bekommt das neutrale Nomen *Haus* ein *-es*: *des Hauses*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Bis wann muss ich die Rechnung bezahlen? – ___
+    options: [Innerhalb von zehn Tage., Außerhalb von zehn Tagen., Innerhalb von zehn Tagen.]
+    answer: Innerhalb von zehn Tagen.
+    explanation:
+      en: "A span with a deadline is *innerhalb*; *von* takes the *Dativ*, so the plural gets *-n*: *zehn Tagen*."
+      fa: "مدتی که مهلت دارد با *innerhalb* بیان می‌شود؛ *von* با حالت *Dativ* می‌آید و اسم جمع *-n* می‌گیرد: *zehn Tagen*."
+      de: "Eine Frist sagt man mit *innerhalb*. Nach *von* steht der Dativ, der Plural bekommt *-n*: *zehn Tagen*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Am Wochenende ist die Praxis geschlossen. Wir sind ___ der Sprechzeiten nicht erreichbar.
+    options: [innerhalb, außer, außerhalb]
+    answer: außerhalb
+    explanation:
+      en: "Not at the times when the practice is open: *außerhalb der Sprechzeiten*."
+      fa: "در زمانی که مطب باز نیست: *außerhalb der Sprechzeiten*."
+      de: "Nicht in der Zeit, in der die Praxis offen ist: *außerhalb der Sprechzeiten*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "„Sie bekommen innerhalb einer Woche Bescheid.“ Was bedeutet das?"
+    options:
+      - Sie bekommen erst nach einer Woche Bescheid.
+      - Sie bekommen spätestens in einer Woche Bescheid.
+      - Sie bekommen eine Woche lang jeden Tag Bescheid.
+    answer: Sie bekommen spätestens in einer Woche Bescheid.
+    explanation:
+      en: "*Innerhalb einer Woche*: at some point in the next week, at the latest at its end."
+      fa: "*innerhalb einer Woche* یعنی در لحظه‌ای از هفتهٔ آینده، حداکثر تا پایان آن."
+      de: "*Innerhalb einer Woche* heißt: irgendwann in dieser Woche, spätestens an ihrem Ende."
+  - id: true-1
+    type: true-false
+    prompt: Die Apotheke liegt außerhalb des Zentrums.
+    answer: true
+    explanation:
+      en: "*Das Zentrum* in the *Genitiv* is *des Zentrums*. The sentence is correct."
+      fa: "*das Zentrum* در حالت *Genitiv* می‌شود *des Zentrums*. جمله درست است."
+      de: "*Das Zentrum* im Genitiv: *des Zentrums*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir wohnen außerhalb von Hamburg.
+    answer: true
+    explanation:
+      en: "Before a name you say *außerhalb von*. The sentence is correct."
+      fa: "پیش از نام *außerhalb von* به کار می‌رود. جمله درست است."
+      de: "Vor einem Namen sagt man *außerhalb von*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Die Mensa ist innerhalb die Universität.
+    answer: false
+    explanation:
+      en: "*Innerhalb* takes the *Genitiv*: *innerhalb der Universität*."
+      fa: "*innerhalb* با حالت *Genitiv* می‌آید: *innerhalb der Universität*."
+      de: "Nach *innerhalb* steht der Genitiv: *innerhalb der Universität*."
+  - id: true-4
+    type: true-false
+    prompt: Das Geld kommt innerhalb von zwei Tagen auf Ihr Konto.
+    answer: true
+    explanation:
+      en: "Before a number without an article: *innerhalb von* with the *Dativ* *zwei Tagen*. The sentence is correct."
+      fa: "پیش از عدد بدون حرف تعریف: *innerhalb von* با حالت *Dativ* (*zwei Tagen*). جمله درست است."
+      de: "Vor einer Zahl ohne Artikel: *innerhalb von* mit Dativ (*zwei Tagen*). Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Bitte antworten Sie innerhalb ___ (ein) Monats.
+    answers: [eines]
+    explanation:
+      en: "*Ein Monat* in the *Genitiv* is *eines Monats*."
+      fa: "*ein Monat* در حالت *Genitiv* می‌شود *eines Monats*."
+      de: "*Ein Monat* im Genitiv: *eines Monats*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Außerhalb ___ (die) Saison ist das Hotel viel billiger.
+    answers: [der]
+    explanation:
+      en: "*Die* becomes *der* in the *Genitiv*: *außerhalb der Saison*."
+      fa: "*die* در حالت *Genitiv* می‌شود *der*: *außerhalb der Saison*."
+      de: "*Die* wird im Genitiv zu *der*: *außerhalb der Saison*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Der Bauernhof liegt etwas außerhalb des ___ (Ort).
+    answers: [Ortes, Orts]
+    explanation:
+      en: "After *des* the masculine noun gets *-es* or *-s*: *des Ortes*."
+      fa: "پس از *des* اسم مذکر *-es* یا *-s* می‌گیرد: *des Ortes*."
+      de: "Nach *des* bekommt das maskuline Nomen *-es* oder *-s*: *des Ortes*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Das Paket kommt ___ (innerhalb / zwei Tage).
+    answers: [innerhalb von zwei Tagen, innerhalb zweier Tage, innerhalb zwei Tagen]
+    explanation:
+      en: "Before a number without an article: *innerhalb von* with the *Dativ*, so the plural gets *-n*: *innerhalb von zwei Tagen*."
+      fa: "پیش از عدد بدون حرف تعریف: *innerhalb von* با حالت *Dativ*، پس اسم جمع *-n* می‌گیرد: *innerhalb von zwei Tagen*."
+      de: "Vor einer Zahl ohne Artikel: *innerhalb von* mit Dativ, der Plural bekommt *-n*: *innerhalb von zwei Tagen*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "außerhalb + die Stadt"
+    answers: [außerhalb der Stadt]
+    explanation:
+      en: "*Außerhalb* takes the *Genitiv*: *die Stadt* becomes *der Stadt*."
+      fa: "*außerhalb* با حالت *Genitiv* می‌آید: *die Stadt* به *der Stadt* تبدیل می‌شود."
+      de: "Nach *außerhalb* steht der Genitiv: *die Stadt* wird zu *der Stadt*."
+  - id: error-1
+    type: find-error
+    prompt: Die Antwort kommt innerhalb eine Woche.
+    answer: eine
+    explanation:
+      en: "*Innerhalb* takes the *Genitiv*: *innerhalb einer Woche*."
+      fa: "*innerhalb* با حالت *Genitiv* می‌آید: *innerhalb einer Woche*."
+      de: "Nach *innerhalb* steht der Genitiv: *innerhalb einer Woche*."
+  - id: error-2
+    type: find-error
+    prompt: Der Campingplatz liegt außerhalb das Dorfes.
+    answer: das
+    explanation:
+      en: "In the *Genitiv*, *das* becomes *des*: *außerhalb des Dorfes*."
+      fa: "در حالت *Genitiv*، *das* به *des* تبدیل می‌شود: *außerhalb des Dorfes*."
+      de: "Im Genitiv wird *das* zu *des*: *außerhalb des Dorfes*."
+  - id: match-1
+    type: matching
+    answer:
+      - [innerhalb der Stadt, in der Stadt]
+      - [außerhalb der Stadt, nicht in der Stadt]
+      - [innerhalb einer Woche, spätestens nach sieben Tagen]
+    explanation:
+      en: "*Innerhalb* is inside a place or a time span, *außerhalb* outside it."
+      fa: "*innerhalb* یعنی درون یک مکان یا یک بازهٔ زمانی و *außerhalb* یعنی بیرون از آن."
+      de: "*Innerhalb* heißt: in einem Ort oder in einer Zeit. *Außerhalb* heißt: nicht darin."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: deb3e43ed928f0c6

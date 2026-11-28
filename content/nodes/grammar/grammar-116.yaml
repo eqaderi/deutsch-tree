@@ -4,10 +4,341 @@ kind: grammar
 level: B1
 chapter: b1-adjectives-participles
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-071, grammar-109]
 title:
   en: "Adjective endings in the *Genitiv*"
-  fa: "پایانهٔ صفت در *Genitiv*"
+  fa: "پایانهٔ صفت در حالت *Genitiv*"
   de: "Adjektivendungen im Genitiv"
+
+explanations:
+  en:
+    rule: >
+      In the *Genitiv*, an adjective after an article always ends in *-en*,
+      in every gender and in the plural: *wegen des schlechten Wetters*
+      (because of the bad weather), *der Name der neuen Kollegin*, *das Haus
+      eines alten Freundes*, *die Zimmer meiner kleinen Kinder*. The article
+      already shows the case, so the adjective needs no more. Without an
+      article, the adjective takes the ending of the missing article where
+      it can: *-er*, as in *der*, for feminine and plural nouns (*wegen
+      großer Hitze*, *die Meinung junger Leute*). Masculine and neuter nouns
+      are the exception: the adjective takes *-en*, not *-es*, because the
+      noun already shows the *Genitiv* with its *-(e)s*: *trotz schlechten
+      Wetters*, *wegen starken Regens*. These forms are mostly written.
+  fa:
+    rule: >
+      در حالت *Genitiv* (حالت ملکی)، صفتی که پس از حرف تعریف بیاید همیشه
+      پایانهٔ *-en* می‌گیرد، با هر جنسی و در جمع: *wegen des schlechten
+      Wetters* (به‌خاطر هوای بد)، *der Name der neuen Kollegin*، *das Haus
+      eines alten Freundes* و *die Zimmer meiner kleinen Kinder*. خود حرف
+      تعریف حالت را نشان می‌دهد و صفت به چیز دیگری نیاز ندارد. بدون حرف
+      تعریف، صفت تا جایی که بتواند پایانهٔ حرف تعریفی را می‌گیرد که نیامده
+      است: برای اسم مؤنث و جمع *-er*، مانند *der* (*wegen großer Hitze*،
+      *die Meinung junger Leute*). اسم مذکر و خنثی استثنا هستند: صفت *-en*
+      می‌گیرد، نه *-es*، چون خود اسم با *-(e)s* حالت *Genitiv* را نشان
+      می‌دهد: *trotz schlechten Wetters* (با وجود هوای بد) و *wegen starken
+      Regens*. این شکل‌ها بیشتر در نوشتار به کار می‌روند.
+  de:
+    rule: >
+      Im Genitiv hat ein Adjektiv nach einem Artikel immer die Endung *-en*,
+      bei jedem Genus und im Plural: *wegen des schlechten Wetters*, *der
+      Name der neuen Kollegin*, *das Haus eines alten Freundes*, *die Zimmer
+      meiner kleinen Kinder*. Der Artikel zeigt schon den Kasus. Ohne Artikel
+      bekommt das Adjektiv bei feminin und im Plural die Endung *-er* wie
+      *der*: *wegen großer Hitze*, *die Meinung junger Leute*. Bei maskulin
+      und neutral ist die Endung *-en*, nicht *-es*, denn das Nomen zeigt den
+      Genitiv schon mit *-(e)s*: *trotz schlechten Wetters*, *wegen starken
+      Regens*. Diese Formen schreibt man vor allem.
+
+# The article-change table of content/README.md for the Genitiv: first with
+# an article (always -en), then without one, where "ein" has no form (–).
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Genitiv*", fa: "حالت *Genitiv*", de: Genitiv }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der alte Freund, des alten Freundes, eines alten Freundes, das Haus eines alten Freundes]
+    - [die neue Kollegin, der neuen Kollegin, einer neuen Kollegin, der Name der neuen Kollegin]
+    - [das kleine Kind, des kleinen Kindes, eines kleinen Kindes, die Eltern des kleinen Kindes]
+    - [die alten Häuser (Plural), der alten Häuser, –, die Dächer der alten Häuser]
+    - [starker Regen, starken Regens, –, wegen starken Regens]
+    - [große Hitze, großer Hitze, –, wegen großer Hitze]
+    - [schlechtes Wetter, schlechten Wetters, –, trotz schlechten Wetters]
+    - [junge Leute (Plural), junger Leute, –, die Meinung junger Leute]
+
+examples:
+  - de: Wegen des schlechten Wetters bleiben wir zu Hause.
+    en: Because of the bad weather we are staying at home.
+    fa: به‌خاطر هوای بد در خانه می‌مانیم.
+  - de: Das ist das Haus eines alten Freundes.
+    en: That is the house of an old friend.
+    fa: این خانهٔ یکی از دوستان قدیمی من است.
+  - de: Wie ist der Name der neuen Kollegin?
+    en: What is the new colleague's name?
+    fa: اسم همکار جدید چیست؟
+  - de: Während der langen Fahrt haben wir viel gelesen.
+    en: During the long journey we read a lot.
+    fa: در طول سفر طولانی خیلی کتاب خواندیم.
+  - de: Am Ende des letzten Jahres bin ich umgezogen.
+    en: At the end of last year I moved house.
+    fa: آخر سال گذشته اسباب‌کشی کردم.
+  - de: Die Zimmer meiner kleinen Kinder sind oben.
+    en: My small children's rooms are upstairs.
+    fa: اتاق‌های بچه‌های کوچکم طبقهٔ بالاست.
+  - de: Trotz schlechten Wetters sind viele Leute gekommen.
+    en: Despite bad weather, many people came.
+    fa: با وجود هوای بد، آدم‌های زیادی آمدند.
+  - de: Wegen großer Hitze ist das Schwimmbad heute voll.
+    en: Because of the great heat the swimming pool is full today.
+    fa: به‌خاطر گرمای شدید، استخر امروز شلوغ است.
+  - de: Die Meinung junger Leute ist uns wichtig.
+    en: The opinion of young people is important to us.
+    fa: نظر جوانان برای ما مهم است.
+
+mistakes:
+  - wrong: Wegen des schlechtes Wetters bleiben wir zu Hause.
+    right: Wegen des schlechten Wetters bleiben wir zu Hause.
+    why:
+      en: "After an article in the *Genitiv* the adjective always ends in *-en*: *des schlechten Wetters*."
+      fa: "در حالت *Genitiv*، صفت پس از حرف تعریف همیشه پایانهٔ *-en* می‌گیرد: *des schlechten Wetters*."
+      de: "Im Genitiv hat das Adjektiv nach einem Artikel immer *-en*: *des schlechten Wetters*."
+  - wrong: Wie ist der Name der neue Kollegin?
+    right: Wie ist der Name der neuen Kollegin?
+    why:
+      en: "*Der neuen Kollegin* is *Genitiv*, not *Nominativ*: after this *der* the ending is *-en*."
+      fa: "*der neuen Kollegin* در حالت *Genitiv* است، نه *Nominativ*؛ پس از این *der* پایانه *-en* است."
+      de: "*Der neuen Kollegin* ist Genitiv, nicht Nominativ. Nach diesem *der* ist die Endung *-en*."
+  - wrong: Das ist das Haus eines alter Freundes.
+    right: Das ist das Haus eines alten Freundes.
+    why:
+      en: "*Eines* shows the case itself, so the adjective takes *-en*. The *-er* of *ein alter Freund* is only for the *Nominativ*."
+      fa: "*eines* خودش حالت را نشان می‌دهد، پس صفت *-en* می‌گیرد. *-er* در *ein alter Freund* فقط برای حالت *Nominativ* است."
+      de: "*Eines* zeigt den Kasus schon, also hat das Adjektiv *-en*. Das *-er* von *ein alter Freund* gibt es nur im Nominativ."
+  - wrong: Trotz schlechtes Wetters sind viele Leute gekommen.
+    right: Trotz schlechten Wetters sind viele Leute gekommen.
+    why:
+      en: "Without an article, a masculine or neuter noun in the *Genitiv* has an adjective in *-en*: the *-s* of *Wetters* already shows the case."
+      fa: "بدون حرف تعریف، صفتِ اسم مذکر یا خنثی در حالت *Genitiv* پایانهٔ *-en* می‌گیرد؛ *-s* در *Wetters* خودش حالت را نشان می‌دهد."
+      de: "Ohne Artikel hat das Adjektiv bei *der*- und *das*-Nomen im Genitiv *-en*. Das *-s* von *Wetters* zeigt den Kasus schon."
+  - wrong: Wegen große Hitze ist das Schwimmbad voll.
+    right: Wegen großer Hitze ist das Schwimmbad voll.
+    why:
+      en: "Without an article, a feminine noun in the *Genitiv* has an adjective in *-er*, the ending of the missing *der*."
+      fa: "بدون حرف تعریف، صفتِ اسم مؤنث در حالت *Genitiv* پایانهٔ *-er* می‌گیرد، یعنی پایانهٔ *der* که نیامده است."
+      de: "Ohne Artikel hat das Adjektiv bei *die*-Nomen im Genitiv *-er*, wie der Artikel *der*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wegen des ___ Wetters bleiben wir zu Hause.
+    options: [schlechte, schlechten, schlechtes]
+    answer: schlechten
+    explanation:
+      en: "After *des* in the *Genitiv* the adjective ends in *-en*."
+      fa: "پس از *des* در حالت *Genitiv* صفت پایانهٔ *-en* می‌گیرد."
+      de: "Nach *des* im Genitiv hat das Adjektiv *-en*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wie ist der Name der ___ Kollegin?
+    options: [neue, neuer, neuen]
+    answer: neuen
+    explanation:
+      en: "*Der Kollegin* is *Genitiv* here: after the article the adjective ends in *-en*."
+      fa: "*der Kollegin* این‌جا در حالت *Genitiv* است و صفت پس از حرف تعریف پایانهٔ *-en* می‌گیرد."
+      de: "*Der Kollegin* ist hier Genitiv. Nach dem Artikel hat das Adjektiv *-en*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das ist das Haus eines ___ Freundes.
+    options: [guten, guter, gutes]
+    answer: guten
+    explanation:
+      en: "After *eines* the adjective ends in *-en*."
+      fa: "پس از *eines* صفت پایانهٔ *-en* می‌گیرد."
+      de: "Nach *eines* hat das Adjektiv *-en*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wegen ___ Hitze ist das Schwimmbad heute voll.
+    options: [großen, große, großer]
+    answer: großer
+    explanation:
+      en: "No article, feminine *Genitiv*: the adjective takes the *-er* of the missing *der*."
+      fa: "بدون حرف تعریف و با اسم مؤنث در حالت *Genitiv*، صفت پایانهٔ *-er* حرف تعریف *der* را می‌گیرد."
+      de: "Ohne Artikel, feminin, Genitiv: Das Adjektiv hat *-er* wie *der*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Trotz ___ Regens spielen die Kinder draußen.
+    options: [starkes, starken, starker]
+    answer: starken
+    explanation:
+      en: "No article, masculine *Genitiv*: *-en*, because *Regens* already shows the case with *-s*."
+      fa: "بدون حرف تعریف و با اسم مذکر در حالت *Genitiv*، صفت *-en* می‌گیرد، چون *-s* در *Regens* حالت را نشان می‌دهد."
+      de: "Ohne Artikel, maskulin, Genitiv: *-en*, denn *Regens* zeigt den Kasus schon mit *-s*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Die Meinung ___ Leute ist uns wichtig.
+    options: [junge, junger, jungen]
+    answer: junger
+    explanation:
+      en: "No article, plural *Genitiv*: the adjective takes the *-er* of the missing *der*."
+      fa: "بدون حرف تعریف و در جمع با حالت *Genitiv*، صفت پایانهٔ *-er* حرف تعریف *der* را می‌گیرد."
+      de: "Ohne Artikel, Plural, Genitiv: Das Adjektiv hat *-er* wie *der*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Während der ___ Fahrt haben wir viel gelesen.
+    options: [langen, lange, langer]
+    answer: langen
+    explanation:
+      en: "*Während* takes the *Genitiv*: after *der* the adjective ends in *-en*."
+      fa: "*während* با حالت *Genitiv* می‌آید و صفت پس از *der* پایانهٔ *-en* می‌گیرد."
+      de: "Nach *während* steht der Genitiv. Nach *der* hat das Adjektiv *-en*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Am Ende des ___ Jahres bin ich umgezogen.
+    options: [letztes, letzte, letzten]
+    answer: letzten
+    explanation:
+      en: "After *des* the adjective ends in *-en*: *des letzten Jahres*."
+      fa: "پس از *des* صفت پایانهٔ *-en* می‌گیرد: *des letzten Jahres*."
+      de: "Nach *des* hat das Adjektiv *-en*: *des letzten Jahres*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Die Wohnung meiner ___ Eltern ist klein.
+    options: [alter, alten, alte]
+    answer: alten
+    explanation:
+      en: "After *meiner* in the *Genitiv* plural the adjective ends in *-en*."
+      fa: "پس از *meiner* در جمع با حالت *Genitiv*، صفت پایانهٔ *-en* می‌گیرد."
+      de: "Nach *meiner* im Genitiv Plural hat das Adjektiv *-en*."
+  - id: choice-5
+    type: multiple-choice
+    prompt: Die Farbe ___ neuen Autos gefällt mir.
+    options: [dem, des, der]
+    answer: des
+    explanation:
+      en: "*Das Auto* in the *Genitiv* is *des Autos*, and the adjective between them ends in *-en*."
+      fa: "*das Auto* در حالت *Genitiv* می‌شود *des Autos* و صفتِ میان آن دو پایانهٔ *-en* می‌گیرد."
+      de: "*Das Auto* im Genitiv: *des Autos*. Das Adjektiv dazwischen hat *-en*."
+  - id: true-1
+    type: true-false
+    prompt: Wegen des starken Regens fällt das Spiel aus.
+    answer: true
+    explanation:
+      en: "After *des* the adjective ends in *-en*. The sentence is correct."
+      fa: "پس از *des* صفت پایانهٔ *-en* می‌گیرد. جمله درست است."
+      de: "Nach *des* hat das Adjektiv *-en*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist das Auto meines neues Nachbarn.
+    answer: false
+    explanation:
+      en: "After *meines* the adjective ends in *-en*: *meines neuen Nachbarn*."
+      fa: "پس از *meines* صفت پایانهٔ *-en* می‌گیرد: *meines neuen Nachbarn*."
+      de: "Nach *meines* hat das Adjektiv *-en*: *meines neuen Nachbarn*."
+  - id: true-3
+    type: true-false
+    prompt: Trotz schlechten Wetters sind viele Leute gekommen.
+    answer: true
+    explanation:
+      en: "No article, neuter *Genitiv*: *-en*, because *Wetters* already has its *-s*. The sentence is correct."
+      fa: "بدون حرف تعریف و با اسم خنثی در حالت *Genitiv*، صفت *-en* می‌گیرد، چون *Wetters* خودش *-s* دارد. جمله درست است."
+      de: "Ohne Artikel, neutral, Genitiv: *-en*, denn *Wetters* hat schon *-s*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Die Ergebnisse der letzte Prüfung sind gut.
+    answer: false
+    explanation:
+      en: "*Der Prüfung* is *Genitiv* here: *der letzten Prüfung*."
+      fa: "*der Prüfung* این‌جا در حالت *Genitiv* است: *der letzten Prüfung*."
+      de: "*Der Prüfung* ist hier Genitiv: *der letzten Prüfung*."
+  - id: true-5
+    type: true-false
+    prompt: Wegen großer Hitze ist die Schule heute früher aus.
+    answer: true
+    explanation:
+      en: "No article, feminine *Genitiv*: *-er*, as in *der*. The sentence is correct."
+      fa: "بدون حرف تعریف و با اسم مؤنث در حالت *Genitiv*، صفت پایانهٔ *-er* می‌گیرد، مانند *der*. جمله درست است."
+      de: "Ohne Artikel, feminin, Genitiv: *-er* wie *der*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir bleiben wegen des ___ (kalt) Wetters zu Hause.
+    answers: [kalten]
+    explanation:
+      en: "After *des* the adjective ends in *-en*: *des kalten Wetters*."
+      fa: "پس از *des* صفت پایانهٔ *-en* می‌گیرد: *des kalten Wetters*."
+      de: "Nach *des* hat das Adjektiv *-en*: *des kalten Wetters*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das ist die Tasche einer ___ (neu) Kollegin.
+    answers: [neuen]
+    explanation:
+      en: "After *einer* in the *Genitiv* the adjective ends in *-en*."
+      fa: "پس از *einer* در حالت *Genitiv* صفت پایانهٔ *-en* می‌گیرد."
+      de: "Nach *einer* im Genitiv hat das Adjektiv *-en*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Meinung ___ (jung) Leute ist wichtig.
+    answers: [junger]
+    explanation:
+      en: "No article, plural *Genitiv*: *-er*, as in *der*: *junger Leute*."
+      fa: "بدون حرف تعریف و در جمع با حالت *Genitiv*، صفت پایانهٔ *-er* می‌گیرد، مانند *der*: *junger Leute*."
+      de: "Ohne Artikel, Plural, Genitiv: *-er* wie *der*: *junger Leute*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Trotz ___ (stark) Regens fahren wir los.
+    answers: [starken]
+    explanation:
+      en: "No article, masculine *Genitiv*: *-en*, because *Regens* already shows the case."
+      fa: "بدون حرف تعریف و با اسم مذکر در حالت *Genitiv*، صفت *-en* می‌گیرد، چون *Regens* خودش حالت را نشان می‌دهد."
+      de: "Ohne Artikel, maskulin, Genitiv: *-en*, denn *Regens* zeigt den Kasus schon."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Genitiv: das kleine Kind"
+    answers: [des kleinen Kindes, des kleinen Kinds]
+    explanation:
+      en: "*Das* becomes *des*, the adjective ends in *-en*, and the noun takes *-(e)s*: *des kleinen Kindes*."
+      fa: "*das* به *des* تبدیل می‌شود، صفت پایانهٔ *-en* می‌گیرد و اسم *-(e)s*: *des kleinen Kindes*."
+      de: "*Das* wird zu *des*, das Adjektiv hat *-en*, das Nomen bekommt *-(e)s*: *des kleinen Kindes*."
+  - id: error-1
+    type: find-error
+    prompt: Wegen des starke Regens kommt der Zug später.
+    answer: starke
+    explanation:
+      en: "After *des* the adjective ends in *-en*: *des starken Regens*."
+      fa: "پس از *des* صفت پایانهٔ *-en* می‌گیرد: *des starken Regens*."
+      de: "Nach *des* hat das Adjektiv *-en*: *des starken Regens*."
+  - id: error-2
+    type: find-error
+    prompt: Die Zimmer der kleine Kinder sind oben.
+    answer: kleine
+    explanation:
+      en: "*Der Kinder* is *Genitiv* plural: *der kleinen Kinder*."
+      fa: "*der Kinder* جمع و در حالت *Genitiv* است: *der kleinen Kinder*."
+      de: "*Der Kinder* ist Genitiv Plural: *der kleinen Kinder*."
+  - id: error-3
+    type: find-error
+    prompt: Trotz schlechtes Wetters gehen wir spazieren.
+    answer: schlechtes
+    explanation:
+      en: "No article, neuter *Genitiv*: *-en*, not *-es*: *trotz schlechten Wetters*."
+      fa: "بدون حرف تعریف و با اسم خنثی در حالت *Genitiv*، صفت *-en* می‌گیرد، نه *-es*: *trotz schlechten Wetters*."
+      de: "Ohne Artikel, neutral, Genitiv: *-en*, nicht *-es*: *trotz schlechten Wetters*."
+  - id: match-1
+    type: matching
+    answer:
+      - [der starke Regen, des starken Regens]
+      - [die große Hitze, der großen Hitze]
+      - [das schlechte Wetter, des schlechten Wetters]
+      - [die jungen Leute, der jungen Leute]
+    explanation:
+      en: "With an article the *Genitiv* adjective always ends in *-en*; only the article and the noun change."
+      fa: "با حرف تعریف، صفت در حالت *Genitiv* همیشه پایانهٔ *-en* می‌گیرد و فقط حرف تعریف و اسم تغییر می‌کنند."
+      de: "Mit Artikel hat das Adjektiv im Genitiv immer *-en*. Nur Artikel und Nomen ändern sich."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, review
+    sheet only; not a person)
+  date: 2026-11-28
+  pool: 4b26b26ba43aa3b7
