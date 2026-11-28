@@ -83,7 +83,7 @@ diagrams:
       second: { en: position 2, fa: جایگاه دوم, de: Position 2 }
       end: { en: the end, fa: پایان جمله, de: Ende }
     svg: |
-      <svg viewBox="0 0 320 212">
+      <svg viewBox="0 0 320 180">
         <!-- Ich werde dich morgen anrufen. -->
         <text class="note" x="84" y="18" text-anchor="middle">{{second}}</text>
         <text class="note" x="276" y="18" text-anchor="middle">{{end}}</text>
