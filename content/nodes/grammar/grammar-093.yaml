@@ -261,3 +261,9 @@ questions:
       en: "Subject *jemand* (*Nominativ*), object *jemanden* (*Akkusativ*), the person who gets something *jemandem* (*Dativ*)."
       fa: "فاعل *jemand* (حالت *Nominativ*)، مفعول *jemanden* (حالت *Akkusativ*) و کسی که چیزی دریافت می‌کند *jemandem* (حالت *Dativ*)."
       de: "Subjekt: *jemand* (Nominativ). Objekt: *jemanden* (Akkusativ). Die Person, die etwas bekommt: *jemandem* (Dativ)."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, review
+    sheet only; not a person)
+  date: 2026-11-28
+  pool: 9a342c33f8062a18

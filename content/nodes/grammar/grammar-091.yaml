@@ -267,3 +267,9 @@ questions:
       en: "Each noun is an object (*Akkusativ*): masculine *einen*, feminine *eine*, neuter *ein*."
       fa: "در هر سه جمله اسم مفعول است (حالت *Akkusativ*): مذکر *einen*، مؤنث *eine* و خنثی *ein*."
       de: "Jedes Nomen ist Objekt (Akkusativ): maskulin *einen*, feminin *eine*, neutral *ein*."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, review
+    sheet only; not a person)
+  date: 2026-11-28
+  pool: 7e497a756aa2d37e

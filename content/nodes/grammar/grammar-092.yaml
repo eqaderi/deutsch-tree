@@ -257,12 +257,12 @@ questions:
       de: "*Stunde* ist feminin: *jede Stunde*."
   - id: error-1
     type: find-error
-    prompt: Jeder Kinder bekommt ein Geschenk.
-    answer: Kinder
+    prompt: Alle Kinder bekommt ein Geschenk.
+    answer: bekommt
     explanation:
-      en: "*Jeder* goes with a singular noun and *bekommt* is singular: *Jedes Kind bekommt …*"
-      fa: "*jeder* با اسم مفرد می‌آید و *bekommt* هم مفرد است: *Jedes Kind bekommt …*"
-      de: "*Jeder* steht beim Singular, und *bekommt* ist Singular: *Jedes Kind bekommt …*"
+      en: "*Alle Kinder* is plural, so the verb is plural: *Alle Kinder bekommen ein Geschenk.*"
+      fa: "*alle Kinder* جمع است، پس فعل هم جمع می‌آید: *Alle Kinder bekommen ein Geschenk.*"
+      de: "*Alle Kinder* ist Plural. Darum steht das Verb im Plural: *Alle Kinder bekommen ein Geschenk.*"
   - id: error-2
     type: find-error
     prompt: Am Wochenende helfe ich allen Nachbarn und jeden Freund.
@@ -290,3 +290,10 @@ questions:
       en: "Time phrases in the *Akkusativ*: masculine *jeden*, feminine *jede*, neuter *jedes*."
       fa: "قیدهای زمان در حالت *Akkusativ*: مذکر *jeden*، مؤنث *jede* و خنثی *jedes*."
       de: "Zeitangaben im Akkusativ: maskulin *jeden*, feminin *jede*, neutral *jedes*."
+
+review:
+  reviewer: two independent AI agents (fresh Claude Opus 5.5 subagents, blind
+    passes on the review sheet only; the second on the rewritten error-1; not
+    people)
+  date: 2026-11-28
+  pool: 477387ee0019c764

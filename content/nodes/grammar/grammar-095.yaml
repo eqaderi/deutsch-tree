@@ -268,3 +268,9 @@ questions:
       en: "The pronoun takes the gender of the noun: masculine *meiner*, feminine *meine*, neuter *meins*."
       fa: "ضمیر جنس اسم را می‌گیرد: مذکر *meiner*، مؤنث *meine* و خنثی *meins*."
       de: "Das Pronomen hat das Genus vom Nomen: maskulin *meiner*, feminin *meine*, neutral *meins*."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, review
+    sheet only; not a person)
+  date: 2026-11-28
+  pool: fce6ee1d7526db22

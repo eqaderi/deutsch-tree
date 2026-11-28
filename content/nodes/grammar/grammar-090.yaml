@@ -115,12 +115,12 @@ mistakes:
       en: "*Lehrerin* is feminine, so *euer* takes *-e*, and the *e* before the *r* drops: *eure*."
       fa: "*Lehrerin* اسم مؤنث است، پس *euer* پایانهٔ *-e* می‌گیرد و حرف *e* پیش از *r* می‌افتد: *eure*."
       de: "*Lehrerin* ist feminin. Darum bekommt *euer* ein *-e*, und das *e* vor dem *r* fällt weg: *eure*."
-  - wrong: Anna spricht mit seiner Mutter.
-    right: Anna spricht mit ihrer Mutter.
+  - wrong: Herr Berg, wie geht es eurem Sohn?
+    right: Herr Berg, wie geht es Ihrem Sohn?
     why:
-      en: "The owner is Anna, a woman, so *ihr*; the case only gives the ending: *ihrer*."
-      fa: "دارنده آنا است که زن است، پس *ihr* می‌آید؛ حالت *Dativ* فقط پایانه را تعیین می‌کند: *ihrer*."
-      de: "Anna ist eine Frau. Darum *ihr*. Der Dativ gibt nur die Endung: *ihrer*."
+      en: "*Euer* is for *ihr*, several people you say *du* to. To Herr Berg you say *Sie*: *Ihrem Sohn*."
+      fa: "*euer* برای *ihr* است، یعنی چند نفر که با آن‌ها *du* می‌گوییم. با آقای برگ با *Sie* سخن می‌گوییم: *Ihrem Sohn*."
+      de: "*Euer* gehört zu *ihr*. Zu Herrn Berg sagt man *Sie*: *Ihrem Sohn*."
 
 questions:
   - id: gap-1
@@ -269,12 +269,12 @@ questions:
       de: "Nach *zu* steht der Dativ. *Großmutter* ist feminin: *zu meiner Großmutter*."
   - id: error-2
     type: find-error
-    prompt: Maria geht mit seinem Hund spazieren.
-    answer: seinem
+    prompt: Maria geht mit ihrer Hund spazieren.
+    answer: ihrer
     explanation:
-      en: "The owner is Maria, a woman, so *ihr*: *mit ihrem Hund*."
-      fa: "دارنده ماریا است که زن است، پس *ihr* می‌آید: *mit ihrem Hund*."
-      de: "Maria ist eine Frau. Darum *ihr*: *mit ihrem Hund*."
+      en: "*Mit* takes the *Dativ*, and *Hund* is masculine: *mit ihrem Hund*."
+      fa: "*mit* با حالت *Dativ* می‌آید و *Hund* اسم مذکر است: *mit ihrem Hund*."
+      de: "Nach *mit* steht der Dativ, und *Hund* ist maskulin: *mit ihrem Hund*."
   - id: order-1
     type: word-order
     answers:
@@ -294,3 +294,10 @@ questions:
       en: "*Mit* takes the *Dativ*: *meinem* for masculine, *meiner* for feminine, *meinen* for the plural."
       fa: "*mit* با حالت *Dativ* می‌آید: *meinem* برای مذکر، *meiner* برای مؤنث و *meinen* برای جمع."
       de: "Nach *mit* steht der Dativ: *meinem* (maskulin), *meiner* (feminin), *meinen* (Plural)."
+
+review:
+  reviewer: two independent AI agents (fresh Claude Opus 5.5 subagents, blind
+    passes on the review sheet only; the second on the rewritten error-2; not
+    people)
+  date: 2026-11-28
+  pool: adb04c4be65da012

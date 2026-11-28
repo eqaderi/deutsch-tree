@@ -268,3 +268,9 @@ questions:
       en: "The pronoun in the *Akkusativ* shows the gender: *einen*, *eine*, *eins*, and *welche* for a plural."
       fa: "ضمیر در حالت *Akkusativ* جنس را نشان می‌دهد: *einen*، *eine*، *eins* و برای جمع *welche*."
       de: "Das Pronomen im Akkusativ zeigt das Genus: *einen*, *eine*, *eins*, im Plural *welche*."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, review
+    sheet only; not a person)
+  date: 2026-11-28
+  pool: 96e869493586f0a3
