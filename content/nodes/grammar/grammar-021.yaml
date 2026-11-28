@@ -4,10 +4,333 @@ kind: grammar
 level: A2
 chapter: a2-werden-lassen-passive
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-003]
 title:
   en: "*werden* as a full verb"
   fa: "*werden* به‌عنوان فعل اصلی"
   de: "*werden* als Vollverb"
+
+explanations:
+  en:
+    rule: >
+      *Werden* means "to become" or "to get": it says that someone or
+      something changes. *Es wird dunkel.* (It is getting dark.) In the
+      singular it is irregular: *ich werde*, *du wirst*, *er* / *sie* / *es
+      wird* (with no *-t*); the plural is regular. After *werden* comes an
+      adjective (*müde*, *kalt*, *besser*) or a noun, and a job usually takes
+      no article, as with *sein*: *Ich möchte Ärztin werden.* With a number it
+      names the age reached on a birthday: *Mein Sohn wird morgen sechs.* The
+      *Perfekt* takes *sein*: *Er ist Lehrer geworden.* Do not mix it up with
+      *bekommen* (to receive): *Ich werde müde* (I get tired), but *Ich
+      bekomme einen Brief* (I get a letter).
+  fa:
+    rule: >
+      فعل *werden* یعنی «شدن» و نشان می‌دهد که کسی یا چیزی تغییر می‌کند:
+      *Es wird dunkel.* (هوا تاریک می‌شود.) این فعل در مفرد بی‌قاعده است:
+      *ich werde*، *du wirst*، *er/sie/es wird* (بدون *-t*)؛ صرف آن در جمع
+      باقاعده است. پس از *werden* صفت (*müde*، *kalt*، *besser*) یا اسم
+      می‌آید. اسم شغل، مانند جمله‌های با *sein*، معمولاً حرف تعریف نمی‌گیرد:
+      *Ich möchte Ärztin werden.* همراه با عدد، سنی را می‌گوید که کسی در
+      روز تولدش به آن می‌رسد: *Mein Sohn wird morgen sechs.* (پسرم فردا
+      شش‌ساله می‌شود.) گذشتهٔ نقلی (*Perfekt*) آن با *sein* ساخته می‌شود:
+      *Er ist Lehrer geworden.* *werden* را با *bekommen* (دریافت کردن) یکی
+      نگیرید: *Ich werde müde* (خسته می‌شوم)، اما *Ich bekomme einen Brief*
+      (نامه‌ای دریافت می‌کنم).
+  de:
+    rule: >
+      *Werden* sagt: Jemand oder etwas ändert sich. *Es wird dunkel.* Im
+      Singular ist das Verb unregelmäßig: *ich werde*, *du wirst*, *er/sie/es
+      wird* (ohne *-t*). Im Plural ist es regelmäßig. Nach *werden* kommt ein
+      Adjektiv (*müde*, *kalt*, *besser*) oder ein Nomen. Bei einem Beruf steht
+      meistens kein Artikel, wie bei *sein*: *Ich möchte Ärztin werden.* Mit
+      einer Zahl sagt man das neue Alter am Geburtstag: *Mein Sohn wird morgen
+      sechs.* Das Perfekt hat *sein*: *Er ist Lehrer geworden.* *Bekommen* ist
+      etwas anderes: *Ich bekomme einen Brief.*
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*werden*", fa: "*werden*", de: "*werden*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, werde, Ich werde schnell müde.]
+    - [du, wirst, Du wirst rot.]
+    - [er / sie / es, wird, Es wird kalt.]
+    - [wir, werden, Wir werden bald Eltern.]
+    - [ihr, werdet, Ihr werdet nass.]
+    - [sie / Sie, werden, Sie werden Lehrer.]
+
+examples:
+  - de: Ich möchte Ärztin werden.
+    en: I would like to become a doctor.
+    fa: دوست دارم پزشک شوم.
+  - de: Im Winter wird es früh dunkel.
+    en: In winter it gets dark early.
+    fa: در زمستان هوا زود تاریک می‌شود.
+  - de: Der Kaffee wird kalt.
+    en: The coffee is getting cold.
+    fa: قهوه سرد می‌شود.
+  - de: Mein Sohn wird morgen sechs.
+    en: My son turns six tomorrow.
+    fa: پسرم فردا شش‌ساله می‌شود.
+  - de: Du wirst immer so schnell rot!
+    en: You always go red so quickly!
+    fa: تو همیشه این‌قدر زود سرخ می‌شوی!
+  - de: Was wollt ihr später werden?
+    en: What do you (plural) want to be when you grow up?
+    fa: شما (جمع) می‌خواهید در آینده چه‌کاره شوید؟
+  - de: Das Wetter wird morgen besser.
+    en: The weather will get better tomorrow.
+    fa: هوا فردا بهتر می‌شود.
+  - de: Wir werden bald Großeltern.
+    en: We will soon be grandparents.
+    fa: ما به‌زودی پدربزرگ و مادربزرگ می‌شویم.
+  - de: Meine Schwester ist Lehrerin geworden.
+    en: My sister has become a teacher.
+    fa: خواهرم معلم شده است.
+
+mistakes:
+  - wrong: Du wirdst schnell müde.
+    right: Du wirst schnell müde.
+    why:
+      en: "With *du* the form is *wirst*, without *d*."
+      fa: "با *du* صورت فعل *wirst* است، بدون *d*."
+      de: "Bei *du* heißt es *wirst*, ohne *d*."
+  - wrong: Es wirdt dunkel.
+    right: Es wird dunkel.
+    why:
+      en: "With *er*, *sie* and *es* the form is *wird*: no *-t* is added."
+      fa: "با *er*، *sie* و *es* صورت فعل *wird* است و *-t* نمی‌گیرد."
+      de: "Bei *er*, *sie* und *es* heißt es *wird*, ohne *-t*."
+  - wrong: Ich bekomme müde.
+    right: Ich werde müde.
+    why:
+      en: 'For "get tired" German says *werden*. *Bekommen* means to receive: *Ich bekomme einen Brief.*'
+      fa: "برای «خسته شدن» فعل *werden* به کار می‌رود. *bekommen* یعنی دریافت کردن: *Ich bekomme einen Brief.*"
+      de: "Für eine Änderung sagt man *werden*. *Bekommen* sagt man, wenn man etwas erhält: *Ich bekomme einen Brief.*"
+  - wrong: Er hat Lehrer geworden.
+    right: Er ist Lehrer geworden.
+    why:
+      en: "*Werden* forms the *Perfekt* with *sein*: *ist geworden*."
+      fa: "گذشتهٔ نقلی (*Perfekt*) فعل *werden* با *sein* ساخته می‌شود: *ist geworden*."
+      de: "*Werden* hat im Perfekt *sein*: *ist geworden*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Im Winter ___ es früh dunkel.
+    options: [werdet, wird, wirst]
+    answer: wird
+    explanation:
+      en: "With *es* the form is *wird*."
+      fa: "با *es* صورت فعل *wird* است."
+      de: "Bei *es* heißt es *wird*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ du schnell müde?
+    options: [Wird, Werdet, Wirst]
+    answer: Wirst
+    explanation:
+      en: "With *du* the form is *wirst*."
+      fa: "با *du* صورت فعل *wirst* است."
+      de: "Bei *du* heißt es *wirst*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ihr ___ ja ganz nass!
+    options: [werden, werdet, wird]
+    answer: werdet
+    explanation:
+      en: "With *ihr* the form is *werdet*."
+      fa: "با *ihr* صورت فعل *werdet* است."
+      de: "Bei *ihr* heißt es *werdet*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Kinder ___ so schnell groß.
+    options: [wird, werden, werdet]
+    answer: werden
+    explanation:
+      en: "*Die Kinder* is plural (*sie*), so the form is *werden*."
+      fa: "*die Kinder* سوم‌شخص جمع است (*sie*)، پس صورت فعل *werden* است."
+      de: "*Die Kinder* ist Plural (*sie*). Darum heißt es *werden*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich ___ abends immer schnell müde.
+    options: [bekomme, werde, habe]
+    answer: werde
+    explanation:
+      en: "A change (getting tired) is *werden*: *ich werde müde*."
+      fa: "برای تغییر حال (خسته شدن) فعل *werden* می‌آید: *ich werde müde*."
+      de: "Eine Änderung sagt man mit *werden*: *ich werde müde*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Zum Geburtstag ___ ich ein Fahrrad.
+    options: [werde, bekomme, wird]
+    answer: bekomme
+    explanation:
+      en: "A present is received, so the verb is *bekommen*, not *werden*."
+      fa: "هدیه دریافت می‌شود، پس فعل *bekommen* است، نه *werden*."
+      de: "Ein Geschenk bekommt man. Darum heißt es *bekomme*, nicht *werde*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Mein Bruder ___ Koch geworden.
+    options: [hat, wird, ist]
+    answer: ist
+    explanation:
+      en: "*Werden* forms the *Perfekt* with *sein*: *er ist geworden*."
+      fa: "گذشتهٔ نقلی (*Perfekt*) فعل *werden* با *sein* ساخته می‌شود: *er ist geworden*."
+      de: "*Werden* hat im Perfekt *sein*: *er ist geworden*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Das Wetter ist schlecht ___.
+    options: [werden, geworden, gewordet]
+    answer: geworden
+    explanation:
+      en: "The *Partizip II* of *werden* is *geworden*."
+      fa: "صفت مفعولی (*Partizip II*) فعل *werden* می‌شود *geworden*."
+      de: "Das Partizip II von *werden* ist *geworden*."
+  - id: choice-5
+    type: multiple-choice
+    prompt: Meine Oma wird morgen 90.
+    options:
+      - Meine Oma ist schon seit einem Jahr 90.
+      - Morgen hat meine Oma ihren 90. Geburtstag.
+      - Meine Oma hatte gestern Geburtstag.
+    answer: Morgen hat meine Oma ihren 90. Geburtstag.
+    explanation:
+      en: "*Werden* with an age names the birthday: tomorrow she turns 90."
+      fa: "*werden* همراه با سن، روز تولد را می‌گوید: مادربزرگ فردا نودساله می‌شود."
+      de: "*Werden* mit einer Zahl sagt das neue Alter: Morgen ist ihr Geburtstag."
+  - id: true-1
+    type: true-false
+    prompt: Sie möchte Lehrerin werden.
+    answer: true
+    explanation:
+      en: "A job after *werden* usually takes no article. The sentence is correct."
+      fa: "اسم شغل پس از *werden* معمولاً حرف تعریف نمی‌گیرد. جمله درست است."
+      de: "Bei einem Beruf steht meistens kein Artikel. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Es wirdt schon dunkel.
+    answer: false
+    explanation:
+      en: "With *es* the form is *wird*, with no *-t*: *Es wird schon dunkel.*"
+      fa: "با *es* صورت فعل *wird* است و *-t* نمی‌گیرد: *Es wird schon dunkel.*"
+      de: "Bei *es* heißt es *wird*, ohne *-t*: *Es wird schon dunkel.*"
+  - id: true-3
+    type: true-false
+    prompt: Der Kaffee hat kalt geworden.
+    answer: false
+    explanation:
+      en: "*Werden* forms the *Perfekt* with *sein*: *Der Kaffee ist kalt geworden.*"
+      fa: "گذشتهٔ نقلی (*Perfekt*) فعل *werden* با *sein* ساخته می‌شود: *Der Kaffee ist kalt geworden.*"
+      de: "*Werden* hat im Perfekt *sein*: *Der Kaffee ist kalt geworden.*"
+  - id: true-4
+    type: true-false
+    prompt: Mein Opa wird nächste Woche 80.
+    answer: true
+    explanation:
+      en: "*Er wird 80*: next week is his eightieth birthday. The sentence is correct."
+      fa: "*er wird 80* یعنی هفتهٔ آینده هشتادساله می‌شود. جمله درست است."
+      de: "*Er wird 80*: Nächste Woche hat er Geburtstag. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Du ___ (werden) morgen 18, oder?
+    answers: [wirst]
+    explanation:
+      en: "With *du* the form is *wirst*."
+      fa: "با *du* صورت فعل *wirst* است."
+      de: "Bei *du* heißt es *wirst*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Meine Schwester ___ (werden) nächstes Jahr Ärztin.
+    answers: [wird]
+    explanation:
+      en: "*Meine Schwester* is *sie* (singular), so the form is *wird*."
+      fa: "*meine Schwester* سوم‌شخص مفرد است (*sie*)، پس صورت فعل *wird* است."
+      de: "*Meine Schwester* ist *sie* (Singular). Darum heißt es *wird*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir ___ (werden) nächsten Sommer Eltern.
+    answers: [werden]
+    explanation:
+      en: "With *wir* the form is *werden*."
+      fa: "با *wir* صورت فعل *werden* است."
+      de: "Bei *wir* heißt es *werden*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Mein Bruder ist Polizist ___ (werden).
+    answers: [geworden]
+    explanation:
+      en: "*Ist* + *Partizip II*: the *Perfekt* of *werden* is *ist geworden*."
+      fa: "*ist* + صفت مفعولی: گذشتهٔ نقلی *werden* می‌شود *ist geworden*."
+      de: "*Ist* + Partizip II: Das Perfekt von *werden* ist *ist geworden*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Perfekt: es wird dunkel"
+    answers: [es ist dunkel geworden, es ist dunkel geworden.]
+    explanation:
+      en: "*Werden* takes *sein*, and *geworden* goes to the end: *es ist dunkel geworden*."
+      fa: "*werden* با *sein* می‌آید و *geworden* به پایان جمله می‌رود: *es ist dunkel geworden*."
+      de: "*Werden* hat *sein*, und *geworden* steht am Ende: *es ist dunkel geworden*."
+  - id: error-1
+    type: find-error
+    prompt: Du wirdst immer so schnell rot.
+    answer: wirdst
+    explanation:
+      en: "With *du* the form is *wirst*, without *d*."
+      fa: "با *du* صورت فعل *wirst* است، بدون *d*."
+      de: "Bei *du* heißt es *wirst*, ohne *d*."
+  - id: error-2
+    type: find-error
+    prompt: Meine Tochter hat Ärztin geworden.
+    answer: hat
+    explanation:
+      en: "*Werden* forms the *Perfekt* with *sein*: *Meine Tochter ist Ärztin geworden.*"
+      fa: "گذشتهٔ نقلی (*Perfekt*) فعل *werden* با *sein* ساخته می‌شود: *Meine Tochter ist Ärztin geworden.*"
+      de: "*Werden* hat im Perfekt *sein*: *Meine Tochter ist Ärztin geworden.*"
+  - id: error-3
+    type: find-error
+    prompt: Im Winter bekomme ich schnell müde.
+    answer: bekomme
+    explanation:
+      en: "Getting tired is a change, so the verb is *werden*: *Im Winter werde ich schnell müde.*"
+      fa: "خسته شدن تغییر حال است، پس فعل *werden* می‌آید: *Im Winter werde ich schnell müde.*"
+      de: "Müde werden ist eine Änderung. Darum: *Im Winter werde ich schnell müde.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [was, willst, du, später, werden]
+    end: "?"
+    explanation:
+      en: "After the question word comes the modal verb; *werden* is the infinitive at the end."
+      fa: "پس از واژهٔ پرسشی فعل وجهی می‌آید و *werden* به‌صورت مصدر در پایان جمله است."
+      de: "Nach dem Fragewort kommt das Modalverb. *Werden* steht als Infinitiv am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [warum, wird, der Kaffee, so schnell, kalt]
+    end: "?"
+    explanation:
+      en: "*Wird* stands in position 2, after the question word; the adjective *kalt* comes last."
+      fa: "*wird* پس از واژهٔ پرسشی در جایگاه دوم می‌آید و صفت *kalt* در پایان جمله."
+      de: "*Wird* steht nach dem Fragewort auf Position 2. Das Adjektiv *kalt* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, werde]
+      - [du, wirst]
+      - [er, wird]
+      - [ihr, werdet]
+    explanation:
+      en: "*Ich werde*, *du wirst*, *er wird*, *ihr werdet*: the singular is irregular."
+      fa: "*ich werde*، *du wirst*، *er wird*، *ihr werdet*: صرف این فعل در مفرد بی‌قاعده است."
+      de: "*Ich werde*, *du wirst*, *er wird*, *ihr werdet*: Im Singular ist das Verb unregelmäßig."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: the whole pool, then typed-1 again after its key was widened to
+    accept a full stop; not people)"
+  date: 2026-11-28
+  pool: 2916359ec1e85cae

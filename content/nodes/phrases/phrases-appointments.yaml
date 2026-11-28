@@ -4,7 +4,7 @@ kind: phrases
 level: A2
 chapter: a2-phrases-arrangements
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Agreeing on a time and a place"
   fa: "هماهنگ کردن زمان و مکان"
@@ -14,3 +14,303 @@ purpose:
   fa: "بپرسید طرف مقابل کی وقت دارد، روز و جایی را پیشنهاد کنید و قرار را قطعی کنید."
   de: "Fragen, wann jemand Zeit hat, einen Tag und einen Ort anbieten und den Termin festmachen."
 examTasks: [exam-schreiben-1, exam-schreiben-3, exam-sprechen-1]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Wann hast du Zeit?
+    meaning:
+      en: When are you free? The first question when you plan a meeting. With *Sie* it is *Wann haben Sie Zeit?*
+      fa: «کی وقت داری؟» نخستین پرسش وقتی قراری می‌گذارید. با *Sie* می‌شود *Wann haben Sie Zeit?*
+      de: Die erste Frage, wenn man ein Treffen plant. Bei *Sie* fragt man *Wann haben Sie Zeit?*
+    examTasks: [exam-schreiben-1, exam-schreiben-3, exam-sprechen-1]
+    example:
+      de: Ich möchte dich nächste Woche besuchen. Wann hast du Zeit?
+      en: I would like to visit you next week. When are you free?
+      fa: می‌خواهم هفتهٔ آینده به دیدنت بیایم. کی وقت داری؟
+
+  - de: Hast du am … Zeit?
+    meaning:
+      en: "Are you free on …? Offers one day. Days take *am*: *am Montag*, *am Wochenende*."
+      fa: "«… وقت داری؟» یک روز را پیشنهاد می‌کند. پیش از نام روزها *am* می‌آید: *am Montag*، *am Wochenende*."
+      de: "Man schlägt einen Tag vor. Vor Tagen steht *am*: *am Montag*, *am Wochenende*."
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Hast du am Freitagabend Zeit?
+      en: Are you free on Friday evening?
+      fa: جمعه عصر وقت داری؟
+
+  - de: Hätten Sie am … Zeit?
+    meaning:
+      en: Would you be free on …? A polite question to a person you call *Sie*, good in a formal e-mail. *Hätten* is the polite form of *haben*.
+      fa: «آیا … وقت دارید؟» پرسشی مؤدبانه از کسی که با *Sie* خطابش می‌کنید، مناسب ایمیل رسمی. *Hätten* شکل مؤدبانهٔ *haben* است.
+      de: Eine höfliche Frage an eine Person, zu der man *Sie* sagt, gut in einer formellen E-Mail. *Hätten* ist die höfliche Form von *haben*.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Hätten Sie am Montag um zehn Uhr Zeit für ein kurzes Gespräch?
+      en: Would you be free on Monday at ten for a short talk?
+      fa: آیا دوشنبه ساعت ده برای گفت‌وگویی کوتاه وقت دارید؟
+
+  - de: Passt es dir am …?
+    meaning:
+      en: Does … suit you? Offers a day and a time. *passen* takes the dative, *dir*; with *Sie* it is *Passt es Ihnen …?*
+      fa: «… برایت مناسب است؟» روز و ساعتی را پیشنهاد می‌کند. *passen* با حالت *Dativ* می‌آید، یعنی *dir*؛ با *Sie* می‌شود *Passt es Ihnen …?*
+      de: Man schlägt einen Tag und eine Uhrzeit vor. Nach *passen* kommt der Dativ, *dir*. Bei *Sie* fragt man *Passt es Ihnen …?*
+    examTasks: [exam-schreiben-1, exam-schreiben-3, exam-sprechen-1]
+    example:
+      de: Passt es dir am Donnerstag um sechs?
+      en: Does Thursday at six suit you?
+      fa: پنجشنبه ساعت شش برایت مناسب است؟
+
+  - de: Wo treffen wir uns?
+    meaning:
+      en: Where shall we meet? Asks for the place. *sich treffen* is reflexive, so *uns* comes with *wir*.
+      fa: «کجا همدیگر را ببینیم؟» مکان قرار را می‌پرسد. *sich treffen* فعل انعکاسی است، پس با *wir* ضمیر *uns* می‌آید.
+      de: Man fragt nach dem Ort. *sich treffen* ist reflexiv, also sagt man *wir … uns*.
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Gut, Samstag passt. Wo treffen wir uns?
+      en: Good, Saturday works. Where shall we meet?
+      fa: خوب است، شنبه مناسب است. کجا همدیگر را ببینیم؟
+
+  - de: Treffen wir uns um … vor …?
+    meaning:
+      en: "Shall we meet at … in front of …? Offers a time and a place in one question. *vor* answers *wo?*, so it takes the dative: *vor dem Kino*."
+      fa: "«ساعت … جلوی … همدیگر را ببینیم؟» ساعت و مکان را در یک پرسش پیشنهاد می‌کند. *vor* این‌جا به پرسش *wo?* پاسخ می‌دهد، پس حالت *Dativ* می‌گیرد: *vor dem Kino*."
+      de: "Man schlägt Uhrzeit und Ort in einer Frage vor. *vor* antwortet hier auf *wo?*, also kommt der Dativ: *vor dem Kino*."
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Treffen wir uns um sieben vor dem Kino?
+      en: Shall we meet at seven in front of the cinema?
+      fa: ساعت هفت جلوی سینما همدیگر را ببینیم؟
+
+  - de: Am … kann ich leider nicht, aber am … geht es.
+    meaning:
+      en: I can't make it on …, but … works. Says no to one day and offers another. *es geht* means "it works".
+      fa: «… متأسفانه نمی‌توانم، ولی … می‌شود.» روزی را رد می‌کند و روز دیگری را پیشنهاد می‌دهد. *es geht* یعنی «شدنی است».
+      de: Man sagt nein zu einem Tag und bietet einen anderen an. *Es geht* heißt hier, dass es möglich ist.
+    examTasks: [exam-schreiben-1, exam-schreiben-3, exam-sprechen-1]
+    example:
+      de: Am Montag kann ich leider nicht, aber am Dienstag geht es.
+      en: I can't make it on Monday, unfortunately, but Tuesday works.
+      fa: دوشنبه متأسفانه نمی‌توانم، ولی سه‌شنبه می‌شود.
+
+  - de: Das passt mir gut.
+    meaning:
+      en: That suits me well. Says yes to a day or a time. *mir* is the dative of *ich*.
+      fa: «برایم مناسب است.» روز یا ساعتی را می‌پذیرد. *mir* حالت *Dativ* ضمیر *ich* است.
+      de: Man sagt ja zu einem Tag oder einer Uhrzeit. *mir* ist der Dativ von *ich*.
+    examTasks: [exam-schreiben-1, exam-schreiben-3, exam-sprechen-1]
+    example:
+      de: Samstag um zehn? Das passt mir gut.
+      en: Saturday at ten? That suits me well.
+      fa: شنبه ساعت ده؟ برایم مناسب است.
+
+  - de: Abgemacht!
+    meaning:
+      en: Agreed! Fixes the meeting at the end, mostly when speaking.
+      fa: «قبول!» در پایان گفت‌وگو قرار را قطعی می‌کند، بیشتر در گفتار.
+      de: Damit macht man den Termin am Ende fest, meistens beim Sprechen.
+    examTasks: [exam-sprechen-1]
+    example:
+      de: Also um zehn am Bahnhof? Abgemacht!
+      en: So at ten at the station? Agreed!
+      fa: پس ساعت ده در ایستگاه قطار؟ قبول!
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9). The right option stands in
+# a different place from question to question.
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Du möchtest wissen, wann Frau Weber Zeit hat. Was schreibst du ihr?
+    options:
+      - Wann hast du Zeit, Frau Weber?
+      - Wann haben Sie Zeit, Frau Weber?
+      - Wann habt ihr Zeit, Frau Weber?
+    answer: Wann haben Sie Zeit, Frau Weber?
+    explanation:
+      en: You call Frau Weber *Sie*, so the verb is *haben*. *Wann haben Sie Zeit?*
+      fa: "خانم وبر را با *Sie* خطاب می‌کنید، پس فعل *haben* است: *Wann haben Sie Zeit?*"
+      de: "Zu Frau Weber sagt man *Sie*, also heißt das Verb *haben*: *Wann haben Sie Zeit?*"
+
+  - id: q2
+    type: gap-fill
+    prompt: Passt es ___ am Donnerstag um sechs?
+    options: [du, dich, dir]
+    answer: dir
+    explanation:
+      en: "*passen* takes the dative. The dative of *du* is *dir*."
+      fa: "*passen* با حالت *Dativ* می‌آید و حالت *Dativ* ضمیر *du* واژهٔ *dir* است."
+      de: "Nach *passen* kommt der Dativ. Der Dativ von *du* ist *dir*."
+
+  - id: q3
+    type: true-false
+    prompt: Treffen wir uns um sieben vor dem Kino?
+    answer: true
+    explanation:
+      en: The verb comes first in the question, and *vor* takes the dative *dem Kino*. The sentence is correct.
+      fa: فعل در آغاز پرسش آمده است و *vor* حالت *Dativ*، یعنی *dem Kino*، گرفته است. جمله درست است.
+      de: Das Verb steht in der Frage vorne, und nach *vor* kommt der Dativ *dem Kino*. Der Satz ist richtig.
+
+  - id: q4
+    type: true-false
+    prompt: Wann du hast am Wochenende Zeit?
+    answer: false
+    explanation:
+      en: In a question with *wann* the verb comes right after it. *Wann hast du am Wochenende Zeit?*
+      fa: "در پرسش با *wann* فعل بلافاصله پس از آن می‌آید: *Wann hast du am Wochenende Zeit?*"
+      de: "In einer Frage mit *wann* steht das Verb direkt danach: *Wann hast du am Wochenende Zeit?*"
+
+  - id: q5
+    type: find-error
+    prompt: Passt es dich am Freitag um acht?
+    answer: dich
+    explanation:
+      en: "*passen* takes the dative, so it is *dir*, not *dich*."
+      fa: "*passen* با حالت *Dativ* می‌آید، پس *dir* درست است، نه *dich*."
+      de: "Nach *passen* kommt der Dativ, also *dir*, nicht *dich*."
+
+  - id: q6
+    type: word-order
+    answers:
+      - [wo, treffen, wir, uns, am Samstag]
+    end: "?"
+    explanation:
+      en: "The verb comes right after *wo*, then *wir uns*: *Wo treffen wir uns am Samstag?*"
+      fa: "فعل بلافاصله پس از *wo* می‌آید و پس از آن *wir uns*: *Wo treffen wir uns am Samstag?*"
+      de: "Das Verb steht direkt nach *wo*, dann kommt *wir uns*: *Wo treffen wir uns am Samstag?*"
+
+  - id: q7
+    type: multiple-choice
+    prompt: "Lena fragt: Hast du am Montag Zeit? Am Montag kannst du nicht, am Dienstag aber schon. Was antwortest du?"
+    options:
+      - Das passt mir gut.
+      - Abgemacht!
+      - Am Montag kann ich leider nicht, aber am Dienstag geht es.
+    answer: Am Montag kann ich leider nicht, aber am Dienstag geht es.
+    explanation:
+      en: You say no to Monday and offer Tuesday. *Das passt mir gut* and *Abgemacht!* would say yes to Monday.
+      fa: دوشنبه را رد می‌کنید و سه‌شنبه را پیشنهاد می‌دهید. *Das passt mir gut* و *Abgemacht!* یعنی دوشنبه را پذیرفته‌اید.
+      de: Du sagst nein zum Montag und bietest den Dienstag an. *Das passt mir gut* und *Abgemacht!* sagen ja zum Montag.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Ich möchte dich nächste Woche besuchen. Wann ___ (haben) du Zeit?
+    answers: [hast, hättest]
+    explanation:
+      en: With *du* the verb is *hast*. *hättest* is a little more polite and also right.
+      fa: با *du* فعل *hast* است. *hättest* کمی مؤدبانه‌تر است و آن هم درست است.
+      de: Bei *du* heißt es *hast*. *hättest* ist etwas höflicher und auch richtig.
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: ___ (passen) es dir am Donnerstag um sechs?
+    answers: [Passt]
+    explanation:
+      en: With *es* the verb is *passt*, and it comes first in the question.
+      fa: با *es* فعل *passt* است و در پرسش در آغاز جمله می‌آید.
+      de: Bei *es* heißt es *passt*, und das Verb steht in der Frage vorne.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Passt es ___ (Sie) am Montag um zehn, Frau Weber?
+    answers: [Ihnen]
+    explanation:
+      en: "*passen* takes the dative. The dative of *Sie* is *Ihnen*."
+      fa: "*passen* با حالت *Dativ* می‌آید و حالت *Dativ* ضمیر *Sie* واژهٔ *Ihnen* است."
+      de: "Nach *passen* kommt der Dativ. Der Dativ von *Sie* ist *Ihnen*."
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: ___ (haben, Konjunktiv II) Sie am Montag um zehn Uhr Zeit, Frau Weber?
+    answers: [Hätten]
+    explanation:
+      en: The polite question is *Hätten Sie … Zeit?*
+      fa: پرسش مؤدبانه *Hätten Sie … Zeit?* است.
+      de: Die höfliche Frage ist *Hätten Sie … Zeit?*
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: ___ treffen wir uns? – Am besten vor dem Kino.
+    answers: [Wo]
+    explanation:
+      en: The answer is a place, so the question word is *wo*.
+      fa: پاسخ یک مکان است، پس واژهٔ پرسشی *wo* است.
+      de: Die Antwort ist ein Ort, also heißt das Fragewort *wo*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Treffen wir uns um sieben ___ (vor / die Bibliothek)?
+    answers: [vor der Bibliothek, vor der]
+    explanation:
+      en: "*vor* answers *wo?* here, so it takes the dative: *die Bibliothek* becomes *vor der Bibliothek*."
+      fa: "*vor* این‌جا به پرسش *wo?* پاسخ می‌دهد و حالت *Dativ* می‌گیرد: *die Bibliothek* می‌شود *vor der Bibliothek*."
+      de: "*vor* antwortet hier auf *wo?*, also kommt der Dativ: *die Bibliothek* wird zu *vor der Bibliothek*."
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Treffen ___ uns um sieben vor dem Kino?
+    answers: [wir]
+    explanation:
+      en: "*uns* goes with *wir*: *Treffen wir uns …?*"
+      fa: "*uns* با *wir* می‌آید: *Treffen wir uns …?*"
+      de: "*uns* gehört zu *wir*: *Treffen wir uns …?*"
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Am Montag kann ich leider nicht, aber am Dienstag ___ (gehen) es.
+    answers: [geht, ginge]
+    explanation:
+      en: "*es geht* means it works. With *es* the verb is *geht*; *ginge* is the *Konjunktiv II* and also right."
+      fa: "*es geht* یعنی «شدنی است». با *es* فعل *geht* است."
+      de: "*Es geht* heißt, dass es möglich ist. Bei *es* heißt es *geht*."
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Samstag um zehn? Das ___ (passen) mir gut.
+    answers: [passt]
+    explanation:
+      en: With *das* the verb is *passt*. *Das passt mir gut.*
+      fa: "با *das* فعل *passt* است: *Das passt mir gut.*"
+      de: "Bei *das* heißt es *passt*: *Das passt mir gut.*"
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Samstag um zehn? Das passt ___ (ich) gut.
+    answers: [mir]
+    explanation:
+      en: "*passen* takes the dative. The dative of *ich* is *mir*."
+      fa: "*passen* با حالت *Dativ* می‌آید و حالت *Dativ* ضمیر *ich* واژهٔ *mir* است."
+      de: "Nach *passen* kommt der Dativ. Der Dativ von *ich* ist *mir*."
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Also um zehn am Bahnhof? ___ (abmachen, Partizip II)!
+    answers: [Abgemacht]
+    explanation:
+      en: You fix the meeting with *Abgemacht!*, the past participle of *abmachen*.
+      fa: قرار را با *Abgemacht!* قطعی می‌کنید که صفت مفعولی *abmachen* است.
+      de: Man macht den Termin fest mit *Abgemacht!*, dem Partizip II von *abmachen*.
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Hast du ___ (an / der Freitag) Zeit?
+    answers: [am Freitag, am, an dem Freitag, an dem]
+    explanation:
+      en: "Days take *am* (*an dem*): *am Freitag*."
+      fa: "پیش از نام روزها *am* (*an dem*) می‌آید: *am Freitag*."
+      de: "Vor Tagen steht *am* (*an dem*): *am Freitag*."
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Gut, Samstag passt. Wo ___ (treffen) wir uns?
+    answers: [treffen]
+    explanation:
+      en: With *wir* the verb is *treffen*, right after *wo*.
+      fa: با *wir* فعل *treffen* است و بلافاصله پس از *wo* می‌آید.
+      de: Bei *wir* heißt es *treffen*, direkt nach *wo*.
+
+review:
+  reviewer: an independent AI agent (two fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: 82ddb732f63f4b5e
