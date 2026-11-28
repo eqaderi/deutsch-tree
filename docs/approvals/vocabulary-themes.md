@@ -469,7 +469,7 @@ ehrlich · höflich · frech · mutig · der Mut · neugierig · stolz · tolera
 hübsch · schlank · mager · blass · elegant · chic · die Figur · die Frisur · der Bart · der Schmuck · schminken · (sich) rasieren · äußerlich · wunderschön · kräftig · die Uniform · das Kostüm · der Hut · die Socke · der Strumpf · der Bikini · der Knopf · das Tuch · anhaben · nähen · die Nadel · die Garderobe
 
 **B1-W1.5 Joy, hope and surprise** · شادی، امید و شگفتی · Freude, Hoffnung und Überraschung · 25 words  
-die Freude · das Gefühl · die Laune · die Stimmung · die Hoffnung · die Überraschung · überraschen · das Vergnügen · sich vergnügen · vergnügt · sich amüsieren · genießen · fröhlich · begeistert · dankbar · gespannt · lächeln · beruhigen · sich wundern · das Wunder · angenehm · gemütlich · entspannend · der Respekt · erwarten
+die Freude · das Gefühl · die Laune · die Stimmung · die Hoffnung · die Überraschung · überraschen · das Vergnügen · sich vergnügen · sich amüsieren · genießen · vergnügt · fröhlich · begeistert · dankbar · gespannt · lächeln · beruhigen · sich wundern · das Wunder · angenehm · gemütlich · entspannend · der Respekt · erwarten
 
 **B1-W1.6 Anger, fear and worry** · خشم، ترس و نگرانی · Ärger, Angst und Sorgen · 24 words  
 der Ärger · ärgerlich · aufregen · wütend · die Sorge · sorgen · (sich) fürchten · ängstlich · erschrecken · der Schreck · die Enttäuschung · enttäuschen · die Langeweile · sich langweilen · das Pech · leiden · klagen · hassen · die Träne · schreien · peinlich · unheimlich · der Nerv · der Druck
