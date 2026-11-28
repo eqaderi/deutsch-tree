@@ -96,6 +96,15 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   // #92: [bˈʊx] with a short u; the hyphen keeps the long u of "Buch".
   Buchhandlung: 'Buch-handlung',
 
+  // #94: stressed on the first syllable, [ˈzeːməstɐ]; the hyphen stresses "mes" as German does.
+  Semester: 'Se-mester',
+  // #94: stressed on the first syllable, [ˈzeːminaːɐ]; the hyphen stresses "nar".
+  Seminar: 'Semi-nar',
+  // #94: read as German, [ˈrɛçɐçə]; this spelling gives the French "sch" and the stress on "scher".
+  Recherche: 'Re-scherrsche',
+  // #94: "fss" is read as "fs" + "ch", [bəˈrʊfsçuːlə]; the hyphen keeps "schule" whole.
+  Berufsschule: 'Berufs-schule',
+
   // #97: read letter by letter in the German way, [hˈoːmeːˌɔfiːkə]; the hyphen gives [hˈoːmˈɔfɪs].
   Homeoffice: 'Hohm-offis',
 }

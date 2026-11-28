@@ -4,10 +4,378 @@ kind: grammar
 level: B1
 chapter: b1-connectors-negation
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-151, grammar-165]
 title:
   en: "*trotzdem*"
   fa: "*trotzdem*"
   de: "*trotzdem*"
+
+explanations:
+  en:
+    rule: >
+      *Trotzdem* (still, all the same, anyway) says that something happens
+      although the first fact speaks against it: *Das Wasser ist kalt,
+      trotzdem geht sie schwimmen.* It is the opposite of *deshalb*, which
+      gives the result you would expect. Like *deshalb*, *trotzdem* is an
+      adverb, not a conjunction: at the start of a clause it takes position 1,
+      so the verb comes next and the subject after it (*trotzdem geht sie*).
+      It can also stand after the verb, often in a new sentence or after
+      *aber*: *Sie geht trotzdem schwimmen.* *aber sie geht trotzdem
+      schwimmen.* The fact that speaks against it can also go into a clause
+      with *obwohl*, with the verb at the end: *Sie geht schwimmen, obwohl
+      das Wasser kalt ist.*
+  fa:
+    rule: >
+      *trotzdem* (با این حال، با وجود این) می‌گوید کاری انجام می‌شود، هرچند
+      واقعیت نخست با آن جور درنمی‌آید: *Das Wasser ist kalt, trotzdem geht
+      sie schwimmen.* این واژه وارونهٔ *deshalb* است که نتیجهٔ مورد انتظار را
+      می‌آورد. *trotzdem* نیز مانند *deshalb* قید است، نه حرف ربط. اگر در آغاز
+      جمله بیاید، خودش جایگاه اول را می‌گیرد؛ پس فعل پس از آن می‌آید و فاعل
+      پس از فعل: *trotzdem geht sie*. جای آن می‌تواند پس از فعل هم باشد، به‌ویژه
+      در جمله‌ای تازه یا پس از *aber*: *Sie geht trotzdem schwimmen.* و *aber
+      sie geht trotzdem schwimmen.* همان واقعیتِ مخالف را می‌توان در جمله‌ای
+      با *obwohl* هم گفت که فعلش به پایان جمله می‌رود: *Sie geht schwimmen,
+      obwohl das Wasser kalt ist.*
+  de:
+    rule: >
+      *Trotzdem* sagt: Etwas passiert, aber man erwartet es nicht. Der erste
+      Satz spricht dagegen: *Das Wasser ist kalt, trotzdem geht sie
+      schwimmen.* Bei *deshalb* ist es anders: Danach kommt die Folge, die man
+      erwartet. *Trotzdem* ist ein Adverb wie *deshalb*, keine Konjunktion. Am
+      Anfang vom Satz ist es Position 1. Dann kommt das Verb und danach das
+      Subjekt: *trotzdem geht sie*. *Trotzdem* kann auch nach dem Verb stehen,
+      oft in einem neuen Satz oder nach *aber*: *Sie geht trotzdem schwimmen.*
+      *aber sie geht trotzdem schwimmen.* Man kann das Gleiche auch mit
+      *obwohl* sagen. Dann steht das Verb am Ende: *Sie geht schwimmen, obwohl
+      das Wasser kalt ist.*
+
+table:
+  columns:
+    - { en: First clause, fa: جملهٔ نخست, de: Erster Satz }
+    - { en: Position 1, fa: جایگاه اول, de: Position 1 }
+    - { en: "Position 2: verb", fa: "جایگاه دوم: فعل", de: "Position 2: Verb" }
+    - { en: Subject, fa: فاعل, de: Subjekt }
+    - { en: The rest, fa: بقیهٔ جمله, de: Rest }
+  rows:
+    - ["Das Wasser ist kalt,", trotzdem, geht, sie, schwimmen.]
+    - ["Ich bin müde,", trotzdem, lerne, ich, noch eine Stunde.]
+    - ["Es regnet,", trotzdem, fahren, wir, mit dem Rad.]
+    - ["Er hat wenig Geld, und", trotzdem, kauft, er, ein neues Handy.]
+    - ["Der Film war lang.", Trotzdem, hat, er, mir gefallen.]
+
+# Three ways to join one fact to what follows from it: deshalb (what you
+# expect), trotzdem (what you don't expect), and obwohl, which puts the fact
+# into a clause after the surprise. The bent arrow marks the surprise.
+diagrams:
+  - caption:
+      en: >
+        One fact, two results. With *deshalb* comes what you expect; with
+        *trotzdem* comes what you do not expect. *Obwohl* says the same as
+        *trotzdem* the other way round: the surprise first, then the fact, with
+        the verb at the end.
+      fa: >
+        یک واقعیت و دو نتیجه. پس از *deshalb* نتیجهٔ طبیعی می‌آید و پس از
+        *trotzdem* نتیجه‌ای که کسی انتظارش را ندارد. *obwohl* همان معنای
+        *trotzdem* را به ترتیب وارونه می‌گوید: نخست نتیجهٔ غیرمنتظره، سپس
+        واقعیت، با فعل در پایان جمله.
+      de: >
+        Eine Tatsache, zwei Folgen. Nach *deshalb* kommt, was man erwartet. Nach
+        *trotzdem* kommt, was man nicht erwartet. Mit *obwohl* sagt man das
+        Gleiche umgekehrt: Zuerst kommt die Überraschung, dann die Tatsache, mit
+        dem Verb am Ende.
+    labels:
+      fact: { en: the fact, fa: واقعیت, de: die Tatsache }
+      expected: { en: as expected, fa: نتیجهٔ طبیعی, de: erwartet }
+      unexpected: { en: not as expected, fa: نتیجهٔ غیرمنتظره, de: nicht erwartet }
+    svg: |
+      <svg viewBox="0 0 320 306">
+        <!-- deshalb: fact, then the expected result -->
+        <rect class="surface" x="4" y="8" width="132" height="60"/>
+        <rect class="surface" x="184" y="8" width="132" height="60"/>
+        <text class="label" x="70" y="34" text-anchor="middle">Es regnet,</text>
+        <text class="note" x="70" y="56" text-anchor="middle">{{fact}}</text>
+        <text class="label" x="250" y="34" text-anchor="middle">deshalb …</text>
+        <text class="note" x="250" y="56" text-anchor="middle">{{expected}}</text>
+        <line class="line" x1="140" y1="38" x2="172" y2="38"/>
+        <polygon class="object" points="180,38 170,32 170,44"/>
+        <text class="note" x="160" y="90" text-anchor="middle">Es regnet, deshalb bleibe ich zu Hause.</text>
+        <!-- trotzdem: fact, then the unexpected result; the arrow bends -->
+        <rect class="surface" x="4" y="110" width="132" height="60"/>
+        <rect class="shade" x="184" y="110" width="132" height="60"/>
+        <text class="label" x="70" y="136" text-anchor="middle">Es regnet,</text>
+        <text class="note" x="70" y="158" text-anchor="middle">{{fact}}</text>
+        <text class="label" x="250" y="136" text-anchor="middle">trotzdem …</text>
+        <text class="note" x="250" y="158" text-anchor="middle">{{unexpected}}</text>
+        <polyline class="line" points="140,140 152,128 160,152 172,140"/>
+        <polygon class="object" points="180,140 170,134 170,146"/>
+        <text class="note" x="160" y="192" text-anchor="middle">Es regnet, trotzdem gehe ich spazieren.</text>
+        <!-- obwohl: the unexpected result first, the fact after it -->
+        <rect class="shade" x="4" y="212" width="132" height="60"/>
+        <rect class="surface" x="184" y="212" width="132" height="60"/>
+        <text class="label" x="70" y="238" text-anchor="middle">Ich gehe …,</text>
+        <text class="note" x="70" y="260" text-anchor="middle">{{unexpected}}</text>
+        <text class="label" x="250" y="238" text-anchor="middle">obwohl …</text>
+        <text class="note" x="250" y="260" text-anchor="middle">{{fact}}</text>
+        <line class="line" x1="148" y1="242" x2="180" y2="242"/>
+        <polygon class="object" points="140,242 150,236 150,248"/>
+        <text class="note" x="160" y="294" text-anchor="middle">Ich gehe spazieren, obwohl es regnet.</text>
+      </svg>
+
+examples:
+  - de: Das Wasser ist kalt, trotzdem geht sie schwimmen.
+    en: The water is cold, but she goes swimming all the same.
+    fa: آب سرد است، با این حال او به شنا می‌رود.
+  - de: Ich bin müde, trotzdem lerne ich noch eine Stunde.
+    en: I'm tired, but I'm still studying for another hour.
+    fa: خسته‌ام، با این حال یک ساعت دیگر درس می‌خوانم.
+  - de: Es regnet, trotzdem fahren wir mit dem Rad.
+    en: It's raining, but we're going by bike anyway.
+    fa: باران می‌بارد، با این حال با دوچرخه می‌رویم.
+  - de: Der Film war lang. Trotzdem hat er mir gefallen.
+    en: The film was long. Even so, I liked it.
+    fa: فیلم طولانی بود. با این حال از آن خوشم آمد.
+  - de: Mein Kollege war krank. Er ist trotzdem ins Büro gekommen.
+    en: My colleague was ill. He came to the office all the same.
+    fa: همکارم بیمار بود. با این حال به اداره آمد.
+  - de: Die Wohnung ist klein, aber wir fühlen uns trotzdem wohl.
+    en: The flat is small, but we still feel at home.
+    fa: آپارتمان کوچک است، اما با این حال در آن احساس راحتی می‌کنیم.
+  - de: Ich habe ihm den Weg genau erklärt, trotzdem hat er sich verlaufen.
+    en: I explained the way to him exactly, and he still got lost.
+    fa: راه را دقیق برایش توضیح دادم، با این حال گم شد.
+  - de: Die Karten waren teuer. Trotzdem war das Konzert ausverkauft.
+    en: The tickets were expensive. Even so, the concert was sold out.
+    fa: بلیت‌ها گران بودند. با وجود این همهٔ بلیت‌های کنسرت فروش رفت.
+
+mistakes:
+  - wrong: Das Wasser ist kalt, trotzdem sie geht schwimmen.
+    right: Das Wasser ist kalt, trotzdem geht sie schwimmen.
+    why:
+      en: "*Trotzdem* is position 1, so the verb comes next and the subject after it: *trotzdem geht sie*."
+      fa: "*trotzdem* جایگاه اول است، پس فعل پس از آن می‌آید و فاعل پس از فعل: *trotzdem geht sie*."
+      de: "*Trotzdem* ist Position 1. Danach kommt das Verb, dann das Subjekt: *trotzdem geht sie*."
+  - wrong: Es regnet, trotzdem bleiben wir zu Hause.
+    right: Es regnet, deshalb bleiben wir zu Hause.
+    why:
+      en: "Staying at home is what you expect when it rains, so *deshalb*. *Trotzdem* is for what you do not expect: *trotzdem gehen wir spazieren*."
+      fa: "در خانه ماندن هنگام باران نتیجهٔ طبیعی است، پس *deshalb* می‌آید. *trotzdem* برای نتیجهٔ غیرمنتظره است: *trotzdem gehen wir spazieren*."
+      de: "Bei Regen zu Hause bleiben: Das erwartet man. Darum *deshalb*. *Trotzdem* sagt man, wenn man es nicht erwartet: *trotzdem gehen wir spazieren*."
+  - wrong: Ich gehe spazieren, trotzdem es regnet.
+    right: Ich gehe spazieren, obwohl es regnet.
+    why:
+      en: "*Trotzdem* starts the surprising result, not the fact against it. To add the fact after the result, use *obwohl* with the verb at the end."
+      fa: "*trotzdem* آغاز نتیجهٔ غیرمنتظره است، نه آغاز واقعیتِ مخالف. برای آوردن آن واقعیت پس از نتیجه، *obwohl* به کار می‌رود و فعل به پایان جمله می‌رود."
+      de: "Nach *trotzdem* kommt die Überraschung, nicht der Grund dagegen. Den Grund nach der Folge sagt man mit *obwohl*, das Verb steht am Ende."
+  - wrong: Ich war müde, aber ich trotzdem habe gearbeitet.
+    right: Ich war müde, aber ich habe trotzdem gearbeitet.
+    why:
+      en: "After *aber* the subject *ich* is position 1 and the verb *habe* is position 2. *Trotzdem* comes after the verb."
+      fa: "پس از *aber* فاعل *ich* جایگاه اول است و فعل *habe* جایگاه دوم. *trotzdem* پس از فعل می‌آید."
+      de: "Nach *aber* ist *ich* Position 1 und das Verb *habe* Position 2. *Trotzdem* steht nach dem Verb."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das Wetter ist schlecht, trotzdem ___ an den See.
+    options: [wir fahren, fahren wir, fahren]
+    answer: fahren wir
+    explanation:
+      en: "*Trotzdem* is position 1, so the verb *fahren* comes next and *wir* after it."
+      fa: "*trotzdem* جایگاه اول است، پس فعل *fahren* پس از آن می‌آید و *wir* پس از فعل."
+      de: "*Trotzdem* ist Position 1. Dann kommt das Verb *fahren* und danach *wir*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich habe keinen Hunger, ___ esse ich ein Stück Kuchen.
+    options: [deshalb, trotzdem, denn]
+    answer: trotzdem
+    explanation:
+      en: "Eating cake without being hungry is not what you expect: *trotzdem*."
+      fa: "کیک خوردن بی‌آن‌که گرسنه باشی، نتیجهٔ طبیعی نیست: *trotzdem*."
+      de: "Ohne Hunger Kuchen essen: Das erwartet man nicht. Darum *trotzdem*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich habe großen Hunger, ___ esse ich zwei Stück Kuchen.
+    options: [trotzdem, deshalb, obwohl]
+    answer: deshalb
+    explanation:
+      en: "Eating a lot when you are very hungry is what you expect: *deshalb*."
+      fa: "خوردن زیاد هنگام گرسنگی شدید نتیجهٔ طبیعی است: *deshalb*."
+      de: "Mit großem Hunger viel essen: Das erwartet man. Darum *deshalb*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Der Zug hatte Verspätung, ___ bin ich pünktlich angekommen.
+    options: [deshalb, denn, trotzdem]
+    answer: trotzdem
+    explanation:
+      en: "Arriving on time with a late train is a surprise: *trotzdem*."
+      fa: "با قطاری که تأخیر داشت، به‌موقع رسیدن غیرمنتظره است: *trotzdem*."
+      de: "Der Zug war spät, ich war pünktlich: Das erwartet man nicht. Darum *trotzdem*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Er geht zur Arbeit, ___ er Fieber hat.
+    options: [obwohl, trotzdem, deshalb]
+    answer: obwohl
+    explanation:
+      en: "The fact against it comes after the result, with the verb *hat* at the end: that is *obwohl*."
+      fa: "واقعیتِ مخالف پس از نتیجه آمده و فعل *hat* در پایان جمله است؛ پس *obwohl* لازم است."
+      de: "Der Grund dagegen kommt nach der Folge, das Verb *hat* steht am Ende. Das ist *obwohl*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Das Restaurant war teuer. Wir sind gern hingegangen."
+    options:
+      - Das Restaurant war teuer, deshalb sind wir gern hingegangen.
+      - Das Restaurant war teuer, trotzdem wir sind gern hingegangen.
+      - Das Restaurant war teuer, trotzdem sind wir gern hingegangen.
+    answer: Das Restaurant war teuer, trotzdem sind wir gern hingegangen.
+    explanation:
+      en: "Going gladly to an expensive restaurant is not what you expect: *trotzdem*, with the verb *sind* right after it."
+      fa: "رفتن با میل به رستورانی گران نتیجهٔ طبیعی نیست: *trotzdem* و فعل *sind* درست پس از آن."
+      de: "Gern in ein teures Restaurant gehen: Das erwartet man nicht. Also *trotzdem*, direkt danach das Verb *sind*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Was bedeutet: Lisa ist erkältet, trotzdem geht sie joggen."
+    options:
+      - Lisa geht joggen, weil sie erkältet ist.
+      - Lisa ist erkältet, aber sie geht joggen.
+      - Lisa ist erkältet, darum geht sie nicht joggen.
+    answer: Lisa ist erkältet, aber sie geht joggen.
+    explanation:
+      en: "*Trotzdem*: she has a cold, and she goes jogging all the same. The cold is no reason for it."
+      fa: "*trotzdem* یعنی سرما خورده است و با این حال به دویدن می‌رود. سرماخوردگی دلیل دویدن نیست."
+      de: "*Trotzdem*: Sie ist erkältet und geht doch joggen. Die Erkältung ist kein Grund dafür."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich hatte wenig Zeit. ___ habe ich dir geholfen.
+    options: [Trotzdem, Obwohl, Denn]
+    answer: Trotzdem
+    explanation:
+      en: "Only *trotzdem* can take position 1 and be followed by the verb *habe*. *Obwohl* would send the verb to the end, and *denn* gives a reason."
+      fa: "فقط *trotzdem* می‌تواند جایگاه اول را بگیرد و فعل *habe* پس از آن بیاید. *obwohl* فعل را به پایان جمله می‌فرستد و *denn* دلیل می‌آورد."
+      de: "Nur *trotzdem* ist Position 1 mit dem Verb *habe* danach. Nach *obwohl* steht das Verb am Ende, und *denn* nennt einen Grund."
+  - id: true-1
+    type: true-false
+    prompt: Es ist schon spät, trotzdem arbeitet sie noch.
+    answer: true
+    explanation:
+      en: "*Trotzdem* in position 1, then the verb *arbeitet*, then *sie*. The sentence is correct."
+      fa: "*trotzdem* در جایگاه اول، سپس فعل *arbeitet* و پس از آن *sie*. جمله درست است."
+      de: "*Trotzdem* auf Position 1, dann das Verb *arbeitet*, dann *sie*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich war krank, trotzdem ich bin zur Party gegangen.
+    answer: false
+    explanation:
+      en: "After *trotzdem* the verb comes first: *trotzdem bin ich zur Party gegangen*."
+      fa: "پس از *trotzdem* نخست فعل می‌آید: *trotzdem bin ich zur Party gegangen*."
+      de: "Nach *trotzdem* kommt zuerst das Verb: *trotzdem bin ich zur Party gegangen*."
+  - id: true-3
+    type: true-false
+    prompt: Die Prüfung war schwer. Er hat sie trotzdem bestanden.
+    answer: true
+    explanation:
+      en: "*Trotzdem* can stand after the verb. The sentence is correct."
+      fa: "*trotzdem* می‌تواند پس از فعل بیاید. جمله درست است."
+      de: "*Trotzdem* kann nach dem Verb stehen. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Er hat wenig Zeit. Trotzdem hilft er uns beim Umzug.
+    answer: true
+    explanation:
+      en: "*Trotzdem* in position 1, then the verb *hilft*, then *er*. The sentence is correct."
+      fa: "*trotzdem* در جایگاه اول، سپس فعل *hilft* و پس از آن *er*. جمله درست است."
+      de: "*Trotzdem* auf Position 1, dann das Verb *hilft*, dann *er*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Das Auto ist alt, aber es fährt trotzdem gut.
+    answer: true
+    explanation:
+      en: "After *aber* the clause keeps its usual order, and *trotzdem* comes after the verb. The sentence is correct."
+      fa: "پس از *aber* ترتیب عادی جمله حفظ می‌شود و *trotzdem* پس از فعل می‌آید. جمله درست است."
+      de: "Nach *aber* bleibt die normale Wortstellung, *trotzdem* steht nach dem Verb. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Es ist kalt, trotzdem ___ (gehen) die Kinder in den Garten.
+    answers: [gehen]
+    explanation:
+      en: "The verb follows *trotzdem* in position 2, with the ending for *die Kinder* (they): *gehen*."
+      fa: "فعل پس از *trotzdem* در جایگاه دوم می‌آید و شناسهٔ آن با *die Kinder* (سوم‌شخص جمع) جور است: *gehen*."
+      de: "Das Verb steht nach *trotzdem* auf Position 2, passend zu *die Kinder*: *gehen*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Mein Bruder hat wenig Geld, trotzdem ___ (kaufen) er ein neues Handy.
+    answers: [kauft]
+    explanation:
+      en: "After *trotzdem* comes the verb, with the ending for *er*: *kauft*."
+      fa: "پس از *trotzdem* فعل می‌آید، با شناسهٔ سوم‌شخص مفرد (*er*): *kauft*."
+      de: "Nach *trotzdem* kommt das Verb, passend zu *er*: *kauft*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Du bist müde, ___ (trotzdem / deshalb) solltest du früh schlafen gehen.
+    answers: [deshalb]
+    explanation:
+      en: "Going to bed early is what you expect when you are tired: *deshalb*."
+      fa: "زود خوابیدن هنگام خستگی نتیجهٔ طبیعی است: *deshalb*."
+      de: "Müde und früh schlafen gehen: Das erwartet man. Darum *deshalb*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Der Kurs ist schwer, ___ (trotzdem / deshalb) macht er mir Spaß.
+    answers: [trotzdem]
+    explanation:
+      en: "Enjoying a hard course is not what you expect: *trotzdem*."
+      fa: "لذت بردن از کلاسی دشوار نتیجهٔ طبیعی نیست: *trotzdem*."
+      de: "Ein schwerer Kurs macht Spaß: Das erwartet man nicht. Darum *trotzdem*."
+  - id: error-1
+    type: find-error
+    prompt: Er hatte Fieber, obwohl ist er zur Arbeit gegangen.
+    answer: obwohl
+    explanation:
+      en: "The verb *ist* comes right after this word, so it must be the adverb *trotzdem*: *trotzdem ist er zur Arbeit gegangen*. After *obwohl* the verb would go to the end."
+      fa: "فعل *ist* درست پس از این واژه آمده است، پس باید قید *trotzdem* باشد: *trotzdem ist er zur Arbeit gegangen*. پس از *obwohl* فعل به پایان جمله می‌رفت."
+      de: "Direkt danach kommt das Verb *ist*. Darum muss es das Adverb *trotzdem* sein: *trotzdem ist er zur Arbeit gegangen*. Nach *obwohl* steht das Verb am Ende."
+  - id: error-2
+    type: find-error
+    prompt: Ich bin müde, trotzdem gehe ich ins Bett.
+    answer: trotzdem
+    explanation:
+      en: "Going to bed is what you expect when you are tired, so it should be *deshalb*."
+      fa: "به رخت‌خواب رفتن هنگام خستگی نتیجهٔ طبیعی است، پس باید *deshalb* بیاید."
+      de: "Müde ins Bett gehen: Das erwartet man. Darum muss es *deshalb* heißen."
+  - id: order-1
+    type: word-order
+    answers:
+      - [trotzdem, geht, sie, schwimmen]
+      - [sie, geht, trotzdem, schwimmen]
+      - [schwimmen, geht, sie, trotzdem]
+    explanation:
+      en: "The verb *geht* is position 2. *Trotzdem* stands in position 1 or after the verb and subject."
+      fa: "فعل *geht* در جایگاه دوم است. *trotzdem* یا جایگاه اول را می‌گیرد یا پس از فعل و فاعل می‌آید."
+      de: "Das Verb *geht* steht auf Position 2. *Trotzdem* ist Position 1 oder steht nach Verb und Subjekt."
+  - id: order-2
+    type: word-order
+    answers:
+      - [trotzdem, ist, er, ins Büro gekommen]
+      - [er, ist, trotzdem, ins Büro gekommen]
+      - [ins Büro gekommen, ist, er, trotzdem]
+    explanation:
+      en: "The verb *ist* is position 2 and *gekommen* stays at the end. *Trotzdem* stands in position 1 or after *ist er*."
+      fa: "فعل *ist* در جایگاه دوم است و *gekommen* در پایان جمله می‌ماند. *trotzdem* یا جایگاه اول را می‌گیرد یا پس از *ist er* می‌آید."
+      de: "Das Verb *ist* steht auf Position 2, *gekommen* am Ende. *Trotzdem* ist Position 1 oder steht nach *ist er*."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Es ist sehr heiß, …", deshalb gehen wir ins Schwimmbad.]
+      - ["Es ist sehr kalt, …", trotzdem gehen wir ins Schwimmbad.]
+      - ["Wir gehen ins Schwimmbad, …", obwohl es sehr kalt ist.]
+    explanation:
+      en: "Heat is a reason to swim: *deshalb*. Cold speaks against it: *trotzdem*, or *obwohl* with the fact after the result."
+      fa: "گرما دلیلی برای شناست: *deshalb*. سرما با آن جور درنمی‌آید: *trotzdem*، یا *obwohl* که واقعیت را پس از نتیجه می‌آورد."
+      de: "Bei Hitze schwimmen: Das erwartet man, also *deshalb*. Kälte spricht dagegen: *trotzdem*, oder *obwohl* mit dem Grund nach der Folge."
+
+review:
+  reviewer: an independent AI agent (fresh Claude Opus 5.5 subagents, blind passes
+    on the review sheet only, a second one on the disputed questions; not a
+    person)
+  date: 2026-11-28
+  pool: 84165c867c53784c
