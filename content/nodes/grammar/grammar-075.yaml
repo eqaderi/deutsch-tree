@@ -4,10 +4,261 @@ kind: grammar
 level: A1
 chapter: a1-nouns-articles
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-074]
 title:
   en: "*Nullartikel*"
   fa: "بدون حرف تعریف (*Nullartikel*)"
   de: "Nullartikel"
+
+explanations:
+  en:
+    rule: >
+      Some nouns stand without an article (*Nullartikel*). Things you cannot
+      count, such as food, drinks and materials, have no article when you
+      mean some of it or it in general: *Ich esse gern Fleisch.* A job or a
+      nationality after *sein* has no article either: *Er ist Koch. Sie ist
+      Österreicherin.* English says "a cook" here; German does not. The plural
+      of a noun with *ein* also has no article: *ein Apfel – Äpfel*. When you
+      mean one known thing, the article comes back: *Das Fleisch ist frisch.*
+  fa:
+    rule: >
+      برخی اسم‌ها بدون حرف تعریف می‌آیند (*Nullartikel*). چیزهای
+      شمارش‌ناپذیر، مانند خوراکی‌ها، نوشیدنی‌ها و موادی چون چوب و شیشه، وقتی
+      مقداری از آن‌ها یا خودشان به‌طور کلی منظور باشد، حرف تعریف نمی‌گیرند:
+      *Ich esse gern Fleisch.* شغل و ملیت پس از *sein* نیز بدون حرف تعریف
+      می‌آید: *Er ist Koch. Sie ist Österreicherin.* فارسی هم همین را
+      می‌گوید: «او آشپز است». جمع اسمی که با *ein* می‌آید نیز حرف تعریف
+      ندارد: *ein Apfel – Äpfel*. اگر چیز معین و شناخته‌ای منظور باشد، حرف
+      تعریف برمی‌گردد: *Das Fleisch ist frisch.*
+  de:
+    rule: >
+      Manche Nomen stehen ohne Artikel (Nullartikel). Essen, Getränke und
+      Material kann man oft nicht zählen. Meint man etwas davon oder die
+      Sache allgemein, steht kein Artikel: *Ich esse gern Fleisch.* Auch ein
+      Beruf oder eine Nationalität nach *sein* hat keinen Artikel: *Er ist
+      Koch. Sie ist Österreicherin.* Der Plural von *ein* hat auch keinen
+      Artikel: *ein Apfel – Äpfel*. Ist die Sache bekannt, steht wieder ein
+      Artikel: *Das Fleisch ist frisch.*
+
+table:
+  columns:
+    - { en: Use, fa: کاربرد, de: Gebrauch }
+    - { en: Without an article, fa: بدون حرف تعریف, de: Ohne Artikel }
+    - { en: "Known: with *der*, *die*, *das*", fa: "شناخته: با *der*، *die*، *das*", de: "Bekannt: mit *der*, *die*, *das*" }
+  rows:
+    - [Essen und Getränke, Ich esse gern Fleisch., Das Fleisch ist frisch.]
+    - [Material, Der Tisch ist aus Holz., Das Holz ist hell.]
+    - [Beruf nach sein, Er ist Koch., Der Koch heißt Paul.]
+    - [Nationalität nach sein, Sie ist Österreicherin., Die Österreicherin heißt Eva.]
+    - [Plural von ein, Das sind Äpfel., Die Äpfel sind süß.]
+
+examples:
+  - de: Ich esse gern Fleisch.
+    en: I like eating meat.
+    fa: من گوشت دوست دارم.
+  - de: Trinkst du Kaffee oder Tee?
+    en: Do you drink coffee or tea?
+    fa: قهوه می‌نوشی یا چای؟
+  - de: Wir brauchen Milch und Brot.
+    en: We need milk and bread.
+    fa: ما شیر و نان لازم داریم.
+  - de: Der Tisch ist aus Holz.
+    en: The table is made of wood.
+    fa: میز چوبی است.
+  - de: Er ist Koch.
+    en: He is a cook.
+    fa: او آشپز است.
+  - de: Meine Schwester ist Ärztin.
+    en: My sister is a doctor.
+    fa: خواهرم پزشک است.
+  - de: Was sind Sie von Beruf? – Ich bin Lehrerin.
+    en: What do you do for a living? – I am a teacher.
+    fa: شغل شما چیست؟ – معلم هستم.
+  - de: Paul ist Österreicher.
+    en: Paul is Austrian.
+    fa: "*Paul* اتریشی است."
+  - de: Im Garten spielen Kinder.
+    en: Children are playing in the garden.
+    fa: در باغ بچه‌ها بازی می‌کنند.
+  - de: Das Fleisch ist frisch.
+    en: The meat is fresh.
+    fa: گوشت تازه است.
+
+mistakes:
+  - wrong: Er ist ein Koch.
+    right: Er ist Koch.
+    why:
+      en: 'English says "a cook", but a job after *sein* usually has no article in German.'
+      fa: "شغل پس از *sein* معمولاً بدون حرف تعریف می‌آید، درست مانند فارسی: «او آشپز است»."
+      de: "Nach *sein* hat ein Beruf meistens keinen Artikel."
+  - wrong: Ich bin eine Ärztin von Beruf.
+    right: Ich bin Ärztin von Beruf.
+    why:
+      en: "With *von Beruf* the job never has an article."
+      fa: "با *von Beruf* شغل هرگز حرف تعریف نمی‌گیرد."
+      de: "Mit *von Beruf* hat der Beruf nie einen Artikel."
+  - wrong: Ich esse gern ein Fleisch.
+    right: Ich esse gern Fleisch.
+    why:
+      en: "You cannot count *Fleisch*, so it has no *ein*."
+      fa: "*Fleisch* شمارش‌پذیر نیست، پس *ein* نمی‌گیرد."
+      de: "*Fleisch* kann man nicht zählen. Darum kein *ein*."
+  - wrong: Das sind eine Bananen.
+    right: Das sind Bananen.
+    why:
+      en: "*Ein* has no plural, so the plural stands without an article."
+      fa: "*ein* جمع ندارد، پس اسم جمع بدون حرف تعریف می‌آید."
+      de: "*Ein* hat keinen Plural. Das Nomen steht ohne Artikel."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich bin ___ von Beruf.
+    options: [Lehrerin, eine Lehrerin, die Lehrerin]
+    answer: Lehrerin
+    explanation:
+      en: "With *von Beruf* the job has no article: *Ich bin Lehrerin von Beruf.*"
+      fa: "با *von Beruf* شغل بدون حرف تعریف می‌آید: *Ich bin Lehrerin von Beruf.*"
+      de: "Mit *von Beruf* hat der Beruf keinen Artikel: *Ich bin Lehrerin von Beruf.*"
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich esse gern ___.
+    options: [Fleisch, ein Fleisch, einen Fleisch]
+    answer: Fleisch
+    explanation:
+      en: "You cannot count *Fleisch*, so it stands without an article."
+      fa: "*Fleisch* شمارش‌پذیر نیست، پس بدون حرف تعریف می‌آید."
+      de: "*Fleisch* kann man nicht zählen. Es steht ohne Artikel."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der Tisch ist aus ___.
+    options: [Holz, ein Holz, das Holz]
+    answer: Holz
+    explanation:
+      en: "A material after *aus* stands without an article: *aus Holz*."
+      fa: "نام مواد پس از *aus* بدون حرف تعریف می‌آید: *aus Holz*."
+      de: "Ein Material nach *aus* hat keinen Artikel: *aus Holz*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Das sind ___.
+    options: [Äpfel, eine Äpfel, ein Äpfel]
+    answer: Äpfel
+    explanation:
+      en: "*Ein* has no plural: *ein Apfel – Äpfel*."
+      fa: "*ein* جمع ندارد: *ein Apfel – Äpfel*."
+      de: "*Ein* hat keinen Plural: *ein Apfel – Äpfel*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Im Park spielen ___.
+    options: [Kinder, ein Kinder, eine Kinder]
+    answer: Kinder
+    explanation:
+      en: "*Kinder* is a plural, and the plural of *ein* is no article: *ein Kind – Kinder*."
+      fa: "*Kinder* جمع است و جمع *ein* بدون حرف تعریف می‌آید: *ein Kind – Kinder*."
+      de: "*Kinder* ist Plural. Der Plural von *ein Kind* ist *Kinder*, ohne Artikel."
+  - id: gap-6
+    type: gap-fill
+    prompt: Wir trinken ___ ohne Zucker.
+    options: [Tee, ein Tee, eine Tee]
+    answer: Tee
+    explanation:
+      en: "A drink in general has no article: *Wir trinken Tee.*"
+      fa: "نوشیدنی به‌طور کلی بدون حرف تعریف می‌آید: *Wir trinken Tee.*"
+      de: "Ein Getränk allgemein hat keinen Artikel: *Wir trinken Tee.*"
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Sie ist Ärztin von Beruf., Sie ist eine Ärztin von Beruf., Sie ist die Ärztin von Beruf.]
+    answer: Sie ist Ärztin von Beruf.
+    explanation:
+      en: "With *von Beruf* the job never has an article."
+      fa: "با *von Beruf* شغل هرگز حرف تعریف نمی‌گیرد."
+      de: "Mit *von Beruf* hat der Beruf nie einen Artikel."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Das Fenster ist aus Glas., Das Fenster ist aus ein Glas., Das Fenster ist aus eine Glas.]
+    answer: Das Fenster ist aus Glas.
+    explanation:
+      en: "A material after *aus* stands without an article: *aus Glas*."
+      fa: "نام مواد پس از *aus* بدون حرف تعریف می‌آید: *aus Glas*."
+      de: "Ein Material nach *aus* hat keinen Artikel: *aus Glas*."
+  - id: true-1
+    type: true-false
+    prompt: Was sind Sie von Beruf? – Ich bin Ingenieur.
+    answer: true
+    explanation:
+      en: "A job after *sein* has no article. The sentence is correct."
+      fa: "شغل پس از *sein* بدون حرف تعریف می‌آید. جمله درست است."
+      de: "Ein Beruf nach *sein* hat keinen Artikel. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Sie ist Italienerin und wohnt in Rom.
+    answer: true
+    explanation:
+      en: "A nationality after *sein* has no article. The sentence is correct."
+      fa: "ملیت پس از *sein* بدون حرف تعریف می‌آید. جمله درست است."
+      de: "Eine Nationalität nach *sein* hat keinen Artikel. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich trinke gern ein Milch.
+    answer: false
+    explanation:
+      en: "Milk in general has no article: *Ich trinke gern Milch.* (*Milch* is feminine, so *ein* is wrong anyway.)"
+      fa: "شیر به‌طور کلی بدون حرف تعریف می‌آید: *Ich trinke gern Milch.* (*Milch* مؤنث است؛ پس *ein* به هر حال نادرست است.)"
+      de: "Milch allgemein hat keinen Artikel: *Ich trinke gern Milch.*"
+  - id: true-4
+    type: true-false
+    prompt: Das sind eine Bananen.
+    answer: false
+    explanation:
+      en: "*Ein* has no plural: *Das sind Bananen.*"
+      fa: "*ein* جمع ندارد: *Das sind Bananen.*"
+      de: "*Ein* hat keinen Plural: *Das sind Bananen.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Er ist ___ (Koch) von Beruf.
+    answers: [Koch]
+    explanation:
+      en: "With *von Beruf* the job has no article: *Er ist Koch von Beruf.*"
+      fa: "با *von Beruf* شغل بدون حرف تعریف می‌آید: *Er ist Koch von Beruf.*"
+      de: "Mit *von Beruf* hat der Beruf keinen Artikel: *Er ist Koch von Beruf.*"
+  - id: typed-1
+    type: typed-answer
+    prompt: "Plural ohne Artikel: ein Apfel"
+    answers: [Äpfel]
+    explanation:
+      en: "The plural of *ein Apfel* is *Äpfel*, with no article."
+      fa: "جمع *ein Apfel* می‌شود *Äpfel*، بدون حرف تعریف."
+      de: "Der Plural von *ein Apfel* ist *Äpfel*, ohne Artikel."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Plural ohne Artikel: eine Tasche"
+    answers: [Taschen]
+    explanation:
+      en: "The plural of *eine Tasche* is *Taschen*, with no article."
+      fa: "جمع *eine Tasche* می‌شود *Taschen*، بدون حرف تعریف."
+      de: "Der Plural von *eine Tasche* ist *Taschen*, ohne Artikel."
+  - id: error-1
+    type: find-error
+    prompt: Ich bin eine Ärztin von Beruf.
+    answer: eine
+    explanation:
+      en: "With *von Beruf* the job has no article: *Ich bin Ärztin von Beruf.*"
+      fa: "با *von Beruf* شغل بدون حرف تعریف می‌آید: *Ich bin Ärztin von Beruf.*"
+      de: "Mit *von Beruf* hat der Beruf keinen Artikel: *Ich bin Ärztin von Beruf.*"
+  - id: error-2
+    type: find-error
+    prompt: Der Ring ist aus ein Gold.
+    answer: ein
+    explanation:
+      en: "A material after *aus* stands without an article: *Der Ring ist aus Gold.*"
+      fa: "نام مواد پس از *aus* بدون حرف تعریف می‌آید: *Der Ring ist aus Gold.*"
+      de: "Ein Material nach *aus* hat keinen Artikel: *Der Ring ist aus Gold.*"
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: cdc784259afb65ee
