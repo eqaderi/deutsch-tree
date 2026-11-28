@@ -1,40 +1,396 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-emergencies
 kind: vocabulary
 level: B1
 chapter: b1-words-health
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Emergencies, danger and damage"
   fa: "وضعیت اضطراری، خطر و خسارت"
   de: "Notfälle, Gefahr und Schaden"
+attemptSize: 15
 words:
   - word: Notfall
+    class: noun
+    article: der
+    plural: Notfälle
+    level: B1
+    meaning:
+      en: emergency
+      fa: وضعیت اضطراری
+    definition: eine Situation, in der jemand sofort Hilfe braucht
+    example:
+      de: Im Notfall können Sie mich auch nachts anrufen.
+      en: In an emergency you can call me at night too.
+      fa: در وضعیت اضطراری شب‌ها هم می‌توانید به من زنگ بزنید.
+    alsoAccepted: [die Notlage]
+
   - word: Notruf
+    class: noun
+    article: der
+    plural: Notrufe
+    level: B1
+    meaning:
+      en: emergency call; emergency number
+      fa: تماس اضطراری، شمارهٔ اضطراری
+    definition: ein Anruf bei der Polizei, bei der Feuerwehr oder beim Rettungsdienst, wenn man schnell Hilfe braucht
+    example:
+      de: Er hat sofort den Notruf gewählt.
+      en: He dialled the emergency number at once.
+      fa: او فوراً شمارهٔ اضطراری را گرفت.
+    alsoAccepted: [die Notrufnummer]
+
   - word: Notaufnahme
+    class: noun
+    article: die
+    plural: Notaufnahmen
+    level: B1
+    meaning:
+      en: emergency department, A&E
+      fa: بخش اورژانس (بیمارستان)
+    definition: der Teil vom Krankenhaus, in dem man nach einem Unfall sofort behandelt wird
+    example:
+      de: In der Notaufnahme mussten wir drei Stunden warten.
+      en: We had to wait three hours in A&E.
+      fa: در بخش اورژانس سه ساعت منتظر ماندیم.
+    alsoAccepted: [die Notfallstation, die Rettungsstelle]
+
   - word: Notausgang
+    class: noun
+    article: der
+    plural: Notausgänge
+    level: B1
+    meaning:
+      en: emergency exit
+      fa: در خروج اضطراری
+    definition: eine Tür, durch die man bei Feuer schnell aus einem Gebäude kommt
+    example:
+      de: Der Notausgang ist hinten links neben der Bühne.
+      en: The emergency exit is at the back on the left, next to the stage.
+      fa: در خروج اضطراری در انتهای سالن، سمت چپ و کنار صحنه است.
+
   - word: Krankenwagen
+    class: noun
+    article: der
+    plural: Krankenwagen
+    level: B1
+    meaning:
+      en: ambulance
+      fa: آمبولانس
+    definition: ein Auto, das kranke oder verletzte Menschen ins Krankenhaus bringt
+    example:
+      de: Nach dem Unfall war der Krankenwagen in zehn Minuten da.
+      en: After the accident the ambulance arrived within ten minutes.
+      fa: بعد از تصادف آمبولانس ظرف ده دقیقه رسید.
+    alsoAccepted: [der Rettungswagen]
+
   - word: Feuerwehr
+    class: noun
+    article: die
+    plural: Feuerwehren
+    level: B1
+    meaning:
+      en: fire brigade, fire service
+      fa: آتش‌نشانی
+    definition: die Organisation, die kommt und das Feuer löscht, wenn ein Haus in Flammen steht
+    example:
+      de: Die Feuerwehr war schnell da und hat das Feuer gelöscht.
+      en: The fire brigade was there quickly and put out the fire.
+      fa: آتش‌نشانی زود رسید و آتش را خاموش کرد.
+
   - word: Alarm
+    class: noun
+    article: der
+    plural: Alarme
+    level: B1
+    meaning:
+      en: alarm
+      fa: زنگ خطر
+    definition: ein lautes Signal, das zeigt, dass eine Gefahr da ist
+    example:
+      de: Mitten in der Nacht ging im Hotel der Alarm los.
+      en: In the middle of the night the alarm went off in the hotel.
+      fa: نیمه‌شب زنگ خطر هتل به صدا درآمد.
+    alsoAccepted: [das Alarmsignal, das Warnsignal]
+
   - word: Gefahr
+    class: noun
+    article: die
+    plural: Gefahren
+    level: B1
+    meaning:
+      en: danger
+      fa: خطر
+    definition: etwas, das einem Menschen gerade jetzt schaden kann, zum Beispiel Glatteis oder ein wildes Tier
+    example:
+      de: "Vorsicht, Gefahr! Hier fallen oft Steine auf die Straße."
+      en: "Caution, danger! Stones often fall onto the road here."
+      fa: احتیاط، خطر! این‌جا اغلب سنگ روی جاده می‌افتد.
+    tooCloseTo: [Risiko]
+
   - word: retten
+    class: verb
+    level: B1
+    meaning:
+      en: to rescue, to save (a life)
+      fa: نجات دادن
+    definition: einem Menschen in großer Gefahr helfen, damit ihm nichts passiert oder damit er nicht stirbt
+    example:
+      de: Ein junger Mann ist ins Wasser gesprungen und hat das Kind gerettet.
+      en: A young man jumped into the water and saved the child.
+      fa: مرد جوانی به آب پرید و بچه را نجات داد.
+
   - word: warnen
+    class: verb
+    level: B1
+    meaning:
+      en: to warn
+      fa: هشدار دادن
+    definition: jemandem sagen, dass eine Gefahr kommt, damit er vorsichtig ist
+    example:
+      de: Das Radio warnt vor Glatteis auf den Straßen.
+      en: The radio is warning of black ice on the roads.
+      fa: رادیو دربارهٔ یخ‌زدگی جاده‌ها هشدار می‌دهد.
+
   - word: brennen
+    class: verb
+    level: B1
+    meaning:
+      en: to burn, to be on fire
+      fa: سوختن، آتش گرفتن
+    definition: in Flammen stehen, zum Beispiel ein Haus oder ein Wald
+    example:
+      de: Schnell, ruf die Feuerwehr! Die Küche brennt!
+      en: Quick, call the fire brigade! The kitchen is on fire!
+      fa: زود به آتش‌نشانی زنگ بزن! آشپزخانه آتش گرفته است!
+
   - word: verbrennen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to burn oneself
+      fa: جایی از بدن خود را سوزاندن
+    definition: sich an etwas sehr Heißem wehtun, zum Beispiel am Herd oder an einer Pfanne
+    example:
+      de: Ich habe mich am heißen Backofen verbrannt.
+      en: I burned myself on the hot oven.
+      fa: دستم به فر داغ خورد و سوخت.
+
   - word: stürzen
+    class: verb
+    level: B1
+    meaning:
+      en: to fall (badly), to have a fall
+      fa: زمین خوردن، سقوط کردن
+    definition: plötzlich und schwer hinfallen, zum Beispiel auf dem Eis oder vom Fahrrad
+    example:
+      de: Meine Oma ist im Bad gestürzt und hat sich die Hand gebrochen.
+      en: My grandma had a fall in the bathroom and broke her hand.
+      fa: مادربزرگم در حمام زمین خورد و دستش شکست.
+    alsoAccepted: [hinfallen]
+
   - word: Unglück
+    class: noun
+    article: das
+    plural: Unglücke
+    level: B1
+    meaning:
+      en: accident, disaster (in which people are hurt)
+      fa: حادثه، سانحه
+    definition: ein schlimmes Ereignis, bei dem Menschen verletzt werden oder sterben
+    example:
+      de: Bei dem Unglück auf der Autobahn wurden drei Menschen verletzt.
+      en: Three people were injured in the accident on the motorway.
+      fa: در آن سانحه در بزرگراه سه نفر زخمی شدند.
+    alsoAccepted: [der Unfall]
+    tooCloseTo: [Katastrophe]
+
   - word: Katastrophe
+    class: noun
+    article: die
+    plural: Katastrophen
+    level: B1
+    meaning:
+      en: catastrophe, disaster
+      fa: فاجعه
+    definition: ein sehr großes, schlimmes Ereignis, das vielen Menschen schadet, zum Beispiel ein Krieg
+    example:
+      de: Das Hochwasser war eine Katastrophe für das ganze Dorf.
+      en: The flood was a catastrophe for the whole village.
+      fa: سیل برای تمام روستا فاجعه بود.
+    tooCloseTo: [Unglück]
+
   - word: Opfer
+    class: noun
+    article: das
+    plural: Opfer
+    level: B1
+    meaning:
+      en: victim
+      fa: قربانی
+    definition: eine Person, der bei einem Unfall oder bei einem Verbrechen etwas Schlimmes passiert
+    example:
+      de: Die Opfer des Unfalls wurden ins Krankenhaus gebracht.
+      en: The victims of the accident were taken to hospital.
+      fa: قربانیان تصادف را به بیمارستان بردند.
+
   - word: Schaden
+    class: noun
+    article: der
+    plural: Schäden
+    level: B1
+    meaning:
+      en: damage
+      fa: خسارت
+    definition: wenn etwas kaputt ist oder nicht mehr so gut ist wie vorher
+    example:
+      de: Der Sturm hat an unserem Dach großen Schaden angerichtet.
+      en: The storm did a lot of damage to our roof.
+      fa: طوفان به سقف خانهٔ ما خسارت زیادی زد.
+    alsoAccepted: [die Beschädigung]
+
   - word: schaden
+    class: verb
+    level: B1
+    meaning:
+      en: to harm, to be bad for
+      fa: ضرر زدن، مضر بودن
+    definition: schlecht für jemanden oder für etwas sein
+    example:
+      de: Rauchen schadet der Gesundheit.
+      en: Smoking harms your health.
+      fa: سیگار کشیدن به سلامتی ضرر می‌زند.
+
   - word: beschädigen
+    class: verb
+    level: B1
+    meaning:
+      en: to damage (a thing)
+      fa: آسیب زدن (به چیزی)
+    definition: an einer Sache etwas kaputtmachen, aber nicht alles
+    example:
+      de: Beim Umzug wurde leider der Schrank beschädigt.
+      en: Unfortunately the wardrobe was damaged during the move.
+      fa: متأسفانه هنگام اسباب‌کشی کمد آسیب دید.
+    tooCloseTo: [kaputtmachen, zerstören]
+
   - word: zerstören
+    class: verb
+    level: B1
+    meaning:
+      en: to destroy
+      fa: نابود کردن، ویران کردن
+    definition: etwas so kaputtmachen, dass man es nicht mehr reparieren kann
+    example:
+      de: Das Feuer hat das alte Haus völlig zerstört.
+      en: The fire completely destroyed the old house.
+      fa: آتش خانهٔ قدیمی را کاملاً ویران کرد.
+    alsoAccepted: [vernichten]
+    tooCloseTo: [beschädigen, kaputtmachen]
+
   - word: kaputtgehen
+    class: verb
+    level: B1
+    meaning:
+      en: to break, to stop working (by itself)
+      fa: خراب شدن، از کار افتادن
+    definition: kaputt werden, zum Beispiel eine Brille oder eine Waschmaschine
+    example:
+      de: Gestern ist meine Brille kaputtgegangen.
+      en: My glasses broke yesterday.
+      fa: دیروز عینکم شکست.
+
   - word: kaputtmachen
+    class: verb
+    level: B1
+    meaning:
+      en: to break (something), to wreck
+      fa: خراب کردن (چیزی)
+    definition: etwas so behandeln, dass es nicht mehr funktioniert
+    example:
+      de: Wer hat das Fenster kaputtgemacht?
+      en: Who broke the window?
+      fa: چه کسی پنجره را شکست؟
+    alsoAccepted: [zerbrechen]
+    tooCloseTo: [beschädigen, zerstören]
+
   - word: Risiko
+    class: noun
+    article: das
+    plural: Risiken
+    level: B1
+    meaning:
+      en: risk
+      fa: ریسک، خطر احتمالی
+    definition: die Möglichkeit, dass etwas schiefgeht, wenn man etwas Bestimmtes tut
+    example:
+      de: Wer beim Autofahren telefoniert, geht ein großes Risiko ein.
+      en: Anyone who uses the phone while driving takes a big risk.
+      fa: هر کس هنگام رانندگی با تلفن حرف بزند، ریسک بزرگی می‌کند.
+    tooCloseTo: [Gefahr]
+
   - word: Sicherheit
+    class: noun
+    article: die
+    plural: Sicherheiten
+    level: B1
+    meaning:
+      en: safety, security
+      fa: ایمنی، امنیت
+    definition: wenn keine Gefahr da ist und man keine Angst haben muss
+    example:
+      de: Zu Ihrer Sicherheit schnallen Sie sich bitte an.
+      en: For your safety, please fasten your seat belt.
+      fa: برای ایمنی خودتان، لطفاً کمربندتان را ببندید.
+    tooCloseTo: [Schutz]
+
   - word: sichern
+    class: verb
+    level: B1
+    meaning:
+      en: to secure, to make safe
+      fa: ایمن کردن
+    definition: etwas so festmachen oder so absperren, dass nichts passieren kann
+    example:
+      de: Nach einem Unfall muss man zuerst die Unfallstelle sichern.
+      en: After an accident you first have to make the scene of the accident safe.
+      fa: بعد از تصادف، اول باید محل حادثه را ایمن کرد.
+    alsoAccepted: [absichern]
+    tooCloseTo: [schützen]
+
   - word: schützen
+    class: verb
+    level: B1
+    meaning:
+      en: to protect
+      fa: محافظت کردن
+    definition: dafür sorgen, dass jemandem oder etwas nichts Schlimmes passiert
+    example:
+      de: Eine Mütze schützt den Kopf vor der Sonne.
+      en: A cap protects your head from the sun.
+      fa: کلاه از سر در برابر آفتاب محافظت می‌کند.
+    alsoAccepted: [beschützen]
+    tooCloseTo: [sichern]
+
   - word: Schutz
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: protection; shelter
+      fa: محافظت، پناه
+    definition: etwas, das hilft, dass einem nichts Schlimmes passiert, zum Beispiel ein Dach bei Regen
+    example:
+      de: Bei dem Gewitter haben wir unter einer Brücke Schutz gesucht.
+      en: During the thunderstorm we took shelter under a bridge.
+      fa: موقع رعد و برق زیر یک پل پناه گرفتیم.
+    tooCloseTo: [Sicherheit]
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 434f519528ffb7da
