@@ -20,7 +20,7 @@ words:
     meaning:
       en: cheese
       fa: پنیر
-    definition: ein gelbes oder weißes Lebensmittel aus Milch, zum Beispiel auf Brot
+    definition: ein festes Lebensmittel aus Milch, oft gelb und in Scheiben, zum Beispiel aus Holland oder der Schweiz
     example:
       de: Zum Frühstück esse ich Brot mit Käse.
       en: For breakfast I have bread and cheese.
@@ -34,7 +34,7 @@ words:
     meaning:
       en: sausage, cold meat
       fa: سوسیس، کالباس
-    definition: Fleisch in einer langen Form; man isst sie warm oder kalt auf Brot
+    definition: klein gemachtes Fleisch in einer Haut, lang oder rund; man isst es warm oder kalt in Scheiben auf Brot
     example:
       de: Auf dem Markt gibt es heute Würste vom Grill.
       en: There are grilled sausages at the market today.
@@ -49,7 +49,7 @@ words:
     meaning:
       en: beef; cattle
       fa: گوشت گاو؛ گاو
-    definition: ein großes Tier auf dem Bauernhof, das Milch gibt; sein Fleisch isst man auch
+    definition: die Tiere, zu denen die Kuh und der Stier gehören, und ihr Fleisch
     example:
       de: Wir essen kein Schweinefleisch, nur Fleisch vom Rind.
       en: We don't eat pork, only beef.
@@ -137,7 +137,7 @@ words:
     meaning:
       en: bean
       fa: لوبیا
-    definition: ein Gemüse; die Samen wachsen in einer langen, grünen Hülle, und man isst sie gekocht
+    definition: ein Gemüse, grün, weiß oder rot; man isst es gekocht, zum Beispiel in einer Suppe oder mit Chili
     example:
       de: Zum Fleisch gibt es grüne Bohnen.
       en: There are green beans with the meat.

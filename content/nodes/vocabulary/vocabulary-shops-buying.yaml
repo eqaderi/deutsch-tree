@@ -56,7 +56,7 @@ words:
       de: Am Samstag ist das Einkaufszentrum sehr voll.
       en: On Saturdays the shopping centre is very crowded.
       fa: شنبه‌ها مرکز خرید خیلی شلوغ است.
-    alsoAccepted: [die Mall, das Shoppingcenter, das Shopping-Center]
+    alsoAccepted: [die Mall, die Shoppingmall, das Shoppingcenter, das Shopping-Center]
 
   # A flea market is one kind of market; neither meaning is offered as a wrong one for the other.
   - word: Markt
@@ -132,7 +132,7 @@ words:
       de: Mit dem Studentenausweis bekommst du eine Ermäßigung.
       en: With your student card you get a discount.
       fa: با کارت دانشجویی تخفیف می‌گیری.
-    alsoAccepted: [der Rabatt, die Preisermäßigung, der Nachlass, der Preisnachlass]
+    alsoAccepted: [der Rabatt, die Preisermäßigung, der Nachlass, der Preisnachlass, die Reduzierung, der ermäßigte Preis]
 
   - word: preiswert
     class: adjective
@@ -221,7 +221,7 @@ words:
     meaning:
       en: to change (money, a bill)
       fa: عوض کردن؛ خرد کردن (پول)
-    definition: zum Beispiel einen großen Schein in kleines Geld geben lassen, oder Euro in Dollar
+    definition: einen großen Schein in Kleingeld umtauschen, oder Geld in eine andere Währung, zum Beispiel Euro in Dollar
     example:
       de: Können Sie mir zwanzig Euro wechseln?
       en: Can you change twenty euros for me?
@@ -343,7 +343,7 @@ words:
       de: Im Winter brauche ich eine Creme für die Hände.
       en: In winter I need hand cream.
       fa: زمستان‌ها کرم دست لازم دارم.
-    alsoAccepted: [die Hautcreme, die Handcreme, die Gesichtscreme]
+    alsoAccepted: [die Hautcreme, die Handcreme, die Gesichtscreme, die Salbe]
 
   - word: Friseur
     class: noun
@@ -365,7 +365,7 @@ words:
     level: A2
     meaning:
       en: per, for each
-      fa: هر، برای هر
+      fa: برای هر (مثلاً هر کیلو یا هر نفر)
     definition: für jedes, für jeden oder für jede, zum Beispiel bei einem Preis
     example:
       de: Die Äpfel kosten zwei Euro pro Kilo.
