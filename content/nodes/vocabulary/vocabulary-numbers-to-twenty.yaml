@@ -1,33 +1,261 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# The examples write each number as a word, as it is learned here.
 id: vocabulary-numbers-to-twenty
 kind: vocabulary
 level: A1
 chapter: a1-words-numbers-time
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Numbers 1 to 20"
   fa: "عددهای ۱ تا ۲۰"
   de: "Zahlen von 1 bis 20"
+attemptSize: 15
 words:
   - word: eins
+    class: numeral
+    level: A1
+    meaning:
+      en: one
+      fa: یک
+    definition: die erste Zahl, wenn man zählt
+    example:
+      de: Wir treffen uns um eins.
+      en: We are meeting at one.
+      fa: ساعت یک همدیگر را می‌بینیم.
+
   - word: zwei
+    class: numeral
+    level: A1
+    meaning:
+      en: two
+      fa: دو
+    definition: eins plus eins
+    example:
+      de: Wir haben zwei Kinder.
+      en: We have two children.
+      fa: ما دو بچه داریم.
+
   - word: drei
+    class: numeral
+    level: A1
+    meaning:
+      en: three
+      fa: سه
+    definition: zwei plus eins
+    example:
+      de: Ich trinke drei Tassen Kaffee am Tag.
+      en: I drink three cups of coffee a day.
+      fa: روزی سه فنجان قهوه می‌نوشم.
+
   - word: vier
+    class: numeral
+    level: A1
+    meaning:
+      en: four
+      fa: چهار
+    definition: zwei plus zwei
+    example:
+      de: Unsere Wohnung hat vier Zimmer.
+      en: Our flat has four rooms.
+      fa: آپارتمان ما چهار اتاق دارد.
+
   - word: fünf
+    class: numeral
+    level: A1
+    meaning:
+      en: five
+      fa: پنج
+    definition: so viele Finger hat eine Hand
+    example:
+      de: Der Kurs beginnt in fünf Minuten.
+      en: The course starts in five minutes.
+      fa: کلاس پنج دقیقهٔ دیگر شروع می‌شود.
+
   - word: sechs
+    class: numeral
+    level: A1
+    meaning:
+      en: six
+      fa: شش
+    definition: drei plus drei
+    example:
+      de: Ich stehe um sechs Uhr auf.
+      en: I get up at six o'clock.
+      fa: ساعت شش بیدار می‌شوم.
+
   - word: sieben
+    class: numeral
+    level: A1
+    meaning:
+      en: seven
+      fa: هفت
+    definition: so viele Tage hat eine Woche
+    example:
+      de: Mein Sohn ist sieben Jahre alt.
+      en: My son is seven years old.
+      fa: پسرم هفت سال دارد.
+
   - word: acht
+    class: numeral
+    level: A1
+    meaning:
+      en: eight
+      fa: هشت
+    definition: vier plus vier
+    example:
+      de: Die Schule beginnt um acht.
+      en: School starts at eight.
+      fa: مدرسه ساعت هشت شروع می‌شود.
+
+  # The digit tells the number «نه» from the word for "no".
   - word: neun
+    class: numeral
+    level: A1
+    meaning:
+      en: nine
+      fa: نه (۹)
+    definition: drei mal drei
+    example:
+      de: In der Klasse sind neun Mädchen.
+      en: There are nine girls in the class.
+      fa: در این کلاس نُه دختر هستند.
+
   - word: zehn
+    class: numeral
+    level: A1
+    meaning:
+      en: ten
+      fa: ده
+    definition: fünf plus fünf
+    example:
+      de: Ich arbeite zehn Stunden am Tag.
+      en: I work ten hours a day.
+      fa: روزی ده ساعت کار می‌کنم.
+
   - word: elf
+    class: numeral
+    level: A1
+    meaning:
+      en: eleven
+      fa: یازده
+    definition: zehn plus eins
+    example:
+      de: Eine Fußballmannschaft hat elf Spieler.
+      en: A football team has eleven players.
+      fa: هر تیم فوتبال یازده بازیکن دارد.
+
   - word: zwölf
+    class: numeral
+    level: A1
+    meaning:
+      en: twelve
+      fa: دوازده
+    definition: so viele Monate hat ein Jahr
+    example:
+      de: Um zwölf essen wir zu Mittag.
+      en: At twelve we have lunch.
+      fa: ساعت دوازده ناهار می‌خوریم.
+
   - word: dreizehn
+    class: numeral
+    level: A1
+    meaning:
+      en: thirteen
+      fa: سیزده
+    definition: zehn plus drei
+    example:
+      de: Mein Bruder ist dreizehn.
+      en: My brother is thirteen.
+      fa: برادرم سیزده سال دارد.
+
   - word: vierzehn
+    class: numeral
+    level: A1
+    meaning:
+      en: fourteen
+      fa: چهارده
+    definition: sieben plus sieben
+    example:
+      de: Der Urlaub dauert vierzehn Tage.
+      en: The holiday lasts fourteen days.
+      fa: مرخصی چهارده روز طول می‌کشد.
+
   - word: fünfzehn
+    class: numeral
+    level: A1
+    meaning:
+      en: fifteen
+      fa: پانزده
+    definition: zehn plus fünf
+    example:
+      de: Bis zum Bahnhof sind es fünfzehn Minuten.
+      en: It is fifteen minutes to the station.
+      fa: تا ایستگاه قطار پانزده دقیقه راه است.
+
   - word: sechzehn
+    class: numeral
+    level: A1
+    meaning:
+      en: sixteen
+      fa: شانزده
+    definition: acht plus acht
+    example:
+      de: Das Haus hat sechzehn Wohnungen.
+      en: The building has sixteen flats.
+      fa: این ساختمان شانزده آپارتمان دارد.
+
   - word: siebzehn
+    class: numeral
+    level: A1
+    meaning:
+      en: seventeen
+      fa: هفده
+    definition: zehn plus sieben
+    example:
+      de: Der Bus Nummer siebzehn fährt zum Zentrum.
+      en: The number seventeen bus goes to the centre.
+      fa: اتوبوس شمارهٔ هفده به مرکز شهر می‌رود.
+
   - word: achtzehn
+    class: numeral
+    level: A1
+    meaning:
+      en: eighteen
+      fa: هجده
+    definition: neun plus neun
+    example:
+      de: Mit achtzehn darf man in Deutschland wählen.
+      en: At eighteen you can vote in Germany.
+      fa: در آلمان از هجده‌سالگی می‌توان رأی داد.
+
   - word: neunzehn
+    class: numeral
+    level: A1
+    meaning:
+      en: nineteen
+      fa: نوزده
+    definition: zehn plus neun
+    example:
+      de: Die Studentin ist neunzehn Jahre alt.
+      en: The student is nineteen years old.
+      fa: این دانشجو نوزده سال دارد.
+
   - word: zwanzig
+    class: numeral
+    level: A1
+    meaning:
+      en: twenty
+      fa: بیست
+    definition: zehn plus zehn
+    example:
+      de: Im Kurs sind zwanzig Leute.
+      en: There are twenty people in the course.
+      fa: در این کلاس بیست نفر هستند.
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, sheet only;
+    120 questions)
+  date: 2026-11-28
+  pool: 6dc3681f8b99cd35

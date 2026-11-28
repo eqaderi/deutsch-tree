@@ -4,10 +4,257 @@ kind: grammar
 level: A1
 chapter: a1-modal-verbs
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-026]
 title:
   en: "*wollen*"
   fa: "*wollen*"
   de: "*wollen*"
+
+explanations:
+  en:
+    rule: >
+      *Wollen* says what someone wants to do or plans to do: *Er will eine
+      Ausbildung machen.* It works like *können*: *wollen* is conjugated in
+      position 2 and the second verb goes to the end as an infinitive. *Ich*
+      and *er* / *sie* / *es* have the same form, *will*, with no ending; the
+      vowel changes to *i* in the singular. Careful: *ich will* means "I
+      want", not "I will". When the meaning is clear, the infinitive can be
+      dropped: *Ich will nach Hause.*
+  fa:
+    rule: >
+      *wollen* می‌گوید کسی چه می‌خواهد بکند یا چه قصدی دارد: *Er will eine
+      Ausbildung machen.* این فعل مانند *können* به کار می‌رود: *wollen* صرف
+      می‌شود و در جایگاه دوم می‌آید و فعل دوم به شکل مصدر به پایان جمله
+      می‌رود. *ich* و *er* / *sie* / *es* صورت یکسان *will* را دارند، بدون
+      شناسه، و در مفرد واکهٔ *o* به *i* تبدیل می‌شود. *ich will* یعنی
+      «می‌خواهم»؛ آن را با *will* انگلیسی که برای آینده است اشتباه نگیرید.
+      اگر معنا روشن باشد، مصدر را می‌توان انداخت: *Ich will nach Hause.*
+  de:
+    rule: >
+      Mit *wollen* sagt man, was man machen möchte oder plant: *Er will eine
+      Ausbildung machen.* *Wollen* funktioniert wie *können*: *wollen* ist
+      konjugiert und steht auf Position 2, das zweite Verb steht im
+      Infinitiv am Ende. *Ich* und *er* / *sie* / *es* haben die gleiche Form
+      *will*, ohne Endung. Ist die Bedeutung klar, kann der Infinitiv fehlen:
+      *Ich will nach Hause.*
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*wollen*", fa: "*wollen*", de: "*wollen*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, will, Ich will Deutsch lernen.]
+    - [du, willst, Willst du mitkommen?]
+    - [er / sie / es, will, Sie will Ärztin werden.]
+    - [wir, wollen, Wir wollen heute kochen.]
+    - [ihr, wollt, Was wollt ihr essen?]
+    - [sie / Sie, wollen, Sie wollen nach Spanien fahren.]
+
+examples:
+  - de: Ich will Deutsch lernen.
+    en: I want to learn German.
+    fa: می‌خواهم آلمانی یاد بگیرم.
+  - de: Er will eine Ausbildung machen.
+    en: He wants to do vocational training.
+    fa: او می‌خواهد یک دورهٔ آموزش حرفه‌ای بگذراند.
+  - de: Willst du heute Abend ins Kino gehen?
+    en: Do you want to go to the cinema tonight?
+    fa: امشب می‌خواهی به سینما بروی؟
+  - de: Wir wollen im Sommer nach Italien fahren.
+    en: We want to go to Italy in the summer.
+    fa: می‌خواهیم تابستان به ایتالیا برویم.
+  - de: Was wollt ihr am Wochenende machen?
+    en: What do you (plural) want to do at the weekend?
+    fa: آخر هفته می‌خواهید چه کار کنید؟
+  - de: Meine Kinder wollen nicht schlafen.
+    en: My children don't want to sleep.
+    fa: بچه‌هایم نمی‌خواهند بخوابند.
+  - de: Ich will jetzt nach Hause.
+    en: I want to go home now.
+    fa: می‌خواهم الان به خانه بروم.
+
+mistakes:
+  - wrong: Er willt ein Auto kaufen.
+    right: Er will ein Auto kaufen.
+    why:
+      en: With *er*, *sie* and *es* the form is *will*, with no *-t*.
+      fa: با *er*، *sie* و *es* صورت فعل *will* است، بدون *-t*.
+      de: Bei *er*, *sie* und *es* heißt es *will*, ohne *-t*.
+  - wrong: Ich will gehe ins Kino.
+    right: Ich will ins Kino gehen.
+    why:
+      en: The second verb is not conjugated. It goes to the end as an infinitive.
+      fa: فعل دوم صرف نمی‌شود و به شکل مصدر به پایان جمله می‌رود.
+      de: Das zweite Verb ist nicht konjugiert. Es steht im Infinitiv am Ende.
+  - wrong: Wir wollen spielen Fußball.
+    right: Wir wollen Fußball spielen.
+    why:
+      en: The infinitive comes last, after the object.
+      fa: مصدر در پایان جمله می‌آید، پس از مفعول.
+      de: Der Infinitiv steht am Ende, nach dem Objekt.
+  - wrong: Du will mitkommen.
+    right: Du willst mitkommen.
+    why:
+      en: With *du* the form is *willst*.
+      fa: با *du* صورت فعل *willst* است.
+      de: Bei *du* heißt es *willst*.
+
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Ich ___ Deutsch lernen.
+    options: [will, willst, wollen]
+    answer: will
+    explanation:
+      en: With *ich* the form is *will*, with no ending.
+      fa: با *ich* صورت فعل *will* است، بدون شناسه.
+      de: Bei *ich* heißt es *will*, ohne Endung.
+  - id: q2
+    type: multiple-choice
+    prompt: ___ du heute ins Kino gehen?
+    options: [Will, Willst, Wollt]
+    answer: Willst
+    explanation:
+      en: With *du* the form is *willst*.
+      fa: با *du* صورت فعل *willst* است.
+      de: Bei *du* heißt es *willst*.
+  - id: q3
+    type: gap-fill
+    prompt: Mein Bruder ___ Koch werden.
+    options: [will, willt, wollen]
+    answer: will
+    explanation:
+      en: "*Mein Bruder* is *er*: the form is *will*, the same as with *ich*."
+      fa: "*mein Bruder* سوم‌شخص مفرد است (*er*): صورت فعل *will* است، همانند *ich*."
+      de: "*Mein Bruder* ist *er*. Die Form ist *will*, wie bei *ich*."
+  - id: q4
+    type: gap-fill
+    prompt: Was ___ ihr essen?
+    options: [wollt, willst, wollen]
+    answer: wollt
+    explanation:
+      en: With *ihr* the form is *wollt*.
+      fa: با *ihr* صورت فعل *wollt* است.
+      de: Bei *ihr* heißt es *wollt*.
+  - id: q5
+    type: gap-fill
+    prompt: Wir ___ im Sommer nach Italien fahren.
+    options: [will, wollt, wollen]
+    answer: wollen
+    explanation:
+      en: With *wir* the form is *wollen*, like the infinitive.
+      fa: با *wir* صورت فعل *wollen* است، همانند مصدر.
+      de: Bei *wir* ist die Form *wollen*, wie der Infinitiv.
+  - id: q6
+    type: multiple-choice
+    prompt: "Anna / wollen / am Samstag / Tennis / spielen"
+    options:
+      [Anna will am Samstag Tennis spielen., Anna will spielen am Samstag Tennis., Anna am Samstag will Tennis spielen.]
+    answer: Anna will am Samstag Tennis spielen.
+    explanation:
+      en: "*Will* stands in position 2, the infinitive *spielen* at the very end."
+      fa: "*will* در جایگاه دوم می‌آید و مصدر *spielen* در پایان جمله."
+      de: "*Will* steht auf Position 2, der Infinitiv *spielen* ganz am Ende."
+  - id: q7
+    type: multiple-choice
+    prompt: "ich / wollen / ein neues Handy / kaufen"
+    options: [Ich will ein neues Handy kaufen., Ich will kaufen ein neues Handy., Ich ein neues Handy will kaufen.]
+    answer: Ich will ein neues Handy kaufen.
+    explanation:
+      en: "The modal verb is in position 2 and the infinitive closes the sentence."
+      fa: "فعل وجهی در جایگاه دوم است و مصدر جمله را به پایان می‌برد."
+      de: "Das Modalverb steht auf Position 2. Der Infinitiv steht am Ende."
+  - id: q8
+    type: true-false
+    prompt: Meine Eltern wollen ein Haus kaufen.
+    answer: true
+    explanation:
+      en: "*Meine Eltern* is *sie* (plural): *wollen*, with *kaufen* at the end. The sentence is correct."
+      fa: "*meine Eltern* سوم‌شخص جمع است (*sie*): *wollen*، و *kaufen* در پایان. جمله درست است."
+      de: "*Meine Eltern* ist *sie* (Plural): *wollen*, *kaufen* am Ende. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Sie willt nach Hause gehen.
+    answer: false
+    explanation:
+      en: "With *sie* (singular) the form is *will*, with no *-t*: *Sie will nach Hause gehen.*"
+      fa: "با *sie* مفرد صورت فعل *will* است، بدون *-t*: *Sie will nach Hause gehen.*"
+      de: "Bei *sie* (Singular) heißt es *will*, ohne *-t*: *Sie will nach Hause gehen.*"
+  - id: q10
+    type: true-false
+    prompt: Ich will jetzt nach Hause.
+    answer: true
+    explanation:
+      en: "The meaning is clear, so the infinitive (*gehen*) can be left out. The sentence is correct."
+      fa: "معنا روشن است، پس مصدر (*gehen*) را می‌توان انداخت. جمله درست است."
+      de: "Die Bedeutung ist klar. Der Infinitiv (*gehen*) kann fehlen. Der Satz ist richtig."
+  - id: q11
+    type: find-error
+    prompt: Du will heute Abend kochen.
+    answer: will
+    explanation:
+      en: "With *du* the form is *willst*: *Du willst heute Abend kochen.*"
+      fa: "با *du* صورت فعل *willst* است: *Du willst heute Abend kochen.*"
+      de: "Bei *du* heißt es *willst*: *Du willst heute Abend kochen.*"
+  - id: q12
+    type: find-error
+    prompt: Er will heute Fußball spielt.
+    answer: spielt
+    explanation:
+      en: "Only the modal verb is conjugated; the second verb is an infinitive: *Er will heute Fußball spielen.*"
+      fa: "فقط فعل وجهی صرف می‌شود و فعل دوم مصدر است: *Er will heute Fußball spielen.*"
+      de: "Nur das Modalverb ist konjugiert. Das zweite Verb steht im Infinitiv: *Er will heute Fußball spielen.*"
+  - id: q13
+    type: word-order
+    answers:
+      - [willst, du, mitkommen]
+    end: "?"
+    explanation:
+      en: "In a yes/no question the modal verb comes first, and the infinitive stays at the end."
+      fa: "در پرسش بله یا نه فعل وجهی در آغاز می‌آید و مصدر در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht das Modalverb am Anfang. Der Infinitiv bleibt am Ende."
+  - id: q14
+    type: word-order
+    answers:
+      - [was, wollt, ihr, am Wochenende, machen]
+    end: "?"
+    explanation:
+      en: "After the question word comes the modal verb in position 2; the infinitive goes to the end."
+      fa: "پس از واژهٔ پرسشی، فعل وجهی در جایگاه دوم می‌آید و مصدر به پایان جمله می‌رود."
+      de: "Nach dem Fragewort steht das Modalverb auf Position 2. Der Infinitiv steht am Ende."
+  - id: q15
+    type: typed-gap-fill
+    prompt: Lisa ___ (wollen) Lehrerin werden.
+    answers: [will]
+    explanation:
+      en: "Lisa is *sie* (singular): the form is *will*."
+      fa: "لیزا سوم‌شخص مفرد است (*sie*): صورت فعل *will* است."
+      de: "Lisa ist *sie* (Singular). Die Form ist *will*."
+  - id: q16
+    type: typed-gap-fill
+    prompt: Herr Brandt, ___ (wollen) Sie einen Kaffee trinken?
+    answers: [wollen]
+    explanation:
+      en: With the polite *Sie* the form is *wollen*.
+      fa: با *Sie* رسمی صورت فعل *wollen* است.
+      de: Bei *Sie* (höflich) heißt es *wollen*.
+  - id: q17
+    type: matching
+    answer:
+      - [ich, will]
+      - [du, willst]
+      - [wir, wollen]
+      - [ihr, wollt]
+    explanation:
+      en: "The forms of *wollen*: *ich will*, *du willst*, *wir wollen*, *ihr wollt*."
+      fa: "صورت‌های *wollen*: *ich will*، *du willst*، *wir wollen*، *ihr wollt*."
+      de: "Die Formen von *wollen*: *ich will*, *du willst*, *wir wollen*, *ihr wollt*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 18e1ed950f5acdae

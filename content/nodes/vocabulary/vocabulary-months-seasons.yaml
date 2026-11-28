@@ -1,35 +1,338 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# The months are the months of the Western calendar, under their usual Persian names.
 id: vocabulary-months-seasons
 kind: vocabulary
 level: A1
 chapter: a1-words-numbers-time
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Months, seasons and the year"
   fa: "ماه‌ها، فصل‌ها و سال"
   de: "Monate, Jahreszeiten und das Jahr"
+attemptSize: 15
 words:
   - word: Januar
+    class: noun
+    article: der
+    plural: Januare
+    level: A1
+    meaning:
+      en: January
+      fa: ژانویه
+    definition: der erste Monat im Jahr
+    example:
+      de: Im Januar ist es oft sehr kalt.
+      en: In January it is often very cold.
+      fa: در ژانویه هوا اغلب خیلی سرد است.
+    alsoAccepted: [der Jänner]
+
   - word: Februar
+    class: noun
+    article: der
+    plural: Februare
+    level: A1
+    meaning:
+      en: February
+      fa: فوریه
+    definition: der zweite Monat im Jahr
+    example:
+      de: Der Februar ist der kürzeste Monat.
+      en: February is the shortest month.
+      fa: فوریه کوتاه‌ترین ماه سال است.
+    alsoAccepted: [der Feber]
+
   - word: März
+    class: noun
+    article: der
+    plural: Märze
+    level: A1
+    meaning:
+      en: March
+      fa: مارس
+    definition: der dritte Monat im Jahr
+    example:
+      de: Im März beginnt der Frühling.
+      en: Spring begins in March.
+      fa: بهار در ماه مارس شروع می‌شود.
+
   - word: April
+    class: noun
+    article: der
+    plural: Aprile
+    level: A1
+    meaning:
+      en: April
+      fa: آوریل
+    definition: der vierte Monat im Jahr
+    example:
+      de: Im April regnet es oft.
+      en: It often rains in April.
+      fa: در آوریل اغلب باران می‌بارد.
+
+  # The bracket tells the month «مه» from the word for "fog".
   - word: Mai
+    class: noun
+    article: der
+    plural: Maie
+    level: A1
+    meaning:
+      en: May
+      fa: مه (ماه پنجم سال میلادی)
+    definition: der fünfte Monat im Jahr
+    example:
+      de: Am ersten Mai ist ein Feiertag.
+      en: The first of May is a public holiday.
+      fa: اول ماه مه تعطیل رسمی است.
+
   - word: Juni
+    class: noun
+    article: der
+    plural: Junis
+    level: A1
+    meaning:
+      en: June
+      fa: ژوئن
+    definition: der sechste Monat im Jahr
+    example:
+      de: Meine Schwester hat im Juni Geburtstag.
+      en: My sister's birthday is in June.
+      fa: تولد خواهرم در ژوئن است.
+
   - word: Juli
+    class: noun
+    article: der
+    plural: Julis
+    level: A1
+    meaning:
+      en: July
+      fa: ژوئیه، جولای
+    definition: der siebte Monat im Jahr
+    example:
+      de: Im Juli fahren wir ans Meer.
+      en: In July we are going to the seaside.
+      fa: در ژوئیه به کنار دریا می‌رویم.
+
   - word: August
+    class: noun
+    article: der
+    plural: Auguste
+    level: A1
+    meaning:
+      en: August
+      fa: اوت، آگوست
+    definition: der achte Monat im Jahr
+    example:
+      de: Im August ist es oft heiß.
+      en: In August it is often hot.
+      fa: در اوت هوا اغلب گرم است.
+
   - word: September
+    class: noun
+    article: der
+    plural: September
+    level: A1
+    meaning:
+      en: September
+      fa: سپتامبر
+    definition: der neunte Monat im Jahr
+    example:
+      de: Im September beginnt die Schule wieder.
+      en: In September school starts again.
+      fa: در سپتامبر مدرسه‌ها دوباره باز می‌شوند.
+
   - word: Oktober
+    class: noun
+    article: der
+    plural: Oktober
+    level: A1
+    meaning:
+      en: October
+      fa: اکتبر
+    definition: der zehnte Monat im Jahr
+    example:
+      de: Im Oktober fallen die Blätter von den Bäumen.
+      en: In October the leaves fall from the trees.
+      fa: در اکتبر برگ‌ها از درخت‌ها می‌ریزند.
+
   - word: November
+    class: noun
+    article: der
+    plural: November
+    level: A1
+    meaning:
+      en: November
+      fa: نوامبر
+    definition: der elfte Monat im Jahr
+    example:
+      de: Der November ist oft grau und nass.
+      en: November is often grey and wet.
+      fa: نوامبر اغلب ابری و بارانی است.
+
   - word: Dezember
+    class: noun
+    article: der
+    plural: Dezember
+    level: A1
+    meaning:
+      en: December
+      fa: دسامبر
+    definition: der zwölfte und letzte Monat im Jahr
+    example:
+      de: Im Dezember feiern viele Menschen Weihnachten.
+      en: In December many people celebrate Christmas.
+      fa: در دسامبر بسیاری از مردم کریسمس را جشن می‌گیرند.
+
   - word: Jahr
+    class: noun
+    article: das
+    plural: Jahre
+    level: A1
+    meaning:
+      en: year
+      fa: سال
+    definition: zwölf Monate, von Januar bis Dezember
+    example:
+      de: Ich lerne seit einem Jahr Deutsch.
+      en: I have been learning German for a year.
+      fa: یک سال است که آلمانی یاد می‌گیرم.
+
+  # Frühling and Frühjahr name the same season; each is right when the other is asked for.
   - word: Frühling
+    class: noun
+    article: der
+    plural: Frühlinge
+    level: A1
+    meaning:
+      en: spring
+      fa: بهار
+    definition: die Jahreszeit nach dem Winter, wenn die Blumen wieder blühen
+    example:
+      de: Im Frühling wird es wieder warm.
+      en: In spring it gets warm again.
+      fa: در بهار هوا دوباره گرم می‌شود.
+    alsoAccepted: [das Frühjahr]
+    tooCloseTo: [Frühjahr]
+
   - word: Frühjahr
+    class: noun
+    article: das
+    plural: Frühjahre
+    level: A1
+    meaning:
+      en: spring
+      fa: بهار
+    definition: die Monate zwischen Winter und Sommer, etwa März bis Mai
+    example:
+      de: Im Frühjahr renovieren wir unsere Wohnung.
+      en: In the spring we are renovating our flat.
+      fa: بهار آپارتمانمان را نوسازی می‌کنیم.
+    alsoAccepted: [der Frühling]
+    tooCloseTo: [Frühling]
+
   - word: Sommer
+    class: noun
+    article: der
+    plural: Sommer
+    level: A1
+    meaning:
+      en: summer
+      fa: تابستان
+    definition: die warme Jahreszeit nach dem Frühling
+    example:
+      de: Im Sommer gehen wir oft schwimmen.
+      en: In summer we often go swimming.
+      fa: تابستان‌ها اغلب شنا می‌رویم.
+
   - word: Herbst
+    class: noun
+    article: der
+    plural: Herbste
+    level: A1
+    meaning:
+      en: autumn, fall
+      fa: پاییز
+    definition: die Jahreszeit nach dem Sommer, wenn die Blätter fallen
+    example:
+      de: Im Herbst ist es oft windig.
+      en: In autumn it is often windy.
+      fa: پاییز اغلب باد می‌آید.
+
   - word: Winter
+    class: noun
+    article: der
+    plural: Winter
+    level: A1
+    meaning:
+      en: winter
+      fa: زمستان
+    definition: die kalte Jahreszeit, oft mit Schnee
+    example:
+      de: Im Winter fahren wir in die Berge.
+      en: In winter we go to the mountains.
+      fa: زمستان‌ها به کوهستان می‌رویم.
+
   - word: Datum
+    class: noun
+    article: das
+    plural: Daten
+    level: A1
+    meaning:
+      en: date (day, month and year)
+      fa: تاریخ (روز و ماه و سال)
+    definition: der Tag, der Monat und das Jahr, zum Beispiel auf einem Brief
+    example:
+      de: Welches Datum ist heute?
+      en: What is the date today?
+      fa: امروز چندم است؟
+
   - word: Zeit
+    class: noun
+    article: die
+    plural: Zeiten
+    level: A1
+    meaning:
+      en: time
+      fa: زمان، وقت
+    definition: Sekunden, Minuten, Stunden und Tage; das, was die Uhr zeigt
+    example:
+      de: Hast du heute Zeit?
+      en: Do you have time today?
+      fa: امروز وقت داری؟
+
   - word: Anfang
+    class: noun
+    article: der
+    plural: Anfänge
+    level: A1
+    meaning:
+      en: beginning, start
+      fa: آغاز، شروع
+    definition: der Moment, wenn etwas beginnt
+    example:
+      de: Am Anfang war der Kurs schwer.
+      en: At the beginning the course was hard.
+      fa: کلاس در آغاز سخت بود.
+    alsoAccepted: [der Beginn, der Start]
+
   - word: Ende
+    class: noun
+    article: das
+    plural: Enden
+    level: A1
+    meaning:
+      en: end
+      fa: پایان، آخر
+    definition: der Moment, wenn etwas aufhört
+    example:
+      de: Ende Mai ziehen wir um.
+      en: At the end of May we are moving house.
+      fa: آخر ماه مه اسباب‌کشی می‌کنیم.
+    alsoAccepted: [der Schluss]
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, sheet only;
+    132 questions)
+  date: 2026-11-28
+  pool: 4ded95e533af155a
