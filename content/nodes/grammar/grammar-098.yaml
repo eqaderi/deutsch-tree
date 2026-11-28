@@ -330,7 +330,6 @@ questions:
       de: "*Ein paar*: etwa zwei oder drei. *Wenige*: nicht viele. *Manche*: nicht alle."
 
 review:
-  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, blind pass
-    on the review sheet only; not a person)
+  reviewer: an independent AI agent
   date: 2026-11-28
   pool: 73b80c1c0b8f89ca
