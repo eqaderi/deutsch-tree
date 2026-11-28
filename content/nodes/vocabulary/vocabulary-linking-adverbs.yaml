@@ -1,34 +1,299 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A definition in simple German shows the word's place in a sentence with "…", since a small
+# word is hard to say in other words. Each word with several uses is taught in one of them:
+# "schließlich" as "in the end", "weshalb" as "which is why", "ebenfalls" as "also",
+# "gleichfalls" as the reply to a good wish. Words that overlap (jedoch, allerdings; deswegen,
+# daher; weshalb, wieso; ebenso, genauso) accept each other and are never offered as a wrong
+# meaning of each other.
 id: vocabulary-linking-adverbs
 kind: vocabulary
 level: B1
 chapter: b1-words-time-amounts
 order: 4
-status: coming-soon
+status: published
 title:
   en: "However, therefore, by the way: linking a text"
   fa: "با این حال، بنابراین، راستی: پیوند دادن متن"
   de: "Jedoch, deshalb, übrigens: Texte verbinden"
+attemptSize: 15
 words:
   - word: jedoch
+    class: adverb
+    level: B1
+    meaning:
+      en: however (more formal than but)
+      fa: با این حال، ولی (رسمی‌تر از اما)
+    definition: "wie „aber“, oft in geschriebenen Texten: Das Hotel war schön, das Essen war … schlecht."
+    example:
+      de: Das Hotel war sehr schön, das Essen war jedoch enttäuschend.
+      en: The hotel was very nice; the food, however, was disappointing.
+      fa: هتل خیلی زیبا بود، با این حال غذایش ناامیدکننده بود.
+    alsoAccepted: [aber, allerdings, doch]
+    tooCloseTo: [allerdings, trotzdem]
+
   - word: trotzdem
+    class: adverb
+    level: B1
+    meaning:
+      en: nevertheless, all the same
+      fa: با این وجود، باز هم
+    definition: "obwohl es einen Grund dagegen gibt: Es regnet, … gehen wir spazieren."
+    example:
+      de: Ich war sehr müde, trotzdem habe ich die Hausaufgaben gemacht.
+      en: I was very tired; nevertheless I did my homework.
+      fa: خیلی خسته بودم، با این وجود تکالیفم را انجام دادم.
+    alsoAccepted: [dennoch]
+
   - word: deswegen
+    class: adverb
+    level: B1
+    meaning:
+      en: that's why, for this reason
+      fa: به همین دلیل، برای همین
+    definition: "aus diesem Grund: Ich hatte Hunger, … habe ich mir ein Brötchen gekauft."
+    example:
+      de: Der Bus ist ausgefallen, deswegen bin ich zu spät gekommen.
+      en: The bus was cancelled, that's why I was late.
+      fa: اتوبوس نیامد، برای همین دیر رسیدم.
+    alsoAccepted: [deshalb, darum, daher]
+    tooCloseTo: [daher]
+
   - word: daher
+    class: adverb
+    level: B1
+    meaning:
+      en: therefore, hence (that is where it comes from)
+      fa: از این رو، بنابراین
+    definition: "aus diesem Grund, oft in geschriebenen Texten: Die Straße ist gesperrt, … fahren die Busse anders."
+    example:
+      de: Die Brücke wird repariert, daher fahren die Busse eine andere Strecke.
+      en: The bridge is being repaired; therefore the buses are taking another route.
+      fa: پل در حال تعمیر است، از این رو اتوبوس‌ها از مسیر دیگری می‌روند.
+    alsoAccepted: [deshalb, deswegen, darum]
+
   - word: nämlich
+    class: adverb
+    level: B1
+    meaning:
+      en: you see, because (gives the reason afterwards)
+      fa: آخر، چون (دلیل را بعد از جمله می‌گوید)
+    definition: "nennt den Grund für den Satz davor, steht nie am Anfang: Ich komme heute nicht, ich bin … krank."
+    example:
+      de: Ich kann heute nicht kommen, ich habe nämlich Besuch.
+      en: I can't come today; you see, I've got visitors.
+      fa: امروز نمی‌توانم بیایم، آخر مهمان دارم.
+
   - word: zwar
+    class: adverb
+    level: B1
+    meaning:
+      en: it is true that … (but), admittedly
+      fa: درست است که … (اما)
+    definition: "steht im ersten Teil, vor „aber“ im zweiten Teil: Das Auto ist … alt, aber es fährt gut."
+    example:
+      de: Die Wohnung ist zwar klein, aber sie hat einen schönen Balkon.
+      en: The flat is small, it's true, but it has a lovely balcony.
+      fa: درست است که آپارتمان کوچک است، اما بالکن قشنگی دارد.
+
   - word: allerdings
+    class: adverb
+    level: B1
+    meaning:
+      en: though, but (adds a limit to what was said)
+      fa: البته، منتها (محدودیتی به گفته می‌افزاید)
+    definition: "macht das Gesagte etwas kleiner, nennt ein Problem dabei: Die Wohnung ist schön, … ist sie teuer."
+    example:
+      de: Der Kurs ist sehr gut, allerdings ist er auch ziemlich teuer.
+      en: The course is very good, though it's also quite expensive.
+      fa: کلاس خیلی خوب است، البته نسبتاً گران هم هست.
+    alsoAccepted: [jedoch, aber]
+
   - word: einerseits
+    class: adverb
+    level: B1
+    meaning:
+      en: on the one hand
+      fa: از یک سو، از یک طرف
+    definition: "nennt die erste Seite einer Sache, danach kommt die andere: … ist die Stadt schön, andererseits ist sie laut."
+    example:
+      de: Einerseits möchte ich in der Stadt wohnen, andererseits liebe ich die Ruhe auf dem Land.
+      en: On the one hand I'd like to live in the city; on the other hand I love the quiet of the countryside.
+      fa: از یک سو دوست دارم در شهر زندگی کنم، از سوی دیگر آرامش روستا را دوست دارم.
+
   - word: andererseits
+    class: adverb
+    level: B1
+    meaning:
+      en: on the other hand
+      fa: از سوی دیگر، از طرف دیگر
+    definition: "nennt die zweite Seite einer Sache: Einerseits ist die Stadt schön, … ist sie laut."
+    example:
+      de: Das Angebot ist gut, andererseits müsste ich dafür umziehen.
+      en: The offer is good; on the other hand, I'd have to move for it.
+      fa: پیشنهاد خوبی است، از طرف دیگر باید به خاطرش اسباب‌کشی کنم.
+    alsoAccepted: [anderseits, andrerseits, auf der anderen Seite]
+
   - word: übrigens
+    class: adverb
+    level: B1
+    meaning:
+      en: by the way
+      fa: راستی، ضمناً
+    definition: "sagt man, wenn man an etwas Neues denkt und es kurz dazu sagt: Ach, …, hast du morgen Zeit?"
+    example:
+      de: Übrigens, hast du schon gehört, dass Lisa ein Baby bekommen hat?
+      en: By the way, have you heard that Lisa has had a baby?
+      fa: راستی، شنیده‌ای که لیزا بچه‌دار شده است؟
+    tooCloseTo: [nebenbei]
+
   - word: weshalb
+    class: adverb
+    level: B1
+    meaning:
+      en: which is why (links the result); why
+      fa: به همین دلیل (نتیجه را به جملهٔ قبل پیوند می‌دهد)؛ چرا
+    definition: "verbindet einen Satz mit seiner Folge, das Verb steht am Ende: Ich war krank, … ich nicht kommen konnte."
+    example:
+      de: Es hat stark geschneit, weshalb viele Züge ausgefallen sind.
+      en: It snowed heavily, which is why many trains were cancelled.
+      fa: برف سنگینی بارید و به همین دلیل بسیاری از قطارها لغو شدند.
+    alsoAccepted: [weswegen, wieso, warum]
+    tooCloseTo: [wieso]
+
   - word: wieso
+    class: adverb
+    level: B1
+    meaning:
+      en: why, how come (in speech)
+      fa: چطور شد که، چرا (در گفتار)
+    definition: "das Fragewort nach dem Grund, so fragt man oft beim Sprechen: … hast du nicht angerufen?"
+    example:
+      de: Wieso hast du mir nichts davon erzählt?
+      en: How come you didn't tell me anything about it?
+      fa: چطور شد که چیزی در این باره به من نگفتی؟
+    alsoAccepted: [warum, weshalb, weswegen]
+
   - word: worüber
+    class: adverb
+    level: B1
+    meaning:
+      en: about what (what someone talks, laughs or thinks about)
+      fa: دربارهٔ چه (حرف زدن، فکر کردن، خندیدن)
+    definition: "fragt nach dem Thema bei einem Verb mit „über“: … sprecht ihr gerade?"
+    example:
+      de: Worüber habt ihr so lange gesprochen?
+      en: What did you talk about for so long?
+      fa: دربارهٔ چه این‌همه حرف زدید؟
+    tooCloseTo: [worum]
+
   - word: worum
+    class: adverb
+    level: B1
+    meaning:
+      en: what … about (what something is about)
+      fa: موضوعِ چه (موضوع چیست؟)
+    definition: "fragt nach dem Thema bei „es geht um“ oder „bitten um“: … geht es in dem Film?"
+    example:
+      de: Worum geht es in deinem neuen Buch?
+      en: What is your new book about?
+      fa: کتاب تازه‌ات دربارهٔ چیست؟
+
   - word: ebenfalls
+    class: adverb
+    level: B1
+    meaning:
+      en: also, as well (in the same way)
+      fa: نیز، همچنین
+    definition: "auch, auf die gleiche Art: Mein Bruder ist Lehrer, meine Schwester ist … Lehrerin."
+    example:
+      de: Mein Vater war Arzt, und meine Schwester ist ebenfalls Ärztin geworden.
+      en: My father was a doctor, and my sister has also become a doctor.
+      fa: پدرم پزشک بود و خواهرم نیز پزشک شده است.
+    alsoAccepted: [auch, gleichfalls, ebenso]
+    tooCloseTo: [gleichfalls, ebenso]
+
   - word: ebenso
+    class: adverb
+    level: B1
+    meaning:
+      en: just as, equally (as … as)
+      fa: به همان اندازه، همان‌قدر
+    definition: "in gleichem Maß, gleich viel: Mein Bruder ist … groß wie ich."
+    example:
+      de: Der Test war ebenso schwer wie der letzte.
+      en: The test was just as hard as the last one.
+      fa: آزمون به همان اندازهٔ آزمون قبلی سخت بود.
+    alsoAccepted: [genauso, gleich]
+    tooCloseTo: [genauso]
+
   - word: genauso
+    class: adverb
+    level: B1
+    meaning:
+      en: exactly the same, in exactly the same way
+      fa: درست همین‌طور، دقیقاً همان‌طور
+    definition: "ganz gleich, ohne einen Unterschied: Er sieht … aus wie sein Vater."
+    example:
+      de: Mein Sohn lacht genauso wie mein Mann.
+      en: My son laughs exactly the same way as my husband.
+      fa: پسرم درست همان‌طور می‌خندد که شوهرم.
+    alsoAccepted: [ebenso, genau so]
+
   - word: gleichfalls
+    class: adverb
+    level: B1
+    meaning:
+      en: the same to you (reply to a good wish)
+      fa: شما هم همین‌طور (در پاسخ به آرزوی خوب)
+    definition: "die Antwort auf einen guten Wunsch: Schönes Wochenende! – Danke, …!"
+    example:
+      de: Guten Appetit! – Danke, gleichfalls!
+      en: Enjoy your meal! – Thanks, the same to you!
+      fa: نوش جان! – ممنون، شما هم همین‌طور!
+    alsoAccepted: [ebenfalls]
+
   - word: vor allem
+    class: phrase
+    level: B1
+    meaning:
+      en: above all, especially
+      fa: به‌ویژه، بیش از همه
+    definition: "das ist das Wichtigste: Ich esse gern Obst, … Äpfel."
+    example:
+      de: Ich mag Musik, vor allem Jazz.
+      en: I like music, especially jazz.
+      fa: موسیقی دوست دارم، به‌ویژه جاز.
+    alsoAccepted: [besonders, insbesondere, hauptsächlich]
+
   - word: schließlich
+    class: adverb
+    level: B1
+    meaning:
+      en: in the end, finally (after a long time)
+      fa: سرانجام، در نهایت
+    definition: "am Ende, nach langer Zeit: Wir haben lange gesucht, … haben wir eine Wohnung gefunden."
+    example:
+      de: Nach drei Stunden haben wir schließlich den Weg gefunden.
+      en: After three hours we finally found the way.
+      fa: پس از سه ساعت سرانجام راه را پیدا کردیم.
+    alsoAccepted: [endlich, am Ende, zuletzt, letztendlich, letztlich]
+
   - word: nebenbei
+    class: adverb
+    level: B1
+    meaning:
+      en: on the side (in addition to the main thing)
+      fa: در کنارِ کار اصلی، جانبی
+    definition: "zusätzlich zu der wichtigen Sache, die man macht: Er studiert und arbeitet … als Kellner."
+    example:
+      de: Sie studiert Medizin und arbeitet nebenbei in einem Café.
+      en: She studies medicine and works in a café on the side.
+      fa: او پزشکی می‌خواند و در کنارش در یک کافه کار می‌کند.
+    alsoAccepted: [nebenher]
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, sheet only;
+    126 questions)
+  date: 2026-11-28
+  pool: 2be136fd8f2f3abf
