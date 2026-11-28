@@ -51,7 +51,11 @@ explanations:
 table:
   columns:
     - { en: "W-question", fa: پرسش با واژهٔ پرسشی, de: W-Frage }
-    - { en: "Indirect question: verb at the end", fa: "پرسش غیرمستقیم: فعل در پایان", de: "Indirekte Frage: Verb am Ende" }
+    - {
+        en: "Indirect question: verb at the end",
+        fa: "پرسش غیرمستقیم: فعل در پایان",
+        de: "Indirekte Frage: Verb am Ende",
+      }
   rows:
     - [Wo wohnt Michaela?, "Weißt du, wo Michaela wohnt?"]
     - [Wann kommt der Bus?, "Ich weiß nicht, wann der Bus kommt."]

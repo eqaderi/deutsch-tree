@@ -91,7 +91,7 @@ mistakes:
   - wrong: Ich rufe sie an, damit sie mitkommen soll.
     right: Ich rufe sie an, damit sie mitkommt.
     why:
-      en: "*Damit* already says \"so that\", so *sollen* is left out: *damit sie mitkommt*."
+      en: '*Damit* already says "so that", so *sollen* is left out: *damit sie mitkommt*.'
       fa: "*damit* خودش معنای «تا» را دارد، پس *sollen* نمی‌آید: *damit sie mitkommt*."
       de: "*Damit* sagt schon das Ziel. *Sollen* fällt weg: *damit sie mitkommt*."
   - wrong: Ich spreche langsam, damit du verstehst mich.

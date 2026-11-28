@@ -94,7 +94,7 @@ mistakes:
   - wrong: Wann du Zeit hast, komm vorbei.
     right: Wenn du Zeit hast, komm vorbei.
     why:
-      en: "This is a condition, not a question about a time: *wenn*. *Wann* asks \"when?\"."
+      en: 'This is a condition, not a question about a time: *wenn*. *Wann* asks "when?".'
       fa: "این‌جا شرط است، نه پرسش دربارهٔ زمان: *wenn*. *wann* می‌پرسد «کی؟»."
       de: "Das ist eine Bedingung, keine Frage nach der Zeit: *wenn*. *Wann* fragt nach der Zeit."
   - wrong: Wenn ich habe Zeit, koche ich.
@@ -123,7 +123,7 @@ questions:
     options: [Wenn, Wann]
     answer: Wenn
     explanation:
-      en: "A condition, \"if\": *wenn*. *Wann* only asks for a time."
+      en: 'A condition, "if": *wenn*. *Wann* only asks for a time.'
       fa: "شرط است، یعنی «اگر»: *wenn*. *wann* فقط زمان را می‌پرسد."
       de: "Eine Bedingung: *wenn*. *Wann* fragt nur nach der Zeit."
   - id: gap-2

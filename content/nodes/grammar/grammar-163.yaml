@@ -51,7 +51,11 @@ explanations:
 table:
   columns:
     - { en: Yes/no question, fa: پرسش بله یا نه, de: Ja/Nein-Frage }
-    - { en: "Indirect question with *ob*: verb at the end", fa: "پرسش غیرمستقیم با *ob*: فعل در پایان", de: "Indirekte Frage mit *ob*: Verb am Ende" }
+    - {
+        en: "Indirect question with *ob*: verb at the end",
+        fa: "پرسش غیرمستقیم با *ob*: فعل در پایان",
+        de: "Indirekte Frage mit *ob*: Verb am Ende",
+      }
   rows:
     - [Kommt Ali noch?, "Weißt du, ob Ali noch kommt?"]
     - [Ist der Laden heute offen?, "Ich weiß nicht, ob der Laden heute offen ist."]
@@ -87,7 +91,7 @@ mistakes:
   - wrong: Ich weiß nicht, wenn er heute kommt.
     right: Ich weiß nicht, ob er heute kommt.
     why:
-      en: "The answer is open (yes or no?), so *ob*. English says \"if\" here, but German never uses *wenn* for it."
+      en: 'The answer is open (yes or no?), so *ob*. English says "if" here, but German never uses *wenn* for it.'
       fa: "پاسخ باز است (بله یا نه؟)، پس *ob* می‌آید. در این معنا هرگز *wenn* به کار نمی‌رود."
       de: "Die Antwort ist offen (ja oder nein?). Darum *ob*, nicht *wenn*."
   - wrong: Weißt du, ob kommt Ali noch?

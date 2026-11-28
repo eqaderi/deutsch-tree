@@ -81,7 +81,12 @@ diagrams:
         bleibe ich hier.* ist der ganze Nebensatz Position 1. Darum kommt das
         Verb *bleibe* direkt danach. Die Verben sind farbig.
     labels:
-      main: { en: "main clause: verb in position 2", fa: "جملهٔ پایه: فعل در جایگاه دوم", de: "Hauptsatz: Verb auf Position 2" }
+      main:
+        {
+          en: "main clause: verb in position 2",
+          fa: "جملهٔ پایه: فعل در جایگاه دوم",
+          de: "Hauptsatz: Verb auf Position 2",
+        }
       sub: { en: "subordinate clause: verb at the end", fa: "جملهٔ پیرو: فعل در پایان", de: "Nebensatz: Verb am Ende" }
       first: { en: "subordinate clause first", fa: "جملهٔ پیرو در آغاز", de: "Nebensatz zuerst" }
       pos1: { en: position 1, fa: جایگاه اول, de: Position 1 }

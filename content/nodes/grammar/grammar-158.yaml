@@ -46,7 +46,11 @@ explanations:
 
 table:
   columns:
-    - { en: "With *denn*: verb in position 2", fa: "با *denn*: فعل در جایگاه دوم", de: "Mit *denn*: Verb auf Position 2" }
+    - {
+        en: "With *denn*: verb in position 2",
+        fa: "با *denn*: فعل در جایگاه دوم",
+        de: "Mit *denn*: Verb auf Position 2",
+      }
     - { en: "With *weil*: verb at the end", fa: "با *weil*: فعل در پایان", de: "Mit *weil*: Verb am Ende" }
   rows:
     - ["Er kommt nicht mit, denn er ist krank.", "Er kommt nicht mit, weil er krank ist."]
