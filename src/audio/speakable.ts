@@ -8,12 +8,15 @@
  * content pipeline refuses spoken text that still holds a digit and names it,
  * so the voice never meets one.
  *
- * Piper also spells abbreviations out, so "z. B.", "d. h." and "usw." are
- * said as the words they stand for (ticket #79).
+ * Words the voice says wrong however they stand, and abbreviations it would
+ * spell out ("z. B."), are first respelt for the voice from the table in
+ * pronunciations.ts.
  *
- * The audio key is a hash of this text, so a change here gives new audio to
- * exactly the items whose spoken text changes.
+ * The audio key is a hash of this text, so a change here (or in that table)
+ * gives new audio to exactly the items whose spoken text changes.
  */
+
+import { PRONUNCIATIONS } from './pronunciations.ts'
 
 const ONES = ['null', 'eins', 'zwei', 'drei', 'vier', 'fünf', 'sechs', 'sieben', 'acht', 'neun']
 const TEENS = [
@@ -34,6 +37,26 @@ const MONTHS = 'Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktobe
 /** A number not touching another digit or a separator, so "3.5.2025" is never read in pieces. */
 const ALONE_BEFORE = '(?<![\\d.,:])'
 const ALONE_AFTER = '(?![\\d]|[.,:]\\d)'
+/** Not inside a word: "\\b" knows no umlauts. */
+const WORD_START = '(?<![\\p{L}\\p{N}])'
+/** The words after which a date's ordinal ends in -en: "am dritten Mai", "bis fünften Mai". */
+const DATE_EN = 'am|vom|zum|im|beim|dem|den|bis'
+
+/** The words after which an ordinal before a noun ends in -en: "im dritten Stock", "den ersten Preis". */
+const ORDINAL_EN = 'am|im|vom|zum|zur|beim|dem|den|des|jedem|jeden'
+/** The words after which it ends in -e: "der dritte Stock", "die zweite Klasse", but "in der vierten Klasse". */
+const ORDINAL_E = 'der|die|das|jede|jedes'
+/** Prepositions that make "der" the Dativ of a feminine noun, so its ordinal ends in -en. */
+const PREPOSITIONS = 'an|auf|aus|bei|hinter|in|mit|nach|neben|seit|über|unter|von|vor|zu|zwischen'
+
+/** The words of a list as they are written in a sentence and at its start: "am|vom" matches "Am" too. */
+function anyCase(words: string): string {
+  return words
+    .split('|')
+    .map((word) => `[${word.charAt(0).toUpperCase()}${word.charAt(0)}]${word.slice(1)}`)
+    .join('|')
+}
+
 /** Followed by a noun: "1500 Menschen" counts people and is no year. */
 const BEFORE_A_NOUN = '\\s+\\p{Lu}'
 
@@ -111,10 +134,32 @@ const RULES: Array<[RegExp, (...groups: string[]) => string]> = [
   ],
   // A full hour: "um 8 Uhr".
   [new RegExp(`${ALONE_BEFORE}(\\d{1,2})\\s+Uhr\\b`, 'g'), (_match, hour) => `${countWord(Number(hour))} Uhr`],
-  // A date: "am 3. Mai", "der 1. März".
+  // A range of days: "3.–5. Mai" is said "3. bis 5. Mai".
   [
-    new RegExp(`(\\b(?:am|vom|zum|im|beim|dem|den)\\s+)?${ALONE_BEFORE}(\\d{1,2})\\.(?=\\s+(?:${MONTHS})\\b)`, 'g'),
+    new RegExp(`${ALONE_BEFORE}(\\d{1,2})\\.\\s*[–-]\\s*(\\d{1,2})\\.(?=\\s+(?:${MONTHS})\\b)`, 'g'),
+    (_match, first, last) => `${first}. bis ${last}.`,
+  ],
+  // A date: "am 3. Mai", "Am 25. Juli", "der 1. März", "bis 5. Mai", and the first day
+  // of a range: "vom 3. bis (zum) 5. Mai".
+  [
+    new RegExp(
+      `(${WORD_START}(?:${anyCase(DATE_EN)})\\s+)?${ALONE_BEFORE}(\\d{1,2})\\.(?=(?:\\s+bis(?:\\s+zum)?\\s+\\d{1,2}\\.)?\\s+(?:${MONTHS})\\b)`,
+      'gu',
+    ),
     (_match, before, day) => `${before ?? ''}${ordinalWords(Number(day), before ? 'en' : 'e')}`,
+  ],
+  // An ordinal before a noun, after a word that gives its ending: "im 3. Stock", "der 3. Stock",
+  // "in der 4. Klasse". Without such a word ("Er ist 3. Seine …") the dot ends a sentence.
+  [
+    new RegExp(
+      `${WORD_START}(?:(${anyCase(PREPOSITIONS)})\\s+)?(${anyCase(ORDINAL_EN)}|${anyCase(ORDINAL_E)})\\s+${ALONE_BEFORE}(\\d{1,2})\\.(?=${BEFORE_A_NOUN})`,
+      'gu',
+    ),
+    (match, preposition, word, number) => {
+      const plain = word.toLowerCase()
+      const ending = ORDINAL_EN.split('|').includes(plain) || (plain === 'der' && preposition) ? 'en' : 'e'
+      return `${match.slice(0, match.length - number.length - 1)}${ordinalWords(Number(number), ending)}`
+    },
   ],
   // A thousands separator: "2.500" is 2500.
   [new RegExp(`${ALONE_BEFORE}(\\d{1,3}(?:\\.\\d{3})+)${ALONE_AFTER}`, 'g'), (number) => number.replaceAll('.', '')],
@@ -150,25 +195,41 @@ const RULES: Array<[RegExp, (...groups: string[]) => string]> = [
   ],
 ]
 
-/**
- * Abbreviations, said as the words they stand for. Piper spells them out
- * ("z. B." as "zett. Beh.", "usw." as "usf"); a German reader does not.
- */
-const ABBREVIATIONS: Array<[RegExp, string]> = [
-  [/(?<!\p{L})z\. ?B\./gu, 'zum Beispiel'],
-  [/(?<!\p{L})d\. ?h\./gu, 'das heißt'],
-  [/(?<!\p{L})usw\./gu, 'und so weiter'],
-]
+/** Each entry of the table, also with a capital at the start of a sentence, and how the voice is to say it. */
+const RESPELT = new Map(
+  Object.entries(PRONUNCIATIONS).flatMap(([written, said]) => {
+    const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1)
+    return [
+      [capital(written), capital(said)],
+      [written, said],
+    ]
+  }),
+)
+/** A space in an entry may be left out in the text: "z. B." stands for "z.B." too. */
+const asWritten = (written: string) => written.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replaceAll(' ', ' ?')
+const ENTRY = new RegExp(
+  `${WORD_START}(?:${[...RESPELT.keys()]
+    .sort((a, b) => b.length - a.length)
+    .map(asWritten)
+    .join('|')})(?![\\p{L}\\p{N}])`,
+  'gu',
+)
 
-/** The text as the voice says it: tidied, with its abbreviations and every number it knows written as words. */
+/** How the voice is to say what the table matched: "z.B." is found under "z. B.". */
+function respelt(match: string): string {
+  return RESPELT.get(match) ?? (RESPELT.get(match.replace(/\.(?=\p{L})/gu, '. ')) as string)
+}
+
+/** The text as the voice says it: tidied, with what the table respells and every number it knows written as words. */
 export function speakable(text: string): string {
-  let spoken = text.normalize('NFC').replace(/\s+/g, ' ').trim()
-  for (const [pattern, words] of ABBREVIATIONS) {
-    // At the end of a sentence the full stop of the abbreviation also ends the sentence.
-    spoken = spoken.replace(pattern, (match: string, at: number, whole: string) =>
-      at > 0 && at + match.length === whole.length ? `${words}.` : words,
+  let spoken = text
+    .normalize('NFC')
+    .replace(/\s+/g, ' ')
+    .trim()
+    // An abbreviation that ends the text keeps the full stop that also ends the sentence: "… usw." is "… und so weiter.".
+    .replace(ENTRY, (match: string, at: number, whole: string) =>
+      at > 0 && match.endsWith('.') && at + match.length === whole.length ? `${respelt(match)}.` : respelt(match),
     )
-  }
   for (const [pattern, words] of RULES) {
     spoken = spoken.replace(pattern, (...args) => words(...(args.slice(0, -2) as string[])))
   }
