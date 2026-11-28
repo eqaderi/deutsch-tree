@@ -1007,6 +1007,19 @@ changes:
       plural: Stipendien,
       reason: 'the marker "-en" would give "Stipendiumen"; the plural is "Stipendien"',
     }
+  # 92: three markers of the B1 list give no plural in use.
+  - {
+      word: Sandwich,
+      plural: Sandwiches/Sandwichs,
+      reason: 'the marker "-(e)s/-e" would give "Sandwich(e)s"; the plural is "Sandwiches" or "Sandwichs"',
+    }
+  - { word: Umtausch, plural: "-e", reason: 'the marker "¨-e" would give "Umtäusche"; the plural is "Umtausche"' }
+  - {
+      word: Mensa,
+      plural: Mensas/Mensen,
+      reason: 'the marker "-s/-en" would give "Mensaen"; the plural is "Mensas" or "Mensen"',
+    }
+  - { word: Müesli, rename: Müsli, reason: '"Müesli" is the Swiss spelling; Germany and Austria write "Müsli" (#92)' }
   # Nouns that the lists print without article or plural.
   - { word: Achtung, article: die, plural: sg }
   - { word: Grad, article: der, plural: "-e" }
