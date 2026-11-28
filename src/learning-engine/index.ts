@@ -219,9 +219,10 @@ const MEANINGS_OFFERED = 4
  * like one already offered (the case and the spaces aside).
  *
  * Into German (`word-for-meaning`) the learner reads the meaning and types
- * the word as it is learned: a noun with its article. The accepted answers
- * are that form and what the word lists under `alsoAccepted`, so a noun
- * without its article, or with another one, is a wrong answer.
+ * the word as it is learned: a noun with its article, a noun that takes none
+ * ("Deutschland") bare. The accepted answers are that form and what the word
+ * lists under `alsoAccepted`, so a noun without its article, with another
+ * one, or with one it does not take, is a wrong answer.
  *
  * The reason of both questions is the word with its meaning and its example
  * sentence.

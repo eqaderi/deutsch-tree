@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises'
 import path from 'node:path'
+import { NO_ARTICLE } from '../../content-model/index.ts'
 import { parseScopeList, SCOPE_LIST_FILE, type ScopeWord } from '../../content-model/scope-list.ts'
 import { type ContentCheck, type ContentProblem, problemIn } from './check.ts'
 
@@ -10,7 +11,8 @@ import { type ContentCheck, type ContentProblem, problemIn } from './check.ts'
  * The node file writes them out because its page, its test and an Anki
  * export read them from there, and because the lists print a plural only as
  * a marker ("¨-e"), never as the word ("Stühle"). This check keeps the two
- * from drifting apart. A word that the scope list does not have is reported
+ * from drifting apart. A noun that takes no article ("Deutschland") is `none`
+ * in both. A word that the scope list does not have is reported
  * by `vocabulary-covers-the-scope-list`; an empty column is not compared.
  */
 export const vocabularyAgreesWithTheScopeList: ContentCheck = async ({ contentDir, nodes }) => {
@@ -36,7 +38,11 @@ export const vocabularyAgreesWithTheScopeList: ContentCheck = async ({ contentDi
       differs('level', entry.level)
       const articles = listed.article.split('/').filter(Boolean)
       if (entry.article !== undefined && articles.length > 0 && !articles.includes(entry.article)) {
-        problem('article', `is "${entry.article}", but the scope list gives "${listed.article}" for "${entry.word}"`)
+        const gives =
+          listed.article === NO_ARTICLE
+            ? `no article for "${entry.word}"; write "article: ${NO_ARTICLE}"`
+            : `"${listed.article}" for "${entry.word}"`
+        problem('article', `is "${entry.article}", but the scope list gives ${gives}`)
       }
       const plural = pluralProblem(entry, listed)
       if (plural) problem('plural', plural)

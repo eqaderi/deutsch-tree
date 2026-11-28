@@ -192,7 +192,7 @@ die Familie · die Eltern (Pl.) · die Mutter · der Vater · das Kind · der So
 der Mensch · die Leute (Pl.) · der Mann · das Mädchen · der Junge · der Erwachsene · der/die Jugendliche · der Freund · der/die Bekannte · der Kollege · der Gast · die Gruppe · jung · alt · allein · zusammen · fremd · bekannt · kennen · (sich) treffen · besuchen · einladen · die Einladung · helfen · die Hilfe
 
 **A1-W1.5 Countries and where you live** · کشورها و محل زندگی · Länder und Wohnort · 17 words  
-das Land · das Deutschland · das Europa · das Ausland · die Welt · die Heimat · deutsch · europäisch · ausländisch · international · der Ausländer · der/die Deutsche · der Europäer · kommen · wohnen · leben · der Ort
+das Land · Deutschland · Europa · das Ausland · die Welt · die Heimat · deutsch · europäisch · ausländisch · international · der Ausländer · der/die Deutsche · der Europäer · kommen · wohnen · leben · der Ort
 
 #### A1-W2 Words: numbers and time
 
