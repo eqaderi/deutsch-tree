@@ -4,10 +4,342 @@ kind: grammar
 level: A1
 chapter: a1-word-building
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-059]
 title:
   en: "Noun compounds"
   fa: "اسم‌های مرکب"
   de: "Zusammengesetzte Nomen"
+
+explanations:
+  en:
+    rule: >
+      German joins two or more words into one noun, a compound, written as one
+      word with a capital letter only at the start: *die Post* + *die Karte* =
+      *die Postkarte*. The last part is the main word. It gives the compound
+      its gender and its plural (*das Haus* + *die Tür* = *die Haustür*,
+      plural *die Haustüren*), and the parts before it say what kind: a
+      *Haustür* is a kind of door. The first part can also be a verb stem or
+      an adjective (*der Schreibtisch*, *der Kühlschrank*). Sometimes a
+      linking *-s-* or *-n-* stands between the parts (*der
+      Geburtstagskuchen*, *die Sonnenbrille*). The stress is on the first
+      part: *KÜHLschrank*.
+  fa:
+    rule: >
+      در آلمانی دو یا چند واژه به هم می‌پیوندند و یک اسم مرکب می‌سازند. اسم
+      مرکب یک‌جا نوشته می‌شود و فقط حرف اولش بزرگ است: *die Post* + *die
+      Karte* = *die Postkarte*. جزء آخر واژهٔ اصلی است و جنس دستوری و جمع
+      اسم مرکب را تعیین می‌کند (*das Haus* + *die Tür* = *die Haustür*، جمع:
+      *die Haustüren*). اجزای پیش از آن نوعش را نشان می‌دهند: *Haustür* نوعی
+      در است، یعنی در ورودی خانه. جزء اول می‌تواند بن فعل یا صفت هم باشد
+      (*der Schreibtisch*، *der Kühlschrank*). گاهی میان دو جزء حرف میانجی
+      *-s-* یا *-n-* می‌آید (*der Geburtstagskuchen*، *die Sonnenbrille*).
+      تکیهٔ واژه روی جزء اول است: *KÜHLschrank*.
+  de:
+    rule: >
+      Man kann zwei oder mehr Wörter zu einem Nomen verbinden: *die Post* +
+      *die Karte* = *die Postkarte*. Man schreibt es als ein Wort, nur der
+      erste Buchstabe ist groß. Das letzte Wort ist das wichtigste: Es gibt
+      den Artikel und den Plural (*das Haus* + *die Tür* = *die Haustür*,
+      Plural *die Haustüren*). Die Wörter davor sagen, was für eine Sache es
+      ist. Das erste Wort kann auch ein Verb oder ein Adjektiv sein: *der
+      Schreibtisch*, *der Kühlschrank*. Manchmal steht ein *-s-* oder ein
+      *-n-* zwischen den Wörtern: *der Geburtstagskuchen*, *die
+      Sonnenbrille*. Man betont das erste Wort: *KÜHLschrank*.
+
+table:
+  columns:
+    - { en: First part, fa: جزء اول, de: Erstes Wort }
+    - {
+        en: "Last part (gives *der*, *die*, *das*)",
+        fa: "جزء آخر (جنس را تعیین می‌کند)",
+        de: "Letztes Wort (gibt den Artikel)",
+      }
+    - { en: Compound, fa: اسم مرکب, de: Zusammengesetztes Nomen }
+    - { en: Plural, fa: جمع, de: Plural }
+  rows:
+    - [die Post, die Karte, die Postkarte, die Postkarten]
+    - [das Haus, die Tür, die Haustür, die Haustüren]
+    - [die Hand, der Schuh, der Handschuh, die Handschuhe]
+    - [die Kinder (Plural), das Zimmer, das Kinderzimmer, die Kinderzimmer]
+    - [schreiben (Verb), der Tisch, der Schreibtisch, die Schreibtische]
+    - [kühl (Adjektiv), der Schrank, der Kühlschrank, die Kühlschränke]
+    - [die Sonne, die Brille, die Sonnenbrille (mit -n-), die Sonnenbrillen]
+    - [die Woche, das Ende, das Wochenende (mit -n-), die Wochenenden]
+    - [der Geburtstag, der Kuchen, der Geburtstagskuchen (mit -s-), die Geburtstagskuchen]
+    - [die Arbeit, der Platz, der Arbeitsplatz (mit -s-), die Arbeitsplätze]
+    - [das Haus + die Tür, der Schlüssel, der Haustürschlüssel, die Haustürschlüssel]
+
+examples:
+  - de: Ich schreibe meiner Oma eine Postkarte.
+    en: I'm writing my grandma a postcard.
+    fa: برای مادربزرگم کارت پستال می‌نویسم.
+  - de: Der Kühlschrank ist fast leer.
+    en: The fridge is almost empty.
+    fa: یخچال تقریباً خالی است.
+  - de: Wo ist meine Sonnenbrille?
+    en: Where are my sunglasses?
+    fa: عینک آفتابی‌ام کجاست؟
+  - de: Der Geburtstagskuchen schmeckt wunderbar.
+    en: The birthday cake tastes wonderful.
+    fa: کیک تولد خیلی خوشمزه است.
+  - de: Unsere Haustür ist rot.
+    en: Our front door is red.
+    fa: در ورودی خانهٔ ما قرمز است.
+  - de: Das Kinderzimmer ist klein, aber hell.
+    en: The children's room is small but bright.
+    fa: اتاق بچه‌ها کوچک ولی روشن است.
+  - de: Im Winter brauche ich Handschuhe.
+    en: In winter I need gloves.
+    fa: زمستان‌ها دستکش لازم دارم.
+  - de: Mein Schreibtisch steht am Fenster.
+    en: My desk is by the window.
+    fa: میز تحریرم کنار پنجره است.
+  - de: Am Wochenende besuchen wir meine Eltern.
+    en: At the weekend we visit my parents.
+    fa: آخر هفته به دیدن پدر و مادرم می‌رویم.
+  - de: Ich finde den Haustürschlüssel nicht.
+    en: I can't find the front-door key.
+    fa: کلید در خانه را پیدا نمی‌کنم.
+
+mistakes:
+  - wrong: Das Haustür ist offen.
+    right: Die Haustür ist offen.
+    why:
+      en: "The last part gives the gender: *die Tür*, so *die Haustür*."
+      fa: "جنس را جزء آخر تعیین می‌کند: *die Tür*، پس *die Haustür*."
+      de: "Das letzte Wort gibt den Artikel: *die Tür*, also *die Haustür*."
+  - wrong: Ich suche meine Sonnebrille.
+    right: Ich suche meine Sonnenbrille.
+    why:
+      en: "*Sonnenbrille* has a linking *-n-*: *Sonne* + *n* + *Brille*."
+      fa: "*Sonnenbrille* حرف میانجی *-n-* دارد: *Sonne* + *n* + *Brille*."
+      de: "In *Sonnenbrille* steht ein *-n-* zwischen den Wörtern: *Sonne* + *n* + *Brille*."
+  - wrong: Wo ist die Post Karte?
+    right: Wo ist die Postkarte?
+    why:
+      en: A compound is one word, with a capital letter only at the start.
+      fa: اسم مرکب یک واژه است و فقط حرف اولش بزرگ نوشته می‌شود.
+      de: Ein zusammengesetztes Nomen ist ein Wort. Nur der erste Buchstabe ist groß.
+  - wrong: Die Handschuhen sind warm.
+    right: Die Handschuhe sind warm.
+    why:
+      en: "The plural is the plural of the last part: *die Schuhe*, so *die Handschuhe*."
+      fa: "جمع اسم مرکب همان جمع جزء آخر است: *die Schuhe*، پس *die Handschuhe*."
+      de: "Der Plural ist der Plural vom letzten Wort: *die Schuhe*, also *die Handschuhe*."
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: ___ Postkarte ist aus Italien.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "The last part is *die Karte*, so *die Postkarte*."
+      fa: "جزء آخر *die Karte* است، پس *die Postkarte*."
+      de: "Das letzte Wort ist *die Karte*, also *die Postkarte*."
+  - id: q2
+    type: gap-fill
+    prompt: ___ Handschuh liegt im Auto.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "The last part is *der Schuh*, so *der Handschuh*, although *Hand* is feminine."
+      fa: "جزء آخر *der Schuh* است، پس *der Handschuh*؛ با اینکه *Hand* مؤنث است."
+      de: "Das letzte Wort ist *der Schuh*, also *der Handschuh*. *Die Hand* ist egal."
+  - id: q3
+    type: gap-fill
+    prompt: ___ Kinderzimmer ist sehr hell.
+    options: [Der, Die, Das]
+    answer: Das
+    explanation:
+      en: "The last part is *das Zimmer*, so *das Kinderzimmer*."
+      fa: "جزء آخر *das Zimmer* است، پس *das Kinderzimmer*."
+      de: "Das letzte Wort ist *das Zimmer*, also *das Kinderzimmer*."
+  - id: q4
+    type: gap-fill
+    prompt: ___ Hausnummer ist falsch.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "The last part is *die Nummer*, so *die Hausnummer*, although *Haus* is neuter."
+      fa: "جزء آخر *die Nummer* است، پس *die Hausnummer*؛ با اینکه *Haus* خنثی است."
+      de: "Das letzte Wort ist *die Nummer*, also *die Hausnummer*. *Das Haus* ist egal."
+  - id: q5
+    type: gap-fill
+    prompt: ___ Wochenende war schön.
+    options: [Der, Die, Das]
+    answer: Das
+    explanation:
+      en: "The last part is *das Ende*, so *das Wochenende*, although *Woche* is feminine."
+      fa: "جزء آخر *das Ende* است، پس *das Wochenende*؛ با اینکه *Woche* مؤنث است."
+      de: "Das letzte Wort ist *das Ende*, also *das Wochenende*. *Die Woche* ist egal."
+  - id: q6
+    type: gap-fill
+    prompt: ___ Stadtplan liegt auf dem Tisch.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "The last part is *der Plan*, so *der Stadtplan*, although *Stadt* is feminine."
+      fa: "جزء آخر *der Plan* است، پس *der Stadtplan*؛ با اینکه *Stadt* مؤنث است."
+      de: "Das letzte Wort ist *der Plan*, also *der Stadtplan*. *Die Stadt* ist egal."
+  - id: q7
+    type: gap-fill
+    prompt: ___ Wasserflasche ist leer.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "The last part is *die Flasche*, so *die Wasserflasche*, although *Wasser* is neuter."
+      fa: "جزء آخر *die Flasche* است، پس *die Wasserflasche*؛ با اینکه *Wasser* خنثی است."
+      de: "Das letzte Wort ist *die Flasche*, also *die Wasserflasche*. *Das Wasser* ist egal."
+  - id: q8
+    type: gap-fill
+    prompt: Ich fahre mit der ___ in die Stadt.
+    options: [Straßebahn, Straßenbahn, Straßesbahn]
+    answer: Straßenbahn
+    explanation:
+      en: "*Straße* and *Bahn* are joined with a linking *-n-*: *die Straßenbahn*."
+      fa: "*Straße* و *Bahn* با حرف میانجی *-n-* به هم می‌پیوندند: *die Straßenbahn*."
+      de: "Zwischen *Straße* und *Bahn* steht ein *-n-*: *die Straßenbahn*."
+  - id: q9
+    type: gap-fill
+    prompt: Mein ___ ist im Zentrum.
+    options: [Arbeitplatz, Arbeitsplatz, Arbeitenplatz]
+    answer: Arbeitsplatz
+    explanation:
+      en: "*Arbeit* and *Platz* are joined with a linking *-s-*: *der Arbeitsplatz*."
+      fa: "*Arbeit* و *Platz* با حرف میانجی *-s-* به هم می‌پیوندند: *der Arbeitsplatz*."
+      de: "Zwischen *Arbeit* und *Platz* steht ein *-s-*: *der Arbeitsplatz*."
+  - id: q10
+    type: gap-fill
+    prompt: Ein Geschäft für Schuhe ist ein ___.
+    options: [Schuhgeschäft, Geschäftsschuh]
+    answer: Schuhgeschäft
+    explanation:
+      en: "The main word comes last: a shop for shoes is a *Schuhgeschäft*."
+      fa: "واژهٔ اصلی در آخر می‌آید: مغازه‌ای برای کفش *Schuhgeschäft* است."
+      de: "Das wichtigste Wort steht am Ende: Ein Geschäft für Schuhe ist ein *Schuhgeschäft*."
+  - id: q11
+    type: multiple-choice
+    prompt: Was ist ein Kinderzimmer?
+    options: [ein Zimmer für Kinder, ein Kind in einem Zimmer, ein Haus mit Kindern]
+    answer: ein Zimmer für Kinder
+    explanation:
+      en: "The last part is the main word: a *Kinderzimmer* is a room (*Zimmer*)."
+      fa: "جزء آخر واژهٔ اصلی است: *Kinderzimmer* یک اتاق (*Zimmer*) است."
+      de: "Das letzte Wort ist das wichtigste: Ein *Kinderzimmer* ist ein Zimmer."
+  - id: q12
+    type: multiple-choice
+    prompt: Was ist eine Kaffeetasse?
+    options: [eine Tasse für Kaffee, Kaffee ohne Tasse, ein Café mit Tassen]
+    answer: eine Tasse für Kaffee
+    explanation:
+      en: "The last part is the main word: a *Kaffeetasse* is a cup (*Tasse*)."
+      fa: "جزء آخر واژهٔ اصلی است: *Kaffeetasse* یک فنجان (*Tasse*) است."
+      de: "Das letzte Wort ist das wichtigste: Eine *Kaffeetasse* ist eine Tasse."
+  - id: q13
+    type: multiple-choice
+    prompt: "Kühlschrank: Welcher Teil ist betont?"
+    options: [KÜHLschrank, kühlSCHRANK]
+    answer: KÜHLschrank
+    explanation:
+      en: "In a compound the stress is on the first part: *KÜHLschrank*."
+      fa: "در اسم مرکب تکیه روی جزء اول است: *KÜHLschrank*."
+      de: "Man betont das erste Wort: *KÜHLschrank*."
+  - id: q14
+    type: typed-gap-fill
+    prompt: das Haus + die Tür = ___ Haustür
+    answers: [die]
+    explanation:
+      en: "The last part *die Tür* gives the article: *die Haustür*."
+      fa: "حرف تعریف را جزء آخر، *die Tür*، تعیین می‌کند: *die Haustür*."
+      de: "Das letzte Wort *die Tür* gibt den Artikel: *die Haustür*."
+  - id: q15
+    type: typed-gap-fill
+    prompt: die Stadt + der Plan = ___ Stadtplan
+    answers: [der]
+    explanation:
+      en: "The last part *der Plan* gives the article: *der Stadtplan*."
+      fa: "حرف تعریف را جزء آخر، *der Plan*، تعیین می‌کند: *der Stadtplan*."
+      de: "Das letzte Wort *der Plan* gibt den Artikel: *der Stadtplan*."
+  - id: q16
+    type: typed-gap-fill
+    prompt: die Sonne + die Brille = die ___
+    answers: [Sonnenbrille]
+    explanation:
+      en: "One word, with a linking *-n-*: *die Sonnenbrille*."
+      fa: "یک واژه، با حرف میانجی *-n-*: *die Sonnenbrille*."
+      de: "Ein Wort, mit *-n-* in der Mitte: *die Sonnenbrille*."
+  - id: q17
+    type: typed-gap-fill
+    prompt: der Geburtstag + der Kuchen = der ___
+    answers: [Geburtstagskuchen]
+    explanation:
+      en: "One word, with a linking *-s-*: *der Geburtstagskuchen*."
+      fa: "یک واژه، با حرف میانجی *-s-*: *der Geburtstagskuchen*."
+      de: "Ein Wort, mit *-s-* in der Mitte: *der Geburtstagskuchen*."
+  - id: q18
+    type: typed-answer
+    prompt: "Plural: die Postkarte"
+    answers: [die Postkarten, Postkarten]
+    explanation:
+      en: "The plural of the last part: *die Karten*, so *die Postkarten*."
+      fa: "جمع جزء آخر: *die Karten*، پس *die Postkarten*."
+      de: "Der Plural vom letzten Wort: *die Karten*, also *die Postkarten*."
+  - id: q19
+    type: true-false
+    prompt: Das Kühlschrank ist leer.
+    answer: false
+    explanation:
+      en: "The last part is *der Schrank*, so it is *der Kühlschrank*."
+      fa: "جزء آخر *der Schrank* است، پس درستش *der Kühlschrank* است."
+      de: "Das letzte Wort ist *der Schrank*, also *der Kühlschrank*."
+  - id: q20
+    type: true-false
+    prompt: Die Telefonnummer ist richtig.
+    answer: true
+    explanation:
+      en: "The last part is *die Nummer*, so *die Telefonnummer* is right."
+      fa: "جزء آخر *die Nummer* است، پس *die Telefonnummer* درست است."
+      de: "Das letzte Wort ist *die Nummer*, also ist *die Telefonnummer* richtig."
+  - id: q21
+    type: true-false
+    prompt: Ich habe eine neue Wasser Flasche.
+    answer: false
+    explanation:
+      en: "A compound is written as one word: *eine neue Wasserflasche*."
+      fa: "اسم مرکب یک‌جا نوشته می‌شود: *eine neue Wasserflasche*."
+      de: "Ein zusammengesetztes Nomen schreibt man als ein Wort: *eine neue Wasserflasche*."
+  - id: q22
+    type: find-error
+    prompt: Das Briefmarke ist sehr schön.
+    answer: Das
+    explanation:
+      en: "The last part is *die Marke*, so *die Briefmarke*."
+      fa: "جزء آخر *die Marke* است، پس *die Briefmarke*."
+      de: "Das letzte Wort ist *die Marke*, also *die Briefmarke*."
+  - id: q23
+    type: find-error
+    prompt: Der Bushaltestelle ist dort drüben.
+    answer: Der
+    explanation:
+      en: "The last part is *die Haltestelle*, so *die Bushaltestelle*."
+      fa: "جزء آخر *die Haltestelle* است، پس *die Bushaltestelle*."
+      de: "Das letzte Wort ist *die Haltestelle*, also *die Bushaltestelle*."
+  - id: q24
+    type: matching
+    answer:
+      - [die Postkarte, die Postkarten]
+      - [der Handschuh, die Handschuhe]
+      - [das Kinderzimmer, die Kinderzimmer]
+      - [der Stadtplan, die Stadtpläne]
+    explanation:
+      en: "A compound takes the plural of its last part: *Karten*, *Schuhe*, *Zimmer*, *Pläne*."
+      fa: "اسم مرکب جمع جزء آخرش را می‌گیرد: *Karten*، *Schuhe*، *Zimmer*، *Pläne*."
+      de: "Das Nomen hat den Plural vom letzten Wort: *Karten*, *Schuhe*, *Zimmer*, *Pläne*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: d375d04a4b3b5523

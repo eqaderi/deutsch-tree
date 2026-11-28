@@ -84,6 +84,8 @@ its first mention in a node.
 | singular / plural | Singular / Plural | مفرد / جمع |
 | polite *Sie* | Höflichkeitsform | *Sie* رسمی |
 | noun | Nomen | اسم |
+| compound noun (*die Haustür*) | Kompositum | اسم مرکب |
+| linking letter (*-s-* in *Arbeitsplatz*) | Fugenelement | حرف میانجی |
 | article; definite / indefinite | Artikel | حرف تعریف؛ معین / نامعین |
 | masculine / feminine / neuter | maskulin / feminin / neutral | مذکر / مؤنث / خنثی |
 | case | Kasus | حالت |
@@ -110,6 +112,8 @@ its first mention in a node.
 | complement (of a verb) | Ergänzung | متمم |
 | intransitive / transitive (verb) | intransitiv / transitiv | (فعل) لازم / متعدی |
 | separable verb; prefix | trennbares Verb; Präfix | فعل جداشدنی؛ پیشوند |
+| suffix (*-ung*, *-bar*) | Suffix | پسوند |
+| stress (of a word) | Betonung, Wortakzent | تکیه |
 | inseparable verb | untrennbares Verb | فعل جدانشدنی |
 | modal verb | Modalverb | فعل وجهی |
 | reflexive verb | reflexives Verb | فعل انعکاسی |
