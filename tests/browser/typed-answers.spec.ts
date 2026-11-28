@@ -147,7 +147,7 @@ test('a question cannot be left without an answer, and Enter in the field goes o
   await expect(answerField(page)).toHaveValue('')
 })
 
-test('extra spaces are ignored; ae, oe, ue, ss and wrong capitals are accepted and shown with a note', async ({
+test('extra spaces and a mark at the end are ignored; ae, oe, ue, ss and wrong capitals are accepted and shown with a note', async ({
   page,
 }) => {
   await page.goto(TYPED_TEST)
@@ -157,9 +157,11 @@ test('extra spaces are ignored; ae, oe, ue, ss and wrong capitals are accepted a
     q2: 'schoen',
     q4: 'mädchen',
     q8: 'ueben',
-    // Right without a note: only the spaces differ, or it is the second accepted answer.
+    // Right without a note: only the spaces or a mark at the end differ, or it is the second accepted answer.
     q3: '  müde ',
     q9: ' die   Äpfel',
+    q10: 'die Häuser.',
+    q7: 'Straße !',
     q6: 'lebst',
   }
 
