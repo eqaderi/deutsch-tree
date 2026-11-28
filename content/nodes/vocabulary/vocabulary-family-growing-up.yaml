@@ -127,7 +127,15 @@ words:
       de: Nur Angehörige dürfen den Patienten auf der Intensivstation besuchen.
       en: Only family members may visit the patient in intensive care.
       fa: فقط اعضای خانواده می‌توانند به ملاقات بیمار در بخش مراقبت‌های ویژه بروند.
-    alsoAccepted: [die Angehörige, das Familienmitglied, der Verwandte, die Verwandte, der Familienangehörige, die Familienangehörige]
+    alsoAccepted:
+      [
+        die Angehörige,
+        das Familienmitglied,
+        der Verwandte,
+        die Verwandte,
+        der Familienangehörige,
+        die Familienangehörige,
+      ]
 
   - word: verwandt
     class: adjective
