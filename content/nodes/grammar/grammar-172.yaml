@@ -4,10 +4,292 @@ kind: grammar
 level: B1
 chapter: b1-reason-condition-clauses
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-160]
 title:
   en: "*falls*"
   fa: "*falls*"
   de: "*falls*"
+
+explanations:
+  en:
+    rule: >
+      *Falls* (if, in case) gives a condition: something that may happen or
+      may not. It starts a subordinate clause, so the conjugated verb goes
+      to the end: *Falls es regnet, machen wir kein Picknick.* The *falls*
+      clause can come first, and then the main clause starts with its verb,
+      or second: *Ruf mich an, falls du Hilfe brauchst.* For a condition,
+      *wenn* means the same, but *falls* stresses that you are not sure it
+      will happen. *Wenn* can also say when something happens, or that it
+      happens every time; *falls* never does. So *Wenn ich nach Hause komme,
+      koche ich.* and *Immer wenn ich sie sehe, lacht sie.* take only
+      *wenn*. And "if" in the sense of "whether" after *wissen* or *fragen*
+      is *ob*, never *falls*: *Ich weiß nicht, ob er kommt.*
+  fa:
+    rule: >
+      *falls* (اگر، در صورتی که) شرط را بیان می‌کند: چیزی که شاید رخ دهد و
+      شاید رخ ندهد. این حرف ربط جملهٔ پیرو را آغاز می‌کند، پس فعل صرف‌شده
+      به پایان جمله می‌رود: *Falls es regnet, machen wir kein Picknick.*
+      جملهٔ پیرو با *falls* می‌تواند اول بیاید که در این صورت جملهٔ پایه با
+      فعلش آغاز می‌شود، یا دوم: *Ruf mich an, falls du Hilfe brauchst.* در
+      بیان شرط، *wenn* همین معنا را دارد، ولی *falls* تأکید می‌کند که از رخ
+      دادن آن مطمئن نیستید. *wenn* زمان رخ دادن کاری یا تکرار آن را هم
+      می‌گوید، اما *falls* هرگز. پس *Wenn ich nach Hause komme, koche ich.* و
+      *Immer wenn ich sie sehe, lacht sie.* فقط با *wenn* می‌آیند. «اگر» به
+      معنای «آیا» پس از *wissen* یا *fragen* هم *ob* است، نه *falls*: *Ich
+      weiß nicht, ob er kommt.*
+  de:
+    rule: >
+      *Falls* nennt eine Bedingung: Etwas passiert vielleicht, vielleicht
+      auch nicht. Mit *falls* beginnt ein Nebensatz. Das konjugierte Verb
+      steht am Ende: *Falls es regnet, machen wir kein Picknick.* Der
+      *falls*-Satz kann zuerst stehen. Dann beginnt der Hauptsatz mit dem
+      Verb. Er kann auch danach stehen: *Ruf mich an, falls du Hilfe
+      brauchst.* Bei einer Bedingung bedeutet *wenn* das Gleiche. Aber
+      *falls* sagt deutlicher: Ich weiß nicht, ob es passiert. *Wenn* sagt
+      auch, wann oder wie oft etwas passiert. *Falls* kann das nicht. Darum
+      geht in *Wenn ich nach Hause komme, koche ich.* und *Immer wenn ich
+      sie sehe, lacht sie.* nur *wenn*. Nach *wissen* oder *fragen* sagt man
+      *ob*, nie *falls*: *Ich weiß nicht, ob er kommt.*
+
+table:
+  columns:
+    - { en: "*Falls* clause (position 1)", fa: "جملهٔ پیرو با *falls* (جایگاه اول)", de: "*Falls*-Satz (Position 1)" }
+    - { en: "Main clause: verb first", fa: "جملهٔ پایه: اول فعل", de: "Hauptsatz: zuerst das Verb" }
+  rows:
+    - ["Falls es regnet,", machen wir kein Picknick.]
+    - ["Falls du Hilfe brauchst,", ruf mich an.]
+    - ["Falls der Bus nicht kommt,", nehmen wir ein Taxi.]
+    - ["Falls Sie Fragen haben,", schreiben Sie mir bitte eine E-Mail.]
+    - ["Falls ich Zeit habe,", komme ich morgen vorbei.]
+    - ["Falls du morgen nicht kommen kannst,", sag mir bitte Bescheid.]
+
+examples:
+  - de: Falls es regnet, machen wir kein Picknick.
+    en: If it rains, we won't have a picnic.
+    fa: اگر باران ببارد، پیک‌نیک نمی‌رویم.
+  - de: Ruf mich an, falls du Hilfe brauchst.
+    en: Call me in case you need help.
+    fa: اگر کمک لازم داشتی، به من زنگ بزن.
+  - de: Nimm eine Jacke mit, falls es am Abend kalt wird.
+    en: Take a jacket in case it gets cold in the evening.
+    fa: یک کاپشن هم با خودت ببر، شاید شب هوا سرد شود.
+  - de: Falls der Bus nicht kommt, nehmen wir ein Taxi.
+    en: If the bus doesn't come, we'll take a taxi.
+    fa: اگر اتوبوس نیاید، تاکسی می‌گیریم.
+  - de: Falls Sie Fragen haben, schreiben Sie mir bitte eine E-Mail.
+    en: If you have any questions, please send me an e-mail.
+    fa: اگر پرسشی داشتید، لطفاً به من ایمیل بزنید.
+  - de: Falls ich Zeit habe, komme ich morgen vorbei.
+    en: If I have time, I'll drop by tomorrow.
+    fa: اگر وقت داشته باشم، فردا سری می‌زنم.
+  - de: Falls du morgen nicht kommen kannst, sag mir bitte Bescheid.
+    en: If you can't come tomorrow, please let me know.
+    fa: اگر فردا نمی‌توانی بیایی، لطفاً خبرم کن.
+  - de: Wenn ich nach Hause komme, koche ich.
+    en: When I get home, I'll cook.
+    fa: وقتی به خانه برسم، آشپزی می‌کنم.
+
+mistakes:
+  - wrong: Falls es regnet, wir bleiben zu Hause.
+    right: Falls es regnet, bleiben wir zu Hause.
+    why:
+      en: "The *falls* clause is position 1, so the main clause goes on with its verb: *bleiben wir*."
+      fa: "جملهٔ پیرو با *falls* جایگاه اول است، پس جملهٔ پایه با فعلش ادامه می‌یابد: *bleiben wir*."
+      de: "Der *falls*-Satz ist Position 1. Danach kommt das Verb: *bleiben wir*."
+  - wrong: Ruf mich an, falls du brauchst Hilfe.
+    right: Ruf mich an, falls du Hilfe brauchst.
+    why:
+      en: "*Falls* sends the conjugated verb to the end: *falls du Hilfe brauchst*."
+      fa: "*falls* فعل صرف‌شده را به پایان جمله می‌فرستد: *falls du Hilfe brauchst*."
+      de: "Nach *falls* steht das konjugierte Verb am Ende: *falls du Hilfe brauchst*."
+  - wrong: Immer falls ich Oma besuche, backt sie einen Kuchen.
+    right: Immer wenn ich Oma besuche, backt sie einen Kuchen.
+    why:
+      en: "This says what happens every time, not a condition, so only *wenn* fits."
+      fa: "این جمله از تکرار کاری خبر می‌دهد، نه از شرط، پس فقط *wenn* درست است."
+      de: "Hier geht es um jedes Mal, nicht um eine Bedingung. Darum passt nur *wenn*."
+  - wrong: Ich weiß nicht, falls er heute kommt.
+    right: Ich weiß nicht, ob er heute kommt.
+    why:
+      en: 'After *wissen*, "if" means "whether": that is *ob*.'
+      fa: "پس از *wissen*، «اگر» به معنای «آیا» است و آلمانی آن *ob* است."
+      de: "Nach *wissen* fragt man: ja oder nein? Das ist *ob*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ du morgen Zeit hast, können wir ins Kino gehen.
+    options: [Wann, Falls, Obwohl]
+    answer: Falls
+    explanation:
+      en: "The clause gives a condition with its verb at the end: *falls*. *Wann* asks for a time."
+      fa: "جمله شرط را با فعلی در پایان بیان می‌کند: *falls*. *wann* زمان را می‌پرسد."
+      de: "Der Satz nennt eine Bedingung, das Verb steht am Ende: *falls*. *Wann* fragt nach der Zeit."
+  - id: gap-2
+    type: gap-fill
+    prompt: Immer ___ ich sie sehe, lacht sie.
+    options: [wenn, falls, wann]
+    answer: wenn
+    explanation:
+      en: "*Immer* says it happens every time, which only *wenn* can say."
+      fa: "*immer* می‌گوید کار هر بار رخ می‌دهد و این را فقط *wenn* می‌تواند بیان کند."
+      de: "*Immer* heißt: jedes Mal. Das kann nur *wenn* sagen."
+  - id: gap-3
+    type: gap-fill
+    prompt: Nimm einen Schirm mit, ___ es regnet.
+    options: [obwohl, trotzdem, falls]
+    answer: falls
+    explanation:
+      en: "Rain may come or not, and the verb *regnet* is at the end: *falls*."
+      fa: "شاید باران ببارد، شاید نبارد، و فعل *regnet* در پایان است: *falls*."
+      de: "Vielleicht regnet es, vielleicht nicht, und *regnet* steht am Ende: *falls*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Falls du Fragen hast, …
+    options: [du rufst mich an., ruf mich an., mich anrufst.]
+    answer: ruf mich an.
+    explanation:
+      en: "After the *falls* clause the main clause starts with its verb, here the imperative *ruf*."
+      fa: "پس از جملهٔ پیرو با *falls*، جملهٔ پایه با فعلش آغاز می‌شود که این‌جا امر *ruf* است."
+      de: "Nach dem *falls*-Satz beginnt der Hauptsatz mit dem Verb, hier mit dem Imperativ *ruf*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wir machen kein Picknick, falls …
+    options: [es morgen regnet., es regnet morgen., regnet es morgen.]
+    answer: es morgen regnet.
+    explanation:
+      en: "After *falls* the conjugated verb goes to the end: *es morgen regnet*."
+      fa: "پس از *falls* فعل صرف‌شده به پایان جمله می‌رود: *es morgen regnet*."
+      de: "Nach *falls* steht das konjugierte Verb am Ende: *es morgen regnet*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Falls ich Zeit habe, komme ich vorbei. Das heißt: …"
+    options: [Ich komme sicher vorbei., Ich komme nicht vorbei., Vielleicht komme ich vorbei.]
+    answer: Vielleicht komme ich vorbei.
+    explanation:
+      en: "*Falls* gives a condition that may not be met, so the visit is only possible."
+      fa: "*falls* شرطی را می‌گوید که شاید برآورده نشود، پس آمدن فقط ممکن است."
+      de: "*Falls* nennt eine Bedingung. Vielleicht hat die Person Zeit, vielleicht nicht."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Falls der Bus nicht kommt, …
+    options: [wir nehmen ein Taxi., wir ein Taxi nehmen., nehmen wir ein Taxi.]
+    answer: nehmen wir ein Taxi.
+    explanation:
+      en: "The *falls* clause is position 1, so the main clause starts with its verb: *nehmen wir*."
+      fa: "جملهٔ پیرو با *falls* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *nehmen wir*."
+      de: "Der *falls*-Satz ist Position 1. Der Hauptsatz beginnt mit dem Verb: *nehmen wir*."
+  - id: true-1
+    type: true-false
+    prompt: Ruf mich bitte an, falls du später kommst.
+    answer: true
+    explanation:
+      en: "The verb *kommst* is at the end of the *falls* clause. The sentence is correct."
+      fa: "فعل *kommst* در پایان جملهٔ پیرو با *falls* است. جمله درست است."
+      de: "Das Verb *kommst* steht am Ende vom *falls*-Satz. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Falls es morgen schneit, wir fahren nicht.
+    answer: false
+    explanation:
+      en: "After the *falls* clause the main clause starts with its verb: *fahren wir nicht*."
+      fa: "پس از جملهٔ پیرو با *falls*، جملهٔ پایه با فعلش آغاز می‌شود: *fahren wir nicht*."
+      de: "Nach dem *falls*-Satz beginnt der Hauptsatz mit dem Verb: *fahren wir nicht*."
+  - id: true-3
+    type: true-false
+    prompt: Falls du das Buch nicht brauchst, kannst du es mir leihen.
+    answer: true
+    explanation:
+      en: "*Brauchst* ends the *falls* clause, and *kannst* starts the main clause. The sentence is correct."
+      fa: "*brauchst* جملهٔ پیرو را می‌بندد و *kannst* جملهٔ پایه را آغاز می‌کند. جمله درست است."
+      de: "*Brauchst* steht am Ende vom *falls*-Satz, *kannst* beginnt den Hauptsatz. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Falls ich habe Zeit, helfe ich dir.
+    answer: false
+    explanation:
+      en: "After *falls* the verb goes to the end: *falls ich Zeit habe*."
+      fa: "پس از *falls* فعل به پایان جمله می‌رود: *falls ich Zeit habe*."
+      de: "Nach *falls* steht das Verb am Ende: *falls ich Zeit habe*."
+  - id: true-5
+    type: true-false
+    prompt: Ich nehme eine Jacke mit, falls es am Abend kalt wird.
+    answer: true
+    explanation:
+      en: "The verb *wird* is at the end of the *falls* clause. The sentence is correct."
+      fa: "فعل *wird* در پایان جملهٔ پیرو با *falls* است. جمله درست است."
+      de: "Das Verb *wird* steht am Ende vom *falls*-Satz. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Falls du noch Fragen ___ (haben), schreib mir einfach.
+    answers: [hast]
+    explanation:
+      en: "The subject is *du*, and the verb stands at the end of the *falls* clause: *hast*."
+      fa: "فاعل *du* است و فعل در پایان جملهٔ پیرو با *falls* می‌آید: *hast*."
+      de: "Das Subjekt ist *du*, das Verb steht am Ende vom *falls*-Satz: *hast*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Falls der Zug Verspätung ___ (haben), rufe ich dich an.
+    answers: [hat]
+    explanation:
+      en: "*Der Zug* is third person singular, and the verb stands at the end: *hat*."
+      fa: "*der Zug* سوم‌شخص مفرد است و فعل در پایان جمله می‌آید: *hat*."
+      de: "*Der Zug* ist 3. Person Singular, das Verb steht am Ende: *hat*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Falls du morgen nicht kommen ___ (können), sag mir bitte Bescheid.
+    answers: [kannst]
+    explanation:
+      en: "In the *falls* clause the modal verb comes last, in the form for *du*: *kannst*."
+      fa: "در جملهٔ پیرو با *falls* فعل وجهی در آخر و با شناسهٔ دوم‌شخص مفرد می‌آید: *kannst*."
+      de: "Im *falls*-Satz steht das Modalverb am Schluss, in der Form für *du*: *kannst*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Falls es morgen stark regnet, ___ (ausfallen) das Fußballspiel aus.
+    answers: [fällt]
+    explanation:
+      en: "The main clause starts with its verb, and the prefix *aus* goes to the end: *fällt … aus*."
+      fa: "جملهٔ پایه با فعلش آغاز می‌شود و پیشوند *aus* به پایان جمله می‌رود: *fällt … aus*."
+      de: "Der Hauptsatz beginnt mit dem Verb, die Vorsilbe *aus* steht am Ende: *fällt … aus*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["falls du Hilfe brauchst,", ruf, mich, an]
+    explanation:
+      en: "After the *falls* clause the imperative *ruf* comes first, and *an* goes to the end."
+      fa: "پس از جملهٔ پیرو با *falls*، اول امر *ruf* می‌آید و *an* به پایان جمله می‌رود."
+      de: "Nach dem *falls*-Satz kommt zuerst der Imperativ *ruf*, *an* steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["nimm eine Jacke mit,", falls, es, am Abend, kalt, wird]
+    explanation:
+      en: "*Falls* starts the clause, then the subject, and the verb *wird* comes last."
+      fa: "*falls* جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل *wird* در آخر."
+      de: "*Falls* beginnt den Satz, dann kommt das Subjekt, das Verb *wird* steht am Ende."
+  - id: order-3
+    type: word-order
+    answers:
+      - ["falls das Wetter schön ist,", gehen, wir, an den See]
+    explanation:
+      en: "The *falls* clause is position 1, so the verb *gehen* follows, then the subject."
+      fa: "جملهٔ پیرو با *falls* جایگاه اول است، پس فعل *gehen* و سپس فاعل می‌آید."
+      de: "Der *falls*-Satz ist Position 1. Dann kommt das Verb *gehen*, danach das Subjekt."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Falls du Hunger hast,", mache ich dir ein Brot.]
+      - ["Falls du müde bist,", kannst du dich hinlegen.]
+      - ["Falls dir kalt ist,", mache ich das Fenster zu.]
+    explanation:
+      en: "Each main clause answers its condition: bread for hunger, a rest for tiredness, a closed window for the cold."
+      fa: "هر جملهٔ پایه به شرط خود پاسخ می‌دهد: نان برای گرسنگی، استراحت برای خستگی، بستن پنجره برای سرما."
+      de: "Jeder Hauptsatz passt zu seiner Bedingung: Brot bei Hunger, Hinlegen bei Müdigkeit, das Fenster zu bei Kälte."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 3972cb82c1099a76

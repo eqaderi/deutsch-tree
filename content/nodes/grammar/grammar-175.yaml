@@ -4,10 +4,343 @@ kind: grammar
 level: B1
 chapter: b1-reason-condition-clauses
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-097, grammar-159]
 title:
   en: "Verb + preposition + clause"
   fa: "فعل + حرف اضافه + جملهٔ پیرو (*darauf, dass …*)"
   de: "Verb + Präposition + Nebensatz (*darauf, dass …*)"
+
+explanations:
+  en:
+    rule: >
+      Many verbs go with a fixed preposition: *sich freuen auf*, *warten
+      auf*, *denken an*. When what follows the preposition is a whole
+      clause, the preposition cannot stand right before it. It becomes a
+      *da(r)-* word in the main clause, and the clause follows after a
+      comma: *Ich freue mich auf euren Besuch.* becomes *Ich freue mich
+      darauf, dass ihr kommt.* The *da(r)-* word is built as in *darauf*,
+      *daran*, *darüber*, *davon*, and it points ahead to the clause. The
+      clause can be a *dass* clause or an indirect question with *ob* or a
+      question word: *Es hängt davon ab, ob das Wetter gut ist.* *Wir haben
+      darüber gesprochen, wohin wir fahren.* Either way, its conjugated verb
+      goes to the end. An infinitive with *zu* works the same way: *Ich
+      freue mich darauf, euch zu sehen.* After a few verbs of feeling, such
+      as *sich freuen* and *sich ärgern*, the *da(r)-* word may be left out;
+      it is safest to keep it, and after some verbs, such as *abhängen von*,
+      it must stay. You ask with *wo(r)-*: *Worauf freust du dich? –
+      Darauf, dass bald Ferien sind.*
+  fa:
+    rule: >
+      بسیاری از فعل‌ها با حرف اضافهٔ ثابتی می‌آیند: *sich freuen auf*،
+      *warten auf*، *denken an*. اگر پس از حرف اضافه جمله‌ای کامل بیاید،
+      حرف اضافه نمی‌تواند درست پیش از آن بنشیند. در این صورت در جملهٔ پایه
+      به واژه‌ای با *da(r)-* تبدیل می‌شود و جملهٔ پیرو پس از ویرگول می‌آید:
+      از *Ich freue mich auf euren Besuch.* می‌رسیم به *Ich freue mich darauf,
+      dass ihr kommt.* این واژه مانند *darauf*، *daran*، *darüber* و *davon*
+      ساخته می‌شود و به جملهٔ پس از خود اشاره می‌کند. جملهٔ پیرو می‌تواند
+      جمله‌ای با *dass* باشد یا پرسش غیرمستقیم با *ob* یا واژهٔ پرسشی: *Es
+      hängt davon ab, ob das Wetter gut ist.* *Wir haben darüber gesprochen,
+      wohin wir fahren.* در هر دو حالت فعل صرف‌شده به پایان جمله می‌رود.
+      مصدر با *zu* هم همین‌طور می‌آید: *Ich freue mich darauf, euch zu sehen.*
+      پس از چند فعل احساسی، مانند *sich freuen* و *sich ärgern*، می‌توان
+      واژهٔ *da(r)-* را حذف کرد؛ ولی بهتر است آن را نگه دارید، و پس از برخی
+      فعل‌ها، مانند *abhängen von*، حتماً باید بماند. پرسش با *wo(r)-* ساخته
+      می‌شود: *Worauf freust du dich? – Darauf, dass bald Ferien sind.*
+  de:
+    rule: >
+      Viele Verben haben eine feste Präposition: *sich freuen auf*, *warten
+      auf*, *denken an*. Kommt nach der Präposition ein ganzer Satz, kann
+      die Präposition nicht direkt davor stehen. Dann steht im Hauptsatz ein
+      Wort mit *da(r)-*, und nach einem Komma kommt der Nebensatz: aus *Ich
+      freue mich auf euren Besuch.* wird *Ich freue mich darauf, dass ihr
+      kommt.* Das Wort baut man wie *darauf*, *daran*, *darüber*, *davon*.
+      Es zeigt auf den Satz danach. Der Nebensatz kann ein *dass*-Satz sein
+      oder eine indirekte Frage mit *ob* oder einem Fragewort: *Es hängt
+      davon ab, ob das Wetter gut ist.* *Wir haben darüber gesprochen, wohin
+      wir fahren.* Das konjugierte Verb steht immer am Ende. Mit *zu* + Infinitiv
+      geht es genauso: *Ich freue mich darauf, euch zu sehen.* Bei ein paar
+      Verben für Gefühle, zum Beispiel *sich freuen* und *sich ärgern*, kann
+      das Wort mit *da(r)-* fehlen. Sicherer ist es mit. Bei manchen Verben,
+      zum Beispiel *abhängen von*, muss es stehen. Man fragt mit *wo(r)-*:
+      *Worauf freust du dich? – Darauf, dass bald Ferien sind.*
+
+table:
+  columns:
+    - { en: Verb with preposition, fa: فعل و حرف اضافه, de: Verb mit Präposition }
+    - { en: "*da(r)-* word", fa: "واژهٔ *da(r)-*", de: "Wort mit *da(r)-*" }
+    - { en: Example with a clause, fa: مثال با جملهٔ پیرو, de: Beispiel mit Nebensatz }
+  rows:
+    - [sich freuen auf, darauf, "Ich freue mich darauf, dass ihr kommt."]
+    - [warten auf, darauf, "Ich warte darauf, dass du endlich anrufst."]
+    - [denken an, daran, "Denk bitte daran, dass der Laden morgen geschlossen ist."]
+    - [sich erinnern an, daran, "Ich erinnere mich gut daran, wie wir uns kennengelernt haben."]
+    - [sich ärgern über, darüber, "Er ärgert sich darüber, dass er den Bus verpasst hat."]
+    - [sprechen über, darüber, "Wir haben darüber gesprochen, wohin wir im Sommer fahren."]
+    - [abhängen von, davon, "Es hängt davon ab, ob das Wetter gut ist."]
+    - [sich kümmern um, darum, "Ich kümmere mich darum, dass alle eine Einladung bekommen."]
+    - [Angst haben vor, davor, "Sie hat Angst davor, dass sie die Prüfung nicht besteht."]
+    - [sich interessieren für, dafür, "Ich interessiere mich dafür, wie ein Motor funktioniert."]
+
+examples:
+  - de: Ich freue mich darauf, dass ihr kommt.
+    en: I'm looking forward to your visit.
+    fa: مشتاق آمدنتان هستم.
+  - de: Ich warte darauf, dass du endlich anrufst.
+    en: I'm waiting for you to call at last.
+    fa: منتظرم که بالاخره زنگ بزنی.
+  - de: Denk bitte daran, dass der Laden morgen geschlossen ist.
+    en: Please remember that the shop is closed tomorrow.
+    fa: یادت باشد که مغازه فردا بسته است.
+  - de: Ich erinnere mich gut daran, wie wir uns kennengelernt haben.
+    en: I remember well how we met.
+    fa: خوب یادم هست که چطور با هم آشنا شدیم.
+  - de: Er ärgert sich darüber, dass er den Bus verpasst hat.
+    en: He's annoyed that he missed the bus.
+    fa: از این‌که به اتوبوس نرسیده است، دلخور است.
+  - de: Wir haben lange darüber gesprochen, wohin wir im Sommer fahren.
+    en: We talked for a long time about where we'll go in the summer.
+    fa: مدتی طولانی دربارهٔ این‌که تابستان کجا برویم حرف زدیم.
+  - de: Es hängt davon ab, ob das Wetter gut ist.
+    en: It depends on whether the weather is good.
+    fa: بستگی دارد به این‌که هوا خوب باشد یا نه.
+  - de: Worauf freust du dich? – Darauf, dass bald Ferien sind.
+    en: What are you looking forward to? – To the holidays starting soon.
+    fa: منتظر چه هستی؟ – این‌که به‌زودی تعطیلات شروع می‌شود.
+
+mistakes:
+  - wrong: Ich freue mich auf, dass ihr kommt.
+    right: Ich freue mich darauf, dass ihr kommt.
+    why:
+      en: "A preposition cannot stand alone before a clause: it becomes *darauf*."
+      fa: "حرف اضافه نمی‌تواند تنها پیش از جملهٔ پیرو بیاید و به *darauf* تبدیل می‌شود."
+      de: "Vor einem Nebensatz kann die Präposition nicht allein stehen. Man sagt *darauf*."
+  - wrong: Ich warte daran, dass du anrufst.
+    right: Ich warte darauf, dass du anrufst.
+    why:
+      en: "The *da(r)-* word keeps the verb's own preposition: *warten auf*, so *darauf*."
+      fa: "واژهٔ *da(r)-* همان حرف اضافهٔ خود فعل را دارد: *warten auf*، پس *darauf*."
+      de: "Das Wort mit *da(r)-* hat die Präposition vom Verb: *warten auf*, also *darauf*."
+  - wrong: Es hängt davon ab, ob das Wetter ist gut.
+    right: Es hängt davon ab, ob das Wetter gut ist.
+    why:
+      en: "The clause after *davon* is a subordinate clause, so *ist* goes to the end."
+      fa: "جملهٔ پس از *davon* جملهٔ پیرو است، پس *ist* به پایان جمله می‌رود."
+      de: "Der Satz nach *davon* ist ein Nebensatz. Darum steht *ist* am Ende."
+  - wrong: Erinnerst du dich darum, wo wir geparkt haben?
+    right: Erinnerst du dich daran, wo wir geparkt haben?
+    why:
+      en: "The verb is *sich erinnern an*, so the word is *daran*."
+      fa: "فعل *sich erinnern an* است، پس واژه *daran* است."
+      de: "Das Verb heißt *sich erinnern an*. Darum *daran*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich freue mich ___, dass du mich bald besuchst.
+    options: [daran, darauf, davon]
+    answer: darauf
+    explanation:
+      en: "Looking forward is *sich freuen auf*, so before the clause *darauf*."
+      fa: "«مشتاق بودن» *sich freuen auf* است، پس پیش از جملهٔ پیرو *darauf* می‌آید."
+      de: "Das Verb heißt *sich freuen auf*. Vor dem Nebensatz steht darum *darauf*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir warten ___, dass der Regen aufhört.
+    options: [davon, dafür, darauf]
+    answer: darauf
+    explanation:
+      en: "The verb is *warten auf*, so the clause is announced with *darauf*."
+      fa: "فعل *warten auf* است، پس جملهٔ پیرو با *darauf* اعلام می‌شود."
+      de: "Das Verb heißt *warten auf*. Darum steht vor dem Nebensatz *darauf*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Es hängt ___ ab, ob ich morgen Zeit habe.
+    options: [davon, darauf, daran]
+    answer: davon
+    explanation:
+      en: "The verb is *abhängen von*, so the word is *davon*."
+      fa: "فعل *abhängen von* است، پس واژه *davon* است."
+      de: "Das Verb heißt *abhängen von*. Darum *davon*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Denk bitte ___, dass du morgen den Schlüssel mitbringst.
+    options: [darüber, daran, darum]
+    answer: daran
+    explanation:
+      en: '"Remember" here is *denken an*, so the word is *daran*.'
+      fa: "«یادت باشد» این‌جا *denken an* است، پس واژه *daran* است."
+      de: "Hier heißt das Verb *denken an*. Darum *daran*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Er ärgert sich ___, dass er den Bus verpasst hat.
+    options: [darauf, dafür, darüber]
+    answer: darüber
+    explanation:
+      en: "The verb is *sich ärgern über*, so the word is *darüber*."
+      fa: "فعل *sich ärgern über* است، پس واژه *darüber* است."
+      de: "Das Verb heißt *sich ärgern über*. Darum *darüber*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Ich interessiere mich ___, wie ein Motor funktioniert.
+    options: [davon, dafür, damit]
+    answer: dafür
+    explanation:
+      en: "The verb is *sich interessieren für*, so the word is *dafür*, with no *-r-* before a consonant."
+      fa: "فعل *sich interessieren für* است، پس واژه *dafür* است؛ پیش از همخوان *-r-* نمی‌آید."
+      de: "Das Verb heißt *sich interessieren für*. Darum *dafür*, ohne *-r-* vor einem Konsonanten."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Sie hat Angst davor, …
+    options:
+      [dass sie besteht die Prüfung nicht., dass sie die Prüfung nicht besteht., dass besteht sie die Prüfung nicht.]
+    answer: dass sie die Prüfung nicht besteht.
+    explanation:
+      en: "After *davor* comes a *dass* clause, with its verb *besteht* at the end."
+      fa: "پس از *davor* جملهٔ *dass* می‌آید و فعلش *besteht* در پایان است."
+      de: "Nach *davor* kommt ein *dass*-Satz, das Verb *besteht* steht am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Worauf wartest du? – …
+    options:
+      - Daran, dass der Bus endlich kommt.
+      - Darauf, dass der Bus kommt endlich.
+      - Darauf, dass der Bus endlich kommt.
+    answer: Darauf, dass der Bus endlich kommt.
+    explanation:
+      en: "*Worauf* asks with *auf*, so the answer is *darauf*, and the verb *kommt* ends the clause."
+      fa: "*worauf* با *auf* می‌پرسد، پس پاسخ *darauf* است و فعل *kommt* جملهٔ پیرو را می‌بندد."
+      de: "*Worauf* fragt mit *auf*. Die Antwort ist *darauf*, und *kommt* steht am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wir haben lange darüber gesprochen, …
+    options: [wann fahren wir in Urlaub., wann wir in Urlaub fahren., dass wann wir in Urlaub fahren.]
+    answer: wann wir in Urlaub fahren.
+    explanation:
+      en: "After *darüber* an indirect question can follow; its verb *fahren* goes to the end."
+      fa: "پس از *darüber* پرسش غیرمستقیم هم می‌آید و فعلش *fahren* به پایان جمله می‌رود."
+      de: "Nach *darüber* kann eine indirekte Frage kommen. Ihr Verb *fahren* steht am Ende."
+  - id: true-1
+    type: true-false
+    prompt: Ich erinnere mich gut daran, wie wir uns kennengelernt haben.
+    answer: true
+    explanation:
+      en: "*Sich erinnern an* gives *daran*, and *haben* ends the clause. The sentence is correct."
+      fa: "*sich erinnern an* واژهٔ *daran* را می‌دهد و *haben* جملهٔ پیرو را می‌بندد. جمله درست است."
+      de: "*Sich erinnern an* gibt *daran*, und *haben* steht am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich freue mich auf, dass ihr kommt.
+    answer: false
+    explanation:
+      en: "*Auf* cannot stand alone before a clause: *Ich freue mich darauf, dass ihr kommt.*"
+      fa: "*auf* نمی‌تواند تنها پیش از جملهٔ پیرو بیاید: *Ich freue mich darauf, dass ihr kommt.*"
+      de: "*Auf* kann nicht allein vor einem Nebensatz stehen: *Ich freue mich darauf, dass ihr kommt.*"
+  - id: true-3
+    type: true-false
+    prompt: Es hängt davon ab, ob das Wetter gut ist.
+    answer: true
+    explanation:
+      en: "*Abhängen von* gives *davon*, and an *ob* clause follows with *ist* at the end. The sentence is correct."
+      fa: "*abhängen von* واژهٔ *davon* را می‌دهد و جملهٔ *ob* با *ist* در پایان می‌آید. جمله درست است."
+      de: "*Abhängen von* gibt *davon*, dann kommt ein *ob*-Satz mit *ist* am Ende. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Sie denkt darauf, dass sie ihre Mutter anrufen muss.
+    answer: false
+    explanation:
+      en: "The verb is *denken an*, so it must be *daran*: *Sie denkt daran, dass …*"
+      fa: "فعل *denken an* است، پس باید *daran* بیاید: *Sie denkt daran, dass …*"
+      de: "Das Verb heißt *denken an*. Es muss *daran* heißen: *Sie denkt daran, dass …*"
+  - id: true-5
+    type: true-false
+    prompt: Er kümmert sich darum, dass alle Gäste etwas zu essen haben.
+    answer: true
+    explanation:
+      en: "*Sich kümmern um* gives *darum*, and *haben* ends the *dass* clause. The sentence is correct."
+      fa: "*sich kümmern um* واژهٔ *darum* را می‌دهد و *haben* جملهٔ *dass* را می‌بندد. جمله درست است."
+      de: "*Sich kümmern um* gibt *darum*, und *haben* steht am Ende vom *dass*-Satz. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir haben lange ___ (über) gesprochen, wohin wir im Sommer fahren.
+    answers: [darüber]
+    explanation:
+      en: "*Über* begins with a vowel, so an *-r-* comes between: *darüber*."
+      fa: "*über* با واکه آغاز می‌شود، پس یک *-r-* میان آن‌ها می‌آید: *darüber*."
+      de: "*Über* beginnt mit einem Vokal. Darum kommt ein *-r-* dazwischen: *darüber*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Sie hat Angst ___ (vor), dass sie den Zug verpasst.
+    answers: [davor]
+    explanation:
+      en: "*Vor* begins with a consonant, so no *-r-*: *davor*."
+      fa: "*vor* با همخوان آغاز می‌شود، پس *-r-* نمی‌آید: *davor*."
+      de: "*Vor* beginnt mit einem Konsonanten. Darum kein *-r-*: *davor*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich erinnere mich ___ (an), wie wir uns kennengelernt haben.
+    answers: [daran]
+    explanation:
+      en: "*An* begins with a vowel, so an *-r-* comes between: *daran*."
+      fa: "*an* با واکه آغاز می‌شود، پس یک *-r-* میان آن‌ها می‌آید: *daran*."
+      de: "*An* beginnt mit einem Vokal. Darum kommt ein *-r-* dazwischen: *daran*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Es hängt ___ (von) ab, ob wir genug Geld haben.
+    answers: [davon]
+    explanation:
+      en: "*Von* begins with a consonant, so no *-r-*: *davon*."
+      fa: "*von* با همخوان آغاز می‌شود، پس *-r-* نمی‌آید: *davon*."
+      de: "*Von* beginnt mit einem Konsonanten. Darum kein *-r-*: *davon*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Kümmerst du dich ___ (um), dass alle eine Einladung bekommen?
+    answers: [darum]
+    explanation:
+      en: "*Um* begins with a vowel, so an *-r-* comes between: *darum*."
+      fa: "*um* با واکه آغاز می‌شود، پس یک *-r-* میان آن‌ها می‌آید: *darum*."
+      de: "*Um* beginnt mit einem Vokal. Darum kommt ein *-r-* dazwischen: *darum*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ich freue mich, "darauf,", dass, ihr, kommt]
+    explanation:
+      en: "*Darauf* closes the main clause, then the *dass* clause follows with *kommt* at the end."
+      fa: "*darauf* جملهٔ پایه را می‌بندد، سپس جملهٔ *dass* با *kommt* در پایان می‌آید."
+      de: "*Darauf* steht am Ende vom Hauptsatz. Dann kommt der *dass*-Satz mit *kommt* am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["wir warten darauf,", dass, der Regen, endlich, aufhört]
+      - ["wir warten darauf,", dass, endlich, der Regen, aufhört]
+    explanation:
+      en: "*Dass* starts the clause and the separable verb *aufhört* comes last, as one word."
+      fa: "*dass* جمله را آغاز می‌کند و فعل جداشدنی *aufhört* یک‌جا در آخر می‌آید."
+      de: "*Dass* beginnt den Satz, das trennbare Verb *aufhört* steht zusammen am Ende."
+  - id: order-3
+    type: word-order
+    answers:
+      - ["es hängt davon ab,", ob, wir, morgen, Zeit, haben]
+    explanation:
+      en: "After *davon ab* comes the *ob* clause: *ob*, the subject, and *haben* last."
+      fa: "پس از *davon ab* جملهٔ *ob* می‌آید: *ob*، فاعل و در آخر *haben*."
+      de: "Nach *davon ab* kommt der *ob*-Satz: *ob*, das Subjekt, und *haben* am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [sich freuen auf, darauf]
+      - [denken an, daran]
+      - [abhängen von, davon]
+      - [sich ärgern über, darüber]
+      - [sich kümmern um, darum]
+    explanation:
+      en: "Each *da(r)-* word keeps the preposition of its verb, with *-r-* before a vowel."
+      fa: "هر واژهٔ *da(r)-* حرف اضافهٔ فعل خود را نگه می‌دارد و پیش از واکه *-r-* می‌گیرد."
+      de: "Jedes Wort mit *da(r)-* hat die Präposition von seinem Verb, mit *-r-* vor einem Vokal."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 1afa1cf968f5f52a
