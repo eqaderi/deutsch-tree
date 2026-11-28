@@ -1,13 +1,289 @@
-# Grammar list row 2.
+# Grammar list row 2. The file format is described in content/README.md.
 id: grammar-002
 kind: grammar
 level: A1
 chapter: a1-verbs-present
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-001]
 title:
   en: "*sein* and *haben* in *Präsens*"
   fa: "*sein* و *haben* در زمان حال"
   de: "*sein* und *haben* im Präsens"
+
+explanations:
+  en:
+    rule: >
+      *Sein* (to be) and *haben* (to have) are the most frequent German verbs,
+      and they are irregular: learn their forms by heart. *Wissen* (to know a
+      fact) changes its vowel in the singular and has no ending with *ich* and
+      *er/sie/es*: *ich weiß*, *du weißt*, *er weiß*. *Tun* (to do) keeps the
+      usual endings, but its infinitive ends in *-n* only, so *wir tun* and
+      *sie tun* also have just *-n*.
+  fa:
+    rule: >
+      *sein* (بودن) و *haben* (داشتن) پرکاربرد‌ترین فعل‌های آلمانی‌اند و هر دو
+      بی‌قاعده‌اند؛ صرف آن‌ها را باید از بر کرد. *wissen* (دانستن، آگاه بودن از
+      چیزی) در مفرد واکهٔ دیگری می‌گیرد و در اول‌شخص و سوم‌شخص مفرد شناسه
+      ندارد: *ich weiß*، *du weißt*، *er weiß*. *tun* (انجام دادن) شناسه‌های
+      معمول را می‌گیرد، اما مصدرش فقط به *-n* ختم می‌شود؛ از این رو *wir tun* و
+      *sie tun* نیز فقط *-n* دارند.
+  de:
+    rule: >
+      *Sein* und *haben* sind sehr wichtige Verben. Sie sind unregelmäßig. Man
+      lernt die Formen am besten auswendig. Bei *wissen* ändert sich im
+      Singular der Vokal, und bei *ich* und *er/sie/es* gibt es keine Endung:
+      *ich weiß*, *du weißt*, *er weiß*. *Tun* hat die normalen Endungen, aber
+      bei *wir* und *sie* nur *-n*: *wir tun*.
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*sein*", fa: "*sein*", de: "*sein*" }
+    - { en: "*haben*", fa: "*haben*", de: "*haben*" }
+    - { en: "*wissen*", fa: "*wissen*", de: "*wissen*" }
+    - { en: "*tun*", fa: "*tun*", de: "*tun*" }
+  rows:
+    - [ich, bin, habe, weiß, tue]
+    - [du, bist, hast, weißt, tust]
+    - [er / sie / es, ist, hat, weiß, tut]
+    - [wir, sind, haben, wissen, tun]
+    - [ihr, seid, habt, wisst, tut]
+    - [sie / Sie, sind, haben, wissen, tun]
+
+examples:
+  - de: Ich bin Lehrerin.
+    en: I am a teacher.
+    fa: من معلم هستم.
+  - de: Bist du müde?
+    en: Are you tired?
+    fa: خسته‌ای؟
+  - de: Wir sind aus dem Iran.
+    en: We are from Iran.
+    fa: ما اهل ایران هستیم.
+  - de: Ihr seid sehr nett.
+    en: You (plural) are very kind.
+    fa: شما (جمع) خیلی مهربان هستید.
+  - de: Hast du heute Zeit?
+    en: Do you have time today?
+    fa: امروز وقت داری؟
+  - de: Meine Schwester hat zwei Kinder.
+    en: My sister has two children.
+    fa: خواهرم دو فرزند دارد.
+  - de: Ich weiß es nicht.
+    en: I don't know.
+    fa: نمی‌دانم.
+  - de: Was tust du am Wochenende?
+    en: What do you do at the weekend?
+    fa: آخر هفته چه کار می‌کنی؟
+  - de: Es tut mir leid.
+    en: I am sorry.
+    fa: متأسفم.
+
+mistakes:
+  - wrong: Ich habe dreißig Jahre alt.
+    right: Ich bin dreißig Jahre alt.
+    why:
+      en: German gives your age with *sein*, not with *haben*.
+      fa: در فارسی می‌گوییم «سی سال دارم»، اما آلمانی سن را با *sein* می‌گوید، نه با *haben*.
+      de: Das Alter sagt man mit *sein*, nicht mit *haben*.
+  - wrong: Ich bin Hunger.
+    right: Ich habe Hunger.
+    why:
+      en: "*Hunger* is a noun, and German says *Hunger haben*, like *Zeit haben* and *Durst haben*."
+      fa: "*Hunger* اسم است و آلمانی می‌گوید *Hunger haben*، مانند *Zeit haben* و *Durst haben*."
+      de: "*Hunger* ist ein Nomen. Man sagt *Hunger haben*, wie *Zeit haben* und *Durst haben*."
+  - wrong: Ihr sind sehr nett.
+    right: Ihr seid sehr nett.
+    why:
+      en: With *ihr* the form of *sein* is *seid*. *Sind* is for *wir*, *sie* and *Sie*.
+      fa: صرف *sein* با *ihr* می‌شود *seid*. *sind* برای *wir*، *sie* و *Sie* است.
+      de: Bei *ihr* heißt es *seid*. *Sind* ist für *wir*, *sie* und *Sie*.
+  - wrong: Er weißt das nicht.
+    right: Er weiß das nicht.
+    why:
+      en: "*Wissen* has no ending with *er/sie/es*: *er weiß*. Only *du* adds *-t*: *du weißt*."
+      fa: "*wissen* در سوم‌شخص مفرد شناسه ندارد: *er weiß*. فقط *du* شناسهٔ *-t* می‌گیرد: *du weißt*."
+      de: "*Wissen* hat bei *er/sie/es* keine Endung: *er weiß*. Nur bei *du* kommt *-t*: *du weißt*."
+
+# 20 questions, every question type.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich ___ Lehrerin.
+    options: [bin, habe, ist]
+    answer: bin
+    explanation:
+      en: "A job is said with *sein*, and with *ich* the form is *bin*."
+      fa: "شغل با *sein* گفته می‌شود و صرف آن با *ich* می‌شود *bin*."
+      de: "Den Beruf sagt man mit *sein*. Bei *ich* heißt es *bin*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ du heute Zeit?
+    options: [Hast, Bist, Hat]
+    answer: Hast
+    explanation:
+      en: "German says *Zeit haben*, and with *du* the form is *hast*."
+      fa: "آلمانی می‌گوید *Zeit haben* و صرف *haben* با *du* می‌شود *hast*."
+      de: "Man sagt *Zeit haben*. Bei *du* heißt es *hast*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich ___ es nicht.
+    options: [weiß, weißt, wisse]
+    answer: weiß
+    explanation:
+      en: "*Wissen* has no ending with *ich*: *ich weiß*."
+      fa: "*wissen* در اول‌شخص مفرد شناسه ندارد: *ich weiß*."
+      de: "*Wissen* hat bei *ich* keine Endung: *ich weiß*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Was ___ du da?
+    options: [tust, tut, tue]
+    answer: tust
+    explanation:
+      en: "With *du* the ending is *-st*: *du tust*."
+      fa: "با *du* شناسهٔ فعل *-st* است: *du tust*."
+      de: "Bei *du* ist die Endung *-st*: *du tust*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wir ___ aus Polen.
+    options: [sind, seid, haben]
+    answer: sind
+    explanation:
+      en: "With *wir* the form of *sein* is *sind*."
+      fa: "صرف *sein* با *wir* می‌شود *sind*."
+      de: "Bei *wir* heißt *sein*: *sind*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ihr ___ sehr nett.
+    options: [seid, sind, habt]
+    answer: seid
+    explanation:
+      en: "With *ihr* the form of *sein* is *seid*."
+      fa: "صرف *sein* با *ihr* می‌شود *seid*."
+      de: "Bei *ihr* heißt *sein*: *seid*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Mein Bruder ___ zwei Kinder.
+    options: [hat, habt, ist]
+    answer: hat
+    explanation:
+      en: "*Mein Bruder* is *er*, and with *er* the form of *haben* is *hat*."
+      fa: "*mein Bruder* سوم‌شخص مفرد است (*er*) و صرف *haben* با آن می‌شود *hat*."
+      de: "*Mein Bruder* ist *er*. Bei *er* heißt *haben*: *hat*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: ___ ihr die Antwort?
+    options: [Wisst, Weißt, Wissen]
+    answer: Wisst
+    explanation:
+      en: "In the plural *wissen* keeps its vowel *i*, and *ihr* adds *-t*: *ihr wisst*."
+      fa: "*wissen* در جمع واکهٔ *i* را نگه می‌دارد و با *ihr* شناسهٔ *-t* می‌گیرد: *ihr wisst*."
+      de: "Im Plural bleibt bei *wissen* das *i*. Bei *ihr* kommt *-t*: *ihr wisst*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Du ___ (sein) sehr nett.
+    answers: [bist]
+    explanation:
+      en: "With *du* the form of *sein* is *bist*."
+      fa: "صرف *sein* با *du* می‌شود *bist*."
+      de: "Bei *du* heißt *sein*: *bist*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Maria ___ (haben) einen Bruder.
+    answers: [hat]
+    explanation:
+      en: "Maria is *sie* (singular), and with *sie* the form of *haben* is *hat*."
+      fa: "ماریا سوم‌شخص مفرد است (*sie*)، پس صرف *haben* می‌شود *hat*."
+      de: "Maria ist *sie* (Singular). Dann heißt *haben*: *hat*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir ___ (haben) keine Zeit.
+    answers: [haben]
+    explanation:
+      en: "With *wir* the form of *haben* is the same as the infinitive: *haben*."
+      fa: "صرف *haben* با *wir* همان مصدر است: *haben*."
+      de: "Bei *wir* ist *haben* wie der Infinitiv: *haben*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Herr Klein, ___ (sein) Sie aus Wien?
+    answers: [sind]
+    explanation:
+      en: "With the polite *Sie* the form of *sein* is *sind*."
+      fa: "صرف *sein* با *Sie* رسمی می‌شود *sind*."
+      de: "Bei *Sie* (höflich) heißt *sein*: *sind*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Tom ___ (wissen) die Adresse.
+    answers: [weiß]
+    explanation:
+      en: "*Wissen* has no ending with *er*: *Tom weiß*."
+      fa: "*wissen* در سوم‌شخص مفرد شناسه ندارد: *Tom weiß*."
+      de: "*Wissen* hat bei *er* keine Endung: *Tom weiß*."
+  - id: true-1
+    type: true-false
+    prompt: Hast du Hunger?
+    answer: true
+    explanation:
+      en: "German says *Hunger haben*, and with *du* the form is *hast*. The sentence is correct."
+      fa: "آلمانی می‌گوید *Hunger haben* و صرف آن با *du* می‌شود *hast*. جمله درست است."
+      de: "Man sagt *Hunger haben*. Bei *du* heißt es *hast*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Er weißt die Antwort.
+    answer: false
+    explanation:
+      en: "*Wissen* has no ending with *er*: *er weiß*."
+      fa: "*wissen* در سوم‌شخص مفرد شناسه ندارد: *er weiß*."
+      de: "*Wissen* hat bei *er* keine Endung: *er weiß*."
+  - id: true-3
+    type: true-false
+    prompt: Ihr sind aus Berlin.
+    answer: false
+    explanation:
+      en: "With *ihr* the form of *sein* is *seid*: *Ihr seid aus Berlin*."
+      fa: "صرف *sein* با *ihr* می‌شود *seid*: *Ihr seid aus Berlin.*"
+      de: "Bei *ihr* heißt *sein*: *seid*. Richtig ist: *Ihr seid aus Berlin.*"
+  - id: error-1
+    type: find-error
+    prompt: Die Kinder ist im Garten.
+    answer: ist
+    explanation:
+      en: "*Die Kinder* are *sie* (plural), so the form of *sein* is *sind*."
+      fa: "*die Kinder* سوم‌شخص جمع است (*sie*)، پس صرف *sein* می‌شود *sind*."
+      de: "*Die Kinder* sind *sie* (Plural). Darum heißt es *sind*."
+  - id: error-2
+    type: find-error
+    prompt: Du hat ein schönes Auto.
+    answer: hat
+    explanation:
+      en: "With *du* the form of *haben* is *hast*."
+      fa: "صرف *haben* با *du* می‌شود *hast*."
+      de: "Bei *du* heißt *haben*: *hast*."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, bin]
+      - [du, bist]
+      - [er, ist]
+      - [wir, sind]
+      - [ihr, seid]
+    explanation:
+      en: "The forms of *sein*: *ich bin*, *du bist*, *er ist*, *wir sind*, *ihr seid*."
+      fa: "صرف *sein*: *ich bin*، *du bist*، *er ist*، *wir sind*، *ihr seid*."
+      de: "Die Formen von *sein*: *ich bin*, *du bist*, *er ist*, *wir sind*, *ihr seid*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ich, weiß, das, nicht]
+      - [das, weiß, ich, nicht]
+    explanation:
+      en: "The verb comes second. *Ich* or *das* can stand first, and *nicht* comes at the end."
+      fa: "فعل در جایگاه دوم می‌آید. *ich* یا *das* می‌تواند در آغاز جمله باشد و *nicht* در پایان می‌آید."
+      de: "Das Verb steht an Position 2. *Ich* oder *das* kann am Anfang stehen, *nicht* steht am Ende."
+
+review:
+  reviewer: an independent AI agent (Claude, fresh blind subagent; not a person)
+  date: 2026-11-28
+  pool: b1fde7fbb0e45914
