@@ -86,7 +86,7 @@ diagrams:
       main: { en: main clause, fa: جملهٔ پایه, de: Hauptsatz }
       relative: { en: relative clause, fa: جملهٔ موصولی, de: Relativsatz }
       same: { en: same gender, fa: هم‌جنس, de: gleiches Genus }
-      alone: { en: "the relative clause on its own:", fa: "جملهٔ موصولی به‌تنهایی:", de: "der Relativsatz allein:" }
+      alone: { en: "the relative clause on its own:", fa: جملهٔ موصولی به‌تنهایی, de: "der Relativsatz allein:" }
     svg: |
       <svg viewBox="0 0 320 236">
         <!-- Das ist der Tisch, -->
