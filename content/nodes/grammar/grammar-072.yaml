@@ -4,7 +4,7 @@ kind: grammar
 level: B1
 chapter: b1-genitive-nouns
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-071]
 title:
@@ -272,7 +272,7 @@ questions:
   - id: typed-1
     type: typed-answer
     prompt: "Akkusativ: der Herr"
-    answers: [den Herrn]
+    answers: [den Herrn, Herrn]
     explanation:
       en: "*Herr* takes *-n* in the singular *Akkusativ*: *den Herrn*."
       fa: "*Herr* در حالت *Akkusativ* مفرد پایانهٔ *-n* می‌گیرد: *den Herrn*."
@@ -320,3 +320,10 @@ questions:
       en: "In the *Genitiv* the *n-Deklination* gives *-n* or *-en*; *Name* and *Herz* take *-ns* and *-ens*."
       fa: "در حالت *Genitiv*، صرف اسم با *-n* پایانهٔ *-n* یا *-en* می‌دهد؛ *Name* و *Herz* پایانهٔ *-ns* و *-ens* می‌گیرند."
       de: "Im Genitiv hat die n-Deklination *-n* oder *-en*. *Name* und *Herz* bekommen *-ns* und *-ens*."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question, then the questions changed or disputed after the
+    first pass; not people)"
+  date: 2026-11-28
+  pool: 6580dec3b0168fc3

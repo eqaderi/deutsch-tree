@@ -4,7 +4,7 @@ kind: grammar
 level: B1
 chapter: b1-genitive-nouns
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-065, grammar-069]
 title:
@@ -19,8 +19,8 @@ explanations:
       after the noun it describes: *das Auto des Lehrers* (the teacher's
       car), *die Farbe des Hauses* (the colour of the house). *Der* and *das*
       become *des*, and the noun takes *-s*: *des Vaters*, *des Büros*. A noun
-      ending in *-s*, *-ß*, *-x*, *-z* or *-sch* takes *-es*: *des Hauses*,
-      *des Tisches*; many short nouns may take it too (*des Tages*). *Die*
+      ending in *-s*, *-ß*, *-x* or *-z* takes *-es*: *des Hauses*,
+      *des Kurses*; many short nouns may take it too (*des Tages*, *des Tisches*). *Die*
       becomes *der*, in the feminine and in the plural, and the noun stays as
       it is: *der Mutter*, *der Kinder*. *Ein* becomes *eines* or *einer*,
       and *mein*, *dein* or *kein* take the same endings: *meines Vaters*,
@@ -34,9 +34,9 @@ explanations:
       Lehrers* (ماشین معلم) و *die Farbe des Hauses* (رنگ خانه). ترتیب مانند
       اضافهٔ فارسی است: اول خود چیز، سپس صاحب آن. *der* و *das* به *des*
       تبدیل می‌شوند و اسم *-s* می‌گیرد: *des Vaters* و *des Büros*. اسمی که
-      به *-s*، *-ß*، *-x*، *-z* یا *-sch* ختم شود *-es* می‌گیرد: *des Hauses*
-      و *des Tisches*؛ بسیاری از اسم‌های کوتاه هم می‌توانند *-es* بگیرند
-      (*des Tages*). *die*، چه در مؤنث و چه در جمع، به *der* تبدیل می‌شود و
+      به *-s*، *-ß*، *-x* یا *-z* ختم شود *-es* می‌گیرد: *des Hauses*
+      و *des Kurses*؛ بسیاری از اسم‌های کوتاه هم می‌توانند *-es* بگیرند
+      (*des Tages*، *des Tisches*). *die*، چه در مؤنث و چه در جمع، به *der* تبدیل می‌شود و
       خود اسم تغییری نمی‌کند: *der Mutter* و *der Kinder*. *ein* به *eines*
       یا *einer* تبدیل می‌شود و *mein*، *dein* و *kein* هم همین پایانه‌ها را
       می‌گیرند: *meines Vaters* و *meiner Eltern*. اسم جمعِ بدون حرف تعریف
@@ -48,9 +48,9 @@ explanations:
       Der Genitiv sagt, wem etwas gehört oder wozu etwas gehört. Er steht
       nach dem Nomen: *das Auto des Lehrers*, *die Farbe des Hauses*. *Der*
       und *das* werden zu *des*, und das Nomen bekommt *-s*: *des Vaters*,
-      *des Büros*. Endet das Nomen auf *-s*, *-ß*, *-x*, *-z* oder *-sch*,
-      bekommt es *-es*: *des Hauses*, *des Tisches*. Viele kurze Nomen können
-      auch *-es* haben (*des Tages*). *Die* wird zu *der*, bei feminin und im
+      *des Büros*. Endet das Nomen auf *-s*, *-ß*, *-x* oder *-z*,
+      bekommt es *-es*: *des Hauses*, *des Kurses*. Viele kurze Nomen können
+      auch *-es* haben (*des Tages*, *des Tisches*). *Die* wird zu *der*, bei feminin und im
       Plural, und das Nomen bleibt gleich: *der Mutter*, *der Kinder*. *Ein*
       wird zu *eines* oder *einer*. *Mein*, *dein* und *kein* haben die
       gleichen Endungen: *meines Vaters*, *meiner Eltern*. Im Plural ohne
@@ -201,13 +201,13 @@ questions:
       de: "*Eine Ärztin* im Genitiv: *einer Ärztin*."
   - id: choice-3
     type: multiple-choice
-    prompt: Die Preise ___ Wohnungen sind hier sehr hoch.
-    options: [von, des, einer]
+    prompt: Das sind Fotos ___ Freunden aus Spanien.
+    options: [der, von, eines]
     answer: von
     explanation:
-      en: "A plural without an article has no *Genitiv*, so German uses *von* + *Dativ*: *von Wohnungen*."
-      fa: "اسم جمعِ بدون حرف تعریف حالت *Genitiv* ندارد، پس *von* با حالت *Dativ* می‌آید: *von Wohnungen*."
-      de: "Im Plural ohne Artikel gibt es keinen Genitiv. Man sagt *von* + Dativ: *von Wohnungen*."
+      en: "*Freunden* is the plural *Dativ*, without an article. A plural without an article has no *Genitiv*, so German uses *von* + *Dativ*: *von Freunden*."
+      fa: "*Freunden* شکل جمع در حالت *Dativ* است، بدون حرف تعریف. اسم جمعِ بدون حرف تعریف حالت *Genitiv* ندارد، پس *von* با حالت *Dativ* می‌آید: *von Freunden*."
+      de: "*Freunden* ist Dativ Plural, ohne Artikel. Im Plural ohne Artikel gibt es keinen Genitiv. Man sagt *von* + Dativ: *von Freunden*."
   - id: choice-4
     type: multiple-choice
     prompt: Am Ende ___ Woche fahren wir weg.
@@ -267,12 +267,12 @@ questions:
       de: "*Meine Freundin* im Genitiv: *meiner Freundin*."
   - id: typed-gap-3
     type: typed-gap-fill
-    prompt: "Genitiv: Der Preis ___ (der Tisch) war zu hoch."
-    answers: [des Tisches]
+    prompt: "Genitiv: Der Preis ___ (der Kurs) ist zu hoch."
+    answers: [des Kurses]
     explanation:
-      en: "*Tisch* ends in *-sch*, so it takes *-es*: *des Tisches*."
-      fa: "*Tisch* به *-sch* ختم می‌شود، پس پایانهٔ *-es* می‌گیرد: *des Tisches*."
-      de: "*Tisch* endet auf *-sch*. Darum: *des Tisches*."
+      en: "*Kurs* ends in *-s*, so it takes *-es*: *des Kurses*."
+      fa: "*Kurs* به *-s* ختم می‌شود، پس پایانهٔ *-es* می‌گیرد: *des Kurses*."
+      de: "*Kurs* endet auf *-s*. Darum: *des Kurses*."
   - id: typed-1
     type: typed-answer
     prompt: "Genitiv: die Eltern (Plural)"
@@ -324,3 +324,10 @@ questions:
       en: "*Der* and *das* become *des*, with *-s* on the noun; *die* becomes *der*, in the singular and in the plural."
       fa: "*der* و *das* به *des* تبدیل می‌شوند و اسم *-s* می‌گیرد؛ *die* هم در مفرد و هم در جمع به *der* تبدیل می‌شود."
       de: "*Der* und *das* werden zu *des*, das Nomen bekommt *-s*. *Die* wird zu *der*, im Singular und im Plural."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question, then the questions changed or disputed after the
+    first pass; not people)"
+  date: 2026-11-28
+  pool: 7b1b42657302505d
