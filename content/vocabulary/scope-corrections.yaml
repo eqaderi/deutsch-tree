@@ -991,7 +991,11 @@ changes:
   # Articles and plurals that the lists print for another sense of the word than the one in scope.
   - { word: Stock, plural: Stockwerke, reason: '"Stöcke" are sticks; a floor of a house is in the plural "Stockwerke"' }
   - { word: Möbel, article: die, plural: pl, reason: 'learned as "die Möbel"; one piece is "das Möbelstück"' }
-  - { word: Fitness, plural: sg, reason: 'the marker "-" would make "die Fitness" its own plural; the word has no plural' }
+  - {
+      word: Fitness,
+      plural: sg,
+      reason: 'the marker "-" would make "die Fitness" its own plural; the word has no plural',
+    }
   # Plurals that the extraction read wrong.
   - {
       word: Einkaufszentrum,
