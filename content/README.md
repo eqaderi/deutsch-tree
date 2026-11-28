@@ -963,7 +963,9 @@ one, and again when a question or its answer changes later (explanations may
 change freely). A command writes the record, never a hand:
 
 1. `pnpm review:pool <id> --out /tmp/<id>.json` writes the review sheet: the
-   pool without answers and explanations. For an exam part it holds the texts
+   pool without answers and explanations. The options of a choice stand in
+   an order made from the options alone, so their place tells nothing about
+   the key. For an exam part it holds the texts
    of every practice task and the items without answers; an item is named
    with its task (`t1/i3`). Keep the sheet outside the repository.
 2. Give only that file to a reviewer who has not seen the node file (for an

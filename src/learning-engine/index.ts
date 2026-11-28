@@ -226,6 +226,11 @@ const MEANINGS_OFFERED = 4
  *
  * The reason of both questions is the word with its meaning and its example
  * sentence.
+ *
+ * The meanings stand in an order fixed by the words, with the right one
+ * mostly last. No one sees that order: a test draws one for each attempt
+ * (`asAsked`) and the review sheet mixes them by themselves alone. It stays
+ * because the review records of the published nodes are of the pool in it.
  */
 export function vocabularyPool(words: readonly VocabularyWord[]): Question[] {
   const ids = questionIds(words)
