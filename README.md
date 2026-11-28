@@ -186,7 +186,8 @@ GitHub Pages and from a local folder.
   of other questions it is `drawAttempt`. Its page is
   `src/app/VocabularySections.tsx`. The words, as `VocabularyWord`, are what
   an export (Anki) or audio of words reads; `asLearned(word)` is the word
-  with its article, as it is said and asked.
+  with its article, or a reflexive verb with its *sich*, as it is said,
+  shown, exported, found and asked.
 - A vocabulary page ends with the export to Anki (`src/app/AnkiExport.tsx`):
   the words of that node, or of every vocabulary node the learner has
   started, as a file the browser saves. "Started" is `startedVocabulary` in

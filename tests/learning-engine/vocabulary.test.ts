@@ -69,6 +69,20 @@ test('a name that takes no article is shown and typed bare; one that takes an ar
   expect(checkAnswer(intoGerman(pool, 'Schweiz'), 'Schweiz').correct).toBe(false)
 })
 
+test('a reflexive verb is shown and asked with its "sich", and typed with it', () => {
+  const freuen = word({ word: 'freuen', class: 'verb', reflexive: 'sich' })
+  const pool = vocabularyPool([...HOME, freuen])
+
+  expect(fromGerman(pool, 'freuen').prompt).toBe('sich freuen')
+  expect(rightAnswer(intoGerman(pool, 'freuen'))).toBe('sich freuen')
+  expect(checkAnswer(intoGerman(pool, 'freuen'), 'sich freuen')).toEqual({
+    correct: true,
+    notes: [],
+    accepted: 'sich freuen',
+  })
+  expect(checkAnswer(intoGerman(pool, 'freuen'), 'freuen').correct).toBe(false)
+})
+
 test('the small slips of any typed answer are accepted with a note, but never a missing article', () => {
   const question = intoGerman(vocabularyPool(HOME), 'Tür')
 
