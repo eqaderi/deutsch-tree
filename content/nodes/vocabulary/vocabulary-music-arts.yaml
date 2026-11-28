@@ -1,39 +1,391 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A noun for a person (Musiker, Sänger, Künstler, Schauspieler) also accepts its feminine form.
 id: vocabulary-music-arts
 kind: vocabulary
 level: A2
 chapter: a2-words-free-time
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Music, art and going out"
   fa: "موسیقی، هنر و بیرون رفتن"
   de: "Musik, Kunst und Ausgehen"
+attemptSize: 15
 words:
   - word: Musik
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: music
+      fa: موسیقی
+    definition: Töne, die man singt oder mit Instrumenten spielt und die man gern hört
+    example:
+      de: Beim Kochen höre ich gern Musik.
+      en: I like listening to music while I cook.
+      fa: موقع آشپزی دوست دارم موسیقی گوش کنم.
+
   - word: Musiker
+    class: noun
+    article: der
+    plural: Musiker
+    level: A2
+    meaning:
+      en: musician
+      fa: نوازنده، موسیقی‌دان
+    definition: eine Person, die ein Instrument spielt, oft als Beruf
+    example:
+      de: Ihr Mann ist Musiker und spielt in einem Orchester.
+      en: Her husband is a musician and plays in an orchestra.
+      fa: همسرش نوازنده است و در یک ارکستر ساز می‌زند.
+    alsoAccepted: [die Musikerin]
+
   - word: Sänger
+    class: noun
+    article: der
+    plural: Sänger
+    level: A2
+    meaning:
+      en: singer
+      fa: خواننده (آواز)
+    definition: eine Person, die mit ihrer Stimme Lieder vorträgt, oft als Beruf
+    example:
+      de: Der Sänger hat eine sehr schöne Stimme.
+      en: The singer has a very beautiful voice.
+      fa: این خواننده صدای خیلی زیبایی دارد.
+    alsoAccepted: [die Sängerin]
+
   - word: singen
+    class: verb
+    level: A2
+    meaning:
+      en: to sing
+      fa: آواز خواندن
+    definition: mit der Stimme Musik machen, zum Beispiel ein Lied
+    example:
+      de: Meine Tochter singt in einem Chor.
+      en: My daughter sings in a choir.
+      fa: دخترم در یک گروه کر آواز می‌خواند.
+
   - word: Band
+    class: noun
+    article: die
+    plural: Bands
+    level: A2
+    meaning:
+      en: band (a group of musicians)
+      fa: گروه موسیقی
+    definition: eine kleine Gruppe von Leuten, die zusammen Rockmusik oder Popmusik machen
+    example:
+      de: Am Freitag spielt eine Band aus Berlin im Jugendzentrum.
+      en: On Friday a band from Berlin is playing at the youth centre.
+      fa: جمعه یک گروه موسیقی از برلین در مرکز جوانان برنامه اجرا می‌کند.
+    alsoAccepted: [die Musikgruppe, die Gruppe]
+
   - word: Gitarre
+    class: noun
+    article: die
+    plural: Gitarren
+    level: A2
+    meaning:
+      en: guitar
+      fa: گیتار
+    definition: ein Instrument aus Holz mit sechs Saiten, das man mit den Fingern spielt
+    example:
+      de: Er spielt seit drei Jahren Gitarre.
+      en: He has been playing the guitar for three years.
+      fa: او سه سال است که گیتار می‌زند.
+
   - word: Klavier
+    class: noun
+    article: das
+    plural: Klaviere
+    level: A2
+    meaning:
+      en: piano
+      fa: پیانو
+    definition: ein großes Instrument mit schwarzen und weißen Tasten, das oft zu Hause im Wohnzimmer an der Wand steht
+    example:
+      de: Unsere Nachbarin spielt jeden Abend Klavier.
+      en: Our neighbour plays the piano every evening.
+      fa: همسایه‌مان هر شب پیانو می‌زند.
+    alsoAccepted: [das Piano]
+
   - word: Instrument
+    class: noun
+    article: das
+    plural: Instrumente
+    level: A2
+    meaning:
+      en: (musical) instrument
+      fa: ساز، آلت موسیقی
+    definition: ein Ding, mit dem man Musik macht, zum Beispiel eine Flöte oder eine Trommel
+    example:
+      de: Spielst du ein Instrument?
+      en: Do you play an instrument?
+      fa: سازی می‌زنی؟
+    alsoAccepted: [das Musikinstrument]
+
   - word: Konzert
+    class: noun
+    article: das
+    plural: Konzerte
+    level: A2
+    meaning:
+      en: concert
+      fa: کنسرت
+    definition: Musiker oder Sänger machen Musik, und viele Menschen sitzen oder stehen da und hören zu
+    example:
+      de: Gehen wir am Samstag zusammen ins Konzert?
+      en: Shall we go to the concert together on Saturday?
+      fa: شنبه با هم به کنسرت برویم؟
+
   - word: Festival
+    class: noun
+    article: das
+    plural: Festivals
+    level: A2
+    meaning:
+      en: festival (of music, film or theatre)
+      fa: جشنواره، فستیوال
+    definition: viele Konzerte, Filme oder Theaterstücke an einem Ort, oft mehrere Tage lang und oft draußen
+    example:
+      de: Im Sommer gibt es in unserer Stadt ein großes Festival.
+      en: In summer there's a big festival in our town.
+      fa: تابستان‌ها در شهر ما جشنوارهٔ بزرگی برگزار می‌شود.
+    alsoAccepted: [die Festspiele]
+
   - word: Star
+    class: noun
+    article: der
+    plural: Stars
+    level: A2
+    meaning:
+      en: star (a famous person)
+      fa: ستاره (آدم مشهور)
+    definition: eine sehr bekannte Person, zum Beispiel aus dem Film oder aus der Musik
+    example:
+      de: Nach dem Konzert wollten alle ein Foto mit dem Star.
+      en: After the concert everyone wanted a photo with the star.
+      fa: بعد از کنسرت همه می‌خواستند با آن ستاره عکس بگیرند.
+    alsoAccepted: [die Berühmtheit, der Promi]
+
   - word: Kunst
+    class: noun
+    article: die
+    plural: Künste
+    level: A2
+    meaning:
+      en: art
+      fa: هنر
+    definition: Bilder, Figuren, Musik oder Theater, die Menschen machen, damit andere sie ansehen oder hören
+    example:
+      de: Sie interessiert sich sehr für moderne Kunst.
+      en: She's very interested in modern art.
+      fa: او به هنر مدرن خیلی علاقه دارد.
+
   - word: Künstler
+    class: noun
+    article: der
+    plural: Künstler
+    level: A2
+    meaning:
+      en: artist
+      fa: هنرمند
+    definition: eine Person, die Bilder malt, Figuren macht oder auf der Bühne steht, oft als Beruf
+    example:
+      de: In der Galerie hängen Bilder von jungen Künstlern.
+      en: In the gallery there are pictures by young artists.
+      fa: در گالری، نقاشی‌های هنرمندان جوان به دیوار آویزان است.
+    alsoAccepted: [die Künstlerin]
+
   - word: Museum
+    class: noun
+    article: das
+    plural: Museen
+    level: A2
+    meaning:
+      en: museum
+      fa: موزه
+    definition: ein Haus, in dem man alte oder wichtige Dinge und Bilder ansehen kann
+    example:
+      de: Am Montag ist das Museum geschlossen.
+      en: The museum is closed on Mondays.
+      fa: موزه دوشنبه‌ها تعطیل است.
+
   - word: Ausstellung
+    class: noun
+    article: die
+    plural: Ausstellungen
+    level: A2
+    meaning:
+      en: exhibition (of art or objects)
+      fa: نمایشگاه (هنری یا موزه‌ای)
+    definition: Bilder oder andere Dinge, die man für ein paar Wochen oder Monate zeigt, zum Beispiel in einem Museum
+    example:
+      de: Die Ausstellung ist noch bis Ende März offen.
+      en: The exhibition is open until the end of March.
+      fa: نمایشگاه تا آخر ماه مارس باز است.
+
   - word: Theater
+    class: noun
+    article: das
+    plural: Theater
+    level: A2
+    meaning:
+      en: theatre
+      fa: تئاتر
+    definition: ein Haus, in dem Menschen auf einer Bühne ein Stück spielen; auch das Spielen dort
+    example:
+      de: Wir haben Karten fürs Theater am Freitag.
+      en: We have tickets for the theatre on Friday.
+      fa: برای جمعه بلیت تئاتر داریم.
+
   - word: Schauspieler
+    class: noun
+    article: der
+    plural: Schauspieler
+    level: A2
+    meaning:
+      en: actor
+      fa: بازیگر
+    definition: eine Person, die im Film oder im Theater eine Rolle spielt
+    example:
+      de: Der Schauspieler ist auch aus dem Fernsehen bekannt.
+      en: The actor is also well known from television.
+      fa: این بازیگر را از تلویزیون هم می‌شناسند.
+    alsoAccepted: [die Schauspielerin]
+
   - word: Zirkus
+    class: noun
+    article: der
+    plural: Zirkusse
+    level: A2
+    meaning:
+      en: circus
+      fa: سیرک
+    definition: eine Show in einem großen, runden Zelt, mit Clowns und Tieren
+    example:
+      de: Am Sonntag gehen wir mit den Kindern in den Zirkus.
+      en: On Sunday we're taking the children to the circus.
+      fa: یکشنبه با بچه‌ها به سیرک می‌رویم.
+
   - word: Kultur
+    class: noun
+    article: die
+    plural: Kulturen
+    level: A2
+    meaning:
+      en: culture
+      fa: فرهنگ
+    definition: die Kunst, die Musik, die Sprache und die Art zu leben von einem Volk oder einem Land
+    example:
+      de: Ich möchte die Kultur von Österreich besser kennenlernen.
+      en: I'd like to get to know Austria's culture better.
+      fa: دوست دارم فرهنگ اتریش را بهتر بشناسم.
+
   - word: Veranstaltung
+    class: noun
+    article: die
+    plural: Veranstaltungen
+    level: A2
+    meaning:
+      en: (organised) event, such as a concert or a talk
+      fa: رویداد (کنسرت، سخنرانی و مانند آن)
+    definition: etwas, das zu einer bestimmten Zeit an einem Ort für viele Menschen organisiert wird, zum Beispiel ein Vortrag oder ein Konzert
+    example:
+      de: Wo findet die Veranstaltung statt?
+      en: Where is the event taking place?
+      fa: این رویداد کجا برگزار می‌شود؟
+    alsoAccepted: [das Event]
+
   - word: stattfinden
+    class: verb
+    level: A2
+    meaning:
+      en: to take place
+      fa: برگزار شدن
+    definition: zu einer Zeit und an einem Ort sein, zum Beispiel ein Fest oder ein Kurs
+    example:
+      de: Das Konzert findet im Park statt.
+      en: The concert is taking place in the park.
+      fa: کنسرت در پارک برگزار می‌شود.
+
   - word: ausgehen
+    class: verb
+    level: A2
+    meaning:
+      en: to go out (in the evening, for fun)
+      fa: بیرون رفتن (برای تفریح)
+    definition: am Abend in ein Restaurant, eine Bar oder ins Kino gehen, um Spaß zu haben
+    example:
+      de: Am Wochenende gehen wir oft zusammen aus.
+      en: At weekends we often go out together.
+      fa: آخر هفته‌ها اغلب با هم بیرون می‌رویم.
+    alsoAccepted: [weggehen]
+
   - word: unternehmen
+    class: verb
+    level: A2
+    meaning:
+      en: to do (something together in your free time)
+      fa: کاری با هم کردن (در وقت آزاد)
+    definition: in der Freizeit etwas zusammen machen, zum Beispiel einen Ausflug
+    example:
+      de: Wollen wir am Sonntag etwas zusammen unternehmen?
+      en: Shall we do something together on Sunday?
+      fa: یکشنبه با هم کاری بکنیم؟
+    alsoAccepted: [etwas unternehmen]
+    tooCloseTo: [ausgehen]
+
   - word: Programm
+    class: noun
+    article: das
+    plural: Programme
+    level: A2
+    meaning:
+      en: programme (the list of what is on and when)
+      fa: برنامه (فهرست رویدادها و ساعت آن‌ها)
+    definition: das Heft oder die Liste, die sagt, welche Konzerte, Filme oder Vorträge wann kommen
+    example:
+      de: Was steht heute Abend auf dem Programm?
+      en: What's on the programme this evening?
+      fa: برنامهٔ امشب چیست؟
+    alsoAccepted: [das Programmheft, der Veranstaltungskalender]
+
   - word: Rundgang
+    class: noun
+    article: der
+    plural: Rundgänge
+    level: A2
+    meaning:
+      en: walk round (a place, to see it)
+      fa: گشتی پیاده در یک مکان برای دیدن آن
+    definition: ein Weg zu Fuß durch ein Museum, ein Schloss oder eine Stadt, bei dem man viel sieht
+    example:
+      de: Der Rundgang durch die Altstadt dauert eine Stunde.
+      en: The tour of the old town takes an hour.
+      fa: گشت پیاده در بافت قدیمی شهر یک ساعت طول می‌کشد.
+
   - word: Schloss
+    class: noun
+    article: das
+    plural: Schlösser
+    level: A2
+    meaning:
+      en: palace, château
+      fa: کاخ، قصر
+    definition: ein großes, altes und schönes Haus, in dem früher ein König gewohnt hat
+    example:
+      de: Das Schloss liegt auf einem Berg über der Stadt.
+      en: The castle stands on a hill above the town.
+      fa: قصر روی تپه‌ای بالای شهر قرار دارد.
+    alsoAccepted: [der Palast]
+
+review:
+  reviewer: "an independent AI agent (two fresh reviewers: the whole sheet, then
+    the changed and disputed questions)"
+  date: 2026-11-28
+  pool: e54b6bd9501cc11c
