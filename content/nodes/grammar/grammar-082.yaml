@@ -4,10 +4,292 @@ kind: grammar
 level: A1
 chapter: a1-pronouns
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-081]
 title:
   en: "*Personalpronomen*, *Akkusativ*"
-  fa: "ضمیرهای شخصی در *Akkusativ*"
+  fa: "ضمیرهای شخصی در حالت *Akkusativ*"
   de: "Personalpronomen im Akkusativ"
+
+explanations:
+  en:
+    rule: >
+      When a personal pronoun is the object of the verb, it takes its
+      *Akkusativ* form: *mich*, *dich*, *ihn*, *sie*, *es*, *uns*, *euch*,
+      *sie* and *Sie*. It answers *Wen?* (whom?) or *Was?* (what?), after verbs
+      such as *sehen*, *besuchen*, *lieben*, *kennen*, *fragen* and *brauchen*.
+      In the third person only the masculine changes, as with the article:
+      *er* becomes *ihn*, just as *der* becomes *den*. *Sie*, *es* and polite
+      *Sie* stay the same; *ich*, *du*, *wir* and *ihr* have forms of their
+      own. For a thing, the pronoun follows the gender of the noun: *Der Kuchen
+      ist gut. Ich esse ihn.*
+  fa:
+    rule: >
+      وقتی ضمیر شخصی مفعول فعل است، در حالت *Akkusativ* (حالت مفعولی) می‌آید:
+      *mich*، *dich*، *ihn*، *sie*، *es*، *uns*، *euch*، *sie* و *Sie*. این
+      ضمیرها به پرسش *Wen?* (چه کسی را؟) یا *Was?* (چه چیزی را؟) پاسخ می‌دهند و
+      پس از فعل‌هایی مانند *sehen*، *besuchen*، *lieben*، *kennen*، *fragen* و
+      *brauchen* می‌آیند. در سوم‌شخص، همانند حرف تعریف، فقط مذکر تغییر می‌کند:
+      *er* به *ihn* تبدیل می‌شود، همان‌طور که *der* به *den*. *sie*، *es* و
+      *Sie* رسمی تغییر نمی‌کنند، ولی *ich*، *du*، *wir* و *ihr* شکل ویژهٔ خود
+      را دارند. در فارسی «مرا» و «او را» می‌گوییم؛ در آلمانی خود ضمیر شکلش را
+      عوض می‌کند. ضمیرِ یک چیز از جنس اسم پیروی می‌کند: *Der Kuchen ist gut.
+      Ich esse ihn.*
+  de:
+    rule: >
+      Wenn ein Personalpronomen das Objekt ist, steht es im Akkusativ: *mich*,
+      *dich*, *ihn*, *sie*, *es*, *uns*, *euch*, *sie*, *Sie*. Man fragt *Wen?*
+      oder *Was?*. Bei *er* ist es wie beim Artikel: *er* wird zu *ihn*, so wie
+      *der* zu *den* wird. *Sie*, *es* und *Sie* bleiben gleich. Bei Sachen
+      kommt das Pronomen vom Artikel: *Der Kuchen ist gut. Ich esse ihn.*
+
+# The article-change table of content/README.md: each pronoun from its
+# Nominativ form, with the noun it stands for in the third person.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, mich, Besuchst du mich?]
+    - [du, dich, Ich liebe dich.]
+    - [er (der Film), ihn (den Film), Ich sehe ihn heute.]
+    - [sie (die Jacke), sie (die Jacke), Ich kaufe sie.]
+    - [es (das Buch), es (das Buch), Ich lese es.]
+    - [wir, uns, Besuchst du uns?]
+    - [ihr, euch, Ich frage euch.]
+    - ["sie (die Kinder, Plural)", sie (die Kinder), Ich suche sie.]
+    - [Sie, Sie, Ich verstehe Sie nicht.]
+
+examples:
+  - de: Ich liebe dich.
+    en: I love you.
+    fa: دوستت دارم.
+  - de: Kennst du ihn? – Ja, er ist mein Nachbar.
+    en: Do you know him? – Yes, he is my neighbour.
+    fa: او را می‌شناسی؟ – بله، همسایهٔ من است.
+  - de: Der Kuchen ist lecker. Ich esse ihn gern.
+    en: The cake is tasty. I like eating it.
+    fa: کیک خوشمزه است. خوردنش را دوست دارم.
+  - de: Wo ist meine Tasche? Ich brauche sie.
+    en: Where is my bag? I need it.
+    fa: کیفم کجاست؟ لازمش دارم.
+  - de: Das Buch ist gut. Ich kaufe es.
+    en: The book is good. I'll buy it.
+    fa: کتاب خوبی است. آن را می‌خرم.
+  - de: Besuchst du uns am Sonntag?
+    en: Will you visit us on Sunday?
+    fa: یکشنبه به دیدن ما می‌آیی؟
+  - de: Kinder, ich höre euch nicht!
+    en: Children, I can't hear you!
+    fa: بچه‌ها، صدایتان را نمی‌شنوم!
+  - de: Entschuldigung, ich verstehe Sie nicht.
+    en: Excuse me, I don't understand you.
+    fa: ببخشید، حرفتان را نمی‌فهمم.
+
+mistakes:
+  - wrong: Ich liebe du.
+    right: Ich liebe dich.
+    why:
+      en: "*Du* is the subject form. As the object of *lieben* it is *dich*."
+      fa: "*du* شکل فاعلی است. ضمیر در نقش مفعولِ *lieben* می‌شود *dich*."
+      de: "*Du* ist das Subjekt. Als Objekt von *lieben* sagt man *dich*."
+  - wrong: Der Film ist gut. Ich sehe er heute.
+    right: Der Film ist gut. Ich sehe ihn heute.
+    why:
+      en: "The film is the object of *sehen*, so *er* becomes *ihn*."
+      fa: "فیلم مفعولِ *sehen* است، پس *er* به *ihn* تبدیل می‌شود."
+      de: "Der Film ist das Objekt von *sehen*. Darum wird *er* zu *ihn*."
+  - wrong: Der Rock ist schön. Ich kaufe es.
+    right: Der Rock ist schön. Ich kaufe ihn.
+    why:
+      en: "*Rock* is a *der* noun, so the object pronoun is *ihn*, also for a thing. Do not copy the English “it”."
+      fa: "*Rock* اسم مذکر (*der*) است، پس ضمیر مفعولی‌اش *ihn* است، حتی برای یک چیز. «آن» فارسی را به *es* برنگردانید."
+      de: "*Rock* hat den Artikel *der*. Das Pronomen im Akkusativ ist *ihn*, auch bei einer Sache."
+  - wrong: Besuchst du wir morgen?
+    right: Besuchst du uns morgen?
+    why:
+      en: "*Wir* is the subject form. As an object it is *uns*."
+      fa: "*wir* شکل فاعلی است. ضمیر در نقش مفعول می‌شود *uns*."
+      de: "*Wir* ist das Subjekt. Als Objekt sagt man *uns*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Film ist gut. Ich sehe ___ heute.
+    options: [ihn, er, es]
+    answer: ihn
+    explanation:
+      en: "*Der Film* is the object, so *er* becomes *ihn*."
+      fa: "*der Film* مفعول است، پس *er* به *ihn* تبدیل می‌شود."
+      de: "*Der Film* ist das Objekt. *Er* wird zu *ihn*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Jacke ist schön. Ich kaufe ___.
+    options: [sie, ihn, es]
+    answer: sie
+    explanation:
+      en: "*Die Jacke* becomes *sie*, and *sie* stays the same in the *Akkusativ*."
+      fa: "به جای *die Jacke* ضمیر *sie* می‌آید و *sie* در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Die Jacke* wird zu *sie*. *Sie* bleibt im Akkusativ gleich."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Brot ist frisch. Ich esse ___.
+    options: [es, ihn, sie]
+    answer: es
+    explanation:
+      en: "*Das Brot* becomes *es*, and *es* stays the same in the *Akkusativ*."
+      fa: "به جای *das Brot* ضمیر *es* می‌آید و *es* در حالت *Akkusativ* تغییر نمی‌کند."
+      de: "*Das Brot* wird zu *es*. *Es* bleibt im Akkusativ gleich."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Äpfel sind gut. Ich nehme ___.
+    options: [sie, ihn, es]
+    answer: sie
+    explanation:
+      en: "*Die Äpfel* is plural, so the pronoun is *sie*, the same in the *Akkusativ*."
+      fa: "*die Äpfel* جمع است، پس ضمیرش *sie* است که در حالت *Akkusativ* هم همین است."
+      de: "*Die Äpfel* ist Plural. Das Pronomen ist *sie*, auch im Akkusativ."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wo bist du? Ich sehe ___ nicht.
+    options: [dich, du, dir]
+    answer: dich
+    explanation:
+      en: "*Du* is the object of *sehen*, so its *Akkusativ* form *dich*."
+      fa: "*du* مفعولِ *sehen* است، پس شکل *Akkusativ* آن می‌آید: *dich*."
+      de: "*Du* ist das Objekt von *sehen*. Im Akkusativ: *dich*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wir wohnen jetzt in Köln. Besuchst du ___?
+    options: [uns, wir, euch]
+    answer: uns
+    explanation:
+      en: "The object is *wir*, and the *Akkusativ* of *wir* is *uns*."
+      fa: "مفعول *wir* است و شکل *Akkusativ* آن *uns* است."
+      de: "Das Objekt ist *wir*. Im Akkusativ: *uns*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Kinder, ich höre ___ nicht!
+    options: [euch, ihr, dich]
+    answer: euch
+    explanation:
+      en: "You speak to several children (*ihr*), and the *Akkusativ* of *ihr* is *euch*."
+      fa: "با چند کودک حرف می‌زنید (*ihr*) و شکل *Akkusativ* آن *euch* است."
+      de: "Man spricht mit mehreren Kindern (*ihr*). Im Akkusativ: *euch*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Frau Lang, ich verstehe ___ nicht.
+    options: [Sie, Ihnen, du]
+    answer: Sie
+    explanation:
+      en: "Ms Lang is addressed with polite *Sie*, which stays *Sie* in the *Akkusativ*."
+      fa: "خانم لانگ با *Sie* رسمی خطاب می‌شود و *Sie* در حالت *Akkusativ* هم *Sie* است."
+      de: "Zu *Frau Lang* sagt man *Sie*. Im Akkusativ bleibt es *Sie*."
+  - id: true-1
+    type: true-false
+    prompt: Mein Bruder ist nett. Ich besuche er oft.
+    answer: false
+    explanation:
+      en: "The brother is the object of *besuchen*: *Ich besuche ihn oft.*"
+      fa: "برادر مفعولِ *besuchen* است: *Ich besuche ihn oft.*"
+      de: "Der Bruder ist das Objekt von *besuchen*: *Ich besuche ihn oft.*"
+  - id: true-2
+    type: true-false
+    prompt: Wo ist mein Handy? Ich brauche es.
+    answer: true
+    explanation:
+      en: "*Das Handy* becomes *es*, also in the *Akkusativ*. The sentence is correct."
+      fa: "به جای *das Handy* ضمیر *es* می‌آید، در حالت *Akkusativ* هم. جمله درست است."
+      de: "*Das Handy* wird zu *es*, auch im Akkusativ. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Der Tee ist kalt. Ich trinke es nicht.
+    answer: false
+    explanation:
+      en: "*Tee* is a *der* noun, so the object pronoun is *ihn*: *Ich trinke ihn nicht.*"
+      fa: "*Tee* اسم مذکر (*der*) است، پس ضمیر مفعولی‌اش *ihn* است: *Ich trinke ihn nicht.*"
+      de: "*Tee* hat den Artikel *der*. Im Akkusativ: *Ich trinke ihn nicht.*"
+  - id: true-4
+    type: true-false
+    prompt: Tom, ich frage dich morgen.
+    answer: true
+    explanation:
+      en: "Tom is the object of *fragen*, so *dich*. The sentence is correct."
+      fa: "تام مفعولِ *fragen* است، پس *dich* می‌آید. جمله درست است."
+      de: "Tom ist das Objekt von *fragen*: *dich*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Der Salat ist gut. Ich esse ___ (er).
+    answers: [ihn]
+    explanation:
+      en: "In the *Akkusativ*, *er* becomes *ihn*."
+      fa: "در حالت *Akkusativ*، *er* به *ihn* تبدیل می‌شود."
+      de: "Im Akkusativ wird *er* zu *ihn*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Kennst du ___ (ich)? – Ja, du bist Anna!
+    answers: [mich]
+    explanation:
+      en: "In the *Akkusativ*, *ich* becomes *mich*."
+      fa: "در حالت *Akkusativ*، *ich* به *mich* تبدیل می‌شود."
+      de: "Im Akkusativ wird *ich* zu *mich*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Hast du morgen Zeit? Wir besuchen ___ (du).
+    answers: [dich]
+    explanation:
+      en: "In the *Akkusativ*, *du* becomes *dich*."
+      fa: "در حالت *Akkusativ*، *du* به *dich* تبدیل می‌شود."
+      de: "Im Akkusativ wird *du* zu *dich*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Das ist Frau Weber. Kennst du ___ (sie)?
+    answers: [sie]
+    explanation:
+      en: "*Sie* (she) stays *sie* in the *Akkusativ*."
+      fa: "*sie* (او، زن) در حالت *Akkusativ* هم *sie* است."
+      de: "*Sie* (eine Frau) bleibt im Akkusativ *sie*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Akkusativ: wir"
+    answers: [uns]
+    explanation:
+      en: "The *Akkusativ* of *wir* is *uns*."
+      fa: "شکل *Akkusativ* ضمیر *wir* می‌شود *uns*."
+      de: "*Wir* im Akkusativ: *uns*."
+  - id: error-1
+    type: find-error
+    prompt: Die Uhr ist schön. Ich kaufe ihn.
+    answer: ihn
+    explanation:
+      en: "*Uhr* is a *die* noun, so the pronoun is *sie*: *Ich kaufe sie.*"
+      fa: "*Uhr* اسم مؤنث (*die*) است، پس ضمیرش *sie* است: *Ich kaufe sie.*"
+      de: "*Uhr* hat den Artikel *die*. Das Pronomen ist *sie*: *Ich kaufe sie.*"
+  - id: error-2
+    type: find-error
+    prompt: Mama, ich liebe du.
+    answer: du
+    explanation:
+      en: "As the object of *lieben*, *du* becomes *dich*."
+      fa: "*du* در نقش مفعولِ *lieben* به *dich* تبدیل می‌شود."
+      de: "Als Objekt von *lieben* wird *du* zu *dich*."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, mich]
+      - [du, dich]
+      - [er, ihn]
+      - [wir, uns]
+      - [ihr, euch]
+    explanation:
+      en: "The *Akkusativ* forms: *mich*, *dich*, *ihn*, *uns*, *euch*."
+      fa: "شکل‌های حالت *Akkusativ*: *mich*، *dich*، *ihn*، *uns*، *euch*."
+      de: "Die Formen im Akkusativ: *mich*, *dich*, *ihn*, *uns*, *euch*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 6a58dff36519fc38
