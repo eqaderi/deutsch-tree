@@ -4,10 +4,300 @@ kind: grammar
 level: A2
 chapter: a2-adjectives
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-105]
 title:
   en: "*Komparativ* + *als*"
   fa: "صفت تفضیلی (*Komparativ*) + *als*"
   de: "Komparativ + *als*"
+
+explanations:
+  en:
+    rule: >
+      To say that one thing has more of a quality than another, add *-er* to
+      the adjective (the *Komparativ*) and put *als* (than) before the
+      second thing: *Mein Bruder ist jünger als ich.* Never use *mehr* for
+      "more" before an adjective: *schöner*, not *mehr schön*. Many short
+      adjectives with *a*, *o* or *u* take an umlaut: *alt* – *älter*, *groß*
+      – *größer*, *jung* – *jünger*. A few change more: *hoch* – *höher*,
+      *teuer* – *teurer*, *dunkel* – *dunkler*, *nah* – *näher*, and, as you
+      know, *gut* – *besser*, *viel* – *mehr*, *gern* – *lieber*. After *als*
+      a person stands in the *Nominativ*, like the first one: *als ich*,
+      *als du*.
+  fa:
+    rule: >
+      برای گفتن این‌که چیزی صفتی را بیشتر از چیز دیگری دارد، به صفت *-er*
+      افزوده می‌شود (صفت تفضیلی یا *Komparativ*) و پیش از چیز دوم *als*
+      (از) می‌آید: *Mein Bruder ist jünger als ich.* برای «بیشتر» پیش از صفت
+      هرگز *mehr* به کار نرود: *schöner*، نه *mehr schön*. بسیاری از صفت‌های
+      کوتاهی که *a*، *o* یا *u* دارند دو نقطه (*Umlaut*) می‌گیرند: *alt* –
+      *älter*، *groß* – *größer*، *jung* – *jünger*. چند صفت بیشتر تغییر
+      می‌کنند: *hoch* – *höher*، *teuer* – *teurer*، *dunkel* – *dunkler*،
+      *nah* – *näher*، و آن‌هایی که می‌شناسید: *gut* – *besser*، *viel* –
+      *mehr*، *gern* – *lieber*. در فارسی می‌گوییم «از من»، ولی در آلمانی پس
+      از *als* شخص در حالت *Nominativ* (حالت فاعلی) می‌آید، مانند شخص اول:
+      *als ich*، *als du*.
+  de:
+    rule: >
+      Hat eine Sache mehr von einer Eigenschaft als eine andere, bekommt das
+      Adjektiv *-er* (Komparativ). Vor der zweiten Sache steht *als*: *Mein
+      Bruder ist jünger als ich.* Man sagt nie *mehr* vor dem Adjektiv:
+      *schöner*, nicht *mehr schön*. Viele kurze Adjektive mit *a*, *o* oder
+      *u* bekommen einen Umlaut: *alt* – *älter*, *groß* – *größer*, *jung* –
+      *jünger*. Einige ändern sich mehr: *hoch* – *höher*, *teuer* –
+      *teurer*, *dunkel* – *dunkler*, *nah* – *näher*, und *gut* – *besser*,
+      *viel* – *mehr*, *gern* – *lieber*. Nach *als* steht eine Person im
+      Nominativ, wie die erste: *als ich*, *als du*.
+
+table:
+  columns:
+    - { en: Adjective, fa: صفت, de: Adjektiv }
+    - { en: "*Komparativ*", fa: "صفت تفضیلی (*Komparativ*)", de: Komparativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [schnell, schneller, Der Zug ist schneller als der Bus.]
+    - [billig, billiger, Der Bus ist billiger als das Taxi.]
+    - [alt, älter, Meine Schwester ist älter als ich.]
+    - [jung, jünger, Mein Bruder ist jünger als ich.]
+    - [groß, größer, Hamburg ist größer als Bremen.]
+    - [warm, wärmer, Heute ist es wärmer als gestern.]
+    - [hoch, höher, Der Turm ist höher als die Kirche.]
+    - [teuer, teurer, Das Taxi ist teurer als der Bus.]
+    - [dunkel, dunkler, Die Jacke ist dunkler als die Hose.]
+    - [nah, näher, Der Park ist näher als der See.]
+    - [gut, besser, Dein Deutsch ist besser als meins.]
+    - [viel, mehr, Sie arbeitet mehr als ich.]
+
+examples:
+  - de: Mein Bruder ist jünger als ich.
+    en: My brother is younger than me.
+    fa: برادرم از من کوچک‌تر است.
+  - de: Der Zug ist schneller als das Auto.
+    en: The train is faster than the car.
+    fa: قطار از ماشین سریع‌تر است.
+  - de: Im Sommer sind die Tage länger als im Winter.
+    en: In summer the days are longer than in winter.
+    fa: روزها در تابستان بلندتر از زمستان‌اند.
+  - de: Heute ist es kälter als gestern.
+    en: It is colder today than yesterday.
+    fa: امروز هوا از دیروز سردتر است.
+  - de: Der Turm ist höher als die Kirche.
+    en: The tower is taller than the church.
+    fa: برج از کلیسا بلندتر است.
+  - de: Die Wohnung in der Stadt ist teurer als das Haus auf dem Land.
+    en: The flat in town is more expensive than the house in the country.
+    fa: آپارتمانِ شهر از خانهٔ روستا گران‌تر است.
+  - de: Meine Schwester verdient mehr als ich.
+    en: My sister earns more than me.
+    fa: خواهرم از من بیشتر درآمد دارد.
+  - de: Die Prüfung war leichter als gedacht.
+    en: The exam was easier than expected.
+    fa: امتحان از آنچه فکر می‌کردم آسان‌تر بود.
+  - de: Sprich bitte langsamer!
+    en: Please speak more slowly!
+    fa: لطفاً آهسته‌تر حرف بزن!
+
+mistakes:
+  - wrong: Das Auto ist mehr schnell als der Bus.
+    right: Das Auto ist schneller als der Bus.
+    why:
+      en: "German makes the *Komparativ* with *-er*, never with *mehr* before the adjective."
+      fa: "آلمانی صفت تفضیلی را با *-er* می‌سازد، هرگز با *mehr* پیش از صفت."
+      de: "Den Komparativ macht man mit *-er*, nie mit *mehr* vor dem Adjektiv."
+  - wrong: Mein Bruder ist alter als ich.
+    right: Mein Bruder ist älter als ich.
+    why:
+      en: "*Alt* takes an umlaut in the *Komparativ*: *älter*."
+      fa: "*alt* در صفت تفضیلی دو نقطه (*Umlaut*) می‌گیرد: *älter*."
+      de: "*Alt* bekommt im Komparativ einen Umlaut: *älter*."
+  - wrong: Der Berg ist hocher als der Turm.
+    right: Der Berg ist höher als der Turm.
+    why:
+      en: "*Hoch* loses its *c* and takes an umlaut: *höher*."
+      fa: "*hoch* حرف *c* را از دست می‌دهد و دو نقطه می‌گیرد: *höher*."
+      de: "*Hoch* verliert das *c* und bekommt einen Umlaut: *höher*."
+  - wrong: Meine Schwester ist älter von mir.
+    right: Meine Schwester ist älter als ich.
+    why:
+      en: "After a *Komparativ* German uses *als*, not *von*, and the person after it is in the *Nominativ*: *als ich*."
+      fa: "در فارسی می‌گوییم «از من»، ولی آلمانی *als* به کار می‌برد و شخص پس از آن در حالت *Nominativ* است: *als ich*."
+      de: "Nach dem Komparativ steht *als*, nicht *von*. Die Person steht im Nominativ: *als ich*."
+  - wrong: Sie ist größer wie ihr Bruder.
+    right: Sie ist größer als ihr Bruder.
+    why:
+      en: "After a *Komparativ* comes *als*. *Wie* is for things that are the same (*so groß wie*), the next topic but one."
+      fa: "پس از صفت تفضیلی *als* می‌آید. *wie* برای برابری است (*so groß wie*) که موضوع دو درس بعد است."
+      de: "Nach dem Komparativ steht *als*. *Wie* sagt man, wenn etwas gleich ist (*so groß wie*). Das kommt bald."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Zug ist ___ als der Bus.
+    options: [schneller, schnell, mehr schnell]
+    answer: schneller
+    explanation:
+      en: "Before *als* comes the *Komparativ*: *schnell* + *-er*."
+      fa: "پیش از *als* صفت تفضیلی می‌آید: *schnell* + *-er*."
+      de: "Vor *als* steht der Komparativ: *schnell* + *-er*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Meine Oma ist ___ als mein Opa.
+    options: [älter, alter, mehr alt]
+    answer: älter
+    explanation:
+      en: "*Alt* takes an umlaut: *älter*."
+      fa: "*alt* دو نقطه می‌گیرد: *älter*."
+      de: "*Alt* bekommt einen Umlaut: *älter*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Mein Bruder ist größer ___ ich.
+    options: [als, von, so]
+    answer: als
+    explanation:
+      en: "After a *Komparativ* comes *als* (than)."
+      fa: "پس از صفت تفضیلی *als* می‌آید."
+      de: "Nach dem Komparativ steht *als*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Der Berg ist ___ als der Turm.
+    options: [höher, hocher, hoher]
+    answer: höher
+    explanation:
+      en: "*Hoch* becomes *höher*: no *c*, and an umlaut."
+      fa: "*hoch* می‌شود *höher*: بدون *c* و با دو نقطه."
+      de: "*Hoch* wird zu *höher*: ohne *c*, mit Umlaut."
+  - id: gap-5
+    type: gap-fill
+    prompt: Das Taxi ist ___ als die U-Bahn.
+    options: [teurer, teuer, am teuersten]
+    answer: teurer
+    explanation:
+      en: "Before *als* comes the *Komparativ*; *teuer* drops its second *e*: *teurer*."
+      fa: "پیش از *als* صفت تفضیلی می‌آید و *teuer* یک *e* را از دست می‌دهد: *teurer*."
+      de: "Vor *als* steht der Komparativ. Bei *teuer* fällt ein *e* weg: *teurer*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Heute ist es ___ als gestern.
+    options: [wärmer, warmer, mehr warm]
+    answer: wärmer
+    explanation:
+      en: "*Warm* takes an umlaut: *wärmer*."
+      fa: "*warm* دو نقطه می‌گیرد: *wärmer*."
+      de: "*Warm* bekommt einen Umlaut: *wärmer*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich trinke ___ Tee als Kaffee.
+    options: [lieber, gerner, mehr gern]
+    answer: lieber
+    explanation:
+      en: "The *Komparativ* of *gern* is *lieber*."
+      fa: "صفت تفضیلی *gern* می‌شود *lieber*."
+      de: "Der Komparativ von *gern* ist *lieber*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Anna ist 20 Jahre alt, Lisa ist 25. Lisa ist ___ als Anna.
+    options: [älter, jünger, kürzer]
+    answer: älter
+    explanation:
+      en: "Lisa has more years than Anna, so she is *älter*."
+      fa: "لیزا سال‌های بیشتری از آنا دارد، پس *älter* است."
+      de: "Lisa hat mehr Jahre als Anna. Sie ist *älter*."
+  - id: true-1
+    type: true-false
+    prompt: Mein Bruder ist jünger als ich.
+    answer: true
+    explanation:
+      en: "*Jung* – *jünger* with an umlaut, then *als ich* in the *Nominativ*. The sentence is correct."
+      fa: "*jung* – *jünger* با دو نقطه، و پس از آن *als ich* در حالت *Nominativ*. جمله درست است."
+      de: "*Jung* – *jünger* mit Umlaut, dann *als ich* im Nominativ. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das Fahrrad ist mehr billig als das Auto.
+    answer: false
+    explanation:
+      en: "The *Komparativ* is made with *-er*: *billiger als das Auto*."
+      fa: "صفت تفضیلی با *-er* ساخته می‌شود: *billiger als das Auto*."
+      de: "Den Komparativ macht man mit *-er*: *billiger als das Auto*."
+  - id: true-3
+    type: true-false
+    prompt: Er spricht besser Deutsch als ich.
+    answer: true
+    explanation:
+      en: "*Gut* – *besser*, and *als ich*. The sentence is correct."
+      fa: "*gut* – *besser* و *als ich*. جمله درست است."
+      de: "*Gut* – *besser*, dann *als ich*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Im Winter sind die Tage ___ (kurz) als im Sommer.
+    answers: [kürzer]
+    explanation:
+      en: "*Kurz* takes an umlaut: *kürzer*."
+      fa: "*kurz* دو نقطه می‌گیرد: *kürzer*."
+      de: "*Kurz* bekommt einen Umlaut: *kürzer*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Die neue Wohnung ist ___ (groß) als die alte.
+    answers: [größer]
+    explanation:
+      en: "*Groß* takes an umlaut: *größer*."
+      fa: "*groß* دو نقطه می‌گیرد: *größer*."
+      de: "*Groß* bekommt einen Umlaut: *größer*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Der Supermarkt ist ___ (nah) als die Post.
+    answers: [näher]
+    explanation:
+      en: "*Nah* takes an umlaut: *näher*."
+      fa: "*nah* دو نقطه می‌گیرد: *näher*."
+      de: "*Nah* bekommt einen Umlaut: *näher*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Die Jacke ist ___ (teuer) als die Hose.
+    answers: [teurer, teuerer]
+    explanation:
+      en: "*Teuer* usually drops its second *e*: *teurer*."
+      fa: "*teuer* معمولاً یک *e* را از دست می‌دهد: *teurer*."
+      de: "Bei *teuer* fällt meistens ein *e* weg: *teurer*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Dein Kaffee ist ___ (gut) als meiner.
+    answers: [besser]
+    explanation:
+      en: "The *Komparativ* of *gut* is *besser*."
+      fa: "صفت تفضیلی *gut* می‌شود *besser*."
+      de: "Der Komparativ von *gut* ist *besser*."
+  - id: error-1
+    type: find-error
+    prompt: Mein Vater ist alter als meine Mutter.
+    answer: alter
+    explanation:
+      en: "*Alt* takes an umlaut in the *Komparativ*: *älter*."
+      fa: "*alt* در صفت تفضیلی دو نقطه می‌گیرد: *älter*."
+      de: "*Alt* hat im Komparativ einen Umlaut: *älter*."
+  - id: error-2
+    type: find-error
+    prompt: Sie ist älter wie ihr Bruder.
+    answer: wie
+    explanation:
+      en: "After a *Komparativ* comes *als*: *älter als ihr Bruder*."
+      fa: "پس از صفت تفضیلی *als* می‌آید: *älter als ihr Bruder*."
+      de: "Nach dem Komparativ steht *als*: *älter als ihr Bruder*."
+  - id: match-1
+    type: matching
+    answer:
+      - [alt, älter]
+      - [hoch, höher]
+      - [gut, besser]
+      - [viel, mehr]
+      - [teuer, teurer]
+    explanation:
+      en: "*Alt* takes an umlaut, *hoch* also drops its *c*, *teuer* an *e*; *gut* and *viel* have their own forms."
+      fa: "*alt* دو نقطه می‌گیرد، *hoch* افزون بر آن *c* را از دست می‌دهد و *teuer* یک *e* را؛ *gut* و *viel* شکل ویژهٔ خود را دارند."
+      de: "*Alt* bekommt einen Umlaut, *hoch* verliert auch das *c*, *teuer* ein *e*. *Gut* und *viel* haben eigene Formen."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: e906c17686947b73
