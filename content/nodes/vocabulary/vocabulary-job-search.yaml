@@ -1,39 +1,405 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-job-search
 kind: vocabulary
 level: B1
 chapter: b1-words-work-money
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Looking for a job"
   fa: "جست‌وجوی کار"
   de: "Arbeitssuche"
+attemptSize: 15
 words:
   - word: Arbeitsstelle
+    class: noun
+    article: die
+    plural: Arbeitsstellen
+    level: B1
+    meaning:
+      en: job, position (a place of work)
+      fa: شغل، جای کار
+    definition: ein Platz in einer Firma, an dem man arbeitet und Geld verdient
+    example:
+      de: Nach drei Monaten Suche hat sie endlich eine neue Arbeitsstelle gefunden.
+      en: After three months of looking she has finally found a new job.
+      fa: او پس از سه ماه جست‌وجو سرانجام کار تازه‌ای پیدا کرده است.
+    alsoAccepted: [die Stelle, der Arbeitsplatz, der Job]
+
   - word: Lehrstelle
+    class: noun
+    article: die
+    plural: Lehrstellen
+    level: B1
+    meaning:
+      en: apprenticeship (a place to train for a trade)
+      fa: جای کارآموزی (برای یادگرفتن یک حرفه)
+    definition: ein Platz in einem Betrieb, an dem ein junger Mensch einen Beruf lernt
+    example:
+      de: Mein Sohn sucht eine Lehrstelle als Elektriker.
+      en: My son is looking for an apprenticeship as an electrician.
+      fa: پسرم دنبال جای کارآموزی در رشتهٔ برق‌کاری است.
+    alsoAccepted: [der Ausbildungsplatz, die Ausbildungsstelle]
+
+  # Lehrling and Azubi are the same person; each is right when the other is asked for.
   - word: Lehrling
+    class: noun
+    article: der
+    plural: Lehrlinge
+    level: B1
+    meaning:
+      en: apprentice
+      fa: شاگرد (کارآموز یک حرفه)
+    definition: ein junger Mensch, der in einem Betrieb bei einem Meister einen Beruf lernt
+    example:
+      de: In der Bäckerei arbeiten zwei Lehrlinge.
+      en: Two apprentices work in the bakery.
+      fa: در این نانوایی دو شاگرد کار می‌کنند.
+    alsoAccepted: [der Azubi, die Azubi, der Auszubildende, die Auszubildende]
+    tooCloseTo: [Azubi]
+
   - word: Azubi
+    class: noun
+    article: der
+    plural: Azubis
+    level: B1
+    meaning:
+      en: trainee (in vocational training)
+      fa: کارآموز (در دورهٔ آموزش حرفه‌ای)
+    definition: kurz für eine Person, die gerade in einem Betrieb und in der Berufsschule einen Beruf lernt
+    example:
+      de: Unser Azubi macht nächstes Jahr seine Prüfung.
+      en: Our trainee takes his exam next year.
+      fa: کارآموز ما سال آینده امتحانش را می‌دهد.
+    alsoAccepted: [die Azubi, der Auszubildende, die Auszubildende, der Lehrling]
+    tooCloseTo: [Lehrling]
+
   - word: Praktikant
+    class: noun
+    article: der
+    plural: Praktikanten
+    level: B1
+    meaning:
+      en: intern (on a work placement)
+      fa: کارورز
+    definition: eine Person, die für kurze Zeit in einer Firma mitarbeitet, um die Arbeit dort kennenzulernen
+    example:
+      de: Im Sommer arbeitet ein Praktikant aus Spanien in unserem Büro.
+      en: In the summer an intern from Spain is working in our office.
+      fa: تابستان یک کارورز اسپانیایی در دفتر ما کار می‌کند.
+    alsoAccepted: [die Praktikantin]
+
   - word: Aushilfe
+    class: noun
+    article: die
+    plural: Aushilfen
+    level: B1
+    meaning:
+      en: temporary helper, temp
+      fa: نیروی کمکی موقت
+    definition: eine Person, die nur für kurze Zeit oder ein paar Stunden in der Woche mitarbeitet, zum Beispiel in einem Geschäft
+    example:
+      de: Für die Weihnachtszeit sucht der Supermarkt noch zwei Aushilfen.
+      en: The supermarket is still looking for two temps for the Christmas season.
+      fa: سوپرمارکت برای ایام کریسمس هنوز دو نیروی کمکی موقت لازم دارد.
+    alsoAccepted: [die Aushilfskraft]
+
   - word: Lebenslauf
+    class: noun
+    article: der
+    plural: Lebensläufe
+    level: B1
+    meaning:
+      en: CV, résumé
+      fa: رزومه، شرح سوابق
+    definition: ein Text, in dem man seine Schule, seine Ausbildung und seine Arbeit der Reihe nach aufschreibt
+    example:
+      de: Bitte schicken Sie uns Ihren Lebenslauf mit einem Foto.
+      en: Please send us your CV with a photo.
+      fa: لطفاً رزومه‌تان را همراه با یک عکس برای ما بفرستید.
+
   - word: Vorstellungsgespräch
+    class: noun
+    article: das
+    plural: Vorstellungsgespräche
+    level: B1
+    meaning:
+      en: job interview
+      fa: مصاحبهٔ استخدامی
+    definition: ein Treffen, bei dem eine Firma eine Person kennenlernt, die bei ihr arbeiten möchte
+    example:
+      de: Morgen um zehn Uhr habe ich ein Vorstellungsgespräch bei einer Bank.
+      en: Tomorrow at ten I have a job interview at a bank.
+      fa: فردا ساعت ده در یک بانک مصاحبهٔ استخدامی دارم.
+    alsoAccepted: [das Bewerbungsgespräch]
+
   - word: Unterlagen
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: documents, papers (for an application or a file)
+      fa: مدارک (برای درخواست یا پرونده)
+    definition: alle Papiere, die man für etwas braucht, zum Beispiel die Zeugnisse für eine Bewerbung
+    example:
+      de: Haben Sie alle Unterlagen für die Bewerbung dabei?
+      en: Do you have all the documents for the application with you?
+      fa: همهٔ مدارک درخواست کار را همراهتان دارید؟
+    alsoAccepted: [die Papiere, die Dokumente, die Bewerbungsunterlagen]
+
   - word: Voraussetzung
+    class: noun
+    article: die
+    plural: Voraussetzungen
+    level: B1
+    meaning:
+      en: precondition, prerequisite
+      fa: شرط لازم، پیش‌شرط
+    definition: etwas, das man haben oder können muss, damit etwas anderes möglich ist
+    example:
+      de: Gute Englischkenntnisse sind eine Voraussetzung für diese Stelle.
+      en: Good English is a requirement for this job.
+      fa: دانستن انگلیسی در حد خوب شرط لازم این شغل است.
+    alsoAccepted: [die Bedingung, die Vorbedingung]
+
   - word: Karriere
+    class: noun
+    article: die
+    plural: Karrieren
+    level: B1
+    meaning:
+      en: career
+      fa: پیشرفت شغلی، مسیر حرفه‌ای
+    definition: der Weg, den man im Beruf geht, oft mit immer wichtigeren Stellen
+    example:
+      de: Für ihre Karriere ist sie nach München gezogen.
+      en: She moved to Munich for her career.
+      fa: او برای پیشرفت شغلی‌اش به مونیخ رفت.
+    alsoAccepted: [die Laufbahn]
+
+  # Fortbildung and Weiterbildung are near the same; each is right when the other is asked for.
   - word: Fortbildung
+    class: noun
+    article: die
+    plural: Fortbildungen
+    level: B1
+    meaning:
+      en: further training (in your own job)
+      fa: دورهٔ آموزش ضمن خدمت
+    definition: ein Kurs, in dem man in seinem Beruf Neues lernt, damit man auf dem aktuellen Stand bleibt
+    example:
+      de: Nächste Woche besuchen alle Lehrer eine Fortbildung zum Thema Computer.
+      en: Next week all the teachers are attending a training course on computers.
+      fa: هفتهٔ آینده همهٔ معلم‌ها در دورهٔ آموزش ضمن خدمت دربارهٔ رایانه شرکت می‌کنند.
+    alsoAccepted: [die Weiterbildung]
+    tooCloseTo: [Weiterbildung]
+
   - word: Weiterbildung
+    class: noun
+    article: die
+    plural: Weiterbildungen
+    level: B1
+    meaning:
+      en: further education, continuing training
+      fa: آموزش تکمیلی، ادامهٔ تحصیل حرفه‌ای
+    definition: wenn man nach der Ausbildung weiter lernt, zum Beispiel in Kursen, um im Beruf mehr zu können
+    example:
+      de: Die Firma bezahlt mir eine Weiterbildung zur Buchhalterin.
+      en: The company is paying for me to train further as a bookkeeper.
+      fa: شرکت هزینهٔ آموزش تکمیلی مرا برای حسابداری می‌پردازد.
+    alsoAccepted: [die Fortbildung]
+    tooCloseTo: [Fortbildung]
+
   - word: ausgebildet
+    class: adjective
+    level: B1
+    meaning:
+      en: trained, qualified
+      fa: آموزش‌دیده، دارای مدرک حرفه‌ای
+    definition: so, dass man einen Beruf richtig gelernt und eine Prüfung gemacht hat
+    example:
+      de: Sie ist ausgebildete Krankenpflegerin.
+      en: She is a qualified nurse.
+      fa: او پرستار آموزش‌دیده است.
+    alsoAccepted: [qualifiziert, gelernt]
+
   - word: beruflich
+    class: adjective
+    level: B1
+    meaning:
+      en: professional, work-related; for work
+      fa: شغلی، کاری
+    definition: so, dass es mit der Arbeit zu tun hat, die man macht
+    example:
+      de: Ich bin beruflich oft in Wien.
+      en: I'm often in Vienna for work.
+      fa: به خاطر کارم زیاد به وین می‌روم.
+    alsoAccepted: [dienstlich]
+
   - word: berufstätig
+    class: adjective
+    level: B1
+    meaning:
+      en: working, in employment
+      fa: شاغل
+    definition: so, dass man eine Arbeit hat und damit Geld verdient
+    example:
+      de: Beide Eltern sind berufstätig, deshalb geht das Kind in den Kindergarten.
+      en: Both parents work, so the child goes to nursery school.
+      fa: پدر و مادر هر دو شاغل‌اند، برای همین بچه به مهدکودک می‌رود.
+    alsoAccepted: [erwerbstätig, beschäftigt]
+
   - word: Arbeitslosigkeit
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: unemployment
+      fa: بیکاری
+    definition: wenn eine Person oder viele Menschen keine Arbeit haben
+    example:
+      de: In dieser Region ist die Arbeitslosigkeit gesunken.
+      en: Unemployment has fallen in this region.
+      fa: در این منطقه بیکاری کاهش یافته است.
+    alsoAccepted: [die Erwerbslosigkeit]
+
   - word: Arbeitserlaubnis
+    class: noun
+    article: die
+    plural: Arbeitserlaubnisse
+    level: B1
+    meaning:
+      en: work permit
+      fa: اجازهٔ کار
+    definition: ein Papier vom Amt, mit dem eine Person aus dem Ausland in einem Land arbeiten darf
+    example:
+      de: Ohne Arbeitserlaubnis darf er in Deutschland nicht arbeiten.
+      en: He isn't allowed to work in Germany without a work permit.
+      fa: او بدون اجازهٔ کار نمی‌تواند در آلمان کار کند.
+    alsoAccepted: [die Arbeitsgenehmigung]
+
+  # einstellen and anstellen both mean giving someone a job; each is right when the other is asked for.
   - word: einstellen
+    class: verb
+    level: B1
+    meaning:
+      en: to hire, to take on (staff)
+      fa: استخدام کردن
+    definition: einer Person eine Stelle in der Firma geben
+    example:
+      de: Das Hotel stellt im Frühling neue Mitarbeiter ein.
+      en: The hotel takes on new staff in the spring.
+      fa: این هتل در بهار کارمند تازه استخدام می‌کند.
+    alsoAccepted: [anstellen]
+    tooCloseTo: [anstellen]
+
   - word: anstellen
+    class: verb
+    level: B1
+    meaning:
+      en: to hire (on a contract)
+      fa: استخدام کردن (با قرارداد)
+    definition: einer Person einen Arbeitsvertrag geben, sodass sie fest für einen arbeitet
+    example:
+      de: Die Firma hat ihn nach dem Praktikum fest angestellt.
+      en: The company gave him a permanent job after the internship.
+      fa: شرکت بعد از دورهٔ کارورزی او را به‌طور دائم به کار گرفت.
+    alsoAccepted: [einstellen]
+    tooCloseTo: [einstellen]
+
   - word: entlassen
+    class: verb
+    level: B1
+    meaning:
+      en: to dismiss, to lay off
+      fa: اخراج کردن (از کار)
+    definition: einer Person sagen, dass sie nicht mehr in der Firma arbeiten darf
+    example:
+      de: Wegen der Krise hat die Fabrik hundert Arbeiter entlassen.
+      en: Because of the crisis the factory has laid off a hundred workers.
+      fa: کارخانه به دلیل بحران صد کارگر را اخراج کرده است.
+    alsoAccepted: [kündigen, feuern]
+
+  # Entlassung and Kündigung overlap; neither is offered as a wrong meaning of the other.
   - word: Entlassung
+    class: noun
+    article: die
+    plural: Entlassungen
+    level: B1
+    meaning:
+      en: dismissal, layoff
+      fa: اخراج (از کار)
+    definition: wenn eine Firma einer Person sagt, dass sie gehen muss und nicht mehr dort arbeitet
+    example:
+      de: Nach seiner Entlassung hat er ein eigenes Geschäft aufgemacht.
+      en: After his dismissal he opened his own shop.
+      fa: او پس از اخراج، مغازهٔ خودش را باز کرد.
+    alsoAccepted: [die Kündigung]
+    tooCloseTo: [Kündigung]
+
   - word: Kündigung
+    class: noun
+    article: die
+    plural: Kündigungen
+    level: B1
+    meaning:
+      en: notice (ending a job, a flat or a contract)
+      fa: اعلام فسخ قرارداد (کار، اجاره یا اشتراک)
+    definition: wenn man sagt oder schreibt, dass ein Vertrag, zum Beispiel für eine Arbeit oder eine Wohnung, endet
+    example:
+      de: Ich habe meine Kündigung geschrieben, weil ich eine bessere Stelle habe.
+      en: I've handed in my notice because I've got a better job.
+      fa: استعفانامه‌ام را نوشته‌ام، چون کار بهتری پیدا کرده‌ام.
+    tooCloseTo: [Entlassung]
+
   - word: jobben
+    class: verb
+    level: B1
+    meaning:
+      en: to do casual work, to have a casual job
+      fa: کار موقت کردن، کار دانشجویی کردن
+    definition: für kurze Zeit eine einfache Arbeit machen, oft neben dem Studium, um Geld zu verdienen
+    example:
+      de: In den Ferien jobbt Lukas in einem Café.
+      en: During the holidays Lukas has a casual job in a café.
+      fa: لوکاس در تعطیلات در یک کافه کار موقت می‌کند.
+
   - word: Beratung
+    class: noun
+    article: die
+    plural: Beratungen
+    level: B1
+    meaning:
+      en: counselling, advice service
+      fa: مشاوره (جلسه یا خدمات مشاوره)
+    definition: ein Gespräch, in dem eine Person, die sich gut auskennt, einem sagt, was man tun kann
+    example:
+      de: Bei der Agentur für Arbeit bekommen Sie eine kostenlose Beratung.
+      en: At the job centre you get free advice.
+      fa: در ادارهٔ کار می‌توانید رایگان مشاوره بگیرید.
+    alsoAccepted: [das Beratungsgespräch]
+
   - word: Vermittlung
+    class: noun
+    article: die
+    plural: Vermittlungen
+    level: B1
+    meaning:
+      en: placement, finding someone a job (or a partner, a flat)
+      fa: کاریابی، معرفی (به کار یا طرف معامله)
+    definition: wenn jemand hilft, dass zwei Seiten zusammenkommen, zum Beispiel eine Person ohne Arbeit und eine Firma
+    example:
+      de: Durch die Vermittlung einer Freundin habe ich die Stelle bekommen.
+      en: I got the job through a friend who put me in touch.
+      fa: با معرفی یکی از دوستانم این کار را گرفتم.
+    alsoAccepted: [die Arbeitsvermittlung]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: 5f2357721eac7191

@@ -1,39 +1,402 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-costs-prices
 kind: vocabulary
 level: B1
 chapter: b1-words-work-money
 order: 7
-status: coming-soon
+status: published
 title:
   en: "Costs, prices and value"
   fa: "هزینه، قیمت و ارزش"
   de: "Kosten, Preise und Wert"
+attemptSize: 15
 words:
+  # Die Mehrwertsteuer is one kind of Steuer; neither is offered as a wrong meaning of the other.
   - word: Steuer
+    class: noun
+    article: die
+    plural: Steuern
+    level: B1
+    meaning:
+      en: tax
+      fa: مالیات
+    definition: Geld, das man dem Staat zahlen muss, zum Beispiel einen Teil vom Lohn
+    example:
+      de: Wer mehr verdient, zahlt auch mehr Steuern.
+      en: Anyone who earns more also pays more tax.
+      fa: هر کس درآمد بیشتری داشته باشد، مالیات بیشتری هم می‌پردازد.
+    tooCloseTo: [Mehrwertsteuer]
+
   - word: Mehrwertsteuer
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: value added tax, VAT
+      fa: مالیات بر ارزش افزوده
+    definition: die Steuer, die im Preis von fast allen Waren und Leistungen steckt
+    example:
+      de: In Deutschland beträgt die Mehrwertsteuer meistens 19 %.
+      en: In Germany, VAT is usually 19 %.
+      fa: در آلمان مالیات بر ارزش افزوده معمولاً ۱۹٪ است.
+    alsoAccepted: [die Umsatzsteuer]
+    tooCloseTo: [Steuer]
+
   - word: finanziell
+    class: adjective
+    level: B1
+    meaning:
+      en: financial
+      fa: مالی
+    definition: so, dass es mit Geld zu tun hat
+    example:
+      de: Nach dem Umzug hatten wir finanzielle Probleme.
+      en: After the move we had financial problems.
+      fa: بعد از اسباب‌کشی مشکلات مالی داشتیم.
+
   - word: finanzieren
+    class: verb
+    level: B1
+    meaning:
+      en: to finance, to pay for
+      fa: تأمین مالی کردن، هزینهٔ (چیزی را) پرداختن
+    definition: das Geld für etwas geben oder besorgen
+    example:
+      de: Sie finanziert ihr Studium mit einem Job im Café.
+      en: She pays for her studies with a job in a café.
+      fa: او هزینهٔ تحصیلش را با کار در یک کافه تأمین می‌کند.
+
+  # The scope list gives no "sich" for "leisten"; in this theme the node teaches "sich etwas leisten", to afford.
   - word: leisten
+    class: verb
+    reflexive: sich etwas
+    level: B1
+    meaning:
+      en: to afford
+      fa: توان خرید (چیزی را) داشتن، از پس هزینهٔ (چیزی) برآمدن
+    definition: genug Geld für etwas haben, sodass man es kaufen kann
+    example:
+      de: Ich kann mir kein neues Auto leisten.
+      en: I can't afford a new car.
+      fa: توان خرید ماشین نو را ندارم.
+    alsoAccepted: [sich leisten, sich etwas leisten können]
+
+  # Die Einnahme is money taken in, einnehmen is to take it in; neither is offered as a wrong meaning of the other.
   - word: Einnahme
+    class: noun
+    article: die
+    plural: Einnahmen
+    level: B1
+    meaning:
+      en: takings (money that comes in)
+      fa: دریافتی، عایدی (پولی که به دست می‌آید)
+    definition: Geld, das man bekommt, zum Beispiel ein Laden durch den Verkauf von Waren
+    example:
+      de: Im Dezember sind die Einnahmen des Ladens am höchsten.
+      en: The shop's takings are highest in December.
+      fa: دریافتی مغازه در ماه دسامبر از همیشه بیشتر است.
+    alsoAccepted: [die Einnahmen, der Erlös, der Umsatz]
+    tooCloseTo: [einnehmen]
+
   - word: Ausgabe
+    class: noun
+    article: die
+    plural: Ausgaben
+    level: B1
+    meaning:
+      en: expenditure, spending
+      fa: خرج
+    definition: Geld, das man für etwas ausgibt, zum Beispiel für Miete oder Essen
+    example:
+      de: Unsere größte Ausgabe ist die Miete.
+      en: Our biggest expense is the rent.
+      fa: بزرگ‌ترین خرج ما اجاره‌خانه است.
+    alsoAccepted: [die Ausgaben, die Kosten]
+
   - word: Gewinn
+    class: noun
+    article: der
+    plural: Gewinne
+    level: B1
+    meaning:
+      en: profit
+      fa: سود
+    definition: das Geld, das eine Firma mehr einnimmt, als sie ausgibt
+    example:
+      de: Die Firma hat dieses Jahr einen hohen Gewinn gemacht.
+      en: The company made a big profit this year.
+      fa: شرکت امسال سود زیادی کرد.
+    alsoAccepted: [der Profit, der Überschuss]
+
   - word: Verlust
+    class: noun
+    article: der
+    plural: Verluste
+    level: B1
+    meaning:
+      en: loss
+      fa: ضرر، زیان
+    definition: wenn eine Firma oder eine Person mehr Geld ausgibt, als sie einnimmt
+    example:
+      de: Das Restaurant macht seit Monaten Verlust.
+      en: The restaurant has been making a loss for months.
+      fa: رستوران چند ماه است که ضرر می‌دهد.
+    alsoAccepted: [das Defizit, das Minus]
+
+  # Der Wert is the noun, wert the adjective; neither is offered as a wrong meaning of the other.
   - word: Wert
+    class: noun
+    article: der
+    plural: Werte
+    level: B1
+    meaning:
+      en: value
+      fa: ارزش
+    definition: wie viel Geld man für etwas bekommen könnte oder wie wichtig es für jemanden ist
+    example:
+      de: Der Wert des Hauses ist in zehn Jahren stark gestiegen.
+      en: The value of the house has risen sharply in ten years.
+      fa: ارزش این خانه در ده سال خیلی بالا رفته است.
+    tooCloseTo: [wert]
+
+  # wert, wertvoll and sich lohnen are near each other; none is offered as a wrong meaning of another.
   - word: wert
+    class: adjective
+    level: B1
+    meaning:
+      en: worth (a certain amount)
+      fa: به ارزش (مبلغی)، به قیمت (مثلاً صد یورو)
+    definition: so, dass man für etwas so viel Geld bekommen könnte, zum Beispiel hundert Euro
+    example:
+      de: Das alte Fahrrad ist noch 100 Euro wert.
+      en: The old bike is still worth 100 euros.
+      fa: این دوچرخهٔ کهنه هنوز ۱۰۰ یورو می‌ارزد.
+    alsoAccepted: [wert sein]
+    tooCloseTo: [Wert, wertvoll, lohnen]
+
   - word: wertlos
+    class: adjective
+    level: B1
+    meaning:
+      en: worthless
+      fa: بی‌ارزش
+    definition: so, dass etwas kein Geld bringt und niemand es haben will
+    example:
+      de: Der alte Fernseher ist heute fast wertlos.
+      en: The old television is almost worthless today.
+      fa: تلویزیون قدیمی امروز تقریباً بی‌ارزش است.
+
   - word: wertvoll
+    class: adjective
+    level: B1
+    meaning:
+      en: valuable
+      fa: باارزش، گران‌بها
+    definition: so, dass man für etwas viel Geld bekommen würde oder dass es für jemanden sehr wichtig ist
+    example:
+      de: Der Ring meiner Großmutter ist sehr wertvoll.
+      en: My grandmother's ring is very valuable.
+      fa: انگشتر مادربزرگم خیلی باارزش است.
+    alsoAccepted: [kostbar]
+    tooCloseTo: [wert]
+
+  # gratis and umsonst both mean "free of charge" here; each is right when the other is asked for.
   - word: gratis
+    class: adverb
+    level: B1
+    meaning:
+      en: free of charge
+      fa: رایگان، مجانی
+    definition: so, dass man nichts bezahlen muss
+    example:
+      de: Kinder unter sechs Jahren fahren gratis mit dem Bus.
+      en: Children under six travel free on the bus.
+      fa: بچه‌های زیر شش سال رایگان سوار اتوبوس می‌شوند.
+    alsoAccepted: [umsonst, kostenlos, kostenfrei]
+    tooCloseTo: [umsonst]
+
   - word: umsonst
+    class: adverb
+    level: B1
+    meaning:
+      en: for free, for nothing
+      fa: مفت، بی‌پول
+    definition: ohne dass man Geld dafür gibt
+    example:
+      de: Den Kaffee bekommst du heute umsonst.
+      en: You get the coffee for free today.
+      fa: امروز قهوه را مفت می‌گیری.
+    alsoAccepted: [gratis, kostenlos, kostenfrei]
+    tooCloseTo: [gratis]
+
+  # inklusive and pauschal both say that a price covers more; neither is offered as a wrong meaning of the other.
   - word: inklusive
+    class: preposition
+    level: B1
+    meaning:
+      en: including
+      fa: شامل، با احتساب
+    definition: mit dabei, sodass man dafür nicht extra bezahlen muss
+    example:
+      de: Das Zimmer kostet 80 Euro pro Nacht, inklusive Frühstück.
+      en: The room costs 80 euros a night, including breakfast.
+      fa: اتاق شبی ۸۰ یورو است، با احتساب صبحانه.
+    alsoAccepted: [einschließlich, inbegriffen]
+    tooCloseTo: [pauschal]
+
   - word: pauschal
+    class: adjective
+    level: B1
+    meaning:
+      en: flat-rate, all-in (one price for everything)
+      fa: مقطوع، یکجا (یک مبلغ برای همه‌چیز)
+    definition: als ein Preis für alles zusammen, ohne die einzelnen Teile zu rechnen
+    example:
+      de: Für die Reinigung zahlen Sie pauschal 50 Euro.
+      en: You pay a flat rate of 50 euros for the cleaning.
+      fa: برای نظافت مبلغ مقطوع ۵۰ یورو می‌پردازید.
+    tooCloseTo: [inklusive]
+
   - word: Zuschlag
+    class: noun
+    article: der
+    plural: Zuschläge
+    level: B1
+    meaning:
+      en: surcharge, extra charge
+      fa: هزینهٔ اضافه
+    definition: Geld, das man zusätzlich zum normalen Preis bezahlen muss
+    example:
+      de: Für Fahrten in der Nacht verlangt das Taxi einen Zuschlag.
+      en: The taxi charges a surcharge for night journeys.
+      fa: تاکسی برای سفرهای شبانه هزینهٔ اضافه می‌گیرد.
+    alsoAccepted: [der Aufpreis, der Aufschlag]
+
+  # Der Rabatt, das Sonderangebot and reduzieren all make a price lower; none is offered as a wrong meaning of another.
   - word: Rabatt
+    class: noun
+    article: der
+    plural: Rabatte
+    level: B1
+    meaning:
+      en: discount
+      fa: تخفیف
+    definition: wenn man weniger bezahlen muss als der normale Preis, zum Beispiel als Student
+    example:
+      de: Mit dem Studentenausweis bekommst du zehn Prozent Rabatt.
+      en: With your student card you get a ten per cent discount.
+      fa: با کارت دانشجویی ده درصد تخفیف می‌گیری.
+    alsoAccepted: [der Nachlass, der Preisnachlass, die Ermäßigung]
+    tooCloseTo: [Sonderangebot, reduzieren]
+
   - word: Sonderangebot
+    class: noun
+    article: das
+    plural: Sonderangebote
+    level: B1
+    meaning:
+      en: special offer
+      fa: پیشنهاد ویژه، حراج
+    definition: eine Ware, die für kurze Zeit billiger ist als sonst
+    example:
+      de: Diese Woche sind Äpfel im Sonderangebot.
+      en: Apples are on special offer this week.
+      fa: این هفته سیب حراج است.
+    alsoAccepted: [das Angebot]
+    tooCloseTo: [Rabatt]
+
+  # erhöhen and die Erhöhung are the verb and the noun; neither is offered as a wrong meaning of the other.
   - word: erhöhen
+    class: verb
+    level: B1
+    meaning:
+      en: to raise, to increase (a price or an amount)
+      fa: بالا بردن، افزایش دادن
+    definition: etwas größer oder höher machen, zum Beispiel einen Preis
+    example:
+      de: Der Vermieter will die Miete im Januar erhöhen.
+      en: The landlord wants to raise the rent in January.
+      fa: صاحب‌خانه می‌خواهد اجاره را در ژانویه بالا ببرد.
+    alsoAccepted: [steigern, anheben]
+    tooCloseTo: [Erhöhung]
+
   - word: Erhöhung
+    class: noun
+    article: die
+    plural: Erhöhungen
+    level: B1
+    meaning:
+      en: increase, raise (of a price or an amount)
+      fa: افزایش (بالا بردن قیمت یا مقدار)
+    definition: das, was passiert, wenn jemand einen Preis oder eine Zahl höher macht
+    example:
+      de: Die Mitarbeiter fordern eine Erhöhung des Lohns.
+      en: The staff are demanding a pay rise.
+      fa: کارکنان خواستار افزایش دستمزد هستند.
+    alsoAccepted: [die Steigerung, die Anhebung, der Anstieg]
+    tooCloseTo: [erhöhen]
+
   - word: reduzieren
+    class: verb
+    level: B1
+    meaning:
+      en: to reduce, to lower
+      fa: کاهش دادن، کم کردن
+    definition: etwas kleiner oder weniger machen
+    example:
+      de: Im Sommer reduziert der Laden die Preise für Wintermäntel.
+      en: In summer the shop reduces its prices for winter coats.
+      fa: مغازه در تابستان قیمت پالتوهای زمستانی را کم می‌کند.
+    alsoAccepted: [senken, verringern, vermindern]
+    tooCloseTo: [Rabatt]
+
   - word: lohnen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to be worth it, to pay off
+      fa: ارزش زحمت یا هزینه را داشتن، صرف کردن
+    definition: so gut sein, dass die Arbeit, die Zeit oder das Geld nicht verloren ist
+    example:
+      de: "Der Weg lohnt sich: Die Aussicht ist wunderschön."
+      en: "The walk is worth it: the view is beautiful."
+      fa: این راه ارزشش را دارد؛ منظره فوق‌العاده زیباست.
+    alsoAccepted: [sich rentieren, sich auszahlen]
+    tooCloseTo: [wert]
+
   - word: berechnen
+    class: verb
+    level: B1
+    meaning:
+      en: to calculate; to charge (for something)
+      fa: حساب کردن، محاسبه کردن
+    definition: mit Zahlen herausfinden, wie viel etwas kostet, oder diesen Preis von jemandem verlangen
+    example:
+      de: Für die Lieferung berechnen wir fünf Euro.
+      en: We charge five euros for delivery.
+      fa: برای ارسال پنج یورو حساب می‌کنیم.
+    alsoAccepted: [ausrechnen, rechnen]
+
   - word: einnehmen
+    class: verb
+    level: B1
+    meaning:
+      en: to take in (money from sales)
+      fa: به دست آوردن (پول از فروش)
+    definition: Geld bekommen, weil man etwas verkauft oder anbietet
+    example:
+      de: Beim Flohmarkt haben wir 200 Euro eingenommen.
+      en: We took in 200 euros at the flea market.
+      fa: در بازار کهنه‌فروش‌ها ۲۰۰ یورو به دست آوردیم.
+    alsoAccepted: [verdienen]
+    tooCloseTo: [Einnahme]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections, then the ones changed after the second one's; not people)"
+  date: 2026-11-28
+  pool: aa932410d43023bc
