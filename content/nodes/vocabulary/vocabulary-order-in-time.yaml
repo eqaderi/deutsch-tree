@@ -1,36 +1,317 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A definition in simple German shows the word's place in a sentence with "…", since a small
+# word is hard to say in other words. `lassen` is taught in the sense "have something done".
 id: vocabulary-order-in-time
 kind: vocabulary
 level: A2
 chapter: a2-words-small-words
 order: 2
-status: coming-soon
+status: published
 title:
   en: "First, then, suddenly: the order of events"
   fa: "اول، بعد، ناگهان: ترتیب رویدادها"
   de: "Zuerst, dann, plötzlich: die Reihenfolge"
+attemptSize: 15
 words:
   - word: damals
+    class: adverb
+    level: A2
+    meaning:
+      en: back then, at that time (in the past)
+      fa: آن زمان، آن موقع (در گذشته)
+    definition: "zu der Zeit in der Vergangenheit, von der man gerade spricht: Ich habe als Student in Rom gewohnt. … war alles noch billig."
+    example:
+      de: Damals gab es noch keine Handys.
+      en: Back then there were no mobile phones yet.
+      fa: آن زمان هنوز تلفن همراه وجود نداشت.
+
   - word: endlich
+    class: adverb
+    level: A2
+    meaning:
+      en: finally, at last (after a long wait)
+      fa: بالاخره (پس از انتظاری طولانی)
+    definition: "nach langem Warten: Der Bus ist … da!"
+    example:
+      de: Endlich ist Wochenende!
+      en: At last it's the weekend!
+      fa: بالاخره آخر هفته شد!
+    tooCloseTo: [zuletzt]
+
   - word: plötzlich
+    class: adverb
+    level: A2
+    meaning:
+      en: suddenly
+      fa: ناگهان، یک‌دفعه
+    definition: sehr schnell und ohne dass man es erwartet
+    example:
+      de: Plötzlich ging das Licht aus.
+      en: Suddenly the light went out.
+      fa: ناگهان چراغ خاموش شد.
+    alsoAccepted: [auf einmal]
+
   - word: zuerst
+    class: adverb
+    level: A2
+    meaning:
+      en: first (before everything else)
+      fa: اول، اول از همه
+    definition: "als Erstes, vor allen anderen Sachen: … essen wir, dann gehen wir spazieren."
+    example:
+      de: Zuerst wasche ich das Gemüse, dann schneide ich es.
+      en: First I wash the vegetables, then I cut them.
+      fa: اول سبزی‌ها را می‌شویم، بعد آن‌ها را خرد می‌کنم.
+    alsoAccepted: [als Erstes, erst, erst einmal, erstmal, zuallererst]
+    tooCloseTo: [erstens, erst]
+
   - word: zuletzt
+    class: adverb
+    level: A2
+    meaning:
+      en: last, at the end (as the last step)
+      fa: در آخر، آخر از همه
+    definition: "als Letztes, nach allen anderen Sachen: … machen wir das Licht aus."
+    example:
+      de: Zuletzt räumen wir die Küche auf.
+      en: Last of all we tidy up the kitchen.
+      fa: در آخر آشپزخانه را مرتب می‌کنیم.
+    alsoAccepted: [als Letztes, zum Schluss, am Ende, schließlich]
+    tooCloseTo: [endlich]
+
   - word: vorher
+    class: adverb
+    level: A2
+    meaning:
+      en: before, beforehand (earlier than that)
+      fa: پیش از آن، از قبل
+    definition: "vor dieser Zeit: Um acht beginnt der Film. Kurz … essen wir noch etwas."
+    example:
+      de: Wir gehen ins Kino, aber vorher essen wir eine Pizza.
+      en: We're going to the cinema, but before that we're having a pizza.
+      fa: به سینما می‌رویم، اما پیش از آن یک پیتزا می‌خوریم.
+    alsoAccepted: [davor, zuvor]
+    tooCloseTo: [damals]
+
   - word: vorbei
+    class: adverb
+    level: A2
+    meaning:
+      en: over, past (of a time, as in "The summer is over")
+      fa: گذشته، به سر آمده (برای زمان، مثلاً تعطیلات)
+    definition: "zu Ende: Der Sommer ist schon …"
+    example:
+      de: Die Ferien sind leider schon vorbei.
+      en: Unfortunately the holidays are already over.
+      fa: متأسفانه تعطیلات دیگر تمام شده است.
+    alsoAccepted: [vorüber, zu Ende, um, aus]
+
   - word: wieder
+    class: adverb
+    level: A2
+    meaning:
+      en: again
+      fa: دوباره، باز
+    definition: noch einmal, wie schon vorher
+    example:
+      de: Morgen scheint wieder die Sonne.
+      en: Tomorrow the sun will shine again.
+      fa: فردا دوباره آفتاب می‌تابد.
+    alsoAccepted: [noch einmal, noch mal, nochmal, erneut]
+
   - word: erst
+    class: adverb
+    level: A2
+    meaning:
+      en: not until, only (at a later time than expected)
+      fa: تازه (دیرتر از انتظار)
+    definition: "nicht früher als: Der Zug kommt … um zehn Uhr, nicht schon um neun."
+    example:
+      de: Der Laden öffnet erst um zehn Uhr.
+      en: The shop doesn't open until ten o'clock.
+      fa: مغازه تازه ساعت ده باز می‌شود.
+    tooCloseTo: [zuerst]
+
   - word: erstens
+    class: adverb
+    level: A2
+    meaning:
+      en: firstly (the first point in a list of reasons)
+      fa: اولاً
+    definition: der erste Punkt in einer Liste von Gründen
+    example:
+      de: "Ich kaufe das Auto nicht: Erstens ist es zu teuer, zweitens ist es zu alt."
+      en: "I'm not buying the car: firstly it's too expensive, secondly it's too old."
+      fa: "این ماشین را نمی‌خرم: اولاً خیلی گران است، ثانیاً خیلی کهنه است."
+    tooCloseTo: [zuerst]
+
   - word: zweitens
+    class: adverb
+    level: A2
+    meaning:
+      en: secondly
+      fa: ثانیاً، دوم اینکه
+    definition: der zweite Punkt in einer Liste von Gründen
+    example:
+      de: Ich komme nicht mit. Erstens bin ich müde, und zweitens habe ich keine Zeit.
+      en: I'm not coming along. Firstly I'm tired, and secondly I have no time.
+      fa: با شما نمی‌آیم. اولاً خسته‌ام و ثانیاً وقت ندارم.
+
   - word: drittens
+    class: adverb
+    level: A2
+    meaning:
+      en: thirdly
+      fa: ثالثاً، سوم اینکه
+    definition: der dritte Punkt in einer Liste von Gründen
+    example:
+      de: Und drittens liegt die Wohnung direkt an der Autobahn.
+      en: And thirdly, the flat is right next to the motorway.
+      fa: و ثالثاً آپارتمان درست کنار بزرگراه است.
+
   - word: viertens
+    class: adverb
+    level: A2
+    meaning:
+      en: fourthly
+      fa: رابعاً، چهارم اینکه
+    definition: der vierte Punkt in einer Liste von Gründen
+    example:
+      de: Viertens ist die Miete viel zu hoch.
+      en: Fourthly, the rent is far too high.
+      fa: رابعاً اجاره خیلی زیاد است.
+
   - word: beenden
+    class: verb
+    level: A2
+    meaning:
+      en: to end, to finish (something)
+      fa: به پایان رساندن، تمام کردن
+    definition: eine Sache zu Ende machen
+    example:
+      de: Ich beende mein Studium im nächsten Jahr.
+      en: I'm finishing my degree next year.
+      fa: سال آینده تحصیلاتم را به پایان می‌رسانم.
+    alsoAccepted: [abschließen, fertig machen]
+
   - word: verschieben
+    class: verb
+    level: A2
+    meaning:
+      en: to postpone, to put off
+      fa: به تعویق انداختن
+    definition: einen Termin auf eine spätere Zeit legen
+    example:
+      de: Wir müssen das Treffen auf Freitag verschieben.
+      en: We have to postpone the meeting to Friday.
+      fa: باید جلسه را به جمعه موکول کنیم.
+    alsoAccepted: [aufschieben, verlegen]
+
   - word: passieren
+    class: verb
+    level: A2
+    meaning:
+      en: to happen
+      fa: اتفاق افتادن
+    definition: "als Ereignis kommen, oft ohne Plan: Ein Unfall kann schnell …"
+    example:
+      de: Was ist passiert? Du bist ja ganz nass!
+      en: What happened? You're completely wet!
+      fa: چه اتفاقی افتاده؟ تو که سراپا خیس شده‌ای!
+    alsoAccepted: [geschehen, sich ereignen]
+
   - word: klappen
+    class: verb
+    level: A2
+    meaning:
+      en: to work out, to go well (as planned)
+      fa: جور شدن، خوب پیش رفتن
+    definition: "so gut gehen, wie man es geplant hat: Keine Angst, das wird schon …!"
+    example:
+      de: Hat es mit dem Termin beim Arzt geklappt?
+      en: Did it work out with the doctor's appointment?
+      fa: وقت دکتر جور شد؟
+    alsoAccepted: [funktionieren, gelingen, hinhauen, gut gehen, gutgehen]
+
   - word: versuchen
+    class: verb
+    level: A2
+    meaning:
+      en: to try (to do something), to attempt
+      fa: سعی کردن (برای انجام کاری)
+    definition: "schauen, ob man etwas schafft: Ich will …, morgen pünktlich zu sein."
+    example:
+      de: Ich versuche, morgen früher zu kommen.
+      en: I'll try to come earlier tomorrow.
+      fa: سعی می‌کنم فردا زودتر بیایم.
+    alsoAccepted: [probieren]
+
   - word: planen
+    class: verb
+    level: A2
+    meaning:
+      en: to plan (work out the steps of something, e.g. a trip)
+      fa: برنامه‌ریزی کردن (مثلاً برای یک سفر)
+    definition: vorher genau überlegen, wie man etwas macht, zum Beispiel eine Reise
+    example:
+      de: Wir planen eine Reise nach Norwegen.
+      en: We're planning a trip to Norway.
+      fa: سفری به نروژ را برنامه‌ریزی می‌کنیم.
+
   - word: vorbereiten
+    class: verb
+    level: A2
+    meaning:
+      en: to prepare (something), to get (something) ready
+      fa: آماده کردن، تدارک دیدن
+    definition: vorher alles fertig machen, was man für einen Termin braucht
+    example:
+      de: Ich muss noch die Präsentation für morgen vorbereiten.
+      en: I still have to prepare the presentation for tomorrow.
+      fa: هنوز باید ارائهٔ فردا را آماده کنم.
+
   - word: organisieren
+    class: verb
+    level: A2
+    meaning:
+      en: to organise
+      fa: ترتیب دادن، سازمان دادن
+    definition: dafür sorgen, dass ein Fest, ein Treffen oder eine Reise gut stattfindet
+    example:
+      de: Meine Schwester organisiert das Familienfest.
+      en: My sister is organising the family party.
+      fa: خواهرم جشن خانوادگی را ترتیب می‌دهد.
+    alsoAccepted: [veranstalten, ausrichten]
+
   - word: beeilen
+    class: verb
+    reflexive: sich
+    level: A2
+    meaning:
+      en: to hurry
+      fa: عجله کردن
+    definition: schnell machen, weil man wenig Zeit hat
+    example:
+      de: Beeil dich, der Bus kommt gleich!
+      en: Hurry up, the bus is coming any minute!
+      fa: عجله کن، اتوبوس الان می‌رسد!
+    alsoAccepted: [eilen]
+
   - word: lassen
+    class: verb
+    level: A2
+    meaning:
+      en: to have (something) done (by someone else)
+      fa: سپردن کاری به دیگری (مثلاً تعمیر ماشین)
+    definition: "eine Arbeit nicht selbst machen, sondern einer anderen Person geben: das Auto reparieren …"
+    example:
+      de: Ich lasse mein Fahrrad in der Werkstatt reparieren.
+      en: I'm having my bike repaired at the workshop.
+      fa: دوچرخه‌ام را برای تعمیر به تعمیرگاه می‌دهم.
+
+review:
+  reviewer: independent AI agents (four fresh Claude Opus 5.5 subagents, sheet
+    only; 138, then 99, 26 and 21 questions)
+  date: 2026-11-28
+  pool: 0fcaa15e5d8328e6

@@ -1030,6 +1030,18 @@ changes:
       plural: sg,
       reason: 'a name of a continent, used without article: "in Europa", not "das Europa"',
     }
+  - {
+      word: Österreich,
+      article: none,
+      plural: sg,
+      reason: 'a name of a country, used without article: "in Österreich", not "das Österreich"',
+    }
+  - {
+      word: Luxemburg,
+      article: none,
+      plural: sg,
+      reason: 'a name of a country, used without article: "in Luxemburg", not "das Luxemburg"',
+    }
   - { word: Prüfer, article: der, plural: "-" }
   - { word: Bäcker, article: der, plural: "-" }
   - { word: Kaufmann, article: der, plural: Kaufleute }
@@ -1037,8 +1049,6 @@ changes:
   - { word: Techniker, article: der, plural: "-" }
   - { word: Mama, article: die, plural: "-s" }
   - { word: Papa, article: der, plural: "-s" }
-  - { word: Österreich, article: das, plural: sg }
-  - { word: Luxemburg, article: das, plural: sg }
   - { word: Luxemburger, article: der, plural: "-" }
   - { word: Franken, article: der, plural: "-" }
   - { word: Rappen, article: der, plural: "-" }

@@ -4,7 +4,7 @@ kind: phrases
 level: A2
 chapter: a2-phrases-arrangements
 order: 6
-status: coming-soon
+status: published
 title:
   en: "Asking again when you did not understand"
   fa: "دوباره پرسیدن وقتی متوجه نشده‌اید"
@@ -14,3 +14,281 @@ purpose:
   fa: "بگویید که متوجه نشده‌اید، از طرف مقابل بخواهید تکرار کند یا توضیح دهد، و مطمئن شوید که درست فهمیده‌اید."
   de: "Sagen, dass man etwas nicht verstanden hat, um Wiederholung oder Erklärung bitten und prüfen, ob man es richtig verstanden hat."
 examTasks: [exam-sprechen-1, exam-sprechen-3]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Wie bitte?
+    meaning:
+      en: Pardon? Sorry? The short, polite question when you did not hear something. It works with *du* and with *Sie*.
+      fa: «ببخشید، چه گفتید؟» پرسش کوتاه و مؤدبانه وقتی چیزی را نشنیده‌اید. هم با *du* به کار می‌رود و هم با *Sie*.
+      de: Die kurze, höfliche Frage, wenn man etwas nicht gehört hat. Sie passt zu *du* und zu *Sie*.
+    examTasks: [exam-sprechen-1, exam-sprechen-3]
+    example:
+      de: Wie bitte? Ich habe dich nicht gehört.
+      en: Sorry? I didn't hear you.
+      fa: ببخشید، چه گفتی؟ صدایت را نشنیدم.
+
+  - de: Entschuldigung, das habe ich nicht verstanden.
+    meaning:
+      en: Sorry, I didn't understand that. Says clearly that you did not understand. *das* comes first, so *habe* comes before *ich*.
+      fa: «ببخشید، این را متوجه نشدم.» به‌روشنی می‌گوید که متوجه نشده‌اید. *das* در آغاز جمله آمده است، پس *habe* پیش از *ich* قرار می‌گیرد.
+      de: Man sagt klar, dass man etwas nicht verstanden hat. *das* steht am Anfang, also kommt *habe* vor *ich*.
+    examTasks: [exam-sprechen-1, exam-sprechen-3]
+    example:
+      de: Entschuldigung, das habe ich nicht verstanden. Was hast du gesagt?
+      en: Sorry, I didn't understand that. What did you say?
+      fa: ببخشید، این را متوجه نشدم. چه گفتی؟
+
+  - de: Kannst du das bitte wiederholen?
+    meaning:
+      en: Can you repeat that, please? Asks the other person to say it again. With *Sie* it is *Können Sie das bitte wiederholen?*
+      fa: «می‌شود لطفاً تکرارش کنی؟» از طرف مقابل می‌خواهد دوباره بگوید. با *Sie* می‌شود *Können Sie das bitte wiederholen?*
+      de: Man bittet die andere Person, es noch einmal zu sagen. Bei *Sie* fragt man *Können Sie das bitte wiederholen?*
+    examTasks: [exam-sprechen-1, exam-sprechen-3]
+    example:
+      de: Wie bitte? Kannst du das bitte wiederholen?
+      en: Sorry? Can you repeat that, please?
+      fa: ببخشید، چه گفتی؟ می‌شود لطفاً تکرارش کنی؟
+
+  - de: Kannst du bitte etwas langsamer sprechen?
+    meaning:
+      en: Can you speak a little more slowly, please? *langsamer* is the comparative of *langsam*, and *sprechen* goes to the end.
+      fa: «می‌شود لطفاً کمی آهسته‌تر حرف بزنی؟» *langsamer* صفت تفضیلی *langsam* است و *sprechen* به پایان جمله می‌رود.
+      de: "*langsamer* ist der Komparativ von *langsam*, und *sprechen* steht am Ende."
+    examTasks: [exam-sprechen-1, exam-sprechen-3]
+    example:
+      de: Entschuldigung, kannst du bitte etwas langsamer sprechen?
+      en: Sorry, can you speak a little more slowly, please?
+      fa: ببخشید، می‌شود لطفاً کمی آهسته‌تر حرف بزنی؟
+
+  - de: Was meinst du mit …?
+    meaning:
+      en: What do you mean by …? Asks what the other person means by a word or an idea. After *mit* comes the dative.
+      fa: «منظورت از … چیست؟» می‌پرسد طرف مقابل از واژه یا فکری چه منظوری دارد. پس از *mit* حالت *Dativ* می‌آید.
+      de: Man fragt, was die andere Person mit einem Wort oder einer Idee meint. Nach *mit* kommt der Dativ.
+    examTasks: [exam-sprechen-1, exam-sprechen-3]
+    example:
+      de: Was meinst du mit „früh“? Um sieben oder um acht?
+      en: What do you mean by "early"? At seven or at eight?
+      fa: منظورت از «زود» چیست؟ ساعت هفت یا هشت؟
+
+  - de: Was bedeutet …?
+    meaning:
+      en: What does … mean? Asks for the meaning of a word you do not know.
+      fa: «… یعنی چه؟» معنای واژه‌ای را می‌پرسد که آن را نمی‌دانید.
+      de: Man fragt, was ein Wort heißt, das man nicht kennt.
+    examTasks: [exam-sprechen-1, exam-sprechen-3]
+    example:
+      de: Was bedeutet das Wort Feierabend?
+      en: What does the word Feierabend mean?
+      fa: واژهٔ *Feierabend* یعنی چه؟
+
+  - de: Habe ich richtig verstanden, dass …?
+    meaning:
+      en: Did I understand correctly that …? Checks that you understood. After *dass* the verb goes to the end.
+      fa: «درست فهمیدم که …؟» مطمئن می‌شود که درست فهمیده‌اید. پس از *dass* فعل به پایان جمله می‌رود.
+      de: Man prüft, ob man richtig verstanden hat. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-sprechen-1, exam-sprechen-3]
+    example:
+      de: Habe ich richtig verstanden, dass wir uns um acht treffen?
+      en: Did I understand correctly that we are meeting at eight?
+      fa: درست فهمیدم که ساعت هشت همدیگر را می‌بینیم؟
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9). The right option stands in
+# a different place from question to question.
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Dein Partner spricht sehr schnell. Was sagst du?
+    options:
+      - Kannst du bitte etwas langsamer sprichst?
+      - Kannst du bitte etwas langsamer zu sprechen?
+      - Kannst du bitte etwas langsamer sprechen?
+    answer: Kannst du bitte etwas langsamer sprechen?
+    explanation:
+      en: After *kannst* the second verb goes to the end as an infinitive, without *zu*.
+      fa: پس از *kannst* فعل دوم به شکل مصدر و بدون *zu* به پایان جمله می‌رود.
+      de: Nach *kannst* steht das zweite Verb im Infinitiv am Ende, ohne *zu*.
+
+  - id: q2
+    type: gap-fill
+    prompt: Das verstehe ich nicht. Was meinst du ___ diesem Wort?
+    options: [von, mit, für]
+    answer: mit
+    explanation:
+      en: The phrase is *Was meinst du mit …?*, with the dative.
+      fa: عبارت *Was meinst du mit …?* است، با حالت *Dativ*.
+      de: Der Satz heißt *Was meinst du mit …?*, mit dem Dativ.
+
+  - id: q3
+    type: true-false
+    prompt: Kannst du das bitte wiederholen?
+    answer: true
+    explanation:
+      en: "*Kannst* comes first and *wiederholen* goes to the end. The sentence is correct."
+      fa: "*Kannst* در آغاز آمده است و *wiederholen* در پایان جمله. جمله درست است."
+      de: "*Kannst* steht vorne, *wiederholen* am Ende. Der Satz ist richtig."
+
+  - id: q4
+    type: true-false
+    prompt: Entschuldigung, das ich habe nicht verstanden.
+    answer: false
+    explanation:
+      en: When *das* comes first, the verb comes next, before *ich*. *Das habe ich nicht verstanden.*
+      fa: "وقتی *das* در آغاز جمله است، فعل پس از آن و پیش از *ich* می‌آید: *Das habe ich nicht verstanden.*"
+      de: "Wenn *das* am Anfang steht, kommt danach das Verb, vor *ich*: *Das habe ich nicht verstanden.*"
+
+  - id: q5
+    type: find-error
+    prompt: Was bedeutet dieser Wort?
+    answer: dieser
+    explanation:
+      en: "*das Wort* is neuter, so it is *dieses Wort*."
+      fa: "*Wort* اسم خنثی (*das*) است، پس *dieses Wort* درست است."
+      de: "Es heißt *das Wort*, also *dieses Wort*."
+
+  - id: q6
+    type: word-order
+    answers:
+      - [was, meinst, du, mit, diesem Wort]
+    end: "?"
+    explanation:
+      en: "The verb comes right after *was*, then *du*: *Was meinst du mit diesem Wort?*"
+      fa: "فعل بلافاصله پس از *was* می‌آید و پس از آن *du*: *Was meinst du mit diesem Wort?*"
+      de: "Das Verb steht direkt nach *was*, dann kommt *du*: *Was meinst du mit diesem Wort?*"
+
+  - id: q7
+    type: multiple-choice
+    prompt: Du hast nicht gehört, was deine Partnerin gesagt hat. Was sagst du?
+    options:
+      - Bitte schön!
+      - Wie bitte?
+      - Wie geht's?
+    answer: Wie bitte?
+    explanation:
+      en: When you did not hear something, you ask *Wie bitte?*
+      fa: وقتی چیزی را نشنیده‌اید، می‌پرسید *Wie bitte?*
+      de: Wenn man etwas nicht gehört hat, fragt man *Wie bitte?*
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: ___ bitte? Ich habe dich nicht gehört.
+    answers: [Wie]
+    explanation:
+      en: The short question is *Wie bitte?*
+      fa: پرسش کوتاه *Wie bitte?* است.
+      de: Die kurze Frage ist *Wie bitte?*
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Entschuldigung, das habe ich nicht ___ (verstehen).
+    answers: [verstanden]
+    explanation:
+      en: The past participle of *verstehen* is *verstanden*.
+      fa: صفت مفعولی (*Partizip II*) فعل *verstehen* واژهٔ *verstanden* است.
+      de: Das Partizip II von *verstehen* ist *verstanden*.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Entschuldigung, das ___ (haben) ich nicht verstanden.
+    answers: [habe, hatte]
+    explanation:
+      en: After *das* the verb comes next. With *ich* it is *habe*.
+      fa: پس از *das* فعل می‌آید. با *ich* فعل *habe* است.
+      de: Nach *das* kommt das Verb. Bei *ich* heißt es *habe*.
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: ___ (können) du das bitte wiederholen?
+    answers: [Kannst, Könntest]
+    explanation:
+      en: With *du* the verb is *kannst*. *Könntest* is a little more polite and also right.
+      fa: با *du* فعل *kannst* است. *Könntest* کمی مؤدبانه‌تر است و آن هم درست است.
+      de: Bei *du* heißt es *kannst*. *Könntest* ist etwas höflicher und auch richtig.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Kannst du bitte etwas ___ (langsam, Komparativ) sprechen?
+    answers: [langsamer]
+    explanation:
+      en: The comparative of *langsam* is *langsamer*.
+      fa: صفت تفضیلی *langsam* واژهٔ *langsamer* است.
+      de: Der Komparativ von *langsam* ist *langsamer*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Das verstehe ich nicht. Was ___ (meinen) du mit diesem Wort?
+    answers: [meinst, meintest]
+    explanation:
+      en: With *du* the verb is *meinst*. The past *meintest* is also correct German.
+      fa: با *du* فعل *meinst* است.
+      de: Bei *du* heißt es *meinst*.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Das verstehe ich nicht. Was meinst du ___ diesem Wort?
+    answers: [mit]
+    explanation:
+      en: The phrase is *Was meinst du mit …?*
+      fa: عبارت *Was meinst du mit …?* است.
+      de: Der Satz heißt *Was meinst du mit …?*
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Was ___ (bedeuten) das Wort Feierabend?
+    answers: [bedeutet]
+    explanation:
+      en: With *das Wort* the verb is *bedeutet*.
+      fa: با *das Wort* فعل *bedeutet* است.
+      de: Bei *das Wort* heißt es *bedeutet*.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Was bedeutet ___ (dieser) Wort?
+    answers: [dieses]
+    explanation:
+      en: "*das Wort* is neuter, so it is *dieses Wort*."
+      fa: "*Wort* اسم خنثی (*das*) است، پس *dieses Wort* درست است."
+      de: "Es heißt *das Wort*, also *dieses Wort*."
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Habe ich richtig ___ (verstehen), dass wir uns um acht treffen?
+    answers: [verstanden]
+    explanation:
+      en: The phrase is *Habe ich richtig verstanden, dass …?*
+      fa: عبارت *Habe ich richtig verstanden, dass …?* است.
+      de: Der Satz heißt *Habe ich richtig verstanden, dass …?*
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Habe ich richtig verstanden, ___ wir uns um acht treffen?
+    answers: [dass]
+    explanation:
+      en: The phrase is *Habe ich richtig verstanden, dass …?*, with the verb at the end.
+      fa: عبارت *Habe ich richtig verstanden, dass …?* است و فعل به پایان جمله می‌رود.
+      de: Der Satz heißt *Habe ich richtig verstanden, dass …?*, und das Verb steht am Ende.
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Habe ich richtig verstanden, dass wir uns um acht ___ (treffen)?
+    answers: [treffen]
+    explanation:
+      en: After *dass* the verb goes to the end. With *wir* it is *treffen*.
+      fa: پس از *dass* فعل به پایان جمله می‌رود. با *wir* فعل *treffen* است.
+      de: Nach *dass* steht das Verb am Ende. Bei *wir* heißt es *treffen*.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Wie bitte? ___ (können) Sie das bitte wiederholen, Herr Wolf?
+    answers: [Können, Könnten]
+    explanation:
+      en: With *Sie* the verb is *Können*. *Könnten* is a little more polite and also right.
+      fa: با *Sie* فعل *Können* است. *Könnten* کمی مؤدبانه‌تر است و آن هم درست است.
+      de: Bei *Sie* heißt es *Können*. *Könnten* ist etwas höflicher und auch richtig.
+
+review:
+  reviewer: an independent AI agent (three fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: 23f42e651c3da10d

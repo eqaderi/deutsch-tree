@@ -4,7 +4,7 @@ kind: phrases
 level: A2
 chapter: a2-phrases-arrangements
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Giving advice and recommending"
   fa: "توصیه و راهنمایی کردن"
@@ -14,3 +14,279 @@ purpose:
   fa: "به کسی بگویید چه کاری می‌تواند بکند، یا چه چیزی به نظرتان ارزش انجام دادن دارد."
   de: "Jemandem sagen, was er tun könnte oder was man gut findet."
 examTasks: [exam-schreiben-1, exam-sprechen-1]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Du solltest …
+    meaning:
+      en: You should … Friendly advice. *solltest* stands in position 2 and the second verb goes to the end. To a person you call *Sie*, say *Sie sollten …*
+      fa: «بهتر است …» توصیه‌ای دوستانه. *solltest* در جایگاه دوم می‌آید و مصدر به پایان جمله می‌رود. به کسی که با *Sie* خطابش می‌کنید می‌گویید *Sie sollten …*
+      de: Ein freundlicher Rat. *solltest* steht auf Position 2, das zweite Verb steht am Ende. Bei *Sie* sagt man *Sie sollten …*
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Du bist immer so müde. Du solltest früher ins Bett gehen.
+      en: You are always so tired. You should go to bed earlier.
+      fa: همیشه خیلی خسته‌ای. بهتر است زودتر بخوابی.
+
+  - de: An deiner Stelle würde ich …
+    meaning:
+      en: If I were you, I would … You say what you would do in the other person's place. *würde* comes second and the second verb goes to the end. With *Sie* it is *An Ihrer Stelle …*
+      fa: «اگر جای تو بودم، …» می‌گویید خودتان در جای طرف مقابل چه می‌کردید. *würde* در جایگاه دوم می‌آید و مصدر به پایان جمله می‌رود. با *Sie* می‌شود *An Ihrer Stelle …*
+      de: Man sagt, was man selbst an der Stelle der anderen Person machen würde. *würde* steht auf Position 2, das zweite Verb steht am Ende. Bei *Sie* sagt man *An Ihrer Stelle …*
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: An deiner Stelle würde ich mit dem Zug fahren.
+      en: If I were you, I would go by train.
+      fa: اگر جای تو بودم، با قطار می‌رفتم.
+
+  - de: Am besten …
+    meaning:
+      en: The best thing is to … Gives the advice you think is best. *Am besten* comes first, so the verb comes next, before the subject.
+      fa: «بهترین کار این است که …» توصیه‌ای را می‌گوید که به نظرتان از همه بهتر است. *Am besten* در آغاز جمله می‌آید، پس فعل پس از آن و پیش از فاعل قرار می‌گیرد.
+      de: Man sagt, was man für die beste Lösung hält. *Am besten* steht am Anfang, dann kommt das Verb vor dem Subjekt.
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Der Weg ist weit. Am besten fährst du mit dem Bus.
+      en: It is a long way. The best thing is to take the bus.
+      fa: راه دور است. بهترین کار این است که با اتوبوس بروی.
+
+  - de: Warum … du nicht …?
+    meaning:
+      en: Why don't you …? A friendly question that gives advice. The verb comes right after *Warum*.
+      fa: «چرا … نمی‌کنی؟» پرسشی دوستانه که در واقع توصیه است. فعل بلافاصله پس از *Warum* می‌آید.
+      de: Eine freundliche Frage, mit der man einen Rat gibt. Das Verb steht direkt nach *Warum*.
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Warum fragst du nicht deine Lehrerin?
+      en: Why don't you ask your teacher?
+      fa: چرا از معلمت نمی‌پرسی؟
+
+  - de: Ich kann dir … empfehlen.
+    meaning:
+      en: I can recommend … to you. Recommends a place or a thing you know is good. *dir* is the dative of *du*, and *empfehlen* goes to the end. Shorter is *Ich empfehle dir …*
+      fa: «… را به تو توصیه می‌کنم.» جایی یا چیزی را که می‌دانید خوب است پیشنهاد می‌کند. *dir* حالت *Dativ* ضمیر *du* است و *empfehlen* به پایان جمله می‌رود. کوتاه‌ترش *Ich empfehle dir …* است.
+      de: Man empfiehlt einen Ort oder eine Sache, die man gut findet. *dir* ist der Dativ von *du*, und *empfehlen* steht am Ende. Kürzer sagt man *Ich empfehle dir …*
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Ich kann dir das kleine Hotel am See sehr empfehlen.
+      en: I can really recommend the little hotel by the lake to you.
+      fa: هتل کوچک کنار دریاچه را واقعاً به تو توصیه می‌کنم.
+
+  - de: Du musst unbedingt …!
+    meaning:
+      en: You really must …! A warm recommendation of something you liked a lot. *unbedingt* makes it strong; the second verb goes to the end.
+      fa: «حتماً باید …!» توصیهٔ گرم چیزی که خیلی دوستش داشته‌اید. *unbedingt* آن را پررنگ می‌کند و مصدر به پایان جمله می‌رود.
+      de: Man empfiehlt etwas, das einem sehr gut gefallen hat. *unbedingt* macht den Rat stark. Das zweite Verb steht am Ende.
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Der Film ist wirklich toll. Du musst ihn unbedingt sehen!
+      en: The film is really great. You really must see it!
+      fa: فیلم واقعاً عالی است. حتماً باید آن را ببینی!
+
+  - de: Probier doch mal …!
+    meaning:
+      en: Why not try …! A light, friendly tip, mostly for food or something new. *doch mal* makes the imperative soft. To two or more friends you say *Probiert doch mal …!*
+      fa: «… را امتحان کن!» توصیه‌ای سبک و دوستانه، بیشتر برای خوراکی یا چیزی تازه. *doch mal* امر را نرم می‌کند. به دو نفر یا بیشتر می‌گویید *Probiert doch mal …!*
+      de: Ein leichter, freundlicher Tipp, oft für Essen oder etwas Neues. Mit *doch mal* klingt der Imperativ freundlich. Zu zwei oder mehr Personen sagt man *Probiert doch mal …!*
+    examTasks: [exam-schreiben-1, exam-sprechen-1]
+    example:
+      de: Probier doch mal den Apfelkuchen hier, er ist super!
+      en: Why not try the apple cake here, it is great!
+      fa: کیک سیب اینجا را امتحان کن، فوق‌العاده است!
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9). The right option stands in
+# a different place from question to question.
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Dein Freund ist immer müde. Was rätst du ihm?
+    options:
+      - Du solltest früher ins Bett zu gehen.
+      - Du solltest früher ins Bett gehen.
+      - Du solltest früher gehen ins Bett.
+    answer: Du solltest früher ins Bett gehen.
+    explanation:
+      en: After *solltest* the second verb goes to the end, without *zu*.
+      fa: پس از *solltest* مصدر بدون *zu* به پایان جمله می‌رود.
+      de: Nach *solltest* steht das zweite Verb am Ende, ohne *zu*.
+
+  - id: q2
+    type: gap-fill
+    prompt: An deiner Stelle ___ ich mit dem Zug fahren.
+    options: [wurde, würdest, würde]
+    answer: würde
+    explanation:
+      en: The phrase is *An deiner Stelle würde ich …* With *ich* it is *würde*; *wurde* is the past, *würdest* is for *du*.
+      fa: عبارت *An deiner Stelle würde ich …* است. با *ich* می‌شود *würde*؛ *wurde* گذشتهٔ ساده است و *würdest* برای *du*.
+      de: Der Satz heißt *An deiner Stelle würde ich …* Bei *ich* heißt es *würde*. *wurde* ist Vergangenheit, *würdest* ist für *du*.
+
+  - id: q3
+    type: true-false
+    prompt: Warum du fragst nicht deine Lehrerin?
+    answer: false
+    explanation:
+      en: After *Warum* the verb comes next, before *du*. *Warum fragst du nicht deine Lehrerin?*
+      fa: "پس از *Warum* فعل می‌آید، پیش از *du*: *Warum fragst du nicht deine Lehrerin?*"
+      de: "Nach *Warum* kommt das Verb, vor *du*: *Warum fragst du nicht deine Lehrerin?*"
+
+  - id: q4
+    type: true-false
+    prompt: Ich kann dir das kleine Hotel am See sehr empfehlen.
+    answer: true
+    explanation:
+      en: "*dir* is the dative and *empfehlen* stands at the end, so the sentence is correct."
+      fa: "*dir* در حالت *Dativ* است و *empfehlen* در پایان جمله آمده است، پس جمله درست است."
+      de: "*dir* ist Dativ, und *empfehlen* steht am Ende. Der Satz ist richtig."
+
+  - id: q5
+    type: find-error
+    prompt: Ich kann dich das Hotel am See sehr empfehlen.
+    answer: dich
+    explanation:
+      en: You recommend something to a person, and the person is in the dative. *Ich kann dir … empfehlen.*
+      fa: "چیزی را به کسی توصیه می‌کنید و آن شخص در حالت *Dativ* می‌آید: *Ich kann dir … empfehlen.*"
+      de: "Man empfiehlt einer Person etwas, die Person steht im Dativ: *Ich kann dir … empfehlen.*"
+
+  - id: q6
+    type: word-order
+    answers:
+      - [warum, fragst, du, nicht, deine Lehrerin]
+      - [warum, fragst, du, deine Lehrerin, nicht]
+    end: "?"
+    explanation:
+      en: "The verb *fragst* comes right after *warum*, then *du*: *Warum fragst du nicht deine Lehrerin?*"
+      fa: "فعل *fragst* بلافاصله پس از *warum* می‌آید و پس از آن *du*: *Warum fragst du nicht deine Lehrerin?*"
+      de: "Das Verb *fragst* steht direkt nach *warum*, dann kommt *du*: *Warum fragst du nicht deine Lehrerin?*"
+
+  - id: q7
+    type: gap-fill
+    prompt: Der Film ist wirklich toll. Du musst ihn ___ sehen!
+    options: [kaum, unbedingt, leider]
+    answer: unbedingt
+    explanation:
+      en: A strong recommendation is *Du musst … unbedingt …!*
+      fa: توصیهٔ پررنگ با *Du musst … unbedingt …!* ساخته می‌شود.
+      de: Eine starke Empfehlung ist *Du musst … unbedingt …!*
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Du ___ (sollen, Konjunktiv II) mehr Wasser trinken.
+    answers: [solltest]
+    explanation:
+      en: Advice to *du* is *Du solltest …*
+      fa: توصیه به *du* با *Du solltest …* ساخته می‌شود.
+      de: Ein Rat an *du* ist *Du solltest …*
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Herr Wolf, Sie ___ (sollen, Konjunktiv II) mehr Pausen machen.
+    answers: [sollten]
+    explanation:
+      en: With *Sie* the form is *sollten*.
+      fa: با *Sie* صورت فعل *sollten* است.
+      de: Bei *Sie* heißt es *sollten*.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: An deiner ___ würde ich mit dem Zug fahren.
+    answers: [Stelle]
+    explanation:
+      en: The phrase is *An deiner Stelle würde ich …*
+      fa: عبارت *An deiner Stelle würde ich …* است.
+      de: Der Satz heißt *An deiner Stelle würde ich …*
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Frau Weber, an ___ (Ihr) Stelle würde ich einen Tisch reservieren.
+    answers: [Ihrer]
+    explanation:
+      en: With *Sie* it is *an Ihrer Stelle*. *an* takes the dative here, and *die Stelle* is feminine.
+      fa: با *Sie* می‌شود *an Ihrer Stelle*. *an* این‌جا حالت *Dativ* می‌خواهد و *Stelle* اسم مؤنث (*die*) است.
+      de: Bei *Sie* heißt es *an Ihrer Stelle*. Nach *an* kommt hier der Dativ, und es heißt *die Stelle*.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Der Weg ist weit. Am ___ (gut) fährst du mit dem Bus.
+    answers: [besten]
+    explanation:
+      en: The phrase is *Am besten …*, the superlative of *gut*.
+      fa: عبارت *Am besten …* است، صفت عالی *gut*.
+      de: Der Satz heißt *Am besten …*, das ist der Superlativ von *gut*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Der Weg ist weit. Am besten ___ (fahren) du mit dem Bus.
+    answers: [fährst]
+    explanation:
+      en: After *Am besten* the verb comes next. With *du*, *fahren* becomes *fährst*.
+      fa: پس از *Am besten* فعل می‌آید. *fahren* با *du* می‌شود *fährst*.
+      de: Nach *Am besten* kommt das Verb. Bei *du* wird *fahren* zu *fährst*.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Warum ___ (fragen) du nicht deine Lehrerin?
+    answers: [fragst, fragtest]
+    explanation:
+      en: With *du* the verb is *fragst*, right after *Warum*. The past *fragtest* is also correct German.
+      fa: با *du* فعل *fragst* است و بلافاصله پس از *Warum* می‌آید.
+      de: Bei *du* heißt es *fragst*, direkt nach *Warum*.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: ___ fragst du nicht deine Lehrerin? Sie kann dir sicher helfen.
+    answers: [Warum, Wieso, Weshalb]
+    explanation:
+      en: The phrase is *Warum … du nicht …?* *Wieso* and *Weshalb* mean the same.
+      fa: عبارت *Warum … du nicht …?* است. *Wieso* و *Weshalb* هم همین معنا را دارند.
+      de: Der Satz heißt *Warum … du nicht …?* *Wieso* und *Weshalb* bedeuten das Gleiche.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Ich kann ___ (du) das kleine Hotel am See sehr empfehlen.
+    answers: [dir]
+    explanation:
+      en: The person you recommend something to is in the dative. The dative of *du* is *dir*.
+      fa: کسی که چیزی را به او توصیه می‌کنید در حالت *Dativ* می‌آید. حالت *Dativ* ضمیر *du* واژهٔ *dir* است.
+      de: Die Person, der man etwas empfiehlt, steht im Dativ. Der Dativ von *du* ist *dir*.
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Ich ___ (empfehlen) dir das kleine Hotel am See.
+    answers: [empfehle, empfahl]
+    explanation:
+      en: With *ich* the verb is *empfehle*. The past *empfahl* is also correct German.
+      fa: با *ich* فعل *empfehle* است.
+      de: Bei *ich* heißt es *empfehle*.
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Der Film läuft noch bis Sonntag im Kino. Den ___ (müssen) du unbedingt sehen!
+    answers: [musst, müsstest]
+    explanation:
+      en: With *du* the verb is *musst*. *müsstest* is a little softer and also right.
+      fa: با *du* فعل *musst* است. *müsstest* کمی نرم‌تر است و آن هم درست است.
+      de: Bei *du* heißt es *musst*. *müsstest* ist etwas weicher und auch richtig.
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Tom, ___ (probieren) doch mal den Apfelkuchen hier!
+    answers: [probier, probiere]
+    explanation:
+      en: To one friend the imperative is *probier* (or *probiere*). *doch mal* makes it friendly.
+      fa: امر برای یک دوست *probier* (یا *probiere*) است. *doch mal* آن را دوستانه می‌کند.
+      de: Zu einer Person sagt man *probier* (oder *probiere*). *doch mal* macht es freundlich.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Was ___ (sollen, Konjunktiv II) ich machen? – Du solltest zum Arzt gehen.
+    answers: [sollte]
+    explanation:
+      en: To ask for advice, say *Was sollte ich machen?* With *ich* the form is *sollte*.
+      fa: برای خواستن توصیه می‌پرسید *Was sollte ich machen?* با *ich* صورت فعل *sollte* است.
+      de: Wenn man einen Rat braucht, fragt man *Was sollte ich machen?* Bei *ich* heißt es *sollte*.
+
+review:
+  reviewer: an independent AI agent (two fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: 5ce6e28b7318eea8
