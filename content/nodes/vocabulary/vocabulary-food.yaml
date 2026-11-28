@@ -1,37 +1,377 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-food
 kind: vocabulary
 level: A1
 chapter: a1-words-food-home
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Food"
   fa: "خوراکی‌ها"
   de: "Lebensmittel"
+attemptSize: 15
 words:
   - word: Essen
+    class: noun
+    article: das
+    plural: Essen
+    level: A1
+    meaning:
+      en: food, meal (what you eat)
+      fa: غذا
+    definition: das, was man isst, zum Beispiel Suppe, Fleisch oder Nudeln
+    example:
+      de: Das Essen ist fertig!
+      en: The food is ready!
+      fa: غذا آماده است!
+    alsoAccepted: [die Mahlzeit, das Gericht, die Speise, die Nahrung]
+
   - word: Lebensmittel
+    class: noun
+    article: die
+    number: plural-only
+    level: A1
+    meaning:
+      en: groceries, foodstuffs
+      fa: مواد غذایی، خواربار
+    definition: alle Sachen zum Essen und Trinken, die man im Supermarkt kauft
+    example:
+      de: Lebensmittel kaufe ich im Supermarkt.
+      en: I buy groceries at the supermarket.
+      fa: مواد غذایی را از سوپرمارکت می‌خرم.
+    alsoAccepted: [das Lebensmittel, die Nahrungsmittel, die Esswaren]
+
   - word: Brot
+    class: noun
+    article: das
+    plural: Brote
+    level: A1
+    meaning:
+      en: bread
+      fa: نان
+    definition: man backt es groß aus Mehl, Wasser und Salz und schneidet es dann in Scheiben
+    example:
+      de: Wir essen Brot mit Käse.
+      en: We eat bread with cheese.
+      fa: ما نان و پنیر می‌خوریم.
+
   - word: Brötchen
+    class: noun
+    article: das
+    plural: Brötchen
+    level: A1
+    meaning:
+      en: bread roll
+      fa: نان گرد کوچک
+    definition: ein kleines, rundes Brot, oft zum Frühstück
+    example:
+      de: Ich hole morgens frische Brötchen vom Bäcker.
+      en: In the mornings I get fresh rolls from the baker's.
+      fa: صبح‌ها از نانوایی نان گرد تازه می‌خرم.
+    alsoAccepted: [die Semmel, der Weck, der Wecken, die Schrippe, das Rundstück, das Brötli, das Weckerl]
+
   - word: Butter
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: butter
+      fa: کره
+    definition: ein weiches, gelbes Fett aus Milch; man isst es auf Brot
+    example:
+      de: Möchtest du Butter auf dein Brot?
+      en: Would you like butter on your bread?
+      fa: روی نانت کره می‌خواهی؟
+
   - word: Ei
+    class: noun
+    article: das
+    plural: Eier
+    level: A1
+    meaning:
+      en: egg
+      fa: تخم‌مرغ
+    definition: das legt ein Huhn; man kocht es oft zum Frühstück
+    example:
+      de: Ich esse jeden Morgen ein Ei.
+      en: I eat an egg every morning.
+      fa: هر روز صبح یک تخم‌مرغ می‌خورم.
+    alsoAccepted: [das Hühnerei]
+
   - word: Fleisch
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: meat
+      fa: گوشت
+    definition: das isst man von Tieren, zum Beispiel vom Rind oder vom Schwein
+    example:
+      de: Mein Bruder isst kein Fleisch.
+      en: My brother doesn't eat meat.
+      fa: برادرم گوشت نمی‌خورد.
+
   - word: Fisch
+    class: noun
+    article: der
+    plural: Fische
+    level: A1
+    meaning:
+      en: fish
+      fa: ماهی
+    definition: ein Tier, das im Wasser lebt; man kann es auch essen
+    example:
+      de: Am Freitag gibt es bei uns Fisch.
+      en: On Fridays we have fish.
+      fa: جمعه‌ها در خانهٔ ما ماهی داریم.
+
   - word: Hähnchen
+    class: noun
+    article: das
+    plural: Hähnchen
+    level: A1
+    meaning:
+      en: chicken (as food)
+      fa: مرغ (گوشت مرغ)
+    definition: ein junges Huhn als Essen, zum Beispiel vom Grill
+    example:
+      de: Heute Abend gibt es Hähnchen mit Reis.
+      en: This evening there's chicken with rice.
+      fa: امشب مرغ با برنج داریم.
+    alsoAccepted:
+      [
+        das Huhn,
+        das Hühnchen,
+        das Brathähnchen,
+        das Grillhähnchen,
+        das Hühnerfleisch,
+        das Hendl,
+        das Hendel,
+        das Poulet,
+      ]
+
   - word: Schinken
+    class: noun
+    article: der
+    plural: Schinken
+    level: A1
+    meaning:
+      en: ham
+      fa: ژامبون
+    definition: Fleisch vom Schwein, oft in dünnen Scheiben auf dem Brot
+    example:
+      de: Ich nehme ein Brötchen mit Schinken.
+      en: I'll have a roll with ham.
+      fa: یک نان گرد با ژامبون می‌خواهم.
+
   - word: Reis
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: rice
+      fa: برنج
+    definition: kleine, weiße Körner von einer Pflanze; man kocht sie in Wasser
+    example:
+      de: Im Iran isst man sehr viel Reis.
+      en: In Iran people eat a lot of rice.
+      fa: در ایران برنج زیادی می‌خورند.
+
   - word: Kartoffel
+    class: noun
+    article: die
+    plural: Kartoffeln
+    level: A1
+    meaning:
+      en: potato
+      fa: سیب‌زمینی
+    definition: ein gelbes Gemüse aus der Erde; daraus macht man zum Beispiel Pommes frites
+    example:
+      de: Die Kartoffeln sind noch nicht weich.
+      en: The potatoes aren't soft yet.
+      fa: سیب‌زمینی‌ها هنوز نرم نشده‌اند.
+    alsoAccepted: [der Erdapfel]
+
   - word: Pommes frites
+    class: noun
+    article: die
+    number: plural-only
+    level: A1
+    meaning:
+      en: French fries (hot chips)
+      fa: سیب‌زمینی سرخ‌کرده
+    definition: lange, dünne Stücke von Kartoffeln, in heißem Öl gemacht
+    example:
+      de: Die Kinder möchten Pommes frites mit Ketchup.
+      en: The children want chips with ketchup.
+      fa: بچه‌ها سیب‌زمینی سرخ‌کرده با سس گوجه‌فرنگی می‌خواهند.
+    alsoAccepted: [die Pommes, die Fritten]
+
   - word: Salat
+    class: noun
+    article: der
+    plural: Salate
+    level: A1
+    meaning:
+      en: salad; lettuce
+      fa: سالاد؛ کاهو
+    definition: ein kaltes Essen aus Gemüse, oft mit Öl und Essig
+    example:
+      de: Zum Mittagessen esse ich nur einen Salat.
+      en: For lunch I only have a salad.
+      fa: ناهار فقط یک سالاد می‌خورم.
+    alsoAccepted: [der Kopfsalat, der Blattsalat]
+
   - word: Gemüse
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: vegetables
+      fa: سبزیجات
+    definition: Pflanzen oder Teile von Pflanzen, die man isst, zum Beispiel Karotten oder Bohnen
+    example:
+      de: Kinder sollen viel Gemüse essen.
+      en: Children should eat lots of vegetables.
+      fa: بچه‌ها باید سبزیجات زیادی بخورند.
+
   - word: Tomate
+    class: noun
+    article: die
+    plural: Tomaten
+    level: A1
+    meaning:
+      en: tomato
+      fa: گوجه‌فرنگی
+    definition: ein rundes, rotes Gemüse, weich und mit viel Saft; daraus macht man Ketchup
+    example:
+      de: Die Tomaten aus dem Garten schmecken sehr gut.
+      en: The tomatoes from the garden taste very good.
+      fa: گوجه‌فرنگی‌های باغچه خیلی خوشمزه‌اند.
+    alsoAccepted: [der Paradeiser]
+
   - word: Obst
+    class: noun
+    article: das
+    number: singular-only
+    level: A1
+    meaning:
+      en: fruit
+      fa: میوه
+    definition: Äpfel, Birnen, Bananen, Orangen und so weiter
+    example:
+      de: Auf dem Markt ist das Obst frisch und billig.
+      en: At the market the fruit is fresh and cheap.
+      fa: در بازار میوه تازه و ارزان است.
+    alsoAccepted: [die Früchte, die Frucht]
+
   - word: Apfel
+    class: noun
+    article: der
+    plural: Äpfel
+    level: A1
+    meaning:
+      en: apple
+      fa: سیب
+    definition: eine runde Frucht, rot, grün oder gelb; sie wächst an einem Baum
+    example:
+      de: Möchtest du einen Apfel?
+      en: Would you like an apple?
+      fa: سیب می‌خواهی؟
+
   - word: Banane
+    class: noun
+    article: die
+    plural: Bananen
+    level: A1
+    meaning:
+      en: banana
+      fa: موز
+    definition: eine lange, gelbe Frucht; man isst sie ohne die Schale
+    example:
+      de: Die Bananen sind noch grün.
+      en: The bananas are still green.
+      fa: موزها هنوز سبزند.
+
   - word: Birne
+    class: noun
+    article: die
+    plural: Birnen
+    level: A1
+    meaning:
+      en: pear
+      fa: گلابی
+    definition: eine süße, grüne oder gelbe Frucht, unten breit und oben schmal
+    example:
+      de: Diese Birne ist sehr süß.
+      en: This pear is very sweet.
+      fa: این گلابی خیلی شیرین است.
+
   - word: Kuchen
+    class: noun
+    article: der
+    plural: Kuchen
+    level: A1
+    meaning:
+      en: cake
+      fa: کیک
+    definition: etwas Süßes aus Mehl, Eiern und Zucker, oft groß und rund; man isst ein Stück davon am Nachmittag
+    example:
+      de: Am Sonntag backt meine Oma einen Kuchen.
+      en: On Sunday my grandma is baking a cake.
+      fa: مادربزرگم یکشنبه کیک می‌پزد.
+    alsoAccepted: [die Torte]
+
   - word: Salz
+    class: noun
+    article: das
+    plural: Salze
+    level: A1
+    meaning:
+      en: salt
+      fa: نمک
+    definition: ein weißes Pulver, zum Beispiel aus dem Meer; man gibt ein bisschen davon in die Suppe
+    example:
+      de: Die Suppe braucht noch etwas Salz.
+      en: The soup needs a little more salt.
+      fa: سوپ کمی نمک بیشتر لازم دارد.
+
   - word: Öl
+    class: noun
+    article: das
+    plural: Öle
+    level: A1
+    meaning:
+      en: oil
+      fa: روغن
+    definition: etwas Flüssiges und Fettes aus Pflanzen; man brät damit in der Pfanne
+    example:
+      de: Gib bitte ein bisschen Öl in die Pfanne.
+      en: Please put a little oil in the pan.
+      fa: لطفاً کمی روغن در ماهی‌تابه بریز.
+    alsoAccepted: [das Speiseöl, das Olivenöl, das Pflanzenöl]
+
   - word: Hunger
+    class: noun
+    article: der
+    number: singular-only
+    level: A1
+    meaning:
+      en: hunger
+      fa: گرسنگی
+    definition: das Gefühl im Bauch, wenn man lange nichts gegessen hat
+    example:
+      de: Ich habe großen Hunger.
+      en: I'm really hungry.
+      fa: خیلی گرسنه‌ام.
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 144, then 25 questions)
+  date: 2026-11-28
+  pool: d329344cfc4db92a

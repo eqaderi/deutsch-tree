@@ -1,37 +1,355 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-furniture
 kind: vocabulary
 level: A1
 chapter: a1-words-food-home
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Furniture and things at home"
   fa: "مبلمان و وسایل خانه"
   de: "Möbel und Dinge im Haus"
+attemptSize: 15
 words:
+  # The scope list gives "das Möbel" (one piece); it is mostly said in the plural, "die Möbel".
   - word: Möbel
+    class: noun
+    article: das
+    plural: Möbel
+    level: A1
+    meaning:
+      en: furniture, piece of furniture
+      fa: مبلمان، اثاثیه
+    definition: ein großes Ding in einer Wohnung, zum Beispiel ein Tisch, ein Bett oder ein Schrank
+    example:
+      de: Wir brauchen neue Möbel für das Wohnzimmer.
+      en: We need new furniture for the living room.
+      fa: برای اتاق نشیمن مبلمان تازه لازم داریم.
+    alsoAccepted: [die Möbel, das Möbelstück, die Einrichtung]
+
   - word: Tisch
+    class: noun
+    article: der
+    plural: Tische
+    level: A1
+    meaning:
+      en: table
+      fa: میز
+    definition: darauf stellt man beim Essen die Teller; er hat oft vier Beine
+    example:
+      de: Das Essen steht schon auf dem Tisch.
+      en: The food is already on the table.
+      fa: غذا روی میز است.
+    alsoAccepted: [der Esstisch, der Schreibtisch]
+
   - word: Bett
+    class: noun
+    article: das
+    plural: Betten
+    level: A1
+    meaning:
+      en: bed
+      fa: تخت، تختخواب
+    definition: darauf liegt man in der Nacht und schläft, mit Kissen und Decke
+    example:
+      de: Die Kinder gehen um acht ins Bett.
+      en: The children go to bed at eight.
+      fa: بچه‌ها ساعت هشت به رختخواب می‌روند.
+
   - word: Schrank
+    class: noun
+    article: der
+    plural: Schränke
+    level: A1
+    meaning:
+      en: cupboard, wardrobe
+      fa: کمد
+    definition: ein hoher Kasten mit Türen; darin sind Kleider oder Teller
+    example:
+      de: Die Teller sind im Schrank links.
+      en: The plates are in the cupboard on the left.
+      fa: بشقاب‌ها در کمد سمت چپ است.
+    alsoAccepted: [der Kleiderschrank, der Küchenschrank]
+
   - word: Sofa
+    class: noun
+    article: das
+    plural: Sofas
+    level: A1
+    meaning:
+      en: sofa, couch
+      fa: کاناپه، مبل
+    definition: darauf sitzen zwei oder drei Personen bequem, zum Beispiel im Wohnzimmer
+    example:
+      de: Er liegt auf dem Sofa und sieht fern.
+      en: He's lying on the sofa watching TV.
+      fa: او روی کاناپه دراز کشیده و تلویزیون تماشا می‌کند.
+    alsoAccepted: [die Couch, das Kanapee]
+
   - word: Herd
+    class: noun
+    article: der
+    plural: Herde
+    level: A1
+    meaning:
+      en: cooker, stove
+      fa: اجاق، اجاق گاز
+    definition: darauf kocht man in der Küche das Essen, zum Beispiel in einem Topf
+    example:
+      de: Der Topf steht noch auf dem Herd.
+      en: The pot is still on the cooker.
+      fa: قابلمه هنوز روی اجاق است.
+    alsoAccepted: [der Kochherd, der Elektroherd, der Gasherd, das Kochfeld]
+
   - word: Kühlschrank
+    class: noun
+    article: der
+    plural: Kühlschränke
+    level: A1
+    meaning:
+      en: fridge, refrigerator
+      fa: یخچال
+    definition: darin bleiben Milch, Butter und Fleisch kalt
+    example:
+      de: Ist noch Milch im Kühlschrank?
+      en: Is there any milk left in the fridge?
+      fa: هنوز در یخچال شیر هست؟
+
   - word: Dusche
+    class: noun
+    article: die
+    plural: Duschen
+    level: A1
+    meaning:
+      en: shower
+      fa: دوش
+    definition: dort wäscht man sich im Stehen, und das Wasser kommt von oben
+    example:
+      de: Ich gehe schnell unter die Dusche.
+      en: I'm just going to have a quick shower.
+      fa: سریع دوش می‌گیرم.
+
   - word: Licht
+    class: noun
+    article: das
+    plural: Lichter
+    level: A1
+    meaning:
+      en: light
+      fa: نور، چراغ
+    definition: das braucht man in der Nacht, um etwas zu sehen; es kommt zum Beispiel von einer Lampe
+    example:
+      de: Das Licht in der Küche ist sehr hell.
+      en: The light in the kitchen is very bright.
+      fa: نور آشپزخانه خیلی زیاد است.
+    alsoAccepted: [die Lampe, die Beleuchtung]
+
   - word: Bild
+    class: noun
+    article: das
+    plural: Bilder
+    level: A1
+    meaning:
+      en: picture
+      fa: تصویر، تابلو
+    definition: ein Foto oder etwas Gemaltes, zum Beispiel an der Wand
+    example:
+      de: Über dem Sofa hängt ein schönes Bild.
+      en: A beautiful picture hangs above the sofa.
+      fa: بالای کاناپه تابلوی زیبایی آویزان است.
+    alsoAccepted: [das Foto, das Gemälde, die Abbildung, das Poster]
+
   - word: Maschine
+    class: noun
+    article: die
+    plural: Maschinen
+    level: A1
+    meaning:
+      en: machine
+      fa: دستگاه، ماشین
+    definition: ein Ding mit Motor, das für die Menschen eine Arbeit macht
+    example:
+      de: Diese Maschine macht sehr guten Kaffee.
+      en: This machine makes very good coffee.
+      fa: این دستگاه قهوهٔ خیلی خوبی درست می‌کند.
+    alsoAccepted: [das Gerät, der Apparat]
+
   - word: anmachen
+    class: verb
+    level: A1
+    meaning:
+      en: to switch on, to turn on
+      fa: روشن کردن
+    definition: machen, dass das Licht, das Radio oder der Fernseher an ist
+    example:
+      de: Kannst du bitte das Radio anmachen?
+      en: Can you switch on the radio, please?
+      fa: می‌توانی لطفاً رادیو را روشن کنی؟
+    alsoAccepted: [einschalten, anschalten, aufdrehen, andrehen]
+
   - word: ausmachen
+    class: verb
+    level: A1
+    meaning:
+      en: to switch off, to turn off
+      fa: خاموش کردن
+    definition: machen, dass das Licht, das Radio oder der Fernseher aus ist
+    example:
+      de: Mach bitte das Licht aus, wenn du gehst.
+      en: Please switch off the light when you leave.
+      fa: وقتی می‌روی، لطفاً چراغ را خاموش کن.
+    alsoAccepted: [ausschalten, abschalten, abdrehen]
+
   - word: an sein
+    class: verb
+    level: A1
+    meaning:
+      en: to be on (switched on)
+      fa: روشن بودن
+    definition: das Licht brennt oder das Radio spielt, weil man es angemacht hat
+    example:
+      de: Der Fernseher ist noch an.
+      en: The TV is still on.
+      fa: تلویزیون هنوز روشن است.
+    alsoAccepted: [an, eingeschaltet sein, angeschaltet sein, eingeschaltet, angeschaltet, laufen, brennen]
+
   - word: aus sein
+    class: verb
+    level: A1
+    meaning:
+      en: to be off (switched off)
+      fa: خاموش بودن
+    definition: das Licht brennt nicht oder das Radio spielt nicht, weil man es ausgemacht hat
+    example:
+      de: Warum ist die Heizung aus?
+      en: Why is the heating off?
+      fa: چرا شوفاژ خاموش است؟
+    alsoAccepted: [aus, ausgeschaltet sein, abgeschaltet sein, ausgeschaltet, abgeschaltet]
+
+  # "auf sein" and "geöffnet" say the same of a shop; neither is offered as a wrong meaning of the other.
   - word: auf sein
+    class: verb
+    level: A1
+    meaning:
+      en: to be open
+      fa: باز بودن
+    definition: man kann hineingehen oder hineinsehen, zum Beispiel bei einer Tür, einem Fenster oder einem Laden
+    example:
+      de: Ist die Bäckerei am Sonntag auf?
+      en: Is the bakery open on Sunday?
+      fa: نانوایی یکشنبه باز است؟
+    alsoAccepted: [offen sein, geöffnet sein, auf, offen, geöffnet]
+    tooCloseTo: [geöffnet, öffnen]
+
   - word: zu sein
+    class: verb
+    level: A1
+    meaning:
+      en: to be closed, to be shut
+      fa: بسته بودن
+    definition: man kann nicht hineingehen, zum Beispiel bei einer Tür oder einem Laden
+    example:
+      de: Die Tür ist zu, und ich habe keinen Schlüssel.
+      en: The door is shut and I haven't got a key.
+      fa: در بسته است و من کلید ندارم.
+    alsoAccepted: [geschlossen sein, zu, geschlossen]
+    tooCloseTo: [geschlossen, schließen]
+
   - word: öffnen
+    class: verb
+    level: A1
+    meaning:
+      en: to open
+      fa: باز کردن
+    definition: machen, dass zum Beispiel eine Tür, ein Fenster oder eine Flasche nicht mehr zu ist
+    example:
+      de: Kannst du bitte das Fenster öffnen?
+      en: Can you open the window, please?
+      fa: می‌توانی لطفاً پنجره را باز کنی؟
+    alsoAccepted: [aufmachen]
+
   - word: schließen
+    class: verb
+    level: A1
+    meaning:
+      en: to close, to shut
+      fa: بستن
+    definition: machen, dass zum Beispiel eine Tür oder ein Fenster nicht mehr offen ist
+    example:
+      de: Bitte schließen Sie die Tür.
+      en: Please close the door.
+      fa: لطفاً در را ببندید.
+    alsoAccepted: [zumachen]
+
   - word: geöffnet
+    class: adjective
+    level: A1
+    meaning:
+      en: open (of a shop or an office)
+      fa: باز (مغازه یا اداره)
+    definition: so ist ein Geschäft, wenn man hineingehen und etwas kaufen kann
+    example:
+      de: Der Supermarkt ist bis 22 Uhr geöffnet.
+      en: The supermarket is open until 10 pm.
+      fa: سوپرمارکت تا ساعت ۲۲ باز است.
+    alsoAccepted: [offen, auf, geöffnet sein, offen sein, auf sein]
+
   - word: geschlossen
+    class: adjective
+    level: A1
+    meaning:
+      en: closed (of a shop or an office)
+      fa: بسته (مغازه یا اداره)
+    definition: so ist ein Geschäft, wenn man nicht hineingehen und nichts kaufen kann
+    example:
+      de: Am Sonntag sind die Geschäfte geschlossen.
+      en: On Sundays the shops are closed.
+      fa: یکشنبه‌ها مغازه‌ها بسته‌اند.
+    alsoAccepted: [zu, geschlossen sein, zu sein]
+
   - word: kaputt
+    class: adjective
+    level: A1
+    meaning:
+      en: broken
+      fa: خراب
+    definition: so ist ein Gerät, wenn es nicht mehr funktioniert
+    example:
+      de: Mein Handy ist kaputt.
+      en: My mobile is broken.
+      fa: گوشی‌ام خراب است.
+    alsoAccepted: [defekt]
+
   - word: reparieren
+    class: verb
+    level: A1
+    meaning:
+      en: to repair, to fix
+      fa: تعمیر کردن
+    definition: machen, dass etwas wieder funktioniert
+    example:
+      de: Wer kann die Waschmaschine reparieren?
+      en: Who can repair the washing machine?
+      fa: چه کسی می‌تواند ماشین لباسشویی را تعمیر کند؟
+    alsoAccepted: [richten, flicken, instand setzen, in Ordnung bringen]
+
   - word: Reparatur
+    class: noun
+    article: die
+    plural: Reparaturen
+    level: A1
+    meaning:
+      en: repair
+      fa: تعمیر
+    definition: die Arbeit, wenn man etwas Kaputtes wieder ganz macht
+    example:
+      de: Die Reparatur kostet 120 Euro.
+      en: The repair costs 120 euros.
+      fa: هزینهٔ تعمیر ۱۲۰ یورو است.
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 144, then 42 questions)
+  date: 2026-11-28
+  pool: 2f6aae80b2f0fd03

@@ -1,34 +1,329 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-home
 kind: vocabulary
 level: A1
 chapter: a1-words-food-home
 order: 3
-status: coming-soon
+status: published
 title:
   en: "House and flat"
   fa: "خانه و آپارتمان"
   de: "Haus und Wohnung"
+attemptSize: 15
 words:
   - word: Haus
+    class: noun
+    article: das
+    plural: Häuser
+    level: A1
+    meaning:
+      en: house
+      fa: خانه (ساختمان)
+    definition: ein Gebäude, in dem Menschen wohnen
+    example:
+      de: Das Haus hat einen großen Garten.
+      en: The house has a big garden.
+      fa: این خانه باغ بزرگی دارد.
+    alsoAccepted: [das Gebäude, das Einfamilienhaus, das Wohnhaus, das Heim, das Zuhause]
+
+  # A "Wohnung" may be any size, an "Apartment" is a small one; each is right when the other is asked for.
   - word: Wohnung
+    class: noun
+    article: die
+    plural: Wohnungen
+    level: A1
+    meaning:
+      en: flat (a home in a building)
+      fa: آپارتمان، واحد مسکونی
+    definition: Zimmer, Küche und Bad für eine Person oder eine Familie, oft in einem großen Haus
+    example:
+      de: Unsere Wohnung hat einen Balkon.
+      en: Our flat has a balcony.
+      fa: آپارتمان ما بالکن دارد.
+    alsoAccepted: [das Apartment, die Mietwohnung]
+    tooCloseTo: [Apartment]
+
   - word: Apartment
+    class: noun
+    article: das
+    plural: Apartments
+    level: A1
+    meaning:
+      en: small flat, studio flat
+      fa: آپارتمان کوچک، سوئیت
+    definition: eine kleine Wohnung, oft mit nur einem Zimmer
+    example:
+      de: Im Urlaub mieten wir ein Apartment am Meer.
+      en: On holiday we rent a small flat by the sea.
+      fa: در تعطیلات یک آپارتمان کوچک کنار دریا اجاره می‌کنیم.
+    alsoAccepted: [die Wohnung, die Einzimmerwohnung, das Studio, die Ferienwohnung]
+
+  # "Zimmer" is a room of a home or a hotel, "Raum" any room; each is right when the other is asked for.
   - word: Zimmer
+    class: noun
+    article: das
+    plural: Zimmer
+    level: A1
+    meaning:
+      en: room (in a home or a hotel)
+      fa: اتاق
+    definition: ein Teil von einer Wohnung mit Tür und Fenster, zum Beispiel zum Schlafen
+    example:
+      de: Die Wohnung hat drei Zimmer.
+      en: The flat has three rooms.
+      fa: این آپارتمان سه اتاق دارد.
+    alsoAccepted: [der Raum]
+    tooCloseTo: [Raum]
+
   - word: Raum
+    class: noun
+    article: der
+    plural: Räume
+    level: A1
+    meaning:
+      en: room, space
+      fa: فضا، اتاق (در هر ساختمانی)
+    definition: ein Zimmer in einem Gebäude, zum Beispiel für den Unterricht oder für eine Sitzung
+    example:
+      de: Der Deutschkurs ist in Raum 12.
+      en: The German course is in room 12.
+      fa: کلاس آلمانی در اتاق ۱۲ است.
+    alsoAccepted: [das Zimmer]
+
   - word: Küche
+    class: noun
+    article: die
+    plural: Küchen
+    level: A1
+    meaning:
+      en: kitchen
+      fa: آشپزخانه
+    definition: das Zimmer, in dem man kocht
+    example:
+      de: Wir essen meistens in der Küche.
+      en: We mostly eat in the kitchen.
+      fa: ما بیشتر وقت‌ها در آشپزخانه غذا می‌خوریم.
+
   - word: Bad
+    class: noun
+    article: das
+    plural: Bäder
+    level: A1
+    meaning:
+      en: bathroom
+      fa: حمام
+    definition: das Zimmer mit Dusche oder Badewanne, dort wäscht man sich
+    example:
+      de: Das Bad ist neben dem Schlafzimmer.
+      en: The bathroom is next to the bedroom.
+      fa: حمام کنار اتاق خواب است.
+    alsoAccepted: [das Badezimmer]
+
   - word: Toilette
+    class: noun
+    article: die
+    plural: Toiletten
+    level: A1
+    meaning:
+      en: toilet
+      fa: توالت، دستشویی
+    definition: ein kleiner Raum mit WC und Waschbecken
+    example:
+      de: Entschuldigung, wo ist die Toilette?
+      en: Excuse me, where is the toilet?
+      fa: ببخشید، دستشویی کجاست؟
+    alsoAccepted: [das WC, das Klo]
+
   - word: Balkon
+    class: noun
+    article: der
+    plural: Balkone
+    level: A1
+    meaning:
+      en: balcony
+      fa: بالکن
+    definition: ein kleiner Platz draußen an einer Wohnung, oben im Haus
+    example:
+      de: Im Sommer frühstücken wir auf dem Balkon.
+      en: In summer we have breakfast on the balcony.
+      fa: تابستان‌ها در بالکن صبحانه می‌خوریم.
+
   - word: Garten
+    class: noun
+    article: der
+    plural: Gärten
+    level: A1
+    meaning:
+      en: garden
+      fa: باغ، باغچه، حیاط
+    definition: ein Stück Land beim Haus, mit Blumen, Bäumen oder Gemüse
+    example:
+      de: Mein Vater arbeitet gern im Garten.
+      en: My father likes working in the garden.
+      fa: پدرم دوست دارد در باغچه کار کند.
+
   - word: Treppe
+    class: noun
+    article: die
+    plural: Treppen
+    level: A1
+    meaning:
+      en: stairs, staircase
+      fa: پله‌ها، راه‌پله
+    definition: viele Stufen, auf denen man zu Fuß nach oben oder nach unten geht
+    example:
+      de: Der Aufzug ist kaputt, wir nehmen die Treppe.
+      en: The lift is broken, we'll take the stairs.
+      fa: آسانسور خراب است، از پله‌ها می‌رویم.
+    alsoAccepted: [die Stiege, die Stufen, das Treppenhaus]
+
+  # In this sense the scope list gives "¨-e" (Stöcke); "Stockwerke" is the plural of "Stockwerk".
   - word: Stock
+    class: noun
+    article: der
+    plural: Stöcke
+    level: A1
+    meaning:
+      en: floor, storey (of a building)
+      fa: طبقه (ساختمان)
+    definition: "ein Teil von einem Haus auf einer Höhe; man zählt: der erste, der zweite, der dritte"
+    example:
+      de: Ich wohne im vierten Stock.
+      en: I live on the fourth floor.
+      fa: من در طبقهٔ چهارم زندگی می‌کنم.
+    alsoAccepted: [das Stockwerk, die Etage, das Geschoss, das Obergeschoss]
+
   - word: Aufzug
+    class: noun
+    article: der
+    plural: Aufzüge
+    level: A1
+    meaning:
+      en: lift, elevator
+      fa: آسانسور
+    definition: damit fährt man im Haus nach oben oder nach unten
+    example:
+      de: Der Aufzug fährt bis in den achten Stock.
+      en: The lift goes up to the eighth floor.
+      fa: آسانسور تا طبقهٔ هشتم می‌رود.
+    alsoAccepted: [der Fahrstuhl, der Lift]
+
   - word: Eingang
+    class: noun
+    article: der
+    plural: Eingänge
+    level: A1
+    meaning:
+      en: entrance, way in
+      fa: ورودی، در ورود
+    definition: der Ort, wo man in ein Gebäude hineingeht
+    example:
+      de: Der Eingang ist hinter dem Haus.
+      en: The entrance is behind the house.
+      fa: ورودی پشت ساختمان است.
+    alsoAccepted: [die Eingangstür, die Haustür]
+
   - word: Ausgang
+    class: noun
+    article: der
+    plural: Ausgänge
+    level: A1
+    meaning:
+      en: exit, way out
+      fa: خروجی، در خروج
+    definition: der Ort, wo man aus einem Gebäude hinausgeht
+    example:
+      de: Wo ist hier der Ausgang?
+      en: Where is the exit here?
+      fa: خروجی اینجا کجاست؟
+    alsoAccepted: [der Notausgang]
+
   - word: Miete
+    class: noun
+    article: die
+    plural: Mieten
+    level: A1
+    meaning:
+      en: rent (the money)
+      fa: اجاره‌بها
+    definition: das Geld, das man jeden Monat für eine Wohnung bezahlt
+    example:
+      de: Wir zahlen 800 Euro Miete im Monat.
+      en: We pay 800 euros rent a month.
+      fa: ماهی ۸۰۰ یورو اجاره می‌دهیم.
+    alsoAccepted: [die Kaltmiete, die Warmmiete, die Monatsmiete]
+
   - word: mieten
+    class: verb
+    level: A1
+    meaning:
+      en: to rent (from someone)
+      fa: اجاره کردن
+    definition: für Geld eine Wohnung oder ein Auto eine Zeit lang haben
+    example:
+      de: Wir möchten eine Wohnung in der Stadt mieten.
+      en: We'd like to rent a flat in town.
+      fa: می‌خواهیم آپارتمانی در شهر اجاره کنیم.
+    alsoAccepted: [anmieten]
+
   - word: vermieten
+    class: verb
+    level: A1
+    meaning:
+      en: to rent out, to let
+      fa: اجاره دادن
+    definition: eine Wohnung oder ein Zimmer gegen Geld einer anderen Person geben
+    example:
+      de: Frau Keller vermietet ein Zimmer an Studenten.
+      en: Mrs Keller rents out a room to students.
+      fa: خانم کلر اتاقی را به دانشجوها اجاره می‌دهد.
+
   - word: Vermieter
+    class: noun
+    article: der
+    plural: Vermieter
+    level: A1
+    meaning:
+      en: landlord
+      fa: صاحب‌خانه، موجر
+    definition: die Person, der die Wohnung gehört und die sie gegen Geld an andere gibt
+    example:
+      de: Der Vermieter repariert die Heizung.
+      en: The landlord is repairing the heating.
+      fa: صاحب‌خانه شوفاژ را تعمیر می‌کند.
+    alsoAccepted: [die Vermieterin, der Hausbesitzer, der Hauseigentümer, der Eigentümer, der Hauswirt]
+
   - word: umziehen
+    class: verb
+    level: A1
+    meaning:
+      en: to move (house)
+      fa: اسباب‌کشی کردن، نقل مکان کردن
+    definition: aus der alten Wohnung gehen und in einer neuen Wohnung wohnen
+    example:
+      de: Nächsten Monat ziehen wir nach Köln um.
+      en: Next month we're moving to Cologne.
+      fa: ماه آینده به کلن اسباب‌کشی می‌کنیم.
+    alsoAccepted: [übersiedeln, ziehen]
+
   - word: Schlüssel
+    class: noun
+    article: der
+    plural: Schlüssel
+    level: A1
+    meaning:
+      en: key
+      fa: کلید
+    definition: damit schließt man eine Tür auf und zu
+    example:
+      de: Ich kann meinen Schlüssel nicht finden.
+      en: I can't find my key.
+      fa: نمی‌توانم کلیدم را پیدا کنم.
+    alsoAccepted: [der Türschlüssel, der Hausschlüssel]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 126, then 26 questions)
+  date: 2026-11-28
+  pool: 5000c86762ca69d5
