@@ -175,6 +175,15 @@ test.each([
   ['Im Seminar lesen wir einen Text.', 'Im Semi-nar lesen wir einen Text.'],
   ['die Recherche', 'die Re-scherrsche'],
   ['Er ist in der Berufsschule.', 'Er ist in der Berufs-schule.'],
+  // #101: English loanwords read as German, a stress on the wrong syllable, "Geh" and "Fuß" read short.
+  ['Am Wochenende fahre ich Mountainbike.', 'Am Wochenende fahre ich Maunten-beik.'],
+  ['Der Steward und die Stewardess', 'Der Stiu-ard und die Stiuar-dess'],
+  ['Wir campen im Camp. Wir haben gecampt.', 'Wir kämpen im Kämp. Wir haben gekämpt.'],
+  ['das Souvenir', 'das Suwe-nier'],
+  ['Die Giraffe und der Pinguin. Pinguine schwimmen.', 'Die Gi-raffe und der Pinggu-ien. Pinggu-iene schwimmen.'],
+  ['die Distanz', 'die Diss-tanz'],
+  ['auf dem Gehsteig in der Einbahnstraße', 'auf dem Geh-steig in der Einbahn-straße'],
+  ['Der Fußgänger geht in die Fußgängerzone.', 'Der Fuhs-gänger geht in die Fuhs-gängerzone.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })

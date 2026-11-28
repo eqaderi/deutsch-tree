@@ -104,4 +104,21 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Recherche: 'Re-scherrsche',
   // #94: "fss" is read as "fs" + "ch", [bəˈrʊfsçuːlə]; the hyphen keeps "schule" whole.
   Berufsschule: 'Berufs-schule',
+
+  // #101: English loanwords the voice reads as German, a wrong stress, "Geh" and "Fuß" read short.
+  Mountainbike: 'Maunten-beik',
+  Steward: 'Stiu-ard',
+  Stewardess: 'Stiuar-dess',
+  Camp: 'Kämp',
+  campen: 'kämpen',
+  gecampt: 'gekämpt',
+  Souvenir: 'Suwe-nier',
+  Giraffe: 'Gi-raffe',
+  Pinguin: 'Pinggu-ien',
+  Pinguine: 'Pinggu-iene',
+  Distanz: 'Diss-tanz',
+  Gehsteig: 'Geh-steig',
+  Einbahnstraße: 'Einbahn-straße',
+  Fußgänger: 'Fuhs-gänger',
+  Fußgängerzone: 'Fuhs-gängerzone',
 }

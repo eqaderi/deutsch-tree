@@ -1,35 +1,328 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-landscape
 kind: vocabulary
 level: B1
 chapter: b1-words-travel-nature
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Land, sea and sky"
   fa: "خشکی، دریا و آسمان"
   de: "Land, Meer und Himmel"
+attemptSize: 15
 words:
   - word: Nordsee
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: North Sea
+      fa: دریای شمال (میان آلمان و بریتانیا)
+    definition: das Meer im Nordwesten von Deutschland, zwischen Deutschland und Großbritannien
+    example:
+      de: Im Sommer fahren viele Familien an die Nordsee.
+      en: In summer many families go to the North Sea.
+      fa: تابستان خانواده‌های زیادی به کنار دریای شمال می‌روند.
+
   - word: Ostsee
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: Baltic Sea
+      fa: دریای بالتیک
+    definition: das Meer im Nordosten von Deutschland, zwischen Deutschland, Polen und Skandinavien
+    example:
+      de: Die Ostsee ist im Sommer oft wärmer als die Nordsee.
+      en: In summer the Baltic is often warmer than the North Sea.
+      fa: دریای بالتیک تابستان‌ها اغلب از دریای شمال گرم‌تر است.
+
   - word: Ozean
+    class: noun
+    article: der
+    plural: Ozeane
+    level: B1
+    meaning:
+      en: ocean
+      fa: اقیانوس
+    definition: ein sehr großes Meer, zum Beispiel der Atlantik
+    example:
+      de: Mit dem Schiff hat die Reise über den Ozean zwei Wochen gedauert.
+      en: The journey across the ocean by ship took two weeks.
+      fa: سفر با کشتی از آن سوی اقیانوس دو هفته طول کشید.
+    alsoAccepted: [das Weltmeer]
+
+  # Küste is by the sea, Ufer by a river or a lake; neither is offered as a wrong meaning of the other.
   - word: Küste
+    class: noun
+    article: die
+    plural: Küsten
+    level: B1
+    meaning:
+      en: coast (the land by the sea)
+      fa: کرانهٔ دریا، منطقهٔ ساحلی
+    definition: das Land direkt am Meer
+    example:
+      de: Wir sind mit dem Fahrrad an der Küste entlanggefahren.
+      en: We cycled along the coast.
+      fa: با دوچرخه در امتداد ساحل دریا رکاب زدیم.
+    tooCloseTo: [Ufer]
+
   - word: Ufer
+    class: noun
+    article: das
+    plural: Ufer
+    level: B1
+    meaning:
+      en: bank, shore (of a river or a lake)
+      fa: کنارهٔ رود یا دریاچه
+    definition: das Land direkt am Rand von einem Fluss oder einem See
+    example:
+      de: Am Ufer des Flusses kann man schön spazieren gehen.
+      en: You can take lovely walks along the river bank.
+      fa: کنار رودخانه می‌شود پیاده‌روی خوبی کرد.
+    tooCloseTo: [Küste]
+
   - word: Gebirge
+    class: noun
+    article: das
+    plural: Gebirge
+    level: B1
+    meaning:
+      en: mountains, mountain range
+      fa: رشته‌کوه، کوهستان
+    definition: viele hohe Berge, die zusammen liegen
+    example:
+      de: Die Alpen sind das höchste Gebirge in Europa.
+      en: The Alps are the highest mountain range in Europe.
+      fa: آلپ بلندترین رشته‌کوه اروپاست.
+    alsoAccepted: [die Bergkette]
+
   - word: Hügel
+    class: noun
+    article: der
+    plural: Hügel
+    level: B1
+    meaning:
+      en: hill
+      fa: تپه
+    definition: ein kleiner, niedriger Berg
+    example:
+      de: Hinter unserem Dorf liegt ein Hügel mit einem schönen Blick.
+      en: Behind our village there is a hill with a lovely view.
+      fa: پشت روستای ما تپه‌ای با منظرهٔ زیبا هست.
+
   - word: Tal
+    class: noun
+    article: das
+    plural: Täler
+    level: B1
+    meaning:
+      en: valley
+      fa: دره
+    definition: das tiefe Land zwischen zwei Bergen
+    example:
+      de: Unten im Tal fließt ein kleiner Fluss.
+      en: A small river flows down in the valley.
+      fa: پایین دره رود کوچکی جاری است.
+
+  # Gebiet and Region both name a part of a country; each is right for the other.
   - word: Gebiet
+    class: noun
+    article: das
+    plural: Gebiete
+    level: B1
+    meaning:
+      en: area (a piece of land, for example around a town or a river)
+      fa: ناحیه (بخشی از زمین، مثلاً اطراف یک شهر یا رود)
+    definition: ein Stück Land, zum Beispiel um eine Stadt oder an einem Fluss
+    example:
+      de: In diesem Gebiet gibt es viele seltene Vögel.
+      en: There are lots of rare birds in this area.
+      fa: در این ناحیه پرندگان کمیاب زیادی هست.
+    alsoAccepted: [die Region, die Gegend]
+    tooCloseTo: [Region]
+
   - word: Region
+    class: noun
+    article: die
+    plural: Regionen
+    level: B1
+    meaning:
+      en: region (a larger part of a country with something in common)
+      fa: منطقه (بخش بزرگی از یک کشور با ویژگی‌های مشترک)
+    definition: ein größerer Teil eines Landes mit gemeinsamen Merkmalen, zum Beispiel derselben Landschaft oder Sprache
+    example:
+      de: Die Region um den Bodensee ist bei Touristen sehr beliebt.
+      en: The region around Lake Constance is very popular with tourists.
+      fa: منطقهٔ اطراف دریاچهٔ کنستانس میان گردشگران بسیار محبوب است.
+    alsoAccepted: [das Gebiet, die Gegend]
+    tooCloseTo: [Gebiet]
+
   - word: regional
+    class: adjective
+    level: B1
+    meaning:
+      en: regional, local (from the area where you are)
+      fa: منطقه‌ای، محلی
+    definition: aus einer bestimmten Gegend, nicht von weit weg
+    example:
+      de: Auf dem Markt kaufe ich gern regionales Obst und Gemüse.
+      en: At the market I like buying local fruit and vegetables.
+      fa: دوست دارم از بازار میوه و سبزی محلی بخرم.
+    alsoAccepted: [lokal]
+
   - word: Grenze
+    class: noun
+    article: die
+    plural: Grenzen
+    level: B1
+    meaning:
+      en: border, frontier
+      fa: مرز
+    definition: die Linie zwischen zwei Ländern
+    example:
+      de: Wir haben an der Grenze zur Schweiz kurz angehalten.
+      en: We stopped briefly at the Swiss border.
+      fa: در مرز سوئیس کمی توقف کردیم.
+
   - word: nördlich
+    class: adjective
+    level: B1
+    meaning:
+      en: northern, to the north (of)
+      fa: شمالی، در شمالِ
+    definition: im Norden oder in Richtung Norden
+    example:
+      de: Hamburg liegt nördlich von Hannover.
+      en: Hamburg lies to the north of Hanover.
+      fa: هامبورگ در شمال هانوفر قرار دارد.
+
   - word: südlich
+    class: adjective
+    level: B1
+    meaning:
+      en: southern, to the south (of)
+      fa: جنوبی، در جنوبِ
+    definition: im Süden oder in Richtung Süden
+    example:
+      de: Im südlichen Teil des Landes ist es wärmer.
+      en: It is warmer in the southern part of the country.
+      fa: در بخش جنوبی کشور هوا گرم‌تر است.
+
   - word: östlich
+    class: adjective
+    level: B1
+    meaning:
+      en: eastern, to the east (of)
+      fa: شرقی، در شرقِ
+    definition: im Osten oder in Richtung Osten
+    example:
+      de: Die Stadt liegt etwa 50 Kilometer östlich von München.
+      en: The town lies about 50 kilometres east of Munich.
+      fa: این شهر حدود ۵۰ کیلومتر در شرق مونیخ قرار دارد.
+
   - word: westlich
+    class: adjective
+    level: B1
+    meaning:
+      en: western, to the west (of)
+      fa: غربی، در غربِ
+    definition: im Westen oder in Richtung Westen
+    example:
+      de: Der Wind kommt heute aus westlicher Richtung.
+      en: The wind is coming from the west today.
+      fa: امروز باد از سمت غرب می‌وزد.
+
   - word: Kanal
+    class: noun
+    article: der
+    plural: Kanäle
+    level: B1
+    meaning:
+      en: canal (a waterway built for ships); also a TV channel
+      fa: آبراه، کانال (همچنین کانال تلویزیون)
+    definition: eine künstliche Wasserstraße für Schiffe; auch ein Sender im Fernsehen
+    example:
+      de: In Venedig fährt man mit dem Boot durch die Kanäle.
+      en: In Venice you go through the canals by boat.
+      fa: در ونیز با قایق از میان کانال‌ها رفت‌وآمد می‌کنند.
+
   - word: Mond
+    class: noun
+    article: der
+    plural: Monde
+    level: B1
+    meaning:
+      en: moon
+      fa: ماه (در آسمان)
+    definition: das große runde Licht, das man nachts am Himmel sieht
+    example:
+      de: Heute Nacht ist der Mond ganz rund und hell.
+      en: Tonight the moon is completely round and bright.
+      fa: امشب ماه کاملاً گرد و روشن است.
+
   - word: Stern
+    class: noun
+    article: der
+    plural: Sterne
+    level: B1
+    meaning:
+      en: star
+      fa: ستاره
+    definition: einer der vielen kleinen hellen Punkte am Himmel in der Nacht
+    example:
+      de: Auf dem Land sieht man nachts viel mehr Sterne als in der Stadt.
+      en: In the country you see many more stars at night than in town.
+      fa: در روستا شب‌ها خیلی بیشتر از شهر ستاره دیده می‌شود.
+
   - word: Luft
+    class: noun
+    article: die
+    plural: Lüfte
+    level: B1
+    meaning:
+      en: air
+      fa: هوا (که نفس می‌کشیم)
+    definition: das, was wir atmen
+    example:
+      de: Am Meer ist die Luft frisch und sauber.
+      en: By the sea the air is fresh and clean.
+      fa: کنار دریا هوا تازه و پاک است.
+
   - word: Schatten
+    class: noun
+    article: der
+    plural: Schatten
+    level: B1
+    meaning:
+      en: shade, shadow
+      fa: سایه
+    definition: die dunkle Fläche hinter einem Baum, einem Haus oder einem Menschen, wenn die Sonne scheint
+    example:
+      de: Es ist so heiß, setzen wir uns lieber in den Schatten.
+      en: It's so hot, let's sit in the shade.
+      fa: خیلی گرم است، بیایید در سایه بنشینیم.
+
   - word: fließen
+    class: verb
+    level: B1
+    meaning:
+      en: to flow
+      fa: جاری بودن، روان بودن (آب)
+    definition: sich wie das Wasser in einem Fluss ohne Pause in eine Richtung bewegen
+    example:
+      de: Der Rhein fließt durch Köln.
+      en: The Rhine flows through Cologne.
+      fa: رود راین از میان کلن می‌گذرد.
+    alsoAccepted: [strömen]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 132 questions, then 20 changed or disputed ones; not
+    people)"
+  date: 2026-11-28
+  pool: d215d2b65b863ab9
