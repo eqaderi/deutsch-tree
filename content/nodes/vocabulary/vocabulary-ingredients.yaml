@@ -1,39 +1,408 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-ingredients
 kind: vocabulary
 level: B1
 chapter: b1-words-home-food
 order: 6
-status: coming-soon
+status: published
 title:
   en: "Ingredients"
   fa: "مواد غذایی"
   de: "Zutaten"
+attemptSize: 15
 words:
   - word: Aprikose
+    class: noun
+    article: die
+    plural: Aprikosen
+    level: B1
+    meaning:
+      en: apricot
+      fa: زردآلو
+    definition: eine kleine, runde, orange Frucht mit einem großen Kern
+    example:
+      de: Aus den Aprikosen machen wir Marmelade.
+      en: We're making jam from the apricots.
+      fa: از زردآلوها مربا درست می‌کنیم.
+    alsoAccepted: [die Marille]
+
   - word: Pflaume
+    class: noun
+    article: die
+    plural: Pflaumen
+    level: B1
+    meaning:
+      en: plum
+      fa: آلو
+    definition: eine dunkelblaue oder rote Frucht mit einem Kern, die im Spätsommer reif wird
+    example:
+      de: Die Pflaumen aus unserem Garten sind sehr süß.
+      en: The plums from our garden are very sweet.
+      fa: آلوهای باغ ما خیلی شیرین است.
+    alsoAccepted: [die Zwetschge, die Zwetschke, die Zwetsche]
+
   - word: Frucht
+    class: noun
+    article: die
+    plural: Früchte
+    level: B1
+    meaning:
+      en: fruit
+      fa: میوه
+    definition: der Teil einer Pflanze, in dem die Samen sind und den man oft essen kann, zum Beispiel ein Apfel
+    example:
+      de: Im Sommer essen wir viele frische Früchte.
+      en: In summer we eat lots of fresh fruit.
+      fa: تابستان‌ها میوهٔ تازهٔ زیادی می‌خوریم.
+    alsoAccepted: [das Obst]
+
+  # "Karotte" and "Möhre" are both a carrot; each is right when the other is asked for.
   - word: Karotte
+    class: noun
+    article: die
+    plural: Karotten
+    level: B1
+    meaning:
+      en: carrot
+      fa: هویج
+    definition: ein langes, orangefarbenes Gemüse, das in der Erde wächst
+    example:
+      de: Kaninchen fressen gern Karotten.
+      en: Rabbits like eating carrots.
+      fa: خرگوش‌ها هویج دوست دارند.
+    alsoAccepted: [die Möhre, die Mohrrübe, das Rüebli, die Gelbe Rübe]
+    tooCloseTo: [Möhre]
+
   - word: Möhre
+    class: noun
+    article: die
+    plural: Möhren
+    level: B1
+    meaning:
+      en: carrot
+      fa: هویج
+    definition: ein orangefarbenes Gemüse, das man roh oder gekocht isst; so sagt man vor allem in Norddeutschland
+    example:
+      de: Für die Suppe brauche ich drei Möhren.
+      en: I need three carrots for the soup.
+      fa: برای سوپ سه هویج لازم دارم.
+    alsoAccepted: [die Karotte, die Mohrrübe, die Gelbe Rübe]
+    tooCloseTo: [Karotte]
+
   - word: Zwiebel
+    class: noun
+    article: die
+    plural: Zwiebeln
+    level: B1
+    meaning:
+      en: onion
+      fa: پیاز
+    definition: ein rundes Gemüse mit starkem Geschmack; wenn man es schneidet, muss man oft weinen
+    example:
+      de: Schneid bitte die Zwiebel in kleine Stücke.
+      en: Please cut the onion into small pieces.
+      fa: لطفاً پیاز را ریز خرد کن.
+
   - word: Pilz
+    class: noun
+    article: der
+    plural: Pilze
+    level: B1
+    meaning:
+      en: mushroom
+      fa: قارچ
+    definition: etwas, das im Wald wächst, oft mit einem runden Hut; manche kann man essen, manche sind giftig
+    example:
+      de: Im Herbst sammeln wir Pilze im Wald.
+      en: In autumn we gather mushrooms in the forest.
+      fa: پاییز در جنگل قارچ جمع می‌کنیم.
+    alsoAccepted: [das Schwammerl, der Champignon]
+
   - word: Hackfleisch
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: mince, minced meat
+      fa: گوشت چرخ‌کرده
+    definition: Fleisch, das in ganz kleine Stücke gemacht wurde, zum Beispiel für Frikadellen
+    example:
+      de: Für die Soße brauche ich 500 Gramm Hackfleisch.
+      en: I need 500 grams of mince for the sauce.
+      fa: برای سس ۵۰۰ گرم گوشت چرخ‌کرده لازم دارم.
+    alsoAccepted: [das Gehackte, das Faschierte, das Hack]
+
   - word: Braten
+    class: noun
+    article: der
+    plural: Braten
+    level: B1
+    meaning:
+      en: roast, joint (of meat)
+      fa: گوشت بریان (در فر)
+    definition: ein großes Stück Fleisch, das man lange im Ofen gart
+    example:
+      de: Am Sonntag gibt es bei uns Braten mit Kartoffeln.
+      en: On Sundays we have a roast with potatoes.
+      fa: یکشنبه‌ها در خانهٔ ما گوشت بریان با سیب‌زمینی داریم.
+
   - word: Schnitzel
+    class: noun
+    article: das
+    plural: Schnitzel
+    level: B1
+    meaning:
+      en: schnitzel, escalope (in breadcrumbs)
+      fa: شنیسل
+    definition: ein dünnes Stück Fleisch, das man in Ei und Brotkrumen taucht und in der Pfanne brät
+    example:
+      de: Ich nehme das Schnitzel mit Pommes.
+      en: I'll have the schnitzel with chips.
+      fa: من شنیسل با سیب‌زمینی سرخ‌کرده سفارش می‌دهم.
+
   - word: Steak
+    class: noun
+    article: das
+    plural: Steaks
+    level: B1
+    meaning:
+      en: steak
+      fa: استیک
+    definition: ein dickes Stück Rindfleisch, das man kurz in der Pfanne brät oder grillt
+    example:
+      de: Das Steak ist innen noch rosa.
+      en: The steak is still pink inside.
+      fa: استیک هنوز وسطش صورتی است.
+
   - word: Mehl
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: flour
+      fa: آرد
+    definition: ein weißes Pulver aus Getreide, das man zum Backen von Brot und Kuchen braucht
+    example:
+      de: Für den Kuchen brauchen wir 250 Gramm Mehl.
+      en: We need 250 grams of flour for the cake.
+      fa: برای کیک ۲۵۰ گرم آرد لازم داریم.
+
   - word: Honig
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: honey
+      fa: عسل
+    definition: etwas Süßes und Goldgelbes, das Bienen machen
+    example:
+      de: Ich trinke meinen Tee gern mit Honig.
+      en: I like my tea with honey.
+      fa: چایم را دوست دارم با عسل بنوشم.
+
   - word: Marmelade
+    class: noun
+    article: die
+    plural: Marmeladen
+    level: B1
+    meaning:
+      en: jam
+      fa: مربا
+    definition: etwas Süßes aus gekochtem Obst und Zucker, das man auf Brot isst
+    example:
+      de: Zum Frühstück esse ich ein Brötchen mit Marmelade.
+      en: For breakfast I have a roll with jam.
+      fa: صبحانه نان با مربا می‌خورم.
+    alsoAccepted: [die Konfitüre]
+
   - word: Margarine
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: margarine
+      fa: مارگارین
+    definition: ein weiches Fett aus Pflanzen, das man statt Butter benutzt
+    example:
+      de: Statt Butter nehme ich zum Backen Margarine.
+      en: I use margarine instead of butter for baking.
+      fa: برای شیرینی‌پزی به‌جای کره از مارگارین استفاده می‌کنم.
+
+  # "Sahne" is cream, "Schlagsahne" whipped cream; neither is offered as a wrong meaning of the other.
   - word: Sahne
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: cream
+      fa: خامه
+    definition: der dicke, fette Teil von der Milch
+    example:
+      de: Möchtest du Sahne in den Kaffee?
+      en: Would you like cream in your coffee?
+      fa: در قهوه‌ات خامه می‌خواهی؟
+    alsoAccepted: [der Rahm, das Obers]
+    tooCloseTo: [Schlagsahne]
+
   - word: Schlagsahne
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: whipped cream
+      fa: خامهٔ زده‌شده (فرم‌گرفته)
+    definition: Sahne, die man so lange schlägt, bis sie fest und luftig ist; man isst sie zum Beispiel zu Kuchen
+    example:
+      de: Einen Apfelkuchen mit Schlagsahne, bitte.
+      en: An apple cake with whipped cream, please.
+      fa: یک کیک سیب با خامهٔ زده‌شده، لطفاً.
+    alsoAccepted: [die Sahne, das Schlagobers, der Schlagrahm]
+    tooCloseTo: [Sahne]
+
   - word: Essig
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: vinegar
+      fa: سرکه
+    definition: eine saure Flüssigkeit, die man zum Beispiel an den Salat gibt
+    example:
+      de: Für den Salat brauche ich Öl und Essig.
+      en: I need oil and vinegar for the salad.
+      fa: برای سالاد روغن و سرکه لازم دارم.
+
   - word: Pfeffer
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: pepper (the spice)
+      fa: فلفل (سیاه یا سفید)
+    definition: ein scharfes Gewürz, schwarz oder weiß, das man oft zusammen mit Salz benutzt
+    example:
+      de: Kannst du mir bitte den Pfeffer geben?
+      en: Could you pass me the pepper, please?
+      fa: لطفاً فلفل را به من می‌دهی؟
+
   - word: Gewürz
+    class: noun
+    article: das
+    plural: Gewürze
+    level: B1
+    meaning:
+      en: spice
+      fa: ادویه
+    definition: etwas, das man in kleinen Mengen ins Essen gibt, damit es besser schmeckt, zum Beispiel Zimt
+    example:
+      de: In der persischen Küche benutzt man viele Gewürze.
+      en: Persian cooking uses lots of spices.
+      fa: در آشپزی ایرانی ادویهٔ زیادی به کار می‌رود.
+
   - word: Soße
+    class: noun
+    article: die
+    plural: Soßen
+    level: B1
+    meaning:
+      en: sauce, gravy
+      fa: سس
+    definition: eine dicke Flüssigkeit, die man zu Fleisch, Nudeln oder Salat isst
+    example:
+      de: Die Soße ist ein bisschen zu salzig.
+      en: The sauce is a bit too salty.
+      fa: سس کمی زیادی شور است.
+    alsoAccepted: [die Sauce]
+
+  # The scope list gives "der/das" for "Ketchup": the node teaches "der Ketchup" and accepts "das Ketchup".
   - word: Ketchup
+    class: noun
+    article: der
+    plural: Ketchups
+    level: B1
+    meaning:
+      en: ketchup
+      fa: سس گوجه‌فرنگی
+    definition: eine rote, süße Soße aus Tomaten, die man oft zu Pommes isst
+    example:
+      de: Die Kinder essen Pommes mit Ketchup.
+      en: The children eat chips with ketchup.
+      fa: بچه‌ها سیب‌زمینی سرخ‌کرده را با سس گوجه‌فرنگی می‌خورند.
+    alsoAccepted: [das Ketchup]
+
+  # "Kloß" and "Knödel" are the same dish; each is right when the other is asked for.
   - word: Kloß
+    class: noun
+    article: der
+    plural: Klöße
+    level: B1
+    meaning:
+      en: dumpling
+      fa: کوفتهٔ سیب‌زمینی یا نان (غذای آلمانی)
+    definition: eine runde Kugel aus Kartoffeln oder Brot, die man in heißem Wasser kocht
+    example:
+      de: Zum Braten gibt es Klöße und Rotkohl.
+      en: With the roast there are dumplings and red cabbage.
+      fa: کنار گوشت بریان کوفتهٔ سیب‌زمینی و کلم قرمز هست.
+    alsoAccepted: [der Knödel]
+    tooCloseTo: [Knödel]
+
   - word: Knödel
+    class: noun
+    article: der
+    plural: Knödel
+    level: B1
+    meaning:
+      en: dumpling (the word used in Bavaria and Austria)
+      fa: کوفتهٔ سیب‌زمینی یا نان (غذای آلمانی)
+    definition: eine Kugel aus Teig, Kartoffeln oder Brot; so sagt man vor allem in Bayern und Österreich
+    example:
+      de: In Bayern isst man Knödel oft zum Schweinebraten.
+      en: In Bavaria people often eat dumplings with roast pork.
+      fa: در باواریا کوفته را اغلب با گوشت بریان خوک می‌خورند.
+    alsoAccepted: [der Kloß]
+    tooCloseTo: [Kloß]
+
   - word: Zutaten
+    class: noun
+    article: die
+    number: plural-only
+    level: B1
+    meaning:
+      en: ingredients
+      fa: مواد لازم (غذا)
+    definition: alles, was man für ein Gericht oder einen Kuchen braucht
+    example:
+      de: Hast du alle Zutaten für den Kuchen?
+      en: Have you got all the ingredients for the cake?
+      fa: همهٔ مواد لازم کیک را داری؟
+
   - word: Fett
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: fat
+      fa: چربی
+    definition: Öl, Butter und Ähnliches; auch der weiße Teil vom Fleisch
+    example:
+      de: Dieses Essen hat zu viel Fett.
+      en: This food has too much fat in it.
+      fa: این غذا چربی زیادی دارد.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: c88f20703e458a57

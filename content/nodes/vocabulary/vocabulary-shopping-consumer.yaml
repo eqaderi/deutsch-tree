@@ -1,38 +1,386 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-shopping-consumer
 kind: vocabulary
 level: B1
 chapter: b1-words-home-food
 order: 9
-status: coming-soon
+status: published
 title:
   en: "Shopping and goods"
   fa: "خرید و کالا"
   de: "Einkaufen und Waren"
+attemptSize: 15
 words:
+  # "Einkauf" is the shopping you do, "Kauf" the buying of one thing; neither is offered as a wrong meaning of the other.
   - word: Einkauf
+    class: noun
+    article: der
+    plural: Einkäufe
+    level: B1
+    meaning:
+      en: shopping; purchases (what you have bought)
+      fa: خرید روزانه؛ خریدها (چیزهای خریده‌شده)
+    definition: wenn man in Geschäfte geht und Dinge kauft; auch die Dinge, die man gekauft hat
+    example:
+      de: Kannst du mir mit den Einkäufen helfen?
+      en: Can you help me with the shopping?
+      fa: می‌توانی در آوردن خریدها کمکم کنی؟
+    alsoAccepted: [das Einkaufen, die Einkäufe]
+    tooCloseTo: [Kauf]
+
   - word: Kauf
+    class: noun
+    article: der
+    plural: Käufe
+    level: B1
+    meaning:
+      en: purchase, buying (of one thing)
+      fa: خرید (یک چیز)، معامله
+    definition: wenn man eine Sache für Geld bekommt, zum Beispiel ein Auto oder eine Wohnung
+    example:
+      de: Vor dem Kauf sollte man die Preise vergleichen.
+      en: Before buying you should compare prices.
+      fa: پیش از خرید بهتر است قیمت‌ها را مقایسه کرد.
+    alsoAccepted: [der Erwerb]
+    tooCloseTo: [Einkauf]
+
   - word: Käufer
+    class: noun
+    article: der
+    plural: Käufer
+    level: B1
+    meaning:
+      en: buyer, purchaser
+      fa: خریدار
+    definition: eine Person, die etwas für Geld bekommt
+    example:
+      de: Für unser altes Auto haben wir schnell einen Käufer gefunden.
+      en: We quickly found a buyer for our old car.
+      fa: برای ماشین قدیمی‌مان زود خریدار پیدا کردیم.
+    alsoAccepted: [die Käuferin]
+
   - word: Ware
+    class: noun
+    article: die
+    plural: Waren
+    level: B1
+    meaning:
+      en: goods, merchandise
+      fa: کالا، جنس
+    definition: Dinge, die man in einem Geschäft verkauft
+    example:
+      de: Die Ware kommt morgen mit der Lieferung.
+      en: The goods are coming tomorrow with the delivery.
+      fa: کالا فردا با محموله می‌رسد.
+    alsoAccepted: [das Produkt, der Artikel, die Waren]
+
   - word: Marke
+    class: noun
+    article: die
+    plural: Marken
+    level: B1
+    meaning:
+      en: brand, make
+      fa: مارک، برند
+    definition: der Name, den eine Firma ihren Produkten gibt, damit man sie erkennt
+    example:
+      de: Welche Marke ist dein Handy?
+      en: What make is your phone?
+      fa: گوشی‌ات چه مارکی است؟
+    alsoAccepted: [der Markenname]
+
   - word: Auswahl
+    class: noun
+    article: die
+    plural: Auswahlen
+    level: B1
+    meaning:
+      en: selection, range, choice
+      fa: تنوع، حق انتخاب
+    definition: viele verschiedene Dinge, von denen man eins nehmen kann
+    example:
+      de: Der Laden hat eine große Auswahl an Schuhen.
+      en: The shop has a large selection of shoes.
+      fa: این مغازه تنوع زیادی کفش دارد.
+    alsoAccepted: [das Sortiment, die Vielfalt, das Angebot]
+
+  # The scope list gives "(sich etwas)": the node teaches the verb without "sich" and accepts it with.
   - word: aussuchen
+    class: verb
+    level: B1
+    meaning:
+      en: to choose, to pick (out)
+      fa: انتخاب کردن، برگزیدن
+    definition: aus mehreren Dingen das nehmen, das man am liebsten möchte
+    example:
+      de: Sie hat für ihre Mutter einen schönen Schal ausgesucht.
+      en: She picked out a lovely scarf for her mother.
+      fa: او برای مادرش شال قشنگی انتخاب کرد.
+    alsoAccepted: [auswählen, wählen, sich etwas aussuchen]
+
   - word: Katalog
+    class: noun
+    article: der
+    plural: Kataloge
+    level: B1
+    meaning:
+      en: catalogue
+      fa: کاتالوگ
+    definition: ein dickes Heft oder Buch mit Bildern und Preisen von allen Sachen, die eine Firma verkauft
+    example:
+      de: Ich habe die Lampe aus einem Katalog bestellt.
+      en: I ordered the lamp from a catalogue.
+      fa: چراغ را از روی کاتالوگ سفارش دادم.
+
   - word: Schaufenster
+    class: noun
+    article: das
+    plural: Schaufenster
+    level: B1
+    meaning:
+      en: shop window
+      fa: ویترین (مغازه)
+    definition: das große Fenster von einem Geschäft, in dem man die Sachen sieht, die es verkauft
+    example:
+      de: Im Schaufenster hängt ein schönes Kleid.
+      en: There's a lovely dress in the shop window.
+      fa: در ویترین لباس قشنگی آویزان است.
+
   - word: Buchhandlung
+    class: noun
+    article: die
+    plural: Buchhandlungen
+    level: B1
+    meaning:
+      en: bookshop
+      fa: کتاب‌فروشی
+    definition: ein Geschäft, in dem man Bücher kaufen kann
+    example:
+      de: In der Buchhandlung am Bahnhof gibt es auch Zeitschriften.
+      en: The bookshop at the station sells magazines too.
+      fa: کتاب‌فروشی کنار ایستگاه مجله هم دارد.
+    alsoAccepted: [der Buchladen]
+
+  # "Reklame" and "Werbung" are both advertising; each is right when the other is asked for.
   - word: Reklame
+    class: noun
+    article: die
+    plural: Reklamen
+    level: B1
+    meaning:
+      en: advertising, adverts (a little old-fashioned)
+      fa: آگهی تبلیغاتی، تبلیغ (واژهٔ کهنه‌تر)
+    definition: ein älteres Wort für Plakate, Anzeigen oder kurze Filme, die für ein Produkt werben
+    example:
+      de: Im Briefkasten ist schon wieder nur Reklame.
+      en: There's nothing but adverts in the letterbox again.
+      fa: باز هم در صندوق پست فقط آگهی تبلیغاتی است.
+    alsoAccepted: [die Werbung]
+    tooCloseTo: [Werbung]
+
   - word: Werbung
+    class: noun
+    article: die
+    plural: Werbungen
+    level: B1
+    meaning:
+      en: advertising, publicity
+      fa: تبلیغات
+    definition: Bilder, Texte und Filme, mit denen eine Firma zeigt, warum man ihr Produkt kaufen soll
+    example:
+      de: Im Fernsehen gibt es zu viel Werbung.
+      en: There's too much advertising on TV.
+      fa: در تلویزیون تبلیغات زیادی پخش می‌شود.
+    alsoAccepted: [die Reklame]
+    tooCloseTo: [Reklame]
+
   - word: Garantie
+    class: noun
+    article: die
+    plural: Garantien
+    level: B1
+    meaning:
+      en: guarantee, warranty
+      fa: ضمانت، گارانتی
+    definition: das Versprechen von einer Firma, dass sie ein Gerät repariert, wenn es in einer bestimmten Zeit kaputtgeht
+    example:
+      de: Auf den Fernseher gibt es zwei Jahre Garantie.
+      en: The TV comes with a two-year guarantee.
+      fa: این تلویزیون دو سال گارانتی دارد.
+    alsoAccepted: [die Gewährleistung]
+
   - word: garantieren
+    class: verb
+    level: B1
+    meaning:
+      en: to guarantee
+      fa: تضمین کردن
+    definition: fest versprechen, dass etwas so ist oder so passieren wird
+    example:
+      de: Wir garantieren die Lieferung innerhalb von 24 Stunden.
+      en: We guarantee delivery within 24 hours.
+      fa: تحویل ظرف ۲۴ ساعت را تضمین می‌کنیم.
+    alsoAccepted: [zusichern, gewährleisten]
+
   - word: Umtausch
+    class: noun
+    article: der
+    plural: Umtausche
+    level: B1
+    meaning:
+      en: exchange (of something you bought)
+      fa: تعویض (کالای خریده‌شده)
+    definition: wenn man eine gekaufte Sache in das Geschäft zurückbringt und eine andere dafür bekommt
+    example:
+      de: Ein Umtausch ist nur mit dem Kassenbon möglich.
+      en: An exchange is only possible with the receipt.
+      fa: تعویض کالا فقط با رسید خرید ممکن است.
+
   - word: umtauschen
+    class: verb
+    level: B1
+    meaning:
+      en: to exchange (something you bought)
+      fa: تعویض کردن، عوض کردن (کالای خریده‌شده)
+    definition: eine gekaufte Sache in das Geschäft zurückbringen und eine andere dafür nehmen
+    example:
+      de: Die Hose ist zu klein, ich tausche sie morgen um.
+      en: The trousers are too small; I'll exchange them tomorrow.
+      fa: این شلوار کوچک است، فردا عوضش می‌کنم.
+    alsoAccepted: [tauschen]
+
   - word: Lieferung
+    class: noun
+    article: die
+    plural: Lieferungen
+    level: B1
+    meaning:
+      en: delivery
+      fa: تحویل، ارسال (کالا)
+    definition: wenn eine Firma bestellte Sachen zu einem Kunden bringt; auch die Sachen, die gebracht werden
+    example:
+      de: Ab 50 Euro ist die Lieferung kostenlos.
+      en: Delivery is free on orders over 50 euros.
+      fa: ارسال برای خریدهای بالای ۵۰ یورو رایگان است.
+    alsoAccepted: [die Zustellung]
+
   - word: verpacken
+    class: verb
+    level: B1
+    meaning:
+      en: to pack, to package
+      fa: بسته‌بندی کردن
+    definition: etwas in Papier, eine Kiste oder Plastik tun, damit man es schicken oder verkaufen kann
+    example:
+      de: Die Gläser sind gut verpackt, damit nichts kaputtgeht.
+      en: The glasses are well packed so that nothing breaks.
+      fa: لیوان‌ها خوب بسته‌بندی شده‌اند تا چیزی نشکند.
+    alsoAccepted: [einpacken, packen]
+
   - word: anschaffen
+    class: verb
+    level: B1
+    meaning:
+      en: to buy, to get (something to keep and use for a long time)
+      fa: خریدن، تهیه کردن (وسیله‌ای ماندگار)
+    definition: etwas Größeres kaufen, das man lange benutzen will, zum Beispiel ein Auto oder Möbel
+    example:
+      de: Wir wollen uns eine neue Waschmaschine anschaffen.
+      en: We want to get ourselves a new washing machine.
+      fa: می‌خواهیم یک ماشین لباسشویی نو بخریم.
+    alsoAccepted: [sich anschaffen, sich etwas anschaffen, kaufen, erwerben]
+
   - word: Salon
+    class: noun
+    article: der
+    plural: Salons
+    level: B1
+    meaning:
+      en: salon (hairdresser's, beauty salon)
+      fa: سالن (آرایش یا زیبایی)
+    definition: ein Geschäft, in dem man sich die Haare machen oder sich schminken lassen kann; das Wort steht oft im Namen des Geschäfts
+    example:
+      de: Sie hat um drei einen Termin im Salon.
+      en: She has an appointment at the salon at three.
+      fa: او ساعت سه در سالن آرایش وقت دارد.
+    alsoAccepted: [der Friseursalon, der Schönheitssalon]
+
   - word: Fundbüro
+    class: noun
+    article: das
+    plural: Fundbüros
+    level: B1
+    meaning:
+      en: lost property office
+      fa: دفتر اشیای گمشده
+    definition: ein Amt, bei dem man Sachen abholen kann, die man verloren hat
+    example:
+      de: Meinen Schirm habe ich im Fundbüro wiederbekommen.
+      en: I got my umbrella back from the lost property office.
+      fa: چترم را از دفتر اشیای گمشده پس گرفتم.
+
+  # "Abo" is the short, everyday form of "Abonnement"; each is right when the other is asked for.
   - word: Abo
+    class: noun
+    article: das
+    plural: Abos
+    level: B1
+    meaning:
+      en: subscription (informal)
+      fa: اشتراک (عامیانه)
+    definition: kurz und umgangssprachlich für einen Vertrag, mit dem man etwas regelmäßig bekommt und jeden Monat dafür zahlt
+    example:
+      de: Ich habe ein Abo für das Fitnessstudio.
+      en: I have a gym subscription.
+      fa: اشتراک باشگاه ورزشی دارم.
+    alsoAccepted: [das Abonnement]
+    tooCloseTo: [Abonnement]
+
   - word: Abonnement
+    class: noun
+    article: das
+    plural: Abonnements
+    level: B1
+    meaning:
+      en: subscription
+      fa: اشتراک
+    definition: ein Vertrag, mit dem man zum Beispiel eine Zeitung jede Woche bekommt oder mehrmals ins Theater gehen kann
+    example:
+      de: Das Abonnement der Zeitung kostet zwanzig Euro im Monat.
+      en: The newspaper subscription costs twenty euros a month.
+      fa: اشتراک این روزنامه ماهی بیست یورو است.
+    alsoAccepted: [das Abo]
+    tooCloseTo: [Abo]
+
   - word: abonnieren
+    class: verb
+    level: B1
+    meaning:
+      en: to subscribe (to)
+      fa: مشترک شدن
+    definition: einen Vertrag machen, damit man eine Zeitung oder einen Kanal regelmäßig bekommt
+    example:
+      de: Ich habe den Newsletter abonniert.
+      en: I've subscribed to the newsletter.
+      fa: مشترک این خبرنامه شده‌ام.
+
   - word: bieten
+    class: verb
+    level: B1
+    meaning:
+      en: to offer
+      fa: ارائه دادن، عرضه کردن
+    definition: sagen oder zeigen, dass man jemandem etwas geben will, zum Beispiel Hilfe, Geld oder einen Service
+    example:
+      de: Das Geschäft bietet einen kostenlosen Lieferservice.
+      en: The shop offers a free delivery service.
+      fa: این فروشگاه خدمات ارسال رایگان ارائه می‌دهد.
+    alsoAccepted: [anbieten]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: 0e19e23cba48f5bc

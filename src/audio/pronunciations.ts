@@ -47,6 +47,10 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Cafeteria: 'Kaffeterihja',
   // #79: Thorsten says "das Sekretariat" as "das ist der Kriteriat"; the j keeps it whole.
   Sekretariat: 'Sekretarijat',
+  // #89: said with [ʃ], [ʃaˈoːtɪʃ]; "kaotisch" gives [kaˈoːtɪʃ].
+  chaotisch: 'kaotisch',
+  // #89: said [ˈzaɪtdəm], stress on "seit" and a weak "dem"; "seit deem" gives [zaɪt ˈdeːm].
+  seitdem: 'seit deem',
   // #88: said [ˈkɔʃtyːm], stressed first and with "scht"; the hyphen gives [kɔsˈtyːm].
   Kostüm: 'Koss-tüm',
   // #88: stressed on the first syllable; the hyphen stresses "ro" as German does.
@@ -55,6 +59,43 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   umgehen: 'ummgehen',
   // #88: said with a long i, [ʃiːk]; "schick" gives the short [ʃɪk].
   chic: 'schick',
+  // #90: stressed on the first syllable ("SEE-nioren"); the j gives [zɛnˈjoːrən].
+  Senioren: 'Senjoren',
+  // #90: "Creme" comes out with a final schwa, [kreːmə]; this spelling gives [kreːm].
+  Zahncreme: 'Zahnkreem',
+  // #90: read with [sk] as in English; German says [ʃiː].
+  Skifahren: 'Schifahren',
+  // #90: stressed on the first syllable; the hyphen stresses "ät" too.
+  Diät: 'Di-ät',
+  // #90: stressed on "So"; the hyphens stress "zial" and "arbeiter" as German does.
+  Sozialarbeiter: 'So-zial-arbeiter',
+
+  // #92: the short forms of the floors on signs and in flat adverts are read out in full, as
+  // "z. B." is; "Erdgeschoss" alone comes out as [ɛɾdɡˈɛʃɔs], the hyphen gives the long e.
+  EG: 'Erd-geschoss',
+  OG: 'Ober-geschoss',
+  UG: 'Untergeschoss',
+  // #92: loanwords that the voice says letter by letter in the German way. "Etage" comes out as
+  // [ˈeːtɑːɡə], "Buffet" as [bˈʊfət], "Dessert" as [dˈɛsɜt], "Steak" as [ʃtˈeːɑːk], "Ketchup" as
+  // [kˈɛtʃuːp], "Sandwich" as [zˈandvɪç], "Kakao" as [kˈɑkaˌoː]; the spellings give the sounds
+  // ("Büfett" is also a German spelling), a hyphen moves the stress off the first syllable.
+  Etage: 'E-taasche',
+  Buffet: 'Büfett',
+  Dessert: 'Dessär',
+  Abonnement: 'Abonne-mang',
+  Salon: 'Sa-long',
+  Kakao: 'Ka-kau',
+  Steak: 'Stejk',
+  Ketchup: 'Ketschap',
+  Sandwich: 'Sändwitsch',
+  // #92: said with a short ü, [mˈʏsliː]; "Mühsli" gives the long ü.
+  Müsli: 'Mühsli',
+  // #92: "sp" and "st" inside a compound come out as [sp], [st]; the parts begin with [ʃp], [ʃt].
+  Nachspeise: 'Nachschpeise',
+  Kunststoff: 'Kunstschtoff',
+  // #92: [bˈʊx] with a short u; the hyphen keeps the long u of "Buch".
+  Buchhandlung: 'Buch-handlung',
+
   // #94: stressed on the first syllable, [ˈzeːməstɐ]; the hyphen stresses "mes" as German does.
   Semester: 'Se-mester',
   // #94: stressed on the first syllable, [ˈzeːminaːɐ]; the hyphen stresses "nar".

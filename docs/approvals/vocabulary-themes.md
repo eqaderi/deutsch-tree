@@ -525,7 +525,7 @@ das Material · das Holz · das Metall · das Gold · das Plastik · der Kunstst
 die Aprikose · die Pflaume · die Frucht · die Karotte · die Möhre · die Zwiebel · der Pilz · das Hackfleisch · der Braten · das Schnitzel · das Steak · das Mehl · der Honig · die Marmelade · die Margarine · die Sahne · die Schlagsahne · der Essig · der Pfeffer · das Gewürz · die Soße · der/das Ketchup · der Kloß · der Knödel · die Zutaten (Pl.) · das Fett
 
 **B1-W3.7 Meals, snacks and drinks** · وعده‌ها، میان‌وعده‌ها و نوشیدنی‌ها · Mahlzeiten, Snacks und Getränke · 21 words  
-die Mahlzeit · die Speise · das Menü · die Nachspeise · das Dessert · der Imbiss · der Snack · das/der Sandwich · das Müesli · das Gebäck · der Kakao · die/das Cola · die Limonade · das Buffet · zubereiten · mischen · Tee ziehen lassen · zu Mittag · die Scheibe · das Nahrungsmittel · verpflegen
+die Mahlzeit · die Speise · das Menü · die Nachspeise · das Dessert · der Imbiss · der Snack · das/der Sandwich · das Müsli · das Gebäck · der Kakao · die/das Cola · die Limonade · das Buffet · zubereiten · mischen · Tee ziehen lassen · zu Mittag · die Scheibe · das Nahrungsmittel · verpflegen
 
 **B1-W3.8 Taste and eating out** · مزه و غذا خوردن در بیرون · Geschmack und Essen gehen · 22 words  
 der Geschmack · lecker · salzig · roh · reif · satt · hungrig · durstig · die Gaststätte · das Gasthaus · die Kneipe · die Bar · die Kantine · die Mensa · der Ober · der Wirt · das Trinkgeld · bedienen · Prost · die Reservierung · fressen · konsumieren

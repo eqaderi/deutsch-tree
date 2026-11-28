@@ -4,10 +4,294 @@ kind: grammar
 level: B1
 chapter: b1-reason-condition-clauses
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-158]
 title:
   en: "*da*"
   fa: "*da*"
   de: "*da*"
+
+explanations:
+  en:
+    rule: >
+      *Da* (as, since) gives a reason, like *weil*, and it also starts a
+      subordinate clause with the conjugated verb at the end. A *da* clause
+      usually comes first and gives a reason the listener already knows or
+      can see; the main clause then starts with its verb: *Da es kalt war,
+      bin ich nach Hause gegangen.* *Da* is more usual in writing than in
+      speech. Unlike a *weil* clause, a *da* clause does not answer *Warum?*
+      on its own: *Warum kommst du nicht? – Weil ich krank bin.* Keep the
+      conjunction apart from the adverb *da* (there, then). After the adverb
+      the verb comes next, in position 2: *Da ist der Bahnhof.* *Am Freitag
+      kann ich nicht, da habe ich Dienst.* So look at the verb: at the end
+      of the clause, *da* means "because"; right after *da*, it means "there"
+      or "then".
+  fa:
+    rule: >
+      *da* (چون، از آن‌جا که) مانند *weil* علت را بیان می‌کند و آن هم جملهٔ
+      پیرو را آغاز می‌کند، پس فعل صرف‌شده به پایان جمله می‌رود. جملهٔ پیرو
+      با *da* بیشتر اول می‌آید و علتی را می‌گوید که شنونده از پیش می‌داند
+      یا می‌بیند؛ آن‌گاه جملهٔ پایه با فعلش آغاز می‌شود: *Da es kalt war,
+      bin ich nach Hause gegangen.* *da* در نوشتار رایج‌تر از گفتار است.
+      جملهٔ پیرو با *da*، برخلاف جملهٔ *weil*، به‌تنهایی پاسخ پرسش *Warum?*
+      نیست: *Warum kommst du nicht? – Weil ich krank bin.* این حرف ربط را با
+      قید *da* (آن‌جا، آن وقت) اشتباه نگیرید. پس از قید، فعل بلافاصله در
+      جایگاه دوم می‌آید: *Da ist der Bahnhof.* *Am Freitag kann ich nicht, da
+      habe ich Dienst.* پس به فعل نگاه کنید: اگر در پایان جمله باشد، *da*
+      یعنی «چون»؛ اگر بلافاصله پس از *da* بیاید، یعنی «آن‌جا» یا «آن وقت».
+  de:
+    rule: >
+      *Da* nennt einen Grund, wie *weil*. Mit *da* beginnt auch ein
+      Nebensatz. Das konjugierte Verb steht am Ende. Meistens steht der
+      *da*-Satz zuerst und nennt einen Grund, den der andere schon kennt
+      oder sieht. Dann beginnt der Hauptsatz mit dem Verb: *Da es kalt war,
+      bin ich nach Hause gegangen.* *Da* hört man weniger, man schreibt es
+      mehr. Auf die Frage *Warum?* antwortet man nicht mit einem *da*-Satz
+      allein, sondern mit *weil*: *Warum kommst du nicht? – Weil ich krank
+      bin.* Es gibt auch das Adverb *da* (dort, dann). Danach kommt sofort
+      das Verb, auf Position 2: *Da ist der Bahnhof.* *Am Freitag kann ich
+      nicht, da habe ich Dienst.* Achten Sie also auf das Verb: Steht es am
+      Ende, ist *da* ein Grund. Steht es direkt nach *da*, heißt *da* dort
+      oder dann.
+
+table:
+  columns:
+    - { en: "*Da* clause (position 1)", fa: "جملهٔ پیرو با *da* (جایگاه اول)", de: "*Da*-Satz (Position 1)" }
+    - { en: "Main clause: verb first", fa: "جملهٔ پایه: اول فعل", de: "Hauptsatz: zuerst das Verb" }
+  rows:
+    - ["Da es kalt war,", bin ich nach Hause gegangen.]
+    - ["Da ich kein Auto habe,", fahre ich mit dem Bus.]
+    - ["Da der Aufzug kaputt ist,", nehmen wir die Treppe.]
+    - ["Da Sie neu hier sind,", zeige ich Ihnen zuerst das Büro.]
+    - ["Da morgen ein Feiertag ist,", sind alle Geschäfte geschlossen.]
+    - ["Da ich morgen früh arbeiten muss,", gehe ich jetzt ins Bett.]
+
+examples:
+  - de: Da es kalt war, bin ich nach Hause gegangen.
+    en: As it was cold, I went home.
+    fa: چون هوا سرد بود، به خانه رفتم.
+  - de: Da ich kein Auto habe, fahre ich mit dem Bus.
+    en: As I don't have a car, I take the bus.
+    fa: از آن‌جا که ماشین ندارم، با اتوبوس می‌روم.
+  - de: Da der Aufzug kaputt ist, nehmen wir die Treppe.
+    en: Since the lift is out of order, we're taking the stairs.
+    fa: چون آسانسور خراب است، از پله‌ها می‌رویم.
+  - de: Da Sie neu hier sind, zeige ich Ihnen zuerst das Büro.
+    en: As you're new here, I'll show you the office first.
+    fa: چون شما تازه به این‌جا آمده‌اید، اول دفتر را به شما نشان می‌دهم.
+  - de: Da morgen ein Feiertag ist, sind alle Geschäfte geschlossen.
+    en: Since tomorrow is a public holiday, all the shops are closed.
+    fa: از آن‌جا که فردا تعطیل رسمی است، همهٔ مغازه‌ها بسته‌اند.
+  - de: Wir bleiben heute zu Hause, da es stark regnet.
+    en: We're staying at home today, as it's raining hard.
+    fa: امروز در خانه می‌مانیم، چون باران شدیدی می‌بارد.
+  - de: Warum kommst du nicht mit? – Weil ich krank bin.
+    en: Why aren't you coming along? – Because I'm ill.
+    fa: چرا با ما نمی‌آیی؟ – چون بیمارم.
+  - de: Am Freitag kann ich nicht, da habe ich Dienst.
+    en: I can't on Friday; I'm on duty then.
+    fa: جمعه نمی‌توانم، آن روز سر کارم.
+
+mistakes:
+  - wrong: Da es kalt war, ich bin nach Hause gegangen.
+    right: Da es kalt war, bin ich nach Hause gegangen.
+    why:
+      en: "The *da* clause is position 1, so the main clause goes on with its verb: *bin ich*."
+      fa: "جملهٔ پیرو با *da* جایگاه اول است، پس جملهٔ پایه با فعلش ادامه می‌یابد: *bin ich*."
+      de: "Der *da*-Satz ist Position 1. Danach kommt das Verb: *bin ich*."
+  - wrong: Da ich habe keine Zeit, komme ich nicht.
+    right: Da ich keine Zeit habe, komme ich nicht.
+    why:
+      en: '*Da* meaning "because" sends the conjugated verb to the end: *da ich keine Zeit habe*.'
+      fa: "*da* به معنای «چون» فعل صرف‌شده را به پایان جمله می‌فرستد: *da ich keine Zeit habe*."
+      de: "Wenn *da* einen Grund nennt, steht das konjugierte Verb am Ende: *da ich keine Zeit habe*."
+  - wrong: Warum kommst du nicht? – Da ich krank bin.
+    right: Warum kommst du nicht? – Weil ich krank bin.
+    why:
+      en: "A clause alone that answers *Warum?* takes *weil*, not *da*."
+      fa: "جمله‌ای که به‌تنهایی پاسخ *Warum?* است با *weil* می‌آید، نه با *da*."
+      de: "Auf *Warum?* antwortet ein Satz allein mit *weil*, nicht mit *da*."
+  - wrong: Siehst du die Post? Da die Bank ist.
+    right: Siehst du die Post? Da ist die Bank.
+    why:
+      en: 'Here *da* means "there": it is an adverb, so the verb follows it at once: *Da ist die Bank.*'
+      fa: "این‌جا *da* یعنی «آن‌جا» و قید است، پس فعل بلافاصله پس از آن می‌آید: *Da ist die Bank.*"
+      de: "Hier heißt *da* dort. Es ist ein Adverb, darum kommt das Verb direkt danach: *Da ist die Bank.*"
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ der Zug Verspätung hatte, kamen wir zu spät.
+    options: [Denn, Da, Trotzdem]
+    answer: Da
+    explanation:
+      en: "The verb *hatte* is at the end and the clause gives the reason, so the conjunction *da*."
+      fa: "فعل *hatte* در پایان جمله است و جمله علت را می‌گوید، پس حرف ربط *da* می‌آید."
+      de: "Das Verb *hatte* steht am Ende, und der Satz nennt den Grund. Darum die Konjunktion *da*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Warum lernst du so viel? – ___ ich morgen eine Prüfung habe.
+    options: [Weil, Da, Denn]
+    answer: Weil
+    explanation:
+      en: "A clause alone that answers *Warum?* takes *weil*; *da* cannot stand alone as the answer."
+      fa: "جمله‌ای که به‌تنهایی پاسخ *Warum?* است با *weil* می‌آید؛ جملهٔ *da* نمی‌تواند تنها پاسخ باشد."
+      de: "Ein Satz allein als Antwort auf *Warum?* beginnt mit *weil*. Ein *da*-Satz kann nicht allein antworten."
+  - id: gap-3
+    type: gap-fill
+    prompt: Am Wochenende? ___ habe ich leider keine Zeit.
+    options: [Weil, Obwohl, Da]
+    answer: Da
+    explanation:
+      en: 'The verb *habe* comes right after the gap, so it is the adverb *da*, "then".'
+      fa: "فعل *habe* بلافاصله پس از جای خالی آمده است، پس این قید *da* به معنای «آن وقت» است."
+      de: "Das Verb *habe* steht direkt danach. Das ist das Adverb *da*: dann."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Da ich keinen Schlüssel hatte, …
+    options: [ich musste warten., musste ich warten., ich warten musste.]
+    answer: musste ich warten.
+    explanation:
+      en: "The *da* clause is position 1, so the main clause starts with its verb: *musste ich*."
+      fa: "جملهٔ پیرو با *da* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *musste ich*."
+      de: "Der *da*-Satz ist Position 1. Der Hauptsatz beginnt mit dem Verb: *musste ich*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wir bleiben heute zu Hause, da …
+    options: [es regnet stark., es stark regnet., stark es regnet.]
+    answer: es stark regnet.
+    explanation:
+      en: "Here *da* gives the reason, so the verb *regnet* goes to the end."
+      fa: "این‌جا *da* علت را می‌گوید، پس فعل *regnet* به پایان جمله می‌رود."
+      de: "Hier nennt *da* den Grund. Darum steht das Verb *regnet* am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Welcher Satz nennt einen Grund?"
+    options: [Da steht mein Auto., "Am Montag? Da habe ich keine Zeit.", "Da es spät ist, fahre ich nach Hause."]
+    answer: "Da es spät ist, fahre ich nach Hause."
+    explanation:
+      en: 'Only there is the verb *ist* at the end of the *da* clause. In the others *da* means "there" or "then".'
+      fa: "فقط در این جمله فعل *ist* در پایان جملهٔ *da* است. در دو جملهٔ دیگر *da* یعنی «آن‌جا» یا «آن وقت»."
+      de: "Nur hier steht das Verb *ist* am Ende vom *da*-Satz. In den anderen Sätzen heißt *da* dort oder dann."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Da sie krank ist, …
+    options: [sie kann nicht kommen., kann sie nicht kommen., sie nicht kommen kann.]
+    answer: kann sie nicht kommen.
+    explanation:
+      en: "After the *da* clause comes the verb of the main clause: *kann sie*."
+      fa: "پس از جملهٔ پیرو با *da*، فعل جملهٔ پایه می‌آید: *kann sie*."
+      de: "Nach dem *da*-Satz kommt das Verb vom Hauptsatz: *kann sie*."
+  - id: true-1
+    type: true-false
+    prompt: Da ich wenig Geld habe, kaufe ich kein neues Auto.
+    answer: true
+    explanation:
+      en: "*Habe* ends the *da* clause, and the main clause starts with its verb *kaufe*. The sentence is correct."
+      fa: "*habe* جملهٔ پیرو را می‌بندد و جملهٔ پایه با فعل *kaufe* آغاز می‌شود. جمله درست است."
+      de: "*Habe* steht am Ende vom *da*-Satz, der Hauptsatz beginnt mit dem Verb *kaufe*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Da der Laden geschlossen ist, wir gehen zum Supermarkt.
+    answer: false
+    explanation:
+      en: "After the *da* clause the main clause starts with its verb: *gehen wir zum Supermarkt*."
+      fa: "پس از جملهٔ پیرو با *da*، جملهٔ پایه با فعلش آغاز می‌شود: *gehen wir zum Supermarkt*."
+      de: "Nach dem *da*-Satz beginnt der Hauptsatz mit dem Verb: *gehen wir zum Supermarkt*."
+  - id: true-3
+    type: true-false
+    prompt: Da hat sie recht.
+    answer: true
+    explanation:
+      en: 'Here *da* is the adverb ("there, in that"), so the verb *hat* follows it in position 2. The sentence is correct.'
+      fa: "این‌جا *da* قید است (یعنی «در این مورد»)، پس فعل *hat* در جایگاه دوم پس از آن می‌آید. جمله درست است."
+      de: "Hier ist *da* ein Adverb. Darum steht das Verb *hat* direkt danach, auf Position 2. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Da er keine Zeit hat, kommt er nicht mit.
+    answer: true
+    explanation:
+      en: "The verb *hat* is at the end of the *da* clause, and *kommt* starts the main clause. The sentence is correct."
+      fa: "فعل *hat* در پایان جملهٔ پیرو با *da* است و *kommt* جملهٔ پایه را آغاز می‌کند. جمله درست است."
+      de: "Das Verb *hat* steht am Ende vom *da*-Satz, *kommt* beginnt den Hauptsatz. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Da er hat keine Zeit, kommt er nicht mit.
+    answer: false
+    explanation:
+      en: "*Da* gives the reason here, so its verb goes to the end: *da er keine Zeit hat*."
+      fa: "این‌جا *da* علت را می‌گوید، پس فعلش به پایان جمله می‌رود: *da er keine Zeit hat*."
+      de: "Hier nennt *da* den Grund. Darum steht das Verb am Ende: *da er keine Zeit hat*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Da ich morgen früh arbeiten ___ (müssen), gehe ich jetzt ins Bett.
+    answers: [muss]
+    explanation:
+      en: "In the *da* clause the modal verb comes last, in the form for *ich*: *muss*."
+      fa: "در جملهٔ پیرو با *da* فعل وجهی در آخر و با شناسهٔ اول‌شخص مفرد می‌آید: *muss*."
+      de: "Im *da*-Satz steht das Modalverb am Schluss, in der Form für *ich*: *muss*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Da der Kurs um acht Uhr ___ (anfangen), stehe ich um sieben auf.
+    answers: [anfängt]
+    explanation:
+      en: "In the *da* clause the separable verb is one word at the end: *anfängt*."
+      fa: "در جملهٔ پیرو با *da* فعل جداشدنی یک‌جا در پایان می‌آید: *anfängt*."
+      de: "Im *da*-Satz steht das trennbare Verb zusammen am Ende: *anfängt*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Da das Wetter so schön ___ (sein), essen wir heute im Garten.
+    answers: [ist]
+    explanation:
+      en: "*Das Wetter* is third person singular, and the verb stands at the end of the *da* clause: *ist*."
+      fa: "*das Wetter* سوم‌شخص مفرد است و فعل در پایان جملهٔ پیرو با *da* می‌آید: *ist*."
+      de: "*Das Wetter* ist 3. Person Singular, das Verb steht am Ende vom *da*-Satz: *ist*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Da es schon spät war, ___ (nehmen) wir ein Taxi.
+    answers: [nahmen]
+    explanation:
+      en: "The main clause starts with its verb, in the *Präteritum* like *war*: *nahmen*."
+      fa: "جملهٔ پایه با فعلش آغاز می‌شود و مانند *war* در گذشتهٔ ساده (*Präteritum*) است: *nahmen*."
+      de: "Der Hauptsatz beginnt mit dem Verb, im Präteritum wie *war*: *nahmen*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["da es kalt war,", bin, ich, nach Hause, gegangen]
+    explanation:
+      en: "The *da* clause is position 1, so *bin* comes next, then the subject, and *gegangen* goes last."
+      fa: "جملهٔ پیرو با *da* جایگاه اول است، پس *bin*، سپس فاعل و در آخر *gegangen* می‌آید."
+      de: "Der *da*-Satz ist Position 1. Dann kommt *bin*, danach das Subjekt, und *gegangen* steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["wir bleiben heute zu Hause,", da, es, stark, regnet]
+    explanation:
+      en: "*Da* starts the clause, then the subject, and the verb *regnet* comes last."
+      fa: "*da* جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل *regnet* در آخر."
+      de: "*Da* beginnt den Satz, dann kommt das Subjekt, das Verb *regnet* steht am Ende."
+  - id: order-3
+    type: word-order
+    answers:
+      - ["da ich kein Auto habe,", fahre, ich, mit dem Bus]
+    explanation:
+      en: "After the *da* clause the main clause starts with its verb *fahre*, then the subject."
+      fa: "پس از جملهٔ پیرو با *da*، جملهٔ پایه با فعل *fahre* و سپس فاعل می‌آید."
+      de: "Nach dem *da*-Satz kommt zuerst das Verb *fahre*, dann das Subjekt."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Da der Aufzug kaputt ist,", nehmen wir die Treppe.]
+      - ["Da ich Durst habe,", trinke ich ein Glas Wasser.]
+      - ["Da es dunkel wird,", mache ich das Licht an.]
+    explanation:
+      en: "Each *da* clause gives the reason for its main clause: the broken lift, thirst, the dark."
+      fa: "هر جملهٔ پیرو با *da* علت جملهٔ پایهٔ خود را می‌گوید: آسانسور خراب، تشنگی، تاریکی."
+      de: "Jeder *da*-Satz nennt den Grund für seinen Hauptsatz: der kaputte Aufzug, der Durst, die Dunkelheit."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: d5c8e6d250692ded

@@ -4,10 +4,316 @@ kind: grammar
 level: B1
 chapter: b1-reason-condition-clauses
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-158]
 title:
   en: "*obwohl*"
   fa: "*obwohl*"
   de: "*obwohl*"
+
+explanations:
+  en:
+    rule: >
+      *Obwohl* (although) gives a contrast: something happens, though you
+      would expect the opposite. *Ich besuche sie, obwohl ich wenig Zeit
+      habe.* It starts a subordinate clause, so the conjugated verb goes to
+      the end, as after *weil*. A comma always comes before *obwohl*. The
+      *obwohl* clause can also come first; then the main clause starts with
+      its verb: *Obwohl es regnet, gehen wir spazieren.* The adverb
+      *trotzdem* (all the same) says the same from the other side. It stands
+      in the main clause that tells what happens anyway, and the verb comes
+      right after it, in position 2: *Es regnet, trotzdem gehen wir
+      spazieren.* So *weil* gives a reason for something, and *obwohl* gives
+      a reason that does not stop it.
+  fa:
+    rule: >
+      *obwohl* (با این‌که، اگرچه) تضاد را بیان می‌کند: کاری انجام می‌شود،
+      هرچند انتظار عکس آن می‌رود. *Ich besuche sie, obwohl ich wenig Zeit
+      habe.* این حرف ربط جملهٔ پیرو را آغاز می‌کند، پس فعل صرف‌شده، مانند
+      پس از *weil*، به پایان جمله می‌رود. پیش از *obwohl* همیشه ویرگول
+      می‌آید. جملهٔ پیرو با *obwohl* می‌تواند اول هم بیاید؛ در این صورت
+      جملهٔ پایه با فعلش آغاز می‌شود: *Obwohl es regnet, gehen wir
+      spazieren.* قید *trotzdem* (با این حال) همین معنا را از سوی دیگر
+      می‌گوید. این قید در جملهٔ پایه‌ای می‌آید که از رخ دادن کار با وجود
+      مانع خبر می‌دهد، و فعل بلافاصله پس از آن در جایگاه دوم قرار می‌گیرد:
+      *Es regnet, trotzdem gehen wir spazieren.* پس *weil* علت کاری را
+      می‌گوید و *obwohl* علتی را که جلوی آن کار را نمی‌گیرد.
+  de:
+    rule: >
+      *Obwohl* nennt einen Gegensatz: Etwas passiert, aber man erwartet das
+      Gegenteil. *Ich besuche sie, obwohl ich wenig Zeit habe.* Mit *obwohl*
+      beginnt ein Nebensatz. Das konjugierte Verb steht am Ende, wie nach
+      *weil*. Vor *obwohl* steht immer ein Komma. Der *obwohl*-Satz kann
+      auch zuerst stehen. Dann beginnt der Hauptsatz mit dem Verb: *Obwohl
+      es regnet, gehen wir spazieren.* Das Adverb *trotzdem* sagt das
+      Gleiche von der anderen Seite. Es steht im Hauptsatz, und das Verb
+      kommt direkt danach, auf Position 2: *Es regnet, trotzdem gehen wir
+      spazieren.* *Weil* nennt also einen Grund. *Obwohl* nennt einen Grund,
+      der nichts ändert.
+
+table:
+  columns:
+    - {
+        en: "With *trotzdem*: verb in position 2",
+        fa: "با *trotzdem*: فعل در جایگاه دوم",
+        de: "Mit *trotzdem*: Verb auf Position 2",
+      }
+    - { en: "With *obwohl*: verb at the end", fa: "با *obwohl*: فعل در پایان", de: "Mit *obwohl*: Verb am Ende" }
+  rows:
+    - ["Es regnet, trotzdem gehen wir spazieren.", "Wir gehen spazieren, obwohl es regnet."]
+    - ["Ich habe wenig Zeit, trotzdem besuche ich sie.", "Ich besuche sie, obwohl ich wenig Zeit habe."]
+    - ["Er ist krank, trotzdem geht er zur Arbeit.", "Er geht zur Arbeit, obwohl er krank ist."]
+    - ["Das Handy ist teuer, trotzdem kauft sie es.", "Sie kauft das Handy, obwohl es teuer ist."]
+    - ["Ich habe viel gegessen, trotzdem habe ich noch Hunger.", "Ich habe noch Hunger, obwohl ich viel gegessen habe."]
+    - [
+        "Der Film fängt gleich an, trotzdem ist Paul noch nicht da.",
+        "Paul ist noch nicht da, obwohl der Film gleich anfängt.",
+      ]
+
+examples:
+  - de: Ich besuche sie, obwohl ich wenig Zeit habe.
+    en: I'm visiting her although I have little time.
+    fa: به دیدنش می‌روم، با این‌که وقت کمی دارم.
+  - de: Obwohl es regnet, gehen wir spazieren.
+    en: Although it's raining, we're going for a walk.
+    fa: با این‌که باران می‌بارد، به پیاده‌روی می‌رویم.
+  - de: Er geht zur Arbeit, obwohl er krank ist.
+    en: He goes to work although he is ill.
+    fa: با این‌که بیمار است، سر کار می‌رود.
+  - de: Obwohl sie müde war, hat sie noch die Küche aufgeräumt.
+    en: Although she was tired, she still tidied up the kitchen.
+    fa: با این‌که خسته بود، آشپزخانه را هم مرتب کرد.
+  - de: Ich habe noch Hunger, obwohl ich viel gegessen habe.
+    en: I'm still hungry although I've eaten a lot.
+    fa: هنوز گرسنه‌ام، با این‌که زیاد خورده‌ام.
+  - de: Paul ist noch nicht da, obwohl der Film gleich anfängt.
+    en: Paul isn't here yet, although the film is about to start.
+    fa: پاول هنوز نیامده است، با این‌که فیلم الان شروع می‌شود.
+  - de: Sie spricht gut Deutsch, obwohl sie erst seit einem Jahr in Wien wohnt.
+    en: She speaks German well although she has only lived in Vienna for a year.
+    fa: آلمانی را خوب حرف می‌زند، با این‌که فقط یک سال است در وین زندگی می‌کند.
+  - de: Es ist kalt, trotzdem geht sie schwimmen.
+    en: It's cold, but she goes swimming all the same.
+    fa: هوا سرد است، با این حال به شنا می‌رود.
+
+mistakes:
+  - wrong: Ich besuche sie, obwohl ich habe wenig Zeit.
+    right: Ich besuche sie, obwohl ich wenig Zeit habe.
+    why:
+      en: "*Obwohl* sends the conjugated verb to the end: *obwohl ich wenig Zeit habe*."
+      fa: "*obwohl* فعل صرف‌شده را به پایان جمله می‌فرستد: *obwohl ich wenig Zeit habe*."
+      de: "Nach *obwohl* steht das konjugierte Verb am Ende: *obwohl ich wenig Zeit habe*."
+  - wrong: Obwohl es regnet, wir gehen spazieren.
+    right: Obwohl es regnet, gehen wir spazieren.
+    why:
+      en: "The *obwohl* clause is position 1, so the main clause goes on with its verb: *gehen wir*."
+      fa: "جملهٔ پیرو با *obwohl* جایگاه اول است، پس جملهٔ پایه با فعلش ادامه می‌یابد: *gehen wir*."
+      de: "Der *obwohl*-Satz ist Position 1. Danach kommt das Verb: *gehen wir*."
+  - wrong: Es regnet, trotzdem wir gehen spazieren.
+    right: Es regnet, trotzdem gehen wir spazieren.
+    why:
+      en: "*Trotzdem* takes position 1 of its clause, so the verb follows it at once: *trotzdem gehen wir*."
+      fa: "*trotzdem* جایگاه اول جمله‌اش را می‌گیرد، پس فعل بلافاصله پس از آن می‌آید: *trotzdem gehen wir*."
+      de: "*Trotzdem* steht auf Position 1. Darum kommt das Verb direkt danach: *trotzdem gehen wir*."
+  - wrong: Er kommt mit, weil er keine Lust hat.
+    right: Er kommt mit, obwohl er keine Lust hat.
+    why:
+      en: "Having no wish to go is no reason for going along; it is a contrast, so *obwohl*."
+      fa: "بی‌میلی دلیل همراه شدن نیست، بلکه با آن در تضاد است؛ پس *obwohl* درست است."
+      de: "Keine Lust ist kein Grund zum Mitkommen. Es ist ein Gegensatz, also *obwohl*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich habe noch Hunger, ___ ich schon drei Brötchen gegessen habe.
+    options: [weil, obwohl, dass]
+    answer: obwohl
+    explanation:
+      en: "Three rolls should end your hunger, so this is a contrast: *obwohl*."
+      fa: "سه نان باید گرسنگی را برطرف کند، پس این‌جا تضاد است: *obwohl*."
+      de: "Nach drei Brötchen erwartet man keinen Hunger. Das ist ein Gegensatz: *obwohl*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich bleibe heute zu Hause, ___ ich erkältet bin.
+    options: [obwohl, weil, trotzdem]
+    answer: weil
+    explanation:
+      en: "A cold is a reason for staying at home, so *weil*; *obwohl* would say it is not."
+      fa: "سرماخوردگی دلیل در خانه ماندن است، پس *weil*؛ *obwohl* خلاف این را می‌گفت."
+      de: "Eine Erkältung ist ein Grund, zu Hause zu bleiben. Darum *weil*. *Obwohl* würde das Gegenteil sagen."
+  - id: gap-3
+    type: gap-fill
+    prompt: Es ist schon spät, ___ arbeitet er noch.
+    options: [obwohl, weil, trotzdem]
+    answer: trotzdem
+    explanation:
+      en: "The verb *arbeitet* comes right after the gap, in position 2, so only the adverb *trotzdem* fits."
+      fa: "فعل *arbeitet* بلافاصله پس از جای خالی و در جایگاه دوم است، پس فقط قید *trotzdem* درست است."
+      de: "Das Verb *arbeitet* steht direkt danach, auf Position 2. Darum passt nur das Adverb *trotzdem*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ das Wetter schlecht war, hatten wir einen schönen Urlaub.
+    options: [Weil, Trotzdem, Obwohl]
+    answer: Obwohl
+    explanation:
+      en: "Bad weather and a lovely holiday are a contrast, and the verb *war* is at the end: *obwohl*."
+      fa: "هوای بد و سفری خوش با هم در تضادند و فعل *war* در پایان است: *obwohl*."
+      de: "Schlechtes Wetter und ein schöner Urlaub sind ein Gegensatz, und *war* steht am Ende: *obwohl*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Sie geht schwimmen, obwohl …
+    options: [das Wasser ist kalt., das Wasser kalt ist., ist das Wasser kalt.]
+    answer: das Wasser kalt ist.
+    explanation:
+      en: "After *obwohl* the conjugated verb goes to the end: *das Wasser kalt ist*."
+      fa: "پس از *obwohl* فعل صرف‌شده به پایان جمله می‌رود: *das Wasser kalt ist*."
+      de: "Nach *obwohl* steht das konjugierte Verb am Ende: *das Wasser kalt ist*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Obwohl ich wenig Zeit habe, …
+    options: [ich helfe dir., helfe ich dir., ich dir helfe.]
+    answer: helfe ich dir.
+    explanation:
+      en: "The *obwohl* clause is position 1, so the main clause starts with its verb: *helfe ich*."
+      fa: "جملهٔ پیرو با *obwohl* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *helfe ich*."
+      de: "Der *obwohl*-Satz ist Position 1. Der Hauptsatz beginnt mit dem Verb: *helfe ich*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Es ist kalt, trotzdem …
+    options: [sie geht schwimmen., sie schwimmen geht., geht sie schwimmen.]
+    answer: geht sie schwimmen.
+    explanation:
+      en: "*Trotzdem* is position 1, so the verb *geht* comes next, then the subject."
+      fa: "*trotzdem* جایگاه اول است، پس فعل *geht* و سپس فاعل می‌آید."
+      de: "*Trotzdem* ist Position 1. Dann kommt das Verb *geht*, danach das Subjekt."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "Obwohl Tim krank ist, geht er zur Arbeit. Das heißt: …"
+    options: [Tim bleibt heute zu Hause., "Tim arbeitet nicht, weil er krank ist.", "Tim ist krank, aber er arbeitet."]
+    answer: "Tim ist krank, aber er arbeitet."
+    explanation:
+      en: "*Obwohl* says the illness does not stop him: he is ill and still works."
+      fa: "*obwohl* می‌گوید بیماری جلوی او را نمی‌گیرد: بیمار است و باز هم کار می‌کند."
+      de: "*Obwohl* sagt: Die Krankheit ändert nichts. Tim ist krank und arbeitet trotzdem."
+  - id: choice-5
+    type: multiple-choice
+    prompt: Er hat den Bus verpasst, obwohl …
+    options: [er ist früh losgegangen., er früh ist losgegangen., er früh losgegangen ist.]
+    answer: er früh losgegangen ist.
+    explanation:
+      en: "In the *Perfekt* the conjugated *ist* comes last, after the *Partizip II* *losgegangen*."
+      fa: "در گذشتهٔ نقلی (*Perfekt*) فعل صرف‌شدهٔ *ist* پس از صفت مفعولی *losgegangen* و در آخر می‌آید."
+      de: "Im Perfekt steht das konjugierte *ist* am Schluss, nach dem Partizip II *losgegangen*."
+  - id: true-1
+    type: true-false
+    prompt: Ich gehe joggen, obwohl ich müde bin.
+    answer: true
+    explanation:
+      en: "The verb *bin* is at the end of the *obwohl* clause. The sentence is correct."
+      fa: "فعل *bin* در پایان جملهٔ پیرو با *obwohl* است. جمله درست است."
+      de: "Das Verb *bin* steht am Ende vom *obwohl*-Satz. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Obwohl es schneit, wir fahren in die Berge.
+    answer: false
+    explanation:
+      en: "After the *obwohl* clause the main clause starts with its verb: *fahren wir in die Berge*."
+      fa: "پس از جملهٔ پیرو با *obwohl*، جملهٔ پایه با فعلش آغاز می‌شود: *fahren wir in die Berge*."
+      de: "Nach dem *obwohl*-Satz beginnt der Hauptsatz mit dem Verb: *fahren wir in die Berge*."
+  - id: true-3
+    type: true-false
+    prompt: Sie lernt weiter, obwohl sie die Prüfung schon bestanden hat.
+    answer: true
+    explanation:
+      en: "*Hat* closes the *obwohl* clause, after the *Partizip II*. The sentence is correct."
+      fa: "*hat* پس از صفت مفعولی جملهٔ پیرو با *obwohl* را می‌بندد. جمله درست است."
+      de: "*Hat* steht am Ende vom *obwohl*-Satz, nach dem Partizip II. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Er kauft das Handy, obwohl es ist sehr teuer.
+    answer: false
+    explanation:
+      en: "After *obwohl* the verb goes to the end: *obwohl es sehr teuer ist*."
+      fa: "پس از *obwohl* فعل به پایان جمله می‌رود: *obwohl es sehr teuer ist*."
+      de: "Nach *obwohl* steht das Verb am Ende: *obwohl es sehr teuer ist*."
+  - id: true-5
+    type: true-false
+    prompt: Das Essen war kalt, trotzdem haben wir alles gegessen.
+    answer: true
+    explanation:
+      en: "After *trotzdem* the verb *haben* is in position 2. The sentence is correct."
+      fa: "پس از *trotzdem* فعل *haben* در جایگاه دوم است. جمله درست است."
+      de: "Nach *trotzdem* steht das Verb *haben* auf Position 2. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich fahre mit dem Fahrrad, obwohl es draußen sehr kalt ___ (sein).
+    answers: [ist]
+    explanation:
+      en: "*Es* is third person singular, and in the *obwohl* clause the verb stands at the end: *ist*."
+      fa: "*es* سوم‌شخص مفرد است و در جملهٔ پیرو با *obwohl* فعل در پایان می‌آید: *ist*."
+      de: "*Es* ist 3. Person Singular, und im *obwohl*-Satz steht das Verb am Ende: *ist*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Er ist immer noch müde, obwohl er zehn Stunden ___ (schlafen) hat.
+    answers: [geschlafen]
+    explanation:
+      en: "*Hat* is already at the end, so the gap takes the *Partizip II* of *schlafen*: *geschlafen*."
+      fa: "*hat* در پایان جمله آمده است، پس جای خالی صفت مفعولی *schlafen* را می‌خواهد: *geschlafen*."
+      de: "*Hat* steht schon am Ende. In die Lücke kommt das Partizip II von *schlafen*: *geschlafen*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Obwohl es stark ___ (regnen), gehen die Kinder nach draußen.
+    answers: [regnet]
+    explanation:
+      en: "The verb of the *obwohl* clause stands at its end, in the present like the main clause: *regnet*."
+      fa: "فعل جملهٔ پیرو با *obwohl* در پایان آن می‌آید و مانند جملهٔ پایه در زمان حال است: *regnet*."
+      de: "Das Verb vom *obwohl*-Satz steht am Ende, im Präsens wie der Hauptsatz: *regnet*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich bin satt, trotzdem ___ (essen) ich noch ein Stück Kuchen.
+    answers: [esse]
+    explanation:
+      en: "After *trotzdem* the verb comes in position 2, in the form for *ich*: *esse*."
+      fa: "پس از *trotzdem* فعل در جایگاه دوم و با شناسهٔ اول‌شخص مفرد می‌آید: *esse*."
+      de: "Nach *trotzdem* steht das Verb auf Position 2, in der Form für *ich*: *esse*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["sie geht zur Arbeit,", obwohl, sie, krank, ist]
+    explanation:
+      en: "*Obwohl* starts the clause, then the subject, and the verb *ist* comes last."
+      fa: "*obwohl* جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل *ist* در آخر."
+      de: "*Obwohl* beginnt den Satz, dann kommt das Subjekt, das Verb *ist* steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["obwohl er wenig Geld hat,", kauft, er, ein neues Auto]
+    explanation:
+      en: "The *obwohl* clause is position 1, so the verb *kauft* follows, then the subject."
+      fa: "جملهٔ پیرو با *obwohl* جایگاه اول است، پس فعل *kauft* و سپس فاعل می‌آید."
+      de: "Der *obwohl*-Satz ist Position 1. Dann kommt das Verb *kauft*, danach das Subjekt."
+  - id: order-3
+    type: word-order
+    answers:
+      - ["ich komme mit,", obwohl, ich, morgen früh, aufstehen, muss]
+    explanation:
+      en: "After *obwohl* the modal verb *muss* goes to the very end, after the infinitive *aufstehen*."
+      fa: "پس از *obwohl* فعل وجهی *muss* پس از مصدر *aufstehen* و در پایان جمله می‌آید."
+      de: "Nach *obwohl* steht das Modalverb *muss* ganz am Ende, nach dem Infinitiv *aufstehen*."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Sie friert,", obwohl sie eine dicke Jacke trägt.]
+      - ["Er hat noch Hunger,", obwohl er schon viel gegessen hat.]
+      - ["Ich bin müde,", obwohl ich lange geschlafen habe.]
+    explanation:
+      en: "Each *obwohl* clause names what should have prevented it: a warm jacket, a big meal, a long sleep."
+      fa: "هر جملهٔ پیرو با *obwohl* چیزی را می‌گوید که باید مانع می‌شد: کاپشن گرم، غذای زیاد، خواب طولانی."
+      de: "Jeder *obwohl*-Satz nennt, was es eigentlich verhindern sollte: eine dicke Jacke, viel Essen, langer Schlaf."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: c54b66467c1d9cf9

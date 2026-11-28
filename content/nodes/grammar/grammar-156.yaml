@@ -4,10 +4,371 @@ kind: grammar
 level: B1
 chapter: b1-connectors-negation
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-146, grammar-154]
 title:
   en: "Position of *nicht* in detail"
   fa: "جایگاه *nicht* با جزئیات"
   de: "Die Position von *nicht* im Detail"
+
+explanations:
+  en:
+    rule: >
+      *Nicht* can negate the whole sentence or only one part of it. To negate
+      the whole sentence, *nicht* stands as late as it can: after the verb in
+      position 2, after pronouns and objects with *der*, *die*, *das* or
+      *mein* (*Ich kenne ihn nicht.*), and after a time such as *heute* or
+      *morgen*. But it comes before the parts that belong closely to the
+      verb: the second part of the verb at the end (*Ich habe den Film nicht
+      gesehen.* *Der Zug fährt heute nicht ab.*), a place or a direction
+      (*nicht nach Hause*), an adjective or a noun after *sein*, an object
+      with a preposition (*Ich warte nicht auf dich.*) and a word that says
+      how (*nicht schnell*). To negate only one part, *nicht* stands directly
+      before that part, and *sondern* often gives the right one: *Das sind
+      nicht die Äpfel von Klara, sondern von Paul.* *Nicht ich habe das
+      gesagt, sondern Tom.*
+  fa:
+    rule: >
+      *nicht* می‌تواند کل جمله را منفی کند یا فقط یک بخش آن را. برای نفی کل
+      جمله، *nicht* تا جای ممکن دیرتر می‌آید: پس از فعلِ جایگاه دوم، پس از
+      ضمیرها و پس از مفعولی که با *der*، *die*، *das* یا *mein* می‌آید
+      (*Ich kenne ihn nicht.*)، و پس از قید زمانی مانند *heute* یا *morgen*.
+      اما *nicht* پیش از بخش‌هایی می‌آید که پیوند نزدیکی با فعل دارند: بخش
+      دوم فعل در پایان جمله (*Ich habe den Film nicht gesehen.* و *Der Zug
+      fährt heute nicht ab.*)، مکان یا مقصد (*nicht nach Hause*)، صفت یا
+      اسمِ پس از *sein*، مفعولی که با حرف اضافه می‌آید (*Ich warte nicht auf
+      dich.*) و قیدی که چگونگی را می‌گوید (*nicht schnell*). برای نفی فقط یک
+      بخش، *nicht* درست پیش از همان بخش می‌آید و اغلب *sondern* بخش درست را
+      می‌آورد: *Das sind nicht die Äpfel von Klara, sondern von Paul.* و
+      *Nicht ich habe das gesagt, sondern Tom.*
+  de:
+    rule: >
+      Mit *nicht* verneint man den ganzen Satz oder nur einen Teil. Für den
+      ganzen Satz steht *nicht* möglichst spät: nach dem Verb auf Position 2,
+      nach Pronomen und nach einem Objekt mit *der*, *die*, *das* oder *mein*
+      (*Ich kenne ihn nicht.*), und nach einer Zeit wie *heute* oder *morgen*.
+      Aber *nicht* steht vor den Teilen, die eng zum Verb gehören: vor dem
+      zweiten Teil vom Verb am Ende (*Ich habe den Film nicht gesehen.* *Der
+      Zug fährt heute nicht ab.*), vor einem Ort oder einer Richtung (*nicht
+      nach Hause*), vor einem Adjektiv oder Nomen nach *sein*, vor einem
+      Objekt mit Präposition (*Ich warte nicht auf dich.*) und vor einem Wort,
+      das sagt, wie (*nicht schnell*). Für nur einen Teil steht *nicht* direkt
+      vor diesem Teil. Oft nennt *sondern* dann das Richtige: *Das sind nicht
+      die Äpfel von Klara, sondern von Paul.* *Nicht ich habe das gesagt,
+      sondern Tom.*
+
+table:
+  columns:
+    - { en: Position 1, fa: جایگاه اول, de: Position 1 }
+    - { en: "Position 2: verb", fa: "جایگاه دوم: فعل", de: "Position 2: Verb" }
+    - { en: Before *nicht*, fa: "پیش از *nicht*", de: "Vor *nicht*" }
+    - { en: "*nicht*", fa: "*nicht*", de: "*nicht*" }
+    - { en: After *nicht*, fa: "پس از *nicht*", de: "Nach *nicht*" }
+  rows:
+    - [Ich, kenne, ihn, nicht, –]
+    - [Er, findet, den Schlüssel, nicht, –]
+    - [Wir, kommen, morgen, nicht, –]
+    - [Ich, habe, den Film, nicht, gesehen.]
+    - [Wir, können, heute, nicht, kommen.]
+    - [Der Zug, fährt, heute, nicht, ab.]
+    - [Sie, fährt, morgen, nicht, nach Hause.]
+    - [Ich, warte, –, nicht, auf dich.]
+    - [Das Essen, ist, heute, nicht, gut.]
+    - [Er, fährt, –, nicht, schnell.]
+
+# Two sentences with the same words. The bracket shows how much nicht
+# negates: the whole sentence, or only das Buch. The slot of nicht is tinted.
+diagrams:
+  - caption:
+      en: >
+        How much *nicht* negates. At the end, before *gekauft*, it negates the
+        whole sentence: I did not buy the book. Directly before *das Buch*, it
+        negates only that part: I bought something, but something else.
+      fa: >
+        واژهٔ *nicht* چه اندازه از جمله را منفی می‌کند؟ در پایان جمله، پیش از
+        *gekauft*، کل جمله را منفی می‌کند: کتاب را نخریده‌ام. درست پیش از
+        *das Buch* فقط همان بخش را منفی می‌کند: چیزی خریده‌ام، اما چیز دیگری.
+      de: >
+        Was *nicht* verneint. Am Ende, vor *gekauft*, verneint es den ganzen
+        Satz: Ich habe das Buch nicht gekauft. Direkt vor *das Buch* verneint
+        es nur diesen Teil: Ich habe etwas gekauft, aber etwas anderes.
+    labels:
+      whole: { en: the whole sentence is negated, fa: کل جمله منفی است, de: der ganze Satz ist verneint }
+      part: { en: only this part is negated, fa: فقط این بخش منفی است, de: nur dieser Teil ist verneint }
+    svg: |
+      <svg viewBox="0 0 320 236">
+        <!-- the whole sentence: a bracket over every slot -->
+        <text class="note" x="160" y="16" text-anchor="middle">{{whole}}</text>
+        <polyline class="guide" points="8,36 8,28 314,28 314,36"/>
+        <rect class="surface" x="8" y="42" width="36" height="32" rx="4"/>
+        <rect class="surface" x="50" y="42" width="50" height="32" rx="4"/>
+        <rect class="surface" x="106" y="42" width="78" height="32" rx="4"/>
+        <rect class="shade" x="190" y="42" width="52" height="32" rx="4"/>
+        <rect class="surface" x="248" y="42" width="66" height="32" rx="4"/>
+        <text class="label" x="26" y="63" text-anchor="middle">Ich</text>
+        <text class="label" x="75" y="63" text-anchor="middle">habe</text>
+        <text class="label" x="145" y="63" text-anchor="middle">das Buch</text>
+        <text class="label" x="216" y="63" text-anchor="middle">nicht</text>
+        <text class="label" x="281" y="63" text-anchor="middle">gekauft</text>
+        <!-- only das Buch: a bracket under that slot -->
+        <rect class="surface" x="8" y="120" width="36" height="32" rx="4"/>
+        <rect class="surface" x="50" y="120" width="50" height="32" rx="4"/>
+        <rect class="shade" x="106" y="120" width="52" height="32" rx="4"/>
+        <rect class="surface" x="164" y="120" width="78" height="32" rx="4"/>
+        <rect class="surface" x="248" y="120" width="66" height="32" rx="4"/>
+        <text class="label" x="26" y="141" text-anchor="middle">Ich</text>
+        <text class="label" x="75" y="141" text-anchor="middle">habe</text>
+        <text class="label" x="132" y="141" text-anchor="middle">nicht</text>
+        <text class="label" x="203" y="141" text-anchor="middle">das Buch</text>
+        <text class="label" x="281" y="141" text-anchor="middle">gekauft</text>
+        <polyline class="guide" points="164,158 164,166 242,166 242,158"/>
+        <text class="note" x="203" y="186" text-anchor="middle">{{part}}</text>
+        <text class="note" x="160" y="220" text-anchor="middle">…, sondern die Zeitschrift.</text>
+      </svg>
+
+examples:
+  - de: Ich kenne ihn nicht.
+    en: I don't know him.
+    fa: او را نمی‌شناسم.
+  - de: Ich habe den Film nicht gesehen.
+    en: I haven't seen the film.
+    fa: آن فیلم را ندیده‌ام.
+  - de: Wir können heute nicht kommen.
+    en: We can't come today.
+    fa: امروز نمی‌توانیم بیاییم.
+  - de: Der Zug fährt heute nicht ab.
+    en: The train isn't leaving today.
+    fa: قطار امروز حرکت نمی‌کند.
+  - de: Ich warte nicht auf dich.
+    en: I'm not waiting for you.
+    fa: منتظرت نمی‌مانم.
+  - de: Er fährt nicht schnell.
+    en: He doesn't drive fast.
+    fa: او تند رانندگی نمی‌کند.
+  - de: Wir kommen morgen nicht.
+    en: We aren't coming tomorrow.
+    fa: ما فردا نمی‌آییم.
+  - de: Wir kommen nicht morgen, sondern übermorgen.
+    en: We're coming not tomorrow but the day after.
+    fa: ما فردا نمی‌آییم، بلکه پس‌فردا.
+  - de: Das sind nicht die Äpfel von Klara, sondern von Paul.
+    en: These aren't Klara's apples, they're Paul's.
+    fa: این سیب‌ها مال کلارا نیستند، بلکه مال پاول‌اند.
+  - de: Nicht ich habe das gesagt, sondern Tom.
+    en: It wasn't me who said that, it was Tom.
+    fa: آن حرف را من نزدم، بلکه تام زد.
+
+mistakes:
+  - wrong: Ich habe den Film gesehen nicht.
+    right: Ich habe den Film nicht gesehen.
+    why:
+      en: "*Nicht* comes before the second part of the verb at the end: *nicht gesehen*."
+      fa: "*nicht* پیش از بخش دوم فعل در پایان جمله می‌آید: *nicht gesehen*."
+      de: "*Nicht* steht vor dem zweiten Teil vom Verb am Ende: *nicht gesehen*."
+  - wrong: Ich kenne nicht ihn.
+    right: Ich kenne ihn nicht.
+    why:
+      en: "To negate the whole sentence, *nicht* comes after a pronoun such as *ihn*."
+      fa: "برای نفی کل جمله، *nicht* پس از ضمیری مانند *ihn* می‌آید."
+      de: "Für den ganzen Satz steht *nicht* nach einem Pronomen wie *ihn*."
+  - wrong: Der Bus fährt heute ab nicht.
+    right: Der Bus fährt heute nicht ab.
+    why:
+      en: "The prefix *ab* is the second part of the verb, so *nicht* stands before it."
+      fa: "پیشوند *ab* بخش دوم فعل است، پس *nicht* پیش از آن می‌آید."
+      de: "*Ab* ist der zweite Teil vom Verb. Darum steht *nicht* davor."
+  - wrong: Ich warte auf dich nicht.
+    right: Ich warte nicht auf dich.
+    why:
+      en: "An object with a preposition (*auf dich*) belongs closely to the verb, so *nicht* stands before it."
+      fa: "مفعولی که با حرف اضافه می‌آید (*auf dich*) پیوند نزدیکی با فعل دارد، پس *nicht* پیش از آن می‌آید."
+      de: "Ein Objekt mit Präposition (*auf dich*) gehört eng zum Verb. Darum steht *nicht* davor."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir können morgen leider ___.
+    options: [kommen nicht, nicht kommen, nicht kommt]
+    answer: nicht kommen
+    explanation:
+      en: "The infinitive *kommen* is the second part of the verb, at the end, and *nicht* stands before it."
+      fa: "مصدر *kommen* بخش دوم فعل است و در پایان جمله می‌آید؛ *nicht* پیش از آن می‌نشیند."
+      de: "Der Infinitiv *kommen* ist der zweite Teil vom Verb am Ende. *Nicht* steht davor."
+  - id: gap-2
+    type: gap-fill
+    prompt: Der Zug fährt heute ___.
+    options: [ab nicht, nicht abfährt, nicht ab]
+    answer: nicht ab
+    explanation:
+      en: "The prefix *ab* goes to the end, and *nicht* stands before it: *nicht ab*."
+      fa: "پیشوند *ab* به پایان جمله می‌رود و *nicht* پیش از آن می‌آید: *nicht ab*."
+      de: "*Ab* steht am Ende, *nicht* davor: *nicht ab*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich interessiere mich ___.
+    options: [nicht für Fußball, für Fußball nicht, für nicht Fußball]
+    answer: nicht für Fußball
+    explanation:
+      en: "*Für Fußball* is an object with a preposition, so *nicht* stands before it."
+      fa: "*für Fußball* مفعولی با حرف اضافه است، پس *nicht* پیش از آن می‌آید."
+      de: "*Für Fußball* ist ein Objekt mit Präposition. Darum steht *nicht* davor."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich habe nicht den Rock gekauft, ___.
+    options: [aber die Hose, sondern die Hose, denn die Hose]
+    answer: sondern die Hose
+    explanation:
+      en: "*Nicht den Rock* negates only the skirt, so *sondern* gives what was bought instead."
+      fa: "*nicht den Rock* فقط دامن را منفی می‌کند، پس *sondern* چیزی را می‌آورد که به جای آن خریده شده است."
+      de: "*Nicht den Rock* verneint nur den Rock. *Sondern* nennt, was man stattdessen gekauft hat."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Ich habe meine Mutter gestern angerufen. → verneint:"
+    options:
+      - Ich habe meine Mutter gestern angerufen nicht.
+      - Ich nicht habe meine Mutter gestern angerufen.
+      - Ich habe meine Mutter gestern nicht angerufen.
+    answer: Ich habe meine Mutter gestern nicht angerufen.
+    explanation:
+      en: "*Nicht* comes after the object and the time, and before the participle *angerufen* at the end."
+      fa: "*nicht* پس از مفعول و قید زمان و پیش از صفت مفعولی *angerufen* در پایان جمله می‌آید."
+      de: "*Nicht* steht nach dem Objekt und der Zeit und vor dem Partizip *angerufen* am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Was bedeutet: Nicht Paul hat das Fenster kaputt gemacht."
+    options:
+      - Das Fenster ist nicht kaputt.
+      - Paul hat das Fenster repariert.
+      - Jemand anders hat das Fenster kaputt gemacht.
+    answer: Jemand anders hat das Fenster kaputt gemacht.
+    explanation:
+      en: "*Nicht Paul* negates only Paul: the window is broken, but someone else broke it."
+      fa: "*nicht Paul* فقط پاول را منفی می‌کند: پنجره شکسته است، ولی کس دیگری آن را شکسته است."
+      de: "*Nicht Paul* verneint nur Paul: Das Fenster ist kaputt, aber jemand anders war es."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "In welchem Satz ist nur die Zeit verneint?"
+    options:
+      - Ich komme nicht am Montag, sondern am Dienstag.
+      - Ich komme am Montag nicht.
+      - Am Montag komme ich nicht.
+    answer: Ich komme nicht am Montag, sondern am Dienstag.
+    explanation:
+      en: "*Nicht* directly before *am Montag*, with *sondern*: I am coming, only on another day. The other two say I am not coming on Monday at all."
+      fa: "*nicht* درست پیش از *am Montag* آمده و *sondern* پس از آن: می‌آیم، فقط روزی دیگر. دو جملهٔ دیگر می‌گویند دوشنبه اصلاً نمی‌آیم."
+      de: "*Nicht* steht direkt vor *am Montag*, dann kommt *sondern*: Ich komme, nur an einem anderen Tag. Die anderen zwei Sätze sagen: Am Montag komme ich gar nicht."
+  - id: true-1
+    type: true-false
+    prompt: Ich habe ihn gestern nicht gesehen.
+    answer: true
+    explanation:
+      en: "*Nicht* after the pronoun and the time, before the participle at the end. The sentence is correct."
+      fa: "*nicht* پس از ضمیر و قید زمان و پیش از صفت مفعولی در پایان جمله آمده است. جمله درست است."
+      de: "*Nicht* steht nach dem Pronomen und der Zeit, vor dem Partizip am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir sind am Wochenende ins Kino nicht gegangen.
+    answer: false
+    explanation:
+      en: "*Ins Kino* is a direction, so *nicht* stands before it: *nicht ins Kino gegangen*."
+      fa: "*ins Kino* مقصد است، پس *nicht* پیش از آن می‌آید: *nicht ins Kino gegangen*."
+      de: "*Ins Kino* ist eine Richtung. Darum steht *nicht* davor: *nicht ins Kino gegangen*."
+  - id: true-3
+    type: true-false
+    prompt: Das sind nicht meine Schuhe, sondern die Schuhe von meinem Bruder.
+    answer: true
+    explanation:
+      en: "*Nicht* directly before *meine Schuhe* negates only that part, and *sondern* gives the right one. The sentence is correct."
+      fa: "*nicht* درست پیش از *meine Schuhe* فقط همان بخش را منفی می‌کند و *sondern* بخش درست را می‌آورد. جمله درست است."
+      de: "*Nicht* direkt vor *meine Schuhe* verneint nur diesen Teil, *sondern* nennt das Richtige. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich verstehe die Frage nicht.
+    answer: true
+    explanation:
+      en: "An object with *die* stands before *nicht*, and nothing follows. The sentence is correct."
+      fa: "مفعولی که با *die* آمده پیش از *nicht* می‌ایستد و چیزی پس از آن نمی‌آید. جمله درست است."
+      de: "Ein Objekt mit *die* steht vor *nicht*, danach kommt nichts mehr. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Mein Opa fährt schnell nicht.
+    answer: false
+    explanation:
+      en: "A word that says how, such as *schnell*, comes after *nicht*: *Mein Opa fährt nicht schnell.*"
+      fa: "قیدی که چگونگی را می‌گوید، مانند *schnell*، پس از *nicht* می‌آید: *Mein Opa fährt nicht schnell.*"
+      de: "Ein Wort, das sagt, wie, steht nach *nicht*: *Mein Opa fährt nicht schnell.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich habe die E-Mail ___ (geschrieben / nicht).
+    answers: [nicht geschrieben]
+    explanation:
+      en: "*Nicht* stands before the participle at the end: *nicht geschrieben*."
+      fa: "*nicht* پیش از صفت مفعولی در پایان جمله می‌آید: *nicht geschrieben*."
+      de: "*Nicht* steht vor dem Partizip am Ende: *nicht geschrieben*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir fahren am Sonntag ___ (nach Hause / nicht).
+    answers: [nicht nach Hause]
+    explanation:
+      en: "*Nach Hause* is a direction, so *nicht* stands before it."
+      fa: "*nach Hause* مقصد است، پس *nicht* پیش از آن می‌آید."
+      de: "*Nach Hause* ist eine Richtung. Darum steht *nicht* davor."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Kennst du Frau Weber? – Nein, ich kenne ___ (nicht / sie).
+    answers: [sie nicht]
+    explanation:
+      en: "A pronoun stands before *nicht* when the whole sentence is negated: *sie nicht*."
+      fa: "در نفی کل جمله، ضمیر پیش از *nicht* می‌آید: *sie nicht*."
+      de: "Für den ganzen Satz steht das Pronomen vor *nicht*: *sie nicht*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Der Kurs fängt heute ___ (an / nicht).
+    answers: [nicht an]
+    explanation:
+      en: "The prefix *an* is the second part of the verb at the end, so *nicht* stands before it."
+      fa: "پیشوند *an* بخش دوم فعل است و در پایان جمله می‌آید، پس *nicht* پیش از آن می‌نشیند."
+      de: "*An* ist der zweite Teil vom Verb am Ende. Darum steht *nicht* davor."
+  - id: error-1
+    type: find-error
+    prompt: Wir kommen nicht morgen, aber übermorgen.
+    answer: aber
+    explanation:
+      en: "*Nicht morgen* negates only the day, and the right day replaces it: that needs *sondern*, not *aber*."
+      fa: "*nicht morgen* فقط روز را منفی می‌کند و روز درست جای آن را می‌گیرد؛ پس *sondern* لازم است، نه *aber*."
+      de: "*Nicht morgen* verneint nur den Tag, und der richtige Tag kommt an seine Stelle. Dafür braucht man *sondern*, nicht *aber*."
+  - id: order-1
+    type: word-order
+    end: "?"
+    answers:
+      - [warum, hast, du, ihn, nicht angerufen]
+    explanation:
+      en: "The verb *hast* is position 2. The pronoun *ihn* stands before *nicht*, and *nicht* before the participle at the end."
+      fa: "فعل *hast* در جایگاه دوم است. ضمیر *ihn* پیش از *nicht* می‌آید و *nicht* پیش از صفت مفعولی در پایان جمله."
+      de: "Das Verb *hast* steht auf Position 2. Das Pronomen *ihn* steht vor *nicht*, *nicht* vor dem Partizip am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [nicht ich, habe, das, "gesagt,", sondern Tom]
+      - [das, habe, nicht ich, "gesagt,", sondern Tom]
+    explanation:
+      en: "Only *ich* is negated, so *nicht* stands directly before *ich*, and *sondern Tom* gives the right person."
+      fa: "فقط *ich* منفی می‌شود، پس *nicht* درست پیش از *ich* می‌آید و *sondern Tom* کس درست را می‌گوید."
+      de: "Nur *ich* ist verneint. Darum steht *nicht* direkt vor *ich*, und *sondern Tom* nennt die richtige Person."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Ich habe das Buch ___.", nicht gelesen]
+      - ["Ich warte ___.", nicht auf den Bus]
+      - ["Ich kenne ___.", den Mann nicht]
+    explanation:
+      en: "*Nicht* stands before the participle (*nicht gelesen*) and before an object with a preposition (*nicht auf den Bus*), but after an object with *der*, *die* or *das* (*den Mann nicht*)."
+      fa: "*nicht* پیش از صفت مفعولی (*nicht gelesen*) و پیش از مفعولِ با حرف اضافه (*nicht auf den Bus*) می‌آید، اما پس از مفعولی که با *der*، *die* یا *das* آمده است (*den Mann nicht*)."
+      de: "*Nicht* steht vor dem Partizip (*nicht gelesen*) und vor einem Objekt mit Präposition (*nicht auf den Bus*), aber nach einem Objekt mit *der*, *die* oder *das* (*den Mann nicht*)."
+
+review:
+  reviewer: an independent AI agent (fresh Claude Opus 5.5 subagent, blind pass on
+    the review sheet only; not a person)
+  date: 2026-11-28
+  pool: 5e644243c542b4d5
