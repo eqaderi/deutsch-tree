@@ -56,8 +56,16 @@ explanations:
 table:
   columns:
     - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
-    - { en: "*Dativ*: *vor*, *seit*, *in*, *bei*", fa: "حالت *Dativ*: *vor*، *seit*، *in*، *bei*", de: "Dativ: *vor*, *seit*, *in*, *bei*" }
-    - { en: "*Genitiv*: *während*, *innerhalb*", fa: "حالت *Genitiv*: *während*، *innerhalb*", de: "Genitiv: *während*, *innerhalb*" }
+    - {
+        en: "*Dativ*: *vor*, *seit*, *in*, *bei*",
+        fa: "حالت *Dativ*: *vor*، *seit*، *in*، *bei*",
+        de: "Dativ: *vor*, *seit*, *in*, *bei*",
+      }
+    - {
+        en: "*Genitiv*: *während*, *innerhalb*",
+        fa: "حالت *Genitiv*: *während*، *innerhalb*",
+        de: "Genitiv: *während*, *innerhalb*",
+      }
     - { en: Example, fa: مثال, de: Beispiel }
   rows:
     - [der Urlaub, dem Urlaub, des Urlaubs, "vor dem Urlaub, während des Urlaubs"]
