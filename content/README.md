@@ -938,11 +938,39 @@ the command are in the main README, "Audio".
   choice. A chapter or mock-exam ticket that adds listening texts follows
   this rule.
 - Numbers are spoken as words: `85 Jahre`, `14:35 Uhr`, `am 3. Mai`, `1990`,
-  `3,50 €` and `20 %` need nothing. A number in another form (`3.5.2025`) is
+  `3,50 €` and `20 %` need nothing. So do dates at the start of a sentence
+  (`Am 25. Juli`), ranges of days (`vom 3. bis 5. Mai`, `3.–5. Mai`,
+  `bis 5. Mai`) and an ordinal before a noun after an article or `am`, `im`,
+  `zum`, `beim`, `jeden` … (`im 3. Stock`, `der 3. Stock`, `in der 4. Klasse`,
+  `zum 1. Mal`). The ending follows the word before it; after `die` it is
+  always *-e*, so write a plural (`die 3. Klassen`) or a genitive (`am Ende
+  der 2. Woche`) in words. Without such a word the dot ends a sentence
+  (`Er ist 3. Seine …` is "drei"). A number in another form (`3.5.2025`) is
   an error that asks you to write it in words.
-- The abbreviations *z. B.*, *d. h.* and *usw.* are spoken as their words
-  (*zum Beispiel*, *das heißt*, *und so weiter*); Piper would spell them out.
-  Another abbreviation needs a line in `ABBREVIATIONS` (`src/audio/speakable.ts`).
+- Words the voice says wrong wherever they stand (*der ICE* as "Ike", *fit*
+  with a long i) and abbreviations it would spell out (*z. B.*, *bzw.*,
+  *usw.* …) are in one table, `PRONUNCIATIONS` in
+  `src/audio/pronunciations.ts`: what is written, and how the voice is to say
+  it. It changes only what the voice says, never what the learner sees, and
+  it applies to the whole word only (*Hals*, not *Halsschmerzen*). When the
+  voice slips on a word every time, add a line with your ticket number:
+  1. Look at Piper's phonemes for the word and for your respelling, with the
+     Python that Piper is installed in, and keep a spelling that gives the
+     right sounds and stress (`ˈ` marks it). A hyphen gives each part a
+     stress (`La-tein`).
+
+     ```sh
+     python -c "import os, piper; from piper.phonemize_espeak import EspeakPhonemizer as E; \
+       print(E(os.path.join(os.path.dirname(piper.__file__), 'espeak-ng-data')).phonemize('de', 'der Halls'))"
+     ```
+  2. Run `pnpm audio:generate` (both voices) and listen to the new files in
+     both voices, or transcribe them with whisper: one voice can slip where
+     the other does not.
+  3. Add the word to the table's test in `tests/audio/speakable.test.ts`.
+
+  The audio key is a hash of the text as the voice says it (after the
+  table), so a new or changed line gives new files to exactly the items that
+  hold the word, and `pnpm audio:generate` removes the old ones.
 - Audio is not part of the review record: changing an example needs new
   audio, never a new review.
 - Listen to new audio once. When the voice slips on an item, say it again with
@@ -966,7 +994,9 @@ one, and again when a question or its answer changes later (explanations may
 change freely). A command writes the record, never a hand:
 
 1. `pnpm review:pool <id> --out /tmp/<id>.json` writes the review sheet: the
-   pool without answers and explanations. For an exam part it holds the texts
+   pool without answers and explanations. The options of a choice stand in
+   an order made from the options alone, so their place tells nothing about
+   the key. For an exam part it holds the texts
    of every practice task and the items without answers; an item is named
    with its task (`t1/i3`). Keep the sheet outside the repository.
 2. Give only that file to a reviewer who has not seen the node file (for an
