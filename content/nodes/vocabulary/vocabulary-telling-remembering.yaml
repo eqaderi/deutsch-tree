@@ -18,12 +18,12 @@ words:
     meaning:
       en: to talk
       fa: حرف زدن، صحبت کردن
-    definition: mit Worten etwas sagen, mit anderen sprechen
+    definition: mit Worten etwas sagen, zum Beispiel mit Freunden über ein Problem
     example:
       de: Wir müssen mal über das Problem reden.
       en: We need to talk about the problem.
       fa: باید دربارهٔ این مشکل حرف بزنیم.
-    alsoAccepted: [sprechen, sich unterhalten, unterhalten, plaudern, quatschen]
+    alsoAccepted: [sprechen, sich unterhalten, plaudern, quatschen]
 
   # berichten and informieren both pass news on; neither is offered as a wrong meaning of the other.
   - word: berichten
@@ -37,7 +37,7 @@ words:
       de: Die Zeitung berichtet über den Unfall.
       en: The newspaper is reporting on the accident.
       fa: روزنامه دربارهٔ این تصادف گزارش می‌دهد.
-    alsoAccepted: [erzählen, melden, informieren, mitteilen, schildern]
+    alsoAccepted: [erzählen, melden, schildern]
     tooCloseTo: [informieren, beschreiben]
 
   - word: beschreiben
@@ -93,7 +93,7 @@ words:
       de: Hast du gemerkt, dass Tom heute traurig war?
       en: Did you notice that Tom was sad today?
       fa: متوجه شدی که تام امروز ناراحت بود؟
-    alsoAccepted: [bemerken, feststellen, mitbekommen, wahrnehmen, erkennen]
+    alsoAccepted: [bemerken, feststellen, mitbekommen, wahrnehmen]
 
   - word: nennen
     class: verb
@@ -106,7 +106,7 @@ words:
       de: Nennen Sie drei Städte in Deutschland.
       en: Name three cities in Germany.
       fa: سه شهر در آلمان نام ببرید.
-    alsoAccepted: [benennen, bezeichnen, erwähnen, aufzählen, heißen]
+    alsoAccepted: [benennen, bezeichnen, erwähnen]
 
   - word: aussprechen
     class: verb
@@ -144,7 +144,7 @@ words:
       de: Die Mutter ruft die Kinder zum Essen.
       en: The mother calls the children to come and eat.
       fa: مادر بچه‌ها را برای غذا صدا می‌زند.
-    alsoAccepted: [schreien, anrufen, herbeirufen, brüllen]
+    alsoAccepted: [schreien, herbeirufen, brüllen]
 
   - word: Situation
     class: noun
@@ -159,7 +159,7 @@ words:
       de: Das war eine schwierige Situation für mich.
       en: That was a difficult situation for me.
       fa: آن موقعیت برایم دشوار بود.
-    alsoAccepted: [die Lage, der Zustand]
+    alsoAccepted: [die Lage]
 
   # Used as "Bescheid sagen" (to let someone know) and "Bescheid wissen" (to know about it).
   # Bescheid and Nachricht both bring news; neither is offered as a wrong meaning of the other.
@@ -170,14 +170,13 @@ words:
     level: A2
     meaning:
       en: word, notice (to let someone know)
-      fa: اطلاع، خبر (برای باخبر کردن کسی)
+      fa: خبر (در «به کسی خبر دادن» یا «از چیزی خبر داشتن»)
     definition: "eine kurze Information für eine Person, zum Beispiel: „Sag mir …, wenn du kommst!“"
     example:
       de: Sag mir bitte Bescheid, wenn du zu Hause bist.
       en: Please let me know when you're home.
       fa: لطفاً وقتی به خانه رسیدی، به من خبر بده.
-    alsoAccepted:
-      [Bescheid, die Information, die Info, die Nachricht, die Mitteilung, die Auskunft, die Benachrichtigung]
+    alsoAccepted: [Bescheid, die Information, die Info, die Nachricht, die Mitteilung, die Benachrichtigung]
     tooCloseTo: [Nachricht, informieren]
 
   - word: Nachricht
@@ -193,7 +192,7 @@ words:
       de: Ich habe dir eine Nachricht geschrieben.
       en: I've written you a message.
       fa: برایت پیام فرستاده‌ام.
-    alsoAccepted: [die Mitteilung, die Botschaft, die Meldung, die SMS, die Nachrichten]
+    alsoAccepted: [die Mitteilung, die Botschaft, die Meldung, die Nachrichten]
 
   # The scope list gives "(sich)": the node teaches "informieren", to inform; "sich informieren" is to find out.
   - word: informieren
@@ -233,7 +232,7 @@ words:
       de: Bitte bestätigen Sie den Termin per E-Mail.
       en: Please confirm the appointment by email.
       fa: لطفاً وقت ملاقات را با ایمیل تأیید کنید.
-    alsoAccepted: [zusagen, bekräftigen, quittieren]
+    alsoAccepted: [bekräftigen]
 
   - word: Witz
     class: noun
@@ -248,7 +247,7 @@ words:
       de: Mein Opa erzählt gern Witze.
       en: My grandpa likes telling jokes.
       fa: پدربزرگم دوست دارد جوک تعریف کند.
-    alsoAccepted: [der Scherz, der Spaß]
+    alsoAccepted: [der Scherz]
     tooCloseTo: [Geschichte]
 
   - word: Geschichte
@@ -264,7 +263,7 @@ words:
       de: Am Abend liest der Vater den Kindern eine Geschichte vor.
       en: In the evening the father reads the children a story.
       fa: پدر شب‌ها برای بچه‌ها قصه می‌خواند.
-    alsoAccepted: [die Erzählung, die Story, das Märchen]
+    alsoAccepted: [die Erzählung, die Story]
 
   - word: zeigen
     class: verb
@@ -277,7 +276,7 @@ words:
       de: Kannst du mir den Weg zum Bahnhof zeigen?
       en: Can you show me the way to the station?
       fa: می‌توانی راه ایستگاه قطار را به من نشان بدهی؟
-    alsoAccepted: [vorzeigen, vorführen, zeigen auf]
+    alsoAccepted: [vorzeigen]
 
   - word: übersetzen
     class: verb
@@ -290,7 +289,6 @@ words:
       de: Kannst du mir den Brief ins Englische übersetzen?
       en: Can you translate the letter into English for me?
       fa: می‌توانی این نامه را برایم به انگلیسی ترجمه کنی؟
-    alsoAccepted: [dolmetschen]
 
   - word: Übersetzung
     class: noun
@@ -330,10 +328,10 @@ words:
       de: Bitte sprechen Sie langsam und deutlich.
       en: Please speak slowly and clearly.
       fa: لطفاً آهسته و واضح صحبت کنید.
-    alsoAccepted: [klar, verständlich, eindeutig]
+    alsoAccepted: [klar, verständlich]
 
 review:
-  reviewer: independent AI agents (four fresh Claude Opus 5.5 subagents, sheet
-    only; 138, then 4, then 35, then 18 questions)
+  reviewer: independent AI agents (six fresh Claude Opus 5.5 subagents, sheet
+    only; 138, then 4, 35, 18, 42 and 12 questions)
   date: 2026-11-28
-  pool: 896df88b2c1aae4a
+  pool: 9cf68de38886a8bb

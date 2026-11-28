@@ -25,9 +25,9 @@ words:
       de: Meiner Meinung nach ist der Film zu lang.
       en: In my opinion the film is too long.
       fa: به نظر من فیلم زیادی طولانی است.
-    alsoAccepted: [die Ansicht, die Auffassung, die Einstellung, der Standpunkt]
+    alsoAccepted: [die Ansicht, die Auffassung, der Standpunkt]
 
-  # meinen and denken are near each other; each is right when the other is asked for.
+  # meinen and denken are near each other; neither is offered as a wrong meaning of the other.
   - word: meinen
     class: verb
     level: A2
@@ -39,7 +39,7 @@ words:
       de: Was meinst du, sollen wir den Zug nehmen?
       en: What do you think, shall we take the train?
       fa: نظرت چیست، با قطار برویم؟
-    alsoAccepted: [denken, glauben, finden, bedeuten, der Meinung sein]
+    alsoAccepted: [denken, glauben, finden, der Meinung sein]
     tooCloseTo: [denken]
 
   - word: denken
@@ -53,7 +53,7 @@ words:
       de: Ich denke, wir sind zu früh.
       en: I think we're too early.
       fa: فکر می‌کنم زیادی زود آمده‌ایم.
-    alsoAccepted: [meinen, glauben, finden, nachdenken, überlegen]
+    alsoAccepted: [nachdenken, überlegen]
 
   - word: diskutieren
     class: verb
@@ -92,13 +92,13 @@ words:
     level: A2
     meaning:
       en: suggestion, proposal
-      fa: پیشنهاد
+      fa: پیشنهاد (برای کاری که می‌شود کرد)
     definition: "das, was man einer Person sagt, damit sie es vielleicht macht, zum Beispiel: „Gehen wir ins Kino?“"
     example:
       de: Hast du einen Vorschlag für das Wochenende?
       en: Do you have a suggestion for the weekend?
       fa: برای آخر هفته پیشنهادی داری؟
-    alsoAccepted: [die Anregung, die Idee, der Tipp]
+    alsoAccepted: [die Anregung]
     tooCloseTo: [Tipp]
 
   - word: Tipp
@@ -116,7 +116,7 @@ words:
       fa: می‌توانی یک رستوران خوب به من توصیه کنی؟
     alsoAccepted: [der Rat, der Ratschlag, der Hinweis, die Empfehlung]
 
-  # raten and beraten are near each other; each is right when the other is asked for.
+  # raten and beraten are near each other; neither is offered as a wrong meaning of the other.
   - word: raten
     class: verb
     level: A2
@@ -128,7 +128,7 @@ words:
       de: Der Arzt rät mir, mehr Sport zu machen.
       en: The doctor advises me to do more sport.
       fa: دکتر به من توصیه می‌کند بیشتر ورزش کنم.
-    alsoAccepted: [beraten, empfehlen, vorschlagen, einen Rat geben, schätzen, vermuten, tippen]
+    alsoAccepted: [empfehlen, einen Rat geben, schätzen, vermuten, tippen]
     tooCloseTo: [beraten]
 
   - word: beraten
@@ -142,7 +142,7 @@ words:
       de: Die Verkäuferin hat mich sehr gut beraten.
       en: The shop assistant gave me very good advice.
       fa: فروشنده خیلی خوب راهنمایی‌ام کرد.
-    alsoAccepted: [raten, empfehlen, einen Rat geben, helfen]
+    alsoAccepted: [raten, einen Rat geben]
 
   - word: begründen
     class: verb
@@ -155,7 +155,7 @@ words:
       de: Bitte begründen Sie Ihre Meinung.
       en: Please give reasons for your opinion.
       fa: لطفاً برای نظرتان دلیل بیاورید.
-    alsoAccepted: [rechtfertigen, erklären, erläutern]
+    alsoAccepted: [rechtfertigen]
 
   - word: recht haben
     class: verb
@@ -176,13 +176,13 @@ words:
     level: A2
     meaning:
       en: agreed, in agreement
-      fa: موافق
+      fa: موافق، رضایت‌داده (به پیشنهاد کسی)
     definition: so ist man, wenn man zu dem Plan von einer anderen Person Ja sagt und nichts dagegen hat
     example:
       de: Wir treffen uns um acht. Bist du einverstanden?
       en: We'll meet at eight. Is that all right with you?
       fa: ساعت هشت همدیگر را می‌بینیم. موافقی؟
-    alsoAccepted: [dafür, einig, okay, OK, abgemacht]
+    alsoAccepted: [einig, abgemacht]
     tooCloseTo: [dafür, natürlich]
 
   - word: dafür
@@ -196,7 +196,7 @@ words:
       de: Ich bin dafür, dass wir am Samstag grillen.
       en: I'm in favour of having a barbecue on Saturday.
       fa: من طرفدار این هستم که شنبه کباب درست کنیم.
-    alsoAccepted: [einverstanden, pro]
+    alsoAccepted: [pro]
     tooCloseTo: [dagegen]
 
   - word: dagegen
@@ -224,7 +224,7 @@ words:
       de: Ich komme auf jeden Fall zu deiner Party.
       en: I'm definitely coming to your party.
       fa: در هر صورت به مهمانی‌ات می‌آیم.
-    alsoAccepted: [auf alle Fälle, in jedem Fall, jedenfalls, unbedingt, bestimmt, sicher, definitiv, garantiert]
+    alsoAccepted: [auf alle Fälle, in jedem Fall, bestimmt, definitiv, garantiert]
     tooCloseTo: [unbedingt, sicher, natürlich, wahrscheinlich]
 
   - word: natürlich
@@ -238,7 +238,7 @@ words:
       de: Natürlich helfe ich dir.
       en: Of course I'll help you.
       fa: البته که کمکت می‌کنم.
-    alsoAccepted: [selbstverständlich, klar, logisch, sicher]
+    alsoAccepted: [selbstverständlich, klar, logisch]
     tooCloseTo: [sicher, unbedingt]
 
   - word: sicher
@@ -274,12 +274,12 @@ words:
     meaning:
       en: absolutely, by all means, at all costs
       fa: حتماً، به هر قیمتی
-    definition: ganz, ganz wichtig, so dass man es machen muss
+    definition: "das sagt man, wenn etwas sehr wichtig ist, zum Beispiel: „Du musst … kommen!“"
     example:
       de: Den Film musst du unbedingt sehen!
       en: You absolutely have to see that film!
       fa: این فیلم را حتماً باید ببینی!
-    alsoAccepted: [auf jeden Fall, auf alle Fälle, in jedem Fall, bestimmt, absolut, definitiv, um jeden Preis]
+    alsoAccepted: [auf jeden Fall, auf alle Fälle, in jedem Fall, absolut, definitiv, um jeden Preis]
 
   - word: Unterschied
     class: noun
@@ -294,7 +294,7 @@ words:
       de: Was ist der Unterschied zwischen den beiden Handys?
       en: What's the difference between the two mobile phones?
       fa: فرق این دو گوشی چیست؟
-    alsoAccepted: [die Differenz, die Abweichung]
+    alsoAccepted: [die Differenz]
     tooCloseTo: [Gegenteil]
 
   - word: Gegenteil
@@ -338,7 +338,7 @@ words:
       de: Hast du eine Ahnung, wo mein Handy ist?
       en: Do you have any idea where my phone is?
       fa: خبر داری گوشی‌ام کجاست؟
-    alsoAccepted: [die Vorstellung, der Schimmer, die Idee]
+    alsoAccepted: [die Vorstellung, der Schimmer]
 
   # Interesse and interessieren are noun and verb of one idea.
   - word: Interesse
@@ -354,7 +354,6 @@ words:
       de: Mein Sohn hat großes Interesse an Musik.
       en: My son has a great interest in music.
       fa: پسرم علاقهٔ زیادی به موسیقی دارد.
-    alsoAccepted: [die Neugier, die Neugierde]
 
   # The scope list gives "(sich)": the node teaches "sich interessieren (für)", to be interested in.
   - word: interessieren
@@ -382,10 +381,10 @@ words:
       de: Sie können zwischen Fisch und Fleisch wählen.
       en: You can choose between fish and meat.
       fa: می‌توانید بین ماهی و گوشت انتخاب کنید.
-    alsoAccepted: [aussuchen, auswählen, abstimmen, entscheiden, sich entscheiden]
+    alsoAccepted: [aussuchen, auswählen, abstimmen]
 
 review:
-  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
-    only; 156, then 50, then 23 questions)
+  reviewer: independent AI agents (six fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 50, 23, 48, 16 and 4 questions)
   date: 2026-11-28
-  pool: d9c13de6b5578630
+  pool: a49988a3266341a0

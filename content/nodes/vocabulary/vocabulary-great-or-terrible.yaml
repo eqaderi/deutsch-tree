@@ -1,7 +1,7 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
 # docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 # Many words here are near each other (very bad, very good, real, whole); such words are never
-# offered as wrong meanings of each other (tooCloseTo) and are right when the other is asked for.
+# offered as wrong meanings of each other (tooCloseTo); one is right for the other only where they mean the same.
 id: vocabulary-great-or-terrible
 kind: vocabulary
 level: A2
@@ -25,7 +25,7 @@ words:
       de: Das Wetter ist heute furchtbar.
       en: The weather is awful today.
       fa: هوا امروز افتضاح است.
-    alsoAccepted: [schrecklich, fürchterlich, entsetzlich, grauenhaft, grässlich, scheußlich, schlimm, mies]
+    alsoAccepted: [schrecklich, fürchterlich, entsetzlich, grauenhaft, grässlich, scheußlich]
     tooCloseTo: [schrecklich, schlimm]
 
   - word: schrecklich
@@ -34,12 +34,12 @@ words:
     meaning:
       en: terrible, horrible
       fa: وحشتناک
-    definition: so schlecht, dass man Angst oder einen Schock bekommt
+    definition: so schlecht, dass man es kaum ansehen oder hören kann
     example:
       de: Gestern habe ich einen schrecklichen Unfall gesehen.
       en: Yesterday I saw a terrible accident.
       fa: دیروز تصادف وحشتناکی دیدم.
-    alsoAccepted: [furchtbar, fürchterlich, entsetzlich, grauenhaft, grässlich, scheußlich, schlimm, schockierend]
+    alsoAccepted: [furchtbar, fürchterlich, entsetzlich, grauenhaft, grässlich, scheußlich, grauenvoll]
     tooCloseTo: [schlimm]
 
   - word: schlimm
@@ -53,7 +53,7 @@ words:
       de: Keine Sorge, das ist nicht so schlimm.
       en: Don't worry, it's not that bad.
       fa: نگران نباش، آن‌قدرها بد نیست.
-    alsoAccepted: [schlecht, ernst, schwer, übel, schrecklich, furchtbar]
+    alsoAccepted: [schlecht, ernst, schwer, übel, ernsthaft, schwerwiegend, gravierend]
 
   - word: toll
     class: adjective
@@ -79,6 +79,7 @@ words:
         cool,
         phantastisch,
         ausgezeichnet,
+        hervorragend,
         herrlich,
       ]
     tooCloseTo: [super, fantastisch]
@@ -102,7 +103,7 @@ words:
     level: A2
     meaning:
       en: fantastic, amazing
-      fa: فوق‌العاده، شگفت‌انگیز
+      fa: شگفت‌انگیز، بی‌نظیر
     definition: so gut, dass man es kaum glauben kann
     example:
       de: Von hier hat man einen fantastischen Blick auf die Berge.
@@ -121,9 +122,13 @@ words:
         klasse,
         spitze,
         prima,
-        außergewöhnlich,
         sagenhaft,
+        hervorragend,
         traumhaft,
+        wundervoll,
+        fabelhaft,
+        phänomenal,
+        einmalig,
       ]
 
   - word: langweilig
@@ -137,7 +142,7 @@ words:
       de: Der Film war so langweilig, dass ich eingeschlafen bin.
       en: The film was so boring that I fell asleep.
       fa: فیلم آن‌قدر کسل‌کننده بود که خوابم برد.
-    alsoAccepted: [öde, fad, uninteressant, ermüdend]
+    alsoAccepted: [öde, fad, uninteressant, fade]
 
   - word: interessant
     class: adjective
@@ -145,12 +150,11 @@ words:
     meaning:
       en: interesting
       fa: جالب
-    definition: so, dass man mehr wissen oder sehen möchte
+    definition: so, dass man gern mehr darüber wissen möchte, zum Beispiel ein Thema oder eine Frage
     example:
       de: Das Buch ist sehr interessant.
       en: The book is very interesting.
       fa: این کتاب خیلی جالب است.
-    alsoAccepted: [spannend]
 
   - word: spannend
     class: adjective
@@ -163,7 +167,7 @@ words:
       de: Das Fußballspiel war bis zum Ende spannend.
       en: The football match was gripping right to the end.
       fa: بازی فوتبال تا آخر نفس‌گیر بود.
-    alsoAccepted: [aufregend, packend, fesselnd, interessant, atemberaubend]
+    alsoAccepted: [aufregend, packend, fesselnd, mitreißend]
     tooCloseTo: [aufregend, interessant]
 
   - word: aufregend
@@ -191,7 +195,7 @@ words:
       de: Die Woche vor dem Urlaub war sehr stressig.
       en: The week before the holiday was very stressful.
       fa: هفتهٔ قبل از سفر خیلی پرفشار بود.
-    alsoAccepted: [anstrengend, hektisch, belastend]
+    alsoAccepted: [hektisch, belastend, stressreich]
 
   - word: echt
     class: adjective
@@ -213,7 +217,7 @@ words:
     meaning:
       en: really, truly; real
       fa: واقعاً، به‌راستی؛ واقعی
-    definition: in der Wahrheit so, nicht nur gedacht; auch sehr
+    definition: in Wahrheit so, nicht nur gedacht; auch sehr
     example:
       de: Das Hotel war wirklich schön.
       en: The hotel was really nice.
@@ -246,7 +250,7 @@ words:
       de: Ich habe den ganzen Tag gearbeitet.
       en: I worked the whole day.
       fa: تمام روز کار کردم.
-    alsoAccepted: [gesamt, völlig, komplett, total, ziemlich, vollständig]
+    alsoAccepted: [gesamt, ziemlich]
     tooCloseTo: [besonders]
 
   - word: besonders
@@ -260,20 +264,20 @@ words:
       de: Ich mag Obst, besonders Erdbeeren.
       en: I like fruit, especially strawberries.
       fa: میوه دوست دارم، به‌خصوص توت‌فرنگی.
-    alsoAccepted: [vor allem, speziell, insbesondere, vorwiegend]
+    alsoAccepted: [vor allem, speziell, insbesondere]
 
   - word: typisch
     class: adjective
     level: A2
     meaning:
       en: typical
-      fa: معمول، مخصوص (یک آدم یا یک جا)
+      fa: تیپیک، ویژهٔ (یک آدم یا یک جا)
     definition: so, wie es oft oder immer bei einer Person, einem Land oder einer Sache ist
     example:
       de: Das ist typisch für ihn, er kommt immer zu spät.
       en: That's typical of him; he's always late.
       fa: این کار همیشگی اوست، همیشه دیر می‌آید.
-    alsoAccepted: [charakteristisch, üblich, bezeichnend]
+    alsoAccepted: [charakteristisch, bezeichnend, kennzeichnend]
 
   - word: modern
     class: adjective
@@ -286,20 +290,20 @@ words:
       de: Die Wohnung hat eine moderne Küche.
       en: The flat has a modern kitchen.
       fa: این آپارتمان آشپزخانهٔ مدرنی دارد.
-    alsoAccepted: [zeitgemäß, aktuell, heutig]
+    alsoAccepted: [zeitgemäß]
 
   - word: praktisch
     class: adjective
     level: A2
     meaning:
       en: practical, handy
-      fa: کاربردی، به‌دردبخور
+      fa: کاربردی، راحت برای استفاده
     definition: gut und einfach zu benutzen
     example:
       de: Die kleine Tasche ist sehr praktisch für die Reise.
       en: The small bag is very handy for the trip.
       fa: این کیف کوچک برای سفر خیلی کاربردی است.
-    alsoAccepted: [nützlich, zweckmäßig, handlich, benutzerfreundlich]
+    alsoAccepted: [zweckmäßig, handlich, benutzerfreundlich]
     tooCloseTo: [nützlich, bequem]
 
   - word: nützlich
@@ -313,7 +317,7 @@ words:
       de: Danke für die nützlichen Tipps!
       en: Thanks for the useful tips!
       fa: ممنون برای نکته‌های مفید!
-    alsoAccepted: [praktisch, hilfreich, sinnvoll, brauchbar]
+    alsoAccepted: [hilfreich, brauchbar]
 
   - word: notwendig
     class: adjective
@@ -339,7 +343,7 @@ words:
       de: Die letzte Aufgabe war sehr schwierig.
       en: The last task was very difficult.
       fa: تکلیف آخر خیلی دشوار بود.
-    alsoAccepted: [schwer, kompliziert, mühsam]
+    alsoAccepted: [schwer]
 
   - word: gefährlich
     class: adjective
@@ -352,7 +356,7 @@ words:
       de: Im Winter ist diese Straße gefährlich.
       en: In winter this road is dangerous.
       fa: این جاده در زمستان خطرناک است.
-    alsoAccepted: [riskant, gefährdend, lebensgefährlich]
+    alsoAccepted: [riskant]
 
   - word: wahr
     class: adjective
@@ -365,7 +369,7 @@ words:
       de: Ist das wahr, du ziehst nach Wien?
       en: Is it true you're moving to Vienna?
       fa: راست است که به وین اسباب‌کشی می‌کنی؟
-    alsoAccepted: [richtig, zutreffend, wirklich]
+    alsoAccepted: [richtig, zutreffend]
 
   - word: schädlich
     class: adjective
@@ -378,7 +382,7 @@ words:
       de: Rauchen ist schädlich für die Gesundheit.
       en: Smoking is harmful to your health.
       fa: سیگار کشیدن برای سلامتی زیان‌آور است.
-    alsoAccepted: [ungesund, gefährlich, giftig]
+    alsoAccepted: [ungesund]
     tooCloseTo: [gefährlich]
 
   - word: bequem
@@ -392,10 +396,10 @@ words:
       de: Diese Schuhe sind sehr bequem.
       en: These shoes are very comfortable.
       fa: این کفش‌ها خیلی راحت‌اند.
-    alsoAccepted: [gemütlich, komfortabel, angenehm]
+    alsoAccepted: [komfortabel]
 
 review:
-  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
-    only; 156, then 4 questions)
+  reviewer: independent AI agents (five fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 4, 63, 19 and 7 questions)
   date: 2026-11-28
-  pool: 57a9b6f437dc5e95
+  pool: 66bc8be715d463dc

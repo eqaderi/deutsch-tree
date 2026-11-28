@@ -123,25 +123,14 @@ words:
     plural: Ehepartner
     level: A2
     meaning:
-      en: spouse, husband or wife
+      en: spouse
       fa: همسر
     definition: der Mann oder die Frau, mit dem oder mit der man verheiratet ist
     example:
       de: Bitte bringen Sie auch Ihren Ehepartner mit.
       en: Please bring your spouse too.
       fa: لطفاً همسرتان را هم با خود بیاورید.
-    alsoAccepted:
-      [
-        die Ehepartnerin,
-        der Ehegatte,
-        die Ehegattin,
-        der Gatte,
-        die Gattin,
-        der Ehemann,
-        die Ehefrau,
-        der Mann,
-        die Frau,
-      ]
+    alsoAccepted: [die Ehepartnerin, der Ehegatte, die Ehegattin, der Gatte, die Gattin]
 
   - word: Paar
     class: noun
@@ -156,7 +145,7 @@ words:
       de: Anna und Tom sind seit drei Jahren ein Paar.
       en: Anna and Tom have been a couple for three years.
       fa: آنا و تام سه سال است که با هم هستند.
-    alsoAccepted: [das Pärchen, das Ehepaar, das Liebespaar]
+    alsoAccepted: [das Pärchen]
 
   # The scope list gives the feminine "Nachbarin".
   - word: Nachbar
@@ -211,13 +200,12 @@ words:
     level: A2
     meaning:
       en: contact
-      fa: تماس، ارتباط
+      fa: تماس (با کسی)
     definition: die Verbindung zu einer Person, mit der man spricht, schreibt oder sich trifft
     example:
       de: Ich habe noch Kontakt zu meinen Freunden aus der Schule.
       en: I'm still in contact with my friends from school.
       fa: هنوز با دوستان دوران مدرسه‌ام در ارتباطم.
-    alsoAccepted: [die Verbindung]
 
   # The scope list gives the feminine "Rentnerin" and the Austrian "Pensionist".
   - word: Rentner
@@ -333,13 +321,13 @@ words:
     level: A2
     meaning:
       en: babysitter
-      fa: پرستار بچه
+      fa: پرستار بچه (برای چند ساعت)
     definition: eine Person, die für Geld auf kleine Kinder aufpasst, wenn die Eltern weg sind
     example:
       de: Wir suchen einen Babysitter für Freitagabend.
       en: We're looking for a babysitter for Friday evening.
       fa: برای جمعه‌شب دنبال پرستار بچه می‌گردیم.
-    alsoAccepted: [die Babysitterin, das Kindermädchen]
+    alsoAccepted: [die Babysitterin]
 
   - word: Taschengeld
     class: noun
@@ -394,7 +382,7 @@ words:
       de: Wir haben uns lange über den Urlaub unterhalten.
       en: We talked about the holiday for a long time.
       fa: مدت زیادی دربارهٔ سفرمان با هم گپ زدیم.
-    alsoAccepted: [plaudern, quatschen, reden, sprechen, sich austauschen, sich aussprechen]
+    alsoAccepted: [plaudern, plauschen, quatschen, reden, sprechen]
 
   - word: verabredet
     class: adjective
@@ -410,7 +398,7 @@ words:
     alsoAccepted: [verabredet sein]
 
 review:
-  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
-    only; 156, then 13, then 18 questions)
+  reviewer: independent AI agents (five fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 13, 18, 23 and 9 questions)
   date: 2026-11-28
-  pool: be7f915917c27b69
+  pool: 1f5d6b6e30272e45

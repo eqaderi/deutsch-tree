@@ -24,7 +24,7 @@ words:
       de: Deine Kollegin ist wirklich nett.
       en: Your colleague is really nice.
       fa: همکارت واقعاً مهربان است.
-    alsoAccepted: [lieb, freundlich, sympathisch]
+    alsoAccepted: [lieb, freundlich, gutherzig]
     tooCloseTo: [freundlich, sympathisch]
 
   # "sympathisch" is not "sympathetic": it is a person you like at once.
@@ -39,7 +39,7 @@ words:
       de: Der neue Nachbar ist mir sehr sympathisch.
       en: I really like the new neighbour.
       fa: همسایهٔ تازه به نظرم خیلی دوست‌داشتنی است.
-    alsoAccepted: [nett, angenehm, liebenswert]
+    alsoAccepted: [angenehm, liebenswert]
     tooCloseTo: [freundlich]
 
   - word: freundlich
@@ -53,7 +53,7 @@ words:
       de: Die Verkäuferin war sehr freundlich.
       en: The shop assistant was very friendly.
       fa: فروشنده خیلی خوش‌برخورد بود.
-    alsoAccepted: [nett, höflich]
+    alsoAccepted: [nett]
 
   # klug and intelligent are near each other; each is right when the other is asked for.
   - word: klug
@@ -67,7 +67,7 @@ words:
       de: Das war eine kluge Entscheidung.
       en: That was a wise decision.
       fa: تصمیم عاقلانه‌ای بود.
-    alsoAccepted: [intelligent, schlau, weise, gescheit, clever, vernünftig]
+    alsoAccepted: [intelligent, schlau, weise, gescheit, clever]
     tooCloseTo: [intelligent]
 
   - word: intelligent
@@ -203,7 +203,7 @@ words:
       de: Mein Opa ist mit achtzig noch sehr aktiv.
       en: At eighty my grandpa is still very active.
       fa: پدربزرگم در هشتادسالگی هنوز خیلی فعال است.
-    alsoAccepted: [tätig, rege]
+    alsoAccepted: [rege]
 
   - word: romantisch
     class: adjective
@@ -269,7 +269,7 @@ words:
       de: Fußball ist in Deutschland sehr beliebt.
       en: Football is very popular in Germany.
       fa: فوتبال در آلمان خیلی محبوب است.
-    alsoAccepted: [populär, begehrt]
+    alsoAccepted: [populär]
 
   - word: reich
     class: adjective
@@ -374,7 +374,7 @@ words:
     alsoAccepted: [kraftlos]
 
 review:
-  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
-    only; 162, then 18 questions)
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 162, then 18, then 18 questions)
   date: 2026-11-28
-  pool: 91cd3480358cc403
+  pool: 17b13e8a0a5c0b97

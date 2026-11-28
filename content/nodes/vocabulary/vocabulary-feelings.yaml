@@ -40,7 +40,6 @@ words:
       de: Hast du Lust auf ein Eis?
       en: Do you fancy an ice cream?
       fa: حوصلهٔ بستنی داری؟
-    alsoAccepted: [die Laune]
 
   - word: Spaß
     class: noun
@@ -55,7 +54,7 @@ words:
       de: Das Spiel macht den Kindern viel Spaß.
       en: The children have a lot of fun with the game.
       fa: بچه‌ها از این بازی خیلی لذت می‌برند.
-    alsoAccepted: [die Freude, das Vergnügen]
+    alsoAccepted: [das Vergnügen]
 
   - word: Stress
     class: noun
@@ -70,7 +69,7 @@ words:
       de: Im Moment habe ich viel Stress bei der Arbeit.
       en: At the moment I'm under a lot of stress at work.
       fa: این روزها در کار خیلی استرس دارم.
-    alsoAccepted: [die Belastung, der Druck]
+    alsoAccepted: [die Belastung]
 
   - word: Ruhe
     class: noun
@@ -85,7 +84,7 @@ words:
       de: Nach der Arbeit brauche ich ein bisschen Ruhe.
       en: After work I need a bit of peace and quiet.
       fa: بعد از کار کمی آرامش لازم دارم.
-    alsoAccepted: [die Stille, die Erholung]
+    alsoAccepted: [die Stille]
 
   # Traum and Wunsch are near each other; neither is offered as a wrong meaning of the other.
   - word: Traum
@@ -123,12 +122,12 @@ words:
     meaning:
       en: glad
       fa: خوشحال
-    definition: "mit einem guten Gefühl, weil etwas gut gegangen ist, zum Beispiel: „Ich bin …, dass du da bist.“"
+    definition: "glücklich über etwas, zum Beispiel: „Ich bin …, dass du da bist.“"
     example:
       de: Ich bin froh, dass du da bist.
       en: I'm glad you're here.
       fa: خوشحالم که اینجایی.
-    alsoAccepted: [glücklich, fröhlich, erfreut, zufrieden, erleichtert]
+    alsoAccepted: [glücklich, erfreut]
 
   - word: traurig
     class: adjective
@@ -156,7 +155,7 @@ words:
       de: Ich ärgere mich, weil der Bus schon wieder zu spät ist.
       en: I'm annoyed because the bus is late again.
       fa: عصبانی‌ام، چون اتوبوس باز هم دیر کرده است.
-    alsoAccepted: [sich aufregen, böse werden, sauer werden, wütend werden]
+    alsoAccepted: [sich aufregen, böse werden, sauer werden]
 
   # The scope list gives "(sich)": the node teaches "sich fühlen", to feel well, ill or tired.
   - word: fühlen
@@ -164,14 +163,13 @@ words:
     reflexive: sich
     level: A2
     meaning:
-      en: to feel
-      fa: احساس کردن
+      en: to feel (well, ill or tired)
+      fa: احساس کردن (حال خوب یا بد)
     definition: merken, wie es einem geht, zum Beispiel gut, krank oder müde
     example:
       de: Ich fühle mich heute nicht gut.
       en: I don't feel well today.
       fa: امروز احساس خوبی ندارم.
-    alsoAccepted: [fühlen, spüren, empfinden]
 
   # hoffen and wünschen are near each other; neither is offered as a wrong meaning of the other.
   - word: hoffen
@@ -266,7 +264,7 @@ words:
       de: Der Gast beschwert sich über das kalte Essen.
       en: The guest is complaining about the cold food.
       fa: مهمان از غذای سرد شکایت می‌کند.
-    alsoAccepted: [sich beklagen, klagen, reklamieren]
+    alsoAccepted: [sich beklagen, reklamieren]
 
   # The scope list gives "sich": the verb is always "sich bedanken".
   - word: bedanken
@@ -304,12 +302,12 @@ words:
     meaning:
       en: a pity, a shame
       fa: حیف
-    definition: "das sagt man, wenn etwas nicht so gut ist, wie man es sich gewünscht hat: „Wie …!“"
+    definition: bedauerlich, nicht so, wie man es sich gewünscht hat
     example:
       de: Schade, dass du nicht kommen kannst.
       en: What a pity you can't come.
       fa: حیف که نمی‌توانی بیایی.
-    alsoAccepted: [bedauerlich, der Jammer, ein Jammer, blöd, dumm]
+    alsoAccepted: [bedauerlich, ein Jammer]
 
   - word: egal
     class: adjective
@@ -322,7 +320,7 @@ words:
       de: Kaffee oder Tee? Das ist mir egal.
       en: Coffee or tea? I don't mind.
       fa: قهوه یا چای؟ برایم فرقی نمی‌کند.
-    alsoAccepted: [gleich, gleichgültig, einerlei, wurscht, wurst, unwichtig]
+    alsoAccepted: [gleich, gleichgültig, einerlei, wurscht, wurst]
 
   - word: Lüge
     class: noun
@@ -357,17 +355,17 @@ words:
     level: A2
     meaning:
       en: to disturb, to bother
-      fa: مزاحم (کسی) شدن، آزار دادن
+      fa: مزاحم (کسی) شدن
     definition: eine Person bei der Arbeit oder beim Schlafen nicht in Ruhe lassen
     example:
       de: Entschuldigung, störe ich?
       en: Excuse me, am I disturbing you?
       fa: ببخشید، مزاحمتان هستم؟
-    alsoAccepted: [belästigen, nerven, unterbrechen]
+    alsoAccepted: [belästigen, nerven]
     tooCloseTo: [ärgern]
 
 review:
-  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
-    only; 150, then 11, then 33 questions)
+  reviewer: independent AI agents (six fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 11, 33, 53, 10 and 5 questions)
   date: 2026-11-28
-  pool: 2b118974cf704d61
+  pool: 50d17a9019407a6c
