@@ -175,6 +175,9 @@ test.each([
   ['Im Seminar lesen wir einen Text.', 'Im Semi-nar lesen wir einen Text.'],
   ['die Recherche', 'die Re-scherrsche'],
   ['Er ist in der Berufsschule.', 'Er ist in der Berufs-schule.'],
+  // #97: an English loanword read the German way.
+  ['Homeoffice hat Vorteile.', 'Hohm-offis hat Vorteile.'],
+  ['Ich arbeite im Homeoffice.', 'Ich arbeite im Hohm-offis.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })

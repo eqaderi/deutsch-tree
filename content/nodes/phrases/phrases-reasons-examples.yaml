@@ -4,7 +4,7 @@ kind: phrases
 level: B1
 chapter: b1-phrases-opinions
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Giving reasons and examples"
   fa: "آوردن دلیل و مثال"
@@ -14,3 +14,276 @@ purpose:
   fa: "حرفتان را با دلیل، مثال یا تجربهٔ شخصی محکم کنید."
   de: "Mit einem Grund, einem Beispiel oder der eigenen Erfahrung zeigen, warum man etwas denkt."
 examTasks: [exam-schreiben-1, exam-schreiben-2, exam-sprechen-2]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: …, denn …
+    meaning:
+      en: …, because … Adds a reason. After *denn* the word order stays normal, with the verb in position 2, unlike after *weil*.
+      fa: «…، چون …» دلیلی را اضافه می‌کند. پس از *denn* ترتیب واژه‌ها عادی می‌ماند و فعل در جایگاه دوم می‌آید، برخلاف *weil*.
+      de: Damit nennt man einen Grund. Nach *denn* kommt ein normaler Satz mit dem Verb auf Position 2, anders als nach *weil*.
+    examTasks: [exam-schreiben-1, exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Ich fahre gern mit dem Fahrrad, denn es ist gesund.
+      en: I like to cycle, because it is healthy.
+      fa: دوچرخه‌سواری را دوست دارم، چون برای سلامتی خوب است.
+
+  - de: Der Grund dafür ist, dass …
+    meaning:
+      en: The reason for this is that … Gives the reason for something you have just said. After *dass* the verb goes to the end.
+      fa: «دلیلش این است که …» دلیل چیزی را که همین الان گفتید بیان می‌کند. پس از *dass* فعل به پایان جمله می‌رود.
+      de: Man nennt den Grund für etwas, das man gerade gesagt hat. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Viele Familien ziehen aufs Land. Der Grund dafür ist, dass die Mieten in der Stadt sehr hoch sind.
+      en: Many families move to the country. The reason for this is that rents in the city are very high.
+      fa: بسیاری از خانواده‌ها به روستا می‌روند. دلیلش این است که اجاره‌ها در شهر خیلی بالاست.
+
+  - de: Das liegt daran, dass …
+    meaning:
+      en: That is because … Explains the cause of a fact or a problem. The verb is *liegen an*, so it is *daran*; after *dass* the verb goes to the end.
+      fa: «علتش این است که …» علت واقعیت یا مشکلی را توضیح می‌دهد. فعل *liegen an* است، پس *daran* می‌آید. پس از *dass* فعل به پایان جمله می‌رود.
+      de: Man erklärt, warum etwas so ist. Das Verb ist *liegen an*, darum heißt es *daran*. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Auf dem Land fahren viele Leute Auto. Das liegt daran, dass es nur wenige Busse gibt.
+      en: In the country many people drive. That is because there are only a few buses.
+      fa: در روستا خیلی‌ها با ماشین رفت‌وآمد می‌کنند. علتش این است که اتوبوس کم است.
+
+  - de: Zum Beispiel …
+    meaning:
+      en: For example … Gives an example. At the start of a sentence *Zum Beispiel* fills position 1, so the verb comes next, before the subject.
+      fa: «مثلاً …» مثالی می‌آورد. *Zum Beispiel* در آغاز جمله جایگاه اول را پر می‌کند، پس فعل پس از آن و پیش از فاعل می‌آید.
+      de: Man nennt ein Beispiel. Am Satzanfang steht *Zum Beispiel* auf Position 1, darum kommt danach das Verb und dann das Subjekt.
+    examTasks: [exam-schreiben-1, exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Sport ist gut gegen Stress. Zum Beispiel gehe ich nach der Arbeit oft schwimmen.
+      en: Sport is good against stress. For example, I often go swimming after work.
+      fa: ورزش برای کم کردن استرس خوب است. مثلاً من بعد از کار اغلب به شنا می‌روم.
+
+  - de: …, wie zum Beispiel …
+    meaning:
+      en: …, such as … Names examples inside a sentence, often after a plural, *viele Sportarten, wie zum Beispiel …*
+      fa: "«…، مانند …» در میان جمله مثال‌هایی را نام می‌برد، معمولاً پس از اسمی جمع: *viele Sportarten, wie zum Beispiel …*"
+      de: Man nennt Beispiele mitten im Satz, oft nach einem Plural, zum Beispiel *viele Sportarten, wie zum Beispiel …*
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Viele Sportarten, wie zum Beispiel Schwimmen oder Radfahren, sind gut für die Gesundheit.
+      en: Many sports, such as swimming or cycling, are good for your health.
+      fa: بسیاری از ورزش‌ها، مانند شنا یا دوچرخه‌سواری، برای سلامتی خوب‌اند.
+
+  - de: Ein gutes Beispiel dafür ist …
+    meaning:
+      en: A good example of this is … Brings in one example that shows what you mean.
+      fa: «نمونهٔ خوبش … است.» مثالی می‌آورد که منظورتان را نشان می‌دهد.
+      de: Man nennt ein Beispiel, das gut zeigt, was man meint.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Radfahren in der Stadt kann sicher sein. Ein gutes Beispiel dafür ist Kopenhagen.
+      en: Cycling in the city can be safe. A good example of this is Copenhagen.
+      fa: دوچرخه‌سواری در شهر می‌تواند امن باشد. نمونهٔ خوبش کپنهاگ است.
+
+  - de: Aus eigener Erfahrung weiß ich, dass …
+    meaning:
+      en: I know from my own experience that … Supports your opinion with what you have lived through. *Aus eigener Erfahrung* fills position 1, so *weiß* comes before *ich*.
+      fa: «از تجربهٔ خودم می‌دانم که …» نظرتان را با تجربهٔ شخصی‌تان محکم می‌کند. *Aus eigener Erfahrung* جایگاه اول را پر می‌کند، پس *weiß* پیش از *ich* می‌آید.
+      de: Man zeigt mit dem eigenen Leben, warum man etwas denkt. *Aus eigener Erfahrung* steht auf Position 1, darum kommt *weiß* vor *ich*.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Aus eigener Erfahrung weiß ich, dass Sport gegen Stress hilft.
+      en: I know from my own experience that sport helps against stress.
+      fa: از تجربهٔ خودم می‌دانم که ورزش به کم شدن استرس کمک می‌کند.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options:
+      - Ich fahre gern mit dem Fahrrad, denn es gesund ist.
+      - Ich fahre gern mit dem Fahrrad, denn es ist gesund.
+      - Ich fahre gern mit dem Fahrrad, denn ist es gesund.
+    answer: Ich fahre gern mit dem Fahrrad, denn es ist gesund.
+    explanation:
+      en: After *denn* the order is normal, subject then verb. *denn es ist gesund*.
+      fa: "پس از *denn* ترتیب واژه‌ها عادی است، اول فاعل و بعد فعل: *denn es ist gesund*."
+      de: "Nach *denn* kommt ein normaler Satz, zuerst das Subjekt, dann das Verb: *denn es ist gesund*."
+
+  - id: q2
+    type: gap-fill
+    prompt: Das liegt ___, dass viele Menschen in der Stadt arbeiten.
+    options: [daran, davon, darauf]
+    answer: daran
+    explanation:
+      en: The verb is *liegen an*, so the phrase is *Das liegt daran, dass …*
+      fa: فعل *liegen an* است، پس عبارت *Das liegt daran, dass …* است.
+      de: Das Verb heißt *liegen an*, also *Das liegt daran, dass …*
+
+  - id: q3
+    type: true-false
+    prompt: Zum Beispiel gehe ich nach der Arbeit oft joggen.
+    answer: true
+    explanation:
+      en: "*Zum Beispiel* fills position 1, so the verb *gehe* comes next, before *ich*. The sentence is correct."
+      fa: "*Zum Beispiel* جایگاه اول را پر می‌کند، پس فعل *gehe* پس از آن و پیش از *ich* می‌آید. جمله درست است."
+      de: "*Zum Beispiel* steht auf Position 1, darum kommt danach das Verb *gehe* und dann *ich*. Der Satz ist richtig."
+
+  - id: q4
+    type: true-false
+    prompt: Der Grund dafür ist, dass die Mieten sind in der Stadt sehr hoch.
+    answer: false
+    explanation:
+      en: After *dass* the verb goes to the end. *…, dass die Mieten in der Stadt sehr hoch sind.*
+      fa: "پس از *dass* فعل به پایان جمله می‌رود: *…, dass die Mieten in der Stadt sehr hoch sind.*"
+      de: "Nach *dass* steht das Verb am Ende: *…, dass die Mieten in der Stadt sehr hoch sind.*"
+
+  - id: q5
+    type: find-error
+    prompt: Aus eigene Erfahrung weiß ich, dass das stimmt.
+    answer: eigene
+    explanation:
+      en: "*aus* takes the dative and *Erfahrung* is feminine, so it is *aus eigener Erfahrung*."
+      fa: "*aus* حالت *Dativ* می‌خواهد و *Erfahrung* اسم مؤنث (*die*) است، پس می‌شود *aus eigener Erfahrung*."
+      de: "Nach *aus* kommt der Dativ, und es heißt *die Erfahrung*. Also: *aus eigener Erfahrung*."
+
+  - id: q6
+    type: word-order
+    answers:
+      - ["das liegt daran,", dass, die Wohnungen, so teuer, sind]
+    explanation:
+      en: "After *dass* comes the subject *die Wohnungen*, and the verb *sind* goes to the end: *Das liegt daran, dass die Wohnungen so teuer sind.*"
+      fa: "پس از *dass* فاعل یعنی *die Wohnungen* می‌آید و فعل *sind* به پایان جمله می‌رود: *Das liegt daran, dass die Wohnungen so teuer sind.*"
+      de: "Nach *dass* kommt das Subjekt *die Wohnungen*, und das Verb *sind* steht am Ende: *Das liegt daran, dass die Wohnungen so teuer sind.*"
+
+  - id: q7
+    type: gap-fill
+    prompt: Viele Sportarten, wie zum ___ Schwimmen oder Radfahren, sind gut für die Gesundheit.
+    options: [Grund, Fall, Beispiel]
+    answer: Beispiel
+    explanation:
+      en: The phrase is *wie zum Beispiel …*
+      fa: عبارت *wie zum Beispiel …* است.
+      de: Der Ausdruck heißt *wie zum Beispiel …*
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Ich bleibe heute zu Hause, ___ ich bin krank.
+    answers: [denn]
+    explanation:
+      en: The verb *bin* is in position 2, so the reason comes with *denn*. After *weil* it would be *weil ich krank bin*.
+      fa: فعل *bin* در جایگاه دوم است، پس دلیل با *denn* می‌آید. با *weil* می‌شد *weil ich krank bin*.
+      de: Das Verb *bin* steht auf Position 2, darum kommt der Grund mit *denn*. Mit *weil* heißt es *weil ich krank bin*.
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Ich lerne Deutsch, denn ich ___ (wollen) in Deutschland studieren.
+    answers: [will, wollte]
+    explanation:
+      en: After *denn* the verb stays in position 2. With *ich*, *wollen* becomes *will*.
+      fa: پس از *denn* فعل در جایگاه دوم می‌ماند. *wollen* با *ich* می‌شود *will*.
+      de: Nach *denn* bleibt das Verb auf Position 2. Bei *ich* wird *wollen* zu *will*.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Viele Familien ziehen aufs Land. Der ___ dafür ist, dass die Mieten in der Stadt sehr hoch sind.
+    answers: [Grund, Hauptgrund, wichtigste Grund]
+    explanation:
+      en: The phrase is *Der Grund dafür ist, dass …*
+      fa: عبارت *Der Grund dafür ist, dass …* است.
+      de: Der Ausdruck heißt *Der Grund dafür ist, dass …*
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Viele Familien ziehen aufs Land. Der Grund ___ ist, dass die Mieten in der Stadt sehr hoch sind.
+    answers: [dafür, hierfür]
+    explanation:
+      en: The phrase is *Der Grund dafür ist, dass …* (*der Grund für etwas*).
+      fa: عبارت *Der Grund dafür ist, dass …* است (*der Grund für etwas*).
+      de: Der Ausdruck heißt *Der Grund dafür ist, dass …* (*der Grund für etwas*).
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Der Grund dafür ist, dass die Mieten in der Stadt sehr hoch ___ (sein).
+    answers: [sind, waren]
+    explanation:
+      en: After *dass* the verb goes to the end. With *die Mieten* (plural) it is *sind*.
+      fa: پس از *dass* فعل به پایان جمله می‌رود. با *die Mieten* که جمع است، فعل *sind* می‌شود.
+      de: Nach *dass* steht das Verb am Ende. Bei *die Mieten* (Plural) heißt es *sind*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Das ___ (liegen) daran, dass viele Menschen in der Stadt arbeiten.
+    answers: [liegt, lag]
+    explanation:
+      en: The phrase is *Das liegt daran, dass …* The past *lag* is also correct German.
+      fa: عبارت *Das liegt daran, dass …* است. گذشتهٔ سادهٔ *lag* هم درست است.
+      de: Der Ausdruck heißt *Das liegt daran, dass …* Die Vergangenheit *lag* ist auch richtig.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Das liegt ___ (an), dass es auf dem Land nur wenige Busse gibt.
+    answers: [daran]
+    explanation:
+      en: The verb is *liegen an*, and a *dass* clause follows, so it is *daran*.
+      fa: فعل *liegen an* است و پس از آن جمله‌ای با *dass* می‌آید، پس می‌شود *daran*.
+      de: Das Verb heißt *liegen an*, und danach kommt ein Satz mit *dass*. Darum heißt es *daran*.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Sport ist gut gegen Stress. ___ Beispiel gehe ich nach der Arbeit oft joggen.
+    answers: [Zum]
+    explanation:
+      en: The phrase is *Zum Beispiel …* (*zu* + *dem*).
+      fa: عبارت *Zum Beispiel …* است (*zu* + *dem*).
+      de: Der Ausdruck heißt *Zum Beispiel …* (*zu* + *dem*).
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Zum Beispiel ___ (fahren) ich jeden Tag mit dem Fahrrad zur Arbeit.
+    answers: [fahre, fuhr]
+    explanation:
+      en: "*Zum Beispiel* fills position 1, so the verb *fahre* comes next, before *ich*."
+      fa: "*Zum Beispiel* جایگاه اول را پر می‌کند، پس فعل *fahre* پس از آن و پیش از *ich* می‌آید."
+      de: "*Zum Beispiel* steht auf Position 1, darum kommt danach das Verb *fahre* und dann *ich*."
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Viele Sportarten, wie zum ___ Schwimmen, sind gut für die Gesundheit.
+    answers: [Beispiel]
+    explanation:
+      en: The phrase is *wie zum Beispiel …*
+      fa: عبارت *wie zum Beispiel …* است.
+      de: Der Ausdruck heißt *wie zum Beispiel …*
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Aus ___ (eigen) Erfahrung weiß ich, dass Sport gegen Stress hilft.
+    answers: [eigener]
+    explanation:
+      en: "*aus* takes the dative and *Erfahrung* is feminine, so it is *aus eigener Erfahrung*."
+      fa: "*aus* حالت *Dativ* می‌خواهد و *Erfahrung* اسم مؤنث (*die*) است، پس می‌شود *aus eigener Erfahrung*."
+      de: "Nach *aus* kommt der Dativ, und es heißt *die Erfahrung*. Also: *aus eigener Erfahrung*."
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Aus eigener Erfahrung ___ (wissen) ich, dass Sport gegen Stress hilft.
+    answers: [weiß, wusste]
+    explanation:
+      en: "*Aus eigener Erfahrung* fills position 1, so the verb comes next. With *ich*, *wissen* becomes *weiß*."
+      fa: "*Aus eigener Erfahrung* جایگاه اول را پر می‌کند، پس فعل پس از آن می‌آید. *wissen* با *ich* می‌شود *weiß*."
+      de: "*Aus eigener Erfahrung* steht auf Position 1, darum kommt danach das Verb. Bei *ich* wird *wissen* zu *weiß*."
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Radfahren in der Stadt kann sicher sein. Ein gutes Beispiel ___ ist Kopenhagen.
+    answers: [dafür, hierfür]
+    explanation:
+      en: The phrase is *Ein gutes Beispiel dafür ist …* (*ein Beispiel für etwas*).
+      fa: عبارت *Ein gutes Beispiel dafür ist …* است (*ein Beispiel für etwas*).
+      de: Der Ausdruck heißt *Ein gutes Beispiel dafür ist …* (*ein Beispiel für etwas*).
+
+review:
+  reviewer: an independent AI agent (two fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: b99321b1a2cc12a2

@@ -104,4 +104,7 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Recherche: 'Re-scherrsche',
   // #94: "fss" is read as "fs" + "ch", [bəˈrʊfsçuːlə]; the hyphen keeps "schule" whole.
   Berufsschule: 'Berufs-schule',
+
+  // #97: read letter by letter in the German way, [hˈoːmeːˌɔfiːkə]; the hyphen gives [hˈoːmˈɔfɪs].
+  Homeoffice: 'Hohm-offis',
 }

@@ -4,7 +4,7 @@ kind: phrases
 level: B1
 chapter: b1-phrases-opinions
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Advantages and disadvantages"
   fa: "مزایا و معایب"
@@ -14,3 +14,276 @@ purpose:
   fa: "خوبی‌ها و بدی‌های چیزی را بگویید و آن‌ها را با هم بسنجید."
   de: "Die guten und die schlechten Seiten von etwas nennen und vergleichen."
 examTasks: [exam-schreiben-2, exam-sprechen-2]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Ein Vorteil ist, dass …
+    meaning:
+      en: One advantage is that … Names a good side. After *dass* the verb goes to the end. A strong one is *Ein großer Vorteil ist, dass …*
+      fa: «یکی از مزیت‌ها این است که …» جنبهٔ خوبی را نام می‌برد. پس از *dass* فعل به پایان جمله می‌رود. برای مزیتی مهم می‌گویید *Ein großer Vorteil ist, dass …*
+      de: Man nennt eine gute Seite. Nach *dass* steht das Verb am Ende. Für eine wichtige gute Seite sagt man *Ein großer Vorteil ist, dass …*
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Ein Vorteil ist, dass man im Homeoffice viel Zeit spart.
+      en: One advantage is that you save a lot of time working from home.
+      fa: یکی از مزیت‌ها این است که در دورکاری وقت زیادی صرفه‌جویی می‌شود.
+
+  - de: Ein Nachteil ist, dass …
+    meaning:
+      en: One disadvantage is that … Names a bad side. After *dass* the verb goes to the end.
+      fa: «یکی از عیب‌ها این است که …» جنبهٔ بدی را نام می‌برد. پس از *dass* فعل به پایان جمله می‌رود.
+      de: Man nennt eine schlechte Seite. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Ein Nachteil ist, dass man im Homeoffice oft allein ist.
+      en: One disadvantage is that you are often alone working from home.
+      fa: یکی از عیب‌ها این است که در دورکاری آدم اغلب تنهاست.
+
+  - de: Der größte Vorteil von … ist …
+    meaning:
+      en: The biggest advantage of … is … Names the most important good side. *von* takes the dative, *vom Leben*, *von der Arbeit*. The same works with *Der größte Nachteil*.
+      fa: "«بزرگ‌ترین مزیت …، … است.» مهم‌ترین جنبهٔ خوب را نام می‌برد. *von* حالت *Dativ* می‌خواهد: *vom Leben*، *von der Arbeit*. با *Der größte Nachteil* هم همین‌طور است."
+      de: "Man nennt die wichtigste gute Seite. Nach *von* kommt der Dativ: *vom Leben*, *von der Arbeit*. Genauso geht *Der größte Nachteil*."
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Der größte Vorteil vom Leben auf dem Land ist die Ruhe.
+      en: The biggest advantage of living in the country is the quiet.
+      fa: بزرگ‌ترین مزیت زندگی در روستا آرامش است.
+
+  - de: Das hat sowohl Vorteile als auch Nachteile.
+    meaning:
+      en: That has both advantages and disadvantages. A good first sentence before you name both sides.
+      fa: «این هم مزایا دارد و هم معایب.» جملهٔ آغازین خوبی است، پیش از آنکه هر دو طرف را نام ببرید.
+      de: Ein guter erster Satz, bevor man beide Seiten nennt.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Homeoffice hat sowohl Vorteile als auch Nachteile.
+      en: Working from home has both advantages and disadvantages.
+      fa: دورکاری هم مزایا دارد و هم معایب.
+
+  - de: Einerseits …, andererseits …
+    meaning:
+      en: On the one hand …, on the other hand … Puts two sides side by side. Each word fills position 1, so the verb comes right after it. Longer is *Auf der einen Seite …, auf der anderen Seite …*
+      fa: «از یک طرف …، از طرف دیگر …» دو طرف را کنار هم می‌گذارد. هر یک از این دو واژه جایگاه اول را پر می‌کند، پس فعل بلافاصله پس از آن می‌آید. شکل بلندترش *Auf der einen Seite …, auf der anderen Seite …* است.
+      de: Man stellt zwei Seiten nebeneinander. Beide Wörter stehen auf Position 1, darum kommt danach gleich das Verb. Länger sagt man *Auf der einen Seite …, auf der anderen Seite …*
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Einerseits ist das Leben in der Stadt spannend, andererseits ist es sehr teuer.
+      en: On the one hand, life in the city is exciting; on the other hand, it is very expensive.
+      fa: از یک طرف زندگی در شهر هیجان‌انگیز است، از طرف دیگر خیلی گران است.
+
+  - de: … zwar …, aber …
+    meaning:
+      en: … may be …, but … Grants a good side and then names a bad one, or the other way round. *zwar* stays in the first sentence; after *aber* comes a normal sentence.
+      fa: «… درست است که …، ولی …» جنبهٔ خوبی را می‌پذیرد و بعد جنبهٔ بدی را می‌گوید، یا برعکس. *zwar* در جملهٔ اول می‌ماند و پس از *aber* جمله‌ای با ترتیب عادی می‌آید.
+      de: Man gibt eine gute Seite zu und nennt dann eine schlechte, oder umgekehrt. *zwar* steht im ersten Satz. Nach *aber* kommt ein normaler Satz.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Homeoffice ist zwar bequem, aber man sieht seine Kollegen selten.
+      en: Working from home may be comfortable, but you rarely see your colleagues.
+      fa: دورکاری درست است که راحت است، ولی آدم همکارانش را کم می‌بیند.
+
+  - de: Für mich überwiegen die Vorteile.
+    meaning:
+      en: "For me, the advantages outweigh the disadvantages. You weigh both sides and say which is stronger for you. Or the other way: *Für mich überwiegen die Nachteile.*"
+      fa: "«برای من مزایا بر معایب می‌چربد.» هر دو طرف را می‌سنجید و می‌گویید کدام برایتان سنگین‌تر است. یا برعکس: *Für mich überwiegen die Nachteile.*"
+      de: "Man vergleicht beide Seiten und sagt, welche für einen selbst wichtiger ist. Oder umgekehrt: *Für mich überwiegen die Nachteile.*"
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Homeoffice ist nicht perfekt, aber für mich überwiegen die Vorteile.
+      en: Working from home is not perfect, but for me the advantages outweigh the disadvantages.
+      fa: دورکاری بی‌عیب نیست، ولی به نظر من مزایایش بر معایبش می‌چربد.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options:
+      - Einerseits ist das Leben in der Stadt spannend, andererseits ist es sehr teuer.
+      - Einerseits das Leben in der Stadt ist spannend, andererseits es ist sehr teuer.
+      - Einerseits ist das Leben in der Stadt spannend, andererseits es ist sehr teuer.
+    answer: Einerseits ist das Leben in der Stadt spannend, andererseits ist es sehr teuer.
+    explanation:
+      en: "*Einerseits* and *andererseits* each fill position 1, so the verb *ist* comes right after both."
+      fa: "*Einerseits* و *andererseits* هر یک جایگاه اول را پر می‌کنند، پس فعل *ist* بلافاصله پس از هر دو می‌آید."
+      de: "*Einerseits* und *andererseits* stehen auf Position 1, darum kommt das Verb *ist* direkt danach."
+
+  - id: q2
+    type: gap-fill
+    prompt: Homeoffice hat sowohl Vorteile ___ auch Nachteile.
+    options: [oder, als, noch]
+    answer: als
+    explanation:
+      en: The pair is *sowohl … als auch …*
+      fa: "این دو بخش با هم می‌آیند: *sowohl … als auch …*"
+      de: Die zwei Teile gehören zusammen, *sowohl … als auch …*
+
+  - id: q3
+    type: true-false
+    prompt: Ein Vorteil ist, dass man im Homeoffice viel Zeit spart.
+    answer: true
+    explanation:
+      en: "*Ein Vorteil ist, dass …* with the verb *spart* at the end is correct."
+      fa: عبارت *Ein Vorteil ist, dass …* با فعل *spart* در پایان جمله درست است.
+      de: "*Ein Vorteil ist, dass …* mit dem Verb *spart* am Ende ist richtig."
+
+  - id: q4
+    type: true-false
+    prompt: Ein Nachteil ist, dass man ist im Homeoffice oft allein.
+    answer: false
+    explanation:
+      en: After *dass* the verb goes to the end. *Ein Nachteil ist, dass man im Homeoffice oft allein ist.*
+      fa: "پس از *dass* فعل به پایان جمله می‌رود: *Ein Nachteil ist, dass man im Homeoffice oft allein ist.*"
+      de: "Nach *dass* steht das Verb am Ende: *Ein Nachteil ist, dass man im Homeoffice oft allein ist.*"
+
+  - id: q5
+    type: find-error
+    prompt: Homeoffice ist zwar bequem, oder man sieht seine Kollegen selten.
+    answer: oder
+    explanation:
+      en: "*zwar* goes with *aber*. *Homeoffice ist zwar bequem, aber man sieht seine Kollegen selten.*"
+      fa: "*zwar* با *aber* می‌آید: *Homeoffice ist zwar bequem, aber man sieht seine Kollegen selten.*"
+      de: "*zwar* gehört zu *aber*: *Homeoffice ist zwar bequem, aber man sieht seine Kollegen selten.*"
+
+  - id: q6
+    type: word-order
+    answers:
+      - ["ein Nachteil ist,", dass, man, oft allein, ist]
+    explanation:
+      en: "After *dass* comes the subject *man*, and the verb *ist* goes to the end: *Ein Nachteil ist, dass man oft allein ist.*"
+      fa: "پس از *dass* فاعل یعنی *man* می‌آید و فعل *ist* به پایان جمله می‌رود: *Ein Nachteil ist, dass man oft allein ist.*"
+      de: "Nach *dass* kommt das Subjekt *man*, und das Verb *ist* steht am Ende: *Ein Nachteil ist, dass man oft allein ist.*"
+
+  - id: q7
+    type: gap-fill
+    prompt: Homeoffice ist nicht perfekt, aber für mich ___ die Vorteile.
+    options: [übernehmen, überweisen, überwiegen]
+    answer: überwiegen
+    explanation:
+      en: "*überwiegen* means to be stronger or more. *übernehmen* is to take over, *überweisen* is to transfer money."
+      fa: "*überwiegen* یعنی بیشتر یا سنگین‌تر بودن. *übernehmen* یعنی به عهده گرفتن و *überweisen* یعنی واریز کردن پول."
+      de: "*überwiegen* heißt: mehr oder stärker sein. *übernehmen* und *überweisen* bedeuten etwas anderes."
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Homeoffice hat Vorteile und Nachteile. Ein ___ ist, dass man viel Zeit spart.
+    answers: [Vorteil, großer Vorteil, wichtiger Vorteil, Pluspunkt]
+    explanation:
+      en: Saving time is a good side, so it is *Ein Vorteil ist, dass …*
+      fa: صرفه‌جویی در وقت جنبه‌ای خوب است، پس می‌گویید *Ein Vorteil ist, dass …*
+      de: Zeit sparen ist eine gute Seite, also *Ein Vorteil ist, dass …*
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Homeoffice ist bequem. Ein ___ ist aber, dass man oft allein ist.
+    answers: [Nachteil, großer Nachteil, Problem, Minuspunkt]
+    explanation:
+      en: Being alone is a bad side, so it is *Ein Nachteil ist, dass …*
+      fa: تنها بودن جنبه‌ای بد است، پس می‌گویید *Ein Nachteil ist, dass …*
+      de: Allein sein ist eine schlechte Seite, also *Ein Nachteil ist, dass …*
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Ein Vorteil ist, ___ man im Homeoffice viel Zeit spart.
+    answers: [dass]
+    explanation:
+      en: The phrase is *Ein Vorteil ist, dass …*, and after *dass* the verb goes to the end.
+      fa: عبارت *Ein Vorteil ist, dass …* است و پس از *dass* فعل به پایان جمله می‌رود.
+      de: Der Ausdruck heißt *Ein Vorteil ist, dass …*, und nach *dass* steht das Verb am Ende.
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Ein Nachteil ist, dass man im Homeoffice oft allein ___ (sein).
+    answers: [ist, war]
+    explanation:
+      en: After *dass* the verb goes to the end. With *man* it is *ist*.
+      fa: پس از *dass* فعل به پایان جمله می‌رود. با *man* شکل فعل *ist* است.
+      de: Nach *dass* steht das Verb am Ende. Bei *man* heißt es *ist*.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Der größte Vorteil ___ (von / das Leben) auf dem Land ist die Ruhe.
+    answers: [vom Leben, von dem Leben, vom, von dem]
+    explanation:
+      en: "*von* takes the dative, and *von dem* is usually *vom*. *der größte Vorteil vom Leben auf dem Land*."
+      fa: "*von* حالت *Dativ* می‌خواهد و *von dem* معمولاً *vom* می‌شود: *der größte Vorteil vom Leben auf dem Land*."
+      de: "Nach *von* kommt der Dativ, und *von dem* wird meistens zu *vom*: *der größte Vorteil vom Leben auf dem Land*."
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Der ___ (groß, Superlativ) Vorteil vom Leben auf dem Land ist die Ruhe.
+    answers: [größte]
+    explanation:
+      en: The superlative of *groß* is *größt-*, and after *der* the ending is *-e*. *der größte Vorteil*.
+      fa: "صفت عالی *groß* می‌شود *größt-* و پس از *der* پایانهٔ *-e* می‌گیرد: *der größte Vorteil*."
+      de: "Der Superlativ von *groß* ist *größt-*, und nach *der* ist die Endung *-e*: *der größte Vorteil*."
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Homeoffice hat sowohl Vorteile ___ auch Nachteile.
+    answers: [als, wie]
+    explanation:
+      en: The pair is *sowohl … als auch …* *sowohl … wie auch …* is also correct, but less usual.
+      fa: "این دو بخش با هم می‌آیند: *sowohl … als auch …* شکل *sowohl … wie auch …* هم درست است، ولی کمتر به کار می‌رود."
+      de: Die zwei Teile gehören zusammen, *sowohl … als auch …* *sowohl … wie auch …* ist auch richtig, aber seltener.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Homeoffice hat ___ Vorteile als auch Nachteile.
+    answers: [sowohl]
+    explanation:
+      en: The pair is *sowohl … als auch …*
+      fa: "این دو بخش با هم می‌آیند: *sowohl … als auch …*"
+      de: Die zwei Teile gehören zusammen, *sowohl … als auch …*
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: ___ ist das Leben in der Stadt spannend, andererseits ist es sehr teuer.
+    answers: [Einerseits, Auf der einen Seite]
+    explanation:
+      en: The pair is *Einerseits …, andererseits …*
+      fa: "این دو بخش با هم می‌آیند: *Einerseits …, andererseits …*"
+      de: Die zwei Teile gehören zusammen, *Einerseits …, andererseits …*
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Einerseits ist das Leben in der Stadt spannend, ___ ist es sehr teuer.
+    answers: [andererseits, anderseits, andrerseits, auf der anderen Seite]
+    explanation:
+      en: The pair is *Einerseits …, andererseits …*
+      fa: "این دو بخش با هم می‌آیند: *Einerseits …, andererseits …*"
+      de: Die zwei Teile gehören zusammen, *Einerseits …, andererseits …*
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Einerseits ___ (sein) das Leben in der Stadt spannend, andererseits ist es sehr teuer.
+    answers: [ist, war]
+    explanation:
+      en: "*Einerseits* fills position 1, so the verb *ist* comes right after it."
+      fa: "*Einerseits* جایگاه اول را پر می‌کند، پس فعل *ist* بلافاصله پس از آن می‌آید."
+      de: "*Einerseits* steht auf Position 1, darum kommt das Verb *ist* direkt danach."
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Homeoffice ist zwar bequem, ___ man sieht seine Kollegen selten.
+    answers: [aber, doch, jedoch]
+    explanation:
+      en: "*zwar* goes with *aber*. *…, aber man sieht seine Kollegen selten.*"
+      fa: "*zwar* با *aber* می‌آید: *…, aber man sieht seine Kollegen selten.*"
+      de: "*zwar* gehört zu *aber*: *…, aber man sieht seine Kollegen selten.*"
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Homeoffice ist nicht perfekt, aber für mich ___ (überwiegen) die Vorteile.
+    answers: [überwiegen, überwogen]
+    explanation:
+      en: The phrase is *Für mich überwiegen die Vorteile.* The verb agrees with *die Vorteile*, which is plural.
+      fa: عبارت *Für mich überwiegen die Vorteile.* است. فعل با *die Vorteile* که جمع است مطابقت می‌کند.
+      de: Der Ausdruck heißt *Für mich überwiegen die Vorteile.* Das Verb passt zu *die Vorteile*, also Plural.
+
+review:
+  reviewer: an independent AI agent (a fresh subagent, blind to the key)
+  date: 2026-11-28
+  pool: b82e7f349a2fe197
