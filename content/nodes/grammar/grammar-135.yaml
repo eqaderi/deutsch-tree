@@ -4,10 +4,311 @@ kind: grammar
 level: B1
 chapter: b1-prepositions
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-071]
 title:
   en: "*wegen* + *Genitiv*/*Dativ*"
   fa: "*wegen* + *Genitiv* یا *Dativ*"
   de: "*wegen* + Genitiv / Dativ"
+
+explanations:
+  en:
+    rule: >
+      *Wegen* (because of) gives a reason as a noun: *Wegen des Regens
+      bleiben wir zu Hause.* In written German it takes the *Genitiv*, like
+      *während*: *des* with *-s* or *-es* on a masculine or neuter noun
+      (*wegen des Unfalls*), *der* for a feminine noun and the plural
+      (*wegen der Arbeit*, *wegen der Kinder*), and *eines*, *einer* with
+      *ein*. In speech you will often hear the *Dativ* (*wegen dem Regen*);
+      write the *Genitiv*. A noun without an article stays as it is, as on
+      signs and in announcements: *wegen Krankheit geschlossen*, *wegen
+      Bauarbeiten*. *Weil* gives the same reason as a clause, with the verb
+      at the end: *Weil es regnet, bleiben wir zu Hause.* An adjective after
+      *des* or *der* ends in *-en*: *wegen des schlechten Wetters*.
+  fa:
+    rule: >
+      *wegen* (به دلیل، به خاطر) دلیل را با یک اسم بیان می‌کند: *Wegen des
+      Regens bleiben wir zu Hause.* (به دلیل باران در خانه می‌مانیم). در زبان
+      نوشتاری، *wegen* هم مانند *während* با حالت *Genitiv* (حالت ملکی)
+      می‌آید: *des* برای اسم مذکر یا خنثی که *-s* یا *-es* می‌گیرد (*wegen
+      des Unfalls*)، *der* برای اسم مؤنث و جمع (*wegen der Arbeit*، *wegen
+      der Kinder*)، و با *ein* صورت‌های *eines* و *einer*. در گفتار حالت
+      *Dativ* را هم زیاد می‌شنوید (*wegen dem Regen*)، ولی در نوشتار حالت
+      *Genitiv* را به کار ببرید. اسمی که حرف تعریف ندارد تغییر نمی‌کند، مانند
+      تابلوها و اطلاعیه‌ها: *wegen Krankheit geschlossen* و *wegen
+      Bauarbeiten*. همین دلیل را *weil* با یک جملهٔ پیرو بیان می‌کند که فعلش
+      در پایان می‌آید: *Weil es regnet, bleiben wir zu Hause.* صفت پس از
+      *des* یا *der* پایانهٔ *-en* می‌گیرد: *wegen des schlechten Wetters*.
+  de:
+    rule: >
+      *Wegen* nennt einen Grund mit einem Nomen: *Wegen des Regens bleiben
+      wir zu Hause.* In der geschriebenen Sprache steht nach *wegen* der
+      Genitiv, wie nach *während*: *des* und am maskulinen oder neutralen
+      Nomen *-s* oder *-es* (*wegen des Unfalls*). Bei femininen Nomen und im
+      Plural steht *der* (*wegen der Arbeit*, *wegen der Kinder*). Mit *ein*:
+      *eines*, *einer*. Beim Sprechen hört man oft den Dativ (*wegen dem
+      Regen*). Schreiben Sie den Genitiv. Ein Nomen ohne Artikel bleibt
+      gleich, zum Beispiel auf Schildern und in Durchsagen: *wegen Krankheit
+      geschlossen*, *wegen Bauarbeiten*. Mit *weil* sagt man den Grund als
+      Nebensatz, das Verb steht am Ende: *Weil es regnet, bleiben wir zu
+      Hause.* Ein Adjektiv nach *des* oder *der* hat die Endung *-en*: *wegen
+      des schlechten Wetters*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Genitiv*", fa: "حالت *Genitiv*", de: Genitiv }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Unfall, des Unfalls, eines Unfalls, wegen eines Unfalls]
+    - [die Krankheit, der Krankheit, einer Krankheit, wegen der Krankheit]
+    - [das Problem, des Problems, eines Problems, wegen des Problems]
+    - [die Kinder (Plural), der Kinder, –, wegen der Kinder]
+
+examples:
+  - de: Wegen des schlechten Wetters bleiben wir heute zu Hause.
+    en: Because of the bad weather we're staying at home today.
+    fa: به دلیل هوای بد امروز در خانه می‌مانیم.
+  - de: Wegen eines Unfalls gibt es auf der Autobahn einen langen Stau.
+    en: Because of an accident there is a long traffic jam on the motorway.
+    fa: به دلیل یک تصادف، در بزرگراه ترافیک سنگینی است.
+  - de: Der Zug hat wegen einer Störung Verspätung.
+    en: The train is late because of a fault.
+    fa: قطار به دلیل یک خرابی تأخیر دارد.
+  - de: Wegen der Kinder sind wir aufs Land gezogen.
+    en: We moved to the country because of the children.
+    fa: به خاطر بچه‌ها به روستا رفتیم.
+  - de: Ich rufe wegen der Rechnung an.
+    en: I'm calling about the bill.
+    fa: دربارهٔ صورت‌حساب زنگ می‌زنم.
+  - de: Das Geschäft ist heute wegen Krankheit geschlossen.
+    en: The shop is closed today due to illness.
+    fa: مغازه امروز به دلیل بیماری تعطیل است.
+  - de: Wegen Bauarbeiten fährt die Straßenbahn nicht.
+    en: The tram isn't running because of construction work.
+    fa: به دلیل کارهای ساختمانی، تراموا کار نمی‌کند.
+  - de: Wegen seiner Rückenschmerzen kann er nicht Fußball spielen.
+    en: Because of his back pain he can't play football.
+    fa: او به دلیل کمردرد نمی‌تواند فوتبال بازی کند.
+  - de: Weil das Wetter schlecht ist, bleiben wir zu Hause.
+    en: Because the weather is bad, we're staying at home.
+    fa: چون هوا بد است، در خانه می‌مانیم.
+  - de: Wegen des Termins beim Arzt komme ich heute später.
+    en: Because of my doctor's appointment I'll be later today.
+    fa: به خاطر وقت دکتر امروز دیرتر می‌آیم.
+
+mistakes:
+  - wrong: Wegen das Wetter bleiben wir zu Hause.
+    right: Wegen des Wetters bleiben wir zu Hause.
+    why:
+      en: "*Wegen* takes the *Genitiv*: *das Wetter* becomes *des Wetters*, with *-s* on the noun."
+      fa: "*wegen* با حالت *Genitiv* می‌آید: *das Wetter* به *des Wetters* تبدیل می‌شود و اسم *-s* می‌گیرد."
+      de: "Nach *wegen* steht der Genitiv: *das Wetter* wird zu *des Wetters*, mit *-s* am Nomen."
+  - wrong: Wegen des Regen fällt das Spiel aus.
+    right: Wegen des Regens fällt das Spiel aus.
+    why:
+      en: "After *des* the masculine noun needs its *-s*: *des Regens*."
+      fa: "پس از *des* اسم مذکر باید *-s* بگیرد: *des Regens*."
+      de: "Nach *des* braucht das maskuline Nomen ein *-s*: *des Regens*."
+  - wrong: Wegen die Arbeit habe ich keine Zeit.
+    right: Wegen der Arbeit habe ich keine Zeit.
+    why:
+      en: "*Arbeit* is feminine: in the *Genitiv*, *die* becomes *der*."
+      fa: "*Arbeit* اسم مؤنث است: در حالت *Genitiv*، *die* به *der* تبدیل می‌شود."
+      de: "*Arbeit* ist feminin. Im Genitiv wird *die* zu *der*."
+  - wrong: Wegen ich krank bin, komme ich nicht.
+    right: Weil ich krank bin, komme ich nicht.
+    why:
+      en: "*Wegen* comes before a noun. Before a clause with a verb it is *weil*."
+      fa: "*wegen* پیش از اسم می‌آید. پیش از جمله‌ای که فعل دارد *weil* به کار می‌رود."
+      de: "*Wegen* steht vor einem Nomen. Vor einem Satz mit Verb steht *weil*."
+  - wrong: Wegen dem Stau sind wir zu spät gekommen.
+    right: Wegen des Staus sind wir zu spät gekommen.
+    why:
+      en: "In speech you hear the *Dativ*, but in writing *wegen* takes the *Genitiv*: *des Staus*."
+      fa: "در گفتار حالت *Dativ* را می‌شنوید، ولی در نوشتار *wegen* با حالت *Genitiv* می‌آید: *des Staus*."
+      de: "Beim Sprechen hört man oft den Dativ. Geschrieben steht nach *wegen* der Genitiv: *des Staus*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wegen ___ Unfalls gibt es einen langen Stau.
+    options: [einem, einen, eines]
+    answer: eines
+    explanation:
+      en: "*Ein Unfall* in the *Genitiv* is *eines Unfalls*."
+      fa: "*ein Unfall* در حالت *Genitiv* می‌شود *eines Unfalls*."
+      de: "*Ein Unfall* im Genitiv: *eines Unfalls*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Das Spiel fällt wegen ___ Regens aus.
+    options: [des, dem, der]
+    answer: des
+    explanation:
+      en: "*Der Regen* in the *Genitiv* is *des Regens*; the *-s* on *Regens* fits only *des*."
+      fa: "*der Regen* در حالت *Genitiv* می‌شود *des Regens*؛ *-s* در *Regens* فقط با *des* جور است."
+      de: "*Der Regen* im Genitiv: *des Regens*. Das *-s* an *Regens* passt nur zu *des*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wegen ___ Hitze ist das Schwimmbad heute sehr voll.
+    options: [die, der, des]
+    answer: der
+    explanation:
+      en: "*Hitze* is feminine: in the *Genitiv*, *die* becomes *der*."
+      fa: "*Hitze* اسم مؤنث است: در حالت *Genitiv*، *die* به *der* تبدیل می‌شود."
+      de: "*Hitze* ist feminin. Im Genitiv wird *die* zu *der*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ es regnet, bleiben wir zu Hause.
+    options: [Wegen, Weil, Trotz]
+    answer: Weil
+    explanation:
+      en: "A clause with the verb at the end (*es regnet*) follows *weil*, not *wegen*."
+      fa: "جمله‌ای که فعلش در پایان است (*es regnet*) پس از *weil* می‌آید، نه پس از *wegen*."
+      de: "Ein Satz mit dem Verb am Ende (*es regnet*) kommt nach *weil*, nicht nach *wegen*."
+  - id: gap-5
+    type: gap-fill
+    prompt: ___ des Regens bleiben wir zu Hause.
+    options: [Weil, Deshalb, Wegen]
+    answer: Wegen
+    explanation:
+      en: "Before a noun in the *Genitiv* (*des Regens*) the preposition is *wegen*."
+      fa: "پیش از اسمی در حالت *Genitiv* (*des Regens*) حرف اضافهٔ *wegen* می‌آید."
+      de: "Vor einem Nomen im Genitiv (*des Regens*) steht die Präposition *wegen*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Warum ist die Bäckerei heute zu? – ___
+    options: [Wegen krank., Wegen Krankheit., Weil Krankheit.]
+    answer: Wegen Krankheit.
+    explanation:
+      en: "*Wegen* needs a noun; without an article it stays as it is: *wegen Krankheit*."
+      fa: "*wegen* اسم لازم دارد و اسم بدون حرف تعریف تغییر نمی‌کند: *wegen Krankheit*."
+      de: "Nach *wegen* steht ein Nomen. Ohne Artikel bleibt es gleich: *wegen Krankheit*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Guten Tag, ich rufe ___ an.
+    options: [wegen die Rechnung, wegen der Rechnung, wegen den Rechnung]
+    answer: wegen der Rechnung
+    explanation:
+      en: "*Rechnung* is feminine: *wegen der Rechnung*."
+      fa: "*Rechnung* اسم مؤنث است: *wegen der Rechnung*."
+      de: "*Rechnung* ist feminin: *wegen der Rechnung*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "„Weil das Wetter schlecht ist, fahren wir nicht.“ Welcher Satz sagt dasselbe?"
+    options:
+      - Trotz des schlechten Wetters fahren wir nicht.
+      - Wegen des schlechten Wetters fahren wir nicht.
+      - Während des schlechten Wetters fahren wir nicht.
+    answer: Wegen des schlechten Wetters fahren wir nicht.
+    explanation:
+      en: "*Weil* and *wegen* both give the reason: *weil* with a clause, *wegen* with a noun."
+      fa: "*weil* و *wegen* هر دو دلیل را بیان می‌کنند: *weil* با جملهٔ پیرو و *wegen* با اسم."
+      de: "*Weil* und *wegen* nennen beide den Grund: *weil* mit einem Satz, *wegen* mit einem Nomen."
+  - id: true-1
+    type: true-false
+    prompt: Wegen der Kinder sind wir aufs Land gezogen.
+    answer: true
+    explanation:
+      en: "Plural *die Kinder* in the *Genitiv* is *der Kinder*. The sentence is correct."
+      fa: "*die Kinder* جمع در حالت *Genitiv* می‌شود *der Kinder*. جمله درست است."
+      de: "*Die Kinder* (Plural) im Genitiv: *der Kinder*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wegen das Problem kann ich morgen nicht kommen.
+    answer: false
+    explanation:
+      en: "*Wegen* takes the *Genitiv*: *wegen des Problems*."
+      fa: "*wegen* با حالت *Genitiv* می‌آید: *wegen des Problems*."
+      de: "Nach *wegen* steht der Genitiv: *wegen des Problems*."
+  - id: true-3
+    type: true-false
+    prompt: Das Museum ist wegen Bauarbeiten geschlossen.
+    answer: true
+    explanation:
+      en: "A noun without an article stays as it is after *wegen*. The sentence is correct."
+      fa: "اسم بدون حرف تعریف پس از *wegen* تغییر نمی‌کند. جمله درست است."
+      de: "Ein Nomen ohne Artikel bleibt nach *wegen* gleich. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wegen ich keine Zeit habe, komme ich nicht.
+    answer: false
+    explanation:
+      en: "Before a clause with a verb it is *weil*: *Weil ich keine Zeit habe, …*"
+      fa: "پیش از جمله‌ای که فعل دارد *weil* می‌آید: *Weil ich keine Zeit habe, …*"
+      de: "Vor einem Satz mit Verb steht *weil*: *Weil ich keine Zeit habe, …*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Der Zug hat wegen ___ (eine) Störung Verspätung.
+    answers: [einer]
+    explanation:
+      en: "*Eine Störung* in the *Genitiv* is *einer Störung*."
+      fa: "*eine Störung* در حالت *Genitiv* می‌شود *einer Störung*."
+      de: "*Eine Störung* im Genitiv: *einer Störung*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wegen ___ (der) Staus sind wir zu spät gekommen.
+    answers: [des]
+    explanation:
+      en: "*Der Stau* is masculine; in the *Genitiv* *der* becomes *des*: *des Staus*."
+      fa: "*der Stau* مذکر است و در حالت *Genitiv*، *der* به *des* تبدیل می‌شود: *des Staus*."
+      de: "*Der Stau* ist maskulin. Im Genitiv wird *der* zu *des*: *des Staus*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wegen des ___ (Gewitter) ist unser Flug ausgefallen.
+    answers: [Gewitters]
+    explanation:
+      en: "After *des* the neuter noun gets *-s*: *des Gewitters*."
+      fa: "پس از *des* اسم خنثی *-s* می‌گیرد: *des Gewitters*."
+      de: "Nach *des* bekommt das neutrale Nomen *-s*: *des Gewitters*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich habe ___ (wegen / die Arbeit) keine Zeit.
+    answers: [wegen der Arbeit, wegen der]
+    explanation:
+      en: "*Die Arbeit* in the *Genitiv* is *der Arbeit*: *wegen der Arbeit*."
+      fa: "*die Arbeit* در حالت *Genitiv* می‌شود *der Arbeit*: *wegen der Arbeit*."
+      de: "*Die Arbeit* im Genitiv: *der Arbeit*. Also: *wegen der Arbeit*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Genitiv: wegen + das Wetter"
+    answers: [wegen des Wetters, des Wetters wegen]
+    explanation:
+      en: "*Wegen* takes the *Genitiv*: *das Wetter* becomes *des Wetters*."
+      fa: "*wegen* با حالت *Genitiv* می‌آید: *das Wetter* به *des Wetters* تبدیل می‌شود."
+      de: "Nach *wegen* steht der Genitiv: *das Wetter* wird zu *des Wetters*."
+  - id: error-1
+    type: find-error
+    prompt: Wegen des Nebel konnte das Flugzeug nicht landen.
+    answer: Nebel
+    explanation:
+      en: "After *des* the masculine noun needs *-s*: *des Nebels*."
+      fa: "پس از *des* اسم مذکر باید *-s* بگیرد: *des Nebels*."
+      de: "Nach *des* braucht das maskuline Nomen ein *-s*: *des Nebels*."
+  - id: error-2
+    type: find-error
+    prompt: Wegen die Krankheit bleibt er im Bett.
+    answer: die
+    explanation:
+      en: "In the *Genitiv*, feminine *die* becomes *der*: *wegen der Krankheit*."
+      fa: "در حالت *Genitiv*، *die* مؤنث به *der* تبدیل می‌شود: *wegen der Krankheit*."
+      de: "Im Genitiv wird *die* (feminin) zu *der*: *wegen der Krankheit*."
+  - id: match-1
+    type: matching
+    answer:
+      - [wegen, des Regens]
+      - [weil, es regnet]
+      - [deshalb, bleiben wir zu Hause]
+    explanation:
+      en: "*Wegen* comes before a noun, *weil* before a clause with the verb at the end, and *deshalb* is followed by the verb."
+      fa: "*wegen* پیش از اسم می‌آید، *weil* پیش از جمله‌ای که فعلش در پایان است، و پس از *deshalb* فعل می‌آید."
+      de: "*Wegen* steht vor einem Nomen, *weil* vor einem Satz mit dem Verb am Ende, und nach *deshalb* kommt das Verb."
+
+review:
+  reviewer: "independent AI agents (two fresh subagents, review sheet only: the
+    whole pool, then the disputed question again after it was rewritten and its
+    key widened; not people)"
+  date: 2026-11-28
+  pool: 37a54ce4bf7d7231
