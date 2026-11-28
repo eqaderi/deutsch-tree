@@ -4,10 +4,367 @@ kind: grammar
 level: B1
 chapter: b1-time-clauses
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-023, grammar-160]
 title:
   en: "*als* for a single past event, vs *wenn*"
   fa: "*als* برای یک رویداد در گذشته، در برابر *wenn*"
   de: "*als* für ein einzelnes Ereignis in der Vergangenheit, im Vergleich mit *wenn*"
+
+explanations:
+  en:
+    rule: >
+      *Als* starts a subordinate clause about one event or one period in the
+      past: *Als ich Kind war, lebten wir auf dem Land.* *Als ich in Wien
+      ankam, regnete es.* As after *wenn*, the conjugated verb goes to the
+      end, and it is mostly in the *Präteritum*. For something that happened
+      again and again in the past, German uses *wenn*, often with *immer* or
+      *jedes Mal*: *Immer wenn wir Oma besuchten, backte sie einen Kuchen.*
+      For the present and the future it is always *wenn*: *Wenn ich in Wien
+      ankomme, rufe ich dich an.* So: once in the past, *als*; in every other
+      case, *wenn*. English says "when" for both, and the question word
+      *wann* (when?) only asks for a time.
+  fa:
+    rule: >
+      *als* جملهٔ پیرو را برای یک رویداد یا یک دوره در گذشته آغاز می‌کند:
+      *Als ich Kind war, lebten wir auf dem Land.* و *Als ich in Wien ankam,
+      regnete es.* مانند جملهٔ پیرو با *wenn*، فعل صرف‌شده به پایان جمله
+      می‌رود و بیشتر در گذشتهٔ ساده (*Präteritum*) است. برای کاری که در
+      گذشته بارها تکرار شده است، آلمانی *wenn* را به کار می‌برد، اغلب همراه
+      *immer* یا *jedes Mal*: *Immer wenn wir Oma besuchten, backte sie einen
+      Kuchen.* برای زمان حال و آینده همیشه *wenn* می‌آید: *Wenn ich in Wien
+      ankomme, rufe ich dich an.* پس برای یک بار در گذشته *als* و در همهٔ
+      موارد دیگر *wenn*. در فارسی هر دو را «وقتی» ترجمه می‌کنیم؛ واژهٔ
+      پرسشی *wann* (کی؟) فقط زمان را می‌پرسد.
+  de:
+    rule: >
+      Mit *als* beginnt ein Nebensatz über ein Ereignis oder eine Zeit in der
+      Vergangenheit, die es nur einmal gab: *Als ich Kind war, lebten wir auf
+      dem Land.* *Als ich in Wien ankam, regnete es.* Wie nach *wenn* steht
+      das konjugierte Verb am Ende, meistens im Präteritum. Ist etwas in der
+      Vergangenheit oft passiert, sagt man *wenn*, oft mit *immer* oder
+      *jedes Mal*: *Immer wenn wir Oma besuchten, backte sie einen Kuchen.*
+      In der Gegenwart und in der Zukunft sagt man immer *wenn*: *Wenn ich in
+      Wien ankomme, rufe ich dich an.* Also: einmal in der Vergangenheit
+      *als*, sonst *wenn*. Das Fragewort *wann* fragt nur nach der Zeit.
+
+table:
+  columns:
+    - { en: "Once in the past: *als*", fa: "یک بار در گذشته: *als*", de: "Einmal in der Vergangenheit: *als*" }
+    - {
+        en: "Again and again in the past: *wenn*",
+        fa: "بارها در گذشته: *wenn*",
+        de: "Oft in der Vergangenheit: *wenn*",
+      }
+    - { en: "Now or later: *wenn*", fa: "حال یا آینده: *wenn*", de: "Jetzt oder später: *wenn*" }
+  rows:
+    - ["Als ich krank war, …", "Immer wenn ich krank war, …", "Wenn ich krank bin, …"]
+    - ["Als wir in Rom waren, …", "Jedes Mal, wenn wir in Rom waren, …", "Wenn wir in Rom sind, …"]
+    - ["Als der Brief kam, …", "Immer wenn ein Brief kam, …", "Wenn der Brief kommt, …"]
+
+# A time line with "jetzt" on the right. One point in the past for als,
+# three points in the past for immer wenn, one point after now for wenn.
+diagrams:
+  - caption:
+      en: >
+        Time runs to the right. One event in the past takes *als*. Something
+        that happened again and again in the past takes *immer wenn*. After
+        *jetzt*, in the future, it is *wenn* too.
+      fa: >
+        زمان به سمت راست پیش می‌رود. برای یک رویداد در گذشته *als* می‌آید.
+        برای کاری که در گذشته بارها رخ داده است *immer wenn* می‌آید. پس از
+        *jetzt*، یعنی در آینده، هم *wenn* می‌آید.
+      de: >
+        Die Zeit läuft nach rechts. Für ein Ereignis in der Vergangenheit sagt
+        man *als*. Ist etwas in der Vergangenheit oft passiert, sagt man
+        *immer wenn*. Nach *jetzt*, in der Zukunft, sagt man auch *wenn*.
+    labels:
+      past: { en: past, fa: گذشته, de: Vergangenheit }
+      future: { en: future, fa: آینده, de: Zukunft }
+    svg: |
+      <svg viewBox="0 0 320 196">
+        <!-- als: one point in the past -->
+        <text class="label" x="50" y="30" text-anchor="middle">als</text>
+        <circle class="object" cx="50" cy="48" r="7"/>
+        <line class="guide" x1="50" y1="55" x2="50" y2="144"/>
+        <!-- immer wenn: three points in the past -->
+        <text class="label" x="150" y="80" text-anchor="middle">immer wenn</text>
+        <circle class="object" cx="115" cy="98" r="7"/>
+        <circle class="object" cx="150" cy="98" r="7"/>
+        <circle class="object" cx="185" cy="98" r="7"/>
+        <line class="guide" x1="115" y1="105" x2="115" y2="144"/>
+        <line class="guide" x1="150" y1="105" x2="150" y2="144"/>
+        <line class="guide" x1="185" y1="105" x2="185" y2="144"/>
+        <!-- wenn: one point after now -->
+        <text class="label" x="276" y="30" text-anchor="middle">wenn</text>
+        <circle class="object" cx="276" cy="48" r="7"/>
+        <line class="guide" x1="276" y1="55" x2="276" y2="144"/>
+        <!-- the time line, with an arrow to the right; jetzt on it -->
+        <line class="line" x1="10" y1="150" x2="304" y2="150"/>
+        <polygon class="object" points="304,144 316,150 304,156"/>
+        <circle class="object" cx="230" cy="150" r="6"/>
+        <text class="label" x="230" y="178" text-anchor="middle">jetzt</text>
+        <text class="note" x="110" y="178" text-anchor="middle">{{past}}</text>
+        <text class="note" x="288" y="178" text-anchor="middle">{{future}}</text>
+      </svg>
+
+examples:
+  - de: Als ich Kind war, lebten wir auf dem Land.
+    en: When I was a child, we lived in the country.
+    fa: وقتی بچه بودم، در روستا زندگی می‌کردیم.
+  - de: Als ich in Wien ankam, regnete es.
+    en: When I arrived in Vienna, it was raining.
+    fa: وقتی به وین رسیدم، باران می‌بارید.
+  - de: Als das Telefon klingelte, stand ich unter der Dusche.
+    en: When the phone rang, I was in the shower.
+    fa: وقتی تلفن زنگ زد، زیر دوش بودم.
+  - de: Meine Eltern haben sich kennengelernt, als sie Studenten waren.
+    en: My parents met when they were students.
+    fa: پدر و مادرم وقتی دانشجو بودند با هم آشنا شدند.
+  - de: Immer wenn wir Oma besuchten, backte sie einen Kuchen.
+    en: Whenever we visited grandma, she baked a cake.
+    fa: هر بار که به دیدن مادربزرگ می‌رفتیم، کیک می‌پخت.
+  - de: Jedes Mal, wenn ich ihn anrief, war er nicht zu Hause.
+    en: Every time I called him, he wasn't at home.
+    fa: هر بار که به او زنگ می‌زدم، خانه نبود.
+  - de: Wenn ich in Wien ankomme, rufe ich dich an.
+    en: When I arrive in Vienna, I'll call you.
+    fa: وقتی به وین رسیدم، به تو زنگ می‌زنم.
+  - de: Wann bist du nach Deutschland gekommen? – Als ich zwanzig war.
+    en: When did you come to Germany? – When I was twenty.
+    fa: کی به آلمان آمدی؟ – وقتی بیست سالم بود.
+
+mistakes:
+  - wrong: Wenn ich gestern nach Hause kam, war niemand da.
+    right: Als ich gestern nach Hause kam, war niemand da.
+    why:
+      en: '*Gestern* is one event in the past, so *als*. *Wenn* in the past means "every time".'
+      fa: "*gestern* یک رویداد در گذشته است، پس *als* می‌آید. *wenn* در گذشته یعنی «هر بار»."
+      de: "*Gestern* ist ein Ereignis in der Vergangenheit. Darum *als*. *Wenn* heißt in der Vergangenheit: jedes Mal."
+  - wrong: Als ich morgen Zeit habe, rufe ich dich an.
+    right: Wenn ich morgen Zeit habe, rufe ich dich an.
+    why:
+      en: "*Als* is only for the past. For the present and the future it is always *wenn*."
+      fa: "*als* فقط برای گذشته است. برای حال و آینده همیشه *wenn* می‌آید."
+      de: "*Als* gibt es nur für die Vergangenheit. Für jetzt und später sagt man immer *wenn*."
+  - wrong: Als ich klein war, ich spielte viel draußen.
+    right: Als ich klein war, spielte ich viel draußen.
+    why:
+      en: "The *als* clause is position 1, so the main clause starts with its verb: *spielte ich*."
+      fa: "جملهٔ پیرو با *als* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *spielte ich*."
+      de: "Der *als*-Satz ist Position 1. Danach kommt sofort das Verb: *spielte ich*."
+  - wrong: Als ich war jung, wohnte ich in Bonn.
+    right: Als ich jung war, wohnte ich in Bonn.
+    why:
+      en: "In the *als* clause the conjugated verb *war* goes to the end."
+      fa: "در جملهٔ پیرو با *als* فعل صرف‌شدهٔ *war* به پایان جمله می‌رود."
+      de: "Im *als*-Satz steht das konjugierte Verb *war* am Ende."
+  - wrong: Wann ich jung war, wohnte ich in Bonn.
+    right: Als ich jung war, wohnte ich in Bonn.
+    why:
+      en: "*Wann* only asks for a time. A time in the past that is not a question is *als*."
+      fa: "*wann* فقط زمان را می‌پرسد. برای زمانی در گذشته که پرسش نیست *als* می‌آید."
+      de: "*Wann* fragt nur nach der Zeit. Eine Zeit in der Vergangenheit ohne Frage: *als*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ ich Kind war, wohnten wir in Hamburg.
+    options: [Wenn, Als]
+    answer: Als
+    explanation:
+      en: "Childhood is one period in the past: *als*."
+      fa: "کودکی یک دوره در گذشته است: *als*."
+      de: "Die Kindheit ist eine Zeit in der Vergangenheit, die es einmal gab: *als*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ ich nach Hause komme, rufe ich dich an.
+    options: [Als, Wenn]
+    answer: Wenn
+    explanation:
+      en: "This is about the future, so *wenn*. *Als* is only for the past."
+      fa: "این جمله دربارهٔ آینده است، پس *wenn* می‌آید. *als* فقط برای گذشته است."
+      de: "Das ist in der Zukunft. Darum *wenn*. *Als* gibt es nur für die Vergangenheit."
+  - id: gap-3
+    type: gap-fill
+    prompt: Immer ___ wir Oma besuchten, backte sie einen Kuchen.
+    options: [als, wenn]
+    answer: wenn
+    explanation:
+      en: "*Immer*: it happened again and again in the past, so *wenn*."
+      fa: "*immer* نشان می‌دهد که این کار در گذشته بارها رخ داده است، پس *wenn* می‌آید."
+      de: "*Immer*: Es ist in der Vergangenheit oft passiert. Darum *wenn*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ wir letzten Sommer in Italien ankamen, schien die Sonne.
+    options: [Wann, Wenn, Als]
+    answer: Als
+    explanation:
+      en: "One arrival, last summer: one event in the past, so *als*."
+      fa: "یک بار رسیدن در تابستان گذشته، یعنی یک رویداد در گذشته: *als*."
+      de: "Letzten Sommer, eine Ankunft: ein Ereignis in der Vergangenheit. Darum *als*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Weißt du, ___ der Film anfängt?
+    options: [als, wann, wenn]
+    answer: wann
+    explanation:
+      en: "You ask for a time, so the question word *wann*, also inside the sentence."
+      fa: "زمان پرسیده می‌شود، پس واژهٔ پرسشی *wann* می‌آید، درون جمله هم."
+      de: "Man fragt nach der Zeit. Darum das Fragewort *wann*, auch im Satz."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Als ich gestern nach Hause kam, …
+    options: [niemand war da., war niemand da., niemand da war.]
+    answer: war niemand da.
+    explanation:
+      en: "The *als* clause is position 1, so the main clause starts with its verb: *war niemand da*."
+      fa: "جملهٔ پیرو با *als* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *war niemand da*."
+      de: "Der *als*-Satz ist Position 1. Der Hauptsatz beginnt mit dem Verb: *war niemand da*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Mein Vater hat mich gestern angerufen, …
+    options: [als ich saß im Bus., wenn ich im Bus saß., als ich im Bus saß.]
+    answer: als ich im Bus saß.
+    explanation:
+      en: "One call, yesterday: *als*, with the verb *saß* at the end."
+      fa: "یک تماس در دیروز: *als* می‌آید و فعل *saß* در پایان جمله است."
+      de: "Ein Anruf, gestern: *als*. Das Verb *saß* steht am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Immer wenn ich in Berlin war, habe ich meinen Onkel besucht. Was heißt das?"
+    options: [Das ist einmal passiert., Das ist oft passiert., Das passiert bald.]
+    answer: Das ist oft passiert.
+    explanation:
+      en: "*Immer wenn* in the past means every time: it happened often."
+      fa: "*immer wenn* در گذشته یعنی هر بار؛ پس این کار بارها رخ داده است."
+      de: "*Immer wenn* in der Vergangenheit heißt: jedes Mal. Es ist also oft passiert."
+  - id: true-1
+    type: true-false
+    prompt: Als ich jung war, spielte ich oft Fußball.
+    answer: true
+    explanation:
+      en: "Youth is one period in the past, so *als*, even though the football was often. The sentence is correct."
+      fa: "جوانی یک دوره در گذشته است، پس *als* می‌آید، هرچند فوتبال بازی کردن بارها بوده است. جمله درست است."
+      de: "Die Jugend ist eine Zeit in der Vergangenheit: *als*, auch wenn das Fußballspielen oft war. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wenn ich gestern im Kino war, habe ich Anna getroffen.
+    answer: false
+    explanation:
+      en: "*Gestern*: one event in the past, so *als*: *Als ich gestern im Kino war, …*"
+      fa: "*gestern* یک رویداد در گذشته است، پس *als* می‌آید: *Als ich gestern im Kino war, …*"
+      de: "*Gestern*: ein Ereignis in der Vergangenheit. Darum *als*: *Als ich gestern im Kino war, …*"
+  - id: true-3
+    type: true-false
+    prompt: Immer wenn ich in Wien war, habe ich Sachertorte gegessen.
+    answer: true
+    explanation:
+      en: "*Immer wenn*: again and again in the past, so *wenn*. The sentence is correct."
+      fa: "*immer wenn* یعنی بارها در گذشته، پس *wenn* درست است. جمله درست است."
+      de: "*Immer wenn*: oft in der Vergangenheit. Darum *wenn*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Als ich morgen Zeit habe, komme ich vorbei.
+    answer: false
+    explanation:
+      en: "*Morgen* is in the future, so *wenn*: *Wenn ich morgen Zeit habe, …*"
+      fa: "*morgen* در آینده است، پس *wenn* می‌آید: *Wenn ich morgen Zeit habe, …*"
+      de: "*Morgen* ist in der Zukunft. Darum *wenn*: *Wenn ich morgen Zeit habe, …*"
+  - id: true-5
+    type: true-false
+    prompt: Als das Telefon klingelte, stand ich unter der Dusche.
+    answer: true
+    explanation:
+      en: "One call in the past: *als*, with *klingelte* at the end and the main clause verb first. The sentence is correct."
+      fa: "یک زنگ در گذشته: *als*، با *klingelte* در پایان جملهٔ پیرو و فعل در آغاز جملهٔ پایه. جمله درست است."
+      de: "Ein Anruf in der Vergangenheit: *als*. *Klingelte* steht am Ende, der Hauptsatz beginnt mit dem Verb. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Als ich nach Hause ___ (kommen), war das Essen schon fertig.
+    answers: [kam, gekommen bin]
+    explanation:
+      en: "In the *als* clause the verb goes to the end, mostly in the *Präteritum*: *kam*."
+      fa: "در جملهٔ پیرو با *als* فعل به پایان جمله می‌رود و بیشتر در گذشتهٔ ساده است: *kam*."
+      de: "Im *als*-Satz steht das Verb am Ende, meistens im Präteritum: *kam*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (als / wenn) ich klein war, hatte ich einen Hund.
+    answers: [Als]
+    explanation:
+      en: "Being small is one period in the past: *als*."
+      fa: "کودکی یک دوره در گذشته است: *als*."
+      de: "Klein sein ist eine Zeit in der Vergangenheit, die es einmal gab: *als*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Jedes Mal, ___ (als / wenn) ich sie anrief, war sie nicht zu Hause.
+    answers: [wenn]
+    explanation:
+      en: "*Jedes Mal*: again and again in the past, so *wenn*."
+      fa: "*jedes Mal* یعنی بارها در گذشته، پس *wenn* می‌آید."
+      de: "*Jedes Mal*: oft in der Vergangenheit. Darum *wenn*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Als wir in Berlin ___ (ankommen), regnete es.
+    answers: [ankamen, angekommen sind]
+    explanation:
+      en: "In the *als* clause the separable verb is one word at the end: *ankamen*."
+      fa: "در جملهٔ پیرو با *als* فعل جداشدنی یک‌جا در پایان جمله می‌آید: *ankamen*."
+      de: "Im *als*-Satz steht das trennbare Verb zusammen am Ende: *ankamen*."
+  - id: error-1
+    type: find-error
+    prompt: Wenn ich letztes Jahr in Spanien war, habe ich viel Spanisch gelernt.
+    answer: Wenn
+    explanation:
+      en: "*Letztes Jahr* is one period in the past: *Als ich letztes Jahr in Spanien war, …*"
+      fa: "*letztes Jahr* یک دوره در گذشته است: *Als ich letztes Jahr in Spanien war, …*"
+      de: "*Letztes Jahr* ist eine Zeit in der Vergangenheit: *Als ich letztes Jahr in Spanien war, …*"
+  - id: error-2
+    type: find-error
+    prompt: Als ich Kind bin, lebten wir in Graz.
+    answer: bin
+    explanation:
+      en: "*Als* is about the past, so the verb is in the past too: *Als ich Kind war, …*"
+      fa: "*als* دربارهٔ گذشته است، پس فعل هم در گذشته می‌آید: *Als ich Kind war, …*"
+      de: "*Als* spricht über die Vergangenheit. Das Verb steht auch in der Vergangenheit: *Als ich Kind war, …*"
+  - id: error-3
+    type: find-error
+    prompt: Ich weiß nicht, als der Zug ankommt.
+    answer: als
+    explanation:
+      en: "You ask for a time, so the question word *wann*: *Ich weiß nicht, wann der Zug ankommt.*"
+      fa: "زمان پرسیده می‌شود، پس واژهٔ پرسشی *wann* می‌آید: *Ich weiß nicht, wann der Zug ankommt.*"
+      de: "Man fragt nach der Zeit. Darum das Fragewort *wann*: *Ich weiß nicht, wann der Zug ankommt.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - ["als ich jung war,", wohnte, ich, in Köln]
+    explanation:
+      en: "The *als* clause is position 1, so the verb *wohnte* comes next, then the subject."
+      fa: "جملهٔ پیرو با *als* جایگاه اول است، پس فعل *wohnte* و سپس فاعل می‌آید."
+      de: "Der *als*-Satz ist Position 1. Dann kommt das Verb *wohnte*, danach das Subjekt."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["es regnete,", als, wir, im Park, waren]
+    explanation:
+      en: "*Als* starts the clause, then the subject, and the verb *waren* comes last."
+      fa: "*als* جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل *waren* در آخر."
+      de: "*Als* beginnt den Satz, dann kommt das Subjekt, das Verb *waren* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - ["___ ich Kind war, lebten wir in Bonn.", als]
+      - ["___ kommst du nach Hause?", wann]
+      - ["Ruf mich an, ___ du in Bonn bist.", wenn]
+    explanation:
+      en: "Once in the past: *als*. A question for a time: *wann*. Now or later: *wenn*."
+      fa: "یک بار در گذشته: *als*. پرسش دربارهٔ زمان: *wann*. حال یا آینده: *wenn*."
+      de: "Einmal in der Vergangenheit: *als*. Eine Frage nach der Zeit: *wann*. Jetzt oder später: *wenn*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 8593e5322d03b75b
