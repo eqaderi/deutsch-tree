@@ -132,7 +132,7 @@ test('the review sheet of a vocabulary node asks every question once in each lan
   expect(entry(ids.wordEn)).toEqual({
     id: ids.wordEn,
     language: 'en',
-    instruction: 'Type the German word. A noun needs its article, if it takes one.',
+    instruction: 'Type the German word. A noun needs its article, if it takes one, and a reflexive verb its sich.',
     question: { type: 'word-for-meaning', prompt: 'table' },
     answerFormat: expect.any(String),
     answer: null,
@@ -140,7 +140,8 @@ test('the review sheet of a vocabulary node asks every question once in each lan
   })
   expect(entry(ids.wordFa)?.question).toEqual({ type: 'word-for-meaning', prompt: 'میز' })
   expect(entry(ids.wordDe)).toMatchObject({
-    instruction: 'Welches Wort ist das? Schreib es. Ein Nomen braucht seinen Artikel, wenn es einen hat.',
+    instruction:
+      'Welches Wort ist das? Schreib es. Ein Nomen braucht seinen Artikel, wenn es einen hat, ein reflexives Verb sein „sich“.',
     question: { type: 'word-for-meaning', prompt: 'ein Möbelstück mit einer Platte und vier Beinen' },
   })
 })

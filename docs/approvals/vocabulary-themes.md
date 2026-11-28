@@ -230,7 +230,7 @@ das Essen · die Lebensmittel (Pl.) · das Brot · das Brötchen · die Butter �
 das Getränk · das Wasser · die Milch · der Kaffee · der Tee · der Saft · das Bier · der Wein · die Flasche · das Glas · der Durst · das Frühstück · frühstücken · essen · trinken · kochen · grillen · schmecken · der Appetit · das Restaurant · das Café · das Lokal · die Speisekarte · bestellen · bitter · riechen
 
 **A1-W3.3 House and flat** · خانه و آپارتمان · Haus und Wohnung · 21 words  
-das Haus · die Wohnung · das Apartment · das Zimmer · der Raum · die Küche · das Bad · die Toilette · der Balkon · der Garten · die Treppe · der Stock · der Aufzug · der Eingang · der Ausgang · die Miete · mieten · vermieten · der Vermieter · sich umziehen · der Schlüssel
+das Haus · die Wohnung · das Apartment · das Zimmer · der Raum · die Küche · das Bad · die Toilette · der Balkon · der Garten · die Treppe · der Stock · der Aufzug · der Eingang · der Ausgang · die Miete · mieten · vermieten · der Vermieter · (sich) umziehen · der Schlüssel
 
 **A1-W3.4 Furniture and things at home** · مبلمان و وسایل خانه · Möbel und Dinge im Haus · 24 words  
 die Möbel (Pl.) · der Tisch · das Bett · der Schrank · das Sofa · der Herd · der Kühlschrank · die Dusche · das Licht · das Bild · die Maschine · anmachen · ausmachen · an sein · aus sein · auf sein · zu sein · öffnen · schließen · geöffnet · geschlossen · kaputt · reparieren · die Reparatur

@@ -106,6 +106,46 @@ test('a noun that takes no article is shown, heard and asked without one', async
   ])
 })
 
+test('a reflexive verb is shown, heard and asked with its "sich"', async () => {
+  const content = await fixtureContentWith({
+    [SCOPE_LIST_FILE]: (text) => `${text}freuen\tverb\tA1\t\t\tsich\n`,
+    [VOCABULARY]: changeReviewedNode((node) => {
+      node.words.push({
+        ...node.words[8],
+        word: 'freuen',
+        reflexive: 'sich',
+        meaning: { en: 'to be glad', fa: 'خوشحال شدن' },
+        definition: 'froh sein, zum Beispiel über ein Geschenk',
+        example: { de: 'Wir freuen uns.', en: "We're glad.", fa: 'خوشحالیم.' },
+        alsoAccepted: [],
+        tooCloseTo: [],
+      })
+    }),
+  })
+  // The new word has no audio yet; its audio is heard by the key of "sich freuen" (`audio.text`).
+  const { report, bundle } = await compileContent(content, { requireAudio: false })
+
+  expect(report.errors).toEqual([])
+  const compiled = vocabularyOf(bundle?.nodes.find((node) => node.id === NODE))
+  expect(compiled.words.find((word) => word.word === 'freuen')).toMatchObject({
+    reflexive: 'sich',
+    audio: { text: 'sich freuen' },
+  })
+  const about = compiled.questions.filter((question) => 'word' in question && question.word === 'freuen')
+  expect(about).toEqual([
+    expect.objectContaining({ type: 'meaning-of-word', prompt: 'sich freuen' }),
+    expect.objectContaining({ type: 'word-for-meaning', answers: ['sich freuen'] }),
+  ])
+})
+
+test('only a verb is reflexive', async () => {
+  const errors = await errorsAfter((node) => {
+    node.words[0].reflexive = 'sich'
+  })
+
+  expect(errors).toEqual([inWords('words[0].reflexive', 'only a verb is learned with "sich", and this word is a noun')])
+})
+
 test('the tree and the checkpoint know that a published vocabulary node has a test', async () => {
   const { bundle } = await compileContent(fixtureContent)
 

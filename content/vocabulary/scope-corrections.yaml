@@ -1062,6 +1062,11 @@ changes:
   - { word: Drittel, article: das, plural: "-" }
   - { word: Pfingsten, article: das, plural: sg }
   - { word: Nationalfeiertag, article: der, plural: "-e" }
+  - {
+      word: umziehen,
+      reflexive: (sich),
+      reason: 'reflexive only as "sich umziehen" (to change clothes); "umziehen" (to move house) takes no "sich"',
+    }
 
 # Headwords that the lists print in the cell of another word, so the extraction has no row for them.
 additions:
