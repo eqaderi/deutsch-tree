@@ -4,10 +4,330 @@ kind: grammar
 level: B1
 chapter: b1-genitive-nouns
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-065, grammar-069]
 title:
   en: "*Genitiv* with articles"
   fa: "*Genitiv* با حرف تعریف"
   de: "Genitiv mit Artikel"
+
+explanations:
+  en:
+    rule: >
+      The *Genitiv* says whose something is, or what it belongs to. It comes
+      after the noun it describes: *das Auto des Lehrers* (the teacher's
+      car), *die Farbe des Hauses* (the colour of the house). *Der* and *das*
+      become *des*, and the noun takes *-s*: *des Vaters*, *des Büros*. A noun
+      ending in *-s*, *-ß*, *-x* or *-z* takes *-es*: *des Hauses*,
+      *des Kurses*; many short nouns may take it too (*des Tages*, *des Tisches*). *Die*
+      becomes *der*, in the feminine and in the plural, and the noun stays as
+      it is: *der Mutter*, *der Kinder*. *Ein* becomes *eines* or *einer*,
+      and *mein*, *dein* or *kein* take the same endings: *meines Vaters*,
+      *meiner Eltern*. A plural without an article has no *Genitiv*: use
+      *von* + *Dativ* (*die Preise von Wohnungen*). The *Genitiv* is common in
+      writing; in speech *von* + *Dativ* is often used instead.
+  fa:
+    rule: >
+      حالت *Genitiv* (حالت ملکی) نشان می‌دهد چیزی مال کیست یا به چه تعلق
+      دارد. این حالت پس از اسمی می‌آید که توصیفش می‌کند: *das Auto des
+      Lehrers* (ماشین معلم) و *die Farbe des Hauses* (رنگ خانه). ترتیب مانند
+      اضافهٔ فارسی است: اول خود چیز، سپس صاحب آن. *der* و *das* به *des*
+      تبدیل می‌شوند و اسم *-s* می‌گیرد: *des Vaters* و *des Büros*. اسمی که
+      به *-s*، *-ß*، *-x* یا *-z* ختم شود *-es* می‌گیرد: *des Hauses*
+      و *des Kurses*؛ بسیاری از اسم‌های کوتاه هم می‌توانند *-es* بگیرند
+      (*des Tages*، *des Tisches*). *die*، چه در مؤنث و چه در جمع، به *der* تبدیل می‌شود و
+      خود اسم تغییری نمی‌کند: *der Mutter* و *der Kinder*. *ein* به *eines*
+      یا *einer* تبدیل می‌شود و *mein*، *dein* و *kein* هم همین پایانه‌ها را
+      می‌گیرند: *meines Vaters* و *meiner Eltern*. اسم جمعِ بدون حرف تعریف
+      حالت *Genitiv* ندارد؛ به‌جای آن *von* با حالت *Dativ* می‌آید: *die
+      Preise von Wohnungen*. حالت *Genitiv* در نوشتار رایج است و در گفتار
+      بیشتر *von* با حالت *Dativ* به کار می‌رود.
+  de:
+    rule: >
+      Der Genitiv sagt, wem etwas gehört oder wozu etwas gehört. Er steht
+      nach dem Nomen: *das Auto des Lehrers*, *die Farbe des Hauses*. *Der*
+      und *das* werden zu *des*, und das Nomen bekommt *-s*: *des Vaters*,
+      *des Büros*. Endet das Nomen auf *-s*, *-ß*, *-x* oder *-z*,
+      bekommt es *-es*: *des Hauses*, *des Kurses*. Viele kurze Nomen können
+      auch *-es* haben (*des Tages*, *des Tisches*). *Die* wird zu *der*, bei feminin und im
+      Plural, und das Nomen bleibt gleich: *der Mutter*, *der Kinder*. *Ein*
+      wird zu *eines* oder *einer*. *Mein*, *dein* und *kein* haben die
+      gleichen Endungen: *meines Vaters*, *meiner Eltern*. Im Plural ohne
+      Artikel gibt es keinen Genitiv. Dann nimmt man *von* + Dativ: *die
+      Preise von Wohnungen*. Den Genitiv schreibt man oft; beim Sprechen sagt
+      man oft *von* + Dativ.
+
+# The article-change table of content/README.md, for the Genitiv.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Genitiv*", fa: "حالت *Genitiv*", de: Genitiv }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Vater, des Vaters, eines Vaters, das Auto des Vaters]
+    - [die Mutter, der Mutter, einer Mutter, die Tasche der Mutter]
+    - [das Haus, des Hauses, eines Hauses, die Farbe des Hauses]
+    - [die Kinder (Plural), der Kinder, –, die Zimmer der Kinder]
+
+examples:
+  - de: Das Auto meines Vaters ist schon sehr alt.
+    en: My father's car is already very old.
+    fa: ماشین پدرم دیگر خیلی قدیمی است.
+  - de: Die Farbe des Hauses gefällt mir nicht.
+    en: I don't like the colour of the house.
+    fa: رنگ خانه را دوست ندارم.
+  - de: Hast du die Rede des Bürgermeisters gehört?
+    en: Did you hear the mayor's speech?
+    fa: سخنرانی شهردار را شنیدی؟
+  - de: Der Name der Straße ist sehr lang.
+    en: The name of the street is very long.
+    fa: اسم خیابان خیلی طولانی است.
+  - de: Am Ende des Monats habe ich kein Geld mehr.
+    en: At the end of the month I have no money left.
+    fa: آخر ماه دیگر پولی ندارم.
+  - de: Die Zimmer der Kinder sind oben.
+    en: The children's rooms are upstairs.
+    fa: اتاق‌های بچه‌ها طبقهٔ بالاست.
+  - de: Das ist die Tochter einer Kollegin.
+    en: That is a colleague's daughter.
+    fa: او دختر یکی از همکارانم است.
+  - de: Die Tür des Büros ist geschlossen.
+    en: The office door is closed.
+    fa: در دفتر بسته است.
+  - de: Wir wohnen im Haus meiner Großeltern.
+    en: We live in my grandparents' house.
+    fa: ما در خانهٔ پدربزرگ و مادربزرگم زندگی می‌کنیم.
+  - de: Die Preise von Wohnungen sind hier sehr hoch.
+    en: Flat prices here are very high.
+    fa: قیمت آپارتمان‌ها اینجا خیلی بالاست.
+
+mistakes:
+  - wrong: Das ist das Auto des Vater.
+    right: Das ist das Auto des Vaters.
+    why:
+      en: "A masculine or neuter noun takes *-s* in the *Genitiv*: *des Vaters*."
+      fa: "اسم مذکر و خنثی در حالت *Genitiv* پایانهٔ *-s* می‌گیرد: *des Vaters*."
+      de: "Ein Nomen mit *der* oder *das* bekommt im Genitiv *-s*: *des Vaters*."
+  - wrong: Der Name des Straße ist sehr lang.
+    right: Der Name der Straße ist sehr lang.
+    why:
+      en: "*Straße* is feminine. In the *Genitiv* *die* becomes *der*, not *des*, and the noun takes no ending."
+      fa: "*Straße* اسم مؤنث (*die*) است. در حالت *Genitiv*، *die* به *der* تبدیل می‌شود، نه به *des*، و اسم پایانه‌ای نمی‌گیرد."
+      de: "*Straße* hat den Artikel *die*. Im Genitiv wird *die* zu *der*, nicht zu *des*. Das Nomen bekommt keine Endung."
+  - wrong: Die Zimmer die Kinder sind oben.
+    right: Die Zimmer der Kinder sind oben.
+    why:
+      en: "In the plural the *Genitiv* article is *der*: *der Kinder*."
+      fa: "در جمع، حرف تعریف حالت *Genitiv* همان *der* است: *der Kinder*."
+      de: "Im Plural ist der Artikel im Genitiv *der*: *der Kinder*."
+  - wrong: Die Farbe des Haus gefällt mir nicht.
+    right: Die Farbe des Hauses gefällt mir nicht.
+    why:
+      en: "*Haus* ends in *-s*, so it takes *-es* in the *Genitiv*: *des Hauses*."
+      fa: "*Haus* به *-s* ختم می‌شود، پس در حالت *Genitiv* پایانهٔ *-es* می‌گیرد: *des Hauses*."
+      de: "*Haus* endet auf *-s*. Darum bekommt es im Genitiv *-es*: *des Hauses*."
+  - wrong: Das ist die Wohnung meines Eltern.
+    right: Das ist die Wohnung meiner Eltern.
+    why:
+      en: "*Eltern* is plural. In the plural *meine* becomes *meiner* in the *Genitiv*."
+      fa: "*Eltern* جمع است. در جمع، *meine* در حالت *Genitiv* به *meiner* تبدیل می‌شود."
+      de: "*Eltern* ist Plural. Im Plural wird *meine* im Genitiv zu *meiner*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das Auto ___ Lehrers steht vor der Schule.
+    options: [dem, des, der]
+    answer: des
+    explanation:
+      en: "*Der Lehrer* in the *Genitiv* is *des Lehrers*."
+      fa: "*der Lehrer* در حالت *Genitiv* می‌شود *des Lehrers*."
+      de: "*Der Lehrer* im Genitiv: *des Lehrers*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Tasche ___ Lehrerin ist rot.
+    options: [des, die, der]
+    answer: der
+    explanation:
+      en: "*Die Lehrerin* in the *Genitiv* is *der Lehrerin*."
+      fa: "*die Lehrerin* در حالت *Genitiv* می‌شود *der Lehrerin*."
+      de: "*Die Lehrerin* im Genitiv: *der Lehrerin*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Zimmer ___ Kinder sind oben.
+    options: [der, die, den]
+    answer: der
+    explanation:
+      en: "In the plural the *Genitiv* article is *der*: *der Kinder*."
+      fa: "در جمع، حرف تعریف حالت *Genitiv* همان *der* است: *der Kinder*."
+      de: "Im Plural ist der Artikel im Genitiv *der*: *der Kinder*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Farbe des ___ gefällt mir sehr.
+    options: [Haus, Häuser, Hauses]
+    answer: Hauses
+    explanation:
+      en: "*Haus* ends in *-s*, so the *Genitiv* is *des Hauses*."
+      fa: "*Haus* به *-s* ختم می‌شود، پس حالت *Genitiv* آن *des Hauses* است."
+      de: "*Haus* endet auf *-s*. Der Genitiv ist *des Hauses*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Der Preis des ___ ist zu hoch.
+    options: [Computers, Computer, Computern]
+    answer: Computers
+    explanation:
+      en: "After *des* the masculine noun takes *-s*: *des Computers*."
+      fa: "پس از *des* اسم مذکر پایانهٔ *-s* می‌گیرد: *des Computers*."
+      de: "Nach *des* bekommt das Nomen *-s*: *des Computers*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Das ist das Fahrrad ___ Freundes.
+    options: [einem, eines, einen]
+    answer: eines
+    explanation:
+      en: "*Ein Freund* in the *Genitiv* is *eines Freundes*."
+      fa: "*ein Freund* در حالت *Genitiv* می‌شود *eines Freundes*."
+      de: "*Ein Freund* im Genitiv: *eines Freundes*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich habe die Telefonnummer ___ Ärztin.
+    options: [eine, eines, einer]
+    answer: einer
+    explanation:
+      en: "*Eine Ärztin* in the *Genitiv* is *einer Ärztin*."
+      fa: "*eine Ärztin* در حالت *Genitiv* می‌شود *einer Ärztin*."
+      de: "*Eine Ärztin* im Genitiv: *einer Ärztin*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Das sind Fotos ___ Freunden aus Spanien.
+    options: [der, von, eines]
+    answer: von
+    explanation:
+      en: "*Freunden* is the plural *Dativ*, without an article. A plural without an article has no *Genitiv*, so German uses *von* + *Dativ*: *von Freunden*."
+      fa: "*Freunden* شکل جمع در حالت *Dativ* است، بدون حرف تعریف. اسم جمعِ بدون حرف تعریف حالت *Genitiv* ندارد، پس *von* با حالت *Dativ* می‌آید: *von Freunden*."
+      de: "*Freunden* ist Dativ Plural, ohne Artikel. Im Plural ohne Artikel gibt es keinen Genitiv. Man sagt *von* + Dativ: *von Freunden*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Am Ende ___ Woche fahren wir weg.
+    options: [des, der, dem]
+    answer: der
+    explanation:
+      en: "*Die Woche* in the *Genitiv* is *der Woche*."
+      fa: "*die Woche* در حالت *Genitiv* می‌شود *der Woche*."
+      de: "*Die Woche* im Genitiv: *der Woche*."
+  - id: true-1
+    type: true-false
+    prompt: Das ist das Auto meines Vaters.
+    answer: true
+    explanation:
+      en: "*Mein Vater* in the *Genitiv* is *meines Vaters*. The sentence is correct."
+      fa: "*mein Vater* در حالت *Genitiv* می‌شود *meines Vaters*. جمله درست است."
+      de: "*Mein Vater* im Genitiv: *meines Vaters*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Der Name des Straße ist lang.
+    answer: false
+    explanation:
+      en: "*Straße* is feminine, so the *Genitiv* is *der Straße*."
+      fa: "*Straße* اسم مؤنث است، پس حالت *Genitiv* آن *der Straße* است."
+      de: "*Straße* hat den Artikel *die*. Im Genitiv: *der Straße*."
+  - id: true-3
+    type: true-false
+    prompt: Morgen ist der Hochzeitstag meiner Eltern.
+    answer: true
+    explanation:
+      en: "In the plural *meine* becomes *meiner* in the *Genitiv*: *meiner Eltern*. The sentence is correct."
+      fa: "در جمع، *meine* در حالت *Genitiv* به *meiner* تبدیل می‌شود: *meiner Eltern*. جمله درست است."
+      de: "Im Plural wird *meine* im Genitiv zu *meiner*: *meiner Eltern*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Die Tür des Büro ist zu.
+    answer: false
+    explanation:
+      en: "A neuter noun takes *-s* after *des*: *des Büros*."
+      fa: "اسم خنثی پس از *des* پایانهٔ *-s* می‌گیرد: *des Büros*."
+      de: "Nach *des* bekommt das Nomen *-s*: *des Büros*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist das Büro ___ (der) Chefs.
+    answers: [des]
+    explanation:
+      en: "*Der* becomes *des* in the *Genitiv*: *des Chefs*."
+      fa: "*der* در حالت *Genitiv* به *des* تبدیل می‌شود: *des Chefs*."
+      de: "*Der* wird im Genitiv zu *des*: *des Chefs*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Die Mutter ___ (meine) Freundin ist Ärztin.
+    answers: [meiner]
+    explanation:
+      en: "*Meine Freundin* in the *Genitiv* is *meiner Freundin*."
+      fa: "*meine Freundin* در حالت *Genitiv* می‌شود *meiner Freundin*."
+      de: "*Meine Freundin* im Genitiv: *meiner Freundin*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: "Genitiv: Der Preis ___ (der Kurs) ist zu hoch."
+    answers: [des Kurses]
+    explanation:
+      en: "*Kurs* ends in *-s*, so it takes *-es*: *des Kurses*."
+      fa: "*Kurs* به *-s* ختم می‌شود، پس پایانهٔ *-es* می‌گیرد: *des Kurses*."
+      de: "*Kurs* endet auf *-s*. Darum: *des Kurses*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Genitiv: die Eltern (Plural)"
+    answers: [der Eltern]
+    explanation:
+      en: "In the plural the *Genitiv* article is *der*, and the noun stays as it is."
+      fa: "در جمع، حرف تعریف حالت *Genitiv* همان *der* است و اسم تغییری نمی‌کند."
+      de: "Im Plural ist der Artikel im Genitiv *der*. Das Nomen bleibt gleich."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Genitiv: ein Zimmer"
+    answers: [eines Zimmers]
+    explanation:
+      en: "*Ein* becomes *eines*, and the neuter noun takes *-s*: *eines Zimmers*."
+      fa: "*ein* به *eines* تبدیل می‌شود و اسم خنثی *-s* می‌گیرد: *eines Zimmers*."
+      de: "*Ein* wird zu *eines*, und das Nomen bekommt *-s*: *eines Zimmers*."
+  - id: error-1
+    type: find-error
+    prompt: Wie ist der Name des Hotel?
+    answer: Hotel
+    explanation:
+      en: "After *des* the noun takes *-s*: *des Hotels*."
+      fa: "پس از *des* اسم پایانهٔ *-s* می‌گیرد: *des Hotels*."
+      de: "Nach *des* bekommt das Nomen *-s*: *des Hotels*."
+  - id: error-2
+    type: find-error
+    prompt: Die Freundin meines Schwester wohnt in Wien.
+    answer: meines
+    explanation:
+      en: "*Schwester* is feminine, so the *Genitiv* is *meiner Schwester*."
+      fa: "*Schwester* اسم مؤنث است، پس حالت *Genitiv* آن *meiner Schwester* است."
+      de: "*Schwester* hat den Artikel *die*. Im Genitiv: *meiner Schwester*."
+  - id: error-3
+    type: find-error
+    prompt: Die Farbe des Tasche gefällt mir.
+    answer: des
+    explanation:
+      en: "*Tasche* is feminine, so the *Genitiv* article is *der*: *der Tasche*."
+      fa: "*Tasche* اسم مؤنث است، پس حرف تعریف حالت *Genitiv* آن *der* است: *der Tasche*."
+      de: "*Tasche* hat den Artikel *die*. Im Genitiv: *der Tasche*."
+  - id: match-1
+    type: matching
+    answer:
+      - [der Lehrer, des Lehrers]
+      - [die Lehrerin, der Lehrerin]
+      - [das Büro, des Büros]
+      - [die Kinder, der Kinder]
+    explanation:
+      en: "*Der* and *das* become *des*, with *-s* on the noun; *die* becomes *der*, in the singular and in the plural."
+      fa: "*der* و *das* به *des* تبدیل می‌شوند و اسم *-s* می‌گیرد؛ *die* هم در مفرد و هم در جمع به *der* تبدیل می‌شود."
+      de: "*Der* und *das* werden zu *des*, das Nomen bekommt *-s*. *Die* wird zu *der*, im Singular und im Plural."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question, then the questions changed or disputed after the
+    first pass; not people)"
+  date: 2026-11-28
+  pool: 7b1b42657302505d

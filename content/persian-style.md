@@ -85,6 +85,7 @@ its first mention in a node.
 | singular / plural | Singular / Plural | مفرد / جمع |
 | polite *Sie* | Höflichkeitsform | *Sie* رسمی |
 | noun | Nomen | اسم |
+| *n-Deklination* (*der Kollege*, *den Kollegen*) | n-Deklination | صرف اسم با *-n* (*n-Deklination*) |
 | compound noun (*die Haustür*) | Kompositum | اسم مرکب |
 | linking letter (*-s-* in *Arbeitsplatz*) | Fugenelement | حرف میانجی |
 | article; definite / indefinite | Artikel | حرف تعریف؛ معین / نامعین |
@@ -131,6 +132,7 @@ its first mention in a node.
 | Plusquamperfekt | Plusquamperfekt | گذشتهٔ بعید (*Plusquamperfekt*) |
 | future | Futur I | زمان آینده (*Futur I*) |
 | past participle | Partizip II | صفت مفعولی (*Partizip II*) |
+| participle (*Partizip I* or *II*), in general | Partizip | صفت فعلی |
 | principal parts (*gehen*, *ging*, *ist gegangen*) | Stammformen | سه صورت اصلی فعل |
 | Konjunktiv II | Konjunktiv II | *Konjunktiv II* (وجه شرطی) |
 | passive | Passiv | مجهول |
