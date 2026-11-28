@@ -1,38 +1,374 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-vehicles-trips
 kind: vocabulary
 level: A2
 chapter: a2-words-health-town
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Vehicles and trips"
   fa: "وسیله‌های نقلیه و سفر"
   de: "Fahrzeuge und Reisen"
+attemptSize: 15
 words:
+  # "parkieren" is the Swiss word for the same thing.
   - word: parken
+    class: verb
+    level: A2
+    meaning:
+      en: to park
+      fa: پارک کردن (خودرو)
+    definition: ein Auto an einem Ort abstellen und dort stehen lassen
+    example:
+      de: Hier dürfen Sie nicht parken.
+      en: You can't park here.
+      fa: اینجا نباید پارک کنید.
+    alsoAccepted: [parkieren]
+
   - word: Wagen
+    class: noun
+    article: der
+    plural: Wagen
+    level: A2
+    meaning:
+      en: car; carriage, coach (of a train)
+      fa: خودرو؛ واگن (قطار)
+    definition: ein anderes Wort für ein Auto; auch ein Teil von einem Zug
+    example:
+      de: Unser Wagen ist leider kaputt.
+      en: Unfortunately our car has broken down.
+      fa: متأسفانه خودرومان خراب شده است.
+
   - word: Motor
+    class: noun
+    article: der
+    plural: Motoren
+    level: A2
+    meaning:
+      en: engine, motor
+      fa: موتور (ماشین)
+    definition: die Maschine in einem Auto oder Boot, die es bewegt
+    example:
+      de: Der Motor macht komische Geräusche.
+      en: The engine is making strange noises.
+      fa: موتور صداهای عجیبی می‌دهد.
+
+  # A tyre sits on a wheel; neither meaning is offered as a wrong one for the other.
   - word: Reifen
+    class: noun
+    article: der
+    plural: Reifen
+    level: A2
+    meaning:
+      en: tyre
+      fa: لاستیک (چرخ)
+    definition: der Ring aus Gummi mit Luft darin, der um ein Rad liegt
+    example:
+      de: Im Winter brauchen wir andere Reifen.
+      en: In winter we need different tyres.
+      fa: در زمستان لاستیک‌های دیگری لازم داریم.
+    tooCloseTo: [Rad]
+
   - word: Motorroller
+    class: noun
+    article: der
+    plural: Motorroller
+    level: A2
+    meaning:
+      en: (motor) scooter
+      fa: اسکوتر موتوری
+    definition: ein leichtes Fahrzeug mit zwei kleinen Rädern und einem Motor, auf dem man wie auf einem Stuhl sitzt
+    example:
+      de: In der Stadt fährt sie mit dem Motorroller zur Arbeit.
+      en: In town she rides her scooter to work.
+      fa: او در شهر با اسکوتر موتوری سر کار می‌رود.
+    alsoAccepted: [der Roller]
+
   - word: Rad
+    class: noun
+    article: das
+    plural: Räder
+    level: A2
+    meaning:
+      en: wheel; bike (short for bicycle)
+      fa: چرخ؛ دوچرخه
+    definition: das runde Teil, auf dem ein Auto rollt; auch kurz für Fahrrad
+    example:
+      de: Ein Auto hat vier Räder.
+      en: A car has four wheels.
+      fa: خودرو چهار چرخ دارد.
+    tooCloseTo: [Reifen]
+
   - word: Werkstatt
+    class: noun
+    article: die
+    plural: Werkstätten
+    level: A2
+    meaning:
+      en: (repair) garage, workshop
+      fa: تعمیرگاه، کارگاه
+    definition: dort repariert man Autos oder andere Dinge
+    example:
+      de: Das Auto ist seit Montag in der Werkstatt.
+      en: The car has been at the garage since Monday.
+      fa: خودرو از دوشنبه در تعمیرگاه است.
+    alsoAccepted: [die Autowerkstatt]
+
+  # "der Führerausweis" is the Swiss word for the same thing.
   - word: Führerschein
+    class: noun
+    article: der
+    plural: Führerscheine
+    level: A2
+    meaning:
+      en: driving licence
+      fa: گواهینامهٔ رانندگی
+    definition: ein Dokument, das zeigt, dass eine Person Auto fahren darf
+    example:
+      de: Mit achtzehn hat er den Führerschein gemacht.
+      en: He got his driving licence at eighteen.
+      fa: او در هجده‌سالگی گواهینامهٔ رانندگی گرفت.
+    alsoAccepted: [der Führerausweis]
+
   - word: Fahrplan
+    class: noun
+    article: der
+    plural: Fahrpläne
+    level: A2
+    meaning:
+      en: timetable (of trains or buses)
+      fa: جدول زمان حرکت (قطار یا اتوبوس)
+    definition: eine Liste, auf der steht, wann Busse oder Züge abfahren und ankommen
+    example:
+      de: Laut Fahrplan kommt der Bus um 7:15 Uhr.
+      en: According to the timetable, the bus comes at 7.15.
+      fa: طبق جدول حرکت، اتوبوس ساعت ۷:۱۵ می‌آید.
+
   - word: ICE
+    class: noun
+    article: der
+    plural: ICEs
+    level: A2
+    meaning:
+      en: the German high-speed train (Intercity-Express)
+      fa: قطار سریع‌السیر آلمان
+    definition: ein sehr schneller Zug der Deutschen Bahn zwischen großen Städten
+    example:
+      de: Mit dem ICE sind wir in vier Stunden in München.
+      en: By ICE we'll be in Munich in four hours.
+      fa: با قطار سریع‌السیر چهار ساعته به مونیخ می‌رسیم.
+    alsoAccepted: [der Intercity-Express]
+
   - word: Verspätung
+    class: noun
+    article: die
+    plural: Verspätungen
+    level: A2
+    meaning:
+      en: delay, late arrival
+      fa: تأخیر (قطار، اتوبوس یا هواپیما)
+    definition: wenn ein Zug oder Bus später kommt, als er soll
+    example:
+      de: Der Zug hat zwanzig Minuten Verspätung.
+      en: The train is twenty minutes late.
+      fa: قطار بیست دقیقه تأخیر دارد.
+
   - word: umsteigen
+    class: verb
+    level: A2
+    meaning:
+      en: to change (trains or buses)
+      fa: عوض کردن (قطار یا اتوبوس)
+    definition: aus einem Zug oder Bus aussteigen und in einen anderen einsteigen
+    example:
+      de: In Köln müssen wir umsteigen.
+      en: We have to change in Cologne.
+      fa: در کلن باید قطار عوض کنیم.
+
   - word: verpassen
+    class: verb
+    level: A2
+    meaning:
+      en: to miss (a train, a bus, a chance)
+      fa: از دست دادن (قطار، اتوبوس، فرصت)
+    definition: zu spät kommen, so dass der Zug oder Bus schon weg ist
+    example:
+      de: Beeil dich, sonst verpassen wir den Bus!
+      en: Hurry up, or we'll miss the bus!
+      fa: عجله کن، وگرنه به اتوبوس نمی‌رسیم!
+    alsoAccepted: [versäumen]
+
   - word: erreichen
+    class: verb
+    level: A2
+    meaning:
+      en: to reach (a place, a person by phone); to catch (a train in time)
+      fa: رسیدن به (جایی)؛ به‌موقع رسیدن (به قطار)
+    definition: zu einem Ort kommen, zu dem man wollte, oder eine Person am Telefon sprechen können
+    example:
+      de: Wir haben den Zug gerade noch erreicht.
+      en: We only just caught the train.
+      fa: به‌زحمت به قطار رسیدیم.
+
   - word: Flug
+    class: noun
+    article: der
+    plural: Flüge
+    level: A2
+    meaning:
+      en: flight
+      fa: پرواز
+    definition: eine Reise in der Luft von einem Flughafen zu einem anderen; sie hat eine Nummer und eine feste Zeit
+    example:
+      de: Der Flug nach Rom dauert zwei Stunden.
+      en: The flight to Rome takes two hours.
+      fa: پرواز به رم دو ساعت طول می‌کشد.
+
   - word: Schiff
+    class: noun
+    article: das
+    plural: Schiffe
+    level: A2
+    meaning:
+      en: ship
+      fa: کشتی
+    definition: ein großes Boot, das Menschen oder Waren über das Meer bringt
+    example:
+      de: Wir fahren mit dem Schiff auf die Insel.
+      en: We're going to the island by ship.
+      fa: با کشتی به جزیره می‌رویم.
+
+  # Booking and reserving overlap; neither meaning is offered as a wrong one for the other.
   - word: buchen
+    class: verb
+    level: A2
+    meaning:
+      en: to book (a trip, a flight, a course)
+      fa: رزرو کردن و خریدن (سفر، پرواز، دوره)
+    definition: eine Reise, einen Flug oder einen Kurs fest bestellen
+    example:
+      de: Wir haben den Urlaub schon im Januar gebucht.
+      en: We booked the holiday back in January.
+      fa: تعطیلات را از همان ژانویه رزرو کرده‌ایم.
+    tooCloseTo: [reservieren]
+
   - word: reservieren
+    class: verb
+    level: A2
+    meaning:
+      en: to reserve (a table, a seat)
+      fa: جا رزرو کردن (میز یا صندلی)
+    definition: sagen, dass man einen Tisch im Restaurant oder einen Platz haben möchte, damit er frei bleibt
+    example:
+      de: Ich möchte einen Tisch für vier Personen reservieren.
+      en: I'd like to reserve a table for four.
+      fa: می‌خواهم میزی برای چهار نفر رزرو کنم.
+    alsoAccepted: [vorbestellen]
+    tooCloseTo: [buchen]
+
   - word: verreisen
+    class: verb
+    level: A2
+    meaning:
+      en: to go away (on a trip)
+      fa: برای مدتی به سفر رفتن و از خانه دور بودن
+    definition: für einige Zeit von zu Hause wegfahren, zum Beispiel in den Urlaub
+    example:
+      de: Im August verreisen wir für zwei Wochen.
+      en: In August we're going away for two weeks.
+      fa: در ماه اوت دو هفته به سفر می‌رویم.
+    alsoAccepted: [wegfahren]
+
   - word: Tour
+    class: noun
+    article: die
+    plural: Touren
+    level: A2
+    meaning:
+      en: tour (to several places, by bike, by bus or on foot)
+      fa: تور، گشت (به چند جا، با دوچرخه، اتوبوس یا پیاده)
+    definition: eine Fahrt oder Wanderung zu mehreren Orten, mit dem Rad, dem Bus oder zu Fuß
+    example:
+      de: Am Wochenende machen wir eine Tour mit dem Fahrrad.
+      en: At the weekend we're going on a bike tour.
+      fa: آخر هفته با دوچرخه به گشت می‌رویم.
+
   - word: Tourist
+    class: noun
+    article: der
+    plural: Touristen
+    level: A2
+    meaning:
+      en: tourist
+      fa: گردشگر، توریست
+    definition: jemand, der eine fremde Stadt oder ein fremdes Land besucht, um die Sehenswürdigkeiten zu sehen
+    example:
+      de: Im Sommer sind viele Touristen in der Altstadt.
+      en: In summer there are lots of tourists in the old town.
+      fa: تابستان‌ها گردشگران زیادی در بخش قدیمی شهر هستند.
+    alsoAccepted: [die Touristin]
+
+  # A youth hostel is one kind of accommodation; neither meaning is offered as a wrong one for the other.
   - word: Unterkunft
+    class: noun
+    article: die
+    plural: Unterkünfte
+    level: A2
+    meaning:
+      en: accommodation, place to stay
+      fa: محل اقامت در سفر، جای خواب (مثلاً هتل)
+    definition: ein Ort, an dem man auf einer Reise schläft, zum Beispiel ein Hotel
+    example:
+      de: Wir suchen noch eine günstige Unterkunft in Hamburg.
+      en: We're still looking for cheap accommodation in Hamburg.
+      fa: هنوز دنبال محل اقامت ارزانی در هامبورگ هستیم.
+    tooCloseTo: [Jugendherberge]
+
   - word: Jugendherberge
+    class: noun
+    article: die
+    plural: Jugendherbergen
+    level: A2
+    meaning:
+      en: youth hostel
+      fa: مهمان‌سرای جوانان
+    definition: dort übernachten Schulklassen auf einer Klassenfahrt; sie ist billig und hat Zimmer mit vielen Betten
+    example:
+      de: Die Klasse übernachtet in einer Jugendherberge.
+      en: The class is staying the night in a youth hostel.
+      fa: کلاس شب را در مهمان‌سرای جوانان می‌گذراند.
+    tooCloseTo: [Unterkunft]
+
   - word: Zelt
+    class: noun
+    article: das
+    plural: Zelte
+    level: A2
+    meaning:
+      en: tent
+      fa: چادر (مسافرتی)
+    definition: ein kleines Haus aus Stoff, in dem man beim Camping schläft
+    example:
+      de: Wir schlafen im Zelt am See.
+      en: We're sleeping in a tent by the lake.
+      fa: در چادری کنار دریاچه می‌خوابیم.
+
   - word: unterwegs
+    class: adverb
+    level: A2
+    meaning:
+      en: on the way, on the road
+      fa: در راه، در سفر
+    definition: auf dem Weg von einem Ort zu einem anderen
+    example:
+      de: Ich bin schon unterwegs und komme in zehn Minuten.
+      en: I'm already on my way and will be there in ten minutes.
+      fa: در راهم و ده دقیقهٔ دیگر می‌رسم.
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 150 questions, then the 59 changed after the first one's
+    answers, then the 9 changed after the second one's; not people)"
+  date: 2026-11-28
+  pool: 47bbce6ad78f49b4
