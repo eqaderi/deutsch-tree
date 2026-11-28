@@ -1,13 +1,317 @@
-# Grammar list row 192.
+# Grammar list row 192. The file format is described in content/README.md.
+# The ordinal numbers as a topic of their own are grammar-106; here they are
+# only what a date needs.
 id: grammar-192
 kind: grammar
 level: A1
 chapter: a1-numbers-time
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-190]
 title:
   en: "Dates, days, months, seasons, times of day"
   fa: "تاریخ، روزهای هفته، ماه‌ها، فصل‌ها و بخش‌های روز"
   de: "Datum, Tage, Monate, Jahreszeiten, Tageszeiten"
+
+explanations:
+  en:
+    rule: >
+      Days, months, seasons and times of day are *der* nouns, except *die
+      Nacht*. To say when, use *am* (*an dem*) with a day, a date or a time of
+      day: *am Montag*, *am 25. Juli*, *am Abend*, but *in der Nacht*. Use
+      *im* (*in dem*) with a month or a season: *im Juli*, *im Sommer*. The
+      day of a date is an ordinal number, written with a point: *der 3. Mai*
+      is *der dritte Mai*, and after *am* it ends in *-en*: *am dritten Mai*.
+      Up to 19 the number adds *-te* (*zweite*, *vierte*, but *erste*,
+      *dritte*, *siebte*), from 20 on *-ste* (*zwanzigste*). A year stands
+      alone or after *im Jahr*: *1990* is *neunzehnhundertneunzig*, *2025* is
+      *zweitausendfünfundzwanzig*.
+  fa:
+    rule: >
+      روزهای هفته، ماه‌ها، فصل‌ها و بخش‌های روز همه اسم مذکر (*der*) هستند،
+      به جز *die Nacht*. برای گفتن زمان یک کار، با روز، تاریخ و بخش‌های روز
+      *am* (کوتاه‌شدهٔ *an dem*) می‌آید: *am Montag*، *am 25. Juli*، *am
+      Abend*؛ ولی *in der Nacht*. با ماه و فصل *im* (کوتاه‌شدهٔ *in dem*)
+      می‌آید: *im Juli*، *im Sommer*. روز ماه در تاریخ، عدد ترتیبی است و با
+      نقطه نوشته می‌شود: *der 3. Mai* را *der dritte Mai* می‌خوانند و پس از
+      *am* پایانهٔ *-en* می‌گیرد: *am dritten Mai*. تا ۱۹ به عدد *-te* افزوده
+      می‌شود (*zweite*، *vierte*؛ ولی *erste*، *dritte*، *siebte*) و از ۲۰ به
+      بعد *-ste* (*zwanzigste*). سال یا تنها می‌آید یا پس از *im Jahr*:
+      *1990* را *neunzehnhundertneunzig* و *2025* را
+      *zweitausendfünfundzwanzig* می‌خوانند.
+  de:
+    rule: >
+      Tage, Monate, Jahreszeiten und Tageszeiten haben den Artikel *der*, nur
+      *die Nacht* nicht. Auf die Frage *Wann?* sagt man bei Tagen, beim Datum
+      und bei Tageszeiten *am* (*an dem*): *am Montag*, *am 25. Juli*, *am
+      Abend*. Aber: *in der Nacht*. Bei Monaten und Jahreszeiten sagt man
+      *im* (*in dem*): *im Juli*, *im Sommer*. Das Datum ist eine Ordinalzahl
+      mit Punkt: *der 3. Mai* ist *der dritte Mai*, nach *am* mit *-en*: *am
+      dritten Mai*. Bis 19 kommt *-te* dazu (*zweite*, *vierte*, aber
+      *erste*, *dritte*, *siebte*), ab 20 *-ste* (*zwanzigste*). Ein Jahr
+      steht allein oder nach *im Jahr*: *1990* sagt man
+      *neunzehnhundertneunzig*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Wann?* (*Dativ*)", fa: "*Wann?* (حالت *Dativ*)", de: "*Wann?* (Dativ)" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Montag, am Montag, Am Montag habe ich frei.]
+    - [der Abend, am Abend, Am Abend lese ich.]
+    - [der 3. Mai (der dritte Mai), am 3. Mai (am dritten Mai), Ich habe am 3. Mai Geburtstag.]
+    - [der 25. Juli (der fünfundzwanzigste), am 25. Juli (am fünfundzwanzigsten), Wir fliegen am 25. Juli.]
+    - [der Juli, im Juli, Im Juli ist es heiß.]
+    - [der Sommer, im Sommer, Im Sommer fahren wir ans Meer.]
+    - [die Nacht, in der Nacht, In der Nacht schlafe ich.]
+    - [das Wochenende, am Wochenende, Am Wochenende besuche ich Oma.]
+    - [die Ferien (Plural), in den Ferien, In den Ferien reisen wir.]
+    - [das Jahr 2025, 2025 / im Jahr 2025, Ich bin 2001 geboren.]
+
+examples:
+  - de: Welcher Tag ist heute? – Heute ist Mittwoch.
+    en: What day is it today? – Today is Wednesday.
+    fa: امروز چه روزی است؟ – امروز چهارشنبه است.
+  - de: Heute ist der 3. Mai.
+    en: Today is the third of May.
+    fa: امروز سوم مه است.
+  - de: Ich habe am 25. Juli Geburtstag.
+    en: My birthday is on the 25th of July.
+    fa: تولدم ۲۵ ژوئیه است.
+  - de: Der Kurs beginnt am Montag, dem 2. Februar.
+    en: The course starts on Monday, the 2nd of February.
+    fa: دوره دوشنبه، ۲ فوریه، شروع می‌شود.
+  - de: Am Montag habe ich einen Deutschkurs.
+    en: On Monday I have a German class.
+    fa: دوشنبه کلاس آلمانی دارم.
+  - de: Am Abend lese ich.
+    en: In the evening I read.
+    fa: سر شب کتاب می‌خوانم.
+  - de: In der Nacht ist es hier sehr ruhig.
+    en: At night it is very quiet here.
+    fa: شب‌ها اینجا خیلی آرام است.
+  - de: Im Sommer fahren wir nach Italien.
+    en: In summer we're going to Italy.
+    fa: تابستان به ایتالیا می‌رویم.
+  - de: Im Dezember ist es oft kalt.
+    en: In December it is often cold.
+    fa: در دسامبر هوا اغلب سرد است.
+  - de: Meine Tochter ist 2019 geboren.
+    en: My daughter was born in 2019.
+    fa: دخترم سال ۲۰۱۹ به دنیا آمده است.
+  - de: Am Wochenende besuchen wir unsere Großeltern.
+    en: At the weekend we visit our grandparents.
+    fa: آخر هفته به دیدن پدربزرگ و مادربزرگمان می‌رویم.
+
+mistakes:
+  - wrong: Ich habe im Montag frei.
+    right: Ich habe am Montag frei.
+    why:
+      en: "A day takes *am*: *am Montag*. *Im* is for months and seasons."
+      fa: "با روزهای هفته *am* می‌آید: *am Montag*. *im* برای ماه‌ها و فصل‌هاست."
+      de: "Bei Tagen sagt man *am*: *am Montag*. *Im* ist für Monate und Jahreszeiten."
+  - wrong: Wir fahren am Juli nach Spanien.
+    right: Wir fahren im Juli nach Spanien.
+    why:
+      en: "A month takes *im*: *im Juli*. *Am* is for a day or a date: *am 5. Juli*."
+      fa: "با ماه *im* می‌آید: *im Juli*. *am* برای روز یا تاریخ است: *am 5. Juli*."
+      de: "Bei Monaten sagt man *im*: *im Juli*. *Am* ist für einen Tag oder ein Datum: *am 5. Juli*."
+  - wrong: Ich arbeite am Nacht.
+    right: Ich arbeite in der Nacht.
+    why:
+      en: "*Nacht* is a *die* noun and the exception: *am Abend*, but *in der Nacht*."
+      fa: "*Nacht* اسم مؤنث (*die*) و استثناست: *am Abend*، ولی *in der Nacht*."
+      de: "*Nacht* hat den Artikel *die* und ist die Ausnahme: *am Abend*, aber *in der Nacht*."
+  - wrong: Ich bin in 1995 geboren.
+    right: Ich bin 1995 geboren.
+    why:
+      en: 'English says "in 1995". German says the year alone, or *im Jahr 1995*.'
+      fa: "پیش از سال *in* نمی‌آید: سال یا تنها می‌آید یا پس از *im Jahr*: *im Jahr 1995*."
+      de: "Vor einem Jahr steht kein *in*. Man sagt nur *1995* oder *im Jahr 1995*."
+  - wrong: Ich habe am drei Mai Geburtstag.
+    right: Ich habe am dritten Mai Geburtstag.
+    why:
+      en: "The day of a date is an ordinal number, and after *am* it ends in *-en*: *am dritten Mai*."
+      fa: "روز ماه در تاریخ عدد ترتیبی است و پس از *am* پایانهٔ *-en* می‌گیرد: *am dritten Mai*."
+      de: "Beim Datum steht eine Ordinalzahl, nach *am* mit *-en*: *am dritten Mai*."
+
+# 20 questions.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich habe ___ Freitag frei.
+    options: [am, im, um]
+    answer: am
+    explanation:
+      en: "A day takes *am*: *am Freitag*."
+      fa: "با روزهای هفته *am* می‌آید: *am Freitag*."
+      de: "Bei Tagen sagt man *am*: *am Freitag*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ August machen wir Urlaub.
+    options: [Im, Am, Um]
+    answer: Im
+    explanation:
+      en: "A month takes *im*: *im August*."
+      fa: "با ماه *im* می‌آید: *im August*."
+      de: "Bei Monaten sagt man *im*: *im August*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ Winter ist es kalt.
+    options: [Im, Am, In]
+    answer: Im
+    explanation:
+      en: "A season takes *im*, short for *in dem*: *im Winter*."
+      fa: "با فصل *im* می‌آید که کوتاه‌شدهٔ *in dem* است: *im Winter*."
+      de: "Bei Jahreszeiten sagt man *im*, kurz für *in dem*: *im Winter*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wir essen ___ Abend zusammen.
+    options: [am, im, um]
+    answer: am
+    explanation:
+      en: "A time of day takes *am*: *am Abend*. Only *Nacht* is different: *in der Nacht*."
+      fa: "با بخش‌های روز *am* می‌آید: *am Abend*. فقط *Nacht* فرق دارد: *in der Nacht*."
+      de: "Bei Tageszeiten sagt man *am*: *am Abend*. Nur bei *Nacht* nicht: *in der Nacht*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Heute ist der 3. Mai. Man sagt: Heute ist der ___ Mai."
+    options: [dritte, dritten, drei]
+    answer: dritte
+    explanation:
+      en: "After *der* the ordinal ends in *-e*: *der dritte Mai*. *-en* comes after *am*."
+      fa: "پس از *der* عدد ترتیبی با *-e* می‌آید: *der dritte Mai*. *-en* پس از *am* می‌آید."
+      de: "Nach *der* hat die Ordinalzahl *-e*: *der dritte Mai*. *-en* steht nach *am*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Ich habe am 1. März Geburtstag. Man sagt: am ___ März."
+    options: [ersten, erste, eins]
+    answer: ersten
+    explanation:
+      en: "*1.* is *erste*, and after *am* it ends in *-en*: *am ersten März*."
+      fa: "*1.* می‌شود *erste* و پس از *am* پایانهٔ *-en* می‌گیرد: *am ersten März*."
+      de: "*1.* ist *erste*, nach *am* mit *-en*: *am ersten März*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Wann hast du Geburtstag? – ___."
+    options: [Am 12. Mai, Im 12. Mai, Um 12. Mai]
+    answer: Am 12. Mai
+    explanation:
+      en: "A date takes *am*: *am 12. Mai*. *Im* is only for the month alone: *im Mai*."
+      fa: "با تاریخ *am* می‌آید: *am 12. Mai*. *im* فقط برای ماه به تنهایی است: *im Mai*."
+      de: "Beim Datum sagt man *am*: *am 12. Mai*. *Im* nur beim Monat allein: *im Mai*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich habe am ___ (7.) Juni Geburtstag.
+    answers: [siebten, siebenten]
+    explanation:
+      en: "*7.* is *siebte*, and after *am* it ends in *-en*: *am siebten Juni*."
+      fa: "*7.* می‌شود *siebte* و پس از *am* پایانهٔ *-en* می‌گیرد: *am siebten Juni*."
+      de: "*7.* ist *siebte*, nach *am* mit *-en*: *am siebten Juni*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Heute ist der ___ (20.) Oktober.
+    answers: [zwanzigste]
+    explanation:
+      en: "From 20 on the ordinal adds *-ste*, and after *der* it ends in *-e*: *der zwanzigste Oktober*."
+      fa: "از ۲۰ به بعد *-ste* به عدد افزوده می‌شود و پس از *der* با *-e* می‌آید: *der zwanzigste Oktober*."
+      de: "Ab 20 kommt *-ste* dazu, nach *der* mit *-e*: *der zwanzigste Oktober*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Der Kurs beginnt am ___ (2.) April.
+    answers: [zweiten]
+    explanation:
+      en: "*2.* is *zweite*, and after *am* it ends in *-en*: *am zweiten April*."
+      fa: "*2.* می‌شود *zweite* و پس از *am* پایانهٔ *-en* می‌گیرد: *am zweiten April*."
+      de: "*2.* ist *zweite*, nach *am* mit *-en*: *am zweiten April*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Wann? der Sommer"
+    answers: [im Sommer]
+    explanation:
+      en: "A season takes *im*: *im Sommer*."
+      fa: "با فصل *im* می‌آید: *im Sommer*."
+      de: "Bei Jahreszeiten sagt man *im*: *im Sommer*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Wann? der Dienstag"
+    answers: [am Dienstag]
+    explanation:
+      en: "A day takes *am*: *am Dienstag*."
+      fa: "با روزهای هفته *am* می‌آید: *am Dienstag*."
+      de: "Bei Tagen sagt man *am*: *am Dienstag*."
+  - id: typed-3
+    type: typed-answer
+    prompt: "Wann? die Nacht"
+    answers: [in der Nacht, nachts]
+    explanation:
+      en: "*Nacht* is the exception among the times of day: *in der Nacht*."
+      fa: "*Nacht* در میان بخش‌های روز استثناست: *in der Nacht*."
+      de: "*Nacht* ist bei den Tageszeiten die Ausnahme: *in der Nacht*."
+  - id: true-1
+    type: true-false
+    prompt: Ich bin 1998 geboren.
+    answer: true
+    explanation:
+      en: "A year stands alone, without *in*. The sentence is correct."
+      fa: "سال بدون *in* می‌آید. جمله درست است."
+      de: "Ein Jahr steht ohne *in*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir fahren in 2025 nach Berlin.
+    answer: false
+    explanation:
+      en: 'German has no *in* before a year: *2025* or *im Jahr 2025*, not "in 2025" as in English.'
+      fa: "پیش از سال *in* نمی‌آید: *2025* یا *im Jahr 2025*."
+      de: "Vor einem Jahr steht kein *in*: *2025* oder *im Jahr 2025*."
+  - id: true-3
+    type: true-false
+    prompt: Am Morgen trinke ich Kaffee.
+    answer: true
+    explanation:
+      en: "A time of day takes *am*: *am Morgen*. The sentence is correct."
+      fa: "با بخش‌های روز *am* می‌آید: *am Morgen*. جمله درست است."
+      de: "Bei Tageszeiten sagt man *am*: *am Morgen*. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Ich habe im Mittwoch einen Termin.
+    answer: im
+    explanation:
+      en: "A day takes *am*: *am Mittwoch*."
+      fa: "با روزهای هفته *am* می‌آید: *am Mittwoch*."
+      de: "Bei Tagen sagt man *am*: *am Mittwoch*."
+  - id: error-2
+    type: find-error
+    prompt: Wir fahren am Sommer an die Ostsee.
+    answer: am
+    explanation:
+      en: "A season takes *im*: *im Sommer*."
+      fa: "با فصل *im* می‌آید: *im Sommer*."
+      de: "Bei Jahreszeiten sagt man *im*: *im Sommer*."
+  - id: match-1
+    type: matching
+    answer:
+      - ["1.", erste]
+      - ["3.", dritte]
+      - ["7.", siebte]
+      - ["20.", zwanzigste]
+    explanation:
+      en: "Up to 19 the ordinal adds *-te*, from 20 on *-ste*; *erste*, *dritte* and *siebte* are special."
+      fa: "تا ۱۹ به عدد *-te* افزوده می‌شود و از ۲۰ به بعد *-ste*؛ *erste*، *dritte* و *siebte* استثنا هستند."
+      de: "Bis 19 kommt *-te* dazu, ab 20 *-ste*. *Erste*, *dritte* und *siebte* sind besonders."
+  - id: order-1
+    type: word-order
+    answers:
+      - [der Kurs, beginnt, am Montag]
+      - [am Montag, beginnt, der Kurs]
+    explanation:
+      en: "The verb comes second. The time can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. زمان می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. Die Zeit kann am Anfang oder am Ende stehen."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 95d6270b584594f4

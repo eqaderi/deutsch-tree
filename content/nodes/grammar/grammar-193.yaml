@@ -1,13 +1,340 @@
-# Grammar list row 193.
+# Grammar list row 193. The file format is described in content/README.md.
 id: grammar-193
 kind: grammar
 level: A1
 chapter: a1-numbers-time
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-139]
 title:
   en: "Time and frequency adverbs"
   fa: "قیدهای زمان و تکرار (*heute*، *oft*، *nie* …)"
   de: "Adverbien für Zeit und Häufigkeit (*heute*, *oft*, *nie* …)"
+
+explanations:
+  en:
+    rule: >
+      Time adverbs say when: *gestern*, *heute*, *morgen*, *jetzt*, *bald*,
+      *später*. Frequency adverbs say how often: *immer*, *oft*, *manchmal*,
+      *nie*. Such an adverb often stands right after the verb: *Ich gehe oft
+      ins Kino.* It can also stand first; then the verb stays in position 2
+      and the subject comes after it: *Heute habe ich frei.* With *morgen* the
+      present tense is enough for the future: *Morgen fahre ich nach Köln.* A
+      time of day after *heute*, *morgen* or *gestern* is a noun and has a
+      capital: *heute Abend*, *morgen Vormittag*.
+  fa:
+    rule: >
+      قیدهای زمان می‌گویند کاری کی انجام می‌شود: *gestern* (دیروز)، *heute*
+      (امروز)، *morgen* (فردا)، *jetzt* (حالا)، *bald* (به‌زودی)، *später*
+      (بعداً). قیدهای تکرار می‌گویند کاری هر چند وقت یک بار انجام می‌شود:
+      *immer* (همیشه)، *oft* (اغلب)، *manchmal* (گاهی)، *nie* (هرگز). این قیدها
+      بیشتر درست پس از فعل می‌آیند: *Ich gehe oft ins Kino.* در آغاز جمله هم
+      می‌توانند بیایند؛ در این صورت فعل همچنان در جایگاه دوم می‌ماند و فاعل پس
+      از آن می‌آید: *Heute habe ich frei.* با *morgen* زمان حال برای آینده
+      کافی است: *Morgen fahre ich nach Köln.* بخش روز پس از *heute*، *morgen*
+      و *gestern* اسم است و با حرف بزرگ نوشته می‌شود: *heute Abend* (امشب)،
+      *morgen Vormittag* (فردا پیش از ظهر).
+  de:
+    rule: >
+      Adverbien für die Zeit sagen, wann etwas passiert: *gestern*, *heute*,
+      *morgen*, *jetzt*, *bald*, *später*. Adverbien für die Häufigkeit sagen,
+      wie oft: *immer*, *oft*, *manchmal*, *nie*. Das Adverb steht meistens
+      direkt nach dem Verb: *Ich gehe oft ins Kino.* Es kann auch am Anfang
+      stehen. Dann bleibt das Verb auf Position 2, und das Subjekt kommt
+      danach: *Heute habe ich frei.* Mit *morgen* reicht das Präsens für die
+      Zukunft: *Morgen fahre ich nach Köln.* Nach *heute*, *morgen* und
+      *gestern* schreibt man die Tageszeit groß: *heute Abend*, *morgen
+      Vormittag*.
+
+table:
+  columns:
+    - { en: Question, fa: پرسش, de: Frage }
+    - { en: Adverb, fa: قید, de: Adverb }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [Wann?, gestern, Gestern war ich zu Hause.]
+    - [Wann?, heute, Heute habe ich frei.]
+    - [Wann?, morgen, Morgen fahre ich nach Köln.]
+    - [Wann?, jetzt, Jetzt lerne ich Deutsch.]
+    - [Wann?, bald, Wir sehen uns bald.]
+    - [Wann?, später, Ich komme später.]
+    - [Wann?, heute Abend, Heute Abend koche ich.]
+    - [Wann?, morgen früh, Morgen früh habe ich einen Termin.]
+    - [Wie oft?, immer, Ich trinke immer Tee.]
+    - [Wie oft?, oft, Wir gehen oft ins Kino.]
+    - [Wie oft?, manchmal, Manchmal kocht mein Mann.]
+    - [Wie oft?, nie, Meine Schwester raucht nie.]
+    - [Wie oft?, einmal pro Woche, Ich mache einmal pro Woche Sport.]
+
+# How often: one bar per adverb, full for "immer", empty for "nie".
+diagrams:
+  - caption:
+      en: >
+        *Wie oft?* From *immer* (always) to *nie* (never): the longer the bar,
+        the more often it happens.
+      fa: >
+        *Wie oft?* از *immer* (همیشه) تا *nie* (هرگز): هر چه نوار بلندتر باشد،
+        کار بیشتر تکرار می‌شود.
+      de: >
+        *Wie oft?* Von *immer* bis *nie*: Je länger der Balken, desto öfter
+        passiert es.
+    svg: |
+      <svg viewBox="0 0 320 184">
+        <!-- immer -->
+        <text class="label" x="76" y="31" text-anchor="end">immer</text>
+        <rect class="surface" x="86" y="14" width="200" height="24"/>
+        <rect class="object" x="86" y="14" width="200" height="24"/>
+        <!-- oft -->
+        <text class="label" x="76" y="75" text-anchor="end">oft</text>
+        <rect class="surface" x="86" y="58" width="200" height="24"/>
+        <rect class="object" x="86" y="58" width="140" height="24"/>
+        <!-- manchmal -->
+        <text class="label" x="76" y="119" text-anchor="end">manchmal</text>
+        <rect class="surface" x="86" y="102" width="200" height="24"/>
+        <rect class="object" x="86" y="102" width="70" height="24"/>
+        <!-- nie: the bar stays empty -->
+        <text class="label" x="76" y="163" text-anchor="end">nie</text>
+        <rect class="surface" x="86" y="146" width="200" height="24"/>
+      </svg>
+
+examples:
+  - de: Heute habe ich keine Zeit.
+    en: I have no time today.
+    fa: امروز وقت ندارم.
+  - de: Morgen fahren wir nach Hamburg.
+    en: Tomorrow we're going to Hamburg.
+    fa: فردا به هامبورگ می‌رویم.
+  - de: Gestern war ich krank.
+    en: Yesterday I was ill.
+    fa: دیروز بیمار بودم.
+  - de: Ich lerne jetzt Deutsch.
+    en: I'm learning German now.
+    fa: حالا آلمانی یاد می‌گیرم.
+  - de: Am Morgen trinke ich immer Tee.
+    en: In the morning I always drink tea.
+    fa: صبح‌ها همیشه چای می‌نوشم.
+  - de: Wir gehen oft ins Kino.
+    en: We often go to the cinema.
+    fa: ما اغلب به سینما می‌رویم.
+  - de: Manchmal kocht mein Mann.
+    en: Sometimes my husband cooks.
+    fa: گاهی شوهرم آشپزی می‌کند.
+  - de: Meine Schwester raucht nie.
+    en: My sister never smokes.
+    fa: خواهرم هرگز سیگار نمی‌کشد.
+  - de: Heute Abend gehe ich ins Konzert.
+    en: Tonight I'm going to a concert.
+    fa: امشب به کنسرت می‌روم.
+  - de: Ich komme später.
+    en: I'll come later.
+    fa: بعداً می‌آیم.
+  - de: Ich mache einmal pro Woche Sport.
+    en: I do sport once a week.
+    fa: هفته‌ای یک بار ورزش می‌کنم.
+
+mistakes:
+  - wrong: Heute ich habe frei.
+    right: Heute habe ich frei.
+    why:
+      en: "When the adverb stands first, the verb is still second and the subject comes after it."
+      fa: "وقتی قید در آغاز جمله می‌آید، فعل همچنان در جایگاه دوم است و فاعل پس از آن می‌آید."
+      de: "Steht das Adverb am Anfang, bleibt das Verb auf Position 2. Das Subjekt kommt danach."
+  - wrong: Ich trinke nie keinen Kaffee.
+    right: Ich trinke nie Kaffee.
+    why:
+      en: "*Nie* already says no. Do not add *kein* or *nicht*."
+      fa: "در فارسی می‌گوییم «هرگز قهوه نمی‌نوشم»، ولی در آلمانی *nie* خودش منفی است؛ *kein* یا *nicht* را نیفزایید."
+      de: "*Nie* ist schon eine Verneinung. Man braucht kein *kein* und kein *nicht*."
+  - wrong: Gestern bin ich zu Hause.
+    right: Gestern war ich zu Hause.
+    why:
+      en: "*Gestern* is in the past, so *sein* is in the past too: *war*."
+      fa: "*gestern* به گذشته اشاره دارد، پس *sein* هم باید گذشته باشد: *war*."
+      de: "*Gestern* ist Vergangenheit. Darum steht *sein* in der Vergangenheit: *war*."
+  - wrong: Ich habe heute morgen einen Termin.
+    right: Ich habe heute Morgen einen Termin.
+    why:
+      en: "After *heute* a time of day is a noun with a capital: *heute Morgen* (this morning). Small *morgen* means tomorrow."
+      fa: "پس از *heute* بخش روز اسم است و با حرف بزرگ نوشته می‌شود: *heute Morgen* (امروز صبح). *morgen* با حرف کوچک یعنی فردا."
+      de: "Nach *heute* ist die Tageszeit ein Nomen und groß: *heute Morgen*. Klein heißt *morgen*: am nächsten Tag."
+
+# 20 questions.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ habe ich frei. Morgen arbeite ich wieder.
+    options: [Heute, Gestern, Nie]
+    answer: Heute
+    explanation:
+      en: "*Habe* is present and *morgen* comes next, so it is *heute*."
+      fa: "*habe* زمان حال است و فردا روز بعد است، پس *heute* (امروز) درست است."
+      de: "*Habe* ist Präsens, und *morgen* kommt danach. Darum: *heute*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich trinke ___ Kaffee. Ich mag keinen Kaffee.
+    options: [nie, oft, immer]
+    answer: nie
+    explanation:
+      en: "Someone who does not like coffee never drinks it: *nie*."
+      fa: "کسی که قهوه دوست ندارد، هرگز قهوه نمی‌نوشد: *nie*."
+      de: "Wer keinen Kaffee mag, trinkt ihn *nie*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Tom ist ___ pünktlich. Er kommt nie zu spät.
+    options: [immer, nie, manchmal]
+    answer: immer
+    explanation:
+      en: "He is never late, so he is always on time: *immer*."
+      fa: "او هرگز دیر نمی‌کند، پس همیشه سر وقت است: *immer*."
+      de: "Er kommt nie zu spät. Also ist er *immer* pünktlich."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ war ich im Kino.
+    options: [Gestern, Morgen, Bald]
+    answer: Gestern
+    explanation:
+      en: "*War* is in the past, so the adverb is *gestern*."
+      fa: "*war* زمان گذشته است، پس قید *gestern* (دیروز) درست است."
+      de: "*War* ist Vergangenheit. Darum: *gestern*."
+  - id: gap-5
+    type: gap-fill
+    prompt: ___ fahren wir nach Berlin. Heute packen wir die Koffer.
+    options: [Morgen, Gestern, Nie]
+    answer: Morgen
+    explanation:
+      en: "They pack today and travel the next day: *morgen*. The present tense is enough for the future."
+      fa: "امروز چمدان می‌بندند و روز بعد سفر می‌کنند: *morgen*. زمان حال برای آینده کافی است."
+      de: "Heute packen sie, am nächsten Tag fahren sie: *morgen*. Das Präsens reicht für die Zukunft."
+  - id: gap-6
+    type: gap-fill
+    prompt: Ich habe heute ___ einen Termin, um acht Uhr.
+    options: [Morgen, morgen]
+    answer: Morgen
+    explanation:
+      en: "After *heute* the time of day is a noun with a capital: *heute Morgen*."
+      fa: "پس از *heute* بخش روز اسم است و با حرف بزرگ نوشته می‌شود: *heute Morgen*."
+      de: "Nach *heute* ist die Tageszeit ein Nomen und groß: *heute Morgen*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich koche ___, aber nicht oft.
+    options: [manchmal, immer, nie]
+    answer: manchmal
+    explanation:
+      en: "Not often, but not never either: *manchmal*."
+      fa: "نه اغلب، ولی نه هرگز: *manchmal* (گاهی)."
+      de: "Nicht oft, aber auch nicht nie: *manchmal*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Heute habe ich frei., Heute ich habe frei., Heute frei habe ich.]
+    answer: Heute habe ich frei.
+    explanation:
+      en: "*Heute* is first, the verb second, then the subject."
+      fa: "*heute* در آغاز جمله است، فعل در جایگاه دوم و سپس فاعل."
+      de: "*Heute* steht am Anfang, das Verb auf Position 2, dann das Subjekt."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich gehe ___ ins Kino, fast jede Woche.
+    options: [oft, nie, gestern]
+    answer: oft
+    explanation:
+      en: "Almost every week is often: *oft*."
+      fa: "تقریباً هر هفته یعنی اغلب: *oft*."
+      de: "Fast jede Woche: Das ist *oft*."
+  - id: true-1
+    type: true-false
+    prompt: Morgen ich fahre nach Köln.
+    answer: false
+    explanation:
+      en: "After *morgen* at the start, the verb comes second: *Morgen fahre ich nach Köln.*"
+      fa: "وقتی *morgen* در آغاز جمله است، فعل در جایگاه دوم می‌آید: *Morgen fahre ich nach Köln.*"
+      de: "*Morgen* steht am Anfang, dann kommt das Verb: *Morgen fahre ich nach Köln.*"
+  - id: true-2
+    type: true-false
+    prompt: Ich gehe oft ins Kino.
+    answer: true
+    explanation:
+      en: "*Oft* stands right after the verb. The sentence is correct."
+      fa: "*oft* درست پس از فعل آمده است. جمله درست است."
+      de: "*Oft* steht direkt nach dem Verb. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Am Wochenende schlafe ich immer lange.
+    answer: true
+    explanation:
+      en: "The time is first, the verb second, and *immer* after the subject. The sentence is correct."
+      fa: "زمان در آغاز، فعل در جایگاه دوم و *immer* پس از فاعل آمده است. جمله درست است."
+      de: "Die Zeit steht am Anfang, das Verb auf Position 2, *immer* nach dem Subjekt. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich esse nie kein Fleisch.
+    answer: false
+    explanation:
+      en: "*Nie* already says no: *Ich esse nie Fleisch.*"
+      fa: "*nie* خودش منفی است: *Ich esse nie Fleisch.*"
+      de: "*Nie* ist schon eine Verneinung: *Ich esse nie Fleisch.*"
+  - id: error-1
+    type: find-error
+    prompt: Heute abend koche ich Pasta.
+    answer: abend
+    explanation:
+      en: "After *heute* the time of day is a noun with a capital: *heute Abend*."
+      fa: "پس از *heute* بخش روز اسم است و با حرف بزرگ نوشته می‌شود: *heute Abend*."
+      de: "Nach *heute* ist die Tageszeit ein Nomen und groß: *heute Abend*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [morgen, fahren, wir, nach Köln]
+      - [wir, fahren, morgen, nach Köln]
+      - [nach Köln, fahren, wir, morgen]
+    explanation:
+      en: "The verb comes second. *Morgen* can stand first or right after the subject."
+      fa: "فعل در جایگاه دوم می‌آید. *morgen* می‌تواند در آغاز جمله یا پس از فاعل بیاید."
+      de: "Das Verb steht an Position 2. *Morgen* kann am Anfang oder nach dem Subjekt stehen."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wir, kochen, manchmal]
+      - [manchmal, kochen, wir]
+    explanation:
+      en: "The verb comes second. *Manchmal* can stand first or after the verb and subject."
+      fa: "فعل در جایگاه دوم می‌آید. *manchmal* می‌تواند در آغاز یا پایان جمله بیاید."
+      de: "Das Verb steht an Position 2. *Manchmal* kann am Anfang oder am Ende stehen."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Heute ist Montag. ___ war Sonntag.
+    answers: [Gestern]
+    explanation:
+      en: "The day before today is *gestern*."
+      fa: "روز پیش از امروز *gestern* (دیروز) است."
+      de: "Der Tag vor heute ist *gestern*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Heute ist Montag. ___ ist Dienstag.
+    answers: [Morgen]
+    explanation:
+      en: "The day after today is *morgen*."
+      fa: "روز پس از امروز *morgen* (فردا) است."
+      de: "Der Tag nach heute ist *morgen*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Wie oft? 100 %"
+    answers: [immer]
+    explanation:
+      en: "Every time: *immer*."
+      fa: "هر بار: *immer* (همیشه)."
+      de: "Jedes Mal: *immer*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Wie oft? 0 %"
+    answers: [nie, niemals]
+    explanation:
+      en: "Not once: *nie*."
+      fa: "حتی یک بار هم نه: *nie* (هرگز)."
+      de: "Kein einziges Mal: *nie*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 2e28ebc318c26c1d
