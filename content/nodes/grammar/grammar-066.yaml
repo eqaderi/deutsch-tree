@@ -4,10 +4,303 @@ kind: grammar
 level: A2
 chapter: a2-dativ-objects
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-063, grammar-064]
 title:
   en: "*Dativ* as indirect object, all nouns, plural *-n*"
-  fa: "*Dativ* به‌عنوان مفعول غیرمستقیم، برای همهٔ اسم‌ها؛ *-n* در جمع"
+  fa: "حالت *Dativ* برای مفعول باواسطه، با همهٔ اسم‌ها؛ *-n* در جمع"
   de: "Dativ als indirektes Objekt, alle Nomen, Plural mit *-n*"
+
+explanations:
+  en:
+    rule: >
+      The *Dativ* is also the case of the indirect object: the person who
+      gets something, or for whom something is done. Ask *Wem?* (to whom?):
+      *Ich gebe meiner Nachbarin den Schlüssel.* Every article word changes
+      as *der* does: *dem*, *einem*, *meinem*, *keinem* for masculine and
+      neuter nouns, *der*, *einer*, *meiner*, *keiner* for feminine nouns,
+      and *den*, *meinen*, *keinen* in the plural. In the *Dativ* plural the
+      noun itself adds *-n*: *den Kindern*, *meinen Freunden*. A plural that
+      already ends in *-n*, or ends in *-s*, adds nothing: *den Frauen*, *den
+      Babys*.
+  fa:
+    rule: >
+      مفعول باواسطه در آلمانی در حالت *Dativ* (حالت مفعول باواسطه) می‌آید:
+      کسی که چیزی به او داده می‌شود یا کاری برایش انجام می‌شود. پرسش این
+      حالت *Wem?* (به چه کسی؟) است: *Ich gebe meiner Nachbarin den
+      Schlüssel.* همهٔ حرف‌های تعریف مانند *der* تغییر می‌کنند: برای اسم
+      مذکر و خنثی *dem*، *einem*، *meinem* و *keinem*، برای اسم مؤنث *der*،
+      *einer*، *meiner* و *keiner*، و در جمع *den*، *meinen* و *keinen*. در
+      حالت *Dativ* جمع، خود اسم نیز *-n* می‌گیرد: *den Kindern*، *meinen
+      Freunden*. اسم جمعی که از پیش به *-n* یا *-s* ختم می‌شود چیزی
+      نمی‌گیرد: *den Frauen*، *den Babys*. در فارسی «به» یا «برای» این مفعول
+      را نشان می‌دهد؛ در آلمانی حرف تعریف این کار را می‌کند و حرف اضافه لازم
+      نیست.
+  de:
+    rule: >
+      Der Dativ ist auch der Fall für das indirekte Objekt: die Person, die
+      etwas bekommt. Man fragt *Wem?*: *Ich gebe meiner Nachbarin den
+      Schlüssel.* Alle Artikel ändern sich wie *der*: maskulin und neutral
+      *dem*, *einem*, *meinem*, *keinem*, feminin *der*, *einer*, *meiner*,
+      *keiner*, im Plural *den*, *meinen*, *keinen*. Im Dativ Plural bekommt
+      auch das Nomen *-n*: *den Kindern*. Endet der Plural schon auf *-n*
+      oder auf *-s*, kommt nichts dazu: *den Frauen*, *den Babys*.
+
+# The article-change table of content/README.md, with two more plural rows:
+# the plural -n is the topic, and so are the plurals that do not take it.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Lehrer, dem Lehrer, einem Lehrer, Wir schenken dem Lehrer ein Buch.]
+    - [die Nachbarin, der Nachbarin, einer Nachbarin, Ich gebe meiner Nachbarin den Schlüssel.]
+    - [das Kind, dem Kind, einem Kind, Sie kauft dem Kind ein Eis.]
+    - [die Freunde (Plural), den Freunden, –, Ich schreibe meinen Freunden eine Karte.]
+    - [die Frauen (Plural), den Frauen, –, Er zeigt den Frauen den Weg.]
+    - [die Babys (Plural), den Babys, –, Wir geben den Babys Milch.]
+
+examples:
+  - de: Ich gebe meiner Nachbarin den Schlüssel.
+    en: I give my neighbour the key.
+    fa: کلید را به همسایه‌ام می‌دهم.
+  - de: Wir schenken unserem Lehrer ein Buch.
+    en: We are giving our teacher a book.
+    fa: به معلممان یک کتاب هدیه می‌دهیم.
+  - de: Die Kellnerin bringt dem Gast die Suppe.
+    en: The waitress brings the guest the soup.
+    fa: پیشخدمت سوپ را برای مهمان می‌آورد.
+  - de: Ich schreibe meinen Freunden eine Postkarte.
+    en: I am writing my friends a postcard.
+    fa: برای دوستانم کارت‌پستال می‌نویسم.
+  - de: Die Lehrerin erklärt den Kindern die Aufgabe.
+    en: The teacher explains the exercise to the children.
+    fa: معلم تمرین را برای بچه‌ها توضیح می‌دهد.
+  - de: Kaufst du deiner Schwester ein Geschenk?
+    en: Are you buying your sister a present?
+    fa: برای خواهرت هدیه می‌خری؟
+  - de: Er zeigt einer Frau den Weg zum Bahnhof.
+    en: He shows a woman the way to the station.
+    fa: او راه ایستگاه قطار را به زنی نشان می‌دهد.
+  - de: Die Großeltern erzählen den Enkeln eine Geschichte.
+    en: The grandparents tell the grandchildren a story.
+    fa: پدربزرگ و مادربزرگ برای نوه‌ها قصه‌ای تعریف می‌کنند.
+  - de: Ich leihe meinem Bruder mein Fahrrad.
+    en: I am lending my brother my bike.
+    fa: دوچرخه‌ام را به برادرم قرض می‌دهم.
+  - de: Wir geben den Babys Milch.
+    en: We give the babies milk.
+    fa: به بچه‌های شیرخوار شیر می‌دهیم.
+
+mistakes:
+  - wrong: Ich gebe meine Nachbarin den Schlüssel.
+    right: Ich gebe meiner Nachbarin den Schlüssel.
+    why:
+      en: "The person who gets something is in the *Dativ*: *meine Nachbarin* becomes *meiner Nachbarin*."
+      fa: "کسی که چیزی به او داده می‌شود در حالت *Dativ* می‌آید: *meine Nachbarin* به *meiner Nachbarin* تبدیل می‌شود."
+      de: "Die Person, die etwas bekommt, steht im Dativ: *meine Nachbarin* wird zu *meiner Nachbarin*."
+  - wrong: Die Lehrerin erklärt den Kinder die Aufgabe.
+    right: Die Lehrerin erklärt den Kindern die Aufgabe.
+    why:
+      en: "In the *Dativ* plural the noun adds *-n*: *den Kindern*."
+      fa: "در حالت *Dativ* جمع، اسم نیز *-n* می‌گیرد: *den Kindern*."
+      de: "Im Dativ Plural bekommt das Nomen *-n*: *den Kindern*."
+  - wrong: Wir kaufen unser Sohn ein Fahrrad.
+    right: Wir kaufen unserem Sohn ein Fahrrad.
+    why:
+      en: "*Sohn* is masculine, and *unser* takes the ending of *dem*: *unserem Sohn*."
+      fa: "*Sohn* اسم مذکر است و *unser* همان پایانهٔ *dem* را می‌گیرد: *unserem Sohn*."
+      de: "*Sohn* ist maskulin. *Unser* bekommt die Endung wie *dem*: *unserem Sohn*."
+  - wrong: Ich schreibe meinen Freunde eine Karte.
+    right: Ich schreibe meinen Freunden eine Karte.
+    why:
+      en: "*Meinen* alone is not enough: in the *Dativ* plural the noun adds *-n* too."
+      fa: "*meinen* به‌تنهایی بس نیست: در حالت *Dativ* جمع، اسم هم *-n* می‌گیرد."
+      de: "*Meinen* allein ist nicht genug: Im Dativ Plural bekommt auch das Nomen *-n*."
+  - wrong: Er bringt der Gast einen Kaffee.
+    right: Er bringt dem Gast einen Kaffee.
+    why:
+      en: "*Gast* is a *der* noun, so in the *Dativ* it is *dem Gast*. *Der* in the *Dativ* is for feminine nouns."
+      fa: "*Gast* اسم مذکر (*der*) است، پس در حالت *Dativ* می‌شود *dem Gast*. *der* در حالت *Dativ* برای اسم مؤنث است."
+      de: "*Gast* hat den Artikel *der*. Im Dativ heißt es *dem Gast*. *Der* im Dativ ist für feminine Nomen."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich gebe ___ Nachbarin den Schlüssel.
+    options: [meiner, meine, meinem]
+    answer: meiner
+    explanation:
+      en: "*Nachbarin* is feminine and gets the key (*Wem?*): *meiner Nachbarin*."
+      fa: "*Nachbarin* اسم مؤنث است و کلید به او داده می‌شود (*Wem?*): *meiner Nachbarin*."
+      de: "*Nachbarin* ist feminin und bekommt den Schlüssel (*Wem?*): *meiner Nachbarin*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir schenken ___ Lehrer ein Buch.
+    options: [unserem, unseren, unser]
+    answer: unserem
+    explanation:
+      en: "*Lehrer* is masculine and gets the book: *unserem Lehrer*."
+      fa: "*Lehrer* اسم مذکر است و کتاب به او داده می‌شود: *unserem Lehrer*."
+      de: "*Lehrer* ist maskulin und bekommt das Buch: *unserem Lehrer*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Lehrerin erklärt den ___ die Aufgabe.
+    options: [Kindern, Kinder, Kind]
+    answer: Kindern
+    explanation:
+      en: "*Den* before the noun is the *Dativ* plural, and the noun adds *-n*: *den Kindern*."
+      fa: "*den* پیش از اسم نشانهٔ حالت *Dativ* جمع است و اسم *-n* می‌گیرد: *den Kindern*."
+      de: "*Den* vor dem Nomen ist Dativ Plural. Das Nomen bekommt *-n*: *den Kindern*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Kellnerin bringt ___ Gast einen Kaffee.
+    options: [dem, den, der]
+    answer: dem
+    explanation:
+      en: "*Der Gast* gets the coffee, so the *Dativ*: *dem Gast*."
+      fa: "قهوه برای *der Gast* آورده می‌شود، پس حالت *Dativ* می‌آید: *dem Gast*."
+      de: "*Der Gast* bekommt den Kaffee. Darum Dativ: *dem Gast*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich schreibe ___ eine E-Mail.
+    options: [meinen Eltern, meine Eltern, meiner Eltern]
+    answer: meinen Eltern
+    explanation:
+      en: "The plural in the *Dativ* takes *meinen*. *Eltern* already ends in *-n*, so it adds nothing."
+      fa: "جمع در حالت *Dativ* با *meinen* می‌آید. *Eltern* از پیش به *-n* ختم می‌شود و چیزی نمی‌گیرد."
+      de: "Im Dativ Plural steht *meinen*. *Eltern* endet schon auf *-n*, also kommt nichts dazu."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Sie zeigt ___ die Wohnung.
+    options: [den Gästen, die Gäste, den Gäste]
+    answer: den Gästen
+    explanation:
+      en: "The guests are shown the flat (*Wem?*): *den Gästen*, with *-n* on the noun."
+      fa: "آپارتمان به مهمان‌ها نشان داده می‌شود (*Wem?*): *den Gästen*، با *-n* در پایان اسم."
+      de: "Die Gäste sehen die Wohnung (*Wem?*): *den Gästen*, mit *-n* am Nomen."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wir schicken ___ ein Paket.
+    options: [den Großeltern, die Großeltern, dem Großeltern]
+    answer: den Großeltern
+    explanation:
+      en: "*Großeltern* is a plural that already ends in *-n*: *den Großeltern*."
+      fa: "*Großeltern* اسم جمعی است که از پیش به *-n* ختم می‌شود: *den Großeltern*."
+      de: "*Großeltern* ist Plural und endet schon auf *-n*: *den Großeltern*."
+  - id: true-1
+    type: true-false
+    prompt: Wir geben den Babys die Flasche.
+    answer: true
+    explanation:
+      en: "A plural in *-s* adds no *-n* in the *Dativ*: *den Babys*. The sentence is correct."
+      fa: "اسم جمعی که به *-s* ختم می‌شود در حالت *Dativ* *-n* نمی‌گیرد: *den Babys*. جمله درست است."
+      de: "Ein Plural auf *-s* bekommt im Dativ kein *-n*: *den Babys*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Er schenkt seiner Frau Blumen.
+    answer: true
+    explanation:
+      en: "*Frau* is feminine and gets the flowers: *seiner Frau*. The sentence is correct."
+      fa: "*Frau* اسم مؤنث است و گل به او داده می‌شود: *seiner Frau*. جمله درست است."
+      de: "*Frau* ist feminin und bekommt die Blumen: *seiner Frau*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich erzähle meinen Freunde eine Geschichte.
+    answer: false
+    explanation:
+      en: "In the *Dativ* plural the noun adds *-n*: *meinen Freunden*."
+      fa: "در حالت *Dativ* جمع، اسم *-n* می‌گیرد: *meinen Freunden*."
+      de: "Im Dativ Plural bekommt das Nomen *-n*: *meinen Freunden*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich gebe ___ (der Mann) die Zeitung.
+    answers: [dem Mann, dem]
+    explanation:
+      en: "The man gets the newspaper, so the *Dativ*: *dem Mann*."
+      fa: "روزنامه به مرد داده می‌شود، پس حالت *Dativ* می‌آید: *dem Mann*."
+      de: "Der Mann bekommt die Zeitung. Darum Dativ: *dem Mann*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir schreiben ___ (unsere Lehrerin) eine Karte.
+    answers: [unserer Lehrerin, unserer]
+    explanation:
+      en: "*Lehrerin* is feminine: in the *Dativ* *unsere* becomes *unserer*."
+      fa: "*Lehrerin* اسم مؤنث است: در حالت *Dativ*، *unsere* به *unserer* تبدیل می‌شود."
+      de: "*Lehrerin* ist feminin. Im Dativ wird *unsere* zu *unserer*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Oma erzählt den ___ (die Enkel) eine Geschichte.
+    answers: [Enkeln]
+    explanation:
+      en: "The plural *die Enkel* adds *-n* in the *Dativ*: *den Enkeln*."
+      fa: "جمع *die Enkel* در حالت *Dativ* *-n* می‌گیرد: *den Enkeln*."
+      de: "Der Plural *die Enkel* bekommt im Dativ *-n*: *den Enkeln*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Dativ: die Kinder"
+    answers: [den Kindern]
+    explanation:
+      en: "Plural *die* becomes *den*, and the noun adds *-n*: *den Kindern*."
+      fa: "*die* جمع به *den* تبدیل می‌شود و اسم *-n* می‌گیرد: *den Kindern*."
+      de: "*Die* im Plural wird zu *den*, und das Nomen bekommt *-n*: *den Kindern*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Dativ: die Autos"
+    answers: [den Autos]
+    explanation:
+      en: "A plural in *-s* adds nothing: *den Autos*."
+      fa: "اسم جمعی که به *-s* ختم می‌شود چیزی نمی‌گیرد: *den Autos*."
+      de: "Ein Plural auf *-s* bekommt nichts dazu: *den Autos*."
+  - id: typed-3
+    type: typed-answer
+    prompt: "Dativ: meine Schwester"
+    answers: [meiner Schwester]
+    explanation:
+      en: "*Schwester* is feminine: *meine* becomes *meiner*."
+      fa: "*Schwester* اسم مؤنث است: *meine* به *meiner* تبدیل می‌شود."
+      de: "*Schwester* ist feminin: *meine* wird zu *meiner*."
+  - id: error-1
+    type: find-error
+    prompt: Die Lehrerin erklärt den Kinder die Regel.
+    answer: Kinder
+    explanation:
+      en: "In the *Dativ* plural the noun adds *-n*: *den Kindern*."
+      fa: "در حالت *Dativ* جمع، اسم *-n* می‌گیرد: *den Kindern*."
+      de: "Im Dativ Plural bekommt das Nomen *-n*: *den Kindern*."
+  - id: error-2
+    type: find-error
+    prompt: Ich gebe meine Mutter einen Kuss.
+    answer: meine
+    explanation:
+      en: "The mother gets the kiss, so the *Dativ*: *meiner Mutter*."
+      fa: "بوسه به مادر داده می‌شود، پس حالت *Dativ* می‌آید: *meiner Mutter*."
+      de: "Die Mutter bekommt den Kuss. Darum Dativ: *meiner Mutter*."
+  - id: error-3
+    type: find-error
+    prompt: Wir bringen der Gast ein Glas Wasser.
+    answer: der
+    explanation:
+      en: "*Gast* is masculine: in the *Dativ* it is *dem Gast*."
+      fa: "*Gast* اسم مذکر است: در حالت *Dativ* می‌شود *dem Gast*."
+      de: "*Gast* ist maskulin. Im Dativ heißt es *dem Gast*."
+  - id: match-1
+    type: matching
+    answer:
+      - [schenkt ___ Mutter Blumen, seiner]
+      - [gibt ___ Vater das Geld, seinem]
+      - [kauft ___ Kindern ein Eis, seinen]
+    explanation:
+      en: "In the *Dativ* the ending is *-er* for feminine, *-em* for masculine, and *-en* in the plural."
+      fa: "در حالت *Dativ* پایانه برای مؤنث *-er*، برای مذکر *-em* و در جمع *-en* است."
+      de: "Im Dativ ist die Endung feminin *-er*, maskulin *-em* und im Plural *-en*."
+
+review:
+  reviewer: two independent AI agents (Claude Opus 5.5 subagents, blind passes on
+    the review sheet only; a second fresh agent re-answered the changed
+    questions; not a person)
+  date: 2026-11-28
+  pool: b372c8df448e5a18

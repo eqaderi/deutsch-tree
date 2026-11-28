@@ -4,10 +4,294 @@ kind: grammar
 level: A2
 chapter: a2-dativ-objects
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-066]
 title:
   en: "Verbs with *Dativ* + *Akkusativ*"
-  fa: "فعل‌هایی با *Dativ* و *Akkusativ*"
+  fa: "فعل‌هایی با حالت *Dativ* و حالت *Akkusativ*"
   de: "Verben mit Dativ + Akkusativ"
+
+explanations:
+  en:
+    rule: >
+      Many verbs take two objects: a person in the *Dativ* (*Wem?*) and a
+      thing in the *Akkusativ* (*Was?*). The person gets the thing, or the
+      action is done for them: *Er hat seiner Frau Blumen geschenkt.* Such
+      verbs are *geben*, *schenken*, *zeigen*, *bringen*, *schicken*,
+      *erklären*, *kaufen*, *leihen*, *empfehlen*, *sagen* and *erzählen*.
+      German needs no preposition for "to" or "for": *Ich gebe dem Kind den
+      Ball*, never *zu dem Kind*. The person is often a pronoun in the
+      *Dativ*: *Kannst du mir das Salz geben?*
+  fa:
+    rule: >
+      بسیاری از فعل‌ها دو مفعول می‌گیرند: شخص در حالت *Dativ* (*Wem?*، به چه
+      کسی؟) و چیز در حالت *Akkusativ* (*Was?*، چه چیزی را؟). آن چیز به شخص
+      می‌رسد یا کار برای او انجام می‌شود: *Er hat seiner Frau Blumen
+      geschenkt.* از این فعل‌ها *geben*، *schenken*، *zeigen*، *bringen*،
+      *schicken*، *erklären*، *kaufen*، *leihen*، *empfehlen*، *sagen* و
+      *erzählen* هستند. فارسی برای شخص «به» یا «برای» می‌آورد، ولی آلمانی
+      حرف اضافه لازم ندارد: *Ich gebe dem Kind den Ball*، هرگز *zu dem Kind*.
+      شخص اغلب ضمیری در حالت *Dativ* است: *Kannst du mir das Salz geben?*
+  de:
+    rule: >
+      Viele Verben haben zwei Objekte: eine Person im Dativ (*Wem?*) und eine
+      Sache im Akkusativ (*Was?*). Die Person bekommt die Sache: *Er hat
+      seiner Frau Blumen geschenkt.* Solche Verben sind *geben*, *schenken*,
+      *zeigen*, *bringen*, *schicken*, *erklären*, *kaufen*, *leihen*,
+      *empfehlen*, *sagen* und *erzählen*. Man braucht keine Präposition:
+      *Ich gebe dem Kind den Ball*, nicht *zu dem Kind*. Oft ist die Person
+      ein Pronomen: *Kannst du mir das Salz geben?*
+
+# The article-change table of content/README.md with both cases of the
+# topic beside the Nominativ: the person in the Dativ, the thing in the
+# Akkusativ. Each example has one of each.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ* (*Wem?*)", fa: "حالت *Dativ* (*Wem?*)", de: "Dativ (*Wem?*)" }
+    - { en: "*Akkusativ* (*Was?*)", fa: "حالت *Akkusativ* (*Was?*)", de: "Akkusativ (*Was?*)" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Vater, dem Vater, den Vater, Ich gebe dem Vater den Schlüssel.]
+    - [die Mutter, der Mutter, die Mutter, Er schenkt der Mutter eine Uhr.]
+    - [das Kind, dem Kind, das Kind, Sie zeigt dem Kind das Bild.]
+    - [die Gäste (Plural), den Gästen, die Gäste, Wir bringen den Gästen das Essen.]
+
+examples:
+  - de: Er hat seiner Frau Blumen geschenkt.
+    en: He gave his wife flowers.
+    fa: او به همسرش گل هدیه داد.
+  - de: Kannst du mir das Salz geben?
+    en: Can you pass me the salt?
+    fa: می‌توانی نمک را به من بدهی؟
+  - de: Ich zeige dem Gast das Zimmer.
+    en: I show the guest the room.
+    fa: اتاق را به مهمان نشان می‌دهم.
+  - de: Der Kellner bringt den Gästen die Speisekarte.
+    en: The waiter brings the guests the menu.
+    fa: پیشخدمت منو را برای مهمان‌ها می‌آورد.
+  - de: Wir schicken unseren Eltern ein Foto.
+    en: We send our parents a photo.
+    fa: برای پدر و مادرمان عکسی می‌فرستیم.
+  - de: Kannst du mir die Aufgabe erklären?
+    en: Can you explain the exercise to me?
+    fa: می‌توانی تمرین را برایم توضیح بدهی؟
+  - de: Ich leihe meinem Bruder mein Auto.
+    en: I am lending my brother my car.
+    fa: ماشینم را به برادرم قرض می‌دهم.
+  - de: Was empfehlen Sie mir?
+    en: What do you recommend?
+    fa: چه چیزی به من پیشنهاد می‌کنید؟
+  - de: Die Oma erzählt den Kindern eine Geschichte.
+    en: Grandma tells the children a story.
+    fa: مادربزرگ برای بچه‌ها قصه‌ای تعریف می‌کند.
+  - de: Ich kaufe meiner Tochter ein Fahrrad.
+    en: I am buying my daughter a bike.
+    fa: برای دخترم دوچرخه می‌خرم.
+
+mistakes:
+  - wrong: Ich gebe das Buch zu meinem Bruder.
+    right: Ich gebe meinem Bruder das Buch.
+    why:
+      en: 'English says "to my brother", but German needs no preposition: the *Dativ* alone says who gets it.'
+      fa: "در فارسی می‌گوییم «به برادرم»، ولی در آلمانی حرف اضافه لازم نیست: حالت *Dativ* به‌تنهایی گیرنده را نشان می‌دهد."
+      de: "Hier braucht man keine Präposition. Der Dativ zeigt allein, wer das Buch bekommt."
+  - wrong: Er schenkt seine Frau Blumen.
+    right: Er schenkt seiner Frau Blumen.
+    why:
+      en: "The person who gets the present is in the *Dativ*: *seiner Frau*. The present is the *Akkusativ*."
+      fa: "کسی که هدیه به او داده می‌شود در حالت *Dativ* می‌آید: *seiner Frau*. خود هدیه در حالت *Akkusativ* است."
+      de: "Die Person, die das Geschenk bekommt, steht im Dativ: *seiner Frau*. Das Geschenk steht im Akkusativ."
+  - wrong: Ich zeige dem Gast der Weg.
+    right: Ich zeige dem Gast den Weg.
+    why:
+      en: "The thing that is shown is in the *Akkusativ*: *der Weg* becomes *den Weg*."
+      fa: "چیزی که نشان داده می‌شود در حالت *Akkusativ* می‌آید: *der Weg* به *den Weg* تبدیل می‌شود."
+      de: "Die Sache steht im Akkusativ: *der Weg* wird zu *den Weg*."
+  - wrong: Kannst du mich das erklären?
+    right: Kannst du mir das erklären?
+    why:
+      en: "*Das* is what is explained (*Akkusativ*); the person it is explained to takes the *Dativ*: *mir*, not *mich*."
+      fa: "*das* چیزی است که توضیح داده می‌شود (حالت *Akkusativ*)؛ شخص در حالت *Dativ* می‌آید: *mir*، نه *mich*."
+      de: "*Das* ist die Sache (Akkusativ). Die Person steht im Dativ: *mir*, nicht *mich*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Er schenkt ___ Frau Blumen.
+    options: [seiner, seine, seinen]
+    answer: seiner
+    explanation:
+      en: "His wife gets the flowers (*Wem?*), so the *Dativ*: *seiner Frau*."
+      fa: "گل به همسرش داده می‌شود (*Wem?*)، پس حالت *Dativ* می‌آید: *seiner Frau*."
+      de: "Seine Frau bekommt die Blumen (*Wem?*). Darum Dativ: *seiner Frau*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich zeige dem Gast ___ Zimmer.
+    options: [das, dem, den]
+    answer: das
+    explanation:
+      en: "The room is what is shown (*Was?*), so the *Akkusativ*: *das Zimmer* does not change."
+      fa: "اتاق چیزی است که نشان داده می‌شود (*Was?*)، پس در حالت *Akkusativ* می‌آید و *das Zimmer* تغییر نمی‌کند."
+      de: "Das Zimmer ist die Sache (*Was?*). Akkusativ: *das Zimmer* bleibt gleich."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der Kellner bringt ___ Gästen die Rechnung.
+    options: [den, die, der]
+    answer: den
+    explanation:
+      en: "The guests get the bill: *Dativ* plural *den Gästen*."
+      fa: "صورت‌حساب به مهمان‌ها داده می‌شود: حالت *Dativ* جمع، *den Gästen*."
+      de: "Die Gäste bekommen die Rechnung: Dativ Plural *den Gästen*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Kannst du ___ das Wort erklären?
+    options: [mir, mich, ich]
+    answer: mir
+    explanation:
+      en: "The word is explained to me: the person is in the *Dativ*, *mir*."
+      fa: "واژه برای من توضیح داده می‌شود: شخص در حالت *Dativ* می‌آید، *mir*."
+      de: "Die Person steht im Dativ: *mir*. *Das Wort* ist der Akkusativ."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich gebe ___ den Schlüssel.
+    options: [meiner Freundin, meine Freundin, zu meiner Freundin]
+    answer: meiner Freundin
+    explanation:
+      en: "The person who gets the key is in the *Dativ*, without a preposition: *meiner Freundin*."
+      fa: "کسی که کلید به او داده می‌شود در حالت *Dativ* و بدون حرف اضافه می‌آید: *meiner Freundin*."
+      de: "Die Person, die den Schlüssel bekommt, steht im Dativ, ohne Präposition: *meiner Freundin*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Sie schickt ihrem Vater ___ Brief.
+    options: [einen, einem, ein]
+    answer: einen
+    explanation:
+      en: "The letter is what is sent (*Was?*): *der Brief* in the *Akkusativ* is *einen Brief*."
+      fa: "نامه چیزی است که فرستاده می‌شود (*Was?*): *der Brief* در حالت *Akkusativ* می‌شود *einen Brief*."
+      de: "Der Brief ist die Sache (*Was?*). Akkusativ: *einen Brief*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich leihe meinem Bruder mein Fahrrad. Wer hat das Fahrrad dann?
+    options: [mein Bruder, ich, mein Vater]
+    answer: mein Bruder
+    explanation:
+      en: "*Meinem Bruder* is the *Dativ*: the brother gets the bike."
+      fa: "*meinem Bruder* در حالت *Dativ* است: دوچرخه به برادر داده می‌شود."
+      de: "*Meinem Bruder* ist der Dativ: Der Bruder bekommt das Fahrrad."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Wem hat Anna die Fotos gezeigt? – ___ Mutter.
+    options: [Ihrer, Ihre, Ihren]
+    answer: Ihrer
+    explanation:
+      en: "*Wem?* asks for the *Dativ*: *ihrer Mutter*."
+      fa: "*Wem?* حالت *Dativ* را می‌پرسد: *ihrer Mutter*."
+      de: "*Wem?* fragt nach dem Dativ: *ihrer Mutter*."
+  - id: true-1
+    type: true-false
+    prompt: Ich bringe dir einen Kaffee.
+    answer: true
+    explanation:
+      en: "*Dir* is the person (*Dativ*), *einen Kaffee* the thing (*Akkusativ*). The sentence is correct."
+      fa: "*dir* شخص است (حالت *Dativ*) و *einen Kaffee* چیز (حالت *Akkusativ*). جمله درست است."
+      de: "*Dir* ist die Person (Dativ), *einen Kaffee* die Sache (Akkusativ). Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir erklären die Gäste den Weg.
+    answer: false
+    explanation:
+      en: "The guests are the people it is explained to, so the *Dativ*: *den Gästen*."
+      fa: "راه برای مهمان‌ها توضیح داده می‌شود، پس حالت *Dativ* می‌آید: *den Gästen*."
+      de: "Die Gäste sind die Personen. Darum Dativ: *den Gästen*."
+  - id: true-3
+    type: true-false
+    prompt: Kannst du mir deine Telefonnummer sagen?
+    answer: true
+    explanation:
+      en: "*Mir* is the person (*Dativ*), *deine Telefonnummer* the thing (*Akkusativ*). The sentence is correct."
+      fa: "*mir* شخص است (حالت *Dativ*) و *deine Telefonnummer* چیز (حالت *Akkusativ*). جمله درست است."
+      de: "*Mir* ist die Person (Dativ), *deine Telefonnummer* die Sache (Akkusativ). Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich gebe den Ball zu dem Kind.
+    answer: false
+    explanation:
+      en: "*Geben* needs no preposition: *Ich gebe dem Kind den Ball.*"
+      fa: "*geben* حرف اضافه نمی‌خواهد: *Ich gebe dem Kind den Ball.*"
+      de: "Bei *geben* steht keine Präposition: *Ich gebe dem Kind den Ball.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich schenke ___ (mein Vater) eine Uhr.
+    answers: [meinem Vater, meinem]
+    explanation:
+      en: "My father gets the watch: *Dativ*, *meinem Vater*."
+      fa: "ساعت به پدرم داده می‌شود: حالت *Dativ*، *meinem Vater*."
+      de: "Mein Vater bekommt die Uhr: Dativ, *meinem Vater*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Die Lehrerin erklärt ___ (die Schüler) die Grammatik.
+    answers: [den Schülern, den]
+    explanation:
+      en: "The pupils are the people it is explained to: *Dativ* plural, *den Schülern*, with *-n*."
+      fa: "دستور زبان برای دانش‌آموزان توضیح داده می‌شود: حالت *Dativ* جمع، *den Schülern*، با *-n*."
+      de: "Die Schüler sind die Personen: Dativ Plural, *den Schülern*, mit *-n*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Kannst du mir ___ (der Weg) zeigen?
+    answers: [den Weg, den]
+    explanation:
+      en: "The way is what is shown (*Was?*): *Akkusativ*, *den Weg*."
+      fa: "راه چیزی است که نشان داده می‌شود (*Was?*): حالت *Akkusativ*، *den Weg*."
+      de: "Der Weg ist die Sache (*Was?*): Akkusativ, *den Weg*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wir schicken ___ (unsere Oma) ein Paket.
+    answers: [unserer Oma, unserer]
+    explanation:
+      en: "Grandma gets the parcel: *Dativ*, *unserer Oma*."
+      fa: "بسته برای مادربزرگ فرستاده می‌شود: حالت *Dativ*، *unserer Oma*."
+      de: "Die Oma bekommt das Paket: Dativ, *unserer Oma*."
+  - id: error-1
+    type: find-error
+    prompt: Ich gebe meinem Bruder der Ball.
+    answer: der
+    explanation:
+      en: "The ball is the thing (*Akkusativ*): *der Ball* becomes *den Ball*."
+      fa: "توپ چیزی است که داده می‌شود (حالت *Akkusativ*): *der Ball* به *den Ball* تبدیل می‌شود."
+      de: "Der Ball ist die Sache (Akkusativ): *der Ball* wird zu *den Ball*."
+  - id: error-2
+    type: find-error
+    prompt: Er zeigt seine Freundin die Stadt.
+    answer: seine
+    explanation:
+      en: "His girlfriend is the person who is shown the town: *Dativ*, *seiner Freundin*."
+      fa: "شهر به دوست او نشان داده می‌شود: حالت *Dativ*، *seiner Freundin*."
+      de: "Die Freundin ist die Person: Dativ, *seiner Freundin*."
+  - id: match-1
+    type: matching
+    answer:
+      - [schenkt ___ Mutter eine Blume, der]
+      - [zeigt ___ Vater den Weg, dem]
+      - [bringt ___ Kindern das Essen, den]
+    explanation:
+      en: "Each person is in the *Dativ*: *der Mutter*, *dem Vater* and plural *den Kindern*."
+      fa: "هر سه شخص در حالت *Dativ* هستند: *der Mutter*، *dem Vater* و برای جمع *den Kindern*."
+      de: "Alle Personen stehen im Dativ: *der Mutter*, *dem Vater* und im Plural *den Kindern*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [was, schenkst, du, deiner Mutter]
+    end: "?"
+    explanation:
+      en: "The question word comes first and the verb second; *deiner Mutter* is the person (*Dativ*)."
+      fa: "واژهٔ پرسشی در آغاز و فعل در جایگاه دوم می‌آید؛ *deiner Mutter* شخص است (حالت *Dativ*)."
+      de: "Das Fragewort steht am Anfang, das Verb auf Position 2. *Deiner Mutter* ist die Person (Dativ)."
+
+review:
+  reviewer: two independent AI agents (Claude Opus 5.5 subagents, blind passes on
+    the review sheet only; a second fresh agent re-answered the changed
+    questions; not a person)
+  date: 2026-11-28
+  pool: 09baa4b513bb4121
