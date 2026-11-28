@@ -356,19 +356,20 @@ words:
       fa: پسرم علاقهٔ زیادی به موسیقی دارد.
     alsoAccepted: [die Neugier, die Neugierde]
 
-  # The scope list gives "(sich)": "sich für etwas interessieren" is to be interested in it.
+  # The scope list gives "(sich)": the node teaches "sich interessieren (für)", to be interested in.
   - word: interessieren
     class: verb
+    reflexive: sich
     level: A2
     meaning:
-      en: to interest; to be interested (with sich)
-      fa: برای کسی جالب بودن؛ علاقه داشتن (فعل انعکاسی)
-    definition: "mit „sich“: etwas gern wissen oder kennenlernen wollen, zum Beispiel ein Hobby"
+      en: to be interested (in)
+      fa: علاقه داشتن (به چیزی)
+    definition: etwas gern wissen oder kennenlernen wollen, zum Beispiel ein Hobby
     example:
       de: Meine Tochter interessiert sich für Autos.
       en: My daughter is interested in cars.
       fa: دخترم به ماشین علاقه دارد.
-    alsoAccepted: [sich interessieren]
+    alsoAccepted: [sich interessieren für, Interesse haben]
 
   - word: wählen
     class: verb
@@ -382,3 +383,9 @@ words:
       en: You can choose between fish and meat.
       fa: می‌توانید بین ماهی و گوشت انتخاب کنید.
     alsoAccepted: [aussuchen, auswählen, abstimmen, entscheiden, sich entscheiden]
+
+review:
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 50, then 23 questions)
+  date: 2026-11-28
+  pool: d9c13de6b5578630

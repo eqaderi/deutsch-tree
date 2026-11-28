@@ -54,19 +54,20 @@ words:
     alsoAccepted: [schildern, darstellen]
 
   # erinnern and merken can both be "remember"; neither is offered as a wrong meaning of the other.
-  # The scope list gives "(sich)": "sich erinnern" is to remember, without "sich" it is to remind.
+  # The scope list gives "(sich)": the node teaches "sich erinnern", to remember; without "sich" it is to remind.
   - word: erinnern
     class: verb
+    reflexive: sich
     level: A2
     meaning:
-      en: to remind; to remember (with sich)
-      fa: یادآوری کردن؛ به یاد آوردن (فعل انعکاسی)
-    definition: "eine Person an etwas denken lassen; mit „sich“: wieder an etwas denken, das früher war"
+      en: to remember (something from before)
+      fa: به یاد آوردن، به خاطر آوردن
+    definition: wieder an etwas denken, das früher war
     example:
       de: Erinnerst du dich an unseren Urlaub in Italien?
       en: Do you remember our holiday in Italy?
       fa: سفرمان به ایتالیا یادت هست؟
-    alsoAccepted: [sich erinnern, sich entsinnen, ins Gedächtnis rufen]
+    alsoAccepted: [sich entsinnen, sich erinnern an, sich an etwas erinnern, zurückdenken]
     tooCloseTo: [merken, vergessen]
 
   - word: vergessen
@@ -85,14 +86,14 @@ words:
     class: verb
     level: A2
     meaning:
-      en: to notice; to keep in mind (sich etwas merken)
-      fa: متوجه شدن؛ به خاطر سپردن
-    definition: "etwas sehen oder fühlen und verstehen; mit „sich“: etwas im Kopf behalten"
+      en: to notice, to realise
+      fa: متوجه شدن، پی بردن
+    definition: etwas sehen, hören oder fühlen und es verstehen
     example:
       de: Hast du gemerkt, dass Tom heute traurig war?
       en: Did you notice that Tom was sad today?
       fa: متوجه شدی که تام امروز ناراحت بود؟
-    alsoAccepted: [bemerken, sich merken, feststellen, mitbekommen, behalten, wahrnehmen]
+    alsoAccepted: [bemerken, feststellen, mitbekommen, wahrnehmen, erkennen]
 
   - word: nennen
     class: verb
@@ -193,19 +194,19 @@ words:
       fa: برایت پیام فرستاده‌ام.
     alsoAccepted: [die Mitteilung, die Botschaft, die Meldung, die SMS, die Nachrichten]
 
-  # The scope list gives "(sich)": "sich informieren" is to find out.
+  # The scope list gives "(sich)": the node teaches "informieren", to inform; "sich informieren" is to find out.
   - word: informieren
     class: verb
     level: A2
     meaning:
-      en: to inform; to find out (with sich)
-      fa: اطلاع دادن؛ اطلاعات به دست آوردن (فعل انعکاسی)
-    definition: "einer Person sagen, was sie wissen muss; mit „sich“: Informationen suchen"
+      en: to inform, to let (someone) know
+      fa: اطلاع دادن، باخبر کردن
+    definition: einer Person sagen, was sie wissen muss
     example:
       de: Bitte informieren Sie uns, wenn sich Ihre Adresse ändert.
       en: Please inform us if your address changes.
       fa: لطفاً اگر نشانی‌تان عوض شد، به ما اطلاع دهید.
-    alsoAccepted: [sich informieren, benachrichtigen, mitteilen, Bescheid sagen, Bescheid geben, sich erkundigen, unterrichten]
+    alsoAccepted: [benachrichtigen, mitteilen, Bescheid sagen, Bescheid geben, unterrichten]
 
   - word: beantworten
     class: verb
@@ -331,7 +332,7 @@ words:
     alsoAccepted: [klar, verständlich, eindeutig]
 
 review:
-  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
-    only; 138, then 4 questions)
+  reviewer: independent AI agents (four fresh Claude Opus 5.5 subagents, sheet
+    only; 138, then 4, then 35, then 18 questions)
   date: 2026-11-28
-  pool: be1305f22a3b0baf
+  pool: 896df88b2c1aae4a

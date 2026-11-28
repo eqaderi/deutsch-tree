@@ -143,23 +143,25 @@ words:
       fa: بچه غمگین است، چون دوستش از اینجا می‌رود.
     alsoAccepted: [unglücklich, betrübt, bedrückt]
 
-  # The scope list gives "(sich)": "sich ärgern" is to be annoyed.
+  # The scope list gives "(sich)": the node teaches "sich ärgern", to be annoyed.
   - word: ärgern
     class: verb
+    reflexive: sich
     level: A2
     meaning:
-      en: to annoy; to be annoyed (with sich)
-      fa: حرص (کسی را) درآوردن؛ عصبانی شدن (فعل انعکاسی)
-    definition: "eine Person böse machen; mit „sich“: böse werden, weil etwas nicht gut ist"
+      en: to be annoyed, to get cross
+      fa: عصبانی شدن، حرص خوردن
+    definition: böse werden, weil etwas nicht so ist, wie man es möchte
     example:
       de: Ich ärgere mich, weil der Bus schon wieder zu spät ist.
       en: I'm annoyed because the bus is late again.
       fa: عصبانی‌ام، چون اتوبوس باز هم دیر کرده است.
-    alsoAccepted: [sich ärgern, sich aufregen, aufregen, nerven]
+    alsoAccepted: [sich aufregen, böse werden, sauer werden, wütend werden]
 
-  # The scope list gives "(sich)": "sich fühlen" is to feel well, ill or tired.
+  # The scope list gives "(sich)": the node teaches "sich fühlen", to feel well, ill or tired.
   - word: fühlen
     class: verb
+    reflexive: sich
     level: A2
     meaning:
       en: to feel
@@ -169,7 +171,7 @@ words:
       de: Ich fühle mich heute nicht gut.
       en: I don't feel well today.
       fa: امروز احساس خوبی ندارم.
-    alsoAccepted: [sich fühlen, spüren, empfinden]
+    alsoAccepted: [fühlen, spüren, empfinden]
 
   # hoffen and wünschen are near each other; neither is offered as a wrong meaning of the other.
   - word: hoffen
@@ -222,7 +224,7 @@ words:
       en: I dreamed about you last night.
       fa: دیشب خوابت را دیدم.
 
-  # The scope list gives "(sich)": "sich etwas wünschen" is to want something as a gift.
+  # The scope list gives "(sich)": the node teaches "wünschen"; "sich etwas wünschen" is accepted too.
   - word: wünschen
     class: verb
     level: A2
@@ -234,7 +236,7 @@ words:
       de: Ich wünsche dir viel Glück!
       en: I wish you lots of luck!
       fa: برایت آرزوی موفقیت می‌کنم!
-    alsoAccepted: [sich wünschen]
+    alsoAccepted: [sich wünschen, sich etwas wünschen]
 
   # schimpfen and beschweren both voice displeasure; neither is offered as a wrong meaning of the other.
   - word: schimpfen
@@ -254,30 +256,32 @@ words:
   # The scope list gives "sich": the verb is always "sich beschweren".
   - word: beschweren
     class: verb
+    reflexive: sich
     level: A2
     meaning:
-      en: to complain (with sich)
-      fa: شکایت کردن (فعل انعکاسی)
-    definition: "mit „sich“: sagen, dass man mit etwas nicht zufrieden ist, zum Beispiel im Hotel"
+      en: to complain
+      fa: شکایت کردن
+    definition: sagen, dass man mit etwas nicht zufrieden ist, zum Beispiel im Hotel
     example:
       de: Der Gast beschwert sich über das kalte Essen.
       en: The guest is complaining about the cold food.
       fa: مهمان از غذای سرد شکایت می‌کند.
-    alsoAccepted: [sich beschweren, sich beklagen, beklagen, reklamieren]
+    alsoAccepted: [sich beklagen, klagen, reklamieren]
 
   # The scope list gives "sich": the verb is always "sich bedanken".
   - word: bedanken
     class: verb
+    reflexive: sich
     level: A2
     meaning:
-      en: to say thank you (with sich)
-      fa: تشکر کردن (فعل انعکاسی)
-    definition: "mit „sich“: Danke sagen"
+      en: to say thank you
+      fa: تشکر کردن
+    definition: Danke sagen
     example:
       de: Ich möchte mich für Ihre Hilfe bedanken.
       en: I would like to thank you for your help.
       fa: می‌خواهم از کمکتان تشکر کنم.
-    alsoAccepted: [sich bedanken, danken, Danke sagen, danke sagen]
+    alsoAccepted: [danken, Danke sagen, danke sagen]
 
   # Said as "Es tut mir leid."
   - word: leidtun
@@ -363,7 +367,7 @@ words:
     tooCloseTo: [ärgern]
 
 review:
-  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
-    only; 150, then 11 questions)
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 11, then 33 questions)
   date: 2026-11-28
-  pool: e4acadfc5c06ab38
+  pool: 2b118974cf704d61

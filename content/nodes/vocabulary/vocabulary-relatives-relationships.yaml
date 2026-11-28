@@ -278,16 +278,16 @@ words:
   # The scope list gives "sich": the verb is always "sich verlieben".
   - word: verlieben
     class: verb
+    reflexive: sich
     level: A2
     meaning:
-      en: to fall in love (with sich)
-      fa: عاشق شدن (فعل انعکاسی)
-    definition: "mit „sich“: anfangen, eine Person zu lieben"
+      en: to fall in love
+      fa: عاشق شدن
+    definition: anfangen, eine Person zu lieben
     example:
       de: Er hat sich im Urlaub in eine Spanierin verliebt.
       en: He fell in love with a Spanish woman on holiday.
       fa: او در سفر عاشق یک زن اسپانیایی شد.
-    alsoAccepted: [sich verlieben]
 
   # The scope list gives "(sich)": "sich streiten" is the everyday form.
   - word: streiten
@@ -372,19 +372,20 @@ words:
       fa: یکشنبه هیچ‌کس در دفتر نیست.
     alsoAccepted: [keiner, kein Mensch]
 
-  # The scope list gives "(sich)": "sich unterhalten" is to talk; without "sich" it is to entertain.
+  # The scope list gives "(sich)": the node teaches "sich unterhalten", to talk; without "sich" it is to entertain.
   - word: unterhalten
     class: verb
+    reflexive: sich
     level: A2
     meaning:
-      en: to talk, to have a chat (with sich)
-      fa: گپ زدن، گفت‌وگو کردن (فعل انعکاسی)
-    definition: "mit „sich“: mit einer Person in Ruhe über etwas sprechen"
+      en: to talk, to have a chat
+      fa: گپ زدن، گفت‌وگو کردن
+    definition: mit einer Person in Ruhe über etwas sprechen
     example:
       de: Wir haben uns lange über den Urlaub unterhalten.
       en: We talked about the holiday for a long time.
       fa: مدت زیادی دربارهٔ سفرمان با هم گپ زدیم.
-    alsoAccepted: [sich unterhalten, plaudern, quatschen, reden, sprechen, sich austauschen]
+    alsoAccepted: [plaudern, quatschen, reden, sprechen, sich austauschen, sich aussprechen]
 
   - word: verabredet
     class: adjective
@@ -400,7 +401,7 @@ words:
     alsoAccepted: [verabredet sein]
 
 review:
-  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
-    only; 156, then 13 questions)
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 13, then 18 questions)
   date: 2026-11-28
-  pool: e3959e7f3adb142e
+  pool: be7f915917c27b69
