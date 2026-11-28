@@ -5,7 +5,7 @@ kind: vocabulary
 level: A2
 chapter: a2-words-home-food
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Clothes and fashion"
   fa: "لباس و مد"
@@ -375,3 +375,10 @@ words:
       de: Im Winter ist es um fünf Uhr schon dunkel.
       en: In winter it's already dark at five o'clock.
       fa: زمستان‌ها ساعت پنج هوا دیگر تاریک است.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 156 questions, then the 8 changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: da31c7cbf98eca60

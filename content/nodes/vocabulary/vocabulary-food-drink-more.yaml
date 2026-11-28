@@ -5,7 +5,7 @@ kind: vocabulary
 level: A2
 chapter: a2-words-home-food
 order: 4
-status: coming-soon
+status: published
 title:
   en: "More food and drink"
   fa: "خوراکی‌ها و نوشیدنی‌های بیشتر"
@@ -137,11 +137,12 @@ words:
     meaning:
       en: bean
       fa: لوبیا
-    definition: ein Gemüse, grün, weiß oder rot; man isst es gekocht, zum Beispiel in einer Suppe oder mit Chili
+    definition: ein Gemüse aus kleinen, länglichen Samen, weiß, rot oder schwarz, die man lange kocht, zum Beispiel für Chili con Carne
     example:
       de: Zum Fleisch gibt es grüne Bohnen.
       en: There are green beans with the meat.
       fa: همراه گوشت لوبیا سبز هم هست.
+    alsoAccepted: [die Bohnen]
 
   - word: Orange
     class: noun
@@ -301,3 +302,10 @@ words:
       de: Die Kartoffeln sind gekocht und schön weich.
       en: The potatoes are cooked and nicely soft.
       fa: سیب‌زمینی‌ها پخته و حسابی نرم شده‌اند.
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 120 questions, then the 17 changed after the first one's
+    objections, then the 7 changed after the second one's; not people)"
+  date: 2026-11-28
+  pool: c4ed7fdf64e16c09

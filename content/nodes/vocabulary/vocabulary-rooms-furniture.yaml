@@ -5,7 +5,7 @@ kind: vocabulary
 level: A2
 chapter: a2-words-home-food
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Rooms and the building"
   fa: "اتاق‌ها و ساختمان"
@@ -207,6 +207,7 @@ words:
     alsoAccepted: [das Fernsehgerät, der Fernsehapparat]
 
   # "Gerät" is any device, "Apparat" mostly a telephone or a camera; each is right when the other is asked for.
+  # A TV set and a lamp are devices too, so "Gerät" is never offered as a wrong meaning of them, or the other way.
   - word: Gerät
     class: noun
     article: das
@@ -221,7 +222,7 @@ words:
       en: The device is new, but it doesn't work.
       fa: این دستگاه نو است، اما کار نمی‌کند.
     alsoAccepted: [der Apparat, die Maschine, das Elektrogerät]
-    tooCloseTo: [Apparat]
+    tooCloseTo: [Apparat, Fernseher, Lampe]
 
   - word: Apparat
     class: noun
@@ -251,6 +252,7 @@ words:
       de: Nach dem Umzug sind wir alle sehr müde.
       en: After the move we're all very tired.
       fa: بعد از اسباب‌کشی همه خیلی خسته‌ایم.
+    alsoAccepted: [der Wohnungswechsel]
 
   - word: einziehen
     class: verb
@@ -381,3 +383,10 @@ words:
       en: The window is open; I'm cold.
       fa: پنجره باز است و سردم است.
     alsoAccepted: [geöffnet, auf]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 156 questions, then the 13 changed after the first one's
+    objections, then the 3 changed after the second one's; not people)"
+  date: 2026-11-28
+  pool: a4be4c8a7e6fcad7

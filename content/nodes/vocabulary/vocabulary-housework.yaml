@@ -5,7 +5,7 @@ kind: vocabulary
 level: A2
 chapter: a2-words-home-food
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Housework and things"
   fa: "کارهای خانه و وسایل"
@@ -381,3 +381,10 @@ words:
       de: Um sechs Uhr bin ich schon wach.
       en: By six o'clock I'm already awake.
       fa: ساعت شش دیگر بیدارم.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 162 questions, then the 9 changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: 511947f0a0f51b30
