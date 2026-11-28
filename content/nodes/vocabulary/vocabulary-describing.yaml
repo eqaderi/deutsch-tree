@@ -1,31 +1,265 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# besser and beste are the forms of gut; `alsoAccepted` takes the other forms of beste.
 id: vocabulary-describing
 kind: vocabulary
 level: A1
 chapter: a1-words-small-words
 order: 6
-status: coming-soon
+status: published
 title:
   en: "Good, bad, easy: describing"
   fa: "خوب، بد، آسان: توصیف کردن"
   de: "Gut, schlecht, einfach: Beschreiben"
+attemptSize: 15
 words:
   - word: gut
+    class: adjective
+    level: A1
+    meaning:
+      en: good; well
+      fa: خوب
+    definition: so, wie es sein soll; nicht schlecht
+    example:
+      de: Du sprichst sehr gut Deutsch.
+      en: You speak German very well.
+      fa: خیلی خوب آلمانی صحبت می‌کنی.
+
   - word: schlecht
+    class: adjective
+    level: A1
+    meaning:
+      en: bad; badly
+      fa: بد
+    definition: nicht gut, nicht so, wie es sein soll
+    example:
+      de: Das Essen war leider schlecht.
+      en: Unfortunately the food was bad.
+      fa: متأسفانه غذا بد بود.
+    tooCloseTo: [böse]
+
   - word: besser
+    class: adjective
+    level: A1
+    meaning:
+      en: better
+      fa: بهتر
+    definition: "der Komparativ von „gut“: Heute geht es mir … als gestern."
+    example:
+      de: Heute geht es mir besser.
+      en: I'm feeling better today.
+      fa: امروز حالم بهتر است.
+
   - word: beste
+    class: adjective
+    level: A1
+    meaning:
+      en: best
+      fa: بهترین
+    definition: so gut, dass nichts anderes besser ist
+    example:
+      de: Sie ist meine beste Freundin.
+      en: She is my best friend.
+      fa: او بهترین دوست من است.
+    alsoAccepted: [bester, bestes, besten, am besten]
+
   - word: einfach
+    class: adjective
+    level: A1
+    meaning:
+      en: easy, simple
+      fa: آسان، ساده
+    definition: nicht schwer und nicht kompliziert
+    example:
+      de: Die Aufgabe ist ganz einfach.
+      en: The exercise is really easy.
+      fa: تمرین خیلی آسان است.
+    alsoAccepted: [leicht]
+
   - word: normal
+    class: adjective
+    level: A1
+    meaning:
+      en: normal, usual
+      fa: عادی، معمولی
+    definition: so, wie es meistens ist; nichts Besonderes
+    example:
+      de: Heute ist ein ganz normaler Tag.
+      en: Today is a perfectly normal day.
+      fa: امروز یک روز کاملاً عادی است.
+    alsoAccepted: [gewöhnlich, üblich]
+
   - word: klar
+    class: adjective
+    level: A1
+    meaning:
+      en: clear; of course
+      fa: روشن، واضح؛ البته
+    definition: "leicht zu verstehen; auch eine Antwort: natürlich, ja!"
+    example:
+      de: Kommst du mit? – Klar!
+      en: Are you coming along? – Of course!
+      fa: با ما می‌آیی؟ – البته!
+
   - word: wunderbar
+    class: adjective
+    level: A1
+    meaning:
+      en: wonderful
+      fa: فوق‌العاده، عالی
+    definition: ganz toll, sehr, sehr gut
+    example:
+      de: Das Konzert war wunderbar.
+      en: The concert was wonderful.
+      fa: کنسرت فوق‌العاده بود.
+    alsoAccepted:
+      [
+        wundervoll,
+        herrlich,
+        wunderschön,
+        toll,
+        großartig,
+        super,
+        fantastisch,
+        ausgezeichnet,
+        hervorragend,
+        prima,
+        klasse,
+      ]
+
   - word: glücklich
+    class: adjective
+    level: A1
+    meaning:
+      en: happy
+      fa: خوشبخت، شاد
+    definition: voller Freude, weil das Leben schön ist
+    example:
+      de: Die beiden sind sehr glücklich zusammen.
+      en: The two of them are very happy together.
+      fa: آن دو با هم خیلی خوشبخت‌اند.
+    alsoAccepted: [froh]
+    tooCloseTo: [zufrieden]
+
   - word: zufrieden
+    class: adjective
+    level: A1
+    meaning:
+      en: satisfied, content
+      fa: راضی
+    definition: man hat, was man möchte, und will es nicht anders
+    example:
+      de: Bist du mit deiner neuen Wohnung zufrieden?
+      en: Are you satisfied with your new flat?
+      fa: از آپارتمان جدیدت راضی هستی؟
+    tooCloseTo: [glücklich]
+
   - word: böse
+    class: adjective
+    level: A1
+    meaning:
+      en: angry; bad, evil
+      fa: عصبانی؛ بدجنس
+    definition: "sehr unzufrieden mit einer Person; auch: nicht lieb, gemein"
+    example:
+      de: Bist du mir böse?
+      en: Are you angry with me?
+      fa: از دست من عصبانی هستی؟
+    alsoAccepted: [wütend, sauer]
+    tooCloseTo: [schlecht]
+
   - word: lieb
+    class: adjective
+    level: A1
+    meaning:
+      en: kind, sweet, dear
+      fa: مهربان، عزیز
+    definition: "sehr nett zu anderen; auch am Anfang von einem Brief: „Liebe Anna, …“"
+    example:
+      de: Das ist sehr lieb von dir.
+      en: That's very kind of you.
+      fa: خیلی لطف داری.
+    alsoAccepted: [nett, freundlich]
+
   - word: ruhig
+    class: adjective
+    level: A1
+    meaning:
+      en: quiet, calm
+      fa: آرام، ساکت
+    definition: ohne Lärm; auch nicht nervös
+    example:
+      de: Unsere Straße ist sehr ruhig.
+      en: Our street is very quiet.
+      fa: خیابان ما خیلی آرام است.
+    alsoAccepted: [still, leise]
+
   - word: schnell
+    class: adjective
+    level: A1
+    meaning:
+      en: fast, quick
+      fa: سریع، تند
+    definition: nicht langsam
+    example:
+      de: Der Zug fährt sehr schnell.
+      en: The train goes very fast.
+      fa: قطار خیلی سریع حرکت می‌کند.
+    alsoAccepted: [rasch]
+    tooCloseTo: [eilig]
+
   - word: eilig
+    class: adjective
+    level: A1
+    meaning:
+      en: urgent; in a hurry
+      fa: فوری؛ عجله‌ای
+    definition: "es muss schnell gehen, zum Beispiel in „Ich habe es …“"
+    example:
+      de: Ich habe es eilig.
+      en: I'm in a hurry.
+      fa: عجله دارم.
+    alsoAccepted: [dringend]
+    tooCloseTo: [schnell]
+
   - word: kulturell
+    class: adjective
+    level: A1
+    meaning:
+      en: cultural
+      fa: فرهنگی
+    definition: es hat mit Kultur zu tun, zum Beispiel mit Theater, Musik und Kunst
+    example:
+      de: Die Stadt hat ein großes kulturelles Angebot.
+      en: The city has a lot of cultural events.
+      fa: این شهر برنامه‌های فرهنگی زیادی دارد.
+
   - word: automatisch
+    class: adjective
+    level: A1
+    meaning:
+      en: automatic, automatically
+      fa: خودکار
+    definition: ohne Hilfe von einem Menschen, ganz von selbst
+    example:
+      de: Die Tür öffnet sich automatisch.
+      en: The door opens automatically.
+      fa: در به‌طور خودکار باز می‌شود.
+
   - word: möglich
+    class: adjective
+    level: A1
+    meaning:
+      en: possible
+      fa: ممکن
+    definition: so, dass es gehen oder passieren kann
+    example:
+      de: Ist es möglich, heute noch einen Termin zu bekommen?
+      en: Is it possible to get an appointment today?
+      fa: ممکن است امروز وقت بگیرم؟
+
+review:
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 108, then 26, then 6 questions)
+  date: 2026-11-28
+  pool: 029b939548cbe10d

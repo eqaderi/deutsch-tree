@@ -1,40 +1,372 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Several of these verbs are close in meaning (machen and tun, bekommen and kriegen, legen and
+# stellen); `tooCloseTo` keeps a close one from being offered as a wrong meaning, and
+# `alsoAccepted` takes it as right where it fits.
 id: vocabulary-everyday-verbs
 kind: vocabulary
 level: A1
 chapter: a1-words-small-words
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Verbs for every day"
   fa: "فعل‌های هرروزه"
   de: "Verben für jeden Tag"
+attemptSize: 15
 words:
   - word: machen
+    class: verb
+    level: A1
+    meaning:
+      en: to do, to make
+      fa: انجام دادن، درست کردن
+    definition: etwas tun oder herstellen, zum Beispiel Hausaufgaben oder Kaffee
+    example:
+      de: Was machst du am Wochenende?
+      en: What are you doing at the weekend?
+      fa: آخر هفته چه کار می‌کنی؟
+    alsoAccepted: [tun]
+    tooCloseTo: [tun]
+
   - word: tun
+    class: verb
+    level: A1
+    meaning:
+      en: to do
+      fa: کردن، انجام دادن (کاری)
+    definition: etwas machen; man hört es auch in „Das … mir leid.“
+    example:
+      de: Was kann ich für Sie tun?
+      en: What can I do for you?
+      fa: چه کاری می‌توانم برایتان انجام دهم؟
+    alsoAccepted: [machen]
+    tooCloseTo: [machen]
+
   - word: haben
+    class: verb
+    level: A1
+    meaning:
+      en: to have
+      fa: داشتن
+    definition: "zum Beispiel ein Auto oder Zeit: Ich … ein Auto. Wir … keine Zeit."
+    example:
+      de: Wir haben heute keine Zeit.
+      en: We don't have time today.
+      fa: امروز وقت نداریم.
+    alsoAccepted: [besitzen]
+
   - word: sein
+    class: verb
+    level: A1
+    meaning:
+      en: to be
+      fa: بودن
+    definition: "das wichtigste Verb im Deutschen: ich bin, du bist, er ist"
+    example:
+      de: Mein Bruder ist Arzt.
+      en: My brother is a doctor.
+      fa: برادرم پزشک است.
+
   - word: werden
+    class: verb
+    level: A1
+    meaning:
+      en: to become
+      fa: شدن
+    definition: "anders sein als vorher, zum Beispiel: Im Herbst … es kalt."
+    example:
+      de: Meine Tochter wird morgen sechs.
+      en: My daughter turns six tomorrow.
+      fa: دخترم فردا شش‌ساله می‌شود.
+
   - word: geben
+    class: verb
+    level: A1
+    meaning:
+      en: to give
+      fa: دادن
+    definition: einer Person etwas in die Hand tun, damit sie es hat
+    example:
+      de: Kannst du mir bitte das Salz geben?
+      en: Can you give me the salt, please?
+      fa: می‌شود لطفاً نمک را به من بدهی؟
+    tooCloseTo: [abgeben]
+
   - word: nehmen
+    class: verb
+    level: A1
+    meaning:
+      en: to take
+      fa: برداشتن، گرفتن (با دست)
+    definition: etwas mit der Hand greifen, zum Beispiel ein Buch aus dem Regal
+    example:
+      de: Wir nehmen den Bus um acht.
+      en: We're taking the bus at eight.
+      fa: ساعت هشت سوار اتوبوس می‌شویم.
+    tooCloseTo: [mitnehmen]
+
+  # kriegen is the spoken word for bekommen; each is right when the other is asked for.
   - word: bekommen
+    class: verb
+    level: A1
+    meaning:
+      en: to get, to receive
+      fa: دریافت کردن، به دست آوردن
+    definition: "eine andere Person gibt oder schickt einem etwas, zum Beispiel einen Brief: Ich … einen Brief."
+    example:
+      de: Zum Geburtstag habe ich ein Buch bekommen.
+      en: I got a book for my birthday.
+      fa: برای تولدم یک کتاب هدیه گرفتم.
+    alsoAccepted: [kriegen, erhalten]
+    tooCloseTo: [kriegen]
+
   - word: kriegen
+    class: verb
+    level: A1
+    meaning:
+      en: to get (in everyday speech)
+      fa: گرفتن (در زبان محاوره)
+    definition: ein lockeres Wort für „bekommen“
+    example:
+      de: Kriegst du auch so viele E-Mails?
+      en: Do you get so many e-mails too?
+      fa: تو هم این‌قدر ایمیل می‌گیری؟
+    alsoAccepted: [bekommen]
+    tooCloseTo: [bekommen]
+
   - word: bringen
+    class: verb
+    level: A1
+    meaning:
+      en: to bring
+      fa: آوردن
+    definition: etwas zu einer Person oder an einen Ort tragen
+    example:
+      de: Der Kellner bringt die Suppe.
+      en: The waiter brings the soup.
+      fa: پیشخدمت سوپ را می‌آورد.
+    tooCloseTo: [holen]
+
   - word: holen
+    class: verb
+    level: A1
+    meaning:
+      en: to fetch, to go and get
+      fa: رفتن و آوردن
+    definition: irgendwohin gehen, etwas nehmen und damit zurückkommen
+    example:
+      de: Ich hole schnell Brot vom Bäcker.
+      en: I'll quickly go and get bread from the baker's.
+      fa: سریع از نانوایی نان می‌گیرم و برمی‌گردم.
+    tooCloseTo: [bringen, abholen]
+
   - word: abholen
+    class: verb
+    level: A1
+    meaning:
+      en: to pick up, to collect (a person or a thing from a place)
+      fa: دنبال کسی رفتن، تحویل گرفتن (چیزی از جایی)
+    definition: an einen Ort kommen, wo eine Person oder ein Paket wartet, und sie oder es mitnehmen
+    example:
+      de: Ich hole dich um sechs vom Bahnhof ab.
+      en: I'll pick you up from the station at six.
+      fa: ساعت شش از ایستگاه دنبالت می‌آیم.
+    tooCloseTo: [holen]
+
   - word: abgeben
+    class: verb
+    level: A1
+    meaning:
+      en: to hand in, to hand over
+      fa: تحویل دادن
+    definition: etwas einer Person oder an einer Stelle geben, zum Beispiel einen Test oder einen Schlüssel
+    example:
+      de: Bitte geben Sie den Schlüssel an der Rezeption ab.
+      en: Please hand in the key at reception.
+      fa: لطفاً کلید را در پذیرش تحویل دهید.
+    tooCloseTo: [geben]
+
   - word: mitnehmen
+    class: verb
+    level: A1
+    meaning:
+      en: to take along, to take with you
+      fa: با خود بردن
+    definition: etwas mit sich nehmen, wenn man weggeht, zum Beispiel einen Schirm
+    example:
+      de: Nimm einen Schirm mit, es regnet!
+      en: Take an umbrella with you, it's raining!
+      fa: چتر با خودت ببر، باران می‌آید!
+    tooCloseTo: [nehmen]
+
   - word: legen
+    class: verb
+    level: A1
+    meaning:
+      en: to lay, to put (down flat)
+      fa: گذاشتن (به‌صورت خوابیده)
+    definition: eine Sache flach auf etwas tun, zum Beispiel ein Buch auf den Tisch
+    example:
+      de: Leg das Handy bitte auf den Tisch.
+      en: Please put the phone on the table.
+      fa: لطفاً گوشی را روی میز بگذار.
+    alsoAccepted: [hinlegen]
+    tooCloseTo: [stellen]
+
   - word: stellen
+    class: verb
+    level: A1
+    meaning:
+      en: to put (upright)
+      fa: گذاشتن (به‌صورت ایستاده)
+    definition: eine Sache so auf etwas tun, dass sie steht, zum Beispiel eine Flasche auf den Tisch
+    example:
+      de: Stell die Flaschen in den Kühlschrank.
+      en: Put the bottles in the fridge.
+      fa: بطری‌ها را در یخچال بگذار.
+    alsoAccepted: [hinstellen]
+    tooCloseTo: [legen]
+
   - word: liegen
+    class: verb
+    level: A1
+    meaning:
+      en: to lie, to be lying (flat)
+      fa: قرار داشتن (به‌صورت خوابیده)، دراز کشیدن
+    definition: flach auf etwas sein, zum Beispiel im Bett oder auf dem Tisch
+    example:
+      de: Das Buch liegt auf dem Sofa.
+      en: The book is lying on the sofa.
+      fa: کتاب روی مبل است.
+
   - word: stehen
+    class: verb
+    level: A1
+    meaning:
+      en: to stand
+      fa: ایستادن، ایستاده بودن
+    definition: auf den Füßen sein, nicht sitzen und nicht liegen
+    example:
+      de: Im Bus stehen viele Leute.
+      en: Many people are standing on the bus.
+      fa: در اتوبوس عدهٔ زیادی ایستاده‌اند.
+
   - word: sitzen
+    class: verb
+    level: A1
+    meaning:
+      en: to sit, to be sitting
+      fa: نشستن، نشسته بودن
+    definition: auf einem Stuhl sein, nicht stehen und nicht liegen
+    example:
+      de: Wir sitzen im Garten und trinken Tee.
+      en: We're sitting in the garden drinking tea.
+      fa: در باغ نشسته‌ایم و چای می‌نوشیم.
+
   - word: sehen
+    class: verb
+    level: A1
+    meaning:
+      en: to see
+      fa: دیدن
+    definition: etwas mit den Augen erkennen
+    example:
+      de: Siehst du das Haus dort?
+      en: Can you see that house over there?
+      fa: آن خانه را آنجا می‌بینی؟
+
   - word: benutzen
+    class: verb
+    level: A1
+    meaning:
+      en: to use
+      fa: استفاده کردن
+    definition: etwas für eine Arbeit nehmen, zum Beispiel ein Messer zum Schneiden
+    example:
+      de: Darf ich dein Handy benutzen?
+      en: May I use your phone?
+      fa: می‌توانم از گوشی‌ات استفاده کنم؟
+    alsoAccepted: [nutzen, verwenden, gebrauchen, benützen]
+
   - word: gehören
+    class: verb
+    level: A1
+    meaning:
+      en: to belong (to)
+      fa: تعلق داشتن، مال کسی بودن
+    definition: "das Eigentum von einer Person sein, zum Beispiel: Wem … das Fahrrad?"
+    example:
+      de: Das Fahrrad gehört meiner Schwester.
+      en: The bike belongs to my sister.
+      fa: دوچرخه مال خواهرم است.
+
   - word: fehlen
+    class: verb
+    level: A1
+    meaning:
+      en: to be missing, to be absent
+      fa: کم بودن، غایب بودن
+    definition: nicht da sein, aber man braucht es oder wartet darauf
+    example:
+      de: Im Kurs fehlen heute drei Leute.
+      en: Three people are missing from the class today.
+      fa: امروز سه نفر در کلاس غایب‌اند.
+
+  # The scope list gives "sich": the verb is always "sich kümmern um".
   - word: kümmern
+    class: verb
+    level: A1
+    meaning:
+      en: to take care of, to look after (with sich)
+      fa: مراقبت کردن، رسیدگی کردن (فعل انعکاسی)
+    definition: "mit „sich“ und „um“: für eine Person oder eine Sache sorgen, zum Beispiel für ein Kind"
+    example:
+      de: Wer kümmert sich um den Hund?
+      en: Who looks after the dog?
+      fa: چه کسی از سگ نگهداری می‌کند؟
+    alsoAccepted: [sich kümmern, sich kümmern um, sorgen, sorgen für, aufpassen, aufpassen auf, pflegen]
+
+  # The scope list gives "sich": the verb is always "sich freuen".
   - word: freuen
+    class: verb
+    level: A1
+    meaning:
+      en: to be glad, to be pleased (with sich)
+      fa: خوشحال شدن (فعل انعکاسی)
+    definition: "mit „sich“: froh sein, zum Beispiel über ein Geschenk"
+    example:
+      de: Wir freuen uns über deinen Besuch.
+      en: We're glad about your visit.
+      fa: از آمدنت خوشحالیم.
+    alsoAccepted: [sich freuen, froh sein]
+
   - word: anbieten
+    class: verb
+    level: A1
+    meaning:
+      en: to offer
+      fa: پیشنهاد کردن، تعارف کردن
+    definition: sagen, dass eine Person etwas haben kann, zum Beispiel Kaffee oder Hilfe
+    example:
+      de: Er bietet mir seine Hilfe an.
+      en: He offers me his help.
+      fa: او به من پیشنهاد کمک می‌دهد.
+
   - word: empfehlen
+    class: verb
+    level: A1
+    meaning:
+      en: to recommend
+      fa: توصیه کردن
+    definition: einer Person sagen, dass etwas gut für sie ist, zum Beispiel ein Restaurant
+    example:
+      de: Können Sie mir ein gutes Hotel empfehlen?
+      en: Can you recommend a good hotel?
+      fa: می‌توانید هتل خوبی به من توصیه کنید؟
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 162, then 42 questions)
+  date: 2026-11-28
+  pool: 07f0f47de540b8d7

@@ -311,7 +311,7 @@ ich · er · es · sie · Sie · wir · ihr · man · dich · dir · sich · mei
 wer · was · wann · warum · wie · wo · woher · wohin · welcher · was für ein · und · oder · aber · denn · also · auch · nicht · nur · sehr · so
 
 **A1-W6.5 Prepositions** · حرف‌های اضافه · Präpositionen · 21 words  
-an · auf · aus · bei · bis · durch · für · gegen · in · mit · nach · ohne · seit · über · um · unter · von · vor · zu · zwischen · ab
+in · auf · an · unter · über · vor · zwischen · aus · von · ab · nach · zu · bei · mit · ohne · für · gegen · durch · um · bis · seit
 
 **A1-W6.6 Good, bad, easy: describing** · خوب، بد، آسان: توصیف کردن · Gut, schlecht, einfach: Beschreiben · 18 words  
 gut · schlecht · besser · beste · einfach · normal · klar · wunderbar · glücklich · zufrieden · böse · lieb · ruhig · schnell · eilig · kulturell · automatisch · möglich

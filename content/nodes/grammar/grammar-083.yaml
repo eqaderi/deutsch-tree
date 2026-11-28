@@ -4,10 +4,303 @@ kind: grammar
 level: A1
 chapter: a1-pronouns
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-064, grammar-082]
 title:
   en: "*Personalpronomen*, *Dativ*"
-  fa: "ضمیرهای شخصی در *Dativ*"
+  fa: "ضمیرهای شخصی در حالت *Dativ*"
   de: "Personalpronomen im Dativ"
+
+explanations:
+  en:
+    rule: >
+      After a verb that takes the *Dativ*, such as *helfen*, *danken*,
+      *gehören*, *gefallen*, *schmecken* and *passen*, a personal pronoun takes
+      its *Dativ* form: *mir*, *dir*, *ihm*, *ihr*, *ihm*, *uns*, *euch*,
+      *ihnen* and *Ihnen*. It answers *Wem?* (to whom?). The forms you need
+      most are *mir*, *dir* and *Ihnen*: *Kann ich Ihnen helfen?*, *Das gefällt
+      mir.*, *Wie geht es dir?* In the third person the pronoun follows the
+      article in the *Dativ*: *dem* becomes *ihm*, *der* becomes *ihr*, and
+      plural *den* becomes *ihnen*. *Uns* and *euch* are the same as in the
+      *Akkusativ*.
+  fa:
+    rule: >
+      پس از فعلی که حالت *Dativ* (حالت مفعول باواسطه) می‌گیرد، مانند *helfen*،
+      *danken*، *gehören*، *gefallen*، *schmecken* و *passen*، ضمیر شخصی شکل
+      *Dativ* خود را دارد: *mir*، *dir*، *ihm*، *ihr*، *ihm*، *uns*، *euch*،
+      *ihnen* و *Ihnen*. پرسش این حالت *Wem?* (به چه کسی؟) است. پرکاربردترین
+      شکل‌ها *mir*، *dir* و *Ihnen* هستند: *Kann ich Ihnen helfen?*، *Das
+      gefällt mir.* و *Wie geht es dir?* در سوم‌شخص، ضمیر از حرف تعریفِ حالت
+      *Dativ* پیروی می‌کند: به جای *dem* می‌آید *ihm*، به جای *der* می‌آید
+      *ihr* و به جای *den* جمع می‌آید *ihnen*. *uns* و *euch* همان شکل حالت
+      *Akkusativ* را دارند. در فارسی «به من» و «به او» می‌گوییم؛ در آلمانی یک
+      واژه بس است.
+  de:
+    rule: >
+      Nach Verben mit Dativ wie *helfen*, *danken*, *gehören*, *gefallen*,
+      *schmecken* und *passen* steht das Personalpronomen im Dativ: *mir*,
+      *dir*, *ihm*, *ihr*, *ihm*, *uns*, *euch*, *ihnen*, *Ihnen*. Man fragt
+      *Wem?*. Sehr oft braucht man *mir*, *dir* und *Ihnen*: *Kann ich Ihnen
+      helfen?* Bei *er*, *sie* und *es* ist es wie beim Artikel: *dem* wird zu
+      *ihm*, *der* zu *ihr*, und im Plural *den* zu *ihnen*.
+
+# The article-change table of content/README.md: each pronoun from its
+# Nominativ form, with the Akkusativ beside it so that mich and mir are
+# seen together.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, mich, mir, Das gefällt mir.]
+    - [du, dich, dir, Wie geht es dir?]
+    - [er (der Vater), ihn (den Vater), ihm (dem Vater), Ich helfe ihm.]
+    - [sie (die Mutter), sie (die Mutter), ihr (der Mutter), Ich danke ihr.]
+    - [es (das Kind), es (das Kind), ihm (dem Kind), Das Eis schmeckt ihm.]
+    - [wir, uns, uns, Hilfst du uns?]
+    - [ihr, euch, euch, Gefällt euch die Stadt?]
+    - ["sie (die Eltern, Plural)", sie (die Eltern), ihnen (den Eltern), Das Haus gehört ihnen.]
+    - [Sie, Sie, Ihnen, Kann ich Ihnen helfen?]
+
+examples:
+  - de: Kann ich Ihnen helfen?
+    en: Can I help you?
+    fa: می‌توانم کمکتان کنم؟
+  - de: Wie geht es dir? – Danke, gut.
+    en: How are you? – Fine, thanks.
+    fa: حالت چطور است؟ – ممنون، خوبم.
+  - de: Die Jacke gefällt mir.
+    en: I like the jacket.
+    fa: از این کت خوشم می‌آید.
+  - de: Schmeckt dir die Suppe?
+    en: Do you like the soup?
+    fa: سوپ را دوست داری؟
+  - de: Ist das der Hund von Tom? – Ja, er gehört ihm.
+    en: Is that Tom's dog? – Yes, it belongs to him.
+    fa: این سگِ تام است؟ – بله، مال اوست.
+  - de: Die Schuhe passen ihr nicht.
+    en: The shoes don't fit her.
+    fa: این کفش‌ها اندازهٔ پای او نیست.
+  - de: Unsere Nachbarn sind alt. Wir helfen ihnen oft.
+    en: Our neighbours are old. We often help them.
+    fa: همسایه‌هایمان پیرند. ما اغلب به آن‌ها کمک می‌کنیم.
+  - de: Ich danke euch!
+    en: Thank you (plural)!
+    fa: از شما (جمع) ممنونم!
+
+mistakes:
+  - wrong: Kannst du mich helfen?
+    right: Kannst du mir helfen?
+    why:
+      en: "*Helfen* takes the *Dativ*, so *mir*, not *mich*."
+      fa: "*helfen* حالت *Dativ* می‌گیرد، پس *mir* می‌آید، نه *mich*."
+      de: "*Helfen* hat den Dativ: *mir*, nicht *mich*."
+  - wrong: Das gefällt ich.
+    right: Das gefällt mir.
+    why:
+      en: "With *gefallen* the thing is the subject and the person is in the *Dativ*: *mir*."
+      fa: "با *gefallen* آن چیز فاعل است و شخص در حالت *Dativ* می‌آید: *mir*."
+      de: "Bei *gefallen* ist die Sache das Subjekt. Die Person steht im Dativ: *mir*."
+  - wrong: Herr Braun, wie geht es Sie?
+    right: Herr Braun, wie geht es Ihnen?
+    why:
+      en: "*Wie geht es …?* takes the *Dativ*. Polite *Sie* in the *Dativ* is *Ihnen*."
+      fa: "*Wie geht es …?* با حالت *Dativ* می‌آید و *Sie* رسمی در این حالت *Ihnen* است."
+      de: "Bei *Wie geht es …?* steht der Dativ. *Sie* im Dativ ist *Ihnen*."
+  - wrong: Meine Oma ist krank. Ich helfe ihm.
+    right: Meine Oma ist krank. Ich helfe ihr.
+    why:
+      en: "*Oma* is a woman (*die Oma*), and *der Oma* in the *Dativ* becomes *ihr*."
+      fa: "*Oma* زن است (*die Oma*) و به جای *der Oma* در حالت *Dativ* ضمیر *ihr* می‌آید."
+      de: "*Oma* ist eine Frau (*die Oma*). Im Dativ: *der Oma*, das Pronomen ist *ihr*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Kannst du ___ helfen?
+    options: [mir, mich, ich]
+    answer: mir
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *mir*."
+      fa: "*helfen* حالت *Dativ* می‌گیرد: *mir*."
+      de: "*Helfen* hat den Dativ: *mir*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Suppe ist super. Sie schmeckt ___ sehr gut.
+    options: [mir, mich, ich]
+    answer: mir
+    explanation:
+      en: "With *schmecken* the person is in the *Dativ*: *mir*."
+      fa: "با *schmecken* شخص در حالت *Dativ* می‌آید: *mir*."
+      de: "Bei *schmecken* steht die Person im Dativ: *mir*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Herr Braun, wie geht es ___?
+    options: [Ihnen, Sie, Ihr]
+    answer: Ihnen
+    explanation:
+      en: "Polite *Sie* in the *Dativ* is *Ihnen*."
+      fa: "*Sie* رسمی در حالت *Dativ* می‌شود *Ihnen*."
+      de: "*Sie* im Dativ: *Ihnen*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Mein Opa ist krank. Ich helfe ___.
+    options: [ihm, ihr, ihn]
+    answer: ihm
+    explanation:
+      en: "*Der Opa* in the *Dativ* is *dem Opa*, and the pronoun is *ihm*."
+      fa: "*der Opa* در حالت *Dativ* می‌شود *dem Opa* و ضمیرش *ihm* است."
+      de: "*Der Opa* im Dativ: *dem Opa*. Das Pronomen ist *ihm*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Meine Mutter hat viel Arbeit. Ich helfe ___.
+    options: [ihr, ihm, sie]
+    answer: ihr
+    explanation:
+      en: "*Die Mutter* in the *Dativ* is *der Mutter*, and the pronoun is *ihr*."
+      fa: "*die Mutter* در حالت *Dativ* می‌شود *der Mutter* و ضمیرش *ihr* است."
+      de: "*Die Mutter* im Dativ: *der Mutter*. Das Pronomen ist *ihr*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Lena und Paul, gefällt ___ die Stadt?
+    options: [euch, dir, Ihnen]
+    answer: euch
+    explanation:
+      en: "You speak to two friends (*ihr*), and *ihr* in the *Dativ* is *euch*."
+      fa: "با دو دوست حرف می‌زنید (*ihr*) و *ihr* در حالت *Dativ* می‌شود *euch*."
+      de: "Man spricht mit zwei Freunden (*ihr*). Im Dativ: *euch*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Die Kinder sind müde. Das Spiel gefällt ___ nicht mehr.
+    options: [ihnen, sie, ihm]
+    answer: ihnen
+    explanation:
+      en: "*Die Kinder* is plural, and plural *den Kindern* in the *Dativ* becomes *ihnen*."
+      fa: "*die Kinder* جمع است و به جای *den Kindern* در حالت *Dativ* ضمیر *ihnen* می‌آید."
+      de: "*Die Kinder* ist Plural. Im Dativ: *den Kindern*, das Pronomen ist *ihnen*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ist das dein Handy? – Ja, es gehört ___.
+    options: [mir, dir, mich]
+    answer: mir
+    explanation:
+      en: "The phone is mine, and *gehören* takes the *Dativ*: *mir*."
+      fa: "گوشی مال من است و *gehören* حالت *Dativ* می‌گیرد: *mir*."
+      de: "Das Handy ist von mir. *Gehören* hat den Dativ: *mir*."
+  - id: true-1
+    type: true-false
+    prompt: Kann ich dir helfen?
+    answer: true
+    explanation:
+      en: "*Helfen* takes the *Dativ*, and *du* in the *Dativ* is *dir*. The sentence is correct."
+      fa: "*helfen* حالت *Dativ* می‌گیرد و *du* در این حالت *dir* است. جمله درست است."
+      de: "*Helfen* hat den Dativ. *Du* im Dativ ist *dir*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das Kleid gefällt mich.
+    answer: false
+    explanation:
+      en: "With *gefallen* the person is in the *Dativ*: *Das Kleid gefällt mir.*"
+      fa: "با *gefallen* شخص در حالت *Dativ* می‌آید: *Das Kleid gefällt mir.*"
+      de: "Bei *gefallen* steht die Person im Dativ: *Das Kleid gefällt mir.*"
+  - id: true-3
+    type: true-false
+    prompt: Frau Lang, ich danke Ihnen.
+    answer: true
+    explanation:
+      en: "*Danken* takes the *Dativ*, and polite *Sie* in the *Dativ* is *Ihnen*. The sentence is correct."
+      fa: "*danken* حالت *Dativ* می‌گیرد و *Sie* رسمی در این حالت *Ihnen* است. جمله درست است."
+      de: "*Danken* hat den Dativ. *Sie* im Dativ ist *Ihnen*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wie geht es du?
+    answer: false
+    explanation:
+      en: "*Wie geht es …?* takes the *Dativ*: *Wie geht es dir?*"
+      fa: "*Wie geht es …?* با حالت *Dativ* می‌آید: *Wie geht es dir?*"
+      de: "Bei *Wie geht es …?* steht der Dativ: *Wie geht es dir?*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Die Schuhe passen ___ (ich) nicht.
+    answers: [mir]
+    explanation:
+      en: "With *passen* the person is in the *Dativ*: *ich* becomes *mir*."
+      fa: "با *passen* شخص در حالت *Dativ* می‌آید: *ich* به *mir* تبدیل می‌شود."
+      de: "Bei *passen* steht die Person im Dativ: *ich* wird zu *mir*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Herr Kurz, gefällt ___ (Sie) das Hotel?
+    answers: [Ihnen]
+    explanation:
+      en: "With *gefallen* the person is in the *Dativ*: *Sie* becomes *Ihnen*."
+      fa: "با *gefallen* شخص در حالت *Dativ* می‌آید: *Sie* به *Ihnen* تبدیل می‌شود."
+      de: "Bei *gefallen* steht die Person im Dativ: *Sie* wird zu *Ihnen*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Papa, ich danke ___ (du)!
+    answers: [dir]
+    explanation:
+      en: "*Danken* takes the *Dativ*: *du* becomes *dir*."
+      fa: "*danken* حالت *Dativ* می‌گیرد: *du* به *dir* تبدیل می‌شود."
+      de: "*Danken* hat den Dativ: *du* wird zu *dir*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Unsere Nachbarn sind alt. Wir helfen ___ (sie) oft.
+    answers: [ihnen]
+    explanation:
+      en: "The neighbours are plural, so plural *sie* in the *Dativ*: *ihnen*."
+      fa: "همسایه‌ها جمع‌اند، پس *sie* جمع در حالت *Dativ* می‌آید: *ihnen*."
+      de: "Die Nachbarn sind Plural. *Sie* (Plural) im Dativ: *ihnen*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Das ist Marias Buch. Es gehört ___ (sie).
+    answers: [ihr]
+    explanation:
+      en: "Maria is a woman, so *sie* in the *Dativ*: *ihr*."
+      fa: "ماریا زن است، پس *sie* در حالت *Dativ* می‌آید: *ihr*."
+      de: "Maria ist eine Frau. *Sie* im Dativ: *ihr*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Dativ: wir"
+    answers: [uns]
+    explanation:
+      en: "The *Dativ* of *wir* is *uns*, the same as the *Akkusativ*."
+      fa: "شکل *Dativ* ضمیر *wir* می‌شود *uns*، همانند حالت *Akkusativ*."
+      de: "*Wir* im Dativ: *uns*, wie im Akkusativ."
+  - id: error-1
+    type: find-error
+    prompt: Kannst du mich bitte helfen?
+    answer: mich
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *Kannst du mir bitte helfen?*"
+      fa: "*helfen* حالت *Dativ* می‌گیرد: *Kannst du mir bitte helfen?*"
+      de: "*Helfen* hat den Dativ: *Kannst du mir bitte helfen?*"
+  - id: error-2
+    type: find-error
+    prompt: Herr Wolf, wie geht es Sie?
+    answer: Sie
+    explanation:
+      en: "Polite *Sie* in the *Dativ* is *Ihnen*: *Wie geht es Ihnen?*"
+      fa: "*Sie* رسمی در حالت *Dativ* می‌شود *Ihnen*: *Wie geht es Ihnen?*"
+      de: "*Sie* im Dativ ist *Ihnen*: *Wie geht es Ihnen?*"
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, mir]
+      - [du, dir]
+      - [er, ihm]
+      - [sie (Plural), ihnen]
+      - [Sie, Ihnen]
+    explanation:
+      en: "The *Dativ* forms: *mir*, *dir*, *ihm*, plural *ihnen* and polite *Ihnen*."
+      fa: "شکل‌های حالت *Dativ*: *mir*، *dir*، *ihm*، *ihnen* برای جمع و *Ihnen* رسمی."
+      de: "Die Formen im Dativ: *mir*, *dir*, *ihm*, *ihnen* (Plural) und *Ihnen*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 6b4e908b73677313

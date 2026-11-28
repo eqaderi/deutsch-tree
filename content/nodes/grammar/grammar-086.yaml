@@ -4,10 +4,287 @@ kind: grammar
 level: A1
 chapter: a1-pronouns
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-063, grammar-141]
 title:
   en: "Question pronouns *wer*, *was*, *wen*, *wem*"
   fa: "ضمیرهای پرسشی *wer*، *was*، *wen*، *wem*"
   de: "Fragepronomen *wer*, *was*, *wen*, *wem*"
+
+explanations:
+  en:
+    rule: >
+      *Wer?* (who?) asks for the person who does something, the subject:
+      *Wer kommt heute?* *Wen?* (whom?) asks for a person in the *Akkusativ*,
+      the object: *Wen besuchst du?* *Wem?* (to whom?) asks for a person in
+      the *Dativ*, after verbs such as *helfen*, *gehören* and *gefallen* and
+      after *mit*: *Wem gehört die Jacke?*, *Mit wem fährst du?* *Was?* (what?)
+      asks for a thing, as subject or as object. The endings are those of the
+      article: *wer*, *wen*, *wem* like *der*, *den*, *dem*. After *wer* the
+      verb is singular, even when the answer is several people: *Wer kommt?*
+  fa:
+    rule: >
+      *Wer?* (چه کسی؟) کسی را می‌پرسد که کاری می‌کند، یعنی فاعل را: *Wer kommt
+      heute?* *Wen?* (چه کسی را؟) شخصی را در حالت *Akkusativ* می‌پرسد، یعنی
+      مفعول را: *Wen besuchst du?* *Wem?* (به چه کسی؟) شخصی را در حالت *Dativ*
+      می‌پرسد، پس از فعل‌هایی مانند *helfen*، *gehören* و *gefallen* و پس از
+      *mit*: *Wem gehört die Jacke?* و *Mit wem fährst du?* *Was?* (چه؟ چه
+      چیزی؟) چیزی را می‌پرسد، چه فاعل باشد چه مفعول. پایانه‌ها همان پایانه‌های
+      حرف تعریف‌اند: *wer*، *wen*، *wem* مانند *der*، *den*، *dem*. در فارسی
+      «چه کسی» ثابت است و فقط «را» یا «به» عوض می‌شود؛ در آلمانی خود ضمیر
+      پرسشی تغییر می‌کند. پس از *wer* فعل مفرد است، حتی اگر پاسخ چند نفر
+      باشد: *Wer kommt?*
+  de:
+    rule: >
+      Mit *wer* fragt man nach dem Subjekt, nach einer Person: *Wer kommt
+      heute?* Mit *wen* fragt man nach einer Person im Akkusativ: *Wen
+      besuchst du?* Mit *wem* fragt man nach einer Person im Dativ, zum
+      Beispiel nach *helfen*, *gehören* und *mit*: *Wem gehört die Jacke?* Mit
+      *was* fragt man nach einer Sache. Die Endungen sind wie beim Artikel:
+      *wer*, *wen*, *wem* wie *der*, *den*, *dem*. Nach *wer* steht das Verb im
+      Singular: *Wer kommt?*
+
+# The article-change table of content/README.md for the question pronouns:
+# wer, wen, wem beside der, den, dem, which share their endings.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [wer (Person), wen, wem, Wen besuchst du? – Meine Oma.]
+    - [der (Artikel), den, dem, Ich besuche den Mann.]
+    - [was (Sache), was, –, Was kaufst du? – Brot.]
+
+examples:
+  - de: Wer ist das? – Das ist mein Bruder.
+    en: Who is that? – That's my brother.
+    fa: او کیست؟ – برادر من است.
+  - de: Wen besuchst du am Wochenende?
+    en: Who are you visiting at the weekend?
+    fa: آخر هفته به دیدن چه کسی می‌روی؟
+  - de: Wem gehört die Jacke?
+    en: Whose jacket is this?
+    fa: این کت مال کیست؟
+  - de: Mit wem gehst du ins Kino?
+    en: Who are you going to the cinema with?
+    fa: با چه کسی به سینما می‌روی؟
+  - de: Was machst du heute?
+    en: What are you doing today?
+    fa: امروز چه کار می‌کنی؟
+  - de: Was ist das? – Das ist ein Geschenk für dich.
+    en: What is that? – It's a present for you.
+    fa: این چیست؟ – هدیه‌ای برای توست.
+  - de: Wer kommt heute Abend? – Anna und Tom.
+    en: Who is coming tonight? – Anna and Tom.
+    fa: امشب چه کسی می‌آید؟ – آنا و تام.
+  - de: Wem hilfst du? – Meiner Nachbarin.
+    en: Who are you helping? – My neighbour.
+    fa: به چه کسی کمک می‌کنی؟ – به همسایه‌ام.
+
+mistakes:
+  - wrong: Wer besuchst du?
+    right: Wen besuchst du?
+    why:
+      en: "*Du* is the subject; the person you ask about is the object, so the *Akkusativ*: *wen*."
+      fa: "*du* فاعل است و شخصی که پرسیده می‌شود مفعول است، پس حالت *Akkusativ*: *wen*."
+      de: "*Du* ist das Subjekt. Die Person ist das Objekt, also Akkusativ: *wen*."
+  - wrong: Wen gehört das Fahrrad?
+    right: Wem gehört das Fahrrad?
+    why:
+      en: "*Gehören* takes the *Dativ*, so the question is *wem*."
+      fa: "*gehören* حالت *Dativ* می‌گیرد، پس پرسش با *wem* است."
+      de: "*Gehören* hat den Dativ. Darum fragt man mit *wem*."
+  - wrong: Wer kommen heute?
+    right: Wer kommt heute?
+    why:
+      en: "After *wer* the verb is singular, even when several people come."
+      fa: "پس از *wer* فعل مفرد است، حتی اگر چند نفر بیایند."
+      de: "Nach *wer* steht das Verb im Singular, auch bei mehreren Personen."
+  - wrong: Mit wen sprichst du?
+    right: Mit wem sprichst du?
+    why:
+      en: "*Mit* takes the *Dativ*, so *mit wem*."
+      fa: "*mit* حالت *Dativ* می‌گیرد، پس *mit wem*."
+      de: "Nach *mit* steht der Dativ: *mit wem*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ kommt heute Abend?
+    options: [Wer, Wen, Wem]
+    answer: Wer
+    explanation:
+      en: "The person who comes is the subject, so *wer*."
+      fa: "کسی که می‌آید فاعل است، پس *wer*."
+      de: "Die Person ist das Subjekt. Darum: *wer*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ besuchst du am Sonntag?
+    options: [Wen, Wer, Wem]
+    answer: Wen
+    explanation:
+      en: "*Du* is the subject; the person visited is the object (*Akkusativ*): *wen*."
+      fa: "*du* فاعل است و کسی که به دیدنش می‌روند مفعول (حالت *Akkusativ*): *wen*."
+      de: "*Du* ist das Subjekt. Die Person ist das Objekt (Akkusativ): *wen*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ gehört das Auto?
+    options: [Wem, Wen, Wer]
+    answer: Wem
+    explanation:
+      en: "*Gehören* takes the *Dativ*: *wem*."
+      fa: "*gehören* حالت *Dativ* می‌گیرد: *wem*."
+      de: "*Gehören* hat den Dativ: *wem*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ kaufst du im Supermarkt? – Brot und Milch.
+    options: [Was, Wer, Wem]
+    answer: Was
+    explanation:
+      en: "The answer is things, so *was*."
+      fa: "پاسخ چیزهایی است، پس *was*."
+      de: "Die Antwort sind Sachen. Darum: *was*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Mit ___ fährst du nach Berlin?
+    options: [wem, wen, wer]
+    answer: wem
+    explanation:
+      en: "*Mit* takes the *Dativ*: *mit wem*."
+      fa: "*mit* حالت *Dativ* می‌گیرد: *mit wem*."
+      de: "Nach *mit* steht der Dativ: *mit wem*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: ___ hilfst du? – Meiner Mutter.
+    options: [Wem, Wen, Wer]
+    answer: Wem
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *wem*."
+      fa: "*helfen* حالت *Dativ* می‌گیرد: *wem*."
+      de: "*Helfen* hat den Dativ: *wem*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: ___ siehst du? – Ich sehe Paul.
+    options: [Wen, Wem, Wer]
+    answer: Wen
+    explanation:
+      en: "Paul is the object of *sehen* (*Akkusativ*): *wen*."
+      fa: "پاول مفعولِ *sehen* است (حالت *Akkusativ*): *wen*."
+      de: "Paul ist das Objekt von *sehen* (Akkusativ): *wen*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wer ___ heute Abend? – Lisa und Max.
+    options: [kommt, kommen, kommst]
+    answer: kommt
+    explanation:
+      en: "After *wer* the verb is singular, even for two people: *wer kommt*."
+      fa: "پس از *wer* فعل مفرد است، حتی برای دو نفر: *wer kommt*."
+      de: "Nach *wer* steht das Verb im Singular, auch bei zwei Personen: *wer kommt*."
+  - id: true-1
+    type: true-false
+    prompt: Wen fragst du?
+    answer: true
+    explanation:
+      en: "The person asked is the object of *fragen*: *wen*. The sentence is correct."
+      fa: "کسی که از او پرسیده می‌شود مفعولِ *fragen* است: *wen*. جمله درست است."
+      de: "Die Person ist das Objekt von *fragen*: *wen*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wer gefällt der Film?
+    answer: false
+    explanation:
+      en: "With *gefallen* the film is the subject and the person is in the *Dativ*: *Wem gefällt der Film?*"
+      fa: "با *gefallen* فیلم فاعل است و شخص در حالت *Dativ*: *Wem gefällt der Film?*"
+      de: "Bei *gefallen* ist der Film das Subjekt, die Person steht im Dativ: *Wem gefällt der Film?*"
+  - id: true-3
+    type: true-false
+    prompt: Was ist das?
+    answer: true
+    explanation:
+      en: "*Was* asks for a thing. The sentence is correct."
+      fa: "*was* چیزی را می‌پرسد. جمله درست است."
+      de: "Mit *was* fragt man nach einer Sache. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wer liebst du?
+    answer: false
+    explanation:
+      en: "*Du* is the subject; the person loved is the object: *Wen liebst du?*"
+      fa: "*du* فاعل است و کسی که دوستش دارند مفعول: *Wen liebst du?*"
+      de: "*Du* ist das Subjekt. Die Person ist das Objekt: *Wen liebst du?*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: ___ (wer) gehört die Tasche? – Mir.
+    answers: [Wem]
+    explanation:
+      en: "*Gehören* takes the *Dativ*: *wer* becomes *wem*."
+      fa: "*gehören* حالت *Dativ* می‌گیرد: *wer* به *wem* تبدیل می‌شود."
+      de: "*Gehören* hat den Dativ: *wer* wird zu *wem*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (wer) suchst du? – Meinen Sohn.
+    answers: [Wen]
+    explanation:
+      en: "The son is the object of *suchen* (*Akkusativ*): *wer* becomes *wen*."
+      fa: "پسر مفعولِ *suchen* است (حالت *Akkusativ*): *wer* به *wen* تبدیل می‌شود."
+      de: "Der Sohn ist das Objekt von *suchen* (Akkusativ): *wer* wird zu *wen*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (wer) wohnt hier? – Familie Klein.
+    answers: [Wer]
+    explanation:
+      en: "The people who live here are the subject: *wer*."
+      fa: "کسانی که این‌جا زندگی می‌کنند فاعل‌اند: *wer*."
+      de: "Die Personen sind das Subjekt: *wer*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Mit ___ (wer) sprichst du?
+    answers: [wem]
+    explanation:
+      en: "*Mit* takes the *Dativ*: *wer* becomes *wem*."
+      fa: "*mit* حالت *Dativ* می‌گیرد: *wer* به *wem* تبدیل می‌شود."
+      de: "Nach *mit* steht der Dativ: *wer* wird zu *wem*."
+  - id: error-1
+    type: find-error
+    prompt: Wer besuchst du heute?
+    answer: Wer
+    explanation:
+      en: "*Du* is the subject; the person visited is the object: *Wen besuchst du heute?*"
+      fa: "*du* فاعل است و کسی که به دیدنش می‌روند مفعول: *Wen besuchst du heute?*"
+      de: "*Du* ist das Subjekt. Die Person ist das Objekt: *Wen besuchst du heute?*"
+  - id: error-2
+    type: find-error
+    prompt: Wen gehört der Schlüssel?
+    answer: Wen
+    explanation:
+      en: "*Gehören* takes the *Dativ*: *Wem gehört der Schlüssel?*"
+      fa: "*gehören* حالت *Dativ* می‌گیرد: *Wem gehört der Schlüssel?*"
+      de: "*Gehören* hat den Dativ: *Wem gehört der Schlüssel?*"
+  - id: error-3
+    type: find-error
+    prompt: Mit wen gehst du ins Kino?
+    answer: wen
+    explanation:
+      en: "*Mit* takes the *Dativ*: *Mit wem gehst du ins Kino?*"
+      fa: "*mit* حالت *Dativ* می‌گیرد: *Mit wem gehst du ins Kino?*"
+      de: "Nach *mit* steht der Dativ: *Mit wem gehst du ins Kino?*"
+  - id: match-1
+    type: matching
+    answer:
+      - [___ hilfst du? – Meinem Opa., Wem]
+      - [___ besuchst du? – Meine Oma., Wen]
+      - [___ kommt? – Tom., Wer]
+      - [___ kaufst du? – Brot., Was]
+    explanation:
+      en: "*Wem* for the *Dativ* (*helfen*), *wen* for the object, *wer* for the subject, *was* for a thing."
+      fa: "*wem* برای حالت *Dativ* (*helfen*)، *wen* برای مفعول، *wer* برای فاعل و *was* برای چیز."
+      de: "*Wem* im Dativ (*helfen*), *wen* für das Objekt, *wer* für das Subjekt, *was* für eine Sache."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 5bb0999d15f127fb

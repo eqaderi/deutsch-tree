@@ -4,10 +4,264 @@ kind: grammar
 level: A1
 chapter: a1-pronouns
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-146]
 title:
   en: "*etwas*, *nichts*, *alles*, *mehr*"
   fa: "*etwas*، *nichts*، *alles*، *mehr*"
   de: "*etwas*, *nichts*, *alles*, *mehr*"
+
+explanations:
+  en:
+    rule: >
+      *Etwas* means "something", *nichts* "nothing", *alles* "everything" and
+      *mehr* "more". They never change their form. *Nichts* is already
+      negative, so no *nicht* goes with it: *Ich esse jetzt nichts.* In a
+      question German uses *etwas* where English says "anything": *Möchtest du
+      etwas trinken?* *Etwas* can also mean "a little": *Ich spreche etwas
+      Deutsch.* *Mehr* goes before a noun without an ending: *mehr Zeit*.
+      *Nichts mehr* means "nothing more": *Danke, ich möchte nichts mehr.*
+  fa:
+    rule: >
+      *etwas* یعنی «چیزی»، *nichts* یعنی «هیچ‌چیز»، *alles* یعنی «همه‌چیز» و
+      *mehr* یعنی «بیشتر». شکل این واژه‌ها هیچ‌گاه تغییر نمی‌کند. *nichts*
+      خودش منفی است، پس *nicht* کنارش نمی‌آید: *Ich esse jetzt nichts.* در
+      فارسی می‌گوییم «هیچ‌چیز نمی‌خورم» و فعل هم منفی است، ولی در آلمانی فعل
+      مثبت می‌ماند. *etwas* به معنای «کمی» هم هست: *Ich spreche etwas
+      Deutsch.* (کمی آلمانی حرف می‌زنم.) *mehr* بی‌پایانه پیش از اسم می‌آید:
+      *mehr Zeit* (وقت بیشتر). *nichts mehr* یعنی «دیگر هیچ‌چیز»: *Danke, ich
+      möchte nichts mehr.*
+  de:
+    rule: >
+      *Etwas* ist eine Sache, *nichts* ist keine Sache, *alles* sind alle
+      Sachen. *Etwas*, *nichts*, *alles* und *mehr* ändern ihre Form nie.
+      *Nichts* ist schon negativ. Darum steht kein *nicht* dabei: *Ich esse
+      jetzt nichts.* *Etwas* kann auch „ein bisschen“ heißen: *Ich spreche
+      etwas Deutsch.* *Mehr* steht ohne Endung vor einem Nomen: *mehr Zeit*.
+      *Nichts mehr* sagt man, wenn es genug ist: *Danke, ich möchte nichts
+      mehr.*
+
+table:
+  columns:
+    - { en: Word, fa: واژه, de: Wort }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [etwas, Möchtest du etwas trinken?]
+    - [etwas (= ein bisschen), Ich spreche etwas Deutsch.]
+    - [nichts, "Nein, danke. Ich möchte nichts."]
+    - [alles, "Ist das alles? – Ja, das ist alles."]
+    - [mehr, Wir brauchen mehr Zeit.]
+    - [nichts mehr, "Danke, ich möchte nichts mehr."]
+
+examples:
+  - de: Ich esse jetzt nichts.
+    en: I'm not eating anything now.
+    fa: الان چیزی نمی‌خورم.
+  - de: Möchten Sie etwas trinken?
+    en: Would you like something to drink?
+    fa: چیزی برای نوشیدن میل دارید؟
+  - de: Ich verstehe nichts.
+    en: I don't understand anything.
+    fa: هیچ‌چیز نمی‌فهمم.
+  - de: Alles ist gut.
+    en: Everything is fine.
+    fa: همه‌چیز خوب است.
+  - de: Noch etwas? – Nein, danke, das ist alles.
+    en: Anything else? – No, thank you, that's all.
+    fa: چیز دیگری هم می‌خواهید؟ – نه، ممنون، همین.
+  - de: Ich spreche etwas Deutsch.
+    en: I speak a little German.
+    fa: کمی آلمانی حرف می‌زنم.
+  - de: Ich brauche mehr Zeit.
+    en: I need more time.
+    fa: وقت بیشتری لازم دارم.
+  - de: Danke, ich möchte nichts mehr.
+    en: Thank you, I don't want anything more.
+    fa: ممنون، دیگر چیزی نمی‌خواهم.
+
+mistakes:
+  - wrong: Ich esse nicht nichts.
+    right: Ich esse nichts.
+    why:
+      en: "*Nichts* is already negative. No *nicht* goes with it."
+      fa: "*nichts* خودش منفی است و *nicht* کنارش نمی‌آید."
+      de: "*Nichts* ist schon negativ. Ein *nicht* braucht man nicht."
+  - wrong: Ich möchte nicht etwas.
+    right: Ich möchte nichts.
+    why:
+      en: "“Not anything” is one word in German: *nichts*."
+      fa: "«هیچ‌چیز» در آلمانی یک واژه است: *nichts*."
+      de: "*Nicht* und *etwas* zusammen sagt man mit einem Wort: *nichts*."
+  - wrong: Alle ist gut.
+    right: Alles ist gut.
+    why:
+      en: "“Everything” is *alles*, with *-s*."
+      fa: "«همه‌چیز» *alles* است، با *-s* پایانی."
+      de: "Für „jede Sache“ sagt man *alles*, mit *-s*."
+  - wrong: Ich habe nichts Zeit.
+    right: Ich habe keine Zeit.
+    why:
+      en: "*Nichts* stands on its own. Before a noun the negative is *kein*: *keine Zeit*."
+      fa: "*nichts* تنها می‌آید. پیش از اسم، برای نفی *kein* به کار می‌رود: *keine Zeit*."
+      de: "*Nichts* steht allein. Vor einem Nomen sagt man *kein*: *keine Zeit*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Möchtest du ___ trinken? – Ja, gern einen Tee.
+    options: [etwas, nichts, alles]
+    answer: etwas
+    explanation:
+      en: "In a question “anything” is *etwas*. The answer, a tea, is something."
+      fa: "در پرسش، «چیزی» *etwas* است؛ پاسخ هم چیزی است: یک چای."
+      de: "In der Frage sagt man *etwas*. Die Antwort ist eine Sache: ein Tee."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich habe keinen Hunger. Ich esse ___.
+    options: [nichts, etwas, alles]
+    answer: nichts
+    explanation:
+      en: "No hunger, so nothing: *Ich esse nichts.*"
+      fa: "گرسنه نیست، پس هیچ‌چیز نمی‌خورد: *Ich esse nichts.*"
+      de: "Kein Hunger, also *nichts*: *Ich esse nichts.*"
+  - id: gap-3
+    type: gap-fill
+    prompt: Hast du ___? – Ja, den Schlüssel, das Handy und die Tasche.
+    options: [alles, nichts, mehr]
+    answer: alles
+    explanation:
+      en: "The answer lists every thing, so *alles*: everything."
+      fa: "پاسخ همهٔ چیزها را برمی‌شمارد، پس *alles* (همه‌چیز)."
+      de: "Die Antwort nennt alle Sachen. Darum: *alles*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Arbeit ist schwer. Ich brauche ___ Zeit.
+    options: [mehr, alles, nichts]
+    answer: mehr
+    explanation:
+      en: "*Mehr* goes before a noun without an ending: *mehr Zeit*."
+      fa: "*mehr* بی‌پایانه پیش از اسم می‌آید: *mehr Zeit*."
+      de: "*Mehr* steht ohne Endung vor dem Nomen: *mehr Zeit*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Kein Problem, ___ ist gut.
+    options: [alles, alle, allen]
+    answer: alles
+    explanation:
+      en: "“Everything” is *alles*, with *-s*."
+      fa: "«همه‌چیز» *alles* است، با *-s* پایانی."
+      de: "Für „jede Sache“ sagt man *alles*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Danke, ich bin satt. Ich möchte ___.
+    options: [nichts mehr, nicht nichts, mehr nichts]
+    answer: nichts mehr
+    explanation:
+      en: "“Nothing more” is *nichts mehr*, in this order."
+      fa: "«دیگر هیچ‌چیز» می‌شود *nichts mehr*، به همین ترتیب."
+      de: "Man sagt *nichts mehr*, in dieser Reihenfolge."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Sprechen Sie Deutsch? – Ja, ich spreche ___ Deutsch.
+    options: [etwas, nichts, alles]
+    answer: etwas
+    explanation:
+      en: "*Etwas Deutsch* means “a little German”."
+      fa: "*etwas Deutsch* یعنی «کمی آلمانی»."
+      de: "*Etwas Deutsch* heißt: ein bisschen Deutsch."
+  - id: true-1
+    type: true-false
+    prompt: Ich verstehe nichts.
+    answer: true
+    explanation:
+      en: "*Nichts* is negative on its own; the verb stays as it is. The sentence is correct."
+      fa: "*nichts* خودش منفی است و فعل مثبت می‌ماند. جمله درست است."
+      de: "*Nichts* ist allein negativ. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ist das alles? – Ja, danke.
+    answer: true
+    explanation:
+      en: "*Alles* means “everything”. The sentence is correct."
+      fa: "*alles* یعنی «همه‌چیز». جمله درست است."
+      de: "*Alles* heißt: jede Sache. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Wir brauchen mehr Stühle.
+    answer: true
+    explanation:
+      en: "*Mehr* goes before a noun without an ending, also before a plural. The sentence is correct."
+      fa: "*mehr* بی‌پایانه پیش از اسم می‌آید، پیش از اسم جمع نیز. جمله درست است."
+      de: "*Mehr* steht ohne Endung vor dem Nomen, auch im Plural. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Danke, ich möchte mehr nichts.
+    answer: false
+    explanation:
+      en: "The order is *nichts mehr*: *Danke, ich möchte nichts mehr.*"
+      fa: "ترتیب درست *nichts mehr* است: *Danke, ich möchte nichts mehr.*"
+      de: "Man sagt *nichts mehr*: *Danke, ich möchte nichts mehr.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich habe keinen Hunger. Ich esse ___ (etwas / nichts).
+    answers: [nichts]
+    explanation:
+      en: "No hunger, so *nichts*, without *nicht*."
+      fa: "گرسنه نیست، پس *nichts*، بدون *nicht*."
+      de: "Kein Hunger, also *nichts*, ohne *nicht*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Möchten Sie noch ___ (etwas / nichts)? – Ja, einen Kaffee, bitte.
+    answers: [etwas]
+    explanation:
+      en: "The answer is yes, a coffee: *noch etwas*, “something else”."
+      fa: "پاسخ مثبت است، یک قهوه: *noch etwas* (چیز دیگری)."
+      de: "Die Antwort ist ja, ein Kaffee: *noch etwas*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir haben Brot, Käse und Milch. Wir haben ___ (alle / alles).
+    answers: [alles]
+    explanation:
+      en: "Every thing is there, so *alles*, with *-s*."
+      fa: "همهٔ چیزها هست، پس *alles*، با *-s* پایانی."
+      de: "Alle Sachen sind da. Darum: *alles*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Das Zimmer ist zu klein. Wir brauchen ___ (mehr / alles) Platz.
+    answers: [mehr]
+    explanation:
+      en: "*Mehr* goes before a noun without an ending: *mehr Platz*."
+      fa: "*mehr* بی‌پایانه پیش از اسم می‌آید: *mehr Platz*."
+      de: "*Mehr* steht ohne Endung vor dem Nomen: *mehr Platz*."
+  - id: error-1
+    type: find-error
+    prompt: Ich habe heute nichts Zeit.
+    answer: nichts
+    explanation:
+      en: "Before a noun the negative is *kein*: *Ich habe heute keine Zeit.*"
+      fa: "پیش از اسم، برای نفی *kein* می‌آید: *Ich habe heute keine Zeit.*"
+      de: "Vor einem Nomen sagt man *kein*: *Ich habe heute keine Zeit.*"
+  - id: error-2
+    type: find-error
+    prompt: Kein Problem, alle ist gut.
+    answer: alle
+    explanation:
+      en: "“Everything” is *alles*: *Kein Problem, alles ist gut.*"
+      fa: "«همه‌چیز» *alles* است: *Kein Problem, alles ist gut.*"
+      de: "Man sagt *alles*: *Kein Problem, alles ist gut.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [warum, isst, du, nichts]
+    end: "?"
+    explanation:
+      en: "The question word comes first, then the verb and the subject; *nichts* goes at the end."
+      fa: "واژهٔ پرسشی در آغاز می‌آید، سپس فعل و فاعل؛ *nichts* در پایان جمله می‌نشیند."
+      de: "Das Fragewort steht am Anfang, dann das Verb und das Subjekt. *Nichts* steht am Ende."
+
+review:
+  reviewer: two independent AI agents (Claude Opus 5.5 subagents, blind passes on
+    the review sheet only; the second on the rewritten order-1; not people)
+  date: 2026-11-28
+  pool: 45679e0f8fe27ba5

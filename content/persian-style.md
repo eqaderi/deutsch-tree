@@ -79,6 +79,7 @@ its first mention in a node.
 | ending (of an article, adjective or noun) | Endung | پایانه |
 | conjugation; to conjugate | Konjugation | صرف؛ صرف کردن |
 | regular / irregular | regelmäßig / unregelmäßig | باقاعده / بی‌قاعده |
+| mixed verb (*bringen*, *gebracht*) | gemischtes Verb | فعل آمیخته |
 | person; first person singular | Person | شخص؛ اول‌شخص مفرد (also دوم‌شخص، سوم‌شخص) |
 | singular / plural | Singular / Plural | مفرد / جمع |
 | polite *Sie* | Höflichkeitsform | *Sie* رسمی |
@@ -120,6 +121,7 @@ its first mention in a node.
 | passive | Passiv | مجهول |
 | negation | Negation | نفی |
 | question word | Fragewort | واژهٔ پرسشی |
+| question pronoun (*wer*, *was*) | Fragepronomen | ضمیر پرسشی |
 
 A case is always named with «حالت» before it: «با حالت *Dativ* می‌آید», not
 «با *Dativ* می‌آید». A noun is named by its gender, with the article in
