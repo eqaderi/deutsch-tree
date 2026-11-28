@@ -1,38 +1,369 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-science-research
 kind: vocabulary
 level: B1
 chapter: b1-words-learning
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Science, research and technology"
   fa: "علم، پژوهش و فناوری"
   de: "Wissenschaft, Forschung und Technik"
+attemptSize: 15
 words:
   - word: Wissenschaft
+    class: noun
+    article: die
+    plural: Wissenschaften
+    level: B1
+    meaning:
+      en: science, scholarship
+      fa: علم، دانش علمی
+    definition: alle Fächer wie Physik, Biologie oder Geschichte, in denen man an Universitäten forscht und lehrt
+    example:
+      de: Die Wissenschaft hat in den letzten 100 Jahren viel erreicht.
+      en: Science has achieved a lot in the last 100 years.
+      fa: علم در صد سال گذشته به دستاوردهای بسیاری رسیده است.
+
   - word: Wissenschaftler
+    class: noun
+    article: der
+    plural: Wissenschaftler
+    level: B1
+    meaning:
+      en: scientist, researcher
+      fa: دانشمند، پژوهشگر
+    definition: eine Person, die forscht und neues Wissen sucht, oft an einer Universität
+    example:
+      de: Wissenschaftler aus zehn Ländern arbeiten an dem Projekt.
+      en: Scientists from ten countries are working on the project.
+      fa: دانشمندانی از ده کشور روی این پروژه کار می‌کنند.
+    alsoAccepted: [die Wissenschaftlerin, der Forscher, die Forscherin]
+
+  # Forschung and Recherche can both be "research".
   - word: Forschung
+    class: noun
+    article: die
+    plural: Forschungen
+    level: B1
+    meaning:
+      en: research (scientific)
+      fa: پژوهش (علمی)
+    definition: die Arbeit, bei der man etwas genau und lange untersucht, um Neues zu finden
+    example:
+      de: Die Firma gibt viel Geld für Forschung aus.
+      en: The company spends a lot of money on research.
+      fa: این شرکت پول زیادی صرف پژوهش می‌کند.
+    tooCloseTo: [Recherche, Studie]
+
   - word: Studie
+    class: noun
+    article: die
+    plural: Studien
+    level: B1
+    meaning:
+      en: study (a scientific investigation of one question)
+      fa: مطالعهٔ علمی، بررسی (دربارهٔ یک پرسش)
+    definition: eine wissenschaftliche Untersuchung zu einer bestimmten Frage, mit Ergebnissen
+    example:
+      de: Eine neue Studie zeigt, dass viele Kinder zu wenig schlafen.
+      en: A new study shows that many children don't sleep enough.
+      fa: یک مطالعهٔ تازه نشان می‌دهد که بسیاری از بچه‌ها کم می‌خوابند.
+    tooCloseTo: [Forschung]
+
   - word: Theorie
+    class: noun
+    article: die
+    plural: Theorien
+    level: B1
+    meaning:
+      en: theory
+      fa: نظریه، تئوری
+    definition: Gedanken und Regeln, die etwas erklären sollen, auch wenn man sie in der Praxis noch nicht geprüft hat
+    example:
+      de: In der Theorie klingt das gut, aber in der Praxis funktioniert es nicht.
+      en: In theory that sounds good, but in practice it doesn't work.
+      fa: در تئوری خوب به نظر می‌رسد، اما در عمل کار نمی‌کند.
+
   - word: theoretisch
+    class: adjective
+    level: B1
+    meaning:
+      en: theoretical, in theory
+      fa: نظری، از نظر تئوری
+    definition: nur in Gedanken, nicht in der Praxis
+    example:
+      de: Theoretisch kann man in drei Monaten Deutsch lernen, praktisch dauert es länger.
+      en: In theory you can learn German in three months; in practice it takes longer.
+      fa: از نظر تئوری می‌توان در سه ماه آلمانی یاد گرفت، اما در عمل بیشتر طول می‌کشد.
+
   - word: Experte
+    class: noun
+    article: der
+    plural: Experten
+    level: B1
+    meaning:
+      en: expert
+      fa: کارشناس، متخصص
+    definition: eine Person, die über ein Thema sehr viel weiß
+    example:
+      de: Experten sagen, dass die Preise weiter steigen.
+      en: Experts say that prices will go on rising.
+      fa: کارشناسان می‌گویند قیمت‌ها باز هم بالا می‌رود.
+    alsoAccepted: [die Expertin, der Fachmann, die Fachfrau]
+
   - word: Statistik
+    class: noun
+    article: die
+    plural: Statistiken
+    level: B1
+    meaning:
+      en: statistics
+      fa: آمار
+    definition: Zahlen, die man sammelt und ordnet, damit man etwas über viele Menschen oder Dinge weiß
+    example:
+      de: Laut Statistik leben in Berlin fast vier Millionen Menschen.
+      en: According to the statistics almost four million people live in Berlin.
+      fa: طبق آمار، نزدیک به چهار میلیون نفر در برلین زندگی می‌کنند.
+
   - word: statistisch
+    class: adjective
+    level: B1
+    meaning:
+      en: statistical
+      fa: آماری
+    definition: mit Zahlen von sehr vielen Fällen gezeigt
+    example:
+      de: Statistisch gesehen ist Fliegen sicherer als Autofahren.
+      en: Statistically speaking, flying is safer than driving.
+      fa: از نظر آماری، پرواز از رانندگی امن‌تر است.
+
   - word: Umfrage
+    class: noun
+    article: die
+    plural: Umfragen
+    level: B1
+    meaning:
+      en: survey, poll
+      fa: نظرسنجی
+    definition: wenn man vielen Menschen dieselben Fragen stellt, um ihre Meinung zu erfahren
+    example:
+      de: Bei einer Umfrage haben 60 % der Befragten Ja gesagt.
+      en: In a survey 60 % of those asked said yes.
+      fa: در یک نظرسنجی ۶۰٪ از پاسخ‌دهندگان پاسخ مثبت دادند.
+    alsoAccepted: [die Befragung]
+
   - word: Recherche
+    class: noun
+    article: die
+    plural: Recherchen
+    level: B1
+    meaning:
+      en: research, investigation (looking for information, for example as a journalist)
+      fa: جست‌وجو و گردآوری اطلاعات (مثلاً برای یک گزارش)
+    definition: die Suche nach Informationen zu einem Thema, zum Beispiel im Internet oder in Büchern
+    example:
+      de: Nach kurzer Recherche im Internet habe ich die Antwort gefunden.
+      en: After a short search on the internet I found the answer.
+      fa: پس از کمی جست‌وجو در اینترنت، پاسخ را پیدا کردم.
+    tooCloseTo: [Forschung]
+
   - word: analysieren
+    class: verb
+    level: B1
+    meaning:
+      en: to analyse
+      fa: تحلیل کردن، تجزیه و تحلیل کردن
+    definition: etwas sehr genau untersuchen, um es zu verstehen
+    example:
+      de: Die Forscher analysieren die Daten aus der Umfrage.
+      en: The researchers are analysing the data from the survey.
+      fa: پژوهشگران داده‌های نظرسنجی را تحلیل می‌کنند.
+
   - word: Erfindung
+    class: noun
+    article: die
+    plural: Erfindungen
+    level: B1
+    meaning:
+      en: invention
+      fa: اختراع
+    definition: etwas Neues, das eine Person als Erste gebaut oder gemacht hat
+    example:
+      de: Das Telefon war eine wichtige Erfindung.
+      en: The telephone was an important invention.
+      fa: تلفن اختراع مهمی بود.
+
   - word: erfinden
+    class: verb
+    level: B1
+    meaning:
+      en: to invent
+      fa: اختراع کردن
+    definition: als Erster etwas ganz Neues bauen oder machen
+    example:
+      de: Wer hat eigentlich das Fahrrad erfunden?
+      en: Who actually invented the bicycle?
+      fa: راستی، دوچرخه را چه کسی اختراع کرد؟
+
   - word: entdecken
+    class: verb
+    level: B1
+    meaning:
+      en: to discover
+      fa: کشف کردن، پیدا کردن (چیزی ناشناخته)
+    definition: etwas finden, das man vorher nicht kannte
+    example:
+      de: Im Urlaub haben wir einen kleinen, ruhigen Strand entdeckt.
+      en: On holiday we discovered a small, quiet beach.
+      fa: در تعطیلات ساحل کوچک و آرامی کشف کردیم.
+
   - word: Entwicklung
+    class: noun
+    article: die
+    plural: Entwicklungen
+    level: B1
+    meaning:
+      en: development
+      fa: توسعه، رشد، تحول
+    definition: wenn etwas langsam anders, größer oder besser wird, oder wenn man etwas Neues macht
+    example:
+      de: Die Entwicklung eines neuen Medikaments dauert oft zehn Jahre.
+      en: Developing a new medicine often takes ten years.
+      fa: ساخت یک داروی تازه اغلب ده سال طول می‌کشد.
+
   - word: entwickeln
+    class: verb
+    level: B1
+    meaning:
+      en: to develop (plan and make something new)
+      fa: توسعه دادن، طراحی و ساختن (چیزی تازه)
+    definition: lange an einem neuen Produkt arbeiten, bis es fertig ist, zum Beispiel an einem Medikament oder einer App
+    example:
+      de: Die Firma entwickelt Apps für Schulen.
+      en: The company develops apps for schools.
+      fa: این شرکت برای مدرسه‌ها اپلیکیشن می‌سازد.
+
+  # Technik, Technologie and Methode overlap ("technology", "technique").
   - word: Technik
+    class: noun
+    article: die
+    plural: Techniken
+    level: B1
+    meaning:
+      en: technology, engineering; technique (a way of doing something)
+      fa: فن، مهندسی؛ شیوهٔ انجام کار
+    definition: Maschinen und Geräte und das Wissen, wie man sie baut; auch die Art, wie man etwas macht
+    example:
+      de: Mein Vater interessiert sich sehr für Technik.
+      en: My father is very interested in technology.
+      fa: پدرم به مسائل فنی خیلی علاقه دارد.
+    alsoAccepted: [die Technologie]
+    tooCloseTo: [Technologie, Methode]
+
   - word: Technologie
+    class: noun
+    article: die
+    plural: Technologien
+    level: B1
+    meaning:
+      en: technology (one particular modern technical process, for example for solar power)
+      fa: فناوری (یک روش فنی نوین و مشخص، مثلاً برای انرژی خورشیدی)
+    definition: ein bestimmtes modernes technisches Verfahren, zum Beispiel für Solaranlagen oder Batterien
+    example:
+      de: Mit dieser Technologie spart man viel Energie.
+      en: This technology saves a lot of energy.
+      fa: این فناوری انرژی زیادی را صرفه‌جویی می‌کند.
+    alsoAccepted: [die Technik]
+    tooCloseTo: [Technik]
+
   - word: technisch
+    class: adjective
+    level: B1
+    meaning:
+      en: technical
+      fa: فنی
+    definition: so, dass es mit Maschinen und Geräten zu tun hat
+    example:
+      de: Wegen eines technischen Problems fährt der Zug heute nicht.
+      en: Because of a technical problem the train isn't running today.
+      fa: قطار امروز به دلیل یک مشکل فنی حرکت نمی‌کند.
+
   - word: Methode
+    class: noun
+    article: die
+    plural: Methoden
+    level: B1
+    meaning:
+      en: method
+      fa: روش
+    definition: die Art und Weise, wie man etwas macht, in festen Schritten
+    example:
+      de: Mit dieser Methode lernt man Vokabeln schneller.
+      en: With this method you learn vocabulary faster.
+      fa: با این روش واژه‌ها را سریع‌تر یاد می‌گیرید.
+    alsoAccepted: [das Verfahren]
+    tooCloseTo: [Technik]
+
   - word: Faktor
+    class: noun
+    article: der
+    plural: Faktoren
+    level: B1
+    meaning:
+      en: factor
+      fa: عامل
+    definition: eine Sache, die bei einem Ergebnis eine Rolle spielt
+    example:
+      de: Schlaf ist ein wichtiger Faktor für die Gesundheit.
+      en: Sleep is an important factor for health.
+      fa: خواب عامل مهمی برای سلامت است.
+
   - word: Durchschnitt
+    class: noun
+    article: der
+    plural: Durchschnitte
+    level: B1
+    meaning:
+      en: average (all the numbers added up and divided by how many there are)
+      fa: میانگین
+    definition: der Wert, den man bekommt, wenn man alle Zahlen addiert und durch ihre Anzahl teilt
+    example:
+      de: Im Durchschnitt schlafen Erwachsene sieben Stunden pro Nacht.
+      en: On average adults sleep seven hours a night.
+      fa: بزرگسالان به‌طور میانگین شبی هفت ساعت می‌خوابند.
+    alsoAccepted: [der Mittelwert]
+
   - word: durchschnittlich
+    class: adjective
+    level: B1
+    meaning:
+      en: average, on average; ordinary
+      fa: متوسط، به‌طور میانگین؛ معمولی
+    definition: so wie die meisten, nicht besonders gut und nicht besonders schlecht; im Mittel
+    example:
+      de: Durchschnittlich trinkt man in Deutschland drei Tassen Kaffee am Tag.
+      en: On average people in Germany drink three cups of coffee a day.
+      fa: در آلمان مردم به‌طور میانگین روزی سه فنجان قهوه می‌نوشند.
+
   - word: Philosophie
+    class: noun
+    article: die
+    plural: Philosophien
+    level: B1
+    meaning:
+      en: philosophy
+      fa: فلسفه
+    definition: die Wissenschaft, die über die großen Fragen des Lebens nachdenkt, zum Beispiel was gut und was richtig ist
+    example:
+      de: Meine Schwester studiert Philosophie in Tübingen.
+      en: My sister is studying philosophy in Tübingen.
+      fa: خواهرم در توبینگن فلسفه می‌خواند.
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 150 questions, then 20 and 6 changed or disputed ones; not
+    people)"
+  date: 2026-11-28
+  pool: 6a5d747aa79a1dc3

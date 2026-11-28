@@ -1,35 +1,330 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-exams-marks
 kind: vocabulary
 level: B1
 chapter: b1-words-learning
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Exams, marks and certificates"
   fa: "امتحان، نمره و مدرک"
   de: "Prüfungen, Noten und Zeugnisse"
+attemptSize: 15
 words:
   - word: Klassenarbeit
+    class: noun
+    article: die
+    plural: Klassenarbeiten
+    level: B1
+    meaning:
+      en: class test (a written test at school)
+      fa: امتحان کتبی سر کلاس (در مدرسه)
+    definition: ein schriftlicher Test, den alle Schüler einer Klasse zusammen in der Schule schreiben
+    example:
+      de: Morgen schreiben wir eine Klassenarbeit in Mathe.
+      en: Tomorrow we have a class test in maths.
+      fa: فردا امتحان کتبی ریاضی داریم.
+    # The scope list names the Austrian word.
+    alsoAccepted: [die Schularbeit]
+
   - word: Nachhilfe
+    class: noun
+    article: die
+    plural: Nachhilfen
+    level: B1
+    meaning:
+      en: private tutoring, extra lessons (for a pupil who has problems in a subject)
+      fa: کلاس تقویتی، درس خصوصی
+    definition: zusätzlicher Unterricht für Schüler, die in einem Fach Probleme haben
+    example:
+      de: Mein Sohn bekommt zweimal pro Woche Nachhilfe in Englisch.
+      en: My son gets extra lessons in English twice a week.
+      fa: پسرم هفته‌ای دو بار کلاس تقویتی انگلیسی دارد.
+    alsoAccepted: [der Nachhilfeunterricht]
+
   - word: Intensivkurs
+    class: noun
+    article: der
+    plural: Intensivkurse
+    level: B1
+    meaning:
+      en: intensive course
+      fa: دورهٔ فشرده
+    definition: ein Kurs mit sehr vielen Stunden in kurzer Zeit
+    example:
+      de: "Im Sommer mache ich einen Intensivkurs: vier Wochen, jeden Tag fünf Stunden."
+      en: "In the summer I'm doing an intensive course: four weeks, five hours every day."
+      fa: "تابستان یک دورهٔ فشرده می‌گذرانم: چهار هفته، هر روز پنج ساعت."
+
+  # Zertifikat and Urkunde are both certificates; neither is offered as a wrong meaning of the other.
   - word: Zertifikat
+    class: noun
+    article: das
+    plural: Zertifikate
+    level: B1
+    meaning:
+      en: certificate (that you passed an exam or did a course)
+      fa: گواهی‌نامه (قبولی در امتحان یا گذراندن دوره)
+    definition: ein Papier, das zeigt, dass man eine Prüfung bestanden oder einen Kurs gemacht hat
+    example:
+      de: Wer die Prüfung besteht, bekommt ein Zertifikat.
+      en: Anyone who passes the exam gets a certificate.
+      fa: هر کس در امتحان قبول شود، گواهی‌نامه می‌گیرد.
+    tooCloseTo: [Urkunde]
+
+  # Diplom and Abschluss can both be a degree.
   - word: Diplom
+    class: noun
+    article: das
+    plural: Diplome
+    level: B1
+    meaning:
+      en: diploma (the document and title of a university degree)
+      fa: دانشنامه (سند و عنوان مدرک دانشگاهی)
+    definition: der Titel und das Papier, die man nach einem Studium an einer Hochschule bekommt
+    example:
+      de: Nach fünf Jahren Studium hat sie endlich ihr Diplom bekommen.
+      en: After five years of study she finally got her degree.
+      fa: پس از پنج سال تحصیل، سرانجام مدرک دانشگاهی‌اش را گرفت.
+    tooCloseTo: [Abschluss]
+
   - word: Abschluss
+    class: noun
+    article: der
+    plural: Abschlüsse
+    level: B1
+    meaning:
+      en: completion, graduation (finishing school, training or studies with an exam)
+      fa: فارغ‌التحصیلی، پایان تحصیل (با امتحان نهایی)
+    definition: das Ende von einer Schule, einer Ausbildung oder einem Studium mit einer Prüfung
+    example:
+      de: Nach dem Abschluss möchte ich ein Jahr im Ausland arbeiten.
+      en: After graduating I'd like to work abroad for a year.
+      fa: بعد از فارغ‌التحصیلی می‌خواهم یک سال در خارج کار کنم.
+    tooCloseTo: [Diplom]
+
+  # The six marks of German schools, from 1 (the best) to 6.
   - word: sehr gut
+    class: phrase
+    level: B1
+    meaning:
+      en: very good (the best mark, a 1)
+      fa: خیلی خوب (بهترین نمره، ۱)
+    definition: so gut, dass man in der Schule die beste Note bekommt, eine Eins
+    example:
+      de: Deine Arbeit ist sehr gut, du bekommst eine Eins.
+      en: Your work is very good, you're getting a 1.
+      fa: کارت خیلی خوب است، نمرهٔ ۱ می‌گیری.
+    tooCloseTo: [ausgezeichnet]
+
   - word: befriedigend
+    class: adjective
+    level: B1
+    meaning:
+      en: satisfactory (the mark 3)
+      fa: متوسط، قابل قبول (نمرهٔ ۳)
+    definition: in Ordnung, aber nicht besonders gut; in der Schule ist das eine Drei
+    example:
+      de: Der Aufsatz war befriedigend, also eine Drei.
+      en: The essay was satisfactory, so a 3.
+      fa: انشا قابل قبول بود، یعنی نمرهٔ ۳.
+
   - word: ausreichend
+    class: adjective
+    level: B1
+    meaning:
+      en: sufficient, enough; as a mark a 4, the lowest pass
+      fa: کافی؛ در نمره‌دهی ۴، کمترین نمرهٔ قبولی
+    definition: genug; in der Schule die Note vier, mit der man gerade noch bestanden hat
+    example:
+      de: Mit „ausreichend“ hat er die Prüfung gerade noch bestanden.
+      en: With a 4 he only just passed the exam.
+      fa: او با نمرهٔ ۴ به‌زحمت در امتحان قبول شد.
+
   - word: mangelhaft
+    class: adjective
+    level: B1
+    meaning:
+      en: poor, faulty; as a mark a 5, a fail
+      fa: ضعیف، ناقص؛ در نمره‌دهی ۵، مردود
+    definition: mit vielen Fehlern oder schlecht gemacht; in der Schule die Note fünf, mit der man nicht bestanden hat
+    example:
+      de: Die Reparatur war mangelhaft, die Heizung ist schon wieder kaputt.
+      en: The repair was poor, the heating is broken again already.
+      fa: تعمیر ناقص بود و شوفاژ دوباره خراب شده است.
+
   - word: ungenügend
+    class: adjective
+    level: B1
+    meaning:
+      en: unsatisfactory, very poor (the mark 6, the worst)
+      fa: بسیار ضعیف (نمرهٔ ۶، بدترین نمره)
+    definition: so schlecht, dass man in der Schule die schlechteste Note bekommt, eine Sechs
+    example:
+      de: Er hat ein leeres Blatt abgegeben und „ungenügend“ bekommen.
+      en: He handed in a blank sheet and got a 6.
+      fa: او برگهٔ سفید تحویل داد و نمرهٔ ۶ گرفت.
+    tooCloseTo: [mangelhaft]
+
   - word: ausgezeichnet
+    class: adjective
+    level: B1
+    meaning:
+      en: excellent, outstanding
+      fa: عالی، درخشان
+    definition: von sehr hoher Qualität, viel besser als normal, zum Beispiel ein Essen oder ein Hotel
+    example:
+      de: Das Essen in diesem Restaurant ist ausgezeichnet.
+      en: The food in this restaurant is excellent.
+      fa: غذای این رستوران عالی است.
+    alsoAccepted: [hervorragend, exzellent, erstklassig, vorzüglich]
+    tooCloseTo: [sehr gut]
+
   - word: Übung
+    class: noun
+    article: die
+    plural: Übungen
+    level: B1
+    meaning:
+      en: exercise, practice
+      fa: تمرین
+    definition: eine Aufgabe, mit der man etwas lernt und trainiert
+    example:
+      de: Machen Sie bitte Übung 3 auf Seite 40.
+      en: Please do exercise 3 on page 40.
+      fa: لطفاً تمرین ۳ صفحهٔ ۴۰ را انجام دهید.
+
   - word: Wiederholung
+    class: noun
+    article: die
+    plural: Wiederholungen
+    level: B1
+    meaning:
+      en: revision, repetition
+      fa: مرور، تکرار
+    definition: wenn man etwas noch einmal macht oder lernt, damit man es nicht vergisst
+    example:
+      de: Vor der Prüfung machen wir eine Wiederholung von allen Kapiteln.
+      en: Before the exam we revise all the chapters.
+      fa: پیش از امتحان همهٔ فصل‌ها را مرور می‌کنیم.
+
   - word: Fortschritt
+    class: noun
+    article: der
+    plural: Fortschritte
+    level: B1
+    meaning:
+      en: progress (getting better at something)
+      fa: پیشرفت
+    definition: ein Schritt nach vorn, zum Beispiel beim Lernen, in der Medizin oder in der Technik
+    example:
+      de: Du hast in Deutsch große Fortschritte gemacht!
+      en: You've made great progress in German!
+      fa: در آلمانی خیلی پیشرفت کرده‌ای!
+
+  # korrigieren and verbessern can both be "to correct".
   - word: korrigieren
+    class: verb
+    level: B1
+    meaning:
+      en: to correct, to mark (find and put right the mistakes)
+      fa: تصحیح کردن (پیدا کردن و درست کردن اشتباه‌ها)
+    definition: eine Arbeit durchlesen, die Fehler markieren und richtig machen, zum Beispiel als Lehrerin
+    example:
+      de: Die Lehrerin korrigiert am Wochenende unsere Tests.
+      en: The teacher marks our tests at the weekend.
+      fa: معلم آخر هفته برگه‌های امتحانمان را تصحیح می‌کند.
+    alsoAccepted: [verbessern, berichtigen]
+    tooCloseTo: [verbessern]
+
   - word: verbessern
+    class: verb
+    level: B1
+    meaning:
+      en: to improve, to make better
+      fa: بهتر کردن، بهبود دادن
+    definition: etwas so ändern, dass es besser wird
+    example:
+      de: Ich möchte meine Aussprache verbessern.
+      en: I'd like to improve my pronunciation.
+      fa: می‌خواهم تلفظم را بهتر کنم.
+    tooCloseTo: [korrigieren]
+
   - word: Leistung
+    class: noun
+    article: die
+    plural: Leistungen
+    level: B1
+    meaning:
+      en: performance, achievement
+      fa: عملکرد، دستاورد
+    definition: das, was man mit Arbeit oder Training schafft, und wie gut es ist
+    example:
+      de: Ihre Leistungen in der Schule sind sehr gut.
+      en: Her performance at school is very good.
+      fa: عملکردش در مدرسه خیلی خوب است.
+
   - word: testen
+    class: verb
+    level: B1
+    meaning:
+      en: to test, to try out
+      fa: آزمایش کردن، امتحان کردن (چیزی)
+    definition: prüfen, ob etwas funktioniert, oder sehen, was eine Person kann
+    example:
+      de: Bevor du das Programm kaufst, kannst du es 30 Tage kostenlos testen.
+      en: Before you buy the program, you can test it free for 30 days.
+      fa: پیش از خرید این برنامه، می‌توانی آن را ۳۰ روز رایگان امتحان کنی.
+    alsoAccepted: [prüfen, ausprobieren]
+
   - word: Qualifikation
+    class: noun
+    article: die
+    plural: Qualifikationen
+    level: B1
+    meaning:
+      en: qualification (what makes you fit for a job)
+      fa: صلاحیت حرفه‌ای (آموزش و مدرکی که برای یک کار لازم است)
+    definition: das, was man gelernt hat und kann, damit man eine bestimmte Arbeit machen darf
+    example:
+      de: Für diese Stelle haben Sie leider nicht die richtige Qualifikation.
+      en: Unfortunately you don't have the right qualification for this job.
+      fa: متأسفانه صلاحیت لازم برای این شغل را ندارید.
+
   - word: Urkunde
+    class: noun
+    article: die
+    plural: Urkunden
+    level: B1
+    meaning:
+      en: official certificate, document (for example of a birth or a prize)
+      fa: سند رسمی، لوح (مثلاً گواهی تولد یا لوح تقدیر)
+    definition: ein offizielles Papier, das etwas bestätigt, zum Beispiel eine Geburt, eine Hochzeit oder einen Preis
+    example:
+      de: Die Sieger des Wettbewerbs bekommen eine Urkunde.
+      en: The winners of the competition get a certificate.
+      fa: برندگان مسابقه لوح تقدیر می‌گیرند.
+    tooCloseTo: [Zertifikat]
+
   - word: Kandidat
+    class: noun
+    article: der
+    plural: Kandidaten
+    level: B1
+    meaning:
+      en: candidate
+      fa: داوطلب، نامزد
+    definition: eine Person, die bei einer Prüfung oder Wahl mitmacht oder eine Stelle haben möchte
+    example:
+      de: Jeder Kandidat hat zwanzig Minuten Zeit.
+      en: Each candidate has twenty minutes.
+      fa: هر داوطلب بیست دقیقه وقت دارد.
+    alsoAccepted: [die Kandidatin]
+
+review:
+  reviewer: "independent AI agents (five fresh Claude Opus 5.5 subagents, review
+    sheet only: all 132 questions, then 48, 14, 6 and 9 changed or disputed
+    ones; not people)"
+  date: 2026-11-28
+  pool: 09fcd2322dae8126

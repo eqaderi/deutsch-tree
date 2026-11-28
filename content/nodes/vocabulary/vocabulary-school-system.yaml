@@ -1,37 +1,380 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-school-system
 kind: vocabulary
 level: B1
 chapter: b1-words-learning
 order: 1
-status: coming-soon
+status: published
 title:
   en: "Schools and universities"
   fa: "مدرسه‌ها و دانشگاه‌ها"
   de: "Schulen und Hochschulen"
+attemptSize: 15
 words:
   - word: Grundschule
+    class: noun
+    article: die
+    plural: Grundschulen
+    level: B1
+    meaning:
+      en: primary school
+      fa: دبستان
+    definition: die erste Schule für Kinder, ungefähr von sechs bis zehn Jahren
+    example:
+      de: Unsere Tochter kommt im Herbst in die Grundschule.
+      en: Our daughter starts primary school in the autumn.
+      fa: دخترمان پاییز به دبستان می‌رود.
+
   - word: Gymnasium
+    class: noun
+    article: das
+    plural: Gymnasien
+    level: B1
+    meaning:
+      en: academic secondary school (it ends with the exam for university)
+      fa: دبیرستان نظری (که با مدرک ورود به دانشگاه تمام می‌شود)
+    definition: eine Schule nach der Grundschule, die mit dem Abitur endet
+    example:
+      de: Nach der vierten Klasse ist Jonas aufs Gymnasium gewechselt.
+      en: After year four Jonas moved up to an academic secondary school.
+      fa: یوناس بعد از کلاس چهارم به دبیرستان نظری رفت.
+
+  # Realschule and Mittelschule are both secondary schools after primary school.
   - word: Realschule
+    class: noun
+    article: die
+    plural: Realschulen
+    level: B1
+    meaning:
+      en: secondary school up to year ten (between the general and the academic school)
+      fa: مدرسهٔ متوسطه تا پایهٔ دهم (میان مدرسهٔ عمومی و دبیرستان نظری)
+    definition: eine Schule nach der Grundschule, die nach der zehnten Klasse mit einem mittleren Abschluss endet
+    example:
+      de: Nach der Realschule möchte Lea eine Ausbildung als Erzieherin machen.
+      en: After secondary school Lea wants to train as a nursery teacher.
+      fa: لئا بعد از مدرسهٔ متوسطه می‌خواهد دورهٔ آموزش مربی کودک را بگذراند.
+    tooCloseTo: [Mittelschule]
+
   - word: Gesamtschule
+    class: noun
+    article: die
+    plural: Gesamtschulen
+    level: B1
+    meaning:
+      en: comprehensive school (all pupils learn together after primary school)
+      fa: مدرسهٔ جامع (همهٔ دانش‌آموزان بعد از دبستان با هم درس می‌خوانند)
+    definition: eine Schule, in der alle Kinder nach der Grundschule zusammen lernen, egal welchen Abschluss sie später machen
+    example:
+      de: An der Gesamtschule kann man auch das Abitur machen.
+      en: At a comprehensive school you can also take the exam for university.
+      fa: در مدرسهٔ جامع هم می‌توان مدرک ورود به دانشگاه گرفت.
+
   - word: Mittelschule
+    class: noun
+    article: die
+    plural: Mittelschulen
+    level: B1
+    meaning:
+      en: general secondary school after primary school (in Bavaria and Austria)
+      fa: مدرسهٔ متوسطهٔ عمومی بعد از دبستان (در بایرن و اتریش)
+    definition: in Bayern und Österreich eine Schule nach der Grundschule, oft für Kinder, die später eine Ausbildung machen
+    example:
+      de: Mein Sohn geht in Wien in die Mittelschule.
+      en: My son goes to secondary school in Vienna.
+      fa: پسرم در وین به مدرسهٔ متوسطه می‌رود.
+    tooCloseTo: [Realschule]
+
   - word: Sonderschule
+    class: noun
+    article: die
+    plural: Sonderschulen
+    level: B1
+    meaning:
+      en: special school (for children who need special help with learning)
+      fa: مدرسهٔ استثنایی
+    definition: eine Schule für Kinder, die wegen einer Behinderung oder Krankheit besondere Hilfe beim Lernen brauchen
+    example:
+      de: Die Sonderschule hat kleine Klassen mit nur acht Kindern.
+      en: The special school has small classes of only eight children.
+      fa: مدرسهٔ استثنایی کلاس‌های کوچکی با فقط هشت بچه دارد.
+    alsoAccepted: [die Förderschule]
+
   - word: Berufsschule
+    class: noun
+    article: die
+    plural: Berufsschulen
+    level: B1
+    meaning:
+      en: vocational school (attended alongside an apprenticeship)
+      fa: مدرسهٔ فنی و حرفه‌ای (در کنار دورهٔ کارآموزی)
+    definition: eine Schule, die man während der Ausbildung neben der Arbeit in einer Firma besucht
+    example:
+      de: Mehmet ist zwei Tage pro Woche in der Berufsschule und drei Tage im Betrieb.
+      en: Mehmet is at vocational school two days a week and at the company three days.
+      fa: محمد هفته‌ای دو روز در مدرسهٔ فنی و حرفه‌ای است و سه روز سر کار.
+
+  # Hochschule is the general word: a Universität and a Fachhochschule are both one.
   - word: Hochschule
+    class: noun
+    article: die
+    plural: Hochschulen
+    level: B1
+    meaning:
+      en: institution of higher education (a university or college)
+      fa: مؤسسهٔ آموزش عالی (دانشگاه یا دانشکده)
+    definition: jede Schule nach dem Abitur, an der man studieren kann, also eine Universität, eine Fachhochschule oder eine Kunsthochschule
+    example:
+      de: Nach dem Abitur möchte er an einer Hochschule Musik studieren.
+      en: After his final school exams he wants to study music at a college.
+      fa: او بعد از گرفتن مدرک ورود به دانشگاه می‌خواهد در یک مؤسسهٔ آموزش عالی موسیقی بخواند.
+    tooCloseTo: [Uni, Fachhochschule]
+
   - word: Fachhochschule
+    class: noun
+    article: die
+    plural: Fachhochschulen
+    level: B1
+    meaning:
+      en: university of applied sciences (practical, job-related studies)
+      fa: دانشگاه علوم کاربردی (تحصیل عملی و شغل‌محور)
+    definition: eine Hochschule, an der man sehr praktisch und für einen bestimmten Beruf studiert
+    example:
+      de: Sie studiert Sozialarbeit an der Fachhochschule in Köln.
+      en: She is studying social work at the university of applied sciences in Cologne.
+      fa: او در دانشگاه علوم کاربردی کلن مددکاری اجتماعی می‌خواند.
+    alsoAccepted: [die FH]
+
   - word: Volkshochschule
+    class: noun
+    article: die
+    plural: Volkshochschulen
+    level: B1
+    meaning:
+      en: adult education centre (cheap courses for everyone)
+      fa: مرکز آموزش بزرگسالان (دوره‌های ارزان برای همه)
+    definition: eine Schule für Erwachsene mit günstigen Kursen, zum Beispiel für Sprachen, Kochen oder Computer
+    example:
+      de: Ich mache an der Volkshochschule einen Spanischkurs.
+      en: I'm doing a Spanish course at the adult education centre.
+      fa: در مرکز آموزش بزرگسالان در کلاس اسپانیایی شرکت می‌کنم.
+    alsoAccepted: [die VHS]
+
   - word: Uni
+    class: noun
+    article: die
+    plural: Unis
+    level: B1
+    meaning:
+      en: uni (the short, everyday word for university)
+      fa: دانشگاه (صورت کوتاه و محاوره‌ای)
+    definition: kurz für Universität
+    example:
+      de: Ich fahre jeden Morgen mit dem Fahrrad zur Uni.
+      en: I cycle to uni every morning.
+      fa: هر روز صبح با دوچرخه به دانشگاه می‌روم.
+    alsoAccepted: [die Universität]
+    tooCloseTo: [Hochschule]
+
   - word: Institut
+    class: noun
+    article: das
+    plural: Institute
+    level: B1
+    meaning:
+      en: institute
+      fa: مؤسسه، پژوهشگاه
+    definition: eine Einrichtung, oft an einer Universität, in der man zu einem bestimmten Thema forscht oder lehrt
+    example:
+      de: Meinen ersten Deutschkurs habe ich am Goethe-Institut gemacht.
+      en: I did my first German course at the Goethe-Institut.
+      fa: نخستین دورهٔ آلمانی‌ام را در مؤسسهٔ گوته گذراندم.
+
+  # Kita is the short form of Kindertagesstätte: each is right for the other.
   - word: Kindertagesstätte
+    class: noun
+    article: die
+    plural: Kindertagesstätten
+    level: B1
+    meaning:
+      en: day-care centre for children up to school age (the official word)
+      fa: مرکز نگهداری روزانهٔ کودکان تا سن مدرسه (واژهٔ رسمی)
+    definition: das offizielle lange Wort für ein Haus, in dem Kinder bis zur Schule am Tag betreut werden
+    example:
+      de: Die Kindertagesstätte ist von 7 bis 17 Uhr geöffnet.
+      en: The day-care centre is open from 7 a.m. to 5 p.m.
+      fa: مرکز نگهداری روزانهٔ کودکان از ساعت ۷ تا ۱۷ باز است.
+    alsoAccepted: [die Kita]
+    tooCloseTo: [Kita]
+
   - word: Kita
+    class: noun
+    article: die
+    plural: Kitas
+    level: B1
+    meaning:
+      en: nursery, day care (the short, everyday word)
+      fa: مهدکودک (واژهٔ کوتاه و رایج)
+    definition: kurz für Kindertagesstätte
+    example:
+      de: Ich bringe meinen Sohn jeden Morgen um acht in die Kita.
+      en: I take my son to nursery at eight every morning.
+      fa: هر روز صبح ساعت هشت پسرم را به مهدکودک می‌برم.
+    alsoAccepted: [die Kindertagesstätte]
+    tooCloseTo: [Kindertagesstätte]
+
   - word: Krippe
+    class: noun
+    article: die
+    plural: Krippen
+    level: B1
+    meaning:
+      en: crèche (day care for children under three)
+      fa: شیرخوارگاه (برای کودکان زیر سه سال)
+    definition: ein Ort, an dem Babys und Kinder unter drei Jahren am Tag betreut werden
+    example:
+      de: Unsere Tochter ist ein Jahr alt und geht seit Mai in die Krippe.
+      en: Our daughter is one year old and has been going to a crèche since May.
+      fa: دخترمان یک‌ساله است و از ماه مه به شیرخوارگاه می‌رود.
+    alsoAccepted: [die Kinderkrippe]
+    tooCloseTo: [Kita, Kindertagesstätte]
+
   - word: Semester
+    class: noun
+    article: das
+    plural: Semester
+    level: B1
+    meaning:
+      en: semester, term (half of a university year)
+      fa: نیم‌سال تحصیلی، ترم
+    definition: ein halbes Jahr an einer Universität oder Hochschule, mit Kursen und Prüfungen
+    example:
+      de: Ich studiere jetzt im dritten Semester Informatik.
+      en: I'm now in my third semester of computer science.
+      fa: الان ترم سوم رشتهٔ علوم رایانه هستم.
+
   - word: Seminar
+    class: noun
+    article: das
+    plural: Seminare
+    level: B1
+    meaning:
+      en: seminar (a university class in which a small group discusses)
+      fa: سمینار، کلاس بحث (در دانشگاه)
+    definition: ein Kurs an der Universität, in dem eine kleine Gruppe zusammen über ein Thema spricht und arbeitet
+    example:
+      de: Im Seminar müssen wir jede Woche einen Text lesen.
+      en: In the seminar we have to read a text every week.
+      fa: در سمینار باید هر هفته یک متن بخوانیم.
+
+  # The scope list gives "der/die": a man is "der Studierende", a woman "die Studierende".
   - word: Studierende
+    class: noun
+    article: der
+    plural: Studierenden
+    level: B1
+    meaning:
+      en: student (at a university)
+      fa: دانشجو
+    definition: eine Person, die an einer Universität oder Hochschule studiert
+    example:
+      de: Viele Studierende arbeiten neben dem Studium.
+      en: Many students work alongside their studies.
+      fa: بسیاری از دانشجویان در کنار تحصیل کار می‌کنند.
+    alsoAccepted: [die Studierende, der Student, die Studentin]
+
   - word: Professor
+    class: noun
+    article: der
+    plural: Professoren
+    level: B1
+    meaning:
+      en: professor
+      fa: استاد (دانشگاه)
+    definition: eine Person, die an einer Universität lehrt und forscht und dort die höchste Stelle hat
+    example:
+      de: Unser Professor hält die Vorlesung immer ohne Notizen.
+      en: Our professor always gives the lecture without notes.
+      fa: استادمان همیشه بدون یادداشت درس می‌دهد.
+    alsoAccepted: [die Professorin]
+
   - word: Kursleiter
+    class: noun
+    article: der
+    plural: Kursleiter
+    level: B1
+    meaning:
+      en: course leader, course teacher
+      fa: مدرس دوره
+    definition: eine Person, die einen Kurs leitet, zum Beispiel an der Volkshochschule
+    example:
+      de: Der Kursleiter gibt uns jede Woche Hausaufgaben.
+      en: The course leader gives us homework every week.
+      fa: مدرس دوره هر هفته به ما تمرین برای خانه می‌دهد.
+    alsoAccepted: [die Kursleiterin]
+
   - word: Lerner
+    class: noun
+    article: der
+    plural: Lerner
+    level: B1
+    meaning:
+      en: learner (above all of a language)
+      fa: زبان‌آموز، یادگیرنده
+    definition: eine Person, die etwas lernt, besonders eine Sprache
+    example:
+      de: Dieses Wörterbuch ist speziell für Lerner geschrieben.
+      en: This dictionary is written especially for learners.
+      fa: این فرهنگ لغت مخصوص زبان‌آموزان نوشته شده است.
+    alsoAccepted: [die Lernerin, der Lernende, die Lernende]
+
   - word: Teilnehmer
+    class: noun
+    article: der
+    plural: Teilnehmer
+    level: B1
+    meaning:
+      en: participant
+      fa: شرکت‌کننده
+    definition: eine Person, die bei einem Kurs oder einer Veranstaltung mitmacht
+    example:
+      de: Der Kurs hat zwölf Teilnehmer aus acht Ländern.
+      en: The course has twelve participants from eight countries.
+      fa: این دوره دوازده شرکت‌کننده از هشت کشور دارد.
+    alsoAccepted: [die Teilnehmerin]
+
   - word: Teilnahme
+    class: noun
+    article: die
+    plural: Teilnahmen
+    level: B1
+    meaning:
+      en: participation, attendance
+      fa: شرکت، حضور
+    definition: das Mitmachen bei einem Kurs oder einer Veranstaltung
+    example:
+      de: Die Teilnahme am Kurs ist kostenlos.
+      en: Taking part in the course is free.
+      fa: شرکت در این دوره رایگان است.
+    alsoAccepted: [die Beteiligung]
+
   - word: beteiligen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to take part, to get involved
+      fa: شرکت کردن، مشارکت کردن
+    definition: bei einer Sache mitmachen und selbst etwas dazu tun
+    example:
+      de: Alle Schüler haben sich an dem Projekt beteiligt.
+      en: All the pupils took part in the project.
+      fa: همهٔ دانش‌آموزان در این پروژه مشارکت کردند.
+    alsoAccepted: [teilnehmen, mitmachen, mitwirken]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 144 questions, then 34 and 8 changed or disputed ones; not
+    people)"
+  date: 2026-11-28
+  pool: 92770a557fe221ca

@@ -1,39 +1,390 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-exam-instructions
 kind: vocabulary
 level: B1
 chapter: b1-words-learning
 order: 4
-status: coming-soon
+status: published
 title:
   en: "The language of exam tasks"
   fa: "زبانِ دستورهای امتحان"
   de: "Die Sprache der Prüfungsaufgaben"
+attemptSize: 15
 words:
   - word: Aufforderung
+    class: noun
+    article: die
+    plural: Aufforderungen
+    level: B1
+    meaning:
+      en: instruction, request (telling someone firmly to do something)
+      fa: درخواست قاطع (برای انجام کاری)
+    definition: wenn man sagt oder schreibt, dass eine Person etwas tun soll
+    example:
+      de: Er hat die Rechnung erst nach der dritten Aufforderung bezahlt.
+      en: He only paid the bill after the third request.
+      fa: او صورت‌حساب را تازه بعد از سومین درخواست پرداخت.
+    alsoAccepted: [die Anweisung, die Forderung]
+
   - word: Abschnitt
+    class: noun
+    article: der
+    plural: Abschnitte
+    level: B1
+    meaning:
+      en: section (a part of a text, shorter than a chapter)
+      fa: قسمتی از متن (کوتاه‌تر از یک فصل، اغلب با چند بند)
+    definition: ein Teil von einem Text, kürzer als ein Kapitel, oft mit mehreren Absätzen
+    example:
+      de: Lesen Sie zuerst den ersten Abschnitt.
+      en: First read the first section.
+      fa: اول قسمت نخست را بخوانید.
+
   - word: Zeile
+    class: noun
+    article: die
+    plural: Zeilen
+    level: B1
+    meaning:
+      en: line (of a text)
+      fa: سطر
+    definition: Wörter, die in einem Text nebeneinander stehen, vom linken bis zum rechten Rand
+    example:
+      de: Die Antwort steht in Zeile 12.
+      en: The answer is in line 12.
+      fa: پاسخ در سطر ۱۲ است.
+
   - word: Überschrift
+    class: noun
+    article: die
+    plural: Überschriften
+    level: B1
+    meaning:
+      en: heading, title (above a text)
+      fa: عنوان، تیتر (بالای یک متن)
+    definition: die Wörter, die groß über einem Text stehen und sagen, worum es geht
+    example:
+      de: Welche Überschrift passt zu welchem Text?
+      en: Which heading goes with which text?
+      fa: کدام عنوان به کدام متن می‌خورد؟
+    alsoAccepted: [der Titel]
+
+  # Abbildung and Grafik can both be a picture in a text.
   - word: Abbildung
+    class: noun
+    article: die
+    plural: Abbildungen
+    level: B1
+    meaning:
+      en: illustration, figure (a picture in a book or text)
+      fa: تصویر، شکل (در کتاب یا متن)
+    definition: ein Bild oder eine Zeichnung in einem Buch oder Text
+    example:
+      de: Beschreiben Sie die Abbildung auf Seite 5.
+      en: Describe the illustration on page 5.
+      fa: تصویر صفحهٔ ۵ را توصیف کنید.
+    alsoAccepted: [die Illustration, das Bild]
+    tooCloseTo: [Grafik]
+
   - word: Tabelle
+    class: noun
+    article: die
+    plural: Tabellen
+    level: B1
+    meaning:
+      en: table (of rows and columns)
+      fa: جدول
+    definition: Zahlen oder Wörter, die in Reihen und Spalten geordnet sind
+    example:
+      de: In der Tabelle sehen Sie die Preise für alle Kurse.
+      en: In the table you can see the prices of all the courses.
+      fa: در جدول قیمت همهٔ دوره‌ها را می‌بینید.
+
   - word: Grafik
+    class: noun
+    article: die
+    plural: Grafiken
+    level: B1
+    meaning:
+      en: chart, graph (a picture that shows numbers)
+      fa: نمودار (تصویری که عددها را نشان می‌دهد)
+    definition: ein Bild mit Linien, Balken oder Kreisen, das Zahlen zeigt
+    example:
+      de: Die Grafik zeigt, wie viele Menschen in Deutschland mit dem Fahrrad zur Arbeit fahren.
+      en: The chart shows how many people in Germany cycle to work.
+      fa: این نمودار نشان می‌دهد چند نفر در آلمان با دوچرخه سر کار می‌روند.
+    alsoAccepted: [das Diagramm, das Schaubild]
+    tooCloseTo: [Abbildung]
+
   - word: Textaufbau
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: structure of a text
+      fa: ساختار متن
+    definition: wie ein Text geordnet ist, also was am Anfang, in der Mitte und am Ende steht
+    example:
+      de: "Achten Sie auf den Textaufbau: Einleitung, Hauptteil und Schluss."
+      en: "Pay attention to the structure of the text: introduction, main part and conclusion."
+      fa: "به ساختار متن توجه کنید: مقدمه، بدنه و نتیجه‌گیری."
+    alsoAccepted: [die Textstruktur, der Aufbau, die Gliederung]
+
   - word: Einleitung
+    class: noun
+    article: die
+    plural: Einleitungen
+    level: B1
+    meaning:
+      en: introduction (the first part of a text or talk)
+      fa: مقدمه (بخش آغازین خود متن یا سخنرانی)
+    definition: der erste Teil von einem Text oder Vortrag, der sagt, worum es geht
+    example:
+      de: In der Einleitung nennen Sie das Thema.
+      en: In the introduction you name the topic.
+      fa: در مقدمه موضوع را بیان کنید.
+    alsoAccepted: [die Einführung]
+
   - word: Reihenfolge
+    class: noun
+    article: die
+    plural: Reihenfolgen
+    level: B1
+    meaning:
+      en: order, sequence
+      fa: ترتیب (اینکه چه چیزی اول و چه چیزی بعد می‌آید)
+    definition: wie Dinge nacheinander kommen, zuerst das eine, dann das andere
+    example:
+      de: Bringen Sie die Bilder in die richtige Reihenfolge.
+      en: Put the pictures in the right order.
+      fa: تصویرها را به ترتیب درست مرتب کنید.
+    alsoAccepted: [die Abfolge]
+
+  # ergänzen and einfügen can both be "to fill in a gap".
   - word: ergänzen
+    class: verb
+    level: B1
+    meaning:
+      en: to complete, to add (what is missing)
+      fa: کامل کردن، تکمیل کردن
+    definition: etwas vollständig machen, indem man schreibt, was noch fehlt
+    example:
+      de: Ergänzen Sie die Sätze.
+      en: Complete the sentences.
+      fa: جمله‌ها را کامل کنید.
+    alsoAccepted: [vervollständigen]
+    tooCloseTo: [einfügen]
+
   - word: zuordnen
+    class: verb
+    level: B1
+    meaning:
+      en: to match (each thing to the one it belongs to)
+      fa: جفت کردن (هر چیز با چیزی که به آن مربوط است)
+    definition: sagen, welche Sache zu welcher anderen gehört
+    example:
+      de: Ordnen Sie die Überschriften den Texten zu.
+      en: Match the headings to the texts.
+      fa: هر عنوان را به متن مربوطش وصل کنید.
+
   - word: einfügen
+    class: verb
+    level: B1
+    meaning:
+      en: to insert, to put in (into a gap); to paste
+      fa: گذاشتن، جا دادن (در جای خالی)؛ چسباندن (در رایانه)
+    definition: etwas in eine Lücke oder zwischen andere Dinge setzen
+    example:
+      de: Fügen Sie das passende Wort in die Lücke ein.
+      en: Insert the right word into the gap.
+      fa: واژهٔ مناسب را در جای خالی بگذارید.
+    alsoAccepted: [einsetzen]
+    tooCloseTo: [ergänzen]
+
   - word: auswählen
+    class: verb
+    level: B1
+    meaning:
+      en: to choose, to select
+      fa: انتخاب کردن، برگزیدن
+    definition: aus mehreren Dingen eines nehmen, das man haben möchte oder das passt
+    example:
+      de: Wählen Sie für jede Aufgabe die richtige Lösung aus.
+      en: Choose the right answer for each task.
+      fa: برای هر پرسش، پاسخ درست را انتخاب کنید.
+    alsoAccepted: [wählen, aussuchen]
+
   - word: zusammenfassen
+    class: verb
+    level: B1
+    meaning:
+      en: to summarize
+      fa: خلاصه کردن
+    definition: das Wichtigste von einem Text oder Gespräch kurz sagen oder schreiben
+    example:
+      de: Fassen Sie den Text in drei Sätzen zusammen.
+      en: Summarize the text in three sentences.
+      fa: متن را در سه جمله خلاصه کنید.
+
+  # Referat, Präsentation and Vortrag are all a talk in front of others.
   - word: Referat
+    class: noun
+    article: das
+    plural: Referate
+    level: B1
+    meaning:
+      en: paper (a talk on a topic that a pupil or student prepares for the class)
+      fa: گزارش تحقیقی کلاسی (که دانش‌آموز یا دانشجو جلوی کلاس می‌خواند)
+    definition: ein Text über ein Thema, den ein Schüler oder Student vorbereitet und vor der Klasse vorträgt
+    example:
+      de: Nächste Woche halte ich ein Referat über Solarenergie.
+      en: Next week I'm giving a presentation on solar energy.
+      fa: هفتهٔ آینده دربارهٔ انرژی خورشیدی ارائهٔ کلاسی دارم.
+    tooCloseTo: [Präsentation, Vortrag]
+
   - word: Präsentation
+    class: noun
+    article: die
+    plural: Präsentationen
+    level: B1
+    meaning:
+      en: presentation (often with slides)
+      fa: ارائه (اغلب با اسلاید)
+    definition: wenn man vor anderen Leuten etwas zeigt und erklärt, oft mit Bildern vom Computer
+    example:
+      de: Meine Präsentation dauert zehn Minuten.
+      en: My presentation lasts ten minutes.
+      fa: ارائه‌ام ده دقیقه طول می‌کشد.
+    tooCloseTo: [Referat, Vortrag]
+
   - word: präsentieren
+    class: verb
+    level: B1
+    meaning:
+      en: to present (show and explain in front of others)
+      fa: ارائه کردن، عرضه کردن
+    definition: etwas vor anderen Leuten zeigen und erklären
+    example:
+      de: Die Gruppe präsentiert ihre Ergebnisse vor der Klasse.
+      en: The group presents its results to the class.
+      fa: گروه نتایج کارش را جلوی کلاس ارائه می‌کند.
+    alsoAccepted: [vorstellen, vorführen]
+
   - word: Vortrag
+    class: noun
+    article: der
+    plural: Vorträge
+    level: B1
+    meaning:
+      en: lecture, talk (by an expert to an audience, for example in a museum)
+      fa: سخنرانی (یک کارشناس برای حاضران، مثلاً در موزه)
+    definition: wenn eine Person vor Publikum über ein Thema spricht und ihr Wissen weitergibt, zum Beispiel in einem Museum
+    example:
+      de: Heute Abend gibt es im Museum einen Vortrag über die Geschichte der Stadt.
+      en: This evening there is a talk at the museum about the history of the town.
+      fa: امشب در موزه سخنرانی‌ای دربارهٔ تاریخ شهر برگزار می‌شود.
+    tooCloseTo: [Referat, Präsentation]
+
   - word: Modul
+    class: noun
+    article: das
+    plural: Module
+    level: B1
+    meaning:
+      en: module (one part of a course or an exam)
+      fa: ماژول، واحد (یکی از قسمت‌های یک دوره یا امتحان)
+    definition: ein Teil von einem Kurs oder einer Prüfung, zum Beispiel Lesen oder Hören
+    example:
+      de: "Die Prüfung hat vier Module: Lesen, Hören, Schreiben und Sprechen."
+      en: "The exam has four modules: reading, listening, writing and speaking."
+      fa: "این امتحان چهار مهارت دارد: خواندن، شنیدن، نوشتن و صحبت کردن."
+
   - word: Hinweis
+    class: noun
+    article: der
+    plural: Hinweise
+    level: B1
+    meaning:
+      en: tip, hint (a short piece of help)
+      fa: نکته، راهنمایی
+    definition: eine kurze Information, die einem hilft oder auf etwas aufmerksam macht
+    example:
+      de: Bitte beachten Sie die Hinweise auf dem Aufgabenblatt.
+      en: Please note the tips on the task sheet.
+      fa: لطفاً به نکته‌های برگهٔ پرسش‌ها توجه کنید.
+    alsoAccepted: [der Tipp]
+
   - word: Angabe
-  - word: "vgl."
-  - word: "bzw."
-  - word: "etc."
+    class: noun
+    article: die
+    plural: Angaben
+    level: B1
+    meaning:
+      en: detail given (for example your name or date of birth on a form)
+      fa: مشخصات واردشده (مثلاً نام یا تاریخ تولد در فرم)
+    definition: eine Information, die man zum Beispiel in ein Formular schreibt, wie der Name oder das Datum
+    example:
+      de: Bitte prüfen Sie Ihre Angaben noch einmal.
+      en: Please check your details once more.
+      fa: لطفاً مشخصاتتان را یک بار دیگر بررسی کنید.
+
+  - word: vgl.
+    class: abbreviation
+    level: B1
+    meaning:
+      en: cf., compare (pointing to another place)
+      fa: مقایسه کنید، نگاه کنید به (به‌صورت کوتاه‌نوشت)
+    definition: kurz für „vergleiche“, wenn man auf eine andere Stelle zeigt
+    example:
+      de: Die Zahl der Radfahrer ist gestiegen (vgl. Tabelle 2).
+      en: The number of cyclists has risen (cf. table 2).
+      fa: شمار دوچرخه‌سواران بالا رفته است (نگاه کنید به جدول ۲).
+    alsoAccepted: [vergleiche]
+
+  - word: bzw.
+    class: abbreviation
+    level: B1
+    meaning:
+      en: respectively; or (to be more exact)
+      fa: به ترتیب؛ یا (به بیان دقیق‌تر)
+    definition: kurz für „beziehungsweise“, für zwei Dinge in der gleichen Reihenfolge oder für „oder“
+    example:
+      de: Die Kurse kosten 80 bzw. 120 Euro.
+      en: The courses cost 80 and 120 euros respectively.
+      fa: این دوره‌ها به ترتیب ۸۰ و ۱۲۰ یورو قیمت دارند.
+    alsoAccepted: [beziehungsweise]
+
+  - word: etc.
+    class: abbreviation
+    level: B1
+    meaning:
+      en: etc., et cetera
+      fa: و غیره، و جز آن
+    definition: kurz für „et cetera“, wenn es noch mehr davon gibt
+    example:
+      de: Im Kurs lernen wir Grammatik, Wörter, Aussprache etc.
+      en: In the course we learn grammar, words, pronunciation, etc.
+      fa: در کلاس دستور زبان، واژه، تلفظ و غیره یاد می‌گیریم.
+    alsoAccepted: [usw., und so weiter, et cetera]
+
   - word: folgend
+    class: adjective
+    level: B1
+    meaning:
+      en: following
+      fa: زیر (صفت، مثلاً در «پرسش‌های زیر»)
+    definition: im Text gleich danach stehend, zum Beispiel die Fragen unter einer Aufgabe
+    example:
+      de: Beantworten Sie die folgenden Fragen.
+      en: Answer the following questions.
+      fa: به پرسش‌های زیر پاسخ دهید.
+    alsoAccepted: [nachfolgend, nachstehend]
+
+review:
+  reviewer: "independent AI agents (four fresh Claude Opus 5.5 subagents, review
+    sheet only: all 156 questions, then 67, 31 and 11 changed or disputed ones;
+    not people)"
+  date: 2026-11-28
+  pool: 82f8c18e84df40d4
