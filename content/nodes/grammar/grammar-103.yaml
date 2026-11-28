@@ -1,13 +1,281 @@
-# Grammar list row 103.
+# Grammar list row 103. The file format is described in content/README.md.
+# lieber and am liebsten are grammar-105.
 id: grammar-103
 kind: grammar
 level: A1
 chapter: a1-adjectives
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-102]
 title:
   en: "Adjective used adverbially"
   fa: "صفت در نقش قید"
   de: "Adjektiv als Adverb"
+
+explanations:
+  en:
+    rule: >
+      An adjective can also say how someone does something: *Er fährt
+      schnell.* Then it stands after the verb and, as after *sein*, never takes
+      an ending. English adds *-ly* (quick, quickly); German adds nothing, so
+      *schnell* is both "quick" and "quickly", and *gut* is both "good" and
+      "well". The little word *gern* works the same way but says that you like
+      doing something: *Ich lese gern.* (I like reading.) It comes right after
+      the verb; *nicht gern* means you don't like it.
+  fa:
+    rule: >
+      صفت می‌تواند بگوید کسی کاری را چگونه انجام می‌دهد: *Er fährt schnell.*
+      (تند رانندگی می‌کند.) در این نقش صفت پس از فعل می‌آید و مانند جایگاه
+      پس از *sein* هرگز پایانه نمی‌گیرد. در فارسی هم همین‌طور است: «تند»
+      هم صفت است و هم قید. پس *schnell* یعنی «تند» و «به‌تندی»، و *gut* یعنی
+      «خوب» و «به‌خوبی». قید کوچک *gern* هم همین‌طور به کار می‌رود، اما
+      می‌گوید که انجام دادن کاری را دوست دارید: *Ich lese gern.* (کتاب خواندن
+      را دوست دارم.) *gern* درست پس از فعل می‌آید؛ *nicht gern* یعنی آن کار
+      را دوست ندارید.
+  de:
+    rule: >
+      Ein Adjektiv kann auch sagen, wie man etwas macht: *Er fährt schnell.*
+      Dann steht es nach dem Verb und hat, wie nach *sein*, keine Endung.
+      *Schnell* und *gut* bleiben also immer gleich. Das Wort *gern* steht
+      auch so beim Verb. Es sagt: Man macht etwas mit Freude. *Ich lese gern.*
+      *Nicht gern* heißt: Man macht es nicht mit Freude.
+
+table:
+  columns:
+    - { en: Adjective, fa: صفت, de: Adjektiv }
+    - { en: "After *sein*", fa: "پس از *sein*", de: "Nach *sein*" }
+    - { en: "With a verb: how?", fa: "همراه فعل: چگونه؟", de: "Beim Verb: wie?" }
+  rows:
+    - [schnell, Das Auto ist schnell., Er fährt schnell.]
+    - [gut, Das Essen ist gut., Sie kocht gut.]
+    - [laut, Die Musik ist laut., Die Kinder singen laut.]
+    - [langsam, Der Bus ist langsam., Bitte sprechen Sie langsam.]
+    - [schön, Das Lied ist schön., Du singst schön.]
+    - [gern, –, Ich lese gern.]
+
+examples:
+  - de: Mein Bruder fährt schnell.
+    en: My brother drives fast.
+    fa: برادرم تند رانندگی می‌کند.
+  - de: Anna spricht gut Deutsch.
+    en: Anna speaks German well.
+    fa: آنا خوب آلمانی حرف می‌زند.
+  - de: Bitte sprechen Sie langsam.
+    en: Please speak slowly.
+    fa: لطفاً آهسته صحبت کنید.
+  - de: Das Baby schläft ruhig.
+    en: The baby is sleeping peacefully.
+    fa: بچه آرام خوابیده است.
+  - de: Ich lese gern.
+    en: I like reading.
+    fa: کتاب خواندن را دوست دارم.
+  - de: Wir spielen gern Fußball.
+    en: We like playing football.
+    fa: ما فوتبال بازی کردن را دوست داریم.
+  - de: Trinkst du gern Kaffee?
+    en: Do you like coffee?
+    fa: قهوه دوست داری؟
+  - de: Ich tanze nicht gern.
+    en: I don't like dancing.
+    fa: رقصیدن را دوست ندارم.
+  - de: Was isst du gern?
+    en: What do you like to eat?
+    fa: چه غذایی دوست داری؟
+
+mistakes:
+  - wrong: Er fährt schnelle.
+    right: Er fährt schnell.
+    why:
+      en: "An adjective that says how someone does something has no ending."
+      fa: "صفتی که چگونگی انجام کاری را می‌گوید پایانه نمی‌گیرد."
+      de: "Ein Adjektiv, das sagt, wie man etwas macht, hat keine Endung."
+  - wrong: Ich gern lese.
+    right: Ich lese gern.
+    why:
+      en: "The verb is in position 2; *gern* comes after it."
+      fa: "در فارسی قید پیش از فعل می‌آید («با علاقه می‌خوانم»)، ولی در آلمانی فعل در جایگاه دوم است و *gern* پس از آن."
+      de: "Das Verb steht auf Position 2, *gern* steht danach."
+  - wrong: Er arbeitet gute.
+    right: Er arbeitet gut.
+    why:
+      en: '*Gut* is also "well". With a verb it has no ending.'
+      fa: "*gut* هم «خوب» است و هم «به‌خوبی». همراه فعل پایانه نمی‌گیرد."
+      de: "*Gut* steht beim Verb ohne Endung."
+  - wrong: Ich tanze gern nicht.
+    right: Ich tanze nicht gern.
+    why:
+      en: "*Nicht* stands before *gern*: *nicht gern*."
+      fa: "*nicht* پیش از *gern* می‌آید: *nicht gern*."
+      de: "*Nicht* steht vor *gern*: *nicht gern*."
+
+# 19 questions.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Mein Bruder fährt ___.
+    options: [schnell, schnelle, schnelles]
+    answer: schnell
+    explanation:
+      en: "It says how he drives, so no ending: *schnell*."
+      fa: "چگونگی رانندگی را می‌گوید، پس بدون پایانه: *schnell*."
+      de: "Das Wort sagt, wie er fährt. Darum keine Endung: *schnell*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Anna spricht ___ Deutsch.
+    options: [gut, gute, guten]
+    answer: gut
+    explanation:
+      en: '*Gut* says how she speaks ("well"), so it has no ending.'
+      fa: "*gut* می‌گوید آنا چگونه حرف می‌زند، پس پایانه نمی‌گیرد."
+      de: "*Gut* sagt, wie Anna spricht. Darum keine Endung."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Kinder spielen ___ im Garten.
+    options: [ruhig, ruhige, ruhigen]
+    answer: ruhig
+    explanation:
+      en: "It says how the children play, so no ending: *ruhig*."
+      fa: "چگونگی بازی بچه‌ها را می‌گوید، پس بدون پایانه: *ruhig*."
+      de: "Das Wort sagt, wie die Kinder spielen. Darum keine Endung: *ruhig*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Tom kann ___ schwimmen.
+    options: [gut, gute, guter]
+    answer: gut
+    explanation:
+      en: "*Gut* says how Tom swims. With a verb it has no ending."
+      fa: "*gut* می‌گوید تام چگونه شنا می‌کند. همراه فعل پایانه نمی‌گیرد."
+      de: "*Gut* sagt, wie Tom schwimmt. Beim Verb hat es keine Endung."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wie singt sie? – Sie singt ___.
+    options: [schön, schöne, schönes]
+    answer: schön
+    explanation:
+      en: "The answer to *Wie?* with a verb is the adjective without an ending."
+      fa: "پاسخ *Wie?* همراه فعل، صفت بدون پایانه است."
+      de: "Auf *Wie?* steht beim Verb das Adjektiv ohne Endung."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Ich koche gern. Das heißt:"
+    options: [Kochen macht mir Spaß., Ich koche gut., Ich koche schnell.]
+    answer: Kochen macht mir Spaß.
+    explanation:
+      en: "*Gern* says you like doing it, not how well or how fast you do it."
+      fa: "*gern* می‌گوید آن کار را دوست دارید، نه این‌که آن را خوب یا تند انجام می‌دهید."
+      de: "*Gern* heißt: Man macht es mit Freude. Es sagt nicht, wie gut oder wie schnell."
+  - id: true-1
+    type: true-false
+    prompt: Der Zug fährt langsam.
+    answer: true
+    explanation:
+      en: "*Langsam* says how the train goes, without an ending. The sentence is correct."
+      fa: "*langsam* بدون پایانه می‌گوید قطار چگونه حرکت می‌کند. جمله درست است."
+      de: "*Langsam* sagt ohne Endung, wie der Zug fährt. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich gern koche.
+    answer: false
+    explanation:
+      en: "The verb is in position 2 and *gern* after it: *Ich koche gern.*"
+      fa: "فعل در جایگاه دوم و *gern* پس از آن است: *Ich koche gern.*"
+      de: "Das Verb steht auf Position 2, *gern* danach: *Ich koche gern.*"
+  - id: true-3
+    type: true-false
+    prompt: Sie tanzt gut.
+    answer: true
+    explanation:
+      en: '*Gut* means "well" here and has no ending. The sentence is correct.'
+      fa: "*gut* اینجا یعنی «به‌خوبی» و پایانه ندارد. جمله درست است."
+      de: "*Gut* steht hier beim Verb ohne Endung. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Er arbeitet schnelle.
+    answer: false
+    explanation:
+      en: "With a verb the adjective has no ending: *Er arbeitet schnell.*"
+      fa: "صفت همراه فعل پایانه نمی‌گیرد: *Er arbeitet schnell.*"
+      de: "Beim Verb hat das Adjektiv keine Endung: *Er arbeitet schnell.*"
+  - id: true-5
+    type: true-false
+    prompt: Ich höre gern Musik.
+    answer: true
+    explanation:
+      en: "*Gern* comes right after the verb. The sentence is correct."
+      fa: "*gern* درست پس از فعل آمده است. جمله درست است."
+      de: "*Gern* steht direkt nach dem Verb. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Bitte sprechen Sie ___ (langsam).
+    answers: [langsam, langsamer]
+    explanation:
+      en: "It says how to speak, so it stays *langsam*."
+      fa: "چگونگی صحبت کردن را می‌گوید، پس همان *langsam* می‌ماند."
+      de: "Das Wort sagt, wie man spricht. Es bleibt *langsam*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Mein Vater kocht ___ (gut).
+    answers: [gut]
+    explanation:
+      en: "With a verb *gut* has no ending."
+      fa: "*gut* همراه فعل پایانه نمی‌گیرد."
+      de: "Beim Verb hat *gut* keine Endung."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Das Baby schläft ___ (ruhig).
+    answers: [ruhig]
+    explanation:
+      en: "It says how the baby sleeps, so no ending: *ruhig*."
+      fa: "چگونگی خوابیدن بچه را می‌گوید، پس بدون پایانه: *ruhig*."
+      de: "Das Wort sagt, wie das Baby schläft. Darum keine Endung: *ruhig*."
+  - id: error-1
+    type: find-error
+    prompt: Das Kind schläft ruhige.
+    answer: ruhige
+    explanation:
+      en: "An adjective with a verb has no ending: *ruhig*."
+      fa: "صفت همراه فعل پایانه نمی‌گیرد: *ruhig*."
+      de: "Ein Adjektiv beim Verb hat keine Endung: *ruhig*."
+  - id: error-2
+    type: find-error
+    prompt: Er spricht laute.
+    answer: laute
+    explanation:
+      en: "It says how he speaks, so no ending: *laut*."
+      fa: "چگونگی حرف زدن را می‌گوید، پس بدون پایانه: *laut*."
+      de: "Das Wort sagt, wie er spricht. Darum keine Endung: *laut*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [was, isst, du, gern]
+    end: "?"
+    explanation:
+      en: "The question word first, then the verb and the subject; *gern* follows them."
+      fa: "اول واژهٔ پرسشی، بعد فعل و فاعل؛ *gern* پس از آن‌ها می‌آید."
+      de: "Zuerst das Fragewort, dann das Verb und das Subjekt. *Gern* kommt danach."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wer, singt, so laut]
+    end: "?"
+    explanation:
+      en: "*Wer* is the subject, so the verb comes right after it. *So laut* says how."
+      fa: "*wer* فاعل است، پس فعل درست پس از آن می‌آید. *so laut* چگونگی را می‌گوید."
+      de: "*Wer* ist das Subjekt. Das Verb steht direkt danach. *So laut* sagt, wie."
+  - id: match-1
+    type: matching
+    answer:
+      - [Er fährt gern Auto., Autofahren macht ihm Spaß.]
+      - [Er fährt gut Auto., Er ist ein guter Fahrer.]
+      - [Er fährt schnell Auto., Er fährt nie langsam.]
+    explanation:
+      en: "*Gern*: he likes it. *Gut*: he does it well. *Schnell*: he does it fast."
+      fa: "*gern*: آن را دوست دارد. *gut*: آن را خوب انجام می‌دهد. *schnell*: آن را تند انجام می‌دهد."
+      de: "*Gern*: Es macht ihm Spaß. *Gut*: Er kann es gut. *Schnell*: Er macht es schnell."
+
+review:
+  reviewer: two independent AI agents (a second fresh agent re-answered the
+    changed or disputed questions)
+  date: 2026-11-28
+  pool: 50378f31805ecb35
