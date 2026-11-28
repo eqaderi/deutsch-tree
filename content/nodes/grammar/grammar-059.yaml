@@ -4,10 +4,277 @@ kind: grammar
 level: A1
 chapter: a1-nouns-articles
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: []
 title:
   en: "*Genus* and definite article"
-  fa: "جنس دستوری (*Genus*) و حرف تعریف معیّن"
+  fa: "جنس دستوری (*Genus*) و حرف تعریف معین"
   de: "Genus und bestimmter Artikel"
+
+explanations:
+  en:
+    rule: >
+      Every German noun has a grammatical gender (*Genus*): masculine,
+      feminine or neuter. The definite article shows it: *der* for a masculine
+      noun, *die* for a feminine one and *das* for a neuter one. In the plural
+      every noun takes *die*. The gender belongs to the word, not to the
+      thing: a table is masculine (*der Tisch*), and a girl is neuter (*das
+      Mädchen*). So learn every noun together with its article. A noun always
+      begins with a capital letter.
+  fa:
+    rule: >
+      هر اسم آلمانی جنس دستوری (*Genus*) دارد: مذکر، مؤنث یا خنثی. حرف تعریف
+      معین این جنس را نشان می‌دهد: *der* برای اسم مذکر، *die* برای اسم مؤنث و
+      *das* برای اسم خنثی. در جمع، همهٔ اسم‌ها *die* می‌گیرند. جنس دستوری به
+      خود واژه بستگی دارد، نه به معنای آن: میز مذکر است (*der Tisch*) و دختر
+      خنثی (*das Mädchen*). فارسی جنس دستوری ندارد، پس هر اسم را همراه حرف
+      تعریفش یاد بگیرید. اسم در آلمانی همیشه با حرف بزرگ آغاز می‌شود.
+  de:
+    rule: >
+      Jedes Nomen hat ein Genus: maskulin, feminin oder neutral. Der bestimmte
+      Artikel zeigt das Genus: *der* ist maskulin, *die* ist feminin, *das*
+      ist neutral. Im Plural haben alle Nomen *die*. Das Genus gehört zum
+      Wort, nicht zur Sache: *der Tisch*, *das Mädchen*. Lernen Sie jedes
+      Nomen mit dem Artikel. Nomen schreibt man immer groß.
+
+table:
+  columns:
+    - { en: Gender, fa: جنس دستوری, de: Genus }
+    - { en: Article, fa: حرف تعریف, de: Artikel }
+    - { en: Examples, fa: مثال, de: Beispiele }
+  rows:
+    - [maskulin, der, "der Apfel, der Tisch, der Mann"]
+    - [feminin, die, "die Sonne, die Lampe, die Frau"]
+    - [neutral, das, "das Kind, das Buch, das Mädchen"]
+    - [Plural, die, "die Äpfel, die Lampen, die Kinder"]
+
+examples:
+  - de: Der Apfel ist rot.
+    en: The apple is red.
+    fa: سیب قرمز است.
+  - de: Die Sonne scheint.
+    en: The sun is shining.
+    fa: خورشید می‌تابد.
+  - de: Das Kind spielt.
+    en: The child is playing.
+    fa: بچه بازی می‌کند.
+  - de: Der Tisch ist neu.
+    en: The table is new.
+    fa: میز نو است.
+  - de: Das Mädchen heißt Lena.
+    en: The girl is called Lena.
+    fa: اسم آن دختر لنا است.
+  - de: Die Frau kommt aus Wien.
+    en: The woman comes from Vienna.
+    fa: آن زن اهل وین است.
+  - de: Wo ist die Tasche?
+    en: Where is the bag?
+    fa: کیف کجاست؟
+  - de: Die Kinder lernen Deutsch.
+    en: The children are learning German.
+    fa: بچه‌ها آلمانی یاد می‌گیرند.
+
+mistakes:
+  - wrong: Die Tisch ist groß.
+    right: Der Tisch ist groß.
+    why:
+      en: "*Tisch* is masculine: *der Tisch*. A thing has a gender too."
+      fa: "*Tisch* اسم مذکر است: *der Tisch*. اشیا هم جنس دستوری دارند."
+      de: "*Tisch* ist maskulin: *der Tisch*. Auch Sachen haben ein Genus."
+  - wrong: Der Mädchen ist zehn Jahre alt.
+    right: Das Mädchen ist zehn Jahre alt.
+    why:
+      en: "*Mädchen* is neuter: *das Mädchen*. The gender of the word is not the sex of the person."
+      fa: "*Mädchen* اسم خنثی است: *das Mädchen*. جنس دستوری واژه با جنسیت آدم یکی نیست."
+      de: "*Mädchen* ist neutral: *das Mädchen*. Das Genus ist nicht immer Mann oder Frau."
+  - wrong: Der Lampen sind neu.
+    right: Die Lampen sind neu.
+    why:
+      en: "In the plural every noun takes *die*."
+      fa: "در جمع، همهٔ اسم‌ها *die* می‌گیرند."
+      de: "Im Plural haben alle Nomen *die*."
+  - wrong: Das kind spielt.
+    right: Das Kind spielt.
+    why:
+      en: "A German noun always begins with a capital letter."
+      fa: "اسم آلمانی همیشه با حرف بزرگ آغاز می‌شود."
+      de: "Ein Nomen schreibt man immer groß."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ Apfel ist rot.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "*Apfel* is masculine: *der Apfel*."
+      fa: "*Apfel* اسم مذکر است: *der Apfel*."
+      de: "*Apfel* ist maskulin: *der Apfel*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ Sonne scheint.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "*Sonne* is feminine: *die Sonne*."
+      fa: "*Sonne* اسم مؤنث است: *die Sonne*."
+      de: "*Sonne* ist feminin: *die Sonne*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ Kind spielt.
+    options: [Der, Die, Das]
+    answer: Das
+    explanation:
+      en: "*Kind* is neuter: *das Kind*."
+      fa: "*Kind* اسم خنثی است: *das Kind*."
+      de: "*Kind* ist neutral: *das Kind*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ Mädchen heißt Lena.
+    options: [Der, Die, Das]
+    answer: Das
+    explanation:
+      en: "*Mädchen* is neuter, although a girl is female: *das Mädchen*."
+      fa: "*Mädchen* اسم خنثی است، هرچند دختر مؤنث است: *das Mädchen*."
+      de: "*Mädchen* ist neutral: *das Mädchen*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wo ist ___ Tasche?
+    options: [der, die, das]
+    answer: die
+    explanation:
+      en: "*Tasche* is feminine: *die Tasche*."
+      fa: "*Tasche* اسم مؤنث است: *die Tasche*."
+      de: "*Tasche* ist feminin: *die Tasche*."
+  - id: gap-6
+    type: gap-fill
+    prompt: ___ Kinder lernen Deutsch.
+    options: [Der, Die, Das]
+    answer: Die
+    explanation:
+      en: "*Kinder* is a plural, and in the plural every noun takes *die*."
+      fa: "*die Kinder* جمع است و در جمع، همهٔ اسم‌ها *die* می‌گیرند."
+      de: "*Kinder* ist Plural. Im Plural steht immer *die*."
+  - id: gap-7
+    type: gap-fill
+    prompt: ___ Mann trinkt Kaffee.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "*Mann* is masculine: *der Mann*."
+      fa: "*Mann* اسم مذکر است: *der Mann*."
+      de: "*Mann* ist maskulin: *der Mann*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welches Nomen ist maskulin?
+    options: [Tisch, Lampe, Buch]
+    answer: Tisch
+    explanation:
+      en: "*der Tisch* is masculine; *die Lampe* is feminine and *das Buch* neuter."
+      fa: "*der Tisch* مذکر است؛ *die Lampe* مؤنث است و *das Buch* خنثی."
+      de: "*Der Tisch* ist maskulin. *Die Lampe* ist feminin, *das Buch* ist neutral."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welches Nomen ist neutral?
+    options: [Mädchen, Frau, Mann]
+    answer: Mädchen
+    explanation:
+      en: "*das Mädchen* is neuter; *die Frau* is feminine and *der Mann* masculine."
+      fa: "*das Mädchen* خنثی است؛ *die Frau* مؤنث است و *der Mann* مذکر."
+      de: "*Das Mädchen* ist neutral. *Die Frau* ist feminin, *der Mann* ist maskulin."
+  - id: true-1
+    type: true-false
+    prompt: Die Frau kommt aus Wien.
+    answer: true
+    explanation:
+      en: "*Frau* is feminine: *die Frau*. The sentence is correct."
+      fa: "*Frau* اسم مؤنث است: *die Frau*. جمله درست است."
+      de: "*Frau* ist feminin: *die Frau*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Die Auto ist neu.
+    answer: false
+    explanation:
+      en: "*Auto* is neuter: *das Auto*."
+      fa: "*Auto* اسم خنثی است: *das Auto*."
+      de: "*Auto* ist neutral: *das Auto*."
+  - id: true-3
+    type: true-false
+    prompt: Die Lehrer kommen heute.
+    answer: true
+    explanation:
+      en: "*Die Lehrer* is a plural, so *die* is right. The sentence is correct."
+      fa: "*die Lehrer* جمع است، پس *die* درست است. جمله درست است."
+      de: "*Die Lehrer* ist Plural, darum *die*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: ___ (der / die / das) Stuhl ist bequem.
+    answers: [Der]
+    explanation:
+      en: "*Stuhl* is masculine: *der Stuhl*."
+      fa: "*Stuhl* اسم مذکر است: *der Stuhl*."
+      de: "*Stuhl* ist maskulin: *der Stuhl*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (der / die / das) Fenster ist offen.
+    answers: [Das]
+    explanation:
+      en: "*Fenster* is neuter: *das Fenster*."
+      fa: "*Fenster* اسم خنثی است: *das Fenster*."
+      de: "*Fenster* ist neutral: *das Fenster*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wo ist ___ (der / die / das) Brille?
+    answers: [die]
+    explanation:
+      en: "*Brille* is feminine: *die Brille*."
+      fa: "*Brille* اسم مؤنث است: *die Brille*."
+      de: "*Brille* ist feminin: *die Brille*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Mit Artikel: Haus"
+    answers: [das Haus]
+    explanation:
+      en: "*Haus* is neuter: *das Haus*."
+      fa: "*Haus* اسم خنثی است: *das Haus*."
+      de: "*Haus* ist neutral: *das Haus*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Mit Artikel: Zeitung"
+    answers: [die Zeitung]
+    explanation:
+      en: "*Zeitung* is feminine: *die Zeitung*."
+      fa: "*Zeitung* اسم مؤنث است: *die Zeitung*."
+      de: "*Zeitung* ist feminin: *die Zeitung*."
+  - id: error-1
+    type: find-error
+    prompt: Der Mädchen spielt im Garten.
+    answer: Der
+    explanation:
+      en: "*Mädchen* is neuter: *Das Mädchen spielt im Garten.*"
+      fa: "*Mädchen* اسم خنثی است: *Das Mädchen spielt im Garten.*"
+      de: "*Mädchen* ist neutral: *Das Mädchen spielt im Garten.*"
+  - id: error-2
+    type: find-error
+    prompt: Die Tisch ist sehr groß.
+    answer: Die
+    explanation:
+      en: "*Tisch* is masculine: *Der Tisch ist sehr groß.*"
+      fa: "*Tisch* اسم مذکر است: *Der Tisch ist sehr groß.*"
+      de: "*Tisch* ist maskulin: *Der Tisch ist sehr groß.*"
+  - id: match-1
+    type: matching
+    answer:
+      - [Mann, der]
+      - [Frau, die]
+      - [Kind, das]
+    explanation:
+      en: "*der Mann* is masculine, *die Frau* feminine and *das Kind* neuter."
+      fa: "*der Mann* مذکر است، *die Frau* مؤنث و *das Kind* خنثی."
+      de: "*Der Mann* ist maskulin, *die Frau* ist feminin, *das Kind* ist neutral."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 562ed59c3a3c9c5f
