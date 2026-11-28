@@ -1706,7 +1706,7 @@ Lüge	noun	A2	die	-n
 lügen	verb	A2
 Lust	noun	A2	die	sg
 lustig	adjective	A1
-Luxemburg	noun	A2	das	sg
+Luxemburg	noun	A2	none	sg
 Luxemburger	noun	A2	der	-		Luxemburgerin
 luxemburgisch	adjective	A2
 machen	verb	A1
@@ -2006,7 +2006,7 @@ Original	noun	B1	das	-e
 Ort	noun	A1	der	-e
 Osten	noun	A1	der
 Ostern	noun	A2	none	sg
-Österreich	noun	A2	das	sg
+Österreich	noun	A2	none	sg
 Österreicher	noun	A2	der	-		Österreicherin
 österreichisch	adjective	A2
 östlich	adjective	B1
