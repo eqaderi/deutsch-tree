@@ -4,10 +4,274 @@ kind: grammar
 level: A2
 chapter: a2-subordinate-clauses
 order: 7
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-142, grammar-162]
 title:
   en: "Indirect question with *ob*"
   fa: "پرسش غیرمستقیم با *ob*"
   de: "Indirekte Frage mit *ob*"
+
+explanations:
+  en:
+    rule: >
+      A yes/no question has no question word. To put it inside another
+      sentence, German uses *ob* (whether, if): *Kommt Ali noch?* becomes
+      *Weißt du, ob Ali noch kommt?* *Ob* starts a subordinate clause, so the
+      conjugated verb goes to the end, as after a question word. It often
+      follows *Weißt du, …?*, *Ich weiß nicht, …*, *Können Sie mir sagen,
+      …?* and *fragen*. Keep three words apart: *ob* leaves the answer open
+      (yes or no?), *dass* states a fact (*Ich weiß, dass Ali kommt.*), and
+      *wenn* is a condition or a time (*Ruf mich an, wenn du Zeit hast.*). So
+      the English "if" in "I don't know if he's coming" is *ob*, never
+      *wenn*.
+  fa:
+    rule: >
+      پرسش بله یا نه واژهٔ پرسشی ندارد. برای آوردن آن درون جملهٔ دیگر،
+      آلمانی *ob* (آیا، که آیا) را به کار می‌برد: *Kommt Ali noch?* می‌شود
+      *Weißt du, ob Ali noch kommt?* *ob* جملهٔ پیرو را آغاز می‌کند، پس فعل
+      صرف‌شده به پایان جمله می‌رود، درست مانند پس از واژهٔ پرسشی. *ob* بیشتر
+      پس از *Weißt du, …?*، *Ich weiß nicht, …*، *Können Sie mir sagen, …?* و
+      *fragen* می‌آید. این سه واژه را از هم جدا کنید: *ob* پاسخ را باز
+      می‌گذارد (بله یا نه؟)، *dass* واقعیتی را بیان می‌کند (*Ich weiß, dass
+      Ali kommt.*) و *wenn* شرط یا زمان را می‌گوید (*Ruf mich an, wenn du
+      Zeit hast.*). پس «… یا نه» در «نمی‌دانم می‌آید یا نه» در آلمانی
+      همیشه *ob* است، نه *wenn*.
+  de:
+    rule: >
+      Eine Ja/Nein-Frage hat kein Fragewort. In einem anderen Satz steht dann
+      *ob*: Aus *Kommt Ali noch?* wird *Weißt du, ob Ali noch kommt?* Mit *ob*
+      beginnt ein Nebensatz. Das konjugierte Verb steht am Ende, wie nach
+      einem Fragewort. *Ob* kommt oft nach *Weißt du, …?*, *Ich weiß nicht,
+      …*, *Können Sie mir sagen, …?* und *fragen*. Achten Sie auf drei Wörter:
+      *Ob* lässt die Antwort offen (ja oder nein?). *Dass* sagt eine Tatsache
+      (*Ich weiß, dass Ali kommt.*). *Wenn* nennt eine Bedingung oder eine Zeit
+      (*Ruf mich an, wenn du Zeit hast.*).
+
+table:
+  columns:
+    - { en: Yes/no question, fa: پرسش بله یا نه, de: Ja/Nein-Frage }
+    - {
+        en: "Indirect question with *ob*: verb at the end",
+        fa: "پرسش غیرمستقیم با *ob*: فعل در پایان",
+        de: "Indirekte Frage mit *ob*: Verb am Ende",
+      }
+  rows:
+    - [Kommt Ali noch?, "Weißt du, ob Ali noch kommt?"]
+    - [Ist der Laden heute offen?, "Ich weiß nicht, ob der Laden heute offen ist."]
+    - [Hast du morgen Zeit?, "Ich möchte wissen, ob du morgen Zeit hast."]
+    - [Fährt der Bus zum Bahnhof?, "Können Sie mir sagen, ob der Bus zum Bahnhof fährt?"]
+    - [Kann ich hier parken?, "Wissen Sie, ob ich hier parken kann?"]
+    - [Kommt der Zug pünktlich an?, "Er fragt, ob der Zug pünktlich ankommt."]
+
+examples:
+  - de: Weißt du, ob Ali noch kommt?
+    en: Do you know if Ali is still coming?
+    fa: می‌دانی علی هنوز می‌آید یا نه؟
+  - de: Ich weiß nicht, ob der Supermarkt heute offen ist.
+    en: I don't know whether the supermarket is open today.
+    fa: نمی‌دانم سوپرمارکت امروز باز است یا نه.
+  - de: Können Sie mir sagen, ob dieser Bus zum Bahnhof fährt?
+    en: Can you tell me whether this bus goes to the station?
+    fa: ممکن است بگویید این اتوبوس به ایستگاه قطار می‌رود یا نه؟
+  - de: Wissen Sie, ob ich hier parken kann?
+    en: Do you know if I can park here?
+    fa: می‌دانید می‌توانم این‌جا پارک کنم یا نه؟
+  - de: Ich frage meine Chefin, ob ich morgen frei habe.
+    en: I'm asking my boss whether I have tomorrow off.
+    fa: از رئیسم می‌پرسم که آیا فردا مرخصی دارم.
+  - de: Er fragt, ob wir mitkommen.
+    en: He's asking whether we're coming along.
+    fa: می‌پرسد که آیا ما هم می‌آییم.
+  - de: Ich weiß, dass Ali heute kommt.
+    en: I know that Ali is coming today.
+    fa: می‌دانم که علی امروز می‌آید.
+
+mistakes:
+  - wrong: Ich weiß nicht, wenn er heute kommt.
+    right: Ich weiß nicht, ob er heute kommt.
+    why:
+      en: 'The answer is open (yes or no?), so *ob*. English says "if" here, but German never uses *wenn* for it.'
+      fa: "پاسخ باز است (بله یا نه؟)، پس *ob* می‌آید. در این معنا هرگز *wenn* به کار نمی‌رود."
+      de: "Die Antwort ist offen (ja oder nein?). Darum *ob*, nicht *wenn*."
+  - wrong: Weißt du, ob kommt Ali noch?
+    right: Weißt du, ob Ali noch kommt?
+    why:
+      en: "After *ob* the subject comes first and the verb goes to the end: *ob Ali noch kommt*."
+      fa: "پس از *ob* اول فاعل می‌آید و فعل به پایان جمله می‌رود: *ob Ali noch kommt*."
+      de: "Nach *ob* kommt zuerst das Subjekt, das Verb steht am Ende: *ob Ali noch kommt*."
+  - wrong: Wissen Sie, ob der Zug pünktlich ist.
+    right: Wissen Sie, ob der Zug pünktlich ist?
+    why:
+      en: "*Wissen Sie, …?* is a question, so the whole sentence ends with a question mark."
+      fa: "*Wissen Sie, …?* پرسش است، پس کل جمله با علامت پرسش تمام می‌شود."
+      de: "*Wissen Sie, …?* ist eine Frage. Darum steht am Ende ein Fragezeichen."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich weiß nicht, ___ Ali noch kommt. Vielleicht ist er krank.
+    options: [ob, dass, wenn]
+    answer: ob
+    explanation:
+      en: "You don't know: yes or no? The answer is open, so *ob*."
+      fa: "نمی‌دانید: بله یا نه؟ پاسخ باز است، پس *ob*."
+      de: "Man weiß es nicht: ja oder nein? Die Antwort ist offen: *ob*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ali hat angerufen. Ich weiß, ___ er heute kommt.
+    options: [dass, ob, wenn]
+    answer: dass
+    explanation:
+      en: "Ali called, so it is a fact you know: *dass*."
+      fa: "علی زنگ زده است، پس این واقعیتی است که می‌دانید: *dass*."
+      de: "Ali hat angerufen. Das ist eine Tatsache: *dass*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ruf mich bitte an, ___ du Zeit hast.
+    options: [wenn, ob, dass]
+    answer: wenn
+    explanation:
+      en: "A condition or a time, not an open question: *wenn*."
+      fa: "شرط یا زمان است، نه پرسشی باز: *wenn*."
+      de: "Eine Bedingung oder eine Zeit, keine offene Frage: *wenn*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Können Sie mir sagen, ___ dieser Zug nach Köln fährt?
+    options: [ob, wenn, dass]
+    answer: ob
+    explanation:
+      en: "You ask a yes/no question politely: *ob*."
+      fa: "یک پرسش بله یا نه را مؤدبانه می‌پرسید: *ob*."
+      de: "Man stellt höflich eine Ja/Nein-Frage: *ob*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Weißt du, …
+    options: [ob der Laden heute offen ist?, ob ist der Laden heute offen?, ob der Laden ist heute offen?]
+    answer: ob der Laden heute offen ist?
+    explanation:
+      en: "After *ob* comes the subject, and the verb *ist* goes to the very end."
+      fa: "پس از *ob* فاعل می‌آید و فعل *ist* به پایان جمله می‌رود."
+      de: "Nach *ob* kommt das Subjekt, das Verb *ist* steht ganz am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "„Hast du morgen Zeit?“ – Lisa fragt mich, …"
+    options: [ob ich morgen Zeit habe., ob ich habe morgen Zeit., wenn ich morgen Zeit habe.]
+    answer: ob ich morgen Zeit habe.
+    explanation:
+      en: "Lisa's question is a yes/no question, so *ob*, with the verb *habe* at the end."
+      fa: "پرسش لیزا بله یا نه است، پس *ob* می‌آید و فعل *habe* در پایان."
+      de: "Lisas Frage ist eine Ja/Nein-Frage: *ob*, das Verb *habe* am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Kann ich hier parken? – Wissen Sie, …
+    options: [ob ich hier parken kann?, ob ich kann hier parken?, ob kann ich hier parken?]
+    answer: ob ich hier parken kann?
+    explanation:
+      en: "The conjugated modal verb *kann* comes last, after the infinitive *parken*."
+      fa: "فعل وجهی صرف‌شدهٔ *kann* در آخر و پس از مصدر *parken* می‌آید."
+      de: "Das konjugierte Modalverb *kann* steht ganz am Schluss, nach dem Infinitiv *parken*."
+  - id: true-1
+    type: true-false
+    prompt: Ich weiß nicht, ob ich morgen Zeit habe.
+    answer: true
+    explanation:
+      en: "An open question with *ob*, and the verb *habe* at the end. The sentence is correct."
+      fa: "پرسشی باز با *ob* است و فعل *habe* در پایان آمده است. جمله درست است."
+      de: "Eine offene Frage mit *ob*, das Verb *habe* am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Weißt du, ob der Arzt heute da ist?
+    answer: true
+    explanation:
+      en: "*Ob* starts the clause, and the verb *ist* closes it. The sentence is correct."
+      fa: "*ob* جمله را آغاز می‌کند و فعل *ist* آن را می‌بندد. جمله درست است."
+      de: "*Ob* beginnt den Satz, das Verb *ist* steht am Ende. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich weiß nicht, wenn der Laden heute offen ist.
+    answer: false
+    explanation:
+      en: "The answer is open (yes or no?), so *ob*: *Ich weiß nicht, ob der Laden heute offen ist.*"
+      fa: "پاسخ باز است (بله یا نه؟)، پس *ob* می‌آید: *Ich weiß nicht, ob der Laden heute offen ist.*"
+      de: "Die Antwort ist offen (ja oder nein?). Darum *ob*: *Ich weiß nicht, ob der Laden heute offen ist.*"
+  - id: true-4
+    type: true-false
+    prompt: Kannst du mir sagen, ob kommt der Bus bald?
+    answer: false
+    explanation:
+      en: "After *ob* the verb goes to the end: *ob der Bus bald kommt*."
+      fa: "پس از *ob* فعل به پایان جمله می‌رود: *ob der Bus bald kommt*."
+      de: "Nach *ob* steht das Verb am Ende: *ob der Bus bald kommt*."
+  - id: true-5
+    type: true-false
+    prompt: Er fragt, ob wir mitkommen.
+    answer: true
+    explanation:
+      en: "*Ob* after *fragen*, and the separable verb *mitkommen* is one word at the end. The sentence is correct."
+      fa: "*ob* پس از *fragen* آمده و فعل جداشدنی *mitkommen* یک‌جا در پایان است. جمله درست است."
+      de: "*Ob* nach *fragen*, das trennbare Verb *mitkommen* zusammen am Ende. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ist das Museum heute geöffnet? – Weißt du, ___ das Museum heute geöffnet ist?
+    answers: [ob]
+    explanation:
+      en: "A yes/no question becomes an indirect question with *ob*."
+      fa: "پرسش بله یا نه با *ob* به پرسش غیرمستقیم تبدیل می‌شود."
+      de: "Aus einer Ja/Nein-Frage wird eine indirekte Frage mit *ob*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich weiß nicht, ob ich morgen kommen ___ (können).
+    answers: [kann, könnte]
+    explanation:
+      en: "With *ich* it is *kann*, and the modal verb comes last, after *kommen*."
+      fa: "با *ich* می‌شود *kann* و فعل وجهی در آخر و پس از *kommen* می‌آید."
+      de: "Bei *ich* heißt es *kann*. Das Modalverb steht am Schluss, nach *kommen*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Weißt du, ob der Zug pünktlich ___ (ankommen)?
+    answers: [ankommt, angekommen ist]
+    explanation:
+      en: "The separable verb is one word at the end of the *ob* clause: *ankommt*."
+      fa: "فعل جداشدنی یک‌جا در پایان جملهٔ پیرو با *ob* می‌آید: *ankommt*."
+      de: "Das trennbare Verb steht zusammen am Ende vom *ob*-Satz: *ankommt*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wir fragen den Kellner, ob er noch einen Tisch frei ___ (haben).
+    answers: [hat, hätte]
+    explanation:
+      en: "*Er* is third person singular: *hat*, at the end of the *ob* clause."
+      fa: "*er* سوم‌شخص مفرد است: *hat*، در پایان جملهٔ پیرو با *ob*."
+      de: "*Er* ist 3. Person Singular: *hat*, am Ende vom *ob*-Satz."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["ich weiß nicht,", ob, der Supermarkt, offen, ist]
+    explanation:
+      en: "*Ob*, then the subject, and the verb *ist* at the end."
+      fa: "اول *ob*، سپس فاعل و در پایان فعل *ist*."
+      de: "Zuerst *ob*, dann das Subjekt, am Ende das Verb *ist*."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["ich frage meine Chefin,", ob, ich, frei, habe]
+    explanation:
+      en: "After *ob* comes the subject *ich*, and the verb *habe* closes the clause."
+      fa: "پس از *ob* فاعل *ich* می‌آید و فعل *habe* جمله را می‌بندد."
+      de: "Nach *ob* kommt das Subjekt *ich*, das Verb *habe* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Ich weiß nicht, ___ Tom kommt. Vielleicht hat er keine Zeit.", ob]
+      - ["Tom hat angerufen. Ich weiß, ___ er kommt.", dass]
+      - ["Ich koche für Tom, ___ er kommt.", wenn]
+    explanation:
+      en: "*Ob* leaves the answer open, *dass* states a fact, *wenn* gives a condition or a time."
+      fa: "*ob* پاسخ را باز می‌گذارد، *dass* واقعیتی را بیان می‌کند و *wenn* شرط یا زمان را می‌گوید."
+      de: "*Ob* lässt die Antwort offen, *dass* sagt eine Tatsache, *wenn* nennt eine Bedingung oder eine Zeit."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 07e5d699a78d14a4

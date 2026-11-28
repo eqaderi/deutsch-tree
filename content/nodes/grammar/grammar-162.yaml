@@ -4,10 +4,280 @@ kind: grammar
 level: A2
 chapter: a2-subordinate-clauses
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-141, grammar-157]
 title:
   en: "Indirect question with question word"
   fa: "پرسش غیرمستقیم با واژهٔ پرسشی"
   de: "Indirekte Frage mit Fragewort"
+
+explanations:
+  en:
+    rule: >
+      A W-question can sit inside another sentence: *Wo wohnt Michaela?*
+      becomes *Weißt du, wo Michaela wohnt?* This is an indirect question.
+      The question word (*wo*, *wann*, *was*, *wer*, *wie*, *warum*, *wie
+      viel* …) starts a subordinate clause, so the conjugated verb goes to
+      the end, and a comma comes before it. Indirect questions often follow
+      *Weißt du, …?*, *Wissen Sie, …?*, *Können Sie mir sagen, …?*, *Ich weiß
+      nicht, …* and *Ich möchte wissen, …*. They sound more polite than a
+      direct question. The sign at the end belongs to the main clause: a
+      question mark after *Weißt du, …?*, a full stop after *Ich weiß nicht,
+      …*.
+  fa:
+    rule: >
+      پرسش با واژهٔ پرسشی می‌تواند درون جملهٔ دیگری بیاید: *Wo wohnt
+      Michaela?* می‌شود *Weißt du, wo Michaela wohnt?* به این پرسش غیرمستقیم
+      می‌گویند. واژهٔ پرسشی (*wo*، *wann*، *was*، *wer*، *wie*، *warum*،
+      *wie viel* و …) جملهٔ پیرو را آغاز می‌کند، پس فعل صرف‌شده به پایان جمله
+      می‌رود و پیش از واژهٔ پرسشی ویرگول می‌آید. پرسش غیرمستقیم بیشتر پس از
+      *Weißt du, …?*، *Wissen Sie, …?*، *Können Sie mir sagen, …?*، *Ich weiß
+      nicht, …* و *Ich möchte wissen, …* می‌آید و مؤدبانه‌تر از پرسش مستقیم
+      است. نشانهٔ پایان جمله را جملهٔ پایه تعیین می‌کند: پس از *Weißt du,
+      …?* علامت پرسش، و پس از *Ich weiß nicht, …* نقطه.
+  de:
+    rule: >
+      Eine W-Frage kann in einem anderen Satz stehen: Aus *Wo wohnt
+      Michaela?* wird *Weißt du, wo Michaela wohnt?* Das ist eine indirekte
+      Frage. Das Fragewort (*wo*, *wann*, *was*, *wer*, *wie*, *warum*, *wie
+      viel* …) beginnt einen Nebensatz. Das konjugierte Verb steht am Ende,
+      und davor steht ein Komma. Indirekte Fragen kommen oft nach *Weißt du,
+      …?*, *Wissen Sie, …?*, *Können Sie mir sagen, …?*, *Ich weiß nicht, …*
+      und *Ich möchte wissen, …*. Sie klingen höflicher als eine direkte
+      Frage. Das Zeichen am Ende kommt vom Hauptsatz: ein Fragezeichen nach
+      *Weißt du, …?*, ein Punkt nach *Ich weiß nicht, …*.
+
+table:
+  columns:
+    - { en: "W-question", fa: پرسش با واژهٔ پرسشی, de: W-Frage }
+    - {
+        en: "Indirect question: verb at the end",
+        fa: "پرسش غیرمستقیم: فعل در پایان",
+        de: "Indirekte Frage: Verb am Ende",
+      }
+  rows:
+    - [Wo wohnt Michaela?, "Weißt du, wo Michaela wohnt?"]
+    - [Wann kommt der Bus?, "Ich weiß nicht, wann der Bus kommt."]
+    - [Wie viel kostet das Ticket?, "Können Sie mir sagen, wie viel das Ticket kostet?"]
+    - [Warum ist Tom so traurig?, "Ich möchte wissen, warum Tom so traurig ist."]
+    - [Wann fängt der Kurs an?, "Wissen Sie, wann der Kurs anfängt?"]
+    - [Was hast du gekauft?, "Sag mir, was du gekauft hast."]
+
+examples:
+  - de: Weißt du, wo Michaela wohnt?
+    en: Do you know where Michaela lives?
+    fa: می‌دانی میکائلا کجا زندگی می‌کند؟
+  - de: Ich weiß nicht, wann der Bus kommt.
+    en: I don't know when the bus is coming.
+    fa: نمی‌دانم اتوبوس کی می‌آید.
+  - de: Können Sie mir sagen, wie viel das Ticket kostet?
+    en: Can you tell me how much the ticket costs?
+    fa: ممکن است بگویید بلیت چند است؟
+  - de: Kannst du mir sagen, wie spät es ist?
+    en: Can you tell me what time it is?
+    fa: می‌توانی بگویی ساعت چند است؟
+  - de: Ich möchte wissen, warum du so traurig bist.
+    en: I'd like to know why you're so sad.
+    fa: می‌خواهم بدانم چرا این‌قدر غمگینی.
+  - de: Wissen Sie, wann der Kurs anfängt?
+    en: Do you know when the course starts?
+    fa: می‌دانید کلاس کی شروع می‌شود؟
+  - de: Er fragt, wer heute Abend kocht.
+    en: He's asking who is cooking tonight.
+    fa: می‌پرسد امشب چه کسی آشپزی می‌کند.
+  - de: Ich weiß nicht, was ich sagen soll.
+    en: I don't know what to say.
+    fa: نمی‌دانم چه بگویم.
+
+mistakes:
+  - wrong: Weißt du, wo wohnt Michaela?
+    right: Weißt du, wo Michaela wohnt?
+    why:
+      en: "In an indirect question the verb goes to the end: *wo Michaela wohnt*."
+      fa: "در پرسش غیرمستقیم فعل به پایان جمله می‌رود: *wo Michaela wohnt*."
+      de: "In der indirekten Frage steht das Verb am Ende: *wo Michaela wohnt*."
+  - wrong: Ich weiß nicht, wann kommt der Bus.
+    right: Ich weiß nicht, wann der Bus kommt.
+    why:
+      en: "After the question word comes the subject; the verb *kommt* closes the clause."
+      fa: "پس از واژهٔ پرسشی فاعل می‌آید و فعل *kommt* جمله را می‌بندد."
+      de: "Nach dem Fragewort kommt das Subjekt. Das Verb *kommt* steht am Ende."
+  - wrong: Können Sie mir sagen, wie viel kostet das?
+    right: Können Sie mir sagen, wie viel das kostet?
+    why:
+      en: "*Wie viel* starts the clause like any question word, and the verb goes to the end: *wie viel das kostet*."
+      fa: "*wie viel* هم مانند هر واژهٔ پرسشی جمله را آغاز می‌کند و فعل به پایان می‌رود: *wie viel das kostet*."
+      de: "*Wie viel* beginnt den Satz wie jedes Fragewort. Das Verb steht am Ende: *wie viel das kostet*."
+  - wrong: Ich weiß nicht, wann der Kurs anfängt?
+    right: Ich weiß nicht, wann der Kurs anfängt.
+    why:
+      en: "*Ich weiß nicht* is a statement, not a question, so the sentence ends with a full stop."
+      fa: "*ich weiß nicht* جملهٔ خبری است، نه پرسش؛ پس جمله با نقطه تمام می‌شود."
+      de: "*Ich weiß nicht* ist eine Aussage, keine Frage. Darum steht am Ende ein Punkt."
+
+questions:
+  - id: choice-1
+    type: multiple-choice
+    prompt: Weißt du, …
+    options: [wo Michaela wohnt?, wo wohnt Michaela?, Michaela wo wohnt?]
+    answer: wo Michaela wohnt?
+    explanation:
+      en: "The question word starts the clause, then the subject, and the verb *wohnt* comes last."
+      fa: "واژهٔ پرسشی جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل *wohnt* در آخر."
+      de: "Das Fragewort beginnt den Satz, dann kommt das Subjekt, das Verb *wohnt* steht am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Können Sie mir sagen, …
+    options: [wann der Zug abfährt?, wann fährt der Zug ab?, wann der Zug fährt ab?]
+    answer: wann der Zug abfährt?
+    explanation:
+      en: "The verb goes to the end, and the separable verb is one word there: *abfährt*."
+      fa: "فعل به پایان جمله می‌رود و فعل جداشدنی آن‌جا یک‌جا می‌آید: *abfährt*."
+      de: "Das Verb steht am Ende, das trennbare Verb zusammen: *abfährt*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich weiß nicht, …
+    options: [warum er so müde ist., warum ist er so müde., warum er ist so müde.]
+    answer: warum er so müde ist.
+    explanation:
+      en: "After *warum* comes the subject, and the verb *ist* closes the clause."
+      fa: "پس از *warum* فاعل می‌آید و فعل *ist* جمله را می‌بندد."
+      de: "Nach *warum* kommt das Subjekt, das Verb *ist* steht am Ende."
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich weiß nicht, ___ das Konzert beginnt. Um acht oder um neun?
+    options: [wann, wo, wer]
+    answer: wann
+    explanation:
+      en: "Eight or nine are times, so the question word for a time: *wann*."
+      fa: "هشت یا نه ساعت است، پس واژهٔ پرسشیِ زمان می‌آید: *wann*."
+      de: "Acht oder neun ist eine Uhrzeit. Darum das Fragewort für die Zeit: *wann*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Weißt du, ___ Anna wohnt? In Köln oder in Bonn?
+    options: [wo, wann, wie viel]
+    answer: wo
+    explanation:
+      en: "Cologne or Bonn are places, so the question word for a place: *wo*."
+      fa: "کلن یا بن مکان است، پس واژهٔ پرسشیِ مکان می‌آید: *wo*."
+      de: "Köln oder Bonn sind Orte. Darum das Fragewort für den Ort: *wo*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Kannst du mir sagen, ___ die Jacke kostet? Ist sie teuer?
+    options: [wie viel, wer, wo]
+    answer: wie viel
+    explanation:
+      en: "You ask for a price: *wie viel*."
+      fa: "قیمت پرسیده می‌شود: *wie viel*."
+      de: "Man fragt nach dem Preis: *wie viel*."
+  - id: true-1
+    type: true-false
+    prompt: Ich weiß nicht, wo meine Schlüssel sind.
+    answer: true
+    explanation:
+      en: "The verb *sind* is at the end, and the sentence is a statement with a full stop. It is correct."
+      fa: "فعل *sind* در پایان است و جمله خبری است و با نقطه تمام می‌شود. جمله درست است."
+      de: "Das Verb *sind* steht am Ende, der Satz ist eine Aussage mit Punkt. Er ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Kannst du mir sagen, wie spät ist es?
+    answer: false
+    explanation:
+      en: "In the indirect question the verb goes to the end: *wie spät es ist*."
+      fa: "در پرسش غیرمستقیم فعل به پایان جمله می‌رود: *wie spät es ist*."
+      de: "In der indirekten Frage steht das Verb am Ende: *wie spät es ist*."
+  - id: true-3
+    type: true-false
+    prompt: Weißt du, wann der Film anfängt?
+    answer: true
+    explanation:
+      en: "The separable verb *anfängt* is one word at the end. The sentence is correct."
+      fa: "فعل جداشدنی *anfängt* یک‌جا در پایان آمده است. جمله درست است."
+      de: "Das trennbare Verb *anfängt* steht zusammen am Ende. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich möchte wissen, warum du nicht gekommen bist.
+    answer: true
+    explanation:
+      en: "In the *Perfekt* the conjugated *bist* comes last, after *gekommen*. The sentence is correct."
+      fa: "در گذشتهٔ نقلی (*Perfekt*) فعل صرف‌شدهٔ *bist* پس از *gekommen* و در آخر آمده است. جمله درست است."
+      de: "Im Perfekt steht das konjugierte *bist* am Schluss, nach *gekommen*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Er fragt, wann kommt der Zug.
+    answer: false
+    explanation:
+      en: "In the indirect question the subject comes before the verb, and the verb goes to the end: *wann der Zug kommt*."
+      fa: "در پرسش غیرمستقیم فاعل پیش از فعل می‌آید و فعل به پایان جمله می‌رود: *wann der Zug kommt*."
+      de: "In der indirekten Frage steht das Subjekt vor dem Verb, das Verb am Ende: *wann der Zug kommt*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Weißt du, wo Tom ___ (wohnen)?
+    answers: [wohnt, gewohnt hat, wohnte]
+    explanation:
+      en: "*Tom* is third person singular: *wohnt*, at the end of the indirect question."
+      fa: "*Tom* سوم‌شخص مفرد است: *wohnt*، در پایان پرسش غیرمستقیم."
+      de: "*Tom* ist 3. Person Singular: *wohnt*, am Ende der indirekten Frage."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich weiß nicht, wann der Kurs ___ (anfangen).
+    answers: [anfängt, angefangen hat, anfing]
+    explanation:
+      en: "The separable verb is one word at the end: *anfängt*."
+      fa: "فعل جداشدنی یک‌جا در پایان می‌آید: *anfängt*."
+      de: "Das trennbare Verb steht zusammen am Ende: *anfängt*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Können Sie mir sagen, wie viel das Ticket ___ (kosten)?
+    answers: [kostet, gekostet hat, kostete]
+    explanation:
+      en: "*Das Ticket* is third person singular: *kostet*, at the end of the indirect question."
+      fa: "*das Ticket* سوم‌شخص مفرد است: *kostet*، در پایان پرسش غیرمستقیم."
+      de: "*Das Ticket* ist 3. Person Singular: *kostet*, am Ende der indirekten Frage."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wann kommt der Bus? – Ich weiß nicht, ___ der Bus kommt.
+    answers: [wann, ob]
+    explanation:
+      en: "The direct question asks *wann*, so the indirect one keeps the same question word."
+      fa: "پرسش مستقیم با *wann* است، پس پرسش غیرمستقیم همان واژهٔ پرسشی را نگه می‌دارد."
+      de: "Die direkte Frage hat *wann*. Die indirekte Frage behält das Fragewort."
+  - id: error-1
+    type: find-error
+    prompt: Weißt du, wenn der Bus kommt?
+    answer: wenn
+    explanation:
+      en: "You ask for a time, so the question word *wann*: *Weißt du, wann der Bus kommt?*"
+      fa: "زمان پرسیده می‌شود، پس واژهٔ پرسشی *wann* می‌آید: *Weißt du, wann der Bus kommt?*"
+      de: "Man fragt nach der Zeit. Darum das Fragewort *wann*: *Weißt du, wann der Bus kommt?*"
+  - id: order-1
+    type: word-order
+    answers:
+      - ["ich weiß nicht,", wann, der Film, anfängt]
+    explanation:
+      en: "The question word, then the subject, and the separable verb *anfängt* at the end."
+      fa: "اول واژهٔ پرسشی، سپس فاعل و در پایان فعل جداشدنی *anfängt*."
+      de: "Zuerst das Fragewort, dann das Subjekt, am Ende das trennbare Verb *anfängt*."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["ich möchte wissen,", warum, du, so traurig, bist]
+    explanation:
+      en: "After *warum* comes the subject *du*, and the verb *bist* closes the clause."
+      fa: "پس از *warum* فاعل *du* می‌آید و فعل *bist* جمله را می‌بندد."
+      de: "Nach *warum* kommt das Subjekt *du*, das Verb *bist* steht am Ende."
+  - id: order-3
+    type: word-order
+    answers:
+      - ["er fragt,", wer, heute Abend, kocht]
+    explanation:
+      en: "Here *wer* is the subject itself, so the rest follows it and the verb *kocht* comes last."
+      fa: "این‌جا *wer* خودش فاعل است، پس بقیهٔ جمله پس از آن می‌آید و فعل *kocht* در آخر."
+      de: "Hier ist *wer* selbst das Subjekt. Der Rest kommt danach, das Verb *kocht* am Ende."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: d169fad2320a9542
