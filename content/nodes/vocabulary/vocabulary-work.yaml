@@ -71,7 +71,8 @@ words:
       de: Im Sommer habe ich einen Job in einem Café.
       en: In the summer I have a job in a café.
       fa: تابستان‌ها در یک کافه کار موقت دارم.
-    alsoAccepted: [die Arbeit, die Stelle, der Nebenjob, der Teilzeitjob, die Teilzeitarbeit, die Aushilfe, der Ferienjob]
+    alsoAccepted:
+      [die Arbeit, die Stelle, der Nebenjob, der Teilzeitjob, die Teilzeitarbeit, die Aushilfe, der Ferienjob]
     tooCloseTo: [Arbeit, Beruf, Stelle]
 
   - word: Arbeitsplatz

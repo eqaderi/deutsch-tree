@@ -389,7 +389,8 @@ words:
       de: Bitte füllen Sie diesen Bogen aus.
       en: Please fill in this form.
       fa: لطفاً این برگه را پر کنید.
-    alsoAccepted: [das Blatt, das Formular, der Fragebogen, der Antwortbogen, das Arbeitsblatt, das Blatt Papier, der Zettel]
+    alsoAccepted:
+      [das Blatt, das Formular, der Fragebogen, der Antwortbogen, das Arbeitsblatt, das Blatt Papier, der Zettel]
 
 review:
   reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
