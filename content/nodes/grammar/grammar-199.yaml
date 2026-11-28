@@ -4,10 +4,340 @@ kind: grammar
 level: A2
 chapter: a2-word-building-particles
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-005, grammar-210]
 title:
   en: "Verb prefixes with meaning"
   fa: "پیشوندهای فعلی معنادار (*an-*، *aus-*، *auf-*، *zu-* …)"
   de: "Verbvorsilben mit Bedeutung (*an-*, *aus-*, *auf-*, *zu-* …)"
+
+explanations:
+  en:
+    rule: >
+      Many separable prefixes have a meaning of their own, so one verb with
+      different prefixes gives a family of verbs. *an-* and *aus-* switch a
+      light or a device on and off: *anmachen*, *ausmachen*. *auf-* and *zu-*
+      open and close a door, a window or a shop: *aufmachen*, *zumachen*.
+      *mit-* means "along, with others" (*mitkommen*, *mitnehmen*), *weg-*
+      "away from here" (*weggehen*, *wegwerfen*), *zurück-* "back"
+      (*zurückkommen*, *zurückrufen*) and *weiter-* "go on, not stop"
+      (*weitermachen*, *weiterlesen*). The prefix carries the meaning, so it
+      is never left out, and it goes to the end of the sentence like any
+      separable prefix: *Mach bitte das Licht aus.* In the *Perfekt*, *ge-*
+      goes between the prefix and the verb: *ausgemacht*, *mitgekommen*.
+  fa:
+    rule: >
+      بسیاری از پیشوندهای جداشدنی معنای خودشان را دارند؛ به همین دلیل یک فعل
+      با پیشوندهای گوناگون خانواده‌ای از فعل‌ها می‌سازد. *an-* و *aus-*
+      چراغ یا دستگاهی را روشن و خاموش می‌کنند: *anmachen* (روشن کردن) و
+      *ausmachen* (خاموش کردن). *auf-* و *zu-* برای باز و بسته کردن در،
+      پنجره یا مغازه‌اند: *aufmachen* (باز کردن) و *zumachen* (بستن). *mit-*
+      یعنی «همراه دیگران» (*mitkommen*، همراه آمدن؛ *mitnehmen*، با خود
+      بردن)، *weg-* یعنی «از این‌جا دور» (*weggehen*، رفتن؛ *wegwerfen*، دور
+      انداختن)، *zurück-* یعنی «برگشت» (*zurückkommen*، برگشتن؛
+      *zurückrufen*، دوباره تماس گرفتن) و *weiter-* یعنی «ادامه دادن»
+      (*weitermachen*، ادامه دادن؛ *weiterlesen*، به خواندن ادامه دادن). معنا
+      در پیشوند است، پس هرگز حذف نمی‌شود و مانند هر پیشوند جداشدنی به پایان
+      جمله می‌رود: *Mach bitte das Licht aus.* در گذشتهٔ نقلی (*Perfekt*)،
+      *ge-* میان پیشوند و فعل می‌آید: *ausgemacht*، *mitgekommen*.
+  de:
+    rule: >
+      Viele trennbare Präfixe haben eine eigene Bedeutung. Mit einem Verb und
+      verschiedenen Präfixen bekommt man so viele Verben. *an-* und *aus-*:
+      Licht oder ein Gerät an und aus (*anmachen*, *ausmachen*). *auf-* und
+      *zu-*: Tür, Fenster oder Geschäft offen oder geschlossen (*aufmachen*,
+      *zumachen*). *mit-* heißt „zusammen mit anderen“ (*mitkommen*,
+      *mitnehmen*), *weg-* heißt „weg von hier“ (*weggehen*, *wegwerfen*),
+      *zurück-* heißt „wieder zurück“ (*zurückkommen*, *zurückrufen*), und
+      *weiter-* heißt „nicht aufhören“ (*weitermachen*, *weiterlesen*). Das
+      Präfix gibt die Bedeutung. Man darf es nicht vergessen. Es steht am
+      Satzende: *Mach bitte das Licht aus.* Im Perfekt steht *ge-* zwischen
+      Präfix und Verb: *ausgemacht*, *mitgekommen*.
+
+table:
+  columns:
+    - { en: Prefix, fa: پیشوند, de: Präfix }
+    - { en: Meaning, fa: معنا, de: Bedeutung }
+    - { en: Verbs, fa: فعل‌ها, de: Verben }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - ["an-", einschalten, anmachen, Mach bitte das Licht an.]
+    - ["aus-", ausschalten, ausmachen, Mach bitte das Licht aus.]
+    - ["auf-", öffnen, aufmachen, Ich mache das Fenster auf.]
+    - ["zu-", schließen, zumachen, Mach bitte die Tür zu.]
+    - ["mit-", zusammen mit anderen, "mitkommen, mitnehmen, mitbringen", Kommst du mit?]
+    - ["weg-", weg von hier, "weggehen, wegfahren, wegwerfen", Wir fahren morgen weg.]
+    - ["zurück-", wieder zurück, "zurückkommen, zurückgeben, zurückrufen", Ich rufe dich später zurück.]
+    - ["weiter-", nicht aufhören, "weitermachen, weiterlesen, weiterfahren", Lies bitte weiter.]
+
+examples:
+  - de: Mach bitte das Licht aus.
+    en: Please turn off the light.
+    fa: لطفاً چراغ را خاموش کن.
+  - de: Kannst du den Fernseher anmachen?
+    en: Can you turn on the TV?
+    fa: می‌توانی تلویزیون را روشن کنی؟
+  - de: Es ist warm hier. Ich mache das Fenster auf.
+    en: It's warm in here. I'll open the window.
+    fa: این‌جا گرم است. پنجره را باز می‌کنم.
+  - de: Machen Sie bitte die Tür zu.
+    en: Please close the door.
+    fa: لطفاً در را ببندید.
+  - de: Wir gehen ins Kino. Kommst du mit?
+    en: We're going to the cinema. Are you coming with us?
+    fa: ما به سینما می‌رویم. تو هم می‌آیی؟
+  - de: Nimm einen Regenschirm mit!
+    en: Take an umbrella with you!
+    fa: چتر با خودت ببر!
+  - de: Am Wochenende fahren wir weg.
+    en: At the weekend we're going away.
+    fa: آخر هفته به سفر می‌رویم.
+  - de: Ich werfe die alten Zeitungen weg.
+    en: I'm throwing the old newspapers away.
+    fa: روزنامه‌های کهنه را دور می‌اندازم.
+  - de: Wann kommst du zurück?
+    en: When are you coming back?
+    fa: کی برمی‌گردی؟
+  - de: Frau Berg ist nicht da. Sie ruft Sie morgen zurück.
+    en: Ms Berg isn't here. She will call you back tomorrow.
+    fa: خانم برگ این‌جا نیست. فردا دوباره با شما تماس می‌گیرد.
+  - de: Das Buch ist spannend. Ich lese heute Abend weiter.
+    en: The book is exciting. I'll go on reading tonight.
+    fa: کتاب هیجان‌انگیز است. امشب به خواندنش ادامه می‌دهم.
+  - de: Gestern ist Tom nicht mitgekommen.
+    en: Yesterday Tom didn't come along.
+    fa: دیروز تام همراه ما نیامد.
+
+mistakes:
+  - wrong: Es ist dunkel. Ich mache das Licht.
+    right: Es ist dunkel. Ich mache das Licht an.
+    why:
+      en: 'The prefix carries the meaning: *machen* alone does not say "switch on". Never leave *an* out.'
+      fa: "معنا در پیشوند است: *machen* به‌تنهایی معنای «روشن کردن» ندارد. *an* را هرگز حذف نکنید."
+      de: "Das Präfix gibt die Bedeutung. *Machen* allein heißt nicht „einschalten“. *An* muss am Ende stehen."
+  - wrong: Ich mache aus das Licht.
+    right: Ich mache das Licht aus.
+    why:
+      en: "The prefix goes to the end of the sentence, after *das Licht*."
+      fa: "پیشوند به پایان جمله می‌رود، پس از *das Licht*."
+      de: "Das Präfix steht am Satzende, nach *das Licht*."
+  - wrong: Mach bitte den Fernseher zu.
+    right: Mach bitte den Fernseher aus.
+    why:
+      en: "A device or a light is switched *an* and *aus*; *auf* and *zu* are for doors, windows and shops."
+      fa: "دستگاه و چراغ با *an* و *aus* روشن و خاموش می‌شوند؛ *auf* و *zu* برای در، پنجره و مغازه‌اند."
+      de: "Ein Gerät oder Licht ist *an* oder *aus*. *Auf* und *zu* sagt man bei Tür, Fenster und Geschäft."
+  - wrong: Ich habe das Fenster geaufmacht.
+    right: Ich habe das Fenster aufgemacht.
+    why:
+      en: "In the *Perfekt*, *ge-* goes between the prefix and the verb: *auf-ge-macht*."
+      fa: "در گذشتهٔ نقلی (*Perfekt*)، *ge-* میان پیشوند و فعل می‌آید: *auf-ge-macht*."
+      de: "Im Perfekt steht *ge-* zwischen Präfix und Verb: *auf-ge-macht*."
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: Es ist dunkel hier. Mach bitte das Licht ___.
+    options: [aus, an, zu]
+    answer: an
+    explanation:
+      en: "It is dark, so the light should go on: *anmachen*."
+      fa: "هوا تاریک است، پس چراغ باید روشن شود: *anmachen*."
+      de: "Es ist dunkel. Das Licht soll an sein: *anmachen*."
+  - id: q2
+    type: gap-fill
+    prompt: Ich gehe jetzt schlafen. Machst du bitte den Fernseher ___?
+    options: [auf, an, aus]
+    answer: aus
+    explanation:
+      en: "Before sleeping you switch the TV off: *ausmachen*. *Auf* is for doors and windows."
+      fa: "پیش از خواب تلویزیون را خاموش می‌کنیم: *ausmachen*. *auf* برای در و پنجره است."
+      de: "Vor dem Schlafen macht man den Fernseher aus: *ausmachen*. *Auf* sagt man bei Tür und Fenster."
+  - id: q3
+    type: gap-fill
+    prompt: Es ist kalt im Zimmer. Mach bitte das Fenster ___.
+    options: [zu, aus, auf]
+    answer: zu
+    explanation:
+      en: "When it is cold you close the window: *zumachen*."
+      fa: "وقتی هوا سرد است پنجره را می‌بندیم: *zumachen*."
+      de: "Es ist kalt. Man schließt das Fenster: *zumachen*."
+  - id: q4
+    type: gap-fill
+    prompt: Wir gehen in ein Café. Kommst du ___?
+    options: [weg, mit, weiter]
+    answer: mit
+    explanation:
+      en: "*Mitkommen*: to come along with others."
+      fa: "*mitkommen* یعنی همراه دیگران آمدن."
+      de: "*Mitkommen* heißt: zusammen mit anderen kommen."
+  - id: q5
+    type: gap-fill
+    prompt: Herr Klein ist gerade nicht im Büro. Er ruft Sie später ___.
+    options: [mit, zurück, weg]
+    answer: zurück
+    explanation:
+      en: "You called and he was out, so he calls back: *zurückrufen*."
+      fa: "شما تماس گرفته‌اید و او نبوده، پس بعداً دوباره تماس می‌گیرد: *zurückrufen*."
+      de: "Sie haben angerufen, er war nicht da. Er ruft später zurück: *zurückrufen*."
+  - id: q6
+    type: gap-fill
+    prompt: Die Pause ist vorbei. Wir machen jetzt ___.
+    options: [zurück, weg, weiter]
+    answer: weiter
+    explanation:
+      en: "After the break you go on working: *weitermachen*."
+      fa: "پس از استراحت کار را ادامه می‌دهیم: *weitermachen*."
+      de: "Nach der Pause arbeitet man weiter: *weitermachen*."
+  - id: q7
+    type: multiple-choice
+    prompt: Was macht man mit dem Licht, wenn man aus dem Zimmer geht?
+    options: [Man macht es auf., Man macht es aus., Man macht es zu.]
+    answer: Man macht es aus.
+    explanation:
+      en: "A light is switched off with *ausmachen*; *auf* and *zu* are for doors and windows."
+      fa: "چراغ با *ausmachen* خاموش می‌شود؛ *auf* و *zu* برای در و پنجره‌اند."
+      de: "Licht macht man aus: *ausmachen*. *Auf* und *zu* sagt man bei Tür und Fenster."
+  - id: q8
+    type: multiple-choice
+    prompt: "Familie Schulz fährt im August weg. Das heißt:"
+    options:
+      [
+        Familie Schulz kommt im August nach Hause.,
+        Familie Schulz ist im August nicht zu Hause.,
+        Familie Schulz fährt im August nicht mehr Auto.,
+      ]
+    answer: Familie Schulz ist im August nicht zu Hause.
+    explanation:
+      en: "*Wegfahren* means to go away, on a trip: the family is not at home."
+      fa: "*wegfahren* یعنی به سفر رفتن، پس خانواده در خانه نیست."
+      de: "*Wegfahren* heißt: eine Reise machen. Die Familie ist nicht zu Hause."
+  - id: q9
+    type: multiple-choice
+    prompt: "Ich lese das Buch weiter. Das heißt:"
+    options:
+      [
+        Ich lese das Buch noch einmal von vorne.,
+        Ich gebe das Buch zurück.,
+        Ich habe schon einen Teil gelesen und lese jetzt mehr.,
+      ]
+    answer: Ich habe schon einen Teil gelesen und lese jetzt mehr.
+    explanation:
+      en: "*Weiterlesen*: you do not stop, you go on reading from where you were."
+      fa: "*weiterlesen* یعنی دست از خواندن نمی‌کشید و از همان جا ادامه می‌دهید."
+      de: "*Weiterlesen* heißt: nicht aufhören, sondern weiter lesen."
+  - id: q10
+    type: true-false
+    prompt: Mach bitte die Tür zu.
+    answer: true
+    explanation:
+      en: "*Zumachen* closes a door, and *zu* stands at the end. The sentence is correct."
+      fa: "*zumachen* برای بستن در است و *zu* در پایان جمله آمده است. جمله درست است."
+      de: "Eine Tür macht man zu, und *zu* steht am Ende. Der Satz ist richtig."
+  - id: q11
+    type: true-false
+    prompt: Kannst du bitte den Fernseher zumachen?
+    answer: false
+    explanation:
+      en: "A TV is switched off: *ausmachen*. *Zumachen* is for doors and windows."
+      fa: "تلویزیون خاموش می‌شود: *ausmachen*. *zumachen* برای در و پنجره است."
+      de: "Einen Fernseher macht man aus: *ausmachen*. *Zumachen* sagt man bei Tür und Fenster."
+  - id: q12
+    type: true-false
+    prompt: Ich nehme mit meinen Regenschirm.
+    answer: false
+    explanation:
+      en: "The prefix goes to the end: *Ich nehme meinen Regenschirm mit.*"
+      fa: "پیشوند به پایان جمله می‌رود: *Ich nehme meinen Regenschirm mit.*"
+      de: "Das Präfix steht am Ende: *Ich nehme meinen Regenschirm mit.*"
+  - id: q13
+    type: true-false
+    prompt: Wir kommen um zehn Uhr zurück.
+    answer: true
+    explanation:
+      en: "*Zurückkommen*: the verb in position 2, *zurück* at the end. The sentence is correct."
+      fa: "*zurückkommen*: فعل در جایگاه دوم و *zurück* در پایان جمله. جمله درست است."
+      de: "*Zurückkommen*: Das Verb steht auf Position 2, *zurück* am Ende. Der Satz ist richtig."
+  - id: q14
+    type: find-error
+    prompt: Es ist kalt. Mach bitte das Fenster aus.
+    answer: aus
+    explanation:
+      en: "A window is closed, not switched off: *Mach bitte das Fenster zu.*"
+      fa: "پنجره بسته می‌شود، نه خاموش: *Mach bitte das Fenster zu.*"
+      de: "Ein Fenster macht man zu, nicht aus: *Mach bitte das Fenster zu.*"
+  - id: q15
+    type: find-error
+    prompt: Ich habe das Licht angemacht und den Computer zugemacht.
+    answer: zugemacht
+    explanation:
+      en: "A computer is switched off: *ausgemacht*."
+      fa: "رایانه خاموش می‌شود: *ausgemacht*."
+      de: "Einen Computer macht man aus: *ausgemacht*."
+  - id: q16
+    type: typed-gap-fill
+    prompt: Ich habe das Fenster ___ (aufmachen).
+    answers: [aufgemacht]
+    explanation:
+      en: "In the *Perfekt*, *ge-* goes between the prefix and the verb: *aufgemacht*."
+      fa: "در گذشتهٔ نقلی (*Perfekt*)، *ge-* میان پیشوند و فعل می‌آید: *aufgemacht*."
+      de: "Im Perfekt steht *ge-* zwischen Präfix und Verb: *aufgemacht*."
+  - id: q17
+    type: typed-gap-fill
+    prompt: Gestern sind wir nicht ___ (weggehen).
+    answers: [weggegangen]
+    explanation:
+      en: "*Gehen* gives *gegangen*, so *weggehen* gives *weggegangen*."
+      fa: "صفت مفعولی *gehen* می‌شود *gegangen*، پس *weggehen* می‌شود *weggegangen*."
+      de: "*Gehen* – *gegangen*, also *weggehen* – *weggegangen*."
+  - id: q18
+    type: typed-gap-fill
+    prompt: Ich rufe dich später ___ (zurückrufen).
+    answers: [zurück]
+    explanation:
+      en: "The verb part *rufe* stands in position 2; the prefix *zurück* goes to the end."
+      fa: "بخش فعلی *rufe* در جایگاه دوم می‌آید و پیشوند *zurück* به پایان جمله می‌رود."
+      de: "*Rufe* steht auf Position 2, das Präfix *zurück* steht am Ende."
+  - id: q19
+    type: typed-gap-fill
+    prompt: Wir fahren ans Meer. Nimm bitte deine Sonnenbrille ___ (mitnehmen)!
+    answers: [mit]
+    explanation:
+      en: "*Mitnehmen*: the prefix *mit* goes to the end of the request."
+      fa: "در *mitnehmen* پیشوند *mit* به پایان جملهٔ امری می‌رود."
+      de: "*Mitnehmen*: Das Präfix *mit* steht am Ende."
+  - id: q20
+    type: word-order
+    answers:
+      - [wann, kommst, du, zurück]
+    end: "?"
+    explanation:
+      en: "The question word first, then the verb part, the subject, and the prefix at the end."
+      fa: "نخست واژهٔ پرسشی، سپس بخش فعلی و فاعل، و پیشوند در پایان جمله."
+      de: "Zuerst das Fragewort, dann das Verb und das Subjekt. Das Präfix steht am Ende."
+  - id: q21
+    type: word-order
+    answers:
+      - [wir, fahren, am Samstag, weg]
+      - [am Samstag, fahren, wir, weg]
+    explanation:
+      en: "The verb part is in position 2 and *weg* at the end; *wir* or *am Samstag* can stand first."
+      fa: "بخش فعلی در جایگاه دوم و *weg* در پایان جمله است؛ *wir* یا *am Samstag* می‌تواند در آغاز بیاید."
+      de: "Das Verb steht auf Position 2, *weg* am Ende. *Wir* oder *am Samstag* kann am Anfang stehen."
+  - id: q22
+    type: matching
+    answer:
+      - [anmachen, ausmachen]
+      - [aufmachen, zumachen]
+      - [weggehen, zurückkommen]
+    explanation:
+      en: "Opposites: on and off, open and closed, away and back."
+      fa: "این‌ها متضادند: روشن و خاموش، باز و بسته، رفتن و برگشتن."
+      de: "Das Gegenteil: an und aus, auf und zu, weg und zurück."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: a9855e87e1a44ad2

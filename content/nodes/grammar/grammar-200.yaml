@@ -4,10 +4,308 @@ kind: grammar
 level: A2
 chapter: a2-word-building-particles
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-205]
 title:
   en: "Diminutive *-chen*"
   fa: "اسم مصغّر با *-chen*"
   de: "Verkleinerung mit *-chen*"
+
+explanations:
+  en:
+    rule: >
+      *-chen* after a noun makes a diminutive: a small or a dear version of
+      the thing (*das Haus* → *das Häuschen*, a little house). A diminutive is
+      always neuter, whatever the gender of the noun it comes from: *der
+      Tisch* → *das Tischchen*, *die Katze* → *das Kätzchen*. *a*, *o*, *u*
+      and *au* usually take an umlaut, and a final *-e* drops: *die Katze* →
+      *das Kätzchen*, *die Maus* → *das Mäuschen*. The plural adds no ending:
+      *die Kätzchen*. *-lein* works the same way but is rarer; you meet it in
+      fairy tales and after *-ch*: *das Buch* → *das Büchlein*. Some
+      diminutives are words of their own: *das Brötchen* (bread roll), *das
+      Mädchen* (girl), *das Märchen* (fairy tale).
+  fa:
+    rule: >
+      پسوند *-chen* پس از اسم، اسم مصغّر می‌سازد: نسخهٔ کوچک یا دوست‌داشتنی
+      همان چیز (*das Haus* و *das Häuschen*، خانهٔ کوچک). اسم مصغّر همیشه
+      خنثی (*das*) است، جنس اسم اصلی هرچه باشد: *der Tisch* و *das
+      Tischchen*، *die Katze* و *das Kätzchen*. *a*، *o*، *u* و *au* معمولاً دو
+      نقطه (*Umlaut*) می‌گیرند و *-e* پایانی می‌افتد: *die Katze* و *das
+      Kätzchen*، *die Maus* و *das Mäuschen*. جمع آن پایانه‌ای نمی‌گیرد: *die
+      Kätzchen*. پسوند *-lein* هم همین کار را می‌کند، ولی کمتر به کار
+      می‌رود؛ آن را در قصه‌ها و پس از *-ch* می‌بینید: *das Buch* و *das
+      Büchlein*. برخی از اسم‌های مصغّر واژه‌ای مستقل شده‌اند: *das Brötchen*
+      (نان کوچک صبحانه)، *das Mädchen* (دختر)، *das Märchen* (قصه).
+  de:
+    rule: >
+      Mit *-chen* nach einem Nomen macht man etwas klein oder lieb: *das Haus*
+      – *das Häuschen* (ein kleines Haus). Der Artikel ist immer *das*, auch
+      wenn das Nomen *der* oder *die* hat: *der Tisch* – *das Tischchen*,
+      *die Katze* – *das Kätzchen*. *a*, *o*, *u* und *au* bekommen meistens
+      einen Umlaut, und ein *-e* am Ende fällt weg: *die Maus* – *das
+      Mäuschen*. Im Plural gibt es keine Endung: *die Kätzchen*. *-lein* ist
+      genauso, aber seltener. Man findet es in Märchen und nach *-ch*: *das
+      Buch* – *das Büchlein*. Manche Wörter mit *-chen* sind heute eigene
+      Wörter: *das Brötchen*, *das Mädchen*, *das Märchen*.
+
+table:
+  columns:
+    - { en: Noun, fa: اسم, de: Nomen }
+    - { en: "With *-chen* / *-lein*", fa: "با *-chen* / *-lein*", de: "Mit *-chen* / *-lein*" }
+    - { en: Plural, fa: جمع, de: Plural }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Tisch, das Tischchen, die Tischchen, Das Tischchen steht am Bett.]
+    - [der Hund, das Hündchen, die Hündchen, Das Hündchen ist süß.]
+    - [die Katze, das Kätzchen, die Kätzchen, Die Kätzchen schlafen.]
+    - [die Maus, das Mäuschen, die Mäuschen, Das Mäuschen ist grau.]
+    - [das Haus, das Häuschen, die Häuschen, Das Häuschen ist alt.]
+    - [das Brot, das Brötchen, die Brötchen, Ich kaufe zwei Brötchen.]
+    - [das Buch, das Büchlein, die Büchlein, Das Büchlein ist von Oma.]
+
+examples:
+  - de: Zum Frühstück esse ich zwei Brötchen.
+    en: For breakfast I eat two bread rolls.
+    fa: صبحانه دو نان کوچک می‌خورم.
+  - de: Unsere Katze hat drei Kätzchen.
+    en: Our cat has three kittens.
+    fa: گربهٔ ما سه بچه‌گربه دارد.
+  - de: Das Mädchen spielt im Garten.
+    en: The girl is playing in the garden.
+    fa: دختر در حیاط بازی می‌کند.
+  - de: Sie wohnen in einem Häuschen am See.
+    en: They live in a little house by the lake.
+    fa: آن‌ها در خانه‌ای کوچک کنار دریاچه زندگی می‌کنند.
+  - de: Möchtest du noch ein Stückchen Kuchen?
+    en: Would you like another little piece of cake?
+    fa: یک تکهٔ کوچک دیگر کیک می‌خواهی؟
+  - de: Das Büchlein ist ein Geschenk von meiner Oma.
+    en: The little book is a present from my grandma.
+    fa: این کتاب کوچک هدیهٔ مادربزرگم است.
+  - de: Das Hündchen von Frau Maier ist sehr süß.
+    en: Mrs Maier's little dog is very sweet.
+    fa: سگ کوچک خانم مایر خیلی بامزه است.
+  - de: Am Abend lese ich meinem Sohn ein Märchen vor.
+    en: In the evening I read my son a fairy tale.
+    fa: شب‌ها برای پسرم قصه می‌خوانم.
+
+mistakes:
+  - wrong: Der Hündchen schläft.
+    right: Das Hündchen schläft.
+    why:
+      en: "A noun in *-chen* is always neuter, even if *Hund* is masculine: *das Hündchen*."
+      fa: "اسمی که به *-chen* ختم می‌شود همیشه خنثی است، حتی اگر *Hund* مذکر باشد: *das Hündchen*."
+      de: "Nomen auf *-chen* haben immer *das*, auch wenn es *der Hund* heißt: *das Hündchen*."
+  - wrong: Die Kätzchens spielen.
+    right: Die Kätzchen spielen.
+    why:
+      en: "Nouns in *-chen* add no ending in the plural: *die Kätzchen*."
+      fa: "اسم‌هایی که به *-chen* ختم می‌شوند در جمع پایانه‌ای نمی‌گیرند: *die Kätzchen*."
+      de: "Nomen auf *-chen* haben im Plural keine Endung: *die Kätzchen*."
+  - wrong: Ich kaufe zwei Brotchen.
+    right: Ich kaufe zwei Brötchen.
+    why:
+      en: "*Brot* takes an umlaut before *-chen*: *Brötchen*."
+      fa: "*Brot* پیش از *-chen* دو نقطه می‌گیرد: *Brötchen*."
+      de: "*Brot* bekommt vor *-chen* einen Umlaut: *Brötchen*."
+  - wrong: Die Mädchen heißt Lena.
+    right: Das Mädchen heißt Lena.
+    why:
+      en: "*Mädchen* means a girl, but it ends in *-chen*, so it is neuter: *das Mädchen*."
+      fa: "*Mädchen* به معنای دختر است، ولی به *-chen* ختم می‌شود، پس خنثی است: *das Mädchen*."
+      de: "*Mädchen* ist ein Mädchen, aber es endet auf *-chen*. Darum: *das Mädchen*."
+  - wrong: Wir haben ein Katzechen.
+    right: Wir haben ein Kätzchen.
+    why:
+      en: "The final *-e* of *Katze* drops, and *a* takes an umlaut: *Kätzchen*."
+      fa: "*-e* پایانی *Katze* می‌افتد و *a* دو نقطه می‌گیرد: *Kätzchen*."
+      de: "Das *-e* von *Katze* fällt weg, und *a* bekommt einen Umlaut: *Kätzchen*."
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: ___ Kätzchen schläft im Korb.
+    options: [Die, Das, Der]
+    answer: Das
+    explanation:
+      en: "Nouns in *-chen* are always neuter: *das Kätzchen*, even though it is *die Katze*."
+      fa: "اسم‌هایی که به *-chen* ختم می‌شوند همیشه خنثی‌اند: *das Kätzchen*، با این‌که *die Katze* است."
+      de: "Nomen auf *-chen* haben immer *das*: *das Kätzchen*, auch wenn es *die Katze* heißt."
+  - id: q2
+    type: gap-fill
+    prompt: ___ Tischchen ist aus Holz.
+    options: [Der, Die, Das]
+    answer: Das
+    explanation:
+      en: "*Der Tisch*, but *das Tischchen*: a diminutive is always neuter."
+      fa: "*der Tisch*، ولی *das Tischchen*: اسم مصغّر همیشه خنثی است."
+      de: "*Der Tisch*, aber *das Tischchen*: Mit *-chen* ist der Artikel immer *das*."
+  - id: q3
+    type: gap-fill
+    prompt: Ich hätte gern drei ___, bitte.
+    options: [Brötchen, Brötchens, Brotchen]
+    answer: Brötchen
+    explanation:
+      en: "*Brötchen* has an umlaut and no plural ending: *drei Brötchen*."
+      fa: "*Brötchen* دو نقطه دارد و در جمع پایانه‌ای نمی‌گیرد: *drei Brötchen*."
+      de: "*Brötchen* hat einen Umlaut und im Plural keine Endung: *drei Brötchen*."
+  - id: q4
+    type: gap-fill
+    prompt: ___ Mädchen heißt Lena.
+    options: [Der, Das, Die]
+    answer: Das
+    explanation:
+      en: "*Mädchen* ends in *-chen*, so it is neuter: *das Mädchen*."
+      fa: "*Mädchen* به *-chen* ختم می‌شود، پس خنثی است: *das Mädchen*."
+      de: "*Mädchen* endet auf *-chen*. Darum: *das Mädchen*."
+  - id: q5
+    type: gap-fill
+    prompt: Unsere Katze hat vier ___ bekommen.
+    options: [Katzchen, Kätzchens, Kätzchen]
+    answer: Kätzchen
+    explanation:
+      en: "*Kätzchen* has an umlaut and adds nothing in the plural."
+      fa: "*Kätzchen* دو نقطه دارد و در جمع چیزی به آن اضافه نمی‌شود."
+      de: "*Kätzchen* hat einen Umlaut und im Plural keine Endung."
+  - id: q6
+    type: gap-fill
+    prompt: "die Maus – das ___"
+    options: [Mausechen, Mäuschen, Mauschen]
+    answer: Mäuschen
+    explanation:
+      en: "*au* takes an umlaut before *-chen*: *das Mäuschen*."
+      fa: "*au* پیش از *-chen* دو نقطه می‌گیرد: *das Mäuschen*."
+      de: "*au* bekommt vor *-chen* einen Umlaut: *das Mäuschen*."
+  - id: q7
+    type: multiple-choice
+    prompt: Was ist ein Häuschen?
+    options: [ein großes Haus, ein kleines Haus, viele Häuser]
+    answer: ein kleines Haus
+    explanation:
+      en: "*-chen* makes a thing small: *das Häuschen* is a little house."
+      fa: "*-chen* چیزی را کوچک نشان می‌دهد: *das Häuschen* یعنی خانهٔ کوچک."
+      de: "*-chen* macht etwas klein: *das Häuschen* ist ein kleines Haus."
+  - id: q8
+    type: multiple-choice
+    prompt: Welches Nomen hat den Artikel das?
+    options: [Garten, Blume, Blümchen]
+    answer: Blümchen
+    explanation:
+      en: "*Blümchen* ends in *-chen*, so *das*; it is *der Garten* and *die Blume*."
+      fa: "*Blümchen* به *-chen* ختم می‌شود، پس *das* است؛ ولی *der Garten* و *die Blume*."
+      de: "*Blümchen* endet auf *-chen*, also *das*. Es heißt *der Garten* und *die Blume*."
+  - id: q9
+    type: multiple-choice
+    prompt: Was ist der Plural von das Bäumchen?
+    options: [die Bäumchens, die Bäumchen, die Bäumchenen]
+    answer: die Bäumchen
+    explanation:
+      en: "Nouns in *-chen* add nothing in the plural: *die Bäumchen*."
+      fa: "اسم‌هایی که به *-chen* ختم می‌شوند در جمع پایانه‌ای نمی‌گیرند: *die Bäumchen*."
+      de: "Nomen auf *-chen* haben im Plural keine Endung: *die Bäumchen*."
+  - id: q10
+    type: true-false
+    prompt: Das Kätzchen trinkt Milch.
+    answer: true
+    explanation:
+      en: "*Das Kätzchen*: neuter, with an umlaut. The sentence is correct."
+      fa: "*das Kätzchen*: خنثی و با دو نقطه. جمله درست است."
+      de: "*Das Kätzchen*: mit *das* und Umlaut. Der Satz ist richtig."
+  - id: q11
+    type: true-false
+    prompt: Der Hündchen bellt laut.
+    answer: false
+    explanation:
+      en: "A noun in *-chen* is neuter: *Das Hündchen bellt laut.*"
+      fa: "اسمی که به *-chen* ختم می‌شود خنثی است: *Das Hündchen bellt laut.*"
+      de: "Nomen auf *-chen* haben *das*: *Das Hündchen bellt laut.*"
+  - id: q12
+    type: true-false
+    prompt: Im Garten stehen zwei kleine Bäumchen.
+    answer: true
+    explanation:
+      en: "The plural of *das Bäumchen* is *die Bäumchen*, with no ending. The sentence is correct."
+      fa: "جمع *das Bäumchen* می‌شود *die Bäumchen*، بی‌پایانه. جمله درست است."
+      de: "Der Plural von *das Bäumchen* ist *die Bäumchen*, ohne Endung. Der Satz ist richtig."
+  - id: q13
+    type: true-false
+    prompt: Ich esse jeden Morgen zwei Brötchens.
+    answer: false
+    explanation:
+      en: "No plural ending after *-chen*: *zwei Brötchen*."
+      fa: "پس از *-chen* پایانهٔ جمع نمی‌آید: *zwei Brötchen*."
+      de: "Nach *-chen* gibt es keine Plural-Endung: *zwei Brötchen*."
+  - id: q14
+    type: find-error
+    prompt: Der Brötchen ist noch warm.
+    answer: Der
+    explanation:
+      en: "*Brötchen* ends in *-chen*, so it is neuter: *Das Brötchen ist noch warm.*"
+      fa: "*Brötchen* به *-chen* ختم می‌شود، پس خنثی است: *Das Brötchen ist noch warm.*"
+      de: "*Brötchen* endet auf *-chen*. Darum: *Das Brötchen ist noch warm.*"
+  - id: q15
+    type: find-error
+    prompt: Wir haben zwei kleine Hündchens.
+    answer: Hündchens
+    explanation:
+      en: "No plural ending after *-chen*: *zwei kleine Hündchen*."
+      fa: "پس از *-chen* پایانهٔ جمع نمی‌آید: *zwei kleine Hündchen*."
+      de: "Nach *-chen* gibt es keine Plural-Endung: *zwei kleine Hündchen*."
+  - id: q16
+    type: typed-gap-fill
+    prompt: "der Tisch – das ___ (-chen)"
+    answers: [Tischchen]
+    explanation:
+      en: "*Tisch* + *-chen*: *das Tischchen*. *i* takes no umlaut."
+      fa: "*Tisch* + *-chen*: *das Tischchen*. *i* دو نقطه نمی‌گیرد."
+      de: "*Tisch* + *-chen*: *das Tischchen*. *i* bekommt keinen Umlaut."
+  - id: q17
+    type: typed-gap-fill
+    prompt: "das Haus – das ___ (-chen)"
+    answers: [Häuschen]
+    explanation:
+      en: "*au* takes an umlaut: *das Häuschen*."
+      fa: "*au* دو نقطه می‌گیرد: *das Häuschen*."
+      de: "*au* bekommt einen Umlaut: *das Häuschen*."
+  - id: q18
+    type: typed-gap-fill
+    prompt: "die Katze – das ___ (-chen)"
+    answers: [Kätzchen]
+    explanation:
+      en: "The final *-e* drops and *a* takes an umlaut: *das Kätzchen*."
+      fa: "*-e* پایانی می‌افتد و *a* دو نقطه می‌گیرد: *das Kätzchen*."
+      de: "Das *-e* fällt weg, und *a* bekommt einen Umlaut: *das Kätzchen*."
+  - id: q19
+    type: typed-gap-fill
+    prompt: "das Buch – das ___ (-lein)"
+    answers: [Büchlein]
+    explanation:
+      en: "*Buch* + *-lein*, with an umlaut: *das Büchlein*."
+      fa: "*Buch* + *-lein*، با دو نقطه: *das Büchlein*."
+      de: "*Buch* + *-lein*, mit Umlaut: *das Büchlein*."
+  - id: q20
+    type: typed-answer
+    prompt: "Plural: das Brötchen"
+    answers: [die Brötchen, Brötchen]
+    explanation:
+      en: "Nouns in *-chen* add nothing in the plural: *die Brötchen*."
+      fa: "اسم‌هایی که به *-chen* ختم می‌شوند در جمع چیزی نمی‌گیرند: *die Brötchen*."
+      de: "Nomen auf *-chen* haben im Plural keine Endung: *die Brötchen*."
+  - id: q21
+    type: matching
+    answer:
+      - [der Hund, das Hündchen]
+      - [die Blume, das Blümchen]
+      - [das Brot, das Brötchen]
+      - [der Baum, das Bäumchen]
+    explanation:
+      en: "Each diminutive is neuter and takes an umlaut: *u* → *ü*, *o* → *ö*, *au* → *äu*."
+      fa: "هر اسم مصغّر خنثی است و دو نقطه می‌گیرد: *ü* از *u*، *ö* از *o* و *äu* از *au*."
+      de: "Alle Wörter mit *-chen* haben *das* und einen Umlaut: *u* – *ü*, *o* – *ö*, *au* – *äu*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 73e366d0093bb705
