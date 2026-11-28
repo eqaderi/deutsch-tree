@@ -1,38 +1,371 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-people
 kind: vocabulary
 level: A1
 chapter: a1-words-people
 order: 4
-status: coming-soon
+status: published
 title:
   en: "People around you"
   fa: "آدم‌های دور و بر"
   de: "Menschen um dich"
+attemptSize: 15
 words:
   - word: Mensch
+    class: noun
+    article: der
+    plural: Menschen
+    level: A1
+    meaning:
+      en: human being, person
+      fa: انسان، آدم
+    definition: eine Person, kein Tier
+    example:
+      de: In Berlin leben fast vier Millionen Menschen.
+      en: Almost four million people live in Berlin.
+      fa: در برلین نزدیک به چهار میلیون نفر زندگی می‌کنند.
+    alsoAccepted: [die Person]
+
+  # "die Leute" are "Menschen" too; neither is offered as a wrong meaning of the other.
   - word: Leute
+    class: noun
+    article: die
+    number: plural-only
+    level: A1
+    meaning:
+      en: people
+      fa: مردم، آدم‌ها
+    definition: Menschen, wenn es mehrere sind
+    example:
+      de: Auf der Party waren viele nette Leute.
+      en: There were lots of nice people at the party.
+      fa: در مهمانی آدم‌های خوب زیادی بودند.
+    alsoAccepted: [die Menschen, die Personen]
+    tooCloseTo: [Mensch]
+
   - word: Mann
+    class: noun
+    article: der
+    plural: Männer
+    level: A1
+    meaning:
+      en: man
+      fa: مرد
+    definition: ein erwachsener Mensch, keine Frau
+    example:
+      de: Der Mann dort ist mein Nachbar.
+      en: The man over there is my neighbour.
+      fa: آن مرد همسایهٔ من است.
+    alsoAccepted: [der Herr]
+
   - word: Mädchen
+    class: noun
+    article: das
+    plural: Mädchen
+    level: A1
+    meaning:
+      en: girl
+      fa: دختربچه، دختر جوان
+    definition: ein Kind, aber kein Junge
+    example:
+      de: Das Mädchen spielt mit seinem Ball.
+      en: The girl is playing with her ball.
+      fa: دختر با توپش بازی می‌کند.
+
   - word: Junge
+    class: noun
+    article: der
+    plural: Jungen
+    level: A1
+    meaning:
+      en: boy
+      fa: پسربچه، پسر جوان
+    definition: ein Kind, aber kein Mädchen
+    example:
+      de: Der Junge ist zehn Jahre alt.
+      en: The boy is ten years old.
+      fa: پسر ده سال دارد.
+    alsoAccepted: [der Bub, der Knabe]
+
   - word: Erwachsene
+    class: noun
+    article: der
+    plural: Erwachsenen
+    level: A1
+    meaning:
+      en: adult, grown-up
+      fa: بزرگسال
+    definition: ein Mensch, der kein Kind mehr ist, zum Beispiel ab 18 Jahren
+    example:
+      de: Der Eintritt kostet für Erwachsene 8 Euro.
+      en: Admission costs 8 euros for adults.
+      fa: بلیت ورود برای بزرگسالان ۸ یورو است.
+    alsoAccepted: [die Erwachsene, ein Erwachsener, eine Erwachsene]
+
+  # The scope list gives "der/die": a young man is "der Jugendliche", a young woman "die Jugendliche".
   - word: Jugendliche
+    class: noun
+    article: der
+    plural: Jugendlichen
+    level: A1
+    meaning:
+      en: young person, teenager
+      fa: نوجوان
+    definition: ein Mensch zwischen Kind und Erwachsenem, ungefähr 14 bis 18 Jahre alt
+    example:
+      de: Viele Jugendliche treffen sich am Abend im Park.
+      en: Lots of young people meet in the park in the evening.
+      fa: بسیاری از نوجوانان عصرها در پارک همدیگر را می‌بینند.
+    alsoAccepted: [die Jugendliche, ein Jugendlicher, eine Jugendliche, der Teenager]
+
   - word: Freund
+    class: noun
+    article: der
+    plural: Freunde
+    level: A1
+    meaning:
+      en: friend; boyfriend
+      fa: دوست
+    definition: eine Person, die man sehr gern hat und oft sieht
+    example:
+      de: Mein Freund wohnt in Köln.
+      en: My friend lives in Cologne.
+      fa: دوستم در کلن زندگی می‌کند.
+    alsoAccepted: [die Freundin, der Kumpel]
+
+  # The scope list gives "der/die": a man is "der Bekannte", a woman "die Bekannte".
   - word: Bekannte
+    class: noun
+    article: der
+    plural: Bekannten
+    level: A1
+    meaning:
+      en: acquaintance
+      fa: آشنا (شخص)
+    definition: eine Person, die man kennt, aber nicht so gut wie einen Freund
+    example:
+      de: Ein Bekannter hat mir bei der Wohnungssuche geholfen.
+      en: An acquaintance helped me find a flat.
+      fa: یکی از آشناها در پیدا کردن خانه به من کمک کرد.
+    alsoAccepted: [die Bekannte, ein Bekannter, eine Bekannte]
+
   - word: Kollege
+    class: noun
+    article: der
+    plural: Kollegen
+    level: A1
+    meaning:
+      en: colleague, co-worker
+      fa: همکار
+    definition: eine Person, mit der man in derselben Firma arbeitet
+    example:
+      de: Mein Kollege hilft mir oft bei der Arbeit.
+      en: My colleague often helps me at work.
+      fa: همکارم اغلب در کار به من کمک می‌کند.
+    alsoAccepted: [die Kollegin, der Arbeitskollege, die Arbeitskollegin, der Mitarbeiter, die Mitarbeiterin]
+
   - word: Gast
+    class: noun
+    article: der
+    plural: Gäste
+    level: A1
+    meaning:
+      en: guest
+      fa: مهمان
+    definition: eine Person, die zu Besuch kommt
+    example:
+      de: Heute Abend kommen fünf Gäste zum Essen.
+      en: Five guests are coming for dinner this evening.
+      fa: امشب پنج مهمان برای شام می‌آیند.
+    alsoAccepted: [der Besucher, die Besucherin]
+
   - word: Gruppe
+    class: noun
+    article: die
+    plural: Gruppen
+    level: A1
+    meaning:
+      en: group
+      fa: گروه
+    definition: ein paar Personen, die zusammen etwas machen
+    example:
+      de: Im Kurs arbeiten wir oft in einer Gruppe.
+      en: In the course we often work in a group.
+      fa: در کلاس اغلب گروهی کار می‌کنیم.
+    alsoAccepted: [das Team]
+
   - word: jung
+    class: adjective
+    level: A1
+    meaning:
+      en: young
+      fa: جوان
+    definition: erst wenige Jahre alt
+    example:
+      de: Unsere Lehrerin ist noch sehr jung.
+      en: Our teacher is still very young.
+      fa: معلم ما هنوز خیلی جوان است.
+
   - word: alt
+    class: adjective
+    level: A1
+    meaning:
+      en: old
+      fa: پیر، کهنه، قدیمی
+    definition: nicht jung oder nicht neu
+    example:
+      de: Das Haus ist sehr alt, aber schön.
+      en: The house is very old, but beautiful.
+      fa: خانه خیلی قدیمی است، اما زیباست.
+
   - word: allein
+    class: adjective
+    level: A1
+    meaning:
+      en: alone, on your own
+      fa: تنها
+    definition: ohne andere Personen
+    example:
+      de: Meine Oma wohnt allein in einer kleinen Wohnung.
+      en: My grandma lives alone in a small flat.
+      fa: مادربزرگم تنها در آپارتمان کوچکی زندگی می‌کند.
+    alsoAccepted: [alleine]
+
   - word: zusammen
+    class: adverb
+    level: A1
+    meaning:
+      en: together
+      fa: با هم
+    definition: mit anderen Personen, nicht allein
+    example:
+      de: Am Samstag kochen wir zusammen.
+      en: On Saturday we're cooking together.
+      fa: شنبه با هم آشپزی می‌کنیم.
+    alsoAccepted: [gemeinsam, miteinander]
+
   - word: fremd
+    class: adjective
+    level: A1
+    meaning:
+      en: foreign, strange, unfamiliar
+      fa: غریبه، ناآشنا
+    definition: nicht bekannt; man kennt die Person oder den Ort noch nicht
+    example:
+      de: Entschuldigung, ich bin fremd hier. Wo ist der Bahnhof?
+      en: Excuse me, I'm not from around here. Where is the station?
+      fa: ببخشید، من اینجا غریبه‌ام. ایستگاه قطار کجاست؟
+    alsoAccepted: [unbekannt]
+
   - word: bekannt
+    class: adjective
+    level: A1
+    meaning:
+      en: well-known, known
+      fa: معروف، شناخته‌شده
+    definition: viele Leute kennen die Person oder die Sache
+    example:
+      de: Der Kölner Dom ist sehr bekannt.
+      en: Cologne Cathedral is very well known.
+      fa: کلیسای جامع کلن بسیار معروف است.
+    alsoAccepted: [berühmt]
+
   - word: kennen
+    class: verb
+    level: A1
+    meaning:
+      en: to know (a person or a place)
+      fa: شناختن
+    definition: eine Person oder einen Ort schon gesehen haben und wissen, wer oder was es ist
+    example:
+      de: Kennst du meine Schwester?
+      en: Do you know my sister?
+      fa: خواهرم را می‌شناسی؟
+    alsoAccepted: [erkennen]
+
   - word: treffen
+    class: verb
+    level: A1
+    meaning:
+      en: to meet
+      fa: ملاقات کردن، دیدن (کسی)
+    definition: mit einer Person an einem Ort zusammenkommen
+    example:
+      de: Ich treffe meine Freunde im Café.
+      en: I'm meeting my friends at the café.
+      fa: دوستانم را در کافه می‌بینم.
+    alsoAccepted: [sich treffen, begegnen, kennenlernen, sehen]
+
   - word: besuchen
+    class: verb
+    level: A1
+    meaning:
+      en: to visit
+      fa: به دیدن کسی رفتن
+    definition: zu einer Person nach Hause gehen und eine Zeit dort bleiben
+    example:
+      de: Am Sonntag besuchen wir unsere Großeltern.
+      en: On Sunday we're visiting our grandparents.
+      fa: یکشنبه به دیدن پدربزرگ و مادربزرگمان می‌رویم.
+
   - word: einladen
+    class: verb
+    level: A1
+    meaning:
+      en: to invite
+      fa: دعوت کردن
+    definition: einer Person sagen, dass sie kommen soll, zum Beispiel zum Essen oder zu einer Party
+    example:
+      de: Ich lade dich zu meinem Geburtstag ein.
+      en: I'm inviting you to my birthday.
+      fa: تو را به جشن تولدم دعوت می‌کنم.
+
   - word: Einladung
+    class: noun
+    article: die
+    plural: Einladungen
+    level: A1
+    meaning:
+      en: invitation
+      fa: دعوت، دعوت‌نامه
+    definition: wenn man gefragt wird, ob man zu einem Fest kommt; auch die Karte dafür
+    example:
+      de: Danke für die Einladung! Ich komme gern.
+      en: Thanks for the invitation! I'd love to come.
+      fa: ممنون از دعوتت! با کمال میل می‌آیم.
+    alsoAccepted: [die Einladungskarte]
+
   - word: helfen
+    class: verb
+    level: A1
+    meaning:
+      en: to help
+      fa: کمک کردن
+    definition: etwas für eine Person tun, damit es für sie leichter ist
+    example:
+      de: Kannst du mir bitte helfen?
+      en: Can you help me, please?
+      fa: می‌توانی کمکم کنی؟
+    alsoAccepted: [unterstützen]
+
   - word: Hilfe
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: help
+      fa: کمک
+    definition: wenn eine Person einem etwas leichter macht, zum Beispiel bei der Arbeit oder in einer schweren Situation
+    example:
+      de: Vielen Dank für Ihre Hilfe!
+      en: Many thanks for your help!
+      fa: از کمکتان بسیار سپاسگزارم!
+    alsoAccepted: [die Unterstützung]
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 150, then 14 questions)
+  date: 2026-11-28
+  pool: db55c4f34207d342

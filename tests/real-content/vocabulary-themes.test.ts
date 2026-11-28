@@ -81,13 +81,12 @@ test('every word stands in a node of its own level', () => {
   expect(elsewhere).toEqual([])
 })
 
-test('every vocabulary node but the sample is "coming soon", and each has its name in three languages', () => {
+// Which nodes are published changes with every chapter ticket of stage 3 (#39), so it is not pinned here:
+// the pipeline holds each published node to its review record and its audio.
+test('every vocabulary node has its name in three languages', () => {
   const vocabulary = index.nodes.filter((node) => node.kind === 'vocabulary')
 
   expect(vocabulary).toHaveLength(nodes.length)
-  expect(vocabulary.filter((node) => node.status !== 'coming-soon').map((node) => node.id)).toEqual([
-    'vocabulary-family',
-  ])
   expect(vocabulary.filter((node) => !(node.title.en.length && node.title.fa.length && node.title.de.length))).toEqual(
     [],
   )
