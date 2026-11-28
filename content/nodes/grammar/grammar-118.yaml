@@ -4,10 +4,321 @@ kind: grammar
 level: B1
 chapter: b1-adjectives-participles
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: true
 prerequisites: [grammar-117]
 title:
   en: "*Partizip I* as adjective"
-  fa: "*Partizip I* در نقش صفت"
+  fa: "صفت فاعلی (*Partizip I*) پیش از اسم"
   de: "Partizip I als Adjektiv"
+
+explanations:
+  en:
+    rule: >
+      The *Partizip I* is the infinitive + *-d*: *spielen*, *spielend*;
+      *lachen*, *lachend*. Before a noun it takes the usual adjective
+      endings: *das spielende Kind* (the child who is playing), *mit
+      steigendem Alter* (with rising age), *kochendes Wasser* (boiling
+      water). It says that someone or something is doing it at that moment.
+      The *Partizip II* says that it has been done: *das kochende Wasser* is
+      boiling now, *das gekochte Wasser* has been boiled. In exam tasks you
+      will often read *die folgenden Texte* (the texts that follow). The
+      *Partizip I* normally stands only before a noun. A few have become
+      ordinary adjectives and also stand after *sein*: *spannend*,
+      *anstrengend*, *dringend* (*Der Film ist spannend.*). You need to
+      understand this form when you read or hear it.
+  fa:
+    rule: >
+      صفت فاعلی (*Partizip I*) از مصدر و *-d* ساخته می‌شود: *spielend* از
+      *spielen* و *lachend* از *lachen*. پیش از اسم همان پایانه‌های معمول صفت
+      را می‌گیرد: *das spielende Kind* (کودکی که بازی می‌کند)، *mit
+      steigendem Alter* (با بالا رفتن سن) و *kochendes Wasser* (آب جوش).
+      این صفت می‌گوید کسی یا چیزی همان لحظه کاری را انجام می‌دهد. صفت
+      مفعولی (*Partizip II*) می‌گوید آن کار روی چیزی انجام شده است: *das
+      kochende Wasser* الان می‌جوشد، ولی *das gekochte Wasser* جوشانده شده
+      است. صفت فاعلی در فارسی هم آشناست: *das lachende Kind* یعنی «کودک
+      خندان». در تکلیف‌های امتحان زیاد می‌خوانید: *die folgenden Texte*
+      (متن‌های زیر). صفت فاعلی معمولاً فقط پیش از اسم می‌آید. چند صفت فاعلی
+      به صفت معمولی تبدیل شده‌اند و پس از *sein* هم می‌آیند: *spannend*،
+      *anstrengend* و *dringend* (*Der Film ist spannend.*). کافی است این شکل
+      را هنگام خواندن یا شنیدن بفهمید.
+  de:
+    rule: >
+      Das Partizip I ist der Infinitiv + *-d*: *spielen*, *spielend*;
+      *lachen*, *lachend*. Vor einem Nomen hat es die normalen
+      Adjektivendungen: *das spielende Kind*, *mit steigendem Alter*,
+      *kochendes Wasser*. Es sagt: Das passiert gerade, jetzt. Das Partizip
+      II sagt: Das ist schon passiert. *Das kochende Wasser* kocht jetzt,
+      *das gekochte Wasser* hat schon gekocht. In Prüfungen liest man oft
+      *die folgenden Texte*: die Texte, die jetzt kommen. Das Partizip I
+      steht meistens nur vor einem Nomen. Einige sind heute normale
+      Adjektive und stehen auch nach *sein*: *spannend*, *anstrengend*,
+      *dringend* (*Der Film ist spannend.*).
+
+# How the form is made, with one example each; the last row is one of the
+# forms that are ordinary adjectives now and also stand after "sein".
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*Partizip I*", fa: "صفت فاعلی (*Partizip I*)", de: Partizip I }
+    - { en: Before a noun, fa: پیش از اسم, de: Vor einem Nomen }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [spielen, spielend, das spielende Kind, Das spielende Kind lacht laut.]
+    - [schlafen, schlafend, die schlafende Katze, Weck die schlafende Katze nicht!]
+    - [kochen, kochend, kochendes Wasser, "Vorsicht, kochendes Wasser!"]
+    - [steigen, steigend, steigende Preise (Plural), Viele sprechen über die steigenden Preise.]
+    - [folgen, folgend, die folgenden Texte (Plural), Lesen Sie die folgenden Texte.]
+    - [anstrengen, anstrengend, eine anstrengende Woche, Die Arbeit ist anstrengend.]
+
+examples:
+  - de: Das spielende Kind lacht laut.
+    en: The child who is playing laughs loudly.
+    fa: کودکی که بازی می‌کند بلند می‌خندد.
+  - de: Vorsicht, kochendes Wasser!
+    en: Careful, boiling water!
+    fa: مراقب باشید، آب جوش!
+  - de: Mit steigendem Alter schläft man oft weniger.
+    en: As you get older you often sleep less.
+    fa: با بالا رفتن سن، آدم اغلب کمتر می‌خوابد.
+  - de: Die steigenden Preise sind für viele Familien ein Problem.
+    en: Rising prices are a problem for many families.
+    fa: قیمت‌های رو به افزایش برای بسیاری از خانواده‌ها مشکل است.
+  - de: Lesen Sie die folgenden Texte.
+    en: Read the following texts.
+    fa: متن‌های زیر را بخوانید.
+  - de: Weck die schlafende Katze nicht!
+    en: Don't wake the sleeping cat!
+    fa: گربهٔ خوابیده را بیدار نکن!
+  - de: Der Film war wirklich spannend.
+    en: The film was really exciting.
+    fa: فیلم واقعاً هیجان‌انگیز بود.
+  - de: Die Arbeit im Garten ist anstrengend.
+    en: The work in the garden is tiring.
+    fa: کار در باغ خسته‌کننده است.
+  - de: Ich habe eine dringende Frage.
+    en: I have an urgent question.
+    fa: یک پرسش فوری دارم.
+
+mistakes:
+  - wrong: Das Kind ist spielend.
+    right: Das Kind spielt.
+    why:
+      en: "A *Partizip I* such as *spielend* stands before a noun, not after *sein*. Use the verb: *Das Kind spielt.*"
+      fa: "صفت فاعلی‌ای مانند *spielend* پیش از اسم می‌آید، نه پس از *sein*. خود فعل را به کار ببرید: *Das Kind spielt.*"
+      de: "Ein Partizip I wie *spielend* steht vor einem Nomen, nicht nach *sein*. Man sagt: *Das Kind spielt.*"
+  - wrong: Das Wasser kocht. Vorsicht, gekochtes Wasser!
+    right: Das Wasser kocht. Vorsicht, kochendes Wasser!
+    why:
+      en: "The water is boiling now, so the *Partizip I*: *kochendes Wasser*. *Gekochtes Wasser* has been boiled before."
+      fa: "آب الان می‌جوشد، پس صفت فاعلی می‌آید: *kochendes Wasser*. *gekochtes Wasser* آبی است که پیش‌تر جوشانده شده است."
+      de: "Das Wasser kocht jetzt, darum Partizip I: *kochendes Wasser*. *Gekochtes Wasser* hat schon vorher gekocht."
+  - wrong: Der Film ist sehr spannende.
+    right: Der Film ist sehr spannend.
+    why:
+      en: "After *sein*, *spannend* is an ordinary adjective with no ending."
+      fa: "پس از *sein*، *spannend* صفتی معمولی و بدون پایانه است."
+      de: "Nach *sein* ist *spannend* ein normales Adjektiv ohne Endung."
+
+# 22 questions, recognise only: no typed answers and no word ordering.
+questions:
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Das spielende Kind ist meine Tochter. Das heißt:"
+    options: [Meine Tochter hat gespielt., Meine Tochter spielt gerade., Man spielt mit meiner Tochter.]
+    answer: Meine Tochter spielt gerade.
+    explanation:
+      en: "*Spielend* is the *Partizip I*: the child is playing at this moment."
+      fa: "*spielend* صفت فاعلی است: کودک همین حالا بازی می‌کند."
+      de: "*Spielend* ist das Partizip I: Das Kind spielt jetzt."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Vorsicht, kochendes Wasser! Das heißt:"
+    options: [Das Wasser ist sehr heiß., Das Wasser ist kalt., Man muss das Wasser noch kochen.]
+    answer: Das Wasser ist sehr heiß.
+    explanation:
+      en: "*Kochendes Wasser* is boiling right now, so it is very hot."
+      fa: "*kochendes Wasser* همین حالا در حال جوشیدن است، پس خیلی داغ است."
+      de: "*Kochendes Wasser* kocht gerade. Es ist sehr heiß."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Mit steigendem Alter schläft man oft weniger. Das heißt:"
+    options: [Junge Leute schlafen weniger., Alte Leute schlafen mehr., "Wenn man älter wird, schläft man oft weniger."]
+    answer: Wenn man älter wird, schläft man oft weniger.
+    explanation:
+      en: "*Mit steigendem Alter*: while your age goes up, as you get older."
+      fa: "*mit steigendem Alter* یعنی هم‌زمان با بالا رفتن سن، وقتی آدم پیرتر می‌شود."
+      de: "*Mit steigendem Alter* heißt: wenn man älter wird."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "Lesen Sie die folgenden Texte. Welche Texte?"
+    options: [die Texte von gestern, die nächsten Texte, die letzten Texte]
+    answer: die nächsten Texte
+    explanation:
+      en: "*Folgend* comes from *folgen* (to follow): the texts that come next."
+      fa: "*folgend* از *folgen* (دنبال آمدن) است: متن‌هایی که پس از این می‌آیند."
+      de: "*Folgend* kommt von *folgen*: die Texte, die jetzt kommen."
+  - id: choice-5
+    type: multiple-choice
+    prompt: Welche Form ist ein Partizip I?
+    options: [gesungen, singen, singend]
+    answer: singend
+    explanation:
+      en: "The *Partizip I* is the infinitive + *-d*: *singend*. *Gesungen* is the *Partizip II*."
+      fa: "صفت فاعلی همان مصدر و *-d* است: *singend*. *gesungen* صفت مفعولی است."
+      de: "Das Partizip I ist der Infinitiv + *-d*: *singend*. *Gesungen* ist das Partizip II."
+  - id: choice-6
+    type: multiple-choice
+    prompt: "Die schlafende Katze liegt auf dem Sofa. Was macht die Katze?"
+    options: [Sie schläft., Sie ist jetzt wach., Sie möchte gleich schlafen.]
+    answer: Sie schläft.
+    explanation:
+      en: "*Schlafend* is the *Partizip I*: the cat is asleep right now."
+      fa: "*schlafend* صفت فاعلی است: گربه همین حالا خواب است."
+      de: "*Schlafend* ist das Partizip I: Die Katze schläft jetzt."
+  - id: gap-1
+    type: gap-fill
+    prompt: Leise, das Baby schläft! Weck das ___ Baby nicht.
+    options: [geschlafene, schlafende]
+    answer: schlafende
+    explanation:
+      en: "The baby is sleeping now: the *Partizip I* *schlafend*, with *-e* after *das*."
+      fa: "نوزاد همین حالا خواب است: صفت فاعلی *schlafend* با پایانهٔ *-e* پس از *das*."
+      de: "Das Baby schläft jetzt: Partizip I *schlafend*, mit *-e* nach *das*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Bitte beantworten Sie die ___ Fragen.
+    options: [folgenden, gefolgten]
+    answer: folgenden
+    explanation:
+      en: "*Die folgenden Fragen* are the questions that come next, a common phrase in exam tasks."
+      fa: "*die folgenden Fragen* یعنی پرسش‌هایی که پس از این می‌آیند؛ عبارتی رایج در تکلیف‌های امتحان."
+      de: "*Die folgenden Fragen* sind die Fragen, die jetzt kommen. Das liest man oft in Prüfungen."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der Film war sehr ___.
+    options: [spannende, spannenden, spannend]
+    answer: spannend
+    explanation:
+      en: "After *sein*, *spannend* is an ordinary adjective with no ending."
+      fa: "پس از *sein*، *spannend* صفتی معمولی و بدون پایانه است."
+      de: "Nach *sein* ist *spannend* ein normales Adjektiv ohne Endung."
+  - id: gap-4
+    type: gap-fill
+    prompt: Das ___ Kind ist meine Tochter.
+    options: [spielend, spielende, spielenden]
+    answer: spielende
+    explanation:
+      en: "Before a noun the *Partizip I* takes an ending: after *das* in the *Nominativ*, *-e*."
+      fa: "صفت فاعلی پیش از اسم پایانه می‌گیرد: پس از *das* در حالت *Nominativ*، *-e*."
+      de: "Vor einem Nomen hat das Partizip I eine Endung: nach *das* im Nominativ *-e*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ich habe eine ___ Frage.
+    options: [dringende, dringend, dringenden]
+    answer: dringende
+    explanation:
+      en: "Before a noun *dringend* takes the ending: after *eine*, *-e*."
+      fa: "*dringend* پیش از اسم پایانه می‌گیرد: پس از *eine*، *-e*."
+      de: "Vor einem Nomen hat *dringend* eine Endung: nach *eine* *-e*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Das Wasser kocht gerade. Vorsicht, ___ Wasser!
+    options: [kochendes, gekochtes]
+    answer: kochendes
+    explanation:
+      en: "It is boiling now, so the *Partizip I*: *kochendes Wasser*."
+      fa: "آب الان می‌جوشد، پس صفت فاعلی می‌آید: *kochendes Wasser*."
+      de: "Es kocht jetzt, darum Partizip I: *kochendes Wasser*."
+  - id: true-1
+    type: true-false
+    prompt: Die Arbeit ist anstrengend.
+    answer: true
+    explanation:
+      en: "*Anstrengend* is an ordinary adjective now and may stand after *sein*. The sentence is correct."
+      fa: "*anstrengend* اکنون صفتی معمولی است و پس از *sein* هم می‌آید. جمله درست است."
+      de: "*Anstrengend* ist heute ein normales Adjektiv und steht auch nach *sein*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das Kind ist spielend.
+    answer: false
+    explanation:
+      en: "*Spielend* stands before a noun, not after *sein*: *Das Kind spielt.*"
+      fa: "*spielend* پیش از اسم می‌آید، نه پس از *sein*: *Das Kind spielt.*"
+      de: "*Spielend* steht vor einem Nomen, nicht nach *sein*: *Das Kind spielt.*"
+  - id: true-3
+    type: true-false
+    prompt: Wir sehen eine schlafende Katze.
+    answer: true
+    explanation:
+      en: "*Schlafend* + *-e* after *eine*. The sentence is correct."
+      fa: "*schlafend* با پایانهٔ *-e* پس از *eine*. جمله درست است."
+      de: "*Schlafend* + *-e* nach *eine*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Das war ein spannend Film.
+    answer: false
+    explanation:
+      en: "Before a noun *spannend* needs an ending: *ein spannender Film*."
+      fa: "*spannend* پیش از اسم پایانه لازم دارد: *ein spannender Film*."
+      de: "Vor einem Nomen braucht *spannend* eine Endung: *ein spannender Film*."
+  - id: true-5
+    type: true-false
+    prompt: Mit steigendem Alter braucht man mehr Ruhe.
+    answer: true
+    explanation:
+      en: "*Mit* takes the *Dativ*; without an article *steigend* takes *-em*. The sentence is correct."
+      fa: "*mit* با حالت *Dativ* می‌آید و بدون حرف تعریف، *steigend* پایانهٔ *-em* می‌گیرد. جمله درست است."
+      de: "Nach *mit* steht der Dativ. Ohne Artikel hat *steigend* *-em*. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Das spielend Kind lacht laut.
+    answer: spielend
+    explanation:
+      en: "Before a noun the *Partizip I* needs an ending: *das spielende Kind*."
+      fa: "صفت فاعلی پیش از اسم پایانه لازم دارد: *das spielende Kind*."
+      de: "Vor einem Nomen braucht das Partizip I eine Endung: *das spielende Kind*."
+  - id: error-2
+    type: find-error
+    prompt: Der Film war sehr spannender.
+    answer: spannender
+    explanation:
+      en: "After *sein* there is no ending: *Der Film war sehr spannend.*"
+      fa: "پس از *sein* پایانه‌ای نمی‌آید: *Der Film war sehr spannend.*"
+      de: "Nach *sein* gibt es keine Endung: *Der Film war sehr spannend.*"
+  - id: error-3
+    type: find-error
+    prompt: Ich habe einen dringend Termin beim Arzt.
+    answer: dringend
+    explanation:
+      en: "Before a noun *dringend* needs an ending: *einen dringenden Termin*."
+      fa: "*dringend* پیش از اسم پایانه لازم دارد: *einen dringenden Termin*."
+      de: "Vor einem Nomen braucht *dringend* eine Endung: *einen dringenden Termin*."
+  - id: match-1
+    type: matching
+    answer:
+      - [das spielende Kind, Das Kind spielt.]
+      - [die schlafende Katze, Die Katze schläft.]
+      - [der lachende Mann, Der Mann lacht.]
+      - [die steigenden Preise, Die Preise steigen.]
+    explanation:
+      en: "Each *Partizip I* says what the person or thing is doing: *spielend*, the child plays."
+      fa: "هر صفت فاعلی می‌گوید آن کس یا آن چیز چه می‌کند: *spielend*، یعنی کودک بازی می‌کند."
+      de: "Jedes Partizip I sagt, was die Person oder die Sache gerade macht: *spielend*, das Kind spielt."
+  - id: match-2
+    type: matching
+    answer:
+      - [das kochende Wasser, Das Wasser kocht gerade.]
+      - [das gekochte Ei, Jemand hat das Ei gekocht.]
+      - [das lesende Kind, Das Kind liest gerade.]
+      - [das gelesene Buch, Jemand hat das Buch gelesen.]
+    explanation:
+      en: "The *Partizip I* (*kochend*, *lesend*) says what is going on now; the *Partizip II* (*gekocht*, *gelesen*) what has been done."
+      fa: "صفت فاعلی (*kochend*، *lesend*) می‌گوید الان چه می‌گذرد و صفت مفعولی (*gekocht*، *gelesen*) می‌گوید چه کاری انجام شده است."
+      de: "Das Partizip I (*kochend*, *lesend*) sagt, was jetzt passiert. Das Partizip II (*gekocht*, *gelesen*) sagt, was man gemacht hat."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, review
+    sheet only; not a person)
+  date: 2026-11-28
+  pool: 378f43243cc19623

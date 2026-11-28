@@ -4,10 +4,357 @@ kind: grammar
 level: B1
 chapter: b1-adjectives-participles
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-108, grammar-111]
 title:
   en: "Declined comparative and superlative"
   fa: "صفت تفضیلی و عالی با پایانه"
   de: "Komparativ und Superlativ mit Endung"
+
+explanations:
+  en:
+    rule: >
+      Before a noun, the *Komparativ* and the *Superlativ* take the adjective
+      endings you already know. The ending comes after the *-er* of the
+      *Komparativ* or the *-(e)st* of the *Superlativ*: *ein größerer Teil*
+      (a larger part), *mein jüngster Bruder* (my youngest brother). So a
+      *Komparativ* often has *-er* twice: *ein älterer Mann*. The article
+      decides the ending, as always: after *der*, *die*, *das* it is *-e* or
+      *-en* (*der jüngste Bruder*, *mit dem schnelleren Zug*); after *ein*,
+      *kein* and *mein* it is *-er* or *-es* where *ein* has no ending (*ein
+      größerer Teil*, *mein liebstes Buch*); without an article it is the
+      ending of the missing article (*größere Zimmer*, *bei besserem
+      Wetter*). Irregular forms keep their stem: *ein höherer Turm*, *eine
+      bessere Idee*, *die meisten Leute*. *Mehr* and *weniger* never take an
+      ending (*mehr Zeit*), and the *Komparativ* is never made with *mehr*:
+      *ein interessanteres Buch*.
+  fa:
+    rule: >
+      صفت تفضیلی (*Komparativ*) و صفت عالی (*Superlativ*) هم وقتی پیش از اسم
+      بیایند، همان پایانه‌های آشنای صفت را می‌گیرند. پایانه پس از *-er* صفت
+      تفضیلی یا پس از *-(e)st* صفت عالی می‌آید: *ein größerer Teil* (بخشی
+      بزرگ‌تر) و *mein jüngster Bruder* (کوچک‌ترین برادرم). از این رو صفت
+      تفضیلی اغلب دو بار *-er* دارد: *ein älterer Mann*. پایانه مثل همیشه به
+      حرف تعریف بستگی دارد. پس از *der*، *die* و *das* پایانه *-e* یا *-en*
+      است (*der jüngste Bruder*، *mit dem schnelleren Zug*). پس از *ein*،
+      *kein* و *mein*، در همان جاهایی که *ein* پایانه ندارد، *-er* یا *-es*
+      می‌آید (*ein größerer Teil*، *mein liebstes Buch*). بدون حرف تعریف،
+      صفت پایانهٔ حرف تعریفی را می‌گیرد که نیامده است (*größere Zimmer*،
+      *bei besserem Wetter*). شکل‌های بی‌قاعده بن خود را نگه می‌دارند: *ein
+      höherer Turm*، *eine bessere Idee*، *die meisten Leute*. *mehr* و
+      *weniger* هرگز پایانه نمی‌گیرند (*mehr Zeit*). صفت تفضیلی را هم هرگز با
+      *mehr* نسازید: *ein interessanteres Buch*، نه «*mehr* + صفت» آن‌طور که
+      در انگلیسی رایج است.
+  de:
+    rule: >
+      Vor einem Nomen haben Komparativ und Superlativ die normalen
+      Adjektivendungen. Die Endung kommt nach dem *-er* vom Komparativ oder
+      nach dem *-(e)st* vom Superlativ: *ein größerer Teil*, *mein jüngster
+      Bruder*. Darum hat ein Komparativ oft zweimal *-er*: *ein älterer
+      Mann*. Der Artikel bestimmt die Endung, wie immer. Nach *der*, *die*,
+      *das* ist sie *-e* oder *-en*: *der jüngste Bruder*, *mit dem
+      schnelleren Zug*. Nach *ein*, *kein* und *mein* steht *-er* oder *-es*,
+      wo *ein* keine Endung hat: *ein größerer Teil*, *mein liebstes Buch*.
+      Ohne Artikel hat das Adjektiv die Endung vom Artikel: *größere Zimmer*,
+      *bei besserem Wetter*. Unregelmäßige Formen bleiben gleich: *ein
+      höherer Turm*, *eine bessere Idee*, *die meisten Leute*. *Mehr* und
+      *weniger* haben nie eine Endung: *mehr Zeit*. Den Komparativ macht man
+      nie mit *mehr*: *ein interessanteres Buch*.
+
+# The article-change table of content/README.md, for the three cases of the
+# earlier adjective nodes: the Komparativ after "ein", then the Superlativ
+# after "der". The endings are the ones of grammar-107 and grammar-108.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ein größerer Tisch, einen größeren Tisch, einem größeren Tisch, Wir brauchen einen größeren Tisch.]
+    - [eine größere Wohnung, eine größere Wohnung, einer größeren Wohnung, Sie wohnt jetzt in einer größeren Wohnung.]
+    - [ein größeres Zimmer, ein größeres Zimmer, einem größeren Zimmer, Ich hätte gern ein größeres Zimmer.]
+    - [größere Zimmer (Plural), größere Zimmer, größeren Zimmern, Das Hotel hat auch größere Zimmer.]
+    - [der jüngste Bruder, den jüngsten Bruder, dem jüngsten Bruder, Kennst du meinen jüngsten Bruder?]
+    - [die jüngste Schwester, die jüngste Schwester, der jüngsten Schwester, Ich wohne bei meiner jüngsten Schwester.]
+    - [das jüngste Kind, das jüngste Kind, dem jüngsten Kind, Das jüngste Kind ist erst zwei.]
+    - [die jüngsten Kinder (Plural), die jüngsten Kinder, den jüngsten Kindern, Die jüngsten Kinder spielen im Garten.]
+
+examples:
+  - de: Wir suchen eine größere Wohnung.
+    en: We are looking for a bigger flat.
+    fa: دنبال آپارتمان بزرگ‌تری می‌گردیم.
+  - de: Mein jüngster Bruder geht noch zur Schule.
+    en: My youngest brother is still at school.
+    fa: کوچک‌ترین برادرم هنوز به مدرسه می‌رود.
+  - de: Ich habe einen älteren Bruder und eine jüngere Schwester.
+    en: I have an older brother and a younger sister.
+    fa: یک برادر بزرگ‌تر و یک خواهر کوچک‌تر دارم.
+  - de: Ein größerer Teil der Arbeit ist schon fertig.
+    en: A larger part of the work is already done.
+    fa: بخش بزرگ‌تری از کار دیگر تمام شده است.
+  - de: Wir nehmen lieber den früheren Zug.
+    en: We would rather take the earlier train.
+    fa: ترجیح می‌دهیم با قطار زودتر برویم.
+  - de: Er hat ein teureres Handy als ich.
+    en: He has a more expensive phone than I do.
+    fa: او گوشی گران‌تری از من دارد.
+  - de: Bei besserem Wetter gehen wir spazieren.
+    en: In better weather we go for a walk.
+    fa: اگر هوا بهتر باشد، به پیاده‌روی می‌رویم.
+  - de: Das ist die beste Idee!
+    en: That is the best idea!
+    fa: این بهترین فکر است!
+  - de: Die meisten Leute fahren mit dem Auto zur Arbeit.
+    en: Most people drive to work.
+    fa: بیشتر مردم با ماشین سر کار می‌روند.
+  - de: Hamburg ist die zweitgrößte Stadt in Deutschland.
+    en: Hamburg is the second-largest city in Germany.
+    fa: هامبورگ دومین شهر بزرگ آلمان است.
+
+mistakes:
+  - wrong: Wir suchen eine größer Wohnung.
+    right: Wir suchen eine größere Wohnung.
+    why:
+      en: "Before a noun the *Komparativ* needs an ending too: *größer* + *-e*."
+      fa: "صفت تفضیلی هم پیش از اسم پایانه می‌گیرد: *größer* و پایانهٔ *-e*."
+      de: "Vor einem Nomen braucht auch der Komparativ eine Endung: *größer* + *-e*."
+  - wrong: Mein jüngste Bruder ist zehn.
+    right: Mein jüngster Bruder ist zehn.
+    why:
+      en: "After *mein* a masculine noun in the *Nominativ* takes *-er*, as after *ein*: *mein jüngster Bruder*."
+      fa: "پس از *mein*، صفتِ اسم مذکر در حالت *Nominativ* مانند پس از *ein* پایانهٔ *-er* می‌گیرد: *mein jüngster Bruder*."
+      de: "Nach *mein* hat das Adjektiv bei *der*-Nomen im Nominativ *-er*, wie nach *ein*: *mein jüngster Bruder*."
+  - wrong: Das ist der am schnellsten Zug.
+    right: Das ist der schnellste Zug.
+    why:
+      en: "*Am …sten* stands only after a verb. Before a noun the *Superlativ* takes an ending: *der schnellste Zug*."
+      fa: "ساختار *am …sten* فقط پس از فعل می‌آید. صفت عالی پیش از اسم پایانه می‌گیرد: *der schnellste Zug*."
+      de: "*Am …sten* steht nur nach einem Verb. Vor einem Nomen hat der Superlativ eine Endung: *der schnellste Zug*."
+  - wrong: Ich lese ein mehr interessantes Buch.
+    right: Ich lese ein interessanteres Buch.
+    why:
+      en: "German never makes the *Komparativ* with *mehr*, also with long adjectives: *interessanter*, then the ending."
+      fa: "آلمانی صفت تفضیلی را هرگز با *mehr* نمی‌سازد، حتی با صفت‌های بلند: *interessanter* و سپس پایانه."
+      de: "Den Komparativ macht man nie mit *mehr*, auch nicht bei langen Adjektiven: *interessanter* und dann die Endung."
+  - wrong: Ich brauche mehre Zeit.
+    right: Ich brauche mehr Zeit.
+    why:
+      en: "*Mehr* never takes an ending: *mehr Zeit*, *mehr Geld*, *mehr Leute*."
+      fa: "*mehr* هرگز پایانه نمی‌گیرد: *mehr Zeit*، *mehr Geld*، *mehr Leute*."
+      de: "*Mehr* hat nie eine Endung: *mehr Zeit*, *mehr Geld*, *mehr Leute*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir suchen eine ___ Wohnung.
+    options: [größer, größere, größeren]
+    answer: größere
+    explanation:
+      en: "*Eine Wohnung* in the *Akkusativ* stays as in the *Nominativ*, so the *Komparativ* *größer* takes *-e*."
+      fa: "*eine Wohnung* در حالت *Akkusativ* تغییری نمی‌کند، پس صفت تفضیلی *größer* پایانهٔ *-e* می‌گیرد."
+      de: "*Eine Wohnung* im Akkusativ: Der Komparativ *größer* bekommt *-e*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Mein ___ Bruder ist erst zehn.
+    options: [jüngste, jüngsten, jüngster]
+    answer: jüngster
+    explanation:
+      en: "After *mein*, a masculine noun in the *Nominativ*: the adjective shows the gender with *-er*."
+      fa: "پس از *mein* و با اسم مذکر در حالت *Nominativ*، صفت با *-er* جنس اسم را نشان می‌دهد."
+      de: "Nach *mein*, *der*-Nomen im Nominativ: Das Adjektiv zeigt das Genus mit *-er*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir nehmen lieber den ___ Zug.
+    options: [frühere, früherer, früheren]
+    answer: früheren
+    explanation:
+      en: "*Den Zug* is masculine *Akkusativ*: after *den* the ending is *-en*."
+      fa: "*den Zug* مذکر و در حالت *Akkusativ* است. پس از *den* پایانه *-en* است."
+      de: "*Den Zug*: maskulin, Akkusativ. Nach *den* ist die Endung *-en*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Bei ___ Wetter fahren wir ans Meer.
+    options: [besseren, besserem, besseres]
+    answer: besserem
+    explanation:
+      en: "*Bei* takes the *Dativ*, and there is no article, so the adjective takes the *-em* of *dem*."
+      fa: "*bei* با حالت *Dativ* می‌آید و حرف تعریفی در کار نیست، پس صفت پایانهٔ *-em* حرف تعریف *dem* را می‌گیرد."
+      de: "Nach *bei* steht der Dativ. Es gibt keinen Artikel, also hat das Adjektiv *-em* wie *dem*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Das ist die ___ Idee!
+    options: [beste, besten, bester]
+    answer: beste
+    explanation:
+      en: "*Die Idee*, *Nominativ* singular: after *die* the ending is *-e*."
+      fa: "*die Idee* مفرد و در حالت *Nominativ* است. پس از *die* پایانه *-e* است."
+      de: "*Die Idee*, Nominativ Singular: Nach *die* ist die Endung *-e*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich möchte ein ___ Hotel.
+    options: [billiger, billigeres, billigere]
+    answer: billigeres
+    explanation:
+      en: "*Ein Hotel* is neuter, and *ein* has no ending: the adjective takes *-es*: *billiger* + *-es*."
+      fa: "*Hotel* خنثی است و *ein* پایانه ندارد، پس صفت *-es* می‌گیرد: *billiger* و *-es*."
+      de: "*Das Hotel*: *ein* hat keine Endung, also bekommt das Adjektiv *-es*: *billiger* + *-es*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Er wohnt jetzt in einer ___ Stadt.
+    options: [kleineren, kleinere, kleinerer]
+    answer: kleineren
+    explanation:
+      en: "*In einer Stadt* is *Dativ*: after *einer* the ending is *-en*."
+      fa: "*in einer Stadt* در حالت *Dativ* است. پس از *einer* پایانه *-en* است."
+      de: "*In einer Stadt* ist Dativ. Nach *einer* ist die Endung *-en*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich suche ein ___ Buch.
+    options: [mehr interessantes, interessanter, interessanteres]
+    answer: interessanteres
+    explanation:
+      en: "The *Komparativ* is *interessanter*, never *mehr interessant*; after *ein* with a neuter noun it takes *-es*."
+      fa: "صفت تفضیلی *interessanter* است، نه *mehr interessant*. پس از *ein* و با اسم خنثی پایانهٔ *-es* می‌گیرد."
+      de: "Der Komparativ ist *interessanter*, nie *mehr interessant*. Nach *ein* bei *das*-Nomen kommt *-es* dazu."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Die ___ Leute fahren mit dem Bus zur Arbeit.
+    options: [mehr, meisten, meiste]
+    answer: meisten
+    explanation:
+      en: "The *Superlativ* of *viel* before a plural noun: *die meisten Leute*."
+      fa: "صفت عالی *viel* پیش از اسم جمع: *die meisten Leute*."
+      de: "Superlativ von *viel* vor einem Nomen im Plural: *die meisten Leute*."
+  - id: choice-5
+    type: multiple-choice
+    prompt: Die Zugspitze ist der ___ Berg in Deutschland.
+    options: [höchsten, höchste, höchster]
+    answer: höchste
+    explanation:
+      en: "*Der Berg*, *Nominativ*: after *der* the ending is *-e*: *der höchste Berg*."
+      fa: "*der Berg* در حالت *Nominativ* است. پس از *der* پایانه *-e* است: *der höchste Berg*."
+      de: "*Der Berg*, Nominativ: Nach *der* ist die Endung *-e*: *der höchste Berg*."
+  - id: true-1
+    type: true-false
+    prompt: Ich habe einen älteren Bruder.
+    answer: true
+    explanation:
+      en: "Masculine *Akkusativ* after *einen*: *älter* + *-en*. The sentence is correct."
+      fa: "اسم مذکر در حالت *Akkusativ* پس از *einen*: *älter* و *-en*. جمله درست است."
+      de: "Maskulin, Akkusativ, nach *einen*: *älter* + *-en*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir brauchen einen größer Tisch.
+    answer: false
+    explanation:
+      en: "The *Komparativ* before a noun needs its ending: *einen größeren Tisch*."
+      fa: "صفت تفضیلی پیش از اسم پایانه لازم دارد: *einen größeren Tisch*."
+      de: "Vor einem Nomen braucht der Komparativ eine Endung: *einen größeren Tisch*."
+  - id: true-3
+    type: true-false
+    prompt: Sie hat ein teureres Auto als ich.
+    answer: true
+    explanation:
+      en: "*Teuer* loses its *e* in the *Komparativ* (*teurer*), then takes *-es* after *ein*. The sentence is correct."
+      fa: "*teuer* در صفت تفضیلی *e* خود را از دست می‌دهد (*teurer*) و پس از *ein* پایانهٔ *-es* می‌گیرد. جمله درست است."
+      de: "*Teuer* wird im Komparativ zu *teurer*, nach *ein* kommt *-es* dazu. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Das ist mein liebste Film.
+    answer: false
+    explanation:
+      en: "After *mein*, a masculine noun in the *Nominativ* takes *-er*: *mein liebster Film*."
+      fa: "پس از *mein*، صفتِ اسم مذکر در حالت *Nominativ* پایانهٔ *-er* می‌گیرد: *mein liebster Film*."
+      de: "Nach *mein*, *der*-Nomen im Nominativ: *mein liebster Film*."
+  - id: true-5
+    type: true-false
+    prompt: Heute habe ich mehr Zeit als gestern.
+    answer: true
+    explanation:
+      en: "*Mehr* never takes an ending. The sentence is correct."
+      fa: "*mehr* هرگز پایانه نمی‌گیرد. جمله درست است."
+      de: "*Mehr* hat nie eine Endung. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: "Komparativ: Ich suche eine ___ (billig) Wohnung."
+    answers: [billigere]
+    explanation:
+      en: "*Billiger* + *-e* after *eine*: *eine billigere Wohnung*."
+      fa: "*billiger* و پایانهٔ *-e* پس از *eine*: *eine billigere Wohnung*."
+      de: "*Billiger* + *-e* nach *eine*: *eine billigere Wohnung*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: "Superlativ: Tom ist mein ___ (gut) Freund."
+    answers: [bester]
+    explanation:
+      en: "The *Superlativ* of *gut* is *best-*; after *mein*, masculine *Nominativ*: *mein bester Freund*."
+      fa: "صفت عالی *gut* می‌شود *best-*. پس از *mein* و با اسم مذکر در حالت *Nominativ*: *mein bester Freund*."
+      de: "Der Superlativ von *gut* ist *best-*. Nach *mein*, Nominativ maskulin: *mein bester Freund*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: "Komparativ: Wir fahren mit dem ___ (schnell) Zug."
+    answers: [schnelleren]
+    explanation:
+      en: "*Mit* takes the *Dativ*: after *dem* the ending is *-en*: *schneller* + *-en*."
+      fa: "*mit* با حالت *Dativ* می‌آید و پس از *dem* پایانه *-en* است: *schneller* و *-en*."
+      de: "Nach *mit* steht der Dativ. Nach *dem* ist die Endung *-en*: *schneller* + *-en*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: "Komparativ: Wir wohnen jetzt in einem ___ (groß) Haus."
+    answers: [größeren]
+    explanation:
+      en: "*Groß* takes an umlaut in the *Komparativ* (*größer*); after *einem* in the *Dativ* the ending is *-en*."
+      fa: "*groß* در صفت تفضیلی دو نقطه (*Umlaut*) می‌گیرد (*größer*)؛ پس از *einem* در حالت *Dativ* پایانه *-en* است."
+      de: "*Groß* hat im Komparativ einen Umlaut: *größer*. Nach *einem* im Dativ ist die Endung *-en*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Ganze Nominalgruppe im Superlativ, Nominativ: der Berg (hoch)"
+    answers: [der höchste Berg]
+    explanation:
+      en: "*Hoch* has the *Superlativ* *höchst-*; after *der* in the *Nominativ* the ending is *-e*."
+      fa: "صفت عالی *hoch* می‌شود *höchst-* و پس از *der* در حالت *Nominativ* پایانه *-e* است."
+      de: "Der Superlativ von *hoch* ist *höchst-*. Nach *der* im Nominativ ist die Endung *-e*."
+  - id: error-1
+    type: find-error
+    prompt: Mein jüngste Bruder wohnt in Köln.
+    answer: jüngste
+    explanation:
+      en: "After *mein*, masculine *Nominativ*: *mein jüngster Bruder*."
+      fa: "پس از *mein* و با اسم مذکر در حالت *Nominativ*: *mein jüngster Bruder*."
+      de: "Nach *mein*, Nominativ maskulin: *mein jüngster Bruder*."
+  - id: error-2
+    type: find-error
+    prompt: Wir brauchen eine größer Wohnung.
+    answer: größer
+    explanation:
+      en: "The *Komparativ* before a noun needs its ending: *eine größere Wohnung*."
+      fa: "صفت تفضیلی پیش از اسم پایانه لازم دارد: *eine größere Wohnung*."
+      de: "Vor einem Nomen braucht der Komparativ eine Endung: *eine größere Wohnung*."
+  - id: error-3
+    type: find-error
+    prompt: Wir nehmen den schnellere Zug.
+    answer: schnellere
+    explanation:
+      en: "*Den Zug* is masculine *Akkusativ*: after *den* the ending is *-en*: *den schnelleren Zug*."
+      fa: "*den Zug* مذکر و در حالت *Akkusativ* است. پس از *den* پایانه *-en* است: *den schnelleren Zug*."
+      de: "*Den Zug*: maskulin, Akkusativ. Nach *den* ist die Endung *-en*: *den schnelleren Zug*."
+  - id: match-1
+    type: matching
+    answer:
+      - [ein ___ Tisch, größerer]
+      - [eine ___ Lampe, größere]
+      - [ein ___ Sofa, größeres]
+      - [mit einem ___ Auto, größeren]
+    explanation:
+      en: "After *ein* the adjective shows the gender: *-er* (*der*), *-es* (*das*); *-e* after *eine*, and *-en* in the *Dativ*."
+      fa: "پس از *ein* صفت جنس اسم را نشان می‌دهد: *-er* برای مذکر و *-es* برای خنثی؛ پس از *eine* پایانهٔ *-e* و در حالت *Dativ* پایانهٔ *-en* می‌آید."
+      de: "Nach *ein* zeigt das Adjektiv das Genus: *-er* (*der*), *-es* (*das*). Nach *eine* steht *-e*, im Dativ *-en*."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question, then the typed answer whose prompt was clarified
+    after an objection; not people)"
+  date: 2026-11-28
+  pool: 96d4fb8d1b50c566

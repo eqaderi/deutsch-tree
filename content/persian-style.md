@@ -132,6 +132,7 @@ its first mention in a node.
 | Plusquamperfekt | Plusquamperfekt | گذشتهٔ بعید (*Plusquamperfekt*) |
 | future | Futur I | زمان آینده (*Futur I*) |
 | past participle | Partizip II | صفت مفعولی (*Partizip II*) |
+| present participle (*spielend*) | Partizip I | صفت فاعلی (*Partizip I*) |
 | participle (*Partizip I* or *II*), in general | Partizip | صفت فعلی |
 | principal parts (*gehen*, *ging*, *ist gegangen*) | Stammformen | سه صورت اصلی فعل |
 | Konjunktiv II | Konjunktiv II | *Konjunktiv II* (وجه شرطی) |
