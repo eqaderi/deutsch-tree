@@ -4,10 +4,281 @@ kind: grammar
 level: A1
 chapter: a1-verb-patterns
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062]
 title:
   en: "*mögen* and *möchten* as verbs"
   fa: "*mögen* و *möchten* به‌عنوان فعل اصلی"
   de: "*mögen* und *möchten* als Verben"
+
+explanations:
+  en:
+    rule: >
+      *Mögen* means "to like": it says what you like in general, a thing or a
+      person (*Ich mag Kaffee.*). *Möchten* means "would like": a polite wish
+      for now, as when you order (*Ich möchte einen Tee.*). Here both are the
+      main verb with a noun in the *Akkusativ*. Mind the forms without an
+      ending: *ich mag*, *er mag*, and *ich möchte*, *er möchte*, never
+      *er möchtet*.
+  fa:
+    rule: >
+      *mögen* یعنی «دوست داشتن»: می‌گوید چه چیزی یا چه کسی را به‌طور کلی دوست
+      داریم (*Ich mag Kaffee.*). *möchten* یعنی «خواستن» به شکل مؤدبانه:
+      خواسته‌ای برای همین حالا، مثلاً هنگام سفارش دادن (*Ich möchte einen
+      Tee.*). در این موضوع هر دو فعل اصلی جمله‌اند و اسمی با حالت
+      *Akkusativ* (حالت مفعولی) می‌گیرند. به شکل‌های بی‌شناسه دقت کنید: *ich
+      mag*، *er mag* و *ich möchte*، *er möchte*؛ هرگز *er möchtet*.
+  de:
+    rule: >
+      Mit *mögen* sagt man, was man allgemein gut findet: eine Sache oder eine
+      Person (*Ich mag Kaffee.*). Mit *möchten* sagt man höflich, was man
+      jetzt haben will, zum Beispiel im Café (*Ich möchte einen Tee.*).
+      Danach steht ein Nomen im Akkusativ. Achtung: *ich mag*, *er mag* und
+      *ich möchte*, *er möchte* haben keine Endung.
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*mögen*", fa: "*mögen*", de: "*mögen*" }
+    - { en: "*möchten*", fa: "*möchten*", de: "*möchten*" }
+  rows:
+    - [ich, mag, möchte]
+    - [du, magst, möchtest]
+    - [er / sie / es, mag, möchte]
+    - [wir, mögen, möchten]
+    - [ihr, mögt, möchtet]
+    - [sie / Sie, mögen, möchten]
+
+examples:
+  - de: Ich mag Kaffee.
+    en: I like coffee.
+    fa: من قهوه دوست دارم.
+  - de: Ich möchte einen Tee, bitte.
+    en: I'd like a tea, please.
+    fa: لطفاً یک چای.
+  - de: Magst du Hunde?
+    en: Do you like dogs?
+    fa: سگ دوست داری؟
+  - de: Meine Schwester mag keinen Fisch.
+    en: My sister doesn't like fish.
+    fa: خواهرم ماهی دوست ندارد.
+  - de: Möchtest du ein Stück Kuchen?
+    en: Would you like a piece of cake?
+    fa: یک تکه کیک می‌خواهی؟
+  - de: Wir möchten die Rechnung, bitte.
+    en: We'd like the bill, please.
+    fa: لطفاً صورت‌حساب را بیاورید.
+  - de: Was möchten Sie?
+    en: What would you like?
+    fa: چه میل دارید؟
+  - de: Die Kinder mögen ihre Lehrerin.
+    en: The children like their teacher.
+    fa: بچه‌ها معلمشان را دوست دارند.
+
+mistakes:
+  - wrong: Er magt Musik.
+    right: Er mag Musik.
+    why:
+      en: "With *er*, *sie* and *es* the form is *mag*, without an ending."
+      fa: "با *er*، *sie* و *es* شکل فعل *mag* است، بدون شناسه."
+      de: "Bei *er*, *sie* und *es* heißt es *mag*, ohne Endung."
+  - wrong: Sie möchtet ein Eis.
+    right: Sie möchte ein Eis.
+    why:
+      en: "With *er*, *sie* and *es* the form is *möchte*, without *-t*."
+      fa: "با *er*، *sie* و *es* شکل فعل *möchte* است، بدون *-t*."
+      de: "Bei *er*, *sie* und *es* heißt es *möchte*, ohne *-t*."
+  - wrong: Ich mag einen Kaffee, bitte.
+    right: Ich möchte einen Kaffee, bitte.
+    why:
+      en: "To order or ask for something now, use *möchten*; *mögen* is for what you like in general."
+      fa: "برای سفارش دادن یا خواستن چیزی در همین لحظه *möchten* به کار می‌رود؛ *mögen* برای چیزی است که به‌طور کلی دوست داریم."
+      de: "Wenn man etwas bestellt, sagt man *möchten*. *Mögen* sagt man für Dinge, die man allgemein gut findet."
+  - wrong: Ich möchte ein Tee.
+    right: Ich möchte einen Tee.
+    why:
+      en: "The noun is in the *Akkusativ*: *der Tee*, *einen Tee*."
+      fa: "اسم در حالت *Akkusativ* است: *der Tee*، *einen Tee*."
+      de: "Das Nomen steht im Akkusativ: *der Tee*, *einen Tee*."
+
+# 20 questions, every question type.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich ___ Kaffee, aber keinen Tee.
+    options: [mag, magst, mögen]
+    answer: mag
+    explanation:
+      en: "With *ich* the form is *mag*, without an ending."
+      fa: "با *ich* شکل فعل *mag* است، بدون شناسه."
+      de: "Bei *ich* heißt es *mag*, ohne Endung."
+  - id: gap-2
+    type: gap-fill
+    prompt: Er ___ ein Eis.
+    options: [möchte, möchtet, möchtest]
+    answer: möchte
+    explanation:
+      en: "With *er* the form is *möchte*, without *-t*."
+      fa: "با *er* شکل فعل *möchte* است، بدون *-t*."
+      de: "Bei *er* heißt es *möchte*, ohne *-t*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ du Hunde?
+    options: [Magst, Mag, Mögt]
+    answer: Magst
+    explanation:
+      en: "With *du* the form is *magst*."
+      fa: "با *du* شکل فعل *magst* است."
+      de: "Bei *du* heißt es *magst*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ihr ___ Pizza, oder?
+    options: [mögt, mögen, magst]
+    answer: mögt
+    explanation:
+      en: "With *ihr* the form is *mögt*, with *ö*."
+      fa: "با *ihr* شکل فعل *mögt* است، با *ö*."
+      de: "Bei *ihr* heißt es *mögt*, mit *ö*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Im Café, zum Kellner: Ich ___ ein Wasser, bitte."
+    options: [möchte, mag, mögen]
+    answer: möchte
+    explanation:
+      en: "When you order, you use *möchten*: *Ich möchte ein Wasser, bitte.*"
+      fa: "هنگام سفارش دادن *möchten* به کار می‌رود: *Ich möchte ein Wasser, bitte.*"
+      de: "Beim Bestellen sagt man *möchten*: *Ich möchte ein Wasser, bitte.*"
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich ___ Schokolade sehr. Ich esse sie jeden Tag.
+    options: [mag, möchte, möchtest]
+    answer: mag
+    explanation:
+      en: "Something you like in general, every day: *mögen*, *ich mag*."
+      fa: "چیزی که به‌طور کلی و هر روز دوستش داریم: *mögen*، *ich mag*."
+      de: "Etwas, das man allgemein gut findet: *mögen*, *ich mag*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Sie möchte einen Kaffee., Sie möchtet einen Kaffee., Sie möchte ein Kaffee.]
+    answer: Sie möchte einen Kaffee.
+    explanation:
+      en: "*Sie möchte*, without *-t*, and *der Kaffee* becomes *einen Kaffee* in the *Akkusativ*."
+      fa: "*sie möchte* بدون *-t* است و *der Kaffee* در حالت *Akkusativ* می‌شود *einen Kaffee*."
+      de: "*Sie möchte* ohne *-t*, und *der Kaffee* wird im Akkusativ *einen Kaffee*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "___ Sie, Herr Braun? – Einen Tee, bitte."
+    options: [Was möchten, Was möchtet, Was mögt]
+    answer: Was möchten
+    explanation:
+      en: "With the polite *Sie* the form is *möchten*, and the answer is an order."
+      fa: "با *Sie* رسمی شکل فعل *möchten* است و پاسخ یک سفارش است."
+      de: "Bei *Sie* (höflich) heißt es *möchten*. Die Antwort ist eine Bestellung."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: ___ (möchten) du einen Apfel?
+    answers: [Möchtest]
+    explanation:
+      en: "With *du* the form is *möchtest*; it starts the question, so it has a capital."
+      fa: "با *du* شکل فعل *möchtest* است و چون در آغاز جملهٔ پرسشی آمده، با حرف بزرگ نوشته می‌شود."
+      de: "Bei *du* heißt es *möchtest*. Am Satzanfang schreibt man groß."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Mein Bruder ___ (mögen) keinen Käse.
+    answers: [mag]
+    explanation:
+      en: "*Mein Bruder* is *er*, so the form is *mag*, without an ending."
+      fa: "*mein Bruder* سوم‌شخص مفرد است (*er*)، پس شکل فعل *mag* است، بدون شناسه."
+      de: "*Mein Bruder* ist *er*. Es heißt *mag*, ohne Endung."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir ___ (möchten) die Rechnung, bitte.
+    answers: [möchten]
+    explanation:
+      en: "With *wir* the form is *möchten*."
+      fa: "با *wir* شکل فعل *möchten* است."
+      de: "Bei *wir* heißt es *möchten*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: ___ (möchten) ihr ein Eis?
+    answers: [Möchtet]
+    explanation:
+      en: "With *ihr* the form is *möchtet*; it starts the question, so it has a capital."
+      fa: "با *ihr* شکل فعل *möchtet* است و چون در آغاز جملهٔ پرسشی آمده، با حرف بزرگ نوشته می‌شود."
+      de: "Bei *ihr* heißt es *möchtet*. Am Satzanfang schreibt man groß."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Ich ___ (mögen) meine Nachbarn.
+    answers: [mag]
+    explanation:
+      en: "With *ich* the form is *mag*, without an ending."
+      fa: "با *ich* شکل فعل *mag* است، بدون شناسه."
+      de: "Bei *ich* heißt es *mag*, ohne Endung."
+  - id: true-1
+    type: true-false
+    prompt: Er magt Musik.
+    answer: false
+    explanation:
+      en: "With *er* the form is *mag*: *Er mag Musik.*"
+      fa: "با *er* شکل فعل *mag* است: *Er mag Musik.*"
+      de: "Bei *er* heißt es *mag*: *Er mag Musik.*"
+  - id: true-2
+    type: true-false
+    prompt: Ich möchte einen Tee, bitte.
+    answer: true
+    explanation:
+      en: "*Möchten* for an order, and *einen Tee* in the *Akkusativ*. The sentence is correct."
+      fa: "*möchten* برای سفارش و *einen Tee* در حالت *Akkusativ*. جمله درست است."
+      de: "*Möchten* für eine Bestellung, *einen Tee* im Akkusativ. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich möchte ein Salat.
+    answer: false
+    explanation:
+      en: "*Der Salat* is masculine, so the *Akkusativ* is *einen Salat*: *Ich möchte einen Salat.*"
+      fa: "*Salat* اسم مذکر (*der*) است، پس در حالت *Akkusativ* می‌شود *einen Salat*: *Ich möchte einen Salat.*"
+      de: "*Der Salat* ist maskulin. Im Akkusativ heißt es *einen Salat*: *Ich möchte einen Salat.*"
+  - id: error-1
+    type: find-error
+    prompt: Meine Mutter möchtet einen Kaffee.
+    answer: möchtet
+    explanation:
+      en: "*Meine Mutter* is *sie* (singular), so the form is *möchte*, without *-t*."
+      fa: "*meine Mutter* سوم‌شخص مفرد است (*sie*)، پس شکل فعل *möchte* است، بدون *-t*."
+      de: "*Meine Mutter* ist *sie* (Singular). Es heißt *möchte*, ohne *-t*."
+  - id: error-2
+    type: find-error
+    prompt: Meine Freunde und ich mögt keinen Fisch.
+    answer: mögt
+    explanation:
+      en: "*Meine Freunde und ich* is *wir*, so the form is *mögen*: *Meine Freunde und ich mögen keinen Fisch.*"
+      fa: "*meine Freunde und ich* اول‌شخص جمع است (*wir*)، پس شکل فعل *mögen* است: *Meine Freunde und ich mögen keinen Fisch.*"
+      de: "*Meine Freunde und ich* ist *wir*. Es heißt *mögen*: *Meine Freunde und ich mögen keinen Fisch.*"
+  - id: match-1
+    type: matching
+    answer:
+      - [du, magst]
+      - [ihr, mögt]
+      - [er, möchte]
+      - [wir, möchten]
+    explanation:
+      en: "*Du magst*, *ihr mögt*, *er möchte* (no *-t*), *wir möchten*."
+      fa: "*du magst*، *ihr mögt*، *er möchte* (بدون *-t*)، *wir möchten*."
+      de: "*Du magst*, *ihr mögt*, *er möchte* (ohne *-t*), *wir möchten*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [möchtest, du, einen Kaffee]
+    end: "?"
+    explanation:
+      en: "In a yes/no question the verb comes first: *Möchtest du einen Kaffee?*"
+      fa: "در پرسش بله و خیر، فعل در آغاز جمله می‌آید: *Möchtest du einen Kaffee?*"
+      de: "In einer Ja/Nein-Frage steht das Verb am Anfang: *Möchtest du einen Kaffee?*"
+
+review:
+  reviewer: two independent AI agents (Claude, fresh blind subagents; the second
+    re-answered error-2 after a fix; not a person)
+  date: 2026-11-28
+  pool: d7d57ddb41d99b05

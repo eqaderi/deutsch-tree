@@ -4,10 +4,293 @@ kind: grammar
 level: A1
 chapter: a1-verb-patterns
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-003, grammar-005, grammar-007]
 title:
   en: "*Imperativ*, *du*- and *ihr*-form"
   fa: "امر (*Imperativ*) با *du* و *ihr*"
   de: "Imperativ mit *du* und *ihr*"
+
+explanations:
+  en:
+    rule: >
+      The *du* imperative is the *du* form of the present without *du* and
+      without *-st*: *du gehst*, *Geh!* Verbs that change *e* to *i* or *ie*
+      keep the change (*Nimm!*, *Lies!*), but verbs with *a* to *ä* lose the
+      umlaut (*du fährst*, *Fahr!*). A stem ending in *-t* or *-d* adds *-e*:
+      *Warte!* The *ihr* imperative is the *ihr* form without *ihr*: *Kommt
+      mit!* A separable prefix goes to the end (*Mach das Fenster zu!*).
+      *Sein* and *haben* give *Sei!*, *Seid!* and *Hab!*, *Habt!*
+  fa:
+    rule: >
+      امر با *du* همان صرف *du* در زمان حال است، بدون *du* و بدون *-st*: *du
+      gehst*، *Geh!* فعل‌هایی که واکهٔ *e* را به *i* یا *ie* تغییر می‌دهند،
+      این تغییر را نگه می‌دارند (*Nimm!*، *Lies!*)، اما فعل‌هایی که *a* را به
+      *ä* تغییر می‌دهند، در امر *a* را نگه می‌دارند (*du fährst*، *Fahr!*).
+      اگر بن فعل به *-t* یا *-d* ختم شود، *-e* می‌گیرد: *Warte!* امر با *ihr*
+      همان صرف *ihr* است، بدون *ihr*: *Kommt mit!* پیشوند فعل جداشدنی به
+      پایان جمله می‌رود (*Mach das Fenster zu!*). امر *sein* و *haben* چنین
+      است: *Sei!*، *Seid!* و *Hab!*، *Habt!*
+  de:
+    rule: >
+      Der Imperativ mit *du* ist die *du*-Form ohne *du* und ohne *-st*: *du
+      gehst*, *Geh!* Bei *e* zu *i* oder *ie* bleibt der neue Vokal (*Nimm!*,
+      *Lies!*), bei *a* zu *ä* nicht (*Fahr!*). Endet der Stamm auf *-t* oder
+      *-d*, kommt *-e* dazu: *Warte!* Der Imperativ mit *ihr* ist die
+      *ihr*-Form ohne *ihr*: *Kommt mit!* Das Präfix steht am Ende. *Sein*
+      und *haben*: *Sei!*, *Seid!*, *Hab!*, *Habt!*
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*du*", fa: "*du*", de: "*du*" }
+    - { en: "*ihr*", fa: "*ihr*", de: "*ihr*" }
+  rows:
+    - [gehen, Geh!, Geht!]
+    - [kommen, Komm!, Kommt!]
+    - [warten, Warte!, Wartet!]
+    - [nehmen (e → i), Nimm!, Nehmt!]
+    - [sprechen (e → i), Sprich!, Sprecht!]
+    - [lesen (e → ie), Lies!, Lest!]
+    - [fahren (a → ä), Fahr!, Fahrt!]
+    - [zumachen, Mach … zu!, Macht … zu!]
+    - [sein, Sei!, Seid!]
+    - [haben, Hab!, Habt!]
+
+examples:
+  - de: Geh bitte nach Hause!
+    en: Please go home!
+    fa: لطفاً به خانه برو!
+  - de: Mach das Fenster zu!
+    en: Close the window!
+    fa: پنجره را ببند!
+  - de: Kinder, kommt mit!
+    en: Children, come along!
+    fa: بچه‌ها، با ما بیایید!
+  - de: Sei bitte pünktlich!
+    en: Please be on time!
+    fa: لطفاً سر وقت باش!
+  - de: Fahr langsam!
+    en: Drive slowly!
+    fa: آهسته رانندگی کن!
+  - de: Nimm ein Stück Kuchen!
+    en: Have a piece of cake!
+    fa: یک تکه کیک بردار!
+  - de: Lies den Text laut!
+    en: Read the text aloud!
+    fa: متن را بلند بخوان!
+  - de: Seid bitte leise!
+    en: Please be quiet! (to several people)
+    fa: لطفاً ساکت باشید! (خطاب به چند نفر)
+  - de: Hab keine Angst!
+    en: Don't be afraid!
+    fa: نترس!
+
+mistakes:
+  - wrong: Gehst nach Hause!
+    right: Geh nach Hause!
+    why:
+      en: "The *du* imperative drops *du* and the ending *-st*: *Geh!*"
+      fa: "امر با *du*، هم *du* و هم شناسهٔ *-st* را حذف می‌کند: *Geh!*"
+      de: "Im Imperativ fallen *du* und *-st* weg: *Geh!*"
+  - wrong: Fähr langsam!
+    right: Fahr langsam!
+    why:
+      en: "Verbs with *a* to *ä* keep the plain *a* in the imperative: *Fahr!*"
+      fa: "فعل‌هایی که *a* را به *ä* تغییر می‌دهند، در امر همان *a* را دارند: *Fahr!*"
+      de: "Bei *a* zu *ä* steht im Imperativ wieder *a*: *Fahr!*"
+  - wrong: Nehm den Bus!
+    right: Nimm den Bus!
+    why:
+      en: "Verbs with *e* to *i* keep the change: *du nimmst*, *Nimm!*"
+      fa: "فعل‌هایی که *e* را به *i* تغییر می‌دهند، این تغییر را در امر نگه می‌دارند: *du nimmst*، *Nimm!*"
+      de: "Bei *e* zu *i* bleibt das *i*: *du nimmst*, *Nimm!*"
+  - wrong: Bist ruhig!
+    right: Sei ruhig!
+    why:
+      en: "The imperative of *sein* is *Sei!*, and with *ihr* *Seid!*"
+      fa: "امر *sein* با *du* می‌شود *Sei!* و با *ihr* می‌شود *Seid!*"
+      de: "Der Imperativ von *sein* ist *Sei!*, bei *ihr* *Seid!*"
+
+# 20 questions, every question type.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ bitte nach Hause, Tom!
+    options: [Geh, Gehst, Geht]
+    answer: Geh
+    explanation:
+      en: "Tom is one person you call *du*: *du gehst* without *du* and *-st* is *Geh!*"
+      fa: "تام یک نفر است که او را *du* خطاب می‌کنیم: *du gehst* بدون *du* و *-st* می‌شود *Geh!*"
+      de: "Tom ist eine Person (*du*): *du gehst* ohne *du* und *-st* ist *Geh!*"
+  - id: gap-2
+    type: gap-fill
+    prompt: Kinder, ___ bitte leise!
+    options: [seid, sei, sind]
+    answer: seid
+    explanation:
+      en: "*Kinder* are several people you call *ihr*, so *sein* gives *Seid!*"
+      fa: "بچه‌ها چند نفرند که آن‌ها را *ihr* خطاب می‌کنیم، پس امر *sein* می‌شود *Seid!*"
+      de: "*Kinder* sind mehrere Personen (*ihr*). Der Imperativ von *sein* ist *Seid!*"
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ langsam, Lisa!
+    options: [Fahr, Fähr, Fährst]
+    answer: Fahr
+    explanation:
+      en: "Verbs with *a* to *ä* keep the plain *a* in the imperative: *Fahr!*"
+      fa: "فعل‌هایی که *a* را به *ä* تغییر می‌دهند، در امر همان *a* را دارند: *Fahr!*"
+      de: "Bei *a* zu *ä* steht im Imperativ wieder *a*: *Fahr!*"
+  - id: gap-4
+    type: gap-fill
+    prompt: Anna, ___ bitte den Text!
+    options: [lies, les, liest]
+    answer: lies
+    explanation:
+      en: "*Lesen* keeps *ie* in the imperative: *du liest*, *Lies!*"
+      fa: "*lesen* در امر *ie* را نگه می‌دارد: *du liest*، *Lies!*"
+      de: "Bei *lesen* bleibt *ie*: *du liest*, *Lies!*"
+  - id: choice-1
+    type: multiple-choice
+    prompt: "zumachen, Imperativ mit du:"
+    options: [Mach das Fenster zu!, Zumach das Fenster!, Machst das Fenster zu!]
+    answer: Mach das Fenster zu!
+    explanation:
+      en: "*Mach* comes first without *-st*, and the prefix *zu* goes to the end."
+      fa: "*Mach* بدون *-st* در آغاز می‌آید و پیشوند *zu* به پایان جمله می‌رود."
+      de: "*Mach* steht ohne *-st* am Anfang, das Präfix *zu* am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "sein, Imperativ mit du:"
+    options: [Sei pünktlich!, Bist pünktlich!, Seid pünktlich!]
+    answer: Sei pünktlich!
+    explanation:
+      en: "The *du* imperative of *sein* is *Sei!*; *Seid!* is for *ihr*."
+      fa: "امر *sein* با *du* می‌شود *Sei!*؛ *Seid!* برای *ihr* است."
+      de: "Der Imperativ von *sein* mit *du* ist *Sei!*. *Seid!* ist für *ihr*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "nehmen, Imperativ mit du:"
+    options: [Nimm den Bus!, Nehm den Bus!, Nimmst den Bus!]
+    answer: Nimm den Bus!
+    explanation:
+      en: "*Nehmen* keeps the change to *i*: *du nimmst*, *Nimm!*"
+      fa: "*nehmen* تغییر واکه به *i* را نگه می‌دارد: *du nimmst*، *Nimm!*"
+      de: "Bei *nehmen* bleibt das *i*: *du nimmst*, *Nimm!*"
+  - id: choice-4
+    type: multiple-choice
+    prompt: "mitkommen, Imperativ mit ihr:"
+    options: [Kommt mit!, Kommen mit!, Komm mit!]
+    answer: Kommt mit!
+    explanation:
+      en: "The *ihr* imperative is the *ihr* form without *ihr*: *Kommt mit!*"
+      fa: "امر با *ihr* همان صرف *ihr* است، بدون *ihr*: *Kommt mit!*"
+      de: "Der Imperativ mit *ihr* ist die *ihr*-Form ohne *ihr*: *Kommt mit!*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Tom, ___ (nehmen) bitte dein Buch!
+    answers: [nimm]
+    explanation:
+      en: "*Du nimmst* without *du* and *-st*: *Nimm!*"
+      fa: "*du nimmst* بدون *du* و *-st*: *Nimm!*"
+      de: "*Du nimmst* ohne *du* und *-st*: *Nimm!*"
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Kinder, ___ (sein) bitte pünktlich!
+    answers: [seid]
+    explanation:
+      en: "Several people you call *ihr*: the imperative of *sein* is *Seid!*"
+      fa: "چند نفر که آن‌ها را *ihr* خطاب می‌کنیم: امر *sein* می‌شود *Seid!*"
+      de: "Mehrere Personen (*ihr*): Der Imperativ von *sein* ist *Seid!*"
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Lena, ___ (sprechen) bitte lauter!
+    answers: [sprich]
+    explanation:
+      en: "*Du sprichst* without *du* and *-st*: *Sprich!*, with the *i*."
+      fa: "*du sprichst* بدون *du* و *-st*: *Sprich!*، با همان *i*."
+      de: "*Du sprichst* ohne *du* und *-st*: *Sprich!*, mit *i*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Paul und Mia, ___ (kommen) bitte mit!
+    answers: [kommt]
+    explanation:
+      en: "Two people you call *ihr*: *ihr kommt* without *ihr* is *Kommt!*"
+      fa: "دو نفر که آن‌ها را *ihr* خطاب می‌کنیم: *ihr kommt* بدون *ihr* می‌شود *Kommt!*"
+      de: "Zwei Personen (*ihr*): *ihr kommt* ohne *ihr* ist *Kommt!*"
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Max, ___ (geben) mir bitte das Salz!
+    answers: [gib]
+    explanation:
+      en: "*Du gibst* without *du* and *-st*: *Gib!*, with the *i*."
+      fa: "*du gibst* بدون *du* و *-st*: *Gib!*، با همان *i*."
+      de: "*Du gibst* ohne *du* und *-st*: *Gib!*, mit *i*."
+  - id: true-1
+    type: true-false
+    prompt: Fahr bitte langsam!
+    answer: true
+    explanation:
+      en: "Verbs with *a* to *ä* use the plain *a* in the imperative. The sentence is correct."
+      fa: "فعل‌هایی که *a* را به *ä* تغییر می‌دهند، در امر همان *a* را دارند. جمله درست است."
+      de: "Bei *a* zu *ä* steht im Imperativ *a*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Nehm bitte den Bus!
+    answer: false
+    explanation:
+      en: "*Nehmen* keeps the change to *i*: *Nimm bitte den Bus!*"
+      fa: "*nehmen* تغییر واکه به *i* را نگه می‌دارد: *Nimm bitte den Bus!*"
+      de: "Bei *nehmen* bleibt das *i*: *Nimm bitte den Bus!*"
+  - id: true-3
+    type: true-false
+    prompt: Seid bitte leise, Kinder!
+    answer: true
+    explanation:
+      en: "*Kinder* are *ihr*, and *sein* gives *Seid!* The sentence is correct."
+      fa: "*Kinder* با *ihr* خطاب می‌شوند و امر *sein* می‌شود *Seid!* جمله درست است."
+      de: "*Kinder* sind *ihr*, und *sein* wird *Seid!* Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Mia, lest bitte den Text!
+    answer: lest
+    explanation:
+      en: "Mia is one person you call *du*, so the imperative is *Lies!*; *Lest!* is for *ihr*."
+      fa: "میا یک نفر است که او را *du* خطاب می‌کنیم، پس امر می‌شود *Lies!*؛ *Lest!* برای *ihr* است."
+      de: "Mia ist eine Person (*du*). Der Imperativ ist *Lies!*, *Lest!* ist für *ihr*."
+  - id: error-2
+    type: find-error
+    prompt: Hab keine Angst und bist ruhig!
+    answer: bist
+    explanation:
+      en: "The *du* imperative of *sein* is *sei*: *Hab keine Angst und sei ruhig!*"
+      fa: "امر *sein* با *du* می‌شود *sei*: *Hab keine Angst und sei ruhig!*"
+      de: "Der Imperativ von *sein* mit *du* ist *sei*: *Hab keine Angst und sei ruhig!*"
+  - id: match-1
+    type: matching
+    answer:
+      - [du + nehmen, Nimm!]
+      - [ihr + nehmen, Nehmt!]
+      - [du + sein, Sei!]
+      - [ihr + sein, Seid!]
+    explanation:
+      en: "*Du*: *Nimm!*, *Sei!*; *ihr*: the *ihr* form, *Nehmt!*, *Seid!*"
+      fa: "با *du*: *Nimm!*، *Sei!*؛ با *ihr* همان صرف *ihr*: *Nehmt!*، *Seid!*"
+      de: "*Du*: *Nimm!*, *Sei!*; *ihr*: die *ihr*-Form, *Nehmt!*, *Seid!*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [mach, bitte, die Tür, zu]
+      - [mach, die Tür, bitte, zu]
+      - [bitte, mach, die Tür, zu]
+    end: "!"
+    explanation:
+      en: "*Mach* comes first (or after *bitte*), and *zu* goes to the end."
+      fa: "*mach* در آغاز می‌آید (یا پس از *bitte*) و *zu* به پایان جمله می‌رود."
+      de: "*Mach* steht am Anfang (oder nach *bitte*), *zu* steht am Ende."
+
+review:
+  reviewer: an independent AI agent (Claude, fresh blind subagent; not a person)
+  date: 2026-11-28
+  pool: 9fde87f991ceb6f2
