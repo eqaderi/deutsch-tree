@@ -1,13 +1,305 @@
-# Grammar list row 105.
+# Grammar list row 105. The file format is described in content/README.md.
+# The regular Komparativ and als are grammar-110, the Superlativ grammar-111 (A2).
 id: grammar-105
 kind: grammar
 level: A1
 chapter: a1-adjectives
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-103]
 title:
   en: "*gern* – *lieber* – *am liebsten*; *gut* – *besser*; *viel* – *mehr*"
   fa: "*gern* – *lieber* – *am liebsten*؛ *gut* – *besser*؛ *viel* – *mehr*"
   de: "*gern* – *lieber* – *am liebsten*; *gut* – *besser*; *viel* – *mehr*"
+
+explanations:
+  en:
+    rule: >
+      Three very common words have irregular forms for "more" and "most":
+      learn them by heart. *Gern* says you like doing something, *lieber* that
+      you like it more, so prefer it, and *am liebsten* that you like it most:
+      *Ich trinke gern Kaffee, lieber Tee und am liebsten Wasser.* They stand
+      where *gern* stands, right after the verb, and *am liebsten* often
+      starts the sentence (*Am liebsten esse ich Pizza.*). *Gut* becomes
+      *besser* (better) and *viel* becomes *mehr* (more). *Mehr* never takes
+      an ending: *mehr Zeit*, *mehr Freunde*.
+  fa:
+    rule: >
+      سه واژهٔ بسیار پرکاربرد برای «بیشتر» و «بیشترین» صورت‌های بی‌قاعده دارند
+      که باید از بر کرد. *gern* می‌گوید کاری را دوست دارید، *lieber* که آن را
+      بیشتر دوست دارید و ترجیح می‌دهید، و *am liebsten* که آن را از همه بیشتر
+      دوست دارید: *Ich trinke gern Kaffee, lieber Tee und am liebsten Wasser.*
+      این واژه‌ها همان جای *gern* می‌آیند، یعنی درست پس از فعل؛ *am liebsten*
+      اغلب در آغاز جمله هم می‌آید (*Am liebsten esse ich Pizza.*). صفت تفضیلی
+      (*Komparativ*) *gut* می‌شود *besser* (بهتر) و صفت تفضیلی *viel* می‌شود
+      *mehr* (بیشتر). *mehr* هرگز پایانه نمی‌گیرد: *mehr Zeit*، *mehr Freunde*.
+  de:
+    rule: >
+      Drei sehr wichtige Wörter haben besondere Formen. Man lernt sie am
+      besten auswendig. *Gern* heißt: Man macht etwas mit Freude. *Lieber*
+      heißt: Man macht es mit mehr Freude als etwas anderes. *Am liebsten*
+      heißt: Man macht es mit der größten Freude. *Ich trinke gern Kaffee,
+      lieber Tee und am liebsten Wasser.* Die Wörter stehen wie *gern* direkt
+      nach dem Verb. *Am liebsten* steht oft am Anfang: *Am liebsten esse ich
+      Pizza.* *Gut* wird zu *besser*, *viel* wird zu *mehr*. *Mehr* hat nie
+      eine Endung: *mehr Zeit*, *mehr Freunde*.
+
+table:
+  columns:
+    - { en: Base form, fa: صورت ساده, de: Grundform }
+    - { en: "*Komparativ* (more)", fa: "صفت تفضیلی (*Komparativ*)", de: Komparativ }
+    - { en: "*Superlativ* (most)", fa: "صفت عالی (*Superlativ*)", de: Superlativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [gern, lieber, am liebsten, Ich trinke lieber Tee.]
+    - [gut, besser, am besten, Mein Deutsch ist jetzt besser.]
+    - [viel, mehr, am meisten, Ich brauche mehr Zeit.]
+
+examples:
+  - de: Kaffee oder Tee? – Ich trinke lieber Tee.
+    en: Coffee or tea? – I'd rather have tea.
+    fa: قهوه یا چای؟ – چای را ترجیح می‌دهم.
+  - de: Ich spiele gern Fußball, aber noch lieber Tennis.
+    en: I like playing football, but I like tennis even more.
+    fa: فوتبال بازی کردن را دوست دارم، ولی تنیس را از آن هم بیشتر.
+  - de: Am liebsten esse ich Pizza.
+    en: Most of all I like eating pizza.
+    fa: از همه بیشتر پیتزا دوست دارم.
+  - de: Was machst du am liebsten?
+    en: What do you like doing most?
+    fa: از همه بیشتر چه کاری را دوست داری؟
+  - de: Mein Deutsch ist jetzt besser.
+    en: My German is better now.
+    fa: آلمانی‌ام حالا بهتر شده است.
+  - de: Geht es dir besser?
+    en: Are you feeling better?
+    fa: حالت بهتر است؟
+  - de: Ich brauche mehr Zeit.
+    en: I need more time.
+    fa: وقت بیشتری لازم دارم.
+  - de: Heute kommen mehr Gäste.
+    en: More guests are coming today.
+    fa: امروز مهمان‌های بیشتری می‌آیند.
+
+mistakes:
+  - wrong: Ich trinke mehr gern Tee.
+    right: Ich trinke lieber Tee.
+    why:
+      en: '"Like more" is one word: *lieber*. *Mehr gern* is not German.'
+      fa: "«بیشتر دوست دارم» در آلمانی یک واژه است: *lieber*. *mehr gern* نادرست است."
+      de: "Für „mehr gern“ gibt es ein Wort: *lieber*."
+  - wrong: Ich esse gerner Reis.
+    right: Ich esse lieber Reis.
+    why:
+      en: "*Gern* has an irregular form: *lieber*, never *gerner*."
+      fa: "*gern* صورت بی‌قاعده دارد: *lieber*، هرگز *gerner*."
+      de: "*Gern* hat eine besondere Form: *lieber*, nie *gerner*."
+  - wrong: Das ist mehr gut.
+    right: Das ist besser.
+    why:
+      en: '*Gut* becomes *besser*. German does not put *mehr* before an adjective for "more".'
+      fa: "*gut* می‌شود *besser*. در آلمانی برای «بیشتر» پیش از صفت *mehr* نمی‌آید."
+      de: "*Gut* wird zu *besser*. Man sagt nicht *mehr gut*."
+  - wrong: Am liebsten ich höre Musik.
+    right: Am liebsten höre ich Musik.
+    why:
+      en: "*Am liebsten* takes position 1, so the verb comes next and then the subject."
+      fa: "*am liebsten* جایگاه اول را می‌گیرد، پس پس از آن فعل می‌آید و بعد فاعل."
+      de: "*Am liebsten* steht auf Position 1. Dann kommt das Verb und danach das Subjekt."
+  - wrong: Ich habe jetzt mehre Zeit.
+    right: Ich habe jetzt mehr Zeit.
+    why:
+      en: "*Mehr* never takes an ending."
+      fa: "*mehr* هرگز پایانه نمی‌گیرد."
+      de: "*Mehr* hat nie eine Endung."
+
+# 21 questions.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Kaffee oder Tee? – Ich trinke ___ Tee.
+    options: [lieber, gerner, liebster]
+    answer: lieber
+    explanation:
+      en: "To say what you prefer, use *lieber*, the irregular form of *gern*."
+      fa: "برای گفتن آنچه ترجیح می‌دهید *lieber* می‌آید، صورت بی‌قاعدهٔ *gern*."
+      de: "Was man lieber mag, sagt man mit *lieber*. Das ist die Form von *gern*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Was isst du ___? – Pizza!
+    options: [am liebsten, am gernsten, am liebste]
+    answer: am liebsten
+    explanation:
+      en: 'The form for "most" of *gern* is *am liebsten*.'
+      fa: "صورت «از همه بیشتر» برای *gern* می‌شود *am liebsten*."
+      de: "Die Form von *gern* für „am meisten“ ist *am liebsten*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich lerne jeden Tag. Mein Deutsch ist jetzt ___.
+    options: [besser, mehr gut, guter]
+    answer: besser
+    explanation:
+      en: "*Gut* becomes *besser*, not *mehr gut*."
+      fa: "*gut* می‌شود *besser*، نه *mehr gut*."
+      de: "*Gut* wird zu *besser*, nicht zu *mehr gut*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich brauche ___ Zeit.
+    options: [mehr, mehre, mehrere]
+    answer: mehr
+    explanation:
+      en: "*Mehr* never takes an ending: *mehr Zeit*."
+      fa: "*mehr* هرگز پایانه نمی‌گیرد: *mehr Zeit*."
+      de: "*Mehr* hat nie eine Endung: *mehr Zeit*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Gestern waren zehn Gäste da. Heute kommen ___ Gäste.
+    options: [mehr, mehre, vieler]
+    answer: mehr
+    explanation:
+      en: "*Viel* becomes *mehr*, without an ending, also before a plural."
+      fa: "*viel* می‌شود *mehr*، بدون پایانه، پیش از اسم جمع هم."
+      de: "*Viel* wird zu *mehr*, ohne Endung, auch vor dem Plural."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Ich spiele gern Fußball, aber ich spiele lieber Tennis. Das heißt:"
+    options: [Tennis gefällt mir besser., Fußball gefällt mir besser., Ich spiele nicht gern Tennis.]
+    answer: Tennis gefällt mir besser.
+    explanation:
+      en: "*Lieber* goes with what you like more: tennis."
+      fa: "*lieber* با چیزی می‌آید که بیشتر دوستش دارید: تنیس."
+      de: "*Lieber* steht bei dem, was man mehr mag: Tennis."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Am liebsten lese ich Krimis. Das heißt:"
+    options: [Krimis sind meine Lieblingsbücher., Ich lese nie Krimis., Ich lese nicht gern Krimis.]
+    answer: Krimis sind meine Lieblingsbücher.
+    explanation:
+      en: "*Am liebsten*: of all books, you like detective stories most."
+      fa: "*am liebsten*: از میان همهٔ کتاب‌ها، رمان جنایی را از همه بیشتر دوست دارید."
+      de: "*Am liebsten*: Von allen Büchern mag man Krimis am meisten."
+  - id: true-1
+    type: true-false
+    prompt: Ich trinke mehr gern Tee.
+    answer: false
+    explanation:
+      en: '"Like more" is one word: *Ich trinke lieber Tee.*'
+      fa: "«بیشتر دوست دارم» یک واژه است: *Ich trinke lieber Tee.*"
+      de: "Dafür gibt es ein Wort: *Ich trinke lieber Tee.*"
+  - id: true-2
+    type: true-false
+    prompt: Am liebsten esse ich Fisch.
+    answer: true
+    explanation:
+      en: "*Am liebsten* in position 1, then the verb, then the subject. The sentence is correct."
+      fa: "*am liebsten* در جایگاه اول، بعد فعل و بعد فاعل. جمله درست است."
+      de: "*Am liebsten* auf Position 1, dann das Verb, dann das Subjekt. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Das ist mehr gut.
+    answer: false
+    explanation:
+      en: "*Gut* becomes *besser*: *Das ist besser.*"
+      fa: "*gut* می‌شود *besser*: *Das ist besser.*"
+      de: "*Gut* wird zu *besser*: *Das ist besser.*"
+  - id: true-4
+    type: true-false
+    prompt: Sie hat heute mehr Zeit.
+    answer: true
+    explanation:
+      en: "*Mehr* has no ending. The sentence is correct."
+      fa: "*mehr* پایانه ندارد. جمله درست است."
+      de: "*Mehr* hat keine Endung. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Er spielt lieber Gitarre.
+    answer: true
+    explanation:
+      en: "*Lieber* stands right after the verb, like *gern*. The sentence is correct."
+      fa: "*lieber* مانند *gern* درست پس از فعل آمده است. جمله درست است."
+      de: "*Lieber* steht wie *gern* direkt nach dem Verb. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Nein, danke. Ich trinke ___ (gern, Komparativ) Wasser.
+    answers: [lieber]
+    explanation:
+      en: "The *Komparativ* of *gern* is *lieber*."
+      fa: "صفت تفضیلی *gern* می‌شود *lieber*."
+      de: "Der Komparativ von *gern* ist *lieber*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wer kocht ___ (gut, Komparativ), du oder ich?
+    answers: [besser]
+    explanation:
+      en: "The *Komparativ* of *gut* is *besser*."
+      fa: "صفت تفضیلی *gut* می‌شود *besser*."
+      de: "Der Komparativ von *gut* ist *besser*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich möchte ___ (viel, Komparativ) Freizeit.
+    answers: [mehr]
+    explanation:
+      en: "The *Komparativ* of *viel* is *mehr*, without an ending."
+      fa: "صفت تفضیلی *viel* می‌شود *mehr*، بدون پایانه."
+      de: "Der Komparativ von *viel* ist *mehr*, ohne Endung."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Was machst du am ___ (gern)?
+    answers: [liebsten]
+    explanation:
+      en: "After *am* the form of *gern* is *liebsten*: *am liebsten*."
+      fa: "پس از *am* صورت *gern* می‌شود *liebsten*: *am liebsten*."
+      de: "Nach *am* heißt die Form von *gern* *liebsten*: *am liebsten*."
+  - id: error-1
+    type: find-error
+    prompt: Ich esse gerner Reis.
+    answer: gerner
+    explanation:
+      en: '*Gerner* does not exist. "Like more" is *lieber*.'
+      fa: "*gerner* در آلمانی وجود ندارد. «بیشتر دوست داشتن» می‌شود *lieber*."
+      de: "*Gerner* gibt es nicht. Man sagt *lieber*."
+  - id: error-2
+    type: find-error
+    prompt: Ich spiele am liebste Fußball.
+    answer: liebste
+    explanation:
+      en: "After *am* the form ends in *-en*: *am liebsten*."
+      fa: "پس از *am* واژه به *-en* ختم می‌شود: *am liebsten*."
+      de: "Nach *am* endet das Wort auf *-en*: *am liebsten*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [was, trinkst, du, am liebsten]
+    end: "?"
+    explanation:
+      en: "The question word first, then the verb and the subject; *am liebsten* follows them."
+      fa: "اول واژهٔ پرسشی، بعد فعل و فاعل؛ *am liebsten* پس از آن‌ها می‌آید."
+      de: "Zuerst das Fragewort, dann das Verb und das Subjekt. *Am liebsten* kommt danach."
+  - id: order-2
+    type: word-order
+    answers:
+      - [am liebsten, esse, ich, Pizza]
+      - [ich, esse, am liebsten, Pizza]
+      - [Pizza, esse, ich, am liebsten]
+      - [ich, esse, Pizza, am liebsten]
+    explanation:
+      en: "The verb is in position 2. Before it can stand *am liebsten*, the subject or *Pizza*; after it, *Pizza* and *am liebsten* in either order."
+      fa: "فعل در جایگاه دوم است. پیش از آن *am liebsten*، فاعل یا *Pizza* می‌تواند بیاید و پس از آن *Pizza* و *am liebsten* به هر ترتیبی."
+      de: "Das Verb steht auf Position 2. Davor kann *am liebsten*, das Subjekt oder *Pizza* stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [gern, lieber]
+      - [gut, besser]
+      - [viel, mehr]
+    explanation:
+      en: "The three irregular forms: *gern – lieber*, *gut – besser*, *viel – mehr*."
+      fa: "سه صورت بی‌قاعده: *gern – lieber*، *gut – besser*، *viel – mehr*."
+      de: "Die drei besonderen Formen: *gern – lieber*, *gut – besser*, *viel – mehr*."
+
+review:
+  reviewer: two independent AI agents (a second fresh agent re-answered the
+    changed or disputed questions)
+  date: 2026-11-28
+  pool: 3860d7833bb53cf0

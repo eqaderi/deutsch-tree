@@ -1,13 +1,272 @@
-# Grammar list row 102.
+# Grammar list row 102. The file format is described in content/README.md.
+# Endings before a noun (der neue Tisch) are grammar-107 to -109, at A2.
 id: grammar-102
 kind: grammar
 level: A1
 chapter: a1-adjectives
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-002]
 title:
   en: "Predicative adjective"
   fa: "صفت در نقش مسند (بدون پایانه)"
   de: "Adjektiv nach *sein* (ohne Endung)"
+
+explanations:
+  en:
+    rule: >
+      An adjective after *sein* says what someone or something is like:
+      *Das Haus ist modern.* There it never takes an ending. It stays the same
+      for *der*, *die* and *das* nouns and in the plural: *Der Tisch ist neu.
+      Die Stühle sind neu.* Only the verb changes, *ist* or *sind*. Like every
+      part that completes the sentence, the adjective goes to the end; the
+      verb stays in position 2. Before a noun an adjective does take an
+      ending (*der neue Tisch*), but that comes at *A2*.
+  fa:
+    rule: >
+      صفتی که پس از *sein* می‌آید می‌گوید کسی یا چیزی چگونه است: *Das Haus ist
+      modern.* در این جایگاه صفت هرگز پایانه نمی‌گیرد. با اسم مذکر (*der*)،
+      مؤنث (*die*) و خنثی (*das*) و در جمع یکسان می‌ماند: *Der Tisch ist neu.
+      Die Stühle sind neu.* فقط فعل عوض می‌شود: *ist* یا *sind*. فعل در
+      جایگاه دوم می‌ماند و صفت به پایان جمله می‌رود؛ پس برخلاف فارسی، *ist*
+      پیش از صفت می‌آید. صفتی که پیش از اسم بیاید پایانه می‌گیرد (*der neue
+      Tisch*)، اما این موضوع سطح *A2* است.
+  de:
+    rule: >
+      Ein Adjektiv nach *sein* sagt, wie jemand oder etwas ist: *Das Haus ist
+      modern.* Dann hat das Adjektiv nie eine Endung. Es bleibt gleich bei
+      *der*, *die* und *das* und im Plural: *Der Tisch ist neu. Die Stühle
+      sind neu.* Nur das Verb ändert sich: *ist* oder *sind*. Das Verb steht
+      auf Position 2, das Adjektiv am Ende. Vor einem Nomen hat ein Adjektiv
+      eine Endung (*der neue Tisch*). Das kommt auf Niveau *A2*.
+
+# The article-change table, here to show that nothing changes: one row each
+# for der, die, das and the plural, and the adjective the same in all four.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "Adjective after *sein*", fa: "صفت پس از *sein*", de: "Adjektiv nach *sein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Tisch, neu, Der Tisch ist neu.]
+    - [die Lampe, neu, Die Lampe ist neu.]
+    - [das Bett, neu, Das Bett ist neu.]
+    - [die Stühle (Plural), neu, Die Stühle sind neu.]
+
+examples:
+  - de: Das Haus ist modern.
+    en: The house is modern.
+    fa: خانه مدرن است.
+  - de: Der Kaffee ist heiß.
+    en: The coffee is hot.
+    fa: قهوه داغ است.
+  - de: Die Wohnung ist klein, aber hell.
+    en: The flat is small but bright.
+    fa: آپارتمان کوچک است، اما روشن است.
+  - de: Das Wetter ist heute schön.
+    en: The weather is nice today.
+    fa: هوا امروز خوب است.
+  - de: Die Kinder sind müde.
+    en: The children are tired.
+    fa: بچه‌ها خسته‌اند.
+  - de: Bist du krank? – Nein, ich bin nur müde.
+    en: Are you ill? – No, I'm just tired.
+    fa: مریضی؟ – نه، فقط خسته‌ام.
+  - de: Der Test ist nicht schwer.
+    en: The test is not difficult.
+    fa: آزمون سخت نیست.
+  - de: Ist die Suppe noch warm?
+    en: Is the soup still warm?
+    fa: سوپ هنوز گرم است؟
+  - de: Meine Eltern sind zufrieden.
+    en: My parents are happy (satisfied).
+    fa: پدر و مادرم راضی‌اند.
+
+mistakes:
+  - wrong: Das Haus ist moderne.
+    right: Das Haus ist modern.
+    why:
+      en: "After *sein* an adjective has no ending: *modern*, not *moderne*."
+      fa: "صفت پس از *sein* پایانه نمی‌گیرد: *modern*، نه *moderne*."
+      de: "Nach *sein* hat ein Adjektiv keine Endung: *modern*, nicht *moderne*."
+  - wrong: Die Schuhe sind teuren.
+    right: Die Schuhe sind teuer.
+    why:
+      en: "In the plural only the verb changes (*sind*). The adjective stays *teuer*."
+      fa: "در جمع فقط فعل عوض می‌شود (*sind*). صفت همان *teuer* می‌ماند."
+      de: "Im Plural ändert sich nur das Verb (*sind*). Das Adjektiv bleibt *teuer*."
+  - wrong: Das Essen lecker ist.
+    right: Das Essen ist lecker.
+    why:
+      en: "The verb stands in position 2, so *ist* comes before the adjective."
+      fa: "در فارسی فعل در پایان می‌آید («خوشمزه است»)، ولی در آلمانی فعل در جایگاه دوم است: *ist* پیش از صفت."
+      de: "Das Verb steht auf Position 2. *Ist* steht also vor dem Adjektiv."
+  - wrong: Die Wohnung ist groß und helle.
+    right: Die Wohnung ist groß und hell.
+    why:
+      en: "Two adjectives after *sein*: neither has an ending."
+      fa: "وقتی دو صفت پس از *sein* می‌آیند، هیچ‌کدام پایانه نمی‌گیرد."
+      de: "Zwei Adjektive nach *sein*: Beide haben keine Endung."
+
+# 18 questions.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das Auto ist ___.
+    options: [neu, neue, neues]
+    answer: neu
+    explanation:
+      en: "After *sein* the adjective has no ending: *neu*."
+      fa: "صفت پس از *sein* پایانه نمی‌گیرد: *neu*."
+      de: "Nach *sein* hat das Adjektiv keine Endung: *neu*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Blumen sind ___.
+    options: [schön, schöne, schönen]
+    answer: schön
+    explanation:
+      en: "In the plural too, the adjective after *sein* has no ending: *schön*."
+      fa: "در جمع هم صفت پس از *sein* پایانه نمی‌گیرد: *schön*."
+      de: "Auch im Plural hat das Adjektiv nach *sein* keine Endung: *schön*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der Kaffee ist ___.
+    options: [heiß, heiße, heißen]
+    answer: heiß
+    explanation:
+      en: "*Der Kaffee* is a *der* noun, but the adjective after *sein* still has no ending: *heiß*."
+      fa: "*Kaffee* اسم مذکر (*der*) است، ولی صفت پس از *sein* باز هم پایانه نمی‌گیرد: *heiß*."
+      de: "*Kaffee* hat den Artikel *der*. Trotzdem hat das Adjektiv nach *sein* keine Endung: *heiß*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Wohnung ___ klein.
+    options: [ist, sind, bist]
+    answer: ist
+    explanation:
+      en: "*Die Wohnung* is one thing (*sie*), so *ist*."
+      fa: "*die Wohnung* سوم‌شخص مفرد است (*sie*)، پس *ist*."
+      de: "*Die Wohnung* ist eine Sache (*sie*). Darum *ist*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Die Zimmer ___ hell.
+    options: [sind, ist, seid]
+    answer: sind
+    explanation:
+      en: "*Das Zimmer* has the plural *die Zimmer*: several rooms, so *sind*. The adjective stays *hell*."
+      fa: "*die Zimmer* جمعِ *das Zimmer* است، پس *sind*. صفت همان *hell* می‌ماند."
+      de: "*Die Zimmer* ist der Plural von *das Zimmer*. Darum *sind*. Das Adjektiv bleibt *hell*."
+  - id: true-1
+    type: true-false
+    prompt: Die Stadt ist alt.
+    answer: true
+    explanation:
+      en: "*Ist* in position 2 and *alt* without an ending. The sentence is correct."
+      fa: "*ist* در جایگاه دوم و *alt* بدون پایانه است. جمله درست است."
+      de: "*Ist* auf Position 2, *alt* ohne Endung. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Die Tasche ist schwere.
+    answer: false
+    explanation:
+      en: "After *sein* there is no ending: *Die Tasche ist schwer.*"
+      fa: "صفت پس از *sein* پایانه نمی‌گیرد: *Die Tasche ist schwer.*"
+      de: "Nach *sein* gibt es keine Endung: *Die Tasche ist schwer.*"
+  - id: true-3
+    type: true-false
+    prompt: Das Essen lecker ist.
+    answer: false
+    explanation:
+      en: "The verb must stand in position 2: *Das Essen ist lecker.*"
+      fa: "فعل باید در جایگاه دوم بیاید: *Das Essen ist lecker.*"
+      de: "Das Verb steht auf Position 2: *Das Essen ist lecker.*"
+  - id: true-4
+    type: true-false
+    prompt: Meine Eltern sind zufrieden.
+    answer: true
+    explanation:
+      en: "Plural *sind* and *zufrieden* without an ending. The sentence is correct."
+      fa: "فعل جمع *sind* و *zufrieden* بدون پایانه است. جمله درست است."
+      de: "Plural *sind* und *zufrieden* ohne Endung. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das Kind ___ (sein) müde.
+    answers: [ist]
+    explanation:
+      en: "*Das Kind* is one person (*es*): *ist*."
+      fa: "*das Kind* سوم‌شخص مفرد است (*es*): *ist*."
+      de: "*Das Kind* ist eine Person (*es*): *ist*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Die Straße ist ___ (laut).
+    answers: [laut]
+    explanation:
+      en: "After *sein* the adjective stays as it is: *laut*."
+      fa: "صفت پس از *sein* بی‌تغییر می‌ماند: *laut*."
+      de: "Nach *sein* bleibt das Adjektiv, wie es ist: *laut*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Äpfel sind ___ (frisch).
+    answers: [frisch]
+    explanation:
+      en: "A plural subject, but still no ending: *frisch*."
+      fa: "فاعل جمع است، ولی صفت باز هم پایانه نمی‌گیرد: *frisch*."
+      de: "Das Subjekt ist Plural, aber das Adjektiv hat keine Endung: *frisch*."
+  - id: error-1
+    type: find-error
+    prompt: Die Wohnung ist kleine.
+    answer: kleine
+    explanation:
+      en: "After *sein* there is no ending: *klein*."
+      fa: "صفت پس از *sein* پایانه نمی‌گیرد: *klein*."
+      de: "Nach *sein* gibt es keine Endung: *klein*."
+  - id: error-2
+    type: find-error
+    prompt: Die Brötchen sind frische.
+    answer: frische
+    explanation:
+      en: "In the plural too: no ending after *sein*. *Die Brötchen sind frisch.*"
+      fa: "در جمع هم صفت پس از *sein* پایانه نمی‌گیرد: *Die Brötchen sind frisch.*"
+      de: "Auch im Plural keine Endung nach *sein*: *Die Brötchen sind frisch.*"
+  - id: error-3
+    type: find-error
+    prompt: Das Zimmer ist ruhiges.
+    answer: ruhiges
+    explanation:
+      en: "*Das Zimmer* is a *das* noun, but after *sein* the adjective has no ending: *ruhig*."
+      fa: "*Zimmer* اسم خنثی (*das*) است، ولی صفت پس از *sein* پایانه نمی‌گیرد: *ruhig*."
+      de: "*Zimmer* hat den Artikel *das*, aber nach *sein* hat das Adjektiv keine Endung: *ruhig*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ist, die Suppe, noch, heiß]
+    end: "?"
+    explanation:
+      en: "A yes/no question starts with the verb. The adjective goes to the end."
+      fa: "پرسش بله/نه با فعل شروع می‌شود و صفت به پایان جمله می‌رود."
+      de: "Eine Ja/Nein-Frage beginnt mit dem Verb. Das Adjektiv steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [mein Handy, ist, leider, kaputt]
+      - [leider, ist, mein Handy, kaputt]
+    explanation:
+      en: "The verb is in position 2 and the adjective at the end. *Leider* can also stand first."
+      fa: "فعل در جایگاه دوم و صفت در پایان جمله است. *leider* می‌تواند در آغاز جمله هم بیاید."
+      de: "Das Verb steht auf Position 2, das Adjektiv am Ende. *Leider* kann auch am Anfang stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich ___ müde, bin]
+      - [das Kind ___ müde, ist]
+      - [ihr ___ müde, seid]
+      - [die Kinder ___ müde, sind]
+    explanation:
+      en: "Only *sein* changes with the person: *bin*, *ist*, *seid*, *sind*. *Müde* stays the same."
+      fa: "فقط *sein* با شخص عوض می‌شود: *bin*، *ist*، *seid*، *sind*. *müde* یکسان می‌ماند."
+      de: "Nur *sein* ändert sich mit der Person: *bin*, *ist*, *seid*, *sind*. *Müde* bleibt gleich."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 9e6aae72258ce022
