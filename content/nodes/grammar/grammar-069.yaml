@@ -4,10 +4,275 @@ kind: grammar
 level: A2
 chapter: a2-dativ-objects
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-063, grammar-065]
 title:
   en: "*von* + *Dativ* instead of *Genitiv*"
-  fa: "*von* + *Dativ* به‌جای *Genitiv*"
+  fa: "*von* و حالت *Dativ* به‌جای حالت *Genitiv*"
   de: "*von* + Dativ statt Genitiv"
+
+explanations:
+  en:
+    rule: >
+      To say whose something is, spoken German mostly uses *von* + *Dativ*
+      instead of the *Genitiv*: *das Auto von meinem Vater* (my father's
+      car). The thing comes first, the owner after *von*. *Von dem* is
+      shortened to *vom*: *das Zimmer vom Kind*. With a name you can say
+      *Karls Freunde* or *Freunde von Karl*; both mean the same. In the
+      plural without an article only *von* works: *die Preise von
+      Wohnungen*.
+  fa:
+    rule: >
+      برای گفتن این‌که چیزی مال کیست، آلمانیِ گفتاری بیشتر *von* را با حالت
+      *Dativ* به کار می‌برد، نه حالت *Genitiv* (حالت ملکی) را: *das Auto von
+      meinem Vater* (ماشین پدرم). اول خود چیز می‌آید و صاحب آن پس از *von*.
+      *von dem* کوتاه می‌شود: *vom*، مانند *das Zimmer vom Kind*. با نام
+      اشخاص هم *Karls Freunde* درست است و هم *Freunde von Karl*؛ معنای هر
+      دو یکی است. در جمعِ بدون حرف تعریف فقط *von* به کار می‌رود: *die Preise
+      von Wohnungen*. ترتیب *von* مانند فارسی است: اول چیز، سپس صاحب آن.
+  de:
+    rule: >
+      Wem gehört etwas? Beim Sprechen sagt man meistens *von* + Dativ statt
+      Genitiv: *das Auto von meinem Vater*. Zuerst kommt die Sache, nach
+      *von* die Person. *Von dem* sagt man kurz: *vom*, zum Beispiel *das
+      Zimmer vom Kind*. Bei Namen geht beides: *Karls Freunde* oder *Freunde
+      von Karl*. Im Plural ohne Artikel geht nur *von*: *die Preise von
+      Wohnungen*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*von* + *Dativ*", fa: "*von* + حالت *Dativ*", de: "*von* + Dativ" }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Freund, vom Freund, von einem Freund, das Auto von meinem Freund]
+    - [die Freundin, von der Freundin, von einer Freundin, die Tasche von meiner Freundin]
+    - [das Kind, vom Kind, von einem Kind, das Zimmer vom Kind]
+    - [die Eltern (Plural), von den Eltern, –, das Haus von meinen Eltern]
+
+examples:
+  - de: Freunde von Karl kommen heute.
+    en: Some friends of Karl's are coming today.
+    fa: امروز دوستان کارل می‌آیند.
+  - de: Das ist das Auto von meinem Vater.
+    en: This is my father's car.
+    fa: این ماشین پدرم است.
+  - de: Wie ist die Telefonnummer von deiner Schwester?
+    en: What is your sister's phone number?
+    fa: شمارهٔ تلفن خواهرت چند است؟
+  - de: Das Zimmer vom Kind ist sehr klein.
+    en: The child's room is very small.
+    fa: اتاق بچه خیلی کوچک است.
+  - de: Die Wohnung von Anna und Tom ist schön.
+    en: Anna and Tom's flat is nice.
+    fa: آپارتمان آنا و تام زیباست.
+  - de: Kennst du den Bruder von Lisa?
+    en: Do you know Lisa's brother?
+    fa: برادر لیزا را می‌شناسی؟
+  - de: Der Chef von meinem Mann heißt Herr Weber.
+    en: My husband's boss is called Mr Weber.
+    fa: اسم رئیس شوهرم آقای وبر است.
+  - de: Die Preise von Wohnungen sind hier sehr hoch.
+    en: Flat prices here are very high.
+    fa: قیمت آپارتمان‌ها اینجا خیلی بالاست.
+  - de: Das ist die Tasche von der Lehrerin.
+    en: That is the teacher's bag.
+    fa: این کیف معلم است.
+
+mistakes:
+  - wrong: Das ist das Auto von mein Vater.
+    right: Das ist das Auto von meinem Vater.
+    why:
+      en: "*Von* always takes the *Dativ*: *mein Vater* becomes *meinem Vater*."
+      fa: "*von* همیشه با حالت *Dativ* می‌آید: *mein Vater* به *meinem Vater* تبدیل می‌شود."
+      de: "Nach *von* steht immer der Dativ: *mein Vater* wird zu *meinem Vater*."
+  - wrong: Das Zimmer von das Kind ist klein.
+    right: Das Zimmer vom Kind ist klein.
+    why:
+      en: "*Das Kind* in the *Dativ* is *dem Kind*, and *von dem* is shortened to *vom*."
+      fa: "*das Kind* در حالت *Dativ* می‌شود *dem Kind* و *von dem* کوتاه می‌شود: *vom*."
+      de: "*Das Kind* im Dativ: *dem Kind*. *Von dem* sagt man kurz: *vom*."
+  - wrong: Das ist von Karl das Fahrrad.
+    right: Das ist das Fahrrad von Karl.
+    why:
+      en: "The thing comes first, the owner after it: *das Fahrrad von Karl*, or *Karls Fahrrad*."
+      fa: "اول چیز می‌آید و صاحب آن پس از آن: *das Fahrrad von Karl*، یا *Karls Fahrrad*."
+      de: "Zuerst die Sache, dann die Person: *das Fahrrad von Karl* oder *Karls Fahrrad*."
+  - wrong: Die Tasche von die Lehrerin ist neu.
+    right: Die Tasche von der Lehrerin ist neu.
+    why:
+      en: "After *von* comes the *Dativ*: *die Lehrerin* becomes *der Lehrerin*."
+      fa: "پس از *von* حالت *Dativ* می‌آید: *die Lehrerin* به *der Lehrerin* تبدیل می‌شود."
+      de: "Nach *von* steht der Dativ: *die Lehrerin* wird zu *der Lehrerin*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist das Auto von ___ Vater.
+    options: [meinem, mein, meinen]
+    answer: meinem
+    explanation:
+      en: "*Von* takes the *Dativ*; *Vater* is masculine: *von meinem Vater*."
+      fa: "*von* با حالت *Dativ* می‌آید و *Vater* اسم مذکر است: *von meinem Vater*."
+      de: "Nach *von* steht der Dativ. *Vater* ist maskulin: *von meinem Vater*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Tasche von ___ Lehrerin ist neu.
+    options: [der, die, dem]
+    answer: der
+    explanation:
+      en: "*Die Lehrerin* in the *Dativ* is *der Lehrerin*."
+      fa: "*die Lehrerin* در حالت *Dativ* می‌شود *der Lehrerin*."
+      de: "*Die Lehrerin* im Dativ: *der Lehrerin*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Zimmer ___ Kind ist klein.
+    options: [vom, von, von das]
+    answer: vom
+    explanation:
+      en: "*Von* + *dem Kind* is shortened to *vom Kind*."
+      fa: "*von* + *dem Kind* کوتاه می‌شود: *vom Kind*."
+      de: "*Von* + *dem Kind* sagt man kurz: *vom Kind*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Das Haus von ___ Eltern ist alt.
+    options: [meinen, meine, meiner]
+    answer: meinen
+    explanation:
+      en: "*Von* takes the *Dativ*, and the plural is *meinen Eltern*."
+      fa: "*von* با حالت *Dativ* می‌آید و شکل جمع آن *meinen Eltern* است."
+      de: "Nach *von* steht der Dativ. Im Plural: *meinen Eltern*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Karls Freunde = die Freunde ___
+    options: [von Karl, zu Karl, bei Karl]
+    answer: von Karl
+    explanation:
+      en: "*Von* says whose: *Karls Freunde* and *die Freunde von Karl* mean the same."
+      fa: "*von* صاحب را نشان می‌دهد: *Karls Freunde* و *die Freunde von Karl* یک معنا دارند."
+      de: "*Von* sagt, wem etwas gehört: *Karls Freunde* und *die Freunde von Karl* sind gleich."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Annas Wohnung = die Wohnung ___
+    options: [von Anna, zu Anna, bei Anna]
+    answer: von Anna
+    explanation:
+      en: "*Von* says whose: *Annas Wohnung* and *die Wohnung von Anna* mean the same."
+      fa: "*von* صاحب را نشان می‌دهد: *Annas Wohnung* و *die Wohnung von Anna* یک معنا دارند."
+      de: "*Von* sagt, wem etwas gehört: *Annas Wohnung* und *die Wohnung von Anna* sind gleich."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wer ist das? – Das ist der Freund ___ Schwester.
+    options: [von meiner, von meine, vom meiner]
+    answer: von meiner
+    explanation:
+      en: "*Von* takes the *Dativ*; *Schwester* is feminine: *von meiner Schwester*. *Vom* already holds *dem*."
+      fa: "*von* با حالت *Dativ* می‌آید و *Schwester* اسم مؤنث است: *von meiner Schwester*. *vom* خودش *dem* را در خود دارد."
+      de: "Nach *von* steht der Dativ. *Schwester* ist feminin: *von meiner Schwester*. In *vom* steckt schon *dem*."
+  - id: true-1
+    type: true-false
+    prompt: Das ist das Fahrrad von meinem Bruder.
+    answer: true
+    explanation:
+      en: "*Von* + *Dativ*: *von meinem Bruder*. The sentence is correct."
+      fa: "*von* با حالت *Dativ*: *von meinem Bruder*. جمله درست است."
+      de: "*Von* + Dativ: *von meinem Bruder*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das Auto von meine Mutter ist rot.
+    answer: false
+    explanation:
+      en: "After *von* comes the *Dativ*: *von meiner Mutter*."
+      fa: "پس از *von* حالت *Dativ* می‌آید: *von meiner Mutter*."
+      de: "Nach *von* steht der Dativ: *von meiner Mutter*."
+  - id: true-3
+    type: true-false
+    prompt: Der Hund vom Chef ist sehr groß.
+    answer: true
+    explanation:
+      en: "*Vom Chef* is *von dem Chef*. The sentence is correct."
+      fa: "*vom Chef* همان *von dem Chef* است. جمله درست است."
+      de: "*Vom Chef* ist *von dem Chef*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Das ist von Lisa die Jacke.
+    answer: false
+    explanation:
+      en: "The thing comes first, the owner after it: *Das ist die Jacke von Lisa.*"
+      fa: "اول چیز می‌آید و صاحب آن پس از آن: *Das ist die Jacke von Lisa.*"
+      de: "Zuerst die Sache, dann die Person: *Das ist die Jacke von Lisa.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist das Handy ___ (von / mein Bruder).
+    answers: [von meinem Bruder, von meinem]
+    explanation:
+      en: "*Von* takes the *Dativ*: *von meinem Bruder*."
+      fa: "*von* با حالت *Dativ* می‌آید: *von meinem Bruder*."
+      de: "Nach *von* steht der Dativ: *von meinem Bruder*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wie heißt die Tochter ___ (von / deine Freundin)?
+    answers: [von deiner Freundin, von deiner]
+    explanation:
+      en: "*Freundin* is feminine: *von deiner Freundin*."
+      fa: "*Freundin* اسم مؤنث است: *von deiner Freundin*."
+      de: "*Freundin* ist feminin: *von deiner Freundin*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Das Spielzeug ___ (von / das Kind) liegt im Garten.
+    answers: [vom Kind, von dem Kind, vom, von dem]
+    explanation:
+      en: "*Von* + *dem Kind*, almost always said as *vom Kind*."
+      fa: "*von* + *dem Kind* که تقریباً همیشه کوتاه می‌شود: *vom Kind*."
+      de: "*Von* + *dem Kind*. Kurz sagt man fast immer *vom Kind*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Mit von: Peters Haus"
+    answers: [das Haus von Peter]
+    explanation:
+      en: "The thing first, then *von* and the name: *das Haus von Peter*."
+      fa: "اول چیز، سپس *von* و نام: *das Haus von Peter*."
+      de: "Zuerst die Sache, dann *von* und der Name: *das Haus von Peter*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Mit von: Marias Eltern"
+    answers: [die Eltern von Maria]
+    explanation:
+      en: "The thing first, then *von* and the name: *die Eltern von Maria*."
+      fa: "اول چیز، سپس *von* و نام: *die Eltern von Maria*."
+      de: "Zuerst die Personen, dann *von* und der Name: *die Eltern von Maria*."
+  - id: error-1
+    type: find-error
+    prompt: Das ist der Garten von unsere Nachbarin.
+    answer: unsere
+    explanation:
+      en: "After *von* comes the *Dativ*: *von unserer Nachbarin*."
+      fa: "پس از *von* حالت *Dativ* می‌آید: *von unserer Nachbarin*."
+      de: "Nach *von* steht der Dativ: *von unserer Nachbarin*."
+  - id: error-2
+    type: find-error
+    prompt: Die Farbe von das Auto ist schön.
+    answer: das
+    explanation:
+      en: "*Von* takes the *Dativ*: *von dem Auto*, almost always said as *vom Auto*."
+      fa: "*von* با حالت *Dativ* می‌آید: *von dem Auto* که تقریباً همیشه کوتاه می‌شود: *vom Auto*."
+      de: "Nach *von* steht der Dativ: *von dem Auto*. Kurz sagt man fast immer *vom Auto*."
+  - id: match-1
+    type: matching
+    answer:
+      - [das Auto ___ Vater, vom]
+      - [die Tasche ___ Mutter, von der]
+      - [das Haus ___ Eltern, von den]
+    explanation:
+      en: "*Von* + *Dativ*: *vom Vater* (*von dem*), *von der Mutter*, and plural *von den Eltern*."
+      fa: "*von* با حالت *Dativ*: *vom Vater* (*von dem*)، *von der Mutter* و برای جمع *von den Eltern*."
+      de: "*Von* + Dativ: *vom Vater* (*von dem*), *von der Mutter* und im Plural *von den Eltern*."
+
+review:
+  reviewer: two independent AI agents (Claude Opus 5.5 subagents, blind passes on
+    the review sheet only; a second fresh agent re-answered the changed
+    questions; not a person)
+  date: 2026-11-28
+  pool: 03ff2bf9ffc7f4ce
