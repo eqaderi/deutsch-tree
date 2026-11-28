@@ -1,36 +1,374 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-furniture-containers
 kind: vocabulary
 level: B1
 chapter: b1-words-home-food
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Furniture, pots and boxes"
   fa: "مبلمان، ظرف‌ها و جعبه‌ها"
   de: "Möbel, Töpfe und Kisten"
+attemptSize: 15
 words:
   - word: Regal
+    class: noun
+    article: das
+    plural: Regale
+    level: B1
+    meaning:
+      en: shelves, shelf unit
+      fa: قفسه
+    definition: ein Möbel aus mehreren Brettern übereinander, auf die man Bücher oder andere Dinge stellt
+    example:
+      de: Das Regal im Wohnzimmer ist voll mit Büchern.
+      en: The shelves in the living room are full of books.
+      fa: قفسهٔ اتاق نشیمن پر از کتاب است.
+
   - word: Sessel
+    class: noun
+    article: der
+    plural: Sessel
+    level: B1
+    meaning:
+      en: armchair
+      fa: مبل تک‌نفره
+    definition: ein weicher, bequemer Platz zum Sitzen für eine Person, mit Lehnen für die Arme
+    example:
+      de: Opa sitzt abends im Sessel und liest Zeitung.
+      en: In the evenings Grandpa sits in the armchair and reads the paper.
+      fa: پدربزرگ شب‌ها روی مبل تک‌نفره می‌نشیند و روزنامه می‌خواند.
+    alsoAccepted: [der Fauteuil, der Lehnstuhl]
+
   - word: Couch
+    class: noun
+    article: die
+    plural: Couchs
+    level: B1
+    meaning:
+      en: couch, sofa
+      fa: کاناپه
+    definition: ein langes, weiches Möbel, auf dem mehrere Personen sitzen oder eine Person liegen kann
+    example:
+      de: Nach der Arbeit lege ich mich gern auf die Couch.
+      en: After work I like to lie down on the couch.
+      fa: بعد از کار دوست دارم روی کاناپه دراز بکشم.
+    alsoAccepted: [das Sofa]
+
   - word: Teppich
+    class: noun
+    article: der
+    plural: Teppiche
+    level: B1
+    meaning:
+      en: carpet, rug
+      fa: فرش، قالی
+    definition: ein großes Stück aus Wolle oder Stoff, das auf dem Boden liegt
+    example:
+      de: Im Wohnzimmer liegt ein alter persischer Teppich.
+      en: There's an old Persian rug in the living room.
+      fa: در اتاق نشیمن یک فرش قدیمی ایرانی پهن است.
+
   - word: Kissen
+    class: noun
+    article: das
+    plural: Kissen
+    level: B1
+    meaning:
+      en: cushion, pillow
+      fa: بالش، کوسن
+    definition: ein weiches Ding aus Stoff mit Federn oder Watte darin, für den Kopf im Bett oder für das Sofa
+    example:
+      de: Ich brauche noch ein Kissen für das Gästebett.
+      en: I still need a pillow for the guest bed.
+      fa: هنوز یک بالش برای تخت مهمان لازم دارم.
+
   - word: Vase
+    class: noun
+    article: die
+    plural: Vasen
+    level: B1
+    meaning:
+      en: vase
+      fa: گلدان (برای گل‌های بریده)
+    definition: ein Gefäß aus Glas oder Keramik, in das man Blumen mit Wasser stellt
+    example:
+      de: Stell die Blumen bitte gleich in eine Vase.
+      en: Please put the flowers in a vase straight away.
+      fa: لطفاً گل‌ها را همین حالا در گلدان بگذار.
+    alsoAccepted: [die Blumenvase]
+
   - word: Wecker
+    class: noun
+    article: der
+    plural: Wecker
+    level: B1
+    meaning:
+      en: alarm clock
+      fa: ساعت زنگ‌دار
+    definition: eine Uhr, die zu einer bestimmten Zeit klingelt, damit man aufwacht
+    example:
+      de: Mein Wecker klingelt jeden Tag um sechs.
+      en: My alarm clock goes off at six every day.
+      fa: ساعت زنگ‌دارم هر روز ساعت شش زنگ می‌زند.
+
+  # "Backofen" is the oven, "Ofen" a stove or heater and also the oven; neither is offered as a wrong meaning of the other.
   - word: Backofen
+    class: noun
+    article: der
+    plural: Backöfen
+    level: B1
+    meaning:
+      en: oven
+      fa: فر
+    definition: der heiße Kasten im Herd, in dem man Kuchen, Brot oder eine Pizza macht
+    example:
+      de: Die Pizza ist in zehn Minuten im Backofen fertig.
+      en: The pizza will be ready in the oven in ten minutes.
+      fa: پیتزا ده دقیقه‌ای در فر آماده می‌شود.
+    alsoAccepted: [der Ofen, das Backrohr, das Rohr]
+    tooCloseTo: [Ofen]
+
   - word: Ofen
+    class: noun
+    article: der
+    plural: Öfen
+    level: B1
+    meaning:
+      en: stove, heater; oven
+      fa: بخاری؛ فر
+    definition: ein Gerät, das mit Holz, Kohle, Gas oder Strom heiß wird und ein Zimmer warm macht; auch kurz für den Herd zum Backen
+    example:
+      de: In der Hütte steht ein alter Ofen.
+      en: There's an old stove in the cabin.
+      fa: در کلبه یک بخاری قدیمی هست.
+    alsoAccepted: [der Backofen]
+    tooCloseTo: [Backofen]
+
   - word: Pfanne
+    class: noun
+    article: die
+    plural: Pfannen
+    level: B1
+    meaning:
+      en: frying pan
+      fa: ماهیتابه
+    definition: ein flaches, rundes Gefäß mit einem langen Griff, in dem man zum Beispiel Eier brät
+    example:
+      de: Ich brate die Zwiebeln in der Pfanne.
+      en: I'm frying the onions in the pan.
+      fa: پیازها را در ماهیتابه سرخ می‌کنم.
+    alsoAccepted: [die Bratpfanne]
+
   - word: Schüssel
+    class: noun
+    article: die
+    plural: Schüsseln
+    level: B1
+    meaning:
+      en: bowl
+      fa: کاسه
+    definition: ein tiefes, rundes Gefäß, zum Beispiel für Salat, Suppe oder Müsli
+    example:
+      de: Stell die Schüssel mit dem Salat auf den Tisch.
+      en: Put the bowl of salad on the table.
+      fa: کاسهٔ سالاد را روی میز بگذار.
+    alsoAccepted: [die Schale]
+
   - word: Kanne
+    class: noun
+    article: die
+    plural: Kannen
+    level: B1
+    meaning:
+      en: pot, jug (for coffee, tea or water)
+      fa: قوری، پارچ
+    definition: ein hohes Gefäß mit Griff, oft mit Deckel, für Kaffee, Tee oder Wasser
+    example:
+      de: Ich mache eine Kanne Tee für alle.
+      en: I'll make a pot of tea for everyone.
+      fa: برای همه یک قوری چای دم می‌کنم.
+
+  # "Dose" and "Büchse" are both a tin; each is right when the other is asked for.
   - word: Dose
+    class: noun
+    article: die
+    plural: Dosen
+    level: B1
+    meaning:
+      en: tin, can
+      fa: قوطی، کنسرو
+    definition: ein kleiner, fest geschlossener Behälter aus Metall, in dem zum Beispiel Suppe oder Getränke lange gut bleiben
+    example:
+      de: Im Schrank sind noch zwei Dosen Tomaten.
+      en: There are still two tins of tomatoes in the cupboard.
+      fa: در کابینت هنوز دو قوطی گوجه‌فرنگی هست.
+    alsoAccepted: [die Büchse, die Konservendose]
+    tooCloseTo: [Büchse]
+
   - word: Büchse
+    class: noun
+    article: die
+    plural: Büchsen
+    level: B1
+    meaning:
+      en: tin, can (a little old-fashioned)
+      fa: قوطی (فلزی)
+    definition: ein runder Behälter aus Blech mit Deckel, zum Beispiel für Kekse oder Erbsen
+    example:
+      de: Die Kekse sind in der blauen Büchse.
+      en: The biscuits are in the blue tin.
+      fa: بیسکویت‌ها در قوطی آبی است.
+    alsoAccepted: [die Dose, die Blechdose]
+    tooCloseTo: [Dose]
+
+  # "Schachtel", "Kiste" and "Kasten" are all boxes of some kind; none is offered as a wrong meaning of another.
   - word: Schachtel
+    class: noun
+    article: die
+    plural: Schachteln
+    level: B1
+    meaning:
+      en: (small) box, carton (of cardboard)
+      fa: جعبه (کوچک و مقوایی)
+    definition: ein kleiner Behälter aus Pappe, oft mit Deckel, zum Beispiel für Schuhe oder Pralinen
+    example:
+      de: Die neuen Schuhe sind noch in der Schachtel.
+      en: The new shoes are still in the box.
+      fa: کفش‌های نو هنوز در جعبه است.
+    alsoAccepted: [der Karton, die Pappschachtel]
+    tooCloseTo: [Kiste, Kasten]
+
   - word: Kiste
+    class: noun
+    article: die
+    plural: Kisten
+    level: B1
+    meaning:
+      en: crate, (large) box
+      fa: صندوق، جعبهٔ بزرگ
+    definition: ein großer, fester Behälter aus Holz, Pappe oder Plastik, zum Beispiel für Obst oder für einen Umzug
+    example:
+      de: Für den Umzug brauchen wir noch zehn Kisten.
+      en: We still need ten boxes for the move.
+      fa: برای اسباب‌کشی هنوز ده جعبه لازم داریم.
+    alsoAccepted: [der Kasten, der Karton]
+    tooCloseTo: [Schachtel, Kasten]
+
   - word: Kasten
+    class: noun
+    article: der
+    plural: Kästen
+    level: B1
+    meaning:
+      en: box, case; crate (of bottles)
+      fa: جعبه، صندوق؛ جعبهٔ بطری
+    definition: ein Behälter mit festen Seiten, zum Beispiel für Werkzeug oder für zwanzig Flaschen Wasser
+    example:
+      de: Wir kaufen noch einen Kasten Wasser.
+      en: We're buying another crate of water.
+      fa: یک جعبه بطری آب دیگر هم می‌خریم.
+    alsoAccepted: [die Kiste]
+    tooCloseTo: [Schachtel, Kiste]
+
+  # "Sack" is a large bag, "Tüte" a shopping bag; neither is offered as a wrong meaning of the other.
   - word: Sack
+    class: noun
+    article: der
+    plural: Säcke
+    level: B1
+    meaning:
+      en: sack, large bag
+      fa: گونی، کیسهٔ بزرگ
+    definition: ein großer, weicher Behälter aus Stoff, Papier oder Plastik, zum Beispiel für Kartoffeln oder Müll
+    example:
+      de: Im Keller steht ein Sack Kartoffeln.
+      en: There's a sack of potatoes in the cellar.
+      fa: در زیرزمین یک گونی سیب‌زمینی هست.
+    tooCloseTo: [Tüte]
+
   - word: Tüte
+    class: noun
+    article: die
+    plural: Tüten
+    level: B1
+    meaning:
+      en: bag (of plastic or paper, e.g. for shopping)
+      fa: کیسه (پلاستیکی یا کاغذی)
+    definition: eine dünne Verpackung aus Papier oder Plastik, in die man im Geschäft die gekauften Sachen tut
+    example:
+      de: Brauchen Sie eine Tüte?
+      en: Do you need a bag?
+      fa: کیسه لازم دارید؟
+    alsoAccepted: [der Beutel, die Einkaufstüte, die Tragetasche]
+    tooCloseTo: [Sack]
+
+  # "Abfalleimer" is the bin in the kitchen, "Mülltonne" the big bin outside; neither is offered as a wrong meaning of the other.
   - word: Abfalleimer
+    class: noun
+    article: der
+    plural: Abfalleimer
+    level: B1
+    meaning:
+      en: rubbish bin, waste bin
+      fa: سطل زباله (داخل خانه یا اداره)
+    definition: ein Behälter in der Küche, im Büro oder auf der Straße, in den man den Müll wirft
+    example:
+      de: Der Abfalleimer steht unter der Spüle.
+      en: The bin is under the sink.
+      fa: سطل زباله زیر سینک است.
+    alsoAccepted: [der Mülleimer, der Abfallkübel]
+    tooCloseTo: [Mülltonne]
+
   - word: Mülltonne
+    class: noun
+    article: die
+    plural: Mülltonnen
+    level: B1
+    meaning:
+      en: wheelie bin, dustbin (big, outside)
+      fa: سطل بزرگ زباله (بیرون از خانه)
+    definition: ein großer Behälter mit Deckel und Rädern vor dem Haus, der regelmäßig geleert wird
+    example:
+      de: Die Mülltonnen werden jeden Dienstag geleert.
+      en: The bins are emptied every Tuesday.
+      fa: سطل‌های زباله هر سه‌شنبه خالی می‌شوند.
+    alsoAccepted: [die Tonne, die Abfalltonne]
+    tooCloseTo: [Abfalleimer]
+
   - word: Abfall
+    class: noun
+    article: der
+    plural: Abfälle
+    level: B1
+    meaning:
+      en: rubbish, waste
+      fa: زباله، پسماند
+    definition: Reste und alte Dinge, die man nicht mehr braucht und wegwirft
+    example:
+      de: Bitte trennen Sie den Abfall nach Papier, Glas und Plastik.
+      en: Please sort the waste into paper, glass and plastic.
+      fa: لطفاً زباله‌ها را به کاغذ، شیشه و پلاستیک جدا کنید.
+    alsoAccepted: [der Müll]
+
   - word: Müllabfuhr
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: refuse collection, bin men
+      fa: جمع‌آوری زباله، مأموران زباله
+    definition: die Leute und die Wagen von der Stadt, die den Müll von den Häusern abholen
+    example:
+      de: Die Müllabfuhr kommt bei uns am Donnerstag.
+      en: The bin men come on Thursdays where we live.
+      fa: مأموران جمع‌آوری زباله پنجشنبه‌ها به محلهٔ ما می‌آیند.
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: 8022cbbfc6aba2a8

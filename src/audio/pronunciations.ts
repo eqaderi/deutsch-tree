@@ -47,4 +47,30 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Cafeteria: 'Kaffeterihja',
   // #79: Thorsten says "das Sekretariat" as "das ist der Kriteriat"; the j keeps it whole.
   Sekretariat: 'Sekretarijat',
+
+  // #92: the short forms of the floors on signs and in flat adverts are read out in full, as
+  // "z. B." is; "Erdgeschoss" alone comes out as [ɛɾdɡˈɛʃɔs], the hyphen gives the long e.
+  EG: 'Erd-geschoss',
+  OG: 'Ober-geschoss',
+  UG: 'Untergeschoss',
+  // #92: loanwords that the voice says letter by letter in the German way. "Etage" comes out as
+  // [ˈeːtɑːɡə], "Buffet" as [bˈʊfət], "Dessert" as [dˈɛsɜt], "Steak" as [ʃtˈeːɑːk], "Ketchup" as
+  // [kˈɛtʃuːp], "Sandwich" as [zˈandvɪç], "Kakao" as [kˈɑkaˌoː]; the spellings give the sounds
+  // ("Büfett" is also a German spelling), a hyphen moves the stress off the first syllable.
+  Etage: 'E-taasche',
+  Buffet: 'Büfett',
+  Dessert: 'Dessär',
+  Abonnement: 'Abonne-mang',
+  Salon: 'Sa-long',
+  Kakao: 'Ka-kau',
+  Steak: 'Stejk',
+  Ketchup: 'Ketschap',
+  Sandwich: 'Sändwitsch',
+  // #92: said with a short ü, [mˈʏsliː]; "Mühsli" gives the long ü.
+  Müsli: 'Mühsli',
+  // #92: "sp" and "st" inside a compound come out as [sp], [st]; the parts begin with [ʃp], [ʃt].
+  Nachspeise: 'Nachschpeise',
+  Kunststoff: 'Kunstschtoff',
+  // #92: [bˈʊx] with a short u; the hyphen keeps the long u of "Buch".
+  Buchhandlung: 'Buch-handlung',
 }

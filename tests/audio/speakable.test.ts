@@ -138,6 +138,23 @@ test.each([
   ['Latein ist schwer.', 'La-tein ist schwer.'],
   ['in der Cafeteria', 'in der Kaffeterihja'],
   ['das Sekretariat', 'das Sekretarijat'],
+  // #92: loanwords said the German way ("Buffet" as "Buffett", "Steak" as "Stee-ak"), and floor short forms.
+  ['die Etage', 'die E-taasche'],
+  ['das Buffet', 'das Büfett'],
+  ['Möchten Sie noch ein Dessert?', 'Möchten Sie noch ein Dessär?'],
+  ['das Abonnement', 'das Abonne-mang'],
+  ['der Salon', 'der Sa-long'],
+  ['der Kakao', 'der Ka-kau'],
+  ['das Steak', 'das Stejk'],
+  ['der Ketchup', 'der Ketschap'],
+  ['das Sandwich', 'das Sändwitsch'],
+  ['das Müsli', 'das Mühsli'],
+  ['die Nachspeise', 'die Nachschpeise'],
+  ['der Kunststoff', 'der Kunstschtoff'],
+  ['die Buchhandlung', 'die Buch-handlung'],
+  ['Die Rezeption ist im EG, gleich links.', 'Die Rezeption ist im Erd-geschoss, gleich links.'],
+  ['Die Praxis ist im zweiten OG.', 'Die Praxis ist im zweiten Ober-geschoss.'],
+  ['Die Garage ist im UG.', 'Die Garage ist im Untergeschoss.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })

@@ -1,34 +1,338 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-meals-snacks
 kind: vocabulary
 level: B1
 chapter: b1-words-home-food
 order: 7
-status: coming-soon
+status: published
 title:
   en: "Meals, snacks and drinks"
   fa: "وعده‌ها، میان‌وعده‌ها و نوشیدنی‌ها"
   de: "Mahlzeiten, Snacks und Getränke"
+attemptSize: 15
 words:
   - word: Mahlzeit
+    class: noun
+    article: die
+    plural: Mahlzeiten
+    level: B1
+    meaning:
+      en: meal
+      fa: وعدهٔ غذا
+    definition: das Essen zu einer bestimmten Zeit am Tag, zum Beispiel das Frühstück oder das Abendessen
+    example:
+      de: Wir essen drei Mahlzeiten am Tag.
+      en: We eat three meals a day.
+      fa: ما روزی سه وعده غذا می‌خوریم.
+    alsoAccepted: [das Essen]
+
+  # "Speise" is a dish, "Nahrungsmittel" food as a product; neither is offered as a wrong meaning of the other.
   - word: Speise
+    class: noun
+    article: die
+    plural: Speisen
+    level: B1
+    meaning:
+      en: dish (on a menu), food (formal)
+      fa: غذا، خوراک (رسمی)
+    definition: ein gekochtes Essen, das man anbietet, zum Beispiel auf der Karte im Restaurant
+    example:
+      de: Alle Speisen auf der Karte sind vegetarisch.
+      en: All the dishes on the menu are vegetarian.
+      fa: همهٔ غذاهای این منو گیاهی است.
+    alsoAccepted: [das Gericht, das Essen]
+    tooCloseTo: [Nahrungsmittel]
+
   - word: Menü
+    class: noun
+    article: das
+    plural: Menüs
+    level: B1
+    meaning:
+      en: set menu, set meal
+      fa: منوی ثابت (غذای چندبخشی با قیمت ثابت)
+    definition: ein Essen aus mehreren Teilen, zum Beispiel Suppe, Hauptgericht und etwas Süßes, zu einem festen Preis
+    example:
+      de: Mittags gibt es ein Menü für zwölf Euro.
+      en: At lunchtime there's a set menu for twelve euros.
+      fa: ظهرها یک منوی ثابت دوازده یورویی هست.
+
+  # "Nachspeise" and "Dessert" are the same course; each is right when the other is asked for.
   - word: Nachspeise
+    class: noun
+    article: die
+    plural: Nachspeisen
+    level: B1
+    meaning:
+      en: dessert, pudding
+      fa: دسر
+    definition: etwas Süßes, das man nach dem Hauptgericht isst
+    example:
+      de: Als Nachspeise gibt es heute Apfelkuchen.
+      en: Today there's apple cake for dessert.
+      fa: امروز برای دسر کیک سیب داریم.
+    alsoAccepted: [das Dessert, der Nachtisch]
+    tooCloseTo: [Dessert]
+
   - word: Dessert
+    class: noun
+    article: das
+    plural: Desserts
+    level: B1
+    meaning:
+      en: dessert
+      fa: دسر
+    definition: der süße Teil am Ende von einem Essen im Restaurant, zum Beispiel ein Eis
+    example:
+      de: Möchten Sie noch ein Dessert?
+      en: Would you like a dessert?
+      fa: دسر هم میل دارید؟
+    alsoAccepted: [die Nachspeise, der Nachtisch]
+    tooCloseTo: [Nachspeise]
+
+  # "Imbiss" is a snack bar and a quick meal, "Snack" a small bite; neither is offered as a wrong meaning of the other.
   - word: Imbiss
+    class: noun
+    article: der
+    plural: Imbisse
+    level: B1
+    meaning:
+      en: snack bar, takeaway stand; quick bite
+      fa: دکهٔ غذای فوری؛ غذای سبک
+    definition: ein kleiner Laden oder Stand, an dem man schnell und im Stehen isst; auch ein kleines Essen
+    example:
+      de: Mittags essen wir oft schnell etwas am Imbiss an der Ecke.
+      en: At lunchtime we often grab something at the snack bar on the corner.
+      fa: ظهرها اغلب سریع از دکهٔ غذای سر کوچه چیزی می‌خوریم.
+    alsoAccepted: [die Imbissbude, der Snack, der Imbissstand]
+    tooCloseTo: [Snack]
+
   - word: Snack
+    class: noun
+    article: der
+    plural: Snacks
+    level: B1
+    meaning:
+      en: snack
+      fa: تنقلات، خوراکی سبک (میان‌وعده)
+    definition: etwas Kleines, oft fertig Verpacktes, das man zwischen den Mahlzeiten isst, zum Beispiel Chips oder ein Riegel
+    example:
+      de: Für die Fahrt nehme ich ein paar Snacks mit.
+      en: I'm taking a few snacks for the journey.
+      fa: برای راه چند خوراکی سبک برمی‌دارم.
+    alsoAccepted: [der Imbiss, die Zwischenmahlzeit]
+    tooCloseTo: [Imbiss]
+
+  # The scope list gives "das/der" for "Sandwich": the node teaches "das Sandwich" and accepts "der Sandwich".
   - word: Sandwich
-  - word: Müesli
+    class: noun
+    article: das
+    plural: Sandwiches
+    level: B1
+    meaning:
+      en: sandwich
+      fa: ساندویچ
+    definition: zwei Scheiben Brot mit Käse, Wurst oder Salat dazwischen
+    example:
+      de: Ich mache mir ein Sandwich mit Käse und Tomaten.
+      en: I'm making myself a cheese and tomato sandwich.
+      fa: برای خودم یک ساندویچ پنیر و گوجه‌فرنگی درست می‌کنم.
+    alsoAccepted: [der Sandwich]
+
+  # The B1 list spells it the Swiss way, "Müesli"; the node teaches "Müsli", the spelling of Germany and Austria
+  # (scope-corrections.yaml), and accepts the Swiss one.
+  - word: Müsli
+    class: noun
+    article: das
+    plural: Müsli
+    level: B1
+    meaning:
+      en: muesli
+      fa: موسلی (غلات صبحانه)
+    definition: eine Mischung aus Haferflocken, Nüssen und Obst, die man mit Milch oder Joghurt isst
+    example:
+      de: Zum Frühstück esse ich ein Müsli mit Joghurt.
+      en: For breakfast I have muesli with yoghurt.
+      fa: صبحانه موسلی با ماست می‌خورم.
+    alsoAccepted: [das Müesli]
+
   - word: Gebäck
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: pastries, biscuits (baked goods)
+      fa: شیرینی (خشک و تر)، کلوچه
+    definition: kleine Sachen aus Teig, oft süß, die man im Ofen backt, zum Beispiel Kekse
+    example:
+      de: Zum Kaffee gibt es frisches Gebäck.
+      en: There are fresh pastries with the coffee.
+      fa: با قهوه، شیرینی تازه هم هست.
+    alsoAccepted: [das Backwerk]
+
   - word: Kakao
+    class: noun
+    article: der
+    plural: Kakaos
+    level: B1
+    meaning:
+      en: cocoa, hot chocolate
+      fa: کاکائو، شیرکاکائو
+    definition: ein braunes Getränk aus Milch und Schokoladenpulver; auch das Pulver selbst
+    example:
+      de: Die Kinder trinken morgens einen warmen Kakao.
+      en: The children drink a warm cocoa in the morning.
+      fa: بچه‌ها صبح‌ها شیرکاکائوی گرم می‌نوشند.
+    alsoAccepted: [die heiße Schokolade, die Trinkschokolade, die Schokomilch]
+
+  # "Cola" is one kind of "Limonade"; neither is offered as a wrong meaning of the other.
   - word: Cola
+    class: noun
+    article: die
+    plural: Colas
+    level: B1
+    meaning:
+      en: cola
+      fa: کولا، نوشابهٔ کولا
+    definition: ein süßes, dunkelbraunes Getränk mit Kohlensäure und Koffein
+    example:
+      de: Eine Cola und ein Wasser, bitte.
+      en: A cola and a water, please.
+      fa: یک کولا و یک آب، لطفاً.
+    alsoAccepted: [das Cola]
+    tooCloseTo: [Limonade]
+
   - word: Limonade
+    class: noun
+    article: die
+    plural: Limonaden
+    level: B1
+    meaning:
+      en: lemonade, fizzy fruit drink
+      fa: لیموناد، نوشابهٔ میوه‌ای گازدار
+    definition: ein süßes Getränk mit Kohlensäure, das nach Zitronen oder anderem Obst schmeckt
+    example:
+      de: Im Sommer mache ich selbst Limonade.
+      en: In summer I make lemonade myself.
+      fa: تابستان‌ها خودم لیموناد درست می‌کنم.
+    alsoAccepted: [die Limo, die Brause]
+    tooCloseTo: [Cola]
+
   - word: Buffet
+    class: noun
+    article: das
+    plural: Buffets
+    level: B1
+    meaning:
+      en: buffet
+      fa: بوفه (غذای سلف‌سرویس)
+    definition: ein langer Tisch mit vielen verschiedenen Speisen, von dem sich jeder selbst nimmt
+    example:
+      de: Im Hotel gibt es morgens ein großes Buffet.
+      en: There's a large buffet in the hotel in the morning.
+      fa: در هتل صبح‌ها بوفهٔ بزرگی هست.
+    alsoAccepted: [das Büfett, das Büffet]
+
   - word: zubereiten
+    class: verb
+    level: B1
+    meaning:
+      en: to prepare (food, a meal)
+      fa: آماده کردن، درست کردن (غذا)
+    definition: Essen kochen oder so fertig machen, dass man es essen kann
+    example:
+      de: Der Koch bereitet alle Gerichte frisch zu.
+      en: The cook prepares all the dishes fresh.
+      fa: آشپز همهٔ غذاها را تازه درست می‌کند.
+    alsoAccepted: [kochen, vorbereiten, machen]
+
   - word: mischen
+    class: verb
+    level: B1
+    meaning:
+      en: to mix
+      fa: مخلوط کردن
+    definition: verschiedene Dinge zusammentun, so dass eine neue Sache entsteht
+    example:
+      de: Mischen Sie Mehl, Zucker und Eier in einer Schüssel.
+      en: Mix flour, sugar and eggs in a bowl.
+      fa: آرد، شکر و تخم‌مرغ را در یک کاسه مخلوط کنید.
+    alsoAccepted: [vermischen, vermengen, verrühren, mixen]
+
   - word: Tee ziehen lassen
+    class: verb
+    level: B1
+    meaning:
+      en: to let tea brew, to let tea steep
+      fa: گذاشتن تا چای دم بکشد
+    definition: nach dem Aufgießen die Teeblätter ein paar Minuten im heißen Wasser lassen, damit der Geschmack hineingeht
+    example:
+      de: Lass den Tee fünf Minuten ziehen.
+      en: Let the tea brew for five minutes.
+      fa: بگذار چای پنج دقیقه دم بکشد.
+    alsoAccepted: [den Tee ziehen lassen, ziehen lassen]
+
   - word: zu Mittag
+    class: phrase
+    level: B1
+    meaning:
+      en: for lunch, at lunchtime (as in "have lunch")
+      fa: (برای) ناهار، سر ظهر
+    definition: als Mahlzeit in der Mitte des Tages; man sagt es oft mit essen
+    example:
+      de: Was essen wir heute zu Mittag?
+      en: What are we having for lunch today?
+      fa: امروز ناهار چه بخوریم؟
+    alsoAccepted: [mittags, am Mittag]
+
   - word: Scheibe
+    class: noun
+    article: die
+    plural: Scheiben
+    level: B1
+    meaning:
+      en: slice; (window) pane
+      fa: برش، ورقه؛ شیشه (پنجره)
+    definition: ein dünnes, flaches Stück, das man von Brot, Käse oder Wurst abschneidet; auch das Glas im Fenster
+    example:
+      de: Möchtest du noch eine Scheibe Brot?
+      en: Would you like another slice of bread?
+      fa: یک برش دیگر نان می‌خواهی؟
+
   - word: Nahrungsmittel
+    class: noun
+    article: das
+    plural: Nahrungsmittel
+    level: B1
+    meaning:
+      en: food, foodstuff (a product)
+      fa: مادهٔ غذایی، خوراکی
+    definition: alles, was Menschen essen oder trinken, um zu leben, zum Beispiel Brot, Reis oder Milch
+    example:
+      de: Die Preise für Nahrungsmittel sind gestiegen.
+      en: Food prices have gone up.
+      fa: قیمت مواد غذایی بالا رفته است.
+    alsoAccepted: [das Lebensmittel, die Nahrung]
+    tooCloseTo: [Speise]
+
   - word: verpflegen
+    class: verb
+    level: B1
+    meaning:
+      en: to cater for, to provide with meals
+      fa: غذای (کسی) را تأمین کردن
+    definition: einer Gruppe von Menschen Essen und Trinken geben, zum Beispiel auf einer Reise oder in einem Kurs
+    example:
+      de: Während des Kurses werden alle Teilnehmer im Hotel verpflegt.
+      en: During the course all participants are given their meals at the hotel.
+      fa: در طول دوره، غذای همهٔ شرکت‌کنندگان را هتل تأمین می‌کند.
+    alsoAccepted: [versorgen, bewirten, verköstigen]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: 8cbc2c77b8b64946
