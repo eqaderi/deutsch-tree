@@ -143,6 +143,12 @@ test.each([
   ['Bitte geben Sie Ihre Jacke an der Garderobe ab.', 'Bitte geben Sie Ihre Jacke an der Garde-robe ab.'],
   ['Sie kann gut mit Kindern umgehen.', 'Sie kann gut mit Kindern ummgehen.'],
   ['Du siehst richtig chic aus.', 'Du siehst richtig schick aus.'],
+  // #90: wrong stress, a schwa that is not there, and an English [sk].
+  ['ein Kurs für Senioren', 'ein Kurs für Senjoren'],
+  ['Die Zahncreme ist leer.', 'Die Zahnkreem ist leer.'],
+  ['Beim Skifahren', 'Beim Schifahren'],
+  ['eine Diät', 'eine Di-ät'],
+  ['Ein Sozialarbeiter hilft.', 'Ein So-zial-arbeiter hilft.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })
