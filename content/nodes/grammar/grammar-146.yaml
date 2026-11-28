@@ -4,10 +4,331 @@ kind: grammar
 level: A1
 chapter: a1-negation
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-139]
 title:
   en: "Negation with *nicht*"
   fa: "نفی با *nicht*"
   de: "Verneinung mit *nicht*"
+
+explanations:
+  en:
+    rule: >
+      *Nicht* makes a sentence negative. It never stands before the verb in
+      position 2: it comes after the verb, the object and a time such as
+      *heute*, usually at the end (*Ich verstehe das nicht.*). It stands before
+      the part that completes the sentence: an adjective or a noun after *sein*
+      (*Das ist nicht gut.*), a place (*Er wohnt nicht in Berlin.*) and *gern*
+      (*Ich tanze nicht gern.*). A noun with *ein* or with no article is
+      negated with *kein*, the next topic.
+  fa:
+    rule: >
+      *nicht* جمله را منفی می‌کند. در فارسی نفی به خود فعل می‌چسبد
+      («نمی‌فهمم»)، ولی *nicht* هرگز پیش از فعلِ جایگاه دوم نمی‌آید. جای آن
+      پس از فعل، مفعول و قید زمانی مانند *heute* است و بیشتر در پایان جمله
+      می‌نشیند: *Ich verstehe das nicht.* اما *nicht* پیش از بخشی می‌آید که
+      جمله را کامل می‌کند: صفت یا اسمِ پس از *sein* (*Das ist nicht gut.*)،
+      مکان (*Er wohnt nicht in Berlin.*) و *gern* (*Ich tanze nicht gern.*).
+      اسمی که با *ein* یا بدون حرف تعریف می‌آید با *kein* منفی می‌شود که
+      موضوع درس بعدی است.
+  de:
+    rule: >
+      Mit *nicht* verneint man einen Satz. *Nicht* steht nie vor dem Verb auf
+      Position 2. Es steht nach dem Verb, nach dem Objekt und nach einer Zeit
+      wie *heute*, meistens am Ende: *Ich verstehe das nicht.* Aber *nicht*
+      steht vor einem Adjektiv oder Nomen nach *sein* (*Das ist nicht gut.*),
+      vor einem Ort (*Er wohnt nicht in Berlin.*) und vor *gern* (*Ich tanze
+      nicht gern.*). Ein Nomen mit *ein* oder ohne Artikel verneint man mit
+      *kein*. Das kommt im nächsten Thema.
+
+# Three sentences as rows of slots. The slot of nicht is tinted; the note under
+# it says where it stands. German is in the drawing, the notes are labels.
+diagrams:
+  - caption:
+      en: >
+        Where *nicht* stands. At the end of the sentence, after the verb and
+        the object (*heute* also stays before it); before an adjective; before
+        a place.
+      fa: >
+        جای *nicht* در جمله: در پایان جمله، پس از فعل و مفعول (*heute* هم
+        پیش از آن می‌ماند)؛ پیش از صفت؛ پیش از مکان.
+      de: >
+        Wo *nicht* steht: am Ende vom Satz, nach dem Verb und dem Objekt
+        (auch *heute* steht davor); vor einem Adjektiv; vor einem Ort.
+    labels:
+      end: { en: at the end, fa: در پایان جمله, de: am Ende }
+      adjective: { en: before the adjective, fa: پیش از صفت, de: vor dem Adjektiv }
+      place: { en: before the place, fa: پیش از مکان, de: vor dem Ort }
+    svg: |
+      <svg viewBox="0 0 320 236">
+        <!-- Ich verstehe das nicht. -->
+        <rect class="surface" x="10" y="10" width="40" height="32" rx="4"/>
+        <rect class="surface" x="58" y="10" width="84" height="32" rx="4"/>
+        <rect class="surface" x="150" y="10" width="44" height="32" rx="4"/>
+        <rect class="shade" x="202" y="10" width="56" height="32" rx="4"/>
+        <text class="label" x="30" y="31" text-anchor="middle">Ich</text>
+        <text class="label" x="100" y="31" text-anchor="middle">verstehe</text>
+        <text class="label" x="172" y="31" text-anchor="middle">das</text>
+        <text class="label" x="230" y="31" text-anchor="middle">nicht</text>
+        <text class="note" x="230" y="64" text-anchor="middle">{{end}}</text>
+        <!-- Das ist nicht gut. -->
+        <rect class="surface" x="10" y="88" width="44" height="32" rx="4"/>
+        <rect class="surface" x="62" y="88" width="36" height="32" rx="4"/>
+        <rect class="shade" x="106" y="88" width="56" height="32" rx="4"/>
+        <rect class="surface" x="170" y="88" width="44" height="32" rx="4"/>
+        <text class="label" x="32" y="109" text-anchor="middle">Das</text>
+        <text class="label" x="80" y="109" text-anchor="middle">ist</text>
+        <text class="label" x="134" y="109" text-anchor="middle">nicht</text>
+        <text class="label" x="192" y="109" text-anchor="middle">gut</text>
+        <text class="note" x="134" y="142" text-anchor="middle">{{adjective}}</text>
+        <!-- Er wohnt nicht in Berlin. -->
+        <rect class="surface" x="10" y="166" width="36" height="32" rx="4"/>
+        <rect class="surface" x="54" y="166" width="64" height="32" rx="4"/>
+        <rect class="shade" x="126" y="166" width="56" height="32" rx="4"/>
+        <rect class="surface" x="190" y="166" width="88" height="32" rx="4"/>
+        <text class="label" x="28" y="187" text-anchor="middle">Er</text>
+        <text class="label" x="86" y="187" text-anchor="middle">wohnt</text>
+        <text class="label" x="154" y="187" text-anchor="middle">nicht</text>
+        <text class="label" x="234" y="187" text-anchor="middle">in Berlin</text>
+        <text class="note" x="154" y="220" text-anchor="middle">{{place}}</text>
+      </svg>
+
+table:
+  columns:
+    - { en: Positive, fa: جملهٔ مثبت, de: Ohne Verneinung }
+    - { en: "With *nicht*", fa: "با *nicht*", de: "Mit *nicht*" }
+  rows:
+    - [Ich verstehe das., Ich verstehe das nicht.]
+    - [Anna kommt heute., Anna kommt heute nicht.]
+    - [Das ist gut., Das ist nicht gut.]
+    - [Das ist der Bus., Das ist nicht der Bus.]
+    - [Er wohnt in Berlin., Er wohnt nicht in Berlin.]
+    - [Ich tanze gern., Ich tanze nicht gern.]
+
+examples:
+  - de: Leider verstehe ich das nicht.
+    en: Unfortunately I don't understand that.
+    fa: متأسفانه این را نمی‌فهمم.
+  - de: Ich kenne Tom nicht.
+    en: I don't know Tom.
+    fa: من تام را نمی‌شناسم.
+  - de: Anna kommt heute nicht.
+    en: Anna isn't coming today.
+    fa: آنا امروز نمی‌آید.
+  - de: Das Essen ist nicht teuer.
+    en: The food isn't expensive.
+    fa: غذا گران نیست.
+  - de: Das ist nicht der Bus nach Köln.
+    en: That isn't the bus to Cologne.
+    fa: این اتوبوسی نیست که به کلن می‌رود.
+  - de: Wir wohnen nicht in Berlin.
+    en: We don't live in Berlin.
+    fa: ما در برلین زندگی نمی‌کنیم.
+  - de: Ich tanze nicht gern.
+    en: I don't like dancing.
+    fa: رقصیدن را دوست ندارم.
+  - de: Warum kommst du nicht?
+    en: Why aren't you coming?
+    fa: چرا نمی‌آیی؟
+
+mistakes:
+  - wrong: Ich nicht verstehe das.
+    right: Ich verstehe das nicht.
+    why:
+      en: "*Nicht* never stands before the verb in position 2. Here it goes to the end, after the object *das*."
+      fa: "*nicht* هرگز پیش از فعلِ جایگاه دوم نمی‌آید. این‌جا به پایان جمله می‌رود، پس از مفعول *das*."
+      de: "*Nicht* steht nie vor dem Verb auf Position 2. Hier steht es am Ende, nach dem Objekt *das*."
+  - wrong: Das ist nein gut.
+    right: Das ist nicht gut.
+    why:
+      en: '*Nein* is only an answer ("no"). Inside a sentence the negation is *nicht*.'
+      fa: "*nein* فقط پاسخ است («نه»). برای منفی کردن جمله *nicht* به کار می‌رود."
+      de: "*Nein* ist nur eine Antwort. Im Satz verneint man mit *nicht*."
+  - wrong: Er wohnt in Berlin nicht.
+    right: Er wohnt nicht in Berlin.
+    why:
+      en: "A place completes the sentence, so *nicht* stands before it. Only a strong contrast on the verb puts it after the place."
+      fa: "مکان جمله را کامل می‌کند، پس *nicht* پیش از آن می‌آید. فقط وقتی تأکید ویژه‌ای روی فعل باشد، *nicht* پس از مکان می‌نشیند."
+      de: "Ein Ort macht den Satz komplett. Darum steht *nicht* davor. Nur bei einem starken Gegensatz zum Verb steht es nach dem Ort."
+  - wrong: Ich tanze gern nicht.
+    right: Ich tanze nicht gern.
+    why:
+      en: '*Nicht* stands before *gern*: *nicht gern* means "don''t like to".'
+      fa: "*nicht* پیش از *gern* می‌آید: *nicht gern* یعنی «دوست ندارم که …»."
+      de: "*Nicht* steht vor *gern*: *nicht gern*."
+  - wrong: Ich arbeite nicht heute.
+    right: Ich arbeite heute nicht.
+    why:
+      en: "A time such as *heute* stays before *nicht*. *Nicht heute* is only for a contrast: *nicht heute, sondern morgen*."
+      fa: "قید زمانی مانند *heute* پیش از *nicht* می‌ماند. *nicht heute* فقط برای مقایسه است: *nicht heute, sondern morgen* (نه امروز، بلکه فردا)."
+      de: "Eine Zeit wie *heute* steht vor *nicht*. *Nicht heute* sagt man nur bei einem Gegensatz: *nicht heute, sondern morgen*."
+
+questions:
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Ich verstehe das. → verneint:"
+    options: [Ich verstehe das nicht., Ich verstehe nicht das., Ich nicht verstehe das.]
+    answer: Ich verstehe das nicht.
+    explanation:
+      en: "*Nicht* goes to the end, after the verb and the object *das*."
+      fa: "*nicht* به پایان جمله می‌رود، پس از فعل و مفعول *das*."
+      de: "*Nicht* steht am Ende, nach dem Verb und dem Objekt *das*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Das Wetter ist schön. → verneint:"
+    options: [Das Wetter ist nicht schön., Das Wetter ist schön nicht., Das Wetter nicht ist schön.]
+    answer: Das Wetter ist nicht schön.
+    explanation:
+      en: "*Nicht* stands before the adjective after *sein*: *nicht schön*."
+      fa: "*nicht* پیش از صفتِ پس از *sein* می‌آید: *nicht schön*."
+      de: "*Nicht* steht vor dem Adjektiv nach *sein*: *nicht schön*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Er wohnt in Hamburg. → verneint:"
+    options: [Er wohnt nicht in Hamburg., Er nicht wohnt in Hamburg., Er wohnt in nicht Hamburg.]
+    answer: Er wohnt nicht in Hamburg.
+    explanation:
+      en: "*Nicht* stands before the place: *nicht in Hamburg*."
+      fa: "*nicht* پیش از مکان می‌آید: *nicht in Hamburg*."
+      de: "*Nicht* steht vor dem Ort: *nicht in Hamburg*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "Ich koche gern. → verneint:"
+    options: [Ich koche nicht gern., Ich koche gern nicht., Ich nicht koche gern.]
+    answer: Ich koche nicht gern.
+    explanation:
+      en: "*Nicht* stands before *gern*: *nicht gern*."
+      fa: "*nicht* پیش از *gern* می‌آید: *nicht gern*."
+      de: "*Nicht* steht vor *gern*: *nicht gern*."
+  - id: gap-1
+    type: gap-fill
+    prompt: Ist das richtig? – Nein, das ist ___ richtig.
+    options: [nicht, nein, kein]
+    answer: nicht
+    explanation:
+      en: "*Nein* is the answer; inside the sentence the adjective *richtig* is negated with *nicht*."
+      fa: "*nein* پاسخ است؛ درون جمله صفت *richtig* با *nicht* منفی می‌شود."
+      de: "*Nein* ist die Antwort. Im Satz verneint man das Adjektiv *richtig* mit *nicht*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Kommst du heute? – Nein, ich komme heute ___.
+    options: [nicht, nein, kein]
+    answer: nicht
+    explanation:
+      en: "The verb is negated with *nicht*, at the end after *heute*. *Nein* is only the answer at the start."
+      fa: "فعل با *nicht* منفی می‌شود و *nicht* پس از *heute* در پایان جمله می‌آید. *nein* فقط پاسخِ آغاز جمله است."
+      de: "Das Verb verneint man mit *nicht*, am Ende nach *heute*. *Nein* ist nur die Antwort am Anfang."
+  - id: true-1
+    type: true-false
+    prompt: Das Essen ist nicht teuer.
+    answer: true
+    explanation:
+      en: "*Nicht* stands before the adjective *teuer*. The sentence is correct."
+      fa: "*nicht* پیش از صفت *teuer* آمده است. جمله درست است."
+      de: "*Nicht* steht vor dem Adjektiv *teuer*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich verstehe nicht das.
+    answer: false
+    explanation:
+      en: "*Nicht* comes after the object: *Ich verstehe das nicht.*"
+      fa: "*nicht* پس از مفعول می‌آید: *Ich verstehe das nicht.*"
+      de: "*Nicht* steht nach dem Objekt: *Ich verstehe das nicht.*"
+  - id: true-3
+    type: true-false
+    prompt: Anna kommt heute nicht.
+    answer: true
+    explanation:
+      en: "*Heute* stays before *nicht*, and *nicht* is at the end. The sentence is correct."
+      fa: "*heute* پیش از *nicht* می‌ماند و *nicht* در پایان جمله است. جمله درست است."
+      de: "*Heute* steht vor *nicht*, und *nicht* steht am Ende. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wir wohnen nicht in Berlin.
+    answer: true
+    explanation:
+      en: "*Nicht* stands before the place *in Berlin*. The sentence is correct."
+      fa: "*nicht* پیش از مکان *in Berlin* آمده است. جمله درست است."
+      de: "*Nicht* steht vor dem Ort *in Berlin*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Er nicht arbeitet.
+    answer: false
+    explanation:
+      en: "The verb stays in position 2 and *nicht* comes after it: *Er arbeitet nicht.*"
+      fa: "فعل در جایگاه دوم می‌ماند و *nicht* پس از آن می‌آید: *Er arbeitet nicht.*"
+      de: "Das Verb bleibt auf Position 2, *nicht* steht danach: *Er arbeitet nicht.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das Zimmer ist ___ (groß / nicht).
+    answers: [nicht groß]
+    explanation:
+      en: "*Nicht* stands before the adjective: *nicht groß*."
+      fa: "*nicht* پیش از صفت می‌آید: *nicht groß*."
+      de: "*Nicht* steht vor dem Adjektiv: *nicht groß*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Meine Eltern wohnen ___ (in Köln / nicht).
+    answers: [nicht in Köln]
+    explanation:
+      en: "*Nicht* stands before the place: *nicht in Köln*."
+      fa: "*nicht* پیش از مکان می‌آید: *nicht in Köln*."
+      de: "*Nicht* steht vor dem Ort: *nicht in Köln*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Tom arbeitet ___ (nicht / heute).
+    answers: [heute nicht]
+    explanation:
+      en: "A time such as *heute* stays before *nicht*: *heute nicht*."
+      fa: "قید زمانی مانند *heute* پیش از *nicht* می‌ماند: *heute nicht*."
+      de: "Eine Zeit wie *heute* steht vor *nicht*: *heute nicht*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich schwimme ___ (gern / nicht).
+    answers: [nicht gern]
+    explanation:
+      en: "*Nicht* stands before *gern*: *nicht gern*."
+      fa: "*nicht* پیش از *gern* می‌آید: *nicht gern*."
+      de: "*Nicht* steht vor *gern*: *nicht gern*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ich, verstehe, das, nicht]
+      - [das, verstehe, ich, nicht]
+    explanation:
+      en: "The verb comes second and *nicht* goes to the end."
+      fa: "فعل در جایگاه دوم می‌آید و *nicht* در پایان جمله."
+      de: "Das Verb steht auf Position 2, *nicht* steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [der Bus, kommt, heute, nicht]
+      - [heute, kommt, der Bus, nicht]
+    explanation:
+      en: "The verb comes second. *Heute* stays before *nicht*, and *nicht* goes to the end."
+      fa: "فعل در جایگاه دوم می‌آید. *heute* پیش از *nicht* می‌ماند و *nicht* در پایان جمله است."
+      de: "Das Verb steht auf Position 2. *Heute* steht vor *nicht*, *nicht* steht am Ende."
+  - id: order-3
+    type: word-order
+    answers:
+      - [er, wohnt, nicht, in Berlin]
+      - [in Berlin, wohnt, er, nicht]
+    explanation:
+      en: "*Nicht* stands before the place. If the place comes first, *nicht* goes to the end."
+      fa: "*nicht* پیش از مکان می‌آید. اگر مکان در آغاز جمله باشد، *nicht* به پایان جمله می‌رود."
+      de: "*Nicht* steht vor dem Ort. Steht der Ort am Anfang, steht *nicht* am Ende."
+  - id: order-4
+    type: word-order
+    end: "?"
+    answers:
+      - [ist, das Zimmer, nicht, groß]
+    explanation:
+      en: "In a yes/no question the verb comes first. *Nicht* stands before the adjective."
+      fa: "در پرسش بله و خیر، فعل در آغاز می‌آید. *nicht* پیش از صفت است."
+      de: "In einer Ja/Nein-Frage steht das Verb am Anfang. *Nicht* steht vor dem Adjektiv."
+
+review:
+  reviewer: two independent AI agents (the second on true-4)
+  date: 2026-11-28
+  pool: ded0c02301e93420

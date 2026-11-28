@@ -4,10 +4,286 @@ kind: grammar
 level: A1
 chapter: a1-more-articles
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-081]
 title:
   en: "*Possessivartikel*, *Nominativ* and *Akkusativ*"
-  fa: "صفت ملکی (*Possessivartikel*) در *Nominativ* و *Akkusativ*"
+  fa: "حرف تعریف ملکی (*Possessivartikel*) در حالت *Nominativ* و *Akkusativ*"
   de: "Possessivartikel im Nominativ und Akkusativ"
+
+explanations:
+  en:
+    rule: >
+      A possessive article (*mein*, *dein* …) stands before a noun and says
+      whose it is. The word depends on the owner: *ich* → *mein*, *du* →
+      *dein*, *er* and *es* → *sein*, *sie* → *ihr*, *wir* → *unser*, *sie*
+      (plural) → *ihr*, *Sie* → *Ihr* (*euer*, for *ihr*, comes later). The
+      ending depends on the noun after it, exactly as with *ein*: no ending
+      for masculine and neuter nouns, *-e* for feminine nouns and the plural.
+      In the *Akkusativ* only the masculine changes: *meinen*, like *einen*.
+  fa:
+    rule: >
+      حرف تعریف ملکی (*Possessivartikel*) پیش از اسم می‌آید و نشان می‌دهد آن
+      چیز به چه کسی تعلق دارد. خود واژه را دارنده تعیین می‌کند: *mein* برای *ich*،
+      *dein* برای *du*، *sein* برای *er* و *es*، *ihr* برای *sie*، *unser*
+      برای *wir*، *ihr* برای *sie* جمع و *Ihr* برای *Sie* رسمی (*euer* برای
+      *ihr* در درس‌های بعدی می‌آید). پایانهٔ آن را اسمی تعیین می‌کند که پس از آن می‌آید،
+      درست مانند *ein*: با اسم مذکر و خنثی پایانه‌ای ندارد و با اسم مؤنث و
+      جمع *-e* می‌گیرد. در حالت *Akkusativ* (حالت مفعولی) فقط مذکر تغییر
+      می‌کند: *meinen*، مانند *einen*. در فارسی «مادرش» برای دارندهٔ مرد و زن
+      یکی است، ولی در آلمانی دارندهٔ مذکر یا خنثی *sein* می‌گیرد و دارندهٔ
+      مؤنث *ihr*: *seine Mutter* و *ihre Mutter*.
+  de:
+    rule: >
+      Der Possessivartikel steht vor einem Nomen und sagt, wem etwas gehört:
+      *mein* (ich), *dein* (du), *sein* (er, es), *ihr* (sie), *unser* (wir),
+      *ihr* (sie, Plural), *Ihr* (Sie). Die Endung kommt vom Nomen danach, wie
+      bei *ein*: keine Endung bei maskulinen und neutralen Nomen, *-e* bei
+      femininen Nomen und im Plural. Im Akkusativ ändert sich nur das
+      Maskulinum: *meinen*, wie *einen*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *mein*", fa: "با *mein*", de: "Mit *mein*" }
+    - { en: "*Akkusativ* with *mein*", fa: "حالت *Akkusativ* با *mein*", de: "Akkusativ mit *mein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Vater, mein Vater, meinen Vater, Ich besuche meinen Vater.]
+    - [die Mutter, meine Mutter, meine Mutter, Ich frage meine Mutter.]
+    - [das Handy, mein Handy, mein Handy, Ich suche mein Handy.]
+    - [die Eltern (Plural), meine Eltern, meine Eltern, Ich besuche meine Eltern.]
+
+examples:
+  - de: Das ist meine Mutter.
+    en: This is my mother.
+    fa: این مادرم است.
+  - de: Wo ist dein Bruder?
+    en: Where is your brother?
+    fa: برادرت کجاست؟
+  - de: Peter sucht seinen Schlüssel.
+    en: Peter is looking for his key.
+    fa: پیتر دنبال کلیدش می‌گردد.
+  - de: Anna besucht ihre Eltern.
+    en: Anna is visiting her parents.
+    fa: آنا به دیدن پدر و مادرش می‌رود.
+  - de: Wir lieben unser Haus.
+    en: We love our house.
+    fa: ما خانه‌مان را دوست داریم.
+  - de: Haben Sie Ihren Pass?
+    en: Do you have your passport?
+    fa: گذرنامه‌تان همراهتان است؟
+  - de: Hast du dein Handy?
+    en: Do you have your phone?
+    fa: گوشی‌ات همراهت است؟
+  - de: Heute besuche ich meinen Opa.
+    en: Today I am visiting my grandpa.
+    fa: امروز به دیدن پدربزرگم می‌روم.
+  - de: Das sind unsere Kinder.
+    en: These are our children.
+    fa: این‌ها بچه‌های ما هستند.
+
+mistakes:
+  - wrong: Ich besuche mein Vater.
+    right: Ich besuche meinen Vater.
+    why:
+      en: "*Vater* is masculine and the object, so the *Akkusativ*: *meinen*, like *einen*."
+      fa: "*Vater* اسم مذکر و مفعول جمله است، پس در حالت *Akkusativ* می‌آید: *meinen*، مانند *einen*."
+      de: "*Vater* ist maskulin und das Objekt. Darum Akkusativ: *meinen*, wie *einen*."
+  - wrong: Das ist mein Schwester.
+    right: Das ist meine Schwester.
+    why:
+      en: "*Schwester* is feminine, so *meine*, as in *eine Schwester*."
+      fa: "*Schwester* اسم مؤنث است، پس *meine* می‌آید، مانند *eine Schwester*."
+      de: "*Schwester* ist feminin. Darum *meine*, wie bei *eine Schwester*."
+  - wrong: Das ist Lisa und seine Mutter.
+    right: Das ist Lisa und ihre Mutter.
+    why:
+      en: "The owner is Lisa, a woman, so *ihr*. *Sein* is for an owner that is *er* or *es*."
+      fa: "دارنده لیزا است که زن است، پس *ihr* می‌آید. *sein* برای دارنده‌ای است که *er* یا *es* باشد."
+      de: "Lisa ist eine Frau. Darum *ihr*. *Sein* steht bei *er* und *es*."
+  - wrong: Wir besuchen unser Großeltern.
+    right: Wir besuchen unsere Großeltern.
+    why:
+      en: "*Großeltern* is a plural, and the plural takes *-e*: *unsere*."
+      fa: "*Großeltern* جمع است و جمع *-e* می‌گیرد: *unsere*."
+      de: "*Großeltern* ist Plural. Im Plural steht *-e*: *unsere*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist ___ Mutter.
+    options: [meine, mein, meinen]
+    answer: meine
+    explanation:
+      en: "*Mutter* is feminine: *meine Mutter*."
+      fa: "*Mutter* اسم مؤنث است: *meine Mutter*."
+      de: "*Mutter* ist feminin: *meine Mutter*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich suche ___ Pass.
+    options: [meinen, mein, meine]
+    answer: meinen
+    explanation:
+      en: "*Pass* is masculine and the object (*Akkusativ*): *meinen Pass*."
+      fa: "*Pass* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *meinen Pass*."
+      de: "*Pass* ist maskulin und das Objekt (Akkusativ): *meinen Pass*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wo ist ___ Handy, Tim?
+    options: [dein, deine, deinen]
+    answer: dein
+    explanation:
+      en: "*Handy* is neuter and the subject: *dein Handy*, no ending."
+      fa: "*Handy* اسم خنثی و فاعل جمله است: *dein Handy*، بی‌پایانه."
+      de: "*Handy* ist neutral und das Subjekt: *dein Handy*, ohne Endung."
+  - id: gap-4
+    type: gap-fill
+    prompt: Herr Braun ist verheiratet. Maria ist ___ Frau.
+    options: [seine, ihre, sein]
+    answer: seine
+    explanation:
+      en: "The owner is Herr Braun (*er*), so *sein*; *Frau* is feminine: *seine Frau*."
+      fa: "دارنده آقای براون (*er*) است، پس *sein* می‌آید؛ *Frau* اسم مؤنث است: *seine Frau*."
+      de: "Herr Braun ist *er*. Darum *sein*. *Frau* ist feminin: *seine Frau*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Lisa hat einen Bruder. ___ Bruder heißt Max.
+    options: [Ihr, Sein, Ihre]
+    answer: Ihr
+    explanation:
+      en: "The owner is Lisa (*sie*), so *ihr*; *Bruder* is masculine and the subject: *Ihr Bruder*."
+      fa: "دارنده لیزا (*sie*) است، پس *ihr* می‌آید؛ *Bruder* اسم مذکر و فاعل جمله است: *Ihr Bruder*."
+      de: "Lisa ist *sie*. Darum *ihr*. *Bruder* ist maskulin und das Subjekt: *Ihr Bruder*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Wir besuchen ___ Großeltern.
+    options: [unsere, unser, unseren]
+    answer: unsere
+    explanation:
+      en: "*Großeltern* is a plural: *unsere Großeltern*."
+      fa: "*Großeltern* جمع است: *unsere Großeltern*."
+      de: "*Großeltern* ist Plural: *unsere Großeltern*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Herr Klein, ist das ___ Koffer?
+    options: [Ihr, Ihre, Ihren]
+    answer: Ihr
+    explanation:
+      en: "Herr Klein is *Sie*, so *Ihr*; *Koffer* is masculine and the subject: *Ihr Koffer*."
+      fa: "با آقای کلاین با *Sie* سخن می‌گوییم، پس *Ihr* می‌آید؛ *Koffer* اسم مذکر و فاعل جمله است: *Ihr Koffer*."
+      de: "Zu Herrn Klein sagt man *Sie*. Darum *Ihr*. *Koffer* ist maskulin und das Subjekt: *Ihr Koffer*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Ich liebe meinen Hund., Ich liebe mein Hund., Ich liebe meine Hund.]
+    answer: Ich liebe meinen Hund.
+    explanation:
+      en: "*Hund* is masculine and the object (*Akkusativ*): *meinen Hund*."
+      fa: "*Hund* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *meinen Hund*."
+      de: "*Hund* ist maskulin und das Objekt (Akkusativ): *meinen Hund*."
+  - id: true-1
+    type: true-false
+    prompt: Ich frage meine Schwester.
+    answer: true
+    explanation:
+      en: "*Schwester* is feminine: *meine Schwester*, also in the *Akkusativ*. The sentence is correct."
+      fa: "*Schwester* اسم مؤنث است: *meine Schwester*، در حالت *Akkusativ* هم. جمله درست است."
+      de: "*Schwester* ist feminin: *meine Schwester*, auch im Akkusativ. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Peter besucht seine Oma.
+    answer: true
+    explanation:
+      en: "The owner is Peter (*er*), so *sein*; *Oma* is feminine: *seine Oma*. The sentence is correct."
+      fa: "دارنده پیتر (*er*) است، پس *sein* می‌آید؛ *Oma* اسم مؤنث است: *seine Oma*. جمله درست است."
+      de: "Peter ist *er*. Darum *sein*. *Oma* ist feminin: *seine Oma*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich besuche mein Bruder.
+    answer: false
+    explanation:
+      en: "*Bruder* is masculine and the object (*Akkusativ*): *Ich besuche meinen Bruder.*"
+      fa: "*Bruder* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *Ich besuche meinen Bruder.*"
+      de: "*Bruder* ist maskulin und das Objekt (Akkusativ): *Ich besuche meinen Bruder.*"
+  - id: true-4
+    type: true-false
+    prompt: Wo ist deine Vater?
+    answer: false
+    explanation:
+      en: "*Vater* is masculine, so no ending: *Wo ist dein Vater?*"
+      fa: "*Vater* اسم مذکر است و پایانه نمی‌گیرد: *Wo ist dein Vater?*"
+      de: "*Vater* ist maskulin, also keine Endung: *Wo ist dein Vater?*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich suche ___ (mein) Brille.
+    answers: [meine]
+    explanation:
+      en: "*Brille* is feminine: *meine Brille*."
+      fa: "*Brille* اسم مؤنث است: *meine Brille*."
+      de: "*Brille* ist feminin: *meine Brille*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Kennst du ___ (mein) Freund Paul?
+    answers: [meinen]
+    explanation:
+      en: "*Freund* is masculine and the object (*Akkusativ*): *meinen Freund*."
+      fa: "*Freund* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *meinen Freund*."
+      de: "*Freund* ist maskulin und das Objekt (Akkusativ): *meinen Freund*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Frau Lang, ist das ___ (Ihr) Tasche?
+    answers: [Ihre]
+    explanation:
+      en: "*Tasche* is feminine: *Ihre Tasche*, with a capital *I* for *Sie*."
+      fa: "*Tasche* اسم مؤنث است: *Ihre Tasche*، با *I* بزرگ برای *Sie*."
+      de: "*Tasche* ist feminin: *Ihre Tasche*, groß geschrieben für *Sie*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Max liebt ___ (sein) Katze.
+    answers: [seine]
+    explanation:
+      en: "*Katze* is feminine: *seine Katze*."
+      fa: "*Katze* اسم مؤنث است: *seine Katze*."
+      de: "*Katze* ist feminin: *seine Katze*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Akkusativ: der Vater (mein)"
+    answers: [meinen Vater]
+    explanation:
+      en: "*Vater* is masculine, so in the *Akkusativ* *mein* becomes *meinen*: *meinen Vater*."
+      fa: "*Vater* اسم مذکر است، پس *mein* در حالت *Akkusativ* می‌شود *meinen*: *meinen Vater*."
+      de: "*Vater* ist maskulin. Im Akkusativ wird *mein* zu *meinen*: *meinen Vater*."
+  - id: error-1
+    type: find-error
+    prompt: Heute besuche ich mein Onkel.
+    answer: mein
+    explanation:
+      en: "*Onkel* is masculine and the object (*Akkusativ*): *meinen Onkel*."
+      fa: "*Onkel* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *meinen Onkel*."
+      de: "*Onkel* ist maskulin und das Objekt (Akkusativ): *meinen Onkel*."
+  - id: error-2
+    type: find-error
+    prompt: Das ist meine Bruder.
+    answer: meine
+    explanation:
+      en: "*Bruder* is masculine, so no ending: *Das ist mein Bruder.*"
+      fa: "*Bruder* اسم مذکر است و پایانه نمی‌گیرد: *Das ist mein Bruder.*"
+      de: "*Bruder* ist maskulin, also keine Endung: *Das ist mein Bruder.*"
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, mein]
+      - [du, dein]
+      - [er, sein]
+      - [wir, unser]
+    explanation:
+      en: "Each person has its own possessive article: *ich* → *mein*, *du* → *dein*, *er* → *sein*, *wir* → *unser*."
+      fa: "هر شخص حرف تعریف ملکی خود را دارد: *mein* برای *ich*، *dein* برای *du*، *sein* برای *er* و *unser* برای *wir*."
+      de: "Jede Person hat ihren Possessivartikel: *ich* → *mein*, *du* → *dein*, *er* → *sein*, *wir* → *unser*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 0732df855ec37ab3

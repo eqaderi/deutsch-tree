@@ -4,10 +4,285 @@ kind: grammar
 level: A1
 chapter: a1-first-sentences
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-001]
 title:
   en: "Statement, verb second"
   fa: "جملهٔ خبری: فعل در جایگاه دوم"
   de: "Aussagesatz: Verb auf Position 2"
+
+explanations:
+  en:
+    rule: >
+      In a German statement the conjugated verb always stands in position 2.
+      Position 1 is usually the subject, and everything else comes after the
+      verb. A position is one part of the sentence, not one word: *mein
+      Bruder* or *Anna und Tom* fill position 1 together. Words such as
+      *morgen*, *gern* or *heute* never push in between the subject and the
+      verb, as they can in English ("I often go").
+  fa:
+    rule: >
+      در جملهٔ خبری آلمانی، فعل صرف‌شده همیشه در جایگاه دوم می‌آید؛ نه در پایان
+      جمله، آن‌گونه که در فارسی می‌آید. جایگاه اول معمولاً از آنِ فاعل است و
+      بقیهٔ جمله پس از فعل می‌آید. هر جایگاه یک جزء جمله است، نه یک واژه:
+      *mein Bruder* یا *Anna und Tom* با هم جایگاه اول را پر می‌کنند. واژه‌هایی
+      مانند *morgen*، *gern* یا *heute* هیچ‌گاه میان فاعل و فعل نمی‌آیند.
+  de:
+    rule: >
+      Im Aussagesatz steht das konjugierte Verb immer auf Position 2. Auf
+      Position 1 steht meistens das Subjekt. Alles andere kommt nach dem Verb.
+      Eine Position ist ein Satzteil, nicht ein Wort: *mein Bruder* oder *Anna
+      und Tom* sind zusammen Position 1. Wörter wie *morgen*, *gern* oder
+      *heute* stehen nie zwischen dem Subjekt und dem Verb.
+
+table:
+  columns:
+    - { en: Position 1, fa: جایگاه اول, de: Position 1 }
+    - { en: "Position 2: verb", fa: "جایگاه دوم: فعل", de: "Position 2: Verb" }
+    - { en: The rest, fa: بقیهٔ جمله, de: Rest }
+  rows:
+    - [Ich, fahre, morgen nach Paris.]
+    - [Mein Bruder, wohnt, in Wien.]
+    - [Frau Schulz, ist, Lehrerin.]
+    - [Anna und Tom, lernen, zusammen Deutsch.]
+    - [Wir, trinken, jeden Morgen Tee.]
+
+# The slots of a statement: position 2 is always the verb.
+diagrams:
+  - caption:
+      en: >
+        Three statements. Position 1 can be one word or several; position 2,
+        shaded, is always the verb; the rest follows.
+      fa: >
+        سه جملهٔ خبری. جایگاه اول می‌تواند یک واژه یا چند واژه باشد؛ جایگاه دوم،
+        که رنگی است، همیشه از آنِ فعل است و بقیهٔ جمله پس از آن می‌آید.
+      de: >
+        Drei Aussagesätze. Position 1 ist ein Wort oder mehrere Wörter.
+        Position 2 (farbig) ist immer das Verb. Dann kommt der Rest.
+    labels:
+      first: { en: position 1, fa: جایگاه اول, de: Position 1 }
+      second: { en: "position 2", fa: جایگاه دوم, de: Position 2 }
+      rest: { en: the rest, fa: بقیهٔ جمله, de: Rest }
+    svg: |
+      <svg viewBox="0 0 320 176">
+        <text class="note" x="60" y="20" text-anchor="middle">{{first}}</text>
+        <text class="note" x="164" y="20" text-anchor="middle">{{second}}</text>
+        <text class="note" x="264" y="20" text-anchor="middle">{{rest}}</text>
+        <!-- Ich fahre nach Paris. -->
+        <rect class="surface" x="2" y="32" width="116" height="40"/>
+        <rect class="shade" x="124" y="32" width="80" height="40"/>
+        <rect class="surface" x="210" y="32" width="108" height="40"/>
+        <text class="label" x="60" y="58" text-anchor="middle">Ich</text>
+        <text class="label" x="164" y="58" text-anchor="middle">fahre</text>
+        <text class="label" x="264" y="58" text-anchor="middle">nach Paris.</text>
+        <!-- Mein Bruder wohnt in Wien. -->
+        <rect class="surface" x="2" y="80" width="116" height="40"/>
+        <rect class="shade" x="124" y="80" width="80" height="40"/>
+        <rect class="surface" x="210" y="80" width="108" height="40"/>
+        <text class="label" x="60" y="106" text-anchor="middle">Mein Bruder</text>
+        <text class="label" x="164" y="106" text-anchor="middle">wohnt</text>
+        <text class="label" x="264" y="106" text-anchor="middle">in Wien.</text>
+        <!-- Die Kinder spielen Fußball. -->
+        <rect class="surface" x="2" y="128" width="116" height="40"/>
+        <rect class="shade" x="124" y="128" width="80" height="40"/>
+        <rect class="surface" x="210" y="128" width="108" height="40"/>
+        <text class="label" x="60" y="154" text-anchor="middle">Die Kinder</text>
+        <text class="label" x="164" y="154" text-anchor="middle">spielen</text>
+        <text class="label" x="264" y="154" text-anchor="middle">Fußball.</text>
+      </svg>
+
+examples:
+  - de: Ich fahre morgen nach Paris.
+    en: I am going to Paris tomorrow.
+    fa: من فردا به پاریس می‌روم.
+  - de: Mein Bruder wohnt in Wien.
+    en: My brother lives in Vienna.
+    fa: برادرم در وین زندگی می‌کند.
+  - de: Frau Schulz ist Lehrerin.
+    en: Ms Schulz is a teacher.
+    fa: خانم شولتس معلم است.
+  - de: Anna und Tom lernen zusammen Deutsch.
+    en: Anna and Tom learn German together.
+    fa: آنا و تام با هم آلمانی یاد می‌گیرند.
+  - de: Wir trinken jeden Morgen Tee.
+    en: We drink tea every morning.
+    fa: ما هر صبح چای می‌نوشیم.
+  - de: Der Zug kommt um acht Uhr.
+    en: The train arrives at eight o'clock.
+    fa: قطار ساعت هشت می‌رسد.
+  - de: Ich spiele gern Tennis.
+    en: I like playing tennis.
+    fa: من دوست دارم تنیس بازی کنم.
+
+mistakes:
+  - wrong: Ich Deutsch lerne.
+    right: Ich lerne Deutsch.
+    why:
+      en: "The verb does not go to the end. In a statement it stands in position 2."
+      fa: "فعل آلمانی مانند فعل فارسی به پایان جمله نمی‌رود؛ در جملهٔ خبری در جایگاه دوم می‌آید."
+      de: "Das Verb steht nicht am Ende. Im Aussagesatz steht es auf Position 2."
+  - wrong: Ich morgen fahre nach Paris.
+    right: Ich fahre morgen nach Paris.
+    why:
+      en: "*Morgen* cannot stand between the subject and the verb. The verb comes right after *ich*."
+      fa: "*morgen* نمی‌تواند میان فاعل و فعل بیاید. فعل بلافاصله پس از *ich* می‌آید."
+      de: "*Morgen* steht nicht zwischen Subjekt und Verb. Das Verb kommt direkt nach *ich*."
+  - wrong: Mein Bruder in Wien wohnt.
+    right: Mein Bruder wohnt in Wien.
+    why:
+      en: "*Mein Bruder* is position 1, so the verb follows straight after it."
+      fa: "*mein Bruder* جایگاه اول است، پس فعل بلافاصله پس از آن می‌آید."
+      de: "*Mein Bruder* ist Position 1. Das Verb kommt direkt danach."
+  - wrong: Ich oft koche.
+    right: Ich koche oft.
+    why:
+      en: 'English says "I often cook", but in German *oft* comes after the verb.'
+      fa: "در آلمانی *oft* پس از فعل می‌آید، نه پیش از آن."
+      de: "*Oft* steht nach dem Verb: *Ich koche oft.*"
+
+questions:
+  - id: choice-1
+    type: multiple-choice
+    prompt: "ich / lernen / heute / Deutsch"
+    options: [Ich lerne heute Deutsch., Ich heute lerne Deutsch., Ich heute Deutsch lerne.]
+    answer: Ich lerne heute Deutsch.
+    explanation:
+      en: "The verb stands in position 2, straight after the subject *ich*."
+      fa: "فعل در جایگاه دوم، بلافاصله پس از فاعل *ich* می‌آید."
+      de: "Das Verb steht auf Position 2, direkt nach dem Subjekt *ich*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "meine Schwester / arbeiten / in Köln"
+    options: [Meine Schwester arbeitet in Köln., Meine arbeitet Schwester in Köln., Meine Schwester in Köln arbeitet.]
+    answer: Meine Schwester arbeitet in Köln.
+    explanation:
+      en: "*Meine Schwester* together is position 1. The verb comes after it."
+      fa: "*meine Schwester* با هم جایگاه اول است و فعل پس از آن می‌آید."
+      de: "*Meine Schwester* ist zusammen Position 1. Danach kommt das Verb."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "wir / trinken / jeden Morgen / Tee"
+    options: [Wir trinken jeden Morgen Tee., Wir jeden Morgen trinken Tee., Wir jeden Morgen Tee trinken.]
+    answer: Wir trinken jeden Morgen Tee.
+    explanation:
+      en: "The verb stands in position 2. *Jeden Morgen* comes after it."
+      fa: "فعل در جایگاه دوم می‌آید و *jeden Morgen* پس از آن."
+      de: "Das Verb steht auf Position 2. *Jeden Morgen* kommt danach."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "Herr Koch / sein / Arzt"
+    options: [Herr Koch ist Arzt., Herr ist Koch Arzt., Herr Koch Arzt ist.]
+    answer: Herr Koch ist Arzt.
+    explanation:
+      en: "*Herr Koch* is one position. The verb *ist* comes second."
+      fa: "*Herr Koch* یک جایگاه است و فعل *ist* در جایگاه دوم می‌آید."
+      de: "*Herr Koch* ist eine Position. Das Verb *ist* steht auf Position 2."
+  - id: choice-5
+    type: multiple-choice
+    prompt: "ich / spielen / gern / Tennis"
+    options: [Ich spiele gern Tennis., Ich gern spiele Tennis., Ich gern Tennis spiele.]
+    answer: Ich spiele gern Tennis.
+    explanation:
+      en: "*Gern* comes after the verb, never between the subject and the verb."
+      fa: "*gern* پس از فعل می‌آید، هرگز میان فاعل و فعل."
+      de: "*Gern* steht nach dem Verb, nie zwischen Subjekt und Verb."
+  - id: true-1
+    type: true-false
+    prompt: Ich morgen fahre nach Berlin.
+    answer: false
+    explanation:
+      en: "The verb must come right after *ich*: *Ich fahre morgen nach Berlin.*"
+      fa: "فعل باید بلافاصله پس از *ich* بیاید: *Ich fahre morgen nach Berlin.*"
+      de: "Das Verb kommt direkt nach *ich*: *Ich fahre morgen nach Berlin.*"
+  - id: true-2
+    type: true-false
+    prompt: Meine Eltern wohnen in Hamburg.
+    answer: true
+    explanation:
+      en: "*Meine Eltern* is position 1 and *wohnen* position 2. The sentence is correct."
+      fa: "*meine Eltern* جایگاه اول است و *wohnen* جایگاه دوم. جمله درست است."
+      de: "*Meine Eltern* ist Position 1, *wohnen* Position 2. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Wir Tee trinken.
+    answer: false
+    explanation:
+      en: "The verb does not go to the end: *Wir trinken Tee.*"
+      fa: "فعل به پایان جمله نمی‌رود: *Wir trinken Tee.*"
+      de: "Das Verb steht nicht am Ende: *Wir trinken Tee.*"
+  - id: true-4
+    type: true-false
+    prompt: Herr Wagner kommt aus Österreich.
+    answer: true
+    explanation:
+      en: "*Herr Wagner* is position 1 and *kommt* position 2. The sentence is correct."
+      fa: "*Herr Wagner* جایگاه اول است و *kommt* جایگاه دوم. جمله درست است."
+      de: "*Herr Wagner* ist Position 1, *kommt* Position 2. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Die Kinder im Garten spielen.
+    answer: false
+    explanation:
+      en: "The verb comes second: *Die Kinder spielen im Garten.*"
+      fa: "فعل در جایگاه دوم می‌آید: *Die Kinder spielen im Garten.*"
+      de: "Das Verb steht auf Position 2: *Die Kinder spielen im Garten.*"
+  - id: true-6
+    type: true-false
+    prompt: Ich trinke oft Kaffee.
+    answer: true
+    explanation:
+      en: "*Oft* comes after the verb. The sentence is correct."
+      fa: "*oft* پس از فعل آمده است. جمله درست است."
+      de: "*Oft* steht nach dem Verb. Der Satz ist richtig."
+  - id: order-1
+    type: word-order
+    answers:
+      - [mein Bruder, wohnt, in Wien]
+      - [in Wien, wohnt, mein Bruder]
+    explanation:
+      en: "The verb stands in position 2. Usually the subject comes first; *in Wien* can also stand first."
+      fa: "فعل در جایگاه دوم می‌آید. معمولاً فاعل در آغاز است؛ *in Wien* هم می‌تواند در آغاز بیاید."
+      de: "Das Verb steht auf Position 2. Meistens steht das Subjekt am Anfang. *In Wien* kann auch am Anfang stehen."
+  - id: order-2
+    type: word-order
+    answers:
+      - [die Kinder, spielen, Fußball]
+      - [Fußball, spielen, die Kinder]
+    explanation:
+      en: "The verb stands in position 2. Usually the subject comes first; *Fußball* can also stand first."
+      fa: "فعل در جایگاه دوم می‌آید. معمولاً فاعل در آغاز است؛ *Fußball* هم می‌تواند در آغاز بیاید."
+      de: "Das Verb steht auf Position 2. Meistens steht das Subjekt am Anfang. *Fußball* kann auch am Anfang stehen."
+  - id: order-3
+    type: word-order
+    answers:
+      - [ich, komme, aus dem Iran]
+      - [aus dem Iran, komme, ich]
+    explanation:
+      en: "The verb stands in position 2. Usually the subject comes first; *aus dem Iran* can also stand first."
+      fa: "فعل در جایگاه دوم می‌آید. معمولاً فاعل در آغاز است؛ *aus dem Iran* هم می‌تواند در آغاز بیاید."
+      de: "Das Verb steht auf Position 2. Meistens steht das Subjekt am Anfang. *Aus dem Iran* kann auch am Anfang stehen."
+  - id: order-4
+    type: word-order
+    answers:
+      - [wir, lernen, Deutsch]
+      - [Deutsch, lernen, wir]
+    explanation:
+      en: "The verb stands in position 2. Usually the subject comes first."
+      fa: "فعل در جایگاه دوم می‌آید. معمولاً فاعل در آغاز است."
+      de: "Das Verb steht auf Position 2. Meistens steht das Subjekt am Anfang."
+  - id: gap-1
+    type: gap-fill
+    prompt: Mein Vater ___ jeden Tag.
+    options: [kocht, kochen, koche]
+    answer: kocht
+    explanation:
+      en: "*Mein Vater* is position 1 (*er*), so the verb in position 2 ends in *-t*."
+      fa: "*mein Vater* جایگاه اول است (*er*)، پس فعل در جایگاه دوم شناسهٔ *-t* می‌گیرد."
+      de: "*Mein Vater* ist Position 1 (*er*). Das Verb auf Position 2 hat *-t*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 1dcb1f7d7bdfbffd
