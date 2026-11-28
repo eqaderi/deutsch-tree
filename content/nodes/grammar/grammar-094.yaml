@@ -108,7 +108,7 @@ mistakes:
   - wrong: Hast du Geld? – Nein, ich habe nicht welche.
     right: Hast du Geld? – Nein, ich habe keins.
     why:
-      en: "The answer \"none\" is a form of *kein*; *Geld* is neuter: *keins*."
+      en: 'The answer "none" is a form of *kein*; *Geld* is neuter: *keins*.'
       fa: "برای پاسخ منفی، شکلی از *kein* می‌آید؛ *Geld* اسم خنثی است: *keins*."
       de: "Die negative Antwort ist eine Form von *kein*. *Geld* ist neutral: *keins*."
 
@@ -190,7 +190,7 @@ questions:
     prompt: Hast du Kinder? – Nein, ich habe keine.
     answer: true
     explanation:
-      en: "*Kinder* is a plural; the answer \"none\" is *keine*. The sentence is correct."
+      en: '*Kinder* is a plural; the answer "none" is *keine*. The sentence is correct.'
       fa: "*Kinder* جمع است و پاسخ منفی *keine* است. جمله درست است."
       de: "*Kinder* ist Plural, die negative Antwort ist *keine*. Der Satz ist richtig."
   - id: true-2

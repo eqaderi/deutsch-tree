@@ -49,7 +49,11 @@ table:
   columns:
     - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
     - { en: "With *was für ein*", fa: "با *was für ein*", de: "Mit *was für ein*" }
-    - { en: "*Akkusativ* with *was für ein*", fa: "حالت *Akkusativ* با *was für ein*", de: "Akkusativ mit *was für ein*" }
+    - {
+        en: "*Akkusativ* with *was für ein*",
+        fa: "حالت *Akkusativ* با *was für ein*",
+        de: "Akkusativ mit *was für ein*",
+      }
     - { en: Example, fa: مثال, de: Beispiel }
   rows:
     - [der Film, was für ein Film, was für einen Film, Was für einen Film siehst du?]

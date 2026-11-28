@@ -130,7 +130,7 @@ questions:
     options: [jemand, niemand, etwas]
     answer: jemand
     explanation:
-      en: "In a question \"anyone\" is *jemand*: *Hat ihn jemand gefunden?*"
+      en: 'In a question "anyone" is *jemand*: *Hat ihn jemand gefunden?*'
       fa: "در پرسش، «کسی» *jemand* است: *Hat ihn jemand gefunden?*"
       de: "In der Frage sagt man *jemand*: *Hat ihn jemand gefunden?*"
   - id: gap-4
@@ -215,7 +215,7 @@ questions:
     prompt: Ich höre eine Stimme. Ist ___ (jemand / niemand) hier?
     answers: [jemand]
     explanation:
-      en: "In a question \"anyone\" is *jemand*."
+      en: 'In a question "anyone" is *jemand*.'
       fa: "در پرسش، «کسی» *jemand* است."
       de: "In der Frage sagt man *jemand*."
   - id: typed-answer-1
