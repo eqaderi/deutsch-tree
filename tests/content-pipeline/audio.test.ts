@@ -181,3 +181,17 @@ test('spoken German with a number the voice would misread is an error, also befo
     },
   ])
 })
+
+test('a word the voice misreads is respelt only in what the voice says: the learner sees it as written', async () => {
+  const content = await fixtureContentWith({
+    [PUBLISHED]: changeNode((node) => {
+      node.examples[0].de = 'Mein Hals tut weh.'
+    }),
+  })
+
+  const { bundle } = await compileContent(content, { requireAudio: false })
+  const [example] = (bundle?.nodes.find((node) => node.id === 'grammar-001')?.content as GrammarContent).examples
+
+  expect(example?.de).toBe('Mein Hals tut weh.')
+  expect(example?.audio.text).toBe('Mein Halls tut weh.')
+})
