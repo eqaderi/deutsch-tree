@@ -4,10 +4,315 @@ kind: grammar
 level: A1
 chapter: a1-prepositions
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-121, grammar-122]
 title:
   en: "Contractions"
   fa: "ادغام حرف اضافه با حرف تعریف (*im*، *zum*، *ins* …)"
   de: "Präposition + Artikel in einem Wort (*im*, *zum*, *ins* …)"
+
+explanations:
+  en:
+    rule: >
+      A preposition and the article often melt into one word. With *dem*:
+      *im* (*in dem*), *am* (*an dem*), *zum* (*zu dem*), *vom* (*von dem*),
+      *beim* (*bei dem*). With *der*, only *zur* (*zu der*). With *das*: *ins*
+      (*in das*) and *ans* (*an das*). In everyday chunks the short form is
+      the normal one: *im Juli*, *am Montag*, *zum Arzt*, *ins Kino*. There is
+      no short form with *die*, with a plural, with *ein* or with *mein*: *in
+      die Stadt*, *zu den Kindern*, *zu meiner Oma*.
+  fa:
+    rule: >
+      حرف اضافه و حرف تعریف اغلب در یک واژه ادغام می‌شوند. با *dem*: *im*
+      (*in dem*)، *am* (*an dem*)، *zum* (*zu dem*)، *vom* (*von dem*) و
+      *beim* (*bei dem*). با *der* فقط *zur* (*zu der*). با *das*: *ins* (*in
+      das*) و *ans* (*an das*). در عبارت‌های روزمره، شکل کوتاه شکل عادی است:
+      *im Juli*، *am Montag*، *zum Arzt* و *ins Kino*. با *die*، با اسم جمع،
+      با *ein* و با *mein* شکل کوتاه وجود ندارد: *in die Stadt*، *zu den
+      Kindern* و *zu meiner Oma*.
+  de:
+    rule: >
+      Präposition und Artikel werden oft zu einem Wort. Mit *dem*: *im* (*in
+      dem*), *am* (*an dem*), *zum* (*zu dem*), *vom* (*von dem*), *beim*
+      (*bei dem*). Mit *der* nur *zur* (*zu der*). Mit *das*: *ins* (*in das*)
+      und *ans* (*an das*). In festen Wendungen sagt man fast immer die kurze
+      Form: *im Juli*, *am Montag*, *zum Arzt*, *ins Kino*. Mit *die*, im
+      Plural, mit *ein* und mit *mein* gibt es keine kurze Form: *in die
+      Stadt*, *zu den Kindern*, *zu meiner Oma*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: Preposition + article, fa: حرف اضافه + حرف تعریف, de: Präposition + Artikel }
+    - { en: Short form, fa: شکل کوتاه, de: Kurzform }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Park, in dem Park, im Park, Wir sind im Park.]
+    - [der Bahnhof, an dem Bahnhof, am Bahnhof, Ich warte am Bahnhof.]
+    - [der Arzt, zu dem Arzt, zum Arzt, Ich gehe zum Arzt.]
+    - [die Post, zu der Post, zur Post, Sie geht zur Post.]
+    - [der Markt, von dem Markt, vom Markt, Er kommt vom Markt.]
+    - [der Bäcker, bei dem Bäcker, beim Bäcker, Ich bin beim Bäcker.]
+    - [das Kino, in das Kino, ins Kino, Wir gehen ins Kino.]
+    - [das Meer, an das Meer, ans Meer, Wir fahren ans Meer.]
+
+examples:
+  - de: Mein Vater ist im Garten.
+    en: My father is in the garden.
+    fa: پدرم در باغ است.
+  - de: Wir treffen uns am Bahnhof.
+    en: We're meeting at the station.
+    fa: در ایستگاه قطار همدیگر را می‌بینیم.
+  - de: Morgen gehe ich zum Zahnarzt.
+    en: Tomorrow I'm going to the dentist.
+    fa: فردا پیش دندان‌پزشک می‌روم.
+  - de: Fährst du mit dem Bus zur Arbeit?
+    en: Do you go to work by bus?
+    fa: با اتوبوس سر کار می‌روی؟
+  - de: Ich bringe das Paket zur Post.
+    en: I'm taking the parcel to the post office.
+    fa: بسته را به ادارهٔ پست می‌برم.
+  - de: Sie kommt gerade vom Markt.
+    en: She is just coming from the market.
+    fa: او همین حالا از بازار می‌آید.
+  - de: Ich kaufe Brötchen beim Bäcker.
+    en: I buy rolls at the baker's.
+    fa: از نانوایی نان می‌خرم.
+  - de: Gehen wir am Samstag ins Theater?
+    en: Shall we go to the theatre on Saturday?
+    fa: شنبه به تئاتر برویم؟
+  - de: Im Sommer fahren wir ans Meer.
+    en: In summer we go to the seaside.
+    fa: تابستان‌ها به کنار دریا می‌رویم.
+  - de: Die Bank ist am Marktplatz.
+    en: The bank is on the market square.
+    fa: بانک کنار میدان بازار است.
+
+mistakes:
+  - wrong: Ich gehe zum Post.
+    right: Ich gehe zur Post.
+    why:
+      en: "*Zum* is *zu dem*, for *der* and *das* nouns. *Post* is feminine: *zu der Post*, so *zur Post*."
+      fa: "*zum* یعنی *zu dem* و برای اسم‌های مذکر و خنثی است. *Post* اسم مؤنث است: *zu der Post*، پس *zur Post*."
+      de: "*Zum* ist *zu dem*, für maskuline und neutrale Nomen. *Post* ist feminin: *zu der Post*, also *zur Post*."
+  - wrong: Wir gehen in Kino.
+    right: Wir gehen ins Kino.
+    why:
+      en: "The article cannot be left out: *in das Kino*, shortened to *ins Kino*."
+      fa: "حرف تعریف را نمی‌توان حذف کرد: *in das Kino* که کوتاه می‌شود: *ins Kino*."
+      de: "Der Artikel fehlt nicht: *in das Kino*, kurz *ins Kino*."
+  - wrong: Ich bin in Büro.
+    right: Ich bin im Büro.
+    why:
+      en: "*Wo?*: *in dem Büro*, shortened to *im Büro*. The article is still there, inside *im*."
+      fa: "*Wo?*: *in dem Büro* که کوتاه می‌شود: *im Büro*. حرف تعریف درون *im* هست."
+      de: "*Wo?*: *in dem Büro*, kurz *im Büro*. Der Artikel steckt in *im*."
+  - wrong: Ich fahre zum meiner Oma.
+    right: Ich fahre zu meiner Oma.
+    why:
+      en: "*Zum* already holds an article. Before *meiner* or *einer* there is no short form: *zu meiner Oma*."
+      fa: "*zum* خودش حرف تعریف دارد. پیش از *meiner* یا *einer* شکل کوتاه وجود ندارد: *zu meiner Oma*."
+      de: "In *zum* steckt schon ein Artikel. Vor *meiner* oder *einer* gibt es keine kurze Form: *zu meiner Oma*."
+  - wrong: Sie kommt vom der Arbeit.
+    right: Sie kommt von der Arbeit.
+    why:
+      en: "*Vom* is *von dem*. *Arbeit* is feminine, and *von der* has no short form."
+      fa: "*vom* یعنی *von dem*. *Arbeit* اسم مؤنث است و *von der* شکل کوتاه ندارد."
+      de: "*Vom* ist *von dem*. *Arbeit* ist feminin, und *von der* hat keine kurze Form."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich gehe ___ Post.
+    options: [zur, zum, zu]
+    answer: zur
+    explanation:
+      en: "*Post* is feminine: *zu der Post*, shortened to *zur Post*."
+      fa: "*Post* اسم مؤنث است: *zu der Post* که کوتاه می‌شود: *zur Post*."
+      de: "*Post* ist feminin: *zu der Post*, kurz *zur Post*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir gehen heute ___ Kino.
+    options: [ins, im, in]
+    answer: ins
+    explanation:
+      en: "A direction: *in das Kino*, shortened to *ins Kino*."
+      fa: "جهت: *in das Kino* که کوتاه می‌شود: *ins Kino*."
+      de: "Richtung: *in das Kino*, kurz *ins Kino*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Sie kommt gerade ___ Markt.
+    options: [vom, von, von die]
+    answer: vom
+    explanation:
+      en: "*Markt* is masculine: *von dem Markt*, shortened to *vom Markt*."
+      fa: "*Markt* اسم مذکر است: *von dem Markt* که کوتاه می‌شود: *vom Markt*."
+      de: "*Markt* ist maskulin: *von dem Markt*, kurz *vom Markt*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich kaufe Brot ___ Bäcker.
+    options: [beim, bei, bei den]
+    answer: beim
+    explanation:
+      en: "*Bäcker* is masculine: *bei dem Bäcker*, shortened to *beim Bäcker*."
+      fa: "*Bäcker* اسم مذکر است: *bei dem Bäcker* که کوتاه می‌شود: *beim Bäcker*."
+      de: "*Bäcker* ist maskulin: *bei dem Bäcker*, kurz *beim Bäcker*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ich fahre mit dem Bus ___ Arbeit.
+    options: [zur, zum, zu]
+    answer: zur
+    explanation:
+      en: "*Arbeit* is feminine: *zu der Arbeit*, shortened to *zur Arbeit*."
+      fa: "*Arbeit* اسم مؤنث است: *zu der Arbeit* که کوتاه می‌شود: *zur Arbeit*."
+      de: "*Arbeit* ist feminin: *zu der Arbeit*, kurz *zur Arbeit*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: an + dem = ___
+    options: [am, an, ans]
+    answer: am
+    explanation:
+      en: "*An dem* becomes *am*. *Ans* is *an das*."
+      fa: "*an dem* می‌شود *am*. *ans* یعنی *an das*."
+      de: "*An dem* wird zu *am*. *Ans* ist *an das*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wo ist Papa? – ___ Garten.
+    options: [Im, Ins, In]
+    answer: Im
+    explanation:
+      en: "*Wo?*: *in dem Garten*, shortened to *im Garten*. *Ins* is for a direction."
+      fa: "*Wo?*: *in dem Garten* که کوتاه می‌شود: *im Garten*. *ins* برای جهت است."
+      de: "*Wo?*: *in dem Garten*, kurz *im Garten*. *Ins* steht bei einer Richtung."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich fahre ___ Oma.
+    options: [zu meiner, zur meiner, zum meiner]
+    answer: zu meiner
+    explanation:
+      en: "Before *meiner* there is no short form: *zu meiner Oma*."
+      fa: "پیش از *meiner* شکل کوتاه وجود ندارد: *zu meiner Oma*."
+      de: "Vor *meiner* gibt es keine kurze Form: *zu meiner Oma*."
+  - id: true-1
+    type: true-false
+    prompt: Wir treffen uns um acht am Bahnhof.
+    answer: true
+    explanation:
+      en: "*Am Bahnhof* is *an dem Bahnhof*. The sentence is correct."
+      fa: "*am Bahnhof* یعنی *an dem Bahnhof*. جمله درست است."
+      de: "*Am Bahnhof* ist *an dem Bahnhof*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Die Kinder gehen zum Schule.
+    answer: false
+    explanation:
+      en: "*Schule* is feminine: *zur Schule*."
+      fa: "*Schule* اسم مؤنث است: *zur Schule*."
+      de: "*Schule* ist feminin: *zur Schule*."
+  - id: true-3
+    type: true-false
+    prompt: Ich gehe jetzt ins Bett.
+    answer: true
+    explanation:
+      en: "*Ins Bett* is *in das Bett*, a direction. The sentence is correct."
+      fa: "*ins Bett* یعنی *in das Bett*، جهت. جمله درست است."
+      de: "*Ins Bett* ist *in das Bett*, eine Richtung. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Er kommt vom der Arbeit.
+    answer: false
+    explanation:
+      en: "*Vom* already holds *dem*. *Arbeit* is feminine: *von der Arbeit*."
+      fa: "*vom* خودش *dem* را دارد. *Arbeit* اسم مؤنث است: *von der Arbeit*."
+      de: "In *vom* steckt schon *dem*. *Arbeit* ist feminin: *von der Arbeit*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich bringe das Paket ___ (zu + der) Post.
+    answers: [zur, zu der]
+    explanation:
+      en: "*Zu* takes the *Dativ*: *zu der Post*, almost always said as *zur Post*."
+      fa: "*zu* با حالت *Dativ* می‌آید: *zu der Post* که تقریباً همیشه کوتاه می‌شود: *zur Post*."
+      de: "Nach *zu* steht der Dativ: *zu der Post*, fast immer kurz *zur Post*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Im Urlaub fahren wir ___ (an + das) Meer.
+    answers: [ans, an das]
+    explanation:
+      en: "A direction: *an das Meer*, almost always said as *ans Meer*."
+      fa: "جهت: *an das Meer* که تقریباً همیشه کوتاه می‌شود: *ans Meer*."
+      de: "Richtung: *an das Meer*, fast immer kurz *ans Meer*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich bin heute ___ (bei + dem) Friseur.
+    answers: [beim, bei dem]
+    explanation:
+      en: "*Bei* takes the *Dativ*: *bei dem Friseur*, almost always said as *beim Friseur*."
+      fa: "*bei* با حالت *Dativ* می‌آید: *bei dem Friseur* که تقریباً همیشه کوتاه می‌شود: *beim Friseur*."
+      de: "Nach *bei* steht der Dativ: *bei dem Friseur*, fast immer kurz *beim Friseur*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Er kommt ___ (von + dem) Training.
+    answers: [vom, von dem]
+    explanation:
+      en: "*Von* takes the *Dativ*: *von dem Training*, almost always said as *vom Training*."
+      fa: "*von* با حالت *Dativ* می‌آید: *von dem Training* که تقریباً همیشه کوتاه می‌شود: *vom Training*."
+      de: "Nach *von* steht der Dativ: *von dem Training*, fast immer kurz *vom Training*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Wir fahren mit dem Taxi ___ (zu + dem) Bahnhof.
+    answers: [zum, zu dem]
+    explanation:
+      en: "*Zu dem Bahnhof*, almost always said as *zum Bahnhof*."
+      fa: "*zu dem Bahnhof* که تقریباً همیشه کوتاه می‌شود: *zum Bahnhof*."
+      de: "*Zu dem Bahnhof*, fast immer kurz *zum Bahnhof*."
+  - id: typed-gap-6
+    type: typed-gap-fill
+    prompt: Wir haben ___ (an + dem) Montag frei.
+    answers: [am, an dem]
+    explanation:
+      en: "*An dem Montag*, almost always said as *am Montag*."
+      fa: "*an dem Montag* که تقریباً همیشه کوتاه می‌شود: *am Montag*."
+      de: "*An dem Montag*, fast immer kurz *am Montag*."
+  - id: error-1
+    type: find-error
+    prompt: Wir gehen heute Abend in Kino.
+    answer: in
+    explanation:
+      en: "The article is missing: *in das Kino*, shortened to *ins Kino*."
+      fa: "حرف تعریف جا افتاده است: *in das Kino* که کوتاه می‌شود: *ins Kino*."
+      de: "Der Artikel fehlt: *in das Kino*, kurz *ins Kino*."
+  - id: error-2
+    type: find-error
+    prompt: Ich gehe morgen zum Post.
+    answer: zum
+    explanation:
+      en: "*Post* is feminine: *zur Post*, not *zum*."
+      fa: "*Post* اسم مؤنث است: *zur Post*، نه *zum*."
+      de: "*Post* ist feminin: *zur Post*, nicht *zum*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ich, gehe, heute, zum Arzt]
+      - [heute, gehe, ich, zum Arzt]
+      - [zum Arzt, gehe, ich, heute]
+    explanation:
+      en: "The verb comes second. *Zum Arzt* usually stands at the end."
+      fa: "فعل در جایگاه دوم می‌آید. *zum Arzt* معمولاً در پایان جمله است."
+      de: "Das Verb steht an Position 2. *Zum Arzt* steht meistens am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [in + das, ins]
+      - [zu + der, zur]
+      - [bei + dem, beim]
+      - [von + dem, vom]
+    explanation:
+      en: "*Ins* is *in das*, *zur* is *zu der*, *beim* is *bei dem*, *vom* is *von dem*."
+      fa: "*ins* یعنی *in das*، *zur* یعنی *zu der*، *beim* یعنی *bei dem* و *vom* یعنی *von dem*."
+      de: "*Ins* ist *in das*, *zur* ist *zu der*, *beim* ist *bei dem*, *vom* ist *von dem*."
+
+review:
+  reviewer: two independent AI agents
+  date: 2026-11-28
+  pool: 4b308a772bdab3f6
