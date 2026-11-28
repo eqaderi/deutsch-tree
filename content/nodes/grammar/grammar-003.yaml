@@ -1,13 +1,287 @@
-# Grammar list row 3.
+# Grammar list row 3. The file format is described in content/README.md.
 id: grammar-003
 kind: grammar
 level: A1
 chapter: a1-verbs-present
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-001]
 title:
   en: "Verbs with stem-vowel change"
-  fa: "فعل‌هایی که واکهٔ ستاکشان عوض می‌شود"
+  fa: "فعل‌هایی که واکهٔ بنشان تغییر می‌کند"
   de: "Verben mit Vokalwechsel"
+
+explanations:
+  en:
+    rule: >
+      Some verbs change the vowel of their stem in the *Präsens*, but only
+      with *du* and *er/sie/es*: *e* becomes *i* or *ie* (*sprechen*, *du
+      sprichst*; *sehen*, *er sieht*), and *a* becomes *ä* (*fahren*, *du
+      fährst*). With *ich*, *wir*, *ihr* and *sie/Sie* the vowel stays: *ich
+      spreche*, *ihr fahrt*. The endings are the regular ones; learn each verb
+      with its *er* form, for example *nehmen*, *er nimmt*.
+  fa:
+    rule: >
+      برخی فعل‌ها در زمان حال (*Präsens*) واکهٔ بن خود را تغییر می‌دهند، اما
+      فقط در دوم‌شخص مفرد (*du*) و سوم‌شخص مفرد (*er/sie/es*): *e* به *i* یا
+      *ie* تبدیل می‌شود (*sprechen*، *du sprichst*؛ *sehen*، *er sieht*) و *a*
+      به *ä* (*fahren*، *du fährst*). در شخص‌های دیگر (*ich*، *wir*، *ihr* و
+      *sie/Sie*) واکه تغییر نمی‌کند: *ich spreche*، *ihr fahrt*. شناسه‌ها همان
+      شناسه‌های فعل باقاعده‌اند. هر فعل را همراه با صرف سوم‌شخص مفردش به خاطر
+      بسپارید، مثلاً *nehmen*، *er nimmt*.
+  de:
+    rule: >
+      Bei manchen Verben ändert sich im Präsens der Vokal im Stamm, aber nur
+      bei *du* und *er/sie/es*: *e* wird zu *i* oder *ie* (*sprechen*, *du
+      sprichst*; *sehen*, *er sieht*), *a* wird zu *ä* (*fahren*, *du
+      fährst*). Bei *ich*, *wir*, *ihr* und *sie/Sie* bleibt der Vokal: *ich
+      spreche*, *ihr fahrt*. Die Endungen sind normal.
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*ich*", fa: "*ich*", de: "*ich*" }
+    - { en: "*du*", fa: "*du*", de: "*du*" }
+    - { en: "*er / sie / es*", fa: "*er / sie / es*", de: "*er / sie / es*" }
+    - { en: "*ihr*", fa: "*ihr*", de: "*ihr*" }
+  rows:
+    - [sprechen (e → i), spreche, sprichst, spricht, sprecht]
+    - [helfen (e → i), helfe, hilfst, hilft, helft]
+    - [nehmen (e → i), nehme, nimmst, nimmt, nehmt]
+    - [sehen (e → ie), sehe, siehst, sieht, seht]
+    - [lesen (e → ie), lese, liest, liest, lest]
+    - [fahren (a → ä), fahre, fährst, fährt, fahrt]
+    - [schlafen (a → ä), schlafe, schläfst, schläft, schlaft]
+
+examples:
+  - de: Er spricht drei Sprachen.
+    en: He speaks three languages.
+    fa: او به سه زبان صحبت می‌کند.
+  - de: Lena fährt morgen nach Köln.
+    en: Lena is going to Cologne tomorrow.
+    fa: لنا فردا به کلن می‌رود.
+  - de: Liest du gern?
+    en: Do you like reading?
+    fa: کتاب خواندن را دوست داری؟
+  - de: Siehst du den Bus?
+    en: Can you see the bus?
+    fa: اتوبوس را می‌بینی؟
+  - de: Das Baby schläft schon.
+    en: The baby is already asleep.
+    fa: نوزاد دیگر خوابیده است.
+  - de: Isst du gern Fisch?
+    en: Do you like fish?
+    fa: ماهی دوست داری؟
+  - de: Mein Vater hilft mir.
+    en: My father is helping me.
+    fa: پدرم به من کمک می‌کند.
+  - de: Wir fahren am Montag nach Wien.
+    en: We are going to Vienna on Monday.
+    fa: ما دوشنبه به وین می‌رویم.
+
+mistakes:
+  - wrong: Er sprecht gut Deutsch.
+    right: Er spricht gut Deutsch.
+    why:
+      en: "*Sprechen* changes *e* to *i* with *er/sie/es*: *er spricht*."
+      fa: "واکهٔ *sprechen* در سوم‌شخص مفرد از *e* به *i* تغییر می‌کند: *er spricht*."
+      de: "Bei *sprechen* wird *e* bei *er/sie/es* zu *i*: *er spricht*."
+  - wrong: Ihr fährt zu schnell.
+    right: Ihr fahrt zu schnell.
+    why:
+      en: The vowel changes only with *du* and *er/sie/es*, not with *ihr*.
+      fa: واکه فقط با *du* و *er/sie/es* تغییر می‌کند، نه با *ihr*.
+      de: Der Vokal ändert sich nur bei *du* und *er/sie/es*, nicht bei *ihr*.
+  - wrong: Ich fähre nach Hause.
+    right: Ich fahre nach Hause.
+    why:
+      en: With *ich* the vowel stays as in the infinitive.
+      fa: با *ich* واکه همان واکهٔ مصدر می‌ماند.
+      de: Bei *ich* bleibt der Vokal wie im Infinitiv.
+  - wrong: Lisa nehmt den Bus.
+    right: Lisa nimmt den Bus.
+    why:
+      en: "*Nehmen* changes more than the vowel: *du nimmst*, *er/sie nimmt*."
+      fa: "در *nehmen* افزون بر واکه، حرف‌های دیگری هم تغییر می‌کنند: *du nimmst*، *er/sie nimmt*."
+      de: "Bei *nehmen* ändert sich mehr als der Vokal: *du nimmst*, *er/sie nimmt*."
+
+# 20 questions, every question type.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Er ___ gut Deutsch.
+    options: [spricht, sprecht, spreche]
+    answer: spricht
+    explanation:
+      en: "*Sprechen* changes *e* to *i* with *er*: *er spricht*."
+      fa: "واکهٔ *sprechen* در سوم‌شخص مفرد از *e* به *i* تغییر می‌کند: *er spricht*."
+      de: "Bei *sprechen* wird *e* bei *er* zu *i*: *er spricht*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ du heute nach Köln?
+    options: [Fährst, Fahrst, Fahrt]
+    answer: Fährst
+    explanation:
+      en: "*Fahren* changes *a* to *ä* with *du*: *du fährst*."
+      fa: "واکهٔ *fahren* با *du* از *a* به *ä* تغییر می‌کند: *du fährst*."
+      de: "Bei *fahren* wird *a* bei *du* zu *ä*: *du fährst*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Baby ___ viel.
+    options: [schläft, schlaft, schlafe]
+    answer: schläft
+    explanation:
+      en: "*Das Baby* is *es*, and *schlafen* changes *a* to *ä* with *es*: *es schläft*."
+      fa: "*das Baby* سوم‌شخص مفرد است (*es*) و واکهٔ *schlafen* در این شخص از *a* به *ä* تغییر می‌کند: *es schläft*."
+      de: "*Das Baby* ist *es*. Bei *schlafen* wird *a* bei *es* zu *ä*: *es schläft*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ du mir bitte?
+    options: [Hilfst, Helfst, Hilft]
+    answer: Hilfst
+    explanation:
+      en: "*Helfen* changes *e* to *i* with *du*: *du hilfst*."
+      fa: "واکهٔ *helfen* با *du* از *e* به *i* تغییر می‌کند: *du hilfst*."
+      de: "Bei *helfen* wird *e* bei *du* zu *i*: *du hilfst*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Anna ___ ein Buch.
+    options: [liest, lest, lese]
+    answer: liest
+    explanation:
+      en: "Anna is *sie* (singular), and *lesen* changes *e* to *ie*: *sie liest*."
+      fa: "آنا سوم‌شخص مفرد است (*sie*) و واکهٔ *lesen* از *e* به *ie* تغییر می‌کند: *sie liest*."
+      de: "Anna ist *sie* (Singular). Bei *lesen* wird *e* zu *ie*: *sie liest*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wir ___ heute einen Film.
+    options: [sehen, sieht, siehst]
+    answer: sehen
+    explanation:
+      en: "With *wir* the vowel does not change: *wir sehen*."
+      fa: "با *wir* واکه تغییر نمی‌کند: *wir sehen*."
+      de: "Bei *wir* bleibt der Vokal: *wir sehen*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ihr ___ zu schnell.
+    options: [fahrt, fährt, fährst]
+    answer: fahrt
+    explanation:
+      en: "With *ihr* the vowel does not change: *ihr fahrt*."
+      fa: "با *ihr* واکه تغییر نمی‌کند: *ihr fahrt*."
+      de: "Bei *ihr* bleibt der Vokal: *ihr fahrt*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Ich ___ einen Kaffee.
+    options: [nehme, nimme, nimmt]
+    answer: nehme
+    explanation:
+      en: "With *ich* the stem stays as in the infinitive: *ich nehme*."
+      fa: "با *ich* بن فعل همانند مصدر می‌ماند: *ich nehme*."
+      de: "Bei *ich* bleibt der Stamm wie im Infinitiv: *ich nehme*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Du ___ (sprechen) sehr gut Englisch.
+    answers: [sprichst]
+    explanation:
+      en: "*Sprechen* changes *e* to *i* with *du*: *du sprichst*."
+      fa: "واکهٔ *sprechen* با *du* از *e* به *i* تغییر می‌کند: *du sprichst*."
+      de: "Bei *sprechen* wird *e* bei *du* zu *i*: *du sprichst*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Mein Vater ___ (fahren) mit dem Bus.
+    answers: [fährt]
+    explanation:
+      en: "*Mein Vater* is *er*, and *fahren* changes *a* to *ä*: *er fährt*."
+      fa: "*mein Vater* سوم‌شخص مفرد است (*er*) و واکهٔ *fahren* از *a* به *ä* تغییر می‌کند: *er fährt*."
+      de: "*Mein Vater* ist *er*. Bei *fahren* wird *a* zu *ä*: *er fährt*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (sehen) du das Haus dort?
+    answers: [Siehst]
+    explanation:
+      en: "*Sehen* changes *e* to *ie* with *du*: *du siehst*."
+      fa: "واکهٔ *sehen* با *du* از *e* به *ie* تغییر می‌کند: *du siehst*."
+      de: "Bei *sehen* wird *e* bei *du* zu *ie*: *du siehst*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Tom ___ (essen) gern Pizza.
+    answers: [isst]
+    explanation:
+      en: "*Essen* changes *e* to *i* with *er*: *er isst*."
+      fa: "واکهٔ *essen* در سوم‌شخص مفرد از *e* به *i* تغییر می‌کند: *er isst*."
+      de: "Bei *essen* wird *e* bei *er* zu *i*: *er isst*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Lisa ___ (nehmen) den Zug.
+    answers: [nimmt]
+    explanation:
+      en: "*Nehmen* changes with *sie* (singular): *sie nimmt*, with *e* to *i* and a double *m*."
+      fa: "*nehmen* در سوم‌شخص مفرد تغییر می‌کند: *sie nimmt*، با *i* به جای *e* و دو *m*."
+      de: "Bei *nehmen* heißt es bei *sie* (Singular): *sie nimmt*, mit *i* und *mm*."
+  - id: true-1
+    type: true-false
+    prompt: Er gibt mir das Buch.
+    answer: true
+    explanation:
+      en: "*Geben* changes *e* to *i* with *er*: *er gibt*. The sentence is correct."
+      fa: "واکهٔ *geben* در سوم‌شخص مفرد از *e* به *i* تغییر می‌کند: *er gibt*. جمله درست است."
+      de: "Bei *geben* wird *e* bei *er* zu *i*: *er gibt*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ihr fährt nach Berlin.
+    answer: false
+    explanation:
+      en: "With *ihr* the vowel does not change: *Ihr fahrt nach Berlin*."
+      fa: "با *ihr* واکه تغییر نمی‌کند: *Ihr fahrt nach Berlin.*"
+      de: "Bei *ihr* bleibt der Vokal: *Ihr fahrt nach Berlin.*"
+  - id: true-3
+    type: true-false
+    prompt: Maria trägt eine rote Jacke.
+    answer: true
+    explanation:
+      en: "*Tragen* changes *a* to *ä* with *sie* (singular): *sie trägt*. The sentence is correct."
+      fa: "واکهٔ *tragen* در سوم‌شخص مفرد از *a* به *ä* تغییر می‌کند: *sie trägt*. جمله درست است."
+      de: "Bei *tragen* wird *a* bei *sie* (Singular) zu *ä*: *sie trägt*. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Ich spreche Deutsch, und mein Bruder sprecht Englisch.
+    answer: sprecht
+    explanation:
+      en: "*Mein Bruder* is *er*, so *sprechen* changes *e* to *i*: *er spricht*."
+      fa: "*mein Bruder* سوم‌شخص مفرد است (*er*)، پس واکهٔ *sprechen* از *e* به *i* تغییر می‌کند: *er spricht*."
+      de: "*Mein Bruder* ist *er*. Darum wird *e* zu *i*: *er spricht*."
+  - id: error-2
+    type: find-error
+    prompt: Du schlafst sehr lange.
+    answer: schlafst
+    explanation:
+      en: "*Schlafen* changes *a* to *ä* with *du*: *du schläfst*."
+      fa: "واکهٔ *schlafen* با *du* از *a* به *ä* تغییر می‌کند: *du schläfst*."
+      de: "Bei *schlafen* wird *a* bei *du* zu *ä*: *du schläfst*."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, fahre]
+      - [du, fährst]
+      - [er, fährt]
+      - [ihr, fahrt]
+    explanation:
+      en: "Only *du* and *er* change *a* to *ä*: *du fährst*, *er fährt*; *ich fahre*, *ihr fahrt*."
+      fa: "فقط با *du* و *er* واکهٔ *a* به *ä* تبدیل می‌شود: *du fährst*، *er fährt*؛ اما *ich fahre* و *ihr fahrt*."
+      de: "Nur bei *du* und *er* wird *a* zu *ä*: *du fährst*, *er fährt*; aber *ich fahre*, *ihr fahrt*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [was, isst, du, heute]
+    end: "?"
+    explanation:
+      en: "In a question with a question word, the verb comes second: *Was isst du heute?*"
+      fa: "در جملهٔ پرسشی با واژهٔ پرسشی، فعل در جایگاه دوم می‌آید: *Was isst du heute?*"
+      de: "In einer W-Frage steht das Verb an Position 2: *Was isst du heute?*"
+
+review:
+  reviewer: an independent AI agent (Claude, fresh blind subagent; not a person)
+  date: 2026-11-28
+  pool: 8a8768f93d324322

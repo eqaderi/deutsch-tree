@@ -4,10 +4,300 @@ kind: grammar
 level: A1
 chapter: a1-nouns-articles
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-059]
 title:
   en: "Plural formation"
   fa: "ساختن جمع"
   de: "Der Plural"
+
+explanations:
+  en:
+    rule: >
+      German has several plural endings: *-e*, *-er*, *-(e)n*, *-s* or none,
+      and *a*, *o* and *u* often take an umlaut (*der Apfel – die Äpfel*). A
+      few rules of thumb help. Most feminine nouns take *-(e)n*, and *-in*
+      becomes *-innen*. Masculine and neuter nouns in *-er*, *-el*, *-en*,
+      *-chen* and *-lein* take no ending. Nouns in *-a*, *-i* or *-o* and many
+      words from English take *-s*. Foreign nouns in *-um* change it to *-en*:
+      *das Zentrum – die Zentren*. The article in the plural is always *die*.
+      Some nouns have no plural (*das Obst*) and some have only a plural (*die
+      Eltern*), so learn each noun with its plural.
+  fa:
+    rule: >
+      آلمانی چند پایانهٔ جمع دارد: *-e*، *-er*، *-(e)n*، *-s* یا بدون پایانه؛
+      و *a*، *o* و *u* اغلب دو نقطه (*Umlaut*) می‌گیرند: *der Apfel – die
+      Äpfel*. چند قاعدهٔ سرانگشتی کمک می‌کند. بیشتر اسم‌های مؤنث *-(e)n*
+      می‌گیرند و *-in* به *-innen* تبدیل می‌شود. اسم‌های مذکر و خنثی که به
+      *-er*، *-el*، *-en*، *-chen* و *-lein* ختم می‌شوند پایانه‌ای نمی‌گیرند.
+      اسم‌هایی که به *-a*، *-i* یا *-o* ختم می‌شوند و بسیاری از واژه‌های
+      انگلیسی *-s* می‌گیرند. در اسم‌های بیگانه‌ای که به *-um* ختم می‌شوند،
+      *-um* به *-en* تبدیل می‌شود: *das Zentrum – die Zentren*. حرف تعریف جمع
+      همیشه *die* است. برخی اسم‌ها جمع ندارند (*das Obst*) و برخی فقط جمع
+      دارند (*die Eltern*)؛ پس هر اسم را همراه شکل جمعش یاد بگیرید.
+  de:
+    rule: >
+      Es gibt verschiedene Endungen im Plural: *-e*, *-er*, *-(e)n*, *-s* oder
+      keine Endung. Oft bekommen *a*, *o* und *u* einen Umlaut: *der Apfel –
+      die Äpfel*. Feminine Nomen haben meistens *-(e)n*, aus *-in* wird
+      *-innen*. Maskuline und neutrale Nomen auf *-er*, *-el*, *-en*, *-chen*
+      und *-lein* haben keine Endung. Nomen auf *-a*, *-i*, *-o* und viele
+      Wörter aus dem Englischen haben *-s*. Aus *-um* wird *-en*: *das Zentrum
+      – die Zentren*. Der Artikel im Plural ist immer *die*. Manche Nomen
+      haben keinen Plural (*das Obst*), manche nur einen Plural (*die
+      Eltern*). Lernen Sie jedes Nomen mit dem Plural.
+
+table:
+  columns:
+    - { en: Ending, fa: پایانهٔ جمع, de: Endung }
+    - { en: Singular, fa: مفرد, de: Singular }
+    - { en: Plural, fa: جمع, de: Plural }
+    - { en: Often for, fa: بیشتر در, de: Oft bei }
+  rows:
+    - ["-e", der Tisch, die Tische, "maskulin, neutral"]
+    - ["¨-e", der Stuhl, die Stühle, "maskulin, einige feminin"]
+    - ["-er", das Kind, die Kinder, neutral]
+    - ["¨-er", das Buch, die Bücher, neutral]
+    - ["-n", die Lampe, die Lampen, "feminin auf -e"]
+    - ["-en", die Frau, die Frauen, feminin]
+    - ["-nen", die Lehrerin, die Lehrerinnen, "feminin auf -in"]
+    - ["–", der Lehrer, die Lehrer, "maskulin, neutral auf -er, -el, -en, -chen, -lein"]
+    - ["¨", der Apfel, die Äpfel, "maskulin auf -er, -el, -en"]
+    - ["-s", das Auto, die Autos, "auf -a, -i, -o; Wörter aus dem Englischen"]
+    - ["-um → -en", das Zentrum, die Zentren, "Fremdwörter auf -um"]
+    - [kein Plural, das Obst, –, –]
+    - [nur Plural, –, die Eltern, –]
+
+examples:
+  - de: Drei Fahrkarten, bitte.
+    en: Three tickets, please.
+    fa: سه بلیت، لطفاً.
+  - de: Die Kinder spielen im Park.
+    en: The children are playing in the park.
+    fa: بچه‌ها در پارک بازی می‌کنند.
+  - de: Die Äpfel sind sehr süß.
+    en: The apples are very sweet.
+    fa: سیب‌ها خیلی شیرین‌اند.
+  - de: Die Lehrerinnen kommen heute später.
+    en: The (female) teachers are coming later today.
+    fa: معلم‌های زن امروز دیرتر می‌آیند.
+  - de: Die Autos stehen vor dem Haus.
+    en: The cars are parked in front of the house.
+    fa: ماشین‌ها جلوی خانه پارک شده‌اند.
+  - de: Berlin hat viele Museen.
+    en: Berlin has many museums.
+    fa: برلین موزه‌های زیادی دارد.
+  - de: Die Zimmer sind klein.
+    en: The rooms are small.
+    fa: اتاق‌ها کوچک‌اند.
+  - de: Meine Eltern wohnen in Hamburg.
+    en: My parents live in Hamburg.
+    fa: پدر و مادرم در هامبورگ زندگی می‌کنند.
+  - de: Das Obst ist frisch.
+    en: The fruit is fresh.
+    fa: میوه‌ها تازه‌اند.
+
+mistakes:
+  - wrong: Die Kinds spielen.
+    right: Die Kinder spielen.
+    why:
+      en: "*Kind* takes *-er*: *die Kinder*. *-s* is mostly for nouns in *-a*, *-i*, *-o* and English words."
+      fa: "*Kind* پایانهٔ *-er* می‌گیرد: *die Kinder*. *-s* بیشتر برای اسم‌های مختوم به *-a*، *-i*، *-o* و واژه‌های انگلیسی است."
+      de: "*Kind* hat *-er*: *die Kinder*. *-s* haben vor allem Nomen auf *-a*, *-i*, *-o* und Wörter aus dem Englischen."
+  - wrong: Ich habe zwei Bruder.
+    right: Ich habe zwei Brüder.
+    why:
+      en: "*Bruder* adds no ending, but *u* takes an umlaut: *die Brüder*."
+      fa: "*Bruder* پایانه‌ای نمی‌گیرد، ولی *u* دو نقطه می‌گیرد: *die Brüder*."
+      de: "*Bruder* hat keine Endung, aber einen Umlaut: *die Brüder*."
+  - wrong: Die Lehrerins sind nett.
+    right: Die Lehrerinnen sind nett.
+    why:
+      en: "*-in* becomes *-innen* in the plural, with a double *n*."
+      fa: "*-in* در جمع به *-innen* تبدیل می‌شود، با دو *n*."
+      de: "Aus *-in* wird im Plural *-innen*, mit zwei *n*."
+  - wrong: Ich kaufe Obste.
+    right: Ich kaufe Obst.
+    why:
+      en: "*Obst* has no plural. It already means fruit in general."
+      fa: "*Obst* جمع ندارد؛ خودش به معنای میوه به‌طور کلی است."
+      de: "*Obst* hat keinen Plural."
+
+questions:
+  - id: typed-1
+    type: typed-answer
+    prompt: "Plural: der Tisch"
+    answers: [die Tische, Tische]
+    explanation:
+      en: "*Tisch* takes *-e*: *die Tische*."
+      fa: "*Tisch* پایانهٔ *-e* می‌گیرد: *die Tische*."
+      de: "*Tisch* hat *-e*: *die Tische*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Plural: die Lampe"
+    answers: [die Lampen, Lampen]
+    explanation:
+      en: "A feminine noun in *-e* takes *-n*: *die Lampen*."
+      fa: "اسم مؤنثی که به *-e* ختم می‌شود *-n* می‌گیرد: *die Lampen*."
+      de: "Feminine Nomen auf *-e* haben *-n*: *die Lampen*."
+  - id: typed-3
+    type: typed-answer
+    prompt: "Plural: das Kind"
+    answers: [die Kinder, Kinder]
+    explanation:
+      en: "*Kind* takes *-er*: *die Kinder*."
+      fa: "*Kind* پایانهٔ *-er* می‌گیرد: *die Kinder*."
+      de: "*Kind* hat *-er*: *die Kinder*."
+  - id: typed-4
+    type: typed-answer
+    prompt: "Plural: die Lehrerin"
+    answers: [die Lehrerinnen, Lehrerinnen]
+    explanation:
+      en: "*-in* becomes *-innen*: *die Lehrerinnen*."
+      fa: "*-in* به *-innen* تبدیل می‌شود: *die Lehrerinnen*."
+      de: "Aus *-in* wird *-innen*: *die Lehrerinnen*."
+  - id: typed-5
+    type: typed-answer
+    prompt: "Plural: das Auto"
+    answers: [die Autos, Autos]
+    explanation:
+      en: "Nouns in *-o* take *-s*: *die Autos*."
+      fa: "اسم‌هایی که به *-o* ختم می‌شوند *-s* می‌گیرند: *die Autos*."
+      de: "Nomen auf *-o* haben *-s*: *die Autos*."
+  - id: typed-6
+    type: typed-answer
+    prompt: "Plural: der Apfel"
+    answers: [die Äpfel, Äpfel]
+    explanation:
+      en: "A masculine noun in *-el* takes no ending, but here *a* takes an umlaut: *die Äpfel*."
+      fa: "اسم مذکری که به *-el* ختم می‌شود پایانه‌ای نمی‌گیرد، ولی این‌جا *a* دو نقطه می‌گیرد: *die Äpfel*."
+      de: "Maskuline Nomen auf *-el* haben keine Endung. Hier bekommt *a* einen Umlaut: *die Äpfel*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Plural: das Buch"
+    options: [die Bücher, die Buchs, die Bucher]
+    answer: die Bücher
+    explanation:
+      en: "*Buch* takes *-er* and an umlaut: *die Bücher*."
+      fa: "*Buch* پایانهٔ *-er* و دو نقطه می‌گیرد: *die Bücher*."
+      de: "*Buch* hat *-er* und einen Umlaut: *die Bücher*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Plural: der Stuhl"
+    options: [die Stühle, die Stuhle, die Stuhls]
+    answer: die Stühle
+    explanation:
+      en: "*Stuhl* takes *-e* and an umlaut: *die Stühle*."
+      fa: "*Stuhl* پایانهٔ *-e* و دو نقطه می‌گیرد: *die Stühle*."
+      de: "*Stuhl* hat *-e* und einen Umlaut: *die Stühle*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Plural: das Zimmer"
+    options: [die Zimmer, die Zimmern, die Zimmers]
+    answer: die Zimmer
+    explanation:
+      en: "A neuter noun in *-er* takes no ending: *die Zimmer*."
+      fa: "اسم خنثایی که به *-er* ختم می‌شود پایانه‌ای نمی‌گیرد: *die Zimmer*."
+      de: "Neutrale Nomen auf *-er* haben keine Endung: *die Zimmer*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "Plural: das Zentrum"
+    options: [die Zentren, die Zentrums, die Zentrume]
+    answer: die Zentren
+    explanation:
+      en: "A foreign noun in *-um* changes it to *-en*: *die Zentren*."
+      fa: "در اسم بیگانه‌ای که به *-um* ختم می‌شود، *-um* به *-en* تبدیل می‌شود: *die Zentren*."
+      de: "Bei Fremdwörtern auf *-um* wird *-um* zu *-en*: *die Zentren*."
+  - id: choice-5
+    type: multiple-choice
+    prompt: Welches Nomen hat keinen Plural?
+    options: [Obst, Apfel, Banane]
+    answer: Obst
+    explanation:
+      en: "*Obst* has no plural; *die Äpfel* and *die Bananen* do."
+      fa: "*Obst* جمع ندارد؛ *die Äpfel* و *die Bananen* جمع‌اند."
+      de: "*Obst* hat keinen Plural. *Apfel* und *Banane* haben einen: *die Äpfel*, *die Bananen*."
+  - id: choice-6
+    type: multiple-choice
+    prompt: Welches Nomen gibt es nur im Plural?
+    options: [Eltern, Kinder, Brüder]
+    answer: Eltern
+    explanation:
+      en: "*Eltern* has no singular. *Kinder* and *Brüder* are plurals of *das Kind* and *der Bruder*."
+      fa: "*Eltern* مفرد ندارد. *Kinder* و *Brüder* جمع *das Kind* و *der Bruder* هستند."
+      de: "*Eltern* gibt es nur im Plural. *Kinder* und *Brüder* sind der Plural von *das Kind* und *der Bruder*."
+  - id: gap-1
+    type: gap-fill
+    prompt: Drei ___, bitte.
+    options: [Fahrkarten, Fahrkarte, Fahrkartes]
+    answer: Fahrkarten
+    explanation:
+      en: "Three is more than one, so the plural: *die Fahrkarte* takes *-n*, *Fahrkarten*."
+      fa: "سه یعنی بیش از یکی، پس شکل جمع لازم است: *die Fahrkarte* پایانهٔ *-n* می‌گیرد: *Fahrkarten*."
+      de: "Drei ist Plural: *die Fahrkarte* hat *-n*, also *Fahrkarten*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich habe zwei ___.
+    options: [Brüder, Bruder, Bruders]
+    answer: Brüder
+    explanation:
+      en: "*Bruder* adds no ending, but takes an umlaut: *Brüder*."
+      fa: "*Bruder* پایانه‌ای نمی‌گیرد، ولی دو نقطه می‌گیرد: *Brüder*."
+      de: "*Bruder* hat keine Endung, aber einen Umlaut: *Brüder*."
+  - id: true-1
+    type: true-false
+    prompt: Meine Eltern wohnen in Köln.
+    answer: true
+    explanation:
+      en: "*Eltern* is plural only, with a plural verb. The sentence is correct."
+      fa: "*Eltern* فقط جمع دارد و فعلش جمع است. جمله درست است."
+      de: "*Eltern* ist immer Plural. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir kaufen zwei Handys.
+    answer: true
+    explanation:
+      en: "*Handy* ends in *-y* like an English word and takes *-s*: *Handys*. The sentence is correct."
+      fa: "*Handy* مانند واژه‌ای انگلیسی است و *-s* می‌گیرد: *Handys*. جمله درست است."
+      de: "*Handy* hat *-s* wie ein Wort aus dem Englischen: *Handys*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Im Kühlschrank liegen drei Apfel.
+    answer: false
+    explanation:
+      en: "The plural of *der Apfel* is *die Äpfel*, with an umlaut: *drei Äpfel*."
+      fa: "جمع *der Apfel* با دو نقطه است: *drei Äpfel*."
+      de: "Der Plural von *der Apfel* ist *die Äpfel*, mit Umlaut: *drei Äpfel*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Die ___ (Freundin) von Anna kommen morgen.
+    answers: [Freundinnen]
+    explanation:
+      en: "*Kommen* shows a plural, and *-in* becomes *-innen*: *Freundinnen*."
+      fa: "فعل *kommen* جمع است و *-in* به *-innen* تبدیل می‌شود: *Freundinnen*."
+      de: "*Kommen* zeigt: Plural. Aus *-in* wird *-innen*: *Freundinnen*."
+  - id: error-1
+    type: find-error
+    prompt: Ich kaufe drei Brötchens.
+    answer: Brötchens
+    explanation:
+      en: "Nouns in *-chen* take no ending: *drei Brötchen*."
+      fa: "اسم‌هایی که به *-chen* ختم می‌شوند پایانه‌ای نمی‌گیرند: *drei Brötchen*."
+      de: "Nomen auf *-chen* haben keine Endung: *drei Brötchen*."
+  - id: match-1
+    type: matching
+    answer:
+      - [der Tag, die Tage]
+      - [das Haus, die Häuser]
+      - [die Blume, die Blumen]
+      - [das Hotel, die Hotels]
+    explanation:
+      en: "*Tag* takes *-e*, *Haus* *-er* with an umlaut, *Blume* *-n*, and *Hotel* (a foreign word) *-s*."
+      fa: "*Tag* پایانهٔ *-e* می‌گیرد، *Haus* پایانهٔ *-er* با دو نقطه، *Blume* پایانهٔ *-n* و *Hotel* (واژهٔ بیگانه) *-s*."
+      de: "*Tag* hat *-e*, *Haus* hat *-er* mit Umlaut, *Blume* hat *-n*, *Hotel* hat *-s*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 2ad731a08521081f

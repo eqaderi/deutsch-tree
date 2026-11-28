@@ -4,10 +4,266 @@ kind: grammar
 level: A1
 chapter: a1-nouns-articles
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-059]
 title:
   en: "Indefinite article"
-  fa: "حرف تعریف نامعیّن"
+  fa: "حرف تعریف نامعین"
   de: "Unbestimmter Artikel"
+
+explanations:
+  en:
+    rule: >
+      The indefinite article is *ein* for masculine and neuter nouns and
+      *eine* for feminine ones: *ein Tisch*, *ein Buch*, *eine Lampe*. It is
+      used like English "a": for something new, or one of many. *Der*, *die*
+      and *das* name something already known: *Da ist ein Hund. Der Hund ist
+      groß.* *Ein* has no plural, so the plural stands without an article:
+      *ein Tisch – Tische*.
+  fa:
+    rule: >
+      حرف تعریف نامعین برای اسم‌های مذکر و خنثی *ein* و برای اسم‌های مؤنث
+      *eine* است: *ein Tisch*، *ein Buch*، *eine Lampe*. کاربردش مانند «یک» یا
+      «ـی» در فارسی است: برای چیزی که تازه از آن سخن می‌گوییم یا یکی از چند
+      چیز است. *der*، *die* و *das* چیزی را نام می‌برند که شناخته است: *Da
+      ist ein Hund. Der Hund ist groß.* حرف تعریف *ein* جمع ندارد، پس اسم جمع
+      بدون حرف تعریف می‌آید: *ein Tisch – Tische*.
+  de:
+    rule: >
+      Der unbestimmte Artikel ist *ein* bei maskulinen und neutralen Nomen und
+      *eine* bei femininen Nomen: *ein Tisch*, *ein Buch*, *eine Lampe*. Man
+      sagt *ein* oder *eine*, wenn etwas neu ist. Ist es schon bekannt, sagt
+      man *der*, *die* oder *das*: *Da ist ein Hund. Der Hund ist groß.* Im
+      Plural gibt es keinen unbestimmten Artikel: *ein Tisch – Tische*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Tisch, ein Tisch, Das ist ein Tisch.]
+    - [die Lampe, eine Lampe, Das ist eine Lampe.]
+    - [das Buch, ein Buch, Hier ist ein Buch.]
+    - [die Tische (Plural), –, Das sind Tische.]
+
+examples:
+  - de: Das ist ein Tisch.
+    en: This is a table.
+    fa: این یک میز است.
+  - de: Das ist eine Lampe.
+    en: This is a lamp.
+    fa: این یک چراغ است.
+  - de: Hier ist ein Buch.
+    en: Here is a book.
+    fa: یک کتاب این‌جاست.
+  - de: Ein Mann wartet vor der Tür.
+    en: A man is waiting at the door.
+    fa: مردی جلوی در منتظر است.
+  - de: Eine Frau fragt nach dem Weg.
+    en: A woman is asking the way.
+    fa: زنی راه را می‌پرسد.
+  - de: Da kommt ein Bus.
+    en: Here comes a bus.
+    fa: یک اتوبوس دارد می‌آید.
+  - de: Ein Kaffee kostet 2 Euro.
+    en: A coffee costs 2 euros.
+    fa: یک قهوه ۲ یورو است.
+  - de: Ist das ein Hund oder eine Katze?
+    en: Is that a dog or a cat?
+    fa: آن سگ است یا گربه؟
+  - de: Da ist ein Hund. Der Hund ist groß.
+    en: There is a dog. The dog is big.
+    fa: آن‌جا سگی هست. سگ بزرگ است.
+  - de: Das sind Äpfel.
+    en: These are apples.
+    fa: این‌ها سیب‌اند.
+
+mistakes:
+  - wrong: Das ist ein Lampe.
+    right: Das ist eine Lampe.
+    why:
+      en: "*Lampe* is feminine, so *eine*: *eine Lampe*."
+      fa: "*Lampe* اسم مؤنث است، پس *eine* می‌آید: *eine Lampe*."
+      de: "*Lampe* ist feminin. Darum *eine*: *eine Lampe*."
+  - wrong: Das ist eine Buch.
+    right: Das ist ein Buch.
+    why:
+      en: "*Buch* is neuter, and neuter nouns take *ein*, like masculine ones."
+      fa: "*Buch* اسم خنثی است و اسم خنثی، مانند اسم مذکر، *ein* می‌گیرد."
+      de: "*Buch* ist neutral. Neutrale Nomen haben *ein*, wie maskuline Nomen."
+  - wrong: Das sind eine Äpfel.
+    right: Das sind Äpfel.
+    why:
+      en: "*Ein* has no plural. A plural noun stands without an article here."
+      fa: "*ein* جمع ندارد. این‌جا اسم جمع بدون حرف تعریف می‌آید."
+      de: "*Ein* hat keinen Plural. Hier steht das Nomen ohne Artikel."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist ___ Tisch.
+    options: [ein, eine]
+    answer: ein
+    explanation:
+      en: "*Tisch* is masculine: *ein Tisch*."
+      fa: "*Tisch* اسم مذکر است: *ein Tisch*."
+      de: "*Tisch* ist maskulin: *ein Tisch*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Das ist ___ Lampe.
+    options: [ein, eine]
+    answer: eine
+    explanation:
+      en: "*Lampe* is feminine: *eine Lampe*."
+      fa: "*Lampe* اسم مؤنث است: *eine Lampe*."
+      de: "*Lampe* ist feminin: *eine Lampe*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Hier ist ___ Buch.
+    options: [ein, eine]
+    answer: ein
+    explanation:
+      en: "*Buch* is neuter, and neuter nouns take *ein*: *ein Buch*."
+      fa: "*Buch* اسم خنثی است و اسم خنثی *ein* می‌گیرد: *ein Buch*."
+      de: "*Buch* ist neutral. Neutral heißt *ein*: *ein Buch*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ Frau fragt nach dem Weg.
+    options: [Ein, Eine]
+    answer: Eine
+    explanation:
+      en: "*Frau* is feminine: *eine Frau*."
+      fa: "*Frau* اسم مؤنث است: *eine Frau*."
+      de: "*Frau* ist feminin: *eine Frau*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Da kommt ___ Bus.
+    options: [ein, eine]
+    answer: ein
+    explanation:
+      en: "*Bus* is masculine: *ein Bus*."
+      fa: "*Bus* اسم مذکر است: *ein Bus*."
+      de: "*Bus* ist maskulin: *ein Bus*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Ist das ___ Katze?
+    options: [ein, eine]
+    answer: eine
+    explanation:
+      en: "*Katze* is feminine: *eine Katze*."
+      fa: "*Katze* اسم مؤنث است: *eine Katze*."
+      de: "*Katze* ist feminin: *eine Katze*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Das ist eine Uhr., Das ist ein Uhr., Das sind eine Uhren.]
+    answer: Das ist eine Uhr.
+    explanation:
+      en: "*Uhr* is feminine: *eine Uhr*. In the plural there is no *ein*: *Das sind Uhren.*"
+      fa: "*Uhr* اسم مؤنث است: *eine Uhr*. در جمع *ein* نمی‌آید: *Das sind Uhren.*"
+      de: "*Uhr* ist feminin: *eine Uhr*. Im Plural gibt es kein *ein*: *Das sind Uhren.*"
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Das sind Stühle., Das sind eine Stühle., Das sind ein Stühle.]
+    answer: Das sind Stühle.
+    explanation:
+      en: "*Ein* has no plural, so *Stühle* stands without an article."
+      fa: "*ein* جمع ندارد، پس *Stühle* بدون حرف تعریف می‌آید."
+      de: "*Ein* hat keinen Plural. *Stühle* steht ohne Artikel."
+  - id: true-1
+    type: true-false
+    prompt: Das ist eine Tasche.
+    answer: true
+    explanation:
+      en: "*Tasche* is feminine: *eine Tasche*. The sentence is correct."
+      fa: "*Tasche* اسم مؤنث است: *eine Tasche*. جمله درست است."
+      de: "*Tasche* ist feminin: *eine Tasche*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist ein Zeitung.
+    answer: false
+    explanation:
+      en: "*Zeitung* is feminine (*-ung*): *eine Zeitung*."
+      fa: "*Zeitung* اسم مؤنث است (*-ung*): *eine Zeitung*."
+      de: "*Zeitung* ist feminin (*-ung*): *eine Zeitung*."
+  - id: true-3
+    type: true-false
+    prompt: Ein Kind spielt im Garten.
+    answer: true
+    explanation:
+      en: "*Kind* is neuter: *ein Kind*. The sentence is correct."
+      fa: "*Kind* اسم خنثی است: *ein Kind*. جمله درست است."
+      de: "*Kind* ist neutral: *ein Kind*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist ___ (ein) Brille.
+    answers: [eine]
+    explanation:
+      en: "*Brille* is feminine: *eine Brille*."
+      fa: "*Brille* اسم مؤنث است: *eine Brille*."
+      de: "*Brille* ist feminin: *eine Brille*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das ist ___ (ein) Fahrrad.
+    answers: [ein]
+    explanation:
+      en: "*Fahrrad* is neuter: *ein Fahrrad*."
+      fa: "*Fahrrad* اسم خنثی است: *ein Fahrrad*."
+      de: "*Fahrrad* ist neutral: *ein Fahrrad*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (ein) Mann wartet vor der Tür.
+    answers: [Ein]
+    explanation:
+      en: "*Mann* is masculine: *ein Mann*."
+      fa: "*Mann* اسم مذکر است: *ein Mann*."
+      de: "*Mann* ist maskulin: *ein Mann*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Mit unbestimmtem Artikel: die Wohnung"
+    answers: [eine Wohnung]
+    explanation:
+      en: "*Wohnung* is feminine: *eine Wohnung*."
+      fa: "*Wohnung* اسم مؤنث است: *eine Wohnung*."
+      de: "*Wohnung* ist feminin: *eine Wohnung*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Mit unbestimmtem Artikel: das Zimmer"
+    answers: [ein Zimmer]
+    explanation:
+      en: "*Zimmer* is neuter: *ein Zimmer*."
+      fa: "*Zimmer* اسم خنثی است: *ein Zimmer*."
+      de: "*Zimmer* ist neutral: *ein Zimmer*."
+  - id: error-1
+    type: find-error
+    prompt: Das ist eine Computer.
+    answer: eine
+    explanation:
+      en: "*Computer* is masculine: *Das ist ein Computer.*"
+      fa: "*Computer* اسم مذکر است: *Das ist ein Computer.*"
+      de: "*Computer* ist maskulin: *Das ist ein Computer.*"
+  - id: error-2
+    type: find-error
+    prompt: Hier ist ein Tasse Tee.
+    answer: ein
+    explanation:
+      en: "*Tasse* is feminine: *Hier ist eine Tasse Tee.*"
+      fa: "*Tasse* اسم مؤنث است: *Hier ist eine Tasse Tee.*"
+      de: "*Tasse* ist feminin: *Hier ist eine Tasse Tee.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [ein Mann, wartet, vor der Tür]
+      - [vor der Tür, wartet, ein Mann]
+    explanation:
+      en: "The verb comes second. *Ein Mann* or the place can stand first."
+      fa: "فعل در جایگاه دوم می‌آید. *ein Mann* یا قید مکان می‌تواند در آغاز جمله باشد."
+      de: "Das Verb steht an Position 2. *Ein Mann* oder der Ort kann am Anfang stehen."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 19823abe29b3cc6c
