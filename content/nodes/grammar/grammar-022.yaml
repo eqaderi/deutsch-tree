@@ -1,13 +1,367 @@
-# Grammar list row 22.
+# Grammar list row 22. A2 scope: having something done. Allowing, the Perfekt
+# with lassen, lassen as "leave" and the reflexive come at B1.
 id: grammar-022
 kind: grammar
 level: A2
 chapter: a2-werden-lassen-passive
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-003, grammar-144]
 title:
   en: "*lassen* + *Infinitiv*"
   fa: "*lassen* + مصدر"
   de: "*lassen* + Infinitiv"
+
+explanations:
+  en:
+    rule: >
+      *Lassen* + infinitive says that you do not do something yourself: you
+      have someone else do it for you, often a firm or an expert. *Ich lasse
+      mein Auto reparieren.* (I'm having my car repaired.) Compare *Ich
+      repariere mein Auto*: I do it myself. *Lassen* is conjugated and stands
+      in position 2; the infinitive goes to the end, without *zu*, and closes
+      the *Satzklammer*. With *du* and *er* / *sie* / *es* the vowel takes an
+      umlaut: *du lässt*, *er lässt*; but *ihr lasst*.
+  fa:
+    rule: >
+      *lassen* + مصدر یعنی کاری را خودتان انجام نمی‌دهید، بلکه کس دیگری،
+      اغلب یک شرکت یا متخصص، آن را برایتان انجام می‌دهد: *Ich lasse mein
+      Auto reparieren.* (ماشینم را می‌دهم تعمیر کنند.) مقایسه کنید: *Ich
+      repariere mein Auto.* یعنی خودم آن را تعمیر می‌کنم. *lassen* صرف
+      می‌شود و در جایگاه دوم می‌آید؛ مصدر بدون *zu* به پایان جمله می‌رود و
+      قاب جمله (*Satzklammer*) را می‌بندد. واکهٔ *lassen* با *du* و
+      *er/sie/es* دو نقطه (*Umlaut*) می‌گیرد: *du lässt*، *er lässt*؛ اما
+      *ihr lasst*.
+  de:
+    rule: >
+      Mit *lassen* + Infinitiv sagt man: Ich mache das nicht selbst. Eine
+      andere Person macht es für mich, oft eine Firma oder ein Fachmann. *Ich
+      lasse mein Auto reparieren.* Das heißt: Eine Werkstatt repariert es.
+      *Ich repariere mein Auto* heißt: Ich mache es selbst. *Lassen* steht auf
+      Position 2, der Infinitiv ohne *zu* am Ende (Satzklammer). Bei *du* und
+      *er/sie/es* hat *lassen* einen Umlaut: *du lässt*, *er lässt*. Aber:
+      *ihr lasst*.
+
+diagrams:
+  - caption:
+      en: >
+        *Ich lasse mein Auto reparieren.* and *Du lässt die Jacke reinigen.*
+        In each sentence *lassen* (shaded) stands in position 2 and the
+        infinitive (shaded) at the very end. Together they frame the rest:
+        the *Satzklammer*.
+      fa: >
+        *Ich lasse mein Auto reparieren.* و *Du lässt die Jacke reinigen.* در
+        هر جمله *lassen* (رنگی) در جایگاه دوم و مصدر (رنگی) در پایان جمله
+        می‌آید. این دو بقیهٔ جمله را در میان می‌گیرند: قاب جمله
+        (*Satzklammer*).
+      de: >
+        *Ich lasse mein Auto reparieren.* und *Du lässt die Jacke reinigen.*
+        In jedem Satz steht *lassen* (farbig) auf Position 2 und der Infinitiv
+        (farbig) ganz am Ende. Sie sind die Satzklammer um den Rest.
+    labels:
+      second: { en: position 2, fa: جایگاه دوم, de: Position 2 }
+      end: { en: the end, fa: پایان جمله, de: Ende }
+    svg: |
+      <svg viewBox="0 0 320 196">
+        <text class="note" x="82" y="18" text-anchor="middle">{{second}}</text>
+        <text class="note" x="264" y="18" text-anchor="middle">{{end}}</text>
+        <!-- Ich lasse mein Auto reparieren. -->
+        <rect class="surface" x="2" y="26" width="46" height="40"/>
+        <rect class="shade" x="52" y="26" width="60" height="40"/>
+        <rect class="surface" x="116" y="26" width="90" height="40"/>
+        <rect class="shade" x="210" y="26" width="108" height="40"/>
+        <text class="label" x="25" y="52" text-anchor="middle">Ich</text>
+        <text class="label" x="82" y="52" text-anchor="middle">lasse</text>
+        <text class="label" x="161" y="52" text-anchor="middle">mein Auto</text>
+        <text class="label" x="264" y="52" text-anchor="middle">reparieren.</text>
+        <polyline class="line" points="82,70 82,80 264,80 264,70"/>
+        <text class="note" x="173" y="98" text-anchor="middle">Satzklammer</text>
+        <!-- Du lässt die Jacke reinigen. -->
+        <rect class="surface" x="2" y="116" width="46" height="40"/>
+        <rect class="shade" x="52" y="116" width="60" height="40"/>
+        <rect class="surface" x="116" y="116" width="90" height="40"/>
+        <rect class="shade" x="210" y="116" width="108" height="40"/>
+        <text class="label" x="25" y="142" text-anchor="middle">Du</text>
+        <text class="label" x="82" y="142" text-anchor="middle">lässt</text>
+        <text class="label" x="161" y="142" text-anchor="middle">die Jacke</text>
+        <text class="label" x="264" y="142" text-anchor="middle">reinigen.</text>
+        <polyline class="line" points="82,160 82,170 264,170 264,160"/>
+        <text class="note" x="173" y="188" text-anchor="middle">Satzklammer</text>
+      </svg>
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*lassen*", fa: "*lassen*", de: "*lassen*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, lasse, Ich lasse mein Auto reparieren.]
+    - [du, lässt, Du lässt die Jacke reinigen.]
+    - [er / sie / es, lässt, Sie lässt ihr Handy reparieren.]
+    - [wir, lassen, Wir lassen das Bad renovieren.]
+    - [ihr, lasst, Ihr lasst die Küche streichen.]
+    - [sie / Sie, lassen, Sie lassen eine Pizza liefern.]
+
+examples:
+  - de: Ich lasse mein Auto in der Werkstatt reparieren.
+    en: I'm having my car repaired at the garage.
+    fa: ماشینم را به تعمیرگاه می‌دهم تا تعمیرش کنند.
+  - de: Lässt du deine Jacke reinigen?
+    en: Are you having your jacket cleaned?
+    fa: کاپشنت را به خشک‌شویی می‌دهی؟
+  - de: Frau Krause lässt ihre Wohnung streichen.
+    en: Ms Krause is having her flat painted.
+    fa: خانم کراوزه آپارتمانش را می‌دهد رنگ کنند.
+  - de: Wir lassen heute Abend eine Pizza liefern.
+    en: We're having a pizza delivered tonight.
+    fa: امشب پیتزا سفارش می‌دهیم.
+  - de: Ich repariere mein Fahrrad selbst, aber mein Nachbar lässt sein Fahrrad reparieren.
+    en: I repair my bike myself, but my neighbour has his repaired.
+    fa: من دوچرخه‌ام را خودم تعمیر می‌کنم، اما همسایه‌ام دوچرخه‌اش را برای تعمیر می‌برد.
+  - de: Die Firma lässt die Büros jeden Abend putzen.
+    en: The company has the offices cleaned every evening.
+    fa: شرکت هر شب دفترها را می‌دهد تمیز کنند.
+  - de: Wo lasst ihr eure Fotos drucken?
+    en: Where do you (plural) have your photos printed?
+    fa: شما (جمع) عکس‌هایتان را کجا چاپ می‌کنید؟
+  - de: Herr Wolf lässt seine Uhr reparieren.
+    en: Mr Wolf is having his watch repaired.
+    fa: آقای وولف ساعتش را برای تعمیر می‌برد.
+
+mistakes:
+  - wrong: Ich lasse reparieren mein Auto.
+    right: Ich lasse mein Auto reparieren.
+    why:
+      en: "The infinitive goes to the very end of the sentence."
+      fa: "مصدر به پایان جمله می‌رود."
+      de: "Der Infinitiv steht ganz am Ende."
+  - wrong: Er lasst sein Auto reparieren.
+    right: Er lässt sein Auto reparieren.
+    why:
+      en: "With *er*, *sie* and *es* the form is *lässt*, with an umlaut."
+      fa: "با *er*، *sie* و *es* صورت فعل *lässt* است، با دو نقطه (*Umlaut*)."
+      de: "Bei *er*, *sie* und *es* heißt es *lässt*, mit Umlaut."
+  - wrong: Ich lasse meine Jacke gereinigt.
+    right: Ich lasse meine Jacke reinigen.
+    why:
+      en: 'After *lassen* comes the infinitive, not the *Partizip II*, although English says "have it cleaned".'
+      fa: "پس از *lassen* مصدر می‌آید، نه صفت مفعولی (*Partizip II*)."
+      de: "Nach *lassen* steht der Infinitiv, nicht das Partizip II."
+  - wrong: Wir lassen das Bad zu renovieren.
+    right: Wir lassen das Bad renovieren.
+    why:
+      en: "*Lassen* takes the infinitive without *zu*, as a modal verb does."
+      fa: "*lassen* مانند فعل وجهی، مصدر را بدون *zu* می‌گیرد."
+      de: "Nach *lassen* steht der Infinitiv ohne *zu*, wie bei einem Modalverb."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich ___ mein Auto in der Werkstatt reparieren.
+    options: [lässt, lasse, lasst]
+    answer: lasse
+    explanation:
+      en: "With *ich* the form is *lasse*."
+      fa: "با *ich* صورت فعل *lasse* است."
+      de: "Bei *ich* heißt es *lasse*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ du deine Jacke reinigen?
+    options: [Lasse, Lasst, Lässt]
+    answer: Lässt
+    explanation:
+      en: "With *du* the form is *lässt*, with an umlaut."
+      fa: "با *du* صورت فعل *lässt* است، با دو نقطه (*Umlaut*)."
+      de: "Bei *du* heißt es *lässt*, mit Umlaut."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wo ___ ihr eure Fotos drucken?
+    options: [lässt, lasst, lassen]
+    answer: lasst
+    explanation:
+      en: "With *ihr* the form is *lasst*, without an umlaut."
+      fa: "با *ihr* صورت فعل *lasst* است، بدون دو نقطه (*Umlaut*)."
+      de: "Bei *ihr* heißt es *lasst*, ohne Umlaut."
+  - id: gap-4
+    type: gap-fill
+    prompt: Frau Krause lässt ihre Wohnung ___.
+    options: [gestrichen, streichen, zu streichen]
+    answer: streichen
+    explanation:
+      en: "After *lassen* comes the infinitive, without *zu*: *streichen*."
+      fa: "پس از *lassen* مصدر بدون *zu* می‌آید: *streichen*."
+      de: "Nach *lassen* steht der Infinitiv ohne *zu*: *streichen*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Unsere Nachbarn ___ das Dach reparieren.
+    options: [lassen, lässt, lasst]
+    answer: lassen
+    explanation:
+      en: "*Unsere Nachbarn* is plural (*sie*), so the form is *lassen*."
+      fa: "*unsere Nachbarn* سوم‌شخص جمع است (*sie*)، پس صورت فعل *lassen* است."
+      de: "*Unsere Nachbarn* ist Plural (*sie*). Darum heißt es *lassen*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich lasse meine Uhr reparieren.
+    options:
+      - Ich repariere meine Uhr selbst.
+      - Meine Uhr ist schon repariert.
+      - Eine andere Person repariert meine Uhr.
+    answer: Eine andere Person repariert meine Uhr.
+    explanation:
+      en: "*Lassen* + infinitive: someone else does the work for me."
+      fa: "*lassen* + مصدر یعنی کس دیگری کار را برایم انجام می‌دهد."
+      de: "*Lassen* + Infinitiv: Eine andere Person macht die Arbeit für mich."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Tom repariert sein Fahrrad selbst.
+    options:
+      - Eine Werkstatt repariert Toms Fahrrad.
+      - Tom macht die Arbeit allein.
+      - Tom lässt sein Fahrrad reparieren.
+    answer: Tom macht die Arbeit allein.
+    explanation:
+      en: "Without *lassen*, Tom does it himself. *Er lässt es reparieren* would mean someone else does it."
+      fa: "بدون *lassen*، تام کار را خودش انجام می‌دهد. *er lässt es reparieren* یعنی کس دیگری آن را تعمیر می‌کند."
+      de: "Ohne *lassen* macht Tom es selbst. *Er lässt es reparieren* heißt: Eine andere Person macht es."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Tom kann sein Auto nicht selbst reparieren. Er ___ es in der Werkstatt reparieren.
+    options: [hat, lässt, ist]
+    answer: lässt
+    explanation:
+      en: "The garage does the work for him: *er lässt es reparieren*."
+      fa: "تعمیرگاه کار را برایش انجام می‌دهد: *er lässt es reparieren*."
+      de: "Die Werkstatt macht die Arbeit für ihn: *Er lässt es reparieren.*"
+  - id: true-1
+    type: true-false
+    prompt: Er lässt sein Handy reparieren.
+    answer: true
+    explanation:
+      en: "*Er lässt* with an umlaut, and the infinitive at the end. The sentence is correct."
+      fa: "*er lässt* با دو نقطه (*Umlaut*)، و مصدر در پایان جمله. جمله درست است."
+      de: "*Er lässt* mit Umlaut, der Infinitiv am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich lasse meinen Mantel gereinigt.
+    answer: false
+    explanation:
+      en: "After *lassen* comes the infinitive: *Ich lasse meinen Mantel reinigen.*"
+      fa: "پس از *lassen* مصدر می‌آید: *Ich lasse meinen Mantel reinigen.*"
+      de: "Nach *lassen* steht der Infinitiv: *Ich lasse meinen Mantel reinigen.*"
+  - id: true-3
+    type: true-false
+    prompt: Du lasst die Fenster putzen.
+    answer: false
+    explanation:
+      en: "With *du* the form is *lässt*, with an umlaut: *Du lässt die Fenster putzen.*"
+      fa: "با *du* صورت فعل *lässt* است، با دو نقطه (*Umlaut*): *Du lässt die Fenster putzen.*"
+      de: "Bei *du* heißt es *lässt*, mit Umlaut: *Du lässt die Fenster putzen.*"
+  - id: true-4
+    type: true-false
+    prompt: Wir lassen am Samstag eine Pizza liefern.
+    answer: true
+    explanation:
+      en: "*Wir lassen* in position 2, *liefern* at the end. The sentence is correct."
+      fa: "*wir lassen* در جایگاه دوم و *liefern* در پایان جمله. جمله درست است."
+      de: "*Wir lassen* auf Position 2, *liefern* am Ende. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Maria ___ (lassen) morgen ihr Fahrrad reparieren.
+    answers: [lässt]
+    explanation:
+      en: "*Maria* is *sie* (singular), so the form is *lässt*, with an umlaut."
+      fa: "ماریا سوم‌شخص مفرد است (*sie*)، پس صورت فعل *lässt* است، با دو نقطه (*Umlaut*)."
+      de: "*Maria* ist *sie* (Singular). Darum heißt es *lässt*, mit Umlaut."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Du ___ (lassen) morgen dein Auto waschen, oder?
+    answers: [lässt]
+    explanation:
+      en: "With *du* the form is *lässt*, with an umlaut."
+      fa: "با *du* صورت فعل *lässt* است، با دو نقطه (*Umlaut*)."
+      de: "Bei *du* heißt es *lässt*, mit Umlaut."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir ___ (lassen) nächste Woche das Bad renovieren.
+    answers: [lassen]
+    explanation:
+      en: "With *wir* the form is *lassen*."
+      fa: "با *wir* صورت فعل *lassen* است."
+      de: "Bei *wir* heißt es *lassen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich lasse meinen Computer ___ (reparieren).
+    answers: [reparieren]
+    explanation:
+      en: "After *lassen* the infinitive stays as it is: *reparieren*."
+      fa: "پس از *lassen* مصدر بی‌تغییر می‌آید: *reparieren*."
+      de: "Nach *lassen* bleibt der Infinitiv: *reparieren*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Ihr ___ (lassen) morgen die Küche streichen, oder?
+    answers: [lasst]
+    explanation:
+      en: "With *ihr* the form is *lasst*, without an umlaut."
+      fa: "با *ihr* صورت فعل *lasst* است، بدون دو نقطه (*Umlaut*)."
+      de: "Bei *ihr* heißt es *lasst*, ohne Umlaut."
+  - id: error-1
+    type: find-error
+    prompt: Ich lasse mein Fahrrad repariert.
+    answer: repariert
+    explanation:
+      en: "After *lassen* comes the infinitive: *Ich lasse mein Fahrrad reparieren.*"
+      fa: "پس از *lassen* مصدر می‌آید: *Ich lasse mein Fahrrad reparieren.*"
+      de: "Nach *lassen* steht der Infinitiv: *Ich lasse mein Fahrrad reparieren.*"
+  - id: error-2
+    type: find-error
+    prompt: Er lasst seine Wohnung streichen.
+    answer: lasst
+    explanation:
+      en: "With *er* the form is *lässt*, with an umlaut."
+      fa: "با *er* صورت فعل *lässt* است، با دو نقطه (*Umlaut*)."
+      de: "Bei *er* heißt es *lässt*, mit Umlaut."
+  - id: error-3
+    type: find-error
+    prompt: Lasst du dein Auto waschen?
+    answer: Lasst
+    explanation:
+      en: "With *du* the form is *lässt*: *Lässt du dein Auto waschen?*"
+      fa: "با *du* صورت فعل *lässt* است: *Lässt du dein Auto waschen?*"
+      de: "Bei *du* heißt es *lässt*: *Lässt du dein Auto waschen?*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [wann, lässt, du, dein Auto, reparieren]
+    end: "?"
+    explanation:
+      en: "*Lässt* comes after the question word, the infinitive *reparieren* at the end."
+      fa: "*lässt* پس از واژهٔ پرسشی می‌آید و مصدر *reparieren* در پایان جمله."
+      de: "*Lässt* steht nach dem Fragewort, der Infinitiv *reparieren* am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wo, lassen, Sie, Ihren Mantel, reinigen]
+    end: "?"
+    explanation:
+      en: "*Lassen* comes after the question word, the infinitive *reinigen* at the end."
+      fa: "*lassen* پس از واژهٔ پرسشی می‌آید و مصدر *reinigen* در پایان جمله."
+      de: "*Lassen* steht nach dem Fragewort, der Infinitiv *reinigen* am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, lasse]
+      - [du, lässt]
+      - [ihr, lasst]
+      - [wir, lassen]
+    explanation:
+      en: "*Ich lasse*, *du lässt*, *ihr lasst*, *wir lassen*: only *du* and *er* / *sie* / *es* take the umlaut."
+      fa: "*ich lasse*، *du lässt*، *ihr lasst*، *wir lassen*: فقط *du* و *er/sie/es* دو نقطه (*Umlaut*) می‌گیرند."
+      de: "*Ich lasse*, *du lässt*, *ihr lasst*, *wir lassen*: Nur *du* und *er/sie/es* haben einen Umlaut."
+
+review:
+  reviewer: an independent AI agent (fresh Claude Opus 5.5 subagent, blind pass on
+    the review sheet only; not a person)
+  date: 2026-11-28
+  pool: 534dec317de8d1f9
