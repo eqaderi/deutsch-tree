@@ -1,8 +1,9 @@
 /**
  * Mixing the things a question shows: the pieces of a word ordering question,
- * one side of a matching question.
+ * one side of a matching question, the options of a choice on a review sheet.
  *
- * The node file holds them in the order that is the answer. `mixed` puts them
+ * The node file holds them in the order that is the answer, or with the
+ * right option where its writer put it, usually first. `mixed` puts them
  * in an order that depends only on which things they are, so it tells nothing
  * about the answer, and it is the same on every run: a reviewer's sheet can
  * be compared with the question later, and a build gives the same bundle.

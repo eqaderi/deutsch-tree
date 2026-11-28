@@ -4,10 +4,292 @@ kind: grammar
 level: A2
 chapter: a2-polite-forms
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-034]
 title:
   en: "*hätte gern*"
   fa: "*hätte gern*"
   de: "*hätte gern*"
+
+explanations:
+  en:
+    rule: >
+      *Hätte gern* is the polite way to order or ask for something in a shop,
+      a café or at a counter: *Ich hätte gern ein Brot, bitte.* It means the
+      same as *ich möchte*. *Hätte* is a form of *haben*, its *Konjunktiv II*,
+      the form for wishes and politeness. *Hätte* stands in position 2 (in a
+      yes/no question, first), *gern* comes straight after it, or after the
+      subject in a question, and then the thing you want, in the *Akkusativ*:
+      *einen Kaffee*, *eine Cola*, *ein Brot*. *Ich* and *er* / *sie* / *es*
+      have the same form, *hätte*. *Hätte gern* names a thing, not an action:
+      for an action, use *möchte* or *würde gern* with an infinitive. The
+      person serving you asks *Was hätten Sie gern?*
+  fa:
+    rule: >
+      با *hätte gern* در فروشگاه، کافه یا پشت باجه مؤدبانه چیزی را سفارش
+      می‌دهیم یا می‌خواهیم: *Ich hätte gern ein Brot, bitte.* معنای آن همان
+      *ich möchte* است. *hätte* صورت *Konjunktiv II* (وجه شرطی) فعل *haben*
+      است، صورتی که برای آرزو و ادب به کار می‌رود. *hätte* در جایگاه دوم
+      می‌آید (در پرسش بله یا نه، در آغاز جمله) و *gern* بلافاصله پس از آن (در
+      پرسش، پس از فاعل). سپس چیزی که می‌خواهید در حالت *Akkusativ* (حالت
+      مفعولی) می‌آید: *einen Kaffee*، *eine Cola*، *ein Brot*. *ich* و *er* /
+      *sie* / *es* صورت یکسان *hätte* را دارند. پس از *hätte gern* نام یک چیز
+      می‌آید، نه یک کار؛ برای کار، *möchte* یا *würde gern* را با مصدر به کار
+      ببرید. فروشنده یا پیشخدمت می‌پرسد: *Was hätten Sie gern?*
+  de:
+    rule: >
+      Mit *hätte gern* bestellt man höflich, zum Beispiel im Geschäft, im Café
+      oder am Schalter: *Ich hätte gern ein Brot, bitte.* Es bedeutet das
+      Gleiche wie *ich möchte*. *Hätte* ist eine Form von *haben*, der
+      Konjunktiv II. *Hätte* steht auf Position 2 (in der Ja/Nein-Frage am
+      Anfang). *Gern* steht direkt danach, in der Frage nach dem Subjekt. Dann
+      kommt die Sache, die man möchte, im Akkusativ: *einen Kaffee*, *eine
+      Cola*, *ein Brot*. *Ich* und *er* / *sie* / *es* haben die gleiche Form
+      *hätte*. Nach *hätte gern* steht eine Sache, keine Aktion. Für eine
+      Aktion sagt man *möchte* oder *würde gern* + Infinitiv. Die Verkäuferin
+      fragt: *Was hätten Sie gern?*
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*hätte gern*", fa: "*hätte gern*", de: "*hätte gern*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, hätte gern, Ich hätte gern einen Kaffee.]
+    - [du, hättest gern, Was hättest du gern?]
+    - [er / sie / es, hätte gern, Sie hätte gern ein Glas Wasser.]
+    - [wir, hätten gern, Wir hätten gern die Rechnung.]
+    - [ihr, hättet gern, Was hättet ihr gern?]
+    - [sie / Sie, hätten gern, Was hätten Sie gern?]
+
+examples:
+  - de: Ich hätte gern ein Brot, bitte.
+    en: I'd like a loaf of bread, please.
+    fa: لطفاً یک نان می‌خواستم.
+  - de: Ich hätte gern einen Kaffee mit Milch.
+    en: I'd like a coffee with milk.
+    fa: یک قهوه با شیر می‌خواستم.
+  - de: Was hätten Sie gern?
+    en: What would you like?
+    fa: چه میل دارید؟
+  - de: Wir hätten gern die Rechnung, bitte.
+    en: We'd like the bill, please.
+    fa: لطفاً صورت‌حساب را بیاورید.
+  - de: Ich hätte gern ein Kilo Tomaten.
+    en: I'd like a kilo of tomatoes.
+    fa: یک کیلو گوجه‌فرنگی می‌خواستم.
+  - de: Hätten Sie gern eine Tüte?
+    en: Would you like a bag?
+    fa: کیسه هم می‌خواهید؟
+  - de: Meine Tochter hätte gern ein Eis.
+    en: My daughter would like an ice cream.
+    fa: دخترم یک بستنی می‌خواهد.
+  - de: Ich hätte gern eine Fahrkarte nach Hamburg.
+    en: I'd like a ticket to Hamburg.
+    fa: یک بلیت به هامبورگ می‌خواستم.
+
+mistakes:
+  - wrong: Ich hätte gern einen Tee trinken.
+    right: Ich hätte gern einen Tee.
+    why:
+      en: "*Hätte gern* names a thing and takes no infinitive. With an action: *Ich würde gern einen Tee trinken.*"
+      fa: "پس از *hätte gern* فقط نام چیزی می‌آید و مصدر نمی‌آید. برای کار: *Ich würde gern einen Tee trinken.*"
+      de: "Nach *hätte gern* steht eine Sache, kein Infinitiv. Mit Aktion: *Ich würde gern einen Tee trinken.*"
+  - wrong: Ich gern hätte ein Brot.
+    right: Ich hätte gern ein Brot.
+    why:
+      en: "*Hätte* stands in position 2, and *gern* comes after it."
+      fa: "*hätte* در جایگاه دوم می‌آید و *gern* پس از آن."
+      de: "*Hätte* steht auf Position 2, *gern* kommt danach."
+  - wrong: Wir hätte gern zwei Brötchen.
+    right: Wir hätten gern zwei Brötchen.
+    why:
+      en: "With *wir* the form is *hätten*."
+      fa: "با *wir* صورت فعل *hätten* است."
+      de: "Bei *wir* heißt es *hätten*."
+  - wrong: Ich hatte gern einen Tee, bitte.
+    right: Ich hätte gern einen Tee, bitte.
+    why:
+      en: "*Hatte*, without the umlaut, is the past (*Präteritum*) of *haben*. To order, you need *hätte*, with *ä*."
+      fa: "*hatte* بی دو نقطه (*Umlaut*) گذشتهٔ ساده (*Präteritum*) فعل *haben* است. برای سفارش، *hätte* با *ä* لازم است."
+      de: "*Hatte* ohne Umlaut ist das Präteritum von *haben*. Zum Bestellen braucht man *hätte* mit *ä*."
+  - wrong: Hätten Sie gern einen Tüte?
+    right: Hätten Sie gern eine Tüte?
+    why:
+      en: "*Tüte* is a *die* noun. In the *Akkusativ* only *der* nouns change (*einen*); *eine* stays *eine*."
+      fa: "*Tüte* اسم مؤنث (*die*) است. در حالت *Akkusativ* فقط اسم مذکر (*der*) تغییر می‌کند (*einen*)؛ *eine* همان *eine* می‌ماند."
+      de: "*Tüte* hat den Artikel *die*. Im Akkusativ ändert sich nur *der* (*einen*). *Eine* bleibt *eine*."
+
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Guten Tag, ich ___ gern ein Brot.
+    options: [hätte, hättest, hätten]
+    answer: hätte
+    explanation:
+      en: With *ich* the form is *hätte*.
+      fa: با *ich* صورت فعل *hätte* است.
+      de: Bei *ich* heißt es *hätte*.
+  - id: q2
+    type: gap-fill
+    prompt: Was ___ du gern?
+    options: [hätte, hättest, hättet]
+    answer: hättest
+    explanation:
+      en: With *du* the form is *hättest*.
+      fa: با *du* صورت فعل *hättest* است.
+      de: Bei *du* heißt es *hättest*.
+  - id: q3
+    type: gap-fill
+    prompt: Wir ___ gern die Speisekarte, bitte.
+    options: [hätten, hättet, hätte]
+    answer: hätten
+    explanation:
+      en: With *wir* the form is *hätten*.
+      fa: با *wir* صورت فعل *hätten* است.
+      de: Bei *wir* heißt es *hätten*.
+  - id: q4
+    type: gap-fill
+    prompt: Was ___ ihr gern zum Nachtisch?
+    options: [hättet, hätten, hättest]
+    answer: hättet
+    explanation:
+      en: With *ihr* the form is *hättet*.
+      fa: با *ihr* صورت فعل *hättet* است.
+      de: Bei *ihr* heißt es *hättet*.
+  - id: q5
+    type: multiple-choice
+    prompt: Was hätten Sie gern? – Ich hätte gern ___ Kaffee.
+    options: [einen, ein, einem]
+    answer: einen
+    explanation:
+      en: "*Der Kaffee* is what you want, the object in the *Akkusativ*: *einen Kaffee*."
+      fa: "*der Kaffee* چیزی است که می‌خواهید، یعنی مفعول در حالت *Akkusativ*: *einen Kaffee*."
+      de: "*Der Kaffee* ist das, was man möchte. Akkusativ: *einen Kaffee*."
+  - id: q6
+    type: multiple-choice
+    prompt: "Was bedeutet „Ich hätte gern eine Cola.“?"
+    options: [Ich möchte eine Cola., Ich hatte eine Cola., Ich habe eine Cola.]
+    answer: Ich möchte eine Cola.
+    explanation:
+      en: "*Hätte gern* means the same as *möchte*: a polite order. *Hatte* is the past, *habe* the present."
+      fa: "*hätte gern* همان معنای *möchte* را دارد: سفارشی مؤدبانه. *hatte* گذشته است و *habe* حال."
+      de: "*Hätte gern* bedeutet das Gleiche wie *möchte*: eine höfliche Bestellung. *Hatte* ist Präteritum, *habe* Präsens."
+  - id: q7
+    type: multiple-choice
+    prompt: "ich / hätte / gern / ein Kilo Äpfel"
+    options: [Ich hätte gern ein Kilo Äpfel., Ich gern hätte ein Kilo Äpfel., Ich hätte ein Kilo gern Äpfel.]
+    answer: Ich hätte gern ein Kilo Äpfel.
+    explanation:
+      en: "*Hätte* is in position 2, *gern* right after it, then what you want."
+      fa: "*hätte* در جایگاه دوم است، *gern* بلافاصله پس از آن و سپس چیزی که می‌خواهید."
+      de: "*Hätte* steht auf Position 2, *gern* direkt danach, dann die Sache."
+  - id: q8
+    type: true-false
+    prompt: Hätten Sie gern eine Tüte?
+    answer: true
+    explanation:
+      en: "*Hätten* first, *gern* after *Sie*, then *eine Tüte*. The sentence is correct."
+      fa: "*hätten* در آغاز، *gern* پس از *Sie* و سپس *eine Tüte*. جمله درست است."
+      de: "*Hätten* am Anfang, *gern* nach *Sie*, dann *eine Tüte*. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Ich hätte gern ein Stück Kuchen essen.
+    answer: false
+    explanation:
+      en: "*Hätte gern* takes no infinitive: *Ich hätte gern ein Stück Kuchen.*"
+      fa: "پس از *hätte gern* مصدر نمی‌آید: *Ich hätte gern ein Stück Kuchen.*"
+      de: "Nach *hätte gern* steht kein Infinitiv: *Ich hätte gern ein Stück Kuchen.*"
+  - id: q10
+    type: true-false
+    prompt: Mein Mann hättet gern ein Bier.
+    answer: false
+    explanation:
+      en: "*Mein Mann* is *er*: *Mein Mann hätte gern ein Bier.*"
+      fa: "*mein Mann* سوم‌شخص مفرد است (*er*): *Mein Mann hätte gern ein Bier.*"
+      de: "*Mein Mann* ist *er*: *Mein Mann hätte gern ein Bier.*"
+  - id: q11
+    type: find-error
+    prompt: Wir hätte gern zwei Tassen Tee.
+    answer: hätte
+    explanation:
+      en: "With *wir* the form is *hätten*: *Wir hätten gern zwei Tassen Tee.*"
+      fa: "با *wir* صورت فعل *hätten* است: *Wir hätten gern zwei Tassen Tee.*"
+      de: "Bei *wir* heißt es *hätten*: *Wir hätten gern zwei Tassen Tee.*"
+  - id: q12
+    type: find-error
+    prompt: Ich hätte gern einen Flasche Wasser.
+    answer: einen
+    explanation:
+      en: "*Flasche* is a *die* noun, so the *Akkusativ* is *eine Flasche*."
+      fa: "*Flasche* اسم مؤنث (*die*) است، پس در حالت *Akkusativ* می‌شود *eine Flasche*."
+      de: "*Flasche* hat den Artikel *die*. Akkusativ: *eine Flasche*."
+  - id: q13
+    type: word-order
+    answers:
+      - [wie viele Brötchen, hätten, Sie, gern]
+    end: "?"
+    explanation:
+      en: "*Wie viele Brötchen* is the question word, then *hätten*, the subject and *gern*."
+      fa: "*wie viele Brötchen* بخش پرسشی است، سپس *hätten*، فاعل و *gern*."
+      de: "*Wie viele Brötchen* ist das Fragewort, dann *hätten*, Subjekt und *gern*."
+  - id: q14
+    type: word-order
+    answers:
+      - [welchen Kuchen, hätten, Sie, gern]
+    end: "?"
+    explanation:
+      en: "*Welchen Kuchen* is the question word, then *hätten*, the subject and *gern*."
+      fa: "*welchen Kuchen* بخش پرسشی است، سپس *hätten*، فاعل و *gern*."
+      de: "*Welchen Kuchen* ist das Fragewort, dann *hätten*, Subjekt und *gern*."
+  - id: q15
+    type: typed-gap-fill
+    prompt: Wir ___ (hätte) gern zwei Brötchen.
+    answers: [hätten]
+    explanation:
+      en: With *wir* the form is *hätten*.
+      fa: با *wir* صورت فعل *hätten* است.
+      de: Bei *wir* heißt es *hätten*.
+  - id: q16
+    type: typed-gap-fill
+    prompt: Kinder, was ___ (hätte) ihr gern zum Frühstück?
+    answers: [hättet]
+    explanation:
+      en: With *ihr* the form is *hättet*.
+      fa: با *ihr* صورت فعل *hättet* است.
+      de: Bei *ihr* heißt es *hättet*.
+  - id: q17
+    type: typed-gap-fill
+    prompt: Frau Klein, was ___ (hätte) Sie gern?
+    answers: [hätten]
+    explanation:
+      en: With the polite *Sie* the form is *hätten*.
+      fa: با *Sie* رسمی صورت فعل *hätten* است.
+      de: Bei *Sie* (höflich) heißt es *hätten*.
+  - id: q18
+    type: typed-gap-fill
+    prompt: Ich ___ (haben) gern einen Tee, bitte.
+    answers: [hätte]
+    explanation:
+      en: "To order politely, *haben* becomes *hätte*: *Ich hätte gern einen Tee, bitte.*"
+      fa: "برای سفارش مؤدبانه، *haben* به *hätte* تبدیل می‌شود: *Ich hätte gern einen Tee, bitte.*"
+      de: "Zum höflichen Bestellen wird *haben* zu *hätte*: *Ich hätte gern einen Tee, bitte.*"
+  - id: q19
+    type: matching
+    answer:
+      - [ich, hätte]
+      - [du, hättest]
+      - [wir, hätten]
+      - [ihr, hättet]
+    explanation:
+      en: "The forms of *hätte*: *ich hätte*, *du hättest*, *wir hätten*, *ihr hättet*."
+      fa: "صورت‌های *hätte*: *ich hätte*، *du hättest*، *wir hätten*، *ihr hättet*."
+      de: "Die Formen von *hätte*: *ich hätte*, *du hättest*, *wir hätten*, *ihr hättet*."
+
+review:
+  reviewer: two independent AI agents (fresh Claude Opus 5.5 subagents, blind
+    passes on the review sheet only; the second on q13 after it was rewritten;
+    not people)
+  date: 2026-11-28
+  pool: 9b5fa47b11048d41

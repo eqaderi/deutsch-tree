@@ -181,3 +181,22 @@ test('content with errors gets no audio, and the errors are reported', async () 
   expect(said).toEqual([])
   expect(report.errors).toHaveLength(1)
 })
+
+test('a word the voice misreads is respelt in what the voice is given, and the file is that of the respelt text', async () => {
+  const dir = await contentWithoutAudio({
+    [VOCABULARY]: changeNode((node) => {
+      node.words[0].example.de = 'Ich bin wieder fit.'
+    }),
+  })
+  const { said, synthesise } = fakeVoice()
+
+  await generateAudio(dir, synthesise)
+
+  expect(said.filter((item) => item.text.includes('wieder')).map((item) => `${item.voice}: ${item.text}`)).toEqual([
+    'thorsten: Ich bin wieder fitt.',
+    'kerstin: Ich bin wieder fitt.',
+  ])
+  // The key of the respelt text (`printf 'thorsten\nIch bin wieder fitt.' | shasum -a 256`), so a
+  // changed respelling gives the item a new file and the old one is removed.
+  expect(await fileText(dir, '5c1b4f582d1d97bc')).toBe('thorsten: Ich bin wieder fitt.')
+})

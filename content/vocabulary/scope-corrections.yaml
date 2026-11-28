@@ -997,6 +997,11 @@ changes:
       plural: Einkaufszentren,
       reason: 'the marker "-en" would give "Einkaufszentrumen"; the plural is "Einkaufszentren"',
     }
+  - {
+      word: Stipendium,
+      plural: Stipendien,
+      reason: 'the marker "-en" would give "Stipendiumen"; the plural is "Stipendien"',
+    }
   # Nouns that the lists print without article or plural.
   - { word: Achtung, article: die, plural: sg }
   - { word: Grad, article: der, plural: "-e" }

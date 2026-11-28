@@ -4,10 +4,367 @@ kind: grammar
 level: A2
 chapter: a2-subordinate-clauses
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-139, grammar-144]
 title:
   en: "Subordinate clause word order"
   fa: "ترتیب واژه‌ها در جملهٔ پیرو"
   de: "Wortstellung im Nebensatz"
+
+explanations:
+  en:
+    rule: >
+      A subordinate clause (*Nebensatz*) begins with a word such as *weil*,
+      *dass* or *wenn*, and its conjugated verb goes to the very end: *Ich
+      bleibe zu Hause, weil ich krank bin.* The subject usually comes right
+      after that first word. If the verb has two parts, the conjugated part
+      comes last, after the infinitive or the *Partizip II*: *…, weil ich
+      arbeiten muss.* *…, weil ich den Bus verpasst habe.* A separable verb is
+      written as one word at the end: *…, weil der Zug gleich abfährt.* A
+      reflexive pronoun does not go to the end; it stays next to the subject:
+      *…, weil ich mich nicht wohlfühle.* A comma always separates the two
+      clauses. If the subordinate clause comes first, it fills position 1 of
+      the whole sentence, so the main clause starts with its verb: *Wenn Sie
+      Zeit haben, kommen Sie uns besuchen.* After a *wenn* clause you may add
+      *dann* before that verb: *Wenn du Zeit hast, dann komm vorbei.*
+  fa:
+    rule: >
+      جملهٔ پیرو (*Nebensatz*) با واژه‌ای مانند *weil*، *dass* یا *wenn* آغاز
+      می‌شود و فعل صرف‌شدهٔ آن به پایان جمله می‌رود: *Ich bleibe zu Hause,
+      weil ich krank bin.* فاعل معمولاً درست پس از همان واژهٔ آغازین می‌آید.
+      اگر فعل دو بخش داشته باشد، بخش صرف‌شده پس از مصدر یا صفت مفعولی
+      (*Partizip II*) و در آخر می‌آید: *…, weil ich arbeiten muss.* و *…, weil
+      ich den Bus verpasst habe.* فعل جداشدنی در پایان جملهٔ پیرو به هم
+      چسبیده و یک‌جا نوشته می‌شود: *…, weil der Zug gleich abfährt.* ضمیر
+      انعکاسی به پایان جمله نمی‌رود و کنار فاعل می‌ماند: *…, weil ich mich
+      nicht wohlfühle.* میان دو جمله همیشه ویرگول می‌آید. اگر جملهٔ پیرو
+      اول بیاید، جایگاه اول کل جمله را پر می‌کند؛ پس جملهٔ پایه با فعلش آغاز
+      می‌شود: *Wenn Sie Zeit haben, kommen Sie uns besuchen.* پس از جملهٔ
+      پیرو با *wenn* می‌توان پیش از این فعل *dann* آورد: *Wenn du Zeit hast,
+      dann komm vorbei.*
+  de:
+    rule: >
+      Ein Nebensatz beginnt mit einem Wort wie *weil*, *dass* oder *wenn*.
+      Das konjugierte Verb steht ganz am Ende: *Ich bleibe zu Hause, weil ich
+      krank bin.* Das Subjekt steht meistens direkt nach diesem Wort. Hat das
+      Verb zwei Teile, steht der konjugierte Teil ganz am Schluss, nach dem
+      Infinitiv oder dem Partizip II: *…, weil ich arbeiten muss.* *…, weil
+      ich den Bus verpasst habe.* Ein trennbares Verb schreibt man am Ende
+      zusammen: *…, weil der Zug gleich abfährt.* Das Reflexivpronomen geht
+      nicht ans Ende. Es bleibt beim Subjekt: *…, weil ich mich nicht
+      wohlfühle.* Zwischen den zwei Sätzen steht immer ein Komma. Steht der
+      Nebensatz zuerst, ist er Position 1. Dann beginnt der Hauptsatz mit dem
+      Verb: *Wenn Sie Zeit haben, kommen Sie uns besuchen.* Nach einem
+      *wenn*-Satz kann vor dem Verb noch *dann* stehen: *Wenn du Zeit hast,
+      dann komm vorbei.*
+
+# Three rows of slots. Top: a main clause, verb in position 2. Middle: the
+# same words as a subordinate clause, the verb moved to the end (the arrow).
+# Bottom: a subordinate clause in position 1, the main verb right after it.
+# The verbs are shaded.
+diagrams:
+  - caption:
+      en: >
+        *Ich bin heute krank.* has its verb *bin* in position 2. In *…, weil
+        ich heute krank bin.* the verb goes to the end. In *Wenn es regnet,
+        bleibe ich hier.* the whole subordinate clause is position 1, so the
+        verb *bleibe* comes right after it. The verbs are shaded.
+      fa: >
+        در *Ich bin heute krank.* فعل *bin* در جایگاه دوم است. در *…, weil ich
+        heute krank bin.* فعل به پایان جمله می‌رود. در *Wenn es regnet, bleibe
+        ich hier.* کل جملهٔ پیرو جایگاه اول است، پس فعل *bleibe* درست پس از
+        آن می‌آید. فعل‌ها رنگی‌اند.
+      de: >
+        In *Ich bin heute krank.* steht das Verb *bin* auf Position 2. In *…,
+        weil ich heute krank bin.* steht das Verb am Ende. In *Wenn es regnet,
+        bleibe ich hier.* ist der ganze Nebensatz Position 1. Darum kommt das
+        Verb *bleibe* direkt danach. Die Verben sind farbig.
+    labels:
+      main:
+        {
+          en: "main clause: verb in position 2",
+          fa: "جملهٔ پایه: فعل در جایگاه دوم",
+          de: "Hauptsatz: Verb auf Position 2",
+        }
+      sub: { en: "subordinate clause: verb at the end", fa: "جملهٔ پیرو: فعل در پایان", de: "Nebensatz: Verb am Ende" }
+      first: { en: "subordinate clause first", fa: "جملهٔ پیرو در آغاز", de: "Nebensatz zuerst" }
+      pos1: { en: position 1, fa: جایگاه اول, de: Position 1 }
+      pos2: { en: position 2, fa: جایگاه دوم, de: Position 2 }
+    svg: |
+      <svg viewBox="0 0 320 292">
+        <text class="note" x="160" y="18" text-anchor="middle">{{main}}</text>
+        <!-- Ich bin heute krank. -->
+        <rect class="surface" x="2" y="26" width="60" height="40"/>
+        <rect class="shade" x="66" y="26" width="56" height="40"/>
+        <rect class="surface" x="126" y="26" width="120" height="40"/>
+        <text class="label" x="32" y="52" text-anchor="middle">Ich</text>
+        <text class="label" x="94" y="52" text-anchor="middle">bin</text>
+        <text class="label" x="186" y="52" text-anchor="middle">heute krank.</text>
+        <!-- the verb moves to the end -->
+        <path class="line" d="M94,70 C94,100 284,86 284,110"/>
+        <polygon class="line" points="278,108 290,108 284,116"/>
+        <!-- …, weil ich heute krank bin. -->
+        <rect class="surface" x="2" y="120" width="60" height="40"/>
+        <rect class="surface" x="66" y="120" width="56" height="40"/>
+        <rect class="surface" x="126" y="120" width="120" height="40"/>
+        <rect class="shade" x="250" y="120" width="68" height="40"/>
+        <text class="label" x="32" y="146" text-anchor="middle">weil</text>
+        <text class="label" x="94" y="146" text-anchor="middle">ich</text>
+        <text class="label" x="186" y="146" text-anchor="middle">heute krank</text>
+        <text class="label" x="284" y="146" text-anchor="middle">bin.</text>
+        <text class="note" x="160" y="180" text-anchor="middle">{{sub}}</text>
+        <!-- Wenn es regnet, bleibe ich hier. -->
+        <text class="note" x="160" y="214" text-anchor="middle">{{first}}</text>
+        <rect class="surface" x="2" y="222" width="138" height="40"/>
+        <rect class="shade" x="144" y="222" width="68" height="40"/>
+        <rect class="surface" x="216" y="222" width="102" height="40"/>
+        <text class="label" x="71" y="248" text-anchor="middle">Wenn es regnet,</text>
+        <text class="label" x="178" y="248" text-anchor="middle">bleibe</text>
+        <text class="label" x="267" y="248" text-anchor="middle">ich hier.</text>
+        <text class="note" x="71" y="282" text-anchor="middle">{{pos1}}</text>
+        <text class="note" x="178" y="282" text-anchor="middle">{{pos2}}</text>
+      </svg>
+
+table:
+  columns:
+    - { en: Main clause, fa: جملهٔ پایه, de: Hauptsatz }
+    - { en: Conjunction, fa: حرف ربط, de: Konjunktion }
+    - { en: Subject, fa: فاعل, de: Subjekt }
+    - { en: Middle, fa: میانهٔ جمله, de: Mitte }
+    - { en: "End: verb", fa: "پایان جمله: فعل", de: "Ende: Verb" }
+  rows:
+    - ["Ich bleibe zu Hause,", weil, ich, krank, bin.]
+    - ["Ich weiß,", dass, du, morgen, arbeiten musst.]
+    - ["Er ist müde,", weil, er, schlecht, geschlafen hat.]
+    - ["Wir müssen laufen,", weil, der Zug, gleich, abfährt.]
+    - ["Ich gehe ins Bett,", weil, ich, mich nicht, wohlfühle.]
+    - ["Ich hoffe,", dass, ihr, am Samstag, kommt.]
+
+examples:
+  - de: Ich bleibe heute zu Hause, weil ich krank bin.
+    en: I'm staying at home today because I'm ill.
+    fa: امروز در خانه می‌مانم، چون بیمارم.
+  - de: Ich glaube, dass der Film um acht Uhr anfängt.
+    en: I think the film starts at eight o'clock.
+    fa: فکر می‌کنم فیلم ساعت هشت شروع می‌شود.
+  - de: Wir müssen schnell laufen, weil der Zug gleich abfährt.
+    en: We have to run fast because the train is leaving any minute.
+    fa: باید تند بدویم، چون قطار همین حالا حرکت می‌کند.
+  - de: Ich weiß, dass du morgen arbeiten musst.
+    en: I know that you have to work tomorrow.
+    fa: می‌دانم که فردا باید کار کنی.
+  - de: Er ist müde, weil er schlecht geschlafen hat.
+    en: He is tired because he slept badly.
+    fa: خسته است، چون بد خوابیده است.
+  - de: Sie kommt nicht mit, weil sie sich nicht wohlfühlt.
+    en: She isn't coming along because she doesn't feel well.
+    fa: با ما نمی‌آید، چون حالش خوب نیست.
+  - de: Weil es regnet, nehmen wir den Bus.
+    en: Because it's raining, we'll take the bus.
+    fa: چون باران می‌بارد، با اتوبوس می‌رویم.
+  - de: Wenn Sie Zeit haben, kommen Sie uns besuchen.
+    en: If you have time, come and visit us.
+    fa: اگر وقت دارید، به دیدن ما بیایید.
+  - de: Wenn du Hunger hast, dann iss doch ein Brot.
+    en: If you're hungry, then have a sandwich.
+    fa: اگر گرسنه‌ای، پس یک ساندویچ بخور.
+
+mistakes:
+  - wrong: Ich bleibe zu Hause, weil ich bin krank.
+    right: Ich bleibe zu Hause, weil ich krank bin.
+    why:
+      en: "In the subordinate clause the conjugated verb goes to the very end: *weil ich krank bin*."
+      fa: "در جملهٔ پیرو فعل صرف‌شده به پایان جمله می‌رود: *weil ich krank bin*."
+      de: "Im Nebensatz steht das konjugierte Verb ganz am Ende: *weil ich krank bin*."
+  - wrong: Weil es regnet, wir nehmen den Bus.
+    right: Weil es regnet, nehmen wir den Bus.
+    why:
+      en: "The subordinate clause is position 1, so the main verb comes next: *nehmen wir*."
+      fa: "جملهٔ پیرو جایگاه اول است، پس فعل جملهٔ پایه بلافاصله پس از آن می‌آید: *nehmen wir*."
+      de: "Der Nebensatz ist Position 1. Darum kommt danach sofort das Verb: *nehmen wir*."
+  - wrong: Wir laufen, weil der Zug fährt gleich ab.
+    right: Wir laufen, weil der Zug gleich abfährt.
+    why:
+      en: "In a subordinate clause a separable verb stays in one piece at the end: *abfährt*."
+      fa: "در جملهٔ پیرو فعل جداشدنی جدا نمی‌شود و یک‌جا در پایان می‌آید: *abfährt*."
+      de: "Im Nebensatz bleibt das trennbare Verb zusammen und steht am Ende: *abfährt*."
+  - wrong: Ich weiß, dass du musst morgen arbeiten.
+    right: Ich weiß, dass du morgen arbeiten musst.
+    why:
+      en: "The modal verb is the conjugated part, so it comes last, after the infinitive: *arbeiten musst*."
+      fa: "فعل وجهی بخش صرف‌شده است، پس در آخر و پس از مصدر می‌آید: *arbeiten musst*."
+      de: "Das Modalverb ist der konjugierte Teil. Es steht ganz am Schluss, nach dem Infinitiv: *arbeiten musst*."
+  - wrong: Ich komme zu spät, weil ich habe den Bus verpasst.
+    right: Ich komme zu spät, weil ich den Bus verpasst habe.
+    why:
+      en: "In the *Perfekt* the conjugated *habe* goes to the end, after the *Partizip II*: *verpasst habe*."
+      fa: "در گذشتهٔ نقلی (*Perfekt*) فعل صرف‌شدهٔ *habe* پس از صفت مفعولی و در پایان می‌آید: *verpasst habe*."
+      de: "Im Perfekt steht das konjugierte *habe* am Ende, nach dem Partizip II: *verpasst habe*."
+
+questions:
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich komme heute nicht, weil …
+    options: [ich krank bin., ich bin krank., bin ich krank.]
+    answer: ich krank bin.
+    explanation:
+      en: "After *weil* the conjugated verb goes to the end: *ich krank bin*."
+      fa: "پس از *weil* فعل صرف‌شده به پایان جمله می‌رود: *ich krank bin*."
+      de: "Nach *weil* steht das konjugierte Verb am Ende: *ich krank bin*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Weil es regnet, …
+    options: [nehmen wir den Bus., wir nehmen den Bus., wir den Bus nehmen.]
+    answer: nehmen wir den Bus.
+    explanation:
+      en: "The subordinate clause is position 1, so the main verb follows it directly: *nehmen wir*."
+      fa: "جملهٔ پیرو جایگاه اول است، پس فعل جملهٔ پایه بلافاصله پس از آن می‌آید: *nehmen wir*."
+      de: "Der Nebensatz ist Position 1. Danach kommt sofort das Verb: *nehmen wir*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wenn Sie Zeit haben, …
+    options: [kommen Sie uns besuchen., Sie kommen uns besuchen., Sie uns besuchen kommen.]
+    answer: kommen Sie uns besuchen.
+    explanation:
+      en: "The *wenn* clause is position 1, so the main clause starts with its verb: *kommen Sie*."
+      fa: "جملهٔ پیرو با *wenn* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *kommen Sie*."
+      de: "Der *wenn*-Satz ist Position 1. Der Hauptsatz beginnt mit dem Verb: *kommen Sie*."
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir müssen laufen, weil der Zug gleich ___.
+    options: [abfährt, fährt ab, ab fährt]
+    answer: abfährt
+    explanation:
+      en: "In a subordinate clause the separable verb is one word at the end: *abfährt*."
+      fa: "در جملهٔ پیرو فعل جداشدنی یک‌جا در پایان می‌آید: *abfährt*."
+      de: "Im Nebensatz steht das trennbare Verb zusammen am Ende: *abfährt*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich weiß, dass du morgen ___.
+    options: [arbeiten musst, musst arbeiten, arbeitest musst]
+    answer: arbeiten musst
+    explanation:
+      en: "The conjugated modal verb comes last, after the infinitive: *arbeiten musst*."
+      fa: "فعل وجهی صرف‌شده در آخر و پس از مصدر می‌آید: *arbeiten musst*."
+      de: "Das konjugierte Modalverb steht ganz am Schluss, nach dem Infinitiv: *arbeiten musst*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Er ist müde, weil er schlecht ___.
+    options: [geschlafen hat, hat geschlafen, schlafen hat]
+    answer: geschlafen hat
+    explanation:
+      en: "In the *Perfekt* the conjugated *hat* comes last, after the *Partizip II*: *geschlafen hat*."
+      fa: "در گذشتهٔ نقلی (*Perfekt*) فعل صرف‌شدهٔ *hat* پس از صفت مفعولی و در آخر می‌آید: *geschlafen hat*."
+      de: "Im Perfekt steht das konjugierte *hat* am Schluss, nach dem Partizip II: *geschlafen hat*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Sie kommt nicht mit, weil ___ nicht wohlfühlt.
+    options: [sie sich, sich sie, sie]
+    answer: sie sich
+    explanation:
+      en: "*Sich wohlfühlen* needs its *sich*, and the reflexive pronoun stays next to the subject: *sie sich*."
+      fa: "*sich wohlfühlen* ضمیر انعکاسی *sich* را لازم دارد و این ضمیر کنار فاعل می‌ماند: *sie sich*."
+      de: "*Sich wohlfühlen* braucht *sich*. Das Reflexivpronomen steht beim Subjekt: *sie sich*."
+  - id: true-1
+    type: true-false
+    prompt: Ich glaube, dass der Film um acht Uhr anfängt.
+    answer: true
+    explanation:
+      en: "After *dass* the verb is at the end, and the separable verb is one word: *anfängt*. The sentence is correct."
+      fa: "پس از *dass* فعل در پایان جمله است و فعل جداشدنی یک‌جا آمده است: *anfängt*. جمله درست است."
+      de: "Nach *dass* steht das Verb am Ende, das trennbare Verb zusammen: *anfängt*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wenn du Zeit hast, du kannst mich besuchen.
+    answer: false
+    explanation:
+      en: "After the *wenn* clause the verb comes first: *Wenn du Zeit hast, kannst du mich besuchen.*"
+      fa: "پس از جملهٔ پیرو با *wenn* فعل اول می‌آید: *Wenn du Zeit hast, kannst du mich besuchen.*"
+      de: "Nach dem *wenn*-Satz kommt zuerst das Verb: *Wenn du Zeit hast, kannst du mich besuchen.*"
+  - id: true-3
+    type: true-false
+    prompt: Ich komme zu spät, weil ich habe den Bus verpasst.
+    answer: false
+    explanation:
+      en: "*Habe* goes to the end of the subordinate clause: *weil ich den Bus verpasst habe*."
+      fa: "*habe* به پایان جملهٔ پیرو می‌رود: *weil ich den Bus verpasst habe*."
+      de: "*Habe* steht am Ende vom Nebensatz: *weil ich den Bus verpasst habe*."
+  - id: true-4
+    type: true-false
+    prompt: Weil ich müde bin, gehe ich ins Bett.
+    answer: true
+    explanation:
+      en: "*Bin* ends the subordinate clause, and the main clause starts with its verb *gehe*. The sentence is correct."
+      fa: "*bin* جملهٔ پیرو را می‌بندد و جملهٔ پایه با فعل *gehe* آغاز می‌شود. جمله درست است."
+      de: "*Bin* steht am Ende vom Nebensatz, der Hauptsatz beginnt mit dem Verb *gehe*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Ich hoffe, dass du dich bald besser fühlst.
+    answer: true
+    explanation:
+      en: "The reflexive pronoun *dich* stays next to the subject, and the verb *fühlst* is at the end. The sentence is correct."
+      fa: "ضمیر انعکاسی *dich* کنار فاعل مانده و فعل *fühlst* در پایان است. جمله درست است."
+      de: "Das Reflexivpronomen *dich* steht beim Subjekt, das Verb *fühlst* am Ende. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir müssen uns beeilen, weil der Bus gleich ___ (abfahren).
+    answers: [abfährt]
+    explanation:
+      en: "The separable verb stays one word at the end of the subordinate clause: *abfährt*."
+      fa: "فعل جداشدنی در پایان جملهٔ پیرو یک‌جا می‌ماند: *abfährt*."
+      de: "Das trennbare Verb bleibt am Ende vom Nebensatz zusammen: *abfährt*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Es tut mir leid, dass ich so spät ___ (anrufen).
+    answers: [anrufe, angerufen habe]
+    explanation:
+      en: "The verb goes to the end, and the separable verb is one word: *anrufe*."
+      fa: "فعل به پایان جمله می‌رود و فعل جداشدنی یک‌جا نوشته می‌شود: *anrufe*."
+      de: "Das Verb steht am Ende, das trennbare Verb zusammen: *anrufe*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich bin froh, dass du heute ___ (mitkommen).
+    answers: [mitkommst, mitgekommen bist]
+    explanation:
+      en: "In the *dass* clause the separable verb stays one word at the end: *mitkommst*."
+      fa: "در جملهٔ پیرو با *dass* فعل جداشدنی یک‌جا در پایان می‌آید: *mitkommst*."
+      de: "Im *dass*-Satz steht das trennbare Verb zusammen am Ende: *mitkommst*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wenn ich Zeit habe, ___ (helfen) ich dir.
+    answers: [helfe]
+    explanation:
+      en: "The *wenn* clause is position 1, so the verb *helfe* comes next, before the subject."
+      fa: "جملهٔ پیرو با *wenn* جایگاه اول است، پس فعل *helfe* پیش از فاعل می‌آید."
+      de: "Der *wenn*-Satz ist Position 1. Danach kommt das Verb *helfe*, vor dem Subjekt."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["ich bleibe heute zu Hause,", weil, ich, krank, bin]
+    explanation:
+      en: "*Weil* starts the subordinate clause, the subject follows, and the verb *bin* closes it."
+      fa: "*weil* جملهٔ پیرو را آغاز می‌کند، فاعل پس از آن می‌آید و فعل *bin* آن را می‌بندد."
+      de: "*Weil* beginnt den Nebensatz, dann kommt das Subjekt, am Ende das Verb *bin*."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["wenn es regnet,", bleiben, wir, zu Hause]
+    explanation:
+      en: "The subordinate clause is position 1, so the verb *bleiben* comes next, then the subject."
+      fa: "جملهٔ پیرو جایگاه اول است، پس فعل *bleiben* پس از آن و سپس فاعل می‌آید."
+      de: "Der Nebensatz ist Position 1. Dann kommt das Verb *bleiben*, danach das Subjekt."
+  - id: order-3
+    type: word-order
+    answers:
+      - ["ich weiß,", dass, du, arbeiten, musst]
+    explanation:
+      en: "The conjugated *musst* comes last, after the infinitive *arbeiten*."
+      fa: "فعل صرف‌شدهٔ *musst* در آخر و پس از مصدر *arbeiten* می‌آید."
+      de: "Das konjugierte *musst* steht ganz am Schluss, nach dem Infinitiv *arbeiten*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: a46ed6ea2e59d8de

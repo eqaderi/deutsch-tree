@@ -420,13 +420,13 @@ Comes after the grammar chapter: "Polite requests and advice (Konjunktiv II)"
 3 nodes, 74 words:
 
 **A2-W5.1 School and school subjects** · مدرسه و درس‌ها · Schule und Schulfächer · 27 words  
-das Fach · die Biologie · die Chemie · das Deutsch · das Englisch · das Französisch · die Geografie · das Latein · die Mathematik · die Physik · die Sozialkunde · der Stundenplan · die Klassenfahrt · das Sekretariat · der Direktor · die Note · das Zeugnis · das Heft · der Stift · die Tafel · das Wörterbuch · die Bibliothek · die Cafeteria · der Antwortbogen · der Prüfer · bestehen · das Abitur
+das Fach · der Stundenplan · das Deutsch · das Englisch · das Französisch · das Latein · die Mathematik · die Physik · die Chemie · die Biologie · die Geografie · die Sozialkunde · das Heft · der Stift · die Tafel · das Wörterbuch · die Bibliothek · die Cafeteria · das Sekretariat · der Direktor · die Note · das Zeugnis · der Antwortbogen · der Prüfer · bestehen · das Abitur · die Klassenfahrt
 
 **A2-W5.2 Training, studying and exams** · آموزش، تحصیل و امتحان · Ausbildung, Studium und Prüfungen · 21 words  
-die Ausbildung · der/die Auszubildende · die Universität · das Stipendium · die Kenntnisse (Pl.) · die Erfahrung · der Workshop · das Projekt · üben · prüfen · kontrollieren · (sich) eintragen · markieren · das Rätsel · das Quiz · schriftlich · die Reihe · aufpassen · d. h. · usw. · z. B.
+die Ausbildung · der/die Auszubildende · die Universität · das Stipendium · die Kenntnisse (Pl.) · die Erfahrung · der Workshop · das Projekt · üben · prüfen · kontrollieren · (sich) eintragen · markieren · aufpassen · schriftlich · die Reihe · das Rätsel · das Quiz · z. B. · d. h. · usw.
 
 **A2-W5.3 Jobs and the workplace** · شغل‌ها و محل کار · Berufe und Arbeitsplatz · 26 words  
-das Büro · der/die Angestellte · der Mitarbeiter · der Handwerker · der Mechaniker · der Techniker · der Kaufmann · die Kauffrau · das Gehalt · der Vertrag · die Bewerbung · sich bewerben · kündigen · die Messe · herstellen · vereinbaren · die Erlaubnis · erlaubt · verbieten · dringend · geehrt · freiwillig · privat · teilnehmen · ändern · austragen
+das Büro · der/die Angestellte · der Mitarbeiter · der Handwerker · der Mechaniker · der Techniker · der Kaufmann · die Kauffrau · die Bewerbung · sich bewerben · der Vertrag · das Gehalt · kündigen · die Messe · herstellen · vereinbaren · teilnehmen · ändern · austragen · die Erlaubnis · erlaubt · verbieten · dringend · geehrt · freiwillig · privat
 
 #### A2-W6 Words: time, connecting words and amounts
 
