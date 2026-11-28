@@ -8,6 +8,9 @@
  * content pipeline refuses spoken text that still holds a digit and names it,
  * so the voice never meets one.
  *
+ * Piper also spells abbreviations out, so "z. B.", "d. h." and "usw." are
+ * said as the words they stand for (ticket #79).
+ *
  * The audio key is a hash of this text, so a change here gives new audio to
  * exactly the items whose spoken text changes.
  */
@@ -147,9 +150,25 @@ const RULES: Array<[RegExp, (...groups: string[]) => string]> = [
   ],
 ]
 
-/** The text as the voice says it: tidied, and with every number it knows written as words. */
+/**
+ * Abbreviations, said as the words they stand for. Piper spells them out
+ * ("z. B." as "zett. Beh.", "usw." as "usf"); a German reader does not.
+ */
+const ABBREVIATIONS: Array<[RegExp, string]> = [
+  [/(?<!\p{L})z\. ?B\./gu, 'zum Beispiel'],
+  [/(?<!\p{L})d\. ?h\./gu, 'das heißt'],
+  [/(?<!\p{L})usw\./gu, 'und so weiter'],
+]
+
+/** The text as the voice says it: tidied, with its abbreviations and every number it knows written as words. */
 export function speakable(text: string): string {
   let spoken = text.normalize('NFC').replace(/\s+/g, ' ').trim()
+  for (const [pattern, words] of ABBREVIATIONS) {
+    // At the end of a sentence the full stop of the abbreviation also ends the sentence.
+    spoken = spoken.replace(pattern, (match: string, at: number, whole: string) =>
+      at > 0 && at + match.length === whole.length ? `${words}.` : words,
+    )
+  }
   for (const [pattern, words] of RULES) {
     spoken = spoken.replace(pattern, (...args) => words(...(args.slice(0, -2) as string[])))
   }

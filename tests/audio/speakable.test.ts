@@ -87,3 +87,24 @@ test.each([
 test('a number in a form this does not know stays as written, so the content check can name it', () => {
   expect(speakable('Wir treffen uns am 3.5.2025.')).toMatch(/\d/)
 })
+
+/**
+ * Piper spells an abbreviation out letter by letter, or worse: "z. B." comes
+ * out as "zett. Beh." and "usw." as "usf". A German reader says the words it
+ * stands for, so the voice does too (ticket #79).
+ */
+test.each([
+  ['z. B.', 'zum Beispiel'],
+  ['Ich esse gern Obst, z. B. Äpfel und Bananen.', 'Ich esse gern Obst, zum Beispiel Äpfel und Bananen.'],
+  ['Ich esse gern Obst, z.B. Äpfel.', 'Ich esse gern Obst, zum Beispiel Äpfel.'],
+  ['d. h.', 'das heißt'],
+  ['Der Kurs ist am Wochenende, d. h. am Samstag.', 'Der Kurs ist am Wochenende, das heißt am Samstag.'],
+  ['usw.', 'und so weiter'],
+  ['Im Koffer sind Hosen, Hemden, Socken usw.', 'Im Koffer sind Hosen, Hemden, Socken und so weiter.'],
+])('the abbreviation in "%s" is spoken as its words', (written, spoken) => {
+  expect(speakable(written)).toBe(spoken)
+})
+
+test('a letter with a full stop that is no abbreviation is left as written', () => {
+  expect(speakable('Das ist Herr Z. Bauer.')).toBe('Das ist Herr Z. Bauer.')
+})
