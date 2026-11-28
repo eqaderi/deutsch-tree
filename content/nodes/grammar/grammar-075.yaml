@@ -46,7 +46,9 @@ table:
   columns:
     - { en: Use, fa: کاربرد, de: Gebrauch }
     - { en: Without an article, fa: بدون حرف تعریف, de: Ohne Artikel }
-    - { en: "Known: with *der*, *die*, *das*", fa: "شناخته: با *der*، *die*، *das*", de: "Bekannt: mit *der*, *die*, *das*" }
+    - en: "Known: with *der*, *die*, *das*"
+      fa: "شناخته: با *der*، *die*، *das*"
+      de: "Bekannt: mit *der*, *die*, *das*"
   rows:
     - [Essen und Getränke, Ich esse gern Fleisch., Das Fleisch ist frisch.]
     - [Material, Der Tisch ist aus Holz., Das Holz ist hell.]
