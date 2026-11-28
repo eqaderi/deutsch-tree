@@ -1,39 +1,393 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Plakat and Poster, Fotoapparat and Kamera are close; `tooCloseTo` keeps a close one from
+# being offered as a wrong meaning, and `alsoAccepted` takes it as right. Notiz and Zettel,
+# malen and zeichnen are told apart by their meanings and kept from being offered together.
 id: vocabulary-reading-hobbies
 kind: vocabulary
 level: A2
 chapter: a2-words-free-time
 order: 3
-status: coming-soon
+status: published
 title:
   en: "Reading, radio and hobbies"
   fa: "خواندن، رادیو و سرگرمی‌ها"
   de: "Lesen, Radio und Hobbys"
+attemptSize: 15
 words:
   - word: Radio
+    class: noun
+    article: das
+    plural: Radios
+    level: A2
+    meaning:
+      en: radio
+      fa: رادیو
+    definition: ein Gerät, mit dem man Nachrichten und Musik hört, aber kein Bild sieht
+    example:
+      de: Morgens höre ich im Auto Radio.
+      en: In the mornings I listen to the radio in the car.
+      fa: صبح‌ها در ماشین رادیو گوش می‌کنم.
+
   - word: Sendung
+    class: noun
+    article: die
+    plural: Sendungen
+    level: A2
+    meaning:
+      en: programme, show (one broadcast on radio or TV)
+      fa: یک برنامهٔ رادیویی یا تلویزیونی
+    definition: ein Film, ein Gespräch oder Nachrichten, die man zu einer festen Zeit im Radio oder im Fernsehen hören oder sehen kann
+    example:
+      de: Die Sendung kommt jeden Sonntag um acht.
+      en: The programme is on every Sunday at eight.
+      fa: این برنامه هر یکشنبه ساعت هشت پخش می‌شود.
+    alsoAccepted: [die Show]
+
   - word: Zeitschrift
+    class: noun
+    article: die
+    plural: Zeitschriften
+    level: A2
+    meaning:
+      en: magazine
+      fa: مجله
+    definition: ein dünnes Heft mit Bildern und Texten, das jede Woche oder jeden Monat neu erscheint
+    example:
+      de: Beim Arzt lese ich immer die Zeitschriften im Wartezimmer.
+      en: At the doctor's I always read the magazines in the waiting room.
+      fa: در مطب پزشک همیشه مجله‌های اتاق انتظار را می‌خوانم.
+    alsoAccepted: [das Magazin, die Illustrierte]
+
   - word: Krimi
+    class: noun
+    article: der
+    plural: Krimis
+    level: A2
+    meaning:
+      en: crime story, detective novel or film
+      fa: داستان یا فیلم جنایی
+    definition: ein Buch oder ein Film, in dem die Polizei einen Mörder oder einen Dieb sucht
+    example:
+      de: Am Abend sehen wir gern einen Krimi im Fernsehen.
+      en: In the evening we like watching a crime drama on TV.
+      fa: شب‌ها دوست داریم یک فیلم جنایی در تلویزیون ببینیم.
+
   - word: Comic
+    class: noun
+    article: der
+    plural: Comics
+    level: A2
+    meaning:
+      en: comic, comic book
+      fa: داستان مصور، کمیک
+    definition: eine Geschichte in vielen kleinen Bildern, in denen die Personen in Sprechblasen reden
+    example:
+      de: Mein Sohn liest am liebsten Comics.
+      en: My son likes reading comics best.
+      fa: پسرم از همه بیشتر داستان مصور دوست دارد.
+    alsoAccepted: [das Comic]
+
   - word: Autor
+    class: noun
+    article: der
+    plural: Autoren
+    level: A2
+    meaning:
+      en: author, writer
+      fa: نویسنده
+    definition: eine Person, die ein Buch oder einen anderen Text geschrieben hat
+    example:
+      de: Wer ist der Autor von diesem Buch?
+      en: Who is the author of this book?
+      fa: نویسندهٔ این کتاب کیست؟
+    alsoAccepted: [die Autorin, der Schriftsteller, die Schriftstellerin, der Verfasser, die Verfasserin]
+
   - word: Titel
+    class: noun
+    article: der
+    plural: Titel
+    level: A2
+    meaning:
+      en: title (of a book, film or song)
+      fa: عنوان (کتاب، فیلم یا آهنگ)
+    definition: der Name von einem Buch, einem Film oder einem Lied
+    example:
+      de: Ich habe den Titel von dem Film vergessen.
+      en: I've forgotten the title of the film.
+      fa: عنوان فیلم را فراموش کرده‌ام.
+
   - word: Seite
+    class: noun
+    article: die
+    plural: Seiten
+    level: A2
+    meaning:
+      en: page; side
+      fa: صفحه؛ طرف
+    definition: ein Blatt in einem Buch hat zwei davon, vorne und hinten, und jede hat eine Nummer; auch links oder rechts von etwas
+    example:
+      de: Das Buch hat fast fünfhundert Seiten.
+      en: The book has almost five hundred pages.
+      fa: این کتاب تقریباً پانصد صفحه دارد.
+
   - word: Artikel
+    class: noun
+    article: der
+    plural: Artikel
+    level: A2
+    meaning:
+      en: article (in a newspaper or magazine)
+      fa: مقاله (در روزنامه یا مجله)
+    definition: ein Text über ein Thema in einer Zeitung, einem Heft oder im Internet
+    example:
+      de: Hast du den Artikel über das neue Schwimmbad gelesen?
+      en: Have you read the article about the new swimming pool?
+      fa: مقاله دربارهٔ استخر جدید را خوانده‌ای؟
+    alsoAccepted: [der Beitrag, der Bericht]
+
   - word: Interview
+    class: noun
+    article: das
+    plural: Interviews
+    level: A2
+    meaning:
+      en: interview (for a newspaper, radio or TV)
+      fa: مصاحبه (با روزنامه، رادیو یا تلویزیون)
+    definition: ein Gespräch, in dem jemand für die Zeitung oder das Radio einer bekannten Person Fragen stellt
+    example:
+      de: In der Zeitung steht ein Interview mit der Sängerin.
+      en: There's an interview with the singer in the paper.
+      fa: در روزنامه مصاحبه‌ای با آن خواننده چاپ شده است.
+
   - word: Journalist
+    class: noun
+    article: der
+    plural: Journalisten
+    level: A2
+    meaning:
+      en: journalist, reporter
+      fa: روزنامه‌نگار، خبرنگار
+    definition: eine Person, die als Beruf Nachrichten und Berichte für Zeitungen, das Radio oder das Fernsehen macht
+    example:
+      de: Ein Journalist hat mich nach meiner Meinung gefragt.
+      en: A journalist asked me for my opinion.
+      fa: خبرنگاری نظرم را پرسید.
+    alsoAccepted: [die Journalistin, der Reporter, die Reporterin]
+
   - word: Plakat
+    class: noun
+    article: das
+    plural: Plakate
+    level: A2
+    meaning:
+      en: poster, placard (on a wall, for an event or an advert)
+      fa: پوستر تبلیغاتی، اعلان دیواری
+    definition: ein großes Blatt Papier an einer Wand in der Stadt, das über ein Konzert oder ein Produkt informiert
+    example:
+      de: Überall in der Stadt hängen Plakate für das Festival.
+      en: There are posters for the festival all over town.
+      fa: همه‌جای شهر پوسترهای جشنواره را زده‌اند.
+    alsoAccepted: [das Poster]
+    tooCloseTo: [Poster]
+
   - word: Poster
+    class: noun
+    article: das
+    plural: Poster
+    level: A2
+    meaning:
+      en: poster (a large picture for your room)
+      fa: پوستر (عکس بزرگ برای دیوار اتاق)
+    definition: ein großes Bild aus Papier, das man an die Wand in seinem Zimmer hängt
+    example:
+      de: In ihrem Zimmer hängt ein Poster von ihrer Lieblingsband.
+      en: There's a poster of her favourite band in her room.
+      fa: در اتاقش پوستری از گروه موسیقی محبوبش به دیوار است.
+    alsoAccepted: [das Plakat]
+    tooCloseTo: [Plakat]
+
   - word: Postkarte
+    class: noun
+    article: die
+    plural: Postkarten
+    level: A2
+    meaning:
+      en: postcard
+      fa: کارت‌پستال
+    definition: eine Karte mit einem Bild auf der einen Seite, die man zum Beispiel aus dem Urlaub schickt
+    example:
+      de: Schreibst du uns eine Postkarte aus Italien?
+      en: Will you write us a postcard from Italy?
+      fa: از ایتالیا برایمان کارت‌پستال می‌فرستی؟
+    alsoAccepted: [die Karte, die Ansichtskarte]
+
   - word: Notiz
+    class: noun
+    article: die
+    plural: Notizen
+    level: A2
+    meaning:
+      en: note (something you write down)
+      fa: یادداشت
+    definition: ein paar kurze Wörter, die man aufschreibt, damit man etwas nicht vergisst
+    example:
+      de: Im Kurs mache ich mir immer Notizen.
+      en: In class I always take notes.
+      fa: سر کلاس همیشه یادداشت برمی‌دارم.
+    tooCloseTo: [Zettel]
+
   - word: Zettel
+    class: noun
+    article: der
+    plural: Zettel
+    level: A2
+    meaning:
+      en: slip of paper, scrap of paper
+      fa: تکه کاغذ، برگهٔ کوچک
+    definition: ein kleines Stück Papier, auf das man schnell etwas schreibt
+    example:
+      de: Ich habe dir einen Zettel auf den Tisch gelegt.
+      en: I've left you a note on the table.
+      fa: یک برگه برایت روی میز گذاشته‌ام.
+    tooCloseTo: [Notiz]
+
   - word: notieren
+    class: verb
+    level: A2
+    meaning:
+      en: to note down, to write down
+      fa: یادداشت کردن
+    definition: schnell aufschreiben, damit man es später noch weiß
+    example:
+      de: Ich notiere mir deine Telefonnummer.
+      en: I'll write down your phone number.
+      fa: شماره‌تلفنت را یادداشت می‌کنم.
+    alsoAccepted: [aufschreiben]
+
   - word: Fotoapparat
+    class: noun
+    article: der
+    plural: Fotoapparate
+    level: A2
+    meaning:
+      en: camera (for photos)
+      fa: دوربین عکاسی
+    definition: ein kleines Gerät, mit dem man Fotos macht
+    example:
+      de: Mein Großvater hat noch einen alten Fotoapparat.
+      en: My grandfather still has an old camera.
+      fa: پدربزرگم هنوز یک دوربین عکاسی قدیمی دارد.
+    alsoAccepted: [die Kamera, die Fotokamera]
+    tooCloseTo: [Kamera]
+
   - word: Kamera
+    class: noun
+    article: die
+    plural: Kameras
+    level: A2
+    meaning:
+      en: camera (for photos or films)
+      fa: دوربین (عکاسی یا فیلم‌برداری)
+    definition: ein Gerät, mit dem man Fotos oder Filme macht; es gibt sie auch im Handy
+    example:
+      de: Die Kamera in meinem Handy ist sehr gut.
+      en: The camera in my phone is very good.
+      fa: دوربین گوشی‌ام خیلی خوب است.
+    alsoAccepted: [der Fotoapparat]
+    tooCloseTo: [Fotoapparat]
+
   - word: fotografieren
+    class: verb
+    level: A2
+    meaning:
+      en: to photograph, to take photos
+      fa: عکس گرفتن
+    definition: mit einem Handy oder einem anderen Gerät ein Bild machen
+    example:
+      de: Im Museum darf man nicht fotografieren.
+      en: You're not allowed to take photos in the museum.
+      fa: در موزه عکس گرفتن ممنوع است.
+    alsoAccepted: [knipsen]
+
   - word: malen
+    class: verb
+    level: A2
+    meaning:
+      en: to paint (a picture)
+      fa: نقاشی کردن (با رنگ)
+    definition: mit Farben und einem Pinsel ein Bild machen
+    example:
+      de: Meine Tochter malt gern mit Wasserfarben.
+      en: My daughter likes painting with watercolours.
+      fa: دخترم دوست دارد با آبرنگ نقاشی کند.
+    tooCloseTo: [zeichnen]
+
   - word: zeichnen
+    class: verb
+    level: A2
+    meaning:
+      en: to draw
+      fa: طراحی کردن، کشیدن (با مداد یا خودکار)
+    definition: mit einem Stift Linien auf Papier machen, so dass ein Bild entsteht
+    example:
+      de: Kannst du mir den Weg zum Bahnhof zeichnen?
+      en: Can you draw me the way to the station?
+      fa: می‌توانی راه ایستگاه قطار را برایم بکشی؟
+    tooCloseTo: [malen]
+
   - word: basteln
+    class: verb
+    level: A2
+    meaning:
+      en: to make things by hand (crafts)
+      fa: کاردستی ساختن
+    definition: aus Papier, Holz oder anderen Sachen mit den Händen kleine Dinge machen
+    example:
+      de: Die Kinder basteln Sterne für Weihnachten.
+      en: The children are making stars for Christmas.
+      fa: بچه‌ها برای کریسمس ستارهٔ کاغذی درست می‌کنند.
+
   - word: sammeln
+    class: verb
+    level: A2
+    meaning:
+      en: to collect (as a hobby, such as stamps)
+      fa: جمع کردن (برای سرگرمی، مثلاً تمبر)
+    definition: viele Dinge von einer Art suchen und behalten, zum Beispiel Briefmarken
+    example:
+      de: Mein Onkel sammelt alte Münzen.
+      en: My uncle collects old coins.
+      fa: عمویم سکه‌های قدیمی جمع می‌کند.
+
   - word: ansehen
+    class: verb
+    level: A2
+    meaning:
+      en: to look at (a picture, a flat), to watch (a film)
+      fa: نگاه کردن به چیزی، تماشا کردن (فیلم یا عکس)
+    definition: lange und genau auf etwas schauen, zum Beispiel auf ein Bild oder einen Film
+    example:
+      de: Wollen wir uns heute Abend einen Film ansehen?
+      en: Shall we watch a film this evening?
+      fa: امشب فیلمی تماشا کنیم؟
+    alsoAccepted: [anschauen, angucken, betrachten, sich ansehen, sich anschauen]
+
   - word: aktuell
+    class: adjective
+    level: A2
+    meaning:
+      en: current, up to date
+      fa: کنونی، به‌روز
+    definition: gerade jetzt wichtig oder gültig, zum Beispiel die Nachrichten von heute oder die Preise von diesem Jahr
+    example:
+      de: Im Radio hört man die aktuellen Nachrichten.
+      en: On the radio you hear the latest news.
+      fa: از رادیو تازه‌ترین خبرها را می‌شنوید.
+    alsoAccepted: [gegenwärtig, derzeitig]
+
+review:
+  reviewer: "an independent AI agent (three fresh reviewers: the whole sheet, then
+    the changed and disputed questions twice)"
+  date: 2026-11-28
+  pool: e17c84d89c754e7b

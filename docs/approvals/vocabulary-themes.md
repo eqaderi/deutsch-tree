@@ -388,7 +388,7 @@ das Radio · die Sendung · die Zeitschrift · der Krimi · der/das Comic · der
 der Blog · das E-Book · die Homepage · die Webseite · der Link · die Datei · das Passwort · der PC · der Laptop · das Tablet · das Mobiltelefon · die/das SMS · die Mailbox · chatten · surfen · speichern · herunterladen · online · austauschen
 
 **A2-W3.5 Festivals and holidays** · جشن‌ها و تعطیلی‌ها · Feste und Feiertage · 17 words  
-das Fest · die Feier · der Feiertag · das Weihnachten · das Ostern · das Silvester · das Neujahr · der Karneval · die Ferien (Pl.) · schenken · die Religion · der Werktag · der Arbeitstag · die Mitternacht · der Kalender · täglich · tagsüber
+das Fest · die Feier · der Feiertag · Weihnachten · Ostern · Silvester · Neujahr · der Karneval · die Ferien (Pl.) · schenken · die Religion · der Werktag · der Arbeitstag · die Mitternacht · der Kalender · täglich · tagsüber
 
 #### A2-W4 Words: health, town and nature
 

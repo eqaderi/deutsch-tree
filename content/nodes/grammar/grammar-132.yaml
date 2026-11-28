@@ -1,13 +1,386 @@
-# Grammar list row 132.
+# Grammar list row 132. Entlang is taught after the noun with the Akkusativ;
+# entlang before the noun (with Genitiv or Dativ) is later.
 id: grammar-132
 kind: grammar
 level: A2
 chapter: a2-prepositions
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-126]
 title:
   en: "Route prepositions"
   fa: "حرف‌های اضافهٔ مسیر (*durch*، *um*، *entlang* …)"
   de: "Präpositionen für den Weg (*durch*, *um*, *entlang* …)"
+
+explanations:
+  en:
+    rule: >
+      These prepositions describe a way, as when you give directions. *Durch*
+      (through), *um* (around) and *gegen* (against, into) take the
+      *Akkusativ*: *durch den Park*, *um die Ecke*, *gegen einen Baum*. For a
+      whole circle *herum* is often added at the end: *um den See herum*.
+      *Entlang* (along) usually stands after the noun, with the *Akkusativ*:
+      *die Straße entlang*. *An … vorbei* (past) and *bis zu* (up to, as far
+      as) take the *Dativ*: *am Rathaus vorbei*, *bis zur Ampel*. *Gegenüber*
+      (opposite) says where something is, also with the *Dativ*: *gegenüber
+      dem Bahnhof*; after a pronoun it comes last: *mir gegenüber*.
+  fa:
+    rule: >
+      این حرف‌های اضافه مسیر را نشان می‌دهند، مثلاً وقتی نشانی می‌دهیم.
+      *durch* (از میان)، *um* (دور) و *gegen* (به، برخورد با) با حالت
+      *Akkusativ* (حالت مفعولی) می‌آیند: *durch den Park*، *um die Ecke* و
+      *gegen einen Baum*. برای یک دور کامل اغلب *herum* هم در پایان می‌آید:
+      *um den See herum*. *entlang* (در امتداد) معمولاً پس از اسم و با حالت
+      *Akkusativ* می‌آید: *die Straße entlang*. *an … vorbei* (از کنار چیزی
+      گذشتن) و *bis zu* (تا) با حالت *Dativ* (حالت مفعول باواسطه) می‌آیند: *am
+      Rathaus vorbei* و *bis zur Ampel*. *gegenüber* (روبه‌روی) جای چیزی را
+      نشان می‌دهد و آن هم با حالت *Dativ* می‌آید: *gegenüber dem Bahnhof*؛ با
+      ضمیر، *gegenüber* پس از ضمیر می‌آید: *mir gegenüber*.
+  de:
+    rule: >
+      Diese Präpositionen beschreiben einen Weg, zum Beispiel bei einer
+      Wegbeschreibung. Nach *durch*, *um* und *gegen* steht der Akkusativ:
+      *durch den Park*, *um die Ecke*, *gegen einen Baum*. Für einen ganzen
+      Kreis sagt man oft noch *herum* am Ende: *um den See herum*. *Entlang*
+      steht meistens nach dem Nomen, mit Akkusativ: *die Straße entlang*. Nach
+      *an … vorbei* und *bis zu* steht der Dativ: *am Rathaus vorbei*, *bis zur
+      Ampel*. *Gegenüber* sagt, wo etwas ist, auch mit Dativ: *gegenüber dem
+      Bahnhof*. Nach einem Pronomen steht es am Ende: *mir gegenüber*.
+
+# Seven small pictures, one per preposition. German only, so no labels.
+diagrams:
+  - caption:
+      en: >
+        One picture for each preposition. *Durch*: through the park. *Um …
+        herum*: around it. *Entlang*: along the river. *An … vorbei*: past a
+        house. *Bis zu*: up to a line, and no further. *Gegen*: into a wall.
+        *Gegenüber*: two houses on opposite sides of the street.
+      fa: >
+        برای هر حرف اضافه یک تصویر. *durch*: از میان پارک. *um … herum*: دور
+        آن. *entlang*: در امتداد رودخانه. *an … vorbei*: از کنار یک خانه. *bis
+        zu*: تا یک خط و نه دورتر. *gegen*: برخورد با دیوار. *gegenüber*: دو خانه
+        در دو سوی خیابان، روبه‌روی هم.
+      de: >
+        Ein Bild für jede Präposition. *Durch*: durch den Park. *Um … herum*:
+        rund um etwas. *Entlang*: am Fluss entlang. *An … vorbei*: an einem
+        Haus vorbei. *Bis zu*: bis zu einer Linie und nicht weiter. *Gegen*:
+        gegen eine Wand. *Gegenüber*: zwei Häuser auf den zwei Seiten der
+        Straße.
+    svg: |
+      <svg viewBox="0 0 320 340">
+        <!-- durch: an arrow through a park -->
+        <rect class="surface" x="30" y="20" width="48" height="50"/>
+        <line class="line" x1="8" y1="45" x2="94" y2="45"/>
+        <polygon class="object" points="94,39 104,45 94,51"/>
+        <text class="label" x="54" y="100" text-anchor="middle">durch</text>
+        <!-- um … herum: an arrow around a round place -->
+        <circle class="surface" cx="160" cy="45" r="18"/>
+        <path class="line" d="M 132 45 A 28 28 0 1 1 164 73"/>
+        <polygon class="object" points="166,67 156,73 166,79"/>
+        <text class="label" x="160" y="100" text-anchor="middle">um … herum</text>
+        <!-- entlang: an arrow along a river -->
+        <rect class="shade" x="216" y="54" width="96" height="12"/>
+        <line class="line" x1="218" y1="40" x2="298" y2="40"/>
+        <polygon class="object" points="298,34 308,40 298,46"/>
+        <text class="label" x="266" y="100" text-anchor="middle">entlang</text>
+        <!-- an … vorbei: an arrow past a house -->
+        <rect class="surface" x="36" y="130" width="36" height="34"/>
+        <polygon class="surface" points="32,130 54,116 76,130"/>
+        <line class="line" x1="8" y1="180" x2="94" y2="180"/>
+        <polygon class="object" points="94,174 104,180 94,186"/>
+        <text class="label" x="54" y="212" text-anchor="middle">an … vorbei</text>
+        <!-- bis zu: an arrow that stops at a line -->
+        <line class="line" x1="114" y1="160" x2="184" y2="160"/>
+        <polygon class="object" points="184,154 194,160 184,166"/>
+        <rect class="object" x="198" y="134" width="6" height="52"/>
+        <text class="label" x="160" y="212" text-anchor="middle">bis zu</text>
+        <!-- gegen: an arrow into a wall -->
+        <rect class="surface" x="288" y="130" width="14" height="56"/>
+        <line class="line" x1="222" y1="158" x2="274" y2="158"/>
+        <polygon class="object" points="274,152 286,158 274,164"/>
+        <text class="label" x="262" y="212" text-anchor="middle">gegen</text>
+        <!-- gegenüber: two houses, one on each side of a street -->
+        <rect class="surface" x="146" y="236" width="28" height="22"/>
+        <rect class="shade" x="96" y="264" width="128" height="14"/>
+        <rect class="surface" x="146" y="284" width="28" height="22"/>
+        <text class="label" x="160" y="332" text-anchor="middle">gegenüber</text>
+      </svg>
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - en: "*Akkusativ*: *durch*, *um*, *gegen*, *entlang*"
+      fa: "حالت *Akkusativ*: *durch*، *um*، *gegen*، *entlang*"
+      de: "Akkusativ: *durch*, *um*, *gegen*, *entlang*"
+    - en: "*Dativ*: *an … vorbei*, *bis zu*, *gegenüber*"
+      fa: "حالت *Dativ*: *an … vorbei*، *bis zu*، *gegenüber*"
+      de: "Dativ: *an … vorbei*, *bis zu*, *gegenüber*"
+  rows:
+    - [der Park, durch den Park, am Park vorbei]
+    - [die Ecke, um die Ecke, bis zur Ecke]
+    - [das Rathaus, um das Rathaus herum, gegenüber dem Rathaus]
+    - [der Fluss, den Fluss entlang, bis zum Fluss]
+    - [die Bäume (Plural), um die Bäume herum, an den Bäumen vorbei]
+    - [ein Baum, gegen einen Baum, an einem Baum vorbei]
+
+examples:
+  - de: Gehen Sie hier um die Ecke.
+    en: Go around the corner here.
+    fa: این‌جا از سر نبش بپیچید.
+  - de: Gehen Sie die Straße entlang bis zur Ampel.
+    en: Go along the street as far as the traffic lights.
+    fa: در امتداد خیابان تا چراغ راهنمایی بروید.
+  - de: Dann gehen Sie durch den Park.
+    en: Then go through the park.
+    fa: بعد از میان پارک بگذرید.
+  - de: Fahren Sie am Rathaus vorbei.
+    en: Drive past the town hall.
+    fa: از کنار شهرداری رد شوید.
+  - de: Die Apotheke ist gegenüber dem Bahnhof.
+    en: The pharmacy is opposite the station.
+    fa: داروخانه روبه‌روی ایستگاه قطار است.
+  - de: Am Sonntag laufen wir um den See herum.
+    en: On Sunday we walk around the lake.
+    fa: یکشنبه دور دریاچه راه می‌رویم.
+  - de: Der Bus fährt nur bis zum Bahnhof.
+    en: The bus only goes as far as the station.
+    fa: اتوبوس فقط تا ایستگاه قطار می‌رود.
+  - de: Der Ball fliegt gegen das Fenster.
+    en: The ball flies against the window.
+    fa: توپ به پنجره می‌خورد.
+  - de: Mein Bruder sitzt mir gegenüber.
+    en: My brother is sitting opposite me.
+    fa: برادرم روبه‌رویم نشسته است.
+  - de: Der Zug fährt durch den Tunnel.
+    en: The train goes through the tunnel.
+    fa: قطار از تونل می‌گذرد.
+
+mistakes:
+  - wrong: Gehen Sie durch dem Park.
+    right: Gehen Sie durch den Park.
+    why:
+      en: "*Durch* always takes the *Akkusativ*: *der Park* becomes *den Park*."
+      fa: "*durch* همیشه با حالت *Akkusativ* می‌آید: *der Park* می‌شود *den Park*."
+      de: "Nach *durch* steht immer der Akkusativ: *der Park* wird zu *den Park*."
+  - wrong: Fahren Sie bis die Ampel.
+    right: Fahren Sie bis zur Ampel.
+    why:
+      en: "Before a place with an article, *bis* needs *zu*, with the *Dativ*: *bis zur Ampel*."
+      fa: "پیش از مکانی که حرف تعریف دارد، *bis* به *zu* و حالت *Dativ* نیاز دارد: *bis zur Ampel*."
+      de: "Vor einem Ort mit Artikel braucht *bis* noch *zu*, mit Dativ: *bis zur Ampel*."
+  - wrong: Gehen Sie entlang die Straße.
+    right: Gehen Sie die Straße entlang.
+    why:
+      en: "With the *Akkusativ*, *entlang* comes after the noun: *die Straße entlang*."
+      fa: "با حالت *Akkusativ*، *entlang* پس از اسم می‌آید: *die Straße entlang*."
+      de: "Mit Akkusativ steht *entlang* nach dem Nomen: *die Straße entlang*."
+  - wrong: Die Bank ist gegenüber die Post.
+    right: Die Bank ist gegenüber der Post.
+    why:
+      en: "*Gegenüber* takes the *Dativ*: *die Post* becomes *der Post*."
+      fa: "*gegenüber* با حالت *Dativ* می‌آید: *die Post* می‌شود *der Post*."
+      de: "Nach *gegenüber* steht der Dativ: *die Post* wird zu *der Post*."
+  - wrong: Gehen Sie an den Bahnhof vorbei.
+    right: Gehen Sie am Bahnhof vorbei.
+    why:
+      en: "*An … vorbei* takes the *Dativ*: *an dem Bahnhof*, shortened to *am Bahnhof*."
+      fa: "*an … vorbei* با حالت *Dativ* می‌آید: *an dem Bahnhof* که کوتاه می‌شود: *am Bahnhof*."
+      de: "Bei *an … vorbei* steht der Dativ: *an dem Bahnhof*, kurz *am Bahnhof*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Gehen Sie ___ Park, das ist kürzer.
+    options: [durch den, durch dem, durch der]
+    answer: durch den
+    explanation:
+      en: "*Durch* takes the *Akkusativ*: *der Park* becomes *den Park*."
+      fa: "*durch* با حالت *Akkusativ* می‌آید: *der Park* می‌شود *den Park*."
+      de: "Nach *durch* steht der Akkusativ: *der Park* wird zu *den Park*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Fahren Sie bis ___ Ampel und dann rechts.
+    options: [zur, zum, die]
+    answer: zur
+    explanation:
+      en: "*Bis zu* takes the *Dativ*: *die Ampel*, *zu der*, shortened to *zur*."
+      fa: "*bis zu* با حالت *Dativ* می‌آید: *die Ampel*، *zu der* که کوتاه می‌شود: *zur*."
+      de: "*Bis zu* hat den Dativ: *die Ampel*, *zu der*, kurz *zur*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Apotheke ist gegenüber ___ Bahnhof.
+    options: [dem, den, der]
+    answer: dem
+    explanation:
+      en: "*Gegenüber* takes the *Dativ*: *der Bahnhof* becomes *dem Bahnhof*."
+      fa: "*gegenüber* با حالت *Dativ* می‌آید: *der Bahnhof* می‌شود *dem Bahnhof*."
+      de: "Nach *gegenüber* steht der Dativ: *der Bahnhof* wird zu *dem Bahnhof*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Gehen Sie die Straße ___ bis zur Kirche.
+    options: [entlang, durch, gegenüber]
+    answer: entlang
+    explanation:
+      en: "*Entlang* comes after the noun: *die Straße entlang*, along the street."
+      fa: "*entlang* پس از اسم می‌آید: *die Straße entlang*، یعنی در امتداد خیابان."
+      de: "*Entlang* steht nach dem Nomen: *die Straße entlang*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Der Bus fährt am Rathaus ___.
+    options: [vorbei, herum, durch]
+    answer: vorbei
+    explanation:
+      en: "*Am Rathaus* with *vorbei*: the bus goes past the town hall."
+      fa: "*am Rathaus* با *vorbei*: اتوبوس از کنار شهرداری می‌گذرد."
+      de: "*Am Rathaus* mit *vorbei*: Der Bus fährt am Rathaus vorbei."
+  - id: gap-6
+    type: gap-fill
+    prompt: Wir laufen einmal um ___ See herum.
+    options: [den, dem, der]
+    answer: den
+    explanation:
+      en: "*Um* takes the *Akkusativ*: *der See* becomes *den See*."
+      fa: "*um* با حالت *Akkusativ* می‌آید: *der See* می‌شود *den See*."
+      de: "Nach *um* steht der Akkusativ: *der See* wird zu *den See*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ein Unfall! Das Auto ist ___ einen Baum gefahren.
+    options: [gegen, durch, entlang]
+    answer: gegen
+    explanation:
+      en: "Hitting something is *gegen*: *gegen einen Baum*."
+      fa: "برای برخورد با چیزی *gegen* می‌آید: *gegen einen Baum*."
+      de: "Wenn man etwas trifft, sagt man *gegen*: *gegen einen Baum*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wo ist das Café? – ___ dem Kino.
+    options: [Gegenüber, Durch, Um]
+    answer: Gegenüber
+    explanation:
+      en: "*Wo?* asks for a place, and *gegenüber* takes the *Dativ*: *gegenüber dem Kino*. *Durch* and *um* take the *Akkusativ*."
+      fa: "*Wo?* جای چیزی را می‌پرسد و *gegenüber* با حالت *Dativ* می‌آید: *gegenüber dem Kino*. *durch* و *um* با حالت *Akkusativ* می‌آیند."
+      de: "*Wo?* fragt nach einem Ort. *Gegenüber* hat den Dativ: *gegenüber dem Kino*. *Durch* und *um* haben den Akkusativ."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Gehen Sie hier ___ Ecke, dann sehen Sie die Post.
+    options: [um die, um der, durch die]
+    answer: um die
+    explanation:
+      en: "Around the corner is *um die Ecke*: *um* takes the *Akkusativ*, and *die* stays *die*."
+      fa: "«از سر نبش پیچیدن» می‌شود *um die Ecke*: *um* با حالت *Akkusativ* می‌آید و *die* همان می‌ماند."
+      de: "Es heißt *um die Ecke*: Nach *um* steht der Akkusativ, *die* bleibt *die*."
+  - id: true-1
+    type: true-false
+    prompt: Wir gehen durch den Wald nach Hause.
+    answer: true
+    explanation:
+      en: "*Durch* with the *Akkusativ*: *durch den Wald*. The sentence is correct."
+      fa: "*durch* با حالت *Akkusativ*: *durch den Wald*. جمله درست است."
+      de: "*Durch* mit Akkusativ: *durch den Wald*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Fahren Sie bis zum Bahnhof.
+    answer: true
+    explanation:
+      en: "*Bis zu* with the *Dativ*: *zu dem Bahnhof*, shortened to *zum*. The sentence is correct."
+      fa: "*bis zu* با حالت *Dativ*: *zu dem Bahnhof* که کوتاه می‌شود: *zum*. جمله درست است."
+      de: "*Bis zu* mit Dativ: *zu dem Bahnhof*, kurz *zum*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Gehen Sie entlang den Fluss.
+    answer: false
+    explanation:
+      en: "With the *Akkusativ*, *entlang* comes after the noun: *den Fluss entlang*."
+      fa: "با حالت *Akkusativ*، *entlang* پس از اسم می‌آید: *den Fluss entlang*."
+      de: "Mit Akkusativ steht *entlang* nach dem Nomen: *den Fluss entlang*."
+  - id: true-4
+    type: true-false
+    prompt: Die Bank ist gegenüber der Post.
+    answer: true
+    explanation:
+      en: "*Gegenüber* with the *Dativ*: *die Post* becomes *der Post*. The sentence is correct."
+      fa: "*gegenüber* با حالت *Dativ*: *die Post* می‌شود *der Post*. جمله درست است."
+      de: "*Gegenüber* mit Dativ: *die Post* wird zu *der Post*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Gehen Sie ___ (durch / der Eingang) und dann links.
+    answers: [durch den Eingang, durch den]
+    explanation:
+      en: "*Durch* takes the *Akkusativ*: *der Eingang* becomes *den Eingang*."
+      fa: "*durch* با حالت *Akkusativ* می‌آید: *der Eingang* می‌شود *den Eingang*."
+      de: "Nach *durch* steht der Akkusativ: *der Eingang* wird zu *den Eingang*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Fahren Sie ___ (bis zu / die Kreuzung).
+    answers: [bis zur Kreuzung, bis zu der Kreuzung, bis zur, bis zu der]
+    explanation:
+      en: "*Bis zu* takes the *Dativ*: *zu der Kreuzung*, almost always said as *zur Kreuzung*."
+      fa: "*bis zu* با حالت *Dativ* می‌آید: *zu der Kreuzung* که تقریباً همیشه کوتاه می‌شود: *zur Kreuzung*."
+      de: "*Bis zu* hat den Dativ: *zu der Kreuzung*, fast immer kurz *zur Kreuzung*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Gehen Sie ___ (an / das Rathaus) vorbei.
+    answers: [am Rathaus, an dem Rathaus, am, an dem]
+    explanation:
+      en: "*An … vorbei* takes the *Dativ*: *an dem Rathaus*, almost always said as *am Rathaus*."
+      fa: "*an … vorbei* با حالت *Dativ* می‌آید: *an dem Rathaus* که تقریباً همیشه کوتاه می‌شود: *am Rathaus*."
+      de: "Bei *an … vorbei* steht der Dativ: *an dem Rathaus*, fast immer kurz *am Rathaus*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Die Haltestelle ist ___ (gegenüber / die Schule).
+    answers: [gegenüber der Schule, der Schule gegenüber, gegenüber von der Schule, gegenüber der]
+    explanation:
+      en: "*Gegenüber* takes the *Dativ*: *die Schule* becomes *der Schule*."
+      fa: "*gegenüber* با حالت *Dativ* می‌آید: *die Schule* می‌شود *der Schule*."
+      de: "Nach *gegenüber* steht der Dativ: *die Schule* wird zu *der Schule*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Wir fahren mit dem Rad ___ (der Fluss / entlang).
+    answers: [den Fluss entlang, am Fluss entlang, an dem Fluss entlang, entlang dem Fluss, entlang des Flusses]
+    explanation:
+      en: "*Entlang* after the noun takes the *Akkusativ*: *den Fluss entlang*."
+      fa: "*entlang* پس از اسم با حالت *Akkusativ* می‌آید: *den Fluss entlang*."
+      de: "*Entlang* nach dem Nomen hat den Akkusativ: *den Fluss entlang*."
+  - id: error-1
+    type: find-error
+    prompt: Gehen Sie durch dem Park bis zur Kirche.
+    answer: dem
+    explanation:
+      en: "*Durch* always takes the *Akkusativ*: *durch den Park*."
+      fa: "*durch* همیشه با حالت *Akkusativ* می‌آید: *durch den Park*."
+      de: "Nach *durch* steht immer der Akkusativ: *durch den Park*."
+  - id: error-2
+    type: find-error
+    prompt: Der Bus fährt an der Bahnhof vorbei.
+    answer: der
+    explanation:
+      en: "*Bahnhof* is a *der* noun, and *an … vorbei* takes the *Dativ*: *am Bahnhof vorbei*."
+      fa: "*Bahnhof* اسم مذکر (*der*) است و *an … vorbei* با حالت *Dativ* می‌آید: *am Bahnhof vorbei*."
+      de: "*Bahnhof* hat den Artikel *der*, und *an … vorbei* hat den Dativ: *am Bahnhof vorbei*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [der Weg, führt, durch den Wald]
+      - [durch den Wald, führt, der Weg]
+    explanation:
+      en: "The verb comes second. The way can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. مسیر می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. Der Weg kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [durch ___ Park, den]
+      - [bis ___ Ampel, zur]
+      - [an ___ Kino vorbei, dem]
+      - [die Straße ___, entlang]
+    explanation:
+      en: "*Durch* with the *Akkusativ*: *den Park*. *Bis zu* and *an … vorbei* with the *Dativ*: *zur Ampel*, *dem Kino*. *Entlang* after the noun."
+      fa: "*durch* با حالت *Akkusativ*: *den Park*. *bis zu* و *an … vorbei* با حالت *Dativ*: *zur Ampel* و *dem Kino*. *entlang* پس از اسم."
+      de: "*Durch* mit Akkusativ: *den Park*. *Bis zu* und *an … vorbei* mit Dativ: *zur Ampel*, *dem Kino*. *Entlang* nach dem Nomen."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: a30b782341745827

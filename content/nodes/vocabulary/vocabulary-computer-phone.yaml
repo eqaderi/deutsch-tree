@@ -1,32 +1,291 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Homepage and Webseite are used for the same thing; `tooCloseTo` keeps one from being
+# offered as a wrong meaning of the other, and `alsoAccepted` takes it as right.
 id: vocabulary-computer-phone
 kind: vocabulary
 level: A2
 chapter: a2-words-free-time
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Computer and phone"
   fa: "کامپیوتر و تلفن"
   de: "Computer und Telefon"
+attemptSize: 15
 words:
   - word: Blog
+    class: noun
+    article: der
+    plural: Blogs
+    level: A2
+    meaning:
+      en: blog
+      fa: وبلاگ
+    definition: eine Seite im Internet, auf der eine Person regelmäßig über ihr Leben oder über ein Thema schreibt
+    example:
+      de: Sie schreibt einen Blog über das Kochen.
+      en: She writes a blog about cooking.
+      fa: او وبلاگی دربارهٔ آشپزی می‌نویسد.
+    alsoAccepted: [das Blog]
+
   - word: E-Book
+    class: noun
+    article: das
+    plural: E-Books
+    level: A2
+    meaning:
+      en: e-book
+      fa: کتاب الکترونیکی
+    definition: ein Buch, das man nicht auf Papier, sondern auf einem Bildschirm liest
+    example:
+      de: Im Urlaub lese ich nur E-Books, die sind leichter.
+      en: On holiday I only read e-books; they're lighter.
+      fa: در سفر فقط کتاب الکترونیکی می‌خوانم؛ سبک‌ترند.
+
   - word: Homepage
+    class: noun
+    article: die
+    plural: Homepages
+    level: A2
+    meaning:
+      en: homepage, website (of a person or a firm)
+      fa: وب‌سایت (شخص یا شرکت)، صفحهٔ اصلی وب‌سایت
+    definition: die Seiten im Internet von einer Firma oder einer Person, mit allen Informationen über sie; auch die erste von diesen Seiten
+    example:
+      de: Die Öffnungszeiten stehen auf unserer Homepage.
+      en: The opening hours are on our website.
+      fa: ساعت‌های کاری روی وب‌سایت ما آمده است.
+    alsoAccepted: [die Webseite, die Website, die Internetseite]
+    tooCloseTo: [Webseite]
+
   - word: Webseite
+    class: noun
+    article: die
+    plural: Webseiten
+    level: A2
+    meaning:
+      en: web page, website
+      fa: صفحهٔ وب
+    definition: eine Seite im Internet, die man mit dem Computer oder dem Handy öffnet und liest
+    example:
+      de: Auf dieser Webseite kann man Bahnfahrkarten kaufen.
+      en: You can buy train tickets on this website.
+      fa: در این وب‌سایت می‌شود بلیت قطار خرید.
+    alsoAccepted: [die Website, die Internetseite, die Homepage]
+    tooCloseTo: [Homepage]
+
   - word: Link
+    class: noun
+    article: der
+    plural: Links
+    level: A2
+    meaning:
+      en: link
+      fa: لینک، پیوند
+    definition: ein Wort oder eine Adresse im Internet; man klickt darauf und kommt zu einer anderen Seite
+    example:
+      de: Ich schicke dir den Link per E-Mail.
+      en: I'll send you the link by email.
+      fa: لینک را با ایمیل برایت می‌فرستم.
+    alsoAccepted: [der Hyperlink]
+
   - word: Datei
+    class: noun
+    article: die
+    plural: Dateien
+    level: A2
+    meaning:
+      en: file (on a computer)
+      fa: فایل
+    definition: ein Text, ein Bild oder ein Programm, das im Computer gespeichert ist
+    example:
+      de: Ich kann die Datei leider nicht öffnen.
+      en: Unfortunately I can't open the file.
+      fa: متأسفانه نمی‌توانم فایل را باز کنم.
+
   - word: Passwort
+    class: noun
+    article: das
+    plural: Passwörter
+    level: A2
+    meaning:
+      en: password
+      fa: رمز عبور، گذرواژه
+    definition: ein geheimes Wort, das man eingeben muss, damit man in sein Konto oder in sein Handy kommt
+    example:
+      de: Ich habe mein Passwort vergessen.
+      en: I've forgotten my password.
+      fa: رمز عبورم را فراموش کرده‌ام.
+    alsoAccepted: [das Kennwort]
+
   - word: PC
+    class: noun
+    article: der
+    plural: PCs
+    level: A2
+    meaning:
+      en: PC, personal computer
+      fa: کامپیوتر شخصی
+    definition: ein Computer für eine Person, meistens auf dem Schreibtisch, zu Hause oder im Büro
+    example:
+      de: Mein PC ist schon acht Jahre alt.
+      en: My PC is already eight years old.
+      fa: کامپیوترم دیگر هشت‌ساله شده است.
+    alsoAccepted: [der Computer, der Rechner, der Personal Computer]
+
   - word: Laptop
+    class: noun
+    article: der
+    plural: Laptops
+    level: A2
+    meaning:
+      en: laptop
+      fa: لپ‌تاپ
+    definition: ein kleiner Computer, den man zuklappen und überallhin mitnehmen kann
+    example:
+      de: Im Zug arbeite ich oft am Laptop.
+      en: On the train I often work on my laptop.
+      fa: در قطار اغلب با لپ‌تاپ کار می‌کنم.
+    alsoAccepted: [das Laptop, das Notebook]
+
   - word: Tablet
+    class: noun
+    article: das
+    plural: Tablets
+    level: A2
+    meaning:
+      en: tablet (computer)
+      fa: تبلت
+    definition: ein flacher Computer ohne Tastatur, viel größer als ein Handy; man tippt mit dem Finger auf den Bildschirm
+    example:
+      de: Meine Oma liest die Zeitung auf dem Tablet.
+      en: My grandma reads the newspaper on her tablet.
+      fa: مادربزرگم روزنامه را روی تبلت می‌خواند.
+    alsoAccepted: [der Tablet-PC, der Tablet-Computer]
+
   - word: Mobiltelefon
+    class: noun
+    article: das
+    plural: Mobiltelefone
+    level: A2
+    meaning:
+      en: mobile phone (the formal word)
+      fa: تلفن همراه (واژهٔ رسمی)
+    definition: ein Telefon ohne Kabel, das man überall mitnehmen kann; im Alltag sagt man meistens Handy
+    example:
+      de: Bitte schalten Sie jetzt Ihr Mobiltelefon aus.
+      en: Please switch off your mobile phone now.
+      fa: لطفاً اکنون تلفن همراه خود را خاموش کنید.
+    alsoAccepted: [das Handy, das Smartphone]
+
   - word: SMS
+    class: noun
+    article: die
+    plural: SMS
+    level: A2
+    meaning:
+      en: text message
+      fa: پیامک
+    definition: eine kurze Nachricht, die man mit dem Handy schreibt und an eine Telefonnummer schickt
+    example:
+      de: Schick mir eine SMS, wenn du angekommen bist.
+      en: Send me a text when you've arrived.
+      fa: وقتی رسیدی، برایم پیامک بفرست.
+    alsoAccepted: [das SMS, die Kurznachricht, die Textnachricht]
+
   - word: Mailbox
+    class: noun
+    article: die
+    plural: Mailboxen
+    level: A2
+    meaning:
+      en: voicemail box, mailbox (on a mobile phone)
+      fa: پیغام‌گیر تلفن همراه
+    definition: dort kann ein Anrufer eine Nachricht sprechen, wenn man nicht ans Handy geht
+    example:
+      de: Er geht nicht ans Telefon, ich spreche ihm auf die Mailbox.
+      en: He isn't answering, so I'll leave him a voicemail.
+      fa: گوشی را برنمی‌دارد؛ برایش پیغام صوتی می‌گذارم.
+    alsoAccepted: [die Sprachbox, der Anrufbeantworter]
+
   - word: chatten
+    class: verb
+    level: A2
+    meaning:
+      en: to chat (online)
+      fa: چت کردن
+    definition: im Internet kurze Nachrichten hin und her schreiben und sofort Antworten bekommen
+    example:
+      de: Abends chattet sie oft stundenlang mit ihren Freundinnen.
+      en: In the evenings she often chats with her friends for hours.
+      fa: شب‌ها اغلب ساعت‌ها با دوستانش چت می‌کند.
+
   - word: surfen
+    class: verb
+    level: A2
+    meaning:
+      en: to surf (the internet)
+      fa: وب‌گردی کردن
+    definition: im Internet von einer Seite zur anderen gehen und sich vieles ansehen
+    example:
+      de: In der Mittagspause surfe ich ein bisschen im Internet.
+      en: In my lunch break I surf the internet for a bit.
+      fa: در وقت ناهار کمی در اینترنت می‌گردم.
+
   - word: speichern
+    class: verb
+    level: A2
+    meaning:
+      en: to save (a file, a number)
+      fa: ذخیره کردن
+    definition: einen Text, ein Bild oder eine Nummer im Computer oder im Handy behalten, damit sie später noch da sind
+    example:
+      de: Vergiss nicht, die Datei zu speichern!
+      en: Don't forget to save the file!
+      fa: یادت نرود فایل را ذخیره کنی!
+    alsoAccepted: [abspeichern, sichern]
+
   - word: herunterladen
+    class: verb
+    level: A2
+    meaning:
+      en: to download
+      fa: دانلود کردن
+    definition: eine Datei aus dem Internet auf den eigenen Computer oder auf das Handy holen
+    example:
+      de: Die App kann man kostenlos herunterladen.
+      en: You can download the app for free.
+      fa: این برنامه را می‌شود رایگان دانلود کرد.
+    alsoAccepted: [runterladen, downloaden]
+
   - word: online
+    class: adverb
+    level: A2
+    meaning:
+      en: online
+      fa: آنلاین، برخط
+    definition: im Internet, mit dem Internet verbunden
+    example:
+      de: Die Tickets kann man auch online kaufen.
+      en: You can also buy the tickets online.
+      fa: بلیت‌ها را آنلاین هم می‌شود خرید.
+
   - word: austauschen
+    class: verb
+    level: A2
+    meaning:
+      en: to exchange, to swap
+      fa: رد و بدل کردن، مبادله کردن
+    definition: einer anderen Person etwas geben und dafür etwas von ihr bekommen, zum Beispiel Telefonnummern oder Ideen
+    example:
+      de: Nach dem Kurs haben wir unsere Handynummern ausgetauscht.
+      en: After the course we exchanged mobile numbers.
+      fa: بعد از کلاس شماره‌هایمان را با هم رد و بدل کردیم.
+    alsoAccepted: [tauschen]
+
+review:
+  reviewer: "an independent AI agent (two fresh reviewers: the whole sheet, then
+    the changed and disputed questions)"
+  date: 2026-11-28
+  pool: e145d8c7a9547500

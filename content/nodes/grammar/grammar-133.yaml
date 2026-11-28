@@ -4,10 +4,374 @@ kind: grammar
 level: A2
 chapter: a2-prepositions
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-122, grammar-127]
 title:
   en: "Direction adverbs and *hin-*/*her-*"
   fa: "قیدهای جهت و *hin-* / *her-*"
   de: "Richtungsadverbien und *hin-* / *her-*"
+
+explanations:
+  en:
+    rule: >
+      The place adverbs *hier*, *da*, *dort*, *oben*, *unten*, *links* and
+      *rechts* answer *Wo?*. For a direction, in answer to *Wohin?*, they
+      change: *hier* becomes *hierhin* or *hierher*, *da* and *dort* become
+      *dahin* and *dorthin*, and the others take *nach*: *nach oben*, *nach
+      links*. *Hin* points away from the speaker, *her* towards the speaker:
+      *Komm her!* The question *Wohin?* is often split: *Wo gehst du hin?*
+      Joined to *ein*, *aus*, *auf* and *unter*, they make *herein*, *hinaus*,
+      *herauf*, *hinunter* and so on. In everyday speech these are short, and
+      the same for both directions: *rein*, *raus*, *rauf*, *runter*. As the
+      prefix of a verb they go to the end: *Komm sofort runter!*
+  fa:
+    rule: >
+      قیدهای مکان *hier*، *da*، *dort*، *oben*، *unten*، *links* و *rechts*
+      پاسخ پرسش *Wo?* (کجا؟) هستند. برای جهت، یعنی در پاسخ به *Wohin?* (به
+      کجا؟)، تغییر می‌کنند: *hier* می‌شود *hierhin* یا *hierher*، *da* و
+      *dort* می‌شوند *dahin* و *dorthin*، و بقیه با *nach* می‌آیند: *nach oben*
+      و *nach links*. *hin* جهتِ دور شدن از گوینده را نشان می‌دهد و *her* جهتِ
+      نزدیک شدن به گوینده را: *Komm her!* پرسش *Wohin?* اغلب دو تکه می‌شود:
+      *Wo gehst du hin?* این دو با *ein*، *aus*، *auf* و *unter* واژه‌هایی
+      مانند *herein*، *hinaus*، *herauf* و *hinunter* می‌سازند. در گفتار
+      روزمره شکل کوتاه آن‌ها به کار می‌رود که برای هر دو جهت یکی است: *rein*،
+      *raus*، *rauf* و *runter*. وقتی پیشوند فعل باشند، به پایان جمله
+      می‌روند: *Komm sofort runter!*
+  de:
+    rule: >
+      Die Ortsadverbien *hier*, *da*, *dort*, *oben*, *unten*, *links* und
+      *rechts* antworten auf *Wo?*. Bei einer Richtung, auf die Frage
+      *Wohin?*, ändern sie sich: *hier* wird zu *hierhin* oder *hierher*, *da*
+      und *dort* werden zu *dahin* und *dorthin*, und die anderen bekommen
+      *nach*: *nach oben*, *nach links*. *Hin* heißt: weg vom Sprecher. *Her*
+      heißt: zum Sprecher. *Komm her!* Die Frage *Wohin?* teilt man oft: *Wo
+      gehst du hin?* Mit *ein*, *aus*, *auf* und *unter* gibt es *herein*,
+      *hinaus*, *herauf*, *hinunter* und so weiter. Im Alltag sagt man sie kurz,
+      und für beide Richtungen gleich: *rein*, *raus*, *rauf*, *runter*. Als
+      Präfix von einem Verb stehen sie am Ende: *Komm sofort runter!*
+
+# Three rows: hin and her seen from the speaker, into and out of a house,
+# up and down. German only, so no labels.
+diagrams:
+  - caption:
+      en: >
+        *Her* comes towards the speaker (*ich*), *hin* goes away. *Rein* goes
+        into the house, *raus* out of it. *Nach oben* or *rauf* goes up, *nach
+        unten* or *runter* goes down.
+      fa: >
+        *her* به سوی گوینده (*ich*) می‌آید و *hin* از او دور می‌شود. *rein* به
+        درون خانه می‌رود و *raus* بیرون از آن. *nach oben* یا *rauf* به بالا
+        می‌رود و *nach unten* یا *runter* به پایین.
+      de: >
+        *Her* kommt zum Sprecher (*ich*), *hin* geht weg. *Rein* geht ins Haus,
+        *raus* aus dem Haus. *Nach oben* oder *rauf* geht nach oben, *nach
+        unten* oder *runter* nach unten.
+    svg: |
+      <svg viewBox="0 0 320 390">
+        <!-- her: towards the speaker; hin: away from the speaker -->
+        <text class="label" x="76" y="46" text-anchor="middle">her</text>
+        <line class="line" x1="20" y1="60" x2="130" y2="60"/>
+        <polygon class="object" points="130,54 142,60 130,66"/>
+        <text class="note" x="76" y="84" text-anchor="middle">zu mir</text>
+        <circle class="object" cx="160" cy="36" r="10"/>
+        <rect class="object" x="152" y="50" width="16" height="30"/>
+        <text class="note" x="160" y="100" text-anchor="middle">ich</text>
+        <text class="label" x="240" y="46" text-anchor="middle">hin</text>
+        <line class="line" x1="180" y1="60" x2="290" y2="60"/>
+        <polygon class="object" points="290,54 302,60 290,66"/>
+        <text class="note" x="240" y="84" text-anchor="middle">weg von mir</text>
+        <!-- rein and raus: into and out of a house you can see into -->
+        <polygon class="guide" points="104,160 160,126 216,160"/>
+        <rect class="guide" x="110" y="160" width="100" height="64"/>
+        <text class="label" x="54" y="172" text-anchor="middle">rein</text>
+        <line class="line" x1="20" y1="184" x2="134" y2="184"/>
+        <polygon class="object" points="134,178 146,184 134,190"/>
+        <text class="label" x="266" y="202" text-anchor="middle">raus</text>
+        <line class="line" x1="174" y1="214" x2="290" y2="214"/>
+        <polygon class="object" points="290,208 302,214 290,220"/>
+        <!-- nach oben / rauf and nach unten / runter -->
+        <line class="line" x1="100" y1="344" x2="100" y2="272"/>
+        <polygon class="object" points="94,272 100,260 106,272"/>
+        <text class="label" x="100" y="366" text-anchor="middle">nach oben</text>
+        <text class="note" x="100" y="384" text-anchor="middle">rauf</text>
+        <line class="line" x1="220" y1="260" x2="220" y2="332"/>
+        <polygon class="object" points="214,332 220,344 226,332"/>
+        <text class="label" x="220" y="366" text-anchor="middle">nach unten</text>
+        <text class="note" x="220" y="384" text-anchor="middle">runter</text>
+      </svg>
+
+table:
+  columns:
+    - { en: "*Wo?*", fa: "*Wo?*", de: "*Wo?*" }
+    - { en: "*Wohin?*", fa: "*Wohin?*", de: "*Wohin?*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [hier, "hierhin, hierher", Komm bitte hierher!]
+    - [da / dort, "dahin, dorthin", Wir fahren morgen dorthin.]
+    - [oben, "nach oben, rauf", Der Aufzug fährt nach oben.]
+    - [unten, "nach unten, runter", Komm sofort runter!]
+    - [links / rechts, nach links / nach rechts, Gehen Sie dann nach rechts.]
+    - [drinnen, "rein (herein, hinein)", Komm doch rein!]
+    - [draußen, "raus (heraus, hinaus)", Die Kinder gehen raus.]
+
+examples:
+  - de: Komm sofort runter!
+    en: Come down at once!
+    fa: همین حالا بیا پایین!
+  - de: Der Aufzug fährt nach oben.
+    en: The lift is going up.
+    fa: آسانسور بالا می‌رود.
+  - de: Komm bitte hierher!
+    en: Please come here!
+    fa: بیا این‌جا!
+  - de: Stell den Koffer bitte hierhin.
+    en: Please put the suitcase here.
+    fa: چمدان را این‌جا بگذار.
+  - de: Das Konzert ist im Park. Wir gehen auch dorthin.
+    en: The concert is in the park. We are going there too.
+    fa: کنسرت در پارک است. ما هم به آن‌جا می‌رویم.
+  - de: Wo gehst du hin? – Zum Bäcker.
+    en: Where are you going? – To the baker's.
+    fa: کجا می‌روی؟ – به نانوایی.
+  - de: An der Ampel gehen Sie nach links.
+    en: At the traffic lights go left.
+    fa: سر چراغ راهنمایی به چپ بروید.
+  - de: Es klopft. – Herein!
+    en: Someone is knocking. – Come in!
+    fa: کسی در می‌زند. – بفرمایید!
+  - de: Es ist kalt. Komm doch rein!
+    en: It's cold. Do come in!
+    fa: هوا سرد است. بیا داخل!
+  - de: Die Kinder gehen raus und spielen im Garten.
+    en: The children go out and play in the garden.
+    fa: بچه‌ها بیرون می‌روند و در باغ بازی می‌کنند.
+
+mistakes:
+  - wrong: Ich gehe oben.
+    right: Ich gehe nach oben.
+    why:
+      en: "*Oben* says where (*Wo?*). For a direction (*Wohin?*) it takes *nach*: *nach oben*."
+      fa: "*oben* جای چیزی را می‌گوید (*Wo?*). برای جهت (*Wohin?*) با *nach* می‌آید: *nach oben*."
+      de: "*Oben* sagt, wo etwas ist (*Wo?*). Für eine Richtung (*Wohin?*) sagt man *nach oben*."
+  - wrong: Wir fahren morgen dort.
+    right: Wir fahren morgen dorthin.
+    why:
+      en: "*Fahren* goes somewhere (*Wohin?*), so *dort* becomes *dorthin*."
+      fa: "*fahren* به جایی رفتن است (*Wohin?*)، پس *dort* می‌شود *dorthin*."
+      de: "*Fahren* ist eine Bewegung (*Wohin?*). Darum wird *dort* zu *dorthin*."
+  - wrong: Stell den Koffer bitte hier.
+    right: Stell den Koffer bitte hierhin.
+    why:
+      en: "*Stellen* is a movement to a place (*Wohin?*), so *hier* becomes *hierhin*."
+      fa: "*stellen* حرکت به یک جاست (*Wohin?*)، پس *hier* می‌شود *hierhin*."
+      de: "*Stellen* ist eine Bewegung (*Wohin?*). Darum wird *hier* zu *hierhin*."
+  - wrong: Wo fährst du im Sommer?
+    right: Wohin fährst du im Sommer?
+    why:
+      en: "*Fahren* to a place needs *Wohin?*, or the split form *Wo fährst du im Sommer hin?*"
+      fa: "برای رفتن به جایی *Wohin?* لازم است، یا شکل دو تکهٔ آن: *Wo fährst du im Sommer hin?*"
+      de: "Für eine Fahrt zu einem Ort fragt man *Wohin?* oder geteilt: *Wo fährst du im Sommer hin?*"
+  - wrong: Die Kinder spielen raus.
+    right: Die Kinder spielen draußen.
+    why:
+      en: "Playing stays in one place (*Wo?*): *draußen*. *Raus* is the movement out: *Die Kinder gehen raus.*"
+      fa: "بازی در یک جا می‌ماند (*Wo?*): *draußen*. *raus* حرکت به بیرون است: *Die Kinder gehen raus.*"
+      de: "Beim Spielen bleibt man an einem Ort (*Wo?*): *draußen*. *Raus* ist die Bewegung: *Die Kinder gehen raus.*"
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Aufzug fährt ___.
+    options: [nach oben, oben, dort]
+    answer: nach oben
+    explanation:
+      en: "*Fahren* is a movement (*Wohin?*): *oben* becomes *nach oben*."
+      fa: "*fahren* حرکت است (*Wohin?*): *oben* می‌شود *nach oben*."
+      de: "*Fahren* ist eine Bewegung (*Wohin?*): *oben* wird zu *nach oben*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Mein Zimmer ist ganz ___, unter dem Dach.
+    options: [oben, nach oben, rauf]
+    answer: oben
+    explanation:
+      en: "*Sein* says where (*Wo?*): *oben*, with no *nach*."
+      fa: "*sein* جای چیزی را می‌گوید (*Wo?*): *oben*، بدون *nach*."
+      de: "*Sein* sagt, wo etwas ist (*Wo?*): *oben*, ohne *nach*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Kennst du das neue Café? Wir gehen heute Abend ___.
+    options: [dorthin, dort, hier]
+    answer: dorthin
+    explanation:
+      en: "*Gehen* to a place is *Wohin?*: *dort* becomes *dorthin*."
+      fa: "*gehen* به جایی، پاسخ *Wohin?* است: *dort* می‌شود *dorthin*."
+      de: "*Gehen* zu einem Ort: *Wohin?*. *Dort* wird zu *dorthin*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Es regnet. Komm schnell ___!
+    options: [rein, drinnen, hier]
+    answer: rein
+    explanation:
+      en: "A movement into the house: *rein* (*herein*). *Drinnen* says where."
+      fa: "حرکت به درون خانه: *rein* (*herein*). *drinnen* جای چیزی را می‌گوید."
+      de: "Eine Bewegung ins Haus: *rein* (*herein*). *Drinnen* sagt, wo etwas ist."
+  - id: gap-5
+    type: gap-fill
+    prompt: Die Kinder spielen ___ im Garten.
+    options: [draußen, raus, nach draußen]
+    answer: draußen
+    explanation:
+      en: "Playing stays in one place (*Wo?*): *draußen*."
+      fa: "بازی در یک جا می‌ماند (*Wo?*): *draußen*."
+      de: "Beim Spielen bleibt man an einem Ort (*Wo?*): *draußen*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Gehen Sie an der Kreuzung ___ links.
+    options: [nach, zu, in]
+    answer: nach
+    explanation:
+      en: "A direction with *links* takes *nach*: *nach links*."
+      fa: "جهت با *links* با *nach* می‌آید: *nach links*."
+      de: "Eine Richtung mit *links*: *nach links*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Jemand klopft an die Tür. Sie rufen: „___!“"
+    options: [Herein, Hinein, Hinaus]
+    answer: Herein
+    explanation:
+      en: "The visitor comes into the room, towards you: *her* + *ein*, *Herein!*"
+      fa: "مهمان به درون اتاق و به سوی شما می‌آید: *her* + *ein*، یعنی *Herein!*"
+      de: "Der Besuch kommt ins Zimmer, zu Ihnen: *her* + *ein*, *Herein!*"
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Du bist oben am Fenster. Dein Freund ist unten auf der Straße. Du rufst: „Komm doch ___!“"
+    options: [rauf, runter, raus]
+    answer: rauf
+    explanation:
+      en: "Your friend should come up to you: *rauf* (*herauf*)."
+      fa: "دوستت باید بالا پیش تو بیاید: *rauf* (*herauf*)."
+      de: "Dein Freund soll zu dir nach oben kommen: *rauf* (*herauf*)."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wo ist die Toilette? – ___
+    options: [Dort links., Dorthin., Nach links.]
+    answer: Dort links.
+    explanation:
+      en: "*Wo?* asks where, so the adverbs without *hin* or *nach*: *dort links*."
+      fa: "*Wo?* جای چیزی را می‌پرسد، پس قیدها بدون *hin* و *nach* می‌آیند: *dort links*."
+      de: "*Wo?* fragt nach dem Ort. Darum ohne *hin* und ohne *nach*: *dort links*."
+  - id: true-1
+    type: true-false
+    prompt: Stell die Tasche bitte hierhin.
+    answer: true
+    explanation:
+      en: "*Stellen* is a movement (*Wohin?*): *hierhin*. The sentence is correct."
+      fa: "*stellen* حرکت است (*Wohin?*): *hierhin*. جمله درست است."
+      de: "*Stellen* ist eine Bewegung (*Wohin?*): *hierhin*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich fahre nächste Woche nach Hamburg. Fährst du auch dort?
+    answer: false
+    explanation:
+      en: "*Fahren* to a place is *Wohin?*: *Fährst du auch dorthin?*"
+      fa: "*fahren* به جایی، پاسخ *Wohin?* است: *Fährst du auch dorthin?*"
+      de: "*Fahren* zu einem Ort: *Wohin?*. *Fährst du auch dorthin?*"
+  - id: true-3
+    type: true-false
+    prompt: Der Aufzug fährt nach unten.
+    answer: true
+    explanation:
+      en: "A direction: *nach unten*. The sentence is correct."
+      fa: "جهت: *nach unten*. جمله درست است."
+      de: "Eine Richtung: *nach unten*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich gehe kurz oben und hole meine Jacke.
+    answer: false
+    explanation:
+      en: "*Gehen* is a movement (*Wohin?*): *nach oben* or *rauf*."
+      fa: "*gehen* حرکت است (*Wohin?*): *nach oben* یا *rauf*."
+      de: "*Gehen* ist eine Bewegung (*Wohin?*): *nach oben* oder *rauf*."
+  - id: true-5
+    type: true-false
+    prompt: Wo gehst du hin?
+    answer: true
+    explanation:
+      en: "*Wohin?* is often split: *Wo … hin?* The sentence is correct."
+      fa: "*Wohin?* اغلب دو تکه می‌شود: *Wo … hin?* جمله درست است."
+      de: "*Wohin?* teilt man oft: *Wo … hin?* Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Der Lift fährt ___ (oben).
+    answers: [nach oben, rauf, hinauf, herauf, hoch]
+    explanation:
+      en: "*Fahren* is a movement (*Wohin?*): *nach oben*."
+      fa: "*fahren* حرکت است (*Wohin?*): *nach oben*."
+      de: "*Fahren* ist eine Bewegung (*Wohin?*): *nach oben*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir waren schon oft in Wien, aber wir fahren gern wieder ___ (dort).
+    answers: [dorthin, dahin, hin]
+    explanation:
+      en: "*Fahren* to a place is *Wohin?*: *dort* becomes *dorthin*."
+      fa: "*fahren* به جایی، پاسخ *Wohin?* است: *dort* می‌شود *dorthin*."
+      de: "*Fahren* zu einem Ort: *Wohin?*. *Dort* wird zu *dorthin*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich bin unten in der Küche. Komm bitte ___ (unten)!
+    answers: [runter, herunter, nach unten]
+    explanation:
+      en: "A movement down towards the speaker: *runter* (*herunter*) or *nach unten*."
+      fa: "حرکت به پایین، به سوی گوینده: *runter* (*herunter*) یا *nach unten*."
+      de: "Eine Bewegung nach unten, zum Sprecher: *runter* (*herunter*) oder *nach unten*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Das Wetter ist so schön. Gehen wir ___ (draußen)?
+    answers: [raus, nach draußen, hinaus]
+    explanation:
+      en: "A movement out of the house: *raus* or *nach draußen*."
+      fa: "حرکت به بیرون از خانه: *raus* یا *nach draußen*."
+      de: "Eine Bewegung aus dem Haus: *raus* oder *nach draußen*."
+  - id: error-1
+    type: find-error
+    prompt: Stell die Blumen bitte dort.
+    answer: dort
+    explanation:
+      en: "*Stellen* is a movement (*Wohin?*): *dorthin* or *dahin*."
+      fa: "*stellen* حرکت است (*Wohin?*): *dorthin* یا *dahin*."
+      de: "*Stellen* ist eine Bewegung (*Wohin?*): *dorthin* oder *dahin*."
+  - id: error-2
+    type: find-error
+    prompt: Komm her! Ich bin hierhin.
+    answer: hierhin
+    explanation:
+      en: "*Sein* says where (*Wo?*): *Ich bin hier.*"
+      fa: "*sein* جای کسی را می‌گوید (*Wo?*): *Ich bin hier.*"
+      de: "*Sein* sagt, wo man ist (*Wo?*): *Ich bin hier.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [der Aufzug, fährt, nach oben]
+      - [nach oben, fährt, der Aufzug]
+    explanation:
+      en: "The verb comes second. The direction can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. جهت می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. Die Richtung kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [hier, hierhin]
+      - [dort, dorthin]
+      - [oben, nach oben]
+      - [draußen, nach draußen]
+    explanation:
+      en: "Each *Wo?* word and its *Wohin?* form: *hier*, *hierhin*; *dort*, *dorthin*; *oben*, *nach oben*; *draußen*, *nach draußen*."
+      fa: "هر واژهٔ *Wo?* و شکل *Wohin?* آن: *hier* و *hierhin*؛ *dort* و *dorthin*؛ *oben* و *nach oben*؛ *draußen* و *nach draußen*."
+      de: "Jedes *Wo?*-Wort und seine *Wohin?*-Form: *hier*, *hierhin*; *dort*, *dorthin*; *oben*, *nach oben*; *draußen*, *nach draußen*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: acf88a95444a5f5e
