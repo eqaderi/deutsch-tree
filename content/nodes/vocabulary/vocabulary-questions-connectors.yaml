@@ -1,33 +1,270 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# A definition in simple German shows the word's place in a sentence with "…", since a small
+# word is hard to say in other words.
 id: vocabulary-questions-connectors
 kind: vocabulary
 level: A1
 chapter: a1-words-small-words
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Question words and connecting words"
   fa: "واژه‌های پرسشی و واژه‌های ربط"
   de: "Fragewörter und Verbindungswörter"
+attemptSize: 15
 words:
   - word: wer
+    class: pronoun
+    level: A1
+    meaning:
+      en: who
+      fa: چه کسی
+    definition: "das Fragewort nach einer Person: … ist das?"
+    example:
+      de: Wer kommt heute Abend?
+      en: Who is coming tonight?
+      fa: چه کسی امشب می‌آید؟
+
   - word: was
+    class: pronoun
+    level: A1
+    meaning:
+      en: what
+      fa: چه، چه چیزی
+    definition: "das Fragewort nach einer Sache: … ist das?"
+    example:
+      de: Was isst du gern?
+      en: What do you like to eat?
+      fa: چه غذایی دوست داری؟
+
   - word: wann
+    class: adverb
+    level: A1
+    meaning:
+      en: when (question word)
+      fa: کی، چه زمانی
+    definition: "das Fragewort nach der Zeit: … kommt der Zug?"
+    example:
+      de: Wann beginnt der Kurs?
+      en: When does the course start?
+      fa: کلاس کی شروع می‌شود؟
+
   - word: warum
+    class: adverb
+    level: A1
+    meaning:
+      en: why
+      fa: چرا
+    definition: das Fragewort nach dem Grund
+    example:
+      de: Warum lernst du Deutsch?
+      en: Why are you learning German?
+      fa: چرا آلمانی یاد می‌گیری؟
+    alsoAccepted: [wieso, weshalb]
+
   - word: wie
+    class: adverb
+    level: A1
+    meaning:
+      en: how
+      fa: چطور، چگونه
+    definition: "das Fragewort nach der Art: … geht es dir?"
+    example:
+      de: Wie heißt du?
+      en: What's your name?
+      fa: اسمت چیست؟
+
   - word: wo
+    class: adverb
+    level: A1
+    meaning:
+      en: where (at what place)
+      fa: کجا (در چه جایی)
+    definition: "das Fragewort nach dem Ort: … ist der Bahnhof?"
+    example:
+      de: Wo ist der Bahnhof?
+      en: Where is the station?
+      fa: ایستگاه قطار کجاست؟
+
   - word: woher
+    class: adverb
+    level: A1
+    meaning:
+      en: where from
+      fa: از کجا
+    definition: "das Fragewort nach dem Ort, von dem man kommt: … kommen Sie?"
+    example:
+      de: Woher kommen Sie?
+      en: Where are you from?
+      fa: اهل کجا هستید؟
+
   - word: wohin
+    class: adverb
+    level: A1
+    meaning:
+      en: where to
+      fa: به کجا
+    definition: "das Fragewort nach dem Ziel: … fährst du?"
+    example:
+      de: Wohin fahrt ihr im Urlaub?
+      en: Where are you going on holiday?
+      fa: برای تعطیلات به کجا می‌روید؟
+
   - word: welcher
+    class: pronoun
+    level: A1
+    meaning:
+      en: which
+      fa: کدام
+    definition: "das Fragewort, wenn man aus mehreren Sachen eine wählt: … Bus fährt zum Bahnhof?"
+    example:
+      de: Welchen Bus nimmst du?
+      en: Which bus are you taking?
+      fa: با کدام اتوبوس می‌روی؟
+    alsoAccepted: [welche, welches]
+
   - word: was für ein
+    class: phrase
+    level: A1
+    meaning:
+      en: what kind of
+      fa: چه جور، چه نوع
+    definition: "fragt nach der Art von einer Sache: … Auto hast du?"
+    example:
+      de: Was für ein Auto hast du?
+      en: What kind of car do you have?
+      fa: چه جور ماشینی داری؟
+    alsoAccepted: [was für eine, was für]
+
   - word: und
+    class: conjunction
+    level: A1
+    meaning:
+      en: and
+      fa: و
+    definition: "verbindet zwei Wörter oder zwei Sätze: Brot … Butter"
+    example:
+      de: Wir kaufen Brot und Käse.
+      en: We're buying bread and cheese.
+      fa: نان و پنیر می‌خریم.
+
   - word: oder
+    class: conjunction
+    level: A1
+    meaning:
+      en: or
+      fa: یا
+    definition: "man kann zwischen zwei Sachen wählen: Tee … Kaffee?"
+    example:
+      de: Möchtest du Tee oder Kaffee?
+      en: Would you like tea or coffee?
+      fa: چای می‌خواهی یا قهوه؟
+
   - word: aber
+    class: conjunction
+    level: A1
+    meaning:
+      en: but (however)
+      fa: اما، ولی
+    definition: "verbindet zwei Dinge, die nicht zusammenpassen: klein, … schön"
+    example:
+      de: Das Zimmer ist klein, aber hell.
+      en: The room is small but bright.
+      fa: اتاق کوچک اما روشن است.
+    alsoAccepted: [jedoch, doch]
+
   - word: denn
+    class: conjunction
+    level: A1
+    meaning:
+      en: because, for
+      fa: چون، زیرا
+    definition: "nennt den Grund, wie „weil“, aber das Verb bleibt auf Position 2"
+    example:
+      de: Ich bleibe zu Hause, denn ich bin krank.
+      en: I'm staying at home because I'm ill.
+      fa: در خانه می‌مانم، چون بیمارم.
+    alsoAccepted: [weil, da]
+
   - word: also
+    class: adverb
+    level: A1
+    meaning:
+      en: so, therefore (as a result)
+      fa: پس، بنابراین
+    definition: "nennt die Folge: Es regnet, … nehme ich den Schirm."
+    example:
+      de: Der Bus ist weg, also gehen wir zu Fuß.
+      en: The bus has gone, so we'll walk.
+      fa: اتوبوس رفته است، پس پیاده می‌رویم.
+    alsoAccepted: [deshalb, deswegen, daher, darum]
+
   - word: auch
+    class: adverb
+    level: A1
+    meaning:
+      en: also, too
+      fa: هم، همچنین
+    definition: "genauso wie eine andere Person oder Sache: Ich komme …"
+    example:
+      de: Ich spreche auch ein bisschen Englisch.
+      en: I also speak a little English.
+      fa: من کمی انگلیسی هم صحبت می‌کنم.
+
   - word: nicht
+    class: particle
+    level: A1
+    meaning:
+      en: not
+      fa: نه (برای منفی کردن جمله)
+    definition: "macht einen Satz negativ: Ich komme heute …"
+    example:
+      de: Ich komme heute nicht.
+      en: I'm not coming today.
+      fa: امروز نمی‌آیم.
+
   - word: nur
+    class: adverb
+    level: A1
+    meaning:
+      en: only, just
+      fa: فقط
+    definition: "nicht mehr als das: Ich habe … zehn Euro."
+    example:
+      de: Ich habe nur zehn Minuten Zeit.
+      en: I only have ten minutes.
+      fa: فقط ده دقیقه وقت دارم.
+    alsoAccepted: [bloß, lediglich]
+
   - word: sehr
+    class: adverb
+    level: A1
+    meaning:
+      en: very
+      fa: خیلی، بسیار (پیش از صفت یا قید)
+    definition: "macht ein Wort stärker, zum Beispiel am Anfang von einem Brief: „… geehrte Damen und Herren“"
+    example:
+      de: Das Essen ist sehr gut.
+      en: The food is very good.
+      fa: غذا خیلی خوب است.
+    tooCloseTo: [so]
+
   - word: so
+    class: adverb
+    level: A1
+    meaning:
+      en: like this, in this way; so (very)
+      fa: این‌طور؛ این‌قدر
+    definition: "auf diese Art; auch: sehr, zum Beispiel in „Das ist … schön!“"
+    example:
+      de: So macht man das.
+      en: This is how you do it.
+      fa: این کار را این‌طور انجام می‌دهند.
+    tooCloseTo: [sehr, also]
+
+review:
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 120, then 37, then 4 questions)
+  date: 2026-11-28
+  pool: 66d7ca7d5006eb30
