@@ -12,21 +12,21 @@ title:
   de: "Möbel und Dinge im Haus"
 attemptSize: 15
 words:
-  # The scope list gives "das Möbel" (one piece); it is mostly said in the plural, "die Möbel".
+  # Learned in the plural, "die Möbel" (scope-corrections.yaml); one piece is "das Möbelstück".
   - word: Möbel
     class: noun
-    article: das
-    plural: Möbel
+    article: die
+    number: plural-only
     level: A1
     meaning:
-      en: furniture, piece of furniture
+      en: furniture
       fa: مبلمان، اثاثیه
-    definition: ein großes Ding in einer Wohnung, zum Beispiel ein Tisch, ein Bett oder ein Schrank
+    definition: Tische, Stühle, Betten und Schränke in einer Wohnung
     example:
-      de: Wir brauchen neue Möbel für das Wohnzimmer.
-      en: We need new furniture for the living room.
-      fa: برای اتاق نشیمن مبلمان تازه لازم داریم.
-    alsoAccepted: [die Möbel, das Möbelstück, die Einrichtung]
+      de: Alle Möbel sind neu, nur ein Möbelstück ist alt, der Schrank.
+      en: All the furniture is new; only one piece is old, the wardrobe.
+      fa: همهٔ مبلمان نو است و فقط یک تکه از آن کهنه است، کمد.
+    alsoAccepted: [das Möbelstück, das Mobiliar, die Einrichtung]
 
   - word: Tisch
     class: noun
@@ -349,7 +349,7 @@ words:
       fa: هزینهٔ تعمیر ۱۲۰ یورو است.
 
 review:
-  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
-    only; 144, then 42 questions)
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 144, then 42, then 12 questions)
   date: 2026-11-28
-  pool: 2f6aae80b2f0fd03
+  pool: 42e72dc80ccd77fe
