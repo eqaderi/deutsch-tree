@@ -1,39 +1,389 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-body-illness
 kind: vocabulary
 level: A2
 chapter: a2-words-health-town
 order: 1
-status: coming-soon
+status: published
 title:
   en: "The body and being ill"
   fa: "بدن و بیماری"
   de: "Der Körper und Kranksein"
+attemptSize: 15
 words:
   - word: Körper
+    class: noun
+    article: der
+    plural: Körper
+    level: A2
+    meaning:
+      en: body
+      fa: بدن، جسم
+    definition: alles an einem Menschen oder einem Tier, vom Kopf bis zu den Füßen
+    example:
+      de: Sport ist gut für den Körper.
+      en: Sport is good for the body.
+      fa: ورزش برای بدن مفید است.
+
   - word: Gesicht
+    class: noun
+    article: das
+    plural: Gesichter
+    level: A2
+    meaning:
+      en: face
+      fa: صورت، چهره
+    definition: der vordere Teil vom Kopf mit Augen, Nase und Mund
+    example:
+      de: Wasch dir bitte das Gesicht!
+      en: Please wash your face!
+      fa: لطفاً صورتت را بشوی!
+
   - word: Hals
+    class: noun
+    article: der
+    plural: Hälse
+    level: A2
+    meaning:
+      en: neck; throat
+      fa: گردن؛ گلو
+    definition: der Teil zwischen dem Kopf und den Schultern
+    example:
+      de: Mein Hals tut weh, ich kann kaum sprechen.
+      en: My throat hurts; I can hardly speak.
+      fa: گلویم درد می‌کند و به‌سختی می‌توانم حرف بزنم.
+
   - word: Ohr
+    class: noun
+    article: das
+    plural: Ohren
+    level: A2
+    meaning:
+      en: ear
+      fa: گوش
+    definition: damit hört man; man hat zwei, links und rechts am Kopf
+    example:
+      de: Er hört auf einem Ohr nicht gut.
+      en: He doesn't hear well in one ear.
+      fa: او با یکی از گوش‌هایش خوب نمی‌شنود.
+
   - word: Zahn
+    class: noun
+    article: der
+    plural: Zähne
+    level: A2
+    meaning:
+      en: tooth
+      fa: دندان
+    definition: er ist weiß und hart und steht im Mund; damit beißt man
+    example:
+      de: Putz dir vor dem Schlafen die Zähne!
+      en: Brush your teeth before you go to sleep!
+      fa: قبل از خواب دندان‌هایت را مسواک بزن!
+
   - word: Rücken
+    class: noun
+    article: der
+    plural: Rücken
+    level: A2
+    meaning:
+      en: back (of the body)
+      fa: کمر، پشت (بدن)
+    definition: die hintere Seite vom Menschen, zwischen den Schultern und den Beinen
+    example:
+      de: Nach der Gartenarbeit tut mir der Rücken weh.
+      en: After working in the garden my back hurts.
+      fa: بعد از کار در باغچه کمرم درد می‌کند.
+
   - word: Magen
+    class: noun
+    article: der
+    plural: Mägen
+    level: A2
+    meaning:
+      en: stomach (the organ that digests food)
+      fa: معده (اندامی که غذا را هضم می‌کند)
+    definition: dorthin kommt das Essen, wenn man es geschluckt hat
+    example:
+      de: Ich habe zu viel gegessen, jetzt tut mir der Magen weh.
+      en: I've eaten too much; now my stomach hurts.
+      fa: بیش از اندازه غذا خورده‌ام و حالا معده‌ام درد می‌کند.
+
   - word: Gesundheit
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: health
+      fa: سلامتی، تندرستی
+    definition: der gute Zustand von Körper und Kopf; man wünscht sie zum Geburtstag
+    example:
+      de: Rauchen ist schlecht für die Gesundheit.
+      en: Smoking is bad for your health.
+      fa: سیگار کشیدن برای سلامتی مضر است.
+
+  # Healthy and fit overlap; neither meaning is offered as a wrong one for the other.
   - word: gesund
+    class: adjective
+    level: A2
+    meaning:
+      en: healthy, well
+      fa: سالم، تندرست
+    definition: nicht krank
+    example:
+      de: Ich war krank, aber jetzt bin ich wieder gesund.
+      en: I was ill, but now I'm well again.
+      fa: بیمار بودم، اما حالا دوباره سالمم.
+    tooCloseTo: [fit]
+
+  # The flu is one illness; neither meaning is offered as a wrong one for the other.
   - word: Krankheit
+    class: noun
+    article: die
+    plural: Krankheiten
+    level: A2
+    meaning:
+      en: illness, disease
+      fa: بیماری
+    definition: das, was man hat, wenn man nicht gesund ist, zum Beispiel Grippe oder Masern
+    example:
+      de: Die Krankheit dauert meistens eine Woche.
+      en: The illness usually lasts a week.
+      fa: این بیماری معمولاً یک هفته طول می‌کشد.
+    alsoAccepted: [die Erkrankung]
+    tooCloseTo: [Grippe]
+
   - word: Grippe
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: flu, influenza
+      fa: آنفولانزا
+    definition: eine Krankheit mit hohem Fieber, Husten und Schmerzen im ganzen Körper
+    example:
+      de: Sie hat Grippe und liegt im Bett.
+      en: She has the flu and is in bed.
+      fa: او آنفولانزا گرفته و در رختخواب است.
+    alsoAccepted: [die Influenza]
+    tooCloseTo: [Krankheit]
+
   - word: erkältet
+    class: adjective
+    level: A2
+    meaning:
+      en: having a cold
+      fa: سرماخورده
+    definition: so ist man, wenn man Schnupfen und Husten hat und nur ein bisschen krank ist
+    example:
+      de: Ich bin erkältet und bleibe heute zu Hause.
+      en: I've got a cold and I'm staying at home today.
+      fa: سرما خورده‌ام و امروز در خانه می‌مانم.
+
   - word: husten
+    class: verb
+    level: A2
+    meaning:
+      en: to cough
+      fa: سرفه کردن
+    definition: Luft plötzlich und laut aus dem Mund stoßen, zum Beispiel bei einer Erkältung
+    example:
+      de: Das Kind hustet die ganze Nacht.
+      en: The child coughs all night long.
+      fa: بچه تمام شب سرفه می‌کند.
+
   - word: Schmerz
+    class: noun
+    article: der
+    plural: Schmerzen
+    level: A2
+    meaning:
+      en: pain, ache
+      fa: درد
+    definition: das Gefühl, wenn etwas am Körper wehtut
+    example:
+      de: Nach zwei Tagen war der Schmerz im Knie weg.
+      en: After two days the pain in my knee was gone.
+      fa: بعد از دو روز درد زانویم برطرف شد.
+
+  # A tablet is one kind of medicine; neither meaning is offered as a wrong one for the other.
   - word: Medikament
+    class: noun
+    article: das
+    plural: Medikamente
+    level: A2
+    meaning:
+      en: medicine, medication (a drug)
+      fa: دارو
+    definition: das nimmt man gegen eine Krankheit, zum Beispiel Tropfen oder Tabletten
+    example:
+      de: Dieses Medikament bekommen Sie nur mit Rezept.
+      en: You can only get this medicine with a prescription.
+      fa: این دارو را فقط با نسخه می‌توانید بگیرید.
+    alsoAccepted: [das Arzneimittel, die Arznei, die Medizin]
+    tooCloseTo: [Tablette]
+
   - word: Tablette
+    class: noun
+    article: die
+    plural: Tabletten
+    level: A2
+    meaning:
+      en: tablet, pill
+      fa: قرص
+    definition: ein kleines, rundes Medikament, das man mit Wasser schluckt
+    example:
+      de: Nehmen Sie dreimal am Tag eine Tablette.
+      en: Take one tablet three times a day.
+      fa: روزی سه بار یک قرص بخورید.
+    alsoAccepted: [die Pille]
+    tooCloseTo: [Medikament]
+
   - word: Apotheke
+    class: noun
+    article: die
+    plural: Apotheken
+    level: A2
+    meaning:
+      en: pharmacy, chemist's
+      fa: داروخانه
+    definition: ein Geschäft, in dem man Medikamente kauft
+    example:
+      de: Die Apotheke am Markt hat auch sonntags geöffnet.
+      en: The pharmacy at the market is open on Sundays too.
+      fa: داروخانهٔ کنار بازار یکشنبه‌ها هم باز است.
+
   - word: Krankenhaus
+    class: noun
+    article: das
+    plural: Krankenhäuser
+    level: A2
+    meaning:
+      en: hospital
+      fa: بیمارستان
+    definition: dort bleiben sehr kranke Menschen Tag und Nacht, und Ärzte machen sie wieder gesund
+    example:
+      de: Nach dem Unfall war er drei Tage im Krankenhaus.
+      en: After the accident he was in hospital for three days.
+      fa: بعد از تصادف، سه روز در بیمارستان بود.
+    alsoAccepted: [die Klinik, das Spital]
+
   - word: Krankenkasse
+    class: noun
+    article: die
+    plural: Krankenkassen
+    level: A2
+    meaning:
+      en: health insurance (company)
+      fa: بیمهٔ درمانی
+    definition: man zahlt ihr jeden Monat Geld, und sie bezahlt dafür den Arzt und das Krankenhaus
+    example:
+      de: Die Krankenkasse bezahlt die Brille nicht.
+      en: The health insurance doesn't pay for the glasses.
+      fa: بیمهٔ درمانی هزینهٔ عینک را نمی‌پردازد.
+    alsoAccepted: [die Krankenversicherung]
+
   - word: Krankenpfleger
+    class: noun
+    article: der
+    plural: Krankenpfleger
+    level: A2
+    meaning:
+      en: nurse
+      fa: پرستار
+    definition: ein Mann, der im Krankenhaus für kranke Menschen sorgt, aber kein Arzt ist
+    example:
+      de: Der Krankenpfleger bringt mir ein Glas Wasser.
+      en: The nurse brings me a glass of water.
+      fa: پرستار برایم یک لیوان آب می‌آورد.
+    alsoAccepted: [die Krankenpflegerin, die Krankenschwester, der Pfleger, die Pflegerin]
+
   - word: Sprechstunde
+    class: noun
+    article: die
+    plural: Sprechstunden
+    level: A2
+    meaning:
+      en: consulting hours, office hours (when a doctor or teacher sees people)
+      fa: ساعت‌های پذیرش (پزشک یا استاد)
+    definition: die Zeit, in der man zum Arzt in die Praxis kommen kann
+    example:
+      de: Die Sprechstunde ist montags von acht bis zwölf Uhr.
+      en: Consulting hours are on Mondays from eight to twelve.
+      fa: ساعت‌های پذیرش دوشنبه‌ها از ساعت هشت تا دوازده است.
+    alsoAccepted: [die Sprechzeit]
+
   - word: untersuchen
+    class: verb
+    level: A2
+    meaning:
+      en: to examine (a patient)
+      fa: معاینه کردن (بیمار)
+    definition: genau ansehen, was jemand hat; das macht zum Beispiel der Arzt
+    example:
+      de: Die Ärztin untersucht das Kind.
+      en: The doctor examines the child.
+      fa: پزشک بچه را معاینه می‌کند.
+
   - word: verletzen
+    class: verb
+    reflexive: sich
+    level: A2
+    meaning:
+      en: to injure oneself, to get injured
+      fa: آسیب دیدن، زخمی شدن
+    definition: bei einem Unfall oder beim Sport eine Wunde bekommen oder sich etwas brechen
+    example:
+      de: Ich habe mich beim Fußball am Knie verletzt.
+      en: I hurt my knee playing football.
+      fa: موقع فوتبال زانویم آسیب دید.
+
   - word: Unfall
+    class: noun
+    article: der
+    plural: Unfälle
+    level: A2
+    meaning:
+      en: accident
+      fa: تصادف، حادثه
+    definition: etwas Schlimmes, das plötzlich passiert, zum Beispiel wenn zwei Autos zusammenstoßen
+    example:
+      de: Auf der Autobahn gab es einen Unfall.
+      en: There was an accident on the motorway.
+      fa: در بزرگراه تصادفی رخ داد.
+
   - word: fit
+    class: adjective
+    level: A2
+    meaning:
+      en: fit, in good shape
+      fa: سرحال، روی فرم
+    definition: körperlich in guter Form, so dass man sich stark und gesund fühlt
+    example:
+      de: "Meine Oma ist noch sehr fit: Sie fährt jeden Tag Rad."
+      en: "My grandma is still very fit: she cycles every day."
+      fa: مادربزرگم هنوز خیلی سرحال است و هر روز دوچرخه‌سواری می‌کند.
+    tooCloseTo: [gesund]
+
   - word: fallen
+    class: verb
+    level: A2
+    meaning:
+      en: to fall (from above, downwards)
+      fa: افتادن (از بالا به پایین)
+    definition: von oben nach unten kommen, zum Beispiel ein Glas vom Tisch
+    example:
+      de: Das Glas ist vom Tisch gefallen.
+      en: The glass fell off the table.
+      fa: لیوان از روی میز افتاد.
+    alsoAccepted: [herunterfallen, runterfallen, stürzen]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 156 questions, then the 29 changed after the first one's
+    answers; not people)"
+  date: 2026-11-28
+  pool: 8c25e387cc73a868
