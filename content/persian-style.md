@@ -109,6 +109,7 @@ its first mention in a node.
 | sentence, clause | Satz | جمله |
 | main clause / subordinate clause | Hauptsatz / Nebensatz | جملهٔ پایه / جملهٔ پیرو |
 | relative clause | Relativsatz | جملهٔ موصولی |
+| indirect question | indirekte Frage | پرسش غیرمستقیم |
 | word order; position 2 | Wortstellung; Position 2 | ترتیب واژه‌ها؛ جایگاه دوم |
 | position 0 (of *und*, *aber* …) | Position 0 | جایگاه صفر |
 | sentence bracket | Satzklammer | قاب جمله (*Satzklammer*) |
