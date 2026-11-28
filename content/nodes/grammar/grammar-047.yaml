@@ -4,10 +4,378 @@ kind: grammar
 level: A2
 chapter: a2-werden-lassen-passive
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-017, grammar-021]
 title:
   en: "*Passiv Präsens*"
   fa: "مجهول در زمان حال (*Passiv Präsens*)"
   de: "Passiv Präsens"
+
+explanations:
+  en:
+    rule: >
+      The passive (*Passiv*) puts the action and the thing it happens to
+      first, not the person who does it: *Das Auto wird repariert.* (The car
+      is being repaired.) It is formed with *werden* in position 2 and the
+      *Partizip II* at the end. The thing the action happens to is the
+      subject, in the *Nominativ*, and *werden* agrees with it: *Die Autos
+      werden repariert.* An active sentence with *man* says the same: *Man
+      repariert das Auto.* The object of the active sentence (*den
+      Fernseher*) becomes the subject of the passive one (*der Fernseher*).
+      To name the person who does it, use *von* + *Dativ*: *Der Kuchen wird
+      von meiner Oma gebacken.*
+  fa:
+    rule: >
+      در جملهٔ مجهول (*Passiv*) خودِ کار و چیزی که کار بر آن انجام می‌شود
+      مهم است، نه کسی که آن را انجام می‌دهد: *Das Auto wird repariert.*
+      (ماشین تعمیر می‌شود.) مجهول با *werden* در جایگاه دوم و صفت مفعولی
+      (*Partizip II*) در پایان جمله ساخته می‌شود. چیزی که کار بر آن انجام
+      می‌شود فاعل جمله است و در حالت *Nominativ* (حالت فاعلی) می‌آید، و
+      *werden* با آن مطابقت می‌کند: *Die Autos werden repariert.* جملهٔ
+      معلوم با *man* همین معنا را دارد: *Man repariert das Auto.* مفعول
+      جملهٔ معلوم (*den Fernseher*) در جملهٔ مجهول فاعل می‌شود (*der
+      Fernseher*). برای نام بردن از کسی که کار را انجام می‌دهد، *von* +
+      حالت *Dativ* به کار می‌رود: *Der Kuchen wird von meiner Oma gebacken.*
+  de:
+    rule: >
+      Im Passiv ist die Handlung wichtig, nicht die Person: *Das Auto wird
+      repariert.* Man bildet es mit *werden* auf Position 2 und dem Partizip
+      II am Ende. Das Subjekt ist die Sache, mit der etwas passiert. Es steht
+      im Nominativ, und *werden* passt zu ihm: *Die Autos werden repariert.*
+      Ein Satz mit *man* sagt das Gleiche: *Man repariert das Auto.* Das
+      Objekt im Aktiv (*den Fernseher*) ist im Passiv das Subjekt (*der
+      Fernseher*). Die Person nennt man mit *von* + Dativ: *Der Kuchen wird
+      von meiner Oma gebacken.*
+
+# The table puts each active sentence beside its passive, so the change of
+# the object (den Fernseher) into the subject (der Fernseher) shows in a row.
+table:
+  columns:
+    - { en: "Active (*Aktiv*)", fa: "معلوم (*Aktiv*)", de: Aktiv }
+    - { en: "Passive (*Passiv*)", fa: "مجهول (*Passiv*)", de: Passiv }
+  rows:
+    - [Man repariert den Fernseher., Der Fernseher wird repariert.]
+    - [Man putzt die Küche., Die Küche wird geputzt.]
+    - [Man öffnet das Fenster., Das Fenster wird geöffnet.]
+    - [Man wäscht die Handtücher., Die Handtücher werden gewaschen.]
+    - [Mein Vater kocht das Essen., Das Essen wird von meinem Vater gekocht.]
+
+diagrams:
+  - caption:
+      en: >
+        *Das Auto wird heute repariert.* and *Die Briefe werden jetzt
+        gebracht.* *Werden* (shaded) stands in position 2 and agrees with the
+        subject; the *Partizip II* (shaded) stands at the very end. Together
+        they frame the rest: the *Satzklammer*.
+      fa: >
+        *Das Auto wird heute repariert.* و *Die Briefe werden jetzt
+        gebracht.* *werden* (رنگی) در جایگاه دوم می‌آید و با فاعل مطابقت
+        می‌کند؛ صفت مفعولی (رنگی) در پایان جمله است. این دو بقیهٔ جمله را در
+        میان می‌گیرند: قاب جمله (*Satzklammer*).
+      de: >
+        *Das Auto wird heute repariert.* und *Die Briefe werden jetzt
+        gebracht.* *Werden* (farbig) steht auf Position 2 und passt zum
+        Subjekt. Das Partizip II (farbig) steht ganz am Ende. Sie sind die
+        Satzklammer um den Rest.
+    labels:
+      second: { en: position 2, fa: جایگاه دوم, de: Position 2 }
+      end: { en: the end, fa: پایان جمله, de: Ende }
+    svg: |
+      <svg viewBox="0 0 320 196">
+        <text class="note" x="132" y="18" text-anchor="middle">{{second}}</text>
+        <text class="note" x="272" y="18" text-anchor="middle">{{end}}</text>
+        <!-- Das Auto wird heute repariert. -->
+        <rect class="surface" x="2" y="26" width="94" height="40"/>
+        <rect class="shade" x="100" y="26" width="64" height="40"/>
+        <rect class="surface" x="168" y="26" width="54" height="40"/>
+        <rect class="shade" x="226" y="26" width="92" height="40"/>
+        <text class="label" x="49" y="52" text-anchor="middle">Das Auto</text>
+        <text class="label" x="132" y="52" text-anchor="middle">wird</text>
+        <text class="label" x="195" y="52" text-anchor="middle">heute</text>
+        <text class="label" x="272" y="52" text-anchor="middle">repariert.</text>
+        <polyline class="line" points="132,70 132,80 272,80 272,70"/>
+        <text class="note" x="202" y="98" text-anchor="middle">Satzklammer</text>
+        <!-- Die Briefe werden jetzt gebracht. -->
+        <rect class="surface" x="2" y="116" width="94" height="40"/>
+        <rect class="shade" x="100" y="116" width="64" height="40"/>
+        <rect class="surface" x="168" y="116" width="54" height="40"/>
+        <rect class="shade" x="226" y="116" width="92" height="40"/>
+        <text class="label" x="49" y="142" text-anchor="middle">Die Briefe</text>
+        <text class="label" x="132" y="142" text-anchor="middle">werden</text>
+        <text class="label" x="195" y="142" text-anchor="middle">jetzt</text>
+        <text class="label" x="272" y="142" text-anchor="middle">gebracht.</text>
+        <polyline class="line" points="132,160 132,170 272,170 272,160"/>
+        <text class="note" x="202" y="188" text-anchor="middle">Satzklammer</text>
+      </svg>
+
+examples:
+  - de: Das Auto wird heute repariert.
+    en: The car is being repaired today.
+    fa: ماشین امروز تعمیر می‌شود.
+  - de: In Österreich wird Deutsch gesprochen.
+    en: German is spoken in Austria.
+    fa: در اتریش آلمانی صحبت می‌کنند.
+  - de: Die Briefe werden jeden Morgen gebracht.
+    en: The letters are brought every morning.
+    fa: نامه‌ها را هر روز صبح می‌آورند.
+  - de: Das Paket wird morgen geliefert.
+    en: The parcel will be delivered tomorrow.
+    fa: بسته را فردا تحویل می‌دهند.
+  - de: Die Fenster werden einmal im Monat geputzt.
+    en: The windows are cleaned once a month.
+    fa: پنجره‌ها ماهی یک بار تمیز می‌شوند.
+  - de: Der Kuchen wird von meiner Oma gebacken.
+    en: The cake is baked by my grandma.
+    fa: کیک را مادربزرگم می‌پزد.
+  - de: Wann wird das Zimmer geputzt?
+    en: When is the room cleaned?
+    fa: اتاق کی تمیز می‌شود؟
+  - de: Hier wird jeden Tag frisches Brot gebacken.
+    en: Fresh bread is baked here every day.
+    fa: این‌جا هر روز نان تازه می‌پزند.
+
+mistakes:
+  - wrong: Das Auto wird reparieren.
+    right: Das Auto wird repariert.
+    why:
+      en: "The passive needs the *Partizip II* at the end: *repariert*, not the infinitive."
+      fa: "در مجهول صفت مفعولی (*Partizip II*) در پایان جمله می‌آید: *repariert*، نه مصدر."
+      de: "Im Passiv steht das Partizip II am Ende: *repariert*, nicht der Infinitiv."
+  - wrong: Die Fenster wird geputzt.
+    right: Die Fenster werden geputzt.
+    why:
+      en: "*Die Fenster* is plural, so *werden* is plural too."
+      fa: "*die Fenster* جمع است، پس *werden* نیز جمع می‌آید."
+      de: "*Die Fenster* ist Plural. Darum steht *werden*."
+  - wrong: Den Fernseher wird repariert.
+    right: Der Fernseher wird repariert.
+    why:
+      en: "In the passive the thing is the subject, in the *Nominativ*: *der Fernseher*."
+      fa: "در مجهول، این چیز فاعل جمله است و در حالت *Nominativ* می‌آید: *der Fernseher*."
+      de: "Im Passiv ist die Sache das Subjekt, im Nominativ: *der Fernseher*."
+  - wrong: Der Kuchen wird von meine Oma gebacken.
+    right: Der Kuchen wird von meiner Oma gebacken.
+    why:
+      en: "*Von* takes the *Dativ*: *meine Oma* becomes *meiner Oma*."
+      fa: "*von* با حالت *Dativ* می‌آید: *meine Oma* می‌شود *meiner Oma*."
+      de: "Nach *von* steht der Dativ: *meiner Oma*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das Auto ___ heute repariert.
+    options: [werden, wird, wirst]
+    answer: wird
+    explanation:
+      en: "*Das Auto* is singular, so *werden* is *wird*."
+      fa: "*das Auto* مفرد است، پس *werden* به صورت *wird* می‌آید."
+      de: "*Das Auto* ist Singular. Darum heißt es *wird*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Fenster ___ jeden Monat geputzt.
+    options: [wird, werdet, werden]
+    answer: werden
+    explanation:
+      en: "*Die Fenster* is plural, so *werden* is plural too."
+      fa: "*die Fenster* جمع است، پس *werden* نیز جمع می‌آید."
+      de: "*Die Fenster* ist Plural. Darum heißt es *werden*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Paket wird morgen ___.
+    options: [liefern, geliefert, liefert]
+    answer: geliefert
+    explanation:
+      en: "The passive takes the *Partizip II*: *geliefert*."
+      fa: "مجهول با صفت مفعولی (*Partizip II*) ساخته می‌شود: *geliefert*."
+      de: "Im Passiv steht das Partizip II: *geliefert*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ Fernseher wird heute repariert.
+    options: [Den, Der, Dem]
+    answer: Der
+    explanation:
+      en: "The television is the subject of the passive, in the *Nominativ*: *der Fernseher*."
+      fa: "تلویزیون فاعل جملهٔ مجهول است و در حالت *Nominativ* می‌آید: *der Fernseher*."
+      de: "Der Fernseher ist im Passiv das Subjekt, im Nominativ: *der Fernseher*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Der Kuchen wird von ___ Oma gebacken.
+    options: [meine, meinen, meiner]
+    answer: meiner
+    explanation:
+      en: "*Von* takes the *Dativ*: *meine Oma* becomes *meiner Oma*."
+      fa: "*von* با حالت *Dativ* می‌آید: *meine Oma* می‌شود *meiner Oma*."
+      de: "Nach *von* steht der Dativ: *meiner Oma*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Man putzt das Zimmer.
+    options:
+      - Das Zimmer putzt.
+      - Das Zimmer wird geputzt.
+      - Das Zimmer wird putzen.
+    answer: Das Zimmer wird geputzt.
+    explanation:
+      en: "The passive is *werden* + *Partizip II*: *Das Zimmer wird geputzt.*"
+      fa: "مجهول با *werden* + صفت مفعولی ساخته می‌شود: *Das Zimmer wird geputzt.*"
+      de: "Passiv ist *werden* + Partizip II: *Das Zimmer wird geputzt.*"
+  - id: choice-2
+    type: multiple-choice
+    prompt: In Österreich ___ Deutsch gesprochen.
+    options: [hat, ist, wird]
+    answer: wird
+    explanation:
+      en: "The passive is formed with *werden*: *Deutsch wird gesprochen*."
+      fa: "مجهول با *werden* ساخته می‌شود: *Deutsch wird gesprochen*."
+      de: "Das Passiv bildet man mit *werden*: *Deutsch wird gesprochen*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Die Rechnung wird von Herrn Weber bezahlt.
+    options:
+      - Herr Weber bekommt die Rechnung.
+      - Die Rechnung bezahlt Herrn Weber.
+      - Herr Weber bezahlt die Rechnung.
+    answer: Herr Weber bezahlt die Rechnung.
+    explanation:
+      en: "*Von Herrn Weber* names the person who does it: Herr Weber pays."
+      fa: "*von Herrn Weber* کسی را نام می‌برد که کار را انجام می‌دهد: آقای وبر صورت‌حساب را می‌پردازد."
+      de: "*Von Herrn Weber* nennt die Person: Herr Weber bezahlt."
+  - id: true-1
+    type: true-false
+    prompt: Die Briefe werden jeden Morgen gebracht.
+    answer: true
+    explanation:
+      en: "Plural subject, *werden*, *Partizip II* at the end. The sentence is correct."
+      fa: "فاعل جمع، *werden*، و صفت مفعولی در پایان جمله. جمله درست است."
+      de: "Subjekt im Plural, *werden*, Partizip II am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Die Rechnung wird morgen bezahlen.
+    answer: false
+    explanation:
+      en: "The passive needs the *Partizip II*: *Die Rechnung wird morgen bezahlt.*"
+      fa: "مجهول صفت مفعولی می‌خواهد: *Die Rechnung wird morgen bezahlt.*"
+      de: "Im Passiv steht das Partizip II: *Die Rechnung wird morgen bezahlt.*"
+  - id: true-3
+    type: true-false
+    prompt: Die Kinder wird um vier Uhr abgeholt.
+    answer: false
+    explanation:
+      en: "*Die Kinder* is plural, so *werden* is plural: *Die Kinder werden um vier Uhr abgeholt.*"
+      fa: "*die Kinder* جمع است، پس *werden* نیز جمع می‌آید: *Die Kinder werden um vier Uhr abgeholt.*"
+      de: "*Die Kinder* ist Plural. Darum: *Die Kinder werden um vier Uhr abgeholt.*"
+  - id: true-4
+    type: true-false
+    prompt: Das Essen wird von meinem Vater gekocht.
+    answer: true
+    explanation:
+      en: "*Von* + *Dativ* names the person: *von meinem Vater*. The sentence is correct."
+      fa: "*von* + حالت *Dativ* انجام‌دهندهٔ کار را نام می‌برد: *von meinem Vater*. جمله درست است."
+      de: "*Von* + Dativ nennt die Person: *von meinem Vater*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Die Zimmer ___ (werden) morgen geputzt.
+    answers: [werden]
+    explanation:
+      en: "*Die Zimmer* is plural, so *werden* is plural too."
+      fa: "*die Zimmer* جمع است، پس *werden* نیز جمع می‌آید."
+      de: "*Die Zimmer* ist Plural. Darum heißt es *werden*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das Paket ___ (werden) morgen geliefert.
+    answers: [wird]
+    explanation:
+      en: "*Das Paket* is singular, so *werden* is *wird*."
+      fa: "*das Paket* مفرد است، پس *werden* به صورت *wird* می‌آید."
+      de: "*Das Paket* ist Singular. Darum heißt es *wird*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Rechnung wird morgen ___ (bezahlen).
+    answers: [bezahlt]
+    explanation:
+      en: "The *Partizip II* of *bezahlen* is *bezahlt*, without *ge-*."
+      fa: "صفت مفعولی *bezahlen* می‌شود *bezahlt*، بدون *ge-*."
+      de: "Das Partizip II von *bezahlen* ist *bezahlt*, ohne *ge-*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Die Tür wird gleich ___ (öffnen).
+    answers: [geöffnet]
+    explanation:
+      en: "The *Partizip II* of *öffnen* is *geöffnet*."
+      fa: "صفت مفعولی *öffnen* می‌شود *geöffnet*."
+      de: "Das Partizip II von *öffnen* ist *geöffnet*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Der Brief wird morgen ___ (schreiben).
+    answers: [geschrieben]
+    explanation:
+      en: "The *Partizip II* of *schreiben* is *geschrieben*."
+      fa: "صفت مفعولی *schreiben* می‌شود *geschrieben*."
+      de: "Das Partizip II von *schreiben* ist *geschrieben*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Passiv: man repariert das Fahrrad"
+    answers: [das Fahrrad wird repariert, das Fahrrad wird repariert.]
+    explanation:
+      en: "The object *das Fahrrad* becomes the subject, with *wird* and the *Partizip II*: *das Fahrrad wird repariert*."
+      fa: "مفعول *das Fahrrad* فاعل می‌شود و *wird* و صفت مفعولی را می‌گیرد: *das Fahrrad wird repariert*."
+      de: "Das Objekt *das Fahrrad* wird zum Subjekt, mit *wird* und dem Partizip II: *das Fahrrad wird repariert*."
+  - id: error-1
+    type: find-error
+    prompt: Die Fenster wird jeden Freitag geputzt.
+    answer: wird
+    explanation:
+      en: "*Die Fenster* is plural: *Die Fenster werden jeden Freitag geputzt.*"
+      fa: "*die Fenster* جمع است: *Die Fenster werden jeden Freitag geputzt.*"
+      de: "*Die Fenster* ist Plural: *Die Fenster werden jeden Freitag geputzt.*"
+  - id: error-2
+    type: find-error
+    prompt: Das Auto wird morgen reparieren.
+    answer: reparieren
+    explanation:
+      en: "The passive needs the *Partizip II*: *Das Auto wird morgen repariert.*"
+      fa: "مجهول صفت مفعولی می‌خواهد: *Das Auto wird morgen repariert.*"
+      de: "Im Passiv steht das Partizip II: *Das Auto wird morgen repariert.*"
+  - id: error-3
+    type: find-error
+    prompt: Den Brief wird heute geschickt.
+    answer: Den
+    explanation:
+      en: "The letter is the subject of the passive, in the *Nominativ*: *Der Brief wird heute geschickt.*"
+      fa: "نامه فاعل جملهٔ مجهول است و در حالت *Nominativ* می‌آید: *Der Brief wird heute geschickt.*"
+      de: "Der Brief ist im Passiv das Subjekt, im Nominativ: *Der Brief wird heute geschickt.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [wann, wird, das Paket, geliefert]
+    end: "?"
+    explanation:
+      en: "*Wird* comes after the question word, the *Partizip II* at the end."
+      fa: "*wird* پس از واژهٔ پرسشی می‌آید و صفت مفعولی در پایان جمله."
+      de: "*Wird* steht nach dem Fragewort, das Partizip II am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [warum, werden, die Fenster, nicht, geputzt]
+    end: "?"
+    explanation:
+      en: "*Werden* comes after the question word, *nicht* before the *Partizip II* at the end."
+      fa: "*werden* پس از واژهٔ پرسشی می‌آید و *nicht* پیش از صفت مفعولی در پایان جمله."
+      de: "*Werden* steht nach dem Fragewort, *nicht* vor dem Partizip II am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [man kocht es, es wird gekocht]
+      - [man bringt es, es wird gebracht]
+      - [man bestellt es, es wird bestellt]
+    explanation:
+      en: "Each active verb becomes *wird* + its *Partizip II*: *gekocht*, *gebracht*, *bestellt*."
+      fa: "هر فعل معلوم به *wird* + صفت مفعولی همان فعل تبدیل می‌شود: *gekocht*، *gebracht*، *bestellt*."
+      de: "Jedes Verb im Aktiv wird zu *wird* + Partizip II: *gekocht*, *gebracht*, *bestellt*."
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: the whole pool, then typed-1 again after its key was widened to
+    accept a full stop; not people)"
+  date: 2026-11-28
+  pool: 3aac7fccb6fbef14

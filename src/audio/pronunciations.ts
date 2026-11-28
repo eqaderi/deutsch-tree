@@ -31,6 +31,8 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   'vgl.': 'vergleiche',
   // "et cetera" comes out as "et keetera"; these two words give [ɛt ˈtseːtəra].
   'etc.': 'ett zetera',
+  // #82: the bare headword "ca." comes out as "Ka".
+  'ca.': 'circa',
 
   // #77: alone ("der ICE") the voice says "Ike"; as three letters whisper hears "ICE" in both voices.
   ICE: 'I C E',

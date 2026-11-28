@@ -445,7 +445,7 @@ damals · endlich · plötzlich · zuerst · zuletzt · vorher · vorbei · wied
 als · dass · weil · wenn · deshalb · außerdem · sonst · doch · mal · sogar · eigentlich · außer · wegen · anders · selbst · eigen · einzeln · verschieden · her · hin · heraus · herein · dabei · genau · fast
 
 **A2-W6.4 Countries, numbers and amounts** · کشورها، عددها و مقدارها · Länder, Zahlen und Mengen · 26 words  
-das Österreich · die Schweiz · das Luxemburg · der Österreicher · der Schweizer · der Luxemburger · österreichisch · schweizerisch · luxemburgisch · der Franken · der Rappen · die Zahl · rechnen · zweitausendeins · viertel · mindestens · wenigstens · ca. · genug · ein paar · einige · manche · etwas · der Rest · die Menge · teilen
+Österreich · die Schweiz · Luxemburg · der Österreicher · der Schweizer · der Luxemburger · österreichisch · schweizerisch · luxemburgisch · der Franken · der Rappen · die Zahl · rechnen · zweitausendeins · viertel · mindestens · wenigstens · ca. · genug · ein paar · einige · manche · etwas · der Rest · die Menge · teilen
 
 ### B1
 

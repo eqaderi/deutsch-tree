@@ -1,39 +1,385 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Österreich and Luxemburg take no article ("article: none"): they are shown and asked bare
+# (ticket #48); die Schweiz keeps its article. A noun for a person accepts the woman's form.
 id: vocabulary-countries-amounts
 kind: vocabulary
 level: A2
 chapter: a2-words-small-words
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Countries, numbers and amounts"
   fa: "کشورها، عددها و مقدارها"
   de: "Länder, Zahlen und Mengen"
+attemptSize: 15
 words:
   - word: Österreich
+    class: noun
+    article: none
+    number: singular-only
+    level: A2
+    meaning:
+      en: Austria
+      fa: اتریش
+    definition: das Land, in dem Wien die Hauptstadt ist
+    example:
+      de: Im Sommer fahren wir nach Österreich.
+      en: In the summer we're going to Austria.
+      fa: تابستان به اتریش می‌رویم.
+
   - word: Schweiz
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: Switzerland
+      fa: سوئیس
+    definition: das Land, in dem Bern die Hauptstadt ist
+    example:
+      de: Meine Tante wohnt in der Schweiz.
+      en: My aunt lives in Switzerland.
+      fa: خاله‌ام در سوئیس زندگی می‌کند.
+
   - word: Luxemburg
+    class: noun
+    article: none
+    number: singular-only
+    level: A2
+    meaning:
+      en: Luxembourg
+      fa: لوکزامبورگ
+    definition: ein kleines Land zwischen Deutschland, Frankreich und Belgien
+    example:
+      de: Luxemburg ist ein sehr kleines Land.
+      en: Luxembourg is a very small country.
+      fa: لوکزامبورگ کشور بسیار کوچکی است.
+
   - word: Österreicher
+    class: noun
+    article: der
+    plural: Österreicher
+    level: A2
+    meaning:
+      en: an Austrian (a person from Austria)
+      fa: فرد اتریشی، اهل اتریش
+    definition: ein Mann oder eine Frau aus Österreich
+    example:
+      de: Unser neuer Kollege ist Österreicher.
+      en: Our new colleague is Austrian.
+      fa: همکار تازه‌مان اهل اتریش است.
+    alsoAccepted: [die Österreicherin]
+    tooCloseTo: [österreichisch]
+
   - word: Schweizer
+    class: noun
+    article: der
+    plural: Schweizer
+    level: A2
+    meaning:
+      en: a Swiss (a person from Switzerland)
+      fa: فرد سوئیسی، اهل سوئیس
+    definition: ein Mann oder eine Frau aus der Schweiz
+    example:
+      de: Viele Schweizer sprechen drei Sprachen.
+      en: Many Swiss people speak three languages.
+      fa: بسیاری از سوئیسی‌ها سه زبان صحبت می‌کنند.
+    alsoAccepted: [die Schweizerin]
+    tooCloseTo: [schweizerisch]
+
   - word: Luxemburger
+    class: noun
+    article: der
+    plural: Luxemburger
+    level: A2
+    meaning:
+      en: a Luxembourger (a person from Luxembourg)
+      fa: فرد لوکزامبورگی، اهل لوکزامبورگ
+    definition: ein Mann oder eine Frau aus Luxemburg
+    example:
+      de: Mein Nachbar ist Luxemburger und arbeitet in Trier.
+      en: My neighbour is from Luxembourg and works in Trier.
+      fa: همسایه‌ام اهل لوکزامبورگ است و در تریر کار می‌کند.
+    alsoAccepted: [die Luxemburgerin]
+    tooCloseTo: [luxemburgisch]
+
   - word: österreichisch
+    class: adjective
+    level: A2
+    meaning:
+      en: Austrian (from or of Austria)
+      fa: اتریشی (مربوط به اتریش)
+    definition: aus Österreich oder typisch für Österreich
+    example:
+      de: Wir haben einen österreichischen Nachbarn.
+      en: We have an Austrian neighbour.
+      fa: همسایه‌ای اتریشی داریم.
+    tooCloseTo: [Österreicher]
+
   - word: schweizerisch
+    class: adjective
+    level: A2
+    meaning:
+      en: Swiss (from or of Switzerland)
+      fa: سوئیسی (مربوط به سوئیس)
+    definition: aus der Schweiz oder typisch für die Schweiz
+    example:
+      de: Sie arbeitet für eine schweizerische Firma.
+      en: She works for a Swiss company.
+      fa: او برای یک شرکت سوئیسی کار می‌کند.
+    alsoAccepted: [Schweizer]
+    tooCloseTo: [Schweizer]
+
   - word: luxemburgisch
+    class: adjective
+    level: A2
+    meaning:
+      en: Luxembourgish (from or of Luxembourg)
+      fa: لوکزامبورگی (مربوط به لوکزامبورگ)
+    definition: aus Luxemburg oder typisch für Luxemburg
+    example:
+      de: Mein Bruder hat ein Konto bei einer luxemburgischen Bank.
+      en: My brother has an account with a Luxembourg bank.
+      fa: برادرم در یک بانک لوکزامبورگی حساب دارد.
+    alsoAccepted: [Luxemburger]
+    tooCloseTo: [Luxemburger]
+
   - word: Franken
+    class: noun
+    article: der
+    plural: Franken
+    level: A2
+    meaning:
+      en: franc (the money of Switzerland)
+      fa: فرانک (پول سوئیس)
+    definition: "das Geld in der Schweiz: Der Kaffee kostet fünf …"
+    example:
+      de: Ein Kaffee kostet hier fünf Franken.
+      en: A coffee costs five francs here.
+      fa: یک قهوه اینجا پنج فرانک است.
+    tooCloseTo: [Rappen]
+
   - word: Rappen
+    class: noun
+    article: der
+    plural: Rappen
+    level: A2
+    meaning:
+      en: centime (a hundredth of a Swiss franc)
+      fa: راپن (یک‌صدم فرانک سوئیس)
+    definition: in der Schweiz der hundertste Teil von einem Franken
+    example:
+      de: Das Brötchen kostet achtzig Rappen.
+      en: The roll costs eighty centimes.
+      fa: این نان کوچک هشتاد راپن است.
+    tooCloseTo: [Franken]
+
   - word: Zahl
+    class: noun
+    article: die
+    plural: Zahlen
+    level: A2
+    meaning:
+      en: number (a figure such as 3 or 100)
+      fa: عدد
+    definition: zum Beispiel eins, zwei, drei oder hundert
+    example:
+      de: Schreib die Zahl bitte noch einmal.
+      en: Please write the number again.
+      fa: لطفاً عدد را یک بار دیگر بنویس.
+
   - word: rechnen
+    class: verb
+    level: A2
+    meaning:
+      en: to calculate, to do sums
+      fa: حساب کردن
+    definition: mit Zahlen arbeiten, zum Beispiel plus und minus
+    example:
+      de: Mein Sohn kann schon gut rechnen.
+      en: My son can already do sums well.
+      fa: پسرم حالا دیگر خوب حساب می‌کند.
+    alsoAccepted: [ausrechnen, berechnen]
+
   - word: zweitausendeins
+    class: numeral
+    level: A2
+    meaning:
+      en: two thousand and one (2001)
+      fa: دو هزار و یک (۲۰۰۱)
+    definition: die Zahl nach zweitausend
+    example:
+      de: Meine Schwester ist zweitausendeins geboren.
+      en: My sister was born in 2001.
+      fa: خواهرم متولد سال ۲۰۰۱ است.
+    alsoAccepted: [zweitausendundeins]
+
   - word: viertel
+    class: numeral
+    level: A2
+    meaning:
+      en: quarter (a fourth)
+      fa: یک چهارم، ربع
+    definition: "ein Teil von vier gleichen Teilen: ein … Liter"
+    example:
+      de: Ich trinke jeden Morgen einen viertel Liter Milch.
+      en: I drink a quarter of a litre of milk every morning.
+      fa: هر روز صبح یک چهارم لیتر شیر می‌نوشم.
+    alsoAccepted: [das Viertel]
+
   - word: mindestens
+    class: adverb
+    level: A2
+    meaning:
+      en: at least (not less than a number)
+      fa: دست‌کم، حداقل (نه کمتر از)
+    definition: "nicht weniger als: Ich schlafe … sieben Stunden."
+    example:
+      de: Für die Fahrt brauchen wir mindestens drei Stunden.
+      en: We need at least three hours for the journey.
+      fa: برای این سفر دست‌کم سه ساعت وقت لازم داریم.
+    alsoAccepted: [wenigstens, zumindest]
+    tooCloseTo: [wenigstens]
+
   - word: wenigstens
+    class: adverb
+    level: A2
+    meaning:
+      en: at least (that is something; better than nothing)
+      fa: لااقل (همین هم غنیمت است)
+    definition: "das ist nicht viel, aber besser als nichts: Es regnet, aber … ist es warm."
+    example:
+      de: Der Urlaub war kurz, aber wenigstens hatten wir gutes Wetter.
+      en: The holiday was short, but at least we had good weather.
+      fa: تعطیلات کوتاه بود، اما لااقل هوا خوب بود.
+    alsoAccepted: [zumindest, immerhin]
+    tooCloseTo: [mindestens]
+
   - word: "ca."
+    class: abbreviation
+    level: A2
+    meaning:
+      en: approx., about (the short form)
+      fa: حدوداً (به‌صورت کوتاه‌شده)
+    definition: "die kurze Form für „circa“, also ungefähr: Das kostet … zehn Euro."
+    example:
+      de: Die Fahrt dauert ca. zwei Stunden.
+      en: The journey takes approx. two hours.
+      fa: سفر حدوداً دو ساعت طول می‌کشد.
+    alsoAccepted: [circa, zirka]
+
   - word: genug
+    class: adverb
+    level: A2
+    meaning:
+      en: enough
+      fa: کافی، به اندازهٔ کافی
+    definition: so viel, wie man braucht
+    example:
+      de: Haben wir genug Brot für morgen?
+      en: Do we have enough bread for tomorrow?
+      fa: برای فردا به اندازهٔ کافی نان داریم؟
+    alsoAccepted: [ausreichend, genügend]
+
   - word: ein paar
+    class: phrase
+    level: A2
+    meaning:
+      en: a few, a couple of (two or three)
+      fa: چندتا (دو سه تا)
+    definition: "nicht viele, vielleicht zwei oder drei: Ich bleibe noch … Tage."
+    example:
+      de: Ich bleibe noch ein paar Tage in Hamburg.
+      en: I'm staying in Hamburg for a few more days.
+      fa: چند روز دیگر در هامبورگ می‌مانم.
+    tooCloseTo: [einige, manche, etwas]
+
   - word: einige
+    class: pronoun
+    level: A2
+    meaning:
+      en: several, quite a few
+      fa: چندین
+    definition: "mehr als zwei oder drei, aber nicht sehr viele: Ich war schon … Male in Paris."
+    example:
+      de: Ich habe einige Freunde in Berlin.
+      en: I have several friends in Berlin.
+      fa: در برلین چندین دوست دارم.
+    alsoAccepted: [mehrere]
+    tooCloseTo: [ein paar, manche]
+
   - word: manche
+    class: pronoun
+    level: A2
+    meaning:
+      en: some (but not all)
+      fa: برخی، بعضی (نه همه)
+    definition: "nicht alle, nur ein Teil von ihnen: … Leute essen kein Fleisch."
+    example:
+      de: Manche Kinder gehen zu Fuß zur Schule.
+      en: Some children walk to school.
+      fa: برخی از بچه‌ها پیاده به مدرسه می‌روند.
+    alsoAccepted: [einige]
+    tooCloseTo: [einige, ein paar]
+
   - word: etwas
+    class: pronoun
+    level: A2
+    meaning:
+      en: some, a little (of a thing you cannot count)
+      fa: کمی، مقداری
+    definition: "ein bisschen, eine kleine Menge: Möchtest du … Zucker?"
+    example:
+      de: Möchtest du noch etwas Suppe?
+      en: Would you like some more soup?
+      fa: کمی دیگر سوپ می‌خواهی؟
+    alsoAccepted: [ein bisschen, ein wenig]
+    tooCloseTo: [ein paar]
+
   - word: Rest
+    class: noun
+    article: der
+    plural: Reste
+    level: A2
+    meaning:
+      en: remainder, rest (what is left over)
+      fa: باقی‌مانده، بقیه
+    definition: "was noch da ist, wenn das andere weg ist: der … vom Kuchen"
+    example:
+      de: Den Rest vom Kuchen essen wir morgen.
+      en: We'll eat the rest of the cake tomorrow.
+      fa: بقیهٔ کیک را فردا می‌خوریم.
+
   - word: Menge
+    class: noun
+    article: die
+    plural: Mengen
+    level: A2
+    meaning:
+      en: amount, quantity (of something such as salt or water)
+      fa: مقدار (مثلاً مقدار نمک یا آب)
+    definition: "wie viel von einer Sache da ist: eine kleine … Salz"
+    example:
+      de: Für das Rezept brauchst du nur eine kleine Menge Salz.
+      en: For the recipe you only need a small amount of salt.
+      fa: برای این دستور پخت فقط مقدار کمی نمک لازم داری.
+
   - word: teilen
+    class: verb
+    level: A2
+    meaning:
+      en: to share; to divide
+      fa: تقسیم کردن، شریک شدن
+    definition: eine Sache mit einer anderen Person zusammen haben oder benutzen, zum Beispiel ein Zimmer
+    example:
+      de: Ich teile die Pizza mit meinem Bruder.
+      en: I'm sharing the pizza with my brother.
+      fa: پیتزا را با برادرم تقسیم می‌کنم.
+    alsoAccepted: [aufteilen, sich teilen]
+
+review:
+  reviewer: independent AI agents (four fresh Claude Opus 5.5 subagents, sheet
+    only; 156, then 65, 9 and 3 questions)
+  date: 2026-11-28
+  pool: 7718c639f5efac26

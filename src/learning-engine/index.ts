@@ -377,7 +377,8 @@ export type AnswerNote = 'umlaut-substitute' | 'capitalisation'
  * Compares typed text with the accepted answers of a question. Any question
  * whose answer is typed uses this, whatever it asks for.
  *
- * Spaces at the ends and doubled spaces are ignored. An answer that then
+ * Spaces at the ends and doubled spaces are ignored, and so are the marks
+ * that end a sentence (. ! ?) after the last word. An answer that then
  * differs from an accepted one only by the slips of `AnswerNote` is right,
  * and `notes` names those slips. Nothing else is forgiven: a missing word
  * (an article, say) or a missing letter is a wrong answer.
@@ -438,9 +439,20 @@ function standsFor(typed: string, exact: string): boolean {
   return place === typed.length
 }
 
-/** Text without spaces at its ends and with one space wherever it has several. Never worth a note. */
+/**
+ * Text without spaces at its ends, with one space wherever it has several,
+ * and without the full stops, exclamation marks and question marks after its
+ * last word. Never worth a note. A question mark goes too: the words and
+ * their order are what a typed answer tests, and they show a question
+ * without it. A mark inside the text (a comma, a full stop between words)
+ * stays and must be typed.
+ */
 function spaced(text: string): string {
-  return text.normalize('NFC').replace(/\s+/g, ' ').trim()
+  return text
+    .normalize('NFC')
+    .replace(/[\s.!?]+$/, '')
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
 export interface AttemptResult {

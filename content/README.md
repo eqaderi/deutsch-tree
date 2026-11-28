@@ -616,10 +616,13 @@ and the first is shown as the right one.
   exactly, with its umlauts, its ß and its capitals. An answer that is not
   listed is marked wrong.
 - Do not list variants of spelling. The test ignores extra spaces by itself,
-  and it accepts *ae*, *oe*, *ue* and *ss* in place of *ä*, *ö*, *ü* and *ß*
-  and a capitalisation difference, each with a note that shows the learner
-  the exact spelling. Nothing else is forgiven: a missing word, such as an
-  article, or a plain *u* for *ü* is a wrong answer.
+  and a full stop, exclamation mark or question mark after the last word, so
+  do not list an answer twice, with and without one; a question answer is
+  right with or without its question mark. It accepts *ae*, *oe*, *ue* and
+  *ss* in place of *ä*, *ö*, *ü* and *ß* and a capitalisation difference,
+  each with a note that shows the learner the exact spelling. Nothing else is
+  forgiven: a missing word, such as an article, a comma, or a plain *u* for
+  *ü* is a wrong answer.
 - Pin the answer down. `Wir spielen ___.` can be filled in a hundred ways;
   give the word to use, as in `Du ___ (wohnen) hier.` The blind reviewer types
   an answer without seeing your list, and an answer that is not on it stops
