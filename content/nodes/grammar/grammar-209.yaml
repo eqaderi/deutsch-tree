@@ -4,10 +4,287 @@ kind: grammar
 level: A2
 chapter: a2-dativ-objects
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-140]
 title:
   en: "Time before place in the sentence"
   fa: "زمان پیش از مکان در جمله"
   de: "Zeit vor Ort im Satz"
+
+explanations:
+  en:
+    rule: >
+      When a sentence says when and where, the time comes before the place:
+      *Wir fahren am Wochenende an die Ostsee.* The place, above all a place
+      you go to (*nach Berlin*, *ins Kino*), stands near the end. English
+      does it the other way round ("to the Baltic at the weekend"). A time
+      is also very often put in position 1, and then the subject follows the
+      verb: *Gestern war ich beim Zahnarzt.* If you also say how (*mit dem
+      Zug*), it usually stands between the two: *Ich fahre morgen mit dem Zug
+      nach Berlin.*
+  fa:
+    rule: >
+      وقتی جمله هم زمان و هم مکان را می‌گوید، زمان پیش از مکان می‌آید: *Wir
+      fahren am Wochenende an die Ostsee.* مکان، به‌ویژه جایی که به سوی آن
+      می‌رویم (*nach Berlin*، *ins Kino*)، نزدیک پایان جمله می‌ایستد. در
+      انگلیسی ترتیب برعکس است، ولی فارسی هم زمان را پیش از مکان می‌آورد:
+      «آخر هفته به دریای بالتیک می‌رویم». زمان اغلب در جایگاه اول هم می‌آید و
+      آن‌گاه فاعل پس از فعل قرار می‌گیرد: *Gestern war ich beim Zahnarzt.*
+      اگر چگونگی کار را هم بگوییم (*mit dem Zug*)، معمولاً میان این دو
+      می‌آید: *Ich fahre morgen mit dem Zug nach Berlin.*
+  de:
+    rule: >
+      Sagt ein Satz, wann und wo, dann steht die Zeit vor dem Ort: *Wir
+      fahren am Wochenende an die Ostsee.* Der Ort steht am Ende, vor allem
+      ein Ziel (*nach Berlin*, *ins Kino*). Sehr oft steht die Zeit auch auf
+      Position 1. Dann steht das Subjekt nach dem Verb: *Gestern war ich beim
+      Zahnarzt.* Sagt man auch, wie (*mit dem Zug*), steht das meistens in
+      der Mitte: *Ich fahre morgen mit dem Zug nach Berlin.*
+
+# The parts of a sentence in their places: the time column always stands
+# left of the place column.
+table:
+  columns:
+    - { en: Position 1, fa: جایگاه اول, de: Position 1 }
+    - { en: Verb, fa: فعل, de: Verb }
+    - { en: "Time (*Wann?*)", fa: "زمان (*Wann?*)", de: "Zeit (*Wann?*)" }
+    - { en: "Place (*Wo?* / *Wohin?*)", fa: "مکان (*Wo?* / *Wohin?*)", de: "Ort (*Wo?* / *Wohin?*)" }
+  rows:
+    - [Wir, fahren, am Wochenende, an die Ostsee.]
+    - [Ich, war, gestern, beim Zahnarzt.]
+    - [Meine Schwester, wohnt, seit einem Jahr, in Wien.]
+    - [Der Kurs, ist, jeden Montag, in der Schule.]
+
+examples:
+  - de: Wir fahren am Wochenende an die Ostsee.
+    en: We are going to the Baltic Sea at the weekend.
+    fa: آخر هفته به دریای بالتیک می‌رویم.
+  - de: Gestern war ich beim Zahnarzt.
+    en: I was at the dentist's yesterday.
+    fa: دیروز پیش دندان‌پزشک بودم.
+  - de: Ich war gestern beim Zahnarzt.
+    en: I was at the dentist's yesterday.
+    fa: من دیروز پیش دندان‌پزشک بودم.
+  - de: Meine Schwester wohnt seit einem Jahr in Wien.
+    en: My sister has been living in Vienna for a year.
+    fa: خواهرم یک سال است که در وین زندگی می‌کند.
+  - de: Kommst du heute Abend ins Kino?
+    en: Are you coming to the cinema tonight?
+    fa: امشب به سینما می‌آیی؟
+  - de: Ich fahre morgen mit dem Zug nach Berlin.
+    en: I am going to Berlin by train tomorrow.
+    fa: فردا با قطار به برلین می‌روم.
+  - de: Wir essen heute im Restaurant.
+    en: We are eating at a restaurant today.
+    fa: امروز در رستوران غذا می‌خوریم.
+  - de: Um acht Uhr bin ich im Büro.
+    en: At eight o'clock I am at the office.
+    fa: ساعت هشت در دفترم.
+  - de: Nach dem Kurs gehen wir in ein Café.
+    en: After the class we are going to a café.
+    fa: بعد از کلاس به کافه می‌رویم.
+  - de: Ich habe letzte Woche zu Hause gearbeitet.
+    en: I worked from home last week.
+    fa: هفتهٔ پیش در خانه کار کردم.
+
+mistakes:
+  - wrong: Wir fahren an die Ostsee am Wochenende.
+    right: Wir fahren am Wochenende an die Ostsee.
+    why:
+      en: "The time comes before the place, unlike English: *am Wochenende an die Ostsee*."
+      fa: "زمان پیش از مکان می‌آید: *am Wochenende an die Ostsee*."
+      de: "Die Zeit steht vor dem Ort: *am Wochenende an die Ostsee*."
+  - wrong: Ich war beim Zahnarzt gestern.
+    right: Ich war gestern beim Zahnarzt.
+    why:
+      en: 'English says "at the dentist''s yesterday", German says the time first: *gestern beim Zahnarzt*.'
+      fa: "زمان پیش از مکان می‌آید: *gestern beim Zahnarzt*."
+      de: "Erst die Zeit, dann der Ort: *gestern beim Zahnarzt*."
+  - wrong: Gestern ich war beim Zahnarzt.
+    right: Gestern war ich beim Zahnarzt.
+    why:
+      en: "With the time in position 1, the verb still comes second and the subject follows it."
+      fa: "وقتی زمان در جایگاه اول است، فعل باز هم در جایگاه دوم می‌آید و فاعل پس از آن."
+      de: "Steht die Zeit auf Position 1, bleibt das Verb auf Position 2. Das Subjekt steht danach."
+  - wrong: Ich fahre nach Berlin morgen mit dem Zug.
+    right: Ich fahre morgen mit dem Zug nach Berlin.
+    why:
+      en: "First when, then how, and the place you go to at the end."
+      fa: "اول زمان، سپس چگونگی، و جایی که به سوی آن می‌رویم در پایان."
+      de: "Zuerst wann, dann wie, und das Ziel am Ende."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir fahren ___.
+    options: [am Wochenende an die Ostsee, an die Ostsee am Wochenende]
+    answer: am Wochenende an die Ostsee
+    explanation:
+      en: "The time comes before the place."
+      fa: "زمان پیش از مکان می‌آید."
+      de: "Die Zeit steht vor dem Ort."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich war ___.
+    options: [gestern beim Zahnarzt, beim Zahnarzt gestern]
+    answer: gestern beim Zahnarzt
+    explanation:
+      en: "The time *gestern* comes before the place *beim Zahnarzt*."
+      fa: "قید زمان *gestern* پیش از مکان *beim Zahnarzt* می‌آید."
+      de: "Die Zeit *gestern* steht vor dem Ort *beim Zahnarzt*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Meine Schwester wohnt ___.
+    options: [seit einem Jahr in Wien, in Wien seit einem Jahr]
+    answer: seit einem Jahr in Wien
+    explanation:
+      en: "The time *seit einem Jahr* comes before the place *in Wien*."
+      fa: "زمان *seit einem Jahr* پیش از مکان *in Wien* می‌آید."
+      de: "Die Zeit *seit einem Jahr* steht vor dem Ort *in Wien*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ war ich im Kino.
+    options: [Gestern, Ich, Er]
+    answer: Gestern
+    explanation:
+      en: "A time can stand in position 1; the subject *ich* then follows the verb."
+      fa: "زمان می‌تواند در جایگاه اول بیاید؛ آن‌گاه فاعل *ich* پس از فعل می‌آید."
+      de: "Die Zeit kann auf Position 1 stehen. Das Subjekt *ich* steht dann nach dem Verb."
+  - id: gap-5
+    type: gap-fill
+    prompt: Sie arbeitet ___.
+    options: [jeden Tag im Büro, im Büro jeden Tag]
+    answer: jeden Tag im Büro
+    explanation:
+      en: "The time *jeden Tag* comes before the place *im Büro*."
+      fa: "زمان *jeden Tag* پیش از مکان *im Büro* می‌آید."
+      de: "Die Zeit *jeden Tag* steht vor dem Ort *im Büro*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Kommst du ___?
+    options: [heute Abend ins Kino, ins Kino heute Abend, heute ins Abend Kino]
+    answer: heute Abend ins Kino
+    explanation:
+      en: "First the time, *heute Abend*, then the place you go to, *ins Kino*."
+      fa: "اول زمان، *heute Abend*، سپس جایی که به آن می‌رویم، *ins Kino*."
+      de: "Zuerst die Zeit, *heute Abend*, dann das Ziel, *ins Kino*."
+  - id: true-1
+    type: true-false
+    prompt: Wir essen heute im Restaurant.
+    answer: true
+    explanation:
+      en: "The time *heute* comes before the place *im Restaurant*. The sentence is correct."
+      fa: "زمان *heute* پیش از مکان *im Restaurant* آمده است. جمله درست است."
+      de: "Die Zeit *heute* steht vor dem Ort *im Restaurant*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Am Samstag wir gehen ins Kino.
+    answer: false
+    explanation:
+      en: "With the time in position 1 the verb comes second: *Am Samstag gehen wir ins Kino.*"
+      fa: "وقتی زمان در جایگاه اول است، فعل در جایگاه دوم می‌آید: *Am Samstag gehen wir ins Kino.*"
+      de: "Steht die Zeit auf Position 1, kommt das Verb auf Position 2: *Am Samstag gehen wir ins Kino.*"
+  - id: true-3
+    type: true-false
+    prompt: Ich habe letzte Woche zu Hause gearbeitet.
+    answer: true
+    explanation:
+      en: "The time *letzte Woche* comes before the place *zu Hause*. The sentence is correct."
+      fa: "زمان *letzte Woche* پیش از مکان *zu Hause* آمده است. جمله درست است."
+      de: "Die Zeit *letzte Woche* steht vor dem Ort *zu Hause*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Er fliegt nach Spanien morgen.
+    answer: false
+    explanation:
+      en: "The time comes before the place you go to: *Er fliegt morgen nach Spanien.*"
+      fa: "زمان پیش از جایی می‌آید که به آن می‌رویم: *Er fliegt morgen nach Spanien.*"
+      de: "Die Zeit steht vor dem Ziel: *Er fliegt morgen nach Spanien.*"
+  - id: true-5
+    type: true-false
+    prompt: Gestern war ich beim Zahnarzt.
+    answer: true
+    explanation:
+      en: "The time is in position 1, the verb second, the subject after it. The sentence is correct."
+      fa: "زمان در جایگاه اول، فعل در جایگاه دوم و فاعل پس از آن است. جمله درست است."
+      de: "Die Zeit steht auf Position 1, das Verb auf Position 2, das Subjekt danach. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir gehen ___ (heute Abend / ins Kino).
+    answers: [heute Abend ins Kino]
+    explanation:
+      en: "The time *heute Abend* before the place *ins Kino*."
+      fa: "زمان *heute Abend* پیش از مکان *ins Kino*."
+      de: "Die Zeit *heute Abend* vor dem Ort *ins Kino*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich bin ___ (um acht / im Büro).
+    answers: [um acht im Büro]
+    explanation:
+      en: "The time *um acht* before the place *im Büro*."
+      fa: "زمان *um acht* پیش از مکان *im Büro*."
+      de: "Die Zeit *um acht* vor dem Ort *im Büro*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Fährst du ___ (morgen / nach Berlin)?
+    answers: [morgen nach Berlin]
+    explanation:
+      en: "The time *morgen* before the place you go to, *nach Berlin*."
+      fa: "زمان *morgen* پیش از جایی که به آن می‌روی، *nach Berlin*."
+      de: "Die Zeit *morgen* vor dem Ziel *nach Berlin*."
+  - id: match-1
+    type: matching
+    answer:
+      - [Wann?, am Wochenende]
+      - [Wo?, beim Zahnarzt]
+      - [Wohin?, an die Ostsee]
+    explanation:
+      en: "*Am Wochenende* is a time, *beim Zahnarzt* a place where you are, *an die Ostsee* a place you go to."
+      fa: "*am Wochenende* زمان است، *beim Zahnarzt* جایی که در آن هستیم و *an die Ostsee* جایی که به آن می‌رویم."
+      de: "*Am Wochenende* ist eine Zeit, *beim Zahnarzt* ein Ort (*Wo?*), *an die Ostsee* ein Ziel (*Wohin?*)."
+  - id: order-1
+    type: word-order
+    answers:
+      - [meine Eltern, fahren, am Wochenende, an die Ostsee]
+      - [am Wochenende, fahren, meine Eltern, an die Ostsee]
+      - [an die Ostsee, fahren, meine Eltern, am Wochenende]
+    explanation:
+      en: "The verb comes second. Behind it, the time comes before the place."
+      fa: "فعل در جایگاه دوم می‌آید. پس از فعل، زمان پیش از مکان می‌آید."
+      de: "Das Verb steht auf Position 2. Danach steht die Zeit vor dem Ort."
+  - id: order-2
+    type: word-order
+    answers:
+      - [ich, war, gestern, beim Zahnarzt]
+      - [gestern, war, ich, beim Zahnarzt]
+      - [beim Zahnarzt, war, ich, gestern]
+    explanation:
+      en: "The verb comes second. Behind it, the time comes before the place."
+      fa: "فعل در جایگاه دوم می‌آید. پس از فعل، زمان پیش از مکان می‌آید."
+      de: "Das Verb steht auf Position 2. Danach steht die Zeit vor dem Ort."
+  - id: order-3
+    type: word-order
+    answers:
+      - [warum, warst, du, gestern, beim Arzt]
+    end: "?"
+    explanation:
+      en: "The question word comes first, the verb second, and the time before the place."
+      fa: "واژهٔ پرسشی در آغاز، فعل در جایگاه دوم و زمان پیش از مکان می‌آید."
+      de: "Das Fragewort steht am Anfang, das Verb auf Position 2, die Zeit vor dem Ort."
+  - id: order-4
+    type: word-order
+    answers:
+      - [mit wem, fährst, du, morgen, nach Berlin]
+    end: "?"
+    explanation:
+      en: "The question word comes first, the verb second, and the time before the place."
+      fa: "واژهٔ پرسشی در آغاز، فعل در جایگاه دوم و زمان پیش از مکان می‌آید."
+      de: "Das Fragewort steht am Anfang, das Verb auf Position 2, die Zeit vor dem Ort."
+
+review:
+  reviewer: two independent AI agents (Claude Opus 5.5 subagents, blind passes on
+    the review sheet only; a second fresh agent re-answered the changed
+    questions; not a person)
+  date: 2026-11-28
+  pool: 0cc41ec32850fe04

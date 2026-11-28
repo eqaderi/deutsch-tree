@@ -186,7 +186,8 @@ export const en = {
     'typed-answer': 'Type the answer.',
     'typed-gap-fill': 'Type the word that fits the gap.',
     'meaning-of-word': 'What does this word mean?',
-    'word-for-meaning': 'Type the German word. A noun needs its article, if it takes one.',
+    'word-for-meaning':
+      'Type the German word. A noun needs its article, if it takes one, and a reflexive verb its sich.',
     'richtig-falsch': 'Is this statement right or wrong? The text decides.',
     'ja-nein': 'Answer yes (Ja) or no (Nein). The text of this person decides.',
     'which-text': 'Which advertisement fits? Choose its letter, or 0 if none fits.',

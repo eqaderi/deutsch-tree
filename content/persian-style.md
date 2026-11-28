@@ -77,6 +77,7 @@ its first mention in a node.
 | stem (of a verb) | Stamm | بن |
 | personal ending (of a verb) | Personalendung | شناسه |
 | ending (of an article, adjective or noun) | Endung | پایانه |
+| umlaut (*ä*, *ö*, *ü*) | Umlaut | دو نقطه (*Umlaut*) |
 | conjugation; to conjugate | Konjugation | صرف؛ صرف کردن |
 | regular / irregular | regelmäßig / unregelmäßig | باقاعده / بی‌قاعده |
 | mixed verb (*bringen*, *gebracht*) | gemischtes Verb | فعل آمیخته |
@@ -94,6 +95,7 @@ its first mention in a node.
 | Dativ | Dativ | حالت *Dativ* (حالت مفعول باواسطه) |
 | Genitiv | Genitiv | حالت *Genitiv* (حالت ملکی) |
 | subject / object | Subjekt / Objekt | فاعل / مفعول |
+| direct / indirect object | direktes / indirektes Objekt | مفعول مستقیم / مفعول باواسطه |
 | pronoun; personal, possessive, reflexive, relative | Pronomen | ضمیر؛ شخصی، ملکی، انعکاسی، موصولی |
 | possessive article (*mein*) | Possessivartikel | حرف تعریف ملکی |
 | demonstrative article (*dieser*) | Demonstrativartikel | حرف تعریف اشاره |

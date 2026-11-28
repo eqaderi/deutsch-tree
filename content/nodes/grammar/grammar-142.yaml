@@ -183,7 +183,7 @@ questions:
     answer: Fahrt
     explanation:
       en: "With *ihr* the verb is *fahrt*, without an umlaut."
-      fa: "با *ihr* فعل *fahrt* است، بی اوملاوت."
+      fa: "با *ihr* فعل *fahrt* است، بدون دو نقطه (*Umlaut*)."
       de: "Bei *ihr* heißt das Verb *fahrt*, ohne Umlaut."
   - id: true-1
     type: true-false
