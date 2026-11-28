@@ -1,39 +1,380 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-healthy-living
 kind: vocabulary
 level: B1
 chapter: b1-words-health
 order: 4
-status: coming-soon
+status: published
 title:
   en: "Healthy living and addiction"
   fa: "زندگی سالم و اعتیاد"
   de: "Gesund leben und Sucht"
+attemptSize: 15
 words:
   - word: Zahnbürste
+    class: noun
+    article: die
+    plural: Zahnbürsten
+    level: B1
+    meaning:
+      en: toothbrush
+      fa: مسواک
+    definition: eine kleine Bürste mit einem langen Griff, mit der man sich die Zähne putzt
+    example:
+      de: Ich kaufe alle drei Monate eine neue Zahnbürste.
+      en: I buy a new toothbrush every three months.
+      fa: هر سه ماه یک مسواک نو می‌خرم.
+
   - word: Zahncreme
+    class: noun
+    article: die
+    plural: Zahncremes
+    level: B1
+    meaning:
+      en: toothpaste
+      fa: خمیردندان
+    definition: die weiße Masse aus der Tube, mit der man sich die Zähne putzt
+    example:
+      de: Die Zahncreme ist fast leer, wir brauchen eine neue Tube.
+      en: The toothpaste is almost finished; we need a new tube.
+      fa: خمیردندان تقریباً تمام شده است و یک تیوب تازه لازم داریم.
+    alsoAccepted: [die Zahnpasta, die Zahnpaste]
+
   - word: Bürste
+    class: noun
+    article: die
+    plural: Bürsten
+    level: B1
+    meaning:
+      en: brush
+      fa: برس
+    definition: ein Gegenstand mit vielen kurzen, harten Haaren, zum Beispiel für die Haare oder zum Putzen
+    example:
+      de: Mit einer harten Bürste putzt er seine Schuhe.
+      en: He cleans his shoes with a hard brush.
+      fa: او کفش‌هایش را با یک برس زبر تمیز می‌کند.
+
   - word: Taschentuch
+    class: noun
+    article: das
+    plural: Taschentücher
+    level: B1
+    meaning:
+      en: tissue, handkerchief
+      fa: دستمال (کاغذی یا پارچه‌ای)
+    definition: ein kleines Tuch aus Papier oder aus Stoff für die Nase
+    example:
+      de: Hast du ein Taschentuch für mich? Ich habe Schnupfen.
+      en: Have you got a tissue for me? I've got a runny nose.
+      fa: دستمال داری؟ آب بینی‌ام راه افتاده است.
+
   - word: Spiegel
+    class: noun
+    article: der
+    plural: Spiegel
+    level: B1
+    meaning:
+      en: mirror
+      fa: آینه
+    definition: ein Glas, in dem man sich selbst sieht
+    example:
+      de: Im Bad hängt ein großer Spiegel über dem Waschbecken.
+      en: In the bathroom there is a large mirror above the washbasin.
+      fa: در حمام آینهٔ بزرگی بالای روشویی آویزان است.
+
   - word: Badewanne
+    class: noun
+    article: die
+    plural: Badewannen
+    level: B1
+    meaning:
+      en: bath, bathtub
+      fa: وان حمام
+    definition: ein großes Becken im Badezimmer, in dem man liegt, wenn man badet
+    example:
+      de: Nach dem Training liege ich gern in der warmen Badewanne.
+      en: After training I like lying in a warm bath.
+      fa: بعد از تمرین دوست دارم در وان آب گرم دراز بکشم.
+
   - word: Drogerie
+    class: noun
+    article: die
+    plural: Drogerien
+    level: B1
+    meaning:
+      en: chemist's, drugstore (for toiletries, not prescriptions)
+      fa: فروشگاه لوازم بهداشتی و آرایشی
+    definition: ein Geschäft für Seife, Shampoo und andere Dinge für den Körper, aber ohne Medikamente vom Arzt
+    example:
+      de: Shampoo und Zahncreme kaufe ich immer in der Drogerie.
+      en: I always buy shampoo and toothpaste at the chemist's.
+      fa: شامپو و خمیردندان را همیشه از فروشگاه لوازم بهداشتی می‌خرم.
+
   - word: Sucht
+    class: noun
+    article: die
+    plural: Süchte
+    level: B1
+    meaning:
+      en: addiction
+      fa: اعتیاد
+    definition: wenn man etwas immer wieder haben muss und nicht mehr damit aufhören kann
+    example:
+      de: Auch das Spielen am Handy kann zur Sucht werden.
+      en: Playing games on your phone can become an addiction too.
+      fa: بازی با گوشی هم ممکن است به اعتیاد تبدیل شود.
+    alsoAccepted: [die Abhängigkeit]
+
   - word: süchtig
+    class: adjective
+    level: B1
+    meaning:
+      en: addicted
+      fa: معتاد
+    definition: so, dass man ohne eine bestimmte Sache nicht mehr leben kann, zum Beispiel ohne Zigaretten
+    example:
+      de: Mein Bruder ist süchtig nach Computerspielen.
+      en: My brother is addicted to computer games.
+      fa: برادرم به بازی‌های کامپیوتری معتاد است.
+    alsoAccepted: [abhängig]
+
   - word: Suchtmittel
+    class: noun
+    article: das
+    plural: Suchtmittel
+    level: B1
+    meaning:
+      en: addictive substance (legal or illegal)
+      fa: مادهٔ اعتیادآور (قانونی یا غیرقانونی)
+    definition: jeder Stoff, von dem man abhängig werden kann, auch ein erlaubter wie Alkohol oder Nikotin
+    example:
+      de: Auch Alkohol ist ein Suchtmittel.
+      en: Alcohol is an addictive substance too.
+      fa: الکل هم یک مادهٔ اعتیادآور است.
+    alsoAccepted: [der Suchtstoff]
+    tooCloseTo: [Droge]
+
   - word: Droge
+    class: noun
+    article: die
+    plural: Drogen
+    level: B1
+    meaning:
+      en: drug (an illegal one)
+      fa: مادهٔ مخدر
+    definition: ein meistens verbotenes Mittel wie Kokain, das den Kopf verändert und süchtig machen kann
+    example:
+      de: Die Polizei hat im Auto Drogen gefunden.
+      en: The police found drugs in the car.
+      fa: پلیس در ماشین مواد مخدر پیدا کرد.
+    alsoAccepted: [das Rauschgift]
+    tooCloseTo: [Suchtmittel]
+
   - word: Alkohol
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: alcohol
+      fa: الکل، مشروب الکلی
+    definition: was in Bier, Wein und Schnaps ist und einen Menschen betrunken machen kann
+    example:
+      de: Wer Auto fährt, sollte keinen Alkohol trinken.
+      en: Anyone who is driving should not drink alcohol.
+      fa: کسی که رانندگی می‌کند، نباید مشروب الکلی بنوشد.
+
   - word: betrunken
+    class: adjective
+    level: B1
+    meaning:
+      en: drunk
+      fa: مست
+    definition: so, dass man zu viel Bier, Wein oder Schnaps getrunken hat
+    example:
+      de: Er war so betrunken, dass er nicht mehr gerade gehen konnte.
+      en: He was so drunk that he could no longer walk straight.
+      fa: آن‌قدر مست بود که دیگر نمی‌توانست صاف راه برود.
+
   - word: Raucher
+    class: noun
+    article: der
+    plural: Raucher
+    level: B1
+    meaning:
+      en: smoker
+      fa: آدم سیگاری
+    definition: eine Person, die regelmäßig Zigaretten raucht
+    example:
+      de: Mein Vater war 30 Jahre lang Raucher.
+      en: My father was a smoker for 30 years.
+      fa: پدرم ۳۰ سال سیگاری بود.
+    alsoAccepted: [die Raucherin]
+
   - word: Nichtraucher
+    class: noun
+    article: der
+    plural: Nichtraucher
+    level: B1
+    meaning:
+      en: non-smoker
+      fa: آدم غیرسیگاری
+    definition: eine Person, die nicht raucht
+    example:
+      de: Seit einem Jahr bin ich Nichtraucher und fühle mich viel besser.
+      en: I have been a non-smoker for a year and feel much better.
+      fa: یک سال است که سیگار را کنار گذاشته‌ام و حالم خیلی بهتر است.
+    alsoAccepted: [die Nichtraucherin]
+
   - word: Gift
+    class: noun
+    article: das
+    plural: Gifte
+    level: B1
+    meaning:
+      en: poison
+      fa: سم
+    definition: etwas, das krank macht oder tötet, wenn es in den Körper kommt
+    example:
+      de: Manche Pilze enthalten ein starkes Gift.
+      en: Some mushrooms contain a strong poison.
+      fa: بعضی قارچ‌ها سم قوی‌ای دارند.
+
   - word: giftig
+    class: adjective
+    level: B1
+    meaning:
+      en: poisonous, toxic
+      fa: سمی
+    definition: so gefährlich, dass man krank wird oder stirbt, wenn man es isst, trinkt oder anfasst
+    example:
+      de: Vorsicht, diese Pflanze ist giftig für Katzen.
+      en: Careful, this plant is poisonous to cats.
+      fa: مراقب باشید، این گیاه برای گربه‌ها سمی است.
+
   - word: Ernährung
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: nutrition, the way one eats
+      fa: تغذیه (شیوهٔ غذا خوردن)
+    definition: wie und was man isst und trinkt, zum Beispiel gesund oder ungesund
+    example:
+      de: Eine gesunde Ernährung ist für Kinder besonders wichtig.
+      en: Healthy nutrition is especially important for children.
+      fa: تغذیهٔ سالم برای کودکان اهمیت ویژه‌ای دارد.
+    tooCloseTo: [Diät]
+
+  # The scope list gives the verb bare. Taught in its usual sense, "sich (gesund) ernähren".
   - word: ernähren
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to eat (in a certain way), to feed oneself
+      fa: تغذیه کردن (به شیوه‌ای خاص)
+    definition: sich auf eine bestimmte Art mit Essen versorgen, zum Beispiel mit viel Obst und Gemüse
+    example:
+      de: Seit dem Kochkurs ernähre ich mich viel gesünder.
+      en: Since the cookery course I have been eating much more healthily.
+      fa: از وقتی در کلاس آشپزی شرکت کردم، خیلی سالم‌تر تغذیه می‌کنم.
+
   - word: Vitamin
+    class: noun
+    article: das
+    plural: Vitamine
+    level: B1
+    meaning:
+      en: vitamin
+      fa: ویتامین
+    definition: ein Stoff, zum Beispiel in Obst und Gemüse, den der Körper braucht, um gesund zu bleiben
+    example:
+      de: Im Winter esse ich viel Obst wegen der Vitamine.
+      en: In winter I eat lots of fruit because of the vitamins.
+      fa: در زمستان به خاطر ویتامین‌ها زیاد میوه می‌خورم.
+
   - word: vegetarisch
+    class: adjective
+    level: B1
+    meaning:
+      en: vegetarian
+      fa: گیاهی، بدون گوشت
+    definition: ohne Fleisch und ohne Fisch, aber oft mit Milch und Eiern
+    example:
+      de: In der Kantine gibt es jeden Tag ein vegetarisches Gericht.
+      en: The canteen has a vegetarian dish every day.
+      fa: سلف‌سرویس هر روز یک غذای گیاهی دارد.
+
   - word: erholen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to rest and recover, to get one's strength back
+      fa: استراحت کردن و سرحال شدن، جان گرفتن
+    definition: nach viel Arbeit oder nach einer Krankheit wieder Kraft bekommen
+    example:
+      de: Im Urlaub am Meer habe ich mich gut erholt.
+      en: I had a good rest on holiday by the sea.
+      fa: در تعطیلات کنار دریا حسابی استراحت کردم و سرحال شدم.
+
   - word: Erholung
+    class: noun
+    article: die
+    plural: Erholungen
+    level: B1
+    meaning:
+      en: rest, recovery
+      fa: استراحت، تجدید قوا
+    definition: die Zeit, in der man sich ausruht und wieder Kraft bekommt
+    example:
+      de: Nach der Operation braucht er zwei Wochen Erholung.
+      en: After the operation he needs two weeks of rest.
+      fa: بعد از عمل دو هفته استراحت لازم دارد.
+
   - word: Diät
+    class: noun
+    article: die
+    plural: Diäten
+    level: B1
+    meaning:
+      en: diet (to lose weight or because of an illness)
+      fa: رژیم غذایی
+    definition: ein Plan, nach dem man für eine Zeit weniger oder nur bestimmte Dinge isst, zum Beispiel um leichter zu werden
+    example:
+      de: Nach den Feiertagen macht meine Mutter immer eine Diät.
+      en: After the holidays my mother always goes on a diet.
+      fa: مادرم بعد از تعطیلات همیشه رژیم می‌گیرد.
+    tooCloseTo: [Ernährung]
+
   - word: abnehmen
+    class: verb
+    level: B1
+    meaning:
+      en: to lose weight
+      fa: وزن کم کردن، لاغر شدن
+    definition: leichter werden, weil man weniger isst oder mehr Sport macht
+    example:
+      de: Durch mehr Sport hat sie fünf Kilo abgenommen.
+      en: Through doing more sport she has lost five kilos.
+      fa: با ورزش بیشتر پنج کیلو وزن کم کرده است.
+
   - word: zunehmen
+    class: verb
+    level: B1
+    meaning:
+      en: to put on weight, to gain weight
+      fa: وزن اضافه کردن، چاق شدن
+    definition: schwerer werden, zum Beispiel weil man zu viel isst
+    example:
+      de: Im Urlaub habe ich zwei Kilo zugenommen.
+      en: I put on two kilos on holiday.
+      fa: در تعطیلات دو کیلو وزن اضافه کردم.
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 02151859d9d54c68

@@ -1,40 +1,383 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-body
 kind: vocabulary
 level: B1
 chapter: b1-words-health
 order: 1
-status: coming-soon
+status: published
 title:
   en: "The body"
   fa: "بدن"
   de: "Der Körper"
+attemptSize: 15
 words:
   - word: Brust
+    class: noun
+    article: die
+    plural: Brüste
+    level: B1
+    meaning:
+      en: chest; breast
+      fa: سینه، قفسهٔ سینه
+    definition: der vordere Teil vom Körper zwischen dem Hals und dem Bauch
+    example:
+      de: Nach dem Laufen tut mir die Brust weh.
+      en: My chest hurts after running.
+      fa: بعد از دویدن سینه‌ام درد می‌کند.
+    alsoAccepted: [der Brustkorb]
+
   - word: Finger
+    class: noun
+    article: der
+    plural: Finger
+    level: B1
+    meaning:
+      en: finger
+      fa: انگشت (دست)
+    definition: Eine Hand hat fünf davon.
+    example:
+      de: Ich habe mich beim Kochen in den Finger geschnitten.
+      en: I cut my finger while cooking.
+      fa: موقع آشپزی انگشتم را بریدم.
+
   - word: Herz
+    class: noun
+    article: das
+    plural: Herzen
+    level: B1
+    meaning:
+      en: heart
+      fa: قلب
+    definition: das Organ in der Brust, das das Blut durch den Körper pumpt
+    example:
+      de: Wenn ich Angst habe, schlägt mein Herz schneller.
+      en: When I am scared, my heart beats faster.
+      fa: وقتی می‌ترسم، قلبم تندتر می‌زند.
+
   - word: Haut
+    class: noun
+    article: die
+    plural: Häute
+    level: B1
+    meaning:
+      en: skin
+      fa: پوست
+    definition: was den ganzen Körper außen bedeckt
+    example:
+      de: Im Sommer braucht die Haut Schutz vor der Sonne.
+      en: In summer the skin needs protection from the sun.
+      fa: پوست در تابستان به محافظت در برابر آفتاب نیاز دارد.
+
   - word: Knie
+    class: noun
+    article: das
+    plural: Knie
+    level: B1
+    meaning:
+      en: knee
+      fa: زانو
+    definition: das Gelenk in der Mitte vom Bein
+    example:
+      de: Seit dem Fußballspiel tut mir das linke Knie weh.
+      en: My left knee has hurt since the football match.
+      fa: از آن مسابقهٔ فوتبال، زانوی چپم درد می‌کند.
+
   - word: Knochen
+    class: noun
+    article: der
+    plural: Knochen
+    level: B1
+    meaning:
+      en: bone
+      fa: استخوان
+    definition: ein harter, weißer Teil im Körper; ein Mensch hat über 200 davon
+    example:
+      de: Beim Skifahren hat er sich einen Knochen im Bein gebrochen.
+      en: He broke a bone in his leg while skiing.
+      fa: موقع اسکی یکی از استخوان‌های پایش شکست.
+
   - word: Lippe
+    class: noun
+    article: die
+    plural: Lippen
+    level: B1
+    meaning:
+      en: lip
+      fa: لب
+    definition: der obere oder der untere Rand vom Mund
+    example:
+      de: Im Winter sind meine Lippen oft trocken.
+      en: In winter my lips are often dry.
+      fa: در زمستان لب‌هایم اغلب خشک است.
+
   - word: Muskel
+    class: noun
+    article: der
+    plural: Muskeln
+    level: B1
+    meaning:
+      en: muscle
+      fa: ماهیچه، عضله
+    definition: ein Teil vom Körper, mit dem man sich bewegt und der durch Sport stärker wird
+    example:
+      de: Nach dem ersten Training tun mir alle Muskeln weh.
+      en: After the first training session all my muscles hurt.
+      fa: بعد از اولین تمرین همهٔ عضله‌هایم درد می‌کند.
+
   - word: Nase
+    class: noun
+    article: die
+    plural: Nasen
+    level: B1
+    meaning:
+      en: nose
+      fa: بینی
+    definition: der Teil mitten im Gesicht, mit dem man riecht
+    example:
+      de: Meine Nase läuft, ich brauche ein Taschentuch.
+      en: My nose is running; I need a tissue.
+      fa: آب بینی‌ام راه افتاده است و دستمال لازم دارم.
+
   - word: Schulter
+    class: noun
+    article: die
+    plural: Schultern
+    level: B1
+    meaning:
+      en: shoulder
+      fa: شانه، کتف
+    definition: der Teil vom Körper zwischen dem Hals und dem Arm
+    example:
+      de: Sie trägt die schwere Tasche auf der rechten Schulter.
+      en: She carries the heavy bag on her right shoulder.
+      fa: او کیف سنگین را روی شانهٔ راستش می‌برد.
+
   - word: Blut
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: blood
+      fa: خون
+    definition: die rote Flüssigkeit, die durch den Körper fließt
+    example:
+      de: Beim Arzt hat man mir heute Blut abgenommen.
+      en: At the doctor's they took a blood sample from me today.
+      fa: امروز در مطب پزشک از من خون گرفتند.
+
   - word: bluten
+    class: verb
+    level: B1
+    meaning:
+      en: to bleed
+      fa: خون‌ریزی کردن، خون آمدن
+    definition: Blut verlieren, zum Beispiel aus einer kleinen Wunde
+    example:
+      de: Das Kind ist hingefallen und blutet am Knie.
+      en: The child has fallen over and is bleeding from the knee.
+      fa: بچه زمین خورده است و از زانویش خون می‌آید.
+
   - word: Atem
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: breath
+      fa: نفس
+    definition: die Luft, die aus dem Mund oder aus der Nase kommt
+    example:
+      de: Nach der langen Treppe war ich ganz außer Atem.
+      en: After the long flight of stairs I was completely out of breath.
+      fa: بعد از آن پله‌های طولانی حسابی نفسم بند آمده بود.
+
   - word: atmen
+    class: verb
+    level: B1
+    meaning:
+      en: to breathe
+      fa: نفس کشیدن
+    definition: Luft in den Körper holen und wieder hinauslassen
+    example:
+      de: Bitte atmen Sie ruhig durch die Nase.
+      en: Please breathe calmly through your nose.
+      fa: لطفاً آرام از راه بینی نفس بکشید.
+
   - word: Stimme
+    class: noun
+    article: die
+    plural: Stimmen
+    level: B1
+    meaning:
+      en: voice
+      fa: صدا (صدای انسان)
+    definition: was man hört, wenn ein Mensch spricht oder singt
+    example:
+      de: Nach dem Konzert hatte die Sängerin keine Stimme mehr.
+      en: After the concert the singer had lost her voice.
+      fa: خواننده بعد از کنسرت دیگر صدایش درنمی‌آمد.
+
   - word: körperlich
+    class: adjective
+    level: B1
+    meaning:
+      en: physical, bodily
+      fa: جسمی، بدنی
+    definition: so, dass es mit dem Körper zu tun hat und nicht mit dem Kopf oder den Gefühlen
+    example:
+      de: Die Arbeit auf dem Bau ist körperlich sehr anstrengend.
+      en: Work on a building site is physically very demanding.
+      fa: کار در ساختمان‌سازی از نظر جسمی بسیار سخت است.
+    alsoAccepted: [physisch]
+
   - word: Kraft
+    class: noun
+    article: die
+    plural: Kräfte
+    level: B1
+    meaning:
+      en: strength, power
+      fa: نیرو، توان
+    definition: was man in den Muskeln hat und braucht, um etwas Schweres zu heben
+    example:
+      de: Nach der Grippe hatte ich keine Kraft, die Treppe hochzugehen.
+      en: After the flu I had no strength to walk up the stairs.
+      fa: بعد از آنفولانزا توان بالا رفتن از پله‌ها را نداشتم.
+    alsoAccepted: [die Stärke]
+
   - word: schwitzen
+    class: verb
+    level: B1
+    meaning:
+      en: to sweat
+      fa: عرق کردن
+    definition: Wasser über die Haut verlieren, wenn es heiß ist oder wenn man Sport macht
+    example:
+      de: Im Sommer schwitze ich schon auf dem Weg zur Arbeit.
+      en: In summer I already sweat on my way to work.
+      fa: تابستان‌ها همان سر راه محل کار عرق می‌کنم.
+
   - word: frieren
+    class: verb
+    level: B1
+    meaning:
+      en: to be cold, to freeze (of a person)
+      fa: احساس سرما کردن، یخ کردن
+    definition: am ganzen Körper Kälte fühlen
+    example:
+      de: Zieh lieber eine Jacke an, sonst frierst du!
+      en: You had better put a jacket on, or you'll be cold!
+      fa: بهتر است کاپشن بپوشی، وگرنه سردت می‌شود!
+
   - word: Schlaf
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: sleep
+      fa: خواب (حالت خوابیدن، نه رؤیا)
+    definition: die Zeit, meistens in der Nacht, in der man mit geschlossenen Augen liegt und sich ausruht
+    example:
+      de: Ich brauche jede Nacht mindestens sieben Stunden Schlaf.
+      en: I need at least seven hours of sleep every night.
+      fa: هر شب دست‌کم هفت ساعت خواب لازم دارم.
+
   - word: aufwachen
+    class: verb
+    level: B1
+    meaning:
+      en: to wake up
+      fa: بیدار شدن
+    definition: nach dem Schlafen die Augen öffnen
+    example:
+      de: Heute bin ich schon um fünf Uhr aufgewacht.
+      en: Today I woke up at five o'clock already.
+      fa: امروز ساعت پنج صبح بیدار شدم.
+
   - word: bewegen
+    class: verb
+    level: B1
+    meaning:
+      en: to move (a part of the body, a thing)
+      fa: حرکت دادن، تکان دادن
+    definition: die Lage von etwas ändern, zum Beispiel vom Arm oder von den Fingern
+    example:
+      de: Nach dem Unfall konnte er den Arm nicht mehr bewegen.
+      en: After the accident he could no longer move his arm.
+      fa: بعد از تصادف دیگر نمی‌توانست دستش را تکان بدهد.
+
   - word: Bewegung
+    class: noun
+    article: die
+    plural: Bewegungen
+    level: B1
+    meaning:
+      en: movement; exercise
+      fa: حرکت، تحرک
+    definition: wenn man den Körper nicht still hält, zum Beispiel beim Gehen oder beim Sport
+    example:
+      de: Der Arzt sagt, ich brauche mehr Bewegung an der frischen Luft.
+      en: The doctor says I need more exercise in the fresh air.
+      fa: دکتر می‌گوید باید در هوای آزاد بیشتر تحرک داشته باشم.
+
   - word: wiegen
+    class: verb
+    level: B1
+    meaning:
+      en: to weigh
+      fa: وزن داشتن، وزن کردن
+    definition: ein bestimmtes Gewicht haben, zum Beispiel 70 Kilo, oder das Gewicht von etwas messen
+    example:
+      de: Das Baby wiegt jetzt schon vier Kilo.
+      en: The baby already weighs four kilos now.
+      fa: نوزاد حالا دیگر چهار کیلو وزن دارد.
+
   - word: Fitness
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: fitness
+      fa: آمادگی جسمانی
+    definition: wenn der Körper gesund und stark ist und viel leisten kann
+    example:
+      de: Für meine Fitness fahre ich jeden Tag mit dem Fahrrad zur Arbeit.
+      en: To stay fit I cycle to work every day.
+      fa: برای حفظ آمادگی جسمانی‌ام هر روز با دوچرخه سر کار می‌روم.
+    alsoAccepted: [die Kondition]
+
   - word: Gymnastik
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: keep-fit exercises, gymnastics
+      fa: نرمش، ژیمناستیک
+    definition: einfache Übungen, die den Körper beweglich halten
+    example:
+      de: Meine Oma macht jeden Morgen zehn Minuten Gymnastik.
+      en: My grandma does ten minutes of exercises every morning.
+      fa: مادربزرگم هر روز صبح ده دقیقه نرمش می‌کند.
+
   - word: spüren
+    class: verb
+    level: B1
+    meaning:
+      en: to feel, to sense
+      fa: حس کردن
+    definition: mit dem Körper oder mit den Gefühlen merken, zum Beispiel einen Schmerz
+    example:
+      de: Nach der Spritze spürt man fast nichts mehr.
+      en: After the injection you hardly feel anything any more.
+      fa: بعد از آمپول تقریباً دیگر چیزی حس نمی‌شود.
+    alsoAccepted: [fühlen]
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 94683bf83e7c0081

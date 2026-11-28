@@ -1,37 +1,357 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-anger-fear
 kind: vocabulary
 level: B1
 chapter: b1-words-people-feelings
 order: 6
-status: coming-soon
+status: published
 title:
   en: "Anger, fear and worry"
   fa: "خشم، ترس و نگرانی"
   de: "Ärger, Angst und Sorgen"
+attemptSize: 15
 words:
   - word: Ärger
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: annoyance; trouble (problems)
+      fa: دلخوری؛ دردسر
+    definition: das Gefühl, wenn man böse ist, weil etwas schlecht gelaufen ist; oder Probleme
+    example:
+      de: Mit dem neuen Auto hatten wir nur Ärger.
+      en: We've had nothing but trouble with the new car.
+      fa: با ماشین تازه فقط دردسر داشتیم.
+
   - word: ärgerlich
+    class: adjective
+    level: B1
+    meaning:
+      en: annoying (a situation)
+      fa: آزاردهنده، اعصاب‌خردکن
+    definition: so, dass es einen böse macht
+    example:
+      de: Es ist ärgerlich, dass der Zug schon wieder Verspätung hat.
+      en: It's annoying that the train is late again.
+      fa: اعصاب‌خردکن است که قطار باز هم تأخیر دارد.
+    alsoAccepted: [nervig, lästig]
+    tooCloseTo: [wütend]
+
+  # The scope list gives no "sich": the node teaches "sich aufregen", to get worked up.
   - word: aufregen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to get worked up, to get upset (about something)
+      fa: حرص خوردن، از کوره در رفتن
+    definition: sehr nervös oder böse über etwas werden
+    example:
+      de: Mein Vater regt sich über jede Kleinigkeit auf.
+      en: My father gets worked up about every little thing.
+      fa: پدرم سر هر چیز کوچکی حرص می‌خورد.
+    alsoAccepted: [sich ärgern]
+
   - word: wütend
+    class: adjective
+    level: B1
+    meaning:
+      en: furious, angry
+      fa: خشمگین، عصبانی
+    definition: sehr, sehr böse auf eine Person oder eine Sache
+    example:
+      de: Als er die Rechnung sah, wurde er wütend.
+      en: When he saw the bill, he became furious.
+      fa: وقتی صورت‌حساب را دید، عصبانی شد.
+    alsoAccepted: [zornig, sauer, böse]
+
   - word: Sorge
+    class: noun
+    article: die
+    plural: Sorgen
+    level: B1
+    meaning:
+      en: worry, concern
+      fa: نگرانی
+    definition: das unruhige Gefühl, wenn man an ein Problem oder an eine Person denkt, der es schlecht gehen könnte
+    example:
+      de: Mach dir keine Sorgen, ich komme bald zurück.
+      en: Don't worry, I'll be back soon.
+      fa: نگران نباش، زود برمی‌گردم.
+    alsoAccepted: [die Besorgnis]
+
+  # The scope list gives no "sich": the node teaches "sich sorgen", to worry about someone.
   - word: sorgen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to worry (about someone)
+      fa: نگران (کسی) بودن
+    definition: Angst haben, dass einer Person etwas Schlimmes passiert
+    example:
+      de: Die Eltern sorgen sich um ihren kranken Sohn.
+      en: The parents are worried about their sick son.
+      fa: پدر و مادر نگران پسر بیمارشان هستند.
+    alsoAccepted: [sich Sorgen machen]
+    tooCloseTo: [fürchten]
+
+  # The scope list gives "(sich)": the node teaches "sich fürchten", to be afraid; "fürchten" is accepted too.
   - word: fürchten
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to be afraid (of something)
+      fa: ترسیدن (از چیزی)
+    definition: Angst vor einer Person oder einer Sache haben
+    example:
+      de: Meine Tochter fürchtet sich vor großen Hunden.
+      en: My daughter is afraid of big dogs.
+      fa: دخترم از سگ‌های بزرگ می‌ترسد.
+    alsoAccepted: [fürchten, Angst haben, sich ängstigen]
+    tooCloseTo: [sorgen, erschrecken]
+
   - word: ängstlich
+    class: adjective
+    level: B1
+    meaning:
+      en: timid, easily frightened
+      fa: ترسو، زودترس
+    definition: so, dass man schnell Angst bekommt
+    example:
+      de: Unser Hund ist sehr ängstlich und versteckt sich bei Gewitter.
+      en: Our dog is very timid and hides when there's a thunderstorm.
+      fa: سگمان خیلی ترسوست و موقع رعد و برق پنهان می‌شود.
+    alsoAccepted: [furchtsam, schreckhaft]
+
+  # The node teaches "erschrecken" (erschrak, ist erschrocken), to get a fright.
   - word: erschrecken
+    class: verb
+    level: B1
+    meaning:
+      en: to get a fright, to be startled
+      fa: جا خوردن، یکه خوردن
+    definition: plötzlich Angst bekommen, zum Beispiel bei einem lauten Geräusch
+    example:
+      de: Ich bin erschrocken, als plötzlich das Telefon klingelte.
+      en: I got a fright when the phone suddenly rang.
+      fa: وقتی تلفن ناگهان زنگ زد، جا خوردم.
+    alsoAccepted: [sich erschrecken, zusammenzucken]
+    tooCloseTo: [fürchten]
+
   - word: Schreck
+    class: noun
+    article: der
+    plural: Schrecke
+    level: B1
+    meaning:
+      en: fright, scare (a sudden fear)
+      fa: ترس ناگهانی، وحشت
+    definition: eine plötzliche, kurze Angst
+    example:
+      de: Du hast mir einen großen Schreck eingejagt!
+      en: You gave me a real fright!
+      fa: حسابی مرا ترساندی!
+    alsoAccepted: [der Schrecken]
+
   - word: Enttäuschung
+    class: noun
+    article: die
+    plural: Enttäuschungen
+    level: B1
+    meaning:
+      en: disappointment
+      fa: سرخوردگی، ناامیدی
+    definition: das traurige Gefühl, wenn etwas nicht so gut ist, wie man gehofft hat
+    example:
+      de: Das Ergebnis war eine große Enttäuschung für die Mannschaft.
+      en: The result was a big disappointment for the team.
+      fa: نتیجه برای تیم مایهٔ سرخوردگی بزرگی بود.
+
   - word: enttäuschen
+    class: verb
+    level: B1
+    meaning:
+      en: to disappoint
+      fa: ناامید کردن، سرخورده کردن
+    definition: nicht so gut sein, wie eine andere Person gehofft hat
+    example:
+      de: Der Film hat mich enttäuscht.
+      en: The film disappointed me.
+      fa: فیلم ناامیدم کرد.
+
   - word: Langeweile
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: boredom
+      fa: کسالت، بی‌حوصلگی
+    definition: das Gefühl, wenn man nichts zu tun hat und die Zeit nicht vergeht
+    example:
+      de: Aus Langeweile hat er den ganzen Tag am Handy gespielt.
+      en: Out of boredom he played on his phone all day.
+      fa: از سر بی‌حوصلگی تمام روز با گوشی‌اش بازی کرد.
+
+  # The scope list gives "sich": the node teaches "sich langweilen", to be bored.
   - word: langweilen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to be bored
+      fa: حوصلهٔ (کسی) سر رفتن
+    definition: nichts Interessantes zu tun haben und keinen Spaß haben
+    example:
+      de: Im Wartezimmer habe ich mich zwei Stunden gelangweilt.
+      en: I was bored for two hours in the waiting room.
+      fa: در اتاق انتظار دو ساعت حوصله‌ام سر رفت.
+
   - word: Pech
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: bad luck
+      fa: بدشانسی
+    definition: wenn man zufällig kein Glück hat, zum Beispiel wenn der Bus gerade weggefahren ist
+    example:
+      de: So ein Pech, der Bus ist gerade weggefahren!
+      en: What bad luck, the bus has just left!
+      fa: چه بدشانسی‌ای، اتوبوس همین الان رفت!
+
   - word: leiden
+    class: verb
+    level: B1
+    meaning:
+      en: to suffer
+      fa: رنج بردن
+    definition: Schmerzen haben oder sich lange sehr schlecht fühlen
+    example:
+      de: Sie leidet sehr unter der Trennung.
+      en: She is suffering a lot from the break-up.
+      fa: او از این جدایی خیلی رنج می‌برد.
+    tooCloseTo: [klagen]
+
   - word: klagen
+    class: verb
+    level: B1
+    meaning:
+      en: to moan, to lament (about pain or problems)
+      fa: نالیدن، شکوه کردن
+    definition: oft und traurig sagen, dass man Schmerzen oder Probleme hat
+    example:
+      de: Mein Opa klagt oft über Rückenschmerzen.
+      en: My grandpa often complains about back pain.
+      fa: پدربزرگم اغلب از کمردرد می‌نالد.
+    alsoAccepted: [jammern, sich beklagen]
+    tooCloseTo: [leiden]
+
   - word: hassen
+    class: verb
+    level: B1
+    meaning:
+      en: to hate
+      fa: متنفر بودن
+    definition: eine Person oder eine Sache überhaupt nicht mögen, mit einem sehr starken Gefühl
+    example:
+      de: Ich hasse es, früh aufzustehen.
+      en: I hate getting up early.
+      fa: از صبح زود بیدار شدن متنفرم.
+    alsoAccepted: [verabscheuen]
+
   - word: Träne
+    class: noun
+    article: die
+    plural: Tränen
+    level: B1
+    meaning:
+      en: tear (from the eye)
+      fa: اشک
+    definition: ein Tropfen Wasser, der aus dem Auge kommt, wenn man weint
+    example:
+      de: Beim Abschied hatte sie Tränen in den Augen.
+      en: When they said goodbye she had tears in her eyes.
+      fa: هنگام خداحافظی اشک در چشمانش حلقه زده بود.
+
   - word: schreien
+    class: verb
+    level: B1
+    meaning:
+      en: to scream, to shout
+      fa: فریاد زدن، جیغ کشیدن
+    definition: sehr laut rufen, zum Beispiel aus Angst oder aus Wut
+    example:
+      de: Das Kind schrie, als es die Spinne sah.
+      en: The child screamed when it saw the spider.
+      fa: بچه وقتی عنکبوت را دید، جیغ کشید.
+    alsoAccepted: [brüllen, kreischen]
+
   - word: peinlich
+    class: adjective
+    level: B1
+    meaning:
+      en: embarrassing
+      fa: خجالت‌آور
+    definition: so, dass man sich schämt und vielleicht rot wird
+    example:
+      de: Es war mir peinlich, dass ich ihren Namen vergessen hatte.
+      en: I was embarrassed that I had forgotten her name.
+      fa: خجالت کشیدم که اسمش را فراموش کرده بودم.
+    alsoAccepted: [beschämend]
+
   - word: unheimlich
+    class: adjective
+    level: B1
+    meaning:
+      en: eerie, creepy
+      fa: وهم‌انگیز، دلهره‌آور (مثلاً جایی تاریک)
+    definition: so, dass man ein bisschen Angst bekommt, zum Beispiel nachts im Wald
+    example:
+      de: Nachts ist der Park ziemlich unheimlich.
+      en: At night the park is quite creepy.
+      fa: پارک شب‌ها نسبتاً وهم‌انگیز است.
+    alsoAccepted: [gruselig, schaurig]
+
   - word: Nerv
+    class: noun
+    article: der
+    plural: Nerven
+    level: B1
+    meaning:
+      en: nerve (in the body); nerves
+      fa: عصب، اعصاب
+    definition: eine dünne Verbindung im Körper, die Gefühle und Schmerzen zum Kopf bringt
+    example:
+      de: Der Lärm geht mir auf die Nerven.
+      en: The noise gets on my nerves.
+      fa: سروصدا اعصابم را خرد می‌کند.
+    alsoAccepted: [die Nerven]
+
   - word: Druck
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: pressure (to do something fast or well)
+      fa: فشار (برای انجام کاری، مثلاً پیش از امتحان)
+    definition: das Gefühl, dass man etwas schnell oder sehr gut machen muss
+    example:
+      de: Vor der Prüfung stehe ich unter großem Druck.
+      en: Before the exam I'm under a lot of pressure.
+      fa: پیش از امتحان زیر فشار زیادی هستم.
+    alsoAccepted: [der Leistungsdruck, der Zeitdruck, der Stress]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 144 questions, then the 7 and the 27 changed after the
+    earlier answers; not people)"
+  date: 2026-11-28
+  pool: f0c0e5415d42f8b4

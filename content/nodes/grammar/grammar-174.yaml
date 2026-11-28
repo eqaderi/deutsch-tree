@@ -4,10 +4,305 @@ kind: grammar
 level: B1
 chapter: b1-reason-condition-clauses
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-157]
 title:
   en: "*indem*"
   fa: "*indem*"
   de: "*indem*"
+
+explanations:
+  en:
+    rule: >
+      *Indem* (by …-ing) says how something is done: the way or the means.
+      *Du kannst die Datei öffnen, indem du hier klickst.* (by clicking
+      here). It starts a subordinate clause, so the conjugated verb goes to
+      the end. The *indem* clause usually comes second; when it comes first,
+      the main clause starts with its verb: *Indem er jeden Tag liest, lernt
+      er viele neue Wörter.* It answers the question *Wie?*, also on its own:
+      *Wie hast du so gut Deutsch gelernt? – Indem ich viel mit meinen
+      Nachbarn gesprochen habe.* English says "by" with an -ing form, but
+      German needs a whole clause with a subject and a conjugated verb: not
+      *indem klicken*, but *indem du klickst*. The subject is usually the
+      same as in the main clause. *Indem* is one word; *in dem* written
+      apart means "in the" or "in which".
+  fa:
+    rule: >
+      *indem* (با …، از این راه که …) می‌گوید کاری چگونه یا با چه وسیله‌ای
+      انجام می‌شود: *Du kannst die Datei öffnen, indem du hier klickst.* (با
+      کلیک کردن روی این‌جا). این حرف ربط جملهٔ پیرو را آغاز می‌کند، پس فعل
+      صرف‌شده به پایان جمله می‌رود. جملهٔ پیرو با *indem* بیشتر دوم می‌آید؛
+      اگر اول بیاید، جملهٔ پایه با فعلش آغاز می‌شود: *Indem er jeden Tag
+      liest, lernt er viele neue Wörter.* این جمله پاسخ پرسش *Wie?* (چطور؟)
+      است، به‌تنهایی هم: *Wie hast du so gut Deutsch gelernt? – Indem ich viel
+      mit meinen Nachbarn gesprochen habe.* در فارسی می‌گوییم «با کلیک
+      کردن»، ولی آلمانی جمله‌ای کامل با فاعل و فعل صرف‌شده می‌خواهد: نه
+      *indem klicken*، بلکه *indem du klickst*. فاعل آن معمولاً همان فاعل
+      جملهٔ پایه است. *indem* یک واژه است؛ *in dem* جدا یعنی «در آن» یا «که
+      در آن».
+  de:
+    rule: >
+      *Indem* sagt, wie man etwas macht: auf welchem Weg oder mit welchem
+      Mittel. *Du kannst die Datei öffnen, indem du hier klickst.* Mit
+      *indem* beginnt ein Nebensatz. Das konjugierte Verb steht am Ende.
+      Meistens steht der *indem*-Satz danach. Steht er zuerst, beginnt der
+      Hauptsatz mit dem Verb: *Indem er jeden Tag liest, lernt er viele neue
+      Wörter.* Der *indem*-Satz antwortet auf die Frage *Wie?*, auch allein:
+      *Wie hast du so gut Deutsch gelernt? – Indem ich viel mit meinen
+      Nachbarn gesprochen habe.* Nach *indem* braucht man einen ganzen Satz
+      mit Subjekt und konjugiertem Verb: nicht *indem klicken*, sondern
+      *indem du klickst*. Das Subjekt ist meistens das gleiche wie im
+      Hauptsatz. Man schreibt *indem* zusammen. Getrennt heißt *in dem*
+      etwas anderes: *in dem Haus*.
+
+table:
+  columns:
+    - { en: "Main clause: what is done", fa: "جملهٔ پایه: چه کاری", de: "Hauptsatz: was man macht" }
+    - {
+        en: "*indem* clause: how, verb at the end",
+        fa: "جملهٔ *indem*: چطور، فعل در پایان",
+        de: "*indem*-Satz: wie, Verb am Ende",
+      }
+  rows:
+    - ["Du kannst die Datei öffnen,", indem du hier klickst.]
+    - ["Ich lerne neue Wörter,", indem ich sie auf Karten schreibe.]
+    - ["Man kann Energie sparen,", indem man das Licht ausmacht.]
+    - ["Sie hält sich fit,", indem sie jeden Tag Rad fährt.]
+    - ["Er hat das Problem gelöst,", indem er den Computer neu gestartet hat.]
+    - ["Wir schützen die Umwelt,", indem wir mit dem Zug fahren.]
+
+examples:
+  - de: Du kannst die Datei öffnen, indem du hier klickst.
+    en: You can open the file by clicking here.
+    fa: می‌توانی با کلیک کردن روی این‌جا فایل را باز کنی.
+  - de: Ich lerne neue Wörter, indem ich sie auf Karten schreibe.
+    en: I learn new words by writing them on cards.
+    fa: واژه‌های تازه را با نوشتن روی کارت یاد می‌گیرم.
+  - de: Man kann Energie sparen, indem man das Licht ausmacht.
+    en: You can save energy by switching off the light.
+    fa: با خاموش کردن چراغ می‌توان در مصرف انرژی صرفه‌جویی کرد.
+  - de: Indem er jeden Tag liest, lernt er viele neue Wörter.
+    en: By reading every day, he learns lots of new words.
+    fa: هر روز کتاب می‌خواند و از این راه واژه‌های تازهٔ زیادی یاد می‌گیرد.
+  - de: Sie hält sich fit, indem sie jeden Tag Rad fährt.
+    en: She keeps fit by cycling every day.
+    fa: با دوچرخه‌سواری هر روزه تندرستی‌اش را حفظ می‌کند.
+  - de: Er hat das Problem gelöst, indem er den Computer neu gestartet hat.
+    en: He solved the problem by restarting the computer.
+    fa: با راه‌اندازی دوبارهٔ رایانه مشکل را حل کرد.
+  - de: Wie hast du so gut Deutsch gelernt? – Indem ich viel mit meinen Nachbarn gesprochen habe.
+    en: How did you learn German so well? – By talking a lot with my neighbours.
+    fa: چطور آلمانی را این‌قدر خوب یاد گرفتی؟ – با زیاد حرف زدن با همسایه‌هایم.
+  - de: Indem wir mit dem Zug fahren, schützen wir die Umwelt.
+    en: By taking the train, we protect the environment.
+    fa: با سفر کردن با قطار از محیط زیست محافظت می‌کنیم.
+
+mistakes:
+  - wrong: Du kannst die Datei öffnen, indem du klickst hier.
+    right: Du kannst die Datei öffnen, indem du hier klickst.
+    why:
+      en: "*Indem* sends the conjugated verb to the end: *indem du hier klickst*."
+      fa: "*indem* فعل صرف‌شده را به پایان جمله می‌فرستد: *indem du hier klickst*."
+      de: "Nach *indem* steht das konjugierte Verb am Ende: *indem du hier klickst*."
+  - wrong: Ich lerne Deutsch, indem Filme sehen.
+    right: Ich lerne Deutsch, indem ich Filme sehe.
+    why:
+      en: 'Unlike English "by watching", *indem* needs a subject and a conjugated verb: *indem ich Filme sehe*.'
+      fa: "برخلاف «با تماشا کردن» در فارسی، *indem* فاعل و فعل صرف‌شده لازم دارد: *indem ich Filme sehe*."
+      de: "Nach *indem* braucht man ein Subjekt und ein konjugiertes Verb: *indem ich Filme sehe*."
+  - wrong: Ich spare Geld, in dem ich mit dem Rad fahre.
+    right: Ich spare Geld, indem ich mit dem Rad fahre.
+    why:
+      en: 'The conjunction is one word: *indem*. *In dem* apart means "in the".'
+      fa: "حرف ربط یک واژه است: *indem*. *in dem* جدا یعنی «در آن»."
+      de: "Die Konjunktion schreibt man zusammen: *indem*. Getrennt ist *in dem* etwas anderes."
+  - wrong: Indem er viel liest, er lernt neue Wörter.
+    right: Indem er viel liest, lernt er neue Wörter.
+    why:
+      en: "The *indem* clause is position 1, so the main clause goes on with its verb: *lernt er*."
+      fa: "جملهٔ پیرو با *indem* جایگاه اول است، پس جملهٔ پایه با فعلش ادامه می‌یابد: *lernt er*."
+      de: "Der *indem*-Satz ist Position 1. Danach kommt das Verb: *lernt er*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Du kannst die Datei öffnen, ___ du hier klickst.
+    options: [dass, obwohl, indem]
+    answer: indem
+    explanation:
+      en: "The clause says how you open the file: by clicking. That is *indem*."
+      fa: "جمله می‌گوید فایل را چطور باز می‌کنید: با کلیک کردن. این *indem* است."
+      de: "Der Satz sagt, wie man die Datei öffnet: durch Klicken. Das ist *indem*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wie hast du so schnell Deutsch gelernt? – ___ ich jeden Tag mit meinen Nachbarn gesprochen habe.
+    options: [Damit, Indem, Wenn]
+    answer: Indem
+    explanation:
+      en: "The question is *Wie?*, and a clause alone that says how takes *indem*."
+      fa: "پرسش *Wie?* (چطور؟) است و جمله‌ای که به‌تنهایی شیوهٔ کار را می‌گوید با *indem* می‌آید."
+      de: "Die Frage ist *Wie?*. Ein Satz allein, der sagt wie, beginnt mit *indem*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Man kann Energie sparen, ___ man das Licht ausmacht.
+    options: [indem, obwohl, sodass]
+    answer: indem
+    explanation:
+      en: "Switching off the light is the way to save energy, so *indem*."
+      fa: "خاموش کردن چراغ راه صرفه‌جویی در انرژی است، پس *indem* درست است."
+      de: "Das Licht ausmachen ist der Weg, wie man Energie spart. Darum *indem*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Er hat sein Englisch verbessert, indem …
+    options:
+      - er hat viele Filme auf Englisch gesehen.
+      - er viele Filme auf Englisch gesehen hat.
+      - er viele Filme auf Englisch hat gesehen.
+    answer: er viele Filme auf Englisch gesehen hat.
+    explanation:
+      en: "In the *Perfekt* the conjugated *hat* comes last, after the *Partizip II*: *gesehen hat*."
+      fa: "در گذشتهٔ نقلی (*Perfekt*) فعل صرف‌شدهٔ *hat* پس از صفت مفعولی و در آخر می‌آید: *gesehen hat*."
+      de: "Im Perfekt steht das konjugierte *hat* am Schluss, nach dem Partizip II: *gesehen hat*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Sie hält sich fit, indem sie jeden Tag Rad fährt. Das heißt: …"
+    options:
+      - Sie fährt Rad, obwohl sie nicht fit ist.
+      - Sie ist fit, deshalb fährt sie nicht Rad.
+      - Sie fährt jeden Tag Rad, und so bleibt sie fit.
+    answer: Sie fährt jeden Tag Rad, und so bleibt sie fit.
+    explanation:
+      en: "*Indem* gives the way she keeps fit: by cycling every day."
+      fa: "*indem* راهی را می‌گوید که او با آن تندرست می‌ماند: هر روز دوچرخه‌سواری."
+      de: "*Indem* sagt, wie sie fit bleibt: Sie fährt jeden Tag Rad."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Indem du früher aufstehst, …
+    options: [du hast morgens mehr Zeit., hast du morgens mehr Zeit., du morgens mehr Zeit hast.]
+    answer: hast du morgens mehr Zeit.
+    explanation:
+      en: "The *indem* clause is position 1, so the main clause starts with its verb: *hast du*."
+      fa: "جملهٔ پیرو با *indem* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *hast du*."
+      de: "Der *indem*-Satz ist Position 1. Der Hauptsatz beginnt mit dem Verb: *hast du*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Wie öffne ich die Tür? – …
+    options: [Indem den Knopf drücken., Indem du den Knopf drückst., Indem du drückst den Knopf.]
+    answer: Indem du den Knopf drückst.
+    explanation:
+      en: "*Indem* needs a subject and a conjugated verb, and the verb comes last: *du den Knopf drückst*."
+      fa: "*indem* فاعل و فعل صرف‌شده می‌خواهد و فعل در آخر می‌آید: *du den Knopf drückst*."
+      de: "Nach *indem* braucht man Subjekt und konjugiertes Verb, das Verb steht am Ende: *du den Knopf drückst*."
+  - id: true-1
+    type: true-false
+    prompt: Ich lerne neue Wörter, indem ich Karten schreibe.
+    answer: true
+    explanation:
+      en: "The verb *schreibe* is at the end of the *indem* clause. The sentence is correct."
+      fa: "فعل *schreibe* در پایان جملهٔ پیرو با *indem* است. جمله درست است."
+      de: "Das Verb *schreibe* steht am Ende vom *indem*-Satz. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Man spart Geld, indem man kocht selbst.
+    answer: false
+    explanation:
+      en: "After *indem* the verb goes to the end: *indem man selbst kocht*."
+      fa: "پس از *indem* فعل به پایان جمله می‌رود: *indem man selbst kocht*."
+      de: "Nach *indem* steht das Verb am Ende: *indem man selbst kocht*."
+  - id: true-3
+    type: true-false
+    prompt: Er hat das Problem gelöst, indem er den Computer neu gestartet hat.
+    answer: true
+    explanation:
+      en: "*Hat* closes the *indem* clause, after the *Partizip II*. The sentence is correct."
+      fa: "*hat* پس از صفت مفعولی جملهٔ پیرو با *indem* را می‌بندد. جمله درست است."
+      de: "*Hat* steht am Ende vom *indem*-Satz, nach dem Partizip II. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Du kannst mir helfen, indem den Tisch decken.
+    answer: false
+    explanation:
+      en: "*Indem* needs a subject and a conjugated verb: *indem du den Tisch deckst*."
+      fa: "*indem* فاعل و فعل صرف‌شده می‌خواهد: *indem du den Tisch deckst*."
+      de: "Nach *indem* braucht man Subjekt und konjugiertes Verb: *indem du den Tisch deckst*."
+  - id: true-5
+    type: true-false
+    prompt: Indem wir mit dem Zug fahren, schützen wir die Umwelt.
+    answer: true
+    explanation:
+      en: "*Fahren* ends the *indem* clause, and the main clause starts with *schützen*. The sentence is correct."
+      fa: "*fahren* جملهٔ پیرو را می‌بندد و جملهٔ پایه با *schützen* آغاز می‌شود. جمله درست است."
+      de: "*Fahren* steht am Ende vom *indem*-Satz, der Hauptsatz beginnt mit *schützen*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich halte mich fit, indem ich jeden Morgen ___ (joggen).
+    answers: [jogge]
+    explanation:
+      en: "The subject is *ich*, and the verb stands at the end of the *indem* clause: *jogge*."
+      fa: "فاعل *ich* است و فعل در پایان جملهٔ *indem* می‌آید: *jogge*."
+      de: "Das Subjekt ist *ich*, das Verb steht am Ende vom *indem*-Satz: *jogge*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Sie hat viel Geld gespart, indem sie kein Auto ___ (kaufen) hat.
+    answers: [gekauft]
+    explanation:
+      en: "*Hat* is already at the end, so the gap takes the *Partizip II* of *kaufen*: *gekauft*."
+      fa: "*hat* در پایان جمله آمده است، پس جای خالی صفت مفعولی *kaufen* را می‌خواهد: *gekauft*."
+      de: "*Hat* steht schon am Ende. In die Lücke kommt das Partizip II von *kaufen*: *gekauft*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Man kann Wasser sparen, indem man kürzer ___ (duschen).
+    answers: [duscht]
+    explanation:
+      en: "*Man* takes the third person singular, at the end of the *indem* clause: *duscht*."
+      fa: "*man* با سوم‌شخص مفرد می‌آید و فعل در پایان جملهٔ *indem* است: *duscht*."
+      de: "*Man* steht mit der 3. Person Singular, das Verb am Ende vom *indem*-Satz: *duscht*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Du kannst Strom sparen, indem du den Fernseher ___ (ausmachen).
+    answers: [ausmachst]
+    explanation:
+      en: "In the *indem* clause the separable verb is one word at the end: *ausmachst*."
+      fa: "در جملهٔ پیرو با *indem* فعل جداشدنی یک‌جا در پایان می‌آید: *ausmachst*."
+      de: "Im *indem*-Satz steht das trennbare Verb zusammen am Ende: *ausmachst*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["du kannst die Datei öffnen,", indem, du, hier, klickst]
+    explanation:
+      en: "*Indem* starts the clause, then the subject, and the verb *klickst* comes last."
+      fa: "*indem* جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل *klickst* در آخر."
+      de: "*Indem* beginnt den Satz, dann kommt das Subjekt, das Verb *klickst* steht am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["indem er jeden Tag liest,", lernt, er, viele neue Wörter]
+    explanation:
+      en: "The *indem* clause is position 1, so the verb *lernt* follows, then the subject."
+      fa: "جملهٔ پیرو با *indem* جایگاه اول است، پس فعل *lernt* و سپس فاعل می‌آید."
+      de: "Der *indem*-Satz ist Position 1. Dann kommt das Verb *lernt*, danach das Subjekt."
+  - id: order-3
+    type: word-order
+    answers:
+      - ["sie hat Spanisch gelernt,", indem, sie, ein Jahr in Madrid, gelebt, hat]
+    explanation:
+      en: "In the *indem* clause the *Partizip II* *gelebt* comes before the conjugated *hat*, which ends it."
+      fa: "در جملهٔ *indem* صفت مفعولی *gelebt* پیش از فعل صرف‌شدهٔ *hat* می‌آید و *hat* جمله را می‌بندد."
+      de: "Im *indem*-Satz steht das Partizip II *gelebt* vor dem konjugierten *hat*. *Hat* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Man spart Strom,", indem man das Licht ausmacht.]
+      - ["Man lernt Wörter,", indem man sie oft wiederholt.]
+      - ["Man bleibt gesund,", indem man viel Obst isst.]
+    explanation:
+      en: "Each *indem* clause gives the way: the light for electricity, repeating for words, fruit for health."
+      fa: "هر جملهٔ *indem* راه کار را می‌گوید: چراغ برای برق، تکرار برای واژه‌ها، میوه برای تندرستی."
+      de: "Jeder *indem*-Satz nennt den Weg: das Licht für den Strom, Wiederholen für Wörter, Obst für die Gesundheit."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 6fe5e6e086bd8a22

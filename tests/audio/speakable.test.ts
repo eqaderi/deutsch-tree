@@ -138,6 +138,21 @@ test.each([
   ['Latein ist schwer.', 'La-tein ist schwer.'],
   ['in der Cafeteria', 'in der Kaffeterihja'],
   ['das Sekretariat', 'das Sekretarijat'],
+  // #89: "chaotisch" is said with [ʃ], "seitdem" with the stress on "seit" and a weak "dem".
+  ['Ich bin eher chaotisch.', 'Ich bin eher kaotisch.'],
+  ['Seitdem ich hier wohne, bin ich froh.', 'Seit deem ich hier wohne, bin ich froh.'],
+  ['Wir sind seitdem Freunde.', 'Wir sind seit deem Freunde.'],
+  // #88: the voice stresses the first syllable of these, or says chic with a long i.
+  ['das Kostüm', 'das Koss-tüm'],
+  ['Bitte geben Sie Ihre Jacke an der Garderobe ab.', 'Bitte geben Sie Ihre Jacke an der Garde-robe ab.'],
+  ['Sie kann gut mit Kindern umgehen.', 'Sie kann gut mit Kindern ummgehen.'],
+  ['Du siehst richtig chic aus.', 'Du siehst richtig schick aus.'],
+  // #90: wrong stress, a schwa that is not there, and an English [sk].
+  ['ein Kurs für Senioren', 'ein Kurs für Senjoren'],
+  ['Die Zahncreme ist leer.', 'Die Zahnkreem ist leer.'],
+  ['Beim Skifahren', 'Beim Schifahren'],
+  ['eine Diät', 'eine Di-ät'],
+  ['Ein Sozialarbeiter hilft.', 'Ein So-zial-arbeiter hilft.'],
   // #92: loanwords said the German way ("Buffet" as "Buffett", "Steak" as "Stee-ak"), and floor short forms.
   ['die Etage', 'die E-taasche'],
   ['das Buffet', 'das Büfett'],

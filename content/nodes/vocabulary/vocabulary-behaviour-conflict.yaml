@@ -1,40 +1,414 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-behaviour-conflict
 kind: vocabulary
 level: B1
 chapter: b1-words-people-feelings
 order: 7
-status: coming-soon
+status: published
 title:
   en: "Behaviour and conflicts"
   fa: "رفتار و اختلاف‌ها"
   de: "Verhalten und Konflikte"
+attemptSize: 15
 words:
   - word: Verhalten
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: behaviour
+      fa: رفتار
+    definition: die Art, wie eine Person etwas tut und wie sie zu anderen ist
+    example:
+      de: Sein Verhalten auf der Feier war unmöglich.
+      en: His behaviour at the party was outrageous.
+      fa: رفتارش در جشن واقعاً زشت بود.
+    alsoAccepted: [das Benehmen]
+
+  # The scope list gives "sich": the verb is always "sich verhalten".
   - word: verhalten
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to behave
+      fa: رفتار کردن
+    definition: etwas auf eine bestimmte Art tun, zum Beispiel ruhig, freundlich oder unfreundlich
+    example:
+      de: Die Schüler haben sich im Museum sehr gut verhalten.
+      en: The pupils behaved very well in the museum.
+      fa: دانش‌آموزان در موزه خیلی خوب رفتار کردند.
+    alsoAccepted: [sich benehmen]
+
   - word: Gewohnheit
+    class: noun
+    article: die
+    plural: Gewohnheiten
+    level: B1
+    meaning:
+      en: habit
+      fa: عادت
+    definition: etwas, das man immer wieder macht, oft ohne darüber nachzudenken
+    example:
+      de: Rauchen ist eine schlechte Gewohnheit.
+      en: Smoking is a bad habit.
+      fa: سیگار کشیدن عادت بدی است.
+    alsoAccepted: [die Angewohnheit]
+
+  # The scope list gives no "sich": the node teaches "sich gewöhnen (an)", to get used to something.
   - word: gewöhnen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to get used (to something)
+      fa: عادت کردن (به چیزی)
+    definition: etwas Neues nach einer Zeit normal finden
+    example:
+      de: Ich habe mich schnell an das Wetter in Deutschland gewöhnt.
+      en: I quickly got used to the weather in Germany.
+      fa: زود به هوای آلمان عادت کردم.
+    alsoAccepted: [sich an etwas gewöhnen]
+    tooCloseTo: [gewohnt]
+
   - word: gewohnt
+    class: adjective
+    level: B1
+    meaning:
+      en: used to (something), accustomed
+      fa: خوگرفته، عادت‌کرده (به چیزی)
+    definition: so, dass etwas für einen normal ist, weil man es schon lange kennt oder oft macht
+    example:
+      de: Ich bin es gewohnt, früh aufzustehen.
+      en: I'm used to getting up early.
+      fa: عادت دارم صبح زود بیدار شوم.
+    alsoAccepted: [gewöhnt]
+    tooCloseTo: [gewöhnen]
+
   - word: Rücksicht
+    class: noun
+    article: die
+    plural: Rücksichten
+    level: B1
+    meaning:
+      en: consideration (for other people)
+      fa: ملاحظه، رعایت حال دیگران
+    definition: wenn man an andere Menschen denkt und sie nicht stört
+    example:
+      de: Bitte nehmen Sie Rücksicht auf die Nachbarn und seien Sie nach 22 Uhr leise.
+      en: Please be considerate of the neighbours and keep quiet after 10 pm.
+      fa: لطفاً ملاحظهٔ همسایه‌ها را بکنید و بعد از ساعت ۲۲ سروصدا نکنید.
+    alsoAccepted: [die Rücksichtnahme]
+
+  # Streit and Konflikt are near each other; neither is offered as a wrong meaning of the other.
   - word: Streit
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: argument, quarrel
+      fa: دعوا، مشاجره
+    definition: wenn Menschen laut und böse miteinander reden, weil sie verschiedene Meinungen haben
+    example:
+      de: Nach dem Streit haben die beiden eine Woche nicht miteinander geredet.
+      en: After the argument the two of them didn't speak to each other for a week.
+      fa: بعد از آن دعوا، آن دو یک هفته با هم حرف نزدند.
+    alsoAccepted: [die Auseinandersetzung, der Zank, die Streiterei, der Krach]
+    tooCloseTo: [Konflikt]
+
   - word: Konflikt
+    class: noun
+    article: der
+    plural: Konflikte
+    level: B1
+    meaning:
+      en: conflict (a serious disagreement)
+      fa: اختلاف، کشمکش
+    definition: ein ernstes Problem zwischen Personen oder Gruppen, die nicht der gleichen Meinung sind
+    example:
+      de: Im Team gibt es einen Konflikt über die Arbeitszeiten.
+      en: There's a conflict in the team about working hours.
+      fa: در گروه بر سر ساعت‌های کاری اختلاف هست.
+    alsoAccepted: [die Auseinandersetzung]
+    tooCloseTo: [Streit]
+
   - word: Vorwurf
+    class: noun
+    article: der
+    plural: Vorwürfe
+    level: B1
+    meaning:
+      en: reproach, accusation (blaming someone)
+      fa: سرزنش، اتهام
+    definition: wenn man einer Person direkt sagt, dass sie an etwas Schlechtem schuld ist
+    example:
+      de: Er macht sich Vorwürfe, weil er nicht geholfen hat.
+      en: He blames himself because he didn't help.
+      fa: خودش را سرزنش می‌کند، چون کمک نکرده است.
+    alsoAccepted: [die Beschuldigung, die Anschuldigung]
+
   - word: beleidigen
+    class: verb
+    level: B1
+    meaning:
+      en: to insult, to offend
+      fa: توهین کردن
+    definition: mit bösen Worten zeigen, dass man keinen Respekt vor einer Person hat
+    example:
+      de: Er hat den Schiedsrichter beleidigt und musste vom Platz.
+      en: He insulted the referee and was sent off.
+      fa: به داور توهین کرد و مجبور شد زمین را ترک کند.
+    alsoAccepted: [kränken, beschimpfen]
+
   - word: verzeihen
+    class: verb
+    level: B1
+    meaning:
+      en: to forgive
+      fa: بخشیدن (کسی)
+    definition: einer Person nicht mehr böse sein, obwohl sie etwas falsch gemacht hat
+    example:
+      de: Kannst du mir verzeihen?
+      en: Can you forgive me?
+      fa: می‌توانی مرا ببخشی؟
+    alsoAccepted: [vergeben, entschuldigen]
+    tooCloseTo: [Verzeihung]
+
   - word: Verzeihung
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: forgiveness
+      fa: بخشش، عفو
+    definition: wenn eine Person einem einen Fehler nicht mehr übel nimmt
+    example:
+      de: Er hat sie um Verzeihung gebeten.
+      en: He asked her for forgiveness.
+      fa: از او طلب بخشش کرد.
+    alsoAccepted: [die Vergebung, die Entschuldigung]
+
+  # Schuld and schuld are near each other; neither is offered as a wrong meaning of the other.
   - word: Schuld
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: blame, guilt (for something bad)
+      fa: تقصیر، گناه
+    definition: die Verantwortung für etwas Schlechtes, das passiert ist
+    example:
+      de: Der andere Fahrer hat die Schuld an dem Unfall.
+      en: The other driver is to blame for the accident.
+      fa: تقصیر تصادف با رانندهٔ دیگر است.
+    tooCloseTo: [schuld]
+
   - word: schuld
+    class: adjective
+    level: B1
+    meaning:
+      en: at fault (the one who caused something bad)
+      fa: مقصر
+    definition: so, dass man der Grund für etwas Schlechtes ist
+    example:
+      de: Du bist schuld, dass wir den Zug verpasst haben!
+      en: It's your fault that we missed the train!
+      fa: تو مقصری که به قطار نرسیدیم!
+    alsoAccepted: [schuldig]
+    tooCloseTo: [Schuld]
+
   - word: loben
+    class: verb
+    level: B1
+    meaning:
+      en: to praise
+      fa: تعریف کردن، تحسین کردن
+    definition: sagen, dass eine Person etwas gut gemacht hat
+    example:
+      de: Die Lehrerin lobt den Schüler für seine gute Arbeit.
+      en: The teacher praises the pupil for his good work.
+      fa: معلم از دانش‌آموز برای کار خوبش تعریف می‌کند.
+    alsoAccepted: [preisen]
+
+  # The scope list gives "(sich)": the node teaches "zwingen", to force someone.
   - word: zwingen
+    class: verb
+    level: B1
+    meaning:
+      en: to force (someone to do something)
+      fa: مجبور کردن
+    definition: machen, dass eine Person etwas tun muss, was sie nicht will
+    example:
+      de: Niemand kann dich zwingen, das zu essen.
+      en: Nobody can force you to eat that.
+      fa: هیچ‌کس نمی‌تواند مجبورت کند آن را بخوری.
+    alsoAccepted: [nötigen]
+
+  # The scope list gives "sich": the verb is always "sich weigern".
   - word: weigern
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to refuse (to do something)
+      fa: سر باز زدن، حاضر نبودن (به کاری)
+    definition: sagen, dass man etwas nicht tun will, obwohl es jemand verlangt
+    example:
+      de: Das Kind weigert sich, ins Bett zu gehen.
+      en: The child refuses to go to bed.
+      fa: بچه حاضر نیست به رختخواب برود.
+    alsoAccepted: [ablehnen, verweigern]
+
+  # The scope list gives "sich etwas": the verb is always "sich etwas gefallen lassen".
   - word: gefallen lassen
+    class: verb
+    reflexive: sich etwas
+    level: B1
+    meaning:
+      en: to put up with (something unpleasant)
+      fa: تحمل کردن، زیر بار (چیزی) رفتن
+    definition: etwas Unangenehmes einfach akzeptieren und nichts dagegen tun
+    example:
+      de: Diesen Ton lasse ich mir nicht gefallen!
+      en: I won't put up with that tone!
+      fa: این لحن را تحمل نمی‌کنم!
+    alsoAccepted: [hinnehmen, ertragen, dulden, sich gefallen lassen, aushalten]
+
+  # betrügen and verraten are near each other; neither is offered as a wrong meaning of the other.
   - word: betrügen
+    class: verb
+    level: B1
+    meaning:
+      en: to cheat, to deceive
+      fa: فریب دادن، کلاه سر (کسی) گذاشتن
+    definition: eine Person anlügen, um Geld oder einen Vorteil zu bekommen, oder dem Partner untreu sein
+    example:
+      de: Der Verkäufer hat uns betrogen, das Handy funktioniert gar nicht.
+      en: The seller cheated us; the phone doesn't work at all.
+      fa: فروشنده سرمان کلاه گذاشت؛ گوشی اصلاً کار نمی‌کند.
+    alsoAccepted: [täuschen, hereinlegen, reinlegen, hintergehen]
+    tooCloseTo: [verraten]
+
   - word: verraten
+    class: verb
+    level: B1
+    meaning:
+      en: to give away (a secret), to betray
+      fa: لو دادن (راز)، خیانت کردن
+    definition: einer anderen Person etwas sagen, was man nicht weitersagen darf
+    example:
+      de: Verrate niemandem, was ich dir erzählt habe!
+      en: Don't tell anyone what I told you!
+      fa: به هیچ‌کس لو نده که چه برایت تعریف کردم!
+    alsoAccepted: [ausplaudern, preisgeben]
+    tooCloseTo: [betrügen]
+
   - word: Geheimnis
+    class: noun
+    article: das
+    plural: Geheimnisse
+    level: B1
+    meaning:
+      en: a secret
+      fa: راز
+    definition: etwas, das nur wenige Menschen wissen und nicht weitersagen sollen
+    example:
+      de: Kannst du ein Geheimnis für dich behalten?
+      en: Can you keep a secret?
+      fa: می‌توانی رازی را پیش خودت نگه داری؟
+
+  # geheim and heimlich are near each other; neither is offered as a wrong meaning of the other.
   - word: geheim
+    class: adjective
+    level: B1
+    meaning:
+      en: secret (not to be known by others)
+      fa: مخفی، سری
+    definition: so, dass es niemand erfahren darf, zum Beispiel eine Überraschung
+    example:
+      de: Die Pläne für die Party sind noch geheim.
+      en: The plans for the party are still secret.
+      fa: برنامه‌های مهمانی هنوز مخفی است.
+    tooCloseTo: [heimlich]
+
   - word: heimlich
+    class: adjective
+    level: B1
+    meaning:
+      en: secretly (so that nobody is meant to see)
+      fa: پنهانی، یواشکی
+    definition: so, dass es niemand sehen soll, weil es verboten oder eine Überraschung ist
+    example:
+      de: Er raucht heimlich im Garten.
+      en: He smokes secretly in the garden.
+      fa: او پنهانی در حیاط سیگار می‌کشد.
+    alsoAccepted: [insgeheim]
+    tooCloseTo: [geheim]
+
+  # The node teaches "umgehen mit" (ging um, ist umgegangen), to deal with someone or something.
   - word: umgehen
+    class: verb
+    level: B1
+    meaning:
+      en: to deal with, to handle (someone or something)
+      fa: برخورد کردن، کنار آمدن (با کسی یا چیزی)
+    definition: "mit einer Person oder einer Sache gut oder schlecht zurechtkommen, zum Beispiel: „Sie kann gut mit Kindern …“"
+    example:
+      de: Sie kann sehr gut mit kleinen Kindern umgehen.
+      en: She's very good with small children.
+      fa: او خیلی خوب با بچه‌های کوچک کنار می‌آید.
+    alsoAccepted: [behandeln, zurechtkommen, umgehen mit, handhaben, klarkommen]
+
   - word: Kompromiss
+    class: noun
+    article: der
+    plural: Kompromisse
+    level: B1
+    meaning:
+      en: compromise
+      fa: سازش، مصالحه
+    definition: eine Lösung, bei der jede Seite ein bisschen nachgibt
+    example:
+      de: Nach langer Diskussion haben wir einen Kompromiss gefunden.
+      en: After a long discussion we found a compromise.
+      fa: بعد از بحثی طولانی به سازش رسیدیم.
+
+  # The scope list gives "sich": the verb is always "sich einigen".
   - word: einigen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to agree, to come to an agreement
+      fa: به توافق رسیدن
+    definition: nach einer Diskussion eine Lösung finden, mit der alle einverstanden sind
+    example:
+      de: Wir haben uns auf einen Termin geeinigt.
+      en: We agreed on a date.
+      fa: بر سر یک تاریخ به توافق رسیدیم.
+    alsoAccepted: [sich verständigen, übereinkommen]
+
   - word: übertreiben
+    class: verb
+    level: B1
+    meaning:
+      en: to exaggerate, to overdo it
+      fa: اغراق کردن، زیاده‌روی کردن
+    definition: etwas größer oder schlimmer erzählen, als es wirklich ist, oder zu viel von etwas machen
+    example:
+      de: Jetzt übertreibst du aber, so schlimm war es nicht!
+      en: Now you're exaggerating, it wasn't that bad!
+      fa: دیگر داری اغراق می‌کنی؛ آن‌قدرها هم بد نبود!
+    alsoAccepted: [es übertreiben]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 162 questions, then the 24 and the 20 changed after the
+    earlier answers; not people)"
+  date: 2026-11-28
+  pool: 0d50d602c2ebc25e

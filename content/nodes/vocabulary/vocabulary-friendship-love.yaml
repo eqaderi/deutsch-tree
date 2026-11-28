@@ -1,38 +1,365 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-friendship-love
 kind: vocabulary
 level: B1
 chapter: b1-words-people-feelings
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Friendship, love and meeting people"
   fa: "دوستی، عشق و دیدار با دیگران"
   de: "Freundschaft, Liebe und Begegnungen"
+attemptSize: 15
 words:
   - word: Freundschaft
+    class: noun
+    article: die
+    plural: Freundschaften
+    level: B1
+    meaning:
+      en: friendship
+      fa: دوستی
+    definition: wenn zwei oder mehr Menschen Freunde sind
+    example:
+      de: Unsere Freundschaft hat in der Schule angefangen.
+      en: Our friendship began at school.
+      fa: دوستی ما از مدرسه شروع شد.
+
   - word: Liebe
+    class: noun
+    article: die
+    number: singular-only
+    level: B1
+    meaning:
+      en: love
+      fa: عشق
+    definition: ein sehr starkes Gefühl für eine Person, die man sehr gern hat
+    example:
+      de: Für mich war es Liebe auf den ersten Blick.
+      en: For me it was love at first sight.
+      fa: برای من عشق در نگاه اول بود.
+
+  # Beziehung and Verhältnis both name how people stand to each other; neither is offered as a wrong meaning of the other.
   - word: Beziehung
+    class: noun
+    article: die
+    plural: Beziehungen
+    level: B1
+    meaning:
+      en: relationship (as a couple)
+      fa: رابطهٔ عاطفی (میان دو نفر)
+    definition: wenn zwei Menschen ein Paar sind, verheiratet oder nicht
+    example:
+      de: Sie ist seit zwei Jahren in einer festen Beziehung.
+      en: She has been in a steady relationship for two years.
+      fa: دو سال است که در یک رابطهٔ جدی است.
+    alsoAccepted: [die Partnerschaft, die Liebesbeziehung]
+    tooCloseTo: [Verhältnis]
+
   - word: Verhältnis
+    class: noun
+    article: das
+    plural: Verhältnisse
+    level: B1
+    meaning:
+      en: relations, how well people get on with each other
+      fa: رابطه، میانهٔ دو نفر با هم
+    definition: wie gut oder schlecht zwei Menschen miteinander auskommen
+    example:
+      de: Mit meinem Bruder habe ich ein sehr gutes Verhältnis.
+      en: I get on very well with my brother.
+      fa: رابطه‌ام با برادرم خیلی خوب است.
+    alsoAccepted: [die Beziehung]
+    tooCloseTo: [Beziehung]
+
   - word: Kuss
+    class: noun
+    article: der
+    plural: Küsse
+    level: B1
+    meaning:
+      en: kiss (noun)
+      fa: بوسه
+    definition: eine kurze Berührung mit den Lippen, zum Beispiel aus Liebe oder zur Begrüßung
+    example:
+      de: Zum Abschied gab sie ihm einen Kuss.
+      en: She gave him a kiss goodbye.
+      fa: موقع خداحافظی او را بوسید.
+
   - word: küssen
+    class: verb
+    level: B1
+    meaning:
+      en: to kiss
+      fa: بوسیدن
+    definition: eine Person mit den Lippen berühren, weil man sie liebt oder begrüßt
+    example:
+      de: Er küsst seine Frau, bevor er zur Arbeit geht.
+      en: He kisses his wife before he goes to work.
+      fa: پیش از رفتن به سر کار، همسرش را می‌بوسد.
+
   - word: umarmen
+    class: verb
+    level: B1
+    meaning:
+      en: to hug, to embrace
+      fa: در آغوش گرفتن، بغل کردن
+    definition: die Arme um eine Person legen und sie an sich drücken
+    example:
+      de: Die Großmutter umarmt ihre Enkel am Bahnhof.
+      en: The grandmother hugs her grandchildren at the station.
+      fa: مادربزرگ نوه‌هایش را در ایستگاه در آغوش می‌گیرد.
+    alsoAccepted: [in den Arm nehmen, in die Arme nehmen]
+
   - word: verliebt
+    class: adjective
+    level: B1
+    meaning:
+      en: in love
+      fa: عاشق (کسی)
+    definition: so, dass man immer an eine Person denkt und sie mit ganzem Herzen gern hat
+    example:
+      de: Paul ist total in seine Kollegin verliebt.
+      en: Paul is head over heels in love with his colleague.
+      fa: پل سخت عاشق همکارش شده است.
+
   - word: treu
+    class: adjective
+    level: B1
+    meaning:
+      en: faithful, loyal
+      fa: وفادار
+    definition: so, dass man immer zu einer Person hält und sie nicht verlässt
+    example:
+      de: Er ist seiner Frau immer treu geblieben.
+      en: He has always stayed faithful to his wife.
+      fa: او همیشه به همسرش وفادار مانده است.
+    alsoAccepted: [loyal]
+
   - word: vertrauen
+    class: verb
+    level: B1
+    meaning:
+      en: to trust
+      fa: اعتماد کردن
+    definition: sicher sein, dass eine Person ehrlich ist und einem nichts Schlechtes tut
+    example:
+      de: Ich vertraue meiner besten Freundin.
+      en: I trust my best friend.
+      fa: به بهترین دوستم اعتماد دارم.
+    alsoAccepted: [trauen]
+
   - word: Vertrauen
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: trust (the feeling)
+      fa: اعتماد
+    definition: das sichere Gefühl, dass man sich auf eine Person verlassen kann
+    example:
+      de: Ohne Vertrauen hält keine Beziehung lange.
+      en: Without trust no relationship lasts long.
+      fa: هیچ رابطه‌ای بدون اعتماد دوام نمی‌آورد.
+
   - word: begegnen
+    class: verb
+    level: B1
+    meaning:
+      en: to meet by chance, to run into
+      fa: (اتفاقی) به کسی برخوردن
+    definition: eine Person zufällig sehen und treffen, ohne dass man es geplant hat
+    example:
+      de: Gestern bin ich im Supermarkt meiner alten Lehrerin begegnet.
+      en: Yesterday I ran into my old teacher at the supermarket.
+      fa: دیروز در سوپرمارکت به معلم قدیمی‌ام برخوردم.
+    alsoAccepted: [treffen, zufällig treffen, über den Weg laufen]
+
+  # begrüßen and grüßen are near each other; neither is offered as a wrong meaning of the other.
   - word: begrüßen
+    class: verb
+    level: B1
+    meaning:
+      en: to welcome (someone who arrives)
+      fa: خوشامد گفتن، به استقبال (کسی) رفتن
+    definition: einen Gast freundlich empfangen, wenn er ankommt
+    example:
+      de: Die Gastgeberin begrüßt jeden Gast an der Tür.
+      en: The hostess welcomes every guest at the door.
+      fa: میزبان دم در به هر مهمان خوشامد می‌گوید.
+    alsoAccepted: [willkommen heißen, empfangen]
+    tooCloseTo: [grüßen]
+
   - word: grüßen
+    class: verb
+    level: B1
+    meaning:
+      en: to say hello (to someone you pass)
+      fa: سلام کردن (به آشنایی که از کنارش می‌گذرید)
+    definition: im Vorbeigehen „Hallo“ oder „Guten Tag“ zu einer Person sagen, die man kennt
+    example:
+      de: Unser Nachbar grüßt uns jeden Morgen freundlich.
+      en: Our neighbour says a friendly hello to us every morning.
+      fa: همسایه‌مان هر روز صبح با خوش‌رویی به ما سلام می‌کند.
+    tooCloseTo: [begrüßen]
+
+  # The scope list gives "(sich)": the node teaches "sich verabschieden", to say goodbye.
   - word: verabschieden
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to say goodbye
+      fa: خداحافظی کردن
+    definition: „Tschüss“ oder „Auf Wiedersehen“ sagen, wenn man geht
+    example:
+      de: Ich muss mich jetzt leider verabschieden, mein Zug fährt gleich.
+      en: I'm afraid I have to say goodbye now, my train is about to leave.
+      fa: متأسفانه باید خداحافظی کنم، قطارم الان حرکت می‌کند.
+    alsoAccepted: [Abschied nehmen]
+    tooCloseTo: [Abschied]
+
   - word: Abschied
+    class: noun
+    article: der
+    plural: Abschiede
+    level: B1
+    meaning:
+      en: farewell, parting
+      fa: وداع، لحظهٔ جدایی
+    definition: der Moment, in dem Menschen auseinandergehen und sich lange nicht sehen
+    example:
+      de: Der Abschied am Flughafen war sehr traurig.
+      en: The farewell at the airport was very sad.
+      fa: وداع در فرودگاه خیلی غم‌انگیز بود.
+
+  # The scope list gives "(sich)": the node teaches "sich verabreden", to arrange to meet.
   - word: verabreden
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to arrange to meet (someone)
+      fa: قرار گذاشتن (با کسی)
+    definition: mit einer Person eine Zeit und einen Ort für ein Treffen ausmachen
+    example:
+      de: Wir haben uns für Samstag im Café verabredet.
+      en: We've arranged to meet at the café on Saturday.
+      fa: برای شنبه در کافه قرار گذاشته‌ایم.
+    tooCloseTo: [Verabredung]
+
   - word: Verabredung
+    class: noun
+    article: die
+    plural: Verabredungen
+    level: B1
+    meaning:
+      en: date, arrangement to meet (a friend)
+      fa: قرار (دیدار با کسی)
+    definition: ein privates Treffen mit einem Freund oder einer Freundin, das man ausgemacht hat
+    example:
+      de: Heute Abend habe ich eine Verabredung mit Anna.
+      en: I have a date with Anna this evening.
+      fa: امشب با آنا قرار دارم.
+    alsoAccepted: [das Date]
+
   - word: Treffpunkt
+    class: noun
+    article: der
+    plural: Treffpunkte
+    level: B1
+    meaning:
+      en: meeting place, meeting point
+      fa: محل قرار
+    definition: der Ort, an dem man sich mit anderen trifft
+    example:
+      de: Unser Treffpunkt ist um acht Uhr vor dem Kino.
+      en: We're meeting at eight o'clock in front of the cinema.
+      fa: محل قرارمان ساعت هشت جلوی سینماست.
+    alsoAccepted: [der Treff]
+
   - word: begleiten
+    class: verb
+    level: B1
+    meaning:
+      en: to accompany, to go with (someone)
+      fa: همراهی کردن
+    definition: mit einer Person zusammen irgendwohin gehen
+    example:
+      de: Kannst du mich morgen zum Arzt begleiten?
+      en: Can you come with me to the doctor tomorrow?
+      fa: می‌توانی فردا با من پیش دکتر بیایی؟
+    alsoAccepted: [mitgehen, mitkommen]
+
   - word: vermissen
+    class: verb
+    level: B1
+    meaning:
+      en: to miss (someone who is not there)
+      fa: دلتنگ (کسی) بودن
+    definition: traurig sein, weil eine Person nicht da ist
+    example:
+      de: Ich vermisse meine Familie in Teheran.
+      en: I miss my family in Tehran.
+      fa: دلم برای خانواده‌ام در تهران تنگ شده است.
+
   - word: Heimweh
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: homesickness
+      fa: دلتنگی برای خانه و وطن
+    definition: das traurige Gefühl, wenn man weit weg von zu Hause ist und zurück möchte
+    example:
+      de: In den ersten Wochen in Deutschland hatte ich großes Heimweh.
+      en: In my first weeks in Germany I was very homesick.
+      fa: هفته‌های اول در آلمان خیلی دلتنگ خانه بودم.
+
   - word: einsam
+    class: adjective
+    level: B1
+    meaning:
+      en: lonely
+      fa: تنها و بی‌همدم
+    definition: allein und traurig, weil niemand da ist, mit dem man reden kann
+    example:
+      de: Seit dem Tod seiner Frau fühlt er sich oft einsam.
+      en: Since his wife died he often feels lonely.
+      fa: از وقتی همسرش درگذشته، اغلب احساس تنهایی می‌کند.
+
   - word: gemeinsam
+    class: adjective
+    level: B1
+    meaning:
+      en: shared, in common
+      fa: مشترک
+    definition: so, dass zwei oder mehr Personen es zusammen haben
+    example:
+      de: Wir haben viele gemeinsame Interessen.
+      en: We have a lot of interests in common.
+      fa: علایق مشترک زیادی داریم.
+    tooCloseTo: [miteinander]
+
   - word: miteinander
+    class: adverb
+    level: B1
+    meaning:
+      en: with each other, with one another
+      fa: با یکدیگر
+    definition: der eine mit dem anderen
+    example:
+      de: Die Nachbarn reden kaum miteinander.
+      en: The neighbours hardly talk to each other.
+      fa: همسایه‌ها به‌ندرت با یکدیگر حرف می‌زنند.
+    tooCloseTo: [gemeinsam]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 150 questions, then the 22 changed after the first one's
+    answers; not people)"
+  date: 2026-11-28
+  pool: 8bae69c2aeb1bf99
