@@ -214,8 +214,9 @@ const MEANINGS_OFFERED = 4
  *
  * From German (`meaning-of-word`) the learner reads the word as it is learned
  * and chooses its meaning among the meanings of other words of the node:
- * words of the same class before others, and never a word that either of the
- * two names in `tooCloseTo`.
+ * words of the same class before others, never a word that either of the
+ * two names in `tooCloseTo`, and never a meaning that reads, in any language,
+ * like one already offered (the case and the spaces aside).
  *
  * Into German (`word-for-meaning`) the learner reads the meaning and types
  * the word as it is learned: a noun with its article. The accepted answers
@@ -271,7 +272,23 @@ function wrongOptions(word: VocabularyWord, words: readonly VocabularyWord[]): V
   )
   const sameClass = others.filter((other) => other.class === word.class)
   const otherClass = others.filter((other) => other.class !== word.class)
-  return [...sameClass, ...otherClass].slice(0, MEANINGS_OFFERED - 1)
+  const shown = new Set(shownMeanings(word))
+  const offered: VocabularyWord[] = []
+  for (const other of [...sameClass, ...otherClass]) {
+    if (offered.length === MEANINGS_OFFERED - 1) break
+    const meanings = shownMeanings(other)
+    if (meanings.some((meaning) => shown.has(meaning))) continue
+    for (const meaning of meanings) shown.add(meaning)
+    offered.push(other)
+  }
+  return offered
+}
+
+/** How the meaning of a word reads as an option in each language, the case and the spaces aside. */
+function shownMeanings(word: VocabularyWord): string[] {
+  return [word.meaning.en, word.meaning.fa, word.definition].map(
+    (text, language) => `${language}:${text.trim().replace(/\s+/g, ' ').toLowerCase()}`,
+  )
 }
 
 /**

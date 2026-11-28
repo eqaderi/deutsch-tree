@@ -127,6 +127,27 @@ test('the meaning of a word that is too close is never offered as a wrong option
   ).toEqual(['Bett', 'Großmutter', 'Tisch', 'Tür'])
 })
 
+test('no two options read the same in any language, and no wrong option reads like the right one', () => {
+  // Two verbs with the same English meaning, as #52 found in real content: offered side by side,
+  // a learner could not tell them apart.
+  const anfangen = word({ word: 'anfangen', class: 'verb', meaning: { en: 'to begin, to start', fa: 'شروع کردن' } })
+  const beginnen = word({ word: 'beginnen', class: 'verb', meaning: { en: 'to begin, to start', fa: 'آغاز کردن' } })
+  const aufhoeren = word({ word: 'aufhören', class: 'verb', meaning: { en: 'to stop', fa: 'تمام کردن' } })
+  const enden = word({ word: 'enden', class: 'verb', meaning: { en: 'to end', fa: 'پایان یافتن' } })
+  // The same text but for the case and the spaces reads the same too.
+  const starten = word({ word: 'starten', class: 'verb', meaning: { en: ' To begin,  to start', fa: 'راه انداختن' } })
+  const pool = vocabularyPool([anfangen, beginnen, aufhoeren, enden, starten, ...HOME])
+
+  for (const question of pool) {
+    if (question.type !== 'meaning-of-word') continue
+    expect(question.options).toHaveLength(4)
+    for (const language of ['en', 'fa', 'de'] as const) {
+      const shown = question.options.map((option) => option.meaning[language].trim().replace(/\s+/g, ' ').toLowerCase())
+      expect(new Set(shown).size, `${question.word}, ${language}: ${shown.join(' | ')}`).toBe(4)
+    }
+  }
+})
+
 test('the right option does not always stand in the same place', () => {
   const places = new Set(
     vocabularyPool(HOME)
