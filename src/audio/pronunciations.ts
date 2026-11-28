@@ -69,6 +69,41 @@ export const PRONUNCIATIONS: Readonly<Record<string, string>> = {
   Diät: 'Di-ät',
   // #90: stressed on "So"; the hyphens stress "zial" and "arbeiter" as German does.
   Sozialarbeiter: 'So-zial-arbeiter',
+
+  // #92: the short forms of the floors on signs and in flat adverts are read out in full, as
+  // "z. B." is; "Erdgeschoss" alone comes out as [ɛɾdɡˈɛʃɔs], the hyphen gives the long e.
+  EG: 'Erd-geschoss',
+  OG: 'Ober-geschoss',
+  UG: 'Untergeschoss',
+  // #92: loanwords that the voice says letter by letter in the German way. "Etage" comes out as
+  // [ˈeːtɑːɡə], "Buffet" as [bˈʊfət], "Dessert" as [dˈɛsɜt], "Steak" as [ʃtˈeːɑːk], "Ketchup" as
+  // [kˈɛtʃuːp], "Sandwich" as [zˈandvɪç], "Kakao" as [kˈɑkaˌoː]; the spellings give the sounds
+  // ("Büfett" is also a German spelling), a hyphen moves the stress off the first syllable.
+  Etage: 'E-taasche',
+  Buffet: 'Büfett',
+  Dessert: 'Dessär',
+  Abonnement: 'Abonne-mang',
+  Salon: 'Sa-long',
+  Kakao: 'Ka-kau',
+  Steak: 'Stejk',
+  Ketchup: 'Ketschap',
+  Sandwich: 'Sändwitsch',
+  // #92: said with a short ü, [mˈʏsliː]; "Mühsli" gives the long ü.
+  Müsli: 'Mühsli',
+  // #92: "sp" and "st" inside a compound come out as [sp], [st]; the parts begin with [ʃp], [ʃt].
+  Nachspeise: 'Nachschpeise',
+  Kunststoff: 'Kunstschtoff',
+  // #92: [bˈʊx] with a short u; the hyphen keeps the long u of "Buch".
+  Buchhandlung: 'Buch-handlung',
+
+  // #94: stressed on the first syllable, [ˈzeːməstɐ]; the hyphen stresses "mes" as German does.
+  Semester: 'Se-mester',
+  // #94: stressed on the first syllable, [ˈzeːminaːɐ]; the hyphen stresses "nar".
+  Seminar: 'Semi-nar',
+  // #94: read as German, [ˈrɛçɐçə]; this spelling gives the French "sch" and the stress on "scher".
+  Recherche: 'Re-scherrsche',
+  // #94: "fss" is read as "fs" + "ch", [bəˈrʊfsçuːlə]; the hyphen keeps "schule" whole.
+  Berufsschule: 'Berufs-schule',
   // #96: stressed on "gend", [nɪɾɡˈɛndvoː]; this spelling gives [ˈnɪɾɡəndvˌoː].
   nirgendwo: 'nirgendwoh',
   // #96: stressed on "hin" only; this spelling gives [hˌɪntɜhˈeːɾ].

@@ -1,35 +1,324 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-taste-eating-out
 kind: vocabulary
 level: B1
 chapter: b1-words-home-food
 order: 8
-status: coming-soon
+status: published
 title:
   en: "Taste and eating out"
   fa: "مزه و غذا خوردن در بیرون"
   de: "Geschmack und Essen gehen"
+attemptSize: 15
 words:
   - word: Geschmack
+    class: noun
+    article: der
+    number: singular-only
+    level: B1
+    meaning:
+      en: taste, flavour; taste (what you like)
+      fa: مزه، طعم؛ سلیقه
+    definition: wie etwas im Mund ist, zum Beispiel süß oder sauer; auch das, was eine Person schön findet
+    example:
+      de: Die Suppe hat einen sehr feinen Geschmack.
+      en: The soup has a very delicate flavour.
+      fa: این سوپ طعم بسیار لطیفی دارد.
+
   - word: lecker
+    class: adjective
+    level: B1
+    meaning:
+      en: tasty, delicious
+      fa: خوشمزه
+    definition: so, dass es sehr gut schmeckt
+    example:
+      de: Der Kuchen ist wirklich lecker!
+      en: The cake is really delicious!
+      fa: این کیک واقعاً خوشمزه است!
+    alsoAccepted: [köstlich, schmackhaft]
+
   - word: salzig
+    class: adjective
+    level: B1
+    meaning:
+      en: salty
+      fa: شور
+    definition: mit viel Salz; so, wie das Wasser im Meer schmeckt
+    example:
+      de: Die Pommes sind mir zu salzig.
+      en: The chips are too salty for me.
+      fa: این سیب‌زمینی سرخ‌کرده برای من زیادی شور است.
+
   - word: roh
+    class: adjective
+    level: B1
+    meaning:
+      en: raw
+      fa: خام
+    definition: nicht gekocht und nicht gebraten
+    example:
+      de: Karotten kann man auch roh essen.
+      en: You can eat carrots raw too.
+      fa: هویج را خام هم می‌شود خورد.
+
   - word: reif
+    class: adjective
+    level: B1
+    meaning:
+      en: ripe
+      fa: رسیده (میوه)
+    definition: so, dass Obst oder Gemüse fertig gewachsen ist und gut schmeckt
+    example:
+      de: Die Bananen sind noch nicht reif, sie sind ganz grün.
+      en: The bananas aren't ripe yet; they're still green.
+      fa: موزها هنوز نرسیده‌اند و کاملاً سبزند.
+
   - word: satt
+    class: adjective
+    level: B1
+    meaning:
+      en: full (after eating)
+      fa: سیر (پس از غذا)
+    definition: so, dass man genug gegessen hat und keinen Hunger mehr hat
+    example:
+      de: Danke, ich bin satt, ich möchte nichts mehr.
+      en: Thanks, I'm full; I don't want any more.
+      fa: ممنون، سیر شدم و دیگر چیزی نمی‌خواهم.
+
   - word: hungrig
+    class: adjective
+    level: B1
+    meaning:
+      en: hungry
+      fa: گرسنه
+    definition: so, dass man unbedingt etwas essen möchte
+    example:
+      de: Nach dem Sport bin ich immer sehr hungrig.
+      en: After sport I'm always very hungry.
+      fa: بعد از ورزش همیشه خیلی گرسنه‌ام.
+
   - word: durstig
+    class: adjective
+    level: B1
+    meaning:
+      en: thirsty
+      fa: تشنه
+    definition: so, dass man unbedingt etwas trinken möchte
+    example:
+      de: Bei dieser Hitze sind alle durstig.
+      en: In this heat everyone is thirsty.
+      fa: در این گرما همه تشنه‌اند.
+
+  # "Gaststätte" and "Gasthaus" are both a place to eat and drink; neither is offered as a wrong meaning of the other.
   - word: Gaststätte
+    class: noun
+    article: die
+    plural: Gaststätten
+    level: B1
+    meaning:
+      en: restaurant, inn (formal word)
+      fa: رستوران، غذاخوری (واژهٔ رسمی)
+    definition: ein Ort, an dem man gegen Geld essen und trinken kann; das Wort steht oft auf Schildern und in Formularen
+    example:
+      de: In der Gaststätte am Markt isst man gut und günstig.
+      en: You can eat well and cheaply at the restaurant on the market square.
+      fa: در غذاخوری کنار میدان بازار می‌شود خوب و ارزان غذا خورد.
+    alsoAccepted: [das Restaurant, das Lokal, das Gasthaus, die Gastwirtschaft, die Wirtschaft]
+    tooCloseTo: [Gasthaus]
+
   - word: Gasthaus
+    class: noun
+    article: das
+    plural: Gasthäuser
+    level: B1
+    meaning:
+      en: inn, traditional restaurant (often with rooms)
+      fa: مهمانخانه، غذاخوری سنتی
+    definition: ein einfaches, oft altes Restaurant, besonders auf dem Land, manchmal auch mit Zimmern zum Übernachten
+    example:
+      de: Im Dorf gibt es ein altes Gasthaus mit einem schönen Garten.
+      en: There's an old inn with a lovely garden in the village.
+      fa: در روستا مهمانخانه‌ای قدیمی با باغی زیبا هست.
+    alsoAccepted: [der Gasthof, die Gaststätte, die Wirtschaft]
+    tooCloseTo: [Gaststätte]
+
+  # "Kneipe" is a pub, "Bar" a bar; neither is offered as a wrong meaning of the other.
   - word: Kneipe
+    class: noun
+    article: die
+    plural: Kneipen
+    level: B1
+    meaning:
+      en: pub
+      fa: بار محلی، میخانه
+    definition: ein einfaches Lokal, in dem man vor allem Bier trinkt und Freunde trifft
+    example:
+      de: Nach der Arbeit gehen wir noch in die Kneipe.
+      en: After work we're going to the pub.
+      fa: بعد از کار به بار محل می‌رویم.
+    alsoAccepted: [das Lokal, die Wirtschaft, das Pub, der Pub]
+    tooCloseTo: [Bar]
+
   - word: Bar
+    class: noun
+    article: die
+    plural: Bars
+    level: B1
+    meaning:
+      en: bar (for cocktails and drinks)
+      fa: بار (برای کوکتل و نوشیدنی)
+    definition: ein Lokal, oft spät am Abend offen, in dem man an einer hohen Theke Cocktails und andere Getränke trinkt
+    example:
+      de: Wir treffen uns um zehn in der Bar vom Hotel.
+      en: We're meeting at ten in the hotel bar.
+      fa: ساعت ده در بار هتل همدیگر را می‌بینیم.
+    tooCloseTo: [Kneipe]
+
+  # "Kantine" is at work, "Mensa" at a university; neither is offered as a wrong meaning of the other.
   - word: Kantine
+    class: noun
+    article: die
+    plural: Kantinen
+    level: B1
+    meaning:
+      en: canteen (at work)
+      fa: غذاخوری (محل کار)
+    definition: ein Raum in einer Firma, in dem die Mitarbeiter günstig essen können
+    example:
+      de: Heute gibt es in der Kantine Fisch.
+      en: There's fish in the canteen today.
+      fa: امروز در غذاخوری شرکت ماهی داریم.
+    tooCloseTo: [Mensa]
+
   - word: Mensa
+    class: noun
+    article: die
+    plural: Mensen
+    level: B1
+    meaning:
+      en: canteen (at a university), refectory
+      fa: سلف (دانشگاه)
+    definition: ein großer Speisesaal an der Universität, in dem Studenten billig essen
+    example:
+      de: Die Mensa ist mittags immer voll.
+      en: The university canteen is always full at lunchtime.
+      fa: سلف دانشگاه ظهرها همیشه شلوغ است.
+    tooCloseTo: [Kantine]
+
   - word: Ober
+    class: noun
+    article: der
+    plural: Ober
+    level: B1
+    meaning:
+      en: waiter (old-fashioned word)
+      fa: پیشخدمت (واژهٔ قدیمی)
+    definition: ein Mann, der im Restaurant das Essen und die Getränke bringt; das Wort hört man heute selten
+    example:
+      de: Herr Ober, die Rechnung bitte!
+      en: Waiter, the bill please!
+      fa: آقا، لطفاً صورت‌حساب را بیاورید!
+    alsoAccepted: [der Kellner]
+
   - word: Wirt
+    class: noun
+    article: der
+    plural: Wirte
+    level: B1
+    meaning:
+      en: landlord (of a pub or inn), innkeeper
+      fa: صاحب میخانه یا مهمانخانه
+    definition: der Mann, dem ein Lokal gehört oder der es führt
+    example:
+      de: Der Wirt bringt uns die Getränke selbst an den Tisch.
+      en: The landlord brings the drinks to our table himself.
+      fa: صاحب میخانه خودش نوشیدنی‌ها را سر میز ما می‌آورد.
+    alsoAccepted: [die Wirtin, der Gastwirt, die Gastwirtin]
+
   - word: Trinkgeld
+    class: noun
+    article: das
+    plural: Trinkgelder
+    level: B1
+    meaning:
+      en: tip (money for the waiter)
+      fa: انعام
+    definition: ein bisschen Geld extra, das man der Bedienung gibt, wenn man zufrieden ist
+    example:
+      de: In Deutschland gibt man etwa zehn Prozent Trinkgeld.
+      en: In Germany you give a tip of about ten per cent.
+      fa: در آلمان حدود ده درصد انعام می‌دهند.
+
   - word: bedienen
+    class: verb
+    level: B1
+    meaning:
+      en: to serve (customers, guests)
+      fa: (به مشتری) رسیدگی کردن، پذیرایی کردن
+    definition: Gästen oder Kunden das bringen oder geben, was sie haben möchten
+    example:
+      de: Werden Sie schon bedient?
+      en: Are you being served?
+      fa: کسی به شما رسیدگی می‌کند؟
+
   - word: Prost
+    class: interjection
+    level: B1
+    meaning:
+      en: cheers! (when you drink together)
+      fa: به سلامتی!
+    definition: das sagt man, wenn man mit anderen die Gläser hebt und trinkt
+    example:
+      de: Prost! Auf das neue Jahr!
+      en: Cheers! To the new year!
+      fa: به سلامتی! به افتخار سال نو!
+    alsoAccepted: [Prosit, zum Wohl]
+
   - word: Reservierung
+    class: noun
+    article: die
+    plural: Reservierungen
+    level: B1
+    meaning:
+      en: reservation, booking
+      fa: رزرو
+    definition: wenn man vorher sagt, dass man zu einer Zeit einen Tisch oder ein Zimmer haben möchte
+    example:
+      de: Wir haben eine Reservierung für vier Personen um acht Uhr.
+      en: We have a reservation for four people at eight o'clock.
+      fa: برای ساعت هشت، میزی برای چهار نفر رزرو کرده‌ایم.
+    alsoAccepted: [die Buchung]
+
   - word: fressen
+    class: verb
+    level: B1
+    meaning:
+      en: to eat (of animals)
+      fa: خوردن (برای حیوانات)
+    definition: so nehmen Tiere ihr Futter zu sich; über Menschen gesagt ist es unhöflich
+    example:
+      de: Unsere Katze frisst am liebsten Fisch.
+      en: Our cat likes eating fish best.
+      fa: گربهٔ ما بیشتر از همه ماهی دوست دارد.
+
   - word: konsumieren
+    class: verb
+    level: B1
+    meaning:
+      en: to consume
+      fa: مصرف کردن
+    definition: Dinge kaufen und benutzen, essen oder trinken
+    example:
+      de: Die Deutschen konsumieren viel Kaffee.
+      en: Germans consume a lot of coffee.
+      fa: آلمانی‌ها قهوهٔ زیادی مصرف می‌کنند.
+    alsoAccepted: [verbrauchen]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheets only: all questions, then the ones changed after the first one's
+    objections; not people)"
+  date: 2026-11-28
+  pool: 44d458ef0505b239

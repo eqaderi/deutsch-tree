@@ -4,10 +4,287 @@ kind: grammar
 level: B1
 chapter: b1-two-part-connectors
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-148, grammar-184]
 title:
   en: "*weder … noch*"
   fa: "*weder … noch*"
   de: "*weder … noch*"
+
+explanations:
+  en:
+    rule: >
+      *Weder … noch* (neither … nor) says no to two things at once: *Für
+      Urlaub haben wir weder Zeit noch Geld.* It is a negation in itself, so
+      the sentence takes no other *nicht* or *kein*: *weder Zeit noch Geld*,
+      not *weder keine Zeit*. *Weder* stands right before the first part,
+      *noch* before the second, with no comma between two words or parts of a
+      sentence. Between two clauses a comma usually stands before *noch*, and *noch*
+      takes position 1, so the verb follows it straight away and the subject
+      comes after the verb: *Sie raucht weder, noch trinkt sie Alkohol.*
+  fa:
+    rule: >
+      *weder … noch* (نه … نه) هم‌زمان دو چیز را نفی می‌کند: *Für Urlaub
+      haben wir weder Zeit noch Geld.* این حرف ربط دوجزئی خودش نفی است، پس
+      جمله *nicht* یا *kein* دیگری نمی‌گیرد: *weder Zeit noch Geld*، نه
+      *weder keine Zeit*. *weder* درست پیش از بخش اول می‌آید و *noch* پیش از
+      بخش دوم، و میان دو واژه یا دو بخش از جمله ویرگول نمی‌آید. میان دو جمله
+      معمولاً پیش از *noch* ویرگول می‌آید و *noch* جایگاه اول را می‌گیرد؛ پس فعل
+      بی‌درنگ پس از آن می‌آید و فاعل پس از فعل: *Sie raucht weder, noch trinkt
+      sie Alkohol.*
+  de:
+    rule: >
+      Mit *weder … noch* sagt man zu zwei Sachen nein: *Für Urlaub haben wir
+      weder Zeit noch Geld.* *Weder … noch* ist schon eine Negation. Darum
+      steht im Satz kein anderes *nicht* oder *kein*: *weder Zeit noch Geld*,
+      nicht *weder keine Zeit*. *Weder* steht direkt vor dem ersten Teil,
+      *noch* vor dem zweiten. Zwischen zwei Wörtern oder Satzteilen steht kein
+      Komma. Zwischen zwei Sätzen steht meist ein Komma vor *noch*. *Noch* steht
+      dann auf Position 1. Danach kommt sofort das Verb und dann das Subjekt:
+      *Sie raucht weder, noch trinkt sie Alkohol.*
+
+table:
+  columns:
+    - { en: "First part: *weder*", fa: "بخش اول: *weder*", de: "Erster Teil: *weder*" }
+    - { en: "Second part: *noch*", fa: "بخش دوم: *noch*", de: "Zweiter Teil: *noch*" }
+    - {
+        en: "The same with *kein* or *nicht*",
+        fa: "همین جمله با *kein* یا *nicht*",
+        de: "Dasselbe mit *kein* oder *nicht*",
+      }
+  rows:
+    - [Wir haben weder Zeit, noch Geld., Wir haben keine Zeit und kein Geld.]
+    - [Ich trinke weder Kaffee, noch Tee., Ich trinke keinen Kaffee und keinen Tee.]
+    - [Er hat weder angerufen, noch geschrieben., Er hat nicht angerufen und nicht geschrieben.]
+    - ["Sie raucht weder,", noch trinkt sie Alkohol., Sie raucht nicht und sie trinkt keinen Alkohol.]
+
+examples:
+  - de: Für Urlaub haben wir weder Zeit noch Geld.
+    en: For a holiday we have neither time nor money.
+    fa: برای سفر نه وقت داریم نه پول.
+  - de: Ich trinke weder Kaffee noch Tee.
+    en: I drink neither coffee nor tea.
+    fa: نه قهوه می‌نوشم نه چای.
+  - de: Ich habe weder Hunger noch Durst.
+    en: I'm neither hungry nor thirsty.
+    fa: نه گرسنه‌ام نه تشنه.
+  - de: Das Essen war weder warm noch frisch.
+    en: The food was neither warm nor fresh.
+    fa: غذا نه گرم بود نه تازه.
+  - de: Er hat weder angerufen noch geschrieben.
+    en: He neither phoned nor wrote.
+    fa: نه زنگ زد نه چیزی نوشت.
+  - de: Weder heute noch morgen habe ich Zeit.
+    en: I have time neither today nor tomorrow.
+    fa: نه امروز وقت دارم نه فردا.
+  - de: Sie raucht weder, noch trinkt sie Alkohol.
+    en: She neither smokes nor drinks alcohol.
+    fa: او نه سیگار می‌کشد نه الکل می‌نوشد.
+  - de: Wir fahren weder mit dem Auto noch mit dem Zug, wir fliegen.
+    en: We're going neither by car nor by train; we're flying.
+    fa: نه با ماشین می‌رویم نه با قطار؛ با هواپیما می‌رویم.
+
+mistakes:
+  - wrong: Ich habe weder keine Zeit noch kein Geld.
+    right: Ich habe weder Zeit noch Geld.
+    why:
+      en: "*Weder … noch* is already a negation, so no *kein* is added."
+      fa: "*weder … noch* خودش نفی است، پس *kein* به آن افزوده نمی‌شود."
+      de: "*Weder … noch* ist schon eine Negation. Darum steht kein *kein*."
+  - wrong: Ich trinke weder Kaffee oder Tee.
+    right: Ich trinke weder Kaffee noch Tee.
+    why:
+      en: "*Weder* goes with *noch*, not with *oder*."
+      fa: "*weder* با *noch* می‌آید، نه با *oder*."
+      de: "Zu *weder* gehört *noch*, nicht *oder*."
+  - wrong: Er raucht weder, noch er trinkt.
+    right: Er raucht weder, noch trinkt er.
+    why:
+      en: "Between two clauses *noch* is position 1, so the verb *trinkt* comes next, then the subject."
+      fa: "میان دو جمله *noch* در جایگاه اول است، پس فعل *trinkt* پس از آن می‌آید و سپس فاعل."
+      de: "Zwischen zwei Sätzen ist *noch* Position 1. Dann kommt das Verb *trinkt* und danach das Subjekt."
+  - wrong: Ich kann nicht weder schwimmen noch Rad fahren.
+    right: Ich kann weder schwimmen noch Rad fahren.
+    why:
+      en: "No *nicht* beside *weder … noch*: it already says no."
+      fa: "در کنار *weder … noch* نباید *nicht* آورد، زیرا خودش نفی است."
+      de: "Bei *weder … noch* steht kein *nicht*. Es ist schon eine Negation."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Für Urlaub haben wir weder Zeit ___ Geld.
+    options: [oder, und, noch]
+    answer: noch
+    explanation:
+      en: "*Weder* goes with *noch*: no time and no money."
+      fa: "*weder* با *noch* می‌آید: نه وقت و نه پول."
+      de: "Zu *weder* gehört *noch*: keine Zeit und kein Geld."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich trinke ___ Kaffee noch Tee.
+    options: [weder, entweder, sowohl]
+    answer: weder
+    explanation:
+      en: "*Noch* is the second half of *weder … noch*. *Entweder* goes with *oder*, *sowohl* with *als auch*."
+      fa: "*noch* بخش دوم *weder … noch* است. *entweder* با *oder* می‌آید و *sowohl* با *als auch*."
+      de: "*Noch* ist der zweite Teil von *weder … noch*. *Entweder* steht mit *oder*, *sowohl* mit *als auch*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir haben weder ___ Auto noch ein Fahrrad.
+    options: [kein, ein, keinen]
+    answer: ein
+    explanation:
+      en: "*Weder … noch* already says no, so the article is *ein*, not *kein*."
+      fa: "*weder … noch* خودش نفی است، پس حرف تعریف *ein* است، نه *kein*."
+      de: "*Weder … noch* ist schon eine Negation. Darum *ein*, nicht *kein*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Sie raucht weder, noch ___ Alkohol.
+    options: [sie trinkt, trinkt sie, trinken sie]
+    answer: trinkt sie
+    explanation:
+      en: "Between two clauses *noch* is position 1, so the verb *trinkt* comes next, then *sie*."
+      fa: "میان دو جمله *noch* در جایگاه اول است، پس فعل *trinkt* پس از آن می‌آید و سپس *sie*."
+      de: "Zwischen zwei Sätzen ist *noch* Position 1. Dann kommt das Verb *trinkt* und danach *sie*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich spiele weder Fußball noch Tennis.
+    options: [Ich spiele beides., Ich spiele keins von beiden., Ich spiele eins von beiden.]
+    answer: Ich spiele keins von beiden.
+    explanation:
+      en: "*Weder … noch*: neither of the two."
+      fa: "*weder … noch* یعنی هیچ‌یک از این دو."
+      de: "*Weder … noch* heißt: keins von beiden."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Welcher Satz ist richtig?"
+    options:
+      [
+        "Ich habe weder keinen Hunger noch Durst.",
+        "Ich habe nicht weder Hunger noch Durst.",
+        "Ich habe weder Hunger noch Durst.",
+      ]
+    answer: Ich habe weder Hunger noch Durst.
+    explanation:
+      en: "*Weder … noch* already says no; *kein* or *nicht* beside it is wrong."
+      fa: "*weder … noch* خودش نفی است و آوردن *kein* یا *nicht* در کنارش نادرست است."
+      de: "*Weder … noch* ist schon eine Negation. *Kein* oder *nicht* dazu ist falsch."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Das Essen war weder warm noch frisch.
+    options:
+      [
+        "Das Essen war warm, aber nicht frisch.",
+        Das Essen war nicht warm und nicht frisch.,
+        "Das Essen war frisch, aber nicht warm.",
+      ]
+    answer: Das Essen war nicht warm und nicht frisch.
+    explanation:
+      en: "*Weder … noch* says no to both: not warm and not fresh."
+      fa: "*weder … noch* هر دو را نفی می‌کند: نه گرم و نه تازه."
+      de: "*Weder … noch* sagt zu beidem nein: nicht warm und nicht frisch."
+  - id: true-1
+    type: true-false
+    prompt: Ich kann weder schwimmen noch Rad fahren.
+    answer: true
+    explanation:
+      en: "*Weder* before the first part, *noch* before the second, and no other negation. The sentence is correct."
+      fa: "*weder* پیش از بخش اول و *noch* پیش از بخش دوم آمده و نفی دیگری نیست. جمله درست است."
+      de: "*Weder* vor dem ersten Teil, *noch* vor dem zweiten, keine andere Negation. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir haben weder keine Zeit noch kein Geld.
+    answer: false
+    explanation:
+      en: "*Weder … noch* already says no, so no *kein*: *weder Zeit noch Geld*."
+      fa: "*weder … noch* خودش نفی است، پس *kein* نمی‌آید: *weder Zeit noch Geld*."
+      de: "*Weder … noch* ist schon eine Negation. Ohne *kein*: *weder Zeit noch Geld*."
+  - id: true-3
+    type: true-false
+    prompt: Er hat weder angerufen, noch hat er geschrieben.
+    answer: true
+    explanation:
+      en: "Two clauses: *noch* is position 1, then the verb *hat*, then *er*. The sentence is correct."
+      fa: "دو جمله: *noch* در جایگاه اول است، سپس فعل *hat* و سپس *er*. جمله درست است."
+      de: "Zwei Sätze: *noch* ist Position 1, dann das Verb *hat*, dann *er*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Sie trinkt weder Kaffee oder Tee.
+    answer: false
+    explanation:
+      en: "*Weder* goes with *noch*: *weder Kaffee noch Tee*."
+      fa: "*weder* با *noch* می‌آید: *weder Kaffee noch Tee*."
+      de: "Zu *weder* gehört *noch*: *weder Kaffee noch Tee*."
+  - id: true-5
+    type: true-false
+    prompt: Weder heute noch morgen habe ich Zeit.
+    answer: true
+    explanation:
+      en: "*Weder heute noch morgen* is position 1, so the verb *habe* comes next. The sentence is correct."
+      fa: "*weder heute noch morgen* جایگاه اول است، پس فعل *habe* پس از آن می‌آید. جمله درست است."
+      de: "*Weder heute noch morgen* ist Position 1. Dann kommt das Verb *habe*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich habe weder Hunger ___ Durst.
+    answers: [noch]
+    explanation:
+      en: "*Weder* is answered by *noch*."
+      fa: "جفت *weder*، *noch* است."
+      de: "Zu *weder* gehört *noch*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ heute noch morgen habe ich Zeit.
+    answers: [Weder]
+    explanation:
+      en: "*Noch* in the second half needs *Weder* in the first."
+      fa: "*noch* در بخش دوم به *Weder* در بخش اول نیاز دارد."
+      de: "Zu *noch* im zweiten Teil gehört *Weder* im ersten Teil."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Er raucht weder, noch ___ (trinken) er.
+    answers: [trinkt]
+    explanation:
+      en: "*Noch* is position 1, so the verb follows it, with the ending for *er*: *trinkt*."
+      fa: "*noch* در جایگاه اول است، پس فعل با شناسهٔ *er* پس از آن می‌آید: *trinkt*."
+      de: "*Noch* ist Position 1. Danach kommt das Verb mit der Endung für *er*: *trinkt*."
+  - id: error-1
+    type: find-error
+    prompt: Ich esse weder Fleisch oder Fisch.
+    answer: oder
+    explanation:
+      en: "*Weder* goes with *noch*: *weder Fleisch noch Fisch*."
+      fa: "*weder* با *noch* می‌آید: *weder Fleisch noch Fisch*."
+      de: "Zu *weder* gehört *noch*: *weder Fleisch noch Fisch*."
+  - id: error-2
+    type: find-error
+    prompt: Wir haben weder Zeit noch keine Lust.
+    answer: keine
+    explanation:
+      en: "*Weder … noch* already says no, so no *keine*: *noch Lust*."
+      fa: "*weder … noch* خودش نفی است، پس *keine* نمی‌آید: *noch Lust*."
+      de: "*Weder … noch* ist schon eine Negation. Ohne *keine*: *noch Lust*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["er raucht weder,", noch, trinkt, er]
+    explanation:
+      en: "Between two clauses *noch* is position 1: then the verb *trinkt*, then the subject *er*."
+      fa: "میان دو جمله *noch* در جایگاه اول است: سپس فعل *trinkt* و سپس فاعل *er*."
+      de: "Zwischen zwei Sätzen ist *noch* Position 1: dann das Verb *trinkt*, dann das Subjekt *er*."
+  - id: order-2
+    type: word-order
+    answers:
+      - [ich, habe, weder Zeit, noch Geld]
+      - [weder Zeit, noch Geld, habe, ich]
+    explanation:
+      en: "The verb comes second. *Weder Zeit noch Geld* stays together, after the verb or first."
+      fa: "فعل در جایگاه دوم می‌آید. *weder Zeit noch Geld* با هم می‌ماند، پس از فعل یا در آغاز جمله."
+      de: "Das Verb steht auf Position 2. *Weder Zeit noch Geld* bleibt zusammen, nach dem Verb oder am Anfang."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: ac75bf43409da390
