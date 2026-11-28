@@ -4,10 +4,271 @@ kind: grammar
 level: A2
 chapter: a2-subordinate-clauses
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-157]
 title:
   en: "*damit*"
   fa: "*damit*"
   de: "*damit*"
+
+explanations:
+  en:
+    rule: >
+      *Damit* (so that) gives a purpose: what an action is for. It starts a
+      subordinate clause, so the conjugated verb goes to the end: *Ich rufe
+      sie an, damit sie auch mitkommt.* It is used mostly when the two clauses
+      have different subjects (*ich* … *sie*). The purpose is already in
+      *damit*, so *wollen*, *möchten* and *sollen* are left out of the clause:
+      *…, damit sie mitkommt*, not *…, damit sie mitkommen soll*. *Können*
+      may stay: *…, damit du mich anrufen kannst.* Keep *damit* and *weil*
+      apart: *weil* gives a reason, what is already true (*Ich nehme einen
+      Schirm mit, weil es regnet.*); *damit* gives a goal, what should
+      happen (*Ich spreche langsam, damit du mich verstehst.*).
+  fa:
+    rule: >
+      *damit* (تا، برای این‌که) هدف را بیان می‌کند، یعنی این‌که کاری برای
+      چیست. این حرف ربط جملهٔ پیرو را آغاز می‌کند، پس فعل صرف‌شده به پایان
+      جمله می‌رود: *Ich rufe sie an, damit sie auch mitkommt.* *damit* بیشتر
+      وقتی به کار می‌رود که فاعل دو جمله یکی نیست (*ich* و *sie*). معنای
+      هدف در خود *damit* هست، پس *wollen*، *möchten* و *sollen* در این جمله
+      نمی‌آیند: *…, damit sie mitkommt*، نه *…, damit sie mitkommen soll*.
+      *können* می‌تواند بماند: *…, damit du mich anrufen kannst.* *damit* و
+      *weil* را از هم جدا کنید: *weil* علت را می‌گوید، یعنی چیزی که اکنون
+      درست است (*Ich nehme einen Schirm mit, weil es regnet.*)؛ *damit* هدف
+      را می‌گوید، یعنی چیزی که باید رخ دهد (*Ich spreche langsam, damit du
+      mich verstehst.*).
+  de:
+    rule: >
+      *Damit* nennt ein Ziel: wozu man etwas macht. Mit *damit* beginnt ein
+      Nebensatz. Das konjugierte Verb steht am Ende: *Ich rufe sie an, damit
+      sie auch mitkommt.* Man benutzt *damit* meistens, wenn die zwei Sätze
+      verschiedene Subjekte haben (*ich* … *sie*). Das Ziel steckt schon in
+      *damit*. Darum fallen *wollen*, *möchten* und *sollen* im Satz weg:
+      *…, damit sie mitkommt*, nicht *…, damit sie mitkommen soll*. *Können*
+      kann bleiben: *…, damit du mich anrufen kannst.* *Damit* oder *weil*?
+      *Weil* nennt einen Grund, also etwas, das schon so ist (*Ich nehme einen
+      Schirm mit, weil es regnet.*). *Damit* nennt ein Ziel, also etwas, das
+      passieren soll (*Ich spreche langsam, damit du mich verstehst.*).
+
+table:
+  columns:
+    - { en: Main clause, fa: جملهٔ پایه, de: Hauptsatz }
+    - { en: Conjunction, fa: حرف ربط, de: Konjunktion }
+    - { en: The rest, fa: بقیهٔ جمله, de: Rest }
+    - { en: "End: verb", fa: "پایان جمله: فعل", de: "Ende: Verb" }
+  rows:
+    - ["Ich rufe Lisa an,", damit, sie auch, mitkommt.]
+    - ["Ich spreche langsam,", damit, du mich, verstehst.]
+    - ["Ich gebe dir meine Nummer,", damit, du mich, anrufen kannst.]
+    - ["Wir fahren früh los,", damit, wir den Zug nicht, verpassen.]
+    - ["Ich mache das Fenster auf,", damit, frische Luft ins Zimmer, kommt.]
+
+examples:
+  - de: Ich rufe sie an, damit sie auch mitkommt.
+    en: I'm calling her so that she comes along too.
+    fa: به او زنگ می‌زنم تا او هم با ما بیاید.
+  - de: Ich spreche langsam, damit du mich verstehst.
+    en: I'm speaking slowly so that you understand me.
+    fa: آهسته حرف می‌زنم تا حرفم را بفهمی.
+  - de: Ich gebe dir meine Nummer, damit du mich anrufen kannst.
+    en: I'm giving you my number so that you can call me.
+    fa: شماره‌ام را به تو می‌دهم تا بتوانی به من زنگ بزنی.
+  - de: Wir fahren früh los, damit wir den Zug nicht verpassen.
+    en: We're setting off early so that we don't miss the train.
+    fa: زود راه می‌افتیم تا به قطار برسیم.
+  - de: Der Lehrer erklärt es noch einmal, damit alle es verstehen.
+    en: The teacher explains it once more so that everyone understands it.
+    fa: معلم آن را یک بار دیگر توضیح می‌دهد تا همه بفهمند.
+  - de: Ich mache das Fenster auf, damit frische Luft ins Zimmer kommt.
+    en: I'm opening the window so that fresh air comes into the room.
+    fa: پنجره را باز می‌کنم تا هوای تازه به اتاق بیاید.
+  - de: Ich schreibe es auf, damit ich es nicht vergesse.
+    en: I'm writing it down so that I don't forget it.
+    fa: آن را یادداشت می‌کنم تا فراموشش نکنم.
+
+mistakes:
+  - wrong: Ich rufe sie an, damit sie mitkommen soll.
+    right: Ich rufe sie an, damit sie mitkommt.
+    why:
+      en: "*Damit* already says \"so that\", so *sollen* is left out: *damit sie mitkommt*."
+      fa: "*damit* خودش معنای «تا» را دارد، پس *sollen* نمی‌آید: *damit sie mitkommt*."
+      de: "*Damit* sagt schon das Ziel. *Sollen* fällt weg: *damit sie mitkommt*."
+  - wrong: Ich spreche langsam, damit du verstehst mich.
+    right: Ich spreche langsam, damit du mich verstehst.
+    why:
+      en: "After *damit* the verb goes to the very end: *damit du mich verstehst*."
+      fa: "پس از *damit* فعل به پایان جمله می‌رود: *damit du mich verstehst*."
+      de: "Nach *damit* steht das Verb ganz am Ende: *damit du mich verstehst*."
+  - wrong: Ich nehme einen Schirm mit, damit es regnet.
+    right: Ich nehme einen Schirm mit, weil es regnet.
+    why:
+      en: "The rain is the reason, not the goal: *weil*. *Damit* would mean you want it to rain."
+      fa: "باران علت است، نه هدف: *weil*. *damit* یعنی می‌خواهید باران ببارد."
+      de: "Der Regen ist der Grund, nicht das Ziel: *weil*. Mit *damit* möchte man, dass es regnet."
+  - wrong: Ich gebe dir das Geld, damit du Brot kaufen möchtest.
+    right: Ich gebe dir das Geld, damit du Brot kaufst.
+    why:
+      en: "*Möchten* is left out in a *damit* clause: *damit du Brot kaufst*."
+      fa: "در جملهٔ پیرو با *damit*، *möchten* نمی‌آید: *damit du Brot kaufst*."
+      de: "Im *damit*-Satz fällt *möchten* weg: *damit du Brot kaufst*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich nehme einen Schirm mit, ___ es regnet.
+    options: [weil, damit]
+    answer: weil
+    explanation:
+      en: "The rain is the reason, already true: *weil*."
+      fa: "باران علت است و اکنون درست است: *weil*."
+      de: "Der Regen ist der Grund. Er ist schon da: *weil*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich spreche langsam, ___ du mich verstehst.
+    options: [damit, weil]
+    answer: damit
+    explanation:
+      en: "Understanding is the goal of speaking slowly: *damit*."
+      fa: "فهمیدن هدف آهسته حرف زدن است: *damit*."
+      de: "Verstehen ist das Ziel: *damit*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich mache das Fenster auf, ___ frische Luft ins Zimmer kommt.
+    options: [damit, weil]
+    answer: damit
+    explanation:
+      en: "Fresh air is what opening the window is for: *damit*."
+      fa: "هوای تازه هدف باز کردن پنجره است: *damit*."
+      de: "Frische Luft ist das Ziel: *damit*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich trinke einen Kaffee, ___ ich so müde bin.
+    options: [weil, damit]
+    answer: weil
+    explanation:
+      en: "Being tired is the reason, already true: *weil*."
+      fa: "خستگی علت است و اکنون درست است: *weil*."
+      de: "Müde sein ist der Grund. Das ist schon so: *weil*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Er arbeitet viel, ___ seine Kinder studieren können.
+    options: [damit, weil]
+    answer: damit
+    explanation:
+      en: "His children's studies are the goal of his work: *damit*."
+      fa: "تحصیل فرزندانش هدف کار اوست: *damit*."
+      de: "Das Studium der Kinder ist das Ziel: *damit*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich rufe Lisa an, damit …
+    options: [sie auch mitkommt., sie kommt auch mit., sie auch mitkommen soll.]
+    answer: sie auch mitkommt.
+    explanation:
+      en: "The verb goes to the end as one word, and *sollen* is left out: *sie auch mitkommt*."
+      fa: "فعل یک‌جا به پایان جمله می‌رود و *sollen* نمی‌آید: *sie auch mitkommt*."
+      de: "Das Verb steht zusammen am Ende, *sollen* fällt weg: *sie auch mitkommt*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich gebe dir meine Nummer, damit …
+    options: [du mich anrufen kannst., du kannst mich anrufen., du mich kannst anrufen.]
+    answer: du mich anrufen kannst.
+    explanation:
+      en: "The conjugated *kannst* comes last, after the infinitive *anrufen*."
+      fa: "فعل صرف‌شدهٔ *kannst* در آخر و پس از مصدر *anrufen* می‌آید."
+      de: "Das konjugierte *kannst* steht ganz am Schluss, nach dem Infinitiv *anrufen*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Warum lernst du so viel? – …
+    options: [Damit ich die Prüfung bestehe., Damit ich bestehe die Prüfung., Damit die Prüfung ich bestehe.]
+    answer: Damit ich die Prüfung bestehe.
+    explanation:
+      en: "After *damit* the subject comes first and the verb *bestehe* last."
+      fa: "پس از *damit* اول فاعل و در آخر فعل *bestehe* می‌آید."
+      de: "Nach *damit* kommt zuerst das Subjekt, das Verb *bestehe* steht am Ende."
+  - id: true-1
+    type: true-false
+    prompt: Ich schreibe es auf, damit ich es nicht vergesse.
+    answer: true
+    explanation:
+      en: "Not forgetting is the goal, and the verb *vergesse* is at the end. The sentence is correct."
+      fa: "فراموش نکردن هدف است و فعل *vergesse* در پایان جمله است. جمله درست است."
+      de: "Nicht vergessen ist das Ziel, das Verb *vergesse* steht am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir gehen früh los, damit wir pünktlich sind.
+    answer: true
+    explanation:
+      en: "Being on time is the goal, and *sind* is at the end. The sentence is correct."
+      fa: "به‌موقع رسیدن هدف است و *sind* در پایان جمله است. جمله درست است."
+      de: "Pünktlich sein ist das Ziel, *sind* steht am Ende. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich lerne viel, damit ich bestehe die Prüfung.
+    answer: false
+    explanation:
+      en: "After *damit* the verb goes to the end: *damit ich die Prüfung bestehe*."
+      fa: "پس از *damit* فعل به پایان جمله می‌رود: *damit ich die Prüfung bestehe*."
+      de: "Nach *damit* steht das Verb am Ende: *damit ich die Prüfung bestehe*."
+  - id: true-4
+    type: true-false
+    prompt: Der Lehrer spricht langsam, damit wir ihn verstehen.
+    answer: true
+    explanation:
+      en: "Understanding is the goal, and *verstehen* is at the end. The sentence is correct."
+      fa: "فهمیدن هدف است و *verstehen* در پایان جمله است. جمله درست است."
+      de: "Verstehen ist das Ziel, *verstehen* steht am Ende. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Ich rufe dich an, damit du kommst mit.
+    answer: false
+    explanation:
+      en: "In the *damit* clause the separable verb is one word at the end: *damit du mitkommst*."
+      fa: "در جملهٔ پیرو با *damit* فعل جداشدنی یک‌جا در پایان می‌آید: *damit du mitkommst*."
+      de: "Im *damit*-Satz steht das trennbare Verb zusammen am Ende: *damit du mitkommst*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich spreche laut, damit alle mich ___ (hören).
+    answers: [hören, hören können]
+    explanation:
+      en: "With *alle* (plural) the verb is *hören*, at the end of the *damit* clause."
+      fa: "با *alle* (جمع) فعل *hören* است و در پایان جملهٔ پیرو با *damit* می‌آید."
+      de: "Bei *alle* (Plural) heißt das Verb *hören*. Es steht am Ende vom *damit*-Satz."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich rufe Tom an, damit er auch ___ (mitkommen).
+    answers: [mitkommt, mitkommen kann]
+    explanation:
+      en: "In the *damit* clause the separable verb is one word at the end: *mitkommt*."
+      fa: "در جملهٔ پیرو با *damit* فعل جداشدنی یک‌جا در پایان می‌آید: *mitkommt*."
+      de: "Im *damit*-Satz steht das trennbare Verb zusammen am Ende: *mitkommt*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich gebe dir meine Nummer, damit du mich anrufen ___ (können).
+    answers: [kannst]
+    explanation:
+      en: "*Können* may stay in a *damit* clause. With *du* it is *kannst*, at the very end."
+      fa: "*können* در جملهٔ پیرو با *damit* می‌تواند بماند. با *du* می‌شود *kannst* و در آخر می‌آید."
+      de: "*Können* kann im *damit*-Satz bleiben. Bei *du* heißt es *kannst*, ganz am Ende."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["ich spreche langsam,", damit, du, mich, verstehst]
+    explanation:
+      en: "After *damit* comes the subject *du*, then *mich*, and the verb *verstehst* last."
+      fa: "پس از *damit* اول فاعل *du*، سپس *mich* و در آخر فعل *verstehst* می‌آید."
+      de: "Nach *damit* kommt das Subjekt *du*, dann *mich*, am Ende das Verb *verstehst*."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["ich schreibe es auf,", damit, ich, es, nicht, vergesse]
+    explanation:
+      en: "The subject *ich* and *es* come first, *nicht* before the verb, and *vergesse* last."
+      fa: "اول فاعل *ich* و *es* می‌آیند، *nicht* پیش از فعل و *vergesse* در آخر."
+      de: "Zuerst das Subjekt *ich* und *es*, dann *nicht*, am Ende das Verb *vergesse*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 8c6231e63ddb5392

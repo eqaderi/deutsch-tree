@@ -4,10 +4,283 @@ kind: grammar
 level: A2
 chapter: a2-subordinate-clauses
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-157]
 title:
   en: "*wenn*"
   fa: "*wenn*"
   de: "*wenn*"
+
+explanations:
+  en:
+    rule: >
+      *Wenn* starts a subordinate clause, so the conjugated verb goes to the
+      end. It has two meanings. It gives a condition, "if": *Schreib mir
+      bitte, wenn du Zeit hast.* And it says when something happens, now or
+      in the future, or each time it happens, "when, whenever": *Wenn ich
+      müde bin, trinke ich einen Kaffee.* *Immer wenn* stresses "every time".
+      A *wenn* clause often comes first; then the main clause starts with its
+      verb, and *dann* may stand before that verb: *Wenn du Hilfe brauchst,
+      (dann) ruf mich an.* Do not mix up *wenn* with the question word
+      *wann* (when?), which asks for a time, also inside a sentence: *Ich weiß
+      nicht, wann der Zug kommt.* (For one event in the past German uses
+      *als*; that is a later topic.)
+  fa:
+    rule: >
+      *wenn* جملهٔ پیرو را آغاز می‌کند، پس فعل صرف‌شده به پایان جمله می‌رود.
+      *wenn* دو معنا دارد. شرط را بیان می‌کند، یعنی «اگر»: *Schreib mir
+      bitte, wenn du Zeit hast.* و زمان رخ دادن کاری را می‌گوید، در حال یا
+      آینده، یا هر بار که رخ می‌دهد، یعنی «وقتی که، هر وقت»: *Wenn ich müde
+      bin, trinke ich einen Kaffee.* *immer wenn* بر «هر بار» تأکید می‌کند.
+      جملهٔ پیرو با *wenn* بیشتر اول می‌آید؛ آن‌گاه جملهٔ پایه با فعلش آغاز
+      می‌شود و پیش از این فعل می‌توان *dann* آورد: *Wenn du Hilfe brauchst,
+      (dann) ruf mich an.* *wenn* را با واژهٔ پرسشی *wann* (کی؟) اشتباه
+      نگیرید؛ *wann* زمان را می‌پرسد، درون جمله هم: *Ich weiß nicht, wann der
+      Zug kommt.* (برای یک رویداد در گذشته آلمانی *als* را به کار می‌برد که
+      موضوع درسی دیگر است.)
+  de:
+    rule: >
+      Mit *wenn* beginnt ein Nebensatz. Das konjugierte Verb steht am Ende.
+      *Wenn* hat zwei Bedeutungen. Es nennt eine Bedingung: *Schreib mir
+      bitte, wenn du Zeit hast.* Oder es sagt, wann etwas passiert, jetzt
+      oder später, oder jedes Mal: *Wenn ich müde bin, trinke ich einen
+      Kaffee.* *Immer wenn* heißt: jedes Mal. Oft steht der *wenn*-Satz
+      zuerst. Dann beginnt der Hauptsatz mit dem Verb, und davor kann *dann*
+      stehen: *Wenn du Hilfe brauchst, (dann) ruf mich an.* Verwechseln Sie
+      *wenn* nicht mit dem Fragewort *wann*. *Wann* fragt nach der Zeit, auch
+      im Satz: *Ich weiß nicht, wann der Zug kommt.* (Für ein Ereignis in der
+      Vergangenheit sagt man *als*. Das kommt später.)
+
+table:
+  columns:
+    - { en: "*Wenn* clause (position 1)", fa: "جملهٔ پیرو با *wenn* (جایگاه اول)", de: "*Wenn*-Satz (Position 1)" }
+    - { en: "Main clause: verb first", fa: "جملهٔ پایه: اول فعل", de: "Hauptsatz: zuerst das Verb" }
+  rows:
+    - ["Wenn du Zeit hast,", komm doch vorbei.]
+    - ["Wenn es morgen regnet,", bleiben wir zu Hause.]
+    - ["Wenn ich müde bin,", trinke ich einen Kaffee.]
+    - ["Wenn du Hilfe brauchst,", dann ruf mich an.]
+    - ["Wenn der Kurs vorbei ist,", gehen wir essen.]
+    - ["Immer wenn ich Oma besuche,", backt sie einen Kuchen.]
+
+examples:
+  - de: Schreib mir bitte, wenn du Zeit hast.
+    en: Please write to me when you have time.
+    fa: هر وقت فرصت داشتی، لطفاً برایم بنویس.
+  - de: Wenn es morgen regnet, bleiben wir zu Hause.
+    en: If it rains tomorrow, we'll stay at home.
+    fa: اگر فردا باران ببارد، در خانه می‌مانیم.
+  - de: Wenn ich müde bin, trinke ich einen Kaffee.
+    en: When I'm tired, I drink a coffee.
+    fa: وقتی خسته‌ام، یک قهوه می‌نوشم.
+  - de: Immer wenn ich meine Oma besuche, backt sie einen Kuchen.
+    en: Every time I visit my grandma, she bakes a cake.
+    fa: هر بار که به دیدن مادربزرگم می‌روم، کیک می‌پزد.
+  - de: Wenn du Hilfe brauchst, dann ruf mich an.
+    en: If you need help, then call me.
+    fa: اگر کمک لازم داشتی، به من زنگ بزن.
+  - de: Ich rufe dich an, wenn ich in Berlin bin.
+    en: I'll call you when I'm in Berlin.
+    fa: وقتی در برلین باشم، به تو زنگ می‌زنم.
+  - de: Wann kommst du? – Ich komme, wenn ich mit der Arbeit fertig bin.
+    en: When are you coming? – I'll come when I've finished work.
+    fa: کی می‌آیی؟ – وقتی کارم تمام شد، می‌آیم.
+  - de: Ich weiß nicht, wann der Zug kommt.
+    en: I don't know when the train is coming.
+    fa: نمی‌دانم قطار کی می‌آید.
+
+mistakes:
+  - wrong: Wann du Zeit hast, komm vorbei.
+    right: Wenn du Zeit hast, komm vorbei.
+    why:
+      en: "This is a condition, not a question about a time: *wenn*. *Wann* asks \"when?\"."
+      fa: "این‌جا شرط است، نه پرسش دربارهٔ زمان: *wenn*. *wann* می‌پرسد «کی؟»."
+      de: "Das ist eine Bedingung, keine Frage nach der Zeit: *wenn*. *Wann* fragt nach der Zeit."
+  - wrong: Wenn ich habe Zeit, koche ich.
+    right: Wenn ich Zeit habe, koche ich.
+    why:
+      en: "In the *wenn* clause the verb *habe* goes to the end."
+      fa: "در جملهٔ پیرو با *wenn* فعل *habe* به پایان جمله می‌رود."
+      de: "Im *wenn*-Satz steht das Verb *habe* am Ende."
+  - wrong: Wenn es regnet, wir bleiben zu Hause.
+    right: Wenn es regnet, bleiben wir zu Hause.
+    why:
+      en: "The *wenn* clause is position 1, so the verb comes next: *bleiben wir*."
+      fa: "جملهٔ پیرو با *wenn* جایگاه اول است، پس فعل بلافاصله پس از آن می‌آید: *bleiben wir*."
+      de: "Der *wenn*-Satz ist Position 1. Danach kommt sofort das Verb: *bleiben wir*."
+  - wrong: Ich weiß nicht, wenn der Zug kommt.
+    right: Ich weiß nicht, wann der Zug kommt.
+    why:
+      en: "Here you ask for a time, so the question word *wann*."
+      fa: "این‌جا زمان پرسیده می‌شود، پس واژهٔ پرسشی *wann* می‌آید."
+      de: "Hier fragt man nach der Zeit. Darum das Fragewort *wann*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ du Zeit hast, ruf mich an.
+    options: [Wenn, Wann]
+    answer: Wenn
+    explanation:
+      en: "A condition, \"if\": *wenn*. *Wann* only asks for a time."
+      fa: "شرط است، یعنی «اگر»: *wenn*. *wann* فقط زمان را می‌پرسد."
+      de: "Eine Bedingung: *wenn*. *Wann* fragt nur nach der Zeit."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ kommt der Bus?
+    options: [Wann, Wenn]
+    answer: Wann
+    explanation:
+      en: "A question about a time: *wann*."
+      fa: "پرسش دربارهٔ زمان است: *wann*."
+      de: "Eine Frage nach der Zeit: *wann*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich weiß nicht, ___ der Kurs anfängt.
+    options: [wann, wenn]
+    answer: wann
+    explanation:
+      en: "You do not know the time, so the question word *wann*, also inside the sentence."
+      fa: "زمان را نمی‌دانید، پس واژهٔ پرسشی *wann* می‌آید، درون جمله هم."
+      de: "Man kennt die Zeit nicht. Darum das Fragewort *wann*, auch im Satz."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich rufe dich an, ___ ich in Berlin bin.
+    options: [wenn, wann]
+    answer: wenn
+    explanation:
+      en: "It says when the call will happen, not a question: *wenn*."
+      fa: "زمان زنگ زدن را می‌گوید و پرسش نیست: *wenn*."
+      de: "Der Satz sagt, wann der Anruf passiert. Er ist keine Frage: *wenn*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wenn es morgen regnet, …
+    options: [bleiben wir zu Hause., wir bleiben zu Hause., wir zu Hause bleiben.]
+    answer: bleiben wir zu Hause.
+    explanation:
+      en: "The *wenn* clause is position 1, so the main clause starts with its verb: *bleiben wir*."
+      fa: "جملهٔ پیرو با *wenn* جایگاه اول است، پس جملهٔ پایه با فعلش آغاز می‌شود: *bleiben wir*."
+      de: "Der *wenn*-Satz ist Position 1. Der Hauptsatz beginnt mit dem Verb: *bleiben wir*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Schreib mir bitte, …
+    options: [wenn du Zeit hast., wenn du hast Zeit., wenn hast du Zeit.]
+    answer: wenn du Zeit hast.
+    explanation:
+      en: "After *wenn* the subject comes first and the verb *hast* last."
+      fa: "پس از *wenn* اول فاعل و در آخر فعل *hast* می‌آید."
+      de: "Nach *wenn* kommt zuerst das Subjekt, das Verb *hast* steht am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wenn ich müde bin, …
+    options: [dann trinke ich einen Kaffee., dann ich trinke einen Kaffee., ich trinke dann einen Kaffee.]
+    answer: dann trinke ich einen Kaffee.
+    explanation:
+      en: "*Dann* may stand before the verb, and the verb still comes before the subject: *dann trinke ich*."
+      fa: "*dann* می‌تواند پیش از فعل بیاید و فعل باز هم پیش از فاعل است: *dann trinke ich*."
+      de: "*Dann* kann vor dem Verb stehen. Das Verb steht trotzdem vor dem Subjekt: *dann trinke ich*."
+  - id: true-1
+    type: true-false
+    prompt: Immer wenn ich meine Oma besuche, backt sie einen Kuchen.
+    answer: true
+    explanation:
+      en: "*Immer wenn*: every time. *Besuche* is at the end, and the main clause starts with *backt*. The sentence is correct."
+      fa: "*immer wenn* یعنی هر بار. *besuche* در پایان است و جملهٔ پایه با *backt* آغاز می‌شود. جمله درست است."
+      de: "*Immer wenn*: jedes Mal. *Besuche* steht am Ende, der Hauptsatz beginnt mit *backt*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wann ich Zeit habe, lese ich ein Buch.
+    answer: false
+    explanation:
+      en: "This says what happens each time, not a question: *Wenn ich Zeit habe, …*"
+      fa: "این جمله می‌گوید هر بار چه رخ می‌دهد و پرسش نیست: *Wenn ich Zeit habe, …*"
+      de: "Der Satz sagt, was jedes Mal passiert. Er ist keine Frage: *Wenn ich Zeit habe, …*"
+  - id: true-3
+    type: true-false
+    prompt: Wenn du Hilfe brauchst, dann ruf mich an.
+    answer: true
+    explanation:
+      en: "*Dann* may stand before the verb after a *wenn* clause. The sentence is correct."
+      fa: "پس از جملهٔ پیرو با *wenn* می‌توان *dann* را پیش از فعل آورد. جمله درست است."
+      de: "Nach dem *wenn*-Satz kann *dann* vor dem Verb stehen. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wenn ich nach Hause komme, ich koche.
+    answer: false
+    explanation:
+      en: "After the *wenn* clause the verb comes first: *…, koche ich.*"
+      fa: "پس از جملهٔ پیرو با *wenn* فعل اول می‌آید: *…, koche ich.*"
+      de: "Nach dem *wenn*-Satz kommt zuerst das Verb: *…, koche ich.*"
+  - id: true-5
+    type: true-false
+    prompt: Ich weiß nicht, wann das Konzert beginnt.
+    answer: true
+    explanation:
+      en: "You ask for a time, so *wann*, with the verb at the end. The sentence is correct."
+      fa: "زمان پرسیده می‌شود، پس *wann* می‌آید و فعل در پایان است. جمله درست است."
+      de: "Man fragt nach der Zeit: *wann*, das Verb am Ende. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wenn es regnet, ___ (nehmen) wir den Bus.
+    answers: [nehmen]
+    explanation:
+      en: "The *wenn* clause is position 1, so the verb *nehmen* comes next, before *wir*."
+      fa: "جملهٔ پیرو با *wenn* جایگاه اول است، پس فعل *nehmen* پیش از *wir* می‌آید."
+      de: "Der *wenn*-Satz ist Position 1. Danach kommt das Verb *nehmen*, vor *wir*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wenn ich nach Hause ___ (kommen), koche ich.
+    answers: [komme, gekommen bin]
+    explanation:
+      en: "With *ich* the verb is *komme*, at the end of the *wenn* clause."
+      fa: "با *ich* فعل *komme* است و در پایان جملهٔ پیرو با *wenn* می‌آید."
+      de: "Bei *ich* heißt das Verb *komme*. Es steht am Ende vom *wenn*-Satz."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ruf mich bitte an, wenn du in Wien ___ (ankommen).
+    answers: [ankommst, angekommen bist]
+    explanation:
+      en: "In the *wenn* clause the separable verb is one word at the end: *ankommst*."
+      fa: "در جملهٔ پیرو با *wenn* فعل جداشدنی یک‌جا در پایان می‌آید: *ankommst*."
+      de: "Im *wenn*-Satz steht das trennbare Verb zusammen am Ende: *ankommst*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wenn du Zeit ___ (haben), komm doch vorbei.
+    answers: [hast]
+    explanation:
+      en: "With *du* the verb is *hast*, at the end of the *wenn* clause."
+      fa: "با *du* فعل *hast* است و در پایان جملهٔ پیرو با *wenn* می‌آید."
+      de: "Bei *du* heißt das Verb *hast*. Es steht am Ende vom *wenn*-Satz."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["wenn ich Zeit habe,", helfe, ich, dir]
+    explanation:
+      en: "The *wenn* clause is position 1, so the verb *helfe* comes next, then the subject."
+      fa: "جملهٔ پیرو با *wenn* جایگاه اول است، پس فعل *helfe* و سپس فاعل می‌آید."
+      de: "Der *wenn*-Satz ist Position 1. Dann kommt das Verb *helfe*, danach das Subjekt."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["ich rufe dich an,", wenn, ich, in Berlin, bin]
+    explanation:
+      en: "*Wenn* starts the clause, then the subject, and the verb *bin* comes last."
+      fa: "*wenn* جمله را آغاز می‌کند، سپس فاعل می‌آید و فعل *bin* در آخر."
+      de: "*Wenn* beginnt den Satz, dann kommt das Subjekt, das Verb *bin* steht am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Wenn ich Durst habe,", trinke ich Wasser.]
+      - ["Wenn ich müde bin,", gehe ich ins Bett.]
+      - ["Wenn es regnet,", nehme ich einen Schirm mit.]
+    explanation:
+      en: "Each *wenn* clause names when something happens, and the main clause, verb first, says what you do then."
+      fa: "هر جملهٔ پیرو با *wenn* می‌گوید کاری کی رخ می‌دهد و جملهٔ پایه، با فعل در آغاز، می‌گوید آن وقت چه می‌کنید."
+      de: "Jeder *wenn*-Satz sagt, wann etwas passiert. Der Hauptsatz mit dem Verb zuerst sagt, was man dann macht."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: fdde1fcde47b632a
