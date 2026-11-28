@@ -4,10 +4,321 @@ kind: grammar
 level: A1
 chapter: a1-modal-verbs
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-139]
 title:
   en: "*können* + *Satzklammer*"
   fa: "*können* و قاب جمله (*Satzklammer*)"
   de: "*können* + Satzklammer"
+
+explanations:
+  en:
+    rule: >
+      *Können* is a modal verb: it says that someone is able to do something
+      (*Ich kann schwimmen.*), that something is possible (*Wir können morgen
+      kommen.*) or that it is allowed (*Kann man hier mit Karte zahlen?*). The
+      modal verb is conjugated and stands in position 2; the second verb goes
+      to the very end as an infinitive. Together they frame the rest of the
+      sentence: this is the *Satzklammer*. In a yes/no question the modal verb
+      moves to position 1, and the infinitive still stays at the end. *Ich*
+      and *er* / *sie* / *es* have the same form, *kann*, with no ending, and
+      the vowel changes to *a* in the singular. When the meaning is clear, the
+      infinitive can be dropped: *Sie kann gut Spanisch.*
+  fa:
+    rule: >
+      *können* یک فعل وجهی است و نشان می‌دهد کسی توانایی کاری را دارد
+      (*Ich kann schwimmen.*)، کاری شدنی است (*Wir können morgen kommen.*) یا
+      اجازهٔ آن هست (*Kann man hier mit Karte zahlen?*). فعل وجهی صرف می‌شود و
+      در جایگاه دوم می‌آید، ولی فعل دوم صرف نمی‌شود و به شکل مصدر به پایان
+      جمله می‌رود. این دو فعل بقیهٔ جمله را در میان می‌گیرند؛ به این قاب
+      جمله (*Satzklammer*) می‌گویند. در پرسش بله یا نه فعل وجهی به جایگاه اول
+      می‌آید و مصدر باز هم در پایان می‌ماند. *ich* و *er* / *sie* / *es*
+      صورت یکسان *kann* را دارند، بدون شناسه، و در مفرد واکهٔ *ö* به *a*
+      تبدیل می‌شود. اگر معنا روشن باشد، مصدر را می‌توان انداخت: *Sie kann gut
+      Spanisch.*
+  de:
+    rule: >
+      *Können* ist ein Modalverb. Es sagt: Jemand hat eine Fähigkeit (*Ich kann
+      schwimmen.*), etwas ist möglich (*Wir können morgen kommen.*) oder
+      etwas ist erlaubt (*Kann man hier mit Karte zahlen?*). Das Modalverb
+      ist konjugiert und steht auf Position 2. Das zweite Verb steht im
+      Infinitiv ganz am Ende. Die zwei Verben sind wie eine Klammer um den
+      Satz: die Satzklammer. In einer Ja/Nein-Frage steht das Modalverb auf
+      Position 1, der Infinitiv bleibt am Ende. *Ich* und *er* / *sie* / *es*
+      haben die gleiche Form *kann*, ohne Endung. Ist die Bedeutung klar,
+      kann der Infinitiv fehlen: *Sie kann gut Spanisch.*
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*können*", fa: "*können*", de: "*können*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, kann, Ich kann gut schwimmen.]
+    - [du, kannst, Kannst du Gitarre spielen?]
+    - [er / sie / es, kann, Er kann heute nicht kommen.]
+    - [wir, können, Wir können morgen gehen.]
+    - [ihr, könnt, Könnt ihr mir helfen?]
+    - [sie / Sie, können, Sie können hier warten.]
+
+# Two sentences as rows of slots. The modal verb and the infinitive are shaded;
+# a bracket under each row joins them, the frame of the sentence.
+diagrams:
+  - caption:
+      en: >
+        *Ich kann heute nicht kommen.* and *Kannst du Gitarre spielen?* The
+        modal verb and the infinitive (shaded) frame the rest of the sentence:
+        the *Satzklammer*. In the question the modal verb is in position 1;
+        the infinitive is at the end in both.
+      fa: >
+        *Ich kann heute nicht kommen.* و *Kannst du Gitarre spielen?* فعل وجهی
+        و مصدر (رنگی) بقیهٔ جمله را در میان می‌گیرند: قاب جمله
+        (*Satzklammer*). در پرسش فعل وجهی در جایگاه اول است؛ مصدر در هر دو
+        جمله در پایان می‌آید.
+      de: >
+        *Ich kann heute nicht kommen.* und *Kannst du Gitarre spielen?* Das
+        Modalverb und der Infinitiv (farbig) sind die Satzklammer um den
+        Rest. In der Frage steht das Modalverb auf Position 1. Der Infinitiv
+        steht in beiden Sätzen am Ende.
+    labels:
+      first: { en: position 1, fa: جایگاه اول, de: Position 1 }
+      second: { en: position 2, fa: جایگاه دوم, de: Position 2 }
+      end: { en: the end, fa: پایان جمله, de: Ende }
+    svg: |
+      <svg viewBox="0 0 320 212">
+        <!-- Ich kann heute nicht kommen. -->
+        <text class="note" x="84" y="18" text-anchor="middle">{{second}}</text>
+        <text class="note" x="276" y="18" text-anchor="middle">{{end}}</text>
+        <rect class="surface" x="2" y="26" width="48" height="40"/>
+        <rect class="shade" x="54" y="26" width="60" height="40"/>
+        <rect class="surface" x="118" y="26" width="112" height="40"/>
+        <rect class="shade" x="234" y="26" width="84" height="40"/>
+        <text class="label" x="26" y="52" text-anchor="middle">Ich</text>
+        <text class="label" x="84" y="52" text-anchor="middle">kann</text>
+        <text class="label" x="174" y="52" text-anchor="middle">heute nicht</text>
+        <text class="label" x="276" y="52" text-anchor="middle">kommen.</text>
+        <polyline class="line" points="84,70 84,80 276,80 276,70"/>
+        <text class="note" x="180" y="98" text-anchor="middle">Satzklammer</text>
+        <!-- Kannst du Gitarre spielen? -->
+        <text class="note" x="38" y="124" text-anchor="middle">{{first}}</text>
+        <text class="note" x="276" y="124" text-anchor="middle">{{end}}</text>
+        <rect class="shade" x="2" y="132" width="72" height="40"/>
+        <rect class="surface" x="78" y="132" width="36" height="40"/>
+        <rect class="surface" x="118" y="132" width="112" height="40"/>
+        <rect class="shade" x="234" y="132" width="84" height="40"/>
+        <text class="label" x="38" y="158" text-anchor="middle">Kannst</text>
+        <text class="label" x="96" y="158" text-anchor="middle">du</text>
+        <text class="label" x="174" y="158" text-anchor="middle">Gitarre</text>
+        <text class="label" x="276" y="158" text-anchor="middle">spielen?</text>
+        <polyline class="line" points="38,176 38,186 276,186 276,176"/>
+        <text class="note" x="157" y="204" text-anchor="middle">Satzklammer</text>
+      </svg>
+
+examples:
+  - de: Ich kann gut schwimmen.
+    en: I can swim well.
+    fa: من خوب شنا بلدم.
+  - de: Kannst du Gitarre spielen?
+    en: Can you play the guitar?
+    fa: گیتار زدن بلدی؟
+  - de: Er kann heute nicht kommen.
+    en: He can't come today.
+    fa: او امروز نمی‌تواند بیاید.
+  - de: Kann man hier mit Karte zahlen?
+    en: Can you pay by card here?
+    fa: این‌جا می‌شود با کارت پرداخت کرد؟
+  - de: Wir können am Samstag ins Kino gehen.
+    en: We can go to the cinema on Saturday.
+    fa: می‌توانیم شنبه به سینما برویم.
+  - de: Könnt ihr mir helfen?
+    en: Can you (plural) help me?
+    fa: می‌توانید به من کمک کنید؟
+  - de: Wo kann ich hier Brot kaufen?
+    en: Where can I buy bread here?
+    fa: این‌جا کجا می‌توانم نان بخرم؟
+  - de: Sie kann gut Spanisch.
+    en: She speaks Spanish well.
+    fa: او اسپانیایی را خوب بلد است.
+
+mistakes:
+  - wrong: Ich kann spielen Gitarre.
+    right: Ich kann Gitarre spielen.
+    why:
+      en: The infinitive goes to the very end, after everything else.
+      fa: مصدر به پایان جمله می‌رود، پس از همهٔ اجزای دیگر.
+      de: Der Infinitiv steht ganz am Ende, nach allen anderen Wörtern.
+  - wrong: Er kannt gut kochen.
+    right: Er kann gut kochen.
+    why:
+      en: With *er*, *sie* and *es* the form is *kann*, with no *-t*.
+      fa: با *er*، *sie* و *es* صورت فعل *kann* است، بدون *-t*.
+      de: Bei *er*, *sie* und *es* heißt es *kann*, ohne *-t*.
+  - wrong: Du kannst spielst Tennis.
+    right: Du kannst Tennis spielen.
+    why:
+      en: Only the modal verb is conjugated. The second verb stays an infinitive at the end.
+      fa: فقط فعل وجهی صرف می‌شود؛ فعل دوم به شکل مصدر در پایان جمله می‌ماند.
+      de: Nur das Modalverb ist konjugiert. Das zweite Verb bleibt im Infinitiv am Ende.
+  - wrong: Ich kann zu schwimmen.
+    right: Ich kann schwimmen.
+    why:
+      en: After a modal verb the infinitive has no *zu*.
+      fa: پس از فعل وجهی، مصدر بدون *zu* می‌آید.
+      de: Nach einem Modalverb steht der Infinitiv ohne *zu*.
+
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Ich ___ gut schwimmen.
+    options: [kann, kannst, können]
+    answer: kann
+    explanation:
+      en: With *ich* the form is *kann*, with no ending.
+      fa: با *ich* صورت فعل *kann* است، بدون شناسه.
+      de: Bei *ich* heißt es *kann*, ohne Endung.
+  - id: q2
+    type: multiple-choice
+    prompt: ___ du Gitarre spielen?
+    options: [Kann, Kannst, Könnt]
+    answer: Kannst
+    explanation:
+      en: With *du* the form is *kannst*.
+      fa: با *du* صورت فعل *kannst* است.
+      de: Bei *du* heißt es *kannst*.
+  - id: q3
+    type: gap-fill
+    prompt: Meine Schwester ___ gut kochen.
+    options: [kann, kannt, können]
+    answer: kann
+    explanation:
+      en: "*Meine Schwester* is *sie* (singular): the form is *kann*, the same as with *ich*."
+      fa: "*meine Schwester* سوم‌شخص مفرد است (*sie*): صورت فعل *kann* است، همانند *ich*."
+      de: "*Meine Schwester* ist *sie* (Singular). Die Form ist *kann*, wie bei *ich*."
+  - id: q4
+    type: gap-fill
+    prompt: Wir ___ morgen nicht kommen.
+    options: [kann, könnt, können]
+    answer: können
+    explanation:
+      en: With *wir* the form is *können*, like the infinitive.
+      fa: با *wir* صورت فعل *können* است، همانند مصدر.
+      de: Bei *wir* ist die Form *können*, wie der Infinitiv.
+  - id: q5
+    type: gap-fill
+    prompt: Ihr ___ hier parken.
+    options: [könnt, kannst, können]
+    answer: könnt
+    explanation:
+      en: With *ihr* the form is *könnt*.
+      fa: با *ihr* صورت فعل *könnt* است.
+      de: Bei *ihr* heißt es *könnt*.
+  - id: q6
+    type: multiple-choice
+    prompt: "ich / können / heute / nicht / kommen"
+    options: [Ich kann heute nicht kommen., Ich kann kommen heute nicht., Ich heute kann nicht kommen.]
+    answer: Ich kann heute nicht kommen.
+    explanation:
+      en: "*Kann* stands in position 2, the infinitive *kommen* at the very end."
+      fa: "*kann* در جایگاه دوم می‌آید و مصدر *kommen* در پایان جمله."
+      de: "*Kann* steht auf Position 2, der Infinitiv *kommen* ganz am Ende."
+  - id: q7
+    type: multiple-choice
+    prompt: "Herr Lang / können / sehr gut / tanzen"
+    options: [Herr Lang kann sehr gut tanzen., Herr Lang kann tanzen sehr gut., Herr Lang tanzen kann sehr gut.]
+    answer: Herr Lang kann sehr gut tanzen.
+    explanation:
+      en: "The modal verb is in position 2 and the infinitive closes the sentence."
+      fa: "فعل وجهی در جایگاه دوم است و مصدر جمله را به پایان می‌برد."
+      de: "Das Modalverb steht auf Position 2. Der Infinitiv steht am Ende."
+  - id: q8
+    type: true-false
+    prompt: Ich kann Deutsch sprechen.
+    answer: true
+    explanation:
+      en: "*Kann* is in position 2 and the infinitive *sprechen* at the end. The sentence is correct."
+      fa: "*kann* در جایگاه دوم و مصدر *sprechen* در پایان است. جمله درست است."
+      de: "*Kann* steht auf Position 2, *sprechen* am Ende. Der Satz ist richtig."
+  - id: q9
+    type: true-false
+    prompt: Kannst du mir hilfst?
+    answer: false
+    explanation:
+      en: "Only the modal verb is conjugated: *Kannst du mir helfen?*"
+      fa: "فقط فعل وجهی صرف می‌شود: *Kannst du mir helfen?*"
+      de: "Nur das Modalverb ist konjugiert: *Kannst du mir helfen?*"
+  - id: q10
+    type: true-false
+    prompt: Sie kann sehr gut Englisch.
+    answer: true
+    explanation:
+      en: "The meaning is clear, so the infinitive (*sprechen*) can be left out. The sentence is correct."
+      fa: "معنا روشن است، پس مصدر (*sprechen*) را می‌توان انداخت. جمله درست است."
+      de: "Die Bedeutung ist klar. Der Infinitiv (*sprechen*) kann fehlen. Der Satz ist richtig."
+  - id: q11
+    type: find-error
+    prompt: Wir können nicht zu kommen.
+    answer: zu
+    explanation:
+      en: "After a modal verb the infinitive has no *zu*: *Wir können nicht kommen.*"
+      fa: "پس از فعل وجهی، مصدر بدون *zu* می‌آید: *Wir können nicht kommen.*"
+      de: "Nach einem Modalverb steht der Infinitiv ohne *zu*: *Wir können nicht kommen.*"
+  - id: q12
+    type: find-error
+    prompt: Tom kannt sehr gut singen.
+    answer: kannt
+    explanation:
+      en: "With *er* (Tom) the form is *kann*, with no *-t*: *Tom kann sehr gut singen.*"
+      fa: "با *er* (تام) صورت فعل *kann* است، بدون *-t*: *Tom kann sehr gut singen.*"
+      de: "Bei *er* (Tom) heißt es *kann*, ohne *-t*: *Tom kann sehr gut singen.*"
+  - id: q13
+    type: word-order
+    answers:
+      - [kannst, du, Gitarre, spielen]
+    end: "?"
+    explanation:
+      en: "In a yes/no question the modal verb comes first, and the infinitive stays at the end."
+      fa: "در پرسش بله یا نه فعل وجهی در آغاز می‌آید و مصدر در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht das Modalverb am Anfang. Der Infinitiv bleibt am Ende."
+  - id: q14
+    type: word-order
+    answers:
+      - [wo, kann, ich, Brot, kaufen]
+    end: "?"
+    explanation:
+      en: "After the question word comes the modal verb in position 2; the infinitive goes to the end."
+      fa: "پس از واژهٔ پرسشی، فعل وجهی در جایگاه دوم می‌آید و مصدر به پایان جمله می‌رود."
+      de: "Nach dem Fragewort steht das Modalverb auf Position 2. Der Infinitiv steht am Ende."
+  - id: q15
+    type: typed-gap-fill
+    prompt: ___ (können) man hier mit Karte zahlen?
+    answers: [Kann]
+    explanation:
+      en: "*Man* takes the form of *er*: *kann*. As a question, it stands first."
+      fa: "*man* با صورت سوم‌شخص مفرد می‌آید: *kann*. در پرسش در آغاز جمله است."
+      de: "*Man* hat die Form von *er*: *kann*. In der Frage steht es am Anfang."
+  - id: q16
+    type: typed-gap-fill
+    prompt: Du ___ (können) sehr gut zeichnen.
+    answers: [kannst]
+    explanation:
+      en: With *du* the form is *kannst*.
+      fa: با *du* صورت فعل *kannst* است.
+      de: Bei *du* heißt es *kannst*.
+  - id: q17
+    type: matching
+    answer:
+      - [ich, kann]
+      - [du, kannst]
+      - [wir, können]
+      - [ihr, könnt]
+    explanation:
+      en: "The forms of *können*: *ich kann*, *du kannst*, *wir können*, *ihr könnt*."
+      fa: "صورت‌های *können*: *ich kann*، *du kannst*، *wir können*، *ihr könnt*."
+      de: "Die Formen von *können*: *ich kann*, *du kannst*, *wir können*, *ihr könnt*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 41dc6320cba89530
