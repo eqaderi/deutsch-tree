@@ -1,37 +1,357 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-animals
 kind: vocabulary
 level: B1
 chapter: b1-words-travel-nature
 order: 7
-status: coming-soon
+status: published
 title:
   en: "Animals"
   fa: "حیوانات"
   de: "Tiere"
+attemptSize: 15
 words:
   - word: Affe
+    class: noun
+    article: der
+    plural: Affen
+    level: B1
+    meaning:
+      en: monkey, ape
+      fa: میمون
+    definition: ein Tier, das gut auf Bäume klettert und dem Menschen ähnlich sieht
+    example:
+      de: Im Zoo schauen die Kinder am liebsten den Affen zu.
+      en: At the zoo the children like watching the monkeys best.
+      fa: در باغ‌وحش، بچه‌ها بیشتر از همه دوست دارند میمون‌ها را تماشا کنند.
+
   - word: Bär
+    class: noun
+    article: der
+    plural: Bären
+    level: B1
+    meaning:
+      en: bear
+      fa: خرس
+    definition: ein großes, starkes Tier mit dickem braunem Fell, das im Wald lebt
+    example:
+      de: In Kanada haben wir im Wald einen Bären gesehen.
+      en: We saw a bear in the forest in Canada.
+      fa: در کانادا در جنگل یک خرس دیدیم.
+
   - word: Biene
+    class: noun
+    article: die
+    plural: Bienen
+    level: B1
+    meaning:
+      en: bee
+      fa: زنبور عسل
+    definition: ein kleines fliegendes Insekt, das Honig macht
+    example:
+      de: Die Bienen fliegen von Blume zu Blume.
+      en: The bees fly from flower to flower.
+      fa: زنبورهای عسل از گلی به گل دیگر می‌روند.
+    alsoAccepted: [die Honigbiene]
+
   - word: Elefant
+    class: noun
+    article: der
+    plural: Elefanten
+    level: B1
+    meaning:
+      en: elephant
+      fa: فیل
+    definition: ein sehr großes graues Tier mit einer langen Nase und großen Ohren
+    example:
+      de: Ein Elefant frisst jeden Tag sehr viel Gras und Blätter.
+      en: An elephant eats a lot of grass and leaves every day.
+      fa: فیل هر روز مقدار زیادی علف و برگ می‌خورد.
+
   - word: Ente
+    class: noun
+    article: die
+    plural: Enten
+    level: B1
+    meaning:
+      en: duck
+      fa: اردک
+    definition: ein Vogel, der einen breiten, flachen Schnabel hat, gut schwimmen kann, auf Seen und Flüssen lebt und „quak“ macht
+    example:
+      de: Auf dem See schwimmen viele Enten.
+      en: Lots of ducks are swimming on the lake.
+      fa: اردک‌های زیادی روی دریاچه شنا می‌کنند.
+
   - word: Fliege
+    class: noun
+    article: die
+    plural: Fliegen
+    level: B1
+    meaning:
+      en: fly (the insect)
+      fa: مگس
+    definition: ein kleines schwarzes Insekt, das im Sommer oft durch das Haus fliegt und auf dem Essen sitzt
+    example:
+      de: Mach das Fenster zu, sonst kommen die Fliegen herein!
+      en: Close the window, or the flies will come in!
+      fa: پنجره را ببند، وگرنه مگس‌ها داخل می‌آیند!
+    alsoAccepted: [die Stubenfliege]
+
   - word: Giraffe
+    class: noun
+    article: die
+    plural: Giraffen
+    level: B1
+    meaning:
+      en: giraffe
+      fa: زرافه
+    definition: ein Tier aus Afrika mit einem sehr langen Hals
+    example:
+      de: Die Giraffe frisst die Blätter ganz oben am Baum.
+      en: The giraffe eats the leaves right at the top of the tree.
+      fa: زرافه برگ‌های بالای درخت را می‌خورد.
+
   - word: Hase
+    class: noun
+    article: der
+    plural: Hasen
+    level: B1
+    meaning:
+      en: hare, rabbit
+      fa: خرگوش
+    definition: ein kleines Tier mit langen Ohren, das schnell laufen und springen kann
+    example:
+      de: Auf dem Feld springt ein Hase.
+      en: A hare is jumping about in the field.
+      fa: خرگوشی در کشتزار جست‌وخیز می‌کند.
+    alsoAccepted: [das Kaninchen]
+
   - word: Insekt
+    class: noun
+    article: das
+    plural: Insekten
+    level: B1
+    meaning:
+      en: insect
+      fa: حشره
+    definition: ein kleines Tier mit sechs Beinen, zum Beispiel eine Fliege oder eine Ameise
+    example:
+      de: Im Sommer gibt es im Garten viele Insekten.
+      en: In summer there are lots of insects in the garden.
+      fa: تابستان در باغچه حشره‌های زیادی هست.
+
   - word: Krokodil
+    class: noun
+    article: das
+    plural: Krokodile
+    level: B1
+    meaning:
+      en: crocodile
+      fa: تمساح
+    definition: ein großes, gefährliches Tier mit vielen Zähnen, das im Wasser und an Land lebt
+    example:
+      de: Das Krokodil liegt am Fluss in der Sonne.
+      en: The crocodile is lying in the sun by the river.
+      fa: تمساح کنار رودخانه زیر آفتاب دراز کشیده است.
+    alsoAccepted: [der Alligator]
+
   - word: Kuh
+    class: noun
+    article: die
+    plural: Kühe
+    level: B1
+    meaning:
+      en: cow
+      fa: گاو (ماده)
+    definition: ein großes Tier auf dem Bauernhof, das Milch gibt
+    example:
+      de: Die Kühe stehen auf der Wiese und fressen Gras.
+      en: The cows are standing in the meadow, eating grass.
+      fa: گاوها در مرغزار ایستاده‌اند و علف می‌خورند.
+
   - word: Löwe
+    class: noun
+    article: der
+    plural: Löwen
+    level: B1
+    meaning:
+      en: lion
+      fa: شیر (حیوان)
+    definition: ein großes, gelbbraunes Tier aus Afrika, das man den König der Tiere nennt
+    example:
+      de: Der Löwe schläft fast den ganzen Tag.
+      en: The lion sleeps almost all day.
+      fa: شیر تقریباً تمام روز را می‌خوابد.
+
   - word: Maus
+    class: noun
+    article: die
+    plural: Mäuse
+    level: B1
+    meaning:
+      en: mouse
+      fa: موش
+    definition: ein sehr kleines graues Tier mit einem langen Schwanz, das Katzen gern fangen
+    example:
+      de: Unsere Katze hat eine Maus gefangen.
+      en: Our cat caught a mouse.
+      fa: گربهٔ ما یک موش گرفت.
+
   - word: Mücke
+    class: noun
+    article: die
+    plural: Mücken
+    level: B1
+    meaning:
+      en: mosquito, gnat
+      fa: پشه
+    definition: ein kleines fliegendes Insekt, das Menschen sticht und ihr Blut trinkt
+    example:
+      de: Am See haben mich die Mücken die ganze Nacht gestochen.
+      en: At the lake the mosquitoes bit me all night.
+      fa: کنار دریاچه پشه‌ها تمام شب نیشم زدند.
+    alsoAccepted: [der Moskito, die Schnake, die Gelse, die Stechmücke]
+
   - word: Pinguin
+    class: noun
+    article: der
+    plural: Pinguine
+    level: B1
+    meaning:
+      en: penguin
+      fa: پنگوئن
+    definition: ein schwarz-weißer Vogel, der nicht fliegen, aber sehr gut schwimmen kann
+    example:
+      de: Pinguine leben dort, wo es sehr kalt ist.
+      en: Penguins live where it is very cold.
+      fa: پنگوئن‌ها جایی زندگی می‌کنند که خیلی سرد است.
+
   - word: Schaf
+    class: noun
+    article: das
+    plural: Schafe
+    level: B1
+    meaning:
+      en: sheep
+      fa: گوسفند
+    definition: ein Tier auf dem Bauernhof, das uns Wolle gibt
+    example:
+      de: Auf dem Hügel stehen viele Schafe.
+      en: There are lots of sheep on the hill.
+      fa: گوسفندهای زیادی روی تپه هستند.
+
   - word: Schildkröte
+    class: noun
+    article: die
+    plural: Schildkröten
+    level: B1
+    meaning:
+      en: tortoise, turtle
+      fa: لاک‌پشت
+    definition: ein langsames Tier mit einem harten Panzer auf dem Rücken
+    example:
+      de: Unsere Schildkröte ist schon 40 Jahre alt.
+      en: Our tortoise is already 40 years old.
+      fa: لاک‌پشت ما چهل سال دارد.
+
   - word: Schlange
+    class: noun
+    article: die
+    plural: Schlangen
+    level: B1
+    meaning:
+      en: snake; also a queue (of people waiting)
+      fa: مار؛ همچنین صف (آدم‌های منتظر)
+    definition: ein langes Tier ohne Beine; auch eine lange Reihe von Menschen, die warten
+    example:
+      de: Vorsicht, im hohen Gras können Schlangen sein!
+      en: Careful, there may be snakes in the long grass!
+      fa: مراقب باشید، ممکن است در علف‌های بلند مار باشد!
+
   - word: Haustier
+    class: noun
+    article: das
+    plural: Haustiere
+    level: B1
+    meaning:
+      en: pet
+      fa: حیوان خانگی
+    definition: ein Tier, das bei Menschen in der Wohnung lebt, zum Beispiel eine Katze
+    example:
+      de: In unserem Haus sind Haustiere leider verboten.
+      en: Unfortunately pets are not allowed in our building.
+      fa: متأسفانه نگهداری حیوان خانگی در ساختمان ما ممنوع است.
+
   - word: füttern
+    class: verb
+    level: B1
+    meaning:
+      en: to feed (an animal or a baby)
+      fa: غذا دادن (به حیوان یا بچهٔ کوچک)
+    definition: einem Tier oder einem kleinen Kind zu essen geben
+    example:
+      de: Kannst du bitte die Katze füttern, wenn ich weg bin?
+      en: Can you feed the cat while I'm away, please?
+      fa: می‌توانی وقتی نیستم به گربه غذا بدهی؟
+
+  # beißen is with the teeth, stechen with a sting or a point; neither is offered as a wrong meaning of the other.
   - word: beißen
+    class: verb
+    level: B1
+    meaning:
+      en: to bite (with the teeth)
+      fa: گاز گرفتن (با دندان)
+    definition: die Zähne fest in etwas oder in jemanden drücken
+    example:
+      de: Keine Angst, unser Hund beißt nicht.
+      en: Don't worry, our dog doesn't bite.
+      fa: نترسید، سگ ما گاز نمی‌گیرد.
+    tooCloseTo: [stechen]
+
   - word: stechen
+    class: verb
+    level: B1
+    meaning:
+      en: to sting (of a bee or a mosquito); to prick
+      fa: نیش زدن (زنبور یا پشه)؛ سوراخ کردن با چیز تیز
+    definition: mit etwas Spitzem in die Haut eindringen, so wie eine Biene es tut
+    example:
+      de: Eine Biene hat mich in den Finger gestochen.
+      en: A bee stung me on the finger.
+      fa: زنبوری انگشتم را نیش زد.
+    tooCloseTo: [beißen]
+
   - word: wild
+    class: adjective
+    level: B1
+    meaning:
+      en: wild (living free in nature, not kept by people)
+      fa: وحشی (حیوان)، آزاد در طبیعت
+    definition: frei in der Natur lebend und nicht bei Menschen
+    example:
+      de: In diesem Wald leben noch wilde Pferde.
+      en: Wild horses still live in this forest.
+      fa: هنوز در این جنگل اسب‌های وحشی زندگی می‌کنند.
+
   - word: Tierpark
+    class: noun
+    article: der
+    plural: Tierparks
+    level: B1
+    meaning:
+      en: zoo, wildlife park
+      fa: باغ‌وحش، پارک حیات وحش
+    definition: ein großer Park, in dem man viele Tiere ansehen kann
+    example:
+      de: Am Sonntag gehen wir mit den Kindern in den Tierpark.
+      en: On Sunday we're going to the zoo with the children.
+      fa: یکشنبه با بچه‌ها به باغ‌وحش می‌رویم.
+    alsoAccepted: [der Zoo, der Tiergarten, der Wildpark]
+
+review:
+  reviewer: "independent AI agents (three fresh Claude Opus 5.5 subagents, review
+    sheet only: all 144 questions, then 9 and 4 changed or disputed ones; not
+    people)"
+  date: 2026-11-28
+  pool: 18fd5a9aa226b885

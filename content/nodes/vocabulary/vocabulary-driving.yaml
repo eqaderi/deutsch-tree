@@ -1,40 +1,400 @@
 # Vocabulary theme of B1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-driving
 kind: vocabulary
 level: B1
 chapter: b1-words-travel-nature
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Driving and vehicles"
   fa: "رانندگی و وسیله‌های نقلیه"
   de: "Fahren und Fahrzeuge"
+attemptSize: 15
 words:
   - word: abbiegen
+    class: verb
+    level: B1
+    meaning:
+      en: to turn (left or right into another street)
+      fa: پیچیدن (به چپ یا راست، به خیابانی دیگر)
+    definition: an einer Kreuzung nach links oder rechts in eine andere Straße fahren
+    example:
+      de: An der nächsten Ampel musst du links abbiegen.
+      en: At the next traffic lights you have to turn left.
+      fa: سر چراغ بعدی باید به چپ بپیچی.
+    alsoAccepted: [einbiegen]
+
   - word: überholen
+    class: verb
+    level: B1
+    meaning:
+      en: to overtake, to pass (a slower vehicle)
+      fa: سبقت گرفتن
+    definition: an einem langsameren Auto vorbeifahren und dann vor ihm sein
+    example:
+      de: Die Straße ist hier zu schmal, man darf nicht überholen.
+      en: The road is too narrow here, you're not allowed to overtake.
+      fa: جاده اینجا خیلی باریک است و سبقت گرفتن ممنوع است.
+
   - word: überqueren
+    class: verb
+    level: B1
+    meaning:
+      en: to cross (a street, a river)
+      fa: عبور کردن از عرض (خیابان یا رود)
+    definition: von einer Seite einer Straße oder eines Flusses auf die andere Seite gehen oder fahren
+    example:
+      de: Überquere die Straße nur, wenn die Ampel grün ist.
+      en: Only cross the road when the light is green.
+      fa: فقط وقتی چراغ سبز است از خیابان رد شو.
+    tooCloseTo: [überfahren]
+
   - word: überfahren
+    class: verb
+    level: B1
+    meaning:
+      en: to run over (drive over a person or an animal)
+      fa: زیر گرفتن (با خودرو)
+    definition: mit einem Auto einen Menschen oder ein Tier treffen, so dass er oder es unter das Auto kommt
+    example:
+      de: Fast hätte ich eine Katze überfahren.
+      en: I almost ran over a cat.
+      fa: نزدیک بود گربه‌ای را زیر بگیرم.
+
   - word: bremsen
+    class: verb
+    level: B1
+    meaning:
+      en: to brake
+      fa: ترمز کردن
+    definition: das Auto oder das Fahrrad langsamer machen
+    example:
+      de: Der Fahrer konnte gerade noch rechtzeitig bremsen.
+      en: The driver was just able to brake in time.
+      fa: راننده درست به‌موقع توانست ترمز کند.
+    alsoAccepted: [abbremsen]
+
   - word: Bremse
+    class: noun
+    article: die
+    plural: Bremsen
+    level: B1
+    meaning:
+      en: brake (the part of a car or bike that slows it down)
+      fa: ترمز (قطعه‌ای از خودرو یا دوچرخه)
+    definition: das Teil am Auto oder am Fahrrad, mit dem man langsamer wird oder hält
+    example:
+      de: Die Bremsen an meinem Fahrrad funktionieren nicht richtig.
+      en: The brakes on my bike aren't working properly.
+      fa: ترمزهای دوچرخه‌ام درست کار نمی‌کنند.
+
   - word: hupen
+    class: verb
+    level: B1
+    meaning:
+      en: to honk, to sound the horn
+      fa: بوق زدن
+    definition: mit dem Auto ein lautes Signal geben, damit andere aufpassen
+    example:
+      de: Warum hupt der Fahrer hinter uns die ganze Zeit?
+      en: Why does the driver behind us keep honking?
+      fa: چرا رانندهٔ پشت سر ما مدام بوق می‌زند؟
+
   - word: Strafzettel
+    class: noun
+    article: der
+    plural: Strafzettel
+    level: B1
+    meaning:
+      en: ticket (for wrong parking or speeding)
+      fa: برگهٔ جریمه (برای پارک ممنوع یا سرعت غیرمجاز)
+    definition: ein Papier von der Polizei oder der Stadt, weil man falsch geparkt hat oder zu schnell gefahren ist und Geld bezahlen muss
+    example:
+      de: Ich habe schon wieder einen Strafzettel bekommen, weil ich falsch geparkt habe.
+      en: I got a parking ticket again because I parked in the wrong place.
+      fa: باز هم برگهٔ جریمه گرفتم، چون جای ممنوع پارک کرده بودم.
+    alsoAccepted: [das Knöllchen]
+
+  # The scope list gives no "sich": the node teaches "sich anschnallen", to fasten your seat belt.
   - word: anschnallen
+    class: verb
+    reflexive: sich
+    level: B1
+    meaning:
+      en: to fasten your seat belt, to buckle up
+      fa: کمربند ایمنی را بستن
+    definition: im Auto oder im Flugzeug den Gurt um den eigenen Körper schließen
+    example:
+      de: Bitte schnallen Sie sich an, wir fahren gleich los.
+      en: Please fasten your seat belt, we're about to set off.
+      fa: لطفاً کمربند ایمنی‌تان را ببندید، الان راه می‌افتیم.
+    alsoAccepted: [sich angurten]
+
   - word: losfahren
+    class: verb
+    level: B1
+    meaning:
+      en: to set off, to drive off
+      fa: راه افتادن (با وسیلهٔ نقلیه)
+    definition: anfangen zu fahren und einen Ort mit dem Auto, dem Bus oder dem Zug verlassen
+    example:
+      de: Wir fahren morgen früh um sechs Uhr los.
+      en: We're setting off at six tomorrow morning.
+      fa: فردا صبح ساعت شش راه می‌افتیم.
+    alsoAccepted: [abfahren, wegfahren]
+
   - word: stoppen
+    class: verb
+    level: B1
+    meaning:
+      en: to stop (a vehicle or a person)
+      fa: متوقف کردن، نگه داشتن
+    definition: etwas oder jemanden zum Stehen bringen
+    example:
+      de: Die Polizei hat das Auto an der Grenze gestoppt.
+      en: The police stopped the car at the border.
+      fa: پلیس خودرو را در مرز متوقف کرد.
+    alsoAccepted: [anhalten]
+
   - word: Halt
+    class: noun
+    article: der
+    plural: Halte
+    level: B1
+    meaning:
+      en: stop (a short stop of a bus or train on its way)
+      fa: توقف (کوتاه اتوبوس یا قطار در مسیر)
+    definition: eine kurze Pause, die ein Bus oder ein Zug an einem Ort macht
+    example:
+      de: Der Zug fährt ohne Halt bis München.
+      en: The train goes to Munich without stopping.
+      fa: قطار بدون توقف تا مونیخ می‌رود.
+    alsoAccepted: [der Stopp, der Zwischenhalt, der Aufenthalt]
+
   - word: wenden
+    class: verb
+    level: B1
+    meaning:
+      en: to turn round, to make a U-turn (and drive back)
+      fa: دور زدن (با خودرو و برگشتن)
+    definition: mit dem Auto umdrehen und in die andere Richtung zurückfahren
+    example:
+      de: Hier ist die Straße zu Ende, wir müssen wenden.
+      en: The road ends here, we have to turn round.
+      fa: جاده اینجا تمام می‌شود، باید دور بزنیم.
+    alsoAccepted: [umdrehen, umkehren]
+
   - word: tanken
+    class: verb
+    level: B1
+    meaning:
+      en: to fill up, to get petrol
+      fa: بنزین زدن، سوخت‌گیری کردن
+    definition: Benzin oder Diesel in das Auto füllen
+    example:
+      de: Vor der langen Fahrt müssen wir noch tanken.
+      en: We still need to fill up before the long drive.
+      fa: پیش از سفر طولانی باید بنزین بزنیم.
+    alsoAccepted: [volltanken]
+
   - word: Tankstelle
+    class: noun
+    article: die
+    plural: Tankstellen
+    level: B1
+    meaning:
+      en: petrol station, gas station
+      fa: پمپ بنزین
+    definition: ein Ort an der Straße, wo man Benzin für das Auto kaufen kann
+    example:
+      de: Die nächste Tankstelle ist zwanzig Kilometer entfernt.
+      en: The nearest petrol station is twenty kilometres away.
+      fa: نزدیک‌ترین پمپ بنزین بیست کیلومتر با اینجا فاصله دارد.
+
   - word: Benzin
+    class: noun
+    article: das
+    number: singular-only
+    level: B1
+    meaning:
+      en: petrol, gasoline
+      fa: بنزین
+    definition: die Flüssigkeit, die man für die meisten Autos tankt; Lastwagen fahren meistens mit Diesel
+    example:
+      de: Das Benzin ist schon wieder teurer geworden.
+      en: Petrol has become more expensive again.
+      fa: بنزین باز هم گران‌تر شده است.
+    alsoAccepted: [der Sprit]
+
   - word: Panne
+    class: noun
+    article: die
+    plural: Pannen
+    level: B1
+    meaning:
+      en: breakdown (when a car stops working on the way)
+      fa: خرابی خودرو در راه
+    definition: ein plötzlicher Schaden, so dass das Auto unterwegs nicht mehr fährt
+    example:
+      de: Wir hatten auf der Autobahn eine Panne und mussten zwei Stunden warten.
+      en: We broke down on the motorway and had to wait two hours.
+      fa: در بزرگراه ماشینمان خراب شد و مجبور شدیم دو ساعت منتظر بمانیم.
+    alsoAccepted: [die Autopanne]
+
   - word: Fahrzeug
+    class: noun
+    article: das
+    plural: Fahrzeuge
+    level: B1
+    meaning:
+      en: vehicle
+      fa: وسیلهٔ نقلیه
+    definition: etwas, mit dem man fährt, zum Beispiel ein Auto, ein Bus oder ein Fahrrad
+    example:
+      de: In dieser Straße dürfen keine Fahrzeuge parken.
+      en: No vehicles may park in this street.
+      fa: در این خیابان هیچ وسیلهٔ نقلیه‌ای حق پارک ندارد.
+    tooCloseTo: [Kraftfahrzeug, Kfz, Pkw, Laster, Motorrad, E-Bike, Mountainbike]
+    alsoAccepted: [das Verkehrsmittel]
+
+  # Kfz is the short form of Kraftfahrzeug; each is right for the other.
   - word: Kraftfahrzeug
+    class: noun
+    article: das
+    plural: Kraftfahrzeuge
+    level: B1
+    meaning:
+      en: motor vehicle
+      fa: وسیلهٔ نقلیهٔ موتوری
+    definition: ein Fahrzeug mit Motor, zum Beispiel ein Auto oder ein Motorrad
+    example:
+      de: Für jedes Kraftfahrzeug braucht man eine Versicherung.
+      en: You need insurance for every motor vehicle.
+      fa: برای هر وسیلهٔ نقلیهٔ موتوری بیمه لازم است.
+    alsoAccepted: [das Kfz]
+    tooCloseTo: [Kfz, Fahrzeug, Pkw, Laster, Motorrad]
+
   - word: Kfz
+    class: noun
+    article: das
+    plural: Kfzs
+    level: B1
+    meaning:
+      en: motor vehicle (the short form, in letters)
+      fa: وسیلهٔ نقلیهٔ موتوری (شکل کوتاه‌شده با حروف اول)
+    definition: die kurze Form, mit drei Buchstaben, für ein Fahrzeug mit Motor
+    example:
+      de: Ein Kfz muss man bei der Zulassungsstelle anmelden.
+      en: You have to register a motor vehicle at the registration office.
+      fa: وسیلهٔ نقلیهٔ موتوری را باید در ادارهٔ شماره‌گذاری ثبت کرد.
+    alsoAccepted: [das Kraftfahrzeug]
+    tooCloseTo: [Kraftfahrzeug, Fahrzeug, Pkw, Laster, Motorrad]
+
   - word: Pkw
+    class: noun
+    article: der
+    plural: Pkws
+    level: B1
+    meaning:
+      en: car (the official word, for people, not goods)
+      fa: خودروی سواری
+    definition: ein Auto für Personen, kein Lastwagen und kein Bus
+    example:
+      de: Ein Pkw ist gegen einen Baum gefahren.
+      en: A car crashed into a tree.
+      fa: یک خودروی سواری به درختی برخورد کرد.
+    alsoAccepted: [das Auto, der Personenkraftwagen, der Wagen, der PKW, der Personenwagen]
+
   - word: Laster
+    class: noun
+    article: der
+    plural: Laster
+    level: B1
+    meaning:
+      en: truck, lorry
+      fa: کامیون
+    definition: ein großes Auto, das schwere Sachen transportiert
+    example:
+      de: Auf der Autobahn fahren nachts viele Laster.
+      en: Lots of lorries drive on the motorway at night.
+      fa: شب‌ها کامیون‌های زیادی در بزرگراه رفت‌وآمد می‌کنند.
+    alsoAccepted: [der Lastwagen, der Lkw, der LKW, der Lastkraftwagen]
+
   - word: Motorrad
+    class: noun
+    article: das
+    plural: Motorräder
+    level: B1
+    meaning:
+      en: motorbike, motorcycle
+      fa: موتورسیکلت
+    definition: ein schnelles Fahrzeug mit zwei Rädern und einem Motor
+    example:
+      de: Mein Bruder fährt jeden Sommer mit dem Motorrad nach Italien.
+      en: Every summer my brother rides his motorbike to Italy.
+      fa: برادرم هر تابستان با موتورسیکلت به ایتالیا می‌رود.
+    alsoAccepted: [das Kraftrad]
+
   - word: E-Bike
+    class: noun
+    article: das
+    plural: E-Bikes
+    level: B1
+    meaning:
+      en: e-bike, electric bicycle
+      fa: دوچرخهٔ برقی
+    definition: ein Fahrrad mit einem kleinen Motor, der beim Treten hilft
+    example:
+      de: Mit dem E-Bike komme ich ohne Mühe den Berg hinauf.
+      en: With the e-bike I get up the hill without any effort.
+      fa: با دوچرخهٔ برقی بی‌زحمت از سربالایی بالا می‌روم.
+    alsoAccepted: [das Elektrofahrrad, das Pedelec]
+
   - word: Mountainbike
+    class: noun
+    article: das
+    plural: Mountainbikes
+    level: B1
+    meaning:
+      en: mountain bike
+      fa: دوچرخهٔ کوهستان
+    definition: ein stabiles Fahrrad für Wege im Wald und in den Bergen
+    example:
+      de: Am Wochenende fahre ich mit dem Mountainbike durch den Wald.
+      en: At weekends I ride my mountain bike through the forest.
+      fa: آخر هفته‌ها با دوچرخهٔ کوهستان در جنگل رکاب می‌زنم.
+
   - word: Mobilität
+    class: noun
+    article: die
+    plural: Mobilitäten
+    level: B1
+    meaning:
+      en: mobility (being able to get around and travel easily)
+      fa: تحرک، امکان رفت‌وآمد
+    definition: die Möglichkeit, leicht von einem Ort zum anderen zu kommen
+    example:
+      de: Für viele Menschen auf dem Land bedeutet ein Auto Mobilität.
+      en: For many people in the countryside a car means mobility.
+      fa: برای بسیاری از مردم روستاها، خودرو یعنی امکان رفت‌وآمد.
+
   - word: mobil
+    class: adjective
+    level: B1
+    meaning:
+      en: mobile (able to get around easily)
+      fa: متحرک، قادر به رفت‌وآمد
+    definition: so, dass man sich leicht bewegen oder reisen kann
+    example:
+      de: Mit dem neuen Rollstuhl ist meine Oma wieder mobil.
+      en: With the new wheelchair my grandma can get around again.
+      fa: مادربزرگم با ویلچر تازه دوباره می‌تواند رفت‌وآمد کند.
+    alsoAccepted: [beweglich]
+
+review:
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: all 162 questions, then 33 changed or disputed ones; not
+    people)"
+  date: 2026-11-28
+  pool: 19db9a424e4bf060
