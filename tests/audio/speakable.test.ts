@@ -87,3 +87,16 @@ test.each([
 test('a number in a form this does not know stays as written, so the content check can name it', () => {
   expect(speakable('Wir treffen uns am 3.5.2025.')).toMatch(/\d/)
 })
+
+// Piper says the headword "ca." as "Ka" (ticket #82), so it is spoken as the word it stands for.
+test.each([
+  ['ca.', 'circa'],
+  ['Die Fahrt dauert ca. zwei Stunden.', 'Die Fahrt dauert circa zwei Stunden.'],
+  ['Es kostet ca. 10 Euro.', 'Es kostet circa zehn Euro.'],
+])('the abbreviation in "%s" is spoken in full', (written, spoken) => {
+  expect(speakable(written)).toBe(spoken)
+})
+
+test('letters that only end like an abbreviation stay as written', () => {
+  expect(speakable('Das ist Ihre Musica.')).toBe('Das ist Ihre Musica.')
+})

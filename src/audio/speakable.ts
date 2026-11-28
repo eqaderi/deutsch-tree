@@ -94,6 +94,8 @@ function decimalWords(whole: string, fraction: string): string {
 }
 
 const RULES: Array<[RegExp, (...groups: string[]) => string]> = [
+  // An abbreviation, said as the word it stands for: Piper says "ca." as "Ka" (ticket #82).
+  [/(?<!\p{L})ca\./gu, () => 'circa'],
   // A time: "14:35 Uhr", "14.35 Uhr", "8:05".
   [
     new RegExp(

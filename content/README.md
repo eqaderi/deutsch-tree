@@ -940,6 +940,10 @@ the command are in the main README, "Audio".
 - Numbers are spoken as words: `85 Jahre`, `14:35 Uhr`, `am 3. Mai`, `1990`,
   `3,50 €` and `20 %` need nothing. A number in another form (`3.5.2025`) is
   an error that asks you to write it in words.
+- An abbreviation is spoken as the word it stands for where `speakable`
+  (`src/audio/speakable.ts`) knows it: so far *ca.* as *circa*. Piper may
+  misread any other (it says a bare *ca.* as "Ka"); add it there, with a
+  test, before publishing a word or sentence that holds it.
 - Audio is not part of the review record: changing an example needs new
   audio, never a new review.
 - Listen to new audio once. When the voice slips on an item, say it again with
