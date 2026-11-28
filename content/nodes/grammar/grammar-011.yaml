@@ -4,10 +4,297 @@ kind: grammar
 level: A1
 chapter: a1-verb-patterns
 order: 7
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-139]
 title:
   en: "Verb + *Infinitiv* without *zu* (*gehen*, *bleiben*)"
   fa: "فعل + مصدر بدون *zu* (*gehen*، *bleiben*)"
   de: "Verb + Infinitiv ohne *zu* (*gehen*, *bleiben*)"
+
+explanations:
+  en:
+    rule: >
+      *Gehen* and *bleiben* can take a second verb in the infinitive, without
+      *zu*. The conjugated verb stands in position 2 and the infinitive goes
+      to the end: *Wir gehen heute einkaufen.* With *gehen* you say what you
+      go and do (*schwimmen gehen*, *essen gehen*, *spazieren gehen*); with
+      *bleiben* that someone stays as they are (*sitzen bleiben*, *stehen
+      bleiben*). The infinitive at the end has no ending and stays one word,
+      also a separable verb: *einkaufen*.
+  fa:
+    rule: >
+      *gehen* و *bleiben* می‌توانند فعل دومی را به شکل مصدر و بدون *zu* با
+      خود بیاورند. فعل صرف‌شده در جایگاه دوم می‌آید و مصدر به پایان جمله
+      می‌رود: *Wir gehen heute einkaufen.* با *gehen* می‌گوییم برای چه کاری
+      می‌رویم (*schwimmen gehen*، *essen gehen*، *spazieren gehen*) و با
+      *bleiben* می‌گوییم کسی یا چیزی در همان حال می‌ماند (*sitzen bleiben*،
+      *stehen bleiben*). مصدرِ پایان جمله شناسه نمی‌گیرد و یک واژه می‌ماند،
+      حتی اگر فعل جداشدنی باشد: *einkaufen*.
+  de:
+    rule: >
+      Nach *gehen* und *bleiben* kann ein zweites Verb im Infinitiv stehen,
+      ohne *zu*. Das konjugierte Verb steht auf Position 2, der Infinitiv am
+      Ende: *Wir gehen heute einkaufen.* Mit *gehen* sagt man, was man
+      machen geht (*schwimmen gehen*, *essen gehen*). Mit *bleiben* sagt man,
+      dass jemand so bleibt (*sitzen bleiben*, *stehen bleiben*). Der
+      Infinitiv bleibt ein Wort, auch *einkaufen*.
+
+table:
+  columns:
+    - { en: Position 1, fa: جایگاه اول, de: Position 1 }
+    - {
+        en: "Position 2: *gehen* / *bleiben*",
+        fa: "جایگاه دوم: *gehen* / *bleiben*",
+        de: "Position 2: *gehen* / *bleiben*",
+      }
+    - { en: Middle, fa: میانهٔ جمله, de: Mitte }
+    - { en: "End: infinitive", fa: "پایان جمله: مصدر", de: "Ende: Infinitiv" }
+  rows:
+    - [Wir, gehen, heute, einkaufen.]
+    - [Ich, gehe, am Samstag, schwimmen.]
+    - [Am Abend, gehen, wir, essen.]
+    - [Mein Opa, geht, jeden Tag, spazieren.]
+    - [Die Kinder, bleiben, noch, sitzen.]
+    - [Der Bus, bleibt, an der Ampel, stehen.]
+
+examples:
+  - de: Wir gehen heute einkaufen.
+    en: We're going shopping today.
+    fa: ما امروز به خرید می‌رویم.
+  - de: Ich gehe am Samstag schwimmen.
+    en: I'm going swimming on Saturday.
+    fa: من شنبه به شنا می‌روم.
+  - de: Gehen wir heute Abend essen?
+    en: Shall we go out to eat tonight?
+    fa: امشب برای شام بیرون برویم؟
+  - de: Mein Opa geht jeden Morgen spazieren.
+    en: My grandpa goes for a walk every morning.
+    fa: پدربزرگم هر صبح قدم می‌زند.
+  - de: Bleiben Sie bitte sitzen!
+    en: Please stay seated!
+    fa: لطفاً از جایتان بلند نشوید!
+  - de: Der Bus bleibt an der Ampel stehen.
+    en: The bus stops at the traffic lights.
+    fa: اتوبوس پشت چراغ راهنمایی می‌ایستد.
+  - de: Geht ihr am Wochenende tanzen?
+    en: Are you going dancing at the weekend?
+    fa: آخر هفته برای رقصیدن بیرون می‌روید؟
+  - de: Heute bleibe ich im Bett liegen.
+    en: Today I'm staying in bed.
+    fa: امروز در رختخواب می‌مانم.
+
+mistakes:
+  - wrong: Wir gehen heute zu einkaufen.
+    right: Wir gehen heute einkaufen.
+    why:
+      en: "After *gehen* and *bleiben* the infinitive has no *zu*."
+      fa: "پس از *gehen* و *bleiben* مصدر بدون *zu* می‌آید."
+      de: "Nach *gehen* und *bleiben* steht der Infinitiv ohne *zu*."
+  - wrong: Ich gehe heute Abend esse.
+    right: Ich gehe heute Abend essen.
+    why:
+      en: "Only *gehen* is conjugated; the second verb stays in the infinitive."
+      fa: "فقط *gehen* صرف می‌شود و فعل دوم به شکل مصدر می‌ماند."
+      de: "Nur *gehen* ist konjugiert. Das zweite Verb bleibt im Infinitiv."
+  - wrong: Wir gehen heute kaufen ein.
+    right: Wir gehen heute einkaufen.
+    why:
+      en: "The infinitive at the end stays one word, also a separable verb."
+      fa: "مصدرِ پایان جمله یک واژه می‌ماند، حتی اگر فعل جداشدنی باشد."
+      de: "Der Infinitiv am Ende bleibt ein Wort, auch bei trennbaren Verben."
+  - wrong: Ich schwimmen gehe am Samstag.
+    right: Ich gehe am Samstag schwimmen.
+    why:
+      en: "The conjugated verb is in position 2 and the infinitive at the end."
+      fa: "فعل صرف‌شده در جایگاه دوم می‌آید و مصدر در پایان جمله."
+      de: "Das konjugierte Verb steht auf Position 2, der Infinitiv am Ende."
+
+# 21 questions, every question type.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir gehen heute ___.
+    options: [einkaufen, kaufen ein, zu einkaufen]
+    answer: einkaufen
+    explanation:
+      en: "After *gehen* the infinitive has no *zu* and stays one word: *einkaufen*."
+      fa: "پس از *gehen* مصدر بدون *zu* می‌آید و یک واژه می‌ماند: *einkaufen*."
+      de: "Nach *gehen* steht der Infinitiv ohne *zu*, als ein Wort: *einkaufen*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich gehe am Samstag ___.
+    options: [schwimmen, schwimme, zu schwimmen]
+    answer: schwimmen
+    explanation:
+      en: "The second verb stays in the infinitive, without *zu*: *schwimmen*."
+      fa: "فعل دوم به شکل مصدر و بدون *zu* می‌ماند: *schwimmen*."
+      de: "Das zweite Verb bleibt im Infinitiv, ohne *zu*: *schwimmen*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Mein Opa ___ jeden Tag spazieren.
+    options: [geht, gehen, gehst]
+    answer: geht
+    explanation:
+      en: "*Mein Opa* is *er*, so *gehen* takes *-t*: *er geht*."
+      fa: "*mein Opa* سوم‌شخص مفرد است (*er*)، پس *gehen* شناسهٔ *-t* می‌گیرد: *er geht*."
+      de: "*Mein Opa* ist *er*. *Gehen* bekommt *-t*: *er geht*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Bleiben Sie bitte ___!
+    options: [sitzen, sitzt, zu sitzen]
+    answer: sitzen
+    explanation:
+      en: "After *bleiben* the infinitive has no *zu*: *sitzen bleiben*."
+      fa: "پس از *bleiben* مصدر بدون *zu* می‌آید: *sitzen bleiben*."
+      de: "Nach *bleiben* steht der Infinitiv ohne *zu*: *sitzen bleiben*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "wir / essen gehen / heute Abend"
+    options: [Wir gehen heute Abend essen., Wir essen heute Abend gehen., Wir gehen heute Abend zu essen.]
+    answer: Wir gehen heute Abend essen.
+    explanation:
+      en: "*Gehen* is conjugated in position 2, and *essen* goes to the end without *zu*."
+      fa: "*gehen* صرف می‌شود و در جایگاه دوم می‌آید و *essen* بدون *zu* به پایان جمله می‌رود."
+      de: "*Gehen* ist konjugiert auf Position 2, *essen* steht ohne *zu* am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Gehst du morgen tanzen?, Gehst du morgen zu tanzen?, Gehst du tanzt morgen?]
+    answer: Gehst du morgen tanzen?
+    explanation:
+      en: "*Gehst* comes first in the question, *tanzen* last, without *zu*."
+      fa: "در جملهٔ پرسشی *gehst* در آغاز می‌آید و *tanzen* بدون *zu* در آخر."
+      de: "In der Frage steht *gehst* am Anfang, *tanzen* ohne *zu* am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Der Bus ___ an der Haltestelle stehen.
+    options: [bleibt, bleiben, bleibst]
+    answer: bleibt
+    explanation:
+      en: "*Der Bus* is *er*, so *bleiben* takes *-t*: *er bleibt … stehen*."
+      fa: "*der Bus* سوم‌شخص مفرد است (*er*)، پس *bleiben* شناسهٔ *-t* می‌گیرد: *er bleibt … stehen*."
+      de: "*Der Bus* ist *er*. *Bleiben* bekommt *-t*: *er bleibt … stehen*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Am Sonntag gehen wir im Park ___.
+    options: [spazieren, spazierst, spaziert]
+    answer: spazieren
+    explanation:
+      en: "The second verb is the infinitive: *spazieren gehen*."
+      fa: "فعل دوم به شکل مصدر می‌آید: *spazieren gehen*."
+      de: "Das zweite Verb steht im Infinitiv: *spazieren gehen*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich ___ (gehen) heute Abend tanzen.
+    answers: [gehe]
+    explanation:
+      en: "With *ich* the ending is *-e*: *ich gehe … tanzen*."
+      fa: "با *ich* شناسهٔ فعل *-e* است: *ich gehe … tanzen*."
+      de: "Bei *ich* ist die Endung *-e*: *ich gehe … tanzen*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Geht ihr morgen ___ (schwimmen)?
+    answers: [schwimmen]
+    explanation:
+      en: "Only *geht* is conjugated; *schwimmen* stays in the infinitive."
+      fa: "فقط *geht* صرف شده است و *schwimmen* به شکل مصدر می‌ماند."
+      de: "Nur *geht* ist konjugiert. *Schwimmen* bleibt im Infinitiv."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Die Kinder ___ (bleiben) noch ein bisschen sitzen.
+    answers: [bleiben]
+    explanation:
+      en: "*Die Kinder* is *sie* (plural), so the ending is *-en*: *sie bleiben*."
+      fa: "*die Kinder* سوم‌شخص جمع است (*sie*)، پس شناسهٔ فعل *-en* است: *sie bleiben*."
+      de: "*Die Kinder* sind *sie* (Plural). Die Endung ist *-en*: *sie bleiben*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: ___ (gehen) du heute einkaufen?
+    answers: [Gehst]
+    explanation:
+      en: "With *du* the ending is *-st*; it starts the question, so it has a capital."
+      fa: "با *du* شناسهٔ فعل *-st* است و چون در آغاز جملهٔ پرسشی آمده، با حرف بزرگ نوشته می‌شود."
+      de: "Bei *du* ist die Endung *-st*. Am Satzanfang schreibt man groß."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Mein Vater ___ (gehen) jeden Abend spazieren.
+    answers: [geht]
+    explanation:
+      en: "*Mein Vater* is *er*: *er geht … spazieren*."
+      fa: "*mein Vater* سوم‌شخص مفرد است (*er*): *er geht … spazieren*."
+      de: "*Mein Vater* ist *er*: *er geht … spazieren*."
+  - id: true-1
+    type: true-false
+    prompt: Wir gehen heute einkaufen.
+    answer: true
+    explanation:
+      en: "*Gehen* in position 2, *einkaufen* at the end without *zu*. The sentence is correct."
+      fa: "*gehen* در جایگاه دوم و *einkaufen* بدون *zu* در پایان جمله. جمله درست است."
+      de: "*Gehen* auf Position 2, *einkaufen* ohne *zu* am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich gehe am Samstag zu schwimmen.
+    answer: false
+    explanation:
+      en: "After *gehen* there is no *zu*: *Ich gehe am Samstag schwimmen.*"
+      fa: "پس از *gehen* واژهٔ *zu* نمی‌آید: *Ich gehe am Samstag schwimmen.*"
+      de: "Nach *gehen* steht kein *zu*: *Ich gehe am Samstag schwimmen.*"
+  - id: true-3
+    type: true-false
+    prompt: Bleib bitte sitzen!
+    answer: true
+    explanation:
+      en: "The *du* imperative of *bleiben* with the infinitive *sitzen*. The sentence is correct."
+      fa: "امر *bleiben* با *du* همراه با مصدر *sitzen*. جمله درست است."
+      de: "Imperativ von *bleiben* mit *du*, dazu der Infinitiv *sitzen*. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Meine Schwester geht jeden Morgen joggt.
+    answer: joggt
+    explanation:
+      en: "The second verb stays in the infinitive: *Meine Schwester geht jeden Morgen joggen.*"
+      fa: "فعل دوم به شکل مصدر می‌ماند: *Meine Schwester geht jeden Morgen joggen.*"
+      de: "Das zweite Verb bleibt im Infinitiv: *Meine Schwester geht jeden Morgen joggen.*"
+  - id: error-2
+    type: find-error
+    prompt: Wir gehen heute Abend zu tanzen.
+    answer: zu
+    explanation:
+      en: "After *gehen* the infinitive has no *zu*: *Wir gehen heute Abend tanzen.*"
+      fa: "پس از *gehen* مصدر بدون *zu* می‌آید: *Wir gehen heute Abend tanzen.*"
+      de: "Nach *gehen* steht der Infinitiv ohne *zu*: *Wir gehen heute Abend tanzen.*"
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, gehe einkaufen]
+      - [du, gehst einkaufen]
+      - [wir, gehen einkaufen]
+      - [ihr, geht einkaufen]
+    explanation:
+      en: "Only *gehen* changes with the person; *einkaufen* stays the same."
+      fa: "فقط *gehen* با شخص تغییر می‌کند و *einkaufen* همان می‌ماند."
+      de: "Nur *gehen* ändert sich mit der Person. *Einkaufen* bleibt gleich."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wir, gehen, heute, einkaufen]
+      - [heute, gehen, wir, einkaufen]
+    explanation:
+      en: "*Gehen* stays in position 2 and *einkaufen* at the end; *wir* and *heute* can swap."
+      fa: "*gehen* در جایگاه دوم می‌ماند و *einkaufen* در پایان جمله؛ *wir* و *heute* می‌توانند جایشان را عوض کنند."
+      de: "*Gehen* steht auf Position 2, *einkaufen* am Ende. *Wir* und *heute* können tauschen."
+  - id: order-2
+    type: word-order
+    answers:
+      - [gehst, du, morgen, schwimmen]
+    end: "?"
+    explanation:
+      en: "In a yes/no question *gehst* comes first and *schwimmen* last."
+      fa: "در پرسش بله و خیر، *gehst* در آغاز می‌آید و *schwimmen* در آخر."
+      de: "In einer Ja/Nein-Frage steht *gehst* am Anfang, *schwimmen* am Ende."
+
+review:
+  reviewer: an independent AI agent (Claude, fresh blind subagent; not a person)
+  date: 2026-11-28
+  pool: de8aa4e572c47021

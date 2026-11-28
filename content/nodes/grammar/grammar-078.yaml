@@ -4,10 +4,280 @@ kind: grammar
 level: A1
 chapter: a1-more-articles
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062]
 title:
   en: "*Demonstrativartikel* *dieser*"
-  fa: "صفت اشاره *dieser*"
+  fa: "حرف تعریف اشاره *dieser*"
   de: "Demonstrativartikel *dieser*"
+
+explanations:
+  en:
+    rule: >
+      *Dieser* (this, these) stands before a noun in place of *der*, *die* or
+      *das* and points to one particular thing: this one, not another. It
+      ends in the same letter as the definite article: *der* → *dieser*, *die*
+      → *diese*, *das* → *dieses*, plural *die* → *diese*. In the
+      *Akkusativ* only the masculine changes, *den* → *diesen*: *Ich nehme
+      diesen Pullover.*
+  fa:
+    rule: >
+      *dieser* (این) به جای *der*، *die* یا *das* پیش از اسم می‌آید و به
+      چیزی معین اشاره می‌کند: همین یکی، نه دیگری. این واژه به همان حرفی ختم
+      می‌شود که حرف تعریف معین: *der* می‌شود *dieser*، *die* می‌شود *diese*،
+      *das* می‌شود *dieses* و *die* جمع می‌شود *diese*. در حالت *Akkusativ*
+      (حالت مفعولی) فقط مذکر تغییر می‌کند و مانند *den* می‌شود *diesen*:
+      *Ich nehme diesen Pullover.* «این» در فارسی همیشه یکسان است، ولی
+      *dieser* در آلمانی با جنس، شمار و حالت اسم تغییر می‌کند.
+  de:
+    rule: >
+      *Dieser* steht vor einem Nomen statt *der*, *die* oder *das*. Man zeigt
+      damit auf eine bestimmte Sache: diese hier, keine andere. *Dieser* endet
+      mit dem gleichen Buchstaben wie der Artikel: *der* → *dieser*, *die* → *diese*,
+      *das* → *dieses*, Plural *die* → *diese*. Im Akkusativ ändert sich nur
+      das Maskulinum: *den* → *diesen*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *dieser*", fa: "با *dieser*", de: "Mit *dieser*" }
+    - { en: "*Akkusativ* with *dieser*", fa: "حالت *Akkusativ* با *dieser*", de: "Akkusativ mit *dieser*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Rock, dieser Rock, diesen Rock, Ich nehme diesen Rock.]
+    - [die Jacke, diese Jacke, diese Jacke, Diese Jacke ist zu teuer.]
+    - [das Hemd, dieses Hemd, dieses Hemd, Dieses Hemd gefällt mir.]
+    - [die Schuhe (Plural), diese Schuhe, diese Schuhe, Ich kaufe diese Schuhe.]
+
+examples:
+  - de: Dieses Hemd gefällt mir.
+    en: I like this shirt.
+    fa: از این پیراهن خوشم می‌آید.
+  - de: Ich nehme diesen Pullover.
+    en: I'll take this jumper.
+    fa: این پلیور را برمی‌دارم.
+  - de: Diese Jacke ist zu teuer.
+    en: This jacket is too expensive.
+    fa: این کاپشن زیادی گران است.
+  - de: Kennst du diesen Mann?
+    en: Do you know this man?
+    fa: این مرد را می‌شناسی؟
+  - de: Diese Schuhe sind sehr bequem.
+    en: These shoes are very comfortable.
+    fa: این کفش‌ها خیلی راحت‌اند.
+  - de: Dieser Zug fährt nach Hamburg.
+    en: This train goes to Hamburg.
+    fa: این قطار به هامبورگ می‌رود.
+  - de: Wie findest du dieses Restaurant?
+    en: What do you think of this restaurant?
+    fa: این رستوران را چطور می‌بینی؟
+  - de: Diese Woche habe ich viel Arbeit.
+    en: I have a lot of work this week.
+    fa: این هفته کارم زیاد است.
+
+mistakes:
+  - wrong: Ich kaufe dieser Rock.
+    right: Ich kaufe diesen Rock.
+    why:
+      en: "*Rock* is masculine and the object, so the *Akkusativ*: *diesen*, like *den*."
+      fa: "*Rock* اسم مذکر و مفعول جمله است، پس در حالت *Akkusativ* می‌آید: *diesen*، مانند *den*."
+      de: "*Rock* ist maskulin und das Objekt. Darum Akkusativ: *diesen*, wie *den*."
+  - wrong: Dieser Hemd ist schön.
+    right: Dieses Hemd ist schön.
+    why:
+      en: "*Hemd* is a *das* noun, so *dieses*: it ends in *-s*, like *das*."
+      fa: "*Hemd* اسم خنثی (*das*) است، پس *dieses* می‌آید که مانند *das* به *-s* ختم می‌شود."
+      de: "*Hemd* hat den Artikel *das*. Darum *dieses*, mit *-s* wie *das*."
+  - wrong: Dieses Schuhe sind neu.
+    right: Diese Schuhe sind neu.
+    why:
+      en: "*Schuhe* is a plural, and the plural is *die*, so *diese*."
+      fa: "*Schuhe* جمع است و حرف تعریف جمع *die* است، پس *diese* می‌آید."
+      de: "*Schuhe* ist Plural. Der Artikel ist *die*, also *diese*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ Jacke ist schön.
+    options: [Diese, Dieser, Dieses]
+    answer: Diese
+    explanation:
+      en: "*Jacke* is feminine (*die*): *diese Jacke*."
+      fa: "*Jacke* اسم مؤنث (*die*) است: *diese Jacke*."
+      de: "*Jacke* ist feminin (*die*): *diese Jacke*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ Hemd gefällt mir.
+    options: [Dieses, Dieser, Diese]
+    answer: Dieses
+    explanation:
+      en: "*Hemd* is neuter (*das*): *dieses Hemd*."
+      fa: "*Hemd* اسم خنثی (*das*) است: *dieses Hemd*."
+      de: "*Hemd* ist neutral (*das*): *dieses Hemd*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich nehme ___ Tisch.
+    options: [diesen, dieser, dieses]
+    answer: diesen
+    explanation:
+      en: "*Tisch* is masculine and the object (*Akkusativ*): *den* → *diesen Tisch*."
+      fa: "*Tisch* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *den* می‌شود *diesen Tisch*."
+      de: "*Tisch* ist maskulin und das Objekt (Akkusativ): *den* → *diesen Tisch*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ Zug fährt nach Berlin.
+    options: [Dieser, Diesen, Dieses]
+    answer: Dieser
+    explanation:
+      en: "*Zug* is masculine and the subject (*Nominativ*): *dieser Zug*."
+      fa: "*Zug* اسم مذکر و فاعل جمله است (حالت *Nominativ*): *dieser Zug*."
+      de: "*Zug* ist maskulin und das Subjekt (Nominativ): *dieser Zug*."
+  - id: gap-5
+    type: gap-fill
+    prompt: ___ Äpfel sind sehr süß.
+    options: [Diese, Dieser, Dieses]
+    answer: Diese
+    explanation:
+      en: "*Äpfel* is a plural (*die*): *diese Äpfel*."
+      fa: "*Äpfel* جمع (*die*) است: *diese Äpfel*."
+      de: "*Äpfel* ist Plural (*die*): *diese Äpfel*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Kennst du ___ Frau?
+    options: [diese, dieser, diesen]
+    answer: diese
+    explanation:
+      en: "*Frau* is feminine; in the *Akkusativ* it stays *diese Frau*."
+      fa: "*Frau* اسم مؤنث است و در حالت *Akkusativ* هم *diese Frau* می‌ماند."
+      de: "*Frau* ist feminin. Im Akkusativ bleibt es *diese Frau*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Ich kaufe diesen Computer., Ich kaufe dieser Computer., Ich kaufe dieses Computer.]
+    answer: Ich kaufe diesen Computer.
+    explanation:
+      en: "*Computer* is masculine and the object (*Akkusativ*): *diesen Computer*."
+      fa: "*Computer* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *diesen Computer*."
+      de: "*Computer* ist maskulin und das Objekt (Akkusativ): *diesen Computer*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich finde ___ Buch langweilig.
+    options: [dieses, diesen, dieser]
+    answer: dieses
+    explanation:
+      en: "*Buch* is neuter (*das*); the neuter does not change in the *Akkusativ*: *dieses Buch*."
+      fa: "*Buch* اسم خنثی (*das*) است و خنثی در حالت *Akkusativ* تغییر نمی‌کند: *dieses Buch*."
+      de: "*Buch* ist neutral (*das*). Im Akkusativ bleibt es gleich: *dieses Buch*."
+  - id: true-1
+    type: true-false
+    prompt: Dieser Stuhl ist bequem.
+    answer: true
+    explanation:
+      en: "*Stuhl* is masculine and the subject: *dieser Stuhl*. The sentence is correct."
+      fa: "*Stuhl* اسم مذکر و فاعل جمله است: *dieser Stuhl*. جمله درست است."
+      de: "*Stuhl* ist maskulin und das Subjekt: *dieser Stuhl*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir nehmen dieses Zimmer.
+    answer: true
+    explanation:
+      en: "*Zimmer* is neuter (*das*): *dieses Zimmer*, also in the *Akkusativ*. The sentence is correct."
+      fa: "*Zimmer* اسم خنثی (*das*) است: *dieses Zimmer*، در حالت *Akkusativ* هم. جمله درست است."
+      de: "*Zimmer* ist neutral (*das*): *dieses Zimmer*, auch im Akkusativ. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich möchte dieser Kuchen.
+    answer: false
+    explanation:
+      en: "*Kuchen* is masculine and the object (*Akkusativ*): *Ich möchte diesen Kuchen.*"
+      fa: "*Kuchen* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *Ich möchte diesen Kuchen.*"
+      de: "*Kuchen* ist maskulin und das Objekt (Akkusativ): *Ich möchte diesen Kuchen.*"
+  - id: true-4
+    type: true-false
+    prompt: Diese Kinder spielen im Park.
+    answer: true
+    explanation:
+      en: "*Kinder* is a plural (*die*): *diese Kinder*. The sentence is correct."
+      fa: "*Kinder* جمع (*die*) است: *diese Kinder*. جمله درست است."
+      de: "*Kinder* ist Plural (*die*): *diese Kinder*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Dieses Tasche ist neu.
+    answer: false
+    explanation:
+      en: "*Tasche* is feminine (*die*): *Diese Tasche ist neu.*"
+      fa: "*Tasche* اسم مؤنث (*die*) است: *Diese Tasche ist neu.*"
+      de: "*Tasche* ist feminin (*die*): *Diese Tasche ist neu.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich kaufe ___ (dieser) Mantel.
+    answers: [diesen]
+    explanation:
+      en: "*Mantel* is masculine and the object (*Akkusativ*): *diesen Mantel*."
+      fa: "*Mantel* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *diesen Mantel*."
+      de: "*Mantel* ist maskulin und das Objekt (Akkusativ): *diesen Mantel*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (dieser) Auto ist sehr alt.
+    answers: [Dieses]
+    explanation:
+      en: "*Auto* is neuter (*das*): *dieses Auto*."
+      fa: "*Auto* اسم خنثی (*das*) است: *dieses Auto*."
+      de: "*Auto* ist neutral (*das*): *dieses Auto*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wie findest du ___ (dieser) Lampe?
+    answers: [diese]
+    explanation:
+      en: "*Lampe* is feminine: *diese Lampe*, also in the *Akkusativ*."
+      fa: "*Lampe* اسم مؤنث است: *diese Lampe*، در حالت *Akkusativ* هم."
+      de: "*Lampe* ist feminin: *diese Lampe*, auch im Akkusativ."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: ___ (dieser) Schuhe sind zu klein.
+    answers: [Diese]
+    explanation:
+      en: "*Schuhe* is a plural (*die*): *diese Schuhe*."
+      fa: "*Schuhe* جمع (*die*) است: *diese Schuhe*."
+      de: "*Schuhe* ist Plural (*die*): *diese Schuhe*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Akkusativ: dieser + der Film"
+    answers: [diesen Film]
+    explanation:
+      en: "*Den Film* becomes *diesen Film*: the ending *-en* of *den*."
+      fa: "*den Film* می‌شود *diesen Film*: همان پایانهٔ *-en* حرف تعریف *den*."
+      de: "Aus *den Film* wird *diesen Film*: die Endung *-en* wie bei *den*."
+  - id: error-1
+    type: find-error
+    prompt: Ich nehme dieser Salat.
+    answer: dieser
+    explanation:
+      en: "*Salat* is masculine and the object (*Akkusativ*): *Ich nehme diesen Salat.*"
+      fa: "*Salat* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *Ich nehme diesen Salat.*"
+      de: "*Salat* ist maskulin und das Objekt (Akkusativ): *Ich nehme diesen Salat.*"
+  - id: error-2
+    type: find-error
+    prompt: Diesen Straße ist sehr laut.
+    answer: Diesen
+    explanation:
+      en: "*Straße* is feminine (*die*): *Diese Straße ist sehr laut.*"
+      fa: "*Straße* اسم مؤنث (*die*) است: *Diese Straße ist sehr laut.*"
+      de: "*Straße* ist feminin (*die*): *Diese Straße ist sehr laut.*"
+  - id: match-1
+    type: matching
+    answer:
+      - [der Tisch, dieser]
+      - [die Lampe, diese]
+      - [das Bett, dieses]
+      - [den Stuhl, diesen]
+    explanation:
+      en: "*Dieser* ends in the same letter as the article: *der* → *dieser*, *die* → *diese*, *das* → *dieses*, *den* → *diesen*."
+      fa: "*dieser* به همان حرفی ختم می‌شود که حرف تعریف: *der* می‌شود *dieser*، *die* می‌شود *diese*، *das* می‌شود *dieses* و *den* می‌شود *diesen*."
+      de: "*Dieser* endet mit dem gleichen Buchstaben wie der Artikel: *der* → *dieser*, *die* → *diese*, *das* → *dieses*, *den* → *diesen*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 8b64fa3652dd0530

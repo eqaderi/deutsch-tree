@@ -4,10 +4,322 @@ kind: grammar
 level: A1
 chapter: a1-cases
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-063]
 title:
   en: "Verbs with *Dativ*"
-  fa: "فعل‌هایی که *Dativ* می‌گیرند"
+  fa: "فعل‌هایی که حالت *Dativ* می‌گیرند"
   de: "Verben mit Dativ"
+
+explanations:
+  en:
+    rule: >
+      A few verbs take the person in the *Dativ*, not in the *Akkusativ*:
+      *helfen*, *danken*, *antworten*, *gehören*, *gefallen*, *passen* and
+      *schmecken*. Ask *Wem?* (to whom?): *Ich helfe dem Mann.* With
+      *gehören*, *gefallen*, *passen* and *schmecken* the thing is the subject
+      and the person is in the *Dativ*: *Die Jacke gehört dem Lehrer.* So the
+      verb agrees with the thing: *Die Schuhe gefallen dem Kind.* The person
+      is often a pronoun, as in *Das gefällt mir* and *Kann ich Ihnen
+      helfen?*; the pronouns are a later topic.
+  fa:
+    rule: >
+      چند فعل شخص را نه در حالت *Akkusativ*، بلکه در حالت *Dativ* (حالت
+      مفعول باواسطه) می‌گیرند: *helfen*، *danken*، *antworten*، *gehören*،
+      *gefallen*، *passen* و *schmecken*. پرسش این حالت *Wem?* (به چه کسی؟)
+      است: *Ich helfe dem Mann.* با *gehören*، *gefallen*، *passen* و
+      *schmecken* آن چیز فاعل جمله است و شخص در حالت *Dativ* می‌آید: *Die
+      Jacke gehört dem Lehrer.* از این رو فعل با آن چیز مطابقت می‌کند: *Die
+      Schuhe gefallen dem Kind.* در فارسی می‌گوییم «بچه این کفش‌ها را دوست
+      دارد»، ولی در آلمانی کفش‌ها فاعل‌اند. شخص اغلب ضمیر است، مانند *Das
+      gefällt mir* و *Kann ich Ihnen helfen?*؛ ضمیر‌ها موضوع درسی دیگرند.
+  de:
+    rule: >
+      Einige Verben haben die Person im Dativ, nicht im Akkusativ: *helfen*,
+      *danken*, *antworten*, *gehören*, *gefallen*, *passen* und *schmecken*.
+      Man fragt *Wem?*: *Ich helfe dem Mann.* Bei *gehören*, *gefallen*,
+      *passen* und *schmecken* ist die Sache das Subjekt, die Person steht im
+      Dativ: *Die Jacke gehört dem Lehrer.* Das Verb passt zur Sache: *Die
+      Schuhe gefallen dem Kind.* Oft ist die Person ein Pronomen: *Das gefällt
+      mir.*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Mann, dem Mann, einem Mann, Ich helfe dem Mann.]
+    - [die Frau, der Frau, einer Frau, Die Tasche gehört der Frau.]
+    - [das Kind, dem Kind, einem Kind, Das Eis schmeckt dem Kind.]
+    - [die Eltern (Plural), den Eltern, –, Wir danken den Eltern.]
+
+examples:
+  - de: Ich helfe dem Kind.
+    en: I'm helping the child.
+    fa: به بچه کمک می‌کنم.
+  - de: Wem gehört die Jacke?
+    en: Whose jacket is this?
+    fa: این کاپشن مال کیست؟
+  - de: Die Jacke gehört dem Lehrer.
+    en: The jacket belongs to the teacher.
+    fa: کاپشن مال معلم است.
+  - de: Berlin gefällt den Touristen.
+    en: The tourists like Berlin.
+    fa: گردشگران برلین را دوست دارند.
+  - de: Die Suppe schmeckt dem Kind.
+    en: The child likes the soup.
+    fa: بچه سوپ را دوست دارد.
+  - de: Die Schuhe passen dem Kind nicht.
+    en: The shoes don't fit the child.
+    fa: کفش‌ها اندازهٔ پای بچه نیستند.
+  - de: Wir danken den Gästen.
+    en: We thank the guests.
+    fa: از مهمان‌ها تشکر می‌کنیم.
+  - de: Sie antwortet der Lehrerin.
+    en: She answers the teacher.
+    fa: او به معلم پاسخ می‌دهد.
+  - de: Das gefällt mir.
+    en: I like that.
+    fa: از این خوشم می‌آید.
+  - de: Kann ich Ihnen helfen?
+    en: Can I help you?
+    fa: می‌توانم کمکتان کنم؟
+
+mistakes:
+  - wrong: Ich helfe den Mann.
+    right: Ich helfe dem Mann.
+    why:
+      en: "*Helfen* takes the *Dativ*, not the *Akkusativ*: *dem Mann*."
+      fa: "*helfen* با حالت *Dativ* می‌آید، نه با حالت *Akkusativ*: *dem Mann*."
+      de: "*Helfen* hat den Dativ, nicht den Akkusativ: *dem Mann*."
+  - wrong: Das Fahrrad gehört die Frau.
+    right: Das Fahrrad gehört der Frau.
+    why:
+      en: "With *gehören* the owner is in the *Dativ*: *die Frau* becomes *der Frau*."
+      fa: "با *gehören* صاحب چیز در حالت *Dativ* می‌آید: *die Frau* به *der Frau* تبدیل می‌شود."
+      de: "Bei *gehören* steht die Person im Dativ: *die Frau* wird zu *der Frau*."
+  - wrong: Der Mann gefällt den Film.
+    right: Der Film gefällt dem Mann.
+    why:
+      en: "With *gefallen* the thing you like is the subject. The person who likes it is in the *Dativ*: *dem Mann*."
+      fa: "با *gefallen* چیزی که دوستش داریم فاعل جمله است و کسی که آن را دوست دارد در حالت *Dativ* می‌آید: *dem Mann*."
+      de: "Bei *gefallen* ist die Sache das Subjekt. Die Person steht im Dativ: *dem Mann*."
+  - wrong: Die Schuhe gefällt dem Kind.
+    right: Die Schuhe gefallen dem Kind.
+    why:
+      en: "*Die Schuhe* is the subject and a plural, so the verb is plural: *gefallen*."
+      fa: "*die Schuhe* فاعل جمله و جمع است، پس فعل هم جمع می‌آید: *gefallen*."
+      de: "*Die Schuhe* ist das Subjekt und Plural. Darum steht das Verb im Plural: *gefallen*."
+  - wrong: Ich danke die Lehrerin.
+    right: Ich danke der Lehrerin.
+    why:
+      en: "*Danken* takes the *Dativ*: *die Lehrerin* becomes *der Lehrerin*."
+      fa: "*danken* با حالت *Dativ* می‌آید: *die Lehrerin* به *der Lehrerin* تبدیل می‌شود."
+      de: "*Danken* hat den Dativ: *die Lehrerin* wird zu *der Lehrerin*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich helfe ___ Mann.
+    options: [dem, den, der]
+    answer: dem
+    explanation:
+      en: "*Helfen* takes the *Dativ*. *Mann* is masculine: *dem Mann*."
+      fa: "*helfen* با حالت *Dativ* می‌آید. *Mann* اسم مذکر است: *dem Mann*."
+      de: "*Helfen* hat den Dativ. *Mann* ist maskulin: *dem Mann*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Das Fahrrad gehört ___ Frau.
+    options: [der, die, dem]
+    answer: der
+    explanation:
+      en: "*Gehören* takes the owner in the *Dativ*. *Frau* is feminine: *der Frau*."
+      fa: "با *gehören* صاحب چیز در حالت *Dativ* می‌آید. *Frau* اسم مؤنث است: *der Frau*."
+      de: "Bei *gehören* steht die Person im Dativ. *Frau* ist feminin: *der Frau*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir danken ___ Lehrerin.
+    options: [der, die, den]
+    answer: der
+    explanation:
+      en: "*Danken* takes the *Dativ*. *Lehrerin* is feminine: *der Lehrerin*."
+      fa: "*danken* با حالت *Dativ* می‌آید. *Lehrerin* اسم مؤنث است: *der Lehrerin*."
+      de: "*Danken* hat den Dativ. *Lehrerin* ist feminin: *der Lehrerin*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Schuhe passen ___ Kind nicht.
+    options: [dem, das, den]
+    answer: dem
+    explanation:
+      en: "With *passen* the person is in the *Dativ*. *Kind* is neuter: *dem Kind*."
+      fa: "با *passen* شخص در حالت *Dativ* می‌آید. *Kind* اسم خنثی است: *dem Kind*."
+      de: "Bei *passen* steht die Person im Dativ. *Kind* ist neutral: *dem Kind*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Die Bücher gehören ___ Kindern.
+    options: [den, die, der]
+    answer: den
+    explanation:
+      en: "Plural *die* becomes *den* in the *Dativ*: *den Kindern*."
+      fa: "*die* جمع در حالت *Dativ* به *den* تبدیل می‌شود: *den Kindern*."
+      de: "Im Dativ Plural wird *die* zu *den*: *den Kindern*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: ___ gehört die Jacke?
+    options: [Wem, Wen, Wer]
+    answer: Wem
+    explanation:
+      en: "*Gehören* takes the *Dativ*, so the question word is *Wem?*."
+      fa: "*gehören* با حالت *Dativ* می‌آید، پس واژهٔ پرسشی *Wem?* است."
+      de: "*Gehören* hat den Dativ. Darum fragt man *Wem?*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Der Film gefällt ___.
+    options: [dem Kind, das Kind, den Kind]
+    answer: dem Kind
+    explanation:
+      en: "The film is the subject. The person who likes it is in the *Dativ*: *dem Kind*."
+      fa: "فیلم فاعل جمله است و کسی که آن را دوست دارد در حالت *Dativ* می‌آید: *dem Kind*."
+      de: "Der Film ist das Subjekt. Die Person steht im Dativ: *dem Kind*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Die Kinder ___ dem Vater.
+    options: [helfen, hilft, helfe]
+    answer: helfen
+    explanation:
+      en: "*Die Kinder* is the subject and a plural: *helfen*. *Dem Vater* is the *Dativ*."
+      fa: "*die Kinder* فاعل جمله و جمع است: *helfen*. *dem Vater* در حالت *Dativ* است."
+      de: "*Die Kinder* ist das Subjekt und Plural: *helfen*. *Dem Vater* ist Dativ."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Die Äpfel ___ dem Kind.
+    options: [schmecken, schmeckt, schmecke]
+    answer: schmecken
+    explanation:
+      en: "The apples are the subject, and a plural, so the verb is plural: *schmecken*."
+      fa: "سیب‌ها فاعل جمله‌اند و جمع، پس فعل هم جمع می‌آید: *schmecken*."
+      de: "Die Äpfel sind das Subjekt und Plural. Darum: *schmecken*."
+  - id: true-1
+    type: true-false
+    prompt: Ich helfe dem Kind.
+    answer: true
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *dem Kind*. The sentence is correct."
+      fa: "*helfen* با حالت *Dativ* می‌آید: *dem Kind*. جمله درست است."
+      de: "*Helfen* hat den Dativ: *dem Kind*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich danke die Frau.
+    answer: false
+    explanation:
+      en: "*Danken* takes the *Dativ*: *Ich danke der Frau.*"
+      fa: "*danken* با حالت *Dativ* می‌آید: *Ich danke der Frau.*"
+      de: "*Danken* hat den Dativ: *Ich danke der Frau.*"
+  - id: true-3
+    type: true-false
+    prompt: Die Tasche gehört dem Lehrer.
+    answer: true
+    explanation:
+      en: "The bag is the subject, the owner is in the *Dativ*: *dem Lehrer*. The sentence is correct."
+      fa: "کیف فاعل جمله است و صاحبش در حالت *Dativ* می‌آید: *dem Lehrer*. جمله درست است."
+      de: "Die Tasche ist das Subjekt, die Person steht im Dativ: *dem Lehrer*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Der Mann gefällt die Stadt.
+    answer: false
+    explanation:
+      en: "The city is what he likes, so it is the subject, and the man is in the *Dativ*: *Die Stadt gefällt dem Mann.*"
+      fa: "شهر چیزی است که مرد دوستش دارد، پس فاعل جمله است و مرد در حالت *Dativ* می‌آید: *Die Stadt gefällt dem Mann.*"
+      de: "Die Stadt ist das Subjekt, der Mann steht im Dativ: *Die Stadt gefällt dem Mann.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich helfe ___ (die) Nachbarin.
+    answers: [der]
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *die* becomes *der*."
+      fa: "*helfen* با حالت *Dativ* می‌آید: *die* به *der* تبدیل می‌شود."
+      de: "*Helfen* hat den Dativ: *die* wird zu *der*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wem gehört das Handy? – Es gehört ___ (der) Lehrer.
+    answers: [dem]
+    explanation:
+      en: "The owner is in the *Dativ*: *der* becomes *dem*."
+      fa: "صاحب چیز در حالت *Dativ* می‌آید: *der* به *dem* تبدیل می‌شود."
+      de: "Die Person steht im Dativ: *der* wird zu *dem*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Das Eis schmeckt ___ (das) Kind.
+    answers: [dem]
+    explanation:
+      en: "With *schmecken* the person is in the *Dativ*: *das* becomes *dem*."
+      fa: "با *schmecken* شخص در حالت *Dativ* می‌آید: *das* به *dem* تبدیل می‌شود."
+      de: "Bei *schmecken* steht die Person im Dativ: *das* wird zu *dem*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wir danken ___ (die) Eltern.
+    answers: [den]
+    explanation:
+      en: "Plural *die* becomes *den* in the *Dativ*: *den Eltern*."
+      fa: "*die* جمع در حالت *Dativ* به *den* تبدیل می‌شود: *den Eltern*."
+      de: "Im Dativ Plural wird *die* zu *den*: *den Eltern*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Die Jacke ___ (gefallen) der Frau.
+    answers: [gefällt]
+    explanation:
+      en: "*Die Jacke* is the subject (*sie*, singular): *gefällt*, with *ä*."
+      fa: "*die Jacke* فاعل جمله و سوم‌شخص مفرد است: *gefällt*، با *ä*."
+      de: "*Die Jacke* ist das Subjekt (*sie*, Singular): *gefällt*, mit *ä*."
+  - id: error-1
+    type: find-error
+    prompt: Ich helfe den Mann.
+    answer: den
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *dem Mann*."
+      fa: "*helfen* با حالت *Dativ* می‌آید: *dem Mann*."
+      de: "*Helfen* hat den Dativ: *dem Mann*."
+  - id: error-2
+    type: find-error
+    prompt: Die Schuhe gefällt dem Kind.
+    answer: gefällt
+    explanation:
+      en: "*Die Schuhe* is a plural subject, so the verb is *gefallen*."
+      fa: "فاعل جمله، *die Schuhe*، جمع است، پس فعل *gefallen* می‌آید."
+      de: "*Die Schuhe* ist ein Subjekt im Plural. Darum: *gefallen*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [die Jacke, gehört, dem Lehrer]
+      - [dem Lehrer, gehört, die Jacke]
+    explanation:
+      en: "The verb comes second. *Die Jacke* is the subject and *dem Lehrer* the *Dativ*, in either order."
+      fa: "فعل در جایگاه دوم می‌آید. *die Jacke* فاعل است و *dem Lehrer* در حالت *Dativ*، به هر ترتیبی که بیایند."
+      de: "Das Verb steht an Position 2. *Die Jacke* ist das Subjekt, *dem Lehrer* ist Dativ, in beiden Sätzen."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wem, gehört, das Handy]
+    end: "?"
+    explanation:
+      en: "The question word *wem* comes first, then the verb, then the subject."
+      fa: "واژهٔ پرسشی *wem* در آغاز می‌آید، بعد فعل و بعد فاعل."
+      de: "Das Fragewort *wem* steht am Anfang, dann das Verb, dann das Subjekt."
+  - id: match-1
+    type: matching
+    answer:
+      - [Das Buch gehört ___ Mann., dem]
+      - [Das Buch gehört ___ Frau., der]
+      - [Das Buch gehört ___ Kindern., den]
+    explanation:
+      en: "The owner is in the *Dativ*: *dem Mann*, *der Frau*, and plural *den Kindern*."
+      fa: "صاحب چیز در حالت *Dativ* می‌آید: *dem Mann*، *der Frau* و برای جمع *den Kindern*."
+      de: "Die Person steht im Dativ: *dem Mann*, *der Frau* und im Plural *den Kindern*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: c8ee4ba43af3cea3

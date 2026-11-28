@@ -4,10 +4,331 @@ kind: grammar
 level: A1
 chapter: a1-cases
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-059, grammar-074]
 title:
   en: "*Nominativ*"
   fa: "حالت فاعلی (*Nominativ*)"
   de: "Nominativ"
+
+explanations:
+  en:
+    rule: >
+      The *Nominativ* is the basic form of a noun, the one in the dictionary.
+      The subject, the person or thing that does something, is always in the
+      *Nominativ*: ask *Wer?* (who?) for a person and *Was?* (what?) for a
+      thing. A noun after *sein* is in the *Nominativ* too: *Das ist ein
+      Tisch.* The articles are the ones you know: *der*, *die*, *das*, plural
+      *die*; *ein*, *eine*; *kein*, *keine*. The subject need not come first
+      (*Heute kommt der Bus.*), but its article still shows the *Nominativ*.
+  fa:
+    rule: >
+      حالت *Nominativ* (حالت فاعلی) شکل پایهٔ اسم است؛ همان شکلی که در
+      واژه‌نامه می‌آید. فاعل جمله، یعنی کسی یا چیزی که کاری انجام می‌دهد،
+      همیشه در حالت *Nominativ* است. برای پیدا کردن آن، دربارهٔ انسان
+      می‌پرسیم *Wer?* (چه کسی؟) و دربارهٔ چیز *Was?* (چه چیزی؟). اسمی که پس
+      از *sein* می‌آید نیز در حالت *Nominativ* است: *Das ist ein Tisch.*
+      حرف‌های تعریف این حالت همان‌هایی‌اند که تا این‌جا آموخته‌اید: *der*،
+      *die*، *das* و *die* جمع؛ *ein* و *eine*؛ *kein* و *keine*. فاعل همیشه
+      در آغاز جمله نیست (*Heute kommt der Bus.*)، ولی حرف تعریفش حالت
+      *Nominativ* را نشان می‌دهد.
+  de:
+    rule: >
+      Der Nominativ ist die Grundform von einem Nomen. So steht es im
+      Wörterbuch. Das Subjekt steht immer im Nominativ. Man fragt *Wer?* für
+      Personen und *Was?* für Sachen. Auch nach *sein* steht der Nominativ:
+      *Das ist ein Tisch.* Die Artikel sind *der*, *die*, *das*, im Plural
+      *die*, und *ein*, *eine*, *kein*, *keine*. Das Subjekt steht nicht immer
+      am Anfang: *Heute kommt der Bus.*
+
+# Two sentences: the subject, and the noun after sein. The drawing is German
+# only, so it needs no labels.
+diagrams:
+  - caption:
+      en: >
+        The subject answers *Wer?* or *Was?* and is in the *Nominativ*: *Der
+        Bus kommt heute.* After *sein* both nouns are in the *Nominativ*:
+        *Tom ist Lehrer.*
+      fa: >
+        فاعل پاسخ پرسش *Wer?* یا *Was?* است و در حالت *Nominativ* می‌آید:
+        *Der Bus kommt heute.* پس از *sein* هر دو اسم در حالت *Nominativ*
+        هستند: *Tom ist Lehrer.*
+      de: >
+        Das Subjekt antwortet auf *Wer?* oder *Was?* und steht im Nominativ:
+        *Der Bus kommt heute.* Nach *sein* stehen beide Nomen im Nominativ:
+        *Tom ist Lehrer.*
+    svg: |
+      <svg viewBox="0 0 320 196">
+        <!-- the subject -->
+        <text class="note" x="65" y="16" text-anchor="middle">Wer? Was?</text>
+        <rect class="surface" x="10" y="24" width="110" height="40"/>
+        <text class="label" x="65" y="50" text-anchor="middle">Der Bus</text>
+        <text class="label" x="175" y="50" text-anchor="middle">kommt</text>
+        <text class="label" x="265" y="50" text-anchor="middle">heute.</text>
+        <text class="note" x="65" y="84" text-anchor="middle">Nominativ</text>
+        <!-- the noun after sein -->
+        <rect class="surface" x="10" y="120" width="100" height="40"/>
+        <text class="label" x="60" y="146" text-anchor="middle">Tom</text>
+        <text class="label" x="160" y="146" text-anchor="middle">ist</text>
+        <rect class="surface" x="210" y="120" width="100" height="40"/>
+        <text class="label" x="260" y="146" text-anchor="middle">Lehrer.</text>
+        <text class="note" x="60" y="180" text-anchor="middle">Nominativ</text>
+        <text class="note" x="160" y="180" text-anchor="middle">=</text>
+        <text class="note" x="260" y="180" text-anchor="middle">Nominativ</text>
+      </svg>
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: "With *kein*", fa: "با *kein*", de: "Mit *kein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Bus, ein Bus, kein Bus, Der Bus kommt.]
+    - [die Lehrerin, eine Lehrerin, keine Lehrerin, Die Lehrerin ist nett.]
+    - [das Kind, ein Kind, kein Kind, Das Kind spielt.]
+    - [die Kinder (Plural), –, keine Kinder, Die Kinder lachen.]
+
+examples:
+  - de: Das ist ein Tisch.
+    en: That is a table.
+    fa: این یک میز است.
+  - de: Der Bus kommt um acht.
+    en: The bus comes at eight.
+    fa: اتوبوس ساعت هشت می‌آید.
+  - de: Die Lehrerin heißt Frau Klein.
+    en: The teacher's name is Ms Klein.
+    fa: نام معلم خانم کلاین است.
+  - de: Das Kind spielt im Garten.
+    en: The child is playing in the garden.
+    fa: بچه در باغ بازی می‌کند.
+  - de: Heute kocht Tom.
+    en: Tom is cooking today.
+    fa: امروز تام آشپزی می‌کند.
+  - de: Wer ist das? – Das ist Lena.
+    en: Who is that? – That is Lena.
+    fa: او کیست؟ – لنا است.
+  - de: Was ist das? – Das ist eine Uhr.
+    en: What is that? – That is a clock.
+    fa: این چیست؟ – یک ساعت است.
+  - de: Herr Braun ist Arzt.
+    en: Mr Braun is a doctor.
+    fa: آقای براون پزشک است.
+  - de: Hier ist kein Supermarkt.
+    en: There is no supermarket here.
+    fa: این‌جا سوپرمارکت نیست.
+
+mistakes:
+  - wrong: Das ist einen Tisch.
+    right: Das ist ein Tisch.
+    why:
+      en: "After *sein* the noun is in the *Nominativ*: *ein Tisch*. *Einen* is another case, the next topic."
+      fa: "پس از *sein* اسم در حالت *Nominativ* می‌آید: *ein Tisch*. *einen* شکل حالت دیگری است که موضوع درس بعد است."
+      de: "Nach *sein* steht der Nominativ: *ein Tisch*. *Einen* ist ein anderer Fall. Das kommt im nächsten Thema."
+  - wrong: Den Bus kommt heute.
+    right: Der Bus kommt heute.
+    why:
+      en: "The bus is the subject (*Was kommt?*), so it is in the *Nominativ*: *der Bus*."
+      fa: "اتوبوس فاعل جمله است (*Was kommt?*)، پس در حالت *Nominativ* می‌آید: *der Bus*."
+      de: "Der Bus ist das Subjekt (*Was kommt?*). Darum Nominativ: *der Bus*."
+  - wrong: Wer ist das? – Das ist ein Stuhl.
+    right: Was ist das? – Das ist ein Stuhl.
+    why:
+      en: "*Wer?* asks about a person, *Was?* about a thing. A chair is a thing."
+      fa: "*Wer?* برای پرسیدن دربارهٔ انسان است و *Was?* برای چیز. صندلی چیز است."
+      de: "*Wer?* fragt nach einer Person, *Was?* nach einer Sache. Ein Stuhl ist eine Sache."
+  - wrong: Die Kind spielt im Garten.
+    right: Das Kind spielt im Garten.
+    why:
+      en: "*Kind* is neuter. In the *Nominativ* a neuter noun has *das*."
+      fa: "*Kind* اسم خنثی است و اسم خنثی در حالت *Nominativ*، *das* می‌گیرد."
+      de: "*Kind* ist neutral. Im Nominativ heißt der Artikel *das*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ Kaffee ist heiß.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "*Kaffee* is masculine and the subject, so it is in the *Nominativ*: *der Kaffee*."
+      fa: "*Kaffee* اسم مذکر و فاعل جمله است، پس در حالت *Nominativ* می‌آید: *der Kaffee*."
+      de: "*Kaffee* ist maskulin und das Subjekt. Im Nominativ: *der Kaffee*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Das ist ___ Lampe.
+    options: [eine, ein, einen]
+    answer: eine
+    explanation:
+      en: "After *sein* comes the *Nominativ*. *Lampe* is feminine: *eine Lampe*."
+      fa: "پس از *sein* حالت *Nominativ* می‌آید. *Lampe* اسم مؤنث است: *eine Lampe*."
+      de: "Nach *sein* steht der Nominativ. *Lampe* ist feminin: *eine Lampe*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das ist ___ Problem.
+    options: [kein, keine, keinen]
+    answer: kein
+    explanation:
+      en: "After *sein* comes the *Nominativ*. *Problem* is neuter: *kein Problem*."
+      fa: "پس از *sein* حالت *Nominativ* می‌آید. *Problem* اسم خنثی است: *kein Problem*."
+      de: "Nach *sein* steht der Nominativ. *Problem* ist neutral: *kein Problem*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ Kinder spielen im Park.
+    options: [Die, Der, Das]
+    answer: Die
+    explanation:
+      en: "*Kinder* is a plural and the subject. In the *Nominativ* every plural has *die*."
+      fa: "*Kinder* جمع و فاعل جمله است. در حالت *Nominativ* همهٔ اسم‌های جمع *die* می‌گیرند."
+      de: "*Kinder* ist Plural und das Subjekt. Im Nominativ hat jeder Plural *die*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Am Morgen trinkt Anna Tee. – Wer trinkt Tee?
+    options: [Anna, Tee, Am Morgen]
+    answer: Anna
+    explanation:
+      en: "Anna does something, so she is the subject, in the *Nominativ*, even after the verb."
+      fa: "آنا کاری انجام می‌دهد، پس فاعل جمله است و در حالت *Nominativ* است، هرچند پس از فعل آمده است."
+      de: "Anna macht etwas. Sie ist das Subjekt und steht im Nominativ, auch nach dem Verb."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Was ist das? – Das ist ___.
+    options: [ein Stuhl, einen Stuhl, einem Stuhl]
+    answer: ein Stuhl
+    explanation:
+      en: "After *sein* the noun is in the *Nominativ*: *ein Stuhl*."
+      fa: "پس از *sein* اسم در حالت *Nominativ* می‌آید: *ein Stuhl*."
+      de: "Nach *sein* steht der Nominativ: *ein Stuhl*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: ___ ist das? – Das ist Tom.
+    options: [Wer, Was, Wie]
+    answer: Wer
+    explanation:
+      en: "Tom is a person, so the question is *Wer?*."
+      fa: "تام انسان است، پس پرسش با *Wer?* ساخته می‌شود."
+      de: "Tom ist eine Person. Darum fragt man *Wer?*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: ___ ist das? – Das ist ein Handy.
+    options: [Was, Wer, Wo]
+    answer: Was
+    explanation:
+      en: "A phone is a thing, so the question is *Was?*."
+      fa: "گوشی چیز است، پس پرسش با *Was?* ساخته می‌شود."
+      de: "Ein Handy ist eine Sache. Darum fragt man *Was?*."
+  - id: true-1
+    type: true-false
+    prompt: Das ist einen Tisch.
+    answer: false
+    explanation:
+      en: "After *sein* comes the *Nominativ*: *Das ist ein Tisch.*"
+      fa: "پس از *sein* حالت *Nominativ* می‌آید: *Das ist ein Tisch.*"
+      de: "Nach *sein* steht der Nominativ: *Das ist ein Tisch.*"
+  - id: true-2
+    type: true-false
+    prompt: Herr Braun ist Lehrer.
+    answer: true
+    explanation:
+      en: "A job after *sein* has no article. Both nouns are in the *Nominativ*. The sentence is correct."
+      fa: "شغل پس از *sein* حرف تعریف نمی‌گیرد و هر دو اسم در حالت *Nominativ* هستند. جمله درست است."
+      de: "Ein Beruf nach *sein* hat keinen Artikel. Beide Nomen stehen im Nominativ. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Den Bus kommt um acht.
+    answer: false
+    explanation:
+      en: "The bus is the subject, so it is in the *Nominativ*: *Der Bus kommt um acht.*"
+      fa: "اتوبوس فاعل جمله است، پس در حالت *Nominativ* می‌آید: *Der Bus kommt um acht.*"
+      de: "Der Bus ist das Subjekt. Darum Nominativ: *Der Bus kommt um acht.*"
+  - id: true-4
+    type: true-false
+    prompt: Heute spielen die Kinder im Garten.
+    answer: true
+    explanation:
+      en: "The subject *die Kinder* comes after the verb here. It is still in the *Nominativ*. The sentence is correct."
+      fa: "فاعل جمله، *die Kinder*، این‌جا پس از فعل آمده است و باز هم در حالت *Nominativ* است. جمله درست است."
+      de: "Das Subjekt *die Kinder* steht hier nach dem Verb. Es steht trotzdem im Nominativ. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist ___ (ein) Tasche.
+    answers: [eine]
+    explanation:
+      en: "*Tasche* is feminine: *eine Tasche*."
+      fa: "*Tasche* اسم مؤنث است: *eine Tasche*."
+      de: "*Tasche* ist feminin: *eine Tasche*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das sind ___ (kein) Äpfel.
+    answers: [keine]
+    explanation:
+      en: "In the plural it is *keine*: *keine Äpfel*."
+      fa: "در جمع *keine* می‌آید: *keine Äpfel*."
+      de: "Im Plural heißt es *keine*: *keine Äpfel*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (ein) Frau wartet dort.
+    answers: [Eine]
+    explanation:
+      en: "*Frau* is feminine and the subject: *eine Frau*."
+      fa: "*Frau* اسم مؤنث و فاعل جمله است: *eine Frau*."
+      de: "*Frau* ist feminin und das Subjekt: *eine Frau*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Das ist ___ (kein) Auto.
+    answers: [kein]
+    explanation:
+      en: "*Auto* is neuter: *kein Auto*, like *ein Auto*."
+      fa: "*Auto* اسم خنثی است: *kein Auto*، مانند *ein Auto*."
+      de: "*Auto* ist neutral: *kein Auto*, wie *ein Auto*."
+  - id: error-1
+    type: find-error
+    prompt: Das ist eine Buch.
+    answer: eine
+    explanation:
+      en: "*Buch* is neuter, so *ein Buch*. *Eine* is for feminine nouns."
+      fa: "*Buch* اسم خنثی است، پس *ein Buch*. *eine* برای اسم‌های مؤنث است."
+      de: "*Buch* ist neutral: *ein Buch*. *Eine* ist für feminine Nomen."
+  - id: error-2
+    type: find-error
+    prompt: Den Kaffee ist kalt.
+    answer: Den
+    explanation:
+      en: "The coffee is the subject, so it is in the *Nominativ*: *Der Kaffee ist kalt.*"
+      fa: "قهوه فاعل جمله است، پس در حالت *Nominativ* می‌آید: *Der Kaffee ist kalt.*"
+      de: "Der Kaffee ist das Subjekt. Darum Nominativ: *Der Kaffee ist kalt.*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [der Bus, kommt, heute]
+      - [heute, kommt, der Bus]
+    explanation:
+      en: "The verb comes second. The subject *der Bus* can stand before or after it."
+      fa: "فعل در جایگاه دوم می‌آید. فاعل، *der Bus*، می‌تواند پیش یا پس از آن بیاید."
+      de: "Das Verb steht an Position 2. Das Subjekt *der Bus* kann davor oder danach stehen."
+  - id: order-2
+    type: word-order
+    answers:
+      - [ist, das, ein Hund]
+    end: "?"
+    explanation:
+      en: "In a yes/no question the verb comes first: *Ist das ein Hund?*"
+      fa: "در پرسشی که پاسخش «بله» یا «نه» است، فعل در آغاز جمله می‌آید: *Ist das ein Hund?*"
+      de: "In einer Ja/Nein-Frage steht das Verb am Anfang: *Ist das ein Hund?*"
+  - id: match-1
+    type: matching
+    answer:
+      - [Wer ist das?, Das ist Herr Braun.]
+      - [Was ist das?, Das ist ein Stuhl.]
+      - [Wer wohnt hier?, Frau Klein wohnt hier.]
+      - [Was ist kaputt?, Das Auto ist kaputt.]
+    explanation:
+      en: "*Wer?* asks about a person, *Was?* about a thing. The answer is in the *Nominativ*."
+      fa: "*Wer?* برای پرسیدن دربارهٔ انسان است و *Was?* برای چیز. پاسخ در حالت *Nominativ* است."
+      de: "*Wer?* fragt nach einer Person, *Was?* nach einer Sache. Die Antwort steht im Nominativ."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: da9e83b029d572f4

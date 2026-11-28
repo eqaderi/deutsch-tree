@@ -1,13 +1,343 @@
-# Grammar list row 191.
+# Grammar list row 191. The file format is described in content/README.md.
 id: grammar-191
 kind: grammar
 level: A1
 chapter: a1-numbers-time
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-190]
 title:
   en: "Clock time, informal and official"
   fa: "ساعت: گفتاری و رسمی"
   de: "Uhrzeit, informell und offiziell"
+
+explanations:
+  en:
+    rule: >
+      *Wie spät ist es?* or *Wie viel Uhr ist es?* asks the time, and *um*
+      says at what time: *um acht Uhr*. The official time, on the radio, at
+      the station and in writing, counts 24 hours: the hour, then *Uhr*, then
+      the minutes, so *18.30 Uhr* is *achtzehn Uhr dreißig*. In everyday
+      speech people count 12 hours and say the minutes first, with *nach*
+      (past) or *vor* (to): *zehn nach sechs*, *Viertel vor acht*. *Halb*
+      looks ahead to the next hour: *halb acht* is 7.30, not 8.30.
+  fa:
+    rule: >
+      برای پرسیدن ساعت می‌گویند *Wie spät ist es?* یا *Wie viel Uhr ist es?*
+      و برای گفتن زمان یک کار، حرف اضافهٔ *um* می‌آید: *um acht Uhr* (ساعت
+      هشت). ساعت رسمی، مثلاً در رادیو، در ایستگاه قطار و در نوشته‌ها،
+      بیست‌وچهارساعته است: اول ساعت، سپس *Uhr* و بعد دقیقه. پس *18.30 Uhr*
+      را *achtzehn Uhr dreißig* می‌خوانند. در گفت‌وگوی روزمره ساعت را
+      دوازده‌ساعته می‌گویند و دقیقه را پیش از ساعت، با *nach* (گذشته از) یا
+      *vor* (مانده به): *zehn nach sechs* (شش و ده دقیقه)، *Viertel vor acht*
+      (یک ربع به هشت). *halb* به ساعت بعد اشاره دارد: *halb acht* یعنی هفت و
+      نیم، نه هشت و نیم.
+  de:
+    rule: >
+      Nach der Uhrzeit fragt man: *Wie spät ist es?* oder *Wie viel Uhr ist
+      es?* Für einen Zeitpunkt sagt man *um*: *um acht Uhr*. Offiziell, im
+      Radio, am Bahnhof und in Texten, hat der Tag 24 Stunden: zuerst die
+      Stunde, dann *Uhr*, dann die Minuten. *18.30 Uhr* sagt man *achtzehn Uhr
+      dreißig*. Im Alltag zählt man nur bis zwölf und sagt zuerst die
+      Minuten, mit *nach* oder *vor*: *zehn nach sechs*, *Viertel vor acht*.
+      *Halb* zählt schon zur nächsten Stunde: *halb acht* ist 7.30 Uhr.
+
+table:
+  columns:
+    - { en: Time, fa: ساعت, de: Uhrzeit }
+    - { en: Informal, fa: گفتاری, de: informell }
+    - { en: Official, fa: رسمی, de: offiziell }
+  rows:
+    - ["7.00", sieben (Uhr), sieben Uhr]
+    - ["7.05", fünf nach sieben, sieben Uhr fünf]
+    - ["7.15", Viertel nach sieben, sieben Uhr fünfzehn]
+    - ["7.20", zwanzig nach sieben, sieben Uhr zwanzig]
+    - ["7.25", fünf vor halb acht, sieben Uhr fünfundzwanzig]
+    - ["7.30", halb acht, sieben Uhr dreißig]
+    - ["7.35", fünf nach halb acht, sieben Uhr fünfunddreißig]
+    - ["7.45", Viertel vor acht, sieben Uhr fünfundvierzig]
+    - ["7.50", zehn vor acht, sieben Uhr fünfzig]
+    - ["13.00", eins / ein Uhr, dreizehn Uhr]
+    - ["19.30", halb acht, neunzehn Uhr dreißig]
+
+# A clock from seven to eight: in the first half hour the minutes are counted
+# "nach sieben", in the second half "vor acht"; half way is "halb acht".
+diagrams:
+  - caption:
+      en: >
+        The hour from seven to eight. In the first half hour you count the
+        minutes *nach sieben* (past seven), in the second half *vor acht* (to
+        eight). Half way, at 7.30, it is *halb acht*: half of the way to eight.
+      fa: >
+        ساعت هفت تا هشت. در نیم ساعت اول، دقیقه‌ها را با *nach sieben* (گذشته
+        از هفت) می‌شمارند و در نیم ساعت دوم با *vor acht* (مانده به هشت).
+        درست در میانه، ساعت هفت و نیم، می‌گویند *halb acht*: نیمی از راه تا
+        ساعت هشت.
+      de: >
+        Die Stunde von sieben bis acht. In der ersten halben Stunde zählt man
+        die Minuten *nach sieben*, in der zweiten *vor acht*. In der Mitte, um
+        7.30 Uhr, ist es *halb acht*: die Hälfte bis acht.
+    svg: |
+      <svg viewBox="0 0 320 226">
+        <!-- the clock face; the first half hour shaded -->
+        <circle class="surface" cx="160" cy="125" r="60"/>
+        <path class="shade" d="M160,65 A60,60 0 0,1 160,185 Z"/>
+        <line class="guide" x1="160" y1="65" x2="160" y2="185"/>
+        <!-- the quarter hours -->
+        <line class="line" x1="160" y1="65" x2="160" y2="75"/>
+        <line class="line" x1="220" y1="125" x2="210" y2="125"/>
+        <line class="line" x1="160" y1="185" x2="160" y2="175"/>
+        <line class="line" x1="100" y1="125" x2="110" y2="125"/>
+        <!-- the two halves -->
+        <text class="label" x="190" y="131" text-anchor="middle">nach</text>
+        <text class="label" x="130" y="131" text-anchor="middle">vor</text>
+        <!-- what each quarter is called -->
+        <text class="label" x="160" y="48" text-anchor="middle">sieben Uhr</text>
+        <text class="note" x="228" y="120">Viertel nach</text>
+        <text class="note" x="228" y="138">sieben</text>
+        <text class="label" x="160" y="210" text-anchor="middle">halb acht</text>
+        <text class="note" x="92" y="120" text-anchor="end">Viertel vor</text>
+        <text class="note" x="92" y="138" text-anchor="end">acht</text>
+      </svg>
+
+examples:
+  - de: Wie spät ist es? – Es ist halb acht.
+    en: What time is it? – It's half past seven.
+    fa: ساعت چند است؟ – هفت و نیم است.
+  - de: Wie viel Uhr ist es? – Es ist Viertel nach drei.
+    en: What time is it? – It's quarter past three.
+    fa: ساعت چند است؟ – سه و ربع است.
+  - de: Der Unterricht beginnt um Viertel vor neun.
+    en: Class starts at quarter to nine.
+    fa: کلاس یک ربع به نه شروع می‌شود.
+  - de: Wir treffen uns um zehn nach sechs.
+    en: We're meeting at ten past six.
+    fa: ساعت شش و ده دقیقه همدیگر را می‌بینیم.
+  - de: Es ist zehn vor zwölf.
+    en: It's ten to twelve.
+    fa: ده دقیقه به دوازده است.
+  - de: Um wie viel Uhr kommst du? – Um eins.
+    en: What time are you coming? – At one.
+    fa: ساعت چند می‌آیی؟ – ساعت یک.
+  - de: Ich frühstücke um sieben Uhr.
+    en: I have breakfast at seven.
+    fa: ساعت هفت صبحانه می‌خورم.
+  - de: Der Zug nach München fährt um 18.30 Uhr.
+    en: The train to Munich leaves at 18:30.
+    fa: قطار مونیخ ساعت ۱۸:۳۰ حرکت می‌کند.
+  - de: Die Nachrichten kommen um 20.00 Uhr.
+    en: The news is on at 20:00.
+    fa: اخبار ساعت ۲۰:۰۰ پخش می‌شود.
+  - de: Der Film beginnt um 21.15 Uhr.
+    en: The film starts at 21:15.
+    fa: فیلم ساعت ۲۱:۱۵ شروع می‌شود.
+  - de: Die Bäckerei ist von 7 bis 18 Uhr geöffnet.
+    en: The bakery is open from 7 a.m. to 6 p.m.
+    fa: نانوایی از ساعت ۷ تا ۱۸ باز است.
+
+mistakes:
+  - wrong: Der Kurs beginnt um 7.30 Uhr, also um halb sieben.
+    right: Der Kurs beginnt um 7.30 Uhr, also um halb acht.
+    why:
+      en: "*Halb* looks ahead to the next hour: 7.30 is *halb acht*, half of the way to eight."
+      fa: "در فارسی می‌گوییم «هفت و نیم»، ولی *halb* به ساعت بعد اشاره دارد: ساعت هفت و نیم *halb acht* است."
+      de: "*Halb* zählt zur nächsten Stunde: 7.30 Uhr ist *halb acht*."
+  - wrong: Es ist halb nach sieben.
+    right: Es ist halb acht.
+    why:
+      en: "*Halb* never takes *nach*. Half past seven is *halb acht*."
+      fa: "*halb* هیچ‌گاه با *nach* نمی‌آید. هفت و نیم می‌شود *halb acht*."
+      de: "Nach *halb* steht nie *nach*. 7.30 Uhr ist *halb acht*."
+  - wrong: Der Kurs beginnt in neun Uhr.
+    right: Der Kurs beginnt um neun Uhr.
+    why:
+      en: "A clock time takes *um*: *um neun Uhr*."
+      fa: "برای ساعتِ انجام کار، حرف اضافهٔ *um* می‌آید: *um neun Uhr*."
+      de: "Bei einer Uhrzeit steht *um*: *um neun Uhr*."
+  - wrong: Es ist eins Uhr.
+    right: Es ist ein Uhr.
+    why:
+      en: "Before *Uhr* it is *ein*: *ein Uhr*. Without *Uhr* it is *eins*: *Es ist eins.*"
+      fa: "پیش از *Uhr* می‌گویند *ein*: *ein Uhr*. بدون *Uhr* می‌گویند *eins*: *Es ist eins.*"
+      de: "Vor *Uhr* sagt man *ein*: *ein Uhr*. Ohne *Uhr* sagt man *eins*: *Es ist eins.*"
+
+# 20 questions.
+questions:
+  - id: choice-1
+    type: multiple-choice
+    prompt: "7.30 – Es ist ___."
+    options: [halb acht, halb sieben, sieben halb]
+    answer: halb acht
+    explanation:
+      en: "*Halb* looks ahead to the next hour: 7.30 is *halb acht*."
+      fa: "*halb* به ساعت بعد اشاره دارد: هفت و نیم می‌شود *halb acht*."
+      de: "*Halb* zählt zur nächsten Stunde: 7.30 Uhr ist *halb acht*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "8.15 – Es ist ___."
+    options: [Viertel nach acht, Viertel vor acht, Viertel nach neun]
+    answer: Viertel nach acht
+    explanation:
+      en: "A quarter of an hour past eight: *Viertel nach acht*."
+      fa: "یک ربع از هشت گذشته است: *Viertel nach acht*."
+      de: "Eine Viertelstunde nach acht: *Viertel nach acht*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "10.45 – Es ist ___."
+    options: [Viertel vor elf, Viertel nach zehn, Viertel vor zehn]
+    answer: Viertel vor elf
+    explanation:
+      en: "A quarter of an hour is left until eleven: *Viertel vor elf*."
+      fa: "یک ربع به یازده مانده است: *Viertel vor elf*."
+      de: "Noch eine Viertelstunde bis elf: *Viertel vor elf*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "Es ist halb fünf. Das ist ___."
+    options: [4.30 Uhr, 5.30 Uhr, 5.00 Uhr]
+    answer: 4.30 Uhr
+    explanation:
+      en: "*Halb fünf* is half of the way to five: 4.30."
+      fa: "*halb fünf* یعنی نیم ساعت مانده به پنج: ساعت چهار و نیم."
+      de: "*Halb fünf* ist die Hälfte bis fünf: 4.30 Uhr."
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Kurs beginnt ___ neun Uhr.
+    options: [um, in, an]
+    answer: um
+    explanation:
+      en: "A clock time takes *um*: *um neun Uhr*."
+      fa: "برای ساعتِ انجام کار، *um* می‌آید: *um neun Uhr*."
+      de: "Bei einer Uhrzeit steht *um*: *um neun Uhr*."
+  - id: gap-2
+    type: gap-fill
+    prompt: "1.00 – Es ist ___ Uhr."
+    options: [ein, eins, eine]
+    answer: ein
+    explanation:
+      en: "Before *Uhr*, *eins* becomes *ein*: *ein Uhr*."
+      fa: "پیش از *Uhr*، *eins* می‌شود *ein*: *ein Uhr*."
+      de: "Vor *Uhr* wird *eins* zu *ein*: *ein Uhr*."
+  - id: gap-3
+    type: gap-fill
+    prompt: "4.50 – Es ist zehn ___ fünf."
+    options: [vor, nach]
+    answer: vor
+    explanation:
+      en: "Ten minutes are left until five: *zehn vor fünf*."
+      fa: "ده دقیقه به پنج مانده است: *zehn vor fünf*."
+      de: "Noch zehn Minuten bis fünf: *zehn vor fünf*."
+  - id: gap-4
+    type: gap-fill
+    prompt: "6.10 – Es ist zehn ___ sechs."
+    options: [nach, vor]
+    answer: nach
+    explanation:
+      en: "Ten minutes past six: *zehn nach sechs*."
+      fa: "ده دقیقه از شش گذشته است: *zehn nach sechs*."
+      de: "Zehn Minuten nach sechs: *zehn nach sechs*."
+  - id: true-1
+    type: true-false
+    prompt: Es ist halb nach drei.
+    answer: false
+    explanation:
+      en: "*Halb* never takes *nach*: 3.30 is *halb vier*."
+      fa: "*halb* هیچ‌گاه با *nach* نمی‌آید: سه و نیم می‌شود *halb vier*."
+      de: "Nach *halb* steht nie *nach*: 3.30 Uhr ist *halb vier*."
+  - id: true-2
+    type: true-false
+    prompt: Der Zug fährt um zwanzig Uhr fünfzehn.
+    answer: true
+    explanation:
+      en: "The official time: the hour, *Uhr*, then the minutes. The sentence is correct."
+      fa: "ساعت رسمی است: اول ساعت، سپس *Uhr* و بعد دقیقه. جمله درست است."
+      de: "Die offizielle Uhrzeit: Stunde, *Uhr*, Minuten. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Es ist eins Uhr.
+    answer: false
+    explanation:
+      en: "Before *Uhr* it is *ein*: *Es ist ein Uhr.* Without *Uhr*: *Es ist eins.*"
+      fa: "پیش از *Uhr* می‌گویند *ein*: *Es ist ein Uhr.* بدون *Uhr*: *Es ist eins.*"
+      de: "Vor *Uhr* sagt man *ein*: *Es ist ein Uhr.* Ohne *Uhr*: *Es ist eins.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: "7.30 – Es ist halb ___."
+    answers: [acht]
+    explanation:
+      en: "*Halb* looks ahead to the next hour: *halb acht*."
+      fa: "*halb* به ساعت بعد اشاره دارد: *halb acht*."
+      de: "*Halb* zählt zur nächsten Stunde: *halb acht*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: "9.15 – Es ist Viertel nach ___."
+    answers: [neun]
+    explanation:
+      en: "A quarter of an hour past nine: *Viertel nach neun*."
+      fa: "یک ربع از نه گذشته است: *Viertel nach neun*."
+      de: "Eine Viertelstunde nach neun: *Viertel nach neun*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: "2.45 – Es ist Viertel vor ___."
+    answers: [drei]
+    explanation:
+      en: "A quarter of an hour is left until three: *Viertel vor drei*."
+      fa: "یک ربع به سه مانده است: *Viertel vor drei*."
+      de: "Noch eine Viertelstunde bis drei: *Viertel vor drei*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: "17.20 – Es ist siebzehn Uhr ___."
+    answers: [zwanzig]
+    explanation:
+      en: "The official time: the hour, *Uhr*, then the minutes: *siebzehn Uhr zwanzig*."
+      fa: "ساعت رسمی: اول ساعت، سپس *Uhr* و بعد دقیقه: *siebzehn Uhr zwanzig*."
+      de: "Offiziell: Stunde, *Uhr*, Minuten: *siebzehn Uhr zwanzig*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: "11.30 – Es ist ___ zwölf."
+    answers: [halb]
+    explanation:
+      en: "Half of the way to twelve: *halb zwölf*."
+      fa: "نیم ساعت مانده به دوازده: *halb zwölf*."
+      de: "Die Hälfte bis zwölf: *halb zwölf*."
+  - id: error-1
+    type: find-error
+    prompt: Der Film beginnt in acht Uhr.
+    answer: in
+    explanation:
+      en: "A clock time takes *um*: *um acht Uhr*."
+      fa: "برای ساعتِ انجام کار، *um* می‌آید: *um acht Uhr*."
+      de: "Bei einer Uhrzeit steht *um*: *um acht Uhr*."
+  - id: error-2
+    type: find-error
+    prompt: Wir essen um eins Uhr.
+    answer: eins
+    explanation:
+      en: "Before *Uhr* it is *ein*: *um ein Uhr*."
+      fa: "پیش از *Uhr* می‌گویند *ein*: *um ein Uhr*."
+      de: "Vor *Uhr* sagt man *ein*: *um ein Uhr*."
+  - id: match-1
+    type: matching
+    answer:
+      - ["7.15", Viertel nach sieben]
+      - ["7.30", halb acht]
+      - ["7.45", Viertel vor acht]
+      - ["8.00", acht Uhr]
+    explanation:
+      en: "Past seven up to the half hour, then *halb acht*, then the minutes to eight."
+      fa: "تا نیم ساعت با «گذشته از هفت» (*nach sieben*)، سپس *halb acht* و پس از آن «مانده به هشت» (*vor acht*)."
+      de: "Bis zur halben Stunde *nach sieben*, dann *halb acht*, danach *vor acht*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [der Zug, fährt, um halb acht]
+      - [um halb acht, fährt, der Zug]
+    explanation:
+      en: "The verb comes second. The time can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. زمان می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. Die Zeit kann am Anfang oder am Ende stehen."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 6014bd0eb3671c53

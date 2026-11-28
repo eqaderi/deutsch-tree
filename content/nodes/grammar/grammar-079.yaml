@@ -4,10 +4,264 @@ kind: grammar
 level: A1
 chapter: a1-more-articles
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062]
 title:
   en: "*Demonstrativpronomen* *der*, *das*, *die*"
   fa: "ضمیر اشاره *der*، *das*، *die*"
   de: "Demonstrativpronomen *der*, *das*, *die*"
+
+explanations:
+  en:
+    rule: >
+      In speech, *der*, *die* and *das* often stand alone, without a noun, in
+      place of *er*, *sie* and *es*. They point back to a person or thing just
+      named and stress it, so they usually come first in the sentence: *Die
+      Jacke? Die ist gut!* They have the forms of the definite article: *der*,
+      *die*, *das*, and *die* for the plural. In the *Akkusativ* only the
+      masculine changes: *Der Rock? Den nehme ich.*
+  fa:
+    rule: >
+      در گفتار، *der*، *die* و *das* اغلب بی‌آن‌که اسمی پس از آن‌ها بیاید، به
+      جای *er*، *sie* و *es* به کار می‌روند. این ضمیر اشاره به کس یا چیزی
+      برمی‌گردد که همین حالا نامش آمده است و بر آن تأکید می‌کند؛ از این رو
+      معمولاً در آغاز جمله می‌آید: *Die Jacke? Die ist gut!* شکل‌های آن همان
+      شکل‌های حرف تعریف معین است: *der*، *die*، *das* و برای جمع *die*. در
+      حالت *Akkusativ* (حالت مفعولی) فقط مذکر تغییر می‌کند: *Der Rock? Den
+      nehme ich.* معنای آن نزدیک به «همین» یا «این یکی» در فارسی است.
+  de:
+    rule: >
+      Beim Sprechen stehen *der*, *die* und *das* oft allein, ohne Nomen, statt
+      *er*, *sie* und *es*. Sie zeigen auf eine Person oder Sache, die man
+      gerade genannt hat. Darum stehen sie meistens am Satzanfang: *Die Jacke?
+      Die ist gut!* Die Formen sind wie beim Artikel: *der*, *die*, *das* und
+      im Plural *die*. Im Akkusativ ändert sich nur das Maskulinum: *Der Rock?
+      Den nehme ich.*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: Pronoun, fa: ضمیر, de: Pronomen }
+    - { en: "Pronoun in the *Akkusativ*", fa: "ضمیر در حالت *Akkusativ*", de: Pronomen im Akkusativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Rock, der, den, Der Rock? Den nehme ich.]
+    - [die Jacke, die, die, Die Jacke? Die ist gut!]
+    - [das Hemd, das, das, Das Hemd? Das ist zu teuer.]
+    - [die Schuhe (Plural), die, die, Die Schuhe? Die sind bequem.]
+
+examples:
+  - de: Die Jacke? Die ist gut!
+    en: The jacket? That one's good!
+    fa: کاپشن؟ این یکی خوب است!
+  - de: Wie findest du den Rock? – Den finde ich schön.
+    en: What do you think of the skirt? – I think it's nice.
+    fa: دامن را چطور می‌بینی؟ – به نظرم قشنگ است.
+  - de: Wo ist das Buch? – Das liegt auf dem Tisch.
+    en: Where is the book? – It's on the table.
+    fa: کتاب کجاست؟ – روی میز است.
+  - de: Kennst du Herrn Weber? – Ja, den kenne ich gut.
+    en: Do you know Mr Weber? – Yes, I know him well.
+    fa: آقای وبر را می‌شناسی؟ – بله، او را خوب می‌شناسم.
+  - de: Die Schuhe sind schön. – Ja, aber die sind zu teuer.
+    en: The shoes are nice. – Yes, but they're too expensive.
+    fa: کفش‌ها قشنگ‌اند. – بله، ولی زیادی گران‌اند.
+  - de: Der Kaffee hier? Der ist sehr gut.
+    en: The coffee here? It's very good.
+    fa: قهوهٔ این‌جا؟ خیلی خوب است.
+  - de: Ich suche meine Brille. – Die ist im Bad.
+    en: I'm looking for my glasses. – They're in the bathroom.
+    fa: دنبال عینکم می‌گردم. – در حمام است.
+  - de: Nimmst du das Zimmer? – Ja, das nehme ich.
+    en: Are you taking the room? – Yes, I'll take it.
+    fa: اتاق را می‌گیری؟ – بله، همین را می‌گیرم.
+
+mistakes:
+  - wrong: Der Rock? Der nehme ich.
+    right: Der Rock? Den nehme ich.
+    why:
+      en: "The skirt is the object of *nehmen*, so the *Akkusativ*: *den*, as in *den Rock*."
+      fa: "دامن مفعول *nehmen* است، پس در حالت *Akkusativ* می‌آید: *den*، مانند *den Rock*."
+      de: "Der Rock ist das Objekt von *nehmen*. Darum Akkusativ: *den*, wie bei *den Rock*."
+  - wrong: Die Jacke? Der ist schön.
+    right: Die Jacke? Die ist schön.
+    why:
+      en: "The pronoun has the gender of the noun it stands for. *Jacke* is feminine: *die*."
+      fa: "ضمیر جنس همان اسمی را دارد که به جای آن آمده است. *Jacke* اسم مؤنث است: *die*."
+      de: "Das Pronomen hat das Genus vom Nomen. *Jacke* ist feminin: *die*."
+  - wrong: Die Äpfel? Der sind gut.
+    right: Die Äpfel? Die sind gut.
+    why:
+      en: "For a plural the pronoun is *die*, as the article is."
+      fa: "برای اسم جمع، ضمیر مانند حرف تعریف *die* است."
+      de: "Im Plural ist das Pronomen *die*, wie der Artikel."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Rock? ___ ist schön.
+    options: [Der, Die, Das]
+    answer: Der
+    explanation:
+      en: "*Rock* is masculine and the subject here: *der*."
+      fa: "*Rock* اسم مذکر و این‌جا فاعل جمله است: *der*."
+      de: "*Rock* ist maskulin und hier das Subjekt: *der*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Jacke? ___ ist zu teuer.
+    options: [Die, Der, Den]
+    answer: Die
+    explanation:
+      en: "*Jacke* is feminine: *die*."
+      fa: "*Jacke* اسم مؤنث است: *die*."
+      de: "*Jacke* ist feminin: *die*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Hemd? ___ ist super.
+    options: [Das, Der, Die]
+    answer: Das
+    explanation:
+      en: "*Hemd* is neuter: *das*."
+      fa: "*Hemd* اسم خنثی است: *das*."
+      de: "*Hemd* ist neutral: *das*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Der Pullover ist toll. ___ nehme ich.
+    options: [Den, Der, Die]
+    answer: Den
+    explanation:
+      en: "The jumper is the object of *nehmen* (*Akkusativ*): *den*."
+      fa: "پلیور مفعول *nehmen* است (حالت *Akkusativ*): *den*."
+      de: "Der Pullover ist das Objekt von *nehmen* (Akkusativ): *den*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Wo sind die Schlüssel? – ___ liegen auf dem Tisch.
+    options: [Die, Der, Das]
+    answer: Die
+    explanation:
+      en: "*Schlüssel* is plural here (*die Schlüssel*, *sind*): *die*."
+      fa: "*Schlüssel* این‌جا جمع است (*die Schlüssel*، *sind*): *die*."
+      de: "*Schlüssel* ist hier Plural (*die Schlüssel*, *sind*): *die*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Kennst du Frau Schmidt? – Ja, ___ kenne ich.
+    options: [die, der, den]
+    answer: die
+    explanation:
+      en: "Frau Schmidt is a woman; feminine stays *die* in the *Akkusativ*."
+      fa: "خانم اشمیت زن است و مؤنث در حالت *Akkusativ* هم *die* می‌ماند."
+      de: "Frau Schmidt ist eine Frau. Feminin bleibt im Akkusativ *die*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wie findest du den Film? – ___ finde ich langweilig.
+    options: [Den, Der, Das]
+    answer: Den
+    explanation:
+      en: "The film is the object of *finden* (*Akkusativ*): *den*."
+      fa: "فیلم مفعول *finden* است (حالت *Akkusativ*): *den*."
+      de: "Der Film ist das Objekt von *finden* (Akkusativ): *den*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ist das Zimmer noch frei? – Ja, ___ ist frei.
+    options: [das, der, die]
+    answer: das
+    explanation:
+      en: "*Zimmer* is neuter: *das*."
+      fa: "*Zimmer* اسم خنثی است: *das*."
+      de: "*Zimmer* ist neutral: *das*."
+  - id: true-1
+    type: true-false
+    prompt: Die Schuhe? Die sind bequem.
+    answer: true
+    explanation:
+      en: "*Schuhe* is a plural: *die*. The sentence is correct."
+      fa: "*Schuhe* جمع است: *die*. جمله درست است."
+      de: "*Schuhe* ist Plural: *die*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Der Salat? Den esse ich nicht.
+    answer: true
+    explanation:
+      en: "The salad is the object of *essen* (*Akkusativ*): *den*. The sentence is correct."
+      fa: "سالاد مفعول *essen* است (حالت *Akkusativ*): *den*. جمله درست است."
+      de: "Der Salat ist das Objekt von *essen* (Akkusativ): *den*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Das Auto? Der ist neu.
+    answer: false
+    explanation:
+      en: "*Auto* is neuter: *Das Auto? Das ist neu.*"
+      fa: "*Auto* اسم خنثی است: *Das Auto? Das ist neu.*"
+      de: "*Auto* ist neutral: *Das Auto? Das ist neu.*"
+  - id: true-4
+    type: true-false
+    prompt: Der Computer? Der nehme ich.
+    answer: false
+    explanation:
+      en: "The computer is the object of *nehmen* (*Akkusativ*): *Den nehme ich.*"
+      fa: "کامپیوتر مفعول *nehmen* است (حالت *Akkusativ*): *Den nehme ich.*"
+      de: "Der Computer ist das Objekt von *nehmen* (Akkusativ): *Den nehme ich.*"
+  - id: true-5
+    type: true-false
+    prompt: Kennst du Paul? – Ja, den kenne ich.
+    answer: true
+    explanation:
+      en: "Paul is a man and the object of *kennen* (*Akkusativ*): *den*. The sentence is correct."
+      fa: "پاول مرد و مفعول *kennen* است (حالت *Akkusativ*): *den*. جمله درست است."
+      de: "Paul ist ein Mann und das Objekt von *kennen* (Akkusativ): *den*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Der Tisch? ___ (der) kaufe ich.
+    answers: [Den]
+    explanation:
+      en: "The table is the object of *kaufen* (*Akkusativ*): *Den kaufe ich.*"
+      fa: "میز مفعول *kaufen* است (حالت *Akkusativ*): *Den kaufe ich.*"
+      de: "Der Tisch ist das Objekt von *kaufen* (Akkusativ): *Den kaufe ich.*"
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Die Lampe? ___ (die) ist schön.
+    answers: [Die]
+    explanation:
+      en: "*Lampe* is feminine and the subject: *Die ist schön.*"
+      fa: "*Lampe* اسم مؤنث و فاعل جمله است: *Die ist schön.*"
+      de: "*Lampe* ist feminin und das Subjekt: *Die ist schön.*"
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wie findest du den Mantel? – ___ (der) finde ich zu lang.
+    answers: [Den]
+    explanation:
+      en: "The coat is the object of *finden* (*Akkusativ*): *Den finde ich zu lang.*"
+      fa: "پالتو مفعول *finden* است (حالت *Akkusativ*): *Den finde ich zu lang.*"
+      de: "Der Mantel ist das Objekt von *finden* (Akkusativ): *Den finde ich zu lang.*"
+  - id: error-1
+    type: find-error
+    prompt: Die Jacke? Der ist schön.
+    answer: Der
+    explanation:
+      en: "*Jacke* is feminine: *Die Jacke? Die ist schön.*"
+      fa: "*Jacke* اسم مؤنث است: *Die Jacke? Die ist schön.*"
+      de: "*Jacke* ist feminin: *Die Jacke? Die ist schön.*"
+  - id: error-2
+    type: find-error
+    prompt: Mein Rucksack? Der finde ich nicht.
+    answer: Der
+    explanation:
+      en: "The rucksack is the object of *finden* (*Akkusativ*): *Den finde ich nicht.*"
+      fa: "کوله‌پشتی مفعول *finden* است (حالت *Akkusativ*): *Den finde ich nicht.*"
+      de: "Der Rucksack ist das Objekt von *finden* (Akkusativ): *Den finde ich nicht.*"
+  - id: match-1
+    type: matching
+    answer:
+      - [Der Rock? ___ nehme ich., Den]
+      - [Die Bluse? ___ nehme ich., Die]
+      - [Das Kleid? ___ nehme ich., Das]
+    explanation:
+      en: "Each is the object of *nehmen* (*Akkusativ*): masculine *den*, feminine *die*, neuter *das*."
+      fa: "هر سه مفعول *nehmen* هستند (حالت *Akkusativ*): مذکر *den*، مؤنث *die* و خنثی *das*."
+      de: "Alle sind das Objekt von *nehmen* (Akkusativ): maskulin *den*, feminin *die*, neutral *das*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: aec1cc7a2ce4287b

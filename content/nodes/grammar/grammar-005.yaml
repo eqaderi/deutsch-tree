@@ -4,10 +4,334 @@ kind: grammar
 level: A1
 chapter: a1-verb-patterns
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-001, grammar-139]
 title:
   en: "*Trennbare Verben* in *Präsens*"
   fa: "فعل‌های جداشدنی در زمان حال"
   de: "Trennbare Verben im Präsens"
+
+explanations:
+  en:
+    rule: >
+      A separable verb (*trennbares Verb*) is a verb with a stressed prefix
+      such as *an-*, *auf-*, *aus-*, *ein-*, *mit-*, *zu-* or *fern-*. In a
+      sentence the verb splits: the conjugated verb stands in its usual place,
+      position 2 in a statement, and the prefix goes to the very end:
+      *anfangen*, *Der Kurs fängt um 9 Uhr an.* The verb part takes the
+      normal endings and vowel changes (*du fängst … an*). In the dictionary
+      and in the infinitive the verb is one word.
+  fa:
+    rule: >
+      فعل جداشدنی (*trennbares Verb*) فعلی است با پیشوندی تکیه‌دار مانند
+      *an-*، *auf-*، *aus-*، *ein-*، *mit-*، *zu-* یا *fern-*. این فعل در جمله
+      دو بخش می‌شود: فعل صرف‌شده در جای همیشگی خود می‌آید، یعنی در جملهٔ خبری
+      در جایگاه دوم، و پیشوند به پایان جمله می‌رود: *anfangen*، *Der Kurs
+      fängt um 9 Uhr an.* بخش فعلی همان شناسه‌ها و تغییر واکه‌های معمول را
+      می‌گیرد (*du fängst … an*). در فرهنگ لغت و در مصدر، فعل یک واژه است.
+  de:
+    rule: >
+      Ein trennbares Verb hat ein betontes Präfix, zum Beispiel *an-*,
+      *auf-*, *aus-*, *ein-*, *mit-*, *zu-* oder *fern-*. Im Satz teilt sich
+      das Verb: Das konjugierte Verb steht an seinem normalen Platz, im
+      Aussagesatz auf Position 2. Das Präfix steht ganz am Ende: *anfangen*,
+      *Der Kurs fängt um 9 Uhr an.* Im Wörterbuch und im Infinitiv ist das
+      Verb ein Wort.
+
+# The verb splits: the verb part to position 2, the prefix to the end.
+diagrams:
+  - caption:
+      en: >
+        *anfangen* splits in two: the verb part *fängt* goes to position 2,
+        the prefix *an* to the end of the sentence.
+      fa: >
+        *anfangen* دو بخش می‌شود: بخش فعلی *fängt* به جایگاه دوم می‌رود و
+        پیشوند *an* به پایان جمله.
+      de: >
+        *anfangen* teilt sich: *fängt* steht auf Position 2, das Präfix *an*
+        steht am Satzende.
+    labels:
+      second: { en: position 2, fa: جایگاه دوم, de: Position 2 }
+      end: { en: end, fa: پایان جمله, de: Satzende }
+    svg: |
+      <svg viewBox="0 0 320 184">
+        <!-- the infinitive, prefix shaded -->
+        <rect class="shade" x="100" y="8" width="44" height="40"/>
+        <rect class="surface" x="148" y="8" width="72" height="40"/>
+        <text class="label" x="122" y="34" text-anchor="middle">an</text>
+        <text class="label" x="184" y="34" text-anchor="middle">fangen</text>
+        <!-- where each part goes -->
+        <line class="line" x1="184" y1="50" x2="124" y2="110"/>
+        <polygon class="object" points="124,110 133,108 126,101"/>
+        <line class="line" x1="122" y1="50" x2="289" y2="110"/>
+        <polygon class="object" points="289,110 280,112 283,103"/>
+        <!-- Der Kurs fängt um 9 Uhr an. -->
+        <rect class="surface" x="2" y="112" width="86" height="40"/>
+        <rect class="surface" x="92" y="112" width="64" height="40"/>
+        <rect class="surface" x="160" y="112" width="96" height="40"/>
+        <rect class="shade" x="260" y="112" width="58" height="40"/>
+        <text class="label" x="45" y="138" text-anchor="middle">Der Kurs</text>
+        <text class="label" x="124" y="138" text-anchor="middle">fängt</text>
+        <text class="label" x="208" y="138" text-anchor="middle">um 9 Uhr</text>
+        <text class="label" x="289" y="138" text-anchor="middle">an.</text>
+        <text class="note" x="124" y="174" text-anchor="middle">{{second}}</text>
+        <text class="note" x="284" y="174" text-anchor="middle">{{end}}</text>
+      </svg>
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: Position 1, fa: جایگاه اول, de: Position 1 }
+    - { en: "Position 2: verb", fa: "جایگاه دوم: فعل", de: "Position 2: Verb" }
+    - { en: Middle, fa: میانهٔ جمله, de: Mitte }
+    - { en: "End: prefix", fa: "پایان جمله: پیشوند", de: "Ende: Präfix" }
+  rows:
+    - [anfangen, Der Kurs, fängt, um 9 Uhr, an.]
+    - [aufstehen, Ich, stehe, um 7 Uhr, auf.]
+    - [einkaufen, Wir, kaufen, heute, ein.]
+    - [anrufen, Anna, ruft, ihre Mutter, an.]
+    - [fernsehen, Mein Sohn, sieht, am Abend, fern.]
+    - [zumachen, Er, macht, das Fenster, zu.]
+    - [mitkommen, Heute, kommt, mein Bruder, mit.]
+
+examples:
+  - de: Der Kurs fängt um 9 Uhr an.
+    en: The course starts at 9 o'clock.
+    fa: کلاس ساعت ۹ شروع می‌شود.
+  - de: Ich stehe jeden Tag um sieben Uhr auf.
+    en: I get up at seven every day.
+    fa: من هر روز ساعت هفت از خواب بیدار می‌شوم.
+  - de: Kaufst du heute ein?
+    en: Are you going shopping today?
+    fa: امروز خرید می‌کنی؟
+  - de: Wir sehen am Abend fern.
+    en: We watch TV in the evening.
+    fa: ما شب‌ها تلویزیون تماشا می‌کنیم.
+  - de: Der Zug kommt um 10:15 Uhr in Berlin an.
+    en: The train arrives in Berlin at 10:15.
+    fa: قطار ساعت ۱۰:۱۵ به برلین می‌رسد.
+  - de: Rufst du mich morgen an?
+    en: Will you call me tomorrow?
+    fa: فردا به من زنگ می‌زنی؟
+  - de: Mein Bruder kommt heute nicht mit.
+    en: My brother isn't coming along today.
+    fa: برادرم امروز با ما نمی‌آید.
+  - de: Wann fährt der Bus ab?
+    en: When does the bus leave?
+    fa: اتوبوس کی حرکت می‌کند؟
+
+mistakes:
+  - wrong: Ich aufstehe um 7 Uhr.
+    right: Ich stehe um 7 Uhr auf.
+    why:
+      en: In a sentence the prefix leaves the verb and goes to the end.
+      fa: در جمله، پیشوند از فعل جدا می‌شود و به پایان جمله می‌رود.
+      de: Im Satz trennt sich das Präfix vom Verb und steht am Ende.
+  - wrong: Ich rufe an dich morgen.
+    right: Ich rufe dich morgen an.
+    why:
+      en: The prefix comes last, after everything else in the sentence.
+      fa: پیشوند در آخر می‌آید، پس از همهٔ اجزای دیگر جمله.
+      de: Das Präfix kommt ganz am Ende, nach allen anderen Wörtern.
+  - wrong: Er fangt um 8 Uhr an.
+    right: Er fängt um 8 Uhr an.
+    why:
+      en: "The verb part keeps its vowel change: *fangen*, *er fängt*."
+      fa: "بخش فعلی تغییر واکهٔ خود را نگه می‌دارد: *fangen*، *er fängt*."
+      de: "Der Verbteil hat seinen Vokalwechsel: *fangen*, *er fängt*."
+  - wrong: Wir fernsehen am Abend.
+    right: Wir sehen am Abend fern.
+    why:
+      en: "*Fern* is a prefix too: *sehen* stands in position 2, *fern* at the end."
+      fa: "*fern* هم پیشوند است: *sehen* در جایگاه دوم می‌آید و *fern* در پایان جمله."
+      de: "*Fern* ist auch ein Präfix: *sehen* steht auf Position 2, *fern* am Ende."
+
+# 21 questions, every question type.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Der Kurs ___ um 9 Uhr an.
+    options: [fängt, anfängt, fangt]
+    answer: fängt
+    explanation:
+      en: "The prefix *an* is already at the end, so only the verb part stands in position 2: *fängt*, with *a* to *ä*."
+      fa: "پیشوند *an* در پایان جمله آمده است، پس در جایگاه دوم فقط بخش فعلی می‌آید: *fängt*، با تغییر *a* به *ä*."
+      de: "Das Präfix *an* steht schon am Ende. Auf Position 2 steht nur der Verbteil: *fängt*, mit *ä*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ du heute ein?
+    options: [Kaufst, Einkaufst, Kauft]
+    answer: Kaufst
+    explanation:
+      en: "*Ein* is at the end, so the question starts with the verb part only: *Kaufst du … ein?*"
+      fa: "*ein* در پایان جمله است، پس جملهٔ پرسشی فقط با بخش فعلی شروع می‌شود: *Kaufst du … ein?*"
+      de: "*Ein* steht am Ende. Die Frage beginnt nur mit dem Verbteil: *Kaufst du … ein?*"
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir sehen am Abend ___.
+    options: [fern, fernsehen, sehen]
+    answer: fern
+    explanation:
+      en: "*Sehen* is already in position 2; the prefix *fern* goes to the end."
+      fa: "*sehen* در جایگاه دوم آمده است و پیشوند *fern* به پایان جمله می‌رود."
+      de: "*Sehen* steht schon auf Position 2. Das Präfix *fern* steht am Ende."
+  - id: gap-4
+    type: gap-fill
+    prompt: Mein Vater ___ das Fenster zu.
+    options: [macht, zumacht, machen]
+    answer: macht
+    explanation:
+      en: "*Mein Vater* is *er*, so the verb part is *macht*; the prefix *zu* is at the end."
+      fa: "*mein Vater* سوم‌شخص مفرد است (*er*)، پس بخش فعلی *macht* است و پیشوند *zu* در پایان جمله می‌آید."
+      de: "*Mein Vater* ist *er*. Der Verbteil ist *macht*, das Präfix *zu* steht am Ende."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "ich / anrufen / dich / morgen"
+    options: [Ich rufe dich morgen an., Ich anrufe dich morgen., Ich rufe an dich morgen.]
+    answer: Ich rufe dich morgen an.
+    explanation:
+      en: "*Rufe* stands in position 2 and the prefix *an* at the very end."
+      fa: "*rufe* در جایگاه دوم می‌آید و پیشوند *an* در پایان جمله."
+      de: "*Rufe* steht auf Position 2, das Präfix *an* ganz am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "der Zug / ankommen / um neun Uhr"
+    options: [Der Zug kommt um neun Uhr an., Der Zug ankommt um neun Uhr., Der Zug kommen um neun Uhr an.]
+    answer: Der Zug kommt um neun Uhr an.
+    explanation:
+      en: "*Der Zug* is *er*: *kommt* in position 2, *an* at the end."
+      fa: "*der Zug* سوم‌شخص مفرد است (*er*): *kommt* در جایگاه دوم و *an* در پایان جمله."
+      de: "*Der Zug* ist *er*: *kommt* auf Position 2, *an* am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Kommst du heute mit?, Mitkommst du heute?, Kommst mit du heute?]
+    answer: Kommst du heute mit?
+    explanation:
+      en: "In a yes/no question the verb part comes first and the prefix *mit* last."
+      fa: "در پرسش بله و خیر، بخش فعلی در آغاز جمله می‌آید و پیشوند *mit* در آخر."
+      de: "In einer Ja/Nein-Frage steht der Verbteil am Anfang, das Präfix *mit* am Ende."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "du / fernsehen / am Abend"
+    options: [Du siehst am Abend fern., Du fernsiehst am Abend., Du sehst am Abend fern.]
+    answer: Du siehst am Abend fern.
+    explanation:
+      en: "*Fern* goes to the end, and *sehen* changes *e* to *ie* with *du*: *du siehst … fern*."
+      fa: "*fern* به پایان جمله می‌رود و واکهٔ *sehen* با *du* از *e* به *ie* تغییر می‌کند: *du siehst … fern*."
+      de: "*Fern* steht am Ende, und bei *du* wird *e* zu *ie*: *du siehst … fern*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Der Bus ___ (abfahren) um acht Uhr ab.
+    answers: [fährt]
+    explanation:
+      en: "*Der Bus* is *er*: the verb part is *fährt*, with *a* to *ä*; *ab* is already at the end."
+      fa: "*der Bus* سوم‌شخص مفرد است (*er*): بخش فعلی *fährt* است، با تغییر *a* به *ä*؛ *ab* در پایان جمله آمده است."
+      de: "*Der Bus* ist *er*: Der Verbteil ist *fährt*, mit *ä*. *Ab* steht schon am Ende."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Kommst du heute ___ (mitkommen)?
+    answers: [mit]
+    explanation:
+      en: "*Kommst* is at the start, so only the prefix *mit* is missing, at the end."
+      fa: "*kommst* در آغاز جمله آمده است، پس فقط پیشوند *mit* در پایان جمله کم است."
+      de: "*Kommst* steht am Anfang. Es fehlt nur das Präfix *mit* am Ende."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich rufe dich morgen ___ (anrufen).
+    answers: [an]
+    explanation:
+      en: "*Rufe* is in position 2, so the prefix *an* goes at the end."
+      fa: "*rufe* در جایگاه دوم آمده است، پس پیشوند *an* در پایان جمله می‌آید."
+      de: "*Rufe* steht auf Position 2. Das Präfix *an* steht am Ende."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wir ___ (einkaufen) am Samstag ein.
+    answers: [kaufen]
+    explanation:
+      en: "With *wir* the verb part is *kaufen*; the prefix *ein* is at the end."
+      fa: "با *wir* بخش فعلی *kaufen* است و پیشوند *ein* در پایان جمله می‌آید."
+      de: "Bei *wir* ist der Verbteil *kaufen*. Das Präfix *ein* steht am Ende."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Wann ___ (aufstehen) du morgen auf?
+    answers: [stehst]
+    explanation:
+      en: "With *du* the verb part is *stehst*; the prefix *auf* is at the end."
+      fa: "با *du* بخش فعلی *stehst* است و پیشوند *auf* در پایان جمله می‌آید."
+      de: "Bei *du* ist der Verbteil *stehst*. Das Präfix *auf* steht am Ende."
+  - id: true-1
+    type: true-false
+    prompt: Ich stehe um sieben Uhr auf.
+    answer: true
+    explanation:
+      en: "*Stehe* is in position 2 and *auf* at the end. The sentence is correct."
+      fa: "*stehe* در جایگاه دوم است و *auf* در پایان جمله. جمله درست است."
+      de: "*Stehe* steht auf Position 2, *auf* am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich aufstehe um sieben Uhr.
+    answer: false
+    explanation:
+      en: "The prefix must go to the end: *Ich stehe um sieben Uhr auf.*"
+      fa: "پیشوند باید به پایان جمله برود: *Ich stehe um sieben Uhr auf.*"
+      de: "Das Präfix steht am Ende: *Ich stehe um sieben Uhr auf.*"
+  - id: true-3
+    type: true-false
+    prompt: Er ruft an seine Mutter.
+    answer: false
+    explanation:
+      en: "*An* is the prefix of *anrufen* and goes to the end: *Er ruft seine Mutter an.*"
+      fa: "*an* پیشوند *anrufen* است و به پایان جمله می‌رود: *Er ruft seine Mutter an.*"
+      de: "*An* ist das Präfix von *anrufen* und steht am Ende: *Er ruft seine Mutter an.*"
+  - id: error-1
+    type: find-error
+    prompt: Meine Schwester anruft mich jeden Tag.
+    answer: anruft
+    explanation:
+      en: "The verb splits: *Meine Schwester ruft mich jeden Tag an.*"
+      fa: "فعل دو بخش می‌شود: *Meine Schwester ruft mich jeden Tag an.*"
+      de: "Das Verb teilt sich: *Meine Schwester ruft mich jeden Tag an.*"
+  - id: error-2
+    type: find-error
+    prompt: Der Kurs fangt um neun Uhr an.
+    answer: fangt
+    explanation:
+      en: "*Der Kurs* is *er*, and *fangen* changes *a* to *ä*: *er fängt … an*."
+      fa: "*der Kurs* سوم‌شخص مفرد است (*er*) و واکهٔ *fangen* از *a* به *ä* تغییر می‌کند: *er fängt … an*."
+      de: "*Der Kurs* ist *er*. Bei *fangen* wird *a* zu *ä*: *er fängt … an*."
+  - id: match-1
+    type: matching
+    answer:
+      - [anfangen, er fängt an]
+      - [aufstehen, er steht auf]
+      - [fernsehen, er sieht fern]
+      - [einkaufen, er kauft ein]
+    explanation:
+      en: "Each verb splits in two: the verb part first, the prefix last."
+      fa: "هر فعل دو بخش می‌شود: اول بخش فعلی، در آخر پیشوند."
+      de: "Jedes Verb teilt sich: zuerst der Verbteil, am Ende das Präfix."
+  - id: order-1
+    type: word-order
+    answers:
+      - [der Film, fängt, um acht Uhr, an]
+      - [um acht Uhr, fängt, der Film, an]
+    explanation:
+      en: "*Fängt* stands in position 2, *an* at the end; the subject and the time can swap places."
+      fa: "*fängt* در جایگاه دوم می‌آید و *an* در پایان جمله؛ فاعل و زمان می‌توانند جایشان را با هم عوض کنند."
+      de: "*Fängt* steht auf Position 2, *an* am Ende. Subjekt und Zeit können den Platz tauschen."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wann, kommt, der Zug, an]
+    end: "?"
+    explanation:
+      en: "After the question word comes the verb part *kommt*, and the prefix *an* closes the question."
+      fa: "پس از واژهٔ پرسشی بخش فعلی *kommt* می‌آید و پیشوند *an* جمله را می‌بندد."
+      de: "Nach dem Fragewort kommt der Verbteil *kommt*. Das Präfix *an* steht am Ende."
+
+review:
+  reviewer: an independent AI agent (Claude, fresh blind subagent; not a person)
+  date: 2026-11-28
+  pool: c6f3e0636d6cec7b
