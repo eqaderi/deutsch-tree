@@ -1,36 +1,360 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Information, Auskunft and Schalter are close; `tooCloseTo` keeps a close one from being
+# offered as a wrong meaning, and `alsoAccepted` takes it as right where it fits.
 id: vocabulary-town
 kind: vocabulary
 level: A1
 chapter: a1-words-town-travel
 order: 1
-status: coming-soon
+status: published
 title:
   en: "In town"
   fa: "در شهر"
   de: "In der Stadt"
+attemptSize: 15
 words:
   - word: Stadt
+    class: noun
+    article: die
+    plural: Städte
+    level: A1
+    meaning:
+      en: town, city
+      fa: شهر
+    definition: ein großer Ort, wo viele Menschen wohnen und arbeiten
+    example:
+      de: Wir wohnen in einer kleinen Stadt.
+      en: We live in a small town.
+      fa: ما در شهر کوچکی زندگی می‌کنیم.
+
   - word: Dorf
+    class: noun
+    article: das
+    plural: Dörfer
+    level: A1
+    meaning:
+      en: village
+      fa: روستا، ده
+    definition: ein kleiner Ort auf dem Land mit wenigen Häusern
+    example:
+      de: Meine Großeltern wohnen in einem Dorf.
+      en: My grandparents live in a village.
+      fa: پدربزرگ و مادربزرگم در روستایی زندگی می‌کنند.
+
   - word: Straße
+    class: noun
+    article: die
+    plural: Straßen
+    level: A1
+    meaning:
+      en: street, road
+      fa: خیابان
+    definition: ein Weg für Autos, mit Häusern links und rechts
+    example:
+      de: In welcher Straße wohnst du?
+      en: Which street do you live in?
+      fa: در کدام خیابان زندگی می‌کنی؟
+
   - word: Platz
+    class: noun
+    article: der
+    plural: Plätze
+    level: A1
+    meaning:
+      en: square (in a town); place, seat
+      fa: میدان؛ جا
+    definition: ein freier Ort in der Stadt zwischen den Häusern; auch ein Ort zum Sitzen
+    example:
+      de: Auf dem Platz vor dem Rathaus ist heute Markt.
+      en: Today there is a market on the square in front of the town hall.
+      fa: امروز در میدان جلوی شهرداری بازار است.
+    alsoAccepted: [der Marktplatz, der Sitzplatz]
+
   - word: Bank
+    class: noun
+    article: die
+    plural: Banken
+    level: A1
+    meaning:
+      en: bank (for money)
+      fa: بانک
+    definition: dort hat man sein Geld auf einem Konto
+    example:
+      de: Die Bank ist bis 16 Uhr geöffnet.
+      en: The bank is open until 4 pm.
+      fa: بانک تا ساعت ۱۶ باز است.
+    alsoAccepted: [die Sparkasse]
+
   - word: Post
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: post office; post, mail
+      fa: ادارهٔ پست؛ نامه‌ها و بسته‌های پستی
+    definition: dort gibt man Briefe und Pakete ab; auch die Briefe, die man bekommt
+    example:
+      de: Ich bringe das Paket zur Post.
+      en: I'm taking the parcel to the post office.
+      fa: بسته را به ادارهٔ پست می‌برم.
+    alsoAccepted: [das Postamt]
+
   - word: Polizei
+    class: noun
+    article: die
+    number: singular-only
+    level: A1
+    meaning:
+      en: the police (the service)
+      fa: پلیس، نیروی انتظامی
+    definition: sie sorgt für Ordnung und Sicherheit und kommt, wenn jemand etwas gestohlen hat
+    example:
+      de: Ruf schnell die Polizei!
+      en: Call the police, quick!
+      fa: زود به پلیس زنگ بزن!
+    alsoAccepted: [der Polizist, die Polizistin]
+
   - word: Kino
+    class: noun
+    article: das
+    plural: Kinos
+    level: A1
+    meaning:
+      en: cinema
+      fa: سینما
+    definition: dort sieht man zusammen mit anderen Leuten einen Film
+    example:
+      de: Gehen wir heute Abend ins Kino?
+      en: Shall we go to the cinema tonight?
+      fa: امشب به سینما برویم؟
+
   - word: Schwimmbad
+    class: noun
+    article: das
+    plural: Schwimmbäder
+    level: A1
+    meaning:
+      en: swimming pool
+      fa: استخر
+    definition: dort kann man im Wasser schwimmen, drinnen oder draußen
+    example:
+      de: Im Sommer gehen die Kinder oft ins Schwimmbad.
+      en: In summer the children often go to the swimming pool.
+      fa: بچه‌ها تابستان‌ها اغلب به استخر می‌روند.
+    alsoAccepted: [das Bad, das Hallenbad, das Freibad, das Schwimmbecken]
+
   - word: Bäckerei
+    class: noun
+    article: die
+    plural: Bäckereien
+    level: A1
+    meaning:
+      en: bakery
+      fa: نانوایی
+    definition: ein Geschäft, in dem man Brot und Brötchen kauft
+    example:
+      de: Die Bäckerei an der Ecke hat sehr gutes Brot.
+      en: The bakery on the corner has very good bread.
+      fa: نانوایی سر کوچه نان خیلی خوبی دارد.
+    alsoAccepted: [der Bäcker]
+
   - word: Kiosk
+    class: noun
+    article: der
+    plural: Kioske
+    level: A1
+    meaning:
+      en: kiosk, newsstand
+      fa: دکه، کیوسک
+    definition: ein kleines Geschäft an der Straße mit Zeitungen, Getränken und Süßigkeiten
+    example:
+      de: Am Kiosk kaufe ich eine Zeitung.
+      en: I buy a newspaper at the kiosk.
+      fa: از دکه روزنامه می‌خرم.
+
   - word: Kindergarten
+    class: noun
+    article: der
+    plural: Kindergärten
+    level: A1
+    meaning:
+      en: nursery school, kindergarten
+      fa: مهدکودک
+    definition: ein Haus, in dem Kinder von drei bis sechs Jahren tagsüber spielen und lernen
+    example:
+      de: Unsere Tochter geht seit Mai in den Kindergarten.
+      en: Our daughter has been going to nursery school since May.
+      fa: دخترمان از ماه مه به مهدکودک می‌رود.
+    alsoAccepted: [die Kita, die Kindertagesstätte]
+
   - word: Halle
+    class: noun
+    article: die
+    plural: Hallen
+    level: A1
+    meaning:
+      en: hall (a large room or building)
+      fa: سالن بزرگ
+    definition: ein großes Gebäude mit nur einem großen Raum, zum Beispiel für Sport
+    example:
+      de: Im Winter spielen wir in der Halle Fußball.
+      en: In winter we play football in the hall.
+      fa: زمستان‌ها در سالن فوتبال بازی می‌کنیم.
+    alsoAccepted: [die Sporthalle, die Turnhalle, die Stadthalle, der Saal]
+
   - word: Disco
+    class: noun
+    article: die
+    plural: Discos
+    level: A1
+    meaning:
+      en: disco, club (for dancing)
+      fa: دیسکو، کلوب شبانه
+    definition: dort tanzt man am Abend zu lauter Musik
+    example:
+      de: Am Samstag gehen wir in die Disco.
+      en: On Saturday we're going to the disco.
+      fa: شنبه به دیسکو می‌رویم.
+    alsoAccepted: [die Disko, die Diskothek, der Club]
+
   - word: Schild
+    class: noun
+    article: das
+    plural: Schilder
+    level: A1
+    meaning:
+      en: sign (a board with words or a picture)
+      fa: تابلوی راهنما یا هشدار (با نوشته یا تصویر)
+    definition: darauf steht, wie eine Straße heißt oder was man hier nicht darf
+    example:
+      de: "Auf dem Schild steht: Rauchen verboten."
+      en: "The sign says: no smoking."
+      fa: "روی تابلو نوشته شده است: سیگار کشیدن ممنوع."
+
   - word: Automat
+    class: noun
+    article: der
+    plural: Automaten
+    level: A1
+    meaning:
+      en: machine (for tickets, drinks or money)
+      fa: دستگاه خودکار (برای بلیت، نوشیدنی یا پول)
+    definition: eine Maschine, an der man bezahlt und eine Fahrkarte oder ein Getränk bekommt
+    example:
+      de: Die Fahrkarten gibt es am Automaten.
+      en: You can get tickets from the machine.
+      fa: بلیت را می‌توان از دستگاه خودکار گرفت.
+    alsoAccepted: [der Fahrkartenautomat, der Getränkeautomat, der Geldautomat]
+
   - word: Sehenswürdigkeit
+    class: noun
+    article: die
+    plural: Sehenswürdigkeiten
+    level: A1
+    meaning:
+      en: sight, place of interest
+      fa: جای دیدنی
+    definition: ein bekanntes Gebäude oder ein schöner Ort, den Touristen gern sehen
+    example:
+      de: Der Kölner Dom ist eine bekannte Sehenswürdigkeit.
+      en: Cologne Cathedral is a famous sight.
+      fa: کلیسای جامع کلن جای دیدنی معروفی است.
+
   - word: besichtigen
+    class: verb
+    level: A1
+    meaning:
+      en: to visit and look round (a sight or a museum)
+      fa: بازدید کردن (از جای دیدنی یا موزه)
+    definition: einen Ort oder ein Gebäude genau ansehen, zum Beispiel als Tourist
+    example:
+      de: Morgen besichtigen wir das Schloss.
+      en: Tomorrow we're visiting the castle.
+      fa: فردا از قصر بازدید می‌کنیم.
+    alsoAccepted: [ansehen, anschauen, besuchen, sich ansehen]
+
   - word: Führung
+    class: noun
+    article: die
+    plural: Führungen
+    level: A1
+    meaning:
+      en: guided tour
+      fa: بازدید با راهنما
+    definition: ein Besuch in einer Gruppe, bei dem jemand ein Museum oder eine Stadt zeigt und alles erklärt
+    example:
+      de: Die Führung durch das Museum beginnt um 11 Uhr.
+      en: The guided tour of the museum starts at 11 o'clock.
+      fa: بازدید با راهنما از موزه ساعت ۱۱ شروع می‌شود.
+    alsoAccepted: [die Stadtführung, die Museumsführung, die Gruppenführung]
+
   - word: Eintritt
+    class: noun
+    article: der
+    plural: Eintritte
+    level: A1
+    meaning:
+      en: admission (fee), entry
+      fa: بهای ورود، ورودی
+    definition: das Geld, das man für ein Museum oder ein Konzert bezahlt
+    example:
+      de: Der Eintritt kostet 8 Euro.
+      en: Admission costs 8 euros.
+      fa: بهای ورود ۸ یورو است.
+    alsoAccepted: [der Eintrittspreis, das Eintrittsgeld]
+
   - word: Information
+    class: noun
+    article: die
+    plural: Informationen
+    level: A1
+    meaning:
+      en: information; the information desk
+      fa: اطلاعات؛ بخش اطلاعات
+    definition: das, was man wissen möchte; auch der Ort, wo man fragen kann
+    example:
+      de: Fragen Sie bitte an der Information.
+      en: Please ask at the information desk.
+      fa: لطفاً از بخش اطلاعات بپرسید.
+    alsoAccepted: [die Auskunft, die Info]
+    tooCloseTo: [Auskunft, Schalter]
+
   - word: Auskunft
+    class: noun
+    article: die
+    plural: Auskünfte
+    level: A1
+    meaning:
+      en: information (that you ask someone for)
+      fa: اطلاعاتی که از کسی می‌پرسیم
+    definition: Informationen, die man an einem Schalter oder am Telefon bekommt, zum Beispiel über Züge oder Preise
+    example:
+      de: Können Sie mir eine Auskunft geben?
+      en: Could you give me some information?
+      fa: می‌توانید اطلاعاتی به من بدهید؟
+    alsoAccepted: [die Information, die Info]
+    tooCloseTo: [Information]
+
   - word: Schalter
+    class: noun
+    article: der
+    plural: Schalter
+    level: A1
+    meaning:
+      en: counter (for tickets or stamps)
+      fa: باجه، پیشخوان
+    definition: dort sitzt jemand hinter einem Fenster und verkauft Fahrkarten oder Briefmarken
+    example:
+      de: Am Schalter kann man Briefmarken kaufen.
+      en: You can buy stamps at the counter.
+      fa: از باجه می‌توان تمبر خرید.
+    alsoAccepted: [der Fahrkartenschalter]
+    tooCloseTo: [Information]
+
+review:
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 138, then 42, then 6 questions)
+  date: 2026-11-28
+  pool: 1af8579e73df8229
