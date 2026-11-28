@@ -4,10 +4,377 @@ kind: grammar
 level: A2
 chapter: a2-prepositions
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-120]
 title:
   en: "Temporal: *über*, *von … an*, *zwischen*, *zu*"
   fa: "حرف‌های اضافهٔ زمان: *über*، *von … an*، *zwischen*، *zu*"
   de: "Zeit: *über*, *von … an*, *zwischen*, *zu*"
+
+explanations:
+  en:
+    rule: >
+      *Über* with a length of time means more than: *über eine Stunde*, *über
+      zwei Jahre*; the length keeps the form it has without *über*. With the
+      weekend or a holiday, *über* means during all of it and takes the
+      *Akkusativ*: *übers Wochenende* (*über das*), *über Ostern*. *Von … an*
+      gives the start of something that goes on, with the *Dativ*: *vom
+      Herbst an*, *von Montag an*; it means the same as *ab*. *Zwischen*
+      gives a time between two points, with the *Dativ*: *zwischen 8 und 9
+      Uhr*, *zwischen Weihnachten und Neujahr*; the second point comes after
+      *und*, never after *bis*. *Zu* names an occasion or a meal, with the
+      *Dativ*: *zum Frühstück*, *zum Geburtstag*, and without an article *zu
+      Weihnachten*, *zu Ostern*.
+  fa:
+    rule: >
+      *über* با یک مدت زمان یعنی «بیش از»: *über eine Stunde* و *über zwei
+      Jahre*؛ مدت همان شکلی را دارد که بدون *über* دارد. *über* با آخر هفته
+      یا یک تعطیلی یعنی «در تمام آن مدت» و با حالت *Akkusativ* (حالت مفعولی)
+      می‌آید: *übers Wochenende* (*über das*) و *über Ostern*. *von … an* آغاز
+      کاری را نشان می‌دهد که ادامه دارد و با حالت *Dativ* (حالت مفعول
+      باواسطه) می‌آید: *vom Herbst an* و *von Montag an*؛ معنای آن با *ab*
+      یکی است. *zwischen* زمانی میان دو نقطه را نشان می‌دهد و با حالت *Dativ*
+      می‌آید: *zwischen 8 und 9 Uhr* و *zwischen Weihnachten und Neujahr*؛
+      نقطهٔ دوم پس از *und* می‌آید، هرگز پس از *bis*. *zu* یک مناسبت یا یک
+      وعدهٔ غذا را نام می‌برد و با حالت *Dativ* می‌آید: *zum Frühstück* و *zum
+      Geburtstag*، و بدون حرف تعریف: *zu Weihnachten* و *zu Ostern*.
+  de:
+    rule: >
+      *Über* mit einer Zeitdauer heißt: mehr als. *Über eine Stunde*, *über
+      zwei Jahre*. Die Zeitdauer bleibt so wie ohne *über*. Mit dem Wochenende
+      oder einem Fest heißt *über*: die ganze Zeit. Dann steht der Akkusativ:
+      *übers Wochenende* (*über das*), *über Ostern*. *Von … an* sagt, wann
+      etwas beginnt, das dann weitergeht. Danach steht der Dativ: *vom Herbst
+      an*, *von Montag an*. Das heißt dasselbe wie *ab*. *Zwischen* sagt: eine
+      Zeit zwischen zwei Punkten, mit Dativ: *zwischen 8 und 9 Uhr*, *zwischen
+      Weihnachten und Neujahr*. Vor dem zweiten Punkt steht *und*, nicht
+      *bis*. *Zu* nennt einen Anlass oder ein Essen, mit Dativ: *zum
+      Frühstück*, *zum Geburtstag*, und ohne Artikel *zu Weihnachten*, *zu
+      Ostern*.
+
+# Three time lines, time running to the right.
+diagrams:
+  - caption:
+      en: >
+        Time runs to the right. *Von Montag an*: it starts on Monday and goes
+        on. *Zwischen 8 und 9 Uhr*: somewhere between the two points. *Über
+        eine Stunde*: longer than the dashed bar of one hour.
+      fa: >
+        زمان به سمت راست پیش می‌رود. *von Montag an*: از دوشنبه شروع می‌شود و
+        ادامه دارد. *zwischen 8 und 9 Uhr*: زمانی میان دو نقطه. *über eine
+        Stunde*: بلندتر از نوار خط‌چینِ یک ساعت.
+      de: >
+        Die Zeit läuft nach rechts. *Von Montag an*: Es beginnt am Montag und
+        geht weiter. *Zwischen 8 und 9 Uhr*: irgendwann zwischen den zwei
+        Punkten. *Über eine Stunde*: länger als der Balken mit Strichen, eine
+        Stunde.
+    svg: |
+      <svg viewBox="0 0 320 272">
+        <!-- von Montag an: from a point, on and on -->
+        <text class="label" x="160" y="24" text-anchor="middle">von Montag an</text>
+        <line class="guide" x1="16" y1="54" x2="304" y2="54"/>
+        <line class="line" x1="100" y1="42" x2="100" y2="66"/>
+        <rect class="object" x="100" y="50" width="180" height="8"/>
+        <polygon class="object" points="280,44 296,54 280,64"/>
+        <text class="note" x="100" y="84" text-anchor="middle">Montag</text>
+        <!-- zwischen 8 und 9 Uhr: between two points -->
+        <text class="label" x="160" y="118" text-anchor="middle">zwischen 8 und 9 Uhr</text>
+        <line class="guide" x1="16" y1="146" x2="304" y2="146"/>
+        <line class="line" x1="110" y1="134" x2="110" y2="158"/>
+        <line class="line" x1="210" y1="134" x2="210" y2="158"/>
+        <rect class="object" x="110" y="142" width="100" height="8"/>
+        <text class="note" x="110" y="176" text-anchor="middle">8 Uhr</text>
+        <text class="note" x="210" y="176" text-anchor="middle">9 Uhr</text>
+        <!-- über eine Stunde: longer than one hour -->
+        <text class="label" x="160" y="210" text-anchor="middle">über eine Stunde</text>
+        <rect class="object" x="40" y="222" width="220" height="10"/>
+        <rect class="guide" x="40" y="238" width="160" height="10"/>
+        <text class="note" x="120" y="266" text-anchor="middle">eine Stunde</text>
+      </svg>
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: With the preposition, fa: با حرف اضافه, de: Mit Präposition }
+    - { en: Case, fa: حالت, de: Kasus }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [das Frühstück, zum Frühstück, Dativ, Zum Frühstück trinke ich Tee.]
+    - [der Herbst, vom Herbst an, Dativ, Vom Herbst an arbeite ich hier.]
+    - [die Feiertage (Plural), zwischen den Feiertagen, Dativ, Zwischen den Feiertagen ist das Büro zu.]
+    - [das Wochenende, übers Wochenende (über das), Akkusativ, Wir fahren übers Wochenende weg.]
+    - [eine Stunde, über eine Stunde, Akkusativ, Ich habe über eine Stunde gewartet.]
+
+examples:
+  - de: Ich habe über eine Stunde auf dich gewartet.
+    en: I waited for you for more than an hour.
+    fa: بیش از یک ساعت منتظرت ماندم.
+  - de: Der Film dauert über zwei Stunden.
+    en: The film lasts more than two hours.
+    fa: فیلم بیش از دو ساعت طول می‌کشد.
+  - de: Wir fahren übers Wochenende zu meinen Eltern.
+    en: We are going to my parents' for the weekend.
+    fa: آخر هفته پیش پدر و مادرم می‌رویم.
+  - de: Über Ostern bleiben wir zu Hause.
+    en: Over Easter we are staying at home.
+    fa: تعطیلات عید پاک را در خانه می‌مانیم.
+  - de: Vom Herbst an arbeite ich in Hamburg.
+    en: From the autumn on, I will work in Hamburg.
+    fa: از پاییز به بعد در هامبورگ کار می‌کنم.
+  - de: Von heute an rauche ich nicht mehr.
+    en: From today on I don't smoke any more.
+    fa: از امروز دیگر سیگار نمی‌کشم.
+  - de: Die Ärztin hat zwischen zwölf und vierzehn Uhr Mittagspause.
+    en: The doctor has her lunch break between twelve and two.
+    fa: پزشک میان ساعت ۱۲ و ۱۴ وقت ناهار دارد.
+  - de: Zwischen Weihnachten und Neujahr ist das Büro geschlossen.
+    en: The office is closed between Christmas and New Year.
+    fa: اداره میان کریسمس و سال نو تعطیل است.
+  - de: Zum Frühstück esse ich ein Brötchen mit Käse.
+    en: For breakfast I have a roll with cheese.
+    fa: صبحانه یک نان کوچک با پنیر می‌خورم.
+  - de: Was schenkst du deiner Schwester zum Geburtstag?
+    en: What are you giving your sister for her birthday?
+    fa: برای تولد خواهرت چه هدیه‌ای می‌دهی؟
+  - de: Zu Weihnachten fahren wir nach Hause.
+    en: At Christmas we go home.
+    fa: کریسمس به خانه می‌رویم.
+
+mistakes:
+  - wrong: Zum Weihnachten besuchen wir meine Oma.
+    right: Zu Weihnachten besuchen wir meine Oma.
+    why:
+      en: "*Weihnachten* has no article, so *zu* stays alone: *zu Weihnachten*. *Zum* is *zu dem*."
+      fa: "*Weihnachten* حرف تعریف ندارد، پس *zu* تنها می‌آید: *zu Weihnachten*. *zum* یعنی *zu dem*."
+      de: "*Weihnachten* hat keinen Artikel. Darum nur *zu*: *zu Weihnachten*. *Zum* ist *zu dem*."
+  - wrong: Ab Montag an arbeite ich zu Hause.
+    right: Von Montag an arbeite ich zu Hause.
+    why:
+      en: "The pair is *von … an*. *Ab* stands alone: *ab Montag*, without *an*."
+      fa: "این دو با هم می‌آیند: *von … an*. *ab* تنها می‌آید: *ab Montag*، بدون *an*."
+      de: "Es heißt *von … an*. *Ab* steht allein: *ab Montag*, ohne *an*."
+  - wrong: Wir frühstücken zwischen sieben bis acht Uhr.
+    right: Wir frühstücken zwischen sieben und acht Uhr.
+    why:
+      en: "After *zwischen* the two points are joined with *und*. *Bis* goes with *von*: *von sieben bis acht Uhr*."
+      fa: "پس از *zwischen* دو نقطه با *und* به هم می‌پیوندند. *bis* با *von* می‌آید: *von sieben bis acht Uhr*."
+      de: "Nach *zwischen* verbindet man die zwei Punkte mit *und*. *Bis* passt zu *von*: *von sieben bis acht Uhr*."
+  - wrong: Was isst du zu Frühstück?
+    right: Was isst du zum Frühstück?
+    why:
+      en: "A meal takes its article: *zu dem Frühstück*, shortened to *zum Frühstück*."
+      fa: "وعدهٔ غذا حرف تعریف می‌گیرد: *zu dem Frühstück* که کوتاه می‌شود: *zum Frühstück*."
+      de: "Ein Essen hat einen Artikel: *zu dem Frühstück*, kurz *zum Frühstück*."
+  - wrong: Wir bleiben über dem Wochenende in Berlin.
+    right: Wir bleiben übers Wochenende in Berlin.
+    why:
+      en: "*Über* for the whole weekend takes the *Akkusativ*: *über das Wochenende*, shortened to *übers*."
+      fa: "*über* به معنای «در تمام آخر هفته» با حالت *Akkusativ* می‌آید: *über das Wochenende* که کوتاه می‌شود: *übers*."
+      de: "*Über* für das ganze Wochenende hat den Akkusativ: *über das Wochenende*, kurz *übers*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ Frühstück esse ich ein Brötchen.
+    options: [Zum, Zur, Zu]
+    answer: Zum
+    explanation:
+      en: "A meal with *zu* takes its article in the *Dativ*: *das Frühstück*, *zu dem*, shortened to *zum*."
+      fa: "وعدهٔ غذا با *zu* حرف تعریفش را در حالت *Dativ* می‌گیرد: *das Frühstück*، *zu dem* که کوتاه می‌شود: *zum*."
+      de: "Ein Essen mit *zu* hat seinen Artikel im Dativ: *das Frühstück*, *zu dem*, kurz *zum*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Was schenkst du deiner Mutter ___ Geburtstag?
+    options: [zum, zur, ins]
+    answer: zum
+    explanation:
+      en: "An occasion takes *zu* with the *Dativ*: *der Geburtstag*, *zu dem*, shortened to *zum*."
+      fa: "مناسبت با *zu* و حالت *Dativ* می‌آید: *der Geburtstag*، *zu dem* که کوتاه می‌شود: *zum*."
+      de: "Ein Anlass hat *zu* mit Dativ: *der Geburtstag*, *zu dem*, kurz *zum*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der Arzt hat ___ 12 und 14 Uhr Mittagspause.
+    options: [zwischen, von, über]
+    answer: zwischen
+    explanation:
+      en: "Two points joined with *und*: *zwischen 12 und 14 Uhr*. *Von* would need *bis*."
+      fa: "دو نقطه با *und* به هم پیوسته‌اند: *zwischen 12 und 14 Uhr*. *von* به *bis* نیاز دارد."
+      de: "Zwei Punkte mit *und*: *zwischen 12 und 14 Uhr*. Bei *von* braucht man *bis*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich habe ___ eine Stunde auf den Bus gewartet.
+    options: [über, zwischen, zu]
+    answer: über
+    explanation:
+      en: "*Über* with a length of time means more than: *über eine Stunde*."
+      fa: "*über* با یک مدت زمان یعنی «بیش از»: *über eine Stunde*."
+      de: "*Über* mit einer Zeitdauer heißt: mehr als. *Über eine Stunde*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Von Montag ___ arbeite ich nur noch vormittags.
+    options: [an, bis, zu]
+    answer: an
+    explanation:
+      en: "The start of something that goes on: *von Montag an*."
+      fa: "آغاز کاری که ادامه دارد: *von Montag an*."
+      de: "Der Beginn von etwas, das weitergeht: *von Montag an*."
+  - id: gap-6
+    type: gap-fill
+    prompt: ___ Herbst an habe ich einen neuen Job.
+    options: [Vom, Im, Zum]
+    answer: Vom
+    explanation:
+      en: "*Von … an* with the *Dativ*: *von dem Herbst an*, shortened to *vom Herbst an*."
+      fa: "*von … an* با حالت *Dativ*: *von dem Herbst an* که کوتاه می‌شود: *vom Herbst an*."
+      de: "*Von … an* mit Dativ: *von dem Herbst an*, kurz *vom Herbst an*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wir fahren ___ Wochenende ans Meer.
+    options: [übers, vom, zwischen]
+    answer: übers
+    explanation:
+      en: "For the whole weekend: *über das Wochenende*, shortened to *übers*."
+      fa: "برای تمام آخر هفته: *über das Wochenende* که کوتاه می‌شود: *übers*."
+      de: "Für das ganze Wochenende: *über das Wochenende*, kurz *übers*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Was esst ihr ___ Weihnachten?
+    options: [zu, zum, zur]
+    answer: zu
+    explanation:
+      en: "*Weihnachten* has no article, so *zu* stays alone: *zu Weihnachten*."
+      fa: "*Weihnachten* حرف تعریف ندارد، پس *zu* تنها می‌آید: *zu Weihnachten*."
+      de: "*Weihnachten* hat keinen Artikel. Darum nur *zu*: *zu Weihnachten*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Der Film dauert über zwei Stunden. Das heißt, er dauert ___
+    options: [mehr als zwei Stunden., weniger als zwei Stunden., genau zwei Stunden.]
+    answer: mehr als zwei Stunden.
+    explanation:
+      en: "*Über* with a length of time means more than."
+      fa: "*über* با یک مدت زمان یعنی «بیش از»."
+      de: "*Über* mit einer Zeitdauer heißt: mehr als."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Ab Montag ist das Geschäft zu. Das heißt, ___ ist das Geschäft zu.
+    options: [von Montag an, bis Montag, zwischen Montag]
+    answer: von Montag an
+    explanation:
+      en: "*Ab Montag* and *von Montag an* mean the same: from Monday on."
+      fa: "*ab Montag* و *von Montag an* یک معنا دارند: از دوشنبه به بعد."
+      de: "*Ab Montag* und *von Montag an* heißen dasselbe."
+  - id: true-1
+    type: true-false
+    prompt: Zwischen Weihnachten und Neujahr ist unser Büro geschlossen.
+    answer: true
+    explanation:
+      en: "*Zwischen* with two points joined by *und*. The sentence is correct."
+      fa: "*zwischen* با دو نقطه که با *und* به هم پیوسته‌اند. جمله درست است."
+      de: "*Zwischen* mit zwei Punkten und *und*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Zum Frühstück trinke ich Kaffee.
+    answer: true
+    explanation:
+      en: "A meal: *zu dem Frühstück*, shortened to *zum Frühstück*. The sentence is correct."
+      fa: "وعدهٔ غذا: *zu dem Frühstück* که کوتاه می‌شود: *zum Frühstück*. جمله درست است."
+      de: "Ein Essen: *zu dem Frühstück*, kurz *zum Frühstück*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich gehe zwischen acht bis neun Uhr joggen.
+    answer: false
+    explanation:
+      en: "After *zwischen* the points are joined with *und*: *zwischen acht und neun Uhr*."
+      fa: "پس از *zwischen* دو نقطه با *und* به هم می‌پیوندند: *zwischen acht und neun Uhr*."
+      de: "Nach *zwischen* steht *und*: *zwischen acht und neun Uhr*."
+  - id: true-4
+    type: true-false
+    prompt: Wir haben über zwei Stunden gewartet.
+    answer: true
+    explanation:
+      en: "*Über zwei Stunden*: more than two hours. The sentence is correct."
+      fa: "*über zwei Stunden* یعنی بیش از دو ساعت. جمله درست است."
+      de: "*Über zwei Stunden*: mehr als zwei Stunden. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: ___ (zu / das Mittagessen) gibt es heute Fisch.
+    answers: [Zum Mittagessen, Zu dem Mittagessen, Zum, Zu dem]
+    explanation:
+      en: "A meal with *zu* in the *Dativ*: *zu dem Mittagessen*, almost always said as *zum Mittagessen*."
+      fa: "وعدهٔ غذا با *zu* در حالت *Dativ*: *zu dem Mittagessen* که تقریباً همیشه کوتاه می‌شود: *zum Mittagessen*."
+      de: "Ein Essen mit *zu* im Dativ: *zu dem Mittagessen*, fast immer kurz *zum Mittagessen*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir fahren ___ (über / das Wochenende) zu meinen Eltern.
+    answers: [übers Wochenende, über das Wochenende, übers, über das]
+    explanation:
+      en: "The whole weekend: *über* with the *Akkusativ*, *über das Wochenende*, usually *übers Wochenende*."
+      fa: "تمام آخر هفته: *über* با حالت *Akkusativ*، یعنی *über das Wochenende* که معمولاً می‌شود *übers Wochenende*."
+      de: "Das ganze Wochenende: *über* mit Akkusativ, *über das Wochenende*, meistens kurz *übers Wochenende*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Von heute ___ esse ich kein Fleisch mehr.
+    answers: [an, ab]
+    explanation:
+      en: "The start of something that goes on: *von heute an*."
+      fa: "آغاز کاری که ادامه دارد: *von heute an*."
+      de: "Der Beginn von etwas, das weitergeht: *von heute an*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich esse ___ (zwischen / der Kurs) und der Arbeit schnell etwas.
+    answers: [zwischen dem Kurs, zwischen dem]
+    explanation:
+      en: "*Zwischen* for a time takes the *Dativ*: *der Kurs* becomes *dem Kurs*."
+      fa: "*zwischen* برای زمان با حالت *Dativ* می‌آید: *der Kurs* می‌شود *dem Kurs*."
+      de: "*Zwischen* bei einer Zeit hat den Dativ: *der Kurs* wird zu *dem Kurs*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Ich wünsche dir alles Gute ___ (zu / der Geburtstag)!
+    answers: [zum Geburtstag, zu dem Geburtstag, zum, zu dem]
+    explanation:
+      en: "An occasion takes *zu* with the *Dativ*: *zu dem Geburtstag*, almost always said as *zum Geburtstag*."
+      fa: "مناسبت با *zu* و حالت *Dativ* می‌آید: *zu dem Geburtstag* که تقریباً همیشه کوتاه می‌شود: *zum Geburtstag*."
+      de: "Ein Anlass hat *zu* mit Dativ: *zu dem Geburtstag*, fast immer kurz *zum Geburtstag*."
+  - id: error-1
+    type: find-error
+    prompt: Zum Weihnachten besuchen wir meine Oma.
+    answer: Zum
+    explanation:
+      en: "*Weihnachten* has no article, so *zu* stays alone: *Zu Weihnachten*."
+      fa: "*Weihnachten* حرف تعریف ندارد، پس *zu* تنها می‌آید: *Zu Weihnachten*."
+      de: "*Weihnachten* hat keinen Artikel. Darum nur *zu*: *Zu Weihnachten*."
+  - id: error-2
+    type: find-error
+    prompt: Was isst du morgens zu Frühstück?
+    answer: zu
+    explanation:
+      en: "A meal takes its article: *zu dem Frühstück*, shortened to *zum Frühstück*."
+      fa: "وعدهٔ غذا حرف تعریف می‌گیرد: *zu dem Frühstück* که کوتاه می‌شود: *zum Frühstück*."
+      de: "Ein Essen hat einen Artikel: *zu dem Frühstück*, kurz *zum Frühstück*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wir, frühstücken, zwischen sieben und acht]
+      - [zwischen sieben und acht, frühstücken, wir]
+    explanation:
+      en: "The verb comes second. The time can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. قید زمان می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. Die Zeit kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [___ Frühstück, zum]
+      - [___ acht und neun Uhr, zwischen]
+      - [___ Montag an, von]
+      - [___ eine Stunde (mehr als eine Stunde), über]
+    explanation:
+      en: "A meal: *zum*. Two points with *und*: *zwischen*. A start: *von … an*. More than: *über*."
+      fa: "وعدهٔ غذا: *zum*. دو نقطه با *und*: *zwischen*. آغاز: *von … an*. بیش از: *über*."
+      de: "Ein Essen: *zum*. Zwei Punkte mit *und*: *zwischen*. Ein Beginn: *von … an*. Mehr als: *über*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: ee60d6fa9852b006
