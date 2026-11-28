@@ -4,10 +4,353 @@ kind: grammar
 level: A1
 chapter: a1-building-sentences
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-005, grammar-014, grammar-026]
 title:
   en: "*Satzklammer*"
   fa: "قاب جمله (*Satzklammer*)"
   de: "Satzklammer"
+
+explanations:
+  en:
+    rule: >
+      Many German sentences have a verb in two parts. The conjugated part
+      stands in position 2, and the second part goes to the very end.
+      Together they frame the rest of the sentence: this is the
+      *Satzklammer* (sentence bracket). Three things make the frame: a modal
+      verb and an infinitive (*Ich will meine Tante besuchen.*), *haben* or
+      *sein* and a *Partizip II* in the *Perfekt* (*Ich habe gestern Tee
+      gemacht.*), and a separable verb and its prefix (*Der Kurs fängt um 9
+      Uhr an.*). Words that belong closely to the verb go to the end too: an
+      adjective after *sein* (*Das Wetter ist heute sehr schön.*) and a noun
+      that makes one idea with the verb (*Ich spiele am Samstag mit Freunden
+      Karten.*). In a question the conjugated part moves, and the second part
+      still stays at the end: *Kannst du mir heute helfen?*
+  fa:
+    rule: >
+      در بسیاری از جمله‌های آلمانی فعل دو بخش دارد. بخش صرف‌شده در جایگاه دوم
+      می‌آید و بخش دوم به پایان جمله می‌رود. این دو بخش بقیهٔ جمله را در میان
+      می‌گیرند؛ به این قاب جمله (*Satzklammer*) می‌گویند. قاب جمله سه گونه
+      است: فعل وجهی و مصدر (*Ich will meine Tante besuchen.*)، *haben* یا
+      *sein* و صفت مفعولی (*Partizip II*) در گذشتهٔ نقلی (*Perfekt*) (*Ich
+      habe gestern Tee gemacht.*)، و فعل جداشدنی و پیشوندش (*Der Kurs fängt
+      um 9 Uhr an.*). واژه‌هایی که پیوند نزدیکی با فعل دارند نیز به پایان
+      جمله می‌روند: صفت پس از *sein* (*Das Wetter ist heute sehr schön.*) و
+      اسمی که با فعل یک معنا می‌سازد (*Ich spiele am Samstag mit Freunden
+      Karten.*). در پرسش، بخش صرف‌شده جابه‌جا می‌شود، ولی بخش دوم باز هم در
+      پایان جمله می‌ماند: *Kannst du mir heute helfen?* در فارسی هم فعل در
+      پایان جمله است؛ در آلمانی فقط بخش دوم آن به پایان می‌رود.
+  de:
+    rule: >
+      Oft hat das Verb zwei Teile. Der konjugierte Teil steht auf Position 2,
+      der zweite Teil ganz am Ende. Die zwei Teile sind wie eine Klammer um
+      den Rest: die Satzklammer. So ist es beim Modalverb mit Infinitiv (*Ich
+      will meine Tante besuchen.*), beim Perfekt mit *haben* oder *sein* und
+      dem Partizip II (*Ich habe gestern Tee gemacht.*) und beim trennbaren
+      Verb mit dem Präfix (*Der Kurs fängt um 9 Uhr an.*). Auch ein Adjektiv
+      nach *sein* (*Das Wetter ist heute sehr schön.*) und ein Nomen, das mit
+      dem Verb zusammengehört (*Ich spiele am Samstag mit Freunden Karten.*),
+      stehen am Ende. In der Frage steht der konjugierte Teil an einer anderen
+      Stelle, der zweite Teil bleibt am Ende: *Kannst du mir heute helfen?*
+
+table:
+  columns:
+    - { en: Position 1, fa: جایگاه اول, de: Position 1 }
+    - { en: "Position 2: verb, part 1", fa: "جایگاه دوم: بخش اول فعل", de: "Position 2: Verb, Teil 1" }
+    - { en: Middle, fa: میانهٔ جمله, de: Mitte }
+    - { en: "End: verb, part 2", fa: "پایان جمله: بخش دوم فعل", de: "Ende: Verb, Teil 2" }
+  rows:
+    - [Ich, will, meine Tante, besuchen.]
+    - [Wir, müssen, heute lange, arbeiten.]
+    - [Ich, habe, gestern Tee, gemacht.]
+    - [Sie, ist, am Wochenende nach Hamburg, gefahren.]
+    - [Der Kurs, fängt, um 9 Uhr, an.]
+    - [Ich, rufe, dich morgen, an.]
+    - [Das Wetter, ist, heute sehr, schön.]
+    - [Ich, spiele, am Samstag mit Freunden, Karten.]
+
+# Three sentences as rows of slots: a modal verb, the Perfekt and a separable
+# verb. The two verb parts are shaded; a bracket under each row joins them.
+diagrams:
+  - caption:
+      en: >
+        *Ich will meine Tante besuchen.*, *Ich habe gestern Tee gemacht.* and
+        *Er ruft dich morgen an.* In each sentence the two parts of the verb
+        (shaded) stand in position 2 and at the very end, and frame the rest:
+        the *Satzklammer*.
+      fa: >
+        *Ich will meine Tante besuchen.*، *Ich habe gestern Tee gemacht.* و
+        *Er ruft dich morgen an.* در هر جمله دو بخش فعل (رنگی) در جایگاه دوم
+        و در پایان جمله می‌آیند و بقیهٔ جمله را در میان می‌گیرند: قاب جمله
+        (*Satzklammer*).
+      de: >
+        *Ich will meine Tante besuchen.*, *Ich habe gestern Tee gemacht.* und
+        *Er ruft dich morgen an.* In jedem Satz stehen die zwei Teile vom Verb
+        (farbig) auf Position 2 und ganz am Ende. Sie sind die Satzklammer um
+        den Rest.
+    labels:
+      second: { en: position 2, fa: جایگاه دوم, de: Position 2 }
+      end: { en: the end, fa: پایان جمله, de: Ende }
+    svg: |
+      <svg viewBox="0 0 320 286">
+        <text class="note" x="84" y="18" text-anchor="middle">{{second}}</text>
+        <text class="note" x="274" y="18" text-anchor="middle">{{end}}</text>
+        <!-- Ich will meine Tante besuchen. -->
+        <rect class="surface" x="2" y="26" width="48" height="40"/>
+        <rect class="shade" x="54" y="26" width="60" height="40"/>
+        <rect class="surface" x="118" y="26" width="108" height="40"/>
+        <rect class="shade" x="230" y="26" width="88" height="40"/>
+        <text class="label" x="26" y="52" text-anchor="middle">Ich</text>
+        <text class="label" x="84" y="52" text-anchor="middle">will</text>
+        <text class="label" x="172" y="52" text-anchor="middle">meine Tante</text>
+        <text class="label" x="274" y="52" text-anchor="middle">besuchen.</text>
+        <polyline class="line" points="84,70 84,80 274,80 274,70"/>
+        <text class="note" x="179" y="98" text-anchor="middle">Satzklammer</text>
+        <!-- Ich habe gestern Tee gemacht. -->
+        <rect class="surface" x="2" y="116" width="48" height="40"/>
+        <rect class="shade" x="54" y="116" width="60" height="40"/>
+        <rect class="surface" x="118" y="116" width="108" height="40"/>
+        <rect class="shade" x="230" y="116" width="88" height="40"/>
+        <text class="label" x="26" y="142" text-anchor="middle">Ich</text>
+        <text class="label" x="84" y="142" text-anchor="middle">habe</text>
+        <text class="label" x="172" y="142" text-anchor="middle">gestern Tee</text>
+        <text class="label" x="274" y="142" text-anchor="middle">gemacht.</text>
+        <polyline class="line" points="84,160 84,170 274,170 274,160"/>
+        <text class="note" x="179" y="188" text-anchor="middle">Satzklammer</text>
+        <!-- Er ruft dich morgen an. -->
+        <rect class="surface" x="2" y="206" width="48" height="40"/>
+        <rect class="shade" x="54" y="206" width="60" height="40"/>
+        <rect class="surface" x="118" y="206" width="108" height="40"/>
+        <rect class="shade" x="230" y="206" width="88" height="40"/>
+        <text class="label" x="26" y="232" text-anchor="middle">Er</text>
+        <text class="label" x="84" y="232" text-anchor="middle">ruft</text>
+        <text class="label" x="172" y="232" text-anchor="middle">dich morgen</text>
+        <text class="label" x="274" y="232" text-anchor="middle">an.</text>
+        <polyline class="line" points="84,250 84,260 274,260 274,250"/>
+        <text class="note" x="179" y="278" text-anchor="middle">Satzklammer</text>
+      </svg>
+
+examples:
+  - de: Ich will meine Tante besuchen.
+    en: I want to visit my aunt.
+    fa: می‌خواهم به دیدن عمه‌ام بروم.
+  - de: Wir müssen heute lange arbeiten.
+    en: We have to work late today.
+    fa: امروز باید تا دیروقت کار کنیم.
+  - de: Kannst du mir heute helfen?
+    en: Can you help me today?
+    fa: امروز می‌توانی به من کمک کنی؟
+  - de: Ich habe gestern Tee gemacht.
+    en: I made tea yesterday.
+    fa: دیروز چای درست کردم.
+  - de: Sie ist am Wochenende nach Hamburg gefahren.
+    en: She went to Hamburg at the weekend.
+    fa: آخر هفته به هامبورگ رفت.
+  - de: Der Kurs fängt um 9 Uhr an.
+    en: The course starts at 9 o'clock.
+    fa: کلاس ساعت ۹ شروع می‌شود.
+  - de: Ich rufe dich morgen an.
+    en: I'll call you tomorrow.
+    fa: فردا به تو زنگ می‌زنم.
+  - de: Das Wetter ist heute sehr schön.
+    en: The weather is very nice today.
+    fa: امروز هوا خیلی خوب است.
+  - de: Ich spiele am Samstag mit Freunden Karten.
+    en: On Saturday I play cards with friends.
+    fa: شنبه با دوستانم ورق بازی می‌کنم.
+
+mistakes:
+  - wrong: Ich will besuchen meine Tante.
+    right: Ich will meine Tante besuchen.
+    why:
+      en: "The infinitive goes to the very end, after everything else: *meine Tante besuchen*."
+      fa: "مصدر به پایان جمله می‌رود، پس از همهٔ اجزای دیگر: *meine Tante besuchen*."
+      de: "Der Infinitiv steht ganz am Ende, nach allem anderen: *meine Tante besuchen*."
+  - wrong: Ich habe gemacht Tee.
+    right: Ich habe Tee gemacht.
+    why:
+      en: "In the *Perfekt* the *Partizip II* closes the sentence: *Tee gemacht*."
+      fa: "در گذشتهٔ نقلی (*Perfekt*) صفت مفعولی (*Partizip II*) جمله را می‌بندد: *Tee gemacht*."
+      de: "Im Perfekt steht das Partizip II am Ende: *Tee gemacht*."
+  - wrong: Der Kurs anfängt um 9 Uhr.
+    right: Der Kurs fängt um 9 Uhr an.
+    why:
+      en: "In a sentence the prefix comes off: *fängt* in position 2, *an* at the end."
+      fa: "در جمله پیشوند از فعل جدا می‌شود: *fängt* در جایگاه دوم و *an* در پایان جمله."
+      de: "Im Satz ist das Präfix getrennt: *fängt* auf Position 2, *an* am Ende."
+  - wrong: Kannst du helfen mir heute?
+    right: Kannst du mir heute helfen?
+    why:
+      en: "In a question too the infinitive stays at the end; *mir* and *heute* come before it."
+      fa: "در پرسش نیز مصدر در پایان جمله می‌ماند و *mir* و *heute* پیش از آن می‌آیند."
+      de: "Auch in der Frage steht der Infinitiv am Ende. *Mir* und *heute* stehen davor."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich will morgen meine Oma ___.
+    options: [besuchen, besuche, besucht]
+    answer: besuchen
+    explanation:
+      en: "After the modal verb *will* the second verb stands at the end as an infinitive: *besuchen*."
+      fa: "پس از فعل وجهی *will*، فعل دوم به شکل مصدر در پایان جمله می‌آید: *besuchen*."
+      de: "Nach dem Modalverb *will* steht das zweite Verb im Infinitiv am Ende: *besuchen*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir haben gestern Fußball ___.
+    options: [gespielt, spielen, spielt]
+    answer: gespielt
+    explanation:
+      en: "*Haben* in position 2 makes the *Perfekt*, so the *Partizip II* *gespielt* closes the sentence."
+      fa: "*haben* در جایگاه دوم گذشتهٔ نقلی (*Perfekt*) می‌سازد، پس صفت مفعولی *gespielt* در پایان جمله می‌آید."
+      de: "*Haben* auf Position 2 bildet das Perfekt. Am Ende steht das Partizip II *gespielt*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "anfangen / der Film / um 8 Uhr"
+    options: [Der Film fängt um 8 Uhr an., Der Film anfängt um 8 Uhr., Der Film um 8 Uhr anfängt.]
+    answer: Der Film fängt um 8 Uhr an.
+    explanation:
+      en: "*Fängt* in position 2, the prefix *an* at the very end."
+      fa: "*fängt* در جایگاه دوم و پیشوند *an* در پایان جمله."
+      de: "*Fängt* auf Position 2, das Präfix *an* ganz am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "müssen / ich / heute / arbeiten"
+    options: [Ich muss heute arbeiten., Ich muss arbeiten heute., Ich arbeiten muss heute.]
+    answer: Ich muss heute arbeiten.
+    explanation:
+      en: "The modal verb *muss* in position 2, the infinitive *arbeiten* at the end, *heute* between them."
+      fa: "فعل وجهی *muss* در جایگاه دوم، مصدر *arbeiten* در پایان جمله و *heute* میان آن دو."
+      de: "Das Modalverb *muss* auf Position 2, der Infinitiv *arbeiten* am Ende, *heute* dazwischen."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Perfekt: wir / gestern / ins Kino / gehen"
+    options: [Wir sind gestern ins Kino gegangen., Wir sind gegangen gestern ins Kino., Wir gestern sind ins Kino gegangen.]
+    answer: Wir sind gestern ins Kino gegangen.
+    explanation:
+      en: "*Sind* in position 2, the *Partizip II* *gegangen* at the end, the rest in the middle."
+      fa: "*sind* در جایگاه دوم، صفت مفعولی *gegangen* در پایان جمله و بقیه در میانه."
+      de: "*Sind* auf Position 2, das Partizip II *gegangen* am Ende, der Rest in der Mitte."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "können / du / mir / helfen ?"
+    options: [Kannst du mir helfen?, Kannst helfen du mir?, Kannst du helfen mir?]
+    answer: Kannst du mir helfen?
+    explanation:
+      en: "In a yes/no question *kannst* comes first, and the infinitive *helfen* still stays at the end."
+      fa: "در پرسش بله یا نه *kannst* در آغاز می‌آید و مصدر *helfen* باز هم در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht *kannst* am Anfang. Der Infinitiv *helfen* bleibt am Ende."
+  - id: true-1
+    type: true-false
+    prompt: Ich will heute ins Kino gehen.
+    answer: true
+    explanation:
+      en: "*Will* in position 2, the infinitive *gehen* at the end. The sentence is correct."
+      fa: "*will* در جایگاه دوم و مصدر *gehen* در پایان جمله است. جمله درست است."
+      de: "*Will* auf Position 2, der Infinitiv *gehen* am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich habe gekauft ein Buch.
+    answer: false
+    explanation:
+      en: "The *Partizip II* goes to the end: *Ich habe ein Buch gekauft.*"
+      fa: "صفت مفعولی (*Partizip II*) به پایان جمله می‌رود: *Ich habe ein Buch gekauft.*"
+      de: "Das Partizip II steht am Ende: *Ich habe ein Buch gekauft.*"
+  - id: true-3
+    type: true-false
+    prompt: Wir stehen morgen früh auf.
+    answer: true
+    explanation:
+      en: "*Stehen* in position 2, the prefix *auf* at the end. The sentence is correct."
+      fa: "*stehen* در جایگاه دوم و پیشوند *auf* در پایان جمله است. جمله درست است."
+      de: "*Stehen* auf Position 2, das Präfix *auf* am Ende. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Er ruft an seine Mutter.
+    answer: false
+    explanation:
+      en: "The prefix *an* goes to the very end: *Er ruft seine Mutter an.*"
+      fa: "پیشوند *an* به پایان جمله می‌رود: *Er ruft seine Mutter an.*"
+      de: "Das Präfix *an* steht ganz am Ende: *Er ruft seine Mutter an.*"
+  - id: true-5
+    type: true-false
+    prompt: Am Samstag spiele ich mit Freunden Karten.
+    answer: true
+    explanation:
+      en: "*Karten spielen* is one idea, so *Karten* goes to the end. The sentence is correct."
+      fa: "*Karten spielen* یک معنا می‌سازد، پس *Karten* به پایان جمله می‌رود. جمله درست است."
+      de: "*Karten spielen* gehört zusammen. *Karten* steht am Ende. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Der Bus fährt um 7 Uhr ___ (abfahren).
+    answers: [ab]
+    explanation:
+      en: "*Abfahren* is separable: *fährt* in position 2, *ab* at the end."
+      fa: "*abfahren* فعل جداشدنی است: *fährt* در جایگاه دوم و *ab* در پایان جمله."
+      de: "*Abfahren* ist trennbar: *fährt* auf Position 2, *ab* am Ende."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Kannst du mir morgen ___ (helfen)?
+    answers: [helfen]
+    explanation:
+      en: "After the modal verb *kannst* the second verb stays an infinitive at the end: *helfen*."
+      fa: "پس از فعل وجهی *kannst*، فعل دوم به شکل مصدر در پایان جمله می‌ماند: *helfen*."
+      de: "Nach dem Modalverb *kannst* bleibt das zweite Verb im Infinitiv am Ende: *helfen*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich habe gestern eine Pizza ___ (machen).
+    answers: [gemacht]
+    explanation:
+      en: "*Habe* makes the *Perfekt*; at the end stands the *Partizip II* of *machen*: *gemacht*."
+      fa: "*habe* گذشتهٔ نقلی (*Perfekt*) می‌سازد و در پایان جمله صفت مفعولی *machen* می‌آید: *gemacht*."
+      de: "*Habe* bildet das Perfekt. Am Ende steht das Partizip II von *machen*: *gemacht*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wann stehst du morgen ___ (aufstehen)?
+    answers: [auf]
+    explanation:
+      en: "*Aufstehen* is separable: *stehst* after the question word, *auf* at the end."
+      fa: "*aufstehen* فعل جداشدنی است: *stehst* پس از واژهٔ پرسشی و *auf* در پایان جمله."
+      de: "*Aufstehen* ist trennbar: *stehst* nach dem Fragewort, *auf* am Ende."
+  - id: error-1
+    type: find-error
+    prompt: Wir wollen morgen nach Berlin fahrt.
+    answer: fahrt
+    explanation:
+      en: "After the modal verb *wollen* the verb at the end is an infinitive: *fahren*."
+      fa: "پس از فعل وجهی *wollen*، فعل پایان جمله مصدر است: *fahren*."
+      de: "Nach dem Modalverb *wollen* steht am Ende der Infinitiv: *fahren*."
+  - id: error-2
+    type: find-error
+    prompt: Ich habe gestern Tee machen.
+    answer: machen
+    explanation:
+      en: "With *habe* the sentence is in the *Perfekt*, so the end needs the *Partizip II*: *gemacht*."
+      fa: "با *habe* جمله در گذشتهٔ نقلی (*Perfekt*) است، پس در پایان صفت مفعولی لازم است: *gemacht*."
+      de: "Mit *habe* ist der Satz im Perfekt. Am Ende steht das Partizip II: *gemacht*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [der Zug, kommt, um 8 Uhr, an]
+      - [um 8 Uhr, kommt, der Zug, an]
+    explanation:
+      en: "*Kommt* stays in position 2 and *an* at the end; the subject and the time can swap places."
+      fa: "*kommt* در جایگاه دوم و *an* در پایان جمله می‌ماند؛ فاعل و زمان می‌توانند جایشان را با هم عوض کنند."
+      de: "*Kommt* bleibt auf Position 2, *an* am Ende. Subjekt und Zeit können den Platz tauschen."
+  - id: match-1
+    type: matching
+    answer:
+      - [Der Film fängt um 8 Uhr, an.]
+      - [Ich habe gestern Tee, getrunken.]
+      - [Wir müssen jetzt nach Hause, gehen.]
+    explanation:
+      en: "Each sentence needs its second verb part at the end: the prefix *an*, the *Partizip II* *getrunken*, the infinitive *gehen*."
+      fa: "هر جمله بخش دوم فعلش را در پایان لازم دارد: پیشوند *an*، صفت مفعولی *getrunken* و مصدر *gehen*."
+      de: "Jeder Satz braucht am Ende den zweiten Teil vom Verb: das Präfix *an*, das Partizip II *getrunken*, den Infinitiv *gehen*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: a38af0a0fe43b54d

@@ -4,10 +4,265 @@ kind: grammar
 level: A1
 chapter: a1-building-sentences
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-140]
 title:
   en: "*dann*, *zuerst*, *danach*, *später*"
   fa: "*dann*، *zuerst*، *danach*، *später*"
   de: "*dann*, *zuerst*, *danach*, *später*"
+
+explanations:
+  en:
+    rule: >
+      *Zuerst* (first), *dann* (then), *danach* (after that) and *später*
+      (later) put actions in order. They are adverbs, not conjunctions like
+      *und* or *aber*: at the start of a clause they take position 1 for
+      themselves. So the verb comes next and the subject after it: *Zuerst
+      frühstücke ich, dann gehe ich zur Arbeit.* After *und* (position 0) the
+      adverb is position 1: *und danach gehen wir ins Kino*. These words can
+      also stand after the verb: *Ich komme später.* *Da* can point back to a
+      time just named, as "then" does: *Am Freitag kann ich nicht, da habe ich
+      Dienst.*
+  fa:
+    rule: >
+      *zuerst* (اول)، *dann* (بعد)، *danach* (پس از آن) و *später* (بعداً)
+      ترتیب کارها را نشان می‌دهند. این واژه‌ها قیدند، نه حرف ربط مانند *und*
+      یا *aber*: وقتی در آغاز جمله بیایند، خودشان جایگاه اول را می‌گیرند. پس
+      فعل پس از آن‌ها می‌آید و فاعل پس از فعل: *Zuerst frühstücke ich, dann
+      gehe ich zur Arbeit.* پس از *und* (جایگاه صفر) قید جایگاه اول است: *und
+      danach gehen wir ins Kino*. این واژه‌ها می‌توانند پس از فعل هم بیایند:
+      *Ich komme später.* *da* می‌تواند به زمانی که همین حالا گفته شد اشاره
+      کند، به معنای «آن وقت»: *Am Freitag kann ich nicht, da habe ich
+      Dienst.*
+  de:
+    rule: >
+      *Zuerst*, *dann*, *danach* und *später* sagen, in welcher Reihenfolge
+      etwas passiert. Sie sind Adverbien, keine Konjunktionen wie *und* oder
+      *aber*. Am Anfang vom Satz sind sie Position 1. Dann kommt das Verb und
+      danach das Subjekt: *Zuerst frühstücke ich, dann gehe ich zur Arbeit.*
+      Nach *und* (Position 0) ist das Adverb Position 1: *und danach gehen wir
+      ins Kino*. Die Wörter können auch nach dem Verb stehen: *Ich komme
+      später.* *Da* kann eine Zeit meinen, die man gerade genannt hat: *Am
+      Freitag kann ich nicht, da habe ich Dienst.*
+
+table:
+  columns:
+    - { en: Position 1, fa: جایگاه اول, de: Position 1 }
+    - { en: "Position 2: verb", fa: "جایگاه دوم: فعل", de: "Position 2: Verb" }
+    - { en: Subject, fa: فاعل, de: Subjekt }
+    - { en: The rest, fa: بقیهٔ جمله, de: Rest }
+  rows:
+    - [Zuerst, frühstücke, ich, in Ruhe.]
+    - [Dann, fahre, ich, zur Arbeit.]
+    - [Danach, trinken, wir, einen Kaffee.]
+    - [Später, rufe, ich, dich an.]
+    - ["(Am Freitag …) Da", habe, ich, Dienst.]
+
+examples:
+  - de: Zuerst frühstücke ich, dann gehe ich zur Arbeit.
+    en: First I have breakfast, then I go to work.
+    fa: اول صبحانه می‌خورم، بعد سر کار می‌روم.
+  - de: Ich muss noch telefonieren, dann gehen wir.
+    en: I still have to make a phone call, then we'll go.
+    fa: باید هنوز یک تلفن بزنم، بعد می‌رویم.
+  - de: Wir essen zusammen und danach gehen wir ins Kino.
+    en: We eat together and after that we go to the cinema.
+    fa: با هم غذا می‌خوریم و پس از آن به سینما می‌رویم.
+  - de: Zuerst lese ich die Aufgabe, danach schreibe ich die Antwort.
+    en: First I read the task, after that I write the answer.
+    fa: اول تمرین را می‌خوانم، پس از آن پاسخ را می‌نویسم.
+  - de: Später rufe ich dich an.
+    en: I'll call you later.
+    fa: بعداً به تو زنگ می‌زنم.
+  - de: Ich komme später.
+    en: I'm coming later.
+    fa: بعداً می‌آیم.
+  - de: Am Freitag kann ich nicht, da habe ich Dienst.
+    en: I can't on Friday, I'm on duty then.
+    fa: جمعه نمی‌توانم، آن روز سر کارم.
+  - de: Am Montag habe ich Zeit, da können wir zusammen kochen.
+    en: I have time on Monday, we can cook together then.
+    fa: دوشنبه وقت دارم، آن روز می‌توانیم با هم آشپزی کنیم.
+
+mistakes:
+  - wrong: Dann ich gehe nach Hause.
+    right: Dann gehe ich nach Hause.
+    why:
+      en: "*Dann* is position 1, so the verb comes next and the subject after it."
+      fa: "*dann* جایگاه اول است، پس فعل پس از آن می‌آید و فاعل پس از فعل."
+      de: "*Dann* ist Position 1. Danach kommt das Verb, dann das Subjekt."
+  - wrong: Zuerst ich frühstücke.
+    right: Zuerst frühstücke ich.
+    why:
+      en: "*Zuerst* is an adverb, not a conjunction: it takes position 1, and the verb follows it."
+      fa: "*zuerst* قید است، نه حرف ربط: جایگاه اول را می‌گیرد و فعل پس از آن می‌آید."
+      de: "*Zuerst* ist ein Adverb, keine Konjunktion. Es ist Position 1, danach kommt das Verb."
+  - wrong: Wir essen und danach wir gehen ins Kino.
+    right: Wir essen und danach gehen wir ins Kino.
+    why:
+      en: "*Und* is position 0 and *danach* position 1, so the verb comes next: *danach gehen wir*."
+      fa: "*und* در جایگاه صفر است و *danach* در جایگاه اول، پس فعل پس از آن می‌آید: *danach gehen wir*."
+      de: "*Und* ist Position 0, *danach* ist Position 1. Dann kommt das Verb: *danach gehen wir*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Zuerst ___ Hausaufgaben, dann spiele ich.
+    options: [mache ich, ich mache, machen ich]
+    answer: mache ich
+    explanation:
+      en: "*Zuerst* is position 1, so the verb *mache* comes next and *ich* after it."
+      fa: "*zuerst* جایگاه اول است، پس فعل *mache* پس از آن می‌آید و *ich* پس از فعل."
+      de: "*Zuerst* ist Position 1. Dann kommt das Verb *mache* und danach *ich*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich muss noch telefonieren, dann ___.
+    options: [gehen wir, wir gehen, geht wir]
+    answer: gehen wir
+    explanation:
+      en: "*Dann* is position 1 of the second clause: the verb *gehen*, then *wir*."
+      fa: "*dann* جایگاه اول جملهٔ دوم است: نخست فعل *gehen* و سپس *wir*."
+      de: "*Dann* ist Position 1 im zweiten Satz: zuerst das Verb *gehen*, dann *wir*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir essen zusammen und danach ___ ins Kino.
+    options: [gehen wir, wir gehen, geht wir]
+    answer: gehen wir
+    explanation:
+      en: "*Und* is position 0 and *danach* position 1, so the verb comes before *wir*."
+      fa: "*und* در جایگاه صفر است و *danach* در جایگاه اول، پس فعل پیش از *wir* می‌آید."
+      de: "*Und* ist Position 0, *danach* Position 1. Darum steht das Verb vor *wir*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Am Freitag kann ich nicht, ___ habe ich Dienst.
+    options: [da, denn, und]
+    answer: da
+    explanation:
+      en: "*Da* means \"then, on Friday\" here. It is position 1, so the verb *habe* comes next. After *denn* or *und* the subject would come first."
+      fa: "*da* در این‌جا یعنی «آن وقت، جمعه». جایگاه اول است، پس فعل *habe* پس از آن می‌آید. پس از *denn* یا *und* باید نخست فاعل بیاید."
+      de: "*Da* heißt hier: am Freitag. Es ist Position 1, darum kommt das Verb *habe* danach. Nach *denn* oder *und* käme zuerst das Subjekt."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "dann / ich / nach Hause / gehen"
+    options: [Dann gehe ich nach Hause., Dann ich gehe nach Hause., Dann ich nach Hause gehe.]
+    answer: Dann gehe ich nach Hause.
+    explanation:
+      en: "*Dann* in position 1, the verb *gehe* in position 2, then *ich*."
+      fa: "*dann* در جایگاه اول، فعل *gehe* در جایگاه دوم و سپس *ich*."
+      de: "*Dann* auf Position 1, das Verb *gehe* auf Position 2, dann *ich*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "später / Anna / mich / anrufen"
+    options: [Später ruft Anna mich an., Später Anna ruft mich an., Später ruft an Anna mich.]
+    answer: Später ruft Anna mich an.
+    explanation:
+      en: "*Später* in position 1, *ruft* in position 2, the subject *Anna* after it, and the prefix *an* at the end."
+      fa: "*später* در جایگاه اول، *ruft* در جایگاه دوم، فاعل *Anna* پس از آن و پیشوند *an* در پایان جمله."
+      de: "*Später* auf Position 1, *ruft* auf Position 2, dann das Subjekt *Anna*, das Präfix *an* am Ende."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Am Samstag habe ich frei, ___.
+    options: [da besuche ich meine Oma, da ich besuche meine Oma, da meine Oma ich besuche]
+    answer: da besuche ich meine Oma
+    explanation:
+      en: "*Da* (on Saturday) is position 1: the verb *besuche* comes next, then *ich*."
+      fa: "*da* (آن روز، شنبه) جایگاه اول است: فعل *besuche* پس از آن می‌آید و سپس *ich*."
+      de: "*Da* (am Samstag) ist Position 1: Dann kommt das Verb *besuche* und danach *ich*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Zuerst koche ich. ___ essen wir zusammen.
+    options: [Danach, Zuerst, Gestern]
+    answer: Danach
+    explanation:
+      en: "The eating comes after the cooking: *danach* (after that)."
+      fa: "غذا خوردن پس از آشپزی است: *danach* (پس از آن)."
+      de: "Das Essen kommt nach dem Kochen: *danach*."
+  - id: true-1
+    type: true-false
+    prompt: Zuerst lese ich die Zeitung.
+    answer: true
+    explanation:
+      en: "*Zuerst* in position 1, the verb next, then *ich*. The sentence is correct."
+      fa: "*zuerst* در جایگاه اول، فعل پس از آن و سپس *ich*. جمله درست است."
+      de: "*Zuerst* auf Position 1, dann das Verb, dann *ich*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Danach wir trinken einen Kaffee.
+    answer: false
+    explanation:
+      en: "*Danach* is position 1, so the verb comes next: *Danach trinken wir einen Kaffee.*"
+      fa: "*danach* جایگاه اول است، پس فعل پس از آن می‌آید: *Danach trinken wir einen Kaffee.*"
+      de: "*Danach* ist Position 1, dann kommt das Verb: *Danach trinken wir einen Kaffee.*"
+  - id: true-3
+    type: true-false
+    prompt: Ich rufe dich später an.
+    answer: true
+    explanation:
+      en: "*Später* can stand after the verb, in the middle of the sentence. The sentence is correct."
+      fa: "*später* می‌تواند پس از فعل، در میانهٔ جمله بیاید. جمله درست است."
+      de: "*Später* kann nach dem Verb in der Mitte stehen. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich muss noch arbeiten, dann ich komme.
+    answer: false
+    explanation:
+      en: "*Dann* is position 1, so the verb comes before the subject: *dann komme ich*."
+      fa: "*dann* جایگاه اول است، پس فعل پیش از فاعل می‌آید: *dann komme ich*."
+      de: "*Dann* ist Position 1. Das Verb steht vor dem Subjekt: *dann komme ich*."
+  - id: true-5
+    type: true-false
+    prompt: Am Montag habe ich Zeit, da können wir zusammen kochen.
+    answer: true
+    explanation:
+      en: "*Da* points back to Monday and is position 1; *können* follows it. The sentence is correct."
+      fa: "*da* به دوشنبه اشاره می‌کند و جایگاه اول است؛ *können* پس از آن می‌آید. جمله درست است."
+      de: "*Da* meint den Montag und ist Position 1. *Können* kommt danach. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Zuerst ___ (duschen) ich, dann frühstücke ich.
+    answers: [dusche]
+    explanation:
+      en: "After *zuerst* the verb comes in position 2, with the ending for *ich*: *dusche*."
+      fa: "پس از *zuerst*، فعل با شناسهٔ *ich* در جایگاه دوم می‌آید: *dusche*."
+      de: "Nach *zuerst* steht das Verb auf Position 2, mit der Endung für *ich*: *dusche*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Danach ___ (gehen) wir nach Hause.
+    answers: [gehen]
+    explanation:
+      en: "*Danach* is position 1, the verb comes next, and its subject *wir* takes *-en*."
+      fa: "*danach* جایگاه اول است، فعل پس از آن می‌آید و با فاعل *wir* شناسهٔ *-en* می‌گیرد."
+      de: "*Danach* ist Position 1, dann kommt das Verb. Bei *wir* ist die Endung *-en*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Später ___ (kommen) mein Bruder.
+    answers: [kommt]
+    explanation:
+      en: "The subject *mein Bruder* (*er*) comes after the verb, so *-t*: *kommt*."
+      fa: "فاعل *mein Bruder* (*er*) پس از فعل آمده است، پس شناسهٔ *-t*: *kommt*."
+      de: "Das Subjekt *mein Bruder* (*er*) steht nach dem Verb: *kommt*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [später, komme, ich]
+      - [ich, komme, später]
+    explanation:
+      en: "The verb stays in position 2. If *später* comes first, the subject goes after the verb."
+      fa: "فعل در جایگاه دوم می‌ماند. اگر *später* در آغاز بیاید، فاعل پس از فعل می‌رود."
+      de: "Das Verb bleibt auf Position 2. Steht *später* am Anfang, kommt das Subjekt nach dem Verb."
+  - id: order-2
+    type: word-order
+    answers:
+      - [zuerst, frühstücke, ich]
+      - [ich, frühstücke, zuerst]
+    explanation:
+      en: "The verb stays in position 2. If *zuerst* comes first, the subject goes after the verb."
+      fa: "فعل در جایگاه دوم می‌ماند. اگر *zuerst* در آغاز بیاید، فاعل پس از فعل می‌رود."
+      de: "Das Verb bleibt auf Position 2. Steht *zuerst* am Anfang, kommt das Subjekt nach dem Verb."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 728ae42370bc3089
