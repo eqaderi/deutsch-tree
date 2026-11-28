@@ -4,10 +4,273 @@ kind: grammar
 level: B1
 chapter: b1-two-part-connectors
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-149]
 title:
   en: "*entweder … oder*"
   fa: "*entweder … oder*"
   de: "*entweder … oder*"
+
+explanations:
+  en:
+    rule: >
+      *Entweder … oder* (either … or) names two possibilities, and only one of
+      them happens. It joins two words or parts of a sentence, with no comma:
+      *Meine Eltern kommen entweder am Samstag oder am Sonntag.* It can also
+      join two main clauses; then a comma usually stands before *oder*.
+      *Oder* is in position 0, so its clause keeps statement order: *oder ich
+      mache es allein*. *Entweder* can stand in position 0 too (*Entweder du
+      hilfst mir, …*), or it takes position 1, and then the verb follows it
+      straight away (*Entweder hilfst du mir, …*). Both are correct.
+  fa:
+    rule: >
+      *entweder … oder* (یا … یا) دو امکان را پیش می‌گذارد که فقط یکی از
+      آن‌ها رخ می‌دهد. این حرف ربط دوجزئی دو واژه یا دو بخش از جمله را
+      بی‌ویرگول به هم وصل می‌کند: *Meine Eltern kommen entweder am Samstag
+      oder am Sonntag.* دو جملهٔ پایه را نیز می‌تواند به هم وصل کند؛ در این
+      صورت معمولاً پیش از *oder* ویرگول می‌آید. *oder* در جایگاه صفر است،
+      پس جملهٔ آن ترتیب جملهٔ خبری را نگه می‌دارد: *oder ich mache es
+      allein*. *entweder* نیز می‌تواند در جایگاه صفر بیاید (*Entweder du
+      hilfst mir, …*) یا جایگاه اول را بگیرد که در این صورت فعل بی‌درنگ پس
+      از آن می‌آید (*Entweder hilfst du mir, …*). هر دو درست است.
+  de:
+    rule: >
+      Mit *entweder … oder* nennt man zwei Möglichkeiten. Nur eine davon
+      passiert. Zwischen zwei Wörtern oder Satzteilen steht kein Komma:
+      *Meine Eltern kommen entweder am Samstag oder am Sonntag.* *Entweder …
+      oder* kann auch zwei Hauptsätze verbinden. Dann steht meist ein Komma
+      vor *oder*. *Oder* steht auf Position 0. Danach kommt ein normaler
+      Aussagesatz: *oder ich mache es allein*. Auch *entweder* kann auf
+      Position 0 stehen (*Entweder du hilfst mir, …*). Es kann aber auch auf
+      Position 1 stehen. Dann kommt sofort das Verb (*Entweder hilfst du mir,
+      …*). Beides ist richtig.
+
+table:
+  columns:
+    - { en: "First possibility: *entweder*", fa: "امکان اول: *entweder*", de: "Erste Möglichkeit: *entweder*" }
+    - { en: "Second possibility: *oder*", fa: "امکان دوم: *oder*", de: "Zweite Möglichkeit: *oder*" }
+  rows:
+    - [Meine Eltern kommen entweder am Samstag, oder am Sonntag.]
+    - [Ich trinke morgens entweder Tee, oder Kaffee.]
+    - [Entweder Anna, oder Tom holt dich ab.]
+    - ["Entweder du hilfst mir,", oder ich mache es allein.]
+    - ["Entweder hilfst du mir,", oder ich mache es allein.]
+
+examples:
+  - de: Meine Eltern kommen entweder am Samstag oder am Sonntag.
+    en: My parents are coming either on Saturday or on Sunday.
+    fa: پدر و مادرم یا شنبه می‌آیند یا یکشنبه.
+  - de: Ich trinke morgens entweder Tee oder Kaffee.
+    en: In the morning I drink either tea or coffee.
+    fa: صبح‌ها یا چای می‌نوشم یا قهوه.
+  - de: Wir fahren entweder mit dem Zug oder mit dem Bus.
+    en: We'll go either by train or by bus.
+    fa: یا با قطار می‌رویم یا با اتوبوس.
+  - de: Sie können entweder bar oder mit Karte bezahlen.
+    en: You can pay either in cash or by card.
+    fa: می‌توانید یا نقد پرداخت کنید یا با کارت.
+  - de: Entweder Anna oder Tom holt dich vom Bahnhof ab.
+    en: Either Anna or Tom will pick you up from the station.
+    fa: یا آنا یا تام از ایستگاه دنبالت می‌آید.
+  - de: Entweder du hilfst mir, oder ich mache es allein.
+    en: Either you help me, or I'll do it on my own.
+    fa: یا کمکم می‌کنی یا خودم تنهایی انجامش می‌دهم.
+  - de: Entweder kommst du jetzt mit, oder du bleibst zu Hause.
+    en: Either you come with us now, or you stay at home.
+    fa: یا همین حالا با ما می‌آیی یا در خانه می‌مانی.
+  - de: Entweder wir kochen heute selbst, oder wir bestellen eine Pizza.
+    en: Either we cook for ourselves today, or we order a pizza.
+    fa: یا امروز خودمان آشپزی می‌کنیم یا پیتزا سفارش می‌دهیم.
+
+mistakes:
+  - wrong: Wir fahren entweder nach Rom und nach Mailand.
+    right: Wir fahren entweder nach Rom oder nach Mailand.
+    why:
+      en: "*Entweder* always goes with *oder*, never with *und*."
+      fa: "*entweder* همیشه با *oder* می‌آید، هرگز با *und*."
+      de: "*Entweder* steht immer mit *oder*, nie mit *und*."
+  - wrong: Entweder du kommst mit, oder bleibst du hier.
+    right: Entweder du kommst mit, oder du bleibst hier.
+    why:
+      en: "*Oder* is position 0, not position 1: the subject comes first, then the verb."
+      fa: "*oder* در جایگاه صفر است، نه جایگاه اول: نخست فاعل می‌آید و سپس فعل."
+      de: "*Oder* steht auf Position 0, nicht auf Position 1: zuerst das Subjekt, dann das Verb."
+  - wrong: Entweder wir gehen ins Kino, oder wir ins Theater gehen.
+    right: Entweder wir gehen ins Kino, oder wir gehen ins Theater.
+    why:
+      en: "*Oder* does not start a subordinate clause, so the verb stays in position 2."
+      fa: "*oder* جملهٔ پیرو نمی‌سازد، پس فعل در جایگاه دوم می‌ماند."
+      de: "*Oder* beginnt keinen Nebensatz. Das Verb bleibt auf Position 2."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Meine Eltern kommen entweder am Samstag ___ am Sonntag.
+    options: [und, noch, oder]
+    answer: oder
+    explanation:
+      en: "*Entweder* always goes with *oder*: one of the two days."
+      fa: "*entweder* همیشه با *oder* می‌آید: یکی از این دو روز."
+      de: "*Entweder* steht immer mit *oder*: einer von zwei Tagen."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir fahren ___ mit dem Zug oder mit dem Bus.
+    options: [sowohl, entweder, weder]
+    answer: entweder
+    explanation:
+      en: "The partner of *oder* is *entweder*. *Sowohl* goes with *als auch*, *weder* with *noch*."
+      fa: "جفت *oder*، *entweder* است. *sowohl* با *als auch* می‌آید و *weder* با *noch*."
+      de: "Zu *oder* gehört *entweder*. *Sowohl* steht mit *als auch*, *weder* mit *noch*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Entweder du hilfst mir jetzt, ___ ich mache es allein.
+    options: [aber, oder, denn]
+    answer: oder
+    explanation:
+      en: "The second half of *entweder … oder* is *oder*, also between two clauses."
+      fa: "بخش دوم *entweder … oder*، *oder* است؛ میان دو جمله نیز."
+      de: "Der zweite Teil von *entweder … oder* ist *oder*, auch zwischen zwei Sätzen."
+  - id: gap-4
+    type: gap-fill
+    prompt: Entweder wir gehen ins Kino, oder ___ zu Hause einen Film.
+    options: [sehen wir, wir sehe, wir sehen]
+    answer: wir sehen
+    explanation:
+      en: "*Oder* is position 0, so the subject *wir* comes first and the verb *sehen* second."
+      fa: "*oder* در جایگاه صفر است، پس نخست فاعل *wir* می‌آید و سپس فعل *sehen*."
+      de: "*Oder* steht auf Position 0. Zuerst kommt das Subjekt *wir*, dann das Verb *sehen*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich nehme entweder den Bus oder das Fahrrad.
+    options: [Ich nehme beides., Ich nehme eins von beiden., Ich nehme keins von beiden.]
+    answer: Ich nehme eins von beiden.
+    explanation:
+      en: "*Entweder … oder*: one of the two possibilities, not both."
+      fa: "*entweder … oder* یعنی یکی از دو امکان، نه هر دو."
+      de: "*Entweder … oder* heißt: eine von zwei Möglichkeiten, nicht beide."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Welcher Satz ist richtig?"
+    options:
+      [
+        "Entweder du kommst mit, oder du hier bleibst.",
+        "Entweder du kommst mit, oder bleibst du hier.",
+        "Entweder du kommst mit, oder du bleibst hier.",
+      ]
+    answer: Entweder du kommst mit, oder du bleibst hier.
+    explanation:
+      en: "After *oder* comes statement order: subject *du*, then the verb *bleibst*."
+      fa: "پس از *oder* ترتیب جملهٔ خبری می‌آید: فاعل *du* و سپس فعل *bleibst*."
+      de: "Nach *oder* kommt die Wortstellung vom Aussagesatz: Subjekt *du*, dann das Verb *bleibst*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Entweder ___ jetzt ins Bett, oder du darfst morgen nicht fernsehen.
+    options: [du gehen, gehst du, gehen du]
+    answer: gehst du
+    explanation:
+      en: "Here *entweder* is position 1, so the verb *gehst* comes next, then the subject *du*."
+      fa: "این‌جا *entweder* در جایگاه اول است، پس فعل *gehst* پس از آن می‌آید و سپس فاعل *du*."
+      de: "Hier steht *entweder* auf Position 1. Dann kommt das Verb *gehst* und danach das Subjekt *du*."
+  - id: true-1
+    type: true-false
+    prompt: Wir fahren im Sommer entweder nach Italien oder nach Spanien.
+    answer: true
+    explanation:
+      en: "*Entweder … oder* joins two places; no comma is needed. The sentence is correct."
+      fa: "*entweder … oder* دو مکان را به هم وصل می‌کند و ویرگول لازم نیست. جمله درست است."
+      de: "*Entweder … oder* verbindet zwei Orte, ohne Komma. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Entweder ich komme heute, oder ich komme morgen.
+    answer: true
+    explanation:
+      en: "*Entweder* in position 0, then statement order: *ich komme*. The sentence is correct."
+      fa: "*entweder* در جایگاه صفر است و پس از آن ترتیب جملهٔ خبری می‌آید: *ich komme*. جمله درست است."
+      de: "*Entweder* steht auf Position 0, danach normale Wortstellung: *ich komme*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Entweder komme ich heute, oder ich komme morgen.
+    answer: true
+    explanation:
+      en: "*Entweder* in position 1, so the verb *komme* follows it. This is correct too."
+      fa: "*entweder* در جایگاه اول است، پس فعل *komme* پس از آن می‌آید. این جمله نیز درست است."
+      de: "*Entweder* steht auf Position 1, dann kommt das Verb *komme*. Auch das ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Zum Abendessen gibt es entweder Pizza und Nudeln.
+    answer: false
+    explanation:
+      en: "*Entweder* needs *oder*: *entweder Pizza oder Nudeln*."
+      fa: "*entweder* با *oder* می‌آید: *entweder Pizza oder Nudeln*."
+      de: "Zu *entweder* gehört *oder*: *entweder Pizza oder Nudeln*."
+  - id: true-5
+    type: true-false
+    prompt: Entweder du rufst ihn an, oder schreibst du ihm eine E-Mail.
+    answer: false
+    explanation:
+      en: "*Oder* is position 0, so the subject comes before the verb: *oder du schreibst ihm*."
+      fa: "*oder* در جایگاه صفر است، پس فاعل پیش از فعل می‌آید: *oder du schreibst ihm*."
+      de: "*Oder* steht auf Position 0. Das Subjekt kommt vor dem Verb: *oder du schreibst ihm*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir fahren entweder mit dem Bus ___ mit der U-Bahn.
+    answers: [oder]
+    explanation:
+      en: "*Entweder* is answered by *oder*."
+      fa: "جفت *entweder*، *oder* است."
+      de: "Zu *entweder* gehört *oder*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Entweder du ___ (helfen) mir, oder ich frage Anna.
+    answers: [hilfst]
+    explanation:
+      en: "*Entweder du* is followed by the verb with the ending for *du*: *hilfst*."
+      fa: "پس از *Entweder du* فعل با شناسهٔ *du* می‌آید: *hilfst*."
+      de: "Nach *Entweder du* kommt das Verb mit der Endung für *du*: *hilfst*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Entweder ___ (kommen) Tom heute, oder er kommt am Montag.
+    answers: [kommt]
+    explanation:
+      en: "*Entweder* is position 1 here, so the verb comes next: *kommt Tom*."
+      fa: "این‌جا *entweder* در جایگاه اول است، پس فعل پس از آن می‌آید: *kommt Tom*."
+      de: "Hier ist *entweder* Position 1. Dann kommt das Verb: *kommt Tom*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: ___ du lernst jetzt, oder du gehst heute Abend nicht zur Party.
+    answers: [Entweder]
+    explanation:
+      en: "Two possibilities, one with *oder*: the first half is *Entweder*."
+      fa: "دو امکان که یکی با *oder* آمده است: بخش اول *Entweder* است."
+      de: "Zwei Möglichkeiten, die zweite mit *oder*: Der erste Teil ist *Entweder*."
+  - id: error-1
+    type: find-error
+    prompt: Wir kommen entweder am Freitag und am Samstag.
+    answer: und
+    explanation:
+      en: "*Entweder* goes with *oder*: *entweder am Freitag oder am Samstag*."
+      fa: "*entweder* با *oder* می‌آید: *entweder am Freitag oder am Samstag*."
+      de: "Zu *entweder* gehört *oder*: *entweder am Freitag oder am Samstag*."
+  - id: error-2
+    type: find-error
+    prompt: Entweder du rufst mich an, und du schreibst mir.
+    answer: und
+    explanation:
+      en: "The second clause of *entweder … oder* starts with *oder*: *oder du schreibst mir*."
+      fa: "جملهٔ دوم *entweder … oder* با *oder* آغاز می‌شود: *oder du schreibst mir*."
+      de: "Der zweite Satz von *entweder … oder* beginnt mit *oder*: *oder du schreibst mir*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["entweder du hilfst mir,", oder, ich, mache, es allein]
+    explanation:
+      en: "*Oder* starts the second clause, and statement order follows: *ich mache es allein*."
+      fa: "*oder* جملهٔ دوم را آغاز می‌کند و پس از آن ترتیب جملهٔ خبری می‌آید: *ich mache es allein*."
+      de: "*Oder* beginnt den zweiten Satz. Danach kommt ein normaler Aussagesatz: *ich mache es allein*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 7e1f50fc24f9b23e

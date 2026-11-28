@@ -4,10 +4,275 @@ kind: grammar
 level: B1
 chapter: b1-two-part-connectors
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-154]
 title:
   en: "*nicht nur … sondern auch*"
   fa: "*nicht nur … sondern auch*"
   de: "*nicht nur … sondern auch*"
+
+explanations:
+  en:
+    rule: >
+      *Nicht nur … sondern auch* (not only … but also) adds a second thing to
+      the first, often one that matters more or is a surprise. *Nicht nur*
+      stands right before the part it is about, *sondern auch* before the
+      second part, and before *sondern* there is always a comma: *Pedro lernt
+      nicht nur Deutsch, sondern auch Englisch.* It can also join two main
+      clauses. Then *sondern* is in position 0, the second clause keeps
+      statement order, and *auch* stands inside it, after the verb: *Sie
+      singt nicht nur, sondern sie tanzt auch.* After *nicht nur* the second
+      half is *sondern auch*, never *aber auch*.
+  fa:
+    rule: >
+      *nicht nur … sondern auch* (نه‌تنها … بلکه … هم) چیز دومی را به چیز
+      اول می‌افزاید که اغلب مهم‌تر یا غیرمنتظره است. *nicht nur* درست پیش از
+      بخشی می‌آید که درباره‌اش است و *sondern auch* پیش از بخش دوم. پیش از
+      *sondern* همیشه ویرگول می‌آید: *Pedro lernt nicht nur Deutsch, sondern
+      auch Englisch.* این حرف ربط دوجزئی دو جملهٔ پایه را نیز به هم وصل
+      می‌کند. در این صورت *sondern* در جایگاه صفر است، جملهٔ دوم ترتیب جملهٔ
+      خبری را نگه می‌دارد و *auch* درون آن، پس از فعل، می‌آید: *Sie singt
+      nicht nur, sondern sie tanzt auch.* پس از *nicht nur* بخش دوم همیشه
+      *sondern auch* است، هرگز *aber auch*.
+  de:
+    rule: >
+      Mit *nicht nur … sondern auch* nennt man zuerst eine Sache und dann noch
+      eine zweite. Die zweite ist oft wichtiger oder überraschend. *Nicht nur*
+      steht direkt vor dem ersten Teil, *sondern auch* vor dem zweiten Teil.
+      Vor *sondern* steht immer ein Komma: *Pedro lernt nicht nur Deutsch,
+      sondern auch Englisch.* Man kann auch zwei Hauptsätze verbinden. Dann
+      steht *sondern* auf Position 0. Danach kommt ein normaler Aussagesatz,
+      und *auch* steht in diesem Satz, nach dem Verb: *Sie singt nicht nur,
+      sondern sie tanzt auch.* Nach *nicht nur* kommt *sondern auch*, nie
+      *aber auch*.
+
+table:
+  columns:
+    - { en: "First part: *nicht nur*", fa: "بخش اول: *nicht nur*", de: "Erster Teil: *nicht nur*" }
+    - { en: "Second part: *sondern auch*", fa: "بخش دوم: *sondern auch*", de: "Zweiter Teil: *sondern auch*" }
+  rows:
+    - ["Pedro lernt nicht nur Deutsch,", sondern auch Englisch.]
+    - ["Das Hotel ist nicht nur schön,", sondern auch günstig.]
+    - ["Nicht nur die Kinder,", sondern auch die Eltern hatten Spaß.]
+    - ["Sie singt nicht nur,", sondern sie tanzt auch.]
+    - ["Er hat nicht nur angerufen,", sondern er hat mir auch geschrieben.]
+
+examples:
+  - de: Pedro lernt nicht nur Deutsch, sondern auch Englisch.
+    en: Pedro is learning not only German but also English.
+    fa: پدرو نه‌تنها آلمانی، بلکه انگلیسی هم یاد می‌گیرد.
+  - de: Das Hotel ist nicht nur schön, sondern auch günstig.
+    en: The hotel is not only nice but also cheap.
+    fa: هتل نه‌تنها زیباست، بلکه ارزان هم هست.
+  - de: Nicht nur die Kinder, sondern auch die Eltern hatten viel Spaß.
+    en: Not only the children but also the parents had a lot of fun.
+    fa: نه‌تنها بچه‌ها، بلکه پدر و مادرها هم خیلی خوش گذراندند.
+  - de: Wir waren nicht nur in Wien, sondern auch in Salzburg.
+    en: We were not only in Vienna but also in Salzburg.
+    fa: ما نه‌تنها در وین، بلکه در سالزبورگ هم بودیم.
+  - de: Rauchen ist nicht nur teuer, sondern auch ungesund.
+    en: Smoking is not only expensive but also unhealthy.
+    fa: سیگار کشیدن نه‌تنها گران است، بلکه برای سلامتی هم زیان دارد.
+  - de: Meine Schwester singt nicht nur, sondern sie spielt auch Gitarre.
+    en: My sister doesn't only sing, she also plays the guitar.
+    fa: خواهرم نه‌تنها آواز می‌خواند، بلکه گیتار هم می‌زند.
+  - de: Er hat nicht nur angerufen, sondern er hat mir auch eine Karte geschrieben.
+    en: He didn't only phone, he also wrote me a card.
+    fa: او نه‌تنها زنگ زد، بلکه برایم کارت هم نوشت.
+  - de: Im Kurs lernen wir nicht nur Grammatik, sondern wir sprechen auch viel.
+    en: In the course we don't only learn grammar, we also speak a lot.
+    fa: در کلاس نه‌تنها دستور زبان یاد می‌گیریم، بلکه زیاد هم صحبت می‌کنیم.
+
+mistakes:
+  - wrong: Pedro lernt nicht nur Deutsch, aber auch Englisch.
+    right: Pedro lernt nicht nur Deutsch, sondern auch Englisch.
+    why:
+      en: "After *nicht nur* the second half is *sondern auch*, not *aber auch*."
+      fa: "پس از *nicht nur* بخش دوم *sondern auch* است، نه *aber auch*."
+      de: "Nach *nicht nur* kommt *sondern auch*, nicht *aber auch*."
+  - wrong: Sie spricht nicht nur Deutsch, sondern spricht sie auch Englisch.
+    right: Sie spricht nicht nur Deutsch, sondern sie spricht auch Englisch.
+    why:
+      en: "*Sondern* is position 0, so the subject *sie* comes before the verb."
+      fa: "*sondern* در جایگاه صفر است، پس فاعل *sie* پیش از فعل می‌آید."
+      de: "*Sondern* steht auf Position 0. Das Subjekt *sie* kommt vor dem Verb."
+  - wrong: Das Essen war nicht nur gut sondern auch billig.
+    right: Das Essen war nicht nur gut, sondern auch billig.
+    why:
+      en: "Before *sondern* there is always a comma."
+      fa: "پیش از *sondern* همیشه ویرگول می‌آید."
+      de: "Vor *sondern* steht immer ein Komma."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Pedro lernt nicht nur Deutsch, ___ auch Englisch.
+    options: [aber, sondern, und]
+    answer: sondern
+    explanation:
+      en: "*Nicht nur* is answered by *sondern auch*."
+      fa: "جفت *nicht nur*، *sondern auch* است."
+      de: "Zu *nicht nur* gehört *sondern auch*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Das Hotel ist nicht nur schön, sondern ___ günstig.
+    options: [noch, aber, auch]
+    answer: auch
+    explanation:
+      en: "The second half is *sondern auch*: the hotel is nice and cheap too."
+      fa: "بخش دوم *sondern auch* است: هتل زیباست و ارزان هم هست."
+      de: "Der zweite Teil ist *sondern auch*: Das Hotel ist schön und auch günstig."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ die Kinder, sondern auch die Eltern hatten Spaß.
+    options: [Nur, Nicht nur, Nicht]
+    answer: Nicht nur
+    explanation:
+      en: "*Sondern auch* needs *nicht nur* in the first half: the children had fun, and the parents too."
+      fa: "*sondern auch* در بخش اول به *nicht nur* نیاز دارد: بچه‌ها خوش گذراندند و پدر و مادرها هم."
+      de: "Zu *sondern auch* gehört *nicht nur*: Die Kinder hatten Spaß und die Eltern auch."
+  - id: gap-4
+    type: gap-fill
+    prompt: Sie spricht nicht nur Deutsch, sondern ___ auch Englisch.
+    options: [spricht sie, sie sprechen, sie spricht]
+    answer: sie spricht
+    explanation:
+      en: "*Sondern* is position 0, so the subject *sie* comes first and the verb *spricht* second."
+      fa: "*sondern* در جایگاه صفر است، پس نخست فاعل *sie* می‌آید و سپس فعل *spricht*."
+      de: "*Sondern* steht auf Position 0. Zuerst das Subjekt *sie*, dann das Verb *spricht*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Lisa kann nicht nur kochen, sondern auch backen.
+    options:
+      ["Lisa kann backen, aber nicht kochen.", Lisa kann kochen und backen., "Lisa kann kochen, aber nicht backen."]
+    answer: Lisa kann kochen und backen.
+    explanation:
+      en: "*Nicht nur … sondern auch*: both are true, cooking and baking."
+      fa: "*nicht nur … sondern auch* یعنی هر دو درست است: آشپزی و شیرینی‌پزی."
+      de: "*Nicht nur … sondern auch* heißt: Beides stimmt, kochen und backen."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Welcher Satz ist richtig?"
+    options:
+      [
+        "Er raucht nicht nur, sondern trinkt er auch.",
+        "Er raucht nicht nur, sondern er trinkt auch.",
+        "Er raucht nicht nur, aber er trinkt auch.",
+      ]
+    answer: Er raucht nicht nur, sondern er trinkt auch.
+    explanation:
+      en: "After *sondern* comes statement order, *er trinkt*; and *nicht nur* goes with *sondern*, not *aber*."
+      fa: "پس از *sondern* ترتیب جملهٔ خبری می‌آید، *er trinkt*؛ و *nicht nur* با *sondern* می‌آید، نه با *aber*."
+      de: "Nach *sondern* kommt ein normaler Aussagesatz: *er trinkt*. *Nicht nur* steht mit *sondern*, nicht mit *aber*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Rauchen ist nicht nur teuer, ___.
+    options: [aber auch ungesund, sondern ungesund auch, sondern auch ungesund]
+    answer: sondern auch ungesund
+    explanation:
+      en: "*Sondern auch* stands together, right before the second part: *sondern auch ungesund*."
+      fa: "*sondern auch* با هم و درست پیش از بخش دوم می‌آید: *sondern auch ungesund*."
+      de: "*Sondern auch* steht zusammen direkt vor dem zweiten Teil: *sondern auch ungesund*."
+  - id: true-1
+    type: true-false
+    prompt: Wir waren nicht nur in Wien, sondern auch in Salzburg.
+    answer: true
+    explanation:
+      en: "*Nicht nur* before the first place, *sondern auch* before the second, with a comma. The sentence is correct."
+      fa: "*nicht nur* پیش از مکان اول و *sondern auch* پیش از مکان دوم آمده و ویرگول هم هست. جمله درست است."
+      de: "*Nicht nur* vor dem ersten Ort, *sondern auch* vor dem zweiten, mit Komma. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Sie hat nicht nur ein Auto, aber auch ein Motorrad.
+    answer: false
+    explanation:
+      en: "After *nicht nur* the second half is *sondern auch*: *sondern auch ein Motorrad*."
+      fa: "پس از *nicht nur* بخش دوم *sondern auch* است: *sondern auch ein Motorrad*."
+      de: "Nach *nicht nur* kommt *sondern auch*: *sondern auch ein Motorrad*."
+  - id: true-3
+    type: true-false
+    prompt: Er hat nicht nur angerufen, sondern er hat mir auch geschrieben.
+    answer: true
+    explanation:
+      en: "Two main clauses: *sondern* in position 0, then *er hat*, and *auch* inside the clause. The sentence is correct."
+      fa: "دو جملهٔ پایه: *sondern* در جایگاه صفر، سپس *er hat* و *auch* درون جمله. جمله درست است."
+      de: "Zwei Hauptsätze: *sondern* auf Position 0, dann *er hat*, und *auch* steht im Satz. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Das Essen war nicht nur gut, sondern billig auch.
+    answer: false
+    explanation:
+      en: "*Auch* stands right after *sondern*, before the second part: *sondern auch billig*."
+      fa: "*auch* درست پس از *sondern* و پیش از بخش دوم می‌آید: *sondern auch billig*."
+      de: "*Auch* steht direkt nach *sondern*, vor dem zweiten Teil: *sondern auch billig*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Pedro spielt nicht nur Fußball, ___ auch Tennis.
+    answers: [sondern]
+    explanation:
+      en: "*Nicht nur* is answered by *sondern auch*."
+      fa: "جفت *nicht nur*، *sondern auch* است."
+      de: "Zu *nicht nur* gehört *sondern auch*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das Zimmer ist ___ nur klein, sondern auch dunkel.
+    answers: [nicht]
+    explanation:
+      en: "The first half of *nicht nur … sondern auch* is *nicht nur*."
+      fa: "بخش اول *nicht nur … sondern auch*، *nicht nur* است."
+      de: "Der erste Teil von *nicht nur … sondern auch* ist *nicht nur*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Er kann nicht nur gut kochen, sondern er ___ (backen) auch gern Kuchen.
+    answers: [backt, bäckt]
+    explanation:
+      en: "After *sondern er* the verb comes in position 2, with the ending for *er*: *backt*."
+      fa: "پس از *sondern er*، فعل با شناسهٔ *er* در جایگاه دوم می‌آید: *backt*."
+      de: "Nach *sondern er* steht das Verb auf Position 2, mit der Endung für *er*: *backt*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Im Urlaub haben wir nicht nur gebadet, sondern wir ___ (sein) auch viel gewandert.
+    answers: [sind]
+    explanation:
+      en: "After *sondern wir* the auxiliary comes in position 2. *Wandern* takes *sein* in the *Perfekt*: *wir sind gewandert*."
+      fa: "پس از *sondern wir*، فعل کمکی در جایگاه دوم می‌آید. *wandern* در گذشتهٔ نقلی (*Perfekt*) با *sein* صرف می‌شود: *wir sind gewandert*."
+      de: "Nach *sondern wir* steht das Hilfsverb auf Position 2. *Wandern* bildet das Perfekt mit *sein*: *wir sind gewandert*."
+  - id: error-1
+    type: find-error
+    prompt: Sie spricht nicht nur Englisch, aber auch Französisch.
+    answer: aber
+    explanation:
+      en: "After *nicht nur* comes *sondern auch*: *sondern auch Französisch*."
+      fa: "پس از *nicht nur*، *sondern auch* می‌آید: *sondern auch Französisch*."
+      de: "Nach *nicht nur* kommt *sondern auch*: *sondern auch Französisch*."
+  - id: error-2
+    type: find-error
+    prompt: Das Hotel ist nicht nur schön, sondern aber günstig.
+    answer: aber
+    explanation:
+      en: "The second half is *sondern auch*: *sondern auch günstig*."
+      fa: "بخش دوم *sondern auch* است: *sondern auch günstig*."
+      de: "Der zweite Teil ist *sondern auch*: *sondern auch günstig*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["das Hotel ist nicht nur schön,", sondern, auch, sehr günstig]
+    explanation:
+      en: "*Sondern auch* comes together, right before the second part: *sondern auch sehr günstig*."
+      fa: "*sondern auch* با هم و درست پیش از بخش دوم می‌آید: *sondern auch sehr günstig*."
+      de: "*Sondern auch* steht zusammen direkt vor dem zweiten Teil: *sondern auch sehr günstig*."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["sie singt nicht nur,", sondern, sie, tanzt, auch]
+    explanation:
+      en: "*Sondern* is position 0, then statement order, *sie tanzt*, and *auch* after the verb."
+      fa: "*sondern* در جایگاه صفر است، سپس ترتیب جملهٔ خبری، *sie tanzt*، و *auch* پس از فعل."
+      de: "*Sondern* steht auf Position 0. Dann kommt ein Aussagesatz, *sie tanzt*, und *auch* nach dem Verb."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 090e530c4181f806

@@ -170,6 +170,11 @@ test.each([
   ['Die Rezeption ist im EG, gleich links.', 'Die Rezeption ist im Erd-geschoss, gleich links.'],
   ['Die Praxis ist im zweiten OG.', 'Die Praxis ist im zweiten Ober-geschoss.'],
   ['Die Garage ist im UG.', 'Die Garage ist im Untergeschoss.'],
+  // #94: the voice stresses the first syllable of these, or reads "sch" in Berufsschule as "s-ch".
+  ['Ich studiere jetzt im dritten Semester Informatik.', 'Ich studiere jetzt im dritten Se-mester Informatik.'],
+  ['Im Seminar lesen wir einen Text.', 'Im Semi-nar lesen wir einen Text.'],
+  ['die Recherche', 'die Re-scherrsche'],
+  ['Er ist in der Berufsschule.', 'Er ist in der Berufs-schule.'],
 ])('a word the voice misreads in "%s" is respelt for the voice', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })
