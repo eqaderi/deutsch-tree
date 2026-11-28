@@ -4,10 +4,310 @@ kind: grammar
 level: B1
 chapter: b1-pronouns
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-078]
 title:
   en: "*derselbe*, *dieselbe*, *dasselbe*"
   fa: "*derselbe*، *dieselbe*، *dasselbe*"
   de: "*derselbe*, *dieselbe*, *dasselbe*"
+
+explanations:
+  en:
+    rule: >
+      *Derselbe*, *dieselbe*, *dasselbe* mean "the same", one and the same
+      person or thing: *Hast du denselben Lehrer wie letztes Jahr?* It is one
+      word made of two parts, and both change. The first part is the article
+      *der*, *die*, *das* in its case; *-selb-* then takes *-e* or *-en*, as
+      an adjective does after *der*: *derselbe Lehrer*, *denselben Lehrer*,
+      *demselben Lehrer*, *in derselben Straße*, plural *dieselben Leute*.
+      After a preposition that is joined to the article, *selb-* is written
+      as a word of its own: *im selben Haus*, *am selben Tag*, *zur selben
+      Zeit*. It can stand alone too: *Das ist dasselbe.* What it is compared
+      with follows *wie*: *dasselbe Problem wie gestern*.
+  fa:
+    rule: >
+      *derselbe*، *dieselbe* و *dasselbe* یعنی «همان» یا «همین»، یعنی دقیقاً
+      همان شخص یا چیز: *Hast du denselben Lehrer wie letztes Jahr?* (همان
+      معلم پارسال را داری؟) این واژه یک واژه است که از دو بخش ساخته شده و
+      هر دو بخش تغییر می‌کنند. بخش اول همان حرف تعریف *der*، *die* یا *das*
+      در حالت خودش است؛ پس از آن *-selb-* مانند صفتی که پس از *der* می‌آید
+      پایانهٔ *-e* یا *-en* می‌گیرد: *derselbe Lehrer*، *denselben Lehrer*،
+      *demselben Lehrer*، *in derselben Straße* و در جمع *dieselben Leute*.
+      اگر حرف تعریف با حرف اضافه یکی شده باشد، *selb-* جدا نوشته می‌شود: *im
+      selben Haus*، *am selben Tag*، *zur selben Zeit*. این واژه بی‌اسم هم
+      به کار می‌رود: *Das ist dasselbe.* (این همان است.) چیزی که با آن مقایسه
+      می‌شود پس از *wie* می‌آید: *dasselbe Problem wie gestern*.
+  de:
+    rule: >
+      *Derselbe*, *dieselbe*, *dasselbe* heißt: genau diese Person oder
+      genau diese Sache, keine andere. *Hast du denselben Lehrer wie letztes
+      Jahr?* Es ist ein Wort aus zwei Teilen, und beide ändern sich. Der
+      erste Teil ist der Artikel *der*, *die*, *das* im richtigen Kasus. Dann
+      bekommt *-selb-* die Endung *-e* oder *-en*, wie ein Adjektiv nach
+      *der*: *derselbe Lehrer*, *denselben Lehrer*, *demselben Lehrer*, *in
+      derselben Straße*, im Plural *dieselben Leute*. Nach *im*, *am* oder
+      *zur* schreibt man *selb-* allein: *im selben Haus*, *am selben Tag*,
+      *zur selben Zeit*. Das Wort kann auch allein stehen: *Das ist dasselbe.*
+      Beim Vergleich steht *wie*: *dasselbe Problem wie gestern*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [derselbe Lehrer, denselben Lehrer, demselben Lehrer, Wir haben denselben Lehrer.]
+    - [dieselbe Straße, dieselbe Straße, derselben Straße, Wir wohnen in derselben Straße.]
+    - [dasselbe Haus, dasselbe Haus, demselben Haus (im selben Haus), Er wohnt im selben Haus wie ich.]
+    - [dieselben Leute (Plural), dieselben Leute, denselben Leuten, Ich treffe dort immer dieselben Leute.]
+
+examples:
+  - de: Hast du denselben Lehrer wie letztes Jahr?
+    en: Do you have the same teacher as last year?
+    fa: همان معلم پارسال را داری؟
+  - de: Wir wohnen im selben Haus.
+    en: We live in the same building.
+    fa: ما در یک ساختمان زندگی می‌کنیم.
+  - de: Meine Schwester und ich haben am selben Tag Geburtstag.
+    en: My sister and I have our birthday on the same day.
+    fa: من و خواهرم در یک روز تولد داریم.
+  - de: Das ist dasselbe Problem wie gestern.
+    en: That's the same problem as yesterday.
+    fa: این همان مشکل دیروز است.
+  - de: Er trägt jeden Tag dieselbe Jacke.
+    en: He wears the same jacket every day.
+    fa: او هر روز همان کاپشن را می‌پوشد.
+  - de: Meine Frau und ich arbeiten in derselben Firma.
+    en: My wife and I work at the same company.
+    fa: من و همسرم در یک شرکت کار می‌کنیم.
+  - de: Ich mache immer dieselben Fehler.
+    en: I always make the same mistakes.
+    fa: همیشه همان اشتباه‌ها را می‌کنم.
+  - de: Sie sitzt im Kurs immer auf demselben Platz.
+    en: She always sits in the same seat in class.
+    fa: او در کلاس همیشه روی همان صندلی می‌نشیند.
+  - de: Wir sind zur selben Zeit angekommen.
+    en: We arrived at the same time.
+    fa: ما هم‌زمان رسیدیم.
+  - de: Für mich ist das nicht dasselbe.
+    en: For me, that's not the same.
+    fa: برای من این دو یکسان نیستند.
+
+mistakes:
+  - wrong: Wir haben derselbe Lehrer.
+    right: Wir haben denselben Lehrer.
+    why:
+      en: "*Lehrer* is the object, so the *Akkusativ*: *der* becomes *den*, and *-selbe* becomes *-selben*."
+      fa: "*Lehrer* مفعول است و در حالت *Akkusativ* می‌آید: *der* به *den* و *-selbe* به *-selben* تبدیل می‌شود."
+      de: "*Lehrer* ist das Objekt, also Akkusativ: aus *der* wird *den*, aus *-selbe* wird *-selben*."
+  - wrong: Sie wohnt in dieselbe Straße.
+    right: Sie wohnt in derselben Straße.
+    why:
+      en: "*Wohnen in* says where (*Wo?*), so the *Dativ*: *derselben Straße*."
+      fa: "*wohnen in* جای چیزی را نشان می‌دهد (*Wo?*)، پس حالت *Dativ* می‌آید: *derselben Straße*."
+      de: "*Wohnen in* sagt, wo (*Wo?*). Darum Dativ: *derselben Straße*."
+  - wrong: Das ist die selbe Frage.
+    right: Das ist dieselbe Frage.
+    why:
+      en: "*Dieselbe* is one word: the article and *selbe* are written together."
+      fa: "*dieselbe* یک واژه است: حرف تعریف و *selbe* سرهم نوشته می‌شوند."
+      de: "*Dieselbe* ist ein Wort. Man schreibt den Artikel und *selbe* zusammen."
+  - wrong: Ich wohne im demselben Haus.
+    right: Ich wohne im selben Haus.
+    why:
+      en: "*Im* already holds *dem*, so only *selben* follows. Or say *in demselben Haus*."
+      fa: "*im* خودش *dem* را دارد، پس پس از آن فقط *selben* می‌آید. یا بگویید *in demselben Haus*."
+      de: "In *im* steckt schon *dem*. Darum steht danach nur *selben*. Oder man sagt *in demselben Haus*."
+  - wrong: Ich habe dasselbe Handy als du.
+    right: Ich habe dasselbe Handy wie du.
+    why:
+      en: "After *derselbe* the comparison takes *wie*, not *als*."
+      fa: "پس از *derselbe* مقایسه با *wie* می‌آید، نه با *als*."
+      de: "Nach *derselbe* steht beim Vergleich *wie*, nicht *als*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir haben ___ Lehrer wie letztes Jahr.
+    options: [derselbe, denselben, demselben]
+    answer: denselben
+    explanation:
+      en: "*Lehrer* is the object of *haben*, so the *Akkusativ*: *denselben Lehrer*."
+      fa: "*Lehrer* مفعول *haben* است و در حالت *Akkusativ* می‌آید: *denselben Lehrer*."
+      de: "*Lehrer* ist das Objekt von *haben*, also Akkusativ: *denselben Lehrer*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir wohnen in ___ Straße.
+    options: [derselben, dieselbe, demselben]
+    answer: derselben
+    explanation:
+      en: "*Wohnen in* says where, so the *Dativ*; *Straße* is feminine: *derselben Straße*."
+      fa: "*wohnen in* جا را نشان می‌دهد، پس حالت *Dativ* می‌آید؛ *Straße* اسم مؤنث است: *derselben Straße*."
+      de: "*Wohnen in* sagt, wo. Darum Dativ. *Straße* ist feminin: *derselben Straße*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Du trägst ja ___ Kleid wie gestern!
+    options: [denselben, dieselbe, dasselbe]
+    answer: dasselbe
+    explanation:
+      en: "*Kleid* is neuter, and in the *Akkusativ* *das* stays *das*: *dasselbe Kleid*."
+      fa: "*Kleid* اسم خنثی است و *das* در حالت *Akkusativ* همان *das* می‌ماند: *dasselbe Kleid*."
+      de: "*Kleid* ist neutral. Im Akkusativ bleibt *das*: *dasselbe Kleid*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Meine Schwester und ich haben am ___ Tag Geburtstag.
+    options: [selbe, selben, selber]
+    answer: selben
+    explanation:
+      en: "*Am* is *an dem*, so *selb-* takes *-en*: *am selben Tag*."
+      fa: "*am* همان *an dem* است، پس *selb-* پایانهٔ *-en* می‌گیرد: *am selben Tag*."
+      de: "*Am* ist *an dem*. Darum bekommt *selb-* die Endung *-en*: *am selben Tag*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ich habe ___ Problem wie du.
+    options: [derselbe, dasselbe, dieselbe]
+    answer: dasselbe
+    explanation:
+      en: "*Problem* is neuter: *dasselbe Problem*."
+      fa: "*Problem* اسم خنثی است: *dasselbe Problem*."
+      de: "*Problem* ist neutral: *dasselbe Problem*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options:
+      - Er arbeitet in dieselbe Firma wie ich.
+      - Er arbeitet in derselben Firma wie ich.
+      - Er arbeitet in derselbe Firma wie ich.
+    answer: Er arbeitet in derselben Firma wie ich.
+    explanation:
+      en: "*Arbeiten in* says where, so the *Dativ*: *in derselben Firma*."
+      fa: "*arbeiten in* جا را نشان می‌دهد، پس حالت *Dativ* می‌آید: *in derselben Firma*."
+      de: "*Arbeiten in* sagt, wo. Darum Dativ: *in derselben Firma*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Fährst du wieder mit ___ Leuten in den Urlaub?
+    options: [denselben, dieselben, demselben]
+    answer: denselben
+    explanation:
+      en: "*Mit* takes the *Dativ*; in the plural that is *denselben Leuten*."
+      fa: "*mit* با حالت *Dativ* می‌آید و در جمع می‌شود *denselben Leuten*."
+      de: "Nach *mit* steht der Dativ. Im Plural: *denselben Leuten*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Was bedeutet der Satz? Tom und ich gehen in dieselbe Klasse."
+    options:
+      - Tom und ich sind in einer Klasse.
+      - Tom und ich sind in zwei Klassen, die gleich groß sind.
+      - Tom geht in eine Klasse, ich nicht.
+    answer: Tom und ich sind in einer Klasse.
+    explanation:
+      en: "*Dieselbe Klasse* is one and the same class: Tom and I are in it together."
+      fa: "*dieselbe Klasse* یعنی همان یک کلاس: من و تام با هم در آن هستیم."
+      de: "*Dieselbe Klasse* ist eine Klasse, nicht zwei: Tom und ich sind zusammen darin."
+  - id: true-1
+    type: true-false
+    prompt: Wir sind im selben Jahr geboren.
+    answer: true
+    explanation:
+      en: "*Im* holds *dem*, so *selben* follows. The sentence is correct."
+      fa: "*im* خودش *dem* را دارد، پس *selben* می‌آید. جمله درست است."
+      de: "In *im* steckt *dem*, darum *selben*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Sie hat denselbe Fehler noch einmal gemacht.
+    answer: false
+    explanation:
+      en: "In the *Akkusativ* both parts change: *denselben Fehler*."
+      fa: "در حالت *Akkusativ* هر دو بخش تغییر می‌کنند: *denselben Fehler*."
+      de: "Im Akkusativ ändern sich beide Teile: *denselben Fehler*."
+  - id: true-3
+    type: true-false
+    prompt: Ich wohne seit zehn Jahren in derselben Wohnung.
+    answer: true
+    explanation:
+      en: "*Wohnung* is feminine, and *in* for where takes the *Dativ*: *in derselben Wohnung*. The sentence is correct."
+      fa: "*Wohnung* اسم مؤنث است و *in* برای جا با حالت *Dativ* می‌آید: *in derselben Wohnung*. جمله درست است."
+      de: "*Wohnung* ist feminin, *in* für den Ort hat den Dativ: *in derselben Wohnung*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Mein Bruder und ich haben ___ (derselbe) Arzt.
+    answers: [denselben]
+    explanation:
+      en: "*Arzt* is masculine and the object, so the *Akkusativ*: *denselben Arzt*."
+      fa: "*Arzt* اسم مذکر و مفعول است، پس در حالت *Akkusativ* می‌آید: *denselben Arzt*."
+      de: "*Arzt* ist maskulin und das Objekt, also Akkusativ: *denselben Arzt*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Er sitzt im Bus immer auf ___ (derselbe) Platz.
+    answers: [demselben]
+    explanation:
+      en: "*Sitzen auf* says where, so the *Dativ*: *auf demselben Platz*."
+      fa: "*sitzen auf* جا را نشان می‌دهد، پس حالت *Dativ* می‌آید: *auf demselben Platz*."
+      de: "*Sitzen auf* sagt, wo. Darum Dativ: *auf demselben Platz*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir arbeiten in ___ (dieselbe) Abteilung.
+    answers: [derselben]
+    explanation:
+      en: "*Abteilung* is feminine, and *in* for where takes the *Dativ*: *in derselben Abteilung*."
+      fa: "*Abteilung* اسم مؤنث است و *in* برای جا با حالت *Dativ* می‌آید: *in derselben Abteilung*."
+      de: "*Abteilung* ist feminin, *in* für den Ort hat den Dativ: *in derselben Abteilung*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Meine Freundin und ich haben ___ (dieselbe) Hobbys.
+    answers: [dieselben]
+    explanation:
+      en: "*Hobbys* is plural: *dieselben Hobbys*."
+      fa: "*Hobbys* جمع است: *dieselben Hobbys*."
+      de: "*Hobbys* ist Plural: *dieselben Hobbys*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Dativ: dasselbe Haus"
+    answers: [demselben Haus]
+    explanation:
+      en: "In the *Dativ* *das* becomes *dem* and *-selbe* becomes *-selben*: *demselben Haus*."
+      fa: "در حالت *Dativ* *das* به *dem* و *-selbe* به *-selben* تبدیل می‌شود: *demselben Haus*."
+      de: "Im Dativ wird *das* zu *dem* und *-selbe* zu *-selben*: *demselben Haus*."
+  - id: error-1
+    type: find-error
+    prompt: Meine Eltern wohnen noch in demselben Straße.
+    answer: demselben
+    explanation:
+      en: "*Straße* is feminine; in the *Dativ* that is *derselben Straße*."
+      fa: "*Straße* اسم مؤنث است و در حالت *Dativ* می‌شود *derselben Straße*."
+      de: "*Straße* ist feminin. Im Dativ heißt es *derselben Straße*."
+  - id: error-2
+    type: find-error
+    prompt: Er trägt jeden Tag denselbe Hose.
+    answer: denselbe
+    explanation:
+      en: "*Hose* is feminine, and in the *Akkusativ* *die* stays *die*: *dieselbe Hose*."
+      fa: "*Hose* اسم مؤنث است و *die* در حالت *Akkusativ* همان *die* می‌ماند: *dieselbe Hose*."
+      de: "*Hose* ist feminin. Im Akkusativ bleibt *die*: *dieselbe Hose*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wir, sind, im selben Jahr, geboren]
+      - [im selben Jahr, sind, wir, geboren]
+    explanation:
+      en: "The verb *sind* comes second and *geboren* last. *Im selben Jahr* can stand first or after *wir sind*."
+      fa: "فعل *sind* در جایگاه دوم و *geboren* در پایان جمله می‌آید. *im selben Jahr* می‌تواند در آغاز یا پس از *wir sind* باشد."
+      de: "*Sind* steht an Position 2, *geboren* am Ende. *Im selben Jahr* kann am Anfang oder nach *wir sind* stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [Ich kenne ___ Mann., denselben]
+      - [Ich helfe ___ Frau., derselben]
+      - [Das ist ___ Kind., dasselbe]
+    explanation:
+      en: "*Kennen* takes the *Akkusativ* (*denselben Mann*), *helfen* the *Dativ* (*derselben Frau*), and the subject is in the *Nominativ* (*dasselbe Kind*)."
+      fa: "*kennen* با حالت *Akkusativ* می‌آید (*denselben Mann*)، *helfen* با حالت *Dativ* (*derselben Frau*) و فاعل در حالت *Nominativ* است (*dasselbe Kind*)."
+      de: "*Kennen* hat den Akkusativ (*denselben Mann*), *helfen* den Dativ (*derselben Frau*), das Subjekt steht im Nominativ (*dasselbe Kind*)."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, blind pass
+    on the review sheet only; not a person)
+  date: 2026-11-28
+  pool: bbd23bbbfe07476d

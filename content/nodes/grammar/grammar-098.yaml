@@ -4,10 +4,333 @@ kind: grammar
 level: B1
 chapter: b1-pronouns
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-092]
 title:
   en: "*einige*, *manche*, *wenige*, *ein paar*"
   fa: "*einige*، *manche*، *wenige*، *ein paar*"
   de: "*einige*, *manche*, *wenige*, *ein paar*"
+
+explanations:
+  en:
+    rule: >
+      *Einige* (some, several), *manche* (some, but not all), *wenige* (few,
+      not many) and *ein paar* (a few, two or three) say how many without
+      giving a number. They go with a plural noun, and the verb is plural:
+      *Einige Schüler haben die Hausaufgaben nicht gemacht.* *Einige*,
+      *manche* and *wenige* have the plural endings of *diese*: *-e* in the
+      *Nominativ* and *Akkusativ*, *-en* in the *Dativ*, where the noun takes
+      *-n* as well: *mit einigen Kollegen*. *Ein paar* never changes: *mit ein
+      paar Freunden*; only the noun takes its *-n*. *Wenige* stresses that it
+      is not many (*Nur wenige Gäste sind gekommen.*); *ein paar* simply says
+      there are some. All four can stand alone: *Einige sind schon gegangen.*
+      With a noun you cannot count, in the singular, say *wenig* without an
+      ending: *wenig Zeit*. Written with a capital, *ein Paar* is a pair: *ein
+      Paar Schuhe*.
+  fa:
+    rule: >
+      *einige* (چند، چندین)، *manche* (برخی، نه همه)، *wenige* (تعداد کمی،
+      نه زیاد) و *ein paar* (چند تا، دو سه تا) تعداد را بی‌آن‌که عدد دقیقی
+      بگویند نشان می‌دهند. این واژه‌ها با اسم جمع می‌آیند و فعل نیز جمع
+      است: *Einige Schüler haben die Hausaufgaben nicht gemacht.* (چند
+      دانش‌آموز تکلیفشان را انجام نداده‌اند.) *einige*، *manche* و *wenige*
+      همان پایانه‌های جمع *diese* را می‌گیرند: در حالت *Nominativ* (حالت
+      فاعلی) و حالت *Akkusativ* (حالت مفعولی) *-e* و در حالت *Dativ* (حالت
+      مفعول باواسطه) *-en*؛ در حالت *Dativ* خود اسم هم *-n* می‌گیرد: *mit
+      einigen Kollegen*. *ein paar* هیچ‌وقت تغییر نمی‌کند: *mit ein paar
+      Freunden*؛ فقط اسم *-n* می‌گیرد. *wenige* بر کم بودن تأکید می‌کند
+      (*Nur wenige Gäste sind gekommen.*)، ولی *ein paar* فقط می‌گوید چند
+      تایی هست. هر چهار واژه بی‌اسم هم به کار می‌روند: *Einige sind schon
+      gegangen.* (چند نفر رفته‌اند.) با اسم ناشمردنی و مفرد، *wenig* بدون
+      پایانه می‌آید: *wenig Zeit*. *ein Paar* با حرف بزرگ یعنی «یک جفت»: *ein
+      Paar Schuhe*.
+  de:
+    rule: >
+      *Einige*, *manche*, *wenige* und *ein paar* sagen, wie viele es sind,
+      aber ohne genaue Zahl. *Ein paar* heißt etwa zwei oder drei, *manche*
+      heißt nicht alle, *wenige* heißt nicht viele. Sie stehen bei einem
+      Nomen im Plural, und das Verb steht im Plural: *Einige Schüler haben
+      die Hausaufgaben nicht gemacht.* *Einige*, *manche* und *wenige* haben
+      die Endungen von *diese* im Plural: *-e* im Nominativ und Akkusativ,
+      *-en* im Dativ. Im Dativ bekommt auch das Nomen *-n*: *mit einigen
+      Kollegen*. *Ein paar* ändert sich nie: *mit ein paar Freunden*. Nur das
+      Nomen bekommt *-n*. Alle vier können auch allein stehen: *Einige sind
+      schon gegangen.* Bei Sachen, die man nicht zählen kann, sagt man im
+      Singular *wenig* ohne Endung: *wenig Zeit*. *Ein Paar* mit großem *P*
+      sind zwei Dinge, die zusammengehören: *ein Paar Schuhe*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [einige Freunde, einige Freunde, einigen Freunden, Ich war mit einigen Freunden im Kino.]
+    - [manche Leute, manche Leute, manchen Leuten, Manchen Leuten gefällt das nicht.]
+    - [wenige Kunden, wenige Kunden, wenigen Kunden, Nur wenige Kunden sind gekommen.]
+    - [ein paar Tage, ein paar Tage, ein paar Tagen, Nach ein paar Tagen war ich wieder gesund.]
+
+examples:
+  - de: Einige Schüler haben die Hausaufgaben nicht gemacht.
+    en: Some pupils haven't done their homework.
+    fa: چند دانش‌آموز تکلیفشان را انجام نداده‌اند.
+  - de: Manche Leute essen kein Fleisch.
+    en: Some people don't eat meat.
+    fa: برخی از مردم گوشت نمی‌خورند.
+  - de: Nur wenige Gäste sind zur Party gekommen.
+    en: Only a few guests came to the party.
+    fa: فقط تعداد کمی از مهمان‌ها به مهمانی آمدند.
+  - de: Wir haben noch ein paar Minuten Zeit.
+    en: We still have a few minutes.
+    fa: هنوز چند دقیقه وقت داریم.
+  - de: Ich habe mit einigen Kollegen über das Problem gesprochen.
+    en: I talked to some colleagues about the problem.
+    fa: با چند تا از همکارانم دربارهٔ این مشکل صحبت کردم.
+  - de: Das Paket kommt in wenigen Tagen.
+    en: The parcel will arrive in a few days.
+    fa: بسته تا چند روز دیگر می‌رسد.
+  - de: Manchen Kindern gefällt die Schule nicht.
+    en: Some children don't like school.
+    fa: برخی از بچه‌ها مدرسه را دوست ندارند.
+  - de: Hast du Fotos vom Urlaub? – Ja, ein paar.
+    en: Do you have photos from the holiday? – Yes, a few.
+    fa: از سفر عکس داری؟ – بله، چندتایی.
+  - de: Einige sind schon nach Hause gegangen.
+    en: Some have already gone home.
+    fa: چند نفر به خانه رفته‌اند.
+  - de: Ich habe heute leider wenig Zeit.
+    en: Unfortunately I have little time today.
+    fa: متأسفانه امروز وقت کمی دارم.
+  - de: Ich brauche ein Paar neue Schuhe.
+    en: I need a new pair of shoes.
+    fa: یک جفت کفش نو لازم دارم.
+
+mistakes:
+  - wrong: Ich habe mit einige Freunde gesprochen.
+    right: Ich habe mit einigen Freunden gesprochen.
+    why:
+      en: "*Mit* takes the *Dativ*: *einigen*, and the noun takes *-n*: *Freunden*."
+      fa: "*mit* با حالت *Dativ* می‌آید: *einigen*، و اسم هم *-n* می‌گیرد: *Freunden*."
+      de: "Nach *mit* steht der Dativ: *einigen*, und das Nomen bekommt *-n*: *Freunden*."
+  - wrong: Wir fahren mit ein paaren Freunden weg.
+    right: Wir fahren mit ein paar Freunden weg.
+    why:
+      en: "*Ein paar* never changes, also in the *Dativ*. Only the noun takes *-n*."
+      fa: "*ein paar* هیچ‌وقت تغییر نمی‌کند، در حالت *Dativ* هم. فقط اسم *-n* می‌گیرد."
+      de: "*Ein paar* ändert sich nie, auch nicht im Dativ. Nur das Nomen bekommt *-n*."
+  - wrong: Ich bleibe noch ein Paar Tage.
+    right: Ich bleibe noch ein paar Tage.
+    why:
+      en: "A few is *ein paar* with a small *p*. *Ein Paar* with a capital is a pair, such as *ein Paar Schuhe*."
+      fa: "«چند تا» *ein paar* با حرف کوچک است. *ein Paar* با حرف بزرگ یعنی «یک جفت»، مانند *ein Paar Schuhe*."
+      de: "*Ein paar* (etwa zwei oder drei) schreibt man klein. *Ein Paar* mit großem *P* sind zwei Dinge, die zusammengehören: *ein Paar Schuhe*."
+  - wrong: Manche Leute isst kein Fleisch.
+    right: Manche Leute essen kein Fleisch.
+    why:
+      en: "*Manche Leute* is plural, so the verb is plural: *essen*."
+      fa: "*manche Leute* جمع است، پس فعل هم جمع می‌آید: *essen*."
+      de: "*Manche Leute* ist Plural. Darum steht das Verb im Plural: *essen*."
+  - wrong: Ich habe heute wenige Zeit.
+    right: Ich habe heute wenig Zeit.
+    why:
+      en: "*Zeit* is singular and cannot be counted, so *wenig* without an ending. *Wenige* goes with a plural."
+      fa: "*Zeit* مفرد و ناشمردنی است، پس *wenig* بدون پایانه می‌آید. *wenige* با اسم جمع می‌آید."
+      de: "*Zeit* ist Singular, man kann sie nicht zählen. Darum *wenig* ohne Endung. *Wenige* steht beim Plural."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich habe gestern mit ___ Kollegen gesprochen.
+    options: [einige, einigen, einiges]
+    answer: einigen
+    explanation:
+      en: "*Mit* takes the *Dativ*; in the plural that is *einigen*."
+      fa: "*mit* با حالت *Dativ* می‌آید و در جمع می‌شود *einigen*."
+      de: "Nach *mit* steht der Dativ. Im Plural heißt das *einigen*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir bleiben noch ___ Tage in Wien.
+    options: [ein Paar, einen paar, ein paar]
+    answer: ein paar
+    explanation:
+      en: "A few days is *ein paar Tage*, with a small *p* and no ending."
+      fa: "«چند روز» می‌شود *ein paar Tage*، با حرف کوچک و بدون پایانه."
+      de: "Zwei oder drei Tage: *ein paar Tage*, klein geschrieben und ohne Endung."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der Saal war fast leer. Nur ___ Leute sind gekommen.
+    options: [wenige, alle, viele]
+    answer: wenige
+    explanation:
+      en: "The hall was almost empty, so not many people came: *nur wenige Leute*."
+      fa: "سالن تقریباً خالی بود، پس آدم‌های زیادی نیامدند: *nur wenige Leute*."
+      de: "Der Saal war fast leer. Es sind also nicht viele gekommen: *nur wenige Leute*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ Leute mögen keine Katzen, andere lieben sie.
+    options: [Jeder, Manche, Mancher]
+    answer: Manche
+    explanation:
+      en: "*Leute* is plural, and *andere* shows that it is only a part: *manche Leute*."
+      fa: "*Leute* جمع است و *andere* نشان می‌دهد که فقط بخشی از مردم منظور است: *manche Leute*."
+      de: "*Leute* ist Plural, und *andere* zeigt: Es ist nur ein Teil. Darum *manche Leute*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Nach ___ Minuten war das Essen fertig.
+    options: [einem paar, ein paar, ein paaren]
+    answer: ein paar
+    explanation:
+      en: "*Ein paar* never changes, also after *nach* in the *Dativ*."
+      fa: "*ein paar* هیچ‌وقت تغییر نمی‌کند، پس از *nach* و در حالت *Dativ* هم."
+      de: "*Ein paar* ändert sich nie, auch nicht nach *nach* im Dativ."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options:
+      - Ich habe einige Freunden geholfen.
+      - Ich habe einigen Freunde geholfen.
+      - Ich habe einigen Freunden geholfen.
+    answer: Ich habe einigen Freunden geholfen.
+    explanation:
+      en: "*Helfen* takes the *Dativ*: *einigen*, and the noun takes *-n*: *Freunden*."
+      fa: "*helfen* با حالت *Dativ* می‌آید: *einigen*، و اسم هم *-n* می‌گیرد: *Freunden*."
+      de: "*Helfen* hat den Dativ: *einigen*, und das Nomen bekommt *-n*: *Freunden*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Was bedeutet der Satz? Nur wenige Gäste sind gekommen."
+    options:
+      - Es sind sehr viele Gäste gekommen.
+      - Es sind nicht viele Gäste gekommen.
+      - Es ist kein Gast gekommen.
+    answer: Es sind nicht viele Gäste gekommen.
+    explanation:
+      en: "*Wenige* means not many; some guests came, but fewer than expected."
+      fa: "*wenige* یعنی «نه زیاد»؛ چند مهمان آمدند، ولی کمتر از انتظار."
+      de: "*Wenige* heißt: nicht viele. Einige Gäste sind da, aber nicht so viele."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Was bedeutet der Satz? Manche Kollegen arbeiten auch am Samstag."
+    options:
+      - Ein Teil der Kollegen arbeitet auch am Samstag.
+      - Alle Kollegen arbeiten auch am Samstag.
+      - Kein Kollege arbeitet am Samstag.
+    answer: Ein Teil der Kollegen arbeitet auch am Samstag.
+    explanation:
+      en: "*Manche* means some, but not all."
+      fa: "*manche* یعنی «برخی، نه همه»."
+      de: "*Manche* heißt: nicht alle, nur ein Teil."
+  - id: true-1
+    type: true-false
+    prompt: Ich war gestern mit ein paar Freunden im Kino.
+    answer: true
+    explanation:
+      en: "*Ein paar* stays as it is, and *Freunden* has the *-n* of the *Dativ*. The sentence is correct."
+      fa: "*ein paar* تغییر نمی‌کند و *Freunden* پایانهٔ *-n* حالت *Dativ* را دارد. جمله درست است."
+      de: "*Ein paar* bleibt gleich, und *Freunden* hat das *-n* vom Dativ. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Einige Kinder spielt im Garten.
+    answer: false
+    explanation:
+      en: "*Einige Kinder* is plural, so the verb is plural: *Einige Kinder spielen im Garten.*"
+      fa: "*einige Kinder* جمع است، پس فعل هم جمع می‌آید: *Einige Kinder spielen im Garten.*"
+      de: "*Einige Kinder* ist Plural. Darum: *Einige Kinder spielen im Garten.*"
+  - id: true-3
+    type: true-false
+    prompt: Seit einigen Wochen lerne ich jeden Tag Deutsch.
+    answer: true
+    explanation:
+      en: "*Seit* takes the *Dativ*: *seit einigen Wochen*. The sentence is correct."
+      fa: "*seit* با حالت *Dativ* می‌آید: *seit einigen Wochen*. جمله درست است."
+      de: "Nach *seit* steht der Dativ: *seit einigen Wochen*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich habe ___ (einige) Nachbarn zum Essen eingeladen.
+    answers: [einige]
+    explanation:
+      en: "*Einladen* takes the *Akkusativ*; in the plural it stays *einige*."
+      fa: "*einladen* با حالت *Akkusativ* می‌آید و در جمع همان *einige* می‌ماند."
+      de: "*Einladen* hat den Akkusativ. Im Plural bleibt es *einige*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir haben mit ___ (manche) Gästen lange gesprochen.
+    answers: [manchen]
+    explanation:
+      en: "*Mit* takes the *Dativ*: *manchen Gästen*."
+      fa: "*mit* با حالت *Dativ* می‌آید: *manchen Gästen*."
+      de: "Nach *mit* steht der Dativ: *manchen Gästen*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Das Paket kommt in ___ (wenige) Tagen.
+    answers: [wenigen]
+    explanation:
+      en: "*In* for a time takes the *Dativ*: *in wenigen Tagen*."
+      fa: "*in* برای زمان با حالت *Dativ* می‌آید: *in wenigen Tagen*."
+      de: "*In* für eine Zeit hat den Dativ: *in wenigen Tagen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Nach ___ (ein paar) Minuten kam endlich der Bus.
+    answers: [ein paar]
+    explanation:
+      en: "*Ein paar* never changes, also in the *Dativ*: *nach ein paar Minuten*."
+      fa: "*ein paar* هیچ‌وقت تغییر نمی‌کند، در حالت *Dativ* هم: *nach ein paar Minuten*."
+      de: "*Ein paar* ändert sich nie, auch nicht im Dativ: *nach ein paar Minuten*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Dativ: einige Kinder"
+    answers: [einigen Kindern]
+    explanation:
+      en: "In the *Dativ* plural both change: *einigen* and the noun with *-n*: *Kindern*."
+      fa: "در حالت *Dativ* جمع هر دو تغییر می‌کنند: *einigen* و اسم با *-n*: *Kindern*."
+      de: "Im Dativ Plural ändern sich beide: *einigen* und das Nomen mit *-n*: *Kindern*."
+  - id: error-1
+    type: find-error
+    prompt: Seit einige Tagen regnet es ohne Pause.
+    answer: einige
+    explanation:
+      en: "*Seit* takes the *Dativ*: *seit einigen Tagen*."
+      fa: "*seit* با حالت *Dativ* می‌آید: *seit einigen Tagen*."
+      de: "Nach *seit* steht der Dativ: *seit einigen Tagen*."
+  - id: error-2
+    type: find-error
+    prompt: Ich bleibe noch ein Paar Tage bei meiner Schwester.
+    answer: Paar
+    explanation:
+      en: "A few days is *ein paar Tage*, with a small *p*. *Ein Paar* is a pair."
+      fa: "«چند روز» می‌شود *ein paar Tage*، با حرف کوچک. *ein Paar* یعنی «یک جفت»."
+      de: "Zwei oder drei Tage: *ein paar Tage*, klein. *Ein Paar* sind zwei Dinge, die zusammengehören."
+  - id: error-3
+    type: find-error
+    prompt: Manche Leute trinkt abends keinen Kaffee.
+    answer: trinkt
+    explanation:
+      en: "*Manche Leute* is plural, so the verb is plural: *trinken*."
+      fa: "*manche Leute* جمع است، پس فعل هم جمع می‌آید: *trinken*."
+      de: "*Manche Leute* ist Plural. Darum steht das Verb im Plural: *trinken*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ich, habe, nur wenige Fehler, gemacht]
+      - [nur wenige Fehler, habe, ich, gemacht]
+    explanation:
+      en: "The verb *habe* comes second and *gemacht* last. *Nur wenige Fehler* can stand first or after *ich habe*."
+      fa: "فعل *habe* در جایگاه دوم و *gemacht* در پایان جمله می‌آید. *nur wenige Fehler* می‌تواند در آغاز یا پس از *ich habe* باشد."
+      de: "*Habe* steht an Position 2, *gemacht* am Ende. *Nur wenige Fehler* kann am Anfang oder nach *ich habe* stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [ein paar Tage, zwei oder drei Tage]
+      - [wenige Tage, nicht viele Tage]
+      - [manche Tage, nicht alle Tage]
+    explanation:
+      en: "*Ein paar* is about two or three, *wenige* is not many, *manche* is not all."
+      fa: "*ein paar* یعنی حدود دو سه تا، *wenige* یعنی «نه زیاد» و *manche* یعنی «نه همه»."
+      de: "*Ein paar*: etwa zwei oder drei. *Wenige*: nicht viele. *Manche*: nicht alle."
+
+review:
+  reviewer: an independent AI agent (a fresh Claude Opus 5.5 subagent, blind pass
+    on the review sheet only; not a person)
+  date: 2026-11-28
+  pool: 73b80c1c0b8f89ca
