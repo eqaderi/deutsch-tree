@@ -4,7 +4,7 @@ kind: phrases
 level: B1
 chapter: b1-phrases-writing
 order: 3
-status: coming-soon
+status: published
 prerequisites: [grammar-159, grammar-162]
 title:
   en: "Starting and ending a forum post"
@@ -299,3 +299,8 @@ questions:
       en: In the indirect question the verb goes to the end, and with *ihr* it is *denkt*.
       fa: در پرسش غیرمستقیم فعل به پایان جمله می‌رود و با *ihr* شکل *denkt* می‌آید.
       de: In der indirekten Frage steht das Verb am Ende. Bei *ihr* heißt es *denkt*.
+
+review:
+  reviewer: an independent AI agent (two fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: 8452a8fe6d543bdb

@@ -4,7 +4,7 @@ kind: phrases
 level: B1
 chapter: b1-phrases-writing
 order: 5
-status: coming-soon
+status: published
 prerequisites: [phrases-appointments, phrases-email-formal-greetings, grammar-135]
 title:
   en: "Cancelling or moving an appointment"
@@ -164,6 +164,7 @@ questions:
     answers:
       - [ich, könnte, auch am Donnerstag, kommen]
       - [auch am Donnerstag, könnte, ich, kommen]
+      - [kommen, könnte, ich, auch am Donnerstag]
     explanation:
       en: "*könnte* is in position 2 and *kommen* goes to the end: *Ich könnte auch am Donnerstag kommen.*"
       fa: "*könnte* در جایگاه دوم است و *kommen* در پایان جمله: *Ich könnte auch am Donnerstag kommen.*"
@@ -274,12 +275,12 @@ questions:
 
   - id: q18
     type: typed-gap-fill
-    prompt: Bitte geben Sie mir ___, ob das möglich ist.
-    answers: [Bescheid, Nachricht, Auskunft]
+    prompt: Bitte ___ (geben) Sie mir Bescheid, ob das möglich ist.
+    answers: [geben]
     explanation:
-      en: The phrase is *Bitte geben Sie mir Bescheid, ob …*
-      fa: عبارت *Bitte geben Sie mir Bescheid, ob …* است.
-      de: Der Satz heißt *Bitte geben Sie mir Bescheid, ob …*
+      en: The phrase is *Bitte geben Sie mir Bescheid, ob …* With *Sie* the imperative is *geben Sie*, with the verb first.
+      fa: عبارت *Bitte geben Sie mir Bescheid, ob …* است. امر با *Sie* به‌صورت *geben Sie* است و فعل در آغاز می‌آید.
+      de: Der Satz heißt *Bitte geben Sie mir Bescheid, ob …* Der Imperativ mit *Sie* ist *geben Sie*, das Verb steht vorne.
 
   - id: q19
     type: typed-gap-fill
@@ -298,3 +299,8 @@ questions:
       en: The phrase is *Vielen Dank für Ihr Verständnis.*
       fa: عبارت *Vielen Dank für Ihr Verständnis.* است.
       de: Der Satz heißt *Vielen Dank für Ihr Verständnis.*
+
+review:
+  reviewer: an independent AI agent (two fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: 5781af830ff8c988

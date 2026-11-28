@@ -4,7 +4,7 @@ kind: phrases
 level: B1
 chapter: b1-phrases-writing
 order: 2
-status: coming-soon
+status: published
 prerequisites: [grammar-020, grammar-023, grammar-164]
 title:
   en: "Telling what happened and how it was"
@@ -176,6 +176,7 @@ questions:
       - [das, werde, ich, nie, vergessen]
       - [ich, werde, das, nie, vergessen]
       - [nie, werde, ich, das, vergessen]
+      - [vergessen, werde, ich, das, nie]
     explanation:
       en: "*werde* is in position 2 and *vergessen* goes to the end: *Das werde ich nie vergessen.*"
       fa: "*werde* در جایگاه دوم است و *vergessen* در پایان جمله: *Das werde ich nie vergessen.*"
@@ -310,3 +311,8 @@ questions:
       en: The phrase is *Nicht so schön war, dass …*, with the verb at the end.
       fa: عبارت *Nicht so schön war, dass …* است و فعل در پایان جمله می‌آید.
       de: Der Satz heißt *Nicht so schön war, dass …*, das Verb steht am Ende.
+
+review:
+  reviewer: an independent AI agent (a fresh subagent, blind to the key)
+  date: 2026-11-28
+  pool: 93c057cb98b5c12b

@@ -4,7 +4,7 @@ kind: phrases
 level: B1
 chapter: b1-phrases-writing
 order: 4
-status: coming-soon
+status: published
 prerequisites: [grammar-150, grammar-155]
 title:
   en: "Ordering and linking your points"
@@ -299,3 +299,8 @@ questions:
       en: The usual phrase is *Zum Schluss …*
       fa: عبارت معمول *Zum Schluss …* است.
       de: Der normale Ausdruck heißt *Zum Schluss …*
+
+review:
+  reviewer: an independent AI agent (two fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: 7034339ad05996b2

@@ -4,7 +4,7 @@ kind: phrases
 level: B1
 chapter: b1-phrases-writing
 order: 1
-status: coming-soon
+status: published
 prerequisites: [phrases-email-friend-greetings, phrases-email-formal-greetings, grammar-158]
 title:
   en: "First and last sentences of an e-mail"
@@ -309,3 +309,8 @@ questions:
       en: The offer is *Bei Fragen können Sie mich gern anrufen.* *könnten* is a little more polite and also right.
       fa: این پیشنهاد *Bei Fragen können Sie mich gern anrufen.* است. *könnten* کمی مؤدبانه‌تر است و آن هم درست است.
       de: Das Angebot heißt *Bei Fragen können Sie mich gern anrufen.* *könnten* ist etwas höflicher und auch richtig.
+
+review:
+  reviewer: an independent AI agent (a fresh subagent, blind to the key)
+  date: 2026-11-28
+  pool: 99221d9c0a0fdbac
