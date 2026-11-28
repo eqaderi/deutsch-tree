@@ -4,10 +4,272 @@ kind: grammar
 level: A1
 chapter: a1-more-articles
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-141]
 title:
   en: "*Frageartikel* *welch-*"
-  fa: "صفت پرسشی *welch-*"
+  fa: "حرف تعریف پرسشی *welch-*"
   de: "Frageartikel *welch-*"
+
+explanations:
+  en:
+    rule: >
+      *Welch-* (which) asks for one out of several. It stands before a noun
+      and has the endings of *dieser*: *welcher* (*der*), *welche* (*die*),
+      *welches* (*das*), and *welche* for the plural. In the *Akkusativ*
+      only the masculine changes: *welchen*. The question word and its noun
+      come first, then the verb: *Welchen Film meinst du?* The answer often
+      uses *dieser* or *der*: *Diesen hier.*
+  fa:
+    rule: >
+      *welch-* (کدام) میان چند چیز یکی را می‌پرسد. این واژه پیش از اسم می‌آید
+      و پایانه‌هایش همان پایانه‌های *dieser* است: *welcher* (*der*)،
+      *welche* (*die*)، *welches* (*das*) و برای جمع *welche*. در حالت
+      *Akkusativ* (حالت مفعولی) فقط مذکر تغییر می‌کند: *welchen*. واژهٔ پرسشی
+      با اسمش در آغاز جمله می‌آید و فعل پس از آن: *Welchen Film meinst du?*
+      در پاسخ اغلب *dieser* یا *der* به کار می‌رود: *Diesen hier.* «کدام» در
+      فارسی تغییر نمی‌کند، ولی *welch-* در آلمانی پایانه می‌گیرد.
+  de:
+    rule: >
+      Mit *welch-* fragt man nach einer Sache aus einer Gruppe. *Welch-* steht
+      vor einem Nomen und hat die Endungen von *dieser*: *welcher* (*der*),
+      *welche* (*die*), *welches* (*das*) und im Plural *welche*. Im
+      Akkusativ ändert sich nur das Maskulinum: *welchen*. Das Fragewort mit
+      dem Nomen steht am Anfang, dann kommt das Verb: *Welchen Film meinst
+      du?*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *welch-*", fa: "با *welch-*", de: "Mit *welch-*" }
+    - { en: "*Akkusativ* with *welch-*", fa: "حالت *Akkusativ* با *welch-*", de: "Akkusativ mit *welch-*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Film, welcher Film, welchen Film, Welchen Film meinst du?]
+    - [die Farbe, welche Farbe, welche Farbe, Welche Farbe magst du?]
+    - [das Buch, welches Buch, welches Buch, Welches Buch liest du?]
+    - [die Schuhe (Plural), welche Schuhe, welche Schuhe, Welche Schuhe kaufst du?]
+
+examples:
+  - de: Welchen Film meinst du?
+    en: Which film do you mean?
+    fa: منظورت کدام فیلم است؟
+  - de: Welche Farbe hat dein Auto?
+    en: What colour is your car?
+    fa: ماشینت چه رنگی است؟
+  - de: Welches Kleid gefällt dir?
+    en: Which dress do you like?
+    fa: از کدام لباس خوشت می‌آید؟
+  - de: Welcher Bus fährt zum Bahnhof?
+    en: Which bus goes to the station?
+    fa: کدام اتوبوس به ایستگاه قطار می‌رود؟
+  - de: Welche Sprachen sprechen Sie?
+    en: Which languages do you speak?
+    fa: به چه زبان‌هایی صحبت می‌کنید؟
+  - de: Welchen Kuchen möchtest du? – Den mit Äpfeln.
+    en: Which cake would you like? – The one with apples.
+    fa: کدام کیک را می‌خواهی؟ – کیک سیب را.
+  - de: Welches Zimmer nehmen wir?
+    en: Which room shall we take?
+    fa: کدام اتاق را بگیریم؟
+  - de: Welcher Tag ist heute?
+    en: What day is it today?
+    fa: امروز چه روزی است؟
+
+mistakes:
+  - wrong: Welcher Film siehst du?
+    right: Welchen Film siehst du?
+    why:
+      en: "The film is the object of *sehen*, so the *Akkusativ*: *welchen*, like *den*."
+      fa: "فیلم مفعول *sehen* است، پس در حالت *Akkusativ* می‌آید: *welchen*، مانند *den*."
+      de: "Der Film ist das Objekt von *sehen*. Darum Akkusativ: *welchen*, wie *den*."
+  - wrong: Welche Buch liest du?
+    right: Welches Buch liest du?
+    why:
+      en: "*Buch* is a *das* noun, so *welches*: it ends in *-s*, like *das*."
+      fa: "*Buch* اسم خنثی (*das*) است، پس *welches* می‌آید که مانند *das* به *-s* ختم می‌شود."
+      de: "*Buch* hat den Artikel *das*. Darum *welches*, mit *-s* wie *das*."
+  - wrong: Welchen Film du meinst?
+    right: Welchen Film meinst du?
+    why:
+      en: "After *welch-* and its noun comes the verb, in position 2, and then the subject."
+      fa: "پس از *welch-* و اسمش، فعل در جایگاه دوم می‌آید و فاعل پس از آن."
+      de: "Nach *welch-* und dem Nomen kommt das Verb auf Position 2, dann das Subjekt."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ Farbe magst du?
+    options: [Welche, Welcher, Welches]
+    answer: Welche
+    explanation:
+      en: "*Farbe* is feminine (*die*): *welche Farbe*."
+      fa: "*Farbe* اسم مؤنث (*die*) است: *welche Farbe*."
+      de: "*Farbe* ist feminin (*die*): *welche Farbe*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ Buch liest du?
+    options: [Welches, Welche, Welchen]
+    answer: Welches
+    explanation:
+      en: "*Buch* is neuter (*das*): *welches Buch*."
+      fa: "*Buch* اسم خنثی (*das*) است: *welches Buch*."
+      de: "*Buch* ist neutral (*das*): *welches Buch*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ Bus fährt zum Bahnhof?
+    options: [Welcher, Welchen, Welches]
+    answer: Welcher
+    explanation:
+      en: "*Bus* is masculine and the subject (*Nominativ*): *welcher Bus*."
+      fa: "*Bus* اسم مذکر و فاعل جمله است (حالت *Nominativ*): *welcher Bus*."
+      de: "*Bus* ist maskulin und das Subjekt (Nominativ): *welcher Bus*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ Film möchtest du sehen?
+    options: [Welchen, Welcher, Welches]
+    answer: Welchen
+    explanation:
+      en: "*Film* is masculine and the object (*Akkusativ*): *welchen Film*."
+      fa: "*Film* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *welchen Film*."
+      de: "*Film* ist maskulin und das Objekt (Akkusativ): *welchen Film*."
+  - id: gap-5
+    type: gap-fill
+    prompt: ___ Schuhe kaufst du?
+    options: [Welche, Welcher, Welches]
+    answer: Welche
+    explanation:
+      en: "*Schuhe* is a plural (*die*): *welche Schuhe*."
+      fa: "*Schuhe* جمع (*die*) است: *welche Schuhe*."
+      de: "*Schuhe* ist Plural (*die*): *welche Schuhe*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options: [Welchen Pullover nimmst du?, Welcher Pullover nimmst du?, Welches Pullover nimmst du?]
+    answer: Welchen Pullover nimmst du?
+    explanation:
+      en: "*Pullover* is masculine and the object of *nehmen* (*Akkusativ*): *welchen Pullover*."
+      fa: "*Pullover* اسم مذکر و مفعول *nehmen* است (حالت *Akkusativ*): *welchen Pullover*."
+      de: "*Pullover* ist maskulin und das Objekt von *nehmen* (Akkusativ): *welchen Pullover*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Welchen Kuchen möchtest du? – ___ mit Äpfeln.
+    options: [Den, Der, Das]
+    answer: Den
+    explanation:
+      en: "The answer keeps the case of the question: *welchen Kuchen* → *den* (*Akkusativ*)."
+      fa: "پاسخ حالت پرسش را نگه می‌دارد: *welchen Kuchen*، پس *den* (حالت *Akkusativ*)."
+      de: "Die Antwort hat den Kasus der Frage: *welchen Kuchen* → *den* (Akkusativ)."
+  - id: true-1
+    type: true-false
+    prompt: Welches Zimmer nehmen wir?
+    answer: true
+    explanation:
+      en: "*Zimmer* is neuter (*das*): *welches Zimmer*, also in the *Akkusativ*. The sentence is correct."
+      fa: "*Zimmer* اسم خنثی (*das*) است: *welches Zimmer*، در حالت *Akkusativ* هم. جمله درست است."
+      de: "*Zimmer* ist neutral (*das*): *welches Zimmer*, auch im Akkusativ. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Welcher Tag ist heute?
+    answer: true
+    explanation:
+      en: "*Tag* is masculine and the subject: *welcher Tag*. The sentence is correct."
+      fa: "*Tag* اسم مذکر و فاعل جمله است: *welcher Tag*. جمله درست است."
+      de: "*Tag* ist maskulin und das Subjekt: *welcher Tag*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Welchen Mantel kaufst du?
+    answer: true
+    explanation:
+      en: "*Mantel* is masculine and the object (*Akkusativ*): *welchen Mantel*. The sentence is correct."
+      fa: "*Mantel* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *welchen Mantel*. جمله درست است."
+      de: "*Mantel* ist maskulin und das Objekt (Akkusativ): *welchen Mantel*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Welche Auto gehört dir?
+    answer: false
+    explanation:
+      en: "*Auto* is neuter (*das*): *Welches Auto gehört dir?*"
+      fa: "*Auto* اسم خنثی (*das*) است: *Welches Auto gehört dir?*"
+      de: "*Auto* ist neutral (*das*): *Welches Auto gehört dir?*"
+  - id: true-5
+    type: true-false
+    prompt: Welchen Film du siehst?
+    answer: false
+    explanation:
+      en: "The verb comes after *welch-* and its noun: *Welchen Film siehst du?*"
+      fa: "فعل بلافاصله پس از *welch-* و اسمش می‌آید: *Welchen Film siehst du?*"
+      de: "Das Verb kommt direkt nach *welch-* und dem Nomen: *Welchen Film siehst du?*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: ___ (welch-) Tee trinkst du?
+    answers: [Welchen]
+    explanation:
+      en: "*Tee* is masculine and the object (*Akkusativ*): *welchen Tee*."
+      fa: "*Tee* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *welchen Tee*."
+      de: "*Tee* ist maskulin und das Objekt (Akkusativ): *welchen Tee*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (welch-) Sprache sprichst du?
+    answers: [Welche]
+    explanation:
+      en: "*Sprache* is feminine (*die*): *welche Sprache*."
+      fa: "*Sprache* اسم مؤنث (*die*) است: *welche Sprache*."
+      de: "*Sprache* ist feminin (*die*): *welche Sprache*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (welch-) Fahrrad gehört dir?
+    answers: [Welches]
+    explanation:
+      en: "*Fahrrad* is neuter (*das*) and the subject: *welches Fahrrad*."
+      fa: "*Fahrrad* اسم خنثی (*das*) و فاعل جمله است: *welches Fahrrad*."
+      de: "*Fahrrad* ist neutral (*das*) und das Subjekt: *welches Fahrrad*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: ___ (welch-) Zug fährt nach München?
+    answers: [Welcher]
+    explanation:
+      en: "*Zug* is masculine and the subject (*Nominativ*): *welcher Zug*."
+      fa: "*Zug* اسم مذکر و فاعل جمله است (حالت *Nominativ*): *welcher Zug*."
+      de: "*Zug* ist maskulin und das Subjekt (Nominativ): *welcher Zug*."
+  - id: error-1
+    type: find-error
+    prompt: Welcher Rock kaufst du?
+    answer: Welcher
+    explanation:
+      en: "*Rock* is masculine and the object (*Akkusativ*): *Welchen Rock kaufst du?*"
+      fa: "*Rock* اسم مذکر و مفعول جمله است (حالت *Akkusativ*): *Welchen Rock kaufst du?*"
+      de: "*Rock* ist maskulin und das Objekt (Akkusativ): *Welchen Rock kaufst du?*"
+  - id: error-2
+    type: find-error
+    prompt: Welches Jacke ist neu?
+    answer: Welches
+    explanation:
+      en: "*Jacke* is feminine (*die*): *Welche Jacke ist neu?*"
+      fa: "*Jacke* اسم مؤنث (*die*) است: *Welche Jacke ist neu?*"
+      de: "*Jacke* ist feminin (*die*): *Welche Jacke ist neu?*"
+  - id: order-1
+    type: word-order
+    answers:
+      - [welchen Film, siehst, du, heute]
+    end: "?"
+    explanation:
+      en: "*Welchen Film* comes first, the verb second, then the subject: *Welchen Film siehst du heute?*"
+      fa: "*welchen Film* در آغاز می‌آید، فعل در جایگاه دوم و سپس فاعل: *Welchen Film siehst du heute?*"
+      de: "*Welchen Film* steht am Anfang, das Verb auf Position 2, dann das Subjekt: *Welchen Film siehst du heute?*"
+  - id: match-1
+    type: matching
+    answer:
+      - [___ Mann ist das?, Welcher]
+      - [___ Frau ist das?, Welche]
+      - [___ Kind ist das?, Welches]
+    explanation:
+      en: "*Welch-* takes the ending of the article: *der Mann* → *welcher*, *die Frau* → *welche*, *das Kind* → *welches*."
+      fa: "*welch-* پایانهٔ حرف تعریف را می‌گیرد: *der Mann*، پس *welcher*؛ *die Frau*، پس *welche*؛ *das Kind*، پس *welches*."
+      de: "*Welch-* hat die Endung vom Artikel: *der Mann* → *welcher*, *die Frau* → *welche*, *das Kind* → *welches*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: b0b1c704445fdf05

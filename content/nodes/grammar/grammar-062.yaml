@@ -4,10 +4,354 @@ kind: grammar
 level: A1
 chapter: a1-cases
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-061, grammar-076]
 title:
   en: "*Akkusativ*"
   fa: "حالت مفعولی (*Akkusativ*)"
   de: "Akkusativ"
+
+explanations:
+  en:
+    rule: >
+      The *Akkusativ* is the case of the direct object: the person or thing
+      that the action is done to, after verbs such as *haben*, *brauchen*,
+      *kaufen*, *nehmen* and *sehen*. Ask *Was?* (what?) or *Wen?* (whom?).
+      Only masculine nouns change: *der* becomes *den*, *ein* becomes *einen*
+      and *kein* becomes *keinen*. Feminine, neuter and plural nouns keep their
+      *Nominativ* form. *Es gibt* (there is) takes the *Akkusativ* too: *Es
+      gibt einen Park.*
+  fa:
+    rule: >
+      حالت *Akkusativ* (حالت مفعولی) حالت مفعول مستقیم است: کسی یا چیزی که
+      کار بر آن انجام می‌شود، پس از فعل‌هایی مانند *haben*، *brauchen*،
+      *kaufen*، *nehmen* و *sehen*. برای پیدا کردن آن می‌پرسیم *Was?* (چه
+      چیزی را؟) یا *Wen?* (چه کسی را؟). در این حالت فقط اسم مذکر تغییر
+      می‌کند: *der* به *den*، *ein* به *einen* و *kein* به *keinen* تبدیل
+      می‌شود. اسم‌های مؤنث، خنثی و جمع همان شکل حالت *Nominativ* را دارند.
+      در فارسی مفعول را اغلب با «را» می‌شناسیم؛ در آلمانی حرف تعریف این نقش
+      را نشان می‌دهد. پس از *es gibt* (هست، وجود دارد) نیز حالت *Akkusativ*
+      می‌آید: *Es gibt einen Park.*
+  de:
+    rule: >
+      Der Akkusativ ist der Fall für das Objekt nach Verben wie *haben*,
+      *brauchen*, *kaufen*, *nehmen* und *sehen*. Man fragt *Was?* oder
+      *Wen?*. Nur maskuline Nomen ändern sich: *der* wird zu *den*, *ein* wird
+      zu *einen*, *kein* wird zu *keinen*. Feminine und neutrale Nomen und der
+      Plural bleiben wie im Nominativ. Auch nach *es gibt* steht der
+      Akkusativ: *Es gibt einen Park.*
+
+# The same two nouns in two orders: the article, not the place, shows who
+# does what. German only, so no labels.
+diagrams:
+  - caption:
+      en: >
+        *Der Mann* is the subject (*Nominativ*) and *den Tisch* the object
+        (*Akkusativ*), in either order. The article shows who does what, not
+        the place in the sentence.
+      fa: >
+        *der Mann* فاعل است (حالت *Nominativ*) و *den Tisch* مفعول (حالت
+        *Akkusativ*)، به هر ترتیبی که بیایند. نقش هر اسم را حرف تعریفش نشان
+        می‌دهد، نه جایش در جمله.
+      de: >
+        *Der Mann* ist das Subjekt (Nominativ), *den Tisch* ist das Objekt
+        (Akkusativ), in beiden Sätzen. Der Artikel zeigt, wer was macht, nicht
+        die Position im Satz.
+    svg: |
+      <svg viewBox="0 0 320 200">
+        <!-- subject first -->
+        <text class="note" x="58" y="16" text-anchor="middle">Wer?</text>
+        <text class="note" x="262" y="16" text-anchor="middle">Was?</text>
+        <rect class="surface" x="6" y="24" width="104" height="40"/>
+        <text class="label" x="58" y="50" text-anchor="middle">Der Mann</text>
+        <text class="label" x="160" y="50" text-anchor="middle">kauft</text>
+        <rect class="surface" x="210" y="24" width="104" height="40"/>
+        <text class="label" x="262" y="50" text-anchor="middle">den Tisch.</text>
+        <text class="note" x="58" y="84" text-anchor="middle">Nominativ</text>
+        <text class="note" x="262" y="84" text-anchor="middle">Akkusativ</text>
+        <!-- object first -->
+        <rect class="surface" x="6" y="124" width="104" height="40"/>
+        <text class="label" x="58" y="150" text-anchor="middle">Den Tisch</text>
+        <text class="label" x="160" y="150" text-anchor="middle">kauft</text>
+        <rect class="surface" x="210" y="124" width="104" height="40"/>
+        <text class="label" x="262" y="150" text-anchor="middle">der Mann.</text>
+        <text class="note" x="58" y="184" text-anchor="middle">Akkusativ</text>
+        <text class="note" x="262" y="184" text-anchor="middle">Nominativ</text>
+      </svg>
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Akkusativ*", fa: "حالت *Akkusativ*", de: Akkusativ }
+    - { en: "With *ein* / *kein*", fa: "با *ein* / *kein*", de: "Mit *ein* / *kein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Tee, den Tee, einen / keinen Tee, Ich nehme einen Tee.]
+    - [die Suppe, die Suppe, eine / keine Suppe, Ich esse eine Suppe.]
+    - [das Brot, das Brot, ein / kein Brot, Ich kaufe ein Brot.]
+    - [die Äpfel (Plural), die Äpfel, – / keine Äpfel, Wir haben keine Äpfel.]
+
+examples:
+  - de: Ich nehme einen Tee.
+    en: I'll have a tea.
+    fa: من یک چای می‌گیرم.
+  - de: Wir brauchen einen Tisch.
+    en: We need a table.
+    fa: ما یک میز لازم داریم.
+  - de: Ich sehe den Bus.
+    en: I can see the bus.
+    fa: اتوبوس را می‌بینم.
+  - de: Hast du einen Stift?
+    en: Do you have a pen?
+    fa: خودکار داری؟
+  - de: Er kauft eine Zeitung.
+    en: He is buying a newspaper.
+    fa: او یک روزنامه می‌خرد.
+  - de: Wir haben ein Auto.
+    en: We have a car.
+    fa: ما ماشین داریم.
+  - de: Ich habe keinen Hunger.
+    en: I'm not hungry.
+    fa: گرسنه نیستم.
+  - de: Hier gibt es einen Park.
+    en: There is a park here.
+    fa: این‌جا یک پارک هست.
+  - de: Den Film kenne ich schon.
+    en: I already know that film.
+    fa: این فیلم را از قبل می‌شناسم.
+
+mistakes:
+  - wrong: Ich nehme ein Tee.
+    right: Ich nehme einen Tee.
+    why:
+      en: "*Tee* is masculine and the object, so *ein* becomes *einen*."
+      fa: "*Tee* اسم مذکر و مفعول جمله است، پس *ein* به *einen* تبدیل می‌شود."
+      de: "*Tee* ist maskulin und das Objekt. Darum wird *ein* zu *einen*."
+  - wrong: Ich habe einen Tasche.
+    right: Ich habe eine Tasche.
+    why:
+      en: "Only masculine nouns change in the *Akkusativ*. *Tasche* is feminine, so it stays *eine Tasche*."
+      fa: "در حالت *Akkusativ* فقط اسم مذکر تغییر می‌کند. *Tasche* اسم مؤنث است، پس همان *eine Tasche* می‌ماند."
+      de: "Im Akkusativ ändern sich nur maskuline Nomen. *Tasche* ist feminin: *eine Tasche*."
+  - wrong: Ich habe kein Hunger.
+    right: Ich habe keinen Hunger.
+    why:
+      en: "*Hunger* is masculine and the object: *keinen Hunger*."
+      fa: "*Hunger* اسم مذکر و مفعول جمله است: *keinen Hunger*."
+      de: "*Hunger* ist maskulin und das Objekt: *keinen Hunger*."
+  - wrong: Hier gibt es ein Supermarkt.
+    right: Hier gibt es einen Supermarkt.
+    why:
+      en: "*Es gibt* takes the *Akkusativ*. *Supermarkt* is masculine: *einen Supermarkt*."
+      fa: "پس از *es gibt* حالت *Akkusativ* می‌آید. *Supermarkt* اسم مذکر است: *einen Supermarkt*."
+      de: "Nach *es gibt* steht der Akkusativ. *Supermarkt* ist maskulin: *einen Supermarkt*."
+  - wrong: Der Film kenne ich schon.
+    right: Den Film kenne ich schon.
+    why:
+      en: "*Ich* is the subject. The film is the object, so it is *den Film*, also at the start of the sentence."
+      fa: "فاعل جمله *ich* است. فیلم مفعول است، پس *den Film* می‌آید، حتی در آغاز جمله."
+      de: "*Ich* ist das Subjekt. Der Film ist das Objekt: *den Film*, auch am Anfang vom Satz."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich nehme ___ Tee.
+    options: [einen, ein, eine]
+    answer: einen
+    explanation:
+      en: "*Tee* is masculine and the object: *einen Tee*."
+      fa: "*Tee* اسم مذکر و مفعول جمله است: *einen Tee*."
+      de: "*Tee* ist maskulin und das Objekt: *einen Tee*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir kaufen ___ Brot.
+    options: [ein, einen, eine]
+    answer: ein
+    explanation:
+      en: "*Brot* is neuter. Neuter nouns do not change in the *Akkusativ*: *ein Brot*."
+      fa: "*Brot* اسم خنثی است و اسم خنثی در حالت *Akkusativ* تغییر نمی‌کند: *ein Brot*."
+      de: "*Brot* ist neutral. Neutrale Nomen ändern sich im Akkusativ nicht: *ein Brot*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich sehe ___ Bus.
+    options: [den, der, dem]
+    answer: den
+    explanation:
+      en: "*Bus* is masculine and the object: *der* becomes *den*."
+      fa: "*Bus* اسم مذکر و مفعول جمله است: *der* به *den* تبدیل می‌شود."
+      de: "*Bus* ist maskulin und das Objekt: *der* wird zu *den*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Ich habe ___ Hunger.
+    options: [keinen, kein, keine]
+    answer: keinen
+    explanation:
+      en: "*Hunger* is masculine and the object: *keinen Hunger*."
+      fa: "*Hunger* اسم مذکر و مفعول جمله است: *keinen Hunger*."
+      de: "*Hunger* ist maskulin und das Objekt: *keinen Hunger*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Er trinkt ___ Milch.
+    options: [die, den, der]
+    answer: die
+    explanation:
+      en: "*Milch* is feminine. Feminine nouns do not change in the *Akkusativ*: *die Milch*."
+      fa: "*Milch* اسم مؤنث است و اسم مؤنث در حالت *Akkusativ* تغییر نمی‌کند: *die Milch*."
+      de: "*Milch* ist feminin. Feminine Nomen ändern sich im Akkusativ nicht: *die Milch*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Hier gibt es ___.
+    options: [einen Bahnhof, ein Bahnhof, einem Bahnhof]
+    answer: einen Bahnhof
+    explanation:
+      en: "*Es gibt* takes the *Akkusativ*. *Bahnhof* is masculine: *einen Bahnhof*."
+      fa: "پس از *es gibt* حالت *Akkusativ* می‌آید. *Bahnhof* اسم مذکر است: *einen Bahnhof*."
+      de: "Nach *es gibt* steht der Akkusativ. *Bahnhof* ist maskulin: *einen Bahnhof*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Den Kuchen isst das Kind. – Wer isst den Kuchen?
+    options: [das Kind, der Kuchen, den Kuchen]
+    answer: das Kind
+    explanation:
+      en: "*Den Kuchen* is the *Akkusativ*, so the cake is the object. The child is the subject, though it comes second."
+      fa: "*den Kuchen* در حالت *Akkusativ* است، پس کیک مفعول است. فاعل جمله بچه است، هرچند دیرتر آمده است."
+      de: "*Den Kuchen* ist Akkusativ, also das Objekt. Das Kind ist das Subjekt, auch wenn es später kommt."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich brauche ___.
+    options: [einen Computer, ein Computer, eine Computer]
+    answer: einen Computer
+    explanation:
+      en: "*Computer* is masculine and the object: *einen Computer*."
+      fa: "*Computer* اسم مذکر و مفعول جمله است: *einen Computer*."
+      de: "*Computer* ist maskulin und das Objekt: *einen Computer*."
+  - id: true-1
+    type: true-false
+    prompt: Ich habe einen Bruder.
+    answer: true
+    explanation:
+      en: "*Bruder* is masculine and the object: *einen Bruder*. The sentence is correct."
+      fa: "*Bruder* اسم مذکر و مفعول جمله است: *einen Bruder*. جمله درست است."
+      de: "*Bruder* ist maskulin und das Objekt: *einen Bruder*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir haben einen Auto.
+    answer: false
+    explanation:
+      en: "*Auto* is neuter, and neuter nouns do not change: *Wir haben ein Auto.*"
+      fa: "*Auto* اسم خنثی است و اسم خنثی تغییر نمی‌کند: *Wir haben ein Auto.*"
+      de: "*Auto* ist neutral. Neutrale Nomen ändern sich nicht: *Wir haben ein Auto.*"
+  - id: true-3
+    type: true-false
+    prompt: Sie kauft eine Jacke.
+    answer: true
+    explanation:
+      en: "*Jacke* is feminine and stays *eine Jacke* in the *Akkusativ*. The sentence is correct."
+      fa: "*Jacke* اسم مؤنث است و در حالت *Akkusativ* همان *eine Jacke* می‌ماند. جمله درست است."
+      de: "*Jacke* ist feminin und bleibt im Akkusativ *eine Jacke*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich trinke der Kaffee.
+    answer: false
+    explanation:
+      en: "*Kaffee* is masculine and the object: *Ich trinke den Kaffee.*"
+      fa: "*Kaffee* اسم مذکر و مفعول جمله است: *Ich trinke den Kaffee.*"
+      de: "*Kaffee* ist maskulin und das Objekt: *Ich trinke den Kaffee.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich nehme ___ (der) Salat.
+    answers: [den]
+    explanation:
+      en: "*Salat* is masculine: *der* becomes *den*."
+      fa: "*Salat* اسم مذکر است: *der* به *den* تبدیل می‌شود."
+      de: "*Salat* ist maskulin: *der* wird zu *den*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir suchen ___ (ein) Hotel.
+    answers: [ein]
+    explanation:
+      en: "*Hotel* is neuter, so *ein* does not change."
+      fa: "*Hotel* اسم خنثی است، پس *ein* تغییر نمی‌کند."
+      de: "*Hotel* ist neutral. *Ein* bleibt gleich."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Er hat ___ (kein) Bruder.
+    answers: [keinen]
+    explanation:
+      en: "*Bruder* is masculine: *kein* becomes *keinen*."
+      fa: "*Bruder* اسم مذکر است: *kein* به *keinen* تبدیل می‌شود."
+      de: "*Bruder* ist maskulin: *kein* wird zu *keinen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Siehst du ___ (die) Katze?
+    answers: [die]
+    explanation:
+      en: "*Katze* is feminine, so *die* does not change."
+      fa: "*Katze* اسم مؤنث است، پس *die* تغییر نمی‌کند."
+      de: "*Katze* ist feminin. *Die* bleibt gleich."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Akkusativ: der Hund"
+    answers: [den Hund]
+    explanation:
+      en: "*Hund* is masculine: *der Hund* becomes *den Hund*."
+      fa: "*Hund* اسم مذکر است: *der Hund* به *den Hund* تبدیل می‌شود."
+      de: "*Hund* ist maskulin: *der Hund* wird zu *den Hund*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Akkusativ: ein Apfel"
+    answers: [einen Apfel]
+    explanation:
+      en: "*Apfel* is masculine: *ein Apfel* becomes *einen Apfel*."
+      fa: "*Apfel* اسم مذکر است: *ein Apfel* به *einen Apfel* تبدیل می‌شود."
+      de: "*Apfel* ist maskulin: *ein Apfel* wird zu *einen Apfel*."
+  - id: error-1
+    type: find-error
+    prompt: Ich kaufe einen Tasche.
+    answer: einen
+    explanation:
+      en: "*Tasche* is feminine and does not change: *eine Tasche*."
+      fa: "*Tasche* اسم مؤنث است و تغییر نمی‌کند: *eine Tasche*."
+      de: "*Tasche* ist feminin und ändert sich nicht: *eine Tasche*."
+  - id: error-2
+    type: find-error
+    prompt: Hier gibt es kein Supermarkt.
+    answer: kein
+    explanation:
+      en: "After *es gibt* comes the *Akkusativ*. *Supermarkt* is masculine: *keinen Supermarkt*."
+      fa: "پس از *es gibt* حالت *Akkusativ* می‌آید. *Supermarkt* اسم مذکر است: *keinen Supermarkt*."
+      de: "Nach *es gibt* steht der Akkusativ. *Supermarkt* ist maskulin: *keinen Supermarkt*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ich, kaufe, einen Apfel]
+      - [einen Apfel, kaufe, ich]
+    explanation:
+      en: "The verb comes second. The object can also come first; *einen* still shows it is the object."
+      fa: "فعل در جایگاه دوم می‌آید. مفعول می‌تواند در آغاز جمله هم بیاید و *einen* باز هم نشان می‌دهد که مفعول است."
+      de: "Das Verb steht an Position 2. Das Objekt kann auch am Anfang stehen. *Einen* zeigt: Das ist das Objekt."
+  - id: order-2
+    type: word-order
+    answers:
+      - [hast, du, einen Stift]
+    end: "?"
+    explanation:
+      en: "In a yes/no question the verb comes first, then the subject, then the object."
+      fa: "در پرسشی که پاسخش «بله» یا «نه» است، اول فعل می‌آید، بعد فاعل و بعد مفعول."
+      de: "In einer Ja/Nein-Frage steht das Verb am Anfang, dann das Subjekt, dann das Objekt."
+  - id: match-1
+    type: matching
+    answer:
+      - [Ich nehme ___ Tee., einen]
+      - [Ich nehme ___ Suppe., eine]
+      - [Ich nehme ___ Brot., ein]
+    explanation:
+      en: "Only the masculine *Tee* changes: *einen Tee*. *Eine Suppe* and *ein Brot* stay as they are."
+      fa: "فقط *Tee* که مذکر است تغییر می‌کند: *einen Tee*. *eine Suppe* و *ein Brot* تغییر نمی‌کنند."
+      de: "Nur das maskuline *Tee* ändert sich: *einen Tee*. *Eine Suppe* und *ein Brot* bleiben gleich."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 12d0886c7e00084b

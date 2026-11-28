@@ -1,35 +1,303 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# The examples write each number as a word, as it is learned here.
 id: vocabulary-numbers-big
 kind: vocabulary
 level: A1
 chapter: a1-words-numbers-time
 order: 2
-status: coming-soon
+status: published
 title:
   en: "Big numbers, first and second"
   fa: "عددهای بزرگ، اول و دوم"
   de: "Große Zahlen, erste und zweite"
+attemptSize: 15
 words:
   - word: einundzwanzig
+    class: numeral
+    level: A1
+    meaning:
+      en: twenty-one
+      fa: بیست و یک
+    definition: zwanzig plus eins
+    example:
+      de: Meine Schwester wird morgen einundzwanzig.
+      en: My sister turns twenty-one tomorrow.
+      fa: خواهرم فردا بیست و یک‌ساله می‌شود.
+
   - word: dreißig
+    class: numeral
+    level: A1
+    meaning:
+      en: thirty
+      fa: سی
+    definition: drei mal zehn
+    example:
+      de: Der Zug hat dreißig Minuten Verspätung.
+      en: The train is thirty minutes late.
+      fa: قطار سی دقیقه تأخیر دارد.
+
   - word: vierzig
+    class: numeral
+    level: A1
+    meaning:
+      en: forty
+      fa: چهل
+    definition: vier mal zehn
+    example:
+      de: Mein Vater ist vierzig Jahre alt.
+      en: My father is forty years old.
+      fa: پدرم چهل سال دارد.
+
   - word: fünfzig
+    class: numeral
+    level: A1
+    meaning:
+      en: fifty
+      fa: پنجاه
+    definition: fünf mal zehn
+    example:
+      de: Das Ticket kostet fünfzig Euro.
+      en: The ticket costs fifty euros.
+      fa: بلیت پنجاه یورو است.
+
   - word: sechzig
+    class: numeral
+    level: A1
+    meaning:
+      en: sixty
+      fa: شصت
+    definition: so viele Minuten hat eine Stunde
+    example:
+      de: Meine Mutter ist sechzig und arbeitet noch.
+      en: My mother is sixty and still works.
+      fa: مادرم شصت سال دارد و هنوز کار می‌کند.
+
   - word: siebzig
+    class: numeral
+    level: A1
+    meaning:
+      en: seventy
+      fa: هفتاد
+    definition: sieben mal zehn
+    example:
+      de: Auf dieser Straße darf man nur siebzig fahren.
+      en: On this road you may only drive at seventy.
+      fa: در این جاده بیشتر از هفتاد کیلومتر در ساعت نمی‌توان رانندگی کرد.
+
   - word: achtzig
+    class: numeral
+    level: A1
+    meaning:
+      en: eighty
+      fa: هشتاد
+    definition: acht mal zehn
+    example:
+      de: Unsere Nachbarin ist jetzt achtzig.
+      en: Our neighbour is eighty now.
+      fa: همسایه‌مان حالا هشتاد سال دارد.
+
   - word: neunzig
+    class: numeral
+    level: A1
+    meaning:
+      en: ninety
+      fa: نود
+    definition: neun mal zehn
+    example:
+      de: Der Film dauert neunzig Minuten.
+      en: The film lasts ninety minutes.
+      fa: فیلم نود دقیقه طول می‌کشد.
+
   - word: hundert
+    class: numeral
+    level: A1
+    meaning:
+      en: a hundred, one hundred
+      fa: صد
+    definition: zehn mal zehn
+    example:
+      de: Das Hotel hat hundert Zimmer.
+      en: The hotel has a hundred rooms.
+      fa: این هتل صد اتاق دارد.
+    alsoAccepted: [einhundert]
+
   - word: hunderteins
+    class: numeral
+    level: A1
+    meaning:
+      en: a hundred and one
+      fa: صد و یک
+    definition: hundert plus eins
+    example:
+      de: Unser Zimmer hat die Nummer hunderteins.
+      en: Our room is number one hundred and one.
+      fa: شمارهٔ اتاق ما صد و یک است.
+    alsoAccepted: [einhunderteins, hundertundeins, einhundertundeins]
+
   - word: zweihundert
+    class: numeral
+    level: A1
+    meaning:
+      en: two hundred
+      fa: دویست
+    definition: zwei mal hundert
+    example:
+      de: Bis Berlin sind es zweihundert Kilometer.
+      en: It is two hundred kilometres to Berlin.
+      fa: تا برلین دویست کیلومتر راه است.
+
   - word: tausend
+    class: numeral
+    level: A1
+    meaning:
+      en: a thousand, one thousand
+      fa: هزار
+    definition: zehn mal hundert
+    example:
+      de: In unserem Dorf wohnen tausend Menschen.
+      en: A thousand people live in our village.
+      fa: در روستای ما هزار نفر زندگی می‌کنند.
+    alsoAccepted: [eintausend]
+
   - word: Million
+    class: noun
+    article: die
+    plural: Millionen
+    level: A1
+    meaning:
+      en: million
+      fa: میلیون
+    definition: tausend mal tausend
+    example:
+      de: Die Stadt hat fast eine Million Einwohner.
+      en: The city has almost a million inhabitants.
+      fa: این شهر نزدیک به یک میلیون نفر جمعیت دارد.
+
   - word: Milliarde
+    class: noun
+    article: die
+    plural: Milliarden
+    level: A1
+    meaning:
+      en: billion (a thousand million)
+      fa: میلیارد
+    definition: tausend Millionen
+    example:
+      de: Auf der Erde leben über acht Milliarden Menschen.
+      en: Over eight billion people live on Earth.
+      fa: بیش از هشت میلیارد نفر روی زمین زندگی می‌کنند.
+
+  # An ordinal is learned in its form after "der", "die" or "das"; the other forms are right too.
   - word: erste
+    class: numeral
+    level: A1
+    meaning:
+      en: first (1st)
+      fa: اول، نخستین
+    definition: die Nummer eins in einer Reihe
+    example:
+      de: Das ist die erste Straße links.
+      en: That is the first street on the left.
+      fa: این اولین خیابان سمت چپ است.
+    alsoAccepted: [erster, erstes, ersten]
+
   - word: zweite
+    class: numeral
+    level: A1
+    meaning:
+      en: second (2nd)
+      fa: دوم
+    definition: die Nummer zwei in einer Reihe
+    example:
+      de: Das ist schon die zweite Tasse Kaffee heute.
+      en: That is already the second cup of coffee today.
+      fa: این دومین فنجان قهوهٔ امروز است.
+    alsoAccepted: [zweiter, zweites, zweiten]
+
   - word: dritte
+    class: numeral
+    level: A1
+    meaning:
+      en: third
+      fa: سوم
+    definition: die Nummer drei in einer Reihe
+    example:
+      de: Der März ist der dritte Monat im Jahr.
+      en: March is the third month of the year.
+      fa: مارس سومین ماه سال است.
+    alsoAccepted: [dritter, drittes, dritten]
+
   - word: vierte
+    class: numeral
+    level: A1
+    meaning:
+      en: fourth
+      fa: چهارم
+    definition: die Nummer vier in einer Reihe
+    example:
+      de: Wir wohnen im vierten Stock.
+      en: We live on the fourth floor.
+      fa: ما در طبقهٔ چهارم زندگی می‌کنیم.
+    alsoAccepted: [vierter, viertes, vierten]
+
+  # "halb drei" is half past two: the half hour before three.
   - word: halb
+    class: adjective
+    level: A1
+    meaning:
+      en: half (as in half an hour)
+      fa: نیم (مثلاً نیم ساعت)
+    definition: so viel wie die Hälfte, zum Beispiel eine … Stunde, also dreißig Minuten
+    example:
+      de: Es ist halb drei.
+      en: It is half past two.
+      fa: ساعت دو و نیم است.
+    alsoAccepted: [halbe, halber, halbes, die Hälfte]
+
   - word: Viertel
+    class: noun
+    article: das
+    plural: Viertel
+    level: A1
+    meaning:
+      en: quarter
+      fa: یک‌چهارم، ربع
+    definition: ein Teil von vier gleichen Teilen
+    example:
+      de: Es ist Viertel nach acht.
+      en: It is a quarter past eight.
+      fa: ساعت هشت و ربع است.
+
   - word: Prozent
+    class: noun
+    article: das
+    plural: Prozente
+    level: A1
+    meaning:
+      en: percent
+      fa: درصد
+    definition: der hundertste Teil, zum Beispiel von einem Preis; man schreibt es %
+    example:
+      de: Heute ist alles zwanzig Prozent billiger.
+      en: Today everything is twenty percent cheaper.
+      fa: امروز همه‌چیز بیست درصد ارزان‌تر است.
+
   - word: circa
+    class: adverb
+    level: A1
+    meaning:
+      en: about, approximately
+      fa: تقریباً، حدود
+    definition: nicht genau gezählt, vielleicht ein bisschen mehr oder ein bisschen weniger
+    example:
+      de: Die Fahrt dauert circa zwei Stunden.
+      en: The journey takes about two hours.
+      fa: سفر حدود دو ساعت طول می‌کشد.
+    alsoAccepted: [zirka, ca., etwa, ungefähr, rund]
+
+review:
+  reviewer: independent AI agents (three fresh Claude Opus 5.5 subagents, sheet
+    only; 132, then 23, then 2 questions)
+  date: 2026-11-28
+  pool: f02916e7edb7dbfb

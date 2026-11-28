@@ -93,6 +93,8 @@ its first mention in a node.
 | subject / object | Subjekt / Objekt | فاعل / مفعول |
 | pronoun; personal, possessive, reflexive, relative | Pronomen | ضمیر؛ شخصی، ملکی، انعکاسی، موصولی |
 | possessive article (*mein*) | Possessivartikel | حرف تعریف ملکی |
+| demonstrative article (*dieser*) | Demonstrativartikel | حرف تعریف اشاره |
+| interrogative article (*welch-*) | Frageartikel | حرف تعریف پرسشی |
 | preposition | Präposition | حرف اضافه |
 | two-way preposition | Wechselpräposition | حرف اضافهٔ دوحالته |
 | adjective; comparative / superlative | Adjektiv; Komparativ / Superlativ | صفت؛ صفت تفضیلی / صفت عالی |

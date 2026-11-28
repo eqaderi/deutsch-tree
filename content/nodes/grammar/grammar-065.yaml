@@ -4,10 +4,267 @@ kind: grammar
 level: A1
 chapter: a1-cases
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-061]
 title:
   en: "*Genitiv* *-s* on names"
-  fa: "*-s* ملکی (*Genitiv*) روی نام‌ها"
+  fa: "*-s* ملکی (حالت *Genitiv*) در نام‌ها"
   de: "Genitiv-*s* bei Namen"
+
+explanations:
+  en:
+    rule: >
+      To say whose something is, German adds *-s* to a name and puts the name
+      before the noun, with no article and no apostrophe: *Annas Buch*
+      (Anna's book), *Karls Freunde*. This is the *Genitiv*. A name that
+      already ends in *-s*, *-x* or *-z* takes only an apostrophe: *Jonas'
+      Fahrrad*, *Max' Auto*. The same works with *Mama* and *Papa*: *Mamas
+      Auto*.
+  fa:
+    rule: >
+      برای این‌که بگوییم چیزی مال کیست، در آلمانی به نام *-s* می‌افزاییم و
+      نام را پیش از اسم می‌آوریم، بدون حرف تعریف و بدون آپاستروف: *Annas
+      Buch* (کتاب آنا) و *Karls Freunde* (دوستان کارل). این حالت *Genitiv*
+      (حالت ملکی) است. ترتیب برعکس فارسی است: در فارسی اول چیز می‌آید و بعد
+      صاحبش، ولی در آلمانی اول صاحب و بعد چیز. نامی که خودش به *-s*، *-x* یا
+      *-z* ختم می‌شود فقط آپاستروف می‌گیرد: *Jonas' Fahrrad* و *Max' Auto*.
+      با *Mama* و *Papa* هم همین‌طور است: *Mamas Auto*.
+  de:
+    rule: >
+      Wem gehört etwas? Man stellt den Namen mit *-s* vor das Nomen, ohne
+      Artikel und ohne Apostroph: *Annas Buch*, *Karls Freunde*. Das ist der
+      Genitiv. Endet der Name auf *-s*, *-x* oder *-z*, schreibt man nur einen
+      Apostroph: *Jonas' Fahrrad*, *Max' Auto*. Das geht auch mit *Mama* und
+      *Papa*: *Mamas Auto*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Genitiv*", fa: "حالت *Genitiv*", de: Genitiv }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [Anna, Annas, Annas Buch]
+    - [Karl, Karls, Karls Freunde]
+    - [Mama, Mamas, Mamas Auto]
+    - [Jonas, Jonas', Jonas' Fahrrad]
+    - [Max, Max', Max' Schwester]
+
+examples:
+  - de: Das ist Annas Buch.
+    en: That is Anna's book.
+    fa: این کتاب آناست.
+  - de: Karls Freunde kommen heute.
+    en: Karl's friends are coming today.
+    fa: دوستان کارل امروز می‌آیند.
+  - de: Wo ist Jonas' Fahrrad?
+    en: Where is Jonas's bike?
+    fa: دوچرخهٔ یوناس کجاست؟
+  - de: Max' Schwester heißt Lena.
+    en: Max's sister is called Lena.
+    fa: نام خواهر ماکس لنا است.
+  - de: Mamas Auto ist rot.
+    en: Mum's car is red.
+    fa: ماشین مامان قرمز است.
+  - de: Das ist Peters Wohnung.
+    en: That is Peter's flat.
+    fa: این آپارتمان پتر است.
+  - de: Sabines Kinder spielen im Garten.
+    en: Sabine's children are playing in the garden.
+    fa: بچه‌های زابینه در باغ بازی می‌کنند.
+  - de: Ist das Toms Handy?
+    en: Is that Tom's phone?
+    fa: این گوشی تام است؟
+
+mistakes:
+  - wrong: Das ist Anna's Buch.
+    right: Das ist Annas Buch.
+    why:
+      en: "German writes the *-s* straight onto the name, without the apostrophe of English *Anna's*."
+      fa: "در آلمانی *-s* بی‌واسطه به نام می‌چسبد و آپاستروف انگلیسی (*Anna's*) را نمی‌نویسیم."
+      de: "Im Deutschen schreibt man das *-s* direkt an den Namen, ohne Apostroph: *Annas*."
+  - wrong: Wo ist die Peters Jacke?
+    right: Wo ist Peters Jacke?
+    why:
+      en: "A name with *-s* takes the place of the article, so no *der*, *die* or *das* comes before it."
+      fa: "نام با *-s* جای حرف تعریف را می‌گیرد، پس پیش از آن *der*، *die* یا *das* نمی‌آید."
+      de: "Der Name mit *-s* steht an der Stelle vom Artikel. Davor steht kein *der*, *die* oder *das*."
+  - wrong: Das ist Jonass Fahrrad.
+    right: Das ist Jonas' Fahrrad.
+    why:
+      en: "*Jonas* already ends in *-s*, so it takes only an apostrophe: *Jonas'*."
+      fa: "*Jonas* خودش به *-s* ختم می‌شود، پس فقط آپاستروف می‌گیرد: *Jonas'*."
+      de: "*Jonas* endet schon auf *-s*. Darum schreibt man nur einen Apostroph: *Jonas'*."
+  - wrong: Max's Auto ist neu.
+    right: Max' Auto ist neu.
+    why:
+      en: "After a name in *-x* there is only an apostrophe, never *'s*."
+      fa: "پس از نامی که به *-x* ختم می‌شود فقط آپاستروف می‌آید، هرگز *'s*."
+      de: "Nach einem Namen auf *-x* steht nur ein Apostroph, nie *'s*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist ___ Fahrrad.
+    options: [Jonas', Jonass, Jonases]
+    answer: Jonas'
+    explanation:
+      en: "*Jonas* ends in *-s*, so it takes only an apostrophe: *Jonas' Fahrrad*."
+      fa: "*Jonas* به *-s* ختم می‌شود، پس فقط آپاستروف می‌گیرد: *Jonas' Fahrrad*."
+      de: "*Jonas* endet auf *-s*. Darum nur ein Apostroph: *Jonas' Fahrrad*."
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ Freunde kommen heute.
+    options: [Karls, Karl, Der Karls]
+    answer: Karls
+    explanation:
+      en: "The name takes *-s* and stands before the noun, with no article: *Karls Freunde*."
+      fa: "نام *-s* می‌گیرد و بدون حرف تعریف پیش از اسم می‌آید: *Karls Freunde*."
+      de: "Der Name bekommt *-s* und steht ohne Artikel vor dem Nomen: *Karls Freunde*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wo ist ___ Auto?
+    options: [Peters, das Peters, Peter]
+    answer: Peters
+    explanation:
+      en: "*Peters Auto*: the name with *-s*, and no article before it."
+      fa: "*Peters Auto*: نام با *-s* و بدون حرف تعریف پیش از آن."
+      de: "*Peters Auto*: der Name mit *-s*, ohne Artikel davor."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Max hat einen Bruder. Wie heißt ___ Bruder?
+    options: [Max', Maxs, Maxes]
+    answer: Max'
+    explanation:
+      en: "*Max* ends in *-x*, so it takes only an apostrophe: *Max' Bruder*."
+      fa: "*Max* به *-x* ختم می‌شود، پس فقط آپاستروف می‌گیرد: *Max' Bruder*."
+      de: "*Max* endet auf *-x*. Darum nur ein Apostroph: *Max' Bruder*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Annas Bruder heißt Tim. – Wer ist Anna?
+    options: [Tims Schwester, Tims Mutter, Tims Tochter]
+    answer: Tims Schwester
+    explanation:
+      en: "*Annas Bruder* is Anna's brother, so Tim is her brother and Anna is his sister: *Tims Schwester*."
+      fa: "*Annas Bruder* یعنی برادر آنا. پس تیم برادر آناست و آنا خواهر تیم: *Tims Schwester*."
+      de: "*Annas Bruder* ist Tim. Also ist Anna *Tims Schwester*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Das Handy gehört Lena. Das ist ___.
+    options: [Lenas Handy, Lena Handy, das Lenas Handy]
+    answer: Lenas Handy
+    explanation:
+      en: "The owner's name takes *-s* and needs no article: *Lenas Handy*."
+      fa: "نام صاحب چیز *-s* می‌گیرد و حرف تعریف نمی‌خواهد: *Lenas Handy*."
+      de: "Der Name bekommt *-s* und hat keinen Artikel: *Lenas Handy*."
+  - id: true-1
+    type: true-false
+    prompt: Das ist Toms Jacke.
+    answer: true
+    explanation:
+      en: "*Toms Jacke*: the name with *-s*, no apostrophe, no article. The sentence is correct."
+      fa: "*Toms Jacke*: نام با *-s*، بدون آپاستروف و بدون حرف تعریف. جمله درست است."
+      de: "*Toms Jacke*: der Name mit *-s*, ohne Apostroph und ohne Artikel. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist die Lisas Tasche.
+    answer: false
+    explanation:
+      en: "No article comes before a name with *-s*: *Das ist Lisas Tasche.*"
+      fa: "پیش از نام با *-s* حرف تعریف نمی‌آید: *Das ist Lisas Tasche.*"
+      de: "Vor dem Namen mit *-s* steht kein Artikel: *Das ist Lisas Tasche.*"
+  - id: true-3
+    type: true-false
+    prompt: Wo ist Hans' Brille?
+    answer: true
+    explanation:
+      en: "*Hans* ends in *-s*, so it takes only an apostrophe: *Hans' Brille*. The sentence is correct."
+      fa: "*Hans* به *-s* ختم می‌شود، پس فقط آپاستروف می‌گیرد: *Hans' Brille*. جمله درست است."
+      de: "*Hans* endet auf *-s*. Darum nur ein Apostroph: *Hans' Brille*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Max's Schwester wohnt in Wien.
+    answer: false
+    explanation:
+      en: "After a name in *-x* there is only an apostrophe: *Max' Schwester*."
+      fa: "پس از نامی که به *-x* ختم می‌شود فقط آپاستروف می‌آید: *Max' Schwester*."
+      de: "Nach einem Namen auf *-x* steht nur ein Apostroph: *Max' Schwester*."
+  - id: true-5
+    type: true-false
+    prompt: Mamas Kuchen schmeckt super.
+    answer: true
+    explanation:
+      en: "*Mama* works like a name: *Mamas Kuchen*. The sentence is correct."
+      fa: "*Mama* مانند نام به کار می‌رود: *Mamas Kuchen*. جمله درست است."
+      de: "*Mama* ist wie ein Name: *Mamas Kuchen*. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist ___ (Anna) Zimmer.
+    answers: [Annas]
+    explanation:
+      en: "Add *-s* to the name, without an apostrophe: *Annas Zimmer*."
+      fa: "به نام *-s* بیفزایید، بدون آپاستروف: *Annas Zimmer*."
+      de: "Der Name bekommt *-s*, ohne Apostroph: *Annas Zimmer*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (Karl) Schwester heißt Mia.
+    answers: [Karls]
+    explanation:
+      en: "Add *-s* to the name: *Karls Schwester*."
+      fa: "به نام *-s* بیفزایید: *Karls Schwester*."
+      de: "Der Name bekommt *-s*: *Karls Schwester*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ist das ___ (Jonas) Fahrrad?
+    answers: [Jonas', Jonas’]
+    explanation:
+      en: "*Jonas* already ends in *-s*: only an apostrophe, *Jonas'*."
+      fa: "*Jonas* خودش به *-s* ختم می‌شود: فقط آپاستروف، *Jonas'*."
+      de: "*Jonas* endet schon auf *-s*: nur ein Apostroph, *Jonas'*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wo ist ___ (Mama) Tasche?
+    answers: [Mamas]
+    explanation:
+      en: "*Mama* takes *-s* like a name: *Mamas Tasche*."
+      fa: "*Mama* مانند نام *-s* می‌گیرد: *Mamas Tasche*."
+      de: "*Mama* bekommt *-s* wie ein Name: *Mamas Tasche*."
+  - id: error-1
+    type: find-error
+    prompt: Wo ist die Peters Jacke?
+    answer: die
+    explanation:
+      en: "No article before a name with *-s*: *Wo ist Peters Jacke?*"
+      fa: "پیش از نام با *-s* حرف تعریف نمی‌آید: *Wo ist Peters Jacke?*"
+      de: "Vor dem Namen mit *-s* steht kein Artikel: *Wo ist Peters Jacke?*"
+  - id: error-2
+    type: find-error
+    prompt: Das ist Jonass Fahrrad.
+    answer: Jonass
+    explanation:
+      en: "*Jonas* ends in *-s*, so only an apostrophe: *Jonas' Fahrrad*."
+      fa: "*Jonas* به *-s* ختم می‌شود، پس فقط آپاستروف می‌گیرد: *Jonas' Fahrrad*."
+      de: "*Jonas* endet auf *-s*. Darum nur ein Apostroph: *Jonas' Fahrrad*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ist, das, Lenas Handy]
+    end: "?"
+    explanation:
+      en: "In a yes/no question the verb comes first. *Lenas Handy* stays together."
+      fa: "در پرسشی که پاسخش «بله» یا «نه» است، فعل در آغاز می‌آید. *Lenas Handy* از هم جدا نمی‌شود."
+      de: "In einer Ja/Nein-Frage steht das Verb am Anfang. *Lenas Handy* bleibt zusammen."
+  - id: order-2
+    type: word-order
+    answers:
+      - [Karls Freunde, kommen, heute]
+      - [heute, kommen, Karls Freunde]
+    explanation:
+      en: "The verb comes second. *Karls Freunde* is the subject and can stand before or after it."
+      fa: "فعل در جایگاه دوم می‌آید. *Karls Freunde* فاعل جمله است و می‌تواند پیش یا پس از فعل بیاید."
+      de: "Das Verb steht an Position 2. *Karls Freunde* ist das Subjekt und kann davor oder danach stehen."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: da2b5cca3cdf77a5
