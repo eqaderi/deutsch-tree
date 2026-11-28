@@ -5,6 +5,7 @@ level: B1
 chapter: b1-phrases-writing
 order: 3
 status: coming-soon
+prerequisites: [grammar-159, grammar-162]
 title:
   en: "Starting and ending a forum post"
   fa: "شروع و پایان یک نوشته در انجمن اینترنتی"
@@ -14,3 +15,287 @@ purpose:
   fa: "در آغاز به موضوع یا به نوشتهٔ فرد دیگری اشاره کنید و در پایان نظرتان را جمع‌بندی کنید."
   de: "Am Anfang etwas zum Thema oder zu einem anderen Beitrag sagen und am Ende die eigene Meinung zusammenfassen."
 examTasks: [exam-schreiben-2]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Ich habe den Beitrag von … gelesen.
+    meaning:
+      en: I have read …'s post. Refers to another person's post at the start of yours. *der Beitrag* is a text someone has written in a forum.
+      fa: «نوشتهٔ … را خواندم.» در آغاز نوشته‌تان به نوشتهٔ فرد دیگری اشاره می‌کند. *der Beitrag* متنی است که کسی در انجمن اینترنتی نوشته است.
+      de: Am Anfang sagt man, auf welchen Beitrag man antwortet. *der Beitrag* ist ein Text, den jemand in einem Forum geschrieben hat.
+    examTasks: [exam-schreiben-2]
+    example:
+      de: Ich habe den Beitrag von Sandra gelesen und möchte etwas dazu schreiben.
+      en: I have read Sandra's post and would like to add something.
+      fa: نوشتهٔ ساندرا را خواندم و می‌خواهم چیزی دربارهٔ آن بنویسم.
+
+  - de: In der Sendung ging es um …
+    meaning:
+      en: The programme was about … Names the topic at the start, for example of a TV programme. *es geht um* takes the accusative; in the past it is *es ging um*.
+      fa: «برنامه دربارهٔ … بود.» در آغاز موضوع را می‌گوید، مثلاً موضوع یک برنامهٔ تلویزیونی. پس از *es geht um* حالت *Akkusativ* می‌آید و گذشتهٔ آن *es ging um* است.
+      de: Am Anfang nennt man das Thema, zum Beispiel von einer Fernsehsendung. Nach *es geht um* kommt der Akkusativ. In der Vergangenheit heißt es *es ging um*.
+    examTasks: [exam-schreiben-2]
+    example:
+      de: In der Sendung ging es um die Frage, ob Kinder ein eigenes Handy brauchen.
+      en: The programme was about whether children need a mobile phone of their own.
+      fa: برنامه دربارهٔ این پرسش بود که آیا کودکان به تلفن همراه شخصی نیاز دارند.
+
+  - de: Zu diesem Thema möchte ich auch etwas schreiben.
+    meaning:
+      en: I would like to write something on this topic too. A plain first sentence that joins the discussion. *zu* takes the dative, *zu diesem Thema*.
+      fa: "«من هم می‌خواهم دربارهٔ این موضوع چیزی بنویسم.» جملهٔ اول ساده‌ای برای پیوستن به بحث. پس از *zu* حالت *Dativ* می‌آید: *zu diesem Thema*."
+      de: Ein einfacher erster Satz. Man macht bei der Diskussion mit. Nach *zu* kommt der Dativ, *zu diesem Thema*.
+    examTasks: [exam-schreiben-2]
+    example:
+      de: Die Diskussion hier ist sehr spannend. Zu diesem Thema möchte ich auch etwas schreiben.
+      en: The discussion here is very interesting. I would like to write something on this topic too.
+      fa: بحث این‌جا خیلی جالب است. من هم می‌خواهم دربارهٔ این موضوع چیزی بنویسم.
+
+  - de: Wie … schon geschrieben hat, …
+    meaning:
+      en: As … has already written, … Takes up a point from another person's post. This part ends with *hat*; then the main clause begins with its verb.
+      fa: «همان‌طور که … نوشته است، …» نکته‌ای از نوشتهٔ فرد دیگری را پی می‌گیرد. این بخش با *hat* تمام می‌شود و سپس جملهٔ پایه با فعلش شروع می‌شود.
+      de: So nimmt man einen Punkt aus einem anderen Beitrag auf. Dieser Teil endet mit *hat*. Dann beginnt der Hauptsatz mit dem Verb.
+    examTasks: [exam-schreiben-2]
+    example:
+      de: Wie Sandra schon geschrieben hat, sind Handys für Kinder oft zu teuer.
+      en: As Sandra has already written, mobile phones are often too expensive for children.
+      fa: همان‌طور که ساندرا نوشته است، تلفن همراه برای کودکان اغلب بیش از حد گران است.
+
+  - de: "Das kenne ich auch: …"
+    meaning:
+      en: "I know that too: … Links the topic to your own experience. After the colon a whole sentence follows."
+      fa: "«من هم این را تجربه کرده‌ام: …» موضوع را به تجربهٔ خودتان پیوند می‌دهد. پس از دونقطه جمله‌ای کامل می‌آید."
+      de: So verbindet man das Thema mit der eigenen Erfahrung. Nach dem Doppelpunkt kommt ein ganzer Satz.
+    examTasks: [exam-schreiben-2]
+    example:
+      de: "Das kenne ich auch: Mein Sohn sitzt jeden Abend stundenlang am Handy."
+      en: "I know that too: my son spends hours on his phone every evening."
+      fa: "من هم این را تجربه کرده‌ام: پسرم هر شب ساعت‌ها با تلفن همراهش سرگرم است."
+
+  - de: Zusammenfassend kann ich sagen, dass …
+    meaning:
+      en: To sum up, I can say that … Begins the summary of your view at the end of the post. After *dass* the verb goes to the end.
+      fa: «در جمع‌بندی می‌توانم بگویم که …» جمع‌بندی نظرتان را در پایان نوشته آغاز می‌کند. پس از *dass* فعل به پایان جمله می‌رود.
+      de: So beginnt man am Ende die Zusammenfassung der eigenen Meinung. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-2]
+    example:
+      de: Zusammenfassend kann ich sagen, dass ein Handy für Kinder ab zwölf Jahren sinnvoll ist.
+      en: To sum up, I can say that a mobile phone makes sense for children from the age of twelve.
+      fa: در جمع‌بندی می‌توانم بگویم که تلفن همراه برای کودکان از دوازده‌سالگی به بعد معقول است.
+
+  - de: Alles in allem …
+    meaning:
+      en: All in all … A short way to begin your last sentence. It takes the first place, so the verb comes right after it.
+      fa: «روی هم رفته …» شیوه‌ای کوتاه برای آغاز جملهٔ پایانی. در جایگاه اول می‌آید، پس فعل بلافاصله پس از آن قرار می‌گیرد.
+      de: Ein kurzer Anfang für den letzten Satz. *Alles in allem* steht auf Position 1, das Verb kommt direkt danach.
+    examTasks: [exam-schreiben-2]
+    example:
+      de: Alles in allem finde ich die Idee gut, aber man braucht klare Regeln.
+      en: All in all I think the idea is good, but you need clear rules.
+      fa: روی هم رفته ایده را خوب می‌دانم، ولی قانون‌های روشنی لازم است.
+
+  - de: Mich würde interessieren, was ihr darüber denkt.
+    meaning:
+      en: I would like to know what you all think about it. Ends the post with a question to the other readers. *was ihr darüber denkt* is an indirect question, with the verb at the end.
+      fa: «دوست دارم بدانم شما در این باره چه فکر می‌کنید.» نوشته را با پرسشی از خوانندگان دیگر تمام می‌کند. *was ihr darüber denkt* پرسش غیرمستقیم است و فعلش در پایان می‌آید.
+      de: So endet man mit einer Frage an die anderen Leser. *was ihr darüber denkt* ist eine indirekte Frage, das Verb steht am Ende.
+    examTasks: [exam-schreiben-2]
+    example:
+      de: Das ist meine Erfahrung. Mich würde interessieren, was ihr darüber denkt.
+      en: That is my experience. I would like to know what you all think about it.
+      fa: این تجربهٔ من است. دوست دارم بدانم شما در این باره چه فکر می‌کنید.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Du antwortest im Forum auf einen Text von Sandra. Wie beginnst du?
+    options:
+      - Ich habe den Beitrag von Sandra gelest.
+      - Ich habe den Beitrag von Sandra gelesen.
+      - Ich bin den Beitrag von Sandra gelesen.
+    answer: Ich habe den Beitrag von Sandra gelesen.
+    explanation:
+      en: "*lesen* takes *haben* in the Perfekt, and its Partizip II is *gelesen*."
+      fa: "*lesen* در گذشتهٔ نقلی (*Perfekt*) با *haben* می‌آید و صفت مفعولی (*Partizip II*) آن *gelesen* است."
+      de: "*lesen* hat im Perfekt *haben*, und das Partizip II ist *gelesen*."
+
+  - id: q2
+    type: gap-fill
+    prompt: In der Sendung ging es ___ die Frage, ob Kinder ein eigenes Handy brauchen.
+    options: [über, von, um]
+    answer: um
+    explanation:
+      en: The phrase is *es geht um*, in the past *es ging um*.
+      fa: عبارت *es geht um* است و گذشتهٔ آن *es ging um*.
+      de: Der Ausdruck heißt *es geht um*, in der Vergangenheit *es ging um*.
+
+  - id: q3
+    type: true-false
+    prompt: Wie Sandra schon geschrieben hat, Handys sind für Kinder oft zu teuer.
+    answer: false
+    explanation:
+      en: "After the *wie* clause the main clause begins with its verb: *…, sind Handys für Kinder oft zu teuer.*"
+      fa: "پس از جملهٔ *wie*، جملهٔ پایه با فعلش شروع می‌شود: *…, sind Handys für Kinder oft zu teuer.*"
+      de: "Nach dem Satz mit *wie* beginnt der Hauptsatz mit dem Verb: *…, sind Handys für Kinder oft zu teuer.*"
+
+  - id: q4
+    type: true-false
+    prompt: Zusammenfassend kann ich sagen, dass die Idee gut ist.
+    answer: true
+    explanation:
+      en: Right. After *dass* the verb *ist* goes to the end.
+      fa: درست است. پس از *dass* فعل *ist* به پایان جمله رفته است.
+      de: Richtig. Nach *dass* steht das Verb *ist* am Ende.
+
+  - id: q5
+    type: find-error
+    prompt: Zu dieses Thema möchte ich auch etwas schreiben.
+    answer: dieses
+    explanation:
+      en: "*zu* takes the dative, and *das Thema* is neuter: *zu diesem Thema*."
+      fa: "پس از *zu* حالت *Dativ* می‌آید و *Thema* اسم خنثی (*das*) است: *zu diesem Thema*."
+      de: "Nach *zu* kommt der Dativ, und es heißt *das Thema*: *zu diesem Thema*."
+
+  - id: q6
+    type: word-order
+    answers:
+      - [ich, habe, den Beitrag von Sandra, gelesen]
+      - [den Beitrag von Sandra, habe, ich, gelesen]
+      - [gelesen, habe, ich, den Beitrag von Sandra]
+    explanation:
+      en: "*habe* is in position 2 and *gelesen* usually goes to the end: *Ich habe den Beitrag von Sandra gelesen.*"
+      fa: "*habe* در جایگاه دوم است و *gelesen* معمولاً در پایان جمله می‌آید: *Ich habe den Beitrag von Sandra gelesen.*"
+      de: "*habe* steht an Position 2, *gelesen* steht normalerweise am Ende: *Ich habe den Beitrag von Sandra gelesen.*"
+
+  - id: q7
+    type: multiple-choice
+    prompt: Am Ende deines Beitrags möchtest du die Meinung der anderen hören. Was schreibst du?
+    options:
+      - Mich würde interessieren, was ihr darüber denkt.
+      - Mich würde interessieren, was denkt ihr darüber.
+      - Ich würde interessieren, was ihr darüber denkt.
+    answer: Mich würde interessieren, was ihr darüber denkt.
+    explanation:
+      en: It is *mich würde interessieren*, with the person in the accusative, and in the indirect question the verb *denkt* goes to the end.
+      fa: درست آن *mich würde interessieren* است، با شخص در حالت *Akkusativ*؛ و در پرسش غیرمستقیم فعل *denkt* به پایان جمله می‌رود.
+      de: Es heißt *mich würde interessieren*, mit der Person im Akkusativ, und in der indirekten Frage steht das Verb *denkt* am Ende.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Ich habe ___ (der Beitrag) von Sandra gelesen und möchte etwas dazu schreiben.
+    answers: [den Beitrag]
+    explanation:
+      en: "*lesen* takes the accusative, *den Beitrag*."
+      fa: "*lesen* مفعول مستقیم در حالت *Akkusativ* می‌گیرد: *den Beitrag*."
+      de: "*lesen* hat den Akkusativ, *den Beitrag*."
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Ich habe den Beitrag von Sandra ___ (lesen) und möchte etwas dazu schreiben.
+    answers: [gelesen]
+    explanation:
+      en: The Perfekt of *lesen* is *habe … gelesen*.
+      fa: گذشتهٔ نقلی (*Perfekt*) فعل *lesen* به‌صورت *habe … gelesen* است.
+      de: Das Perfekt von *lesen* ist *habe … gelesen*.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: In der Sendung ___ (gehen) es um die Frage, ob Kinder ein eigenes Handy brauchen.
+    answers: [ging, geht]
+    explanation:
+      en: The phrase is *es geht um*; for a programme you saw, the past *es ging um*.
+      fa: عبارت *es geht um* است؛ برای برنامه‌ای که دیده‌اید، گذشتهٔ آن *es ging um* می‌آید.
+      de: Der Ausdruck heißt *es geht um*. Für eine Sendung, die man gesehen hat, sagt man *es ging um*.
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Zu ___ (dieses) Thema möchte ich auch etwas schreiben.
+    answers: [diesem]
+    explanation:
+      en: "*zu* takes the dative, so *zu diesem Thema*."
+      fa: "پس از *zu* حالت *Dativ* می‌آید، پس *zu diesem Thema*."
+      de: "Nach *zu* kommt der Dativ, also *zu diesem Thema*."
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Wie Sandra schon geschrieben ___, sind Handys für Kinder oft zu teuer.
+    answers: [hat, hatte]
+    explanation:
+      en: "*schreiben* takes *haben* in the Perfekt, and *hat* goes to the end of the *wie* clause."
+      fa: "*schreiben* در گذشتهٔ نقلی (*Perfekt*) با *haben* می‌آید و *hat* در پایان جملهٔ *wie* قرار می‌گیرد."
+      de: "*schreiben* hat im Perfekt *haben*, und *hat* steht am Ende vom Satz mit *wie*."
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Wie Sandra schon geschrieben hat, ___ (sein) Handys für Kinder oft zu teuer.
+    answers: [sind]
+    explanation:
+      en: The main clause begins with its verb, and the subject *Handys* is plural, so *sind*.
+      fa: جملهٔ پایه با فعلش شروع می‌شود و فاعل آن، *Handys*، جمع است، پس *sind*.
+      de: Der Hauptsatz beginnt mit dem Verb. Das Subjekt *Handys* ist Plural, also *sind*.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: "Das ___ (kennen) ich auch: Mein Sohn sitzt jeden Abend stundenlang am Handy."
+    answers: [kenne]
+    explanation:
+      en: The phrase is *Das kenne ich auch*, with *kenne* in position 2.
+      fa: عبارت *Das kenne ich auch* است و *kenne* در جایگاه دوم می‌آید.
+      de: Der Satz heißt *Das kenne ich auch*, mit *kenne* an Position 2.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: ___ (zusammenfassen) kann ich sagen, dass ein Handy für Kinder ab zwölf Jahren sinnvoll ist.
+    answers: [Zusammenfassend]
+    explanation:
+      en: The phrase is *Zusammenfassend kann ich sagen, dass …*
+      fa: عبارت *Zusammenfassend kann ich sagen, dass …* است.
+      de: Der Satz heißt *Zusammenfassend kann ich sagen, dass …*
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Zusammenfassend kann ich sagen, dass ein Handy für Kinder ab zwölf Jahren sinnvoll ___ (sein).
+    answers: [ist, wäre]
+    explanation:
+      en: After *dass* the verb goes to the end, *ist*.
+      fa: "پس از *dass* فعل به پایان جمله می‌رود: *ist*."
+      de: Nach *dass* steht das Verb am Ende, *ist*.
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Alles in ___ finde ich die Idee gut, aber man braucht klare Regeln.
+    answers: [allem]
+    explanation:
+      en: The phrase is *alles in allem*.
+      fa: عبارت *alles in allem* است.
+      de: Der Ausdruck heißt *alles in allem*.
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Alles in allem ___ (finden) ich die Idee gut, aber man braucht klare Regeln.
+    answers: [finde, fand]
+    explanation:
+      en: "*Alles in allem* takes the first place, so the verb *finde* comes right after it."
+      fa: "*Alles in allem* در جایگاه اول است، پس فعل *finde* بلافاصله پس از آن می‌آید."
+      de: "*Alles in allem* steht auf Position 1, also kommt das Verb *finde* direkt danach."
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Das ist meine Erfahrung. Mich ___ (werden, Konjunktiv II) interessieren, was ihr darüber denkt.
+    answers: [würde]
+    explanation:
+      en: The phrase is *Mich würde interessieren, …*
+      fa: عبارت *Mich würde interessieren, …* است.
+      de: Der Satz heißt *Mich würde interessieren, …*
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Das ist meine Erfahrung. Mich würde interessieren, was ihr darüber ___ (denken).
+    answers: [denkt]
+    explanation:
+      en: In the indirect question the verb goes to the end, and with *ihr* it is *denkt*.
+      fa: در پرسش غیرمستقیم فعل به پایان جمله می‌رود و با *ihr* شکل *denkt* می‌آید.
+      de: In der indirekten Frage steht das Verb am Ende. Bei *ihr* heißt es *denkt*.

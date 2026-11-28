@@ -5,6 +5,7 @@ level: B1
 chapter: b1-phrases-writing
 order: 2
 status: coming-soon
+prerequisites: [grammar-020, grammar-023, grammar-164]
 title:
   en: "Telling what happened and how it was"
   fa: "تعریف کردن یک اتفاق و اینکه چطور بود"
@@ -14,3 +15,298 @@ purpose:
   fa: "اتفاقی مثل جشن یا سفر را توصیف کنید: چه کردید، چطور بود و از چه چیزی بیشتر خوشتان آمد."
   de: "Ein Ereignis wie eine Feier oder eine Reise beschreiben: was man gemacht hat, wie es war und was am besten war."
 examTasks: [exam-schreiben-1, exam-sprechen-2]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Stell dir vor, …!
+    meaning:
+      en: Guess what … ! Opens a piece of news to a friend and makes them curious. A whole sentence follows, with its verb in position 2.
+      fa: «فکرش را بکن، …!» خبری را برای یک دوست آغاز می‌کند و او را کنجکاو می‌کند. پس از آن جمله‌ای کامل می‌آید که فعلش در جایگاه دوم است.
+      de: So beginnt man eine Neuigkeit für einen Freund oder eine Freundin. Er oder sie soll neugierig werden. Danach kommt ein ganzer Satz, das Verb steht an Position 2.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Stell dir vor, wir haben endlich eine neue Wohnung gefunden!
+      en: Guess what, we have finally found a new flat!
+      fa: فکرش را بکن، بالاخره آپارتمان تازه‌ای پیدا کردیم!
+
+  - de: Mir ist etwas … passiert.
+    meaning:
+      en: Something … happened to me. Begins a story. *passieren* takes *sein* in the Perfekt, and the person is in the dative, *mir* or *uns*. After *etwas* the adjective has a capital letter and *-es*, as in *etwas Lustiges*.
+      fa: "«اتفاق … برایم افتاد.» داستانی را آغاز می‌کند. *passieren* در گذشتهٔ نقلی (*Perfekt*) با *sein* می‌آید و شخص در حالت *Dativ* است: *mir* یا *uns*. صفت پس از *etwas* با حرف بزرگ و پایانهٔ *-es* نوشته می‌شود، مانند *etwas Lustiges*."
+      de: So beginnt man eine Geschichte. *passieren* hat im Perfekt *sein*, und die Person steht im Dativ, *mir* oder *uns*. Nach *etwas* schreibt man das Adjektiv groß und mit *-es*, zum Beispiel *etwas Lustiges*.
+    examTasks: [exam-schreiben-1, exam-sprechen-2]
+    example:
+      de: Gestern ist mir etwas Lustiges passiert.
+      en: Something funny happened to me yesterday.
+      fa: دیروز اتفاق خنده‌داری برایم افتاد.
+
+  - de: Als …, …
+    meaning:
+      en: When … , … Tells about one moment or one event in the past. After *als* the verb goes to the end; then the main clause begins with its verb.
+      fa: «وقتی …، …» دربارهٔ یک لحظه یا یک رویداد یگانه در گذشته است. پس از *als* فعل به پایان جمله می‌رود و سپس جملهٔ پایه با فعلش شروع می‌شود.
+      de: So erzählt man von einem Moment oder einem einmaligen Ereignis in der Vergangenheit. Nach *als* steht das Verb am Ende. Danach beginnt der Hauptsatz mit dem Verb.
+    examTasks: [exam-schreiben-1, exam-sprechen-2]
+    example:
+      de: Als wir am Bahnhof ankamen, war der Zug schon weg.
+      en: When we arrived at the station, the train had already left.
+      fa: وقتی به ایستگاه قطار رسیدیم، قطار رفته بود.
+
+  - de: Plötzlich …
+    meaning:
+      en: Suddenly … Brings a surprise into the story. *plötzlich* takes the first place, so the verb comes right after it.
+      fa: «ناگهان …» رویدادی غیرمنتظره را وارد داستان می‌کند. *plötzlich* در جایگاه اول می‌آید، پس فعل بلافاصله پس از آن قرار می‌گیرد.
+      de: Damit kommt eine Überraschung in die Geschichte. *plötzlich* steht auf Position 1, das Verb kommt direkt danach.
+    examTasks: [exam-schreiben-1, exam-sprechen-2]
+    example:
+      de: Wir saßen gemütlich im Garten. Plötzlich begann es zu regnen.
+      en: We were sitting comfortably in the garden. Suddenly it began to rain.
+      fa: آسوده در باغ نشسته بودیم. ناگهان باران گرفت.
+
+  - de: Zum Glück …
+    meaning:
+      en: Luckily … Tells how a problem ended well. The verb comes right after *zum Glück*. The opposite is *leider*.
+      fa: «خوشبختانه …» می‌گوید مشکلی چگونه به خیر گذشت. فعل بلافاصله پس از *zum Glück* می‌آید. متضاد آن *leider* است.
+      de: So erzählt man, dass ein Problem gut ausgegangen ist. Das Verb kommt direkt nach *zum Glück*. Das Gegenteil ist *leider*.
+    examTasks: [exam-schreiben-1, exam-sprechen-2]
+    example:
+      de: Zum Glück hat uns ein Nachbar mit dem Auto zum Flughafen gebracht.
+      en: Luckily a neighbour drove us to the airport.
+      fa: خوشبختانه یکی از همسایه‌ها ما را با ماشین به فرودگاه رساند.
+
+  - de: Es hat mir sehr gut gefallen.
+    meaning:
+      en: I liked it very much. Says how the event was. With *gefallen* the person who likes something is in the dative, *mir*, and the thing is the subject.
+      fa: «خیلی خوشم آمد.» می‌گوید رویداد چطور بود. با *gefallen* کسی که از چیزی خوشش می‌آید در حالت *Dativ* است (*mir*) و خود آن چیز فاعل جمله است.
+      de: So sagt man, wie es war. Bei *gefallen* steht die Person im Dativ, *mir*. Die Sache ist das Subjekt.
+    examTasks: [exam-schreiben-1, exam-sprechen-2]
+    example:
+      de: Die Hochzeit war wunderschön, es hat mir sehr gut gefallen.
+      en: The wedding was beautiful; I liked it very much.
+      fa: عروسی بسیار زیبا بود و خیلی خوشم آمد.
+
+  - de: Am besten hat mir … gefallen.
+    meaning:
+      en: What I liked best was … Names the best part. The thing you liked is the subject, so with a plural the verb is *haben*, as in *Am besten haben mir die Konzerte gefallen.*
+      fa: «از همه بیشتر از … خوشم آمد.» بهترین بخش را نام می‌برد. چیزی که از آن خوشتان آمده فاعل جمله است، پس با اسم جمع فعل *haben* می‌آید، مانند *Am besten haben mir die Konzerte gefallen.*
+      de: So nennt man das Beste. Die Sache ist das Subjekt. Bei einem Plural heißt es *haben*, zum Beispiel *Am besten haben mir die Konzerte gefallen.*
+    examTasks: [exam-schreiben-1, exam-sprechen-2]
+    example:
+      de: Am besten hat mir der Ausflug in die Berge gefallen.
+      en: What I liked best was the trip to the mountains.
+      fa: از همه بیشتر از گردش در کوهستان خوشم آمد.
+
+  - de: Nicht so schön war, dass …
+    meaning:
+      en: What was not so nice was that … Names a bad part politely. After *dass* the verb goes to the end.
+      fa: «تنها ایرادش این بود که …» جنبهٔ ناخوشایند را مؤدبانه بیان می‌کند. پس از *dass* فعل به پایان جمله می‌رود.
+      de: So nennt man höflich eine schlechte Seite. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-1, exam-sprechen-2]
+    example:
+      de: Nicht so schön war, dass es die ganze Zeit geregnet hat.
+      en: What was not so nice was that it rained the whole time.
+      fa: تنها ایرادش این بود که در تمام این مدت باران بارید.
+
+  - de: Das werde ich nie vergessen.
+    meaning:
+      en: I will never forget that. A strong last sentence for a story. *werde … vergessen* is the future (*Futur I*), and *vergessen* goes to the end.
+      fa: «هرگز فراموشش نمی‌کنم.» جملهٔ پایانی پرقدرتی برای یک داستان. *werde … vergessen* زمان آینده (*Futur I*) است و *vergessen* به پایان جمله می‌رود.
+      de: Ein starker letzter Satz für eine Geschichte. *werde … vergessen* ist Futur, *vergessen* steht am Ende.
+    examTasks: [exam-schreiben-1, exam-sprechen-2]
+    example:
+      de: Es war der schönste Tag meines Lebens. Das werde ich nie vergessen.
+      en: It was the most beautiful day of my life. I will never forget it.
+      fa: زیباترین روز زندگی‌ام بود. هرگز فراموشش نمی‌کنم.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Du erzählst von deiner Reise. Das Essen war das Beste. Was sagst du?
+    options:
+      - Am besten habe mir das Essen gefallen.
+      - Am besten hat mich das Essen gefallen.
+      - Am besten hat mir das Essen gefallen.
+    answer: Am besten hat mir das Essen gefallen.
+    explanation:
+      en: The subject is *das Essen*, so the verb is *hat*, and the person who liked it is in the dative, *mir*.
+      fa: "فاعل جمله *das Essen* است، پس فعل *hat* است، و کسی که خوشش آمده در حالت *Dativ* می‌آید: *mir*."
+      de: Das Subjekt ist *das Essen*, also *hat*. Die Person steht im Dativ, *mir*.
+
+  - id: q2
+    type: gap-fill
+    prompt: Gestern ___ mir etwas Lustiges passiert.
+    options: [hat, ist, habe]
+    answer: ist
+    explanation:
+      en: "*passieren* takes *sein* in the Perfekt: *ist passiert*."
+      fa: "*passieren* در گذشتهٔ نقلی (*Perfekt*) با *sein* می‌آید: *ist passiert*."
+      de: "*passieren* hat im Perfekt *sein*: *ist passiert*."
+
+  - id: q3
+    type: true-false
+    prompt: Als wir am Bahnhof ankamen, der Zug war schon weg.
+    answer: false
+    explanation:
+      en: "After the *als* clause the main clause begins with its verb: *Als wir am Bahnhof ankamen, war der Zug schon weg.*"
+      fa: "پس از جملهٔ *als*، جملهٔ پایه با فعلش شروع می‌شود: *Als wir am Bahnhof ankamen, war der Zug schon weg.*"
+      de: "Nach dem Satz mit *als* beginnt der Hauptsatz mit dem Verb: *Als wir am Bahnhof ankamen, war der Zug schon weg.*"
+
+  - id: q4
+    type: true-false
+    prompt: Am besten haben mir die Konzerte gefallen.
+    answer: true
+    explanation:
+      en: Right. The subject *die Konzerte* is plural, so the verb is *haben*.
+      fa: درست است. فاعل جمله، *die Konzerte*، جمع است، پس فعل *haben* است.
+      de: Richtig. Das Subjekt *die Konzerte* ist Plural, also *haben*.
+
+  - id: q5
+    type: find-error
+    prompt: Wenn wir gestern am Bahnhof ankamen, war der Zug schon weg.
+    answer: Wenn
+    explanation:
+      en: For one event in the past it is *als*. *wenn* in the past is for something that happened again and again.
+      fa: برای یک رویداد یگانه در گذشته *als* به کار می‌رود. *wenn* در گذشته برای کاری است که بارها تکرار شده است.
+      de: Für ein einmaliges Ereignis in der Vergangenheit sagt man *als*. *wenn* steht in der Vergangenheit für etwas, das oft passiert ist.
+
+  - id: q6
+    type: word-order
+    answers:
+      - [das, werde, ich, nie, vergessen]
+      - [ich, werde, das, nie, vergessen]
+      - [nie, werde, ich, das, vergessen]
+    explanation:
+      en: "*werde* is in position 2 and *vergessen* goes to the end: *Das werde ich nie vergessen.*"
+      fa: "*werde* در جایگاه دوم است و *vergessen* در پایان جمله: *Das werde ich nie vergessen.*"
+      de: "*werde* steht an Position 2, *vergessen* am Ende: *Das werde ich nie vergessen.*"
+
+  - id: q7
+    type: multiple-choice
+    prompt: Du hast eine tolle Neuigkeit für deine Freundin. Wie beginnst du?
+    options:
+      - Stell dir vor, ich habe eine neue Wohnung gefunden!
+      - Stell dich vor, ich habe eine neue Wohnung gefunden!
+      - Stell dir vor, ich eine neue Wohnung gefunden habe!
+    answer: Stell dir vor, ich habe eine neue Wohnung gefunden!
+    explanation:
+      en: The phrase is *Stell dir vor*, with *dir*, and a whole sentence follows with its verb in position 2.
+      fa: عبارت *Stell dir vor* با *dir* است و پس از آن جمله‌ای کامل می‌آید که فعلش در جایگاه دوم است.
+      de: Der Satz heißt *Stell dir vor*, mit *dir*. Danach kommt ein ganzer Satz, das Verb steht an Position 2.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Lena, stell ___ vor, ich habe eine neue Wohnung gefunden!
+    answers: [dir]
+    explanation:
+      en: The phrase is *Stell dir vor*, with the dative *dir*.
+      fa: عبارت *Stell dir vor* است، با *dir* در حالت *Dativ*.
+      de: Der Satz heißt *Stell dir vor*, mit dem Dativ *dir*.
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Lena, ___ (vorstellen) dir vor, ich habe eine neue Wohnung gefunden!
+    answers: [stell, stelle]
+    explanation:
+      en: To one friend the imperative of *sich vorstellen* is *stell dir vor*; *vor* goes to the end.
+      fa: امر *sich vorstellen* برای یک دوست *stell dir vor* است و *vor* به پایان می‌رود.
+      de: Der Imperativ von *sich vorstellen* für eine Person ist *stell dir vor*. *vor* steht am Ende.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Gestern ist ___ (ich) etwas Lustiges passiert.
+    answers: [mir]
+    explanation:
+      en: With *passieren* the person is in the dative, *mir*.
+      fa: "با *passieren* شخص در حالت *Dativ* می‌آید: *mir*."
+      de: Bei *passieren* steht die Person im Dativ, *mir*.
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Gestern ist mir etwas ___ (lustig) passiert.
+    answers: [Lustiges]
+    explanation:
+      en: After *etwas* the adjective has a capital letter and *-es*, *etwas Lustiges*.
+      fa: "صفت پس از *etwas* با حرف بزرگ و پایانهٔ *-es* نوشته می‌شود: *etwas Lustiges*."
+      de: Nach *etwas* schreibt man das Adjektiv groß und mit *-es*, *etwas Lustiges*.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Als wir am Bahnhof ___ (ankommen), war der Zug schon weg.
+    answers: [ankamen, angekommen sind, angekommen waren]
+    explanation:
+      en: After *als* the verb goes to the end, here in the Präteritum, *ankamen*, written as one word.
+      fa: "پس از *als* فعل به پایان جمله می‌رود، این‌جا در گذشتهٔ ساده (*Präteritum*): *ankamen*، که سرهم نوشته می‌شود."
+      de: Nach *als* steht das Verb am Ende, hier im Präteritum, *ankamen*, in einem Wort.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Als wir am Bahnhof ankamen, ___ (sein) der Zug schon weg.
+    answers: [war]
+    explanation:
+      en: After the *als* clause the main clause begins with its verb, *war*.
+      fa: پس از جملهٔ *als*، جملهٔ پایه با فعلش (*war*) شروع می‌شود.
+      de: Nach dem Satz mit *als* beginnt der Hauptsatz mit dem Verb, *war*.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Wir saßen gemütlich im Garten. Plötzlich ___ (beginnen) es zu regnen.
+    answers: [begann]
+    explanation:
+      en: The verb comes right after *plötzlich*. In a story it is the Präteritum, *begann*.
+      fa: "فعل بلافاصله پس از *plötzlich* می‌آید. در داستان از گذشتهٔ ساده (*Präteritum*) استفاده می‌شود: *begann*."
+      de: Das Verb kommt direkt nach *plötzlich*. In einer Geschichte steht das Präteritum, *begann*.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: ___ Glück hat uns ein Nachbar mit dem Auto zum Flughafen gebracht.
+    answers: [Zum]
+    explanation:
+      en: The phrase is *zum Glück*.
+      fa: عبارت *zum Glück* است.
+      de: Der Ausdruck heißt *zum Glück*.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Zum Glück ___ (haben) uns ein Nachbar mit dem Auto zum Flughafen gebracht.
+    answers: [hat, hatte]
+    explanation:
+      en: The verb comes right after *zum Glück*, and the subject *ein Nachbar* takes *hat*.
+      fa: فعل بلافاصله پس از *zum Glück* می‌آید و با فاعل *ein Nachbar* شکل *hat* درست است.
+      de: Das Verb kommt direkt nach *zum Glück*. Zum Subjekt *ein Nachbar* passt *hat*.
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Die Hochzeit war wunderschön, es hat ___ (ich) sehr gut gefallen.
+    answers: [mir]
+    explanation:
+      en: With *gefallen* the person is in the dative, *mir*.
+      fa: "با *gefallen* شخص در حالت *Dativ* می‌آید: *mir*."
+      de: Bei *gefallen* steht die Person im Dativ, *mir*.
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Es war der schönste Tag meines Lebens. Das ___ (werden) ich nie vergessen.
+    answers: [werde]
+    explanation:
+      en: The phrase is *Das werde ich nie vergessen*, the future with *werden*.
+      fa: عبارت *Das werde ich nie vergessen* است، در زمان آینده با *werden*.
+      de: Der Satz heißt *Das werde ich nie vergessen*, das Futur mit *werden*.
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Am besten ___ (haben) mir die Konzerte gefallen.
+    answers: [haben, hatten]
+    explanation:
+      en: The subject *die Konzerte* is plural, so the verb is *haben*.
+      fa: فاعل جمله، *die Konzerte*، جمع است، پس فعل *haben* است.
+      de: Das Subjekt *die Konzerte* ist Plural, also *haben*.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Nicht so schön war, ___ es die ganze Zeit geregnet hat.
+    answers: [dass]
+    explanation:
+      en: The phrase is *Nicht so schön war, dass …*, with the verb at the end.
+      fa: عبارت *Nicht so schön war, dass …* است و فعل در پایان جمله می‌آید.
+      de: Der Satz heißt *Nicht so schön war, dass …*, das Verb steht am Ende.

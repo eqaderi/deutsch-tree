@@ -5,6 +5,7 @@ level: B1
 chapter: b1-phrases-writing
 order: 4
 status: coming-soon
+prerequisites: [grammar-150, grammar-155]
 title:
   en: "Ordering and linking your points"
   fa: "مرتب کردن و پیوند دادن مطالب"
@@ -14,3 +15,287 @@ purpose:
   fa: "مطالبتان را به ترتیب بچینید و به هم وصل کنید تا دنبال کردن متن یا صحبت شما آسان باشد."
   de: "Die eigenen Punkte in eine Reihenfolge bringen und verbinden, damit man den Text oder Vortrag gut versteht."
 examTasks: [exam-schreiben-1, exam-schreiben-2, exam-sprechen-2]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Erstens …, zweitens …
+    meaning:
+      en: Firstly …, secondly … Numbers your points one after the other; the third one is *drittens*. The verb comes right after each of these words.
+      fa: «اول اینکه …، دوم اینکه …» نکته‌هایتان را یکی پس از دیگری شماره‌گذاری می‌کند؛ سومی *drittens* است. فعل بلافاصله پس از هر کدام از این واژه‌ها می‌آید.
+      de: So zählt man seine Punkte nacheinander. Der dritte Punkt heißt *drittens*. Das Verb kommt direkt nach diesen Wörtern.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Erstens ist das Fahrrad billig, zweitens ist es gut für die Gesundheit.
+      en: Firstly the bike is cheap, secondly it is good for your health.
+      fa: اول اینکه دوچرخه ارزان است، دوم اینکه برای سلامتی خوب است.
+
+  - de: Zum einen …, zum anderen …
+    meaning:
+      en: For one thing …, for another … Gives two reasons that point the same way. For two sides that contrast, use *einerseits … andererseits*. The verb comes right after *zum einen* and *zum anderen*.
+      fa: «یکی اینکه …، دیگر اینکه …» دو دلیل هم‌سو را کنار هم می‌گذارد. برای دو جنبهٔ متضاد *einerseits … andererseits* به کار می‌رود. فعل بلافاصله پس از *zum einen* و *zum anderen* می‌آید.
+      de: Damit nennt man zwei Gründe, die zusammenpassen. Für zwei Seiten, die gegeneinander stehen, sagt man *einerseits … andererseits*. Das Verb kommt direkt nach *zum einen* und *zum anderen*.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Ich fahre gern mit dem Zug. Zum einen ist es bequem, zum anderen kann ich unterwegs lesen.
+      en: I like travelling by train. For one thing it is comfortable, for another I can read on the way.
+      fa: دوست دارم با قطار سفر کنم. یکی اینکه راحت است، دیگر اینکه در راه می‌توانم کتاب بخوانم.
+
+  - de: Außerdem …
+    meaning:
+      en: What's more … / Besides … Adds one more point. *außerdem* takes the first place, and the verb comes right after it.
+      fa: «علاوه بر این …» نکتهٔ دیگری اضافه می‌کند. *außerdem* در جایگاه اول می‌آید و فعل بلافاصله پس از آن قرار می‌گیرد.
+      de: Damit kommt noch ein Punkt dazu. *außerdem* steht auf Position 1, das Verb kommt direkt danach.
+    examTasks: [exam-schreiben-1, exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Die Wohnung ist hell und groß. Außerdem liegt sie nah am Park.
+      en: The flat is bright and large. What's more, it is close to the park.
+      fa: آپارتمان روشن و بزرگ است. علاوه بر این، نزدیک پارک است.
+
+  - de: Dazu kommt, dass …
+    meaning:
+      en: On top of that … Adds a further point, often a stronger one. After *dass* the verb goes to the end.
+      fa: «از این گذشته …» نکتهٔ دیگری اضافه می‌کند، اغلب نکته‌ای مهم‌تر. پس از *dass* فعل به پایان جمله می‌رود.
+      de: Damit nennt man noch einen Punkt, oft einen wichtigen. Nach *dass* steht das Verb am Ende.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Ein Auto ist teuer. Dazu kommt, dass man in der Stadt kaum einen Parkplatz findet.
+      en: A car is expensive. On top of that, you can hardly find a parking space in town.
+      fa: ماشین گران است. از این گذشته، در شهر به‌سختی جای پارک پیدا می‌شود.
+
+  - de: Ein weiterer Punkt ist …
+    meaning:
+      en: Another point is … Opens your next point. *weiter* takes the ending that the article needs, as in *ein weiterer Punkt* or *eine weitere Frage*.
+      fa: «نکتهٔ دیگر … است.» نکتهٔ بعدی را آغاز می‌کند. *weiter* پایانه‌ای می‌گیرد که حرف تعریف می‌خواهد، مانند *ein weiterer Punkt* یا *eine weitere Frage*.
+      de: So beginnt man den nächsten Punkt. *weiter* bekommt eine Endung, zum Beispiel *ein weiterer Punkt* oder *eine weitere Frage*.
+    examTasks: [exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: "Ein weiterer Punkt ist die Zeit: Mit dem Fahrrad steht man nie im Stau."
+      en: "Another point is time: on a bike you are never stuck in a traffic jam."
+      fa: "نکتهٔ دیگر زمان است: با دوچرخه هیچ‌وقت در ترافیک گیر نمی‌کنید."
+
+  - de: Übrigens …
+    meaning:
+      en: By the way … Brings in a new point, often in an e-mail to a friend. The verb comes right after it.
+      fa: «راستی …» نکتهٔ تازه‌ای را پیش می‌کشد، اغلب در ایمیل به یک دوست. فعل بلافاصله پس از آن می‌آید.
+      de: Damit kommt ein neuer Punkt, oft in einer E-Mail an Freunde. Das Verb kommt direkt danach.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Übrigens habe ich jetzt eine neue Arbeit.
+      en: By the way, I have a new job now.
+      fa: راستی، حالا کار تازه‌ای دارم.
+
+  - de: "Jetzt zu deiner Frage: …"
+    meaning:
+      en: "Now to your question: … Moves on in an e-mail, often to something your friend asked. To a person you address with *Sie*: *Jetzt zu Ihrer Frage*."
+      fa: "«و اما پرسشت: …» در ایمیل به نکتهٔ بعدی می‌رود، اغلب به چیزی که دوستتان پرسیده است. به کسی که با *Sie* خطابش می‌کنید: *Jetzt zu Ihrer Frage*."
+      de: "So kommt man in einer E-Mail zum nächsten Punkt, oft zu einer Frage vom Freund oder von der Freundin. Mit *Sie* heißt es: *Jetzt zu Ihrer Frage*."
+    examTasks: [exam-schreiben-1]
+    example:
+      de: "Jetzt zu deiner Frage: Ja, ich komme gern zu deiner Party."
+      en: "Now to your question: yes, I would love to come to your party."
+      fa: "و اما پرسشت: بله، با کمال میل به مهمانی‌ات می‌آیم."
+
+  - de: Zum Schluss …
+    meaning:
+      en: Finally … Opens your last point. The verb comes right after it, as in *Zum Schluss möchte ich noch sagen, dass …*
+      fa: «در پایان …» آخرین نکته‌تان را آغاز می‌کند. فعل بلافاصله پس از آن می‌آید، مانند *Zum Schluss möchte ich noch sagen, dass …*
+      de: So beginnt man den letzten Punkt. Das Verb kommt direkt danach, zum Beispiel *Zum Schluss möchte ich noch sagen, dass …*
+    examTasks: [exam-schreiben-1, exam-schreiben-2, exam-sprechen-2]
+    example:
+      de: Zum Schluss möchte ich noch sagen, dass mir die Arbeit im Team viel Spaß macht.
+      en: Finally I would like to say that I really enjoy working in the team.
+      fa: در پایان می‌خواهم بگویم که از کار گروهی خیلی لذت می‌برم.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: "Erstens ist das Fahrrad billig. Wie nennst du den zweiten Grund?"
+    options:
+      - Zweitens es ist gut für die Gesundheit.
+      - Zweite ist es gut für die Gesundheit.
+      - Zweitens ist es gut für die Gesundheit.
+    answer: Zweitens ist es gut für die Gesundheit.
+    explanation:
+      en: The word is *zweitens*, and the verb *ist* comes right after it.
+      fa: واژهٔ درست *zweitens* است و فعل *ist* بلافاصله پس از آن می‌آید.
+      de: Das Wort heißt *zweitens*, und das Verb *ist* kommt direkt danach.
+
+  - id: q2
+    type: gap-fill
+    prompt: Zum einen ist der Zug bequem, zum ___ kann ich unterwegs lesen.
+    options: [andere, anderen, ander]
+    answer: anderen
+    explanation:
+      en: The pair is *zum einen …, zum anderen …*
+      fa: این جفت *zum einen …, zum anderen …* است.
+      de: Das Paar heißt *zum einen …, zum anderen …*
+
+  - id: q3
+    type: true-false
+    prompt: Die Wohnung ist hell und groß. Außerdem liegt sie nah am Park.
+    answer: true
+    explanation:
+      en: Right. *außerdem* is in position 1 and the verb *liegt* comes right after it.
+      fa: درست است. *außerdem* در جایگاه اول است و فعل *liegt* بلافاصله پس از آن آمده است.
+      de: Richtig. *außerdem* steht auf Position 1, das Verb *liegt* kommt direkt danach.
+
+  - id: q4
+    type: true-false
+    prompt: Ein Auto ist teuer. Dazu kommt, dass man findet in der Stadt kaum einen Parkplatz.
+    answer: false
+    explanation:
+      en: "After *dass* the verb goes to the end: *Dazu kommt, dass man in der Stadt kaum einen Parkplatz findet.*"
+      fa: "پس از *dass* فعل به پایان جمله می‌رود: *Dazu kommt, dass man in der Stadt kaum einen Parkplatz findet.*"
+      de: "Nach *dass* steht das Verb am Ende: *Dazu kommt, dass man in der Stadt kaum einen Parkplatz findet.*"
+
+  - id: q5
+    type: find-error
+    prompt: "Ein weitere Punkt ist die Zeit: Mit dem Fahrrad steht man nie im Stau."
+    answer: weitere
+    explanation:
+      en: "*der Punkt* is masculine, so after *ein* it is *weiterer*: *ein weiterer Punkt*."
+      fa: "*Punkt* اسم مذکر (*der*) است، پس پس از *ein* شکل *weiterer* می‌آید: *ein weiterer Punkt*."
+      de: "Es heißt *der Punkt*, also nach *ein* *weiterer*: *ein weiterer Punkt*."
+
+  - id: q6
+    type: word-order
+    answers:
+      - [außerdem, liegt, sie, nah am Park]
+      - [sie, liegt, außerdem, nah am Park]
+      - [nah am Park, liegt, sie, außerdem]
+    explanation:
+      en: "The verb *liegt* is in position 2: *Außerdem liegt sie nah am Park.*"
+      fa: "فعل *liegt* در جایگاه دوم است: *Außerdem liegt sie nah am Park.*"
+      de: "Das Verb *liegt* steht an Position 2: *Außerdem liegt sie nah am Park.*"
+
+  - id: q7
+    type: multiple-choice
+    prompt: Deine Freundin Anna hat dir in ihrer E-Mail eine Frage gestellt. Wie kommst du in deiner Antwort zu dieser Frage?
+    options:
+      - "Jetzt zu deine Frage: …"
+      - "Jetzt zu Ihrer Frage: …"
+      - "Jetzt zu deiner Frage: …"
+    answer: "Jetzt zu deiner Frage: …"
+    explanation:
+      en: To a friend it is *deine*, and *zu* takes the dative, so *zu deiner Frage*.
+      fa: به یک دوست *deine* می‌نویسید و پس از *zu* حالت *Dativ* می‌آید، پس *zu deiner Frage*.
+      de: An eine Freundin schreibt man *deine*, und nach *zu* kommt der Dativ, also *zu deiner Frage*.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: ___ ist das Fahrrad billig, zweitens ist es gut für die Gesundheit.
+    answers: [Erstens]
+    explanation:
+      en: The first point is *erstens*, the second *zweitens*.
+      fa: نکتهٔ اول *erstens* است و نکتهٔ دوم *zweitens*.
+      de: Der erste Punkt heißt *erstens*, der zweite *zweitens*.
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Erstens ist das Fahrrad billig, ___ (zwei) ist es gut für die Gesundheit.
+    answers: [zweitens]
+    explanation:
+      en: The second point is *zweitens*.
+      fa: نکتهٔ دوم *zweitens* است.
+      de: Der zweite Punkt heißt *zweitens*.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Erstens ist das Fahrrad billig, zweitens ___ (sein) es gut für die Gesundheit.
+    answers: [ist]
+    explanation:
+      en: The verb comes right after *zweitens*, *ist es*.
+      fa: "فعل بلافاصله پس از *zweitens* می‌آید: *ist es*."
+      de: Das Verb kommt direkt nach *zweitens*, *ist es*.
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Ich fahre gern mit dem Zug. Zum ___ ist es bequem, zum anderen kann ich unterwegs lesen.
+    answers: [einen]
+    explanation:
+      en: The pair is *zum einen …, zum anderen …*
+      fa: این جفت *zum einen …, zum anderen …* است.
+      de: Das Paar heißt *zum einen …, zum anderen …*
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Die Wohnung ist hell und groß. Außerdem ___ (liegen) sie nah am Park.
+    answers: [liegt]
+    explanation:
+      en: The verb comes right after *außerdem*, *liegt sie*.
+      fa: "فعل بلافاصله پس از *außerdem* می‌آید: *liegt sie*."
+      de: Das Verb kommt direkt nach *außerdem*, *liegt sie*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Ein Auto ist teuer. Dazu ___ (kommen), dass man in der Stadt kaum einen Parkplatz findet.
+    answers: [kommt]
+    explanation:
+      en: The phrase is *Dazu kommt, dass …*
+      fa: عبارت *Dazu kommt, dass …* است.
+      de: Der Satz heißt *Dazu kommt, dass …*
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Ein Auto ist teuer. Dazu kommt, ___ man in der Stadt kaum einen Parkplatz findet.
+    answers: [dass]
+    explanation:
+      en: The phrase is *Dazu kommt, dass …*, with the verb at the end.
+      fa: عبارت *Dazu kommt, dass …* است و فعل در پایان جمله می‌آید.
+      de: Der Satz heißt *Dazu kommt, dass …*, das Verb steht am Ende.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: "Ein ___ (weiter) Punkt ist die Zeit: Mit dem Fahrrad steht man nie im Stau."
+    answers: [weiterer]
+    explanation:
+      en: "*der Punkt* is masculine, so *ein weiterer Punkt*."
+      fa: "*Punkt* اسم مذکر (*der*) است، پس *ein weiterer Punkt*."
+      de: "Es heißt *der Punkt*, also *ein weiterer Punkt*."
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: "Eine ___ (weiter) Frage ist der Preis: Wie viel kostet ein gutes Fahrrad?"
+    answers: [weitere]
+    explanation:
+      en: "*die Frage* is feminine, so *eine weitere Frage*."
+      fa: "*Frage* اسم مؤنث (*die*) است، پس *eine weitere Frage*."
+      de: "Es heißt *die Frage*, also *eine weitere Frage*."
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Übrigens ___ (haben) ich jetzt eine neue Arbeit.
+    answers: [habe]
+    explanation:
+      en: The verb comes right after *übrigens*, *habe ich*.
+      fa: "فعل بلافاصله پس از *übrigens* می‌آید: *habe ich*."
+      de: Das Verb kommt direkt nach *übrigens*, *habe ich*.
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: "Jetzt zu ___ (deine) Frage: Ja, ich komme gern zu deiner Party."
+    answers: [deiner]
+    explanation:
+      en: "*zu* takes the dative, so *zu deiner Frage*."
+      fa: "پس از *zu* حالت *Dativ* می‌آید، پس *zu deiner Frage*."
+      de: "Nach *zu* kommt der Dativ, also *zu deiner Frage*."
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: "Sehr geehrte Frau Becker, jetzt zu ___ (Ihre) Frage: Der Kurs beginnt am Montag."
+    answers: [Ihrer]
+    explanation:
+      en: "*zu* takes the dative, so *zu Ihrer Frage*, with a capital *I*."
+      fa: "پس از *zu* حالت *Dativ* می‌آید، پس *zu Ihrer Frage*، با *I* بزرگ."
+      de: "Nach *zu* kommt der Dativ, also *zu Ihrer Frage*, mit großem *I*."
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Zum ___ möchte ich noch sagen, dass mir die Arbeit im Team viel Spaß macht.
+    answers: [Schluss, Abschluss, Ende]
+    explanation:
+      en: The usual phrase is *Zum Schluss …*
+      fa: عبارت معمول *Zum Schluss …* است.
+      de: Der normale Ausdruck heißt *Zum Schluss …*

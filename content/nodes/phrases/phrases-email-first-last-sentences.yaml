@@ -5,12 +5,307 @@ level: B1
 chapter: b1-phrases-writing
 order: 1
 status: coming-soon
+prerequisites: [phrases-email-friend-greetings, phrases-email-formal-greetings, grammar-158]
 title:
   en: "First and last sentences of an e-mail"
   fa: "جمله‌های اول و آخر ایمیل"
   de: "Erste und letzte Sätze in einer E-Mail"
 purpose:
   en: "After the greeting, say why you are writing; before the closing, end with a wish or a request for an answer."
-  fa: "بعد از سلام بگویید چرا می‌نویسید؛ پیش از خداحافظی با یک آرزو یا درخواست جواب تمام کنید."
+  fa: "بعد از سلام بگویید چرا می‌نویسید؛ پیش از خداحافظی با یک آرزو یا درخواست پاسخ تمام کنید."
   de: "Nach der Anrede sagen, warum man schreibt; vor dem Gruß mit einem Wunsch oder einer Bitte um Antwort enden."
 examTasks: [exam-schreiben-1, exam-schreiben-3]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Ich habe mich sehr über deine E-Mail gefreut.
+    meaning:
+      en: I was very happy to get your e-mail. A warm first sentence when you answer a friend. *sich freuen über* is for something you already have.
+      fa: «از ایمیلت خیلی خوشحال شدم.» جملهٔ اول گرمی برای پاسخ دادن به ایمیل یک دوست. *sich freuen über* برای چیزی است که به دستتان رسیده است.
+      de: Ein freundlicher erster Satz, wenn man einem Freund oder einer Freundin antwortet. *sich freuen über* sagt man für etwas, das man schon hat.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Liebe Lena, ich habe mich sehr über deine E-Mail gefreut.
+      en: Dear Lena, I was very happy to get your e-mail.
+      fa: لنای عزیز، از ایمیلت خیلی خوشحال شدم.
+
+  - de: Ich hoffe, es geht dir gut.
+    meaning:
+      en: I hope you are well. A friendly sentence near the start of an e-mail to a friend. After *es geht* comes the dative, *dir*; to two or more friends, *euch*.
+      fa: "«امیدوارم حالت خوب باشد.» جمله‌ای دوستانه در آغاز ایمیل به یک دوست. پس از *es geht* حالت *Dativ* می‌آید: *dir*، و برای دو نفر یا بیشتر *euch*."
+      de: Ein freundlicher Satz am Anfang einer E-Mail an einen Freund. Nach *es geht* kommt der Dativ, *dir*. Bei zwei oder mehr Personen sagt man *euch*.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Ich hoffe, es geht dir und deiner Familie gut.
+      en: I hope you and your family are well.
+      fa: امیدوارم حال تو و خانواده‌ات خوب باشد.
+
+  - de: Ich schreibe dir, weil …
+    meaning:
+      en: I am writing to you because … Says right at the start why you are writing. *schreiben* takes the person in the dative, *dir*; after *weil* the verb goes to the end.
+      fa: «برایت می‌نویسم، چون …» در همان آغاز می‌گوید چرا می‌نویسید. گیرنده پس از *schreiben* در حالت *Dativ* می‌آید (*dir*) و پس از *weil* فعل به پایان جمله می‌رود.
+      de: So sagt man gleich am Anfang, warum man schreibt. Nach *schreiben* steht die Person im Dativ, *dir*. Nach *weil* steht das Verb am Ende.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Ich schreibe dir, weil ich nächsten Monat nach Hamburg komme.
+      en: I am writing to you because I am coming to Hamburg next month.
+      fa: برایت می‌نویسم، چون ماه آینده به هامبورگ می‌آیم.
+
+  - de: Ich schreibe Ihnen wegen …
+    meaning:
+      en: I am writing to you about … The formal way to name the reason for an e-mail at its start. In writing, *wegen* takes the genitive, as in *wegen des Kurses* or *wegen meiner Anmeldung*.
+      fa: «دربارهٔ … برایتان می‌نویسم.» شیوهٔ رسمی گفتن موضوع ایمیل در آغاز آن. در نوشتار پس از *wegen* حالت *Genitiv* می‌آید، مانند *wegen des Kurses* یا *wegen meiner Anmeldung*.
+      de: So nennt man in einer formellen E-Mail am Anfang den Grund. Beim Schreiben kommt nach *wegen* der Genitiv, zum Beispiel *wegen des Kurses* oder *wegen meiner Anmeldung*.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Sehr geehrte Frau Krüger, ich schreibe Ihnen wegen des Deutschkurses am Samstag.
+      en: Dear Ms Krüger, I am writing to you about the German course on Saturday.
+      fa: خانم کروگر گرامی، دربارهٔ کلاس آلمانی روز شنبه برایتان می‌نویسم.
+
+  - de: Schreib mir bald!
+    meaning:
+      en: Write to me soon! A short, warm last sentence to a friend. To two or more friends you write *Schreibt mir bald!*
+      fa: «زود برایم بنویس!» جملهٔ پایانی کوتاه و گرمی برای یک دوست. به دو نفر یا بیشتر می‌نویسید *Schreibt mir bald!*
+      de: Ein kurzer, freundlicher letzter Satz an einen Freund oder eine Freundin. An zwei oder mehr Personen schreibt man *Schreibt mir bald!*
+    examTasks: [exam-schreiben-1]
+    example:
+      de: So, jetzt muss ich los. Schreib mir bald!
+      en: Right, I have to go now. Write to me soon!
+      fa: خب، حالا باید بروم. زود برایم بنویس!
+
+  - de: Ich hoffe, wir sehen uns bald.
+    meaning:
+      en: I hope we see each other soon. A warm last sentence to a friend or to your family. Here *uns* means "each other".
+      fa: «امیدوارم به‌زودی همدیگر را ببینیم.» جملهٔ پایانی گرمی برای یک دوست یا برای خانواده. *uns* در این‌جا یعنی «همدیگر».
+      de: Ein freundlicher letzter Satz an Freunde oder an die Familie. *uns* heißt hier „einander“.
+    examTasks: [exam-schreiben-1]
+    example:
+      de: Ich vermisse dich sehr und hoffe, wir sehen uns bald.
+      en: I miss you a lot and hope we see each other soon.
+      fa: خیلی دلم برایت تنگ شده و امیدوارم به‌زودی همدیگر را ببینیم.
+
+  - de: Ich freue mich auf Ihre Antwort.
+    meaning:
+      en: I look forward to your reply. The usual last sentence of a formal e-mail. *sich freuen auf* is for something still to come. To a friend you write *auf deine Antwort*.
+      fa: «منتظر پاسخ شما هستم.» جملهٔ پایانی معمول در ایمیل رسمی. *sich freuen auf* برای چیزی است که هنوز پیش نیامده است. به یک دوست می‌نویسید *auf deine Antwort*.
+      de: Der normale letzte Satz einer formellen E-Mail. *sich freuen auf* sagt man für etwas, das noch kommt. An einen Freund schreibt man *auf deine Antwort*.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Vielen Dank im Voraus. Ich freue mich auf Ihre Antwort.
+      en: Thank you in advance. I look forward to your reply.
+      fa: پیشاپیش سپاسگزارم. منتظر پاسخ شما هستم.
+
+  - de: Über eine schnelle Antwort würde ich mich freuen.
+    meaning:
+      en: I would be glad of a quick reply. A polite, formal request for an answer, with *würde*. The usual order is right too, *Ich würde mich über eine schnelle Antwort freuen.*
+      fa: "«از پاسخ سریع شما خوشحال می‌شوم.» درخواستی مؤدبانه و رسمی برای پاسخ، با *würde*. ترتیب معمول هم درست است: *Ich würde mich über eine schnelle Antwort freuen.*"
+      de: Eine höfliche, formelle Bitte um Antwort, mit *würde*. Man kann auch sagen *Ich würde mich über eine schnelle Antwort freuen.*
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Der Kurs beginnt schon nächste Woche. Über eine schnelle Antwort würde ich mich freuen.
+      en: The course already begins next week. I would be glad of a quick reply.
+      fa: کلاس از هفتهٔ آینده شروع می‌شود. از پاسخ سریع شما خوشحال می‌شوم.
+
+  - de: Bei Fragen können Sie mich gern anrufen.
+    meaning:
+      en: If you have any questions, feel free to call me. A friendly offer at the end of a formal e-mail. *Bei Fragen* means "if there are questions".
+      fa: «اگر پرسشی داشتید، با من تماس بگیرید.» پیشنهادی دوستانه در پایان ایمیل رسمی. *Bei Fragen* یعنی «اگر پرسشی بود».
+      de: Ein freundliches Angebot am Ende einer formellen E-Mail. *Bei Fragen* heißt „wenn Sie Fragen haben“.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Bei Fragen können Sie mich gern jederzeit anrufen.
+      en: If you have any questions, feel free to call me at any time.
+      fa: اگر پرسشی داشتید، هر وقت خواستید با من تماس بگیرید.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Deine Freundin Lena hat dir eine E-Mail geschrieben. Sie hat dich sehr gefreut. Wie beginnst du deine Antwort?
+    options:
+      - Ich habe mich sehr für deine E-Mail gefreut.
+      - Ich habe mich sehr über deine E-Mail gefreut.
+      - Ich habe sehr über deine E-Mail gefreut.
+    answer: Ich habe mich sehr über deine E-Mail gefreut.
+    explanation:
+      en: For something you have received it is *sich freuen über*, and the verb needs *mich*.
+      fa: برای چیزی که به دستتان رسیده *sich freuen über* به کار می‌رود و فعل *mich* را لازم دارد.
+      de: Für etwas, das man bekommen hat, sagt man *sich freuen über*. Das Verb braucht *mich*.
+
+  - id: q2
+    type: gap-fill
+    prompt: Sehr geehrte Frau Krüger, ich schreibe Ihnen ___ des Deutschkurses am Samstag.
+    options: [denn, weil, wegen]
+    answer: wegen
+    explanation:
+      en: A noun follows, *des Deutschkurses*, so it is the preposition *wegen*. *weil* and *denn* begin a whole clause.
+      fa: پس از جای خالی اسم می‌آید (*des Deutschkurses*)، پس حرف اضافهٔ *wegen* درست است. *weil* و *denn* جملهٔ کامل را آغاز می‌کنند.
+      de: Danach kommt ein Nomen, *des Deutschkurses*, also die Präposition *wegen*. *weil* und *denn* beginnen einen ganzen Satz.
+
+  - id: q3
+    type: true-false
+    prompt: Ich schreibe dir, weil ich nächsten Monat nach Hamburg komme.
+    answer: true
+    explanation:
+      en: Right. After *weil* the verb *komme* goes to the end.
+      fa: درست است. پس از *weil* فعل *komme* به پایان جمله رفته است.
+      de: Richtig. Nach *weil* steht das Verb *komme* am Ende.
+
+  - id: q4
+    type: true-false
+    prompt: Ich freue mich auf Ihrer Antwort.
+    answer: false
+    explanation:
+      en: "*sich freuen auf* takes the accusative: *auf Ihre Antwort*."
+      fa: "پس از *sich freuen auf* حالت *Akkusativ* می‌آید: *auf Ihre Antwort*."
+      de: "Nach *sich freuen auf* kommt der Akkusativ: *auf Ihre Antwort*."
+
+  - id: q5
+    type: find-error
+    prompt: Ich hoffe, es geht dich gut.
+    answer: dich
+    explanation:
+      en: "After *es geht* comes the dative: *Ich hoffe, es geht dir gut.*"
+      fa: "پس از *es geht* حالت *Dativ* می‌آید: *Ich hoffe, es geht dir gut.*"
+      de: "Nach *es geht* kommt der Dativ: *Ich hoffe, es geht dir gut.*"
+
+  - id: q6
+    type: word-order
+    answers:
+      - [ich, freue, mich, auf Ihre Antwort]
+      - [auf Ihre Antwort, freue, ich, mich]
+    explanation:
+      en: "*freue* is in position 2 and *mich* comes after the subject: *Ich freue mich auf Ihre Antwort.*"
+      fa: "*freue* در جایگاه دوم است و *mich* پس از فاعل می‌آید: *Ich freue mich auf Ihre Antwort.*"
+      de: "*freue* steht an Position 2, *mich* kommt nach dem Subjekt: *Ich freue mich auf Ihre Antwort.*"
+
+  - id: q7
+    type: multiple-choice
+    prompt: Du schreibst an deinen Vermieter, Herrn Braun. Welcher letzte Satz passt?
+    options:
+      - Ich freue mich auf Ihre Antwort.
+      - Schreib mir bald!
+      - Ich hoffe, es geht dir gut.
+    answer: Ich freue mich auf Ihre Antwort.
+    explanation:
+      en: To your landlord you write with *Sie*, and *Ich freue mich auf Ihre Antwort* is the usual last sentence. The other two are for a friend.
+      fa: به صاحب‌خانه با *Sie* می‌نویسید و *Ich freue mich auf Ihre Antwort* جملهٔ پایانی معمول است. دو جملهٔ دیگر برای دوست است.
+      de: An den Vermieter schreibt man mit *Sie*, und *Ich freue mich auf Ihre Antwort* ist der normale letzte Satz. Die anderen zwei sind für Freunde.
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Liebe Lena, danke für deine Nachricht! Ich habe mich sehr ___ deine E-Mail gefreut.
+    answers: [über]
+    explanation:
+      en: For something you have received it is *sich freuen über*.
+      fa: برای چیزی که به دستتان رسیده *sich freuen über* به کار می‌رود.
+      de: Für etwas, das man bekommen hat, sagt man *sich freuen über*.
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Ich vermisse dich sehr und hoffe, wir sehen ___ (wir) bald.
+    answers: [uns]
+    explanation:
+      en: The phrase is *Ich hoffe, wir sehen uns bald.* With *wir* the pronoun is *uns*.
+      fa: عبارت *Ich hoffe, wir sehen uns bald.* است. با *wir* ضمیر *uns* می‌آید.
+      de: Der Satz heißt *Ich hoffe, wir sehen uns bald.* Bei *wir* heißt es *uns*.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Hallo Tom, wie geht's? Ich ___ (hoffen), es geht dir gut.
+    answers: [hoffe]
+    explanation:
+      en: The phrase is *Ich hoffe, es geht dir gut.*
+      fa: عبارت *Ich hoffe, es geht dir gut.* است.
+      de: Der Satz heißt *Ich hoffe, es geht dir gut.*
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Ich hoffe, es geht ___ (du) und deiner Familie gut.
+    answers: [dir]
+    explanation:
+      en: After *es geht* comes the dative, and the dative of *du* is *dir*.
+      fa: پس از *es geht* حالت *Dativ* می‌آید و حالت *Dativ* ضمیر *du* واژهٔ *dir* است.
+      de: Nach *es geht* kommt der Dativ. Der Dativ von *du* ist *dir*.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Ich schreibe ___ (du), weil ich nächsten Monat nach Hamburg komme.
+    answers: [dir]
+    explanation:
+      en: You write *to* someone, so the person is in the dative, *dir*.
+      fa: گیرندهٔ نامه در حالت *Dativ* می‌آید، پس *dir*.
+      de: Die Person, der man schreibt, steht im Dativ, also *dir*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Sehr geehrte Frau Krüger, ich schreibe Ihnen wegen ___ (der Deutschkurs) am Samstag.
+    answers: [des Deutschkurses, dem Deutschkurs]
+    explanation:
+      en: In writing, *wegen* takes the genitive, *des Deutschkurses*. The dative *dem Deutschkurs* is common when speaking.
+      fa: "در نوشتار پس از *wegen* حالت *Genitiv* می‌آید: *des Deutschkurses*. در گفتار حالت *Dativ*، یعنی *dem Deutschkurs*، هم رایج است."
+      de: Beim Schreiben kommt nach *wegen* der Genitiv, *des Deutschkurses*. Beim Sprechen hört man oft den Dativ, *dem Deutschkurs*.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Sehr geehrter Herr Braun, ich schreibe Ihnen wegen ___ (mein Termin) am Montag.
+    answers: [meines Termins, meines Termines, meinem Termin]
+    explanation:
+      en: In writing, *wegen* takes the genitive, *meines Termins*. The dative *meinem Termin* is common when speaking.
+      fa: "در نوشتار پس از *wegen* حالت *Genitiv* می‌آید: *meines Termins*. در گفتار حالت *Dativ*، یعنی *meinem Termin*، هم رایج است."
+      de: Beim Schreiben kommt nach *wegen* der Genitiv, *meines Termins*. Beim Sprechen hört man oft den Dativ, *meinem Termin*.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: So, jetzt muss ich los, Tom. ___ (schreiben) mir bald!
+    answers: [Schreib, Schreibe]
+    explanation:
+      en: To one friend the imperative is *Schreib!* (or *Schreibe!*), so *Schreib mir bald!*
+      fa: امر برای یک دوست *Schreib!* (یا *Schreibe!*) است، پس *Schreib mir bald!*
+      de: Der Imperativ für eine Person ist *Schreib!* (oder *Schreibe!*), also *Schreib mir bald!*
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: So, jetzt muss ich los. Schreib ___ (ich) bald!
+    answers: [mir]
+    explanation:
+      en: You write *to* someone, so the dative, *mir*.
+      fa: گیرنده در حالت *Dativ* می‌آید، پس *mir*.
+      de: Die Person steht im Dativ, also *mir*.
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Vielen Dank im Voraus. Ich freue mich schon ___ Ihre Antwort.
+    answers: [auf]
+    explanation:
+      en: For something still to come it is *sich freuen auf*.
+      fa: برای چیزی که هنوز پیش نیامده *sich freuen auf* به کار می‌رود.
+      de: Für etwas, das noch kommt, sagt man *sich freuen auf*.
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Über eine schnelle Antwort ___ (werden, Konjunktiv II) ich mich freuen.
+    answers: [würde]
+    explanation:
+      en: The polite request is *Über eine schnelle Antwort würde ich mich freuen.*
+      fa: درخواست مؤدبانه *Über eine schnelle Antwort würde ich mich freuen.* است.
+      de: Die höfliche Bitte heißt *Über eine schnelle Antwort würde ich mich freuen.*
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Über eine schnelle Antwort würde ich ___ freuen.
+    answers: [mich, mich sehr]
+    explanation:
+      en: "*sich freuen* needs its pronoun; with *ich* it is *mich*."
+      fa: "*sich freuen* فعل انعکاسی است و با *ich* ضمیر *mich* می‌آید."
+      de: "*sich freuen* braucht das Pronomen. Bei *ich* heißt es *mich*."
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Bei Fragen ___ (können) Sie mich gern jederzeit anrufen.
+    answers: [können, könnten]
+    explanation:
+      en: The offer is *Bei Fragen können Sie mich gern anrufen.* *könnten* is a little more polite and also right.
+      fa: این پیشنهاد *Bei Fragen können Sie mich gern anrufen.* است. *könnten* کمی مؤدبانه‌تر است و آن هم درست است.
+      de: Das Angebot heißt *Bei Fragen können Sie mich gern anrufen.* *könnten* ist etwas höflicher und auch richtig.
