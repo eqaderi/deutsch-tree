@@ -4,10 +4,319 @@ kind: grammar
 level: A1
 chapter: a1-prepositions
 order: 7
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-062, grammar-063]
 title:
   en: "Modal: *mit*, *ohne*, *für*, *aus* (material), *als* (job)"
   fa: "حرف‌های اضافهٔ *mit*، *ohne*، *für*، *aus* (جنس) و *als* (شغل)"
   de: "*mit*, *ohne*, *für*, *aus* (Material), *als* (Beruf)"
+
+explanations:
+  en:
+    rule: >
+      *Mit* (with) takes the *Dativ*: *mit dem Auto*, *mit meiner Freundin*,
+      *Kaffee mit Milch*. *Ohne* (without) takes the *Akkusativ* and usually
+      has no article: *Kaffee ohne Zucker*, *ohne Jacke*; with a person, *ohne
+      meinen Mann*, *ohne dich*. *Für* (for) takes the *Akkusativ*: *für
+      meinen Bruder*, *für dich*. In the *Akkusativ* only masculine *der*
+      changes, to *den* (*ein* to *einen*, *mein* to *meinen*). *Aus* says
+      what a thing is made of, with no article: *aus Holz*, *aus Plastik*.
+      *Als* names a job or a role, also with no article: *Ich arbeite als
+      Lehrerin.*
+  fa:
+    rule: >
+      *mit* (با) با حالت *Dativ* (حالت مفعول باواسطه) می‌آید: *mit dem Auto*،
+      *mit meiner Freundin* و *Kaffee mit Milch*. *ohne* (بدون) با حالت
+      *Akkusativ* (حالت مفعولی) می‌آید و معمولاً حرف تعریف نمی‌گیرد: *Kaffee
+      ohne Zucker* و *ohne Jacke*؛ با یک شخص: *ohne meinen Mann* و *ohne
+      dich*. *für* (برای) هم با حالت *Akkusativ* می‌آید: *für meinen Bruder*
+      و *für dich*. در حالت *Akkusativ* فقط *der* مذکر تغییر می‌کند و *den*
+      می‌شود (*ein* به *einen* و *mein* به *meinen*). *aus* جنس چیزی را
+      می‌گوید و حرف تعریف نمی‌گیرد: *aus Holz* و *aus Plastik*. *als* شغل یا
+      نقش کسی را می‌گوید و آن هم بدون حرف تعریف می‌آید: *Ich arbeite als
+      Lehrerin.*
+  de:
+    rule: >
+      Nach *mit* steht der Dativ: *mit dem Auto*, *mit meiner Freundin*,
+      *Kaffee mit Milch*. Nach *ohne* steht der Akkusativ, meistens ohne
+      Artikel: *Kaffee ohne Zucker*, *ohne Jacke*. Bei Personen: *ohne meinen
+      Mann*, *ohne dich*. Nach *für* steht auch der Akkusativ: *für meinen
+      Bruder*, *für dich*. Im Akkusativ ändert sich nur *der*: Er wird zu
+      *den* (*ein* zu *einen*, *mein* zu *meinen*). *Aus* sagt, woraus etwas
+      ist, ohne Artikel: *aus Holz*, *aus Plastik*. *Als* sagt den Beruf oder
+      die Rolle, auch ohne Artikel: *Ich arbeite als Lehrerin.*
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*mit* + *Dativ*", fa: "*mit* + حالت *Dativ*", de: "*mit* + Dativ" }
+    - { en: "*für*, *ohne* + *Akkusativ*", fa: "*für* و *ohne* + حالت *Akkusativ*", de: "*für*, *ohne* + Akkusativ" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Freund, mit dem Freund, für den Freund, ein Geschenk für den Freund]
+    - [die Freundin, mit der Freundin, für die Freundin, mit der Freundin ins Kino]
+    - [das Kind, mit dem Kind, ohne das Kind, ein Buch für das Kind]
+    - [die Kinder (Plural), mit den Kindern, für die Kinder, Urlaub mit den Kindern]
+    - [ein Freund, mit einem Freund, ohne einen Freund, mit einem Freund im Café]
+
+examples:
+  - de: Ich fahre mit dem Auto zur Arbeit.
+    en: I drive to work.
+    fa: با ماشین سر کار می‌روم.
+  - de: Ich gehe mit meiner Freundin ins Kino.
+    en: I'm going to the cinema with my girlfriend.
+    fa: با دوستم به سینما می‌روم.
+  - de: Einen Kaffee mit Milch, bitte.
+    en: A coffee with milk, please.
+    fa: یک قهوه با شیر، لطفاً.
+  - de: Ich trinke Tee ohne Zucker.
+    en: I drink tea without sugar.
+    fa: چای را بدون شکر می‌نوشم.
+  - de: Ich komme nicht ohne dich.
+    en: I'm not coming without you.
+    fa: بدون تو نمی‌آیم.
+  - de: Die Blumen sind für meine Mutter.
+    en: The flowers are for my mother.
+    fa: این گل‌ها برای مادرم است.
+  - de: Das Geschenk ist für dich.
+    en: The present is for you.
+    fa: این هدیه برای توست.
+  - de: Der Tisch ist aus Holz.
+    en: The table is made of wood.
+    fa: میز چوبی است.
+  - de: Die Flasche ist aus Plastik.
+    en: The bottle is made of plastic.
+    fa: بطری پلاستیکی است.
+  - de: Ich arbeite als Krankenpfleger.
+    en: I work as a nurse.
+    fa: به‌عنوان پرستار کار می‌کنم.
+  - de: Sie arbeitet als Lehrerin in Köln.
+    en: She works as a teacher in Cologne.
+    fa: او در کلن معلم است.
+
+mistakes:
+  - wrong: Ich fahre mit die U-Bahn.
+    right: Ich fahre mit der U-Bahn.
+    why:
+      en: "*Mit* takes the *Dativ*: *die* becomes *der*."
+      fa: "*mit* با حالت *Dativ* می‌آید: *die* به *der* تبدیل می‌شود."
+      de: "Nach *mit* steht der Dativ: *die* wird zu *der*."
+  - wrong: Das Geschenk ist für meinem Bruder.
+    right: Das Geschenk ist für meinen Bruder.
+    why:
+      en: "*Für* takes the *Akkusativ*, not the *Dativ*: *meinen Bruder*."
+      fa: "*für* با حالت *Akkusativ* می‌آید، نه *Dativ*: *meinen Bruder*."
+      de: "Nach *für* steht der Akkusativ, nicht der Dativ: *meinen Bruder*."
+  - wrong: Ich gehe ohne meinem Mann.
+    right: Ich gehe ohne meinen Mann.
+    why:
+      en: "*Ohne* takes the *Akkusativ*: *meinen Mann*."
+      fa: "*ohne* با حالت *Akkusativ* می‌آید: *meinen Mann*."
+      de: "Nach *ohne* steht der Akkusativ: *meinen Mann*."
+  - wrong: Ich arbeite als ein Lehrer.
+    right: Ich arbeite als Lehrer.
+    why:
+      en: 'English says "as a teacher"; German names a job after *als* with no article.'
+      fa: "پس از *als* شغل بدون حرف تعریف می‌آید: *als Lehrer*."
+      de: "Nach *als* steht der Beruf ohne Artikel: *als Lehrer*."
+  - wrong: Der Tisch ist aus dem Holz.
+    right: Der Tisch ist aus Holz.
+    why:
+      en: "A material after *aus* has no article: *aus Holz*, *aus Glas*."
+      fa: "جنس پس از *aus* حرف تعریف نمی‌گیرد: *aus Holz* و *aus Glas*."
+      de: "Beim Material nach *aus* steht kein Artikel: *aus Holz*, *aus Glas*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir fahren mit ___ U-Bahn.
+    options: [der, die, dem]
+    answer: der
+    explanation:
+      en: "*Mit* takes the *Dativ*. *U-Bahn* is feminine: *die* becomes *der*."
+      fa: "*mit* با حالت *Dativ* می‌آید. *U-Bahn* اسم مؤنث است: *die* به *der* تبدیل می‌شود."
+      de: "Nach *mit* steht der Dativ. *U-Bahn* ist feminin: *die* wird zu *der*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Blumen sind für ___ Mutter.
+    options: [meine, meiner, meinem]
+    answer: meine
+    explanation:
+      en: "*Für* takes the *Akkusativ*, and feminine *meine* stays *meine*."
+      fa: "*für* با حالت *Akkusativ* می‌آید و *meine* مؤنث تغییر نمی‌کند."
+      de: "Nach *für* steht der Akkusativ. Feminin bleibt *meine*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Das Geschenk ist für ___ Vater.
+    options: [meinen, meinem, mein]
+    answer: meinen
+    explanation:
+      en: "*Für* takes the *Akkusativ*. *Vater* is masculine: *mein* becomes *meinen*."
+      fa: "*für* با حالت *Akkusativ* می‌آید. *Vater* اسم مذکر است: *mein* به *meinen* تبدیل می‌شود."
+      de: "Nach *für* steht der Akkusativ. *Vater* ist maskulin: *mein* wird zu *meinen*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Der Teller ist ___ Glas.
+    options: [aus, als, für]
+    answer: aus
+    explanation:
+      en: "What a thing is made of: *aus Glas*."
+      fa: "جنس یک چیز: *aus Glas*."
+      de: "Das Material: *aus Glas*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Er arbeitet ___ Koch in einem Restaurant.
+    options: [als, für, mit]
+    answer: als
+    explanation:
+      en: "A job takes *als*, with no article: *als Koch*."
+      fa: "شغل با *als* و بدون حرف تعریف می‌آید: *als Koch*."
+      de: "Beim Beruf steht *als* ohne Artikel: *als Koch*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Mit wem gehst du ins Kino? – ___
+    options: [Mit meinem Bruder., Mit meinen Bruder., Mit mein Bruder.]
+    answer: Mit meinem Bruder.
+    explanation:
+      en: "*Mit* takes the *Dativ*: *mein Bruder* becomes *meinem Bruder*."
+      fa: "*mit* با حالت *Dativ* می‌آید: *mein Bruder* به *meinem Bruder* تبدیل می‌شود."
+      de: "Nach *mit* steht der Dativ: *mein Bruder* wird zu *meinem Bruder*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Das Buch ist ___ meinen Sohn.
+    options: [für, mit, aus]
+    answer: für
+    explanation:
+      en: "*Meinen Sohn* is *Akkusativ*, and of these three only *für* takes it."
+      fa: "*meinen Sohn* در حالت *Akkusativ* است و از این سه، فقط *für* با این حالت می‌آید."
+      de: "*Meinen Sohn* ist Akkusativ. Von den drei steht nur *für* mit Akkusativ."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich arbeite ___.
+    options: [als Ärztin, als eine Ärztin, für Ärztin]
+    answer: als Ärztin
+    explanation:
+      en: "A job takes *als*, with no article: *als Ärztin*."
+      fa: "شغل با *als* و بدون حرف تعریف می‌آید: *als Ärztin*."
+      de: "Beim Beruf steht *als* ohne Artikel: *als Ärztin*."
+  - id: true-1
+    type: true-false
+    prompt: Der Stuhl ist aus Holz.
+    answer: true
+    explanation:
+      en: "A material after *aus*, with no article. The sentence is correct."
+      fa: "جنس پس از *aus* و بدون حرف تعریف. جمله درست است."
+      de: "Material nach *aus*, ohne Artikel. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich gehe nie ohne mein Handy aus dem Haus.
+    answer: true
+    explanation:
+      en: "*Ohne* takes the *Akkusativ*, and neuter *mein* stays *mein*. The sentence is correct."
+      fa: "*ohne* با حالت *Akkusativ* می‌آید و *mein* خنثی تغییر نمی‌کند. جمله درست است."
+      de: "Nach *ohne* steht der Akkusativ. Neutral bleibt *mein*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Sie arbeitet als eine Verkäuferin.
+    answer: false
+    explanation:
+      en: "No article after *als* with a job: *als Verkäuferin*."
+      fa: "پس از *als* شغل بدون حرف تعریف می‌آید: *als Verkäuferin*."
+      de: "Nach *als* steht der Beruf ohne Artikel: *als Verkäuferin*."
+  - id: true-4
+    type: true-false
+    prompt: Ich spiele mit meinen Freunden Fußball.
+    answer: true
+    explanation:
+      en: "*Mit* takes the *Dativ*: plural *meinen Freunden*, with *-n*. The sentence is correct."
+      fa: "*mit* با حالت *Dativ* می‌آید: جمع *meinen Freunden* با *-n*. جمله درست است."
+      de: "Nach *mit* steht der Dativ: im Plural *meinen Freunden* mit *-n*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Das Geschenk ist für meinem Opa.
+    answer: false
+    explanation:
+      en: "*Für* takes the *Akkusativ*: *für meinen Opa*."
+      fa: "*für* با حالت *Akkusativ* می‌آید: *für meinen Opa*."
+      de: "Nach *für* steht der Akkusativ: *für meinen Opa*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir fahren mit ___ (die) Kindern in den Urlaub.
+    answers: [den]
+    explanation:
+      en: "*Mit* takes the *Dativ*: plural *die* becomes *den*."
+      fa: "*mit* با حالت *Dativ* می‌آید: *die* جمع به *den* تبدیل می‌شود."
+      de: "Nach *mit* steht der Dativ: Im Plural wird *die* zu *den*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Der Kuchen ist für ___ (der) Chef.
+    answers: [den]
+    explanation:
+      en: "*Für* takes the *Akkusativ*: *der* becomes *den*."
+      fa: "*für* با حالت *Akkusativ* می‌آید: *der* به *den* تبدیل می‌شود."
+      de: "Nach *für* steht der Akkusativ: *der* wird zu *den*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich mag keine Milch. Ich trinke den Kaffee ___ Milch.
+    answers: [ohne]
+    explanation:
+      en: "No milk: *ohne Milch*, with no article."
+      fa: "بدون شیر: *ohne Milch*، بدون حرف تعریف."
+      de: "Keine Milch: *ohne Milch*, ohne Artikel."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Mein Onkel arbeitet ___ Taxifahrer.
+    answers: [als]
+    explanation:
+      en: "A job takes *als*: *als Taxifahrer*."
+      fa: "شغل با *als* می‌آید: *als Taxifahrer*."
+      de: "Beim Beruf steht *als*: *als Taxifahrer*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "für + ein Freund"
+    answers: [für einen Freund]
+    explanation:
+      en: "*Für* takes the *Akkusativ*: masculine *ein* becomes *einen*."
+      fa: "*für* با حالت *Akkusativ* می‌آید: *ein* مذکر به *einen* تبدیل می‌شود."
+      de: "Nach *für* steht der Akkusativ: Maskulin wird *ein* zu *einen*."
+  - id: error-1
+    type: find-error
+    prompt: Ich gehe heute ohne meinem Mann ins Kino.
+    answer: meinem
+    explanation:
+      en: "*Ohne* takes the *Akkusativ*: *ohne meinen Mann*."
+      fa: "*ohne* با حالت *Akkusativ* می‌آید: *ohne meinen Mann*."
+      de: "Nach *ohne* steht der Akkusativ: *ohne meinen Mann*."
+  - id: error-2
+    type: find-error
+    prompt: Ich arbeite als ein Lehrer.
+    answer: ein
+    explanation:
+      en: "No article after *als* with a job: *als Lehrer*."
+      fa: "پس از *als* شغل بدون حرف تعریف می‌آید: *als Lehrer*."
+      de: "Nach *als* steht der Beruf ohne Artikel: *als Lehrer*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [meine Schwester, arbeitet, als Ärztin]
+      - [als Ärztin, arbeitet, meine Schwester]
+    explanation:
+      en: "The verb comes second. *Als Ärztin* usually stands last."
+      fa: "فعل در جایگاه دوم می‌آید. *als Ärztin* معمولاً در پایان جمله است."
+      de: "Das Verb steht an Position 2. *Als Ärztin* steht meistens am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [mit ___ Auto, dem]
+      - [für ___ Mann, meinen]
+      - [ohne ___ Kinder, die]
+    explanation:
+      en: "*Mit* takes the *Dativ* (*dem Auto*); *für* and *ohne* take the *Akkusativ* (*meinen Mann*, *die Kinder*)."
+      fa: "*mit* با حالت *Dativ* می‌آید (*dem Auto*)؛ *für* و *ohne* با حالت *Akkusativ* (*meinen Mann* و *die Kinder*)."
+      de: "Nach *mit* steht der Dativ (*dem Auto*), nach *für* und *ohne* der Akkusativ (*meinen Mann*, *die Kinder*)."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 652dbfc8ebb46ef1

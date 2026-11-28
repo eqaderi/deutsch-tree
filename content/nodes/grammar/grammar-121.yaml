@@ -1,13 +1,312 @@
-# Grammar list row 121.
+# Grammar list row 121. A1 core only: in, an, auf and bei in everyday chunks.
+# The systematic choice by type of place is A2.
 id: grammar-121
 kind: grammar
 level: A1
 chapter: a1-prepositions
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-063]
 title:
   en: "Local, *Wo?*: *in*, *an*, *auf*, *bei* + *Dativ*"
-  fa: "مکان، *Wo?*: *in*، *an*، *auf*، *bei* + *Dativ*"
+  fa: "مکان، *Wo?*: *in*، *an*، *auf*، *bei* + حالت *Dativ*"
   de: "Ort, *Wo?*: *in*, *an*, *auf*, *bei* + Dativ"
+
+explanations:
+  en:
+    rule: >
+      To say where someone or something is (*Wo?*), German often uses *in*,
+      *an*, *auf* and *bei*, followed by the *Dativ*. *In* is inside a place:
+      *in der Küche*, *im Park*. *An* is at the edge of something or by the
+      water: *an der Haltestelle*, *am Bahnhof*, *am Meer*. *Auf* is on a
+      surface or at an open place: *auf dem Tisch*, *auf dem Markt*. *Bei* is
+      at a person's home or at a firm: *bei meiner Oma*, *beim Arzt*, *bei
+      Siemens*. A city and most countries have no article: *in Berlin*, *in
+      Deutschland*. Learn each place together with its preposition.
+  fa:
+    rule: >
+      برای گفتن این‌که کسی یا چیزی کجاست (*Wo?*)، آلمانی بیشتر *in*، *an*،
+      *auf* و *bei* را به کار می‌برد و پس از آن‌ها حالت *Dativ* (حالت مفعول
+      باواسطه) می‌آید. *in* یعنی درون یک مکان: *in der Küche* و *im Park*.
+      *an* یعنی کنار یا لبهٔ چیزی، یا کنار آب: *an der Haltestelle*، *am
+      Bahnhof* و *am Meer*. *auf* یعنی روی یک سطح یا در یک فضای باز: *auf dem
+      Tisch* و *auf dem Markt*. *bei* یعنی خانهٔ کسی یا محل کار در یک شرکت:
+      *bei meiner Oma*، *beim Arzt* و *bei Siemens*. شهرها و بیشتر کشورها
+      حرف تعریف ندارند: *in Berlin* و *in Deutschland*. هر مکان را همراه با
+      حرف اضافه‌اش به خاطر بسپارید.
+  de:
+    rule: >
+      Auf die Frage *Wo?* stehen oft *in*, *an*, *auf* und *bei*, danach der
+      Dativ. *In* heißt: drinnen, zum Beispiel *in der Küche*, *im Park*. *An*
+      heißt: am Rand von etwas oder am Wasser, zum Beispiel *an der
+      Haltestelle*, *am Bahnhof*, *am Meer*. *Auf* heißt: oben auf etwas oder
+      auf einem offenen Platz, zum Beispiel *auf dem Tisch*, *auf dem Markt*.
+      *Bei* steht bei Personen und Firmen: *bei meiner Oma*, *beim Arzt*, *bei
+      Siemens*. Städte und die meisten Länder haben keinen Artikel: *in
+      Berlin*, *in Deutschland*. Lernen Sie jeden Ort mit seiner Präposition.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Markt, dem Markt, einem Markt, auf dem Markt]
+    - [die Haltestelle, der Haltestelle, einer Haltestelle, an der Haltestelle]
+    - [das Büro, dem Büro, einem Büro, im Büro (in dem)]
+    - [die Eltern (Plural), den Eltern, –, bei den Eltern]
+
+examples:
+  - de: Ich bin in der Küche.
+    en: I'm in the kitchen.
+    fa: من در آشپزخانه هستم.
+  - de: Die Kinder spielen im Park.
+    en: The children are playing in the park.
+    fa: بچه‌ها در پارک بازی می‌کنند.
+  - de: Meine Schwester wohnt in Berlin.
+    en: My sister lives in Berlin.
+    fa: خواهرم در برلین زندگی می‌کند.
+  - de: Wir warten an der Haltestelle.
+    en: We are waiting at the bus stop.
+    fa: ما در ایستگاه اتوبوس منتظریم.
+  - de: Im Sommer sind wir oft am Meer.
+    en: In summer we are often at the seaside.
+    fa: تابستان‌ها اغلب کنار دریا هستیم.
+  - de: Treffen wir uns am Bahnhof?
+    en: Shall we meet at the station?
+    fa: در ایستگاه قطار همدیگر را ببینیم؟
+  - de: Sie ist auf dem Markt.
+    en: She is at the market.
+    fa: او در بازار است.
+  - de: Die Tasse steht auf dem Tisch.
+    en: The cup is on the table.
+    fa: فنجان روی میز است.
+  - de: Heute bin ich bei meiner Oma.
+    en: Today I'm at my grandma's.
+    fa: امروز خانهٔ مادربزرگم هستم.
+  - de: Er arbeitet bei Siemens.
+    en: He works at Siemens.
+    fa: او در شرکت زیمنس کار می‌کند.
+  - de: Ich bin gerade beim Arzt.
+    en: I'm at the doctor's right now.
+    fa: الان پیش پزشک هستم.
+
+mistakes:
+  - wrong: Ich bin heute in meiner Oma.
+    right: Ich bin heute bei meiner Oma.
+    why:
+      en: "At a person's home is *bei*: *bei meiner Oma*."
+      fa: "برای خانهٔ کسی *bei* می‌آید: *bei meiner Oma*."
+      de: "Bei Personen sagt man *bei*: *bei meiner Oma*."
+  - wrong: Er arbeitet in Siemens.
+    right: Er arbeitet bei Siemens.
+    why:
+      en: "A firm you work for takes *bei*: *bei Siemens*."
+      fa: "برای شرکتی که در آن کار می‌کنید *bei* می‌آید: *bei Siemens*."
+      de: "Bei Firmen sagt man *bei*: *bei Siemens*."
+  - wrong: Wir warten in der Haltestelle.
+    right: Wir warten an der Haltestelle.
+    why:
+      en: "You wait by the bus stop, not inside it: *an der Haltestelle*."
+      fa: "کنار ایستگاه اتوبوس منتظر می‌مانیم، نه درون آن: *an der Haltestelle*."
+      de: "Man wartet nicht in der Haltestelle, sondern daneben: *an der Haltestelle*."
+  - wrong: Ich wohne in die Stadt.
+    right: Ich wohne in der Stadt.
+    why:
+      en: "*Wohnen* says where (*Wo?*), so the *Dativ* follows: *die* becomes *der*."
+      fa: "*wohnen* جای کسی را نشان می‌دهد (*Wo?*)، پس حالت *Dativ* می‌آید: *die* به *der* تبدیل می‌شود."
+      de: "*Wohnen* sagt, wo (*Wo?*). Darum steht der Dativ: *die* wird zu *der*."
+  - wrong: Sie wohnt in der Berlin.
+    right: Sie wohnt in Berlin.
+    why:
+      en: "A city has no article: *in Berlin*."
+      fa: "شهر حرف تعریف ندارد: *in Berlin*."
+      de: "Städte haben keinen Artikel: *in Berlin*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Die Kinder spielen ___ Park.
+    options: [im, in, in den]
+    answer: im
+    explanation:
+      en: "*Wo?*: *in* + *dem Park*, shortened to *im Park*."
+      fa: "*Wo?*: *in* + *dem Park* که کوتاه می‌شود: *im Park*."
+      de: "*Wo?*: *in* + *dem Park*, kurz *im Park*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir wohnen in ___ Stadt.
+    options: [der, die, dem]
+    answer: der
+    explanation:
+      en: "*Stadt* is feminine. In the *Dativ*, *die* becomes *der*."
+      fa: "*Stadt* اسم مؤنث است. در حالت *Dativ*، *die* به *der* تبدیل می‌شود."
+      de: "*Stadt* ist feminin. Im Dativ wird *die* zu *der*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich warte ___ Bahnhof.
+    options: [am, an, an den]
+    answer: am
+    explanation:
+      en: "*An* + *dem Bahnhof*, shortened to *am Bahnhof*."
+      fa: "*an* + *dem Bahnhof* که کوتاه می‌شود: *am Bahnhof*."
+      de: "*An* + *dem Bahnhof*, kurz *am Bahnhof*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Die Bücher liegen auf ___ Tisch.
+    options: [dem, den, der]
+    answer: dem
+    explanation:
+      en: "*Wo?*: *der Tisch* in the *Dativ* is *dem Tisch*."
+      fa: "*Wo?*: *der Tisch* در حالت *Dativ* می‌شود *dem Tisch*."
+      de: "*Wo?*: *der Tisch* im Dativ ist *dem Tisch*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Er ist heute ___ Arzt.
+    options: [beim, bei, bei die]
+    answer: beim
+    explanation:
+      en: "*Arzt* is masculine: *bei dem Arzt*, shortened to *beim Arzt*."
+      fa: "*Arzt* اسم مذکر است: *bei dem Arzt* که کوتاه می‌شود: *beim Arzt*."
+      de: "*Arzt* ist maskulin: *bei dem Arzt*, kurz *beim Arzt*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wo ist Tom? – Er ist ___ seiner Freundin.
+    options: [bei, in, auf]
+    answer: bei
+    explanation:
+      en: "At a person's home is *bei*: *bei seiner Freundin*."
+      fa: "برای خانهٔ کسی *bei* می‌آید: *bei seiner Freundin*."
+      de: "Bei Personen sagt man *bei*: *bei seiner Freundin*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wo wohnt Anna? – ___
+    options: [In Hamburg., In der Hamburg., Im Hamburg.]
+    answer: In Hamburg.
+    explanation:
+      en: "A city has no article: *in Hamburg*."
+      fa: "شهر حرف تعریف ندارد: *in Hamburg*."
+      de: "Städte haben keinen Artikel: *in Hamburg*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wo bist du? – Ich bin ___ Markt.
+    options: [auf dem, in den, auf den]
+    answer: auf dem
+    explanation:
+      en: "A market is an open place: *auf*, with the *Dativ* *dem Markt*."
+      fa: "بازار فضایی باز است: *auf* با حالت *Dativ*: *auf dem Markt*."
+      de: "Ein Markt ist ein offener Platz: *auf* mit Dativ, *auf dem Markt*."
+  - id: true-1
+    type: true-false
+    prompt: Meine Eltern wohnen in Köln.
+    answer: true
+    explanation:
+      en: "A city takes *in* with no article. The sentence is correct."
+      fa: "شهر با *in* و بدون حرف تعریف می‌آید. جمله درست است."
+      de: "Bei Städten steht *in* ohne Artikel. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich arbeite in Siemens.
+    answer: false
+    explanation:
+      en: "A firm you work for takes *bei*: *bei Siemens*."
+      fa: "برای شرکتی که در آن کار می‌کنید *bei* می‌آید: *bei Siemens*."
+      de: "Bei Firmen sagt man *bei*: *bei Siemens*."
+  - id: true-3
+    type: true-false
+    prompt: Wir sind heute bei den Großeltern.
+    answer: true
+    explanation:
+      en: "*Bei* with people, and plural *die* becomes *den* in the *Dativ*. The sentence is correct."
+      fa: "*bei* برای اشخاص است و *die* جمع در حالت *Dativ* به *den* تبدیل می‌شود. جمله درست است."
+      de: "*Bei* steht bei Personen, und im Dativ Plural wird *die* zu *den*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Das Handy liegt auf der Tisch.
+    answer: false
+    explanation:
+      en: "*Tisch* is masculine: in the *Dativ* it is *dem Tisch*."
+      fa: "*Tisch* اسم مذکر است: در حالت *Dativ* می‌شود *dem Tisch*."
+      de: "*Tisch* ist maskulin: im Dativ *dem Tisch*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir warten an ___ (die) Haltestelle.
+    answers: [der]
+    explanation:
+      en: "In the *Dativ*, *die* becomes *der*: *an der Haltestelle*."
+      fa: "در حالت *Dativ*، *die* به *der* تبدیل می‌شود: *an der Haltestelle*."
+      de: "Im Dativ wird *die* zu *der*: *an der Haltestelle*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das Kind spielt in ___ (der) Garten.
+    answers: [dem]
+    explanation:
+      en: "In the *Dativ*, *der* becomes *dem*: *in dem Garten*, usually *im Garten*."
+      fa: "در حالت *Dativ*، *der* به *dem* تبدیل می‌شود: *in dem Garten* که معمولاً *im Garten* گفته می‌شود."
+      de: "Im Dativ wird *der* zu *dem*: *in dem Garten*, meistens kurz *im Garten*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Heute essen wir bei ___ (die) Großeltern.
+    answers: [den]
+    explanation:
+      en: "Plural *die* becomes *den* in the *Dativ*: *bei den Großeltern*."
+      fa: "*die* جمع در حالت *Dativ* به *den* تبدیل می‌شود: *bei den Großeltern*."
+      de: "Im Dativ Plural wird *die* zu *den*: *bei den Großeltern*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Wo? bei + der Arzt"
+    answers: [beim Arzt, bei dem Arzt]
+    explanation:
+      en: "*Bei dem Arzt*, almost always said as *beim Arzt*."
+      fa: "*bei dem Arzt* که تقریباً همیشه کوتاه می‌شود: *beim Arzt*."
+      de: "*Bei dem Arzt*, kurz fast immer *beim Arzt*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Wo? in + das Büro"
+    answers: [im Büro, in dem Büro]
+    explanation:
+      en: "*In dem Büro*, almost always said as *im Büro*."
+      fa: "*in dem Büro* که تقریباً همیشه کوتاه می‌شود: *im Büro*."
+      de: "*In dem Büro*, kurz fast immer *im Büro*."
+  - id: error-1
+    type: find-error
+    prompt: Die Kinder sind in den Park.
+    answer: den
+    explanation:
+      en: "*Sind* says where (*Wo?*), so the *Dativ*: *in dem Park*, or *im Park*."
+      fa: "*sind* جای کسی را نشان می‌دهد (*Wo?*)، پس حالت *Dativ* می‌آید: *in dem Park* یا *im Park*."
+      de: "*Sind* sagt, wo (*Wo?*). Darum Dativ: *in dem Park* oder *im Park*."
+  - id: error-2
+    type: find-error
+    prompt: Sie wohnt in der Berlin.
+    answer: der
+    explanation:
+      en: "A city has no article: *in Berlin*."
+      fa: "شهر حرف تعریف ندارد: *in Berlin*."
+      de: "Städte haben keinen Artikel: *in Berlin*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [mein Bruder, arbeitet, bei Siemens]
+      - [bei Siemens, arbeitet, mein Bruder]
+    explanation:
+      en: "The verb comes second. The place can stand first or last."
+      fa: "فعل در جایگاه دوم می‌آید. قید مکان می‌تواند در آغاز یا پایان جمله باشد."
+      de: "Das Verb steht an Position 2. Der Ort kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - [Ich bin ___ Arzt., beim]
+      - [Wir warten ___ Haltestelle., an der]
+      - [Sie kocht ___ Küche., in der]
+    explanation:
+      en: "At the doctor's is *beim Arzt*, at the stop *an der Haltestelle*, inside the kitchen *in der Küche*."
+      fa: "پیش پزشک: *beim Arzt*؛ کنار ایستگاه: *an der Haltestelle*؛ درون آشپزخانه: *in der Küche*."
+      de: "Beim Arzt: *beim*. An der Haltestelle: *an der*. In der Küche: *in der*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: d7b2509cbbabe9e3
