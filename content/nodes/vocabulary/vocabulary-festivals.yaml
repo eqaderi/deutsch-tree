@@ -1,30 +1,269 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# Weihnachten, Ostern, Silvester and Neujahr take no article ("article: none"): they are
+# shown and asked bare, as in "an Ostern" and "frohe Weihnachten" (ticket #48).
+# Fest and Feier, Werktag and Arbeitstag are close; `tooCloseTo` keeps a close one from
+# being offered as a wrong meaning, and `alsoAccepted` takes it as right. Karneval is one
+# kind of Fest, so the two are never offered beside each other either.
 id: vocabulary-festivals
 kind: vocabulary
 level: A2
 chapter: a2-words-free-time
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Festivals and holidays"
   fa: "جشن‌ها و تعطیلی‌ها"
   de: "Feste und Feiertage"
+attemptSize: 15
 words:
   - word: Fest
+    class: noun
+    article: das
+    plural: Feste
+    level: A2
+    meaning:
+      en: festival, celebration (a special day or a big party)
+      fa: جشن، عید
+    definition: ein besonderer Tag oder Abend, an dem Menschen zusammen feiern, zum Beispiel in der Familie, im Dorf oder in der Kirche
+    example:
+      de: Im Sommer gibt es in unserem Dorf ein großes Fest.
+      en: In summer there's a big festival in our village.
+      fa: تابستان‌ها در روستای ما جشن بزرگی برپا می‌شود.
+    alsoAccepted: [die Feier]
+    tooCloseTo: [Feier, Karneval]
+
   - word: Feier
+    class: noun
+    article: die
+    plural: Feiern
+    level: A2
+    meaning:
+      en: party, celebration (for an occasion such as a birthday)
+      fa: مهمانی، جشن (به مناسبتی)
+    definition: ein Treffen von Freunden, Familie oder Kollegen, weil etwas Besonderes passiert ist, zum Beispiel eine Hochzeit
+    example:
+      de: Nach der Hochzeit machen wir eine kleine Feier im Restaurant.
+      en: After the wedding we're having a small party at a restaurant.
+      fa: بعد از مراسم ازدواج، در رستوران جشن کوچکی می‌گیریم.
+    alsoAccepted: [das Fest, die Party]
+    tooCloseTo: [Fest]
+
   - word: Feiertag
+    class: noun
+    article: der
+    plural: Feiertage
+    level: A2
+    meaning:
+      en: public holiday
+      fa: تعطیل رسمی
+    definition: ein besonderer Tag, an dem die meisten Menschen nicht arbeiten und die Geschäfte zu sind, zum Beispiel der erste Mai
+    example:
+      de: Am Montag ist ein Feiertag, da haben die Geschäfte zu.
+      en: Monday is a public holiday, so the shops are closed.
+      fa: دوشنبه تعطیل رسمی است و مغازه‌ها بسته‌اند.
+
   - word: Weihnachten
+    class: noun
+    article: none
+    number: singular-only
+    level: A2
+    meaning:
+      en: Christmas
+      fa: کریسمس، عید میلاد مسیح
+    definition: das Fest im Dezember, an dem Christen die Geburt von Jesus feiern
+    example:
+      de: An Weihnachten besuchen wir meine Eltern.
+      en: At Christmas we visit my parents.
+      fa: کریسمس به دیدن پدر و مادرم می‌رویم.
+
   - word: Ostern
+    class: noun
+    article: none
+    number: singular-only
+    level: A2
+    meaning:
+      en: Easter
+      fa: عید پاک
+    definition: das christliche Fest im Frühling, im März oder im April
+    example:
+      de: Zu Ostern suchen die Kinder im Garten bunte Eier.
+      en: At Easter the children look for coloured eggs in the garden.
+      fa: در عید پاک بچه‌ها در باغ دنبال تخم‌مرغ‌های رنگی می‌گردند.
+
   - word: Silvester
+    class: noun
+    article: none
+    number: singular-only
+    level: A2
+    meaning:
+      en: New Year's Eve
+      fa: شب سال نوی میلادی
+    definition: der letzte Tag im Jahr, der einunddreißigste Dezember, und die Party in dieser Nacht
+    example:
+      de: An Silvester gibt es um Mitternacht ein Feuerwerk.
+      en: On New Year's Eve there are fireworks at midnight.
+      fa: شب سال نو، نیمه‌شب آتش‌بازی می‌شود.
+    alsoAccepted: [der Silvesterabend]
+
   - word: Neujahr
+    class: noun
+    article: none
+    number: singular-only
+    level: A2
+    meaning:
+      en: New Year's Day
+      fa: روز اول سال نوی میلادی
+    definition: der erste Tag im neuen Jahr, der erste Januar
+    example:
+      de: An Neujahr schlafen viele Leute lange.
+      en: On New Year's Day lots of people sleep in.
+      fa: روز اول سال نو خیلی‌ها تا دیروقت می‌خوابند.
+    alsoAccepted: [der Neujahrstag]
+
   - word: Karneval
+    class: noun
+    article: der
+    plural: Karnevals
+    level: A2
+    meaning:
+      en: carnival
+      fa: کارناوال
+    definition: die Tage im Februar oder März, an denen sich viele Menschen verkleiden und auf der Straße feiern, zum Beispiel in Köln
+    example:
+      de: Zum Karneval fahren wir jedes Jahr nach Köln.
+      en: Every year we go to Cologne for the carnival.
+      fa: هر سال برای کارناوال به کلن می‌رویم.
+    alsoAccepted: [der Fasching, die Fastnacht]
+
   - word: Ferien
+    class: noun
+    article: die
+    number: plural-only
+    level: A2
+    meaning:
+      en: holidays (from school or university), vacation
+      fa: تعطیلات (مدرسه یا دانشگاه)
+    definition: die Wochen, in denen die Schüler keine Schule haben
+    example:
+      de: In den Ferien fahren wir an die Ostsee.
+      en: In the holidays we're going to the Baltic Sea.
+      fa: در تعطیلات به دریای بالتیک می‌رویم.
+    alsoAccepted: [die Schulferien]
+
   - word: schenken
+    class: verb
+    level: A2
+    meaning:
+      en: to give (as a present)
+      fa: هدیه دادن
+    definition: einer Person etwas geben, das sie behalten darf, zum Beispiel zum Geburtstag
+    example:
+      de: Was schenkst du deiner Mutter zu Weihnachten?
+      en: What are you giving your mother for Christmas?
+      fa: برای کریسمس به مادرت چه هدیه‌ای می‌دهی؟
+
   - word: Religion
+    class: noun
+    article: die
+    plural: Religionen
+    level: A2
+    meaning:
+      en: religion
+      fa: دین، مذهب
+    definition: der Glaube an Gott oder an Götter, mit eigenen Festen, Gebeten und Regeln
+    example:
+      de: In unserer Klasse gibt es Kinder mit verschiedenen Religionen.
+      en: There are children of different religions in our class.
+      fa: در کلاس ما بچه‌هایی با دین‌های مختلف هستند.
+
   - word: Werktag
+    class: noun
+    article: der
+    plural: Werktage
+    level: A2
+    meaning:
+      en: weekday, working day (not a Sunday or a holiday)
+      fa: روز غیرتعطیل (به‌جز یکشنبه و تعطیلات رسمی)
+    definition: jeder Tag außer Sonntag und Feiertag, also Montag bis Samstag
+    example:
+      de: Der Bus fährt nur an Werktagen.
+      en: The bus only runs on weekdays.
+      fa: این اتوبوس فقط روزهای غیرتعطیل کار می‌کند.
+    alsoAccepted: [der Arbeitstag]
+    tooCloseTo: [Arbeitstag]
+
   - word: Arbeitstag
+    class: noun
+    article: der
+    plural: Arbeitstage
+    level: A2
+    meaning:
+      en: working day, day at work
+      fa: روز کاری
+    definition: ein Tag, an dem man arbeitet, und die Stunden, die man dann bei der Arbeit ist
+    example:
+      de: Heute hatte ich einen langen Arbeitstag.
+      en: I had a long day at work today.
+      fa: امروز روز کاری طولانی‌ای داشتم.
+    alsoAccepted: [der Werktag]
+    tooCloseTo: [Werktag]
+
   - word: Mitternacht
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: midnight
+      fa: نیمه‌شب
+    definition: zwölf Uhr in der Nacht, wenn ein neuer Tag beginnt
+    example:
+      de: Die Party war erst nach Mitternacht zu Ende.
+      en: The party didn't finish until after midnight.
+      fa: مهمانی تازه بعد از نیمه‌شب تمام شد.
+
   - word: Kalender
+    class: noun
+    article: der
+    plural: Kalender
+    level: A2
+    meaning:
+      en: calendar, diary
+      fa: تقویم
+    definition: eine Liste von allen Tagen, Wochen und Monaten im Jahr, oft an der Wand oder im Handy
+    example:
+      de: Ich schreibe mir den Termin gleich in den Kalender.
+      en: I'll put the appointment in my diary right away.
+      fa: قرار را همین الان در تقویمم می‌نویسم.
+    alsoAccepted: [der Terminkalender]
+
   - word: täglich
+    class: adjective
+    level: A2
+    meaning:
+      en: daily, every day
+      fa: روزانه، هر روز
+    definition: an jedem Tag
+    example:
+      de: Das Museum ist täglich von zehn bis achtzehn Uhr geöffnet.
+      en: The museum is open daily from ten a.m. to six p.m.
+      fa: موزه هر روز از ساعت ۱۰ تا ۱۸ باز است.
+
   - word: tagsüber
+    class: adverb
+    level: A2
+    meaning:
+      en: during the day
+      fa: در طول روز
+    definition: am Tag, wenn es hell ist, nicht in der Nacht
+    example:
+      de: Tagsüber arbeite ich, abends habe ich Zeit.
+      en: During the day I work; in the evenings I have time.
+      fa: در طول روز کار می‌کنم و شب‌ها وقت دارم.
+
+review:
+  reviewer: "an independent AI agent (three fresh reviewers: the whole sheet, then
+    the changed and disputed questions twice)"
+  date: 2026-11-28
+  pool: 8df7dc3d3e95ba68
