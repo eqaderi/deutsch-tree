@@ -4,7 +4,7 @@ kind: grammar
 level: B1
 chapter: b1-relative-clauses
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-178]
 title:
@@ -331,3 +331,9 @@ questions:
       en: "*Was* after *alles*, *wo* after the name of a city, and after a noun a relative pronoun: *den* (*Ich kenne den Mann*)."
       fa: "*was* پس از *alles*، *wo* پس از نام شهر و پس از اسم، ضمیر موصولی: *den* (*Ich kenne den Mann*)."
       de: "*Was* nach *alles*, *wo* nach dem Namen einer Stadt, und nach einem Nomen ein Relativpronomen: *den* (*Ich kenne den Mann*)."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 821e756131185f53

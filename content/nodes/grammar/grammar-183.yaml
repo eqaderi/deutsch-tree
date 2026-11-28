@@ -4,7 +4,7 @@ kind: grammar
 level: B1
 chapter: b1-relative-clauses
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: true
 prerequisites: [grammar-071, grammar-180]
 title:
@@ -75,9 +75,9 @@ diagrams:
         the owner, *Frau*, not of *Sohn*. On its own the relative clause is
         *Ihr Sohn heißt Max.*, so *deren* reads like *ihr*.
       fa: >
-        *deren* با صاحب، یعنی *Frau*، هم‌جنس است، نه با *Sohn*. جملهٔ موصولی
-        به‌تنهایی چنین می‌شود: *Ihr Sohn heißt Max.* پس *deren* را مانند
-        *ihr* بخوانید. جملهٔ کامل: *Das ist die Frau, deren Sohn Max heißt.*
+        ضمیر *deren* با صاحب، یعنی *Frau*، هم‌جنس است، نه با *Sohn*. در
+        جملهٔ موصولی به‌تنهایی به جای *deren* واژهٔ *ihr* می‌آید، پس *deren*
+        را مانند *ihr* بخوانید.
       de: >
         *Das ist die Frau, deren Sohn Max heißt.* *Deren* passt zum Besitzer,
         zu *Frau*, nicht zu *Sohn*. Der Relativsatz allein heißt: *Ihr Sohn
@@ -111,14 +111,14 @@ diagrams:
         <text class="note" x="160" y="164" text-anchor="middle">{{alone}}</text>
         <text class="label" x="150" y="194" text-anchor="end">Ihr Sohn</text>
         <text class="label" x="158" y="194">heißt Max.</text>
-        <line class="guide" x1="80" y1="202" x2="150" y2="202"/>
-        <text class="note" x="115" y="222" text-anchor="middle">deren = ihr</text>
+        <line class="guide" x1="86" y1="202" x2="150" y2="202"/>
+        <text class="note" x="118" y="222" text-anchor="middle">deren = ihr</text>
       </svg>
 
 examples:
-  - de: Florian Bader, dessen Zwillinge in die Krippe gehen, arbeitet jetzt halbtags.
-    en: Florian Bader, whose twins go to nursery, now works part-time.
-    fa: فلوریان بادر که دوقلوهایش به مهدکودک می‌روند، حالا نیمه‌وقت کار می‌کند.
+  - de: Mein Kollege, dessen Zwillinge in die Krippe gehen, arbeitet jetzt halbtags.
+    en: My colleague, whose twins go to nursery, now works part-time.
+    fa: همکارم که دوقلوهایش به مهدکودک می‌روند، حالا نیمه‌وقت کار می‌کند.
   - de: Das ist die Frau, deren Sohn in meiner Klasse ist.
     en: That's the woman whose son is in my class.
     fa: این همان زنی است که پسرش در کلاس من است.
@@ -318,3 +318,9 @@ questions:
       en: "*Dessen* reads like *sein*, for a masculine or neuter owner; *deren* like *ihr*, for a feminine owner or a plural."
       fa: "*dessen* مانند *sein* است، برای صاحب مذکر یا خنثی؛ *deren* مانند *ihr*، برای صاحب مؤنث یا جمع."
       de: "*Dessen* ist wie *sein* (maskulin, neutral), *deren* wie *ihr* (feminin, Plural)."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: bf5f824bac9c2592
