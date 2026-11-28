@@ -105,6 +105,10 @@ its first mention in a node.
 | main clause / subordinate clause | Hauptsatz / Nebensatz | جملهٔ پایه / جملهٔ پیرو |
 | relative clause | Relativsatz | جملهٔ موصولی |
 | word order; position 2 | Wortstellung; Position 2 | ترتیب واژه‌ها؛ جایگاه دوم |
+| position 0 (of *und*, *aber* …) | Position 0 | جایگاه صفر |
+| sentence bracket | Satzklammer | قاب جمله (*Satzklammer*) |
+| complement (of a verb) | Ergänzung | متمم |
+| intransitive / transitive (verb) | intransitiv / transitiv | (فعل) لازم / متعدی |
 | separable verb; prefix | trennbares Verb; Präfix | فعل جداشدنی؛ پیشوند |
 | inseparable verb | untrennbares Verb | فعل جدانشدنی |
 | modal verb | Modalverb | فعل وجهی |

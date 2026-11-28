@@ -1,13 +1,283 @@
-# Grammar list row 104.
+# Grammar list row 104. The file format is described in content/README.md.
+# Other degree words (ziemlich, total, besonders) are grammar-114, at A2.
 id: grammar-104
 kind: grammar
 level: A1
 chapter: a1-adjectives
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-102]
 title:
   en: "*sehr* / *zu* + adjective"
   fa: "*sehr* و *zu* + صفت"
   de: "*sehr* / *zu* + Adjektiv"
+
+explanations:
+  en:
+    rule: >
+      *Sehr* (very) and *zu* (too) stand directly before an adjective, which
+      still has no ending: *sehr schön*, *zu teuer*. *Sehr* only makes the
+      adjective stronger. *Zu* says there is more than is good, so it names a
+      problem: *Die Jacke ist sehr schön, aber zu teuer* means you will not
+      buy it. A measure before *zu* says by how much: *zehn Minuten zu spät*.
+      Both also go with an adjective that says how: *Er fährt zu schnell.*
+  fa:
+    rule: >
+      *sehr* و *zu* درست پیش از صفت می‌آیند و صفت باز هم پایانه نمی‌گیرد:
+      *sehr schön*، *zu teuer*. در فارسی «خیلی» هر دو معنا را دارد، ولی
+      آلمانی این دو را از هم جدا می‌کند. *sehr* یعنی «خیلی» و فقط صفت را
+      قوی‌تر می‌کند. *zu* یعنی «بیش از اندازه» و از یک مشکل خبر می‌دهد: *Die
+      Jacke ist sehr schön, aber zu teuer* یعنی کاپشن را نمی‌خرید. اندازه‌ای
+      که پیش از *zu* بیاید می‌گوید چقدر بیش از اندازه: *zehn Minuten zu spät*
+      (ده دقیقه دیر). هر دو با صفتی هم می‌آیند که چگونگی کاری را می‌گوید:
+      *Er fährt zu schnell.*
+  de:
+    rule: >
+      *Sehr* und *zu* stehen direkt vor dem Adjektiv. Das Adjektiv hat keine
+      Endung: *sehr schön*, *zu teuer*. *Sehr* macht das Adjektiv nur stärker.
+      *Zu* heißt: mehr, als gut ist. Es gibt ein Problem. *Die Jacke ist sehr
+      schön, aber zu teuer.* Man kauft sie also nicht. Vor *zu* kann ein Maß
+      stehen: *zehn Minuten zu spät*. Beide stehen auch beim Verb: *Er fährt
+      zu schnell.*
+
+table:
+  columns:
+    - { en: Adjective, fa: صفت, de: Adjektiv }
+    - { en: "*sehr* (very)", fa: "*sehr* (خیلی)", de: "*sehr* (stärker)" }
+    - { en: "*zu* (too): a problem", fa: "*zu* (بیش از اندازه): یک مشکل", de: "*zu* (mehr, als gut ist): ein Problem" }
+  rows:
+    - [groß, Die Wohnung ist sehr groß., Die Wohnung ist zu groß für mich.]
+    - [teuer, Das Auto ist sehr teuer., Das Auto ist zu teuer. Ich kaufe es nicht.]
+    - [heiß, Der Tee ist sehr heiß., Der Tee ist zu heiß. Ich trinke ihn später.]
+    - [schnell, Er fährt sehr schnell., Er fährt zu schnell. Das ist gefährlich.]
+    - [spät, Es ist schon sehr spät., Wir sind zu spät. Der Zug ist weg.]
+
+examples:
+  - de: Das ist sehr schön, aber zu teuer.
+    en: That is very nice, but too expensive.
+    fa: خیلی قشنگ است، اما بیش از اندازه گران است.
+  - de: Vielen Dank, das ist sehr nett von Ihnen.
+    en: Thank you very much, that is very kind of you.
+    fa: بسیار سپاسگزارم، خیلی لطف دارید.
+  - de: Die Suppe ist zu salzig.
+    en: The soup is too salty.
+    fa: سوپ بیش از اندازه شور است.
+  - de: Der Film ist sehr lustig.
+    en: The film is very funny.
+    fa: فیلم خیلی خنده‌دار است.
+  - de: Die Hose ist zwei Zentimeter zu lang.
+    en: The trousers are two centimetres too long.
+    fa: شلوار دو سانتی‌متر بلندتر از اندازه است.
+  - de: Du kommst zehn Minuten zu spät.
+    en: You are ten minutes late.
+    fa: ده دقیقه دیر آمده‌ای.
+  - de: Sie spricht sehr gut Deutsch.
+    en: She speaks German very well.
+    fa: او خیلی خوب آلمانی حرف می‌زند.
+  - de: Mein Opa fährt zu langsam.
+    en: My grandad drives too slowly.
+    fa: پدربزرگم بیش از اندازه آهسته رانندگی می‌کند.
+  - de: Das Zimmer ist nicht sehr groß, aber sehr ruhig.
+    en: The room is not very big, but very quiet.
+    fa: اتاق خیلی بزرگ نیست، اما خیلی آرام است.
+
+mistakes:
+  - wrong: Danke, das Essen ist zu lecker!
+    right: Danke, das Essen ist sehr lecker!
+    why:
+      en: "Praise takes *sehr*. *Zu* always names a problem: more than is good."
+      fa: "برای تعریف کردن *sehr* به کار می‌رود. *zu* همیشه از یک مشکل خبر می‌دهد: بیش از اندازه."
+      de: "Ein Lob sagt man mit *sehr*. *Zu* heißt immer: mehr, als gut ist."
+  - wrong: Das Zimmer ist sehr kleine.
+    right: Das Zimmer ist sehr klein.
+    why:
+      en: "After *sehr* or *zu* the adjective still has no ending."
+      fa: "پس از *sehr* یا *zu* هم صفت پایانه نمی‌گیرد."
+      de: "Auch nach *sehr* oder *zu* hat das Adjektiv keine Endung."
+  - wrong: Er spricht sehr Deutsch gut.
+    right: Er spricht sehr gut Deutsch.
+    why:
+      en: "*Sehr* stands directly before its adjective: *sehr gut*."
+      fa: "*sehr* درست پیش از صفت خودش می‌آید: *sehr gut*."
+      de: "*Sehr* steht direkt vor dem Adjektiv: *sehr gut*."
+
+# 20 questions. Where sehr and zu are both offered, the sentence leaves only
+# one of them possible: praise (sehr), or a measure before the gap (zu).
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ihr Deutsch ist ___ gut. Super!
+    options: [sehr, zu]
+    answer: sehr
+    explanation:
+      en: "Praise takes *sehr*. German cannot be *zu gut*, more than is good."
+      fa: "برای تعریف *sehr* به کار می‌رود. آلمانیِ کسی نمی‌تواند «بیش از اندازه خوب» باشد."
+      de: "Ein Lob sagt man mit *sehr*. Deutsch kann nicht *zu gut* sein."
+  - id: gap-2
+    type: gap-fill
+    prompt: Du kommst zehn Minuten ___ spät.
+    options: [zu, sehr]
+    answer: zu
+    explanation:
+      en: "A measure (*zehn Minuten*) says by how much: that is only possible with *zu*."
+      fa: "اندازه (*zehn Minuten*) می‌گوید چقدر بیش از اندازه؛ این فقط با *zu* ممکن است."
+      de: "Ein Maß (*zehn Minuten*) sagt, wie viel zu viel. Das geht nur mit *zu*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Die Hose ist zwei Zentimeter ___ lang.
+    options: [zu, sehr]
+    answer: zu
+    explanation:
+      en: "*Zwei Zentimeter* says by how much the trousers are too long: *zu*."
+      fa: "*zwei Zentimeter* می‌گوید شلوار چقدر بلندتر از اندازه است: *zu*."
+      de: "*Zwei Zentimeter* sagt, wie viel zu lang: *zu*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Vielen Dank! Das Essen ist ___ lecker.
+    options: [sehr, zu]
+    answer: sehr
+    explanation:
+      en: "You thank and praise, so *sehr*. *Zu* would name a problem."
+      fa: "تشکر و تعریف می‌کنید، پس *sehr*. *zu* از یک مشکل خبر می‌دهد."
+      de: "Man dankt und lobt, also *sehr*. *Zu* sagt: Es gibt ein Problem."
+  - id: gap-5
+    type: gap-fill
+    prompt: Das Auto ist sehr ___.
+    options: [schnell, schnelle, schnelles]
+    answer: schnell
+    explanation:
+      en: "After *sehr* the adjective has no ending: *schnell*."
+      fa: "پس از *sehr* صفت پایانه نمی‌گیرد: *schnell*."
+      de: "Nach *sehr* hat das Adjektiv keine Endung: *schnell*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Die Jacke ist zu teuer. Ich kaufe sie ___.
+    options: [nicht, sofort]
+    answer: nicht
+    explanation:
+      en: "*Zu teuer* is a problem: you don't buy the jacket."
+      fa: "*zu teuer* یعنی مشکلی هست: کاپشن را نمی‌خرید."
+      de: "*Zu teuer* ist ein Problem. Man kauft die Jacke nicht."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Das Wasser ist zu kalt. Das heißt:"
+    options: [Wir schwimmen heute nicht., Wir schwimmen jetzt sofort., Das Wasser ist warm.]
+    answer: Wir schwimmen heute nicht.
+    explanation:
+      en: "*Zu kalt* is colder than is good, so there is no swimming."
+      fa: "*zu kalt* یعنی سردتر از اندازه، پس امروز شنا نمی‌کنیم."
+      de: "*Zu kalt* heißt: kälter, als gut ist. Darum schwimmt man nicht."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Das Hotel ist sehr schön. Das heißt:"
+    options: [Das Hotel gefällt mir., Das Hotel ist nicht schön., Das Hotel ist hässlich.]
+    answer: Das Hotel gefällt mir.
+    explanation:
+      en: "*Sehr schön* is only stronger than *schön*: there is no problem, you like it."
+      fa: "*sehr schön* فقط قوی‌تر از *schön* است؛ مشکلی نیست و هتل را دوست دارید."
+      de: "*Sehr schön* ist nur stärker als *schön*. Es gibt kein Problem."
+  - id: true-1
+    type: true-false
+    prompt: Der Tee ist sehr heiß.
+    answer: true
+    explanation:
+      en: "*Sehr* directly before the adjective, no ending. The sentence is correct."
+      fa: "*sehr* درست پیش از صفت آمده و صفت پایانه ندارد. جمله درست است."
+      de: "*Sehr* direkt vor dem Adjektiv, keine Endung. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Die Wohnung ist zu kleine.
+    answer: false
+    explanation:
+      en: "After *zu* there is no ending: *zu klein*."
+      fa: "پس از *zu* صفت پایانه نمی‌گیرد: *zu klein*."
+      de: "Nach *zu* gibt es keine Endung: *zu klein*."
+  - id: true-3
+    type: true-false
+    prompt: Der Koffer ist fünf Kilo zu schwer.
+    answer: true
+    explanation:
+      en: "A measure before *zu* says by how much. The sentence is correct."
+      fa: "اندازهٔ پیش از *zu* می‌گوید چقدر بیش از اندازه. جمله درست است."
+      de: "Das Maß vor *zu* sagt, wie viel zu viel. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Der Koffer ist fünf Kilo sehr schwer.
+    answer: false
+    explanation:
+      en: "A measure goes only with *zu*: *fünf Kilo zu schwer*."
+      fa: "اندازه فقط با *zu* می‌آید: *fünf Kilo zu schwer*."
+      de: "Ein Maß geht nur mit *zu*: *fünf Kilo zu schwer*."
+  - id: true-5
+    type: true-false
+    prompt: Er fährt immer zu schnell.
+    answer: true
+    explanation:
+      en: "*Zu* also goes with an adjective that says how. The sentence is correct."
+      fa: "*zu* با صفتی هم می‌آید که چگونگی کاری را می‌گوید. جمله درست است."
+      de: "*Zu* steht auch beim Verb vor dem Adjektiv. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wie geht es Ihnen? – Danke, ___ (sehr / zu) gut.
+    answers: [sehr]
+    explanation:
+      en: "You feel well, and nobody can feel *zu gut*, better than is good: *sehr gut*."
+      fa: "حالتان خوب است و کسی نمی‌تواند «بیش از اندازه خوب» باشد: *sehr gut*."
+      de: "Es geht Ihnen gut. *Zu gut* geht es niemandem: *sehr gut*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Das Kleid ist eine Nummer ___ (sehr / zu) groß.
+    answers: [zu]
+    explanation:
+      en: "*Eine Nummer* says by how much: only *zu* goes with a measure."
+      fa: "*eine Nummer* می‌گوید چقدر بیش از اندازه؛ فقط *zu* با اندازه می‌آید."
+      de: "*Eine Nummer* sagt, wie viel zu viel. Mit einem Maß steht nur *zu*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Das Zimmer ist sehr ___ (ruhig).
+    answers: [ruhig]
+    explanation:
+      en: "After *sehr* the adjective stays as it is: *ruhig*."
+      fa: "پس از *sehr* صفت بی‌تغییر می‌ماند: *ruhig*."
+      de: "Nach *sehr* bleibt das Adjektiv, wie es ist: *ruhig*."
+  - id: error-1
+    type: find-error
+    prompt: Die Suppe ist zu salzige.
+    answer: salzige
+    explanation:
+      en: "After *zu* the adjective has no ending: *zu salzig*."
+      fa: "پس از *zu* صفت پایانه نمی‌گیرد: *zu salzig*."
+      de: "Nach *zu* hat das Adjektiv keine Endung: *zu salzig*."
+  - id: error-2
+    type: find-error
+    prompt: Du kommst eine Stunde sehr spät.
+    answer: sehr
+    explanation:
+      en: "A measure (*eine Stunde*) goes only with *zu*: *eine Stunde zu spät*."
+      fa: "اندازه (*eine Stunde*) فقط با *zu* می‌آید: *eine Stunde zu spät*."
+      de: "Ein Maß (*eine Stunde*) geht nur mit *zu*: *eine Stunde zu spät*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ist, die Jacke, zu, teuer]
+    end: "?"
+    explanation:
+      en: "The question starts with the verb; *zu* stands directly before *teuer*."
+      fa: "پرسش با فعل شروع می‌شود و *zu* درست پیش از *teuer* می‌آید."
+      de: "Die Frage beginnt mit dem Verb. *Zu* steht direkt vor *teuer*."
+  - id: order-2
+    type: word-order
+    answers:
+      - [ist, das Zimmer, sehr, klein]
+    end: "?"
+    explanation:
+      en: "The question starts with the verb; *sehr* stands directly before *klein*."
+      fa: "پرسش با فعل شروع می‌شود و *sehr* درست پیش از *klein* می‌آید."
+      de: "Die Frage beginnt mit dem Verb. *Sehr* steht direkt vor *klein*."
+
+review:
+  reviewer: two independent AI agents (a second fresh agent re-answered the
+    changed or disputed questions)
+  date: 2026-11-28
+  pool: 0dbc30df89895000
