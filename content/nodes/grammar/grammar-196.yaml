@@ -51,7 +51,11 @@ explanations:
 table:
   columns:
     - { en: First part, fa: جزء اول, de: Erstes Wort }
-    - { en: "Last part (gives *der*, *die*, *das*)", fa: "جزء آخر (جنس را تعیین می‌کند)", de: "Letztes Wort (gibt den Artikel)" }
+    - {
+        en: "Last part (gives *der*, *die*, *das*)",
+        fa: "جزء آخر (جنس را تعیین می‌کند)",
+        de: "Letztes Wort (gibt den Artikel)",
+      }
     - { en: Compound, fa: اسم مرکب, de: Zusammengesetztes Nomen }
     - { en: Plural, fa: جمع, de: Plural }
   rows:

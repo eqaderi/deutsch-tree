@@ -141,7 +141,7 @@ questions:
     options: [kostenlos, unkosten, kostenbar]
     answer: kostenlos
     explanation:
-      en: "*-los* means \"without\": *kostenlos*, without costs."
+      en: '*-los* means "without": *kostenlos*, without costs.'
       fa: "*-los* یعنی «بدون»: *kostenlos*، بدون هزینه."
       de: "*-los* heißt „ohne“: *kostenlos* = ohne Kosten."
   - id: q3
@@ -168,7 +168,7 @@ questions:
     options: [trinkbar, untrinkbar, trinklos]
     answer: trinkbar
     explanation:
-      en: "*-bar* means \"can be done\": you can drink it, so it is *trinkbar*."
+      en: '*-bar* means "can be done": you can drink it, so it is *trinkbar*.'
       fa: "*-bar* یعنی «شدنی»: می‌شود آن را نوشید، پس *trinkbar* است."
       de: "*-bar* heißt „man kann es machen“: Man kann es trinken, es ist *trinkbar*."
   - id: q6
