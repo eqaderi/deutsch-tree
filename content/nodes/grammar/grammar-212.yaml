@@ -4,10 +4,360 @@ kind: grammar
 level: B1
 chapter: b1-prepositions
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-120, grammar-131, grammar-134, grammar-137]
 title:
   en: "Temporal prepositions: contrast pairs and temporal *bei*"
   fa: "حرف‌های اضافهٔ زمان: جفت‌های متقابل و *bei* زمانی"
   de: "Präpositionen für die Zeit: Unterschiede und *bei* für die Zeit"
+
+explanations:
+  en:
+    rule: >
+      With a length of time, three prepositions look in different
+      directions. *Vor drei Jahren* is a point in the past (ago), so the verb
+      is in a past tense. *Seit drei Jahren* runs from the past up to now and
+      is not over, so the verb is in the present. *In drei Jahren* is a
+      point in the future. *Bei* + *Dativ* says at the time of an event or a
+      situation, "when" or "in": *bei der Arbeit*, *bei schlechtem Wetter*,
+      very often with a verb used as a noun: *beim Kochen* (*bei dem*
+      becomes *beim*). *Während* + *Genitiv* stresses that two things run
+      side by side for the whole time: *während des Essens*. *Innerhalb* +
+      *Genitiv* gives a span with a deadline: *innerhalb einer Woche*.
+  fa:
+    rule: >
+      این سه حرف اضافه با یک مدت زمان هر کدام جهتی دیگر را نشان می‌دهند. *vor drei
+      Jahren* (سه سال پیش) نقطه‌ای در گذشته است، پس فعل در یکی از زمان‌های
+      گذشته می‌آید. *seit drei Jahren* (سه سال است که) از گذشته تا اکنون ادامه
+      دارد و تمام نشده است، پس فعل در زمان حال (*Präsens*) می‌آید. *in drei
+      Jahren* (سه سال دیگر) نقطه‌ای در آینده است. *bei* با حالت *Dativ* (حالت
+      مفعول باواسطه) زمان یک رویداد یا یک وضعیت را می‌گوید، یعنی «هنگام» یا
+      «در»: *bei der Arbeit* (سر کار) و *bei schlechtem Wetter* (در هوای بد).
+      *bei* بسیار وقت‌ها با فعلی می‌آید که اسم شده است: *beim Kochen* (هنگام
+      آشپزی)؛ *bei dem* کوتاه می‌شود و *beim* می‌شود. *während* با حالت
+      *Genitiv* (حالت ملکی) تأکید می‌کند که دو کار در تمام مدت کنار هم پیش
+      می‌روند: *während des Essens*. *innerhalb* با حالت *Genitiv* مدتی را
+      نشان می‌دهد که مهلت دارد: *innerhalb einer Woche* (ظرف یک هفته).
+  de:
+    rule: >
+      Mit einer Zeitdauer zeigen drei Präpositionen in verschiedene
+      Richtungen. *Vor drei Jahren* ist ein Punkt in der Vergangenheit. Das
+      Verb steht in einer Zeitform der Vergangenheit. *Seit drei Jahren*
+      geht von früher bis jetzt und ist noch nicht vorbei. Das Verb steht im
+      Präsens. *In drei Jahren* ist ein Punkt in der Zukunft. *Bei* + Dativ
+      sagt: zur Zeit von einem Ereignis oder einer Situation, zum Beispiel
+      *bei der Arbeit*, *bei schlechtem Wetter*. Sehr oft steht danach ein
+      Verb als Nomen: *beim Kochen* (*bei dem* wird zu *beim*). *Während* +
+      Genitiv sagt: Zwei Dinge passieren die ganze Zeit zusammen, zum
+      Beispiel *während des Essens*. *Innerhalb* + Genitiv nennt eine Frist:
+      *innerhalb einer Woche*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*: *vor*, *seit*, *in*, *bei*", fa: "حالت *Dativ*: *vor*، *seit*، *in*، *bei*", de: "Dativ: *vor*, *seit*, *in*, *bei*" }
+    - { en: "*Genitiv*: *während*, *innerhalb*", fa: "حالت *Genitiv*: *während*، *innerhalb*", de: "Genitiv: *während*, *innerhalb*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Urlaub, dem Urlaub, des Urlaubs, "vor dem Urlaub, während des Urlaubs"]
+    - [die Arbeit, der Arbeit, der Arbeit, "bei der Arbeit, während der Arbeit"]
+    - [das Essen, dem Essen, des Essens, "beim Essen, während des Essens"]
+    - [die Ferien (Plural), den Ferien, der Ferien, "in den Ferien, während der Ferien"]
+    - [ein Monat, einem Monat, eines Monats, "vor einem Monat, innerhalb eines Monats"]
+    - [eine Woche, einer Woche, einer Woche, "seit einer Woche, innerhalb einer Woche"]
+
+# A time line with "jetzt" in the middle: vor three years back, in three
+# years ahead, and seit as a bar from three years back up to now. Under each,
+# the verb form that goes with it.
+diagrams:
+  - caption:
+      en: >
+        Time runs to the right, and *jetzt* is now. *Vor drei Jahren* is a
+        point in the past: *Ich bin nach Köln gekommen.* *Seit drei Jahren*
+        runs from then up to now: *Ich arbeite hier.* *In drei Jahren* is a
+        point in the future: *Ich gehe in Rente.*
+      fa: >
+        زمان به سمت راست پیش می‌رود و *jetzt* یعنی اکنون. نقطهٔ چپ سه سال پیش
+        است (*vor drei Jahren*) و با فعل گذشته می‌آید. نوار تیره از آن زمان تا
+        اکنون ادامه دارد (*seit drei Jahren*) و با فعل زمان حال می‌آید. نقطهٔ
+        راست سه سال دیگر است (*in drei Jahren*).
+      de: >
+        Die Zeit läuft nach rechts, *jetzt* ist in der Mitte. *Vor drei
+        Jahren* ist ein Punkt in der Vergangenheit: *Ich bin nach Köln
+        gekommen.* *Seit drei Jahren* geht von damals bis jetzt: *Ich arbeite
+        hier.* *In drei Jahren* ist ein Punkt in der Zukunft: *Ich gehe in
+        Rente.*
+    svg: |
+      <svg viewBox="0 0 320 196">
+        <!-- seit: from three years ago up to now -->
+        <text class="label" x="110" y="28" text-anchor="middle">seit drei Jahren</text>
+        <rect class="object" x="60" y="38" width="100" height="12"/>
+        <text class="note" x="110" y="72" text-anchor="middle">arbeite hier</text>
+        <line class="guide" x1="60" y1="50" x2="60" y2="134"/>
+        <line class="guide" x1="160" y1="50" x2="160" y2="134"/>
+        <!-- the time line, with an arrow to the right -->
+        <line class="line" x1="10" y1="140" x2="304" y2="140"/>
+        <polygon class="object" points="304,134 316,140 304,146"/>
+        <circle class="object" cx="60" cy="140" r="6"/>
+        <circle class="object" cx="160" cy="140" r="6"/>
+        <circle class="object" cx="260" cy="140" r="6"/>
+        <text class="note" x="60" y="166" text-anchor="middle">vor drei Jahren</text>
+        <text class="label" x="160" y="168" text-anchor="middle">jetzt</text>
+        <text class="note" x="260" y="166" text-anchor="middle">in drei Jahren</text>
+        <text class="note" x="60" y="186" text-anchor="middle">bin gekommen</text>
+        <text class="note" x="260" y="186" text-anchor="middle">gehe in Rente</text>
+      </svg>
+
+examples:
+  - de: Vor drei Jahren bin ich nach Köln gekommen.
+    en: I came to Cologne three years ago.
+    fa: سه سال پیش به کلن آمدم.
+  - de: Seit drei Jahren arbeite ich bei einer Bank.
+    en: I have been working at a bank for three years.
+    fa: سه سال است که در یک بانک کار می‌کنم.
+  - de: In drei Jahren gehe ich in Rente.
+    en: In three years I'll retire.
+    fa: سه سال دیگر بازنشسته می‌شوم.
+  - de: Beim Kochen höre ich gern Radio.
+    en: I like listening to the radio while I cook.
+    fa: هنگام آشپزی دوست دارم رادیو گوش کنم.
+  - de: Bei schlechtem Wetter bleiben wir zu Hause.
+    en: In bad weather we stay at home.
+    fa: در هوای بد در خانه می‌مانیم.
+  - de: Bei der Arbeit darf ich nicht privat telefonieren.
+    en: At work I'm not allowed to make private calls.
+    fa: سر کار اجازه ندارم تلفن شخصی بزنم.
+  - de: Beim Autofahren soll man nicht telefonieren.
+    en: You shouldn't use the phone when you're driving.
+    fa: هنگام رانندگی نباید با تلفن حرف زد.
+  - de: Während des Essens hat niemand ein Wort gesagt.
+    en: During the meal nobody said a word.
+    fa: سر غذا هیچ‌کس یک کلمه هم حرف نزد.
+  - de: Sie müssen das Formular innerhalb einer Woche zurückschicken.
+    en: You must send the form back within a week.
+    fa: باید فرم را ظرف یک هفته پس بفرستید.
+  - de: Vor dem Essen wasche ich mir die Hände.
+    en: I wash my hands before the meal.
+    fa: پیش از غذا دست‌هایم را می‌شویم.
+  - de: Seit dem Unfall fährt er nicht mehr Auto.
+    en: Since the accident he hasn't driven a car.
+    fa: از زمان تصادف دیگر رانندگی نمی‌کند.
+
+mistakes:
+  - wrong: Ich wohne hier vor zwei Jahren.
+    right: Ich wohne seit zwei Jahren hier.
+    why:
+      en: "The living began in the past and goes on now, so it is *seit*. *Vor* is a single point in the past."
+      fa: "زندگی در این‌جا در گذشته شروع شده و هنوز ادامه دارد، پس *seit* می‌آید. *vor* فقط یک نقطه در گذشته است."
+      de: "Das Wohnen hat früher begonnen und geht weiter. Darum *seit*. *Vor* ist nur ein Punkt in der Vergangenheit."
+  - wrong: Seit zwei Jahren bin ich nach Köln gezogen.
+    right: Vor zwei Jahren bin ich nach Köln gezogen.
+    why:
+      en: "Moving house happens once, at a point in the past: *vor zwei Jahren*."
+      fa: "اسباب‌کشی یک بار و در یک نقطه از گذشته رخ می‌دهد: *vor zwei Jahren*."
+      de: "Ein Umzug passiert einmal, an einem Punkt in der Vergangenheit: *vor zwei Jahren*."
+  - wrong: Seit drei Jahren habe ich in Köln gewohnt.
+    right: Seit drei Jahren wohne ich in Köln.
+    why:
+      en: "With *seit* the action is not over, so the verb stays in the present: *wohne*."
+      fa: "با *seit* کار هنوز تمام نشده است، پس فعل در زمان حال می‌ماند: *wohne*."
+      de: "Mit *seit* ist es noch nicht vorbei. Darum steht das Verb im Präsens: *wohne*."
+  - wrong: Bei Kochen höre ich Musik.
+    right: Beim Kochen höre ich Musik.
+    why:
+      en: "A verb used as a noun is neuter (*das Kochen*): *bei dem Kochen*, shortened to *beim Kochen*."
+      fa: "فعلی که اسم شده خنثی است (*das Kochen*): *bei dem Kochen* که کوتاه می‌شود و *beim Kochen* می‌شود."
+      de: "Ein Verb als Nomen ist neutral (*das Kochen*): *bei dem Kochen*, kurz *beim Kochen*."
+  - wrong: Beim schlechtem Wetter bleiben wir zu Hause.
+    right: Bei schlechtem Wetter bleiben wir zu Hause.
+    why:
+      en: "*Beim* is *bei dem*. Here there is no article, so it is only *bei*: *bei schlechtem Wetter*."
+      fa: "*beim* همان *bei dem* است. این‌جا حرف تعریف نیست، پس فقط *bei* می‌آید: *bei schlechtem Wetter*."
+      de: "*Beim* ist *bei dem*. Hier gibt es keinen Artikel. Darum nur *bei*: *bei schlechtem Wetter*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ zwei Jahren bin ich nach Köln gezogen.
+    options: [Seit, In, Vor]
+    answer: Vor
+    explanation:
+      en: "A move happens once in the past (*bin gezogen*): *vor zwei Jahren*."
+      fa: "اسباب‌کشی یک بار در گذشته رخ داده است (*bin gezogen*): *vor zwei Jahren*."
+      de: "Ein Umzug passiert einmal in der Vergangenheit (*bin gezogen*): *vor zwei Jahren*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich wohne schon ___ zwei Jahren hier.
+    options: [vor, seit, nach]
+    answer: seit
+    explanation:
+      en: "It began in the past and goes on (*wohne schon*): *seit zwei Jahren*."
+      fa: "در گذشته شروع شده و ادامه دارد (*wohne schon*): *seit zwei Jahren*."
+      de: "Es hat früher begonnen und geht weiter (*wohne schon*): *seit zwei Jahren*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Der neue Kurs beginnt ___ zwei Wochen.
+    options: [vor, in, seit]
+    answer: in
+    explanation:
+      en: "A point in the future, counted from now: *in zwei Wochen*."
+      fa: "نقطه‌ای در آینده، از اکنون حساب‌شده: *in zwei Wochen*."
+      de: "Ein Punkt in der Zukunft, von jetzt an gerechnet: *in zwei Wochen*."
+  - id: gap-4
+    type: gap-fill
+    prompt: ___ Joggen höre ich gern Musik.
+    options: [Bei, Beim, Während]
+    answer: Beim
+    explanation:
+      en: "*Das Joggen* is a verb used as a noun; *bei dem* becomes *beim*: *beim Joggen*."
+      fa: "*das Joggen* فعلی است که اسم شده؛ *bei dem* کوتاه می‌شود و *beim* می‌شود: *beim Joggen*."
+      de: "*Das Joggen* ist ein Verb als Nomen. *Bei dem* wird zu *beim*: *beim Joggen*."
+  - id: gap-5
+    type: gap-fill
+    prompt: ___ Regen fahre ich mit dem Bus.
+    options: [Beim, Seit, Bei]
+    answer: Bei
+    explanation:
+      en: "Whenever it rains: *bei Regen*. There is no article, so not *beim*."
+      fa: "هر وقت باران ببارد: *bei Regen*. حرف تعریف نیست، پس *beim* نمی‌آید."
+      de: "Immer wenn es regnet: *bei Regen*. Es gibt keinen Artikel, also nicht *beim*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Wann bist du nach Deutschland gekommen? – ___
+    options: [Seit einem Jahr., Vor einem Jahr., In einem Jahr.]
+    answer: Vor einem Jahr.
+    explanation:
+      en: "*Wann?* with a past tense (*bist gekommen*) asks for a point in the past: *vor einem Jahr*."
+      fa: "*Wann?* با فعل گذشته (*bist gekommen*) نقطه‌ای در گذشته را می‌پرسد: *vor einem Jahr*."
+      de: "*Wann?* mit Vergangenheit (*bist gekommen*) fragt nach einem Punkt in der Vergangenheit: *vor einem Jahr*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Bis wann muss ich das Formular zurückschicken? – ___
+    options: [Seit einer Woche., Innerhalb einer Woche., Vor einer Woche.]
+    answer: Innerhalb einer Woche.
+    explanation:
+      en: "*Bis wann?* asks for a deadline: *innerhalb einer Woche*."
+      fa: "*Bis wann?* مهلت را می‌پرسد: *innerhalb einer Woche*."
+      de: "*Bis wann?* fragt nach einer Frist: *innerhalb einer Woche*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wann hörst du gern Musik? – ___
+    options: [Bei Autofahren., Seit dem Autofahren., Beim Autofahren.]
+    answer: Beim Autofahren.
+    explanation:
+      en: "*Das Autofahren* is a verb used as a noun: *beim Autofahren*."
+      fa: "*das Autofahren* فعلی است که اسم شده: *beim Autofahren*."
+      de: "*Das Autofahren* ist ein Verb als Nomen: *beim Autofahren*."
+  - id: true-1
+    type: true-false
+    prompt: Seit zwei Jahren arbeite ich bei einer Bank.
+    answer: true
+    explanation:
+      en: "*Seit* with the verb in the present: the work began and goes on. The sentence is correct."
+      fa: "*seit* با فعل زمان حال: کار شروع شده و ادامه دارد. جمله درست است."
+      de: "*Seit* mit dem Verb im Präsens: Die Arbeit hat begonnen und geht weiter. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich wohne hier vor fünf Jahren.
+    answer: false
+    explanation:
+      en: "Living here goes on now, so it is *seit*: *Ich wohne seit fünf Jahren hier.*"
+      fa: "زندگی در این‌جا هنوز ادامه دارد، پس *seit* می‌آید: *Ich wohne seit fünf Jahren hier.*"
+      de: "Das Wohnen geht weiter. Darum *seit*: *Ich wohne seit fünf Jahren hier.*"
+  - id: true-3
+    type: true-false
+    prompt: Bei gutem Wetter essen wir im Garten.
+    answer: true
+    explanation:
+      en: "*Bei* + *Dativ* without an article: *bei gutem Wetter*. The sentence is correct."
+      fa: "*bei* با حالت *Dativ* و بدون حرف تعریف: *bei gutem Wetter*. جمله درست است."
+      de: "*Bei* + Dativ ohne Artikel: *bei gutem Wetter*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Beim starkem Wind fahre ich nicht mit dem Fahrrad.
+    answer: false
+    explanation:
+      en: "*Beim* is *bei dem*, but there is no article here: *bei starkem Wind*."
+      fa: "*beim* همان *bei dem* است، ولی این‌جا حرف تعریف نیست: *bei starkem Wind*."
+      de: "*Beim* ist *bei dem*, aber hier gibt es keinen Artikel: *bei starkem Wind*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich habe ___ (vor / ein Monat) eine neue Stelle gefunden.
+    answers: [vor einem Monat, vor einem]
+    explanation:
+      en: "*Vor* takes the *Dativ*: *ein Monat* becomes *einem Monat*."
+      fa: "*vor* با حالت *Dativ* می‌آید: *ein Monat* به *einem Monat* تبدیل می‌شود."
+      de: "Nach *vor* steht der Dativ: *ein Monat* wird zu *einem Monat*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich lerne ___ (seit / ein Jahr) Spanisch.
+    answers: [seit einem Jahr, seit einem]
+    explanation:
+      en: "*Seit* takes the *Dativ*: *ein Jahr* becomes *einem Jahr*."
+      fa: "*seit* با حالت *Dativ* می‌آید: *ein Jahr* به *einem Jahr* تبدیل می‌شود."
+      de: "Nach *seit* steht der Dativ: *ein Jahr* wird zu *einem Jahr*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (bei / das Essen) sehen wir nie fern.
+    answers: [Beim Essen, Bei dem Essen, Beim, Bei dem]
+    explanation:
+      en: "*Bei* + *dem Essen*, almost always said as *beim Essen*."
+      fa: "*bei* + *dem Essen* که تقریباً همیشه کوتاه می‌شود: *beim Essen*."
+      de: "*Bei* + *dem Essen*. Kurz sagt man fast immer *beim Essen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Sie bekommen die Antwort ___ (innerhalb / eine Woche).
+    answers: [innerhalb einer Woche, innerhalb einer, innerhalb von einer Woche]
+    explanation:
+      en: "*Innerhalb* takes the *Genitiv*: *eine Woche* becomes *einer Woche*."
+      fa: "*innerhalb* با حالت *Genitiv* می‌آید: *eine Woche* به *einer Woche* تبدیل می‌شود."
+      de: "Nach *innerhalb* steht der Genitiv: *eine Woche* wird zu *einer Woche*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "vor + drei Tage"
+    answers: [vor drei Tagen]
+    explanation:
+      en: "*Vor* takes the *Dativ*, and the plural noun gets *-n*: *vor drei Tagen*."
+      fa: "*vor* با حالت *Dativ* می‌آید و اسم جمع *-n* می‌گیرد: *vor drei Tagen*."
+      de: "Nach *vor* steht der Dativ, das Nomen im Plural bekommt *-n*: *vor drei Tagen*."
+  - id: error-1
+    type: find-error
+    prompt: Der Kurs hat vor zwei Wochen begonnen und endet seit drei Wochen.
+    answer: seit
+    explanation:
+      en: "The end is a point in the future, counted from now: *endet in drei Wochen*."
+      fa: "پایان کلاس نقطه‌ای در آینده است که از اکنون حساب می‌شود: *endet in drei Wochen*."
+      de: "Das Ende ist ein Punkt in der Zukunft, von jetzt an gerechnet: *endet in drei Wochen*."
+  - id: error-2
+    type: find-error
+    prompt: Bei Duschen singe ich immer.
+    answer: Bei
+    explanation:
+      en: "*Das Duschen* is a verb used as a noun: *beim Duschen*."
+      fa: "*das Duschen* فعلی است که اسم شده: *beim Duschen*."
+      de: "*Das Duschen* ist ein Verb als Nomen: *beim Duschen*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [was, machst, du, in zwei Jahren]
+    end: "?"
+    explanation:
+      en: "The question word first, the verb second, then the subject and the time."
+      fa: "واژهٔ پرسشی در آغاز، فعل در جایگاه دوم، سپس فاعل و قید زمان."
+      de: "Zuerst das Fragewort, dann das Verb an Position 2, dann das Subjekt und die Zeit."
+  - id: match-1
+    type: matching
+    answer:
+      - [vor zwei Jahren, bin ich umgezogen]
+      - [seit zwei Jahren, wohne ich schon hier]
+      - [in zwei Jahren, ziehe ich wieder um]
+    explanation:
+      en: "*Vor* is a point in the past, *seit* runs up to now, and *in* is a point in the future."
+      fa: "*vor* نقطه‌ای در گذشته است، *seit* تا اکنون ادامه دارد و *in* نقطه‌ای در آینده است."
+      de: "*Vor* ist ein Punkt in der Vergangenheit, *seit* geht bis jetzt, *in* ist ein Punkt in der Zukunft."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 5f65e186d79ba978
