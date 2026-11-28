@@ -163,7 +163,8 @@ questions:
   - id: q6
     type: multiple-choice
     prompt: "du / solltest / nicht so viel / fernsehen"
-    options: [Du solltest nicht so viel fernsehen., Du solltest fernsehen nicht so viel., Du nicht so viel solltest fernsehen.]
+    options:
+      [Du solltest nicht so viel fernsehen., Du solltest fernsehen nicht so viel., Du nicht so viel solltest fernsehen.]
     answer: Du solltest nicht so viel fernsehen.
     explanation:
       en: "*Solltest* is in position 2 and the infinitive *fernsehen* at the end."
