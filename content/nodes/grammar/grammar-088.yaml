@@ -4,10 +4,315 @@ kind: grammar
 level: A1
 chapter: a1-pronouns
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-082]
 title:
   en: "Reciprocal *sich* / *uns*"
   fa: "*sich* و *uns* به معنای «همدیگر»"
   de: "*sich* / *uns* mit der Bedeutung „einander“"
+
+explanations:
+  en:
+    rule: >
+      With a plural subject, *uns*, *euch* and *sich* can mean "each other":
+      *Wir sehen uns morgen.* (We'll see each other tomorrow.) The pronoun goes
+      with the subject: *wir … uns*, *ihr … euch*, and *sie* or polite *Sie …
+      sich*. *Uns* and *euch* are the *Akkusativ* forms you know; *sich* is new
+      and always has a small letter, also with *Sie*. Common verbs are
+      *sehen*, *treffen*, *kennen*, *lieben*, *besuchen* and *verstehen*.
+      English often leaves "each other" out (*We meet at eight*), but German
+      needs the pronoun: *Wir treffen uns um acht.*
+  fa:
+    rule: >
+      وقتی فاعل جمع است، *uns*، *euch* و *sich* می‌توانند به معنای «همدیگر»
+      باشند: *Wir sehen uns morgen.* (فردا همدیگر را می‌بینیم.) این ضمیر با
+      فاعل جور می‌شود: *wir … uns*، *ihr … euch*، و برای *sie* جمع و *Sie*
+      رسمی *sich*. *uns* و *euch* همان شکل‌های حالت *Akkusativ* هستند؛ *sich* تازه
+      است و همیشه با حرف کوچک نوشته می‌شود، حتی با *Sie*. فعل‌های رایج در این
+      کاربرد *sehen*، *treffen*، *kennen*، *lieben*، *besuchen* و *verstehen*
+      هستند. در فارسی «همدیگر» برای همهٔ شخص‌ها یکی است، ولی در آلمانی ضمیر
+      با فاعل عوض می‌شود. *treffen* هم بی‌مفعول نمی‌آید: «ساعت هشت همدیگر را
+      می‌بینیم» می‌شود *Wir treffen uns um acht.*
+  de:
+    rule: >
+      Bei einem Subjekt im Plural können *uns*, *euch* und *sich* „einander“
+      heißen: *Wir sehen uns morgen.* Das Pronomen passt zum Subjekt: *wir …
+      uns*, *ihr … euch*, *sie* und *Sie … sich*. *Sich* schreibt man immer
+      klein, auch bei *Sie*. Oft sagt man das mit *sehen*, *treffen*,
+      *kennen*, *lieben*, *besuchen* und *verstehen*: *Wir treffen uns um
+      acht.*
+
+# One arrow for "Anna sieht Tom", two for "Anna und Tom sehen sich": the
+# pronoun means the seeing goes both ways. German only, so no labels.
+diagrams:
+  - caption:
+      en: >
+        Above, *Anna sieht Tom*: one arrow, from Anna to Tom. Below, *Anna und
+        Tom sehen sich*: two arrows, each sees the other. That is the meaning
+        of *sich* here.
+      fa: >
+        بالا، *Anna sieht Tom*: یک پیکان، از آنا به تام. پایین، *Anna und Tom
+        sehen sich*: دو پیکان، هر کدام دیگری را می‌بیند. معنای *sich* در این‌جا
+        همین است.
+      de: >
+        Oben, *Anna sieht Tom*: ein Pfeil, von Anna zu Tom. Unten, *Anna und
+        Tom sehen sich*: zwei Pfeile, jeder sieht den anderen. Das bedeutet
+        *sich* hier.
+    svg: |
+      <svg viewBox="0 0 320 276">
+        <!-- Anna sieht Tom: one arrow -->
+        <circle class="object" cx="60" cy="28" r="14"/>
+        <rect class="object" x="46" y="46" width="28" height="34" rx="6"/>
+        <circle class="object" cx="260" cy="28" r="14"/>
+        <rect class="object" x="246" y="46" width="28" height="34" rx="6"/>
+        <line class="line" x1="84" y1="62" x2="226" y2="62"/>
+        <polygon class="object" points="224,56 236,62 224,68"/>
+        <text class="note" x="60" y="100" text-anchor="middle">Anna</text>
+        <text class="note" x="260" y="100" text-anchor="middle">Tom</text>
+        <text class="label" x="160" y="124" text-anchor="middle">Anna sieht Tom.</text>
+        <!-- Anna und Tom sehen sich: two arrows -->
+        <circle class="object" cx="60" cy="168" r="14"/>
+        <rect class="object" x="46" y="186" width="28" height="34" rx="6"/>
+        <circle class="object" cx="260" cy="168" r="14"/>
+        <rect class="object" x="246" y="186" width="28" height="34" rx="6"/>
+        <line class="line" x1="84" y1="196" x2="226" y2="196"/>
+        <polygon class="object" points="224,190 236,196 224,202"/>
+        <line class="line" x1="94" y1="212" x2="236" y2="212"/>
+        <polygon class="object" points="96,206 84,212 96,218"/>
+        <text class="note" x="60" y="240" text-anchor="middle">Anna</text>
+        <text class="note" x="260" y="240" text-anchor="middle">Tom</text>
+        <text class="label" x="160" y="264" text-anchor="middle">Anna und Tom sehen sich.</text>
+      </svg>
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: Each other, fa: همدیگر, de: einander }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [wir, uns, Wir sehen uns morgen.]
+    - [ihr, euch, Kennt ihr euch schon?]
+    - [sie (Plural), sich, Anna und Tom lieben sich.]
+    - [Sie, sich, Kennen Sie sich schon?]
+
+examples:
+  - de: Wir sehen uns morgen!
+    en: See you tomorrow!
+    fa: فردا همدیگر را می‌بینیم!
+  - de: Wir treffen uns um acht vor dem Kino.
+    en: We're meeting at eight in front of the cinema.
+    fa: ساعت هشت جلوی سینما همدیگر را می‌بینیم.
+  - de: Kennt ihr euch schon?
+    en: Do you (plural) already know each other?
+    fa: شما (جمع) همدیگر را می‌شناسید؟
+  - de: Anna und Tom lieben sich.
+    en: Anna and Tom love each other.
+    fa: آنا و تام همدیگر را دوست دارند.
+  - de: Die Nachbarn besuchen sich oft.
+    en: The neighbours often visit each other.
+    fa: همسایه‌ها اغلب به دیدن همدیگر می‌روند.
+  - de: Wir verstehen uns gut.
+    en: We get on well.
+    fa: ما با هم خوب کنار می‌آییم.
+  - de: Frau Roth, Herr Lang, kennen Sie sich schon?
+    en: Ms Roth, Mr Lang, do you already know each other?
+    fa: خانم روت، آقای لانگ، شما همدیگر را می‌شناسید؟
+
+mistakes:
+  - wrong: Wir sehen sich morgen.
+    right: Wir sehen uns morgen.
+    why:
+      en: "With *wir* the pronoun is *uns*. *Sich* is only for *sie* and *Sie*."
+      fa: "با *wir* ضمیر *uns* می‌آید. *sich* فقط برای *sie* و *Sie* است."
+      de: "Bei *wir* sagt man *uns*. *Sich* gibt es nur bei *sie* und *Sie*."
+  - wrong: Wir treffen um acht.
+    right: Wir treffen uns um acht.
+    why:
+      en: "English says “we meet”, but German needs the pronoun: *wir treffen uns*."
+      fa: "*treffen* بی‌مفعول نمی‌آید؛ «همدیگر را می‌بینیم» می‌شود *wir treffen uns*."
+      de: "*Treffen* braucht ein Objekt: *wir treffen uns*."
+  - wrong: Kennt ihr sich?
+    right: Kennt ihr euch?
+    why:
+      en: "With *ihr* the pronoun is *euch*."
+      fa: "با *ihr* ضمیر *euch* می‌آید."
+      de: "Bei *ihr* sagt man *euch*."
+  - wrong: Kennen Sie Sich?
+    right: Kennen Sie sich?
+    why:
+      en: "Only polite *Sie* has a capital letter. *Sich* is always small."
+      fa: "فقط *Sie* رسمی با حرف بزرگ نوشته می‌شود. *sich* همیشه با حرف کوچک است."
+      de: "Nur das höfliche *Sie* schreibt man groß. *Sich* schreibt man immer klein."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wir sehen ___ morgen!
+    options: [uns, sich, wir]
+    answer: uns
+    explanation:
+      en: "With *wir* the pronoun for “each other” is *uns*."
+      fa: "با *wir* ضمیرِ «همدیگر» *uns* است."
+      de: "Bei *wir* heißt „einander“ *uns*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Kennt ihr ___ schon?
+    options: [euch, sich, ihr]
+    answer: euch
+    explanation:
+      en: "With *ihr* the pronoun for “each other” is *euch*."
+      fa: "با *ihr* ضمیرِ «همدیگر» *euch* است."
+      de: "Bei *ihr* heißt „einander“ *euch*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Anna und Tom lieben ___.
+    options: [sich, ihnen, ihr]
+    answer: sich
+    explanation:
+      en: "*Anna und Tom* is plural *sie*, and the pronoun for “each other” is *sich*."
+      fa: "*Anna und Tom* سوم‌شخص جمع است (*sie*) و ضمیرِ «همدیگر» *sich* است."
+      de: "*Anna und Tom* ist *sie* (Plural). „Einander“ heißt *sich*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Frau Roth, Herr Lang, kennen Sie ___ schon?
+    options: [sich, Sich, Ihnen]
+    answer: sich
+    explanation:
+      en: "With polite *Sie* the pronoun is *sich*, with a small letter."
+      fa: "با *Sie* رسمی ضمیر *sich* می‌آید، با حرف کوچک."
+      de: "Bei *Sie* heißt es *sich*, klein geschrieben."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Lisa und Paul sehen sich jeden Tag. Das heißt: …"
+    options:
+      - Lisa sieht Paul, und Paul sieht Lisa.
+      - Lisa und Paul sehen andere Leute.
+      - Lisa sieht Paul, aber Paul sieht Lisa nicht.
+    answer: Lisa sieht Paul, und Paul sieht Lisa.
+    explanation:
+      en: "*Sich* here means “each other”: each one sees the other."
+      fa: "*sich* در این‌جا یعنی «همدیگر»: هر کدام دیگری را می‌بیند."
+      de: "*Sich* heißt hier „einander“: jeder sieht den anderen."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Meine Freundin und ich verstehen ___ gut.
+    options: [uns, sich, wir]
+    answer: uns
+    explanation:
+      en: "*Meine Freundin und ich* is *wir*, so the pronoun is *uns*."
+      fa: "*Meine Freundin und ich* یعنی *wir* (ما)، پس ضمیر *uns* است."
+      de: "*Meine Freundin und ich*, das ist *wir*. Darum: *uns*."
+  - id: true-1
+    type: true-false
+    prompt: Wir sehen uns am Montag.
+    answer: true
+    explanation:
+      en: "With *wir* the pronoun is *uns*. The sentence is correct."
+      fa: "با *wir* ضمیر *uns* می‌آید. جمله درست است."
+      de: "Bei *wir* sagt man *uns*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir kennen sich schon lange.
+    answer: false
+    explanation:
+      en: "With *wir* the pronoun is *uns*: *Wir kennen uns schon lange.*"
+      fa: "با *wir* ضمیر *uns* می‌آید: *Wir kennen uns schon lange.*"
+      de: "Bei *wir* sagt man *uns*: *Wir kennen uns schon lange.*"
+  - id: true-3
+    type: true-false
+    prompt: Kennt ihr euch?
+    answer: true
+    explanation:
+      en: "With *ihr* the pronoun is *euch*. The sentence is correct."
+      fa: "با *ihr* ضمیر *euch* می‌آید. جمله درست است."
+      de: "Bei *ihr* sagt man *euch*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ihr seht sich morgen.
+    answer: false
+    explanation:
+      en: "With *ihr* the pronoun is *euch*: *Ihr seht euch morgen.*"
+      fa: "با *ihr* ضمیر *euch* می‌آید: *Ihr seht euch morgen.*"
+      de: "Bei *ihr* sagt man *euch*: *Ihr seht euch morgen.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich sehe dich, und du siehst mich. Wir sehen ___.
+    answers: [uns, einander, uns gegenseitig]
+    explanation:
+      en: "Each sees the other, and with *wir* that is *uns*."
+      fa: "هر کدام دیگری را می‌بیند و با *wir* این ضمیر *uns* است."
+      de: "Jeder sieht den anderen. Bei *wir* sagt man *uns*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Lena besucht Mia, und Mia besucht Lena. Sie besuchen ___ oft.
+    answers: [sich, einander, sich gegenseitig]
+    explanation:
+      en: "Each visits the other, and with plural *sie* that is *sich*."
+      fa: "هر کدام به دیدن دیگری می‌رود و با *sie* جمع این ضمیر *sich* است."
+      de: "Jede besucht die andere. Bei *sie* (Plural) sagt man *sich*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Max, du kennst Tom, und Tom kennt dich. Ihr kennt ___.
+    answers: [euch, einander, euch gegenseitig]
+    explanation:
+      en: "Each knows the other, and with *ihr* that is *euch*."
+      fa: "هر کدام دیگری را می‌شناسد و با *ihr* این ضمیر *euch* است."
+      de: "Jeder kennt den anderen. Bei *ihr* sagt man *euch*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Sara liebt Ali, und Ali liebt Sara. Sie lieben ___.
+    answers: [sich, einander, sich gegenseitig]
+    explanation:
+      en: "Each loves the other, and with plural *sie* that is *sich*."
+      fa: "هر کدام دیگری را دوست دارد و با *sie* جمع این ضمیر *sich* است."
+      de: "Jeder liebt den anderen. Bei *sie* (Plural) sagt man *sich*."
+  - id: error-1
+    type: find-error
+    prompt: Wir sehen sich morgen im Büro.
+    answer: sich
+    explanation:
+      en: "With *wir* the pronoun is *uns*: *Wir sehen uns morgen im Büro.*"
+      fa: "با *wir* ضمیر *uns* می‌آید: *Wir sehen uns morgen im Büro.*"
+      de: "Bei *wir* sagt man *uns*: *Wir sehen uns morgen im Büro.*"
+  - id: error-2
+    type: find-error
+    prompt: Kennt ihr sich schon?
+    answer: sich
+    explanation:
+      en: "With *ihr* the pronoun is *euch*: *Kennt ihr euch schon?*"
+      fa: "با *ihr* ضمیر *euch* می‌آید: *Kennt ihr euch schon?*"
+      de: "Bei *ihr* sagt man *euch*: *Kennt ihr euch schon?*"
+  - id: error-3
+    type: find-error
+    prompt: Herr Lang und Frau Roth kennen Sich schon.
+    answer: Sich
+    explanation:
+      en: "*Sich* is always written with a small letter: *kennen sich schon*."
+      fa: "*sich* همیشه با حرف کوچک نوشته می‌شود: *kennen sich schon*."
+      de: "*Sich* schreibt man immer klein: *kennen sich schon*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wir, sehen, uns, morgen]
+      - [morgen, sehen, wir, uns]
+    explanation:
+      en: "The verb comes second, and *uns* follows the verb and the subject."
+      fa: "فعل در جایگاه دوم می‌آید و *uns* پس از فعل و فاعل."
+      de: "Das Verb steht an Position 2. *Uns* steht nach dem Verb und dem Subjekt."
+  - id: match-1
+    type: matching
+    answer:
+      - [wir, uns]
+      - [ihr, euch]
+      - [Anna und Tom, sich]
+    explanation:
+      en: "“Each other” follows the subject: *wir … uns*, *ihr … euch*, *sie … sich*."
+      fa: "ضمیرِ «همدیگر» با فاعل جور می‌شود: *wir … uns*، *ihr … euch*، *sie … sich*."
+      de: "„Einander“ passt zum Subjekt: *wir … uns*, *ihr … euch*, *sie … sich*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 0729d2ed5543177e
