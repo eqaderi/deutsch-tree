@@ -38,6 +38,56 @@ test('only spaces, or nothing, is a wrong answer', () => {
   expect(checkAnswer(question, undefined).correct).toBe(false)
 })
 
+// ---------- a full stop, an exclamation mark or a question mark at the end ----------
+
+test.each([
+  ['Ich werde Arzt.'],
+  ['Ich werde Arzt!'],
+  ['Ich werde Arzt?'],
+  ['Ich werde Arzt .'],
+  ['Ich werde Arzt. '],
+  ['Ich werde Arzt...'],
+  ['Ich werde Arzt!?'],
+])('%j for "Ich werde Arzt": the mark at the end of the sentence is ignored, with no note', (typed) => {
+  expect(checkAnswer(typedAnswer('q1', ['Ich werde Arzt']), typed)).toEqual({
+    correct: true,
+    notes: [],
+    accepted: 'Ich werde Arzt',
+  })
+})
+
+test('a question typed without its question mark is right, and an accepted answer written with a mark at the end needs none', () => {
+  expect(checkAnswer(typedAnswer('q1', ['Wo wohnst du?']), 'Wo wohnst du')).toEqual({
+    correct: true,
+    notes: [],
+    accepted: 'Wo wohnst du?',
+  })
+  expect(checkTyped('es ist dunkel geworden', ['es ist dunkel geworden.'])).toMatchObject({ correct: true, notes: [] })
+})
+
+test('the other slips are still accepted with their notes when the answer ends with a full stop', () => {
+  expect(checkAnswer(typedAnswer('q1', ['Ich höre Musik']), 'ich hoere Musik.')).toEqual({
+    correct: true,
+    notes: ['umlaut-substitute', 'capitalisation'],
+    accepted: 'Ich höre Musik',
+  })
+})
+
+test('punctuation inside the answer is not ignored', () => {
+  const question = typedAnswer('q1', ['Ich glaube, dass er kommt'])
+
+  expect(checkAnswer(question, 'Ich glaube dass er kommt.')).toEqual({ correct: false, notes: [] })
+  expect(checkAnswer(typedAnswer('q1', ['Ich werde Arzt']), 'Ich. werde Arzt')).toEqual({ correct: false, notes: [] })
+  expect(checkAnswer(typedAnswer('q1', ['Ich werde Arzt']), '.Ich werde Arzt')).toEqual({ correct: false, notes: [] })
+})
+
+test('only a full stop, or only marks and spaces, is a wrong answer', () => {
+  const question = typedAnswer('q1', ['wohnst'])
+
+  expect(checkAnswer(question, '.').correct).toBe(false)
+  expect(checkAnswer(question, ' ?! ').correct).toBe(false)
+})
+
 // ---------- ae, oe, ue and ss in place of ä, ö, ü and ß ----------
 
 test.each([
