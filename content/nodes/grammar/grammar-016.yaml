@@ -4,10 +4,300 @@ kind: grammar
 level: A1
 chapter: a1-past
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-014, grammar-015]
 title:
   en: "Irregular *Partizip II*"
-  fa: "*Partizip II* بی‌قاعده"
+  fa: "صفت مفعولی (*Partizip II*) بی‌قاعده"
   de: "Unregelmäßiges Partizip II"
+
+explanations:
+  en:
+    rule: >
+      Many frequent verbs are irregular: their *Partizip II* is *ge-* + stem
+      + *-en*, and the vowel of the stem often changes. *Essen* becomes
+      *gegessen*, *trinken* becomes *getrunken*, *schreiben* becomes
+      *geschrieben*. A few verbs are mixed: they end in *-t* like a regular
+      verb but change their vowel too, as in *bringen*, *gebracht* and
+      *wissen*, *gewusst*. No rule tells you which verbs are irregular, so
+      learn each *Partizip II* together with its verb.
+  fa:
+    rule: >
+      بسیاری از فعل‌های پرکاربرد بی‌قاعده‌اند: صفت مفعولی (*Partizip II*)
+      آن‌ها از *ge-* + بن + *-en* ساخته می‌شود و واکهٔ بن نیز اغلب تغییر
+      می‌کند. *essen* می‌شود *gegessen*، *trinken* می‌شود *getrunken* و
+      *schreiben* می‌شود *geschrieben*. چند فعل آمیخته‌اند: مانند فعل باقاعده
+      به *-t* ختم می‌شوند، اما واکهٔ آن‌ها هم تغییر می‌کند؛ مانند *bringen*،
+      *gebracht* و *wissen*، *gewusst*. هیچ قاعده‌ای نمی‌گوید کدام فعل
+      بی‌قاعده است؛ از این رو صفت مفعولی هر فعل را همراه با خود فعل از بر کنید.
+  de:
+    rule: >
+      Viele wichtige Verben sind unregelmäßig. Das Partizip II ist *ge-* +
+      Stamm + *-en*, und oft ändert sich der Vokal: *essen*, *gegessen*;
+      *trinken*, *getrunken*; *schreiben*, *geschrieben*. Einige Verben sind
+      gemischt: Sie enden auf *-t*, aber der Vokal ändert sich: *bringen*,
+      *gebracht*; *wissen*, *gewusst*. Lernen Sie das Partizip II immer mit
+      dem Verb.
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*Partizip II*", fa: "صفت مفعولی (*Partizip II*)", de: Partizip II }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [essen, gegessen, Ich habe schon gegessen.]
+    - [trinken, getrunken, Du hast Kaffee getrunken.]
+    - [schreiben, geschrieben, Er hat eine E-Mail geschrieben.]
+    - [lesen, gelesen, Wir haben das Buch gelesen.]
+    - [sehen, gesehen, Habt ihr den Film gesehen?]
+    - [sprechen, gesprochen, Sie hat mit dem Chef gesprochen.]
+    - [nehmen, genommen, Ich habe den Bus genommen.]
+    - [finden, gefunden, Hast du den Schlüssel gefunden?]
+    - [schlafen, geschlafen, Das Baby hat gut geschlafen.]
+    - [helfen, geholfen, Er hat mir geholfen.]
+    - [bringen (gemischt), gebracht, Sie hat Blumen gebracht.]
+    - [denken (gemischt), gedacht, Ich habe an dich gedacht.]
+    - [kennen (gemischt), gekannt, Wir haben ihn nicht gekannt.]
+    - [wissen (gemischt), gewusst, Das habe ich nicht gewusst.]
+
+examples:
+  - de: Ich habe schon gegessen.
+    en: I have already eaten.
+    fa: من غذا خورده‌ام.
+  - de: Hast du heute genug Wasser getrunken?
+    en: Did you drink enough water today?
+    fa: امروز به اندازهٔ کافی آب خوردی؟
+  - de: Meine Oma hat mir einen Brief geschrieben.
+    en: My grandma wrote me a letter.
+    fa: مادربزرگم برایم نامه‌ای نوشت.
+  - de: Habt ihr den Film schon gesehen?
+    en: Have you (plural) seen the film yet?
+    fa: شما (جمع) فیلم را دیده‌اید؟
+  - de: Ich habe meinen Schlüssel nicht gefunden.
+    en: I didn't find my key.
+    fa: کلیدم را پیدا نکردم.
+  - de: Wir haben lange mit dem Arzt gesprochen.
+    en: We talked with the doctor for a long time.
+    fa: مدت زیادی با پزشک صحبت کردیم.
+  - de: Er hat seiner Freundin Blumen gebracht.
+    en: He brought his girlfriend flowers.
+    fa: او برای دوست‌دخترش گل آورد.
+  - de: Das habe ich nicht gewusst.
+    en: I didn't know that.
+    fa: این را نمی‌دانستم.
+
+mistakes:
+  - wrong: Ich habe Pizza geesst.
+    right: Ich habe Pizza gegessen.
+    why:
+      en: "*Essen* is irregular: its *Partizip II* is *gegessen*."
+      fa: "*essen* بی‌قاعده است: صفت مفعولی آن *gegessen* است."
+      de: "*Essen* ist unregelmäßig. Das Partizip II ist *gegessen*."
+  - wrong: Er hat mir Blumen gebringt.
+    right: Er hat mir Blumen gebracht.
+    why:
+      en: "*Bringen* is mixed: it ends in *-t*, but the vowel changes: *gebracht*."
+      fa: "*bringen* آمیخته است: به *-t* ختم می‌شود، اما واکه‌اش تغییر می‌کند: *gebracht*."
+      de: "*Bringen* ist gemischt: Es endet auf *-t*, aber der Vokal ändert sich: *gebracht*."
+  - wrong: Wir haben den Bus genehmt.
+    right: Wir haben den Bus genommen.
+    why:
+      en: "*Nehmen* is irregular: *genommen*, with *-en* and a new vowel."
+      fa: "*nehmen* بی‌قاعده است: *genommen*، با *-en* و واکه‌ای دیگر."
+      de: "*Nehmen* ist unregelmäßig: *genommen*, mit *-en* und einem anderen Vokal."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich habe heute schon ___.
+    options: [gegessen, geesst, gessen]
+    answer: gegessen
+    explanation:
+      en: "*Essen* is irregular: *gegessen*."
+      fa: "*essen* بی‌قاعده است: *gegessen*."
+      de: "*Essen* ist unregelmäßig: *gegessen*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Hast du den Film ___?
+    options: [gesehen, gesieht, gesehet]
+    answer: gesehen
+    explanation:
+      en: "*Sehen* is irregular: *gesehen*."
+      fa: "*sehen* بی‌قاعده است: *gesehen*."
+      de: "*Sehen* ist unregelmäßig: *gesehen*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir haben viel Wasser ___.
+    options: [getrunken, getrinkt, getrinken]
+    answer: getrunken
+    explanation:
+      en: "*Trinken* is irregular, and its vowel changes: *getrunken*."
+      fa: "*trinken* بی‌قاعده است و واکه‌اش تغییر می‌کند: *getrunken*."
+      de: "*Trinken* ist unregelmäßig, der Vokal ändert sich: *getrunken*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Er hat mir einen Brief ___.
+    options: [geschrieben, geschreibt, geschriebt]
+    answer: geschrieben
+    explanation:
+      en: "*Schreiben* is irregular: *geschrieben*."
+      fa: "*schreiben* بی‌قاعده است: *geschrieben*."
+      de: "*Schreiben* ist unregelmäßig: *geschrieben*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Das habe ich nicht ___.
+    options: [gewusst, geweißt, gewisst]
+    answer: gewusst
+    explanation:
+      en: "*Wissen* is mixed: it ends in *-t* and changes its vowel: *gewusst*."
+      fa: "*wissen* آمیخته است: به *-t* ختم می‌شود و واکه‌اش تغییر می‌کند: *gewusst*."
+      de: "*Wissen* ist gemischt: Es endet auf *-t*, und der Vokal ändert sich: *gewusst*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Ich habe heute oft an dich ___.
+    options: [gedacht, gedenkt, gedachen]
+    answer: gedacht
+    explanation:
+      en: "*Denken* is mixed: *gedacht*."
+      fa: "*denken* آمیخته است: *gedacht*."
+      de: "*Denken* ist gemischt: *gedacht*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Sie hat lange mit ihrer Lehrerin ___.
+    options: [gesprochen, gesprecht, gesprachen]
+    answer: gesprochen
+    explanation:
+      en: "*Sprechen* is irregular, and its vowel changes: *gesprochen*."
+      fa: "*sprechen* بی‌قاعده است و واکه‌اش تغییر می‌کند: *gesprochen*."
+      de: "*Sprechen* ist unregelmäßig, der Vokal ändert sich: *gesprochen*."
+  - id: true-1
+    type: true-false
+    prompt: Wir haben das Buch gelesen.
+    answer: true
+    explanation:
+      en: "*Lesen* is irregular: *gelesen*. The sentence is correct."
+      fa: "*lesen* بی‌قاعده است: *gelesen*. جمله درست است."
+      de: "*Lesen* ist unregelmäßig: *gelesen*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich habe den Zug genehmt.
+    answer: false
+    explanation:
+      en: "*Nehmen* is irregular: *Ich habe den Zug genommen.*"
+      fa: "*nehmen* بی‌قاعده است: *Ich habe den Zug genommen.*"
+      de: "*Nehmen* ist unregelmäßig: *Ich habe den Zug genommen.*"
+  - id: true-3
+    type: true-false
+    prompt: Habt ihr gut geschlafen?
+    answer: true
+    explanation:
+      en: "*Schlafen* is irregular: *geschlafen*. The sentence is correct."
+      fa: "*schlafen* بی‌قاعده است: *geschlafen*. جمله درست است."
+      de: "*Schlafen* ist unregelmäßig: *geschlafen*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Sie hat uns Kuchen gebringt.
+    answer: false
+    explanation:
+      en: "*Bringen* is mixed: *Sie hat uns Kuchen gebracht.*"
+      fa: "*bringen* آمیخته است: *Sie hat uns Kuchen gebracht.*"
+      de: "*Bringen* ist gemischt: *Sie hat uns Kuchen gebracht.*"
+  - id: error-1
+    type: find-error
+    prompt: Hast du deinen Schlüssel gefindet?
+    answer: gefindet
+    explanation:
+      en: "*Finden* is irregular: *Hast du deinen Schlüssel gefunden?*"
+      fa: "*finden* بی‌قاعده است: *Hast du deinen Schlüssel gefunden?*"
+      de: "*Finden* ist unregelmäßig: *Hast du deinen Schlüssel gefunden?*"
+  - id: error-2
+    type: find-error
+    prompt: Ich habe seine Schwester nicht gekennt.
+    answer: gekennt
+    explanation:
+      en: "*Kennen* is mixed: the vowel changes to *a*: *gekannt*."
+      fa: "*kennen* آمیخته است و واکه‌اش به *a* تغییر می‌کند: *gekannt*."
+      de: "*Kennen* ist gemischt, der Vokal wird zu *a*: *gekannt*."
+  - id: error-3
+    type: find-error
+    prompt: Wir haben gestern Pizza geesst.
+    answer: geesst
+    explanation:
+      en: "*Essen* is irregular: *Wir haben gestern Pizza gegessen.*"
+      fa: "*essen* بی‌قاعده است: *Wir haben gestern Pizza gegessen.*"
+      de: "*Essen* ist unregelmäßig: *Wir haben gestern Pizza gegessen.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich habe heute einen Apfel ___ (essen).
+    answers: [gegessen]
+    explanation:
+      en: "The *Partizip II* of *essen* is *gegessen*."
+      fa: "صفت مفعولی *essen* می‌شود *gegessen*."
+      de: "Das Partizip II von *essen* ist *gegessen*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Hast du das Buch schon ___ (lesen)?
+    answers: [gelesen]
+    explanation:
+      en: "The *Partizip II* of *lesen* is *gelesen*."
+      fa: "صفت مفعولی *lesen* می‌شود *gelesen*."
+      de: "Das Partizip II von *lesen* ist *gelesen*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Mein Bruder hat mir beim Umzug ___ (helfen).
+    answers: [geholfen]
+    explanation:
+      en: "*Helfen* is irregular, and its vowel changes: *geholfen*."
+      fa: "*helfen* بی‌قاعده است و واکه‌اش تغییر می‌کند: *geholfen*."
+      de: "*Helfen* ist unregelmäßig, der Vokal ändert sich: *geholfen*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Wir haben im Urlaub viel ___ (schlafen).
+    answers: [geschlafen]
+    explanation:
+      en: "The *Partizip II* of *schlafen* is *geschlafen*."
+      fa: "صفت مفعولی *schlafen* می‌شود *geschlafen*."
+      de: "Das Partizip II von *schlafen* ist *geschlafen*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Partizip II: trinken"
+    answers: [getrunken]
+    explanation:
+      en: "*Trinken* is irregular: *getrunken*."
+      fa: "*trinken* بی‌قاعده است: *getrunken*."
+      de: "*Trinken* ist unregelmäßig: *getrunken*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Partizip II: bringen"
+    answers: [gebracht]
+    explanation:
+      en: "*Bringen* is mixed: *gebracht*."
+      fa: "*bringen* آمیخته است: *gebracht*."
+      de: "*Bringen* ist gemischt: *gebracht*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [hast, du, schon, gegessen]
+    end: "?"
+    explanation:
+      en: "In a yes/no question *haben* comes first, and the *Partizip II* stays at the end."
+      fa: "در پرسش بله یا نه *haben* در آغاز می‌آید و صفت مفعولی در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht *haben* am Anfang. Das Partizip II bleibt am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [essen, gegessen]
+      - [schreiben, geschrieben]
+      - [nehmen, genommen]
+      - [denken, gedacht]
+    explanation:
+      en: "Learn each *Partizip II* with its verb: *gegessen*, *geschrieben*, *genommen*, and the mixed *gedacht*."
+      fa: "صفت مفعولی هر فعل را با خود فعل از بر کنید: *gegessen*، *geschrieben*، *genommen* و *gedacht* که آمیخته است."
+      de: "Lernen Sie das Partizip II mit dem Verb: *gegessen*, *geschrieben*, *genommen* und gemischt *gedacht*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 9094c214019b6d08

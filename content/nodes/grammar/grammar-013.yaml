@@ -4,10 +4,288 @@ kind: grammar
 level: A1
 chapter: a1-past
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-002]
 title:
   en: "*Präteritum* of *sein* and *haben*"
   fa: "گذشتهٔ ساده (*Präteritum*) فعل‌های *sein* و *haben*"
   de: "Präteritum von *sein* und *haben*"
+
+explanations:
+  en:
+    rule: >
+      To say how things were and what you had in the past, German uses the
+      simple past (*Präteritum*) of *sein* and *haben*: *war* (was) and
+      *hatte* (had). This is the usual form for these two verbs, in speech as
+      well as in writing: *Gestern war ich müde.* The forms for *ich* and
+      *er/sie/es* are the same and take no extra ending (*ich war*, *er
+      war*); the other persons add the endings you know from the present
+      tense (*du warst*, *wir waren*, *ihr wart*).
+  fa:
+    rule: >
+      برای گفتن این‌که در گذشته چیزی چگونه بود یا چه داشتیم، در آلمانی گذشتهٔ
+      ساده (*Präteritum*) دو فعل *sein* و *haben* به کار می‌رود: *war*
+      (بودم، بود) و *hatte* (داشتم، داشت). این صورت، هم در گفتار و هم در
+      نوشتار، صورت معمول این دو فعل در گذشته است: *Gestern war ich müde.*
+      صورت اول‌شخص مفرد (*ich*) و سوم‌شخص مفرد (*er/sie/es*) یکی است و شناسهٔ
+      دیگری نمی‌گیرد (*ich war*، *er war*). شخص‌های دیگر همان شناسه‌های زمان
+      حال را می‌گیرند (*du warst*، *wir waren*، *ihr wart*).
+  de:
+    rule: >
+      Für die Vergangenheit von *sein* und *haben* sagt man meistens das
+      Präteritum: *war* und *hatte*. Man sagt es so und man schreibt es so:
+      *Gestern war ich müde.* Bei *ich* und *er/sie/es* ist die Form gleich
+      und hat keine Endung: *ich war*, *er war*. Die anderen Personen haben
+      die Endungen aus dem Präsens: *du warst*, *wir waren*, *ihr wart*.
+
+table:
+  columns:
+    - { en: Person, fa: شخص, de: Person }
+    - { en: "*sein*", fa: "*sein*", de: "*sein*" }
+    - { en: "*haben*", fa: "*haben*", de: "*haben*" }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [ich, war, hatte, Ich war gestern krank.]
+    - [du, warst, hattest, Hattest du Zeit?]
+    - [er / sie / es, war, hatte, Er hatte keinen Hunger.]
+    - [wir, waren, hatten, Wir waren im Kino.]
+    - [ihr, wart, hattet, Wo wart ihr?]
+    - [sie / Sie, waren, hatten, Sie hatten ein Auto.]
+
+examples:
+  - de: Gestern war ich sehr müde.
+    en: I was very tired yesterday.
+    fa: دیروز خیلی خسته بودم.
+  - de: Wo warst du am Wochenende?
+    en: Where were you at the weekend?
+    fa: آخر هفته کجا بودی؟
+  - de: Er war nicht da.
+    en: He wasn't there.
+    fa: او آن‌جا نبود.
+  - de: Wo wart ihr gestern?
+    en: Where were you (plural) yesterday?
+    fa: شما (جمع) دیروز کجا بودید؟
+  - de: Ich hatte keine Zeit.
+    en: I didn't have time.
+    fa: وقت نداشتم.
+  - de: Hattest du gestern Kopfschmerzen?
+    en: Did you have a headache yesterday?
+    fa: دیروز سردرد داشتی؟
+  - de: Meine Eltern hatten früher einen Hund.
+    en: My parents used to have a dog.
+    fa: پدر و مادرم قبلاً یک سگ داشتند.
+  - de: Das Wetter war schön, und wir hatten viel Spaß.
+    en: The weather was nice, and we had a lot of fun.
+    fa: هوا خوب بود و خیلی به ما خوش گذشت.
+
+mistakes:
+  - wrong: Ich warst gestern krank.
+    right: Ich war gestern krank.
+    why:
+      en: "With *ich* the form is *war*, with no ending. *Warst* goes with *du*."
+      fa: "با *ich* صورت فعل *war* است، بدون شناسه. *warst* با *du* می‌آید."
+      de: "Bei *ich* heißt es *war*, ohne Endung. *Warst* sagt man bei *du*."
+  - wrong: Du hatte keine Zeit.
+    right: Du hattest keine Zeit.
+    why:
+      en: "With *du* the ending is *-st*: *du hattest*."
+      fa: "با *du* شناسهٔ فعل *-st* است: *du hattest*."
+      de: "Bei *du* ist die Endung *-st*: *du hattest*."
+  - wrong: Gestern ich war im Kino.
+    right: Gestern war ich im Kino.
+    why:
+      en: "The verb stays in position 2. When *gestern* comes first, *war* comes next and the subject after it."
+      fa: "فعل در جایگاه دوم می‌ماند. اگر *gestern* در آغاز جمله بیاید، پس از آن *war* و سپس فاعل می‌آید."
+      de: "Das Verb steht auf Position 2. Steht *gestern* am Anfang, dann kommt *war* und danach das Subjekt."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Gestern ___ ich krank.
+    options: [war, warst, waren]
+    answer: war
+    explanation:
+      en: "With *ich* the form is *war*, with no ending."
+      fa: "با *ich* صورت فعل *war* است، بدون شناسه."
+      de: "Bei *ich* heißt es *war*, ohne Endung."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wo ___ du am Wochenende?
+    options: [warst, war, wart]
+    answer: warst
+    explanation:
+      en: "With *du* the ending is *-st*: *du warst*."
+      fa: "با *du* شناسهٔ فعل *-st* است: *du warst*."
+      de: "Bei *du* ist die Endung *-st*: *du warst*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Wir ___ letzte Woche keine Zeit.
+    options: [hatten, hattet, hatte]
+    answer: hatten
+    explanation:
+      en: "With *wir* the form is *hatten*, with *-en*."
+      fa: "با *wir* صورت فعل *hatten* است، با شناسهٔ *-en*."
+      de: "Bei *wir* heißt es *hatten*, mit *-en*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Meine Schwester ___ gestern Geburtstag.
+    options: [hatte, hattest, hatten]
+    answer: hatte
+    explanation:
+      en: "*Meine Schwester* is *sie* (singular), which has the same form as *ich*: *hatte*."
+      fa: "*meine Schwester* سوم‌شخص مفرد است (*sie*) و صورت فعلش مانند *ich* است: *hatte*."
+      de: "*Meine Schwester* ist *sie* (Singular). Die Form ist wie bei *ich*: *hatte*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: ___ ihr gestern im Kino?
+    options: [Wart, Waren, Warst]
+    answer: Wart
+    explanation:
+      en: "With *ihr* the form is *wart*. As a yes/no question, it stands first."
+      fa: "با *ihr* صورت فعل *wart* است. در پرسش بله یا نه در آغاز جمله می‌آید."
+      de: "Bei *ihr* heißt es *wart*. In der Ja/Nein-Frage steht es am Anfang."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Meine Eltern ___ früher einen Hund.
+    options: [hatten, hatte, hattet]
+    answer: hatten
+    explanation:
+      en: "*Meine Eltern* are *sie* (plural), so the form is *hatten*."
+      fa: "*meine Eltern* سوم‌شخص جمع است (*sie*)، پس صورت فعل *hatten* است."
+      de: "*Meine Eltern* sind *sie* (Plural). Die Form ist *hatten*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Frau Lang, ___ Sie schon einmal in Hamburg?
+    options: [waren, wart, war]
+    answer: waren
+    explanation:
+      en: "With the polite *Sie* the form is *waren*."
+      fa: "با *Sie* رسمی صورت فعل *waren* است."
+      de: "Bei *Sie* (höflich) heißt es *waren*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Das Wetter ___ gestern sehr schön.
+    options: [war, hatte, wart]
+    answer: war
+    explanation:
+      en: "Here you say how something was, so the verb is *sein*: *das Wetter war*."
+      fa: "این‌جا از چگونگی چیزی سخن می‌رود، پس فعل *sein* است: *das Wetter war*."
+      de: "Man sagt, wie etwas ist. Das Verb ist *sein*: *das Wetter war*."
+  - id: true-1
+    type: true-false
+    prompt: Ich hatte gestern viel Arbeit.
+    answer: true
+    explanation:
+      en: "With *ich* the form is *hatte*. The sentence is correct."
+      fa: "با *ich* صورت فعل *hatte* است. جمله درست است."
+      de: "Bei *ich* heißt es *hatte*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Wir war letzte Woche in Berlin.
+    answer: false
+    explanation:
+      en: "With *wir* the form is *waren*: *Wir waren letzte Woche in Berlin.*"
+      fa: "با *wir* صورت فعل *waren* است: *Wir waren letzte Woche in Berlin.*"
+      de: "Bei *wir* heißt es *waren*: *Wir waren letzte Woche in Berlin.*"
+  - id: true-3
+    type: true-false
+    prompt: Ihr wart gestern nicht da.
+    answer: true
+    explanation:
+      en: "With *ihr* the form is *wart*. The sentence is correct."
+      fa: "با *ihr* صورت فعل *wart* است. جمله درست است."
+      de: "Bei *ihr* heißt es *wart*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Gestern ich war im Büro.
+    answer: false
+    explanation:
+      en: "The verb must be in position 2: *Gestern war ich im Büro.*"
+      fa: "فعل باید در جایگاه دوم باشد: *Gestern war ich im Büro.*"
+      de: "Das Verb steht auf Position 2: *Gestern war ich im Büro.*"
+  - id: error-1
+    type: find-error
+    prompt: Meine Freundin hattest keine Zeit.
+    answer: hattest
+    explanation:
+      en: "*Meine Freundin* is *sie* (singular): *Meine Freundin hatte keine Zeit.*"
+      fa: "*meine Freundin* سوم‌شخص مفرد است (*sie*): *Meine Freundin hatte keine Zeit.*"
+      de: "*Meine Freundin* ist *sie* (Singular): *Meine Freundin hatte keine Zeit.*"
+  - id: error-2
+    type: find-error
+    prompt: Wir wart am Sonntag im Park.
+    answer: wart
+    explanation:
+      en: "*Wart* goes with *ihr*. With *wir* it is *waren*: *Wir waren am Sonntag im Park.*"
+      fa: "*wart* با *ihr* می‌آید. با *wir* صورت فعل *waren* است: *Wir waren am Sonntag im Park.*"
+      de: "*Wart* sagt man bei *ihr*. Bei *wir* heißt es *waren*: *Wir waren am Sonntag im Park.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich ___ (haben) gestern Kopfschmerzen.
+    answers: [hatte]
+    explanation:
+      en: "*Gestern* is the past, and *haben* in the past with *ich* is *hatte*."
+      fa: "*gestern* به گذشته اشاره دارد و گذشتهٔ *haben* با *ich* می‌شود *hatte*."
+      de: "*Gestern* ist Vergangenheit. *Haben* bei *ich*: *hatte*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (sein) du gestern zu Hause?
+    answers: [Warst]
+    explanation:
+      en: "With *du*: *warst*. As a yes/no question, it stands first, with a capital letter."
+      fa: "با *du*: *warst*. در پرسش بله یا نه در آغاز جمله و با حرف بزرگ می‌آید."
+      de: "Bei *du*: *warst*. In der Ja/Nein-Frage steht es am Anfang, mit großem Buchstaben."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ihr ___ (haben) letzte Woche Urlaub.
+    answers: [hattet]
+    explanation:
+      en: "*Letzte Woche* is the past, and *haben* in the past with *ihr* is *hattet*."
+      fa: "*letzte Woche* به گذشته اشاره دارد و گذشتهٔ *haben* با *ihr* می‌شود *hattet*."
+      de: "*Letzte Woche* ist Vergangenheit. *Haben* bei *ihr*: *hattet*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Die Kinder ___ (sein) gestern sehr müde.
+    answers: [waren]
+    explanation:
+      en: "*Die Kinder* are *sie* (plural), so *sein* in the past is *waren*."
+      fa: "*die Kinder* سوم‌شخص جمع است (*sie*)، پس گذشتهٔ *sein* می‌شود *waren*."
+      de: "*Die Kinder* sind *sie* (Plural). *Sein* in der Vergangenheit: *waren*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wo, warst, du, gestern]
+    end: "?"
+    explanation:
+      en: "After the question word comes the verb in position 2, then the subject."
+      fa: "پس از واژهٔ پرسشی، فعل در جایگاه دوم و سپس فاعل می‌آید."
+      de: "Nach dem Fragewort steht das Verb auf Position 2, dann das Subjekt."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich, war]
+      - [du, warst]
+      - [ihr, wart]
+      - [wir, waren]
+    explanation:
+      en: "The past of *sein*: *ich war*, *du warst*, *ihr wart*, *wir waren*."
+      fa: "گذشتهٔ سادهٔ *sein*: *ich war*، *du warst*، *ihr wart*، *wir waren*."
+      de: "Das Präteritum von *sein*: *ich war*, *du warst*, *ihr wart*, *wir waren*."
+  - id: match-2
+    type: matching
+    answer:
+      - [ich, hatte]
+      - [du, hattest]
+      - [ihr, hattet]
+      - [wir, hatten]
+    explanation:
+      en: "The past of *haben*: *ich hatte*, *du hattest*, *ihr hattet*, *wir hatten*."
+      fa: "گذشتهٔ سادهٔ *haben*: *ich hatte*، *du hattest*، *ihr hattet*، *wir hatten*."
+      de: "Das Präteritum von *haben*: *ich hatte*, *du hattest*, *ihr hattet*, *wir hatten*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: be4f71bbcca2d9e7
