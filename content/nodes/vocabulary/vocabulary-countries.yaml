@@ -1,9 +1,6 @@
 # Vocabulary theme of A1. Its words are waiting for the learner's approval:
 # docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
-# Written in full but not yet published (ticket #48): two blind reviewers objected that the test
-# shows "das Deutschland" and "das Europa", because a noun is always asked with its article, while
-# German names a country or continent without one. That needs a decision about how such names
-# are learned; every other word of the node passed its review.
+# Deutschland and Europa take no article ("article: none"): they are shown and asked bare (ticket #48).
 id: vocabulary-countries
 kind: vocabulary
 level: A1
@@ -33,7 +30,7 @@ words:
 
   - word: Deutschland
     class: noun
-    article: das
+    article: none
     number: singular-only
     level: A1
     meaning:
@@ -44,11 +41,10 @@ words:
       de: Ich lebe seit drei Jahren in Deutschland.
       en: I have been living in Germany for three years.
       fa: سه سال است که در آلمان زندگی می‌کنم.
-    alsoAccepted: [Deutschland]
 
   - word: Europa
     class: noun
-    article: das
+    article: none
     number: singular-only
     level: A1
     meaning:
@@ -59,7 +55,6 @@ words:
       de: Spanien und Polen liegen in Europa.
       en: Spain and Poland are in Europe.
       fa: اسپانیا و لهستان در اروپا هستند.
-    alsoAccepted: [Europa]
 
   - word: Ausland
     class: noun

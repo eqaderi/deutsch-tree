@@ -5,6 +5,7 @@
 import { spoken } from '../audio/index.ts'
 import {
   asLearned,
+  NO_ARTICLE,
   type NodeFile,
   type Question,
   type VocabularyContent,
@@ -15,7 +16,7 @@ import { vocabularyPool } from '../learning-engine/index.ts'
 type EntryFile = NonNullable<NodeFile['words']>[number]
 
 /** Whether an entry has every part that a page and a test need. The schema demands it of a published node. */
-function isWritten(entry: EntryFile): entry is EntryFile & VocabularyWord {
+function isWritten(entry: EntryFile): boolean {
   const hasNounParts = entry.article !== undefined && (entry.plural !== undefined || entry.number !== undefined)
   return (
     entry.class !== undefined &&
@@ -34,7 +35,16 @@ function isWritten(entry: EntryFile): entry is EntryFile & VocabularyWord {
  */
 export function writtenWords(node: Partial<Pick<NodeFile, 'kind' | 'words'>>): VocabularyWord[] | undefined {
   const words = node.kind === 'vocabulary' ? (node.words ?? []) : []
-  return words.length > 0 && words.every(isWritten) ? words.filter(isWritten) : undefined
+  return words.length > 0 && words.every(isWritten) ? words.map(asWord) : undefined
+}
+
+/**
+ * A written entry as a page and a test read it. A noun that takes no article
+ * (`article: none`) has none, so it is shown, heard and asked bare.
+ */
+function asWord(entry: EntryFile): VocabularyWord {
+  const { article, ...word } = entry as EntryFile & Omit<VocabularyWord, 'article'>
+  return article === NO_ARTICLE || article === undefined ? word : { ...word, article }
 }
 
 /**

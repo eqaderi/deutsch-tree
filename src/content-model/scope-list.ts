@@ -36,7 +36,7 @@ export interface ScopeWord {
   class: WordClass
   /** The lowest level whose word list has the word: A1, A2 or B1. */
   level: string
-  /** For a noun: der, die or das; `der/die` when the lists print two. Empty when unknown. */
+  /** For a noun: der, die or das; `der/die` when the lists print two; `none` when it takes none ("Deutschland"). Empty when unknown. */
   article: string
   /** For a noun: the plural marker as the lists print it (`-n`, `¨-e`, `Museen`), `sg` or `pl` for a noun with one number only. */
   plural: string

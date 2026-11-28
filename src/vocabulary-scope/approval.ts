@@ -11,7 +11,7 @@
 import { readdir, readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { parse as parseYaml } from 'yaml'
-import type { NodeFile } from '../content-model/index.ts'
+import { NO_ARTICLE, type NodeFile } from '../content-model/index.ts'
 import { textOf } from '../content-model/rich-text.ts'
 import { parseScopeList, SCOPE_LIST_FILE, type ScopeWord } from '../content-model/scope-list.ts'
 import { compileContent, formatReport } from '../content-pipeline/index.ts'
@@ -156,10 +156,12 @@ function leftOutPart(leftOut: LeftOut[]): string {
   ].join('\n')
 }
 
-/** "die Mutter", "(sich) ändern", "gern". A word the scope list does not have is shown as written. */
+/** "die Mutter", "Deutschland", "(sich) ändern", "gern". A word the scope list does not have is shown as written. */
 function display(word: ScopeWord | undefined, written: string): string {
   if (word === undefined) return written
-  const before = word.class === 'noun' ? word.article : word.reflexive
+  // A noun that takes no article ("none" in the scope list) is shown bare.
+  const article = word.article === NO_ARTICLE ? '' : word.article
+  const before = word.class === 'noun' ? article : word.reflexive
   const number = word.plural === 'pl' ? ' (Pl.)' : ''
   return `${before ? `${before} ` : ''}${word.word}${number}`
 }
