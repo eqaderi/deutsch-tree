@@ -4,7 +4,7 @@ kind: phrases
 level: A2
 chapter: a2-phrases-arrangements
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Asking politely for help or information"
   fa: "درخواست مؤدبانهٔ کمک یا اطلاعات"
@@ -14,3 +14,281 @@ purpose:
   fa: "از کسی که با *Sie* خطابش می‌کنید بخواهید کاری انجام دهد یا چیزی را به شما بگوید."
   de: "Eine Person, zu der man *Sie* sagt, höflich um etwas bitten oder nach etwas fragen."
 examTasks: [exam-schreiben-3]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Könnten Sie mir bitte …?
+    meaning:
+      en: Could you please …? The usual polite request. *Könnten* is the polite form of *können*; the second verb goes to the end.
+      fa: «ممکن است لطفاً …؟» درخواست مؤدبانهٔ معمول. *Könnten* شکل مؤدبانهٔ *können* است و مصدر به پایان جمله می‌رود.
+      de: Die normale höfliche Bitte. *Könnten* ist die höfliche Form von *können*. Das zweite Verb steht am Ende.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Könnten Sie mir bitte die Unterlagen für den Kurs schicken?
+      en: Could you please send me the papers for the course?
+      fa: ممکن است لطفاً مدارک دوره را برایم بفرستید؟
+
+  - de: Würden Sie bitte …?
+    meaning:
+      en: Would you please …? Just as polite as *Könnten Sie …?* *Würden* is the polite form of *werden*; the second verb goes to the end.
+      fa: «لطفاً … می‌کنید؟» به همان اندازهٔ *Könnten Sie …?* مؤدبانه است. *Würden* شکل مؤدبانهٔ *werden* است و مصدر به پایان جمله می‌رود.
+      de: Genauso höflich wie *Könnten Sie …?* *Würden* ist die höfliche Form von *werden*. Das zweite Verb steht am Ende.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Würden Sie mir bitte die Rechnung noch einmal schicken?
+      en: Would you please send me the bill again?
+      fa: لطفاً صورت‌حساب را دوباره برایم می‌فرستید؟
+
+  - de: Ich hätte eine Frage zu …
+    meaning:
+      en: I have a question about … A polite way to start a request for information. *hätte* sounds softer than *habe*. After *zu* comes the dative.
+      fa: «پرسشی دربارهٔ … داشتم.» آغازی مؤدبانه برای درخواست اطلاعات. *hätte* نرم‌تر از *habe* است. پس از *zu* حالت *Dativ* می‌آید.
+      de: So beginnt man höflich eine Frage. *hätte* klingt freundlicher als *habe*. Nach *zu* kommt der Dativ.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Ich hätte eine Frage zum Deutschkurs am Abend.
+      en: I have a question about the evening German course.
+      fa: پرسشی دربارهٔ کلاس شبانهٔ زبان آلمانی داشتم.
+
+  - de: Können Sie mir sagen, wann …?
+    meaning:
+      en: Can you tell me when …? Asks for a piece of information. *wann* can be another question word (*wo*, *wie viel*). After it the verb goes to the end.
+      fa: «می‌توانید به من بگویید کی …؟» اطلاعاتی را می‌پرسد. به‌جای *wann* واژهٔ پرسشی دیگری هم می‌آید (*wo*، *wie viel*). پس از آن فعل به پایان جمله می‌رود.
+      de: So fragt man nach einer Information. Statt *wann* geht auch ein anderes Fragewort (*wo*, *wie viel*). Danach steht das Verb am Ende.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Können Sie mir sagen, wann der nächste Kurs beginnt?
+      en: Can you tell me when the next course starts?
+      fa: می‌توانید به من بگویید دورهٔ بعدی کی شروع می‌شود؟
+
+  - de: Ich möchte gern wissen, ob …
+    meaning:
+      en: I would like to know whether … For a yes-or-no question. After *ob* the verb goes to the end.
+      fa: «می‌خواهم بدانم آیا …» برای پرسشی که پاسخش آری یا نه است. پس از *ob* فعل به پایان جمله می‌رود.
+      de: Für eine Frage mit Ja oder Nein. Nach *ob* steht das Verb am Ende.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Ich möchte gern wissen, ob es im nächsten Kurs noch freie Plätze gibt.
+      en: I would like to know whether there are still free places in the next course.
+      fa: می‌خواهم بدانم آیا در دورهٔ بعدی هنوز جای خالی هست.
+
+  - de: Ich bitte Sie um …
+    meaning:
+      en: I ask you for … A clear, formal request. After *um* comes the accusative.
+      fa: «از شما … را درخواست می‌کنم.» درخواستی روشن و رسمی. پس از *um* حالت *Akkusativ* می‌آید.
+      de: Eine klare, formelle Bitte. Nach *um* kommt der Akkusativ.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Ich bitte Sie um einen neuen Termin.
+      en: I ask you for a new appointment.
+      fa: از شما وقت تازه‌ای درخواست می‌کنم.
+
+  - de: Vielen Dank im Voraus!
+    meaning:
+      en: Many thanks in advance! Thanks the person at the end of a request, before the greeting.
+      fa: «پیشاپیش بسیار سپاسگزارم!» در پایان درخواست و پیش از عبارت پایانی ایمیل، از طرف مقابل تشکر می‌کند.
+      de: Damit dankt man am Ende einer Bitte, vor dem Gruß.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Ich freue mich auf Ihre Antwort. Vielen Dank im Voraus!
+      en: I look forward to your answer. Many thanks in advance!
+      fa: منتظر پاسخ شما هستم. پیشاپیش بسیار سپاسگزارم!
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9). The right option stands in
+# a different place from question to question.
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Du brauchst Hilfe von deiner Nachbarin, Frau Lang. Was schreibst du ihr?
+    options:
+      - Könntest Sie mir bitte helfen?
+      - Könnten Sie mich bitte helfen?
+      - Könnten Sie mir bitte helfen?
+    answer: Könnten Sie mir bitte helfen?
+    explanation:
+      en: With *Sie* it is *Könnten*, and *helfen* takes the dative *mir*.
+      fa: با *Sie* فعل *Könnten* است و *helfen* حالت *Dativ*، یعنی *mir*، می‌خواهد.
+      de: Bei *Sie* heißt es *Könnten*, und nach *helfen* kommt der Dativ *mir*.
+
+  - id: q2
+    type: multiple-choice
+    prompt: Welcher Satz ist richtig?
+    options:
+      - Können Sie mir sagen, wann beginnt der nächste Kurs?
+      - Können Sie mir sagen, wann der nächste Kurs beginnt?
+      - Können Sie mir sagen, der nächste Kurs wann beginnt?
+    answer: Können Sie mir sagen, wann der nächste Kurs beginnt?
+    explanation:
+      en: After *Können Sie mir sagen, wann …* the verb goes to the end. *…, wann der nächste Kurs beginnt?*
+      fa: "پس از *Können Sie mir sagen, wann …* فعل به پایان جمله می‌رود: *…, wann der nächste Kurs beginnt?*"
+      de: "Nach *Können Sie mir sagen, wann …* steht das Verb am Ende: *…, wann der nächste Kurs beginnt?*"
+
+  - id: q3
+    type: gap-fill
+    prompt: Ich möchte gern wissen, ___ es im nächsten Kurs noch freie Plätze gibt.
+    options: [ob, wenn, dass]
+    answer: ob
+    explanation:
+      en: The answer is yes or no, so the question is asked with *ob*.
+      fa: پاسخ آری یا نه است، پس پرسش با *ob* ساخته می‌شود.
+      de: Die Antwort ist Ja oder Nein, also fragt man mit *ob*.
+
+  - id: q4
+    type: true-false
+    prompt: Ich bitte Sie um einen neuen Termin.
+    answer: true
+    explanation:
+      en: "*um* takes the accusative, *einen neuen Termin*. The sentence is correct."
+      fa: "*um* حالت *Akkusativ* می‌خواهد، یعنی *einen neuen Termin*. جمله درست است."
+      de: "Nach *um* kommt der Akkusativ, *einen neuen Termin*. Der Satz ist richtig."
+
+  - id: q5
+    type: true-false
+    prompt: Vielen Dank in Voraus!
+    answer: false
+    explanation:
+      en: The phrase is *Vielen Dank im Voraus!*, with *im*.
+      fa: عبارت درست *Vielen Dank im Voraus!* است، با *im*.
+      de: Es heißt *Vielen Dank im Voraus!*, mit *im*.
+
+  - id: q6
+    type: find-error
+    prompt: Ich hätte eine Frage zu den Deutschkurs am Abend.
+    answer: den
+    explanation:
+      en: After *zu* comes the dative. *der Deutschkurs*, so *zu dem* (*zum*) *Deutschkurs*.
+      fa: پس از *zu* حالت *Dativ* می‌آید. *Deutschkurs* اسم مذکر (*der*) است، پس *zu dem* (*zum*) *Deutschkurs*.
+      de: Nach *zu* kommt der Dativ. *der Deutschkurs*, also *zu dem* (*zum*) *Deutschkurs*.
+
+  - id: q7
+    type: word-order
+    answers:
+      - ["können Sie mir sagen,", wann, der nächste Kurs, beginnt]
+    end: "?"
+    explanation:
+      en: "After *wann* the verb *beginnt* goes to the end: *Können Sie mir sagen, wann der nächste Kurs beginnt?*"
+      fa: "پس از *wann* فعل *beginnt* به پایان جمله می‌رود: *Können Sie mir sagen, wann der nächste Kurs beginnt?*"
+      de: "Nach *wann* steht das Verb *beginnt* am Ende: *Können Sie mir sagen, wann der nächste Kurs beginnt?*"
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: ___ (können, Konjunktiv II) Sie mir bitte helfen?
+    answers: [Könnten]
+    explanation:
+      en: The polite request is *Könnten Sie …?*
+      fa: درخواست مؤدبانه *Könnten Sie …?* است.
+      de: Die höfliche Bitte ist *Könnten Sie …?*
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Könnten Sie ___ (ich) bitte helfen?
+    answers: [mir]
+    explanation:
+      en: "*helfen* takes the dative. The dative of *ich* is *mir*."
+      fa: "*helfen* با حالت *Dativ* می‌آید و حالت *Dativ* ضمیر *ich* واژهٔ *mir* است."
+      de: "Nach *helfen* kommt der Dativ. Der Dativ von *ich* ist *mir*."
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: ___ (werden, Konjunktiv II) Sie mir bitte die Rechnung noch einmal schicken?
+    answers: [Würden]
+    explanation:
+      en: The polite request is *Würden Sie bitte …?*
+      fa: درخواست مؤدبانه *Würden Sie bitte …?* است.
+      de: Die höfliche Bitte ist *Würden Sie bitte …?*
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Ich ___ (haben, Konjunktiv II) eine Frage zum Deutschkurs am Abend.
+    answers: [hätte]
+    explanation:
+      en: The polite start is *Ich hätte eine Frage …*
+      fa: آغاز مؤدبانه *Ich hätte eine Frage …* است.
+      de: Höflich beginnt man mit *Ich hätte eine Frage …*
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Ich hätte eine Frage ___ (zu / der Deutschkurs) am Abend.
+    answers: [zum Deutschkurs, zu dem Deutschkurs, zum, zu dem]
+    explanation:
+      en: After *zu* comes the dative. *der Deutschkurs* becomes *zum* (*zu dem*) *Deutschkurs*.
+      fa: پس از *zu* حالت *Dativ* می‌آید. *der Deutschkurs* می‌شود *zum* (*zu dem*) *Deutschkurs*.
+      de: Nach *zu* kommt der Dativ. *der Deutschkurs* wird zu *zum* (*zu dem*) *Deutschkurs*.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Ich möchte mich anmelden. Können Sie mir sagen, wann der nächste Kurs ___ (beginnen)?
+    answers: [beginnt]
+    explanation:
+      en: After *wann* the verb goes to the end. With *der Kurs* it is *beginnt*.
+      fa: پس از *wann* فعل به پایان جمله می‌رود. با *der Kurs* فعل *beginnt* است.
+      de: Nach *wann* steht das Verb am Ende. Bei *der Kurs* heißt es *beginnt*.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: Ich finde das Büro nicht. Können Sie mir sagen, ___ das Büro ist?
+    answers: [wo]
+    explanation:
+      en: You ask for a place, so the question word is *wo*.
+      fa: مکانی را می‌پرسید، پس واژهٔ پرسشی *wo* است.
+      de: Man fragt nach einem Ort, also heißt das Fragewort *wo*.
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Ich möchte gern wissen, ___ es im nächsten Kurs noch freie Plätze gibt.
+    answers: [ob]
+    explanation:
+      en: The answer is yes or no, so the question is asked with *ob*.
+      fa: پاسخ آری یا نه است، پس پرسش با *ob* ساخته می‌شود.
+      de: Die Antwort ist Ja oder Nein, also fragt man mit *ob*.
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: Ich möchte gern wissen, ob es im nächsten Kurs noch freie Plätze ___ (geben).
+    answers: [gibt]
+    explanation:
+      en: After *ob* the verb goes to the end. *es gibt* becomes *…, ob es … gibt*.
+      fa: "پس از *ob* فعل به پایان جمله می‌رود: *es gibt* می‌شود *…, ob es … gibt*."
+      de: Nach *ob* steht das Verb am Ende. *Es gibt* wird zu *…, ob es … gibt*.
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Ich bitte Sie ___ einen neuen Termin.
+    answers: [um]
+    explanation:
+      en: The phrase is *jemanden um etwas bitten*. *Ich bitte Sie um …*
+      fa: "عبارت *jemanden um etwas bitten* است: *Ich bitte Sie um …*"
+      de: "Es heißt *jemanden um etwas bitten*: *Ich bitte Sie um …*"
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Ich bitte Sie um ___ (ein) neuen Termin.
+    answers: [einen]
+    explanation:
+      en: After *um* comes the accusative. *der Termin*, so *um einen neuen Termin*.
+      fa: پس از *um* حالت *Akkusativ* می‌آید. *Termin* اسم مذکر (*der*) است، پس *um einen neuen Termin*.
+      de: Nach *um* kommt der Akkusativ. *der Termin*, also *um einen neuen Termin*.
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Ich freue mich auf Ihre Antwort. Vielen Dank im ___!
+    answers: [Voraus]
+    explanation:
+      en: The phrase is *Vielen Dank im Voraus!*
+      fa: عبارت *Vielen Dank im Voraus!* است.
+      de: Es heißt *Vielen Dank im Voraus!*
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Ich freue mich auf Ihre Antwort. ___ (viel) Dank im Voraus!
+    answers: [Vielen]
+    explanation:
+      en: The phrase is *Vielen Dank im Voraus!*
+      fa: عبارت *Vielen Dank im Voraus!* است.
+      de: Es heißt *Vielen Dank im Voraus!*
+
+review:
+  reviewer: an independent AI agent (a fresh subagent, blind to the key)
+  date: 2026-11-28
+  pool: b4c4fa762e927edd
