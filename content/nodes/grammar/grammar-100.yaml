@@ -62,7 +62,13 @@ table:
     - [der Film, irgendein Film, irgendeinen Film, irgendeinem Film, Lass uns irgendeinen Film ansehen.]
     - [die Zeitung, irgendeine Zeitung, irgendeine Zeitung, irgendeiner Zeitung, Das stand in irgendeiner Zeitung.]
     - [das Hotel, irgendein Hotel, irgendein Hotel, irgendeinem Hotel, Wir schlafen in irgendeinem Hotel.]
-    - [die Fragen (Plural), irgendwelche Fragen, irgendwelche Fragen, irgendwelchen Fragen, Hast du irgendwelche Fragen?]
+    - [
+        die Fragen (Plural),
+        irgendwelche Fragen,
+        irgendwelche Fragen,
+        irgendwelchen Fragen,
+        Hast du irgendwelche Fragen?,
+      ]
 
 examples:
   - de: Hat irgendjemand unseren Nachbarn gesehen?
