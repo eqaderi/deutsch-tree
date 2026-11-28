@@ -168,6 +168,10 @@ test.each([
   ['etc.', 'ett zetera'],
   ['Wir brauchen Brot, Milch etc.', 'Wir brauchen Brot, Milch ett zetera.'],
   ['Z. B. Äpfel.', 'Zum Beispiel Äpfel.'],
+  // #82: the bare headword "ca." comes out as "Ka".
+  ['ca.', 'circa'],
+  ['Die Fahrt dauert ca. zwei Stunden.', 'Die Fahrt dauert circa zwei Stunden.'],
+  ['Es kostet ca. 10 Euro.', 'Es kostet circa zehn Euro.'],
 ])('the abbreviation in "%s" is spoken as its words', (written, spoken) => {
   expect(speakable(written)).toBe(spoken)
 })

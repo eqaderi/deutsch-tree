@@ -4,10 +4,363 @@ kind: grammar
 level: A2
 chapter: a2-relative-clauses
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-079, grammar-157]
 title:
   en: "Relative clause, *Nominativ*"
-  fa: "جملهٔ موصولی در *Nominativ*"
+  fa: "جملهٔ موصولی در حالت *Nominativ*"
   de: "Relativsatz im Nominativ"
+
+explanations:
+  en:
+    rule: >
+      A relative clause (*Relativsatz*) says more about a noun: *Wer ist die
+      Frau, die dort rechts steht?* Where English has "who", "which" or
+      "that", German has a relative pronoun, and it looks like the definite
+      article: *der*, *die*, *das*, and *die* for the plural. It takes the
+      gender and number of the noun it refers to: *der Mann, der …*, *die
+      Frau, die …*, *das Kind, das …*, *die Leute, die …*. The grammatical
+      gender counts, not the person's sex: *das Mädchen, das …*. When the
+      pronoun is the subject of the relative clause, it is in the
+      *Nominativ*, whatever the case of the noun in the main clause: *Ich
+      habe einen Bruder, der in Hamburg wohnt.* A relative clause is a
+      subordinate clause: a comma comes before it, and its conjugated verb
+      goes to the end, in the form that fits the noun (*die Kinder, die dort
+      spielen*). It usually stands right after its noun.
+  fa:
+    rule: >
+      جملهٔ موصولی (*Relativsatz*) دربارهٔ یک اسم توضیح بیشتری می‌دهد: *Wer
+      ist die Frau, die dort rechts steht?* در فارسی این کار را «که» انجام
+      می‌دهد و همیشه یکسان است؛ در آلمانی جملهٔ موصولی با ضمیر موصولی آغاز
+      می‌شود که شکل حرف تعریف معین را دارد: *der*، *die*، *das* و برای جمع
+      *die*. ضمیر موصولی با اسمی که به آن برمی‌گردد هم‌جنس و هم‌شمار است:
+      *der Mann, der …*، *die Frau, die …*، *das Kind, das …* و *die Leute,
+      die …*. ملاک، جنس دستوری اسم است، نه جنس طبیعی: *das Mädchen, das …*.
+      اگر ضمیر موصولی فاعل جملهٔ موصولی باشد، در حالت *Nominativ* (حالت
+      فاعلی) می‌آید و حالت اسم در جملهٔ پایه در آن اثری ندارد: *Ich habe
+      einen Bruder, der in Hamburg wohnt.* جملهٔ موصولی نوعی جملهٔ پیرو است:
+      پیش از آن ویرگول می‌آید و فعل صرف‌شدهٔ آن به پایان جمله می‌رود، با
+      شناسه‌ای که با همان اسم جور است (*die Kinder, die dort spielen*). این
+      جمله معمولاً درست پس از اسم خود می‌آید.
+  de:
+    rule: >
+      Ein Relativsatz sagt mehr über ein Nomen: *Wer ist die Frau, die dort
+      rechts steht?* Er beginnt mit einem Relativpronomen. Es sieht aus wie
+      der Artikel: *der*, *die*, *das* und im Plural *die*. Das
+      Relativpronomen passt zum Nomen: *der Mann, der …*, *die Frau, die …*,
+      *das Kind, das …*, *die Leute, die …*. Wichtig ist der Artikel, nicht
+      Mann oder Frau: *das Mädchen, das …*. Ist das Relativpronomen im
+      Relativsatz das Subjekt, steht es im Nominativ. Der Kasus vom Nomen im
+      Hauptsatz ist dabei egal: *Ich habe einen Bruder, der in Hamburg
+      wohnt.* Der Relativsatz ist ein Nebensatz: Vor ihm steht ein Komma, und
+      das konjugierte Verb steht am Ende. Das Verb passt zum Nomen: *die
+      Kinder, die dort spielen*. Meistens steht der Relativsatz direkt nach
+      dem Nomen.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: Relative pronoun, fa: ضمیر موصولی, de: Relativpronomen }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der Mann, der, "der Mann, der dort steht"]
+    - [die Frau, die, "die Frau, die dort steht"]
+    - [das Kind, das, "das Kind, das dort spielt"]
+    - [die Leute (Plural), die, "die Leute, die dort warten"]
+
+# Two rows of slots. Top: the main clause with its noun (shaded). Below: the
+# relative clause, its pronoun (shaded) right under the noun, with an arrow
+# from the noun to it; the conjugated verb at the end.
+diagrams:
+  - caption:
+      en: >
+        *Das ist der Mann, der hier wohnt.* The relative pronoun *der* has the
+        gender of *Mann*, and the verb *wohnt* goes to the end of the
+        relative clause.
+      fa: >
+        *Das ist der Mann, der hier wohnt.* ضمیر موصولی *der* با *Mann*
+        هم‌جنس است و فعل *wohnt* به پایان جملهٔ موصولی می‌رود.
+      de: >
+        *Das ist der Mann, der hier wohnt.* Das Relativpronomen *der* passt
+        zu *Mann*, und das Verb *wohnt* steht am Ende vom Relativsatz.
+    labels:
+      main: { en: main clause, fa: جملهٔ پایه, de: Hauptsatz }
+      relative: { en: relative clause, fa: جملهٔ موصولی, de: Relativsatz }
+      same: { en: same gender, fa: هم‌جنس, de: gleiches Genus }
+      end: { en: verb at the end, fa: فعل در پایان, de: Verb am Ende }
+    svg: |
+      <svg viewBox="0 0 320 170">
+        <!-- Das ist der Mann, -->
+        <rect class="surface" x="2" y="10" width="110" height="40"/>
+        <rect class="shade" x="116" y="10" width="64" height="40"/>
+        <text class="label" x="57" y="36" text-anchor="middle">Das ist der</text>
+        <text class="label" x="148" y="36" text-anchor="middle">Mann,</text>
+        <text class="note" x="250" y="36" text-anchor="middle">{{main}}</text>
+        <!-- from the noun to its pronoun -->
+        <line class="line" x1="148" y1="54" x2="148" y2="80"/>
+        <polygon class="line" points="142,78 154,78 148,86"/>
+        <text class="note" x="162" y="74">{{same}}</text>
+        <!-- der hier wohnt. -->
+        <rect class="shade" x="116" y="90" width="64" height="40"/>
+        <rect class="surface" x="184" y="90" width="56" height="40"/>
+        <rect class="surface" x="244" y="90" width="74" height="40"/>
+        <text class="label" x="148" y="116" text-anchor="middle">der</text>
+        <text class="label" x="212" y="116" text-anchor="middle">hier</text>
+        <text class="label" x="281" y="116" text-anchor="middle">wohnt.</text>
+        <text class="note" x="57" y="116" text-anchor="middle">{{relative}}</text>
+        <text class="note" x="318" y="154" text-anchor="end">{{end}}</text>
+      </svg>
+
+examples:
+  - de: Wer ist die Frau, die dort rechts steht?
+    en: Who is the woman standing over there on the right?
+    fa: خانمی که آنجا سمت راست ایستاده است کیست؟
+  - de: Das ist der Bus, der zum Bahnhof fährt.
+    en: This is the bus that goes to the station.
+    fa: این همان اتوبوسی است که به ایستگاه قطار می‌رود.
+  - de: Ich suche ein Hotel, das nicht so teuer ist.
+    en: I'm looking for a hotel that isn't so expensive.
+    fa: دنبال هتلی می‌گردم که چندان گران نباشد.
+  - de: Wir haben Nachbarn, die sehr nett sind.
+    en: We have neighbours who are very nice.
+    fa: همسایه‌هایی داریم که خیلی مهربان‌اند.
+  - de: Ich habe einen Bruder, der in Hamburg wohnt.
+    en: I have a brother who lives in Hamburg.
+    fa: برادری دارم که در هامبورگ زندگی می‌کند.
+  - de: Wie heißt das Mädchen, das neben dir sitzt?
+    en: What's the name of the girl sitting next to you?
+    fa: اسم دختری که کنارت نشسته چیست؟
+  - de: Das ist ein Film, der mir sehr gut gefällt.
+    en: This is a film that I like very much.
+    fa: این فیلمی است که خیلی از آن خوشم می‌آید.
+  - de: Hast du einen Kollegen, der Spanisch sprechen kann?
+    en: Do you have a colleague who can speak Spanish?
+    fa: همکاری داری که بتواند اسپانیایی حرف بزند؟
+  - de: Wo sind die Kinder, die hier gespielt haben?
+    en: Where are the children who were playing here?
+    fa: بچه‌هایی که این‌جا بازی می‌کردند کجا هستند؟
+
+mistakes:
+  - wrong: Wer ist die Frau, die steht dort rechts?
+    right: Wer ist die Frau, die dort rechts steht?
+    why:
+      en: "A relative clause is a subordinate clause: its conjugated verb goes to the end."
+      fa: "جملهٔ موصولی جملهٔ پیرو است و فعل صرف‌شدهٔ آن به پایان جمله می‌رود."
+      de: "Der Relativsatz ist ein Nebensatz. Das konjugierte Verb steht am Ende."
+  - wrong: Das ist der Mann, die neben uns wohnt.
+    right: Das ist der Mann, der neben uns wohnt.
+    why:
+      en: "*Mann* is a *der* noun, so the relative pronoun is *der*."
+      fa: "*Mann* اسم مذکر (*der*) است، پس ضمیر موصولی هم *der* است."
+      de: "*Mann* hat den Artikel *der*. Darum ist das Relativpronomen *der*."
+  - wrong: Ich habe einen Bruder, den in Hamburg wohnt.
+    right: Ich habe einen Bruder, der in Hamburg wohnt.
+    why:
+      en: "The pronoun is the subject of *wohnt*, so it is in the *Nominativ*: *der*. *Einen* belongs to the main clause and does not count."
+      fa: "ضمیر موصولی فاعل *wohnt* است، پس در حالت *Nominativ* می‌آید: *der*. *einen* به جملهٔ پایه تعلق دارد و در انتخاب ضمیر اثری ندارد."
+      de: "Das Relativpronomen ist das Subjekt von *wohnt*. Darum Nominativ: *der*. *Einen* gehört zum Hauptsatz."
+  - wrong: Kennst du das Mädchen, die dort singt?
+    right: Kennst du das Mädchen, das dort singt?
+    why:
+      en: "*Mädchen* is a *das* noun, so the pronoun is *das*, even though a girl is female."
+      fa: "*Mädchen* اسم خنثی (*das*) است، پس ضمیر موصولی *das* است، هرچند دختر مؤنث است."
+      de: "*Mädchen* hat den Artikel *das*. Darum heißt das Relativpronomen *das*."
+  - wrong: Ich habe zwei Freunde, die in Berlin wohnt.
+    right: Ich habe zwei Freunde, die in Berlin wohnen.
+    why:
+      en: "*Die* stands for *Freunde*, a plural, so the verb takes the plural form: *wohnen*."
+      fa: "*die* به *Freunde* برمی‌گردد که جمع است، پس فعل نیز جمع می‌آید: *wohnen*."
+      de: "*Die* steht für *Freunde*, also Plural. Darum: *wohnen*."
+  - wrong: Das ist der Kollege, wer mir immer hilft.
+    right: Das ist der Kollege, der mir immer hilft.
+    why:
+      en: 'English says "who", but German does not use *wer* here: after a noun the relative pronoun is *der*, *die* or *das*.'
+      fa: "این‌جا *wer* به کار نمی‌رود: پس از اسم، ضمیر موصولی *der*، *die* یا *das* است."
+      de: "Nach einem Nomen steht nicht *wer*, sondern *der*, *die* oder *das*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Wer ist die Frau, ___ dort rechts steht?
+    options: [der, das, die]
+    answer: die
+    explanation:
+      en: "*Frau* is a *die* noun, and the pronoun is the subject of *steht*: *die*."
+      fa: "*Frau* اسم مؤنث (*die*) است و ضمیر موصولی فاعل *steht* است: *die*."
+      de: "*Frau* hat den Artikel *die*, und das Pronomen ist das Subjekt: *die*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Das ist der Bus, ___ zum Bahnhof fährt.
+    options: [der, die, den]
+    answer: der
+    explanation:
+      en: "*Bus* is a *der* noun, and the pronoun is the subject of *fährt*, so it is in the *Nominativ*: *der*."
+      fa: "*Bus* اسم مذکر (*der*) است و ضمیر موصولی فاعل *fährt* است، پس در حالت *Nominativ* می‌آید: *der*."
+      de: "*Bus* hat den Artikel *der*. Das Pronomen ist das Subjekt, also Nominativ: *der*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich suche ein Hotel, ___ nicht so teuer ist.
+    options: [der, die, das]
+    answer: das
+    explanation:
+      en: "*Hotel* is a *das* noun, so the relative pronoun is *das*."
+      fa: "*Hotel* اسم خنثی (*das*) است، پس ضمیر موصولی *das* است."
+      de: "*Hotel* hat den Artikel *das*. Das Relativpronomen ist *das*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wo sind die Kinder, ___ hier gespielt haben?
+    options: [die, der, das]
+    answer: die
+    explanation:
+      en: "*Kinder* is plural, and the plural relative pronoun is *die*."
+      fa: "*Kinder* جمع است و ضمیر موصولی جمع *die* است."
+      de: "*Kinder* ist Plural. Im Plural heißt das Relativpronomen *die*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ich habe zwei Freunde, die in Berlin ___.
+    options: [wohnt, wohnen, wohnst]
+    answer: wohnen
+    explanation:
+      en: "*Die* stands for *Freunde*, a plural, so the verb is *wohnen*."
+      fa: "*die* به *Freunde* برمی‌گردد که جمع است، پس فعل *wohnen* است."
+      de: "*Die* steht für *Freunde*, also Plural: *wohnen*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ich kenne die Frau, …
+    options: [die arbeitet im Café., die im Café arbeitet., arbeitet die im Café.]
+    answer: die im Café arbeitet.
+    explanation:
+      en: "The relative pronoun comes first in the relative clause, and the conjugated verb goes to the end."
+      fa: "ضمیر موصولی در آغاز جملهٔ موصولی می‌آید و فعل صرف‌شده در پایان آن."
+      de: "Das Relativpronomen steht am Anfang vom Relativsatz, das konjugierte Verb am Ende."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Ich habe einen Kollegen, ___ sehr gut kocht.
+    options: [den, dem, der]
+    answer: der
+    explanation:
+      en: "The pronoun is the subject of *kocht*, so it is in the *Nominativ*: *der*. *Einen Kollegen* belongs to the main clause."
+      fa: "ضمیر موصولی فاعل *kocht* است، پس در حالت *Nominativ* می‌آید: *der*. *einen Kollegen* به جملهٔ پایه تعلق دارد."
+      de: "Das Pronomen ist das Subjekt von *kocht*, also Nominativ: *der*. *Einen Kollegen* gehört zum Hauptsatz."
+  - id: true-1
+    type: true-false
+    prompt: Wir suchen eine Wohnung, die einen Balkon hat.
+    answer: true
+    explanation:
+      en: "*Wohnung* is a *die* noun, the pronoun *die* is the subject, and *hat* is at the end. The sentence is correct."
+      fa: "*Wohnung* اسم مؤنث (*die*) است، ضمیر *die* فاعل است و *hat* در پایان آمده است. جمله درست است."
+      de: "*Wohnung* hat den Artikel *die*, das Pronomen *die* ist das Subjekt, und *hat* steht am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Das ist das Hotel, der am Bahnhof liegt.
+    answer: false
+    explanation:
+      en: "*Hotel* is a *das* noun, so the pronoun is *das*: *das Hotel, das am Bahnhof liegt*."
+      fa: "*Hotel* اسم خنثی (*das*) است، پس ضمیر موصولی *das* است: *das Hotel, das am Bahnhof liegt*."
+      de: "*Hotel* hat den Artikel *das*. Richtig ist: *das Hotel, das am Bahnhof liegt*."
+  - id: true-3
+    type: true-false
+    prompt: Hier sind die Kollegen, die mir immer helfen.
+    answer: true
+    explanation:
+      en: "*Kollegen* is plural: the pronoun *die* and the verb *helfen* fit it. The sentence is correct."
+      fa: "*Kollegen* جمع است و ضمیر *die* و فعل *helfen* با آن جورند. جمله درست است."
+      de: "*Kollegen* ist Plural. Das Pronomen *die* und das Verb *helfen* passen. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Ich habe einen Bruder, den in Hamburg wohnt.
+    answer: false
+    explanation:
+      en: "The pronoun is the subject of *wohnt*, so it is in the *Nominativ*: *der in Hamburg wohnt*."
+      fa: "ضمیر موصولی فاعل *wohnt* است، پس در حالت *Nominativ* می‌آید: *der in Hamburg wohnt*."
+      de: "Das Pronomen ist das Subjekt von *wohnt*, also Nominativ: *der in Hamburg wohnt*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das ist der Mann, ___ neben uns wohnt.
+    answers: [der, welcher]
+    explanation:
+      en: "*Mann* is a *der* noun, and the pronoun is the subject: *der*."
+      fa: "*Mann* اسم مذکر (*der*) است و ضمیر موصولی فاعل است: *der*."
+      de: "*Mann* hat den Artikel *der*, und das Pronomen ist das Subjekt: *der*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich kaufe die Lampe, ___ dort im Fenster steht.
+    answers: [die, welche]
+    explanation:
+      en: "*Lampe* is a *die* noun, so the relative pronoun is *die*."
+      fa: "*Lampe* اسم مؤنث (*die*) است، پس ضمیر موصولی *die* است."
+      de: "*Lampe* hat den Artikel *die*. Das Relativpronomen ist *die*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Kennst du ein Café, ___ auch am Sonntag geöffnet hat?
+    answers: [das, welches]
+    explanation:
+      en: "*Café* is a *das* noun, so the relative pronoun is *das*."
+      fa: "*Café* اسم خنثی (*das*) است، پس ضمیر موصولی *das* است."
+      de: "*Café* hat den Artikel *das*. Das Relativpronomen ist *das*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich habe eine Nachbarin, die sehr gut Deutsch ___ (sprechen).
+    answers: [spricht]
+    explanation:
+      en: "*Die* stands for one woman, so the verb is in the third person singular: *spricht*, at the end."
+      fa: "*die* به یک نفر برمی‌گردد، پس فعل سوم‌شخص مفرد است و در پایان می‌آید: *spricht*."
+      de: "*Die* steht für eine Person. Darum: *spricht*, am Ende."
+  - id: error-1
+    type: find-error
+    prompt: Das ist die Frau, der neben mir wohnt.
+    answer: der
+    explanation:
+      en: "*Frau* is a *die* noun, so the pronoun is *die*: *die neben mir wohnt*."
+      fa: "*Frau* اسم مؤنث (*die*) است، پس ضمیر موصولی *die* است: *die neben mir wohnt*."
+      de: "*Frau* hat den Artikel *die*. Richtig ist: *die neben mir wohnt*."
+  - id: error-2
+    type: find-error
+    prompt: Ich habe eine Freundin, die in Wien wohnen.
+    answer: wohnen
+    explanation:
+      en: "*Die* stands for one *Freundin*, so the verb is singular: *wohnt*."
+      fa: "*die* به یک *Freundin* برمی‌گردد که مفرد است، پس فعل نیز مفرد است: *wohnt*."
+      de: "*Die* steht für eine *Freundin*, also Singular: *wohnt*."
+  - id: error-3
+    type: find-error
+    prompt: Kennst du das Mädchen, die dort singt?
+    answer: die
+    explanation:
+      en: "*Mädchen* is a *das* noun, so the pronoun is *das*, even though a girl is female."
+      fa: "*Mädchen* اسم خنثی (*das*) است، پس ضمیر موصولی *das* است، هرچند دختر مؤنث است."
+      de: "*Mädchen* hat den Artikel *das*. Darum: *das dort singt*."
+  - id: order-1
+    type: word-order
+    answers:
+      - ["das ist der Mann,", der, neben uns, wohnt]
+    explanation:
+      en: "The relative pronoun *der* comes right after the comma, and the verb *wohnt* goes to the end."
+      fa: "ضمیر موصولی *der* درست پس از ویرگول می‌آید و فعل *wohnt* به پایان جمله می‌رود."
+      de: "Das Relativpronomen *der* steht nach dem Komma, das Verb *wohnt* am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - ["ich habe eine Freundin,", die, sehr gut, kochen, kann]
+    explanation:
+      en: "With a modal verb, the conjugated *kann* comes last, after the infinitive *kochen*."
+      fa: "با فعل وجهی، *kann* که صرف‌شده است در آخر می‌آید، پس از مصدر *kochen*."
+      de: "Mit Modalverb steht das konjugierte *kann* ganz am Ende, nach dem Infinitiv *kochen*."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Wir haben einen Hund,", der gern schwimmt.]
+      - ["Wir haben eine Katze,", die viel schläft.]
+      - ["Wir haben ein Pferd,", das schnell läuft.]
+      - ["Wir haben zwei Kinder,", die zur Schule gehen.]
+    explanation:
+      en: "The pronoun follows the noun: *Hund* → *der*, *Katze* → *die*, *Pferd* → *das*. Plural *Kinder* takes *die* and a plural verb: *gehen*."
+      fa: "ضمیر موصولی از اسم پیروی می‌کند: *der* برای *Hund*، *die* برای *Katze* و *das* برای *Pferd*. *Kinder* جمع است و *die* و فعل جمع *gehen* می‌گیرد."
+      de: "Das Pronomen passt zum Nomen: *der Hund*, *die Katze*, *das Pferd*. *Kinder* ist Plural: *die* und das Verb *gehen*."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 10b7eb5bf6cd8b65

@@ -132,6 +132,7 @@ its first mention in a node.
 | principal parts (*gehen*, *ging*, *ist gegangen*) | Stammformen | سه صورت اصلی فعل |
 | Konjunktiv II | Konjunktiv II | *Konjunktiv II* (وجه شرطی) |
 | passive | Passiv | مجهول |
+| active (the opposite of passive) | Aktiv | معلوم |
 | negation | Negation | نفی |
 | question word | Fragewort | واژهٔ پرسشی |
 | question pronoun (*wer*, *was*) | Fragepronomen | ضمیر پرسشی |

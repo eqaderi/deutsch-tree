@@ -1,35 +1,311 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
+# The words for parts of the day are close in meaning; each meaning names its part of the day,
+# and `tooCloseTo` keeps a neighbouring part from being offered as a wrong meaning.
 id: vocabulary-when-how-often
 kind: vocabulary
 level: A2
 chapter: a2-words-small-words
 order: 1
-status: coming-soon
+status: published
 title:
   en: "When and how often"
   fa: "کِی و چند وقت یک‌بار"
   de: "Wann und wie oft"
+attemptSize: 15
 words:
   - word: montags
+    class: adverb
+    level: A2
+    meaning:
+      en: on Mondays
+      fa: دوشنبه‌ها
+    definition: an jedem Montag
+    example:
+      de: Montags gehe ich nach der Arbeit schwimmen.
+      en: On Mondays I go swimming after work.
+      fa: دوشنبه‌ها بعد از کار به شنا می‌روم.
+    alsoAccepted: [jeden Montag]
+
   - word: dienstags
+    class: adverb
+    level: A2
+    meaning:
+      en: on Tuesdays
+      fa: سه‌شنبه‌ها
+    definition: an jedem Dienstag
+    example:
+      de: Dienstags ist das Museum geschlossen.
+      en: The museum is closed on Tuesdays.
+      fa: موزه سه‌شنبه‌ها تعطیل است.
+    alsoAccepted: [jeden Dienstag]
+
   - word: mittwochs
+    class: adverb
+    level: A2
+    meaning:
+      en: on Wednesdays
+      fa: چهارشنبه‌ها
+    definition: an jedem Mittwoch
+    example:
+      de: Mittwochs kocht mein Mann für die ganze Familie.
+      en: On Wednesdays my husband cooks for the whole family.
+      fa: چهارشنبه‌ها شوهرم برای همهٔ خانواده آشپزی می‌کند.
+    alsoAccepted: [jeden Mittwoch]
+
   - word: donnerstags
+    class: adverb
+    level: A2
+    meaning:
+      en: on Thursdays
+      fa: پنج‌شنبه‌ها
+    definition: an jedem Donnerstag
+    example:
+      de: Der Deutschkurs ist immer donnerstags.
+      en: The German course is always on Thursdays.
+      fa: کلاس آلمانی همیشه پنج‌شنبه‌ها برگزار می‌شود.
+    alsoAccepted: [jeden Donnerstag]
+
   - word: freitags
+    class: adverb
+    level: A2
+    meaning:
+      en: on Fridays
+      fa: جمعه‌ها
+    definition: an jedem Freitag
+    example:
+      de: Freitags arbeite ich nur bis zwölf Uhr.
+      en: On Fridays I only work until twelve o'clock.
+      fa: جمعه‌ها فقط تا ساعت دوازده کار می‌کنم.
+    alsoAccepted: [jeden Freitag]
+
   - word: samstags
+    class: adverb
+    level: A2
+    meaning:
+      en: on Saturdays
+      fa: شنبه‌ها
+    definition: an jedem Samstag
+    example:
+      de: Samstags gehen wir auf den Markt.
+      en: On Saturdays we go to the market.
+      fa: شنبه‌ها به بازار می‌رویم.
+    alsoAccepted: [jeden Samstag, sonnabends]
+
   - word: sonntags
+    class: adverb
+    level: A2
+    meaning:
+      en: on Sundays
+      fa: یکشنبه‌ها
+    definition: an jedem Sonntag
+    example:
+      de: Sonntags schlafe ich lange.
+      en: On Sundays I sleep in.
+      fa: یکشنبه‌ها تا دیروقت می‌خوابم.
+    alsoAccepted: [jeden Sonntag]
+
   - word: morgens
+    class: adverb
+    level: A2
+    meaning:
+      en: in the mornings (early, after getting up)
+      fa: صبح‌ها (اول روز)
+    definition: jeden Tag am Anfang vom Tag, kurz nach dem Aufstehen
+    example:
+      de: Morgens trinke ich immer zuerst einen Kaffee.
+      en: In the mornings I always have a coffee first.
+      fa: صبح‌ها همیشه اول یک قهوه می‌نوشم.
+    alsoAccepted: [jeden Morgen]
+    tooCloseTo: [vormittags, früh]
+
   - word: vormittags
+    class: adverb
+    level: A2
+    meaning:
+      en: in the late mornings (before noon)
+      fa: پیش از ظهرها
+    definition: jeden Tag in der Zeit nach dem Morgen und vor dem Mittag
+    example:
+      de: Vormittags bin ich im Büro, nachmittags arbeite ich zu Hause.
+      en: In the late mornings I'm at the office; in the afternoons I work at home.
+      fa: پیش از ظهرها در دفترم و بعدازظهرها در خانه کار می‌کنم.
+    alsoAccepted: [jeden Vormittag]
+    tooCloseTo: [morgens]
+
   - word: mittags
+    class: adverb
+    level: A2
+    meaning:
+      en: at midday, at lunchtime (every day)
+      fa: ظهرها
+    definition: jeden Tag gegen zwölf Uhr, wenn man zu Mittag isst
+    example:
+      de: Mittags essen die Kinder in der Schule.
+      en: At lunchtime the children eat at school.
+      fa: بچه‌ها ظهرها در مدرسه ناهار می‌خورند.
+    alsoAccepted: [jeden Mittag]
+
   - word: nachmittags
+    class: adverb
+    level: A2
+    meaning:
+      en: in the afternoons
+      fa: بعدازظهرها
+    definition: jeden Tag in der Zeit nach dem Mittag und vor dem Abend
+    example:
+      de: Nachmittags spiele ich oft mit meinem Sohn Fußball.
+      en: In the afternoons I often play football with my son.
+      fa: بعدازظهرها اغلب با پسرم فوتبال بازی می‌کنم.
+    alsoAccepted: [jeden Nachmittag]
+
   - word: abends
+    class: adverb
+    level: A2
+    meaning:
+      en: in the evenings
+      fa: شب‌ها (سر شب)
+    definition: jeden Tag nach der Arbeit, bevor man schlafen geht
+    example:
+      de: Abends sehen wir gern zusammen fern.
+      en: In the evenings we like watching TV together.
+      fa: شب‌ها دوست داریم با هم تلویزیون تماشا کنیم.
+    alsoAccepted: [jeden Abend]
+    tooCloseTo: [nachts]
+
   - word: nachts
+    class: adverb
+    level: A2
+    meaning:
+      en: at night (while people sleep)
+      fa: شب‌ها (دیروقت، هنگام خواب)
+    definition: in der Zeit, in der die meisten Menschen schlafen
+    example:
+      de: Nachts ist es in unserer Straße sehr ruhig.
+      en: At night it is very quiet in our street.
+      fa: شب‌ها خیابان ما خیلی آرام است.
+    alsoAccepted: [jede Nacht]
+    tooCloseTo: [abends]
+
   - word: übermorgen
+    class: adverb
+    level: A2
+    meaning:
+      en: the day after tomorrow
+      fa: پس‌فردا
+    definition: in zwei Tagen, an dem Tag nach morgen
+    example:
+      de: Übermorgen fahren wir in den Urlaub.
+      en: The day after tomorrow we're going on holiday.
+      fa: پس‌فردا به تعطیلات می‌رویم.
+
   - word: vorgestern
+    class: adverb
+    level: A2
+    meaning:
+      en: the day before yesterday
+      fa: پریروز
+    definition: vor zwei Tagen, an dem Tag vor gestern
+    example:
+      de: Vorgestern war ich beim Zahnarzt.
+      en: The day before yesterday I was at the dentist's.
+      fa: پریروز به دندان‌پزشکی رفتم.
+
   - word: früh
+    class: adjective
+    level: A2
+    meaning:
+      en: early
+      fa: زود
+    definition: am Anfang von einer Zeit, nicht spät
+    example:
+      de: Ich stehe jeden Tag früh auf.
+      en: I get up early every day.
+      fa: هر روز زود بیدار می‌شوم.
+    alsoAccepted: [zeitig]
+    tooCloseTo: [morgens]
+
   - word: zweimal
+    class: adverb
+    level: A2
+    meaning:
+      en: twice, two times
+      fa: دو بار
+    definition: einmal und dann noch einmal
+    example:
+      de: Ich putze mir zweimal am Tag die Zähne.
+      en: I brush my teeth twice a day.
+      fa: روزی دو بار مسواک می‌زنم.
+    alsoAccepted: [zwei Mal]
+
   - word: dreimal
+    class: adverb
+    level: A2
+    meaning:
+      en: three times
+      fa: سه بار
+    definition: einmal, noch einmal und dann noch einmal
+    example:
+      de: Nehmen Sie die Tabletten dreimal am Tag.
+      en: Take the tablets three times a day.
+      fa: قرص‌ها را روزی سه بار بخورید.
+    alsoAccepted: [drei Mal]
+
   - word: viermal
+    class: adverb
+    level: A2
+    meaning:
+      en: four times
+      fa: چهار بار
+    definition: so oft wie zweimal und dann noch zweimal
+    example:
+      de: Wir waren schon viermal in Italien im Urlaub.
+      en: We've been on holiday in Italy four times already.
+      fa: تا حالا چهار بار برای تعطیلات به ایتالیا رفته‌ایم.
+    alsoAccepted: [vier Mal]
+
   - word: manchmal
+    class: adverb
+    level: A2
+    meaning:
+      en: sometimes
+      fa: گاهی، گاهی وقت‌ها
+    definition: an einigen Tagen ja, an anderen Tagen nicht
+    example:
+      de: Manchmal fahre ich mit dem Fahrrad zur Arbeit.
+      en: Sometimes I cycle to work.
+      fa: گاهی با دوچرخه سر کار می‌روم.
+    alsoAccepted: [ab und zu, hin und wieder, gelegentlich, mitunter]
+
   - word: meistens
+    class: adverb
+    level: A2
+    meaning:
+      en: mostly, most of the time
+      fa: بیشتر وقت‌ها
+    definition: fast immer, aber nicht immer
+    example:
+      de: Meistens esse ich mittags in der Kantine.
+      en: Most of the time I have lunch in the canteen.
+      fa: بیشتر وقت‌ها ظهر در غذاخوری محل کار غذا می‌خورم.
+    alsoAccepted: [meist]
+
   - word: Mal
+    class: noun
+    article: das
+    plural: Male
+    level: A2
+    meaning:
+      en: time (an occasion, as in "the first time")
+      fa: بار، دفعه (مثل «اولین بار»)
+    definition: "so zählt man, wie oft etwas passiert: das erste …, das letzte …"
+    example:
+      de: Beim nächsten Mal komme ich pünktlich.
+      en: Next time I'll be on time.
+      fa: دفعهٔ بعد سر وقت می‌آیم.
+
+review:
+  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
+    only; 132, then 9 questions)
+  date: 2026-11-28
+  pool: 93a1f0834ece4ff0
