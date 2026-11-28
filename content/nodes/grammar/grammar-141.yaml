@@ -4,10 +4,245 @@ kind: grammar
 level: A1
 chapter: a1-first-sentences
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-087, grammar-139]
 title:
   en: "W-question"
   fa: "پرسش با واژهٔ پرسشی (*W-Frage*)"
   de: "W-Frage"
+
+explanations:
+  en:
+    rule: >
+      A W-question starts with a question word in position 1. The conjugated
+      verb follows in position 2, and the subject comes after the verb: *Wo
+      wohnst du?* German needs no helper verb like English "do". A question
+      word with its noun or adjective, such as *wie viele Kinder* or *wie
+      alt*, fills position 1 together. At the end of a W-question the voice
+      usually goes down.
+  fa:
+    rule: >
+      پرسش با واژهٔ پرسشی (*W-Frage*) با واژهٔ پرسشی در جایگاه اول آغاز
+      می‌شود. فعل صرف‌شده در جایگاه دوم می‌آید و فاعل پس از فعل: *Wo wohnst
+      du?* در فارسی ترتیب جمله در پرسش عوض نمی‌شود («تو کجا زندگی می‌کنی؟»)،
+      ولی در آلمانی فعل بلافاصله پس از واژهٔ پرسشی می‌آید. واژهٔ پرسشی همراه
+      اسم یا صفتش، مانند *wie viele Kinder* یا *wie alt*، با هم جایگاه اول را
+      پر می‌کند. در پایان این پرسش‌ها لحن صدا معمولاً پایین می‌آید.
+  de:
+    rule: >
+      Eine W-Frage beginnt mit einem Fragewort auf Position 1. Das konjugierte
+      Verb steht auf Position 2, und das Subjekt kommt nach dem Verb: *Wo
+      wohnst du?* Ein Fragewort mit Nomen oder Adjektiv, zum Beispiel *wie
+      viele Kinder* oder *wie alt*, ist zusammen Position 1. Am Ende von einer
+      W-Frage geht die Stimme meistens nach unten.
+
+table:
+  columns:
+    - { en: "Position 1: question word", fa: "جایگاه اول: واژهٔ پرسشی", de: "Position 1: Fragewort" }
+    - { en: "Position 2: verb", fa: "جایگاه دوم: فعل", de: "Position 2: Verb" }
+    - { en: Subject and the rest, fa: فاعل و بقیهٔ جمله, de: Subjekt und Rest }
+  rows:
+    - [Wo, ist, Peter?]
+    - [Woher, kommen, Sie?]
+    - [Wann, beginnt, der Kurs?]
+    - [Wohin, fahrt, ihr im Sommer?]
+    - [Warum, lernst, du Deutsch?]
+    - [Wie viele Kinder, haben, Sie?]
+    - [Wie alt, ist, deine Tochter?]
+
+examples:
+  - de: Wo ist Peter?
+    en: Where is Peter?
+    fa: پیتر کجاست؟
+  - de: Woher kommen Sie?
+    en: Where are you from?
+    fa: اهل کجا هستید؟
+  - de: Wann beginnt der Kurs?
+    en: When does the course start?
+    fa: کلاس کی شروع می‌شود؟
+  - de: Wohin fahrt ihr im Sommer?
+    en: Where are you (plural) going in the summer?
+    fa: تابستان کجا می‌روید؟
+  - de: Warum lernst du Deutsch?
+    en: Why are you learning German?
+    fa: چرا آلمانی یاد می‌گیری؟
+  - de: Wie viele Kinder haben Sie?
+    en: How many children do you have?
+    fa: چند فرزند دارید؟
+  - de: Wie alt ist deine Tochter?
+    en: How old is your daughter?
+    fa: دخترت چند سال دارد؟
+
+mistakes:
+  - wrong: Wo du wohnst?
+    right: Wo wohnst du?
+    why:
+      en: "The verb comes right after the question word, and the subject after the verb."
+      fa: "فعل بلافاصله پس از واژهٔ پرسشی می‌آید و فاعل پس از فعل."
+      de: "Das Verb kommt direkt nach dem Fragewort, das Subjekt danach."
+  - wrong: Wann der Zug kommt?
+    right: Wann kommt der Zug?
+    why:
+      en: "*Der Zug* is the subject, so it comes after the verb *kommt*."
+      fa: "*der Zug* فاعل است، پس پس از فعل *kommt* می‌آید."
+      de: "*Der Zug* ist das Subjekt. Es steht nach dem Verb *kommt*."
+  - wrong: Wie viele haben Sie Kinder?
+    right: Wie viele Kinder haben Sie?
+    why:
+      en: "*Wie viele Kinder* stays together in position 1."
+      fa: "*wie viele Kinder* با هم در جایگاه اول می‌ماند."
+      de: "*Wie viele Kinder* bleibt zusammen auf Position 1."
+
+questions:
+  - id: order-1
+    type: word-order
+    answers:
+      - [wo, wohnst, du]
+    end: "?"
+    explanation:
+      en: "Question word, then the verb, then the subject."
+      fa: "واژهٔ پرسشی، سپس فعل و بعد فاعل."
+      de: "Fragewort, dann Verb, dann Subjekt."
+  - id: order-2
+    type: word-order
+    answers:
+      - [woher, kommt, Ihr Mann]
+    end: "?"
+    explanation:
+      en: "Question word, then the verb, then the subject *Ihr Mann*."
+      fa: "واژهٔ پرسشی، سپس فعل و بعد فاعل *Ihr Mann*."
+      de: "Fragewort, dann Verb, dann das Subjekt *Ihr Mann*."
+  - id: order-3
+    type: word-order
+    answers:
+      - [wann, beginnt, der Film]
+    end: "?"
+    explanation:
+      en: "Question word, then the verb, then the subject *der Film*."
+      fa: "واژهٔ پرسشی، سپس فعل و بعد فاعل *der Film*."
+      de: "Fragewort, dann Verb, dann das Subjekt *der Film*."
+  - id: order-4
+    type: word-order
+    answers:
+      - [wie viele Kinder, haben, Sie]
+    end: "?"
+    explanation:
+      en: "*Wie viele Kinder* fills position 1, then the verb, then *Sie*."
+      fa: "*wie viele Kinder* جایگاه اول را پر می‌کند، سپس فعل و بعد *Sie* می‌آید."
+      de: "*Wie viele Kinder* ist Position 1, dann das Verb, dann *Sie*."
+  - id: order-5
+    type: word-order
+    answers:
+      - [wohin, fahrt, ihr, im Sommer]
+    end: "?"
+    explanation:
+      en: "Question word, verb, subject, then the rest."
+      fa: "واژهٔ پرسشی، فعل، فاعل و سپس بقیهٔ جمله."
+      de: "Fragewort, Verb, Subjekt, dann der Rest."
+  - id: order-6
+    type: word-order
+    answers:
+      - [warum, lernt, Karim, Deutsch]
+    end: "?"
+    explanation:
+      en: "Question word, verb, subject, then the rest."
+      fa: "واژهٔ پرسشی، فعل، فاعل و سپس بقیهٔ جمله."
+      de: "Fragewort, Verb, Subjekt, dann der Rest."
+  - id: true-1
+    type: true-false
+    prompt: Wo du wohnst?
+    answer: false
+    explanation:
+      en: "The verb comes right after the question word: *Wo wohnst du?*"
+      fa: "فعل بلافاصله پس از واژهٔ پرسشی می‌آید: *Wo wohnst du?*"
+      de: "Das Verb kommt direkt nach dem Fragewort: *Wo wohnst du?*"
+  - id: true-2
+    type: true-false
+    prompt: Wann kommt der Bus?
+    answer: true
+    explanation:
+      en: "Question word, verb, subject. The sentence is correct."
+      fa: "واژهٔ پرسشی، فعل، فاعل. جمله درست است."
+      de: "Fragewort, Verb, Subjekt. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Woher Sie kommen?
+    answer: false
+    explanation:
+      en: "The verb comes right after the question word: *Woher kommen Sie?*"
+      fa: "فعل بلافاصله پس از واژهٔ پرسشی می‌آید: *Woher kommen Sie?*"
+      de: "Das Verb kommt direkt nach dem Fragewort: *Woher kommen Sie?*"
+  - id: true-4
+    type: true-false
+    prompt: Wie alt ist dein Sohn?
+    answer: true
+    explanation:
+      en: "*Wie alt* is position 1, then the verb, then the subject. The sentence is correct."
+      fa: "*wie alt* جایگاه اول است، سپس فعل و بعد فاعل. جمله درست است."
+      de: "*Wie alt* ist Position 1, dann Verb, dann Subjekt. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Wie viel kostet das Brot?
+    answer: true
+    explanation:
+      en: "*Wie viel* is position 1, *kostet* position 2. The sentence is correct."
+      fa: "*wie viel* جایگاه اول است و *kostet* جایگاه دوم. جمله درست است."
+      de: "*Wie viel* ist Position 1, *kostet* Position 2. Der Satz ist richtig."
+  - id: true-6
+    type: true-false
+    prompt: Warum Lisa ist müde?
+    answer: false
+    explanation:
+      en: "The verb comes right after *warum*: *Warum ist Lisa müde?*"
+      fa: "فعل بلافاصله پس از *warum* می‌آید: *Warum ist Lisa müde?*"
+      de: "Das Verb kommt direkt nach *warum*: *Warum ist Lisa müde?*"
+  - id: choice-1
+    type: multiple-choice
+    prompt: "wo / arbeiten / Ihre Frau"
+    options: [Wo arbeitet Ihre Frau?, Wo Ihre Frau arbeitet?, Ihre Frau wo arbeitet?]
+    answer: Wo arbeitet Ihre Frau?
+    explanation:
+      en: "Question word, then the verb, then the subject *Ihre Frau*."
+      fa: "واژهٔ پرسشی، سپس فعل و بعد فاعل *Ihre Frau*."
+      de: "Fragewort, dann Verb, dann das Subjekt *Ihre Frau*."
+  - id: gap-1
+    type: gap-fill
+    prompt: Wohin ___ im Sommer?
+    options: [fahrt ihr, ihr fahrt, fahren ihr]
+    answer: fahrt ihr
+    explanation:
+      en: "The verb comes right after *wohin*, then *ihr*; with *ihr* the ending is *-t*."
+      fa: "فعل بلافاصله پس از *wohin* می‌آید و سپس *ihr*؛ با *ihr* شناسهٔ فعل *-t* است."
+      de: "Das Verb kommt direkt nach *wohin*, dann *ihr*. Bei *ihr* ist die Endung *-t*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Woher ___?
+    options: [kommst du, du kommst, kommen du]
+    answer: kommst du
+    explanation:
+      en: "The verb comes right after *woher*, then *du*."
+      fa: "فعل بلافاصله پس از *woher* می‌آید و سپس *du*."
+      de: "Das Verb kommt direkt nach *woher*, dann *du*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wo ___ (arbeiten) dein Vater?
+    answers: [arbeitet]
+    explanation:
+      en: "The subject *dein Vater* (*er*) comes after the verb, so *arbeitet*, with *-et* after *t*."
+      fa: "فاعل *dein Vater* (*er*) پس از فعل آمده است، پس *arbeitet*؛ پس از *t* شناسه *-et* است."
+      de: "Das Subjekt *dein Vater* (*er*) steht nach dem Verb: *arbeitet*, nach *t* mit *-et*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wie ___ (heißen) Sie?
+    answers: [heißen]
+    explanation:
+      en: "With the polite *Sie* the ending is *-en*: *Wie heißen Sie?*"
+      fa: "با *Sie* رسمی شناسهٔ فعل *-en* است: *Wie heißen Sie?*"
+      de: "Bei *Sie* ist die Endung *-en*: *Wie heißen Sie?*"
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 02ae591d55739b4a

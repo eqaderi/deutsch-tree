@@ -4,10 +4,270 @@ kind: grammar
 level: A1
 chapter: a1-first-sentences
 order: 6
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-139]
 title:
   en: "Yes/no question"
   fa: "پرسش بله یا نه"
   de: "Ja/Nein-Frage"
+
+explanations:
+  en:
+    rule: >
+      A question that is answered with *ja* or *nein* starts with the
+      conjugated verb. The verb stands in position 1, the subject comes right
+      after it, and then the rest: *Kommst du morgen?* There is no question
+      word, and no helper verb like English "do" or "are". The verb keeps the
+      same ending as in a statement. At the end the voice goes up.
+  fa:
+    rule: >
+      پرسشی که پاسخش *ja* (بله) یا *nein* (نه) است، با فعل صرف‌شده آغاز
+      می‌شود. فعل در جایگاه اول می‌آید، فاعل بلافاصله پس از آن و سپس بقیهٔ
+      جمله: *Kommst du morgen?* در فارسی چنین پرسشی را با لحن صدا یا با «آیا»
+      می‌سازیم؛ آلمانی برای آن واژهٔ جداگانه‌ای ندارد و فعل را به آغاز جمله
+      می‌برد. شناسهٔ فعل همان شناسهٔ جملهٔ خبری است. در پایان پرسش لحن صدا بالا
+      می‌رود.
+  de:
+    rule: >
+      Auf eine Ja/Nein-Frage antwortet man mit *ja* oder *nein*. Die Frage
+      beginnt mit dem konjugierten Verb. Das Verb steht auf Position 1, das
+      Subjekt direkt danach, dann der Rest: *Kommst du morgen?* Es gibt kein
+      Fragewort. Das Verb hat die gleiche Endung wie im Aussagesatz. Am Ende
+      geht die Stimme nach oben.
+
+table:
+  columns:
+    - { en: "Position 1: verb", fa: "جایگاه اول: فعل", de: "Position 1: Verb" }
+    - { en: Subject, fa: فاعل, de: Subjekt }
+    - { en: The rest, fa: بقیهٔ جمله, de: Rest }
+  rows:
+    - [Kommst, du, morgen?]
+    - [Hast, du, heute Zeit?]
+    - [Wohnen, Sie, in Köln?]
+    - [Ist, das, dein Fahrrad?]
+    - [Spielt, Tom, gern Fußball?]
+    - [Lernt, ihr, zusammen?]
+
+# A statement becomes a yes/no question: the verb moves to the front.
+diagrams:
+  - caption:
+      en: >
+        *Du kommst morgen.* becomes *Kommst du morgen?*: the verb, shaded,
+        moves to position 1 and the subject comes after it.
+      fa: >
+        *Du kommst morgen.* به *Kommst du morgen?* تبدیل می‌شود: فعل، که رنگی
+        است، به جایگاه اول می‌رود و فاعل پس از آن می‌آید.
+      de: >
+        Aus *Du kommst morgen.* wird *Kommst du morgen?*: Das Verb (farbig)
+        geht auf Position 1, das Subjekt kommt danach.
+    labels:
+      statement: { en: statement, fa: جملهٔ خبری, de: Aussagesatz }
+      question: { en: yes/no question, fa: پرسش بله یا نه, de: Ja/Nein-Frage }
+    svg: |
+      <svg viewBox="0 0 320 180">
+        <text class="note" x="160" y="18" text-anchor="middle">{{statement}}</text>
+        <!-- Du kommst morgen. -->
+        <rect class="surface" x="4" y="28" width="96" height="40"/>
+        <rect class="shade" x="106" y="28" width="96" height="40"/>
+        <rect class="surface" x="208" y="28" width="108" height="40"/>
+        <text class="label" x="52" y="54" text-anchor="middle">Du</text>
+        <text class="label" x="154" y="54" text-anchor="middle">kommst</text>
+        <text class="label" x="262" y="54" text-anchor="middle">morgen.</text>
+        <!-- the verb moves to the front -->
+        <line class="line" x1="154" y1="72" x2="56" y2="108"/>
+        <polyline class="line" points="63,99 56,108 67,108"/>
+        <!-- Kommst du morgen? -->
+        <rect class="shade" x="4" y="114" width="96" height="40"/>
+        <rect class="surface" x="106" y="114" width="96" height="40"/>
+        <rect class="surface" x="208" y="114" width="108" height="40"/>
+        <text class="label" x="52" y="140" text-anchor="middle">Kommst</text>
+        <text class="label" x="154" y="140" text-anchor="middle">du</text>
+        <text class="label" x="262" y="140" text-anchor="middle">morgen?</text>
+        <text class="note" x="160" y="174" text-anchor="middle">{{question}}</text>
+      </svg>
+
+examples:
+  - de: Kommst du morgen?
+    en: Are you coming tomorrow?
+    fa: فردا می‌آیی؟
+  - de: Hast du heute Zeit?
+    en: Do you have time today?
+    fa: امروز وقت داری؟
+  - de: Wohnen Sie in Köln?
+    en: Do you live in Cologne?
+    fa: شما در کلن زندگی می‌کنید؟
+  - de: Ist das dein Fahrrad?
+    en: Is that your bike?
+    fa: این دوچرخهٔ توست؟
+  - de: Sprechen Sie Englisch?
+    en: Do you speak English?
+    fa: انگلیسی صحبت می‌کنید؟
+  - de: Spielt Tom gern Fußball?
+    en: Does Tom like playing football?
+    fa: تام دوست دارد فوتبال بازی کند؟
+  - de: Lernt ihr zusammen?
+    en: Do you (plural) study together?
+    fa: شما (جمع) با هم درس می‌خوانید؟
+
+mistakes:
+  - wrong: Ist Anna kommt heute?
+    right: Kommt Anna heute?
+    why:
+      en: 'German has no helper verb like English "is" or "does". The verb itself moves to the front.'
+      fa: "آلمانی فعل کمکی جداگانه‌ای برای پرسش ندارد؛ خودِ فعل به آغاز جمله می‌رود."
+      de: "Man braucht kein zweites Verb. Das Verb selbst steht am Anfang."
+  - wrong: Lernst Deutsch du?
+    right: Lernst du Deutsch?
+    why:
+      en: "The subject comes right after the verb, before the rest."
+      fa: "فاعل بلافاصله پس از فعل می‌آید، پیش از بقیهٔ جمله."
+      de: "Das Subjekt kommt direkt nach dem Verb, vor dem Rest."
+  - wrong: Sprichst Sie Englisch?
+    right: Sprechen Sie Englisch?
+    why:
+      en: "At the front the verb keeps its ending: with the polite *Sie* it is *sprechen*."
+      fa: "فعل در آغاز جمله هم شناسهٔ خود را نگه می‌دارد: با *Sie* رسمی *sprechen* می‌آید."
+      de: "Am Anfang hat das Verb die gleiche Endung: bei *Sie* heißt es *sprechen*."
+
+questions:
+  - id: choice-1
+    type: multiple-choice
+    prompt: "du / kommen / morgen"
+    options: [Kommst du morgen?, Kommt du morgen?, Kommst morgen du?]
+    answer: Kommst du morgen?
+    explanation:
+      en: "The verb with its *du* ending first, then *du*, then the rest."
+      fa: "اول فعل با شناسهٔ *du*، سپس *du* و بعد بقیهٔ جمله."
+      de: "Zuerst das Verb mit der Endung für *du*, dann *du*, dann der Rest."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Sie / sprechen / Englisch"
+    options: [Sprechen Sie Englisch?, Spricht Sie Englisch?, Sprechen Englisch Sie?]
+    answer: Sprechen Sie Englisch?
+    explanation:
+      en: "The verb first, with *-en* for the polite *Sie*, then *Sie*."
+      fa: "اول فعل با شناسهٔ *-en* برای *Sie* رسمی، سپس *Sie*."
+      de: "Zuerst das Verb, bei *Sie* mit *-en*, dann *Sie*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Anna / arbeiten / heute"
+    options: [Arbeitet Anna heute?, Ist Anna arbeitet heute?, Arbeiten Anna heute?]
+    answer: Arbeitet Anna heute?
+    explanation:
+      en: "The verb itself comes first, with no extra *ist*; with Anna (*sie*) it is *arbeitet*."
+      fa: "خودِ فعل در آغاز می‌آید، بی *ist* اضافه؛ با آنا (*sie*) فعل *arbeitet* است."
+      de: "Das Verb selbst steht am Anfang, ohne *ist*. Bei Anna (*sie*): *arbeitet*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: "ihr / haben / Zeit"
+    options: [Habt ihr Zeit?, Hat ihr Zeit?, Haben ihr Zeit?]
+    answer: Habt ihr Zeit?
+    explanation:
+      en: "With *ihr* the verb is *habt*, also at the front."
+      fa: "با *ihr* فعل *habt* است، در آغاز پرسش هم."
+      de: "Bei *ihr* heißt das Verb *habt*, auch am Anfang."
+  - id: gap-1
+    type: gap-fill
+    prompt: ___ Sie aus Polen?
+    options: [Kommen, Kommt, Kommst]
+    answer: Kommen
+    explanation:
+      en: "With the polite *Sie* the verb ends in *-en*: *Kommen Sie …?*"
+      fa: "با *Sie* رسمی شناسهٔ فعل *-en* است: *Kommen Sie …?*"
+      de: "Bei *Sie* hat das Verb *-en*: *Kommen Sie …?*"
+  - id: gap-2
+    type: gap-fill
+    prompt: ___ ihr morgen nach Berlin?
+    options: [Fahrt, Fahren, Fährt]
+    answer: Fahrt
+    explanation:
+      en: "With *ihr* the verb is *fahrt*, without an umlaut."
+      fa: "با *ihr* فعل *fahrt* است، بی اوملاوت."
+      de: "Bei *ihr* heißt das Verb *fahrt*, ohne Umlaut."
+  - id: true-1
+    type: true-false
+    prompt: Ist Anna kommt heute?
+    answer: false
+    explanation:
+      en: "No extra verb: *Kommt Anna heute?*"
+      fa: "فعل اضافه لازم نیست: *Kommt Anna heute?*"
+      de: "Kein zweites Verb: *Kommt Anna heute?*"
+  - id: true-2
+    type: true-false
+    prompt: Wohnst du in Hamburg?
+    answer: true
+    explanation:
+      en: "Verb first, then the subject. The sentence is correct."
+      fa: "اول فعل، سپس فاعل. جمله درست است."
+      de: "Zuerst das Verb, dann das Subjekt. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Lernt Deutsch Karim?
+    answer: false
+    explanation:
+      en: "The subject comes right after the verb: *Lernt Karim Deutsch?*"
+      fa: "فاعل بلافاصله پس از فعل می‌آید: *Lernt Karim Deutsch?*"
+      de: "Das Subjekt kommt direkt nach dem Verb: *Lernt Karim Deutsch?*"
+  - id: true-4
+    type: true-false
+    prompt: Habt ihr am Montag Zeit?
+    answer: true
+    explanation:
+      en: "Verb first, then *ihr*, then the rest. The sentence is correct."
+      fa: "اول فعل، سپس *ihr* و بعد بقیهٔ جمله. جمله درست است."
+      de: "Zuerst das Verb, dann *ihr*, dann der Rest. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Bist du müde?
+    answer: true
+    explanation:
+      en: "*Bist* first, then *du*. The sentence is correct."
+      fa: "اول *bist*، سپس *du*. جمله درست است."
+      de: "Zuerst *bist*, dann *du*. Der Satz ist richtig."
+  - id: true-6
+    type: true-false
+    prompt: Kommst morgen du?
+    answer: false
+    explanation:
+      en: "The subject comes right after the verb: *Kommst du morgen?*"
+      fa: "فاعل بلافاصله پس از فعل می‌آید: *Kommst du morgen?*"
+      de: "Das Subjekt kommt direkt nach dem Verb: *Kommst du morgen?*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: ___ (sein) du müde?
+    answers: [Bist]
+    explanation:
+      en: "*Sein* with *du* is *bist*: *Bist du müde?*"
+      fa: "*sein* با *du* می‌شود *bist*: *Bist du müde?*"
+      de: "*Sein* bei *du*: *bist*. *Bist du müde?*"
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: ___ (haben) Sie heute Zeit?
+    answers: [Haben]
+    explanation:
+      en: "With the polite *Sie* it is *haben*: *Haben Sie heute Zeit?*"
+      fa: "با *Sie* رسمی فعل *haben* است: *Haben Sie heute Zeit?*"
+      de: "Bei *Sie*: *haben*. *Haben Sie heute Zeit?*"
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ (wohnen) ihr in Köln?
+    answers: [Wohnt]
+    explanation:
+      en: "With *ihr* the ending is *-t*: *Wohnt ihr in Köln?*"
+      fa: "با *ihr* شناسهٔ فعل *-t* است: *Wohnt ihr in Köln?*"
+      de: "Bei *ihr* ist die Endung *-t*: *Wohnt ihr in Köln?*"
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: ___ (spielen) Tom gern Fußball?
+    answers: [Spielt]
+    explanation:
+      en: "Tom is *er*, so the ending is *-t*: *Spielt Tom gern Fußball?*"
+      fa: "تام سوم‌شخص مفرد است (*er*)، پس شناسهٔ فعل *-t* است: *Spielt Tom gern Fußball?*"
+      de: "Tom ist *er*. Die Endung ist *-t*: *Spielt Tom gern Fußball?*"
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: bbd2dd0c20c98641

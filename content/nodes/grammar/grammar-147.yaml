@@ -4,10 +4,283 @@ kind: grammar
 level: A1
 chapter: a1-negation
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-076, grammar-146]
 title:
   en: "Negation with *kein*"
   fa: "نفی با *kein*"
   de: "Verneinung mit *kein*"
+
+explanations:
+  en:
+    rule: >
+      A noun with *ein* or with no article is negated with *kein*, never with
+      *nicht*: *ein Problem* becomes *kein Problem*, *Zeit* becomes *keine
+      Zeit*. *Kein* has the endings of *ein*, and in the plural it is *keine*.
+      After *haben* a masculine noun takes *keinen*: *Ich habe keinen Hund.*
+      Everything else is negated with *nicht*: a verb, an adjective, and a
+      noun with *der*, *die* or *das*.
+  fa:
+    rule: >
+      اسمی که با *ein* یا بدون حرف تعریف می‌آید با *kein* منفی می‌شود، نه با
+      *nicht*: *ein Problem* می‌شود *kein Problem* و *Zeit* می‌شود *keine
+      Zeit*. *kein* همان پایانه‌های *ein* را می‌گیرد و در جمع *keine* است.
+      پس از *haben*، اسم مذکر *keinen* می‌گیرد: *Ich habe keinen Hund.* بقیهٔ
+      بخش‌های جمله با *nicht* منفی می‌شوند: فعل، صفت، و اسمی که با *der*،
+      *die* یا *das* می‌آید.
+  de:
+    rule: >
+      Ein Nomen mit *ein* oder ohne Artikel verneint man mit *kein*, nicht mit
+      *nicht*: *ein Problem* wird zu *kein Problem*, *Zeit* wird zu *keine
+      Zeit*. *Kein* hat die Endungen von *ein*. Im Plural heißt es *keine*.
+      Nach *haben* bekommt ein maskulines Nomen *keinen*: *Ich habe keinen
+      Hund.* Alles andere verneint man mit *nicht*: ein Verb, ein Adjektiv und
+      ein Nomen mit *der*, *die* oder *das*.
+
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "With *ein*", fa: "با *ein*", de: "Mit *ein*" }
+    - { en: "With *kein*", fa: "با *kein*", de: "Mit *kein*" }
+    - { en: "Example with *haben*", fa: "مثال با *haben*", de: "Beispiel mit *haben*" }
+  rows:
+    - [der Hund, ein Hund, kein Hund, Ich habe keinen Hund.]
+    - [die Katze, eine Katze, keine Katze, Ich habe keine Katze.]
+    - [das Auto, ein Auto, kein Auto, Ich habe kein Auto.]
+    - [die Kinder (Plural), –, keine Kinder, Ich habe keine Kinder.]
+
+examples:
+  - de: Heute habe ich keine Zeit.
+    en: I have no time today.
+    fa: امروز وقت ندارم.
+  - de: Das ist kein Problem.
+    en: That's no problem.
+    fa: مشکلی نیست.
+  - de: Mein Bruder hat kein Auto.
+    en: My brother doesn't have a car.
+    fa: برادرم ماشین ندارد.
+  - de: Ich habe keinen Hunger.
+    en: I'm not hungry.
+    fa: گرسنه نیستم.
+  - de: Wir haben keine Kinder.
+    en: We don't have any children.
+    fa: ما بچه نداریم.
+  - de: Hast du kein Handy?
+    en: Don't you have a mobile phone?
+    fa: گوشی نداری؟
+  - de: Das ist nicht die Post, das ist die Bank.
+    en: That isn't the post office, it's the bank.
+    fa: این ادارهٔ پست نیست، بانک است.
+  - de: Der Kaffee ist nicht heiß.
+    en: The coffee isn't hot.
+    fa: قهوه داغ نیست.
+
+mistakes:
+  - wrong: Ich habe nicht Zeit.
+    right: Ich habe keine Zeit.
+    why:
+      en: "*Zeit* has no article, so it is negated with *kein*: *keine Zeit*."
+      fa: "*Zeit* حرف تعریف ندارد، پس با *kein* منفی می‌شود: *keine Zeit*."
+      de: "*Zeit* hat keinen Artikel. Darum verneint man mit *kein*: *keine Zeit*."
+  - wrong: Das ist nicht ein Problem.
+    right: Das ist kein Problem.
+    why:
+      en: "*Nicht* and *ein* together become *kein*."
+      fa: "*nicht* و *ein* با هم می‌شوند *kein*."
+      de: "*Nicht* und *ein* zusammen werden zu *kein*."
+  - wrong: Der Film ist kein gut.
+    right: Der Film ist nicht gut.
+    why:
+      en: "*Gut* is an adjective, not a noun, so it is negated with *nicht*."
+      fa: "*gut* صفت است، نه اسم؛ پس با *nicht* منفی می‌شود."
+      de: "*Gut* ist ein Adjektiv, kein Nomen. Darum verneint man mit *nicht*."
+  - wrong: Ich habe kein Hund.
+    right: Ich habe keinen Hund.
+    why:
+      en: "*Hund* is masculine (*der*). After *haben* it takes *keinen*, as *ein* becomes *einen*."
+      fa: "*Hund* اسم مذکر (*der*) است. پس از *haben*، *keinen* می‌گیرد، همان‌طور که *ein* می‌شود *einen*."
+      de: "*Hund* hat den Artikel *der*. Nach *haben* heißt es *keinen*, so wie *einen*."
+  - wrong: Er hat keine Auto.
+    right: Er hat kein Auto.
+    why:
+      en: "*Auto* is neuter (*das*), so *kein* has no ending, like *ein Auto*."
+      fa: "*Auto* اسم خنثی (*das*) است، پس *kein* پایانه نمی‌گیرد، مانند *ein Auto*."
+      de: "*Auto* hat den Artikel *das*. Darum *kein* ohne Endung, wie bei *ein Auto*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Das ist ___ Problem.
+    options: [kein, keine, nicht]
+    answer: kein
+    explanation:
+      en: "*Problem* is neuter (*das*), and *ein Problem* becomes *kein Problem*."
+      fa: "*Problem* اسم خنثی (*das*) است و *ein Problem* می‌شود *kein Problem*."
+      de: "*Problem* hat den Artikel *das*. *Ein Problem* wird zu *kein Problem*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir haben heute ___ Zeit.
+    options: [keine, kein, nicht]
+    answer: keine
+    explanation:
+      en: "*Zeit* is feminine (*die*) and has no article, so it is negated with *keine*."
+      fa: "*Zeit* اسم مؤنث (*die*) است و حرف تعریف ندارد، پس با *keine* منفی می‌شود."
+      de: "*Zeit* hat den Artikel *die* und steht ohne Artikel. Darum: *keine Zeit*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich bin heute ___ müde.
+    options: [nicht, kein, keine]
+    answer: nicht
+    explanation:
+      en: "*Müde* is an adjective, so it is negated with *nicht*."
+      fa: "*müde* صفت است، پس با *nicht* منفی می‌شود."
+      de: "*Müde* ist ein Adjektiv. Darum verneint man mit *nicht*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Das ist ___ der Bus nach Köln.
+    options: [nicht, kein, keinen]
+    answer: nicht
+    explanation:
+      en: "*Der Bus* has the article *der*, so it is negated with *nicht*."
+      fa: "*der Bus* با حرف تعریف معین *der* آمده است، پس با *nicht* منفی می‌شود."
+      de: "*Der Bus* hat den Artikel *der*. Darum verneint man mit *nicht*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ich habe ___ Hund.
+    options: [keinen, kein, nicht]
+    answer: keinen
+    explanation:
+      en: "*Hund* is masculine (*der*). After *haben* it is *keinen Hund*."
+      fa: "*Hund* اسم مذکر (*der*) است. پس از *haben* می‌شود *keinen Hund*."
+      de: "*Hund* hat den Artikel *der*. Nach *haben* heißt es *keinen Hund*."
+  - id: gap-6
+    type: gap-fill
+    prompt: Er ist ___ Lehrer, er ist Arzt.
+    options: [kein, keine, keinen]
+    answer: kein
+    explanation:
+      en: "*Lehrer* is masculine (*der*). After *sein* it is *kein Lehrer*, without an ending."
+      fa: "*Lehrer* اسم مذکر (*der*) است. پس از *sein* می‌شود *kein Lehrer*، بدون پایانه."
+      de: "*Lehrer* hat den Artikel *der*. Nach *sein* heißt es *kein Lehrer*, ohne Endung."
+  - id: true-1
+    type: true-false
+    prompt: Ich habe keine Zeit.
+    answer: true
+    explanation:
+      en: "*Zeit* has no article, so *keine Zeit*. The sentence is correct."
+      fa: "*Zeit* حرف تعریف ندارد، پس *keine Zeit*. جمله درست است."
+      de: "*Zeit* steht ohne Artikel, also *keine Zeit*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich habe nicht Geld.
+    answer: false
+    explanation:
+      en: "*Geld* has no article, so it is negated with *kein*: *Ich habe kein Geld.*"
+      fa: "*Geld* حرف تعریف ندارد، پس با *kein* منفی می‌شود: *Ich habe kein Geld.*"
+      de: "*Geld* steht ohne Artikel. Darum: *Ich habe kein Geld.*"
+  - id: true-3
+    type: true-false
+    prompt: Anna ist nicht krank.
+    answer: true
+    explanation:
+      en: "*Krank* is an adjective, so *nicht krank*. The sentence is correct."
+      fa: "*krank* صفت است، پس *nicht krank*. جمله درست است."
+      de: "*Krank* ist ein Adjektiv, also *nicht krank*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wir haben kein Kinder.
+    answer: false
+    explanation:
+      en: "In the plural *kein* is *keine*: *keine Kinder*."
+      fa: "*kein* در جمع *keine* است: *keine Kinder*."
+      de: "Im Plural heißt es *keine*: *keine Kinder*."
+  - id: true-5
+    type: true-false
+    prompt: Das ist nicht das Auto von Tom.
+    answer: true
+    explanation:
+      en: "*Das Auto* has the article *das*, so it is negated with *nicht*. The sentence is correct."
+      fa: "*das Auto* با حرف تعریف معین *das* آمده است، پس با *nicht* منفی می‌شود. جمله درست است."
+      de: "*Das Auto* hat den Artikel *das*. Darum *nicht*. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Wir haben heute nicht Zeit.
+    answer: nicht
+    explanation:
+      en: "*Zeit* has no article, so *keine Zeit*, not *nicht Zeit*."
+      fa: "*Zeit* حرف تعریف ندارد، پس *keine Zeit* درست است، نه *nicht Zeit*."
+      de: "*Zeit* steht ohne Artikel. Richtig ist *keine Zeit*, nicht *nicht Zeit*."
+  - id: error-2
+    type: find-error
+    prompt: Das Kind ist kein müde.
+    answer: kein
+    explanation:
+      en: "*Müde* is an adjective, so *nicht müde*."
+      fa: "*müde* صفت است، پس *nicht müde*."
+      de: "*Müde* ist ein Adjektiv. Richtig ist *nicht müde*."
+  - id: error-3
+    type: find-error
+    prompt: Das ist keine Problem.
+    answer: keine
+    explanation:
+      en: "*Problem* is neuter (*das*), so *kein Problem*, without *-e*."
+      fa: "*Problem* اسم خنثی (*das*) است، پس *kein Problem*، بدون *-e*."
+      de: "*Problem* hat den Artikel *das*. Richtig ist *kein Problem*, ohne *-e*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Wir haben ___ (kein) Milch.
+    answers: [keine]
+    explanation:
+      en: "*Milch* is feminine (*die*): *keine Milch*."
+      fa: "*Milch* اسم مؤنث (*die*) است: *keine Milch*."
+      de: "*Milch* hat den Artikel *die*: *keine Milch*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Sie hat ___ (kein) Fahrrad.
+    answers: [kein]
+    explanation:
+      en: "*Fahrrad* is neuter (*das*): *kein Fahrrad*, without an ending."
+      fa: "*Fahrrad* اسم خنثی (*das*) است: *kein Fahrrad*، بدون پایانه."
+      de: "*Fahrrad* hat den Artikel *das*: *kein Fahrrad*, ohne Endung."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Ich habe ___ (kein) Bruder.
+    answers: [keinen]
+    explanation:
+      en: "*Bruder* is masculine (*der*). After *haben* it is *keinen Bruder*."
+      fa: "*Bruder* اسم مذکر (*der*) است. پس از *haben* می‌شود *keinen Bruder*."
+      de: "*Bruder* hat den Artikel *der*. Nach *haben* heißt es *keinen Bruder*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Der Film ist ___ (nicht / kein) gut.
+    answers: [nicht]
+    explanation:
+      en: "*Gut* is an adjective, so it is negated with *nicht*."
+      fa: "*gut* صفت است، پس با *nicht* منفی می‌شود."
+      de: "*Gut* ist ein Adjektiv. Darum verneint man mit *nicht*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [ich, habe, keinen Hund]
+      - [keinen Hund, habe, ich]
+    explanation:
+      en: "The verb comes second; *keinen Hund* stands where *einen Hund* would stand."
+      fa: "فعل در جایگاه دوم می‌آید؛ *keinen Hund* همان جایی می‌نشیند که *einen Hund* می‌نشست."
+      de: "Das Verb steht auf Position 2. *Keinen Hund* steht da, wo sonst *einen Hund* steht."
+  - id: match-1
+    type: matching
+    answer:
+      - [Das ist ___ Problem., kein]
+      - [Das ist ___ Lampe., keine]
+      - [Ich habe ___ Hund., keinen]
+      - [Das ist ___ gut., nicht]
+    explanation:
+      en: "*Kein Problem* (*das*), *keine Lampe* (*die*), *keinen Hund* after *haben* (*der*), and *nicht* before the adjective *gut*."
+      fa: "*kein Problem* (*das*)، *keine Lampe* (*die*)، *keinen Hund* پس از *haben* (*der*)، و *nicht* پیش از صفت *gut*."
+      de: "*Kein Problem* (*das*), *keine Lampe* (*die*), *keinen Hund* nach *haben* (*der*) und *nicht* vor dem Adjektiv *gut*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: a1b5ee36edb116a9
