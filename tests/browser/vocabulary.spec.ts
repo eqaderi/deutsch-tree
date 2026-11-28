@@ -20,7 +20,7 @@ const GERMAN_QUESTION_OF = (place: number, total: number) => `Frage ${place} von
 const GERMAN_NEXT = 'Weiter'
 
 /** What a question into German asks of a learner who reads in English. */
-const INTO_GERMAN = 'Type the German word. A noun needs its article, if it takes one.'
+const INTO_GERMAN = 'Type the German word. A noun needs its article, if it takes one, and a reflexive verb its sich.'
 
 /** The word list on the page, one item per word. */
 const wordsOnPage = (page: Page) => page.getByRole('list', { name: 'Words' }).getByRole('listitem')

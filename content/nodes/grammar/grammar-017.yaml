@@ -4,10 +4,351 @@ kind: grammar
 level: A2
 chapter: a2-past
 order: 1
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-005, grammar-006, grammar-016]
 title:
   en: "*Perfekt* of separable, inseparable and *-ieren* verbs"
-  fa: "*Perfekt* فعل‌های جداشدنی، جدانشدنی و فعل‌های *-ieren*"
+  fa: "گذشتهٔ نقلی (*Perfekt*) فعل‌های جداشدنی، جدانشدنی و فعل‌های *-ieren*"
   de: "Perfekt von trennbaren Verben, untrennbaren Verben und Verben auf *-ieren*"
+
+explanations:
+  en:
+    rule: >
+      Three groups of verbs build their *Partizip II* in their own way. A
+      separable verb puts *ge-* between the prefix and the rest of the verb:
+      *anrufen*, *angerufen*; *einkaufen*, *eingekauft*. An inseparable verb
+      (*be-*, *ver-*, *er-*, *ent-*) takes no *ge-*: *verstehen*,
+      *verstanden*; *besuchen*, *besucht*. A verb in *-ieren* takes no *ge-*
+      either and always ends in *-t*: *telefonieren*, *telefoniert*. Whether
+      the participle ends in *-t* or *-en* comes from the simple verb (*rufen*,
+      *gerufen*, so *angerufen*), and verbs of movement or change still take
+      *sein*: *Ich bin früh aufgestanden.*
+  fa:
+    rule: >
+      سه گروه از فعل‌ها صفت مفعولی (*Partizip II*) را به شیوهٔ خود می‌سازند.
+      در فعل جداشدنی، *ge-* میان پیشوند و بقیهٔ فعل می‌آید: *anrufen*،
+      *angerufen*؛ *einkaufen*، *eingekauft*. فعل جدانشدنی (با پیشوند *be-*،
+      *ver-*، *er-* یا *ent-*) *ge-* نمی‌گیرد: *verstehen*، *verstanden*؛
+      *besuchen*، *besucht*. فعل‌هایی که به *-ieren* ختم می‌شوند نیز *ge-*
+      نمی‌گیرند و همیشه به *-t* ختم می‌شوند: *telefonieren*، *telefoniert*.
+      این‌که صفت مفعولی به *-t* ختم شود یا به *-en*، به فعل ساده بستگی دارد
+      (*rufen*، *gerufen*؛ پس *angerufen*). فعل‌های حرکت و تغییر در این‌جا هم
+      با *sein* می‌آیند: *Ich bin früh aufgestanden.*
+  de:
+    rule: >
+      Drei Gruppen von Verben bilden das Partizip II anders. Bei trennbaren
+      Verben steht *ge-* zwischen dem Präfix und dem Verb: *anrufen*,
+      *angerufen*; *einkaufen*, *eingekauft*. Untrennbare Verben (*be-*,
+      *ver-*, *er-*, *ent-*) haben kein *ge-*: *verstehen*, *verstanden*;
+      *besuchen*, *besucht*. Verben auf *-ieren* haben auch kein *ge-* und
+      enden immer auf *-t*: *telefonieren*, *telefoniert*. Ob das Partizip auf
+      *-t* oder *-en* endet, sagt das einfache Verb: *rufen*, *gerufen*, also
+      *angerufen*. Verben der Bewegung und der Veränderung haben wie immer
+      *sein*: *Ich bin früh aufgestanden.*
+
+table:
+  columns:
+    - { en: Kind of verb, fa: نوع فعل, de: Verbtyp }
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*Partizip II*", fa: "صفت مفعولی (*Partizip II*)", de: Partizip II }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [trennbar, anrufen, angerufen, Ich habe dich angerufen.]
+    - [trennbar, einkaufen, eingekauft, Wir haben eingekauft.]
+    - [trennbar, einladen, eingeladen, Sie hat uns eingeladen.]
+    - [trennbar, fernsehen, ferngesehen, Habt ihr ferngesehen?]
+    - [trennbar, aufstehen, aufgestanden, Er ist früh aufgestanden.]
+    - [untrennbar, besuchen, besucht, Ich habe Oma besucht.]
+    - [untrennbar, erzählen, erzählt, Sie hat viel erzählt.]
+    - [untrennbar, verstehen, verstanden, Hast du das verstanden?]
+    - [untrennbar, bekommen, bekommen, Er hat ein Paket bekommen.]
+    - [untrennbar, vergessen, vergessen, Ich habe es vergessen.]
+    - [auf -ieren, telefonieren, telefoniert, Wir haben telefoniert.]
+    - [auf -ieren, studieren, studiert, Sie hat in Wien studiert.]
+    - [auf -ieren, reparieren, repariert, Er hat das Rad repariert.]
+    - [auf -ieren, passieren, passiert, Was ist passiert?]
+
+examples:
+  - de: Ich habe dich gestern angerufen.
+    en: I called you yesterday.
+    fa: دیروز به تو زنگ زدم.
+  - de: Wir haben am Samstag im Supermarkt eingekauft.
+    en: We did our shopping at the supermarket on Saturday.
+    fa: شنبه در سوپرمارکت خرید کردیم.
+  - de: Heute bin ich sehr früh aufgestanden.
+    en: I got up very early today.
+    fa: امروز خیلی زود از خواب بلند شدم.
+  - de: Der Zug ist pünktlich angekommen.
+    en: The train arrived on time.
+    fa: قطار سر وقت رسید.
+  - de: Hast du die Frage verstanden?
+    en: Did you understand the question?
+    fa: پرسش را فهمیدی؟
+  - de: Letzte Woche haben wir unsere Großeltern besucht.
+    en: Last week we visited our grandparents.
+    fa: هفتهٔ پیش به دیدن پدربزرگ و مادربزرگمان رفتیم.
+  - de: Ich habe meinen Regenschirm im Bus vergessen.
+    en: I left my umbrella on the bus.
+    fa: چترم را در اتوبوس جا گذاشتم.
+  - de: Sie hat drei Jahre in Leipzig studiert.
+    en: She studied in Leipzig for three years.
+    fa: او سه سال در لایپزیگ درس خواند.
+  - de: Was ist passiert?
+    en: What happened?
+    fa: چه اتفاقی افتاد؟
+
+mistakes:
+  - wrong: Wir haben gestern geeinkauft.
+    right: Wir haben gestern eingekauft.
+    why:
+      en: "In a separable verb *ge-* goes between the prefix and the verb: *ein-ge-kauft*."
+      fa: "در فعل جداشدنی *ge-* میان پیشوند و فعل می‌آید: *ein-ge-kauft*."
+      de: "Bei trennbaren Verben steht *ge-* zwischen Präfix und Verb: *ein-ge-kauft*."
+  - wrong: Hast du das geverstanden?
+    right: Hast du das verstanden?
+    why:
+      en: "*Verstehen* is inseparable, so its *Partizip II* has no *ge-*: *verstanden*."
+      fa: "*verstehen* جدانشدنی است، پس صفت مفعولی آن *ge-* ندارد: *verstanden*."
+      de: "*Verstehen* ist untrennbar, das Partizip II hat kein *ge-*: *verstanden*."
+  - wrong: Wir haben lange getelefoniert.
+    right: Wir haben lange telefoniert.
+    why:
+      en: "A verb in *-ieren* takes no *ge-*: *telefoniert*."
+      fa: "فعل‌های *-ieren* *ge-* نمی‌گیرند: *telefoniert*."
+      de: "Verben auf *-ieren* haben kein *ge-*: *telefoniert*."
+  - wrong: Ich habe heute früh aufgestanden.
+    right: Ich bin heute früh aufgestanden.
+    why:
+      en: "*Aufstehen* is a change of position, so it takes *sein*: *ich bin aufgestanden*."
+      fa: "*aufstehen* تغییر حالت را نشان می‌دهد و با *sein* می‌آید: *ich bin aufgestanden*."
+      de: "*Aufstehen* ist eine Veränderung, deshalb mit *sein*: *ich bin aufgestanden*."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich habe dich gestern ___.
+    options: [angerufen, geanrufen, angeruft]
+    answer: angerufen
+    explanation:
+      en: "*Anrufen* is separable: *ge-* goes after *an-*, and *rufen* ends in *-en*: *angerufen*."
+      fa: "*anrufen* جداشدنی است: *ge-* پس از *an-* می‌آید و *rufen* به *-en* ختم می‌شود: *angerufen*."
+      de: "*Anrufen* ist trennbar: *ge-* steht nach *an-*, und *rufen* endet auf *-en*: *angerufen*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir haben am Samstag ___.
+    options: [eingekauft, geeinkauft, einkauft]
+    answer: eingekauft
+    explanation:
+      en: "*Einkaufen* is separable: *ein-ge-kauft*."
+      fa: "*einkaufen* جداشدنی است: *ein-ge-kauft*."
+      de: "*Einkaufen* ist trennbar: *ein-ge-kauft*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Hast du die Aufgabe ___?
+    options: [verstanden, geverstanden, verstandet]
+    answer: verstanden
+    explanation:
+      en: "*Verstehen* is inseparable: no *ge-*, and the irregular form *verstanden*."
+      fa: "*verstehen* جدانشدنی است: بدون *ge-* و با صورت بی‌قاعدهٔ *verstanden*."
+      de: "*Verstehen* ist untrennbar: kein *ge-*, unregelmäßig *verstanden*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Wir haben gestern lange ___.
+    options: [telefoniert, getelefoniert, telefonierten]
+    answer: telefoniert
+    explanation:
+      en: "A verb in *-ieren* takes no *ge-*: *telefoniert*."
+      fa: "فعل‌های *-ieren* *ge-* نمی‌گیرند: *telefoniert*."
+      de: "Verben auf *-ieren* haben kein *ge-*: *telefoniert*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Er hat zum Geburtstag ein Fahrrad ___.
+    options: [bekommen, gebekommen, bekommt]
+    answer: bekommen
+    explanation:
+      en: "*Bekommen* is inseparable: no *ge-*, so the *Partizip II* looks like the infinitive."
+      fa: "*bekommen* جدانشدنی است و *ge-* نمی‌گیرد؛ از این رو صفت مفعولی آن مانند مصدر است."
+      de: "*Bekommen* ist untrennbar, ohne *ge-*: Das Partizip II ist wie der Infinitiv."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Wann ___ du heute aufgestanden?
+    options: [bist, hast, ist]
+    answer: bist
+    explanation:
+      en: "*Aufstehen* takes *sein*, and with *du* the form is *bist*."
+      fa: "*aufstehen* با *sein* می‌آید و صورت آن با *du* می‌شود *bist*."
+      de: "*Aufstehen* hat *sein*, und bei *du* heißt es *bist*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Wer hat das Auto ___?
+    options: [repariert, gerepariert, reparierte]
+    answer: repariert
+    explanation:
+      en: "*Reparieren* ends in *-ieren*: no *ge-*, *repariert*."
+      fa: "*reparieren* به *-ieren* ختم می‌شود: بدون *ge-*، *repariert*."
+      de: "*Reparieren* endet auf *-ieren*: kein *ge-*, *repariert*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Meine Eltern haben uns zum Essen ___.
+    options: [eingeladen, geeinladen, eingeladet]
+    answer: eingeladen
+    explanation:
+      en: "*Einladen* is separable and irregular: *ein-ge-laden*."
+      fa: "*einladen* جداشدنی و بی‌قاعده است: *ein-ge-laden*."
+      de: "*Einladen* ist trennbar und unregelmäßig: *ein-ge-laden*."
+  - id: true-1
+    type: true-false
+    prompt: Ich habe meine Tante besucht.
+    answer: true
+    explanation:
+      en: "*Besuchen* is inseparable: *besucht*, without *ge-*. The sentence is correct."
+      fa: "*besuchen* جدانشدنی است: *besucht*، بدون *ge-*. جمله درست است."
+      de: "*Besuchen* ist untrennbar: *besucht*, ohne *ge-*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Sie hat in Berlin gestudiert.
+    answer: false
+    explanation:
+      en: "A verb in *-ieren* takes no *ge-*: *Sie hat in Berlin studiert.*"
+      fa: "فعل‌های *-ieren* *ge-* نمی‌گیرند: *Sie hat in Berlin studiert.*"
+      de: "Verben auf *-ieren* haben kein *ge-*: *Sie hat in Berlin studiert.*"
+  - id: true-3
+    type: true-false
+    prompt: Was ist gestern passiert?
+    answer: true
+    explanation:
+      en: "*Passieren* takes *sein* and no *ge-*: *ist passiert*. The sentence is correct."
+      fa: "*passieren* با *sein* می‌آید و *ge-* نمی‌گیرد: *ist passiert*. جمله درست است."
+      de: "*Passieren* hat *sein* und kein *ge-*: *ist passiert*. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Habt ihr gestern Abend ferngesehen?
+    answer: true
+    explanation:
+      en: "*Fernsehen* is separable: *fern-ge-sehen*. The sentence is correct."
+      fa: "*fernsehen* جداشدنی است: *fern-ge-sehen*. جمله درست است."
+      de: "*Fernsehen* ist trennbar: *fern-ge-sehen*. Der Satz ist richtig."
+  - id: error-1
+    type: find-error
+    prompt: Der Bus ist pünktlich angekommt.
+    answer: angekommt
+    explanation:
+      en: "*Kommen* is irregular, so *ankommen* has *-en*: *Der Bus ist pünktlich angekommen.*"
+      fa: "*kommen* بی‌قاعده است، پس *ankommen* هم به *-en* ختم می‌شود: *Der Bus ist pünktlich angekommen.*"
+      de: "*Kommen* ist unregelmäßig, also auch *ankommen*: *Der Bus ist pünktlich angekommen.*"
+  - id: error-2
+    type: find-error
+    prompt: Ich habe meinen Schlüssel gevergessen.
+    answer: gevergessen
+    explanation:
+      en: "*Vergessen* is inseparable: *Ich habe meinen Schlüssel vergessen.*"
+      fa: "*vergessen* جدانشدنی است: *Ich habe meinen Schlüssel vergessen.*"
+      de: "*Vergessen* ist untrennbar: *Ich habe meinen Schlüssel vergessen.*"
+  - id: error-3
+    type: find-error
+    prompt: Er hat uns eine lustige Geschichte geerzählt.
+    answer: geerzählt
+    explanation:
+      en: "*Erzählen* is inseparable: *Er hat uns eine lustige Geschichte erzählt.*"
+      fa: "*erzählen* جدانشدنی است: *Er hat uns eine lustige Geschichte erzählt.*"
+      de: "*Erzählen* ist untrennbar: *Er hat uns eine lustige Geschichte erzählt.*"
+  - id: error-4
+    type: find-error
+    prompt: Wir haben im Urlaub viel gefotografiert.
+    answer: gefotografiert
+    explanation:
+      en: "A verb in *-ieren* takes no *ge-*: *Wir haben im Urlaub viel fotografiert.*"
+      fa: "فعل‌های *-ieren* *ge-* نمی‌گیرند: *Wir haben im Urlaub viel fotografiert.*"
+      de: "Verben auf *-ieren* haben kein *ge-*: *Wir haben im Urlaub viel fotografiert.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Er hat mich gestern ___ (anrufen).
+    answers: [angerufen]
+    explanation:
+      en: "*Anrufen* is separable and *rufen* is irregular: *angerufen*."
+      fa: "*anrufen* جداشدنی است و *rufen* بی‌قاعده: *angerufen*."
+      de: "*Anrufen* ist trennbar, *rufen* ist unregelmäßig: *angerufen*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Wir haben die Wohnung ___ (aufräumen).
+    answers: [aufgeräumt]
+    explanation:
+      en: "*Aufräumen* is separable and regular: *auf-ge-räumt*."
+      fa: "*aufräumen* جداشدنی و باقاعده است: *auf-ge-räumt*."
+      de: "*Aufräumen* ist trennbar und regelmäßig: *auf-ge-räumt*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Hast du die Rechnung schon ___ (bezahlen)?
+    answers: [bezahlt]
+    explanation:
+      en: "*Bezahlen* is inseparable: no *ge-*, *bezahlt*."
+      fa: "*bezahlen* جدانشدنی است: بدون *ge-*، *bezahlt*."
+      de: "*Bezahlen* ist untrennbar: kein *ge-*, *bezahlt*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Sie hat zwei Stunden mit ihrer Schwester ___ (telefonieren).
+    answers: [telefoniert]
+    explanation:
+      en: "A verb in *-ieren* takes no *ge-*: *telefoniert*."
+      fa: "فعل‌های *-ieren* *ge-* نمی‌گیرند: *telefoniert*."
+      de: "Verben auf *-ieren* haben kein *ge-*: *telefoniert*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Der Kurs hat schon ___ (anfangen).
+    answers: [angefangen]
+    explanation:
+      en: "*Anfangen* is separable and irregular: *an-ge-fangen*."
+      fa: "*anfangen* جداشدنی و بی‌قاعده است: *an-ge-fangen*."
+      de: "*Anfangen* ist trennbar und unregelmäßig: *an-ge-fangen*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Partizip II: verstehen"
+    answers: [verstanden]
+    explanation:
+      en: "*Verstehen* is inseparable and irregular: *verstanden*."
+      fa: "*verstehen* جدانشدنی و بی‌قاعده است: *verstanden*."
+      de: "*Verstehen* ist untrennbar und unregelmäßig: *verstanden*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Partizip II: einladen"
+    answers: [eingeladen]
+    explanation:
+      en: "*Einladen* is separable and irregular: *eingeladen*."
+      fa: "*einladen* جداشدنی و بی‌قاعده است: *eingeladen*."
+      de: "*Einladen* ist trennbar und unregelmäßig: *eingeladen*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wann, bist, du, aufgestanden]
+    end: "?"
+    explanation:
+      en: "The question word comes first, *sein* second, and the *Partizip II* at the end."
+      fa: "واژهٔ پرسشی در آغاز، *sein* در جایگاه دوم و صفت مفعولی در پایان جمله می‌آید."
+      de: "Das Fragewort steht am Anfang, *sein* auf Position 2, das Partizip II am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [hat, der Film, schon, angefangen]
+    end: "?"
+    explanation:
+      en: "In a yes/no question *haben* comes first, and the whole *Partizip II* *angefangen* stays at the end."
+      fa: "در پرسش بله یا نه *haben* در آغاز می‌آید و صفت مفعولی *angefangen* کامل در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht *haben* am Anfang, das ganze Partizip II *angefangen* am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [anrufen, angerufen]
+      - [besuchen, besucht]
+      - [studieren, studiert]
+      - [aufstehen, aufgestanden]
+    explanation:
+      en: "Separable: *ge-* in the middle (*angerufen*, *aufgestanden*); inseparable and *-ieren*: no *ge-* (*besucht*, *studiert*)."
+      fa: "جداشدنی: *ge-* در میانه (*angerufen*، *aufgestanden*)؛ جدانشدنی و *-ieren*: بدون *ge-* (*besucht*، *studiert*)."
+      de: "Trennbar: *ge-* in der Mitte (*angerufen*, *aufgestanden*); untrennbar und *-ieren*: kein *ge-* (*besucht*, *studiert*)."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: 88cc614fe48cab1f

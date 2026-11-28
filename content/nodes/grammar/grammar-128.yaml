@@ -299,8 +299,8 @@ questions:
       de: "*Die* wird im Dativ zu *der*: *vor der Post*."
   - id: typed-gap-3
     type: typed-gap-fill
-    prompt: Die Bücher stehen ___ (in + das) Regal.
-    answers: [im, in dem]
+    prompt: Die Bücher stehen ___ (in / das Regal).
+    answers: [im Regal, in dem Regal, im, in dem]
     explanation:
       en: "*In* + *das Regal* in the *Dativ* is *in dem Regal*, almost always said as *im Regal*."
       fa: "*in* + *das Regal* در حالت *Dativ* می‌شود *in dem Regal* که تقریباً همیشه کوتاه می‌شود: *im Regal*."
@@ -367,6 +367,8 @@ questions:
       de: "Alles ist an einem Ort (*Wo?*). Darum Dativ: *dem Tisch*, *der Tür* und im Plural *den Autos*."
 
 review:
-  reviewer: an independent AI agent
-  date: 2026-11-26
-  pool: 3a0379dc8e91a8ff
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question again after the hints were rewritten, then the
+    rewritten gaps once more after their key was widened; not people)"
+  date: 2026-11-28
+  pool: 4dde714b0a115d20

@@ -4,10 +4,320 @@ kind: grammar
 level: A1
 chapter: a1-word-building
 order: 3
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-102]
 title:
   en: "Adjectives with *un-*, *-los*, *-bar*; colour compounds"
   fa: "صفت‌هایی با *un-*، *-los*، *-bar*؛ رنگ‌های مرکب"
   de: "Adjektive mit *un-*, *-los*, *-bar*; zusammengesetzte Farben"
+
+explanations:
+  en:
+    rule: >
+      A few small parts make new adjectives. *un-* in front gives the
+      opposite: *bekannt* → *unbekannt* (unknown). It goes with many
+      adjectives, but not with all: the opposite of *groß* is *klein*, never
+      *ungroß*. *-los* after a noun means "without": *die Kosten* →
+      *kostenlos* (free of charge), *die Arbeit* → *arbeitslos* (unemployed,
+      with a linking *-s-*). *-bar* after a verb stem means "can be done":
+      *erreichen* → *erreichbar* (can be reached), *trinken* → *trinkbar*. For
+      a light or dark colour, put *hell* or *dunkel* in front, as one word:
+      *hellblau*, *dunkelgrün*. After *sein* these adjectives have no ending,
+      like any other: *Das Museum ist kostenlos.*
+  fa:
+    rule: >
+      با چند جزء کوچک صفت تازه ساخته می‌شود. *un-* در آغاز صفت، مانند «نا» در
+      فارسی، معنای مخالف می‌سازد: *bekannt* (شناخته) و *unbekannt*
+      (ناشناخته). با بسیاری از صفت‌ها می‌آید، ولی نه با همه: مخالف *groß*،
+      *klein* است، هرگز *ungroß*. *-los* پس از اسم، مانند «بی» در فارسی، یعنی
+      «بدون»: *die Kosten* و *kostenlos* (رایگان)، *die Arbeit* و
+      *arbeitslos* (بیکار، با حرف میانجی *-s-*). *-bar* پس از بن فعل، مانند
+      «-پذیر» در فارسی، یعنی «شدنی»: *erreichen* و *erreichbar* (در دسترس)،
+      *trinken* و *trinkbar* (آشامیدنی). برای رنگ روشن یا تیره، *hell* یا
+      *dunkel* پیش از نام رنگ می‌آید و با آن یک‌جا نوشته می‌شود: *hellblau*
+      (آبی روشن)، *dunkelgrün* (سبز تیره). این صفت‌ها نیز مانند صفت‌های دیگر
+      پس از *sein* پایانه نمی‌گیرند: *Das Museum ist kostenlos.*
+  de:
+    rule: >
+      Mit kleinen Wortteilen macht man neue Adjektive. *un-* macht das
+      Gegenteil: *bekannt* – *unbekannt*. Das geht nicht bei jedem Adjektiv:
+      Das Gegenteil von *groß* ist *klein*, nicht *ungroß*. *-los* nach einem
+      Nomen heißt „ohne“: *kostenlos* = ohne Kosten, *arbeitslos* = ohne
+      Arbeit (mit *-s-*). *-bar* nach einem Verb heißt „man kann es machen“:
+      *erreichbar* = man kann die Person erreichen. Bei Farben steht *hell*
+      oder *dunkel* davor: *hellblau*, *dunkelgrün*. Man schreibt es als ein
+      Wort. Nach *sein* haben diese Adjektive keine Endung: *Das Museum ist
+      kostenlos.*
+
+table:
+  columns:
+    - { en: Part, fa: جزء, de: Wortteil }
+    - { en: Meaning, fa: معنا, de: Bedeutung }
+    - { en: From, fa: واژهٔ پایه, de: Aus }
+    - { en: New adjective, fa: صفت تازه, de: Neues Adjektiv }
+  rows:
+    - ["un-", "nicht …", bekannt, unbekannt]
+    - ["un-", "nicht …", freundlich, unfreundlich]
+    - ["un-", "nicht …", pünktlich, unpünktlich]
+    - ["un-", "nicht …", möglich, unmöglich]
+    - ["-los", "ohne …", die Kosten, kostenlos]
+    - ["-los", "ohne …", die Arbeit, arbeitslos (mit -s-)]
+    - ["-los", "ohne …", das Problem, problemlos]
+    - ["-bar", "man kann es …", erreichen, erreichbar]
+    - ["-bar", "man kann es …", trinken, trinkbar]
+    - ["-bar", "man kann es …", waschen, waschbar]
+    - ["hell-", helle Farbe, blau, hellblau]
+    - ["dunkel-", dunkle Farbe, grün, dunkelgrün]
+
+examples:
+  - de: Der Sänger ist noch unbekannt.
+    en: The singer is still unknown.
+    fa: این خواننده هنوز ناشناخته است.
+  - de: Der Kellner war sehr unfreundlich.
+    en: The waiter was very unfriendly.
+    fa: پیشخدمت خیلی بدبرخورد بود.
+  - de: Mein Bruder sucht Arbeit. Er ist arbeitslos.
+    en: My brother is looking for work. He is unemployed.
+    fa: برادرم دنبال کار است. او بیکار است.
+  - de: Für Kinder ist der Eintritt kostenlos.
+    en: Entry is free for children.
+    fa: ورود برای کودکان رایگان است.
+  - de: Ich bin ab acht Uhr erreichbar.
+    en: You can reach me from eight o'clock.
+    fa: از ساعت هشت در دسترسم.
+  - de: Das Wasser hier ist nicht trinkbar.
+    en: The water here is not drinkable.
+    fa: آب این‌جا آشامیدنی نیست.
+  - de: Meine neue Jacke ist dunkelblau.
+    en: My new jacket is dark blue.
+    fa: کاپشن تازه‌ام آبی تیره است.
+  - de: Die Wände im Bad sind hellgrün.
+    en: The walls in the bathroom are light green.
+    fa: دیوارهای حمام سبز روشن‌اند.
+  - de: Die Reise war ganz problemlos.
+    en: The journey went without any problems.
+    fa: سفر بی‌دردسر گذشت.
+
+mistakes:
+  - wrong: Sie ist arbeitlos.
+    right: Sie ist arbeitslos.
+    why:
+      en: "*arbeitslos* has a linking *-s-*: *Arbeit* + *s* + *los*."
+      fa: "*arbeitslos* حرف میانجی *-s-* دارد: *Arbeit* + *s* + *los*."
+      de: "In *arbeitslos* steht ein *-s-*: *Arbeit* + *s* + *los*."
+  - wrong: Das Zimmer ist ungroß.
+    right: Das Zimmer ist klein.
+    why:
+      en: "*un-* does not go with every adjective: the opposite of *groß* is *klein*."
+      fa: "*un-* با هر صفتی نمی‌آید: مخالف *groß*، *klein* است."
+      de: "*un-* geht nicht bei jedem Adjektiv. Das Gegenteil von *groß* ist *klein*."
+  - wrong: Die Jacke ist hell blau.
+    right: Die Jacke ist hellblau.
+    why:
+      en: "A colour with *hell* or *dunkel* is one word: *hellblau*."
+      fa: "رنگ با *hell* یا *dunkel* یک واژه است: *hellblau*."
+      de: "Eine Farbe mit *hell* oder *dunkel* ist ein Wort: *hellblau*."
+  - wrong: Ich bin heute nicht erreichen.
+    right: Ich bin heute nicht erreichbar.
+    why:
+      en: "After *sein* you need the adjective *erreichbar*, not the verb *erreichen*."
+      fa: "پس از *sein* صفت *erreichbar* لازم است، نه فعل *erreichen*."
+      de: "Nach *sein* braucht man das Adjektiv *erreichbar*, nicht das Verb *erreichen*."
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: Der Mann ist nicht freundlich. Er ist ___.
+    options: [unfreundlich, freundlichlos, freundlichbar]
+    answer: unfreundlich
+    explanation:
+      en: "*un-* gives the opposite: *unfreundlich*."
+      fa: "*un-* معنای مخالف می‌سازد: *unfreundlich*."
+      de: "*un-* macht das Gegenteil: *unfreundlich*."
+  - id: q2
+    type: gap-fill
+    prompt: Der Eintritt kostet nichts. Er ist ___.
+    options: [kostenlos, unkosten, kostenbar]
+    answer: kostenlos
+    explanation:
+      en: '*-los* means "without": *kostenlos*, without costs.'
+      fa: "*-los* یعنی «بدون»: *kostenlos*، بدون هزینه."
+      de: "*-los* heißt „ohne“: *kostenlos* = ohne Kosten."
+  - id: q3
+    type: gap-fill
+    prompt: Herr Klein hat keine Arbeit. Er ist ___.
+    options: [arbeitslos, unarbeit, arbeitbar]
+    answer: arbeitslos
+    explanation:
+      en: "Without work: *arbeitslos*, with a linking *-s-*."
+      fa: "بدون کار: *arbeitslos*، با حرف میانجی *-s-*."
+      de: "Ohne Arbeit: *arbeitslos*, mit *-s-*."
+  - id: q4
+    type: gap-fill
+    prompt: Rufen Sie mich am Abend an. Dann bin ich ___.
+    options: [erreichbar, unerreichbar, erreichlos]
+    answer: erreichbar
+    explanation:
+      en: "*erreichbar*: you can reach me; *unerreichbar* would mean you cannot."
+      fa: "*erreichbar* یعنی در دسترسم؛ *unerreichbar* یعنی در دسترس نیستم."
+      de: "*erreichbar*: Man kann mich erreichen. *unerreichbar* heißt das Gegenteil."
+  - id: q5
+    type: gap-fill
+    prompt: Das Wasser ist sauber. Man kann es trinken. Es ist ___.
+    options: [trinkbar, untrinkbar, trinklos]
+    answer: trinkbar
+    explanation:
+      en: '*-bar* means "can be done": you can drink it, so it is *trinkbar*.'
+      fa: "*-bar* یعنی «شدنی»: می‌شود آن را نوشید، پس *trinkbar* است."
+      de: "*-bar* heißt „man kann es machen“: Man kann es trinken, es ist *trinkbar*."
+  - id: q6
+    type: gap-fill
+    prompt: Das Problem ist nicht wichtig. Es ist ___.
+    options: [unwichtig, wichtiglos, wichtigbar]
+    answer: unwichtig
+    explanation:
+      en: "*un-* gives the opposite: *unwichtig*."
+      fa: "*un-* معنای مخالف می‌سازد: *unwichtig*."
+      de: "*un-* macht das Gegenteil: *unwichtig*."
+  - id: q7
+    type: gap-fill
+    prompt: Der Himmel ist blau, aber nicht dunkel. Er ist ___.
+    options: [hellblau, dunkelblau, unblau]
+    answer: hellblau
+    explanation:
+      en: "Light blue is *hellblau*, one word."
+      fa: "آبی روشن *hellblau* است، یک واژه."
+      de: "Ein helles Blau ist *hellblau*, ein Wort."
+  - id: q8
+    type: gap-fill
+    prompt: Die Tasche ist grün, fast schwarz. Sie ist ___.
+    options: [dunkelgrün, hellgrün, ungrün]
+    answer: dunkelgrün
+    explanation:
+      en: "Almost black is dark: *dunkelgrün*."
+      fa: "تقریباً سیاه یعنی تیره: *dunkelgrün*."
+      de: "Fast schwarz ist dunkel: *dunkelgrün*."
+  - id: q9
+    type: multiple-choice
+    prompt: "Der Film ist unbekannt. Das heißt:"
+    options: [Man kennt den Film nicht., Alle kennen den Film., Der Film ist sehr lang.]
+    answer: Man kennt den Film nicht.
+    explanation:
+      en: "*unbekannt* is the opposite of *bekannt*: people do not know it."
+      fa: "*unbekannt* مخالف *bekannt* است: مردم آن را نمی‌شناسند."
+      de: "*unbekannt* ist das Gegenteil von *bekannt*: Man kennt ihn nicht."
+  - id: q10
+    type: multiple-choice
+    prompt: "Der Zug ist oft unpünktlich. Das heißt:"
+    options: [Der Zug kommt oft nicht pünktlich., Der Zug kommt immer pünktlich., Der Zug fährt oft nicht.]
+    answer: Der Zug kommt oft nicht pünktlich.
+    explanation:
+      en: "*unpünktlich* means not on time."
+      fa: "*unpünktlich* یعنی سر وقت نیست."
+      de: "*unpünktlich* heißt: nicht pünktlich."
+  - id: q11
+    type: multiple-choice
+    prompt: "Das Parken ist hier kostenlos. Das heißt:"
+    options: [Man muss für das Parken nichts bezahlen., Das Parken ist hier sehr teuer., Hier darf man nicht parken.]
+    answer: Man muss für das Parken nichts bezahlen.
+    explanation:
+      en: "*kostenlos* means without costs: free of charge."
+      fa: "*kostenlos* یعنی بدون هزینه، رایگان."
+      de: "*kostenlos* heißt: ohne Kosten."
+  - id: q12
+    type: true-false
+    prompt: Die Hose ist hellgrau.
+    answer: true
+    explanation:
+      en: "*hell* + *grau* is one word: *hellgrau*. Right."
+      fa: "*hell* + *grau* یک واژه است: *hellgrau*. درست است."
+      de: "*hell* + *grau* ist ein Wort: *hellgrau*. Richtig."
+  - id: q13
+    type: true-false
+    prompt: Ich bin am Wochenende nicht erreichbar.
+    answer: true
+    explanation:
+      en: "*erreichbar* is an adjective, so it stands after *sein*. Right."
+      fa: "*erreichbar* صفت است و پس از *sein* می‌آید. درست است."
+      de: "*erreichbar* ist ein Adjektiv und steht nach *sein*. Richtig."
+  - id: q14
+    type: true-false
+    prompt: Die Wohnung ist ungroß.
+    answer: false
+    explanation:
+      en: "*un-* does not go with *groß*; say *Die Wohnung ist klein.*"
+      fa: "*un-* با *groß* نمی‌آید؛ درستش *Die Wohnung ist klein.* است."
+      de: "*un-* geht nicht mit *groß*. Richtig ist: *Die Wohnung ist klein.*"
+  - id: q15
+    type: true-false
+    prompt: Das Museum ist am Sonntag kostenlos.
+    answer: true
+    explanation:
+      en: "*kostenlos* after *sein*, without an ending. Right."
+      fa: "*kostenlos* پس از *sein*، بدون پایانه. درست است."
+      de: "*kostenlos* nach *sein*, ohne Endung. Richtig."
+  - id: q16
+    type: find-error
+    prompt: Herr Kaya ist seit März arbeitlos.
+    answer: arbeitlos
+    explanation:
+      en: "*arbeitslos* has a linking *-s-*."
+      fa: "*arbeitslos* حرف میانجی *-s-* دارد."
+      de: "In *arbeitslos* steht ein *-s-*."
+  - id: q17
+    type: matching
+    answer:
+      - [kostenlos, ohne Kosten]
+      - [unbekannt, nicht bekannt]
+      - [trinkbar, man kann es trinken]
+      - [arbeitslos, ohne Arbeit]
+    explanation:
+      en: "*un-* = not, *-los* = without, *-bar* = can be done."
+      fa: "*un-* یعنی «نه»، *-los* یعنی «بدون» و *-bar* یعنی «شدنی»."
+      de: "*un-* = nicht, *-los* = ohne, *-bar* = man kann es machen."
+  - id: q18
+    type: typed-gap-fill
+    prompt: nicht pünktlich = ___
+    answers: [unpünktlich]
+    explanation:
+      en: "*un-* + *pünktlich* = *unpünktlich*."
+      fa: "*un-* + *pünktlich* = *unpünktlich*."
+      de: "*un-* + *pünktlich* = *unpünktlich*."
+  - id: q19
+    type: typed-gap-fill
+    prompt: ohne Arbeit = ___
+    answers: [arbeitslos, erwerbslos, beschäftigungslos]
+    explanation:
+      en: "*Arbeit* + *s* + *-los* = *arbeitslos*."
+      fa: "*Arbeit* + *s* + *-los* = *arbeitslos*."
+      de: "*Arbeit* + *s* + *-los* = *arbeitslos*."
+  - id: q20
+    type: typed-gap-fill
+    prompt: Man kann die Jacke waschen. Sie ist ___.
+    answers: [waschbar]
+    explanation:
+      en: "The verb stem *wasch-* + *-bar* = *waschbar*: it can be washed."
+      fa: "بن فعل *wasch-* + *-bar* = *waschbar*: شستنی است."
+      de: "Der Stamm *wasch-* + *-bar* = *waschbar*: Man kann sie waschen."
+  - id: q21
+    type: typed-gap-fill
+    prompt: hell + grün = ___
+    answers: [hellgrün]
+    explanation:
+      en: "A colour with *hell* is one word, lower case: *hellgrün*."
+      fa: "رنگ با *hell* یک واژه است و با حرف کوچک نوشته می‌شود: *hellgrün*."
+      de: "Eine Farbe mit *hell* ist ein Wort, klein geschrieben: *hellgrün*."
+  - id: q22
+    type: typed-gap-fill
+    prompt: nicht möglich = ___
+    answers: [unmöglich]
+    explanation:
+      en: "*un-* + *möglich* = *unmöglich*."
+      fa: "*un-* + *möglich* = *unmöglich*."
+      de: "*un-* + *möglich* = *unmöglich*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 181b728bacc1c0b5

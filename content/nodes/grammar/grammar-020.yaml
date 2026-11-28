@@ -4,10 +4,333 @@ kind: grammar
 level: A2
 chapter: a2-past
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-017, grammar-018, grammar-019]
 title:
   en: "*Perfekt* vs *Präteritum* in use"
-  fa: "کاربرد *Perfekt* در برابر *Präteritum*"
+  fa: "کاربرد گذشتهٔ نقلی (*Perfekt*) و گذشتهٔ ساده (*Präteritum*)"
   de: "Perfekt oder Präteritum: Was benutzt man wann?"
+
+explanations:
+  en:
+    rule: >
+      The *Perfekt* and the *Präteritum* both tell the past; the difference is
+      where each is used. When you speak, or write a message or a personal
+      letter, most verbs take the *Perfekt*: *Ich habe gearbeitet.* A written
+      story or report, such as a book or a newspaper article, mostly uses the
+      *Präteritum*: *Am Abend ging sie nach Hause.* *Sein*, *haben*, the modal
+      verbs and *es gab* are the exception: they take the *Präteritum* in
+      speech too: *Gestern war ich müde, aber ich habe gearbeitet.* The
+      *Perfekt* of a modal verb with a second verb ends in two infinitives
+      (*Er hat lange warten müssen.*). You only need to understand it; say
+      *Er musste lange warten.*
+  fa:
+    rule: >
+      گذشتهٔ نقلی (*Perfekt*) و گذشتهٔ ساده (*Präteritum*) هر دو از گذشته
+      سخن می‌گویند؛ تفاوتشان در جای کاربرد است. در گفتار، در پیام کوتاه و در
+      نامهٔ شخصی، بیشتر فعل‌ها به صورت گذشتهٔ نقلی می‌آیند: *Ich habe
+      gearbeitet.* در داستان یا گزارش نوشته‌شده، مانند کتاب یا مقالهٔ روزنامه،
+      بیشتر گذشتهٔ ساده به کار می‌رود: *Am Abend ging sie nach Hause.* فعل‌های
+      *sein* و *haben*، فعل‌های وجهی و *es gab* استثنا هستند و در گفتار هم
+      به صورت گذشتهٔ ساده می‌آیند: *Gestern war ich müde, aber ich habe
+      gearbeitet.* گذشتهٔ نقلی فعل وجهی همراه با فعلی دیگر با دو مصدر پایان
+      می‌یابد (*Er hat lange warten müssen.*). کافی است این ساخت را بفهمید؛
+      خودتان بگویید *Er musste lange warten.*
+  de:
+    rule: >
+      Perfekt und Präteritum sind beide Vergangenheit. Der Unterschied ist,
+      wo man sie benutzt. Beim Sprechen, in einer Nachricht oder in einem
+      persönlichen Brief benutzt man bei den meisten Verben das Perfekt: *Ich
+      habe gearbeitet.* In einer Geschichte oder einem Bericht, zum Beispiel in
+      einem Buch oder in der Zeitung, steht meistens das Präteritum: *Am Abend
+      ging sie nach Hause.* *Sein*, *haben*, die Modalverben und *es gab* sind
+      anders: Man benutzt sie auch beim Sprechen im Präteritum: *Gestern war
+      ich müde, aber ich habe gearbeitet.* Das Perfekt eines Modalverbs mit
+      einem zweiten Verb hat am Ende zwei Infinitive: *Er hat lange warten
+      müssen.* Das müssen Sie nur verstehen. Sagen Sie: *Er musste lange
+      warten.*
+
+table:
+  columns:
+    - { en: Verb, fa: فعل, de: Verb }
+    - { en: When you speak, fa: در گفتار, de: Beim Sprechen }
+    - { en: In a story or report, fa: در داستان یا گزارش, de: In Geschichte und Bericht }
+  rows:
+    - [sein, ich war, ich war]
+    - [haben, ich hatte, ich hatte]
+    - [können, ich konnte, ich konnte]
+    - [müssen, ich musste, ich musste]
+    - [es gibt, es gab, es gab]
+    - [arbeiten, ich habe gearbeitet, ich arbeitete]
+    - [gehen, ich bin gegangen, ich ging]
+    - [kommen, ich bin gekommen, ich kam]
+    - [sagen, ich habe gesagt, ich sagte]
+
+examples:
+  - de: Gestern war ich müde, aber ich habe gearbeitet.
+    en: I was tired yesterday, but I worked.
+    fa: دیروز خسته بودم، اما کار کردم.
+  - de: Ich konnte nicht kommen, weil ich krank war.
+    en: I couldn't come because I was ill.
+    fa: نتوانستم بیایم، چون بیمار بودم.
+  - de: Am Wochenende haben wir Pizza gegessen und einen Film gesehen.
+    en: At the weekend we ate pizza and watched a film.
+    fa: آخر هفته پیتزا خوردیم و فیلم دیدیم.
+  - de: Leider musste ich lange auf den Bus warten.
+    en: Unfortunately I had to wait a long time for the bus.
+    fa: متأسفانه مجبور شدم مدت زیادی منتظر اتوبوس بمانم.
+  - de: Hast du gut geschlafen?
+    en: Did you sleep well?
+    fa: خوب خوابیدی؟
+  - de: Am Abend kam der Zug in Hamburg an. Anna ging sofort ins Hotel.
+    en: In the evening the train arrived in Hamburg. Anna went straight to the hotel.
+    fa: عصر قطار به هامبورگ رسید. آنا بی‌درنگ به هتل رفت.
+  - de: Gestern gab es auf der Autobahn einen langen Stau.
+    en: Yesterday there was a long traffic jam on the motorway.
+    fa: دیروز در بزرگراه راه‌بندان طولانی‌ای بود.
+  - de: Er hat lange warten müssen.
+    en: He had to wait a long time.
+    fa: او مجبور شد مدت زیادی منتظر بماند.
+
+mistakes:
+  - wrong: Ich habe gestern nicht kommen gekonnt.
+    right: Ich konnte gestern nicht kommen.
+    why:
+      en: "A modal verb with a second verb has no *gekonnt*. Use the *Präteritum*: *ich konnte*."
+      fa: "فعل وجهی همراه با فعلی دیگر صورت *gekonnt* ندارد. گذشتهٔ ساده را به کار ببرید: *ich konnte*."
+      de: "Ein Modalverb mit einem zweiten Verb hat kein *gekonnt*. Sagen Sie das Präteritum: *ich konnte*."
+  - wrong: Gestern ich hatte keine Zeit.
+    right: Gestern hatte ich keine Zeit.
+    why:
+      en: "The verb stays in position 2, in the *Präteritum* too: *Gestern hatte ich …*"
+      fa: "در گذشتهٔ ساده هم فعل در جایگاه دوم می‌ماند: *Gestern hatte ich …*"
+      de: "Auch im Präteritum steht das Verb auf Position 2: *Gestern hatte ich …*"
+  - wrong: Ich war gestern ins Kino gegangen.
+    right: Ich bin gestern ins Kino gegangen.
+    why:
+      en: "The *Perfekt* takes the present of *sein* or *haben*. *War … gegangen* is the *Plusquamperfekt*, an earlier past."
+      fa: "گذشتهٔ نقلی با زمان حال *sein* یا *haben* ساخته می‌شود. *war … gegangen* گذشتهٔ بعید (*Plusquamperfekt*) است."
+      de: "Das Perfekt hat *sein* oder *haben* im Präsens. *War … gegangen* ist Plusquamperfekt."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Gestern ___ ich müde, aber ich habe gearbeitet.
+    options: [war, bin, habe]
+    answer: war
+    explanation:
+      en: "*Sein* takes the *Präteritum* in speech too: *ich war*."
+      fa: "*sein* در گفتار هم به صورت گذشتهٔ ساده می‌آید: *ich war*."
+      de: "*Sein* steht auch beim Sprechen im Präteritum: *ich war*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Ich ___ gestern keine Zeit.
+    options: [hatte, habe, hat]
+    answer: hatte
+    explanation:
+      en: "*Gestern* asks for the past, and *haben* takes the *Präteritum*: *ich hatte*."
+      fa: "*gestern* گذشته را می‌خواهد و *haben* به صورت گذشتهٔ ساده می‌آید: *ich hatte*."
+      de: "*Gestern* ist Vergangenheit, und *haben* steht im Präteritum: *ich hatte*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Was ___ du am Wochenende gemacht?
+    options: [hast, bist, warst]
+    answer: hast
+    explanation:
+      en: "*Machen* forms the *Perfekt* with *haben*: *Was hast du gemacht?*"
+      fa: "*machen* گذشتهٔ نقلی را با *haben* می‌سازد: *Was hast du gemacht?*"
+      de: "*Machen* bildet das Perfekt mit *haben*: *Was hast du gemacht?*"
+  - id: gap-4
+    type: gap-fill
+    prompt: Leider ___ ich nicht kommen.
+    options: [konnte, habe, bin]
+    answer: konnte
+    explanation:
+      en: "A modal verb with a second verb is said in the *Präteritum*: *ich konnte … kommen*."
+      fa: "فعل وجهی همراه با فعلی دیگر به صورت گذشتهٔ ساده می‌آید: *ich konnte … kommen*."
+      de: "Ein Modalverb mit einem zweiten Verb sagt man im Präteritum: *ich konnte … kommen*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Im Gespräch sagt man meistens:"
+    options:
+      - Ich habe gestern Fußball gespielt.
+      - Ich spielte gestern Fußball.
+      - Ich hatte gestern Fußball gespielt.
+    answer: Ich habe gestern Fußball gespielt.
+    explanation:
+      en: "In speech most verbs take the *Perfekt*. *Hatte … gespielt* is the *Plusquamperfekt*."
+      fa: "در گفتار بیشتر فعل‌ها به صورت گذشتهٔ نقلی می‌آیند. *hatte … gespielt* گذشتهٔ بعید است."
+      de: "Beim Sprechen benutzt man bei den meisten Verben das Perfekt. *Hatte … gespielt* ist Plusquamperfekt."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "In einem Märchen steht:"
+    options:
+      - Die Prinzessin ging in den Wald.
+      - Die Prinzessin gehte in den Wald.
+      - Die Prinzessin geht gestern in den Wald.
+    answer: Die Prinzessin ging in den Wald.
+    explanation:
+      en: "A written story uses the *Präteritum*, and *gehen* is irregular: *ging*."
+      fa: "در داستان نوشته‌شده گذشتهٔ ساده به کار می‌رود و *gehen* بی‌قاعده است: *ging*."
+      de: "In einer Geschichte steht das Präteritum, und *gehen* ist unregelmäßig: *ging*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Er hat lange warten müssen. Das heißt:"
+    options:
+      - Er musste lange warten.
+      - Er muss lange warten.
+      - Er wollte lange warten.
+    answer: Er musste lange warten.
+    explanation:
+      en: "*Hat … warten müssen* is the *Perfekt* of *müssen*: it means the same as *Er musste lange warten.*"
+      fa: "*hat … warten müssen* گذشتهٔ نقلی *müssen* است و همان معنای *Er musste lange warten.* را دارد."
+      de: "*Hat … warten müssen* ist das Perfekt von *müssen*. Es bedeutet: *Er musste lange warten.*"
+  - id: choice-4
+    type: multiple-choice
+    prompt: Gestern ___ ich krank.
+    options: [war, habe, bin gewesen]
+    answer: war
+    explanation:
+      en: "*Sein* is said in the *Präteritum*: *Gestern war ich krank.* *Bin gewesen* would need its two parts apart: *Ich bin gestern krank gewesen.*"
+      fa: "*sein* به صورت گذشتهٔ ساده می‌آید: *Gestern war ich krank.* *bin gewesen* باید دو بخش شود: *Ich bin gestern krank gewesen.*"
+      de: "*Sein* sagt man im Präteritum: *Gestern war ich krank.* *Bin gewesen* steht getrennt: *Ich bin gestern krank gewesen.*"
+  - id: true-1
+    type: true-false
+    prompt: Er hat lange warten müssen.
+    answer: true
+    explanation:
+      en: "This is the *Perfekt* of a modal verb: two infinitives at the end. The sentence is correct."
+      fa: "این گذشتهٔ نقلی یک فعل وجهی است: دو مصدر در پایان جمله. جمله درست است."
+      de: "Das ist das Perfekt eines Modalverbs: zwei Infinitive am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich habe gestern nicht kommen gekonnt.
+    answer: false
+    explanation:
+      en: "There is no *gekonnt* with a second verb: *Ich konnte gestern nicht kommen.*"
+      fa: "همراه با فعلی دیگر صورت *gekonnt* وجود ندارد: *Ich konnte gestern nicht kommen.*"
+      de: "Mit einem zweiten Verb gibt es kein *gekonnt*: *Ich konnte gestern nicht kommen.*"
+  - id: true-3
+    type: true-false
+    prompt: Wir hatten keine Zeit, aber wir haben dir geholfen.
+    answer: true
+    explanation:
+      en: "*Haben* in the *Präteritum*, *helfen* in the *Perfekt*, as people speak. The sentence is correct."
+      fa: "*haben* به صورت گذشتهٔ ساده و *helfen* به صورت گذشتهٔ نقلی، همان‌گونه که در گفتار رایج است. جمله درست است."
+      de: "*Haben* im Präteritum, *helfen* im Perfekt, wie man spricht. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Wir haben gestern sehr müde gewesen.
+    answer: false
+    explanation:
+      en: "*Sein* takes *sein* in the *Perfekt*, and in speech it is usually the *Präteritum*: *Wir waren gestern sehr müde.*"
+      fa: "گذشتهٔ نقلی *sein* با *sein* ساخته می‌شود و در گفتار معمولاً گذشتهٔ ساده به کار می‌رود: *Wir waren gestern sehr müde.*"
+      de: "*Sein* hat im Perfekt *sein*, und meistens sagt man das Präteritum: *Wir waren gestern sehr müde.*"
+  - id: error-1
+    type: find-error
+    prompt: Ich habe gestern arbeiten gemusst.
+    answer: gemusst
+    explanation:
+      en: "With a second verb the *Perfekt* has two infinitives: *Ich habe gestern arbeiten müssen.* In speech say *Ich musste gestern arbeiten.*"
+      fa: "گذشتهٔ نقلی همراه با فعلی دیگر دو مصدر دارد: *Ich habe gestern arbeiten müssen.* در گفتار بگویید *Ich musste gestern arbeiten.*"
+      de: "Mit einem zweiten Verb hat das Perfekt zwei Infinitive: *Ich habe gestern arbeiten müssen.* Sagen Sie: *Ich musste gestern arbeiten.*"
+  - id: error-2
+    type: find-error
+    prompt: Letzte Woche habe ich krank.
+    answer: habe
+    explanation:
+      en: "Being ill is *sein*, here in the *Präteritum*: *Letzte Woche war ich krank.*"
+      fa: "برای بیمار بودن فعل *sein* لازم است، این‌جا به صورت گذشتهٔ ساده: *Letzte Woche war ich krank.*"
+      de: "Krank sein: Hier steht *sein* im Präteritum: *Letzte Woche war ich krank.*"
+  - id: error-3
+    type: find-error
+    prompt: Wir sind am Wochenende viel Spaß gehabt.
+    answer: sind
+    explanation:
+      en: "*Haben* forms its *Perfekt* with *haben*: *Wir haben am Wochenende viel Spaß gehabt.* Usually people say *Wir hatten viel Spaß.*"
+      fa: "*haben* گذشتهٔ نقلی را با *haben* می‌سازد: *Wir haben am Wochenende viel Spaß gehabt.* معمولاً می‌گویند *Wir hatten viel Spaß.*"
+      de: "*Haben* bildet das Perfekt mit *haben*: *Wir haben am Wochenende viel Spaß gehabt.* Meistens sagt man: *Wir hatten viel Spaß.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Gestern ___ ich keine Zeit (haben).
+    answers: [hatte]
+    explanation:
+      en: "*Haben* takes the *Präteritum*, also in speech: *ich hatte*."
+      fa: "*haben* در گفتار هم به صورت گذشتهٔ ساده می‌آید: *ich hatte*."
+      de: "*Haben* steht auch beim Sprechen im Präteritum: *ich hatte*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Am Montag ___ wir leider nicht kommen (können).
+    answers: [konnten]
+    explanation:
+      en: "A modal verb takes the *Präteritum*: *wir konnten*."
+      fa: "فعل وجهی به صورت گذشتهٔ ساده می‌آید: *wir konnten*."
+      de: "Ein Modalverb steht im Präteritum: *wir konnten*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Gestern ___ es keine Brötchen mehr (geben).
+    answers: [gab]
+    explanation:
+      en: "*Es gab* is the usual past of *es gibt*, also in speech."
+      fa: "*es gab* صورت معمول گذشتهٔ *es gibt* است، در گفتار هم."
+      de: "*Es gab* ist die normale Vergangenheit von *es gibt*, auch beim Sprechen."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Ich ___ gestern lange warten (müssen).
+    answers: [musste]
+    explanation:
+      en: "A modal verb takes the *Präteritum*: *ich musste*."
+      fa: "فعل وجهی به صورت گذشتهٔ ساده می‌آید: *ich musste*."
+      de: "Ein Modalverb steht im Präteritum: *ich musste*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Perfekt: ich ging"
+    answers: [ich bin gegangen]
+    explanation:
+      en: "In speech say the *Perfekt*: *ich bin gegangen*, with *sein*."
+      fa: "در گفتار گذشتهٔ نقلی را به کار ببرید: *ich bin gegangen*، با *sein*."
+      de: "Beim Sprechen sagt man das Perfekt: *ich bin gegangen*, mit *sein*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Perfekt: er sagte"
+    answers: [er hat gesagt]
+    explanation:
+      en: "In speech say the *Perfekt*: *er hat gesagt*."
+      fa: "در گفتار گذشتهٔ نقلی را به کار ببرید: *er hat gesagt*."
+      de: "Beim Sprechen sagt man das Perfekt: *er hat gesagt*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [warum, konntest, du, nicht, kommen]
+    end: "?"
+    explanation:
+      en: "The question word comes first, *konntest* second, and the infinitive at the end."
+      fa: "واژهٔ پرسشی در آغاز، *konntest* در جایگاه دوم و مصدر در پایان جمله می‌آید."
+      de: "Das Fragewort steht am Anfang, *konntest* auf Position 2, der Infinitiv am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [was, hast, du, am Wochenende, gemacht]
+    end: "?"
+    explanation:
+      en: "The question word comes first, *hast* second, and the *Partizip II* at the end."
+      fa: "واژهٔ پرسشی در آغاز، *hast* در جایگاه دوم و صفت مفعولی در پایان جمله می‌آید."
+      de: "Das Fragewort steht am Anfang, *hast* auf Position 2, das Partizip II am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [ich ging, ich bin gegangen]
+      - [ich kam, ich bin gekommen]
+      - [ich sagte, ich habe gesagt]
+      - [ich arbeitete, ich habe gearbeitet]
+    explanation:
+      en: "Each *Präteritum* with its *Perfekt*: the first is usual in writing, the second in speech."
+      fa: "هر گذشتهٔ ساده با گذشتهٔ نقلی آن: اولی در نوشتار رایج است و دومی در گفتار."
+      de: "Jedes Präteritum mit seinem Perfekt: das erste schreibt man meistens, das zweite sagt man."
+
+review:
+  reviewer: an independent AI agent (Claude Opus 5.5 subagent, blind pass on the
+    review sheet only; not a person)
+  date: 2026-11-28
+  pool: cda98abc8f254afa

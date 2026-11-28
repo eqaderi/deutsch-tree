@@ -9,7 +9,7 @@ recogniseOnly: false
 prerequisites: [grammar-001]
 title:
   en: "*Personalpronomen*, *Nominativ*"
-  fa: "ضمیرهای شخصی در *Nominativ*"
+  fa: "ضمیرهای شخصی در حالت *Nominativ*"
   de: "Personalpronomen im Nominativ"
 
 explanations:
