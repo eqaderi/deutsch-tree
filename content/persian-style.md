@@ -95,6 +95,7 @@ its first mention in a node.
 | Dativ | Dativ | حالت *Dativ* (حالت مفعول باواسطه) |
 | Genitiv | Genitiv | حالت *Genitiv* (حالت ملکی) |
 | subject / object | Subjekt / Objekt | فاعل / مفعول |
+| direct / indirect object | direktes / indirektes Objekt | مفعول مستقیم / مفعول باواسطه |
 | pronoun; personal, possessive, reflexive, relative | Pronomen | ضمیر؛ شخصی، ملکی، انعکاسی، موصولی |
 | possessive article (*mein*) | Possessivartikel | حرف تعریف ملکی |
 | demonstrative article (*dieser*) | Demonstrativartikel | حرف تعریف اشاره |
