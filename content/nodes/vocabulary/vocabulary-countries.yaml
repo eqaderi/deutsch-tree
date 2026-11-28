@@ -6,7 +6,7 @@ kind: vocabulary
 level: A1
 chapter: a1-words-people
 order: 5
-status: coming-soon
+status: published
 title:
   en: "Countries and where you live"
   fa: "کشورها و محل زندگی"
@@ -248,3 +248,8 @@ words:
       en: I live in a small town near Munich.
       fa: در شهر کوچکی نزدیک مونیخ زندگی می‌کنم.
     alsoAccepted: [die Stelle, der Platz, die Ortschaft]
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 2f2e1c1b56700919
