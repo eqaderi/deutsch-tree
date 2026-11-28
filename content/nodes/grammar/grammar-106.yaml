@@ -1,13 +1,321 @@
-# Grammar list row 106.
+# Grammar list row 106. The file format is described in content/README.md.
+# Dates (am dritten Mai) are taught in grammar-192; here the ordinals as a
+# whole. The spoken German writes them in words: the voice reads "3." in
+# "im 3. Stock" as "drei".
 id: grammar-106
 kind: grammar
 level: A1
 chapter: a1-adjectives
 order: 5
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-190, grammar-192]
 title:
   en: "Ordinal numbers"
   fa: "عددهای ترتیبی"
   de: "Ordinalzahlen"
+
+explanations:
+  en:
+    rule: >
+      An ordinal number gives the place in a row: *der erste Tag* (the first
+      day). Up to 19 add *-te* to the number: *zweite*, *vierte*, *zehnte*.
+      Four are irregular: *erste* (1st), *dritte* (3rd), *siebte* (7th) and
+      *achte* (8th, with one *t*). From 20 on add *-ste*: *zwanzigste*,
+      *einundzwanzigste*. In writing it is the number with a point: *der 3.
+      Mai*. Like an adjective before a noun it has an ending: *-e* after
+      *der*, *die* and *das* in the *Nominativ* (*die zweite Straße*), and
+      *-en* after *am*, *im*, *zum* and the other *Dativ* forms, after *den*
+      and in the plural (*im dritten Stock*, *die ersten Tage*).
+  fa:
+    rule: >
+      عدد ترتیبی جای چیزی را در یک ردیف نشان می‌دهد: *der erste Tag* (روز
+      اول). همان‌طور که در فارسی به عدد «ـم» افزوده می‌شود («دوم»، «چهارم»)،
+      در آلمانی تا ۱۹ به عدد *-te* افزوده می‌شود: *zweite*، *vierte*،
+      *zehnte*. چهار عدد بی‌قاعده‌اند: *erste* (اول)، *dritte* (سوم)، *siebte*
+      (هفتم) و *achte* (هشتم، با یک *t*). از ۲۰ به بعد *-ste* افزوده می‌شود:
+      *zwanzigste*، *einundzwanzigste*. در نوشتن، عدد با یک نقطه می‌آید: *der
+      3. Mai*. عدد ترتیبی مانند صفتِ پیش از اسم پایانه می‌گیرد: پس از *der*،
+      *die* و *das* در حالت *Nominativ* (حالت فاعلی) *-e* (*die zweite
+      Straße*)، و پس از *am*، *im*، *zum* و دیگر صورت‌های حالت *Dativ*، پس از
+      *den* و در جمع *-en* (*im dritten Stock*، *die ersten Tage*).
+  de:
+    rule: >
+      Eine Ordinalzahl sagt, an welcher Stelle etwas steht: *der erste Tag*.
+      Bis 19 kommt *-te* an die Zahl: *zweite*, *vierte*, *zehnte*. Besonders
+      sind *erste* (1.), *dritte* (3.), *siebte* (7.) und *achte* (8., nur ein
+      *t*). Ab 20 kommt *-ste* dazu: *zwanzigste*, *einundzwanzigste*.
+      Geschrieben ist es die Zahl mit Punkt: *der 3. Mai*. Wie ein Adjektiv
+      vor einem Nomen hat sie eine Endung: *-e* nach *der*, *die* und *das* im
+      Nominativ (*die zweite Straße*), *-en* nach *am*, *im*, *zum* und den
+      anderen Formen im Dativ, nach *den* und im Plural (*im dritten Stock*,
+      *die ersten Tage*).
+
+# The article-change table: Nominativ and Dativ for der, die, das and the
+# plural, then three more rows for the forms 7, 8 and 20. The ordinals do not
+# go with ein at A1, so there is no column for it.
+table:
+  columns:
+    - { en: "*Nominativ*", fa: "حالت *Nominativ*", de: Nominativ }
+    - { en: "*Dativ*", fa: "حالت *Dativ*", de: Dativ }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [der erste Tag (1.), am ersten Tag, Am ersten Tag ist alles neu.]
+    - [die zweite Straße (2.), in der zweiten Straße, Die Bank ist in der zweiten Straße rechts.]
+    - [das dritte Mal (3.), zum dritten Mal, Ich bin zum dritten Mal hier.]
+    - [die ersten Wochen (Plural), in den ersten Wochen, In den ersten Wochen lerne ich viel.]
+    - [der siebte Stock (7.), im siebten Stock, Wir wohnen im siebten Stock.]
+    - [der achte Monat (8.), im achten Monat, Der August ist der achte Monat.]
+    - [der zwanzigste Mai (20.), am zwanzigsten Mai, Ich habe am zwanzigsten Mai Geburtstag.]
+
+examples:
+  - de: Heute ist der erste Februar.
+    en: Today is the first of February.
+    fa: امروز اول فوریه است.
+  - de: Wir wohnen im dritten Stock.
+    en: We live on the third floor.
+    fa: ما در طبقهٔ سوم زندگی می‌کنیم.
+  - de: Die Apotheke ist in der zweiten Straße rechts.
+    en: The chemist's is in the second street on the right.
+    fa: داروخانه در خیابان دوم سمت راست است.
+  - de: Ich bin zum ersten Mal in Deutschland.
+    en: I am in Germany for the first time.
+    fa: اولین بار است که در آلمان هستم.
+  - de: Mein Sohn ist in der vierten Klasse.
+    en: My son is in fourth grade.
+    fa: پسرم کلاس چهارم است.
+  - de: Ich nehme den ersten Zug um sechs Uhr.
+    en: I'm taking the first train at six o'clock.
+    fa: قطار اول ساعت شش را می‌گیرم.
+  - de: Die ersten Tage im Kurs sind schwer.
+    en: The first days of the course are hard.
+    fa: روزهای اول دوره سخت است.
+  - de: Der Januar ist der erste Monat im Jahr.
+    en: January is the first month of the year.
+    fa: ژانویه ماه اول سال است.
+  - de: Der Wievielte ist heute? – Heute ist der siebte Mai.
+    en: What's the date today? – Today is the seventh of May.
+    fa: امروز چندم است؟ – امروز هفتم مه است.
+  - de: Der Kurs beginnt am zwölften März.
+    en: The course starts on the twelfth of March.
+    fa: دوره دوازدهم مارس شروع می‌شود.
+
+mistakes:
+  - wrong: Heute ist der dreite Mai.
+    right: Heute ist der dritte Mai.
+    why:
+      en: "*Drei* gives the irregular *dritte*."
+      fa: "عدد ترتیبیِ *drei* بی‌قاعده است: *dritte*."
+      de: "Von *drei* heißt die Ordinalzahl *dritte*."
+  - wrong: Heute ist der einste Juni.
+    right: Heute ist der erste Juni.
+    why:
+      en: "*Eins* gives the irregular *erste*."
+      fa: "عدد ترتیبیِ *eins* بی‌قاعده است: *erste*."
+      de: "Von *eins* heißt die Ordinalzahl *erste*."
+  - wrong: Der August ist der achtte Monat.
+    right: Der August ist der achte Monat.
+    why:
+      en: "*Acht* already ends in *t*, so only *-e* is added: *achte*."
+      fa: "*acht* خودش به *t* ختم می‌شود، پس فقط *-e* افزوده می‌شود: *achte*."
+      de: "*Acht* endet schon auf *t*. Darum kommt nur *-e* dazu: *achte*."
+  - wrong: Heute ist der zwanzigte Mai.
+    right: Heute ist der zwanzigste Mai.
+    why:
+      en: "From 20 on the ending is *-ste*: *zwanzigste*."
+      fa: "از ۲۰ به بعد *-ste* افزوده می‌شود: *zwanzigste*."
+      de: "Ab 20 kommt *-ste* dazu: *zwanzigste*."
+  - wrong: Ich bin zum erste Mal hier.
+    right: Ich bin zum ersten Mal hier.
+    why:
+      en: "After *zum* (*zu dem*, a *Dativ*) the ending is *-en*: *zum ersten Mal*."
+      fa: "پس از *zum* (کوتاه‌شدهٔ *zu dem*، حالت *Dativ*) پایانه *-en* است: *zum ersten Mal*."
+      de: "Nach *zum* (*zu dem*, Dativ) ist die Endung *-en*: *zum ersten Mal*."
+
+# 21 questions.
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Heute ist der ___ März.
+    options: [dritte, dreite, dreiste]
+    answer: dritte
+    explanation:
+      en: "*Drei* gives the irregular *dritte*."
+      fa: "عدد ترتیبیِ *drei* بی‌قاعده است: *dritte*."
+      de: "Von *drei* heißt die Ordinalzahl *dritte*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir wohnen im ___ Stock.
+    options: [zweiten, zweite, zweiter]
+    answer: zweiten
+    explanation:
+      en: "After *im* (*in dem*, a *Dativ*) the ending is *-en*."
+      fa: "پس از *im* (کوتاه‌شدهٔ *in dem*، حالت *Dativ*) پایانه *-en* است."
+      de: "Nach *im* (*in dem*, Dativ) ist die Endung *-en*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Ich bin zum ___ Mal in Wien.
+    options: [ersten, erste, einsten]
+    answer: ersten
+    explanation:
+      en: "*Eins* gives *erste*, and after *zum* it ends in *-en*: *zum ersten Mal*."
+      fa: "عدد ترتیبیِ *eins* می‌شود *erste* و پس از *zum* پایانهٔ *-en* می‌گیرد: *zum ersten Mal*."
+      de: "Von *eins* heißt es *erste*, nach *zum* mit *-en*: *zum ersten Mal*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Der August ist der ___ Monat.
+    options: [achte, achtte, achtste]
+    answer: achte
+    explanation:
+      en: "*Acht* already ends in *t*, so only *-e* is added: *achte*."
+      fa: "*acht* خودش به *t* ختم می‌شود، پس فقط *-e* افزوده می‌شود: *achte*."
+      de: "*Acht* endet schon auf *t*. Darum nur *-e*: *achte*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Heute ist der ___ Juni.
+    options: [zwanzigste, zwanzigte, zwanzigen]
+    answer: zwanzigste
+    explanation:
+      en: "From 20 on the ending is *-ste*: *zwanzigste*."
+      fa: "از ۲۰ به بعد *-ste* افزوده می‌شود: *zwanzigste*."
+      de: "Ab 20 kommt *-ste* dazu: *zwanzigste*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: der 1. Mai
+    options: [der erste Mai, der eins Mai, der einste Mai]
+    answer: der erste Mai
+    explanation:
+      en: "*1.* is read as the ordinal *erste*."
+      fa: "*1.* را با عدد ترتیبی می‌خوانند: *erste*."
+      de: "*1.* liest man als Ordinalzahl: *erste*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: am 3. Oktober
+    options: [am dritten Oktober, am dritte Oktober, am drei Oktober]
+    answer: am dritten Oktober
+    explanation:
+      en: "*3.* is *dritte*, and after *am* it ends in *-en*: *am dritten*."
+      fa: "*3.* می‌شود *dritte* و پس از *am* پایانهٔ *-en* می‌گیرد: *am dritten*."
+      de: "*3.* ist *dritte*, nach *am* mit *-en*: *am dritten*."
+  - id: true-1
+    type: true-false
+    prompt: Ich wohne im fünften Stock.
+    answer: true
+    explanation:
+      en: "*Fünf* + *-te*, and *-en* after *im*. The sentence is correct."
+      fa: "*fünf* + *-te* و پس از *im* پایانهٔ *-en*. جمله درست است."
+      de: "*Fünf* + *-te*, nach *im* mit *-en*. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Heute ist der siebte April.
+    answer: true
+    explanation:
+      en: "*Sieben* gives *siebte*, with *-e* after *der*. The sentence is correct."
+      fa: "عدد ترتیبیِ *sieben* می‌شود *siebte* و پس از *der* پایانهٔ *-e* دارد. جمله درست است."
+      de: "Von *sieben* heißt es *siebte*, nach *der* mit *-e*. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Wir haben am zweite Mai frei.
+    answer: false
+    explanation:
+      en: "After *am* the ending is *-en*: *am zweiten Mai*."
+      fa: "پس از *am* پایانه *-en* است: *am zweiten Mai*."
+      de: "Nach *am* ist die Endung *-en*: *am zweiten Mai*."
+  - id: true-4
+    type: true-false
+    prompt: Die ersten Tage sind schwer.
+    answer: true
+    explanation:
+      en: "In the plural the ending is *-en*: *die ersten Tage*. The sentence is correct."
+      fa: "در جمع پایانه *-en* است: *die ersten Tage*. جمله درست است."
+      de: "Im Plural ist die Endung *-en*: *die ersten Tage*. Der Satz ist richtig."
+  - id: true-5
+    type: true-false
+    prompt: Heute ist der neunzehnste Juli.
+    answer: false
+    explanation:
+      en: "Up to 19 the ending is *-te*: *neunzehnte*."
+      fa: "تا ۱۹ به عدد *-te* افزوده می‌شود: *neunzehnte*."
+      de: "Bis 19 kommt *-te* dazu: *neunzehnte*."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Heute ist der ___ (1.) Februar.
+    answers: [erste]
+    explanation:
+      en: "*1.* is *erste*, with *-e* after *der*."
+      fa: "*1.* می‌شود *erste* و پس از *der* پایانهٔ *-e* دارد."
+      de: "*1.* ist *erste*, nach *der* mit *-e*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Ich habe am ___ (7.) Mai Geburtstag.
+    answers: [siebten, siebenten]
+    explanation:
+      en: "*7.* is *siebte*, and after *am* it ends in *-en*: *siebten*."
+      fa: "*7.* می‌شود *siebte* و پس از *am* پایانهٔ *-en* می‌گیرد: *siebten*."
+      de: "*7.* ist *siebte*, nach *am* mit *-en*: *siebten*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Wir wohnen im ___ (3.) Stock.
+    answers: [dritten]
+    explanation:
+      en: "*3.* is *dritte*, and after *im* it ends in *-en*: *dritten*."
+      fa: "*3.* می‌شود *dritte* و پس از *im* پایانهٔ *-en* می‌گیرد: *dritten*."
+      de: "*3.* ist *dritte*, nach *im* mit *-en*: *dritten*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Der Kurs beginnt am ___ (21.) September.
+    answers: [einundzwanzigsten]
+    explanation:
+      en: "From 20 on add *-ste*; after *am* it ends in *-en*: *einundzwanzigsten*."
+      fa: "از ۲۰ به بعد *-ste* افزوده می‌شود و پس از *am* پایانه *-en* است: *einundzwanzigsten*."
+      de: "Ab 20 kommt *-ste* dazu, nach *am* mit *-en*: *einundzwanzigsten*."
+  - id: error-1
+    type: find-error
+    prompt: Wir treffen uns am vierte Juli.
+    answer: vierte
+    explanation:
+      en: "After *am* the ending is *-en*: *am vierten Juli*."
+      fa: "پس از *am* پایانه *-en* است: *am vierten Juli*."
+      de: "Nach *am* ist die Endung *-en*: *am vierten Juli*."
+  - id: error-2
+    type: find-error
+    prompt: Der Dezember ist der zwölfste Monat.
+    answer: zwölfste
+    explanation:
+      en: "Up to 19 the ending is *-te*: *zwölfte*."
+      fa: "تا ۱۹ به عدد *-te* افزوده می‌شود: *zwölfte*."
+      de: "Bis 19 kommt *-te* dazu: *zwölfte*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [wohnst, du, im dritten Stock]
+    end: "?"
+    explanation:
+      en: "A yes/no question starts with the verb, then the subject."
+      fa: "پرسش بله/نه با فعل شروع می‌شود و پس از آن فاعل می‌آید."
+      de: "Eine Ja/Nein-Frage beginnt mit dem Verb, dann kommt das Subjekt."
+  - id: order-2
+    type: word-order
+    answers:
+      - [der Kurs, beginnt, am ersten Montag]
+      - [am ersten Montag, beginnt, der Kurs]
+    explanation:
+      en: "The verb is in position 2. The time can stand first or last."
+      fa: "فعل در جایگاه دوم است. قید زمان می‌تواند در آغاز یا پایان جمله بیاید."
+      de: "Das Verb steht auf Position 2. Die Zeit kann am Anfang oder am Ende stehen."
+  - id: match-1
+    type: matching
+    answer:
+      - ["1.", erste]
+      - ["3.", dritte]
+      - ["7.", siebte]
+      - ["20.", zwanzigste]
+    explanation:
+      en: "*Erste*, *dritte* and *siebte* are irregular; from 20 on the ending is *-ste*."
+      fa: "*erste*، *dritte* و *siebte* بی‌قاعده‌اند؛ از ۲۰ به بعد *-ste* افزوده می‌شود."
+      de: "*Erste*, *dritte* und *siebte* sind besonders. Ab 20 kommt *-ste* dazu."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 70eaaf29c2d9e7ec
