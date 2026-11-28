@@ -4,7 +4,8 @@ kind: phrases
 level: B1
 chapter: b1-phrases-writing
 order: 5
-status: coming-soon
+status: published
+prerequisites: [phrases-appointments, phrases-email-formal-greetings, grammar-135]
 title:
   en: "Cancelling or moving an appointment"
   fa: "لغو یا جابه‌جا کردن قرار"
@@ -14,3 +15,292 @@ purpose:
   fa: "مؤدبانه خبر بدهید که نمی‌توانید سر قرار بیایید و قرار تازه‌ای بخواهید."
   de: "Höflich sagen, dass man zu einem Termin nicht kommen kann, und um einen neuen Termin bitten."
 examTasks: [exam-schreiben-3]
+
+# The Persian follows content/persian-style.md.
+phrases:
+  - de: Leider muss ich den Termin am … absagen.
+    meaning:
+      en: Unfortunately I have to cancel the appointment on … Says clearly that you cannot come. *absagen* is a separable verb, but after *muss* it stays in one piece at the end.
+      fa: «متأسفانه باید قرار روز … را لغو کنم.» به‌روشنی می‌گوید که نمی‌توانید بیایید. *absagen* فعل جداشدنی است، اما پس از *muss* به‌صورت مصدر و یکپارچه در پایان جمله می‌آید.
+      de: So sagt man klar, dass man nicht kommen kann. *absagen* ist ein trennbares Verb, aber nach *muss* steht es zusammen am Ende.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Leider muss ich den Termin am Dienstag absagen.
+      en: Unfortunately I have to cancel the appointment on Tuesday.
+      fa: متأسفانه باید قرار سه‌شنبه را لغو کنم.
+
+  - de: Wegen … kann ich leider nicht kommen.
+    meaning:
+      en: Because of … I unfortunately cannot come. Gives a short reason with a noun. In writing, *wegen* takes the genitive, as in *wegen einer Erkältung* or *wegen des Streiks*.
+      fa: «به دلیل … متأسفانه نمی‌توانم بیایم.» دلیلی کوتاه با یک اسم می‌آورد. در نوشتار پس از *wegen* حالت *Genitiv* می‌آید، مانند *wegen einer Erkältung* یا *wegen des Streiks*.
+      de: So nennt man kurz einen Grund, mit einem Nomen. Beim Schreiben kommt nach *wegen* der Genitiv, zum Beispiel *wegen einer Erkältung* oder *wegen des Streiks*.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Wegen einer starken Erkältung kann ich leider nicht kommen.
+      en: Because of a bad cold I unfortunately cannot come.
+      fa: به دلیل سرماخوردگی شدید متأسفانه نمی‌توانم بیایم.
+
+  - de: Entschuldigen Sie bitte die späte Absage.
+    meaning:
+      en: Please excuse the late cancellation. Apologises when you cancel at short notice. *die Absage* is the noun of *absagen*.
+      fa: «از اینکه دیر خبر می‌دهم، عذر می‌خواهم.» وقتی قرار را در آخرین لحظه لغو می‌کنید، با این جمله عذرخواهی می‌کنید. *die Absage* اسمِ فعل *absagen* است.
+      de: So entschuldigt man sich, wenn man sehr spät absagt. *die Absage* ist das Nomen zu *absagen*.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Ich habe es erst heute Morgen erfahren. Entschuldigen Sie bitte die späte Absage.
+      en: I only found out this morning. Please excuse the late cancellation.
+      fa: خودم هم تازه امروز صبح باخبر شدم. از اینکه دیر خبر می‌دهم، عذر می‌خواهم.
+
+  - de: Wäre es möglich, den Termin zu verschieben?
+    meaning:
+      en: Would it be possible to move the appointment? A polite request for another date, with *wäre*. *verschieben* goes to the end, with *zu* before it.
+      fa: «ممکن است قرار را به وقت دیگری موکول کنیم؟» درخواستی مؤدبانه برای زمانی دیگر، با *wäre*. *verschieben* به پایان جمله می‌رود و *zu* پیش از آن می‌آید.
+      de: Eine höfliche Bitte um einen anderen Termin, mit *wäre*. *verschieben* steht am Ende, mit *zu* davor.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Wäre es möglich, den Termin auf nächste Woche zu verschieben?
+      en: Would it be possible to move the appointment to next week?
+      fa: ممکن است قرار را به هفتهٔ آینده موکول کنیم؟
+
+  - de: Ich könnte auch am … kommen.
+    meaning:
+      en: I could also come on … Offers another day. *könnte* is the polite form of *können*, and *kommen* goes to the end.
+      fa: «می‌توانم روز … هم بیایم.» روز دیگری را پیشنهاد می‌کند. *könnte* شکل مؤدبانهٔ *können* است و *kommen* به پایان جمله می‌رود.
+      de: So bietet man einen anderen Tag an. *könnte* ist die höfliche Form von *können*. *kommen* steht am Ende.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Ich könnte auch am Donnerstag um zehn Uhr kommen.
+      en: I could also come on Thursday at ten.
+      fa: پنجشنبه ساعت ده هم می‌توانم بیایم.
+
+  - de: Würde Ihnen … passen?
+    meaning:
+      en: Would … suit you? Asks whether a new time is right for the other person. *passen* takes the dative, *Ihnen* or *dir*.
+      fa: "«… برایتان مناسب است؟» می‌پرسد آیا زمان تازه برای طرف مقابل مناسب است. پس از *passen* حالت *Dativ* می‌آید: *Ihnen* یا *dir*."
+      de: So fragt man, ob ein neuer Termin für die andere Person gut ist. Nach *passen* kommt der Dativ, *Ihnen* oder *dir*.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Würde Ihnen der nächste Montag passen?
+      en: Would next Monday suit you?
+      fa: دوشنبهٔ آینده برایتان مناسب است؟
+
+  - de: Bitte geben Sie mir Bescheid, ob …
+    meaning:
+      en: Please let me know whether … Asks for an answer about the new date. After *ob* the verb goes to the end.
+      fa: «لطفاً به من خبر بدهید که آیا …» دربارهٔ زمان تازه پاسخ می‌خواهد. پس از *ob* فعل به پایان جمله می‌رود.
+      de: So bittet man um eine Antwort zum neuen Termin. Nach *ob* steht das Verb am Ende.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Bitte geben Sie mir Bescheid, ob das möglich ist.
+      en: Please let me know whether that is possible.
+      fa: لطفاً به من خبر بدهید که آیا این امکان دارد.
+
+  - de: Vielen Dank für Ihr Verständnis.
+    meaning:
+      en: Thank you for your understanding. A polite last sentence when you have caused someone trouble, for example by cancelling. *Ihr* has a capital letter.
+      fa: «از تفاهم شما سپاسگزارم.» جملهٔ پایانی مؤدبانه وقتی برای کسی زحمتی درست کرده‌اید، مثلاً با لغو قرار. *Ihr* با حرف بزرگ نوشته می‌شود.
+      de: Ein höflicher letzter Satz, wenn man jemandem Arbeit macht, zum Beispiel mit einer Absage. *Ihr* schreibt man groß.
+    examTasks: [exam-schreiben-3]
+    example:
+      de: Ich hoffe, wir finden bald einen neuen Termin. Vielen Dank für Ihr Verständnis.
+      en: I hope we find a new appointment soon. Thank you for your understanding.
+      fa: امیدوارم به‌زودی زمان تازه‌ای پیدا کنیم. از تفاهم شما سپاسگزارم.
+
+# 20 questions: 7 answered without typing and 13 typed, so no attempt of 10 is passed
+# by recognising the phrases alone (the pass mark is 9).
+questions:
+  - id: q1
+    type: multiple-choice
+    prompt: Du hast am Mittwoch einen Termin beim Zahnarzt, aber du kannst nicht kommen. Was schreibst du?
+    options:
+      - Leider muss ich den Termin am Mittwoch sagen ab.
+      - Leider muss ich den Termin am Mittwoch absagen.
+      - Leider muss ich den Termin am Mittwoch absage.
+    answer: Leider muss ich den Termin am Mittwoch absagen.
+    explanation:
+      en: After *muss* the infinitive goes to the end in one piece, *absagen*.
+      fa: "پس از *muss* مصدر یکپارچه به پایان جمله می‌رود: *absagen*."
+      de: Nach *muss* steht der Infinitiv zusammen am Ende, *absagen*.
+
+  - id: q2
+    type: gap-fill
+    prompt: ___ einer starken Erkältung kann ich leider nicht kommen.
+    options: [Wegen, Weil, Denn]
+    answer: Wegen
+    explanation:
+      en: A noun follows, *einer starken Erkältung*, so it is the preposition *wegen*. *weil* and *denn* begin a whole clause.
+      fa: پس از جای خالی اسم می‌آید (*einer starken Erkältung*)، پس حرف اضافهٔ *wegen* درست است. *weil* و *denn* جملهٔ کامل را آغاز می‌کنند.
+      de: Danach kommt ein Nomen, *einer starken Erkältung*, also die Präposition *wegen*. *weil* und *denn* beginnen einen ganzen Satz.
+
+  - id: q3
+    type: true-false
+    prompt: Wäre es möglich, den Termin verschieben?
+    answer: false
+    explanation:
+      en: "After *Wäre es möglich* the infinitive needs *zu*: *den Termin zu verschieben*."
+      fa: "پس از *Wäre es möglich* مصدر با *zu* می‌آید: *den Termin zu verschieben*."
+      de: "Nach *Wäre es möglich* braucht der Infinitiv *zu*: *den Termin zu verschieben*."
+
+  - id: q4
+    type: true-false
+    prompt: Würde Ihnen der nächste Montag passen?
+    answer: true
+    explanation:
+      en: Right. *passen* takes the dative, *Ihnen*, and *passen* goes to the end.
+      fa: درست است. پس از *passen* حالت *Dativ* (*Ihnen*) می‌آید و *passen* در پایان جمله است.
+      de: Richtig. *passen* hat den Dativ, *Ihnen*, und *passen* steht am Ende.
+
+  - id: q5
+    type: find-error
+    prompt: Würde Sie der nächste Montag passen?
+    answer: Sie
+    explanation:
+      en: "*passen* takes the dative: *Würde Ihnen der nächste Montag passen?*"
+      fa: "پس از *passen* حالت *Dativ* می‌آید: *Würde Ihnen der nächste Montag passen?*"
+      de: "*passen* hat den Dativ: *Würde Ihnen der nächste Montag passen?*"
+
+  - id: q6
+    type: word-order
+    answers:
+      - [ich, könnte, auch am Donnerstag, kommen]
+      - [auch am Donnerstag, könnte, ich, kommen]
+      - [kommen, könnte, ich, auch am Donnerstag]
+    explanation:
+      en: "*könnte* is in position 2 and *kommen* goes to the end: *Ich könnte auch am Donnerstag kommen.*"
+      fa: "*könnte* در جایگاه دوم است و *kommen* در پایان جمله: *Ich könnte auch am Donnerstag kommen.*"
+      de: "*könnte* steht an Position 2, *kommen* am Ende: *Ich könnte auch am Donnerstag kommen.*"
+
+  - id: q7
+    type: multiple-choice
+    prompt: Du sagst einen Termin erst eine Stunde vorher ab. Wie entschuldigst du dich?
+    options:
+      - Entschuldigen Sie bitte die späten Absage.
+      - Entschuldigen Sie bitte der späten Absage.
+      - Entschuldigen Sie bitte die späte Absage.
+    answer: Entschuldigen Sie bitte die späte Absage.
+    explanation:
+      en: "*entschuldigen* takes the accusative, *die späte Absage*; after *die* the adjective ends in *-e*."
+      fa: "*entschuldigen* مفعول مستقیم در حالت *Akkusativ* می‌گیرد: *die späte Absage*؛ صفت پس از *die* پایانهٔ *-e* دارد."
+      de: "*entschuldigen* hat den Akkusativ, *die späte Absage*. Nach *die* endet das Adjektiv auf *-e*."
+
+  - id: q8
+    type: typed-gap-fill
+    prompt: Leider muss ich den Termin am Dienstag ___ (absagen).
+    answers: [absagen]
+    explanation:
+      en: After *muss* the infinitive goes to the end in one piece, *absagen*.
+      fa: "پس از *muss* مصدر یکپارچه به پایان جمله می‌رود: *absagen*."
+      de: Nach *muss* steht der Infinitiv zusammen am Ende, *absagen*.
+
+  - id: q9
+    type: typed-gap-fill
+    prompt: Leider ___ (müssen) ich den Termin am Dienstag absagen.
+    answers: [muss]
+    explanation:
+      en: With *ich* it is *muss*, in position 2.
+      fa: با *ich* شکل *muss* می‌آید، در جایگاه دوم.
+      de: Bei *ich* heißt es *muss*, an Position 2.
+
+  - id: q10
+    type: typed-gap-fill
+    prompt: Wegen ___ (eine Erkältung) kann ich leider nicht kommen.
+    answers: [einer Erkältung]
+    explanation:
+      en: "*wegen* takes the genitive, and *eine* becomes *einer*: *wegen einer Erkältung*."
+      fa: "پس از *wegen* حالت *Genitiv* می‌آید و *eine* به *einer* تبدیل می‌شود: *wegen einer Erkältung*."
+      de: "Nach *wegen* kommt der Genitiv, aus *eine* wird *einer*: *wegen einer Erkältung*."
+
+  - id: q11
+    type: typed-gap-fill
+    prompt: Wegen ___ (der Streik) kann ich morgen leider nicht kommen.
+    answers: [des Streiks, des Streikes, dem Streik]
+    explanation:
+      en: In writing, *wegen* takes the genitive, *des Streiks*. The dative *dem Streik* is common when speaking.
+      fa: "در نوشتار پس از *wegen* حالت *Genitiv* می‌آید: *des Streiks*. در گفتار حالت *Dativ*، یعنی *dem Streik*، هم رایج است."
+      de: Beim Schreiben kommt nach *wegen* der Genitiv, *des Streiks*. Beim Sprechen hört man oft den Dativ, *dem Streik*.
+
+  - id: q12
+    type: typed-gap-fill
+    prompt: Ich habe es erst heute Morgen erfahren. Entschuldigen Sie bitte die späte ___ (absagen).
+    answers: [Absage]
+    explanation:
+      en: The noun of *absagen* is *die Absage*, with a capital letter.
+      fa: اسمِ فعل *absagen* واژهٔ *die Absage* است، با حرف بزرگ.
+      de: Das Nomen zu *absagen* ist *die Absage*, mit großem Buchstaben.
+
+  - id: q13
+    type: typed-gap-fill
+    prompt: Wäre es möglich, den Termin auf nächste Woche ___ verschieben?
+    answers: [zu]
+    explanation:
+      en: After *Wäre es möglich* the infinitive at the end has *zu* before it.
+      fa: پس از *Wäre es möglich* پیش از مصدر پایانی *zu* می‌آید.
+      de: Nach *Wäre es möglich* steht *zu* vor dem Infinitiv am Ende.
+
+  - id: q14
+    type: typed-gap-fill
+    prompt: ___ (sein, Konjunktiv II) es möglich, den Termin auf nächste Woche zu verschieben?
+    answers: [Wäre]
+    explanation:
+      en: The polite question is *Wäre es möglich, … zu …?*
+      fa: پرسش مؤدبانه *Wäre es möglich, … zu …?* است.
+      de: Die höfliche Frage heißt *Wäre es möglich, … zu …?*
+
+  - id: q15
+    type: typed-gap-fill
+    prompt: Ich ___ (können, Konjunktiv II) auch am Donnerstag um zehn Uhr kommen.
+    answers: [könnte]
+    explanation:
+      en: The polite offer is *Ich könnte auch am … kommen.*
+      fa: پیشنهاد مؤدبانه *Ich könnte auch am … kommen.* است.
+      de: Das höfliche Angebot heißt *Ich könnte auch am … kommen.*
+
+  - id: q16
+    type: typed-gap-fill
+    prompt: ___ (werden, Konjunktiv II) Ihnen der nächste Montag passen?
+    answers: [Würde]
+    explanation:
+      en: The polite question is *Würde Ihnen … passen?*
+      fa: پرسش مؤدبانه *Würde Ihnen … passen?* است.
+      de: Die höfliche Frage heißt *Würde Ihnen … passen?*
+
+  - id: q17
+    type: typed-gap-fill
+    prompt: Würde ___ (Sie) der nächste Montag passen?
+    answers: [Ihnen]
+    explanation:
+      en: "*passen* takes the dative, and the dative of *Sie* is *Ihnen*."
+      fa: "پس از *passen* حالت *Dativ* می‌آید و حالت *Dativ* ضمیر *Sie* واژهٔ *Ihnen* است."
+      de: "*passen* hat den Dativ. Der Dativ von *Sie* ist *Ihnen*."
+
+  - id: q18
+    type: typed-gap-fill
+    prompt: Bitte ___ (geben) Sie mir Bescheid, ob das möglich ist.
+    answers: [geben]
+    explanation:
+      en: The phrase is *Bitte geben Sie mir Bescheid, ob …* With *Sie* the imperative is *geben Sie*, with the verb first.
+      fa: عبارت *Bitte geben Sie mir Bescheid, ob …* است. امر با *Sie* به‌صورت *geben Sie* است و فعل در آغاز می‌آید.
+      de: Der Satz heißt *Bitte geben Sie mir Bescheid, ob …* Der Imperativ mit *Sie* ist *geben Sie*, das Verb steht vorne.
+
+  - id: q19
+    type: typed-gap-fill
+    prompt: Bitte geben Sie ___ (ich) Bescheid, ob das möglich ist.
+    answers: [mir]
+    explanation:
+      en: You give *Bescheid* to someone, so the person is in the dative, *mir*.
+      fa: کسی که خبر به او داده می‌شود در حالت *Dativ* می‌آید، پس *mir*.
+      de: Die Person, der man Bescheid gibt, steht im Dativ, also *mir*.
+
+  - id: q20
+    type: typed-gap-fill
+    prompt: Ich hoffe, wir finden bald einen neuen Termin. Vielen Dank ___ Ihr Verständnis.
+    answers: [für]
+    explanation:
+      en: The phrase is *Vielen Dank für Ihr Verständnis.*
+      fa: عبارت *Vielen Dank für Ihr Verständnis.* است.
+      de: Der Satz heißt *Vielen Dank für Ihr Verständnis.*
+
+review:
+  reviewer: an independent AI agent (two fresh subagents, blind to the key)
+  date: 2026-11-28
+  pool: 5781af830ff8c988
