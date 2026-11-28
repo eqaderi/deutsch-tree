@@ -4,10 +4,344 @@ kind: grammar
 level: A2
 chapter: a2-past
 order: 2
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-013, grammar-026]
 title:
   en: "*Präteritum* of modal verbs"
   fa: "گذشتهٔ ساده (*Präteritum*) فعل‌های وجهی"
   de: "Präteritum der Modalverben"
+
+explanations:
+  en:
+    rule: >
+      For the past of a modal verb German uses the *Präteritum*, in speech as
+      well as in writing: *Ich konnte gestern nicht kommen.* The form is the
+      stem without its umlaut + *-te*: *können*, *konnte*; *müssen*,
+      *musste*; *dürfen*, *durfte*; *wollen*, *wollte*; *sollen*, *sollte*.
+      *Ich* and *er* / *sie* / *es* have the same form with no further ending,
+      as with *war*; the other persons add the endings you know (*du
+      konntest*, *wir konnten*, *ihr konntet*). As in the present, the modal
+      verb stands in position 2 and the infinitive at the end. *Möchten* has
+      no *Präteritum* of its own: for a wish in the past, say *wollte*: *Ich
+      wollte einen Kaffee.*
+  fa:
+    rule: >
+      در آلمانی برای گذشتهٔ فعل‌های وجهی، هم در گفتار و هم در نوشتار، گذشتهٔ
+      ساده (*Präteritum*) به کار می‌رود: *Ich konnte gestern nicht kommen.*
+      این صورت از بن فعل بدون دو نقطه (*Umlaut*) + *-te* ساخته می‌شود: *können*،
+      *konnte*؛ *müssen*، *musste*؛ *dürfen*، *durfte*؛ *wollen*، *wollte*؛
+      *sollen*، *sollte*. صورت اول‌شخص مفرد (*ich*) و سوم‌شخص مفرد (*er/sie/es*)
+      یکی است و مانند *war* شناسهٔ دیگری نمی‌گیرد. شخص‌های دیگر شناسه‌های
+      آشنا را می‌گیرند (*du konntest*، *wir konnten*، *ihr konntet*). مانند
+      زمان حال، فعل وجهی در جایگاه دوم و مصدر در پایان جمله می‌آید. *möchten*
+      گذشتهٔ سادهٔ جداگانه ندارد؛ برای خواستن در گذشته *wollte* به کار
+      می‌رود: *Ich wollte einen Kaffee.*
+  de:
+    rule: >
+      Für die Vergangenheit der Modalverben benutzt man das Präteritum, beim
+      Sprechen und beim Schreiben: *Ich konnte gestern nicht kommen.* Die Form
+      ist der Stamm ohne Umlaut + *-te*: *können*, *konnte*; *müssen*,
+      *musste*; *dürfen*, *durfte*; *wollen*, *wollte*; *sollen*, *sollte*.
+      Bei *ich* und *er/sie/es* ist die Form gleich und hat keine Endung, wie
+      bei *war*. Die anderen Personen haben die bekannten Endungen: *du
+      konntest*, *wir konnten*, *ihr konntet*. Das Modalverb steht auf
+      Position 2, der Infinitiv am Ende. *Möchten* hat kein Präteritum. Man
+      sagt *wollte*: *Ich wollte einen Kaffee.*
+
+table:
+  columns:
+    - { en: Infinitive, fa: مصدر, de: Infinitiv }
+    - { en: "*ich* / *er* / *sie* / *es*", fa: "*ich* / *er* / *sie* / *es*", de: "*ich* / *er* / *sie* / *es*" }
+    - { en: "*du*", fa: "*du*", de: "*du*" }
+    - { en: "*wir* / *sie* / *Sie*", fa: "*wir* / *sie* / *Sie*", de: "*wir* / *sie* / *Sie*" }
+    - { en: "*ihr*", fa: "*ihr*", de: "*ihr*" }
+  rows:
+    - [können, konnte, konntest, konnten, konntet]
+    - [müssen, musste, musstest, mussten, musstet]
+    - [dürfen, durfte, durftest, durften, durftet]
+    - [wollen, wollte, wolltest, wollten, wolltet]
+    - [sollen, sollte, solltest, sollten, solltet]
+
+examples:
+  - de: Ich konnte gestern nicht kommen.
+    en: I couldn't come yesterday.
+    fa: دیروز نتوانستم بیایم.
+  - de: Früher musste ich jeden Tag mit dem Bus fahren.
+    en: I used to have to take the bus every day.
+    fa: قبلاً مجبور بودم هر روز با اتوبوس بروم.
+  - de: Wir wollten ins Kino gehen, aber es war schon zu spät.
+    en: We wanted to go to the cinema, but it was already too late.
+    fa: می‌خواستیم به سینما برویم، اما دیگر دیر شده بود.
+  - de: Durftest du als Kind lange fernsehen?
+    en: Were you allowed to watch TV for long as a child?
+    fa: در کودکی اجازه داشتی مدت زیادی تلویزیون تماشا کنی؟
+  - de: Wir sollten um acht Uhr da sein, aber der Zug hatte Verspätung.
+    en: We were supposed to be there at eight, but the train was late.
+    fa: قرار بود ساعت هشت آن‌جا باشیم، اما قطار تأخیر داشت.
+  - de: Ihr musstet lange warten, oder?
+    en: You (plural) had to wait a long time, didn't you?
+    fa: شما (جمع) مجبور شدید مدت زیادی منتظر بمانید، نه؟
+  - de: Ich wollte einen Kaffee, aber die Maschine war kaputt.
+    en: I wanted a coffee, but the machine was broken.
+    fa: یک قهوه می‌خواستم، اما دستگاه خراب بود.
+  - de: Leider konnten wir nicht lange bleiben.
+    en: Unfortunately we couldn't stay long.
+    fa: متأسفانه نتوانستیم زیاد بمانیم.
+
+mistakes:
+  - wrong: Ich könnte gestern nicht kommen.
+    right: Ich konnte gestern nicht kommen.
+    why:
+      en: "The *Präteritum* of a modal verb has no umlaut: *konnte*."
+      fa: "گذشتهٔ سادهٔ فعل وجهی دو نقطه ندارد: *konnte*."
+      de: "Das Präteritum der Modalverben hat keinen Umlaut: *konnte*."
+  - wrong: Gestern ich musste lange arbeiten.
+    right: Gestern musste ich lange arbeiten.
+    why:
+      en: "The modal verb stays in position 2: after *gestern* comes *musste*, then the subject."
+      fa: "فعل وجهی در جایگاه دوم می‌ماند: پس از *gestern*، *musste* و سپس فاعل می‌آید."
+      de: "Das Modalverb steht auf Position 2: nach *gestern* kommt *musste*, dann das Subjekt."
+  - wrong: Ich möchtete ein Eis.
+    right: Ich wollte ein Eis.
+    why:
+      en: "*Möchten* has no *Präteritum*. For a wish in the past, say *wollte*."
+      fa: "*möchten* گذشتهٔ ساده ندارد. برای خواستن در گذشته *wollte* به کار می‌رود."
+      de: "*Möchten* hat kein Präteritum. Man sagt *wollte*."
+  - wrong: Wir mussten gestern lange gewartet.
+    right: Wir mussten gestern lange warten.
+    why:
+      en: "After a modal verb the second verb is an infinitive: *warten*, not a *Partizip II*."
+      fa: "پس از فعل وجهی، فعل دوم مصدر است: *warten*، نه صفت مفعولی."
+      de: "Nach dem Modalverb steht der Infinitiv: *warten*, nicht das Partizip II."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Ich ___ gestern nicht kommen.
+    options: [konnte, konntest, konnten]
+    answer: konnte
+    explanation:
+      en: "With *ich* the form is *konnte*, with no further ending."
+      fa: "با *ich* صورت فعل *konnte* است، بدون شناسهٔ دیگر."
+      de: "Bei *ich* heißt es *konnte*, ohne weitere Endung."
+  - id: gap-2
+    type: gap-fill
+    prompt: Wir ___ am Samstag arbeiten.
+    options: [mussten, musstet, musste]
+    answer: mussten
+    explanation:
+      en: "With *wir* the form is *mussten*, with *-n*."
+      fa: "با *wir* صورت فعل *mussten* است، با *-n*."
+      de: "Bei *wir* heißt es *mussten*, mit *-n*."
+  - id: gap-3
+    type: gap-fill
+    prompt: ___ du als Kind lange aufbleiben?
+    options: [Durftest, Durfte, Durften]
+    answer: Durftest
+    explanation:
+      en: "With *du* the ending is *-st*: *durftest*."
+      fa: "با *du* شناسهٔ فعل *-st* است: *durftest*."
+      de: "Bei *du* ist die Endung *-st*: *durftest*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Meine Schwester ___ schon immer Ärztin werden.
+    options: [wollte, wolltest, wollten]
+    answer: wollte
+    explanation:
+      en: "*Meine Schwester* is *sie* (singular), which has the same form as *ich*: *wollte*."
+      fa: "*meine Schwester* سوم‌شخص مفرد است (*sie*) و صورت فعلش مانند *ich* است: *wollte*."
+      de: "*Meine Schwester* ist *sie* (Singular). Die Form ist wie bei *ich*: *wollte*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: Ihr ___ um acht Uhr am Bahnhof sein.
+    options: [solltet, solltest, sollten]
+    answer: solltet
+    explanation:
+      en: "With *ihr* the ending is *-t*: *solltet*."
+      fa: "با *ihr* شناسهٔ فعل *-t* است: *solltet*."
+      de: "Bei *ihr* ist die Endung *-t*: *solltet*."
+  - id: choice-2
+    type: multiple-choice
+    prompt: Gestern ___ ich leider nicht zum Kurs kommen.
+    options: [konnte, kann, können]
+    answer: konnte
+    explanation:
+      en: "*Gestern* asks for the past: *konnte*."
+      fa: "*gestern* گذشته را می‌خواهد: *konnte*."
+      de: "*Gestern* ist Vergangenheit: *konnte*."
+  - id: choice-3
+    type: multiple-choice
+    prompt: Früher ___ ich Pilot werden.
+    options: [wollte, möchtete, mochtete]
+    answer: wollte
+    explanation:
+      en: "*Möchten* has no *Präteritum*; for a wish in the past, say *wollte*."
+      fa: "*möchten* گذشتهٔ ساده ندارد؛ برای خواستن در گذشته *wollte* به کار می‌رود."
+      de: "*Möchten* hat kein Präteritum. Man sagt *wollte*."
+  - id: choice-4
+    type: multiple-choice
+    prompt: Er ___ gestern zum Arzt gehen.
+    options: [musste, muss, müssen]
+    answer: musste
+    explanation:
+      en: "*Gestern* asks for the past, and *er* has the form *musste*, without umlaut."
+      fa: "*gestern* گذشته را می‌خواهد و صورت فعل با *er* *musste* است، بدون دو نقطه."
+      de: "*Gestern* ist Vergangenheit, und bei *er* heißt es *musste*, ohne Umlaut."
+  - id: true-1
+    type: true-false
+    prompt: Wir konnten das Spiel nicht gewinnen.
+    answer: true
+    explanation:
+      en: "*Wir konnten* in position 2, the infinitive *gewinnen* at the end. The sentence is correct."
+      fa: "*wir konnten* در جایگاه دوم و مصدر *gewinnen* در پایان جمله. جمله درست است."
+      de: "*Konnten* auf Position 2, der Infinitiv *gewinnen* am Ende. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Ich wollte dich gestern anrufen.
+    answer: true
+    explanation:
+      en: "*Ich wollte* with the infinitive *anrufen* at the end. The sentence is correct."
+      fa: "*ich wollte* با مصدر *anrufen* در پایان جمله. جمله درست است."
+      de: "*Ich wollte* und der Infinitiv *anrufen* am Ende. Der Satz ist richtig."
+  - id: true-3
+    type: true-false
+    prompt: Ich möchtete gestern ins Kino gehen.
+    answer: false
+    explanation:
+      en: "*Möchten* has no *Präteritum*: *Ich wollte gestern ins Kino gehen.*"
+      fa: "*möchten* گذشتهٔ ساده ندارد: *Ich wollte gestern ins Kino gehen.*"
+      de: "*Möchten* hat kein Präteritum: *Ich wollte gestern ins Kino gehen.*"
+  - id: true-4
+    type: true-false
+    prompt: Gestern ich konnte nicht schlafen.
+    answer: false
+    explanation:
+      en: "The modal verb stays in position 2: *Gestern konnte ich nicht schlafen.*"
+      fa: "فعل وجهی در جایگاه دوم می‌ماند: *Gestern konnte ich nicht schlafen.*"
+      de: "Das Modalverb steht auf Position 2: *Gestern konnte ich nicht schlafen.*"
+  - id: error-1
+    type: find-error
+    prompt: Ihr musstet gestern lange gewartet.
+    answer: gewartet
+    explanation:
+      en: "After a modal verb comes the infinitive: *Ihr musstet gestern lange warten.*"
+      fa: "پس از فعل وجهی مصدر می‌آید: *Ihr musstet gestern lange warten.*"
+      de: "Nach dem Modalverb steht der Infinitiv: *Ihr musstet gestern lange warten.*"
+  - id: error-2
+    type: find-error
+    prompt: Wir konntet den Bus nicht finden.
+    answer: konntet
+    explanation:
+      en: "With *wir* the form is *konnten*: *Wir konnten den Bus nicht finden.*"
+      fa: "با *wir* صورت فعل *konnten* است: *Wir konnten den Bus nicht finden.*"
+      de: "Bei *wir* heißt es *konnten*: *Wir konnten den Bus nicht finden.*"
+  - id: error-3
+    type: find-error
+    prompt: Er wollt gestern nicht mitkommen.
+    answer: wollt
+    explanation:
+      en: "The *Präteritum* has *-te*: *Er wollte gestern nicht mitkommen.*"
+      fa: "گذشتهٔ ساده *-te* دارد: *Er wollte gestern nicht mitkommen.*"
+      de: "Das Präteritum hat *-te*: *Er wollte gestern nicht mitkommen.*"
+  - id: error-4
+    type: find-error
+    prompt: Du solltet mich gestern anrufen.
+    answer: solltet
+    explanation:
+      en: "With *du* the ending is *-st*: *Du solltest mich gestern anrufen.*"
+      fa: "با *du* شناسهٔ فعل *-st* است: *Du solltest mich gestern anrufen.*"
+      de: "Bei *du* ist die Endung *-st*: *Du solltest mich gestern anrufen.*"
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Ich ___ gestern lange arbeiten (müssen).
+    answers: [musste]
+    explanation:
+      en: "*Müssen* loses its umlaut in the *Präteritum*: *ich musste*."
+      fa: "*müssen* در گذشتهٔ ساده دو نقطهٔ خود را از دست می‌دهد: *ich musste*."
+      de: "*Müssen* hat im Präteritum keinen Umlaut: *ich musste*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Gestern ___ wir den Film nicht sehen (dürfen).
+    answers: [durften]
+    explanation:
+      en: "*Dürfen* loses its umlaut, and *wir* adds *-n*: *durften*."
+      fa: "*dürfen* دو نقطهٔ خود را از دست می‌دهد و *wir* *-n* می‌گیرد: *durften*."
+      de: "*Dürfen* hat keinen Umlaut, und bei *wir* kommt *-n* dazu: *durften*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: ___ du gestern nicht kommen (können)?
+    answers: [Konntest]
+    explanation:
+      en: "With *du*: *konntest*, without umlaut."
+      fa: "با *du*: *konntest*، بدون دو نقطه."
+      de: "Bei *du*: *konntest*, ohne Umlaut."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Letztes Jahr ___ ihr nach Spanien fahren (wollen).
+    answers: [wolltet]
+    explanation:
+      en: "With *ihr* the ending is *-t*: *wolltet*."
+      fa: "با *ihr* شناسهٔ فعل *-t* است: *wolltet*."
+      de: "Bei *ihr* ist die Endung *-t*: *wolltet*."
+  - id: typed-gap-5
+    type: typed-gap-fill
+    prompt: Mein Sohn ___ früher jeden Tag Klavier üben (sollen).
+    answers: [sollte]
+    explanation:
+      en: "*Mein Sohn* is *er*, which has the same form as *ich*: *sollte*."
+      fa: "*mein Sohn* سوم‌شخص مفرد است (*er*) و صورت فعلش مانند *ich* است: *sollte*."
+      de: "*Mein Sohn* ist *er*. Die Form ist wie bei *ich*: *sollte*."
+  - id: typed-1
+    type: typed-answer
+    prompt: "Präteritum: ich kann"
+    answers: [ich konnte, konnte]
+    explanation:
+      en: "*Können* loses its umlaut: *ich konnte*."
+      fa: "*können* دو نقطهٔ خود را از دست می‌دهد: *ich konnte*."
+      de: "*Können* hat im Präteritum keinen Umlaut: *ich konnte*."
+  - id: typed-2
+    type: typed-answer
+    prompt: "Präteritum: wir dürfen"
+    answers: [wir durften, durften]
+    explanation:
+      en: "*Dürfen* loses its umlaut: *wir durften*."
+      fa: "*dürfen* دو نقطهٔ خود را از دست می‌دهد: *wir durften*."
+      de: "*Dürfen* hat im Präteritum keinen Umlaut: *wir durften*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [warum, musstest, du, so lange, warten]
+    end: "?"
+    explanation:
+      en: "The question word comes first, the modal verb second, and the infinitive at the end."
+      fa: "واژهٔ پرسشی در آغاز، فعل وجهی در جایگاه دوم و مصدر در پایان جمله می‌آید."
+      de: "Das Fragewort steht am Anfang, das Modalverb auf Position 2, der Infinitiv am Ende."
+  - id: order-2
+    type: word-order
+    answers:
+      - [wolltet, ihr, nicht, ins Kino, gehen]
+    end: "?"
+    explanation:
+      en: "In a yes/no question the modal verb comes first, and the infinitive stays at the end."
+      fa: "در پرسش بله یا نه فعل وجهی در آغاز می‌آید و مصدر در پایان جمله می‌ماند."
+      de: "In der Ja/Nein-Frage steht das Modalverb am Anfang, der Infinitiv bleibt am Ende."
+  - id: match-1
+    type: matching
+    answer:
+      - [können, konnte]
+      - [müssen, musste]
+      - [dürfen, durfte]
+      - [wollen, wollte]
+      - [sollen, sollte]
+    explanation:
+      en: "Stem without umlaut + *-te*: *konnte*, *musste*, *durfte*, *wollte*, *sollte*."
+      fa: "بن بدون دو نقطه + *-te*: *konnte*، *musste*، *durfte*، *wollte*، *sollte*."
+      de: "Stamm ohne Umlaut + *-te*: *konnte*, *musste*, *durfte*, *wollte*, *sollte*."
+
+review:
+  reviewer: "an independent AI agent (Claude Opus 5.5 subagents: one blind pass on
+    the review sheet, a second fresh one on typed-1 and typed-2 after their keys
+    were widened; not a person)"
+  date: 2026-11-28
+  pool: 2ce1855df63dc40d
