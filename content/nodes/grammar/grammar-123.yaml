@@ -266,8 +266,8 @@ questions:
       de: "*Der Iran* hat einen Artikel. Nach *aus* steht der Dativ: *aus dem Iran*."
   - id: typed-gap-2
     type: typed-gap-fill
-    prompt: Ich komme gerade ___ (von + der) Bahnhof.
-    answers: [vom, von dem]
+    prompt: Ich komme gerade ___ (von / der Bahnhof).
+    answers: [vom Bahnhof, von dem Bahnhof, vom, von dem]
     explanation:
       en: "*Von dem Bahnhof*, almost always said as *vom Bahnhof*."
       fa: "*von dem Bahnhof* که تقریباً همیشه کوتاه می‌شود: *vom Bahnhof*."
@@ -333,6 +333,8 @@ questions:
       de: "Von einer Person: *vom Arzt*. Aus einem Land: *aus der Türkei*. Von einer Tätigkeit: *von der Arbeit*."
 
 review:
-  reviewer: an independent AI agent
+  reviewer: "independent AI agents (two fresh Claude Opus 5.5 subagents, review
+    sheet only: every question again after the hints were rewritten, then the
+    rewritten gaps once more after their key was widened; not people)"
   date: 2026-11-28
-  pool: 1be4d566efab0118
+  pool: c59499826a9fcaf7

@@ -91,6 +91,7 @@ words:
     article: die         # nouns only: der, die, das, or none for a noun that takes no article
     plural: Großmütter   # nouns only: the plural written out, without article
     # number: plural-only  # in place of `plural` for a noun with one number (plural-only, singular-only)
+    # reflexive: sich     # verbs only: what a reflexive verb is learned with (sich, sich etwas)
     level: A1
     meaning:             # plain text, no asterisks; Persian without Latin letters
       en: grandmother
@@ -116,13 +117,20 @@ words:
   too, by a correction in `scope-corrections.yaml` (`article: none`), and the
   check holds the node to it. A name that takes an article keeps it:
   *die Schweiz*, *die Türkei*, *der Iran*.
+- **A reflexive verb** is written `reflexive: sich` (or `sich etwas`). It is
+  shown, heard, put on its Anki card, found and asked with it: *sich freuen*
+  is the answer and *freuen* is wrong. A verb the scope list marks `sich` is
+  always reflexive, and a published node must write it so; one it marks
+  `(sich)` is written with it or without, by the sense the node teaches
+  (*sich waschen* or *waschen*). Never put "with sich" into a meaning.
 - A node writes no `questions`: the test is made from the words. Every word
   is asked twice. **From German**: the learner sees the word as it is learned
   (*die Großmutter*) and chooses its meaning among four meanings of words of
   the node, of the same word class where the node has enough. **Into
   German**: the learner sees the meaning and types the word, a noun with its
   article (if it takes one); *Großmutter* or *der Großmutter* is wrong, and only the slips of
-  any typed answer (umlauts, capitals) are forgiven. A learner who reads in
+  any typed answer (umlauts, capitals) are forgiven. A reflexive verb is typed
+  with its *sich* in the same way. A learner who reads in
   simple German sees the `definition` in place of a meaning, in both
   directions. One attempt asks about a word once, half of the words in each
   direction. The reason shown for a wrong answer is the word, its meaning
@@ -132,13 +140,13 @@ words:
   rejected, unless each lists the other in `alsoAccepted` and one names the
   other in `tooCloseTo` (*Oma* and *Großmutter*). List under `alsoAccepted`
   every other German a learner may rightly type: *die Frau* for *Ehefrau*.
-- The page lists every word with its article, plural, word class, level,
+- The page lists every word with its article or its *sich*, plural, word class, level,
   meaning, definition and example. Search finds a word by itself with its
   article and its meaning (in simple German: its definition), not by its
   example.
 - The review covers the questions made from the words, in each of the three
   languages (see "Review before publishing"). A change to a word, its
-  article, a meaning, the definition, `alsoAccepted` or `tooCloseTo` calls
+  article, its `reflexive`, a meaning, the definition, `alsoAccepted` or `tooCloseTo` calls
   for a new review; the example sentence, the plural and the level may change
   freely, because no question shows them.
 
@@ -397,6 +405,14 @@ table:
     - [das Regal, dem Regal, einem Regal, auf dem Regal]
     - [die Bücher (Plural), den Büchern, –, zwischen den Büchern]
 ```
+
+A gap whose answer is a case form gives its hint as the preposition and the
+noun in its dictionary form, apart: `Ich bin heute ___ (bei / der Arzt).`
+The noun then stands only in the hint, so a learner may fill the gap with
+the whole phrase or with what changes: accept both (`answers: [beim Arzt,
+bei dem Arzt, beim, bei dem]`). Never `(bei + der) Arzt`: reviewers read the
+article joined to the preposition as the article in the case already, here
+a Dativ *der*.
 
 ```yaml
 status: published

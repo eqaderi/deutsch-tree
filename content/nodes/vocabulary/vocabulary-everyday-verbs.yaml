@@ -180,7 +180,7 @@ words:
     meaning:
       en: to hand in, to hand over
       fa: تحویل دادن
-    definition: etwas einer Person oder an einer Stelle geben, zum Beispiel einen Test oder einen Schlüssel
+    definition: etwas einer Person oder einem Büro geben, zum Beispiel einen Test oder einen Schlüssel
     example:
       de: Bitte geben Sie den Schlüssel an der Rezeption ab.
       en: Please hand in the key at reception.
@@ -316,30 +316,32 @@ words:
   # The scope list gives "sich": the verb is always "sich kümmern um".
   - word: kümmern
     class: verb
+    reflexive: sich
     level: A1
     meaning:
-      en: to take care of, to look after (with sich)
-      fa: مراقبت کردن، رسیدگی کردن (فعل انعکاسی)
-    definition: "mit „sich“ und „um“: für eine Person oder eine Sache sorgen, zum Beispiel für ein Kind"
+      en: to take care of, to look after
+      fa: مراقبت کردن، رسیدگی کردن
+    definition: "mit „um“: für eine Person oder eine Sache sorgen, zum Beispiel für ein Kind"
     example:
       de: Wer kümmert sich um den Hund?
       en: Who looks after the dog?
       fa: چه کسی از سگ نگهداری می‌کند؟
-    alsoAccepted: [sich kümmern, sich kümmern um, sorgen, sorgen für, aufpassen, aufpassen auf, pflegen]
+    alsoAccepted: [sich kümmern um, sorgen, sorgen für, aufpassen, aufpassen auf, pflegen, betreuen]
 
   # The scope list gives "sich": the verb is always "sich freuen".
   - word: freuen
     class: verb
+    reflexive: sich
     level: A1
     meaning:
-      en: to be glad, to be pleased (with sich)
-      fa: خوشحال شدن (فعل انعکاسی)
-    definition: "mit „sich“: froh sein, zum Beispiel über ein Geschenk"
+      en: to be glad, to be pleased
+      fa: خوشحال شدن
+    definition: froh sein, zum Beispiel über ein Geschenk
     example:
       de: Wir freuen uns über deinen Besuch.
       en: We're glad about your visit.
       fa: از آمدنت خوشحالیم.
-    alsoAccepted: [sich freuen, froh sein]
+    alsoAccepted: [froh sein, froh werden]
 
   - word: anbieten
     class: verb
@@ -366,7 +368,10 @@ words:
       fa: می‌توانید هتل خوبی به من توصیه کنید؟
 
 review:
-  reviewer: independent AI agents (two fresh Claude Opus 5.5 subagents, sheet
-    only; 162, then 42 questions)
+  reviewer: "independent AI agents (five fresh Claude Opus 5.5 subagents, review
+    sheet only: the 21 questions changed by sich kümmern and sich freuen; 6
+    changed by the abgeben definition the first objected to; the other 137; 3
+    disputed ones twice more, the second time after the instruction named the
+    sich; not people)"
   date: 2026-11-28
-  pool: 07f0f47de540b8d7
+  pool: ec6446644c08974a

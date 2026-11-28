@@ -4,10 +4,334 @@ kind: grammar
 level: A1
 chapter: a1-word-building
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-002, grammar-005]
 title:
   en: "State expressions with *sein*/*haben* + particle"
   fa: "بیان وضعیت با *sein* / *haben* + جزء (*an sein*، *dabeihaben* …)"
   de: "Zustände mit *sein* / *haben* + Partikel (*an sein*, *dabeihaben* …)"
+
+explanations:
+  en:
+    rule: >
+      In everyday spoken German, *sein* with a short word says what state
+      something is in: *an sein* (on) and *aus sein* (off) for a light or a
+      device, *auf sein* (open) and *zu sein* (closed) for a door, a window or
+      a shop, *da sein* (here) and *weg sein* (gone) for a person or a thing,
+      and *dafür sein* (be for it) and *dagegen sein* (be against it). *Was
+      ist los?* asks what is wrong or what is happening. With *haben* there
+      are *dabeihaben* (have with you) and *anhaben* (be wearing). The verb
+      stands in position 2 and the short word goes to the end, like the
+      prefix of a separable verb: *Hast du deinen Ausweis dabei?*
+  fa:
+    rule: >
+      در گفتار روزمرهٔ آلمانی، *sein* همراه با یک واژهٔ کوتاه وضعیت چیزی را
+      بیان می‌کند: *an sein* (روشن بودن) و *aus sein* (خاموش بودن) برای چراغ
+      یا دستگاه، *auf sein* (باز بودن) و *zu sein* (بسته بودن) برای در،
+      پنجره یا مغازه، *da sein* (حاضر بودن، این‌جا بودن) و *weg sein* (رفته
+      بودن، نبودن) برای آدم یا چیز، و *dafür sein* (موافق بودن) و *dagegen
+      sein* (مخالف بودن). *Was ist los?* یعنی «چه شده؟» یا «چه خبر است؟». با
+      *haben* نیز *dabeihaben* (همراه داشتن) و *anhaben* (به تن داشتن) را
+      داریم. فعل در جایگاه دوم می‌آید و واژهٔ کوتاه به آخر جمله می‌رود، درست
+      مانند پیشوند فعل جداشدنی: *Hast du deinen Ausweis dabei?*
+  de:
+    rule: >
+      Beim Sprechen sagt man oft mit *sein* und einem kurzen Wort, wie etwas
+      ist: Das Licht ist *an* oder *aus*. Die Tür ist *auf* oder *zu*. Eine
+      Person ist *da* oder *weg*. Man ist *dafür* oder *dagegen*. *Was ist
+      los?* fragt: Was ist passiert? Mit *haben* sagt man *dabeihaben* (bei
+      sich haben) und *anhaben* (tragen). Das Verb steht auf Position 2, das
+      kurze Wort steht am Ende, wie bei einem trennbaren Verb: *Hast du deinen
+      Ausweis dabei?*
+
+table:
+  columns:
+    - { en: Expression, fa: عبارت, de: Ausdruck }
+    - { en: Meaning, fa: معنا, de: Bedeutung }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [an sein, "läuft, ist eingeschaltet", Der Fernseher ist noch an.]
+    - [aus sein, "läuft nicht, ist ausgeschaltet", Das Licht ist aus.]
+    - [auf sein, ist offen, Das Fenster ist auf.]
+    - [zu sein, ist geschlossen, Die Apotheke ist schon zu.]
+    - [da sein, ist hier, Ist Frau Berger da?]
+    - [weg sein, ist nicht mehr hier, Mein Fahrrad ist weg!]
+    - [los sein, passiert, Was ist los?]
+    - [dafür sein, findet es gut, Ich bin dafür.]
+    - [dagegen sein, findet es nicht gut, Bist du dagegen?]
+    - [dabeihaben, hat es bei sich, Hast du deinen Ausweis dabei?]
+    - [anhaben, trägt es, Er hat eine Jacke an.]
+
+examples:
+  - de: Der Fernseher ist noch an.
+    en: The TV is still on.
+    fa: تلویزیون هنوز روشن است.
+  - de: Im Bad ist das Licht aus.
+    en: The light in the bathroom is off.
+    fa: چراغ حمام خاموش است.
+  - de: Ist das Fenster auf oder zu?
+    en: Is the window open or closed?
+    fa: پنجره باز است یا بسته؟
+  - de: Am Sonntag ist die Apotheke zu.
+    en: The pharmacy is closed on Sunday.
+    fa: داروخانه یکشنبه‌ها بسته است.
+  - de: Ist Herr Wagner heute da?
+    en: Is Mr Wagner in today?
+    fa: آقای واگنر امروز هست؟
+  - de: Mein Fahrrad ist weg!
+    en: My bike is gone!
+    fa: دوچرخه‌ام نیست!
+  - de: Was ist los? Du bist so still.
+    en: What's wrong? You're so quiet.
+    fa: چه شده؟ خیلی ساکتی.
+  - de: Wir machen am Samstag ein Picknick. Bist du dafür oder dagegen?
+    en: We're having a picnic on Saturday. Are you for or against it?
+    fa: شنبه پیک‌نیک می‌رویم. موافقی یا مخالف؟
+  - de: Hast du deinen Ausweis dabei?
+    en: Do you have your ID with you?
+    fa: کارت شناسایی‌ات همراهت است؟
+  - de: Es ist kalt, aber Tom hat keine Jacke an.
+    en: It's cold, but Tom isn't wearing a jacket.
+    fa: هوا سرد است، ولی تام کاپشن نپوشیده است.
+
+mistakes:
+  - wrong: Das Licht ist an noch.
+    right: Das Licht ist noch an.
+    why:
+      en: "The short word goes to the very end: *Das Licht ist noch an.*"
+      fa: "واژهٔ کوتاه به آخرِ آخر جمله می‌رود: *Das Licht ist noch an.*"
+      de: "Das kurze Wort steht ganz am Ende: *Das Licht ist noch an.*"
+  - wrong: Hast du dabei deinen Schlüssel?
+    right: Hast du deinen Schlüssel dabei?
+    why:
+      en: "*dabei* goes to the end, like the prefix of a separable verb."
+      fa: "*dabei* مانند پیشوند فعل جداشدنی به آخر جمله می‌رود."
+      de: "*dabei* steht am Ende, wie bei einem trennbaren Verb."
+  - wrong: Die Lampe ist auf.
+    right: Die Lampe ist an.
+    why:
+      en: "A lamp or a device is *an* or *aus*; *auf* and *zu* are for doors, windows and shops."
+      fa: "چراغ و دستگاه *an* یا *aus* است؛ *auf* و *zu* برای در، پنجره و مغازه است."
+      de: "Eine Lampe oder ein Gerät ist *an* oder *aus*. *Auf* und *zu* sagt man bei Türen, Fenstern und Geschäften."
+  - wrong: Ich bin für.
+    right: Ich bin dafür.
+    why:
+      en: "Without a noun after it, say *dafür*; *für* needs a noun: *Ich bin für den Plan.*"
+      fa: "وقتی اسمی پس از آن نمی‌آید، *dafür* بگویید؛ *für* اسم لازم دارد: *Ich bin für den Plan.*"
+      de: "Ohne Nomen sagt man *dafür*. *Für* braucht ein Nomen: *Ich bin für den Plan.*"
+
+questions:
+  - id: q1
+    type: gap-fill
+    prompt: Der Fernseher läuft noch. Er ist noch ___.
+    options: [an, auf, zu]
+    answer: an
+    explanation:
+      en: "A device that is running is *an*."
+      fa: "دستگاهی که کار می‌کند *an* است."
+      de: "Ein Gerät, das läuft, ist *an*."
+  - id: q2
+    type: gap-fill
+    prompt: Die Bäckerei ist geschlossen. Sie ist schon ___.
+    options: [zu, aus, an]
+    answer: zu
+    explanation:
+      en: "A closed shop is *zu*."
+      fa: "مغازهٔ بسته *zu* است."
+      de: "Ein Geschäft, das geschlossen ist, ist *zu*."
+  - id: q3
+    type: gap-fill
+    prompt: Das Fenster ist offen. Es ist ___.
+    options: [auf, an, aus]
+    answer: auf
+    explanation:
+      en: "An open window is *auf*; *an* and *aus* are for lights and devices."
+      fa: "پنجرهٔ باز *auf* است؛ *an* و *aus* برای چراغ و دستگاه است."
+      de: "Ein offenes Fenster ist *auf*. *An* und *aus* sagt man bei Licht und Geräten."
+  - id: q4
+    type: gap-fill
+    prompt: Ich finde meinen Schlüssel nicht. Er ist ___!
+    options: [weg, zu, an]
+    answer: weg
+    explanation:
+      en: "A thing you cannot find is *weg*: gone."
+      fa: "چیزی که پیدایش نمی‌کنید *weg* است، یعنی نیست."
+      de: "Was man nicht findet, ist *weg*."
+  - id: q5
+    type: gap-fill
+    prompt: Du siehst traurig aus. Was ist ___?
+    options: [los, dafür, auf]
+    answer: los
+    explanation:
+      en: "*Was ist los?* asks what is wrong."
+      fa: "*Was ist los?* یعنی «چه شده؟»."
+      de: "*Was ist los?* fragt: Was ist passiert?"
+  - id: q6
+    type: gap-fill
+    prompt: Ist Frau Schulz heute im Büro? – Ja, sie ist ___.
+    options: [da, an, auf]
+    answer: da
+    explanation:
+      en: "A person who is here is *da*."
+      fa: "کسی که حاضر است *da* است."
+      de: "Eine Person, die hier ist, ist *da*."
+  - id: q7
+    type: gap-fill
+    prompt: Wir machen am Samstag ein Picknick. Bist du dafür oder ___?
+    options: [dagegen, daran, dazu]
+    answer: dagegen
+    explanation:
+      en: "The opposite of *dafür* (for it) is *dagegen* (against it)."
+      fa: "مخالف *dafür* (موافق)، *dagegen* (مخالف) است."
+      de: "Das Gegenteil von *dafür* ist *dagegen*."
+  - id: q8
+    type: gap-fill
+    prompt: Es regnet. Hast du einen Schirm ___?
+    options: [dabei, dafür, dagegen]
+    answer: dabei
+    explanation:
+      en: "*dabeihaben*: to have something with you."
+      fa: "*dabeihaben* یعنی چیزی را همراه داشتن."
+      de: "*dabeihaben* heißt: etwas bei sich haben."
+  - id: q9
+    type: gap-fill
+    prompt: Es ist kalt, aber er hat nur ein T-Shirt ___.
+    options: [an, auf, zu]
+    answer: an
+    explanation:
+      en: "*anhaben*: to be wearing something."
+      fa: "*anhaben* یعنی چیزی را به تن داشتن."
+      de: "*anhaben* heißt: etwas tragen."
+  - id: q10
+    type: gap-fill
+    prompt: Es ist dunkel im Zimmer. Das Licht ist ___.
+    options: [aus, zu, auf]
+    answer: aus
+    explanation:
+      en: "A light that is not on is *aus*."
+      fa: "چراغی که روشن نیست *aus* است."
+      de: "Ein Licht, das nicht an ist, ist *aus*."
+  - id: q11
+    type: multiple-choice
+    prompt: "„Was ist los?“ heißt:"
+    options: [Was ist passiert?, Wo bist du?, Wie spät ist es?]
+    answer: Was ist passiert?
+    explanation:
+      en: "*Was ist los?* asks what has happened or what is wrong."
+      fa: "*Was ist los?* می‌پرسد چه اتفاقی افتاده یا چه مشکلی هست."
+      de: "*Was ist los?* fragt: Was ist passiert?"
+  - id: q12
+    type: multiple-choice
+    prompt: "Frau Lange ist schon weg. Das heißt:"
+    options: [Sie ist nicht mehr hier., Sie kommt gleich., Sie ist noch im Büro.]
+    answer: Sie ist nicht mehr hier.
+    explanation:
+      en: "*weg sein*: no longer here."
+      fa: "*weg sein* یعنی دیگر این‌جا نبودن."
+      de: "*weg sein* heißt: nicht mehr hier sein."
+  - id: q13
+    type: multiple-choice
+    prompt: "Er hat einen Mantel an. Das heißt:"
+    options: [Er trägt einen Mantel., Er kauft einen Mantel., Er sucht einen Mantel.]
+    answer: Er trägt einen Mantel.
+    explanation:
+      en: "*anhaben* means to be wearing."
+      fa: "*anhaben* یعنی به تن داشتن."
+      de: "*anhaben* heißt: tragen."
+  - id: q14
+    type: multiple-choice
+    prompt: "Ich bin dagegen. Das heißt:"
+    options: [Ich finde die Idee nicht gut., Ich finde die Idee gut., Ich weiß es nicht.]
+    answer: Ich finde die Idee nicht gut.
+    explanation:
+      en: "*dagegen sein*: to be against it."
+      fa: "*dagegen sein* یعنی مخالف بودن."
+      de: "*dagegen sein* heißt: etwas nicht gut finden."
+  - id: q15
+    type: true-false
+    prompt: Ist der Supermarkt am Sonntag zu?
+    answer: true
+    explanation:
+      en: "A shop is *zu* (closed); the verb comes first in a yes/no question. Right."
+      fa: "مغازه *zu* (بسته) است و در پرسش بله/نه فعل اول می‌آید. درست است."
+      de: "Ein Geschäft ist *zu*. In der Ja/Nein-Frage steht das Verb vorne. Richtig."
+  - id: q16
+    type: true-false
+    prompt: Der Fernseher ist an noch.
+    answer: false
+    explanation:
+      en: "*an* goes to the very end: *Der Fernseher ist noch an.*"
+      fa: "*an* به آخرِ آخر جمله می‌رود: *Der Fernseher ist noch an.*"
+      de: "*an* steht ganz am Ende: *Der Fernseher ist noch an.*"
+  - id: q17
+    type: true-false
+    prompt: Hast du dabei deinen Pass?
+    answer: false
+    explanation:
+      en: "*dabei* goes to the end: *Hast du deinen Pass dabei?*"
+      fa: "*dabei* به آخر جمله می‌رود: *Hast du deinen Pass dabei?*"
+      de: "*dabei* steht am Ende: *Hast du deinen Pass dabei?*"
+  - id: q18
+    type: true-false
+    prompt: Die Lampe im Flur ist aus.
+    answer: true
+    explanation:
+      en: "A lamp is *an* or *aus*. Right."
+      fa: "چراغ *an* یا *aus* است. درست است."
+      de: "Eine Lampe ist *an* oder *aus*. Richtig."
+  - id: q19
+    type: find-error
+    prompt: Bist du für oder dagegen?
+    answer: für
+    explanation:
+      en: "Without a noun after it, say *dafür*: *Bist du dafür oder dagegen?*"
+      fa: "وقتی اسمی پس از آن نمی‌آید، *dafür* درست است: *Bist du dafür oder dagegen?*"
+      de: "Ohne Nomen sagt man *dafür*: *Bist du dafür oder dagegen?*"
+  - id: q20
+    type: word-order
+    answers:
+      - [mein Fahrrad, ist, weg]
+      - [weg, ist, mein Fahrrad]
+    end: "!"
+    explanation:
+      en: "The verb *ist* stands in position 2; *weg* usually goes to the end."
+      fa: "فعل *ist* در جایگاه دوم است و *weg* معمولاً به آخر جمله می‌رود."
+      de: "Das Verb *ist* steht auf Position 2. *weg* steht meistens am Ende."
+  - id: q21
+    type: typed-gap-fill
+    prompt: Hast du dein Handy ___ (dabeihaben)?
+    answers: [dabei]
+    explanation:
+      en: "*dabeihaben*: *dabei* goes to the end."
+      fa: "در *dabeihaben*، *dabei* به آخر جمله می‌رود."
+      de: "Bei *dabeihaben* steht *dabei* am Ende."
+  - id: q22
+    type: typed-gap-fill
+    prompt: Was hast du heute ___ (anhaben)?
+    answers: [an]
+    explanation:
+      en: "*anhaben*: *an* goes to the end: *Was hast du heute an?*"
+      fa: "در *anhaben*، *an* به آخر جمله می‌رود: *Was hast du heute an?*"
+      de: "Bei *anhaben* steht *an* am Ende: *Was hast du heute an?*"
+  - id: q23
+    type: typed-gap-fill
+    prompt: Die Tür ist nicht zu. Sie ist ___.
+    answers: [auf, offen]
+    explanation:
+      en: "The opposite of *zu* is *auf* (or *offen*)."
+      fa: "مخالف *zu*، *auf* (یا *offen*) است."
+      de: "Das Gegenteil von *zu* ist *auf* (oder *offen*)."
+  - id: q24
+    type: typed-gap-fill
+    prompt: Der Computer ist nicht an. Er ist ___.
+    answers: [aus, ausgeschaltet, ausgemacht]
+    explanation:
+      en: "The opposite of *an* is *aus*."
+      fa: "مخالف *an*، *aus* است."
+      de: "Das Gegenteil von *an* ist *aus*."
+
+review:
+  reviewer: an independent AI agent
+  date: 2026-11-28
+  pool: 61ad9e9d508170ee
