@@ -4,10 +4,319 @@ kind: grammar
 level: B1
 chapter: b1-connectors-negation
 order: 4
-status: coming-soon
+status: published
 recogniseOnly: false
 prerequisites: [grammar-153]
 title:
   en: "Text connectors"
   fa: "واژه‌های پیونددهندهٔ متن (*außerdem*، *allerdings*، *jedoch* …)"
   de: "Wörter, die Sätze im Text verbinden (*außerdem*, *allerdings*, *jedoch* …)"
+
+explanations:
+  en:
+    rule: >
+      These words link a sentence to the one before it and say how the two
+      fit together. *Außerdem* (besides, also) adds one more point.
+      *Allerdings* (however, though) adds a limit or a drawback to what was
+      just said. *Jedoch* (however) sets up a contrast, like *aber*, and
+      sounds more formal. *Dagegen* (by contrast) compares two people or
+      things. *Einerseits … andererseits* (on the one hand … on the other)
+      weighs two sides. They are adverbs, like *deshalb*: in position 1 the
+      verb comes next and the subject after it (*Außerdem hat sie einen
+      Balkon.*), and most can also stand after the verb (*Sie ist allerdings
+      teuer.*). *Dagegen* often stands right after the person compared: *Mein
+      Bruder liebt Sport. Ich dagegen lese lieber.* They help you link your
+      sentences in the writing part of the exam.
+  fa:
+    rule: >
+      این واژه‌ها جمله را به جملهٔ پیش از آن وصل می‌کنند و نشان می‌دهند که
+      رابطهٔ آن دو چیست. *außerdem* (افزون بر این، همچنین) نکتهٔ دیگری
+      می‌افزاید. *allerdings* (البته، ولی) بر آنچه گفته شد محدودیت یا عیبی
+      می‌افزاید. *jedoch* (اما، با این حال) مانند *aber* تضاد را نشان می‌دهد و
+      رسمی‌تر است. *dagegen* (در مقابل) دو کس یا دو چیز را با هم مقایسه
+      می‌کند. *einerseits … andererseits* (از یک سو … از سوی دیگر) دو جنبهٔ
+      یک موضوع را می‌سنجد. این واژه‌ها مانند *deshalb* قیدند: در جایگاه اول،
+      فعل پس از آن‌ها می‌آید و فاعل پس از فعل (*Außerdem hat sie einen
+      Balkon.*)، و بیشترشان می‌توانند پس از فعل هم بیایند (*Sie ist
+      allerdings teuer.*). *dagegen* اغلب درست پس از کسی می‌آید که مقایسه
+      می‌شود: *Mein Bruder liebt Sport. Ich dagegen lese lieber.* این واژه‌ها
+      در بخش نوشتن امتحان به پیوند جمله‌ها کمک می‌کنند.
+  de:
+    rule: >
+      Diese Wörter verbinden einen Satz mit dem Satz davor. Sie zeigen, wie
+      die beiden Sätze zusammenpassen. Mit *außerdem* nennt man noch einen
+      Punkt. Mit *allerdings* nennt man eine Grenze oder einen Nachteil. Mit
+      *jedoch* nennt man einen Gegensatz, wie mit *aber*, nur formeller. Mit
+      *dagegen* vergleicht man zwei Personen oder Dinge. Mit *einerseits …
+      andererseits* nennt man zwei Seiten von einer Sache. Diese Wörter sind
+      Adverbien wie *deshalb*. Auf Position 1 kommt danach das Verb, dann das
+      Subjekt: *Außerdem hat sie einen Balkon.* Die meisten können auch nach
+      dem Verb stehen: *Sie ist allerdings teuer.* *Dagegen* steht oft direkt
+      nach der Person, die man vergleicht: *Mein Bruder liebt Sport. Ich
+      dagegen lese lieber.* Mit diesen Wörtern verbindet man die Sätze beim
+      Schreiben in der Prüfung.
+
+table:
+  columns:
+    - { en: Word, fa: واژه, de: Wort }
+    - { en: Means about the same as, fa: تقریباً هم‌معنای, de: Bedeutet etwa }
+    - { en: Example, fa: مثال, de: Beispiel }
+  rows:
+    - [außerdem, und auch, "Die Wohnung ist hell. Außerdem hat sie einen Balkon."]
+    - [allerdings, "aber (ein Nachteil)", "Die Wohnung ist schön, allerdings ist sie teuer."]
+    - [jedoch, aber, "Das Hotel war schön. Das Essen war jedoch schlecht."]
+    - [dagegen, im Gegensatz dazu, "Mein Bruder liebt Sport. Ich dagegen lese lieber."]
+    - [einerseits … andererseits, auf der einen Seite … auf der anderen Seite, "Einerseits ist das Auto teuer, andererseits ist es sehr praktisch."]
+
+examples:
+  - de: Die Wohnung ist hell. Außerdem hat sie einen großen Balkon.
+    en: The flat is bright. It also has a large balcony.
+    fa: آپارتمان روشن است. افزون بر این، بالکن بزرگی هم دارد.
+  - de: Ich habe heute keine Zeit. Außerdem bin ich ein bisschen erkältet.
+    en: I don't have time today. Besides, I have a bit of a cold.
+    fa: امروز وقت ندارم. افزون بر این، کمی هم سرما خورده‌ام.
+  - de: Die Wohnung ist schön, allerdings ist sie sehr teuer.
+    en: The flat is nice, but it is very expensive.
+    fa: آپارتمان قشنگ است، البته خیلی گران است.
+  - de: Der Kurs ist interessant. Er ist allerdings nur am Abend.
+    en: The course is interesting. It's only in the evening, though.
+    fa: کلاس جالب است، ولی فقط شب‌ها برگزار می‌شود.
+  - de: Das Hotel war schön. Das Essen war jedoch schlecht.
+    en: The hotel was nice. The food, however, was bad.
+    fa: هتل خوب بود، اما غذایش بد بود.
+  - de: Wir haben lange gewartet, jedoch ist niemand gekommen.
+    en: We waited a long time; however, nobody came.
+    fa: مدت زیادی منتظر ماندیم، با این حال کسی نیامد.
+  - de: Mein Bruder liebt Sport. Ich dagegen lese lieber.
+    en: My brother loves sport. I, on the other hand, prefer reading.
+    fa: برادرم عاشق ورزش است. من در مقابل، کتاب خواندن را بیشتر دوست دارم.
+  - de: In der Stadt ist immer viel los. Auf dem Land ist es dagegen sehr ruhig.
+    en: There's always a lot going on in the city. In the country, by contrast, it's very quiet.
+    fa: در شهر همیشه خبرهای زیادی است. در روستا، در مقابل، خیلی آرام است.
+  - de: Einerseits ist das Auto teuer, andererseits ist es sehr praktisch.
+    en: On the one hand the car is expensive; on the other hand it is very practical.
+    fa: این ماشین از یک سو گران است و از سوی دیگر خیلی کاربردی.
+  - de: Einerseits möchte ich in Berlin bleiben, andererseits vermisse ich meine Familie.
+    en: On the one hand I'd like to stay in Berlin; on the other, I miss my family.
+    fa: از یک سو دلم می‌خواهد در برلین بمانم و از سوی دیگر دلم برای خانواده‌ام تنگ شده است.
+
+mistakes:
+  - wrong: Die Wohnung ist hell, außerdem sie hat einen Balkon.
+    right: Die Wohnung ist hell, außerdem hat sie einen Balkon.
+    why:
+      en: "*Außerdem* is position 1, so the verb comes next and the subject after it: *außerdem hat sie*."
+      fa: "*außerdem* جایگاه اول است، پس فعل پس از آن می‌آید و فاعل پس از فعل: *außerdem hat sie*."
+      de: "*Außerdem* ist Position 1. Danach kommt das Verb, dann das Subjekt: *außerdem hat sie*."
+  - wrong: Einerseits ist das Auto teuer, andererseits es ist praktisch.
+    right: Einerseits ist das Auto teuer, andererseits ist es praktisch.
+    why:
+      en: "*Andererseits* is position 1 of its clause too, so the verb comes next: *andererseits ist es*."
+      fa: "*andererseits* هم جایگاه اول جملهٔ خودش است، پس فعل پس از آن می‌آید: *andererseits ist es*."
+      de: "Auch *andererseits* ist Position 1 in seinem Satz. Danach kommt das Verb: *andererseits ist es*."
+  - wrong: Das Hotel war sehr schön, außerdem war das Essen schlecht.
+    right: Das Hotel war sehr schön, allerdings war das Essen schlecht.
+    why:
+      en: "Bad food is a drawback, not one more good point. *Außerdem* adds; *allerdings* or *jedoch* sets up the contrast."
+      fa: "غذای بد عیب است، نه نکتهٔ خوب دیگری. *außerdem* چیزی می‌افزاید؛ برای تضاد *allerdings* یا *jedoch* به کار می‌رود."
+      de: "Schlechtes Essen ist ein Nachteil, kein Plus. *Außerdem* nennt noch einen Punkt. Für den Gegensatz sagt man *allerdings* oder *jedoch*."
+  - wrong: Mein Bruder liebt Sport, dagegen ich lese lieber.
+    right: Mein Bruder liebt Sport, ich dagegen lese lieber.
+    why:
+      en: "*Dagegen* goes right after the person compared (*ich dagegen lese*), or into position 1 with the verb next (*dagegen lese ich*)."
+      fa: "*dagegen* یا درست پس از کسی می‌آید که مقایسه می‌شود (*ich dagegen lese*)، یا در جایگاه اول و فعل پس از آن (*dagegen lese ich*)."
+      de: "*Dagegen* steht direkt nach der Person, die man vergleicht (*ich dagegen lese*), oder auf Position 1 mit dem Verb danach (*dagegen lese ich*)."
+
+questions:
+  - id: gap-1
+    type: gap-fill
+    prompt: Die Wohnung ist hell und ruhig. ___ ist sie nicht weit vom Bahnhof.
+    options: [Allerdings, Außerdem, Dagegen]
+    answer: Außerdem
+    explanation:
+      en: "Being near the station is one more good point: *außerdem*."
+      fa: "نزدیک بودن به ایستگاه نکتهٔ خوب دیگری است: *außerdem*."
+      de: "Nah am Bahnhof: Das ist noch ein Plus. Darum *außerdem*."
+  - id: gap-2
+    type: gap-fill
+    prompt: Die Wohnung ist hell und ruhig. ___ ist sie sehr weit vom Bahnhof.
+    options: [Außerdem, Allerdings, Einerseits]
+    answer: Allerdings
+    explanation:
+      en: "Being far from the station is a drawback: *allerdings*."
+      fa: "دور بودن از ایستگاه یک عیب است: *allerdings*."
+      de: "Weit vom Bahnhof: Das ist ein Nachteil. Darum *allerdings*."
+  - id: gap-3
+    type: gap-fill
+    prompt: Meine Schwester ist sehr ordentlich. Ich ___ bin ziemlich chaotisch.
+    options: [außerdem, dagegen, also]
+    answer: dagegen
+    explanation:
+      en: "Two people are compared, and the word stands right after *ich*: *dagegen*."
+      fa: "دو نفر با هم مقایسه می‌شوند و این واژه درست پس از *ich* آمده است: *dagegen*."
+      de: "Man vergleicht zwei Personen. Das Wort steht direkt nach *ich*: *dagegen*."
+  - id: gap-4
+    type: gap-fill
+    prompt: Einerseits verdiene ich gut, ___ habe ich wenig Freizeit.
+    options: [andererseits, außerdem, deshalb]
+    answer: andererseits
+    explanation:
+      en: "*Einerseits* asks for the other side: *andererseits*."
+      fa: "پس از *einerseits*، سوی دیگر با *andererseits* می‌آید."
+      de: "Nach *einerseits* kommt die andere Seite: *andererseits*."
+  - id: gap-5
+    type: gap-fill
+    prompt: Ich kann dir heute nicht helfen. Außerdem ___ morgen auch keine Zeit.
+    options: [habe ich, ich habe, ich hätte]
+    answer: habe ich
+    explanation:
+      en: "*Außerdem* is position 1, so the verb *habe* comes next and *ich* after it."
+      fa: "*außerdem* جایگاه اول است، پس فعل *habe* پس از آن می‌آید و *ich* پس از فعل."
+      de: "*Außerdem* ist Position 1. Dann kommt das Verb *habe* und danach *ich*."
+  - id: choice-1
+    type: multiple-choice
+    prompt: "Der Laptop ist schnell und leicht. ___ ist der Akku schwach."
+    options: [Außerdem, Einerseits, Jedoch]
+    answer: Jedoch
+    explanation:
+      en: "A weak battery is a contrast to the good points: *jedoch*. *Einerseits* would need *andererseits* after it."
+      fa: "باتری ضعیف در تضاد با نکته‌های خوب است: *jedoch*. *einerseits* به *andererseits* در ادامه نیاز دارد."
+      de: "Ein schwacher Akku ist ein Gegensatz zu den guten Punkten: *jedoch*. Nach *einerseits* müsste *andererseits* kommen."
+  - id: choice-2
+    type: multiple-choice
+    prompt: "Was bedeutet: Das Zimmer ist groß, allerdings ist es laut."
+    options:
+      - Das Zimmer ist groß und auch ruhig.
+      - Das Zimmer ist groß, aber es ist laut.
+      - Das Zimmer ist laut, weil es groß ist.
+    answer: Das Zimmer ist groß, aber es ist laut.
+    explanation:
+      en: "*Allerdings* adds a drawback, like *aber*: big, but loud."
+      fa: "*allerdings* مانند *aber* عیبی می‌افزاید: بزرگ است، ولی پرسروصداست."
+      de: "*Allerdings* nennt einen Nachteil, wie *aber*: groß, aber laut."
+  - id: choice-3
+    type: multiple-choice
+    prompt: "Welcher Satz ist richtig?"
+    options:
+      - Ich fahre gern Rad. Außerdem ich jogge oft.
+      - Ich fahre gern Rad. Außerdem jogge ich oft.
+      - Ich fahre gern Rad. Außerdem oft ich jogge.
+    answer: Ich fahre gern Rad. Außerdem jogge ich oft.
+    explanation:
+      en: "*Außerdem* is position 1: the verb *jogge* comes next, then *ich*."
+      fa: "*außerdem* جایگاه اول است: فعل *jogge* پس از آن می‌آید و سپس *ich*."
+      de: "*Außerdem* ist Position 1: Dann kommt das Verb *jogge*, dann *ich*."
+  - id: true-1
+    type: true-false
+    prompt: Das Restaurant ist gut. Es ist allerdings ziemlich teuer.
+    answer: true
+    explanation:
+      en: "*Allerdings* can stand after the verb, and it adds a drawback. The sentence is correct."
+      fa: "*allerdings* می‌تواند پس از فعل بیاید و عیبی را می‌افزاید. جمله درست است."
+      de: "*Allerdings* kann nach dem Verb stehen und nennt einen Nachteil. Der Satz ist richtig."
+  - id: true-2
+    type: true-false
+    prompt: Einerseits ist die Stadt schön, andererseits sie ist sehr teuer.
+    answer: false
+    explanation:
+      en: "After *andererseits* the verb comes first: *andererseits ist sie sehr teuer*."
+      fa: "پس از *andererseits* نخست فعل می‌آید: *andererseits ist sie sehr teuer*."
+      de: "Nach *andererseits* kommt zuerst das Verb: *andererseits ist sie sehr teuer*."
+  - id: true-3
+    type: true-false
+    prompt: Im Sommer ist es hier heiß. Im Winter ist es dagegen sehr kalt.
+    answer: true
+    explanation:
+      en: "*Dagegen* compares summer and winter and stands after the verb. The sentence is correct."
+      fa: "*dagegen* تابستان و زمستان را با هم مقایسه می‌کند و پس از فعل آمده است. جمله درست است."
+      de: "*Dagegen* vergleicht Sommer und Winter und steht nach dem Verb. Der Satz ist richtig."
+  - id: true-4
+    type: true-false
+    prompt: Der Job ist interessant, außerdem ist das Gehalt sehr niedrig.
+    answer: false
+    explanation:
+      en: "A low salary is a drawback, not one more good point: *allerdings* or *jedoch*, not *außerdem*."
+      fa: "حقوق کم عیب است، نه نکتهٔ خوب دیگری: *allerdings* یا *jedoch*، نه *außerdem*."
+      de: "Wenig Gehalt ist ein Nachteil, kein Plus: *allerdings* oder *jedoch*, nicht *außerdem*."
+  - id: true-5
+    type: true-false
+    prompt: Wir wollten draußen essen. Es hat jedoch den ganzen Abend geregnet.
+    answer: true
+    explanation:
+      en: "*Jedoch* sets up the contrast and stands after the verb. The sentence is correct."
+      fa: "*jedoch* تضاد را نشان می‌دهد و پس از فعل آمده است. جمله درست است."
+      de: "*Jedoch* nennt den Gegensatz und steht nach dem Verb. Der Satz ist richtig."
+  - id: typed-gap-1
+    type: typed-gap-fill
+    prompt: Das Hotel liegt direkt am Strand. Außerdem ___ (haben) es einen schönen Garten.
+    answers: [hat]
+    explanation:
+      en: "After *außerdem* comes the verb, with the ending for *es*: *hat*."
+      fa: "پس از *außerdem* فعل می‌آید، با صورت سوم‌شخص مفرد (*es*): *hat*."
+      de: "Nach *außerdem* kommt das Verb, passend zu *es*: *hat*."
+  - id: typed-gap-2
+    type: typed-gap-fill
+    prompt: Einerseits will ich ein Auto kaufen, ___ (andererseits / außerdem) brauche ich das Geld für die Reise.
+    answers: [andererseits]
+    explanation:
+      en: "After *einerseits* the other side comes with *andererseits*."
+      fa: "پس از *einerseits*، سوی دیگر با *andererseits* می‌آید."
+      de: "Nach *einerseits* nennt man die andere Seite mit *andererseits*."
+  - id: typed-gap-3
+    type: typed-gap-fill
+    prompt: Der Film war lustig, ___ (außerdem / allerdings) war er viel zu lang.
+    answers: [allerdings]
+    explanation:
+      en: "Too long is a drawback of a funny film: *allerdings*."
+      fa: "بیش از حد طولانی بودن، عیب فیلمی خنده‌دار است: *allerdings*."
+      de: "Zu lang ist ein Nachteil: *allerdings*."
+  - id: typed-gap-4
+    type: typed-gap-fill
+    prompt: Mein Mann trinkt gern Kaffee. Ich ___ (dagegen / außerdem) trinke lieber Tee.
+    answers: [dagegen]
+    explanation:
+      en: "Two people are compared, and the word follows *ich* directly: *dagegen*."
+      fa: "دو نفر با هم مقایسه می‌شوند و این واژه درست پس از *ich* آمده است: *dagegen*."
+      de: "Man vergleicht zwei Personen, das Wort steht direkt nach *ich*: *dagegen*."
+  - id: error-1
+    type: find-error
+    prompt: Das Zimmer ist sehr schön, außerdem ist es leider sehr laut.
+    answer: außerdem
+    explanation:
+      en: "*Leider* shows a drawback, not one more good point: *allerdings* or *jedoch*, not *außerdem*."
+      fa: "*leider* عیبی را نشان می‌دهد، نه نکتهٔ خوب دیگری: *allerdings* یا *jedoch*، نه *außerdem*."
+      de: "*Leider* zeigt einen Nachteil, kein Plus: *allerdings* oder *jedoch*, nicht *außerdem*."
+  - id: error-2
+    type: find-error
+    prompt: Einerseits macht die Arbeit Spaß, außerdem ist sie sehr anstrengend.
+    answer: außerdem
+    explanation:
+      en: "*Einerseits* needs its other half: *andererseits ist sie sehr anstrengend*."
+      fa: "*einerseits* به نیمهٔ دیگرش نیاز دارد: *andererseits ist sie sehr anstrengend*."
+      de: "Zu *einerseits* gehört *andererseits*: *andererseits ist sie sehr anstrengend*."
+  - id: order-1
+    type: word-order
+    answers:
+      - [außerdem, hat, die Wohnung, einen Balkon]
+      - [die Wohnung, hat, außerdem, einen Balkon]
+      - [einen Balkon, hat, die Wohnung, außerdem]
+    explanation:
+      en: "The verb *hat* is position 2. *Außerdem* stands in position 1 or after the verb and subject."
+      fa: "فعل *hat* در جایگاه دوم است. *außerdem* یا جایگاه اول را می‌گیرد یا پس از فعل و فاعل می‌آید."
+      de: "Das Verb *hat* steht auf Position 2. *Außerdem* ist Position 1 oder steht nach Verb und Subjekt."
+  - id: match-1
+    type: matching
+    answer:
+      - ["Die Jacke ist warm. …", Außerdem ist sie leicht.]
+      - ["Mein Bruder trägt gern Jacken. …", Ich dagegen trage lieber Mäntel.]
+      - ["Einerseits ist die Jacke warm, …", andererseits ist sie zu schwer.]
+    explanation:
+      en: "Light is one more good point of the jacket: *außerdem*. *Ich dagegen* compares me with my brother. *Einerseits* goes with *andererseits*."
+      fa: "سبک بودن نکتهٔ خوب دیگری دربارهٔ کاپشن است: *außerdem*. *ich dagegen* مرا با برادرم مقایسه می‌کند. *einerseits* با *andererseits* می‌آید."
+      de: "Leicht ist noch ein Plus der Jacke: *außerdem*. *Ich dagegen* vergleicht mich mit meinem Bruder. Zu *einerseits* gehört *andererseits*."
+
+review:
+  reviewer: an independent AI agent (fresh Claude Opus 5.5 subagents, blind passes
+    on the review sheet only, a second one on the disputed questions; not a
+    person)
+  date: 2026-11-28
+  pool: 06fd4f596a366ee5
