@@ -1,5 +1,5 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-shops-buying
 kind: vocabulary
 level: A2
@@ -10,29 +10,365 @@ title:
   en: "Shops and buying"
   fa: "مغازه‌ها و خرید کردن"
   de: "Geschäfte und Kaufen"
+attemptSize: 15
 words:
   - word: Supermarkt
+    class: noun
+    article: der
+    plural: Supermärkte
+    level: A2
+    meaning:
+      en: supermarket
+      fa: سوپرمارکت
+    definition: ein großes Geschäft, in dem man Lebensmittel und Dinge für den Haushalt selbst aus dem Regal nimmt
+    example:
+      de: Der Supermarkt hat bis 22 Uhr geöffnet.
+      en: The supermarket is open until 10 p.m.
+      fa: سوپرمارکت تا ساعت ۲۲ باز است.
+
+  # A department store and a shopping centre are both big places to shop; neither meaning is offered as a wrong one for the other.
   - word: Kaufhaus
+    class: noun
+    article: das
+    plural: Kaufhäuser
+    level: A2
+    meaning:
+      en: department store
+      fa: فروشگاه بزرگ چندطبقه
+    definition: ein großes Geschäft mit mehreren Etagen; dort gibt es Kleidung, Spielzeug, Bücher und vieles mehr
+    example:
+      de: Die Kinderkleidung ist im Kaufhaus im zweiten Stock.
+      en: The children's clothes are on the second floor of the department store.
+      fa: لباس بچه در طبقهٔ دوم فروشگاه است.
+    alsoAccepted: [das Warenhaus]
+    tooCloseTo: [Einkaufszentrum]
+
   - word: Einkaufszentrum
+    class: noun
+    article: das
+    plural: Einkaufszentren
+    level: A2
+    meaning:
+      en: shopping centre, mall
+      fa: مرکز خرید
+    definition: ein großes Gebäude mit vielen verschiedenen Geschäften, Cafés und oft einem Kino
+    example:
+      de: Am Samstag ist das Einkaufszentrum sehr voll.
+      en: On Saturdays the shopping centre is very crowded.
+      fa: شنبه‌ها مرکز خرید خیلی شلوغ است.
+    alsoAccepted: [die Mall, das Shoppingcenter, das Shopping-Center]
+
+  # A flea market is one kind of market; neither meaning is offered as a wrong one for the other.
   - word: Markt
+    class: noun
+    article: der
+    plural: Märkte
+    level: A2
+    meaning:
+      en: market
+      fa: بازار
+    definition: ein Platz, auf dem man draußen an Ständen Obst, Gemüse und andere Dinge kaufen kann
+    example:
+      de: Jeden Mittwoch gehe ich auf den Markt.
+      en: Every Wednesday I go to the market.
+      fa: هر چهارشنبه به بازار می‌روم.
+    alsoAccepted: [der Wochenmarkt, der Bauernmarkt]
+    tooCloseTo: [Flohmarkt]
+
   - word: Flohmarkt
+    class: noun
+    article: der
+    plural: Flohmärkte
+    level: A2
+    meaning:
+      en: flea market
+      fa: بازار اجناس دست‌دوم
+    definition: dort verkaufen Leute alte und gebrauchte Sachen, oft am Wochenende und draußen
+    example:
+      de: Auf dem Flohmarkt habe ich eine alte Lampe gekauft.
+      en: I bought an old lamp at the flea market.
+      fa: از بازار اجناس دست‌دوم یک چراغ قدیمی خریدم.
+    alsoAccepted: [der Trödelmarkt]
+
   - word: Produkt
+    class: noun
+    article: das
+    plural: Produkte
+    level: A2
+    meaning:
+      en: product
+      fa: محصول، کالا
+    definition: eine Sache, die eine Firma macht und verkauft
+    example:
+      de: Dieses Produkt kommt aus der Region.
+      en: This product comes from the local area.
+      fa: این محصول از همین منطقه است.
+    alsoAccepted: [die Ware, der Artikel, das Erzeugnis]
+
   - word: Qualität
+    class: noun
+    article: die
+    plural: Qualitäten
+    level: A2
+    meaning:
+      en: quality
+      fa: کیفیت
+    definition: wie gut oder schlecht eine Sache ist
+    example:
+      de: Die Schuhe sind teuer, aber die Qualität ist gut.
+      en: The shoes are expensive, but the quality is good.
+      fa: کفش‌ها گران‌اند، اما کیفیتشان خوب است.
+
   - word: Ermäßigung
+    class: noun
+    article: die
+    plural: Ermäßigungen
+    level: A2
+    meaning:
+      en: reduction, discount
+      fa: تخفیف
+    definition: ein kleinerer Preis, zum Beispiel für Studenten, Kinder oder Rentner
+    example:
+      de: Mit dem Studentenausweis bekommst du eine Ermäßigung.
+      en: With your student card you get a discount.
+      fa: با کارت دانشجویی تخفیف می‌گیری.
+    alsoAccepted: [der Rabatt, die Preisermäßigung, der Nachlass, der Preisnachlass]
+
   - word: preiswert
+    class: adjective
+    level: A2
+    meaning:
+      en: good value, inexpensive
+      fa: ارزان، به‌صرفه
+    definition: nicht teuer, und man bekommt viel für sein Geld
+    example:
+      de: Das Restaurant ist gut und preiswert.
+      en: The restaurant is good and reasonably priced.
+      fa: این رستوران هم خوب است و هم به‌صرفه.
+    alsoAccepted: [günstig, billig, preisgünstig]
+
   - word: kostenlos
+    class: adjective
+    level: A2
+    meaning:
+      en: free (of charge)
+      fa: رایگان، مجانی
+    definition: so, dass man nichts dafür bezahlen muss
+    example:
+      de: Der Eintritt ist für Kinder kostenlos.
+      en: Entry is free for children.
+      fa: ورود برای بچه‌ها رایگان است.
+    alsoAccepted: [gratis, umsonst, kostenfrei, gebührenfrei]
+
   - word: ausgeben
+    class: verb
+    level: A2
+    meaning:
+      en: to spend (money)
+      fa: خرج کردن
+    definition: Geld für etwas bezahlen, so dass man es danach nicht mehr hat
+    example:
+      de: Für Kleidung gebe ich nicht viel Geld aus.
+      en: I don't spend much money on clothes.
+      fa: برای لباس پول زیادی خرج نمی‌کنم.
+
   - word: sparen
+    class: verb
+    level: A2
+    meaning:
+      en: to save (money)
+      fa: پس‌انداز کردن، صرفه‌جویی کردن
+    definition: Geld nicht ausgeben, sondern für später behalten
+    example:
+      de: Wir sparen für eine größere Wohnung.
+      en: We're saving for a bigger flat.
+      fa: برای خانهٔ بزرگ‌تری پس‌انداز می‌کنیم.
+
   - word: Kredit
+    class: noun
+    article: der
+    plural: Kredite
+    level: A2
+    meaning:
+      en: loan, credit
+      fa: وام، اعتبار
+    definition: Geld, das man von einer Bank bekommt und später mit Zinsen zurückzahlt
+    example:
+      de: Für das Auto haben wir einen Kredit aufgenommen.
+      en: We took out a loan for the car.
+      fa: برای خرید ماشین وام گرفتیم.
+    alsoAccepted: [das Darlehen]
+
   - word: Geldbörse
+    class: noun
+    article: die
+    plural: Geldbörsen
+    level: A2
+    meaning:
+      en: purse, wallet
+      fa: کیف پول
+    definition: eine kleine Tasche für Münzen, Scheine und Karten
+    example:
+      de: Ich habe meine Geldbörse zu Hause vergessen.
+      en: I left my wallet at home.
+      fa: کیف پولم را در خانه جا گذاشتم.
+    alsoAccepted: [das Portemonnaie, das Portmonee, der Geldbeutel, die Brieftasche, die Börse]
+
+  # "wechseln" (money) and "tauschen" (one thing for another) overlap; each is right when the other is asked for.
   - word: wechseln
+    class: verb
+    level: A2
+    meaning:
+      en: to change (money, a bill)
+      fa: عوض کردن؛ خرد کردن (پول)
+    definition: zum Beispiel einen großen Schein in kleines Geld geben lassen, oder Euro in Dollar
+    example:
+      de: Können Sie mir zwanzig Euro wechseln?
+      en: Can you change twenty euros for me?
+      fa: می‌توانید بیست یورو را برایم خرد کنید؟
+    alsoAccepted: [tauschen, umtauschen, eintauschen]
+    tooCloseTo: [tauschen]
+
   - word: tauschen
+    class: verb
+    level: A2
+    meaning:
+      en: to swap, to trade
+      fa: معاوضه کردن، با هم عوض کردن
+    definition: einer Person etwas geben und dafür etwas anderes von ihr bekommen
+    example:
+      de: Wollen wir die Plätze tauschen?
+      en: Shall we swap seats?
+      fa: می‌خواهی جاهایمان را عوض کنیم؟
+    alsoAccepted: [wechseln, umtauschen, eintauschen]
+
   - word: leihen
+    class: verb
+    level: A2
+    meaning:
+      en: to lend; to borrow
+      fa: قرض دادن؛ قرض گرفتن
+    definition: einer Person etwas für kurze Zeit geben, oder etwas für kurze Zeit bekommen und dann zurückgeben
+    example:
+      de: Kannst du mir bis Freitag zehn Euro leihen?
+      en: Can you lend me ten euros until Friday?
+      fa: می‌توانی تا جمعه ده یورو به من قرض بدهی؟
+    alsoAccepted: [ausleihen, verleihen, borgen]
+
   - word: liefern
+    class: verb
+    level: A2
+    meaning:
+      en: to deliver
+      fa: تحویل دادن، رساندن (کالا)
+    definition: Waren zu einer Person nach Hause oder in ein Geschäft bringen
+    example:
+      de: Das Sofa wird nächste Woche geliefert.
+      en: The sofa is being delivered next week.
+      fa: کاناپه را هفتهٔ آینده تحویل می‌دهند.
+    alsoAccepted: [zustellen, ausliefern, bringen]
+
   - word: Paket
+    class: noun
+    article: das
+    plural: Pakete
+    level: A2
+    meaning:
+      en: parcel, package
+      fa: بستهٔ پستی
+    definition: ein Karton mit Sachen darin, den man mit der Post schickt
+    example:
+      de: Für dich ist ein Paket gekommen.
+      en: A parcel has come for you.
+      fa: یک بسته برایت آمده است.
+    alsoAccepted: [das Päckchen, die Sendung]
+
   - word: Service
+    class: noun
+    article: der
+    number: singular-only
+    level: A2
+    meaning:
+      en: service (to customers)
+      fa: خدمات (به مشتری)
+    definition: die Hilfe und die Arbeit, die ein Geschäft, ein Hotel oder ein Restaurant für die Kunden macht
+    example:
+      de: Der Service in diesem Hotel ist sehr gut.
+      en: The service in this hotel is very good.
+      fa: خدمات این هتل خیلی خوب است.
+    alsoAccepted: [der Kundendienst, der Kundenservice, die Bedienung]
+
+  # Cream and perfume are cosmetics; neither meaning is offered as a wrong one for cosmetics, or the other way.
   - word: Kosmetik
+    class: noun
+    article: die
+    number: singular-only
+    level: A2
+    meaning:
+      en: cosmetics, beauty products
+      fa: لوازم آرایشی و بهداشتی
+    definition: Mittel für eine schöne Haut, ein schönes Gesicht und schöne Haare, zum Beispiel Lippenstift
+    example:
+      de: Kosmetik gibt es im Kaufhaus im Erdgeschoss.
+      en: Cosmetics are on the ground floor of the department store.
+      fa: لوازم آرایشی در طبقهٔ همکف فروشگاه است.
+    alsoAccepted: [die Kosmetika, die Kosmetikartikel, die Schminke]
+    tooCloseTo: [Creme, Parfüm]
+
   - word: Parfüm
+    class: noun
+    article: das
+    plural: Parfüms
+    level: A2
+    meaning:
+      en: perfume
+      fa: عطر
+    definition: eine Flüssigkeit, die gut riecht; man tut ein bisschen davon auf die Haut
+    example:
+      de: Zum Geburtstag schenke ich meiner Mutter ein Parfüm.
+      en: For her birthday I'm giving my mother some perfume.
+      fa: برای تولد مادرم به او عطر هدیه می‌دهم.
+    alsoAccepted: [das Parfum, der Duft]
+
   - word: Creme
+    class: noun
+    article: die
+    plural: Cremes
+    level: A2
+    meaning:
+      en: cream (for the skin)
+      fa: کرم (پوست)
+    definition: etwas Weiches aus der Tube oder aus der Dose, das man auf die Haut tut
+    example:
+      de: Im Winter brauche ich eine Creme für die Hände.
+      en: In winter I need hand cream.
+      fa: زمستان‌ها کرم دست لازم دارم.
+    alsoAccepted: [die Hautcreme, die Handcreme, die Gesichtscreme]
+
   - word: Friseur
+    class: noun
+    article: der
+    plural: Friseure
+    level: A2
+    meaning:
+      en: hairdresser, barber
+      fa: آرایشگر؛ آرایشگاه
+    definition: eine Person, die beruflich Haare schneidet und wäscht; auch das Geschäft, in dem sie arbeitet
+    example:
+      de: Ich gehe morgen zum Friseur, meine Haare sind zu lang.
+      en: I'm going to the hairdresser's tomorrow; my hair is too long.
+      fa: فردا به آرایشگاه می‌روم، موهایم خیلی بلند شده است.
+    alsoAccepted: [die Friseurin, der Frisör, die Frisörin, der Coiffeur, die Coiffeuse, der Friseursalon]
+
   - word: pro
+    class: preposition
+    level: A2
+    meaning:
+      en: per, for each
+      fa: هر، برای هر
+    definition: für jedes, für jeden oder für jede, zum Beispiel bei einem Preis
+    example:
+      de: Die Äpfel kosten zwei Euro pro Kilo.
+      en: The apples cost two euros per kilo.
+      fa: سیب کیلویی دو یورو است.
+    alsoAccepted: [je]

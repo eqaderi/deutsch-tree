@@ -1,5 +1,5 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-housework
 kind: vocabulary
 level: A2
@@ -10,31 +10,372 @@ title:
   en: "Housework and things"
   fa: "کارهای خانه و وسایل"
   de: "Hausarbeit und Dinge"
+attemptSize: 15
 words:
   - word: Haushalt
+    class: noun
+    article: der
+    plural: Haushalte
+    level: A2
+    meaning:
+      en: household, housework
+      fa: خانه‌داری، امور خانه
+    definition: die Wohnung und alle Arbeiten darin, wie Kochen, Waschen und Saubermachen
+    example:
+      de: Bei uns helfen alle im Haushalt mit.
+      en: At our place everyone helps with the housework.
+      fa: در خانهٔ ما همه در کارهای خانه کمک می‌کنند.
+    alsoAccepted: [die Hausarbeit]
+
   - word: Müll
+    class: noun
+    article: der
+    number: singular-only
+    level: A2
+    meaning:
+      en: rubbish, garbage
+      fa: زباله، آشغال
+    definition: alte Sachen und Reste, die man wegwirft
+    example:
+      de: Bringst du bitte den Müll raus?
+      en: Will you take the rubbish out, please?
+      fa: لطفاً زباله‌ها را بیرون می‌بری؟
+    alsoAccepted: [der Abfall]
+
   - word: aufräumen
+    class: verb
+    level: A2
+    meaning:
+      en: to tidy up
+      fa: مرتب کردن، جمع‌وجور کردن
+    definition: alle Sachen wieder an ihren Platz legen
+    example:
+      de: Am Samstag räumen die Kinder ihr Zimmer auf.
+      en: On Saturday the children tidy their room.
+      fa: شنبه‌ها بچه‌ها اتاقشان را مرتب می‌کنند.
+    alsoAccepted: [Ordnung machen]
+
   - word: putzen
+    class: verb
+    level: A2
+    meaning:
+      en: to clean
+      fa: تمیز کردن، نظافت کردن
+    definition: mit Wasser und einem Tuch sauber machen, zum Beispiel das Bad oder die Fenster
+    example:
+      de: Ich putze jeden Freitag das Bad.
+      en: I clean the bathroom every Friday.
+      fa: هر جمعه حمام را تمیز می‌کنم.
+    alsoAccepted: [sauber machen, saubermachen, reinigen, wischen]
+
   - word: Wäsche
+    class: noun
+    article: die
+    plural: Wäschen
+    level: A2
+    meaning:
+      en: laundry, washing
+      fa: رخت، لباس‌های شستنی
+    definition: Kleidung, Handtücher und Bettzeug, die man wäscht oder gerade gewaschen hat
+    example:
+      de: Die Wäsche hängt draußen in der Sonne.
+      en: The washing is hanging outside in the sun.
+      fa: رخت‌ها بیرون زیر آفتاب آویزان است.
+
   - word: Handtuch
+    class: noun
+    article: das
+    plural: Handtücher
+    level: A2
+    meaning:
+      en: towel
+      fa: حوله
+    definition: damit macht man sich nach dem Duschen oder Waschen trocken
+    example:
+      de: Im Bad liegen frische Handtücher.
+      en: There are fresh towels in the bathroom.
+      fa: در حمام حولهٔ تمیز هست.
+    alsoAccepted: [das Badetuch, das Duschtuch]
+
   - word: Seife
+    class: noun
+    article: die
+    plural: Seifen
+    level: A2
+    meaning:
+      en: soap
+      fa: صابون
+    definition: damit wäscht man sich die Hände; sie macht mit Wasser Schaum
+    example:
+      de: Wasch dir die Hände mit Seife!
+      en: Wash your hands with soap!
+      fa: دست‌هایت را با صابون بشوی!
+
   - word: sauber
+    class: adjective
+    level: A2
+    meaning:
+      en: clean
+      fa: تمیز
+    definition: ohne Schmutz, gerade gewaschen oder geputzt
+    example:
+      de: Die Küche ist jetzt wieder sauber.
+      en: The kitchen is clean again now.
+      fa: آشپزخانه حالا دوباره تمیز است.
+    alsoAccepted: [rein]
+
   - word: schmutzig
+    class: adjective
+    level: A2
+    meaning:
+      en: dirty
+      fa: کثیف
+    definition: nicht sauber, mit Flecken oder Staub
+    example:
+      de: Deine Schuhe sind ganz schmutzig.
+      en: Your shoes are really dirty.
+      fa: کفش‌هایت حسابی کثیف است.
+    alsoAccepted: [dreckig]
+
   - word: Reinigung
+    class: noun
+    article: die
+    plural: Reinigungen
+    level: A2
+    meaning:
+      en: cleaning; dry cleaner's
+      fa: نظافت؛ خشکشویی
+    definition: das Saubermachen; auch ein Geschäft, das Kleidung für Geld sauber macht
+    example:
+      de: Ich bringe den Anzug in die Reinigung.
+      en: I'm taking the suit to the dry cleaner's.
+      fa: کت‌وشلوار را به خشکشویی می‌برم.
+    alsoAccepted: [die chemische Reinigung, die Putzerei, das Putzen, das Saubermachen]
+
   - word: Schere
+    class: noun
+    article: die
+    plural: Scheren
+    level: A2
+    meaning:
+      en: scissors
+      fa: قیچی
+    definition: damit schneidet man Papier oder Haare; sie hat zwei scharfe Teile
+    example:
+      de: Wo ist die Schere? Ich will das Paket aufmachen.
+      en: Where are the scissors? I want to open the parcel.
+      fa: قیچی کجاست؟ می‌خواهم بسته را باز کنم.
+
+  # "Ding" and "Sache" are both a thing; each is right when the other is asked for.
   - word: Ding
+    class: noun
+    article: das
+    plural: Dinge
+    level: A2
+    meaning:
+      en: thing, object
+      fa: چیز، شیء
+    definition: ein Gegenstand, oft einer, dessen Namen man nicht kennt
+    example:
+      de: Was ist denn das für ein Ding?
+      en: What on earth is that thing?
+      fa: این دیگر چه چیزی است؟
+    alsoAccepted: [die Sache, der Gegenstand]
+    tooCloseTo: [Sache]
+
   - word: Sache
+    class: noun
+    article: die
+    plural: Sachen
+    level: A2
+    meaning:
+      en: thing, matter; things (your belongings)
+      fa: چیز، موضوع؛ وسایل (در جمع)
+    definition: etwas, das man hat oder über das man spricht; im Plural auch die Kleidung und andere Dinge einer Person
+    example:
+      de: Pack deine Sachen, wir fahren gleich los.
+      en: Pack your things; we're leaving soon.
+      fa: وسایلت را جمع کن، الان راه می‌افتیم.
+    alsoAccepted: [das Ding, der Gegenstand, die Angelegenheit]
+
   - word: leer
+    class: adjective
+    level: A2
+    meaning:
+      en: empty
+      fa: خالی
+    definition: ohne Inhalt; nichts ist darin
+    example:
+      de: Der Kühlschrank ist leer, wir müssen einkaufen.
+      en: The fridge is empty; we have to go shopping.
+      fa: یخچال خالی است، باید خرید کنیم.
+
   - word: voll
+    class: adjective
+    level: A2
+    meaning:
+      en: full
+      fa: پر
+    definition: so, dass nichts mehr hineinpasst
+    example:
+      de: Der Mülleimer ist schon wieder voll.
+      en: The bin is full again already.
+      fa: سطل زباله باز پر شده است.
+
   - word: nass
+    class: adjective
+    level: A2
+    meaning:
+      en: wet
+      fa: خیس
+    definition: mit Wasser darauf oder darin, nicht trocken
+    example:
+      de: Meine Haare sind noch nass.
+      en: My hair is still wet.
+      fa: موهایم هنوز خیس است.
+
   - word: trocken
+    class: adjective
+    level: A2
+    meaning:
+      en: dry
+      fa: خشک
+    definition: ohne Wasser, nicht nass
+    example:
+      de: Ist die Wäsche schon trocken?
+      en: Is the washing dry yet?
+      fa: رخت‌ها خشک شده‌اند؟
+
   - word: wecken
+    class: verb
+    level: A2
+    meaning:
+      en: to wake (someone) up
+      fa: بیدار کردن
+    definition: eine Person aus dem Schlaf holen
+    example:
+      de: Kannst du mich morgen um sechs wecken?
+      en: Can you wake me at six tomorrow?
+      fa: می‌توانی فردا ساعت شش بیدارم کنی؟
+    alsoAccepted: [aufwecken]
+
+  # The scope list gives "(sich)": it is used as "sich ausruhen".
   - word: ausruhen
+    class: verb
+    level: A2
+    meaning:
+      en: to rest, to have a rest
+      fa: استراحت کردن
+    definition: eine Pause machen und nichts tun, damit man wieder Kraft hat
+    example:
+      de: Nach dem Putzen ruhe ich mich auf dem Sofa aus.
+      en: After the cleaning I have a rest on the sofa.
+      fa: بعد از نظافت روی کاناپه استراحت می‌کنم.
+    alsoAccepted: [sich ausruhen, sich erholen, ausspannen, sich entspannen, entspannen, ruhen]
+
+  # "packen" is to pack a bag, "einpacken" to put a thing into a bag or paper; neither is offered as a wrong meaning of the other.
   - word: packen
+    class: verb
+    level: A2
+    meaning:
+      en: to pack (a bag, a suitcase)
+      fa: بستن (چمدان یا ساک)
+    definition: Kleidung und andere Dinge in einen Koffer oder eine Tasche tun, zum Beispiel vor einer Reise
+    example:
+      de: Ich packe heute Abend meinen Koffer.
+      en: I'm packing my suitcase this evening.
+      fa: امشب چمدانم را می‌بندم.
+    alsoAccepted: [einpacken]
+    tooCloseTo: [einpacken]
+
   - word: einpacken
+    class: verb
+    level: A2
+    meaning:
+      en: to wrap (up), to pack (into something)
+      fa: پیچیدن (در کاغذ)، بسته‌بندی کردن
+    definition: etwas in Papier, eine Tüte oder einen Karton tun, zum Beispiel ein Geschenk
+    example:
+      de: Können Sie mir das Geschenk bitte einpacken?
+      en: Could you wrap the present for me, please?
+      fa: ممکن است لطفاً هدیه را برایم کادو کنید؟
+    alsoAccepted: [verpacken, einwickeln, packen]
+
   - word: auspacken
+    class: verb
+    level: A2
+    meaning:
+      en: to unpack, to unwrap
+      fa: باز کردن و خالی کردن (چمدان یا بسته)
+    definition: Dinge aus einem Koffer, einer Tasche oder einem Paket herausnehmen
+    example:
+      de: Nach der Reise packe ich sofort den Koffer aus.
+      en: After a trip I unpack my suitcase straight away.
+      fa: بعد از سفر فوراً چمدانم را خالی می‌کنم.
+    alsoAccepted: [auswickeln]
+
   - word: Mittel
+    class: noun
+    article: das
+    plural: Mittel
+    level: A2
+    meaning:
+      en: product, agent (e.g. for cleaning); means; remedy
+      fa: ماده (مثلاً شوینده)، وسیله، دارو
+    definition: etwas, das man für einen Zweck benutzt, zum Beispiel zum Putzen oder gegen Schmerzen
+    example:
+      de: Mit diesem Mittel wird der Herd wieder sauber.
+      en: With this product the cooker gets clean again.
+      fa: با این ماده اجاق دوباره تمیز می‌شود.
+    alsoAccepted: [das Putzmittel, das Reinigungsmittel]
+
+  # The scope list gives "(sich)": "sich setzen" is to sit down.
   - word: setzen
+    class: verb
+    level: A2
+    meaning:
+      en: to sit down (with sich), to seat (someone)
+      fa: نشستن، نشاندن
+    definition: sich auf einen Stuhl oder ein Sofa tun, oder eine andere Person dorthin bringen
+    example:
+      de: Setz dich bitte, das Essen ist gleich fertig.
+      en: Do sit down; the food is nearly ready.
+      fa: لطفاً بنشین، غذا الان آماده می‌شود.
+    alsoAccepted: [sich setzen, sich hinsetzen, hinsetzen, Platz nehmen]
+
   - word: ziehen
+    class: verb
+    level: A2
+    meaning:
+      en: to pull; to move (to another place)
+      fa: کشیدن؛ نقل مکان کردن
+    definition: etwas zu sich hin bewegen, zum Beispiel eine Tür; auch in eine andere Stadt gehen und dort wohnen
+    example:
+      de: Du musst an der Tür ziehen, nicht drücken.
+      en: You have to pull the door, not push it.
+      fa: در را باید بکشی، نه اینکه هل بدهی.
+    alsoAccepted: [umziehen]
+
   - word: rund
+    class: adjective
+    level: A2
+    meaning:
+      en: round
+      fa: گرد
+    definition: wie ein Kreis oder ein Ball, ohne Ecken
+    example:
+      de: In der Küche haben wir einen runden Tisch.
+      en: We have a round table in the kitchen.
+      fa: در آشپزخانه یک میز گرد داریم.
+
   - word: wach
+    class: adjective
+    level: A2
+    meaning:
+      en: awake
+      fa: بیدار
+    definition: nicht mehr im Schlaf; die Augen sind offen
+    example:
+      de: Um sechs Uhr bin ich schon wach.
+      en: By six o'clock I'm already awake.
+      fa: ساعت شش دیگر بیدارم.

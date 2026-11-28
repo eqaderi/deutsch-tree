@@ -1,5 +1,5 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-kitchen-cooking
 kind: vocabulary
 level: A2
@@ -10,27 +10,319 @@ title:
   en: "In the kitchen"
   fa: "در آشپزخانه"
   de: "In der Küche"
+attemptSize: 15
 words:
   - word: Geschirr
+    class: noun
+    article: das
+    number: singular-only
+    level: A2
+    meaning:
+      en: dishes, crockery
+      fa: ظرف‌ها، ظروف
+    definition: alle Teller, Tassen und Schüsseln in einem Haushalt
+    example:
+      de: Wer spült heute das Geschirr?
+      en: Who's washing the dishes today?
+      fa: امروز چه کسی ظرف‌ها را می‌شوید؟
+
   - word: Tasse
+    class: noun
+    article: die
+    plural: Tassen
+    level: A2
+    meaning:
+      en: cup
+      fa: فنجان
+    definition: daraus trinkt man Kaffee oder Tee; sie hat einen Henkel
+    example:
+      de: Möchtest du eine Tasse Tee?
+      en: Would you like a cup of tea?
+      fa: یک فنجان چای می‌خواهی؟
+    alsoAccepted: [der Becher]
+
   - word: Teller
+    class: noun
+    article: der
+    plural: Teller
+    level: A2
+    meaning:
+      en: plate
+      fa: بشقاب
+    definition: darauf liegt das Essen, wenn man am Tisch isst
+    example:
+      de: Die Teller stehen schon auf dem Tisch.
+      en: The plates are already on the table.
+      fa: بشقاب‌ها روی میز چیده شده‌اند.
+
   - word: Gabel
+    class: noun
+    article: die
+    plural: Gabeln
+    level: A2
+    meaning:
+      en: fork
+      fa: چنگال
+    definition: damit isst man zum Beispiel Fleisch oder Salat; sie hat drei oder vier Spitzen
+    example:
+      de: Ich brauche noch eine Gabel.
+      en: I need another fork.
+      fa: یک چنگال دیگر لازم دارم.
+
   - word: Löffel
+    class: noun
+    article: der
+    plural: Löffel
+    level: A2
+    meaning:
+      en: spoon
+      fa: قاشق
+    definition: damit isst man Suppe, oder man rührt damit den Kaffee um
+    example:
+      de: Die Suppe isst man mit dem Löffel.
+      en: You eat soup with a spoon.
+      fa: سوپ را با قاشق می‌خورند.
+
   - word: Messer
+    class: noun
+    article: das
+    plural: Messer
+    level: A2
+    meaning:
+      en: knife
+      fa: چاقو، کارد
+    definition: damit schneidet man Brot, Fleisch oder Gemüse
+    example:
+      de: Vorsicht, das Messer ist sehr scharf!
+      en: Careful, the knife is very sharp!
+      fa: مواظب باش، چاقو خیلی تیز است!
+
   - word: Topf
+    class: noun
+    article: der
+    plural: Töpfe
+    level: A2
+    meaning:
+      en: pot, saucepan
+      fa: قابلمه
+    definition: darin kocht man auf dem Herd zum Beispiel Suppe, Reis oder Kartoffeln
+    example:
+      de: Der Topf ist zu klein für die ganze Suppe.
+      en: The pot is too small for all the soup.
+      fa: قابلمه برای این همه سوپ کوچک است.
+    alsoAccepted: [der Kochtopf]
+
   - word: backen
+    class: verb
+    level: A2
+    meaning:
+      en: to bake
+      fa: پختن (در فر)
+    definition: Kuchen oder Brot im Ofen machen
+    example:
+      de: Am Sonntag backe ich einen Kuchen.
+      en: On Sunday I'm baking a cake.
+      fa: یکشنبه کیک می‌پزم.
+
   - word: braten
+    class: verb
+    level: A2
+    meaning:
+      en: to fry, to roast
+      fa: سرخ کردن، بریان کردن
+    definition: Fleisch, Fisch oder Kartoffeln in heißem Fett in der Pfanne oder im Ofen machen
+    example:
+      de: Er brät die Kartoffeln in der Pfanne.
+      en: He's frying the potatoes in the pan.
+      fa: او سیب‌زمینی‌ها را در ماهیتابه سرخ می‌کند.
+    alsoAccepted: [anbraten, frittieren]
+
+  # The scope list gives "(sich)": "sich schneiden" is to cut yourself. The word is asked as "to cut".
   - word: schneiden
+    class: verb
+    level: A2
+    meaning:
+      en: to cut
+      fa: بریدن، خرد کردن
+    definition: mit einem Messer oder einer Schere in Teile teilen
+    example:
+      de: Kannst du bitte die Zwiebeln schneiden?
+      en: Can you cut the onions, please?
+      fa: می‌شود لطفاً پیازها را خرد کنی؟
+    alsoAccepted: [klein schneiden, kleinschneiden, zerschneiden, abschneiden]
+
   - word: probieren
+    class: verb
+    level: A2
+    meaning:
+      en: to taste, to try
+      fa: چشیدن، امتحان کردن
+    definition: ein bisschen essen oder trinken, um zu wissen, wie es schmeckt; auch etwas zum ersten Mal machen
+    example:
+      de: Probier mal die Soße, ist sie gut so?
+      en: Taste the sauce. Is it good like this?
+      fa: سس را بچش، همین‌طور خوب است؟
+    alsoAccepted: [kosten, versuchen, ausprobieren, abschmecken]
+
   - word: Rezept
+    class: noun
+    article: das
+    plural: Rezepte
+    level: A2
+    meaning:
+      en: recipe; prescription
+      fa: دستور پخت؛ نسخه (پزشک)
+    definition: ein Text, der sagt, wie man ein Essen kocht; auch ein Zettel vom Arzt für Medikamente
+    example:
+      de: Das Rezept für diesen Kuchen ist von meiner Oma.
+      en: The recipe for this cake is from my grandma.
+      fa: دستور پخت این کیک از مادربزرگم است.
+    alsoAccepted: [das Kochrezept]
+
   - word: Gericht
+    class: noun
+    article: das
+    plural: Gerichte
+    level: A2
+    meaning:
+      en: dish (a kind of food)
+      fa: خوراک، نوعی غذا
+    definition: ein Essen, das man nach einem Rezept kocht, zum Beispiel eine Suppe oder Spaghetti
+    example:
+      de: Dieses Gericht kommt aus Italien.
+      en: This dish comes from Italy.
+      fa: این غذا ایتالیایی است.
+    alsoAccepted: [die Speise, das Essen]
+
   - word: Portion
+    class: noun
+    article: die
+    plural: Portionen
+    level: A2
+    meaning:
+      en: portion, serving
+      fa: پرس، سهم (غذا)
+    definition: so viel Essen, wie eine Person auf einmal bekommt
+    example:
+      de: Eine Portion Pommes, bitte!
+      en: One portion of chips, please!
+      fa: یک پرس سیب‌زمینی سرخ‌کرده، لطفاً!
+
   - word: Mittagessen
+    class: noun
+    article: das
+    plural: Mittagessen
+    level: A2
+    meaning:
+      en: lunch
+      fa: ناهار
+    definition: das Essen in der Mitte des Tages, zum Beispiel um zwölf oder um eins
+    example:
+      de: Was gibt es heute zum Mittagessen?
+      en: What's for lunch today?
+      fa: امروز ناهار چه داریم؟
+
   - word: Stück
+    class: noun
+    article: das
+    plural: Stücke
+    level: A2
+    meaning:
+      en: piece
+      fa: تکه، قطعه
+    definition: ein Teil von einer Sache, zum Beispiel von einem Kuchen oder von einem Brot
+    example:
+      de: Möchtest du noch ein Stück Kuchen?
+      en: Would you like another piece of cake?
+      fa: یک تکه کیک دیگر می‌خواهی؟
+
   - word: frisch
+    class: adjective
+    level: A2
+    meaning:
+      en: fresh
+      fa: تازه
+    definition: gerade gemacht, gekauft oder geerntet, nicht alt
+    example:
+      de: Das Brot ist ganz frisch, es ist noch warm.
+      en: The bread is really fresh; it's still warm.
+      fa: نان کاملاً تازه است و هنوز گرم است.
+
   - word: süß
+    class: adjective
+    level: A2
+    meaning:
+      en: sweet
+      fa: شیرین
+    definition: mit viel Zucker, so wie Schokolade oder Honig schmeckt
+    example:
+      de: Der Kaffee ist mir zu süß.
+      en: The coffee is too sweet for me.
+      fa: این قهوه برای من زیادی شیرین است.
+
   - word: sauer
+    class: adjective
+    level: A2
+    meaning:
+      en: sour; annoyed (informal)
+      fa: ترش؛ دلخور (در گفتار)
+    definition: so, wie eine Zitrone schmeckt; auch ein bisschen böse auf eine Person
+    example:
+      de: Die Äpfel sind noch grün und sauer.
+      en: The apples are still green and sour.
+      fa: سیب‌ها هنوز کال و ترش‌اند.
+
   - word: scharf
+    class: adjective
+    level: A2
+    meaning:
+      en: spicy, hot; sharp
+      fa: تند (مزه)؛ تیز
+    definition: mit viel Pfeffer oder Chili, so dass es im Mund brennt; auch ein Messer, das gut schneidet
+    example:
+      de: Das Essen ist sehr scharf, ich brauche Wasser!
+      en: The food is very spicy; I need water!
+      fa: غذا خیلی تند است، آب لازم دارم!
+
   - word: fett
+    class: adjective
+    level: A2
+    meaning:
+      en: fatty, greasy
+      fa: چرب
+    definition: mit viel Öl, Butter oder Speck
+    example:
+      de: Pommes sind lecker, aber sehr fett.
+      en: Chips are tasty but very greasy.
+      fa: سیب‌زمینی سرخ‌کرده خوشمزه است، اما خیلی چرب است.
+    alsoAccepted: [fettig]
+
   - word: Kellner
+    class: noun
+    article: der
+    plural: Kellner
+    level: A2
+    meaning:
+      en: waiter
+      fa: پیشخدمت (رستوران)، گارسون
+    definition: eine Person, die im Restaurant das Essen und die Getränke an den Tisch bringt
+    example:
+      de: Der Kellner bringt uns die Speisekarte.
+      en: The waiter brings us the menu.
+      fa: پیشخدمت منو را برایمان می‌آورد.
+    alsoAccepted: [die Kellnerin, die Bedienung, der Ober, der Serviceangestellte, die Serviceangestellte, die Servicekraft]
+
   - word: Koch
+    class: noun
+    article: der
+    plural: Köche
+    level: A2
+    meaning:
+      en: cook, chef
+      fa: آشپز
+    definition: eine Person, die beruflich das Essen macht, zum Beispiel in einem Restaurant
+    example:
+      de: Der Koch in diesem Restaurant kommt aus Spanien.
+      en: The chef in this restaurant comes from Spain.
+      fa: آشپز این رستوران اهل اسپانیاست.
+    alsoAccepted: [die Köchin, der Chefkoch, die Chefköchin]

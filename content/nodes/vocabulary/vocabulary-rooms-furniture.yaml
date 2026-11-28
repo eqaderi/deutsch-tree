@@ -1,5 +1,5 @@
 # Vocabulary theme of A2. Its words are waiting for the learner's approval:
-# docs/approvals/vocabulary-themes.md.
+# docs/approvals/vocabulary-themes.md. The Persian follows content/persian-style.md.
 id: vocabulary-rooms-furniture
 kind: vocabulary
 level: A2
@@ -10,30 +10,374 @@ title:
   en: "Rooms and the building"
   fa: "اتاق‌ها و ساختمان"
   de: "Zimmer und Gebäude"
+attemptSize: 15
 words:
   - word: Wohnzimmer
+    class: noun
+    article: das
+    plural: Wohnzimmer
+    level: A2
+    meaning:
+      en: living room
+      fa: اتاق نشیمن
+    definition: das Zimmer, in dem man sitzt, fernsieht und Gäste hat
+    example:
+      de: Am Abend sitzen wir zusammen im Wohnzimmer.
+      en: In the evening we sit together in the living room.
+      fa: شب‌ها با هم در اتاق نشیمن می‌نشینیم.
+    alsoAccepted: [die Stube, die Wohnstube]
+
   - word: Schlafzimmer
+    class: noun
+    article: das
+    plural: Schlafzimmer
+    level: A2
+    meaning:
+      en: bedroom
+      fa: اتاق خواب
+    definition: das Zimmer mit dem Bett, in dem man in der Nacht schläft
+    example:
+      de: Das Schlafzimmer ist klein, aber hell.
+      en: The bedroom is small but bright.
+      fa: اتاق خواب کوچک است، اما روشن است.
+
   - word: Keller
+    class: noun
+    article: der
+    plural: Keller
+    level: A2
+    meaning:
+      en: cellar, basement
+      fa: زیرزمین
+    definition: ein Raum unter dem Haus, oft dunkel und kühl
+    example:
+      de: Die Fahrräder stehen im Keller.
+      en: The bikes are in the basement.
+      fa: دوچرخه‌ها در زیرزمین است.
+    alsoAccepted: [das Untergeschoss, das Kellergeschoss]
+
   - word: Garage
+    class: noun
+    article: die
+    plural: Garagen
+    level: A2
+    meaning:
+      en: garage
+      fa: گاراژ، پارکینگ خانه
+    definition: ein kleines Haus oder ein Raum für das Auto
+    example:
+      de: Unser Auto steht in der Garage.
+      en: Our car is in the garage.
+      fa: ماشینمان در پارکینگ است.
+    alsoAccepted: [die Tiefgarage]
+
+  # The ground floor is one of the floors, so neither meaning is offered as a wrong one for the other.
   - word: Erdgeschoss
+    class: noun
+    article: das
+    plural: Erdgeschosse
+    level: A2
+    meaning:
+      en: ground floor
+      fa: طبقهٔ همکف
+    definition: die Etage auf der Höhe der Straße, unter dem ersten Stock
+    example:
+      de: Die Bäckerei ist im Erdgeschoss.
+      en: The bakery is on the ground floor.
+      fa: نانوایی در طبقهٔ همکف است.
+    alsoAccepted: [das Erdgeschoß, das Parterre]
+    tooCloseTo: [Stockwerk]
+
   - word: Stockwerk
+    class: noun
+    article: das
+    plural: Stockwerke
+    level: A2
+    meaning:
+      en: floor, storey
+      fa: طبقه (ساختمان)
+    definition: eine Ebene in einem Haus; ein Hochhaus hat sehr viele davon
+    example:
+      de: Das Haus hat vier Stockwerke.
+      en: The house has four floors.
+      fa: این خانه چهار طبقه دارد.
+    alsoAccepted: [der Stock, die Etage, das Geschoss, das Geschoß]
+
   - word: Tür
+    class: noun
+    article: die
+    plural: Türen
+    level: A2
+    meaning:
+      en: door
+      fa: در (اتاق یا خانه)
+    definition: dadurch geht man in ein Zimmer oder in ein Haus; man kann sie öffnen und schließen
+    example:
+      de: Die Tür zum Garten ist aus Glas.
+      en: The door to the garden is made of glass.
+      fa: دری که به باغ باز می‌شود شیشه‌ای است.
+    alsoAccepted: [die Haustür, die Wohnungstür, die Zimmertür]
+
   - word: Fenster
+    class: noun
+    article: das
+    plural: Fenster
+    level: A2
+    meaning:
+      en: window
+      fa: پنجره
+    definition: ein Teil der Wand aus Glas; dadurch kommt Licht ins Zimmer
+    example:
+      de: Unser Wohnzimmer hat zwei große Fenster.
+      en: Our living room has two big windows.
+      fa: اتاق نشیمن ما دو پنجرهٔ بزرگ دارد.
+
   - word: Heizung
+    class: noun
+    article: die
+    plural: Heizungen
+    level: A2
+    meaning:
+      en: heating, radiator
+      fa: شوفاژ، سیستم گرمایش
+    definition: damit wird es im Winter in der Wohnung warm
+    example:
+      de: Die Heizung ist kaputt, und die Wohnung ist kalt.
+      en: The heating is broken and the flat is cold.
+      fa: شوفاژ خراب است و خانه سرد است.
+    alsoAccepted: [der Heizkörper, die Zentralheizung]
+
   - word: WC
+    class: noun
+    article: das
+    plural: WCs
+    level: A2
+    meaning:
+      en: toilet, WC
+      fa: توالت، دستشویی
+    definition: ein kleiner Raum mit einer Toilette und oft einem Waschbecken
+    example:
+      de: Das WC ist gleich neben dem Bad.
+      en: The toilet is right next to the bathroom.
+      fa: توالت درست کنار حمام است.
+    alsoAccepted: [die Toilette, das Klo, die Gästetoilette]
+
   - word: Stuhl
+    class: noun
+    article: der
+    plural: Stühle
+    level: A2
+    meaning:
+      en: chair
+      fa: صندلی
+    definition: darauf sitzt eine Person, zum Beispiel am Tisch; er hat vier Beine und eine Lehne
+    example:
+      de: Wir brauchen noch zwei Stühle für die Gäste.
+      en: We need two more chairs for the guests.
+      fa: برای مهمان‌ها دو صندلی دیگر لازم داریم.
+
   - word: Lampe
+    class: noun
+    article: die
+    plural: Lampen
+    level: A2
+    meaning:
+      en: lamp
+      fa: چراغ (وسیلهٔ روشنایی)
+    definition: sie macht Licht, zum Beispiel auf dem Schreibtisch oder an der Decke
+    example:
+      de: Die Lampe über dem Tisch ist neu.
+      en: The lamp above the table is new.
+      fa: چراغ بالای میز نو است.
+    alsoAccepted: [die Leuchte, die Stehlampe, die Tischlampe, das Licht]
+
   - word: Fernseher
+    class: noun
+    article: der
+    plural: Fernseher
+    level: A2
+    meaning:
+      en: TV set, television
+      fa: تلویزیون (دستگاه)
+    definition: ein Gerät mit einem Bildschirm; damit sieht man Filme und Nachrichten
+    example:
+      de: Der Fernseher steht im Wohnzimmer.
+      en: The TV is in the living room.
+      fa: تلویزیون در اتاق نشیمن است.
+    alsoAccepted: [das Fernsehgerät, der Fernsehapparat]
+
+  # "Gerät" is any device, "Apparat" mostly a telephone or a camera; each is right when the other is asked for.
   - word: Gerät
+    class: noun
+    article: das
+    plural: Geräte
+    level: A2
+    meaning:
+      en: device, appliance
+      fa: دستگاه، وسیلهٔ برقی
+    definition: eine Maschine für zu Hause oder die Arbeit, zum Beispiel ein Handy oder eine Waschmaschine
+    example:
+      de: Das Gerät ist neu, aber es funktioniert nicht.
+      en: The device is new, but it doesn't work.
+      fa: این دستگاه نو است، اما کار نمی‌کند.
+    alsoAccepted: [der Apparat, die Maschine, das Elektrogerät]
+    tooCloseTo: [Apparat]
+
   - word: Apparat
+    class: noun
+    article: der
+    plural: Apparate
+    level: A2
+    meaning:
+      en: apparatus, set (a telephone, a camera)
+      fa: دستگاه (مثلاً تلفن یا دوربین)
+    definition: ein technisches Gerät, zum Beispiel ein Telefon oder eine Kamera
+    example:
+      de: Guten Tag, hier ist Frau Weber am Apparat.
+      en: Good afternoon, this is Ms Weber speaking.
+      fa: روز بخیر، وبر هستم.
+    alsoAccepted: [das Gerät, der Telefonapparat, der Fotoapparat]
+
   - word: Umzug
+    class: noun
+    article: der
+    plural: Umzüge
+    level: A2
+    meaning:
+      en: move (to a new home), removal
+      fa: اسباب‌کشی
+    definition: wenn man mit allen Möbeln in eine andere Wohnung geht
+    example:
+      de: Nach dem Umzug sind wir alle sehr müde.
+      en: After the move we're all very tired.
+      fa: بعد از اسباب‌کشی همه خیلی خسته‌ایم.
+
   - word: einziehen
+    class: verb
+    level: A2
+    meaning:
+      en: to move in
+      fa: ساکن شدن (در خانهٔ تازه)
+    definition: in eine neue Wohnung kommen und dort zu wohnen beginnen
+    example:
+      de: Wir ziehen im Mai in die neue Wohnung ein.
+      en: We're moving into the new flat in May.
+      fa: ماه مه به آپارتمان تازه می‌رویم.
+
   - word: renovieren
+    class: verb
+    level: A2
+    meaning:
+      en: to renovate, to redecorate
+      fa: نوسازی کردن (خانه)
+    definition: eine Wohnung oder ein Haus wieder schön und wie neu machen, zum Beispiel mit Farbe
+    example:
+      de: Im Sommer renovieren wir die Küche.
+      en: In the summer we're renovating the kitchen.
+      fa: تابستان آشپزخانه را نوسازی می‌کنیم.
+    alsoAccepted: [sanieren, modernisieren, erneuern]
+
   - word: bauen
+    class: verb
+    level: A2
+    meaning:
+      en: to build
+      fa: ساختن
+    definition: ein Haus, eine Straße oder eine Brücke neu machen
+    example:
+      de: Meine Eltern bauen ein Haus auf dem Land.
+      en: My parents are building a house in the country.
+      fa: پدر و مادرم در روستا خانه‌ای می‌سازند.
+    alsoAccepted: [errichten, aufbauen]
+
   - word: nebenan
+    class: adverb
+    level: A2
+    meaning:
+      en: next door
+      fa: در خانه یا اتاق بغلی
+    definition: im Haus oder im Zimmer direkt daneben
+    example:
+      de: Die Frau von nebenan hat einen großen Hund.
+      en: The woman next door has a big dog.
+      fa: خانم همسایهٔ بغلی یک سگ بزرگ دارد.
+
   - word: drinnen
+    class: adverb
+    level: A2
+    meaning:
+      en: inside, indoors
+      fa: داخل خانه، درون
+    definition: im Haus oder im Raum, nicht draußen
+    example:
+      de: Es regnet, die Kinder spielen heute drinnen.
+      en: It's raining; the children are playing indoors today.
+      fa: باران می‌بارد و بچه‌ها امروز داخل خانه بازی می‌کنند.
+    alsoAccepted: [innen, im Haus]
+
   - word: hängen
+    class: verb
+    level: A2
+    meaning:
+      en: to hang
+      fa: آویزان بودن، آویختن
+    definition: oben an einem Nagel oder an der Wand fest sein, oder etwas so festmachen
+    example:
+      de: Das Bild hängt über dem Sofa.
+      en: The picture hangs above the sofa.
+      fa: تابلو بالای کاناپه آویزان است.
+    alsoAccepted: [aufhängen]
+
+  # "offen" is the only adjective, so its wrong meanings come from the other words; "to open" is never one of them.
   - word: aufmachen
+    class: verb
+    level: A2
+    meaning:
+      en: to open
+      fa: باز کردن
+    definition: zum Beispiel eine Tür oder eine Flasche so bewegen, dass man hineinkann
+    example:
+      de: Kannst du bitte das Fenster aufmachen?
+      en: Can you open the window, please?
+      fa: می‌شود لطفاً پنجره را باز کنی؟
+    alsoAccepted: [öffnen]
+    tooCloseTo: [offen]
+
   - word: zumachen
+    class: verb
+    level: A2
+    meaning:
+      en: to close, to shut
+      fa: بستن
+    definition: zum Beispiel eine Tür oder ein Fenster wieder schließen
+    example:
+      de: Mach bitte die Tür zu, es ist kalt.
+      en: Please shut the door; it's cold.
+      fa: لطفاً در را ببند، سرد است.
+    alsoAccepted: [schließen]
+
   - word: abschließen
+    class: verb
+    level: A2
+    meaning:
+      en: to lock
+      fa: قفل کردن
+    definition: mit einem Schlüssel zumachen, so dass niemand hineinkommt
+    example:
+      de: Hast du die Wohnung abgeschlossen?
+      en: Did you lock the flat?
+      fa: در خانه را قفل کردی؟
+    alsoAccepted: [zuschließen, verschließen, absperren, zusperren]
+
   - word: offen
+    class: adjective
+    level: A2
+    meaning:
+      en: open
+      fa: باز
+    definition: nicht zu; man kann hineingehen oder hineinsehen
+    example:
+      de: Das Fenster ist offen, mir ist kalt.
+      en: The window is open; I'm cold.
+      fa: پنجره باز است و سردم است.
+    alsoAccepted: [geöffnet, auf]
